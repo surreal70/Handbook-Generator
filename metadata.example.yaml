@@ -1,0 +1,148 @@
+# Global Metadata Configuration - Example Template
+# ================================================
+# This file contains organization-wide information used across all handbooks.
+# Copy this file to 'metadata.yaml' and replace the placeholder values with your actual data.
+#
+# Usage:
+#   1. Copy this file: cp metadata.example.yaml metadata.yaml
+#   2. Edit metadata.yaml with your organization's information
+#   3. The handbook generator will automatically use metadata.yaml
+#
+# Placeholders in templates:
+#   - {{ meta.organization.name }} - Organization name
+#   - {{ meta.ceo.name }} - CEO name
+#   - {{ meta.cio.email }} - CIO email address
+#   - {{ meta.document.owner }} - Document owner
+#   - And many more...
+
+# ============================================================================
+# ORGANIZATION INFORMATION
+# ============================================================================
+# Basic information about your organization
+organization:
+  name: "[YOUR_ORGANIZATION_NAME]"              # e.g., "Acme Corporation GmbH"
+  address: "[YOUR_STREET_ADDRESS]"              # e.g., "Main Street 123"
+  city: "[YOUR_CITY]"                           # e.g., "Berlin"
+  postal_code: "[YOUR_POSTAL_CODE]"             # e.g., "10115"
+  country: "[YOUR_COUNTRY]"                     # e.g., "Deutschland" or "Germany"
+  website: "[YOUR_WEBSITE_URL]"                 # e.g., "https://www.example.com"
+  phone: "[YOUR_PHONE_NUMBER]"                  # e.g., "+49 30 12345678"
+  email: "[YOUR_CONTACT_EMAIL]"                 # e.g., "info@example.com"
+
+# ============================================================================
+# ORGANIZATIONAL ROLES
+# ============================================================================
+# Define key personnel and their contact information.
+# These roles are used throughout the handbooks for RACI matrices,
+# contact lists, and responsibility assignments.
+#
+# Standard roles (recommended to define):
+#   - ceo: Chief Executive Officer
+#   - cio: Chief Information Officer
+#   - ciso: Chief Information Security Officer
+#   - cfo: Chief Financial Officer
+#   - coo: Chief Operating Officer
+#
+# Additional roles (customize as needed):
+#   - it_operations_manager: IT Operations Manager
+#   - service_desk_lead: Service Desk Lead
+#   - Add more roles as needed for your organization
+
+roles:
+  # -------------------------
+  # C-Level Executives
+  # -------------------------
+  ceo:
+    name: "[CEO_FULL_NAME]"                     # e.g., "John Doe"
+    title: "Chief Executive Officer"
+    email: "[CEO_EMAIL]"                        # e.g., "john.doe@example.com"
+    phone: "[CEO_PHONE]"                        # e.g., "+49 30 12345678-100"
+    department: "Management"
+    
+  cio:
+    name: "[CIO_FULL_NAME]"                     # e.g., "Jane Smith"
+    title: "Chief Information Officer"
+    email: "[CIO_EMAIL]"                        # e.g., "jane.smith@example.com"
+    phone: "[CIO_PHONE]"                        # e.g., "+49 30 12345678-200"
+    department: "IT"
+    
+  ciso:
+    name: "[CISO_FULL_NAME]"                    # e.g., "Bob Johnson"
+    title: "Chief Information Security Officer"
+    email: "[CISO_EMAIL]"                       # e.g., "bob.johnson@example.com"
+    phone: "[CISO_PHONE]"                       # e.g., "+49 30 12345678-300"
+    department: "IT Security"
+    
+  cfo:
+    name: "[CFO_FULL_NAME]"                     # e.g., "Alice Williams"
+    title: "Chief Financial Officer"
+    email: "[CFO_EMAIL]"                        # e.g., "alice.williams@example.com"
+    phone: "[CFO_PHONE]"                        # e.g., "+49 30 12345678-400"
+    department: "Finance"
+    
+  coo:
+    name: "[COO_FULL_NAME]"                     # e.g., "Charlie Brown"
+    title: "Chief Operating Officer"
+    email: "[COO_EMAIL]"                        # e.g., "charlie.brown@example.com"
+    phone: "[COO_PHONE]"                        # e.g., "+49 30 12345678-500"
+    department: "Operations"
+  
+  # -------------------------
+  # IT Operations Roles
+  # -------------------------
+  it_operations_manager:
+    name: "[IT_OPS_MANAGER_NAME]"               # e.g., "David Miller"
+    title: "IT Operations Manager"
+    email: "[IT_OPS_MANAGER_EMAIL]"             # e.g., "david.miller@example.com"
+    phone: "[IT_OPS_MANAGER_PHONE]"             # e.g., "+49 30 12345678-250"
+    department: "IT Operations"
+    
+  service_desk_lead:
+    name: "[SERVICE_DESK_LEAD_NAME]"            # e.g., "Emma Davis"
+    title: "Service Desk Lead"
+    email: "[SERVICE_DESK_LEAD_EMAIL]"          # e.g., "emma.davis@example.com"
+    phone: "[SERVICE_DESK_LEAD_PHONE]"          # e.g., "+49 30 12345678-111"
+    department: "Service Desk"
+  
+  # -------------------------
+  # Add Custom Roles Here
+  # -------------------------
+  # Example: Add a Security Operations Manager
+  # security_operations_manager:
+  #   name: "[SECURITY_OPS_MANAGER_NAME]"
+  #   title: "Security Operations Manager"
+  #   email: "[SECURITY_OPS_MANAGER_EMAIL]"
+  #   phone: "[SECURITY_OPS_MANAGER_PHONE]"
+  #   department: "IT Security"
+
+# ============================================================================
+# DOCUMENT INFORMATION
+# ============================================================================
+# Default document metadata for all generated handbooks
+document:
+  owner: "[DOCUMENT_OWNER_ROLE]"                # e.g., "IT Operations Manager"
+  approver: "[DOCUMENT_APPROVER_ROLE]"          # e.g., "CIO"
+  version: "1.0.0"                              # Semantic versioning (MAJOR.MINOR.PATCH)
+  classification: "internal"                    # Options: public, internal, confidential, restricted
+
+# ============================================================================
+# DEFAULT VALUES
+# ============================================================================
+# Default values used when generating handbooks
+defaults:
+  author: "[DEFAULT_AUTHOR_NAME_AND_EMAIL]"     # e.g., "John Doe [john.doe@example.com]"
+  language: "de"                                # Options: "de" (German), "en" (English)
+
+# ============================================================================
+# NOTES
+# ============================================================================
+# - All email addresses must be valid (contain @ and domain)
+# - Phone numbers should include country code (e.g., +49 for Germany)
+# - Classification levels:
+#     * public: Publicly available information
+#     * internal: Internal use only
+#     * confidential: Confidential information, restricted access
+#     * restricted: Highly restricted, need-to-know basis
+# - Role names are case-insensitive in templates (ceo, CEO, Ceo all work)
+# - You can add custom roles beyond the standard ones listed above
+# - Department field is optional for roles

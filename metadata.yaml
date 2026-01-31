@@ -1,0 +1,72 @@
+# Global Metadata Configuration
+# This file contains organization-wide information used across all handbooks
+
+organization:
+  name: "AdminSend GmbH"
+  address: "Musterstraße 123"
+  city: "München"
+  postal_code: "80331"
+  country: "Deutschland"
+  website: "https://www.adminsend.de"
+  phone: "+49 89 12345678"
+  email: "info@adminsend.de"
+
+roles:
+  ceo:
+    name: "Max Mustermann"
+    title: "Chief Executive Officer"
+    email: "max.mustermann@adminsend.de"
+    phone: "+49 89 12345678-100"
+    department: "Management"
+    
+  cio:
+    name: "Anna Schmidt"
+    title: "Chief Information Officer"
+    email: "anna.schmidt@adminsend.de"
+    phone: "+49 89 12345678-200"
+    department: "IT"
+    
+  ciso:
+    name: "Thomas Weber"
+    title: "Chief Information Security Officer"
+    email: "thomas.weber@adminsend.de"
+    phone: "+49 89 12345678-300"
+    department: "IT Security"
+    
+  cfo:
+    name: "Maria Müller"
+    title: "Chief Financial Officer"
+    email: "maria.mueller@adminsend.de"
+    phone: "+49 89 12345678-400"
+    department: "Finance"
+    
+  coo:
+    name: "Peter Fischer"
+    title: "Chief Operating Officer"
+    email: "peter.fischer@adminsend.de"
+    phone: "+49 89 12345678-500"
+    department: "Operations"
+    
+  it_operations_manager:
+    name: "Andreas Huemmer"
+    title: "IT Operations Manager"
+    email: "andreas.huemmer@adminsend.de"
+    phone: "+49 89 12345678-250"
+    department: "IT Operations"
+    
+  service_desk_lead:
+    name: "Julia Becker"
+    title: "Service Desk Lead"
+    email: "julia.becker@adminsend.de"
+    phone: "+49 89 12345678-111"
+    department: "Service Desk"
+
+document:
+  owner: "IT Operations Manager"
+  approver: "CIO"
+  version: "1.0.0"
+  classification: "internal"  # public, internal, confidential, restricted
+
+defaults:
+  author: "Andreas Huemmer [andreas.huemmer@adminsend.de]"
+  language: "de"

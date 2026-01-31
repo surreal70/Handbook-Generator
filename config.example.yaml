@@ -1,0 +1,22 @@
+# Handbuch-Generator Configuration Example
+# 
+# Copy this file to config.yaml and fill in your actual credentials
+# WARNING: config.yaml contains sensitive credentials - do not commit to git!
+
+data_sources:
+  netbox:
+    url: "https://netbox.example.com"
+    api_token: "your_netbox_api_token_here"
+  
+  # Future data sources can be added here
+  # example:
+  #   url: "https://api.example.com"
+  #   api_key: "your_api_key_here"
+
+defaults:
+  language: "de"  # de or en
+  output_format: "both"  # markdown, pdf, or both
+
+metadata:
+  author: "Andreas Huemmer [andreas.huemmer@adminsend.de]"
+  version: "1.0.0"

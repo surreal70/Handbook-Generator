@@ -1,0 +1,26 @@
+# Handbuch-Generator Dependencies
+
+# Template Processing
+jinja2>=3.1.0
+
+# Data Source Integration
+pynetbox>=7.0.0
+requests>=2.31.0
+
+# Configuration Management
+pyyaml>=6.0
+
+# Output Generation
+markdown>=3.5.0
+weasyprint>=60.0
+
+# Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+hypothesis>=6.90.0
+responses>=0.24.0
+
+# Development
+flake8>=6.1.0
+black>=23.0.0
+mypy>=1.7.0
