@@ -104,8 +104,8 @@ Das System zeigt verfügbare Sprachen und Handbuchtypen an und fragt nach Ihrer 
 #### Kommandozeilen-Parameter
 
 ```bash
-# Backup-Handbuch auf Deutsch generieren
-python -m src.cli --language de --template backup
+# IT-Operations-Handbuch auf Deutsch generieren
+python -m src.cli --language de --template it-operation
 
 # ISMS-Handbuch auf Englisch, nur PDF
 python -m src.cli --language en --template isms --output pdf
@@ -120,7 +120,7 @@ python -m src.cli --config /path/to/config.yaml --language de --template it-oper
 #### Verfügbare Parameter
 
 - `--language, -l`: Sprache auswählen (`de`, `en`)
-- `--template, -t`: Handbuchtyp auswählen (`backup`, `bcm`, `isms`, `it-operation`)
+- `--template, -t`: Handbuchtyp auswählen (`bcm`, `isms`, `it-operation`)
 - `--output, -o`: Ausgabeformat (`markdown`, `pdf`, `both`) [Standard: `both`]
 - `--verbose, -v`: Ausführliches Logging aktivieren
 - `--config, -c`: Pfad zur Konfigurationsdatei [Standard: `config.yaml`]
@@ -132,16 +132,13 @@ Vorlagen werden im `templates/` Verzeichnis organisiert:
 ```
 templates/
 ├── de/                          # Deutsche Vorlagen
-│   ├── backup/
-│   │   ├── 0000_metadata_de_backup.md
-│   │   ├── 0100_einleitung.md
-│   │   ├── 0200_backup_strategie.md
-│   │   └── 0300_wiederherstellung.md
 │   ├── bcm/
+│   │   ├── 0000_metadata_de_bcm.md
+│   │   ├── 0100_einleitung.md
+│   │   └── 0200_notfallplanung.md
 │   ├── isms/
 │   └── it-operation/
 └── en/                          # Englische Vorlagen
-    ├── backup/
     ├── bcm/
     ├── isms/
     └── it-operation/
@@ -182,10 +179,9 @@ Generierte Handbücher werden im `Handbook/` Verzeichnis gespeichert:
 ```
 Handbook/
 ├── de/
-│   ├── backup/
-│   │   ├── backup_handbook.md
-│   │   └── backup_handbook.pdf
 │   ├── bcm/
+│   │   ├── bcm_handbook.md
+│   │   └── bcm_handbook.pdf
 │   ├── isms/
 │   └── it-operation/
 └── en/
