@@ -179,10 +179,10 @@ class TestTemplateNumberingSequence:
         """
         templates_dir = Path(f'templates/{language}/it-operation')
         
-        # Get all content templates (excluding metadata)
+        # Get all content templates (excluding metadata and README)
         content_templates = sorted([
             f for f in templates_dir.glob('*.md')
-            if not f.name.startswith('0000_')
+            if not f.name.startswith('0000_') and f.name != 'README.md'
         ])
         
         # Extract template numbers
@@ -359,7 +359,7 @@ class TestBilingualTemplateConsistency:
         # Get all German templates (excluding metadata)
         de_templates = sorted([
             f for f in de_dir.glob('*.md')
-            if not f.name.startswith('0000_')
+            if not f.name.startswith('0000_') and f.name != 'README.md'
         ])
         
         for de_template in de_templates:
@@ -658,8 +658,8 @@ class TestMultiLanguagePlaceholderConsistency:
                 placeholders = re.findall(r'\{\{[^}]+\}\}', content)
                 
                 for placeholder in placeholders:
-                    # Verify placeholder format
-                    assert re.match(r'\{\{\s*(meta|netbox)\.[a-zA-Z0-9_.]+\s*\}\}', placeholder), \
+                    # Verify placeholder format (meta, netbox, or metadata)
+                    assert re.match(r'\{\{\s*(meta|netbox|metadata)\.[a-zA-Z0-9_.]+\s*\}\}', placeholder), \
                         f"Placeholder '{placeholder}' in {template_file.name} should follow format {{{{ source.field }}}}"
     
     def test_common_placeholders_exist_in_both_languages(self):
@@ -1099,7 +1099,7 @@ class TestCompleteTemplateStructure:
         # Get actual template numbers
         actual_templates = sorted([
             f for f in templates_dir.glob('*.md')
-            if not f.name.startswith('0000_')
+            if not f.name.startswith('0000_') and f.name != 'README.md'
         ])
         
         actual_numbers = []
@@ -1135,7 +1135,7 @@ class TestCompleteTemplateStructure:
         # Get actual template numbers
         actual_templates = sorted([
             f for f in templates_dir.glob('*.md')
-            if not f.name.startswith('0000_')
+            if not f.name.startswith('0000_') and f.name != 'README.md'
         ])
         
         actual_numbers = []
@@ -1164,10 +1164,10 @@ class TestCompleteTemplateStructure:
         for language in ['de', 'en']:
             templates_dir = Path(f'templates/{language}/it-operation')
             
-            # Get all content templates (excluding metadata)
+            # Get all content templates (excluding metadata and README)
             content_templates = sorted([
                 f for f in templates_dir.glob('*.md')
-                if not f.name.startswith('0000_')
+                if not f.name.startswith('0000_') and f.name != 'README.md'
             ])
             
             # Extract and verify template numbers
@@ -1247,6 +1247,9 @@ class TestCompleteTemplateStructure:
             templates_dir = Path(f'templates/{language}/it-operation')
             
             for template_file in templates_dir.glob('*.md'):
+                # Skip README.md
+                if template_file.name == 'README.md':
+                    continue
                 assert filename_pattern.match(template_file.name), \
                     f"Template filename {template_file.name} should follow convention: NNNN_Title_Words.md"
     
@@ -1255,9 +1258,9 @@ class TestCompleteTemplateStructure:
         de_dir = Path('templates/de/it-operation')
         en_dir = Path('templates/en/it-operation')
         
-        # Count content templates (excluding metadata)
-        de_count = len([f for f in de_dir.glob('*.md') if not f.name.startswith('0000_')])
-        en_count = len([f for f in en_dir.glob('*.md') if not f.name.startswith('0000_')])
+        # Count content templates (excluding metadata and README)
+        de_count = len([f for f in de_dir.glob('*.md') if not f.name.startswith('0000_') and f.name != 'README.md'])
+        en_count = len([f for f in en_dir.glob('*.md') if not f.name.startswith('0000_') and f.name != 'README.md'])
         
         assert de_count == en_count, \
             f"German and English should have same number of templates. DE: {de_count}, EN: {en_count}"
@@ -1322,9 +1325,11 @@ class TestCompleteTemplateStructure:
         for language in ['de', 'en']:
             templates_dir = Path(f'templates/{language}/it-operation')
             
-            # Get all template numbers
+            # Get all template numbers (excluding README)
             template_numbers = []
             for template_file in templates_dir.glob('*.md'):
+                if template_file.name == 'README.md':
+                    continue
                 try:
                     number = int(template_file.name[:4])
                     template_numbers.append(number)
@@ -1344,7 +1349,7 @@ class TestCompleteTemplateStructure:
             # Get templates sorted alphabetically (which should match numerical order)
             templates = sorted([
                 f for f in templates_dir.glob('*.md')
-                if not f.name.startswith('0000_')
+                if not f.name.startswith('0000_') and f.name != 'README.md'
             ])
             
             # Extract numbers

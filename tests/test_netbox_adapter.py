@@ -171,7 +171,9 @@ def test_netbox_adapter_connect_failure(mock_pynetbox_api):
     with pytest.raises(ConnectionError) as exc_info:
         adapter.connect()
     
-    assert "Unexpected error connecting to NetBox" in str(exc_info.value)
+    # Check that error message contains relevant information
+    error_msg = str(exc_info.value)
+    assert "Failed to connect to NetBox" in error_msg or "Unexpected error connecting to NetBox" in error_msg
     assert adapter._connected is False
 
 

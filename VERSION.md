@@ -1,6 +1,6 @@
 # Version Management
 
-## Current Version: 0.0.1
+## Current Version: 0.0.2
 
 ### Single Source of Truth
 
@@ -19,7 +19,7 @@ All other parts of the codebase reference this single source:
 1. **setup.py**: Imports `__version__` from `src/__init__.py` for package distribution
 2. **config_manager.py**: Uses `__version__` as default fallback for metadata version
 3. **placeholder_processor.py**: Uses `__version__` as default fallback for document version
-4. **metadata_config_manager.py**: Uses version "0.0.1" as default for document metadata
+4. **metadata_config_manager.py**: Uses version from `__version__` as default for document metadata
 
 ### Updating the Version
 
@@ -32,6 +32,26 @@ To update the version number:
 **Do not** hardcode version numbers elsewhere in the codebase.
 
 ### Version History
+
+- **0.0.2** (2025-02-04): Documentation update
+  - Updated README.md with accurate template counts (186 total)
+  - Created English version (README.en.md)
+  - Updated copyright year to 2025, 2026
+  - Added language switcher to both README files
+  - Reorganized documentation files to docs/ directory
+  - Moved helper scripts to helpers/ directory
+  - Updated VERSION.md and README.1st.md
+
+- **1.0.0** (2025-02-04): First stable release
+  - Complete template system with 4 handbook types (BCM, ISMS, BSI Grundschutz, IT-Operations)
+  - 186 templates in German and English (30 BCM, 71 ISMS, 54 BSI, 31 IT-Ops)
+  - HTML comment processing for template documentation
+  - Comprehensive test suite (450+ tests, 86% coverage)
+  - Property-based testing for correctness validation
+  - PDF generation support (WeasyPrint)
+  - Multi-language support (de, en)
+  - NetBox integration for data sources
+  - Production ready
 
 - **0.0.1** (2025-01-31): Initial experimental release
   - Early development state

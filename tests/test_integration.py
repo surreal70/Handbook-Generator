@@ -199,8 +199,8 @@ def test_end_to_end_handbook_generation(temp_workspace, complete_template_set, m
         assert "192.168.1.100" in all_content
         assert "Andreas Huemmer" in all_content
         assert "1.0.0" in all_content
-        # Date will be current date from metadata dict
-        assert "2026-01-31" in all_content or "2025-01-30" in all_content
+        # Date will be current date (check for year 2026 or 2025)
+        assert "2026-" in all_content or "2025-" in all_content
         
         # 4. Generate markdown output
         processed_contents = [r.content for r in processed_results]
@@ -1503,8 +1503,8 @@ def test_end_to_end_it_operations_handbook_generation(temp_workspace, it_operati
         assert "Datacenter Munich" in all_content
         assert "backup-server-01" in all_content
         assert "192.168.1.100" in all_content
-        # Date will be current date from metadata dict
-        assert "2026-01-31" in all_content or "2025-01-30" in all_content
+        # Date will be current date (check for year 2026 or 2025)
+        assert "2026-" in all_content or "2025-" in all_content
         
         # Generate output
         de_output_result = output_generator.generate_markdown(
@@ -1897,3 +1897,2873 @@ def test_service_template_workflow(temp_workspace, service_template,
         # Verify specific role counts
         # Should have replacements for CIO, IT Ops Manager, Service Desk Lead
         assert meta_count >= 10, f"Should have at least 10 meta replacements, got {meta_count}"
+
+
+# ============================================================================
+# Phase 5.5: Integration Tests for New Template Types
+# ============================================================================
+
+@pytest.fixture
+def bcm_templates(temp_workspace):
+    """Create BCM templates for end-to-end testing."""
+    templates_dir = temp_workspace / "templates"
+    
+    # German BCM templates
+    de_bcm = templates_dir / "de" / "bcm"
+    de_bcm.mkdir(parents=True)
+    
+    # Metadata template
+    (de_bcm / "0000_metadata_de_bcm.md").write_text("""# BCM-Handbuch
+
+**Dokument-Metadaten**
+
+- **Organisation:** {{ meta.organization.name }}
+- **Erstellt am:** {{ metadata.date }}
+- **Autor:** {{ meta.author }}
+- **Version:** {{ meta.document.version }}
+- **Typ:** Business Continuity Management Handbuch
+
+---
+""")
+    
+    # Purpose and Scope
+    (de_bcm / "0010_Zweck_und_Geltungsbereich.md").write_text("""# 1. Zweck und Geltungsbereich
+
+## 1.1 Zweck
+
+Dieses BCM-Handbuch beschreibt das Business Continuity Management für {{ meta.organization.name }}.
+
+**Referenz:** ISO 22301:2019
+
+## 1.2 Geltungsbereich
+
+- **Organisation:** {{ meta.organization.name }}
+- **Standort:** {{ netbox.site_name }}
+- **BCM-Verantwortlicher:** {{ meta.cio.name }}
+
+## 1.3 Zielgruppe
+
+Dieses Handbuch richtet sich an:
+- Geschäftsführung
+- BCM-Team
+- Krisenmanagement-Team
+""")
+    
+    # BCM Policy
+    (de_bcm / "0020_BCM_Leitlinie_Policy.md").write_text("""# 2. BCM-Leitlinie (Policy)
+
+## 2.1 Management Commitment
+
+Die Geschäftsführung von {{ meta.organization.name }} verpflichtet sich zur Implementierung und Aufrechterhaltung eines Business Continuity Management Systems nach ISO 22301.
+
+**CEO:** {{ meta.ceo.name }}  
+**CIO:** {{ meta.cio.name }}
+
+## 2.2 BCM-Governance
+
+### RACI-Matrix
+
+| Aktivität | CEO | CIO | BCM-Manager |
+|---|---|---|---|
+| BCM-Strategie | A | R | C |
+| BIA-Durchführung | I | A | R |
+| Plan-Tests | I | A | R |
+
+**Legende:** R=Responsible, A=Accountable, C=Consulted, I=Informed
+
+## 2.3 Infrastruktur
+
+**Primärer Standort:** {{ netbox.site_name }}  
+**Backup-Infrastruktur:** {{ netbox.device_name }}
+""")
+    
+    # BIA Methodology
+    (de_bcm / "0070_BIA_Methodik.md").write_text("""# 7. BIA-Methodik
+
+## 7.1 Business Impact Analysis
+
+Die Business Impact Analysis (BIA) wird nach ISO 22301 durchgeführt.
+
+**Verantwortlich:** {{ meta.cio.name }}
+
+## 7.2 Kritikalitätsbewertung
+
+Standort: {{ netbox.site_name }}
+
+[TODO: Kritikalitätsbewertung für spezifische Services eintragen]
+
+## 7.3 RTO/RPO Definitionen
+
+[TODO: Recovery Time Objectives und Recovery Point Objectives definieren]
+""")
+    
+    # English BCM templates
+    en_bcm = templates_dir / "en" / "bcm"
+    en_bcm.mkdir(parents=True)
+    
+    # Metadata template
+    (en_bcm / "0000_metadata_en_bcm.md").write_text("""# BCM Handbook
+
+**Document Metadata**
+
+- **Organization:** {{ meta.organization.name }}
+- **Created:** {{ metadata.date }}
+- **Author:** {{ meta.author }}
+- **Version:** {{ meta.document.version }}
+- **Type:** Business Continuity Management Handbook
+
+---
+""")
+    
+    # Purpose and Scope
+    (en_bcm / "0010_Purpose_and_Scope.md").write_text("""# 1. Purpose and Scope
+
+## 1.1 Purpose
+
+This BCM Handbook describes the Business Continuity Management for {{ meta.organization.name }}.
+
+**Reference:** ISO 22301:2019
+
+## 1.2 Scope
+
+- **Organization:** {{ meta.organization.name }}
+- **Location:** {{ netbox.site_name }}
+- **BCM Responsible:** {{ meta.cio.name }}
+
+## 1.3 Target Audience
+
+This handbook is intended for:
+- Management
+- BCM Team
+- Crisis Management Team
+""")
+    
+    # BCM Policy
+    (en_bcm / "0020_BCM_Policy.md").write_text("""# 2. BCM Policy
+
+## 2.1 Management Commitment
+
+The management of {{ meta.organization.name }} commits to implementing and maintaining a Business Continuity Management System according to ISO 22301.
+
+**CEO:** {{ meta.ceo.name }}  
+**CIO:** {{ meta.cio.name }}
+
+## 2.2 BCM Governance
+
+### RACI Matrix
+
+| Activity | CEO | CIO | BCM Manager |
+|---|---|---|---|
+| BCM Strategy | A | R | C |
+| BIA Execution | I | A | R |
+| Plan Tests | I | A | R |
+
+**Legend:** R=Responsible, A=Accountable, C=Consulted, I=Informed
+
+## 2.3 Infrastructure
+
+**Primary Location:** {{ netbox.site_name }}  
+**Backup Infrastructure:** {{ netbox.device_name }}
+""")
+    
+    # BIA Methodology
+    (en_bcm / "0070_BIA_Methodology.md").write_text("""# 7. BIA Methodology
+
+## 7.1 Business Impact Analysis
+
+The Business Impact Analysis (BIA) is conducted according to ISO 22301.
+
+**Responsible:** {{ meta.cio.name }}
+
+## 7.2 Criticality Assessment
+
+Location: {{ netbox.site_name }}
+
+[TODO: Enter criticality assessment for specific services]
+
+## 7.3 RTO/RPO Definitions
+
+[TODO: Define Recovery Time Objectives and Recovery Point Objectives]
+""")
+    
+    return templates_dir
+
+
+@pytest.mark.integration
+def test_end_to_end_bcm_handbook_generation_german(temp_workspace, bcm_templates, 
+                                                   sample_metadata_config, mock_netbox_api):
+    """
+    Test end-to-end BCM handbook generation for German.
+    
+    This test verifies:
+    - German BCM handbook generation
+    - ISO 22301 references present
+    - RACI matrices included
+    - All placeholder replacements (meta + netbox)
+    - Correct output structure
+    - No errors during processing
+    
+    Requirements: All BCM requirements (1.1-4.5)
+    Task: 5.5.1
+    """
+    from src.meta_adapter import MetaAdapter
+    
+    output_dir = temp_workspace / "Handbook"
+    
+    # Initialize components
+    template_manager = TemplateManager(bcm_templates)
+    
+    # Create meta adapter
+    meta_adapter = MetaAdapter(sample_metadata_config)
+    meta_adapter.connect()
+    
+    # Create netbox adapter
+    with patch('pynetbox.api') as mock_pynetbox:
+        mock_pynetbox.return_value = mock_netbox_api
+        
+        netbox_adapter = NetBoxAdapter(
+            url="https://netbox.example.com",
+            api_token="test_token"
+        )
+        netbox_adapter.connect()
+        
+        # Create placeholder processor
+        metadata_dict = {
+            "author": "Test Author",
+            "version": "1.0.0",
+            "date": "2025-01-30"
+        }
+        data_sources = {
+            "meta": meta_adapter,
+            "netbox": netbox_adapter,
+            "metadata": metadata_dict
+        }
+        processor = PlaceholderProcessor(data_sources, metadata_dict)
+        output_generator = OutputGenerator(output_dir)
+        
+        # Process German BCM templates
+        de_templates = template_manager.get_templates("de", "bcm")
+        assert len(de_templates) == 4, "Should find 4 German BCM templates"
+        
+        de_results = []
+        for template in de_templates:
+            content = template.read_content()
+            result = processor.process_template(content, template.path.name)
+            de_results.append(result)
+        
+        # Verify no errors
+        total_errors = sum(len(r.errors) for r in de_results)
+        assert total_errors == 0, "No errors should occur during processing"
+        
+        # Verify all placeholders were replaced
+        all_content = "\n\n".join([r.content for r in de_results])
+        
+        # Check meta placeholders
+        assert "{{ meta.organization.name }}" not in all_content
+        assert "{{ meta.ceo.name }}" not in all_content
+        assert "{{ meta.cio.name }}" not in all_content
+        assert "{{ meta.document.version }}" not in all_content
+        assert "{{ meta.author }}" not in all_content
+        
+        # Check netbox placeholders
+        assert "{{ netbox.site_name }}" not in all_content
+        assert "{{ netbox.device_name }}" not in all_content
+        
+        # Check metadata placeholders
+        assert "{{ metadata.date }}" not in all_content
+        
+        # Verify actual values are present
+        assert "Test Organization GmbH" in all_content
+        assert "John Doe" in all_content  # CEO
+        assert "Jane Smith" in all_content  # CIO
+        assert "Datacenter Munich" in all_content
+        assert "backup-server-01" in all_content
+        
+        # Verify ISO 22301 references
+        assert "ISO 22301" in all_content, "Should contain ISO 22301 references"
+        
+        # Verify RACI matrix present
+        assert "RACI" in all_content or "Responsible" in all_content, \
+            "Should contain RACI matrix"
+        
+        # Verify TODO markers remain (for customization)
+        assert "[TODO:" in all_content, "TODO markers should remain for customization"
+        
+        # Generate output
+        de_output_result = output_generator.generate_markdown(
+            [r.content for r in de_results], "de", "bcm"
+        )
+        de_output = de_output_result.markdown_path
+        
+        # Verify output structure
+        assert de_output.exists(), "German BCM output should exist"
+        assert de_output.parent == output_dir / "de" / "bcm"
+        assert de_output.name == "bcm_handbook.md"
+        
+        # Verify output content
+        output_content = de_output.read_text()
+        assert "BCM-Handbuch" in output_content
+        assert "Business Continuity Management" in output_content
+        assert "Test Organization GmbH" in output_content
+        assert "ISO 22301" in output_content
+        
+        # Verify replacement statistics
+        total_replacements = sum(len(r.replacements) for r in de_results)
+        assert total_replacements > 0, "Should have successful replacements"
+
+
+@pytest.mark.integration
+def test_end_to_end_bcm_handbook_generation_english(temp_workspace, bcm_templates, 
+                                                    sample_metadata_config, mock_netbox_api):
+    """
+    Test end-to-end BCM handbook generation for English.
+    
+    This test verifies:
+    - English BCM handbook generation
+    - Bilingual consistency (same structure as German)
+    - All placeholder replacements work in English
+    - Correct output structure
+    
+    Requirements: 3.1, 3.2, 3.3, 3.4, 3.5
+    Task: 5.5.1
+    """
+    from src.meta_adapter import MetaAdapter
+    
+    output_dir = temp_workspace / "Handbook"
+    
+    # Initialize components
+    template_manager = TemplateManager(bcm_templates)
+    
+    # Create meta adapter
+    meta_adapter = MetaAdapter(sample_metadata_config)
+    meta_adapter.connect()
+    
+    # Create netbox adapter
+    with patch('pynetbox.api') as mock_pynetbox:
+        mock_pynetbox.return_value = mock_netbox_api
+        
+        netbox_adapter = NetBoxAdapter(
+            url="https://netbox.example.com",
+            api_token="test_token"
+        )
+        netbox_adapter.connect()
+        
+        # Create placeholder processor
+        metadata_dict = {
+            "author": "Test Author",
+            "version": "1.0.0",
+            "date": "2025-01-30"
+        }
+        data_sources = {
+            "meta": meta_adapter,
+            "netbox": netbox_adapter,
+            "metadata": metadata_dict
+        }
+        processor = PlaceholderProcessor(data_sources, metadata_dict)
+        output_generator = OutputGenerator(output_dir)
+        
+        # Process English BCM templates
+        en_templates = template_manager.get_templates("en", "bcm")
+        assert len(en_templates) == 4, "Should find 4 English BCM templates"
+        
+        en_results = []
+        for template in en_templates:
+            content = template.read_content()
+            result = processor.process_template(content, template.path.name)
+            en_results.append(result)
+        
+        # Verify no errors
+        total_errors = sum(len(r.errors) for r in en_results)
+        assert total_errors == 0, "No errors should occur during processing"
+        
+        # Verify all placeholders were replaced
+        all_content = "\n\n".join([r.content for r in en_results])
+        
+        # Check placeholders were replaced
+        assert "{{ meta.organization.name }}" not in all_content
+        assert "{{ meta.ceo.name }}" not in all_content
+        assert "{{ meta.cio.name }}" not in all_content
+        assert "{{ netbox.site_name }}" not in all_content
+        assert "{{ netbox.device_name }}" not in all_content
+        
+        # Verify actual values are present
+        assert "Test Organization GmbH" in all_content
+        assert "John Doe" in all_content
+        assert "Jane Smith" in all_content
+        assert "Datacenter Munich" in all_content
+        assert "backup-server-01" in all_content
+        
+        # Verify ISO 22301 references
+        assert "ISO 22301" in all_content
+        
+        # Verify RACI matrix present
+        assert "RACI" in all_content or "Responsible" in all_content
+        
+        # Generate output
+        en_output_result = output_generator.generate_markdown(
+            [r.content for r in en_results], "en", "bcm"
+        )
+        en_output = en_output_result.markdown_path
+        
+        # Verify output structure
+        assert en_output.exists(), "English BCM output should exist"
+        assert en_output.parent == output_dir / "en" / "bcm"
+        assert en_output.name == "bcm_handbook.md"
+        
+        # Verify output content
+        output_content = en_output.read_text()
+        assert "BCM Handbook" in output_content
+        assert "Business Continuity Management" in output_content
+        assert "Test Organization GmbH" in output_content
+        assert "ISO 22301" in output_content
+
+
+@pytest.mark.integration
+def test_bcm_bilingual_consistency(temp_workspace, bcm_templates, 
+                                  sample_metadata_config, mock_netbox_api):
+    """
+    Test BCM bilingual consistency.
+    
+    This test verifies:
+    - German and English BCM templates have same structure
+    - Same number of templates in both languages
+    - Same placeholder usage
+    - Same data values in both outputs
+    
+    Requirements: 3.3, 3.4, 3.5
+    Task: 5.5.1
+    """
+    from src.meta_adapter import MetaAdapter
+    
+    output_dir = temp_workspace / "Handbook"
+    
+    # Initialize components
+    template_manager = TemplateManager(bcm_templates)
+    
+    # Create adapters
+    meta_adapter = MetaAdapter(sample_metadata_config)
+    meta_adapter.connect()
+    
+    with patch('pynetbox.api') as mock_pynetbox:
+        mock_pynetbox.return_value = mock_netbox_api
+        
+        netbox_adapter = NetBoxAdapter(
+            url="https://netbox.example.com",
+            api_token="test_token"
+        )
+        netbox_adapter.connect()
+        
+        metadata_dict = {
+            "author": "Test Author",
+            "version": "1.0.0",
+            "date": "2025-01-30"
+        }
+        data_sources = {
+            "meta": meta_adapter,
+            "netbox": netbox_adapter,
+            "metadata": metadata_dict
+        }
+        processor = PlaceholderProcessor(data_sources, metadata_dict)
+        output_generator = OutputGenerator(output_dir)
+        
+        # Process both languages
+        de_templates = template_manager.get_templates("de", "bcm")
+        en_templates = template_manager.get_templates("en", "bcm")
+        
+        # Verify same number of templates
+        assert len(de_templates) == len(en_templates), \
+            "German and English should have same number of templates"
+        
+        # Process German
+        de_results = []
+        for template in de_templates:
+            content = template.read_content()
+            result = processor.process_template(content, template.path.name)
+            de_results.append(result)
+        
+        # Process English
+        en_results = []
+        for template in en_templates:
+            content = template.read_content()
+            result = processor.process_template(content, template.path.name)
+            en_results.append(result)
+        
+        # Verify same number of replacements (approximately)
+        de_total_replacements = sum(len(r.replacements) for r in de_results)
+        en_total_replacements = sum(len(r.replacements) for r in en_results)
+        
+        # Allow small difference due to language-specific text
+        assert abs(de_total_replacements - en_total_replacements) <= 2, \
+            f"Replacement counts should be similar: DE={de_total_replacements}, EN={en_total_replacements}"
+        
+        # Verify same data values in both
+        de_content = "\n".join([r.content for r in de_results])
+        en_content = "\n".join([r.content for r in en_results])
+        
+        # Same organization data
+        assert "Test Organization GmbH" in de_content
+        assert "Test Organization GmbH" in en_content
+        
+        # Same personnel
+        assert "John Doe" in de_content
+        assert "John Doe" in en_content
+        assert "Jane Smith" in de_content
+        assert "Jane Smith" in en_content
+        
+        # Same infrastructure
+        assert "Datacenter Munich" in de_content
+        assert "Datacenter Munich" in en_content
+        assert "backup-server-01" in de_content
+        assert "backup-server-01" in en_content
+        
+        # Generate outputs
+        de_output_result = output_generator.generate_markdown(
+            [r.content for r in de_results], "de", "bcm"
+        )
+        en_output_result = output_generator.generate_markdown(
+            [r.content for r in en_results], "en", "bcm"
+        )
+        
+        # Verify both outputs exist
+        assert de_output_result.markdown_path.exists()
+        assert en_output_result.markdown_path.exists()
+        
+        # Verify different directory structure
+        assert de_output_result.markdown_path.parent == output_dir / "de" / "bcm"
+        assert en_output_result.markdown_path.parent == output_dir / "en" / "bcm"
+
+
+
+@pytest.fixture
+def isms_templates(temp_workspace):
+    """Create ISMS templates for end-to-end testing."""
+    templates_dir = temp_workspace / "templates"
+    
+    # German ISMS templates
+    de_isms = templates_dir / "de" / "isms"
+    de_isms.mkdir(parents=True)
+    
+    # Metadata template
+    (de_isms / "0000_metadata_de_isms.md").write_text("""# ISMS-Handbuch
+
+**Dokument-Metadaten**
+
+- **Organisation:** {{ meta.organization.name }}
+- **Erstellt am:** {{ metadata.date }}
+- **Autor:** {{ meta.author }}
+- **Version:** {{ meta.document.version }}
+- **Typ:** Information Security Management System Handbuch
+
+---
+""")
+    
+    # Basis ISMS - Information Security Policy
+    (de_isms / "0010_ISMS_Informationssicherheitsleitlinie.md").write_text("""# 1. Informationssicherheitsleitlinie
+
+## 1.1 Management Commitment
+
+Die Geschäftsführung von {{ meta.organization.name }} verpflichtet sich zur Implementierung und Aufrechterhaltung eines Information Security Management Systems nach ISO/IEC 27001:2022.
+
+**Referenz:** ISO 27001:2022 Clause 5.2
+
+**CEO:** {{ meta.ceo.name }}  
+**CISO:** {{ meta.ciso.name }}
+
+## 1.2 Informationssicherheitsziele
+
+[TODO: Spezifische Sicherheitsziele definieren]
+
+## 1.3 Geltungsbereich
+
+**Organisation:** {{ meta.organization.name }}  
+**Standort:** {{ netbox.site_name }}
+""")
+    
+    # Basis ISMS - Scope
+    (de_isms / "0020_ISMS_Geltungsbereich_Scope.md").write_text("""# 2. ISMS Geltungsbereich (Scope)
+
+## 2.1 Scope Definition
+
+**Referenz:** ISO 27001:2022 Clause 4.3
+
+Der Geltungsbereich des ISMS umfasst:
+
+- **Organisation:** {{ meta.organization.name }}
+- **Standorte:** {{ netbox.site_name }}
+- **Systeme:** {{ netbox.device_name }}
+
+## 2.2 Boundaries
+
+[TODO: Grenzen des ISMS definieren]
+
+## 2.3 Ausschlüsse
+
+[TODO: Ausschlüsse dokumentieren]
+""")
+    
+    # Basis ISMS - Governance
+    (de_isms / "0040_ISMS_Governance_Rollen_und_Verantwortlichkeiten.md").write_text("""# 4. ISMS Governance, Rollen und Verantwortlichkeiten
+
+## 4.1 ISMS Governance-Struktur
+
+**Referenz:** ISO 27001:2022 Clause 5.3
+
+### Führungsebene
+
+- **CEO:** {{ meta.ceo.name }} ({{ meta.ceo.email }})
+- **CIO:** {{ meta.cio.name }} ({{ meta.cio.email }})
+- **CISO:** {{ meta.ciso.name }} ({{ meta.ciso.email }})
+
+## 4.2 RACI-Matrix für ISMS-Prozesse
+
+| Prozess | CEO | CIO | CISO | IT-Team |
+|---|---|---|---|---|
+| ISMS-Strategie | A | R | C | I |
+| Risikoanalyse | I | A | R | C |
+| Incident Response | I | A | R | R |
+| Audits | A | C | R | I |
+
+**Legende:** R=Responsible, A=Accountable, C=Consulted, I=Informed
+""")
+    
+    # Abstract Policy - Access Control
+    (de_isms / "0220_Policy_Zugriffssteuerung_und_Identitaetsmanagement.md").write_text("""# Policy: Zugriffssteuerung und Identitätsmanagement
+
+## Zweck
+
+Diese Policy definiert die Anforderungen an Zugriffssteuerung und Identitätsmanagement.
+
+**Annex A Mapping:** A.5.15, A.5.16, A.5.17, A.5.18
+
+## Geltungsbereich
+
+**Organisation:** {{ meta.organization.name }}  
+**Verantwortlich:** {{ meta.ciso.name }}
+
+## Policy-Statements
+
+1. Zugriff auf Informationssysteme erfolgt nach dem Need-to-Know-Prinzip
+2. Alle Benutzerkonten müssen eindeutig identifizierbar sein
+3. Privilegierte Zugriffe werden besonders überwacht
+
+## Verantwortlichkeiten
+
+- **Policy Owner:** {{ meta.ciso.name }}
+- **Genehmigung:** {{ meta.cio.name }}
+
+[TODO: Spezifische Policy-Anforderungen ergänzen]
+""")
+    
+    # Detailed Guideline - IAM
+    (de_isms / "0230_Richtlinie_IAM_Joiner_Mover_Leaver_und_Zugriffsantraege.md").write_text("""# Richtlinie: IAM Joiner-Mover-Leaver und Zugriffsanträge
+
+## Zweck
+
+Diese Richtlinie beschreibt die detaillierte Implementierung der Zugriffssteuerung.
+
+**Bezug:** Policy 0220 - Zugriffssteuerung und Identitätsmanagement  
+**Annex A Mapping:** A.5.16, A.5.17
+
+## Joiner-Prozess
+
+1. HR meldet neuen Mitarbeiter an {{ meta.ciso.email }}
+2. IT erstellt Benutzerkonto
+3. Vorgesetzter genehmigt Zugriffsrechte
+
+## Mover-Prozess
+
+[TODO: Mover-Prozess definieren]
+
+## Leaver-Prozess
+
+[TODO: Leaver-Prozess definieren]
+
+## Verantwortlichkeiten
+
+- **Prozess-Owner:** {{ meta.ciso.name }}
+- **Technische Umsetzung:** IT-Team
+- **Standort:** {{ netbox.site_name }}
+""")
+    
+    # Appendix - Annex A Mapping
+    (de_isms / "0710_Anhang_AnnexA_Mapping_Template.md").write_text("""# Anhang: Annex A Mapping
+
+## Annex A Control Mapping
+
+**Referenz:** ISO 27001:2022 Annex A, Amendment 1:2024
+
+### Organizational Controls (A.5)
+
+| Control | Title | Applicable | Implementation |
+|---|---|---|---|
+| A.5.1 | Policies for information security | Yes | 0010 |
+| A.5.15 | Access control | Yes | 0220, 0230 |
+| A.5.16 | Identity management | Yes | 0220, 0230 |
+
+### People Controls (A.6)
+
+[TODO: People Controls mapping]
+
+### Physical Controls (A.7)
+
+**Standort:** {{ netbox.site_name }}
+
+[TODO: Physical Controls mapping]
+
+## Compliance Status
+
+**Verantwortlich:** {{ meta.ciso.name }}  
+**Letzte Überprüfung:** {{ metadata.date }}
+""")
+    
+    # English ISMS templates
+    en_isms = templates_dir / "en" / "isms"
+    en_isms.mkdir(parents=True)
+    
+    # Metadata template
+    (en_isms / "0000_metadata_en_isms.md").write_text("""# ISMS Handbook
+
+**Document Metadata**
+
+- **Organization:** {{ meta.organization.name }}
+- **Created:** {{ metadata.date }}
+- **Author:** {{ meta.author }}
+- **Version:** {{ meta.document.version }}
+- **Type:** Information Security Management System Handbook
+
+---
+""")
+    
+    # Basis ISMS - Information Security Policy
+    (en_isms / "0010_ISMS_Information_Security_Policy.md").write_text("""# 1. Information Security Policy
+
+## 1.1 Management Commitment
+
+The management of {{ meta.organization.name }} commits to implementing and maintaining an Information Security Management System according to ISO/IEC 27001:2022.
+
+**Reference:** ISO 27001:2022 Clause 5.2
+
+**CEO:** {{ meta.ceo.name }}  
+**CISO:** {{ meta.ciso.name }}
+
+## 1.2 Information Security Objectives
+
+[TODO: Define specific security objectives]
+
+## 1.3 Scope
+
+**Organization:** {{ meta.organization.name }}  
+**Location:** {{ netbox.site_name }}
+""")
+    
+    # Basis ISMS - Scope
+    (en_isms / "0020_ISMS_Scope.md").write_text("""# 2. ISMS Scope
+
+## 2.1 Scope Definition
+
+**Reference:** ISO 27001:2022 Clause 4.3
+
+The ISMS scope includes:
+
+- **Organization:** {{ meta.organization.name }}
+- **Locations:** {{ netbox.site_name }}
+- **Systems:** {{ netbox.device_name }}
+
+## 2.2 Boundaries
+
+[TODO: Define ISMS boundaries]
+
+## 2.3 Exclusions
+
+[TODO: Document exclusions]
+""")
+    
+    # Basis ISMS - Governance
+    (en_isms / "0040_ISMS_Governance_Roles_and_Responsibilities.md").write_text("""# 4. ISMS Governance, Roles and Responsibilities
+
+## 4.1 ISMS Governance Structure
+
+**Reference:** ISO 27001:2022 Clause 5.3
+
+### Leadership
+
+- **CEO:** {{ meta.ceo.name }} ({{ meta.ceo.email }})
+- **CIO:** {{ meta.cio.name }} ({{ meta.cio.email }})
+- **CISO:** {{ meta.ciso.name }} ({{ meta.ciso.email }})
+
+## 4.2 RACI Matrix for ISMS Processes
+
+| Process | CEO | CIO | CISO | IT Team |
+|---|---|---|---|---|
+| ISMS Strategy | A | R | C | I |
+| Risk Analysis | I | A | R | C |
+| Incident Response | I | A | R | R |
+| Audits | A | C | R | I |
+
+**Legend:** R=Responsible, A=Accountable, C=Consulted, I=Informed
+""")
+    
+    # Abstract Policy - Access Control
+    (en_isms / "0220_Policy_Access_Control_and_Identity_Management.md").write_text("""# Policy: Access Control and Identity Management
+
+## Purpose
+
+This policy defines requirements for access control and identity management.
+
+**Annex A Mapping:** A.5.15, A.5.16, A.5.17, A.5.18
+
+## Scope
+
+**Organization:** {{ meta.organization.name }}  
+**Responsible:** {{ meta.ciso.name }}
+
+## Policy Statements
+
+1. Access to information systems follows the need-to-know principle
+2. All user accounts must be uniquely identifiable
+3. Privileged access is specially monitored
+
+## Responsibilities
+
+- **Policy Owner:** {{ meta.ciso.name }}
+- **Approval:** {{ meta.cio.name }}
+
+[TODO: Add specific policy requirements]
+""")
+    
+    # Detailed Guideline - IAM
+    (en_isms / "0230_Guideline_IAM_Joiner_Mover_Leaver_and_Access_Requests.md").write_text("""# Guideline: IAM Joiner-Mover-Leaver and Access Requests
+
+## Purpose
+
+This guideline describes the detailed implementation of access control.
+
+**Reference:** Policy 0220 - Access Control and Identity Management  
+**Annex A Mapping:** A.5.16, A.5.17
+
+## Joiner Process
+
+1. HR reports new employee to {{ meta.ciso.email }}
+2. IT creates user account
+3. Supervisor approves access rights
+
+## Mover Process
+
+[TODO: Define mover process]
+
+## Leaver Process
+
+[TODO: Define leaver process]
+
+## Responsibilities
+
+- **Process Owner:** {{ meta.ciso.name }}
+- **Technical Implementation:** IT Team
+- **Location:** {{ netbox.site_name }}
+""")
+    
+    # Appendix - Annex A Mapping
+    (en_isms / "0710_Appendix_AnnexA_Mapping_Template.md").write_text("""# Appendix: Annex A Mapping
+
+## Annex A Control Mapping
+
+**Reference:** ISO 27001:2022 Annex A, Amendment 1:2024
+
+### Organizational Controls (A.5)
+
+| Control | Title | Applicable | Implementation |
+|---|---|---|---|
+| A.5.1 | Policies for information security | Yes | 0010 |
+| A.5.15 | Access control | Yes | 0220, 0230 |
+| A.5.16 | Identity management | Yes | 0220, 0230 |
+
+### People Controls (A.6)
+
+[TODO: People Controls mapping]
+
+### Physical Controls (A.7)
+
+**Location:** {{ netbox.site_name }}
+
+[TODO: Physical Controls mapping]
+
+## Compliance Status
+
+**Responsible:** {{ meta.ciso.name }}  
+**Last Review:** {{ metadata.date }}
+""")
+    
+    return templates_dir
+
+
+@pytest.mark.integration
+def test_end_to_end_isms_handbook_generation_german(temp_workspace, isms_templates, 
+                                                    sample_metadata_config, mock_netbox_api):
+    """
+    Test end-to-end ISMS handbook generation for German.
+    
+    This test verifies:
+    - German ISMS handbook generation
+    - Three-tier structure (Basis, Policy, Guideline)
+    - ISO 27001:2022 references present
+    - Annex A mappings included
+    - RACI matrices included
+    - All placeholder replacements
+    
+    Requirements: All ISMS requirements (5.1-9.5)
+    Task: 5.5.2
+    """
+    from src.meta_adapter import MetaAdapter
+    
+    output_dir = temp_workspace / "Handbook"
+    
+    # Initialize components
+    template_manager = TemplateManager(isms_templates)
+    
+    # Create meta adapter
+    meta_adapter = MetaAdapter(sample_metadata_config)
+    meta_adapter.connect()
+    
+    # Create netbox adapter
+    with patch('pynetbox.api') as mock_pynetbox:
+        mock_pynetbox.return_value = mock_netbox_api
+        
+        netbox_adapter = NetBoxAdapter(
+            url="https://netbox.example.com",
+            api_token="test_token"
+        )
+        netbox_adapter.connect()
+        
+        # Create placeholder processor
+        metadata_dict = {
+            "author": "Test Author",
+            "version": "1.0.0",
+            "date": "2025-01-30"
+        }
+        data_sources = {
+            "meta": meta_adapter,
+            "netbox": netbox_adapter,
+            "metadata": metadata_dict
+        }
+        processor = PlaceholderProcessor(data_sources, metadata_dict)
+        output_generator = OutputGenerator(output_dir)
+        
+        # Process German ISMS templates
+        de_templates = template_manager.get_templates("de", "isms")
+        assert len(de_templates) == 7, "Should find 7 German ISMS templates"
+        
+        de_results = []
+        for template in de_templates:
+            content = template.read_content()
+            result = processor.process_template(content, template.path.name)
+            de_results.append(result)
+        
+        # Verify no errors
+        total_errors = sum(len(r.errors) for r in de_results)
+        assert total_errors == 0, "No errors should occur during processing"
+        
+        # Verify all placeholders were replaced
+        all_content = "\n\n".join([r.content for r in de_results])
+        
+        # Check meta placeholders
+        assert "{{ meta.organization.name }}" not in all_content
+        assert "{{ meta.ceo.name }}" not in all_content
+        assert "{{ meta.cio.name }}" not in all_content
+        assert "{{ meta.ciso.name }}" not in all_content
+        assert "{{ meta.ciso.email }}" not in all_content
+        
+        # Check netbox placeholders
+        assert "{{ netbox.site_name }}" not in all_content
+        assert "{{ netbox.device_name }}" not in all_content
+        
+        # Verify actual values are present
+        assert "Test Organization GmbH" in all_content
+        assert "John Doe" in all_content  # CEO
+        assert "Jane Smith" in all_content  # CIO
+        assert "Bob Johnson" in all_content  # CISO
+        assert "Datacenter Munich" in all_content
+        assert "backup-server-01" in all_content
+        
+        # Verify ISO 27001:2022 references
+        assert "ISO 27001:2022" in all_content or "ISO/IEC 27001:2022" in all_content, \
+            "Should contain ISO 27001:2022 references"
+        
+        # Verify Annex A mappings
+        assert "Annex A" in all_content, "Should contain Annex A mappings"
+        assert "A.5." in all_content, "Should contain Annex A control references"
+        
+        # Verify RACI matrix present
+        assert "RACI" in all_content or "Responsible" in all_content, \
+            "Should contain RACI matrix"
+        
+        # Verify three-tier structure elements
+        # Basis ISMS (0010-0160)
+        assert "Informationssicherheitsleitlinie" in all_content or "Information Security Policy" in all_content
+        assert "Geltungsbereich" in all_content or "Scope" in all_content
+        
+        # Abstract Policy (0220)
+        assert "Policy" in all_content
+        assert "Zugriffssteuerung" in all_content or "Access Control" in all_content
+        
+        # Detailed Guideline (0230)
+        assert "Richtlinie" in all_content or "Guideline" in all_content
+        assert "Joiner" in all_content and "Mover" in all_content and "Leaver" in all_content
+        
+        # Verify TODO markers remain
+        assert "[TODO:" in all_content, "TODO markers should remain for customization"
+        
+        # Generate output
+        de_output_result = output_generator.generate_markdown(
+            [r.content for r in de_results], "de", "isms"
+        )
+        de_output = de_output_result.markdown_path
+        
+        # Verify output structure
+        assert de_output.exists(), "German ISMS output should exist"
+        assert de_output.parent == output_dir / "de" / "isms"
+        assert de_output.name == "isms_handbook.md"
+        
+        # Verify output content
+        output_content = de_output.read_text()
+        assert "ISMS" in output_content
+        assert "Information Security Management" in output_content
+        assert "Test Organization GmbH" in output_content
+        assert "ISO 27001" in output_content
+        assert "Annex A" in output_content
+
+
+@pytest.mark.integration
+def test_end_to_end_isms_handbook_generation_english(temp_workspace, isms_templates, 
+                                                     sample_metadata_config, mock_netbox_api):
+    """
+    Test end-to-end ISMS handbook generation for English.
+    
+    This test verifies:
+    - English ISMS handbook generation
+    - Three-tier structure maintained in English
+    - All placeholder replacements work in English
+    - Correct output structure
+    
+    Requirements: 8.1, 8.2, 8.3, 8.4, 8.5
+    Task: 5.5.2
+    """
+    from src.meta_adapter import MetaAdapter
+    
+    output_dir = temp_workspace / "Handbook"
+    
+    # Initialize components
+    template_manager = TemplateManager(isms_templates)
+    
+    # Create meta adapter
+    meta_adapter = MetaAdapter(sample_metadata_config)
+    meta_adapter.connect()
+    
+    # Create netbox adapter
+    with patch('pynetbox.api') as mock_pynetbox:
+        mock_pynetbox.return_value = mock_netbox_api
+        
+        netbox_adapter = NetBoxAdapter(
+            url="https://netbox.example.com",
+            api_token="test_token"
+        )
+        netbox_adapter.connect()
+        
+        # Create placeholder processor
+        metadata_dict = {
+            "author": "Test Author",
+            "version": "1.0.0",
+            "date": "2025-01-30"
+        }
+        data_sources = {
+            "meta": meta_adapter,
+            "netbox": netbox_adapter,
+            "metadata": metadata_dict
+        }
+        processor = PlaceholderProcessor(data_sources, metadata_dict)
+        output_generator = OutputGenerator(output_dir)
+        
+        # Process English ISMS templates
+        en_templates = template_manager.get_templates("en", "isms")
+        assert len(en_templates) == 7, "Should find 7 English ISMS templates"
+        
+        en_results = []
+        for template in en_templates:
+            content = template.read_content()
+            result = processor.process_template(content, template.path.name)
+            en_results.append(result)
+        
+        # Verify no errors
+        total_errors = sum(len(r.errors) for r in en_results)
+        assert total_errors == 0, "No errors should occur during processing"
+        
+        # Verify all placeholders were replaced
+        all_content = "\n\n".join([r.content for r in en_results])
+        
+        # Check placeholders were replaced
+        assert "{{ meta.organization.name }}" not in all_content
+        assert "{{ meta.ciso.name }}" not in all_content
+        assert "{{ netbox.site_name }}" not in all_content
+        
+        # Verify actual values are present
+        assert "Test Organization GmbH" in all_content
+        assert "Bob Johnson" in all_content  # CISO
+        assert "Datacenter Munich" in all_content
+        
+        # Verify ISO 27001:2022 references
+        assert "ISO 27001:2022" in all_content or "ISO/IEC 27001:2022" in all_content
+        
+        # Verify Annex A mappings
+        assert "Annex A" in all_content
+        assert "A.5." in all_content
+        
+        # Verify RACI matrix present
+        assert "RACI" in all_content or "Responsible" in all_content
+        
+        # Verify three-tier structure in English
+        assert "Information Security Policy" in all_content
+        assert "Scope" in all_content
+        assert "Policy" in all_content
+        assert "Guideline" in all_content
+        assert "Joiner" in all_content
+        
+        # Generate output
+        en_output_result = output_generator.generate_markdown(
+            [r.content for r in en_results], "en", "isms"
+        )
+        en_output = en_output_result.markdown_path
+        
+        # Verify output structure
+        assert en_output.exists(), "English ISMS output should exist"
+        assert en_output.parent == output_dir / "en" / "isms"
+        assert en_output.name == "isms_handbook.md"
+        
+        # Verify output content
+        output_content = en_output.read_text()
+        assert "ISMS Handbook" in output_content
+        assert "Information Security Management" in output_content
+        assert "Test Organization GmbH" in output_content
+        assert "ISO 27001" in output_content
+        assert "Annex A" in output_content
+
+
+@pytest.mark.integration
+def test_isms_three_tier_structure_verification(temp_workspace, isms_templates, 
+                                               sample_metadata_config, mock_netbox_api):
+    """
+    Test ISMS three-tier structure verification.
+    
+    This test verifies:
+    - Basis ISMS documents (0010-0160)
+    - Abstract Policies (0200-0680, even numbers)
+    - Detailed Guidelines (0210-0690, odd numbers)
+    - Policy-Guideline pairing
+    
+    Requirements: 7.1, 7.2, 7.3, 7.4, 7.5
+    Task: 5.5.2
+    """
+    from src.meta_adapter import MetaAdapter
+    
+    # Initialize components
+    template_manager = TemplateManager(isms_templates)
+    
+    # Get German ISMS templates
+    de_templates = template_manager.get_templates("de", "isms")
+    
+    # Categorize templates by tier
+    basis_templates = []
+    policy_templates = []
+    guideline_templates = []
+    appendix_templates = []
+    
+    for template in de_templates:
+        filename = template.path.name
+        # Extract number from filename
+        import re
+        match = re.match(r'^(\d{4})_', filename)
+        if match:
+            number = int(match.group(1))
+            
+            if 10 <= number <= 160:
+                basis_templates.append(template)
+            elif 200 <= number <= 680 and number % 20 == 0:  # Even numbers (0200, 0220, etc.)
+                policy_templates.append(template)
+            elif 210 <= number <= 690 and number % 20 == 10:  # Odd numbers (0210, 0230, etc.)
+                guideline_templates.append(template)
+            elif 710 <= number <= 740:
+                appendix_templates.append(template)
+    
+    # Verify we have templates in each tier
+    assert len(basis_templates) > 0, "Should have Basis ISMS templates"
+    assert len(policy_templates) > 0, "Should have Policy templates"
+    assert len(guideline_templates) > 0, "Should have Guideline templates"
+    assert len(appendix_templates) > 0, "Should have Appendix templates"
+    
+    # Verify Policy-Guideline pairing
+    # For each policy (0220), there should be a corresponding guideline (0230)
+    policy_numbers = set()
+    guideline_numbers = set()
+    
+    for template in policy_templates:
+        match = re.match(r'^(\d{4})_', template.path.name)
+        if match:
+            policy_numbers.add(int(match.group(1)))
+    
+    for template in guideline_templates:
+        match = re.match(r'^(\d{4})_', template.path.name)
+        if match:
+            guideline_numbers.add(int(match.group(1)))
+    
+    # Check that for each policy, there's a guideline 10 numbers higher
+    for policy_num in policy_numbers:
+        expected_guideline = policy_num + 10
+        assert expected_guideline in guideline_numbers, \
+            f"Policy {policy_num} should have corresponding guideline {expected_guideline}"
+    
+    # Process templates and verify content structure
+    meta_adapter = MetaAdapter(sample_metadata_config)
+    meta_adapter.connect()
+    
+    with patch('pynetbox.api') as mock_pynetbox:
+        mock_pynetbox.return_value = mock_netbox_api
+        
+        netbox_adapter = NetBoxAdapter(
+            url="https://netbox.example.com",
+            api_token="test_token"
+        )
+        netbox_adapter.connect()
+        
+        metadata_dict = {"author": "Test Author", "version": "1.0.0", "date": "2025-01-30"}
+        data_sources = {
+            "meta": meta_adapter,
+            "netbox": netbox_adapter,
+            "metadata": metadata_dict
+        }
+        processor = PlaceholderProcessor(data_sources, metadata_dict)
+        
+        # Process policy template
+        if policy_templates:
+            policy_content = policy_templates[0].read_content()
+            policy_result = processor.process_template(policy_content, policy_templates[0].path.name)
+            
+            # Verify policy characteristics
+            assert "Policy" in policy_result.content
+            assert "Annex A" in policy_result.content, "Policies should reference Annex A"
+            assert "Verantwortlich" in policy_result.content or "Responsible" in policy_result.content
+        
+        # Process guideline template
+        if guideline_templates:
+            guideline_content = guideline_templates[0].read_content()
+            guideline_result = processor.process_template(guideline_content, guideline_templates[0].path.name)
+            
+            # Verify guideline characteristics
+            assert "Richtlinie" in guideline_result.content or "Guideline" in guideline_result.content
+            assert "Policy" in guideline_result.content, "Guidelines should reference their parent policy"
+
+
+
+@pytest.fixture
+def bsi_grundschutz_templates(temp_workspace):
+    """Create BSI Grundschutz templates for end-to-end testing."""
+    templates_dir = temp_workspace / "templates"
+    
+    # German BSI Grundschutz templates
+    de_bsi = templates_dir / "de" / "bsi-grundschutz"
+    de_bsi.mkdir(parents=True)
+    
+    # Metadata template
+    (de_bsi / "0000_metadata_de_bsi-grundschutz.md").write_text("""# BSI IT-Grundschutz Handbuch
+
+**Dokument-Metadaten**
+
+- **Organisation:** {{ meta.organization.name }}
+- **Erstellt am:** {{ metadata.date }}
+- **Autor:** {{ meta.author }}
+- **Version:** {{ meta.document.version }}
+- **Typ:** BSI IT-Grundschutz Handbuch
+
+---
+""")
+    
+    # Information Security Policy
+    (de_bsi / "0010_Informationssicherheitsleitlinie.md").write_text("""# 1. Informationssicherheitsleitlinie
+
+## 1.1 Management Commitment
+
+Die Geschäftsführung von {{ meta.organization.name }} verpflichtet sich zur Implementierung und Aufrechterhaltung eines ISMS nach BSI IT-Grundschutz.
+
+**Referenz:** BSI Standard 200-1
+
+**CEO:** {{ meta.ceo.name }}  
+**CISO:** {{ meta.ciso.name }}
+
+## 1.2 Informationssicherheitsziele
+
+[TODO: Spezifische Sicherheitsziele nach BSI-Vorgaben definieren]
+
+## 1.3 Geltungsbereich
+
+**Organisation:** {{ meta.organization.name }}  
+**Standort:** {{ netbox.site_name }}
+""")
+    
+    # ISMS Organization
+    (de_bsi / "0020_ISMS_Organisation_Rollen_RACI.md").write_text("""# 2. ISMS Organisation, Rollen und RACI
+
+## 2.1 ISMS-Organisationsstruktur
+
+**Referenz:** BSI Standard 200-1, Kapitel 7
+
+### Führungsebene
+
+- **CEO:** {{ meta.ceo.name }} ({{ meta.ceo.email }})
+- **CIO:** {{ meta.cio.name }} ({{ meta.cio.email }})
+- **CISO/ISB:** {{ meta.ciso.name }} ({{ meta.ciso.email }})
+
+## 2.2 RACI-Matrix für BSI-Prozesse
+
+| Prozess | CEO | CIO | ISB | IT-Team |
+|---|---|---|---|---|
+| Sicherheitskonzept | A | R | R | C |
+| Strukturanalyse | I | A | R | C |
+| Schutzbedarfsfeststellung | I | A | R | C |
+| Modellierung | I | A | R | R |
+| Basis-Sicherheitscheck | I | A | R | R |
+
+**Legende:** R=Responsible, A=Accountable, C=Consulted, I=Informed
+
+**ISB:** Informationssicherheitsbeauftragter
+""")
+    
+    # Structure Analysis
+    (de_bsi / "0050_Strukturanalyse_Template.md").write_text("""# 5. Strukturanalyse
+
+## 5.1 Methodik
+
+Die Strukturanalyse wird nach BSI Standard 200-2 durchgeführt.
+
+**Referenz:** BSI Standard 200-2, Kapitel 6
+
+**Verantwortlich:** {{ meta.ciso.name }}
+
+## 5.2 Informationsverbund
+
+**Organisation:** {{ meta.organization.name }}  
+**Standort:** {{ netbox.site_name }}  
+**Systeme:** {{ netbox.device_name }}
+
+## 5.3 Erfasste Objekte
+
+[TODO: Erfasste Objekte nach BSI-Kategorien dokumentieren]
+
+### Anwendungen
+
+[TODO: Anwendungen erfassen]
+
+### IT-Systeme
+
+- **System:** {{ netbox.device_name }}
+- **Standort:** {{ netbox.site_name }}
+
+### Netzwerke
+
+[TODO: Netzwerke erfassen]
+""")
+    
+    # Baustein Mapping
+    (de_bsi / "0070_Modellierung_Bausteinzuordnung_Template.md").write_text("""# 7. Modellierung und Bausteinzuordnung
+
+## 7.1 Modellierung nach BSI IT-Grundschutz
+
+**Referenz:** BSI Standard 200-2, Kapitel 8
+
+**Verantwortlich:** {{ meta.ciso.name }}
+
+## 7.2 Bausteinzuordnung
+
+### ISMS-Bausteine (ISMS.*)
+
+| Baustein | Titel | Zugeordnet zu |
+|---|---|---|
+| ISMS.1 | Sicherheitsmanagement | {{ meta.organization.name }} |
+| ISMS.1.A1 | Übernahme der Gesamtverantwortung | {{ meta.ceo.name }} |
+
+### ORP-Bausteine (Organisation und Personal)
+
+[TODO: ORP-Bausteine zuordnen]
+
+### CON-Bausteine (Konzeption und Vorgehensweisen)
+
+[TODO: CON-Bausteine zuordnen]
+
+### OPS-Bausteine (Betrieb)
+
+**Standort:** {{ netbox.site_name }}
+
+[TODO: OPS-Bausteine zuordnen]
+
+### DER-Bausteine (Detektion und Reaktion)
+
+[TODO: DER-Bausteine zuordnen]
+""")
+    
+    # Risk Analysis
+    (de_bsi / "0090_Risikoanalyse_nach_BSI_200_3_Template.md").write_text("""# 9. Risikoanalyse nach BSI Standard 200-3
+
+## 9.1 Risikoanalyse-Methodik
+
+Die Risikoanalyse wird nach BSI Standard 200-3 durchgeführt.
+
+**Referenz:** BSI Standard 200-3
+
+**Verantwortlich:** {{ meta.ciso.name }}
+
+## 9.2 Gefährdungskatalog
+
+[TODO: Relevante Gefährdungen aus BSI-Katalog identifizieren]
+
+## 9.3 Risikobehandlung
+
+**Standort:** {{ netbox.site_name }}
+
+[TODO: Risikobehandlungsoptionen dokumentieren]
+
+## 9.4 Restrisiken
+
+[TODO: Akzeptierte Restrisiken dokumentieren]
+
+**Genehmigung:** {{ meta.ceo.name }}
+""")
+    
+    # Policy - Access Control
+    (de_bsi / "0200_Policy_Zugriffssteuerung_und_Berechtigungen.md").write_text("""# Policy: Zugriffssteuerung und Berechtigungen
+
+## Zweck
+
+Diese Policy definiert die Anforderungen an Zugriffssteuerung und Berechtigungsvergabe.
+
+**BSI Baustein-Referenz:** ORP.4 (Identitäts- und Berechtigungsmanagement)
+
+## Geltungsbereich
+
+**Organisation:** {{ meta.organization.name }}  
+**Verantwortlich:** {{ meta.ciso.name }}
+
+## Policy-Statements
+
+1. Zugriff auf IT-Systeme erfolgt nach dem Need-to-Know-Prinzip
+2. Alle Benutzerkonten müssen eindeutig identifizierbar sein
+3. Privilegierte Zugriffe werden protokolliert und überwacht
+
+## Verantwortlichkeiten
+
+- **Policy Owner:** {{ meta.ciso.name }}
+- **Genehmigung:** {{ meta.cio.name }}
+
+[TODO: Spezifische Policy-Anforderungen nach BSI-Vorgaben ergänzen]
+""")
+    
+    # Guideline - IAM
+    (de_bsi / "0210_Richtlinie_IAM_Joiner_Mover_Leaver_und_Rezertifizierung.md").write_text("""# Richtlinie: IAM Joiner-Mover-Leaver und Rezertifizierung
+
+## Zweck
+
+Diese Richtlinie beschreibt die detaillierte Implementierung der Zugriffssteuerung nach BSI-Vorgaben.
+
+**Bezug:** Policy 0200 - Zugriffssteuerung und Berechtigungen  
+**BSI Baustein-Referenz:** ORP.4.A1, ORP.4.A2, ORP.4.A3
+
+## Joiner-Prozess
+
+1. HR meldet neuen Mitarbeiter an {{ meta.ciso.email }}
+2. IT erstellt Benutzerkonto nach Freigabe
+3. Vorgesetzter genehmigt Zugriffsrechte
+
+## Mover-Prozess
+
+[TODO: Mover-Prozess nach BSI-Vorgaben definieren]
+
+## Leaver-Prozess
+
+[TODO: Leaver-Prozess nach BSI-Vorgaben definieren]
+
+## Rezertifizierung
+
+[TODO: Rezertifizierungsprozess definieren]
+
+## Verantwortlichkeiten
+
+- **Prozess-Owner:** {{ meta.ciso.name }}
+- **Technische Umsetzung:** IT-Team
+- **Standort:** {{ netbox.site_name }}
+""")
+    
+    # English BSI Grundschutz templates
+    en_bsi = templates_dir / "en" / "bsi-grundschutz"
+    en_bsi.mkdir(parents=True)
+    
+    # Metadata template
+    (en_bsi / "0000_metadata_en_bsi-grundschutz.md").write_text("""# BSI IT-Grundschutz Handbook
+
+**Document Metadata**
+
+- **Organization:** {{ meta.organization.name }}
+- **Created:** {{ metadata.date }}
+- **Author:** {{ meta.author }}
+- **Version:** {{ meta.document.version }}
+- **Type:** BSI IT-Grundschutz Handbook
+
+---
+""")
+    
+    # Information Security Policy
+    (en_bsi / "0010_Information_Security_Policy.md").write_text("""# 1. Information Security Policy
+
+## 1.1 Management Commitment
+
+The management of {{ meta.organization.name }} commits to implementing and maintaining an ISMS according to BSI IT-Grundschutz.
+
+**Reference:** BSI Standard 200-1
+
+**CEO:** {{ meta.ceo.name }}  
+**CISO:** {{ meta.ciso.name }}
+
+## 1.2 Information Security Objectives
+
+[TODO: Define specific security objectives according to BSI requirements]
+
+## 1.3 Scope
+
+**Organization:** {{ meta.organization.name }}  
+**Location:** {{ netbox.site_name }}
+""")
+    
+    # ISMS Organization
+    (en_bsi / "0020_ISMS_Organization_Roles_RACI.md").write_text("""# 2. ISMS Organization, Roles and RACI
+
+## 2.1 ISMS Organization Structure
+
+**Reference:** BSI Standard 200-1, Chapter 7
+
+### Leadership
+
+- **CEO:** {{ meta.ceo.name }} ({{ meta.ceo.email }})
+- **CIO:** {{ meta.cio.name }} ({{ meta.cio.email }})
+- **CISO/ISB:** {{ meta.ciso.name }} ({{ meta.ciso.email }})
+
+## 2.2 RACI Matrix for BSI Processes
+
+| Process | CEO | CIO | ISB | IT Team |
+|---|---|---|---|---|
+| Security Concept | A | R | R | C |
+| Structure Analysis | I | A | R | C |
+| Protection Requirements | I | A | R | C |
+| Modeling | I | A | R | R |
+| Basic Security Check | I | A | R | R |
+
+**Legend:** R=Responsible, A=Accountable, C=Consulted, I=Informed
+
+**ISB:** Information Security Officer
+""")
+    
+    # Structure Analysis
+    (en_bsi / "0050_Structure_Analysis_Template.md").write_text("""# 5. Structure Analysis
+
+## 5.1 Methodology
+
+The structure analysis is conducted according to BSI Standard 200-2.
+
+**Reference:** BSI Standard 200-2, Chapter 6
+
+**Responsible:** {{ meta.ciso.name }}
+
+## 5.2 Information Domain
+
+**Organization:** {{ meta.organization.name }}  
+**Location:** {{ netbox.site_name }}  
+**Systems:** {{ netbox.device_name }}
+
+## 5.3 Recorded Objects
+
+[TODO: Document recorded objects according to BSI categories]
+
+### Applications
+
+[TODO: Record applications]
+
+### IT Systems
+
+- **System:** {{ netbox.device_name }}
+- **Location:** {{ netbox.site_name }}
+
+### Networks
+
+[TODO: Record networks]
+""")
+    
+    # Baustein Mapping
+    (en_bsi / "0070_Modeling_Baustein_Assignment_Template.md").write_text("""# 7. Modeling and Baustein Assignment
+
+## 7.1 Modeling according to BSI IT-Grundschutz
+
+**Reference:** BSI Standard 200-2, Chapter 8
+
+**Responsible:** {{ meta.ciso.name }}
+
+## 7.2 Baustein Assignment
+
+### ISMS Bausteine (ISMS.*)
+
+| Baustein | Title | Assigned to |
+|---|---|---|
+| ISMS.1 | Security Management | {{ meta.organization.name }} |
+| ISMS.1.A1 | Assumption of Overall Responsibility | {{ meta.ceo.name }} |
+
+### ORP Bausteine (Organization and Personnel)
+
+[TODO: Assign ORP Bausteine]
+
+### CON Bausteine (Conception and Procedures)
+
+[TODO: Assign CON Bausteine]
+
+### OPS Bausteine (Operations)
+
+**Location:** {{ netbox.site_name }}
+
+[TODO: Assign OPS Bausteine]
+
+### DER Bausteine (Detection and Response)
+
+[TODO: Assign DER Bausteine]
+""")
+    
+    # Risk Analysis
+    (en_bsi / "0090_Risk_Analysis_BSI_200_3_Template.md").write_text("""# 9. Risk Analysis according to BSI Standard 200-3
+
+## 9.1 Risk Analysis Methodology
+
+The risk analysis is conducted according to BSI Standard 200-3.
+
+**Reference:** BSI Standard 200-3
+
+**Responsible:** {{ meta.ciso.name }}
+
+## 9.2 Threat Catalog
+
+[TODO: Identify relevant threats from BSI catalog]
+
+## 9.3 Risk Treatment
+
+**Location:** {{ netbox.site_name }}
+
+[TODO: Document risk treatment options]
+
+## 9.4 Residual Risks
+
+[TODO: Document accepted residual risks]
+
+**Approval:** {{ meta.ceo.name }}
+""")
+    
+    # Policy - Access Control
+    (en_bsi / "0200_Policy_Access_Control_and_Permissions.md").write_text("""# Policy: Access Control and Permissions
+
+## Purpose
+
+This policy defines requirements for access control and permission assignment.
+
+**BSI Baustein Reference:** ORP.4 (Identity and Authorization Management)
+
+## Scope
+
+**Organization:** {{ meta.organization.name }}  
+**Responsible:** {{ meta.ciso.name }}
+
+## Policy Statements
+
+1. Access to IT systems follows the need-to-know principle
+2. All user accounts must be uniquely identifiable
+3. Privileged access is logged and monitored
+
+## Responsibilities
+
+- **Policy Owner:** {{ meta.ciso.name }}
+- **Approval:** {{ meta.cio.name }}
+
+[TODO: Add specific policy requirements according to BSI guidelines]
+""")
+    
+    # Guideline - IAM
+    (en_bsi / "0210_Guideline_IAM_Joiner_Mover_Leaver_and_Recertification.md").write_text("""# Guideline: IAM Joiner-Mover-Leaver and Recertification
+
+## Purpose
+
+This guideline describes the detailed implementation of access control according to BSI requirements.
+
+**Reference:** Policy 0200 - Access Control and Permissions  
+**BSI Baustein Reference:** ORP.4.A1, ORP.4.A2, ORP.4.A3
+
+## Joiner Process
+
+1. HR reports new employee to {{ meta.ciso.email }}
+2. IT creates user account after approval
+3. Supervisor approves access rights
+
+## Mover Process
+
+[TODO: Define mover process according to BSI requirements]
+
+## Leaver Process
+
+[TODO: Define leaver process according to BSI requirements]
+
+## Recertification
+
+[TODO: Define recertification process]
+
+## Responsibilities
+
+- **Process Owner:** {{ meta.ciso.name }}
+- **Technical Implementation:** IT Team
+- **Location:** {{ netbox.site_name }}
+""")
+    
+    return templates_dir
+
+
+@pytest.mark.integration
+def test_end_to_end_bsi_grundschutz_handbook_generation_german(temp_workspace, bsi_grundschutz_templates, 
+                                                               sample_metadata_config, mock_netbox_api):
+    """
+    Test end-to-end BSI Grundschutz handbook generation for German.
+    
+    This test verifies:
+    - German BSI Grundschutz handbook generation
+    - BSI Standards 200-1, 200-2, 200-3 references present
+    - BSI Baustein references included
+    - RACI matrices included
+    - All placeholder replacements
+    
+    Requirements: All BSI Grundschutz requirements (10.1-14.5)
+    Task: 5.5.3
+    """
+    from src.meta_adapter import MetaAdapter
+    
+    output_dir = temp_workspace / "Handbook"
+    
+    # Initialize components
+    template_manager = TemplateManager(bsi_grundschutz_templates)
+    
+    # Create meta adapter
+    meta_adapter = MetaAdapter(sample_metadata_config)
+    meta_adapter.connect()
+    
+    # Create netbox adapter
+    with patch('pynetbox.api') as mock_pynetbox:
+        mock_pynetbox.return_value = mock_netbox_api
+        
+        netbox_adapter = NetBoxAdapter(
+            url="https://netbox.example.com",
+            api_token="test_token"
+        )
+        netbox_adapter.connect()
+        
+        # Create placeholder processor
+        metadata_dict = {
+            "author": "Test Author",
+            "version": "1.0.0",
+            "date": "2025-01-30"
+        }
+        data_sources = {
+            "meta": meta_adapter,
+            "netbox": netbox_adapter,
+            "metadata": metadata_dict
+        }
+        processor = PlaceholderProcessor(data_sources, metadata_dict)
+        output_generator = OutputGenerator(output_dir)
+        
+        # Process German BSI Grundschutz templates
+        de_templates = template_manager.get_templates("de", "bsi-grundschutz")
+        assert len(de_templates) == 8, "Should find 8 German BSI Grundschutz templates"
+        
+        de_results = []
+        for template in de_templates:
+            content = template.read_content()
+            result = processor.process_template(content, template.path.name)
+            de_results.append(result)
+        
+        # Verify no errors
+        total_errors = sum(len(r.errors) for r in de_results)
+        assert total_errors == 0, "No errors should occur during processing"
+        
+        # Verify all placeholders were replaced
+        all_content = "\n\n".join([r.content for r in de_results])
+        
+        # Check meta placeholders
+        assert "{{ meta.organization.name }}" not in all_content
+        assert "{{ meta.ceo.name }}" not in all_content
+        assert "{{ meta.cio.name }}" not in all_content
+        assert "{{ meta.ciso.name }}" not in all_content
+        assert "{{ meta.ciso.email }}" not in all_content
+        
+        # Check netbox placeholders
+        assert "{{ netbox.site_name }}" not in all_content
+        assert "{{ netbox.device_name }}" not in all_content
+        
+        # Verify actual values are present
+        assert "Test Organization GmbH" in all_content
+        assert "John Doe" in all_content  # CEO
+        assert "Jane Smith" in all_content  # CIO
+        assert "Bob Johnson" in all_content  # CISO
+        assert "Datacenter Munich" in all_content
+        assert "backup-server-01" in all_content
+        
+        # Verify BSI Standards references
+        assert "BSI Standard 200-1" in all_content, "Should contain BSI Standard 200-1 references"
+        assert "BSI Standard 200-2" in all_content, "Should contain BSI Standard 200-2 references"
+        assert "BSI Standard 200-3" in all_content, "Should contain BSI Standard 200-3 references"
+        
+        # Verify BSI Baustein references
+        assert "Baustein" in all_content, "Should contain Baustein references"
+        assert "ISMS." in all_content or "ORP." in all_content, \
+            "Should contain specific Baustein references (ISMS.*, ORP.*, etc.)"
+        
+        # Verify RACI matrix present
+        assert "RACI" in all_content or "Responsible" in all_content, \
+            "Should contain RACI matrix"
+        
+        # Verify BSI-specific processes
+        assert "Strukturanalyse" in all_content or "Structure Analysis" in all_content
+        assert "Modellierung" in all_content or "Modeling" in all_content
+        assert "Risikoanalyse" in all_content or "Risk Analysis" in all_content
+        
+        # Verify TODO markers remain
+        assert "[TODO:" in all_content, "TODO markers should remain for customization"
+        
+        # Generate output
+        de_output_result = output_generator.generate_markdown(
+            [r.content for r in de_results], "de", "bsi-grundschutz"
+        )
+        de_output = de_output_result.markdown_path
+        
+        # Verify output structure
+        assert de_output.exists(), "German BSI Grundschutz output should exist"
+        assert de_output.parent == output_dir / "de" / "bsi-grundschutz"
+        assert de_output.name == "bsi-grundschutz_handbook.md"
+        
+        # Verify output content
+        output_content = de_output.read_text()
+        assert "BSI" in output_content
+        assert "IT-Grundschutz" in output_content
+        assert "Test Organization GmbH" in output_content
+        assert "BSI Standard 200" in output_content
+
+
+@pytest.mark.integration
+def test_end_to_end_bsi_grundschutz_handbook_generation_english(temp_workspace, bsi_grundschutz_templates, 
+                                                                sample_metadata_config, mock_netbox_api):
+    """
+    Test end-to-end BSI Grundschutz handbook generation for English.
+    
+    This test verifies:
+    - English BSI Grundschutz handbook generation
+    - All placeholder replacements work in English
+    - Correct output structure
+    
+    Requirements: 13.1, 13.2, 13.3, 13.4, 13.5
+    Task: 5.5.3
+    """
+    from src.meta_adapter import MetaAdapter
+    
+    output_dir = temp_workspace / "Handbook"
+    
+    # Initialize components
+    template_manager = TemplateManager(bsi_grundschutz_templates)
+    
+    # Create meta adapter
+    meta_adapter = MetaAdapter(sample_metadata_config)
+    meta_adapter.connect()
+    
+    # Create netbox adapter
+    with patch('pynetbox.api') as mock_pynetbox:
+        mock_pynetbox.return_value = mock_netbox_api
+        
+        netbox_adapter = NetBoxAdapter(
+            url="https://netbox.example.com",
+            api_token="test_token"
+        )
+        netbox_adapter.connect()
+        
+        # Create placeholder processor
+        metadata_dict = {
+            "author": "Test Author",
+            "version": "1.0.0",
+            "date": "2025-01-30"
+        }
+        data_sources = {
+            "meta": meta_adapter,
+            "netbox": netbox_adapter,
+            "metadata": metadata_dict
+        }
+        processor = PlaceholderProcessor(data_sources, metadata_dict)
+        output_generator = OutputGenerator(output_dir)
+        
+        # Process English BSI Grundschutz templates
+        en_templates = template_manager.get_templates("en", "bsi-grundschutz")
+        assert len(en_templates) == 8, "Should find 8 English BSI Grundschutz templates"
+        
+        en_results = []
+        for template in en_templates:
+            content = template.read_content()
+            result = processor.process_template(content, template.path.name)
+            en_results.append(result)
+        
+        # Verify no errors
+        total_errors = sum(len(r.errors) for r in en_results)
+        assert total_errors == 0, "No errors should occur during processing"
+        
+        # Verify all placeholders were replaced
+        all_content = "\n\n".join([r.content for r in en_results])
+        
+        # Check placeholders were replaced
+        assert "{{ meta.organization.name }}" not in all_content
+        assert "{{ meta.ciso.name }}" not in all_content
+        assert "{{ netbox.site_name }}" not in all_content
+        
+        # Verify actual values are present
+        assert "Test Organization GmbH" in all_content
+        assert "Bob Johnson" in all_content  # CISO
+        assert "Datacenter Munich" in all_content
+        
+        # Verify BSI Standards references
+        assert "BSI Standard 200" in all_content
+        
+        # Verify Baustein references
+        assert "Baustein" in all_content
+        
+        # Verify RACI matrix present
+        assert "RACI" in all_content or "Responsible" in all_content
+        
+        # Generate output
+        en_output_result = output_generator.generate_markdown(
+            [r.content for r in en_results], "en", "bsi-grundschutz"
+        )
+        en_output = en_output_result.markdown_path
+        
+        # Verify output structure
+        assert en_output.exists(), "English BSI Grundschutz output should exist"
+        assert en_output.parent == output_dir / "en" / "bsi-grundschutz"
+        assert en_output.name == "bsi-grundschutz_handbook.md"
+        
+        # Verify output content
+        output_content = en_output.read_text()
+        assert "BSI IT-Grundschutz Handbook" in output_content
+        assert "Test Organization GmbH" in output_content
+        assert "BSI Standard 200" in output_content
+
+
+@pytest.mark.integration
+def test_bsi_grundschutz_baustein_references(temp_workspace, bsi_grundschutz_templates, 
+                                            sample_metadata_config, mock_netbox_api):
+    """
+    Test BSI Grundschutz Baustein references verification.
+    
+    This test verifies:
+    - BSI Baustein references are present
+    - Baustein categories (ISMS, ORP, CON, OPS, DER) are referenced
+    - Baustein assignments are documented
+    
+    Requirements: 10.4, 11.4, 12.3
+    Task: 5.5.3
+    """
+    from src.meta_adapter import MetaAdapter
+    
+    # Initialize components
+    template_manager = TemplateManager(bsi_grundschutz_templates)
+    
+    # Create adapters
+    meta_adapter = MetaAdapter(sample_metadata_config)
+    meta_adapter.connect()
+    
+    with patch('pynetbox.api') as mock_pynetbox:
+        mock_pynetbox.return_value = mock_netbox_api
+        
+        netbox_adapter = NetBoxAdapter(
+            url="https://netbox.example.com",
+            api_token="test_token"
+        )
+        netbox_adapter.connect()
+        
+        metadata_dict = {"author": "Test Author", "version": "1.0.0", "date": "2025-01-30"}
+        data_sources = {
+            "meta": meta_adapter,
+            "netbox": netbox_adapter,
+            "metadata": metadata_dict
+        }
+        processor = PlaceholderProcessor(data_sources, metadata_dict)
+        
+        # Get German BSI Grundschutz templates
+        de_templates = template_manager.get_templates("de", "bsi-grundschutz")
+        
+        # Find Baustein mapping template
+        baustein_template = None
+        for template in de_templates:
+            if "Modellierung" in template.path.name or "Baustein" in template.path.name:
+                baustein_template = template
+                break
+        
+        assert baustein_template is not None, "Should find Baustein mapping template"
+        
+        # Process Baustein template
+        content = baustein_template.read_content()
+        result = processor.process_template(content, baustein_template.path.name)
+        
+        # Verify Baustein references
+        assert "Baustein" in result.content, "Should contain Baustein references"
+        
+        # Verify Baustein categories are mentioned
+        baustein_categories = ["ISMS", "ORP", "CON", "OPS", "DER"]
+        found_categories = [cat for cat in baustein_categories if cat in result.content]
+        
+        assert len(found_categories) > 0, \
+            f"Should reference at least one Baustein category, found: {found_categories}"
+        
+        # Verify specific Baustein references (e.g., ISMS.1, ORP.4)
+        import re
+        baustein_pattern = r'(ISMS|ORP|CON|OPS|DER)\.\d+'
+        baustein_matches = re.findall(baustein_pattern, result.content)
+        
+        assert len(baustein_matches) > 0, \
+            "Should contain specific Baustein references (e.g., ISMS.1, ORP.4)"
+
+
+
+@pytest.fixture
+def it_operation_baseline_templates(temp_workspace):
+    """Create baseline IT-Operation templates for backward compatibility testing."""
+    templates_dir = temp_workspace / "templates"
+    
+    # German IT-Operation templates (existing format)
+    de_it_op = templates_dir / "de" / "it-operation"
+    de_it_op.mkdir(parents=True)
+    
+    # Metadata template
+    (de_it_op / "0000_metadata_de_it-operation.md").write_text("""# IT-Operations Handbuch
+
+**Dokument-Metadaten**
+
+- **Organisation:** {{ meta.organization.name }}
+- **Erstellt am:** {{ metadata.date }}
+- **Autor:** {{ meta.author }}
+- **Version:** {{ meta.document.version }}
+
+---
+""")
+    
+    # Introduction
+    (de_it_op / "0010_Einleitung.md").write_text("""# 1. Einleitung
+
+## 1.1 Zweck
+
+Dieses IT-Operations-Handbuch beschreibt die Betriebsprozesse für {{ meta.organization.name }}.
+
+## 1.2 Geltungsbereich
+
+Standort: {{ netbox.site_name }}
+""")
+    
+    # System Overview
+    (de_it_op / "0040_Systemuebersicht_und_Architektur.md").write_text("""# 4. Systemübersicht und Architektur
+
+## 4.1 Infrastruktur
+
+**Primärer Standort:** {{ netbox.site_name }}  
+**Backup-Server:** {{ netbox.device_name }}  
+**IP-Adresse:** {{ netbox.primary_ip }}
+
+## 4.2 Verantwortlichkeiten
+
+**CIO:** {{ meta.cio.name }}  
+**E-Mail:** {{ meta.cio.email }}
+""")
+    
+    return templates_dir
+
+
+@pytest.mark.integration
+def test_backward_compatibility_it_operation_templates(temp_workspace, it_operation_baseline_templates, 
+                                                      sample_metadata_config, mock_netbox_api):
+    """
+    Test backward compatibility with existing IT-Operation templates.
+    
+    This test verifies:
+    - Existing IT-Operation templates continue to work
+    - No regressions in placeholder processing
+    - Output structure remains unchanged
+    - All existing functionality preserved
+    
+    Requirements: 20.1, 20.2, 20.3, 20.4, 20.5
+    Task: 5.5.4
+    """
+    from src.meta_adapter import MetaAdapter
+    
+    output_dir = temp_workspace / "Handbook"
+    
+    # Initialize components
+    template_manager = TemplateManager(it_operation_baseline_templates)
+    
+    # Create meta adapter
+    meta_adapter = MetaAdapter(sample_metadata_config)
+    meta_adapter.connect()
+    
+    # Create netbox adapter
+    with patch('pynetbox.api') as mock_pynetbox:
+        mock_pynetbox.return_value = mock_netbox_api
+        
+        netbox_adapter = NetBoxAdapter(
+            url="https://netbox.example.com",
+            api_token="test_token"
+        )
+        netbox_adapter.connect()
+        
+        # Create placeholder processor
+        metadata_dict = {
+            "author": "Test Author",
+            "version": "1.0.0",
+            "date": "2025-01-30"
+        }
+        data_sources = {
+            "meta": meta_adapter,
+            "netbox": netbox_adapter,
+            "metadata": metadata_dict
+        }
+        processor = PlaceholderProcessor(data_sources, metadata_dict)
+        output_generator = OutputGenerator(output_dir)
+        
+        # Process IT-Operation templates
+        de_templates = template_manager.get_templates("de", "it-operation")
+        assert len(de_templates) == 3, "Should find 3 IT-Operation templates"
+        
+        de_results = []
+        for template in de_templates:
+            content = template.read_content()
+            result = processor.process_template(content, template.path.name)
+            de_results.append(result)
+        
+        # Verify no errors (backward compatibility)
+        total_errors = sum(len(r.errors) for r in de_results)
+        assert total_errors == 0, "No errors should occur - backward compatibility maintained"
+        
+        # Verify all placeholders were replaced
+        all_content = "\n\n".join([r.content for r in de_results])
+        
+        # Check meta placeholders
+        assert "{{ meta.organization.name }}" not in all_content
+        assert "{{ meta.cio.name }}" not in all_content
+        assert "{{ meta.cio.email }}" not in all_content
+        assert "{{ meta.author }}" not in all_content
+        assert "{{ meta.document.version }}" not in all_content
+        
+        # Check netbox placeholders
+        assert "{{ netbox.site_name }}" not in all_content
+        assert "{{ netbox.device_name }}" not in all_content
+        assert "{{ netbox.primary_ip }}" not in all_content
+        
+        # Check metadata placeholders
+        assert "{{ metadata.date }}" not in all_content
+        
+        # Verify actual values are present
+        assert "Test Organization GmbH" in all_content
+        assert "Jane Smith" in all_content  # CIO
+        assert "Datacenter Munich" in all_content
+        assert "backup-server-01" in all_content
+        assert "192.168.1.100" in all_content
+        
+        # Generate output
+        de_output_result = output_generator.generate_markdown(
+            [r.content for r in de_results], "de", "it-operation"
+        )
+        de_output = de_output_result.markdown_path
+        
+        # Verify output structure (backward compatibility)
+        assert de_output.exists(), "IT-Operation output should exist"
+        assert de_output.parent == output_dir / "de" / "it-operation"
+        assert de_output.name == "it-operation_handbook.md"
+        
+        # Verify output content
+        output_content = de_output.read_text()
+        assert "IT-Operations Handbuch" in output_content
+        assert "Test Organization GmbH" in output_content
+        assert "Jane Smith" in output_content
+        assert "Datacenter Munich" in output_content
+        
+        # Verify replacement statistics
+        total_replacements = sum(len(r.replacements) for r in de_results)
+        assert total_replacements > 0, "Should have successful replacements"
+        
+        # Verify both sources were used
+        meta_count = sum(r.get_replacement_count_by_source("meta") for r in de_results)
+        netbox_count = sum(r.get_replacement_count_by_source("netbox") for r in de_results)
+        metadata_count = sum(r.get_replacement_count_by_source("metadata") for r in de_results)
+        
+        assert meta_count > 0, "Should have meta replacements"
+        assert netbox_count > 0, "Should have netbox replacements"
+        assert metadata_count > 0, "Should have metadata replacements"
+
+
+@pytest.mark.integration
+def test_backward_compatibility_cli_parameters(temp_workspace, it_operation_baseline_templates):
+    """
+    Test backward compatibility of CLI parameters.
+    
+    This test verifies:
+    - Existing CLI parameters still work
+    - it-operation template type is recognized
+    - No breaking changes in CLI interface
+    
+    Requirements: 20.3
+    Task: 5.5.4
+    """
+    # Initialize template manager
+    template_manager = TemplateManager(it_operation_baseline_templates)
+    
+    # Verify it-operation templates can be discovered
+    discovered = template_manager.discover_templates()
+    
+    assert "de" in discovered, "German templates should be discovered"
+    assert "it-operation" in discovered["de"], "it-operation type should be recognized"
+    
+    # Verify templates can be retrieved
+    templates = template_manager.get_templates("de", "it-operation")
+    assert len(templates) > 0, "Should find it-operation templates"
+    
+    # Verify template structure is valid
+    for template in templates:
+        assert template.path.exists(), f"Template file should exist: {template.path}"
+        assert template.language == "de", "Language should be correctly identified"
+        assert template.category == "it-operation", "Category should be correctly identified"
+
+
+@pytest.mark.integration
+def test_backward_compatibility_placeholder_syntax(temp_workspace, it_operation_baseline_templates, 
+                                                   sample_metadata_config, mock_netbox_api):
+    """
+    Test backward compatibility of placeholder syntax.
+    
+    This test verifies:
+    - Existing placeholder syntax {{ source.field }} still works
+    - Meta placeholders work as before
+    - NetBox placeholders work as before
+    - Metadata placeholders work as before
+    
+    Requirements: 20.5, 24.1, 24.2
+    Task: 5.5.4
+    """
+    from src.meta_adapter import MetaAdapter
+    
+    # Initialize components
+    template_manager = TemplateManager(it_operation_baseline_templates)
+    
+    # Create adapters
+    meta_adapter = MetaAdapter(sample_metadata_config)
+    meta_adapter.connect()
+    
+    with patch('pynetbox.api') as mock_pynetbox:
+        mock_pynetbox.return_value = mock_netbox_api
+        
+        netbox_adapter = NetBoxAdapter(
+            url="https://netbox.example.com",
+            api_token="test_token"
+        )
+        netbox_adapter.connect()
+        
+        metadata_dict = {
+            "author": "Test Author",
+            "version": "1.0.0",
+            "date": "2025-01-30"
+        }
+        data_sources = {
+            "meta": meta_adapter,
+            "netbox": netbox_adapter,
+            "metadata": metadata_dict
+        }
+        processor = PlaceholderProcessor(data_sources, metadata_dict)
+        
+        # Process templates
+        templates = template_manager.get_templates("de", "it-operation")
+        
+        for template in templates:
+            content = template.read_content()
+            result = processor.process_template(content, template.path.name)
+            
+            # Verify no errors
+            assert len(result.errors) == 0, \
+                f"No errors should occur in {template.path.name} - backward compatibility"
+            
+            # Verify replacements occurred
+            if len(result.replacements) > 0:
+                # Check that all replacements use correct source routing
+                for replacement in result.replacements:
+                    assert replacement.source in ["meta", "netbox", "metadata"], \
+                        f"Replacement source should be valid: {replacement.source}"
+                    
+                    # Verify placeholder syntax was recognized
+                    assert replacement.placeholder.startswith("{{"), \
+                        "Placeholder should start with {{"
+                    assert replacement.placeholder.endswith("}}"), \
+                        "Placeholder should end with }}"
+                    assert "." in replacement.placeholder, \
+                        "Placeholder should contain dot notation (source.field)"
+
+
+@pytest.mark.integration
+def test_backward_compatibility_output_structure(temp_workspace, it_operation_baseline_templates, 
+                                                sample_metadata_config, mock_netbox_api):
+    """
+    Test backward compatibility of output structure.
+    
+    This test verifies:
+    - Output directory structure remains unchanged
+    - Output filename format remains unchanged
+    - Output content format remains unchanged
+    
+    Requirements: 25.1, 25.2, 25.3
+    Task: 5.5.4
+    """
+    from src.meta_adapter import MetaAdapter
+    
+    output_dir = temp_workspace / "Handbook"
+    
+    # Initialize components
+    template_manager = TemplateManager(it_operation_baseline_templates)
+    
+    # Create adapters
+    meta_adapter = MetaAdapter(sample_metadata_config)
+    meta_adapter.connect()
+    
+    with patch('pynetbox.api') as mock_pynetbox:
+        mock_pynetbox.return_value = mock_netbox_api
+        
+        netbox_adapter = NetBoxAdapter(
+            url="https://netbox.example.com",
+            api_token="test_token"
+        )
+        netbox_adapter.connect()
+        
+        metadata_dict = {
+            "author": "Test Author",
+            "version": "1.0.0",
+            "date": "2025-01-30"
+        }
+        data_sources = {
+            "meta": meta_adapter,
+            "netbox": netbox_adapter,
+            "metadata": metadata_dict
+        }
+        processor = PlaceholderProcessor(data_sources, metadata_dict)
+        output_generator = OutputGenerator(output_dir)
+        
+        # Process templates
+        templates = template_manager.get_templates("de", "it-operation")
+        results = []
+        for template in templates:
+            content = template.read_content()
+            result = processor.process_template(content, template.path.name)
+            results.append(result)
+        
+        # Generate output
+        output_result = output_generator.generate_markdown(
+            [r.content for r in results], "de", "it-operation"
+        )
+        output_path = output_result.markdown_path
+        
+        # Verify output structure (backward compatibility)
+        # Expected: Handbook/de/it-operation/it-operation_handbook.md
+        assert output_path.exists(), "Output file should exist"
+        
+        # Verify directory structure
+        assert output_path.parent.name == "it-operation", \
+            "Output should be in it-operation directory"
+        assert output_path.parent.parent.name == "de", \
+            "Output should be in de language directory"
+        assert output_path.parent.parent.parent.name == "Handbook", \
+            "Output should be in Handbook directory"
+        
+        # Verify filename format
+        assert output_path.name == "it-operation_handbook.md", \
+            "Output filename should follow pattern: {template-type}_handbook.md"
+        
+        # Verify output is valid markdown
+        output_content = output_path.read_text()
+        assert len(output_content) > 0, "Output should have content"
+        assert "#" in output_content, "Output should contain markdown headers"
+
+
+
+@pytest.fixture
+def templates_with_html_comments(temp_workspace):
+    """Create templates with HTML comments for integration testing."""
+    templates_dir = temp_workspace / "templates"
+    
+    # German templates with HTML comments
+    de_test = templates_dir / "de" / "test-comments"
+    de_test.mkdir(parents=True)
+    
+    # Template with single-line HTML comments
+    (de_test / "0010_single_line_comments.md").write_text("""# Test Template
+
+<!-- This is a template author note -->
+
+## Section 1
+
+**Organisation:** {{ meta.organization.name }}
+
+<!-- TODO: Add more details here -->
+
+## Section 2
+
+**Standort:** {{ netbox.site_name }}
+
+<!-- End of template -->
+""")
+    
+    # Template with multi-line HTML comments
+    (de_test / "0020_multi_line_comments.md").write_text("""# Multi-line Comments Test
+
+<!--
+TEMPLATE AUTHOR NOTE:
+This section requires customization based on your organization's
+specific requirements. Consider the following:
+- Business processes
+- Critical systems
+- Recovery objectives
+-->
+
+## Configuration
+
+**CIO:** {{ meta.cio.name }}
+
+<!--
+Multi-line comment
+spanning several lines
+with various content
+-->
+
+**CISO:** {{ meta.ciso.name }}
+""")
+    
+    # Template with mixed comments and placeholders
+    (de_test / "0030_mixed_comments_placeholders.md").write_text("""# Mixed Content Test
+
+<!-- Comment before placeholder -->
+**Organisation:** {{ meta.organization.name }}
+<!-- Comment after placeholder -->
+
+## Infrastructure
+
+<!-- This placeholder should still work: {{ netbox.site_name }} -->
+
+**Actual Site:** {{ netbox.site_name }}
+
+<!-- Comment with placeholder reference: Use {{ meta.cio.name }} for approval -->
+
+**CIO:** {{ meta.cio.name }}
+""")
+    
+    # Template without HTML comments (control)
+    (de_test / "0040_no_comments.md").write_text("""# No Comments Test
+
+## Basic Information
+
+**Organisation:** {{ meta.organization.name }}
+**CIO:** {{ meta.cio.name }}
+**Standort:** {{ netbox.site_name }}
+""")
+    
+    return templates_dir
+
+
+@pytest.mark.integration
+def test_html_comment_integration_single_line(temp_workspace, templates_with_html_comments, 
+                                             sample_metadata_config, mock_netbox_api):
+    """
+    Test HTML comment integration with single-line comments.
+    
+    This test verifies:
+    - Single-line HTML comments are removed
+    - Placeholders are still processed correctly
+    - Markdown content is preserved
+    - No comment markers remain in output
+    
+    Requirements: 16.1, 16.2, 17.1, 17.3
+    Task: 5.5.5
+    """
+    from src.meta_adapter import MetaAdapter
+    
+    # Initialize components
+    template_manager = TemplateManager(templates_with_html_comments)
+    
+    # Create adapters
+    meta_adapter = MetaAdapter(sample_metadata_config)
+    meta_adapter.connect()
+    
+    with patch('pynetbox.api') as mock_pynetbox:
+        mock_pynetbox.return_value = mock_netbox_api
+        
+        netbox_adapter = NetBoxAdapter(
+            url="https://netbox.example.com",
+            api_token="test_token"
+        )
+        netbox_adapter.connect()
+        
+        metadata_dict = {"author": "Test Author", "version": "1.0.0", "date": "2025-01-30"}
+        data_sources = {
+            "meta": meta_adapter,
+            "netbox": netbox_adapter,
+            "metadata": metadata_dict
+        }
+        processor = PlaceholderProcessor(data_sources, metadata_dict)
+        
+        # Get template with single-line comments
+        templates = template_manager.get_templates("de", "test-comments")
+        single_line_template = [t for t in templates if "single_line" in t.path.name][0]
+        
+        # Process template
+        content = single_line_template.read_content()
+        result = processor.process_template(content, single_line_template.path.name)
+        
+        # Verify HTML comments were removed
+        assert "<!--" not in result.content, "HTML comment start marker should be removed"
+        assert "-->" not in result.content, "HTML comment end marker should be removed"
+        assert "template author note" not in result.content.lower(), \
+            "Comment content should be removed"
+        assert "TODO: Add more details" not in result.content, \
+            "TODO comment should be removed"
+        
+        # Verify placeholders were still processed
+        assert "{{ meta.organization.name }}" not in result.content
+        assert "{{ netbox.site_name }}" not in result.content
+        
+        # Verify actual values are present
+        assert "Test Organization GmbH" in result.content
+        assert "Datacenter Munich" in result.content
+        
+        # Verify markdown structure is preserved
+        assert "# Test Template" in result.content
+        assert "## Section 1" in result.content
+        assert "## Section 2" in result.content
+        assert "**Organisation:**" in result.content
+        assert "**Standort:**" in result.content
+
+
+@pytest.mark.integration
+def test_html_comment_integration_multi_line(temp_workspace, templates_with_html_comments, 
+                                            sample_metadata_config, mock_netbox_api):
+    """
+    Test HTML comment integration with multi-line comments.
+    
+    This test verifies:
+    - Multi-line HTML comments are completely removed
+    - All lines of multi-line comments are removed
+    - Placeholders after comments are still processed
+    - Markdown formatting is preserved
+    
+    Requirements: 16.3, 17.2, 17.3
+    Task: 5.5.5
+    """
+    from src.meta_adapter import MetaAdapter
+    
+    # Initialize components
+    template_manager = TemplateManager(templates_with_html_comments)
+    
+    # Create adapters
+    meta_adapter = MetaAdapter(sample_metadata_config)
+    meta_adapter.connect()
+    
+    with patch('pynetbox.api') as mock_pynetbox:
+        mock_pynetbox.return_value = mock_netbox_api
+        
+        netbox_adapter = NetBoxAdapter(
+            url="https://netbox.example.com",
+            api_token="test_token"
+        )
+        netbox_adapter.connect()
+        
+        metadata_dict = {"author": "Test Author", "version": "1.0.0", "date": "2025-01-30"}
+        data_sources = {
+            "meta": meta_adapter,
+            "netbox": netbox_adapter,
+            "metadata": metadata_dict
+        }
+        processor = PlaceholderProcessor(data_sources, metadata_dict)
+        
+        # Get template with multi-line comments
+        templates = template_manager.get_templates("de", "test-comments")
+        multi_line_template = [t for t in templates if "multi_line" in t.path.name][0]
+        
+        # Process template
+        content = multi_line_template.read_content()
+        result = processor.process_template(content, multi_line_template.path.name)
+        
+        # Verify HTML comments were removed
+        assert "<!--" not in result.content, "HTML comment start marker should be removed"
+        assert "-->" not in result.content, "HTML comment end marker should be removed"
+        
+        # Verify multi-line comment content was removed
+        assert "TEMPLATE AUTHOR NOTE" not in result.content
+        assert "requires customization" not in result.content
+        assert "Business processes" not in result.content
+        assert "Critical systems" not in result.content
+        assert "Recovery objectives" not in result.content
+        assert "spanning several lines" not in result.content
+        
+        # Verify placeholders were still processed
+        assert "{{ meta.cio.name }}" not in result.content
+        assert "{{ meta.ciso.name }}" not in result.content
+        
+        # Verify actual values are present
+        assert "Jane Smith" in result.content  # CIO
+        assert "Bob Johnson" in result.content  # CISO
+        
+        # Verify markdown structure is preserved
+        assert "# Multi-line Comments Test" in result.content
+        assert "## Configuration" in result.content
+        assert "**CIO:**" in result.content
+        assert "**CISO:**" in result.content
+
+
+@pytest.mark.integration
+def test_html_comment_integration_mixed_scenarios(temp_workspace, templates_with_html_comments, 
+                                                 sample_metadata_config, mock_netbox_api):
+    """
+    Test HTML comment integration with mixed scenarios.
+    
+    This test verifies:
+    - Comments before placeholders don't affect processing
+    - Comments after placeholders don't affect processing
+    - Comments containing placeholder references are removed
+    - Actual placeholders outside comments are processed
+    
+    Requirements: 18.1, 18.2
+    Task: 5.5.5
+    """
+    from src.meta_adapter import MetaAdapter
+    
+    # Initialize components
+    template_manager = TemplateManager(templates_with_html_comments)
+    
+    # Create adapters
+    meta_adapter = MetaAdapter(sample_metadata_config)
+    meta_adapter.connect()
+    
+    with patch('pynetbox.api') as mock_pynetbox:
+        mock_pynetbox.return_value = mock_netbox_api
+        
+        netbox_adapter = NetBoxAdapter(
+            url="https://netbox.example.com",
+            api_token="test_token"
+        )
+        netbox_adapter.connect()
+        
+        metadata_dict = {"author": "Test Author", "version": "1.0.0", "date": "2025-01-30"}
+        data_sources = {
+            "meta": meta_adapter,
+            "netbox": netbox_adapter,
+            "metadata": metadata_dict
+        }
+        processor = PlaceholderProcessor(data_sources, metadata_dict)
+        
+        # Get template with mixed comments and placeholders
+        templates = template_manager.get_templates("de", "test-comments")
+        mixed_template = [t for t in templates if "mixed" in t.path.name][0]
+        
+        # Process template
+        content = mixed_template.read_content()
+        result = processor.process_template(content, mixed_template.path.name)
+        
+        # Verify all HTML comments were removed
+        assert "<!--" not in result.content
+        assert "-->" not in result.content
+        assert "Comment before placeholder" not in result.content
+        assert "Comment after placeholder" not in result.content
+        assert "This placeholder should still work" not in result.content
+        assert "Use {{ meta.cio.name }} for approval" not in result.content
+        
+        # Verify actual placeholders (outside comments) were processed
+        assert "{{ meta.organization.name }}" not in result.content
+        assert "{{ netbox.site_name }}" not in result.content
+        assert "{{ meta.cio.name }}" not in result.content
+        
+        # Verify actual values are present
+        assert "Test Organization GmbH" in result.content
+        assert "Datacenter Munich" in result.content
+        assert "Jane Smith" in result.content
+        
+        # Verify markdown structure is preserved
+        assert "# Mixed Content Test" in result.content
+        assert "## Infrastructure" in result.content
+        assert "**Organisation:**" in result.content
+        assert "**Actual Site:**" in result.content
+        assert "**CIO:**" in result.content
+
+
+@pytest.mark.integration
+def test_html_comment_integration_no_comments_control(temp_workspace, templates_with_html_comments, 
+                                                     sample_metadata_config, mock_netbox_api):
+    """
+    Test HTML comment integration with templates without comments (control test).
+    
+    This test verifies:
+    - Templates without HTML comments work normally
+    - No regression when HTML comments are not present
+    - Placeholder processing is unaffected
+    
+    Requirements: 17.4, 17.5
+    Task: 5.5.5
+    """
+    from src.meta_adapter import MetaAdapter
+    
+    # Initialize components
+    template_manager = TemplateManager(templates_with_html_comments)
+    
+    # Create adapters
+    meta_adapter = MetaAdapter(sample_metadata_config)
+    meta_adapter.connect()
+    
+    with patch('pynetbox.api') as mock_pynetbox:
+        mock_pynetbox.return_value = mock_netbox_api
+        
+        netbox_adapter = NetBoxAdapter(
+            url="https://netbox.example.com",
+            api_token="test_token"
+        )
+        netbox_adapter.connect()
+        
+        metadata_dict = {"author": "Test Author", "version": "1.0.0", "date": "2025-01-30"}
+        data_sources = {
+            "meta": meta_adapter,
+            "netbox": netbox_adapter,
+            "metadata": metadata_dict
+        }
+        processor = PlaceholderProcessor(data_sources, metadata_dict)
+        
+        # Get template without comments
+        templates = template_manager.get_templates("de", "test-comments")
+        no_comments_template = [t for t in templates if "no_comments" in t.path.name][0]
+        
+        # Process template
+        content = no_comments_template.read_content()
+        result = processor.process_template(content, no_comments_template.path.name)
+        
+        # Verify no errors
+        assert len(result.errors) == 0, "No errors should occur"
+        
+        # Verify placeholders were processed
+        assert "{{ meta.organization.name }}" not in result.content
+        assert "{{ meta.cio.name }}" not in result.content
+        assert "{{ netbox.site_name }}" not in result.content
+        
+        # Verify actual values are present
+        assert "Test Organization GmbH" in result.content
+        assert "Jane Smith" in result.content
+        assert "Datacenter Munich" in result.content
+        
+        # Verify markdown structure is preserved
+        assert "# No Comments Test" in result.content
+        assert "## Basic Information" in result.content
+        assert "**Organisation:**" in result.content
+        assert "**CIO:**" in result.content
+        assert "**Standort:**" in result.content
+
+
+@pytest.mark.integration
+def test_html_comment_integration_end_to_end(temp_workspace, templates_with_html_comments, 
+                                            sample_metadata_config, mock_netbox_api):
+    """
+    Test HTML comment integration end-to-end workflow.
+    
+    This test verifies:
+    - Complete workflow with HTML comments
+    - Output generation with comment removal
+    - No comment markers in final output file
+    - All templates processed correctly
+    
+    Requirements: 16.1, 16.2, 16.3, 17.1, 17.2, 17.3
+    Task: 5.5.5
+    """
+    from src.meta_adapter import MetaAdapter
+    
+    output_dir = temp_workspace / "Handbook"
+    
+    # Initialize components
+    template_manager = TemplateManager(templates_with_html_comments)
+    
+    # Create adapters
+    meta_adapter = MetaAdapter(sample_metadata_config)
+    meta_adapter.connect()
+    
+    with patch('pynetbox.api') as mock_pynetbox:
+        mock_pynetbox.return_value = mock_netbox_api
+        
+        netbox_adapter = NetBoxAdapter(
+            url="https://netbox.example.com",
+            api_token="test_token"
+        )
+        netbox_adapter.connect()
+        
+        metadata_dict = {"author": "Test Author", "version": "1.0.0", "date": "2025-01-30"}
+        data_sources = {
+            "meta": meta_adapter,
+            "netbox": netbox_adapter,
+            "metadata": metadata_dict
+        }
+        processor = PlaceholderProcessor(data_sources, metadata_dict)
+        output_generator = OutputGenerator(output_dir)
+        
+        # Process all templates
+        templates = template_manager.get_templates("de", "test-comments")
+        results = []
+        for template in templates:
+            content = template.read_content()
+            result = processor.process_template(content, template.path.name)
+            results.append(result)
+        
+        # Verify no errors
+        total_errors = sum(len(r.errors) for r in results)
+        assert total_errors == 0, "No errors should occur"
+        
+        # Generate output
+        output_result = output_generator.generate_markdown(
+            [r.content for r in results], "de", "test-comments"
+        )
+        output_path = output_result.markdown_path
+        
+        # Verify output was created
+        assert output_path.exists(), "Output file should be created"
+        
+        # Read output content
+        output_content = output_path.read_text()
+        
+        # Verify no HTML comment markers in output
+        assert "<!--" not in output_content, "No HTML comment start markers in output"
+        assert "-->" not in output_content, "No HTML comment end markers in output"
+        
+        # Verify comment content was removed
+        assert "template author note" not in output_content.lower()
+        assert "TEMPLATE AUTHOR NOTE" not in output_content
+        assert "TODO: Add more details" not in output_content
+        assert "requires customization" not in output_content
+        
+        # Verify placeholders were replaced
+        assert "{{ meta.organization.name }}" not in output_content
+        assert "{{ meta.cio.name }}" not in output_content
+        assert "{{ netbox.site_name }}" not in output_content
+        
+        # Verify actual values are present
+        assert "Test Organization GmbH" in output_content
+        assert "Jane Smith" in output_content
+        assert "Datacenter Munich" in output_content
+        
+        # Verify markdown structure is preserved
+        assert "# Test Template" in output_content or "# Multi-line Comments Test" in output_content
+        assert "**Organisation:**" in output_content or "**CIO:**" in output_content

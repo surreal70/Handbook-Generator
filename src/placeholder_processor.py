@@ -11,6 +11,7 @@ from datetime import datetime
 from pathlib import Path
 import re
 from src.error_handler import ErrorHandler, ErrorContext
+from src.html_comment_processor import HTMLCommentProcessor
 
 
 @dataclass
@@ -80,11 +81,13 @@ class ProcessingResult:
         replacements: List of successful replacements
         warnings: List of warning messages
         errors: List of error messages
+        comments_removed: Number of HTML comments removed
     """
     content: str
     replacements: list[Replacement] = field(default_factory=list)
     warnings: list[str] = field(default_factory=list)
     errors: list[str] = field(default_factory=list)
+    comments_removed: int = 0
     
     def get_replacement_count_by_source(self, source: str) -> int:
         """
@@ -313,6 +316,11 @@ class PlaceholderProcessor:
         """
         Process template and replace all placeholders.
         
+        Processing steps:
+        1. Remove HTML comments
+        2. Find placeholders
+        3. Validate and replace placeholders
+        
         Args:
             template_content: Template content to process
             template_name: Optional template name for better error messages
@@ -330,14 +338,39 @@ class PlaceholderProcessor:
                 )
             return result
         
-        # Find all placeholders
+        # Step 1: Remove HTML comments before placeholder processing
+        comment_processor = HTMLCommentProcessor()
+        
+        # Count comments before removal
+        comments_before = template_content.count('<!--')
+        
+        # Remove comments
+        template_content = comment_processor.remove_comments(template_content)
+        
+        # Count comments after removal (should be 0)
+        comments_after = template_content.count('<!--')
+        
+        # Update statistics
+        result.comments_removed = comments_before - comments_after
+        
+        # Validate comments and add warnings
+        comment_warnings = comment_processor.validate_comments(template_content)
+        for warning in comment_warnings:
+            if template_name:
+                warning = f"{template_name}: {warning}"
+            result.warnings.append(warning)
+        
+        # Update result content with comments removed
+        result.content = template_content
+        
+        # Step 2: Find all placeholders
         placeholders = self.find_placeholders(template_content)
         
-        # If no placeholders, return content unchanged
+        # If no placeholders, return content with comments removed
         if not placeholders:
             return result
         
-        # Validate and replace placeholders
+        # Step 3: Validate and replace placeholders
         lines = template_content.split('\n')
         
         for placeholder in placeholders:

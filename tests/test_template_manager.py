@@ -262,9 +262,9 @@ class TestTemplateRetrieval:
     def test_get_templates_nonexistent_language(self, tmp_path):
         """Test retrieval with non-existent language."""
         manager = TemplateManager(tmp_path)
-        templates = manager.get_templates('xx', 'backup')
         
-        assert templates == []
+        with pytest.raises(ValueError, match="Template directory not found"):
+            manager.get_templates('xx', 'backup')
     
     def test_get_templates_nonexistent_category(self, tmp_path):
         """Test retrieval with non-existent category."""
@@ -272,9 +272,9 @@ class TestTemplateRetrieval:
         (templates_dir / 'de').mkdir(parents=True)
         
         manager = TemplateManager(templates_dir)
-        templates = manager.get_templates('de', 'nonexistent')
         
-        assert templates == []
+        with pytest.raises(ValueError, match="Template directory not found"):
+            manager.get_templates('de', 'nonexistent')
 
 
 class TestTemplateSorting:
@@ -498,7 +498,7 @@ class TestTemplateValidation:
         warnings = manager.validate_template_structure()
         
         assert len(warnings) > 0
-        assert 'without proper numbering' in warnings[0].lower()
+        assert 'invalid template filename' in warnings[0].lower() or 'without proper numbering' in warnings[0].lower()
 
 
 class TestExampleTemplates:

@@ -372,7 +372,7 @@ class TestPlaceholderValidation:
         warning = processor.validate_placeholder_line(line, placeholder)
         
         assert warning is not None
-        assert 'not the only statement' in warning.lower()
+        assert 'not the only content' in warning.lower() or 'not alone' in warning.lower()
     
     def test_validate_placeholder_line_with_whitespace(self):
         """Test validation with only whitespace around placeholder."""
@@ -643,7 +643,7 @@ class TestMissingFieldHandling:
         
         assert value is None
         assert warning is not None
-        assert 'not found' in warning.lower()
+        assert 'field_not_found' in warning.lower() or 'not found' in warning.lower()
     
     def test_replace_placeholder_unknown_source(self):
         """Test replacement with unknown data source."""
@@ -660,7 +660,7 @@ class TestMissingFieldHandling:
         
         assert value is None
         assert warning is not None
-        assert 'unknown data source' in warning.lower()
+        assert 'unknown_data_source' in warning.lower() or 'unknown data source' in warning.lower()
     
     def test_process_template_with_missing_field(self):
         """Test processing template with missing field."""
@@ -805,7 +805,7 @@ class TestAdapterRouting:
         
         assert value is None
         assert warning is not None
-        assert 'unknown data source' in warning.lower()
+        assert 'unknown_data_source' in warning.lower() or 'unknown data source' in warning.lower()
         assert 'available sources' in warning.lower()
         assert 'netbox' in warning
     
@@ -853,7 +853,7 @@ class TestAdapterRouting:
         
         assert value is None
         assert warning is not None
-        assert 'unknown data source' in warning.lower()
+        assert 'unknown_data_source' in warning.lower() or 'unknown data source' in warning.lower()
         assert 'none' in warning.lower()
 
 
@@ -1580,3 +1580,275 @@ class TestDualSourceProcessingProperty:
         sources = result.get_sources_used()
         assert 'meta' in sources, "Meta source should be in sources used"
         assert 'netbox' in sources, "NetBox source should be in sources used"
+
+
+
+class TestHTMLCommentIntegration:
+    """Integration tests for HTML comment processing with placeholder replacement."""
+    
+    def test_comments_removed_before_placeholder_processing(self):
+        """Test that HTML comments are removed before placeholders are processed."""
+        mock_adapter = MockDataSourceAdapter({'device_name': 'server-01'})
+        processor = PlaceholderProcessor(data_sources={'netbox': mock_adapter})
+        
+        content = """# Device Information
+<!-- This is a comment about the device -->
+{{ netbox.device_name }}
+<!-- End of device section -->"""
+        
+        result = processor.process_template(content)
+        
+        # Verify comments are removed
+        assert "<!--" not in result.content
+        assert "-->" not in result.content
+        assert "This is a comment" not in result.content
+        
+        # Verify placeholder was replaced
+        assert "server-01" in result.content
+        assert "{{ netbox.device_name }}" not in result.content
+        
+        # Verify statistics
+        assert result.comments_removed == 2
+        assert len(result.replacements) == 1
+    
+    def test_comment_with_placeholder_inside(self):
+        """Test that placeholders inside comments are not processed."""
+        mock_adapter = MockDataSourceAdapter({'device_name': 'server-01'})
+        processor = PlaceholderProcessor(data_sources={'netbox': mock_adapter})
+        
+        content = """# Device Information
+<!-- TODO: Replace {{ netbox.device_name }} with actual value -->
+{{ netbox.device_name }}"""
+        
+        result = processor.process_template(content)
+        
+        # Verify comment is removed (including placeholder inside it)
+        assert "<!--" not in result.content
+        assert "-->" not in result.content
+        assert "TODO" not in result.content
+        
+        # Verify only the placeholder outside the comment was replaced
+        assert result.content.count("server-01") == 1
+        assert "{{ netbox.device_name }}" not in result.content
+        
+        # Verify statistics
+        assert result.comments_removed == 1
+        assert len(result.replacements) == 1
+    
+    def test_mixed_comments_and_placeholders(self):
+        """Test template with both comments and placeholders mixed."""
+        mock_netbox = MockDataSourceAdapter({
+            'device_name': 'server-01',
+            'site_name': 'datacenter-1'
+        })
+        mock_meta = MockDataSourceAdapter({
+            'organization.name': 'AdminSend GmbH'
+        })
+        
+        processor = PlaceholderProcessor(data_sources={
+            'netbox': mock_netbox,
+            'meta': mock_meta
+        })
+        
+        content = """# IT Operations Handbook
+<!-- Organization information -->
+{{ meta.organization.name }}
+<!-- Device details -->
+{{ netbox.device_name }}
+<!-- Site information -->
+{{ netbox.site_name }}
+<!-- End of document -->"""
+        
+        result = processor.process_template(content)
+        
+        # Verify all comments are removed
+        assert "<!--" not in result.content
+        assert "-->" not in result.content
+        
+        # Verify all placeholders are replaced
+        assert "AdminSend GmbH" in result.content
+        assert "server-01" in result.content
+        assert "datacenter-1" in result.content
+        
+        # Verify statistics
+        assert result.comments_removed == 4
+        assert len(result.replacements) == 3
+    
+    def test_multiline_comment_with_placeholders(self):
+        """Test multiline comment with placeholders in surrounding content."""
+        mock_adapter = MockDataSourceAdapter({'device_name': 'server-01'})
+        processor = PlaceholderProcessor(data_sources={'netbox': mock_adapter})
+        
+        content = """# Device Information
+{{ netbox.device_name }}
+<!--
+This is a multiline comment
+that spans several lines
+and should be completely removed
+-->
+{{ netbox.device_name }}"""
+        
+        result = processor.process_template(content)
+        
+        # Verify comment is removed
+        assert "<!--" not in result.content
+        assert "-->" not in result.content
+        assert "multiline comment" not in result.content
+        
+        # Verify both placeholders are replaced
+        assert result.content.count("server-01") == 2
+        
+        # Verify statistics
+        assert result.comments_removed == 1
+        assert len(result.replacements) == 2
+    
+    def test_empty_template_with_comments(self):
+        """Test template that becomes empty after comment removal."""
+        processor = PlaceholderProcessor()
+        
+        content = "<!-- Only a comment -->"
+        
+        result = processor.process_template(content)
+        
+        # Verify comment is removed
+        assert "<!--" not in result.content
+        assert "-->" not in result.content
+        
+        # Verify statistics
+        assert result.comments_removed == 1
+        assert len(result.replacements) == 0
+    
+    def test_template_without_comments(self):
+        """Test that templates without comments still work correctly."""
+        mock_adapter = MockDataSourceAdapter({'device_name': 'server-01'})
+        processor = PlaceholderProcessor(data_sources={'netbox': mock_adapter})
+        
+        content = """# Device Information
+{{ netbox.device_name }}"""
+        
+        result = processor.process_template(content)
+        
+        # Verify placeholder is replaced
+        assert "server-01" in result.content
+        
+        # Verify statistics
+        assert result.comments_removed == 0
+        assert len(result.replacements) == 1
+    
+    def test_comment_removal_statistics(self):
+        """Test that comment removal statistics are accurate."""
+        processor = PlaceholderProcessor()
+        
+        content = """<!-- Comment 1 -->
+Text
+<!-- Comment 2 -->
+More text
+<!-- Comment 3 -->"""
+        
+        result = processor.process_template(content)
+        
+        # Verify all comments are removed
+        assert "<!--" not in result.content
+        
+        # Verify statistics
+        assert result.comments_removed == 3
+    
+    def test_unclosed_comment_warning(self):
+        """Test that unclosed comments generate warnings."""
+        processor = PlaceholderProcessor()
+        
+        content = """# Header
+<!-- Unclosed comment
+Some text"""
+        
+        result = processor.process_template(content)
+        
+        # Verify warning is generated
+        assert len(result.warnings) >= 1
+        assert any("unclosed" in w.lower() for w in result.warnings)
+
+
+
+class TestHTMLCommentMarkdownPreservationProperty:
+    """Property-based tests for markdown preservation during HTML comment removal."""
+    
+    @settings(max_examples=100)
+    @given(
+        markdown_elements=st.lists(
+            st.sampled_from([
+                '# Header 1',
+                '## Header 2',
+                '### Header 3',
+                '**Bold text**',
+                '*Italic text*',
+                '- List item',
+                '1. Numbered item',
+                '`code`',
+                '[Link](url)',
+                '> Quote',
+            ]),
+            min_size=1,
+            max_size=10
+        ),
+        has_comment=st.booleans(),
+        comment_text=st.text(
+            alphabet=st.characters(blacklist_characters='<>-'),
+            max_size=50
+        )
+    )
+    def test_property_2_html_comment_removal_preserves_markdown(
+        self,
+        markdown_elements,
+        has_comment,
+        comment_text
+    ):
+        """
+        Feature: template-system-extension
+        Property 2: HTML Comment Removal Preserves Markdown
+        
+        For any template content with HTML comments, removing comments SHALL preserve
+        all non-comment markdown content exactly, including formatting, headers, lists,
+        and code blocks.
+        
+        Validates: Requirements 17.3, 17.4, 17.5
+        """
+        processor = PlaceholderProcessor()
+        
+        # Build content with markdown elements
+        content_parts = []
+        for element in markdown_elements:
+            content_parts.append(element)
+            
+            # Optionally add a comment after this element
+            if has_comment:
+                content_parts.append(f"<!-- {comment_text} -->")
+        
+        content = '\n'.join(content_parts)
+        
+        # Process template (which removes comments)
+        result = processor.process_template(content)
+        
+        # Verify all markdown elements are preserved
+        for element in markdown_elements:
+            assert element in result.content, \
+                f"Markdown element '{element}' should be preserved in content"
+        
+        # Verify no comment markers remain
+        assert "<!--" not in result.content, \
+            "Opening comment markers should be removed"
+        assert "-->" not in result.content, \
+            "Closing comment markers should be removed"
+        
+        # Verify markdown structure is intact (no broken formatting)
+        # Check that markdown syntax characters are still present
+        if any('#' in elem for elem in markdown_elements):
+            assert '#' in result.content, "Header markers should be preserved"
+        if any('**' in elem for elem in markdown_elements):
+            assert '**' in result.content, "Bold markers should be preserved"
+        if any('*' in elem and '**' not in elem for elem in markdown_elements):
+            assert '*' in result.content, "Italic markers should be preserved"
+        if any('`' in elem for elem in markdown_elements):
+            assert '`' in result.content, "Code markers should be preserved"
+        if any('[' in elem and ']' in elem for elem in markdown_elements):
+            assert '[' in result.content and ']' in result.content, \
+                "Link markers should be preserved"

@@ -21,7 +21,7 @@ class TestCLIParameterValidation:
     @settings(max_examples=100)
     @given(
         language=st.sampled_from(['de', 'en']),
-        template=st.sampled_from(['backup', 'bcm', 'isms', 'it-operation'])
+        template=st.sampled_from(['backup', 'bcm', 'bsi-grundschutz', 'isms', 'it-operation'])
     )
     def test_property_2_valid_parameter_combinations(self, language, template):
         """
@@ -51,7 +51,7 @@ class TestCLIParameterValidation:
     @settings(max_examples=100)
     @given(
         language=st.sampled_from(['de', 'en', None]),
-        template=st.sampled_from(['backup', 'bcm', 'isms', 'it-operation', None])
+        template=st.sampled_from(['backup', 'bcm', 'bsi-grundschutz', 'isms', 'it-operation', None])
     )
     def test_property_2_parameter_consistency(self, language, template):
         """
@@ -453,3 +453,223 @@ class TestArgumentParsing:
         assert args.template_dir == 'templates'
         assert args.output_dir == 'Handbook'
         assert args.create_config is False
+
+
+class TestTemplateTypeValidation:
+    """Tests for template type validation in CLI."""
+    
+    def test_valid_template_type_backup(self):
+        """
+        Test that 'backup' template type is accepted.
+        
+        Validates: Requirements 21.1, 21.5
+        """
+        test_args = [
+            'cli.py',
+            '--language', 'de',
+            '--template', 'backup'
+        ]
+        
+        with patch.object(sys, 'argv', test_args):
+            args = parse_arguments()
+        
+        assert args.template == 'backup'
+    
+    def test_valid_template_type_bcm(self):
+        """
+        Test that 'bcm' template type is accepted.
+        
+        Validates: Requirements 21.1, 21.5
+        """
+        test_args = [
+            'cli.py',
+            '--language', 'de',
+            '--template', 'bcm'
+        ]
+        
+        with patch.object(sys, 'argv', test_args):
+            args = parse_arguments()
+        
+        assert args.template == 'bcm'
+    
+    def test_valid_template_type_isms(self):
+        """
+        Test that 'isms' template type is accepted.
+        
+        Validates: Requirements 21.2, 21.5
+        """
+        test_args = [
+            'cli.py',
+            '--language', 'en',
+            '--template', 'isms'
+        ]
+        
+        with patch.object(sys, 'argv', test_args):
+            args = parse_arguments()
+        
+        assert args.template == 'isms'
+    
+    def test_valid_template_type_bsi_grundschutz(self):
+        """
+        Test that 'bsi-grundschutz' template type is accepted.
+        
+        Validates: Requirements 21.3, 21.5
+        """
+        test_args = [
+            'cli.py',
+            '--language', 'de',
+            '--template', 'bsi-grundschutz'
+        ]
+        
+        with patch.object(sys, 'argv', test_args):
+            args = parse_arguments()
+        
+        assert args.template == 'bsi-grundschutz'
+    
+    def test_valid_template_type_it_operation(self):
+        """
+        Test that 'it-operation' template type is accepted.
+        
+        Validates: Requirements 21.1, 21.5
+        """
+        test_args = [
+            'cli.py',
+            '--language', 'en',
+            '--template', 'it-operation'
+        ]
+        
+        with patch.object(sys, 'argv', test_args):
+            args = parse_arguments()
+        
+        assert args.template == 'it-operation'
+    
+    def test_invalid_template_type_rejected(self):
+        """
+        Test that invalid template type is rejected with error message.
+        
+        Validates: Requirements 21.5
+        """
+        test_args = [
+            'cli.py',
+            '--language', 'de',
+            '--template', 'invalid-type'
+        ]
+        
+        with patch.object(sys, 'argv', test_args):
+            with pytest.raises(SystemExit) as exc_info:
+                parse_arguments()
+        
+        # argparse exits with code 2 for invalid arguments
+        assert exc_info.value.code == 2
+    
+    def test_invalid_template_type_shows_valid_choices(self, capsys):
+        """
+        Test that invalid template type shows available choices in error message.
+        
+        Validates: Requirements 21.5
+        """
+        test_args = [
+            'cli.py',
+            '--language', 'de',
+            '--template', 'nonexistent'
+        ]
+        
+        with patch.object(sys, 'argv', test_args):
+            with pytest.raises(SystemExit):
+                parse_arguments()
+        
+        captured = capsys.readouterr()
+        error_output = captured.err
+        
+        # Verify error message contains valid choices
+        assert 'invalid choice' in error_output.lower()
+        assert 'backup' in error_output
+        assert 'bcm' in error_output
+        assert 'bsi-grundschutz' in error_output
+        assert 'isms' in error_output
+        assert 'it-operation' in error_output
+    
+    def test_all_valid_template_types_accepted(self):
+        """
+        Test that all valid template types are accepted.
+        
+        Validates: Requirements 21.1, 21.2, 21.3, 21.5
+        """
+        valid_types = ['backup', 'bcm', 'bsi-grundschutz', 'isms', 'it-operation']
+        
+        for template_type in valid_types:
+            test_args = [
+                'cli.py',
+                '--language', 'de',
+                '--template', template_type
+            ]
+            
+            with patch.object(sys, 'argv', test_args):
+                args = parse_arguments()
+            
+            assert args.template == template_type, \
+                f"Template type '{template_type}' should be accepted"
+    
+    @settings(max_examples=100)
+    @given(
+        template_type=st.sampled_from(['backup', 'bcm', 'bsi-grundschutz', 'isms', 'it-operation']),
+        language=st.sampled_from(['de', 'en'])
+    )
+    def test_property_14_cli_template_type_validation(self, template_type, language):
+        """
+        Feature: template-system-extension
+        Property 14: CLI Template Type Validation
+        
+        For any CLI invocation with --template parameter, if the template type
+        is in the valid set (backup, bcm, bsi-grundschutz, isms, it-operation),
+        the system SHALL accept the input without error.
+        
+        Validates: Requirements 21.5
+        """
+        test_args = [
+            'cli.py',
+            '--language', language,
+            '--template', template_type
+        ]
+        
+        with patch.object(sys, 'argv', test_args):
+            args = parse_arguments()
+        
+        # Verify the template type was accepted
+        assert args.template == template_type, \
+            f"Valid template type '{template_type}' should be accepted"
+        assert args.language == language, \
+            f"Language '{language}' should be accepted"
+    
+    @settings(max_examples=100)
+    @given(
+        invalid_template=st.text(
+            alphabet=st.characters(blacklist_categories=('Cs',)),
+            min_size=1,
+            max_size=50
+        ).filter(lambda x: x not in ['backup', 'bcm', 'bsi-grundschutz', 'isms', 'it-operation'])
+    )
+    def test_property_14_cli_invalid_template_rejection(self, invalid_template):
+        """
+        Feature: template-system-extension
+        Property 14: CLI Template Type Validation
+        
+        For any CLI invocation with --template parameter, if the template type
+        is NOT in the valid set, the system SHALL reject the input with an
+        error message listing valid options.
+        
+        Validates: Requirements 21.5
+        """
+        test_args = [
+            'cli.py',
+            '--language', 'de',
+            '--template', invalid_template
+        ]
+        
+        with patch.object(sys, 'argv', test_args):
+            with pytest.raises(SystemExit) as exc_info:
+                parse_arguments()
+        
+        # argparse exits with code 2 for invalid arguments
+        assert exc_info.value.code == 2, \
+            f"Invalid template type '{invalid_template}' should be rejected with exit code 2"

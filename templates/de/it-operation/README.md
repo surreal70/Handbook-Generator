@@ -136,7 +136,56 @@ cp templates/de/service-templates/service_description_template.md \
 - Ersetzen Sie diese mit servicespezifischen Informationen
 - Behalten Sie die Struktur und Überschriften bei
 
-### 2. RACI-Matrizen ausfüllen
+### 2. HTML-Kommentare für Template-Dokumentation
+
+**Verwenden Sie HTML-Kommentare für nicht-gerenderte Hinweise:**
+
+Templates können HTML-Kommentare enthalten, die im generierten Handbuch nicht erscheinen. Diese sind ideal für:
+
+```markdown
+<!-- 
+TEMPLATE-AUTOR HINWEIS:
+Dieser Abschnitt muss für jeden Service individuell angepasst werden.
+Berücksichtigen Sie:
+- Service-spezifische Architektur
+- Abhängigkeiten zu anderen Services
+- Kritikalitätseinstufung
+-->
+
+## Systemarchitektur
+
+{{ netbox.device.name }}
+
+<!-- TODO: Architekturdiagramm einfügen -->
+```
+
+**Anwendungsfälle für HTML-Kommentare:**
+
+**Anpassungshinweise:**
+```markdown
+<!-- Passen Sie die folgenden Werte an Ihre Organisation an -->
+**Wartungsfenster:** Sonntag 02:00-06:00 Uhr
+```
+
+**Framework-Referenzen:**
+```markdown
+<!-- Dieser Abschnitt erfüllt ISO 20000 Anforderung 8.6 -->
+## Incident Management
+```
+
+**Platzhalter-Dokumentation:**
+```markdown
+<!-- Der Platzhalter {{ meta.cio.name }} wird durch den CIO-Namen ersetzt -->
+**Verantwortlich:** {{ meta.cio.name }}
+```
+
+**Best Practices:**
+- Kommentare werden vor der Platzhalter-Verarbeitung entfernt
+- Platzhalter innerhalb von Kommentaren werden nicht ersetzt
+- Verwenden Sie Kommentare für Hinweise, nicht für sensible Daten
+- Vermeiden Sie verschachtelte Kommentare
+
+### 3. RACI-Matrizen ausfüllen
 
 **Vollständige RACI-Matrizen sind essentiell:**
 ```markdown

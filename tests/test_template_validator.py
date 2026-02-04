@@ -34,15 +34,13 @@ class TestRACIMatrixValidation:
 """
         
         validator = TemplateValidator()
-        result = ValidationResult(is_valid=True, warnings=[], errors=[])
-        validator._validate_raci_matrices(content, 'test.md', result)
+        warnings = validator.validate_raci_matrix(content)
         
         # Should have no warnings for valid RACI matrix
-        assert len(result.warnings) == 0
-        assert result.is_valid
+        assert len(warnings) == 0
     
-    def test_incomplete_raci_matrix(self):
-        """Test that an incomplete RACI matrix generates warnings."""
+    def test_raci_matrix_missing_accountable(self):
+        """Test that RACI matrix without Accountable generates warning."""
         content = """
 # Roles and Responsibilities
 
@@ -50,18 +48,56 @@ class TestRACIMatrixValidation:
 
 | Activity | CIO | CISO | Ops Manager | Service Desk |
 |---|---|---|---|---|
-| Operations & Monitoring | A | C | R |  |
-| Incident Management | A |  | R | R |
-| Change Management | A | C |  | I |
+| Operations & Monitoring | R | C | R | I |
+| Incident Management | R | C | R | R |
 """
         
         validator = TemplateValidator()
-        result = ValidationResult(is_valid=True, warnings=[], errors=[])
-        validator._validate_raci_matrices(content, 'test.md', result)
+        warnings = validator.validate_raci_matrix(content)
         
-        # Should have warnings for incomplete cells
-        assert len(result.warnings) > 0
-        assert 'incomplete' in result.warnings[0].lower() or 'invalid' in result.warnings[0].lower()
+        # Should have warnings for missing Accountable
+        assert len(warnings) > 0
+        assert any('accountable' in w.lower() for w in warnings)
+    
+    def test_raci_matrix_missing_responsible(self):
+        """Test that RACI matrix without Responsible generates warning."""
+        content = """
+# Roles and Responsibilities
+
+## RACI Matrix
+
+| Activity | CIO | CISO | Ops Manager | Service Desk |
+|---|---|---|---|---|
+| Operations & Monitoring | A | C | I | I |
+| Incident Management | A | C | I | I |
+"""
+        
+        validator = TemplateValidator()
+        warnings = validator.validate_raci_matrix(content)
+        
+        # Should have warnings for missing Responsible
+        assert len(warnings) > 0
+        assert any('responsible' in w.lower() for w in warnings)
+    
+    def test_raci_matrix_multiple_accountable(self):
+        """Test that RACI matrix with multiple Accountable generates warning."""
+        content = """
+# Roles and Responsibilities
+
+## RACI Matrix
+
+| Activity | CIO | CISO | Ops Manager | Service Desk |
+|---|---|---|---|---|
+| Operations & Monitoring | A | A | R | I |
+| Incident Management | A | C | R | R |
+"""
+        
+        validator = TemplateValidator()
+        warnings = validator.validate_raci_matrix(content)
+        
+        # Should have warnings for multiple Accountable
+        assert len(warnings) > 0
+        assert any('multiple' in w.lower() and 'accountable' in w.lower() for w in warnings)
     
     def test_no_raci_matrix(self):
         """Test that templates without RACI matrices don't generate warnings."""
@@ -76,66 +112,10 @@ Content here.
 """
         
         validator = TemplateValidator()
-        result = ValidationResult(is_valid=True, warnings=[], errors=[])
-        validator._validate_raci_matrices(content, 'test.md', result)
+        warnings = validator.validate_raci_matrix(content)
         
         # Should have no warnings
-        assert len(result.warnings) == 0
-        assert result.is_valid
-    
-    @settings(max_examples=50)
-    @given(
-        num_roles=st.integers(min_value=2, max_value=6),
-        num_activities=st.integers(min_value=2, max_value=8)
-    )
-    def test_property_14_raci_matrix_completeness(self, num_roles, num_activities):
-        """
-        Feature: it-operation-template-extension, Property 14: RACI Matrix Completeness
-        
-        For any template containing a RACI matrix, all cells should be filled with one of the
-        valid RACI values (R, A, C, I) or explicitly marked as not applicable.
-        
-        Validates: Requirements 20.4
-        """
-        raci_values = ['R', 'A', 'C', 'I']
-        
-        # Test 1: Complete RACI matrix (all cells filled)
-        roles = [f'Role{i}' for i in range(num_roles)]
-        header = '| Activity | ' + ' | '.join(roles) + ' |\n'
-        separator = '|---|' + '---|' * num_roles + '\n'
-        
-        rows_complete = []
-        for i in range(num_activities):
-            activity = f'Activity{i}'
-            cells = [activity] + [raci_values[j % len(raci_values)] for j in range(num_roles)]
-            rows_complete.append('| ' + ' | '.join(cells) + ' |')
-        
-        content_complete = header + separator + '\n'.join(rows_complete)
-        
-        validator = TemplateValidator()
-        result_complete = ValidationResult(is_valid=True, warnings=[], errors=[])
-        validator._validate_raci_matrices(content_complete, 'test.md', result_complete)
-        
-        # Complete matrix should have no warnings
-        assert len(result_complete.warnings) == 0, \
-            "Complete RACI matrix should have no warnings"
-        
-        # Test 2: Incomplete RACI matrix (with empty cells)
-        rows_incomplete = []
-        for i in range(num_activities):
-            activity = f'Activity{i}'
-            # Make first role cell empty for each activity
-            cells = [activity, ''] + [raci_values[j % len(raci_values)] for j in range(num_roles - 1)]
-            rows_incomplete.append('| ' + ' | '.join(cells) + ' |')
-        
-        content_incomplete = header + separator + '\n'.join(rows_incomplete)
-        
-        result_incomplete = ValidationResult(is_valid=True, warnings=[], errors=[])
-        validator._validate_raci_matrices(content_incomplete, 'test.md', result_incomplete)
-        
-        # Incomplete matrix should have warnings
-        assert len(result_incomplete.warnings) > 0, \
-            "Incomplete RACI matrix should have warnings"
+        assert len(warnings) == 0
 
 
 class TestPlaceholderSyntaxValidation:
@@ -152,11 +132,10 @@ class TestPlaceholderSyntaxValidation:
 """
         
         validator = TemplateValidator()
-        result = ValidationResult(is_valid=True, warnings=[], errors=[])
-        validator._validate_placeholder_syntax(content, 'test.md', result)
+        warnings = validator.validate_placeholder_syntax(content)
         
         # Should have no warnings
-        assert len(result.warnings) == 0
+        assert len(warnings) == 0
     
     def test_valid_netbox_placeholders(self):
         """Test that valid netbox placeholders pass validation."""
@@ -169,29 +148,27 @@ class TestPlaceholderSyntaxValidation:
 """
         
         validator = TemplateValidator()
-        result = ValidationResult(is_valid=True, warnings=[], errors=[])
-        validator._validate_placeholder_syntax(content, 'test.md', result)
+        warnings = validator.validate_placeholder_syntax(content)
         
         # Should have no warnings
-        assert len(result.warnings) == 0
+        assert len(warnings) == 0
     
     def test_invalid_placeholder_syntax(self):
         """Test that invalid placeholder syntax generates warnings."""
         content = """
 # Service Description
 
-**Organization:** {{ invalid_source.field }}
+**Organization:** {{ invalid }}
 **Name:** {{ meta }}
 **Value:** {{ .field }}
 """
         
         validator = TemplateValidator()
-        result = ValidationResult(is_valid=True, warnings=[], errors=[])
-        validator._validate_placeholder_syntax(content, 'test.md', result)
+        warnings = validator.validate_placeholder_syntax(content)
         
         # Should have warnings for invalid placeholders
-        assert len(result.warnings) > 0
-        assert any('invalid' in w.lower() for w in result.warnings)
+        assert len(warnings) > 0
+        assert any('invalid' in w.lower() for w in warnings)
     
     def test_placeholder_with_whitespace(self):
         """Test that placeholders with whitespace are valid."""
@@ -203,18 +180,17 @@ class TestPlaceholderSyntaxValidation:
 """
         
         validator = TemplateValidator()
-        result = ValidationResult(is_valid=True, warnings=[], errors=[])
-        validator._validate_placeholder_syntax(content, 'test.md', result)
+        warnings = validator.validate_placeholder_syntax(content)
         
         # Should have no warnings (whitespace is allowed)
-        assert len(result.warnings) == 0
+        assert len(warnings) == 0
 
 
 class TestFrameworkReferenceValidation:
     """Tests for framework reference validation."""
     
-    def test_template_with_itil_reference(self):
-        """Test that templates with ITIL references pass validation."""
+    def test_it_operation_template_with_itil_reference(self):
+        """Test that IT-operation templates with ITIL references pass validation."""
         content = """
 # Incident Management
 
@@ -229,14 +205,13 @@ This process follows ITIL v4 Incident Management practice.
 """
         
         validator = TemplateValidator()
-        result = ValidationResult(is_valid=True, warnings=[], errors=[])
-        validator._validate_framework_references(content, '0120_Incident_Management.md', result)
+        warnings = validator.validate_framework_references(content, 'it-operation')
         
         # Should have no warnings
-        assert len(result.warnings) == 0
+        assert len(warnings) == 0
     
-    def test_template_with_iso20000_reference(self):
-        """Test that templates with ISO 20000 references pass validation."""
+    def test_it_operation_template_with_iso20000_reference(self):
+        """Test that IT-operation templates with ISO 20000 references pass validation."""
         content = """
 # Service Level Management
 
@@ -248,14 +223,13 @@ This process implements ISO 20000-1:2018 Clause 8.3 requirements.
 """
         
         validator = TemplateValidator()
-        result = ValidationResult(is_valid=True, warnings=[], errors=[])
-        validator._validate_framework_references(content, '0210_Availability.md', result)
+        warnings = validator.validate_framework_references(content, 'it-operation')
         
         # Should have no warnings
-        assert len(result.warnings) == 0
+        assert len(warnings) == 0
     
-    def test_template_with_cobit_reference(self):
-        """Test that templates with COBIT references pass validation."""
+    def test_it_operation_template_with_cobit_reference(self):
+        """Test that IT-operation templates with COBIT references pass validation."""
         content = """
 # Change Management
 
@@ -267,14 +241,121 @@ This process aligns with COBIT 2019 BAI06 (Managed IT Changes).
 """
         
         validator = TemplateValidator()
-        result = ValidationResult(is_valid=True, warnings=[], errors=[])
-        validator._validate_framework_references(content, '0140_Change_Management.md', result)
+        warnings = validator.validate_framework_references(content, 'it-operation')
         
         # Should have no warnings
-        assert len(result.warnings) == 0
+        assert len(warnings) == 0
     
-    def test_operational_template_without_framework_reference(self):
-        """Test that operational templates without framework references generate warnings."""
+    def test_bcm_template_with_iso22301_reference(self):
+        """Test that BCM templates with ISO 22301 references pass validation."""
+        content = """
+# Business Impact Analysis
+
+This BIA follows ISO 22301:2019 Clause 8.2 requirements.
+
+## BIA Methodology
+
+...
+"""
+        
+        validator = TemplateValidator()
+        warnings = validator.validate_framework_references(content, 'bcm')
+        
+        # Should have no warnings
+        assert len(warnings) == 0
+    
+    def test_bcm_template_with_bsi_bcm_reference(self):
+        """Test that BCM templates with BSI BCM references pass validation."""
+        content = """
+# Emergency Management
+
+This process implements BSI Standard 100-4 requirements.
+
+## Emergency Response
+
+...
+"""
+        
+        validator = TemplateValidator()
+        warnings = validator.validate_framework_references(content, 'bcm')
+        
+        # Should have no warnings
+        assert len(warnings) == 0
+    
+    def test_isms_template_with_iso27001_reference(self):
+        """Test that ISMS templates with ISO 27001 references pass validation."""
+        content = """
+# Information Security Policy
+
+This policy implements ISO 27001:2022 Clause 5.2 requirements.
+
+## Policy Statement
+
+...
+"""
+        
+        validator = TemplateValidator()
+        warnings = validator.validate_framework_references(content, 'isms')
+        
+        # Should have no warnings
+        assert len(warnings) == 0
+    
+    def test_isms_template_with_annex_a_reference(self):
+        """Test that ISMS templates with Annex A references pass validation."""
+        content = """
+# Access Control Policy
+
+This policy addresses ISO 27001:2022 Annex A Control A.9.
+
+## Access Control Requirements
+
+...
+"""
+        
+        validator = TemplateValidator()
+        warnings = validator.validate_framework_references(content, 'isms')
+        
+        # Should have no warnings
+        assert len(warnings) == 0
+    
+    def test_bsi_grundschutz_template_with_bsi_200_1_reference(self):
+        """Test that BSI Grundschutz templates with BSI 200-1 references pass validation."""
+        content = """
+# Information Security Policy
+
+This policy follows BSI Standard 200-1 requirements.
+
+## ISMS Organization
+
+...
+"""
+        
+        validator = TemplateValidator()
+        warnings = validator.validate_framework_references(content, 'bsi-grundschutz')
+        
+        # Should have no warnings
+        assert len(warnings) == 0
+    
+    def test_bsi_grundschutz_template_with_baustein_reference(self):
+        """Test that BSI Grundschutz templates with Baustein references pass validation."""
+        content = """
+# Access Control
+
+This implements BSI Baustein ORP.4 requirements.
+
+## Access Control Measures
+
+...
+"""
+        
+        validator = TemplateValidator()
+        warnings = validator.validate_framework_references(content, 'bsi-grundschutz')
+        
+        # Should have no warnings
+        assert len(warnings) == 0
+    
+    def test_template_without_framework_reference(self):
+        """Test that templates without framework references generate warnings."""
         content = """
 # Incident Management
 
@@ -287,94 +368,11 @@ This is an incident management process.
 """
         
         validator = TemplateValidator()
-        result = ValidationResult(is_valid=True, warnings=[], errors=[])
-        # Use a filename that matches operational keywords
-        validator._validate_framework_references(content, '0120_incident_management.md', result)
+        warnings = validator.validate_framework_references(content, 'it-operation')
         
         # Should have warning about missing framework reference
-        assert len(result.warnings) > 0
-        assert any('framework' in w.lower() for w in result.warnings)
-    
-    def test_non_operational_template_without_framework_reference(self):
-        """Test that non-operational templates don't require framework references."""
-        content = """
-# Introduction
-
-This is an introduction to the handbook.
-
-## Purpose
-
-...
-"""
-        
-        validator = TemplateValidator()
-        result = ValidationResult(is_valid=True, warnings=[], errors=[])
-        validator._validate_framework_references(content, '0010_Introduction.md', result)
-        
-        # Should have no warnings (introduction doesn't need framework references)
-        assert len(result.warnings) == 0
-    
-    @settings(max_examples=50)
-    @given(
-        framework=st.sampled_from(['ITIL v4', 'ISO 20000-1:2018', 'COBIT 2019']),
-        template_type=st.sampled_from([
-            'incident', 'problem', 'change', 'monitoring',
-            'backup', 'disaster', 'security', 'compliance'
-        ])
-    )
-    def test_property_16_template_best_practice_compliance(self, framework, template_type):
-        """
-        Feature: it-operation-template-extension, Property 16: Template Best Practice Compliance
-        
-        For any IT-operations template, it should reference at least one recognized IT framework
-        (ITIL, ISO 20000, COBIT) in its content or structure.
-        
-        Validates: Requirements 20.3
-        """
-        # Create template content with framework reference
-        content = f"""
-# {template_type.title()} Management
-
-This process follows {framework} best practices.
-
-## Process Description
-
-...
-"""
-        
-        validator = TemplateValidator()
-        result = ValidationResult(is_valid=True, warnings=[], errors=[])
-        validator._validate_framework_references(
-            content,
-            f'0100_{template_type}_management.md',
-            result
-        )
-        
-        # Should have no warnings when framework is referenced
-        assert len(result.warnings) == 0, \
-            f"Template with {framework} reference should have no warnings"
-        
-        # Now test without framework reference
-        content_no_framework = f"""
-# {template_type.title()} Management
-
-This is a process description.
-
-## Process Description
-
-...
-"""
-        
-        result_no_framework = ValidationResult(is_valid=True, warnings=[], errors=[])
-        validator._validate_framework_references(
-            content_no_framework,
-            f'0100_{template_type}_management.md',
-            result_no_framework
-        )
-        
-        # Should have warning when framework is not referenced
-        assert len(result_no_framework.warnings) > 0, \
-            f"Operational template without framework reference should have warnings"
+        assert len(warnings) > 0
+        assert any('framework' in w.lower() for w in warnings)
 
 
 class TestTemplateValidation:
@@ -606,3 +604,286 @@ class TestMetadataConfigurationValidation:
                 
             finally:
                 tmp_path.unlink()
+
+
+
+class TestTemplateNumberingValidation:
+    """Tests for template numbering sequence validation."""
+    
+    def test_valid_numbering_sequence(self):
+        """Test that valid numbering sequence passes validation."""
+        from src.template_manager import Template
+        from pathlib import Path
+        
+        templates = [
+            Template(Path('0010_intro.md'), 'content', 10, 'de', 'bcm'),
+            Template(Path('0020_policy.md'), 'content', 20, 'de', 'bcm'),
+            Template(Path('0030_scope.md'), 'content', 30, 'de', 'bcm'),
+        ]
+        
+        validator = TemplateValidator()
+        warnings = validator.validate_numbering(templates)
+        
+        # Should have no warnings
+        assert len(warnings) == 0
+    
+    def test_duplicate_numbering(self):
+        """Test that duplicate numbering generates warnings."""
+        from src.template_manager import Template
+        from pathlib import Path
+        
+        templates = [
+            Template(Path('0010_intro.md'), 'content', 10, 'de', 'bcm'),
+            Template(Path('0010_policy.md'), 'content', 10, 'de', 'bcm'),
+            Template(Path('0020_scope.md'), 'content', 20, 'de', 'bcm'),
+        ]
+        
+        validator = TemplateValidator()
+        warnings = validator.validate_numbering(templates)
+        
+        # Should have warning about duplicates
+        assert len(warnings) > 0
+        assert any('duplicate' in w.lower() for w in warnings)
+    
+    def test_missing_prefix(self):
+        """Test that templates without 4-digit prefix generate warnings."""
+        from pathlib import Path
+        
+        templates = [
+            Path('0010_intro.md'),
+            Path('intro.md'),  # Missing prefix
+            Path('0020_policy.md'),
+        ]
+        
+        validator = TemplateValidator()
+        warnings = validator.validate_numbering(templates)
+        
+        # Should have warning about missing prefix
+        assert len(warnings) > 0
+        assert any('prefix' in w.lower() for w in warnings)
+    
+    def test_large_gap_in_numbering(self):
+        """Test that large gaps in numbering generate warnings."""
+        from src.template_manager import Template
+        from pathlib import Path
+        
+        templates = [
+            Template(Path('0010_intro.md'), 'content', 10, 'de', 'bcm'),
+            Template(Path('0100_policy.md'), 'content', 100, 'de', 'bcm'),  # Large gap
+        ]
+        
+        validator = TemplateValidator()
+        warnings = validator.validate_numbering(templates)
+        
+        # Should have warning about large gap
+        assert len(warnings) > 0
+        assert any('gap' in w.lower() for w in warnings)
+
+
+
+class TestRACIMatrixProperties:
+    """Property-based tests for RACI matrix validation."""
+    
+    @settings(max_examples=100)
+    @given(
+        num_roles=st.integers(min_value=2, max_value=8),
+        num_activities=st.integers(min_value=2, max_value=10)
+    )
+    def test_property_7_raci_matrix_completeness(self, num_roles, num_activities):
+        """
+        Feature: template-system-extension
+        Property 7: RACI Matrix Completeness
+        
+        For any RACI matrix in a template, each activity row SHALL have exactly one 'A' (Accountable)
+        and at least one 'R' (Responsible).
+        
+        Validates: Requirements 2.3, 6.4, 11.5
+        """
+        validator = TemplateValidator()
+        
+        # Test 1: Valid RACI matrix (exactly one A, at least one R per row)
+        roles = [f'Role{i}' for i in range(num_roles)]
+        header = '| Activity | ' + ' | '.join(roles) + ' |\n'
+        separator = '|---|' + '---|' * num_roles + '\n'
+        
+        rows_valid = []
+        for i in range(num_activities):
+            activity = f'Activity{i}'
+            # Ensure exactly one A and at least one R
+            cells = [activity]
+            cells.append('A')  # First role is Accountable
+            cells.append('R')  # Second role is Responsible
+            # Fill remaining roles with C or I
+            for j in range(2, num_roles):
+                cells.append('C' if j % 2 == 0 else 'I')
+            rows_valid.append('| ' + ' | '.join(cells) + ' |')
+        
+        content_valid = header + separator + '\n'.join(rows_valid)
+        warnings_valid = validator.validate_raci_matrix(content_valid)
+        
+        # Valid matrix should have no warnings
+        assert len(warnings_valid) == 0, \
+            f"Valid RACI matrix should have no warnings, got: {warnings_valid}"
+        
+        # Test 2: Invalid RACI matrix (missing Accountable)
+        rows_no_a = []
+        for i in range(num_activities):
+            activity = f'Activity{i}'
+            cells = [activity]
+            # No A, only R, C, I
+            for j in range(num_roles):
+                cells.append('R' if j == 0 else ('C' if j % 2 == 0 else 'I'))
+            rows_no_a.append('| ' + ' | '.join(cells) + ' |')
+        
+        content_no_a = header + separator + '\n'.join(rows_no_a)
+        warnings_no_a = validator.validate_raci_matrix(content_no_a)
+        
+        # Should have warnings about missing Accountable
+        assert len(warnings_no_a) > 0, \
+            "RACI matrix without Accountable should have warnings"
+        assert any('accountable' in w.lower() for w in warnings_no_a), \
+            f"Should warn about missing Accountable, got: {warnings_no_a}"
+        
+        # Test 3: Invalid RACI matrix (missing Responsible)
+        rows_no_r = []
+        for i in range(num_activities):
+            activity = f'Activity{i}'
+            cells = [activity]
+            # No R, only A, C, I
+            for j in range(num_roles):
+                cells.append('A' if j == 0 else ('C' if j % 2 == 0 else 'I'))
+            rows_no_r.append('| ' + ' | '.join(cells) + ' |')
+        
+        content_no_r = header + separator + '\n'.join(rows_no_r)
+        warnings_no_r = validator.validate_raci_matrix(content_no_r)
+        
+        # Should have warnings about missing Responsible
+        assert len(warnings_no_r) > 0, \
+            "RACI matrix without Responsible should have warnings"
+        assert any('responsible' in w.lower() for w in warnings_no_r), \
+            f"Should warn about missing Responsible, got: {warnings_no_r}"
+        
+        # Test 4: Invalid RACI matrix (multiple Accountable)
+        rows_multi_a = []
+        for i in range(num_activities):
+            activity = f'Activity{i}'
+            cells = [activity]
+            # Multiple A values
+            for j in range(num_roles):
+                cells.append('A' if j < 2 else ('R' if j == 2 else 'C'))
+            rows_multi_a.append('| ' + ' | '.join(cells) + ' |')
+        
+        content_multi_a = header + separator + '\n'.join(rows_multi_a)
+        warnings_multi_a = validator.validate_raci_matrix(content_multi_a)
+        
+        # Should have warnings about multiple Accountable
+        assert len(warnings_multi_a) > 0, \
+            "RACI matrix with multiple Accountable should have warnings"
+        assert any('multiple' in w.lower() and 'accountable' in w.lower() for w in warnings_multi_a), \
+            f"Should warn about multiple Accountable, got: {warnings_multi_a}"
+
+
+
+class TestFrameworkReferenceProperties:
+    """Property-based tests for framework reference validation."""
+    
+    @settings(max_examples=100)
+    @given(
+        template_type=st.sampled_from(['it-operation', 'bcm', 'isms', 'bsi-grundschutz']),
+        has_framework_ref=st.booleans()
+    )
+    def test_property_8_framework_reference_presence(self, template_type, has_framework_ref):
+        """
+        Feature: template-system-extension
+        Property 8: Framework Reference Presence
+        
+        For any BCM template, at least one reference to ISO 22301 or BSI BCM standards SHALL be present.
+        For any ISMS template, at least one reference to ISO 27001:2022 SHALL be present.
+        For any BSI Grundschutz template, at least one reference to BSI Standards 200-1, 200-2, or 200-3 SHALL be present.
+        For any IT-operation template, at least one reference to ITIL, ISO 20000, or COBIT SHALL be present.
+        
+        Validates: Requirements 2.1, 2.2, 6.1, 6.2, 11.1, 11.2, 11.3
+        """
+        validator = TemplateValidator()
+        
+        # Define framework references for each template type
+        framework_refs = {
+            'it-operation': ['ITIL v4', 'ISO 20000-1:2018', 'COBIT 2019'],
+            'bcm': ['ISO 22301:2019', 'BSI Standard 100-4'],
+            'isms': ['ISO 27001:2022', 'Annex A'],
+            'bsi-grundschutz': ['BSI Standard 200-1', 'BSI Baustein']
+        }
+        
+        # Select a framework reference for this template type
+        framework_ref = framework_refs[template_type][0]
+        
+        # Create template content with or without framework reference
+        if has_framework_ref:
+            content = f"""
+# Template Content
+
+This template implements {framework_ref} requirements.
+
+## Section
+
+Content here.
+"""
+        else:
+            content = """
+# Template Content
+
+This is a template without framework references.
+
+## Section
+
+Content here.
+"""
+        
+        warnings = validator.validate_framework_references(content, template_type)
+        
+        # If framework reference is present, should have no warnings
+        if has_framework_ref:
+            assert len(warnings) == 0, \
+                f"Template with {framework_ref} reference should have no warnings, got: {warnings}"
+        else:
+            # If framework reference is missing, should have warning
+            assert len(warnings) > 0, \
+                f"Template without framework reference should have warnings"
+            assert any('framework' in w.lower() for w in warnings), \
+                f"Should warn about missing framework reference, got: {warnings}"
+    
+    @settings(max_examples=50)
+    @given(
+        template_type=st.sampled_from(['bcm', 'isms', 'bsi-grundschutz']),
+        framework_idx=st.integers(min_value=0, max_value=1)
+    )
+    def test_property_8_multiple_framework_options(self, template_type, framework_idx):
+        """
+        Test that any valid framework reference for a template type is accepted.
+        """
+        validator = TemplateValidator()
+        
+        # Define multiple valid framework references for each template type
+        framework_options = {
+            'bcm': ['ISO 22301:2019', 'BSI Standard 100-4'],
+            'isms': ['ISO 27001:2022', 'Annex A Control A.5'],
+            'bsi-grundschutz': ['BSI Standard 200-1', 'BSI IT-Grundschutz']
+        }
+        
+        framework_ref = framework_options[template_type][framework_idx]
+        
+        content = f"""
+# Template Content
+
+This template follows {framework_ref} requirements.
+
+## Implementation
+
+Details here.
+"""
+        
+        warnings = validator.validate_framework_references(content, template_type)
+        
+        # Should have no warnings with any valid framework reference
+        assert len(warnings) == 0, \
+            f"Template with {framework_ref} reference should have no warnings, got: {warnings}"

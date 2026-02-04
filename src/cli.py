@@ -42,6 +42,12 @@ Examples:
   # Generate English ISMS handbook in PDF only
   python -m src.cli -l en -t isms -o pdf
   
+  # Generate German BCM handbook in both formats
+  python -m src.cli -l de -t bcm
+  
+  # Generate English BSI Grundschutz handbook in Markdown only
+  python -m src.cli -l en -t bsi-grundschutz -o markdown
+  
   # Verbose mode with custom config
   python -m src.cli -l de -t bcm -v -c custom_config.yaml
         """
@@ -57,8 +63,8 @@ Examples:
     parser.add_argument(
         '--template', '-t',
         type=str,
-        choices=['backup', 'bcm', 'isms', 'it-operation'],
-        help='Template type/category for handbook'
+        choices=['backup', 'bcm', 'bsi-grundschutz', 'isms', 'it-operation'],
+        help='Template type/category for handbook (backup=Backup procedures, bcm=Business Continuity Management, bsi-grundschutz=BSI IT-Grundschutz, isms=Information Security Management System, it-operation=IT Operations)'
     )
     
     parser.add_argument(
@@ -261,7 +267,12 @@ def main() -> int:
             return 1
     
     # Verify selected combination exists
-    templates = template_manager.get_templates(language, template_type)
+    try:
+        templates = template_manager.get_templates(language, template_type)
+    except ValueError as e:
+        logger.log_error(str(e))
+        return 1
+        
     if not templates:
         logger.log_error(
             f"No templates found for language '{language}' and type '{template_type}'. "
