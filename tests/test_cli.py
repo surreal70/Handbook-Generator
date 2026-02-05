@@ -21,7 +21,7 @@ class TestCLIParameterValidation:
     @settings(max_examples=100)
     @given(
         language=st.sampled_from(['de', 'en']),
-        template=st.sampled_from(['backup', 'bcm', 'bsi-grundschutz', 'isms', 'it-operation'])
+        template=st.sampled_from(['backup', 'bcm', 'bsi-grundschutz', 'cis-controls', 'isms', 'it-operation'])
     )
     def test_property_2_valid_parameter_combinations(self, language, template):
         """
@@ -51,7 +51,7 @@ class TestCLIParameterValidation:
     @settings(max_examples=100)
     @given(
         language=st.sampled_from(['de', 'en', None]),
-        template=st.sampled_from(['backup', 'bcm', 'bsi-grundschutz', 'isms', 'it-operation', None])
+        template=st.sampled_from(['backup', 'bcm', 'bsi-grundschutz', 'cis-controls', 'isms', 'it-operation', None])
     )
     def test_property_2_parameter_consistency(self, language, template):
         """
@@ -543,6 +543,64 @@ class TestTemplateTypeValidation:
         
         assert args.template == 'it-operation'
     
+    def test_valid_template_type_cis_controls(self):
+        """
+        Test that 'cis-controls' template type is accepted.
+        
+        Validates: Requirements 3.1, 3.2
+        """
+        test_args = [
+            'cli.py',
+            '--language', 'de',
+            '--template', 'cis-controls'
+        ]
+        
+        with patch.object(sys, 'argv', test_args):
+            args = parse_arguments()
+        
+        assert args.template == 'cis-controls'
+    
+    def test_valid_template_type_cis_controls_short_flag(self):
+        """
+        Test that 'cis-controls' template type is accepted with short flag.
+        
+        Validates: Requirements 3.1, 3.2
+        """
+        test_args = [
+            'cli.py',
+            '-l', 'en',
+            '-t', 'cis-controls'
+        ]
+        
+        with patch.object(sys, 'argv', test_args):
+            args = parse_arguments()
+        
+        assert args.template == 'cis-controls'
+    
+    def test_cis_controls_appears_in_help_text(self, capsys):
+        """
+        Test that 'cis-controls' appears in help text.
+        
+        Validates: Requirements 3.1, 3.2
+        """
+        test_args = [
+            'cli.py',
+            '--help'
+        ]
+        
+        with patch.object(sys, 'argv', test_args):
+            with pytest.raises(SystemExit) as exc_info:
+                parse_arguments()
+        
+        # Help exits with code 0
+        assert exc_info.value.code == 0
+        
+        captured = capsys.readouterr()
+        help_output = captured.out
+        
+        # Verify cis-controls appears in help text
+        assert 'cis-controls' in help_output.lower()
+    
     def test_invalid_template_type_rejected(self):
         """
         Test that invalid template type is rejected with error message.
@@ -586,6 +644,7 @@ class TestTemplateTypeValidation:
         assert 'backup' in error_output
         assert 'bcm' in error_output
         assert 'bsi-grundschutz' in error_output
+        assert 'cis-controls' in error_output
         assert 'isms' in error_output
         assert 'it-operation' in error_output
     
@@ -593,9 +652,9 @@ class TestTemplateTypeValidation:
         """
         Test that all valid template types are accepted.
         
-        Validates: Requirements 21.1, 21.2, 21.3, 21.5
+        Validates: Requirements 21.1, 21.2, 21.3, 21.5, 3.1
         """
-        valid_types = ['backup', 'bcm', 'bsi-grundschutz', 'isms', 'it-operation']
+        valid_types = ['backup', 'bcm', 'bsi-grundschutz', 'cis-controls', 'isms', 'it-operation']
         
         for template_type in valid_types:
             test_args = [
@@ -612,7 +671,7 @@ class TestTemplateTypeValidation:
     
     @settings(max_examples=100)
     @given(
-        template_type=st.sampled_from(['backup', 'bcm', 'bsi-grundschutz', 'isms', 'it-operation']),
+        template_type=st.sampled_from(['backup', 'bcm', 'bsi-grundschutz', 'cis-controls', 'isms', 'it-operation']),
         language=st.sampled_from(['de', 'en'])
     )
     def test_property_14_cli_template_type_validation(self, template_type, language):
@@ -621,10 +680,10 @@ class TestTemplateTypeValidation:
         Property 14: CLI Template Type Validation
         
         For any CLI invocation with --template parameter, if the template type
-        is in the valid set (backup, bcm, bsi-grundschutz, isms, it-operation),
+        is in the valid set (backup, bcm, bsi-grundschutz, cis-controls, isms, it-operation),
         the system SHALL accept the input without error.
         
-        Validates: Requirements 21.5
+        Validates: Requirements 21.5, 3.1
         """
         test_args = [
             'cli.py',
@@ -647,7 +706,7 @@ class TestTemplateTypeValidation:
             alphabet=st.characters(blacklist_categories=('Cs',)),
             min_size=1,
             max_size=50
-        ).filter(lambda x: x not in ['backup', 'bcm', 'bsi-grundschutz', 'isms', 'it-operation'])
+        ).filter(lambda x: x not in ['backup', 'bcm', 'bsi-grundschutz', 'cis-controls', 'isms', 'it-operation'])
     )
     def test_property_14_cli_invalid_template_rejection(self, invalid_template):
         """

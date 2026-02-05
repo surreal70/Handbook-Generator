@@ -8,7 +8,7 @@ echo "Generating PDFs using Pandoc"
 echo "=========================================="
 echo ""
 
-TYPES=("bcm" "isms" "bsi-grundschutz" "it-operation")
+TYPES=("bcm" "isms" "bsi-grundschutz" "it-operation" "cis-controls")
 LANGUAGES=("de" "en")
 
 # First, generate separate markdown files

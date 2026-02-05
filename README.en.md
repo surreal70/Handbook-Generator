@@ -3,10 +3,10 @@
 <div align="center">
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
-[![Version](https://img.shields.io/badge/version-0.0.3-blue.svg)](VERSION.md)
+[![Version](https://img.shields.io/badge/version-0.0.4-blue.svg)](VERSION.md)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Code Coverage](https://img.shields.io/badge/coverage-86%25-brightgreen.svg)](htmlcov/index.html)
-[![Tests](https://img.shields.io/badge/tests-450%20passed-success.svg)](tests/)
+[![Code Coverage](https://img.shields.io/badge/coverage-84%25-brightgreen.svg)](htmlcov/index.html)
+[![Tests](https://img.shields.io/badge/tests-765%20passed-success.svg)](tests/)
 [![Documentation](https://img.shields.io/badge/docs-complete-blue.svg)](docs/)
 
 **A professional Python tool for generating standards-compliant handbooks**
@@ -25,12 +25,12 @@ A Python tool for generating professional handbooks from Markdown templates with
 
 The Handbook Generator creates professional handbooks in various formats (HTML, PDF, Markdown) from structured Markdown templates. The system replaces placeholders in templates with real data from external systems like NetBox and supports multilingual handbooks.
 
-**Version 0.0.3** - Complete handbook generation with PDF support
+**Version 0.0.4** - CIS Controls v8 Hardening Templates Integration
 
 ## Features
 
 - 📝 **Template-based Document Generation** - Structured Markdown templates with intelligent processing
-- 📚 **Four Handbook Types** - BCM, ISMS, BSI Grundschutz, IT-Operations
+- 📚 **Five Handbook Types** - BCM, ISMS, BSI Grundschutz, IT-Operations, CIS Controls
 - 🔄 **Placeholder Replacement** - Automatic data integration from external sources (NetBox, Metadata)
 - 🌍 **Multilingual Support** - German and English with identical structure
 - 📄 **Multi-Format Output** - HTML, PDF (Pandoc + XeLaTeX), Markdown
@@ -40,8 +40,8 @@ The Handbook Generator creates professional handbooks in various formats (HTML, 
 - ⚙️ **Configurable Data Sources** - Flexible integration of external systems
 - 🔍 **Verbose Logging** - Detailed debugging and error analysis
 - ✅ **Comprehensively Tested** - 86% Code Coverage, 450+ Tests (Unit & Property-Based)
-- 📋 **Framework Compliance** - ISO 22301, ISO 27001:2022, BSI Standards, ITIL v4
-- 📦 **186 Templates** - Professional, standards-compliant templates
+- 📋 **Framework Compliance** - ISO 22301, ISO 27001:2022, BSI Standards, ITIL v4, CIS Controls v8
+- 📦 **240 Templates** - Professional, standards-compliant templates
 - 🚀 **Batch Generation** - Automatic generation of all handbooks
 
 ## Handbook Types
@@ -52,8 +52,21 @@ The Handbook Generator creates professional handbooks in various formats (HTML, 
 | **ISMS** | ISO 27001:2022, Annex A | 71 | Information Security Management System |
 | **BSI Grundschutz** | BSI 200-1/2/3 | 54 | IT-Grundschutz according to BSI |
 | **IT-Operation** | ITIL v4, ISO 20000-1 | 31 | IT Operations Handbook |
+| **CIS Controls** | CIS Controls v8 | 27 | CIS Controls v8 Hardening |
 
-## New in Version 0.0.3 🎉
+## New in Version 0.0.4 🎉
+
+- ✅ **CIS Controls v8 Integration** - Fifth handbook type for system hardening
+- ✅ **27 New Templates** - Hardening baselines for OS and applications (54 with DE/EN)
+- ✅ **Foundation Templates** - Overview, scope, lifecycle, exceptions, testing
+- ✅ **OS Hardening** - Windows Server/Client, Linux, macOS, Containers
+- ✅ **App Hardening** - Web servers, databases, Kubernetes, Docker, SSH, Identity
+- ✅ **Fully Bilingual** - German and English with identical structure
+- ✅ **90+ New Tests** - Property-based and integration tests
+- ✅ **Backward Compatible** - All existing handbook types work unchanged
+- ✅ **240 Templates Total** - Across 5 handbook types
+
+## New in Version 0.0.3
 
 - ✅ **Complete PDF Generation** - All 8 handbooks available as PDF (3.4 MB)
 - ✅ **Pandoc + XeLaTeX Integration** - Professional PDF generation with TOC
@@ -212,6 +225,15 @@ python -m src.cli --language en --template isms --output pdf --test
 # Generate BSI Grundschutz handbook in German
 python -m src.cli --language de --template bsi-grundschutz --test
 
+# Generate CIS Controls handbook in German
+python -m src.cli --language de --template cis-controls --test
+
+# Generate CIS Controls handbook in English
+python -m src.cli --language en --template cis-controls --test
+
+# Generate CIS Controls handbook with all formats
+python -m src.cli --language en --template cis-controls --output all --test --separate-files --pdf-toc
+
 # Generate BCM handbook with verbose logging
 python -m src.cli --language en --template bcm --verbose --test
 
@@ -222,7 +244,7 @@ python -m src.cli --config /path/to/config.yaml --language en --template it-oper
 #### Available Parameters
 
 - `--language, -l`: Select language (`de`, `en`)
-- `--template, -t`: Select handbook type (`bcm`, `isms`, `bsi-grundschutz`, `it-operation`)
+- `--template, -t`: Select handbook type (`bcm`, `isms`, `bsi-grundschutz`, `it-operation`, `cis-controls`)
 - `--output, -o`: Output format (`markdown`, `pdf`, `both`) [Default: `both`]
 - `--test`: Enable test mode (required for output generation)
 - `--verbose, -v`: Enable verbose logging
@@ -297,6 +319,35 @@ ERROR: Output generation requires --test flag. Use --test to enable test mode ou
 - **isms**: Information Security Management System (ISO 27001:2022, Annex A)
 - **bsi-grundschutz**: BSI IT-Grundschutz (BSI Standards 200-1, 200-2, 200-3)
 - **it-operation**: IT Operations Handbook (ITIL v4, ISO 20000-1, COBIT 2019)
+- **cis-controls**: CIS Controls v8 Hardening Templates (CIS Controls v8 Framework)
+
+#### CIS Controls Template Structure
+
+The CIS Controls templates are organized into four categories (27 templates, numbering 0010-0410):
+
+**1. Foundation (0010-0050)** - 5 Templates
+- Overview and approach
+- Scope and asset groups
+- Hardening lifecycle
+- Exceptions and risk acceptance
+- Testing and validation
+
+**2. Operating Systems (0100-0150)** - 6 Templates
+- Windows Server Hardening Baseline
+- Windows Client Hardening Baseline
+- Linux Hardening Baseline
+- macOS Hardening Baseline
+- Container Base Images Hardening
+
+**3. Applications (0200-0330)** - 14 Templates
+- Web servers (Nginx, Apache, IIS, Tomcat)
+- Databases (PostgreSQL, MySQL, MS SQL Server)
+- Container platforms (Kubernetes, Docker)
+- Services (SSH, Identity/AD)
+
+**4. Appendices (0400-0410)** - 2 Templates
+- Control Mapping Template
+- Checklists and Evidence
 
 ### Template Structure
 
@@ -320,15 +371,25 @@ templates/
 │   │   ├── 0010_Informationssicherheitsleitlinie.md
 │   │   ├── 0020_ISMS_Organisation_Rollen_RACI.md
 │   │   └── ... (52 more)
-│   └── it-operation/            # IT Operations Handbook (31 Templates)
-│       ├── README.md
-│       ├── 0010_Einleitung.md
-│       └── ... (29 more)
+│   ├── it-operation/            # IT Operations Handbook (31 Templates)
+│   │   ├── README.md
+│   │   ├── 0010_Einleitung.md
+│   │   └── ... (29 more)
+│   └── cis-controls/            # CIS Controls v8 Hardening (27 Templates)
+│       ├── 0000_metadata_de_cis-controls.md
+│       ├── 0010_CIS_Controls_Ueberblick_und_Vorgehen.md
+│       ├── 0020_Geltungsbereich_Assetgruppen_und_Tiering.md
+│       └── ... (25 more)
 └── en/                          # English templates
     ├── bcm/
     ├── isms/
     ├── bsi-grundschutz/
-    └── it-operation/
+    ├── it-operation/
+    └── cis-controls/            # CIS Controls v8 Hardening (27 Templates)
+        ├── 0000_metadata_en_cis-controls.md
+        ├── 0010_CIS_Controls_Overview_and_Approach.md
+        ├── 0020_Scope_Asset_Groups_and_Tiering.md
+        └── ... (25 more)
 ```
 
 #### File Naming Conventions

@@ -74,8 +74,8 @@ Examples:
     parser.add_argument(
         '--template', '-t',
         type=str,
-        choices=['backup', 'bcm', 'bsi-grundschutz', 'isms', 'it-operation'],
-        help='Template type/category for handbook (backup=Backup procedures, bcm=Business Continuity Management, bsi-grundschutz=BSI IT-Grundschutz, isms=Information Security Management System, it-operation=IT Operations)'
+        choices=['backup', 'bcm', 'bsi-grundschutz', 'cis-controls', 'isms', 'it-operation'],
+        help='Template type/category for handbook (backup=Backup procedures, bcm=Business Continuity Management, bsi-grundschutz=BSI IT-Grundschutz, cis-controls=CIS Controls v8 Hardening, isms=Information Security Management System, it-operation=IT Operations)'
     )
     
     parser.add_argument(

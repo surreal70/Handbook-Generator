@@ -9,7 +9,7 @@ echo "=========================================="
 echo ""
 
 # Define handbook types
-TYPES=("bcm" "isms" "bsi-grundschutz" "it-operation")
+TYPES=("bcm" "isms" "bsi-grundschutz" "it-operation" "cis-controls")
 LANGUAGES=("de" "en")
 FORMATS=("html")  # PDF disabled due to missing libpango
 
@@ -46,11 +46,13 @@ echo "├── de/"
 echo "│   ├── bcm/html/"
 echo "│   ├── isms/html/"
 echo "│   ├── bsi-grundschutz/html/"
-echo "│   └── it-operation/html/"
+echo "│   ├── it-operation/html/"
+echo "│   └── cis-controls/html/"
 echo "└── en/"
 echo "    ├── bcm/html/"
 echo "    ├── isms/html/"
 echo "    ├── bsi-grundschutz/html/"
-echo "    └── it-operation/html/"
+echo "    ├── it-operation/html/"
+echo "    └── cis-controls/html/"
 echo ""
 echo "Note: PDF generation skipped due to missing libpango library"

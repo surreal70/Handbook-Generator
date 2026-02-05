@@ -4004,7 +4004,7 @@ class TestSeparateMarkdownFileGeneration:
         assert len(result.errors) == 0, f"Should not have errors: {result.errors}"
         
         # Property 2: All files should be created with correct naming pattern
-        output_dir = output_generator.output_dir / language / "markdown"
+        output_dir = output_generator.output_dir / language / template_type / "markdown"
         assert output_dir.exists(), "Output directory should exist"
         
         for template_name, _ in templates_data:
@@ -4053,7 +4053,7 @@ class TestSeparateMarkdownFileGeneration:
         assert len(result.errors) == 0, f"Should not have errors: {result.errors}"
         
         # Property 2: TOC file should exist
-        toc_path = output_generator.output_dir / language / "markdown" / "TOC.md"
+        toc_path = output_generator.output_dir / language / template_type / "markdown" / "TOC.md"
         assert toc_path.exists(), "TOC.md should exist"
         
         # Property 3: TOC should contain all templates with valid markdown links
@@ -4100,7 +4100,7 @@ class TestSeparateMarkdownFileGeneration:
         assert len(result.errors) == 0, f"Should not have errors: {result.errors}"
         
         # Property: No combined file should exist
-        output_dir = output_generator.output_dir / language / "markdown"
+        output_dir = output_generator.output_dir / language / template_type / "markdown"
         
         # Common combined file patterns
         combined_patterns = [
@@ -4160,7 +4160,7 @@ class TestSeparateMarkdownFileGeneration:
         assert len(result.errors) == 0, f"Should not have errors: {result.errors}"
         
         # Property: Each file should contain exactly its original content
-        output_dir = output_generator.output_dir / language / "markdown"
+        output_dir = output_generator.output_dir / language / template_type / "markdown"
         
         for template_name, original_content in templates_data:
             filename = Path(template_name).stem + ".md"

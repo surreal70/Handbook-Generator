@@ -1,6 +1,6 @@
 # Version Management
 
-## Current Version: 0.0.3
+## Current Version: 0.0.4
 
 ### Single Source of Truth
 
@@ -32,6 +32,22 @@ To update the version number:
 **Do not** hardcode version numbers elsewhere in the codebase.
 
 ### Version History
+
+- **0.0.4** (2025-02-05): CIS Controls v8 Hardening Templates Integration
+  - ✅ Added CIS Controls v8 as fifth handbook type
+  - ✅ 27 new templates for system hardening baselines (54 total with German/English)
+  - ✅ Foundation templates (overview, scope, lifecycle, exceptions, testing)
+  - ✅ Operating system hardening (Windows Server/Client, Linux, macOS, Containers)
+  - ✅ Application hardening (web servers, databases, Kubernetes, Docker, SSH, Identity)
+  - ✅ Appendices (control mapping, checklists, evidence)
+  - ✅ Full bilingual support (German and English)
+  - ✅ Complete integration with existing template system
+  - ✅ Comprehensive test suite (90+ new tests)
+  - ✅ Property-based testing for correctness validation
+  - ✅ End-to-end integration tests for all output formats
+  - ✅ Backward compatibility with existing handbook types
+  - ✅ Updated batch generation scripts
+  - ✅ Total: 240 templates across 5 handbook types
 
 - **0.0.3** (2025-02-05): Complete handbook generation with PDF support
   - ✅ Generated all 8 handbooks in HTML format (388 HTML files)

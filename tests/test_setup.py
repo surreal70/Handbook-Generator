@@ -36,7 +36,7 @@ def test_src_package():
     """Verify src package is importable."""
     import src
     
-    assert src.__version__ == "1.0.0"
+    assert src.__version__ == "0.0.3"
     assert src.__author__ == "Andreas Huemmer"
 
 

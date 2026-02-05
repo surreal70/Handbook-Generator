@@ -271,8 +271,8 @@ class TestHTMLOutputGenerator:
         
         html_dir = result['html_dir']
         assert html_dir.name == 'html'
-        assert html_dir.parent.name == 'en'
-        assert html_dir.parent.parent == html_generator.output_dir
+        assert html_dir.parent.name == 'isms'
+        assert html_dir.parent.parent.name == 'en'
     
     def test_generate_html_site_navigation_links(self, html_generator, sample_templates):
         """Test that navigation links are correctly generated between pages."""
@@ -554,12 +554,14 @@ class TestProperty26HTMLOutputStructure:
         assert '<link rel="stylesheet" href="styles.css">' in toc_content, \
             "TOC page should link to stylesheet"
         
-        # Requirement 31.5: Output stored in test-output/{language}/html/
-        # Note: The actual path is output_dir/{language}/html/ where output_dir is test-output
+        # Requirement 31.5: Output stored in test-output/{language}/{template_type}/html/
+        # Note: The actual path is output_dir/{language}/{template_type}/html/
         assert html_dir.name == 'html', \
             "HTML files should be in 'html' directory"
-        assert html_dir.parent.name == language, \
-            f"HTML directory should be under language directory '{language}'"
+        assert html_dir.parent.name == template_type, \
+            f"HTML directory should be under template type directory '{template_type}'"
+        assert html_dir.parent.parent.name == language, \
+            f"Template type directory should be under language directory '{language}'"
     
     @settings(max_examples=30, suppress_health_check=[HealthCheck.function_scoped_fixture])
     @given(
@@ -706,3 +708,408 @@ class TestProperty26HTMLOutputStructure:
             page_content = (html_dir / html_filename).read_text(encoding='utf-8')
             assert css_link in page_content, \
                 f"Page {html_filename} should link to CSS"
+
+
+# ============================================================================
+# CIS Controls HTML Generation Tests
+# ============================================================================
+
+class TestCISControlsHTMLGeneration:
+    """Test suite for CIS Controls HTML generation."""
+    
+    @pytest.fixture
+    def temp_output_dir(self, tmp_path):
+        """Create temporary output directory."""
+        return tmp_path / "test-output"
+    
+    @pytest.fixture
+    def html_generator(self, temp_output_dir):
+        """Create HTMLOutputGenerator instance with test mode enabled."""
+        return HTMLOutputGenerator(temp_output_dir, test_mode=True)
+    
+    @pytest.fixture
+    def template_manager(self):
+        """Get template manager instance."""
+        from src.template_manager import TemplateManager
+        return TemplateManager(Path("templates"))
+    
+    def test_cis_controls_html_mini_website_generation(self, html_generator, template_manager):
+        """
+        Test HTML mini-website generation for CIS Controls.
+        
+        Requirements: 5.1
+        """
+        # Get CIS Controls templates
+        try:
+            templates = template_manager.get_templates('de', 'cis-controls')
+        except ValueError:
+            pytest.skip("CIS Controls templates not found")
+        
+        if not templates:
+            pytest.skip("No CIS Controls templates available")
+        
+        # Process templates
+        processed_contents = [t.read_content() for t in templates]
+        filenames = [t.path.name for t in templates]
+        
+        # Generate HTML site
+        result = html_generator.generate_html_site(
+            processed_contents,
+            filenames,
+            'de',
+            'cis-controls'
+        )
+        
+        # Verify success
+        assert len(result['errors']) == 0, f"Should have no errors: {result['errors']}"
+        assert result['html_dir'] is not None, "HTML directory should be set"
+        
+        # Verify directory structure
+        html_dir = Path(result['html_dir'])
+        assert html_dir.exists(), "HTML directory should exist"
+        assert html_dir.name == "html"
+        assert html_dir.parent.name == "cis-controls"
+        assert html_dir.parent.parent.name == "de"
+        
+        # Verify index.html exists
+        index_file = html_dir / "index.html"
+        assert index_file.exists(), "index.html should exist"
+        
+        # Verify individual HTML files exist
+        html_files = list(html_dir.glob("*.html"))
+        # Should have index.html plus one file per template
+        assert len(html_files) >= len(templates), \
+            f"Should have at least {len(templates)} HTML files (including index)"
+    
+    def test_cis_controls_html_navigation_structure(self, html_generator, template_manager):
+        """
+        Test that CIS Controls HTML has correct navigation structure.
+        
+        Requirements: 5.1
+        """
+        # Get CIS Controls templates (just first 3 for testing)
+        try:
+            templates = template_manager.get_templates('de', 'cis-controls')[:3]
+        except ValueError:
+            pytest.skip("CIS Controls templates not found")
+        
+        if len(templates) < 2:
+            pytest.skip("Need at least 2 templates for navigation test")
+        
+        # Process templates
+        processed_contents = [t.read_content() for t in templates]
+        filenames = [t.path.name for t in templates]
+        
+        # Generate HTML site
+        result = html_generator.generate_html_site(
+            processed_contents,
+            filenames,
+            'de',
+            'cis-controls'
+        )
+        
+        assert len(result['errors']) == 0
+        html_dir = Path(result['html_dir'])
+        
+        # Check first template page
+        first_file = html_dir / filenames[0].replace('.md', '.html')
+        if first_file.exists():
+            content = first_file.read_text(encoding='utf-8')
+            
+            # Should have navigation
+            assert '<nav' in content, "Should have navigation element"
+            
+            # Should have link to TOC (index.html)
+            assert 'index.html' in content, "Should have link to TOC"
+            
+            # Should have link to next page
+            if len(templates) > 1:
+                next_file = filenames[1].replace('.md', '.html')
+                assert next_file in content, "Should have link to next page"
+        
+        # Check middle template page
+        if len(templates) > 2:
+            middle_file = html_dir / filenames[1].replace('.md', '.html')
+            if middle_file.exists():
+                content = middle_file.read_text(encoding='utf-8')
+                
+                # Should have link to previous page
+                prev_file = filenames[0].replace('.md', '.html')
+                assert prev_file in content, "Should have link to previous page"
+                
+                # Should have link to next page
+                next_file = filenames[2].replace('.md', '.html')
+                assert next_file in content, "Should have link to next page"
+    
+    def test_cis_controls_html_styles_css_inclusion(self, html_generator, template_manager):
+        """
+        Test that CIS Controls HTML includes styles.css.
+        
+        Requirements: 5.1
+        """
+        # Get CIS Controls templates
+        try:
+            templates = template_manager.get_templates('de', 'cis-controls')[:1]
+        except ValueError:
+            pytest.skip("CIS Controls templates not found")
+        
+        if not templates:
+            pytest.skip("No CIS Controls templates available")
+        
+        # Process templates
+        processed_contents = [t.read_content() for t in templates]
+        filenames = [t.path.name for t in templates]
+        
+        # Generate HTML site
+        result = html_generator.generate_html_site(
+            processed_contents,
+            filenames,
+            'de',
+            'cis-controls'
+        )
+        
+        assert len(result['errors']) == 0
+        html_dir = Path(result['html_dir'])
+        
+        # Verify styles.css exists
+        styles_file = html_dir / "styles.css"
+        assert styles_file.exists(), "styles.css should exist"
+        
+        # Verify styles.css has content
+        styles_content = styles_file.read_text(encoding='utf-8')
+        assert len(styles_content) > 0, "styles.css should have content"
+        assert 'body' in styles_content, "styles.css should have body styles"
+        
+        # Verify HTML files link to styles.css
+        index_file = html_dir / "index.html"
+        if index_file.exists():
+            index_content = index_file.read_text(encoding='utf-8')
+            assert '<link rel="stylesheet" href="styles.css">' in index_content, \
+                "index.html should link to styles.css"
+        
+        # Check first template page
+        first_file = html_dir / filenames[0].replace('.md', '.html')
+        if first_file.exists():
+            content = first_file.read_text(encoding='utf-8')
+            assert '<link rel="stylesheet" href="styles.css">' in content, \
+                "Template pages should link to styles.css"
+    
+    def test_cis_controls_english_html_generation(self, html_generator, template_manager):
+        """
+        Test HTML generation for English CIS Controls templates.
+        
+        Requirements: 5.1
+        """
+        # Get English CIS Controls templates
+        try:
+            templates = template_manager.get_templates('en', 'cis-controls')
+        except ValueError:
+            pytest.skip("English CIS Controls templates not found")
+        
+        if not templates:
+            pytest.skip("No English CIS Controls templates available")
+        
+        # Process templates
+        processed_contents = [t.read_content() for t in templates]
+        filenames = [t.path.name for t in templates]
+        
+        # Generate HTML site
+        result = html_generator.generate_html_site(
+            processed_contents,
+            filenames,
+            'en',
+            'cis-controls'
+        )
+        
+        # Verify success
+        assert len(result['errors']) == 0, f"Should have no errors: {result['errors']}"
+        assert result['html_dir'] is not None
+        
+        # Verify directory structure uses English
+        html_dir = Path(result['html_dir'])
+        assert html_dir.parent.parent.name == "en"
+    
+    def test_cis_controls_html_toc_page_structure(self, html_generator, template_manager):
+        """
+        Test that CIS Controls HTML TOC page has correct structure.
+        
+        Requirements: 5.1
+        """
+        # Get CIS Controls templates
+        try:
+            templates = template_manager.get_templates('de', 'cis-controls')
+        except ValueError:
+            pytest.skip("CIS Controls templates not found")
+        
+        if not templates:
+            pytest.skip("No CIS Controls templates available")
+        
+        # Process templates
+        processed_contents = [t.read_content() for t in templates]
+        filenames = [t.path.name for t in templates]
+        
+        # Generate HTML site
+        result = html_generator.generate_html_site(
+            processed_contents,
+            filenames,
+            'de',
+            'cis-controls'
+        )
+        
+        assert len(result['errors']) == 0
+        html_dir = Path(result['html_dir'])
+        
+        # Check index.html (TOC page)
+        index_file = html_dir / "index.html"
+        assert index_file.exists(), "index.html should exist"
+        
+        index_content = index_file.read_text(encoding='utf-8')
+        
+        # Should have TOC heading
+        assert 'Inhaltsverzeichnis' in index_content or 'Table of Contents' in index_content, \
+            "TOC page should have heading"
+        
+        # Should have links to all templates
+        for filename in filenames:
+            html_filename = filename.replace('.md', '.html')
+            assert html_filename in index_content, \
+                f"TOC should link to {html_filename}"
+    
+    def test_cis_controls_html_responsive_design(self, html_generator, template_manager):
+        """
+        Test that CIS Controls HTML includes responsive design CSS.
+        
+        Requirements: 5.1
+        """
+        # Get CIS Controls templates
+        try:
+            templates = template_manager.get_templates('de', 'cis-controls')[:1]
+        except ValueError:
+            pytest.skip("CIS Controls templates not found")
+        
+        if not templates:
+            pytest.skip("No CIS Controls templates available")
+        
+        # Process templates
+        processed_contents = [t.read_content() for t in templates]
+        filenames = [t.path.name for t in templates]
+        
+        # Generate HTML site
+        result = html_generator.generate_html_site(
+            processed_contents,
+            filenames,
+            'de',
+            'cis-controls'
+        )
+        
+        assert len(result['errors']) == 0
+        html_dir = Path(result['html_dir'])
+        
+        # Check styles.css for responsive design
+        styles_file = html_dir / "styles.css"
+        if styles_file.exists():
+            styles_content = styles_file.read_text(encoding='utf-8')
+            
+            # Should have media queries for responsive design
+            assert '@media' in styles_content, \
+                "styles.css should include media queries for responsive design"
+        
+        # Check HTML files for viewport meta tag
+        index_file = html_dir / "index.html"
+        if index_file.exists():
+            index_content = index_file.read_text(encoding='utf-8')
+            assert 'viewport' in index_content, \
+                "HTML should include viewport meta tag for responsive design"
+    
+    def test_cis_controls_html_overwrite_warning(self, html_generator, template_manager):
+        """
+        Test that CIS Controls HTML generation succeeds even when files exist.
+        
+        Note: HTML generator currently overwrites files without warning.
+        This test verifies that generation succeeds on second run.
+        
+        Requirements: 5.1
+        """
+        # Get CIS Controls templates
+        try:
+            templates = template_manager.get_templates('de', 'cis-controls')[:1]
+        except ValueError:
+            pytest.skip("CIS Controls templates not found")
+        
+        if not templates:
+            pytest.skip("No CIS Controls templates available")
+        
+        # Process templates
+        processed_contents = [t.read_content() for t in templates]
+        filenames = [t.path.name for t in templates]
+        
+        # Generate first time
+        result1 = html_generator.generate_html_site(
+            processed_contents,
+            filenames,
+            'de',
+            'cis-controls'
+        )
+        assert len(result1['errors']) == 0
+        
+        # Generate again (overwrite)
+        result2 = html_generator.generate_html_site(
+            processed_contents,
+            filenames,
+            'de',
+            'cis-controls'
+        )
+        
+        # Should succeed without errors
+        assert len(result2['errors']) == 0, \
+            "HTML generation should succeed even when overwriting existing files"
+        
+        # Files should still exist
+        html_dir = Path(result2['html_dir'])
+        assert (html_dir / "index.html").exists(), "index.html should exist after overwrite"
+    
+    def test_cis_controls_html_content_conversion(self, html_generator, template_manager):
+        """
+        Test that CIS Controls markdown content is properly converted to HTML.
+        
+        Requirements: 5.1
+        """
+        # Get CIS Controls templates
+        try:
+            templates = template_manager.get_templates('de', 'cis-controls')[:1]
+        except ValueError:
+            pytest.skip("CIS Controls templates not found")
+        
+        if not templates:
+            pytest.skip("No CIS Controls templates available")
+        
+        # Process templates
+        processed_contents = [t.read_content() for t in templates]
+        filenames = [t.path.name for t in templates]
+        
+        # Generate HTML site
+        result = html_generator.generate_html_site(
+            processed_contents,
+            filenames,
+            'de',
+            'cis-controls'
+        )
+        
+        assert len(result['errors']) == 0
+        html_dir = Path(result['html_dir'])
+        
+        # Check first template page
+        first_file = html_dir / filenames[0].replace('.md', '.html')
+        if first_file.exists():
+            content = first_file.read_text(encoding='utf-8')
+            
+            # Should have HTML structure
+            assert '<!DOCTYPE html>' in content, "Should have HTML doctype"
+            assert '<html' in content, "Should have html tag"
+            assert '<head>' in content, "Should have head section"
+            assert '<body>' in content, "Should have body section"
+            
+            # Markdown headers should be converted to HTML headers
+            if '#' in processed_contents[0]:
+                assert '<h1>' in content or '<h2>' in content or '<h3>' in content, \
+                    "Markdown headers should be converted to HTML headers"

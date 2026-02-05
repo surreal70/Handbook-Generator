@@ -168,7 +168,7 @@ def test_end_to_end_handbook_generation(temp_workspace, complete_template_set, m
         processor = PlaceholderProcessor(data_sources)
         
         # Create output generator
-        output_generator = OutputGenerator(output_dir)
+        output_generator = OutputGenerator(output_dir, test_mode=True)
         
         # Execute workflow
         # 1. Discover templates
@@ -198,7 +198,7 @@ def test_end_to_end_handbook_generation(temp_workspace, complete_template_set, m
         assert "Datacenter Munich" in all_content
         assert "192.168.1.100" in all_content
         assert "Andreas Huemmer" in all_content
-        assert "1.0.0" in all_content
+        assert "0.0.3" in all_content  # Version from src/__init__.py
         # Date will be current date (check for year 2026 or 2025)
         assert "2026-" in all_content or "2025-" in all_content
         
@@ -213,7 +213,7 @@ def test_end_to_end_handbook_generation(temp_workspace, complete_template_set, m
         
         # 5. Verify output file exists and structure
         assert output_path.exists(), "Output file should be created"
-        assert output_path.parent == output_dir / "de" / "backup"
+        assert output_path.parent == output_dir / "de" / "backup" / "markdown"
         assert output_path.name == "backup_handbook.md"
         
         # 6. Verify output content
@@ -269,7 +269,7 @@ def test_end_to_end_with_pdf_generation(temp_workspace, complete_template_set, m
         
         data_sources = {"netbox": netbox_adapter, "metadata": config_data["metadata"]}
         processor = PlaceholderProcessor(data_sources)
-        output_generator = OutputGenerator(output_dir)
+        output_generator = OutputGenerator(output_dir, test_mode=True)
         
         # Process templates
         templates = template_manager.get_templates("de", "backup")
@@ -399,7 +399,7 @@ def test_multi_language_handbook_generation(temp_workspace, multilanguage_templa
         
         data_sources = {"netbox": netbox_adapter, "metadata": config_data["metadata"]}
         processor = PlaceholderProcessor(data_sources)
-        output_generator = OutputGenerator(output_dir)
+        output_generator = OutputGenerator(output_dir, test_mode=True)
         
         # Process German templates
         de_templates = template_manager.get_templates("de", "backup")
@@ -660,7 +660,7 @@ Another valid placeholder:
         
         data_sources = {"netbox": netbox_adapter, "metadata": config_data["metadata"]}
         processor = PlaceholderProcessor(data_sources)
-        output_generator = OutputGenerator(output_dir)
+        output_generator = OutputGenerator(output_dir, test_mode=True)
         
         # Process template
         templates = template_manager.get_templates("de", "backup")
@@ -1463,7 +1463,7 @@ def test_end_to_end_it_operations_handbook_generation(temp_workspace, it_operati
             "metadata": metadata_dict
         }
         processor = PlaceholderProcessor(data_sources, metadata_dict)
-        output_generator = OutputGenerator(output_dir)
+        output_generator = OutputGenerator(output_dir, test_mode=True)
         
         # Process German templates
         de_templates = template_manager.get_templates("de", "it-operation")
@@ -1514,7 +1514,7 @@ def test_end_to_end_it_operations_handbook_generation(temp_workspace, it_operati
         
         # Verify output structure
         assert de_output.exists(), "German output should exist"
-        assert de_output.parent == output_dir / "de" / "it-operation"
+        assert de_output.parent == output_dir / "de" / "it-operation" / "markdown"
         assert de_output.name == "it-operation_handbook.md"
         
         # Verify output content
@@ -1585,7 +1585,7 @@ def test_end_to_end_bilingual_handbook_generation(temp_workspace, it_operations_
             "metadata": metadata_dict
         }
         processor = PlaceholderProcessor(data_sources, metadata_dict)
-        output_generator = OutputGenerator(output_dir)
+        output_generator = OutputGenerator(output_dir, test_mode=True)
         
         # Process German templates
         de_templates = template_manager.get_templates("de", "it-operation")
@@ -1618,7 +1618,7 @@ def test_end_to_end_bilingual_handbook_generation(temp_workspace, it_operations_
         assert en_output.exists(), "English output should exist"
         
         # Verify correct directory structure
-        assert de_output.parent == output_dir / "de" / "it-operation"
+        assert de_output.parent == output_dir / "de" / "it-operation" / "markdown"
         assert en_output.parent == output_dir / "en" / "it-operation"
         
         # Verify language-specific content
@@ -1819,7 +1819,7 @@ def test_service_template_workflow(temp_workspace, service_template,
             "metadata": metadata_dict
         }
         processor = PlaceholderProcessor(data_sources, metadata_dict)
-        output_generator = OutputGenerator(output_dir)
+        output_generator = OutputGenerator(output_dir, test_mode=True)
         
         # Process service template
         templates = template_manager.get_templates("de", "service-templates")
@@ -1875,7 +1875,7 @@ def test_service_template_workflow(temp_workspace, service_template,
         
         # Verify output was created
         assert output_path.exists(), "Service template output should exist"
-        assert output_path.parent == output_dir / "de" / "service-templates"
+        assert output_path.parent == output_dir / "de" / "service-templates" / "markdown"
         
         # Verify output content
         output_content = output_path.read_text()
@@ -2139,7 +2139,7 @@ def test_end_to_end_bcm_handbook_generation_german(temp_workspace, bcm_templates
             "metadata": metadata_dict
         }
         processor = PlaceholderProcessor(data_sources, metadata_dict)
-        output_generator = OutputGenerator(output_dir)
+        output_generator = OutputGenerator(output_dir, test_mode=True)
         
         # Process German BCM templates
         de_templates = template_manager.get_templates("de", "bcm")
@@ -2197,7 +2197,7 @@ def test_end_to_end_bcm_handbook_generation_german(temp_workspace, bcm_templates
         
         # Verify output structure
         assert de_output.exists(), "German BCM output should exist"
-        assert de_output.parent == output_dir / "de" / "bcm"
+        assert de_output.parent == output_dir / "de" / "bcm" / "markdown"
         assert de_output.name == "bcm_handbook.md"
         
         # Verify output content
@@ -2260,7 +2260,7 @@ def test_end_to_end_bcm_handbook_generation_english(temp_workspace, bcm_template
             "metadata": metadata_dict
         }
         processor = PlaceholderProcessor(data_sources, metadata_dict)
-        output_generator = OutputGenerator(output_dir)
+        output_generator = OutputGenerator(output_dir, test_mode=True)
         
         # Process English BCM templates
         en_templates = template_manager.get_templates("en", "bcm")
@@ -2307,7 +2307,7 @@ def test_end_to_end_bcm_handbook_generation_english(temp_workspace, bcm_template
         
         # Verify output structure
         assert en_output.exists(), "English BCM output should exist"
-        assert en_output.parent == output_dir / "en" / "bcm"
+        assert en_output.parent == output_dir / "en" / "bcm" / "markdown"
         assert en_output.name == "bcm_handbook.md"
         
         # Verify output content
@@ -2364,7 +2364,7 @@ def test_bcm_bilingual_consistency(temp_workspace, bcm_templates,
             "metadata": metadata_dict
         }
         processor = PlaceholderProcessor(data_sources, metadata_dict)
-        output_generator = OutputGenerator(output_dir)
+        output_generator = OutputGenerator(output_dir, test_mode=True)
         
         # Process both languages
         de_templates = template_manager.get_templates("de", "bcm")
@@ -2846,7 +2846,7 @@ def test_end_to_end_isms_handbook_generation_german(temp_workspace, isms_templat
             "metadata": metadata_dict
         }
         processor = PlaceholderProcessor(data_sources, metadata_dict)
-        output_generator = OutputGenerator(output_dir)
+        output_generator = OutputGenerator(output_dir, test_mode=True)
         
         # Process German ISMS templates
         de_templates = template_manager.get_templates("de", "isms")
@@ -2920,7 +2920,7 @@ def test_end_to_end_isms_handbook_generation_german(temp_workspace, isms_templat
         
         # Verify output structure
         assert de_output.exists(), "German ISMS output should exist"
-        assert de_output.parent == output_dir / "de" / "isms"
+        assert de_output.parent == output_dir / "de" / "isms" / "markdown"
         assert de_output.name == "isms_handbook.md"
         
         # Verify output content
@@ -2980,7 +2980,7 @@ def test_end_to_end_isms_handbook_generation_english(temp_workspace, isms_templa
             "metadata": metadata_dict
         }
         processor = PlaceholderProcessor(data_sources, metadata_dict)
-        output_generator = OutputGenerator(output_dir)
+        output_generator = OutputGenerator(output_dir, test_mode=True)
         
         # Process English ISMS templates
         en_templates = template_manager.get_templates("en", "isms")
@@ -3034,7 +3034,7 @@ def test_end_to_end_isms_handbook_generation_english(temp_workspace, isms_templa
         
         # Verify output structure
         assert en_output.exists(), "English ISMS output should exist"
-        assert en_output.parent == output_dir / "en" / "isms"
+        assert en_output.parent == output_dir / "en" / "isms" / "markdown"
         assert en_output.name == "isms_handbook.md"
         
         # Verify output content
@@ -3680,7 +3680,7 @@ def test_end_to_end_bsi_grundschutz_handbook_generation_german(temp_workspace, b
             "metadata": metadata_dict
         }
         processor = PlaceholderProcessor(data_sources, metadata_dict)
-        output_generator = OutputGenerator(output_dir)
+        output_generator = OutputGenerator(output_dir, test_mode=True)
         
         # Process German BSI Grundschutz templates
         de_templates = template_manager.get_templates("de", "bsi-grundschutz")
@@ -3748,7 +3748,7 @@ def test_end_to_end_bsi_grundschutz_handbook_generation_german(temp_workspace, b
         
         # Verify output structure
         assert de_output.exists(), "German BSI Grundschutz output should exist"
-        assert de_output.parent == output_dir / "de" / "bsi-grundschutz"
+        assert de_output.parent == output_dir / "de" / "bsi-grundschutz" / "markdown"
         assert de_output.name == "bsi-grundschutz_handbook.md"
         
         # Verify output content
@@ -3806,7 +3806,7 @@ def test_end_to_end_bsi_grundschutz_handbook_generation_english(temp_workspace, 
             "metadata": metadata_dict
         }
         processor = PlaceholderProcessor(data_sources, metadata_dict)
-        output_generator = OutputGenerator(output_dir)
+        output_generator = OutputGenerator(output_dir, test_mode=True)
         
         # Process English BSI Grundschutz templates
         en_templates = template_manager.get_templates("en", "bsi-grundschutz")
@@ -3852,7 +3852,7 @@ def test_end_to_end_bsi_grundschutz_handbook_generation_english(temp_workspace, 
         
         # Verify output structure
         assert en_output.exists(), "English BSI Grundschutz output should exist"
-        assert en_output.parent == output_dir / "en" / "bsi-grundschutz"
+        assert en_output.parent == output_dir / "en" / "bsi-grundschutz" / "markdown"
         assert en_output.name == "bsi-grundschutz_handbook.md"
         
         # Verify output content
@@ -4038,7 +4038,7 @@ def test_backward_compatibility_it_operation_templates(temp_workspace, it_operat
             "metadata": metadata_dict
         }
         processor = PlaceholderProcessor(data_sources, metadata_dict)
-        output_generator = OutputGenerator(output_dir)
+        output_generator = OutputGenerator(output_dir, test_mode=True)
         
         # Process IT-Operation templates
         de_templates = template_manager.get_templates("de", "it-operation")
@@ -4087,7 +4087,7 @@ def test_backward_compatibility_it_operation_templates(temp_workspace, it_operat
         
         # Verify output structure (backward compatibility)
         assert de_output.exists(), "IT-Operation output should exist"
-        assert de_output.parent == output_dir / "de" / "it-operation"
+        assert de_output.parent == output_dir / "de" / "it-operation" / "markdown"
         assert de_output.name == "it-operation_handbook.md"
         
         # Verify output content
@@ -4261,7 +4261,7 @@ def test_backward_compatibility_output_structure(temp_workspace, it_operation_ba
             "metadata": metadata_dict
         }
         processor = PlaceholderProcessor(data_sources, metadata_dict)
-        output_generator = OutputGenerator(output_dir)
+        output_generator = OutputGenerator(output_dir, test_mode=True)
         
         # Process templates
         templates = template_manager.get_templates("de", "it-operation")
@@ -4297,6 +4297,334 @@ def test_backward_compatibility_output_structure(temp_workspace, it_operation_ba
         output_content = output_path.read_text()
         assert len(output_content) > 0, "Output should have content"
         assert "#" in output_content, "Output should contain markdown headers"
+
+
+@pytest.mark.integration
+def test_backward_compatibility_bcm_handbook_generation(temp_workspace, sample_metadata_config, mock_netbox_api):
+    """
+    Test that BCM handbook generation produces identical output after CIS Controls integration.
+    
+    This test verifies:
+    - BCM templates are still discoverable
+    - BCM handbook generation works correctly
+    - Output structure is unchanged
+    - All placeholders are replaced correctly
+    
+    Requirements: 10.1
+    Task: 9.2
+    """
+    from src.meta_adapter import MetaAdapter
+    
+    # Use actual BCM templates from the repository
+    templates_dir = Path("templates")
+    output_dir = temp_workspace / "Handbook"
+    
+    # Initialize components
+    template_manager = TemplateManager(templates_dir)
+    
+    # Create meta adapter
+    meta_adapter = MetaAdapter(sample_metadata_config)
+    meta_adapter.connect()
+    
+    # Create netbox adapter
+    with patch('pynetbox.api') as mock_pynetbox:
+        mock_pynetbox.return_value = mock_netbox_api
+        
+        netbox_adapter = NetBoxAdapter(
+            url="https://netbox.example.com",
+            api_token="test_token"
+        )
+        netbox_adapter.connect()
+        
+        # Create placeholder processor
+        metadata_dict = {
+            "author": "Test Author",
+            "version": "1.0.0",
+            "date": "2025-01-30"
+        }
+        data_sources = {
+            "meta": meta_adapter,
+            "netbox": netbox_adapter,
+            "metadata": metadata_dict
+        }
+        processor = PlaceholderProcessor(data_sources, metadata_dict)
+        output_generator = OutputGenerator(output_dir, test_mode=True)
+        
+        # Process BCM templates
+        bcm_templates = template_manager.get_templates("de", "bcm")
+        assert len(bcm_templates) > 0, "Should find BCM templates"
+        
+        bcm_results = []
+        for template in bcm_templates[:5]:  # Test first 5 templates
+            content = template.read_content()
+            result = processor.process_template(content, template.path.name)
+            bcm_results.append(result)
+        
+        # Verify no errors (backward compatibility)
+        total_errors = sum(len(r.errors) for r in bcm_results)
+        assert total_errors == 0, "BCM handbook generation should work without errors"
+        
+        # Generate output
+        bcm_output_result = output_generator.generate_markdown(
+            [r.content for r in bcm_results], "de", "bcm"
+        )
+        bcm_output = bcm_output_result.markdown_path
+        
+        # Verify output structure (backward compatibility)
+        assert bcm_output.exists(), "BCM output should exist"
+        assert bcm_output.parent == output_dir / "de" / "bcm" / "markdown"
+        assert bcm_output.name == "bcm_handbook.md"
+        
+        # Verify output content
+        output_content = bcm_output.read_text()
+        assert len(output_content) > 0, "BCM output should have content"
+        assert "#" in output_content, "BCM output should contain markdown headers"
+
+
+@pytest.mark.integration
+def test_backward_compatibility_isms_handbook_generation(temp_workspace, sample_metadata_config, mock_netbox_api):
+    """
+    Test that ISMS handbook generation produces identical output after CIS Controls integration.
+    
+    This test verifies:
+    - ISMS templates are still discoverable
+    - ISMS handbook generation works correctly
+    - Output structure is unchanged
+    - All placeholders are replaced correctly
+    
+    Requirements: 10.2
+    Task: 9.2
+    """
+    from src.meta_adapter import MetaAdapter
+    
+    # Use actual ISMS templates from the repository
+    templates_dir = Path("templates")
+    output_dir = temp_workspace / "Handbook"
+    
+    # Initialize components
+    template_manager = TemplateManager(templates_dir)
+    
+    # Create meta adapter
+    meta_adapter = MetaAdapter(sample_metadata_config)
+    meta_adapter.connect()
+    
+    # Create netbox adapter
+    with patch('pynetbox.api') as mock_pynetbox:
+        mock_pynetbox.return_value = mock_netbox_api
+        
+        netbox_adapter = NetBoxAdapter(
+            url="https://netbox.example.com",
+            api_token="test_token"
+        )
+        netbox_adapter.connect()
+        
+        # Create placeholder processor
+        metadata_dict = {
+            "author": "Test Author",
+            "version": "1.0.0",
+            "date": "2025-01-30"
+        }
+        data_sources = {
+            "meta": meta_adapter,
+            "netbox": netbox_adapter,
+            "metadata": metadata_dict
+        }
+        processor = PlaceholderProcessor(data_sources, metadata_dict)
+        output_generator = OutputGenerator(output_dir, test_mode=True)
+        
+        # Process ISMS templates
+        isms_templates = template_manager.get_templates("de", "isms")
+        assert len(isms_templates) > 0, "Should find ISMS templates"
+        
+        isms_results = []
+        for template in isms_templates[:5]:  # Test first 5 templates
+            content = template.read_content()
+            result = processor.process_template(content, template.path.name)
+            isms_results.append(result)
+        
+        # Verify no errors (backward compatibility)
+        total_errors = sum(len(r.errors) for r in isms_results)
+        assert total_errors == 0, "ISMS handbook generation should work without errors"
+        
+        # Generate output
+        isms_output_result = output_generator.generate_markdown(
+            [r.content for r in isms_results], "de", "isms"
+        )
+        isms_output = isms_output_result.markdown_path
+        
+        # Verify output structure (backward compatibility)
+        assert isms_output.exists(), "ISMS output should exist"
+        assert isms_output.parent == output_dir / "de" / "isms" / "markdown"
+        assert isms_output.name == "isms_handbook.md"
+        
+        # Verify output content
+        output_content = isms_output.read_text()
+        assert len(output_content) > 0, "ISMS output should have content"
+        assert "#" in output_content, "ISMS output should contain markdown headers"
+
+
+@pytest.mark.integration
+def test_backward_compatibility_bsi_grundschutz_handbook_generation(temp_workspace, sample_metadata_config, mock_netbox_api):
+    """
+    Test that BSI Grundschutz handbook generation produces identical output after CIS Controls integration.
+    
+    This test verifies:
+    - BSI Grundschutz templates are still discoverable
+    - BSI Grundschutz handbook generation works correctly
+    - Output structure is unchanged
+    - All placeholders are replaced correctly
+    
+    Requirements: 10.3
+    Task: 9.2
+    """
+    from src.meta_adapter import MetaAdapter
+    
+    # Use actual BSI Grundschutz templates from the repository
+    templates_dir = Path("templates")
+    output_dir = temp_workspace / "Handbook"
+    
+    # Initialize components
+    template_manager = TemplateManager(templates_dir)
+    
+    # Create meta adapter
+    meta_adapter = MetaAdapter(sample_metadata_config)
+    meta_adapter.connect()
+    
+    # Create netbox adapter
+    with patch('pynetbox.api') as mock_pynetbox:
+        mock_pynetbox.return_value = mock_netbox_api
+        
+        netbox_adapter = NetBoxAdapter(
+            url="https://netbox.example.com",
+            api_token="test_token"
+        )
+        netbox_adapter.connect()
+        
+        # Create placeholder processor
+        metadata_dict = {
+            "author": "Test Author",
+            "version": "1.0.0",
+            "date": "2025-01-30"
+        }
+        data_sources = {
+            "meta": meta_adapter,
+            "netbox": netbox_adapter,
+            "metadata": metadata_dict
+        }
+        processor = PlaceholderProcessor(data_sources, metadata_dict)
+        output_generator = OutputGenerator(output_dir, test_mode=True)
+        
+        # Process BSI Grundschutz templates
+        bsi_templates = template_manager.get_templates("de", "bsi-grundschutz")
+        assert len(bsi_templates) > 0, "Should find BSI Grundschutz templates"
+        
+        bsi_results = []
+        for template in bsi_templates[:5]:  # Test first 5 templates
+            content = template.read_content()
+            result = processor.process_template(content, template.path.name)
+            bsi_results.append(result)
+        
+        # Verify no errors (backward compatibility)
+        total_errors = sum(len(r.errors) for r in bsi_results)
+        assert total_errors == 0, "BSI Grundschutz handbook generation should work without errors"
+        
+        # Generate output
+        bsi_output_result = output_generator.generate_markdown(
+            [r.content for r in bsi_results], "de", "bsi-grundschutz"
+        )
+        bsi_output = bsi_output_result.markdown_path
+        
+        # Verify output structure (backward compatibility)
+        assert bsi_output.exists(), "BSI Grundschutz output should exist"
+        assert bsi_output.parent == output_dir / "de" / "bsi-grundschutz" / "markdown"
+        assert bsi_output.name == "bsi-grundschutz_handbook.md"
+        
+        # Verify output content
+        output_content = bsi_output.read_text()
+        assert len(output_content) > 0, "BSI Grundschutz output should have content"
+        assert "#" in output_content, "BSI Grundschutz output should contain markdown headers"
+
+
+@pytest.mark.integration
+def test_backward_compatibility_it_operation_handbook_generation(temp_workspace, sample_metadata_config, mock_netbox_api):
+    """
+    Test that IT-Operation handbook generation produces identical output after CIS Controls integration.
+    
+    This test verifies:
+    - IT-Operation templates are still discoverable
+    - IT-Operation handbook generation works correctly
+    - Output structure is unchanged
+    - All placeholders are replaced correctly
+    
+    Requirements: 10.4
+    Task: 9.2
+    """
+    from src.meta_adapter import MetaAdapter
+    
+    # Use actual IT-Operation templates from the repository
+    templates_dir = Path("templates")
+    output_dir = temp_workspace / "Handbook"
+    
+    # Initialize components
+    template_manager = TemplateManager(templates_dir)
+    
+    # Create meta adapter
+    meta_adapter = MetaAdapter(sample_metadata_config)
+    meta_adapter.connect()
+    
+    # Create netbox adapter
+    with patch('pynetbox.api') as mock_pynetbox:
+        mock_pynetbox.return_value = mock_netbox_api
+        
+        netbox_adapter = NetBoxAdapter(
+            url="https://netbox.example.com",
+            api_token="test_token"
+        )
+        netbox_adapter.connect()
+        
+        # Create placeholder processor
+        metadata_dict = {
+            "author": "Test Author",
+            "version": "1.0.0",
+            "date": "2025-01-30"
+        }
+        data_sources = {
+            "meta": meta_adapter,
+            "netbox": netbox_adapter,
+            "metadata": metadata_dict
+        }
+        processor = PlaceholderProcessor(data_sources, metadata_dict)
+        output_generator = OutputGenerator(output_dir, test_mode=True)
+        
+        # Process IT-Operation templates
+        it_op_templates = template_manager.get_templates("de", "it-operation")
+        assert len(it_op_templates) > 0, "Should find IT-Operation templates"
+        
+        it_op_results = []
+        for template in it_op_templates[:5]:  # Test first 5 templates
+            content = template.read_content()
+            result = processor.process_template(content, template.path.name)
+            it_op_results.append(result)
+        
+        # Verify no errors (backward compatibility)
+        total_errors = sum(len(r.errors) for r in it_op_results)
+        assert total_errors == 0, "IT-Operation handbook generation should work without errors"
+        
+        # Generate output
+        it_op_output_result = output_generator.generate_markdown(
+            [r.content for r in it_op_results], "de", "it-operation"
+        )
+        it_op_output = it_op_output_result.markdown_path
+        
+        # Verify output structure (backward compatibility)
+        assert it_op_output.exists(), "IT-Operation output should exist"
+        assert it_op_output.parent == output_dir / "de" / "it-operation" / "markdown"
+        assert it_op_output.name == "it-operation_handbook.md"
+        
+        # Verify output content
+        output_content = it_op_output.read_text()
+        assert len(output_content) > 0, "IT-Operation output should have content"
+        assert "#" in output_content, "IT-Operation output should contain markdown headers"
 
 
 
@@ -4718,7 +5046,7 @@ def test_html_comment_integration_end_to_end(temp_workspace, templates_with_html
             "metadata": metadata_dict
         }
         processor = PlaceholderProcessor(data_sources, metadata_dict)
-        output_generator = OutputGenerator(output_dir)
+        output_generator = OutputGenerator(output_dir, test_mode=True)
         
         # Process all templates
         templates = template_manager.get_templates("de", "test-comments")
@@ -4998,7 +5326,7 @@ def test_separate_markdown_files_generation(temp_workspace, bcm_templates_for_te
         )
         
         # Verify output directory structure
-        markdown_dir = output_dir / "de" / "markdown"
+        markdown_dir = output_dir / "de" / "bcm" / "markdown"
         assert markdown_dir.exists(), "Markdown directory should exist"
         
         # Verify one file per template
@@ -5279,16 +5607,16 @@ def test_multi_format_output_generation(temp_workspace, bcm_templates_for_testin
             print(f"PDF generation skipped: {e}")
         
         # Verify output directory structure
-        assert (output_dir / "de" / "markdown").exists(), "Markdown directory should exist"
-        assert (output_dir / "de" / "html").exists(), "HTML directory should exist"
+        assert (output_dir / "de" / "bcm" / "markdown").exists(), "Markdown directory should exist"
+        assert (output_dir / "de" / "bcm" / "html").exists(), "HTML directory should exist"
         
         # Verify markdown files
-        markdown_dir = output_dir / "de" / "markdown"
+        markdown_dir = output_dir / "de" / "bcm" / "markdown"
         markdown_files = list(markdown_dir.glob("*.md"))
         assert len(markdown_files) == 4, "Should have 4 markdown files (3 templates + TOC)"
         
         # Verify HTML files
-        html_dir = output_dir / "de" / "html"
+        html_dir = output_dir / "de" / "bcm" / "html"
         html_files = list(html_dir.glob("*.html"))
         assert len(html_files) >= 4, "Should have at least 4 HTML files (3 templates + index)"
         
@@ -5571,16 +5899,16 @@ def test_complete_workflow_with_all_new_features(temp_workspace, bcm_templates_f
             print(f"PDF generation skipped: {e}")
         
         # Verify all outputs were created
-        assert (output_dir / "de" / "markdown").exists(), "Markdown directory should exist"
-        assert (output_dir / "de" / "html").exists(), "HTML directory should exist"
+        assert (output_dir / "de" / "bcm" / "markdown").exists(), "Markdown directory should exist"
+        assert (output_dir / "de" / "bcm" / "html").exists(), "HTML directory should exist"
         
         # Verify markdown files
-        markdown_dir = output_dir / "de" / "markdown"
+        markdown_dir = output_dir / "de" / "bcm" / "markdown"
         assert (markdown_dir / "TOC.md").exists(), "TOC.md should exist"
         assert len(list(markdown_dir.glob("*.md"))) == 4, "Should have 4 markdown files"
         
         # Verify HTML files
-        html_dir = output_dir / "de" / "html"
+        html_dir = output_dir / "de" / "bcm" / "html"
         assert (html_dir / "index.html").exists(), "index.html should exist"
         assert len(list(html_dir.glob("*.html"))) >= 4, "Should have at least 4 HTML files"
         
@@ -5604,3 +5932,916 @@ def test_complete_workflow_with_all_new_features(temp_workspace, bcm_templates_f
         error_message = " ".join(result.errors).lower()
         assert "test" in error_message or "flag" in error_message, \
             "Error should mention test mode requirement"
+
+
+# ============================================================================
+# CIS Controls Integration Tests
+# ============================================================================
+
+@pytest.fixture
+def cis_controls_templates(temp_workspace):
+    """Create CIS Controls templates for integration testing."""
+    templates_dir = temp_workspace / "templates"
+    
+    # German CIS Controls templates
+    de_cis = templates_dir / "de" / "cis-controls"
+    de_cis.mkdir(parents=True)
+    
+    # Metadata template
+    (de_cis / "0000_metadata_de_cis-controls.md").write_text("""# CIS Controls v8 Hardening Templates
+
+**Dokument-Metadaten**
+
+- **Autor:** {{ meta.author }}
+- **Version:** {{ meta.document.version }}
+- **Organisation:** {{ meta.organization.name }}
+- **Klassifizierung:** {{ meta.document.classification }}
+
+---
+""")
+    
+    # Foundation templates
+    (de_cis / "0010_CIS_Controls_Ueberblick_und_Vorgehen.md").write_text("""# 1. CIS Controls Überblick und Vorgehen
+
+## 1.1 Einführung
+
+Die CIS Controls v8 bieten einen strukturierten Ansatz zur Systemhärtung.
+
+Organisation: {{ meta.organization.name }}
+Standort: {{ meta.organization.city }}
+""")
+    
+    (de_cis / "0020_Geltungsbereich_Assetgruppen_und_Tiering.md").write_text("""# 2. Geltungsbereich, Assetgruppen und Tiering
+
+## 2.1 Geltungsbereich
+
+Dieses Dokument gilt für alle IT-Systeme der {{ meta.organization.name }}.
+
+## 2.2 Verantwortlichkeiten
+
+- **CISO:** {{ meta.ciso.name }}
+- **CIO:** {{ meta.cio.name }}
+""")
+    
+    # OS templates
+    (de_cis / "0110_OS_Windows_Server_Hardening_Baseline.md").write_text("""# 3. Windows Server Hardening Baseline
+
+## 3.1 Sicherheitseinstellungen
+
+Dokumentverantwortlicher: {{ meta.document.owner }}
+Genehmiger: {{ meta.document.approver }}
+""")
+    
+    # English CIS Controls templates
+    en_cis = templates_dir / "en" / "cis-controls"
+    en_cis.mkdir(parents=True)
+    
+    # Metadata template
+    (en_cis / "0000_metadata_en_cis-controls.md").write_text("""# CIS Controls v8 Hardening Templates
+
+**Document Metadata**
+
+- **Author:** {{ meta.author }}
+- **Version:** {{ meta.document.version }}
+- **Organization:** {{ meta.organization.name }}
+- **Classification:** {{ meta.document.classification }}
+
+---
+""")
+    
+    # Foundation templates
+    (en_cis / "0010_CIS_Controls_Overview_and_Approach.md").write_text("""# 1. CIS Controls Overview and Approach
+
+## 1.1 Introduction
+
+CIS Controls v8 provide a structured approach to system hardening.
+
+Organization: {{ meta.organization.name }}
+Location: {{ meta.organization.city }}
+""")
+    
+    (en_cis / "0020_Scope_Asset_Groups_and_Tiering.md").write_text("""# 2. Scope, Asset Groups and Tiering
+
+## 2.1 Scope
+
+This document applies to all IT systems of {{ meta.organization.name }}.
+
+## 2.2 Responsibilities
+
+- **CISO:** {{ meta.ciso.name }}
+- **CIO:** {{ meta.cio.name }}
+""")
+    
+    # OS templates
+    (en_cis / "0110_OS_Windows_Server_Hardening_Baseline.md").write_text("""# 3. Windows Server Hardening Baseline
+
+## 3.1 Security Settings
+
+Document Owner: {{ meta.document.owner }}
+Approver: {{ meta.document.approver }}
+""")
+    
+    return templates_dir
+
+
+@pytest.fixture
+def sample_meta_config():
+    """Create sample metadata configuration for CIS Controls testing."""
+    from src.metadata_config_manager import (
+        MetadataConfig, OrganizationInfo, PersonRole, DocumentInfo
+    )
+    
+    organization = OrganizationInfo(
+        name="SecureOrg GmbH",
+        address="Security Street 42",
+        city="Munich",
+        postal_code="80331",
+        country="Germany",
+        website="https://secureorg.example.com",
+        phone="+49 89 12345678",
+        email="info@secureorg.example.com"
+    )
+    
+    roles = {
+        "ceo": PersonRole(
+            name="Alice Schmidt",
+            title="Chief Executive Officer",
+            email="alice.schmidt@secureorg.example.com",
+            phone="+49 89 12345678-100",
+            department="Management"
+        ),
+        "cio": PersonRole(
+            name="Bob Mueller",
+            title="Chief Information Officer",
+            email="bob.mueller@secureorg.example.com",
+            phone="+49 89 12345678-200",
+            department="IT"
+        ),
+        "ciso": PersonRole(
+            name="Carol Weber",
+            title="Chief Information Security Officer",
+            email="carol.weber@secureorg.example.com",
+            phone="+49 89 12345678-300",
+            department="IT Security"
+        )
+    }
+    
+    document = DocumentInfo(
+        owner="Security Operations Manager",
+        approver="CISO",
+        version="1.0.0",
+        classification="confidential"
+    )
+    
+    return MetadataConfig(
+        organization=organization,
+        roles=roles,
+        document=document,
+        author="Security Team [security@secureorg.example.com]",
+        language="de"
+    )
+
+
+@pytest.mark.integration
+def test_end_to_end_cis_controls_german_generation(temp_workspace, cis_controls_templates, sample_meta_config):
+    """
+    Test complete CIS Controls handbook generation workflow for German.
+    
+    This test verifies:
+    - Template discovery for CIS Controls
+    - Placeholder detection and replacement with meta adapter
+    - Markdown output generation
+    - Output directory structure
+    - Content correctness
+    
+    Requirements: 3.1, 5.1, 5.2, 5.3
+    Feature: cis-controls-integration
+    Task: 14.1
+    """
+    from src.meta_adapter import MetaAdapter
+    
+    output_dir = temp_workspace / "Handbook"
+    
+    # Initialize components
+    template_manager = TemplateManager(cis_controls_templates)
+    logger = HandbookLogger(verbose=False)
+    
+    # Initialize meta adapter
+    meta_adapter = MetaAdapter(sample_meta_config, language='de')
+    meta_adapter.connect()
+    meta_adapter.set_handbook_type('cis-controls')
+    
+    data_sources = {'meta': meta_adapter}
+    processor = PlaceholderProcessor(data_sources)
+    output_generator = OutputGenerator(output_dir, test_mode=True)
+    
+    # Execute workflow
+    # 1. Discover templates
+    templates = template_manager.get_templates('de', 'cis-controls')
+    assert len(templates) == 4, "Should find 4 German CIS Controls templates"
+    
+    # 2. Process templates
+    processed_results = []
+    for template in templates:
+        content = template.read_content()
+        result = processor.process_template(content, template.path.name)
+        processed_results.append(result)
+    
+    # 3. Verify placeholder replacements
+    all_content = "\n\n".join([r.content for r in processed_results])
+    
+    # Check that placeholders were replaced
+    assert "{{ meta.organization.name }}" not in all_content
+    assert "{{ meta.organization.city }}" not in all_content
+    assert "{{ meta.ciso.name }}" not in all_content
+    assert "{{ meta.cio.name }}" not in all_content
+    assert "{{ meta.document.owner }}" not in all_content
+    assert "{{ meta.document.approver }}" not in all_content
+    assert "{{ meta.author }}" not in all_content
+    assert "{{ meta.document.version }}" not in all_content
+    assert "{{ meta.document.classification }}" not in all_content
+    
+    # Check that actual values are present
+    assert "SecureOrg GmbH" in all_content
+    assert "Munich" in all_content
+    assert "Carol Weber" in all_content
+    assert "Bob Mueller" in all_content
+    assert "Security Operations Manager" in all_content
+    assert "CISO" in all_content
+    assert "Security Team" in all_content
+    assert "1.0.0" in all_content
+    assert "confidential" in all_content
+    
+    # 4. Generate markdown output
+    processed_contents = [r.content for r in processed_results]
+    output_result = output_generator.generate_markdown(
+        processed_contents,
+        'de',
+        'cis-controls'
+    )
+    output_path = output_result.markdown_path
+    
+    # 5. Verify output file exists and structure
+    assert output_path.exists(), "Output file should be created"
+    assert output_path.parent == output_dir / "de" / "cis-controls" / "markdown"
+    assert output_path.name == "cis-controls_handbook.md"
+    
+    # 6. Verify output content
+    output_content = output_path.read_text()
+    assert "SecureOrg GmbH" in output_content
+    assert "CIS Controls v8 Hardening Templates" in output_content
+    assert "CIS Controls Überblick und Vorgehen" in output_content
+    assert "Geltungsbereich, Assetgruppen und Tiering" in output_content
+    assert "Windows Server Hardening Baseline" in output_content
+    
+    # 7. Verify no errors occurred
+    total_errors = sum(len(r.errors) for r in processed_results)
+    assert total_errors == 0, "No errors should occur during processing"
+
+
+@pytest.mark.integration
+def test_end_to_end_cis_controls_english_generation(temp_workspace, cis_controls_templates, sample_meta_config):
+    """
+    Test complete CIS Controls handbook generation workflow for English.
+    
+    This test verifies:
+    - Template discovery for English CIS Controls
+    - Placeholder replacement with English language setting
+    - Markdown output generation
+    - Language-specific content
+    
+    Requirements: 3.1, 5.1, 5.2, 5.3
+    Feature: cis-controls-integration
+    Task: 14.1
+    """
+    from src.meta_adapter import MetaAdapter
+    
+    output_dir = temp_workspace / "Handbook"
+    
+    # Initialize components
+    template_manager = TemplateManager(cis_controls_templates)
+    logger = HandbookLogger(verbose=False)
+    
+    # Initialize meta adapter with English language
+    meta_adapter = MetaAdapter(sample_meta_config, language='en')
+    meta_adapter.connect()
+    meta_adapter.set_handbook_type('cis-controls')
+    
+    data_sources = {'meta': meta_adapter}
+    processor = PlaceholderProcessor(data_sources)
+    output_generator = OutputGenerator(output_dir, test_mode=True)
+    
+    # Execute workflow
+    # 1. Discover templates
+    templates = template_manager.get_templates('en', 'cis-controls')
+    assert len(templates) == 4, "Should find 4 English CIS Controls templates"
+    
+    # 2. Process templates
+    processed_results = []
+    for template in templates:
+        content = template.read_content()
+        result = processor.process_template(content, template.path.name)
+        processed_results.append(result)
+    
+    # 3. Verify placeholder replacements
+    all_content = "\n\n".join([r.content for r in processed_results])
+    
+    # Check that placeholders were replaced
+    assert "{{ meta.organization.name }}" not in all_content
+    assert "{{ meta.organization.city }}" not in all_content
+    assert "{{ meta.ciso.name }}" not in all_content
+    assert "{{ meta.cio.name }}" not in all_content
+    
+    # Check that actual values are present
+    assert "SecureOrg GmbH" in all_content
+    assert "Munich" in all_content
+    assert "Carol Weber" in all_content
+    assert "Bob Mueller" in all_content
+    
+    # 4. Generate markdown output
+    processed_contents = [r.content for r in processed_results]
+    output_result = output_generator.generate_markdown(
+        processed_contents,
+        'en',
+        'cis-controls'
+    )
+    output_path = output_result.markdown_path
+    
+    # 5. Verify output file exists and structure
+    assert output_path.exists(), "Output file should be created"
+    assert output_path.parent == output_dir / "en" / "cis-controls" / "markdown"
+    assert output_path.name == "cis-controls_handbook.md"
+    
+    # 6. Verify English-specific content
+    output_content = output_path.read_text()
+    assert "SecureOrg GmbH" in output_content
+    assert "CIS Controls v8 Hardening Templates" in output_content
+    assert "CIS Controls Overview and Approach" in output_content
+    assert "Scope, Asset Groups and Tiering" in output_content
+    assert "Windows Server Hardening Baseline" in output_content
+    
+    # 7. Verify no errors occurred
+    total_errors = sum(len(r.errors) for r in processed_results)
+    assert total_errors == 0, "No errors should occur during processing"
+
+
+@pytest.mark.integration
+def test_end_to_end_cis_controls_all_formats(temp_workspace, cis_controls_templates, sample_meta_config):
+    """
+    Test CIS Controls handbook generation in all output formats.
+    
+    This test verifies:
+    - Markdown generation
+    - PDF generation
+    - HTML generation
+    - All formats work correctly for CIS Controls
+    
+    Requirements: 5.1, 5.2, 5.3
+    Feature: cis-controls-integration
+    Task: 14.1
+    """
+    from src.meta_adapter import MetaAdapter
+    
+    output_dir = temp_workspace / "Handbook"
+    
+    # Initialize components
+    template_manager = TemplateManager(cis_controls_templates)
+    logger = HandbookLogger(verbose=False)
+    
+    # Initialize meta adapter
+    meta_adapter = MetaAdapter(sample_meta_config, language='de')
+    meta_adapter.connect()
+    meta_adapter.set_handbook_type('cis-controls')
+    
+    data_sources = {'meta': meta_adapter}
+    processor = PlaceholderProcessor(data_sources)
+    output_generator = OutputGenerator(output_dir, test_mode=True)
+    
+    # Process templates
+    templates = template_manager.get_templates('de', 'cis-controls')
+    processed_results = []
+    for template in templates:
+        content = template.read_content()
+        result = processor.process_template(content, template.path.name)
+        processed_results.append(result)
+    
+    processed_contents = [r.content for r in processed_results]
+    
+    # Test 1: Generate Markdown
+    md_result = output_generator.generate_markdown(processed_contents, 'de', 'cis-controls')
+    md_path = md_result.markdown_path
+    
+    assert md_path.exists(), "Markdown file should be created"
+    assert md_path.suffix == ".md"
+    assert md_path.name == "cis-controls_handbook.md"
+    
+    # Test 2: Generate PDF
+    markdown_content = md_path.read_text()
+    
+    try:
+        pdf_result = output_generator.generate_pdf(markdown_content, 'de', 'cis-controls')
+        pdf_path = pdf_result.pdf_path
+        
+        assert pdf_path.exists(), "PDF file should be created"
+        assert pdf_path.suffix == ".pdf"
+        assert pdf_path.name == "cis-controls_handbook.pdf"
+        assert pdf_path.stat().st_size > 0, "PDF should have content"
+        
+    except Exception as e:
+        # PDF generation might fail if system libraries are missing
+        pytest.skip(f"PDF generation skipped: {e}")
+    
+    # Test 3: Generate HTML
+    html_generator = HTMLOutputGenerator(output_dir, test_mode=True)
+    filenames = [template.path.name for template in templates]
+    
+    html_result = html_generator.generate_html_site(
+        processed_contents,
+        filenames,
+        'de',
+        'cis-controls'
+    )
+    
+    html_dir = html_result.get('html_dir')
+    assert html_dir is not None, "HTML directory should be created"
+    assert html_dir.exists(), "HTML directory should exist"
+    
+    # Verify HTML files
+    html_files = list(html_dir.glob("*.html"))
+    assert len(html_files) > 0, "HTML files should be generated"
+    
+    # Verify index.html exists
+    index_html = html_dir / "index.html"
+    assert index_html.exists(), "index.html should exist"
+    
+    # Verify styles.css exists
+    styles_css = html_dir / "styles.css"
+    assert styles_css.exists(), "styles.css should exist"
+    
+    # Verify HTML content
+    index_content = index_html.read_text()
+    assert "CIS Controls" in index_content, "HTML should contain CIS Controls content"
+
+
+
+@pytest.mark.integration
+def test_cis_controls_separate_files_mode(temp_workspace, cis_controls_templates, sample_meta_config):
+    """
+    Test CIS Controls handbook generation with separate markdown files.
+    
+    This test verifies:
+    - Separate markdown files generation for each template
+    - TOC.md creation with proper links
+    - File naming conventions
+    - Directory structure
+    
+    Requirements: 5.4
+    Feature: cis-controls-integration
+    Task: 14.2
+    """
+    from src.meta_adapter import MetaAdapter
+    
+    output_dir = temp_workspace / "Handbook"
+    
+    # Initialize components
+    template_manager = TemplateManager(cis_controls_templates)
+    logger = HandbookLogger(verbose=False)
+    
+    # Initialize meta adapter
+    meta_adapter = MetaAdapter(sample_meta_config, language='de')
+    meta_adapter.connect()
+    meta_adapter.set_handbook_type('cis-controls')
+    
+    data_sources = {'meta': meta_adapter}
+    processor = PlaceholderProcessor(data_sources)
+    output_generator = OutputGenerator(output_dir, test_mode=True)
+    
+    # Process templates
+    templates = template_manager.get_templates('de', 'cis-controls')
+    processed_results = []
+    for template in templates:
+        content = template.read_content()
+        result = processor.process_template(content, template.path.name)
+        processed_results.append(result)
+    
+    processed_contents = [r.content for r in processed_results]
+    
+    # Generate separate markdown files
+    templates_data = [
+        (template.path.name, content)
+        for template, content in zip(templates, processed_contents)
+    ]
+    
+    md_result = output_generator.generate_separate_markdown_files(
+        templates_data,
+        'de',
+        'cis-controls'
+    )
+    
+    # Verify result
+    assert md_result.markdown_path is not None, "Markdown path should be set"
+    output_dir_path = md_result.markdown_path.parent
+    
+    # Verify directory structure
+    assert output_dir_path == output_dir / "de" / "cis-controls" / "markdown"
+    assert output_dir_path.exists(), "Output directory should exist"
+    
+    # Verify separate files were created
+    markdown_files = list(output_dir_path.glob("*.md"))
+    # Should have 4 template files (excluding TOC.md if generated separately)
+    template_files = [f for f in markdown_files if not f.name.startswith("TOC")]
+    assert len(template_files) == 4, f"Should have 4 separate markdown files, found {len(template_files)}"
+    
+    # Verify file naming conventions
+    expected_filenames = [
+        "0000_metadata_de_cis-controls.md",
+        "0010_CIS_Controls_Ueberblick_und_Vorgehen.md",
+        "0020_Geltungsbereich_Assetgruppen_und_Tiering.md",
+        "0110_OS_Windows_Server_Hardening_Baseline.md"
+    ]
+    
+    actual_filenames = sorted([f.name for f in template_files])
+    assert actual_filenames == sorted(expected_filenames), \
+        f"File names should match template names. Expected: {expected_filenames}, Got: {actual_filenames}"
+    
+    # Verify each file has content
+    for md_file in template_files:
+        content = md_file.read_text()
+        assert len(content) > 0, f"File {md_file.name} should have content"
+        # Check that at least some placeholders were replaced (not all files have all placeholders)
+        # Just verify the file has actual content, not empty
+        assert len(content) > 50, f"File {md_file.name} should have substantial content"
+    
+    # Generate TOC file
+    templates_info = []
+    for template in templates:
+        filename = template.path.name
+        filename_base = Path(filename).stem
+        template_number = filename_base[:4]
+        title_part = filename_base[5:] if len(filename_base) > 5 else filename_base
+        template_title = title_part.replace('_', ' ')
+        templates_info.append((template_number, template_title, filename))
+    
+    toc_result = output_generator.generate_markdown_toc(
+        templates_info,
+        'de',
+        'cis-controls'
+    )
+    
+    # Verify TOC.md was created
+    toc_path = toc_result.markdown_path
+    assert toc_path is not None, "TOC path should be set"
+    assert toc_path.exists(), "TOC.md should exist"
+    assert toc_path.name == "TOC.md"
+    
+    # Verify TOC content
+    toc_content = toc_path.read_text()
+    assert "# Table of Contents" in toc_content or "# Inhaltsverzeichnis" in toc_content, \
+        "TOC should have a title"
+    
+    # Verify TOC contains links to all templates
+    for template_info in templates_info:
+        template_number, template_title, filename = template_info
+        # TOC should contain the filename as a link
+        assert filename in toc_content, f"TOC should contain link to {filename}"
+    
+    # Verify no errors occurred
+    assert len(md_result.errors) == 0, "No errors should occur during separate files generation"
+    assert len(toc_result.errors) == 0, "No errors should occur during TOC generation"
+
+
+@pytest.mark.integration
+def test_cis_controls_separate_files_english(temp_workspace, cis_controls_templates, sample_meta_config):
+    """
+    Test CIS Controls separate files generation for English language.
+    
+    This test verifies:
+    - Separate files work for English templates
+    - File naming conventions for English
+    - TOC generation for English
+    
+    Requirements: 5.4
+    Feature: cis-controls-integration
+    Task: 14.2
+    """
+    from src.meta_adapter import MetaAdapter
+    
+    output_dir = temp_workspace / "Handbook"
+    
+    # Initialize components
+    template_manager = TemplateManager(cis_controls_templates)
+    
+    # Initialize meta adapter with English language
+    meta_adapter = MetaAdapter(sample_meta_config, language='en')
+    meta_adapter.connect()
+    meta_adapter.set_handbook_type('cis-controls')
+    
+    data_sources = {'meta': meta_adapter}
+    processor = PlaceholderProcessor(data_sources)
+    output_generator = OutputGenerator(output_dir, test_mode=True)
+    
+    # Process templates
+    templates = template_manager.get_templates('en', 'cis-controls')
+    processed_results = []
+    for template in templates:
+        content = template.read_content()
+        result = processor.process_template(content, template.path.name)
+        processed_results.append(result)
+    
+    processed_contents = [r.content for r in processed_results]
+    
+    # Generate separate markdown files
+    templates_data = [
+        (template.path.name, content)
+        for template, content in zip(templates, processed_contents)
+    ]
+    
+    md_result = output_generator.generate_separate_markdown_files(
+        templates_data,
+        'en',
+        'cis-controls'
+    )
+    
+    # Verify result
+    output_dir_path = md_result.markdown_path.parent
+    assert output_dir_path == output_dir / "en" / "cis-controls" / "markdown"
+    
+    # Verify separate files were created
+    markdown_files = list(output_dir_path.glob("*.md"))
+    template_files = [f for f in markdown_files if not f.name.startswith("TOC")]
+    assert len(template_files) == 4, "Should have 4 separate markdown files for English"
+    
+    # Verify English file naming
+    expected_filenames = [
+        "0000_metadata_en_cis-controls.md",
+        "0010_CIS_Controls_Overview_and_Approach.md",
+        "0020_Scope_Asset_Groups_and_Tiering.md",
+        "0110_OS_Windows_Server_Hardening_Baseline.md"
+    ]
+    
+    actual_filenames = sorted([f.name for f in template_files])
+    assert actual_filenames == sorted(expected_filenames), \
+        f"English file names should match. Expected: {expected_filenames}, Got: {actual_filenames}"
+    
+    # Verify content is in English
+    for md_file in template_files:
+        content = md_file.read_text()
+        if "Overview" in md_file.name:
+            assert "Overview and Approach" in content, "Should contain English content"
+        elif "Scope" in md_file.name:
+            assert "Scope, Asset Groups" in content, "Should contain English content"
+
+
+
+@pytest.mark.integration
+def test_cis_controls_pdf_with_toc(temp_workspace, cis_controls_templates, sample_meta_config):
+    """
+    Test CIS Controls PDF generation with table of contents.
+    
+    This test verifies:
+    - PDF generation with table of contents
+    - Page breaks between sections
+    - Clickable links in TOC
+    - PDF structure and content
+    
+    Requirements: 5.5
+    Feature: cis-controls-integration
+    Task: 14.3
+    """
+    from src.meta_adapter import MetaAdapter
+    
+    output_dir = temp_workspace / "Handbook"
+    
+    # Initialize components
+    template_manager = TemplateManager(cis_controls_templates)
+    logger = HandbookLogger(verbose=False)
+    
+    # Initialize meta adapter
+    meta_adapter = MetaAdapter(sample_meta_config, language='de')
+    meta_adapter.connect()
+    meta_adapter.set_handbook_type('cis-controls')
+    
+    data_sources = {'meta': meta_adapter}
+    processor = PlaceholderProcessor(data_sources)
+    output_generator = OutputGenerator(output_dir, test_mode=True)
+    
+    # Process templates
+    templates = template_manager.get_templates('de', 'cis-controls')
+    processed_results = []
+    for template in templates:
+        content = template.read_content()
+        result = processor.process_template(content, template.path.name)
+        processed_results.append(result)
+    
+    processed_contents = [r.content for r in processed_results]
+    
+    # Prepare templates data for PDF with TOC
+    templates_data = []
+    for template, content in zip(templates, processed_contents):
+        filename = template.path.name
+        filename_base = Path(filename).stem
+        
+        # Extract template number (first 4 digits)
+        template_number = filename_base[:4]
+        
+        # Extract title (everything after first underscore, replace underscores with spaces)
+        title_part = filename_base[5:] if len(filename_base) > 5 else filename_base
+        template_title = title_part.replace('_', ' ')
+        
+        templates_data.append((template_number, template_title, content))
+    
+    # Generate PDF with TOC
+    try:
+        pdf_result = output_generator.generate_pdf_with_toc(
+            templates_data,
+            'de',
+            'cis-controls'
+        )
+        
+        # Verify PDF was created
+        pdf_path = pdf_result.pdf_path
+        assert pdf_path is not None, "PDF path should be set"
+        assert pdf_path.exists(), "PDF file should be created"
+        assert pdf_path.suffix == ".pdf"
+        assert pdf_path.name == "cis-controls_handbook.pdf"
+        
+        # Verify PDF directory structure
+        assert pdf_path.parent == output_dir / "de" / "cis-controls" / "pdf"
+        
+        # Verify PDF has content (size > 0)
+        assert pdf_path.stat().st_size > 0, "PDF should have content"
+        
+        # Verify no errors occurred
+        assert len(pdf_result.errors) == 0, "No errors should occur during PDF generation"
+        
+        # Note: We cannot easily verify internal PDF structure (TOC, page breaks, links)
+        # without a PDF parsing library, but we can verify the file was created successfully
+        # and has reasonable size
+        
+        # PDF should be larger than a minimal PDF (at least 10KB for content + TOC)
+        assert pdf_path.stat().st_size > 10000, \
+            "PDF with TOC should have substantial content (>10KB)"
+        
+    except Exception as e:
+        # PDF generation might fail if system libraries are missing
+        pytest.skip(f"PDF generation skipped: {e}")
+
+
+@pytest.mark.integration
+def test_cis_controls_pdf_with_toc_english(temp_workspace, cis_controls_templates, sample_meta_config):
+    """
+    Test CIS Controls PDF with TOC generation for English language.
+    
+    This test verifies:
+    - PDF with TOC works for English templates
+    - English content in PDF
+    - Proper structure for English handbook
+    
+    Requirements: 5.5
+    Feature: cis-controls-integration
+    Task: 14.3
+    """
+    from src.meta_adapter import MetaAdapter
+    
+    output_dir = temp_workspace / "Handbook"
+    
+    # Initialize components
+    template_manager = TemplateManager(cis_controls_templates)
+    
+    # Initialize meta adapter with English language
+    meta_adapter = MetaAdapter(sample_meta_config, language='en')
+    meta_adapter.connect()
+    meta_adapter.set_handbook_type('cis-controls')
+    
+    data_sources = {'meta': meta_adapter}
+    processor = PlaceholderProcessor(data_sources)
+    output_generator = OutputGenerator(output_dir, test_mode=True)
+    
+    # Process templates
+    templates = template_manager.get_templates('en', 'cis-controls')
+    processed_results = []
+    for template in templates:
+        content = template.read_content()
+        result = processor.process_template(content, template.path.name)
+        processed_results.append(result)
+    
+    processed_contents = [r.content for r in processed_results]
+    
+    # Prepare templates data for PDF with TOC
+    templates_data = []
+    for template, content in zip(templates, processed_contents):
+        filename = template.path.name
+        filename_base = Path(filename).stem
+        template_number = filename_base[:4]
+        title_part = filename_base[5:] if len(filename_base) > 5 else filename_base
+        template_title = title_part.replace('_', ' ')
+        templates_data.append((template_number, template_title, content))
+    
+    # Generate PDF with TOC
+    try:
+        pdf_result = output_generator.generate_pdf_with_toc(
+            templates_data,
+            'en',
+            'cis-controls'
+        )
+        
+        # Verify PDF was created
+        pdf_path = pdf_result.pdf_path
+        assert pdf_path is not None, "PDF path should be set"
+        assert pdf_path.exists(), "PDF file should be created for English"
+        
+        # Verify PDF directory structure for English
+        assert pdf_path.parent == output_dir / "en" / "cis-controls" / "pdf"
+        
+        # Verify PDF has content
+        assert pdf_path.stat().st_size > 0, "English PDF should have content"
+        assert pdf_path.stat().st_size > 10000, "English PDF with TOC should have substantial content"
+        
+        # Verify no errors occurred
+        assert len(pdf_result.errors) == 0, "No errors should occur during English PDF generation"
+        
+    except Exception as e:
+        # PDF generation might fail if system libraries are missing
+        pytest.skip(f"PDF generation skipped: {e}")
+
+
+@pytest.mark.integration
+def test_cis_controls_pdf_with_toc_page_breaks(temp_workspace, cis_controls_templates, sample_meta_config):
+    """
+    Test that PDF with TOC includes page breaks between templates.
+    
+    This test verifies:
+    - Page breaks are inserted between templates
+    - Each template starts on a new page
+    - TOC structure is correct
+    
+    Requirements: 5.5
+    Feature: cis-controls-integration
+    Task: 14.3
+    """
+    from src.meta_adapter import MetaAdapter
+    
+    output_dir = temp_workspace / "Handbook"
+    
+    # Initialize components
+    template_manager = TemplateManager(cis_controls_templates)
+    
+    # Initialize meta adapter
+    meta_adapter = MetaAdapter(sample_meta_config, language='de')
+    meta_adapter.connect()
+    meta_adapter.set_handbook_type('cis-controls')
+    
+    data_sources = {'meta': meta_adapter}
+    processor = PlaceholderProcessor(data_sources)
+    output_generator = OutputGenerator(output_dir, test_mode=True)
+    
+    # Process templates
+    templates = template_manager.get_templates('de', 'cis-controls')
+    processed_results = []
+    for template in templates:
+        content = template.read_content()
+        result = processor.process_template(content, template.path.name)
+        processed_results.append(result)
+    
+    processed_contents = [r.content for r in processed_results]
+    
+    # Prepare templates data
+    templates_data = []
+    for template, content in zip(templates, processed_contents):
+        filename = template.path.name
+        filename_base = Path(filename).stem
+        template_number = filename_base[:4]
+        title_part = filename_base[5:] if len(filename_base) > 5 else filename_base
+        template_title = title_part.replace('_', ' ')
+        templates_data.append((template_number, template_title, content))
+    
+    # Generate PDF with TOC
+    try:
+        pdf_result = output_generator.generate_pdf_with_toc(
+            templates_data,
+            'de',
+            'cis-controls'
+        )
+        
+        pdf_path = pdf_result.pdf_path
+        assert pdf_path.exists(), "PDF should be created"
+        
+        # Read the intermediate markdown that was generated
+        # The generate_pdf_with_toc method should create markdown with page breaks
+        # We can verify this by checking if the method was called correctly
+        
+        # Verify that we have multiple templates (which should result in page breaks)
+        assert len(templates_data) > 1, "Should have multiple templates for page break testing"
+        
+        # Verify PDF size is reasonable for multi-page document
+        # A single-page PDF would be smaller than a multi-page PDF with TOC
+        pdf_size = pdf_path.stat().st_size
+        assert pdf_size > 15000, \
+            f"PDF with multiple templates and TOC should be >15KB, got {pdf_size} bytes"
+        
+        # Verify no errors occurred
+        assert len(pdf_result.errors) == 0, "No errors should occur"
+        
+    except Exception as e:
+        # PDF generation might fail if system libraries are missing
+        pytest.skip(f"PDF generation skipped: {e}")

@@ -386,9 +386,10 @@ def test_generate_markdown_basic(tmp_path):
     assert "## Section 1" in content
     assert "Content here." in content
     
-    # Check file location (now uses markdown subdirectory)
+    # Check file location (now uses markdown subdirectory with handbook type)
     assert result.markdown_path.parent.name == "markdown"
-    assert result.markdown_path.parent.parent.name == "de"
+    assert result.markdown_path.parent.parent.name == "backup"
+    assert result.markdown_path.parent.parent.parent.name == "de"
 
 
 def test_generate_markdown_overwrite_warning(tmp_path):
@@ -556,7 +557,8 @@ def test_test_mode_enabled_allows_markdown_generation(tmp_path):
     # Check file location uses new structure
     assert "test-output" in str(result.markdown_path)
     assert result.markdown_path.parent.name == "markdown"
-    assert result.markdown_path.parent.parent.name == "de"
+    assert result.markdown_path.parent.parent.name == "backup"
+    assert result.markdown_path.parent.parent.parent.name == "de"
 
 
 def test_test_mode_enabled_allows_pdf_generation(tmp_path):
@@ -666,7 +668,7 @@ def test_generate_separate_markdown_files_basic(tmp_path):
     assert len(result.errors) == 0
     
     # Check that separate files were created
-    output_md_dir = output_dir / "de" / "markdown"
+    output_md_dir = output_dir / "de" / "bcm" / "markdown"
     assert output_md_dir.exists()
     
     # Check each file exists and has correct content
@@ -704,7 +706,7 @@ def test_generate_separate_markdown_files_filename_pattern(tmp_path):
     
     assert len(result.errors) == 0
     
-    output_md_dir = output_dir / "de" / "markdown"
+    output_md_dir = output_dir / "de" / "bcm" / "markdown"
     
     # Check filenames match pattern {template-number}_{template-name}.md
     file1 = output_md_dir / "0010_Zweck_und_Geltungsbereich.md"
@@ -781,8 +783,8 @@ def test_generate_separate_markdown_files_output_directory(tmp_path):
     
     assert len(result.errors) == 0
     
-    # Check directory structure: test-output/en/markdown/
-    expected_dir = output_dir / "en" / "markdown"
+    # Check directory structure: test-output/en/isms/markdown/
+    expected_dir = output_dir / "en" / "isms" / "markdown"
     assert expected_dir.exists()
     
     test_file = expected_dir / "0010_Test.md"
@@ -811,7 +813,7 @@ def test_generate_markdown_toc_basic(tmp_path):
     assert len(result.errors) == 0
     
     # Check TOC file exists
-    toc_file = output_dir / "de" / "markdown" / "TOC.md"
+    toc_file = output_dir / "de" / "bcm" / "markdown" / "TOC.md"
     assert toc_file.exists()
     
     # Check TOC content
@@ -847,7 +849,7 @@ def test_generate_markdown_toc_link_format(tmp_path):
     
     assert len(result.errors) == 0
     
-    toc_file = output_dir / "de" / "markdown" / "TOC.md"
+    toc_file = output_dir / "de" / "bcm" / "markdown" / "TOC.md"
     toc_content = toc_file.read_text(encoding='utf-8')
     
     # Check markdown link format: - [0010 - Title](0010_Title.md)
@@ -921,8 +923,8 @@ def test_generate_markdown_toc_output_directory(tmp_path):
     
     assert len(result.errors) == 0
     
-    # Check directory structure: test-output/en/markdown/TOC.md
-    toc_file = output_dir / "en" / "markdown" / "TOC.md"
+    # Check directory structure: test-output/en/isms/markdown/TOC.md
+    toc_file = output_dir / "en" / "isms" / "markdown" / "TOC.md"
     assert toc_file.exists()
 
 
@@ -944,7 +946,7 @@ def test_separate_markdown_no_combined_file(tmp_path):
     
     assert len(result.errors) == 0
     
-    output_md_dir = output_dir / "de" / "markdown"
+    output_md_dir = output_dir / "de" / "bcm" / "markdown"
     
     # Check that separate files exist
     assert (output_md_dir / "0010_Test.md").exists()
@@ -1216,3 +1218,672 @@ def test_generate_pdf_with_toc_output_directory(tmp_path):
         pytest.skip(f"PDF generation dependencies not available: {e}")
 
 
+
+
+# ============================================================================
+# CIS Controls Markdown Generation Tests
+# ============================================================================
+
+def test_cis_controls_combined_markdown_generation(tmp_path):
+    """
+    Test combined Markdown file generation for CIS Controls.
+    
+    Requirements: 5.3
+    """
+    from src.template_manager import TemplateManager
+    
+    output_dir = tmp_path / "test-output"
+    generator = OutputGenerator(output_dir, test_mode=True)
+    template_manager = TemplateManager(Path("templates"))
+    
+    # Get CIS Controls templates
+    try:
+        templates = template_manager.get_templates('de', 'cis-controls')
+    except ValueError:
+        pytest.skip("CIS Controls templates not found")
+    
+    if not templates:
+        pytest.skip("No CIS Controls templates available")
+    
+    # Process templates (simplified - just use content)
+    processed_contents = [t.read_content() for t in templates]
+    
+    # Generate combined markdown
+    result = generator.generate_markdown(
+        processed_contents,
+        'de',
+        'cis-controls'
+    )
+    
+    # Verify success
+    assert result.markdown_path is not None, "Should generate markdown file"
+    assert result.markdown_path.exists(), "Markdown file should exist"
+    assert len(result.errors) == 0, f"Should have no errors: {result.errors}"
+    
+    # Verify file location
+    assert result.markdown_path.name == "cis-controls_handbook.md"
+    assert result.markdown_path.parent.name == "markdown"
+    assert result.markdown_path.parent.parent.name == "cis-controls"
+    assert result.markdown_path.parent.parent.parent.name == "de"
+    
+    # Verify content
+    content = result.markdown_path.read_text(encoding='utf-8')
+    assert len(content) > 0, "Markdown file should have content"
+    
+    # Should contain content from multiple templates
+    assert content.count('#') >= len(templates), \
+        "Should contain headers from all templates"
+
+
+def test_cis_controls_separate_markdown_generation(tmp_path):
+    """
+    Test separate Markdown files generation for CIS Controls.
+    
+    Requirements: 5.4
+    """
+    from src.template_manager import TemplateManager
+    
+    output_dir = tmp_path / "test-output"
+    generator = OutputGenerator(output_dir, test_mode=True)
+    template_manager = TemplateManager(Path("templates"))
+    
+    # Get CIS Controls templates
+    try:
+        templates = template_manager.get_templates('de', 'cis-controls')
+    except ValueError:
+        pytest.skip("CIS Controls templates not found")
+    
+    if not templates:
+        pytest.skip("No CIS Controls templates available")
+    
+    # Prepare templates data
+    templates_data = [(t.path.name, t.read_content()) for t in templates]
+    
+    # Generate separate markdown files
+    result = generator.generate_separate_markdown_files(
+        templates_data,
+        'de',
+        'cis-controls'
+    )
+    
+    # Verify success
+    assert result.markdown_path is not None, "Should return a path"
+    assert len(result.errors) == 0, f"Should have no errors: {result.errors}"
+    
+    # Verify directory structure
+    output_md_dir = output_dir / "de" / "cis-controls" / "markdown"
+    assert output_md_dir.exists(), "Markdown directory should exist"
+    
+    # Verify files were created
+    md_files = list(output_md_dir.glob("*.md"))
+    assert len(md_files) > 0, "Should have created markdown files"
+    
+    # Verify file count matches template count (excluding TOC)
+    non_toc_files = [f for f in md_files if f.name != "TOC.md"]
+    assert len(non_toc_files) == len(templates), \
+        f"Should have {len(templates)} markdown files, found {len(non_toc_files)}"
+    
+    # Verify each file has content
+    for md_file in non_toc_files:
+        content = md_file.read_text(encoding='utf-8')
+        assert len(content) > 0, f"File {md_file.name} should have content"
+
+
+def test_cis_controls_toc_generation(tmp_path):
+    """
+    Test TOC.md generation for CIS Controls.
+    
+    Requirements: 5.4
+    """
+    from src.template_manager import TemplateManager
+    import re
+    
+    output_dir = tmp_path / "test-output"
+    generator = OutputGenerator(output_dir, test_mode=True)
+    template_manager = TemplateManager(Path("templates"))
+    
+    # Get CIS Controls templates
+    try:
+        templates = template_manager.get_templates('de', 'cis-controls')
+    except ValueError:
+        pytest.skip("CIS Controls templates not found")
+    
+    if not templates:
+        pytest.skip("No CIS Controls templates available")
+    
+    # Prepare templates info (number, title, filename)
+    templates_info = []
+    for t in templates:
+        match = re.match(r'(\d{4})_(.+)\.md', t.path.name)
+        if match:
+            number = match.group(1)
+            title = match.group(2).replace('_', ' ')
+            templates_info.append((number, title, t.path.name))
+    
+    if not templates_info:
+        pytest.skip("No valid templates for TOC generation")
+    
+    # Generate TOC
+    result = generator.generate_markdown_toc(
+        templates_info,
+        'de',
+        'cis-controls'
+    )
+    
+    # Verify success
+    assert result.markdown_path is not None, "Should generate TOC file"
+    assert result.markdown_path.exists(), "TOC file should exist"
+    assert len(result.errors) == 0, f"Should have no errors: {result.errors}"
+    
+    # Verify file location
+    assert result.markdown_path.name == "TOC.md"
+    assert result.markdown_path.parent.name == "markdown"
+    assert result.markdown_path.parent.parent.name == "cis-controls"
+    
+    # Verify TOC content
+    toc_content = result.markdown_path.read_text(encoding='utf-8')
+    
+    # Should have title
+    assert "Table of Contents" in toc_content
+    assert "CIS-CONTROLS" in toc_content.upper()
+    
+    # Should have language
+    assert "de" in toc_content
+    
+    # Should have links to all templates
+    for number, title, filename in templates_info:
+        link_text = f"{number} - {title}"
+        assert link_text in toc_content, \
+            f"TOC should contain link to {link_text}"
+        assert f"]({filename})" in toc_content, \
+            f"TOC should have markdown link to {filename}"
+
+
+def test_cis_controls_english_markdown_generation(tmp_path):
+    """
+    Test Markdown generation for English CIS Controls templates.
+    
+    Requirements: 5.3
+    """
+    from src.template_manager import TemplateManager
+    
+    output_dir = tmp_path / "test-output"
+    generator = OutputGenerator(output_dir, test_mode=True)
+    template_manager = TemplateManager(Path("templates"))
+    
+    # Get English CIS Controls templates
+    try:
+        templates = template_manager.get_templates('en', 'cis-controls')
+    except ValueError:
+        pytest.skip("English CIS Controls templates not found")
+    
+    if not templates:
+        pytest.skip("No English CIS Controls templates available")
+    
+    # Process templates
+    processed_contents = [t.read_content() for t in templates]
+    
+    # Generate markdown
+    result = generator.generate_markdown(
+        processed_contents,
+        'en',
+        'cis-controls'
+    )
+    
+    # Verify success
+    assert result.markdown_path is not None, "Should generate markdown file"
+    assert result.markdown_path.exists(), "Markdown file should exist"
+    assert len(result.errors) == 0, f"Should have no errors: {result.errors}"
+    
+    # Verify file location uses English directory
+    assert result.markdown_path.parent.parent.parent.name == "en"
+
+
+def test_cis_controls_markdown_custom_filename(tmp_path):
+    """
+    Test Markdown generation with custom filename for CIS Controls.
+    
+    Requirements: 5.3
+    """
+    from src.template_manager import TemplateManager
+    
+    output_dir = tmp_path / "test-output"
+    generator = OutputGenerator(output_dir, test_mode=True)
+    template_manager = TemplateManager(Path("templates"))
+    
+    # Get CIS Controls templates
+    try:
+        templates = template_manager.get_templates('de', 'cis-controls')
+    except ValueError:
+        pytest.skip("CIS Controls templates not found")
+    
+    if not templates:
+        pytest.skip("No CIS Controls templates available")
+    
+    # Process templates
+    processed_contents = [t.read_content() for t in templates]
+    
+    # Generate markdown with custom filename
+    custom_filename = "custom_cis_controls.md"
+    result = generator.generate_markdown(
+        processed_contents,
+        'de',
+        'cis-controls',
+        filename=custom_filename
+    )
+    
+    # Verify success
+    assert result.markdown_path is not None, "Should generate markdown file"
+    assert result.markdown_path.exists(), "Markdown file should exist"
+    assert result.markdown_path.name == custom_filename, \
+        f"Should use custom filename {custom_filename}"
+
+
+def test_cis_controls_markdown_overwrite_warning(tmp_path):
+    """
+    Test that overwriting existing CIS Controls markdown produces warning.
+    
+    Requirements: 5.3
+    """
+    from src.template_manager import TemplateManager
+    
+    output_dir = tmp_path / "test-output"
+    generator = OutputGenerator(output_dir, test_mode=True)
+    template_manager = TemplateManager(Path("templates"))
+    
+    # Get CIS Controls templates
+    try:
+        templates = template_manager.get_templates('de', 'cis-controls')
+    except ValueError:
+        pytest.skip("CIS Controls templates not found")
+    
+    if not templates:
+        pytest.skip("No CIS Controls templates available")
+    
+    # Process templates
+    processed_contents = [t.read_content() for t in templates]
+    
+    # Generate first time
+    result1 = generator.generate_markdown(
+        processed_contents,
+        'de',
+        'cis-controls'
+    )
+    assert result1.markdown_path is not None
+    
+    # Generate again (overwrite)
+    result2 = generator.generate_markdown(
+        processed_contents,
+        'de',
+        'cis-controls'
+    )
+    
+    # Should have overwrite warning
+    overwrite_warnings = [w for w in result2.warnings if "overwrite" in w.lower() or "exists" in w.lower()]
+    assert len(overwrite_warnings) > 0, \
+        "Should warn about overwriting existing file"
+
+
+# ============================================================================
+# CIS Controls PDF Generation Tests
+# ============================================================================
+
+def test_cis_controls_pdf_generation_without_toc(tmp_path):
+    """
+    Test PDF generation without TOC for CIS Controls.
+    
+    Requirements: 5.2
+    """
+    from src.template_manager import TemplateManager
+    
+    output_dir = tmp_path / "test-output"
+    generator = OutputGenerator(output_dir, test_mode=True)
+    template_manager = TemplateManager(Path("templates"))
+    
+    # Get CIS Controls templates
+    try:
+        templates = template_manager.get_templates('de', 'cis-controls')
+    except ValueError:
+        pytest.skip("CIS Controls templates not found")
+    
+    if not templates:
+        pytest.skip("No CIS Controls templates available")
+    
+    # Process templates
+    processed_contents = [t.read_content() for t in templates]
+    markdown_content = "\n\n".join(processed_contents)
+    
+    # Generate PDF
+    try:
+        result = generator.generate_pdf(
+            markdown_content,
+            'de',
+            'cis-controls'
+        )
+        
+        # If PDF generation succeeds, verify
+        if result.pdf_path is not None:
+            assert result.pdf_path.exists(), "PDF file should exist"
+            assert len(result.errors) == 0, f"Should have no errors: {result.errors}"
+            
+            # Verify file location
+            assert result.pdf_path.name == "cis-controls_handbook.pdf"
+            assert result.pdf_path.parent.name == "pdf"
+            assert result.pdf_path.parent.parent.name == "cis-controls"
+            assert result.pdf_path.parent.parent.parent.name == "de"
+            
+            # Verify file size (should be non-zero)
+            assert result.pdf_path.stat().st_size > 0, "PDF file should have content"
+        else:
+            # PDF generation failed due to missing dependencies - acceptable
+            assert len(result.errors) > 0, "Should have error message if PDF failed"
+            assert any("dependencies" in e.lower() or "import" in e.lower() 
+                      for e in result.errors), \
+                "Error should mention missing dependencies"
+    except (ImportError, OSError):
+        pytest.skip("PDF generation dependencies not available")
+
+
+def test_cis_controls_pdf_generation_with_toc(tmp_path):
+    """
+    Test PDF generation with TOC for CIS Controls.
+    
+    Requirements: 5.5
+    """
+    from src.template_manager import TemplateManager
+    import re
+    
+    output_dir = tmp_path / "test-output"
+    generator = OutputGenerator(output_dir, test_mode=True)
+    template_manager = TemplateManager(Path("templates"))
+    
+    # Get CIS Controls templates
+    try:
+        templates = template_manager.get_templates('de', 'cis-controls')
+    except ValueError:
+        pytest.skip("CIS Controls templates not found")
+    
+    if not templates:
+        pytest.skip("No CIS Controls templates available")
+    
+    # Prepare templates data (number, title, content)
+    templates_data = []
+    for t in templates:
+        match = re.match(r'(\d{4})_(.+)\.md', t.path.name)
+        if match:
+            number = match.group(1)
+            title = match.group(2).replace('_', ' ')
+            content = t.read_content()
+            templates_data.append((number, title, content))
+    
+    if not templates_data:
+        pytest.skip("No valid templates for PDF with TOC")
+    
+    # Generate PDF with TOC
+    try:
+        result = generator.generate_pdf_with_toc(
+            templates_data,
+            'de',
+            'cis-controls'
+        )
+        
+        # If PDF generation succeeds, verify
+        if result.pdf_path is not None:
+            assert result.pdf_path.exists(), "PDF file should exist"
+            assert len(result.errors) == 0, f"Should have no errors: {result.errors}"
+            
+            # Verify file location
+            assert result.pdf_path.name == "cis-controls_handbook.pdf"
+            assert result.pdf_path.parent.name == "pdf"
+            assert result.pdf_path.parent.parent.name == "cis-controls"
+            
+            # Verify file size (should be non-zero)
+            assert result.pdf_path.stat().st_size > 0, "PDF file should have content"
+        else:
+            # PDF generation failed due to missing dependencies - acceptable
+            assert len(result.errors) > 0, "Should have error message if PDF failed"
+    except (ImportError, OSError):
+        pytest.skip("PDF generation dependencies not available")
+
+
+def test_cis_controls_pdf_with_page_breaks(tmp_path):
+    """
+    Test that PDF with TOC includes page breaks between sections.
+    
+    Requirements: 5.5
+    """
+    from src.template_manager import TemplateManager
+    import re
+    
+    output_dir = tmp_path / "test-output"
+    generator = OutputGenerator(output_dir, test_mode=True)
+    template_manager = TemplateManager(Path("templates"))
+    
+    # Get CIS Controls templates (just first 3 for testing)
+    try:
+        templates = template_manager.get_templates('de', 'cis-controls')[:3]
+    except ValueError:
+        pytest.skip("CIS Controls templates not found")
+    
+    if len(templates) < 2:
+        pytest.skip("Need at least 2 templates for page break test")
+    
+    # Prepare templates data
+    templates_data = []
+    for t in templates:
+        match = re.match(r'(\d{4})_(.+)\.md', t.path.name)
+        if match:
+            number = match.group(1)
+            title = match.group(2).replace('_', ' ')
+            content = t.read_content()
+            templates_data.append((number, title, content))
+    
+    if len(templates_data) < 2:
+        pytest.skip("Need at least 2 valid templates for page break test")
+    
+    # Test the internal page break method
+    templates_html = [f"<h1>Template {i}</h1><p>Content {i}</p>" 
+                     for i in range(len(templates_data))]
+    
+    result_html = generator._add_page_breaks(templates_html)
+    
+    # Should have page breaks between templates
+    page_break_count = result_html.count('<div class="page-break"></div>')
+    expected_breaks = len(templates_data) - 1
+    
+    assert page_break_count == expected_breaks, \
+        f"Should have {expected_breaks} page breaks for {len(templates_data)} templates, " \
+        f"found {page_break_count}"
+
+
+def test_cis_controls_english_pdf_generation(tmp_path):
+    """
+    Test PDF generation for English CIS Controls templates.
+    
+    Requirements: 5.2
+    """
+    from src.template_manager import TemplateManager
+    
+    output_dir = tmp_path / "test-output"
+    generator = OutputGenerator(output_dir, test_mode=True)
+    template_manager = TemplateManager(Path("templates"))
+    
+    # Get English CIS Controls templates
+    try:
+        templates = template_manager.get_templates('en', 'cis-controls')
+    except ValueError:
+        pytest.skip("English CIS Controls templates not found")
+    
+    if not templates:
+        pytest.skip("No English CIS Controls templates available")
+    
+    # Process templates
+    processed_contents = [t.read_content() for t in templates]
+    markdown_content = "\n\n".join(processed_contents)
+    
+    # Generate PDF
+    try:
+        result = generator.generate_pdf(
+            markdown_content,
+            'en',
+            'cis-controls'
+        )
+        
+        # If PDF generation succeeds, verify
+        if result.pdf_path is not None:
+            assert result.pdf_path.exists(), "PDF file should exist"
+            # Verify file location uses English directory
+            assert result.pdf_path.parent.parent.parent.name == "en"
+        else:
+            # PDF generation failed - acceptable
+            assert len(result.errors) > 0
+    except (ImportError, OSError):
+        pytest.skip("PDF generation dependencies not available")
+
+
+def test_cis_controls_pdf_custom_filename(tmp_path):
+    """
+    Test PDF generation with custom filename for CIS Controls.
+    
+    Requirements: 5.2
+    """
+    from src.template_manager import TemplateManager
+    
+    output_dir = tmp_path / "test-output"
+    generator = OutputGenerator(output_dir, test_mode=True)
+    template_manager = TemplateManager(Path("templates"))
+    
+    # Get CIS Controls templates
+    try:
+        templates = template_manager.get_templates('de', 'cis-controls')
+    except ValueError:
+        pytest.skip("CIS Controls templates not found")
+    
+    if not templates:
+        pytest.skip("No CIS Controls templates available")
+    
+    # Process templates
+    processed_contents = [t.read_content() for t in templates]
+    markdown_content = "\n\n".join(processed_contents)
+    
+    # Generate PDF with custom filename
+    custom_filename = "custom_cis_handbook.pdf"
+    
+    try:
+        result = generator.generate_pdf(
+            markdown_content,
+            'de',
+            'cis-controls',
+            filename=custom_filename
+        )
+        
+        # If PDF generation succeeds, verify
+        if result.pdf_path is not None:
+            assert result.pdf_path.name == custom_filename, \
+                f"Should use custom filename {custom_filename}"
+        else:
+            # PDF generation failed - acceptable
+            assert len(result.errors) > 0
+    except (ImportError, OSError):
+        pytest.skip("PDF generation dependencies not available")
+
+
+def test_cis_controls_pdf_overwrite_warning(tmp_path):
+    """
+    Test that overwriting existing CIS Controls PDF produces warning.
+    
+    Requirements: 5.2
+    """
+    from src.template_manager import TemplateManager
+    
+    output_dir = tmp_path / "test-output"
+    generator = OutputGenerator(output_dir, test_mode=True)
+    template_manager = TemplateManager(Path("templates"))
+    
+    # Get CIS Controls templates
+    try:
+        templates = template_manager.get_templates('de', 'cis-controls')
+    except ValueError:
+        pytest.skip("CIS Controls templates not found")
+    
+    if not templates:
+        pytest.skip("No CIS Controls templates available")
+    
+    # Create a dummy PDF file first
+    pdf_dir = output_dir / "de" / "cis-controls" / "pdf"
+    pdf_dir.mkdir(parents=True, exist_ok=True)
+    pdf_file = pdf_dir / "cis-controls_handbook.pdf"
+    pdf_file.write_text("dummy pdf content")
+    
+    # Process templates
+    processed_contents = [t.read_content() for t in templates]
+    markdown_content = "\n\n".join(processed_contents)
+    
+    # Generate PDF (should warn about overwrite)
+    try:
+        result = generator.generate_pdf(
+            markdown_content,
+            'de',
+            'cis-controls'
+        )
+        
+        # Should have overwrite warning
+        overwrite_warnings = [w for w in result.warnings if "overwrite" in w.lower() or "exists" in w.lower()]
+        assert len(overwrite_warnings) > 0, \
+            "Should warn about overwriting existing file"
+    except (ImportError, OSError):
+        pytest.skip("PDF generation dependencies not available")
+
+
+def test_cis_controls_pdf_toc_structure(tmp_path):
+    """
+    Test that PDF with TOC has correct TOC structure.
+    
+    Requirements: 5.5
+    """
+    from src.template_manager import TemplateManager
+    import re
+    
+    output_dir = tmp_path / "test-output"
+    generator = OutputGenerator(output_dir, test_mode=True)
+    template_manager = TemplateManager(Path("templates"))
+    
+    # Get CIS Controls templates (just first 3 for testing)
+    try:
+        templates = template_manager.get_templates('de', 'cis-controls')[:3]
+    except ValueError:
+        pytest.skip("CIS Controls templates not found")
+    
+    if not templates:
+        pytest.skip("No CIS Controls templates available")
+    
+    # Prepare templates data
+    templates_data = []
+    for t in templates:
+        match = re.match(r'(\d{4})_(.+)\.md', t.path.name)
+        if match:
+            number = match.group(1)
+            title = match.group(2).replace('_', ' ')
+            content = "# Test Content"
+            templates_data.append((number, title, content))
+    
+    if not templates_data:
+        pytest.skip("No valid templates for TOC test")
+    
+    # Test the internal TOC generation method
+    toc_html = generator._generate_toc_html(templates_data, 'cis-controls')
+    
+    # Verify TOC structure
+    assert '<div class="toc">' in toc_html, "Should have TOC div"
+    assert '<h1>Table of Contents</h1>' in toc_html, "Should have TOC heading"
+    assert '<ul>' in toc_html, "Should have unordered list"
+    assert '</ul>' in toc_html, "Should close unordered list"
+    assert '</div>' in toc_html, "Should close TOC div"
+    assert '<div class="page-break"></div>' in toc_html, "Should have page break after TOC"
+    
+    # Verify all templates are listed
+    for number, title, _ in templates_data:
+        assert f'{number} - {title}' in toc_html, \
+            f"TOC should contain {number} - {title}"
+        assert f'href="#section-{number}"' in toc_html, \
+            f"TOC should have anchor link to section-{number}"

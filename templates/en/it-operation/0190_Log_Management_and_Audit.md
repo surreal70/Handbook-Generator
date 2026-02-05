@@ -295,6 +295,39 @@ This document describes the log management and audit processes for {{ meta.organ
 - Compliance requirements
 - Legal retention
 
+### Archiving Process
+
+**Automatic Archiving:**
+1. Logs older than hot retention are compressed
+2. Compressed logs are moved to warm/cold storage
+3. Metadata remains available for search
+4. Originals are deleted from hot storage
+
+**Archive Format:**
+- Compression: gzip, bzip2
+- Encryption: AES-256
+- Integrity: SHA-256 checksums
+- Metadata: JSON index
+
+**Archive Location:** {{ meta.log_archive_location }}
+
+### Log Deletion
+
+**Automatic Deletion:**
+- Logs older than retention policy are automatically deleted
+- Deletion is logged (audit trail)
+- Verify checksums before deletion
+
+**Manual Deletion:**
+- Only with management approval
+- Document justification
+- Create deletion protocol
+
+**GDPR Deletion:**
+- Right to be forgotten
+- Delete personal data
+- Document deletion
+
 ## Log Analysis and Monitoring
 
 ### SIEM Integration
@@ -340,6 +373,97 @@ THEN alert "Unauthorized Privilege Escalation"
 
 **Severity:** Critical  
 **Response:** Immediate investigation, deactivate account
+
+### Dashboards
+
+#### Security Dashboard
+
+**Metrics:**
+- Failed login attempts (last 24h)
+- Security alerts (by severity)
+- Top 10 attacker IPs
+- Malware detections
+- Firewall blocks
+
+**Target Audience:** Security Operations Team
+
+#### Operations Dashboard
+
+**Metrics:**
+- System errors (by system)
+- Application errors (by app)
+- Performance metrics
+- Disk space warnings
+- Service availability
+
+**Target Audience:** IT Operations Team
+
+#### Compliance Dashboard
+
+**Metrics:**
+- Audit log coverage
+- Retention compliance
+- Access reviews
+- Policy violations
+- Privileged access monitoring
+
+**Target Audience:** Compliance Officer, Auditors
+
+### Alerting
+
+**Alert Channels:**
+- **Email:** {{ meta.alert_email }}
+- **SMS:** For critical alerts
+- **Ticketing:** {{ meta.ticketing_system }}
+- **SIEM Console:** Real-time alerts
+- **Slack/Teams:** Team notifications
+
+**Alert Prioritization:**
+
+| Severity | Response Time | Escalation | Example |
+|---|---|---|---|
+| **Critical** | Immediate | Immediate to on-call | Malware, Data Breach |
+| **High** | < 1 hour | After 1h | Failed Logins, Privilege Escalation |
+| **Medium** | < 4 hours | After 4h | Config Changes, Policy Violations |
+| **Low** | < 24 hours | After 24h | Informational Events |
+
+**Alert Tuning:**
+- False positive reduction
+- Threshold adjustment
+- Whitelist for legitimate activities
+- Regular review (monthly)
+
+## Roles and Responsibilities
+
+### Log Management Team
+
+**Responsibilities:**
+- Log infrastructure management
+- Log collection configuration
+- Retention policy implementation
+- Tool administration
+
+**Team Lead:** {{ meta.it_operations_manager.name }}
+
+### Security Operations Team
+
+**Responsibilities:**
+- SIEM monitoring
+- Alert response
+- Use case development
+- Threat hunting
+
+**Team Lead:** {{ meta.ciso.name }}
+
+### Compliance Officer
+
+**Responsibilities:**
+- Define compliance requirements
+- Audit support
+- Retention policy review
+- Regulatory monitoring
+
+**Person:** {{ meta.compliance_officer }}
 
 ## Compliance and Regulation
 
