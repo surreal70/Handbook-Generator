@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0070 - Risikokriterien und Risikoakzeptanz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0070</div>
+            <h1>Risikokriterien und Risikoakzeptanz</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0060_ISMS_Risikomanagement_Methodik.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0080_ISMS_Risikoregister_Template.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="risikokriterien-und-risikoakzeptanz">Risikokriterien und Risikoakzeptanz</h1>
+<p><strong>Dokument-ID:</strong> 0070<br />
+<strong>Dokumenttyp:</strong> ISMS-Grundlagendokument<br />
+<strong>Standard-Referenz:</strong> ISO/IEC 27001:2022 Clause 6.1.2<br />
+<strong>Owner:</strong> Thomas Weber<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Freigegeben<br />
+<strong>Klassifizierung:</strong> Intern<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.date }}<br />
+<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-risikoappetit-und-toleranz">1. Risikoappetit und Toleranz</h2>
+<h3 id="11-risikoappetit">1.1 Risikoappetit</h3>
+<p>Die <strong>AdminSend GmbH</strong> definiert ihren Risikoappetit wie folgt:</p>
+<p><strong>Allgemeiner Risikoappetit:</strong> [TODO: Konservativ / Moderat / Progressiv]</p>
+<p><strong>Toleranzschwellen nach Risikostufe:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Risikostufe</th>
+<th>Risikoscore</th>
+<th>Akzeptabel</th>
+<th>Behandlung erforderlich</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sehr niedrig</td>
+<td>1-2</td>
+<td>Ja</td>
+<td>Monitoring</td>
+</tr>
+<tr>
+<td>Niedrig</td>
+<td>3-6</td>
+<td>Ja</td>
+<td>Monitoring</td>
+</tr>
+<tr>
+<td>Mittel</td>
+<td>7-12</td>
+<td>Bedingt</td>
+<td>Risikobehandlung empfohlen</td>
+</tr>
+<tr>
+<td>Hoch</td>
+<td>13-20</td>
+<td>Nein</td>
+<td>Risikobehandlung erforderlich</td>
+</tr>
+<tr>
+<td>Sehr hoch</td>
+<td>21-25</td>
+<td>Nein</td>
+<td>Sofortige Risikobehandlung</td>
+</tr>
+</tbody>
+</table>
+<h3 id="12-akzeptanzkriterien">1.2 Akzeptanzkriterien</h3>
+<p><strong>Automatisch akzeptabel:</strong>
+- Risikoscore ≤ 6 (Niedrig)
+- Keine Compliance-Verstöße
+- Keine kritischen Assets betroffen</p>
+<p><strong>Bedingt akzeptabel:</strong>
+- Risikoscore 7-12 (Mittel)
+- Mit Kompensationsmaßnahmen
+- Zeitlich befristet (max. 12 Monate)</p>
+<p><strong>Nicht akzeptabel:</strong>
+- Risikoscore ≥ 13 (Hoch/Sehr hoch)
+- Compliance-Verstöße
+- Kritische Assets ohne Schutzmaßnahmen</p>
+<h2 id="2-bewertungsdimensionen">2. Bewertungsdimensionen</h2>
+<h3 id="21-cia-triade">2.1 CIA-Triade</h3>
+<p><strong>Vertraulichkeit (Confidentiality):</strong>
+- Schutz vor unbefugter Offenlegung
+- Klassifizierung: Öffentlich, Intern, Vertraulich, Streng vertraulich</p>
+<p><strong>Integrität (Integrity):</strong>
+- Schutz vor unbefugter Änderung
+- Korrektheit und Vollständigkeit von Informationen</p>
+<p><strong>Verfügbarkeit (Availability):</strong>
+- Sicherstellung des Zugriffs bei Bedarf
+- RTO/RPO-Anforderungen</p>
+<h3 id="22-weitere-dimensionen">2.2 Weitere Dimensionen</h3>
+<p><strong>Recht und Regulatorik:</strong>
+- DSGVO-Compliance
+- Branchenspezifische Regulierung
+- Vertragliche Verpflichtungen</p>
+<p><strong>Reputation:</strong>
+- Auswirkungen auf Unternehmensimage
+- Kundenvertrauen
+- Medienberichterstattung</p>
+<h2 id="3-akzeptanzprozess">3. Akzeptanzprozess</h2>
+<h3 id="31-akzeptanzbefugnisse">3.1 Akzeptanzbefugnisse</h3>
+<table>
+<thead>
+<tr>
+<th>Risikostufe</th>
+<th>Akzeptanz durch</th>
+<th>Dokumentation</th>
+<th>Genehmigung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sehr niedrig / Niedrig</td>
+<td>CISO</td>
+<td>Risikoregister</td>
+<td>CISO</td>
+</tr>
+<tr>
+<td>Mittel</td>
+<td>CISO</td>
+<td>Risikoregister + Begründung</td>
+<td>CISO + CIO</td>
+</tr>
+<tr>
+<td>Hoch</td>
+<td>Geschäftsführung</td>
+<td>Risikoregister + Formale Risikoakzeptanz</td>
+<td>Geschäftsführung</td>
+</tr>
+<tr>
+<td>Sehr hoch</td>
+<td>Geschäftsführung</td>
+<td>Risikoregister + Formale Risikoakzeptanz + Maßnahmenplan</td>
+<td>Geschäftsführung</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-dokumentationspflicht">3.2 Dokumentationspflicht</h3>
+<p><strong>Mindestangaben:</strong>
+- Risiko-ID und Beschreibung
+- Risikobewertung (Wahrscheinlichkeit, Auswirkung, Score)
+- Begründung für Akzeptanz
+- Kompensationsmaßnahmen (falls vorhanden)
+- Akzeptanzdatum und Gültigkeitsdauer
+- Akzeptierende Person</p>
+<p><strong>Dokument:</strong> Siehe <code>0080_ISMS_Risikoregister_Template.md</code></p>
+<h3 id="33-laufzeit-von-akzeptanzen">3.3 Laufzeit von Akzeptanzen</h3>
+<p><strong>Befristung:</strong>
+- Niedrige Risiken: Unbefristet (mit jährlichem Review)
+- Mittlere Risiken: Max. 12 Monate
+- Hohe Risiken: Max. 6 Monate
+- Sehr hohe Risiken: Max. 3 Monate (Ausnahme)</p>
+<p><strong>Verlängerung:</strong>
+- Erfordert erneute Bewertung und Genehmigung
+- Begründung für Verlängerung erforderlich</p>
+<h3 id="34-review-von-akzeptierten-risiken">3.4 Review von akzeptierten Risiken</h3>
+<p><strong>Regelmäßiger Review:</strong>
+- Quartalsweise: Alle akzeptierten Risiken
+- Jährlich: Vollständige Neubewertung</p>
+<p><strong>Trigger für außerplanmäßigen Review:</strong>
+- Neue Bedrohungen oder Schwachstellen
+- Änderung der Geschäftsumgebung
+- Security Incidents
+- Audit-Findings</p>
+<h2 id="4-referenzen">4. Referenzen</h2>
+<h3 id="interne-dokumente">Interne Dokumente</h3>
+<ul>
+<li><code>0060_ISMS_Risikomanagement_Methodik.md</code> - Risk Management Methodology</li>
+<li><code>0080_ISMS_Risikoregister_Template.md</code> - Risk Register</li>
+<li><code>0090_ISMS_Risikobehandlungsplan_RTP_Template.md</code> - Risk Treatment Plan</li>
+</ul>
+<h3 id="externe-standards">Externe Standards</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022</strong> - Clause 6.1.2: Information security risk assessment</li>
+<li><strong>ISO/IEC 27005:2022</strong> - Information security risk management</li>
+</ul>
+<hr />
+<p><strong>Genehmigt durch:</strong><br />
+{{ meta.management.ceo }}, Geschäftsführung<br />
+Datum: {{ meta.document.approval_date }}</p>
+<p><strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0060_ISMS_Risikomanagement_Methodik.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0080_ISMS_Risikoregister_Template.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

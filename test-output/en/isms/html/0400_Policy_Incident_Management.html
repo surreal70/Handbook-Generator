@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0400 - Policy: Incident Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0400</div>
+            <h1>Policy: Incident Management</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0390_Guideline_Secure_SDLC_Coding_Review_and_Secrets.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0410_Guideline_Incident_Response_and_Major_Incident_Process.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="policy-incident-management">Policy: Incident Management</h1>
+<p><strong>Document ID:</strong> 0400<br />
+<strong>Document Type:</strong> Policy (abstract)<br />
+<strong>Standard Reference:</strong> ISO/IEC 27001:2022 Annex A.5.24-A.5.28 (incl. Amendment 1:2024)<br />
+<strong>Owner:</strong> Thomas Weber<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Approved<br />
+<strong>Classification:</strong> Internal<br />
+<strong>Last Updated:</strong> {{ meta.document.date }}<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This policy defines the principles for incident management and security incident response at <strong>AdminSend GmbH</strong>. It ensures that security incidents are detected, assessed, handled, and documented in a timely manner to minimize damage and learn from incidents.</p>
+<h2 id="2-scope">2. Scope</h2>
+<p>This policy applies to:</p>
+<ul>
+<li><strong>Organizational Units:</strong> All departments and locations of AdminSend GmbH</li>
+<li><strong>Incident Types:</strong> Security incidents, data breaches, malware, phishing, DDoS, insider threats</li>
+<li><strong>Systems:</strong> All IT systems, applications, networks, cloud services</li>
+<li><strong>Personnel:</strong> All employees, contractors, suppliers</li>
+<li><strong>Locations:</strong> {{ netbox.site.name }} and all other operational sites</li>
+</ul>
+<p><strong>Exceptions:</strong> Exceptions are only permitted through the defined exception process (<code>0640_Policy_Exceptions_and_Risk_Waivers.md</code>).</p>
+<h2 id="3-principles-policy-statements">3. Principles (Policy Statements)</h2>
+<h3 id="31-incident-response-capability">3.1 Incident Response Capability</h3>
+<p>The organization maintains an incident response capability with defined processes, roles, and tools for handling security incidents.</p>
+<h3 id="32-reporting-obligation">3.2 Reporting Obligation</h3>
+<p>All employees are required to report suspected or confirmed security incidents immediately. There are no negative consequences for good-faith reports.</p>
+<h3 id="33-incident-categorization-and-prioritization">3.3 Incident Categorization and Prioritization</h3>
+<p>Incidents are categorized by severity and impact:
+- <strong>Critical:</strong> Severe impact on business operations or data protection
+- <strong>High:</strong> Significant impact, but business operations not critically endangered
+- <strong>Medium:</strong> Moderate impact, limited impairment
+- <strong>Low:</strong> Minor impact, no immediate danger</p>
+<h3 id="34-incident-response-lifecycle">3.4 Incident Response Lifecycle</h3>
+<p>Incidents are handled through a structured process:
+- <strong>Detection &amp; Reporting:</strong> Detection and reporting
+- <strong>Triage &amp; Assessment:</strong> Assessment and prioritization
+- <strong>Containment:</strong> Containment for damage limitation
+- <strong>Eradication:</strong> Elimination of the cause
+- <strong>Recovery:</strong> Restoration of normal operations
+- <strong>Post-Incident Review:</strong> Follow-up and lessons learned</p>
+<h3 id="35-escalation-and-communication">3.5 Escalation and Communication</h3>
+<p>Critical incidents are escalated according to defined escalation paths to management, legal, PR, and authorities as appropriate. Communication follows established communication plans.</p>
+<h3 id="36-forensics-and-evidence-preservation">3.6 Forensics and Evidence Preservation</h3>
+<p>Forensic analysis is performed for severe incidents. Evidence is securely preserved and documented for possible legal action.</p>
+<h3 id="37-data-breach-notification">3.7 Data Breach Notification</h3>
+<p>Data breaches are reported to supervisory authorities and affected individuals within 72 hours in accordance with GDPR and other regulatory requirements.</p>
+<h3 id="38-continuous-improvement">3.8 Continuous Improvement</h3>
+<p>Lessons learned are derived from every incident. Insights flow into the improvement of processes, controls, and awareness.</p>
+<h2 id="4-roles-and-responsibilities">4. Roles and Responsibilities</h2>
+<h3 id="raci-matrix-incident-management">RACI Matrix: Incident Management</h3>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>CISO</th>
+<th>Incident Manager</th>
+<th>SOC</th>
+<th>IT Operations</th>
+<th>Legal/DPO</th>
+<th>Management</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Policy creation</td>
+<td>R/A</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Incident detection</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Incident triage</td>
+<td>A</td>
+<td>R</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Incident response</td>
+<td>A</td>
+<td>R</td>
+<td>R</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Escalation</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Data breach notification</td>
+<td>A</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+<td>R</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Forensics</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Post-incident review</td>
+<td>R/A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legend:</strong> R = Responsible (Execution), A = Accountable (Ownership), C = Consulted, I = Informed</p>
+<h3 id="key-roles">Key Roles</h3>
+<ul>
+<li><strong>Policy Owner:</strong> Thomas Weber (CISO)</li>
+<li><strong>Incident Manager:</strong> {{ meta.security.incident_manager }}</li>
+<li><strong>SOC Manager:</strong> {{ meta.security.soc_manager }}</li>
+<li><strong>Data Protection Officer:</strong> {{ meta.dpo.name }}</li>
+<li><strong>Implementation Responsible:</strong> SOC, IT Operations, Incident Response Team</li>
+<li><strong>Control/Audit Function:</strong> ISMS, Internal Audit</li>
+</ul>
+<h2 id="5-derivations-guidelinesstandardsprocesses">5. Derivations (Guidelines/Standards/Processes)</h2>
+<p>Implementation details are defined in subordinate documents:</p>
+<h3 id="related-guidelines">Related Guidelines</h3>
+<ul>
+<li><strong>0410_Guideline_Incident_Response_and_Major_Incident_Process.md</strong> - Detailed implementation guideline</li>
+<li><code>0320_Policy_Logging_and_Monitoring.md</code> - Logging and Monitoring Policy</li>
+<li><code>0440_Policy_Business_Continuity_ICT_Readiness.md</code> - Business Continuity Policy</li>
+<li><code>0560_Policy_Data_Protection_Interfaces.md</code> - Data Protection Policy</li>
+</ul>
+<h3 id="related-standardsbaselines">Related Standards/Baselines</h3>
+<ul>
+<li>Incident response playbooks</li>
+<li>Incident severity matrix</li>
+<li>Escalation paths</li>
+<li>Data breach notification process</li>
+</ul>
+<h3 id="related-processes">Related Processes</h3>
+<ul>
+<li>Incident response process</li>
+<li>Major incident process</li>
+<li>Data breach notification process</li>
+<li>Post-incident review process</li>
+</ul>
+<h2 id="6-compliance-monitoring-and-enforcement">6. Compliance, Monitoring and Enforcement</h2>
+<h3 id="metrics-and-kpis">Metrics and KPIs</h3>
+<ul>
+<li>Number of incidents per category and severity</li>
+<li>MTTD (Mean Time To Detect) - Average detection time</li>
+<li>MTTR (Mean Time To Respond) - Average response time</li>
+<li>MTTR (Mean Time To Resolve) - Average resolution time</li>
+<li>Number of data breaches and notifications</li>
+<li>Post-incident review completion rate (target: 100%)</li>
+</ul>
+<h3 id="evidence-and-proof">Evidence and Proof</h3>
+<ul>
+<li>Incident tickets and documentation</li>
+<li>Incident response logs</li>
+<li>Forensics reports</li>
+<li>Data breach notifications</li>
+<li>Post-incident review reports</li>
+<li>Lessons learned documentation</li>
+</ul>
+<h3 id="consequences-of-violations">Consequences of Violations</h3>
+<p>Violations of this policy are handled according to applicable HR and compliance processes:
+- <strong>Unreported incident:</strong> Retraining, warning
+- <strong>Delayed data breach notification:</strong> Compliance investigation, possible fines
+- <strong>Evidence tampering:</strong> Severe disciplinary action
+- <strong>Repeated violations:</strong> Employment consequences</p>
+<h2 id="7-exceptions">7. Exceptions</h2>
+<p>Exceptions to this policy are only permitted in justified cases:</p>
+<ul>
+<li><strong>Exception Process:</strong> See <code>0640_Policy_Exceptions_and_Risk_Waivers.md</code></li>
+<li><strong>Approval:</strong> Exceptions must be approved by CISO</li>
+<li><strong>Documentation:</strong> All exceptions are documented in the risk register</li>
+<li><strong>Time Limitation:</strong> Exceptions are generally time-limited</li>
+</ul>
+<h2 id="8-references">8. References</h2>
+<h3 id="internal-documents">Internal Documents</h3>
+<ul>
+<li><code>0010_ISMS_Information_Security_Policy.md</code> - ISMS Policy</li>
+<li><code>0410_Guideline_Incident_Response_and_Major_Incident_Process.md</code> - Detailed Guideline</li>
+<li><code>0320_Policy_Logging_and_Monitoring.md</code> - Logging and Monitoring Policy</li>
+<li><code>0080_ISMS_Risk_Register_Template.md</code> - Risk Register</li>
+</ul>
+<h3 id="external-standards-and-requirements">External Standards and Requirements</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.24</strong> - Information security incident management planning and preparation</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.25</strong> - Assessment and decision on information security events</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.26</strong> - Response to information security incidents</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.27</strong> - Learning from information security incidents</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.28</strong> - Collection of evidence</li>
+<li><strong>NIST SP 800-61</strong> - Computer Security Incident Handling Guide</li>
+<li><strong>GDPR (EU 2016/679)</strong> - Art. 33, 34 - Data Breach Notification</li>
+<li><strong>NIS2 Directive</strong> - Network and Information Security Directive</li>
+</ul>
+<hr />
+<p><strong>Approved by:</strong><br />
+{{ meta.management.ceo }}, Management<br />
+Date: {{ meta.document.approval_date }}</p>
+<p><strong>Next Review:</strong> {{ meta.document.next_review }} (annually or as needed)</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0390_Guideline_Secure_SDLC_Coding_Review_and_Secrets.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0410_Guideline_Incident_Response_and_Major_Incident_Process.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

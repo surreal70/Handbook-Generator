@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0480 - Policy: Physical Security</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0480</div>
+            <h1>Policy: Physical Security</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0470_Guideline_Third_Party_Risk_Assessment_and_Cloud_Controls.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0490_Guideline_Access_Visitors_and_Equipment_Protection.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="policy-physical-security">Policy: Physical Security</h1>
+<p><strong>Document ID:</strong> 0480<br />
+<strong>Document Type:</strong> Policy (abstract)<br />
+<strong>Standard Reference:</strong> ISO/IEC 27001:2022 Annex A.7.1-A.7.4 (incl. Amendment 1:2024)<br />
+<strong>Owner:</strong> Thomas Weber<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Approved<br />
+<strong>Classification:</strong> Internal<br />
+<strong>Last Updated:</strong> {{ meta.document.date }}<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This policy defines the principles for physical security at <strong>AdminSend GmbH</strong>. It ensures that physical access to facilities, equipment, and information is controlled and monitored to prevent unauthorized access, theft, and damage.</p>
+<h2 id="2-scope">2. Scope</h2>
+<p>This policy applies to:</p>
+<ul>
+<li><strong>Organizational Units:</strong> All departments and locations of AdminSend GmbH</li>
+<li><strong>Facilities:</strong> Offices, data centers, server rooms, warehouses, production facilities</li>
+<li><strong>Assets:</strong> IT equipment, servers, network components, mobile devices, documents</li>
+<li><strong>Persons:</strong> Employees, visitors, contractors, suppliers</li>
+<li><strong>Locations:</strong> {{ netbox.site.name }} and all other operational sites</li>
+</ul>
+<p><strong>Exceptions:</strong> Exceptions are only permitted through the defined exception process (<code>0640_Policy_Exceptions_and_Risk_Waivers.md</code>).</p>
+<h2 id="3-principles-policy-statements">3. Principles (Policy Statements)</h2>
+<h3 id="31-perimeter-security">3.1 Perimeter Security</h3>
+<p>Physical security areas are protected by perimeter security (fences, walls, security doors). Entry points are controlled and monitored.</p>
+<h3 id="32-access-control">3.2 Access Control</h3>
+<p>Access to sensitive areas is controlled:
+- Electronic access control systems (badge, biometrics)
+- Visitor management and escort requirements
+- Logging of all access
+- Regular review of access rights</p>
+<h3 id="33-security-zones">3.3 Security Zones</h3>
+<p>Facilities are divided into security zones:
+- <strong>Public:</strong> Reception, meeting rooms
+- <strong>Internal:</strong> Offices, workspaces
+- <strong>Restricted:</strong> Server rooms, data centers
+- <strong>High Security:</strong> Critical infrastructure, vault rooms</p>
+<h3 id="34-video-surveillance">3.4 Video Surveillance</h3>
+<p>Critical areas are video monitored. Recordings are stored and protected according to data protection requirements.</p>
+<h3 id="35-protection-against-environmental-hazards">3.5 Protection Against Environmental Hazards</h3>
+<p>IT equipment is protected against environmental hazards:
+- Fire protection (smoke detectors, extinguishing systems)
+- Air conditioning and temperature monitoring
+- Water protection (leak detection)
+- Power supply (UPS, emergency generators)</p>
+<h3 id="36-secure-disposal">3.6 Secure Disposal</h3>
+<p>Physical media and documents are securely disposed of (shredding, incineration, certified disposal).</p>
+<h3 id="37-clear-desk-and-clear-screen">3.7 Clear Desk and Clear Screen</h3>
+<p>Workspaces are cleared when absent (Clear Desk). Screens are locked (Clear Screen).</p>
+<h3 id="38-equipment-security">3.8 Equipment Security</h3>
+<p>IT equipment is protected against theft (Kensington locks, alarm systems, inventory management).</p>
+<h2 id="4-roles-and-responsibilities">4. Roles and Responsibilities</h2>
+<h3 id="raci-matrix-physical-security">RACI Matrix: Physical Security</h3>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>CISO</th>
+<th>Facility Management</th>
+<th>Security</th>
+<th>IT Operations</th>
+<th>HR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Policy Creation</td>
+<td>R/A</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Access Control</td>
+<td>C</td>
+<td>R/A</td>
+<td>R</td>
+<td>I</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Visitor Management</td>
+<td>I</td>
+<td>R/A</td>
+<td>R</td>
+<td>I</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Video Surveillance</td>
+<td>C</td>
+<td>R/A</td>
+<td>R</td>
+<td>I</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Environmental Protection</td>
+<td>C</td>
+<td>R/A</td>
+<td>I</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Equipment Security</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+<td>R/A</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Compliance Review</td>
+<td>R/A</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legend:</strong> R = Responsible (Execution), A = Accountable (Ownership), C = Consulted, I = Informed</p>
+<h3 id="key-roles">Key Roles</h3>
+<ul>
+<li><strong>Policy Owner:</strong> Thomas Weber (CISO)</li>
+<li><strong>Facility Manager:</strong> {{ meta.facility.manager }}</li>
+<li><strong>Security Manager:</strong> {{ meta.security.physical_security_manager }}</li>
+<li><strong>Implementation Responsible:</strong> Facility Management, Security, IT Operations</li>
+<li><strong>Control/Audit Function:</strong> ISMS, Internal Audit</li>
+</ul>
+<h2 id="5-derivatives-guidelinesstandardsprocesses">5. Derivatives (Guidelines/Standards/Processes)</h2>
+<p>Implementation details are defined in subordinate documents:</p>
+<h3 id="associated-guidelines">Associated Guidelines</h3>
+<ul>
+<li><strong>0490_Guideline_Access_Visitors_and_Equipment_Protection.md</strong> - Detailed implementation guideline</li>
+<li><code>0300_Policy_Asset_Management.md</code> - Asset Management Policy</li>
+<li><code>0560_Policy_Data_Protection_Interfaces.md</code> - Data Protection Policy (video surveillance)</li>
+</ul>
+<h3 id="associated-standardsbaselines">Associated Standards/Baselines</h3>
+<ul>
+<li>Security zones concept</li>
+<li>Access control matrix</li>
+<li>Visitor management process</li>
+<li>Video surveillance guideline</li>
+</ul>
+<h3 id="associated-processes">Associated Processes</h3>
+<ul>
+<li>Access control process</li>
+<li>Visitor management process</li>
+<li>Incident response for physical security incidents</li>
+<li>Equipment disposal process</li>
+</ul>
+<h2 id="6-compliance-monitoring-and-enforcement">6. Compliance, Monitoring and Enforcement</h2>
+<h3 id="metrics-and-kpis">Metrics and KPIs</h3>
+<ul>
+<li>Number of unauthorized access attempts</li>
+<li>Number of visitors and compliance with escort requirements</li>
+<li>Number of physical security incidents (theft, break-in)</li>
+<li>Access control system availability (Target: 99.9%)</li>
+<li>Clear Desk/Clear Screen compliance rate</li>
+<li>Number of lost or stolen assets</li>
+</ul>
+<h3 id="evidence-and-proof">Evidence and Proof</h3>
+<ul>
+<li>Access control logs</li>
+<li>Visitor logs</li>
+<li>Video surveillance recordings</li>
+<li>Security incident reports</li>
+<li>Facility audit reports</li>
+<li>Equipment inventory</li>
+</ul>
+<h3 id="consequences-of-violations">Consequences of Violations</h3>
+<p>Violations of this policy are handled according to applicable HR and compliance processes:
+- <strong>Unauthorized Access:</strong> Immediate escalation, investigation
+- <strong>Tailgating:</strong> Warning, retraining
+- <strong>Clear Desk/Screen Violations:</strong> Warning, retraining
+- <strong>Repeated Violations:</strong> Employment consequences</p>
+<h2 id="7-exceptions">7. Exceptions</h2>
+<p>Exceptions to this policy are only permitted in justified exceptional cases:</p>
+<ul>
+<li><strong>Exception Process:</strong> See <code>0640_Policy_Exceptions_and_Risk_Waivers.md</code></li>
+<li><strong>Approval:</strong> Exceptions must be approved by CISO and Facility Manager</li>
+<li><strong>Documentation:</strong> All exceptions are documented in the risk register</li>
+<li><strong>Time Limitation:</strong> Exceptions are generally time-limited</li>
+</ul>
+<h2 id="8-references">8. References</h2>
+<h3 id="internal-documents">Internal Documents</h3>
+<ul>
+<li><code>0010_ISMS_Information_Security_Policy.md</code> - ISMS Policy</li>
+<li><code>0490_Guideline_Access_Visitors_and_Equipment_Protection.md</code> - Detailed Guideline</li>
+<li><code>0300_Policy_Asset_Management.md</code> - Asset Management Policy</li>
+<li><code>0080_ISMS_Risk_Register_Template.md</code> - Risk Register</li>
+</ul>
+<h3 id="external-standards-and-requirements">External Standards and Requirements</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.7.1</strong> - Physical security perimeters</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.7.2</strong> - Physical entry</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.7.3</strong> - Securing offices, rooms and facilities</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.7.4</strong> - Physical security monitoring</li>
+<li><strong>GDPR (EU 2016/679)</strong> - Data protection for video surveillance</li>
+<li><strong>BSI IT-Grundschutz</strong> - Module INF.1 General Building</li>
+</ul>
+<hr />
+<p><strong>Approved by:</strong><br />
+{{ meta.management.ceo }}, Management<br />
+Date: {{ meta.document.approval_date }}</p>
+<p><strong>Next Review:</strong> {{ meta.document.next_review }} (annually or as needed)</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0470_Guideline_Third_Party_Risk_Assessment_and_Cloud_Controls.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0490_Guideline_Access_Visitors_and_Equipment_Protection.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

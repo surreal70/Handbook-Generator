@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0730 - Appendix: Network Plan and Zone Model (Template)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0730</div>
+            <h1>Appendix: Network Plan and Zone Model (Template)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0720_Appendix_Data_Flows_and_Interfaces_Template.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0740_Appendix_Terms_and_Abbreviations.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="appendix-network-plan-and-zone-model-template">Appendix: Network Plan and Zone Model (Template)</h1>
+<p><strong>Document ID:</strong> 0730<br />
+<strong>Document Type:</strong> Appendix<br />
+<strong>Reference Framework:</strong> BSI IT-Grundschutz (BSI Standards 200-1/200-2)<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> {{ meta.document.status }}<br />
+<strong>Classification:</strong> internal<br />
+<strong>Last Updated:</strong> {{ meta.document.last_updated }}<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-purpose-and-objectives">1. Purpose and Objectives</h2>
+<p>The documentation of network architecture and zone model of <strong>AdminSend GmbH</strong> serves:
+- Structure Analysis (Document 0050)
+- Risk Analysis (Document 0090)
+- Network Security (Document 0460/0470)
+- Incident Response (Document 0320/0330)</p>
+<p><strong>Responsible:</strong> Anna Schmidt (IT Management)</p>
+<h2 id="2-high-level-network-plan">2. High-Level Network Plan</h2>
+<p><strong>Storage Location:</strong> <code>diagrams/network-highlevel.png</code> or [TODO: Confluence/SharePoint]</p>
+<p><strong>Representation:</strong>
+- All network zones
+- Firewalls and trust boundaries
+- Main connections (Internet, WAN, VPN)
+- Critical systems</p>
+<p><strong>Tools:</strong> [TODO: e.g., Lucidchart, Draw.io, Visio]</p>
+<h2 id="3-network-zones-and-segmentation">3. Network Zones and Segmentation</h2>
+<table>
+<thead>
+<tr>
+<th>Zone ID</th>
+<th>Zone Name</th>
+<th>Description</th>
+<th>Trust Level</th>
+<th>Access Control</th>
+<th>Responsible</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Z-001</td>
+<td>Internet</td>
+<td>Public Internet</td>
+<td>Untrusted</td>
+<td>Firewall (Deny All)</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Z-002</td>
+<td>DMZ</td>
+<td>Demilitarized Zone (Web Server, Mail Gateway)</td>
+<td>Low Trust</td>
+<td>Firewall (Whitelist)</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Z-003</td>
+<td>Internal LAN</td>
+<td>Internal Corporate Network</td>
+<td>Trusted</td>
+<td>Firewall (Default Allow)</td>
+<td>Anna Schmidt</td>
+<td>{{ netbox.vlan.name }}</td>
+</tr>
+<tr>
+<td>Z-004</td>
+<td>Server VLAN</td>
+<td>Production Servers</td>
+<td>High Trust</td>
+<td>Firewall (Whitelist)</td>
+<td>Anna Schmidt</td>
+<td>{{ netbox.vlan.name }}</td>
+</tr>
+<tr>
+<td>Z-005</td>
+<td>Database VLAN</td>
+<td>Database Servers</td>
+<td>High Trust</td>
+<td>Firewall (Strict Whitelist)</td>
+<td>Anna Schmidt</td>
+<td>{{ netbox.vlan.name }}</td>
+</tr>
+<tr>
+<td>Z-006</td>
+<td>Management VLAN</td>
+<td>Management Network (Monitoring, Backup, Admin)</td>
+<td>High Trust</td>
+<td>Firewall (Strict Whitelist)</td>
+<td>Anna Schmidt</td>
+<td>{{ netbox.vlan.name }}</td>
+</tr>
+<tr>
+<td>Z-007</td>
+<td>Guest WiFi</td>
+<td>Guest WLAN</td>
+<td>Untrusted</td>
+<td>Captive Portal, Firewall</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Z-008</td>
+<td>VPN</td>
+<td>Remote Access (VPN)</td>
+<td>Trusted (after authentication)</td>
+<td>VPN Gateway, MFA</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-trust-boundaries-and-firewall-rules">4. Trust Boundaries and Firewall Rules</h2>
+<h3 id="41-trust-boundaries">4.1 Trust Boundaries</h3>
+<p><strong>Definition:</strong> Trust boundaries are borders between network zones with different trust levels.</p>
+<p><strong>Main Boundaries:</strong>
+1. <strong>Internet ↔ DMZ:</strong> Firewall with strict rules (only HTTP/HTTPS inbound)
+2. <strong>DMZ ↔ Internal LAN:</strong> Firewall with whitelist (only defined connections)
+3. <strong>Internal LAN ↔ Server VLAN:</strong> Firewall with whitelist
+4. <strong>Server VLAN ↔ Database VLAN:</strong> Firewall with strict whitelist (only DB ports)
+5. <strong>Management VLAN ↔ All Zones:</strong> Firewall with strict whitelist (only admin access)</p>
+<h3 id="42-firewall-rules-example">4.2 Firewall Rules (Example)</h3>
+<table>
+<thead>
+<tr>
+<th>Rule ID</th>
+<th>Source</th>
+<th>Destination</th>
+<th>Service/Port</th>
+<th>Action</th>
+<th>Justification</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FW-001</td>
+<td>Internet</td>
+<td>DMZ (Web Server)</td>
+<td>HTTPS (443)</td>
+<td>Allow</td>
+<td>Public web access</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>FW-002</td>
+<td>DMZ (Web Server)</td>
+<td>Server VLAN (App Server)</td>
+<td>HTTPS (8443)</td>
+<td>Allow</td>
+<td>Backend communication</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>FW-003</td>
+<td>Server VLAN (App Server)</td>
+<td>Database VLAN (DB Server)</td>
+<td>PostgreSQL (5432)</td>
+<td>Allow</td>
+<td>Database access</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>FW-004</td>
+<td>Management VLAN</td>
+<td>All Zones</td>
+<td>SSH (22), RDP (3389)</td>
+<td>Allow</td>
+<td>Admin access</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>FW-005</td>
+<td>Guest WiFi</td>
+<td>Internet</td>
+<td>HTTP/HTTPS (80/443)</td>
+<td>Allow</td>
+<td>Internet access for guests</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>FW-006</td>
+<td>Guest WiFi</td>
+<td>Internal LAN</td>
+<td>All</td>
+<td>Deny</td>
+<td>Isolation from internal network</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Reference:</strong> Document 0460/0470 (Network Security)</p>
+<h2 id="5-network-devices">5. Network Devices</h2>
+<table>
+<thead>
+<tr>
+<th>Device ID</th>
+<th>Type</th>
+<th>Model</th>
+<th>Location</th>
+<th>IP Address</th>
+<th>Management IP</th>
+<th>Role</th>
+<th>Owner</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{{ netbox.device.id }}</td>
+<td>{{ netbox.device.type }}</td>
+<td>{{ netbox.device.model }}</td>
+<td>{{ netbox.site.name }}</td>
+<td>{{ netbox.ipaddress.address }}</td>
+<td>[TODO]</td>
+<td>{{ netbox.device.role }}</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>Firewall</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Perimeter Firewall</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>Switch</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Core Switch</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>Router</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Internet Router</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>NetBox Integration:</strong> {{ netbox.url }}</p>
+<h2 id="6-vlans">6. VLANs</h2>
+<table>
+<thead>
+<tr>
+<th>VLAN ID</th>
+<th>VLAN Name</th>
+<th>Network (CIDR)</th>
+<th>Gateway</th>
+<th>Description</th>
+<th>Zone</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{{ netbox.vlan.id }}</td>
+<td>{{ netbox.vlan.name }}</td>
+<td>[TODO: e.g., 10.0.10.0/24]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>Management</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Management Network</td>
+<td>Z-006</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>Servers</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Production Servers</td>
+<td>Z-004</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>Database</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Database Servers</td>
+<td>Z-005</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-administrative-access">7. Administrative Access</h2>
+<h3 id="71-bastionjump-hosts">7.1 Bastion/Jump Hosts</h3>
+<p><strong>Bastion Host:</strong> [TODO: Hostname/IP]<br />
+<strong>Purpose:</strong> Central access point for administrative access to production systems<br />
+<strong>Authentication:</strong> MFA (Multi-Factor Authentication)<br />
+<strong>Protocols:</strong> SSH, RDP<br />
+<strong>Logging:</strong> All access is logged (SIEM)</p>
+<p><strong>Reference:</strong> Document 0200/0210 (Access Control)</p>
+<h3 id="72-remote-admin">7.2 Remote Admin</h3>
+<p><strong>VPN Gateway:</strong> [TODO: Hostname/IP]<br />
+<strong>Authentication:</strong> MFA (Multi-Factor Authentication)<br />
+<strong>Protocol:</strong> IPsec/IKEv2 or OpenVPN<br />
+<strong>Access:</strong> Only for authorized administrators<br />
+<strong>Logging:</strong> All VPN connections are logged</p>
+<p><strong>Reference:</strong> Document 0470 (VPN and Admin Access)</p>
+<h3 id="73-break-glass-access">7.3 Break-Glass Access</h3>
+<p><strong>Emergency Access:</strong> [TODO: Description]<br />
+<strong>Activation:</strong> Only in emergencies (documented)<br />
+<strong>Monitoring:</strong> Immediate notification upon use</p>
+<p><strong>Reference:</strong> BCM Document (Emergency Access)</p>
+<h2 id="8-network-monitoring">8. Network Monitoring</h2>
+<p><strong>Monitoring Tools:</strong>
+- <strong>SIEM:</strong> [TODO: e.g., Splunk, ELK]
+- <strong>Network Monitoring:</strong> [TODO: e.g., Nagios, Zabbix, PRTG]
+- <strong>Flow Analysis:</strong> [TODO: e.g., NetFlow, sFlow]</p>
+<p><strong>Monitored Metrics:</strong>
+- Bandwidth utilization
+- Firewall logs
+- Anomalies (e.g., port scans, DDoS)
+- VPN connections</p>
+<p><strong>Reference:</strong> Document 0300/0310 (Logging and Monitoring)</p>
+<h2 id="9-network-diagrams">9. Network Diagrams</h2>
+<p><strong>Available Diagrams:</strong>
+1. <strong>High-Level Network Plan:</strong> Overview of all zones and main connections
+2. <strong>Detailed Network Plan:</strong> All devices, VLANs, IP addresses
+3. <strong>Firewall Topology:</strong> All firewalls and trust boundaries
+4. <strong>WAN Topology:</strong> Site connectivity (if applicable)
+5. <strong>Cloud Integration:</strong> Connections to cloud providers (AWS, Azure, etc.)</p>
+<p><strong>Storage Location:</strong> <code>diagrams/</code> or [TODO: Confluence/SharePoint]</p>
+<h2 id="10-site-connectivity-wan">10. Site Connectivity (WAN)</h2>
+<p><strong>If applicable:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Site</th>
+<th>Connection Type</th>
+<th>Bandwidth</th>
+<th>Provider</th>
+<th>Backup Connection</th>
+<th>Encryption</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{{ netbox.site.name }}</td>
+<td>[TODO: e.g., MPLS, VPN]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="11-cloud-integration">11. Cloud Integration</h2>
+<p><strong>Cloud Providers:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Provider</th>
+<th>Service</th>
+<th>Connection Type</th>
+<th>Encryption</th>
+<th>Region</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AWS</td>
+<td>EC2, S3, RDS</td>
+<td>VPN (Site-to-Site)</td>
+<td>IPsec</td>
+<td>EU-West-1</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Azure</td>
+<td>[TODO]</td>
+<td>ExpressRoute</td>
+<td>[TODO]</td>
+<td>West Europe</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Reference:</strong> Document 0400/0410 (Suppliers and Cloud Security)</p>
+<h2 id="12-responsibilities-raci">12. Responsibilities (RACI)</h2>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>IT Management</th>
+<th>Network Admin</th>
+<th>CISO</th>
+<th>Firewall Admin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Maintain Network Plan</td>
+<td>A</td>
+<td>R</td>
+<td>I</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Change Firewall Rules</td>
+<td>A</td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+</tr>
+<tr>
+<td>VLAN Configuration</td>
+<td>A</td>
+<td>R</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Network Monitoring</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Annual Review</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legend:</strong>
+- <strong>R</strong> = Responsible (Execution responsibility)
+- <strong>A</strong> = Accountable (Overall responsibility)
+- <strong>C</strong> = Consulted
+- <strong>I</strong> = Informed</p>
+<h2 id="13-change-management">13. Change Management</h2>
+<p><strong>Changes to Network Architecture:</strong>
+- All changes require change ticket
+- Security-relevant changes require CISO approval
+- Network plan must be updated after changes</p>
+<p><strong>Reference:</strong> Document 0380/0390 (Change Management)</p>
+<h2 id="14-approval">14. Approval</h2>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Name</th>
+<th>Date</th>
+<th>Approval</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IT Management</td>
+<td>Anna Schmidt</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+<tr>
+<td>CISO</td>
+<td>Thomas Weber</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>References:</strong>
+- BSI IT-Grundschutz-Kompendium: NET.1.1 Network Architecture and Design
+- BSI IT-Grundschutz-Kompendium: NET.1.2 Network Management
+- BSI IT-Grundschutz-Kompendium: NET.3.2 Firewall
+- Document 0050: Structure Analysis
+- Document 0090: Risk Analysis
+- Document 0460/0470: Network Security</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0720_Appendix_Data_Flows_and_Interfaces_Template.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0740_Appendix_Terms_and_Abbreviations.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

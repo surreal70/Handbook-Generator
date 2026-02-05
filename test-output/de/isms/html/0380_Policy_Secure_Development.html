@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0380 - Policy: Secure Development</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0380</div>
+            <h1>Policy: Secure Development</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0370_Richtlinie_Change_Management_mit_Sicherheitsfreigaben.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0390_Richtlinie_Secure_SDLC_Coding_Review_und_Secrets.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="policy-secure-development">Policy: Secure Development</h1>
+<p><strong>Dokument-ID:</strong> 0380<br />
+<strong>Dokumenttyp:</strong> Policy (abstrakt)<br />
+<strong>Standard-Referenz:</strong> ISO/IEC 27001:2022 Annex A.8.25-A.8.28 (inkl. Amendment 1:2024)<br />
+<strong>Owner:</strong> Thomas Weber<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Freigegeben<br />
+<strong>Klassifizierung:</strong> Intern<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.date }}<br />
+<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-zweck">1. Zweck</h2>
+<p>Diese Policy definiert die Grundsätze für sichere Softwareentwicklung (Secure SDLC) der <strong>AdminSend GmbH</strong>. Sie stellt sicher, dass Sicherheit in alle Phasen des Software Development Lifecycle integriert wird und Anwendungen sicher entwickelt, getestet und betrieben werden.</p>
+<h2 id="2-geltungsbereich">2. Geltungsbereich</h2>
+<p>Diese Policy gilt für:</p>
+<ul>
+<li><strong>Organisationseinheiten:</strong> Alle Entwicklungsteams und Standorte der AdminSend GmbH</li>
+<li><strong>Anwendungen:</strong> Alle intern entwickelten Anwendungen, APIs, Microservices, Mobile Apps</li>
+<li><strong>Entwicklungsphasen:</strong> Requirements, Design, Implementation, Testing, Deployment, Maintenance</li>
+<li><strong>Entwicklungsmodelle:</strong> Agile, Waterfall, DevOps, DevSecOps</li>
+<li><strong>Standorte:</strong> {{ netbox.site.name }} und alle weiteren Entwicklungsstandorte</li>
+</ul>
+<p><strong>Ausnahmen:</strong> Ausnahmen sind nur über den definierten Ausnahmenprozess (<code>0640_Policy_Ausnahmen_und_Risk_Waivers.md</code>) zulässig.</p>
+<h2 id="3-grundsatze-policy-statements">3. Grundsätze (Policy Statements)</h2>
+<h3 id="31-security-by-design">3.1 Security by Design</h3>
+<p>Sicherheit wird von Anfang an in den Entwicklungsprozess integriert (Shift Left). Sicherheitsanforderungen werden in der Requirements-Phase definiert und im Design berücksichtigt.</p>
+<h3 id="32-secure-coding-standards">3.2 Secure Coding Standards</h3>
+<p>Entwickler folgen anerkannten Secure Coding Standards (OWASP, CERT, CWE). Code wird nach Best Practices entwickelt, um häufige Schwachstellen zu vermeiden.</p>
+<h3 id="33-code-reviews-und-peer-reviews">3.3 Code Reviews und Peer Reviews</h3>
+<p>Alle Code-Änderungen durchlaufen Code Reviews. Sicherheitsrelevanter Code erfordert zusätzliche Security Reviews durch das Security Team.</p>
+<h3 id="34-automatisierte-security-testing">3.4 Automatisierte Security Testing</h3>
+<p>Security Testing ist in die CI/CD-Pipeline integriert:
+- <strong>SAST (Static Application Security Testing):</strong> Statische Code-Analyse
+- <strong>DAST (Dynamic Application Security Testing):</strong> Dynamische Sicherheitstests
+- <strong>SCA (Software Composition Analysis):</strong> Analyse von Abhängigkeiten und Open-Source-Komponenten
+- <strong>Container Scanning:</strong> Sicherheitsprüfung von Container-Images</p>
+<h3 id="35-secrets-management">3.5 Secrets Management</h3>
+<p>Secrets (Passwörter, API-Keys, Zertifikate) werden niemals im Code oder in Repositories gespeichert. Secrets werden in dedizierten Secrets Management Systemen verwaltet.</p>
+<h3 id="36-dependency-management">3.6 Dependency Management</h3>
+<p>Externe Bibliotheken und Abhängigkeiten werden auf bekannte Schwachstellen überprüft. Veraltete oder unsichere Abhängigkeiten werden zeitnah aktualisiert.</p>
+<h3 id="37-security-testing-vor-produktionsfreigabe">3.7 Security Testing vor Produktionsfreigabe</h3>
+<p>Vor der Produktionsfreigabe werden umfassende Sicherheitstests durchgeführt:
+- Penetration Testing für kritische Anwendungen
+- Security Acceptance Testing
+- Vulnerability Assessment</p>
+<h3 id="38-secure-deployment-und-configuration">3.8 Secure Deployment und Configuration</h3>
+<p>Anwendungen werden mit sicheren Konfigurationen deployed. Default-Credentials werden geändert, unnötige Features deaktiviert, Hardening-Maßnahmen angewendet.</p>
+<h2 id="4-rollen-und-verantwortlichkeiten">4. Rollen und Verantwortlichkeiten</h2>
+<h3 id="raci-matrix-secure-development">RACI-Matrix: Secure Development</h3>
+<table>
+<thead>
+<tr>
+<th>Aktivität</th>
+<th>CISO</th>
+<th>Security Champion</th>
+<th>Entwickler</th>
+<th>DevOps</th>
+<th>Security Team</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Policy-Erstellung</td>
+<td>R/A</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Security Requirements</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+<td>R/A</td>
+</tr>
+<tr>
+<td>Secure Coding</td>
+<td>I</td>
+<td>C</td>
+<td>R/A</td>
+<td>I</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Code Review</td>
+<td>I</td>
+<td>R</td>
+<td>R</td>
+<td>I</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Security Review</td>
+<td>A</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+<td>R</td>
+</tr>
+<tr>
+<td>SAST/DAST/SCA</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+<td>R</td>
+<td>R/A</td>
+</tr>
+<tr>
+<td>Penetration Testing</td>
+<td>A</td>
+<td>I</td>
+<td>I</td>
+<td>I</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Security Training</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>R</td>
+<td>R</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legende:</strong> R = Responsible (Durchführung), A = Accountable (Verantwortlich), C = Consulted (Konsultiert), I = Informed (Informiert)</p>
+<h3 id="schlusselrollen">Schlüsselrollen</h3>
+<ul>
+<li><strong>Policy Owner:</strong> Thomas Weber (CISO)</li>
+<li><strong>Security Champion:</strong> Entwickler mit Security-Expertise in jedem Team</li>
+<li><strong>Application Security Lead:</strong> {{ meta.security.appsec_lead }}</li>
+<li><strong>Umsetzungsverantwortliche:</strong> Entwickler, DevOps, Security Team</li>
+<li><strong>Kontroll-/Prüfinstanz:</strong> ISMS, Internal Audit</li>
+</ul>
+<h2 id="5-ableitungen-richtlinienstandardsprozesse">5. Ableitungen (Richtlinien/Standards/Prozesse)</h2>
+<p>Details zur Umsetzung werden in nachgelagerten Dokumenten geregelt:</p>
+<h3 id="zugehorige-richtlinien">Zugehörige Richtlinien</h3>
+<ul>
+<li><strong>0390_Richtlinie_Secure_SDLC_Coding_Review_und_Secrets.md</strong> - Detaillierte Implementierungsrichtlinie</li>
+<li><code>0360_Policy_Change_und_Release_Management.md</code> - Change Management Policy</li>
+<li><code>0340_Policy_Vulnerability_und_Patch_Management.md</code> - Vulnerability Management Policy</li>
+<li><code>0260_Policy_Kryptografie_und_Schluesselmanagement.md</code> - Cryptography Policy</li>
+</ul>
+<h3 id="zugehorige-standardsbaselines">Zugehörige Standards/Baselines</h3>
+<ul>
+<li>Secure Coding Standards (OWASP, CERT)</li>
+<li>Code Review Checklists</li>
+<li>SAST/DAST/SCA Tool-Konfigurationen</li>
+<li>Secrets Management Standards</li>
+</ul>
+<h3 id="zugehorige-prozesse">Zugehörige Prozesse</h3>
+<ul>
+<li>Secure SDLC Prozess</li>
+<li>Code Review Prozess</li>
+<li>Security Testing Prozess</li>
+<li>Vulnerability Disclosure Prozess</li>
+</ul>
+<h2 id="6-compliance-monitoring-und-durchsetzung">6. Compliance, Monitoring und Durchsetzung</h2>
+<h3 id="messgroen-und-kpis">Messgrößen und KPIs</h3>
+<ul>
+<li>Anzahl Sicherheitsschwachstellen pro Release (Ziel: Reduktion um 50% jährlich)</li>
+<li>Code Review Coverage (Ziel: 100%)</li>
+<li>SAST/DAST/SCA Coverage (Ziel: 100% kritischer Anwendungen)</li>
+<li>Durchschnittliche Zeit zur Behebung von Schwachstellen (MTTR)</li>
+<li>Anzahl Secrets im Code (Ziel: 0)</li>
+<li>Security Training Completion Rate (Ziel: 100% jährlich)</li>
+</ul>
+<h3 id="nachweise-und-evidence">Nachweise und Evidence</h3>
+<ul>
+<li>Code Review Dokumentation</li>
+<li>SAST/DAST/SCA Reports</li>
+<li>Penetration Test Reports</li>
+<li>Security Acceptance Test Results</li>
+<li>Secrets Scanning Reports</li>
+<li>Security Training Nachweise</li>
+</ul>
+<h3 id="konsequenzen-bei-verstoen">Konsequenzen bei Verstößen</h3>
+<p>Verstöße gegen diese Policy werden nach den geltenden HR- und Compliance-Prozessen behandelt:
+- <strong>Secrets im Code:</strong> Sofortige Rotation, Incident Response, Nachschulung
+- <strong>Übersprungene Code Reviews:</strong> Rollback, Nachholung, Verwarnung
+- <strong>Ignorierte Security Findings:</strong> Remediation, Nachschulung
+- <strong>Wiederholte Verstöße:</strong> Arbeitsrechtliche Konsequenzen</p>
+<h2 id="7-ausnahmen">7. Ausnahmen</h2>
+<p>Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:</p>
+<ul>
+<li><strong>Ausnahmenprozess:</strong> Siehe <code>0640_Policy_Ausnahmen_und_Risk_Waivers.md</code></li>
+<li><strong>Genehmigung:</strong> Ausnahmen müssen vom CISO und Application Security Lead genehmigt werden</li>
+<li><strong>Dokumentation:</strong> Alle Ausnahmen werden im Risikoregister dokumentiert</li>
+<li><strong>Befristung:</strong> Ausnahmen sind grundsätzlich zeitlich befristet</li>
+<li><strong>Kompensationsmaßnahmen:</strong> Ausnahmen erfordern alternative Sicherheitsmaßnahmen</li>
+</ul>
+<h2 id="8-referenzen">8. Referenzen</h2>
+<h3 id="interne-dokumente">Interne Dokumente</h3>
+<ul>
+<li><code>0010_ISMS_Informationssicherheitsleitlinie.md</code> - ISMS Policy</li>
+<li><code>0390_Richtlinie_Secure_SDLC_Coding_Review_und_Secrets.md</code> - Detailed Guideline</li>
+<li><code>0360_Policy_Change_und_Release_Management.md</code> - Change Management Policy</li>
+<li><code>0080_ISMS_Risikoregister_Template.md</code> - Risk Register</li>
+</ul>
+<h3 id="externe-standards-und-vorgaben">Externe Standards und Vorgaben</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.8.25</strong> - Secure development lifecycle</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.8.26</strong> - Application security requirements</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.8.27</strong> - Secure system architecture and engineering principles</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.8.28</strong> - Secure coding</li>
+<li><strong>OWASP Top 10</strong> - Web Application Security Risks</li>
+<li><strong>OWASP ASVS</strong> - Application Security Verification Standard</li>
+<li><strong>NIST SP 800-218</strong> - Secure Software Development Framework (SSDF)</li>
+<li><strong>CWE Top 25</strong> - Most Dangerous Software Weaknesses</li>
+</ul>
+<hr />
+<p><strong>Genehmigt durch:</strong><br />
+{{ meta.management.ceo }}, Geschäftsführung<br />
+Datum: {{ meta.document.approval_date }}</p>
+<p><strong>Nächster Review:</strong> {{ meta.document.next_review }} (jährlich oder anlassbezogen)</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0370_Richtlinie_Change_Management_mit_Sicherheitsfreigaben.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0390_Richtlinie_Secure_SDLC_Coding_Review_und_Secrets.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

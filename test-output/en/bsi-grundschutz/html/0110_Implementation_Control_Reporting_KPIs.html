@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0110 - Implementation Control, Reporting and KPIs</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0110</div>
+            <h1>Implementation Control, Reporting and KPIs</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0100_Security_Concept_and_Action_Plan.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0200_Policy_Access_Control_and_Permissions.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="implementation-control-reporting-and-kpis">Implementation Control, Reporting and KPIs</h1>
+<p><strong>Document ID:</strong> 0110<br />
+<strong>Document Type:</strong> Control Document<br />
+<strong>Reference Framework:</strong> BSI IT-Grundschutz (BSI Standards 200-1/200-2)<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> {{ meta.document.status }}<br />
+<strong>Classification:</strong> internal<br />
+<strong>Last Updated:</strong> {{ meta.document.last_updated }}<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-control-model">1. Control Model</h2>
+<h3 id="11-governance-structure">1.1 Governance Structure</h3>
+<p><strong>ISMS control operates on three levels:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Committee</th>
+<th>Frequency</th>
+<th>Participants</th>
+<th>Focus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Strategic</strong></td>
+<td>Management Review</td>
+<td>Annually</td>
+<td>Executive Management, ISB, IT Management</td>
+<td>Strategic direction, resources</td>
+</tr>
+<tr>
+<td><strong>Tactical</strong></td>
+<td>ISMS Team Meeting</td>
+<td>Monthly</td>
+<td>ISB, IT Management, Information Domain Responsible</td>
+<td>Measure planning, risks</td>
+</tr>
+<tr>
+<td><strong>Operational</strong></td>
+<td>Measure Status Update</td>
+<td>Weekly</td>
+<td>ISB, IT Management, Measure Owners</td>
+<td>Implementation progress</td>
+</tr>
+</tbody>
+</table>
+<h3 id="12-regular-meetings">1.2 Regular Meetings</h3>
+<p><strong>Weekly - Measure Status Update:</strong>
+- <strong>Schedule:</strong> [TODO: e.g., Monday 10:00]
+- <strong>Duration:</strong> 30 minutes
+- <strong>Participants:</strong> ISB, IT Management, current measure owners
+- <strong>Agenda:</strong> Status of ongoing measures, blockers, escalations</p>
+<p><strong>Monthly - ISMS Team Meeting:</strong>
+- <strong>Schedule:</strong> [TODO: e.g., first Thursday of month, 14:00]
+- <strong>Duration:</strong> 2 hours
+- <strong>Participants:</strong> ISMS Team (see Document 0020)
+- <strong>Agenda:</strong> 
+  - KPI review
+  - Measure progress
+  - New risks and incidents
+  - Compliance updates
+  - Decisions and escalations</p>
+<p><strong>Quarterly - Management Review:</strong>
+- <strong>Schedule:</strong> [TODO: e.g., last Friday of quarter]
+- <strong>Duration:</strong> 1 hour
+- <strong>Participants:</strong> Executive Management, ISB, IT Management
+- <strong>Agenda:</strong>
+  - ISMS performance (KPIs)
+  - Measure implementation
+  - Risk dashboard
+  - Budget and resources
+  - Strategic decisions</p>
+<p><strong>Annually - Management Review (comprehensive):</strong>
+- <strong>Schedule:</strong> [TODO: e.g., Q4]
+- <strong>Duration:</strong> Half day
+- <strong>Participants:</strong> Executive Management, ISB, IT Management, ISMS Team
+- <strong>Agenda:</strong> See Document 0140 (Management Review Template)</p>
+<h3 id="13-reporting-channels">1.3 Reporting Channels</h3>
+<table>
+<thead>
+<tr>
+<th>Report</th>
+<th>Frequency</th>
+<th>Creator</th>
+<th>Recipient</th>
+<th>Tool/Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Measure Status</td>
+<td>Weekly</td>
+<td>ISB</td>
+<td>IT Management</td>
+<td>[TODO: Ticketing system]</td>
+</tr>
+<tr>
+<td>ISMS Status Report</td>
+<td>Monthly</td>
+<td>ISB</td>
+<td>Executive Management, ISMS Team</td>
+<td>[TODO: Dashboard/PDF]</td>
+</tr>
+<tr>
+<td>Security Incidents</td>
+<td>Monthly</td>
+<td>ISB</td>
+<td>Executive Management</td>
+<td>[TODO: Incident tool]</td>
+</tr>
+<tr>
+<td>Risk Dashboard</td>
+<td>Quarterly</td>
+<td>ISB</td>
+<td>Executive Management</td>
+<td>[TODO: GRC tool]</td>
+</tr>
+<tr>
+<td>Management Review</td>
+<td>Annually</td>
+<td>ISB</td>
+<td>Executive Management</td>
+<td>Presentation</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-key-performance-indicators-kpis">2. Key Performance Indicators (KPIs)</h2>
+<h3 id="21-measure-implementation">2.1 Measure Implementation</h3>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th>Definition</th>
+<th>Target</th>
+<th>Source</th>
+<th>Frequency</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Action Plan Fulfillment</strong></td>
+<td>% completed measures vs. planned</td>
+<td>100%</td>
+<td>Action Plan (Document 0100)</td>
+<td>Monthly</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td><strong>P1 Measure Fulfillment</strong></td>
+<td>% completed P1 measures</td>
+<td>100% in [TODO] months</td>
+<td>Action Plan</td>
+<td>Weekly</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td><strong>Measure Delay</strong></td>
+<td>Average delay in days</td>
+<td>&lt; 14 days</td>
+<td>Action Plan</td>
+<td>Monthly</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td><strong>Budget Compliance</strong></td>
+<td>% used budget vs. planned</td>
+<td>100% ± 10%</td>
+<td>Financial Controlling</td>
+<td>Monthly</td>
+<td>Max Mustermann</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-it-grundschutz-compliance">2.2 IT-Grundschutz Compliance</h3>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th>Definition</th>
+<th>Target</th>
+<th>Source</th>
+<th>Frequency</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>IT-Grundschutz Fulfillment Rate</strong></td>
+<td>% fulfilled requirements</td>
+<td>&gt; 80%</td>
+<td>Basic Security Check (Document 0080)</td>
+<td>Quarterly</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td><strong>Critical Gaps</strong></td>
+<td>Number of unfulfilled P1 requirements</td>
+<td>0</td>
+<td>Basic Security Check</td>
+<td>Monthly</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td><strong>Module Coverage</strong></td>
+<td>% modeled modules with target-actual comparison</td>
+<td>100%</td>
+<td>Modeling (Document 0070)</td>
+<td>Quarterly</td>
+<td>Thomas Weber</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-risk-management">2.3 Risk Management</h3>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th>Definition</th>
+<th>Target</th>
+<th>Source</th>
+<th>Frequency</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Risk Exposure</strong></td>
+<td>Number of "Very High" risks</td>
+<td>0</td>
+<td>Risk Register (Document 0090)</td>
+<td>Monthly</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td><strong>Risk Reduction</strong></td>
+<td>% reduced risks vs. identified</td>
+<td>&gt; 80%</td>
+<td>Risk Register</td>
+<td>Quarterly</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td><strong>Risk Acceptance Rate</strong></td>
+<td>% accepted risks (without measures)</td>
+<td>&lt; 10%</td>
+<td>Risk Register</td>
+<td>Quarterly</td>
+<td>Thomas Weber</td>
+</tr>
+</tbody>
+</table>
+<h3 id="24-patch-and-vulnerability-management">2.4 Patch and Vulnerability Management</h3>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th>Definition</th>
+<th>Target</th>
+<th>Source</th>
+<th>Frequency</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Patch Compliance</strong></td>
+<td>% systems with current patches</td>
+<td>&gt; 95%</td>
+<td>Patch Management Tool</td>
+<td>Monthly</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td><strong>Critical Patches (SLA)</strong></td>
+<td>% critical patches within SLA (7 days)</td>
+<td>100%</td>
+<td>Patch Management Tool</td>
+<td>Weekly</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td><strong>Vulnerability Remediation</strong></td>
+<td>Average time to remediation (days)</td>
+<td>&lt; 30 days (High), &lt; 90 days (Medium)</td>
+<td>Vulnerability Scanner</td>
+<td>Monthly</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td><strong>Open Vulnerabilities</strong></td>
+<td>Number of open vulnerabilities (Critical/High)</td>
+<td>&lt; 10</td>
+<td>Vulnerability Scanner</td>
+<td>Weekly</td>
+<td>Anna Schmidt</td>
+</tr>
+</tbody>
+</table>
+<h3 id="25-backup-and-recovery">2.5 Backup and Recovery</h3>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th>Definition</th>
+<th>Target</th>
+<th>Source</th>
+<th>Frequency</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Backup Success Rate</strong></td>
+<td>% successful backups</td>
+<td>&gt; 99%</td>
+<td>Backup System</td>
+<td>Daily</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td><strong>Backup Test Rate</strong></td>
+<td>% successful restore tests</td>
+<td>100%</td>
+<td>Test Protocols</td>
+<td>Quarterly</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td><strong>Recovery Time Actual (RTA)</strong></td>
+<td>Actual recovery time</td>
+<td>&lt; RTO</td>
+<td>Test Protocols</td>
+<td>Quarterly</td>
+<td>Anna Schmidt</td>
+</tr>
+</tbody>
+</table>
+<h3 id="26-incident-management">2.6 Incident Management</h3>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th>Definition</th>
+<th>Target</th>
+<th>Source</th>
+<th>Frequency</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Security Incidents</strong></td>
+<td>Number of security incidents</td>
+<td>Decreasing trend</td>
+<td>Incident Management System</td>
+<td>Monthly</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td><strong>Mean Time to Detect (MTTD)</strong></td>
+<td>Average detection time</td>
+<td>&lt; 24 hours</td>
+<td>SIEM</td>
+<td>Monthly</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td><strong>Mean Time to Respond (MTTR)</strong></td>
+<td>Average response time</td>
+<td>&lt; 4 hours (Critical)</td>
+<td>Incident Management System</td>
+<td>Monthly</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td><strong>Incident Closure Rate</strong></td>
+<td>% closed incidents within SLA</td>
+<td>&gt; 95%</td>
+<td>Incident Management System</td>
+<td>Monthly</td>
+<td>Thomas Weber</td>
+</tr>
+</tbody>
+</table>
+<h3 id="27-awareness-and-training">2.7 Awareness and Training</h3>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th>Definition</th>
+<th>Target</th>
+<th>Source</th>
+<th>Frequency</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Training Rate</strong></td>
+<td>% employees with awareness training</td>
+<td>100%</td>
+<td>HR System</td>
+<td>Quarterly</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td><strong>Phishing Test Success Rate</strong></td>
+<td>% employees passing phishing test</td>
+<td>&gt; 90%</td>
+<td>Phishing Simulation</td>
+<td>Quarterly</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td><strong>Security Champion Rate</strong></td>
+<td>Number of security champions per department</td>
+<td>Min. 1 per department</td>
+<td>ISMS Team</td>
+<td>Annually</td>
+<td>Thomas Weber</td>
+</tr>
+</tbody>
+</table>
+<h3 id="28-access-management">2.8 Access Management</h3>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th>Definition</th>
+<th>Target</th>
+<th>Source</th>
+<th>Frequency</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Privileged Account Compliance</strong></td>
+<td>% privileged accounts with MFA</td>
+<td>100%</td>
+<td>IAM System</td>
+<td>Monthly</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td><strong>Access Review Compliance</strong></td>
+<td>% completed access recertifications</td>
+<td>100%</td>
+<td>IAM System</td>
+<td>Quarterly</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td><strong>Orphaned Accounts</strong></td>
+<td>Number of orphaned accounts</td>
+<td>0</td>
+<td>IAM System</td>
+<td>Monthly</td>
+<td>Anna Schmidt</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-kpi-dashboard">3. KPI Dashboard</h2>
+<h3 id="31-traffic-light-status">3.1 Traffic Light Status</h3>
+<table>
+<thead>
+<tr>
+<th>KPI Category</th>
+<th>Current Value</th>
+<th>Target</th>
+<th>Status</th>
+<th>Trend</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Measure Implementation</td>
+<td>[TODO: %]</td>
+<td>100%</td>
+<td>🟢/🟡/🔴</td>
+<td>↗/→/↘</td>
+</tr>
+<tr>
+<td>IT-Grundschutz Compliance</td>
+<td>[TODO: %]</td>
+<td>&gt; 80%</td>
+<td>🟢/🟡/🔴</td>
+<td>↗/→/↘</td>
+</tr>
+<tr>
+<td>Risk Management</td>
+<td>[TODO]</td>
+<td>0 "Very High"</td>
+<td>🟢/🟡/🔴</td>
+<td>↗/→/↘</td>
+</tr>
+<tr>
+<td>Patch Compliance</td>
+<td>[TODO: %]</td>
+<td>&gt; 95%</td>
+<td>🟢/🟡/🔴</td>
+<td>↗/→/↘</td>
+</tr>
+<tr>
+<td>Backup Success Rate</td>
+<td>[TODO: %]</td>
+<td>&gt; 99%</td>
+<td>🟢/🟡/🔴</td>
+<td>↗/→/↘</td>
+</tr>
+<tr>
+<td>Security Incidents</td>
+<td>[TODO]</td>
+<td>Trend ↘</td>
+<td>🟢/🟡/🔴</td>
+<td>↗/→/↘</td>
+</tr>
+<tr>
+<td>Awareness Training</td>
+<td>[TODO: %]</td>
+<td>100%</td>
+<td>🟢/🟡/🔴</td>
+<td>↗/→/↘</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Traffic Light Logic:</strong>
+- 🟢 <strong>Green:</strong> Target achieved or exceeded
+- 🟡 <strong>Yellow:</strong> Target not achieved, but acceptable (&lt; 10% deviation)
+- 🔴 <strong>Red:</strong> Target significantly missed (&gt; 10% deviation), escalation required</p>
+<h3 id="32-trend-analysis">3.2 Trend Analysis</h3>
+<p>[TODO: Insert diagrams and trend visualizations]</p>
+<h2 id="4-escalation-rules">4. Escalation Rules</h2>
+<h3 id="41-escalation-levels">4.1 Escalation Levels</h3>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Trigger</th>
+<th>Escalate to</th>
+<th>Response Time</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Level 1</strong></td>
+<td>KPI 🟡 for 1 month</td>
+<td>IT Management</td>
+<td>1 week</td>
+<td>Root cause analysis, corrective actions</td>
+</tr>
+<tr>
+<td><strong>Level 2</strong></td>
+<td>KPI 🔴 or 🟡 for 2 months</td>
+<td>ISB</td>
+<td>3 days</td>
+<td>Escalation meeting, review resources</td>
+</tr>
+<tr>
+<td><strong>Level 3</strong></td>
+<td>KPI 🔴 for 1 month</td>
+<td>Executive Management</td>
+<td>Immediate</td>
+<td>Management decision, release resources</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-escalation-process">4.2 Escalation Process</h3>
+<ol>
+<li><strong>Identification:</strong> KPI deviation detected</li>
+<li><strong>Analysis:</strong> Root cause analysis by owner</li>
+<li><strong>Escalation:</strong> Escalation according to level</li>
+<li><strong>Actions:</strong> Define and implement corrective actions</li>
+<li><strong>Monitoring:</strong> Close monitoring until target achievement</li>
+<li><strong>Lessons Learned:</strong> Documentation and process improvement</li>
+</ol>
+<h2 id="5-reporting-templates">5. Reporting Templates</h2>
+<h3 id="51-monthly-isms-status-report">5.1 Monthly ISMS Status Report</h3>
+<p><strong>Report Structure:</strong>
+1. <strong>Executive Summary:</strong> Overall status (1 page)
+2. <strong>KPI Dashboard:</strong> Traffic light status and trends
+3. <strong>Measure Progress:</strong> Top 10 measures
+4. <strong>Security Incidents:</strong> Summary
+5. <strong>Risks:</strong> Top 5 risks
+6. <strong>Escalations:</strong> Open escalations
+7. <strong>Next Steps:</strong> Planned activities</p>
+<h3 id="52-quarterly-risk-dashboard">5.2 Quarterly Risk Dashboard</h3>
+<p><strong>Report Structure:</strong>
+1. <strong>Risk Heatmap:</strong> Visualization of all risks
+2. <strong>Top 10 Risks:</strong> Detailed description
+3. <strong>Risk Reduction:</strong> Progress since last quarter
+4. <strong>New Risks:</strong> Identified new risks
+5. <strong>Risk Acceptance:</strong> Accepted risks with justification</p>
+<h3 id="53-annual-management-review">5.3 Annual Management Review</h3>
+<p><strong>Report Structure:</strong> See Document 0140 (Management Review Template)</p>
+<h2 id="6-continuous-improvement">6. Continuous Improvement</h2>
+<h3 id="61-improvement-process">6.1 Improvement Process</h3>
+<p><strong>PDCA Cycle:</strong>
+1. <strong>Plan:</strong> Define objectives and KPIs
+2. <strong>Do:</strong> Implement measures
+3. <strong>Check:</strong> Measure and evaluate KPIs
+4. <strong>Act:</strong> Derive improvement actions</p>
+<h3 id="62-lessons-learned">6.2 Lessons Learned</h3>
+<p>After each major incident or project:
+1. <strong>Retrospective:</strong> What went well? What didn't?
+2. <strong>Root Cause Analysis:</strong> Identify causes
+3. <strong>Improvement Actions:</strong> Define concrete actions
+4. <strong>Documentation:</strong> Document lessons learned
+5. <strong>Communication:</strong> Share insights</p>
+<h2 id="7-tools-and-systems">7. Tools and Systems</h2>
+<table>
+<thead>
+<tr>
+<th>Tool/System</th>
+<th>Purpose</th>
+<th>Owner</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: GRC Tool]</td>
+<td>Risk management, compliance</td>
+<td>Thomas Weber</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: Ticketing System]</td>
+<td>Measure tracking</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: SIEM]</td>
+<td>Security monitoring</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: Vulnerability Scanner]</td>
+<td>Vulnerability management</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: Dashboard Tool]</td>
+<td>KPI visualization</td>
+<td>Thomas Weber</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="8-approval">8. Approval</h2>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Name</th>
+<th>Date</th>
+<th>Approval</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ISB</td>
+<td>Thomas Weber</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+<tr>
+<td>IT Management</td>
+<td>Anna Schmidt</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+<tr>
+<td>Executive Management</td>
+<td>Max Mustermann</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>References:</strong>
+- BSI Standard 200-1: Management Systems for Information Security (ISMS)
+- BSI Standard 200-2: IT-Grundschutz Methodology</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0100_Security_Concept_and_Action_Plan.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0200_Policy_Access_Control_and_Permissions.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

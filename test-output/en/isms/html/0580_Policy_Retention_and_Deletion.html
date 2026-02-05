@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0580 - Policy: Retention and Deletion</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0580</div>
+            <h1>Policy: Retention and Deletion</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0570_Guideline_Data_Protection_Requirements_and_Data_Processing.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0590_Guideline_Records_Retention_and_Secure_Deletion.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="policy-retention-and-deletion">Policy: Retention and Deletion</h1>
+<p><strong>Document ID:</strong> 0580<br />
+<strong>Document Type:</strong> Policy (abstract)<br />
+<strong>Standard Reference:</strong> ISO/IEC 27001:2022 Annex A.5.33, A.5.34, A.8.10 (incl. Amendment 1:2024)<br />
+<strong>Owner:</strong> Thomas Weber<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Approved<br />
+<strong>Classification:</strong> Internal<br />
+<strong>Last Updated:</strong> {{ meta.document.date }}<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This policy defines the requirements for retention and deletion of information and data at <strong>AdminSend GmbH</strong>. It ensures compliance with legal retention obligations and adherence to data protection principles (data minimization, storage limitation).</p>
+<h2 id="2-scope">2. Scope</h2>
+<p>This policy applies to:</p>
+<ul>
+<li><strong>Organizational Units:</strong> All departments and locations of AdminSend GmbH</li>
+<li><strong>Data:</strong> All information and data (structured and unstructured)</li>
+<li><strong>Systems:</strong> All IT systems, databases, backup systems, archives</li>
+<li><strong>Media:</strong> Digital and physical media</li>
+<li><strong>Locations:</strong> {{ netbox.site.name }} and all other operational sites</li>
+</ul>
+<p><strong>Exceptions:</strong> Exceptions are only permitted through the defined exception process (<code>0640_Policy_Exceptions_and_Risk_Waivers.md</code>).</p>
+<h2 id="3-principles-policy-statements">3. Principles (Policy Statements)</h2>
+<h3 id="31-retention-periods">3.1 Retention Periods</h3>
+<p>Retention periods are defined for all information. Retention periods are based on legal, regulatory, and business requirements.</p>
+<h3 id="32-retention-schedule">3.2 Retention Schedule</h3>
+<p>A retention schedule is created and maintained. The retention schedule defines for each information category:
+- Retention period
+- Legal basis
+- Deletion procedure
+- Responsible role</p>
+<h3 id="33-data-minimization-and-storage-limitation">3.3 Data Minimization and Storage Limitation</h3>
+<p>Data is retained only as long as necessary (GDPR Art. 5(1)(e)). After expiration of the retention period, data is deleted or anonymized.</p>
+<h3 id="34-secure-deletion">3.4 Secure Deletion</h3>
+<p>Data is securely and irrevocably deleted. Deletion procedures ensure that data cannot be recovered.</p>
+<h3 id="35-deletion-concept">3.5 Deletion Concept</h3>
+<p>A deletion concept defines:
+- Deletion procedures for different media
+- Deletion periods and triggers
+- Responsibilities
+- Evidence documentation</p>
+<h3 id="36-backup-retention">3.6 Backup Retention</h3>
+<p>Backups are subject to the same retention periods as production data. Backups are deleted after expiration of the retention period.</p>
+<h3 id="37-legal-hold">3.7 Legal Hold</h3>
+<p>For legal proceedings or investigations, data may be exempted from deletion (Legal Hold). Legal Hold is documented and monitored.</p>
+<h3 id="38-physical-media">3.8 Physical Media</h3>
+<p>Physical media (hard drives, USB drives, paper) are securely disposed of:
+- Digital media: Secure deletion or physical destruction
+- Paper: Shredding or certified disposal</p>
+<h2 id="4-roles-and-responsibilities">4. Roles and Responsibilities</h2>
+<h3 id="raci-matrix-retention-and-deletion">RACI Matrix: Retention and Deletion</h3>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>CISO</th>
+<th>DPO</th>
+<th>IT Operations</th>
+<th>Business Owner</th>
+<th>Records Manager</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Policy Creation</td>
+<td>R/A</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Retention Schedule</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+<td>R/A</td>
+</tr>
+<tr>
+<td>Deletion Concept</td>
+<td>R/A</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Deletion Execution</td>
+<td>I</td>
+<td>I</td>
+<td>R/A</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Legal Hold</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+<td>C</td>
+<td>R/A</td>
+</tr>
+<tr>
+<td>Backup Deletion</td>
+<td>C</td>
+<td>I</td>
+<td>R/A</td>
+<td>I</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Physical Disposal</td>
+<td>C</td>
+<td>I</td>
+<td>R/A</td>
+<td>I</td>
+<td>C</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legend:</strong> R = Responsible (Execution), A = Accountable (Ownership), C = Consulted, I = Informed</p>
+<h3 id="key-roles">Key Roles</h3>
+<ul>
+<li><strong>Policy Owner:</strong> Thomas Weber (CISO)</li>
+<li><strong>Records Manager:</strong> {{ meta.records.manager }}</li>
+<li><strong>Data Protection Officer:</strong> {{ meta.dpo.name }}</li>
+<li><strong>Implementation Responsible:</strong> IT Operations, Business Owner</li>
+<li><strong>Control/Audit Function:</strong> ISMS, Internal Audit, Legal</li>
+</ul>
+<h2 id="5-derivatives-guidelinesstandardsprocesses">5. Derivatives (Guidelines/Standards/Processes)</h2>
+<p>Implementation details are defined in subordinate documents:</p>
+<h3 id="associated-guidelines">Associated Guidelines</h3>
+<ul>
+<li><strong>0590_Guideline_Records_Retention_and_Secure_Deletion.md</strong> - Detailed implementation guideline</li>
+<li><code>0280_Policy_Data_Classification_and_Information_Handling.md</code> - Data Classification Policy</li>
+<li><code>0560_Policy_Data_Protection_Interfaces.md</code> - Privacy Policy</li>
+<li><code>0420_Policy_Backup_and_Recovery.md</code> - Backup Policy</li>
+</ul>
+<h3 id="associated-standardsbaselines">Associated Standards/Baselines</h3>
+<ul>
+<li>Retention schedule</li>
+<li>Deletion concept</li>
+<li>Secure deletion procedures (NIST SP 800-88, BSI TL-03423)</li>
+<li>Legal Hold process</li>
+</ul>
+<h3 id="associated-processes">Associated Processes</h3>
+<ul>
+<li>Retention management process</li>
+<li>Deletion process (automated and manual)</li>
+<li>Legal Hold process</li>
+<li>Physical disposal process</li>
+</ul>
+<h2 id="6-compliance-monitoring-and-enforcement">6. Compliance, Monitoring and Enforcement</h2>
+<h3 id="metrics-and-kpis">Metrics and KPIs</h3>
+<ul>
+<li>Retention schedule coverage (Target: 100% of information categories)</li>
+<li>Number of deletions performed (planned vs. performed)</li>
+<li>Average time to deletion after expiration (Target: &lt; 30 days)</li>
+<li>Number of legal holds and duration</li>
+<li>Backup deletion compliance (Target: 100%)</li>
+<li>Number of securely disposed physical media</li>
+</ul>
+<h3 id="evidence-and-proof">Evidence and Proof</h3>
+<ul>
+<li>Retention schedule</li>
+<li>Deletion logs and evidence</li>
+<li>Legal Hold documentation</li>
+<li>Backup deletion logs</li>
+<li>Disposal certificates</li>
+<li>Audit logs for deletions</li>
+</ul>
+<h3 id="consequences-of-violations">Consequences of Violations</h3>
+<p>Violations of this policy are handled according to applicable HR and compliance processes:
+- <strong>Non-deleted Data:</strong> Completion, compliance investigation
+- <strong>Missing Retention Schedule:</strong> Creation, risk assessment
+- <strong>Insecure Deletion:</strong> Incident response, risk assessment
+- <strong>Repeated Violations:</strong> Employment consequences, fines</p>
+<h2 id="7-exceptions">7. Exceptions</h2>
+<p>Exceptions to this policy are only permitted in justified exceptional cases:</p>
+<ul>
+<li><strong>Exception Process:</strong> See <code>0640_Policy_Exceptions_and_Risk_Waivers.md</code></li>
+<li><strong>Approval:</strong> Exceptions must be approved by CISO and DPO</li>
+<li><strong>Documentation:</strong> All exceptions are documented in the risk register</li>
+<li><strong>Time Limitation:</strong> Exceptions are generally time-limited</li>
+</ul>
+<h2 id="8-references">8. References</h2>
+<h3 id="internal-documents">Internal Documents</h3>
+<ul>
+<li><code>0010_ISMS_Information_Security_Policy.md</code> - ISMS Policy</li>
+<li><code>0590_Guideline_Records_Retention_and_Secure_Deletion.md</code> - Detailed Guideline</li>
+<li><code>0280_Policy_Data_Classification_and_Information_Handling.md</code> - Data Classification Policy</li>
+<li><code>0080_ISMS_Risk_Register_Template.md</code> - Risk Register</li>
+</ul>
+<h3 id="external-standards-and-requirements">External Standards and Requirements</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.33</strong> - Protection of records</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.34</strong> - Privacy and protection of PII</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.8.10</strong> - Information deletion</li>
+<li><strong>GDPR Art. 5(1)(e)</strong> - Storage limitation</li>
+<li><strong>GDPR Art. 17</strong> - Right to erasure</li>
+<li><strong>NIST SP 800-88</strong> - Guidelines for Media Sanitization</li>
+<li><strong>BSI TL-03423</strong> - Guide to Deletion and Destruction</li>
+</ul>
+<hr />
+<p><strong>Approved by:</strong><br />
+{{ meta.management.ceo }}, Management<br />
+Date: {{ meta.document.approval_date }}</p>
+<p><strong>Next Review:</strong> {{ meta.document.next_review }} (annually or as needed)</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0570_Guideline_Data_Protection_Requirements_and_Data_Processing.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0590_Guideline_Records_Retention_and_Secure_Deletion.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

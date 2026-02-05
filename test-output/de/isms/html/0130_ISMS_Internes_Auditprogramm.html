@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0130 - Internes Auditprogramm (Template)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0130</div>
+            <h1>Internes Auditprogramm (Template)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0120_ISMS_Schulung_Awareness_und_Kompetenz.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0140_ISMS_Management_Review_Template.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="internes-auditprogramm-template">Internes Auditprogramm (Template)</h1>
+<p><strong>Dokument-ID:</strong> 0130<br />
+<strong>Dokumenttyp:</strong> ISMS-Programm/Template<br />
+<strong>Standard-Referenz:</strong> ISO/IEC 27001:2022 Clause 9.2<br />
+<strong>Owner:</strong> {{ meta.audit.manager }}<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Freigegeben<br />
+<strong>Klassifizierung:</strong> Vertraulich<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.date }}<br />
+<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-zweck-und-geltungsbereich">1. Zweck und Geltungsbereich</h2>
+<h3 id="11-zweck">1.1 Zweck</h3>
+<p>Das interne Auditprogramm der <strong>AdminSend GmbH</strong> stellt sicher, dass:
+- Das ISMS den Anforderungen von ISO 27001:2022 entspricht
+- Das ISMS wirksam implementiert und aufrechterhalten wird
+- Verbesserungspotenziale identifiziert werden
+- Compliance mit Policies und Richtlinien sichergestellt wird</p>
+<h3 id="12-geltungsbereich">1.2 Geltungsbereich</h3>
+<p>Das Auditprogramm umfasst:
+- Alle Bereiche im ISMS-Scope (siehe <code>0020_ISMS_Geltungsbereich_Scope.md</code>)
+- Alle Annex A Controls im SoA (siehe <code>0100_ISMS_Statement_of_Applicability_SoA_Template.md</code>)
+- Alle ISMS-Prozesse und -Dokumente
+- Alle Standorte: {{ netbox.site.name }} und weitere</p>
+<h2 id="2-audit-ansatz">2. Audit-Ansatz</h2>
+<h3 id="21-audit-prinzipien">2.1 Audit-Prinzipien</h3>
+<p><strong>Unabhängigkeit:</strong>
+- Auditoren prüfen nicht ihre eigenen Bereiche
+- Externe Auditoren für kritische Bereiche (optional)
+- Berichtslinie: Audit-Team berichtet an {{ meta.audit.manager }}</p>
+<p><strong>Risikobasiert:</strong>
+- Audit-Frequenz basiert auf Risikobewertung
+- Kritische Bereiche werden häufiger geprüft
+- Fokus auf hohe Risiken und kritische Controls</p>
+<p><strong>Scope-bezogen:</strong>
+- Alle Bereiche im ISMS-Scope werden geprüft
+- Vollständige Abdeckung innerhalb des Audit-Zyklus (3 Jahre)</p>
+<p><strong>Objektiv und evidenzbasiert:</strong>
+- Audit-Findings basieren auf objektiven Nachweisen
+- Stichprobenbasierte Prüfung
+- Dokumentation aller Findings</p>
+<h3 id="22-audit-typen">2.2 Audit-Typen</h3>
+<p><strong>Vollständiges ISMS-Audit:</strong>
+- Frequenz: Jährlich
+- Scope: Gesamtes ISMS
+- Dauer: 5-10 Tage</p>
+<p><strong>Themen-Audits:</strong>
+- Frequenz: Quartalsweise
+- Scope: Spezifische Themen (z.B. Access Management, Patch Management)
+- Dauer: 1-2 Tage</p>
+<p><strong>Follow-up-Audits:</strong>
+- Frequenz: Nach Bedarf
+- Scope: Überprüfung der Umsetzung von Korrekturmaßnahmen
+- Dauer: 0,5-1 Tag</p>
+<h2 id="3-jahresplan">3. Jahresplan</h2>
+<h3 id="31-audit-jahresplan-2026">3.1 Audit-Jahresplan 2026</h3>
+<table>
+<thead>
+<tr>
+<th>Zeitraum</th>
+<th>Audit-Thema/Scope</th>
+<th>Audit-Typ</th>
+<th>Kriterien</th>
+<th>Auditor</th>
+<th>Auditee</th>
+<th>Geplante Dauer</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Q1 2026</strong></td>
+<td>Access Management &amp; IAM</td>
+<td>Themen-Audit</td>
+<td>A.5.15, A.5.16, A.5.17, A.5.18, A.8.2, A.8.3</td>
+<td>[TODO]</td>
+<td>Anna Schmidt</td>
+<td>2 Tage</td>
+<td>Geplant</td>
+</tr>
+<tr>
+<td><strong>Q2 2026</strong></td>
+<td>Vulnerability &amp; Patch Management</td>
+<td>Themen-Audit</td>
+<td>A.8.8, A.5.23</td>
+<td>[TODO]</td>
+<td>IT-Betrieb</td>
+<td>1 Tag</td>
+<td>Geplant</td>
+</tr>
+<tr>
+<td><strong>Q3 2026</strong></td>
+<td>Vollständiges ISMS-Audit</td>
+<td>Vollaudit</td>
+<td>Alle Clauses, SoA</td>
+<td>[TODO]</td>
+<td>Thomas Weber</td>
+<td>10 Tage</td>
+<td>Geplant</td>
+</tr>
+<tr>
+<td><strong>Q4 2026</strong></td>
+<td>Incident Management &amp; Logging</td>
+<td>Themen-Audit</td>
+<td>A.5.24, A.5.25, A.5.26, A.5.28, A.8.15, A.8.16</td>
+<td>[TODO]</td>
+<td>Security Team</td>
+<td>2 Tage</td>
+<td>Geplant</td>
+</tr>
+</tbody>
+</table>
+<p>[TODO: Audit-Plan für 2026 vervollständigen]</p>
+<h3 id="32-audit-frequenz-nach-risiko">3.2 Audit-Frequenz nach Risiko</h3>
+<table>
+<thead>
+<tr>
+<th>Bereich</th>
+<th>Risikostufe</th>
+<th>Audit-Frequenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Privileged Access Management</td>
+<td>Hoch</td>
+<td>Halbjährlich</td>
+</tr>
+<tr>
+<td>Vulnerability Management</td>
+<td>Hoch</td>
+<td>Halbjährlich</td>
+</tr>
+<tr>
+<td>Incident Management</td>
+<td>Hoch</td>
+<td>Halbjährlich</td>
+</tr>
+<tr>
+<td>Backup &amp; Recovery</td>
+<td>Mittel</td>
+<td>Jährlich</td>
+</tr>
+<tr>
+<td>Physical Security</td>
+<td>Mittel</td>
+<td>Jährlich</td>
+</tr>
+<tr>
+<td>HR Security</td>
+<td>Niedrig</td>
+<td>Alle 2 Jahre</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-audit-prozess">4. Audit-Prozess</h2>
+<h3 id="41-audit-phasen">4.1 Audit-Phasen</h3>
+<div class="codehilite"><pre><span></span><code><span class="mf">1.</span><span class="w"> </span><span class="n">Planung</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Audit</span><span class="o">-</span><span class="n">Scope</span><span class="w"> </span><span class="kd">def</span><span class="n">inieren</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Audit</span><span class="o">-</span><span class="n">Team</span><span class="w"> </span><span class="n">benennen</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Audit</span><span class="o">-</span><span class="n">Plan</span><span class="w"> </span><span class="n">erstellen</span>
+<span class="w">   </span><span class="err">└─</span><span class="w"> </span><span class="n">Auditee</span><span class="w"> </span><span class="n">informieren</span>
+
+<span class="mf">2.</span><span class="w"> </span><span class="n">Vorbereitung</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Dokumente</span><span class="w"> </span><span class="n">anfordern</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Audit</span><span class="o">-</span><span class="n">Checkliste</span><span class="w"> </span><span class="n">erstellen</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Stichproben</span><span class="w"> </span><span class="kd">def</span><span class="n">inieren</span>
+<span class="w">   </span><span class="err">└─</span><span class="w"> </span><span class="nb">Int</span><span class="n">erviews</span><span class="w"> </span><span class="n">planen</span>
+
+<span class="mf">3.</span><span class="w"> </span><span class="n">Durchführung</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="kr">Open</span><span class="n">ing</span><span class="w"> </span><span class="n">Meeting</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Dokumentenprüfung</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="nb">Int</span><span class="n">erviews</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Stichproben</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Beobachtungen</span>
+<span class="w">   </span><span class="err">└─</span><span class="w"> </span><span class="n">Closing</span><span class="w"> </span><span class="n">Meeting</span>
+
+<span class="mf">4.</span><span class="w"> </span><span class="n">Berichterstattung</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Findings</span><span class="w"> </span><span class="n">dokumentieren</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Audit</span><span class="o">-</span><span class="n">Bericht</span><span class="w"> </span><span class="n">erstellen</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Bericht</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">Auditee</span>
+<span class="w">   </span><span class="err">└─</span><span class="w"> </span><span class="n">Bericht</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">Management</span>
+
+<span class="mf">5.</span><span class="w"> </span><span class="n">Follow</span><span class="o">-</span><span class="n">up</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Korrekturmaßnahmen</span><span class="w"> </span><span class="n">planen</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Umsetzung</span><span class="w"> </span><span class="n">überwachen</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Follow</span><span class="o">-</span><span class="n">up</span><span class="o">-</span><span class="n">Audit</span>
+<span class="w">   </span><span class="err">└─</span><span class="w"> </span><span class="n">Findings</span><span class="w"> </span><span class="n">schließen</span>
+</code></pre></div>
+
+<h3 id="42-audit-checkliste-beispiel">4.2 Audit-Checkliste (Beispiel)</h3>
+<p><strong>Audit-Thema: Access Management</strong></p>
+<table>
+<thead>
+<tr>
+<th>Prüfpunkt</th>
+<th>Kriterium</th>
+<th>Nachweis</th>
+<th>Ergebnis</th>
+<th>Bemerkungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sind Zugriffsrechte dokumentiert?</td>
+<td>Policy 0220</td>
+<td>IAM-Dokumentation</td>
+<td>✓ / ✗</td>
+<td></td>
+</tr>
+<tr>
+<td>Werden Zugriffsrechte regelmäßig rezertifiziert?</td>
+<td>Richtlinie 0230</td>
+<td>Rezertifizierungsprotokolle</td>
+<td>✓ / ✗</td>
+<td></td>
+</tr>
+<tr>
+<td>Ist das Least-Privilege-Prinzip umgesetzt?</td>
+<td>A.8.2</td>
+<td>IAM-Konfiguration</td>
+<td>✓ / ✗</td>
+<td></td>
+</tr>
+<tr>
+<td>Werden Joiner/Mover/Leaver-Prozesse befolgt?</td>
+<td>Richtlinie 0230</td>
+<td>HR-Tickets, IAM-Logs</td>
+<td>✓ / ✗</td>
+<td></td>
+</tr>
+<tr>
+<td>Ist MFA für alle Benutzer aktiviert?</td>
+<td>A.5.17</td>
+<td>MFA-Konfiguration</td>
+<td>✓ / ✗</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>[TODO: Vollständige Checklisten für alle Audit-Themen erstellen]</p>
+<h3 id="43-audit-kriterien">4.3 Audit-Kriterien</h3>
+<p><strong>Dokumentenprüfung:</strong>
+- Sind Dokumente aktuell und freigegeben?
+- Sind Dokumente vollständig und konsistent?
+- Sind Verantwortlichkeiten definiert?</p>
+<p><strong>Evidence-Prüfung:</strong>
+- Ist Evidence vorhanden und aktuell?
+- Ist Evidence nachvollziehbar?
+- Ist Evidence ausreichend für Nachweis?</p>
+<p><strong>Control-Wirksamkeit:</strong>
+- Ist das Control implementiert?
+- Ist das Control wirksam (Stichproben)?
+- Gibt es Abweichungen oder Schwachstellen?</p>
+<p><strong>Compliance:</strong>
+- Werden Policies und Richtlinien befolgt?
+- Werden gesetzliche Anforderungen erfüllt?
+- Werden vertragliche Verpflichtungen erfüllt?</p>
+<h2 id="5-audit-findings">5. Audit-Findings</h2>
+<h3 id="51-finding-kategorien">5.1 Finding-Kategorien</h3>
+<p><strong>Major Non-Conformity (Schwerwiegend):</strong>
+- Wesentlicher Verstoß gegen ISO 27001:2022
+- Kritisches Control nicht implementiert
+- Systemischer Fehler
+- <strong>Beispiel:</strong> Keine Risikoanalyse durchgeführt</p>
+<p><strong>Minor Non-Conformity (Geringfügig):</strong>
+- Kleinerer Verstoß gegen ISO 27001:2022
+- Control teilweise implementiert
+- Isolierter Fehler
+- <strong>Beispiel:</strong> Dokumentation unvollständig</p>
+<p><strong>Observation (Beobachtung):</strong>
+- Verbesserungspotenzial
+- Best Practice nicht umgesetzt
+- Kein Verstoß gegen Anforderungen
+- <strong>Beispiel:</strong> Prozess könnte effizienter sein</p>
+<p><strong>Opportunity for Improvement (Verbesserungsmöglichkeit):</strong>
+- Empfehlung für Verbesserung
+- Keine Abweichung
+- <strong>Beispiel:</strong> Automatisierung möglich</p>
+<h3 id="52-finding-dokumentation">5.2 Finding-Dokumentation</h3>
+<p><strong>Für jedes Finding:</strong>
+- Finding-ID (z.B. F-2026-Q1-001)
+- Kategorie (Major/Minor/Observation)
+- Beschreibung
+- Betroffener Bereich/Control
+- Nachweis/Evidence
+- Auswirkung
+- Empfohlene Korrekturmaßnahme
+- Verantwortlicher
+- Frist</p>
+<h3 id="53-korrekturmanahmen">5.3 Korrekturmaßnahmen</h3>
+<p><strong>Prozess:</strong>
+1. Auditee plant Korrekturmaßnahme
+2. CISO genehmigt Maßnahme und Frist
+3. Auditee setzt Maßnahme um
+4. Auditor prüft Umsetzung (Follow-up)
+5. Finding wird geschlossen</p>
+<p><strong>Fristen:</strong>
+- Major Non-Conformity: 30 Tage
+- Minor Non-Conformity: 90 Tage
+- Observation: 180 Tage</p>
+<h2 id="6-audit-bericht">6. Audit-Bericht</h2>
+<h3 id="61-berichtsstruktur">6.1 Berichtsstruktur</h3>
+<p><strong>Executive Summary:</strong>
+- Audit-Scope und -Ziel
+- Audit-Datum und -Team
+- Zusammenfassung der Ergebnisse
+- Gesamtbewertung</p>
+<p><strong>Audit-Details:</strong>
+- Audit-Methodik
+- Geprüfte Bereiche und Controls
+- Stichproben
+- Interviews</p>
+<p><strong>Findings:</strong>
+- Liste aller Findings (nach Kategorie)
+- Detailbeschreibung jedes Findings
+- Empfohlene Korrekturmaßnahmen</p>
+<p><strong>Positive Beobachtungen:</strong>
+- Best Practices
+- Gut umgesetzte Controls
+- Verbesserungen seit letztem Audit</p>
+<p><strong>Schlussfolgerung:</strong>
+- Gesamtbewertung des ISMS
+- Empfehlungen
+- Nächste Schritte</p>
+<h3 id="62-berichtsverteilung">6.2 Berichtsverteilung</h3>
+<p><strong>Empfänger:</strong>
+- Auditee
+- CISO
+- Geschäftsführung
+- Informationssicherheitsgremium</p>
+<p><strong>Vertraulichkeit:</strong>
+- Audit-Berichte sind vertraulich
+- Zugriff nur für berechtigte Personen</p>
+<h2 id="7-auditor-qualifikation">7. Auditor-Qualifikation</h2>
+<h3 id="71-anforderungen-an-auditoren">7.1 Anforderungen an Auditoren</h3>
+<p><strong>Fachliche Qualifikation:</strong>
+- Kenntnisse ISO 27001:2022
+- Kenntnisse ISO 27002:2022
+- Kenntnisse Audit-Methodik
+- Branchenkenntnisse</p>
+<p><strong>Zertifizierungen (empfohlen):</strong>
+- ISO 27001 Lead Auditor
+- CISA (Certified Information Systems Auditor)
+- CISM (Certified Information Security Manager)</p>
+<p><strong>Soft Skills:</strong>
+- Kommunikationsfähigkeit
+- Objektivität
+- Analytisches Denken
+- Dokumentationsfähigkeit</p>
+<h3 id="72-auditor-training">7.2 Auditor-Training</h3>
+<p><strong>Initiales Training:</strong>
+- ISO 27001:2022 Schulung
+- Audit-Methodik-Schulung
+- Shadowing erfahrener Auditoren</p>
+<p><strong>Kontinuierliche Weiterbildung:</strong>
+- Jährliche Auffrischung
+- Teilnahme an Auditor-Konferenzen
+- Austausch mit anderen Auditoren</p>
+<h2 id="8-audit-metriken">8. Audit-Metriken</h2>
+<h3 id="81-kpis">8.1 KPIs</h3>
+<table>
+<thead>
+<tr>
+<th>Metrik</th>
+<th>Zielwert</th>
+<th>Aktuell</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Audit-Plan-Erfüllung</td>
+<td>100%</td>
+<td>[TODO]%</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Durchschnittliche Zeit zur Behebung (Major)</td>
+<td>&lt; 30 Tage</td>
+<td>[TODO] Tage</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Durchschnittliche Zeit zur Behebung (Minor)</td>
+<td>&lt; 90 Tage</td>
+<td>[TODO] Tage</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Anzahl offener Findings</td>
+<td>&lt; 5</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Wiederkehrende Findings</td>
+<td>0</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="82-trend-analyse">8.2 Trend-Analyse</h3>
+<p><strong>Jährlicher Review:</strong>
+- Anzahl Findings pro Jahr (Trend)
+- Häufigste Finding-Kategorien
+- Bereiche mit den meisten Findings
+- Verbesserungen seit Vorjahr</p>
+<h2 id="9-rollen-und-verantwortlichkeiten">9. Rollen und Verantwortlichkeiten</h2>
+<h3 id="91-raci-matrix-audit-prozess">9.1 RACI-Matrix: Audit-Prozess</h3>
+<table>
+<thead>
+<tr>
+<th>Aktivität</th>
+<th>Audit Manager</th>
+<th>Auditor</th>
+<th>Auditee</th>
+<th>CISO</th>
+<th>Geschäftsführung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Audit-Programm erstellen</td>
+<td>R/A</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Audit planen</td>
+<td>R</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Audit durchführen</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Findings dokumentieren</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Audit-Bericht erstellen</td>
+<td>R/A</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Korrekturmaßnahmen planen</td>
+<td>C</td>
+<td>C</td>
+<td>R/A</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Follow-up durchführen</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Audit-Programm reviewen</td>
+<td>R/A</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legende:</strong> R = Responsible, A = Accountable, C = Consulted, I = Informed</p>
+<h2 id="10-referenzen">10. Referenzen</h2>
+<h3 id="101-interne-dokumente">10.1 Interne Dokumente</h3>
+<ul>
+<li><code>0020_ISMS_Geltungsbereich_Scope.md</code> - ISMS Scope</li>
+<li><code>0100_ISMS_Statement_of_Applicability_SoA_Template.md</code> - SoA</li>
+<li><code>0140_ISMS_Management_Review_Template.md</code> - Management Review</li>
+<li><code>0150_ISMS_Nichtkonformitaeten_und_Korrekturmassnahmen.md</code> - Non-conformities</li>
+<li>Alle Policies (0200-0680) und Richtlinien (0210-0690)</li>
+</ul>
+<h3 id="102-externe-standards">10.2 Externe Standards</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022</strong> - Clause 9.2: Internal audit</li>
+<li><strong>ISO 19011:2018</strong> - Guidelines for auditing management systems</li>
+<li><strong>ISO/IEC 27007:2020</strong> - Guidelines for information security management systems auditing</li>
+</ul>
+<hr />
+<p><strong>Genehmigt durch:</strong><br />
+{{ meta.audit.manager }}, Audit Manager<br />
+Thomas Weber, CISO<br />
+Datum: {{ meta.document.approval_date }}</p>
+<p><strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0120_ISMS_Schulung_Awareness_und_Kompetenz.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0140_ISMS_Management_Review_Template.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

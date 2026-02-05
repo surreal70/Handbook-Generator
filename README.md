@@ -3,6 +3,7 @@
 <div align="center">
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
+[![Version](https://img.shields.io/badge/version-0.0.3-blue.svg)](VERSION.md)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Code Coverage](https://img.shields.io/badge/coverage-86%25-brightgreen.svg)](htmlcov/index.html)
 [![Tests](https://img.shields.io/badge/tests-450%20passed-success.svg)](tests/)
@@ -22,7 +23,9 @@ Ein Python-Tool zur Generierung professioneller Handbücher aus Markdown-Vorlage
 
 ## Überblick
 
-Der Handbuch-Generator erstellt aus strukturierten Markdown-Vorlagen professionelle Handbücher in verschiedenen Formaten (Markdown, PDF). Das System ersetzt Platzhalter in den Vorlagen durch echte Daten aus externen Systemen wie NetBox und unterstützt mehrsprachige Handbücher.
+Der Handbuch-Generator erstellt aus strukturierten Markdown-Vorlagen professionelle Handbücher in verschiedenen Formaten (HTML, PDF, Markdown). Das System ersetzt Platzhalter in den Vorlagen durch echte Daten aus externen Systemen wie NetBox und unterstützt mehrsprachige Handbücher.
+
+**Version 0.0.3** - Vollständige Handbuch-Generierung mit PDF-Unterstützung
 
 ## Features
 
@@ -30,13 +33,16 @@ Der Handbuch-Generator erstellt aus strukturierten Markdown-Vorlagen professione
 - 📚 **Vier Handbuchtypen** - BCM, ISMS, BSI Grundschutz, IT-Operations
 - 🔄 **Platzhalter-Ersetzung** - Automatische Datenintegration aus externen Quellen (NetBox, Metadata)
 - 🌍 **Mehrsprachige Unterstützung** - Deutsch und Englisch mit identischer Struktur
-- 📄 **Multi-Format-Ausgabe** - Markdown und PDF (WeasyPrint)
+- 📄 **Multi-Format-Ausgabe** - HTML, PDF (Pandoc + XeLaTeX), Markdown
+- 🎨 **HTML Mini-Websites** - Professionelle HTML-Ausgabe mit Navigation und Styling
+- 📑 **PDF mit Inhaltsverzeichnis** - Professionelle PDFs mit TOC und Seitennummerierung
 - 💬 **HTML-Kommentar-Unterstützung** - Nicht-gerenderte Dokumentation für Template-Autoren
 - ⚙️ **Konfigurierbare Datenquellen** - Flexible Integration externer Systeme
 - 🔍 **Verbose Logging** - Detailliertes Debugging und Fehleranalyse
 - ✅ **Umfassend getestet** - 86% Code Coverage, 450+ Tests (Unit & Property-Based)
 - 📋 **Framework-Compliance** - ISO 22301, ISO 27001:2022, BSI Standards, ITIL v4
 - 📦 **186 Templates** - Professionelle, standardkonforme Vorlagen
+- 🚀 **Batch-Generierung** - Automatische Generierung aller Handbücher
 
 ## Handbuchtypen
 
@@ -47,12 +53,27 @@ Der Handbuch-Generator erstellt aus strukturierten Markdown-Vorlagen professione
 | **BSI Grundschutz** | BSI 200-1/2/3 | 54 | IT-Grundschutz nach BSI |
 | **IT-Operation** | ITIL v4, ISO 20000-1 | 31 | IT-Betriebshandbuch |
 
+## Neu in Version 0.0.3 🎉
+
+- ✅ **Vollständige PDF-Generierung** - Alle 8 Handbücher als PDF verfügbar (3.4 MB)
+- ✅ **Pandoc + XeLaTeX Integration** - Professionelle PDF-Generierung mit TOC
+- ✅ **Batch-Generierung** - Automatische Generierung aller Handbücher
+- ✅ **784 Dateien generiert** - 388 HTML + 8 PDF + 388 Markdown
+- ✅ **Helper Scripts** - Automatisierte Generierungsskripte in `helpers/`
+- ✅ **Separate Verzeichnisse** - Jedes Handbuch in eigenem Verzeichnis
+- ✅ **Produktionsreif** - Alle Formate einsatzbereit
+
+**Generierte Handbücher:**
+- 🇩🇪 Deutsch: BCM, ISMS, BSI Grundschutz, IT-Operation (HTML + PDF)
+- 🇬🇧 English: BCM, ISMS, BSI Grundschutz, IT-Operation (HTML + PDF)
+
 ## Installation
 
 ### Voraussetzungen
 
 - Python 3.8 oder höher (empfohlen: Python 3.11+)
 - pip (Python Package Manager)
+- Pandoc + XeLaTeX (für PDF-Generierung)
 
 ### Setup
 
@@ -75,7 +96,72 @@ venv\Scripts\activate  # Windows
 pip install -r requirements.txt
 ```
 
+4. PDF-Generierung aktivieren (empfohlen):
+```bash
+# Für PDF-Generierung mit Pandoc + XeLaTeX (empfohlen)
+sudo apt-get install pandoc texlive-xetex
+
+# Oder für WeasyPrint (experimentell, nicht empfohlen)
+sudo apt-get install libpango-1.0-0 libpangocairo-1.0-0
+```
+
+## Schnellstart
+
+### Einzelnes Handbuch generieren
+
+```bash
+# HTML-Handbuch generieren
+./handbook-generator -l de -t bcm -o html --test
+
+# PDF-Handbuch generieren (erfordert Pandoc + XeLaTeX)
+./handbook-generator -l de -t isms -o pdf --test --pdf-toc
+
+# Alle Formate generieren
+./handbook-generator -l de -t bcm -o all --test --separate-files --pdf-toc
+```
+
+### Alle Handbücher generieren (Batch)
+
+```bash
+# Alle HTML-Handbücher generieren (8 Handbücher)
+bash helpers/generate_all_handbooks.sh
+
+# Alle PDF-Handbücher generieren (8 PDFs)
+bash helpers/generate_pdfs_pandoc.sh
+```
+
+**Ergebnis:**
+- 8 Handbücher (4 Typen × 2 Sprachen)
+- 388 HTML-Dateien
+- 8 PDF-Dateien (3.4 MB)
+- 388 Markdown-Dateien
+- Gesamt: 784 Dateien
+
 ## Verwendung
+
+### Direkter Befehl (Empfohlen)
+
+**Seit Version 2.1** kann der Handbook Generator direkt als Befehl ausgeführt werden:
+
+```bash
+# Direkter Befehl (einfacher und schneller)
+./handbook-generator --language de --template bcm --test --separate-files
+
+# Oder mit Kurzformen
+./handbook-generator -l de -t bcm --test --separate-files
+```
+
+**Vorteile:**
+- ✅ Kürzer und einfacher zu tippen
+- ✅ Professionelleres CLI-Tool-Verhalten
+- ✅ Einfacher in Shell-Skripten zu verwenden
+- ✅ Kann zu PATH hinzugefügt werden für systemweiten Zugriff
+
+**Alternative (funktioniert weiterhin):**
+```bash
+# Klassischer Python-Modul-Aufruf
+python -m src.cli --language de --template bcm --test --separate-files
+```
 
 ### Konfiguration
 
@@ -128,40 +214,211 @@ metadata:
 Starten Sie den Generator ohne Parameter für eine interaktive Auswahl:
 
 ```bash
-python -m src.cli
+./handbook-generator
 ```
 
 Das System zeigt verfügbare Sprachen und Handbuchtypen an und fragt nach Ihrer Auswahl.
 
 #### Kommandozeilen-Parameter
 
+**Wichtig:** Seit Version 2.0 ist der `--test` Flag erforderlich, um Ausgaben zu generieren. Dies verhindert versehentliches Überschreiben von Dateien.
+
 ```bash
-# IT-Operations-Handbuch auf Deutsch generieren
-python -m src.cli --language de --template it-operation
+# IT-Operations-Handbuch auf Deutsch generieren (Test-Modus erforderlich)
+./handbook-generator --language de --template it-operation --test
 
 # BCM-Handbuch auf Deutsch generieren
-python -m src.cli --language de --template bcm
+./handbook-generator --language de --template bcm --test
 
 # ISMS-Handbuch auf Englisch, nur PDF
-python -m src.cli --language en --template isms --output pdf
+./handbook-generator --language en --template isms --output pdf --test
 
 # BSI Grundschutz-Handbuch auf Deutsch
-python -m src.cli --language de --template bsi-grundschutz
+./handbook-generator --language de --template bsi-grundschutz --test
 
 # BCM-Handbuch mit ausführlichem Logging
-python -m src.cli --language de --template bcm --verbose
+./handbook-generator --language de --template bcm --verbose --test
 
 # Eigene Konfigurationsdatei verwenden
-python -m src.cli --config /path/to/config.yaml --language de --template it-operation
+./handbook-generator --config /path/to/config.yaml --language de --template it-operation --test
 ```
 
 #### Verfügbare Parameter
 
 - `--language, -l`: Sprache auswählen (`de`, `en`)
 - `--template, -t`: Handbuchtyp auswählen (`bcm`, `isms`, `bsi-grundschutz`, `it-operation`)
-- `--output, -o`: Ausgabeformat (`markdown`, `pdf`, `both`) [Standard: `both`]
+- `--output, -o`: Ausgabeformat (`markdown`, `pdf`, `html`, `both`, `all`) [Standard: `both`]
+- `--test`: Test-Modus aktivieren (erforderlich für Ausgabegenerierung)
+- `--separate-files`: Separate Markdown-Dateien pro Template generieren (statt kombinierter Datei)
+- `--pdf-toc`: PDF mit Inhaltsverzeichnis und Seitenumbrüchen generieren
 - `--verbose, -v`: Ausführliches Logging aktivieren
 - `--config, -c`: Pfad zur Konfigurationsdatei [Standard: `config.yaml`]
+
+#### Test-Modus und Ausgabestruktur
+
+**Seit Version 2.0** verwendet der Generator eine konsolidierte Ausgabestruktur und erfordert den `--test` Flag für Sicherheit.
+
+**Seit Version 2.1** wird jedes Handbuch in einem separaten Verzeichnis gespeichert:
+
+**Neue Ausgabestruktur (Version 2.1+):**
+```
+test-output/
+├── de/                          # Deutsche Ausgaben
+│   ├── bcm/                     # BCM-Handbuch
+│   │   ├── markdown/            # Separate Markdown-Dateien
+│   │   │   ├── TOC.md          # Inhaltsverzeichnis mit Links
+│   │   │   ├── 0010_Zweck_und_Geltungsbereich.md
+│   │   │   ├── 0020_BCM_Leitlinie_Policy.md
+│   │   │   └── ...
+│   │   ├── pdf/                 # PDF-Ausgaben
+│   │   │   └── bcm_handbook.pdf
+│   │   └── html/                # HTML Mini-Website
+│   │       ├── index.html
+│   │       └── ...
+│   ├── isms/                    # ISMS-Handbuch
+│   │   ├── markdown/
+│   │   ├── pdf/
+│   │   └── html/
+│   ├── bsi-grundschutz/         # BSI Grundschutz-Handbuch
+│   │   ├── markdown/
+│   │   ├── pdf/
+│   │   └── html/
+│   └── it-operation/            # IT-Operations-Handbuch
+│       ├── markdown/
+│       ├── pdf/
+│       └── html/
+└── en/                          # Englische Ausgaben
+    ├── bcm/
+    ├── isms/
+    ├── bsi-grundschutz/
+    └── it-operation/
+```
+
+**Vorteile der neuen Struktur:**
+- ✅ Jedes Handbuch hat sein eigenes Verzeichnis
+- ✅ Keine Datei-Konflikte zwischen verschiedenen Handbuchtypen
+- ✅ Einfachere Navigation und Organisation
+- ✅ Parallele Generierung mehrerer Handbücher möglich
+- ✅ Jedes Handbuch ist eigenständig und vollständig
+│       ├── index.html
+│       ├── 0010_Template_Name.html
+│       └── styles.css
+└── en/                          # Englische Ausgaben
+    ├── markdown/
+    ├── pdf/
+    └── html/
+```
+
+**Warum Test-Modus?**
+- **Sicherheit**: Verhindert versehentliches Überschreiben von Produktionsdateien
+- **Konsolidierung**: Alle Ausgaben an einem Ort statt verstreut in `Handbook/` und `PDF_Output/`
+- **Klarheit**: Explizite Aktivierung macht Ausgabegenerierung bewusst
+
+**Migration von alter Struktur:**
+- Alte Struktur: `Handbook/{sprache}/{typ}/` und `PDF_Output/{sprache}/{typ}/`
+- Neue Struktur: `test-output/{sprache}/{ausgabetyp}/`
+- Dateien werden nach Template-Typ benannt (z.B. `bcm_handbook.pdf`)
+
+**Ohne --test Flag:**
+```bash
+$ python -m src.cli --language de --template bcm
+ERROR: Output generation requires --test flag. Use --test to enable test mode output.
+```
+
+#### Separate Markdown-Dateien
+
+**Seit Version 2.1** können Sie separate Markdown-Dateien für jedes Template generieren, anstatt einer kombinierten Datei:
+
+**Verwendung:**
+```bash
+# Separate Markdown-Dateien für BCM-Handbuch generieren
+python -m src.cli --language de --template bcm --test --separate-files
+
+# Nur separate Markdown-Dateien (kein PDF)
+python -m src.cli --language de --template bcm --output markdown --test --separate-files
+```
+
+**Ausgabestruktur:**
+```
+test-output/de/markdown/
+├── TOC.md                                    # Inhaltsverzeichnis mit Links
+├── 0010_Zweck_und_Geltungsbereich.md        # Einzelnes Template
+├── 0020_BCM_Leitlinie_Policy.md             # Einzelnes Template
+├── 0030_Dokumentenlenkung_und_Versionierung.md
+└── ... (weitere Templates)
+```
+
+**TOC.md Datei:**
+Die `TOC.md` Datei enthält ein Inhaltsverzeichnis mit Links zu allen Template-Dateien:
+```markdown
+# Table of Contents
+
+- [0010 - Zweck und Geltungsbereich](0010_Zweck_und_Geltungsbereich.md)
+- [0020 - BCM Leitlinie Policy](0020_BCM_Leitlinie_Policy.md)
+- [0030 - Dokumentenlenkung und Versionierung](0030_Dokumentenlenkung_und_Versionierung.md)
+...
+```
+
+**Dateinamen-Muster:**
+- Format: `{template-nummer}_{template-name}.md`
+- Beispiel: `0010_Zweck_und_Geltungsbereich.md`
+- Template-Nummer: 4-stellige Nummer aus Dateinamen
+- Template-Name: Aus Dateinamen extrahiert, Unterstriche durch Leerzeichen ersetzt
+
+**Vorteile:**
+- **Einfache Bearbeitung**: Einzelne Kapitel können separat bearbeitet werden
+- **Versionskontrolle**: Git-Diffs sind übersichtlicher bei Änderungen an einzelnen Kapiteln
+- **Modulare Struktur**: Kapitel können einzeln weitergegeben oder wiederverwendet werden
+- **Navigation**: TOC.md bietet schnellen Überblick und Navigation
+
+#### PDF mit Inhaltsverzeichnis
+
+**Seit Version 2.1** können Sie PDFs mit einem automatisch generierten Inhaltsverzeichnis und Seitenumbrüchen zwischen Templates erstellen:
+
+**Verwendung:**
+```bash
+# PDF mit Inhaltsverzeichnis für BCM-Handbuch generieren
+python -m src.cli --language de --template bcm --output pdf --test --pdf-toc
+
+# PDF mit TOC und separate Markdown-Dateien
+python -m src.cli --language de --template bcm --test --separate-files --pdf-toc
+```
+
+**Inhaltsverzeichnis-Struktur:**
+Das Inhaltsverzeichnis wird automatisch am Anfang des PDFs eingefügt und enthält:
+- **Template-Nummern**: 4-stellige Nummerierung (z.B. 0010, 0020)
+- **Template-Titel**: Aus Dateinamen extrahiert
+- **Klickbare Links**: Direkte Navigation zu Abschnitten im PDF
+- **Seitenzahlen**: Automatisch generiert durch PDF-Renderer
+
+**Beispiel-Inhaltsverzeichnis:**
+```
+Table of Contents
+
+0010 - Zweck und Geltungsbereich ..................... Seite 2
+0020 - BCM Leitlinie Policy .......................... Seite 5
+0030 - Dokumentenlenkung und Versionierung ........... Seite 8
+0040 - Notfallorganisation Rollen und Gremien ........ Seite 12
+...
+```
+
+**Seitenumbrüche:**
+- Jedes Template beginnt auf einer neuen Seite
+- Seitenumbrüche werden automatisch zwischen Templates eingefügt
+- Verhindert, dass Kapitel mitten auf einer Seite beginnen
+- Verbessert Lesbarkeit und professionelles Erscheinungsbild
+
+**Technische Details:**
+- Verwendet HTML/CSS `page-break-after` Property
+- Anchor-IDs für interne Verlinkung: `#section-0010`, `#section-0020`, etc.
+- TOC wird als HTML-Struktur generiert und in PDF konvertiert
+- WeasyPrint rendert das finale PDF mit allen Features
+
+**Vorteile:**
+- **Professionelles Layout**: Klare Struktur mit Inhaltsverzeichnis
+- **Einfache Navigation**: Klickbare Links zu allen Kapiteln
+- **Druckfreundlich**: Jedes Kapitel beginnt auf neuer Seite
+- **Übersichtlichkeit**: Schneller Überblick über alle Inhalte
 
 #### Handbuchtypen
 
@@ -169,6 +426,39 @@ python -m src.cli --config /path/to/config.yaml --language de --template it-oper
 - **isms**: Information Security Management System (ISO 27001:2022, Annex A)
 - **bsi-grundschutz**: BSI IT-Grundschutz (BSI Standards 200-1, 200-2, 200-3)
 - **it-operation**: IT-Betriebshandbuch (ITIL v4, ISO 20000-1, COBIT 2019)
+
+### Generierte Handbücher ansehen
+
+Nach der Generierung können Sie die Handbücher wie folgt ansehen:
+
+**HTML-Handbücher:**
+```bash
+# Im Browser öffnen
+firefox test-output/de/bcm/html/index.html
+
+# Oder lokalen Webserver starten
+cd test-output
+python3 -m http.server 8000
+# Dann öffnen: http://localhost:8000/
+```
+
+**PDF-Handbücher:**
+```bash
+# PDF öffnen
+evince test-output/de/isms/pdf/isms_handbook_de.pdf
+
+# Alle PDFs auflisten
+ls test-output/*/*/pdf/*.pdf
+```
+
+**Markdown-Dateien:**
+```bash
+# Einzelne Markdown-Dateien ansehen
+cat test-output/de/bcm/markdown/0010_Zweck_und_Geltungsbereich.md
+
+# Inhaltsverzeichnis ansehen
+cat test-output/de/bcm/markdown/TOC.md
+```
 
 ### Vorlagen-Struktur
 
@@ -345,6 +635,7 @@ Handbook-Generator/
 
 Umfassende Dokumentation finden Sie im `docs/` Verzeichnis:
 
+- **[OUTPUT_FORMATS_GUIDE.md](docs/OUTPUT_FORMATS_GUIDE.md)** - Detaillierte Anleitung zu allen Ausgabeformaten (Separate Markdown, PDF mit TOC, HTML)
 - **[FRAMEWORK_MAPPING.md](docs/FRAMEWORK_MAPPING.md)** - Framework-Compliance-Mappings (ISO 22301, ISO 27001, BSI, ITIL)
 - **[MIGRATION_GUIDE.md](docs/MIGRATION_GUIDE.md)** - Migrationsleitfaden für bestehende Nutzer
 - **[PDF_GENERATION_GUIDE.md](docs/PDF_GENERATION_GUIDE.md)** - Detaillierte Anleitung zur PDF-Generierung
@@ -362,10 +653,25 @@ Jedes Template-Verzeichnis enthält eine `README.md` mit:
 
 ### Helper Scripts
 
-Das `helpers/` Verzeichnis enthält optionale Utility-Scripts:
-- PDF-Generierung mit verschiedenen Backends (WeasyPrint, Pandoc, ReportLab)
-- Framework-Section-Insertion
-- Siehe [helpers/README.md](helpers/README.md) für Details
+Das `helpers/` Verzeichnis enthält Batch-Generierungsskripte:
+
+**generate_all_handbooks.sh** - Generiert alle HTML-Handbücher automatisch
+```bash
+bash helpers/generate_all_handbooks.sh
+```
+- Generiert 8 Handbücher (4 Typen × 2 Sprachen)
+- 388 HTML-Dateien
+- Automatische Fortschrittsanzeige
+
+**generate_pdfs_pandoc.sh** - Generiert alle PDF-Handbücher automatisch
+```bash
+bash helpers/generate_pdfs_pandoc.sh
+```
+- Generiert 8 PDFs (4 Typen × 2 Sprachen)
+- 3.4 MB Gesamtgröße
+- Professionelle Formatierung mit TOC
+
+Weitere Details: [helpers/README.md](helpers/README.md)
 
 ## Entwicklung
 
@@ -407,3 +713,11 @@ Siehe LICENSE Datei.
 Andreas Huemmer [andreas.huemmer@adminsend.de]
 
 Copyright © 2025, 2026
+
+"Ich scheiss dich zu mit meiner Dokumentation
+Ich kleb dich zu von oben bis unten.
+Ich schieb se dir hinten und vorne rein"
+
+Zitat, frei nach Maria Adorf in Kir Royal als Generaldirektor Heinrich.
+
+https://www.youtube.com/watch?v=CwE4mk2fbow

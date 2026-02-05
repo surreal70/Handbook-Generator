@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0050 - Structure Analysis (Template)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0050</div>
+            <h1>Structure Analysis (Template)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0040_Scope_and_Information_Domain.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0060_Protection_Needs_Assessment_Template.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="structure-analysis-template">Structure Analysis (Template)</h1>
+<p><strong>Document ID:</strong> 0050<br />
+<strong>Document Type:</strong> Methodology Artifact<br />
+<strong>Reference Framework:</strong> BSI IT-Grundschutz (BSI Standard 200-2)<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> {{ meta.document.status }}<br />
+<strong>Classification:</strong> internal<br />
+<strong>Last Updated:</strong> {{ meta.document.last_updated }}<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-objective-and-purpose">1. Objective and Purpose</h2>
+<p>The structure analysis systematically captures the structure of the information domain of <strong>AdminSend GmbH</strong>. It forms the basis for:
+- Protection needs assessment (Document 0060)
+- Modeling and module assignment (Document 0070)
+- Basic security check (Document 0080)
+- Risk analysis (Document 0090)</p>
+<p><strong>Responsible:</strong> Thomas Weber (ISO)</p>
+<h2 id="2-approach-and-methodology">2. Approach and Methodology</h2>
+<h3 id="21-data-sources">2.1 Data Sources</h3>
+<p>The following data sources are used for the structure analysis:</p>
+<table>
+<thead>
+<tr>
+<th>Data Source</th>
+<th>Type</th>
+<th>Responsible</th>
+<th>Currency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CMDB/Asset Inventory</td>
+<td>System</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Network Documentation</td>
+<td>Document</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Architecture Diagrams</td>
+<td>Document</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Service Provider Contracts</td>
+<td>Document</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Stakeholder Interviews</td>
+<td>Primary Source</td>
+<td>Thomas Weber</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-granularity">2.2 Granularity</h3>
+<p>The structure analysis is performed at the following granularity levels:</p>
+<ul>
+<li><strong>Business Processes:</strong> Process level (not activity level)</li>
+<li><strong>Applications:</strong> Application system level (not module level)</li>
+<li><strong>IT Systems:</strong> Logical systems (servers, databases, storage)</li>
+<li><strong>Networks:</strong> Network segments and zones</li>
+<li><strong>Rooms:</strong> Locations and critical rooms (data center, server room)</li>
+</ul>
+<h3 id="23-execution">2.3 Execution</h3>
+<p><strong>Timeline:</strong>
+- <strong>Start:</strong> [TODO]
+- <strong>Data Collection:</strong> [TODO: e.g. 2 weeks]
+- <strong>Validation:</strong> [TODO: e.g. 1 week]
+- <strong>Completion:</strong> [TODO]</p>
+<p><strong>Participants:</strong>
+- ISO: Thomas Weber
+- IT Management: Anna Schmidt
+- Information Domain Managers: [TODO]
+- Departments: [TODO]</p>
+<h2 id="3-structure-register">3. Structure Register</h2>
+<h3 id="31-business-processes-and-services">3.1 Business Processes and Services</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Process/Service</th>
+<th>Owner</th>
+<th>Description</th>
+<th>Criticality</th>
+<th>Dependencies</th>
+<th>Applications</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P-001</td>
+<td>[TODO: Process 1]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>High/Medium/Low</td>
+<td>[TODO]</td>
+<td>[TODO: A-001, A-002]</td>
+</tr>
+<tr>
+<td>P-002</td>
+<td>[TODO: Process 2]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>High/Medium/Low</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>P-003</td>
+<td>[TODO: Process 3]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>High/Medium/Low</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total Number of Processes:</strong> [TODO]</p>
+<h3 id="32-applications">3.2 Applications</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Application</th>
+<th>Owner</th>
+<th>Purpose</th>
+<th>User Group</th>
+<th>Interfaces</th>
+<th>Hosting</th>
+<th>Criticality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A-001</td>
+<td>[TODO: App 1]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>On-Prem/Cloud/SaaS</td>
+<td>High/Medium/Low</td>
+</tr>
+<tr>
+<td>A-002</td>
+<td>[TODO: App 2]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>On-Prem/Cloud/SaaS</td>
+<td>High/Medium/Low</td>
+</tr>
+<tr>
+<td>A-003</td>
+<td>[TODO: App 3]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>On-Prem/Cloud/SaaS</td>
+<td>High/Medium/Low</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total Number of Applications:</strong> [TODO]</p>
+<p><strong>Hosting Distribution:</strong>
+- On-Premise: [TODO]
+- Cloud (IaaS/PaaS): [TODO]
+- SaaS: [TODO]</p>
+<h3 id="33-it-systems-and-components">3.3 IT Systems and Components</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>System/Component</th>
+<th>Type</th>
+<th>Owner</th>
+<th>Location/Region</th>
+<th>Operation</th>
+<th>IP Address</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S-001</td>
+<td>{{ netbox.device.server_001 }}</td>
+<td>Server</td>
+<td>Anna Schmidt</td>
+<td>{{ meta.organization.primary_location }}</td>
+<td>Internal</td>
+<td>{{ netbox.ip.server_001 }}</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>S-002</td>
+<td>[TODO: System 2]</td>
+<td>Database</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+<td>Internal/External</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>S-003</td>
+<td>[TODO: System 3]</td>
+<td>Storage</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+<td>Internal/External</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>S-004</td>
+<td>[TODO: System 4]</td>
+<td>Firewall</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+<td>Internal</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total Number of IT Systems:</strong> [TODO]</p>
+<p><strong>System Types:</strong>
+- Servers: [TODO]
+- Databases: [TODO]
+- Storage: [TODO]
+- Network Components: [TODO]
+- Security Components: [TODO]
+- Clients: [TODO]</p>
+<h3 id="34-networks-and-communication">3.4 Networks and Communication</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Network/Zone</th>
+<th>Purpose</th>
+<th>Segmentation</th>
+<th>Internet Access</th>
+<th>VLAN ID</th>
+<th>Operator</th>
+<th>Security Zone</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>N-001</td>
+<td>Management Network</td>
+<td>Administration</td>
+<td>Yes</td>
+<td>No</td>
+<td>{{ netbox.vlan.management }}</td>
+<td>Anna Schmidt</td>
+<td>High Security</td>
+</tr>
+<tr>
+<td>N-002</td>
+<td>Production Network</td>
+<td>Business Applications</td>
+<td>Yes</td>
+<td>Yes (filtered)</td>
+<td>[TODO]</td>
+<td>Anna Schmidt</td>
+<td>Secure</td>
+</tr>
+<tr>
+<td>N-003</td>
+<td>DMZ</td>
+<td>External Services</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>[TODO]</td>
+<td>Anna Schmidt</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>N-004</td>
+<td>Guest WLAN</td>
+<td>Guests</td>
+<td>Yes</td>
+<td>Yes (isolated)</td>
+<td>[TODO]</td>
+<td>Anna Schmidt</td>
+<td>Low</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total Number of Network Segments:</strong> [TODO]</p>
+<p><strong>Security Zones:</strong>
+- High Security (Management, critical systems): [TODO]
+- Secure (Production systems): [TODO]
+- Medium (DMZ, external interfaces): [TODO]
+- Low (Guest network): [TODO]</p>
+<h3 id="35-rooms-and-locations">3.5 Rooms and Locations</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Location/Room</th>
+<th>Type</th>
+<th>Protection Measures</th>
+<th>Access</th>
+<th>Operator</th>
+<th>Criticality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R-001</td>
+<td>{{ meta.organization.primary_location }}</td>
+<td>Main Location</td>
+<td>[TODO]</td>
+<td>Access Control</td>
+<td>AdminSend GmbH</td>
+<td>High</td>
+</tr>
+<tr>
+<td>R-002</td>
+<td>Data Center</td>
+<td>Server Room</td>
+<td>Climate Control, Fire Protection, Access Control</td>
+<td>Authorized</td>
+<td>AdminSend GmbH</td>
+<td>High</td>
+</tr>
+<tr>
+<td>R-003</td>
+<td>[TODO: Room 3]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Medium/Low</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total Number of Locations:</strong> [TODO]<br />
+<strong>Total Number of Critical Rooms:</strong> [TODO]</p>
+<h3 id="36-external-service-providers-and-cloud-providers">3.6 External Service Providers and Cloud Providers</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Service Provider</th>
+<th>Service</th>
+<th>Criticality</th>
+<th>Contract</th>
+<th>Certifications</th>
+<th>Location</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D-001</td>
+<td>[TODO: Provider 1]</td>
+<td>[TODO: Service]</td>
+<td>High/Medium/Low</td>
+<td>[TODO: Contract No.]</td>
+<td>[TODO: ISO 27001, etc.]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>D-002</td>
+<td>[TODO: Provider 2]</td>
+<td>[TODO: Service]</td>
+<td>High/Medium/Low</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total Number of Service Providers:</strong> [TODO]</p>
+<h3 id="37-personnel-and-roles">3.7 Personnel and Roles</h3>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Name</th>
+<th>Area of Responsibility</th>
+<th>Contact</th>
+<th>Deputy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Executive Management</td>
+<td>Max Mustermann</td>
+<td>Overall Responsibility</td>
+<td>max.mustermann@adminsend.de</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>ISO</td>
+<td>Thomas Weber</td>
+<td>ISMS Coordination</td>
+<td>thomas.weber@adminsend.de</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>IT Management</td>
+<td>Anna Schmidt</td>
+<td>IT Operations</td>
+<td>anna.schmidt@adminsend.de</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: Additional Roles]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-dependencies-and-interfaces">4. Dependencies and Interfaces</h2>
+<h3 id="41-internal-dependencies">4.1 Internal Dependencies</h3>
+<table>
+<thead>
+<tr>
+<th>From (Source)</th>
+<th>To (Target)</th>
+<th>Type</th>
+<th>Criticality</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: System A]</td>
+<td>[TODO: System B]</td>
+<td>Data Flow</td>
+<td>High/Medium/Low</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: Application X]</td>
+<td>[TODO: Database Y]</td>
+<td>Data Access</td>
+<td>High/Medium/Low</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-external-interfaces">4.2 External Interfaces</h3>
+<table>
+<thead>
+<tr>
+<th>Interface</th>
+<th>Partner/Provider</th>
+<th>Direction</th>
+<th>Data Types</th>
+<th>Protocol</th>
+<th>Security Measures</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Interface 1]</td>
+<td>[TODO]</td>
+<td>Inbound/Outbound/Bidirectional</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO: VPN, TLS, etc.]</td>
+</tr>
+<tr>
+<td>[TODO: Interface 2]</td>
+<td>[TODO]</td>
+<td>Inbound/Outbound/Bidirectional</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-diagrams-and-visualizations">5. Diagrams and Visualizations</h2>
+<h3 id="51-network-diagram">5.1 Network Diagram</h3>
+<p><img alt="Network Diagram" src="diagrams/netzwerk.png" /></p>
+<p>[TODO: Create a network diagram with all segments and zones]</p>
+<h3 id="52-application-architecture">5.2 Application Architecture</h3>
+<p><img alt="Application Architecture" src="diagrams/anwendungsarchitektur.png" /></p>
+<p>[TODO: Create a diagram of the application landscape]</p>
+<h3 id="53-data-flow-diagram">5.3 Data Flow Diagram</h3>
+<p><img alt="Data Flow Diagram" src="diagrams/datenfluss.png" /></p>
+<p>[TODO: Create a data flow diagram for critical processes]</p>
+<h2 id="6-validation-and-quality-assurance">6. Validation and Quality Assurance</h2>
+<h3 id="61-validation-process">6.1 Validation Process</h3>
+<p>The structure analysis is validated by:
+1. <strong>Review by IT Management:</strong> Anna Schmidt
+2. <strong>Review by Information Domain Managers:</strong> [TODO]
+3. <strong>Comparison with CMDB/Inventory:</strong> [TODO: Date]
+4. <strong>Approval by ISO:</strong> Thomas Weber</p>
+<h3 id="62-completeness-check">6.2 Completeness Check</h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Number Captured</th>
+<th>Completeness</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Business Processes</td>
+<td>[TODO]</td>
+<td>[TODO: %]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Applications</td>
+<td>[TODO]</td>
+<td>[TODO: %]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>IT Systems</td>
+<td>[TODO]</td>
+<td>[TODO: %]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Networks</td>
+<td>[TODO]</td>
+<td>[TODO: %]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Rooms</td>
+<td>[TODO]</td>
+<td>[TODO: %]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Service Providers</td>
+<td>[TODO]</td>
+<td>[TODO: %]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-update-and-maintenance">7. Update and Maintenance</h2>
+<p>The structure analysis is updated when:
+- New IT systems or applications
+- Changes in network architecture
+- New service providers or cloud services
+- Organizational changes
+- At least annually as part of ISMS review</p>
+<p><strong>Responsible:</strong> Thomas Weber (ISO)<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<h2 id="8-approval">8. Approval</h2>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Name</th>
+<th>Date</th>
+<th>Approval</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ISO</td>
+<td>Thomas Weber</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+<tr>
+<td>IT Management</td>
+<td>Anna Schmidt</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>References:</strong>
+- BSI Standard 200-2: IT-Grundschutz Methodology (Chapter 5: Structure Analysis)
+- BSI IT-Grundschutz Compendium</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0040_Scope_and_Information_Domain.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0060_Protection_Needs_Assessment_Template.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0070 - Operating Concept and Processes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0070</div>
+            <h1>Operating Concept and Processes</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0060_Roles_and_Responsibilities.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0080_Operations_Handover_and_GoLive_Checklist.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="operating-concept-and-processes">Operating Concept and Processes</h1>
+<h2 id="overview">Overview</h2>
+<p>This document describes the operating concept and operational processes for the IT service. It defines operating models, process flows according to ITIL standards, interfaces to other processes, and escalation paths.</p>
+<p><strong>Service:</strong> {{ meta.service_name }}<br />
+<strong>Responsible:</strong> Andreas Huemmer<br />
+<strong>Version:</strong> 1.0.0</p>
+<hr />
+<h2 id="operating-model">Operating Model</h2>
+<h3 id="service-hours">Service Hours</h3>
+<table>
+<thead>
+<tr>
+<th>Operating Model</th>
+<th>Description</th>
+<th>Service Hours</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>24/7 Operation</strong></td>
+<td>Continuous operation without interruption</td>
+<td>Mon-Sun, 00:00-24:00</td>
+</tr>
+<tr>
+<td><strong>Business Hours</strong></td>
+<td>Operation during business hours</td>
+<td>Mon-Fri, 08:00-18:00</td>
+</tr>
+<tr>
+<td><strong>Extended Hours</strong></td>
+<td>Extended business hours</td>
+<td>Mon-Fri, 06:00-22:00</td>
+</tr>
+<tr>
+<td><strong>Follow-the-Sun</strong></td>
+<td>Global operation across time zones</td>
+<td>24/7 with regional staffing</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Current Operating Model:</strong> [TODO: Select operating model]</p>
+<h3 id="maintenance-windows">Maintenance Windows</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Time Window</th>
+<th>Frequency</th>
+<th>Duration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Regular Maintenance</strong></td>
+<td>[TODO: e.g., Sunday 02:00-06:00]</td>
+<td>[TODO: e.g., Monthly]</td>
+<td>[TODO: e.g., 4 hours]</td>
+</tr>
+<tr>
+<td><strong>Emergency Maintenance</strong></td>
+<td>As needed</td>
+<td>Ad-hoc</td>
+<td>Variable</td>
+</tr>
+<tr>
+<td><strong>Patch Window</strong></td>
+<td>[TODO: e.g., Tuesday 22:00-24:00]</td>
+<td>[TODO: e.g., Weekly]</td>
+<td>[TODO: e.g., 2 hours]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="support-model">Support Model</h3>
+<p><strong>Support Tiers:</strong>
+- <strong>Level 1 (Service Desk):</strong> Julia Becker - julia.becker@adminsend.de
+- <strong>Level 2 (IT Operations):</strong> Andreas Huemmer - andreas.huemmer@adminsend.de
+- <strong>Level 3 (Specialist/Vendor):</strong> [TODO: Specialist contact]</p>
+<p><strong>On-Call:</strong>
+- <strong>On-Call Rotation:</strong> [TODO: Describe rotation schedule]
+- <strong>Availability:</strong> [TODO: Phone/Pager number]
+- <strong>Response Time:</strong> [TODO: e.g., 15 minutes]</p>
+<hr />
+<h2 id="itil-processes">ITIL Processes</h2>
+<h3 id="service-strategy">Service Strategy</h3>
+<p><strong>Objective:</strong> Strategic alignment of IT services with business requirements</p>
+<p><strong>Activities:</strong>
+- Service Portfolio Management
+- Financial Management
+- Demand Management
+- Business Relationship Management</p>
+<p><strong>Responsible:</strong> Anna Schmidt</p>
+<h3 id="service-design">Service Design</h3>
+<p><strong>Objective:</strong> Design of new or changed services for production operation</p>
+<p><strong>Activities:</strong>
+- Service Catalogue Management
+- Service Level Management
+- Capacity Management
+- Availability Management
+- IT Service Continuity Management
+- Information Security Management
+- Supplier Management</p>
+<p><strong>Responsible:</strong> Andreas Huemmer</p>
+<h3 id="service-transition">Service Transition</h3>
+<p><strong>Objective:</strong> Transition of new or changed services into production</p>
+<p><strong>Activities:</strong>
+- Change Management (see Chapter 0140)
+- Release and Deployment Management
+- Service Validation and Testing
+- Knowledge Management
+- Configuration Management (see Chapter 0090)</p>
+<p><strong>Responsible:</strong> Andreas Huemmer</p>
+<h3 id="service-operation">Service Operation</h3>
+<p><strong>Objective:</strong> Ensure effective and efficient operation</p>
+<p><strong>Activities:</strong>
+- Incident Management (see Chapter 0120)
+- Problem Management (see Chapter 0130)
+- Event Management
+- Request Fulfillment
+- Access Management (see Chapter 0100)</p>
+<p><strong>Responsible:</strong> Julia Becker (Level 1), Andreas Huemmer (Level 2)</p>
+<h3 id="continual-service-improvement-csi">Continual Service Improvement (CSI)</h3>
+<p><strong>Objective:</strong> Continuous improvement of service quality</p>
+<p><strong>Activities:</strong>
+- Service Measurement and Reporting
+- Service Review
+- Process Improvement
+- Root Cause Analysis</p>
+<p><strong>Responsible:</strong> Anna Schmidt</p>
+<hr />
+<h2 id="process-interfaces">Process Interfaces</h2>
+<h3 id="interfaces-to-other-it-processes">Interfaces to Other IT Processes</h3>
+<table>
+<thead>
+<tr>
+<th>Process</th>
+<th>Interface</th>
+<th>Information Flow</th>
+<th>Responsible</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Incident Management</strong></td>
+<td>Incident reports → Operations</td>
+<td>Incidents, Workarounds</td>
+<td>Service Desk</td>
+</tr>
+<tr>
+<td><strong>Change Management</strong></td>
+<td>Change Requests → Operations</td>
+<td>Changes, RFCs</td>
+<td>CAB</td>
+</tr>
+<tr>
+<td><strong>Problem Management</strong></td>
+<td>Known Errors → Operations</td>
+<td>Problem Records, Solutions</td>
+<td>Problem Manager</td>
+</tr>
+<tr>
+<td><strong>Configuration Management</strong></td>
+<td>CI Updates → CMDB</td>
+<td>Configuration Items</td>
+<td>CMDB Manager</td>
+</tr>
+<tr>
+<td><strong>Capacity Management</strong></td>
+<td>Capacity data → Planning</td>
+<td>Performance Metrics</td>
+<td>Capacity Manager</td>
+</tr>
+<tr>
+<td><strong>Availability Management</strong></td>
+<td>Availability data → Reporting</td>
+<td>Availability Reports</td>
+<td>Availability Manager</td>
+</tr>
+<tr>
+<td><strong>Security Management</strong></td>
+<td>Security Events → Operations</td>
+<td>Security Incidents, Patches</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td><strong>Backup Management</strong></td>
+<td>Backup Status → Operations</td>
+<td>Backup Reports, Restore Requests</td>
+<td>Backup Administrator</td>
+</tr>
+</tbody>
+</table>
+<h3 id="interfaces-to-business-processes">Interfaces to Business Processes</h3>
+<table>
+<thead>
+<tr>
+<th>Business Process</th>
+<th>Interface</th>
+<th>Information Flow</th>
+<th>Contact Person</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Procurement</strong></td>
+<td>Hardware/Software Requirements</td>
+<td>Orders, Deliveries</td>
+<td>Procurement</td>
+</tr>
+<tr>
+<td><strong>Finance</strong></td>
+<td>Budget and Costs</td>
+<td>Cost Reports, Budget Requests</td>
+<td>Maria Müller</td>
+</tr>
+<tr>
+<td><strong>Compliance</strong></td>
+<td>Audit Requirements</td>
+<td>Audit Reports, Evidence</td>
+<td>Compliance Officer</td>
+</tr>
+<tr>
+<td><strong>HR</strong></td>
+<td>Employee Onboarding/Offboarding</td>
+<td>Access Management</td>
+<td>HR Department</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="escalation-paths">Escalation Paths</h2>
+<h3 id="technical-escalation">Technical Escalation</h3>
+<div class="codehilite"><pre><span></span><code><span class="err">┌─────────────────────────────────────────────────────────────┐</span>
+<span class="err">│</span><span class="w"> </span><span class="n">Level</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="w"> </span><span class="n">Service</span><span class="w"> </span><span class="n">Desk</span><span class="w">                                        </span><span class="err">│</span>
+<span class="err">│</span><span class="w"> </span><span class="n">Contact:</span><span class="w"> </span><span class="n">Julia</span><span class="w"> </span><span class="n">Becker</span><span class="w">                   </span><span class="err">│</span>
+<span class="err">│</span><span class="w"> </span><span class="n">Email:</span><span class="w"> </span><span class="n">julia</span><span class="o">.</span><span class="n">becker</span><span class="nv">@adminsend</span><span class="o">.</span><span class="n">de</span><span class="w">                    </span><span class="err">│</span>
+<span class="err">│</span><span class="w"> </span><span class="n">Phone:</span><span class="w"> </span><span class="o">+</span><span class="mi">49</span><span class="w"> </span><span class="mi">89</span><span class="w"> </span><span class="mi">12345678</span><span class="o">-</span><span class="mi">111</span><span class="w">                    </span><span class="err">│</span>
+<span class="err">│</span><span class="w"> </span><span class="n">Escalate</span><span class="w"> </span><span class="n">after:</span><span class="w"> </span><span class="mi">30</span><span class="w"> </span><span class="n">minutes</span><span class="w"> </span><span class="p">(</span><span class="n">P1</span><span class="p">),</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">hours</span><span class="w"> </span><span class="p">(</span><span class="n">P2</span><span class="p">)</span><span class="w">               </span><span class="err">│</span>
+<span class="err">└────────────────────┬────────────────────────────────────────┘</span>
+<span class="w">                     </span><span class="err">│</span>
+<span class="w">                     </span><span class="err">▼</span>
+<span class="err">┌─────────────────────────────────────────────────────────────┐</span>
+<span class="err">│</span><span class="w"> </span><span class="n">Level</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span><span class="w"> </span><span class="n">IT</span><span class="w"> </span><span class="n">Operations</span><span class="w">                                       </span><span class="err">│</span>
+<span class="err">│</span><span class="w"> </span><span class="n">Contact:</span><span class="w"> </span><span class="n">Andreas</span><span class="w"> </span><span class="n">Huemmer</span><span class="w">               </span><span class="err">│</span>
+<span class="err">│</span><span class="w"> </span><span class="n">Email:</span><span class="w"> </span><span class="n">andreas</span><span class="o">.</span><span class="n">huemmer</span><span class="nv">@adminsend</span><span class="o">.</span><span class="n">de</span><span class="w">                </span><span class="err">│</span>
+<span class="err">│</span><span class="w"> </span><span class="n">Phone:</span><span class="w"> </span><span class="o">+</span><span class="mi">49</span><span class="w"> </span><span class="mi">89</span><span class="w"> </span><span class="mi">12345678</span><span class="o">-</span><span class="mi">250</span><span class="w">                </span><span class="err">│</span>
+<span class="err">│</span><span class="w"> </span><span class="n">Escalate</span><span class="w"> </span><span class="n">after:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">hour</span><span class="w"> </span><span class="p">(</span><span class="n">P1</span><span class="p">),</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="n">hours</span><span class="w"> </span><span class="p">(</span><span class="n">P2</span><span class="p">)</span><span class="w">                   </span><span class="err">│</span>
+<span class="err">└────────────────────┬────────────────────────────────────────┘</span>
+<span class="w">                     </span><span class="err">│</span>
+<span class="w">                     </span><span class="err">▼</span>
+<span class="err">┌─────────────────────────────────────────────────────────────┐</span>
+<span class="err">│</span><span class="w"> </span><span class="n">Level</span><span class="w"> </span><span class="mi">3</span><span class="p">:</span><span class="w"> </span><span class="n">Specialist</span><span class="o">/</span><span class="n">Vendor</span><span class="w">                                   </span><span class="err">│</span>
+<span class="err">│</span><span class="w"> </span><span class="n">Contact:</span><span class="w"> </span><span class="p">[</span><span class="n">TODO:</span><span class="w"> </span><span class="n">Specialist</span><span class="w"> </span><span class="n">name</span><span class="p">]</span><span class="w">                             </span><span class="err">│</span>
+<span class="err">│</span><span class="w"> </span><span class="n">Email:</span><span class="w"> </span><span class="p">[</span><span class="n">TODO:</span><span class="w"> </span><span class="n">Specialist</span><span class="w"> </span><span class="n">email</span><span class="p">]</span><span class="w">                              </span><span class="err">│</span>
+<span class="err">│</span><span class="w"> </span><span class="n">Phone:</span><span class="w"> </span><span class="p">[</span><span class="n">TODO:</span><span class="w"> </span><span class="n">Specialist</span><span class="w"> </span><span class="n">phone</span><span class="p">]</span><span class="w">                              </span><span class="err">│</span>
+<span class="err">│</span><span class="w"> </span><span class="n">Escalate</span><span class="w"> </span><span class="n">after:</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">hours</span><span class="w"> </span><span class="p">(</span><span class="n">P1</span><span class="p">),</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="n">hours</span><span class="w"> </span><span class="p">(</span><span class="n">P2</span><span class="p">)</span><span class="w">                  </span><span class="err">│</span>
+<span class="err">└─────────────────────────────────────────────────────────────┘</span>
+</code></pre></div>
+
+<h3 id="management-escalation">Management Escalation</h3>
+<div class="codehilite"><pre><span></span><code><span class="err">┌─────────────────────────────────────────────────────────────┐</span>
+<span class="err">│</span><span class="w"> </span><span class="k">Level</span><span class="w"> </span><span class="mi">1</span><span class="err">:</span><span class="w"> </span><span class="n">IT</span><span class="w"> </span><span class="n">Operations</span><span class="w"> </span><span class="n">Manager</span><span class="w">                               </span><span class="err">│</span>
+<span class="err">│</span><span class="w"> </span><span class="nl">Contact</span><span class="p">:</span><span class="w"> </span><span class="n">Andreas</span><span class="w"> </span><span class="n">Huemmer</span><span class="w">               </span><span class="err">│</span>
+<span class="err">│</span><span class="w"> </span><span class="nl">Email</span><span class="p">:</span><span class="w"> </span><span class="n">andreas</span><span class="p">.</span><span class="n">huemmer</span><span class="nv">@adminsend</span><span class="p">.</span><span class="n">de</span><span class="w">                </span><span class="err">│</span>
+<span class="err">│</span><span class="w"> </span><span class="n">Escalate</span><span class="w"> </span><span class="k">for</span><span class="err">:</span><span class="w"> </span><span class="n">Critical</span><span class="w"> </span><span class="n">Incidents</span><span class="w"> </span><span class="p">(</span><span class="n">P1</span><span class="p">),</span><span class="w"> </span><span class="n">SLA</span><span class="w"> </span><span class="n">Violation</span><span class="w">        </span><span class="err">│</span>
+<span class="err">└────────────────────┬────────────────────────────────────────┘</span>
+<span class="w">                     </span><span class="err">│</span>
+<span class="w">                     </span><span class="err">▼</span>
+<span class="err">┌─────────────────────────────────────────────────────────────┐</span>
+<span class="err">│</span><span class="w"> </span><span class="k">Level</span><span class="w"> </span><span class="mi">2</span><span class="err">:</span><span class="w"> </span><span class="n">Chief</span><span class="w"> </span><span class="n">Information</span><span class="w"> </span><span class="n">Officer</span><span class="w"> </span><span class="p">(</span><span class="n">CIO</span><span class="p">)</span><span class="w">                     </span><span class="err">│</span>
+<span class="err">│</span><span class="w"> </span><span class="nl">Contact</span><span class="p">:</span><span class="w"> </span><span class="n">Anna</span><span class="w"> </span><span class="n">Schmidt</span><span class="w">                                 </span><span class="err">│</span>
+<span class="err">│</span><span class="w"> </span><span class="nl">Email</span><span class="p">:</span><span class="w"> </span><span class="n">anna</span><span class="p">.</span><span class="n">schmidt</span><span class="nv">@adminsend</span><span class="p">.</span><span class="n">de</span><span class="w">                                  </span><span class="err">│</span>
+<span class="err">│</span><span class="w"> </span><span class="n">Escalate</span><span class="w"> </span><span class="k">for</span><span class="err">:</span><span class="w"> </span><span class="n">Major</span><span class="w"> </span><span class="n">Incidents</span><span class="p">,</span><span class="w"> </span><span class="n">Business</span><span class="w"> </span><span class="n">Impact</span><span class="w">              </span><span class="err">│</span>
+<span class="err">└────────────────────┬────────────────────────────────────────┘</span>
+<span class="w">                     </span><span class="err">│</span>
+<span class="w">                     </span><span class="err">▼</span>
+<span class="err">┌─────────────────────────────────────────────────────────────┐</span>
+<span class="err">│</span><span class="w"> </span><span class="k">Level</span><span class="w"> </span><span class="mi">3</span><span class="err">:</span><span class="w"> </span><span class="n">Chief</span><span class="w"> </span><span class="n">Executive</span><span class="w"> </span><span class="n">Officer</span><span class="w"> </span><span class="p">(</span><span class="n">CEO</span><span class="p">)</span><span class="w">                       </span><span class="err">│</span>
+<span class="err">│</span><span class="w"> </span><span class="nl">Contact</span><span class="p">:</span><span class="w"> </span><span class="nf">Max</span><span class="w"> </span><span class="n">Mustermann</span><span class="w">                                 </span><span class="err">│</span>
+<span class="err">│</span><span class="w"> </span><span class="nl">Email</span><span class="p">:</span><span class="w"> </span><span class="nf">max</span><span class="p">.</span><span class="n">mustermann</span><span class="nv">@adminsend</span><span class="p">.</span><span class="n">de</span><span class="w">                                  </span><span class="err">│</span>
+<span class="err">│</span><span class="w"> </span><span class="n">Escalate</span><span class="w"> </span><span class="k">for</span><span class="err">:</span><span class="w"> </span><span class="n">Business</span><span class="o">-</span><span class="n">critical</span><span class="w"> </span><span class="n">outages</span><span class="w">                     </span><span class="err">│</span>
+<span class="err">└─────────────────────────────────────────────────────────────┘</span>
+</code></pre></div>
+
+<h3 id="escalation-criteria">Escalation Criteria</h3>
+<table>
+<thead>
+<tr>
+<th>Priority</th>
+<th>Technical Escalation</th>
+<th>Management Escalation</th>
+<th>Timeframe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>P1 (Critical)</strong></td>
+<td>After 30 min (L1→L2), 1h (L2→L3)</td>
+<td>Immediately to IT Ops Manager</td>
+<td>Immediate</td>
+</tr>
+<tr>
+<td><strong>P2 (High)</strong></td>
+<td>After 2h (L1→L2), 4h (L2→L3)</td>
+<td>After 4 hours to IT Ops Manager</td>
+<td>4 hours</td>
+</tr>
+<tr>
+<td><strong>P3 (Medium)</strong></td>
+<td>After 8h (L1→L2), 1 day (L2→L3)</td>
+<td>After 1 day to IT Ops Manager</td>
+<td>1 day</td>
+</tr>
+<tr>
+<td><strong>P4 (Low)</strong></td>
+<td>After 2 days (L1→L2)</td>
+<td>No automatic escalation</td>
+<td>2 days</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="operational-process-overview">Operational Process Overview</h2>
+<h3 id="daily-operating-routines">Daily Operating Routines</h3>
+<p><strong>Morning Check (08:00):</strong>
+- [ ] Check monitoring dashboards
+- [ ] Verify backup status
+- [ ] Review open incidents
+- [ ] Perform system health check
+- [ ] Check log files for anomalies</p>
+<p><strong>Daily Operations:</strong>
+- [ ] Process incidents by priority
+- [ ] Implement changes
+- [ ] Monitor and alerting oversight
+- [ ] Update documentation
+- [ ] Communicate with stakeholders</p>
+<p><strong>Evening Check (18:00):</strong>
+- [ ] Close or hand over daily incidents
+- [ ] Initiate backup runs
+- [ ] Prepare maintenance work
+- [ ] Handover to night shift (if 24/7)
+- [ ] Create daily report</p>
+<h3 id="weekly-activities">Weekly Activities</h3>
+<ul>
+<li>[ ] Service review meeting (Monday)</li>
+<li>[ ] Patch management (Tuesday evening)</li>
+<li>[ ] Capacity review (Wednesday)</li>
+<li>[ ] Problem management meeting (Thursday)</li>
+<li>[ ] Week closing and reporting (Friday)</li>
+</ul>
+<h3 id="monthly-activities">Monthly Activities</h3>
+<ul>
+<li>[ ] Service level reporting</li>
+<li>[ ] Capacity planning</li>
+<li>[ ] Security patch review</li>
+<li>[ ] Disaster recovery test</li>
+<li>[ ] Compliance check</li>
+<li>[ ] Vendor review</li>
+</ul>
+<hr />
+<h2 id="process-metrics-and-kpis">Process Metrics and KPIs</h2>
+<h3 id="operating-metrics">Operating Metrics</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th style="text-align: right;">Target Value</th>
+<th>Measurement Frequency</th>
+<th>Responsible</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Service Availability</strong></td>
+<td style="text-align: right;">≥ 99.5%</td>
+<td>Daily</td>
+<td>IT Operations</td>
+</tr>
+<tr>
+<td><strong>Mean Time To Repair (MTTR)</strong></td>
+<td style="text-align: right;">≤ 4 hours</td>
+<td>Per Incident</td>
+<td>Service Desk</td>
+</tr>
+<tr>
+<td><strong>Mean Time Between Failures (MTBF)</strong></td>
+<td style="text-align: right;">≥ 720 hours</td>
+<td>Monthly</td>
+<td>IT Operations</td>
+</tr>
+<tr>
+<td><strong>First Call Resolution Rate</strong></td>
+<td style="text-align: right;">≥ 70%</td>
+<td>Weekly</td>
+<td>Service Desk</td>
+</tr>
+<tr>
+<td><strong>Change Success Rate</strong></td>
+<td style="text-align: right;">≥ 95%</td>
+<td>Monthly</td>
+<td>Change Manager</td>
+</tr>
+<tr>
+<td><strong>Backup Success Rate</strong></td>
+<td style="text-align: right;">100%</td>
+<td>Daily</td>
+<td>Backup Admin</td>
+</tr>
+</tbody>
+</table>
+<h3 id="process-kpis">Process KPIs</h3>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th style="text-align: right;">Target Value</th>
+<th>Measurement Frequency</th>
+<th>Responsible</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Incident Resolution Time (P1)</strong></td>
+<td style="text-align: right;">≤ 4 hours</td>
+<td>Per Incident</td>
+<td>Service Desk</td>
+</tr>
+<tr>
+<td><strong>Incident Resolution Time (P2)</strong></td>
+<td style="text-align: right;">≤ 8 hours</td>
+<td>Per Incident</td>
+<td>Service Desk</td>
+</tr>
+<tr>
+<td><strong>Change Lead Time</strong></td>
+<td style="text-align: right;">≤ 5 days</td>
+<td>Per Change</td>
+<td>Change Manager</td>
+</tr>
+<tr>
+<td><strong>Problem Resolution Time</strong></td>
+<td style="text-align: right;">≤ 30 days</td>
+<td>Per Problem</td>
+<td>Problem Manager</td>
+</tr>
+<tr>
+<td><strong>SLA Compliance</strong></td>
+<td style="text-align: right;">≥ 98%</td>
+<td>Monthly</td>
+<td>Service Manager</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="continuous-improvement">Continuous Improvement</h2>
+<h3 id="csi-process">CSI Process</h3>
+<ol>
+<li><strong>Identification:</strong> Identify improvement opportunities</li>
+<li><strong>Analysis:</strong> Conduct root cause analysis</li>
+<li><strong>Planning:</strong> Plan improvement measures</li>
+<li><strong>Implementation:</strong> Implement measures</li>
+<li><strong>Measurement:</strong> Measure and validate success</li>
+<li><strong>Review:</strong> Review and document results</li>
+</ol>
+<h3 id="improvement-sources">Improvement Sources</h3>
+<ul>
+<li>Incident analyses and trends</li>
+<li>Problem management insights</li>
+<li>Service review meetings</li>
+<li>Customer feedback</li>
+<li>Audit results</li>
+<li>Benchmark comparisons</li>
+</ul>
+<h3 id="improvement-register">Improvement Register</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Improvement</th>
+<th>Priority</th>
+<th>Status</th>
+<th>Responsible</th>
+<th>Target Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CSI-001</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>CSI-002</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="documentation-and-knowledge-management">Documentation and Knowledge Management</h2>
+<h3 id="documentation-repository">Documentation Repository</h3>
+<ul>
+<li><strong>Operations Manuals:</strong> Central repository for all operational documents</li>
+<li><strong>Runbooks:</strong> Standardized procedure descriptions</li>
+<li><strong>Known Error Database:</strong> Known errors and solutions</li>
+<li><strong>Configuration Management Database (CMDB):</strong> CI documentation</li>
+<li><strong>Change History:</strong> Documentation of all changes</li>
+</ul>
+<h3 id="knowledge-transfer">Knowledge Transfer</h3>
+<ul>
+<li><strong>Onboarding:</strong> Training of new employees</li>
+<li><strong>Training:</strong> Regular training sessions</li>
+<li><strong>Documentation:</strong> Continuous documentation</li>
+<li><strong>Knowledge Sharing:</strong> Team meetings and workshops</li>
+<li><strong>Lessons Learned:</strong> Post-incident reviews</li>
+</ul>
+<hr />
+<h2 id="compliance-and-governance">Compliance and Governance</h2>
+<h3 id="relevant-standards">Relevant Standards</h3>
+<ul>
+<li><strong>ITIL v4:</strong> IT Service Management Framework</li>
+<li><strong>ISO 20000:</strong> IT Service Management Standard</li>
+<li><strong>ISO 27001:</strong> Information Security Management</li>
+<li><strong>COBIT 2019:</strong> IT Governance Framework</li>
+</ul>
+<h3 id="audit-requirements">Audit Requirements</h3>
+<ul>
+<li>Documentation of all operational processes</li>
+<li>Demonstrable compliance with SLAs</li>
+<li>Change management protocols</li>
+<li>Incident management reports</li>
+<li>Compliance evidence</li>
+</ul>
+<hr />
+<h2 id="contacts">Contacts</h2>
+<p><strong>Operations Responsible:</strong>
+- <strong>IT Operations Manager:</strong> Andreas Huemmer - andreas.huemmer@adminsend.de
+- <strong>Service Desk Lead:</strong> Julia Becker - julia.becker@adminsend.de
+- <strong>CIO:</strong> Anna Schmidt - anna.schmidt@adminsend.de</p>
+<p><strong>Additional Contacts:</strong> See Chapter 0270 (Contacts, Escalation and Vendors)</p>
+<hr />
+<p><strong>Document Owner:</strong> IT Operations Manager<br />
+<strong>Approved by:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Organization:</strong> AdminSend GmbH</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0060_Roles_and_Responsibilities.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0080_Operations_Handover_and_GoLive_Checklist.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

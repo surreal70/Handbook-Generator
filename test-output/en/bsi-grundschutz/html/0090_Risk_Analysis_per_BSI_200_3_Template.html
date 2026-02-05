@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0090 - Risk Analysis (BSI Standard 200-3) – Template</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0090</div>
+            <h1>Risk Analysis (BSI Standard 200-3) – Template</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0080_Basic_Security_Check_Gap_Analysis_Template.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0100_Security_Concept_and_Action_Plan.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="risk-analysis-bsi-standard-200-3-template">Risk Analysis (BSI Standard 200-3) – Template</h1>
+<p><strong>Document ID:</strong> 0090<br />
+<strong>Document Type:</strong> Methodology Artifact<br />
+<strong>Reference Framework:</strong> BSI IT-Grundschutz (BSI Standard 200-3)<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> {{ meta.document.status }}<br />
+<strong>Classification:</strong> internal<br />
+<strong>Last Updated:</strong> {{ meta.document.last_updated }}<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-objective-and-trigger">1. Objective and Trigger</h2>
+<p>The risk analysis according to BSI Standard 200-3 identifies and assesses risks for <strong>AdminSend GmbH</strong> that are not covered by IT-Grundschutz modules.</p>
+<p><strong>Responsible:</strong> Thomas Weber (ISB)</p>
+<p><strong>Triggers for Risk Analysis:</strong>
+- High or very high protection need (see Document 0060)
+- Special threat situation (e.g., targeted attacks)
+- Deviations from IT-Grundschutz requirements
+- New technologies without suitable modules
+- External requirements (customers, regulation)</p>
+<p>[TODO: Document specific triggers for this risk analysis]</p>
+<h2 id="2-risk-objects-and-scope">2. Risk Objects and Scope</h2>
+<p><strong>Affected Objects:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Object ID</th>
+<th>Object</th>
+<th>Type</th>
+<th>Protection Need</th>
+<th>Justification for Risk Analysis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Process/Application/System</td>
+<td>Very high</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Process/Application/System</td>
+<td>Very high</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Interfaces and Providers:</strong>
+- [TODO: Document external interfaces and service providers]</p>
+<h2 id="3-threats-vulnerabilities-and-scenarios">3. Threats, Vulnerabilities and Scenarios</h2>
+<h3 id="31-threat-catalog">3.1 Threat Catalog</h3>
+<table>
+<thead>
+<tr>
+<th>Threat ID</th>
+<th>Threat</th>
+<th>Category</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T-001</td>
+<td>Targeted Cyber Attacks</td>
+<td>External</td>
+<td>APT attacks on critical systems</td>
+</tr>
+<tr>
+<td>T-002</td>
+<td>Ransomware</td>
+<td>External</td>
+<td>Encryption of critical data</td>
+</tr>
+<tr>
+<td>T-003</td>
+<td>Insider Threat</td>
+<td>Internal</td>
+<td>Abuse of privileged access</td>
+</tr>
+<tr>
+<td>T-004</td>
+<td>DDoS Attacks</td>
+<td>External</td>
+<td>Availability impairment</td>
+</tr>
+<tr>
+<td>T-005</td>
+<td>Supply Chain Attacks</td>
+<td>External</td>
+<td>Compromise via suppliers</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-vulnerability-catalog">3.2 Vulnerability Catalog</h3>
+<table>
+<thead>
+<tr>
+<th>Vulnerability ID</th>
+<th>Vulnerability</th>
+<th>Object</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>V-001</td>
+<td>Insufficient Segmentation</td>
+<td>Network</td>
+<td>Missing microsegmentation</td>
+</tr>
+<tr>
+<td>V-002</td>
+<td>Missing MFA</td>
+<td>VPN Access</td>
+<td>Password-only authentication</td>
+</tr>
+<tr>
+<td>V-003</td>
+<td>Outdated Software</td>
+<td>[TODO: System]</td>
+<td>End-of-life software in use</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="33-risk-scenarios">3.3 Risk Scenarios</h3>
+<table>
+<thead>
+<tr>
+<th>Scenario ID</th>
+<th>Scenario</th>
+<th>Threat</th>
+<th>Vulnerability</th>
+<th>Affected Object</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S-001</td>
+<td>Ransomware attack on production systems</td>
+<td>T-002</td>
+<td>V-001, V-002</td>
+<td>[TODO: Production system]</td>
+</tr>
+<tr>
+<td>S-002</td>
+<td>Data theft by insider</td>
+<td>T-003</td>
+<td>V-002</td>
+<td>[TODO: Database]</td>
+</tr>
+<tr>
+<td>S-003</td>
+<td>DDoS on public services</td>
+<td>T-004</td>
+<td>[TODO]</td>
+<td>[TODO: Web server]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-risk-assessment">4. Risk Assessment</h2>
+<h3 id="41-assessment-scale">4.1 Assessment Scale</h3>
+<p><strong>Likelihood:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Description</th>
+<th>Frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 - Very Low</td>
+<td>Unlikely</td>
+<td>&lt; 1x in 10 years</td>
+</tr>
+<tr>
+<td>2 - Low</td>
+<td>Rare</td>
+<td>1x in 5-10 years</td>
+</tr>
+<tr>
+<td>3 - Medium</td>
+<td>Occasional</td>
+<td>1x in 1-5 years</td>
+</tr>
+<tr>
+<td>4 - High</td>
+<td>Probable</td>
+<td>1x per year</td>
+</tr>
+<tr>
+<td>5 - Very High</td>
+<td>Very probable</td>
+<td>Multiple times per year</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Impact (Damage Level):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Description</th>
+<th>Financial Impact</th>
+<th>Business Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 - Very Low</td>
+<td>Negligible</td>
+<td>&lt; 10,000 €</td>
+<td>No significant impairment</td>
+</tr>
+<tr>
+<td>2 - Low</td>
+<td>Limited</td>
+<td>10,000 - 50,000 €</td>
+<td>Minor impairment</td>
+</tr>
+<tr>
+<td>3 - Medium</td>
+<td>Considerable</td>
+<td>50,000 - 250,000 €</td>
+<td>Noticeable impairment</td>
+</tr>
+<tr>
+<td>4 - High</td>
+<td>Severe</td>
+<td>250,000 - 1,000,000 €</td>
+<td>Significant impairment</td>
+</tr>
+<tr>
+<td>5 - Very High</td>
+<td>Catastrophic</td>
+<td>&gt; 1,000,000 €</td>
+<td>Existential threat</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Risk Matrix:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Likelihood</th>
+<th>Impact 1</th>
+<th>Impact 2</th>
+<th>Impact 3</th>
+<th>Impact 4</th>
+<th>Impact 5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5 - Very High</td>
+<td>Medium</td>
+<td>High</td>
+<td>High</td>
+<td>Very High</td>
+<td>Very High</td>
+</tr>
+<tr>
+<td>4 - High</td>
+<td>Medium</td>
+<td>Medium</td>
+<td>High</td>
+<td>High</td>
+<td>Very High</td>
+</tr>
+<tr>
+<td>3 - Medium</td>
+<td>Low</td>
+<td>Medium</td>
+<td>Medium</td>
+<td>High</td>
+<td>High</td>
+</tr>
+<tr>
+<td>2 - Low</td>
+<td>Low</td>
+<td>Low</td>
+<td>Medium</td>
+<td>Medium</td>
+<td>High</td>
+</tr>
+<tr>
+<td>1 - Very Low</td>
+<td>Low</td>
+<td>Low</td>
+<td>Low</td>
+<td>Medium</td>
+<td>Medium</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-risk-acceptance-criteria">4.2 Risk Acceptance Criteria</h3>
+<table>
+<thead>
+<tr>
+<th>Risk Level</th>
+<th>Treatment</th>
+<th>Approval Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Very High</strong></td>
+<td>Must be treated</td>
+<td>Executive Management</td>
+</tr>
+<tr>
+<td><strong>High</strong></td>
+<td>Should be treated</td>
+<td>ISB</td>
+</tr>
+<tr>
+<td><strong>Medium</strong></td>
+<td>Can be treated</td>
+<td>ISB</td>
+</tr>
+<tr>
+<td><strong>Low</strong></td>
+<td>Can be accepted</td>
+<td>Information Domain Responsible</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-risk-register">5. Risk Register</h2>
+<table>
+<thead>
+<tr>
+<th>Risk ID</th>
+<th>Object</th>
+<th>Scenario</th>
+<th>Threat</th>
+<th>Vulnerability</th>
+<th>Existing Measures</th>
+<th>Likelihood</th>
+<th>Impact</th>
+<th>Risk (Before)</th>
+<th>Treatment</th>
+<th>Additional Measure</th>
+<th>Owner</th>
+<th>Deadline</th>
+<th>Risk (After)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R-001</td>
+<td>[TODO]</td>
+<td>S-001</td>
+<td>T-002</td>
+<td>V-001, V-002</td>
+<td>Antivirus, Backup</td>
+<td>4</td>
+<td>5</td>
+<td>Very High</td>
+<td>Mitigate</td>
+<td>Microsegmentation, MFA</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>R-002</td>
+<td>[TODO]</td>
+<td>S-002</td>
+<td>T-003</td>
+<td>V-002</td>
+<td>Logging, IAM</td>
+<td>3</td>
+<td>4</td>
+<td>High</td>
+<td>Mitigate</td>
+<td>PAM, DLP</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>R-003</td>
+<td>[TODO]</td>
+<td>S-003</td>
+<td>T-004</td>
+<td>[TODO]</td>
+<td>Firewall</td>
+<td>3</td>
+<td>3</td>
+<td>Medium</td>
+<td>Mitigate</td>
+<td>DDoS Protection</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Risk Treatment Options:</strong>
+- <strong>Mitigate:</strong> Implement additional measures
+- <strong>Avoid:</strong> Eliminate risk source
+- <strong>Transfer:</strong> Transfer risk to third parties (insurance, outsourcing)
+- <strong>Accept:</strong> Consciously accept risk (with approval)</p>
+<h2 id="6-risk-assessment-summary">6. Risk Assessment: Summary</h2>
+<p><strong>Risk Distribution (Before Treatment):</strong>
+- Very High: [TODO]
+- High: [TODO]
+- Medium: [TODO]
+- Low: [TODO]</p>
+<p><strong>Risk Distribution (After Treatment):</strong>
+- Very High: [TODO]
+- High: [TODO]
+- Medium: [TODO]
+- Low: [TODO]</p>
+<p><strong>Top 5 Risks:</strong>
+1. [TODO: Risk 1]
+2. [TODO: Risk 2]
+3. [TODO: Risk 3]
+4. [TODO: Risk 4]
+5. [TODO: Risk 5]</p>
+<h2 id="7-approval-and-risk-acceptance">7. Approval and Risk Acceptance</h2>
+<h3 id="71-risk-owners">7.1 Risk Owners</h3>
+<table>
+<thead>
+<tr>
+<th>Risk ID</th>
+<th>Risk</th>
+<th>Risk Owner</th>
+<th>Acceptance</th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R-001</td>
+<td>[TODO]</td>
+<td>Max Mustermann</td>
+<td>Accepted after measure implementation</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>R-002</td>
+<td>[TODO]</td>
+<td>Thomas Weber</td>
+<td>Accepted after measure implementation</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="72-management-approval">7.2 Management Approval</h3>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Name</th>
+<th>Date</th>
+<th>Approval</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ISB</td>
+<td>Thomas Weber</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+<tr>
+<td>IT Management</td>
+<td>Anna Schmidt</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+<tr>
+<td>Executive Management</td>
+<td>Max Mustermann</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+</tbody>
+</table>
+<h2 id="8-update-and-maintenance">8. Update and Maintenance</h2>
+<p>The risk analysis is updated when:
+- Significant changes in the threat landscape occur
+- New vulnerabilities or security incidents emerge
+- Changes to the information domain occur
+- At least annually as part of the ISMS review</p>
+<p><strong>Responsible:</strong> Thomas Weber (ISB)<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<p><strong>References:</strong>
+- BSI Standard 200-3: Risk Analysis based on IT-Grundschutz
+- BSI IT-Grundschutz Compendium</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0080_Basic_Security_Check_Gap_Analysis_Template.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0100_Security_Concept_and_Action_Plan.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

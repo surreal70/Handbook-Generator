@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0690 - Richtlinie: Sicherheitsanforderungen im Projektlebenszyklus</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0690</div>
+            <h1>Richtlinie: Sicherheitsanforderungen im Projektlebenszyklus</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0680_Policy_Security_in_Projects.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0710_Anhang_AnnexA_Mapping_Template.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="richtlinie-sicherheitsanforderungen-im-projektlebenszyklus">Richtlinie: Sicherheitsanforderungen im Projektlebenszyklus</h1>
+<p><strong>Dokument-ID:</strong> 0690<br />
+<strong>Dokumenttyp:</strong> Richtlinie (detailliert)<br />
+<strong>Zugehörige Policy:</strong> 0680_Policy_Security_in_Projects.md<br />
+<strong>Standard-Referenz:</strong> ISO/IEC 27001:2022 Annex A.5.8<br />
+<strong>Owner:</strong> {{ meta.pmo.manager }}<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Freigegeben<br />
+<strong>Klassifizierung:</strong> Intern<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.date }}</p>
+<hr />
+<h2 id="1-zweck-und-geltungsbereich">1. Zweck und Geltungsbereich</h2>
+<p>Diese Richtlinie konkretisiert die <code>0680_Policy_Security_in_Projects.md</code> und definiert:
+- Security-Anforderungen in allen Projektphasen
+- Security-Reviews und -Gateways
+- Security-by-Design-Prinzipien</p>
+<p><strong>Geltungsbereich:</strong> Alle IT-Projekte bei <strong>AdminSend GmbH</strong></p>
+<h2 id="2-projektklassifizierung">2. Projektklassifizierung</h2>
+<h3 id="21-projekt-kategorien">2.1 Projekt-Kategorien</h3>
+<p><strong>Kategorie A (Kritisch):</strong>
+- Neue Systeme mit vertraulichen Daten
+- Internet-facing Anwendungen
+- Kritische Infrastruktur
+- <strong>Security-Involvement:</strong> Umfassend</p>
+<p><strong>Kategorie B (Hoch):</strong>
+- Interne Anwendungen mit sensiblen Daten
+- Änderungen an kritischen Systemen
+- <strong>Security-Involvement:</strong> Detailliert</p>
+<p><strong>Kategorie C (Standard):</strong>
+- Standard-IT-Projekte
+- Infrastruktur-Upgrades
+- <strong>Security-Involvement:</strong> Standard</p>
+<p><strong>Kategorie D (Niedrig):</strong>
+- Kleine Änderungen
+- Nicht-kritische Systeme
+- <strong>Security-Involvement:</strong> Minimal</p>
+<h3 id="22-klassifizierungskriterien">2.2 Klassifizierungskriterien</h3>
+<p><strong>Bewertung:</strong>
+- Datenklassifizierung (Vertraulich/Streng Vertraulich = höhere Kategorie)
+- Internet-Exposition (Ja = höhere Kategorie)
+- Anzahl Nutzer (&gt; 100 = höhere Kategorie)
+- Compliance-Anforderungen (DSGVO, PCI-DSS = höhere Kategorie)</p>
+<h2 id="3-projektphasen-und-security-aktivitaten">3. Projektphasen und Security-Aktivitäten</h2>
+<h3 id="31-initiierung">3.1 Initiierung</h3>
+<p><strong>Security-Aktivitäten:</strong>
+- Projekt-Klassifizierung
+- Security-Stakeholder identifizieren
+- Initiales Security-Budget</p>
+<p><strong>Deliverables:</strong>
+- Projekt-Klassifizierung
+- Security-Kontaktperson</p>
+<p><strong>Security-Gateway:</strong> Keine (Informativ)</p>
+<h3 id="32-planung">3.2 Planung</h3>
+<p><strong>Security-Aktivitäten:</strong>
+- Security-Anforderungen definieren
+- Threat Modeling (Kategorie A/B)
+- Datenschutz-Folgenabschätzung (DSFA) bei Bedarf
+- Security-Architektur-Review
+- Security-Testing-Plan</p>
+<p><strong>Deliverables:</strong>
+- Security-Requirements-Dokument
+- Threat Model (Kategorie A/B)
+- DSFA (falls erforderlich)
+- Security-Test-Plan</p>
+<p><strong>Security-Gateway 1:</strong>
+- <strong>Kategorie A/B:</strong> Verpflichtend
+- <strong>Genehmiger:</strong> CISO oder Security-Architekt
+- <strong>Kriterien:</strong> Security-Requirements vollständig, Threat Model akzeptabel</p>
+<h3 id="33-design">3.3 Design</h3>
+<p><strong>Security-Aktivitäten:</strong>
+- Security-Architecture-Review
+- Secure-Design-Patterns anwenden
+- Authentifizierung/Autorisierung-Design
+- Verschlüsselungs-Design
+- Logging/Monitoring-Design</p>
+<p><strong>Deliverables:</strong>
+- Security-Architecture-Dokument
+- Data Flow Diagrams
+- Authentication/Authorization-Design</p>
+<p><strong>Security-Gateway 2:</strong>
+- <strong>Kategorie A:</strong> Verpflichtend
+- <strong>Genehmiger:</strong> CISO und Security-Architekt
+- <strong>Kriterien:</strong> Security-Architecture akzeptabel, keine kritischen Schwachstellen im Design</p>
+<h3 id="34-entwicklungbeschaffung">3.4 Entwicklung/Beschaffung</h3>
+<p><strong>Security-Aktivitäten (Entwicklung):</strong>
+- Secure Coding Standards befolgen
+- Code-Reviews (inkl. Security-Review)
+- SAST (Static Application Security Testing)
+- Dependency-Scanning
+- Secrets-Management</p>
+<p><strong>Security-Aktivitäten (Beschaffung):</strong>
+- Vendor-Security-Assessment
+- Vertragsprüfung (Security-Klauseln)
+- Auftragsverarbeitungsvertrag (AVV) bei Bedarf</p>
+<p><strong>Deliverables:</strong>
+- Code-Review-Berichte
+- SAST-Berichte
+- Vendor-Assessment (bei Beschaffung)</p>
+<p><strong>Details:</strong> Siehe <code>0390_Richtlinie_Secure_SDLC</code> und <code>0470_Richtlinie_Third_Party_Risk_Assessment</code></p>
+<h3 id="35-testing">3.5 Testing</h3>
+<p><strong>Security-Testing:</strong>
+- DAST (Dynamic Application Security Testing)
+- Penetration-Testing (Kategorie A/B)
+- Security-Test-Cases
+- Vulnerability-Scanning</p>
+<p><strong>Deliverables:</strong>
+- DAST-Berichte
+- Penetration-Test-Bericht (Kategorie A/B)
+- Security-Test-Ergebnisse</p>
+<p><strong>Security-Gateway 3:</strong>
+- <strong>Kategorie A/B:</strong> Verpflichtend
+- <strong>Genehmiger:</strong> CISO
+- <strong>Kriterien:</strong> Keine kritischen/hohen Schwachstellen, alle Security-Tests bestanden</p>
+<h3 id="36-deployment">3.6 Deployment</h3>
+<p><strong>Security-Aktivitäten:</strong>
+- Security-Configuration-Review
+- Hardening gemäß Baseline
+- Firewall-Regeln konfigurieren
+- Monitoring/Alerting einrichten
+- Backup konfigurieren</p>
+<p><strong>Deliverables:</strong>
+- Security-Configuration-Checkliste
+- Firewall-Regeln-Dokumentation
+- Monitoring-Setup-Dokumentation</p>
+<p><strong>Security-Gateway 4 (Go-Live):</strong>
+- <strong>Kategorie A/B:</strong> Verpflichtend
+- <strong>Genehmiger:</strong> CISO
+- <strong>Kriterien:</strong> Security-Configuration korrekt, Monitoring aktiv, keine offenen kritischen Findings</p>
+<h3 id="37-betrieb-und-wartung">3.7 Betrieb und Wartung</h3>
+<p><strong>Security-Aktivitäten:</strong>
+- Regelmäßige Vulnerability-Scans
+- Patch-Management
+- Security-Incident-Monitoring
+- Jährlicher Security-Review (Kategorie A)</p>
+<p><strong>Deliverables:</strong>
+- Vulnerability-Scan-Berichte
+- Patch-Compliance-Berichte
+- Incident-Reports</p>
+<h3 id="38-auerbetriebnahme">3.8 Außerbetriebnahme</h3>
+<p><strong>Security-Aktivitäten:</strong>
+- Daten-Backup (falls erforderlich)
+- Sichere Daten-Löschung
+- Zugriffe widerrufen
+- Firewall-Regeln entfernen
+- Dokumentation archivieren</p>
+<p><strong>Deliverables:</strong>
+- Löschprotokoll
+- Decommissioning-Checkliste</p>
+<h2 id="4-security-by-design-prinzipien">4. Security-by-Design-Prinzipien</h2>
+<h3 id="41-least-privilege">4.1 Least Privilege</h3>
+<p><strong>Prinzip:</strong> Minimale erforderliche Berechtigungen</p>
+<p><strong>Umsetzung:</strong>
+- Rollenbasierte Zugriffskontrolle (RBAC)
+- Keine Default-Admin-Accounts
+- Just-in-Time (JIT) Access für privilegierte Operationen</p>
+<h3 id="42-defense-in-depth">4.2 Defense in Depth</h3>
+<p><strong>Prinzip:</strong> Mehrere Sicherheitsschichten</p>
+<p><strong>Umsetzung:</strong>
+- Netzwerk-Segmentierung
+- Firewall + IDS/IPS
+- Endpoint-Protection + EDR
+- Application-Security + WAF</p>
+<h3 id="43-fail-secure">4.3 Fail Secure</h3>
+<p><strong>Prinzip:</strong> Bei Fehler in sicheren Zustand</p>
+<p><strong>Umsetzung:</strong>
+- Default Deny (Firewall, Zugriffskontrolle)
+- Fehler führen zu Zugriffsverweigerung (nicht Zugriff)
+- Graceful Degradation</p>
+<h3 id="44-privacy-by-design">4.4 Privacy by Design</h3>
+<p><strong>Prinzip:</strong> Datenschutz von Anfang an</p>
+<p><strong>Umsetzung:</strong>
+- Datenminimierung
+- Zweckbindung
+- Verschlüsselung
+- Anonymisierung/Pseudonymisierung</p>
+<p><strong>Details:</strong> Siehe <code>0570_Richtlinie_Datenschutz_Anforderungen</code></p>
+<h2 id="5-security-requirements">5. Security-Requirements</h2>
+<h3 id="51-funktionale-security-requirements">5.1 Funktionale Security-Requirements</h3>
+<p><strong>Authentifizierung:</strong>
+- Multi-Faktor-Authentifizierung (MFA) für externe Zugriffe
+- Starke Passwörter oder Zertifikate
+- Session-Management</p>
+<p><strong>Autorisierung:</strong>
+- Rollenbasierte Zugriffskontrolle (RBAC)
+- Least Privilege
+- Segregation of Duties</p>
+<p><strong>Verschlüsselung:</strong>
+- TLS 1.2+ für Datenübertragung
+- AES-256 für Daten in Ruhe
+- Sichere Schlüsselverwaltung</p>
+<p><strong>Logging:</strong>
+- Authentifizierungs-Events
+- Zugriffe auf vertrauliche Daten
+- Administrative Aktionen
+- Fehler und Exceptions</p>
+<h3 id="52-nicht-funktionale-security-requirements">5.2 Nicht-funktionale Security-Requirements</h3>
+<p><strong>Performance:</strong>
+- Security-Kontrollen dürfen Performance nicht signifikant beeinträchtigen (&lt; 10%)</p>
+<p><strong>Verfügbarkeit:</strong>
+- Security-Kontrollen hochverfügbar
+- Failover-Mechanismen</p>
+<p><strong>Wartbarkeit:</strong>
+- Security-Konfiguration dokumentiert
+- Automatisierte Security-Tests</p>
+<h2 id="6-threat-modeling">6. Threat Modeling</h2>
+<h3 id="61-methodik">6.1 Methodik</h3>
+<p><strong>STRIDE:</strong>
+- <strong>S</strong>poofing (Identitätsfälschung)
+- <strong>T</strong>ampering (Manipulation)
+- <strong>R</strong>epudiation (Abstreitbarkeit)
+- <strong>I</strong>nformation Disclosure (Informationspreisgabe)
+- <strong>D</strong>enial of Service (Dienstverweigerung)
+- <strong>E</strong>levation of Privilege (Rechteausweitung)</p>
+<h3 id="62-prozess">6.2 Prozess</h3>
+<p><strong>Schritte:</strong>
+1. System-Architektur dokumentieren (Data Flow Diagrams)
+2. Bedrohungen identifizieren (STRIDE)
+3. Bedrohungen bewerten (Risiko)
+4. Mitigationsmaßnahmen definieren
+5. Dokumentation</p>
+<p><strong>Tool:</strong> {{ meta.security.threat_modeling_tool }} (z.B. Microsoft Threat Modeling Tool)</p>
+<h2 id="7-security-testing">7. Security-Testing</h2>
+<h3 id="71-test-typen">7.1 Test-Typen</h3>
+<p><strong>SAST (Static Application Security Testing):</strong>
+- Während Entwicklung
+- Automatisiert in CI/CD
+- Fokus: Code-Schwachstellen</p>
+<p><strong>DAST (Dynamic Application Security Testing):</strong>
+- Während Testing-Phase
+- Automatisiert oder manuell
+- Fokus: Laufzeit-Schwachstellen</p>
+<p><strong>Penetration-Testing:</strong>
+- Vor Go-Live (Kategorie A/B)
+- Manuell durch Experten
+- Fokus: Realistische Angriffs-Szenarien</p>
+<p><strong>Details:</strong> Siehe <code>0390_Richtlinie_Secure_SDLC</code></p>
+<h3 id="72-remediation">7.2 Remediation</h3>
+<p><strong>Prozess:</strong>
+1. Findings priorisieren (nach CVSS)
+2. Remediation-Plan erstellen
+3. Fixes implementieren
+4. Re-Test
+5. Dokumentation</p>
+<p><strong>SLA:</strong>
+- Critical: Vor Go-Live
+- High: Vor Go-Live oder mit Kompensationskontrollen
+- Medium: Innerhalb 30 Tage nach Go-Live
+- Low: Innerhalb 90 Tage nach Go-Live</p>
+<h2 id="8-compliance-und-audit">8. Compliance und Audit</h2>
+<h3 id="81-messgroen-kpis">8.1 Messgrößen (KPIs)</h3>
+<table>
+<thead>
+<tr>
+<th>Metrik</th>
+<th>Zielwert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Security-Gateway-Compliance (Kategorie A/B)</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Penetration-Test vor Go-Live (Kategorie A/B)</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Kritische Findings vor Go-Live</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Security-Requirements-Vollständigkeit</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="82-audit-nachweise">8.2 Audit-Nachweise</h3>
+<ul>
+<li>Security-Requirements-Dokumente</li>
+<li>Threat Models</li>
+<li>Security-Test-Berichte</li>
+<li>Security-Gateway-Genehmigungen</li>
+<li>DSFA (falls erforderlich)</li>
+</ul>
+<h2 id="9-referenzen">9. Referenzen</h2>
+<h3 id="interne-dokumente">Interne Dokumente</h3>
+<ul>
+<li><code>0680_Policy_Security_in_Projects.md</code></li>
+<li><code>0390_Richtlinie_Secure_SDLC_Coding_Review_und_Secrets.md</code></li>
+<li><code>0470_Richtlinie_Third_Party_Risk_Assessment_und_Cloud_Controls.md</code></li>
+<li><code>0570_Richtlinie_Datenschutz_Anforderungen_und_Datenverarbeitung.md</code></li>
+</ul>
+<h3 id="externe-standards">Externe Standards</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.8</strong> - Information security in project management</li>
+<li><strong>NIST SP 800-64</strong> - Security Considerations in the System Development Life Cycle</li>
+<li><strong>OWASP SAMM</strong> - Software Assurance Maturity Model</li>
+</ul>
+<hr />
+<p><strong>Genehmigt durch:</strong> Thomas Weber, CISO<br />
+<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0680_Policy_Security_in_Projects.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0710_Anhang_AnnexA_Mapping_Template.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

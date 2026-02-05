@@ -7,6 +7,27 @@ data_sources:
   netbox:
     url: "https://netbox.example.com"
     api_token: "your_netbox_api_token_here"
+    
+    # NetBox role distinction configuration
+    # Determines how to map NetBox contacts to roles
+    role_distinction:
+      method: "field"  # "field" or "name"
+      field: "role"    # Field name to use if method is "field" (e.g., "role", "title")
+      
+      # Role mappings: maps role keys to NetBox values
+      # For field-based: maps to field values
+      # For name-based: maps to substrings in contact names
+      mappings:
+        ciso: "Chief Information Security Officer"
+        cio: "Chief Information Officer"
+        ceo: "Chief Executive Officer"
+        cto: "Chief Technology Officer"
+        sysop: "System Administrator"
+        datenschutzbeauftragter: "Data Protection Officer"
+        risikomanager: "Risk Manager"
+        interner_auditor: "Internal Auditor"
+        personalleitung: "HR Manager"
+        it_manager: "IT Manager"
   
   # Future data sources can be added here
   # example:

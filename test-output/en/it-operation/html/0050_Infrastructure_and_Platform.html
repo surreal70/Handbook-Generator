@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0050 - Infrastructure and Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0050</div>
+            <h1>Infrastructure and Platform</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0040_System_Overview_and_Architecture.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0060_Roles_and_Responsibilities.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="infrastructure-and-platform">Infrastructure and Platform</h1>
+<h2 id="overview">Overview</h2>
+<h3 id="infrastructure-landscape">Infrastructure Landscape</h3>
+<p>This chapter describes the physical and virtual infrastructure on which IT services are operated.</p>
+<p><strong>Organization:</strong> AdminSend GmbH<br />
+<strong>Location:</strong> München, Deutschland</p>
+<p><strong>Brief Description:</strong>
+[TODO: Describe the infrastructure landscape in 2-3 sentences. What are the main components? Where is the infrastructure operated?]</p>
+<h3 id="infrastructure-overview">Infrastructure Overview</h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th style="text-align: right;">Count</th>
+<th>Type</th>
+<th>Location</th>
+<th>Criticality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Physical Servers</strong></td>
+<td style="text-align: right;">[TODO]</td>
+<td>[TODO: Rack/Blade]</td>
+<td>[TODO]</td>
+<td>☐ L ☐ M ☐ H</td>
+</tr>
+<tr>
+<td><strong>Virtual Machines</strong></td>
+<td style="text-align: right;">[TODO]</td>
+<td>[TODO: VMware/Hyper-V]</td>
+<td>[TODO]</td>
+<td>☐ L ☐ M ☐ H</td>
+</tr>
+<tr>
+<td><strong>Containers</strong></td>
+<td style="text-align: right;">[TODO]</td>
+<td>[TODO: Docker/K8s]</td>
+<td>[TODO]</td>
+<td>☐ L ☐ M ☐ H</td>
+</tr>
+<tr>
+<td><strong>Cloud Instances</strong></td>
+<td style="text-align: right;">[TODO]</td>
+<td>[TODO: AWS/Azure/GCP]</td>
+<td>[TODO]</td>
+<td>☐ L ☐ M ☐ H</td>
+</tr>
+<tr>
+<td><strong>Network Devices</strong></td>
+<td style="text-align: right;">[TODO]</td>
+<td>[TODO: Switch/Router]</td>
+<td>[TODO]</td>
+<td>☐ L ☐ M ☐ H</td>
+</tr>
+<tr>
+<td><strong>Storage Systems</strong></td>
+<td style="text-align: right;">[TODO]</td>
+<td>[TODO: SAN/NAS]</td>
+<td>[TODO]</td>
+<td>☐ L ☐ M ☐ H</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Legend:</strong>
+- <strong>L:</strong> Low
+- <strong>M:</strong> Medium
+- <strong>H:</strong> High</p>
+</blockquote>
+<h2 id="physical-infrastructure">Physical Infrastructure</h2>
+<h3 id="data-centers-and-sites">Data Centers and Sites</h3>
+<h4 id="primary-site">Primary Site</h4>
+<ul>
+<li><strong>Site Name:</strong> {{ netbox.site.name }}</li>
+<li><strong>Address:</strong> {{ netbox.site.physical_address }}</li>
+<li><strong>Data Center:</strong> {{ netbox.site.facility }}</li>
+<li><strong>Operator:</strong> [TODO: DC Operator]</li>
+<li><strong>Certifications:</strong> [TODO: e.g., ISO 27001, Tier III]</li>
+</ul>
+<p><strong>Site Details:</strong>
+- <strong>Availability:</strong> [TODO: e.g., 99.99%]
+- <strong>Power Supply:</strong> [TODO: e.g., Redundant UPS, Emergency Power]
+- <strong>Cooling:</strong> [TODO: e.g., Redundant Air Conditioning]
+- <strong>Fire Protection:</strong> [TODO: e.g., Gas Suppression System]
+- <strong>Access Control:</strong> [TODO: e.g., Biometric, 24/7 Surveillance]</p>
+<h4 id="secondary-site-dr">Secondary Site (DR)</h4>
+<ul>
+<li><strong>Site Name:</strong> [TODO: DR Site]</li>
+<li><strong>Address:</strong> [TODO: Address]</li>
+<li><strong>Data Center:</strong> [TODO: DC Name]</li>
+<li><strong>Operator:</strong> [TODO: DC Operator]</li>
+<li><strong>Distance to Primary Site:</strong> [TODO: km]</li>
+</ul>
+<p><strong>DR Configuration:</strong>
+- <strong>DR Strategy:</strong> [TODO: Hot/Warm/Cold Standby]
+- <strong>Replication:</strong> [TODO: Synchronous/Asynchronous]
+- <strong>RTO:</strong> [TODO: Hours]
+- <strong>RPO:</strong> [TODO: Hours]</p>
+<h3 id="rack-overview">Rack Overview</h3>
+<table>
+<thead>
+<tr>
+<th>Rack ID</th>
+<th>Location</th>
+<th style="text-align: right;">Height (U)</th>
+<th style="text-align: right;">Utilization</th>
+<th>Power Supply</th>
+<th>Network</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: RACK-01]</td>
+<td>{{ netbox.site.name }}</td>
+<td style="text-align: right;">[TODO: 42]</td>
+<td style="text-align: right;">[TODO: 80%]</td>
+<td>[TODO: 2x 32A]</td>
+<td>[TODO: 2x 10G]</td>
+</tr>
+<tr>
+<td>[TODO: RACK-02]</td>
+<td>{{ netbox.site.name }}</td>
+<td style="text-align: right;">[TODO: 42]</td>
+<td style="text-align: right;">[TODO: 60%]</td>
+<td>[TODO: 2x 32A]</td>
+<td>[TODO: 2x 10G]</td>
+</tr>
+<tr>
+<td>[TODO: RACK-03]</td>
+<td>{{ netbox.site.name }}</td>
+<td style="text-align: right;">[TODO: 42]</td>
+<td style="text-align: right;">[TODO: 40%]</td>
+<td>[TODO: 2x 16A]</td>
+<td>[TODO: 2x 1G]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="server-hardware">Server Hardware</h3>
+<table>
+<thead>
+<tr>
+<th>Hostname</th>
+<th>Type</th>
+<th>CPU</th>
+<th>RAM</th>
+<th>Storage</th>
+<th>Location</th>
+<th>Rack</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{{ netbox.device.server01.name }}</td>
+<td>[TODO: Dell R740]</td>
+<td>[TODO: 2x Xeon]</td>
+<td>[TODO: 256GB]</td>
+<td>[TODO: 2TB SSD]</td>
+<td>{{ netbox.site.name }}</td>
+<td>[TODO: RACK-01]</td>
+<td>[TODO: Hypervisor]</td>
+</tr>
+<tr>
+<td>{{ netbox.device.server02.name }}</td>
+<td>[TODO: HP DL380]</td>
+<td>[TODO: 2x Xeon]</td>
+<td>[TODO: 128GB]</td>
+<td>[TODO: 1TB SSD]</td>
+<td>{{ netbox.site.name }}</td>
+<td>[TODO: RACK-01]</td>
+<td>[TODO: Hypervisor]</td>
+</tr>
+<tr>
+<td>{{ netbox.device.server03.name }}</td>
+<td>[TODO: Dell R640]</td>
+<td>[TODO: 2x Xeon]</td>
+<td>[TODO: 64GB]</td>
+<td>[TODO: 500GB SSD]</td>
+<td>{{ netbox.site.name }}</td>
+<td>[TODO: RACK-02]</td>
+<td>[TODO: Application]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Hardware Lifecycle:</strong>
+- <strong>Procurement:</strong> [TODO: Process]
+- <strong>Warranty:</strong> [TODO: e.g., 5 years NBD]
+- <strong>Refresh Cycle:</strong> [TODO: e.g., 5 years]
+- <strong>End-of-Life:</strong> [TODO: Process]</p>
+<h2 id="network-infrastructure">Network Infrastructure</h2>
+<h3 id="network-architecture">Network Architecture</h3>
+<p><strong>Network Topology:</strong> [TODO: e.g., Spine-Leaf, Three-Tier]</p>
+<p><strong>Redundancy:</strong> [TODO: e.g., Fully Redundant, N+1]</p>
+<h3 id="core-network">Core Network</h3>
+<table>
+<thead>
+<tr>
+<th>Device</th>
+<th>Type</th>
+<th>Model</th>
+<th>Location</th>
+<th>Role</th>
+<th>Uplinks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{{ netbox.device.core_switch01.name }}</td>
+<td>Core Switch</td>
+<td>[TODO: Cisco Nexus]</td>
+<td>{{ netbox.site.name }}</td>
+<td>[TODO: Core]</td>
+<td>[TODO: 4x 100G]</td>
+</tr>
+<tr>
+<td>{{ netbox.device.core_switch02.name }}</td>
+<td>Core Switch</td>
+<td>[TODO: Cisco Nexus]</td>
+<td>{{ netbox.site.name }}</td>
+<td>[TODO: Core]</td>
+<td>[TODO: 4x 100G]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="distribution-layer">Distribution Layer</h3>
+<table>
+<thead>
+<tr>
+<th>Device</th>
+<th>Type</th>
+<th>Model</th>
+<th>Location</th>
+<th>Role</th>
+<th>Uplinks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: DIST-SW-01]</td>
+<td>Distribution Switch</td>
+<td>[TODO: Model]</td>
+<td>{{ netbox.site.name }}</td>
+<td>[TODO: Distribution]</td>
+<td>[TODO: 2x 40G]</td>
+</tr>
+<tr>
+<td>[TODO: DIST-SW-02]</td>
+<td>Distribution Switch</td>
+<td>[TODO: Model]</td>
+<td>{{ netbox.site.name }}</td>
+<td>[TODO: Distribution]</td>
+<td>[TODO: 2x 40G]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="access-layer">Access Layer</h3>
+<table>
+<thead>
+<tr>
+<th>Device</th>
+<th>Type</th>
+<th>Model</th>
+<th>Location</th>
+<th>Ports</th>
+<th>Uplinks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: ACC-SW-01]</td>
+<td>Access Switch</td>
+<td>[TODO: Model]</td>
+<td>{{ netbox.site.name }}</td>
+<td>[TODO: 48x 1G]</td>
+<td>[TODO: 2x 10G]</td>
+</tr>
+<tr>
+<td>[TODO: ACC-SW-02]</td>
+<td>Access Switch</td>
+<td>[TODO: Model]</td>
+<td>{{ netbox.site.name }}</td>
+<td>[TODO: 48x 1G]</td>
+<td>[TODO: 2x 10G]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vlan-segmentation">VLAN Segmentation</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">VLAN ID</th>
+<th>Name</th>
+<th>Purpose</th>
+<th>Subnet</th>
+<th>Gateway</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">{{ netbox.vlan.management.vid }}</td>
+<td>Management</td>
+<td>[TODO: Management Network]</td>
+<td>{{ netbox.vlan.management.prefix }}</td>
+<td>[TODO: Gateway]</td>
+</tr>
+<tr>
+<td style="text-align: right;">{{ netbox.vlan.production.vid }}</td>
+<td>Production</td>
+<td>[TODO: Production Network]</td>
+<td>{{ netbox.vlan.production.prefix }}</td>
+<td>[TODO: Gateway]</td>
+</tr>
+<tr>
+<td style="text-align: right;">[TODO: 30]</td>
+<td>DMZ</td>
+<td>[TODO: DMZ Network]</td>
+<td>[TODO: 10.0.30.0/24]</td>
+<td>[TODO: 10.0.30.1]</td>
+</tr>
+<tr>
+<td style="text-align: right;">[TODO: 40]</td>
+<td>Storage</td>
+<td>[TODO: Storage Network]</td>
+<td>[TODO: 10.0.40.0/24]</td>
+<td>[TODO: 10.0.40.1]</td>
+</tr>
+<tr>
+<td style="text-align: right;">[TODO: 50]</td>
+<td>Backup</td>
+<td>[TODO: Backup Network]</td>
+<td>[TODO: 10.0.50.0/24]</td>
+<td>[TODO: 10.0.50.1]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ip-addressing">IP Addressing</h3>
+<p><strong>IP Address Plan:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Network</th>
+<th>Usage</th>
+<th>CIDR</th>
+<th style="text-align: right;">Available IPs</th>
+<th style="text-align: right;">Utilization</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: 10.0.0.0/16]</td>
+<td>Total</td>
+<td>[TODO: /16]</td>
+<td style="text-align: right;">[TODO: 65534]</td>
+<td style="text-align: right;">[TODO: 40%]</td>
+</tr>
+<tr>
+<td>[TODO: 10.0.10.0/24]</td>
+<td>Management</td>
+<td>[TODO: /24]</td>
+<td style="text-align: right;">[TODO: 254]</td>
+<td style="text-align: right;">[TODO: 60%]</td>
+</tr>
+<tr>
+<td>[TODO: 10.0.20.0/24]</td>
+<td>Production</td>
+<td>[TODO: /24]</td>
+<td style="text-align: right;">[TODO: 254]</td>
+<td style="text-align: right;">[TODO: 80%]</td>
+</tr>
+<tr>
+<td>[TODO: 10.0.30.0/24]</td>
+<td>DMZ</td>
+<td>[TODO: /24]</td>
+<td style="text-align: right;">[TODO: 254]</td>
+<td style="text-align: right;">[TODO: 30%]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>IPAM (IP Address Management):</strong>
+- <strong>Tool:</strong> [TODO: e.g., NetBox, phpIPAM]
+- <strong>Responsible:</strong> Andreas Huemmer</p>
+<h3 id="firewall-and-security">Firewall and Security</h3>
+<table>
+<thead>
+<tr>
+<th>Device</th>
+<th>Type</th>
+<th>Model</th>
+<th>Location</th>
+<th>Role</th>
+<th>Throughput</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: FW-01]</td>
+<td>Firewall</td>
+<td>[TODO: Palo Alto]</td>
+<td>{{ netbox.site.name }}</td>
+<td>[TODO: Perimeter]</td>
+<td>[TODO: 10 Gbps]</td>
+</tr>
+<tr>
+<td>[TODO: FW-02]</td>
+<td>Firewall</td>
+<td>[TODO: Palo Alto]</td>
+<td>{{ netbox.site.name }}</td>
+<td>[TODO: Perimeter]</td>
+<td>[TODO: 10 Gbps]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Firewall Rules:</strong>
+- <strong>Number of Rules:</strong> [TODO: e.g., 500]
+- <strong>Review Cycle:</strong> [TODO: e.g., Quarterly]
+- <strong>Responsible:</strong> Thomas Weber</p>
+<h3 id="load-balancer">Load Balancer</h3>
+<table>
+<thead>
+<tr>
+<th>Device</th>
+<th>Type</th>
+<th>Model</th>
+<th>Location</th>
+<th>Algorithm</th>
+<th>Capacity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: LB-01]</td>
+<td>Load Balancer</td>
+<td>[TODO: F5/HAProxy]</td>
+<td>{{ netbox.site.name }}</td>
+<td>[TODO: Round-Robin]</td>
+<td>[TODO: 10k RPS]</td>
+</tr>
+<tr>
+<td>[TODO: LB-02]</td>
+<td>Load Balancer</td>
+<td>[TODO: F5/HAProxy]</td>
+<td>{{ netbox.site.name }}</td>
+<td>[TODO: Round-Robin]</td>
+<td>[TODO: 10k RPS]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="wan-connections">WAN Connections</h3>
+<table>
+<thead>
+<tr>
+<th>Provider</th>
+<th>Type</th>
+<th>Bandwidth</th>
+<th>Location</th>
+<th>SLA</th>
+<th>Cost/Month</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Provider 1]</td>
+<td>[TODO: MPLS]</td>
+<td>[TODO: 1 Gbps]</td>
+<td>{{ netbox.site.name }}</td>
+<td>[TODO: 99.9%]</td>
+<td>[TODO: EUR]</td>
+</tr>
+<tr>
+<td>[TODO: Provider 2]</td>
+<td>[TODO: Internet]</td>
+<td>[TODO: 500 Mbps]</td>
+<td>{{ netbox.site.name }}</td>
+<td>[TODO: 99.5%]</td>
+<td>[TODO: EUR]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="virtualization">Virtualization</h2>
+<h3 id="virtualization-platform">Virtualization Platform</h3>
+<p><strong>Hypervisor:</strong> [TODO: e.g., VMware vSphere 8.0, Microsoft Hyper-V, KVM]</p>
+<p><strong>Management:</strong> [TODO: e.g., vCenter Server, SCVMM]</p>
+<h3 id="cluster-configuration">Cluster Configuration</h3>
+<table>
+<thead>
+<tr>
+<th>Cluster Name</th>
+<th>Hypervisor</th>
+<th style="text-align: right;">Hosts</th>
+<th style="text-align: right;">vCPUs</th>
+<th style="text-align: right;">RAM (GB)</th>
+<th style="text-align: right;">Storage (TB)</th>
+<th style="text-align: right;">VMs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{{ netbox.cluster.prod.name }}</td>
+<td>[TODO: VMware]</td>
+<td style="text-align: right;">[TODO: 4]</td>
+<td style="text-align: right;">[TODO: 128]</td>
+<td style="text-align: right;">[TODO: 1024]</td>
+<td style="text-align: right;">[TODO: 50]</td>
+<td style="text-align: right;">[TODO: 80]</td>
+</tr>
+<tr>
+<td>{{ netbox.cluster.test.name }}</td>
+<td>[TODO: VMware]</td>
+<td style="text-align: right;">[TODO: 2]</td>
+<td style="text-align: right;">[TODO: 64]</td>
+<td style="text-align: right;">[TODO: 512]</td>
+<td style="text-align: right;">[TODO: 20]</td>
+<td style="text-align: right;">[TODO: 40]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cluster Features:</strong>
+- <strong>HA (High Availability):</strong> [TODO: Yes/No, Configuration]
+- <strong>DRS (Distributed Resource Scheduler):</strong> [TODO: Yes/No, Mode]
+- <strong>vMotion/Live Migration:</strong> [TODO: Yes/No]
+- <strong>Fault Tolerance:</strong> [TODO: Yes/No]</p>
+<h3 id="virtual-machines">Virtual Machines</h3>
+<table>
+<thead>
+<tr>
+<th>VM Name</th>
+<th>Cluster</th>
+<th style="text-align: right;">vCPU</th>
+<th style="text-align: right;">RAM (GB)</th>
+<th style="text-align: right;">Storage (GB)</th>
+<th>OS</th>
+<th>Role</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{{ netbox.vm.app01.name }}</td>
+<td>{{ netbox.cluster.prod.name }}</td>
+<td style="text-align: right;">[TODO: 4]</td>
+<td style="text-align: right;">[TODO: 16]</td>
+<td style="text-align: right;">[TODO: 200]</td>
+<td>[TODO: Ubuntu 22.04]</td>
+<td>[TODO: App Server]</td>
+<td>[TODO: Running]</td>
+</tr>
+<tr>
+<td>{{ netbox.vm.db01.name }}</td>
+<td>{{ netbox.cluster.prod.name }}</td>
+<td style="text-align: right;">[TODO: 8]</td>
+<td style="text-align: right;">[TODO: 32]</td>
+<td style="text-align: right;">[TODO: 500]</td>
+<td>[TODO: RHEL 9]</td>
+<td>[TODO: DB Server]</td>
+<td>[TODO: Running]</td>
+</tr>
+<tr>
+<td>{{ netbox.vm.web01.name }}</td>
+<td>{{ netbox.cluster.prod.name }}</td>
+<td style="text-align: right;">[TODO: 2]</td>
+<td style="text-align: right;">[TODO: 8]</td>
+<td style="text-align: right;">[TODO: 100]</td>
+<td>[TODO: Ubuntu 22.04]</td>
+<td>[TODO: Web Server]</td>
+<td>[TODO: Running]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>VM Lifecycle:</strong>
+- <strong>Provisioning:</strong> [TODO: Automated/Manual, Tool]
+- <strong>Template Management:</strong> [TODO: Process]
+- <strong>Snapshot Policy:</strong> [TODO: Policy]
+- <strong>Decommissioning:</strong> [TODO: Process]</p>
+<h3 id="resource-pools">Resource Pools</h3>
+<table>
+<thead>
+<tr>
+<th>Pool Name</th>
+<th>Cluster</th>
+<th>CPU Shares</th>
+<th>RAM Reservation</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Production]</td>
+<td>{{ netbox.cluster.prod.name }}</td>
+<td>[TODO: High]</td>
+<td>[TODO: 50%]</td>
+<td>[TODO: Production VMs]</td>
+</tr>
+<tr>
+<td>[TODO: Development]</td>
+<td>{{ netbox.cluster.test.name }}</td>
+<td>[TODO: Normal]</td>
+<td>[TODO: 25%]</td>
+<td>[TODO: Development VMs]</td>
+</tr>
+<tr>
+<td>[TODO: Test]</td>
+<td>{{ netbox.cluster.test.name }}</td>
+<td>[TODO: Low]</td>
+<td>[TODO: 10%]</td>
+<td>[TODO: Test VMs]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="container-orchestration">Container Orchestration</h2>
+<h3 id="kubernetes-clusters">Kubernetes Clusters</h3>
+<p><strong>Kubernetes Version:</strong> [TODO: e.g., 1.28.x]</p>
+<p><strong>Distribution:</strong> [TODO: e.g., Vanilla K8s, OpenShift, Rancher, EKS, AKS, GKE]</p>
+<table>
+<thead>
+<tr>
+<th>Cluster Name</th>
+<th>Environment</th>
+<th style="text-align: right;">Nodes</th>
+<th style="text-align: right;">Pods</th>
+<th style="text-align: right;">Namespaces</th>
+<th>Ingress</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: k8s-prod]</td>
+<td>Production</td>
+<td style="text-align: right;">[TODO: 6]</td>
+<td style="text-align: right;">[TODO: 200]</td>
+<td style="text-align: right;">[TODO: 20]</td>
+<td>[TODO: Nginx]</td>
+</tr>
+<tr>
+<td>[TODO: k8s-test]</td>
+<td>Test</td>
+<td style="text-align: right;">[TODO: 3]</td>
+<td style="text-align: right;">[TODO: 50]</td>
+<td style="text-align: right;">[TODO: 10]</td>
+<td>[TODO: Nginx]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="node-configuration">Node Configuration</h3>
+<table>
+<thead>
+<tr>
+<th>Node Name</th>
+<th>Role</th>
+<th style="text-align: right;">CPU</th>
+<th style="text-align: right;">RAM (GB)</th>
+<th style="text-align: right;">Storage (GB)</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: k8s-master-01]</td>
+<td>Control Plane</td>
+<td style="text-align: right;">[TODO: 4]</td>
+<td style="text-align: right;">[TODO: 16]</td>
+<td style="text-align: right;">[TODO: 100]</td>
+<td>[TODO: Ready]</td>
+</tr>
+<tr>
+<td>[TODO: k8s-worker-01]</td>
+<td>Worker</td>
+<td style="text-align: right;">[TODO: 8]</td>
+<td style="text-align: right;">[TODO: 32]</td>
+<td style="text-align: right;">[TODO: 200]</td>
+<td>[TODO: Ready]</td>
+</tr>
+<tr>
+<td>[TODO: k8s-worker-02]</td>
+<td>Worker</td>
+<td style="text-align: right;">[TODO: 8]</td>
+<td style="text-align: right;">[TODO: 32]</td>
+<td style="text-align: right;">[TODO: 200]</td>
+<td>[TODO: Ready]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="container-registry">Container Registry</h3>
+<ul>
+<li><strong>Registry:</strong> [TODO: e.g., Harbor, Docker Hub, ECR, ACR, GCR]</li>
+<li><strong>URL:</strong> [TODO: registry.example.com]</li>
+<li><strong>Authentication:</strong> [TODO: e.g., LDAP, OAuth2]</li>
+<li><strong>Scanning:</strong> [TODO: e.g., Trivy, Clair]</li>
+</ul>
+<h3 id="helm-charts">Helm Charts</h3>
+<ul>
+<li><strong>Chart Repository:</strong> [TODO: URL]</li>
+<li><strong>Number of Charts:</strong> [TODO: e.g., 50]</li>
+<li><strong>Versioning:</strong> [TODO: Process]</li>
+</ul>
+<h2 id="cloud-infrastructure">Cloud Infrastructure</h2>
+<h3 id="cloud-providers">Cloud Providers</h3>
+<p><strong>Primary Cloud Provider:</strong> [TODO: e.g., AWS, Azure, Google Cloud]</p>
+<p><strong>Cloud Strategy:</strong> [TODO: e.g., Cloud-First, Hybrid, Multi-Cloud]</p>
+<h3 id="cloud-accounts">Cloud Accounts</h3>
+<table>
+<thead>
+<tr>
+<th>Account Name</th>
+<th>Provider</th>
+<th>Account ID</th>
+<th>Environment</th>
+<th>Purpose</th>
+<th>Cost/Month</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: prod-account]</td>
+<td>[TODO: AWS]</td>
+<td>[TODO: 123456789012]</td>
+<td>Production</td>
+<td>[TODO: Production Workloads]</td>
+<td>[TODO: EUR]</td>
+</tr>
+<tr>
+<td>[TODO: dev-account]</td>
+<td>[TODO: AWS]</td>
+<td>[TODO: 987654321098]</td>
+<td>Development</td>
+<td>[TODO: Development/Test]</td>
+<td>[TODO: EUR]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cloud-regions">Cloud Regions</h3>
+<table>
+<thead>
+<tr>
+<th>Region</th>
+<th>Provider</th>
+<th>Location</th>
+<th>Purpose</th>
+<th>Services</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: eu-central-1]</td>
+<td>[TODO: AWS]</td>
+<td>Frankfurt</td>
+<td>[TODO: Primary]</td>
+<td>[TODO: EC2, RDS, S3]</td>
+</tr>
+<tr>
+<td>[TODO: eu-west-1]</td>
+<td>[TODO: AWS]</td>
+<td>Ireland</td>
+<td>[TODO: DR]</td>
+<td>[TODO: EC2, RDS, S3]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cloud-resources">Cloud Resources</h3>
+<h4 id="compute-iaas">Compute (IaaS)</h4>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Type</th>
+<th>Size</th>
+<th style="text-align: right;">Count</th>
+<th>Region</th>
+<th>Purpose</th>
+<th>Cost/Month</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: EC2 Instances]</td>
+<td>[TODO: t3.large]</td>
+<td>[TODO: 2vCPU/8GB]</td>
+<td style="text-align: right;">[TODO: 10]</td>
+<td>[TODO: eu-central-1]</td>
+<td>[TODO: App Servers]</td>
+<td>[TODO: EUR]</td>
+</tr>
+<tr>
+<td>[TODO: Lambda Functions]</td>
+<td>[TODO: Serverless]</td>
+<td>[TODO: -]</td>
+<td style="text-align: right;">[TODO: 50]</td>
+<td>[TODO: eu-central-1]</td>
+<td>[TODO: Microservices]</td>
+<td>[TODO: EUR]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="storage">Storage</h4>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Type</th>
+<th style="text-align: right;">Size (TB)</th>
+<th>Region</th>
+<th>Purpose</th>
+<th>Cost/Month</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: S3 Buckets]</td>
+<td>[TODO: Object Storage]</td>
+<td style="text-align: right;">[TODO: 10]</td>
+<td>[TODO: eu-central-1]</td>
+<td>[TODO: Backups]</td>
+<td>[TODO: EUR]</td>
+</tr>
+<tr>
+<td>[TODO: EBS Volumes]</td>
+<td>[TODO: Block Storage]</td>
+<td style="text-align: right;">[TODO: 5]</td>
+<td>[TODO: eu-central-1]</td>
+<td>[TODO: VM Storage]</td>
+<td>[TODO: EUR]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="database-paas">Database (PaaS)</h4>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Type</th>
+<th>Size</th>
+<th>Region</th>
+<th>Purpose</th>
+<th>Cost/Month</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: RDS PostgreSQL]</td>
+<td>[TODO: db.r5.large]</td>
+<td>[TODO: 500GB]</td>
+<td>[TODO: eu-central-1]</td>
+<td>[TODO: Production DB]</td>
+<td>[TODO: EUR]</td>
+</tr>
+<tr>
+<td>[TODO: DynamoDB]</td>
+<td>[TODO: NoSQL]</td>
+<td>[TODO: On-Demand]</td>
+<td>[TODO: eu-central-1]</td>
+<td>[TODO: Session Store]</td>
+<td>[TODO: EUR]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="networking">Networking</h4>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Type</th>
+<th>Configuration</th>
+<th>Region</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: VPC]</td>
+<td>[TODO: Virtual Network]</td>
+<td>[TODO: 10.0.0.0/16]</td>
+<td>[TODO: eu-central-1]</td>
+<td>[TODO: Network Isolation]</td>
+</tr>
+<tr>
+<td>[TODO: VPN Gateway]</td>
+<td>[TODO: Site-to-Site VPN]</td>
+<td>[TODO: 1 Gbps]</td>
+<td>[TODO: eu-central-1]</td>
+<td>[TODO: Hybrid Connectivity]</td>
+</tr>
+<tr>
+<td>[TODO: Direct Connect]</td>
+<td>[TODO: Dedicated Line]</td>
+<td>[TODO: 10 Gbps]</td>
+<td>[TODO: eu-central-1]</td>
+<td>[TODO: Low Latency]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cloud-costs">Cloud Costs</h3>
+<p><strong>Total Cost/Month:</strong> [TODO: EUR]</p>
+<p><strong>Cost Optimization:</strong>
+- <strong>Reserved Instances:</strong> [TODO: Percentage]
+- <strong>Spot Instances:</strong> [TODO: Percentage]
+- <strong>Auto-Scaling:</strong> [TODO: Yes/No]
+- <strong>Cost Monitoring:</strong> [TODO: Tool]</p>
+<h2 id="storage-infrastructure">Storage Infrastructure</h2>
+<h3 id="storage-systems">Storage Systems</h3>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Type</th>
+<th style="text-align: right;">Capacity (TB)</th>
+<th style="text-align: right;">Usage (%)</th>
+<th>Protocol</th>
+<th>Location</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: SAN-01]</td>
+<td>SAN</td>
+<td style="text-align: right;">[TODO: 100]</td>
+<td style="text-align: right;">[TODO: 70%]</td>
+<td>[TODO: FC/iSCSI]</td>
+<td>{{ netbox.site.name }}</td>
+<td>[TODO: VM Storage]</td>
+</tr>
+<tr>
+<td>[TODO: NAS-01]</td>
+<td>NAS</td>
+<td style="text-align: right;">[TODO: 50]</td>
+<td style="text-align: right;">[TODO: 60%]</td>
+<td>[TODO: NFS/CIFS]</td>
+<td>{{ netbox.site.name }}</td>
+<td>[TODO: File Shares]</td>
+</tr>
+<tr>
+<td>[TODO: OBJ-01]</td>
+<td>Object Storage</td>
+<td style="text-align: right;">[TODO: 200]</td>
+<td style="text-align: right;">[TODO: 40%]</td>
+<td>[TODO: S3]</td>
+<td>[TODO: Cloud]</td>
+<td>[TODO: Backups]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="storage-tiers">Storage Tiers</h3>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>Type</th>
+<th>Performance</th>
+<th style="text-align: right;">Capacity (TB)</th>
+<th>Cost/TB</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tier 0</strong></td>
+<td>[TODO: NVMe SSD]</td>
+<td>[TODO: &gt;100k IOPS]</td>
+<td style="text-align: right;">[TODO: 10]</td>
+<td>[TODO: High]</td>
+<td>[TODO: Databases]</td>
+</tr>
+<tr>
+<td><strong>Tier 1</strong></td>
+<td>[TODO: SAS SSD]</td>
+<td>[TODO: 50k IOPS]</td>
+<td style="text-align: right;">[TODO: 50]</td>
+<td>[TODO: Medium]</td>
+<td>[TODO: VMs]</td>
+</tr>
+<tr>
+<td><strong>Tier 2</strong></td>
+<td>[TODO: SAS HDD]</td>
+<td>[TODO: 5k IOPS]</td>
+<td style="text-align: right;">[TODO: 100]</td>
+<td>[TODO: Low]</td>
+<td>[TODO: Archive]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="storage-network">Storage Network</h3>
+<p><strong>SAN Fabric:</strong>
+- <strong>Protocol:</strong> [TODO: e.g., Fibre Channel 32G, iSCSI 10G]
+- <strong>Switches:</strong> [TODO: e.g., Brocade, Cisco MDS]
+- <strong>Redundancy:</strong> [TODO: e.g., Dual-Fabric]</p>
+<p><strong>NAS Network:</strong>
+- <strong>Protocol:</strong> [TODO: e.g., NFS v4, SMB 3.0]
+- <strong>Network:</strong> [TODO: e.g., Dedicated 10G Network]</p>
+<h3 id="backup-storage">Backup Storage</h3>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Type</th>
+<th style="text-align: right;">Capacity (TB)</th>
+<th>Retention</th>
+<th>Location</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: BACKUP-01]</td>
+<td>[TODO: Disk]</td>
+<td style="text-align: right;">[TODO: 100]</td>
+<td>[TODO: 30 Days]</td>
+<td>{{ netbox.site.name }}</td>
+<td>[TODO: Disk Backup]</td>
+</tr>
+<tr>
+<td>[TODO: TAPE-01]</td>
+<td>[TODO: Tape Library]</td>
+<td style="text-align: right;">[TODO: 500]</td>
+<td>[TODO: 7 Years]</td>
+<td>{{ netbox.site.name }}</td>
+<td>[TODO: Long-term Archive]</td>
+</tr>
+<tr>
+<td>[TODO: CLOUD-BACKUP]</td>
+<td>[TODO: Cloud]</td>
+<td style="text-align: right;">[TODO: Unlimited]</td>
+<td>[TODO: 90 Days]</td>
+<td>[TODO: Cloud]</td>
+<td>[TODO: Off-Site Backup]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="power-supply">Power Supply</h2>
+<h3 id="primary-power-supply">Primary Power Supply</h3>
+<ul>
+<li><strong>Connection Capacity:</strong> [TODO: e.g., 200 kW]</li>
+<li><strong>Redundancy:</strong> [TODO: e.g., N+1, 2N]</li>
+<li><strong>Provider:</strong> [TODO: Energy Provider]</li>
+</ul>
+<h3 id="ups-uninterruptible-power-supply">UPS (Uninterruptible Power Supply)</h3>
+<table>
+<thead>
+<tr>
+<th>UPS System</th>
+<th style="text-align: right;">Capacity (kVA)</th>
+<th style="text-align: right;">Runtime (min)</th>
+<th>Location</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: UPS-01]</td>
+<td style="text-align: right;">[TODO: 100]</td>
+<td style="text-align: right;">[TODO: 15]</td>
+<td>{{ netbox.site.name }}</td>
+<td>[TODO: Online]</td>
+</tr>
+<tr>
+<td>[TODO: UPS-02]</td>
+<td style="text-align: right;">[TODO: 100]</td>
+<td style="text-align: right;">[TODO: 15]</td>
+<td>{{ netbox.site.name }}</td>
+<td>[TODO: Online]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>UPS Maintenance:</strong>
+- <strong>Maintenance Interval:</strong> [TODO: e.g., Quarterly]
+- <strong>Battery Test:</strong> [TODO: e.g., Monthly]
+- <strong>Responsible:</strong> [TODO: Facility Management]</p>
+<h3 id="emergency-power-supply">Emergency Power Supply</h3>
+<ul>
+<li><strong>Emergency Generator:</strong> [TODO: e.g., 250 kVA Diesel]</li>
+<li><strong>Fuel Reserve:</strong> [TODO: e.g., 1000 Liters]</li>
+<li><strong>Runtime:</strong> [TODO: e.g., 48 Hours]</li>
+<li><strong>Switchover Time:</strong> [TODO: e.g., &lt; 10 Seconds]</li>
+</ul>
+<h2 id="cooling-and-air-conditioning">Cooling and Air Conditioning</h2>
+<h3 id="air-conditioning">Air Conditioning</h3>
+<ul>
+<li><strong>Cooling Capacity:</strong> [TODO: e.g., 150 kW]</li>
+<li><strong>Redundancy:</strong> [TODO: e.g., N+1]</li>
+<li><strong>Target Temperature:</strong> [TODO: e.g., 22°C ±2°C]</li>
+<li><strong>Humidity:</strong> [TODO: e.g., 45% ±5%]</li>
+</ul>
+<h3 id="monitoring">Monitoring</h3>
+<ul>
+<li><strong>Temperature Sensors:</strong> [TODO: Number and Positions]</li>
+<li><strong>Humidity Sensors:</strong> [TODO: Number and Positions]</li>
+<li><strong>Alarms:</strong> [TODO: Thresholds and Escalation]</li>
+</ul>
+<h2 id="physical-security">Physical Security</h2>
+<h3 id="access-control">Access Control</h3>
+<ul>
+<li><strong>System:</strong> [TODO: e.g., Biometric, Card Access]</li>
+<li><strong>Authorized Personnel:</strong> [TODO: Number of People]</li>
+<li><strong>Logging:</strong> [TODO: Retention Period]</li>
+<li><strong>Four-Eyes Principle:</strong> [TODO: Yes/No, for which Areas]</li>
+</ul>
+<h3 id="video-surveillance">Video Surveillance</h3>
+<ul>
+<li><strong>Cameras:</strong> [TODO: Number and Positions]</li>
+<li><strong>Recording:</strong> [TODO: Retention Period]</li>
+<li><strong>Monitoring:</strong> [TODO: 24/7 or Time-controlled]</li>
+</ul>
+<h3 id="fire-protection">Fire Protection</h3>
+<ul>
+<li><strong>Fire Alarm System:</strong> [TODO: Type]</li>
+<li><strong>Suppression System:</strong> [TODO: e.g., Gas Suppression, Sprinkler]</li>
+<li><strong>Fire Compartments:</strong> [TODO: Number]</li>
+<li><strong>Escape Routes:</strong> [TODO: Number and Marking]</li>
+</ul>
+<h2 id="capacity-planning">Capacity Planning</h2>
+<h3 id="current-utilization">Current Utilization</h3>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Capacity</th>
+<th>Used</th>
+<th>Available</th>
+<th style="text-align: right;">Utilization (%)</th>
+<th style="text-align: right;">Threshold (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CPU (Cores)</strong></td>
+<td>[TODO: 500]</td>
+<td>[TODO: 300]</td>
+<td>[TODO: 200]</td>
+<td style="text-align: right;">[TODO: 60%]</td>
+<td style="text-align: right;">[TODO: 80%]</td>
+</tr>
+<tr>
+<td><strong>RAM (GB)</strong></td>
+<td>[TODO: 4000]</td>
+<td>[TODO: 2800]</td>
+<td>[TODO: 1200]</td>
+<td style="text-align: right;">[TODO: 70%]</td>
+<td style="text-align: right;">[TODO: 85%]</td>
+</tr>
+<tr>
+<td><strong>Storage (TB)</strong></td>
+<td>[TODO: 200]</td>
+<td>[TODO: 140]</td>
+<td>[TODO: 60]</td>
+<td style="text-align: right;">[TODO: 70%]</td>
+<td style="text-align: right;">[TODO: 80%]</td>
+</tr>
+<tr>
+<td><strong>Network (Gbps)</strong></td>
+<td>[TODO: 100]</td>
+<td>[TODO: 40]</td>
+<td>[TODO: 60]</td>
+<td style="text-align: right;">[TODO: 40%]</td>
+<td style="text-align: right;">[TODO: 70%]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="growth-forecast">Growth Forecast</h3>
+<p><strong>Forecast Period:</strong> [TODO: e.g., 12 Months]</p>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Current</th>
+<th>Forecast (+12M)</th>
+<th style="text-align: right;">Growth (%)</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CPU</strong></td>
+<td>[TODO: 300 Cores]</td>
+<td>[TODO: 360 Cores]</td>
+<td style="text-align: right;">[TODO: +20%]</td>
+<td>[TODO: Description]</td>
+</tr>
+<tr>
+<td><strong>RAM</strong></td>
+<td>[TODO: 2800 GB]</td>
+<td>[TODO: 3360 GB]</td>
+<td style="text-align: right;">[TODO: +20%]</td>
+<td>[TODO: Description]</td>
+</tr>
+<tr>
+<td><strong>Storage</strong></td>
+<td>[TODO: 140 TB]</td>
+<td>[TODO: 182 TB]</td>
+<td style="text-align: right;">[TODO: +30%]</td>
+<td>[TODO: Description]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="scaling-strategies">Scaling Strategies</h3>
+<p><strong>Vertical Scaling:</strong>
+- [TODO: Strategy Description]
+- [TODO: Maximum Limits]</p>
+<p><strong>Horizontal Scaling:</strong>
+- [TODO: Strategy Description]
+- [TODO: Auto-Scaling Configuration]</p>
+<p><strong>Cloud Bursting:</strong>
+- [TODO: Yes/No, Description]</p>
+<h2 id="lifecycle-management">Lifecycle Management</h2>
+<h3 id="hardware-lifecycle">Hardware Lifecycle</h3>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Duration</th>
+<th>Activities</th>
+<th>Responsible</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Procurement</strong></td>
+<td>[TODO: 4-8 Weeks]</td>
+<td>[TODO: Requirements, Ordering, Delivery]</td>
+<td>Andreas Huemmer</td>
+</tr>
+<tr>
+<td><strong>Commissioning</strong></td>
+<td>[TODO: 1-2 Weeks]</td>
+<td>[TODO: Installation, Configuration, Testing]</td>
+<td>[TODO: Team]</td>
+</tr>
+<tr>
+<td><strong>Operation</strong></td>
+<td>[TODO: 5 Years]</td>
+<td>[TODO: Monitoring, Maintenance, Support]</td>
+<td>[TODO: Team]</td>
+</tr>
+<tr>
+<td><strong>Refresh</strong></td>
+<td>[TODO: 1-2 Weeks]</td>
+<td>[TODO: Migration, Replacement]</td>
+<td>[TODO: Team]</td>
+</tr>
+<tr>
+<td><strong>Disposal</strong></td>
+<td>[TODO: 1 Week]</td>
+<td>[TODO: Data Erasure, Recycling]</td>
+<td>[TODO: Team]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="software-lifecycle">Software Lifecycle</h3>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Duration</th>
+<th>Activities</th>
+<th>Responsible</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Evaluation</strong></td>
+<td>[TODO: 2-4 Weeks]</td>
+<td>[TODO: Requirements Analysis, PoC]</td>
+<td>[TODO: Team]</td>
+</tr>
+<tr>
+<td><strong>Procurement</strong></td>
+<td>[TODO: 2-4 Weeks]</td>
+<td>[TODO: Licensing, Contracts]</td>
+<td>[TODO: Team]</td>
+</tr>
+<tr>
+<td><strong>Implementation</strong></td>
+<td>[TODO: 4-8 Weeks]</td>
+<td>[TODO: Installation, Configuration]</td>
+<td>[TODO: Team]</td>
+</tr>
+<tr>
+<td><strong>Operation</strong></td>
+<td>[TODO: 3-5 Years]</td>
+<td>[TODO: Support, Updates]</td>
+<td>[TODO: Team]</td>
+</tr>
+<tr>
+<td><strong>Retirement</strong></td>
+<td>[TODO: 8-12 Weeks]</td>
+<td>[TODO: Migration, Decommissioning]</td>
+<td>[TODO: Team]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="end-of-life-management">End-of-Life Management</h3>
+<p><strong>Hardware:</strong>
+- <strong>Data Erasure:</strong> [TODO: Process, e.g., DoD 5220.22-M]
+- <strong>Certificate:</strong> [TODO: Yes/No]
+- <strong>Recycling:</strong> [TODO: Certified Partner]</p>
+<p><strong>Software:</strong>
+- <strong>License Return:</strong> [TODO: Process]
+- <strong>Data Export:</strong> [TODO: Process]
+- <strong>Documentation:</strong> [TODO: Archiving]</p>
+<h2 id="compliance-and-certifications">Compliance and Certifications</h2>
+<h3 id="data-center-certifications">Data Center Certifications</h3>
+<ul>
+<li><strong>ISO 27001:</strong> [TODO: Yes/No, Valid Until]</li>
+<li><strong>ISO 9001:</strong> [TODO: Yes/No, Valid Until]</li>
+<li><strong>Tier Certification:</strong> [TODO: Tier I/II/III/IV]</li>
+<li><strong>PCI-DSS:</strong> [TODO: Yes/No, Level]</li>
+</ul>
+<h3 id="compliance-requirements">Compliance Requirements</h3>
+<ul>
+<li><strong>GDPR:</strong> [TODO: Measures]</li>
+<li><strong>BSI Grundschutz:</strong> [TODO: Yes/No, Module]</li>
+<li><strong>KRITIS:</strong> [TODO: Yes/No, Sector]</li>
+</ul>
+<h2 id="responsibilities">Responsibilities</h2>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Responsibility</th>
+<th>Person</th>
+<th>Contact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Infrastructure Manager</strong></td>
+<td>Overall Infrastructure Responsibility</td>
+<td>Andreas Huemmer</td>
+<td>andreas.huemmer@adminsend.de</td>
+</tr>
+<tr>
+<td><strong>Network Administrator</strong></td>
+<td>Network Infrastructure</td>
+<td>[TODO: Name]</td>
+<td>[TODO: Email]</td>
+</tr>
+<tr>
+<td><strong>Storage Administrator</strong></td>
+<td>Storage Systems</td>
+<td>[TODO: Name]</td>
+<td>[TODO: Email]</td>
+</tr>
+<tr>
+<td><strong>Virtualization Admin</strong></td>
+<td>Virtualization</td>
+<td>[TODO: Name]</td>
+<td>[TODO: Email]</td>
+</tr>
+<tr>
+<td><strong>Cloud Architect</strong></td>
+<td>Cloud Infrastructure</td>
+<td>[TODO: Name]</td>
+<td>[TODO: Email]</td>
+</tr>
+<tr>
+<td><strong>Facility Manager</strong></td>
+<td>Physical Infrastructure</td>
+<td>[TODO: Name]</td>
+<td>[TODO: Email]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="contacts">Contacts</h2>
+<p><strong>For Infrastructure Questions:</strong>
+- <strong>IT Operations Manager:</strong> Andreas Huemmer (andreas.huemmer@adminsend.de)
+- <strong>CIO:</strong> Anna Schmidt (anna.schmidt@adminsend.de)</p>
+<p><strong>Emergency Contacts:</strong>
+- <strong>Data Center:</strong> [TODO: Phone 24/7]
+- <strong>Power Provider:</strong> [TODO: Phone]
+- <strong>Facility Management:</strong> [TODO: Phone]</p>
+<hr />
+<p><strong>Document Owner:</strong> IT Operations Manager<br />
+<strong>Approved by:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Organization:</strong> AdminSend GmbH</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0040_System_Overview_and_Architecture.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0060_Roles_and_Responsibilities.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0090 - Risikoanalyse und Szenarien</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0090</div>
+            <h1>Risikoanalyse und Szenarien</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0080_BIA_Ergebnisse_und_RTO_RPO.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0100_Strategie_und_Kontinuitaetsoptionen.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="risikoanalyse-und-szenarien">Risikoanalyse und Szenarien</h1>
+<p><strong>Dokument-ID:</strong> BCM-0090<br />
+<strong>Organisation:</strong> AdminSend GmbH<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Genehmigt durch:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Entwurf / In Review / Freigegeben<br />
+<strong>Klassifizierung:</strong> Vertraulich<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-ziel">1. Ziel</h2>
+<p>Die Risikoanalyse der AdminSend GmbH dient der:</p>
+<ul>
+<li><strong>Identifikation</strong> von Risiken, die die Geschäftskontinuität beeinträchtigen können</li>
+<li><strong>Bewertung</strong> der Eintrittswahrscheinlichkeit und Auswirkungen</li>
+<li><strong>Behandlung</strong> durch geeignete Maßnahmen (Vermeidung, Reduktion, Transfer, Akzeptanz)</li>
+<li><strong>Überwachung</strong> und regelmäßigen Überprüfung der Risiken</li>
+</ul>
+<p>Die Risikoanalyse ergänzt die Business Impact Analysis (BIA) und bildet die Grundlage für die BCM-Strategie.</p>
+<h2 id="2-szenario-katalog">2. Szenario-Katalog</h2>
+<h3 id="21-it-und-cyber-risiken">2.1 IT- und Cyber-Risiken</h3>
+<p><strong>2.1.1 Cyberangriff / Ransomware</strong>
+- <strong>Beschreibung:</strong> Verschlüsselung von Daten durch Ransomware, Erpressung
+- <strong>Betroffene Services:</strong> Alle IT-abhängigen Prozesse
+- <strong>Typische Auswirkungen:</strong> Datenverlust, Systemausfall, Erpressungszahlung
+- <strong>Referenz:</strong> BSI-Standard 200-4, Abschnitt Cyber-Resilience</p>
+<p><strong>2.1.2 Ausfall Rechenzentrum / Cloud-Region</strong>
+- <strong>Beschreibung:</strong> Komplettausfall des primären Rechenzentrums oder Cloud-Region
+- <strong>Betroffene Services:</strong> Alle IT-Services
+- <strong>Typische Auswirkungen:</strong> Totalausfall IT-Systeme, Datenzugriff nicht möglich</p>
+<p><strong>2.1.3 Netzwerkausfall / Internet-Ausfall</strong>
+- <strong>Beschreibung:</strong> Ausfall der Netzwerkinfrastruktur oder Internet-Anbindung
+- <strong>Betroffene Services:</strong> Alle netzwerkabhängigen Services
+- <strong>Typische Auswirkungen:</strong> Keine Kommunikation, kein Datenzugriff</p>
+<p><strong>2.1.4 Datenverlust / Backup-Ausfall</strong>
+- <strong>Beschreibung:</strong> Verlust kritischer Daten, Backup nicht wiederherstellbar
+- <strong>Betroffene Services:</strong> Datenabhängige Prozesse
+- <strong>Typische Auswirkungen:</strong> Permanenter Datenverlust, RPO-Überschreitung</p>
+<h3 id="22-infrastruktur-risiken">2.2 Infrastruktur-Risiken</h3>
+<p><strong>2.2.1 Stromausfall</strong>
+- <strong>Beschreibung:</strong> Ausfall der Stromversorgung am Standort
+- <strong>Betroffene Services:</strong> Alle stromabhängigen Systeme und Prozesse
+- <strong>Typische Auswirkungen:</strong> Produktionsausfall, IT-Ausfall, Gebäudetechnik-Ausfall</p>
+<p><strong>2.2.2 Brand</strong>
+- <strong>Beschreibung:</strong> Feuer im Gebäude oder Rechenzentrum
+- <strong>Betroffene Services:</strong> Alle Services am betroffenen Standort
+- <strong>Typische Auswirkungen:</strong> Standort nicht nutzbar, Sachschäden, Personengefährdung</p>
+<p><strong>2.2.3 Wasserschaden</strong>
+- <strong>Beschreibung:</strong> Überschwemmung, Rohrbruch, Löschwasser
+- <strong>Betroffene Services:</strong> Services am betroffenen Standort
+- <strong>Typische Auswirkungen:</strong> Gebäudeschäden, IT-Hardware-Schäden</p>
+<p><strong>2.2.4 Standort nicht zugänglich</strong>
+- <strong>Beschreibung:</strong> Evakuierung, Sperrung, Naturereignis
+- <strong>Betroffene Services:</strong> Alle standortabhängigen Prozesse
+- <strong>Typische Auswirkungen:</strong> Mitarbeiter können nicht arbeiten, Produktion steht still</p>
+<h3 id="23-personal-risiken">2.3 Personal-Risiken</h3>
+<p><strong>2.3.1 Personalausfall / Pandemie</strong>
+- <strong>Beschreibung:</strong> Krankheitswelle, Pandemie, Massenausfall
+- <strong>Betroffene Services:</strong> Personalintensive Prozesse
+- <strong>Typische Auswirkungen:</strong> Reduzierte Kapazität, Schlüsselpersonen nicht verfügbar</p>
+<p><strong>2.3.2 Ausfall Schlüsselpersonen</strong>
+- <strong>Beschreibung:</strong> Langfristiger Ausfall von Personen mit Spezialwissen
+- <strong>Betroffene Services:</strong> Prozesse mit Wissensabhängigkeiten
+- <strong>Typische Auswirkungen:</strong> Prozesse können nicht durchgeführt werden</p>
+<h3 id="24-lieferanten-risiken">2.4 Lieferanten-Risiken</h3>
+<p><strong>2.4.1 Lieferantenausfall</strong>
+- <strong>Beschreibung:</strong> Kritischer Lieferant kann nicht liefern
+- <strong>Betroffene Services:</strong> Produktions- und Beschaffungsprozesse
+- <strong>Typische Auswirkungen:</strong> Produktionsstopp, Lieferengpässe</p>
+<p><strong>2.4.2 IT-Dienstleister-Ausfall</strong>
+- <strong>Beschreibung:</strong> Ausfall eines kritischen IT-Dienstleisters oder Cloud-Providers
+- <strong>Betroffene Services:</strong> Ausgelagerte IT-Services
+- <strong>Typische Auswirkungen:</strong> Service nicht verfügbar, keine Alternative</p>
+<h3 id="25-naturereignisse-und-umwelt">2.5 Naturereignisse und Umwelt</h3>
+<p><strong>2.5.1 Unwetter / Sturm</strong>
+- <strong>Beschreibung:</strong> Schwere Unwetter, Sturm, Hagel
+- <strong>Betroffene Services:</strong> Standortabhängige Prozesse, Logistik
+- <strong>Typische Auswirkungen:</strong> Gebäudeschäden, Verkehrswege blockiert</p>
+<p><strong>2.5.2 Hochwasser</strong>
+- <strong>Beschreibung:</strong> Überschwemmung durch Fluss oder Starkregen
+- <strong>Betroffene Services:</strong> Standortabhängige Prozesse
+- <strong>Typische Auswirkungen:</strong> Standort überflutet, massive Sachschäden</p>
+<p><strong>2.5.3 Erdbeben</strong> (je nach Standort)
+- <strong>Beschreibung:</strong> Seismisches Ereignis
+- <strong>Betroffene Services:</strong> Alle Services am Standort
+- <strong>Typische Auswirkungen:</strong> Gebäudeschäden, Infrastrukturausfall</p>
+<p>[TODO: Ergänzen oder streichen Sie Szenarien entsprechend Ihrer Standorte und Risiken]</p>
+<h2 id="3-bewertungsmethodik">3. Bewertungsmethodik</h2>
+<h3 id="31-bewertungsschema">3.1 Bewertungsschema</h3>
+<p><strong>Eintrittswahrscheinlichkeit (1-5):</strong>
+| Stufe | Bezeichnung | Beschreibung | Häufigkeit |
+|-------|-------------|--------------|------------|
+| 5 | Sehr hoch | Tritt regelmäßig ein | Mehrmals pro Jahr |
+| 4 | Hoch | Tritt gelegentlich ein | Einmal pro Jahr |
+| 3 | Mittel | Kann eintreten | Einmal in 1-5 Jahren |
+| 2 | Niedrig | Unwahrscheinlich | Einmal in 5-10 Jahren |
+| 1 | Sehr niedrig | Sehr unwahrscheinlich | Seltener als alle 10 Jahre |</p>
+<p><strong>Auswirkung (1-5):</strong>
+| Stufe | Bezeichnung | Beschreibung | Finanzielle Auswirkung |
+|-------|-------------|--------------|----------------------|
+| 5 | Katastrophal | Existenzbedrohend | &gt; 1 Mio. € |
+| 4 | Sehr hoch | Massive Auswirkungen | 500.000 - 1 Mio. € |
+| 3 | Hoch | Erhebliche Auswirkungen | 100.000 - 500.000 € |
+| 2 | Mittel | Spürbare Auswirkungen | 10.000 - 100.000 € |
+| 1 | Niedrig | Geringe Auswirkungen | &lt; 10.000 € |</p>
+<p><strong>Risiko-Score:</strong>
+- Risiko-Score = Eintrittswahrscheinlichkeit × Auswirkung
+- Wertebereich: 1-25</p>
+<h3 id="32-risikotoleranz-und-schwellwerte">3.2 Risikotoleranz und Schwellwerte</h3>
+<p>[TODO: Definieren Sie Ihre Risikotoleranz]</p>
+<p><strong>Beispiel:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Risiko-Score</th>
+<th>Risikostufe</th>
+<th>Behandlung</th>
+<th>Eskalation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>15-25</td>
+<td>Kritisch (Rot)</td>
+<td>Sofortige Maßnahmen erforderlich</td>
+<td>{{ meta.roles.ceo.name }}</td>
+</tr>
+<tr>
+<td>10-14</td>
+<td>Hoch (Orange)</td>
+<td>Maßnahmen innerhalb 3 Monate</td>
+<td>BCM-Manager</td>
+</tr>
+<tr>
+<td>5-9</td>
+<td>Mittel (Gelb)</td>
+<td>Maßnahmen innerhalb 12 Monate</td>
+<td>Fachbereich</td>
+</tr>
+<tr>
+<td>1-4</td>
+<td>Niedrig (Grün)</td>
+<td>Überwachung, keine Maßnahmen</td>
+<td>Fachbereich</td>
+</tr>
+</tbody>
+</table>
+<h3 id="33-risikomatrix">3.3 Risikomatrix</h3>
+<div class="codehilite"><pre><span></span><code><span class="n">Auswirkung</span>
+<span class="w">    </span><span class="err">│</span>
+<span class="w">  </span><span class="mi">5</span><span class="w"> </span><span class="err">│</span><span class="w">  </span><span class="mi">10</span><span class="w">    </span><span class="mi">15</span><span class="w">    </span><span class="mi">20</span><span class="w">    </span><span class="mi">25</span>
+<span class="w">    </span><span class="err">│</span><span class="w"> </span><span class="o">[</span><span class="n">Gelb</span><span class="o">][</span><span class="n">Orange</span><span class="o">][</span><span class="n">Rot</span><span class="o">][</span><span class="n">Rot</span><span class="o">]</span>
+<span class="w">  </span><span class="mi">4</span><span class="w"> </span><span class="err">│</span><span class="w">   </span><span class="mi">8</span><span class="w">    </span><span class="mi">12</span><span class="w">    </span><span class="mi">16</span><span class="w">    </span><span class="mi">20</span>
+<span class="w">    </span><span class="err">│</span><span class="w"> </span><span class="o">[</span><span class="n">Gelb</span><span class="o">][</span><span class="n">Orange</span><span class="o">][</span><span class="n">Orange</span><span class="o">][</span><span class="n">Rot</span><span class="o">]</span>
+<span class="w">  </span><span class="mi">3</span><span class="w"> </span><span class="err">│</span><span class="w">   </span><span class="mi">6</span><span class="w">     </span><span class="mi">9</span><span class="w">    </span><span class="mi">12</span><span class="w">    </span><span class="mi">15</span>
+<span class="w">    </span><span class="err">│</span><span class="w"> </span><span class="o">[</span><span class="n">Gelb</span><span class="o">][</span><span class="n">Gelb</span><span class="o">][</span><span class="n">Orange</span><span class="o">][</span><span class="n">Orange</span><span class="o">]</span>
+<span class="w">  </span><span class="mi">2</span><span class="w"> </span><span class="err">│</span><span class="w">   </span><span class="mi">4</span><span class="w">     </span><span class="mi">6</span><span class="w">     </span><span class="mi">8</span><span class="w">    </span><span class="mi">10</span>
+<span class="w">    </span><span class="err">│</span><span class="w"> </span><span class="o">[</span><span class="n">Grün</span><span class="o">][</span><span class="n">Gelb</span><span class="o">][</span><span class="n">Gelb</span><span class="o">][</span><span class="n">Orange</span><span class="o">]</span>
+<span class="w">  </span><span class="mi">1</span><span class="w"> </span><span class="err">│</span><span class="w">   </span><span class="mi">2</span><span class="w">     </span><span class="mi">3</span><span class="w">     </span><span class="mi">4</span><span class="w">     </span><span class="mi">5</span>
+<span class="w">    </span><span class="err">│</span><span class="w"> </span><span class="o">[</span><span class="n">Grün</span><span class="o">][</span><span class="n">Grün</span><span class="o">][</span><span class="n">Grün</span><span class="o">][</span><span class="n">Gelb</span><span class="o">]</span>
+<span class="w">    </span><span class="err">└─────────────────────────</span>
+<span class="w">      </span><span class="mi">1</span><span class="w">     </span><span class="mi">2</span><span class="w">     </span><span class="mi">3</span><span class="w">     </span><span class="mi">4</span><span class="w">     </span><span class="mi">5</span>
+<span class="w">           </span><span class="n">Wahrscheinlichkeit</span>
+</code></pre></div>
+
+<h2 id="4-risikoregister">4. Risikoregister</h2>
+<h3 id="41-bewertete-risiken">4.1 Bewertete Risiken</h3>
+<table>
+<thead>
+<tr>
+<th>Risiko/Szenario</th>
+<th>Betroffene Services</th>
+<th>Wahrsch.</th>
+<th>Auswirkung</th>
+<th>Score</th>
+<th>Risikostufe</th>
+<th>Kontrollen (bestehend)</th>
+<th>Maßnahmen (geplant)</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Risiko 1]</td>
+<td>[TODO]</td>
+<td>3</td>
+<td>5</td>
+<td>15</td>
+<td>Orange</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beispiele:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Risiko/Szenario</th>
+<th>Betroffene Services</th>
+<th>Wahrsch.</th>
+<th>Auswirkung</th>
+<th>Score</th>
+<th>Risikostufe</th>
+<th>Kontrollen (bestehend)</th>
+<th>Maßnahmen (geplant)</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ransomware-Angriff</td>
+<td>Alle IT-Services</td>
+<td>4</td>
+<td>5</td>
+<td>20</td>
+<td>Rot</td>
+<td>Firewall, AV, Backup</td>
+<td>EDR, Segmentierung, Offline-Backup</td>
+<td>{{ meta.roles.ciso.name }}</td>
+</tr>
+<tr>
+<td>Stromausfall</td>
+<td>Produktion, IT</td>
+<td>3</td>
+<td>4</td>
+<td>12</td>
+<td>Orange</td>
+<td>USV (15min)</td>
+<td>Notstromgenerator</td>
+<td>Facility-Manager</td>
+</tr>
+<tr>
+<td>Personalausfall (Pandemie)</td>
+<td>Alle Prozesse</td>
+<td>2</td>
+<td>4</td>
+<td>8</td>
+<td>Gelb</td>
+<td>Home-Office möglich</td>
+<td>Pandemieplan</td>
+<td>HR</td>
+</tr>
+<tr>
+<td>Lieferantenausfall</td>
+<td>Produktion</td>
+<td>3</td>
+<td>3</td>
+<td>9</td>
+<td>Gelb</td>
+<td>Lagerbestand (2 Wochen)</td>
+<td>Zweitlieferant</td>
+<td>Einkauf</td>
+</tr>
+<tr>
+<td>Rechenzentrumsausfall</td>
+<td>Alle IT-Services</td>
+<td>2</td>
+<td>5</td>
+<td>10</td>
+<td>Orange</td>
+<td>Backup vorhanden</td>
+<td>DR-Standort</td>
+<td>{{ meta.roles.cio.name }}</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-top-risiken-score-15">4.2 Top-Risiken (Score ≥ 15)</h3>
+<p>[TODO: Listen Sie die Top-Risiken auf, die sofortige Maßnahmen erfordern]</p>
+<ol>
+<li><strong>Ransomware-Angriff</strong> (Score: 20)</li>
+<li>Maßnahmen: EDR-Implementierung, Netzwerksegmentierung, Offline-Backups</li>
+<li>Verantwortlich: {{ meta.roles.ciso.name }}</li>
+<li>
+<p>Fällig: Q1 2026</p>
+</li>
+<li>
+<p>[TODO: Weiteres Top-Risiko]</p>
+</li>
+</ol>
+<h2 id="5-risikobehandlung">5. Risikobehandlung</h2>
+<h3 id="51-behandlungsstrategien">5.1 Behandlungsstrategien</h3>
+<p><strong>Risikovermeidung:</strong>
+- Aktivität wird nicht durchgeführt oder eingestellt
+- Beispiel: Verzicht auf Nutzung unsicherer Cloud-Services</p>
+<p><strong>Risikoreduktion:</strong>
+- Maßnahmen zur Reduktion von Wahrscheinlichkeit oder Auswirkung
+- Beispiel: Implementierung von Redundanzen, Backup-Strategien</p>
+<p><strong>Risikotransfer:</strong>
+- Übertragung des Risikos auf Dritte (Versicherung, Outsourcing)
+- Beispiel: Cyber-Versicherung, SLA mit Dienstleistern</p>
+<p><strong>Risikoakzeptanz:</strong>
+- Bewusste Akzeptanz des Restrisikos
+- Beispiel: Niedrige Risiken ohne Maßnahmen</p>
+<h3 id="52-manahmenplan">5.2 Maßnahmenplan</h3>
+<table>
+<thead>
+<tr>
+<th>Maßnahme</th>
+<th>Risiko</th>
+<th>Strategie</th>
+<th>Beschreibung</th>
+<th>Owner</th>
+<th>Priorität</th>
+<th>Kosten</th>
+<th>Fällig</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Maßnahme 1]</td>
+<td>[TODO: Risiko]</td>
+<td>Reduktion</td>
+<td>[TODO: Beschreibung]</td>
+<td>[TODO]</td>
+<td>Hoch</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Offen</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beispiele:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Maßnahme</th>
+<th>Risiko</th>
+<th>Strategie</th>
+<th>Beschreibung</th>
+<th>Owner</th>
+<th>Priorität</th>
+<th>Kosten</th>
+<th>Fällig</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EDR-Implementierung</td>
+<td>Ransomware</td>
+<td>Reduktion</td>
+<td>Endpoint Detection &amp; Response auf allen Clients</td>
+<td>{{ meta.roles.ciso.name }}</td>
+<td>Hoch</td>
+<td>50.000 €</td>
+<td>Q1 2026</td>
+<td>In Arbeit</td>
+</tr>
+<tr>
+<td>Notstromgenerator</td>
+<td>Stromausfall</td>
+<td>Reduktion</td>
+<td>Diesel-Generator für 48h Betrieb</td>
+<td>Facility</td>
+<td>Mittel</td>
+<td>80.000 €</td>
+<td>Q2 2026</td>
+<td>Geplant</td>
+</tr>
+<tr>
+<td>Cyber-Versicherung</td>
+<td>Ransomware</td>
+<td>Transfer</td>
+<td>Versicherung für Cyber-Vorfälle</td>
+<td>CFO</td>
+<td>Hoch</td>
+<td>20.000 €/Jahr</td>
+<td>Q1 2026</td>
+<td>Offen</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-uberwachung-und-review">6. Überwachung und Review</h2>
+<h3 id="61-risiko-monitoring">6.1 Risiko-Monitoring</h3>
+<p><strong>Verantwortlich:</strong> BCM-Manager</p>
+<p><strong>Überwachungsintervall:</strong>
+- Quartalsweise Überprüfung des Risikoregisters
+- Ad-hoc bei neuen Bedrohungen oder Vorfällen
+- Jährliche vollständige Risikoanalyse</p>
+<p><strong>Indikatoren:</strong>
+- Neue Bedrohungen (z.B. neue Ransomware-Varianten)
+- Vorfälle bei vergleichbaren Organisationen
+- Änderungen in der Bedrohungslandschaft
+- Technologische Entwicklungen</p>
+<h3 id="62-eskalation">6.2 Eskalation</h3>
+<p><strong>Eskalationskriterien:</strong>
+- Neues Risiko mit Score ≥ 15
+- Bestehend Risiko erhöht sich auf Score ≥ 15
+- Risiko tritt ein (Incident)</p>
+<p><strong>Eskalationswege:</strong>
+- Score ≥ 15: Sofortige Meldung an {{ meta.roles.ceo.name }}
+- Score 10-14: Meldung an BCM-Manager
+- Score &lt; 10: Dokumentation im Risikoregister</p>
+<hr />
+<p><strong>Dokumenthistorie:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Datum</th>
+<th>Autor</th>
+<th>Änderungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Initiale Erstellung</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0080_BIA_Ergebnisse_und_RTO_RPO.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0100_Strategie_und_Kontinuitaetsoptionen.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

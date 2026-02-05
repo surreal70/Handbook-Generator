@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0160 - Continuous Improvement (CI) in the ISMS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0160</div>
+            <h1>Continuous Improvement (CI) in the ISMS</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0150_ISMS_Non_Conformities_and_Corrective_Actions.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0200_Policy_Acceptable_Use_of_IT.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="continuous-improvement-ci-in-the-isms">Continuous Improvement (CI) in the ISMS</h1>
+<p><strong>Document ID:</strong> 0160<br />
+<strong>Document Type:</strong> ISMS Foundation Document<br />
+<strong>Standard Reference:</strong> ISO/IEC 27001:2022 Clause 10.2<br />
+<strong>Owner:</strong> Thomas Weber<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Approved<br />
+<strong>Classification:</strong> Internal<br />
+<strong>Last Updated:</strong> {{ meta.document.date }}<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-purpose-and-objectives">1. Purpose and Objectives</h2>
+<h3 id="11-purpose">1.1 Purpose</h3>
+<p>The continuous improvement (CI) program of <strong>AdminSend GmbH</strong> ensures that:
+- The ISMS is continuously improved
+- Improvement opportunities are systematically identified
+- Improvement measures are prioritized and implemented
+- The suitability, adequacy, and effectiveness of the ISMS are maintained</p>
+<h3 id="12-objectives">1.2 Objectives</h3>
+<ul>
+<li><strong>Continuous Improvement:</strong> At least 10 improvement measures per year</li>
+<li><strong>Lessons Learned:</strong> Systematic evaluation of all incidents and audits</li>
+<li><strong>Innovation:</strong> Use of new technologies and best practices</li>
+<li><strong>Efficiency:</strong> Optimization of processes and controls</li>
+</ul>
+<h3 id="13-pdca-cycle">1.3 PDCA Cycle</h3>
+<p>The ISMS follows the PDCA cycle (Plan-Do-Check-Act):</p>
+<div class="codehilite"><pre><span></span><code>┌─────────────────────────────────────────────────────────┐
+│<span class="w">                    </span><span class="nv">PDCA</span><span class="w"> </span><span class="nv">Cycle</span><span class="w">                            </span>│
+└─────────────────────────────────────────────────────────┘
+
+<span class="w">    </span><span class="nv">Plan</span>
+<span class="w">    </span>├─<span class="w"> </span><span class="nv">Set</span><span class="w"> </span><span class="nv">objectives</span>
+<span class="w">    </span>├─<span class="w"> </span><span class="nv">Analyze</span><span class="w"> </span><span class="nv">risks</span>
+<span class="w">    </span>├─<span class="w"> </span><span class="nv">Plan</span><span class="w"> </span><span class="nv">measures</span>
+<span class="w">    </span>└─<span class="w"> </span><span class="nv">Allocate</span><span class="w"> </span><span class="nv">resources</span>
+<span class="w">         </span>│
+<span class="w">         </span>▼
+<span class="w">    </span><span class="k">Do</span>
+<span class="w">    </span>├─<span class="w"> </span><span class="nv">Implement</span><span class="w"> </span><span class="nv">measures</span>
+<span class="w">    </span>├─<span class="w"> </span><span class="nv">Conduct</span><span class="w"> </span><span class="nv">training</span>
+<span class="w">    </span>├─<span class="w"> </span><span class="nv">Operate</span><span class="w"> </span><span class="nv">controls</span>
+<span class="w">    </span>└─<span class="w"> </span><span class="nv">Document</span>
+<span class="w">         </span>│
+<span class="w">         </span>▼
+<span class="w">    </span><span class="nv">Check</span>
+<span class="w">    </span>├─<span class="w"> </span><span class="nv">Monitoring</span>
+<span class="w">    </span>├─<span class="w"> </span><span class="nv">Audits</span>
+<span class="w">    </span>├─<span class="w"> </span><span class="nv">Reviews</span>
+<span class="w">    </span>└─<span class="w"> </span><span class="nv">Measure</span><span class="w"> </span><span class="nv">KPIs</span>
+<span class="w">         </span>│
+<span class="w">         </span>▼
+<span class="w">    </span><span class="nv">Act</span>
+<span class="w">    </span>├─<span class="w"> </span><span class="nv">Address</span><span class="w"> </span><span class="nv">non</span><span class="o">-</span><span class="nv">conformities</span>
+<span class="w">    </span>├─<span class="w"> </span><span class="nv">Implement</span><span class="w"> </span><span class="nv">improvements</span>
+<span class="w">    </span>├─<span class="w"> </span><span class="nv">Lessons</span><span class="w"> </span><span class="nv">learned</span>
+<span class="w">    </span>└─<span class="w"> </span><span class="nv">Make</span><span class="w"> </span><span class="nv">adjustments</span>
+<span class="w">         </span>│
+<span class="w">         </span>└──────────┐
+<span class="w">                    </span>│
+<span class="w">                    </span>▼
+<span class="w">         </span><span class="nv">Back</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">Plan</span><span class="w"> </span><span class="ss">(</span><span class="nv">Continuous</span><span class="w"> </span><span class="nv">Cycle</span><span class="ss">)</span>
+</code></pre></div>
+
+<h2 id="2-sources-for-improvements">2. Sources for Improvements</h2>
+<h3 id="21-audits-and-findings">2.1 Audits and Findings</h3>
+<p><strong>Internal Audits:</strong>
+- Audit findings (Major/Minor/Observations)
+- Opportunities for improvement
+- Best practices from other areas</p>
+<p><strong>External Audits:</strong>
+- Certification audits
+- Customer audits
+- Regulatory audits</p>
+<p><strong>See:</strong> <code>0130_ISMS_Internal_Audit_Program.md</code></p>
+<h3 id="22-incidents-and-postmortems">2.2 Incidents and Postmortems</h3>
+<p><strong>Security Incidents:</strong>
+- Root cause analysis
+- Lessons learned
+- Preventive measures</p>
+<p><strong>Near Misses:</strong>
+- Near-miss incidents
+- Early warning indicators
+- Proactive measures</p>
+<p><strong>See:</strong> <code>0400_Policy_Incident_Management.md</code></p>
+<h3 id="23-risk-assessments">2.3 Risk Assessments</h3>
+<p><strong>Risk Analysis:</strong>
+- New risks
+- Changed risk assessments
+- Emerging threats</p>
+<p><strong>Risk Treatment:</strong>
+- Effectiveness of measures
+- New treatment options
+- Optimization potential</p>
+<p><strong>See:</strong> <code>0080_ISMS_Risk_Register_Template.md</code></p>
+<h3 id="24-kpis-and-monitoring">2.4 KPIs and Monitoring</h3>
+<p><strong>Performance Metrics:</strong>
+- KPI trends
+- Deviations from target values
+- Benchmarking</p>
+<p><strong>Monitoring Data:</strong>
+- SIEM alerts
+- Vulnerability scans
+- Log analysis</p>
+<p><strong>See:</strong> <code>0110_ISMS_Security_Objectives_and_Metrics.md</code></p>
+<h3 id="25-changes-in-context">2.5 Changes in Context</h3>
+<p><strong>External Changes:</strong>
+- New threats
+- New technologies
+- New regulations
+- Industry trends</p>
+<p><strong>Internal Changes:</strong>
+- Organizational changes
+- New systems/processes
+- Strategic direction</p>
+<p><strong>See:</strong> <code>0030_ISMS_Context_and_Interested_Parties.md</code></p>
+<h3 id="26-stakeholder-feedback">2.6 Stakeholder Feedback</h3>
+<p><strong>Customers:</strong>
+- Security requirements
+- Satisfaction surveys
+- Complaints</p>
+<p><strong>Employees:</strong>
+- Process feedback
+- Improvement suggestions
+- Usability issues</p>
+<p><strong>Management:</strong>
+- Strategic directives
+- Resource decisions</p>
+<h3 id="27-best-practices-and-innovation">2.7 Best Practices and Innovation</h3>
+<p><strong>External Sources:</strong>
+- Industry standards (NIST, CIS, etc.)
+- Security conferences
+- Threat intelligence
+- Peer exchange</p>
+<p><strong>Internal Innovation:</strong>
+- Proof of concepts
+- Pilot projects
+- Technology evaluations</p>
+<h2 id="3-ci-backlog">3. CI Backlog</h2>
+<h3 id="31-improvement-suggestions">3.1 Improvement Suggestions</h3>
+<table>
+<thead>
+<tr>
+<th>Item ID</th>
+<th>Title</th>
+<th>Source</th>
+<th>Description</th>
+<th>Benefit</th>
+<th>Effort</th>
+<th>Owner</th>
+<th>Priority</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CI-001</td>
+<td>SIEM automation</td>
+<td>Monitoring</td>
+<td>Automatic response playbooks</td>
+<td>Faster incident response</td>
+<td>40 PD</td>
+<td>Security Team</td>
+<td>High</td>
+<td>Planned</td>
+</tr>
+<tr>
+<td>CI-002</td>
+<td>Zero-trust architecture</td>
+<td>Best Practice</td>
+<td>Implement zero-trust principles</td>
+<td>Improved segmentation</td>
+<td>200 PD</td>
+<td>Anna Schmidt</td>
+<td>Medium</td>
+<td>Evaluation</td>
+</tr>
+<tr>
+<td>CI-003</td>
+<td>Security Champions Program</td>
+<td>Awareness</td>
+<td>Multipliers in all teams</td>
+<td>Higher security awareness</td>
+<td>20 PD</td>
+<td>Thomas Weber</td>
+<td>High</td>
+<td>In Progress</td>
+</tr>
+<tr>
+<td>CI-004</td>
+<td>Immutable infrastructure</td>
+<td>DevOps</td>
+<td>Infrastructure as Code with immutability</td>
+<td>Better compliance, less drift</td>
+<td>80 PD</td>
+<td>DevOps</td>
+<td>Medium</td>
+<td>Planned</td>
+</tr>
+</tbody>
+</table>
+<p>[TODO: Add additional improvement suggestions]</p>
+<h3 id="32-prioritization">3.2 Prioritization</h3>
+<p><strong>Prioritization Criteria:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Weight</th>
+<th>Rating (1-5)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Risk reduction</td>
+<td>40%</td>
+<td>How much is risk reduced?</td>
+</tr>
+<tr>
+<td>Compliance benefit</td>
+<td>20%</td>
+<td>Improves compliance?</td>
+</tr>
+<tr>
+<td>Efficiency gain</td>
+<td>20%</td>
+<td>Saves time/resources?</td>
+</tr>
+<tr>
+<td>Effort</td>
+<td>10%</td>
+<td>How high is the effort? (inverted)</td>
+</tr>
+<tr>
+<td>Strategic alignment</td>
+<td>10%</td>
+<td>Fits strategy?</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Prioritization Formula:</strong></p>
+<div class="codehilite"><pre><span></span><code>Priority = (Risk Reduction × 0.4) + (Compliance × 0.2) + 
+           (Efficiency × 0.2) + ((6 - Effort) × 0.1) + 
+           (Strategy × 0.1)
+</code></pre></div>
+
+<p><strong>Priority Levels:</strong>
+- <strong>Very High (4.0-5.0):</strong> Implement immediately
+- <strong>High (3.0-3.9):</strong> Within 6 months
+- <strong>Medium (2.0-2.9):</strong> Within 12 months
+- <strong>Low (&lt; 2.0):</strong> As available</p>
+<h2 id="4-improvement-process">4. Improvement Process</h2>
+<h3 id="41-process-steps">4.1 Process Steps</h3>
+<div class="codehilite"><pre><span></span><code><span class="mf">1.</span><span class="w"> </span><span class="n">Identification</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Recognize</span><span class="w"> </span><span class="n">improvement</span><span class="w"> </span><span class="n">potential</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Create</span><span class="w"> </span><span class="n">description</span>
+<span class="w">   </span><span class="err">└─</span><span class="w"> </span><span class="n">Add</span><span class="w"> </span><span class="kr">to</span><span class="w"> </span><span class="n">backlog</span>
+
+<span class="mf">2.</span><span class="w"> </span><span class="n">Assessment</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Assess</span><span class="w"> </span><span class="n">benefit</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Estimate</span><span class="w"> </span><span class="n">effort</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Prioritize</span>
+<span class="w">   </span><span class="err">└─</span><span class="w"> </span><span class="n">Obtain</span><span class="w"> </span><span class="n">approval</span>
+
+<span class="mf">3.</span><span class="w"> </span><span class="n">Planning</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Detailed</span><span class="w"> </span><span class="n">planning</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Allocate</span><span class="w"> </span><span class="n">resources</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Create</span><span class="w"> </span><span class="n">timeline</span>
+<span class="w">   </span><span class="err">└─</span><span class="w"> </span><span class="n">Inform</span><span class="w"> </span><span class="n">stakeholders</span>
+
+<span class="mf">4.</span><span class="w"> </span><span class="n">Implementation</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Implementation</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Testing</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Documentation</span>
+<span class="w">   </span><span class="err">└─</span><span class="w"> </span><span class="n">Training</span>
+
+<span class="mf">5.</span><span class="w"> </span><span class="n">Review</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="kr">Verify</span><span class="w"> </span><span class="n">effectiveness</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Lessons</span><span class="w"> </span><span class="n">learned</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Documentation</span>
+<span class="w">   </span><span class="err">└─</span><span class="w"> </span><span class="n">Communication</span>
+</code></pre></div>
+
+<h3 id="42-approval-process">4.2 Approval Process</h3>
+<p><strong>Small Improvements (&lt; 10 PD, &lt; €5,000):</strong>
+- Approval by CISO</p>
+<p><strong>Medium Improvements (10-40 PD, €5,000-25,000):</strong>
+- Approval by CISO and CIO</p>
+<p><strong>Large Improvements (&gt; 40 PD, &gt; €25,000):</strong>
+- Approval by management
+- Presentation to information security committee</p>
+<h2 id="5-improvement-categories">5. Improvement Categories</h2>
+<h3 id="51-process-improvements">5.1 Process Improvements</h3>
+<p><strong>Objective:</strong> Efficiency increase, error reduction</p>
+<p><strong>Examples:</strong>
+- Automation of manual processes
+- Simplification of complex processes
+- Tool integration
+- Standardization</p>
+<h3 id="52-control-improvements">5.2 Control Improvements</h3>
+<p><strong>Objective:</strong> Increase effectiveness</p>
+<p><strong>Examples:</strong>
+- New security controls
+- Improvement of existing controls
+- Control automation
+- Monitoring extensions</p>
+<h3 id="53-technology-improvements">5.3 Technology Improvements</h3>
+<p><strong>Objective:</strong> Modernization, innovation</p>
+<p><strong>Examples:</strong>
+- New security tools
+- Cloud migration
+- Zero-trust architecture
+- AI/ML-based security</p>
+<h3 id="54-awareness-improvements">5.4 Awareness Improvements</h3>
+<p><strong>Objective:</strong> Increase security awareness</p>
+<p><strong>Examples:</strong>
+- New training formats
+- Gamification
+- Security champions
+- Awareness campaigns</p>
+<h3 id="55-documentation-improvements">5.5 Documentation Improvements</h3>
+<p><strong>Objective:</strong> Clarity, completeness</p>
+<p><strong>Examples:</strong>
+- Update outdated documents
+- New templates
+- Better structuring
+- Automated documentation</p>
+<h2 id="6-lessons-learned">6. Lessons Learned</h2>
+<h3 id="61-lessons-learned-process">6.1 Lessons Learned Process</h3>
+<p><strong>After each incident/audit/project:</strong>
+1. Conduct lessons learned session
+2. Document findings
+3. Derive improvement measures
+4. Add to CI backlog
+5. Communicate</p>
+<h3 id="62-lessons-learned-database">6.2 Lessons Learned Database</h3>
+<p><strong>Structure:</strong>
+- Date and context
+- What happened?
+- What did we learn?
+- What worked well?
+- What could be improved?
+- Derived measures
+- Status of measures</p>
+<p><strong>Access:</strong>
+- All employees (read)
+- ISMS team (write)</p>
+<h3 id="63-communication">6.3 Communication</h3>
+<p><strong>Target Groups:</strong>
+- Affected teams
+- ISMS committee
+- Management
+- All employees (for relevant lessons learned)</p>
+<p><strong>Channels:</strong>
+- Lessons learned database
+- Security newsletter
+- Team meetings
+- Awareness campaigns</p>
+<h2 id="7-innovation-and-best-practices">7. Innovation and Best Practices</h2>
+<h3 id="71-technology-radar">7.1 Technology Radar</h3>
+<p><strong>Observation of new technologies:</strong>
+- Emerging security technologies
+- Cloud security
+- Zero trust
+- AI/ML in security
+- DevSecOps</p>
+<p><strong>Assessment:</strong>
+- Adopt (Use)
+- Trial (Try)
+- Assess (Evaluate)
+- Hold (Wait)</p>
+<h3 id="72-proof-of-concepts-pocs">7.2 Proof of Concepts (PoCs)</h3>
+<p><strong>Process:</strong>
+1. Identify technology
+2. Define PoC scope
+3. Conduct PoC
+4. Evaluate
+5. Decision: Adopt / Reject</p>
+<p><strong>Budget:</strong>
+- Annual PoC budget: [TODO] €</p>
+<h3 id="73-benchmarking">7.3 Benchmarking</h3>
+<p><strong>Comparison with:</strong>
+- Industry standards
+- Peer organizations
+- Best practices</p>
+<p><strong>Sources:</strong>
+- NIST Cybersecurity Framework
+- CIS Controls
+- SANS Top 20
+- Gartner/Forrester reports</p>
+<h2 id="8-metrics-and-reporting">8. Metrics and Reporting</h2>
+<h3 id="81-ci-kpis">8.1 CI KPIs</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Target Value</th>
+<th>Current</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Number of improvement measures per year</td>
+<td>≥ 10</td>
+<td>[TODO]</td>
+<td>✓ / ✗</td>
+</tr>
+<tr>
+<td>Average implementation time</td>
+<td>&lt; 90 days</td>
+<td>[TODO] days</td>
+<td>✓ / ✗</td>
+</tr>
+<tr>
+<td>Implemented improvements</td>
+<td>≥ 80%</td>
+<td>[TODO]%</td>
+<td>✓ / ✗</td>
+</tr>
+<tr>
+<td>Lessons learned documented</td>
+<td>100%</td>
+<td>[TODO]%</td>
+<td>✓ / ✗</td>
+</tr>
+<tr>
+<td>PoCs conducted</td>
+<td>≥ 3 per year</td>
+<td>[TODO]</td>
+<td>✓ / ✗</td>
+</tr>
+</tbody>
+</table>
+<h3 id="82-reporting">8.2 Reporting</h3>
+<p><strong>Quarterly:</strong>
+- Status of CI backlog
+- Implemented improvements
+- Lessons learned summary</p>
+<p><strong>Annually:</strong>
+- Complete CI report in management review
+- Trend analysis
+- Success stories</p>
+<h2 id="9-roles-and-responsibilities">9. Roles and Responsibilities</h2>
+<h3 id="91-raci-matrix-continuous-improvement">9.1 RACI Matrix: Continuous Improvement</h3>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>CISO</th>
+<th>ISMS Manager</th>
+<th>Improvement Owner</th>
+<th>Teams</th>
+<th>Management</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Identify improvements</td>
+<td>A</td>
+<td>R</td>
+<td>R</td>
+<td>R</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Assess improvements</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Prioritize improvements</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Approve improvements</td>
+<td>A</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Implement improvements</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>R</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Verify effectiveness</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Document lessons learned</td>
+<td>A</td>
+<td>R</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legend:</strong> R = Responsible, A = Accountable, C = Consulted, I = Informed</p>
+<h2 id="10-references">10. References</h2>
+<h3 id="101-internal-documents">10.1 Internal Documents</h3>
+<ul>
+<li><code>0110_ISMS_Security_Objectives_and_Metrics.md</code> - Security Objectives</li>
+<li><code>0130_ISMS_Internal_Audit_Program.md</code> - Internal Audit Program</li>
+<li><code>0140_ISMS_Management_Review_Template.md</code> - Management Review</li>
+<li><code>0150_ISMS_Non_Conformities_and_Corrective_Actions.md</code> - Non-conformities</li>
+<li><code>0400_Policy_Incident_Management.md</code> - Incident Management</li>
+</ul>
+<h3 id="102-external-standards">10.2 External Standards</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022</strong> - Clause 10.2: Continual improvement</li>
+<li><strong>ISO 9001:2015</strong> - Clause 10.3: Continual improvement</li>
+<li><strong>NIST Cybersecurity Framework</strong> - Continuous improvement practices</li>
+</ul>
+<hr />
+<p><strong>Approved by:</strong><br />
+Thomas Weber, CISO<br />
+{{ meta.management.ceo }}, Management<br />
+Date: {{ meta.document.approval_date }}</p>
+<p><strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0150_ISMS_Non_Conformities_and_Corrective_Actions.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0200_Policy_Acceptable_Use_of_IT.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0030 - Document Control and Document Register</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0030</div>
+            <h1>Document Control and Document Register</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0020_ISMS_Organization_Roles_RACI.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0040_Scope_and_Information_Domain.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="document-control-and-document-register">Document Control and Document Register</h1>
+<p><strong>Document ID:</strong> 0030<br />
+<strong>Document Type:</strong> Process/Foundation<br />
+<strong>Reference Framework:</strong> BSI IT-Grundschutz (BSI Standards 200-1/200-2/200-3)<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> {{ meta.document.status }}<br />
+<strong>Classification:</strong> internal<br />
+<strong>Last Updated:</strong> {{ meta.document.last_updated }}<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-purpose-and-scope">1. Purpose and Scope</h2>
+<p>This document describes document control for the Information Security Management System (ISMS) of <strong>AdminSend GmbH</strong>. It defines processes for creation, review, approval, distribution, modification, and archiving of ISMS documents.</p>
+<h3 id="11-scope">1.1 Scope</h3>
+<p>This document control applies to all ISMS-relevant documents:
+- Policies
+- Guidelines and process descriptions
+- Security concepts and risk analyses
+- Work instructions and checklists
+- Protocols and evidence</p>
+<h2 id="2-storage-and-access">2. Storage and Access</h2>
+<h3 id="21-official-storage-location">2.1 Official Storage Location</h3>
+<p><strong>Primary Storage Location:</strong> [TODO: e.g. SharePoint, Confluence, DMS]</p>
+<p><strong>Responsible:</strong> IT Operations Manager</p>
+<p>All ISMS documents are stored centrally in:
+- <strong>Path:</strong> [TODO: e.g. /ISMS/Documentation/]
+- <strong>Backup:</strong> [TODO: Backup strategy]
+- <strong>Versioning:</strong> Automatic versioning enabled</p>
+<h3 id="22-access-control-rbac">2.2 Access Control (RBAC)</h3>
+<p>Access to ISMS documents is role-based:</p>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Read</th>
+<th>Write</th>
+<th>Approve</th>
+<th>Delete</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Executive Management</td>
+<td>✓</td>
+<td>✗</td>
+<td>✓</td>
+<td>✗</td>
+</tr>
+<tr>
+<td>ISO</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>ISMS Team</td>
+<td>✓</td>
+<td>✓</td>
+<td>✗</td>
+<td>✗</td>
+</tr>
+<tr>
+<td>Information Domain Managers</td>
+<td>✓</td>
+<td>✓ (own documents)</td>
+<td>✗</td>
+<td>✗</td>
+</tr>
+<tr>
+<td>All Employees</td>
+<td>✓ (public documents)</td>
+<td>✗</td>
+<td>✗</td>
+<td>✗</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-classification-and-protection-need">2.3 Classification and Protection Need</h3>
+<table>
+<thead>
+<tr>
+<th>Classification</th>
+<th>Description</th>
+<th>Access</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Public</strong></td>
+<td>No confidentiality</td>
+<td>All Employees</td>
+<td>Awareness material</td>
+</tr>
+<tr>
+<td><strong>Internal</strong></td>
+<td>Internal use only</td>
+<td>All Employees</td>
+<td>Policies, guidelines</td>
+</tr>
+<tr>
+<td><strong>Confidential</strong></td>
+<td>Restricted access</td>
+<td>ISMS Team, Authorized</td>
+<td>Risk analyses, security concepts</td>
+</tr>
+<tr>
+<td><strong>Strictly Confidential</strong></td>
+<td>Highest confidentiality</td>
+<td>Executive Management, ISO</td>
+<td>Incident reports, audit findings</td>
+</tr>
+</tbody>
+</table>
+<h3 id="24-emergency-access">2.4 Emergency Access</h3>
+<p>In emergencies (e.g. ISO unavailable), the following persons have access to all ISMS documents:
+- <strong>Executive Management:</strong> Max Mustermann
+- <strong>IT Management:</strong> Anna Schmidt
+- <strong>Deputy ISO:</strong> [TODO]</p>
+<h2 id="3-document-lifecycle">3. Document Lifecycle</h2>
+<h3 id="31-creation">3.1 Creation</h3>
+<p><strong>Process:</strong>
+1. <strong>Initiation:</strong> Need is identified (ISO, ISMS Team, Department)
+2. <strong>Creation:</strong> Author creates document based on template
+3. <strong>Quality Assurance:</strong> Peer review by ISMS Team
+4. <strong>Approval:</strong> Approval by responsible role (see approval matrix)</p>
+<p><strong>Responsible:</strong> Document author, ISO (coordination)</p>
+<h3 id="32-review-and-approval">3.2 Review and Approval</h3>
+<h4 id="321-approval-matrix">3.2.1 Approval Matrix</h4>
+<table>
+<thead>
+<tr>
+<th>Document Type</th>
+<th>Creator</th>
+<th>Reviewer</th>
+<th>Approver</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Policies</td>
+<td>ISO</td>
+<td>ISMS Team</td>
+<td>Executive Management</td>
+</tr>
+<tr>
+<td>Guidelines</td>
+<td>ISO, Department</td>
+<td>ISMS Team</td>
+<td>ISO</td>
+</tr>
+<tr>
+<td>Security Concepts</td>
+<td>Information Domain Managers</td>
+<td>ISO</td>
+<td>ISO</td>
+</tr>
+<tr>
+<td>Work Instructions</td>
+<td>Department</td>
+<td>ISO</td>
+<td>IT Management</td>
+</tr>
+<tr>
+<td>Risk Analyses</td>
+<td>ISO</td>
+<td>ISMS Team</td>
+<td>Executive Management</td>
+</tr>
+</tbody>
+</table>
+<h4 id="322-review-intervals">3.2.2 Review Intervals</h4>
+<table>
+<thead>
+<tr>
+<th>Document Type</th>
+<th>Review Interval</th>
+<th>Responsible</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Policies</td>
+<td>Annually</td>
+<td>ISO</td>
+</tr>
+<tr>
+<td>Guidelines</td>
+<td>Annually</td>
+<td>ISO</td>
+</tr>
+<tr>
+<td>Security Concepts</td>
+<td>Annually or upon changes</td>
+<td>Information Domain Managers</td>
+</tr>
+<tr>
+<td>Work Instructions</td>
+<td>Annually</td>
+<td>Department</td>
+</tr>
+<tr>
+<td>Risk Analyses</td>
+<td>Annually or upon significant changes</td>
+<td>ISO</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Additional Review Triggers:</strong>
+- Significant changes in IT infrastructure
+- New legal requirements
+- Security incidents
+- Audit findings
+- Organizational changes</p>
+<h3 id="33-versioning">3.3 Versioning</h3>
+<p><strong>Versioning Scheme:</strong>
+- <strong>Major Version (X.0):</strong> Significant content changes, new approval required
+- <strong>Minor Version (X.Y):</strong> Minor adjustments, editorial changes</p>
+<p><strong>Example:</strong>
+- Version 1.0: Initial approval
+- Version 1.1: Minor adjustments
+- Version 2.0: Major revision</p>
+<h3 id="34-distribution-and-communication">3.4 Distribution and Communication</h3>
+<p><strong>Distribution Process:</strong>
+1. Document approval
+2. Publication in central storage location
+3. Notification of affected stakeholders (email, intranet)
+4. Training/awareness (if required)
+5. Acknowledgment of receipt (for critical documents)</p>
+<p><strong>Responsible:</strong> ISO</p>
+<h3 id="35-change-management">3.5 Change Management</h3>
+<p><strong>Process for Changes:</strong>
+1. <strong>Change Request:</strong> Initiator submits change request to ISO
+2. <strong>Assessment:</strong> ISO assesses change need and impacts
+3. <strong>Approval:</strong> Approval by responsible role
+4. <strong>Implementation:</strong> Author updates document
+5. <strong>Review:</strong> Review by ISMS Team
+6. <strong>Approval:</strong> Approval according to approval matrix
+7. <strong>Distribution:</strong> Communication of changes</p>
+<h3 id="36-archiving-and-deletion">3.6 Archiving and Deletion</h3>
+<p><strong>Archiving:</strong>
+- Old versions are archived for [TODO: e.g. 5 years]
+- Archived documents are write-protected
+- Access only for ISO and Audit</p>
+<p><strong>Deletion:</strong>
+- Documents are deleted after retention period expires
+- Deletion according to data protection and compliance requirements
+- Deletion log is maintained</p>
+<p><strong>Responsible:</strong> ISO</p>
+<h2 id="4-document-register">4. Document Register</h2>
+<table>
+<thead>
+<tr>
+<th>Document</th>
+<th>ID</th>
+<th>Owner</th>
+<th>Status</th>
+<th>Version</th>
+<th>Last Updated</th>
+<th>Next Review</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Information Security Policy</td>
+<td>0010</td>
+<td>Thomas Weber</td>
+<td>{{ meta.document.status }}</td>
+<td>1.0.0</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.document.next_review }}</td>
+</tr>
+<tr>
+<td>ISMS Organization, Roles and RACI</td>
+<td>0020</td>
+<td>Thomas Weber</td>
+<td>{{ meta.document.status }}</td>
+<td>1.0.0</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.document.next_review }}</td>
+</tr>
+<tr>
+<td>Document Control</td>
+<td>0030</td>
+<td>Thomas Weber</td>
+<td>{{ meta.document.status }}</td>
+<td>1.0.0</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.document.next_review }}</td>
+</tr>
+<tr>
+<td>[TODO: Add additional documents]</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-change-log">5. Change Log</h2>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Change</th>
+<th>Author</th>
+<th>Approver</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>First draft</td>
+<td>IT Operations Manager</td>
+<td>-</td>
+<td>Draft</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-quality-assurance">6. Quality Assurance</h2>
+<h3 id="61-document-quality">6.1 Document Quality</h3>
+<p>All ISMS documents must meet the following quality criteria:
+- <strong>Completeness:</strong> All required content present
+- <strong>Correctness:</strong> Content accurate and current
+- <strong>Comprehensibility:</strong> Clearly and understandably formulated
+- <strong>Consistency:</strong> Consistent with other ISMS documents
+- <strong>Traceability:</strong> Changes documented traceably</p>
+<h3 id="62-document-templates">6.2 Document Templates</h3>
+<p>Templates exist for all document types with:
+- Standardized header (metadata)
+- Structure specifications
+- Placeholders for variable content
+- Notes for authors</p>
+<p><strong>Template Storage Location:</strong> [TODO: e.g. /ISMS/Templates/]</p>
+<h2 id="7-training-and-awareness">7. Training and Awareness</h2>
+<p>All document authors and ISMS Team members are trained in:
+- Document control process
+- Use of templates
+- Versioning and change management
+- Classification and protection needs</p>
+<p><strong>Responsible:</strong> ISO</p>
+<h2 id="8-monitoring-and-improvement">8. Monitoring and Improvement</h2>
+<p>The document control process is regularly monitored:
+- <strong>Metrics:</strong> Number of documents, review compliance, change rate
+- <strong>Review:</strong> Annual review of the process
+- <strong>Improvement:</strong> Continuous optimization based on feedback</p>
+<p><strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<p><strong>References:</strong>
+- BSI Standard 200-1: Management Systems for Information Security (ISMS)
+- BSI Standard 200-2: IT-Grundschutz Methodology</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0020_ISMS_Organization_Roles_RACI.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0040_Scope_and_Information_Domain.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

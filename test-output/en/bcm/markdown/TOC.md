@@ -1,0 +1,37 @@
+# Table of Contents - BCM Handbook
+
+Language: en
+
+## Templates
+
+- [0000 - metadata en bcm](0000_metadata_en_bcm.md)
+- [0010 - Purpose and Scope](0010_Purpose_and_Scope.md)
+- [0020 - BCM Policy](0020_BCM_Policy.md)
+- [0030 - Document Control and Versioning](0030_Document_Control_and_Versioning.md)
+- [0040 - Emergency Organization Roles and Bodies](0040_Emergency_Organization_Roles_and_Bodies.md)
+- [0050 - Contacts and Escalation](0050_Contacts_and_Escalation.md)
+- [0060 - Service and Process Catalog Criticality](0060_Service_and_Process_Catalog_Criticality.md)
+- [0070 - BIA Methodology](0070_BIA_Methodology.md)
+- [0080 - BIA Results and RTO RPO](0080_BIA_Results_and_RTO_RPO.md)
+- [0090 - Risk Analysis and Scenarios](0090_Risk_Analysis_and_Scenarios.md)
+- [0100 - Strategy and Continuity Options](0100_Strategy_and_Continuity_Options.md)
+- [0110 - Activation Criteria and Decision Tree](0110_Activation_Criteria_and_Decision_Tree.md)
+- [0120 - Crisis Management Plan](0120_Crisis_Management_Plan.md)
+- [0130 - Communication Plan Internal External](0130_Communication_Plan_Internal_External.md)
+- [0140 - BCP Business Continuity Plan Template](0140_BCP_Business_Continuity_Plan_Template.md)
+- [0150 - DRP IT Recovery Plan Template](0150_DRP_IT_Recovery_Plan_Template.md)
+- [0160 - Backup and Restore Plan](0160_Backup_and_Restore_Plan.md)
+- [0170 - Alternative Site and Emergency Workplaces](0170_Alternative_Site_and_Emergency_Workplaces.md)
+- [0180 - Suppliers and Third Parties Continuity](0180_Suppliers_and_Third_Parties_Continuity.md)
+- [0190 - Resource Planning and Minimum Staffing](0190_Resource_Planning_and_Minimum_Staffing.md)
+- [0200 - Emergency Access BreakGlass](0200_Emergency_Access_BreakGlass.md)
+- [0210 - Cyber Incident and Ransomware Playbook](0210_Cyber_Incident_and_Ransomware_Playbook.md)
+- [0220 - Exercise and Test Program](0220_Exercise_and_Test_Program.md)
+- [0230 - Test Protocol and Success Criteria](0230_Test_Protocol_and_Success_Criteria.md)
+- [0240 - Post Incident Review Postmortem](0240_Post_Incident_Review_Postmortem.md)
+- [0250 - Maintenance Review and KPIs](0250_Maintenance_Review_and_KPIs.md)
+- [0260 - Training and Awareness](0260_Training_and_Awareness.md)
+- [0270 - Compliance Audit and Evidence](0270_Compliance_Audit_and_Evidence.md)
+- [0280 - Appendix Templates and Checklists](0280_Appendix_Templates_and_Checklists.md)
+- [0290 - Glossary and Abbreviations](0290_Glossary_and_Abbreviations.md)
+- [READ - E](README.md)

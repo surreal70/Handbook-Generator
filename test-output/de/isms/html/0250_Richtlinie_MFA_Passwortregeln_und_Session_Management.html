@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0250 - Richtlinie: MFA, Passwortregeln und Session Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0250</div>
+            <h1>Richtlinie: MFA, Passwortregeln und Session Management</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0240_Policy_Authentisierung_und_Passwoerter.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0260_Policy_Kryptografie_und_Schluesselmanagement.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="richtlinie-mfa-passwortregeln-und-session-management">Richtlinie: MFA, Passwortregeln und Session Management</h1>
+<p><strong>Dokument-ID:</strong> 0250<br />
+<strong>Dokumenttyp:</strong> Richtlinie (detailliert)<br />
+<strong>Zugehörige Policy:</strong> 0240_Policy_Authentisierung_und_Passwoerter.md<br />
+<strong>Standard-Referenz:</strong> ISO/IEC 27001:2022 Annex A.5.17, A.5.18<br />
+<strong>Owner:</strong> {{ meta.it_operations.manager }}<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Freigegeben<br />
+<strong>Klassifizierung:</strong> Intern<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.date }}<br />
+<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-zweck-und-geltungsbereich">1. Zweck und Geltungsbereich</h2>
+<p>Diese Richtlinie konkretisiert die <code>0240_Policy_Authentisierung_und_Passwoerter.md</code> und definiert detaillierte Regeln für:
+- Multi-Faktor-Authentifizierung (MFA)
+- Passwortrichtlinien und Komplexitätsanforderungen
+- Session Management und Timeouts
+- Authentifizierungsmethoden und -technologien</p>
+<p><strong>Geltungsbereich:</strong> Alle Systeme, Anwendungen und Nutzer bei <strong>AdminSend GmbH</strong></p>
+<h2 id="2-multi-faktor-authentifizierung-mfa">2. Multi-Faktor-Authentifizierung (MFA)</h2>
+<h3 id="21-mfa-pflicht">2.1 MFA-Pflicht</h3>
+<p><strong>Obligatorisch für:</strong>
+- Alle Remote-Zugriffe (VPN, Remote Desktop)
+- Alle privilegierten Accounts (Administratoren, Root)
+- Zugriff auf kritische Systeme (Produktion, Finanzsysteme)
+- Cloud-Services und SaaS-Anwendungen
+- E-Mail-Zugriff von externen Geräten
+- Zugriff auf vertrauliche Daten</p>
+<p><strong>Optional für:</strong>
+- Lokale Anmeldungen im Büro (kann durch Conditional Access erzwungen werden)
+- Nicht-kritische interne Anwendungen</p>
+<h3 id="22-mfa-methoden">2.2 MFA-Methoden</h3>
+<p><strong>Unterstützte Faktoren:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Methode</th>
+<th>Typ</th>
+<th>Sicherheitsstufe</th>
+<th>Anwendungsfall</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authenticator-App (TOTP)</td>
+<td>Besitz</td>
+<td>Hoch</td>
+<td>Standard für alle Nutzer</td>
+</tr>
+<tr>
+<td>Hardware-Token (FIDO2/U2F)</td>
+<td>Besitz</td>
+<td>Sehr hoch</td>
+<td>Privilegierte Nutzer, Hochsicherheit</td>
+</tr>
+<tr>
+<td>SMS-Code</td>
+<td>Besitz</td>
+<td>Mittel</td>
+<td>Fallback, nicht empfohlen</td>
+</tr>
+<tr>
+<td>Push-Benachrichtigung</td>
+<td>Besitz</td>
+<td>Hoch</td>
+<td>Mobile Nutzer</td>
+</tr>
+<tr>
+<td>Biometrie (Fingerabdruck, Face ID)</td>
+<td>Inhärenz</td>
+<td>Hoch</td>
+<td>Mobile Geräte, Windows Hello</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Empfohlene Methode:</strong> Authenticator-App (z.B. Microsoft Authenticator, Google Authenticator, Authy)</p>
+<p><strong>Nicht erlaubt:</strong>
+- E-Mail-basierte Codes (zu unsicher)
+- Sicherheitsfragen (anfällig für Social Engineering)</p>
+<h3 id="23-mfa-registrierung">2.3 MFA-Registrierung</h3>
+<p><strong>Onboarding:</strong>
+1. Neue Mitarbeiter registrieren MFA am ersten Arbeitstag
+2. IT-Support unterstützt bei Einrichtung
+3. Mindestens 2 MFA-Methoden registrieren (Primary + Backup)
+4. Backup-Codes generieren und sicher aufbewahren</p>
+<p><strong>Self-Service:</strong>
+- Nutzer können MFA-Methoden über Self-Service-Portal verwalten
+- Änderung von MFA-Methoden erfordert Re-Authentifizierung
+- Verlust von MFA-Gerät: IT-Support-Prozess für Reset</p>
+<h3 id="24-mfa-bypass-und-notfallzugriff">2.4 MFA-Bypass und Notfallzugriff</h3>
+<p><strong>Break-Glass-Accounts:</strong>
+- Notfall-Accounts ohne MFA für Systemwiederherstellung
+- Gesichert in Safe, nur für Notfälle
+- Nutzung wird sofort an CISO eskaliert
+- Passwort nach jeder Nutzung ändern</p>
+<p><strong>Temporärer MFA-Bypass:</strong>
+- Nur in Ausnahmefällen (z.B. Geräteverlust)
+- Genehmigung durch IT-Security erforderlich
+- Maximal 24 Stunden, dann automatische Sperrung
+- Erhöhtes Monitoring während Bypass-Zeitraum</p>
+<h2 id="3-passwortrichtlinien">3. Passwortrichtlinien</h2>
+<h3 id="31-passwortkomplexitat">3.1 Passwortkomplexität</h3>
+<p><strong>Anforderungen für Standard-Nutzer:</strong>
+- <strong>Mindestlänge:</strong> 12 Zeichen
+- <strong>Komplexität:</strong> Mindestens 3 von 4 Zeichentypen:
+  - Großbuchstaben (A-Z)
+  - Kleinbuchstaben (a-z)
+  - Ziffern (0-9)
+  - Sonderzeichen (!@#$%^&amp;<em>)
+- </em><em>Keine Wörterbuch-Wörter:</em><em> Passwort darf nicht in Common-Password-Liste enthalten sein
+- </em><em>Keine persönlichen Informationen:</em>* Kein Name, Geburtsdatum, Benutzername</p>
+<p><strong>Anforderungen für privilegierte Nutzer:</strong>
+- <strong>Mindestlänge:</strong> 16 Zeichen
+- <strong>Komplexität:</strong> Alle 4 Zeichentypen erforderlich
+- <strong>Passphrase empfohlen:</strong> Z.B. "Kaffee!Morgen@2024#Sicher"</p>
+<p><strong>Technische Durchsetzung:</strong>
+- Active Directory Group Policy Objects (GPOs)
+- Azure AD Password Protection
+- Passwort-Filter für Common-Password-Prüfung</p>
+<h3 id="32-passwortanderung">3.2 Passwortänderung</h3>
+<p><strong>Regelmäßige Änderung:</strong>
+- <strong>Standard-Nutzer:</strong> Alle 90 Tage (optional, wenn MFA aktiv)
+- <strong>Privilegierte Nutzer:</strong> Alle 60 Tage (verpflichtend)
+- <strong>Service-Accounts:</strong> Alle 180 Tage oder bei Personalwechsel</p>
+<p><strong>Erzwungene Änderung:</strong>
+- Bei erstem Login (initiales Passwort)
+- Nach Passwort-Reset durch IT-Support
+- Bei Verdacht auf Kompromittierung
+- Nach Sicherheitsvorfällen</p>
+<p><strong>Passwort-Historie:</strong>
+- Letzten 12 Passwörter dürfen nicht wiederverwendet werden
+- Verhindert Rotation zwischen wenigen Passwörtern</p>
+<h3 id="33-passwort-reset">3.3 Passwort-Reset</h3>
+<p><strong>Self-Service Password Reset (SSPR):</strong>
+- Nutzer können Passwort selbst zurücksetzen über {{ meta.iam.sspr_url }}
+- Verifizierung über:
+  - MFA-Methode (Authenticator-App, SMS)
+  - Alternative E-Mail-Adresse
+  - Sicherheitsfragen (nur als Fallback)
+- Audit-Log für alle Passwort-Resets</p>
+<p><strong>IT-Support-Reset:</strong>
+- Bei Verlust aller SSPR-Methoden
+- Identitätsprüfung erforderlich (Personalausweis, Mitarbeiter-ID)
+- Temporäres Passwort, muss bei erstem Login geändert werden
+- Dokumentation im Ticketsystem</p>
+<p><strong>Notfall-Reset:</strong>
+- Bei gesperrten Accounts außerhalb Geschäftszeiten
+- On-Call IT-Support verfügbar
+- Erhöhte Verifizierung (Vorgesetzten-Bestätigung)</p>
+<h3 id="34-passwort-manager">3.4 Passwort-Manager</h3>
+<p><strong>Empfehlung:</strong>
+- Nutzung von Passwort-Manager für alle Nutzer
+- Unternehmens-Lösung: {{ meta.security.password_manager }} (z.B. 1Password, Bitwarden)
+- Zentrale Verwaltung von Shared Credentials</p>
+<p><strong>Funktionen:</strong>
+- Generierung starker, zufälliger Passwörter
+- Sichere Speicherung verschlüsselt
+- Browser-Integration für Auto-Fill
+- Sharing von Credentials im Team (verschlüsselt)
+- Audit-Log für Zugriffe</p>
+<p><strong>Schulung:</strong>
+- Onboarding-Schulung für neue Mitarbeiter
+- Best Practices für Passwort-Manager-Nutzung
+- Vermeidung von Passwort-Wiederverwendung</p>
+<h2 id="4-session-management">4. Session Management</h2>
+<h3 id="41-session-timeouts">4.1 Session-Timeouts</h3>
+<p><strong>Inaktivitäts-Timeouts:</strong></p>
+<table>
+<thead>
+<tr>
+<th>System-Typ</th>
+<th>Timeout</th>
+<th>Begründung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Workstation (lokal)</td>
+<td>15 Minuten</td>
+<td>Physischer Zugriff möglich</td>
+</tr>
+<tr>
+<td>VPN-Verbindung</td>
+<td>8 Stunden</td>
+<td>Remote-Zugriff, Re-Auth täglich</td>
+</tr>
+<tr>
+<td>Web-Anwendungen</td>
+<td>30 Minuten</td>
+<td>Balance zwischen Sicherheit und Usability</td>
+</tr>
+<tr>
+<td>Privilegierte Sessions</td>
+<td>10 Minuten</td>
+<td>Erhöhtes Risiko</td>
+</tr>
+<tr>
+<td>Mobile Apps</td>
+<td>5 Minuten</td>
+<td>Geräteverlust-Risiko</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Absolute Session-Limits:</strong>
+- <strong>Standard-Nutzer:</strong> Max. 12 Stunden, dann Re-Authentifizierung
+- <strong>Privilegierte Nutzer:</strong> Max. 4 Stunden, dann Re-Authentifizierung
+- <strong>Remote-Zugriffe:</strong> Max. 8 Stunden, dann Re-Authentifizierung</p>
+<h3 id="42-bildschirmsperre">4.2 Bildschirmsperre</h3>
+<p><strong>Automatische Sperre:</strong>
+- Nach Inaktivitäts-Timeout (siehe oben)
+- Entsperren nur mit Passwort oder Biometrie
+- Keine Anzeige sensibler Informationen auf Sperrbildschirm</p>
+<p><strong>Manuelle Sperre:</strong>
+- Nutzer müssen Workstation sperren beim Verlassen (Windows+L, Ctrl+Alt+Del)
+- Awareness-Kampagnen zu "Clean Desk Policy"
+- Stichproben durch Security-Team</p>
+<h3 id="43-concurrent-sessions">4.3 Concurrent Sessions</h3>
+<p><strong>Limits:</strong>
+- <strong>Standard-Nutzer:</strong> Max. 3 gleichzeitige Sessions
+- <strong>Privilegierte Nutzer:</strong> Max. 2 gleichzeitige Sessions
+- <strong>Service-Accounts:</strong> Max. 1 Session (verhindert Credential-Sharing)</p>
+<p><strong>Monitoring:</strong>
+- Alerts bei ungewöhnlichen Session-Mustern
+- Automatische Sperrung bei Verdacht auf Account-Sharing
+- Geolocation-Checks (unmögliche Reisen)</p>
+<h3 id="44-session-sicherheit">4.4 Session-Sicherheit</h3>
+<p><strong>Technische Kontrollen:</strong>
+- <strong>Session-Tokens:</strong> Kryptographisch sichere, zufällige Tokens
+- <strong>Token-Rotation:</strong> Neue Tokens nach Re-Authentifizierung
+- <strong>Secure Cookies:</strong> HttpOnly, Secure, SameSite Flags
+- <strong>Session-Fixation-Schutz:</strong> Neue Session-ID nach Login
+- <strong>HTTPS-Erzwingung:</strong> Alle Sessions über verschlüsselte Verbindungen</p>
+<h2 id="5-authentifizierungsmethoden">5. Authentifizierungsmethoden</h2>
+<h3 id="51-single-sign-on-sso">5.1 Single Sign-On (SSO)</h3>
+<p><strong>Implementierung:</strong>
+- <strong>Identity Provider:</strong> {{ meta.iam.idp }} (z.B. Azure AD, Okta)
+- <strong>Protokolle:</strong> SAML 2.0, OAuth 2.0, OpenID Connect
+- <strong>Anwendungen:</strong> Alle Cloud-SaaS-Anwendungen über SSO</p>
+<p><strong>Vorteile:</strong>
+- Einmalige Anmeldung für alle Anwendungen
+- Zentrale Authentifizierung und MFA
+- Reduzierte Passwort-Müdigkeit
+- Vereinfachtes Offboarding (zentrale Sperrung)</p>
+<p><strong>Conditional Access:</strong>
+- Risikobasierte Authentifizierung
+- Geräte-Compliance-Checks
+- Geolocation-basierte Policies
+- Erzwingung von MFA bei erhöhtem Risiko</p>
+<h3 id="52-zertifikat-basierte-authentifizierung">5.2 Zertifikat-basierte Authentifizierung</h3>
+<p><strong>Anwendungsfälle:</strong>
+- Maschine-zu-Maschine-Authentifizierung
+- VPN-Zugriff (zusätzlich zu MFA)
+- Wireless-Netzwerk (802.1X)
+- Code-Signing und E-Mail-Verschlüsselung</p>
+<p><strong>PKI-Infrastruktur:</strong>
+- Interne Certificate Authority (CA): {{ meta.pki.ca }}
+- Zertifikats-Lebenszyklus-Management
+- Automatische Erneuerung vor Ablauf
+- Revocation-Checks (CRL, OCSP)</p>
+<h3 id="53-biometrische-authentifizierung">5.3 Biometrische Authentifizierung</h3>
+<p><strong>Unterstützte Methoden:</strong>
+- <strong>Windows Hello for Business:</strong> Fingerabdruck, Gesichtserkennung
+- <strong>Mobile Geräte:</strong> Touch ID, Face ID
+- <strong>Nur als zweiter Faktor:</strong> Biometrie ersetzt nicht Passwort</p>
+<p><strong>Datenschutz:</strong>
+- Biometrische Daten werden lokal auf Gerät gespeichert (nicht zentral)
+- Keine Übertragung biometrischer Rohdaten
+- DSGVO-konforme Verarbeitung</p>
+<h2 id="6-service-accounts-und-technische-accounts">6. Service-Accounts und technische Accounts</h2>
+<h3 id="61-service-account-richtlinien">6.1 Service-Account-Richtlinien</h3>
+<p><strong>Anforderungen:</strong>
+- <strong>Keine interaktiven Logins:</strong> Service-Accounts dürfen nicht für menschliche Anmeldungen genutzt werden
+- <strong>Starke Passwörter:</strong> Mindestens 24 Zeichen, zufällig generiert
+- <strong>Passwort-Rotation:</strong> Alle 180 Tage oder bei Personalwechsel
+- <strong>Dokumentation:</strong> Zweck, Owner, verwendete Systeme</p>
+<p><strong>Verwaltung:</strong>
+- Zentrale Verwaltung in Passwort-Manager oder PAM-System
+- Genehmigung durch CISO für neue Service-Accounts
+- Regelmäßige Reviews (quartalsweise)
+- Deaktivierung ungenutzter Accounts</p>
+<h3 id="62-api-keys-und-tokens">6.2 API-Keys und Tokens</h3>
+<p><strong>Best Practices:</strong>
+- <strong>Rotation:</strong> API-Keys alle 90 Tage rotieren
+- <strong>Least Privilege:</strong> Minimale Berechtigungen für API-Keys
+- <strong>Secrets Management:</strong> Speicherung in Secrets-Manager (z.B. HashiCorp Vault, Azure Key Vault)
+- <strong>Keine Hardcoding:</strong> API-Keys nicht in Code oder Config-Dateien</p>
+<p><strong>Monitoring:</strong>
+- Logging aller API-Zugriffe
+- Alerts bei ungewöhnlichen API-Nutzungsmustern
+- Rate-Limiting für API-Calls</p>
+<h2 id="7-monitoring-und-alerting">7. Monitoring und Alerting</h2>
+<h3 id="71-authentifizierungs-monitoring">7.1 Authentifizierungs-Monitoring</h3>
+<p><strong>Überwachte Events:</strong>
+- Fehlgeschlagene Login-Versuche (Brute-Force-Detection)
+- Erfolgreiche Logins von ungewöhnlichen Standorten
+- MFA-Bypass-Versuche
+- Passwort-Resets (insbesondere privilegierte Accounts)
+- Concurrent Sessions von verschiedenen IPs</p>
+<p><strong>Automatische Alerts:</strong>
+- <strong>5 fehlgeschlagene Logins:</strong> Warnung an Nutzer
+- <strong>10 fehlgeschlagene Logins:</strong> Account-Sperrung (30 Minuten)
+- <strong>Login von neuem Gerät/Standort:</strong> MFA-Challenge
+- <strong>Unmögliche Reise:</strong> Alert an Security-Team (z.B. Login in Deutschland, 1 Stunde später in USA)</p>
+<h3 id="72-account-sperrung">7.2 Account-Sperrung</h3>
+<p><strong>Automatische Sperrung:</strong>
+- Nach 10 fehlgeschlagenen Login-Versuchen
+- Sperrdauer: 30 Minuten (automatische Entsperrung)
+- Manuelle Entsperrung durch IT-Support möglich</p>
+<p><strong>Privilegierte Accounts:</strong>
+- Bereits nach 5 fehlgeschlagenen Versuchen
+- Manuelle Entsperrung nur durch CISO oder IT-Security
+- Untersuchung bei Sperrung (möglicher Angriff)</p>
+<h2 id="8-compliance-und-audit">8. Compliance und Audit</h2>
+<h3 id="81-messgroen-kpis">8.1 Messgrößen (KPIs)</h3>
+<table>
+<thead>
+<tr>
+<th>Metrik</th>
+<th>Zielwert</th>
+<th>Messung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MFA-Adoption-Rate</td>
+<td>&gt; 99%</td>
+<td>IAM-System</td>
+</tr>
+<tr>
+<td>Passwort-Komplexität-Compliance</td>
+<td>100%</td>
+<td>AD-Reports</td>
+</tr>
+<tr>
+<td>Fehlgeschlagene Logins</td>
+<td>&lt; 100 pro Tag</td>
+<td>SIEM</td>
+</tr>
+<tr>
+<td>Passwort-Resets</td>
+<td>&lt; 50 pro Monat</td>
+<td>IAM-System</td>
+</tr>
+<tr>
+<td>Session-Timeout-Compliance</td>
+<td>&gt; 95%</td>
+<td>Endpoint-Monitoring</td>
+</tr>
+</tbody>
+</table>
+<h3 id="82-audit-nachweise">8.2 Audit-Nachweise</h3>
+<p><strong>Dokumentation:</strong>
+- Authentifizierungs-Logs (Erfolg und Fehler)
+- MFA-Registrierungen und -Nutzung
+- Passwort-Änderungen und -Resets
+- Account-Sperrungen und Entsperrungen
+- Privilegierte Zugriffe</p>
+<p><strong>Retention:</strong>
+- Authentifizierungs-Logs: {{ meta.retention.log_years }} Jahre
+- Audit-Trails: {{ meta.retention.audit_years }} Jahre</p>
+<h2 id="9-referenzen">9. Referenzen</h2>
+<h3 id="interne-dokumente">Interne Dokumente</h3>
+<ul>
+<li><code>0240_Policy_Authentisierung_und_Passwoerter.md</code> - Übergeordnete Policy</li>
+<li><code>0230_Richtlinie_IAM_Joiner_Mover_Leaver_und_Zugriffsantraege.md</code> - IAM Processes</li>
+<li><code>0320_Policy_Logging_und_Monitoring.md</code> - Logging Policy</li>
+</ul>
+<h3 id="externe-standards">Externe Standards</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.17</strong> - Authentication information</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.18</strong> - Access rights</li>
+<li><strong>NIST SP 800-63B</strong> - Digital Identity Guidelines (Authentication)</li>
+<li><strong>OWASP Authentication Cheat Sheet</strong></li>
+</ul>
+<hr />
+<p><strong>Genehmigt durch:</strong><br />
+Thomas Weber, CISO<br />
+Datum: {{ meta.document.approval_date }}</p>
+<p><strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0240_Policy_Authentisierung_und_Passwoerter.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0260_Policy_Kryptografie_und_Schluesselmanagement.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

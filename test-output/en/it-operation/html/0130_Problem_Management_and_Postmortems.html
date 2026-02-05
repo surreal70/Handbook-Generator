@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0130 - Problem Management and Postmortems</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0130</div>
+            <h1>Problem Management and Postmortems</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0120_Incident_Management_Runbook.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0140_Change_and_Release_Management.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="problem-management-and-postmortems">Problem Management and Postmortems</h1>
+<h2 id="purpose-and-scope">Purpose and Scope</h2>
+<p>This document describes the problem management process for AdminSend GmbH according to ITIL v4 best practices. It defines the systematic analysis of recurring incidents, root cause analysis methods, postmortem processes, and the management of the Known Error Database.</p>
+<p><strong>Scope:</strong> All IT services and systems of AdminSend GmbH</p>
+<p><strong>Responsible:</strong> Andreas Huemmer (andreas.huemmer@adminsend.de)</p>
+<h2 id="problem-definition">Problem Definition</h2>
+<p>A <strong>problem</strong> is the unknown cause of one or more incidents. The goal of problem management is to identify and eliminate the root cause to prevent future incidents.</p>
+<h3 id="distinction-incident-vs-problem">Distinction: Incident vs. Problem</h3>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Incident</th>
+<th>Problem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Focus</strong></td>
+<td>Symptoms</td>
+<td>Causes</td>
+</tr>
+<tr>
+<td><strong>Goal</strong></td>
+<td>Quick restoration</td>
+<td>Permanent solution</td>
+</tr>
+<tr>
+<td><strong>Timeframe</strong></td>
+<td>Immediate</td>
+<td>Planned</td>
+</tr>
+<tr>
+<td><strong>Approach</strong></td>
+<td>Workaround</td>
+<td>Root-Cause-Elimination</td>
+</tr>
+<tr>
+<td><strong>Process</strong></td>
+<td>Reactive</td>
+<td>Proactive</td>
+</tr>
+</tbody>
+</table>
+<h2 id="problem-management-process">Problem Management Process</h2>
+<h3 id="process-overview-itil-v4">Process Overview (ITIL v4)</h3>
+<div class="codehilite"><pre><span></span><code>┌─────────────────┐
+│ Problem         │
+│ Detection       │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Problem         │
+│ Logging         │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Problem         │
+│ Categorization  │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Problem         │
+│ Prioritization  │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Investigation   │
+│ &amp; Diagnosis     │
+│ (RCA)           │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Workaround      │
+│ Identification  │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Known Error     │
+│ Recording       │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Problem         │
+│ Resolution      │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Problem         │
+│ Closure         │
+└─────────────────┘
+</code></pre></div>
+
+<h3 id="1-problem-detection">1. Problem Detection</h3>
+<p><strong>Detection Sources:</strong>
+- Recurring incidents (&gt; 3x in 30 days)
+- Trend analysis of incident data
+- Proactive monitoring analyses
+- Major incident reviews
+- Vendor bulletins and security advisories</p>
+<p><strong>Triggers for Problem Creation:</strong>
+- Multiple similar incidents
+- Incidents with high business impact
+- Incidents without known solution
+- Structural weaknesses</p>
+<p><strong>Responsible:</strong> Problem Manager, IT Operations Team</p>
+<h3 id="2-problem-logging">2. Problem Logging</h3>
+<p><strong>Required Information:</strong>
+- Problem ID (automatically generated)
+- Linked incident IDs
+- Symptom description
+- Affected services/systems
+- Affected configuration items (CIs)
+- Initial hypotheses about cause</p>
+<p><strong>Tool:</strong> {{ meta.ticketing_system }}</p>
+<p><strong>Responsible:</strong> Problem Manager</p>
+<h3 id="3-problem-categorization">3. Problem Categorization</h3>
+<p><strong>Categories:</strong>
+- Hardware problems
+- Software problems
+- Network problems
+- Process problems
+- Documentation problems
+- Capacity problems
+- Security problems</p>
+<p><strong>Responsible:</strong> Problem Manager</p>
+<h3 id="4-problem-prioritization">4. Problem Prioritization</h3>
+<p><strong>Priority Factors:</strong>
+- Number of affected incidents
+- Business impact
+- Frequency of occurrence
+- Availability of workarounds
+- Resource availability</p>
+<p><strong>Priority Levels:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Priority</th>
+<th>Description</th>
+<th>Processing Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>P1 - Critical</strong></td>
+<td>Frequent P1 incidents, no workaround</td>
+<td>Immediate</td>
+</tr>
+<tr>
+<td><strong>P2 - High</strong></td>
+<td>Frequent P2 incidents, temporary workaround</td>
+<td>1 week</td>
+</tr>
+<tr>
+<td><strong>P3 - Medium</strong></td>
+<td>Moderate frequency, workaround available</td>
+<td>1 month</td>
+</tr>
+<tr>
+<td><strong>P4 - Low</strong></td>
+<td>Rare incidents, low impact</td>
+<td>Planned</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-investigation-diagnosis-root-cause-analysis">5. Investigation &amp; Diagnosis (Root Cause Analysis)</h3>
+<p><strong>RCA Methods:</strong>
+- 5-Why analysis
+- Fishbone diagram (Ishikawa)
+- Fault tree analysis
+- Timeline analysis
+- Log correlation</p>
+<p><strong>Activities:</strong>
+- Collect data (logs, monitoring, configurations)
+- Develop hypotheses
+- Conduct tests
+- Identify root cause
+- Create documentation</p>
+<p><strong>Responsible:</strong> Problem Manager, Technical Specialists</p>
+<h3 id="6-workaround-identification">6. Workaround Identification</h3>
+<p><strong>Workaround Criteria:</strong>
+- Reduces impact or frequency
+- Practical for incident teams
+- Documented and tested
+- Temporary solution until permanent fix</p>
+<p><strong>Documentation:</strong>
+- Workaround description
+- Application steps
+- Limitations
+- Validity period</p>
+<h3 id="7-known-error-recording">7. Known Error Recording</h3>
+<p><strong>Known Error Database (KEDB):</strong>
+- Problem description
+- Root cause
+- Workaround
+- Permanent solution (if available)
+- Linked incidents
+- Linked CIs</p>
+<p><strong>Access:</strong> All IT staff (Read), Problem Manager (Write)</p>
+<h3 id="8-problem-resolution">8. Problem Resolution</h3>
+<p><strong>Solution Approaches:</strong>
+- Software patch or update
+- Configuration change
+- Hardware replacement
+- Process improvement
+- Documentation update
+- Training</p>
+<p><strong>Change Management:</strong>
+- Permanent solutions require change request
+- Change planning and approval
+- Implementation via change process</p>
+<h3 id="9-problem-closure">9. Problem Closure</h3>
+<p><strong>Closure Criteria:</strong>
+- Root cause identified and documented
+- Permanent solution implemented
+- No new incidents occurred (monitoring period)
+- Documentation complete
+- Lessons learned documented</p>
+<p><strong>Responsible:</strong> Problem Manager</p>
+<h2 id="root-cause-analysis-rca-methods">Root Cause Analysis (RCA) Methods</h2>
+<h3 id="5-why-analysis">5-Why Analysis</h3>
+<p><strong>Method:</strong> Ask "Why?" five times to get to the root cause</p>
+<p><strong>Example:</strong>
+1. <strong>Why</strong> did the database fail? → Disk full
+2. <strong>Why</strong> was the disk full? → Log files not rotated
+3. <strong>Why</strong> were logs not rotated? → Logrotate job failed
+4. <strong>Why</strong> did the job fail? → Incorrect cron configuration
+5. <strong>Why</strong> was the configuration incorrect? → No validation after change</p>
+<p><strong>Root Cause:</strong> Missing change validation</p>
+<h3 id="fishbone-diagram-ishikawa">Fishbone Diagram (Ishikawa)</h3>
+<p><strong>Categories:</strong>
+- <strong>People:</strong> Errors, knowledge, training
+- <strong>Methods:</strong> Processes, procedures, standards
+- <strong>Machines:</strong> Hardware, software, tools
+- <strong>Materials:</strong> Data, configurations, documentation
+- <strong>Environment:</strong> Infrastructure, network, location
+- <strong>Management:</strong> Decisions, resources, priorities</p>
+<p><strong>Application:</strong>
+1. Define problem as "fish head"
+2. Draw main categories as "bones"
+3. Identify causes per category
+4. Add deeper causes as sub-bones
+5. Identify root cause</p>
+<h3 id="timeline-analysis">Timeline Analysis</h3>
+<p><strong>Method:</strong> Chronological reconstruction of events</p>
+<p><strong>Steps:</strong>
+1. Create timeline
+2. Enter all relevant events
+3. Identify causalities
+4. Work out critical path
+5. Find root cause at beginning of causal chain</p>
+<p><strong>Data Sources:</strong>
+- Incident tickets
+- Change records
+- Monitoring logs
+- System logs
+- Deployment history</p>
+<h2 id="postmortem-process">Postmortem Process</h2>
+<h3 id="postmortem-definition">Postmortem Definition</h3>
+<p>A <strong>postmortem</strong> is a structured analysis of a major incident or critical problem with the goal of identifying lessons learned and implementing improvements.</p>
+<h3 id="postmortem-triggers">Postmortem Triggers</h3>
+<p><strong>Mandatory Postmortems for:</strong>
+- Major incidents (P1)
+- Service outages &gt; 4 hours
+- Data loss or security breach
+- Incidents with media attention
+- Repeated incidents despite previous solution</p>
+<p><strong>Optional Postmortems for:</strong>
+- P2 incidents with interesting lessons learned
+- Successful incident management (best practices)
+- Near-miss situations</p>
+<h3 id="postmortem-timeline">Postmortem Timeline</h3>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Timing</th>
+<th>Activity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Initiation</strong></td>
+<td>Within 24h</td>
+<td>Announce postmortem, invite participants</td>
+</tr>
+<tr>
+<td><strong>Data Collection</strong></td>
+<td>24-48h</td>
+<td>Collect logs, timelines, facts</td>
+</tr>
+<tr>
+<td><strong>Meeting</strong></td>
+<td>Within 1 week</td>
+<td>Conduct postmortem meeting</td>
+</tr>
+<tr>
+<td><strong>Documentation</strong></td>
+<td>Within 2 weeks</td>
+<td>Finalize postmortem report</td>
+</tr>
+<tr>
+<td><strong>Follow-up</strong></td>
+<td>Ongoing</td>
+<td>Implement and track action items</td>
+</tr>
+</tbody>
+</table>
+<h3 id="postmortem-meeting">Postmortem Meeting</h3>
+<p><strong>Participants:</strong>
+- Incident Manager
+- Affected teams
+- Service Owner
+- Management (for major incidents)
+- Optional: External stakeholders</p>
+<p><strong>Agenda:</strong>
+1. <strong>Incident Overview</strong> (5 min)
+   - What happened?
+   - When did it happen?
+   - Who was affected?</p>
+<ol>
+<li><strong>Timeline Review</strong> (15 min)</li>
+<li>Chronological events</li>
+<li>Decision points</li>
+<li>
+<p>Communication</p>
+</li>
+<li>
+<p><strong>Root Cause Analysis</strong> (20 min)</p>
+</li>
+<li>5-Why or Fishbone</li>
+<li>Contributing factors</li>
+<li>
+<p>Root cause</p>
+</li>
+<li>
+<p><strong>What Went Well</strong> (10 min)</p>
+</li>
+<li>Successful measures</li>
+<li>Good collaboration</li>
+<li>
+<p>Effective tools</p>
+</li>
+<li>
+<p><strong>What Went Wrong</strong> (10 min)</p>
+</li>
+<li>Problems and delays</li>
+<li>Communication issues</li>
+<li>
+<p>Tool or process deficiencies</p>
+</li>
+<li>
+<p><strong>Action Items</strong> (15 min)</p>
+</li>
+<li>Improvement measures</li>
+<li>Responsible parties</li>
+<li>Deadlines</li>
+</ol>
+<p><strong>Duration:</strong> 60-90 minutes</p>
+<p><strong>Moderator:</strong> Problem Manager or neutral facilitator</p>
+<h3 id="postmortem-principles">Postmortem Principles</h3>
+<p><strong>Blameless Culture:</strong>
+- Focus on systems and processes, not people
+- No blame assignment
+- Psychological safety
+- Learning from mistakes</p>
+<p><strong>Fact-Based:</strong>
+- Objective data (logs, metrics)
+- No speculation
+- Verifiable statements</p>
+<p><strong>Constructive:</strong>
+- Solution-oriented
+- Concrete action items
+- Actionable improvements</p>
+<h2 id="postmortem-template">Postmortem Template</h2>
+<h3 id="1-executive-summary">1. Executive Summary</h3>
+<p><strong>Incident Overview:</strong>
+- <strong>Incident ID:</strong> [ID]
+- <strong>Date/Time:</strong> [Start] - [End]
+- <strong>Duration:</strong> [Hours]
+- <strong>Priority:</strong> P1 / P2
+- <strong>Affected Service:</strong> [Service Name]
+- <strong>Impact:</strong> [Number of users, business impact]</p>
+<p><strong>Summary:</strong>
+[2-3 sentences: What happened and what was the cause?]</p>
+<h3 id="2-timeline">2. Timeline</h3>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Event</th>
+<th>Action</th>
+<th>Responsible</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10:00</td>
+<td>Alert: Database CPU 100%</td>
+<td>Monitoring alert triggered</td>
+<td>Monitoring System</td>
+</tr>
+<tr>
+<td>10:05</td>
+<td>Service Desk receives calls</td>
+<td>Incident ticket created</td>
+<td>Service Desk</td>
+</tr>
+<tr>
+<td>10:15</td>
+<td>Escalation to DBA team</td>
+<td>Database analysis started</td>
+<td>IT Operations</td>
+</tr>
+<tr>
+<td>10:30</td>
+<td>Root cause identified</td>
+<td>Slow query found</td>
+<td>DBA Team</td>
+</tr>
+<tr>
+<td>10:45</td>
+<td>Query optimized</td>
+<td>Deployment performed</td>
+<td>DBA Team</td>
+</tr>
+<tr>
+<td>11:00</td>
+<td>Service restored</td>
+<td>Monitoring confirmed</td>
+<td>IT Operations</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-root-cause-analysis">3. Root Cause Analysis</h3>
+<p><strong>5-Why Analysis:</strong>
+1. Why was the database overloaded? → Slow query
+2. Why was there a slow query? → Missing index
+3. Why was the index missing? → Not included in deployment
+4. Why wasn't it in the deployment? → Not caught in code review
+5. Why wasn't it caught? → No performance tests</p>
+<p><strong>Root Cause:</strong> Missing performance tests in CI/CD pipeline</p>
+<p><strong>Contributing Factors:</strong>
+- Insufficient code review checklist
+- No automated query analysis
+- Missing staging environment with production data volume</p>
+<h3 id="4-impact-assessment">4. Impact Assessment</h3>
+<p><strong>Technical Impact:</strong>
+- Database CPU: 100% for 60 minutes
+- Response times: &gt; 30 seconds (normal: &lt; 1s)
+- Service availability: 0% for 60 minutes</p>
+<p><strong>Business Impact:</strong>
+- Affected users: 500 (100%)
+- Blocked business processes: Order Processing
+- Estimated revenue loss: [Amount]
+- Reputation damage: Medium</p>
+<p><strong>SLA Impact:</strong>
+- SLA target: 99.9% availability
+- Actual availability: 99.86%
+- SLA breach: Yes</p>
+<h3 id="5-what-went-well">5. What Went Well</h3>
+<ul>
+<li>✅ Quick escalation to DBA team (10 minutes)</li>
+<li>✅ Effective communication between teams</li>
+<li>✅ Root cause quickly identified (25 minutes)</li>
+<li>✅ Solution successfully implemented</li>
+<li>✅ No data loss</li>
+</ul>
+<h3 id="6-what-went-wrong">6. What Went Wrong</h3>
+<ul>
+<li>❌ Slow query not detected before deployment</li>
+<li>❌ No automatic performance tests</li>
+<li>❌ Staging environment not representative</li>
+<li>❌ Monitoring alert too late (CPU threshold too high)</li>
+<li>❌ Rollback procedure not documented</li>
+</ul>
+<h3 id="7-action-items">7. Action Items</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Measure</th>
+<th>Responsible</th>
+<th>Deadline</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI-001</td>
+<td>Integrate performance tests in CI/CD</td>
+<td>DevOps Team</td>
+<td>2 weeks</td>
+<td>Open</td>
+</tr>
+<tr>
+<td>AI-002</td>
+<td>Extend code review checklist</td>
+<td>Dev Team</td>
+<td>1 week</td>
+<td>Open</td>
+</tr>
+<tr>
+<td>AI-003</td>
+<td>Staging database with prod volume</td>
+<td>DBA Team</td>
+<td>1 month</td>
+<td>Open</td>
+</tr>
+<tr>
+<td>AI-004</td>
+<td>Adjust monitoring thresholds</td>
+<td>Ops Team</td>
+<td>1 week</td>
+<td>Open</td>
+</tr>
+<tr>
+<td>AI-005</td>
+<td>Create rollback runbook</td>
+<td>DBA Team</td>
+<td>2 weeks</td>
+<td>Open</td>
+</tr>
+</tbody>
+</table>
+<h3 id="8-lessons-learned">8. Lessons Learned</h3>
+<p><strong>Technical:</strong>
+- Performance tests are essential before deployments
+- Staging environment must simulate production data volume
+- Automated query analysis can detect problems early</p>
+<p><strong>Process:</strong>
+- Code review checklists must cover performance aspects
+- Rollback procedures must be documented and tested
+- Monitoring thresholds must be reviewed regularly</p>
+<p><strong>Organizational:</strong>
+- Team communication worked well
+- Escalation processes were effective
+- Documentation needs improvement</p>
+<h3 id="9-follow-up">9. Follow-up</h3>
+<p><strong>Review Date:</strong> [Date, 4 weeks after incident]</p>
+<p><strong>Review Agenda:</strong>
+- Status of all action items
+- Effectiveness of measures
+- Further improvements</p>
+<p><strong>Responsible:</strong> Problem Manager</p>
+<h2 id="known-error-database-kedb">Known Error Database (KEDB)</h2>
+<h3 id="kedb-structure">KEDB Structure</h3>
+<p><strong>Required Fields:</strong>
+- <strong>Known Error ID:</strong> Unique identifier
+- <strong>Title:</strong> Brief description
+- <strong>Symptoms:</strong> How does the problem manifest?
+- <strong>Root Cause:</strong> Identified root cause
+- <strong>Workaround:</strong> Temporary solution
+- <strong>Permanent Solution:</strong> Permanent fix (if available)
+- <strong>Affected CIs:</strong> Configuration items
+- <strong>Linked Incidents:</strong> Incident IDs
+- <strong>Linked Problems:</strong> Problem IDs
+- <strong>Status:</strong> Open, Workaround Available, Resolved, Closed
+- <strong>Priority:</strong> P1-P4
+- <strong>Created:</strong> Date, author
+- <strong>Updated:</strong> Date, author</p>
+<h3 id="kedb-example">KEDB Example</h3>
+<p><strong>Known Error ID:</strong> KE-2024-001</p>
+<p><strong>Title:</strong> PostgreSQL Connection Pool Exhaustion</p>
+<p><strong>Symptoms:</strong>
+- Application reports "Connection timeout"
+- Database logs show "too many connections"
+- Monitoring shows 100% connection pool utilization</p>
+<p><strong>Root Cause:</strong>
+- Connection pool limit configured too low (max_connections=100)
+- Application not releasing connections correctly (connection leak)
+- Missing connection timeout configuration</p>
+<p><strong>Workaround:</strong>
+1. Restart PostgreSQL service: <code>systemctl restart postgresql</code>
+2. Restart application: <code>systemctl restart app-service</code>
+3. Monitoring: Observe connection pool utilization</p>
+<p><strong>Permanent Solution:</strong>
+1. Increase max_connections in postgresql.conf: <code>max_connections = 200</code>
+2. Fix connection leak in application (code fix)
+3. Configure connection timeout: <code>idle_in_transaction_session_timeout = 60000</code>
+4. Improve connection pool monitoring</p>
+<p><strong>Affected CIs:</strong>
+- {{ netbox.database.server }}
+- {{ netbox.application.server }}</p>
+<p><strong>Linked Incidents:</strong> INC-2024-123, INC-2024-145, INC-2024-167</p>
+<p><strong>Status:</strong> Resolved</p>
+<p><strong>Priority:</strong> P2</p>
+<h3 id="kedb-usage">KEDB Usage</h3>
+<p><strong>Incident Handling:</strong>
+1. Match incident symptoms with KEDB
+2. If match: Apply workaround
+3. Link incident with known error
+4. Reference problem ticket</p>
+<p><strong>Problem Analysis:</strong>
+1. Enter new known errors in KEDB
+2. Document workarounds
+3. Track permanent solutions
+4. Update status</p>
+<p><strong>Knowledge Management:</strong>
+- Use KEDB as knowledge base
+- Regular reviews (monthly)
+- Archive outdated entries
+- Document best practices</p>
+<h2 id="proactive-problem-management">Proactive Problem Management</h2>
+<h3 id="trend-analysis">Trend Analysis</h3>
+<p><strong>Data Sources:</strong>
+- Incident statistics
+- Monitoring metrics
+- Performance data
+- Capacity utilization</p>
+<p><strong>Analysis Methods:</strong>
+- Time series analysis
+- Correlation analysis
+- Anomaly detection
+- Predictive analytics</p>
+<p><strong>Goal:</strong> Identify problems before they become incidents</p>
+<h3 id="proactive-measures">Proactive Measures</h3>
+<p><strong>Regular Reviews:</strong>
+- Weekly incident trend reviews
+- Monthly problem reviews
+- Quarterly service reviews</p>
+<p><strong>Preventive Measures:</strong>
+- Capacity upgrades
+- Software updates and patches
+- Configuration optimizations
+- Process improvements
+- Training and documentation</p>
+<h3 id="continuous-improvement">Continuous Improvement</h3>
+<p><strong>Improvement Cycle:</strong>
+1. <strong>Measure:</strong> Capture metrics
+2. <strong>Analyze:</strong> Identify trends
+3. <strong>Improve:</strong> Implement measures
+4. <strong>Control:</strong> Check effectiveness</p>
+<p><strong>Improvement Areas:</strong>
+- Processes
+- Tools
+- Documentation
+- Skills and training
+- Infrastructure</p>
+<h2 id="metrics-and-reporting">Metrics and Reporting</h2>
+<h3 id="key-performance-indicators-kpis">Key Performance Indicators (KPIs)</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Target Value</th>
+<th>Measurement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Problem Resolution Rate</strong></td>
+<td>&gt; 80%</td>
+<td>Resolved problems / Total problems</td>
+</tr>
+<tr>
+<td><strong>Mean Time to Resolve Problem</strong></td>
+<td>&lt; 30 days</td>
+<td>Average resolution time</td>
+</tr>
+<tr>
+<td><strong>Known Error Utilization</strong></td>
+<td>&gt; 60%</td>
+<td>Incidents with KEDB workaround</td>
+</tr>
+<tr>
+<td><strong>Recurring Incident Rate</strong></td>
+<td>&lt; 10%</td>
+<td>Incidents with known cause</td>
+</tr>
+<tr>
+<td><strong>Postmortem Completion Rate</strong></td>
+<td>100%</td>
+<td>Postmortems for major incidents</td>
+</tr>
+</tbody>
+</table>
+<h3 id="reporting">Reporting</h3>
+<p><strong>Monthly Problem Report:</strong>
+- Number of open problems (by priority)
+- Newly created problems
+- Resolved problems
+- Top 5 problem categories
+- KEDB statistics
+- Action items status</p>
+<p><strong>Quarterly Trend Analysis:</strong>
+- Problem trends over time
+- Recurring problem patterns
+- Effectiveness of improvement measures
+- ROI of problem management</p>
+<h2 id="roles-and-responsibilities">Roles and Responsibilities</h2>
+<h3 id="problem-manager">Problem Manager</h3>
+<p><strong>Responsibilities:</strong>
+- Problem process ownership
+- Problem prioritization
+- RCA coordination
+- KEDB management
+- Postmortem moderation
+- Reporting</p>
+<p><strong>Person:</strong> Andreas Huemmer</p>
+<h3 id="technical-specialists">Technical Specialists</h3>
+<p><strong>Responsibilities:</strong>
+- Technical analysis
+- RCA execution
+- Solution development
+- Workaround identification</p>
+<p><strong>Teams:</strong> Server Team, Network Team, DBA Team, Application Team</p>
+<h3 id="service-owner">Service Owner</h3>
+<p><strong>Responsibilities:</strong>
+- Business impact assessment
+- Prioritization decisions
+- Resource provisioning
+- Stakeholder communication</p>
+<h2 id="tools-and-systems">Tools and Systems</h2>
+<h3 id="problem-management-tool">Problem Management Tool</h3>
+<ul>
+<li><strong>System:</strong> {{ meta.ticketing_system }}</li>
+<li><strong>URL:</strong> {{ meta.ticketing_system_url }}</li>
+<li><strong>Access:</strong> IT Operations Team</li>
+</ul>
+<h3 id="known-error-database">Known Error Database</h3>
+<ul>
+<li><strong>System:</strong> {{ meta.ticketing_system }} (KEDB module)</li>
+<li><strong>URL:</strong> {{ meta.kedb_url }}</li>
+<li><strong>Access:</strong> All IT staff (Read)</li>
+</ul>
+<h3 id="rca-tools">RCA Tools</h3>
+<ul>
+<li><strong>Collaboration:</strong> {{ meta.collaboration_tool }}</li>
+<li><strong>Diagramming:</strong> {{ meta.diagramming_tool }}</li>
+<li><strong>Log Analysis:</strong> {{ meta.log_analysis_tool }}</li>
+</ul>
+<h2 id="references">References</h2>
+<ul>
+<li>ITIL v4 Foundation - Problem Management</li>
+<li>ISO/IEC 20000-1:2018 - Problem Management</li>
+<li>Site Reliability Engineering (SRE) - Postmortem Culture</li>
+<li>Internal Incident Management Processes</li>
+<li>Change Management Processes</li>
+</ul>
+<hr />
+<p><strong>Document Owner:</strong> IT Operations Manager<br />
+<strong>Approved by:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Classification:</strong> internal<br />
+<strong>Last Updated:</strong> {{ meta.date }}</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0120_Incident_Management_Runbook.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0140_Change_and_Release_Management.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

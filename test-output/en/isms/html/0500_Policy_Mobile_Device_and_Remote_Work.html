@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0500 - Policy: Mobile Device and Remote Work</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0500</div>
+            <h1>Policy: Mobile Device and Remote Work</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0490_Guideline_Access_Visitors_and_Equipment_Protection.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0510_Guideline_MDM_BringYourOwnDevice_and_Remote_Access.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="policy-mobile-device-and-remote-work">Policy: Mobile Device and Remote Work</h1>
+<p><strong>Document ID:</strong> 0500<br />
+<strong>Document Type:</strong> Policy (abstract)<br />
+<strong>Standard Reference:</strong> ISO/IEC 27001:2022 Annex A.6.7, A.6.8, A.8.9 (incl. Amendment 1:2024)<br />
+<strong>Owner:</strong> Thomas Weber<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Approved<br />
+<strong>Classification:</strong> Internal<br />
+<strong>Last Updated:</strong> {{ meta.document.date }}<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This policy defines the principles for Mobile Device Management and Remote Work at <strong>AdminSend GmbH</strong>. It ensures that mobile devices and remote access are securely managed and comply with the organization's security requirements.</p>
+<h2 id="2-scope">2. Scope</h2>
+<p>This policy applies to:</p>
+<ul>
+<li><strong>Organizational Units:</strong> All departments and locations of AdminSend GmbH</li>
+<li><strong>Devices:</strong> Laptops, smartphones, tablets, wearables (corporate-owned and BYOD)</li>
+<li><strong>Access Methods:</strong> VPN, Remote Desktop, cloud services, mobile apps</li>
+<li><strong>Persons:</strong> All employees, contractors with remote access</li>
+<li><strong>Locations:</strong> {{ netbox.site.name }}, home office, public places, travel</li>
+</ul>
+<p><strong>Exceptions:</strong> Exceptions are only permitted through the defined exception process (<code>0640_Policy_Exceptions_and_Risk_Waivers.md</code>).</p>
+<h2 id="3-principles-policy-statements">3. Principles (Policy Statements)</h2>
+<h3 id="31-mobile-device-management-mdm">3.1 Mobile Device Management (MDM)</h3>
+<p>All mobile devices with access to corporate resources are managed through an MDM system. MDM enables configuration, monitoring, and remote wipe.</p>
+<h3 id="32-byod-bring-your-own-device">3.2 BYOD (Bring Your Own Device)</h3>
+<p>Personal devices may only be used for business purposes after approval and enrollment in MDM. BYOD devices are subject to the same security requirements as corporate devices.</p>
+<h3 id="33-device-encryption">3.3 Device Encryption</h3>
+<p>All mobile devices must be fully encrypted (Full Disk Encryption). Encryption is enforced and monitored through MDM.</p>
+<h3 id="34-secure-remote-access">3.4 Secure Remote Access</h3>
+<p>Remote access to corporate resources is exclusively through secure channels:
+- VPN with multi-factor authentication
+- Zero Trust Network Access (ZTNA)
+- Secure remote desktop solutions</p>
+<h3 id="35-device-compliance">3.5 Device Compliance</h3>
+<p>Mobile devices must meet compliance requirements:
+- Current operating system version
+- Installed security updates
+- Enabled screen lock
+- No jailbreak/root
+- Installed endpoint security software</p>
+<h3 id="36-loststolen-device-response">3.6 Lost/Stolen Device Response</h3>
+<p>In case of loss or theft of mobile devices, an incident is immediately reported. Remote wipe is performed to prevent data loss.</p>
+<h3 id="37-public-wi-fi-and-network-security">3.7 Public Wi-Fi and Network Security</h3>
+<p>Use of public Wi-Fi networks is only permitted via VPN. Unencrypted connections to corporate resources are prohibited.</p>
+<h3 id="38-remote-work-security">3.8 Remote Work Security</h3>
+<p>Remote workspaces must meet security requirements:
+- Secure network connection
+- Physical security (screen lock, clear desk)
+- No sharing of credentials
+- Compliance with Acceptable Use Policy</p>
+<h2 id="4-roles-and-responsibilities">4. Roles and Responsibilities</h2>
+<h3 id="raci-matrix-mobile-device-and-remote-work">RACI Matrix: Mobile Device and Remote Work</h3>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>CISO</th>
+<th>IT Operations</th>
+<th>MDM Administrator</th>
+<th>Employee</th>
+<th>HR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Policy Creation</td>
+<td>R/A</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+<td>C</td>
+</tr>
+<tr>
+<td>MDM Operations</td>
+<td>A</td>
+<td>R</td>
+<td>R</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Device Enrollment</td>
+<td>I</td>
+<td>C</td>
+<td>R</td>
+<td>R/A</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Compliance Monitoring</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Lost Device Response</td>
+<td>A</td>
+<td>R</td>
+<td>R</td>
+<td>R</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Remote Access Provisioning</td>
+<td>C</td>
+<td>R/A</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Security Training</td>
+<td>A</td>
+<td>I</td>
+<td>I</td>
+<td>R</td>
+<td>R</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legend:</strong> R = Responsible (Execution), A = Accountable (Ownership), C = Consulted, I = Informed</p>
+<h3 id="key-roles">Key Roles</h3>
+<ul>
+<li><strong>Policy Owner:</strong> Thomas Weber (CISO)</li>
+<li><strong>MDM Administrator:</strong> {{ meta.it.mdm_admin }}</li>
+<li><strong>Remote Access Manager:</strong> {{ meta.it.remote_access_manager }}</li>
+<li><strong>Implementation Responsible:</strong> IT Operations, Employees</li>
+<li><strong>Control/Audit Function:</strong> ISMS, Internal Audit</li>
+</ul>
+<h2 id="5-derivatives-guidelinesstandardsprocesses">5. Derivatives (Guidelines/Standards/Processes)</h2>
+<p>Implementation details are defined in subordinate documents:</p>
+<h3 id="associated-guidelines">Associated Guidelines</h3>
+<ul>
+<li><strong>0510_Guideline_MDM_BringYourOwnDevice_and_Remote_Access.md</strong> - Detailed implementation guideline</li>
+<li><code>0200_Policy_Acceptable_Use_of_IT.md</code> - Acceptable Use Policy</li>
+<li><code>0240_Policy_Authentication_and_Passwords.md</code> - Authentication Policy</li>
+<li><code>0620_Policy_Endpoint_Security.md</code> - Endpoint Security Policy</li>
+</ul>
+<h3 id="associated-standardsbaselines">Associated Standards/Baselines</h3>
+<ul>
+<li>MDM configuration standards</li>
+<li>Device compliance requirements</li>
+<li>BYOD guideline</li>
+<li>Remote access standards</li>
+</ul>
+<h3 id="associated-processes">Associated Processes</h3>
+<ul>
+<li>Device enrollment process</li>
+<li>Lost/stolen device response process</li>
+<li>Remote access provisioning process</li>
+<li>BYOD approval process</li>
+</ul>
+<h2 id="6-compliance-monitoring-and-enforcement">6. Compliance, Monitoring and Enforcement</h2>
+<h3 id="metrics-and-kpis">Metrics and KPIs</h3>
+<ul>
+<li>MDM enrollment rate (Target: 100% of mobile devices)</li>
+<li>Device compliance rate (Target: 95%)</li>
+<li>Number of non-compliant devices</li>
+<li>Average time to remote wipe for lost devices</li>
+<li>VPN usage rate for remote work</li>
+<li>Number of lost/stolen device incidents</li>
+</ul>
+<h3 id="evidence-and-proof">Evidence and Proof</h3>
+<ul>
+<li>MDM enrollment status</li>
+<li>Device compliance reports</li>
+<li>Remote access logs</li>
+<li>Lost device incident reports</li>
+<li>BYOD approval documentation</li>
+<li>Security training evidence</li>
+</ul>
+<h3 id="consequences-of-violations">Consequences of Violations</h3>
+<p>Violations of this policy are handled according to applicable HR and compliance processes:
+- <strong>Non-enrolled Devices:</strong> Access block, enrollment requirement
+- <strong>Non-Compliance:</strong> Access restriction until remediation
+- <strong>Unreported Device Loss:</strong> Investigation, disciplinary action
+- <strong>Repeated Violations:</strong> Employment consequences</p>
+<h2 id="7-exceptions">7. Exceptions</h2>
+<p>Exceptions to this policy are only permitted in justified exceptional cases:</p>
+<ul>
+<li><strong>Exception Process:</strong> See <code>0640_Policy_Exceptions_and_Risk_Waivers.md</code></li>
+<li><strong>Approval:</strong> Exceptions must be approved by CISO</li>
+<li><strong>Documentation:</strong> All exceptions are documented in the risk register</li>
+<li><strong>Time Limitation:</strong> Exceptions are generally time-limited</li>
+<li><strong>Compensating Controls:</strong> Exceptions require alternative security measures</li>
+</ul>
+<h2 id="8-references">8. References</h2>
+<h3 id="internal-documents">Internal Documents</h3>
+<ul>
+<li><code>0010_ISMS_Information_Security_Policy.md</code> - ISMS Policy</li>
+<li><code>0510_Guideline_MDM_BringYourOwnDevice_and_Remote_Access.md</code> - Detailed Guideline</li>
+<li><code>0620_Policy_Endpoint_Security.md</code> - Endpoint Security Policy</li>
+<li><code>0080_ISMS_Risk_Register_Template.md</code> - Risk Register</li>
+</ul>
+<h3 id="external-standards-and-requirements">External Standards and Requirements</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.6.7</strong> - Remote working</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.6.8</strong> - Information security event reporting</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.8.9</strong> - Configuration management</li>
+<li><strong>NIST SP 800-46</strong> - Guide to Enterprise Telework, Remote Access, and BYOD Security</li>
+<li><strong>GDPR (EU 2016/679)</strong> - Data protection for BYOD and remote work</li>
+</ul>
+<hr />
+<p><strong>Approved by:</strong><br />
+{{ meta.management.ceo }}, Management<br />
+Date: {{ meta.document.approval_date }}</p>
+<p><strong>Next Review:</strong> {{ meta.document.next_review }} (annually or as needed)</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0490_Guideline_Access_Visitors_and_Equipment_Protection.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0510_Guideline_MDM_BringYourOwnDevice_and_Remote_Access.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0430 - Richtlinie: Backup, Restore und Regelmäßige Tests</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0430</div>
+            <h1>Richtlinie: Backup, Restore und Regelmäßige Tests</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0420_Policy_Backup_und_Wiederherstellung.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0440_Policy_Business_Continuity_ICT_Readiness.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="richtlinie-backup-restore-und-regelmaige-tests">Richtlinie: Backup, Restore und Regelmäßige Tests</h1>
+<p><strong>Dokument-ID:</strong> 0430<br />
+<strong>Dokumenttyp:</strong> Richtlinie (detailliert)<br />
+<strong>Zugehörige Policy:</strong> 0420_Policy_Backup_und_Wiederherstellung.md<br />
+<strong>Standard-Referenz:</strong> ISO/IEC 27001:2022 Annex A.8.13<br />
+<strong>Owner:</strong> {{ meta.it_operations.manager }}<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Freigegeben<br />
+<strong>Klassifizierung:</strong> Vertraulich<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.date }}</p>
+<hr />
+<h2 id="1-zweck-und-geltungsbereich">1. Zweck und Geltungsbereich</h2>
+<p>Diese Richtlinie konkretisiert die <code>0420_Policy_Backup_und_Wiederherstellung.md</code> und definiert:
+- Backup-Strategien und -Frequenzen
+- Restore-Prozesse und -Tests
+- Backup-Monitoring und -Verifizierung</p>
+<p><strong>Geltungsbereich:</strong> Alle Daten und Systeme bei <strong>AdminSend GmbH</strong></p>
+<h2 id="2-backup-strategie">2. Backup-Strategie</h2>
+<h3 id="21-3-2-1-regel">2.1 3-2-1-Regel</h3>
+<p><strong>Prinzip:</strong>
+- <strong>3</strong> Kopien der Daten (1 Produktion + 2 Backups)
+- <strong>2</strong> verschiedene Medientypen (z.B. Disk + Tape/Cloud)
+- <strong>1</strong> Kopie Off-Site (geografisch getrennt)</p>
+<h3 id="22-backup-typen">2.2 Backup-Typen</h3>
+<p><strong>Full Backup:</strong>
+- Vollständige Sicherung aller Daten
+- Frequenz: Wöchentlich (Sonntag)
+- Längste Restore-Zeit, aber einfachste Wiederherstellung</p>
+<p><strong>Incremental Backup:</strong>
+- Nur Änderungen seit letztem Backup
+- Frequenz: Täglich
+- Schnellstes Backup, längere Restore-Zeit</p>
+<p><strong>Differential Backup:</strong>
+- Änderungen seit letztem Full Backup
+- Frequenz: Optional, bei Bedarf
+- Balance zwischen Full und Incremental</p>
+<h3 id="23-backup-frequenzen">2.3 Backup-Frequenzen</h3>
+<table>
+<thead>
+<tr>
+<th>System-Typ</th>
+<th>Full</th>
+<th>Incremental</th>
+<th>RPO</th>
+<th>RTO</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kritische Datenbanken</td>
+<td>Täglich</td>
+<td>Stündlich</td>
+<td>1h</td>
+<td>4h</td>
+</tr>
+<tr>
+<td>Produktionsserver</td>
+<td>Wöchentlich</td>
+<td>Täglich</td>
+<td>24h</td>
+<td>8h</td>
+</tr>
+<tr>
+<td>Fileserver</td>
+<td>Wöchentlich</td>
+<td>Täglich</td>
+<td>24h</td>
+<td>8h</td>
+</tr>
+<tr>
+<td>Workstations</td>
+<td>Monatlich</td>
+<td>Wöchentlich</td>
+<td>7d</td>
+<td>24h</td>
+</tr>
+<tr>
+<td>E-Mail</td>
+<td>Täglich</td>
+<td>Stündlich</td>
+<td>1h</td>
+<td>4h</td>
+</tr>
+</tbody>
+</table>
+<p><strong>RPO (Recovery Point Objective):</strong> Maximaler Datenverlust<br />
+<strong>RTO (Recovery Time Objective):</strong> Maximale Wiederherstellungszeit</p>
+<h2 id="3-backup-implementierung">3. Backup-Implementierung</h2>
+<h3 id="31-backup-systeme">3.1 Backup-Systeme</h3>
+<p><strong>On-Premises:</strong>
+- <strong>Backup-Server:</strong> {{ meta.backup.server }}
+- <strong>Backup-Software:</strong> {{ meta.backup.software }} (z.B. Veeam, Commvault)
+- <strong>Storage:</strong> {{ meta.backup.storage }} (Disk, Tape)</p>
+<p><strong>Cloud-Backup:</strong>
+- <strong>Cloud-Provider:</strong> {{ meta.cloud.backup_provider }} (z.B. Azure Backup, AWS Backup)
+- <strong>Verschlüsselung:</strong> AES-256
+- <strong>Geo-Redundanz:</strong> Aktiviert</p>
+<h3 id="32-backup-zeitfenster">3.2 Backup-Zeitfenster</h3>
+<p><strong>Produktionssysteme:</strong>
+- Backup-Window: 22:00 - 06:00 Uhr
+- Minimale Performance-Beeinträchtigung
+- Monitoring während Backup</p>
+<p><strong>Entwicklungssysteme:</strong>
+- Backup-Window: Jederzeit
+- Keine Performance-Anforderungen</p>
+<h3 id="33-verschlusselung">3.3 Verschlüsselung</h3>
+<p><strong>In Transit:</strong>
+- TLS 1.2+ für Backup-Übertragung
+- VPN für Off-Site-Backups</p>
+<p><strong>At Rest:</strong>
+- AES-256 Verschlüsselung aller Backups
+- Schlüsselverwaltung über Key Vault
+- Separate Schlüssel für Backups</p>
+<h3 id="34-retention">3.4 Retention</h3>
+<p><strong>Retention-Schema (GFS - Grandfather-Father-Son):</strong>
+- <strong>Daily:</strong> 7 Tage
+- <strong>Weekly:</strong> 4 Wochen
+- <strong>Monthly:</strong> 12 Monate
+- <strong>Yearly:</strong> {{ meta.retention.backup_years }} Jahre</p>
+<p><strong>Compliance-Backups:</strong>
+- Finanzd aten: 10 Jahre
+- Personaldaten: Gemäß DSGVO
+- E-Mails: {{ meta.retention.email_years }} Jahre</p>
+<h2 id="4-restore-prozesse">4. Restore-Prozesse</h2>
+<h3 id="41-restore-typen">4.1 Restore-Typen</h3>
+<p><strong>File-Level Restore:</strong>
+- Einzelne Dateien oder Ordner
+- Self-Service für Nutzer (begrenzt)
+- IT-Support für umfangreichere Restores</p>
+<p><strong>System-Level Restore:</strong>
+- Vollständige Server-Wiederherstellung
+- Bare-Metal-Recovery
+- Nur durch IT-Betrieb</p>
+<p><strong>Database Restore:</strong>
+- Point-in-Time-Recovery
+- Transaktions-Logs
+- Nur durch Database-Admins</p>
+<h3 id="42-restore-prozess">4.2 Restore-Prozess</h3>
+<p><strong>Schritt 1: Anforderung</strong>
+- Ticket erstellen mit Details (Was, Wann, Warum)
+- Genehmigung durch Vorgesetzten (bei umfangreichen Restores)</p>
+<p><strong>Schritt 2: Vorbereitung</strong>
+- Backup-Katalog prüfen
+- Restore-Ziel vorbereiten
+- Downtime planen (falls erforderlich)</p>
+<p><strong>Schritt 3: Restore</strong>
+- Restore durchführen
+- Fortschritt überwachen
+- Fehlerbehandlung</p>
+<p><strong>Schritt 4: Verifizierung</strong>
+- Datenintegrität prüfen
+- Funktionstest
+- Nutzer-Bestätigung</p>
+<p><strong>Schritt 5: Dokumentation</strong>
+- Restore-Log
+- Lessons Learned
+- Ticket schließen</p>
+<h3 id="43-disaster-recovery">4.3 Disaster Recovery</h3>
+<p><strong>Bei Totalausfall:</strong>
+1. Disaster Recovery Plan aktivieren
+2. Alternative Infrastruktur bereitstellen
+3. Kritische Systeme zuerst wiederherstellen
+4. Schrittweise Wiederherstellung weiterer Systeme
+5. Verifizierung und Rückkehr zum Normalbetrieb</p>
+<p><strong>Details:</strong> Siehe <code>0160_Disaster_Recovery_und_Business_Continuity.md</code> (IT-Operation Templates)</p>
+<h2 id="5-backup-monitoring">5. Backup-Monitoring</h2>
+<h3 id="51-uberwachte-metriken">5.1 Überwachte Metriken</h3>
+<p><strong>Backup-Jobs:</strong>
+- Erfolgreiche/Fehlgeschlagene Backups
+- Backup-Dauer
+- Backup-Größe
+- Änderungsrate</p>
+<p><strong>Storage:</strong>
+- Verfügbarer Speicherplatz
+- Wachstumsrate
+- Deduplizierungsrate</p>
+<p><strong>Performance:</strong>
+- Backup-Geschwindigkeit
+- Netzwerk-Auslastung
+- Storage-Performance</p>
+<h3 id="52-alerting">5.2 Alerting</h3>
+<p><strong>Kritische Alerts:</strong>
+- Backup fehlgeschlagen (2x hintereinander)
+- Storage &gt; 90% voll
+- Backup-Window überschritten
+- Verschlüsselung fehlgeschlagen</p>
+<p><strong>Eskalation:</strong>
+- Erste Benachrichtigung: Backup-Admin
+- Nach 2 Stunden: IT-Operations-Manager
+- Nach 4 Stunden: CISO (bei kritischen Systemen)</p>
+<h3 id="53-reporting">5.3 Reporting</h3>
+<p><strong>Täglicher Backup-Report:</strong>
+- Status aller Backup-Jobs
+- Fehlgeschlagene Backups
+- Storage-Auslastung</p>
+<p><strong>Monatlicher Management-Report:</strong>
+- Backup-Success-Rate
+- Restore-Statistiken
+- Kapazitätsplanung
+- Compliance-Status</p>
+<h2 id="6-backup-tests">6. Backup-Tests</h2>
+<h3 id="61-test-frequenzen">6.1 Test-Frequenzen</h3>
+<table>
+<thead>
+<tr>
+<th>Test-Typ</th>
+<th>Frequenz</th>
+<th>Durchführung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>File-Level Restore</td>
+<td>Monatlich</td>
+<td>Stichprobe</td>
+</tr>
+<tr>
+<td>System-Level Restore</td>
+<td>Quartalsweise</td>
+<td>Kritische Systeme</td>
+</tr>
+<tr>
+<td>Database Restore</td>
+<td>Monatlich</td>
+<td>Point-in-Time-Recovery</td>
+</tr>
+<tr>
+<td>Disaster Recovery</td>
+<td>Jährlich</td>
+<td>Vollständiger DR-Test</td>
+</tr>
+</tbody>
+</table>
+<h3 id="62-test-prozess">6.2 Test-Prozess</h3>
+<p><strong>Planung:</strong>
+1. Test-Scope definieren
+2. Test-Zeitfenster festlegen
+3. Stakeholder informieren
+4. Test-Umgebung vorbereiten</p>
+<p><strong>Durchführung:</strong>
+1. Restore in Test-Umgebung
+2. Datenintegrität prüfen
+3. Funktionstest
+4. Performance-Test
+5. Zeitnahme (RTO-Verifizierung)</p>
+<p><strong>Dokumentation:</strong>
+1. Test-Protokoll erstellen
+2. Erfolg/Misserfolg dokumentieren
+3. Probleme und Lessons Learned
+4. Verbesserungsmaßnahmen definieren</p>
+<p><strong>Nachbereitung:</strong>
+1. Test-Umgebung bereinigen
+2. Backup-Prozesse anpassen (falls erforderlich)
+3. Management-Bericht</p>
+<h3 id="63-disaster-recovery-drill">6.3 Disaster Recovery Drill</h3>
+<p><strong>Jährlicher DR-Test:</strong>
+- Simulation eines Totalausfalls
+- Aktivierung des DR-Plans
+- Wiederherstellung kritischer Systeme
+- Zeitnahme und Dokumentation
+- Management-Präsentation</p>
+<p><strong>Teilnehmer:</strong>
+- IT-Betrieb
+- Application-Owner
+- Management
+- Business-Vertreter</p>
+<h2 id="7-backup-sicherheit">7. Backup-Sicherheit</h2>
+<h3 id="71-zugriffskontrolle">7.1 Zugriffskontrolle</h3>
+<p><strong>Berechtigungen:</strong>
+- <strong>Backup-Admins:</strong> Vollzugriff auf Backup-System
+- <strong>System-Admins:</strong> Restore-Berechtigung für eigene Systeme
+- <strong>Nutzer:</strong> Self-Service-Restore (begrenzt)</p>
+<p><strong>Authentifizierung:</strong>
+- MFA für Backup-System-Zugriff
+- Privilegierte Accounts für Backup-Admins</p>
+<h3 id="72-immutable-backups">7.2 Immutable Backups</h3>
+<p><strong>Schutz vor Ransomware:</strong>
+- Immutable Backups (Write-Once-Read-Many)
+- Air-Gapped Backups (offline)
+- Separate Credentials für Backup-Storage</p>
+<p><strong>Retention Lock:</strong>
+- Backups können nicht vorzeitig gelöscht werden
+- Schutz vor versehentlicher oder böswilliger Löschung</p>
+<h3 id="73-audit-logging">7.3 Audit-Logging</h3>
+<p><strong>Protokollierte Events:</strong>
+- Backup-Job-Starts und -Ends
+- Restore-Anforderungen und -Durchführungen
+- Konfigurationsänderungen
+- Zugriffe auf Backup-System</p>
+<p><strong>Retention:</strong> {{ meta.retention.log_years }} Jahre</p>
+<h2 id="8-compliance-und-audit">8. Compliance und Audit</h2>
+<h3 id="81-messgroen-kpis">8.1 Messgrößen (KPIs)</h3>
+<table>
+<thead>
+<tr>
+<th>Metrik</th>
+<th>Zielwert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Backup-Success-Rate</td>
+<td>&gt; 99%</td>
+</tr>
+<tr>
+<td>Restore-Success-Rate</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>RTO-Einhaltung</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>RPO-Einhaltung</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Test-Completion-Rate</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="82-audit-nachweise">8.2 Audit-Nachweise</h3>
+<ul>
+<li>Backup-Logs und -Reports</li>
+<li>Restore-Test-Protokolle</li>
+<li>DR-Drill-Dokumentation</li>
+<li>Compliance-Berichte</li>
+</ul>
+<h2 id="9-referenzen">9. Referenzen</h2>
+<h3 id="interne-dokumente">Interne Dokumente</h3>
+<ul>
+<li><code>0420_Policy_Backup_und_Wiederherstellung.md</code></li>
+<li><code>0160_Disaster_Recovery_und_Business_Continuity.md</code> (IT-Operation)</li>
+</ul>
+<h3 id="externe-standards">Externe Standards</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.8.13</strong> - Information backup</li>
+<li><strong>NIST SP 800-34</strong> - Contingency Planning Guide</li>
+</ul>
+<hr />
+<p><strong>Genehmigt durch:</strong> Thomas Weber, CISO<br />
+<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0420_Policy_Backup_und_Wiederherstellung.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0440_Policy_Business_Continuity_ICT_Readiness.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

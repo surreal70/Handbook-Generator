@@ -321,3 +321,102 @@ Dieses Dokument beschreibt die Anforderungen für die Erweiterung des bestehende
 3. WHEN PDF-Output generiert wird THEN das System SHALL Dateiname nach Pattern {template-type}_handbook_{language}.pdf erstellen
 4. WHEN mehrere Handbücher generiert werden THEN das System SHALL Überschreiben bestehender Dateien bestätigen lassen
 5. WHEN Ausgabeverzeichnisse nicht existieren THEN das System SHALL diese automatisch erstellen
+
+### Anforderung 26: Per-Handbook Versionierung und Verantwortliche
+
+**User Story:** Als Handbuch-Verantwortlicher möchte ich für jedes Handbuch eigene Versionsinformationen und Verantwortliche Personen definieren, damit jedes Handbuch unabhängig verwaltet werden kann.
+
+#### Akzeptanzkriterien
+
+1. WHEN Handbuch-Metadaten konfiguriert werden THEN das System SHALL pro Handbuchtyp separate Versionsnummern unterstützen
+2. WHEN Handbuch-Metadaten konfiguriert werden THEN das System SHALL pro Handbuchtyp separate Verantwortliche Personen unterstützen
+3. WHEN Handbuch-Metadaten konfiguriert werden THEN das System SHALL pro Handbuchtyp separate Genehmiger unterstützen
+4. WHEN Handbuch-Metadaten konfiguriert werden THEN das System SHALL pro Handbuchtyp separate Versionsdaten unterstützen
+5. WHEN Handbuch-Metadaten verwendet werden THEN das System SHALL Platzhalter im Format {{ handbook.version }}, {{ handbook.owner }} bereitstellen
+
+### Anforderung 27: NetBox Metadata Integration
+
+**User Story:** Als System-Administrator möchte ich NetBox-Daten automatisch in eine Konfigurationsdatei laden, damit ich nicht manuell Daten zwischen Systemen synchronisieren muss.
+
+#### Akzeptanzkriterien
+
+1. WHEN das System startet THEN das System SHALL eine metadata-netbox.yaml Datei erstellen
+2. WHEN metadata-netbox.yaml erstellt wird THEN das System SHALL NetBox-Daten einmalig vor der Dokumentenverarbeitung laden
+3. WHEN NetBox-Daten geladen werden THEN das System SHALL Kontakte mit ihren Rollen aus NetBox abrufen
+4. WHEN NetBox-Daten geladen werden THEN das System SHALL Geräte-Informationen aus NetBox abrufen
+5. WHEN NetBox-Daten geladen werden THEN das System SHALL Standort-Informationen aus NetBox abrufen
+
+### Anforderung 28: NetBox Metadata Platzhalter
+
+**User Story:** Als Template-Autor möchte ich NetBox-Metadaten über einen neuen Platzhalter-Bereich verwenden, damit ich zwischen manuellen und NetBox-Daten unterscheiden kann.
+
+#### Akzeptanzkriterien
+
+1. WHEN NetBox-Metadaten verwendet werden THEN das System SHALL Platzhalter im Format {{ meta-netbox.field }} unterstützen
+2. WHEN NetBox-Metadaten verwendet werden THEN das System SHALL Kontaktdaten über {{ meta-netbox.contacts.role }} bereitstellen
+3. WHEN NetBox-Metadaten verwendet werden THEN das System SHALL Gerätedaten über {{ meta-netbox.devices.name }} bereitstellen
+4. WHEN NetBox-Metadaten verwendet werden THEN das System SHALL Standortdaten über {{ meta-netbox.sites.name }} bereitstellen
+5. WHEN beide Metadaten-Quellen existieren THEN das System SHALL meta-netbox und meta unabhängig voneinander verarbeiten
+
+### Anforderung 29: NetBox Rollen-Unterscheidung
+
+**User Story:** Als System-Administrator möchte ich konfigurieren können, wie Rollen in NetBox-Kontakten unterschieden werden, damit das System die richtigen Personen den richtigen Rollen zuordnet.
+
+#### Akzeptanzkriterien
+
+1. WHEN NetBox-Integration konfiguriert wird THEN das System SHALL den Benutzer fragen, wie Rollen in NetBox unterschieden werden
+2. WHEN Rollen-Unterscheidung konfiguriert wird THEN das System SHALL Optionen für Feld-basierte Zuordnung anbieten (z.B. contact.role, contact.tags)
+3. WHEN Rollen-Unterscheidung konfiguriert wird THEN das System SHALL Optionen für Namens-basierte Zuordnung anbieten (z.B. "CISO" im Namen)
+4. WHEN Rollen-Unterscheidung konfiguriert wird THEN das System SHALL die Konfiguration in config.yaml speichern
+5. WHEN NetBox-Daten geladen werden THEN das System SHALL die konfigurierte Rollen-Unterscheidung anwenden
+
+### Anforderung 30: Erweiterte Metadata-Rollen
+
+**User Story:** Als Compliance-Verantwortlicher möchte ich zusätzliche Rollen in den Metadaten definieren, damit alle relevanten Verantwortlichen im Handbuch dokumentiert sind.
+
+#### Akzeptanzkriterien
+
+1. WHEN Metadaten konfiguriert werden THEN das System SHALL Rolle "Sysop" (Systemoperator/Administrator) unterstützen
+2. WHEN Metadaten konfiguriert werden THEN das System SHALL Rolle "Datenschutzbeauftragter" (Data Protection Officer) unterstützen
+3. WHEN Metadaten konfiguriert werden THEN das System SHALL Rolle "Risikomanager" (Risk Manager) unterstützen
+4. WHEN Metadaten konfiguriert werden THEN das System SHALL Rolle "Interner Auditor" (Internal Auditor) unterstützen
+5. WHEN Metadaten konfiguriert werden THEN das System SHALL Rolle "Personalleitung" (HR Manager) unterstützen
+6. WHEN Metadaten konfiguriert werden THEN das System SHALL Rolle "IT-Manager" (IT Manager) unterstützen
+7. WHEN englische Templates verwendet werden THEN das System SHALL deutsche Rollennamen in englische Äquivalente übersetzen
+
+### Anforderung 31: HTML Output Format
+
+**User Story:** Als Handbuch-Nutzer möchte ich Handbücher als Mini-Website erhalten, damit ich einfach zwischen Kapiteln navigieren kann.
+
+#### Akzeptanzkriterien
+
+1. WHEN HTML-Output generiert wird THEN das System SHALL jede Template-Datei als separate HTML-Seite rendern
+2. WHEN HTML-Output generiert wird THEN das System SHALL eine Inhaltsverzeichnis-Seite als Einstiegsseite erstellen
+3. WHEN HTML-Output generiert wird THEN das System SHALL Navigation zwischen Seiten bereitstellen
+4. WHEN HTML-Output generiert wird THEN das System SHALL konsistentes Styling über alle Seiten anwenden
+5. WHEN HTML-Output generiert wird THEN das System SHALL Ausgabe in Handbook/{language}/{template-type}/html/ speichern
+
+### Anforderung 32: Separate Markdown Rendering
+
+**User Story:** Als Handbuch-Nutzer möchte ich jedes Template als separate Markdown-Datei erhalten, damit ich einzelne Kapitel einfach bearbeiten kann.
+
+#### Akzeptanzkriterien
+
+1. WHEN Markdown-Output generiert wird THEN das System SHALL jede Template-Datei separat rendern
+2. WHEN Markdown-Output generiert wird THEN das System SHALL keine zusammengefasste Datei mit allen Templates erstellen
+3. WHEN Markdown-Output generiert wird THEN das System SHALL Dateinamen nach Pattern {template-number}_{template-name}.md erstellen
+4. WHEN Markdown-Output generiert wird THEN das System SHALL Ausgabe in Handbook/{language}/{template-type}/markdown/ speichern
+5. WHEN Markdown-Output generiert wird THEN das System SHALL eine Inhaltsverzeichnis-Seite (TOC) als separate Datei erstellen
+6. WHEN Markdown-Inhaltsverzeichnis erstellt wird THEN das System SHALL Template-Nummern, Titel und Links zu den Dateien auflisten
+
+### Anforderung 33: PDF Inhaltsverzeichnis
+
+**User Story:** Als Handbuch-Nutzer möchte ich ein Inhaltsverzeichnis im PDF haben, damit ich schnell zu relevanten Abschnitten navigieren kann.
+
+#### Akzeptanzkriterien
+
+1. WHEN PDF-Output generiert wird THEN das System SHALL ein Inhaltsverzeichnis am Anfang des PDFs einfügen
+2. WHEN PDF-Output generiert wird THEN das System SHALL für jedes Template eine neue Seite beginnen
+3. WHEN PDF-Inhaltsverzeichnis erstellt wird THEN das System SHALL Template-Nummern und Titel auflisten
+4. WHEN PDF-Inhaltsverzeichnis erstellt wird THEN das System SHALL Seitenzahlen für jedes Template anzeigen
+5. WHEN PDF-Inhaltsverzeichnis erstellt wird THEN das System SHALL klickbare Links zu Abschnitten bereitstellen

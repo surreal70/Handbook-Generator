@@ -24,14 +24,27 @@ class MetaAdapter(DataSourceAdapter):
         adapter.disconnect()
     """
     
-    def __init__(self, metadata_config: MetadataConfig):
+    # German to English role title translation mapping
+    ROLE_TITLE_TRANSLATIONS = {
+        'Datenschutzbeauftragter': 'Data Protection Officer',
+        'Risikomanager': 'Risk Manager',
+        'Interner Auditor': 'Internal Auditor',
+        'Personalleitung': 'HR Manager',
+        'Systemadministrator': 'System Administrator',
+        'System Administrator': 'System Administrator',  # Already English
+        'IT Manager': 'IT Manager',  # Already English
+    }
+    
+    def __init__(self, metadata_config: MetadataConfig, language: str = 'de'):
         """
         Initialize Meta adapter with metadata configuration.
         
         Args:
             metadata_config: MetadataConfig object with organization metadata
+            language: Language for role title translation ('de' or 'en')
         """
         self.metadata = metadata_config
+        self.language = language
         self._connected = False
     
     def connect(self) -> bool:
@@ -67,8 +80,14 @@ class MetaAdapter(DataSourceAdapter):
         - "ceo.name" -> metadata.roles.ceo.name
         - "ceo.email" -> metadata.roles.ceo.email
         - "document.owner" -> metadata.document.owner
+        - "handbook.version" -> metadata.handbooks[current_type].version
+        - "handbook.owner" -> metadata.handbooks[current_type].owner
+        - "handbook.approver" -> metadata.handbooks[current_type].approver
+        - "handbook.date" -> metadata.handbooks[current_type].date
         - "author" -> metadata.author
         - "language" -> metadata.language
+        
+        Note: For handbook placeholders, set_handbook_type() must be called first.
         
         Args:
             field_path: Dot-separated path to the field
@@ -128,6 +147,10 @@ class MetaAdapter(DataSourceAdapter):
         elif base_field == 'document':
             return self._get_document_field(sub_path)
         
+        # Handbook fields (per-handbook versioning)
+        elif base_field == 'handbook':
+            return self._get_handbook_field(sub_path)
+        
         # Role fields (e.g., "ceo.email", "ciso.phone")
         else:
             return self._get_role_field(base_field, sub_path)
@@ -170,6 +193,7 @@ class MetaAdapter(DataSourceAdapter):
         if not role:
             return None
         
+        # Get the field value
         field_mapping = {
             'name': role.name,
             'title': role.title,
@@ -178,4 +202,52 @@ class MetaAdapter(DataSourceAdapter):
             'department': role.department
         }
         
+        value = field_mapping.get(field_name)
+        
+        # Apply translation for title field in English templates
+        if field_name == 'title' and value and self.language == 'en':
+            value = self.ROLE_TITLE_TRANSLATIONS.get(value, value)
+        
+        return value
+    
+    def _get_handbook_field(self, field_name: str) -> Optional[str]:
+        """
+        Get handbook field value.
+        
+        Note: This method requires the handbook type to be set via set_handbook_type()
+        before calling get_field() with handbook placeholders.
+        
+        Args:
+            field_name: Field name (version, owner, approver, date)
+            
+        Returns:
+            Field value as string, or None if not found
+        """
+        # Check if handbook type is set
+        if not hasattr(self, '_current_handbook_type') or not self._current_handbook_type:
+            return None
+        
+        # Get handbook metadata for current type
+        handbook_info = self.metadata.get_handbook_metadata(self._current_handbook_type)
+        if not handbook_info:
+            return None
+        
+        field_mapping = {
+            'version': handbook_info.version,
+            'owner': handbook_info.owner,
+            'approver': handbook_info.approver,
+            'date': handbook_info.date
+        }
+        
         return field_mapping.get(field_name)
+    
+    def set_handbook_type(self, handbook_type: str) -> None:
+        """
+        Set the current handbook type for handbook placeholder resolution.
+        
+        This must be called before processing templates with {{ handbook.* }} placeholders.
+        
+        Args:
+            handbook_type: Type of handbook (bcm, isms, bsi-grundschutz, it-operation)
+        """
+        self._current_handbook_type = handbook_type

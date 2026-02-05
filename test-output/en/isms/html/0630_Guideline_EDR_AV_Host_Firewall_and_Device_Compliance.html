@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0630 - Guideline: EDR, Antivirus, Host Firewall and Device Compliance</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0630</div>
+            <h1>Guideline: EDR, Antivirus, Host Firewall and Device Compliance</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0620_Policy_Endpoint_Security.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0640_Policy_Exceptions_and_Risk_Waivers.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="guideline-edr-antivirus-host-firewall-and-device-compliance">Guideline: EDR, Antivirus, Host Firewall and Device Compliance</h1>
+<p><strong>Document ID:</strong> 0630<br />
+<strong>Document Type:</strong> Guideline (detailed)<br />
+<strong>Related Policy:</strong> 0620_Policy_Endpoint_Security.md<br />
+<strong>Standard Reference:</strong> ISO/IEC 27001:2022 Annex A.8.7<br />
+<strong>Owner:</strong> {{ meta.it_operations.manager }}<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Approved<br />
+<strong>Classification:</strong> Internal<br />
+<strong>Last Updated:</strong> {{ meta.document.date }}</p>
+<hr />
+<h2 id="1-purpose-and-scope">1. Purpose and Scope</h2>
+<p>This guideline implements <code>0620_Policy_Endpoint_Security.md</code> and defines:
+- Endpoint Detection and Response (EDR) requirements
+- Antivirus configuration and management
+- Host firewall policies
+- Device compliance requirements</p>
+<p><strong>Scope:</strong> All endpoints at <strong>AdminSend GmbH</strong></p>
+<h2 id="2-endpoint-detection-and-response-edr">2. Endpoint Detection and Response (EDR)</h2>
+<h3 id="21-edr-system">2.1 EDR System</h3>
+<p><strong>Platform:</strong> {{ meta.security.edr_solution }} (e.g., CrowdStrike, SentinelOne, Microsoft Defender for Endpoint)</p>
+<p><strong>Functions:</strong>
+- Real-time Threat Detection
+- Behavioral Analysis
+- Automated Response
+- Forensic Capabilities
+- Threat Hunting</p>
+<h3 id="22-edr-deployment">2.2 EDR Deployment</h3>
+<p><strong>Mandatory Installation:</strong>
+- All workstations (Windows, macOS, Linux)
+- All servers
+- No exceptions (except via exception process)</p>
+<p><strong>Deployment Methods:</strong>
+- Group Policy (Windows)
+- MDM (macOS, Mobile)
+- Configuration Management (Linux)</p>
+<h3 id="23-edr-policies">2.3 EDR Policies</h3>
+<p><strong>Detection Modes:</strong>
+- <strong>Prevent:</strong> Automatic blocking (default)
+- <strong>Detect:</strong> Alerting only (for legacy systems)</p>
+<p><strong>Behavioral Policies:</strong>
+- Ransomware Protection
+- Credential Theft Protection
+- Exploit Protection
+- Script Control (PowerShell, CMD)</p>
+<h3 id="24-edr-response">2.4 EDR Response</h3>
+<p><strong>Automated Actions:</strong>
+- Malware Quarantine
+- Process Termination
+- Network Isolation (for critical threats)</p>
+<p><strong>Manual Actions:</strong>
+- Remote Shell for forensics
+- File Retrieval
+- Memory Dump</p>
+<h3 id="25-tamper-protection">2.5 Tamper Protection</h3>
+<p><strong>Protection Against Deactivation:</strong>
+- EDR agent cannot be disabled (without admin password)
+- Uninstall password required
+- Alerts on tamper attempts</p>
+<h2 id="3-antivirus-av">3. Antivirus (AV)</h2>
+<h3 id="31-av-system">3.1 AV System</h3>
+<p><strong>Platform:</strong> {{ meta.security.av_solution }} (often integrated in EDR)</p>
+<p><strong>Scan Types:</strong>
+- Real-time Scanning (On-Access)
+- Scheduled Full Scans (weekly)
+- Quick Scans (daily)</p>
+<h3 id="32-av-configuration">3.2 AV Configuration</h3>
+<p><strong>Scan Settings:</strong>
+- Scan all file types
+- Scan archives
+- Scan email attachments
+- Scan removable media</p>
+<p><strong>Exclusions:</strong>
+- Only after approval by IT Security
+- Documentation required
+- Regular review (quarterly)</p>
+<h3 id="33-signature-updates">3.3 Signature Updates</h3>
+<p><strong>Automatic Updates:</strong>
+- Multiple times daily
+- Via internal update servers (WSUS, etc.)
+- Fallback to cloud updates</p>
+<p><strong>Monitoring:</strong>
+- Alerts for outdated signatures (&gt; 7 days)</p>
+<h3 id="34-malware-handling">3.4 Malware Handling</h3>
+<p><strong>Upon Malware Detection:</strong>
+1. Automatic quarantine
+2. Alert to security team
+3. Create incident ticket
+4. Forensic analysis (if needed)
+5. Remediation
+6. Lessons learned</p>
+<h2 id="4-host-firewall">4. Host Firewall</h2>
+<h3 id="41-windows-firewall">4.1 Windows Firewall</h3>
+<p><strong>Configuration via GPO:</strong>
+- Firewall enabled (all profiles: Domain, Private, Public)
+- Inbound: Default Deny
+- Outbound: Default Allow (with exceptions)</p>
+<p><strong>Allowed Inbound Connections:</strong>
+- Remote Desktop (only from management VLAN)
+- File Sharing (only in corporate network)
+- Monitoring Agents</p>
+<h3 id="42-macos-firewall">4.2 macOS Firewall</h3>
+<p><strong>Configuration via MDM:</strong>
+- Application Firewall enabled
+- Stealth Mode enabled
+- Only signed apps allowed</p>
+<h3 id="43-linux-firewall">4.3 Linux Firewall</h3>
+<p><strong>iptables/firewalld:</strong>
+- Default Deny for inbound
+- Only required services allowed
+- Logging enabled</p>
+<h2 id="5-device-compliance">5. Device Compliance</h2>
+<h3 id="51-compliance-requirements">5.1 Compliance Requirements</h3>
+<p><strong>Mandatory Requirements:</strong>
+- EDR/AV installed and active
+- OS patches current (&lt; 30 days old)
+- Disk encryption enabled
+- Host firewall enabled
+- Screen lock configured (max. 15 minutes)
+- No jailbreak/root (mobile)</p>
+<h3 id="52-compliance-checks">5.2 Compliance Checks</h3>
+<p><strong>Automatic Verification:</strong>
+- At every network access (NAC)
+- At VPN connection
+- Daily (endpoint management)</p>
+<p><strong>Upon Non-Compliance:</strong>
+- Warning to user (24-hour grace period)
+- Restricted network access
+- Complete blocking after 7 days</p>
+<h3 id="53-compliance-reporting">5.3 Compliance Reporting</h3>
+<p><strong>Weekly Report:</strong>
+- Compliance rate per department
+- Top non-compliance items
+- Trend analysis</p>
+<p><strong>Target:</strong> &gt; 95% compliance</p>
+<h2 id="6-patch-management">6. Patch Management</h2>
+<h3 id="61-os-patches">6.1 OS Patches</h3>
+<p><strong>Windows:</strong>
+- WSUS for patch distribution
+- Automatic installation (outside business hours)
+- Reboot window: Weekend</p>
+<p><strong>macOS:</strong>
+- Automatic updates via MDM
+- Deferred updates (7-day test period)</p>
+<p><strong>Linux:</strong>
+- Automatic security updates (unattended-upgrades)
+- Manual updates for kernel</p>
+<h3 id="62-application-patches">6.2 Application Patches</h3>
+<p><strong>Third-Party Applications:</strong>
+- Ninite, Chocolatey for automatic updates
+- Manual updates for critical apps</p>
+<p><strong>Patch SLA:</strong>
+- Critical: 7 days
+- High: 30 days
+- Medium: 90 days</p>
+<p><strong>Details:</strong> See <code>0350_Guideline_Vulnerability_Scans_Patching</code></p>
+<h2 id="7-application-control">7. Application Control</h2>
+<h3 id="71-application-whitelisting">7.1 Application Whitelisting</h3>
+<p><strong>For Critical Systems:</strong>
+- Only signed, approved applications
+- Blocking of unapproved software
+- Exceptions via ticketing system</p>
+<p><strong>Tools:</strong>
+- Windows Defender Application Control (WDAC)
+- AppLocker</p>
+<h3 id="72-script-control">7.2 Script Control</h3>
+<p><strong>PowerShell:</strong>
+- Constrained Language Mode
+- Script signing required
+- Logging enabled</p>
+<p><strong>CMD/Batch:</strong>
+- Blocked for standard users
+- Only for admins</p>
+<h2 id="8-usb-and-removable-media">8. USB and Removable Media</h2>
+<h3 id="81-usb-control">8.1 USB Control</h3>
+<p><strong>Policies:</strong>
+- USB storage blocked (standard users)
+- Only approved USB devices (whitelist)
+- Automatic scanning upon connection</p>
+<p><strong>Exceptions:</strong>
+- Request via ticketing system
+- Time-limited
+- Encrypted USB drives</p>
+<h3 id="82-dlp-for-removable-media">8.2 DLP for Removable Media</h3>
+<p><strong>Data Loss Prevention:</strong>
+- Blocking of confidential data on USB
+- Alerts on copy attempts
+- Logging of all USB activities</p>
+<h2 id="9-monitoring-and-alerting">9. Monitoring and Alerting</h2>
+<h3 id="91-endpoint-monitoring">9.1 Endpoint Monitoring</h3>
+<p><strong>Monitored Metrics:</strong>
+- EDR/AV status
+- Patch level
+- Compliance status
+- Malware detections
+- Anomalies (CPU, network)</p>
+<h3 id="92-siem-integration">9.2 SIEM Integration</h3>
+<p><strong>Events to SIEM:</strong>
+- Malware detections
+- EDR alerts
+- Compliance violations
+- Tamper attempts</p>
+<h3 id="93-automated-response">9.3 Automated Response</h3>
+<p><strong>SOAR Integration:</strong>
+- Automatic isolation upon malware
+- Automatic ticket creation
+- Automatic notifications</p>
+<h2 id="10-compliance-and-audit">10. Compliance and Audit</h2>
+<h3 id="101-metrics-kpis">10.1 Metrics (KPIs)</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Target Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EDR Deployment Rate</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>AV Signature Currency</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Device Compliance Rate</td>
+<td>&gt; 95%</td>
+</tr>
+<tr>
+<td>Malware Detection Rate</td>
+<td>Baseline</td>
+</tr>
+<tr>
+<td>Patch Compliance (30 days)</td>
+<td>&gt; 90%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="102-audit-evidence">10.2 Audit Evidence</h3>
+<ul>
+<li>EDR Deployment Status</li>
+<li>Compliance Reports</li>
+<li>Malware Incident Reports</li>
+<li>Patch Compliance Reports</li>
+</ul>
+<h2 id="11-references">11. References</h2>
+<h3 id="internal-documents">Internal Documents</h3>
+<ul>
+<li><code>0620_Policy_Endpoint_Security.md</code></li>
+<li><code>0350_Guideline_Vulnerability_Scans_Patching_and_Exploitation_Response.md</code></li>
+</ul>
+<h3 id="external-standards">External Standards</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.8.7</strong> - Protection against malware</li>
+<li><strong>NIST SP 800-83</strong> - Guide to Malware Incident Prevention and Handling</li>
+<li><strong>CIS Controls</strong> - Malware Defenses</li>
+</ul>
+<hr />
+<p><strong>Approved by:</strong> Thomas Weber, CISO<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0620_Policy_Endpoint_Security.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0640_Policy_Exceptions_and_Risk_Waivers.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

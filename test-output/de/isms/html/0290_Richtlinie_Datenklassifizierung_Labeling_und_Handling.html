@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0290 - Richtlinie: Datenklassifizierung, Labeling und Handling</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0290</div>
+            <h1>Richtlinie: Datenklassifizierung, Labeling und Handling</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0280_Policy_Datenklassifizierung_und_Informationshandling.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0300_Policy_Asset_Management.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="richtlinie-datenklassifizierung-labeling-und-handling">Richtlinie: Datenklassifizierung, Labeling und Handling</h1>
+<p><strong>Dokument-ID:</strong> 0290<br />
+<strong>Dokumenttyp:</strong> Richtlinie (detailliert)<br />
+<strong>Zugehörige Policy:</strong> 0280_Policy_Datenklassifizierung_und_Informationshandling.md<br />
+<strong>Standard-Referenz:</strong> ISO/IEC 27001:2022 Annex A.5.12, A.5.13<br />
+<strong>Owner:</strong> {{ meta.it_operations.manager }}<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Freigegeben<br />
+<strong>Klassifizierung:</strong> Intern<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.date }}</p>
+<hr />
+<h2 id="1-zweck-und-geltungsbereich">1. Zweck und Geltungsbereich</h2>
+<p>Diese Richtlinie konkretisiert die <code>0280_Policy_Datenklassifizierung_und_Informationshandling.md</code> und definiert:
+- Klassifizierungsstufen und Kriterien
+- Labeling-Verfahren für Dokumente und E-Mails
+- Handling-Anforderungen pro Klassifizierungsstufe</p>
+<p><strong>Geltungsbereich:</strong> Alle Informationen bei <strong>AdminSend GmbH</strong></p>
+<h2 id="2-klassifizierungsstufen">2. Klassifizierungsstufen</h2>
+<h3 id="21-offentlich-public">2.1 Öffentlich (Public)</h3>
+<p><strong>Definition:</strong> Informationen für öffentliche Verbreitung bestimmt</p>
+<p><strong>Beispiele:</strong>
+- Marketing-Materialien, Pressemitteilungen
+- Öffentliche Website-Inhalte
+- Produktdokumentationen</p>
+<p><strong>Handling:</strong>
+- Keine Zugriffsbeschränkungen
+- Keine Verschlüsselung erforderlich
+- Freie Weitergabe erlaubt</p>
+<h3 id="22-intern-internal">2.2 Intern (Internal)</h3>
+<p><strong>Definition:</strong> Informationen für interne Nutzung, nicht für Öffentlichkeit</p>
+<p><strong>Beispiele:</strong>
+- Interne Prozessdokumentationen
+- Organisationsstrukturen
+- Allgemeine Geschäftskommunikation</p>
+<p><strong>Handling:</strong>
+- Zugriff nur für Mitarbeiter und autorisierte Dritte
+- Keine Verschlüsselung erforderlich (außer bei externer Übertragung)
+- Weitergabe an Dritte nur mit NDA</p>
+<h3 id="23-vertraulich-confidential">2.3 Vertraulich (Confidential)</h3>
+<p><strong>Definition:</strong> Sensible Geschäftsinformationen, Schaden bei Offenlegung</p>
+<p><strong>Beispiele:</strong>
+- Verträge, Angebote
+- Personaldaten
+- Finanzberichte (intern)
+- Kundendaten</p>
+<p><strong>Handling:</strong>
+- Zugriff nur nach Need-to-Know-Prinzip
+- Verschlüsselung bei Übertragung und Speicherung
+- Weitergabe nur mit Genehmigung
+- Sichere Vernichtung erforderlich</p>
+<h3 id="24-streng-vertraulich-highly-confidential">2.4 Streng Vertraulich (Highly Confidential)</h3>
+<p><strong>Definition:</strong> Höchst sensible Informationen, erheblicher Schaden bei Offenlegung</p>
+<p><strong>Beispiele:</strong>
+- Geschäftsgeheimnisse, M&amp;A-Pläne
+- Strategische Pläne
+- Sicherheitskonzepte
+- Kritische Infrastrukturdaten</p>
+<p><strong>Handling:</strong>
+- Zugriff nur für autorisierte Personen (explizite Genehmigung)
+- Verschlüsselung verpflichtend (at rest und in transit)
+- Keine E-Mail-Versand ohne Verschlüsselung
+- Physische Dokumente in Safe
+- Sichere Vernichtung nach DIN 66399 P-5</p>
+<h2 id="3-klassifizierungsprozess">3. Klassifizierungsprozess</h2>
+<h3 id="31-verantwortlichkeiten">3.1 Verantwortlichkeiten</h3>
+<p><strong>Daten-Owner:</strong>
+- Klassifizierung neuer Informationen
+- Review und Anpassung bei Änderungen
+- Genehmigung von Zugriff en</p>
+<p><strong>Ersteller:</strong>
+- Anwendung der Klassifizierung bei Dokumenterstellung
+- Labeling gemäß Vorgaben
+- Einhaltung Handling-Anforderungen</p>
+<p><strong>IT-Betrieb:</strong>
+- Technische Umsetzung (DLP, Verschlüsselung)
+- Monitoring und Compliance-Checks</p>
+<h3 id="32-klassifizierungskriterien">3.2 Klassifizierungskriterien</h3>
+<p><strong>Fragen zur Bestimmung:</strong>
+1. Welcher Schaden entsteht bei Offenlegung?
+2. Gibt es gesetzliche/regulatorische Anforderungen?
+3. Wer benötigt Zugriff (Öffentlichkeit, Mitarbeiter, spezifische Personen)?
+4. Wie lange müssen Daten aufbewahrt werden?</p>
+<p><strong>Entscheidungsbaum:</strong>
+- Öffentlich bestimmt? → Öffentlich
+- Nur intern relevant? → Intern
+- Geschäftsschaden bei Offenlegung? → Vertraulich
+- Erheblicher Schaden oder gesetzliche Pflicht? → Streng Vertraulich</p>
+<h2 id="4-labeling-verfahren">4. Labeling-Verfahren</h2>
+<h3 id="41-dokumente">4.1 Dokumente</h3>
+<p><strong>Microsoft Office:</strong>
+- Sensitivity Labels in Office 365
+- Automatische Anwendung über DLP-Regeln
+- Header/Footer mit Klassifizierung</p>
+<p><strong>PDF:</strong>
+- Wasserzeichen mit Klassifizierung
+- Metadaten-Tags</p>
+<p><strong>Physische Dokumente:</strong>
+- Stempel oder Aufdruck auf jeder Seite
+- Farbcodierung (z.B. Rot für Streng Vertraulich)</p>
+<h3 id="42-e-mails">4.2 E-Mails</h3>
+<p><strong>Betreffzeile:</strong>
+- Präfix: [VERTRAULICH], [STRENG VERTRAULICH]
+- Automatisch durch E-Mail-Client</p>
+<p><strong>E-Mail-Body:</strong>
+- Disclaimer im Footer
+- Verschlüsselung bei Vertraulich/Streng Vertraulich</p>
+<p><strong>Outlook-Integration:</strong>
+- Sensitivity Labels
+- Automatische Verschlüsselung bei Klassifizierung</p>
+<h3 id="43-digitale-assets">4.3 Digitale Assets</h3>
+<p><strong>Dateisysteme:</strong>
+- Metadaten-Tags
+- Separate Ordnerstrukturen pro Klassifizierung
+- Zugriffskontrolle über ACLs</p>
+<p><strong>Datenbanken:</strong>
+- Spalten-Level-Klassifizierung
+- Row-Level-Security
+- Audit-Logging für Zugriffe</p>
+<h2 id="5-handling-anforderungen">5. Handling-Anforderungen</h2>
+<h3 id="51-speicherung">5.1 Speicherung</h3>
+<table>
+<thead>
+<tr>
+<th>Klassifizierung</th>
+<th>Speicherort</th>
+<th>Verschlüsselung</th>
+<th>Zugriffskontrolle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Öffentlich</td>
+<td>Beliebig</td>
+<td>Optional</td>
+<td>Keine</td>
+</tr>
+<tr>
+<td>Intern</td>
+<td>Genehmigte Systeme</td>
+<td>Bei externer Speicherung</td>
+<td>Mitarbeiter</td>
+</tr>
+<tr>
+<td>Vertraulich</td>
+<td>Genehmigte Systeme</td>
+<td>Verpflichtend</td>
+<td>Need-to-Know</td>
+</tr>
+<tr>
+<td>Streng Vertraulich</td>
+<td>Dedizierte Systeme</td>
+<td>Verpflichtend (AES-256)</td>
+<td>Explizite Genehmigung</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-ubertragung">5.2 Übertragung</h3>
+<table>
+<thead>
+<tr>
+<th>Klassifizierung</th>
+<th>E-Mail</th>
+<th>Dateitransfer</th>
+<th>Physisch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Öffentlich</td>
+<td>Unverschlüsselt OK</td>
+<td>Beliebig</td>
+<td>Keine Anforderungen</td>
+</tr>
+<tr>
+<td>Intern</td>
+<td>TLS empfohlen</td>
+<td>SFTP/HTTPS</td>
+<td>Versiegelte Umschläge</td>
+</tr>
+<tr>
+<td>Vertraulich</td>
+<td>S/MIME verpflichtend</td>
+<td>SFTP/HTTPS verschlüsselt</td>
+<td>Einschreiben, versiegelt</td>
+</tr>
+<tr>
+<td>Streng Vertraulich</td>
+<td>S/MIME + Genehmigung</td>
+<td>Dedizierte Kanäle</td>
+<td>Kurier, persönliche Übergabe</td>
+</tr>
+</tbody>
+</table>
+<h3 id="53-vernichtung">5.3 Vernichtung</h3>
+<table>
+<thead>
+<tr>
+<th>Klassifizierung</th>
+<th>Digital</th>
+<th>Papier</th>
+<th>Datenträger</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Öffentlich</td>
+<td>Normale Löschung</td>
+<td>Papierkorb</td>
+<td>Normale Löschung</td>
+</tr>
+<tr>
+<td>Intern</td>
+<td>Sichere Löschung</td>
+<td>Shredder P-3</td>
+<td>Sichere Löschung</td>
+</tr>
+<tr>
+<td>Vertraulich</td>
+<td>Kryptographische Löschung</td>
+<td>Shredder P-4</td>
+<td>Degaussing + Zerstörung</td>
+</tr>
+<tr>
+<td>Streng Vertraulich</td>
+<td>Kryptographische Löschung</td>
+<td>Shredder P-5</td>
+<td>Physische Zerstörung</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-data-loss-prevention-dlp">6. Data Loss Prevention (DLP)</h2>
+<h3 id="61-dlp-regeln">6.1 DLP-Regeln</h3>
+<p><strong>Automatische Erkennung:</strong>
+- Kreditkartennummern, Sozialversicherungsnummern
+- Dokumente mit "Vertraulich"-Label
+- Personenbezogene Daten (DSGVO)</p>
+<p><strong>Aktionen:</strong>
+- <strong>Warnung:</strong> Bei Versand Intern-klassifizierter Daten extern
+- <strong>Blockierung:</strong> Bei Versand Vertraulich/Streng Vertraulich ohne Verschlüsselung
+- <strong>Quarantäne:</strong> Bei Verdacht auf Datenleck</p>
+<h3 id="62-monitoring">6.2 Monitoring</h3>
+<p><strong>Überwachte Kanäle:</strong>
+- E-Mail (ausgehend)
+- Cloud-Uploads (OneDrive, SharePoint)
+- USB-Geräte
+- Drucker</p>
+<p><strong>Alerts:</strong>
+- Automatische Benachrichtigung an Security-Team
+- Incident-Erstellung bei kritischen Verstößen</p>
+<h2 id="7-schulung-und-awareness">7. Schulung und Awareness</h2>
+<p><strong>Pflichtschulungen:</strong>
+- Onboarding: Datenklassifizierung-Grundlagen
+- Jährlich: Refresher und Updates</p>
+<p><strong>Awareness-Materialien:</strong>
+- Poster mit Klassifizierungsstufen
+- Quick-Reference-Karten
+- Intranet-Artikel</p>
+<h2 id="8-compliance-und-audit">8. Compliance und Audit</h2>
+<h3 id="81-messgroen-kpis">8.1 Messgrößen (KPIs)</h3>
+<table>
+<thead>
+<tr>
+<th>Metrik</th>
+<th>Zielwert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Klassifizierte Dokumente</td>
+<td>&gt; 80%</td>
+</tr>
+<tr>
+<td>DLP-Incidents</td>
+<td>&lt; 10 pro Monat</td>
+</tr>
+<tr>
+<td>Schulungsteilnahme</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="82-audit-nachweise">8.2 Audit-Nachweise</h3>
+<ul>
+<li>Klassifizierungs-Register</li>
+<li>DLP-Logs und Incidents</li>
+<li>Schulungsnachweise</li>
+<li>Zugriffsprotokolle</li>
+</ul>
+<h2 id="9-referenzen">9. Referenzen</h2>
+<h3 id="interne-dokumente">Interne Dokumente</h3>
+<ul>
+<li><code>0280_Policy_Datenklassifizierung_und_Informationshandling.md</code></li>
+<li><code>0320_Policy_Logging_und_Monitoring.md</code></li>
+</ul>
+<h3 id="externe-standards">Externe Standards</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.12</strong> - Classification of information</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.13</strong> - Labelling of information</li>
+<li><strong>DIN 66399</strong> - Vernichtung von Datenträgern</li>
+</ul>
+<hr />
+<p><strong>Genehmigt durch:</strong> Thomas Weber, CISO<br />
+<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0280_Policy_Datenklassifizierung_und_Informationshandling.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0300_Policy_Asset_Management.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

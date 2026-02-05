@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0730 - Appendix C: Data Flow and Interfaces</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0730</div>
+            <h1>Appendix C: Data Flow and Interfaces</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0720_Appendix_Asset_and_System_Inventory_Template.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0740_Appendix_Terms_and_Abbreviations.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="appendix-c-data-flow-and-interfaces">Appendix C: Data Flow and Interfaces</h1>
+<p><strong>Document Type:</strong> Appendix<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Date:</strong> {{ meta.document.date }}<br />
+<strong>Classification:</strong> internal</p>
+<hr />
+<h2 id="purpose">Purpose</h2>
+<p>This document documents all data flows and interfaces within the organization as well as to external partners and service providers. It fulfills the requirements of:</p>
+<ul>
+<li>ISO/IEC 27001:2022 Annex A 5.14 (Information Transfer)</li>
+<li>ISO/IEC 27001:2022 Annex A 5.19-5.23 (Supplier Relationships)</li>
+<li>ISO/IEC 27001:2022 Annex A 8.20-8.22 (Network Security)</li>
+</ul>
+<p>The documentation serves as the foundation for:</p>
+<ul>
+<li>Risk assessment of data transfers</li>
+<li>Security requirements for interfaces</li>
+<li>Data Protection Impact Assessments (DPIA)</li>
+<li>Incident response and forensics</li>
+</ul>
+<h2 id="scope">Scope</h2>
+<p><strong>Organization:</strong> AdminSend GmbH<br />
+<strong>ISMS Scope:</strong> {{ meta.isms.scope }}<br />
+<strong>Responsible:</strong> Thomas Weber, Data Protection Officer</p>
+<hr />
+<h2 id="data-flow-categories">Data Flow Categories</h2>
+<h3 id="internal-data-flows">Internal Data Flows</h3>
+<p>Data transfers within the organization between different systems and sites.</p>
+<h3 id="external-data-flows">External Data Flows</h3>
+<p>Data transfers between the organization and external partners, customers, suppliers, or cloud services.</p>
+<h3 id="cross-border-data-flows">Cross-Border Data Flows</h3>
+<p>Data transfers across country borders that must meet special data protection requirements (GDPR Art. 44-50).</p>
+<hr />
+<h2 id="data-classification">Data Classification</h2>
+<p>All data flows are assessed according to the following classifications:</p>
+<table>
+<thead>
+<tr>
+<th>Classification</th>
+<th>Description</th>
+<th>Examples</th>
+<th>Protection Measures</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Public</strong></td>
+<td>Intended for public</td>
+<td>Marketing materials, public website</td>
+<td>No special measures</td>
+</tr>
+<tr>
+<td><strong>Internal</strong></td>
+<td>For internal use only</td>
+<td>Internal documents, operations manuals</td>
+<td>Access control</td>
+</tr>
+<tr>
+<td><strong>Confidential</strong></td>
+<td>Sensitive business information</td>
+<td>Contracts, financial reports</td>
+<td>Encryption, strict access control</td>
+</tr>
+<tr>
+<td><strong>Strictly Confidential</strong></td>
+<td>Highly sensitive data</td>
+<td>Personal data, trade secrets</td>
+<td>End-to-end encryption, MFA, audit logging</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="internal-data-flows_1">Internal Data Flows</h2>
+<h3 id="application-to-application-communication">Application-to-Application Communication</h3>
+<table>
+<thead>
+<tr>
+<th>Data Flow-ID</th>
+<th>Source</th>
+<th>Destination</th>
+<th>Protocol</th>
+<th>Port</th>
+<th>Data Type</th>
+<th>Classification</th>
+<th>Encryption</th>
+<th>Frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DF-INT-001</td>
+<td>[TODO: ERP System]</td>
+<td>[TODO: CRM System]</td>
+<td>HTTPS</td>
+<td>443</td>
+<td>Customer Data</td>
+<td>Confidential</td>
+<td>TLS 1.3</td>
+<td>Real-time</td>
+</tr>
+<tr>
+<td>DF-INT-002</td>
+<td>[TODO: App Server]</td>
+<td>[TODO: Database]</td>
+<td>PostgreSQL</td>
+<td>5432</td>
+<td>Transaction Data</td>
+<td>Strictly Confidential</td>
+<td>TLS 1.2+</td>
+<td>Continuous</td>
+</tr>
+<tr>
+<td>DF-INT-003</td>
+<td>[TODO: Backup System]</td>
+<td>[TODO: Storage]</td>
+<td>iSCSI</td>
+<td>3260</td>
+<td>Backup Data</td>
+<td>Confidential</td>
+<td>IPSec</td>
+<td>Daily</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO: Source]</td>
+<td>[TODO: Destination]</td>
+<td>[TODO: Protocol]</td>
+<td>[TODO: Port]</td>
+<td>[TODO: Data Type]</td>
+<td>[TODO: Classification]</td>
+<td>[TODO: Encryption]</td>
+<td>[TODO: Frequency]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Security Measures:</strong>
+- Network segmentation between application and database layers
+- Firewall rules with least privilege principle
+- Encrypted connections (TLS 1.2+)
+- Authentication via certificates or service accounts</p>
+<hr />
+<h3 id="site-to-site-connections">Site-to-Site Connections</h3>
+<table>
+<thead>
+<tr>
+<th>Data Flow-ID</th>
+<th>Source Site</th>
+<th>Destination Site</th>
+<th>Connection Type</th>
+<th>Bandwidth</th>
+<th>Data Type</th>
+<th>Encryption</th>
+<th>Redundancy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DF-S2S-001</td>
+<td>{{ netbox.site.name }}</td>
+<td>[TODO: Branch Office]</td>
+<td>MPLS</td>
+<td>[TODO: Mbps]</td>
+<td>All Business Data</td>
+<td>IPSec</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>DF-S2S-002</td>
+<td>{{ netbox.site.name }}</td>
+<td>[TODO: DR Site]</td>
+<td>Dedicated Line</td>
+<td>[TODO: Mbps]</td>
+<td>Replication Data</td>
+<td>AES-256</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO: Source]</td>
+<td>[TODO: Destination]</td>
+<td>[TODO: Type]</td>
+<td>[TODO: Bandwidth]</td>
+<td>[TODO: Data Type]</td>
+<td>[TODO: Encryption]</td>
+<td>[TODO: Redundancy]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Security Measures:</strong>
+- VPN tunnels with IPSec or WireGuard
+- Redundant connections for critical sites
+- Monitoring and alerting for connection failures
+- Regular security audits</p>
+<hr />
+<h3 id="database-replication">Database Replication</h3>
+<table>
+<thead>
+<tr>
+<th>Data Flow-ID</th>
+<th>Primary DB</th>
+<th>Secondary DB</th>
+<th>Replication Type</th>
+<th>Data Type</th>
+<th>Classification</th>
+<th>Encryption</th>
+<th>RPO</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DF-REP-001</td>
+<td>[TODO: Prod DB]</td>
+<td>[TODO: DR DB]</td>
+<td>Asynchronous</td>
+<td>All Production Data</td>
+<td>Strictly Confidential</td>
+<td>TLS 1.3</td>
+<td>&lt; 1h</td>
+</tr>
+<tr>
+<td>DF-REP-002</td>
+<td>[TODO: Prod DB]</td>
+<td>[TODO: Reporting DB]</td>
+<td>Synchronous</td>
+<td>Reporting Data</td>
+<td>Confidential</td>
+<td>TLS 1.2</td>
+<td>&lt; 5min</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO: Primary]</td>
+<td>[TODO: Secondary]</td>
+<td>[TODO: Type]</td>
+<td>[TODO: Data Type]</td>
+<td>[TODO: Classification]</td>
+<td>[TODO: Encryption]</td>
+<td>[TODO: RPO]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="external-data-flows_1">External Data Flows</h2>
+<h3 id="cloud-services">Cloud Services</h3>
+<table>
+<thead>
+<tr>
+<th>Data Flow-ID</th>
+<th>Internal System</th>
+<th>Cloud Service</th>
+<th>Provider</th>
+<th>Data Type</th>
+<th>Classification</th>
+<th>Encryption</th>
+<th>Data Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DF-EXT-001</td>
+<td>[TODO: File Server]</td>
+<td>Microsoft 365</td>
+<td>Microsoft</td>
+<td>Documents, Emails</td>
+<td>Confidential</td>
+<td>TLS 1.3, At-Rest AES-256</td>
+<td>EU</td>
+</tr>
+<tr>
+<td>DF-EXT-002</td>
+<td>[TODO: App Server]</td>
+<td>AWS S3</td>
+<td>Amazon</td>
+<td>Backup Data</td>
+<td>Confidential</td>
+<td>TLS 1.3, SSE-S3</td>
+<td>EU (Frankfurt)</td>
+</tr>
+<tr>
+<td>DF-EXT-003</td>
+<td>[TODO: Monitoring]</td>
+<td>Azure Monitor</td>
+<td>Microsoft</td>
+<td>Logs, Metrics</td>
+<td>Internal</td>
+<td>TLS 1.3</td>
+<td>EU</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO: System]</td>
+<td>[TODO: Service]</td>
+<td>[TODO: Provider]</td>
+<td>[TODO: Data Type]</td>
+<td>[TODO: Classification]</td>
+<td>[TODO: Encryption]</td>
+<td>[TODO: Location]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Security Measures:</strong>
+- Cloud Security Posture Management (CSPM)
+- Identity and Access Management (IAM) with least privilege
+- Encryption in transit and at rest
+- Regular security assessments of cloud providers
+- Data residency compliance (GDPR)</p>
+<hr />
+<h3 id="partner-interfaces">Partner Interfaces</h3>
+<table>
+<thead>
+<tr>
+<th>Data Flow-ID</th>
+<th>Internal System</th>
+<th>Partner</th>
+<th>Interface Type</th>
+<th>Data Type</th>
+<th>Classification</th>
+<th>Encryption</th>
+<th>Contract</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DF-PART-001</td>
+<td>[TODO: ERP]</td>
+<td>[TODO: Supplier A]</td>
+<td>REST API</td>
+<td>Order Data</td>
+<td>Confidential</td>
+<td>TLS 1.3, API Key</td>
+<td>[TODO: Contract No.]</td>
+</tr>
+<tr>
+<td>DF-PART-002</td>
+<td>[TODO: CRM]</td>
+<td>[TODO: Partner B]</td>
+<td>SFTP</td>
+<td>Customer Data</td>
+<td>Strictly Confidential</td>
+<td>SSH, PGP</td>
+<td>[TODO: Contract No.]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO: System]</td>
+<td>[TODO: Partner]</td>
+<td>[TODO: Type]</td>
+<td>[TODO: Data Type]</td>
+<td>[TODO: Classification]</td>
+<td>[TODO: Encryption]</td>
+<td>[TODO: Contract]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Security Measures:</strong>
+- Supplier security assessments before contract signing
+- Data Processing Agreements (DPA) according to GDPR Art. 28
+- Mutual TLS (mTLS) for API communication
+- API rate limiting and monitoring
+- Regular security audits</p>
+<hr />
+<h3 id="customer-interfaces">Customer Interfaces</h3>
+<table>
+<thead>
+<tr>
+<th>Data Flow-ID</th>
+<th>Internal System</th>
+<th>Interface</th>
+<th>Protocol</th>
+<th>Data Type</th>
+<th>Classification</th>
+<th>Encryption</th>
+<th>Authentication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DF-CUST-001</td>
+<td>[TODO: Web App]</td>
+<td>Customer Portal</td>
+<td>HTTPS</td>
+<td>Customer Data</td>
+<td>Strictly Confidential</td>
+<td>TLS 1.3</td>
+<td>OAuth 2.0 + MFA</td>
+</tr>
+<tr>
+<td>DF-CUST-002</td>
+<td>[TODO: API Gateway]</td>
+<td>Mobile App</td>
+<td>HTTPS</td>
+<td>Transaction Data</td>
+<td>Confidential</td>
+<td>TLS 1.3</td>
+<td>JWT + Biometrics</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO: System]</td>
+<td>[TODO: Interface]</td>
+<td>[TODO: Protocol]</td>
+<td>[TODO: Data Type]</td>
+<td>[TODO: Classification]</td>
+<td>[TODO: Encryption]</td>
+<td>[TODO: Auth]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Security Measures:</strong>
+- Web Application Firewall (WAF)
+- DDoS Protection
+- Rate limiting and throttling
+- Input validation and output encoding
+- Security headers (HSTS, CSP, etc.)</p>
+<hr />
+<h2 id="cross-border-data-flows_1">Cross-Border Data Flows</h2>
+<h3 id="eu-third-country-transfers">EU-Third Country Transfers</h3>
+<table>
+<thead>
+<tr>
+<th>Data Flow-ID</th>
+<th>Source (EU)</th>
+<th>Destination (Third Country)</th>
+<th>Country</th>
+<th>Data Type</th>
+<th>Legal Basis</th>
+<th>Protection Measures</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DF-CROSS-001</td>
+<td>{{ netbox.site.name }}</td>
+<td>[TODO: US Data Center]</td>
+<td>USA</td>
+<td>Cloud Data</td>
+<td>Standard Contractual Clauses (SCC)</td>
+<td>Encryption, Access Controls</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO: Source]</td>
+<td>[TODO: Destination]</td>
+<td>[TODO: Country]</td>
+<td>[TODO: Data Type]</td>
+<td>[TODO: Legal Basis]</td>
+<td>[TODO: Measures]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>GDPR Compliance:</strong>
+- Art. 44-50 GDPR: Data transfer to third countries
+- Standard Contractual Clauses (SCC) according to Art. 46 para. 2 lit. c GDPR
+- Transfer Impact Assessment (TIA) conducted
+- Additional protection measures implemented</p>
+<hr />
+<h2 id="interface-documentation">Interface Documentation</h2>
+<h3 id="api-interfaces">API Interfaces</h3>
+<table>
+<thead>
+<tr>
+<th>API-ID</th>
+<th>Name</th>
+<th>Type</th>
+<th>Version</th>
+<th>Authentication</th>
+<th>Authorization</th>
+<th>Rate Limit</th>
+<th>Documentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>API-001</td>
+<td>[TODO: Customer API]</td>
+<td>REST</td>
+<td>v2.0</td>
+<td>OAuth 2.0</td>
+<td>RBAC</td>
+<td>1000 req/min</td>
+<td>[TODO: URL]</td>
+</tr>
+<tr>
+<td>API-002</td>
+<td>[TODO: Partner API]</td>
+<td>REST</td>
+<td>v1.5</td>
+<td>API Key + mTLS</td>
+<td>API Key Scopes</td>
+<td>500 req/min</td>
+<td>[TODO: URL]</td>
+</tr>
+<tr>
+<td>API-003</td>
+<td>[TODO: Internal API]</td>
+<td>GraphQL</td>
+<td>v1.0</td>
+<td>JWT</td>
+<td>ABAC</td>
+<td>Unlimited</td>
+<td>[TODO: URL]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO: Name]</td>
+<td>[TODO: Type]</td>
+<td>[TODO: Version]</td>
+<td>[TODO: Auth]</td>
+<td>[TODO: Authz]</td>
+<td>[TODO: Limit]</td>
+<td>[TODO: Docs]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Security Requirements:</strong>
+- API gateway with authentication and authorization
+- Input validation and schema validation
+- Output filtering (no sensitive data in error messages)
+- Logging and monitoring of all API access
+- Versioning and deprecation policy</p>
+<hr />
+<h3 id="file-transfer-interfaces">File Transfer Interfaces</h3>
+<table>
+<thead>
+<tr>
+<th>Interface-ID</th>
+<th>Type</th>
+<th>Protocol</th>
+<th>Source</th>
+<th>Destination</th>
+<th>Data Type</th>
+<th>Encryption</th>
+<th>Authentication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FT-001</td>
+<td>SFTP</td>
+<td>SSH</td>
+<td>[TODO: System]</td>
+<td>[TODO: Partner]</td>
+<td>Files</td>
+<td>SSH, PGP</td>
+<td>SSH Key</td>
+</tr>
+<tr>
+<td>FT-002</td>
+<td>FTPS</td>
+<td>FTP over TLS</td>
+<td>[TODO: System]</td>
+<td>[TODO: System]</td>
+<td>Backup Files</td>
+<td>TLS 1.3</td>
+<td>Certificate</td>
+</tr>
+<tr>
+<td>FT-003</td>
+<td>MFT</td>
+<td>Managed File Transfer</td>
+<td>[TODO: System]</td>
+<td>[TODO: Partner]</td>
+<td>Business Data</td>
+<td>AES-256</td>
+<td>OAuth 2.0</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO: Type]</td>
+<td>[TODO: Protocol]</td>
+<td>[TODO: Source]</td>
+<td>[TODO: Destination]</td>
+<td>[TODO: Data Type]</td>
+<td>[TODO: Encryption]</td>
+<td>[TODO: Auth]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="messaging-interfaces">Messaging Interfaces</h3>
+<table>
+<thead>
+<tr>
+<th>Interface-ID</th>
+<th>Type</th>
+<th>Protocol</th>
+<th>Source</th>
+<th>Destination</th>
+<th>Message Type</th>
+<th>Encryption</th>
+<th>Persistence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MSG-001</td>
+<td>Message Queue</td>
+<td>AMQP</td>
+<td>[TODO: Producer]</td>
+<td>[TODO: Consumer]</td>
+<td>Events</td>
+<td>TLS 1.3</td>
+<td>7 Days</td>
+</tr>
+<tr>
+<td>MSG-002</td>
+<td>Event Stream</td>
+<td>Kafka</td>
+<td>[TODO: Producer]</td>
+<td>[TODO: Consumer]</td>
+<td>Logs</td>
+<td>TLS 1.3</td>
+<td>30 Days</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO: Type]</td>
+<td>[TODO: Protocol]</td>
+<td>[TODO: Source]</td>
+<td>[TODO: Destination]</td>
+<td>[TODO: Message Type]</td>
+<td>[TODO: Encryption]</td>
+<td>[TODO: Persistence]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="email-communication">Email Communication</h3>
+<table>
+<thead>
+<tr>
+<th>Communication Type</th>
+<th>Sender</th>
+<th>Recipient</th>
+<th>Data Type</th>
+<th>Classification</th>
+<th>Encryption</th>
+<th>Archiving</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Business Email</td>
+<td>{{ meta.organization.domain }}</td>
+<td>External</td>
+<td>Business Correspondence</td>
+<td>Confidential</td>
+<td>TLS (Opportunistic)</td>
+<td>7 Years</td>
+</tr>
+<tr>
+<td>Confidential Email</td>
+<td>{{ meta.organization.domain }}</td>
+<td>External</td>
+<td>Contract Documents</td>
+<td>Strictly Confidential</td>
+<td>S/MIME or PGP</td>
+<td>10 Years</td>
+</tr>
+<tr>
+<td>Internal Email</td>
+<td>{{ meta.organization.domain }}</td>
+<td>{{ meta.organization.domain }}</td>
+<td>Internal Communication</td>
+<td>Internal</td>
+<td>TLS (Enforced)</td>
+<td>3 Years</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Security Measures:</strong>
+- SPF, DKIM, DMARC for email authentication
+- Email gateway with anti-spam and anti-malware
+- Data Loss Prevention (DLP) for outgoing emails
+- Email encryption for confidential content
+- Email archiving according to legal requirements</p>
+<hr />
+<h2 id="network-architecture">Network Architecture</h2>
+<h3 id="network-zones">Network Zones</h3>
+<table>
+<thead>
+<tr>
+<th>Zone</th>
+<th>Description</th>
+<th>Security Level</th>
+<th>Access Control</th>
+<th>Systems</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DMZ</strong></td>
+<td>Demilitarized zone for publicly accessible services</td>
+<td>High</td>
+<td>Firewall, IDS/IPS</td>
+<td>Web Servers, Mail Gateway</td>
+</tr>
+<tr>
+<td><strong>Internal</strong></td>
+<td>Internal network for business applications</td>
+<td>Medium</td>
+<td>Firewall, NAC</td>
+<td>App Servers, File Servers</td>
+</tr>
+<tr>
+<td><strong>Management</strong></td>
+<td>Management network for administration</td>
+<td>Very High</td>
+<td>Firewall, MFA, Jump Host</td>
+<td>Management Interfaces</td>
+</tr>
+<tr>
+<td><strong>Production</strong></td>
+<td>Production network for critical systems</td>
+<td>Very High</td>
+<td>Firewall, Segmentation</td>
+<td>Database Servers, Core Systems</td>
+</tr>
+<tr>
+<td><strong>Development</strong></td>
+<td>Development and test network</td>
+<td>Low</td>
+<td>Firewall</td>
+<td>Dev/Test Systems</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="firewall-rules-example">Firewall Rules (Example)</h3>
+<table>
+<thead>
+<tr>
+<th>Rule-ID</th>
+<th>Source Zone</th>
+<th>Destination Zone</th>
+<th>Protocol</th>
+<th>Port</th>
+<th>Action</th>
+<th>Logging</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FW-001</td>
+<td>Internet</td>
+<td>DMZ</td>
+<td>HTTPS</td>
+<td>443</td>
+<td>Allow</td>
+<td>Yes</td>
+<td>Web traffic to web servers</td>
+</tr>
+<tr>
+<td>FW-002</td>
+<td>DMZ</td>
+<td>Internal</td>
+<td>HTTPS</td>
+<td>443</td>
+<td>Allow</td>
+<td>Yes</td>
+<td>Web server to app server</td>
+</tr>
+<tr>
+<td>FW-003</td>
+<td>Internal</td>
+<td>Production</td>
+<td>PostgreSQL</td>
+<td>5432</td>
+<td>Allow</td>
+<td>Yes</td>
+<td>App server to database</td>
+</tr>
+<tr>
+<td>FW-004</td>
+<td>Management</td>
+<td>All</td>
+<td>SSH</td>
+<td>22</td>
+<td>Allow</td>
+<td>Yes</td>
+<td>Admin access</td>
+</tr>
+<tr>
+<td>FW-999</td>
+<td>Any</td>
+<td>Any</td>
+<td>Any</td>
+<td>Any</td>
+<td>Deny</td>
+<td>Yes</td>
+<td>Default Deny</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> Complete firewall rules in separate documentation.</p>
+<hr />
+<h2 id="data-flow-diagrams">Data Flow Diagrams</h2>
+<h3 id="high-level-architecture">High-Level Architecture</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">[Internet]</span>
+<span class="w">    </span><span class="na">|</span>
+<span class="w">    </span><span class="na">| HTTPS (443)</span>
+<span class="w">    </span><span class="na">v</span>
+<span class="k">[Firewall/WAF]</span>
+<span class="w">    </span><span class="na">|</span>
+<span class="w">    </span><span class="na">| HTTPS (443)</span>
+<span class="w">    </span><span class="na">v</span>
+<span class="k">[DMZ - Web Server]</span>
+<span class="w">    </span><span class="na">|</span>
+<span class="w">    </span><span class="na">| HTTPS (443)</span>
+<span class="w">    </span><span class="na">v</span>
+<span class="k">[Internal - App Server]</span>
+<span class="w">    </span><span class="na">|</span>
+<span class="w">    </span><span class="na">| PostgreSQL (5432)</span>
+<span class="w">    </span><span class="na">v</span>
+<span class="k">[Production - Database]</span>
+</code></pre></div>
+
+<p><strong>Note:</strong> Detailed network diagrams in separate files (e.g., Visio, Draw.io).</p>
+<hr />
+<h3 id="data-flow-for-critical-business-processes">Data Flow for Critical Business Processes</h3>
+<h4 id="example-customer-order">Example: Customer Order</h4>
+<div class="codehilite"><pre><span></span><code><span class="o">[</span><span class="n">Customer</span><span class="o">]</span><span class="w"> </span>
+<span class="w">  </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">HTTPS</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">Web Portal (DMZ)</span><span class="o">]</span>
+<span class="w">  </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">HTTPS</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">Order Service (Internal)</span><span class="o">]</span>
+<span class="w">  </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">PostgreSQL</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">Order DB (Production)</span><span class="o">]</span>
+<span class="w">  </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">HTTPS</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">Payment Gateway (External)</span><span class="o">]</span>
+<span class="w">  </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">HTTPS</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">ERP System (Internal)</span><span class="o">]</span>
+<span class="w">  </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">HTTPS</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="o">[</span><span class="n">Warehouse System (Internal)</span><span class="o">]</span>
+</code></pre></div>
+
+<p><strong>Security Measures:</strong>
+- End-to-end encryption
+- Authentication at each level
+- Input validation
+- Audit logging of all transactions</p>
+<hr />
+<h2 id="risk-assessment-data-flows">Risk Assessment Data Flows</h2>
+<h3 id="risk-matrix">Risk Matrix</h3>
+<table>
+<thead>
+<tr>
+<th>Data Flow-ID</th>
+<th>Threat</th>
+<th>Likelihood</th>
+<th>Impact</th>
+<th>Risk</th>
+<th>Measures</th>
+<th>Residual Risk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DF-EXT-001</td>
+<td>Data loss during cloud transfer</td>
+<td>Low</td>
+<td>High</td>
+<td>Medium</td>
+<td>Encryption, DLP</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>DF-PART-001</td>
+<td>Unauthorized access by partner</td>
+<td>Medium</td>
+<td>High</td>
+<td>High</td>
+<td>mTLS, API Gateway, Monitoring</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>DF-CROSS-001</td>
+<td>Third country access to EU data</td>
+<td>Medium</td>
+<td>Very High</td>
+<td>High</td>
+<td>SCC, Encryption, Access Controls</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO: Threat]</td>
+<td>[TODO: Likelihood]</td>
+<td>[TODO: Impact]</td>
+<td>[TODO: Risk]</td>
+<td>[TODO: Measures]</td>
+<td>[TODO: Residual Risk]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="monitoring-and-logging">Monitoring and Logging</h2>
+<h3 id="data-flow-monitoring">Data Flow Monitoring</h3>
+<table>
+<thead>
+<tr>
+<th>Monitoring Type</th>
+<th>Tool</th>
+<th>Metrics</th>
+<th>Alerting</th>
+<th>Retention</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Network Traffic</td>
+<td>[TODO: NetFlow/sFlow]</td>
+<td>Bandwidth, Connections, Anomalies</td>
+<td>Yes</td>
+<td>90 Days</td>
+</tr>
+<tr>
+<td>API Traffic</td>
+<td>[TODO: API Gateway]</td>
+<td>Request Rate, Latency, Errors</td>
+<td>Yes</td>
+<td>90 Days</td>
+</tr>
+<tr>
+<td>Firewall Logs</td>
+<td>[TODO: SIEM]</td>
+<td>Blocked Connections, Rule Hits</td>
+<td>Yes</td>
+<td>1 Year</td>
+</tr>
+<tr>
+<td>Application Logs</td>
+<td>[TODO: Log Management]</td>
+<td>Transactions, Errors, Security Events</td>
+<td>Yes</td>
+<td>1 Year</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="security-events">Security Events</h3>
+<p>The following security events are monitored for data flows:</p>
+<ul>
+<li>Unusual data transfer volumes</li>
+<li>Connections to unknown destinations</li>
+<li>Failed authentication attempts</li>
+<li>Protocol violations</li>
+<li>Encryption errors</li>
+<li>DLP violations</li>
+</ul>
+<hr />
+<h2 id="compliance-and-data-protection">Compliance and Data Protection</h2>
+<h3 id="gdpr-requirements">GDPR Requirements</h3>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Article</th>
+<th>Implementation</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lawfulness of processing</td>
+<td>Art. 6</td>
+<td>Legal basis documented</td>
+<td>Processing register</td>
+</tr>
+<tr>
+<td>Data minimization</td>
+<td>Art. 5 para. 1 lit. c</td>
+<td>Only necessary data transferred</td>
+<td>Data flow documentation</td>
+</tr>
+<tr>
+<td>Integrity and confidentiality</td>
+<td>Art. 5 para. 1 lit. f</td>
+<td>Encryption, access control</td>
+<td>Security measures</td>
+</tr>
+<tr>
+<td>Third country transfer</td>
+<td>Art. 44-50</td>
+<td>SCC, TIA</td>
+<td>Transfer documentation</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="processing-register-reference">Processing Register Reference</h3>
+<p>All data flows are documented in the processing register according to Art. 30 GDPR.</p>
+<p><strong>Reference:</strong> [TODO: Link to processing register]</p>
+<hr />
+<h2 id="change-management">Change Management</h2>
+<h3 id="change-control">Change Control</h3>
+<p>All changes to data flows and interfaces are subject to the change management process:</p>
+<ol>
+<li><strong>Change Request:</strong> Request with justification and risk assessment</li>
+<li><strong>Security Review:</strong> Assessment by security team</li>
+<li><strong>Approval:</strong> Approval by Change Advisory Board</li>
+<li><strong>Implementation:</strong> Implementation with documentation</li>
+<li><strong>Verification:</strong> Testing and validation</li>
+<li><strong>Documentation Update:</strong> Update of this document</li>
+</ol>
+<p><strong>Reference:</strong> 0360_Policy_Change_and_Release_Management.md</p>
+<hr />
+<h2 id="references">References</h2>
+<ul>
+<li>Policy: 0660_Policy_Information_Transfer_and_Communication.md</li>
+<li>Guideline: 0670_Guideline_Email_Sharing_and_Collaboration_Tools.md</li>
+<li>Policy: 0460_Policy_Supplier_and_Cloud_Security.md</li>
+<li>Guideline: 0470_Guideline_Third_Party_Risk_Assessment_and_Cloud_Controls.md</li>
+<li>Policy: 0600_Policy_Network_Security.md</li>
+<li>Guideline: 0610_Guideline_Segmentation_Firewalling_and_Network_Access_Control.md</li>
+<li>Appendix: 0720_Appendix_Asset_and_System_Inventory_Template.md</li>
+</ul>
+<hr />
+<p><strong>Document Owner:</strong> Thomas Weber<br />
+<strong>Approved By:</strong> {{ meta.management.name }}<br />
+<strong>Next Review:</strong> Semi-annually</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0720_Appendix_Asset_and_System_Inventory_Template.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0740_Appendix_Terms_and_Abbreviations.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

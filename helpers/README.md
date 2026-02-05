@@ -2,6 +2,61 @@
 
 This directory contains utility scripts for working with the Handbook Generator.
 
+## Batch Generation Scripts
+
+### generate_all_handbooks.sh
+**NEW** - Batch generation script for all handbooks in HTML format.
+
+Automatically generates all 4 handbook types (BCM, ISMS, BSI Grundschutz, IT-Operation) in both German and English languages.
+
+**Usage:**
+```bash
+bash helpers/generate_all_handbooks.sh
+```
+
+**Output:**
+- 8 complete HTML handbooks (4 types × 2 languages)
+- 388 HTML files total
+- Organized in test-output/{language}/{type}/html/ directories
+
+**Features:**
+- Progress tracking
+- Error handling
+- Automatic directory creation
+- Summary report
+
+### generate_pdfs_pandoc.sh
+**NEW** - Batch PDF generation using Pandoc + XeLaTeX.
+
+Generates PDF versions of all handbooks with professional formatting, table of contents, and section numbering.
+
+**Usage:**
+```bash
+bash helpers/generate_pdfs_pandoc.sh
+```
+
+**Output:**
+- 8 PDF files (4 types × 2 languages)
+- Total size: ~3.4 MB
+- Organized in test-output/{language}/{type}/pdf/ directories
+
+**Features:**
+- Automatic markdown generation
+- Combines separate markdown files
+- Adds table of contents
+- Section numbering
+- Professional formatting
+- Unicode support
+
+**Requirements:**
+- Pandoc
+- XeLaTeX (texlive-xetex package)
+
+**Installation:**
+```bash
+sudo apt-get install pandoc texlive-xetex
+```
+
 ## PDF Generation Scripts
 
 ### generate_handbook_pdfs.py
@@ -42,6 +97,10 @@ Simplified shell script for PDF generation with basic options.
 ```bash
 bash helpers/generate_pdfs_simple.sh
 ```
+
+## Legacy PDF Generation Scripts
+
+The following scripts are alternative PDF generation methods. For production use, we recommend **generate_pdfs_pandoc.sh** which provides the best results.
 
 ## Template Utilities
 

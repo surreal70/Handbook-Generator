@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0330 - Guideline: Logging, SIEM and Audit Trails</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0330</div>
+            <h1>Guideline: Logging, SIEM and Audit Trails</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0320_Policy_Logging_and_Monitoring.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0340_Policy_Vulnerability_and_Patch_Management.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="guideline-logging-siem-and-audit-trails">Guideline: Logging, SIEM and Audit Trails</h1>
+<p><strong>Document ID:</strong> 0330<br />
+<strong>Document Type:</strong> Guideline (detailed)<br />
+<strong>Related Policy:</strong> 0320_Policy_Logging_and_Monitoring.md<br />
+<strong>Standard Reference:</strong> ISO/IEC 27001:2022 Annex A.8.15, A.8.16<br />
+<strong>Owner:</strong> {{ meta.it_operations.manager }}<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Approved<br />
+<strong>Classification:</strong> Confidential<br />
+<strong>Last Updated:</strong> {{ meta.document.date }}</p>
+<hr />
+<h2 id="1-purpose-and-scope">1. Purpose and Scope</h2>
+<p>This guideline implements the <code>0320_Policy_Logging_and_Monitoring.md</code> and defines:
+- Logging requirements per system type
+- SIEM integration and use cases
+- Audit trail requirements and retention</p>
+<p><strong>Scope:</strong> All IT systems at <strong>AdminSend GmbH</strong></p>
+<h2 id="2-logging-requirements">2. Logging Requirements</h2>
+<h3 id="21-events-to-be-logged">2.1 Events to be Logged</h3>
+<p><strong>Authentication:</strong>
+- Successful and failed logins
+- Logout events
+- MFA challenges and results
+- Password changes and resets
+- Account lockouts and unlocks</p>
+<p><strong>Authorization:</strong>
+- Access to confidential data
+- Privileged operations (sudo, admin rights)
+- Access denials
+- Permission changes</p>
+<p><strong>System Events:</strong>
+- System start and shutdown
+- Service starts and stops
+- Configuration changes
+- Software installations and updates
+- Errors and exceptions</p>
+<p><strong>Data Events:</strong>
+- File access (read, write, delete)
+- Database queries (for sensitive data)
+- Data exports and downloads
+- Backup operations</p>
+<p><strong>Network Events:</strong>
+- Firewall blocks and allows
+- VPN connections
+- Network scans
+- Traffic anomalies</p>
+<h3 id="22-log-format-and-content">2.2 Log Format and Content</h3>
+<p><strong>Mandatory Fields:</strong>
+- Timestamp (UTC, ISO 8601)
+- Event type and severity
+- Source (system, application, IP)
+- User/account
+- Action/operation
+- Result (success/failure)
+- Additional context information</p>
+<p><strong>Example (JSON):</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-02-02T10:15:30Z&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;event_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;authentication&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;severity&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;info&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;source_ip&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;192.168.1.100&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;jdoe&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;action&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;login&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;result&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;mfa_method&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;authenticator_app&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="23-logging-levels">2.3 Logging Levels</h3>
+<table>
+<thead>
+<tr>
+<th>System Type</th>
+<th>Logging Level</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Production systems</td>
+<td>INFO</td>
+<td>Balance between detail and performance</td>
+</tr>
+<tr>
+<td>Development systems</td>
+<td>DEBUG</td>
+<td>Troubleshooting</td>
+</tr>
+<tr>
+<td>Security systems (firewall, IDS)</td>
+<td>VERBOSE</td>
+<td>Maximum visibility</td>
+</tr>
+<tr>
+<td>Privileged systems</td>
+<td>VERBOSE</td>
+<td>Compliance and forensics</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-siem-integration">3. SIEM Integration</h2>
+<h3 id="31-siem-system">3.1 SIEM System</h3>
+<p><strong>Platform:</strong> {{ meta.security.siem_solution }} (e.g., Splunk, Microsoft Sentinel, Elastic SIEM)</p>
+<p><strong>Architecture:</strong>
+- Log collection via agents or syslog
+- Central log aggregation
+- Normalization and enrichment
+- Correlation and alerting
+- Long-term archiving</p>
+<h3 id="32-log-sources">3.2 Log Sources</h3>
+<p><strong>Priority 1 (Critical):</strong>
+- Active Directory / Azure AD
+- Firewalls and IDS/IPS
+- VPN gateways
+- Privileged Access Management (PAM)
+- Databases with confidential data</p>
+<p><strong>Priority 2 (High):</strong>
+- Web servers and application servers
+- Email gateways
+- Cloud services (Azure, AWS, Google Cloud)
+- Endpoint Detection and Response (EDR)</p>
+<p><strong>Priority 3 (Medium):</strong>
+- Workstations and laptops
+- Network switches
+- Printers and IoT devices</p>
+<h3 id="33-siem-use-cases">3.3 SIEM Use Cases</h3>
+<p><strong>Authentication:</strong>
+- Brute-force attacks (&gt; 10 failed logins in 5 minutes)
+- Impossible travel (logins from geographically impossible locations)
+- Privileged account usage outside business hours</p>
+<p><strong>Malware and Intrusion:</strong>
+- Malware detections by EDR
+- IDS/IPS alerts
+- Command &amp; Control (C2) communication
+- Lateral movement (unusual internal connections)</p>
+<p><strong>Data Exfiltration:</strong>
+- Large data volume uploads to external destinations
+- Access to many confidential files in short time
+- Unusual database queries</p>
+<p><strong>Compliance:</strong>
+- Access to PII (Personally Identifiable Information)
+- Changes to security configurations
+- Privileged operations without approval</p>
+<h3 id="34-alerting-and-response">3.4 Alerting and Response</h3>
+<p><strong>Severity Levels:</strong>
+- <strong>Critical:</strong> Immediate escalation to on-call security (24/7)
+- <strong>High:</strong> Escalation within 1 hour
+- <strong>Medium:</strong> Processing within 4 hours
+- <strong>Low:</strong> Processing within 1 business day</p>
+<p><strong>Automated Response:</strong>
+- Account lockout on brute-force
+- IP blocking on malware C2
+- Endpoint quarantine on malware detection</p>
+<h2 id="4-audit-trails">4. Audit Trails</h2>
+<h3 id="41-requirements">4.1 Requirements</h3>
+<p><strong>Immutability:</strong>
+- Logs must not be modified retroactively
+- Cryptographic signatures or write-once storage
+- Access to logs only for authorized personnel</p>
+<p><strong>Completeness:</strong>
+- Continuous recording of all relevant events
+- Monitoring of log integrity
+- Alerts on log failures</p>
+<p><strong>Traceability:</strong>
+- Who did what when?
+- Reconstruction of event chains
+- Forensic analysis possible</p>
+<h3 id="42-privileged-access">4.2 Privileged Access</h3>
+<p><strong>Additional Requirements:</strong>
+- Session recording for privileged access
+- Four-eyes principle for critical operations
+- Approval workflow before access
+- Detailed logging of all actions</p>
+<p><strong>PAM Integration:</strong>
+- Privileged Access Management System: {{ meta.security.pam_solution }}
+- Just-in-Time (JIT) access
+- Automatic password rotation
+- Session monitoring and recording</p>
+<h3 id="43-compliance-audit-trails">4.3 Compliance Audit Trails</h3>
+<p><strong>Regulatory Requirements:</strong>
+- GDPR: Access to personal data
+- SOX: Financially relevant transactions
+- HIPAA: Access to health data (if applicable)</p>
+<p><strong>Documentation:</strong>
+- Who accessed which data?
+- Purpose of access
+- Approval (if required)
+- Time period</p>
+<h2 id="5-log-retention">5. Log Retention</h2>
+<h3 id="51-retention-periods">5.1 Retention Periods</h3>
+<table>
+<thead>
+<tr>
+<th>Log Type</th>
+<th>Retention (Online)</th>
+<th>Retention (Archive)</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Security logs</td>
+<td>90 days</td>
+<td>{{ meta.retention.log_years }} years</td>
+<td>Forensics, compliance</td>
+</tr>
+<tr>
+<td>Authentication logs</td>
+<td>90 days</td>
+<td>{{ meta.retention.log_years }} years</td>
+<td>Audit, compliance</td>
+</tr>
+<tr>
+<td>System logs</td>
+<td>30 days</td>
+<td>1 year</td>
+<td>Troubleshooting</td>
+</tr>
+<tr>
+<td>Application logs</td>
+<td>30 days</td>
+<td>1 year</td>
+<td>Debugging</td>
+</tr>
+<tr>
+<td>Audit trails (compliance)</td>
+<td>180 days</td>
+<td>{{ meta.retention.audit_years }} years</td>
+<td>Regulatory</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-archiving">5.2 Archiving</h3>
+<p><strong>Process:</strong>
+1. Logs older than retention period (online) are archived
+2. Compression and encryption
+3. Transfer to archive storage (e.g., Azure Blob Archive, AWS Glacier)
+4. Verification of archiving
+5. Deletion from online SIEM</p>
+<p><strong>Archive Access:</strong>
+- Only with justified need (forensics, audit)
+- Approval by CISO
+- Restoration to SIEM for analysis</p>
+<h3 id="53-secure-deletion">5.3 Secure Deletion</h3>
+<p><strong>After Retention Expiry:</strong>
+- Automatic deletion from archive
+- Cryptographic deletion (destroy keys)
+- Documentation of deletion</p>
+<h2 id="6-log-security">6. Log Security</h2>
+<h3 id="61-access-control">6.1 Access Control</h3>
+<p><strong>Permissions:</strong>
+- <strong>Security Team:</strong> Full access to all logs
+- <strong>IT Operations:</strong> Access to system and application logs
+- <strong>Auditors:</strong> Read-only access to audit trails
+- <strong>Developers:</strong> Access only to dev logs</p>
+<p><strong>Authentication:</strong>
+- MFA for SIEM access
+- Privileged accounts for admin operations
+- Audit logging for SIEM access</p>
+<h3 id="62-encryption">6.2 Encryption</h3>
+<p><strong>In Transit:</strong>
+- TLS 1.2+ for log transmission
+- Mutual TLS for critical systems</p>
+<p><strong>At Rest:</strong>
+- Encryption of SIEM storage (AES-256)
+- Encryption of archive logs</p>
+<h3 id="63-integrity-protection">6.3 Integrity Protection</h3>
+<p><strong>Methods:</strong>
+- Cryptographic signatures (HMAC)
+- Write-Once-Read-Many (WORM) storage
+- Blockchain-based log integrity (optional)</p>
+<p><strong>Monitoring:</strong>
+- Regular integrity checks
+- Alerts on tampering attempts</p>
+<h2 id="7-monitoring-and-alerting">7. Monitoring and Alerting</h2>
+<h3 id="71-log-health-monitoring">7.1 Log Health Monitoring</h3>
+<p><strong>Monitored Metrics:</strong>
+- Log ingestion rate (logs per second)
+- Log latency (time until log in SIEM)
+- Missing log sources
+- SIEM storage capacity</p>
+<p><strong>Alerts:</strong>
+- Log source not sending logs (&gt; 15 minutes)
+- Unusually high log rate (possible attack or error)
+- SIEM storage &gt; 80% full</p>
+<h3 id="72-security-monitoring">7.2 Security Monitoring</h3>
+<p><strong>24/7 Security Operations Center (SOC):</strong>
+- Monitoring of all SIEM alerts
+- Triage and incident response
+- Escalation for critical incidents</p>
+<p><strong>Automation:</strong>
+- SOAR (Security Orchestration, Automation and Response)
+- Automated playbooks for common incidents
+- Integration with ticketing system</p>
+<h2 id="8-compliance-and-audit">8. Compliance and Audit</h2>
+<h3 id="81-key-performance-indicators-kpis">8.1 Key Performance Indicators (KPIs)</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Target Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Log source availability</td>
+<td>&gt; 99%</td>
+</tr>
+<tr>
+<td>SIEM alert response time (critical)</td>
+<td>&lt; 15 minutes</td>
+</tr>
+<tr>
+<td>False positive rate</td>
+<td>&lt; 10%</td>
+</tr>
+<tr>
+<td>Log retention compliance</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="82-audit-evidence">8.2 Audit Evidence</h3>
+<ul>
+<li>SIEM configuration and use cases</li>
+<li>Log retention reports</li>
+<li>Incident response documentation</li>
+<li>SIEM access logs</li>
+</ul>
+<h2 id="9-references">9. References</h2>
+<h3 id="internal-documents">Internal Documents</h3>
+<ul>
+<li><code>0320_Policy_Logging_and_Monitoring.md</code></li>
+<li><code>0400_Policy_Incident_Management.md</code></li>
+</ul>
+<h3 id="external-standards">External Standards</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.8.15</strong> - Logging</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.8.16</strong> - Monitoring activities</li>
+<li><strong>NIST SP 800-92</strong> - Guide to Computer Security Log Management</li>
+</ul>
+<hr />
+<p><strong>Approved by:</strong> Thomas Weber, CISO<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0320_Policy_Logging_and_Monitoring.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0340_Policy_Vulnerability_and_Patch_Management.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

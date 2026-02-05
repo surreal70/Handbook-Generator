@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0320 - Policy: Logging and Monitoring</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0320</div>
+            <h1>Policy: Logging and Monitoring</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0310_Guideline_Asset_Inventory_Tagging_and_Disposal.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0330_Guideline_Logging_SIEM_and_Audit_Trails.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="policy-logging-and-monitoring">Policy: Logging and Monitoring</h1>
+<p><strong>Document ID:</strong> 0320<br />
+<strong>Document Type:</strong> Policy (abstract)<br />
+<strong>Standard Reference:</strong> ISO/IEC 27001:2022 Annex A.8.15, A.8.16 (incl. Amendment 1:2024)<br />
+<strong>Owner:</strong> Thomas Weber<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Approved<br />
+<strong>Classification:</strong> Internal<br />
+<strong>Last Updated:</strong> {{ meta.document.date }}<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This policy defines the principles for logging, monitoring, and security event management at <strong>AdminSend GmbH</strong>. It ensures that security-relevant events are captured, monitored, and analyzed to detect, investigate, and respond to security incidents.</p>
+<h2 id="2-scope">2. Scope</h2>
+<p>This policy applies to:</p>
+<ul>
+<li><strong>Organizational Units:</strong> All departments and locations of AdminSend GmbH</li>
+<li><strong>Systems:</strong> All IT systems, applications, network components, security systems</li>
+<li><strong>Log Sources:</strong> Servers, workstations, network devices, firewalls, IDS/IPS, applications, databases</li>
+<li><strong>Monitoring Areas:</strong> Security, performance, availability, compliance</li>
+<li><strong>Locations:</strong> {{ netbox.site.name }} and all other operational sites</li>
+</ul>
+<p><strong>Exceptions:</strong> Exceptions are only permitted through the defined exception process (<code>0640_Policy_Ausnahmen_und_Risk_Waivers.md</code>).</p>
+<h2 id="3-principles-policy-statements">3. Principles (Policy Statements)</h2>
+<h3 id="31-comprehensive-logging">3.1 Comprehensive Logging</h3>
+<p>All security-relevant events are logged:
+- Authentication attempts (successful and failed)
+- Access to sensitive data and systems
+- Privileged activities (admin access, configuration changes)
+- Security incidents and anomalies
+- System and application errors</p>
+<h3 id="32-centralized-log-management">3.2 Centralized Log Management</h3>
+<p>Logs are centrally collected, stored, and analyzed in a SIEM (Security Information and Event Management) system. This enables correlated analysis and efficient incident response.</p>
+<h3 id="33-log-integrity-and-protection">3.3 Log Integrity and Protection</h3>
+<p>Logs are protected against unauthorized modification and deletion:
+- Write-protected log storage
+- Integrity checks (hashing, digital signatures)
+- Access control to log systems
+- Encrypted transmission</p>
+<h3 id="34-retention-and-preservation">3.4 Retention and Preservation</h3>
+<p>Logs are retained according to legal, regulatory, and business requirements:
+- Security logs: Minimum 12 months online, 7 years archive
+- Audit logs: Per compliance requirements
+- Performance logs: Per operational requirements</p>
+<h3 id="35-proactive-monitoring-and-alerting">3.5 Proactive Monitoring and Alerting</h3>
+<p>Security-relevant events are proactively monitored and alerts are generated for anomalies:
+- Real-time monitoring of critical systems
+- Automated alerting rules
+- Escalation processes for critical alerts
+- 24/7 SOC (Security Operations Center) for critical systems</p>
+<h3 id="36-siem-use-cases-and-detection-rules">3.6 SIEM Use Cases and Detection Rules</h3>
+<p>SIEM systems are configured with use cases and detection rules to identify known attack patterns and anomalies:
+- Brute-force attacks
+- Privilege escalation
+- Data exfiltration
+- Malware activities
+- Insider threats</p>
+<h3 id="37-log-analysis-and-forensics">3.7 Log Analysis and Forensics</h3>
+<p>Logs are regularly analyzed and used for forensic investigations during security incidents:
+- Regular log reviews
+- Threat hunting
+- Incident investigation
+- Root cause analysis</p>
+<h3 id="38-data-protection-compliance">3.8 Data Protection Compliance</h3>
+<p>Logging and monitoring comply with data protection regulations (GDPR):
+- Minimization of personal data in logs
+- Purpose limitation of log data
+- Access control to personal log data
+- Deletion after retention period expiration</p>
+<h2 id="4-roles-and-responsibilities">4. Roles and Responsibilities</h2>
+<h3 id="raci-matrix-logging-and-monitoring">RACI Matrix: Logging and Monitoring</h3>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>CISO</th>
+<th>SOC/Security Operations</th>
+<th>IT Operations</th>
+<th>System Owner</th>
+<th>DPO</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Policy Creation</td>
+<td>R/A</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>SIEM Operations</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Log Configuration</td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+<td>R</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Monitoring and Alerting</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Incident Investigation</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Log Retention</td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+<td>I</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Compliance Review</td>
+<td>R/A</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+<td>C</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legend:</strong> R = Responsible (Execution), A = Accountable (Accountable), C = Consulted (Consulted), I = Informed (Informed)</p>
+<h3 id="key-roles">Key Roles</h3>
+<ul>
+<li><strong>Policy Owner:</strong> Thomas Weber (CISO)</li>
+<li><strong>SOC Manager:</strong> {{ meta.security.soc_manager }}</li>
+<li><strong>SIEM Administrator:</strong> {{ meta.it.siem_admin }}</li>
+<li><strong>Implementation Responsible:</strong> SOC, IT operations, system owners</li>
+<li><strong>Control/Audit Function:</strong> ISMS, internal audit, DPO</li>
+</ul>
+<h2 id="5-derivations-guidelinesstandardsprocesses">5. Derivations (Guidelines/Standards/Processes)</h2>
+<p>Implementation details are defined in subordinate documents:</p>
+<h3 id="related-guidelines">Related Guidelines</h3>
+<ul>
+<li><strong>0330_Richtlinie_Logging_SIEM_und_Audit_Trails.md</strong> - Detailed implementation guideline</li>
+<li><code>0400_Policy_Incident_Management.md</code> - Incident management policy</li>
+<li><code>0560_Policy_Datenschutz_Schnittstellen.md</code> - Data protection policy</li>
+<li><code>0340_Policy_Vulnerability_und_Patch_Management.md</code> - Vulnerability management policy</li>
+</ul>
+<h3 id="related-standardsbaselines">Related Standards/Baselines</h3>
+<ul>
+<li>Log standards and formats</li>
+<li>SIEM use cases and detection rules</li>
+<li>Retention requirements</li>
+<li>Alerting thresholds</li>
+</ul>
+<h3 id="related-processes">Related Processes</h3>
+<ul>
+<li>Log onboarding process</li>
+<li>Alert triage and escalation</li>
+<li>Incident investigation</li>
+<li>Log review process</li>
+</ul>
+<h2 id="6-compliance-monitoring-and-enforcement">6. Compliance, Monitoring, and Enforcement</h2>
+<h3 id="metrics-and-kpis">Metrics and KPIs</h3>
+<ul>
+<li>Number of log sources in SIEM (target: 100% of critical systems)</li>
+<li>Log completeness and availability (target: 99.9%)</li>
+<li>Average time to alert triage (MTTD - Mean Time To Detect)</li>
+<li>Number of false positives per day</li>
+<li>SIEM use case coverage</li>
+<li>Compliance rate with retention requirements</li>
+</ul>
+<h3 id="evidence-and-proof">Evidence and Proof</h3>
+<ul>
+<li>SIEM configuration and use cases</li>
+<li>Log retention evidence</li>
+<li>Alert statistics and triage reports</li>
+<li>Incident investigation reports</li>
+<li>Audit reports on logging and monitoring</li>
+<li>Data protection impact assessments</li>
+</ul>
+<h3 id="consequences-for-violations">Consequences for Violations</h3>
+<p>Violations of this policy are handled according to applicable HR and compliance processes:
+- <strong>Deactivation of logging:</strong> Immediate remediation, investigation
+- <strong>Unauthorized log manipulation:</strong> Incident response, employment law consequences
+- <strong>Non-compliance with retention:</strong> Remediation, retraining
+- <strong>Repeated violations:</strong> Employment law consequences</p>
+<h2 id="7-exceptions">7. Exceptions</h2>
+<p>Exceptions to this policy are only permitted in justified exceptional cases:</p>
+<ul>
+<li><strong>Exception Process:</strong> See <code>0640_Policy_Ausnahmen_und_Risk_Waivers.md</code></li>
+<li><strong>Approval:</strong> Exceptions must be approved by CISO</li>
+<li><strong>Documentation:</strong> All exceptions are documented in the risk register</li>
+<li><strong>Time Limit:</strong> Exceptions are generally time-limited</li>
+<li><strong>Compensating Controls:</strong> Exceptions require alternative security measures</li>
+</ul>
+<h2 id="8-references">8. References</h2>
+<h3 id="internal-documents">Internal Documents</h3>
+<ul>
+<li><code>0010_ISMS_Informationssicherheitsleitlinie.md</code> - ISMS policy</li>
+<li><code>0330_Richtlinie_Logging_SIEM_und_Audit_Trails.md</code> - Detailed guideline</li>
+<li><code>0400_Policy_Incident_Management.md</code> - Incident management policy</li>
+<li><code>0080_ISMS_Risikoregister_Template.md</code> - Risk register</li>
+</ul>
+<h3 id="external-standards-and-requirements">External Standards and Requirements</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.8.15</strong> - Logging</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.8.16</strong> - Monitoring activities</li>
+<li><strong>ISO/IEC 27002:2022</strong> - Information security controls</li>
+<li><strong>NIST SP 800-92</strong> - Guide to Computer Security Log Management</li>
+<li><strong>GDPR (EU 2016/679)</strong> - General Data Protection Regulation</li>
+<li><strong>BSI IT-Grundschutz</strong> - Module OPS.1.1.5 Logging</li>
+</ul>
+<hr />
+<p><strong>Approved by:</strong><br />
+{{ meta.management.ceo }}, Management<br />
+Date: {{ meta.document.approval_date }}</p>
+<p><strong>Next Review:</strong> {{ meta.document.next_review }} (annually or as needed)</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0310_Guideline_Asset_Inventory_Tagging_and_Disposal.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0330_Guideline_Logging_SIEM_and_Audit_Trails.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

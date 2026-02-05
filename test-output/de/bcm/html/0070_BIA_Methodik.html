@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0070 - Business Impact Analysis (BIA) – Methodik</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0070</div>
+            <h1>Business Impact Analysis (BIA) – Methodik</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0060_Service_und_Prozesskatalog_Kritikalitaet.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0080_BIA_Ergebnisse_und_RTO_RPO.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="business-impact-analysis-bia-methodik">Business Impact Analysis (BIA) – Methodik</h1>
+<p><strong>Dokument-ID:</strong> BCM-0070<br />
+<strong>Organisation:</strong> AdminSend GmbH<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Genehmigt durch:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Entwurf / In Review / Freigegeben<br />
+<strong>Klassifizierung:</strong> internal<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-zweck-und-output">1. Zweck und Output</h2>
+<h3 id="11-ziele-der-bia">1.1 Ziele der BIA</h3>
+<p>Die Business Impact Analysis (BIA) der AdminSend GmbH verfolgt folgende Ziele:</p>
+<ul>
+<li><strong>Identifikation kritischer Geschäftsprozesse:</strong> Ermittlung der geschäftskritischen Prozesse und Services</li>
+<li><strong>Quantifizierung von Auswirkungen:</strong> Bewertung der finanziellen, operativen und reputationsbezogenen Auswirkungen von Ausfällen</li>
+<li><strong>Festlegung von Zielwerten:</strong> Definition von RTO (Recovery Time Objective) und RPO (Recovery Point Objective)</li>
+<li><strong>Priorisierung:</strong> Festlegung der Wiederherstellungspriorisierung</li>
+<li><strong>Ressourcenplanung:</strong> Ermittlung des Ressourcenbedarfs für Business Continuity</li>
+</ul>
+<h3 id="12-erwartete-ergebnisse">1.2 Erwartete Ergebnisse</h3>
+<p>Die BIA liefert folgende Ergebnisse:</p>
+<p><strong>RTO (Recovery Time Objective):</strong>
+- Maximale tolerierbare Ausfallzeit für jeden kritischen Prozess
+- Zeitpunkt, bis zu dem ein Prozess wiederhergestellt sein muss</p>
+<p><strong>RPO (Recovery Point Objective):</strong>
+- Maximaler tolerierbarer Datenverlust
+- Zeitpunkt, bis zu dem Daten wiederhergestellt werden müssen</p>
+<p><strong>MTPD (Maximum Tolerable Period of Disruption):</strong>
+- Maximale Zeitspanne, die ein Prozess ausfallen kann, bevor irreparable Schäden entstehen
+- Auch: MAO (Maximum Acceptable Outage)</p>
+<p><strong>Priorisierung:</strong>
+- Reihenfolge der Wiederherstellung von Prozessen und Systemen
+- Abhängigkeiten zwischen Prozessen</p>
+<p><strong>Ressourcenbedarf:</strong>
+- Personal, Räumlichkeiten, IT-Systeme, Daten, Lieferanten
+- Mindestressourcen für Notbetrieb</p>
+<h2 id="2-vorgehen-und-methodik">2. Vorgehen und Methodik</h2>
+<h3 id="21-bia-prozess">2.1 BIA-Prozess</h3>
+<div class="codehilite"><pre><span></span><code>┌─────────────────┐
+│ 1. Vorbereitung │
+│ - Scope          │
+│ - Stakeholder    │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│ 2. Datenerhebung│
+│ - Workshops      │
+│ - Interviews     │
+│ - Fragebögen     │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│ 3. Analyse      │
+│ - Bewertung      │
+│ - Abhängigkeiten │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│ 4. RTO/RPO      │
+│ - Festlegung     │
+│ - Validierung    │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│ 5. Dokumentation│
+│ - Bericht        │
+│ - Präsentation   │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│ 6. Freigabe     │
+│ - Review         │
+│ - Genehmigung    │
+└─────────────────┘
+</code></pre></div>
+
+<h3 id="22-workshops-und-interviews">2.2 Workshops und Interviews</h3>
+<p><strong>Zielgruppe:</strong>
+- Fachbereichsleiter und Prozessverantwortliche
+- IT-Verantwortliche
+- Schlüsselpersonen mit Spezialwissen</p>
+<p><strong>Format:</strong>
+- <strong>Workshops:</strong> Gruppenformat für übergreifende Themen (2-4 Stunden)
+- <strong>Interviews:</strong> Einzelgespräche für detaillierte Prozessanalyse (1-2 Stunden)
+- <strong>Fragebögen:</strong> Standardisierte Erhebung für weniger kritische Prozesse</p>
+<p><strong>Durchführung:</strong>
+[TODO: Definieren Sie Workshop-/Interview-Plan]</p>
+<p><strong>Beispiel-Zeitplan:</strong>
+| Woche | Aktivität | Teilnehmer | Verantwortlich |
+|-------|-----------|------------|----------------|
+| 1 | Kick-off Workshop | Alle Bereichsleiter | BCM-Manager |
+| 2-3 | Einzelinterviews Fachbereiche | Prozessverantwortliche | BCM-Manager |
+| 4 | IT-Workshop | IT-Team | BCM-Manager + {{ meta.roles.cio.name }} |
+| 5 | Konsolidierung und Analyse | BCM-Team | BCM-Manager |
+| 6 | Ergebnispräsentation | Management | BCM-Manager |</p>
+<h3 id="23-datenquellen">2.3 Datenquellen</h3>
+<p><strong>Primäre Datenquellen:</strong>
+- Workshops und Interviews mit Fachbereichen
+- Bestehende Prozessdokumentation
+- IT-Service-Katalog und CMDB
+- Finanzberichte und Umsatzdaten</p>
+<p><strong>Sekundäre Datenquellen:</strong>
+- Vertragsdokumente und SLAs
+- Compliance-Anforderungen
+- Historische Vorfallsdaten
+- Benchmarks und Best Practices</p>
+<h3 id="24-review-und-validierungsschritte">2.4 Review- und Validierungsschritte</h3>
+<p><strong>Validierung durch Fachbereiche:</strong>
+1. Entwurf der BIA-Ergebnisse wird an Prozessverantwortliche gesendet
+2. Fachbereiche prüfen und kommentieren innerhalb von [TODO: X] Tagen
+3. Feedback wird eingearbeitet</p>
+<p><strong>Management-Review:</strong>
+1. Konsolidierte BIA-Ergebnisse werden dem Management präsentiert
+2. RTO/RPO-Werte werden diskutiert und validiert
+3. Priorisierung wird festgelegt</p>
+<p><strong>Formale Freigabe:</strong>
+- Genehmigung durch {{ meta.roles.ceo.name }} (CEO)
+- Bestätigung durch Fachbereichsleiter
+- Dokumentation der Freigabe</p>
+<h2 id="3-bewertungsdimensionen">3. Bewertungsdimensionen</h2>
+<h3 id="31-finanzielle-auswirkungen">3.1 Finanzielle Auswirkungen</h3>
+<p><strong>Direkte finanzielle Verluste:</strong>
+- Umsatzverlust pro Stunde/Tag
+- Vertragsstrafen und Schadensersatzforderungen
+- Zusätzliche Kosten für Notfallmaßnahmen</p>
+<p><strong>Bewertungsskala:</strong>
+[TODO: Definieren Sie Ihre Bewertungsskala]</p>
+<p><strong>Beispiel:</strong>
+| Stufe | Beschreibung | Umsatzverlust pro Tag |
+|-------|--------------|----------------------|
+| 5 - Kritisch | Existenzbedrohend | &gt; 500.000 € |
+| 4 - Sehr hoch | Massive Auswirkungen | 100.000 - 500.000 € |
+| 3 - Hoch | Erhebliche Auswirkungen | 50.000 - 100.000 € |
+| 2 - Mittel | Spürbare Auswirkungen | 10.000 - 50.000 € |
+| 1 - Niedrig | Geringe Auswirkungen | &lt; 10.000 € |</p>
+<h3 id="32-operative-auswirkungen">3.2 Operative Auswirkungen</h3>
+<p><strong>Beeinträchtigung des Geschäftsbetriebs:</strong>
+- Durchsatz und Produktionskapazität
+- Rückstau und Nacharbeitsaufwand
+- Qualitätsprobleme
+- Beeinträchtigung anderer Prozesse</p>
+<p><strong>Bewertungsskala:</strong>
+| Stufe | Beschreibung | Operative Auswirkung |
+|-------|--------------|---------------------|
+| 5 - Kritisch | Kompletter Stillstand | Alle Prozesse betroffen |
+| 4 - Sehr hoch | Massive Beeinträchtigung | Mehrere kritische Prozesse betroffen |
+| 3 - Hoch | Erhebliche Beeinträchtigung | Ein kritischer Prozess betroffen |
+| 2 - Mittel | Spürbare Beeinträchtigung | Verzögerungen, aber Betrieb möglich |
+| 1 - Niedrig | Geringe Beeinträchtigung | Keine wesentliche Auswirkung |</p>
+<h3 id="33-rechtliche-und-regulatorische-auswirkungen">3.3 Rechtliche und regulatorische Auswirkungen</h3>
+<p><strong>Compliance-Risiken:</strong>
+- Gesetzliche Verpflichtungen (z.B. DSGVO, Arbeitsschutz)
+- Vertragliche Verpflichtungen (SLAs, Lieferverträge)
+- Meldepflichten gegenüber Behörden
+- Haftungsrisiken</p>
+<p><strong>Bewertungsskala:</strong>
+| Stufe | Beschreibung | Rechtliche Auswirkung |
+|-------|--------------|----------------------|
+| 5 - Kritisch | Schwerer Gesetzesverstoß | Strafverfahren, Lizenzverlust |
+| 4 - Sehr hoch | Erheblicher Verstoß | Bußgelder &gt; 100.000 € |
+| 3 - Hoch | Verstoß | Bußgelder 10.000 - 100.000 € |
+| 2 - Mittel | Vertragsverletzung | Vertragsstrafen |
+| 1 - Niedrig | Keine Verpflichtung | Keine rechtlichen Folgen |</p>
+<h3 id="34-sicherheitsauswirkungen">3.4 Sicherheitsauswirkungen</h3>
+<p><strong>Gefährdung von Personen und Anlagen:</strong>
+- Personensicherheit (Mitarbeiter, Kunden, Besucher)
+- Umweltgefährdung
+- Anlagensicherheit
+- Datensicherheit</p>
+<p><strong>Bewertungsskala:</strong>
+| Stufe | Beschreibung | Sicherheitsauswirkung |
+|-------|--------------|----------------------|
+| 5 - Kritisch | Lebensgefahr | Todesfälle oder schwere Verletzungen |
+| 4 - Sehr hoch | Erhebliche Gefährdung | Verletzungen, Umweltschäden |
+| 3 - Hoch | Gefährdung | Gesundheitsrisiken |
+| 2 - Mittel | Geringe Gefährdung | Sachschäden |
+| 1 - Niedrig | Keine Gefährdung | Keine Sicherheitsrisiken |</p>
+<h3 id="35-reputationsauswirkungen">3.5 Reputationsauswirkungen</h3>
+<p><strong>Image und Vertrauen:</strong>
+- Kundenvertrauen und Kundenzufriedenheit
+- Markenimage und öffentliche Wahrnehmung
+- Vertrauen von Partnern und Investoren
+- Medienberichterstattung</p>
+<p><strong>Bewertungsskala:</strong>
+| Stufe | Beschreibung | Reputationsauswirkung |
+|-------|--------------|----------------------|
+| 5 - Kritisch | Irreparabler Schaden | Massive negative Medienberichterstattung, Kundenabwanderung |
+| 4 - Sehr hoch | Schwerer Schaden | Nationale Medienberichterstattung, erheblicher Vertrauensverlust |
+| 3 - Hoch | Erheblicher Schaden | Regionale Medienberichterstattung, Kundenbeschwerden |
+| 2 - Mittel | Spürbarer Schaden | Social Media Kritik, einzelne Beschwerden |
+| 1 - Niedrig | Geringer Schaden | Keine öffentliche Wahrnehmung |</p>
+<h2 id="4-zeitabhangigkeit-der-auswirkungen">4. Zeitabhängigkeit der Auswirkungen</h2>
+<h3 id="41-zeitfenster-analyse">4.1 Zeitfenster-Analyse</h3>
+<p>Die Auswirkungen von Prozessausfällen werden für verschiedene Zeitfenster bewertet:</p>
+<p><strong>Zeitfenster:</strong>
+- <strong>0-4 Stunden:</strong> Sofortige Auswirkungen
+- <strong>4-24 Stunden:</strong> Kurzfristige Auswirkungen
+- <strong>1-3 Tage:</strong> Mittelfristige Auswirkungen
+- <strong>&gt; 3 Tage:</strong> Langfristige Auswirkungen</p>
+<h3 id="42-impact-progression">4.2 Impact-Progression</h3>
+<p>[TODO: Dokumentieren Sie die zeitabhängige Entwicklung der Auswirkungen]</p>
+<p><strong>Beispiel für Prozess "Auftragsabwicklung":</strong></p>
+<table>
+<thead>
+<tr>
+<th>Zeitfenster</th>
+<th>Finanzielle Auswirkung</th>
+<th>Operative Auswirkung</th>
+<th>Reputationsauswirkung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0-4h</td>
+<td>Gering (Stufe 1)</td>
+<td>Mittel (Stufe 2)</td>
+<td>Niedrig (Stufe 1)</td>
+</tr>
+<tr>
+<td>4-24h</td>
+<td>Mittel (Stufe 2)</td>
+<td>Hoch (Stufe 3)</td>
+<td>Mittel (Stufe 2)</td>
+</tr>
+<tr>
+<td>1-3d</td>
+<td>Hoch (Stufe 3)</td>
+<td>Sehr hoch (Stufe 4)</td>
+<td>Hoch (Stufe 3)</td>
+</tr>
+<tr>
+<td>&gt; 3d</td>
+<td>Kritisch (Stufe 5)</td>
+<td>Kritisch (Stufe 5)</td>
+<td>Sehr hoch (Stufe 4)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="43-mtpd-bestimmung">4.3 MTPD-Bestimmung</h3>
+<p><strong>Maximum Tolerable Period of Disruption (MTPD):</strong></p>
+<p>Der MTPD ist der Zeitpunkt, ab dem die Auswirkungen eines Ausfalls inakzeptabel werden.</p>
+<p><strong>Bestimmung:</strong>
+- MTPD = Zeitpunkt, ab dem Auswirkungen Stufe 4 oder 5 erreichen
+- Oder: Zeitpunkt, ab dem mehrere Dimensionen Stufe 3 erreichen</p>
+<p><strong>Beispiel:</strong>
+- Prozess "Auftragsabwicklung": MTPD = 24 Stunden (ab dann Stufe 4/5)
+- Prozess "E-Mail": MTPD = 4 Stunden (ab dann Stufe 3 in mehreren Dimensionen)</p>
+<h2 id="5-rtorpo-festlegung">5. RTO/RPO-Festlegung</h2>
+<h3 id="51-rto-bestimmung">5.1 RTO-Bestimmung</h3>
+<p><strong>Recovery Time Objective (RTO):</strong>
+- RTO muss deutlich unter MTPD liegen (Sicherheitspuffer)
+- Empfehlung: RTO = 50-70% des MTPD</p>
+<p><strong>Beispiel:</strong>
+- MTPD = 24 Stunden → RTO = 12-16 Stunden
+- MTPD = 4 Stunden → RTO = 2-3 Stunden</p>
+<h3 id="52-rpo-bestimmung">5.2 RPO-Bestimmung</h3>
+<p><strong>Recovery Point Objective (RPO):</strong>
+- Maximaler tolerierbarer Datenverlust
+- Abhängig von Datenänderungsrate und Geschäftskritikalität</p>
+<p><strong>Beispiel:</strong>
+- Transaktionsdaten: RPO = 15 Minuten (kontinuierliche Replikation)
+- Konfigurationsdaten: RPO = 24 Stunden (tägliches Backup)
+- Archivdaten: RPO = 7 Tage (wöchentliches Backup)</p>
+<h2 id="6-ergebnisfreigabe">6. Ergebnisfreigabe</h2>
+<h3 id="61-verantwortliche-fur-abnahme">6.1 Verantwortliche für Abnahme</h3>
+<p><strong>Fachbereichsebene:</strong>
+- Prozessverantwortliche bestätigen BIA-Ergebnisse für ihre Prozesse
+- Validierung der RTO/RPO-Werte</p>
+<p><strong>Management-Ebene:</strong>
+- {{ meta.roles.ceo.name }} (CEO) genehmigt Gesamt-BIA
+- {{ meta.roles.cio.name }} (CIO) genehmigt IT-bezogene RTO/RPO
+- Fachbereichsleiter genehmigen ihre Bereiche</p>
+<h3 id="62-freigabeprozess">6.2 Freigabeprozess</h3>
+<ol>
+<li><strong>Entwurf:</strong> BCM-Manager erstellt BIA-Bericht</li>
+<li><strong>Fachbereichs-Review:</strong> Prozessverantwortliche prüfen (2 Wochen)</li>
+<li><strong>Überarbeitung:</strong> Feedback wird eingearbeitet</li>
+<li><strong>Management-Präsentation:</strong> Vorstellung der Ergebnisse</li>
+<li><strong>Formale Freigabe:</strong> Unterschriften der Verantwortlichen</li>
+<li><strong>Veröffentlichung:</strong> BIA-Ergebnisse werden kommuniziert</li>
+</ol>
+<hr />
+<p><strong>Dokumenthistorie:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Datum</th>
+<th>Autor</th>
+<th>Änderungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Initiale Erstellung</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0060_Service_und_Prozesskatalog_Kritikalitaet.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0080_BIA_Ergebnisse_und_RTO_RPO.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

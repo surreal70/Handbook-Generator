@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0160 - Disaster Recovery and Business Continuity</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0160</div>
+            <h1>Disaster Recovery and Business Continuity</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0150_Backup_and_Restore.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0170_Security_Operations_and_Hardening.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="disaster-recovery-and-business-continuity">Disaster Recovery and Business Continuity</h1>
+<h2 id="purpose-and-scope">Purpose and Scope</h2>
+<p>This document describes the disaster recovery and business continuity strategies for AdminSend GmbH. It defines disaster scenarios, impact analyses, DR strategies, failover/failback procedures, and business continuity plans to ensure business continuity during disasters.</p>
+<p><strong>Scope:</strong> All critical IT services and business processes of AdminSend GmbH</p>
+<p><strong>Responsible:</strong> Anna Schmidt (anna.schmidt@adminsend.de)</p>
+<h2 id="fundamentals">Fundamentals</h2>
+<h3 id="definitions">Definitions</h3>
+<p><strong>Disaster:</strong>
+An event that leads to a significant failure of IT services or business processes and exceeds normal recovery measures.</p>
+<p><strong>Disaster Recovery (DR):</strong>
+Processes and technologies for restoring IT systems and services after a disaster.</p>
+<p><strong>Business Continuity (BC):</strong>
+An organization's ability to maintain critical business processes during and after a disruption.</p>
+<h3 id="distinction-dr-vs-bc">Distinction: DR vs. BC</h3>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Disaster Recovery</th>
+<th>Business Continuity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Focus</strong></td>
+<td>IT systems and infrastructure</td>
+<td>Business processes</td>
+</tr>
+<tr>
+<td><strong>Scope</strong></td>
+<td>Technical recovery</td>
+<td>Entire organization</td>
+</tr>
+<tr>
+<td><strong>Goal</strong></td>
+<td>System availability</td>
+<td>Business continuity</td>
+</tr>
+<tr>
+<td><strong>Responsibility</strong></td>
+<td>IT department</td>
+<td>Management + all departments</td>
+</tr>
+<tr>
+<td><strong>Timeframe</strong></td>
+<td>Hours to days</td>
+<td>Immediate to weeks</td>
+</tr>
+</tbody>
+</table>
+<h3 id="recovery-objectives">Recovery Objectives</h3>
+<h4 id="recovery-time-objective-rto">Recovery Time Objective (RTO)</h4>
+<p><strong>Definition:</strong> Maximum tolerable downtime of a service</p>
+<p><strong>RTO Categories for DR:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Service Tier</th>
+<th>RTO</th>
+<th>DR Strategy</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tier 0 - Critical</strong></td>
+<td>&lt; 1 hour</td>
+<td>Hot standby</td>
+<td>Transaction systems, e-commerce</td>
+</tr>
+<tr>
+<td><strong>Tier 1 - Important</strong></td>
+<td>&lt; 4 hours</td>
+<td>Warm standby</td>
+<td>ERP, CRM, email</td>
+</tr>
+<tr>
+<td><strong>Tier 2 - Standard</strong></td>
+<td>&lt; 24 hours</td>
+<td>Cold standby</td>
+<td>File servers, intranet</td>
+</tr>
+<tr>
+<td><strong>Tier 3 - Non-Critical</strong></td>
+<td>&lt; 7 days</td>
+<td>Backup restore</td>
+<td>Test systems, archives</td>
+</tr>
+</tbody>
+</table>
+<h4 id="recovery-point-objective-rpo">Recovery Point Objective (RPO)</h4>
+<p><strong>Definition:</strong> Maximum tolerable data loss</p>
+<p><strong>RPO Categories for DR:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Service Tier</th>
+<th>RPO</th>
+<th>Replication Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tier 0 - Critical</strong></td>
+<td>&lt; 15 minutes</td>
+<td>Synchronous replication</td>
+</tr>
+<tr>
+<td><strong>Tier 1 - Important</strong></td>
+<td>&lt; 1 hour</td>
+<td>Asynchronous replication</td>
+</tr>
+<tr>
+<td><strong>Tier 2 - Standard</strong></td>
+<td>&lt; 24 hours</td>
+<td>Daily backups</td>
+</tr>
+<tr>
+<td><strong>Tier 3 - Non-Critical</strong></td>
+<td>&lt; 7 days</td>
+<td>Weekly backups</td>
+</tr>
+</tbody>
+</table>
+<h2 id="disaster-scenarios">Disaster Scenarios</h2>
+<h3 id="scenario-categories">Scenario Categories</h3>
+<h4 id="natural-disasters">Natural Disasters</h4>
+<p><strong>Scenarios:</strong>
+- Fire in data center
+- Flooding
+- Earthquake
+- Storm/severe weather
+- Power outage (regional)</p>
+<p><strong>Probability:</strong> Low<br />
+<strong>Impact:</strong> Very high<br />
+<strong>Affected Sites:</strong> {{ netbox.site.primary }}, {{ netbox.site.secondary }}</p>
+<p><strong>Mitigations:</strong>
+- Geographically separated DR site
+- Redundant power supply (UPS, generator)
+- Building security measures
+- Insurance</p>
+<h4 id="technical-failures">Technical Failures</h4>
+<p><strong>Scenarios:</strong>
+- Complete data center failure
+- Network failure (WAN)
+- Storage system failure
+- Hypervisor cluster failure
+- Cloud provider failure</p>
+<p><strong>Probability:</strong> Medium<br />
+<strong>Impact:</strong> High</p>
+<p><strong>Mitigations:</strong>
+- Redundant systems
+- Multi-cloud strategy
+- Automatic failover mechanisms
+- Regular maintenance</p>
+<h4 id="cyber-attacks">Cyber Attacks</h4>
+<p><strong>Scenarios:</strong>
+- Ransomware attack
+- DDoS attack
+- Data breach
+- Insider threat
+- Supply chain attack</p>
+<p><strong>Probability:</strong> High<br />
+<strong>Impact:</strong> Very high</p>
+<p><strong>Mitigations:</strong>
+- Security monitoring (SIEM)
+- Immutable backups
+- Network segmentation
+- Incident response plan
+- Security awareness training</p>
+<h4 id="human-errors">Human Errors</h4>
+<p><strong>Scenarios:</strong>
+- Accidental deletion of critical data
+- Misconfiguration with service outage
+- Untested changes in production
+- Faulty deployment</p>
+<p><strong>Probability:</strong> Medium<br />
+<strong>Impact:</strong> Medium to high</p>
+<p><strong>Mitigations:</strong>
+- Change management processes
+- Four-eyes principle
+- Automated deployments
+- Rollback mechanisms
+- Regular backups</p>
+<h3 id="business-impact-analysis-bia">Business Impact Analysis (BIA)</h3>
+<h4 id="critical-business-processes">Critical Business Processes</h4>
+<table>
+<thead>
+<tr>
+<th>Business Process</th>
+<th>Dependent IT Services</th>
+<th>RTO</th>
+<th>RPO</th>
+<th>Financial Impact/Hour</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Order Processing</strong></td>
+<td>ERP, database, e-commerce</td>
+<td>1h</td>
+<td>15 min</td>
+<td>€50,000</td>
+</tr>
+<tr>
+<td><strong>Customer Support</strong></td>
+<td>CRM, ticketing, telephony</td>
+<td>2h</td>
+<td>1h</td>
+<td>€10,000</td>
+</tr>
+<tr>
+<td><strong>Email Communication</strong></td>
+<td>Email server, Exchange</td>
+<td>4h</td>
+<td>1h</td>
+<td>€5,000</td>
+</tr>
+<tr>
+<td><strong>Financial Accounting</strong></td>
+<td>ERP, database</td>
+<td>8h</td>
+<td>4h</td>
+<td>€2,000</td>
+</tr>
+<tr>
+<td><strong>HR Management</strong></td>
+<td>HR system</td>
+<td>24h</td>
+<td>24h</td>
+<td>€500</td>
+</tr>
+</tbody>
+</table>
+<h4 id="impact-assessment">Impact Assessment</h4>
+<p><strong>Financial Impact:</strong>
+- Direct costs (revenue loss)
+- Indirect costs (productivity loss)
+- Recovery costs
+- Penalties (SLA violations)</p>
+<p><strong>Non-Financial Impact:</strong>
+- Reputation damage
+- Customer loss
+- Legal consequences
+- Employee morale</p>
+<p><strong>Impact Matrix:</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>&lt; 1h</strong></th>
+<th><strong>1-4h</strong></th>
+<th><strong>4-24h</strong></th>
+<th><strong>&gt; 24h</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Critical</strong></td>
+<td>Catastrophic</td>
+<td>Very high</td>
+<td>High</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td><strong>Important</strong></td>
+<td>Very high</td>
+<td>High</td>
+<td>Medium</td>
+<td>Low</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>High</td>
+<td>Medium</td>
+<td>Low</td>
+<td>Minimal</td>
+</tr>
+<tr>
+<td><strong>Non-Critical</strong></td>
+<td>Medium</td>
+<td>Low</td>
+<td>Minimal</td>
+<td>Minimal</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dr-strategies">DR Strategies</h2>
+<h3 id="hot-standby-active-active">Hot Standby (Active-Active)</h3>
+<p><strong>Description:</strong>
+- Parallel production environments at two sites
+- Synchronous data replication
+- Load balancing between sites
+- Automatic failover</p>
+<p><strong>Advantages:</strong>
+- RTO: &lt; 1 hour (often minutes)
+- RPO: &lt; 15 minutes
+- No downtime during failover
+- Continuous availability</p>
+<p><strong>Disadvantages:</strong>
+- Very high costs (double infrastructure)
+- Complex configuration
+- High network requirements</p>
+<p><strong>Application:</strong> Tier 0 services ({{ netbox.service.critical }})</p>
+<p><strong>Cost:</strong> ~200% of production infrastructure</p>
+<h3 id="warm-standby-active-passive">Warm Standby (Active-Passive)</h3>
+<p><strong>Description:</strong>
+- DR site with reduced resources
+- Asynchronous data replication
+- Systems running but not productive
+- Manual or automatic failover</p>
+<p><strong>Advantages:</strong>
+- RTO: &lt; 4 hours
+- RPO: &lt; 1 hour
+- Moderate costs
+- Quick activation</p>
+<p><strong>Disadvantages:</strong>
+- Brief downtime during failover
+- Reduced initial performance
+- Regular testing required</p>
+<p><strong>Application:</strong> Tier 1 services ({{ netbox.service.important }})</p>
+<p><strong>Cost:</strong> ~50-70% of production infrastructure</p>
+<h3 id="cold-standby-backup-based">Cold Standby (Backup-based)</h3>
+<p><strong>Description:</strong>
+- DR site with minimal infrastructure
+- Backup-based recovery
+- Systems built on demand
+- Manual activation</p>
+<p><strong>Advantages:</strong>
+- RTO: &lt; 24 hours
+- RPO: &lt; 24 hours
+- Low costs
+- Simple management</p>
+<p><strong>Disadvantages:</strong>
+- Longer downtime
+- Manual processes
+- Higher risk</p>
+<p><strong>Application:</strong> Tier 2 services ({{ netbox.service.standard }})</p>
+<p><strong>Cost:</strong> ~20-30% of production infrastructure</p>
+<h3 id="backup-restore">Backup &amp; Restore</h3>
+<p><strong>Description:</strong>
+- No dedicated DR site
+- Recovery from backups
+- Procure new hardware as needed
+- Completely manual process</p>
+<p><strong>Advantages:</strong>
+- Minimal costs
+- Simple management</p>
+<p><strong>Disadvantages:</strong>
+- RTO: &gt; 7 days
+- RPO: &gt; 7 days
+- Very high risk
+- Long recovery time</p>
+<p><strong>Application:</strong> Tier 3 services (non-critical)</p>
+<p><strong>Cost:</strong> Backup costs only</p>
+<h2 id="dr-infrastructure">DR Infrastructure</h2>
+<h3 id="primary-site">Primary Site</h3>
+<p><strong>Site:</strong> {{ netbox.site.primary }}<br />
+<strong>Address:</strong> {{ netbox.site.primary_address }}<br />
+<strong>Data Center:</strong> {{ netbox.site.primary_datacenter }}</p>
+<p><strong>Infrastructure:</strong>
+- Production servers: {{ netbox.device.count_primary }}
+- Storage capacity: {{ netbox.storage.capacity_primary }}
+- Network bandwidth: {{ netbox.network.bandwidth_primary }}
+- Power supply: Redundant (N+1)</p>
+<h3 id="dr-site">DR Site</h3>
+<p><strong>Site:</strong> {{ netbox.site.dr }}<br />
+<strong>Address:</strong> {{ netbox.site.dr_address }}<br />
+<strong>Data Center:</strong> {{ netbox.site.dr_datacenter }}<br />
+<strong>Distance:</strong> {{ netbox.site.distance }} km</p>
+<p><strong>Infrastructure:</strong>
+- DR servers: {{ netbox.device.count_dr }}
+- Storage capacity: {{ netbox.storage.capacity_dr }}
+- Network bandwidth: {{ netbox.network.bandwidth_dr }}
+- Power supply: Redundant (N+1)</p>
+<h3 id="replication-connection">Replication Connection</h3>
+<p><strong>Connection Type:</strong> {{ netbox.network.replication_type }}<br />
+<strong>Bandwidth:</strong> {{ netbox.network.replication_bandwidth }}<br />
+<strong>Latency:</strong> {{ netbox.network.replication_latency }} ms<br />
+<strong>Redundancy:</strong> Dual-path</p>
+<p><strong>Replication Technologies:</strong>
+- Storage replication: {{ meta.storage_replication_tech }}
+- Database replication: {{ meta.database_replication_tech }}
+- VM replication: {{ meta.vm_replication_tech }}</p>
+<h2 id="failover-procedures">Failover Procedures</h2>
+<h3 id="failover-triggers">Failover Triggers</h3>
+<p><strong>Automatic Failover Triggers:</strong>
+- Primary site unreachable (&gt; 5 min)
+- Critical system failures (&gt; 3 systems)
+- Storage system failure
+- Network failure (WAN)</p>
+<p><strong>Manual Failover Triggers:</strong>
+- Natural disaster at primary site
+- Planned maintenance (site switch)
+- DR test
+- Management decision</p>
+<h3 id="failover-process">Failover Process</h3>
+<h4 id="process-overview">Process Overview</h4>
+<div class="codehilite"><pre><span></span><code>┌─────────────────┐
+│ Disaster        │
+│ Declaration     │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ DR Team         │
+│ Activation      │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Impact          │
+│ Assessment      │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Failover        │
+│ Execution       │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Service         │
+│ Validation      │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Communication   │
+│ &amp; Monitoring    │
+└─────────────────┘
+</code></pre></div>
+
+<h4 id="1-disaster-declaration">1. Disaster Declaration</h4>
+<p><strong>Responsible:</strong> CIO or IT Operations Manager</p>
+<p><strong>Criteria:</strong>
+- Primary site unavailable
+- RTO at risk for critical services
+- No quick recovery possible</p>
+<p><strong>Activities:</strong>
+- Officially declare disaster
+- Activate DR team
+- Inform management
+- Activate communication plan</p>
+<h4 id="2-dr-team-activation">2. DR Team Activation</h4>
+<p><strong>DR Team Members:</strong>
+- <strong>DR Coordinator:</strong> Anna Schmidt
+- <strong>Technical Lead:</strong> Andreas Huemmer
+- <strong>Network Lead:</strong> [Name]
+- <strong>Storage Lead:</strong> [Name]
+- <strong>Application Lead:</strong> [Name]
+- <strong>Communication Lead:</strong> [Name]</p>
+<p><strong>Activities:</strong>
+- Contact team members
+- Establish war room (physical or virtual)
+- Activate communication channels
+- Provide checklists</p>
+<h4 id="3-impact-assessment">3. Impact Assessment</h4>
+<p><strong>Assessment Activities:</strong>
+- Assess extent of disaster
+- Identify affected systems
+- Check DR site availability
+- Check replication status
+- Determine estimated RTO/RPO</p>
+<p><strong>Decision:</strong>
+- Complete failover to DR site
+- Partial failover (critical services only)
+- Alternative measures</p>
+<h4 id="4-failover-execution">4. Failover Execution</h4>
+<p><strong>Failover Steps (Hot Standby):</strong></p>
+<ol>
+<li><strong>Prepare DNS switchover</strong></li>
+<li>Reduce DNS TTL to 60 seconds (if not already)</li>
+<li>
+<p>Prepare DNS entries for DR site</p>
+</li>
+<li>
+<p><strong>Reconfigure load balancer</strong></p>
+</li>
+<li>Redirect traffic from primary to DR</li>
+<li>
+<p>Switch health checks to DR systems</p>
+</li>
+<li>
+<p><strong>Database failover</strong></p>
+</li>
+<li>Stop replication</li>
+<li>Promote DR database to primary</li>
+<li>
+<p>Switch application connections</p>
+</li>
+<li>
+<p><strong>Application activation</strong></p>
+</li>
+<li>Start application services on DR site</li>
+<li>Validate configurations</li>
+<li>
+<p>Check database connections</p>
+</li>
+<li>
+<p><strong>Perform DNS switchover</strong></p>
+</li>
+<li>Switch DNS entries to DR site</li>
+<li>
+<p>Monitor DNS propagation</p>
+</li>
+<li>
+<p><strong>Adjust network routing</strong></p>
+</li>
+<li>Redirect VPN connections to DR site</li>
+<li>Adjust firewall rules</li>
+<li>Switch monitoring to DR site</li>
+</ol>
+<p><strong>Estimated Duration:</strong> 30-60 minutes (hot standby)</p>
+<p><strong>Failover Steps (Warm Standby):</strong></p>
+<ol>
+<li><strong>Boot DR systems</strong></li>
+<li>Start servers</li>
+<li>Activate storage systems</li>
+<li>
+<p>Check network components</p>
+</li>
+<li>
+<p><strong>Finalize data synchronization</strong></p>
+</li>
+<li>Perform final replication</li>
+<li>Check data consistency</li>
+<li>
+<p>Restore backups (if required)</p>
+</li>
+<li>
+<p><strong>Database recovery</strong></p>
+</li>
+<li>Start database services</li>
+<li>Perform consistency checks</li>
+<li>
+<p>Performance tuning</p>
+</li>
+<li>
+<p><strong>Application deployment</strong></p>
+</li>
+<li>Deploy applications</li>
+<li>Adjust configurations</li>
+<li>
+<p>Test integrations</p>
+</li>
+<li>
+<p><strong>Network and DNS</strong></p>
+</li>
+<li>See hot standby steps 5-6</li>
+</ol>
+<p><strong>Estimated Duration:</strong> 2-4 hours (warm standby)</p>
+<h4 id="5-service-validation">5. Service Validation</h4>
+<p><strong>Validation Steps:</strong>
+- [ ] All critical services reachable
+- [ ] Database connections working
+- [ ] Application functionality tested
+- [ ] Performance acceptable
+- [ ] Monitoring active
+- [ ] Backup jobs running</p>
+<p><strong>Test Scenarios:</strong>
+- Login test
+- Transaction test
+- Integration test
+- Performance test</p>
+<h4 id="6-communication-monitoring">6. Communication &amp; Monitoring</h4>
+<p><strong>Communication:</strong>
+- Inform stakeholders about failover
+- Status updates (every 30 min)
+- User communication
+- Management briefing</p>
+<p><strong>Monitoring:</strong>
+- Continuous monitoring of DR site
+- Performance metrics
+- Error logs
+- User feedback</p>
+<h2 id="failback-procedures">Failback Procedures</h2>
+<h3 id="failback-planning">Failback Planning</h3>
+<p><strong>Failback Triggers:</strong>
+- Primary site restored
+- All systems tested and validated
+- Planned maintenance window available
+- Management approval</p>
+<p><strong>Failback Strategy:</strong>
+- <strong>Planned failback:</strong> During maintenance window
+- <strong>Gradual failback:</strong> Service by service
+- <strong>Complete failback:</strong> All services simultaneously</p>
+<h3 id="failback-process">Failback Process</h3>
+<h4 id="1-prepare-primary-site">1. Prepare Primary Site</h4>
+<p><strong>Activities:</strong>
+- Repair infrastructure damage
+- Rebuild systems (if required)
+- Restore network connectivity
+- Set up replication from DR to primary</p>
+<p><strong>Validation:</strong>
+- All systems functional
+- Replication running
+- Performance acceptable</p>
+<h4 id="2-data-synchronization">2. Data Synchronization</h4>
+<p><strong>Activities:</strong>
+- Reverse replication (DR → Primary)
+- Ensure data consistency
+- Perform delta synchronization</p>
+<p><strong>Duration:</strong> Depends on data volume (hours to days)</p>
+<h4 id="3-failback-execution">3. Failback Execution</h4>
+<p><strong>Steps:</strong>
+1. Announce maintenance window
+2. Finalize replication
+3. Start applications on primary
+4. Switch DNS and load balancer
+5. Put DR site in standby mode</p>
+<p><strong>Estimated Duration:</strong> 2-4 hours</p>
+<h4 id="4-post-failback-validation">4. Post-Failback Validation</h4>
+<p><strong>Validation:</strong>
+- All services running on primary
+- Replication primary → DR restored
+- Monitoring active
+- Backup jobs running</p>
+<h2 id="business-continuity-management">Business Continuity Management</h2>
+<h3 id="bc-strategy">BC Strategy</h3>
+<p><strong>Objectives:</strong>
+- Maintain critical business processes
+- Ensure employee safety
+- Ensure communication
+- Protect reputation</p>
+<h3 id="bc-plans">BC Plans</h3>
+<h4 id="emergency-communication">Emergency Communication</h4>
+<p><strong>Communication Channels:</strong>
+- <strong>Primary:</strong> Email (info@adminsend.de)
+- <strong>Secondary:</strong> Phone (+49 89 12345678)
+- <strong>Emergency:</strong> Mobile apps, SMS</p>
+<p><strong>Contact Lists:</strong>
+- Management team
+- All employees
+- Customers
+- Partners and suppliers
+- Authorities</p>
+<h4 id="alternative-workplaces">Alternative Workplaces</h4>
+<p><strong>Home Office:</strong>
+- VPN access for all employees
+- Laptops and mobile devices
+- Cloud-based collaboration tools</p>
+<p><strong>Backup Office:</strong>
+- Location: [Address]
+- Capacity: [Number of workstations]
+- Equipment: IT, telephony, internet</p>
+<h4 id="critical-suppliers">Critical Suppliers</h4>
+<table>
+<thead>
+<tr>
+<th>Supplier</th>
+<th>Service</th>
+<th>Contact</th>
+<th>Backup Supplier</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{{ meta.isp_provider }}</td>
+<td>Internet</td>
+<td>{{ meta.isp_contact }}</td>
+<td>{{ meta.isp_backup }}</td>
+</tr>
+<tr>
+<td>{{ meta.cloud_provider }}</td>
+<td>Cloud services</td>
+<td>{{ meta.cloud_contact }}</td>
+<td>{{ meta.cloud_backup }}</td>
+</tr>
+<tr>
+<td>{{ meta.hardware_vendor }}</td>
+<td>Hardware</td>
+<td>{{ meta.hardware_contact }}</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dr-testing">DR Testing</h2>
+<h3 id="test-strategy">Test Strategy</h3>
+<p><strong>Test Types:</strong>
+- <strong>Tabletop Exercise:</strong> Theoretical walkthrough (quarterly)
+- <strong>Partial Failover Test:</strong> Individual services (semi-annually)
+- <strong>Full Failover Test:</strong> Complete failover (annually)</p>
+<h3 id="test-process">Test Process</h3>
+<h4 id="tabletop-exercise">Tabletop Exercise</h4>
+<p><strong>Duration:</strong> 2-3 hours</p>
+<p><strong>Participants:</strong>
+- DR team
+- Management
+- Service owners</p>
+<p><strong>Procedure:</strong>
+1. Present disaster scenario
+2. Review roles and responsibilities
+3. Walk through process steps
+4. Identify problems
+5. Document improvements</p>
+<h4 id="full-failover-test">Full Failover Test</h4>
+<p><strong>Duration:</strong> 1 day</p>
+<p><strong>Preparation:</strong>
+- Create test plan
+- Inform stakeholders
+- Plan maintenance window
+- Provide rollback plan</p>
+<p><strong>Execution:</strong>
+1. Failover to DR site
+2. Validate services
+3. Test business processes
+4. Measure performance
+5. Failback to primary</p>
+<p><strong>Follow-up:</strong>
+- Create test report
+- Document lessons learned
+- Implement improvements
+- Plan next test</p>
+<h2 id="metrics-and-reporting">Metrics and Reporting</h2>
+<h3 id="dr-metrics">DR Metrics</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Target Value</th>
+<th>Measurement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RTO Achievement</strong></td>
+<td>&gt; 95%</td>
+<td>Actual RTO / Target RTO</td>
+</tr>
+<tr>
+<td><strong>RPO Achievement</strong></td>
+<td>&gt; 99%</td>
+<td>Actual RPO / Target RPO</td>
+</tr>
+<tr>
+<td><strong>DR Test Success Rate</strong></td>
+<td>100%</td>
+<td>Successful tests / Total tests</td>
+</tr>
+<tr>
+<td><strong>Failover Time</strong></td>
+<td>&lt; Target RTO</td>
+<td>Average failover duration</td>
+</tr>
+<tr>
+<td><strong>Data Loss</strong></td>
+<td>&lt; Target RPO</td>
+<td>Average data loss</td>
+</tr>
+</tbody>
+</table>
+<h3 id="reporting">Reporting</h3>
+<p><strong>Quarterly DR Report:</strong>
+- DR test results
+- RTO/RPO compliance
+- Infrastructure status
+- Improvement measures</p>
+<p><strong>Annual BC Report:</strong>
+- BC strategy review
+- BIA update
+- DR cost analysis
+- Management presentation</p>
+<h2 id="roles-and-responsibilities">Roles and Responsibilities</h2>
+<h3 id="dr-coordinator">DR Coordinator</h3>
+<p><strong>Responsibilities:</strong>
+- DR strategy ownership
+- DR plan management
+- Coordinate DR tests
+- Disaster declaration</p>
+<p><strong>Person:</strong> Anna Schmidt</p>
+<h3 id="bc-manager">BC Manager</h3>
+<p><strong>Responsibilities:</strong>
+- BC strategy development
+- Conduct BIA
+- Create BC plans
+- BC training</p>
+<p><strong>Person:</strong> Peter Fischer</p>
+<h3 id="dr-team">DR Team</h3>
+<p><strong>Members:</strong> See section "DR Team Activation"</p>
+<h2 id="references">References</h2>
+<ul>
+<li>ITIL v4 - Service Continuity Management</li>
+<li>ISO 22301:2019 - Business Continuity Management</li>
+<li>ISO/IEC 27031:2011 - ICT Readiness for Business Continuity</li>
+<li>NIST SP 800-34 - Contingency Planning Guide</li>
+<li>Business Impact Analysis (BIA) Document</li>
+</ul>
+<hr />
+<p><strong>Document Owner:</strong> IT Operations Manager<br />
+<strong>Approved by:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Classification:</strong> internal<br />
+<strong>Last Updated:</strong> {{ meta.date }}</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0150_Backup_and_Restore.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0170_Security_Operations_and_Hardening.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

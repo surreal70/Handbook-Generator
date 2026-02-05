@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0670 - Richtlinie: E-Mail, Sharing und Zusammenarbeitstools</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0670</div>
+            <h1>Richtlinie: E-Mail, Sharing und Zusammenarbeitstools</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0660_Policy_Informationsuebertragung_und_Kommunikation.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0680_Policy_Security_in_Projects.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="richtlinie-e-mail-sharing-und-zusammenarbeitstools">Richtlinie: E-Mail, Sharing und Zusammenarbeitstools</h1>
+<p><strong>Dokument-ID:</strong> 0670<br />
+<strong>Dokumenttyp:</strong> Richtlinie (detailliert)<br />
+<strong>Zugehörige Policy:</strong> 0660_Policy_Informationsuebertragung_und_Kommunikation.md<br />
+<strong>Standard-Referenz:</strong> ISO/IEC 27001:2022 Annex A.5.14<br />
+<strong>Owner:</strong> {{ meta.it_operations.manager }}<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Freigegeben<br />
+<strong>Klassifizierung:</strong> Intern<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.date }}</p>
+<hr />
+<h2 id="1-zweck-und-geltungsbereich">1. Zweck und Geltungsbereich</h2>
+<p>Diese Richtlinie konkretisiert die <code>0660_Policy_Informationsuebertragung_und_Kommunikation.md</code> und definiert:
+- E-Mail-Sicherheit und -Nutzung
+- File-Sharing und Collaboration-Tools
+- Sichere Kommunikationskanäle</p>
+<p><strong>Geltungsbereich:</strong> Alle Kommunikationstools bei <strong>AdminSend GmbH</strong></p>
+<h2 id="2-e-mail-sicherheit">2. E-Mail-Sicherheit</h2>
+<h3 id="21-e-mail-system">2.1 E-Mail-System</h3>
+<p><strong>Plattform:</strong> {{ meta.email.system }} (z.B. Microsoft 365, Google Workspace)</p>
+<p><strong>Sicherheitsfeatures:</strong>
+- SPF, DKIM, DMARC konfiguriert
+- TLS für Transport-Verschlüsselung
+- Anti-Spam und Anti-Malware
+- DLP (Data Loss Prevention)
+- E-Mail-Archivierung</p>
+<h3 id="22-e-mail-nutzung">2.2 E-Mail-Nutzung</h3>
+<p><strong>Erlaubte Nutzung:</strong>
+- Geschäftliche Kommunikation
+- Begrenzte private Nutzung (max. 10 E-Mails/Tag)
+- Anmeldung bei geschäftlichen Online-Diensten</p>
+<p><strong>Verbotene Aktivitäten:</strong>
+- Versand vertraulicher Daten ohne Verschlüsselung
+- Spam, Kettenmails
+- Nutzung privater E-Mail für geschäftliche Zwecke
+- Automatische Weiterleitung an externe Adressen</p>
+<p><strong>Details:</strong> Siehe <code>0210_Richtlinie_Akzeptable_Nutzung_IT.md</code></p>
+<h3 id="23-e-mail-verschlusselung">2.3 E-Mail-Verschlüsselung</h3>
+<p><strong>S/MIME:</strong>
+- Für vertrauliche E-Mails verpflichtend
+- Zertifikate für alle Mitarbeiter
+- Automatische Verschlüsselung bei "Vertraulich"-Label</p>
+<p><strong>Opportunistic TLS:</strong>
+- Für alle ausgehenden E-Mails
+- MTA-STS für bekannte Partner</p>
+<p><strong>Details:</strong> Siehe <code>0270_Richtlinie_Key_Management_und_Verschluesselung.md</code></p>
+<h3 id="24-phishing-schutz">2.4 Phishing-Schutz</h3>
+<p><strong>Technische Kontrollen:</strong>
+- E-Mail-Gateway mit Anti-Phishing
+- Link-Rewriting und Sandbox
+- Attachment-Scanning
+- DMARC-Enforcement</p>
+<p><strong>Nutzer-Schulung:</strong>
+- Phishing-Awareness-Training (jährlich)
+- Phishing-Simulationen (quartalsweise)
+- Reporting-Button in E-Mail-Client</p>
+<p><strong>Bei Phishing-Verdacht:</strong>
+1. E-Mail nicht öffnen/anklicken
+2. Melden über Reporting-Button
+3. E-Mail löschen
+4. IT-Security prüft und reagiert</p>
+<h3 id="25-e-mail-archivierung">2.5 E-Mail-Archivierung</h3>
+<p><strong>Automatische Archivierung:</strong>
+- Alle geschäftlichen E-Mails
+- Retention: {{ meta.retention.email_years }} Jahre
+- Unveränderbarkeit (WORM)</p>
+<p><strong>Zugriff:</strong>
+- Nutzer: Eigene E-Mails
+- Legal/Compliance: Für eDiscovery
+- Vorgesetzte: Mit Genehmigung</p>
+<p><strong>Details:</strong> Siehe <code>0590_Richtlinie_Records_Retention</code></p>
+<h2 id="3-file-sharing">3. File-Sharing</h2>
+<h3 id="31-genehmigte-plattformen">3.1 Genehmigte Plattformen</h3>
+<p><strong>Intern:</strong>
+- <strong>File-Server:</strong> {{ netbox.device.fileserver }}
+- <strong>SharePoint/OneDrive:</strong> {{ meta.collaboration.sharepoint }}
+- <strong>Teams/Slack:</strong> {{ meta.collaboration.teams }}</p>
+<p><strong>Extern (mit Kunden/Partnern):</strong>
+- <strong>Secure File Transfer:</strong> {{ meta.filesharing.secure_platform }}
+- <strong>Nur mit Verschlüsselung und Passwortschutz</strong></p>
+<p><strong>Verboten:</strong>
+- Private Cloud-Dienste (Dropbox privat, Google Drive privat)
+- WeTransfer, Filemail (ohne Genehmigung)
+- USB-Sticks für vertrauliche Daten</p>
+<h3 id="32-berechtigungen">3.2 Berechtigungen</h3>
+<p><strong>Least Privilege:</strong>
+- Nur erforderliche Berechtigungen
+- Read-Only wo möglich
+- Zeitlich befristete Freigaben</p>
+<p><strong>Externe Freigaben:</strong>
+- Genehmigung durch Daten-Owner
+- Passwortschutz verpflichtend
+- Ablaufdatum setzen (max. 90 Tage)
+- Logging aller Zugriffe</p>
+<h3 id="33-dlp-fur-file-sharing">3.3 DLP für File-Sharing</h3>
+<p><strong>Automatische Kontrollen:</strong>
+- Blockierung vertraulicher Daten bei externer Freigabe
+- Warnung bei großen Datenmengen
+- Alerts bei ungewöhnlichen Sharing-Mustern</p>
+<h2 id="4-collaboration-tools">4. Collaboration-Tools</h2>
+<h3 id="41-microsoft-teams-slack">4.1 Microsoft Teams / Slack</h3>
+<p><strong>Genehmigte Nutzung:</strong>
+- Interne Kommunikation
+- Projekt-Collaboration
+- Video-Konferenzen</p>
+<p><strong>Sicherheitseinstellungen:</strong>
+- Externe Gäste nur mit Genehmigung
+- DLP-Policies aktiviert
+- Retention-Policies konfiguriert
+- Audit-Logging aktiviert</p>
+<p><strong>Verbotene Aktivitäten:</strong>
+- Sharing vertraulicher Daten in öffentlichen Channels
+- Nutzung privater Accounts für geschäftliche Zwecke
+- Installation nicht genehmigter Apps/Bots</p>
+<h3 id="42-video-konferenzen">4.2 Video-Konferenzen</h3>
+<p><strong>Genehmigte Plattformen:</strong>
+- <strong>Intern:</strong> {{ meta.collaboration.video }} (z.B. Teams, Zoom)
+- <strong>Extern:</strong> Nur genehmigte Plattformen</p>
+<p><strong>Sicherheitseinstellungen:</strong>
+- Warteraum aktiviert
+- Passwortschutz für Meetings
+- Keine Aufzeichnung ohne Zustimmung
+- Bildschirmfreigabe nur für Moderator</p>
+<p><strong>Best Practices:</strong>
+- Hintergrund-Unschärfe nutzen
+- Mikrofon stumm schalten wenn nicht sprechend
+- Keine vertraulichen Informationen in öffentlichen Meetings</p>
+<h3 id="43-instant-messaging">4.3 Instant Messaging</h3>
+<p><strong>Genehmigte Tools:</strong>
+- Microsoft Teams Chat
+- Slack (Enterprise)</p>
+<p><strong>Verboten:</strong>
+- WhatsApp, Telegram für geschäftliche Kommunikation
+- Private Messaging-Apps</p>
+<p><strong>Retention:</strong>
+- Chat-Historie: {{ meta.retention.chat_years }} Jahre
+- Compliance-Archivierung</p>
+<h2 id="5-externe-kommunikation">5. Externe Kommunikation</h2>
+<h3 id="51-kommunikation-mit-kunden">5.1 Kommunikation mit Kunden</h3>
+<p><strong>Kanäle:</strong>
+- E-Mail (bevorzugt)
+- Telefon
+- Video-Konferenz
+- Kundenportal (falls vorhanden)</p>
+<p><strong>Vertrauliche Informationen:</strong>
+- Verschlüsselung verpflichtend
+- Secure File Transfer nutzen
+- Keine vertraulichen Daten per SMS/WhatsApp</p>
+<h3 id="52-kommunikation-mit-lieferanten">5.2 Kommunikation mit Lieferanten</h3>
+<p><strong>Anforderungen:</strong>
+- NDA vor Austausch vertraulicher Informationen
+- Genehmigte Kommunikationskanäle
+- Dokumentation wichtiger Kommunikation</p>
+<h3 id="53-social-media">5.3 Social Media</h3>
+<p><strong>Geschäftliche Nutzung:</strong>
+- Nur autorisierte Accounts
+- Social Media Guidelines befolgen
+- Keine vertraulichen Informationen</p>
+<p><strong>Private Nutzung:</strong>
+- Keine Vortäuschung offizieller Unternehmensmeinung
+- Disclaimer bei Meinungsäußerungen
+- Keine negativen Äußerungen über Unternehmen</p>
+<p><strong>Details:</strong> Siehe <code>0210_Richtlinie_Akzeptable_Nutzung_IT.md</code></p>
+<h2 id="6-mobile-kommunikation">6. Mobile Kommunikation</h2>
+<h3 id="61-geschafts-smartphones">6.1 Geschäfts-Smartphones</h3>
+<p><strong>Konfiguration:</strong>
+- MDM-Enrollment verpflichtend
+- Verschlüsselung aktiviert
+- Remote-Wipe-Fähigkeit
+- Genehmigte Apps nur</p>
+<p><strong>Nutzung:</strong>
+- Geschäftliche E-Mails und Kalender
+- Teams/Slack
+- Geschäftliche Telefonate</p>
+<h3 id="62-byod">6.2 BYOD</h3>
+<p><strong>Anforderungen:</strong>
+- Containerisierung (Work Profile)
+- Separate Apps für geschäftlich/privat
+- MDM-Enrollment</p>
+<p><strong>Details:</strong> Siehe <code>0510_Richtlinie_MDM_BringYourOwnDevice</code></p>
+<h2 id="7-data-loss-prevention-dlp">7. Data Loss Prevention (DLP)</h2>
+<h3 id="71-dlp-policies">7.1 DLP-Policies</h3>
+<p><strong>Für E-Mail:</strong>
+- Blockierung von Kreditkartennummern
+- Warnung bei "Vertraulich"-Label extern
+- Blockierung großer Anhänge (&gt; 25 MB)</p>
+<p><strong>Für File-Sharing:</strong>
+- Blockierung vertraulicher Daten bei externer Freigabe
+- Warnung bei Sharing mit vielen Personen</p>
+<p><strong>Für Collaboration-Tools:</strong>
+- Warnung bei Posting vertraulicher Daten in öffentlichen Channels</p>
+<h3 id="72-dlp-incidents">7.2 DLP-Incidents</h3>
+<p><strong>Bei DLP-Blockierung:</strong>
+1. Nutzer erhält Warnung
+2. Incident-Ticket erstellt
+3. Security-Team prüft
+4. Bei Bedarf: Schulung oder Disziplinarmaßnahmen</p>
+<h2 id="8-compliance-und-audit">8. Compliance und Audit</h2>
+<h3 id="81-messgroen-kpis">8.1 Messgrößen (KPIs)</h3>
+<table>
+<thead>
+<tr>
+<th>Metrik</th>
+<th>Zielwert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E-Mail-Verschlüsselung (vertraulich)</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Phishing-Klickrate (Simulation)</td>
+<td>&lt; 5%</td>
+</tr>
+<tr>
+<td>DLP-Incidents</td>
+<td>&lt; 10 pro Monat</td>
+</tr>
+<tr>
+<td>Externe Freigaben mit Passwort</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="82-audit-nachweise">8.2 Audit-Nachweise</h3>
+<ul>
+<li>E-Mail-Archiv</li>
+<li>File-Sharing-Logs</li>
+<li>DLP-Incident-Reports</li>
+<li>Phishing-Simulation-Ergebnisse</li>
+</ul>
+<h2 id="9-referenzen">9. Referenzen</h2>
+<h3 id="interne-dokumente">Interne Dokumente</h3>
+<ul>
+<li><code>0660_Policy_Informationsuebertragung_und_Kommunikation.md</code></li>
+<li><code>0210_Richtlinie_Akzeptable_Nutzung_IT.md</code></li>
+<li><code>0270_Richtlinie_Key_Management_und_Verschluesselung.md</code></li>
+</ul>
+<h3 id="externe-standards">Externe Standards</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.14</strong> - Information transfer</li>
+<li><strong>NIST SP 800-177</strong> - Trustworthy Email</li>
+</ul>
+<hr />
+<p><strong>Genehmigt durch:</strong> Thomas Weber, CISO<br />
+<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0660_Policy_Informationsuebertragung_und_Kommunikation.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0680_Policy_Security_in_Projects.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

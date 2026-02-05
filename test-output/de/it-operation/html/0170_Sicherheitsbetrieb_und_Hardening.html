@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0170 - Sicherheitsbetrieb und Hardening</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0170</div>
+            <h1>Sicherheitsbetrieb und Hardening</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0160_Disaster_Recovery_und_Business_Continuity.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0180_Patch_und_Update_Management.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="sicherheitsbetrieb-und-hardening">Sicherheitsbetrieb und Hardening</h1>
+<h2 id="zweck-und-geltungsbereich">Zweck und Geltungsbereich</h2>
+<p>Dieses Dokument beschreibt die Sicherheitsbetriebsprozesse und Hardening-Richtlinien für AdminSend GmbH. Es definiert Security-Monitoring, Incident-Response-Prozesse, Vulnerability-Management und Compliance-Anforderungen zur Sicherstellung der Informationssicherheit.</p>
+<p><strong>Geltungsbereich:</strong> Alle IT-Systeme, Netzwerke, Applikationen und Daten von AdminSend GmbH</p>
+<p><strong>Verantwortlich:</strong> Thomas Weber (thomas.weber@adminsend.de)</p>
+<h2 id="sicherheits-grundlagen">Sicherheits-Grundlagen</h2>
+<h3 id="security-ziele-cia-triade">Security-Ziele (CIA-Triade)</h3>
+<p><strong>Confidentiality (Vertraulichkeit):</strong>
+- Schutz vor unbefugtem Zugriff
+- Verschlüsselung sensibler Daten
+- Zugriffskontrolle und Authentifizierung
+- Data Loss Prevention (DLP)</p>
+<p><strong>Integrity (Integrität):</strong>
+- Schutz vor unbefugter Änderung
+- Digitale Signaturen
+- Checksums und Hashing
+- Change-Management-Prozesse</p>
+<p><strong>Availability (Verfügbarkeit):</strong>
+- Schutz vor Denial-of-Service
+- Redundanz und Hochverfügbarkeit
+- Backup und Disaster Recovery
+- Kapazitäts-Management</p>
+<h3 id="defense-in-depth-strategie">Defense-in-Depth-Strategie</h3>
+<p><strong>Sicherheits-Schichten:</strong></p>
+<div class="codehilite"><pre><span></span><code>┌─────────────────────────────────────┐
+│  Perimeter Security                 │  Firewall, IDS/IPS, DDoS-Protection
+├─────────────────────────────────────┤
+│  Network Security                   │  Segmentierung, VLANs, NAC
+├─────────────────────────────────────┤
+│  Host Security                      │  Hardening, Antivirus, EDR
+├─────────────────────────────────────┤
+│  Application Security               │  WAF, Input-Validation, SAST/DAST
+├─────────────────────────────────────┤
+│  Data Security                      │  Encryption, DLP, Backup
+├─────────────────────────────────────┤
+│  Identity &amp; Access Management       │  MFA, RBAC, PAM
+└─────────────────────────────────────┘
+</code></pre></div>
+
+<h3 id="security-frameworks">Security-Frameworks</h3>
+<p><strong>ISO 27001:2013:</strong>
+- Informationssicherheits-Managementsystem (ISMS)
+- 114 Controls in 14 Kategorien
+- Risiko-basierter Ansatz
+- Kontinuierliche Verbesserung</p>
+<p><strong>BSI Grundschutz:</strong>
+- IT-Grundschutz-Kompendium
+- Bausteine für IT-Systeme
+- Standard-Sicherheitsmaßnahmen
+- Basis-Absicherung und Kern-Absicherung</p>
+<p><strong>NIST Cybersecurity Framework:</strong>
+- Identify, Protect, Detect, Respond, Recover
+- Risiko-Management-Ansatz
+- Branchenübergreifend anwendbar</p>
+<p><strong>CIS Controls:</strong>
+- 18 kritische Sicherheitskontrollen
+- Priorisierte Umsetzung
+- Messbare Implementierung</p>
+<h2 id="hardening-richtlinien">Hardening-Richtlinien</h2>
+<h3 id="betriebssystem-hardening">Betriebssystem-Hardening</h3>
+<h4 id="linux-server-hardening">Linux-Server-Hardening</h4>
+<p><strong>Basis-Härtung:</strong>
+- Minimale Installation (nur benötigte Pakete)
+- Regelmäßige Updates und Patches
+- Deaktivierung ungenutzter Services
+- Firewall-Konfiguration (iptables/nftables)
+- SELinux oder AppArmor aktivieren</p>
+<p><strong>Benutzer und Authentifizierung:</strong>
+- Root-Login per SSH deaktivieren
+- SSH-Key-basierte Authentifizierung
+- Sudo statt direktem Root-Zugriff
+- Passwort-Policies (Komplexität, Ablauf)
+- Account-Lockout nach Fehlversuchen</p>
+<p><strong>Netzwerk-Härtung:</strong>
+- Unnötige Netzwerk-Services deaktivieren
+- TCP-Wrapper konfigurieren
+- IP-Tables Regeln restriktiv
+- IPv6 deaktivieren (falls nicht benötigt)</p>
+<p><strong>Logging und Monitoring:</strong>
+- Syslog-Server-Konfiguration
+- Audit-Daemon (auditd) aktivieren
+- Log-Rotation konfigurieren
+- Zentrale Log-Sammlung</p>
+<p><strong>Referenz:</strong> CIS Benchmark für Linux</p>
+<h4 id="windows-server-hardening">Windows-Server-Hardening</h4>
+<p><strong>Basis-Härtung:</strong>
+- Windows-Updates automatisch
+- Unnötige Features deaktivieren
+- Windows Firewall aktivieren
+- Windows Defender aktivieren
+- BitLocker für Disk-Verschlüsselung</p>
+<p><strong>Benutzer und Authentifizierung:</strong>
+- Lokale Administrator-Konten umbenennen
+- Passwort-Policies via GPO
+- Account-Lockout-Policies
+- Privileged Access Management (PAM)
+- LAPS für lokale Admin-Passwörter</p>
+<p><strong>Netzwerk-Härtung:</strong>
+- SMBv1 deaktivieren
+- LLMNR und NetBIOS deaktivieren
+- Windows Firewall-Regeln restriktiv
+- IPSec für Server-Kommunikation</p>
+<p><strong>Logging und Monitoring:</strong>
+- Advanced Audit Policy konfigurieren
+- PowerShell-Logging aktivieren
+- Event-Log-Forwarding
+- Sysmon installieren</p>
+<p><strong>Referenz:</strong> CIS Benchmark für Windows Server, Microsoft Security Baseline</p>
+<h3 id="netzwerk-hardening">Netzwerk-Hardening</h3>
+<h4 id="firewall-konfiguration">Firewall-Konfiguration</h4>
+<p><strong>Prinzipien:</strong>
+- Default Deny (alles verbieten, nur Benötigtes erlauben)
+- Least Privilege (minimale Berechtigungen)
+- Segmentierung (Netzwerk-Zonen)</p>
+<p><strong>Firewall-Regeln:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Quelle</th>
+<th>Ziel</th>
+<th>Port</th>
+<th>Protokoll</th>
+<th>Aktion</th>
+<th>Begründung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Internet</td>
+<td>DMZ</td>
+<td>443</td>
+<td>TCP</td>
+<td>Allow</td>
+<td>HTTPS-Traffic</td>
+</tr>
+<tr>
+<td>DMZ</td>
+<td>Internal</td>
+<td>3306</td>
+<td>TCP</td>
+<td>Allow</td>
+<td>Datenbank-Zugriff</td>
+</tr>
+<tr>
+<td>Internal</td>
+<td>Internet</td>
+<td>80,443</td>
+<td>TCP</td>
+<td>Allow</td>
+<td>Web-Zugriff</td>
+</tr>
+<tr>
+<td>Any</td>
+<td>Any</td>
+<td>Any</td>
+<td>Any</td>
+<td>Deny</td>
+<td>Default-Regel</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Firewall-System:</strong> {{ netbox.firewall.system }}<br />
+<strong>Management:</strong> {{ netbox.firewall.management_url }}</p>
+<h4 id="netzwerk-segmentierung">Netzwerk-Segmentierung</h4>
+<p><strong>Netzwerk-Zonen:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Zone</th>
+<th>VLAN</th>
+<th>Subnet</th>
+<th>Zweck</th>
+<th>Security-Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DMZ</strong></td>
+<td>{{ netbox.vlan.dmz }}</td>
+<td>{{ netbox.subnet.dmz }}</td>
+<td>Öffentliche Services</td>
+<td>Hoch</td>
+</tr>
+<tr>
+<td><strong>Production</strong></td>
+<td>{{ netbox.vlan.production }}</td>
+<td>{{ netbox.subnet.production }}</td>
+<td>Produktions-Systeme</td>
+<td>Sehr hoch</td>
+</tr>
+<tr>
+<td><strong>Management</strong></td>
+<td>{{ netbox.vlan.management }}</td>
+<td>{{ netbox.subnet.management }}</td>
+<td>Admin-Zugriff</td>
+<td>Kritisch</td>
+</tr>
+<tr>
+<td><strong>User</strong></td>
+<td>{{ netbox.vlan.user }}</td>
+<td>{{ netbox.subnet.user }}</td>
+<td>Benutzer-Netzwerk</td>
+<td>Mittel</td>
+</tr>
+<tr>
+<td><strong>Guest</strong></td>
+<td>{{ netbox.vlan.guest }}</td>
+<td>{{ netbox.subnet.guest }}</td>
+<td>Gast-WLAN</td>
+<td>Niedrig</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Segmentierungs-Regeln:</strong>
+- Keine direkte Kommunikation zwischen Zonen
+- Traffic über Firewall/Router
+- Micro-Segmentierung für kritische Systeme
+- Zero-Trust-Prinzip</p>
+<h4 id="vpn-hartung">VPN-Härtung</h4>
+<p><strong>VPN-Typ:</strong> {{ meta.vpn_type }}<br />
+<strong>Verschlüsselung:</strong> AES-256<br />
+<strong>Authentifizierung:</strong> Certificate-based + MFA</p>
+<p><strong>Härtungs-Maßnahmen:</strong>
+- Starke Verschlüsselungs-Algorithmen
+- Perfect Forward Secrecy (PFS)
+- Certificate-based Authentication
+- Multi-Factor-Authentication (MFA)
+- Split-Tunneling deaktivieren
+- Inaktivitäts-Timeout (15 Min)</p>
+<h3 id="applikations-hardening">Applikations-Hardening</h3>
+<h4 id="web-applikationen">Web-Applikationen</h4>
+<p><strong>OWASP Top 10 Mitigations:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Risiko</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Injection</strong></td>
+<td>Prepared Statements, Input-Validation</td>
+</tr>
+<tr>
+<td><strong>Broken Authentication</strong></td>
+<td>MFA, Session-Management, Passwort-Policies</td>
+</tr>
+<tr>
+<td><strong>Sensitive Data Exposure</strong></td>
+<td>Encryption at Rest/Transit, HTTPS</td>
+</tr>
+<tr>
+<td><strong>XML External Entities</strong></td>
+<td>Disable XML External Entity Processing</td>
+</tr>
+<tr>
+<td><strong>Broken Access Control</strong></td>
+<td>RBAC, Least Privilege</td>
+</tr>
+<tr>
+<td><strong>Security Misconfiguration</strong></td>
+<td>Hardening, Security-Headers</td>
+</tr>
+<tr>
+<td><strong>XSS</strong></td>
+<td>Input-Validation, Output-Encoding, CSP</td>
+</tr>
+<tr>
+<td><strong>Insecure Deserialization</strong></td>
+<td>Input-Validation, Integrity-Checks</td>
+</tr>
+<tr>
+<td><strong>Using Components with Known Vulnerabilities</strong></td>
+<td>Dependency-Scanning, Updates</td>
+</tr>
+<tr>
+<td><strong>Insufficient Logging</strong></td>
+<td>Security-Logging, Monitoring</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Security-Headers:</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="nt">Strict-Transport-Security</span><span class="o">:</span><span class="w"> </span><span class="nt">max-age</span><span class="o">=</span><span class="nt">31536000</span><span class="o">;</span><span class="w"> </span><span class="nt">includeSubDomains</span>
+<span class="nt">X-Frame-Options</span><span class="o">:</span><span class="w"> </span><span class="nt">DENY</span>
+<span class="nt">X-Content-Type-Options</span><span class="o">:</span><span class="w"> </span><span class="nt">nosniff</span>
+<span class="nt">Content-Security-Policy</span><span class="o">:</span><span class="w"> </span><span class="nt">default-src</span><span class="w"> </span><span class="s1">&#39;self&#39;</span>
+<span class="nt">X-XSS-Protection</span><span class="o">:</span><span class="w"> </span><span class="nt">1</span><span class="o">;</span><span class="w"> </span><span class="nt">mode</span><span class="o">=</span><span class="nt">block</span>
+<span class="nt">Referrer-Policy</span><span class="o">:</span><span class="w"> </span><span class="nt">no-referrer</span>
+</code></pre></div>
+
+<h4 id="datenbank-hardening">Datenbank-Hardening</h4>
+<p><strong>MySQL/MariaDB:</strong>
+- Root-Passwort ändern
+- Anonyme Benutzer entfernen
+- Test-Datenbank löschen
+- Remote-Root-Login deaktivieren
+- Least-Privilege für Applikations-Benutzer
+- SSL/TLS für Verbindungen
+- Audit-Plugin aktivieren</p>
+<p><strong>PostgreSQL:</strong>
+- pg_hba.conf restriktiv konfigurieren
+- SSL-Verbindungen erzwingen
+- Passwort-Verschlüsselung (SCRAM-SHA-256)
+- Audit-Logging aktivieren
+- Least-Privilege-Berechtigungen</p>
+<p><strong>Referenz:</strong> CIS Benchmark für Datenbanken</p>
+<h3 id="cloud-hardening">Cloud-Hardening</h3>
+<h4 id="aws-hardening">AWS-Hardening</h4>
+<p><strong>IAM-Best-Practices:</strong>
+- Root-Account nicht verwenden
+- MFA für alle Benutzer
+- Least-Privilege-Policies
+- Rollen statt Benutzer für Services
+- Access-Keys rotieren</p>
+<p><strong>Netzwerk-Sicherheit:</strong>
+- Security-Groups restriktiv
+- NACLs für zusätzliche Kontrolle
+- VPC-Flow-Logs aktivieren
+- Private Subnets für Backend
+- VPN/Direct-Connect für Hybrid</p>
+<p><strong>Monitoring:</strong>
+- CloudTrail aktivieren
+- GuardDuty aktivieren
+- Config-Rules für Compliance
+- CloudWatch-Alarme</p>
+<p><strong>Referenz:</strong> CIS AWS Foundations Benchmark</p>
+<h4 id="azure-hardening">Azure-Hardening</h4>
+<p><strong>Identity-Management:</strong>
+- Azure AD mit MFA
+- Conditional Access Policies
+- Privileged Identity Management (PIM)
+- Identity Protection</p>
+<p><strong>Netzwerk-Sicherheit:</strong>
+- Network Security Groups (NSG)
+- Azure Firewall
+- DDoS Protection Standard
+- Private Endpoints</p>
+<p><strong>Monitoring:</strong>
+- Azure Security Center
+- Azure Sentinel
+- Activity Logs
+- Diagnostic Settings</p>
+<p><strong>Referenz:</strong> CIS Microsoft Azure Foundations Benchmark</p>
+<h2 id="security-monitoring">Security-Monitoring</h2>
+<h3 id="security-information-and-event-management-siem">Security Information and Event Management (SIEM)</h3>
+<p><strong>SIEM-System:</strong> {{ meta.siem_system }}<br />
+<strong>Version:</strong> {{ meta.siem_version }}<br />
+<strong>Management:</strong> {{ meta.siem_url }}</p>
+<p><strong>Log-Quellen:</strong>
+- Firewalls und IDS/IPS
+- Server (Windows, Linux)
+- Netzwerk-Geräte (Switches, Router)
+- Applikationen
+- Cloud-Services (AWS, Azure)
+- Endpoint-Security (EDR)
+- Identity-Management (AD, Azure AD)</p>
+<p><strong>Use-Cases:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Use-Case</th>
+<th>Beschreibung</th>
+<th>Priorität</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Failed Login Attempts</strong></td>
+<td>Mehrfache fehlgeschlagene Logins</td>
+<td>Hoch</td>
+</tr>
+<tr>
+<td><strong>Privilege Escalation</strong></td>
+<td>Unerwartete Admin-Rechte</td>
+<td>Kritisch</td>
+</tr>
+<tr>
+<td><strong>Malware Detection</strong></td>
+<td>Antivirus/EDR-Alerts</td>
+<td>Kritisch</td>
+</tr>
+<tr>
+<td><strong>Data Exfiltration</strong></td>
+<td>Ungewöhnliche Daten-Transfers</td>
+<td>Hoch</td>
+</tr>
+<tr>
+<td><strong>Lateral Movement</strong></td>
+<td>Ungewöhnliche Netzwerk-Verbindungen</td>
+<td>Hoch</td>
+</tr>
+<tr>
+<td><strong>Account Anomalies</strong></td>
+<td>Ungewöhnliche Account-Aktivitäten</td>
+<td>Mittel</td>
+</tr>
+<tr>
+<td><strong>Configuration Changes</strong></td>
+<td>Änderungen an kritischen Systemen</td>
+<td>Mittel</td>
+</tr>
+</tbody>
+</table>
+<h3 id="intrusion-detectionprevention-idsips">Intrusion Detection/Prevention (IDS/IPS)</h3>
+<p><strong>IDS/IPS-System:</strong> {{ netbox.ids.system }}<br />
+<strong>Deployment:</strong> Inline (IPS-Modus)<br />
+<strong>Standort:</strong> {{ netbox.ids.location }}</p>
+<p><strong>Erkennungs-Methoden:</strong>
+- <strong>Signature-based:</strong> Bekannte Angriffsmuster
+- <strong>Anomaly-based:</strong> Abweichungen vom Normalverhalten
+- <strong>Heuristic-based:</strong> Verdächtiges Verhalten</p>
+<p><strong>Regel-Sets:</strong>
+- Emerging Threats
+- Snort Community Rules
+- Custom Rules für spezifische Umgebung</p>
+<p><strong>Tuning:</strong>
+- False-Positive-Reduktion
+- Regel-Priorisierung
+- Whitelist für legitimen Traffic</p>
+<h3 id="endpoint-detection-and-response-edr">Endpoint Detection and Response (EDR)</h3>
+<p><strong>EDR-System:</strong> {{ meta.edr_system }}<br />
+<strong>Abdeckung:</strong> Alle Workstations und Server</p>
+<p><strong>Funktionen:</strong>
+- Real-time Threat Detection
+- Behavioral Analysis
+- Automated Response
+- Forensic Capabilities
+- Threat Hunting</p>
+<p><strong>Response-Aktionen:</strong>
+- Alert generieren
+- Prozess beenden
+- Netzwerk-Verbindung blockieren
+- Host isolieren
+- Forensic-Daten sammeln</p>
+<h3 id="security-metriken">Security-Metriken</h3>
+<table>
+<thead>
+<tr>
+<th>Metrik</th>
+<th>Zielwert</th>
+<th>Messung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Mean Time to Detect (MTTD)</strong></td>
+<td>&lt; 1 Stunde</td>
+<td>Durchschnittliche Erkennungszeit</td>
+</tr>
+<tr>
+<td><strong>Mean Time to Respond (MTTR)</strong></td>
+<td>&lt; 4 Stunden</td>
+<td>Durchschnittliche Response-Zeit</td>
+</tr>
+<tr>
+<td><strong>False Positive Rate</strong></td>
+<td>&lt; 5%</td>
+<td>False Positives / Gesamt-Alerts</td>
+</tr>
+<tr>
+<td><strong>Security Incidents</strong></td>
+<td>Trend abnehmend</td>
+<td>Anzahl Incidents pro Monat</td>
+</tr>
+<tr>
+<td><strong>Patch Compliance</strong></td>
+<td>&gt; 95%</td>
+<td>Gepatchte Systeme / Gesamt-Systeme</td>
+</tr>
+</tbody>
+</table>
+<h2 id="vulnerability-management">Vulnerability Management</h2>
+<h3 id="vulnerability-scanning">Vulnerability-Scanning</h3>
+<p><strong>Scanning-Tools:</strong>
+- <strong>Netzwerk-Scanner:</strong> {{ meta.vulnerability_scanner }}
+- <strong>Web-App-Scanner:</strong> {{ meta.web_scanner }}
+- <strong>Container-Scanner:</strong> {{ meta.container_scanner }}</p>
+<p><strong>Scan-Frequenz:</strong>
+- <strong>Kritische Systeme:</strong> Wöchentlich
+- <strong>Produktions-Systeme:</strong> Monatlich
+- <strong>Entwicklungs-Systeme:</strong> Quartalsweise
+- <strong>Ad-hoc:</strong> Nach neuen Vulnerabilities (Zero-Days)</p>
+<p><strong>Scan-Typen:</strong>
+- <strong>Authenticated Scans:</strong> Mit Credentials (detaillierter)
+- <strong>Unauthenticated Scans:</strong> Ohne Credentials (Angreifer-Perspektive)
+- <strong>Internal Scans:</strong> Aus internem Netzwerk
+- <strong>External Scans:</strong> Aus Internet</p>
+<h3 id="vulnerability-bewertung">Vulnerability-Bewertung</h3>
+<p><strong>CVSS-Score (Common Vulnerability Scoring System):</strong></p>
+<table>
+<thead>
+<tr>
+<th>CVSS-Score</th>
+<th>Severity</th>
+<th>SLA für Remediation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>9.0 - 10.0</strong></td>
+<td>Critical</td>
+<td>7 Tage</td>
+</tr>
+<tr>
+<td><strong>7.0 - 8.9</strong></td>
+<td>High</td>
+<td>30 Tage</td>
+</tr>
+<tr>
+<td><strong>4.0 - 6.9</strong></td>
+<td>Medium</td>
+<td>90 Tage</td>
+</tr>
+<tr>
+<td><strong>0.1 - 3.9</strong></td>
+<td>Low</td>
+<td>180 Tage</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Priorisierungs-Faktoren:</strong>
+- CVSS-Score
+- Exploit-Verfügbarkeit
+- Asset-Kritikalität
+- Exposure (Internet-facing)
+- Daten-Sensitivität</p>
+<h3 id="remediation-prozess">Remediation-Prozess</h3>
+<div class="codehilite"><pre><span></span><code>┌─────────────────┐
+│ Vulnerability   │
+│ Identified      │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Risk            │
+│ Assessment      │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Remediation     │
+│ Planning        │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Patch/Fix       │
+│ Implementation  │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Verification    │
+│ &amp; Closure       │
+└─────────────────┘
+</code></pre></div>
+
+<p><strong>Remediation-Optionen:</strong>
+- <strong>Patching:</strong> Software-Updates installieren
+- <strong>Configuration Change:</strong> Sichere Konfiguration
+- <strong>Workaround:</strong> Temporäre Mitigation
+- <strong>Compensating Control:</strong> Alternative Sicherheitsmaßnahme
+- <strong>Accept Risk:</strong> Risiko akzeptieren (mit Management-Genehmigung)</p>
+<h3 id="penetration-testing">Penetration Testing</h3>
+<p><strong>Test-Frequenz:</strong> Jährlich + nach größeren Changes</p>
+<p><strong>Test-Typen:</strong>
+- <strong>Black-Box:</strong> Keine Vorkenntnisse
+- <strong>Gray-Box:</strong> Teilweise Informationen
+- <strong>White-Box:</strong> Vollständige Informationen</p>
+<p><strong>Test-Scope:</strong>
+- Externe Infrastruktur (Internet-facing)
+- Interne Netzwerk-Segmente
+- Web-Applikationen
+- Mobile Apps
+- Social Engineering</p>
+<p><strong>Penetration-Test-Provider:</strong> {{ meta.pentest_provider }}</p>
+<h2 id="security-incident-response">Security Incident Response</h2>
+<h3 id="incident-kategorien">Incident-Kategorien</h3>
+<table>
+<thead>
+<tr>
+<th>Kategorie</th>
+<th>Beispiele</th>
+<th>Severity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Malware</strong></td>
+<td>Virus, Ransomware, Trojaner</td>
+<td>Hoch - Kritisch</td>
+</tr>
+<tr>
+<td><strong>Unauthorized Access</strong></td>
+<td>Kompromittierte Accounts, Brute-Force</td>
+<td>Hoch</td>
+</tr>
+<tr>
+<td><strong>Data Breach</strong></td>
+<td>Daten-Exfiltration, Daten-Leak</td>
+<td>Kritisch</td>
+</tr>
+<tr>
+<td><strong>DDoS</strong></td>
+<td>Denial-of-Service-Angriffe</td>
+<td>Hoch</td>
+</tr>
+<tr>
+<td><strong>Phishing</strong></td>
+<td>Phishing-E-Mails, Social Engineering</td>
+<td>Mittel - Hoch</td>
+</tr>
+<tr>
+<td><strong>Insider Threat</strong></td>
+<td>Böswillige Insider-Aktivitäten</td>
+<td>Hoch - Kritisch</td>
+</tr>
+<tr>
+<td><strong>Policy Violation</strong></td>
+<td>Verstoß gegen Security-Policies</td>
+<td>Niedrig - Mittel</td>
+</tr>
+</tbody>
+</table>
+<h3 id="incident-response-prozess">Incident-Response-Prozess</h3>
+<h4 id="1-preparation">1. Preparation</h4>
+<p><strong>Vorbereitungs-Aktivitäten:</strong>
+- Incident-Response-Team definieren
+- Incident-Response-Plan erstellen
+- Tools und Ressourcen bereitstellen
+- Training und Übungen durchführen
+- Kontakt-Listen pflegen</p>
+<p><strong>IR-Team:</strong>
+- <strong>IR-Manager:</strong> Thomas Weber
+- <strong>Technical Lead:</strong> Andreas Huemmer
+- <strong>Forensic Analyst:</strong> [Name]
+- <strong>Communication Lead:</strong> [Name]
+- <strong>Legal Counsel:</strong> [Name]</p>
+<h4 id="2-detection-analysis">2. Detection &amp; Analysis</h4>
+<p><strong>Erkennungs-Quellen:</strong>
+- SIEM-Alerts
+- IDS/IPS-Alerts
+- EDR-Alerts
+- Benutzer-Meldungen
+- Threat Intelligence</p>
+<p><strong>Analyse-Aktivitäten:</strong>
+- Alert-Validierung (True/False Positive)
+- Scope-Ermittlung (betroffene Systeme)
+- Impact-Assessment
+- Incident-Klassifizierung
+- Incident-Priorisierung</p>
+<p><strong>Incident-Ticket:</strong> {{ meta.ticketing_system }}</p>
+<h4 id="3-containment">3. Containment</h4>
+<p><strong>Short-term Containment:</strong>
+- Betroffene Systeme isolieren
+- Netzwerk-Verbindungen blockieren
+- Kompromittierte Accounts deaktivieren
+- Malware-Ausbreitung stoppen</p>
+<p><strong>Long-term Containment:</strong>
+- Temporäre Fixes implementieren
+- Systeme in isolierte Umgebung verschieben
+- Monitoring verstärken</p>
+<h4 id="4-eradication">4. Eradication</h4>
+<p><strong>Eradication-Aktivitäten:</strong>
+- Malware entfernen
+- Backdoors schließen
+- Kompromittierte Accounts löschen
+- Vulnerabilities patchen
+- Systeme neu aufsetzen (falls erforderlich)</p>
+<h4 id="5-recovery">5. Recovery</h4>
+<p><strong>Recovery-Aktivitäten:</strong>
+- Systeme aus sauberen Backups wiederherstellen
+- Passwörter zurücksetzen
+- Systeme härten
+- Monitoring aktivieren
+- Schrittweise in Produktion nehmen</p>
+<p><strong>Validierung:</strong>
+- Keine Malware-Spuren
+- Keine Backdoors
+- Normale Funktionalität
+- Performance akzeptabel</p>
+<h4 id="6-post-incident-activity">6. Post-Incident Activity</h4>
+<p><strong>Lessons-Learned-Meeting:</strong>
+- Was ist passiert?
+- Wie wurde es erkannt?
+- Was lief gut?
+- Was lief schlecht?
+- Verbesserungs-Maßnahmen</p>
+<p><strong>Dokumentation:</strong>
+- Incident-Report erstellen
+- Timeline dokumentieren
+- IOCs (Indicators of Compromise) sammeln
+- Kosten erfassen</p>
+<p><strong>Follow-up:</strong>
+- Verbesserungs-Maßnahmen umsetzen
+- Policies aktualisieren
+- Training durchführen
+- Threat-Intelligence teilen</p>
+<h3 id="incident-response-playbooks">Incident-Response-Playbooks</h3>
+<p><strong>Ransomware-Playbook:</strong>
+1. Betroffene Systeme sofort isolieren
+2. Keine Lösegeldzahlung (Policy)
+3. Forensic-Analyse durchführen
+4. Strafverfolgung informieren
+5. Aus Backups wiederherstellen
+6. Vulnerabilities patchen</p>
+<p><strong>Data-Breach-Playbook:</strong>
+1. Scope ermitteln (welche Daten, wie viele Betroffene)
+2. Exfiltration stoppen
+3. Forensic-Analyse
+4. Legal-Team einbinden
+5. Meldepflichten prüfen (DSGVO: 72h)
+6. Betroffene informieren
+7. Aufsichtsbehörde melden</p>
+<p><strong>Phishing-Playbook:</strong>
+1. Phishing-E-Mail identifizieren
+2. E-Mail-Filter aktualisieren
+3. Betroffene Benutzer identifizieren
+4. Passwörter zurücksetzen (falls Credentials eingegeben)
+5. Awareness-Training durchführen</p>
+<h2 id="compliance-und-regulierung">Compliance und Regulierung</h2>
+<h3 id="iso-270012013">ISO 27001:2013</h3>
+<p><strong>Implementierungs-Status:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Annex A Control</th>
+<th>Titel</th>
+<th>Status</th>
+<th>Verantwortlich</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A.9</strong></td>
+<td>Access Control</td>
+<td>Implementiert</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td><strong>A.10</strong></td>
+<td>Cryptography</td>
+<td>Implementiert</td>
+<td>IT-Security</td>
+</tr>
+<tr>
+<td><strong>A.12</strong></td>
+<td>Operations Security</td>
+<td>Implementiert</td>
+<td>IT-Operations</td>
+</tr>
+<tr>
+<td><strong>A.13</strong></td>
+<td>Communications Security</td>
+<td>Implementiert</td>
+<td>Network-Team</td>
+</tr>
+<tr>
+<td><strong>A.14</strong></td>
+<td>System Acquisition</td>
+<td>Teilweise</td>
+<td>IT-Management</td>
+</tr>
+<tr>
+<td><strong>A.16</strong></td>
+<td>Incident Management</td>
+<td>Implementiert</td>
+<td>IR-Team</td>
+</tr>
+<tr>
+<td><strong>A.17</strong></td>
+<td>Business Continuity</td>
+<td>Implementiert</td>
+<td>BC-Manager</td>
+</tr>
+<tr>
+<td><strong>A.18</strong></td>
+<td>Compliance</td>
+<td>Implementiert</td>
+<td>Compliance-Officer</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Audit-Frequenz:</strong> Jährlich (extern), Quartalsweise (intern)</p>
+<p><strong>Nächstes Audit:</strong> {{ meta.next_iso_audit }}</p>
+<h3 id="bsi-grundschutz">BSI Grundschutz</h3>
+<p><strong>Basis-Absicherung:</strong>
+- Alle Bausteine der Basis-Absicherung implementiert
+- Standard-Sicherheitsmaßnahmen umgesetzt
+- Dokumentation vollständig</p>
+<p><strong>Kern-Absicherung:</strong>
+- Kritische Bausteine identifiziert
+- Erhöhte Sicherheitsmaßnahmen implementiert
+- Regelmäßige Reviews</p>
+<p><strong>Zertifizierung:</strong> [Geplant/In Arbeit/Zertifiziert]</p>
+<h3 id="dsgvo-gdpr">DSGVO (GDPR)</h3>
+<p><strong>Technische und organisatorische Maßnahmen (TOMs):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Maßnahme</th>
+<th>Implementierung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Verschlüsselung</strong></td>
+<td>AES-256 at Rest, TLS 1.3 in Transit</td>
+</tr>
+<tr>
+<td><strong>Pseudonymisierung</strong></td>
+<td>Wo möglich implementiert</td>
+</tr>
+<tr>
+<td><strong>Zugriffskontrolle</strong></td>
+<td>RBAC, MFA, PAM</td>
+</tr>
+<tr>
+<td><strong>Logging</strong></td>
+<td>Zentrale Log-Sammlung, SIEM</td>
+</tr>
+<tr>
+<td><strong>Backup</strong></td>
+<td>3-2-1-Regel, verschlüsselt</td>
+</tr>
+<tr>
+<td><strong>Incident Response</strong></td>
+<td>IR-Plan, 72h-Meldepflicht</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Datenschutz-Folgenabschätzung (DSFA):</strong>
+- Für Hochrisiko-Verarbeitungen durchgeführt
+- Dokumentiert und genehmigt</p>
+<p><strong>Datenschutzbeauftragter:</strong> {{ meta.data_protection_officer }}</p>
+<h3 id="weitere-standards">Weitere Standards</h3>
+<p><strong>PCI-DSS:</strong> [Falls zutreffend]<br />
+<strong>HIPAA:</strong> [Falls zutreffend]<br />
+<strong>SOX:</strong> [Falls zutreffend]</p>
+<h2 id="security-awareness-und-training">Security-Awareness und Training</h2>
+<h3 id="awareness-programm">Awareness-Programm</h3>
+<p><strong>Zielgruppe:</strong> Alle Mitarbeiter</p>
+<p><strong>Trainings-Themen:</strong>
+- Passwort-Sicherheit
+- Phishing-Erkennung
+- Social Engineering
+- Sichere Nutzung von IT-Systemen
+- Daten-Klassifizierung
+- Incident-Meldung
+- DSGVO-Grundlagen</p>
+<p><strong>Trainings-Frequenz:</strong>
+- Onboarding: Sofort
+- Auffrischung: Jährlich
+- Phishing-Simulationen: Quartalsweise</p>
+<p><strong>Phishing-Simulationen:</strong>
+- Quartalsweise Kampagnen
+- Verschiedene Phishing-Typen
+- Sofortiges Feedback
+- Zusätzliches Training bei Klick</p>
+<h3 id="security-champions">Security-Champions</h3>
+<p><strong>Konzept:</strong> Security-Ansprechpartner in jeder Abteilung</p>
+<p><strong>Aufgaben:</strong>
+- Security-Awareness fördern
+- Security-Fragen beantworten
+- Security-Incidents melden
+- Best Practices verbreiten</p>
+<p><strong>Training:</strong> Erweiterte Security-Schulungen</p>
+<h2 id="rollen-und-verantwortlichkeiten">Rollen und Verantwortlichkeiten</h2>
+<h3 id="chief-information-security-officer-ciso">Chief Information Security Officer (CISO)</h3>
+<p><strong>Verantwortlichkeiten:</strong>
+- Security-Strategie-Ownership
+- Risiko-Management
+- Compliance-Sicherstellung
+- Incident-Response-Koordination
+- Security-Budget</p>
+<p><strong>Person:</strong> Thomas Weber</p>
+<h3 id="security-operations-team">Security-Operations-Team</h3>
+<p><strong>Verantwortlichkeiten:</strong>
+- SIEM-Monitoring
+- Incident-Response
+- Vulnerability-Management
+- Security-Tool-Verwaltung</p>
+<p><strong>Team-Größe:</strong> [Anzahl]</p>
+<h3 id="it-operations-team">IT-Operations-Team</h3>
+<p><strong>Verantwortlichkeiten:</strong>
+- System-Hardening
+- Patch-Management
+- Security-Konfiguration
+- Backup-Sicherheit</p>
+<p><strong>Lead:</strong> Andreas Huemmer</p>
+<h2 id="metriken-und-reporting">Metriken und Reporting</h2>
+<h3 id="security-metriken_1">Security-Metriken</h3>
+<table>
+<thead>
+<tr>
+<th>Metrik</th>
+<th>Zielwert</th>
+<th>Frequenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Security Incidents</strong></td>
+<td>Trend abnehmend</td>
+<td>Monatlich</td>
+</tr>
+<tr>
+<td><strong>MTTD</strong></td>
+<td>&lt; 1 Stunde</td>
+<td>Monatlich</td>
+</tr>
+<tr>
+<td><strong>MTTR</strong></td>
+<td>&lt; 4 Stunden</td>
+<td>Monatlich</td>
+</tr>
+<tr>
+<td><strong>Patch Compliance</strong></td>
+<td>&gt; 95%</td>
+<td>Wöchentlich</td>
+</tr>
+<tr>
+<td><strong>Vulnerability Remediation</strong></td>
+<td>&gt; 90% in SLA</td>
+<td>Monatlich</td>
+</tr>
+<tr>
+<td><strong>Phishing-Click-Rate</strong></td>
+<td>&lt; 5%</td>
+<td>Quartalsweise</td>
+</tr>
+<tr>
+<td><strong>Security-Training-Completion</strong></td>
+<td>100%</td>
+<td>Jährlich</td>
+</tr>
+</tbody>
+</table>
+<h3 id="reporting">Reporting</h3>
+<p><strong>Wöchentliches Security-Dashboard:</strong>
+- Neue Security-Incidents
+- Offene Vulnerabilities
+- Patch-Status
+- SIEM-Alert-Statistiken</p>
+<p><strong>Monatliches Security-Report:</strong>
+- Security-Metriken
+- Incident-Zusammenfassung
+- Vulnerability-Trends
+- Compliance-Status</p>
+<p><strong>Quartalsweises Management-Report:</strong>
+- Security-Posture-Assessment
+- Risiko-Bewertung
+- Compliance-Status
+- Budget und Ressourcen
+- Strategische Empfehlungen</p>
+<h2 id="referenzen">Referenzen</h2>
+<ul>
+<li>ISO/IEC 27001:2013 - Information Security Management</li>
+<li>BSI IT-Grundschutz-Kompendium</li>
+<li>NIST Cybersecurity Framework</li>
+<li>CIS Controls v8</li>
+<li>OWASP Top 10</li>
+<li>SANS Top 25 Software Errors</li>
+<li>MITRE ATT&amp;CK Framework</li>
+<li>DSGVO (GDPR)</li>
+</ul>
+<hr />
+<p><strong>Dokumentverantwortlicher:</strong> IT Operations Manager<br />
+<strong>Genehmigt durch:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Klassifizierung:</strong> internal<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.date }}</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0160_Disaster_Recovery_und_Business_Continuity.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0180_Patch_und_Update_Management.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

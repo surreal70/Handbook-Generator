@@ -16,7 +16,9 @@ from src.placeholder_processor import PlaceholderProcessor
 from src.data_source_adapter import DataSourceAdapter
 from src.netbox_adapter import NetBoxAdapter
 from src.meta_adapter import MetaAdapter
+from src.netbox_metadata_loader import NetBoxMetadataLoader
 from src.output_generator import OutputGenerator
+from src.html_output_generator import HTMLOutputGenerator
 from src.logger import HandbookLogger, StatisticsCalculator
 
 
@@ -33,23 +35,32 @@ def parse_arguments() -> argparse.Namespace:
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  # Interactive mode
-  python -m src.cli
+  # Interactive mode (test mode required)
+  python -m src.cli --test
   
-  # Generate German backup handbook in both formats
-  python -m src.cli --language de --template backup
+  # Generate German backup handbook in both formats (markdown + PDF)
+  python -m src.cli --language de --template backup --test
   
   # Generate English ISMS handbook in PDF only
-  python -m src.cli -l en -t isms -o pdf
+  python -m src.cli -l en -t isms -o pdf --test
   
-  # Generate German BCM handbook in both formats
-  python -m src.cli -l de -t bcm
+  # Generate German BCM handbook in HTML format
+  python -m src.cli -l de -t bcm -o html --test
   
-  # Generate English BSI Grundschutz handbook in Markdown only
-  python -m src.cli -l en -t bsi-grundschutz -o markdown
+  # Generate English BSI Grundschutz handbook in all formats
+  python -m src.cli -l en -t bsi-grundschutz -o all --test
+  
+  # Generate separate markdown files for each template
+  python -m src.cli -l de -t bcm --test --separate-files
+  
+  # Generate PDF with table of contents and page breaks
+  python -m src.cli -l de -t isms -o pdf --test --pdf-toc
+  
+  # Generate both separate markdown files and PDF with TOC
+  python -m src.cli -l de -t bcm --test --separate-files --pdf-toc
   
   # Verbose mode with custom config
-  python -m src.cli -l de -t bcm -v -c custom_config.yaml
+  python -m src.cli -l de -t bcm -v -c custom_config.yaml --test
         """
     )
     
@@ -70,9 +81,9 @@ Examples:
     parser.add_argument(
         '--output', '-o',
         type=str,
-        choices=['markdown', 'pdf', 'both'],
+        choices=['markdown', 'pdf', 'html', 'both', 'all'],
         default='both',
-        help='Output format (default: both)'
+        help='Output format: markdown (single or separate files), pdf (with or without TOC), html (mini-website), both (markdown+pdf), or all (markdown+pdf+html) (default: both)'
     )
     
     parser.add_argument(
@@ -106,6 +117,24 @@ Examples:
         type=str,
         default='Handbook',
         help='Path to output directory (default: Handbook)'
+    )
+    
+    parser.add_argument(
+        '--test',
+        action='store_true',
+        help='Enable test mode to allow output generation (required for safety)'
+    )
+    
+    parser.add_argument(
+        '--separate-files',
+        action='store_true',
+        help='Generate separate markdown files for each template instead of a combined file (creates TOC.md with links)'
+    )
+    
+    parser.add_argument(
+        '--pdf-toc',
+        action='store_true',
+        help='Generate PDF with table of contents and page breaks between templates (improves navigation and readability)'
     )
     
     return parser.parse_args()
@@ -282,14 +311,50 @@ def main() -> int:
     
     logger.log_info(f"\n✓ Found {len(templates)} template(s) for {language}/{template_type}")
     
+    # Load NetBox metadata if NetBox is configured
+    metadata_netbox_path = Path("metadata-netbox.yaml")
+    if config.netbox_url and config.netbox_api_token:
+        logger.log_info("\nLoading NetBox metadata...")
+        try:
+            # Get role distinction configuration
+            role_config = config.netbox_role_distinction or {
+                'method': 'field',
+                'field': 'role',
+                'mappings': {}
+            }
+            
+            # Initialize NetBox metadata loader
+            netbox_loader = NetBoxMetadataLoader(
+                config.netbox_url,
+                config.netbox_api_token,
+                role_config
+            )
+            
+            # Load metadata from NetBox
+            netbox_metadata = netbox_loader.load_metadata()
+            
+            # Save to metadata-netbox.yaml
+            netbox_loader.save_to_yaml(netbox_metadata, str(metadata_netbox_path))
+            
+            logger.log_verbose(f"✓ NetBox metadata loaded and saved to {metadata_netbox_path}")
+            
+        except ConnectionError as e:
+            logger.log_warning(f"Failed to load NetBox metadata: {str(e)}")
+            logger.log_warning("Continuing without NetBox metadata...")
+        except Exception as e:
+            logger.log_warning(f"Unexpected error loading NetBox metadata: {str(e)}")
+            logger.log_warning("Continuing without NetBox metadata...")
+    
     # Initialize data source adapters
     data_sources = {}
     
     # Add meta adapter if metadata is available
     if config.metadata:
         try:
-            meta_adapter = MetaAdapter(config.metadata)
+            meta_adapter = MetaAdapter(config.metadata, language=language)
             if meta_adapter.connect():
+                # Set handbook type for per-handbook metadata support
+                meta_adapter.set_handbook_type(template_type)
                 data_sources['meta'] = meta_adapter
                 logger.log_verbose("✓ Meta adapter initialized with organization metadata")
             else:
@@ -313,8 +378,8 @@ def main() -> int:
     processor = PlaceholderProcessor(data_sources)
     
     # Initialize output generator
-    output_dir = Path(args.output_dir)
-    output_generator = OutputGenerator(output_dir)
+    output_dir = Path('test-output')  # Use consolidated test-output directory
+    output_generator = OutputGenerator(output_dir, test_mode=args.test)
     
     # Start processing
     logger.start_processing()
@@ -358,35 +423,138 @@ def main() -> int:
     output_format = args.output
     markdown_path = None
     pdf_path = None
+    html_dir = None
     
     # Generate markdown
-    if output_format in ['markdown', 'both']:
-        md_result = output_generator.generate_markdown(
-            processed_contents,
-            language,
-            template_type
-        )
-        all_warnings.extend(md_result.warnings)
-        all_errors.extend(md_result.errors)
-        
-        if md_result.markdown_path:
-            markdown_path = md_result.markdown_path
-            logger.log_info(f"✓ Markdown generated: {markdown_path}")
+    if output_format in ['markdown', 'both', 'all']:
+        if args.separate_files:
+            # Generate separate markdown files for each template
+            templates_data = [
+                (template.path.name, content)
+                for template, content in zip(templates, processed_contents)
+            ]
+            
+            md_result = output_generator.generate_separate_markdown_files(
+                templates_data,
+                language,
+                template_type
+            )
+            all_warnings.extend(md_result.warnings)
+            all_errors.extend(md_result.errors)
+            
+            if md_result.markdown_path:
+                markdown_path = md_result.markdown_path
+                # Extract count from warning message
+                file_count = len(templates_data)
+                logger.log_info(f"✓ Generated {file_count} separate markdown files in {markdown_path.parent}")
+            
+            # Generate TOC file
+            templates_info = []
+            for template in templates:
+                # Extract template number and title from filename
+                # Expected format: 0010_Template_Name.md
+                filename = template.path.name
+                filename_base = Path(filename).stem
+                
+                # Extract number (first 4 digits)
+                template_number = filename_base[:4]
+                
+                # Extract title (everything after first underscore, replace underscores with spaces)
+                title_part = filename_base[5:] if len(filename_base) > 5 else filename_base
+                template_title = title_part.replace('_', ' ')
+                
+                templates_info.append((template_number, template_title, filename))
+            
+            toc_result = output_generator.generate_markdown_toc(
+                templates_info,
+                language,
+                template_type
+            )
+            all_warnings.extend(toc_result.warnings)
+            all_errors.extend(toc_result.errors)
+            
+            if toc_result.markdown_path:
+                logger.log_info(f"✓ TOC file generated: {toc_result.markdown_path}")
+        else:
+            # Generate combined markdown file (existing behavior)
+            md_result = output_generator.generate_markdown(
+                processed_contents,
+                language,
+                template_type
+            )
+            all_warnings.extend(md_result.warnings)
+            all_errors.extend(md_result.errors)
+            
+            if md_result.markdown_path:
+                markdown_path = md_result.markdown_path
+                logger.log_info(f"✓ Markdown generated: {markdown_path}")
     
     # Generate PDF
-    if output_format in ['pdf', 'both']:
-        assembled_content = output_generator.assemble_markdown(processed_contents)
-        pdf_result = output_generator.generate_pdf(
-            assembled_content,
+    if output_format in ['pdf', 'both', 'all']:
+        if args.pdf_toc:
+            # Generate PDF with table of contents
+            templates_data = []
+            for template, content in zip(templates, processed_contents):
+                # Extract template number and title from filename
+                # Expected format: 0010_Template_Name.md
+                filename = template.path.name
+                filename_base = Path(filename).stem
+                
+                # Extract number (first 4 digits)
+                template_number = filename_base[:4]
+                
+                # Extract title (everything after first underscore, replace underscores with spaces)
+                title_part = filename_base[5:] if len(filename_base) > 5 else filename_base
+                template_title = title_part.replace('_', ' ')
+                
+                templates_data.append((template_number, template_title, content))
+            
+            pdf_result = output_generator.generate_pdf_with_toc(
+                templates_data,
+                language,
+                template_type
+            )
+            all_warnings.extend(pdf_result.warnings)
+            all_errors.extend(pdf_result.errors)
+            
+            if pdf_result.pdf_path:
+                pdf_path = pdf_result.pdf_path
+                logger.log_info(f"✓ PDF with TOC generated: {pdf_path}")
+        else:
+            # Generate PDF without TOC (existing behavior)
+            assembled_content = output_generator.assemble_markdown(processed_contents)
+            pdf_result = output_generator.generate_pdf(
+                assembled_content,
+                language,
+                template_type
+            )
+            all_warnings.extend(pdf_result.warnings)
+            all_errors.extend(pdf_result.errors)
+            
+            if pdf_result.pdf_path:
+                pdf_path = pdf_result.pdf_path
+                logger.log_info(f"✓ PDF generated: {pdf_path}")
+    
+    # Generate HTML
+    if output_format in ['html', 'all']:
+        html_generator = HTMLOutputGenerator(output_dir, test_mode=args.test)
+        
+        # Extract filenames from templates
+        filenames = [template.path.name for template in templates]
+        
+        html_result = html_generator.generate_html_site(
+            processed_contents,
+            filenames,
             language,
             template_type
         )
-        all_warnings.extend(pdf_result.warnings)
-        all_errors.extend(pdf_result.errors)
+        all_warnings.extend(html_result.get('warnings', []))
+        all_errors.extend(html_result.get('errors', []))
         
-        if pdf_result.pdf_path:
-            pdf_path = pdf_result.pdf_path
-            logger.log_info(f"✓ PDF generated: {pdf_path}")
+        if html_result.get('html_dir'):
+            html_dir = html_result['html_dir']
+            file_count = len(html_result.get('files', []))
+            logger.log_info(f"✓ HTML site generated: {html_dir} ({file_count} files)")
     
     # Calculate statistics
     processing_time = logger.get_elapsed_time()
@@ -397,6 +565,14 @@ def main() -> int:
         output_size += markdown_path.stat().st_size
     if pdf_path and pdf_path.exists():
         output_size += pdf_path.stat().st_size
+    if html_dir and html_dir.exists():
+        # Sum up all HTML files
+        for html_file in html_dir.glob('*.html'):
+            output_size += html_file.stat().st_size
+        # Include CSS file
+        css_file = html_dir / 'styles.css'
+        if css_file.exists():
+            output_size += css_file.stat().st_size
     
     stats = StatisticsCalculator.calculate_statistics(
         processed_results,

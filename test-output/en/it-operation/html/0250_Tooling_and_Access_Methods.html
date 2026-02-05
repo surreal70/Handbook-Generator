@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0250 - Tooling and Access Methods</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0250</div>
+            <h1>Tooling and Access Methods</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0240_Runbooks_Standard_Operations.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0260_Known_Issues_and_FAQ.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="tooling-and-access-methods">Tooling and Access Methods</h1>
+<h2 id="overview">Overview</h2>
+<p>This document describes the tools and systems used, access methods and URLs, as well as authentication methods for the IT service. The goal is to provide a central overview of all relevant tools and their access.</p>
+<p><strong>Document Owner:</strong> IT Operations Manager<br />
+<strong>Approved by:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Organization:</strong> AdminSend GmbH</p>
+<hr />
+<h2 id="tool-categories">Tool Categories</h2>
+<h3 id="tool-categories-overview">Tool Categories Overview</h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th style="text-align: right;">Number of Tools</th>
+<th>Main Responsible</th>
+<th>Criticality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Monitoring &amp; Observability</td>
+<td style="text-align: right;">[TODO]</td>
+<td>Andreas Huemmer</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Infrastructure Management</td>
+<td style="text-align: right;">[TODO]</td>
+<td>Andreas Huemmer</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Security &amp; Compliance</td>
+<td style="text-align: right;">[TODO]</td>
+<td>Thomas Weber</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Development &amp; Deployment</td>
+<td style="text-align: right;">[TODO]</td>
+<td>Andreas Huemmer</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Collaboration &amp; Communication</td>
+<td style="text-align: right;">[TODO]</td>
+<td>Peter Fischer</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Documentation &amp; Knowledge</td>
+<td style="text-align: right;">[TODO]</td>
+<td>Andreas Huemmer</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Backup &amp; Recovery</td>
+<td style="text-align: right;">[TODO]</td>
+<td>Andreas Huemmer</td>
+<td>High</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="monitoring-and-observability">Monitoring and Observability</h2>
+<h3 id="system-monitoring">System Monitoring</h3>
+<h4 id="todo-monitoring-tool-name">[TODO: Monitoring Tool Name]</h4>
+<ul>
+<li><strong>Purpose:</strong> System and infrastructure monitoring</li>
+<li><strong>URL:</strong> [TODO: https://monitoring.example.com]</li>
+<li><strong>Access:</strong> VPN + SSO</li>
+<li><strong>Authentication:</strong> AdminSend GmbH SSO</li>
+<li><strong>Responsible:</strong> Andreas Huemmer</li>
+<li><strong>Support:</strong> [TODO: Support Contact]</li>
+<li><strong>Documentation:</strong> [TODO: Documentation URL]</li>
+</ul>
+<p><strong>Main Functions:</strong>
+- Server monitoring (CPU, RAM, Disk, Network)
+- Service monitoring (Uptime, Response Time)
+- Alerting and notifications
+- Dashboards and visualization</p>
+<hr />
+<h2 id="infrastructure-management">Infrastructure Management</h2>
+<h3 id="configuration-management-database-cmdb">Configuration Management Database (CMDB)</h3>
+<h4 id="netbox">NetBox</h4>
+<ul>
+<li><strong>Purpose:</strong> CMDB and IPAM</li>
+<li><strong>URL:</strong> {{ netbox.url }}</li>
+<li><strong>Access:</strong> VPN + Username/Password</li>
+<li><strong>Authentication:</strong> Local accounts or LDAP</li>
+<li><strong>Responsible:</strong> Andreas Huemmer</li>
+<li><strong>API:</strong> {{ netbox.api_url }}</li>
+<li><strong>Documentation:</strong> https://docs.netbox.dev/</li>
+</ul>
+<p><strong>Main Functions:</strong>
+- Device inventory
+- IP address management (IPAM)
+- Rack management
+- Cable documentation
+- Virtualization tracking</p>
+<hr />
+<h2 id="security-and-compliance">Security and Compliance</h2>
+<h3 id="security-information-and-event-management-siem">Security Information and Event Management (SIEM)</h3>
+<h4 id="todo-siem-tool-name">[TODO: SIEM Tool Name]</h4>
+<ul>
+<li><strong>Purpose:</strong> Security event monitoring and analysis</li>
+<li><strong>URL:</strong> [TODO: https://siem.example.com]</li>
+<li><strong>Access:</strong> VPN + SSO</li>
+<li><strong>Authentication:</strong> AdminSend GmbH SSO</li>
+<li><strong>Responsible:</strong> Thomas Weber</li>
+<li><strong>Support:</strong> [TODO: Support Contact]</li>
+</ul>
+<p><strong>Main Functions:</strong>
+- Security event aggregation
+- Threat detection
+- Incident response
+- Compliance reporting</p>
+<hr />
+<h2 id="access-methods">Access Methods</h2>
+<h3 id="vpn-access">VPN Access</h3>
+<h4 id="corporate-vpn">Corporate VPN</h4>
+<ul>
+<li><strong>Purpose:</strong> Secure remote access</li>
+<li><strong>URL:</strong> [TODO: https://vpn.example.com]</li>
+<li><strong>Client:</strong> [TODO: VPN Client Name]</li>
+<li><strong>Authentication:</strong> AdminSend GmbH AD + MFA</li>
+<li><strong>Responsible:</strong> Thomas Weber</li>
+<li><strong>Support:</strong> julia.becker@adminsend.de</li>
+</ul>
+<p><strong>Connection Instructions:</strong>
+1. Install VPN client
+2. Import/configure profile
+3. Connect with AD credentials + MFA
+4. Validate connection</p>
+<hr />
+<h3 id="ssh-access">SSH Access</h3>
+<h4 id="ssh-bastion-host">SSH Bastion Host</h4>
+<ul>
+<li><strong>Purpose:</strong> Secure SSH access to servers</li>
+<li><strong>Hostname:</strong> [TODO: bastion.example.com]</li>
+<li><strong>Port:</strong> 22</li>
+<li><strong>Authentication:</strong> SSH Keys + MFA</li>
+<li><strong>Responsible:</strong> Andreas Huemmer</li>
+</ul>
+<p><strong>Connection Instructions:</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Generate SSH key (if not exists)</span>
+ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;your_email@example.com&quot;</span>
+
+<span class="c1"># Add public key to bastion host</span>
+<span class="c1"># (by admin)</span>
+
+<span class="c1"># Connect to bastion host</span>
+ssh<span class="w"> </span>-i<span class="w"> </span>~/.ssh/id_ed25519<span class="w"> </span>username@bastion.example.com
+
+<span class="c1"># From bastion to target server</span>
+ssh<span class="w"> </span>username@target-server
+</code></pre></div>
+
+<hr />
+<h2 id="authentication-methods">Authentication Methods</h2>
+<h3 id="single-sign-on-sso">Single Sign-On (SSO)</h3>
+<h4 id="adminsend-gmbh-sso">AdminSend GmbH SSO</h4>
+<ul>
+<li><strong>Provider:</strong> [TODO: SSO Provider]</li>
+<li><strong>Protocol:</strong> SAML 2.0 / OAuth 2.0 / OpenID Connect</li>
+<li><strong>MFA:</strong> Required for all external access</li>
+<li><strong>Session Timeout:</strong> 8 hours</li>
+<li><strong>Responsible:</strong> Thomas Weber</li>
+</ul>
+<p><strong>Supported Applications:</strong>
+- [TODO: List of SSO-integrated applications]</p>
+<hr />
+<h3 id="api-authentication">API Authentication</h3>
+<h4 id="api-tokens">API Tokens</h4>
+<ul>
+<li><strong>Usage:</strong> Programmatic access to APIs</li>
+<li><strong>Generation:</strong> Via respective tool interface</li>
+<li><strong>Rotation:</strong> Every 90 days</li>
+<li><strong>Storage:</strong> Secrets management system</li>
+<li><strong>Responsible:</strong> Andreas Huemmer</li>
+</ul>
+<p><strong>Best Practices:</strong>
+- Never commit tokens in code
+- Minimal permissions (Least Privilege)
+- Regular rotation
+- Monitor token usage</p>
+<hr />
+<h2 id="emergency-access">Emergency Access</h2>
+<h3 id="break-glass-accounts">Break-Glass Accounts</h3>
+<h4 id="emergency-admin-account">Emergency Admin Account</h4>
+<ul>
+<li><strong>Purpose:</strong> Emergency access in case of SSO failure</li>
+<li><strong>Storage:</strong> Sealed envelope in safe</li>
+<li><strong>Access:</strong> Only by Anna Schmidt or Thomas Weber</li>
+<li><strong>Logging:</strong> Every use is logged and reviewed</li>
+<li><strong>Password Rotation:</strong> Quarterly</li>
+</ul>
+<p><strong>Usage Process:</strong>
+1. Identify and document emergency
+2. Obtain approval from CIO/CISO
+3. Open envelope and document
+4. Perform access
+5. Log all actions
+6. Change password and seal new envelope
+7. Create incident report</p>
+<hr />
+<h2 id="processes-and-responsibilities">Processes and Responsibilities</h2>
+<h3 id="raci-matrix">RACI Matrix</h3>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>CIO</th>
+<th>CISO</th>
+<th>Ops Manager</th>
+<th>Ops Team</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tool Selection</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Tool Implementation</td>
+<td>C</td>
+<td>C</td>
+<td>A</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Access Management</td>
+<td>C</td>
+<td>A</td>
+<td>R</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Tool Maintenance</td>
+<td>I</td>
+<td>C</td>
+<td>A</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Tool Review</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Emergency Access</td>
+<td>A</td>
+<td>A</td>
+<td>C</td>
+<td>I</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Legend:</strong> R = Responsible, A = Accountable, C = Consulted, I = Informed</p>
+</blockquote>
+<hr />
+<p><strong>Last Update:</strong> {{ meta.date }}<br />
+<strong>Next Review:</strong> [TODO: Date]<br />
+<strong>Contact:</strong> andreas.huemmer@adminsend.de</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0240_Runbooks_Standard_Operations.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0260_Known_Issues_and_FAQ.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

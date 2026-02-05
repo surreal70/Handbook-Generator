@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0450 - Guideline: ICT Disaster Recovery - Interfaces to BCM</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0450</div>
+            <h1>Guideline: ICT Disaster Recovery - Interfaces to BCM</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0440_Policy_Business_Continuity_ICT_Readiness.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0460_Policy_Supplier_and_Cloud_Security.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="guideline-ict-disaster-recovery-interfaces-to-bcm">Guideline: ICT Disaster Recovery - Interfaces to BCM</h1>
+<p><strong>Document ID:</strong> 0450<br />
+<strong>Document Type:</strong> Guideline (detailed)<br />
+<strong>Related Policy:</strong> 0440_Policy_Business_Continuity_ICT_Readiness.md<br />
+<strong>Standard Reference:</strong> ISO/IEC 27001:2022 Annex A.5.29, A.5.30<br />
+<strong>Owner:</strong> {{ meta.it_operations.manager }}<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Approved<br />
+<strong>Classification:</strong> Confidential<br />
+<strong>Last Updated:</strong> {{ meta.document.date }}</p>
+<hr />
+<h2 id="1-purpose-and-scope">1. Purpose and Scope</h2>
+<p>This guideline implements the <code>0440_Policy_Business_Continuity_ICT_Readiness.md</code> and defines:
+- ICT disaster recovery plans and processes
+- Interfaces to Business Continuity Management (BCM)
+- ICT readiness for emergency situations</p>
+<p><strong>Scope:</strong> All IT systems and services at <strong>AdminSend GmbH</strong></p>
+<h2 id="2-ict-disaster-recovery-strategy">2. ICT Disaster Recovery Strategy</h2>
+<h3 id="21-recovery-objectives">2.1 Recovery Objectives</h3>
+<p><strong>RTO (Recovery Time Objective):</strong>
+| System Tier | RTO | Rationale |
+|-------------|-----|-----------|
+| Tier 1 (Critical) | 4 hours | Business-critical systems |
+| Tier 2 (Important) | 24 hours | Important business functions |
+| Tier 3 (Standard) | 72 hours | Standard IT services |</p>
+<p><strong>RPO (Recovery Point Objective):</strong>
+| System Tier | RPO | Backup Frequency |
+|-------------|-----|------------------|
+| Tier 1 | 1 hour | Hourly |
+| Tier 2 | 24 hours | Daily |
+| Tier 3 | 7 days | Weekly |</p>
+<h3 id="22-dr-strategies">2.2 DR Strategies</h3>
+<p><strong>Hot Site:</strong>
+- Fully redundant infrastructure
+- Real-time replication
+- Immediate failover capability
+- For Tier 1 systems</p>
+<p><strong>Warm Site:</strong>
+- Partially pre-configured infrastructure
+- Regular backups
+- Activation within hours
+- For Tier 2 systems</p>
+<p><strong>Cold Site:</strong>
+- Basic infrastructure available
+- Recovery from backups
+- Activation within days
+- For Tier 3 systems</p>
+<h2 id="3-dr-infrastructure">3. DR Infrastructure</h2>
+<h3 id="31-primary-data-center">3.1 Primary Data Center</h3>
+<p><strong>Location:</strong> {{ netbox.site.primary }}<br />
+<strong>Systems:</strong> All production systems<br />
+<strong>Redundancy:</strong> N+1 for critical components</p>
+<h3 id="32-dr-site">3.2 DR Site</h3>
+<p><strong>Location:</strong> {{ netbox.site.dr }}<br />
+<strong>Distance:</strong> &gt; 50 km from primary site<br />
+<strong>Systems:</strong> Replicated Tier 1 systems, backup infrastructure</p>
+<h3 id="33-cloud-dr">3.3 Cloud DR</h3>
+<p><strong>Cloud Provider:</strong> {{ meta.cloud.dr_provider }}<br />
+<strong>Regions:</strong> {{ meta.cloud.primary_region }}, {{ meta.cloud.dr_region }}<br />
+<strong>Services:</strong> IaaS for DR workloads</p>
+<h2 id="4-interfaces-to-bcm">4. Interfaces to BCM</h2>
+<h3 id="41-business-impact-analysis-bia">4.1 Business Impact Analysis (BIA)</h3>
+<p><strong>ICT Input for BIA:</strong>
+- System dependencies
+- RTO/RPO capabilities
+- Single points of failure
+- Recovery costs</p>
+<p><strong>BIA Output for ICT:</strong>
+- Criticality of business processes
+- Maximum tolerable downtime (MTD)
+- Recovery prioritization</p>
+<h3 id="42-bcm-plans">4.2 BCM Plans</h3>
+<p><strong>ICT Contributions:</strong>
+- IT Disaster Recovery Plan (DRP)
+- Technical recovery procedures
+- IT personnel contact lists
+- Escalation paths</p>
+<p><strong>BCM Coordination:</strong>
+- Alignment with Business Continuity Plans (BCP)
+- Joint exercises and tests
+- Consistent communication</p>
+<h3 id="43-crisis-management">4.3 Crisis Management</h3>
+<p><strong>ICT Role in Crisis Team:</strong>
+- IT representative in crisis team
+- Status updates on IT systems
+- Technical decision support
+- Coordination of IT recovery</p>
+<h2 id="5-dr-activation">5. DR Activation</h2>
+<h3 id="51-activation-criteria">5.1 Activation Criteria</h3>
+<p><strong>Automatic Activation:</strong>
+- Complete failure of primary site
+- Critical infrastructure components failed
+- Natural disasters</p>
+<p><strong>Manual Activation:</strong>
+- Decision by crisis team
+- Planned failover tests
+- Maintenance activities</p>
+<h3 id="52-activation-process">5.2 Activation Process</h3>
+<p><strong>Phase 1: Assessment (0-30 minutes)</strong>
+1. Assess extent of damage
+2. Decide on DR activation
+3. Inform crisis team
+4. Mobilize DR team</p>
+<p><strong>Phase 2: Activation (30 minutes - 4 hours)</strong>
+1. Activate DR infrastructure
+2. Restore systems (by priority)
+3. Switch network routing
+4. Functional test</p>
+<p><strong>Phase 3: Operation (variable)</strong>
+1. Operation in DR mode
+2. Intensify monitoring
+3. Regular status updates
+4. Prepare return</p>
+<p><strong>Phase 4: Failback (planned)</strong>
+1. Restore primary site
+2. Synchronize data
+3. Planned failback
+4. Verification</p>
+<h2 id="6-dr-tests">6. DR Tests</h2>
+<h3 id="61-test-types">6.1 Test Types</h3>
+<p><strong>Tabletop Exercise:</strong>
+- Frequency: Quarterly
+- Walkthrough of DR plan
+- No technical activation</p>
+<p><strong>Partial Failover:</strong>
+- Frequency: Semi-annually
+- Individual systems failover
+- Minimal business impact</p>
+<p><strong>Full DR Drill:</strong>
+- Frequency: Annually
+- Complete failover of all Tier 1 systems
+- Planned downtime required</p>
+<h3 id="62-test-documentation">6.2 Test Documentation</h3>
+<p><strong>Test Protocol:</strong>
+- Date, participants, scope
+- Steps performed
+- Measured RTO/RPO
+- Problems and lessons learned
+- Improvement measures</p>
+<h2 id="7-compliance-and-audit">7. Compliance and Audit</h2>
+<h3 id="71-key-performance-indicators-kpis">7.1 Key Performance Indicators (KPIs)</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Target Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DR test success rate</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>RTO compliance (test)</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>RPO compliance (test)</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>DR plan currency</td>
+<td>&lt; 6 months</td>
+</tr>
+</tbody>
+</table>
+<h3 id="72-audit-evidence">7.2 Audit Evidence</h3>
+<ul>
+<li>DR plans and procedures</li>
+<li>Test protocols</li>
+<li>BIA documentation</li>
+<li>Failover logs</li>
+</ul>
+<h2 id="8-references">8. References</h2>
+<h3 id="internal-documents">Internal Documents</h3>
+<ul>
+<li><code>0440_Policy_Business_Continuity_ICT_Readiness.md</code></li>
+<li><code>0430_Guideline_Backup_Restore_and_Regular_Tests.md</code></li>
+<li>BCM Handbook (if available)</li>
+</ul>
+<h3 id="external-standards">External Standards</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.29</strong> - Information security during disruption</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.30</strong> - ICT readiness for business continuity</li>
+<li><strong>ISO 22301</strong> - Business Continuity Management</li>
+</ul>
+<hr />
+<p><strong>Approved by:</strong> Thomas Weber, CISO<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0440_Policy_Business_Continuity_ICT_Readiness.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0460_Policy_Supplier_and_Cloud_Security.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

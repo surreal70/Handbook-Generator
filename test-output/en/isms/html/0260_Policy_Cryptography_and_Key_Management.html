@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0260 - Policy: Cryptography and Key Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0260</div>
+            <h1>Policy: Cryptography and Key Management</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0250_Guideline_MFA_Password_Rules_and_Session_Management.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0270_Guideline_Key_Management_and_Encryption.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="policy-cryptography-and-key-management">Policy: Cryptography and Key Management</h1>
+<p><strong>Document ID:</strong> 0260<br />
+<strong>Document Type:</strong> Policy (abstract)<br />
+<strong>Standard Reference:</strong> ISO/IEC 27001:2022 Annex A.8.24 (incl. Amendment 1:2024)<br />
+<strong>Owner:</strong> Thomas Weber<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Approved<br />
+<strong>Classification:</strong> Internal<br />
+<strong>Last Updated:</strong> {{ meta.document.date }}<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This policy defines the principles for the use of cryptographic procedures and the management of cryptographic keys at <strong>AdminSend GmbH</strong>. It ensures that information is protected by appropriate cryptographic controls and keys are managed securely.</p>
+<h2 id="2-scope">2. Scope</h2>
+<p>This policy applies to:</p>
+<ul>
+<li><strong>Organizational Units:</strong> All departments and locations of AdminSend GmbH</li>
+<li><strong>Systems:</strong> All IT systems, applications, databases, networks, cloud services</li>
+<li><strong>Data:</strong> All data at rest, in transit, and in use</li>
+<li><strong>Cryptographic Procedures:</strong> Encryption, hashing, digital signatures, certificates</li>
+<li><strong>Locations:</strong> {{ netbox.site.name }} and all other operational sites</li>
+</ul>
+<p><strong>Exceptions:</strong> Exceptions are only permitted through the defined exception process (<code>0640_Policy_Ausnahmen_und_Risk_Waivers.md</code>).</p>
+<h2 id="3-principles-policy-statements">3. Principles (Policy Statements)</h2>
+<h3 id="31-risk-based-use-of-cryptography">3.1 Risk-Based Use of Cryptography</h3>
+<p>Cryptographic procedures are deployed based on risk analysis. The protection requirements of information determine the strength and type of cryptographic controls.</p>
+<h3 id="32-encryption-of-sensitive-data">3.2 Encryption of Sensitive Data</h3>
+<p>Sensitive and confidential data is encrypted both at rest and in transit:
+- <strong>Data at Rest:</strong> Encryption of databases, file systems, backups, mobile devices
+- <strong>Data in Transit:</strong> TLS/SSL for network communication, VPN for remote access
+- <strong>Data in Use:</strong> Encryption in memory where technically feasible (e.g., confidential computing)</p>
+<h3 id="33-use-of-recognized-algorithms">3.3 Use of Recognized Algorithms</h3>
+<p>Only recognized and standardized cryptographic algorithms are used:
+- Symmetric encryption: AES-256 or higher
+- Asymmetric encryption: RSA-2048 or higher, ECC with at least 256 bits
+- Hashing: SHA-256 or higher
+- Deprecated algorithms (MD5, SHA-1, DES, 3DES) are prohibited</p>
+<h3 id="34-key-management-lifecycle">3.4 Key Management Lifecycle</h3>
+<p>Cryptographic keys are managed securely throughout their entire lifecycle:
+- <strong>Generation:</strong> Secure random number generators, sufficient key length
+- <strong>Storage:</strong> Hardware Security Modules (HSM), Key Management Systems (KMS)
+- <strong>Distribution:</strong> Secure transmission channels, authentication of recipients
+- <strong>Rotation:</strong> Regular key rotation based on risk and compliance requirements
+- <strong>Archiving:</strong> Secure retention for decryption of historical data
+- <strong>Destruction:</strong> Secure deletion of keys no longer needed</p>
+<h3 id="35-separation-of-keys-and-data">3.5 Separation of Keys and Data</h3>
+<p>Cryptographic keys are stored separately from encrypted data. Keys must not be stored in plaintext in configuration files or source code.</p>
+<h3 id="36-certificate-management">3.6 Certificate Management</h3>
+<p>Digital certificates are managed centrally:
+- Use of trusted Certificate Authorities (CA)
+- Regular review and renewal of certificates
+- Monitoring of expiring certificates
+- Secure storage of private keys</p>
+<h3 id="37-cryptographic-protocols">3.7 Cryptographic Protocols</h3>
+<p>Secure cryptographic protocols are used for communication:
+- TLS 1.2 or higher (TLS 1.3 preferred)
+- SSH-2 for secure remote access
+- IPsec for VPN connections
+- Deprecated protocols (SSL, TLS 1.0/1.1) are prohibited</p>
+<h3 id="38-compliance-with-export-controls">3.8 Compliance with Export Controls</h3>
+<p>The use of cryptography complies with national and international export control regulations.</p>
+<h2 id="4-roles-and-responsibilities">4. Roles and Responsibilities</h2>
+<h3 id="raci-matrix-cryptography-and-key-management">RACI Matrix: Cryptography and Key Management</h3>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>CISO</th>
+<th>IT Operations</th>
+<th>Crypto Officer</th>
+<th>Development</th>
+<th>Compliance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Policy Creation</td>
+<td>R/A</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Crypto Architecture</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Key Generation</td>
+<td>C</td>
+<td>R</td>
+<td>R/A</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Key Rotation</td>
+<td>C</td>
+<td>R</td>
+<td>R/A</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Certificate Management</td>
+<td>C</td>
+<td>R</td>
+<td>R/A</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Crypto Monitoring</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>I</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Compliance Review</td>
+<td>C</td>
+<td>I</td>
+<td>C</td>
+<td>I</td>
+<td>R/A</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legend:</strong> R = Responsible (Execution), A = Accountable (Accountable), C = Consulted (Consulted), I = Informed (Informed)</p>
+<h3 id="key-roles">Key Roles</h3>
+<ul>
+<li><strong>Policy Owner:</strong> Thomas Weber (CISO)</li>
+<li><strong>Crypto Officer:</strong> {{ meta.it.crypto_officer }}</li>
+<li><strong>Key Management Responsible:</strong> {{ meta.it.key_manager }}</li>
+<li><strong>Implementation Responsible:</strong> IT operations, development</li>
+<li><strong>Control/Audit Function:</strong> ISMS, internal audit, compliance</li>
+</ul>
+<h2 id="5-derivations-guidelinesstandardsprocesses">5. Derivations (Guidelines/Standards/Processes)</h2>
+<p>Implementation details are defined in subordinate documents:</p>
+<h3 id="related-guidelines">Related Guidelines</h3>
+<ul>
+<li><strong>0270_Richtlinie_Key_Management_und_Verschluesselung.md</strong> - Detailed implementation guideline</li>
+<li><code>0280_Policy_Datenklassifizierung_und_Informationshandling.md</code> - Data classification policy</li>
+<li><code>0460_Policy_Lieferanten_und_Cloud_Sicherheit.md</code> - Cloud security policy</li>
+<li><code>0600_Policy_Netzwerksicherheit.md</code> - Network security policy</li>
+</ul>
+<h3 id="related-standardsbaselines">Related Standards/Baselines</h3>
+<ul>
+<li>Cryptographic algorithms standard</li>
+<li>Key length requirements</li>
+<li>TLS/SSL configuration standard</li>
+<li>Certificate lifecycle standard</li>
+</ul>
+<h3 id="related-processes">Related Processes</h3>
+<ul>
+<li>Key generation and rotation process</li>
+<li>Certificate renewal process</li>
+<li>Incident response for key compromise</li>
+<li>Crypto agility process (migration to new algorithms)</li>
+</ul>
+<h2 id="6-compliance-monitoring-and-enforcement">6. Compliance, Monitoring, and Enforcement</h2>
+<h3 id="metrics-and-kpis">Metrics and KPIs</h3>
+<ul>
+<li>Number of encrypted systems and databases</li>
+<li>Encryption rate of sensitive data (target: 100%)</li>
+<li>Number of expiring certificates (target: 0 expired certificates)</li>
+<li>Average key rotation time</li>
+<li>Number of violations of crypto standards</li>
+<li>Number of compromised keys</li>
+</ul>
+<h3 id="evidence-and-proof">Evidence and Proof</h3>
+<ul>
+<li>Encryption inventory</li>
+<li>Key management logs</li>
+<li>Certificate register</li>
+<li>Crypto compliance reports</li>
+<li>Penetration test results</li>
+<li>Audit reports on cryptographic controls</li>
+</ul>
+<h3 id="consequences-for-violations">Consequences for Violations</h3>
+<p>Violations of this policy are handled according to applicable HR and compliance processes:
+- <strong>Use of weak algorithms:</strong> Immediate remediation, retraining
+- <strong>Insecure key storage:</strong> Immediate key rotation, investigation
+- <strong>Key compromise:</strong> Incident response, revocation, forensic analysis
+- <strong>Repeated violations:</strong> Employment law consequences</p>
+<h2 id="7-exceptions">7. Exceptions</h2>
+<p>Exceptions to this policy are only permitted in justified exceptional cases:</p>
+<ul>
+<li><strong>Exception Process:</strong> See <code>0640_Policy_Ausnahmen_und_Risk_Waivers.md</code></li>
+<li><strong>Approval:</strong> Exceptions must be approved by CISO and crypto officer</li>
+<li><strong>Documentation:</strong> All exceptions are documented in the risk register</li>
+<li><strong>Time Limit:</strong> Exceptions are generally time-limited and regularly reviewed</li>
+<li><strong>Compensating Controls:</strong> Exceptions require alternative security measures</li>
+</ul>
+<h2 id="8-references">8. References</h2>
+<h3 id="internal-documents">Internal Documents</h3>
+<ul>
+<li><code>0010_ISMS_Informationssicherheitsleitlinie.md</code> - ISMS policy</li>
+<li><code>0270_Richtlinie_Key_Management_und_Verschluesselung.md</code> - Detailed guideline</li>
+<li><code>0280_Policy_Datenklassifizierung_und_Informationshandling.md</code> - Data classification policy</li>
+<li><code>0080_ISMS_Risikoregister_Template.md</code> - Risk register</li>
+</ul>
+<h3 id="external-standards-and-requirements">External Standards and Requirements</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.8.24</strong> - Use of cryptography</li>
+<li><strong>ISO/IEC 27002:2022</strong> - Information security controls</li>
+<li><strong>NIST SP 800-57</strong> - Recommendation for Key Management</li>
+<li><strong>NIST SP 800-175B</strong> - Guideline for Using Cryptographic Standards</li>
+<li><strong>BSI TR-02102</strong> - Cryptographic Procedures: Recommendations and Key Lengths</li>
+<li><strong>FIPS 140-2/140-3</strong> - Security Requirements for Cryptographic Modules</li>
+<li><strong>eIDAS Regulation (EU 910/2014)</strong> - Electronic Identification and Trust Services</li>
+</ul>
+<hr />
+<p><strong>Approved by:</strong><br />
+{{ meta.management.ceo }}, Management<br />
+Date: {{ meta.document.approval_date }}</p>
+<p><strong>Next Review:</strong> {{ meta.document.next_review }} (annually or as needed)</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0250_Guideline_MFA_Password_Rules_and_Session_Management.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0270_Guideline_Key_Management_and_Encryption.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

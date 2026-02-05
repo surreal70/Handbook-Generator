@@ -5,7 +5,7 @@ Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
 Copyright: 2025
 """
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from enum import Enum
 from pathlib import Path
 from typing import Optional, Dict
@@ -136,6 +136,34 @@ class DocumentInfo:
 
 
 @dataclass
+class HandbookInfo:
+    """
+    Per-handbook versioning and responsible persons.
+    
+    Attributes:
+        version: Handbook version (e.g., "1.0.0")
+        owner: Handbook owner name
+        approver: Handbook approver name
+        date: Handbook date (ISO format: YYYY-MM-DD)
+    """
+    version: str
+    owner: str
+    approver: str
+    date: str
+    
+    def __post_init__(self):
+        """Validate handbook info after initialization."""
+        # Validate date format (basic check for YYYY-MM-DD)
+        if self.date:
+            import re
+            if not re.match(r'^\d{4}-\d{2}-\d{2}$', self.date):
+                raise ValueError(
+                    f"Invalid date format: {self.date}. "
+                    f"Expected ISO format: YYYY-MM-DD"
+                )
+
+
+@dataclass
 class MetadataConfig:
     """
     Main metadata configuration class.
@@ -146,12 +174,14 @@ class MetadataConfig:
         document: Document information
         author: Default author name
         language: Default language code
+        handbooks: Dictionary of per-handbook metadata (handbook_type -> HandbookInfo)
     """
     organization: OrganizationInfo
     roles: Dict[str, PersonRole]
     document: DocumentInfo
     author: str
     language: str
+    handbooks: Dict[str, HandbookInfo] = field(default_factory=dict)
     
     def get_role(self, role_name: str) -> Optional[PersonRole]:
         """
@@ -173,6 +203,30 @@ class MetadataConfig:
         # Try case-insensitive search
         for key, value in self.roles.items():
             if key.lower() == role_name_lower:
+                return value
+        
+        return None
+    
+    def get_handbook_metadata(self, handbook_type: str) -> Optional[HandbookInfo]:
+        """
+        Get metadata for specific handbook type.
+        
+        Args:
+            handbook_type: Type of handbook (bcm, isms, bsi-grundschutz, it-operation)
+            
+        Returns:
+            HandbookInfo object if found, None otherwise
+        """
+        # Convert to lowercase for case-insensitive lookup
+        handbook_type_lower = handbook_type.lower()
+        
+        # Try direct lookup
+        if handbook_type_lower in self.handbooks:
+            return self.handbooks[handbook_type_lower]
+        
+        # Try case-insensitive search
+        for key, value in self.handbooks.items():
+            if key.lower() == handbook_type_lower:
                 return value
         
         return None
@@ -303,12 +357,34 @@ class MetadataConfigManager:
         author = defaults.get('author', 'Andreas Huemmer [andreas.huemmer@adminsend.de]')
         language = defaults.get('language', 'de')
         
+        # Parse handbooks (per-handbook versioning)
+        handbooks_data = metadata_data.get('handbooks', {})
+        handbooks = {}
+        
+        for handbook_type, handbook_data in handbooks_data.items():
+            if not isinstance(handbook_data, dict):
+                raise ValueError(
+                    f"Invalid configuration for handbook '{handbook_type}': "
+                    f"expected dictionary, got {type(handbook_data).__name__}"
+                )
+            
+            try:
+                handbooks[handbook_type.lower()] = HandbookInfo(
+                    version=handbook_data.get('version', '1.0.0'),
+                    owner=handbook_data.get('owner', ''),
+                    approver=handbook_data.get('approver', ''),
+                    date=handbook_data.get('date', '')
+                )
+            except ValueError as e:
+                raise ValueError(f"Invalid data for handbook '{handbook_type}': {e}")
+        
         return MetadataConfig(
             organization=organization,
             roles=roles,
             document=document,
             author=author,
-            language=language
+            language=language,
+            handbooks=handbooks
         )
 
 
@@ -380,6 +456,32 @@ document:
   approver: "CIO"
   version: "1.0.0"
   classification: "internal"  # public, internal, confidential, restricted
+
+# Per-Handbook Versioning and Responsible Persons
+handbooks:
+  bcm:
+    version: "1.0.0"
+    owner: "Peter Fischer"
+    approver: "Max Mustermann"
+    date: "2025-02-05"
+  
+  isms:
+    version: "2.1.0"
+    owner: "Thomas Weber"
+    approver: "Anna Schmidt"
+    date: "2025-02-01"
+  
+  bsi-grundschutz:
+    version: "1.5.0"
+    owner: "Thomas Weber"
+    approver: "Anna Schmidt"
+    date: "2025-01-28"
+  
+  it-operation:
+    version: "3.0.0"
+    owner: "Andreas Huemmer"
+    approver: "Anna Schmidt"
+    date: "2025-01-15"
 
 defaults:
   author: "Andreas Huemmer [andreas.huemmer@adminsend.de]"

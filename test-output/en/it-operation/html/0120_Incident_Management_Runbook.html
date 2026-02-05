@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0120 - Incident Management Runbook</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0120</div>
+            <h1>Incident Management Runbook</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0110_Monitoring_Alerting_and_Observability.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0130_Problem_Management_and_Postmortems.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="incident-management-runbook">Incident Management Runbook</h1>
+<h2 id="purpose-and-scope">Purpose and Scope</h2>
+<p>This document describes the incident management process for AdminSend GmbH according to ITIL v4 best practices. It defines categories, priorities, escalation processes, and standard runbooks for handling service disruptions.</p>
+<p><strong>Scope:</strong> All IT services and systems of AdminSend GmbH</p>
+<p><strong>Responsible:</strong> Andreas Huemmer (andreas.huemmer@adminsend.de)</p>
+<h2 id="incident-definition">Incident Definition</h2>
+<p>An <strong>incident</strong> is an unplanned interruption or quality reduction of an IT service. The goal of incident management is to restore normal service operation as quickly as possible.</p>
+<h3 id="distinction-from-other-processes">Distinction from Other Processes</h3>
+<table>
+<thead>
+<tr>
+<th>Process</th>
+<th>Focus</th>
+<th>Goal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Incident Management</strong></td>
+<td>Symptom treatment</td>
+<td>Quick restoration</td>
+</tr>
+<tr>
+<td><strong>Problem Management</strong></td>
+<td>Root cause analysis</td>
+<td>Permanent solution</td>
+</tr>
+<tr>
+<td><strong>Change Management</strong></td>
+<td>Planned changes</td>
+<td>Controlled implementation</td>
+</tr>
+<tr>
+<td><strong>Service Request</strong></td>
+<td>Standard requests</td>
+<td>Fulfillment of requirements</td>
+</tr>
+</tbody>
+</table>
+<h2 id="incident-categories">Incident Categories</h2>
+<h3 id="categorization-by-area">Categorization by Area</h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Description</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Hardware</strong></td>
+<td>Physical devices and components</td>
+<td>Server failure, disk defect, network hardware</td>
+</tr>
+<tr>
+<td><strong>Software</strong></td>
+<td>Applications and operating systems</td>
+<td>Application crash, license issues, software bugs</td>
+</tr>
+<tr>
+<td><strong>Network</strong></td>
+<td>Network connections and services</td>
+<td>Connection drops, DNS problems, firewall blocks</td>
+</tr>
+<tr>
+<td><strong>Security</strong></td>
+<td>Security incidents</td>
+<td>Malware, unauthorized access, data breach</td>
+</tr>
+<tr>
+<td><strong>Performance</strong></td>
+<td>Performance problems</td>
+<td>Slow response times, high CPU load, memory leaks</td>
+</tr>
+<tr>
+<td><strong>Data</strong></td>
+<td>Data loss or corruption</td>
+<td>Database corruption, backup errors, data loss</td>
+</tr>
+<tr>
+<td><strong>User</strong></td>
+<td>Access and permission problems</td>
+<td>Login problems, password reset, missing permissions</td>
+</tr>
+</tbody>
+</table>
+<h3 id="categorization-by-service">Categorization by Service</h3>
+<ul>
+<li><strong>Email Service</strong></li>
+<li><strong>File Server</strong></li>
+<li><strong>Database Service</strong></li>
+<li><strong>Web Applications</strong></li>
+<li><strong>Network Infrastructure</strong></li>
+<li><strong>Backup Systems</strong></li>
+<li><strong>Monitoring Systems</strong></li>
+<li><strong>[Additional services per service catalog]</strong></li>
+</ul>
+<h2 id="incident-priorities">Incident Priorities</h2>
+<p>The priority of an incident is determined by <strong>impact</strong> and <strong>urgency</strong>.</p>
+<h3 id="impact-assessment">Impact Assessment</h3>
+<table>
+<thead>
+<tr>
+<th>Impact</th>
+<th>Description</th>
+<th>Affected Users</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>High</strong></td>
+<td>Critical service completely failed</td>
+<td>&gt; 50% of users or business-critical service</td>
+</tr>
+<tr>
+<td><strong>Medium</strong></td>
+<td>Service limited availability</td>
+<td>10-50% of users or important service</td>
+</tr>
+<tr>
+<td><strong>Low</strong></td>
+<td>Individual users affected</td>
+<td>&lt; 10% of users or non-critical service</td>
+</tr>
+</tbody>
+</table>
+<h3 id="urgency-assessment">Urgency Assessment</h3>
+<table>
+<thead>
+<tr>
+<th>Urgency</th>
+<th>Description</th>
+<th>Time Window</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>High</strong></td>
+<td>Immediate processing required</td>
+<td>Business process blocked</td>
+</tr>
+<tr>
+<td><strong>Medium</strong></td>
+<td>Timely processing required</td>
+<td>Business process impaired</td>
+</tr>
+<tr>
+<td><strong>Low</strong></td>
+<td>Can be processed as planned</td>
+<td>No immediate impact</td>
+</tr>
+</tbody>
+</table>
+<h3 id="priority-matrix">Priority Matrix</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Urgency: High</strong></th>
+<th><strong>Urgency: Medium</strong></th>
+<th><strong>Urgency: Low</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Impact: High</strong></td>
+<td><strong>P1 - Critical</strong></td>
+<td><strong>P2 - High</strong></td>
+<td><strong>P3 - Medium</strong></td>
+</tr>
+<tr>
+<td><strong>Impact: Medium</strong></td>
+<td><strong>P2 - High</strong></td>
+<td><strong>P3 - Medium</strong></td>
+<td><strong>P4 - Low</strong></td>
+</tr>
+<tr>
+<td><strong>Impact: Low</strong></td>
+<td><strong>P3 - Medium</strong></td>
+<td><strong>P4 - Low</strong></td>
+<td><strong>P5 - Planned</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="service-level-targets">Service Level Targets</h3>
+<table>
+<thead>
+<tr>
+<th>Priority</th>
+<th>Response Time</th>
+<th>Resolution Time</th>
+<th>Escalate After</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>P1 - Critical</strong></td>
+<td>15 minutes</td>
+<td>4 hours</td>
+<td>1 hour</td>
+</tr>
+<tr>
+<td><strong>P2 - High</strong></td>
+<td>30 minutes</td>
+<td>8 hours</td>
+<td>2 hours</td>
+</tr>
+<tr>
+<td><strong>P3 - Medium</strong></td>
+<td>2 hours</td>
+<td>24 hours</td>
+<td>8 hours</td>
+</tr>
+<tr>
+<td><strong>P4 - Low</strong></td>
+<td>4 hours</td>
+<td>48 hours</td>
+<td>24 hours</td>
+</tr>
+<tr>
+<td><strong>P5 - Planned</strong></td>
+<td>1 business day</td>
+<td>5 business days</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h2 id="incident-management-process">Incident Management Process</h2>
+<h3 id="process-overview-itil-v4">Process Overview (ITIL v4)</h3>
+<div class="codehilite"><pre><span></span><code>┌─────────────────┐
+│ Incident        │
+│ Detection       │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Incident        │
+│ Logging         │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Categorization  │
+│ &amp; Prioritization│
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Initial         │
+│ Diagnosis       │
+└────────┬────────┘
+         │
+    ┌────▼────┐
+    │ Known   │ Yes ┌──────────────┐
+    │ Error?  ├────►│ Apply        │
+    └────┬────┘     │ Workaround   │
+         │ No       └──────────────┘
+         │
+┌────────▼────────┐
+│ Investigation   │
+│ &amp; Diagnosis     │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Resolution      │
+│ &amp; Recovery      │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Incident        │
+│ Closure         │
+└─────────────────┘
+</code></pre></div>
+
+<h3 id="1-incident-detection">1. Incident Detection</h3>
+<p><strong>Detection Sources:</strong>
+- Monitoring alerts ({{ netbox.monitoring_system }})
+- Service desk tickets
+- User reports
+- Automatic event correlation</p>
+<p><strong>Responsible:</strong> Monitoring system, service desk</p>
+<h3 id="2-incident-logging">2. Incident Logging</h3>
+<p><strong>Required Information:</strong>
+- Incident ID (automatically generated)
+- Timestamp of report
+- Affected service/system
+- Symptom description
+- Affected users/locations
+- Reporter (name, contact)</p>
+<p><strong>Tool:</strong> {{ meta.ticketing_system }}</p>
+<p><strong>Responsible:</strong> Service desk</p>
+<h3 id="3-categorization-prioritization">3. Categorization &amp; Prioritization</h3>
+<p><strong>Activities:</strong>
+- Assign category (hardware, software, network, etc.)
+- Assess impact
+- Assess urgency
+- Calculate priority (P1-P5)
+- Identify affected service</p>
+<p><strong>Responsible:</strong> Service desk / incident manager</p>
+<h3 id="4-initial-diagnosis">4. Initial Diagnosis</h3>
+<p><strong>Activities:</strong>
+- Analyze symptoms
+- Check logs
+- Evaluate monitoring data
+- Search known error database
+- First resolution attempts (level 1)</p>
+<p><strong>Responsible:</strong> Service desk (level 1)</p>
+<h3 id="5-investigation-diagnosis">5. Investigation &amp; Diagnosis</h3>
+<p><strong>Activities:</strong>
+- Detailed technical analysis
+- Root cause identification (if possible)
+- Workaround development
+- Escalation to specialists (level 2/3)</p>
+<p><strong>Responsible:</strong> IT operations team (level 2/3)</p>
+<h3 id="6-resolution-recovery">6. Resolution &amp; Recovery</h3>
+<p><strong>Activities:</strong>
+- Implement solution
+- Restore service
+- Test functionality
+- Inform users</p>
+<p><strong>Responsible:</strong> IT operations team</p>
+<h3 id="7-incident-closure">7. Incident Closure</h3>
+<p><strong>Activities:</strong>
+- Obtain user confirmation
+- Complete documentation
+- Close incident
+- Create problem ticket if needed</p>
+<p><strong>Responsible:</strong> Service desk</p>
+<h2 id="escalation-processes">Escalation Processes</h2>
+<h3 id="hierarchical-escalation">Hierarchical Escalation</h3>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Role</th>
+<th>Contact</th>
+<th>Escalate For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Level 1</strong></td>
+<td>Service desk</td>
+<td>julia.becker@adminsend.de</td>
+<td>Standard incidents</td>
+</tr>
+<tr>
+<td><strong>Level 2</strong></td>
+<td>IT operations team</td>
+<td>andreas.huemmer@adminsend.de</td>
+<td>Complex technical problems</td>
+</tr>
+<tr>
+<td><strong>Level 3</strong></td>
+<td>Specialists / vendor</td>
+<td>[Vendor contacts]</td>
+<td>Specialist knowledge required</td>
+</tr>
+<tr>
+<td><strong>Management</strong></td>
+<td>CIO</td>
+<td>anna.schmidt@adminsend.de</td>
+<td>P1 incidents &gt; 2h</td>
+</tr>
+</tbody>
+</table>
+<h3 id="functional-escalation">Functional Escalation</h3>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Contact Person</th>
+<th>Contact</th>
+<th>Responsibility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Network</strong></td>
+<td>Network team</td>
+<td>[Email]</td>
+<td>Network infrastructure</td>
+</tr>
+<tr>
+<td><strong>Server</strong></td>
+<td>Server team</td>
+<td>[Email]</td>
+<td>Servers and virtualization</td>
+</tr>
+<tr>
+<td><strong>Database</strong></td>
+<td>DBA team</td>
+<td>[Email]</td>
+<td>Database systems</td>
+</tr>
+<tr>
+<td><strong>Security</strong></td>
+<td>Security team</td>
+<td>thomas.weber@adminsend.de</td>
+<td>Security incidents</td>
+</tr>
+<tr>
+<td><strong>Applications</strong></td>
+<td>Application team</td>
+<td>[Email]</td>
+<td>Business applications</td>
+</tr>
+</tbody>
+</table>
+<h3 id="escalation-triggers">Escalation Triggers</h3>
+<p><strong>Automatic Escalation For:</strong>
+- P1 incident not resolved after 1 hour
+- P2 incident not resolved after 2 hours
+- P3 incident not resolved after 8 hours
+- Multiple reopenings of same incident
+- Security incidents (immediately to CISO)</p>
+<p><strong>Management Escalation For:</strong>
+- P1 incidents (inform CIO)
+- Incidents with high media attention
+- Incidents with legal implications
+- Multiple simultaneous P1/P2 incidents</p>
+<h2 id="standard-runbooks">Standard Runbooks</h2>
+<h3 id="runbook-1-server-unreachable">Runbook 1: Server Unreachable</h3>
+<p><strong>Symptoms:</strong> Server not responding to ping, services unavailable</p>
+<p><strong>Priority:</strong> P1 or P2 (depending on service criticality)</p>
+<p><strong>Diagnosis Steps:</strong>
+1. Perform ping test: <code>ping {{ netbox.server.ip }}</code>
+2. Check monitoring dashboard
+3. Check physical state (if on-site)
+4. Check network connectivity
+5. Check hypervisor status (for VMs)</p>
+<p><strong>Resolution Steps:</strong>
+1. Restore network connection (if network problem)
+2. Perform server restart (if hanging)
+3. Perform hypervisor migration (for VM problem)
+4. Initiate hardware replacement (for hardware defect)
+5. Activate backup system (if primary system defective)</p>
+<p><strong>Escalation:</strong> After 30 minutes to level 2, after 1 hour to management</p>
+<h3 id="runbook-2-application-slow-unreachable">Runbook 2: Application Slow / Unreachable</h3>
+<p><strong>Symptoms:</strong> Long response times, timeouts, HTTP 500/503 errors</p>
+<p><strong>Priority:</strong> P2 or P3</p>
+<p><strong>Diagnosis Steps:</strong>
+1. Check application logs
+2. Analyze performance metrics (CPU, RAM, disk I/O)
+3. Check database performance
+4. Measure network latency
+5. Check load balancer status</p>
+<p><strong>Resolution Steps:</strong>
+1. Perform application restart
+2. Clear cache
+3. Optimize database queries
+4. Scale resources (increase CPU/RAM)
+5. Redirect traffic to other instances</p>
+<p><strong>Escalation:</strong> After 2 hours to application team</p>
+<h3 id="runbook-3-database-connection-error">Runbook 3: Database Connection Error</h3>
+<p><strong>Symptoms:</strong> Connection timeout, "too many connections", application cannot access DB</p>
+<p><strong>Priority:</strong> P1 or P2</p>
+<p><strong>Diagnosis Steps:</strong>
+1. Check database status: <code>systemctl status postgresql</code>
+2. Check connection pool
+3. Analyze database logs
+4. Check disk space
+5. Check network connectivity to DB</p>
+<p><strong>Resolution Steps:</strong>
+1. Restart database service
+2. Increase connection pool limits
+3. Terminate long-running queries
+4. Free up disk space
+5. Failover to standby database</p>
+<p><strong>Escalation:</strong> Immediately to DBA team for P1</p>
+<h3 id="runbook-4-backup-failed">Runbook 4: Backup Failed</h3>
+<p><strong>Symptoms:</strong> Backup job reports error, backup monitoring alert</p>
+<p><strong>Priority:</strong> P2 or P3</p>
+<p><strong>Diagnosis Steps:</strong>
+1. Check backup logs
+2. Check disk space on backup target
+3. Check network connection to backup storage
+4. Check backup software status
+5. Check source system status</p>
+<p><strong>Resolution Steps:</strong>
+1. Manually restart backup job
+2. Free up disk space on backup target
+3. Restore network connection
+4. Restart backup software
+5. Use alternative backup method</p>
+<p><strong>Escalation:</strong> After 4 hours to backup team</p>
+<h3 id="runbook-5-security-incident-malwareintrusion">Runbook 5: Security Incident (Malware/Intrusion)</h3>
+<p><strong>Symptoms:</strong> Malware alert, unusual network activity, unauthorized access</p>
+<p><strong>Priority:</strong> P1 (always)</p>
+<p><strong>Diagnosis Steps:</strong>
+1. Analyze alert details
+2. Identify affected systems
+3. Assess extent of compromise
+4. Secure logs (forensics)
+5. Inform CISO</p>
+<p><strong>Resolution Steps:</strong>
+1. Isolate affected systems (network separation)
+2. Perform malware scan
+3. Block compromised accounts
+4. Reset passwords
+5. Perform forensic analysis
+6. Rebuild systems (if required)</p>
+<p><strong>Escalation:</strong> Immediately to CISO (thomas.weber@adminsend.de)</p>
+<h3 id="runbook-6-network-outage">Runbook 6: Network Outage</h3>
+<p><strong>Symptoms:</strong> No network connectivity, devices unreachable</p>
+<p><strong>Priority:</strong> P1 or P2</p>
+<p><strong>Diagnosis Steps:</strong>
+1. Identify affected network segments
+2. Check switch/router status
+3. Check physical cabling
+4. Check VLAN configuration
+5. Check routing tables</p>
+<p><strong>Resolution Steps:</strong>
+1. Restart network devices
+2. Replace defective cables
+3. Correct VLAN configuration
+4. Fix routing problems
+5. Failover to backup connection</p>
+<p><strong>Escalation:</strong> After 30 minutes to network team</p>
+<h2 id="communication-processes">Communication Processes</h2>
+<h3 id="internal-communication">Internal Communication</h3>
+<p><strong>At Incident Opening:</strong>
+- Service desk informs affected users
+- IT operations team immediately informed for P1/P2
+- Management informed for P1</p>
+<p><strong>During Processing:</strong>
+- Regular status updates (P1: every 30 min, P2: every 2h)
+- Escalation notifications
+- Team communication via {{ meta.collaboration_tool }}</p>
+<p><strong>At Incident Resolution:</strong>
+- User notification of resolution
+- Management information for P1/P2
+- Documentation in ticket system</p>
+<h3 id="external-communication">External Communication</h3>
+<p><strong>Stakeholder Information:</strong>
+- Executive management for critical incidents
+- Customers for service outages
+- External partners for dependencies</p>
+<p><strong>Communication Channels:</strong>
+- Email: info@adminsend.de
+- Status page: {{ meta.status_page_url }}
+- Phone: +49 89 12345678</p>
+<p><strong>Communication Template:</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="nl">Subject</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="n">P1</span><span class="o">/</span><span class="n">P2</span><span class="p">]</span><span class="w"> </span><span class="n">Service</span><span class="w"> </span><span class="n">Disruption</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="n">Service</span><span class="w"> </span><span class="n">Name</span><span class="p">]</span>
+
+<span class="n">Dear</span><span class="w"> </span><span class="n">Sir</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">Madam</span><span class="p">,</span>
+
+<span class="n">We</span><span class="w"> </span><span class="n">inform</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">about</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">current</span><span class="w"> </span><span class="n">service</span><span class="w"> </span><span class="n">disruption</span><span class="o">:</span>
+
+<span class="nl">Service</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="n">Service</span><span class="w"> </span><span class="n">Name</span><span class="p">]</span>
+<span class="nl">Priority</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="n">P1</span><span class="o">/</span><span class="n">P2</span><span class="o">/</span><span class="n">P3</span><span class="p">]</span>
+<span class="nl">Start</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="n">Timestamp</span><span class="p">]</span>
+<span class="nl">Impact</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="n">Description</span><span class="p">]</span>
+<span class="nl">Status</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="n">In</span><span class="w"> </span><span class="n">Progress</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">Resolved</span><span class="p">]</span>
+
+<span class="n">We</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">working</span><span class="w"> </span><span class="n">intensively</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">solution</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">keep</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">informed</span><span class="p">.</span>
+
+<span class="n">Next</span><span class="w"> </span><span class="n">update</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="n">Time</span><span class="p">]</span>
+
+<span class="n">Best</span><span class="w"> </span><span class="n">regards</span>
+<span class="n">AdminSend</span><span class="w"> </span><span class="n">GmbH</span>
+<span class="n">IT</span><span class="w"> </span><span class="n">Operations</span><span class="w"> </span><span class="n">Team</span>
+</code></pre></div>
+
+<h2 id="major-incident-management">Major Incident Management</h2>
+<h3 id="major-incident-definition">Major Incident Definition</h3>
+<p>A <strong>major incident</strong> is an incident with:
+- Priority P1
+- Impact on critical business processes
+- High number of affected users (&gt; 50%)
+- Potential financial or legal consequences</p>
+<h3 id="major-incident-team">Major Incident Team</h3>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Person</th>
+<th>Responsibility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Incident Manager</strong></td>
+<td>Andreas Huemmer</td>
+<td>Coordination and communication</td>
+</tr>
+<tr>
+<td><strong>Technical Lead</strong></td>
+<td>[Name]</td>
+<td>Technical solution finding</td>
+</tr>
+<tr>
+<td><strong>Communication Lead</strong></td>
+<td>[Name]</td>
+<td>Stakeholder communication</td>
+</tr>
+<tr>
+<td><strong>Management Rep</strong></td>
+<td>Anna Schmidt</td>
+<td>Decisions and escalation</td>
+</tr>
+</tbody>
+</table>
+<h3 id="major-incident-process">Major Incident Process</h3>
+<ol>
+<li><strong>Incident Declaration:</strong> Incident manager declares major incident</li>
+<li><strong>Team Assembly:</strong> Major incident team is convened</li>
+<li><strong>War Room:</strong> Dedicated communication channel (e.g., conference call)</li>
+<li><strong>Status Updates:</strong> Every 30 minutes to stakeholders</li>
+<li><strong>Resolution:</strong> Coordinated solution implementation</li>
+<li><strong>Post-Incident Review:</strong> Mandatory postmortem within 48h</li>
+</ol>
+<h2 id="metrics-and-reporting">Metrics and Reporting</h2>
+<h3 id="key-performance-indicators-kpis">Key Performance Indicators (KPIs)</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Target Value</th>
+<th>Measurement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Mean Time to Respond (MTTR)</strong></td>
+<td>&lt; 15 min (P1)</td>
+<td>Average response time</td>
+</tr>
+<tr>
+<td><strong>Mean Time to Resolve (MTTR)</strong></td>
+<td>&lt; 4h (P1)</td>
+<td>Average resolution time</td>
+</tr>
+<tr>
+<td><strong>First Call Resolution Rate</strong></td>
+<td>&gt; 70%</td>
+<td>Resolution on first contact</td>
+</tr>
+<tr>
+<td><strong>Incident Reopen Rate</strong></td>
+<td>&lt; 5%</td>
+<td>Reopening rate</td>
+</tr>
+<tr>
+<td><strong>SLA Compliance</strong></td>
+<td>&gt; 95%</td>
+<td>Adherence to SLA times</td>
+</tr>
+</tbody>
+</table>
+<h3 id="reporting">Reporting</h3>
+<p><strong>Daily Reporting:</strong>
+- Number of open incidents (by priority)
+- P1/P2 incidents in progress
+- SLA violations</p>
+<p><strong>Weekly Reporting:</strong>
+- Incident trend analysis
+- Top 5 incident categories
+- Escalation statistics</p>
+<p><strong>Monthly Reporting:</strong>
+- KPI dashboard
+- Service availability
+- Improvement measures</p>
+<h2 id="tools-and-systems">Tools and Systems</h2>
+<h3 id="incident-management-tool">Incident Management Tool</h3>
+<ul>
+<li><strong>System:</strong> {{ meta.ticketing_system }}</li>
+<li><strong>URL:</strong> {{ meta.ticketing_system_url }}</li>
+<li><strong>Access:</strong> All IT staff</li>
+</ul>
+<h3 id="monitoring-system">Monitoring System</h3>
+<ul>
+<li><strong>System:</strong> {{ netbox.monitoring_system }}</li>
+<li><strong>URL:</strong> {{ meta.monitoring_url }}</li>
+<li><strong>Access:</strong> IT operations team</li>
+</ul>
+<h3 id="communication-tools">Communication Tools</h3>
+<ul>
+<li><strong>Chat:</strong> {{ meta.collaboration_tool }}</li>
+<li><strong>Conference:</strong> {{ meta.conference_system }}</li>
+<li><strong>Status Page:</strong> {{ meta.status_page_url }}</li>
+</ul>
+<h2 id="appendix">Appendix</h2>
+<h3 id="incident-categories-complete">Incident Categories (Complete)</h3>
+<ul>
+<li>Hardware &gt; Server</li>
+<li>Hardware &gt; Storage</li>
+<li>Hardware &gt; Network</li>
+<li>Software &gt; Operating System</li>
+<li>Software &gt; Application</li>
+<li>Software &gt; Database</li>
+<li>Network &gt; Connectivity</li>
+<li>Network &gt; Performance</li>
+<li>Security &gt; Malware</li>
+<li>Security &gt; Unauthorized Access</li>
+<li>Security &gt; Data Breach</li>
+<li>Performance &gt; Slow Response</li>
+<li>Performance &gt; High Load</li>
+<li>Data &gt; Corruption</li>
+<li>Data &gt; Loss</li>
+<li>User &gt; Access</li>
+<li>User &gt; Authentication</li>
+</ul>
+<h3 id="contacts-and-on-call">Contacts and On-Call</h3>
+<table>
+<thead>
+<tr>
+<th>Team</th>
+<th>Primary</th>
+<th>Secondary</th>
+<th>On-Call</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Service Desk</strong></td>
+<td>julia.becker@adminsend.de</td>
+<td>[Backup]</td>
+<td>24/7</td>
+</tr>
+<tr>
+<td><strong>IT Operations</strong></td>
+<td>andreas.huemmer@adminsend.de</td>
+<td>[Backup]</td>
+<td>24/7</td>
+</tr>
+<tr>
+<td><strong>Network Team</strong></td>
+<td>[Email]</td>
+<td>[Backup]</td>
+<td>On-call</td>
+</tr>
+<tr>
+<td><strong>Security Team</strong></td>
+<td>thomas.weber@adminsend.de</td>
+<td>[Backup]</td>
+<td>24/7</td>
+</tr>
+</tbody>
+</table>
+<h3 id="references">References</h3>
+<ul>
+<li>ITIL v4 Foundation</li>
+<li>ISO/IEC 20000-1:2018 - Service Management</li>
+<li>Internal Service Level Agreements</li>
+<li>Escalation Matrix</li>
+</ul>
+<hr />
+<p><strong>Document Owner:</strong> IT Operations Manager<br />
+<strong>Approved by:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Classification:</strong> internal<br />
+<strong>Last Update:</strong> {{ meta.date }}</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0110_Monitoring_Alerting_and_Observability.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0130_Problem_Management_and_Postmortems.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0600 - Policy: Netzwerksicherheit</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0600</div>
+            <h1>Policy: Netzwerksicherheit</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0590_Richtlinie_Records_Retention_und_Sichere_Loeschung.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0610_Richtlinie_Segmentierung_Firewalling_und_Network_Access_Control.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="policy-netzwerksicherheit">Policy: Netzwerksicherheit</h1>
+<p><strong>Dokument-ID:</strong> 0600<br />
+<strong>Dokumenttyp:</strong> Policy (abstrakt)<br />
+<strong>Standard-Referenz:</strong> ISO/IEC 27001:2022 Annex A.8.20-A.8.23 (inkl. Amendment 1:2024)<br />
+<strong>Owner:</strong> Thomas Weber<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Freigegeben<br />
+<strong>Klassifizierung:</strong> Intern<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.date }}<br />
+<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-zweck">1. Zweck</h2>
+<p>Diese Policy definiert die Anforderungen an die Netzwerksicherheit der <strong>AdminSend GmbH</strong>. Sie stellt sicher, dass Netzwerke angemessen gesichert, segmentiert und überwacht werden, um die Vertraulichkeit, Integrität und Verfügbarkeit von Informationen zu schützen.</p>
+<h2 id="2-geltungsbereich">2. Geltungsbereich</h2>
+<p>Diese Policy gilt für:</p>
+<ul>
+<li><strong>Organisationseinheiten:</strong> Alle Abteilungen und Standorte der AdminSend GmbH</li>
+<li><strong>Netzwerke:</strong> Alle internen und externen Netzwerke, LAN, WLAN, WAN, VPN</li>
+<li><strong>Systeme:</strong> Firewalls, Router, Switches, Load Balancer, IDS/IPS</li>
+<li><strong>Verbindungen:</strong> Alle Netzwerkverbindungen (intern, extern, Partner, Cloud)</li>
+<li><strong>Standorte:</strong> {{ netbox.site.name }} und alle weiteren Betriebsstandorte</li>
+</ul>
+<p><strong>Ausnahmen:</strong> Ausnahmen sind nur über den definierten Ausnahmenprozess (<code>0640_Policy_Ausnahmen_und_Risk_Waivers.md</code>) zulässig.</p>
+<h2 id="3-grundsatze-policy-statements">3. Grundsätze (Policy Statements)</h2>
+<h3 id="31-netzwerksegmentierung">3.1 Netzwerksegmentierung</h3>
+<p>Netzwerke werden nach Schutzbedarf und Funktion segmentiert. Segmentierung erfolgt durch Firewalls, VLANs und Zonen (z.B. DMZ, Produktionsnetz, Verwaltungsnetz).</p>
+<h3 id="32-defense-in-depth">3.2 Defense in Depth</h3>
+<p>Netzwerksicherheit folgt dem Defense-in-Depth-Prinzip. Mehrere Sicherheitsschichten schützen vor Angriffen (Perimeter, Segmentierung, Host-basiert).</p>
+<h3 id="33-least-privilege-network-access">3.3 Least Privilege Network Access</h3>
+<p>Netzwerkzugriffe folgen dem Least-Privilege-Prinzip. Nur erforderliche Verbindungen sind erlaubt (Default Deny, Whitelist-Ansatz).</p>
+<h3 id="34-firewall-management">3.4 Firewall-Management</h3>
+<p>Firewalls schützen Netzwerkgrenzen. Firewall-Regeln werden dokumentiert, regelmäßig überprüft und nach Change-Management-Prozess geändert.</p>
+<h3 id="35-network-access-control-nac">3.5 Network Access Control (NAC)</h3>
+<p>Zugriffe auf Netzwerke werden kontrolliert. NAC stellt sicher, dass nur autorisierte und konforme Geräte Zugriff erhalten.</p>
+<h3 id="36-intrusion-detectionprevention-idsips">3.6 Intrusion Detection/Prevention (IDS/IPS)</h3>
+<p>Netzwerke werden auf Angriffe überwacht. IDS/IPS-Systeme erkennen und blockieren verdächtige Aktivitäten.</p>
+<h3 id="37-vpn-und-remote-access">3.7 VPN und Remote Access</h3>
+<p>Remote-Zugriffe erfolgen über sichere VPN-Verbindungen. VPN-Verbindungen sind verschlüsselt und authentifiziert (MFA).</p>
+<h3 id="38-wireless-security">3.8 Wireless Security</h3>
+<p>WLAN-Netzwerke sind gesichert (WPA3, 802.1X). Gast-WLANs sind vom Produktionsnetz getrennt.</p>
+<h3 id="39-network-monitoring-und-logging">3.9 Network Monitoring und Logging</h3>
+<p>Netzwerkaktivitäten werden überwacht und protokolliert. Logs werden zentral gesammelt und analysiert (SIEM).</p>
+<h2 id="4-rollen-und-verantwortlichkeiten">4. Rollen und Verantwortlichkeiten</h2>
+<h3 id="raci-matrix-netzwerksicherheit">RACI-Matrix: Netzwerksicherheit</h3>
+<table>
+<thead>
+<tr>
+<th>Aktivität</th>
+<th>CISO</th>
+<th>Network Security</th>
+<th>IT-Betrieb</th>
+<th>SOC</th>
+<th>Network Admin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Policy-Erstellung</td>
+<td>R/A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Netzwerksegmentierung</td>
+<td>R</td>
+<td>R/A</td>
+<td>R</td>
+<td>C</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Firewall-Management</td>
+<td>C</td>
+<td>R/A</td>
+<td>R</td>
+<td>C</td>
+<td>R</td>
+</tr>
+<tr>
+<td>NAC-Implementierung</td>
+<td>C</td>
+<td>R/A</td>
+<td>R</td>
+<td>C</td>
+<td>R</td>
+</tr>
+<tr>
+<td>IDS/IPS-Betrieb</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>R/A</td>
+<td>C</td>
+</tr>
+<tr>
+<td>VPN-Management</td>
+<td>C</td>
+<td>R/A</td>
+<td>R</td>
+<td>C</td>
+<td>R</td>
+</tr>
+<tr>
+<td>WLAN-Security</td>
+<td>C</td>
+<td>R/A</td>
+<td>R</td>
+<td>C</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Network Monitoring</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>R/A</td>
+<td>C</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legende:</strong> R = Responsible (Durchführung), A = Accountable (Verantwortlich), C = Consulted (Konsultiert), I = Informed (Informiert)</p>
+<h3 id="schlusselrollen">Schlüsselrollen</h3>
+<ul>
+<li><strong>Policy Owner:</strong> Thomas Weber (CISO)</li>
+<li><strong>Network Security Manager:</strong> {{ meta.network.security_manager }}</li>
+<li><strong>Network Administrator:</strong> {{ meta.network.admin }}</li>
+<li><strong>SOC Manager:</strong> {{ meta.soc.manager }}</li>
+<li><strong>Umsetzungsverantwortliche:</strong> IT-Betrieb, Network Team</li>
+<li><strong>Kontroll-/Prüfinstanz:</strong> ISMS, Internal Audit, SOC</li>
+</ul>
+<h2 id="5-ableitungen-richtlinienstandardsprozesse">5. Ableitungen (Richtlinien/Standards/Prozesse)</h2>
+<p>Details zur Umsetzung werden in nachgelagerten Dokumenten geregelt:</p>
+<h3 id="zugehorige-richtlinien">Zugehörige Richtlinien</h3>
+<ul>
+<li><strong>0610_Richtlinie_Segmentierung_Firewalling_und_Network_Access_Control.md</strong> - Detaillierte Implementierungsrichtlinie</li>
+<li><code>0220_Policy_Zugriffssteuerung_und_Identitaetsmanagement.md</code> - Access Control Policy</li>
+<li><code>0320_Policy_Logging_und_Monitoring.md</code> - Logging and Monitoring Policy</li>
+<li><code>0500_Policy_Mobile_Device_und_Remote_Work.md</code> - Remote Work Policy</li>
+</ul>
+<h3 id="zugehorige-standardsbaselines">Zugehörige Standards/Baselines</h3>
+<ul>
+<li>Netzwerksegmentierungskonzept</li>
+<li>Firewall-Regelwerk</li>
+<li>NAC-Konfiguration</li>
+<li>IDS/IPS-Signaturen und Regeln</li>
+<li>VPN-Konfiguration</li>
+<li>WLAN-Security-Baseline</li>
+</ul>
+<h3 id="zugehorige-prozesse">Zugehörige Prozesse</h3>
+<ul>
+<li>Firewall Change Management</li>
+<li>NAC Onboarding/Offboarding</li>
+<li>IDS/IPS Alert Response</li>
+<li>VPN Access Request</li>
+<li>Network Security Monitoring</li>
+</ul>
+<h2 id="6-compliance-monitoring-und-durchsetzung">6. Compliance, Monitoring und Durchsetzung</h2>
+<h3 id="messgroen-und-kpis">Messgrößen und KPIs</h3>
+<ul>
+<li>Netzwerksegmentierung Coverage (Ziel: 100% kritischer Systeme)</li>
+<li>Firewall-Regel-Review-Frequenz (Ziel: quartalsweise)</li>
+<li>NAC Coverage (Ziel: 100% Produktionsnetz)</li>
+<li>IDS/IPS Alert Response Time (Ziel: &lt; 15 Minuten für kritische Alerts)</li>
+<li>VPN-Verfügbarkeit (Ziel: 99.5%)</li>
+<li>WLAN-Security-Compliance (Ziel: 100% WPA3)</li>
+<li>Anzahl blockierter Angriffe (IDS/IPS)</li>
+</ul>
+<h3 id="nachweise-und-evidence">Nachweise und Evidence</h3>
+<ul>
+<li>Netzwerkdiagramme und Segmentierungskonzept</li>
+<li>Firewall-Regelwerk und Change-Logs</li>
+<li>NAC-Konfiguration und Device-Inventory</li>
+<li>IDS/IPS-Logs und Alert-Reports</li>
+<li>VPN-Logs und Access-Logs</li>
+<li>WLAN-Konfiguration und Security-Scans</li>
+<li>Network Monitoring Dashboards</li>
+</ul>
+<h3 id="konsequenzen-bei-verstoen">Konsequenzen bei Verstößen</h3>
+<p>Verstöße gegen diese Policy werden nach den geltenden HR- und Compliance-Prozessen behandelt:
+- <strong>Nicht autorisierte Firewall-Änderungen:</strong> Incident Response, Rollback, Disziplinarmaßnahmen
+- <strong>Fehlende Segmentierung:</strong> Nachholung, Risikobewertung
+- <strong>Unsichere WLAN-Konfiguration:</strong> Sofortige Korrektur, Incident Response
+- <strong>Wiederholte Verstöße:</strong> Arbeitsrechtliche Konsequenzen, Zugriffsentzug</p>
+<h2 id="7-ausnahmen">7. Ausnahmen</h2>
+<p>Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:</p>
+<ul>
+<li><strong>Ausnahmenprozess:</strong> Siehe <code>0640_Policy_Ausnahmen_und_Risk_Waivers.md</code></li>
+<li><strong>Genehmigung:</strong> Ausnahmen müssen vom CISO und Network Security Manager genehmigt werden</li>
+<li><strong>Dokumentation:</strong> Alle Ausnahmen werden im Risikoregister dokumentiert</li>
+<li><strong>Befristung:</strong> Ausnahmen sind grundsätzlich zeitlich befristet</li>
+</ul>
+<h2 id="8-referenzen">8. Referenzen</h2>
+<h3 id="interne-dokumente">Interne Dokumente</h3>
+<ul>
+<li><code>0010_ISMS_Informationssicherheitsleitlinie.md</code> - ISMS Policy</li>
+<li><code>0610_Richtlinie_Segmentierung_Firewalling_und_Network_Access_Control.md</code> - Detailed Guideline</li>
+<li><code>0220_Policy_Zugriffssteuerung_und_Identitaetsmanagement.md</code> - Access Control Policy</li>
+<li><code>0080_ISMS_Risikoregister_Template.md</code> - Risk Register</li>
+</ul>
+<h3 id="externe-standards-und-vorgaben">Externe Standards und Vorgaben</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.8.20</strong> - Networks security</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.8.21</strong> - Security of network services</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.8.22</strong> - Segregation of networks</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.8.23</strong> - Web filtering</li>
+<li><strong>NIST SP 800-41</strong> - Guidelines on Firewalls and Firewall Policy</li>
+<li><strong>NIST SP 800-97</strong> - Establishing Wireless Robust Security Networks</li>
+<li><strong>BSI IT-Grundschutz</strong> - NET.1.1, NET.1.2, NET.3.2</li>
+</ul>
+<hr />
+<p><strong>Genehmigt durch:</strong><br />
+{{ meta.management.ceo }}, Geschäftsführung<br />
+Datum: {{ meta.document.approval_date }}</p>
+<p><strong>Nächster Review:</strong> {{ meta.document.next_review }} (jährlich oder anlassbezogen)</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0590_Richtlinie_Records_Retention_und_Sichere_Loeschung.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0610_Richtlinie_Segmentierung_Firewalling_und_Network_Access_Control.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0040 - Geltungsbereich und Informationsverbund (Abgrenzung)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0040</div>
+            <h1>Geltungsbereich und Informationsverbund (Abgrenzung)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0030_Dokumentenlenkung_und_Dokumentenregister.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0050_Strukturanalyse_Template.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="geltungsbereich-und-informationsverbund-abgrenzung">Geltungsbereich und Informationsverbund (Abgrenzung)</h1>
+<p><strong>Dokument-ID:</strong> 0040<br />
+<strong>Dokumenttyp:</strong> Grundlagendokument<br />
+<strong>Referenzrahmen:</strong> BSI IT-Grundschutz (BSI Standards 200-1/200-2/200-3)<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> {{ meta.document.status }}<br />
+<strong>Klassifizierung:</strong> internal<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.last_updated }}<br />
+<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-zweck-und-zielsetzung">1. Zweck und Zielsetzung</h2>
+<p>Dieses Dokument definiert den Geltungsbereich des Informationssicherheits-Managementsystems (ISMS) von <strong>AdminSend GmbH</strong> und grenzt den Informationsverbund ab. Die klare Definition des Scopes ist Grundlage für alle weiteren IT-Grundschutz-Aktivitäten (Strukturanalyse, Schutzbedarfsfeststellung, Modellierung).</p>
+<h2 id="2-scope-definition">2. Scope-Definition</h2>
+<h3 id="21-organisationseinheiten-und-standorte">2.1 Organisationseinheiten und Standorte</h3>
+<p><strong>Organisation:</strong> AdminSend GmbH</p>
+<p><strong>Standorte im Scope:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Standort</th>
+<th>Adresse</th>
+<th>Typ</th>
+<th>Mitarbeitende</th>
+<th>Im Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{{ meta.organization.primary_location }}</td>
+<td>[TODO]</td>
+<td>Hauptstandort</td>
+<td>[TODO]</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>[TODO: Weitere Standorte]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>✓/✗</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Organisationseinheiten im Scope:</strong>
+- Geschäftsführung
+- IT-Abteilung
+- [TODO: Weitere Abteilungen]</p>
+<h3 id="22-geschaftsprozesse-und-services">2.2 Geschäftsprozesse und Services</h3>
+<p><strong>Kritische Geschäftsprozesse im Scope:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Prozess</th>
+<th>Beschreibung</th>
+<th>Kritikalität</th>
+<th>Owner</th>
+<th>Im Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Prozess 1]</td>
+<td>[TODO]</td>
+<td>Hoch/Mittel/Niedrig</td>
+<td>[TODO]</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>[TODO: Prozess 2]</td>
+<td>[TODO]</td>
+<td>Hoch/Mittel/Niedrig</td>
+<td>[TODO]</td>
+<td>✓</td>
+</tr>
+</tbody>
+</table>
+<p><strong>IT-Services im Scope:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Beschreibung</th>
+<th>Nutzer</th>
+<th>Service Owner</th>
+<th>Im Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Service 1]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Anna Schmidt</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>[TODO: Service 2]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Anna Schmidt</td>
+<td>✓</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-it-infrastruktur">2.3 IT-Infrastruktur</h3>
+<p><strong>IT-Systeme im Scope:</strong></p>
+<h4 id="231-on-premise-it">2.3.1 On-Premise IT</h4>
+<table>
+<thead>
+<tr>
+<th>Kategorie</th>
+<th>Systeme</th>
+<th>Anzahl</th>
+<th>Im Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Server</td>
+<td>{{ netbox.device.servers }}</td>
+<td>[TODO]</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Netzwerk</td>
+<td>{{ netbox.device.network }}</td>
+<td>[TODO]</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Storage</td>
+<td>{{ netbox.device.storage }}</td>
+<td>[TODO]</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Clients</td>
+<td>Workstations, Laptops</td>
+<td>[TODO]</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Mobile Devices</td>
+<td>Smartphones, Tablets</td>
+<td>[TODO]</td>
+<td>✓</td>
+</tr>
+</tbody>
+</table>
+<h4 id="232-cloud-services">2.3.2 Cloud-Services</h4>
+<table>
+<thead>
+<tr>
+<th>Cloud-Service</th>
+<th>Provider</th>
+<th>Typ (IaaS/PaaS/SaaS)</th>
+<th>Im Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Cloud Service 1]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>[TODO: Cloud Service 2]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>✓</td>
+</tr>
+</tbody>
+</table>
+<h4 id="233-otiot-falls-zutreffend">2.3.3 OT/IoT (falls zutreffend)</h4>
+<table>
+<thead>
+<tr>
+<th>OT/IoT-System</th>
+<th>Beschreibung</th>
+<th>Standort</th>
+<th>Im Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: OT System 1]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>✓/✗</td>
+</tr>
+</tbody>
+</table>
+<h3 id="24-anwendungen-und-daten">2.4 Anwendungen und Daten</h3>
+<p><strong>Geschäftsanwendungen im Scope:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Anwendung</th>
+<th>Typ</th>
+<th>Kritikalität</th>
+<th>Datenklassifizierung</th>
+<th>Im Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Anwendung 1]</td>
+<td>[TODO]</td>
+<td>Hoch/Mittel/Niedrig</td>
+<td>Vertraulich/Intern</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>[TODO: Anwendung 2]</td>
+<td>[TODO]</td>
+<td>Hoch/Mittel/Niedrig</td>
+<td>Vertraulich/Intern</td>
+<td>✓</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Datenarten im Scope:</strong>
+- Personenbezogene Daten (DSGVO-relevant)
+- Geschäftsgeheimnisse
+- Kundendaten
+- Finanzdaten
+- [TODO: Weitere Datenarten]</p>
+<h2 id="3-abgrenzung-des-informationsverbunds">3. Abgrenzung des Informationsverbunds</h2>
+<h3 id="31-in-scope">3.1 In Scope</h3>
+<p><strong>Folgende Elemente sind im Scope des ISMS:</strong></p>
+<ol>
+<li><strong>Infrastruktur:</strong></li>
+<li>Alle Server und Netzwerkkomponenten an Standort {{ meta.organization.primary_location }}</li>
+<li>
+<p>[TODO: Weitere Infrastruktur]</p>
+</li>
+<li>
+<p><strong>Anwendungen:</strong></p>
+</li>
+<li>Alle geschäftskritischen Anwendungen</li>
+<li>
+<p>[TODO: Spezifische Anwendungen]</p>
+</li>
+<li>
+<p><strong>Daten:</strong></p>
+</li>
+<li>Alle personenbezogenen Daten</li>
+<li>Alle Geschäftsdaten mit Klassifizierung "Vertraulich" oder höher</li>
+<li>
+<p>[TODO: Weitere Daten]</p>
+</li>
+<li>
+<p><strong>Personen:</strong></p>
+</li>
+<li>Alle Mitarbeitenden von AdminSend GmbH</li>
+<li>Externe Dienstleister mit Zugriff auf Scope-Systeme</li>
+<li>
+<p>[TODO: Weitere Personengruppen]</p>
+</li>
+<li>
+<p><strong>Prozesse:</strong></p>
+</li>
+<li>Alle IT-Betriebsprozesse</li>
+<li>Alle geschäftskritischen Prozesse</li>
+<li>[TODO: Weitere Prozesse]</li>
+</ol>
+<h3 id="32-out-of-scope">3.2 Out of Scope</h3>
+<p><strong>Folgende Elemente sind NICHT im Scope des ISMS:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Begründung</th>
+<th>Risikobewertung</th>
+<th>Schnittstellen zum Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Out-of-Scope Element 1]</td>
+<td>[TODO: Begründung]</td>
+<td>[TODO: Risiko]</td>
+<td>[TODO: Schnittstellen]</td>
+</tr>
+<tr>
+<td>[TODO: Out-of-Scope Element 2]</td>
+<td>[TODO: Begründung]</td>
+<td>[TODO: Risiko]</td>
+<td>[TODO: Schnittstellen]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Wichtig:</strong> Auch Out-of-Scope-Elemente müssen hinsichtlich ihrer Risiken für den Scope bewertet werden, insbesondere wenn Schnittstellen bestehen.</p>
+<h3 id="33-begrundung-der-abgrenzung">3.3 Begründung der Abgrenzung</h3>
+<p>[TODO: Erläutern Sie die Gründe für die gewählte Scope-Abgrenzung]</p>
+<p>Beispiele für Begründungen:
+- Fokus auf kritische Geschäftsprozesse
+- Ressourcenbeschränkungen (schrittweise Erweiterung geplant)
+- Externe Verantwortung (z.B. ausgelagerte Prozesse)
+- Geringe Kritikalität</p>
+<h2 id="4-schnittstellen-und-abhangigkeiten">4. Schnittstellen und Abhängigkeiten</h2>
+<h3 id="41-externe-dienstleister-und-provider">4.1 Externe Dienstleister und Provider</h3>
+<table>
+<thead>
+<tr>
+<th>Dienstleister</th>
+<th>Service</th>
+<th>Kritikalität</th>
+<th>Vertragliche Regelungen</th>
+<th>Sicherheitsanforderungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Provider 1]</td>
+<td>[TODO]</td>
+<td>Hoch/Mittel/Niedrig</td>
+<td>[TODO: Vertrag vorhanden]</td>
+<td>[TODO: SLA, Zertifizierungen]</td>
+</tr>
+<tr>
+<td>[TODO: Provider 2]</td>
+<td>[TODO]</td>
+<td>Hoch/Mittel/Niedrig</td>
+<td>[TODO: Vertrag vorhanden]</td>
+<td>[TODO: SLA, Zertifizierungen]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-kritische-schnittstellen">4.2 Kritische Schnittstellen</h3>
+<p><strong>Schnittstellen zwischen Scope und Out-of-Scope:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Schnittstelle</th>
+<th>Von (Scope)</th>
+<th>Nach (Out-of-Scope)</th>
+<th>Datenfluss</th>
+<th>Sicherheitsmaßnahmen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Schnittstelle 1]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO: Verschlüsselung, Firewall, etc.]</td>
+</tr>
+<tr>
+<td>[TODO: Schnittstelle 2]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Schnittstellen zu externen Partnern:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Partner</th>
+<th>Zweck</th>
+<th>Datenarten</th>
+<th>Sicherheitsmaßnahmen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Partner 1]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: Partner 2]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="43-abhangigkeiten">4.3 Abhängigkeiten</h3>
+<p><strong>Kritische Abhängigkeiten des Scopes:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Abhängigkeit</th>
+<th>Typ</th>
+<th>Auswirkung bei Ausfall</th>
+<th>Mitigationsmaßnahmen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Internetanbindung</td>
+<td>Externe Infrastruktur</td>
+<td>[TODO]</td>
+<td>[TODO: Redundanz, Backup-Leitung]</td>
+</tr>
+<tr>
+<td>Stromversorgung</td>
+<td>Externe Infrastruktur</td>
+<td>[TODO]</td>
+<td>[TODO: USV, Notstrom]</td>
+</tr>
+<tr>
+<td>[TODO: Weitere Abhängigkeiten]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-informationsverbund-diagramm">5. Informationsverbund-Diagramm</h2>
+<p><img alt="Informationsverbund-Diagramm" src="diagrams/informationsverbund.png" /></p>
+<p><strong>Diagramm-Legende:</strong>
+- <strong>Grüne Linie:</strong> Scope-Grenze (im ISMS)
+- <strong>Rote Linie:</strong> Out-of-Scope-Grenze
+- <strong>Blaue Pfeile:</strong> Datenflüsse
+- <strong>Gelbe Symbole:</strong> Kritische Schnittstellen</p>
+<p>[TODO: Erstellen Sie ein Diagramm des Informationsverbunds]</p>
+<h2 id="6-scope-anderungen">6. Scope-Änderungen</h2>
+<h3 id="61-anderungsprozess">6.1 Änderungsprozess</h3>
+<p>Änderungen am Scope erfordern:
+1. <strong>Antrag:</strong> Formaler Änderungsantrag an ISB
+2. <strong>Bewertung:</strong> Bewertung der Auswirkungen (Risiken, Ressourcen, Compliance)
+3. <strong>Genehmigung:</strong> Genehmigung durch Geschäftsführung
+4. <strong>Umsetzung:</strong> Aktualisierung aller betroffenen Dokumente
+5. <strong>Kommunikation:</strong> Information aller Stakeholder</p>
+<p><strong>Verantwortlich:</strong> Thomas Weber (ISB)</p>
+<h3 id="62-scope-review">6.2 Scope-Review</h3>
+<p>Der Scope wird regelmäßig überprüft:
+- <strong>Frequenz:</strong> Jährlich oder bei wesentlichen Änderungen
+- <strong>Trigger:</strong> Neue Geschäftsprozesse, IT-Systeme, Standorte, regulatorische Anforderungen
+- <strong>Verantwortlich:</strong> ISB</p>
+<p><strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+<h2 id="7-dokumentation-und-nachweise">7. Dokumentation und Nachweise</h2>
+<p>Folgende Dokumente und Nachweise werden für den Scope geführt:
+- Dieses Scope-Dokument
+- Informationsverbund-Diagramm
+- Asset-Inventar (siehe Anhang 0710)
+- Datenfluss-Diagramme (siehe Anhang 0720)
+- Verträge mit externen Dienstleistern
+- Scope-Änderungsprotokolle</p>
+<h2 id="8-freigabe">8. Freigabe</h2>
+<table>
+<thead>
+<tr>
+<th>Rolle</th>
+<th>Name</th>
+<th>Datum</th>
+<th>Freigabe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Geschäftsführung</td>
+<td>Max Mustermann</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+<tr>
+<td>ISB</td>
+<td>Thomas Weber</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Referenzen:</strong>
+- BSI Standard 200-1: Managementsysteme für Informationssicherheit (ISMS)
+- BSI Standard 200-2: IT-Grundschutz-Methodik (Kapitel 4: Festlegung des Geltungsbereichs)
+- BSI IT-Grundschutz-Kompendium</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0030_Dokumentenlenkung_und_Dokumentenregister.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0050_Strukturanalyse_Template.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

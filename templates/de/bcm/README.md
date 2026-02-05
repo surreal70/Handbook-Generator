@@ -186,17 +186,75 @@ Alle kritischen Abhängigkeiten dokumentieren:
 ### CLI-Verwendung
 
 ```bash
-# Deutsches BCM-Handbuch generieren
-python src/cli.py --language de --template bcm --output Handbook/de/bcm/
+# Deutsches BCM-Handbuch generieren (Test-Modus erforderlich)
+python -m src.cli --language de --template bcm --test
+
+# Separate Markdown-Dateien pro Template generieren
+python -m src.cli --language de --template bcm --test --separate-files
+
+# PDF mit Inhaltsverzeichnis und Seitenumbrüchen generieren
+python -m src.cli --language de --template bcm --output pdf --test --pdf-toc
+
+# Alle Formate mit allen Features generieren
+python -m src.cli --language de --template bcm --output all --test --separate-files --pdf-toc
 
 # Englisches BCM-Handbuch generieren
-python src/cli.py --language en --template bcm --output Handbook/en/bcm/
+python -m src.cli --language en --template bcm --test
 ```
 
 ### Ausgabeformate
 
-- **Markdown:** Einzelne .md-Dateien für jedes Kapitel
-- **PDF:** Vollständiges Handbuch als PDF (erfordert Pandoc)
+Das System unterstützt mehrere Ausgabeformate:
+
+- **Markdown (kombiniert):** Einzelne .md-Datei mit allen Kapiteln
+- **Markdown (separate Dateien):** Separate .md-Dateien für jedes Kapitel mit TOC.md
+- **PDF (Standard):** Vollständiges Handbuch als PDF
+- **PDF (mit TOC):** PDF mit Inhaltsverzeichnis und Seitenumbrüchen zwischen Kapiteln
+- **HTML:** Mini-Website mit Navigation zwischen Seiten
+
+### Ausgabestruktur
+
+Alle Ausgaben werden in der `test-output/` Verzeichnisstruktur gespeichert:
+
+```
+test-output/
+├── de/
+│   ├── markdown/
+│   │   ├── TOC.md                                    # Inhaltsverzeichnis (nur mit --separate-files)
+│   │   ├── 0010_Zweck_und_Geltungsbereich.md        # Einzelnes Template (nur mit --separate-files)
+│   │   ├── 0020_BCM_Leitlinie_Policy.md             # Einzelnes Template (nur mit --separate-files)
+│   │   └── bcm_handbook.md                           # Kombinierte Datei (ohne --separate-files)
+│   ├── pdf/
+│   │   └── bcm_handbook.pdf                          # PDF (mit oder ohne TOC)
+│   └── html/
+│       ├── index.html                                # Inhaltsverzeichnis
+│       ├── 0010_Zweck_und_Geltungsbereich.html
+│       └── styles.css
+└── en/
+    └── ... (gleiche Struktur)
+```
+
+### Ausgabeformat-Optionen
+
+**Separate Markdown-Dateien (`--separate-files`):**
+- Jedes Template wird als separate .md-Datei gespeichert
+- TOC.md Datei mit Links zu allen Templates
+- Ideal für Versionskontrolle und individuelle Bearbeitung
+- Dateinamen-Muster: `{nummer}_{name}.md`
+
+**PDF mit Inhaltsverzeichnis (`--pdf-toc`):**
+- Automatisch generiertes Inhaltsverzeichnis auf erster Seite
+- Klickbare Links zu allen Kapiteln
+- Seitenumbrüche zwischen Templates
+- Professionelles Layout für Druck und Distribution
+
+**HTML Mini-Website (`--output html`):**
+- Separate HTML-Seite für jedes Template
+- Navigation zwischen Seiten (Vorherige/Nächste)
+- Konsistentes Styling über alle Seiten
+- Ideal für Intranet oder Online-Zugriff
+
+Weitere Details zu allen Ausgabeformaten finden Sie in der [OUTPUT_FORMATS_GUIDE.md](../../../docs/OUTPUT_FORMATS_GUIDE.md).
 
 ## Wartung und Aktualisierung
 

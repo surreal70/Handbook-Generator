@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0440 - Policy: Business Continuity ICT Readiness</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0440</div>
+            <h1>Policy: Business Continuity ICT Readiness</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0430_Guideline_Backup_Restore_and_Regular_Tests.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0450_Guideline_ICT_DR_Interfaces_to_BCM.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="policy-business-continuity-ict-readiness">Policy: Business Continuity ICT Readiness</h1>
+<p><strong>Document ID:</strong> 0440<br />
+<strong>Document Type:</strong> Policy (abstract)<br />
+<strong>Standard Reference:</strong> ISO/IEC 27001:2022 Annex A.5.29, A.5.30 (incl. Amendment 1:2024)<br />
+<strong>Owner:</strong> Thomas Weber<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Approved<br />
+<strong>Classification:</strong> Internal<br />
+<strong>Last Updated:</strong> {{ meta.document.date }}<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This policy defines the principles for ICT continuity and disaster recovery at <strong>AdminSend GmbH</strong>. It ensures that IT systems and services can continue or be quickly restored during disruptions to ensure business continuity.</p>
+<h2 id="2-scope">2. Scope</h2>
+<p>This policy applies to:</p>
+<ul>
+<li><strong>Organizational Units:</strong> All departments and locations of AdminSend GmbH</li>
+<li><strong>Systems:</strong> All business-critical IT systems, applications, infrastructure, cloud services</li>
+<li><strong>Scenarios:</strong> Natural disasters, cyberattacks, system failures, pandemics, supplier failures</li>
+<li><strong>Interfaces:</strong> Integration with BCM (Business Continuity Management)</li>
+<li><strong>Locations:</strong> {{ netbox.site.name }} and all other operational sites</li>
+</ul>
+<p><strong>Exceptions:</strong> Exceptions are only permitted through the defined exception process (<code>0640_Policy_Exceptions_and_Risk_Waivers.md</code>).</p>
+<h2 id="3-principles-policy-statements">3. Principles (Policy Statements)</h2>
+<h3 id="31-ict-continuity-planning">3.1 ICT Continuity Planning</h3>
+<p>ICT continuity plans exist for all business-critical IT services, defining recovery strategies, resources, and responsibilities.</p>
+<h3 id="32-business-impact-analysis-bia">3.2 Business Impact Analysis (BIA)</h3>
+<p>Regular business impact analyses identify critical IT services and their RPO/RTO requirements. The BIA is coordinated with the BCM team.</p>
+<h3 id="33-redundancy-and-high-availability">3.3 Redundancy and High Availability</h3>
+<p>Critical IT systems are designed with redundancy and high availability:
+- Redundant components (servers, storage, network)
+- Geographically distributed data centers
+- Load balancing and failover mechanisms
+- Cloud-based disaster recovery</p>
+<h3 id="34-disaster-recovery-plans-drp">3.4 Disaster Recovery Plans (DRP)</h3>
+<p>Detailed disaster recovery plans describe step-by-step procedures for restoring IT systems after a failure.</p>
+<h3 id="35-regular-tests-and-exercises">3.5 Regular Tests and Exercises</h3>
+<p>ICT continuity and DR plans are regularly tested:
+- <strong>Critical Systems:</strong> Annual DR tests
+- <strong>Important Systems:</strong> Every 2 years
+- <strong>Tabletop Exercises:</strong> Quarterly</p>
+<h3 id="36-alternative-workplaces-and-remote-work">3.6 Alternative Workplaces and Remote Work</h3>
+<p>Employees can work from alternative locations or remotely during site failures. Remote access infrastructure is designed for high availability.</p>
+<h3 id="37-supplier-and-cloud-provider-continuity">3.7 Supplier and Cloud Provider Continuity</h3>
+<p>Critical suppliers and cloud providers are assessed for their business continuity capabilities. SLAs contain continuity requirements.</p>
+<h3 id="38-incident-to-crisis-escalation">3.8 Incident-to-Crisis Escalation</h3>
+<p>Clear escalation paths define when an IT incident escalates to a business continuity crisis and the BCM team is activated.</p>
+<h2 id="4-roles-and-responsibilities">4. Roles and Responsibilities</h2>
+<h3 id="raci-matrix-business-continuity-ict-readiness">RACI Matrix: Business Continuity ICT Readiness</h3>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>CISO</th>
+<th>BCM Manager</th>
+<th>IT Operations</th>
+<th>CIO</th>
+<th>Crisis Management Team</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Policy creation</td>
+<td>R/A</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>BIA execution</td>
+<td>C</td>
+<td>R/A</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>DRP creation</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>DR tests</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Crisis activation</td>
+<td>C</td>
+<td>R/A</td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Recovery execution</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>R</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Post-incident review</td>
+<td>R/A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legend:</strong> R = Responsible (Execution), A = Accountable (Ownership), C = Consulted, I = Informed</p>
+<h3 id="key-roles">Key Roles</h3>
+<ul>
+<li><strong>Policy Owner:</strong> Thomas Weber (CISO)</li>
+<li><strong>BCM Manager:</strong> {{ meta.bcm.manager }}</li>
+<li><strong>DR Coordinator:</strong> {{ meta.it.dr_coordinator }}</li>
+<li><strong>CIO:</strong> Anna Schmidt</li>
+<li><strong>Implementation Responsible:</strong> IT Operations, System Owners</li>
+<li><strong>Control/Audit Function:</strong> ISMS, Internal Audit</li>
+</ul>
+<h2 id="5-derivations-guidelinesstandardsprocesses">5. Derivations (Guidelines/Standards/Processes)</h2>
+<p>Implementation details are defined in subordinate documents:</p>
+<h3 id="related-guidelines">Related Guidelines</h3>
+<ul>
+<li><strong>0450_Guideline_ICT_DR_Interfaces_to_BCM.md</strong> - Detailed implementation guideline</li>
+<li><code>0420_Policy_Backup_and_Recovery.md</code> - Backup Policy</li>
+<li><code>0400_Policy_Incident_Management.md</code> - Incident Management Policy</li>
+<li>BCM Handbook (see <code>templates/en/bcm/</code>)</li>
+</ul>
+<h3 id="related-standardsbaselines">Related Standards/Baselines</h3>
+<ul>
+<li>RPO/RTO matrix</li>
+<li>DR plan templates</li>
+<li>Test scenarios</li>
+<li>Escalation paths</li>
+</ul>
+<h3 id="related-processes">Related Processes</h3>
+<ul>
+<li>Business impact analysis process</li>
+<li>Disaster recovery process</li>
+<li>DR test process</li>
+<li>Crisis management process</li>
+</ul>
+<h2 id="6-compliance-monitoring-and-enforcement">6. Compliance, Monitoring and Enforcement</h2>
+<h3 id="metrics-and-kpis">Metrics and KPIs</h3>
+<ul>
+<li>Number of critical systems with DR plans (target: 100%)</li>
+<li>DR test completion rate (target: 100%)</li>
+<li>Average recovery time (RTO compliance)</li>
+<li>Number of successful DR tests</li>
+<li>BIA currency (target: annual update)</li>
+<li>Availability of critical systems (target: 99.9%)</li>
+</ul>
+<h3 id="evidence-and-proof">Evidence and Proof</h3>
+<ul>
+<li>Business impact analysis reports</li>
+<li>Disaster recovery plans</li>
+<li>DR test protocols</li>
+<li>Availability metrics</li>
+<li>Crisis management exercise protocols</li>
+<li>BCM/DR audit reports</li>
+</ul>
+<h3 id="consequences-of-violations">Consequences of Violations</h3>
+<p>Violations of this policy are handled according to applicable HR and compliance processes:
+- <strong>Missing DR plans:</strong> Immediate creation, escalation
+- <strong>Untested DR plans:</strong> Completion, retraining
+- <strong>RTO/RPO violations:</strong> Root cause analysis, remediation
+- <strong>Repeated violations:</strong> Employment consequences</p>
+<h2 id="7-exceptions">7. Exceptions</h2>
+<p>Exceptions to this policy are only permitted in justified cases:</p>
+<ul>
+<li><strong>Exception Process:</strong> See <code>0640_Policy_Exceptions_and_Risk_Waivers.md</code></li>
+<li><strong>Approval:</strong> Exceptions must be approved by CISO and BCM Manager</li>
+<li><strong>Documentation:</strong> All exceptions are documented in the risk register</li>
+<li><strong>Time Limitation:</strong> Exceptions are generally time-limited</li>
+<li><strong>Compensating Controls:</strong> Exceptions require alternative continuity measures</li>
+</ul>
+<h2 id="8-references">8. References</h2>
+<h3 id="internal-documents">Internal Documents</h3>
+<ul>
+<li><code>0010_ISMS_Information_Security_Policy.md</code> - ISMS Policy</li>
+<li><code>0450_Guideline_ICT_DR_Interfaces_to_BCM.md</code> - Detailed Guideline</li>
+<li><code>0420_Policy_Backup_and_Recovery.md</code> - Backup Policy</li>
+<li>BCM Handbook (<code>templates/en/bcm/</code>)</li>
+</ul>
+<h3 id="external-standards-and-requirements">External Standards and Requirements</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.29</strong> - Information security during disruption</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.30</strong> - ICT readiness for business continuity</li>
+<li><strong>ISO 22301</strong> - Business Continuity Management Systems</li>
+<li><strong>ISO/IEC 27031</strong> - ICT readiness for business continuity</li>
+<li><strong>BSI Standard 100-4</strong> - Business Continuity Management</li>
+</ul>
+<hr />
+<p><strong>Approved by:</strong><br />
+{{ meta.management.ceo }}, Management<br />
+Date: {{ meta.document.approval_date }}</p>
+<p><strong>Next Review:</strong> {{ meta.document.next_review }} (annually or as needed)</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0430_Guideline_Backup_Restore_and_Regular_Tests.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0450_Guideline_ICT_DR_Interfaces_to_BCM.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

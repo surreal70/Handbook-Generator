@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0060 - Schutzbedarfsfeststellung (Template)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0060</div>
+            <h1>Schutzbedarfsfeststellung (Template)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0050_Strukturanalyse_Template.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0070_Modellierung_Bausteinzuordnung_Template.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="schutzbedarfsfeststellung-template">Schutzbedarfsfeststellung (Template)</h1>
+<p><strong>Dokument-ID:</strong> 0060<br />
+<strong>Dokumenttyp:</strong> Methodik-Artefakt<br />
+<strong>Referenzrahmen:</strong> BSI IT-Grundschutz (BSI Standard 200-2)<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> {{ meta.document.status }}<br />
+<strong>Klassifizierung:</strong> internal<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.last_updated }}<br />
+<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-ziel-und-zweck">1. Ziel und Zweck</h2>
+<p>Die Schutzbedarfsfeststellung bestimmt systematisch den Schutzbedarf für Geschäftsprozesse, Informationen, Anwendungen und IT-Systeme von <strong>AdminSend GmbH</strong>. Sie bildet die Grundlage für:
+- Auswahl angemessener Sicherheitsmaßnahmen
+- Priorisierung von Sicherheitsinvestitionen
+- Risikoanalyse (Dokument 0090)
+- Compliance-Nachweis</p>
+<p><strong>Verantwortlich:</strong> Thomas Weber (ISB)</p>
+<h2 id="2-schutzbedarfskategorien-und-kriterien">2. Schutzbedarfskategorien und Kriterien</h2>
+<h3 id="21-schutzziele">2.1 Schutzziele</h3>
+<p>Die Schutzbedarfsfeststellung erfolgt für folgende Schutzziele:</p>
+<h4 id="211-vertraulichkeit-confidentiality">2.1.1 Vertraulichkeit (Confidentiality)</h4>
+<p>Schutz vor unbefugter Offenlegung von Informationen.</p>
+<table>
+<thead>
+<tr>
+<th>Kategorie</th>
+<th>Beschreibung</th>
+<th>Schadensbeispiele</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Normal</strong></td>
+<td>Begrenzte negative Auswirkungen</td>
+<td>Geringfügige Beeinträchtigung, interne Peinlichkeit</td>
+</tr>
+<tr>
+<td><strong>Hoch</strong></td>
+<td>Beträchtliche negative Auswirkungen</td>
+<td>Verstoß gegen Gesetze, erheblicher finanzieller Schaden, Reputationsschaden</td>
+</tr>
+<tr>
+<td><strong>Sehr hoch</strong></td>
+<td>Existenzbedrohende Auswirkungen</td>
+<td>Existenzgefährdung, katastrophaler Reputationsschaden, strafrechtliche Konsequenzen</td>
+</tr>
+</tbody>
+</table>
+<h4 id="212-integritat-integrity">2.1.2 Integrität (Integrity)</h4>
+<p>Schutz vor unbefugter Veränderung von Informationen.</p>
+<table>
+<thead>
+<tr>
+<th>Kategorie</th>
+<th>Beschreibung</th>
+<th>Schadensbeispiele</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Normal</strong></td>
+<td>Begrenzte negative Auswirkungen</td>
+<td>Korrigierbare Fehler, geringe Auswirkungen auf Geschäftsprozesse</td>
+</tr>
+<tr>
+<td><strong>Hoch</strong></td>
+<td>Beträchtliche negative Auswirkungen</td>
+<td>Erhebliche Geschäftsprozess-Störungen, finanzielle Verluste, Compliance-Verstöße</td>
+</tr>
+<tr>
+<td><strong>Sehr hoch</strong></td>
+<td>Existenzbedrohende Auswirkungen</td>
+<td>Kritische Geschäftsprozess-Ausfälle, existenzbedrohende finanzielle Schäden</td>
+</tr>
+</tbody>
+</table>
+<h4 id="213-verfugbarkeit-availability">2.1.3 Verfügbarkeit (Availability)</h4>
+<p>Sicherstellung der Verfügbarkeit von Informationen und Systemen.</p>
+<table>
+<thead>
+<tr>
+<th>Kategorie</th>
+<th>Beschreibung</th>
+<th>Tolerierbare Ausfallzeit</th>
+<th>Schadensbeispiele</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Normal</strong></td>
+<td>Begrenzte negative Auswirkungen</td>
+<td>&gt; 24 Stunden</td>
+<td>Geringe Produktivitätsverluste, Unannehmlichkeiten</td>
+</tr>
+<tr>
+<td><strong>Hoch</strong></td>
+<td>Beträchtliche negative Auswirkungen</td>
+<td>4-24 Stunden</td>
+<td>Erhebliche Produktivitätsverluste, Kundenbeschwerden, finanzielle Verluste</td>
+</tr>
+<tr>
+<td><strong>Sehr hoch</strong></td>
+<td>Existenzbedrohende Auswirkungen</td>
+<td>&lt; 4 Stunden</td>
+<td>Kritische Geschäftsprozess-Ausfälle, massive finanzielle Verluste, Existenzgefährdung</td>
+</tr>
+</tbody>
+</table>
+<h4 id="214-authentizitat-optional">2.1.4 Authentizität (Optional)</h4>
+<p>Sicherstellung der Echtheit und Glaubwürdigkeit von Informationen.</p>
+<table>
+<thead>
+<tr>
+<th>Kategorie</th>
+<th>Beschreibung</th>
+<th>Schadensbeispiele</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Normal</strong></td>
+<td>Begrenzte negative Auswirkungen</td>
+<td>Geringe Zweifel an Echtheit, korrigierbar</td>
+</tr>
+<tr>
+<td><strong>Hoch</strong></td>
+<td>Beträchtliche negative Auswirkungen</td>
+<td>Erhebliche rechtliche oder finanzielle Konsequenzen</td>
+</tr>
+<tr>
+<td><strong>Sehr hoch</strong></td>
+<td>Existenzbedrohende Auswirkungen</td>
+<td>Existenzbedrohende rechtliche oder finanzielle Konsequenzen</td>
+</tr>
+</tbody>
+</table>
+<h4 id="215-nachvollziehbarkeit-optional">2.1.5 Nachvollziehbarkeit (Optional)</h4>
+<p>Sicherstellung der Rückverfolgbarkeit von Aktionen.</p>
+<table>
+<thead>
+<tr>
+<th>Kategorie</th>
+<th>Beschreibung</th>
+<th>Schadensbeispiele</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Normal</strong></td>
+<td>Begrenzte negative Auswirkungen</td>
+<td>Erschwerte Fehlersuche, geringe Compliance-Risiken</td>
+</tr>
+<tr>
+<td><strong>Hoch</strong></td>
+<td>Beträchtliche negative Auswirkungen</td>
+<td>Compliance-Verstöße, erschwerte Incident-Aufklärung</td>
+</tr>
+<tr>
+<td><strong>Sehr hoch</strong></td>
+<td>Existenzbedrohende Auswirkungen</td>
+<td>Schwerwiegende Compliance-Verstöße, unmögliche Incident-Aufklärung</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-bewertungsmastab">2.2 Bewertungsmaßstab</h3>
+<p><strong>Bewertungskriterien:</strong>
+- Gesetzliche und regulatorische Anforderungen (DSGVO, IT-Sicherheitsgesetz, etc.)
+- Vertragliche Verpflichtungen
+- Geschäftskritikalität
+- Finanzielle Auswirkungen
+- Reputationsrisiken
+- Personenbezogene Daten
+- Geschäftsgeheimnisse</p>
+<h2 id="3-schutzbedarfsfeststellung">3. Schutzbedarfsfeststellung</h2>
+<h3 id="31-geschaftsprozesse">3.1 Geschäftsprozesse</h3>
+<table>
+<thead>
+<tr>
+<th>Prozess-ID</th>
+<th>Prozess</th>
+<th>Owner</th>
+<th>C</th>
+<th>I</th>
+<th>A</th>
+<th>Begründung</th>
+<th>Schutzbedarf gesamt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P-001</td>
+<td>[TODO: Prozess 1]</td>
+<td>[TODO]</td>
+<td>Normal/Hoch/Sehr hoch</td>
+<td>Normal/Hoch/Sehr hoch</td>
+<td>Normal/Hoch/Sehr hoch</td>
+<td>[TODO: Begründung]</td>
+<td>[TODO: Maximum-Prinzip]</td>
+</tr>
+<tr>
+<td>P-002</td>
+<td>[TODO: Prozess 2]</td>
+<td>[TODO]</td>
+<td>Normal/Hoch/Sehr hoch</td>
+<td>Normal/Hoch/Sehr hoch</td>
+<td>Normal/Hoch/Sehr hoch</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>P-003</td>
+<td>[TODO: Prozess 3]</td>
+<td>[TODO]</td>
+<td>Normal/Hoch/Sehr hoch</td>
+<td>Normal/Hoch/Sehr hoch</td>
+<td>Normal/Hoch/Sehr hoch</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Anzahl Prozesse gesamt:</strong> [TODO]<br />
+<strong>Verteilung:</strong>
+- Normal: [TODO]
+- Hoch: [TODO]
+- Sehr hoch: [TODO]</p>
+<h3 id="32-informationen-und-daten">3.2 Informationen und Daten</h3>
+<table>
+<thead>
+<tr>
+<th>Info-ID</th>
+<th>Information/Datenart</th>
+<th>Prozess</th>
+<th>C</th>
+<th>I</th>
+<th>A</th>
+<th>Begründung</th>
+<th>Schutzbedarf gesamt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I-001</td>
+<td>Personenbezogene Daten (DSGVO)</td>
+<td>[TODO]</td>
+<td>Hoch</td>
+<td>Hoch</td>
+<td>Normal</td>
+<td>DSGVO-Anforderungen</td>
+<td>Hoch</td>
+</tr>
+<tr>
+<td>I-002</td>
+<td>Geschäftsgeheimnisse</td>
+<td>[TODO]</td>
+<td>Sehr hoch</td>
+<td>Hoch</td>
+<td>Normal</td>
+<td>Wettbewerbsvorteil</td>
+<td>Sehr hoch</td>
+</tr>
+<tr>
+<td>I-003</td>
+<td>Finanzdaten</td>
+<td>[TODO]</td>
+<td>Hoch</td>
+<td>Sehr hoch</td>
+<td>Hoch</td>
+<td>Gesetzliche Anforderungen</td>
+<td>Sehr hoch</td>
+</tr>
+<tr>
+<td>I-004</td>
+<td>[TODO: Weitere Daten]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Anzahl Informationsarten gesamt:</strong> [TODO]</p>
+<h3 id="33-anwendungen">3.3 Anwendungen</h3>
+<table>
+<thead>
+<tr>
+<th>Anwendungs-ID</th>
+<th>Anwendung</th>
+<th>Prozess</th>
+<th>C</th>
+<th>I</th>
+<th>A</th>
+<th>Begründung</th>
+<th>Schutzbedarf gesamt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A-001</td>
+<td>[TODO: Anwendung 1]</td>
+<td>P-001</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Vererbung von Prozess P-001</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>A-002</td>
+<td>[TODO: Anwendung 2]</td>
+<td>P-002</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>A-003</td>
+<td>[TODO: Anwendung 3]</td>
+<td>P-003</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Anzahl Anwendungen gesamt:</strong> [TODO]</p>
+<h3 id="34-it-systeme-und-komponenten">3.4 IT-Systeme und Komponenten</h3>
+<table>
+<thead>
+<tr>
+<th>System-ID</th>
+<th>System/Komponente</th>
+<th>Anwendung</th>
+<th>C</th>
+<th>I</th>
+<th>A</th>
+<th>Begründung</th>
+<th>Schutzbedarf gesamt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S-001</td>
+<td>{{ netbox.device.server_001 }}</td>
+<td>A-001</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Vererbung von Anwendung A-001</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>S-002</td>
+<td>[TODO: System 2]</td>
+<td>A-002</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>S-003</td>
+<td>[TODO: System 3]</td>
+<td>A-003</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Anzahl IT-Systeme gesamt:</strong> [TODO]</p>
+<h3 id="35-netzwerke">3.5 Netzwerke</h3>
+<table>
+<thead>
+<tr>
+<th>Netz-ID</th>
+<th>Netzwerk/Zone</th>
+<th>Systeme</th>
+<th>C</th>
+<th>I</th>
+<th>A</th>
+<th>Begründung</th>
+<th>Schutzbedarf gesamt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>N-001</td>
+<td>Management-Netz</td>
+<td>S-001, S-002</td>
+<td>Sehr hoch</td>
+<td>Sehr hoch</td>
+<td>Hoch</td>
+<td>Kritische Administrationszugriffe</td>
+<td>Sehr hoch</td>
+</tr>
+<tr>
+<td>N-002</td>
+<td>Produktiv-Netz</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>N-003</td>
+<td>DMZ</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Anzahl Netzwerke gesamt:</strong> [TODO]</p>
+<h3 id="36-raume-und-standorte">3.6 Räume und Standorte</h3>
+<table>
+<thead>
+<tr>
+<th>Raum-ID</th>
+<th>Raum/Standort</th>
+<th>Systeme</th>
+<th>C</th>
+<th>I</th>
+<th>A</th>
+<th>Begründung</th>
+<th>Schutzbedarf gesamt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R-001</td>
+<td>Rechenzentrum</td>
+<td>Alle kritischen Server</td>
+<td>Sehr hoch</td>
+<td>Sehr hoch</td>
+<td>Sehr hoch</td>
+<td>Hosting kritischer Systeme</td>
+<td>Sehr hoch</td>
+</tr>
+<tr>
+<td>R-002</td>
+<td>{{ meta.organization.primary_location }}</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Anzahl Räume gesamt:</strong> [TODO]</p>
+<h2 id="4-schutzbedarfsvererbung-und-abhangigkeiten">4. Schutzbedarfsvererbung und Abhängigkeiten</h2>
+<h3 id="41-vererbungsprinzip">4.1 Vererbungsprinzip</h3>
+<p>Der Schutzbedarf wird nach dem <strong>Maximum-Prinzip</strong> vererbt:</p>
+<div class="codehilite"><pre><span></span><code>Geschäftsprozess
+    ↓ (vererbt Schutzbedarf)
+Informationen
+    ↓ (vererbt Schutzbedarf)
+Anwendungen
+    ↓ (vererbt Schutzbedarf)
+IT-Systeme
+    ↓ (vererbt Schutzbedarf)
+Netzwerke, Räume
+</code></pre></div>
+
+<p><strong>Beispiel:</strong>
+- Prozess P-001 hat Schutzbedarf "Sehr hoch" für Vertraulichkeit
+- Anwendung A-001 unterstützt Prozess P-001
+- → Anwendung A-001 erbt Schutzbedarf "Sehr hoch" für Vertraulichkeit
+- Server S-001 hostet Anwendung A-001
+- → Server S-001 erbt Schutzbedarf "Sehr hoch" für Vertraulichkeit</p>
+<h3 id="42-vererbungstabelle">4.2 Vererbungstabelle</h3>
+<table>
+<thead>
+<tr>
+<th>Von (Quelle)</th>
+<th>Nach (Ziel)</th>
+<th>Vererbter Schutzbedarf</th>
+<th>Begründung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P-001</td>
+<td>A-001</td>
+<td>C: Sehr hoch, I: Hoch, A: Hoch</td>
+<td>Anwendung unterstützt kritischen Prozess</td>
+</tr>
+<tr>
+<td>A-001</td>
+<td>S-001</td>
+<td>C: Sehr hoch, I: Hoch, A: Hoch</td>
+<td>Server hostet kritische Anwendung</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="43-ausnahmen-und-begrundungen">4.3 Ausnahmen und Begründungen</h3>
+<p><strong>Ausnahmen vom Maximum-Prinzip:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Objekt</th>
+<th>Erwarteter Schutzbedarf</th>
+<th>Tatsächlicher Schutzbedarf</th>
+<th>Begründung</th>
+<th>Genehmigt von</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Objekt]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO: Begründung für Abweichung]</td>
+<td>Thomas Weber</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Wichtig:</strong> Ausnahmen müssen dokumentiert und genehmigt werden.</p>
+<h3 id="44-kumulative-effekte">4.4 Kumulative Effekte</h3>
+<p>Wenn ein System mehrere Anwendungen mit unterschiedlichem Schutzbedarf hostet, gilt das <strong>Maximum-Prinzip</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Anwendung 1</th>
+<th>Anwendung 2</th>
+<th>Anwendung 3</th>
+<th>Resultierender Schutzbedarf</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S-001</td>
+<td>C: Hoch</td>
+<td>C: Sehr hoch</td>
+<td>C: Normal</td>
+<td>C: Sehr hoch (Maximum)</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-validierung-und-qualitatssicherung">5. Validierung und Qualitätssicherung</h2>
+<h3 id="51-validierungsprozess">5.1 Validierungsprozess</h3>
+<p>Die Schutzbedarfsfeststellung wird validiert durch:</p>
+<ol>
+<li><strong>Review durch Prozess-Owner:</strong> Bestätigung der Geschäftskritikalität</li>
+<li><strong>Review durch IT-Leitung:</strong> Anna Schmidt - Technische Machbarkeit</li>
+<li><strong>Review durch Legal/Compliance:</strong> Gesetzliche Anforderungen</li>
+<li><strong>Review durch Datenschutz:</strong> DSGVO-Konformität</li>
+<li><strong>Freigabe durch ISB:</strong> Thomas Weber</li>
+</ol>
+<h3 id="52-konsistenzprufung">5.2 Konsistenzprüfung</h3>
+<table>
+<thead>
+<tr>
+<th>Prüfkriterium</th>
+<th>Status</th>
+<th>Bemerkungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Alle Prozesse bewertet</td>
+<td>[TODO: ✓/✗]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Alle Anwendungen bewertet</td>
+<td>[TODO: ✓/✗]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Alle IT-Systeme bewertet</td>
+<td>[TODO: ✓/✗]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Vererbung konsistent</td>
+<td>[TODO: ✓/✗]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Ausnahmen dokumentiert</td>
+<td>[TODO: ✓/✗]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Begründungen vollständig</td>
+<td>[TODO: ✓/✗]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-auswirkungen-auf-sicherheitsmanahmen">6. Auswirkungen auf Sicherheitsmaßnahmen</h2>
+<h3 id="61-manahmen-nach-schutzbedarf">6.1 Maßnahmen nach Schutzbedarf</h3>
+<table>
+<thead>
+<tr>
+<th>Schutzbedarf</th>
+<th>Beispielhafte Maßnahmen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Normal</strong></td>
+<td>Standard-Sicherheitsmaßnahmen, Basis-Härtung, Standard-Backup</td>
+</tr>
+<tr>
+<td><strong>Hoch</strong></td>
+<td>Erweiterte Sicherheitsmaßnahmen, Verschlüsselung, MFA, erweiterte Überwachung, redundante Systeme</td>
+</tr>
+<tr>
+<td><strong>Sehr hoch</strong></td>
+<td>Maximale Sicherheitsmaßnahmen, Ende-zu-Ende-Verschlüsselung, Hardware-Token, 24/7-Überwachung, Hochverfügbarkeit, Disaster Recovery</td>
+</tr>
+</tbody>
+</table>
+<h3 id="62-priorisierung-von-manahmen">6.2 Priorisierung von Maßnahmen</h3>
+<p>Sicherheitsmaßnahmen werden priorisiert nach:
+1. <strong>Sehr hoher Schutzbedarf:</strong> Höchste Priorität
+2. <strong>Hoher Schutzbedarf:</strong> Hohe Priorität
+3. <strong>Normaler Schutzbedarf:</strong> Normale Priorität</p>
+<h2 id="7-dokumentation-und-nachweise">7. Dokumentation und Nachweise</h2>
+<p>Folgende Dokumente und Nachweise werden geführt:
+- Dieses Schutzbedarfsfeststellungs-Dokument
+- Bewertungsworkshop-Protokolle
+- Freigaben der Prozess-Owner
+- Ausnahme-Genehmigungen
+- Änderungsprotokolle</p>
+<h2 id="8-aktualisierung-und-pflege">8. Aktualisierung und Pflege</h2>
+<p>Die Schutzbedarfsfeststellung wird aktualisiert bei:
+- Neuen Geschäftsprozessen oder Anwendungen
+- Wesentlichen Änderungen an bestehenden Prozessen
+- Neuen gesetzlichen Anforderungen
+- Sicherheitsvorfällen
+- Mindestens jährlich im Rahmen des ISMS-Reviews</p>
+<p><strong>Verantwortlich:</strong> Thomas Weber (ISB)<br />
+<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+<h2 id="9-freigabe">9. Freigabe</h2>
+<table>
+<thead>
+<tr>
+<th>Rolle</th>
+<th>Name</th>
+<th>Datum</th>
+<th>Freigabe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ISB</td>
+<td>Thomas Weber</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+<tr>
+<td>IT-Leitung</td>
+<td>Anna Schmidt</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+<tr>
+<td>Geschäftsführung</td>
+<td>Max Mustermann</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Referenzen:</strong>
+- BSI Standard 200-2: IT-Grundschutz-Methodik (Kapitel 6: Schutzbedarfsfeststellung)
+- BSI IT-Grundschutz-Kompendium</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0050_Strukturanalyse_Template.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0070_Modellierung_Bausteinzuordnung_Template.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

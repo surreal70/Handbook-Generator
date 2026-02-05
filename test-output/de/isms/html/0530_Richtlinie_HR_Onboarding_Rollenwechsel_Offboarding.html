@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0530 - Richtlinie: HR Security - Onboarding, Rollenwechsel, Offboarding</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0530</div>
+            <h1>Richtlinie: HR Security - Onboarding, Rollenwechsel, Offboarding</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0520_Policy_HR_Security.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0540_Policy_Konfiguration_und_Hardening.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="richtlinie-hr-security-onboarding-rollenwechsel-offboarding">Richtlinie: HR Security - Onboarding, Rollenwechsel, Offboarding</h1>
+<p><strong>Dokument-ID:</strong> 0530<br />
+<strong>Dokumenttyp:</strong> Richtlinie (detailliert)<br />
+<strong>Zugehörige Policy:</strong> 0520_Policy_HR_Security.md<br />
+<strong>Standard-Referenz:</strong> ISO/IEC 27001:2022 Annex A.6.1, A.6.2, A.6.3, A.6.4<br />
+<strong>Owner:</strong> {{ meta.hr.manager }}<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Freigegeben<br />
+<strong>Klassifizierung:</strong> Vertraulich<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.date }}</p>
+<hr />
+<h2 id="1-zweck-und-geltungsbereich">1. Zweck und Geltungsbereich</h2>
+<p>Diese Richtlinie konkretisiert die <code>0520_Policy_HR_Security.md</code> und definiert:
+- Security-Aspekte im HR-Lifecycle
+- Onboarding, Rollenwechsel und Offboarding-Prozesse
+- Background-Checks und Vertraulichkeitsverpflichtungen</p>
+<p><strong>Geltungsbereich:</strong> Alle Mitarbeiter, Auftragnehmer und Dritte bei <strong>AdminSend GmbH</strong></p>
+<h2 id="2-pre-employment">2. Pre-Employment</h2>
+<h3 id="21-background-checks">2.1 Background Checks</h3>
+<p><strong>Standard-Mitarbeiter:</strong>
+- Identitätsprüfung (Personalausweis)
+- Referenzen prüfen (2 Referenzen)
+- Bildungsabschlüsse verifizieren
+- Arbeitserlaubnis prüfen</p>
+<p><strong>Privilegierte Rollen:</strong>
+- Erweiterte Background-Checks
+- Führungszeugnis
+- Kreditwürdigkeit (bei Finanzzugriff)
+- Social Media Screening (optional)</p>
+<p><strong>Externe Auftragnehmer:</strong>
+- Firmen-Background-Check
+- NDA vor Zugriff
+- Sponsor-Verantwortung</p>
+<h3 id="22-arbeitsvertrag">2.2 Arbeitsvertrag</h3>
+<p><strong>Security-Klauseln:</strong>
+- Vertraulichkeitsverpflichtung
+- Acceptable Use Policy
+- Intellectual Property Rights
+- Post-Employment-Verpflichtungen</p>
+<h2 id="3-onboarding">3. Onboarding</h2>
+<h3 id="31-erster-arbeitstag">3.1 Erster Arbeitstag</h3>
+<p><strong>HR-Aktivitäten:</strong>
+1. Willkommens-Paket übergeben
+2. Arbeitsvertrag unterschreiben
+3. Security-Policies bestätigen
+4. Notfallkontakte erfassen</p>
+<p><strong>IT-Aktivitäten:</strong>
+1. Account-Erstellung (siehe <code>0230_Richtlinie_IAM</code>)
+2. Hardware-Ausgabe
+3. IT-Einweisung
+4. MFA-Registrierung</p>
+<h3 id="32-security-schulungen">3.2 Security-Schulungen</h3>
+<p><strong>Pflicht-Schulungen (Erste Woche):</strong>
+- Information Security Awareness (2 Stunden)
+- Data Protection / DSGVO (1 Stunde)
+- Acceptable Use Policy (30 Minuten)
+- Phishing-Awareness (30 Minuten)</p>
+<p><strong>Bestätigung:</strong>
+- Quiz (Bestehensgrenze: 80%)
+- Unterschrift auf Schulungsnachweis</p>
+<h3 id="33-rollenspezifische-schulungen">3.3 Rollenspezifische Schulungen</h3>
+<p><strong>Entwickler:</strong>
+- Secure Coding Training
+- OWASP Top 10</p>
+<p><strong>Administratoren:</strong>
+- Privileged Access Management
+- Incident Response</p>
+<p><strong>HR/Finance:</strong>
+- Data Privacy
+- Social Engineering Awareness</p>
+<h2 id="4-rollenwechsel-mover">4. Rollenwechsel (Mover)</h2>
+<h3 id="41-interner-wechsel">4.1 Interner Wechsel</h3>
+<p><strong>HR-Prozess:</strong>
+1. Neue Rolle in HR-System aktualisieren
+2. Alter und neuer Vorgesetzter informieren
+3. IT-Ticket für Zugriffsänderungen</p>
+<p><strong>IT-Prozess:</strong>
+1. Alte Zugriffe entziehen
+2. Neue Zugriffe bereitstellen
+3. Hardware anpassen (falls erforderlich)
+4. Dokumentation aktualisieren</p>
+<p><strong>Details:</strong> Siehe <code>0230_Richtlinie_IAM</code></p>
+<h3 id="42-beforderungen">4.2 Beförderungen</h3>
+<p><strong>Zusätzliche Prüfungen:</strong>
+- Bei privilegierten Rollen: Erweiterter Background-Check
+- Security-Schulungen für neue Verantwortung
+- Vier-Augen-Prinzip bei kritischen Zugriff en</p>
+<h2 id="5-offboarding">5. Offboarding</h2>
+<h3 id="51-geplantes-ausscheiden">5.1 Geplantes Ausscheiden</h3>
+<p><strong>2 Wochen vor Austritt:</strong>
+- Wissenstransfer planen
+- Übergabe-Checkliste erstellen
+- Zugriffe reviewen</p>
+<p><strong>Letzter Arbeitstag:</strong>
+- Hardware-Rückgabe
+- Zutrittskarte abgeben
+- Exit-Interview
+- Account-Deaktivierung (End of Day)</p>
+<p><strong>Nach Austritt:</strong>
+- Account-Löschung (nach 30 Tagen)
+- E-Mail-Weiterleitung (30 Tage)
+- Daten-Archivierung</p>
+<p><strong>Details:</strong> Siehe <code>0230_Richtlinie_IAM</code></p>
+<h3 id="52-ungeplantes-ausscheiden">5.2 Ungeplantes Ausscheiden</h3>
+<p><strong>Sofortmaßnahmen (innerhalb 1 Stunde):</strong>
+1. Alle Accounts deaktivieren
+2. VPN-Zugriff sperren
+3. Zutrittskarte deaktivieren
+4. Mobile Geräte remote löschen
+5. Vorgesetzten und Security informieren</p>
+<p><strong>Gründe:</strong>
+- Kündigung aus wichtigem Grund
+- Sicherheitsvorfälle
+- Verdacht auf Datenmissbrauch</p>
+<h3 id="53-post-employment">5.3 Post-Employment</h3>
+<p><strong>Vertraulichkeitsverpflichtung:</strong>
+- Bleibt nach Austritt bestehen
+- Keine Weitergabe von Geschäftsgeheimnissen
+- Rückgabe aller Unterlagen</p>
+<p><strong>Wiedereinstellung:</strong>
+- Neuer Background-Check
+- Neue Security-Schulungen
+- Neue Accounts (keine Reaktivierung alter Accounts)</p>
+<h2 id="6-vertraulichkeitsverpflichtungen">6. Vertraulichkeitsverpflichtungen</h2>
+<h3 id="61-non-disclosure-agreement-nda">6.1 Non-Disclosure Agreement (NDA)</h3>
+<p><strong>Unterzeichnung:</strong>
+- Bei Einstellung (im Arbeitsvertrag)
+- Bei Zugriff auf vertrauliche Projekte
+- Bei Auftragsverarbeitung (externe Dienstleister)</p>
+<p><strong>Inhalte:</strong>
+- Definition vertraulicher Informationen
+- Nutzungsbeschränkungen
+- Dauer der Verpflichtung
+- Konsequenzen bei Verstößen</p>
+<h3 id="62-intellectual-property-ip">6.2 Intellectual Property (IP)</h3>
+<p><strong>Regelung:</strong>
+- Alle Arbeitsergebnisse gehören dem Unternehmen
+- Keine private Nutzung von Unternehmens-Code
+- Offenlegung von Erfindungen</p>
+<h2 id="7-disziplinarmanahmen">7. Disziplinarmaßnahmen</h2>
+<h3 id="71-security-verstoe">7.1 Security-Verstöße</h3>
+<p><strong>Kategorien:</strong>
+- <strong>Leicht:</strong> Unbeabsichtigte Verstöße (z.B. Passwort-Sharing)
+- <strong>Mittel:</strong> Fahrlässige Verstöße (z.B. Datenverlust durch Unachtsamkeit)
+- <strong>Schwer:</strong> Vorsätzliche Verstöße (z.B. Datendiebstahl)</p>
+<p><strong>Maßnahmen:</strong>
+- Leicht: Verwarnung, Nachschulung
+- Mittel: Schriftliche Abmahnung
+- Schwer: Kündigung, Strafanzeige</p>
+<h3 id="72-prozess">7.2 Prozess</h3>
+<ol>
+<li>Incident-Meldung</li>
+<li>Untersuchung durch HR und Security</li>
+<li>Anhörung des Mitarbeiters</li>
+<li>Entscheidung über Maßnahmen</li>
+<li>Dokumentation</li>
+<li>Umsetzung</li>
+</ol>
+<h2 id="8-externe-auftragnehmer">8. Externe Auftragnehmer</h2>
+<h3 id="81-onboarding">8.1 Onboarding</h3>
+<p><strong>Voraussetzungen:</strong>
+- Vertrag mit Security-Klauseln
+- NDA unterschrieben
+- Background-Check (durch Auftragnehmer-Firma)
+- Interner Sponsor</p>
+<p><strong>Zugriffe:</strong>
+- Zeitlich befristet
+- Nur projektbezogen
+- Regelmäßige Rezertifizierung (quartalsweise)</p>
+<h3 id="82-monitoring">8.2 Monitoring</h3>
+<p><strong>Erhöhte Überwachung:</strong>
+- Zugriffe auf vertrauliche Daten
+- Privilegierte Aktivitäten
+- Datenexporte</p>
+<h3 id="83-offboarding">8.3 Offboarding</h3>
+<p><strong>Bei Projektende:</strong>
+- Sofortige Zugriffsentziehung
+- Datenrückgabe oder -löschung
+- Bestätigung der Vertraulichkeitsverpflichtung</p>
+<h2 id="9-compliance-und-audit">9. Compliance und Audit</h2>
+<h3 id="91-messgroen-kpis">9.1 Messgrößen (KPIs)</h3>
+<table>
+<thead>
+<tr>
+<th>Metrik</th>
+<th>Zielwert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Background-Check-Completion</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Security-Schulung (Onboarding)</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Offboarding-Completion (am letzten Tag)</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>NDA-Unterzeichnung</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="92-audit-nachweise">9.2 Audit-Nachweise</h3>
+<ul>
+<li>Background-Check-Dokumentation</li>
+<li>Schulungsnachweise</li>
+<li>NDA-Unterschriften</li>
+<li>Offboarding-Checklisten</li>
+</ul>
+<h2 id="10-referenzen">10. Referenzen</h2>
+<h3 id="interne-dokumente">Interne Dokumente</h3>
+<ul>
+<li><code>0520_Policy_HR_Security.md</code></li>
+<li><code>0230_Richtlinie_IAM_Joiner_Mover_Leaver_und_Zugriffsantraege.md</code></li>
+</ul>
+<h3 id="externe-standards">Externe Standards</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.6.1</strong> - Screening</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.6.2</strong> - Terms and conditions of employment</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.6.3</strong> - Information security awareness, education and training</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.6.4</strong> - Disciplinary process</li>
+</ul>
+<hr />
+<p><strong>Genehmigt durch:</strong> Thomas Weber, CISO<br />
+<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0520_Policy_HR_Security.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0540_Policy_Konfiguration_und_Hardening.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0290 - Anhang: Checklisten und Vorlagen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0290</div>
+            <h1>Anhang: Checklisten und Vorlagen</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0280_Compliance_und_Audits.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0000_README.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="anhang-checklisten-und-vorlagen">Anhang: Checklisten und Vorlagen</h1>
+<h2 id="ubersicht">Übersicht</h2>
+<p>Dieses Dokument enthält eine Sammlung von Checklisten, Vorlagen für Standarddokumente und Formularen für den IT-Betrieb. Ziel ist es, konsistente und effiziente Durchführung von Standardprozessen zu gewährleisten.</p>
+<p><strong>Dokumentverantwortlicher:</strong> IT Operations Manager<br />
+<strong>Genehmigt durch:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Organisation:</strong> AdminSend GmbH</p>
+<hr />
+<h2 id="checklisten">Checklisten</h2>
+<h3 id="incident-management-checklisten">Incident-Management-Checklisten</h3>
+<h4 id="incident-response-checkliste">Incident-Response-Checkliste</h4>
+<div class="codehilite"><pre><span></span><code><span class="gh"># Incident-Response-Checkliste</span>
+
+<span class="gs">**Incident-ID:**</span> [INC-XXXXX]
+<span class="gs">**Datum/Zeit:**</span> [YYYY-MM-DD HH:MM]
+<span class="gs">**Melder:**</span> [Name]
+<span class="gs">**Priorität:**</span> P1 / P2 / P3 / P4
+
+<span class="gu">## Phase 1: Erkennung und Erfassung</span>
+<span class="k">- [ ]</span> Incident erkannt und dokumentiert
+<span class="k">- [ ]</span> Priorität bewertet (P1-P4)
+<span class="k">- [ ]</span> Ticket erstellt
+<span class="k">- [ ]</span> Betroffene Systeme identifiziert
+<span class="k">- [ ]</span> Betroffene Benutzer identifiziert
+<span class="k">- [ ]</span> Erste Symptome dokumentiert
+
+<span class="gu">## Phase 2: Klassifizierung und Priorisierung</span>
+<span class="k">- [ ]</span> Incident-Kategorie zugewiesen
+<span class="k">- [ ]</span> Business-Impact bewertet
+<span class="k">- [ ]</span> Dringlichkeit bewertet
+<span class="k">- [ ]</span> Priorität bestätigt
+<span class="k">- [ ]</span> Verantwortlichen zugewiesen
+
+<span class="gu">## Phase 3: Diagnose und Untersuchung</span>
+<span class="k">- [ ]</span> Logs analysiert
+<span class="k">- [ ]</span> Monitoring-Daten geprüft
+<span class="k">- [ ]</span> Ähnliche Incidents gesucht
+<span class="k">- [ ]</span> Known Issues geprüft
+<span class="k">- [ ]</span> Root-Cause identifiziert (falls möglich)
+
+<span class="gu">## Phase 4: Lösung und Wiederherstellung</span>
+<span class="k">- [ ]</span> Lösungsansatz definiert
+<span class="k">- [ ]</span> Genehmigung eingeholt (falls erforderlich)
+<span class="k">- [ ]</span> Lösung implementiert
+<span class="k">- [ ]</span> Funktionalität validiert
+<span class="k">- [ ]</span> Benutzer informiert
+
+<span class="gu">## Phase 5: Abschluss</span>
+<span class="k">- [ ]</span> Incident gelöst
+<span class="k">- [ ]</span> Dokumentation vervollständigt
+<span class="k">- [ ]</span> Benutzer-Bestätigung eingeholt
+<span class="k">- [ ]</span> Ticket geschlossen
+<span class="k">- [ ]</span> Lessons Learned dokumentiert (bei P1/P2)
+
+<span class="gu">## Kommunikation</span>
+<span class="k">- [ ]</span> Stakeholder informiert
+<span class="k">- [ ]</span> Status-Updates kommuniziert
+<span class="k">- [ ]</span> Lösung kommuniziert
+
+<span class="gs">**Bearbeitet von:**</span> [Name]
+<span class="gs">**Abgeschlossen am:**</span> [YYYY-MM-DD HH:MM]
+<span class="gs">**Dauer:**</span> [HH:MM]
+</code></pre></div>
+
+<hr />
+<h4 id="major-incident-checkliste">Major-Incident-Checkliste</h4>
+<div class="codehilite"><pre><span></span><code><span class="gh"># Major-Incident-Checkliste (P1)</span>
+
+<span class="gs">**Incident-ID:**</span> [INC-XXXXX]
+<span class="gs">**Datum/Zeit:**</span> [YYYY-MM-DD HH:MM]
+<span class="gs">**Incident-Manager:**</span> [Name]
+
+<span class="gu">## Sofortmaßnahmen (0-15 Minuten)</span>
+<span class="k">- [ ]</span> Major-Incident erklärt
+<span class="k">- [ ]</span> Incident-Manager benannt
+<span class="k">- [ ]</span> War-Room eingerichtet (physisch/virtuell)
+<span class="k">- [ ]</span> Kommunikations-Kanal etabliert
+<span class="k">- [ ]</span> Management informiert (CIO)
+<span class="k">- [ ]</span> Erste Status-Meldung versendet
+
+<span class="gu">## Incident-Management (15-60 Minuten)</span>
+<span class="k">- [ ]</span> Technisches Team zusammengestellt
+<span class="k">- [ ]</span> Rollen und Verantwortlichkeiten geklärt
+<span class="k">- [ ]</span> Diagnose gestartet
+<span class="k">- [ ]</span> Workaround gesucht
+<span class="k">- [ ]</span> Status-Updates alle 30 Minuten
+<span class="k">- [ ]</span> Eskalation vorbereitet (falls erforderlich)
+
+<span class="gu">## Lösungsfindung (1-4 Stunden)</span>
+<span class="k">- [ ]</span> Root-Cause identifiziert
+<span class="k">- [ ]</span> Lösungsansatz definiert
+<span class="k">- [ ]</span> Risikobewertung durchgeführt
+<span class="k">- [ ]</span> Genehmigung eingeholt
+<span class="k">- [ ]</span> Implementierung gestartet
+<span class="k">- [ ]</span> Rollback-Plan bereit
+
+<span class="gu">## Wiederherstellung</span>
+<span class="k">- [ ]</span> Lösung implementiert
+<span class="k">- [ ]</span> Funktionalität validiert
+<span class="k">- [ ]</span> Monitoring intensiviert
+<span class="k">- [ ]</span> Benutzer informiert
+<span class="k">- [ ]</span> Services wiederhergestellt
+
+<span class="gu">## Nachbereitung</span>
+<span class="k">- [ ]</span> Incident geschlossen
+<span class="k">- [ ]</span> Postmortem geplant (innerhalb 48h)
+<span class="k">- [ ]</span> Dokumentation vervollständigt
+<span class="k">- [ ]</span> Management-Report erstellt
+<span class="k">- [ ]</span> Verbesserungsmaßnahmen definiert
+
+<span class="gu">## Kommunikation</span>
+<span class="k">- [ ]</span> Initiale Benachrichtigung (&lt; 15 Min)
+<span class="k">- [ ]</span> Status-Updates (alle 30 Min)
+<span class="k">- [ ]</span> Lösungs-Benachrichtigung
+<span class="k">- [ ]</span> Abschluss-Benachrichtigung
+<span class="k">- [ ]</span> Postmortem-Einladung
+
+<span class="gs">**Incident-Manager:**</span> [Name]
+<span class="gs">**Technischer Lead:**</span> [Name]
+<span class="gs">**Kommunikations-Lead:**</span> [Name]
+</code></pre></div>
+
+<hr />
+<h3 id="change-management-checklisten">Change-Management-Checklisten</h3>
+<h4 id="standard-change-checkliste">Standard-Change-Checkliste</h4>
+<div class="codehilite"><pre><span></span><code><span class="gh"># Standard-Change-Checkliste</span>
+
+<span class="gs">**Change-ID:**</span> [CHG-XXXXX]
+<span class="gs">**Datum:**</span> [YYYY-MM-DD]
+<span class="gs">**Change-Manager:**</span> [Name]
+
+<span class="gu">## Planung</span>
+<span class="k">- [ ]</span> Change-Request erstellt
+<span class="k">- [ ]</span> Beschreibung vollständig
+<span class="k">- [ ]</span> Begründung dokumentiert
+<span class="k">- [ ]</span> Risikobewertung durchgeführt
+<span class="k">- [ ]</span> Betroffene Systeme identifiziert
+<span class="k">- [ ]</span> Abhängigkeiten identifiziert
+<span class="k">- [ ]</span> Zeitfenster definiert
+<span class="k">- [ ]</span> Ressourcen allokiert
+
+<span class="gu">## Genehmigung</span>
+<span class="k">- [ ]</span> Change-Kategorie bestimmt (Standard/Normal/Emergency)
+<span class="k">- [ ]</span> Genehmiger identifiziert
+<span class="k">- [ ]</span> Genehmigung eingeholt
+<span class="k">- [ ]</span> CAB-Review (falls erforderlich)
+
+<span class="gu">## Vorbereitung</span>
+<span class="k">- [ ]</span> Implementierungsplan erstellt
+<span class="k">- [ ]</span> Rollback-Plan erstellt
+<span class="k">- [ ]</span> Test-Plan erstellt
+<span class="k">- [ ]</span> Kommunikationsplan erstellt
+<span class="k">- [ ]</span> Backup durchgeführt
+<span class="k">- [ ]</span> Test-Umgebung validiert
+
+<span class="gu">## Implementierung</span>
+<span class="k">- [ ]</span> Wartungsfenster gestartet
+<span class="k">- [ ]</span> Benutzer informiert
+<span class="k">- [ ]</span> Change implementiert
+<span class="k">- [ ]</span> Schritt-für-Schritt dokumentiert
+<span class="k">- [ ]</span> Probleme dokumentiert
+
+<span class="gu">## Validierung</span>
+<span class="k">- [ ]</span> Funktionalität getestet
+<span class="k">- [ ]</span> Performance validiert
+<span class="k">- [ ]</span> Monitoring geprüft
+<span class="k">- [ ]</span> Keine Fehler in Logs
+<span class="k">- [ ]</span> Benutzer-Akzeptanz-Test (falls erforderlich)
+
+<span class="gu">## Abschluss</span>
+<span class="k">- [ ]</span> Change erfolgreich
+<span class="k">- [ ]</span> Dokumentation aktualisiert
+<span class="k">- [ ]</span> CMDB aktualisiert
+<span class="k">- [ ]</span> Benutzer informiert
+<span class="k">- [ ]</span> Change geschlossen
+<span class="k">- [ ]</span> Lessons Learned (bei Problemen)
+
+<span class="gu">## Rollback (falls erforderlich)</span>
+<span class="k">- [ ]</span> Rollback-Entscheidung getroffen
+<span class="k">- [ ]</span> Rollback-Plan ausgeführt
+<span class="k">- [ ]</span> System wiederhergestellt
+<span class="k">- [ ]</span> Validierung durchgeführt
+<span class="k">- [ ]</span> Incident erstellt für Analyse
+
+<span class="gs">**Change-Manager:**</span> [Name]
+<span class="gs">**Implementiert von:**</span> [Name]
+<span class="gs">**Status:**</span> Erfolgreich / Rollback / Abgebrochen
+</code></pre></div>
+
+<hr />
+<h3 id="backup-und-recovery-checklisten">Backup und Recovery Checklisten</h3>
+<h4 id="backup-verifikations-checkliste">Backup-Verifikations-Checkliste</h4>
+<div class="codehilite"><pre><span></span><code><span class="gh"># Backup-Verifikations-Checkliste</span>
+
+<span class="gs">**Datum:**</span> [YYYY-MM-DD]
+<span class="gs">**Durchgeführt von:**</span> [Name]
+
+<span class="gu">## Backup-Status</span>
+<span class="k">- [ ]</span> Alle geplanten Backups durchgeführt
+<span class="k">- [ ]</span> Backup-Logs geprüft
+<span class="k">- [ ]</span> Keine Fehler in Logs
+<span class="k">- [ ]</span> Backup-Größen plausibel
+<span class="k">- [ ]</span> Backup-Zeiten akzeptabel
+
+<span class="gu">## Backup-Integrität</span>
+<span class="k">- [ ]</span> Checksummen validiert
+<span class="k">- [ ]</span> Backup-Dateien lesbar
+<span class="k">- [ ]</span> Keine Korruption festgestellt
+<span class="k">- [ ]</span> Verschlüsselung funktioniert
+
+<span class="gu">## Restore-Test</span>
+<span class="k">- [ ]</span> Zufälliges Backup ausgewählt
+<span class="k">- [ ]</span> Test-Umgebung vorbereitet
+<span class="k">- [ ]</span> Restore durchgeführt
+<span class="k">- [ ]</span> Daten validiert
+<span class="k">- [ ]</span> Funktionalität getestet
+<span class="k">- [ ]</span> Restore-Zeit gemessen
+
+<span class="gu">## Dokumentation</span>
+<span class="k">- [ ]</span> Test-Ergebnis dokumentiert
+<span class="k">- [ ]</span> Probleme dokumentiert
+<span class="k">- [ ]</span> Verbesserungen identifiziert
+<span class="k">- [ ]</span> Report erstellt
+
+<span class="gu">## Systeme geprüft</span>
+<span class="k">- [ ]</span> Datenbanken
+<span class="k">- [ ]</span> File-Server
+<span class="k">- [ ]</span> Anwendungs-Server
+<span class="k">- [ ]</span> Konfigurationen
+<span class="k">- [ ]</span> Virtualisierungs-Hosts
+
+<span class="gs">**Ergebnis:**</span> Erfolgreich / Mit Problemen / Fehlgeschlagen
+<span class="gs">**Nächster Test:**</span> [YYYY-MM-DD]
+</code></pre></div>
+
+<hr />
+<h4 id="disaster-recovery-test-checkliste">Disaster-Recovery-Test-Checkliste</h4>
+<div class="codehilite"><pre><span></span><code><span class="gh"># Disaster-Recovery-Test-Checkliste</span>
+
+<span class="gs">**Test-Datum:**</span> [YYYY-MM-DD]
+<span class="gs">**Test-Leiter:**</span> [Name]
+<span class="gs">**Szenario:**</span> [Beschreibung]
+
+<span class="gu">## Vorbereitung</span>
+<span class="k">- [ ]</span> Test-Szenario definiert
+<span class="k">- [ ]</span> Test-Plan erstellt
+<span class="k">- [ ]</span> Teilnehmer informiert
+<span class="k">- [ ]</span> Test-Umgebung vorbereitet
+<span class="k">- [ ]</span> Backup-Daten bereitgestellt
+<span class="k">- [ ]</span> Kommunikationskanäle getestet
+
+<span class="gu">## Disaster-Simulation</span>
+<span class="k">- [ ]</span> Disaster-Szenario ausgelöst
+<span class="k">- [ ]</span> Incident-Response aktiviert
+<span class="k">- [ ]</span> Kommunikation gestartet
+<span class="k">- [ ]</span> DR-Team mobilisiert
+<span class="k">- [ ]</span> DR-Standort aktiviert (falls zutreffend)
+
+<span class="gu">## Recovery-Durchführung</span>
+<span class="k">- [ ]</span> DR-Plan befolgt
+<span class="k">- [ ]</span> Systeme wiederhergestellt
+<span class="k">- [ ]</span> Daten wiederhergestellt
+<span class="k">- [ ]</span> Netzwerk wiederhergestellt
+<span class="k">- [ ]</span> Anwendungen wiederhergestellt
+<span class="k">- [ ]</span> Zeiten gemessen (RTO/RPO)
+
+<span class="gu">## Validierung</span>
+<span class="k">- [ ]</span> Alle kritischen Systeme online
+<span class="k">- [ ]</span> Datenintegrität geprüft
+<span class="k">- [ ]</span> Funktionalität getestet
+<span class="k">- [ ]</span> Performance akzeptabel
+<span class="k">- [ ]</span> Benutzer-Zugriff funktioniert
+
+<span class="gu">## Rückkehr zum Normalbetrieb</span>
+<span class="k">- [ ]</span> Failback-Plan ausgeführt
+<span class="k">- [ ]</span> Primäre Systeme wiederhergestellt
+<span class="k">- [ ]</span> Daten synchronisiert
+<span class="k">- [ ]</span> Normalbetrieb wiederhergestellt
+<span class="k">- [ ]</span> DR-Standort deaktiviert
+
+<span class="gu">## Nachbereitung</span>
+<span class="k">- [ ]</span> Test-Ergebnisse dokumentiert
+<span class="k">- [ ]</span> RTO/RPO-Zeiten dokumentiert
+<span class="k">- [ ]</span> Probleme identifiziert
+<span class="k">- [ ]</span> Verbesserungen definiert
+<span class="k">- [ ]</span> DR-Plan aktualisiert
+<span class="k">- [ ]</span> Lessons-Learned-Session durchgeführt
+
+<span class="gu">## Metriken</span>
+<span class="k">-</span><span class="w"> </span><span class="gs">**RTO-Ziel:**</span> [Zeit]
+<span class="k">-</span><span class="w"> </span><span class="gs">**RTO-Erreicht:**</span> [Zeit]
+<span class="k">-</span><span class="w"> </span><span class="gs">**RPO-Ziel:**</span> [Zeit]
+<span class="k">-</span><span class="w"> </span><span class="gs">**RPO-Erreicht:**</span> [Zeit]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Erfolgsrate:**</span> [%]
+
+<span class="gs">**Test-Ergebnis:**</span> Erfolgreich / Teilweise erfolgreich / Fehlgeschlagen
+<span class="gs">**Nächster Test:**</span> [YYYY-MM-DD]
+</code></pre></div>
+
+<hr />
+<h3 id="security-checklisten">Security-Checklisten</h3>
+<h4 id="security-incident-response-checkliste">Security-Incident-Response-Checkliste</h4>
+<div class="codehilite"><pre><span></span><code><span class="gh"># Security-Incident-Response-Checkliste</span>
+
+<span class="gs">**Incident-ID:**</span> [SEC-XXXXX]
+<span class="gs">**Datum/Zeit:**</span> [YYYY-MM-DD HH:MM]
+<span class="gs">**Incident-Commander:**</span> [Name]
+
+<span class="gu">## Phase 1: Identifikation (0-30 Minuten)</span>
+<span class="k">- [ ]</span> Security-Event erkannt
+<span class="k">- [ ]</span> Incident bestätigt
+<span class="k">- [ ]</span> Severity bewertet
+<span class="k">- [ ]</span> CISO informiert
+<span class="k">- [ ]</span> Security-Team mobilisiert
+<span class="k">- [ ]</span> Incident-Ticket erstellt
+
+<span class="gu">## Phase 2: Eindämmung (30 Min - 2 Stunden)</span>
+<span class="k">- [ ]</span> Betroffene Systeme identifiziert
+<span class="k">- [ ]</span> Systeme isoliert (falls erforderlich)
+<span class="k">- [ ]</span> Accounts gesperrt (falls erforderlich)
+<span class="k">- [ ]</span> Netzwerk-Segmentierung aktiviert
+<span class="k">- [ ]</span> Forensik-Daten gesichert
+<span class="k">- [ ]</span> Weitere Ausbreitung verhindert
+
+<span class="gu">## Phase 3: Eradikation (2-8 Stunden)</span>
+<span class="k">- [ ]</span> Malware entfernt
+<span class="k">- [ ]</span> Backdoors geschlossen
+<span class="k">- [ ]</span> Schwachstellen gepatcht
+<span class="k">- [ ]</span> Kompromittierte Accounts zurückgesetzt
+<span class="k">- [ ]</span> Systeme gehärtet
+
+<span class="gu">## Phase 4: Wiederherstellung (8-24 Stunden)</span>
+<span class="k">- [ ]</span> Systeme aus sauberem Backup wiederhergestellt
+<span class="k">- [ ]</span> Passwörter zurückgesetzt
+<span class="k">- [ ]</span> Monitoring intensiviert
+<span class="k">- [ ]</span> Systeme schrittweise online gebracht
+<span class="k">- [ ]</span> Funktionalität validiert
+
+<span class="gu">## Phase 5: Lessons Learned (24-48 Stunden)</span>
+<span class="k">- [ ]</span> Postmortem durchgeführt
+<span class="k">- [ ]</span> Timeline erstellt
+<span class="k">- [ ]</span> Root-Cause identifiziert
+<span class="k">- [ ]</span> Verbesserungen definiert
+<span class="k">- [ ]</span> Incident-Report erstellt
+
+<span class="gu">## Kommunikation</span>
+<span class="k">- [ ]</span> Management informiert
+<span class="k">- [ ]</span> Betroffene Benutzer informiert
+<span class="k">- [ ]</span> Behörden informiert (falls erforderlich)
+<span class="k">- [ ]</span> Kunden informiert (falls erforderlich)
+<span class="k">- [ ]</span> Medien-Statement (falls erforderlich)
+
+<span class="gu">## Compliance</span>
+<span class="k">- [ ]</span> DSGVO-Meldepflicht geprüft (72h)
+<span class="k">- [ ]</span> Aufsichtsbehörde informiert (falls erforderlich)
+<span class="k">- [ ]</span> Betroffene benachrichtigt (falls erforderlich)
+<span class="k">- [ ]</span> Dokumentation für Audit
+
+<span class="gs">**Incident-Commander:**</span> [Name]
+<span class="gs">**Forensik-Lead:**</span> [Name]
+<span class="gs">**Kommunikations-Lead:**</span> [Name]
+<span class="gs">**Status:**</span> Offen / Eingedämmt / Gelöst
+</code></pre></div>
+
+<hr />
+<h2 id="vorlagen">Vorlagen</h2>
+<h3 id="incident-report-vorlage">Incident-Report-Vorlage</h3>
+<div class="codehilite"><pre><span></span><code><span class="gh"># Incident-Report</span>
+
+<span class="gs">**Incident-ID:**</span> [INC-XXXXX]
+<span class="gs">**Datum:**</span> [YYYY-MM-DD]
+<span class="gs">**Erstellt von:**</span> [Name]
+
+<span class="gu">## Executive Summary</span>
+[Kurze Zusammenfassung des Incidents für Management]
+
+<span class="gu">## Incident-Details</span>
+<span class="k">-</span><span class="w"> </span><span class="gs">**Priorität:**</span> P1 / P2 / P3 / P4
+<span class="k">-</span><span class="w"> </span><span class="gs">**Kategorie:**</span> [Kategorie]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Betroffene Systeme:**</span> [Liste]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Betroffene Benutzer:**</span> [Anzahl/Beschreibung]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Beginn:**</span> [YYYY-MM-DD HH:MM]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Ende:**</span> [YYYY-MM-DD HH:MM]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Dauer:**</span> [HH:MM]
+
+<span class="gu">## Timeline</span>
+| Zeit | Ereignis | Aktion |
+|---|---|---|
+| HH:MM | [Ereignis] | [Aktion] |
+| HH:MM | [Ereignis] | [Aktion] |
+
+<span class="gu">## Root Cause</span>
+[Detaillierte Beschreibung der Ursache]
+
+<span class="gu">## Impact</span>
+<span class="k">-</span><span class="w"> </span><span class="gs">**Business-Impact:**</span> [Beschreibung]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Finanzielle Auswirkungen:**</span> [Schätzung]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Reputations-Schaden:**</span> [Bewertung]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Betroffene Services:**</span> [Liste]
+
+<span class="gu">## Lösung</span>
+[Beschreibung der implementierten Lösung]
+
+<span class="gu">## Verbesserungsmaßnahmen</span>
+<span class="k">1.</span> [Maßnahme 1] - Verantwortlich: [Name] - Frist: [Datum]
+<span class="k">2.</span> [Maßnahme 2] - Verantwortlich: [Name] - Frist: [Datum]
+<span class="k">3.</span> [Maßnahme 3] - Verantwortlich: [Name] - Frist: [Datum]
+
+<span class="gu">## Lessons Learned</span>
+<span class="k">-</span><span class="w"> </span>[Lesson 1]
+<span class="k">-</span><span class="w"> </span>[Lesson 2]
+<span class="k">-</span><span class="w"> </span>[Lesson 3]
+
+<span class="gu">## Anhänge</span>
+<span class="k">-</span><span class="w"> </span>[Logs]
+<span class="k">-</span><span class="w"> </span>[Screenshots]
+<span class="k">-</span><span class="w"> </span>[Monitoring-Daten]
+
+<span class="gs">**Erstellt von:**</span> [Name]
+<span class="gs">**Genehmigt von:**</span> Andreas Huemmer
+<span class="gs">**Datum:**</span> [YYYY-MM-DD]
+</code></pre></div>
+
+<hr />
+<h3 id="change-request-vorlage">Change-Request-Vorlage</h3>
+<div class="codehilite"><pre><span></span><code><span class="gh"># Change-Request</span>
+
+<span class="gs">**Change-ID:**</span> [CHG-XXXXX]
+<span class="gs">**Datum:**</span> [YYYY-MM-DD]
+<span class="gs">**Antragsteller:**</span> [Name]
+
+<span class="gu">## Change-Details</span>
+<span class="k">-</span><span class="w"> </span><span class="gs">**Titel:**</span> [Kurzer Titel]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Kategorie:**</span> Standard / Normal / Emergency
+<span class="k">-</span><span class="w"> </span><span class="gs">**Priorität:**</span> Niedrig / Mittel / Hoch / Kritisch
+<span class="k">-</span><span class="w"> </span><span class="gs">**Geplantes Datum:**</span> [YYYY-MM-DD]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Geplante Zeit:**</span> [HH:MM - HH:MM]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Dauer:**</span> [Geschätzte Dauer]
+
+<span class="gu">## Beschreibung</span>
+[Detaillierte Beschreibung des Changes]
+
+<span class="gu">## Begründung</span>
+[Warum ist dieser Change notwendig?]
+
+<span class="gu">## Betroffene Systeme</span>
+<span class="k">-</span><span class="w"> </span>[System 1]
+<span class="k">-</span><span class="w"> </span>[System 2]
+<span class="k">-</span><span class="w"> </span>[System 3]
+
+<span class="gu">## Betroffene Benutzer</span>
+[Anzahl und Beschreibung der betroffenen Benutzer]
+
+<span class="gu">## Risikobewertung</span>
+<span class="k">-</span><span class="w"> </span><span class="gs">**Risiko:**</span> Niedrig / Mittel / Hoch
+<span class="k">-</span><span class="w"> </span><span class="gs">**Impact:**</span> Niedrig / Mittel / Hoch
+<span class="k">-</span><span class="w"> </span><span class="gs">**Wahrscheinlichkeit:**</span> Niedrig / Mittel / Hoch
+
+<span class="gu">## Risiken und Mitigationen</span>
+| Risiko | Wahrscheinlichkeit | Impact | Mitigation |
+|---|---|---|---|
+| [Risiko 1] | [L/M/H] | [L/M/H] | [Maßnahme] |
+| [Risiko 2] | [L/M/H] | [L/M/H] | [Maßnahme] |
+
+<span class="gu">## Implementierungsplan</span>
+<span class="k">1.</span> [Schritt 1]
+<span class="k">2.</span> [Schritt 2]
+<span class="k">3.</span> [Schritt 3]
+
+<span class="gu">## Rollback-Plan</span>
+<span class="k">1.</span> [Schritt 1]
+<span class="k">2.</span> [Schritt 2]
+<span class="k">3.</span> [Schritt 3]
+
+<span class="gu">## Test-Plan</span>
+<span class="k">1.</span> [Test 1]
+<span class="k">2.</span> [Test 2]
+<span class="k">3.</span> [Test 3]
+
+<span class="gu">## Kommunikationsplan</span>
+<span class="k">-</span><span class="w"> </span><span class="gs">**Vor Change:**</span> [Wer, Wann, Wie]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Während Change:**</span> [Wer, Wann, Wie]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Nach Change:**</span> [Wer, Wann, Wie]
+
+<span class="gu">## Genehmigungen</span>
+<span class="k">- [ ]</span> Technische Genehmigung: [Name] - [Datum]
+<span class="k">- [ ]</span> Business-Genehmigung: [Name] - [Datum]
+<span class="k">- [ ]</span> CAB-Genehmigung: [Name] - [Datum]
+
+<span class="gs">**Antragsteller:**</span> [Name]
+<span class="gs">**Change-Manager:**</span> Andreas Huemmer
+<span class="gs">**Status:**</span> Beantragt / Genehmigt / Abgelehnt / Implementiert
+</code></pre></div>
+
+<hr />
+<h3 id="postmortem-vorlage">Postmortem-Vorlage</h3>
+<div class="codehilite"><pre><span></span><code><span class="gh"># Postmortem</span>
+
+<span class="gs">**Incident-ID:**</span> [INC-XXXXX]
+<span class="gs">**Datum:**</span> [YYYY-MM-DD]
+<span class="gs">**Facilitator:**</span> [Name]
+<span class="gs">**Teilnehmer:**</span> [Namen]
+
+<span class="gu">## Incident-Zusammenfassung</span>
+[Kurze Zusammenfassung des Incidents]
+
+<span class="gu">## Timeline</span>
+| Zeit | Ereignis | Wer | Aktion |
+|---|---|---|---|
+| HH:MM | [Ereignis] | [Name] | [Aktion] |
+| HH:MM | [Ereignis] | [Name] | [Aktion] |
+
+<span class="gu">## Was lief gut?</span>
+<span class="k">-</span><span class="w"> </span>[Punkt 1]
+<span class="k">-</span><span class="w"> </span>[Punkt 2]
+<span class="k">-</span><span class="w"> </span>[Punkt 3]
+
+<span class="gu">## Was lief nicht gut?</span>
+<span class="k">-</span><span class="w"> </span>[Punkt 1]
+<span class="k">-</span><span class="w"> </span>[Punkt 2]
+<span class="k">-</span><span class="w"> </span>[Punkt 3]
+
+<span class="gu">## Root Cause</span>
+[5-Why-Analyse oder andere Root-Cause-Methode]
+
+<span class="k">1.</span> <span class="gs">**Warum trat das Problem auf?**</span> [Antwort]
+<span class="k">2.</span> <span class="gs">**Warum?**</span> [Antwort]
+<span class="k">3.</span> <span class="gs">**Warum?**</span> [Antwort]
+<span class="k">4.</span> <span class="gs">**Warum?**</span> [Antwort]
+<span class="k">5.</span> <span class="gs">**Warum?**</span> [Antwort]
+
+<span class="gs">**Root Cause:**</span> [Finale Ursache]
+
+<span class="gu">## Action Items</span>
+| # | Aktion | Verantwortlich | Frist | Status |
+|---|---|---|---|---|
+| 1 | [Aktion] | [Name] | [Datum] | Offen |
+| 2 | [Aktion] | [Name] | [Datum] | Offen |
+| 3 | [Aktion] | [Name] | [Datum] | Offen |
+
+<span class="gu">## Lessons Learned</span>
+<span class="k">-</span><span class="w"> </span>[Lesson 1]
+<span class="k">-</span><span class="w"> </span>[Lesson 2]
+<span class="k">-</span><span class="w"> </span>[Lesson 3]
+
+<span class="gu">## Verbesserungen</span>
+<span class="gu">### Kurzfristig (&lt; 1 Monat)</span>
+<span class="k">-</span><span class="w"> </span>[Verbesserung 1]
+<span class="k">-</span><span class="w"> </span>[Verbesserung 2]
+
+<span class="gu">### Mittelfristig (1-3 Monate)</span>
+<span class="k">-</span><span class="w"> </span>[Verbesserung 1]
+<span class="k">-</span><span class="w"> </span>[Verbesserung 2]
+
+<span class="gu">### Langfristig (&gt; 3 Monate)</span>
+<span class="k">-</span><span class="w"> </span>[Verbesserung 1]
+<span class="k">-</span><span class="w"> </span>[Verbesserung 2]
+
+<span class="gs">**Facilitator:**</span> [Name]
+<span class="gs">**Datum:**</span> [YYYY-MM-DD]
+<span class="gs">**Follow-Up:**</span> [Datum für Review der Action Items]
+</code></pre></div>
+
+<hr />
+<h2 id="formulare">Formulare</h2>
+<h3 id="zugriffs-anforderungs-formular">Zugriffs-Anforderungs-Formular</h3>
+<div class="codehilite"><pre><span></span><code><span class="gh"># Zugriffs-Anforderung</span>
+
+<span class="gs">**Antragsteller:**</span> [Name]
+<span class="gs">**Datum:**</span> [YYYY-MM-DD]
+<span class="gs">**Abteilung:**</span> [Abteilung]
+
+<span class="gu">## Benutzer-Informationen</span>
+<span class="k">-</span><span class="w"> </span><span class="gs">**Name:**</span> [Vollständiger Name]
+<span class="k">-</span><span class="w"> </span><span class="gs">**E-Mail:**</span> [E-Mail-Adresse]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Telefon:**</span> [Telefonnummer]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Abteilung:**</span> [Abteilung]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Position:**</span> [Position]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Manager:**</span> [Manager-Name]
+
+<span class="gu">## Zugriffs-Details</span>
+<span class="k">-</span><span class="w"> </span><span class="gs">**System/Anwendung:**</span> [Name]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Zugriffs-Level:**</span> Read / Write / Admin
+<span class="k">-</span><span class="w"> </span><span class="gs">**Begründung:**</span> [Geschäftliche Begründung]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Dauer:**</span> Permanent / Temporär bis [Datum]
+
+<span class="gu">## Erforderliche Berechtigungen</span>
+<span class="k">- [ ]</span> [Berechtigung 1]
+<span class="k">- [ ]</span> [Berechtigung 2]
+<span class="k">- [ ]</span> [Berechtigung 3]
+
+<span class="gu">## Genehmigungen</span>
+<span class="k">- [ ]</span> Manager-Genehmigung: [Name] - [Datum]
+<span class="k">- [ ]</span> Data-Owner-Genehmigung: [Name] - [Datum]
+<span class="k">- [ ]</span> Security-Genehmigung: [Name] - [Datum]
+
+<span class="gu">## IT-Bearbeitung</span>
+<span class="k">-</span><span class="w"> </span><span class="gs">**Bearbeitet von:**</span> [Name]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Datum:**</span> [YYYY-MM-DD]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Zugriff gewährt:**</span> Ja / Nein
+<span class="k">-</span><span class="w"> </span><span class="gs">**Kommentare:**</span> [Kommentare]
+
+<span class="gs">**Status:**</span> Beantragt / Genehmigt / Abgelehnt / Implementiert
+</code></pre></div>
+
+<hr />
+<h3 id="hardware-anforderungs-formular">Hardware-Anforderungs-Formular</h3>
+<div class="codehilite"><pre><span></span><code><span class="gh"># Hardware-Anforderung</span>
+
+<span class="gs">**Antragsteller:**</span> [Name]
+<span class="gs">**Datum:**</span> [YYYY-MM-DD]
+<span class="gs">**Abteilung:**</span> [Abteilung]
+
+<span class="gu">## Benutzer-Informationen</span>
+<span class="k">-</span><span class="w"> </span><span class="gs">**Name:**</span> [Vollständiger Name]
+<span class="k">-</span><span class="w"> </span><span class="gs">**E-Mail:**</span> [E-Mail-Adresse]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Abteilung:**</span> [Abteilung]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Standort:**</span> [Standort]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Manager:**</span> [Manager-Name]
+
+<span class="gu">## Hardware-Details</span>
+<span class="k">-</span><span class="w"> </span><span class="gs">**Typ:**</span> Laptop / Desktop / Monitor / Peripherie / Sonstiges
+<span class="k">-</span><span class="w"> </span><span class="gs">**Spezifikation:**</span> [Gewünschte Spezifikation]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Begründung:**</span> [Geschäftliche Begründung]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Dringlichkeit:**</span> Normal / Hoch / Kritisch
+
+<span class="gu">## Alte Hardware (falls Ersatz)</span>
+<span class="k">-</span><span class="w"> </span><span class="gs">**Typ:**</span> [Typ]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Modell:**</span> [Modell]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Seriennummer:**</span> [Seriennummer]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Zustand:**</span> [Zustand]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Rückgabe:**</span> Ja / Nein
+
+<span class="gu">## Kosten</span>
+<span class="k">-</span><span class="w"> </span><span class="gs">**Geschätzte Kosten:**</span> [Betrag]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Budget-Code:**</span> [Budget-Code]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Kostenstelle:**</span> [Kostenstelle]
+
+<span class="gu">## Genehmigungen</span>
+<span class="k">- [ ]</span> Manager-Genehmigung: [Name] - [Datum]
+<span class="k">- [ ]</span> Budget-Genehmigung: [Name] - [Datum]
+<span class="k">- [ ]</span> IT-Genehmigung: [Name] - [Datum]
+
+<span class="gu">## IT-Bearbeitung</span>
+<span class="k">-</span><span class="w"> </span><span class="gs">**Bearbeitet von:**</span> [Name]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Bestelldatum:**</span> [YYYY-MM-DD]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Lieferdatum:**</span> [YYYY-MM-DD]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Installationsdatum:**</span> [YYYY-MM-DD]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Asset-Tag:**</span> [Asset-Tag]
+
+<span class="gs">**Status:**</span> Beantragt / Genehmigt / Bestellt / Geliefert / Installiert
+</code></pre></div>
+
+<hr />
+<h2 id="prozesse-und-verantwortlichkeiten">Prozesse und Verantwortlichkeiten</h2>
+<h3 id="raci-matrix">RACI-Matrix</h3>
+<table>
+<thead>
+<tr>
+<th>Aktivität</th>
+<th>Ops Manager</th>
+<th>Ops Team</th>
+<th>Service Desk</th>
+<th>Benutzer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Checklisten-Erstellung</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Vorlagen-Erstellung</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Checklisten-Nutzung</td>
+<td>C</td>
+<td>R</td>
+<td>R</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Vorlagen-Nutzung</td>
+<td>C</td>
+<td>R</td>
+<td>R</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Aktualisierung</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Legende:</strong> R = Responsible, A = Accountable, C = Consulted, I = Informed</p>
+</blockquote>
+<hr />
+<h2 id="compliance-und-standards">Compliance und Standards</h2>
+<h3 id="relevante-standards">Relevante Standards</h3>
+<ul>
+<li><strong>ITIL v4:</strong> Service Operation Practice</li>
+<li><strong>ISO 20000:</strong> Clause 8.1 - Operational Planning and Control</li>
+<li><strong>COBIT 2019:</strong> DSS01 - Managed Operations</li>
+</ul>
+<hr />
+<h2 id="anhang">Anhang</h2>
+<h3 id="glossar">Glossar</h3>
+<table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Checkliste</td>
+<td>Strukturierte Liste von Aufgaben oder Prüfpunkten</td>
+</tr>
+<tr>
+<td>Vorlage</td>
+<td>Standardisiertes Dokument-Format</td>
+</tr>
+<tr>
+<td>Formular</td>
+<td>Strukturiertes Eingabe-Dokument</td>
+</tr>
+<tr>
+<td>Postmortem</td>
+<td>Nachträgliche Analyse eines Incidents</td>
+</tr>
+</tbody>
+</table>
+<h3 id="referenzen">Referenzen</h3>
+<ul>
+<li>ITIL v4 Foundation Handbook</li>
+<li>ISO/IEC 20000-1:2018</li>
+<li>COBIT 2019 Framework</li>
+</ul>
+<hr />
+<p><strong>Letzte Aktualisierung:</strong> {{ meta.date }}<br />
+<strong>Nächste Review:</strong> [TODO: Datum]<br />
+<strong>Kontakt:</strong> andreas.huemmer@adminsend.de</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0280_Compliance_und_Audits.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0000_README.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

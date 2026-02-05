@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0150 - Non-Conformities and Corrective Actions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0150</div>
+            <h1>Non-Conformities and Corrective Actions</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0140_ISMS_Management_Review_Template.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0160_ISMS_Continuous_Improvement.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="non-conformities-and-corrective-actions">Non-Conformities and Corrective Actions</h1>
+<p><strong>Document ID:</strong> 0150<br />
+<strong>Document Type:</strong> ISMS Process/Template<br />
+<strong>Standard Reference:</strong> ISO/IEC 27001:2022 Clause 10.1<br />
+<strong>Owner:</strong> Thomas Weber<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Approved<br />
+<strong>Classification:</strong> Internal<br />
+<strong>Last Updated:</strong> {{ meta.document.date }}<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-purpose-and-objective">1. Purpose and Objective</h2>
+<h3 id="11-purpose">1.1 Purpose</h3>
+<p>This document defines the process for systematic treatment of non-conformities in the ISMS of <strong>AdminSend GmbH</strong>. It ensures that:
+- Deviations from requirements are identified and documented
+- Root causes are analyzed and addressed
+- Corrective actions are effectively implemented
+- Recurrence is prevented</p>
+<h3 id="12-types-of-non-conformities">1.2 Types of Non-Conformities</h3>
+<p><strong>Audit Findings:</strong>
+- Major non-conformities (severe)
+- Minor non-conformities (minor)
+- Observations</p>
+<p><strong>Security Incidents:</strong>
+- Security incidents with root cause in process/control weaknesses</p>
+<p><strong>Policy Violations:</strong>
+- Violations of ISMS policies and guidelines</p>
+<p><strong>Compliance Violations:</strong>
+- Violations of legal or contractual requirements</p>
+<h2 id="2-process">2. Process</h2>
+<h3 id="21-process-overview">2.1 Process Overview</h3>
+<div class="codehilite"><pre><span></span><code><span class="mf">1.</span><span class="w"> </span><span class="n">Capture</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Identify</span><span class="w"> </span><span class="n">non</span><span class="o">-</span><span class="n">conformity</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Create</span><span class="w"> </span><span class="n">ticket</span><span class="o">/</span><span class="n">finding</span>
+<span class="w">   </span><span class="err">└─</span><span class="w"> </span><span class="n">Categorize</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">prioritize</span>
+
+<span class="mf">2.</span><span class="w"> </span><span class="n">Root</span><span class="w"> </span><span class="n">Cause</span><span class="w"> </span><span class="n">Analysis</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Perform</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="n">cause</span><span class="w"> </span><span class="n">analysis</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Identify</span><span class="w"> </span><span class="kr">cont</span><span class="n">ributing</span><span class="w"> </span><span class="n">factors</span>
+<span class="w">   </span><span class="err">└─</span><span class="w"> </span><span class="n">Recognize</span><span class="w"> </span><span class="kr">sys</span><span class="n">temic</span><span class="w"> </span><span class="n">causes</span>
+
+<span class="mf">3.</span><span class="w"> </span><span class="kd">Def</span><span class="n">ine</span><span class="w"> </span><span class="n">Corrective</span><span class="w"> </span><span class="n">Action</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Immediate</span><span class="w"> </span><span class="n">action</span><span class="w"> </span><span class="p">(</span><span class="kr">cont</span><span class="n">ainment</span><span class="p">)</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Corrective</span><span class="w"> </span><span class="n">action</span>
+<span class="w">   </span><span class="err">└─</span><span class="w"> </span><span class="n">Preventive</span><span class="w"> </span><span class="n">action</span>
+
+<span class="mf">4.</span><span class="w"> </span><span class="n">Implementation</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Implement</span><span class="w"> </span><span class="n">action</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Track</span><span class="w"> </span><span class="n">progress</span>
+<span class="w">   </span><span class="err">└─</span><span class="w"> </span><span class="n">Document</span>
+
+<span class="mf">5.</span><span class="w"> </span><span class="n">Effectiveness</span><span class="w"> </span><span class="n">Verification</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="kr">Verify</span><span class="w"> </span><span class="n">effectiveness</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Conduct</span><span class="w"> </span><span class="n">follow</span><span class="o">-</span><span class="n">up</span>
+<span class="w">   </span><span class="err">└─</span><span class="w"> </span><span class="n">Document</span><span class="w"> </span><span class="n">lessons</span><span class="w"> </span><span class="n">learned</span>
+
+<span class="mf">6.</span><span class="w"> </span><span class="n">Closure</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="kr">Close</span><span class="w"> </span><span class="n">finding</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Archive</span><span class="w"> </span><span class="n">documentation</span>
+<span class="w">   </span><span class="err">└─</span><span class="w"> </span><span class="n">Communication</span>
+</code></pre></div>
+
+<h3 id="22-step-1-capture">2.2 Step 1: Capture</h3>
+<p><strong>Identification:</strong>
+- Through audits (internal/external)
+- Through security incidents
+- Through monitoring and KPIs
+- Through employee reports
+- Through management reviews</p>
+<p><strong>Documentation:</strong>
+- Assign finding ID (e.g., F-2026-001)
+- Description of non-conformity
+- Affected area/control
+- Evidence
+- Categorization (Major/Minor/Observation)
+- Priority (High/Medium/Low)</p>
+<p><strong>Responsible:</strong> Auditor, ISMS Manager, or Reporter</p>
+<h3 id="23-step-2-root-cause-analysis">2.3 Step 2: Root Cause Analysis</h3>
+<p><strong>Root Cause Analysis (RCA):</strong>
+- <strong>5-Why Method:</strong> Why did this happen? (ask 5 times)
+- <strong>Fishbone Diagram:</strong> Cause categories (People, Process, Technology, Environment)
+- <strong>Fault Tree Analysis:</strong> Logical analysis of failure causes</p>
+<p><strong>To Identify:</strong>
+- Immediate cause
+- Root cause
+- Contributing factors
+- Systemic causes</p>
+<p><strong>Documentation:</strong>
+- RCA method
+- Identified causes
+- Contributing factors</p>
+<p><strong>Responsible:</strong> Finding owner, supported by ISMS Manager</p>
+<h3 id="24-step-3-define-corrective-action">2.4 Step 3: Define Corrective Action</h3>
+<p><strong>Immediate Action:</strong>
+- Containment of problem
+- Damage limitation
+- Temporary solution</p>
+<p><strong>Corrective Action:</strong>
+- Address root cause
+- Permanent solution
+- Process/control improvement</p>
+<p><strong>Preventive Action:</strong>
+- Prevent recurrence
+- Prevent similar problems
+- Systemic improvements</p>
+<p><strong>Documentation:</strong>
+- Description of action
+- Responsible person
+- Deadline
+- Resources/budget
+- Success criteria</p>
+<p><strong>Responsible:</strong> Finding owner, approved by CISO</p>
+<h3 id="25-step-4-implementation">2.5 Step 4: Implementation</h3>
+<p><strong>Implementation:</strong>
+- Implement action according to plan
+- Document progress
+- Inform stakeholders</p>
+<p><strong>Tracking:</strong>
+- Regular status updates
+- Escalation for delays
+- Adjustment for problems</p>
+<p><strong>Documentation:</strong>
+- Implementation steps
+- Deviations from plan
+- Lessons learned</p>
+<p><strong>Responsible:</strong> Finding owner</p>
+<h3 id="26-step-5-effectiveness-verification">2.6 Step 5: Effectiveness Verification</h3>
+<p><strong>Verification:</strong>
+- Is the action implemented?
+- Is the non-conformity resolved?
+- Is the root cause eliminated?</p>
+<p><strong>Validation:</strong>
+- Is the action effective?
+- Does the problem still occur?
+- Are there unintended side effects?</p>
+<p><strong>Methods:</strong>
+- Follow-up audit
+- Sampling
+- Monitoring
+- Interviews</p>
+<p><strong>Documentation:</strong>
+- Effectiveness verification performed on
+- Method
+- Result
+- Evidence</p>
+<p><strong>Responsible:</strong> Auditor or ISMS Manager</p>
+<h3 id="27-step-6-closure">2.7 Step 6: Closure</h3>
+<p><strong>Closure Criteria:</strong>
+- Action fully implemented
+- Effectiveness demonstrated
+- Documentation complete
+- Lessons learned documented</p>
+<p><strong>Closure Activities:</strong>
+- Set finding status to "Closed"
+- Archive documentation
+- Inform stakeholders
+- Communicate lessons learned</p>
+<p><strong>Responsible:</strong> ISMS Manager</p>
+<h2 id="3-non-conformities-register">3. Non-Conformities Register</h2>
+<h3 id="31-active-non-conformities">3.1 Active Non-Conformities</h3>
+<table>
+<thead>
+<tr>
+<th>Finding ID</th>
+<th>Source</th>
+<th>Category</th>
+<th>Description</th>
+<th>Root Cause</th>
+<th>Corrective Action</th>
+<th>Owner</th>
+<th>Due</th>
+<th>Status</th>
+<th>Effectiveness Verified</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F-2026-001</td>
+<td>Audit</td>
+<td>Minor</td>
+<td>Documentation incomplete</td>
+<td>Process not defined</td>
+<td>Document process</td>
+<td>[TODO]</td>
+<td>2026-03-31</td>
+<td>In Progress</td>
+<td>-</td>
+</tr>
+<tr>
+<td>F-2026-002</td>
+<td>Incident</td>
+<td>Major</td>
+<td>Unpatched vulnerability exploited</td>
+<td>Patch process insufficient</td>
+<td>Improve patch process</td>
+<td>IT Operations</td>
+<td>2026-02-28</td>
+<td>In Progress</td>
+<td>-</td>
+</tr>
+<tr>
+<td>F-2026-003</td>
+<td>Monitoring</td>
+<td>Observation</td>
+<td>MFA activation &lt; 100%</td>
+<td>Awareness insufficient</td>
+<td>MFA campaign</td>
+<td>Thomas Weber</td>
+<td>2026-04-30</td>
+<td>Planned</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p>[TODO: Add active non-conformities]</p>
+<h3 id="32-closed-non-conformities-archive">3.2 Closed Non-Conformities (Archive)</h3>
+<table>
+<thead>
+<tr>
+<th>Finding ID</th>
+<th>Source</th>
+<th>Category</th>
+<th>Description</th>
+<th>Corrective Action</th>
+<th>Closure Date</th>
+<th>Effectiveness Confirmed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F-2025-050</td>
+<td>Audit</td>
+<td>Minor</td>
+<td>Backup tests not documented</td>
+<td>Establish backup test process</td>
+<td>2026-01-15</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>F-2025-051</td>
+<td>Incident</td>
+<td>Major</td>
+<td>Phishing incident</td>
+<td>Security awareness training</td>
+<td>2026-01-20</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<p>[TODO: Archive closed non-conformities]</p>
+<h2 id="4-prioritization-and-deadlines">4. Prioritization and Deadlines</h2>
+<h3 id="41-prioritization">4.1 Prioritization</h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Priority</th>
+<th>Deadline</th>
+<th>Escalation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Major Non-Conformity</td>
+<td>Very High</td>
+<td>30 days</td>
+<td>Immediately to CISO and management</td>
+</tr>
+<tr>
+<td>Minor Non-Conformity</td>
+<td>High</td>
+<td>90 days</td>
+<td>To CISO if delayed</td>
+</tr>
+<tr>
+<td>Observation</td>
+<td>Medium</td>
+<td>180 days</td>
+<td>To ISMS Manager if delayed</td>
+</tr>
+<tr>
+<td>Opportunity for Improvement</td>
+<td>Low</td>
+<td>As available</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-escalation">4.2 Escalation</h3>
+<p><strong>Overdue Actions:</strong>
+- &gt; 2 weeks overdue: Reminder to owner
+- &gt; 4 weeks overdue: Escalation to CISO
+- &gt; 8 weeks overdue: Escalation to management</p>
+<p><strong>Critical Non-Conformities:</strong>
+- Major non-conformities: Immediate escalation
+- Compliance violations: Immediate escalation
+- Recurring non-conformities: Escalation to management</p>
+<h2 id="5-root-cause-analysis-methods">5. Root Cause Analysis Methods</h2>
+<h3 id="51-5-why-method">5.1 5-Why Method</h3>
+<p><strong>Example:</strong>
+1. <strong>Why</strong> did the non-conformity occur? → Unpatched vulnerability was exploited
+2. <strong>Why</strong> was the vulnerability unpatched? → Patch was not installed in time
+3. <strong>Why</strong> was the patch not installed in time? → Patch process did not prioritize patch
+4. <strong>Why</strong> did the process not prioritize the patch? → CVSS score was not considered
+5. <strong>Why</strong> was CVSS score not considered? → Process only considers vendor severity</p>
+<p><strong>Root Cause:</strong> Patch prioritization not based on CVSS score</p>
+<p><strong>Corrective Action:</strong> Extend patch process with CVSS-based prioritization</p>
+<h3 id="52-fishbone-diagram-ishikawa">5.2 Fishbone Diagram (Ishikawa)</h3>
+<p><strong>Categories:</strong>
+- <strong>People:</strong> Lack of training, errors, negligence
+- <strong>Process:</strong> Insufficient processes, missing documentation
+- <strong>Technology:</strong> Missing tools, misconfiguration, bugs
+- <strong>Environment:</strong> Organizational factors, resource shortage</p>
+<h2 id="6-effectiveness-verification">6. Effectiveness Verification</h2>
+<h3 id="61-methods">6.1 Methods</h3>
+<p><strong>Audit:</strong>
+- Follow-up audit
+- Sample testing
+- Document review</p>
+<p><strong>Monitoring:</strong>
+- KPI tracking
+- Incident tracking
+- Compliance monitoring</p>
+<p><strong>Testing:</strong>
+- Penetration tests
+- Vulnerability scans
+- Configuration audits</p>
+<p><strong>Interviews:</strong>
+- Questioning affected persons
+- Feedback collection</p>
+<h3 id="62-success-criteria">6.2 Success Criteria</h3>
+<p><strong>Action is effective when:</strong>
+- Non-conformity no longer occurs
+- Root cause is eliminated
+- KPIs have improved
+- No new problems have emerged
+- Stakeholders are satisfied</p>
+<h2 id="7-lessons-learned">7. Lessons Learned</h2>
+<h3 id="71-documentation">7.1 Documentation</h3>
+<p><strong>For each closed non-conformity:</strong>
+- What did we learn?
+- What worked well?
+- What could be improved?
+- Which actions are transferable?</p>
+<h3 id="72-communication">7.2 Communication</h3>
+<p><strong>Target Groups:</strong>
+- Affected teams
+- ISMS committee
+- Management
+- All employees (for relevant lessons learned)</p>
+<p><strong>Channels:</strong>
+- Lessons learned database
+- Security newsletter
+- Team meetings
+- Awareness campaigns</p>
+<h2 id="8-roles-and-responsibilities">8. Roles and Responsibilities</h2>
+<h3 id="81-raci-matrix-non-conformities-process">8.1 RACI Matrix: Non-Conformities Process</h3>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>CISO</th>
+<th>ISMS Manager</th>
+<th>Finding Owner</th>
+<th>Auditor</th>
+<th>Management</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Capture non-conformity</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>R</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Root cause analysis</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Define action</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Approve action</td>
+<td>A</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Implement action</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Verify effectiveness</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>R</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Close finding</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legend:</strong> R = Responsible, A = Accountable, C = Consulted, I = Informed</p>
+<h2 id="9-metrics-and-reporting">9. Metrics and Reporting</h2>
+<h3 id="91-kpis">9.1 KPIs</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Target Value</th>
+<th>Current</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Open major findings</td>
+<td>0</td>
+<td>[TODO]</td>
+<td>✓ / ✗</td>
+</tr>
+<tr>
+<td>Open minor findings</td>
+<td>&lt; 5</td>
+<td>[TODO]</td>
+<td>✓ / ✗</td>
+</tr>
+<tr>
+<td>Average remediation time (Major)</td>
+<td>&lt; 30 days</td>
+<td>[TODO] days</td>
+<td>✓ / ✗</td>
+</tr>
+<tr>
+<td>Average remediation time (Minor)</td>
+<td>&lt; 90 days</td>
+<td>[TODO] days</td>
+<td>✓ / ✗</td>
+</tr>
+<tr>
+<td>Overdue findings</td>
+<td>0</td>
+<td>[TODO]</td>
+<td>✓ / ✗</td>
+</tr>
+<tr>
+<td>Recurring findings</td>
+<td>0</td>
+<td>[TODO]</td>
+<td>✓ / ✗</td>
+</tr>
+</tbody>
+</table>
+<h3 id="92-reporting">9.2 Reporting</h3>
+<p><strong>Monthly:</strong>
+- Status of all open findings
+- Overdue findings
+- Newly added findings</p>
+<p><strong>Quarterly:</strong>
+- Trend analysis
+- Most common causes
+- Effectiveness of actions</p>
+<p><strong>Annually:</strong>
+- Complete review in management review
+- Lessons learned summary</p>
+<h2 id="10-references">10. References</h2>
+<h3 id="101-internal-documents">10.1 Internal Documents</h3>
+<ul>
+<li><code>0130_ISMS_Internal_Audit_Program.md</code> - Internal Audit Program</li>
+<li><code>0140_ISMS_Management_Review_Template.md</code> - Management Review</li>
+<li><code>0160_ISMS_Continuous_Improvement.md</code> - Continuous Improvement</li>
+<li><code>0400_Policy_Incident_Management.md</code> - Incident Management</li>
+</ul>
+<h3 id="102-external-standards">10.2 External Standards</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022</strong> - Clause 10.1: Nonconformity and corrective action</li>
+<li><strong>ISO 9001:2015</strong> - Clause 10.2: Nonconformity and corrective action</li>
+<li><strong>ISO 19011:2018</strong> - Guidelines for auditing management systems</li>
+</ul>
+<hr />
+<p><strong>Approved by:</strong><br />
+Thomas Weber, CISO<br />
+Date: {{ meta.document.approval_date }}</p>
+<p><strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0140_ISMS_Management_Review_Template.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0160_ISMS_Continuous_Improvement.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

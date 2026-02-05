@@ -15,6 +15,26 @@ The design follows the existing architecture pattern: templates are organized by
 │                         CLI Interface                        │
 │  (Existing: --language, --template, --output)               │
 │  (Extended: bcm, isms, bsi-grundschutz template types)      │
+│  (Extended: --output html for HTML mini-website)            │
+└────────────────────┬────────────────────────────────────────┘
+                     │
+                     ▼
+┌─────────────────────────────────────────────────────────────┐
+│                 Configuration Manager                        │
+│  - Loads config.yaml (manual metadata)                      │
+│  - Loads metadata-netbox.yaml (NetBox metadata)             │
+│  - Manages per-handbook versioning                          │
+│  - Handles role configuration for NetBox                    │
+└────────────────────┬────────────────────────────────────────┘
+                     │
+                     ▼
+┌─────────────────────────────────────────────────────────────┐
+│              NetBox Metadata Loader (NEW)                    │
+│  - Fetches contacts with roles from NetBox                  │
+│  - Fetches device information from NetBox                   │
+│  - Fetches site information from NetBox                     │
+│  - Populates metadata-netbox.yaml once per run              │
+│  - Applies configured role distinction logic                │
 └────────────────────┬────────────────────────────────────────┘
                      │
                      ▼
@@ -28,7 +48,7 @@ The design follows the existing architecture pattern: templates are organized by
                      │
                      ▼
 ┌─────────────────────────────────────────────────────────────┐
-│              HTML Comment Processor (NEW)                    │
+│              HTML Comment Processor                          │
 │  - Strips <!-- comment --> from templates                   │
 │  - Handles single-line and multi-line comments              │
 │  - Preserves surrounding markdown                           │
@@ -40,16 +60,17 @@ The design follows the existing architecture pattern: templates are organized by
 │  - Detects {{ source.field }} placeholders                  │
 │  - Routes to appropriate data source adapter                │
 │  - Replaces placeholders with actual data                   │
-│  (Unchanged: Works with all template types)                 │
+│  (Extended: Supports meta-netbox.* placeholders)            │
+│  (Extended: Supports handbook.* placeholders)               │
 └────────────────────┬────────────────────────────────────────┘
                      │
                      ▼
 ┌─────────────────────────────────────────────────────────────┐
 │                   Output Generator                           │
 │  - Assembles processed templates                            │
-│  - Generates Markdown output                                │
-│  - Generates PDF output                                     │
-│  (Unchanged: Works with all template types)                 │
+│  (Extended: Generates separate Markdown files with TOC)     │
+│  (Extended: Generates PDF with TOC and page breaks)         │
+│  (Extended: Generates HTML mini-website with navigation)    │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -187,6 +208,393 @@ class TemplateValidator:
 - Framework references must be present in appropriate templates (ISO 22301 for BCM, ISO 27001 for ISMS, BSI 200-x for Grundschutz)
 - Placeholders must follow `{{ source.field }}` syntax
 - Template numbering must be sequential with no gaps
+
+### 5. NetBox Metadata Loader (NEW)
+
+**Purpose**: Fetch metadata from NetBox and populate metadata-netbox.yaml file once per run.
+
+**Interface**:
+```python
+class NetBoxMetadataLoader:
+    """Loads metadata from NetBox and creates metadata-netbox.yaml."""
+    
+    def __init__(self, netbox_url: str, api_token: str, role_config: dict):
+        """
+        Initialize NetBox loader.
+        
+        Args:
+            netbox_url: URL of NetBox instance
+            api_token: API token for authentication
+            role_config: Configuration for role distinction
+        """
+        pass
+    
+    def load_metadata(self) -> dict:
+        """
+        Load all metadata from NetBox.
+        
+        Returns:
+            Dictionary with contacts, devices, sites
+        """
+        pass
+    
+    def fetch_contacts_with_roles(self) -> dict:
+        """
+        Fetch contacts from NetBox and assign roles.
+        
+        Returns:
+            Dictionary mapping roles to contact information
+        """
+        pass
+    
+    def fetch_devices(self) -> dict:
+        """
+        Fetch device information from NetBox.
+        
+        Returns:
+            Dictionary with device data
+        """
+        pass
+    
+    def fetch_sites(self) -> dict:
+        """
+        Fetch site information from NetBox.
+        
+        Returns:
+            Dictionary with site data
+        """
+        pass
+    
+    def save_to_yaml(self, metadata: dict, filepath: str) -> None:
+        """
+        Save metadata to YAML file.
+        
+        Args:
+            metadata: Metadata dictionary
+            filepath: Path to metadata-netbox.yaml
+        """
+        pass
+```
+
+**Implementation Details**:
+- Connects to NetBox API using pynetbox library
+- Applies role distinction logic based on configuration
+- Supports field-based role assignment (e.g., contact.role, contact.tags)
+- Supports name-based role assignment (e.g., "CISO" in name)
+- Creates metadata-netbox.yaml in project root
+- Runs once at start of handbook generation
+
+**Role Distinction Configuration**:
+```yaml
+# In config.yaml
+netbox:
+  url: "https://netbox.example.com"
+  api_token: "token_here"
+  role_distinction:
+    method: "field"  # or "name" or "tags"
+    field: "role"    # if method is "field"
+    mappings:
+      "CISO": "Chief Information Security Officer"
+      "CIO": "Chief Information Officer"
+      "Sysop": "System Administrator"
+      # ... more mappings
+```
+
+### 6. Configuration Manager (EXTENDED)
+
+**Purpose**: Manage configuration including per-handbook versioning and metadata.
+
+**Extended Interface**:
+```python
+class ConfigurationManager:
+    """Manages system configuration and metadata."""
+    
+    def load_config(self, config_path: str) -> dict:
+        """Load main configuration file."""
+        pass
+    
+    def load_metadata(self, metadata_path: str) -> dict:
+        """Load manual metadata from metadata.yaml."""
+        pass
+    
+    def load_netbox_metadata(self, netbox_metadata_path: str) -> dict:
+        """Load NetBox metadata from metadata-netbox.yaml."""
+        pass
+    
+    def get_handbook_metadata(self, handbook_type: str) -> dict:
+        """
+        Get metadata for specific handbook type.
+        
+        Args:
+            handbook_type: Type of handbook (bcm, isms, etc.)
+            
+        Returns:
+            Dictionary with version, owner, approver, date
+        """
+        pass
+    
+    def get_role_metadata(self, role: str, source: str = "meta") -> dict:
+        """
+        Get metadata for specific role.
+        
+        Args:
+            role: Role name (ciso, cio, sysop, etc.)
+            source: Source of metadata ("meta" or "meta-netbox")
+            
+        Returns:
+            Dictionary with name, email, phone
+        """
+        pass
+```
+
+**Per-Handbook Metadata Structure**:
+```yaml
+# In metadata.yaml
+handbooks:
+  bcm:
+    version: "1.0.0"
+    owner: "John Doe"
+    approver: "Jane Smith"
+    date: "2025-01-15"
+  isms:
+    version: "2.1.0"
+    owner: "Alice Johnson"
+    approver: "Bob Williams"
+    date: "2025-01-20"
+  bsi-grundschutz:
+    version: "1.5.0"
+    owner: "Charlie Brown"
+    approver: "Diana Prince"
+    date: "2025-01-10"
+  it-operation:
+    version: "3.0.0"
+    owner: "Eve Adams"
+    approver: "Frank Castle"
+    date: "2025-01-05"
+
+roles:
+  ciso:
+    name: "John Security"
+    email: "john.security@example.com"
+    phone: "+49 123 456789"
+  cio:
+    name: "Jane Tech"
+    email: "jane.tech@example.com"
+    phone: "+49 123 456790"
+  sysop:
+    name: "Bob Admin"
+    email: "bob.admin@example.com"
+    phone: "+49 123 456791"
+  datenschutzbeauftragter:
+    name: "Alice Privacy"
+    email: "alice.privacy@example.com"
+    phone: "+49 123 456792"
+  risikomanager:
+    name: "Charlie Risk"
+    email: "charlie.risk@example.com"
+    phone: "+49 123 456793"
+  interner_auditor:
+    name: "Diana Audit"
+    email: "diana.audit@example.com"
+    phone: "+49 123 456794"
+  personalleitung:
+    name: "Eve HR"
+    email: "eve.hr@example.com"
+    phone: "+49 123 456795"
+  it_manager:
+    name: "Frank IT"
+    email: "frank.it@example.com"
+    phone: "+49 123 456796"
+```
+
+### 7. Placeholder Processor (EXTENDED)
+
+**Extended Functionality**: Support new placeholder types.
+
+**New Placeholder Types**:
+
+**Handbook-Specific Placeholders**:
+```markdown
+**Version:** {{ handbook.version }}
+**Dokumentverantwortlicher:** {{ handbook.owner }}
+**Genehmiger:** {{ handbook.approver }}
+**Datum:** {{ handbook.date }}
+```
+
+**NetBox Metadata Placeholders**:
+```markdown
+**CISO (NetBox):** {{ meta-netbox.ciso.name }} ({{ meta-netbox.ciso.email }})
+**Standort (NetBox):** {{ meta-netbox.sites.primary.name }}
+**Gerät (NetBox):** {{ meta-netbox.devices.firewall.name }}
+```
+
+**Extended Role Placeholders**:
+```markdown
+**Systemadministrator:** {{ meta.sysop.name }}
+**Datenschutzbeauftragter:** {{ meta.datenschutzbeauftragter.name }}
+**Risikomanager:** {{ meta.risikomanager.name }}
+**Interner Auditor:** {{ meta.interner_auditor.name }}
+**Personalleitung:** {{ meta.personalleitung.name }}
+**IT-Manager:** {{ meta.it_manager.name }}
+```
+
+**English Translation** (automatic in English templates):
+```markdown
+**System Administrator:** {{ meta.sysop.name }}
+**Data Protection Officer:** {{ meta.datenschutzbeauftragter.name }}
+**Risk Manager:** {{ meta.risikomanager.name }}
+**Internal Auditor:** {{ meta.interner_auditor.name }}
+**HR Manager:** {{ meta.personalleitung.name }}
+**IT Manager:** {{ meta.it_manager.name }}
+```
+
+### 8. Output Generator (EXTENDED)
+
+**Extended Functionality**: Support HTML output, separate markdown files, and PDF with TOC.
+
+**New Output Formats**:
+
+**HTML Mini-Website**:
+```python
+class HTMLOutputGenerator:
+    """Generates HTML mini-website from templates."""
+    
+    def generate_html_site(self, templates: list[Template], output_dir: str) -> None:
+        """
+        Generate HTML mini-website.
+        
+        Args:
+            templates: List of processed templates
+            output_dir: Output directory for HTML files
+        """
+        pass
+    
+    def generate_toc_page(self, templates: list[Template]) -> str:
+        """
+        Generate table of contents HTML page.
+        
+        Args:
+            templates: List of templates
+            
+        Returns:
+            HTML content for TOC page
+        """
+        pass
+    
+    def generate_template_page(self, template: Template, prev_link: str, next_link: str) -> str:
+        """
+        Generate HTML page for single template.
+        
+        Args:
+            template: Template to render
+            prev_link: Link to previous page
+            next_link: Link to next page
+            
+        Returns:
+            HTML content for template page
+        """
+        pass
+    
+    def apply_styling(self, html_content: str) -> str:
+        """
+        Apply consistent CSS styling.
+        
+        Args:
+            html_content: Raw HTML content
+            
+        Returns:
+            Styled HTML content
+        """
+        pass
+```
+
+**Separate Markdown Files**:
+```python
+class SeparateMarkdownGenerator:
+    """Generates separate markdown files for each template."""
+    
+    def generate_separate_files(self, templates: list[Template], output_dir: str) -> None:
+        """
+        Generate separate markdown file for each template.
+        
+        Args:
+            templates: List of processed templates
+            output_dir: Output directory for markdown files
+        """
+        pass
+    
+    def generate_toc_file(self, templates: list[Template], output_dir: str) -> None:
+        """
+        Generate table of contents markdown file.
+        
+        Args:
+            templates: List of templates
+            output_dir: Output directory
+        """
+        pass
+```
+
+**PDF with Table of Contents**:
+```python
+class PDFWithTOCGenerator:
+    """Generates PDF with table of contents and page breaks."""
+    
+    def generate_pdf_with_toc(self, templates: list[Template], output_path: str) -> None:
+        """
+        Generate PDF with TOC and page breaks.
+        
+        Args:
+            templates: List of processed templates
+            output_path: Output PDF file path
+        """
+        pass
+    
+    def generate_toc_content(self, templates: list[Template]) -> str:
+        """
+        Generate table of contents content.
+        
+        Args:
+            templates: List of templates
+            
+        Returns:
+            Markdown content for TOC
+        """
+        pass
+    
+    def add_page_breaks(self, content: str) -> str:
+        """
+        Add page breaks between templates.
+        
+        Args:
+            content: Combined markdown content
+            
+        Returns:
+            Content with page break markers
+        """
+        pass
+```
+
+**Output Directory Structure**:
+```
+Handbook/
+├── de/
+│   ├── bcm/
+│   │   ├── markdown/              # NEW: Separate markdown files
+│   │   │   ├── TOC.md
+│   │   │   ├── 0010_Zweck_und_Geltungsbereich.md
+│   │   │   ├── 0020_BCM_Leitlinie_Policy.md
+│   │   │   └── ...
+│   │   ├── html/                  # NEW: HTML mini-website
+│   │   │   ├── index.html         # TOC page
+│   │   │   ├── 0010_Zweck_und_Geltungsbereich.html
+│   │   │   ├── 0020_BCM_Leitlinie_Policy.html
+│   │   │   ├── styles.css
+│   │   │   └── ...
+│   │   └── bcm_handbook_de.pdf    # PDF with TOC
+│   └── ...
+└── en/
+    └── ...
+```
 
 ## Data Models
 
@@ -372,6 +780,60 @@ specific BCM strategy. Consider the following:
 
 **Validates: Requirements 7.1, 7.2, 7.3, 7.4, 7.5**
 
+### Property 16: Per-Handbook Metadata Independence
+
+*For any* handbook type (bcm, isms, bsi-grundschutz, it-operation), the system SHALL support independent version numbers, owners, approvers, and dates, such that changing metadata for one handbook does not affect any other handbook.
+
+**Validates: Requirements 26.1, 26.2, 26.3, 26.4**
+
+### Property 17: Handbook Placeholder Support
+
+*For any* handbook type, placeholders in the format `{{ handbook.version }}`, `{{ handbook.owner }}`, `{{ handbook.approver }}`, and `{{ handbook.date }}` SHALL be replaced with the correct handbook-specific metadata.
+
+**Validates: Requirements 26.5**
+
+### Property 18: NetBox Metadata Loading
+
+*For any* valid NetBox configuration, when the system starts, it SHALL fetch contacts, devices, and sites from NetBox exactly once before document processing begins, and populate metadata-netbox.yaml with the fetched data.
+
+**Validates: Requirements 27.2, 27.3, 27.4, 27.5**
+
+### Property 19: Meta-NetBox Placeholder Support
+
+*For any* template containing `{{ meta-netbox.* }}` placeholders, the system SHALL replace them with data from metadata-netbox.yaml, and both `{{ meta.* }}` and `{{ meta-netbox.* }}` placeholders SHALL work independently in the same template.
+
+**Validates: Requirements 28.1, 28.2, 28.3, 28.4, 28.5**
+
+### Property 20: NetBox Role Distinction Application
+
+*For any* configured role distinction method (field-based or name-based), when loading NetBox data, the system SHALL apply the configured logic to map NetBox contacts to roles, and the configuration SHALL be persisted in config.yaml.
+
+**Validates: Requirements 29.4, 29.5**
+
+### Property 21: Extended Role Support
+
+*For any* of the six new roles (sysop, datenschutzbeauftragter, risikomanager, interner_auditor, personalleitung, it_manager), the system SHALL support metadata configuration and placeholder replacement, and SHALL translate German role names to English equivalents in English templates.
+
+**Validates: Requirements 30.1, 30.2, 30.3, 30.4, 30.5, 30.6, 30.7**
+
+### Property 22: HTML Output Structure
+
+*For any* handbook generation with HTML output, the system SHALL create separate HTML files for each template, generate a table of contents index page, provide navigation links between pages, apply consistent styling across all pages, and store output in `Handbook/{language}/{template-type}/html/`.
+
+**Validates: Requirements 31.1, 31.2, 31.3, 31.4, 31.5**
+
+### Property 23: Separate Markdown File Generation
+
+*For any* handbook generation with markdown output, the system SHALL create separate markdown files for each template (no combined file), use filenames matching the pattern `{template-number}_{template-name}.md`, create a TOC file with template numbers, titles, and links, and store output in `Handbook/{language}/{template-type}/markdown/`.
+
+**Validates: Requirements 32.1, 32.2, 32.3, 32.4, 32.5, 32.6**
+
+### Property 24: PDF Table of Contents
+
+*For any* handbook generation with PDF output, the system SHALL insert a table of contents at the beginning of the PDF, start a new page for each template, and include template numbers, titles, and page numbers in the TOC.
+
+**Validates: Requirements 33.1, 33.2, 33.3, 33.4**
+
 ## Error Handling
 
 ### HTML Comment Processing Errors
@@ -419,6 +881,94 @@ Template: templates/de/it-operation/0010_Einleitung.md
 Expected to remain unchanged for backward compatibility
 ```
 
+### NetBox Integration Errors
+
+**NetBox Connection Failed**:
+```
+Error: Failed to connect to NetBox at https://netbox.example.com
+Check network connectivity and API token validity
+Suggestion: Verify config.yaml contains correct NetBox URL and API token
+```
+
+**NetBox Role Mapping Failed**:
+```
+Warning: Could not map NetBox contact "John Doe" to any configured role
+Role distinction method: field-based (field: role)
+Contact role value: "Network Engineer"
+Suggestion: Add role mapping in config.yaml or adjust role distinction configuration
+```
+
+**metadata-netbox.yaml Creation Failed**:
+```
+Error: Failed to create metadata-netbox.yaml
+Permission denied: /path/to/metadata-netbox.yaml
+Suggestion: Check file permissions in project directory
+```
+
+### Per-Handbook Metadata Errors
+
+**Missing Handbook Metadata**:
+```
+Warning: No metadata found for handbook type "bcm" in metadata.yaml
+Using default values: version="1.0.0", owner="Unknown", approver="Unknown"
+Suggestion: Add handbook metadata section to metadata.yaml
+```
+
+**Invalid Handbook Placeholder**:
+```
+Error: Invalid handbook placeholder: {{ handbook.invalid_field }}
+Valid fields: version, owner, approver, date
+Template: templates/de/bcm/0010_Zweck_und_Geltungsbereich.md, line 15
+```
+
+### HTML Output Errors
+
+**HTML Generation Failed**:
+```
+Error: Failed to generate HTML output
+Template: 0050_Kontakte_und_Eskalation.md
+Reason: Invalid markdown syntax at line 42
+Suggestion: Validate markdown syntax in template
+```
+
+**CSS File Missing**:
+```
+Warning: CSS stylesheet not found
+Expected: Handbook/de/bcm/html/styles.css
+HTML pages will be generated without styling
+```
+
+### Markdown Output Errors
+
+**TOC Generation Failed**:
+```
+Error: Failed to generate table of contents for markdown output
+Reason: No templates found in templates/de/bcm/
+Suggestion: Verify template directory exists and contains templates
+```
+
+**Filename Pattern Violation**:
+```
+Warning: Template filename does not match expected pattern
+Found: template_without_number.md
+Expected: NNNN_template_name.md (e.g., 0010_Einleitung.md)
+```
+
+### PDF Output Errors
+
+**PDF TOC Generation Failed**:
+```
+Error: Failed to generate PDF table of contents
+Reason: WeasyPrint encountered invalid HTML
+Suggestion: Check template markdown for syntax errors
+```
+
+**Page Break Insertion Failed**:
+```
+Warning: Could not insert page break after template 0050_Kontakte_und_Eskalation.md
+PDF may not have proper page separation
+```
+
 ## Testing Strategy
 
 ### Dual Testing Approach
@@ -453,6 +1003,44 @@ The testing strategy combines unit tests for specific examples and edge cases wi
    - New template types accepted
    - Invalid template types rejected
    - Backward compatibility with existing types
+
+5. **NetBox Integration**:
+   - NetBox connection success/failure
+   - Contact fetching with role mapping
+   - Device and site information fetching
+   - metadata-netbox.yaml creation
+   - Role distinction configuration (field-based, name-based)
+
+6. **Per-Handbook Metadata**:
+   - Independent version numbers per handbook
+   - Independent owners/approvers per handbook
+   - Handbook placeholder replacement
+   - Missing metadata handling
+
+7. **Extended Roles**:
+   - All 6 new roles supported in metadata
+   - Role placeholder replacement
+   - German to English role name translation
+
+8. **HTML Output**:
+   - Separate HTML file per template
+   - TOC index page generation
+   - Navigation link generation
+   - CSS styling application
+   - Output directory structure
+
+9. **Separate Markdown Output**:
+   - Separate markdown file per template
+   - No combined file created
+   - Filename pattern compliance
+   - TOC file generation
+   - Output directory structure
+
+10. **PDF with TOC**:
+    - TOC insertion at PDF beginning
+    - Page breaks between templates
+    - TOC content (numbers, titles, page numbers)
+    - Clickable links in TOC
 
 ### Property-Based Testing Configuration
 
@@ -510,10 +1098,43 @@ Property {number}: {property_title}
    - Templates without HTML comments
    - Mixed scenarios
 
+4. **NetBox Integration End-to-End**:
+   - Mock NetBox API responses
+   - Generate metadata-netbox.yaml
+   - Process templates with meta-netbox placeholders
+   - Verify correct data replacement
+   - Test both field-based and name-based role distinction
+
+5. **Per-Handbook Metadata Integration**:
+   - Configure different metadata for each handbook type
+   - Generate all handbook types
+   - Verify each handbook uses correct metadata
+   - Verify handbook placeholders replaced correctly
+
+6. **Multi-Format Output Integration**:
+   - Generate HTML output for all handbook types
+   - Generate separate markdown files for all handbook types
+   - Generate PDF with TOC for all handbook types
+   - Verify all output formats coexist correctly
+   - Verify output directory structure
+
+7. **Extended Roles Integration**:
+   - Configure all 6 new roles in metadata
+   - Generate handbooks in German and English
+   - Verify role placeholders replaced correctly
+   - Verify German-to-English translation in English templates
+
+8. **Complete Workflow Integration**:
+   - Start with NetBox data loading
+   - Load per-handbook metadata
+   - Process templates with all placeholder types
+   - Generate all output formats (HTML, markdown, PDF)
+   - Verify complete workflow executes without errors
+
 ### Test Coverage Goals
 
 - **Unit Test Coverage**: >80% code coverage
-- **Property Test Coverage**: All 15 correctness properties implemented
-- **Integration Test Coverage**: All template types and languages
+- **Property Test Coverage**: All 24 correctness properties implemented (15 existing + 9 new)
+- **Integration Test Coverage**: All template types, languages, and output formats
 - **Regression Test Coverage**: All existing functionality preserved
 

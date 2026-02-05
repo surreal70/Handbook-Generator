@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0140 - Change und Release Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0140</div>
+            <h1>Change und Release Management</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0130_Problem_Management_und_Postmortems.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0150_Backup_und_Restore.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="change-und-release-management">Change und Release Management</h1>
+<h2 id="zweck-und-geltungsbereich">Zweck und Geltungsbereich</h2>
+<p>Dieses Dokument beschreibt die Change- und Release-Management-Prozesse für AdminSend GmbH gemäß ITIL v4 Best Practices. Es definiert Change-Kategorien, Genehmigungsprozesse, Release-Strategien und Rollback-Prozeduren zur kontrollierten Durchführung von Änderungen an IT-Services und -Systemen.</p>
+<p><strong>Geltungsbereich:</strong> Alle IT-Services, Systeme und Infrastruktur-Komponenten von AdminSend GmbH</p>
+<p><strong>Verantwortlich:</strong> Andreas Huemmer (andreas.huemmer@adminsend.de)</p>
+<h2 id="change-management">Change Management</h2>
+<h3 id="change-definition">Change-Definition</h3>
+<p>Ein <strong>Change</strong> ist das Hinzufügen, Ändern oder Entfernen von etwas, das direkte oder indirekte Auswirkungen auf Services haben könnte. Das Ziel des Change Managements ist die Minimierung von Risiken bei gleichzeitiger Maximierung des Business-Value.</p>
+<h3 id="change-prinzipien">Change-Prinzipien</h3>
+<p><strong>Kernprinzipien:</strong>
+- <strong>Kontrolliert:</strong> Alle Changes durchlaufen definierte Prozesse
+- <strong>Dokumentiert:</strong> Vollständige Dokumentation aller Changes
+- <strong>Genehmigt:</strong> Autorisierung vor Implementierung
+- <strong>Getestet:</strong> Validierung vor Produktiv-Deployment
+- <strong>Rückgängig machbar:</strong> Rollback-Plan für jeden Change</p>
+<h3 id="change-kategorien">Change-Kategorien</h3>
+<h4 id="standard-change">Standard Change</h4>
+<p><strong>Definition:</strong> Vorab genehmigte, risikoarme, häufig durchgeführte Changes mit dokumentierter Prozedur.</p>
+<p><strong>Eigenschaften:</strong>
+- Niedriges Risiko
+- Bekannte Prozedur
+- Vorab-Genehmigung durch CAB
+- Keine individuelle Genehmigung erforderlich
+- Dokumentierte Runbooks</p>
+<p><strong>Beispiele:</strong>
+- Passwort-Reset
+- Benutzer-Anlage/Löschung
+- Standard-Software-Installation
+- Backup-Restore (nicht-kritisch)
+- Zertifikats-Erneuerung
+- Routine-Patches (getestet)</p>
+<p><strong>Genehmigung:</strong> Automatisch (vorab genehmigt)</p>
+<p><strong>Bearbeitungszeit:</strong> Sofort bis 24 Stunden</p>
+<h4 id="normal-change">Normal Change</h4>
+<p><strong>Definition:</strong> Changes, die individuelle Bewertung, Genehmigung und Planung erfordern.</p>
+<p><strong>Eigenschaften:</strong>
+- Mittleres bis hohes Risiko
+- Individuelle Bewertung erforderlich
+- CAB-Genehmigung erforderlich
+- Detaillierte Planung
+- Test-Phase erforderlich</p>
+<p><strong>Beispiele:</strong>
+- Neue Software-Deployments
+- Infrastruktur-Änderungen
+- Netzwerk-Rekonfigurationen
+- Datenbank-Schema-Änderungen
+- Major-Version-Upgrades
+- Neue Service-Einführungen</p>
+<p><strong>Genehmigung:</strong> Change Advisory Board (CAB)</p>
+<p><strong>Bearbeitungszeit:</strong> 1-4 Wochen (abhängig von Komplexität)</p>
+<h4 id="emergency-change">Emergency Change</h4>
+<p><strong>Definition:</strong> Dringende Changes zur Behebung von kritischen Incidents oder Sicherheitsproblemen.</p>
+<p><strong>Eigenschaften:</strong>
+- Hohe Dringlichkeit
+- Verkürzte Genehmigungsprozesse
+- Minimale Dokumentation vor Implementierung
+- Nachträgliche vollständige Dokumentation
+- Emergency CAB (ECAB) Genehmigung</p>
+<p><strong>Beispiele:</strong>
+- Security-Patches (Zero-Day)
+- Kritische Bugfixes
+- Disaster-Recovery-Maßnahmen
+- Service-Wiederherstellung
+- Sicherheitsvorfälle</p>
+<p><strong>Genehmigung:</strong> Emergency CAB (ECAB) oder CIO</p>
+<p><strong>Bearbeitungszeit:</strong> Sofort bis 4 Stunden</p>
+<h3 id="change-prozess">Change-Prozess</h3>
+<h4 id="prozessubersicht">Prozessübersicht</h4>
+<div class="codehilite"><pre><span></span><code>┌─────────────────┐
+│ Change Request  │
+│ Creation        │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Change          │
+│ Assessment      │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Change          │
+│ Authorization   │
+│ (CAB)           │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Change          │
+│ Planning        │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Change          │
+│ Implementation  │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Change          │
+│ Review          │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Change          │
+│ Closure         │
+└─────────────────┘
+</code></pre></div>
+
+<h4 id="1-change-request-creation">1. Change Request Creation</h4>
+<p><strong>Erforderliche Informationen:</strong>
+- <strong>Change-ID:</strong> Automatisch generiert
+- <strong>Titel:</strong> Kurzbeschreibung
+- <strong>Beschreibung:</strong> Detaillierte Beschreibung der Änderung
+- <strong>Begründung:</strong> Business-Reason, Problem-Referenz
+- <strong>Kategorie:</strong> Standard / Normal / Emergency
+- <strong>Betroffene Services:</strong> Service-Liste
+- <strong>Betroffene CIs:</strong> Configuration Items
+- <strong>Risiko-Bewertung:</strong> Niedrig / Mittel / Hoch
+- <strong>Implementierungs-Plan:</strong> Schritt-für-Schritt-Anleitung
+- <strong>Rollback-Plan:</strong> Rückgängig-Machung
+- <strong>Test-Plan:</strong> Validierungs-Schritte
+- <strong>Zeitfenster:</strong> Geplantes Wartungsfenster
+- <strong>Requester:</strong> Antragsteller
+- <strong>Implementer:</strong> Durchführender</p>
+<p><strong>Tool:</strong> {{ meta.ticketing_system }}</p>
+<p><strong>Verantwortlich:</strong> Change Requester</p>
+<h4 id="2-change-assessment">2. Change Assessment</h4>
+<p><strong>Bewertungs-Kriterien:</strong>
+- <strong>Impact:</strong> Auswirkung auf Services und Nutzer
+- <strong>Risiko:</strong> Wahrscheinlichkeit und Schwere von Problemen
+- <strong>Komplexität:</strong> Technische Komplexität
+- <strong>Abhängigkeiten:</strong> Betroffene Systeme und Services
+- <strong>Ressourcen:</strong> Erforderliche Skills und Zeit</p>
+<p><strong>Risiko-Matrix:</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Impact: Niedrig</strong></th>
+<th><strong>Impact: Mittel</strong></th>
+<th><strong>Impact: Hoch</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Wahrscheinlichkeit: Niedrig</strong></td>
+<td>Niedriges Risiko</td>
+<td>Mittleres Risiko</td>
+<td>Mittleres Risiko</td>
+</tr>
+<tr>
+<td><strong>Wahrscheinlichkeit: Mittel</strong></td>
+<td>Mittleres Risiko</td>
+<td>Mittleres Risiko</td>
+<td>Hohes Risiko</td>
+</tr>
+<tr>
+<td><strong>Wahrscheinlichkeit: Hoch</strong></td>
+<td>Mittleres Risiko</td>
+<td>Hohes Risiko</td>
+<td>Sehr hohes Risiko</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Verantwortlich:</strong> Change Manager</p>
+<h4 id="3-change-authorization-cab">3. Change Authorization (CAB)</h4>
+<p><strong>Change Advisory Board (CAB):</strong></p>
+<p><strong>Mitglieder:</strong>
+- <strong>Chair:</strong> Andreas Huemmer (Change Manager)
+- <strong>CIO:</strong> Anna Schmidt
+- <strong>CISO:</strong> Thomas Weber
+- <strong>Service Owner:</strong> [Service-abhängig]
+- <strong>Technical Leads:</strong> [Change-abhängig]
+- <strong>Business Representatives:</strong> [Bei Business-Impact]</p>
+<p><strong>CAB-Meeting:</strong>
+- <strong>Frequenz:</strong> Wöchentlich (Dienstag 10:00)
+- <strong>Dauer:</strong> 60 Minuten
+- <strong>Agenda:</strong> Review aller Normal Changes
+- <strong>Entscheidung:</strong> Genehmigen / Ablehnen / Zurückstellen</p>
+<p><strong>Emergency CAB (ECAB):</strong>
+- <strong>Mitglieder:</strong> CIO, Change Manager, Technical Lead
+- <strong>Einberufung:</strong> Ad-hoc bei Emergency Changes
+- <strong>Entscheidung:</strong> Innerhalb 1 Stunde</p>
+<p><strong>Genehmigungskriterien:</strong>
+- Vollständige Dokumentation
+- Akzeptables Risiko
+- Ressourcen verfügbar
+- Test-Plan vorhanden
+- Rollback-Plan vorhanden
+- Wartungsfenster verfügbar</p>
+<h4 id="4-change-planning">4. Change Planning</h4>
+<p><strong>Planungs-Aktivitäten:</strong>
+- Detaillierte Implementierungs-Schritte
+- Ressourcen-Allokation
+- Zeitplan erstellen
+- Kommunikations-Plan
+- Test-Szenarien definieren
+- Rollback-Trigger definieren</p>
+<p><strong>Change-Kalender:</strong>
+- Alle geplanten Changes visualisieren
+- Konflikte identifizieren
+- Wartungsfenster koordinieren
+- Stakeholder informieren</p>
+<p><strong>Verantwortlich:</strong> Change Implementer, Change Manager</p>
+<h4 id="5-change-implementation">5. Change Implementation</h4>
+<p><strong>Pre-Implementation:</strong>
+- Backup erstellen
+- Rollback-Prozedur bereitstellen
+- Team-Briefing durchführen
+- Stakeholder informieren</p>
+<p><strong>Implementation:</strong>
+- Implementierungs-Plan Schritt-für-Schritt ausführen
+- Fortschritt dokumentieren
+- Bei Problemen: Rollback-Trigger prüfen</p>
+<p><strong>Post-Implementation:</strong>
+- Funktionalität testen
+- Monitoring prüfen
+- Stakeholder informieren
+- Dokumentation aktualisieren</p>
+<p><strong>Verantwortlich:</strong> Change Implementer</p>
+<h4 id="6-change-review">6. Change Review</h4>
+<p><strong>Review-Aktivitäten:</strong>
+- Erfolg der Implementierung bewerten
+- Abweichungen vom Plan dokumentieren
+- Lessons Learned identifizieren
+- Metriken erfassen (Dauer, Downtime, etc.)</p>
+<p><strong>Review-Kriterien:</strong>
+- Change erfolgreich implementiert?
+- Rollback erforderlich gewesen?
+- Unerwartete Probleme aufgetreten?
+- Zeitplan eingehalten?
+- Dokumentation vollständig?</p>
+<p><strong>Verantwortlich:</strong> Change Manager</p>
+<h4 id="7-change-closure">7. Change Closure</h4>
+<p><strong>Closure-Aktivitäten:</strong>
+- Dokumentation finalisieren
+- CMDB aktualisieren
+- Change-Ticket schließen
+- Metriken in Reporting aufnehmen</p>
+<p><strong>Verantwortlich:</strong> Change Manager</p>
+<h3 id="wartungsfenster">Wartungsfenster</h3>
+<p><strong>Standard-Wartungsfenster:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Typ</th>
+<th>Zeitfenster</th>
+<th>Frequenz</th>
+<th>Genehmigung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Routine</strong></td>
+<td>Dienstag 22:00-02:00</td>
+<td>Wöchentlich</td>
+<td>Standard Changes</td>
+</tr>
+<tr>
+<td><strong>Geplant</strong></td>
+<td>Samstag 20:00-06:00</td>
+<td>Monatlich</td>
+<td>Normal Changes</td>
+</tr>
+<tr>
+<td><strong>Emergency</strong></td>
+<td>Jederzeit</td>
+<td>Ad-hoc</td>
+<td>Emergency Changes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Wartungsfenster-Regeln:</strong>
+- Minimale Service-Unterbrechung
+- Nutzer-Benachrichtigung 48h vorher
+- Rollback-Zeit einplanen (50% der Implementierungszeit)
+- Keine Changes während Business-Critical-Zeiten</p>
+<h3 id="rollback-prozeduren">Rollback-Prozeduren</h3>
+<p><strong>Rollback-Trigger:</strong>
+- Kritische Fehler während Implementation
+- Service-Verfügbarkeit &lt; SLA
+- Unerwartete Auswirkungen auf andere Services
+- Test-Validierung fehlgeschlagen
+- Change Manager Entscheidung</p>
+<p><strong>Rollback-Plan-Anforderungen:</strong>
+- Schritt-für-Schritt-Anleitung
+- Geschätzte Rollback-Dauer
+- Erforderliche Ressourcen
+- Daten-Wiederherstellung (falls erforderlich)
+- Validierungs-Schritte</p>
+<p><strong>Rollback-Prozess:</strong>
+1. Rollback-Entscheidung treffen
+2. Stakeholder informieren
+3. Rollback-Plan ausführen
+4. System-Status validieren
+5. Incident-Ticket erstellen (falls erforderlich)
+6. Post-Rollback-Review durchführen</p>
+<h2 id="release-management">Release Management</h2>
+<h3 id="release-definition">Release-Definition</h3>
+<p>Ein <strong>Release</strong> ist eine Sammlung von Hardware, Software, Dokumentation, Prozessen oder anderen Komponenten, die erforderlich sind, um eine oder mehrere genehmigte Changes zu implementieren.</p>
+<h3 id="release-typen">Release-Typen</h3>
+<h4 id="major-release">Major Release</h4>
+<p><strong>Definition:</strong> Signifikante neue Funktionalität oder Architektur-Änderungen</p>
+<p><strong>Eigenschaften:</strong>
+- Große Änderungen
+- Umfangreiche Tests erforderlich
+- Lange Planungsphase
+- Hohes Risiko
+- Umfangreiche Dokumentation</p>
+<p><strong>Beispiele:</strong>
+- Neue Software-Version (z.B. v2.0.0)
+- Plattform-Migration
+- Architektur-Redesign</p>
+<p><strong>Frequenz:</strong> Quartalsweise oder halbjährlich</p>
+<p><strong>Genehmigung:</strong> CAB + Management</p>
+<h4 id="minor-release">Minor Release</h4>
+<p><strong>Definition:</strong> Neue Features oder Verbesserungen ohne Architektur-Änderungen</p>
+<p><strong>Eigenschaften:</strong>
+- Moderate Änderungen
+- Standard-Tests
+- Mittleres Risiko
+- Abwärtskompatibel</p>
+<p><strong>Beispiele:</strong>
+- Feature-Releases (z.B. v1.1.0)
+- Performance-Verbesserungen
+- Neue Integrationen</p>
+<p><strong>Frequenz:</strong> Monatlich</p>
+<p><strong>Genehmigung:</strong> CAB</p>
+<h4 id="patch-release">Patch Release</h4>
+<p><strong>Definition:</strong> Bugfixes und Security-Patches</p>
+<p><strong>Eigenschaften:</strong>
+- Kleine Änderungen
+- Fokus auf Stabilität
+- Niedriges Risiko
+- Schnelle Implementierung</p>
+<p><strong>Beispiele:</strong>
+- Bugfix-Releases (z.B. v1.0.1)
+- Security-Patches
+- Hotfixes</p>
+<p><strong>Frequenz:</strong> Bei Bedarf (wöchentlich)</p>
+<p><strong>Genehmigung:</strong> Change Manager</p>
+<h3 id="release-prozess">Release-Prozess</h3>
+<h4 id="prozessubersicht_1">Prozessübersicht</h4>
+<div class="codehilite"><pre><span></span><code>┌─────────────────┐
+│ Release         │
+│ Planning        │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Release         │
+│ Build           │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Release         │
+│ Testing         │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Release         │
+│ Deployment      │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Release         │
+│ Review          │
+└─────────────────┘
+</code></pre></div>
+
+<h4 id="1-release-planning">1. Release Planning</h4>
+<p><strong>Planungs-Aktivitäten:</strong>
+- Release-Scope definieren
+- Changes für Release auswählen
+- Release-Zeitplan erstellen
+- Ressourcen planen
+- Risiko-Assessment durchführen
+- Kommunikations-Plan erstellen</p>
+<p><strong>Release-Scope:</strong>
+- Inkludierte Changes
+- Neue Features
+- Bugfixes
+- Abhängigkeiten
+- Ausschlüsse</p>
+<p><strong>Verantwortlich:</strong> Release Manager</p>
+<h4 id="2-release-build">2. Release Build</h4>
+<p><strong>Build-Aktivitäten:</strong>
+- Code-Integration
+- Automatisierte Builds (CI/CD)
+- Artefakt-Erstellung
+- Versionierung
+- Build-Dokumentation</p>
+<p><strong>Build-Pipeline:</strong>
+1. Code-Commit
+2. Automatische Tests (Unit, Integration)
+3. Code-Quality-Checks (Linting, Security-Scan)
+4. Build-Artefakt erstellen
+5. Artefakt in Repository speichern</p>
+<p><strong>Verantwortlich:</strong> DevOps-Team</p>
+<h4 id="3-release-testing">3. Release Testing</h4>
+<p><strong>Test-Phasen:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Umgebung</th>
+<th>Fokus</th>
+<th>Dauer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Unit Tests</strong></td>
+<td>Dev</td>
+<td>Code-Funktionalität</td>
+<td>Automatisch</td>
+</tr>
+<tr>
+<td><strong>Integration Tests</strong></td>
+<td>Dev</td>
+<td>Komponenten-Integration</td>
+<td>Automatisch</td>
+</tr>
+<tr>
+<td><strong>System Tests</strong></td>
+<td>Test</td>
+<td>Gesamtsystem</td>
+<td>1-2 Tage</td>
+</tr>
+<tr>
+<td><strong>UAT</strong></td>
+<td>Staging</td>
+<td>Business-Anforderungen</td>
+<td>3-5 Tage</td>
+</tr>
+<tr>
+<td><strong>Performance Tests</strong></td>
+<td>Staging</td>
+<td>Last und Performance</td>
+<td>1-2 Tage</td>
+</tr>
+<tr>
+<td><strong>Security Tests</strong></td>
+<td>Staging</td>
+<td>Sicherheit</td>
+<td>1-2 Tage</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Test-Kriterien:</strong>
+- Alle Tests bestanden
+- Keine kritischen Bugs
+- Performance-Ziele erreicht
+- Security-Scan ohne High-Findings
+- UAT-Abnahme durch Business</p>
+<p><strong>Verantwortlich:</strong> QA-Team, Business-Users</p>
+<h4 id="4-release-deployment">4. Release Deployment</h4>
+<p><strong>Deployment-Strategien:</strong></p>
+<h5 id="blue-green-deployment">Blue-Green Deployment</h5>
+<p><strong>Beschreibung:</strong> Zwei identische Produktions-Umgebungen (Blue und Green). Neue Version wird in inaktiver Umgebung deployed, dann Traffic umgeschaltet.</p>
+<p><strong>Vorteile:</strong>
+- Zero-Downtime
+- Schneller Rollback
+- Vollständige Tests in Prod-Umgebung</p>
+<p><strong>Nachteile:</strong>
+- Doppelte Infrastruktur-Kosten
+- Datenbank-Migrationen komplex</p>
+<p><strong>Anwendung:</strong> Kritische Services mit hohen Verfügbarkeits-Anforderungen</p>
+<h5 id="canary-deployment">Canary Deployment</h5>
+<p><strong>Beschreibung:</strong> Neue Version wird schrittweise für einen kleinen Prozentsatz der Nutzer ausgerollt, dann graduell erhöht.</p>
+<p><strong>Vorteile:</strong>
+- Risiko-Minimierung
+- Frühe Fehler-Erkennung
+- Graduelles Rollout</p>
+<p><strong>Nachteile:</strong>
+- Komplexe Traffic-Steuerung
+- Längere Deployment-Dauer</p>
+<p><strong>Anwendung:</strong> Services mit großer Nutzerbasis</p>
+<h5 id="rolling-deployment">Rolling Deployment</h5>
+<p><strong>Beschreibung:</strong> Neue Version wird schrittweise auf Server-Instanzen deployed, während alte Version weiterläuft.</p>
+<p><strong>Vorteile:</strong>
+- Keine zusätzliche Infrastruktur
+- Graduelles Rollout
+- Automatisierbar</p>
+<p><strong>Nachteile:</strong>
+- Temporäre Versions-Inkonsistenz
+- Komplexe Rollbacks</p>
+<p><strong>Anwendung:</strong> Standard-Deployments mit Load-Balancing</p>
+<h5 id="big-bang-deployment">Big Bang Deployment</h5>
+<p><strong>Beschreibung:</strong> Alle Komponenten werden gleichzeitig aktualisiert.</p>
+<p><strong>Vorteile:</strong>
+- Einfach
+- Schnell
+- Keine Versions-Inkonsistenz</p>
+<p><strong>Nachteile:</strong>
+- Downtime erforderlich
+- Hohes Risiko
+- Komplexe Rollbacks</p>
+<p><strong>Anwendung:</strong> Nur für unkritische Services oder mit Wartungsfenster</p>
+<p><strong>Deployment-Checkliste:</strong>
+- [ ] Backup erstellt
+- [ ] Rollback-Plan bereit
+- [ ] Monitoring aktiviert
+- [ ] Stakeholder informiert
+- [ ] Team verfügbar
+- [ ] Deployment-Runbook geprüft
+- [ ] Change-Ticket genehmigt</p>
+<p><strong>Verantwortlich:</strong> DevOps-Team, Release Manager</p>
+<h4 id="5-release-review">5. Release Review</h4>
+<p><strong>Review-Aktivitäten:</strong>
+- Deployment-Erfolg bewerten
+- Metriken analysieren
+- Lessons Learned dokumentieren
+- Verbesserungen identifizieren</p>
+<p><strong>Review-Metriken:</strong>
+- Deployment-Dauer
+- Downtime (falls vorhanden)
+- Anzahl Rollbacks
+- Post-Deployment-Incidents
+- User-Feedback</p>
+<p><strong>Verantwortlich:</strong> Release Manager</p>
+<h3 id="cicd-pipeline">CI/CD Pipeline</h3>
+<p><strong>Continuous Integration (CI):</strong>
+- Automatische Builds bei Code-Commit
+- Automatische Tests (Unit, Integration)
+- Code-Quality-Checks
+- Security-Scans
+- Artefakt-Erstellung</p>
+<p><strong>Continuous Deployment (CD):</strong>
+- Automatisches Deployment in Dev/Test
+- Manuelles Deployment in Staging/Prod
+- Automatische Rollbacks bei Fehlern
+- Deployment-Monitoring</p>
+<p><strong>Pipeline-Tools:</strong>
+- <strong>CI/CD-System:</strong> {{ meta.cicd_system }}
+- <strong>Version Control:</strong> {{ meta.version_control }}
+- <strong>Artefakt-Repository:</strong> {{ meta.artifact_repository }}
+- <strong>Container-Registry:</strong> {{ meta.container_registry }}</p>
+<h2 id="metriken-und-reporting">Metriken und Reporting</h2>
+<h3 id="change-management-metriken">Change-Management-Metriken</h3>
+<table>
+<thead>
+<tr>
+<th>Metrik</th>
+<th>Zielwert</th>
+<th>Messung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Change Success Rate</strong></td>
+<td>&gt; 95%</td>
+<td>Erfolgreiche Changes / Gesamt-Changes</td>
+</tr>
+<tr>
+<td><strong>Emergency Change Rate</strong></td>
+<td>&lt; 5%</td>
+<td>Emergency Changes / Gesamt-Changes</td>
+</tr>
+<tr>
+<td><strong>Change-Related Incidents</strong></td>
+<td>&lt; 10%</td>
+<td>Incidents durch Changes / Gesamt-Incidents</td>
+</tr>
+<tr>
+<td><strong>CAB Approval Rate</strong></td>
+<td>&gt; 90%</td>
+<td>Genehmigte Changes / Eingereichte Changes</td>
+</tr>
+<tr>
+<td><strong>Rollback Rate</strong></td>
+<td>&lt; 5%</td>
+<td>Rollbacks / Implementierte Changes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="release-management-metriken">Release-Management-Metriken</h3>
+<table>
+<thead>
+<tr>
+<th>Metrik</th>
+<th>Zielwert</th>
+<th>Messung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Release Frequency</strong></td>
+<td>Monatlich</td>
+<td>Anzahl Releases pro Monat</td>
+</tr>
+<tr>
+<td><strong>Lead Time</strong></td>
+<td>&lt; 2 Wochen</td>
+<td>Zeit von Commit bis Produktion</td>
+</tr>
+<tr>
+<td><strong>Deployment Frequency</strong></td>
+<td>Wöchentlich</td>
+<td>Anzahl Deployments pro Woche</td>
+</tr>
+<tr>
+<td><strong>Mean Time to Recovery</strong></td>
+<td>&lt; 1 Stunde</td>
+<td>Durchschnittliche Wiederherstellungszeit</td>
+</tr>
+<tr>
+<td><strong>Change Failure Rate</strong></td>
+<td>&lt; 15%</td>
+<td>Fehlgeschlagene Deployments / Gesamt</td>
+</tr>
+</tbody>
+</table>
+<h3 id="reporting">Reporting</h3>
+<p><strong>Wöchentliches Change-Report:</strong>
+- Anzahl Changes (nach Kategorie)
+- Geplante Changes (nächste Woche)
+- Change-Kalender
+- Offene Change-Requests</p>
+<p><strong>Monatliches Release-Report:</strong>
+- Release-Übersicht
+- Deployment-Statistiken
+- Metriken-Dashboard
+- Verbesserungs-Maßnahmen</p>
+<h2 id="rollen-und-verantwortlichkeiten">Rollen und Verantwortlichkeiten</h2>
+<h3 id="change-manager">Change Manager</h3>
+<p><strong>Verantwortlichkeiten:</strong>
+- Change-Prozess-Ownership
+- CAB-Moderation
+- Change-Assessment
+- Change-Kalender-Verwaltung
+- Reporting</p>
+<p><strong>Person:</strong> Andreas Huemmer</p>
+<h3 id="release-manager">Release Manager</h3>
+<p><strong>Verantwortlichkeiten:</strong>
+- Release-Planung
+- Release-Koordination
+- Deployment-Oversight
+- Release-Dokumentation</p>
+<p><strong>Person:</strong> [Name]</p>
+<h3 id="change-advisory-board-cab">Change Advisory Board (CAB)</h3>
+<p><strong>Verantwortlichkeiten:</strong>
+- Change-Bewertung
+- Change-Genehmigung
+- Risiko-Assessment
+- Priorisierung</p>
+<p><strong>Mitglieder:</strong> Siehe Abschnitt "Change Authorization"</p>
+<h2 id="tools-und-systeme">Tools und Systeme</h2>
+<h3 id="change-management-tool">Change-Management-Tool</h3>
+<ul>
+<li><strong>System:</strong> {{ meta.ticketing_system }}</li>
+<li><strong>URL:</strong> {{ meta.ticketing_system_url }}</li>
+<li><strong>Zugriff:</strong> Alle IT-Mitarbeiter</li>
+</ul>
+<h3 id="cicd-pipeline_1">CI/CD-Pipeline</h3>
+<ul>
+<li><strong>System:</strong> {{ meta.cicd_system }}</li>
+<li><strong>URL:</strong> {{ meta.cicd_url }}</li>
+<li><strong>Zugriff:</strong> DevOps-Team</li>
+</ul>
+<h3 id="version-control">Version Control</h3>
+<ul>
+<li><strong>System:</strong> {{ meta.version_control }}</li>
+<li><strong>URL:</strong> {{ meta.version_control_url }}</li>
+<li><strong>Zugriff:</strong> Development-Team</li>
+</ul>
+<h2 id="referenzen">Referenzen</h2>
+<ul>
+<li>ITIL v4 Foundation - Change Enablement</li>
+<li>ITIL v4 Foundation - Release Management</li>
+<li>ISO/IEC 20000-1:2018 - Change Management</li>
+<li>DevOps Handbook - Deployment Strategies</li>
+<li>Site Reliability Engineering (SRE) - Release Engineering</li>
+</ul>
+<hr />
+<p><strong>Dokumentverantwortlicher:</strong> IT Operations Manager<br />
+<strong>Genehmigt durch:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Klassifizierung:</strong> internal<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.date }}</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0130_Problem_Management_und_Postmortems.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0150_Backup_und_Restore.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

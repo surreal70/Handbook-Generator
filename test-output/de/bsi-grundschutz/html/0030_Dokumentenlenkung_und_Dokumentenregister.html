@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0030 - Dokumentenlenkung und Dokumentenregister</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0030</div>
+            <h1>Dokumentenlenkung und Dokumentenregister</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0020_ISMS_Organisation_Rollen_RACI.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0040_Geltungsbereich_und_Informationsverbund.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="dokumentenlenkung-und-dokumentenregister">Dokumentenlenkung und Dokumentenregister</h1>
+<p><strong>Dokument-ID:</strong> 0030<br />
+<strong>Dokumenttyp:</strong> Prozess/Grundlage<br />
+<strong>Referenzrahmen:</strong> BSI IT-Grundschutz (BSI Standards 200-1/200-2/200-3)<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> {{ meta.document.status }}<br />
+<strong>Klassifizierung:</strong> internal<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.last_updated }}<br />
+<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-zweck-und-geltungsbereich">1. Zweck und Geltungsbereich</h2>
+<p>Dieses Dokument beschreibt die Dokumentenlenkung für das Informationssicherheits-Managementsystem (ISMS) von <strong>AdminSend GmbH</strong>. Es definiert Prozesse für Erstellung, Review, Freigabe, Verteilung, Änderung und Archivierung von ISMS-Dokumenten.</p>
+<h3 id="11-geltungsbereich">1.1 Geltungsbereich</h3>
+<p>Diese Dokumentenlenkung gilt für alle ISMS-relevanten Dokumente:
+- Leitlinien und Policies
+- Richtlinien und Prozessbeschreibungen
+- Sicherheitskonzepte und Risikoanalysen
+- Arbeitsanweisungen und Checklisten
+- Protokolle und Nachweise</p>
+<h2 id="2-ablage-und-zugriff">2. Ablage und Zugriff</h2>
+<h3 id="21-offizieller-ablageort">2.1 Offizieller Ablageort</h3>
+<p><strong>Primärer Ablageort:</strong> [TODO: z.B. SharePoint, Confluence, DMS]</p>
+<p><strong>Verantwortlich:</strong> IT Operations Manager</p>
+<p>Alle ISMS-Dokumente werden zentral abgelegt in:
+- <strong>Pfad:</strong> [TODO: z.B. /ISMS/Dokumentation/]
+- <strong>Backup:</strong> [TODO: Backup-Strategie]
+- <strong>Versionierung:</strong> Automatische Versionierung aktiviert</p>
+<h3 id="22-zugriffskontrolle-rbac">2.2 Zugriffskontrolle (RBAC)</h3>
+<p>Zugriff auf ISMS-Dokumente erfolgt rollenbasiert:</p>
+<table>
+<thead>
+<tr>
+<th>Rolle</th>
+<th>Lesen</th>
+<th>Schreiben</th>
+<th>Freigeben</th>
+<th>Löschen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Geschäftsführung</td>
+<td>✓</td>
+<td>✗</td>
+<td>✓</td>
+<td>✗</td>
+</tr>
+<tr>
+<td>ISB</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>ISMS-Team</td>
+<td>✓</td>
+<td>✓</td>
+<td>✗</td>
+<td>✗</td>
+</tr>
+<tr>
+<td>Informationsverbund-Verantwortliche</td>
+<td>✓</td>
+<td>✓ (eigene Dokumente)</td>
+<td>✗</td>
+<td>✗</td>
+</tr>
+<tr>
+<td>Alle Mitarbeitenden</td>
+<td>✓ (öffentliche Dokumente)</td>
+<td>✗</td>
+<td>✗</td>
+<td>✗</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-klassifizierung-und-schutzbedarf">2.3 Klassifizierung und Schutzbedarf</h3>
+<table>
+<thead>
+<tr>
+<th>Klassifizierung</th>
+<th>Beschreibung</th>
+<th>Zugriff</th>
+<th>Beispiele</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Öffentlich</strong></td>
+<td>Keine Vertraulichkeit</td>
+<td>Alle Mitarbeitenden</td>
+<td>Awareness-Material</td>
+</tr>
+<tr>
+<td><strong>Intern</strong></td>
+<td>Nur für interne Nutzung</td>
+<td>Alle Mitarbeitenden</td>
+<td>Policies, Richtlinien</td>
+</tr>
+<tr>
+<td><strong>Vertraulich</strong></td>
+<td>Eingeschränkter Zugriff</td>
+<td>ISMS-Team, Berechtigte</td>
+<td>Risikoanalysen, Sicherheitskonzepte</td>
+</tr>
+<tr>
+<td><strong>Streng vertraulich</strong></td>
+<td>Höchste Vertraulichkeit</td>
+<td>Geschäftsführung, ISB</td>
+<td>Incident-Berichte, Audit-Findings</td>
+</tr>
+</tbody>
+</table>
+<h3 id="24-notfallzugriff">2.4 Notfallzugriff</h3>
+<p>Im Notfall (z.B. Ausfall des ISB) haben folgende Personen Zugriff auf alle ISMS-Dokumente:
+- <strong>Geschäftsführung:</strong> Max Mustermann
+- <strong>IT-Leitung:</strong> Anna Schmidt
+- <strong>Stellvertretender ISB:</strong> [TODO]</p>
+<h2 id="3-dokumentenlebenszyklus">3. Dokumentenlebenszyklus</h2>
+<h3 id="31-erstellung">3.1 Erstellung</h3>
+<p><strong>Prozess:</strong>
+1. <strong>Initiierung:</strong> Bedarf wird identifiziert (ISB, ISMS-Team, Fachabteilung)
+2. <strong>Erstellung:</strong> Autor erstellt Dokument basierend auf Template
+3. <strong>Qualitätssicherung:</strong> Peer-Review durch ISMS-Team
+4. <strong>Freigabe:</strong> Freigabe durch zuständige Rolle (siehe Freigabematrix)</p>
+<p><strong>Verantwortlich:</strong> Dokumentautor, ISB (Koordination)</p>
+<h3 id="32-review-und-freigabe">3.2 Review und Freigabe</h3>
+<h4 id="321-freigabematrix">3.2.1 Freigabematrix</h4>
+<table>
+<thead>
+<tr>
+<th>Dokumenttyp</th>
+<th>Ersteller</th>
+<th>Reviewer</th>
+<th>Genehmiger</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Leitlinien/Policies</td>
+<td>ISB</td>
+<td>ISMS-Team</td>
+<td>Geschäftsführung</td>
+</tr>
+<tr>
+<td>Richtlinien</td>
+<td>ISB, Fachabteilung</td>
+<td>ISMS-Team</td>
+<td>ISB</td>
+</tr>
+<tr>
+<td>Sicherheitskonzepte</td>
+<td>Informationsverbund-Verantwortliche</td>
+<td>ISB</td>
+<td>ISB</td>
+</tr>
+<tr>
+<td>Arbeitsanweisungen</td>
+<td>Fachabteilung</td>
+<td>ISB</td>
+<td>IT-Leitung</td>
+</tr>
+<tr>
+<td>Risikoanalysen</td>
+<td>ISB</td>
+<td>ISMS-Team</td>
+<td>Geschäftsführung</td>
+</tr>
+</tbody>
+</table>
+<h4 id="322-review-intervalle">3.2.2 Review-Intervalle</h4>
+<table>
+<thead>
+<tr>
+<th>Dokumenttyp</th>
+<th>Review-Intervall</th>
+<th>Verantwortlich</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Leitlinien/Policies</td>
+<td>Jährlich</td>
+<td>ISB</td>
+</tr>
+<tr>
+<td>Richtlinien</td>
+<td>Jährlich</td>
+<td>ISB</td>
+</tr>
+<tr>
+<td>Sicherheitskonzepte</td>
+<td>Jährlich oder bei Änderungen</td>
+<td>Informationsverbund-Verantwortliche</td>
+</tr>
+<tr>
+<td>Arbeitsanweisungen</td>
+<td>Jährlich</td>
+<td>Fachabteilung</td>
+</tr>
+<tr>
+<td>Risikoanalysen</td>
+<td>Jährlich oder bei wesentlichen Änderungen</td>
+<td>ISB</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Zusätzliche Review-Trigger:</strong>
+- Wesentliche Änderungen in der IT-Infrastruktur
+- Neue gesetzliche Anforderungen
+- Sicherheitsvorfälle
+- Audit-Findings
+- Organisatorische Änderungen</p>
+<h3 id="33-versionierung">3.3 Versionierung</h3>
+<p><strong>Versionierungsschema:</strong>
+- <strong>Major Version (X.0):</strong> Wesentliche inhaltliche Änderungen, neue Freigabe erforderlich
+- <strong>Minor Version (X.Y):</strong> Kleinere Anpassungen, redaktionelle Änderungen</p>
+<p><strong>Beispiel:</strong>
+- Version 1.0: Initiale Freigabe
+- Version 1.1: Kleinere Anpassungen
+- Version 2.0: Wesentliche Überarbeitung</p>
+<h3 id="34-verteilung-und-kommunikation">3.4 Verteilung und Kommunikation</h3>
+<p><strong>Verteilungsprozess:</strong>
+1. Freigabe des Dokuments
+2. Veröffentlichung im zentralen Ablageort
+3. Benachrichtigung betroffener Stakeholder (E-Mail, Intranet)
+4. Schulung/Awareness (falls erforderlich)
+5. Bestätigung der Kenntnisnahme (bei kritischen Dokumenten)</p>
+<p><strong>Verantwortlich:</strong> ISB</p>
+<h3 id="35-anderungsmanagement">3.5 Änderungsmanagement</h3>
+<p><strong>Prozess für Änderungen:</strong>
+1. <strong>Änderungsantrag:</strong> Initiator stellt Änderungsantrag an ISB
+2. <strong>Bewertung:</strong> ISB bewertet Änderungsbedarf und Auswirkungen
+3. <strong>Genehmigung:</strong> Genehmigung durch zuständige Rolle
+4. <strong>Umsetzung:</strong> Autor aktualisiert Dokument
+5. <strong>Review:</strong> Review durch ISMS-Team
+6. <strong>Freigabe:</strong> Freigabe gemäß Freigabematrix
+7. <strong>Verteilung:</strong> Kommunikation der Änderungen</p>
+<h3 id="36-archivierung-und-loschung">3.6 Archivierung und Löschung</h3>
+<p><strong>Archivierung:</strong>
+- Alte Versionen werden für [TODO: z.B. 5 Jahre] archiviert
+- Archivierte Dokumente sind schreibgeschützt
+- Zugriff nur für ISB und Audit</p>
+<p><strong>Löschung:</strong>
+- Dokumente werden nach Ablauf der Aufbewahrungsfrist gelöscht
+- Löschung erfolgt gemäß Datenschutz- und Compliance-Anforderungen
+- Löschprotokoll wird geführt</p>
+<p><strong>Verantwortlich:</strong> ISB</p>
+<h2 id="4-dokumentenregister">4. Dokumentenregister</h2>
+<table>
+<thead>
+<tr>
+<th>Dokument</th>
+<th>ID</th>
+<th>Owner</th>
+<th>Status</th>
+<th>Version</th>
+<th>Letzte Aktualisierung</th>
+<th>Nächster Review</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Informationssicherheitsleitlinie</td>
+<td>0010</td>
+<td>Thomas Weber</td>
+<td>{{ meta.document.status }}</td>
+<td>1.0.0</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.document.next_review }}</td>
+</tr>
+<tr>
+<td>ISMS-Organisation, Rollen und RACI</td>
+<td>0020</td>
+<td>Thomas Weber</td>
+<td>{{ meta.document.status }}</td>
+<td>1.0.0</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.document.next_review }}</td>
+</tr>
+<tr>
+<td>Dokumentenlenkung</td>
+<td>0030</td>
+<td>Thomas Weber</td>
+<td>{{ meta.document.status }}</td>
+<td>1.0.0</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.document.next_review }}</td>
+</tr>
+<tr>
+<td>[TODO: Weitere Dokumente ergänzen]</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-anderungsprotokoll">5. Änderungsprotokoll</h2>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Datum</th>
+<th>Änderung</th>
+<th>Autor</th>
+<th>Genehmiger</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>Erster Entwurf</td>
+<td>IT Operations Manager</td>
+<td>-</td>
+<td>Entwurf</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-qualitatssicherung">6. Qualitätssicherung</h2>
+<h3 id="61-dokumentenqualitat">6.1 Dokumentenqualität</h3>
+<p>Alle ISMS-Dokumente müssen folgende Qualitätskriterien erfüllen:
+- <strong>Vollständigkeit:</strong> Alle erforderlichen Inhalte vorhanden
+- <strong>Korrektheit:</strong> Inhaltlich korrekt und aktuell
+- <strong>Verständlichkeit:</strong> Klar und verständlich formuliert
+- <strong>Konsistenz:</strong> Konsistent mit anderen ISMS-Dokumenten
+- <strong>Nachvollziehbarkeit:</strong> Änderungen nachvollziehbar dokumentiert</p>
+<h3 id="62-dokumenten-templates">6.2 Dokumenten-Templates</h3>
+<p>Für alle Dokumenttypen existieren Templates mit:
+- Standardisiertem Header (Metadaten)
+- Strukturvorgaben
+- Platzhaltern für variable Inhalte
+- Hinweisen für Autoren</p>
+<p><strong>Ablageort Templates:</strong> [TODO: z.B. /ISMS/Templates/]</p>
+<h2 id="7-schulung-und-awareness">7. Schulung und Awareness</h2>
+<p>Alle Dokumentautoren und ISMS-Team-Mitglieder werden geschult in:
+- Dokumentenlenkungsprozess
+- Verwendung von Templates
+- Versionierung und Änderungsmanagement
+- Klassifizierung und Schutzbedarf</p>
+<p><strong>Verantwortlich:</strong> ISB</p>
+<h2 id="8-uberwachung-und-verbesserung">8. Überwachung und Verbesserung</h2>
+<p>Der Dokumentenlenkungsprozess wird regelmäßig überwacht:
+- <strong>Metriken:</strong> Anzahl Dokumente, Review-Compliance, Änderungsrate
+- <strong>Review:</strong> Jährliche Überprüfung des Prozesses
+- <strong>Verbesserung:</strong> Kontinuierliche Optimierung basierend auf Feedback</p>
+<p><strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<p><strong>Referenzen:</strong>
+- BSI Standard 200-1: Managementsysteme für Informationssicherheit (ISMS)
+- BSI Standard 200-2: IT-Grundschutz-Methodik</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0020_ISMS_Organisation_Rollen_RACI.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0040_Geltungsbereich_und_Informationsverbund.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

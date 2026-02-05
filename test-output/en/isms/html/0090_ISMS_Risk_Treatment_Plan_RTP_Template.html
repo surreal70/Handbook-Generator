@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0090 - Risk Treatment Plan (RTP) – Template</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0090</div>
+            <h1>Risk Treatment Plan (RTP) – Template</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0080_ISMS_Risk_Register_Template.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0100_ISMS_Statement_of_Applicability_SoA_Template.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="risk-treatment-plan-rtp-template">Risk Treatment Plan (RTP) – Template</h1>
+<p><strong>Document ID:</strong> 0090<br />
+<strong>Document Type:</strong> ISMS Plan/Template<br />
+<strong>Standard Reference:</strong> ISO/IEC 27001:2022 Clause 6.1.3<br />
+<strong>Owner:</strong> Thomas Weber<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Approved<br />
+<strong>Classification:</strong> Confidential<br />
+<strong>Last Updated:</strong> {{ meta.document.date }}<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-purpose-and-scope">1. Purpose and Scope</h2>
+<h3 id="11-purpose">1.1 Purpose</h3>
+<p>The Risk Treatment Plan (RTP) of <strong>AdminSend GmbH</strong> documents all planned measures for treating identified information security risks. It serves as:
+- Action plan for risk treatment
+- Tracking tool for measure implementation
+- Evidence for audits and compliance
+- Basis for resource planning and budgeting</p>
+<h3 id="12-scope">1.2 Scope</h3>
+<p>This plan encompasses all measures for treating risks within the ISMS scope (see <code>0020_ISMS_Scope.md</code>) that are treated with the "Mitigate" or "Transfer" strategy.</p>
+<p><strong>Excluded:</strong>
+- Accepted risks (see <code>0080_ISMS_Risk_Register_Template.md</code>)
+- Avoided risks (activity discontinued)</p>
+<h2 id="2-risk-treatment-plan-table">2. Risk Treatment Plan Table</h2>
+<h3 id="21-active-measures">2.1 Active Measures</h3>
+<table>
+<thead>
+<tr>
+<th>Measure ID</th>
+<th>Risk ID</th>
+<th>Measure</th>
+<th>Control Reference (Annex A)</th>
+<th>Owner</th>
+<th>Priority</th>
+<th>Effort (PD)</th>
+<th>Budget</th>
+<th>Target Date</th>
+<th>Status</th>
+<th>Progress</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M-001</td>
+<td>R-001</td>
+<td>Procure redundant core switch</td>
+<td>A.8.6 (Capacity management)</td>
+<td>Anna Schmidt</td>
+<td>High</td>
+<td>20</td>
+<td>€50,000</td>
+<td>2026-06-30</td>
+<td>Planned</td>
+<td>0%</td>
+<td>Budget approved, tender in progress</td>
+</tr>
+<tr>
+<td>M-002</td>
+<td>R-002</td>
+<td>Implement immutable backups</td>
+<td>A.8.13 (Information backup)</td>
+<td>IT Operations</td>
+<td>Very High</td>
+<td>40</td>
+<td>€30,000</td>
+<td>2026-03-31</td>
+<td>In Progress</td>
+<td>60%</td>
+<td>Pilot phase completed</td>
+</tr>
+<tr>
+<td>M-003</td>
+<td>R-003</td>
+<td>Roll out MFA for all users</td>
+<td>A.5.17 (Authentication information)</td>
+<td>IAM Team</td>
+<td>Very High</td>
+<td>30</td>
+<td>€15,000</td>
+<td>2026-02-28</td>
+<td>In Progress</td>
+<td>80%</td>
+<td>200 of 250 users migrated</td>
+</tr>
+<tr>
+<td>M-004</td>
+<td>R-004</td>
+<td>Implement secret scanning tool</td>
+<td>A.8.24 (Use of cryptography)</td>
+<td>Dev Lead</td>
+<td>Medium</td>
+<td>15</td>
+<td>€10,000</td>
+<td>2026-04-30</td>
+<td>Planned</td>
+<td>10%</td>
+<td>Tool evaluation: GitGuardian vs. Gitleaks</td>
+</tr>
+<tr>
+<td>M-005</td>
+<td>R-005</td>
+<td>Perform VPN hardening</td>
+<td>A.5.14 (Information transfer)</td>
+<td>IT Operations</td>
+<td>Medium</td>
+<td>10</td>
+<td>€5,000</td>
+<td>2026-05-31</td>
+<td>Planned</td>
+<td>0%</td>
+<td>Create hardening guide</td>
+</tr>
+</tbody>
+</table>
+<p>[TODO: Add additional measures based on risk register]</p>
+<h3 id="22-completed-measures-archive">2.2 Completed Measures (Archive)</h3>
+<table>
+<thead>
+<tr>
+<th>Measure ID</th>
+<th>Risk ID</th>
+<th>Measure</th>
+<th>Owner</th>
+<th>Completion Date</th>
+<th>Result</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M-010</td>
+<td>R-020</td>
+<td>Install patch CVE-2025-1234</td>
+<td>IT Operations</td>
+<td>2026-01-10</td>
+<td>Successful</td>
+<td>Vulnerability Scan Report</td>
+</tr>
+<tr>
+<td>M-011</td>
+<td>R-021</td>
+<td>Correct firewall configuration</td>
+<td>IT Operations</td>
+<td>2026-01-15</td>
+<td>Successful</td>
+<td>Firewall Audit Report</td>
+</tr>
+</tbody>
+</table>
+<p>[TODO: Archive completed measures]</p>
+<h2 id="3-measure-prioritization">3. Measure Prioritization</h2>
+<h3 id="31-prioritization-criteria">3.1 Prioritization Criteria</h3>
+<p><strong>Priority Levels:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Priority</th>
+<th>Risk Level</th>
+<th>Compliance</th>
+<th>Effort</th>
+<th>Timeframe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Very High</strong></td>
+<td>Very High / High</td>
+<td>Critical</td>
+<td>Any</td>
+<td>Immediate - 3 months</td>
+</tr>
+<tr>
+<td><strong>High</strong></td>
+<td>High / Medium</td>
+<td>Important</td>
+<td>Low-Medium</td>
+<td>3-6 months</td>
+</tr>
+<tr>
+<td><strong>Medium</strong></td>
+<td>Medium</td>
+<td>Normal</td>
+<td>Medium</td>
+<td>6-12 months</td>
+</tr>
+<tr>
+<td><strong>Low</strong></td>
+<td>Low</td>
+<td>Optional</td>
+<td>High</td>
+<td>&gt; 12 months</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Prioritization Formula:</strong></p>
+<div class="codehilite"><pre><span></span><code>Priority = (Risk Score × 2) + Compliance Factor - Effort Factor
+
+Compliance Factor:
+- Critical (GDPR, NIS2): +10
+- Important (ISO 27001): +5
+- Normal: +0
+
+Effort Factor:
+- Low (&lt; 10 PD): -0
+- Medium (10-40 PD): -5
+- High (&gt; 40 PD): -10
+</code></pre></div>
+
+<h3 id="32-quick-wins">3.2 Quick Wins</h3>
+<p><strong>Quick Wins</strong> are measures with high benefit and low effort:</p>
+<table>
+<thead>
+<tr>
+<th>Measure ID</th>
+<th>Measure</th>
+<th>Risk Reduction</th>
+<th>Effort</th>
+<th>ROI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M-003</td>
+<td>MFA rollout</td>
+<td>High</td>
+<td>Medium</td>
+<td>High</td>
+</tr>
+<tr>
+<td>M-005</td>
+<td>VPN hardening</td>
+<td>Medium</td>
+<td>Low</td>
+<td>Very High</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recommendation:</strong> Quick wins should be prioritized to achieve rapid security improvements.</p>
+<h2 id="4-measure-details">4. Measure Details</h2>
+<h3 id="41-measure-description">4.1 Measure Description</h3>
+<p>The following details should be documented for each measure:</p>
+<p><strong>Measure M-002: Implement Immutable Backups</strong></p>
+<p><strong>Description:</strong>
+Implementation of immutable backups to protect against ransomware. Backups are stored in Write-Once-Read-Many (WORM) format and cannot be deleted or modified.</p>
+<p><strong>Objective:</strong>
+- Protection against ransomware attacks on backups
+- Ensure recoverability in case of data loss
+- Compliance with GDPR Art. 32 (Security of processing)</p>
+<p><strong>Scope:</strong>
+- All production systems
+- Critical databases
+- Customer data (GDPR-relevant)</p>
+<p><strong>Implementation Steps:</strong>
+1. Evaluate backup solution (Veeam, Commvault, AWS S3 Object Lock)
+2. Pilot phase with non-critical systems (✓ Completed)
+3. Rollout to production systems (In Progress)
+4. Perform restore tests
+5. Documentation and training</p>
+<p><strong>Resources:</strong>
+- Owner: IT Operations
+- Team: 2 Backup Administrators
+- Effort: 40 person-days
+- Budget: €30,000 (licenses + hardware)</p>
+<p><strong>Dependencies:</strong>
+- No critical dependencies</p>
+<p><strong>Implementation Risks:</strong>
+- Increased storage requirements (Mitigation: Additional storage procured)
+- Longer backup times (Mitigation: Backup window adjusted)</p>
+<p><strong>Success Criteria:</strong>
+- All critical systems have immutable backups
+- Restore tests successful (RTO/RPO met)
+- No ransomware can delete backups</p>
+<p><strong>Evidence:</strong>
+- Backup configuration documentation
+- Restore test protocols
+- Compliance report</p>
+<h2 id="5-control-mapping-annex-a">5. Control Mapping (Annex A)</h2>
+<h3 id="51-linkage-to-annex-a-controls">5.1 Linkage to Annex A Controls</h3>
+<p>Each measure should be linked to relevant Annex A controls:</p>
+<table>
+<thead>
+<tr>
+<th>Measure ID</th>
+<th>Annex A Control</th>
+<th>Control Name</th>
+<th>Implementation Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M-001</td>
+<td>A.8.6</td>
+<td>Capacity management</td>
+<td>Planned</td>
+</tr>
+<tr>
+<td>M-002</td>
+<td>A.8.13</td>
+<td>Information backup</td>
+<td>In Progress</td>
+</tr>
+<tr>
+<td>M-003</td>
+<td>A.5.17</td>
+<td>Authentication information</td>
+<td>In Progress</td>
+</tr>
+<tr>
+<td>M-004</td>
+<td>A.8.24</td>
+<td>Use of cryptography</td>
+<td>Planned</td>
+</tr>
+<tr>
+<td>M-005</td>
+<td>A.5.14</td>
+<td>Information transfer</td>
+<td>Planned</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Complete Control Mapping:</strong>
+- See <code>0100_ISMS_Statement_of_Applicability_SoA_Template.md</code>
+- See <code>0710_Appendix_AnnexA_Mapping_Template.md</code></p>
+<h3 id="52-control-implementation-status">5.2 Control Implementation Status</h3>
+<p><strong>Status Definitions:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Description</th>
+<th>Criteria</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Not Implemented</strong></td>
+<td>Control is not in place</td>
+<td>0% implementation</td>
+</tr>
+<tr>
+<td><strong>Planned</strong></td>
+<td>Control is planned but not yet started</td>
+<td>Measure in RTP</td>
+</tr>
+<tr>
+<td><strong>In Progress</strong></td>
+<td>Control is being implemented</td>
+<td>1-99% implementation</td>
+</tr>
+<tr>
+<td><strong>Implemented</strong></td>
+<td>Control is fully implemented</td>
+<td>100% implementation, evidence available</td>
+</tr>
+<tr>
+<td><strong>Effective</strong></td>
+<td>Control is implemented and demonstrably effective</td>
+<td>Implemented + effectiveness evidence</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-resource-planning-and-budgeting">6. Resource Planning and Budgeting</h2>
+<h3 id="61-resource-overview">6.1 Resource Overview</h3>
+<p><strong>Personnel Resources:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Team/Role</th>
+<th>Available Capacity (PD/month)</th>
+<th>Planned Utilization</th>
+<th>Availability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IT Operations</td>
+<td>40</td>
+<td>30</td>
+<td>75%</td>
+</tr>
+<tr>
+<td>Security Team</td>
+<td>20</td>
+<td>18</td>
+<td>90%</td>
+</tr>
+<tr>
+<td>IAM Team</td>
+<td>15</td>
+<td>12</td>
+<td>80%</td>
+</tr>
+<tr>
+<td>Dev Team</td>
+<td>10</td>
+<td>5</td>
+<td>50%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Financial Resources:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Quarter</th>
+<th>Budget</th>
+<th>Planned Expenses</th>
+<th>Available</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q1 2026</td>
+<td>€50,000</td>
+<td>€45,000</td>
+<td>€5,000</td>
+</tr>
+<tr>
+<td>Q2 2026</td>
+<td>€50,000</td>
+<td>€55,000</td>
+<td>-€5,000 (Overrun)</td>
+</tr>
+<tr>
+<td>Q3 2026</td>
+<td>€50,000</td>
+<td>€30,000</td>
+<td>€20,000</td>
+</tr>
+<tr>
+<td>Q4 2026</td>
+<td>€50,000</td>
+<td>€20,000</td>
+<td>€30,000</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Budget Request:</strong>
+- Q2 2026: Additional €5,000 for M-001 (Redundant switch)</p>
+<h3 id="62-capacity-planning">6.2 Capacity Planning</h3>
+<p><strong>Bottlenecks:</strong>
+- Security Team: 90% utilized (critical)
+- IAM Team: 80% utilized (high)</p>
+<p><strong>Actions:</strong>
+- Prioritization of critical measures
+- External support for M-004 (Secret scanning)
+- Postponement of non-critical measures to Q3/Q4</p>
+<h2 id="7-dependencies-and-implementation-risks">7. Dependencies and Implementation Risks</h2>
+<h3 id="71-dependencies-between-measures">7.1 Dependencies Between Measures</h3>
+<div class="codehilite"><pre><span></span><code>M-002 (Immutable Backups)
+  ↓ (requires)
+M-001 (Redundant Switch)
+  ↓ (enables)
+M-005 (VPN Hardening)
+</code></pre></div>
+
+<p><strong>Critical Path:</strong>
+- M-002 must be completed before M-001
+- M-001 is prerequisite for M-005</p>
+<h3 id="72-implementation-risks">7.2 Implementation Risks</h3>
+<table>
+<thead>
+<tr>
+<th>Risk</th>
+<th>Likelihood</th>
+<th>Impact</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Resource bottlenecks</td>
+<td>High</td>
+<td>Medium</td>
+<td>External support, prioritization</td>
+</tr>
+<tr>
+<td>Budget overrun</td>
+<td>Medium</td>
+<td>Medium</td>
+<td>Regular budget monitoring, approval process</td>
+</tr>
+<tr>
+<td>Technical complexity</td>
+<td>Medium</td>
+<td>High</td>
+<td>Pilot phases, external expertise</td>
+</tr>
+<tr>
+<td>Resistance to change</td>
+<td>Low</td>
+<td>Medium</td>
+<td>Change management, awareness</td>
+</tr>
+</tbody>
+</table>
+<h3 id="73-change-management">7.3 Change Management</h3>
+<p><strong>Communication:</strong>
+- Regular updates to stakeholders
+- Awareness campaigns for affected users
+- Training for new controls</p>
+<p><strong>Rollback Planning:</strong>
+- Create rollback plan for each measure
+- Pilot phases before production rollout
+- Backup before critical changes</p>
+<h2 id="8-tracking-and-reporting">8. Tracking and Reporting</h2>
+<h3 id="81-measure-tracking">8.1 Measure Tracking</h3>
+<p><strong>Tracking Frequency:</strong>
+- Weekly: Status update for critical measures
+- Monthly: Complete RTP review
+- Quarterly: Reporting to information security committee</p>
+<p><strong>Tracking Metrics:</strong>
+- Number of open measures
+- Number of overdue measures
+- Average implementation duration
+- Budget utilization</p>
+<h3 id="82-reporting">8.2 Reporting</h3>
+<p><strong>Monthly Reporting:</strong>
+- Status of all active measures
+- Progress (% completion)
+- Risks and issues
+- Budget status</p>
+<p><strong>Quarterly Reporting:</strong>
+- Summary for information security committee
+- Trend analysis
+- Prioritization recommendations</p>
+<p><strong>Escalation:</strong>
+- Overdue measures (&gt; 2 weeks): Escalation to CISO
+- Critical delays: Escalation to management</p>
+<h2 id="9-effectiveness-verification">9. Effectiveness Verification</h2>
+<h3 id="91-evidence-of-effectiveness">9.1 Evidence of Effectiveness</h3>
+<p>Effectiveness must be demonstrated for each implemented measure:</p>
+<p><strong>Evidence Methods:</strong>
+- <strong>Technical Tests:</strong> Vulnerability scans, penetration tests, configuration audits
+- <strong>Process Audits:</strong> Internal audits, compliance checks
+- <strong>Monitoring:</strong> SIEM alerts, log analysis, KPI tracking
+- <strong>Documentation:</strong> Policies, procedures, training records</p>
+<p><strong>Example M-002 (Immutable Backups):</strong>
+- Evidence: Restore test protocol
+- Frequency: Quarterly
+- Criteria: RTO/RPO met, backups not modifiable</p>
+<h3 id="92-evidence-register">9.2 Evidence Register</h3>
+<p><strong>Linkage:</strong>
+- See <code>0700_Appendix_Evidence_Register.md</code>
+- Each measure has linked evidence</p>
+<h2 id="10-roles-and-responsibilities">10. Roles and Responsibilities</h2>
+<h3 id="101-raci-matrix-risk-treatment">10.1 RACI Matrix: Risk Treatment</h3>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>CISO</th>
+<th>ISMS Manager</th>
+<th>Measure Owner</th>
+<th>IT Operations</th>
+<th>Budget Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create RTP</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Prioritize measures</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Implement measures</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>R</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Approve budget</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+<td>I</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Track progress</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Verify effectiveness</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>R</td>
+<td>I</td>
+</tr>
+<tr>
+<td>RTP review</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legend:</strong> R = Responsible, A = Accountable, C = Consulted, I = Informed</p>
+<h2 id="11-references">11. References</h2>
+<h3 id="111-internal-documents">11.1 Internal Documents</h3>
+<ul>
+<li><code>0060_ISMS_Risk_Management_Methodology.md</code> - Risk Management Methodology</li>
+<li><code>0070_ISMS_Risk_Acceptance_Criteria.md</code> - Risk Acceptance Criteria</li>
+<li><code>0080_ISMS_Risk_Register_Template.md</code> - Risk Register</li>
+<li><code>0100_ISMS_Statement_of_Applicability_SoA_Template.md</code> - SoA</li>
+<li><code>0360_Policy_Change_and_Release_Management.md</code> - Change Management</li>
+<li><code>0700_Appendix_Evidence_Register.md</code> - Evidence Register</li>
+</ul>
+<h3 id="112-external-standards">11.2 External Standards</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022</strong> - Clause 6.1.3: Information security risk treatment</li>
+<li><strong>ISO/IEC 27002:2022</strong> - Information security controls</li>
+<li><strong>ISO/IEC 27005:2022</strong> - Information security risk management</li>
+</ul>
+<hr />
+<h2 id="change-history">Change History</h2>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Description</th>
+<th>Approved By</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>{{ meta.document.date }}</td>
+<td>Thomas Weber</td>
+<td>Initial version</td>
+<td>{{ meta.management.ceo }}</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Approved by:</strong><br />
+Thomas Weber, CISO<br />
+Date: {{ meta.document.approval_date }}</p>
+<p><strong>Next Review:</strong> {{ meta.document.next_review }} (Monthly)</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0080_ISMS_Risk_Register_Template.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0100_ISMS_Statement_of_Applicability_SoA_Template.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

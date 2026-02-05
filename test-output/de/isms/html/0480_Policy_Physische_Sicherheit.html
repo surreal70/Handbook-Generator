@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0480 - Policy: Physische Sicherheit</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0480</div>
+            <h1>Policy: Physische Sicherheit</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0470_Richtlinie_Third_Party_Risk_Assessment_und_Cloud_Controls.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0490_Richtlinie_Zutritt_Besucher_und_Schutz_von_Equipment.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="policy-physische-sicherheit">Policy: Physische Sicherheit</h1>
+<p><strong>Dokument-ID:</strong> 0480<br />
+<strong>Dokumenttyp:</strong> Policy (abstrakt)<br />
+<strong>Standard-Referenz:</strong> ISO/IEC 27001:2022 Annex A.7.1-A.7.4 (inkl. Amendment 1:2024)<br />
+<strong>Owner:</strong> Thomas Weber<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Freigegeben<br />
+<strong>Klassifizierung:</strong> Intern<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.date }}<br />
+<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-zweck">1. Zweck</h2>
+<p>Diese Policy definiert die Grundsätze für physische Sicherheit der <strong>AdminSend GmbH</strong>. Sie stellt sicher, dass physischer Zugang zu Einrichtungen, Geräten und Informationen kontrolliert und überwacht wird, um unbefugten Zugriff, Diebstahl und Beschädigung zu verhindern.</p>
+<h2 id="2-geltungsbereich">2. Geltungsbereich</h2>
+<p>Diese Policy gilt für:</p>
+<ul>
+<li><strong>Organisationseinheiten:</strong> Alle Abteilungen und Standorte der AdminSend GmbH</li>
+<li><strong>Einrichtungen:</strong> Büros, Rechenzentren, Serverräume, Lager, Produktionsstätten</li>
+<li><strong>Assets:</strong> IT-Equipment, Server, Netzwerkkomponenten, mobile Geräte, Dokumente</li>
+<li><strong>Personen:</strong> Mitarbeiter, Besucher, Auftragnehmer, Lieferanten</li>
+<li><strong>Standorte:</strong> {{ netbox.site.name }} und alle weiteren Betriebsstandorte</li>
+</ul>
+<p><strong>Ausnahmen:</strong> Ausnahmen sind nur über den definierten Ausnahmenprozess (<code>0640_Policy_Ausnahmen_und_Risk_Waivers.md</code>) zulässig.</p>
+<h2 id="3-grundsatze-policy-statements">3. Grundsätze (Policy Statements)</h2>
+<h3 id="31-perimeter-sicherheit">3.1 Perimeter-Sicherheit</h3>
+<p>Physische Sicherheitsbereiche werden durch Perimeter-Sicherheit geschützt (Zäune, Mauern, Sicherheitstüren). Zutrittspunkte werden kontrolliert und überwacht.</p>
+<h3 id="32-zutrittskontrolle">3.2 Zutrittskontrolle</h3>
+<p>Der Zutritt zu sensiblen Bereichen wird kontrolliert:
+- Elektronische Zutrittskontrollsysteme (Badge, Biometrie)
+- Besuchermanagement und Begleitpflicht
+- Protokollierung aller Zutritte
+- Regelmäßige Überprüfung von Zutrittsrechten</p>
+<h3 id="33-sicherheitszonen">3.3 Sicherheitszonen</h3>
+<p>Einrichtungen werden in Sicherheitszonen eingeteilt:
+- <strong>Öffentlich:</strong> Empfang, Besprechungsräume
+- <strong>Intern:</strong> Büros, Arbeitsplätze
+- <strong>Eingeschränkt:</strong> Serverräume, Rechenzentren
+- <strong>Hochsicher:</strong> Kritische Infrastruktur, Tresorräume</p>
+<h3 id="34-videouberwachung">3.4 Videoüberwachung</h3>
+<p>Kritische Bereiche werden videoüberwacht. Aufzeichnungen werden gemäß Datenschutzanforderungen gespeichert und geschützt.</p>
+<h3 id="35-schutz-vor-umweltgefahren">3.5 Schutz vor Umweltgefahren</h3>
+<p>IT-Equipment wird vor Umweltgefahren geschützt:
+- Brandschutz (Rauchmelder, Löschanlagen)
+- Klimatisierung und Temperaturüberwachung
+- Wasserschutz (Leckageerkennung)
+- Stromversorgung (USV, Notstromgeneratoren)</p>
+<h3 id="36-sichere-entsorgung">3.6 Sichere Entsorgung</h3>
+<p>Physische Medien und Dokumente werden sicher entsorgt (Schreddern, Verbrennen, zertifizierte Entsorgung).</p>
+<h3 id="37-clear-desk-und-clear-screen">3.7 Clear Desk und Clear Screen</h3>
+<p>Arbeitsplätze werden bei Abwesenheit aufgeräumt (Clear Desk). Bildschirme werden gesperrt (Clear Screen).</p>
+<h3 id="38-equipment-security">3.8 Equipment Security</h3>
+<p>IT-Equipment wird vor Diebstahl geschützt (Kensington-Locks, Alarmanlagen, Inventarisierung).</p>
+<h2 id="4-rollen-und-verantwortlichkeiten">4. Rollen und Verantwortlichkeiten</h2>
+<h3 id="raci-matrix-physische-sicherheit">RACI-Matrix: Physische Sicherheit</h3>
+<table>
+<thead>
+<tr>
+<th>Aktivität</th>
+<th>CISO</th>
+<th>Facility Management</th>
+<th>Security</th>
+<th>IT-Betrieb</th>
+<th>HR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Policy-Erstellung</td>
+<td>R/A</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Zutrittskontrolle</td>
+<td>C</td>
+<td>R/A</td>
+<td>R</td>
+<td>I</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Besuchermanagement</td>
+<td>I</td>
+<td>R/A</td>
+<td>R</td>
+<td>I</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Videoüberwachung</td>
+<td>C</td>
+<td>R/A</td>
+<td>R</td>
+<td>I</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Umweltschutz</td>
+<td>C</td>
+<td>R/A</td>
+<td>I</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Equipment Security</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+<td>R/A</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Compliance-Prüfung</td>
+<td>R/A</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legende:</strong> R = Responsible (Durchführung), A = Accountable (Verantwortlich), C = Consulted (Konsultiert), I = Informed (Informiert)</p>
+<h3 id="schlusselrollen">Schlüsselrollen</h3>
+<ul>
+<li><strong>Policy Owner:</strong> Thomas Weber (CISO)</li>
+<li><strong>Facility Manager:</strong> {{ meta.facility.manager }}</li>
+<li><strong>Security Manager:</strong> {{ meta.security.physical_security_manager }}</li>
+<li><strong>Umsetzungsverantwortliche:</strong> Facility Management, Security, IT-Betrieb</li>
+<li><strong>Kontroll-/Prüfinstanz:</strong> ISMS, Internal Audit</li>
+</ul>
+<h2 id="5-ableitungen-richtlinienstandardsprozesse">5. Ableitungen (Richtlinien/Standards/Prozesse)</h2>
+<p>Details zur Umsetzung werden in nachgelagerten Dokumenten geregelt:</p>
+<h3 id="zugehorige-richtlinien">Zugehörige Richtlinien</h3>
+<ul>
+<li><strong>0490_Richtlinie_Zutritt_Besucher_und_Schutz_von_Equipment.md</strong> - Detaillierte Implementierungsrichtlinie</li>
+<li><code>0300_Policy_Asset_Management.md</code> - Asset Management Policy</li>
+<li><code>0560_Policy_Datenschutz_Schnittstellen.md</code> - Data Protection Policy (Videoüberwachung)</li>
+</ul>
+<h3 id="zugehorige-standardsbaselines">Zugehörige Standards/Baselines</h3>
+<ul>
+<li>Sicherheitszonen-Konzept</li>
+<li>Zutrittskontroll-Matrix</li>
+<li>Besuchermanagement-Prozess</li>
+<li>Videoüberwachungs-Richtlinie</li>
+</ul>
+<h3 id="zugehorige-prozesse">Zugehörige Prozesse</h3>
+<ul>
+<li>Zutrittskontroll-Prozess</li>
+<li>Besuchermanagement-Prozess</li>
+<li>Incident Response bei physischen Sicherheitsvorfällen</li>
+<li>Equipment-Entsorgungsprozess</li>
+</ul>
+<h2 id="6-compliance-monitoring-und-durchsetzung">6. Compliance, Monitoring und Durchsetzung</h2>
+<h3 id="messgroen-und-kpis">Messgrößen und KPIs</h3>
+<ul>
+<li>Anzahl unbefugter Zutrittsversuche</li>
+<li>Besucheranzahl und Compliance mit Begleitpflicht</li>
+<li>Anzahl physischer Sicherheitsvorfälle (Diebstahl, Einbruch)</li>
+<li>Zutrittskontroll-System-Verfügbarkeit (Ziel: 99.9%)</li>
+<li>Clear Desk/Clear Screen Compliance-Rate</li>
+<li>Anzahl verlorener oder gestohlener Assets</li>
+</ul>
+<h3 id="nachweise-und-evidence">Nachweise und Evidence</h3>
+<ul>
+<li>Zutrittskontroll-Logs</li>
+<li>Besucherprotokolle</li>
+<li>Videoüberwachungs-Aufzeichnungen</li>
+<li>Sicherheitsvorfalls-Reports</li>
+<li>Facility-Audit-Berichte</li>
+<li>Equipment-Inventar</li>
+</ul>
+<h3 id="konsequenzen-bei-verstoen">Konsequenzen bei Verstößen</h3>
+<p>Verstöße gegen diese Policy werden nach den geltenden HR- und Compliance-Prozessen behandelt:
+- <strong>Unbefugter Zutritt:</strong> Sofortige Eskalation, Untersuchung
+- <strong>Tailgating (Mitschleusen):</strong> Verwarnung, Nachschulung
+- <strong>Clear Desk/Screen-Verstöße:</strong> Verwarnung, Nachschulung
+- <strong>Wiederholte Verstöße:</strong> Arbeitsrechtliche Konsequenzen</p>
+<h2 id="7-ausnahmen">7. Ausnahmen</h2>
+<p>Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:</p>
+<ul>
+<li><strong>Ausnahmenprozess:</strong> Siehe <code>0640_Policy_Ausnahmen_und_Risk_Waivers.md</code></li>
+<li><strong>Genehmigung:</strong> Ausnahmen müssen vom CISO und Facility Manager genehmigt werden</li>
+<li><strong>Dokumentation:</strong> Alle Ausnahmen werden im Risikoregister dokumentiert</li>
+<li><strong>Befristung:</strong> Ausnahmen sind grundsätzlich zeitlich befristet</li>
+</ul>
+<h2 id="8-referenzen">8. Referenzen</h2>
+<h3 id="interne-dokumente">Interne Dokumente</h3>
+<ul>
+<li><code>0010_ISMS_Informationssicherheitsleitlinie.md</code> - ISMS Policy</li>
+<li><code>0490_Richtlinie_Zutritt_Besucher_und_Schutz_von_Equipment.md</code> - Detailed Guideline</li>
+<li><code>0300_Policy_Asset_Management.md</code> - Asset Management Policy</li>
+<li><code>0080_ISMS_Risikoregister_Template.md</code> - Risk Register</li>
+</ul>
+<h3 id="externe-standards-und-vorgaben">Externe Standards und Vorgaben</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.7.1</strong> - Physical security perimeters</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.7.2</strong> - Physical entry</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.7.3</strong> - Securing offices, rooms and facilities</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.7.4</strong> - Physical security monitoring</li>
+<li><strong>DSGVO (EU 2016/679)</strong> - Datenschutz bei Videoüberwachung</li>
+<li><strong>BSI IT-Grundschutz</strong> - Baustein INF.1 Allgemeines Gebäude</li>
+</ul>
+<hr />
+<p><strong>Genehmigt durch:</strong><br />
+{{ meta.management.ceo }}, Geschäftsführung<br />
+Datum: {{ meta.document.approval_date }}</p>
+<p><strong>Nächster Review:</strong> {{ meta.document.next_review }} (jährlich oder anlassbezogen)</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0470_Richtlinie_Third_Party_Risk_Assessment_und_Cloud_Controls.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0490_Richtlinie_Zutritt_Besucher_und_Schutz_von_Equipment.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

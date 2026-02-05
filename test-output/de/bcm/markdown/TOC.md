@@ -1,0 +1,37 @@
+# Table of Contents - BCM Handbook
+
+Language: de
+
+## Templates
+
+- [0000 - metadata de bcm](0000_metadata_de_bcm.md)
+- [0010 - Zweck und Geltungsbereich](0010_Zweck_und_Geltungsbereich.md)
+- [0020 - BCM Leitlinie Policy](0020_BCM_Leitlinie_Policy.md)
+- [0030 - Dokumentenlenkung und Versionierung](0030_Dokumentenlenkung_und_Versionierung.md)
+- [0040 - Notfallorganisation Rollen und Gremien](0040_Notfallorganisation_Rollen_und_Gremien.md)
+- [0050 - Kontakte und Eskalation](0050_Kontakte_und_Eskalation.md)
+- [0060 - Service und Prozesskatalog Kritikalitaet](0060_Service_und_Prozesskatalog_Kritikalitaet.md)
+- [0070 - BIA Methodik](0070_BIA_Methodik.md)
+- [0080 - BIA Ergebnisse und RTO RPO](0080_BIA_Ergebnisse_und_RTO_RPO.md)
+- [0090 - Risikoanalyse und Szenarien](0090_Risikoanalyse_und_Szenarien.md)
+- [0100 - Strategie und Kontinuitaetsoptionen](0100_Strategie_und_Kontinuitaetsoptionen.md)
+- [0110 - Aktivierungskriterien und Entscheidungsbaum](0110_Aktivierungskriterien_und_Entscheidungsbaum.md)
+- [0120 - Krisenmanagementplan](0120_Krisenmanagementplan.md)
+- [0130 - Kommunikationsplan Intern Extern](0130_Kommunikationsplan_Intern_Extern.md)
+- [0140 - BCP Geschaeftsfortfuehrungsplan Template](0140_BCP_Geschaeftsfortfuehrungsplan_Template.md)
+- [0150 - DRP IT Wiederanlaufplan Template](0150_DRP_IT_Wiederanlaufplan_Template.md)
+- [0160 - Backup und Restore Plan](0160_Backup_und_Restore_Plan.md)
+- [0170 - Alternativstandort und Notfallarbeitsplaetze](0170_Alternativstandort_und_Notfallarbeitsplaetze.md)
+- [0180 - Lieferanten und Drittparteien Kontinuitaet](0180_Lieferanten_und_Drittparteien_Kontinuitaet.md)
+- [0190 - Ressourcenplanung und Mindestbesetzung](0190_Ressourcenplanung_und_Mindestbesetzung.md)
+- [0200 - Notfallzugang BreakGlass](0200_Notfallzugang_BreakGlass.md)
+- [0210 - Cyber Incident und Ransomware Playbook](0210_Cyber_Incident_und_Ransomware_Playbook.md)
+- [0220 - Uebungs und Testprogramm](0220_Uebungs_und_Testprogramm.md)
+- [0230 - Testprotokoll und Erfolgskriterien](0230_Testprotokoll_und_Erfolgskriterien.md)
+- [0240 - Nachbereitung Postmortem](0240_Nachbereitung_Postmortem.md)
+- [0250 - Pflege Review und KPIs](0250_Pflege_Review_und_KPIs.md)
+- [0260 - Schulungen und Sensibilisierung](0260_Schulungen_und_Sensibilisierung.md)
+- [0270 - Compliance Audit und Nachweise](0270_Compliance_Audit_und_Nachweise.md)
+- [0280 - Anhang Vorlagen und Checklisten](0280_Anhang_Vorlagen_und_Checklisten.md)
+- [0290 - Glossar und Abkuerzungen](0290_Glossar_und_Abkuerzungen.md)
+- [READ - E](README.md)

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0530 - Guideline: HR Security - Onboarding, Role Change, Offboarding</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0530</div>
+            <h1>Guideline: HR Security - Onboarding, Role Change, Offboarding</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0520_Policy_HR_Security.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0540_Policy_Configuration_and_Hardening.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="guideline-hr-security-onboarding-role-change-offboarding">Guideline: HR Security - Onboarding, Role Change, Offboarding</h1>
+<p><strong>Document ID:</strong> 0530<br />
+<strong>Document Type:</strong> Guideline (detailed)<br />
+<strong>Associated Policy:</strong> 0520_Policy_HR_Security.md<br />
+<strong>Standard Reference:</strong> ISO/IEC 27001:2022 Annex A.6.1, A.6.2, A.6.3, A.6.4<br />
+<strong>Owner:</strong> {{ meta.hr.manager }}<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Approved<br />
+<strong>Classification:</strong> Confidential<br />
+<strong>Last Updated:</strong> {{ meta.document.date }}</p>
+<hr />
+<h2 id="1-purpose-and-scope">1. Purpose and Scope</h2>
+<p>This guideline specifies the <code>0520_Policy_HR_Security.md</code> and defines:
+- Security aspects in the HR lifecycle
+- Onboarding, role change, and offboarding processes
+- Background checks and confidentiality obligations</p>
+<p><strong>Scope:</strong> All employees, contractors, and third parties at <strong>AdminSend GmbH</strong></p>
+<h2 id="2-pre-employment">2. Pre-Employment</h2>
+<h3 id="21-background-checks">2.1 Background Checks</h3>
+<p><strong>Standard Employees:</strong>
+- Identity verification (ID card)
+- Check references (2 references)
+- Verify educational qualifications
+- Check work authorization</p>
+<p><strong>Privileged Roles:</strong>
+- Extended background checks
+- Criminal record certificate
+- Credit check (for financial access)
+- Social media screening (optional)</p>
+<p><strong>External Contractors:</strong>
+- Company background check
+- NDA before access
+- Sponsor responsibility</p>
+<h3 id="22-employment-contract">2.2 Employment Contract</h3>
+<p><strong>Security Clauses:</strong>
+- Confidentiality obligation
+- Acceptable Use Policy
+- Intellectual property rights
+- Post-employment obligations</p>
+<h2 id="3-onboarding">3. Onboarding</h2>
+<h3 id="31-first-day-of-work">3.1 First Day of Work</h3>
+<p><strong>HR Activities:</strong>
+1. Hand over welcome package
+2. Sign employment contract
+3. Acknowledge security policies
+4. Record emergency contacts</p>
+<p><strong>IT Activities:</strong>
+1. Account creation (see <code>0230_Guideline_IAM</code>)
+2. Hardware issuance
+3. IT orientation
+4. MFA registration</p>
+<h3 id="32-security-training">3.2 Security Training</h3>
+<p><strong>Mandatory Training (First Week):</strong>
+- Information Security Awareness (2 hours)
+- Data Protection / GDPR (1 hour)
+- Acceptable Use Policy (30 minutes)
+- Phishing Awareness (30 minutes)</p>
+<p><strong>Confirmation:</strong>
+- Quiz (passing threshold: 80%)
+- Signature on training certificate</p>
+<h3 id="33-role-specific-training">3.3 Role-Specific Training</h3>
+<p><strong>Developers:</strong>
+- Secure Coding Training
+- OWASP Top 10</p>
+<p><strong>Administrators:</strong>
+- Privileged Access Management
+- Incident Response</p>
+<p><strong>HR/Finance:</strong>
+- Data Privacy
+- Social Engineering Awareness</p>
+<h2 id="4-role-change-mover">4. Role Change (Mover)</h2>
+<h3 id="41-internal-transfer">4.1 Internal Transfer</h3>
+<p><strong>HR Process:</strong>
+1. Update new role in HR system
+2. Inform old and new supervisor
+3. IT ticket for access changes</p>
+<p><strong>IT Process:</strong>
+1. Revoke old access
+2. Provision new access
+3. Adjust hardware (if required)
+4. Update documentation</p>
+<p><strong>Details:</strong> See <code>0230_Guideline_IAM</code></p>
+<h3 id="42-promotions">4.2 Promotions</h3>
+<p><strong>Additional Checks:</strong>
+- For privileged roles: Extended background check
+- Security training for new responsibilities
+- Four-eyes principle for critical access</p>
+<h2 id="5-offboarding">5. Offboarding</h2>
+<h3 id="51-planned-departure">5.1 Planned Departure</h3>
+<p><strong>2 Weeks Before Departure:</strong>
+- Plan knowledge transfer
+- Create handover checklist
+- Review access</p>
+<p><strong>Last Day of Work:</strong>
+- Hardware return
+- Return access card
+- Exit interview
+- Account deactivation (end of day)</p>
+<p><strong>After Departure:</strong>
+- Account deletion (after 30 days)
+- Email forwarding (30 days)
+- Data archiving</p>
+<p><strong>Details:</strong> See <code>0230_Guideline_IAM</code></p>
+<h3 id="52-unplanned-departure">5.2 Unplanned Departure</h3>
+<p><strong>Immediate Actions (within 1 hour):</strong>
+1. Deactivate all accounts
+2. Block VPN access
+3. Deactivate access card
+4. Remote wipe mobile devices
+5. Inform supervisor and Security</p>
+<p><strong>Reasons:</strong>
+- Termination for cause
+- Security incidents
+- Suspected data misuse</p>
+<h3 id="53-post-employment">5.3 Post-Employment</h3>
+<p><strong>Confidentiality Obligation:</strong>
+- Remains in effect after departure
+- No disclosure of trade secrets
+- Return of all documents</p>
+<p><strong>Rehiring:</strong>
+- New background check
+- New security training
+- New accounts (no reactivation of old accounts)</p>
+<h2 id="6-confidentiality-obligations">6. Confidentiality Obligations</h2>
+<h3 id="61-non-disclosure-agreement-nda">6.1 Non-Disclosure Agreement (NDA)</h3>
+<p><strong>Signing:</strong>
+- At hiring (in employment contract)
+- For access to confidential projects
+- For data processing (external service providers)</p>
+<p><strong>Contents:</strong>
+- Definition of confidential information
+- Usage restrictions
+- Duration of obligation
+- Consequences of violations</p>
+<h3 id="62-intellectual-property-ip">6.2 Intellectual Property (IP)</h3>
+<p><strong>Regulation:</strong>
+- All work results belong to the company
+- No private use of company code
+- Disclosure of inventions</p>
+<h2 id="7-disciplinary-measures">7. Disciplinary Measures</h2>
+<h3 id="71-security-violations">7.1 Security Violations</h3>
+<p><strong>Categories:</strong>
+- <strong>Minor:</strong> Unintentional violations (e.g., password sharing)
+- <strong>Medium:</strong> Negligent violations (e.g., data loss through carelessness)
+- <strong>Severe:</strong> Intentional violations (e.g., data theft)</p>
+<p><strong>Measures:</strong>
+- Minor: Warning, retraining
+- Medium: Written reprimand
+- Severe: Termination, criminal charges</p>
+<h3 id="72-process">7.2 Process</h3>
+<ol>
+<li>Incident report</li>
+<li>Investigation by HR and Security</li>
+<li>Hearing of employee</li>
+<li>Decision on measures</li>
+<li>Documentation</li>
+<li>Implementation</li>
+</ol>
+<h2 id="8-external-contractors">8. External Contractors</h2>
+<h3 id="81-onboarding">8.1 Onboarding</h3>
+<p><strong>Prerequisites:</strong>
+- Contract with security clauses
+- NDA signed
+- Background check (by contractor company)
+- Internal sponsor</p>
+<p><strong>Access:</strong>
+- Time-limited
+- Project-based only
+- Regular recertification (quarterly)</p>
+<h3 id="82-monitoring">8.2 Monitoring</h3>
+<p><strong>Enhanced Monitoring:</strong>
+- Access to confidential data
+- Privileged activities
+- Data exports</p>
+<h3 id="83-offboarding">8.3 Offboarding</h3>
+<p><strong>At Project End:</strong>
+- Immediate access revocation
+- Data return or deletion
+- Confirmation of confidentiality obligation</p>
+<h2 id="9-compliance-and-audit">9. Compliance and Audit</h2>
+<h3 id="91-metrics-kpis">9.1 Metrics (KPIs)</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Target Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Background check completion</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Security training (onboarding)</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Offboarding completion (on last day)</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>NDA signing</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="92-audit-evidence">9.2 Audit Evidence</h3>
+<ul>
+<li>Background check documentation</li>
+<li>Training certificates</li>
+<li>NDA signatures</li>
+<li>Offboarding checklists</li>
+</ul>
+<h2 id="10-references">10. References</h2>
+<h3 id="internal-documents">Internal Documents</h3>
+<ul>
+<li><code>0520_Policy_HR_Security.md</code></li>
+<li><code>0230_Guideline_IAM_Joiner_Mover_Leaver_and_Access_Requests.md</code></li>
+</ul>
+<h3 id="external-standards">External Standards</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.6.1</strong> - Screening</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.6.2</strong> - Terms and conditions of employment</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.6.3</strong> - Information security awareness, education and training</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.6.4</strong> - Disciplinary process</li>
+</ul>
+<hr />
+<p><strong>Approved by:</strong> Thomas Weber, CISO<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0520_Policy_HR_Security.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0540_Policy_Configuration_and_Hardening.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

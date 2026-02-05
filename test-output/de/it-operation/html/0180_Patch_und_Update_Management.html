@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0180 - Patch und Update Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0180</div>
+            <h1>Patch und Update Management</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0170_Sicherheitsbetrieb_und_Hardening.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0190_Log_Management_und_Audit.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="patch-und-update-management">Patch und Update Management</h1>
+<h2 id="zweck-und-geltungsbereich">Zweck und Geltungsbereich</h2>
+<p>Dieses Dokument beschreibt die Patch- und Update-Management-Prozesse für AdminSend GmbH. Es definiert Patch-Kategorien, Zeitpläne, Test- und Rollout-Prozesse sowie Vulnerability-Scanning und Priorisierung zur Sicherstellung der System-Sicherheit und -Stabilität.</p>
+<p><strong>Geltungsbereich:</strong> Alle IT-Systeme, Betriebssysteme, Applikationen und Firmware von AdminSend GmbH</p>
+<p><strong>Verantwortlich:</strong> Andreas Huemmer (andreas.huemmer@adminsend.de)</p>
+<h2 id="patch-management-grundlagen">Patch-Management-Grundlagen</h2>
+<h3 id="ziele">Ziele</h3>
+<p><strong>Primäre Ziele:</strong>
+- <strong>Sicherheit:</strong> Schließen von Sicherheitslücken
+- <strong>Stabilität:</strong> Behebung von Bugs und Fehlern
+- <strong>Compliance:</strong> Erfüllung regulatorischer Anforderungen
+- <strong>Performance:</strong> Optimierung und neue Features
+- <strong>Kompatibilität:</strong> Unterstützung neuer Technologien</p>
+<h3 id="patch-kategorien">Patch-Kategorien</h3>
+<h4 id="security-patches-sicherheits-updates">Security Patches (Sicherheits-Updates)</h4>
+<p><strong>Beschreibung:</strong> Patches, die Sicherheitslücken schließen</p>
+<p><strong>Priorität:</strong> Kritisch bis Hoch</p>
+<p><strong>Beispiele:</strong>
+- CVE-behaftete Vulnerabilities
+- Zero-Day-Exploits
+- Kritische Sicherheitslücken</p>
+<p><strong>SLA:</strong>
+- <strong>Critical (CVSS 9.0-10.0):</strong> 7 Tage
+- <strong>High (CVSS 7.0-8.9):</strong> 30 Tage
+- <strong>Medium (CVSS 4.0-6.9):</strong> 90 Tage
+- <strong>Low (CVSS 0.1-3.9):</strong> 180 Tage</p>
+<h4 id="feature-updates-funktions-updates">Feature Updates (Funktions-Updates)</h4>
+<p><strong>Beschreibung:</strong> Updates mit neuen Funktionen und Verbesserungen</p>
+<p><strong>Priorität:</strong> Mittel</p>
+<p><strong>Beispiele:</strong>
+- Neue Features
+- Performance-Verbesserungen
+- UI/UX-Verbesserungen</p>
+<p><strong>SLA:</strong> Nach Bedarf, geplant in Wartungsfenstern</p>
+<h4 id="bugfix-patches-fehlerbehebungen">Bugfix Patches (Fehlerbehebungen)</h4>
+<p><strong>Beschreibung:</strong> Patches zur Behebung von Bugs ohne Sicherheitsrelevanz</p>
+<p><strong>Priorität:</strong> Niedrig bis Mittel</p>
+<p><strong>Beispiele:</strong>
+- Funktionale Fehler
+- Performance-Probleme
+- Kompatibilitäts-Probleme</p>
+<p><strong>SLA:</strong> 90 Tage oder nach Bedarf</p>
+<h4 id="firmware-updates">Firmware Updates</h4>
+<p><strong>Beschreibung:</strong> Updates für Hardware-Firmware</p>
+<p><strong>Priorität:</strong> Mittel bis Hoch</p>
+<p><strong>Beispiele:</strong>
+- BIOS/UEFI-Updates
+- Storage-Controller-Firmware
+- Netzwerk-Equipment-Firmware</p>
+<p><strong>SLA:</strong> Nach Herstellerempfehlung, geplant</p>
+<h3 id="patch-quellen">Patch-Quellen</h3>
+<table>
+<thead>
+<tr>
+<th>System-Typ</th>
+<th>Patch-Quelle</th>
+<th>Update-Mechanismus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Windows</strong></td>
+<td>Windows Update, WSUS</td>
+<td>Automatisch/Manuell</td>
+</tr>
+<tr>
+<td><strong>Linux (RHEL/CentOS)</strong></td>
+<td>Red Hat Network, YUM</td>
+<td>yum update</td>
+</tr>
+<tr>
+<td><strong>Linux (Ubuntu/Debian)</strong></td>
+<td>Ubuntu Repositories, APT</td>
+<td>apt update &amp;&amp; apt upgrade</td>
+</tr>
+<tr>
+<td><strong>VMware</strong></td>
+<td>VMware Update Manager</td>
+<td>VUM</td>
+</tr>
+<tr>
+<td><strong>Applikationen</strong></td>
+<td>Vendor-Websites, Package-Manager</td>
+<td>Manuell/Automatisch</td>
+</tr>
+<tr>
+<td><strong>Firmware</strong></td>
+<td>Vendor-Support-Sites</td>
+<td>Manuell</td>
+</tr>
+<tr>
+<td><strong>Cloud-Services</strong></td>
+<td>Provider-Managed</td>
+<td>Automatisch</td>
+</tr>
+</tbody>
+</table>
+<h2 id="patch-management-prozess">Patch-Management-Prozess</h2>
+<h3 id="prozess-ubersicht">Prozess-Übersicht</h3>
+<div class="codehilite"><pre><span></span><code>┌─────────────────┐
+│ Vulnerability   │
+│ Identification  │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Patch           │
+│ Assessment      │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Patch           │
+│ Acquisition     │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Patch           │
+│ Testing         │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Patch           │
+│ Deployment      │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Verification    │
+│ &amp; Reporting     │
+└─────────────────┘
+</code></pre></div>
+
+<h3 id="1-vulnerability-identification">1. Vulnerability Identification</h3>
+<p><strong>Identifikations-Quellen:</strong>
+- <strong>Vulnerability-Scanner:</strong> {{ meta.vulnerability_scanner }}
+- <strong>Vendor-Advisories:</strong> Microsoft, Red Hat, VMware, etc.
+- <strong>Security-Mailinglists:</strong> CERT, US-CERT, vendor-specific
+- <strong>Threat-Intelligence:</strong> {{ meta.threat_intelligence_source }}
+- <strong>SIEM-Alerts:</strong> {{ meta.siem_system }}</p>
+<p><strong>Aktivitäten:</strong>
+- Vulnerability-Scans durchführen (wöchentlich)
+- Vendor-Advisories überwachen (täglich)
+- CVE-Datenbank prüfen
+- Betroffene Systeme identifizieren
+- Patch-Verfügbarkeit prüfen</p>
+<p><strong>Verantwortlich:</strong> Security-Operations-Team</p>
+<h3 id="2-patch-assessment">2. Patch Assessment</h3>
+<p><strong>Bewertungs-Kriterien:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Kriterium</th>
+<th>Bewertung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CVSS-Score</strong></td>
+<td>0.0 - 10.0</td>
+</tr>
+<tr>
+<td><strong>Exploit-Verfügbarkeit</strong></td>
+<td>Ja/Nein</td>
+</tr>
+<tr>
+<td><strong>Asset-Kritikalität</strong></td>
+<td>Kritisch/Wichtig/Standard</td>
+</tr>
+<tr>
+<td><strong>Exposure</strong></td>
+<td>Internet-facing/Internal</td>
+</tr>
+<tr>
+<td><strong>Vendor-Empfehlung</strong></td>
+<td>Sofort/Geplant/Optional</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Risiko-Matrix:</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Internet-facing</strong></th>
+<th><strong>Internal</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Critical (CVSS 9-10)</strong></td>
+<td>Sofort (7 Tage)</td>
+<td>Hoch (14 Tage)</td>
+</tr>
+<tr>
+<td><strong>High (CVSS 7-8.9)</strong></td>
+<td>Hoch (14 Tage)</td>
+<td>Mittel (30 Tage)</td>
+</tr>
+<tr>
+<td><strong>Medium (CVSS 4-6.9)</strong></td>
+<td>Mittel (30 Tage)</td>
+<td>Niedrig (90 Tage)</td>
+</tr>
+<tr>
+<td><strong>Low (CVSS 0-3.9)</strong></td>
+<td>Niedrig (90 Tage)</td>
+<td>Sehr niedrig (180 Tage)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Impact-Assessment:</strong>
+- Welche Systeme sind betroffen?
+- Welche Business-Prozesse sind abhängig?
+- Ist ein Reboot erforderlich?
+- Gibt es bekannte Kompatibilitäts-Probleme?
+- Welches Wartungsfenster ist verfügbar?</p>
+<p><strong>Entscheidung:</strong>
+- <strong>Patch:</strong> Patch installieren
+- <strong>Defer:</strong> Patch verschieben (mit Begründung)
+- <strong>Reject:</strong> Patch nicht installieren (mit Begründung)
+- <strong>Workaround:</strong> Alternative Mitigation</p>
+<p><strong>Verantwortlich:</strong> Patch-Management-Team</p>
+<h3 id="3-patch-acquisition">3. Patch Acquisition</h3>
+<p><strong>Beschaffungs-Aktivitäten:</strong>
+- Patch von Vendor-Quelle herunterladen
+- Patch-Integrität verifizieren (Checksums, Signaturen)
+- Patch in Patch-Repository speichern
+- Patch-Metadaten dokumentieren</p>
+<p><strong>Patch-Repository:</strong> {{ meta.patch_repository }}</p>
+<p><strong>Dokumentation:</strong>
+- Patch-ID
+- Vendor
+- Release-Date
+- CVE-IDs
+- Betroffene Systeme
+- Installations-Anweisungen</p>
+<p><strong>Verantwortlich:</strong> Patch-Management-Team</p>
+<h3 id="4-patch-testing">4. Patch Testing</h3>
+<p><strong>Test-Umgebungen:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Umgebung</th>
+<th>Zweck</th>
+<th>Systeme</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Dev</strong></td>
+<td>Entwickler-Tests</td>
+<td>{{ netbox.environment.dev }}</td>
+</tr>
+<tr>
+<td><strong>Test</strong></td>
+<td>Funktionale Tests</td>
+<td>{{ netbox.environment.test }}</td>
+</tr>
+<tr>
+<td><strong>Staging</strong></td>
+<td>Pre-Production-Tests</td>
+<td>{{ netbox.environment.staging }}</td>
+</tr>
+<tr>
+<td><strong>Production</strong></td>
+<td>Produktiv-Systeme</td>
+<td>{{ netbox.environment.production }}</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Test-Prozess:</strong></p>
+<h4 id="phase-1-dev-testing-optional">Phase 1: Dev-Testing (Optional)</h4>
+<p><strong>Dauer:</strong> 1-2 Tage</p>
+<p><strong>Aktivitäten:</strong>
+- Patch in Dev-Umgebung installieren
+- Basis-Funktionalität testen
+- Offensichtliche Probleme identifizieren</p>
+<h4 id="phase-2-test-testing">Phase 2: Test-Testing</h4>
+<p><strong>Dauer:</strong> 3-5 Tage</p>
+<p><strong>Aktivitäten:</strong>
+- Patch in Test-Umgebung installieren
+- Funktionale Tests durchführen
+- Performance-Tests durchführen
+- Kompatibilitäts-Tests durchführen
+- Rollback-Prozedur testen</p>
+<p><strong>Test-Checkliste:</strong>
+- [ ] Patch erfolgreich installiert
+- [ ] System startet nach Reboot
+- [ ] Applikationen starten
+- [ ] Basis-Funktionalität funktioniert
+- [ ] Performance akzeptabel
+- [ ] Keine Error-Logs
+- [ ] Rollback erfolgreich getestet</p>
+<h4 id="phase-3-staging-testing">Phase 3: Staging-Testing</h4>
+<p><strong>Dauer:</strong> 2-3 Tage</p>
+<p><strong>Aktivitäten:</strong>
+- Patch in Staging-Umgebung installieren
+- Business-Prozess-Tests durchführen
+- User-Acceptance-Tests (UAT)
+- Last-Tests (falls kritisch)</p>
+<p><strong>Go/No-Go-Entscheidung:</strong>
+- Alle Tests bestanden → Go
+- Kritische Probleme → No-Go, Patch zurückstellen
+- Nicht-kritische Probleme → Go mit Workaround</p>
+<p><strong>Verantwortlich:</strong> QA-Team, Applikations-Owner</p>
+<p><strong>Ausnahmen (Emergency-Patches):</strong>
+- Kritische Security-Patches können Test-Phase verkürzen
+- Mindestens Basis-Tests in Test-Umgebung
+- Erhöhtes Risiko akzeptiert und dokumentiert</p>
+<h3 id="5-patch-deployment">5. Patch Deployment</h3>
+<p><strong>Deployment-Strategien:</strong></p>
+<h4 id="phased-rollout-standard">Phased Rollout (Standard)</h4>
+<p><strong>Beschreibung:</strong> Schrittweise Ausrollung in Phasen</p>
+<p><strong>Phasen:</strong>
+1. <strong>Pilot-Gruppe:</strong> 5-10% der Systeme (1-2 Tage)
+2. <strong>Phase 1:</strong> 25% der Systeme (2-3 Tage)
+3. <strong>Phase 2:</strong> 50% der Systeme (2-3 Tage)
+4. <strong>Phase 3:</strong> Alle verbleibenden Systeme</p>
+<p><strong>Vorteile:</strong>
+- Risiko-Minimierung
+- Frühe Problem-Erkennung
+- Kontrollierte Ausrollung</p>
+<p><strong>Anwendung:</strong> Standard-Patches, Feature-Updates</p>
+<h4 id="big-bang-alle-auf-einmal">Big Bang (Alle auf einmal)</h4>
+<p><strong>Beschreibung:</strong> Alle Systeme gleichzeitig patchen</p>
+<p><strong>Vorteile:</strong>
+- Schnelle Ausrollung
+- Einfache Koordination</p>
+<p><strong>Nachteile:</strong>
+- Hohes Risiko
+- Große Impact bei Problemen</p>
+<p><strong>Anwendung:</strong> Nur für unkritische Systeme oder in Notfällen</p>
+<h4 id="rolling-update">Rolling Update</h4>
+<p><strong>Beschreibung:</strong> Systeme nacheinander patchen (z.B. in Clustern)</p>
+<p><strong>Vorteile:</strong>
+- Keine Downtime
+- Kontinuierliche Verfügbarkeit</p>
+<p><strong>Anwendung:</strong> Hochverfügbare Systeme, Load-Balanced-Cluster</p>
+<p><strong>Deployment-Methoden:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Methode</th>
+<th>Tool</th>
+<th>Anwendung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Automatisch</strong></td>
+<td>WSUS, SCCM, Ansible</td>
+<td>Standard-Patches</td>
+</tr>
+<tr>
+<td><strong>Semi-Automatisch</strong></td>
+<td>Patch-Management-Tool</td>
+<td>Geplante Patches</td>
+</tr>
+<tr>
+<td><strong>Manuell</strong></td>
+<td>Remote-Session</td>
+<td>Kritische Systeme, Firmware</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Deployment-Zeitfenster:</strong></p>
+<table>
+<thead>
+<tr>
+<th>System-Tier</th>
+<th>Wartungsfenster</th>
+<th>Frequenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tier 0 (Kritisch)</strong></td>
+<td>Sonntag 02:00-06:00</td>
+<td>Monatlich</td>
+</tr>
+<tr>
+<td><strong>Tier 1 (Wichtig)</strong></td>
+<td>Samstag 22:00-02:00</td>
+<td>Monatlich</td>
+</tr>
+<tr>
+<td><strong>Tier 2 (Standard)</strong></td>
+<td>Mittwoch 20:00-22:00</td>
+<td>Monatlich</td>
+</tr>
+<tr>
+<td><strong>Tier 3 (Unkritisch)</strong></td>
+<td>Jederzeit</td>
+<td>Nach Bedarf</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Deployment-Checkliste:</strong>
+- [ ] Change-Ticket erstellt und genehmigt
+- [ ] Stakeholder informiert
+- [ ] Backup erstellt
+- [ ] Rollback-Plan bereit
+- [ ] Monitoring aktiviert
+- [ ] On-Call-Team verfügbar</p>
+<p><strong>Verantwortlich:</strong> IT-Operations-Team</p>
+<h3 id="6-verification-reporting">6. Verification &amp; Reporting</h3>
+<p><strong>Verifikations-Aktivitäten:</strong>
+- Patch-Installation bestätigen
+- System-Funktionalität prüfen
+- Performance-Metriken überwachen
+- Error-Logs prüfen
+- Vulnerability-Scan wiederholen</p>
+<p><strong>Verifikations-Checkliste:</strong>
+- [ ] Patch auf allen Ziel-Systemen installiert
+- [ ] Systeme laufen stabil
+- [ ] Keine kritischen Errors
+- [ ] Performance normal
+- [ ] Vulnerability geschlossen (Scan)</p>
+<p><strong>Reporting:</strong>
+- Patch-Status-Report
+- Erfolgs-/Fehler-Rate
+- Offene Patches
+- Compliance-Status</p>
+<p><strong>Verantwortlich:</strong> Patch-Management-Team</p>
+<h2 id="patch-zeitplane">Patch-Zeitpläne</h2>
+<h3 id="monatlicher-patch-zyklus">Monatlicher Patch-Zyklus</h3>
+<p><strong>Microsoft Patch Tuesday:</strong>
+- <strong>Patch-Release:</strong> 2. Dienstag im Monat
+- <strong>Assessment:</strong> Dienstag-Mittwoch
+- <strong>Testing:</strong> Mittwoch-Freitag (Woche 1)
+- <strong>Staging:</strong> Montag-Mittwoch (Woche 2)
+- <strong>Production-Deployment:</strong> Samstag/Sonntag (Woche 2-3)</p>
+<p><strong>Linux-Patches:</strong>
+- <strong>Assessment:</strong> Wöchentlich (Montag)
+- <strong>Testing:</strong> Dienstag-Donnerstag
+- <strong>Deployment:</strong> Samstag (monatlich)</p>
+<p><strong>Applikations-Patches:</strong>
+- <strong>Assessment:</strong> Bei Vendor-Release
+- <strong>Testing:</strong> 1 Woche
+- <strong>Deployment:</strong> Nächstes Wartungsfenster</p>
+<h3 id="emergency-patches">Emergency-Patches</h3>
+<p><strong>Trigger:</strong>
+- Critical-Vulnerability (CVSS &gt; 9.0)
+- Aktive Exploits in the Wild
+- Zero-Day-Vulnerabilities
+- Vendor-Empfehlung "Sofort"</p>
+<p><strong>Prozess:</strong>
+- <strong>Assessment:</strong> Sofort (&lt; 4 Stunden)
+- <strong>Testing:</strong> Minimal (&lt; 8 Stunden)
+- <strong>Deployment:</strong> Sofort (&lt; 24 Stunden)</p>
+<p><strong>Genehmigung:</strong> CIO oder CISO</p>
+<p><strong>Kommunikation:</strong> Alle Stakeholder sofort informieren</p>
+<h3 id="patch-kalender">Patch-Kalender</h3>
+<table>
+<thead>
+<tr>
+<th>Woche</th>
+<th>Montag</th>
+<th>Dienstag</th>
+<th>Mittwoch</th>
+<th>Donnerstag</th>
+<th>Freitag</th>
+<th>Samstag</th>
+<th>Sonntag</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Woche 1</strong></td>
+<td>Assessment</td>
+<td>Testing</td>
+<td>Testing</td>
+<td>Testing</td>
+<td>Testing</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Woche 2</strong></td>
+<td>Staging</td>
+<td>Staging</td>
+<td>Staging</td>
+<td>Go/No-Go</td>
+<td>-</td>
+<td>Tier 1 Deploy</td>
+<td>Tier 0 Deploy</td>
+</tr>
+<tr>
+<td><strong>Woche 3</strong></td>
+<td>Verification</td>
+<td>Reporting</td>
+<td>Tier 2 Deploy</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Woche 4</strong></td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h2 id="patch-management-tools">Patch-Management-Tools</h2>
+<h3 id="windows-patch-management">Windows-Patch-Management</h3>
+<p><strong>Tool:</strong> Windows Server Update Services (WSUS)<br />
+<strong>Server:</strong> {{ netbox.wsus.server }}<br />
+<strong>Management:</strong> {{ netbox.wsus.management_url }}</p>
+<p><strong>Konfiguration:</strong>
+- Automatische Synchronisation mit Microsoft Update
+- Patch-Approval-Workflow
+- Computer-Gruppen nach Tier
+- Reporting und Compliance-Dashboard</p>
+<p><strong>Patch-Gruppen:</strong>
+- <strong>Pilot:</strong> Test-Systeme
+- <strong>Tier-0:</strong> Kritische Produktions-Systeme
+- <strong>Tier-1:</strong> Wichtige Produktions-Systeme
+- <strong>Tier-2:</strong> Standard-Systeme
+- <strong>Tier-3:</strong> Unkritische Systeme</p>
+<h3 id="linux-patch-management">Linux-Patch-Management</h3>
+<p><strong>Tool:</strong> Ansible / Satellite<br />
+<strong>Server:</strong> {{ netbox.ansible.server }}</p>
+<p><strong>Playbooks:</strong>
+- <code>patch-assessment.yml</code> - Verfügbare Updates prüfen
+- <code>patch-security.yml</code> - Nur Security-Updates
+- <code>patch-all.yml</code> - Alle Updates
+- <code>patch-rollback.yml</code> - Rollback</p>
+<p><strong>Beispiel-Playbook:</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="nn">---</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Patch Linux Servers</span>
+<span class="w">  </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">linux_servers</span>
+<span class="w">  </span><span class="nt">become</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
+<span class="w">  </span><span class="nt">tasks</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Update package cache</span>
+<span class="w">      </span><span class="nt">apt</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">update_cache</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
+<span class="w">      </span><span class="nt">when</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ansible_os_family == &quot;Debian&quot;</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install security updates</span>
+<span class="w">      </span><span class="nt">apt</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">upgrade</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">safe</span>
+<span class="w">        </span><span class="nt">autoremove</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
+<span class="w">      </span><span class="nt">when</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ansible_os_family == &quot;Debian&quot;</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Check if reboot required</span>
+<span class="w">      </span><span class="nt">stat</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/var/run/reboot-required</span>
+<span class="w">      </span><span class="nt">register</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reboot_required</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Reboot if required</span>
+<span class="w">      </span><span class="nt">reboot</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">msg</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Reboot</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">security</span><span class="nv"> </span><span class="s">updates&quot;</span>
+<span class="w">      </span><span class="nt">when</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">reboot_required.stat.exists</span>
+</code></pre></div>
+
+<h3 id="vmware-patch-management">VMware-Patch-Management</h3>
+<p><strong>Tool:</strong> VMware Update Manager (VUM)<br />
+<strong>Integration:</strong> vCenter {{ netbox.vcenter.server }}</p>
+<p><strong>Baseline-Gruppen:</strong>
+- <strong>Critical-Patches:</strong> Kritische Security-Patches
+- <strong>Non-Critical-Patches:</strong> Alle anderen Patches
+- <strong>Upgrades:</strong> ESXi-Upgrades</p>
+<p><strong>Remediation-Prozess:</strong>
+- Baseline-Compliance prüfen
+- Hosts in Maintenance-Mode
+- Patches installieren
+- Hosts rebooten
+- Compliance verifizieren</p>
+<h3 id="vulnerability-scanner">Vulnerability-Scanner</h3>
+<p><strong>Tool:</strong> {{ meta.vulnerability_scanner }}<br />
+<strong>Scan-Frequenz:</strong> Wöchentlich</p>
+<p><strong>Scan-Profile:</strong>
+- <strong>Full-Scan:</strong> Alle Vulnerabilities
+- <strong>Patch-Scan:</strong> Nur fehlende Patches
+- <strong>Compliance-Scan:</strong> Compliance-Checks</p>
+<p><strong>Integration:</strong> SIEM, Ticketing-System</p>
+<h2 id="rollback-prozeduren">Rollback-Prozeduren</h2>
+<h3 id="rollback-trigger">Rollback-Trigger</h3>
+<p><strong>Rollback erforderlich bei:</strong>
+- Kritische Funktionalität nicht verfügbar
+- Performance-Degradation &gt; 20%
+- Daten-Korruption
+- Sicherheits-Probleme durch Patch
+- Business-Prozess-Ausfall</p>
+<p><strong>Rollback-Entscheidung:</strong> IT Operations Manager oder höher</p>
+<h3 id="rollback-methoden">Rollback-Methoden</h3>
+<h4 id="windows-rollback">Windows-Rollback</h4>
+<p><strong>Methode 1: Windows-Uninstall</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="c"># Patch-Liste anzeigen</span>
+<span class="nb">Get-HotFix</span>
+
+<span class="c"># Patch deinstallieren</span>
+<span class="n">wusa</span> <span class="p">/</span><span class="n">uninstall</span> <span class="p">/</span><span class="n">kb</span><span class="p">:</span><span class="n">KBXXXXXX</span> <span class="p">/</span><span class="n">quiet</span> <span class="p">/</span><span class="n">norestart</span>
+</code></pre></div>
+
+<p><strong>Methode 2: System-Restore</strong>
+- Restore-Point vor Patch-Installation
+- System-Wiederherstellung durchführen</p>
+<p><strong>Methode 3: Backup-Restore</strong>
+- VM-Snapshot wiederherstellen
+- Bare-Metal-Restore</p>
+<h4 id="linux-rollback">Linux-Rollback</h4>
+<p><strong>Methode 1: Package-Downgrade</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Ubuntu/Debian</span>
+apt-cache<span class="w"> </span>policy<span class="w"> </span>&lt;package&gt;
+apt-get<span class="w"> </span>install<span class="w"> </span>&lt;package&gt;<span class="o">=</span>&lt;old-version&gt;
+
+<span class="c1"># RHEL/CentOS</span>
+yum<span class="w"> </span>downgrade<span class="w"> </span>&lt;package&gt;
+</code></pre></div>
+
+<p><strong>Methode 2: Snapshot-Rollback</strong>
+- LVM-Snapshot wiederherstellen
+- VM-Snapshot wiederherstellen</p>
+<h4 id="vmware-rollback">VMware-Rollback</h4>
+<p><strong>Methode:</strong> VUM-Rollback
+- Baseline-Remediation rückgängig machen
+- Vorherige Patch-Version installieren</p>
+<h3 id="rollback-prozess">Rollback-Prozess</h3>
+<ol>
+<li><strong>Rollback-Entscheidung treffen</strong></li>
+<li>Impact bewerten</li>
+<li>
+<p>Stakeholder informieren</p>
+</li>
+<li>
+<p><strong>Rollback durchführen</strong></p>
+</li>
+<li>Rollback-Methode auswählen</li>
+<li>Rollback ausführen</li>
+<li>
+<p>System neu starten (falls erforderlich)</p>
+</li>
+<li>
+<p><strong>Verifikation</strong></p>
+</li>
+<li>Funktionalität prüfen</li>
+<li>Performance prüfen</li>
+<li>
+<p>Logs prüfen</p>
+</li>
+<li>
+<p><strong>Dokumentation</strong></p>
+</li>
+<li>Rollback-Grund dokumentieren</li>
+<li>Lessons Learned</li>
+<li>Alternative Lösungen evaluieren</li>
+</ol>
+<h2 id="compliance-und-reporting">Compliance und Reporting</h2>
+<h3 id="patch-compliance-metriken">Patch-Compliance-Metriken</h3>
+<table>
+<thead>
+<tr>
+<th>Metrik</th>
+<th>Zielwert</th>
+<th>Messung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Patch Compliance Rate</strong></td>
+<td>&gt; 95%</td>
+<td>Gepatchte Systeme / Gesamt-Systeme</td>
+</tr>
+<tr>
+<td><strong>Critical Patch SLA</strong></td>
+<td>&gt; 95%</td>
+<td>Patches in SLA / Gesamt-Patches</td>
+</tr>
+<tr>
+<td><strong>Mean Time to Patch (MTTP)</strong></td>
+<td>&lt; 30 Tage</td>
+<td>Durchschnittliche Patch-Dauer</td>
+</tr>
+<tr>
+<td><strong>Patch Success Rate</strong></td>
+<td>&gt; 98%</td>
+<td>Erfolgreiche Patches / Gesamt-Patches</td>
+</tr>
+<tr>
+<td><strong>Rollback Rate</strong></td>
+<td>&lt; 2%</td>
+<td>Rollbacks / Gesamt-Patches</td>
+</tr>
+</tbody>
+</table>
+<h3 id="patch-compliance-dashboard">Patch-Compliance-Dashboard</h3>
+<p><strong>Metriken:</strong>
+- Patch-Status nach System-Tier
+- Offene Critical-Patches
+- SLA-Compliance
+- Patch-Trends (monatlich)
+- Top-10-Vulnerabilities</p>
+<p><strong>Tool:</strong> {{ meta.patch_dashboard }}</p>
+<p><strong>Zugriff:</strong> IT-Management, Security-Team</p>
+<h3 id="reporting">Reporting</h3>
+<p><strong>Wöchentliches Patch-Status-Report:</strong>
+- Neue Patches verfügbar
+- Patches in Testing
+- Geplante Deployments
+- Offene Critical-Patches</p>
+<p><strong>Monatliches Patch-Compliance-Report:</strong>
+- Patch-Compliance-Rate
+- SLA-Compliance
+- Patch-Statistiken
+- Trend-Analysen
+- Verbesserungs-Maßnahmen</p>
+<p><strong>Quartalsweises Management-Report:</strong>
+- Patch-Management-Strategie-Review
+- Risiko-Assessment
+- Compliance-Status
+- Budget und Ressourcen</p>
+<p><strong>Empfänger:</strong>
+- Wöchentlich: IT-Operations-Team
+- Monatlich: IT-Management, Security-Team
+- Quartalsweise: CIO, CISO, Management</p>
+<h2 id="ausnahmen-und-sonderfalle">Ausnahmen und Sonderfälle</h2>
+<h3 id="patch-ausnahmen">Patch-Ausnahmen</h3>
+<p><strong>Gründe für Ausnahmen:</strong>
+- Vendor-Support endet (End-of-Life)
+- Applikations-Inkompatibilität
+- Business-kritische Systeme (Change-Freeze)
+- Spezielle Vendor-Anforderungen</p>
+<p><strong>Ausnahme-Prozess:</strong>
+1. Ausnahme-Antrag stellen
+2. Risiko-Assessment durchführen
+3. Kompensations-Maßnahmen definieren
+4. Management-Genehmigung einholen
+5. Ausnahme dokumentieren
+6. Regelmäßig reviewen (quartalsweise)</p>
+<p><strong>Ausnahme-Register:</strong> {{ meta.exception_register }}</p>
+<h3 id="end-of-life-systeme">End-of-Life-Systeme</h3>
+<p><strong>Strategie:</strong>
+- Migration planen
+- Netzwerk-Segmentierung
+- Zusätzliche Monitoring
+- Kompensations-Kontrollen
+- Risiko-Akzeptanz dokumentieren</p>
+<p><strong>EOL-Register:</strong> {{ meta.eol_register }}</p>
+<h3 id="legacy-applikationen">Legacy-Applikationen</h3>
+<p><strong>Herausforderungen:</strong>
+- Keine Patches verfügbar
+- Inkompatibilität mit neuen OS-Versionen
+- Vendor-Support eingestellt</p>
+<p><strong>Mitigations:</strong>
+- Virtualisierung/Containerisierung
+- Netzwerk-Isolation
+- WAF/IPS vor Applikation
+- Regelmäßige Vulnerability-Scans
+- Migrations-Roadmap</p>
+<h2 id="rollen-und-verantwortlichkeiten">Rollen und Verantwortlichkeiten</h2>
+<h3 id="patch-management-team">Patch-Management-Team</h3>
+<p><strong>Verantwortlichkeiten:</strong>
+- Patch-Prozess-Ownership
+- Vulnerability-Assessment
+- Patch-Testing-Koordination
+- Deployment-Planung
+- Reporting</p>
+<p><strong>Team-Lead:</strong> Andreas Huemmer</p>
+<h3 id="system-administratoren">System-Administratoren</h3>
+<p><strong>Verantwortlichkeiten:</strong>
+- Patch-Deployment durchführen
+- System-Monitoring
+- Rollback-Durchführung
+- Dokumentation</p>
+<h3 id="security-team">Security-Team</h3>
+<p><strong>Verantwortlichkeiten:</strong>
+- Vulnerability-Scanning
+- Risiko-Assessment
+- Security-Patch-Priorisierung
+- Compliance-Überwachung</p>
+<p><strong>Lead:</strong> Thomas Weber</p>
+<h3 id="applikations-owner">Applikations-Owner</h3>
+<p><strong>Verantwortlichkeiten:</strong>
+- Applikations-Kompatibilität prüfen
+- User-Acceptance-Tests
+- Go/No-Go-Entscheidung
+- Business-Impact-Assessment</p>
+<h3 id="change-manager">Change-Manager</h3>
+<p><strong>Verantwortlichkeiten:</strong>
+- Change-Tickets genehmigen
+- Change-Kalender verwalten
+- Stakeholder-Kommunikation
+- Post-Implementation-Review</p>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="patch-management-best-practices">Patch-Management-Best-Practices</h3>
+<ol>
+<li><strong>Regelmäßige Vulnerability-Scans</strong></li>
+<li>Wöchentliche Scans</li>
+<li>Automatisierte Scans</li>
+<li>
+<p>Priorisierung nach Risiko</p>
+</li>
+<li>
+<p><strong>Test vor Deployment</strong></p>
+</li>
+<li>Immer in Test-Umgebung testen</li>
+<li>Rollback-Plan bereit haben</li>
+<li>
+<p>Dokumentation aktuell halten</p>
+</li>
+<li>
+<p><strong>Phased Rollout</strong></p>
+</li>
+<li>Pilot-Gruppe zuerst</li>
+<li>Schrittweise Ausrollung</li>
+<li>
+<p>Monitoring während Rollout</p>
+</li>
+<li>
+<p><strong>Backup vor Patching</strong></p>
+</li>
+<li>Immer Backup erstellen</li>
+<li>Backup-Integrität prüfen</li>
+<li>
+<p>Restore-Prozedur testen</p>
+</li>
+<li>
+<p><strong>Kommunikation</strong></p>
+</li>
+<li>Stakeholder frühzeitig informieren</li>
+<li>Status-Updates während Deployment</li>
+<li>
+<p>Post-Deployment-Kommunikation</p>
+</li>
+<li>
+<p><strong>Dokumentation</strong></p>
+</li>
+<li>Patch-Prozess dokumentieren</li>
+<li>Lessons Learned festhalten</li>
+<li>
+<p>Knowledge-Base pflegen</p>
+</li>
+<li>
+<p><strong>Automatisierung</strong></p>
+</li>
+<li>Patch-Deployment automatisieren</li>
+<li>Reporting automatisieren</li>
+<li>
+<p>Compliance-Checks automatisieren</p>
+</li>
+<li>
+<p><strong>Kontinuierliche Verbesserung</strong></p>
+</li>
+<li>Prozess regelmäßig reviewen</li>
+<li>Metriken analysieren</li>
+<li>Optimierungen umsetzen</li>
+</ol>
+<h2 id="referenzen">Referenzen</h2>
+<ul>
+<li>NIST SP 800-40 Rev. 4 - Guide to Enterprise Patch Management Planning</li>
+<li>ISO/IEC 27002:2013 - Control 12.6.1 (Management of Technical Vulnerabilities)</li>
+<li>CIS Controls v8 - Control 7 (Continuous Vulnerability Management)</li>
+<li>ITIL v4 - Change Enablement Practice</li>
+<li>Vendor-Patch-Dokumentation (Microsoft, Red Hat, VMware)</li>
+<li>CVE Database: https://cve.mitre.org</li>
+<li>NVD Database: https://nvd.nist.gov</li>
+</ul>
+<hr />
+<p><strong>Dokumentverantwortlicher:</strong> IT Operations Manager<br />
+<strong>Genehmigt durch:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Klassifizierung:</strong> internal<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.date }}</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0170_Sicherheitsbetrieb_und_Hardening.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0190_Log_Management_und_Audit.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

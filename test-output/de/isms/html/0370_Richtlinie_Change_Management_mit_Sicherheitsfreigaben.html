@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0370 - Richtlinie: Change Management mit Sicherheitsfreigaben</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0370</div>
+            <h1>Richtlinie: Change Management mit Sicherheitsfreigaben</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0360_Policy_Change_und_Release_Management.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0380_Policy_Secure_Development.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="richtlinie-change-management-mit-sicherheitsfreigaben">Richtlinie: Change Management mit Sicherheitsfreigaben</h1>
+<p><strong>Dokument-ID:</strong> 0370<br />
+<strong>Dokumenttyp:</strong> Richtlinie (detailliert)<br />
+<strong>Zugehörige Policy:</strong> 0360_Policy_Change_und_Release_Management.md<br />
+<strong>Standard-Referenz:</strong> ISO/IEC 27001:2022 Annex A.8.32<br />
+<strong>Owner:</strong> {{ meta.it_operations.manager }}<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Freigegeben<br />
+<strong>Klassifizierung:</strong> Intern<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.date }}</p>
+<hr />
+<h2 id="1-zweck-und-geltungsbereich">1. Zweck und Geltungsbereich</h2>
+<p>Diese Richtlinie konkretisiert die <code>0360_Policy_Change_und_Release_Management.md</code> und definiert:
+- Change-Management-Prozesse mit Sicherheitsprüfungen
+- Change-Kategorien und Genehmigungsworkflows
+- Rollback-Verfahren und Post-Implementation-Reviews</p>
+<p><strong>Geltungsbereich:</strong> Alle IT-Änderungen bei <strong>AdminSend GmbH</strong></p>
+<h2 id="2-change-kategorien">2. Change-Kategorien</h2>
+<h3 id="21-standard-changes">2.1 Standard Changes</h3>
+<p><strong>Definition:</strong> Vorab genehmigte, risikoarme, häufige Änderungen</p>
+<p><strong>Beispiele:</strong>
+- Passwort-Resets
+- Software-Updates (getestet)
+- Hinzufügen von Nutzern zu Standardgruppen</p>
+<p><strong>Genehmigung:</strong> Keine individuelle Genehmigung erforderlich<br />
+<strong>Sicherheitsprüfung:</strong> Nicht erforderlich</p>
+<h3 id="22-normal-changes">2.2 Normal Changes</h3>
+<p><strong>Definition:</strong> Geplante Änderungen mit mittlerem Risiko</p>
+<p><strong>Beispiele:</strong>
+- Konfigurationsänderungen
+- Software-Installationen
+- Netzwerk-Änderungen</p>
+<p><strong>Genehmigung:</strong> Change Advisory Board (CAB)<br />
+<strong>Sicherheitsprüfung:</strong> Bei sicherheitsrelevanten Änderungen</p>
+<h3 id="23-emergency-changes">2.3 Emergency Changes</h3>
+<p><strong>Definition:</strong> Ungeplante, dringende Änderungen</p>
+<p><strong>Beispiele:</strong>
+- Kritische Security-Patches
+- Systemausfälle
+- Aktive Sicherheitsvorfälle</p>
+<p><strong>Genehmigung:</strong> Emergency CAB (ECAB)<br />
+<strong>Sicherheitsprüfung:</strong> Nachträglich</p>
+<h2 id="3-change-management-prozess">3. Change-Management-Prozess</h2>
+<h3 id="31-change-request-rfc">3.1 Change Request (RFC)</h3>
+<p><strong>Pflichtfelder:</strong>
+- Change-Titel und Beschreibung
+- Begründung (Business Justification)
+- Betroffene Systeme und Services
+- Risikobewertung
+- Rollback-Plan
+- Test-Ergebnisse
+- Geplantes Zeitfenster</p>
+<p><strong>Sicherheitsrelevante Zusatzfelder:</strong>
+- Auswirkungen auf Sicherheitskontrollen
+- Änderungen an Firewall-Regeln
+- Neue externe Verbindungen
+- Privilegierte Zugriffe erforderlich</p>
+<h3 id="32-risikobewertung">3.2 Risikobewertung</h3>
+<p><strong>Risiko-Matrix:</strong>
+| Wahrscheinlichkeit | Auswirkung Niedrig | Auswirkung Mittel | Auswirkung Hoch |
+|--------------------|-------------------|-------------------|-----------------|
+| Niedrig | Niedrig | Niedrig | Mittel |
+| Mittel | Niedrig | Mittel | Hoch |
+| Hoch | Mittel | Hoch | Kritisch |</p>
+<p><strong>Auswirkungen:</strong>
+- <strong>Niedrig:</strong> Einzelner Nutzer betroffen
+- <strong>Mittel:</strong> Abteilung betroffen
+- <strong>Hoch:</strong> Gesamte Organisation betroffen</p>
+<h3 id="33-sicherheitsprufung">3.3 Sicherheitsprüfung</h3>
+<p><strong>Trigger:</strong>
+- Änderungen an Sicherheitssystemen (Firewall, IDS, etc.)
+- Neue externe Verbindungen
+- Privilegierte Zugriffe
+- Änderungen an Authentifizierung/Autorisierung
+- Risiko "Hoch" oder "Kritisch"</p>
+<p><strong>Prüfung durch IT-Security:</strong>
+- Review des Change Requests
+- Sicherheitsauswirkungen bewerten
+- Zusätzliche Kontrollen empfehlen
+- Genehmigung oder Ablehnung</p>
+<p><strong>SLA:</strong> Sicherheitsprüfung innerhalb 2 Arbeitstagen</p>
+<h3 id="34-change-advisory-board-cab">3.4 Change Advisory Board (CAB)</h3>
+<p><strong>Mitglieder:</strong>
+- Change Manager (Vorsitz)
+- IT-Betrieb
+- IT-Security (bei sicherheitsrelevanten Changes)
+- Application Owner (bei Anwendungsänderungen)
+- Business Representative</p>
+<p><strong>Frequenz:</strong> Wöchentlich (Dienstag 10:00 Uhr)</p>
+<p><strong>Aufgaben:</strong>
+- Review und Genehmigung von Normal Changes
+- Priorisierung bei Konflikten
+- Risikobewertung
+- Terminplanung</p>
+<h3 id="35-implementation">3.5 Implementation</h3>
+<p><strong>Pre-Implementation:</strong>
+- Backup erstellen
+- Rollback-Plan bereitstellen
+- Kommunikation an betroffene Nutzer
+- Monitoring vorbereiten</p>
+<p><strong>Implementation:</strong>
+- Änderung gemäß Plan durchführen
+- Dokumentation aller Schritte
+- Abweichungen dokumentieren</p>
+<p><strong>Post-Implementation:</strong>
+- Funktionstest
+- Monitoring auf Fehler (24 Stunden)
+- Change-Status aktualisieren
+- Dokumentation vervollständigen</p>
+<h3 id="36-rollback">3.6 Rollback</h3>
+<p><strong>Trigger:</strong>
+- Funktionstest fehlgeschlagen
+- Kritische Fehler in Produktion
+- Sicherheitsprobleme erkannt</p>
+<p><strong>Prozess:</strong>
+1. Rollback-Entscheidung durch Change Manager
+2. Rollback gemäß Rollback-Plan
+3. Verifizierung der Wiederherstellung
+4. Root-Cause-Analyse
+5. Neuer Change Request für erneuten Versuch</p>
+<h2 id="4-emergency-changes">4. Emergency Changes</h2>
+<h3 id="41-emergency-cab-ecab">4.1 Emergency CAB (ECAB)</h3>
+<p><strong>Mitglieder:</strong>
+- Change Manager oder Stellvertreter
+- IT-Betrieb (On-Call)
+- CISO oder IT-Security (On-Call)</p>
+<p><strong>Verfügbarkeit:</strong> 24/7</p>
+<p><strong>Genehmigungsprozess:</strong>
+- Telefonische oder E-Mail-Genehmigung
+- Dokumentation im Nachhinein
+- Review im nächsten regulären CAB</p>
+<h3 id="42-emergency-change-prozess">4.2 Emergency Change-Prozess</h3>
+<p><strong>Beschleunigter Workflow:</strong>
+1. <strong>Initiierung:</strong> Incident-Manager erstellt Emergency RFC
+2. <strong>Bewertung:</strong> ECAB bewertet Dringlichkeit und Risiko
+3. <strong>Genehmigung:</strong> ECAB genehmigt (oder lehnt ab)
+4. <strong>Implementation:</strong> Sofortige Durchführung
+5. <strong>Dokumentation:</strong> Nachträgliche Vervollständigung
+6. <strong>Review:</strong> Im nächsten CAB</p>
+<p><strong>Sicherheitsprüfung:</strong>
+- Bei kritischen Security-Patches: Nachträglich
+- Bei anderen Emergency Changes: Vor Implementation (wenn möglich)</p>
+<h2 id="5-sicherheitskontrollen">5. Sicherheitskontrollen</h2>
+<h3 id="51-segregation-of-duties">5.1 Segregation of Duties</h3>
+<p><strong>Prinzip:</strong> Keine Person darf Change anfordern, genehmigen und implementieren</p>
+<p><strong>Rollen:</strong>
+- <strong>Requester:</strong> Beantragt Change
+- <strong>Approver:</strong> Genehmigt Change (CAB)
+- <strong>Implementer:</strong> Führt Change durch
+- <strong>Reviewer:</strong> Prüft Post-Implementation</p>
+<h3 id="52-privilegierte-changes">5.2 Privilegierte Changes</h3>
+<p><strong>Zusätzliche Anforderungen:</strong>
+- Vier-Augen-Prinzip bei Implementation
+- Session-Recording
+- Detaillierte Dokumentation
+- Post-Implementation-Security-Review</p>
+<h3 id="53-firewall-changes">5.3 Firewall-Changes</h3>
+<p><strong>Spezielle Anforderungen:</strong>
+- Begründung für jede neue Regel
+- Quell- und Ziel-IP/Port dokumentieren
+- Zeitliche Befristung (wo möglich)
+- Regelmäßiger Review (quartalsweise)</p>
+<p><strong>Genehmigung:</strong>
+- IT-Security: Verpflichtend
+- Network-Team: Technische Umsetzbarkeit
+- Application Owner: Business Justification</p>
+<h2 id="6-testing-und-validation">6. Testing und Validation</h2>
+<h3 id="61-test-umgebungen">6.1 Test-Umgebungen</h3>
+<p><strong>Anforderungen:</strong>
+- Dev/Test-Umgebung für alle kritischen Systeme
+- Möglichst identisch zu Produktion
+- Isoliert von Produktion</p>
+<p><strong>Test-Prozess:</strong>
+1. Change in Dev/Test implementieren
+2. Funktionstest durchführen
+3. Performance-Test (bei Bedarf)
+4. Security-Test (bei sicherheitsrelevanten Changes)
+5. Dokumentation der Test-Ergebnisse</p>
+<h3 id="62-security-testing">6.2 Security Testing</h3>
+<p><strong>Bei sicherheitsrelevanten Changes:</strong>
+- Vulnerability-Scan nach Change
+- Penetration-Test (bei kritischen Änderungen)
+- Code-Review (bei Software-Changes)
+- Configuration-Review</p>
+<h2 id="7-dokumentation-und-audit">7. Dokumentation und Audit</h2>
+<h3 id="71-change-dokumentation">7.1 Change-Dokumentation</h3>
+<p><strong>Pflicht-Dokumentation:</strong>
+- Change Request (RFC)
+- Genehmigungen
+- Implementation-Log
+- Test-Ergebnisse
+- Post-Implementation-Review</p>
+<p><strong>Aufbewahrung:</strong> {{ meta.retention.change_years }} Jahre</p>
+<h3 id="72-post-implementation-review-pir">7.2 Post-Implementation Review (PIR)</h3>
+<p><strong>Durchführung:</strong>
+- Innerhalb 7 Tage nach Implementation
+- Bei allen Normal und Emergency Changes</p>
+<p><strong>Inhalte:</strong>
+- Erfolg der Implementation
+- Aufgetretene Probleme
+- Lessons Learned
+- Verbesserungsvorschläge</p>
+<h3 id="73-compliance-und-audit">7.3 Compliance und Audit</h3>
+<p><strong>Messgrößen (KPIs):</strong>
+| Metrik | Zielwert |
+|--------|----------|
+| Erfolgreiche Changes | &gt; 95% |
+| Emergency Changes | &lt; 10% aller Changes |
+| Unauthorized Changes | 0 |
+| PIR-Completion-Rate | 100% |</p>
+<p><strong>Audit-Nachweise:</strong>
+- Change-Logs
+- Genehmigungen
+- Sicherheitsprüfungen
+- PIR-Berichte</p>
+<h2 id="8-referenzen">8. Referenzen</h2>
+<h3 id="interne-dokumente">Interne Dokumente</h3>
+<ul>
+<li><code>0360_Policy_Change_und_Release_Management.md</code></li>
+<li><code>0400_Policy_Incident_Management.md</code></li>
+</ul>
+<h3 id="externe-standards">Externe Standards</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.8.32</strong> - Change management</li>
+<li><strong>ITIL 4</strong> - Change Enablement Practice</li>
+</ul>
+<hr />
+<p><strong>Genehmigt durch:</strong> Thomas Weber, CISO<br />
+<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0360_Policy_Change_und_Release_Management.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0380_Policy_Secure_Development.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

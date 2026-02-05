@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0270 - Guideline: Key Management and Encryption</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0270</div>
+            <h1>Guideline: Key Management and Encryption</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0260_Policy_Cryptography_and_Key_Management.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0280_Policy_Data_Classification_and_Information_Handling.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="guideline-key-management-and-encryption">Guideline: Key Management and Encryption</h1>
+<p><strong>Document ID:</strong> 0270<br />
+<strong>Document Type:</strong> Guideline (detailed)<br />
+<strong>Related Policy:</strong> 0260_Policy_Cryptography_and_Key_Management.md<br />
+<strong>Standard Reference:</strong> ISO/IEC 27001:2022 Annex A.8.24<br />
+<strong>Owner:</strong> {{ meta.it_operations.manager }}<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Approved<br />
+<strong>Classification:</strong> Confidential<br />
+<strong>Last Updated:</strong> {{ meta.document.date }}<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-purpose-and-scope">1. Purpose and Scope</h2>
+<p>This guideline implements the <code>0260_Policy_Cryptography_and_Key_Management.md</code> and defines detailed procedures for:
+- Cryptographic algorithms and standards
+- Key generation, storage, and rotation
+- Certificate management
+- Encryption of data at rest and in transit</p>
+<p><strong>Scope:</strong> All cryptographic systems at <strong>AdminSend GmbH</strong></p>
+<h2 id="2-cryptographic-standards">2. Cryptographic Standards</h2>
+<h3 id="21-approved-algorithms">2.1 Approved Algorithms</h3>
+<p><strong>Symmetric Encryption:</strong>
+- <strong>AES-256</strong> (Advanced Encryption Standard, 256-bit) - Recommended
+- <strong>AES-128</strong> - Acceptable for non-critical data
+- <strong>ChaCha20</strong> - Acceptable for mobile devices</p>
+<p><strong>Asymmetric Encryption:</strong>
+- <strong>RSA-4096</strong> - Recommended for long-term security
+- <strong>RSA-2048</strong> - Acceptable, minimum requirement
+- <strong>ECDSA P-384</strong> - Recommended for performance
+- <strong>Ed25519</strong> - Acceptable for SSH keys</p>
+<p><strong>Hash Functions:</strong>
+- <strong>SHA-256</strong> - Minimum requirement
+- <strong>SHA-384, SHA-512</strong> - Recommended for critical applications
+- <strong>BLAKE2</strong> - Acceptable</p>
+<p><strong>Prohibited Algorithms:</strong>
+- MD5, SHA-1 (cryptographically broken)
+- DES, 3DES (deprecated)
+- RSA &lt; 2048 bit (too weak)
+- RC4 (insecure)</p>
+<h3 id="22-tlsssl-configuration">2.2 TLS/SSL Configuration</h3>
+<p><strong>TLS Versions:</strong>
+- <strong>TLS 1.3</strong> - Recommended
+- <strong>TLS 1.2</strong> - Minimum requirement
+- <strong>TLS 1.1, 1.0, SSL</strong> - Prohibited</p>
+<p><strong>Cipher Suites (Recommended):</strong></p>
+<div class="codehilite"><pre><span></span><code>TLS_AES_256_GCM_SHA384
+TLS_CHACHA20_POLY1305_SHA256
+TLS_AES_128_GCM_SHA256
+ECDHE-RSA-AES256-GCM-SHA384
+ECDHE-RSA-AES128-GCM-SHA256
+</code></pre></div>
+
+<p><strong>Certificates:</strong>
+- Minimum RSA-2048 or ECDSA P-256
+- Validity period: Max. 13 months (398 days)
+- Trusted Certificate Authorities (CAs)</p>
+<h2 id="3-key-management">3. Key Management</h2>
+<h3 id="31-key-generation">3.1 Key Generation</h3>
+<p><strong>Requirements:</strong>
+- Cryptographically secure random number generators (CSPRNG)
+- Key lengths per section 2.1
+- Generation in secure environment (HSM, Key Vault)</p>
+<p><strong>Process:</strong>
+1. Key request via ticket system
+2. Approval by CISO or IT security
+3. Generation by Key Management System
+4. Secure handover to requester
+5. Documentation in key register</p>
+<h3 id="32-key-storage">3.2 Key Storage</h3>
+<p><strong>Hardware Security Modules (HSM):</strong>
+- Critical keys (Root CA, master keys) in HSM: {{ meta.security.hsm }}
+- FIPS 140-2 Level 2 or higher
+- Physical security and access control</p>
+<p><strong>Key Management Systems:</strong>
+- <strong>Cloud:</strong> {{ meta.cloud.key_vault }} (e.g., Azure Key Vault, AWS KMS)
+- <strong>On-Premises:</strong> {{ meta.security.kms }} (e.g., HashiCorp Vault)
+- Encrypted storage
+- Audit logging of all access</p>
+<p><strong>Prohibited:</strong>
+- Storage in plaintext
+- Hardcoding in source code
+- Storage in configuration files
+- Transmission via email or chat</p>
+<h3 id="33-key-rotation">3.3 Key Rotation</h3>
+<p><strong>Rotation Intervals:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Key Type</th>
+<th>Rotation</th>
+<th>Justification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Encryption Keys (DEK)</td>
+<td>Annually</td>
+<td>Balance between security and effort</td>
+</tr>
+<tr>
+<td>Key Encryption Keys (KEK)</td>
+<td>Every 2 years</td>
+<td>Rarely used, higher security</td>
+</tr>
+<tr>
+<td>TLS Certificates</td>
+<td>Every 12 months</td>
+<td>CA requirements</td>
+</tr>
+<tr>
+<td>API Keys</td>
+<td>Every 90 days</td>
+<td>Frequent use, higher risk</td>
+</tr>
+<tr>
+<td>SSH Keys</td>
+<td>Every 180 days</td>
+<td>Administrative access</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Automation:</strong>
+- Automatic rotation where possible (cloud services)
+- Notifications 30 days before expiration
+- Documentation of all rotations</p>
+<p><strong>Emergency Rotation:</strong>
+- On suspected compromise: Immediate rotation
+- On personnel change: Rotation of all affected keys
+- On security incidents: Rotation per incident response</p>
+<h3 id="34-key-destruction">3.4 Key Destruction</h3>
+<p><strong>Process:</strong>
+1. Mark key as "deprecated"
+2. Grace period (30 days) for data decryption
+3. Secure deletion from all systems
+4. Documentation of destruction</p>
+<p><strong>Methods:</strong>
+- Cryptographic overwriting (multiple passes)
+- HSM: Secure erase function
+- Physical media: Destruction per DIN 66399</p>
+<h2 id="4-certificate-management">4. Certificate Management</h2>
+<h3 id="41-public-key-infrastructure-pki">4.1 Public Key Infrastructure (PKI)</h3>
+<p><strong>Components:</strong>
+- <strong>Root CA:</strong> {{ meta.pki.root_ca }} (Offline, HSM-protected)
+- <strong>Issuing CA:</strong> {{ meta.pki.issuing_ca }} (Online, for certificate issuance)
+- <strong>Certificate Management System:</strong> {{ meta.pki.cms }}</p>
+<p><strong>Certificate Types:</strong>
+- <strong>Server Certificates:</strong> Web servers, API endpoints
+- <strong>Client Certificates:</strong> User authentication, VPN
+- <strong>Code Signing:</strong> Software signing
+- <strong>Email Certificates:</strong> S/MIME encryption</p>
+<h3 id="42-certificate-lifecycle">4.2 Certificate Lifecycle</h3>
+<p><strong>Issuance:</strong>
+1. Create Certificate Signing Request (CSR)
+2. Submit request via PKI portal
+3. Validation by Certificate Authority
+4. Issue and provide certificate
+5. Installation and configuration</p>
+<p><strong>Renewal:</strong>
+- Automatic notification 60 days before expiration
+- Renewal 30 days before expiration
+- Automation via ACME protocol (Let's Encrypt)</p>
+<p><strong>Revocation:</strong>
+- On compromise: Immediate revocation
+- On personnel change: Revocation of all personal certificates
+- Publication in Certificate Revocation List (CRL)
+- OCSP (Online Certificate Status Protocol) for real-time checks</p>
+<h3 id="43-certificate-inventory">4.3 Certificate Inventory</h3>
+<p><strong>Documentation:</strong>
+- All issued certificates in CMDB
+- Expiration dates, purpose, owner
+- Automatic scans for unknown certificates</p>
+<p><strong>Monitoring:</strong>
+- Daily check for expiring certificates
+- Alerts for certificates &lt; 30 days validity
+- Automatic renewal where possible</p>
+<h2 id="5-data-encryption">5. Data Encryption</h2>
+<h3 id="51-data-at-rest">5.1 Data at Rest</h3>
+<p><strong>Encryption Requirement:</strong>
+- All confidential and highly confidential data
+- Personal data (GDPR requirement)
+- Financial data and trade secrets
+- Backups and archived data</p>
+<p><strong>Methods:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Storage Location</th>
+<th>Method</th>
+<th>Key Management</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Laptops/Desktops</td>
+<td>BitLocker (Windows), FileVault (macOS)</td>
+<td>TPM + Recovery Key in Key Vault</td>
+</tr>
+<tr>
+<td>Server Disks</td>
+<td>LUKS (Linux), BitLocker (Windows)</td>
+<td>Key Vault</td>
+</tr>
+<tr>
+<td>Databases</td>
+<td>Transparent Data Encryption (TDE)</td>
+<td>Database Key Management</td>
+</tr>
+<tr>
+<td>Cloud Storage</td>
+<td>Server-Side Encryption (SSE)</td>
+<td>Cloud Key Management Service</td>
+</tr>
+<tr>
+<td>File Servers</td>
+<td>Encrypted File System (EFS)</td>
+<td>Active Directory + Key Vault</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Configuration:</strong>
+- AES-256 for all encryption
+- Automatic encryption on storage
+- No user interaction required</p>
+<h3 id="52-data-in-transit">5.2 Data in Transit</h3>
+<p><strong>Encryption Requirement:</strong>
+- All data transmission over public networks
+- Internal transmission of confidential data
+- API communication
+- Email with confidential content</p>
+<p><strong>Methods:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Transmission Type</th>
+<th>Protocol</th>
+<th>Configuration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Web Traffic</td>
+<td>HTTPS (TLS 1.2+)</td>
+<td>See section 2.2</td>
+</tr>
+<tr>
+<td>Email</td>
+<td>TLS (SMTP), S/MIME</td>
+<td>Opportunistic TLS + encryption for confidential</td>
+</tr>
+<tr>
+<td>File Transfer</td>
+<td>SFTP, FTPS, HTTPS</td>
+<td>No unencrypted protocols</td>
+</tr>
+<tr>
+<td>VPN</td>
+<td>IPsec, WireGuard</td>
+<td>AES-256, Perfect Forward Secrecy</td>
+</tr>
+<tr>
+<td>Database</td>
+<td>TLS for connections</td>
+<td>Enforced encryption</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Prohibited Protocols:</strong>
+- FTP (unencrypted)
+- Telnet (unencrypted)
+- HTTP for confidential data
+- SMTP without TLS for confidential emails</p>
+<h3 id="53-data-in-use">5.3 Data in Use</h3>
+<p><strong>Technologies:</strong>
+- <strong>Confidential Computing:</strong> Encryption during processing (Intel SGX, AMD SEV)
+- <strong>Homomorphic Encryption:</strong> Computations on encrypted data (experimental)
+- <strong>Secure Enclaves:</strong> Isolated processing environments</p>
+<p><strong>Use Cases:</strong>
+- Processing highly sensitive data in cloud
+- Multi-party computation
+- Privacy-preserving analytics</p>
+<h2 id="6-email-encryption">6. Email Encryption</h2>
+<h3 id="61-smime">6.1 S/MIME</h3>
+<p><strong>Implementation:</strong>
+- S/MIME certificates for all employees
+- Automatic encryption for emails with "Confidential" classification
+- Signing of all outgoing emails</p>
+<p><strong>Configuration:</strong>
+- Outlook, Thunderbird: S/MIME plugin
+- Mobile devices: Native S/MIME support
+- Certificate distribution via Active Directory</p>
+<h3 id="62-opportunistic-tls">6.2 Opportunistic TLS</h3>
+<p><strong>SMTP TLS:</strong>
+- All email servers support STARTTLS
+- Enforced encryption for known partners
+- Fallback to unencrypted only for non-confidential emails</p>
+<p><strong>MTA-STS (Mail Transfer Agent Strict Transport Security):</strong>
+- Policy publication via DNS
+- Enforcement of TLS for incoming emails</p>
+<h2 id="7-backup-encryption">7. Backup Encryption</h2>
+<p><strong>Requirements:</strong>
+- All backups encrypted (AES-256)
+- Separate keys for backups (not production keys)
+- Offline copy of backup keys (safe)</p>
+<p><strong>Process:</strong>
+1. Backup creation with encryption
+2. Store key in Key Vault
+3. Offline copy of key in safe
+4. Regular restore tests (quarterly)</p>
+<p><strong>Disaster Recovery:</strong>
+- Backup keys in emergency documentation
+- Access only by authorized persons
+- Four-eyes principle for key access</p>
+<h2 id="8-cloud-encryption">8. Cloud Encryption</h2>
+<h3 id="81-cloud-storage">8.1 Cloud Storage</h3>
+<p><strong>Configuration:</strong>
+- <strong>Azure:</strong> Customer-Managed Keys (CMK) in Azure Key Vault
+- <strong>AWS:</strong> Customer Master Keys (CMK) in AWS KMS
+- <strong>Google Cloud:</strong> Customer-Managed Encryption Keys (CMEK)</p>
+<p><strong>Benefits:</strong>
+- Control over keys
+- Ability to rotate keys
+- Compliance requirements met</p>
+<h3 id="82-cloud-databases">8.2 Cloud Databases</h3>
+<p><strong>Encryption:</strong>
+- Transparent Data Encryption (TDE) enabled
+- Encrypted connections (TLS)
+- Customer-managed keys for critical databases</p>
+<h2 id="9-compliance-and-audit">9. Compliance and Audit</h2>
+<h3 id="91-key-performance-indicators-kpis">9.1 Key Performance Indicators (KPIs)</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Target Value</th>
+<th>Measurement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Encrypted Laptops</td>
+<td>100%</td>
+<td>Endpoint Management</td>
+</tr>
+<tr>
+<td>TLS 1.2+ Usage</td>
+<td>100%</td>
+<td>Web Server Logs</td>
+</tr>
+<tr>
+<td>Certificate Expiration Incidents</td>
+<td>0 per year</td>
+<td>PKI Monitoring</td>
+</tr>
+<tr>
+<td>Key Rotation Compliance</td>
+<td>&gt; 95%</td>
+<td>Key Management System</td>
+</tr>
+</tbody>
+</table>
+<h3 id="92-audit-evidence">9.2 Audit Evidence</h3>
+<p><strong>Documentation:</strong>
+- Cryptography policy and guidelines
+- Key register and inventory
+- Certificate inventory
+- Encryption configurations
+- Audit logs for key access</p>
+<h2 id="10-references">10. References</h2>
+<h3 id="internal-documents">Internal Documents</h3>
+<ul>
+<li><code>0260_Policy_Cryptography_and_Key_Management.md</code> - Parent policy</li>
+<li><code>0420_Policy_Backup_und_Wiederherstellung.md</code> - Backup policy</li>
+</ul>
+<h3 id="external-standards">External Standards</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.8.24</strong> - Use of cryptography</li>
+<li><strong>NIST SP 800-57</strong> - Key Management Recommendations</li>
+<li><strong>NIST SP 800-52</strong> - TLS Guidelines</li>
+<li><strong>BSI TR-02102</strong> - Cryptographic Procedures</li>
+</ul>
+<hr />
+<p><strong>Approved by:</strong><br />
+Thomas Weber, CISO<br />
+Date: {{ meta.document.approval_date }}</p>
+<p><strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0260_Policy_Cryptography_and_Key_Management.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0280_Policy_Data_Classification_and_Information_Handling.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0710 - Anhang A: Annex A Control Mapping</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0710</div>
+            <h1>Anhang A: Annex A Control Mapping</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0690_Richtlinie_Sicherheitsanforderungen_im_Projektlebenszyklus.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0720_Anhang_Asset_und_Systeminventar_Template.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="anhang-a-annex-a-control-mapping">Anhang A: Annex A Control Mapping</h1>
+<p><strong>Dokumenttyp:</strong> Anhang<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Datum:</strong> {{ meta.document.date }}<br />
+<strong>Klassifizierung:</strong> internal</p>
+<hr />
+<h2 id="zweck">Zweck</h2>
+<p>Dieses Dokument stellt das vollständige Mapping der ISO/IEC 27001:2022 Annex A Kontrollen auf die implementierten Policies und Richtlinien des ISMS dar. Es dient als zentrale Referenz für die Compliance-Nachweisführung und zeigt auf, wie jede Annex A Kontrolle in der Organisation umgesetzt wird.</p>
+<p>Das Mapping berücksichtigt die Änderungen aus Amendment 1:2024 und stellt sicher, dass alle 93 Kontrollen der aktuellen Annex A Version abgedeckt sind.</p>
+<h2 id="geltungsbereich">Geltungsbereich</h2>
+<p><strong>Organisation:</strong> AdminSend GmbH<br />
+<strong>ISMS Scope:</strong> {{ meta.isms.scope }}<br />
+<strong>Verantwortlich:</strong> Thomas Weber (thomas.weber@adminsend.de)</p>
+<hr />
+<h2 id="isoiec-270012022-annex-a-struktur">ISO/IEC 27001:2022 Annex A Struktur</h2>
+<p>Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:</p>
+<ul>
+<li><strong>Organizational Controls (5.1-5.37):</strong> 37 Kontrollen</li>
+<li><strong>People Controls (6.1-6.8):</strong> 8 Kontrollen</li>
+<li><strong>Physical Controls (7.1-7.14):</strong> 14 Kontrollen</li>
+<li><strong>Technological Controls (8.1-8.34):</strong> 34 Kontrollen</li>
+</ul>
+<p><strong>Gesamt:</strong> 93 Kontrollen</p>
+<hr />
+<h2 id="annex-a-control-mapping">Annex A Control Mapping</h2>
+<h3 id="5-organizational-controls">5. Organizational Controls</h3>
+<h4 id="51-policies-for-information-security">5.1 Policies for Information Security</h4>
+<p><strong>Control Statement:</strong> Information security policy and topic-specific policies shall be defined, approved by management, published, communicated to and acknowledged by relevant personnel and relevant interested parties, and reviewed at planned intervals and if significant changes occur.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0010_ISMS_Informationssicherheitsleitlinie.md
+- Policy: 0200-0680 (Alle Topic-Specific Policies)
+- Prozess: 0050_ISMS_Dokumentenlenkung.md</p>
+<p><strong>Verantwortlich:</strong> Thomas Weber<br />
+<strong>Nachweis:</strong> Genehmigte und veröffentlichte Policies, Schulungsnachweise</p>
+<hr />
+<h4 id="52-information-security-roles-and-responsibilities">5.2 Information Security Roles and Responsibilities</h4>
+<p><strong>Control Statement:</strong> Information security roles and responsibilities shall be defined and allocated according to the organization needs.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Dokument: 0040_ISMS_Governance_Rollen_und_Verantwortlichkeiten.md
+- RACI-Matrizen in allen relevanten Policies</p>
+<p><strong>Verantwortlich:</strong> Thomas Weber<br />
+<strong>Nachweis:</strong> RACI-Matrizen, Stellenbeschreibungen, Organigramm</p>
+<hr />
+<h4 id="53-segregation-of-duties">5.3 Segregation of Duties</h4>
+<p><strong>Control Statement:</strong> Conflicting duties and conflicting areas of responsibility shall be segregated.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0220_Policy_Zugriffssteuerung_und_Identitaetsmanagement.md
+- Richtlinie: 0230_Richtlinie_IAM_Joiner_Mover_Leaver_und_Zugriffsantraege.md</p>
+<p><strong>Verantwortlich:</strong> Thomas Weber<br />
+<strong>Nachweis:</strong> Berechtigungskonzept, Zugriffsreviews</p>
+<hr />
+<h4 id="54-management-responsibilities">5.4 Management Responsibilities</h4>
+<p><strong>Control Statement:</strong> Management shall require all personnel to apply information security in accordance with the established information security policy, topic-specific policies and procedures of the organization.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0010_ISMS_Informationssicherheitsleitlinie.md
+- Dokument: 0120_ISMS_Schulung_Awareness_und_Kompetenz.md</p>
+<p><strong>Verantwortlich:</strong> Management, Thomas Weber<br />
+<strong>Nachweis:</strong> Management-Commitment, Schulungsnachweise</p>
+<hr />
+<h4 id="55-contact-with-authorities">5.5 Contact with Authorities</h4>
+<p><strong>Control Statement:</strong> The organization shall establish and maintain contact with relevant authorities.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Dokument: 0030_ISMS_Kontext_und_Interessierte_Parteien.md
+- Policy: 0400_Policy_Incident_Management.md</p>
+<p><strong>Verantwortlich:</strong> Thomas Weber<br />
+<strong>Nachweis:</strong> Kontaktlisten, Kommunikationsprotokolle</p>
+<hr />
+<h4 id="56-contact-with-special-interest-groups">5.6 Contact with Special Interest Groups</h4>
+<p><strong>Control Statement:</strong> The organization shall establish and maintain contact with special interest groups or other specialist security forums and professional associations.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Dokument: 0030_ISMS_Kontext_und_Interessierte_Parteien.md</p>
+<p><strong>Verantwortlich:</strong> Thomas Weber<br />
+<strong>Nachweis:</strong> Mitgliedschaften, Teilnahmebestätigungen</p>
+<hr />
+<h4 id="57-threat-intelligence">5.7 Threat Intelligence</h4>
+<p><strong>Control Statement:</strong> Information relating to information security threats shall be collected and analyzed to produce threat intelligence.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0340_Policy_Vulnerability_und_Patch_Management.md
+- Richtlinie: 0350_Richtlinie_Vulnerability_Scans_Patching_und_Exploitation_Response.md</p>
+<p><strong>Verantwortlich:</strong> Security Operations Team<br />
+<strong>Nachweis:</strong> Threat Intelligence Reports, Vulnerability Scans</p>
+<hr />
+<h4 id="58-information-security-in-project-management">5.8 Information Security in Project Management</h4>
+<p><strong>Control Statement:</strong> Information security shall be integrated into project management.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0680_Policy_Security_in_Projects.md
+- Richtlinie: 0690_Richtlinie_Sicherheitsanforderungen_im_Projektlebenszyklus.md</p>
+<p><strong>Verantwortlich:</strong> Project Management Office, Thomas Weber<br />
+<strong>Nachweis:</strong> Projektdokumentation, Security Reviews</p>
+<hr />
+<h4 id="59-inventory-of-information-and-other-associated-assets">5.9 Inventory of Information and Other Associated Assets</h4>
+<p><strong>Control Statement:</strong> An inventory of information and other associated assets, including owners, shall be developed and maintained.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0300_Policy_Asset_Management.md
+- Richtlinie: 0310_Richtlinie_Asset_Inventory_Tagging_und_Entsorgung.md
+- Anhang: 0720_Anhang_Asset_und_Systeminventar_Template.md</p>
+<p><strong>Verantwortlich:</strong> Asset Management Team<br />
+<strong>Nachweis:</strong> Asset Inventory, CMDB</p>
+<hr />
+<h4 id="510-acceptable-use-of-information-and-other-associated-assets">5.10 Acceptable Use of Information and Other Associated Assets</h4>
+<p><strong>Control Statement:</strong> Rules for the acceptable use of information and of assets associated with information and information processing facilities shall be identified, documented and implemented.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0200_Policy_Akzeptable_Nutzung_IT.md
+- Richtlinie: 0210_Richtlinie_Akzeptable_Nutzung_IT.md</p>
+<p><strong>Verantwortlich:</strong> Thomas Weber<br />
+<strong>Nachweis:</strong> Acceptable Use Policy, Mitarbeiterbestätigungen</p>
+<hr />
+<h4 id="511-return-of-assets">5.11 Return of Assets</h4>
+<p><strong>Control Statement:</strong> Personnel and other interested parties as appropriate shall return all of the organization's assets in their possession upon change or termination of their employment, contract or agreement.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0520_Policy_HR_Security.md
+- Richtlinie: 0530_Richtlinie_HR_Onboarding_Rollenwechsel_Offboarding.md</p>
+<p><strong>Verantwortlich:</strong> HR, IT Operations<br />
+<strong>Nachweis:</strong> Offboarding-Checklisten, Asset-Rückgabeprotokolle</p>
+<hr />
+<h4 id="512-classification-of-information">5.12 Classification of Information</h4>
+<p><strong>Control Statement:</strong> Information shall be classified according to the information security needs of the organization based on confidentiality, integrity, availability and relevant interested party requirements.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0280_Policy_Datenklassifizierung_und_Informationshandling.md
+- Richtlinie: 0290_Richtlinie_Datenklassifizierung_Labeling_und_Handling.md</p>
+<p><strong>Verantwortlich:</strong> Data Owners, Thomas Weber<br />
+<strong>Nachweis:</strong> Klassifizierungsschema, gelabelte Dokumente</p>
+<hr />
+<h4 id="513-labelling-of-information">5.13 Labelling of Information</h4>
+<p><strong>Control Statement:</strong> An appropriate set of procedures for information labelling shall be developed and implemented in accordance with the information classification scheme adopted by the organization.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Richtlinie: 0290_Richtlinie_Datenklassifizierung_Labeling_und_Handling.md</p>
+<p><strong>Verantwortlich:</strong> Data Owners<br />
+<strong>Nachweis:</strong> Labelling-Richtlinien, gelabelte Assets</p>
+<hr />
+<h4 id="514-information-transfer">5.14 Information Transfer</h4>
+<p><strong>Control Statement:</strong> Information transfer rules, procedures, or agreements shall be in place for all types of transfer facilities within the organization and between the organization and other parties.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0660_Policy_Informationsuebertragung_und_Kommunikation.md
+- Richtlinie: 0670_Richtlinie_Email_Sharing_und_Zusammenarbeitstools.md</p>
+<p><strong>Verantwortlich:</strong> Thomas Weber<br />
+<strong>Nachweis:</strong> Transfer-Richtlinien, Verschlüsselungsnachweise</p>
+<hr />
+<h4 id="515-access-control">5.15 Access Control</h4>
+<p><strong>Control Statement:</strong> Rules to control physical and logical access to information and other associated assets shall be established and implemented based on business and information security requirements.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0220_Policy_Zugriffssteuerung_und_Identitaetsmanagement.md
+- Richtlinie: 0230_Richtlinie_IAM_Joiner_Mover_Leaver_und_Zugriffsantraege.md</p>
+<p><strong>Verantwortlich:</strong> IAM Team, Thomas Weber<br />
+<strong>Nachweis:</strong> Berechtigungskonzept, Access Reviews</p>
+<hr />
+<h4 id="516-identity-management">5.16 Identity Management</h4>
+<p><strong>Control Statement:</strong> The full life cycle of identities shall be managed.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0220_Policy_Zugriffssteuerung_und_Identitaetsmanagement.md
+- Richtlinie: 0230_Richtlinie_IAM_Joiner_Mover_Leaver_und_Zugriffsantraege.md</p>
+<p><strong>Verantwortlich:</strong> IAM Team<br />
+<strong>Nachweis:</strong> Identity Lifecycle Prozesse, Joiner/Mover/Leaver Dokumentation</p>
+<hr />
+<h4 id="517-authentication-information">5.17 Authentication Information</h4>
+<p><strong>Control Statement:</strong> Allocation and management of authentication information shall be controlled by a management process, including advising personnel on appropriate handling of authentication information.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0240_Policy_Authentisierung_und_Passwoerter.md
+- Richtlinie: 0250_Richtlinie_MFA_Passwortregeln_und_Session_Management.md</p>
+<p><strong>Verantwortlich:</strong> IAM Team<br />
+<strong>Nachweis:</strong> Passwort-Richtlinien, MFA-Implementierung</p>
+<hr />
+<h4 id="518-access-rights">5.18 Access Rights</h4>
+<p><strong>Control Statement:</strong> Access rights to information and other associated assets shall be provisioned, reviewed, modified and removed in accordance with the organization's topic-specific policy on and rules for access control.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Richtlinie: 0230_Richtlinie_IAM_Joiner_Mover_Leaver_und_Zugriffsantraege.md</p>
+<p><strong>Verantwortlich:</strong> IAM Team, Resource Owners<br />
+<strong>Nachweis:</strong> Access Request Workflows, Rezertifizierungsprotokolle</p>
+<hr />
+<h4 id="519-information-security-in-supplier-relationships">5.19 Information Security in Supplier Relationships</h4>
+<p><strong>Control Statement:</strong> Processes and procedures shall be defined and implemented to manage the information security risks associated with the use of supplier's products or services.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0460_Policy_Lieferanten_und_Cloud_Sicherheit.md
+- Richtlinie: 0470_Richtlinie_Third_Party_Risk_Assessment_und_Cloud_Controls.md</p>
+<p><strong>Verantwortlich:</strong> Procurement, Thomas Weber<br />
+<strong>Nachweis:</strong> Supplier Security Assessments, Verträge</p>
+<hr />
+<h4 id="520-addressing-information-security-within-supplier-agreements">5.20 Addressing Information Security within Supplier Agreements</h4>
+<p><strong>Control Statement:</strong> Relevant information security requirements shall be established and agreed with each supplier based on the type of supplier relationship.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Richtlinie: 0470_Richtlinie_Third_Party_Risk_Assessment_und_Cloud_Controls.md</p>
+<p><strong>Verantwortlich:</strong> Procurement, Legal, Thomas Weber<br />
+<strong>Nachweis:</strong> Vertragsklauseln, SLAs</p>
+<hr />
+<h4 id="521-managing-information-security-in-the-ict-supply-chain">5.21 Managing Information Security in the ICT Supply Chain</h4>
+<p><strong>Control Statement:</strong> Processes and procedures shall be defined and implemented to manage the information security risks associated with the ICT products and services supply chain.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Richtlinie: 0470_Richtlinie_Third_Party_Risk_Assessment_und_Cloud_Controls.md</p>
+<p><strong>Verantwortlich:</strong> Thomas Weber, IT Operations<br />
+<strong>Nachweis:</strong> Supply Chain Risk Assessments</p>
+<hr />
+<h4 id="522-monitoring-review-and-change-management-of-supplier-services">5.22 Monitoring, Review and Change Management of Supplier Services</h4>
+<p><strong>Control Statement:</strong> The organization shall regularly monitor, review, evaluate and manage change in supplier information security practices and service delivery.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Richtlinie: 0470_Richtlinie_Third_Party_Risk_Assessment_und_Cloud_Controls.md</p>
+<p><strong>Verantwortlich:</strong> Supplier Management, Thomas Weber<br />
+<strong>Nachweis:</strong> Supplier Reviews, Performance Reports</p>
+<hr />
+<h4 id="523-information-security-for-use-of-cloud-services">5.23 Information Security for Use of Cloud Services</h4>
+<p><strong>Control Statement:</strong> Processes for acquisition, use, management and exit from cloud services shall be established in accordance with the organization's information security requirements.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0460_Policy_Lieferanten_und_Cloud_Sicherheit.md
+- Richtlinie: 0470_Richtlinie_Third_Party_Risk_Assessment_und_Cloud_Controls.md</p>
+<p><strong>Verantwortlich:</strong> Cloud Governance Team, Thomas Weber<br />
+<strong>Nachweis:</strong> Cloud Security Assessments, Cloud Contracts</p>
+<hr />
+<h4 id="524-information-security-incident-management-planning-and-preparation">5.24 Information Security Incident Management Planning and Preparation</h4>
+<p><strong>Control Statement:</strong> The organization shall plan and prepare for managing information security incidents by defining, establishing and communicating information security incident management processes, roles and responsibilities.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0400_Policy_Incident_Management.md
+- Richtlinie: 0410_Richtlinie_Incident_Response_und_Major_Incident_Prozess.md</p>
+<p><strong>Verantwortlich:</strong> Incident Response Team, Thomas Weber<br />
+<strong>Nachweis:</strong> Incident Response Plan, Runbooks</p>
+<hr />
+<h4 id="525-assessment-and-decision-on-information-security-events">5.25 Assessment and Decision on Information Security Events</h4>
+<p><strong>Control Statement:</strong> The organization shall assess information security events and decide if they are to be categorized as information security incidents.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Richtlinie: 0410_Richtlinie_Incident_Response_und_Major_Incident_Prozess.md</p>
+<p><strong>Verantwortlich:</strong> Incident Response Team<br />
+<strong>Nachweis:</strong> Event Classification Criteria, Incident Tickets</p>
+<hr />
+<h4 id="526-response-to-information-security-incidents">5.26 Response to Information Security Incidents</h4>
+<p><strong>Control Statement:</strong> Information security incidents shall be responded to in accordance with the documented procedures.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Richtlinie: 0410_Richtlinie_Incident_Response_und_Major_Incident_Prozess.md</p>
+<p><strong>Verantwortlich:</strong> Incident Response Team<br />
+<strong>Nachweis:</strong> Incident Response Dokumentation, Post-Mortems</p>
+<hr />
+<h4 id="527-learning-from-information-security-incidents">5.27 Learning from Information Security Incidents</h4>
+<p><strong>Control Statement:</strong> Knowledge gained from information security incidents shall be used to strengthen and improve the information security controls.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Richtlinie: 0410_Richtlinie_Incident_Response_und_Major_Incident_Prozess.md
+- Dokument: 0160_ISMS_Kontinuierliche_Verbesserung.md</p>
+<p><strong>Verantwortlich:</strong> Incident Response Team, Thomas Weber<br />
+<strong>Nachweis:</strong> Lessons Learned Dokumentation, Verbesserungsmaßnahmen</p>
+<hr />
+<h4 id="528-collection-of-evidence">5.28 Collection of Evidence</h4>
+<p><strong>Control Statement:</strong> The organization shall establish and implement procedures for the identification, collection, acquisition and preservation of evidence related to information security events.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Richtlinie: 0410_Richtlinie_Incident_Response_und_Major_Incident_Prozess.md</p>
+<p><strong>Verantwortlich:</strong> Incident Response Team, Forensics Team<br />
+<strong>Nachweis:</strong> Forensics Procedures, Chain of Custody Dokumentation</p>
+<hr />
+<h4 id="529-information-security-during-disruption">5.29 Information Security During Disruption</h4>
+<p><strong>Control Statement:</strong> The organization shall plan how to maintain information security at an appropriate level during disruption.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0440_Policy_Business_Continuity_ICT_Readiness.md
+- Richtlinie: 0450_Richtlinie_ICT_DR_Schnittstellen_zu_BCM.md</p>
+<p><strong>Verantwortlich:</strong> BCM Team, Thomas Weber<br />
+<strong>Nachweis:</strong> Business Continuity Plans, DR Tests</p>
+<hr />
+<h4 id="530-ict-readiness-for-business-continuity">5.30 ICT Readiness for Business Continuity</h4>
+<p><strong>Control Statement:</strong> ICT readiness shall be planned, implemented, maintained and tested based on business continuity objectives and ICT continuity requirements.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0440_Policy_Business_Continuity_ICT_Readiness.md
+- Richtlinie: 0450_Richtlinie_ICT_DR_Schnittstellen_zu_BCM.md</p>
+<p><strong>Verantwortlich:</strong> IT Operations, BCM Team<br />
+<strong>Nachweis:</strong> DR Plans, BC Tests, RTO/RPO Dokumentation</p>
+<hr />
+<h4 id="531-legal-statutory-regulatory-and-contractual-requirements">5.31 Legal, Statutory, Regulatory and Contractual Requirements</h4>
+<p><strong>Control Statement:</strong> Legal, statutory, regulatory and contractual requirements relevant to information security and the organization's approach to meet these requirements shall be identified, documented and kept up to date.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Dokument: 0030_ISMS_Kontext_und_Interessierte_Parteien.md
+- Policy: 0560_Policy_Datenschutz_Schnittstellen.md</p>
+<p><strong>Verantwortlich:</strong> Legal, Compliance, Thomas Weber<br />
+<strong>Nachweis:</strong> Compliance Register, Legal Reviews</p>
+<hr />
+<h4 id="532-intellectual-property-rights">5.32 Intellectual Property Rights</h4>
+<p><strong>Control Statement:</strong> The organization shall implement appropriate procedures to protect intellectual property rights.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0200_Policy_Akzeptable_Nutzung_IT.md
+- Richtlinie: 0290_Richtlinie_Datenklassifizierung_Labeling_und_Handling.md</p>
+<p><strong>Verantwortlich:</strong> Legal, Thomas Weber<br />
+<strong>Nachweis:</strong> IP Protection Procedures, Lizenzmanagement</p>
+<hr />
+<h4 id="533-protection-of-records">5.33 Protection of Records</h4>
+<p><strong>Control Statement:</strong> Records shall be protected from loss, destruction, falsification, unauthorized access and unauthorized release.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0580_Policy_Aufbewahrung_und_Loeschung.md
+- Richtlinie: 0590_Richtlinie_Records_Retention_und_Sichere_Loeschung.md</p>
+<p><strong>Verantwortlich:</strong> Records Management, Thomas Weber<br />
+<strong>Nachweis:</strong> Records Retention Policy, Archivierungssysteme</p>
+<hr />
+<h4 id="534-privacy-and-protection-of-pii">5.34 Privacy and Protection of PII</h4>
+<p><strong>Control Statement:</strong> The organization shall identify and meet the requirements regarding the preservation of privacy and protection of PII according to applicable laws and regulations and contractual requirements.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0560_Policy_Datenschutz_Schnittstellen.md
+- Richtlinie: 0570_Richtlinie_Datenschutz_Anforderungen_und_Datenverarbeitung.md</p>
+<p><strong>Verantwortlich:</strong> Data Protection Officer, Thomas Weber<br />
+<strong>Nachweis:</strong> DSGVO Compliance, Privacy Impact Assessments</p>
+<hr />
+<h4 id="535-independent-review-of-information-security">5.35 Independent Review of Information Security</h4>
+<p><strong>Control Statement:</strong> The organization's approach to managing information security and its implementation including people, processes and technologies shall be reviewed independently at planned intervals, or when significant changes occur.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Dokument: 0130_ISMS_Internes_Auditprogramm.md</p>
+<p><strong>Verantwortlich:</strong> Internal Audit, Thomas Weber<br />
+<strong>Nachweis:</strong> Audit Reports, Audit Plans</p>
+<hr />
+<h4 id="536-compliance-with-policies-rules-and-standards-for-information-security">5.36 Compliance with Policies, Rules and Standards for Information Security</h4>
+<p><strong>Control Statement:</strong> Compliance with the organization's information security policy, topic-specific policies, rules and standards shall be regularly reviewed.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Dokument: 0130_ISMS_Internes_Auditprogramm.md
+- Dokument: 0140_ISMS_Management_Review_Template.md</p>
+<p><strong>Verantwortlich:</strong> Compliance Team, Thomas Weber<br />
+<strong>Nachweis:</strong> Compliance Reviews, Audit Findings</p>
+<hr />
+<h4 id="537-documented-operating-procedures">5.37 Documented Operating Procedures</h4>
+<p><strong>Control Statement:</strong> Operating procedures for information processing facilities shall be documented and made available to personnel who need them.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Alle Richtlinien (0210-0690)
+- Dokument: 0050_ISMS_Dokumentenlenkung.md</p>
+<p><strong>Verantwortlich:</strong> IT Operations, Process Owners<br />
+<strong>Nachweis:</strong> Betriebsdokumentation, SOPs, Runbooks</p>
+<hr />
+<h3 id="6-people-controls">6. People Controls</h3>
+<h4 id="61-screening">6.1 Screening</h4>
+<p><strong>Control Statement:</strong> Background verification checks on all candidates for employment shall be carried out prior to joining the organization and on an ongoing basis taking into consideration applicable laws, regulations and ethics and be proportional to the business requirements, the classification of the information to be accessed and the perceived risks.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0520_Policy_HR_Security.md
+- Richtlinie: 0530_Richtlinie_HR_Onboarding_Rollenwechsel_Offboarding.md</p>
+<p><strong>Verantwortlich:</strong> HR, Thomas Weber<br />
+<strong>Nachweis:</strong> Background Check Procedures, Screening Records</p>
+<hr />
+<h4 id="62-terms-and-conditions-of-employment">6.2 Terms and Conditions of Employment</h4>
+<p><strong>Control Statement:</strong> The employment contractual agreements shall state the personnel's and the organization's responsibilities for information security.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0520_Policy_HR_Security.md
+- Richtlinie: 0530_Richtlinie_HR_Onboarding_Rollenwechsel_Offboarding.md</p>
+<p><strong>Verantwortlich:</strong> HR, Legal<br />
+<strong>Nachweis:</strong> Arbeitsverträge, NDA Templates</p>
+<hr />
+<h4 id="63-information-security-awareness-education-and-training">6.3 Information Security Awareness, Education and Training</h4>
+<p><strong>Control Statement:</strong> Personnel of the organization and relevant interested parties shall receive appropriate information security awareness, education and training and regular updates of the organization's information security policy, topic-specific policies and procedures, as relevant for their job function.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Dokument: 0120_ISMS_Schulung_Awareness_und_Kompetenz.md</p>
+<p><strong>Verantwortlich:</strong> Thomas Weber, HR<br />
+<strong>Nachweis:</strong> Schulungspläne, Teilnahmebestätigungen, Awareness Kampagnen</p>
+<hr />
+<h4 id="64-disciplinary-process">6.4 Disciplinary Process</h4>
+<p><strong>Control Statement:</strong> A disciplinary process shall be formalized and communicated to take actions against personnel and other relevant interested parties who have committed an information security policy violation.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0520_Policy_HR_Security.md
+- Dokument: 0150_ISMS_Nichtkonformitaeten_und_Korrekturmassnahmen.md</p>
+<p><strong>Verantwortlich:</strong> HR, Management<br />
+<strong>Nachweis:</strong> Disziplinarverfahren, Dokumentierte Verstöße</p>
+<hr />
+<h4 id="65-responsibilities-after-termination-or-change-of-employment">6.5 Responsibilities After Termination or Change of Employment</h4>
+<p><strong>Control Statement:</strong> Information security responsibilities and duties that remain valid after termination or change of employment shall be defined, enforced and communicated to relevant personnel and other interested parties.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0520_Policy_HR_Security.md
+- Richtlinie: 0530_Richtlinie_HR_Onboarding_Rollenwechsel_Offboarding.md</p>
+<p><strong>Verantwortlich:</strong> HR, IT Operations<br />
+<strong>Nachweis:</strong> Offboarding Checklisten, Exit Interviews</p>
+<hr />
+<h4 id="66-confidentiality-or-non-disclosure-agreements">6.6 Confidentiality or Non-Disclosure Agreements</h4>
+<p><strong>Control Statement:</strong> Confidentiality or non-disclosure agreements reflecting the organization's needs for the protection of information shall be identified, documented, regularly reviewed and signed by personnel and other relevant interested parties.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0520_Policy_HR_Security.md</p>
+<p><strong>Verantwortlich:</strong> Legal, HR<br />
+<strong>Nachweis:</strong> Unterzeichnete NDAs, Vertraulichkeitsvereinbarungen</p>
+<hr />
+<h4 id="67-remote-working">6.7 Remote Working</h4>
+<p><strong>Control Statement:</strong> Security measures shall be implemented when personnel are working remotely to protect information accessed, processed or stored outside the organization's premises.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0500_Policy_Mobile_Device_und_Remote_Work.md
+- Richtlinie: 0510_Richtlinie_MDM_BringYourOwnDevice_und_Remote_Access.md</p>
+<p><strong>Verantwortlich:</strong> IT Operations, Thomas Weber<br />
+<strong>Nachweis:</strong> Remote Work Policy, VPN Logs, Endpoint Security</p>
+<hr />
+<h4 id="68-information-security-event-reporting">6.8 Information Security Event Reporting</h4>
+<p><strong>Control Statement:</strong> The organization shall provide a mechanism for personnel to report observed or suspected information security events through appropriate channels in a timely manner.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0400_Policy_Incident_Management.md
+- Richtlinie: 0410_Richtlinie_Incident_Response_und_Major_Incident_Prozess.md</p>
+<p><strong>Verantwortlich:</strong> All Personnel, Incident Response Team<br />
+<strong>Nachweis:</strong> Incident Reporting Channels, Event Reports</p>
+<hr />
+<h3 id="7-physical-controls">7. Physical Controls</h3>
+<h4 id="71-physical-security-perimeters">7.1 Physical Security Perimeters</h4>
+<p><strong>Control Statement:</strong> Security perimeters shall be defined and used to protect areas that contain information and other associated assets.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0480_Policy_Physische_Sicherheit.md
+- Richtlinie: 0490_Richtlinie_Zutritt_Besucher_und_Schutz_von_Equipment.md</p>
+<p><strong>Verantwortlich:</strong> Facility Management, Thomas Weber<br />
+<strong>Nachweis:</strong> Sicherheitszonen, Zutrittskontrollsysteme</p>
+<hr />
+<h4 id="72-physical-entry">7.2 Physical Entry</h4>
+<p><strong>Control Statement:</strong> Secure areas shall be protected by appropriate entry controls and access points.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Richtlinie: 0490_Richtlinie_Zutritt_Besucher_und_Schutz_von_Equipment.md</p>
+<p><strong>Verantwortlich:</strong> Facility Management<br />
+<strong>Nachweis:</strong> Zutrittskontrollsystem, Access Logs</p>
+<hr />
+<h4 id="73-securing-offices-rooms-and-facilities">7.3 Securing Offices, Rooms and Facilities</h4>
+<p><strong>Control Statement:</strong> Physical security for offices, rooms and facilities shall be designed and implemented.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0480_Policy_Physische_Sicherheit.md
+- Richtlinie: 0490_Richtlinie_Zutritt_Besucher_und_Schutz_von_Equipment.md</p>
+<p><strong>Verantwortlich:</strong> Facility Management<br />
+<strong>Nachweis:</strong> Sicherheitskonzept Gebäude, Raumschutzmaßnahmen</p>
+<hr />
+<h4 id="74-physical-security-monitoring">7.4 Physical Security Monitoring</h4>
+<p><strong>Control Statement:</strong> Premises shall be continuously monitored for unauthorized physical access.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Richtlinie: 0490_Richtlinie_Zutritt_Besucher_und_Schutz_von_Equipment.md</p>
+<p><strong>Verantwortlich:</strong> Security Operations, Facility Management<br />
+<strong>Nachweis:</strong> Videoüberwachung, Alarmsysteme, Security Logs</p>
+<hr />
+<h4 id="75-protecting-against-physical-and-environmental-threats">7.5 Protecting Against Physical and Environmental Threats</h4>
+<p><strong>Control Statement:</strong> Protection against physical and environmental threats, such as natural disasters and other intentional or unintentional physical threats to infrastructure shall be designed and implemented.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0480_Policy_Physische_Sicherheit.md
+- Policy: 0440_Policy_Business_Continuity_ICT_Readiness.md</p>
+<p><strong>Verantwortlich:</strong> Facility Management, BCM Team<br />
+<strong>Nachweis:</strong> Umweltschutzmaßnahmen, Brandschutz, Klimatisierung</p>
+<hr />
+<h4 id="76-working-in-secure-areas">7.6 Working in Secure Areas</h4>
+<p><strong>Control Statement:</strong> Security measures for working in secure areas shall be designed and implemented.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Richtlinie: 0490_Richtlinie_Zutritt_Besucher_und_Schutz_von_Equipment.md</p>
+<p><strong>Verantwortlich:</strong> Facility Management, Thomas Weber<br />
+<strong>Nachweis:</strong> Clean Desk Policy, Secure Area Procedures</p>
+<hr />
+<h4 id="77-clear-desk-and-clear-screen">7.7 Clear Desk and Clear Screen</h4>
+<p><strong>Control Statement:</strong> Clear desk rules for papers and removable storage media and clear screen rules for information processing facilities shall be defined and appropriately enforced.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0480_Policy_Physische_Sicherheit.md
+- Policy: 0200_Policy_Akzeptable_Nutzung_IT.md</p>
+<p><strong>Verantwortlich:</strong> All Personnel, Management<br />
+<strong>Nachweis:</strong> Clear Desk Policy, Awareness Training</p>
+<hr />
+<h4 id="78-equipment-siting-and-protection">7.8 Equipment Siting and Protection</h4>
+<p><strong>Control Statement:</strong> Equipment shall be sited securely and protected.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Richtlinie: 0490_Richtlinie_Zutritt_Besucher_und_Schutz_von_Equipment.md</p>
+<p><strong>Verantwortlich:</strong> IT Operations, Facility Management<br />
+<strong>Nachweis:</strong> Serverraum-Sicherheit, Equipment Protection Measures</p>
+<hr />
+<h4 id="79-security-of-assets-off-premises">7.9 Security of Assets Off-Premises</h4>
+<p><strong>Control Statement:</strong> Off-site assets shall be protected.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0500_Policy_Mobile_Device_und_Remote_Work.md
+- Richtlinie: 0510_Richtlinie_MDM_BringYourOwnDevice_und_Remote_Access.md</p>
+<p><strong>Verantwortlich:</strong> IT Operations, Thomas Weber<br />
+<strong>Nachweis:</strong> Mobile Device Management, Encryption Policies</p>
+<hr />
+<h4 id="710-storage-media">7.10 Storage Media</h4>
+<p><strong>Control Statement:</strong> Storage media shall be managed through their life cycle of acquisition, use, transportation and disposal in accordance with the organization's classification scheme and handling requirements.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0300_Policy_Asset_Management.md
+- Richtlinie: 0310_Richtlinie_Asset_Inventory_Tagging_und_Entsorgung.md</p>
+<p><strong>Verantwortlich:</strong> IT Operations<br />
+<strong>Nachweis:</strong> Media Handling Procedures, Disposal Records</p>
+<hr />
+<h4 id="711-supporting-utilities">7.11 Supporting Utilities</h4>
+<p><strong>Control Statement:</strong> Information processing facilities shall be protected from power failures and other disruptions caused by failures in supporting utilities.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0440_Policy_Business_Continuity_ICT_Readiness.md
+- Richtlinie: 0450_Richtlinie_ICT_DR_Schnittstellen_zu_BCM.md</p>
+<p><strong>Verantwortlich:</strong> IT Operations, Facility Management<br />
+<strong>Nachweis:</strong> USV-Systeme, Redundante Stromversorgung</p>
+<hr />
+<h4 id="712-cabling-security">7.12 Cabling Security</h4>
+<p><strong>Control Statement:</strong> Cables carrying power, data or supporting information services shall be protected from interception, interference or damage.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0480_Policy_Physische_Sicherheit.md
+- Policy: 0600_Policy_Netzwerksicherheit.md</p>
+<p><strong>Verantwortlich:</strong> IT Operations, Facility Management<br />
+<strong>Nachweis:</strong> Kabelschutzmaßnahmen, Netzwerkdokumentation</p>
+<hr />
+<h4 id="713-equipment-maintenance">7.13 Equipment Maintenance</h4>
+<p><strong>Control Statement:</strong> Equipment shall be maintained correctly to ensure availability, integrity and confidentiality of information.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0300_Policy_Asset_Management.md
+- Richtlinie: 0310_Richtlinie_Asset_Inventory_Tagging_und_Entsorgung.md</p>
+<p><strong>Verantwortlich:</strong> IT Operations<br />
+<strong>Nachweis:</strong> Wartungspläne, Maintenance Records</p>
+<hr />
+<h4 id="714-secure-disposal-or-re-use-of-equipment">7.14 Secure Disposal or Re-use of Equipment</h4>
+<p><strong>Control Statement:</strong> Items of equipment containing storage media shall be verified to ensure that any sensitive data and licensed software has been removed or securely overwritten prior to disposal or re-use.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Richtlinie: 0310_Richtlinie_Asset_Inventory_Tagging_und_Entsorgung.md
+- Policy: 0580_Policy_Aufbewahrung_und_Loeschung.md</p>
+<p><strong>Verantwortlich:</strong> IT Operations<br />
+<strong>Nachweis:</strong> Secure Disposal Procedures, Wiping Certificates</p>
+<hr />
+<h3 id="8-technological-controls">8. Technological Controls</h3>
+<h4 id="81-user-endpoint-devices">8.1 User Endpoint Devices</h4>
+<p><strong>Control Statement:</strong> Information stored on, processed by or accessible via user endpoint devices shall be protected.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0620_Policy_Endpoint_Security.md
+- Richtlinie: 0630_Richtlinie_EDR_AV_Host_Firewall_und_Device_Compliance.md</p>
+<p><strong>Verantwortlich:</strong> IT Operations, Thomas Weber<br />
+<strong>Nachweis:</strong> Endpoint Protection, Device Compliance Policies</p>
+<hr />
+<h4 id="82-privileged-access-rights">8.2 Privileged Access Rights</h4>
+<p><strong>Control Statement:</strong> The allocation and use of privileged access rights shall be restricted and managed.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0220_Policy_Zugriffssteuerung_und_Identitaetsmanagement.md
+- Richtlinie: 0230_Richtlinie_IAM_Joiner_Mover_Leaver_und_Zugriffsantraege.md</p>
+<p><strong>Verantwortlich:</strong> IAM Team, Thomas Weber<br />
+<strong>Nachweis:</strong> Privileged Access Management, PAM Logs</p>
+<hr />
+<h4 id="83-information-access-restriction">8.3 Information Access Restriction</h4>
+<p><strong>Control Statement:</strong> Access to information and other associated assets shall be restricted in accordance with the established topic-specific policy on access control.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0220_Policy_Zugriffssteuerung_und_Identitaetsmanagement.md
+- Richtlinie: 0230_Richtlinie_IAM_Joiner_Mover_Leaver_und_Zugriffsantraege.md</p>
+<p><strong>Verantwortlich:</strong> IAM Team, Data Owners<br />
+<strong>Nachweis:</strong> Access Control Lists, Authorization Policies</p>
+<hr />
+<h4 id="84-access-to-source-code">8.4 Access to Source Code</h4>
+<p><strong>Control Statement:</strong> Read and write access to source code, development tools and software libraries shall be appropriately managed.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0380_Policy_Secure_Development.md
+- Richtlinie: 0390_Richtlinie_Secure_SDLC_Coding_Review_und_Secrets.md</p>
+<p><strong>Verantwortlich:</strong> Development Team, Thomas Weber<br />
+<strong>Nachweis:</strong> Source Code Access Controls, Git Permissions</p>
+<hr />
+<h4 id="85-secure-authentication">8.5 Secure Authentication</h4>
+<p><strong>Control Statement:</strong> Secure authentication technologies and procedures shall be implemented based on information access restrictions and the topic-specific policy on access control.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0240_Policy_Authentisierung_und_Passwoerter.md
+- Richtlinie: 0250_Richtlinie_MFA_Passwortregeln_und_Session_Management.md</p>
+<p><strong>Verantwortlich:</strong> IAM Team<br />
+<strong>Nachweis:</strong> MFA Implementation, Authentication Logs</p>
+<hr />
+<h4 id="86-capacity-management">8.6 Capacity Management</h4>
+<p><strong>Control Statement:</strong> The use of resources shall be monitored and adjusted in line with current and expected capacity requirements.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0320_Policy_Logging_und_Monitoring.md
+- Richtlinie: 0330_Richtlinie_Logging_SIEM_und_Audit_Trails.md</p>
+<p><strong>Verantwortlich:</strong> IT Operations<br />
+<strong>Nachweis:</strong> Capacity Monitoring, Performance Reports</p>
+<hr />
+<h4 id="87-protection-against-malware">8.7 Protection Against Malware</h4>
+<p><strong>Control Statement:</strong> Protection against malware shall be implemented and supported by appropriate user awareness.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0620_Policy_Endpoint_Security.md
+- Richtlinie: 0630_Richtlinie_EDR_AV_Host_Firewall_und_Device_Compliance.md</p>
+<p><strong>Verantwortlich:</strong> IT Operations, Thomas Weber<br />
+<strong>Nachweis:</strong> Antivirus/EDR Deployment, Malware Detection Logs</p>
+<hr />
+<h4 id="88-management-of-technical-vulnerabilities">8.8 Management of Technical Vulnerabilities</h4>
+<p><strong>Control Statement:</strong> Information about technical vulnerabilities of information systems in use shall be obtained, the organization's exposure to such vulnerabilities shall be evaluated and appropriate measures shall be taken.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0340_Policy_Vulnerability_und_Patch_Management.md
+- Richtlinie: 0350_Richtlinie_Vulnerability_Scans_Patching_und_Exploitation_Response.md</p>
+<p><strong>Verantwortlich:</strong> Security Operations, IT Operations<br />
+<strong>Nachweis:</strong> Vulnerability Scans, Patch Management Reports</p>
+<hr />
+<h4 id="89-configuration-management">8.9 Configuration Management</h4>
+<p><strong>Control Statement:</strong> Configurations, including security configurations, of hardware, software, services and networks shall be established, documented, implemented, monitored and reviewed.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0540_Policy_Konfiguration_und_Hardening.md
+- Richtlinie: 0550_Richtlinie_Sicherheitsbaselines_Hardening_und_Konfig_Aenderungen.md</p>
+<p><strong>Verantwortlich:</strong> IT Operations, Thomas Weber<br />
+<strong>Nachweis:</strong> Configuration Management Database, Baseline Configurations</p>
+<hr />
+<h4 id="810-information-deletion">8.10 Information Deletion</h4>
+<p><strong>Control Statement:</strong> Information stored in information systems, devices or in any other storage media shall be deleted when no longer required.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0580_Policy_Aufbewahrung_und_Loeschung.md
+- Richtlinie: 0590_Richtlinie_Records_Retention_und_Sichere_Loeschung.md</p>
+<p><strong>Verantwortlich:</strong> Data Owners, IT Operations<br />
+<strong>Nachweis:</strong> Data Retention Policy, Deletion Logs</p>
+<hr />
+<h4 id="811-data-masking">8.11 Data Masking</h4>
+<p><strong>Control Statement:</strong> Data masking shall be used in accordance with the organization's topic-specific policy on access control and other related topic-specific policies, and business requirements, taking applicable legislation into consideration.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0560_Policy_Datenschutz_Schnittstellen.md
+- Richtlinie: 0570_Richtlinie_Datenschutz_Anforderungen_und_Datenverarbeitung.md</p>
+<p><strong>Verantwortlich:</strong> Development Team, Data Protection Officer<br />
+<strong>Nachweis:</strong> Data Masking Procedures, Test Data Management</p>
+<hr />
+<h4 id="812-data-leakage-prevention">8.12 Data Leakage Prevention</h4>
+<p><strong>Control Statement:</strong> Data leakage prevention measures shall be applied to systems, networks and any other devices that process, store or transmit sensitive information.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0280_Policy_Datenklassifizierung_und_Informationshandling.md
+- Richtlinie: 0290_Richtlinie_Datenklassifizierung_Labeling_und_Handling.md</p>
+<p><strong>Verantwortlich:</strong> Security Operations, Thomas Weber<br />
+<strong>Nachweis:</strong> DLP Implementation, DLP Alerts</p>
+<hr />
+<h4 id="813-information-backup">8.13 Information Backup</h4>
+<p><strong>Control Statement:</strong> Backup copies of information, software and systems shall be maintained and regularly tested in accordance with the agreed topic-specific policy on backup.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0420_Policy_Backup_und_Wiederherstellung.md
+- Richtlinie: 0430_Richtlinie_Backup_Restore_und_Regelmaessige_Tests.md</p>
+<p><strong>Verantwortlich:</strong> IT Operations<br />
+<strong>Nachweis:</strong> Backup Policies, Restore Tests, Backup Logs</p>
+<hr />
+<h4 id="814-redundancy-of-information-processing-facilities">8.14 Redundancy of Information Processing Facilities</h4>
+<p><strong>Control Statement:</strong> Information processing facilities shall be implemented with redundancy sufficient to meet availability requirements.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0440_Policy_Business_Continuity_ICT_Readiness.md
+- Richtlinie: 0450_Richtlinie_ICT_DR_Schnittstellen_zu_BCM.md</p>
+<p><strong>Verantwortlich:</strong> IT Operations, IT Architecture<br />
+<strong>Nachweis:</strong> High Availability Designs, Redundancy Documentation</p>
+<hr />
+<h4 id="815-logging">8.15 Logging</h4>
+<p><strong>Control Statement:</strong> Logs that record activities, exceptions, faults and other relevant events shall be produced, stored, protected and analyzed.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0320_Policy_Logging_und_Monitoring.md
+- Richtlinie: 0330_Richtlinie_Logging_SIEM_und_Audit_Trails.md</p>
+<p><strong>Verantwortlich:</strong> IT Operations, Security Operations<br />
+<strong>Nachweis:</strong> Logging Standards, SIEM Implementation, Log Retention</p>
+<hr />
+<h4 id="816-monitoring-activities">8.16 Monitoring Activities</h4>
+<p><strong>Control Statement:</strong> Networks, systems and applications shall be monitored for anomalous behaviour and appropriate actions taken to evaluate potential information security incidents.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0320_Policy_Logging_und_Monitoring.md
+- Richtlinie: 0330_Richtlinie_Logging_SIEM_und_Audit_Trails.md</p>
+<p><strong>Verantwortlich:</strong> Security Operations<br />
+<strong>Nachweis:</strong> SIEM Use Cases, Monitoring Dashboards, Alerts</p>
+<hr />
+<h4 id="817-clock-synchronization">8.17 Clock Synchronization</h4>
+<p><strong>Control Statement:</strong> The clocks of information processing systems used by the organization shall be synchronized to approved time sources.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0540_Policy_Konfiguration_und_Hardening.md
+- Richtlinie: 0550_Richtlinie_Sicherheitsbaselines_Hardening_und_Konfig_Aenderungen.md</p>
+<p><strong>Verantwortlich:</strong> IT Operations<br />
+<strong>Nachweis:</strong> NTP Configuration, Time Synchronization Logs</p>
+<hr />
+<h4 id="818-use-of-privileged-utility-programs">8.18 Use of Privileged Utility Programs</h4>
+<p><strong>Control Statement:</strong> The use of utility programs that can be capable of overriding system and application controls shall be restricted and tightly controlled.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0220_Policy_Zugriffssteuerung_und_Identitaetsmanagement.md
+- Richtlinie: 0230_Richtlinie_IAM_Joiner_Mover_Leaver_und_Zugriffsantraege.md</p>
+<p><strong>Verantwortlich:</strong> IT Operations, Thomas Weber<br />
+<strong>Nachweis:</strong> Privileged Access Controls, Utility Program Restrictions</p>
+<hr />
+<h4 id="819-installation-of-software-on-operational-systems">8.19 Installation of Software on Operational Systems</h4>
+<p><strong>Control Statement:</strong> Procedures and measures shall be implemented to securely manage software installation on operational systems.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0360_Policy_Change_und_Release_Management.md
+- Richtlinie: 0370_Richtlinie_Change_Management_mit_Sicherheitsfreigaben.md</p>
+<p><strong>Verantwortlich:</strong> IT Operations, Change Management<br />
+<strong>Nachweis:</strong> Software Installation Procedures, Change Records</p>
+<hr />
+<h4 id="820-networks-security">8.20 Networks Security</h4>
+<p><strong>Control Statement:</strong> Networks and network devices shall be secured, managed and controlled to protect information in systems and applications.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0600_Policy_Netzwerksicherheit.md
+- Richtlinie: 0610_Richtlinie_Segmentierung_Firewalling_und_Network_Access_Control.md</p>
+<p><strong>Verantwortlich:</strong> Network Team, Thomas Weber<br />
+<strong>Nachweis:</strong> Network Security Architecture, Firewall Rules</p>
+<hr />
+<h4 id="821-security-of-network-services">8.21 Security of Network Services</h4>
+<p><strong>Control Statement:</strong> Security mechanisms, service levels and service requirements of network services shall be identified, implemented and monitored.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0600_Policy_Netzwerksicherheit.md
+- Richtlinie: 0610_Richtlinie_Segmentierung_Firewalling_und_Network_Access_Control.md</p>
+<p><strong>Verantwortlich:</strong> Network Team<br />
+<strong>Nachweis:</strong> Network Service SLAs, Security Monitoring</p>
+<hr />
+<h4 id="822-segregation-of-networks">8.22 Segregation of Networks</h4>
+<p><strong>Control Statement:</strong> Groups of information services, users and information systems shall be segregated in the organization's networks.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Richtlinie: 0610_Richtlinie_Segmentierung_Firewalling_und_Network_Access_Control.md</p>
+<p><strong>Verantwortlich:</strong> Network Team, Thomas Weber<br />
+<strong>Nachweis:</strong> Network Segmentation Design, VLAN Configuration</p>
+<hr />
+<h4 id="823-web-filtering">8.23 Web Filtering</h4>
+<p><strong>Control Statement:</strong> Access to external websites shall be managed to reduce exposure to malicious content.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0600_Policy_Netzwerksicherheit.md
+- Policy: 0620_Policy_Endpoint_Security.md</p>
+<p><strong>Verantwortlich:</strong> Security Operations, IT Operations<br />
+<strong>Nachweis:</strong> Web Filtering Solution, Blocked Content Logs</p>
+<hr />
+<h4 id="824-use-of-cryptography">8.24 Use of Cryptography</h4>
+<p><strong>Control Statement:</strong> Rules for the effective use of cryptography, including cryptographic key management, shall be defined and implemented.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0260_Policy_Kryptografie_und_Schluesselmanagement.md
+- Richtlinie: 0270_Richtlinie_Key_Management_und_Verschluesselung.md</p>
+<p><strong>Verantwortlich:</strong> Thomas Weber, IT Operations<br />
+<strong>Nachweis:</strong> Cryptography Policy, Key Management Procedures</p>
+<hr />
+<h4 id="825-secure-development-life-cycle">8.25 Secure Development Life Cycle</h4>
+<p><strong>Control Statement:</strong> Rules for the secure development of software and systems shall be established and applied.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0380_Policy_Secure_Development.md
+- Richtlinie: 0390_Richtlinie_Secure_SDLC_Coding_Review_und_Secrets.md</p>
+<p><strong>Verantwortlich:</strong> Development Team, Thomas Weber<br />
+<strong>Nachweis:</strong> Secure SDLC Procedures, Code Review Records</p>
+<hr />
+<h4 id="826-application-security-requirements">8.26 Application Security Requirements</h4>
+<p><strong>Control Statement:</strong> Information security requirements shall be identified, specified and approved when developing or acquiring applications.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0380_Policy_Secure_Development.md
+- Richtlinie: 0390_Richtlinie_Secure_SDLC_Coding_Review_und_Secrets.md</p>
+<p><strong>Verantwortlich:</strong> Development Team, Security Architecture<br />
+<strong>Nachweis:</strong> Security Requirements Specifications, Threat Models</p>
+<hr />
+<h4 id="827-secure-system-architecture-and-engineering-principles">8.27 Secure System Architecture and Engineering Principles</h4>
+<p><strong>Control Statement:</strong> Principles for engineering secure systems shall be established, documented, maintained and applied to any information system development activities.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0380_Policy_Secure_Development.md
+- Richtlinie: 0390_Richtlinie_Secure_SDLC_Coding_Review_und_Secrets.md</p>
+<p><strong>Verantwortlich:</strong> Security Architecture, Development Team<br />
+<strong>Nachweis:</strong> Secure Architecture Principles, Design Reviews</p>
+<hr />
+<h4 id="828-secure-coding">8.28 Secure Coding</h4>
+<p><strong>Control Statement:</strong> Secure coding principles shall be applied to software development.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Richtlinie: 0390_Richtlinie_Secure_SDLC_Coding_Review_und_Secrets.md</p>
+<p><strong>Verantwortlich:</strong> Development Team<br />
+<strong>Nachweis:</strong> Secure Coding Guidelines, SAST/DAST Results</p>
+<hr />
+<h4 id="829-security-testing-in-development-and-acceptance">8.29 Security Testing in Development and Acceptance</h4>
+<p><strong>Control Statement:</strong> Security testing processes shall be defined and implemented in the development life cycle.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Richtlinie: 0390_Richtlinie_Secure_SDLC_Coding_Review_und_Secrets.md</p>
+<p><strong>Verantwortlich:</strong> Development Team, Security Team<br />
+<strong>Nachweis:</strong> Security Test Plans, Penetration Test Reports</p>
+<hr />
+<h4 id="830-outsourced-development">8.30 Outsourced Development</h4>
+<p><strong>Control Statement:</strong> The organization shall direct, monitor and review the activities related to outsourced system development.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0460_Policy_Lieferanten_und_Cloud_Sicherheit.md
+- Richtlinie: 0470_Richtlinie_Third_Party_Risk_Assessment_und_Cloud_Controls.md</p>
+<p><strong>Verantwortlich:</strong> Development Team, Thomas Weber<br />
+<strong>Nachweis:</strong> Supplier Contracts, Development Oversight Records</p>
+<hr />
+<h4 id="831-separation-of-development-test-and-production-environments">8.31 Separation of Development, Test and Production Environments</h4>
+<p><strong>Control Statement:</strong> Development, testing and production environments shall be separated and secured.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0380_Policy_Secure_Development.md
+- Richtlinie: 0390_Richtlinie_Secure_SDLC_Coding_Review_und_Secrets.md</p>
+<p><strong>Verantwortlich:</strong> Development Team, IT Operations<br />
+<strong>Nachweis:</strong> Environment Separation, Access Controls per Environment</p>
+<hr />
+<h4 id="832-change-management">8.32 Change Management</h4>
+<p><strong>Control Statement:</strong> Changes to information processing facilities and information systems shall be subject to change management procedures.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0360_Policy_Change_und_Release_Management.md
+- Richtlinie: 0370_Richtlinie_Change_Management_mit_Sicherheitsfreigaben.md</p>
+<p><strong>Verantwortlich:</strong> Change Management, IT Operations<br />
+<strong>Nachweis:</strong> Change Management Process, Change Records</p>
+<hr />
+<h4 id="833-test-information">8.33 Test Information</h4>
+<p><strong>Control Statement:</strong> Test information shall be appropriately selected, protected and managed.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Policy: 0560_Policy_Datenschutz_Schnittstellen.md
+- Richtlinie: 0570_Richtlinie_Datenschutz_Anforderungen_und_Datenverarbeitung.md</p>
+<p><strong>Verantwortlich:</strong> Development Team, Data Protection Officer<br />
+<strong>Nachweis:</strong> Test Data Management, Data Masking Procedures</p>
+<hr />
+<h4 id="834-protection-of-information-systems-during-audit-testing">8.34 Protection of Information Systems During Audit Testing</h4>
+<p><strong>Control Statement:</strong> Audit tests and other assurance activities involving assessment of operational systems shall be planned and agreed between the tester and appropriate management.</p>
+<p><strong>Implementierungsstatus:</strong> ☑ Implementiert<br />
+<strong>Umsetzung in ISMS:</strong>
+- Dokument: 0130_ISMS_Internes_Auditprogramm.md</p>
+<p><strong>Verantwortlich:</strong> Internal Audit, IT Operations<br />
+<strong>Nachweis:</strong> Audit Plans, Test Approvals, Audit Protocols</p>
+<hr />
+<h2 id="amendment-12024-anderungen">Amendment 1:2024 Änderungen</h2>
+<p><strong>Hinweis:</strong> ISO/IEC 27001:2022 Amendment 1:2024 führt keine neuen Kontrollen ein, sondern präzisiert bestehende Kontrollen und aktualisiert Referenzen. Die wichtigsten Änderungen betreffen:</p>
+<ul>
+<li><strong>5.7 Threat Intelligence:</strong> Erweiterte Anforderungen an Threat Intelligence Prozesse</li>
+<li><strong>5.23 Information Security for Use of Cloud Services:</strong> Aktualisierte Cloud Security Anforderungen</li>
+<li><strong>8.11 Data Masking:</strong> Neue Kontrolle für Datenmaskierung (bereits in 2022 enthalten)</li>
+<li><strong>8.12 Data Leakage Prevention:</strong> Neue Kontrolle für DLP (bereits in 2022 enthalten)</li>
+</ul>
+<p>Alle Änderungen sind in diesem Mapping bereits berücksichtigt.</p>
+<hr />
+<h2 id="zusammenfassung">Zusammenfassung</h2>
+<h3 id="implementierungsstatus-ubersicht">Implementierungsstatus Übersicht</h3>
+<table>
+<thead>
+<tr>
+<th>Kategorie</th>
+<th>Anzahl Kontrollen</th>
+<th>Implementiert</th>
+<th>Teilweise</th>
+<th>Nicht implementiert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Organizational Controls (5.x)</td>
+<td>37</td>
+<td>37</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>People Controls (6.x)</td>
+<td>8</td>
+<td>8</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Physical Controls (7.x)</td>
+<td>14</td>
+<td>14</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Technological Controls (8.x)</td>
+<td>34</td>
+<td>34</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td><strong>Gesamt</strong></td>
+<td><strong>93</strong></td>
+<td><strong>93</strong></td>
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Implementierungsgrad:</strong> 100%</p>
+<hr />
+<h2 id="verwendung-dieses-mappings">Verwendung dieses Mappings</h2>
+<p>Dieses Mapping dient als:</p>
+<ol>
+<li><strong>Compliance-Nachweis:</strong> Zeigt auf, wie jede Annex A Kontrolle umgesetzt wird</li>
+<li><strong>Audit-Vorbereitung:</strong> Ermöglicht schnelle Identifikation relevanter Dokumente</li>
+<li><strong>Gap-Analyse:</strong> Identifiziert fehlende oder unvollständige Implementierungen</li>
+<li><strong>Wartung:</strong> Unterstützt bei der Aktualisierung des ISMS</li>
+</ol>
+<p><strong>Aktualisierung:</strong> Dieses Dokument sollte bei jeder Änderung an Policies, Richtlinien oder Kontrollen aktualisiert werden.</p>
+<hr />
+<h2 id="referenzen">Referenzen</h2>
+<ul>
+<li>ISO/IEC 27001:2022 Information Security Management Systems - Requirements</li>
+<li>ISO/IEC 27001:2022/Amd 1:2024 Amendment 1</li>
+<li>ISO/IEC 27002:2022 Information Security Controls</li>
+<li>Statement of Applicability (SoA): 0100_ISMS_Statement_of_Applicability_SoA_Template.md</li>
+</ul>
+<hr />
+<p><strong>Dokumentverantwortlicher:</strong> Thomas Weber<br />
+<strong>Genehmigt durch:</strong> {{ meta.management.name }}<br />
+<strong>Nächste Überprüfung:</strong> {{ meta.document.next_review }}</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0690_Richtlinie_Sicherheitsanforderungen_im_Projektlebenszyklus.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0720_Anhang_Asset_und_Systeminventar_Template.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

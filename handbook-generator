@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+"""
+Handbook Generator - Direct executable script
+
+This script allows running the handbook generator without needing to call
+the Python interpreter explicitly.
+
+Usage:
+    ./handbook-generator --language de --template bcm --test --separate-files
+    handbook-generator -l en -t isms -o pdf --test --pdf-toc
+"""
+
+import sys
+from src.cli import main
+
+if __name__ == '__main__':
+    sys.exit(main())

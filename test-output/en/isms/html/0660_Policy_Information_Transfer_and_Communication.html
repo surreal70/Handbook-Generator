@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0660 - Policy: Information Transfer and Communication</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0660</div>
+            <h1>Policy: Information Transfer and Communication</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0650_Guideline_Exception_Process.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0670_Guideline_Email_Sharing_and_Collaboration_Tools.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="policy-information-transfer-and-communication">Policy: Information Transfer and Communication</h1>
+<p><strong>Document ID:</strong> 0660<br />
+<strong>Document Type:</strong> Policy (abstract)<br />
+<strong>Standard Reference:</strong> ISO/IEC 27001:2022 Annex A.5.14, A.8.24, A.8.26 (incl. Amendment 1:2024)<br />
+<strong>Owner:</strong> Thomas Weber<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Approved<br />
+<strong>Classification:</strong> Internal<br />
+<strong>Last Updated:</strong> {{ meta.document.date }}<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This policy defines the requirements for secure information transfer and communication of <strong>AdminSend GmbH</strong>. It ensures that information is appropriately protected during transmission and that communication channels are secure.</p>
+<h2 id="2-scope">2. Scope</h2>
+<p>This policy applies to:</p>
+<ul>
+<li><strong>Organizational Units:</strong> All departments and locations of AdminSend GmbH</li>
+<li><strong>Communication Channels:</strong> Email, messaging, file sharing, collaboration tools</li>
+<li><strong>Data:</strong> All information (especially confidential and personal data)</li>
+<li><strong>Transmission Paths:</strong> Internal, external, cloud, partners</li>
+<li><strong>Locations:</strong> {{ netbox.site.name }} and all other operational sites</li>
+</ul>
+<p><strong>Exceptions:</strong> Exceptions are only permitted through the defined exception process (<code>0640_Policy_Exceptions_and_Risk_Waivers.md</code>).</p>
+<h2 id="3-policy-statements">3. Policy Statements</h2>
+<h3 id="31-encrypted-transmission">3.1 Encrypted Transmission</h3>
+<p>Confidential information is transmitted encrypted. Encryption occurs in transit (TLS/SSL) and at rest.</p>
+<h3 id="32-email-security">3.2 Email Security</h3>
+<p>Email communication is secured:
+- <strong>Inbound:</strong> SPF, DKIM, DMARC, anti-spam, anti-malware
+- <strong>Outbound:</strong> TLS encryption, S/MIME or PGP for confidential content
+- <strong>Phishing Protection:</strong> User awareness, technical protection measures</p>
+<h3 id="33-secure-file-sharing">3.3 Secure File Sharing</h3>
+<p>File sharing occurs via approved platforms. Confidential files are shared encrypted. Public file sharing (e.g., WeTransfer) is prohibited for confidential data.</p>
+<h3 id="34-collaboration-tools">3.4 Collaboration Tools</h3>
+<p>Collaboration tools (Teams, Slack, etc.) must meet security requirements:
+- Encrypted communication
+- Access control
+- Data Loss Prevention (DLP)
+- Audit logging</p>
+<h3 id="35-messaging-and-chat">3.5 Messaging and Chat</h3>
+<p>Instant messaging for business communication occurs via approved tools. Private messaging apps are prohibited for confidential business information.</p>
+<h3 id="36-data-loss-prevention-dlp">3.6 Data Loss Prevention (DLP)</h3>
+<p>DLP systems prevent unintentional or malicious data exfiltration. DLP monitors email, file sharing, and collaboration tools.</p>
+<h3 id="37-external-communication">3.7 External Communication</h3>
+<p>Communication with external parties (customers, partners, suppliers) occurs via secure channels. Confidentiality agreements (NDAs) are concluded as needed.</p>
+<h3 id="38-mobile-communication">3.8 Mobile Communication</h3>
+<p>Mobile communication (smartphones, tablets) occurs via secure channels. Mobile devices are managed with MDM/MAM (see <code>0500_Policy_Mobile_Device_and_Remote_Work.md</code>).</p>
+<h3 id="39-social-media">3.9 Social Media</h3>
+<p>Business social media use follows social media guidelines. Confidential information is not shared via social media.</p>
+<h2 id="4-roles-and-responsibilities">4. Roles and Responsibilities</h2>
+<h3 id="raci-matrix-information-transfer-and-communication">RACI Matrix: Information Transfer and Communication</h3>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>CISO</th>
+<th>IT Operations</th>
+<th>Communication Security</th>
+<th>End User</th>
+<th>DPO</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Policy Creation</td>
+<td>R/A</td>
+<td>C</td>
+<td>R</td>
+<td>I</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Email Security</td>
+<td>C</td>
+<td>R/A</td>
+<td>R</td>
+<td>I</td>
+<td>C</td>
+</tr>
+<tr>
+<td>File Sharing</td>
+<td>C</td>
+<td>R/A</td>
+<td>R</td>
+<td>R</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Collaboration Tools</td>
+<td>C</td>
+<td>R/A</td>
+<td>R</td>
+<td>R</td>
+<td>C</td>
+</tr>
+<tr>
+<td>DLP Implementation</td>
+<td>R/A</td>
+<td>R</td>
+<td>R</td>
+<td>I</td>
+<td>C</td>
+</tr>
+<tr>
+<td>External Communication</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Mobile Communication</td>
+<td>C</td>
+<td>R/A</td>
+<td>C</td>
+<td>R</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Social Media</td>
+<td>C</td>
+<td>I</td>
+<td>R/A</td>
+<td>R</td>
+<td>I</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legend:</strong> R = Responsible (Execution), A = Accountable (Ownership), C = Consulted, I = Informed</p>
+<h3 id="key-roles">Key Roles</h3>
+<ul>
+<li><strong>Policy Owner:</strong> Thomas Weber (CISO)</li>
+<li><strong>Communication Security Manager:</strong> {{ meta.communication.security_manager }}</li>
+<li><strong>IT Operations Manager:</strong> {{ meta.it.operations_manager }}</li>
+<li><strong>Data Protection Officer:</strong> {{ meta.dpo.name }}</li>
+<li><strong>Implementation Responsible:</strong> IT Operations, End Users</li>
+<li><strong>Control/Audit Function:</strong> ISMS, Internal Audit, DPO</li>
+</ul>
+<h2 id="5-derived-documents-guidelinesstandardsprocesses">5. Derived Documents (Guidelines/Standards/Processes)</h2>
+<p>Implementation details are defined in subordinate documents:</p>
+<h3 id="related-guidelines">Related Guidelines</h3>
+<ul>
+<li><strong>0670_Guideline_Email_Sharing_and_Collaboration_Tools.md</strong> - Detailed implementation guideline</li>
+<li><code>0280_Policy_Data_Classification_and_Information_Handling.md</code> - Data Classification Policy</li>
+<li><code>0260_Policy_Cryptography_and_Key_Management.md</code> - Encryption Policy</li>
+<li><code>0500_Policy_Mobile_Device_and_Remote_Work.md</code> - Mobile Device Policy</li>
+</ul>
+<h3 id="related-standardsbaselines">Related Standards/Baselines</h3>
+<ul>
+<li>Email Security Configuration (SPF, DKIM, DMARC)</li>
+<li>Approved File Sharing Platforms</li>
+<li>Approved Collaboration Tools</li>
+<li>DLP Rules and Policies</li>
+<li>Social Media Guidelines</li>
+</ul>
+<h3 id="related-processes">Related Processes</h3>
+<ul>
+<li>Email Encryption Process (S/MIME, PGP)</li>
+<li>File Sharing Approval Process</li>
+<li>DLP Incident Response</li>
+<li>External Communication (NDA Process)</li>
+</ul>
+<h2 id="6-compliance-monitoring-and-enforcement">6. Compliance, Monitoring and Enforcement</h2>
+<h3 id="metrics-and-kpis">Metrics and KPIs</h3>
+<ul>
+<li>Email Encryption Rate (Target: 100% for confidential emails)</li>
+<li>SPF/DKIM/DMARC Compliance (Target: 100%)</li>
+<li>DLP Incident Rate</li>
+<li>Number of blocked phishing emails</li>
+<li>File Sharing Compliance (Target: 100% approved platforms)</li>
+<li>Collaboration Tool Compliance</li>
+<li>Number of social media violations</li>
+</ul>
+<h3 id="evidence-and-proof">Evidence and Proof</h3>
+<ul>
+<li>Email Security Configuration (SPF, DKIM, DMARC)</li>
+<li>Email Encryption Logs</li>
+<li>DLP Logs and Incident Reports</li>
+<li>File Sharing Logs</li>
+<li>Collaboration Tool Configuration</li>
+<li>Phishing Simulation Results</li>
+<li>Social Media Monitoring</li>
+</ul>
+<h3 id="consequences-of-violations">Consequences of Violations</h3>
+<p>Violations of this policy are handled according to applicable HR and compliance processes:
+- <strong>Unencrypted Confidential Emails:</strong> Incident response, user awareness training
+- <strong>Unapproved File Sharing Tools:</strong> Access blocked, disciplinary measures
+- <strong>DLP Violations:</strong> Incident response, investigation, disciplinary measures if applicable
+- <strong>Repeated Violations:</strong> Employment consequences, access revocation</p>
+<h2 id="7-exceptions">7. Exceptions</h2>
+<p>Exceptions to this policy are only permitted in justified exceptional cases:</p>
+<ul>
+<li><strong>Exception Process:</strong> See <code>0640_Policy_Exceptions_and_Risk_Waivers.md</code></li>
+<li><strong>Approval:</strong> Exceptions must be approved by CISO and Communication Security Manager</li>
+<li><strong>Documentation:</strong> All exceptions are documented in the risk register</li>
+<li><strong>Time Limitation:</strong> Exceptions are generally time-limited</li>
+</ul>
+<h2 id="8-references">8. References</h2>
+<h3 id="internal-documents">Internal Documents</h3>
+<ul>
+<li><code>0010_ISMS_Information_Security_Policy.md</code> - ISMS Policy</li>
+<li><code>0670_Guideline_Email_Sharing_and_Collaboration_Tools.md</code> - Detailed Guideline</li>
+<li><code>0280_Policy_Data_Classification_and_Information_Handling.md</code> - Data Classification Policy</li>
+<li><code>0080_ISMS_Risk_Register_Template.md</code> - Risk Register</li>
+</ul>
+<h3 id="external-standards-and-regulations">External Standards and Regulations</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.14</strong> - Information transfer</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.8.24</strong> - Use of cryptography</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.8.26</strong> - Application security requirements</li>
+<li><strong>NIST SP 800-177</strong> - Trustworthy Email</li>
+<li><strong>RFC 7208</strong> - Sender Policy Framework (SPF)</li>
+<li><strong>RFC 6376</strong> - DomainKeys Identified Mail (DKIM)</li>
+<li><strong>RFC 7489</strong> - Domain-based Message Authentication, Reporting, and Conformance (DMARC)</li>
+</ul>
+<hr />
+<p><strong>Approved by:</strong><br />
+{{ meta.management.ceo }}, Executive Management<br />
+Date: {{ meta.document.approval_date }}</p>
+<p><strong>Next Review:</strong> {{ meta.document.next_review }} (annually or as needed)</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0650_Guideline_Exception_Process.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0670_Guideline_Email_Sharing_and_Collaboration_Tools.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

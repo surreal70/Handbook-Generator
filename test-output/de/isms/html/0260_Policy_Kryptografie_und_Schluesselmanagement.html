@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0260 - Policy: Kryptografie und Schlüsselmanagement</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0260</div>
+            <h1>Policy: Kryptografie und Schlüsselmanagement</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0250_Richtlinie_MFA_Passwortregeln_und_Session_Management.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0270_Richtlinie_Key_Management_und_Verschluesselung.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="policy-kryptografie-und-schlusselmanagement">Policy: Kryptografie und Schlüsselmanagement</h1>
+<p><strong>Dokument-ID:</strong> 0260<br />
+<strong>Dokumenttyp:</strong> Policy (abstrakt)<br />
+<strong>Standard-Referenz:</strong> ISO/IEC 27001:2022 Annex A.8.24 (inkl. Amendment 1:2024)<br />
+<strong>Owner:</strong> Thomas Weber<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Freigegeben<br />
+<strong>Klassifizierung:</strong> Intern<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.date }}<br />
+<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-zweck">1. Zweck</h2>
+<p>Diese Policy definiert die Grundsätze für den Einsatz kryptografischer Verfahren und das Management kryptografischer Schlüssel der <strong>AdminSend GmbH</strong>. Sie stellt sicher, dass Informationen durch angemessene kryptografische Kontrollen geschützt werden und Schlüssel sicher verwaltet werden.</p>
+<h2 id="2-geltungsbereich">2. Geltungsbereich</h2>
+<p>Diese Policy gilt für:</p>
+<ul>
+<li><strong>Organisationseinheiten:</strong> Alle Abteilungen und Standorte der AdminSend GmbH</li>
+<li><strong>Systeme:</strong> Alle IT-Systeme, Anwendungen, Datenbanken, Netzwerke, Cloud-Services</li>
+<li><strong>Daten:</strong> Alle Daten in Ruhe (Data at Rest), in Bewegung (Data in Transit) und in Verarbeitung (Data in Use)</li>
+<li><strong>Kryptografische Verfahren:</strong> Verschlüsselung, Hashing, digitale Signaturen, Zertifikate</li>
+<li><strong>Standorte:</strong> {{ netbox.site.name }} und alle weiteren Betriebsstandorte</li>
+</ul>
+<p><strong>Ausnahmen:</strong> Ausnahmen sind nur über den definierten Ausnahmenprozess (<code>0640_Policy_Ausnahmen_und_Risk_Waivers.md</code>) zulässig.</p>
+<h2 id="3-grundsatze-policy-statements">3. Grundsätze (Policy Statements)</h2>
+<h3 id="31-risikoorientierter-einsatz-von-kryptografie">3.1 Risikoorientierter Einsatz von Kryptografie</h3>
+<p>Kryptografische Verfahren werden auf Basis einer Risikoanalyse eingesetzt. Der Schutzbedarf der Informationen bestimmt die Stärke und Art der kryptografischen Kontrollen.</p>
+<h3 id="32-verschlusselung-sensibler-daten">3.2 Verschlüsselung sensibler Daten</h3>
+<p>Sensible und vertrauliche Daten werden sowohl bei der Speicherung (Data at Rest) als auch bei der Übertragung (Data in Transit) verschlüsselt:
+- <strong>Data at Rest:</strong> Verschlüsselung von Datenbanken, Dateisystemen, Backups, mobilen Geräten
+- <strong>Data in Transit:</strong> TLS/SSL für Netzwerkkommunikation, VPN für Remote-Zugriffe
+- <strong>Data in Use:</strong> Verschlüsselung im Arbeitsspeicher wo technisch möglich (z.B. Confidential Computing)</p>
+<h3 id="33-verwendung-anerkannter-algorithmen">3.3 Verwendung anerkannter Algorithmen</h3>
+<p>Es werden ausschließlich anerkannte und standardisierte kryptografische Algorithmen eingesetzt:
+- Symmetrische Verschlüsselung: AES-256 oder höher
+- Asymmetrische Verschlüsselung: RSA-2048 oder höher, ECC mit mindestens 256 Bit
+- Hashing: SHA-256 oder höher
+- Veraltete Algorithmen (MD5, SHA-1, DES, 3DES) sind untersagt</p>
+<h3 id="34-schlusselmanagement-lebenszyklus">3.4 Schlüsselmanagement-Lebenszyklus</h3>
+<p>Kryptografische Schlüssel werden über ihren gesamten Lebenszyklus sicher verwaltet:
+- <strong>Generierung:</strong> Sichere Zufallszahlengeneratoren, ausreichende Schlüssellänge
+- <strong>Speicherung:</strong> Hardware Security Modules (HSM), Key Management Systems (KMS)
+- <strong>Verteilung:</strong> Sichere Übertragungskanäle, Authentifizierung der Empfänger
+- <strong>Rotation:</strong> Regelmäßige Schlüsselrotation basierend auf Risiko und Compliance-Anforderungen
+- <strong>Archivierung:</strong> Sichere Aufbewahrung für Entschlüsselung historischer Daten
+- <strong>Vernichtung:</strong> Sichere Löschung nicht mehr benötigter Schlüssel</p>
+<h3 id="35-trennung-von-schlusseln-und-daten">3.5 Trennung von Schlüsseln und Daten</h3>
+<p>Kryptografische Schlüssel werden getrennt von den verschlüsselten Daten gespeichert. Schlüssel dürfen nicht im Klartext in Konfigurationsdateien oder Quellcode abgelegt werden.</p>
+<h3 id="36-zertifikatsmanagement">3.6 Zertifikatsmanagement</h3>
+<p>Digitale Zertifikate werden zentral verwaltet:
+- Verwendung vertrauenswürdiger Certificate Authorities (CA)
+- Regelmäßige Überprüfung und Erneuerung von Zertifikaten
+- Überwachung ablaufender Zertifikate
+- Sichere Speicherung privater Schlüssel</p>
+<h3 id="37-kryptografische-protokolle">3.7 Kryptografische Protokolle</h3>
+<p>Sichere kryptografische Protokolle werden für die Kommunikation verwendet:
+- TLS 1.2 oder höher (TLS 1.3 bevorzugt)
+- SSH-2 für sichere Remote-Zugriffe
+- IPsec für VPN-Verbindungen
+- Veraltete Protokolle (SSL, TLS 1.0/1.1) sind untersagt</p>
+<h3 id="38-compliance-mit-export-kontrollen">3.8 Compliance mit Export-Kontrollen</h3>
+<p>Der Einsatz von Kryptografie erfolgt in Übereinstimmung mit nationalen und internationalen Export-Kontrollvorschriften.</p>
+<h2 id="4-rollen-und-verantwortlichkeiten">4. Rollen und Verantwortlichkeiten</h2>
+<h3 id="raci-matrix-kryptografie-und-schlusselmanagement">RACI-Matrix: Kryptografie und Schlüsselmanagement</h3>
+<table>
+<thead>
+<tr>
+<th>Aktivität</th>
+<th>CISO</th>
+<th>IT-Betrieb</th>
+<th>Crypto Officer</th>
+<th>Entwicklung</th>
+<th>Compliance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Policy-Erstellung</td>
+<td>R/A</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Krypto-Architektur</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Schlüssel-Generierung</td>
+<td>C</td>
+<td>R</td>
+<td>R/A</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Schlüssel-Rotation</td>
+<td>C</td>
+<td>R</td>
+<td>R/A</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Zertifikats-Management</td>
+<td>C</td>
+<td>R</td>
+<td>R/A</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Krypto-Monitoring</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>I</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Compliance-Prüfung</td>
+<td>C</td>
+<td>I</td>
+<td>C</td>
+<td>I</td>
+<td>R/A</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legende:</strong> R = Responsible (Durchführung), A = Accountable (Verantwortlich), C = Consulted (Konsultiert), I = Informed (Informiert)</p>
+<h3 id="schlusselrollen">Schlüsselrollen</h3>
+<ul>
+<li><strong>Policy Owner:</strong> Thomas Weber (CISO)</li>
+<li><strong>Crypto Officer:</strong> {{ meta.it.crypto_officer }}</li>
+<li><strong>Key Management Verantwortlicher:</strong> {{ meta.it.key_manager }}</li>
+<li><strong>Umsetzungsverantwortliche:</strong> IT-Betrieb, Entwicklung</li>
+<li><strong>Kontroll-/Prüfinstanz:</strong> ISMS, Internal Audit, Compliance</li>
+</ul>
+<h2 id="5-ableitungen-richtlinienstandardsprozesse">5. Ableitungen (Richtlinien/Standards/Prozesse)</h2>
+<p>Details zur Umsetzung werden in nachgelagerten Dokumenten geregelt:</p>
+<h3 id="zugehorige-richtlinien">Zugehörige Richtlinien</h3>
+<ul>
+<li><strong>0270_Richtlinie_Key_Management_und_Verschluesselung.md</strong> - Detaillierte Implementierungsrichtlinie</li>
+<li><code>0280_Policy_Datenklassifizierung_und_Informationshandling.md</code> - Data Classification Policy</li>
+<li><code>0460_Policy_Lieferanten_und_Cloud_Sicherheit.md</code> - Cloud Security Policy</li>
+<li><code>0600_Policy_Netzwerksicherheit.md</code> - Network Security Policy</li>
+</ul>
+<h3 id="zugehorige-standardsbaselines">Zugehörige Standards/Baselines</h3>
+<ul>
+<li>Kryptografische Algorithmen-Standard</li>
+<li>Schlüssellängen-Anforderungen</li>
+<li>TLS/SSL-Konfigurationsstandard</li>
+<li>Zertifikats-Lifecycle-Standard</li>
+</ul>
+<h3 id="zugehorige-prozesse">Zugehörige Prozesse</h3>
+<ul>
+<li>Schlüssel-Generierungs- und Rotationsprozess</li>
+<li>Zertifikats-Erneuerungsprozess</li>
+<li>Incident Response bei Schlüsselkompromittierung</li>
+<li>Krypto-Agility-Prozess (Migration zu neuen Algorithmen)</li>
+</ul>
+<h2 id="6-compliance-monitoring-und-durchsetzung">6. Compliance, Monitoring und Durchsetzung</h2>
+<h3 id="messgroen-und-kpis">Messgrößen und KPIs</h3>
+<ul>
+<li>Anzahl verschlüsselter Systeme und Datenbanken</li>
+<li>Verschlüsselungsrate sensibler Daten (Ziel: 100%)</li>
+<li>Anzahl ablaufender Zertifikate (Ziel: 0 abgelaufene Zertifikate)</li>
+<li>Durchschnittliche Schlüsselrotationszeit</li>
+<li>Anzahl Verstöße gegen Krypto-Standards</li>
+<li>Anzahl kompromittierter Schlüssel</li>
+</ul>
+<h3 id="nachweise-und-evidence">Nachweise und Evidence</h3>
+<ul>
+<li>Verschlüsselungs-Inventar</li>
+<li>Schlüssel-Management-Logs</li>
+<li>Zertifikats-Register</li>
+<li>Krypto-Compliance-Reports</li>
+<li>Penetration-Test-Ergebnisse</li>
+<li>Audit-Berichte zu kryptografischen Kontrollen</li>
+</ul>
+<h3 id="konsequenzen-bei-verstoen">Konsequenzen bei Verstößen</h3>
+<p>Verstöße gegen diese Policy werden nach den geltenden HR- und Compliance-Prozessen behandelt:
+- <strong>Verwendung schwacher Algorithmen:</strong> Sofortige Remediation, Nachschulung
+- <strong>Unsichere Schlüsselspeicherung:</strong> Sofortige Schlüsselrotation, Untersuchung
+- <strong>Schlüsselkompromittierung:</strong> Incident Response, Revocation, forensische Analyse
+- <strong>Wiederholte Verstöße:</strong> Arbeitsrechtliche Konsequenzen</p>
+<h2 id="7-ausnahmen">7. Ausnahmen</h2>
+<p>Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:</p>
+<ul>
+<li><strong>Ausnahmenprozess:</strong> Siehe <code>0640_Policy_Ausnahmen_und_Risk_Waivers.md</code></li>
+<li><strong>Genehmigung:</strong> Ausnahmen müssen vom CISO und Crypto Officer genehmigt werden</li>
+<li><strong>Dokumentation:</strong> Alle Ausnahmen werden im Risikoregister dokumentiert</li>
+<li><strong>Befristung:</strong> Ausnahmen sind grundsätzlich zeitlich befristet und werden regelmäßig überprüft</li>
+<li><strong>Kompensationsmaßnahmen:</strong> Ausnahmen erfordern alternative Sicherheitsmaßnahmen</li>
+</ul>
+<h2 id="8-referenzen">8. Referenzen</h2>
+<h3 id="interne-dokumente">Interne Dokumente</h3>
+<ul>
+<li><code>0010_ISMS_Informationssicherheitsleitlinie.md</code> - ISMS Policy</li>
+<li><code>0270_Richtlinie_Key_Management_und_Verschluesselung.md</code> - Detailed Guideline</li>
+<li><code>0280_Policy_Datenklassifizierung_und_Informationshandling.md</code> - Data Classification Policy</li>
+<li><code>0080_ISMS_Risikoregister_Template.md</code> - Risk Register</li>
+</ul>
+<h3 id="externe-standards-und-vorgaben">Externe Standards und Vorgaben</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.8.24</strong> - Use of cryptography</li>
+<li><strong>ISO/IEC 27002:2022</strong> - Information security controls</li>
+<li><strong>NIST SP 800-57</strong> - Recommendation for Key Management</li>
+<li><strong>NIST SP 800-175B</strong> - Guideline for Using Cryptographic Standards</li>
+<li><strong>BSI TR-02102</strong> - Kryptographische Verfahren: Empfehlungen und Schlüssellängen</li>
+<li><strong>FIPS 140-2/140-3</strong> - Security Requirements for Cryptographic Modules</li>
+<li><strong>eIDAS-Verordnung (EU 910/2014)</strong> - Elektronische Identifizierung und Vertrauensdienste</li>
+</ul>
+<hr />
+<p><strong>Genehmigt durch:</strong><br />
+{{ meta.management.ceo }}, Geschäftsführung<br />
+Datum: {{ meta.document.approval_date }}</p>
+<p><strong>Nächster Review:</strong> {{ meta.document.next_review }} (jährlich oder anlassbezogen)</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0250_Richtlinie_MFA_Passwortregeln_und_Session_Management.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0270_Richtlinie_Key_Management_und_Verschluesselung.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

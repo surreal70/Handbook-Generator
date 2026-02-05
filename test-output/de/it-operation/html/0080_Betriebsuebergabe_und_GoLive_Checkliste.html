@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0080 - Betriebsübergabe und Go-Live-Checkliste</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0080</div>
+            <h1>Betriebsübergabe und Go-Live-Checkliste</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0070_Betriebskonzept_und_Betriebsprozesse.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0090_Konfigurationsmanagement_und_CMDB.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="betriebsubergabe-und-go-live-checkliste">Betriebsübergabe und Go-Live-Checkliste</h1>
+<h2 id="ubersicht">Übersicht</h2>
+<p>Dieses Dokument beschreibt den Prozess der Betriebsübergabe und enthält eine umfassende Go-Live-Checkliste für die Überführung neuer oder geänderter IT-Services in den Produktivbetrieb.</p>
+<p><strong>Service:</strong> {{ meta.service_name }}<br />
+<strong>Verantwortlich:</strong> Andreas Huemmer<br />
+<strong>Stand:</strong> 1.0.0</p>
+<hr />
+<h2 id="betriebsubergabe-prozess">Betriebsübergabe-Prozess</h2>
+<h3 id="phasen-der-betriebsubergabe">Phasen der Betriebsübergabe</h3>
+<div class="codehilite"><pre><span></span><code><span class="err">┌─────────────────┐</span>
+<span class="err">│</span><span class="w"> </span><span class="mf">1.</span><span class="w"> </span><span class="n">Vorbereitung</span><span class="w"> </span><span class="err">│</span>
+<span class="err">└────────┬────────┘</span>
+<span class="w">         </span><span class="err">│</span>
+<span class="w">         </span><span class="err">▼</span>
+<span class="err">┌─────────────────┐</span>
+<span class="err">│</span><span class="w"> </span><span class="mf">2.</span><span class="w"> </span><span class="n">Dokumentation</span><span class="err">│</span>
+<span class="err">└────────┬────────┘</span>
+<span class="w">         </span><span class="err">│</span>
+<span class="w">         </span><span class="err">▼</span>
+<span class="err">┌─────────────────┐</span>
+<span class="err">│</span><span class="w"> </span><span class="mf">3.</span><span class="w"> </span><span class="n">Training</span><span class="w">     </span><span class="err">│</span>
+<span class="err">└────────┬────────┘</span>
+<span class="w">         </span><span class="err">│</span>
+<span class="w">         </span><span class="err">▼</span>
+<span class="err">┌─────────────────┐</span>
+<span class="err">│</span><span class="w"> </span><span class="mf">4.</span><span class="w"> </span><span class="n">Testing</span><span class="w">      </span><span class="err">│</span>
+<span class="err">└────────┬────────┘</span>
+<span class="w">         </span><span class="err">│</span>
+<span class="w">         </span><span class="err">▼</span>
+<span class="err">┌─────────────────┐</span>
+<span class="err">│</span><span class="w"> </span><span class="mf">5.</span><span class="w"> </span><span class="k">Go</span><span class="o">-</span><span class="n">Live</span><span class="w">      </span><span class="err">│</span>
+<span class="err">└────────┬────────┘</span>
+<span class="w">         </span><span class="err">│</span>
+<span class="w">         </span><span class="err">▼</span>
+<span class="err">┌─────────────────┐</span>
+<span class="err">│</span><span class="w"> </span><span class="mf">6.</span><span class="w"> </span><span class="n">Hypercare</span><span class="w">    </span><span class="err">│</span>
+<span class="err">└─────────────────┘</span>
+</code></pre></div>
+
+<h3 id="rollen-und-verantwortlichkeiten">Rollen und Verantwortlichkeiten</h3>
+<table>
+<thead>
+<tr>
+<th>Rolle</th>
+<th>Verantwortung</th>
+<th>Ansprechpartner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Service Owner</strong></td>
+<td>Gesamtverantwortung für Service</td>
+<td>[TODO: Name]</td>
+</tr>
+<tr>
+<td><strong>IT Operations Manager</strong></td>
+<td>Betriebsübernahme koordinieren</td>
+<td>Andreas Huemmer</td>
+</tr>
+<tr>
+<td><strong>Technical Lead</strong></td>
+<td>Technische Implementierung</td>
+<td>[TODO: Name]</td>
+</tr>
+<tr>
+<td><strong>Service Desk Lead</strong></td>
+<td>Support-Bereitschaft</td>
+<td>Julia Becker</td>
+</tr>
+<tr>
+<td><strong>Change Manager</strong></td>
+<td>Change-Genehmigung</td>
+<td>[TODO: Name]</td>
+</tr>
+<tr>
+<td><strong>CIO</strong></td>
+<td>Finale Freigabe</td>
+<td>Anna Schmidt</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="go-live-checkliste">Go-Live-Checkliste</h2>
+<h3 id="phase-1-vorbereitung-4-6-wochen-vor-go-live">Phase 1: Vorbereitung (4-6 Wochen vor Go-Live)</h3>
+<h4 id="projektplanung">Projektplanung</h4>
+<ul>
+<li>[ ] Go-Live-Datum festgelegt und kommuniziert</li>
+<li>[ ] Projektteam zusammengestellt</li>
+<li>[ ] Rollen und Verantwortlichkeiten definiert</li>
+<li>[ ] Kommunikationsplan erstellt</li>
+<li>[ ] Risikobewertung durchgeführt</li>
+<li>[ ] Rollback-Plan erstellt</li>
+</ul>
+<h4 id="infrastruktur">Infrastruktur</h4>
+<ul>
+<li>[ ] Hardware beschafft und installiert</li>
+<li>[ ] Netzwerkanbindung konfiguriert</li>
+<li>[ ] Virtualisierung/Cloud-Ressourcen bereitgestellt</li>
+<li>[ ] Storage-Kapazität allokiert</li>
+<li>[ ] Backup-Infrastruktur eingerichtet</li>
+<li>[ ] Monitoring-Infrastruktur vorbereitet</li>
+</ul>
+<h4 id="software-und-lizenzen">Software und Lizenzen</h4>
+<ul>
+<li>[ ] Software-Lizenzen beschafft</li>
+<li>[ ] Software installiert und konfiguriert</li>
+<li>[ ] Patches und Updates eingespielt</li>
+<li>[ ] Lizenz-Compliance geprüft</li>
+<li>[ ] Drittanbieter-Software integriert</li>
+</ul>
+<h3 id="phase-2-dokumentation-3-4-wochen-vor-go-live">Phase 2: Dokumentation (3-4 Wochen vor Go-Live)</h3>
+<h4 id="betriebsdokumentation">Betriebsdokumentation</h4>
+<ul>
+<li>[ ] Betriebshandbuch erstellt (dieses Dokument)</li>
+<li>[ ] Systemarchitektur dokumentiert (Kapitel 0040)</li>
+<li>[ ] Infrastruktur dokumentiert (Kapitel 0050)</li>
+<li>[ ] Netzwerkdiagramme erstellt</li>
+<li>[ ] Konfigurationsdokumentation vollständig</li>
+<li>[ ] CMDB-Einträge erstellt (Kapitel 0090)</li>
+</ul>
+<h4 id="prozessdokumentation">Prozessdokumentation</h4>
+<ul>
+<li>[ ] Incident-Management-Prozess definiert (Kapitel 0120)</li>
+<li>[ ] Change-Management-Prozess definiert (Kapitel 0140)</li>
+<li>[ ] Backup-Prozess dokumentiert (Kapitel 0150)</li>
+<li>[ ] Monitoring-Prozess dokumentiert (Kapitel 0110)</li>
+<li>[ ] Eskalationspfade definiert (Kapitel 0070)</li>
+</ul>
+<h4 id="runbooks-und-anleitungen">Runbooks und Anleitungen</h4>
+<ul>
+<li>[ ] Standard-Runbooks erstellt (Kapitel 0240)</li>
+<li>[ ] Troubleshooting-Guides erstellt</li>
+<li>[ ] Notfall-Runbooks erstellt</li>
+<li>[ ] Wartungs-Checklisten erstellt</li>
+<li>[ ] FAQ-Dokument erstellt (Kapitel 0260)</li>
+</ul>
+<h3 id="phase-3-training-2-3-wochen-vor-go-live">Phase 3: Training (2-3 Wochen vor Go-Live)</h3>
+<h4 id="service-desk-training">Service Desk Training</h4>
+<ul>
+<li>[ ] Service-Übersicht präsentiert</li>
+<li>[ ] Incident-Handling trainiert</li>
+<li>[ ] Ticketing-System geschult</li>
+<li>[ ] Eskalationsprozesse erklärt</li>
+<li>[ ] FAQ und Known Issues durchgegangen</li>
+<li>[ ] Hands-on-Training durchgeführt</li>
+</ul>
+<h4 id="operations-team-training">Operations Team Training</h4>
+<ul>
+<li>[ ] Technische Architektur erklärt</li>
+<li>[ ] Monitoring-Tools geschult</li>
+<li>[ ] Backup/Restore-Prozeduren trainiert</li>
+<li>[ ] Change-Prozess durchgegangen</li>
+<li>[ ] Notfall-Prozeduren geübt</li>
+<li>[ ] Runbooks durchgearbeitet</li>
+</ul>
+<h4 id="management-briefing">Management Briefing</h4>
+<ul>
+<li>[ ] Service-Übersicht präsentiert</li>
+<li>[ ] SLAs und KPIs erklärt</li>
+<li>[ ] Risiken und Mitigationen besprochen</li>
+<li>[ ] Eskalationsprozesse kommuniziert</li>
+<li>[ ] Reporting-Mechanismen erklärt</li>
+</ul>
+<h3 id="phase-4-testing-1-2-wochen-vor-go-live">Phase 4: Testing (1-2 Wochen vor Go-Live)</h3>
+<h4 id="funktionale-tests">Funktionale Tests</h4>
+<ul>
+<li>[ ] Unit-Tests durchgeführt</li>
+<li>[ ] Integrationstests durchgeführt</li>
+<li>[ ] End-to-End-Tests durchgeführt</li>
+<li>[ ] User Acceptance Tests (UAT) durchgeführt</li>
+<li>[ ] Performance-Tests durchgeführt</li>
+<li>[ ] Security-Tests durchgeführt</li>
+</ul>
+<h4 id="betriebstests">Betriebstests</h4>
+<ul>
+<li>[ ] Backup-Test durchgeführt</li>
+<li>[ ] Restore-Test durchgeführt</li>
+<li>[ ] Failover-Test durchgeführt</li>
+<li>[ ] Monitoring-Alerts getestet</li>
+<li>[ ] Incident-Prozess getestet</li>
+<li>[ ] Eskalationsprozess getestet</li>
+</ul>
+<h4 id="disaster-recovery-test">Disaster Recovery Test</h4>
+<ul>
+<li>[ ] DR-Plan getestet</li>
+<li>[ ] Failover zu DR-Site getestet</li>
+<li>[ ] Failback zu Primary Site getestet</li>
+<li>[ ] RTO/RPO validiert</li>
+<li>[ ] DR-Dokumentation aktualisiert</li>
+</ul>
+<h3 id="phase-5-go-live-go-live-tag">Phase 5: Go-Live (Go-Live-Tag)</h3>
+<h4 id="pre-go-live-24-stunden-vorher">Pre-Go-Live (24 Stunden vorher)</h4>
+<ul>
+<li>[ ] Go/No-Go-Meeting durchgeführt</li>
+<li>[ ] Alle Stakeholder informiert</li>
+<li>[ ] Wartungsfenster kommuniziert</li>
+<li>[ ] Rollback-Plan final geprüft</li>
+<li>[ ] Backup vor Go-Live erstellt</li>
+<li>[ ] Change-Ticket genehmigt</li>
+</ul>
+<h4 id="go-live-aktivitaten">Go-Live-Aktivitäten</h4>
+<ul>
+<li>[ ] Wartungsfenster gestartet</li>
+<li>[ ] Service-Migration durchgeführt</li>
+<li>[ ] Konfigurationsänderungen angewendet</li>
+<li>[ ] Smoke-Tests durchgeführt</li>
+<li>[ ] Monitoring aktiviert</li>
+<li>[ ] Service-Status kommuniziert</li>
+</ul>
+<h4 id="post-go-live-unmittelbar-nach-go-live">Post-Go-Live (unmittelbar nach Go-Live)</h4>
+<ul>
+<li>[ ] Service-Verfügbarkeit bestätigt</li>
+<li>[ ] Monitoring-Dashboards geprüft</li>
+<li>[ ] Erste Transaktionen validiert</li>
+<li>[ ] Performance-Metriken geprüft</li>
+<li>[ ] Stakeholder informiert</li>
+<li>[ ] Go-Live-Protokoll erstellt</li>
+</ul>
+<h3 id="phase-6-hypercare-1-4-wochen-nach-go-live">Phase 6: Hypercare (1-4 Wochen nach Go-Live)</h3>
+<h4 id="hypercare-support">Hypercare-Support</h4>
+<ul>
+<li>[ ] Erweiterte Support-Zeiten aktiviert</li>
+<li>[ ] Zusätzliche Ressourcen bereitgestellt</li>
+<li>[ ] Tägliche Status-Meetings durchgeführt</li>
+<li>[ ] Incident-Tracking intensiviert</li>
+<li>[ ] Performance-Monitoring verstärkt</li>
+<li>[ ] User-Feedback gesammelt</li>
+</ul>
+<h4 id="stabilisierung">Stabilisierung</h4>
+<ul>
+<li>[ ] Kritische Issues behoben</li>
+<li>[ ] Performance optimiert</li>
+<li>[ ] Dokumentation aktualisiert</li>
+<li>[ ] Known Issues dokumentiert</li>
+<li>[ ] Lessons Learned dokumentiert</li>
+<li>[ ] Post-Implementation-Review durchgeführt</li>
+</ul>
+<hr />
+<h2 id="ubergabedokumentation">Übergabedokumentation</h2>
+<h3 id="ubergabe-paket">Übergabe-Paket</h3>
+<p>Das Übergabe-Paket muss folgende Dokumente enthalten:</p>
+<h4 id="technische-dokumentation">Technische Dokumentation</h4>
+<ol>
+<li><strong>Systemarchitektur</strong> (Kapitel 0040)</li>
+<li>Architekturdiagramme</li>
+<li>Komponentenbeschreibungen</li>
+<li>Datenflüsse</li>
+<li>
+<p>Abhängigkeiten</p>
+</li>
+<li>
+<p><strong>Infrastruktur</strong> (Kapitel 0050)</p>
+</li>
+<li>Hardware-Inventar</li>
+<li>Netzwerkkonfiguration</li>
+<li>IP-Adressierung</li>
+<li>
+<p>Virtualisierung/Cloud-Ressourcen</p>
+</li>
+<li>
+<p><strong>Konfiguration</strong> (Kapitel 0090)</p>
+</li>
+<li>Konfigurationsdateien</li>
+<li>CMDB-Einträge</li>
+<li>Netzwerk-Konfiguration</li>
+<li>Security-Konfiguration</li>
+</ol>
+<h4 id="betriebsdokumentation_1">Betriebsdokumentation</h4>
+<ol>
+<li><strong>Betriebsprozesse</strong> (Kapitel 0070)</li>
+<li>Betriebsmodell</li>
+<li>ITIL-Prozesse</li>
+<li>Eskalationspfade</li>
+<li>
+<p>KPIs und Metriken</p>
+</li>
+<li>
+<p><strong>Monitoring</strong> (Kapitel 0110)</p>
+</li>
+<li>Monitoring-Strategie</li>
+<li>Alert-Konfiguration</li>
+<li>Dashboard-Übersichten</li>
+<li>
+<p>Schwellwerte</p>
+</li>
+<li>
+<p><strong>Backup und Recovery</strong> (Kapitel 0150)</p>
+</li>
+<li>Backup-Strategie</li>
+<li>Backup-Zeitpläne</li>
+<li>Restore-Prozeduren</li>
+<li>RTO/RPO-Werte</li>
+</ol>
+<h4 id="support-dokumentation">Support-Dokumentation</h4>
+<ol>
+<li><strong>Runbooks</strong> (Kapitel 0240)</li>
+<li>Standard-Operationen</li>
+<li>Troubleshooting-Guides</li>
+<li>Notfall-Prozeduren</li>
+<li>
+<p>Wartungs-Checklisten</p>
+</li>
+<li>
+<p><strong>Known Issues und FAQ</strong> (Kapitel 0260)</p>
+</li>
+<li>Bekannte Probleme</li>
+<li>Workarounds</li>
+<li>Häufige Fragen</li>
+<li>
+<p>Lösungen</p>
+</li>
+<li>
+<p><strong>Kontakte</strong> (Kapitel 0270)</p>
+</li>
+<li>Ansprechpartner</li>
+<li>Eskalationskontakte</li>
+<li>Vendor-Kontakte</li>
+<li>On-Call-Informationen</li>
+</ol>
+<h3 id="ubergabe-meeting">Übergabe-Meeting</h3>
+<p><strong>Agenda:</strong>
+1. Service-Übersicht und Geschäftszweck
+2. Technische Architektur und Infrastruktur
+3. Betriebsprozesse und Verantwortlichkeiten
+4. Monitoring und Alerting
+5. Incident- und Problem-Management
+6. Backup und Disaster Recovery
+7. Known Issues und Risiken
+8. Fragen und Antworten</p>
+<p><strong>Teilnehmer:</strong>
+- Service Owner
+- IT Operations Manager: Andreas Huemmer
+- Technical Lead
+- Service Desk Lead: Julia Becker
+- CIO: Anna Schmidt</p>
+<hr />
+<h2 id="acceptance-kriterien">Acceptance-Kriterien</h2>
+<h3 id="technische-acceptance-kriterien">Technische Acceptance-Kriterien</h3>
+<table>
+<thead>
+<tr>
+<th>Kriterium</th>
+<th>Anforderung</th>
+<th>Status</th>
+<th>Verifiziert durch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Funktionalität</strong></td>
+<td>Alle Features funktionieren gemäß Spezifikation</td>
+<td>☐</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td><strong>Performance</strong></td>
+<td>Response-Zeiten &lt; [TODO] ms</td>
+<td>☐</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td><strong>Verfügbarkeit</strong></td>
+<td>Service erreichbar 24/7</td>
+<td>☐</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td><strong>Skalierbarkeit</strong></td>
+<td>Unterstützt [TODO] gleichzeitige Benutzer</td>
+<td>☐</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td><strong>Security</strong></td>
+<td>Security-Tests bestanden</td>
+<td>☐</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td><strong>Backup</strong></td>
+<td>Backup-Tests erfolgreich</td>
+<td>☐</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td><strong>Monitoring</strong></td>
+<td>Alle Metriken werden erfasst</td>
+<td>☐</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td><strong>Integration</strong></td>
+<td>Alle Schnittstellen funktionieren</td>
+<td>☐</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="betriebliche-acceptance-kriterien">Betriebliche Acceptance-Kriterien</h3>
+<table>
+<thead>
+<tr>
+<th>Kriterium</th>
+<th>Anforderung</th>
+<th>Status</th>
+<th>Verifiziert durch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Dokumentation</strong></td>
+<td>Vollständige Betriebsdokumentation</td>
+<td>☐</td>
+<td>IT Ops Manager</td>
+</tr>
+<tr>
+<td><strong>Training</strong></td>
+<td>Team geschult und einsatzbereit</td>
+<td>☐</td>
+<td>Service Desk Lead</td>
+</tr>
+<tr>
+<td><strong>Runbooks</strong></td>
+<td>Alle Runbooks erstellt und getestet</td>
+<td>☐</td>
+<td>IT Ops Manager</td>
+</tr>
+<tr>
+<td><strong>CMDB</strong></td>
+<td>Alle CIs dokumentiert</td>
+<td>☐</td>
+<td>CMDB Manager</td>
+</tr>
+<tr>
+<td><strong>SLA</strong></td>
+<td>SLAs definiert und vereinbart</td>
+<td>☐</td>
+<td>Service Manager</td>
+</tr>
+<tr>
+<td><strong>Support</strong></td>
+<td>Support-Prozesse etabliert</td>
+<td>☐</td>
+<td>Service Desk Lead</td>
+</tr>
+<tr>
+<td><strong>Monitoring</strong></td>
+<td>Monitoring aktiv und funktional</td>
+<td>☐</td>
+<td>Monitoring Team</td>
+</tr>
+<tr>
+<td><strong>Backup</strong></td>
+<td>Backup-Prozess etabliert</td>
+<td>☐</td>
+<td>Backup Admin</td>
+</tr>
+</tbody>
+</table>
+<h3 id="geschaftliche-acceptance-kriterien">Geschäftliche Acceptance-Kriterien</h3>
+<table>
+<thead>
+<tr>
+<th>Kriterium</th>
+<th>Anforderung</th>
+<th>Status</th>
+<th>Verifiziert durch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Business Requirements</strong></td>
+<td>Alle Geschäftsanforderungen erfüllt</td>
+<td>☐</td>
+<td>Service Owner</td>
+</tr>
+<tr>
+<td><strong>User Acceptance</strong></td>
+<td>UAT erfolgreich abgeschlossen</td>
+<td>☐</td>
+<td>Business Users</td>
+</tr>
+<tr>
+<td><strong>Compliance</strong></td>
+<td>Compliance-Anforderungen erfüllt</td>
+<td>☐</td>
+<td>Compliance Officer</td>
+</tr>
+<tr>
+<td><strong>Budget</strong></td>
+<td>Innerhalb des Budgets</td>
+<td>☐</td>
+<td>Maria Müller</td>
+</tr>
+<tr>
+<td><strong>Timeline</strong></td>
+<td>Zeitplan eingehalten</td>
+<td>☐</td>
+<td>Project Manager</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="gono-go-entscheidung">Go/No-Go-Entscheidung</h2>
+<h3 id="gono-go-meeting">Go/No-Go-Meeting</h3>
+<p><strong>Zeitpunkt:</strong> 24 Stunden vor geplantem Go-Live<br />
+<strong>Teilnehmer:</strong>
+- Service Owner
+- IT Operations Manager: Andreas Huemmer
+- Technical Lead
+- Change Manager
+- CIO: Anna Schmidt</p>
+<h3 id="entscheidungskriterien">Entscheidungskriterien</h3>
+<table>
+<thead>
+<tr>
+<th>Kriterium</th>
+<th>Go</th>
+<th>No-Go</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Alle Tests bestanden</strong></td>
+<td>✓</td>
+<td>✗</td>
+<td>☐</td>
+</tr>
+<tr>
+<td><strong>Dokumentation vollständig</strong></td>
+<td>✓</td>
+<td>✗</td>
+<td>☐</td>
+</tr>
+<tr>
+<td><strong>Team trainiert</strong></td>
+<td>✓</td>
+<td>✗</td>
+<td>☐</td>
+</tr>
+<tr>
+<td><strong>Keine kritischen Issues</strong></td>
+<td>✓</td>
+<td>✗</td>
+<td>☐</td>
+</tr>
+<tr>
+<td><strong>Rollback-Plan vorhanden</strong></td>
+<td>✓</td>
+<td>✗</td>
+<td>☐</td>
+</tr>
+<tr>
+<td><strong>Stakeholder informiert</strong></td>
+<td>✓</td>
+<td>✗</td>
+<td>☐</td>
+</tr>
+<tr>
+<td><strong>Change genehmigt</strong></td>
+<td>✓</td>
+<td>✗</td>
+<td>☐</td>
+</tr>
+<tr>
+<td><strong>Backup erstellt</strong></td>
+<td>✓</td>
+<td>✗</td>
+<td>☐</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Entscheidung:</strong> ☐ GO ☐ NO-GO</p>
+<p><strong>Begründung:</strong> [TODO]</p>
+<p><strong>Unterschriften:</strong>
+- Service Owner: <strong><em>_</em></strong><strong><em>_</em></strong><strong><em> Datum: </em></strong><strong><em>_
+- IT Operations Manager: </em></strong><strong><em>_</em></strong><strong><em>_</em></strong> Datum: <strong><em>_</em></strong>
+- CIO: <strong><em>_</em></strong><strong><em>_</em></strong><strong><em> Datum: </em></strong>____</p>
+<hr />
+<h2 id="rollback-plan">Rollback-Plan</h2>
+<h3 id="rollback-trigger">Rollback-Trigger</h3>
+<p>Rollback wird ausgelöst bei:
+- Kritischen Funktionsausfällen
+- Schwerwiegenden Performance-Problemen
+- Datenverlust oder Datenkorruption
+- Security-Incidents
+- Nicht erfüllten Acceptance-Kriterien</p>
+<h3 id="rollback-prozedur">Rollback-Prozedur</h3>
+<ol>
+<li><strong>Entscheidung:</strong> IT Operations Manager entscheidet über Rollback</li>
+<li><strong>Kommunikation:</strong> Stakeholder informieren</li>
+<li><strong>Wartungsfenster:</strong> Falls erforderlich, Wartungsfenster aktivieren</li>
+<li><strong>Backup-Restore:</strong> Letztes funktionierendes Backup wiederherstellen</li>
+<li><strong>Konfiguration:</strong> Alte Konfiguration wiederherstellen</li>
+<li><strong>Validierung:</strong> Funktionalität prüfen</li>
+<li><strong>Kommunikation:</strong> Rollback-Abschluss kommunizieren</li>
+<li><strong>Post-Mortem:</strong> Ursachenanalyse durchführen</li>
+</ol>
+<h3 id="rollback-zeitfenster">Rollback-Zeitfenster</h3>
+<ul>
+<li><strong>Innerhalb 4 Stunden nach Go-Live:</strong> Schneller Rollback möglich</li>
+<li><strong>4-24 Stunden nach Go-Live:</strong> Rollback mit erhöhtem Aufwand</li>
+<li><strong>Nach 24 Stunden:</strong> Rollback nur nach sorgfältiger Analyse</li>
+</ul>
+<hr />
+<h2 id="post-implementation-review">Post-Implementation-Review</h2>
+<h3 id="review-meeting">Review-Meeting</h3>
+<p><strong>Zeitpunkt:</strong> 2-4 Wochen nach Go-Live<br />
+<strong>Teilnehmer:</strong> Alle Projektbeteiligten</p>
+<p><strong>Agenda:</strong>
+1. Go-Live-Verlauf Review
+2. Lessons Learned
+3. Issues und Resolutionen
+4. Performance-Analyse
+5. User-Feedback
+6. Verbesserungsvorschläge
+7. Nächste Schritte</p>
+<h3 id="lessons-learned">Lessons Learned</h3>
+<table>
+<thead>
+<tr>
+<th>Kategorie</th>
+<th>Was lief gut?</th>
+<th>Was lief schlecht?</th>
+<th>Verbesserungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Planung</strong></td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td><strong>Kommunikation</strong></td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td><strong>Testing</strong></td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td><strong>Training</strong></td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td><strong>Go-Live</strong></td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td><strong>Support</strong></td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="metriken-nach-go-live">Metriken nach Go-Live</h3>
+<table>
+<thead>
+<tr>
+<th>Metrik</th>
+<th style="text-align: right;">Zielwert</th>
+<th style="text-align: right;">Ist-Wert</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Verfügbarkeit (erste Woche)</strong></td>
+<td style="text-align: right;">≥ 99%</td>
+<td style="text-align: right;">[TODO]%</td>
+<td>☐</td>
+</tr>
+<tr>
+<td><strong>Incidents (erste Woche)</strong></td>
+<td style="text-align: right;">≤ 10</td>
+<td style="text-align: right;">[TODO]</td>
+<td>☐</td>
+</tr>
+<tr>
+<td><strong>MTTR (erste Woche)</strong></td>
+<td style="text-align: right;">≤ 4h</td>
+<td style="text-align: right;">[TODO]h</td>
+<td>☐</td>
+</tr>
+<tr>
+<td><strong>User Satisfaction</strong></td>
+<td style="text-align: right;">≥ 80%</td>
+<td style="text-align: right;">[TODO]%</td>
+<td>☐</td>
+</tr>
+<tr>
+<td><strong>Performance</strong></td>
+<td style="text-align: right;">&lt; [TODO] ms</td>
+<td style="text-align: right;">[TODO] ms</td>
+<td>☐</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="kontakte">Kontakte</h2>
+<p><strong>Go-Live-Team:</strong>
+- <strong>Service Owner:</strong> [TODO: Name] - [TODO: E-Mail]
+- <strong>IT Operations Manager:</strong> Andreas Huemmer - andreas.huemmer@adminsend.de
+- <strong>Technical Lead:</strong> [TODO: Name] - [TODO: E-Mail]
+- <strong>Service Desk Lead:</strong> Julia Becker - julia.becker@adminsend.de
+- <strong>Change Manager:</strong> [TODO: Name] - [TODO: E-Mail]
+- <strong>CIO:</strong> Anna Schmidt - anna.schmidt@adminsend.de</p>
+<hr />
+<p><strong>Dokumentverantwortlicher:</strong> IT Operations Manager<br />
+<strong>Genehmigt durch:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Organisation:</strong> AdminSend GmbH</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0070_Betriebskonzept_und_Betriebsprozesse.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0090_Konfigurationsmanagement_und_CMDB.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

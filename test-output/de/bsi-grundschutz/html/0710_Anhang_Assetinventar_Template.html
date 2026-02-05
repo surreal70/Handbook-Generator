@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0710 - Anhang: Assetinventar (Template)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0710</div>
+            <h1>Anhang: Assetinventar (Template)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0700_Anhang_Nachweisregister_Evidence.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0720_Anhang_Datenfluesse_und_Schnittstellen_Template.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="anhang-assetinventar-template">Anhang: Assetinventar (Template)</h1>
+<p><strong>Dokument-ID:</strong> 0710<br />
+<strong>Dokumenttyp:</strong> Anhang/Template<br />
+<strong>Referenzrahmen:</strong> BSI IT-Grundschutz (BSI Standards 200-1/200-2)<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> {{ meta.document.status }}<br />
+<strong>Klassifizierung:</strong> internal<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.last_updated }}<br />
+<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-zweck-und-zielsetzung">1. Zweck und Zielsetzung</h2>
+<p>Das Assetinventar von <strong>AdminSend GmbH</strong> dokumentiert alle IT-Assets im Geltungsbereich des ISMS.</p>
+<p><strong>Verantwortlich:</strong> Anna Schmidt</p>
+<h2 id="2-hinweis-zur-pflege">2. Hinweis zur Pflege</h2>
+<p><strong>Empfehlung:</strong> Dieses Inventar sollte in einer CMDB (Configuration Management Database) oder einem Asset-Management-Tool gepflegt werden. Dieses Dokument dient als Template/Export-Format.</p>
+<p><strong>CMDB-System:</strong> [TODO: z.B. ServiceNow, Device42, NetBox]<br />
+<strong>Ablageort:</strong> {{ netbox.url }} oder [TODO]</p>
+<h2 id="3-asset-kategorien">3. Asset-Kategorien</h2>
+<h3 id="31-hardware-assets">3.1 Hardware-Assets</h3>
+<ul>
+<li>Server (physisch, virtuell)</li>
+<li>Netzwerkgeräte (Router, Switches, Firewalls)</li>
+<li>Storage-Systeme</li>
+<li>Endpoints (Laptops, Desktops, Mobile Devices)</li>
+<li>IoT-Geräte</li>
+</ul>
+<h3 id="32-software-assets">3.2 Software-Assets</h3>
+<ul>
+<li>Betriebssysteme</li>
+<li>Anwendungen (kommerziell, Open Source, Eigenentwicklung)</li>
+<li>Datenbanken</li>
+<li>Middleware</li>
+</ul>
+<h3 id="33-daten-assets">3.3 Daten-Assets</h3>
+<ul>
+<li>Datenbanken</li>
+<li>Fileserver/Shares</li>
+<li>Cloud-Storage</li>
+<li>Backup-Medien</li>
+</ul>
+<h3 id="34-services">3.4 Services</h3>
+<ul>
+<li>IT-Services (intern, extern)</li>
+<li>Cloud-Services (SaaS, PaaS, IaaS)</li>
+</ul>
+<h2 id="4-asset-register">4. Asset-Register</h2>
+<table>
+<thead>
+<tr>
+<th>Asset-ID</th>
+<th>Name</th>
+<th>Typ</th>
+<th>Kategorie</th>
+<th>Owner</th>
+<th>Standort/Region</th>
+<th>Schutzbedarf (C/I/A)</th>
+<th>Lebenszyklusstatus</th>
+<th>Hersteller</th>
+<th>Modell</th>
+<th>Seriennummer</th>
+<th>Anschaffungsdatum</th>
+<th>EOL-Datum</th>
+<th>Bemerkungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{{ netbox.device.id }}</td>
+<td>{{ netbox.device.name }}</td>
+<td>Server</td>
+<td>Hardware</td>
+<td>Anna Schmidt</td>
+<td>{{ netbox.site.name }}</td>
+<td>[TODO]</td>
+<td>Produktiv</td>
+<td>{{ netbox.device.manufacturer }}</td>
+<td>{{ netbox.device.model }}</td>
+<td>{{ netbox.device.serial }}</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Schutzbedarf-Kategorien:</strong>
+- <strong>Normal:</strong> Standard-Schutzbedarf
+- <strong>Hoch:</strong> Erhöhter Schutzbedarf
+- <strong>Sehr hoch:</strong> Kritischer Schutzbedarf</p>
+<p><strong>Lebenszyklusstatus:</strong>
+- <strong>Planung:</strong> In Beschaffung
+- <strong>Entwicklung:</strong> In Entwicklung/Konfiguration
+- <strong>Produktiv:</strong> Im Produktivbetrieb
+- <strong>Wartung:</strong> In Wartung/Support
+- <strong>Außerbetrieb:</strong> Stillgelegt
+- <strong>Entsorgung:</strong> Zur Entsorgung vorgesehen</p>
+<h2 id="5-netbox-integration">5. NetBox-Integration</h2>
+<p><strong>NetBox-Instanz:</strong> {{ netbox.url }}</p>
+<p><strong>Verfügbare Daten aus NetBox:</strong>
+- Geräte: {{ netbox.device.name }}, {{ netbox.device.type }}, {{ netbox.device.role }}
+- Standorte: {{ netbox.site.name }}, {{ netbox.site.region }}
+- IP-Adressen: {{ netbox.ipaddress.address }}
+- VLANs: {{ netbox.vlan.name }}, {{ netbox.vlan.id }}
+- Racks: {{ netbox.rack.name }}, {{ netbox.rack.location }}</p>
+<p><strong>Synchronisation:</strong> [TODO: Automatisch/Manuell, Frequenz]</p>
+<h2 id="6-asset-lifecycle-management">6. Asset-Lifecycle-Management</h2>
+<h3 id="61-beschaffung">6.1 Beschaffung</h3>
+<ul>
+<li>Asset wird erfasst (Status: Planung)</li>
+<li>Schutzbedarf wird festgestellt</li>
+<li>Owner wird zugewiesen</li>
+</ul>
+<h3 id="62-inbetriebnahme">6.2 Inbetriebnahme</h3>
+<ul>
+<li>Asset wird konfiguriert und gehärtet</li>
+<li>Asset wird in Produktion überführt (Status: Produktiv)</li>
+<li>Monitoring wird aktiviert</li>
+</ul>
+<h3 id="63-betrieb">6.3 Betrieb</h3>
+<ul>
+<li>Regelmäßige Updates und Patches</li>
+<li>Monitoring und Wartung</li>
+<li>Änderungen werden dokumentiert (Change Management)</li>
+</ul>
+<h3 id="64-auerbetriebnahme">6.4 Außerbetriebnahme</h3>
+<ul>
+<li>Asset wird stillgelegt (Status: Außerbetrieb)</li>
+<li>Daten werden sicher gelöscht</li>
+<li>Asset wird entsorgt (Status: Entsorgung)</li>
+</ul>
+<p><strong>Referenz:</strong> Dokument 0250 (Asset Lifecycle)</p>
+<h2 id="7-verantwortlichkeiten-raci">7. Verantwortlichkeiten (RACI)</h2>
+<table>
+<thead>
+<tr>
+<th>Aktivität</th>
+<th>IT-Leitung</th>
+<th>Asset-Owner</th>
+<th>CMDB-Admin</th>
+<th>ISB</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Asset erfassen</td>
+<td>A</td>
+<td>R</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Schutzbedarf festlegen</td>
+<td>A</td>
+<td>C</td>
+<td>I</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Asset aktualisieren</td>
+<td>I</td>
+<td>R</td>
+<td>A</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Asset-Review (jährlich)</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Asset-Entsorgung</td>
+<td>A</td>
+<td>R</td>
+<td>I</td>
+<td>C</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legende:</strong>
+- <strong>R</strong> = Responsible (Durchführungsverantwortung)
+- <strong>A</strong> = Accountable (Gesamtverantwortung)
+- <strong>C</strong> = Consulted (Konsultiert)
+- <strong>I</strong> = Informed (Informiert)</p>
+<h2 id="8-asset-tagging">8. Asset-Tagging</h2>
+<p><strong>Tagging-Schema:</strong>
+- <strong>Environment:</strong> Production, Staging, Development, Test
+- <strong>Criticality:</strong> Critical, High, Medium, Low
+- <strong>Owner:</strong> Bereichsverantwortlicher
+- <strong>Compliance:</strong> ISO27001, BSI, DSGVO, etc.
+- <strong>Backup:</strong> Yes/No
+- <strong>DR:</strong> Yes/No</p>
+<p><strong>Beispiel (Cloud-Ressourcen):</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="n">Environment</span><span class="o">:</span><span class="w"> </span><span class="n">Production</span>
+<span class="n">Criticality</span><span class="o">:</span><span class="w"> </span><span class="n">High</span>
+<span class="n">Owner</span><span class="o">:</span><span class="w"> </span><span class="n">Anna</span><span class="w"> </span><span class="n">Schmidt</span>
+<span class="n">Compliance</span><span class="o">:</span><span class="w"> </span><span class="n">ISO27001</span><span class="o">,</span><span class="w"> </span><span class="n">BSI</span>
+<span class="n">Backup</span><span class="o">:</span><span class="w"> </span><span class="n">Yes</span>
+<span class="n">DR</span><span class="o">:</span><span class="w"> </span><span class="n">Yes</span>
+</code></pre></div>
+
+<h2 id="9-reporting">9. Reporting</h2>
+<p><strong>Regelmäßige Reports:</strong>
+- <strong>Monatlich:</strong> Asset-Bestandsübersicht
+- <strong>Quartalsweise:</strong> EOL-Report (Assets mit nahendem End-of-Life)
+- <strong>Jährlich:</strong> Vollständiger Asset-Review</p>
+<p><strong>Verantwortlich:</strong> Anna Schmidt</p>
+<h2 id="10-freigabe">10. Freigabe</h2>
+<table>
+<thead>
+<tr>
+<th>Rolle</th>
+<th>Name</th>
+<th>Datum</th>
+<th>Freigabe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IT-Leitung</td>
+<td>Anna Schmidt</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+<tr>
+<td>ISB</td>
+<td>Thomas Weber</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Referenzen:</strong>
+- BSI IT-Grundschutz-Kompendium: OPS.1.1.1 Allgemeiner IT-Betrieb
+- BSI IT-Grundschutz-Kompendium: OPS.1.2.2 Archivierung
+- Dokument 0050: Strukturanalyse
+- Dokument 0060: Schutzbedarfsfeststellung
+- Dokument 0250: Asset Lifecycle</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0700_Anhang_Nachweisregister_Evidence.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0720_Anhang_Datenfluesse_und_Schnittstellen_Template.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

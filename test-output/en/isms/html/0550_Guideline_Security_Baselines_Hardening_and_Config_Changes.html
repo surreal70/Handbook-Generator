@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0550 - Guideline: Security Baselines, Hardening and Configuration Changes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0550</div>
+            <h1>Guideline: Security Baselines, Hardening and Configuration Changes</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0540_Policy_Configuration_and_Hardening.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0560_Policy_Data_Protection_Interfaces.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="guideline-security-baselines-hardening-and-configuration-changes">Guideline: Security Baselines, Hardening and Configuration Changes</h1>
+<p><strong>Document ID:</strong> 0550<br />
+<strong>Document Type:</strong> Guideline (detailed)<br />
+<strong>Associated Policy:</strong> 0540_Policy_Configuration_and_Hardening.md<br />
+<strong>Standard Reference:</strong> ISO/IEC 27001:2022 Annex A.8.9<br />
+<strong>Owner:</strong> {{ meta.it_operations.manager }}<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Approved<br />
+<strong>Classification:</strong> Confidential<br />
+<strong>Last Updated:</strong> {{ meta.document.date }}</p>
+<hr />
+<h2 id="1-purpose-and-scope">1. Purpose and Scope</h2>
+<p>This guideline specifies the <code>0540_Policy_Configuration_and_Hardening.md</code> and defines:
+- Security baselines for different system types
+- Hardening processes and standards
+- Configuration management and change control</p>
+<p><strong>Scope:</strong> All IT systems at <strong>AdminSend GmbH</strong></p>
+<h2 id="2-security-baselines">2. Security Baselines</h2>
+<h3 id="21-windows-server">2.1 Windows Server</h3>
+<p><strong>Baseline Standard:</strong> CIS Benchmark Level 1</p>
+<p><strong>Core Requirements:</strong>
+- Disable local administrator accounts (except break-glass)
+- Windows Firewall enabled
+- Windows Defender enabled
+- Automatic updates enabled
+- SMBv1 disabled
+- PowerShell logging enabled
+- Audit policies configured</p>
+<p><strong>Tools:</strong>
+- Group Policy Objects (GPOs)
+- Microsoft Security Compliance Toolkit
+- CIS-CAT Pro</p>
+<h3 id="22-linux-server">2.2 Linux Server</h3>
+<p><strong>Baseline Standard:</strong> CIS Benchmark Level 1</p>
+<p><strong>Core Requirements:</strong>
+- Root login via SSH disabled
+- SSH key-based authentication
+- Firewall (iptables/firewalld) enabled
+- SELinux/AppArmor enabled
+- Automatic security updates
+- Unnecessary services disabled
+- Audit daemon (auditd) enabled</p>
+<p><strong>Tools:</strong>
+- Ansible/Puppet for configuration management
+- Lynis for security audits</p>
+<h3 id="23-network-devices">2.3 Network Devices</h3>
+<p><strong>Baseline Standard:</strong> Vendor best practices + CIS Benchmarks</p>
+<p><strong>Core Requirements:</strong>
+- Default passwords changed
+- SNMP v3 (or disabled)
+- Unused ports disabled
+- Management access only via dedicated VLAN
+- Logging to SIEM
+- NTP configured</p>
+<h3 id="24-cloud-workloads">2.4 Cloud Workloads</h3>
+<p><strong>Baseline Standard:</strong> Cloud Security Posture Management (CSPM)</p>
+<p><strong>Azure:</strong>
+- Azure Security Benchmark
+- Microsoft Defender for Cloud recommendations</p>
+<p><strong>AWS:</strong>
+- AWS Foundational Security Best Practices
+- CIS AWS Foundations Benchmark</p>
+<p><strong>GCP:</strong>
+- CIS Google Cloud Platform Foundation Benchmark</p>
+<h2 id="3-hardening-process">3. Hardening Process</h2>
+<h3 id="31-build-phase">3.1 Build Phase</h3>
+<p><strong>Golden Images:</strong>
+- Pre-configured, hardened images
+- Regular updates (monthly)
+- Automated builds (CI/CD)</p>
+<p><strong>Process:</strong>
+1. Base image (vendor)
+2. Apply hardening scripts
+3. Security scan
+4. Approval
+5. Image repository</p>
+<h3 id="32-deployment-phase">3.2 Deployment Phase</h3>
+<p><strong>Automation:</strong>
+- Infrastructure as Code (Terraform, ARM Templates)
+- Configuration Management (Ansible, Puppet, Chef)
+- Compliance checks before deployment</p>
+<p><strong>Manual Steps:</strong>
+- Only for exceptions
+- Documentation required
+- Post-deployment verification</p>
+<h3 id="33-maintenance-phase">3.3 Maintenance Phase</h3>
+<p><strong>Regular Reviews:</strong>
+- Quarterly configuration audits
+- Drift detection (deviations from baseline)
+- Remediation of non-compliance</p>
+<h2 id="4-configuration-management">4. Configuration Management</h2>
+<h3 id="41-configuration-management-database-cmdb">4.1 Configuration Management Database (CMDB)</h3>
+<p><strong>System:</strong> {{ meta.itsm.cmdb }}</p>
+<p><strong>Documented Configurations:</strong>
+- System type and version
+- Installed software
+- Network configuration
+- Security configuration
+- Baseline version</p>
+<h3 id="42-configuration-baselines">4.2 Configuration Baselines</h3>
+<p><strong>Baseline Versions:</strong>
+- Major version: For significant changes
+- Minor version: For smaller updates
+- Patch version: For security fixes</p>
+<p><strong>Example:</strong> Windows-Server-Baseline v2.1.3</p>
+<h3 id="43-drift-detection">4.3 Drift Detection</h3>
+<p><strong>Monitoring:</strong>
+- Automatic scans (daily)
+- Comparison with baseline
+- Alerts for deviations</p>
+<p><strong>Tools:</strong>
+- Microsoft Defender for Cloud (Azure)
+- AWS Config (AWS)
+- Chef InSpec, Ansible Tower</p>
+<p><strong>Remediation:</strong>
+- Automatic correction (where possible)
+- Manual correction with ticket
+- Exception process (see Section 6)</p>
+<h2 id="5-configuration-changes">5. Configuration Changes</h2>
+<h3 id="51-change-process">5.1 Change Process</h3>
+<p><strong>All Configuration Changes Through Change Management:</strong>
+- Create change request (RFC)
+- Security impact assessment
+- Testing in dev/test
+- CAB approval
+- Implementation
+- Verification</p>
+<p><strong>Details:</strong> See <code>0370_Guideline_Change_Management_with_Security_Approvals</code></p>
+<h3 id="52-emergency-changes">5.2 Emergency Changes</h3>
+<p><strong>For Critical Security Fixes:</strong>
+- Expedited process
+- ECAB approval
+- Retrospective documentation</p>
+<h3 id="53-configuration-backup">5.3 Configuration Backup</h3>
+<p><strong>Before Each Change:</strong>
+- Backup of current configuration
+- Versioning
+- Rollback capability</p>
+<p><strong>Retention:</strong> {{ meta.retention.config_years }} years</p>
+<h2 id="6-exceptions-and-deviations">6. Exceptions and Deviations</h2>
+<h3 id="61-exception-process">6.1 Exception Process</h3>
+<p><strong>Request:</strong>
+- Justification (business justification)
+- Risk assessment
+- Compensating controls
+- Time limitation</p>
+<p><strong>Approval:</strong>
+- CISO approval required
+- Documentation in exception register
+- Regular review (quarterly)</p>
+<p><strong>Details:</strong> See <code>0640_Policy_Exceptions_and_Risk_Waivers.md</code></p>
+<h3 id="62-legacy-systems">6.2 Legacy Systems</h3>
+<p><strong>For Systems That Cannot Meet Baseline:</strong>
+- Implement compensating controls
+- Network isolation
+- Enhanced monitoring
+- Create migration plan</p>
+<h2 id="7-compliance-monitoring">7. Compliance Monitoring</h2>
+<h3 id="71-automated-compliance-scanning">7.1 Automated Compliance Scanning</h3>
+<p><strong>Tools:</strong>
+- <strong>Windows:</strong> Microsoft Security Compliance Toolkit, CIS-CAT
+- <strong>Linux:</strong> Lynis, OpenSCAP
+- <strong>Cloud:</strong> Cloud Security Posture Management (CSPM)
+- <strong>Network:</strong> Nessus, Qualys</p>
+<p><strong>Frequency:</strong>
+- Critical systems: Weekly
+- Standard systems: Monthly</p>
+<h3 id="72-compliance-reporting">7.2 Compliance Reporting</h3>
+<p><strong>Monthly Compliance Report:</strong>
+- Compliance rate per baseline
+- Top non-compliance items
+- Trend analysis
+- Remediation status</p>
+<p><strong>Target:</strong> &gt; 95% compliance</p>
+<h3 id="73-audit-evidence">7.3 Audit Evidence</h3>
+<ul>
+<li>Baseline documents</li>
+<li>Compliance scan reports</li>
+<li>Exception register</li>
+<li>Remediation tickets</li>
+</ul>
+<h2 id="8-hardening-standards">8. Hardening Standards</h2>
+<h3 id="81-reference-standards">8.1 Reference Standards</h3>
+<p><strong>Primary:</strong>
+- CIS Benchmarks (Center for Internet Security)
+- DISA STIGs (Defense Information Systems Agency Security Technical Implementation Guides)
+- Vendor best practices</p>
+<p><strong>Secondary:</strong>
+- NIST Cybersecurity Framework
+- BSI IT-Grundschutz</p>
+<h3 id="82-baseline-documentation">8.2 Baseline Documentation</h3>
+<p><strong>For Each Baseline:</strong>
+- Scope and applicability
+- Configuration settings (detailed)
+- Justification for each setting
+- Test procedures
+- Rollback procedures</p>
+<p><strong>Location:</strong> {{ meta.documentation.baseline_repo }}</p>
+<h2 id="9-compliance-and-audit">9. Compliance and Audit</h2>
+<h3 id="91-metrics-kpis">9.1 Metrics (KPIs)</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Target Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Baseline compliance rate</td>
+<td>&gt; 95%</td>
+</tr>
+<tr>
+<td>Drift remediation time</td>
+<td>&lt; 7 days</td>
+</tr>
+<tr>
+<td>Golden image currency</td>
+<td>&lt; 30 days</td>
+</tr>
+<tr>
+<td>Exceptions with current review</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="92-audit-evidence">9.2 Audit Evidence</h3>
+<ul>
+<li>Baseline documents</li>
+<li>Compliance scan reports</li>
+<li>Configuration backups</li>
+<li>Change records</li>
+</ul>
+<h2 id="10-references">10. References</h2>
+<h3 id="internal-documents">Internal Documents</h3>
+<ul>
+<li><code>0540_Policy_Configuration_and_Hardening.md</code></li>
+<li><code>0370_Guideline_Change_Management_with_Security_Approvals.md</code></li>
+<li><code>0640_Policy_Exceptions_and_Risk_Waivers.md</code></li>
+</ul>
+<h3 id="external-standards">External Standards</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.8.9</strong> - Configuration management</li>
+<li><strong>CIS Benchmarks</strong> - https://www.cisecurity.org/cis-benchmarks/</li>
+<li><strong>NIST SP 800-70</strong> - Security Configuration Checklists</li>
+</ul>
+<hr />
+<p><strong>Approved by:</strong> Thomas Weber, CISO<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0540_Policy_Configuration_and_Hardening.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0560_Policy_Data_Protection_Interfaces.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

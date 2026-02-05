@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0080 - Operations Handover and Go-Live Checklist</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0080</div>
+            <h1>Operations Handover and Go-Live Checklist</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0070_Operating_Concept_and_Processes.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0090_Configuration_Management_and_CMDB.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="operations-handover-and-go-live-checklist">Operations Handover and Go-Live Checklist</h1>
+<h2 id="overview">Overview</h2>
+<p>This document describes the operations handover process and contains a comprehensive go-live checklist for transitioning new or changed IT services into production.</p>
+<p><strong>Service:</strong> {{ meta.service_name }}<br />
+<strong>Responsible:</strong> Andreas Huemmer<br />
+<strong>Version:</strong> 1.0.0</p>
+<hr />
+<h2 id="operations-handover-process">Operations Handover Process</h2>
+<h3 id="phases-of-operations-handover">Phases of Operations Handover</h3>
+<div class="codehilite"><pre><span></span><code><span class="err">┌─────────────────┐</span>
+<span class="err">│</span><span class="w"> </span><span class="mf">1.</span><span class="w"> </span><span class="n">Preparation</span><span class="w">  </span><span class="err">│</span>
+<span class="err">└────────┬────────┘</span>
+<span class="w">         </span><span class="err">│</span>
+<span class="w">         </span><span class="err">▼</span>
+<span class="err">┌─────────────────┐</span>
+<span class="err">│</span><span class="w"> </span><span class="mf">2.</span><span class="w"> </span><span class="n">Documentation</span><span class="err">│</span>
+<span class="err">└────────┬────────┘</span>
+<span class="w">         </span><span class="err">│</span>
+<span class="w">         </span><span class="err">▼</span>
+<span class="err">┌─────────────────┐</span>
+<span class="err">│</span><span class="w"> </span><span class="mf">3.</span><span class="w"> </span><span class="n">Training</span><span class="w">     </span><span class="err">│</span>
+<span class="err">└────────┬────────┘</span>
+<span class="w">         </span><span class="err">│</span>
+<span class="w">         </span><span class="err">▼</span>
+<span class="err">┌─────────────────┐</span>
+<span class="err">│</span><span class="w"> </span><span class="mf">4.</span><span class="w"> </span><span class="n">Testing</span><span class="w">      </span><span class="err">│</span>
+<span class="err">└────────┬────────┘</span>
+<span class="w">         </span><span class="err">│</span>
+<span class="w">         </span><span class="err">▼</span>
+<span class="err">┌─────────────────┐</span>
+<span class="err">│</span><span class="w"> </span><span class="mf">5.</span><span class="w"> </span><span class="k">Go</span><span class="o">-</span><span class="n">Live</span><span class="w">      </span><span class="err">│</span>
+<span class="err">└────────┬────────┘</span>
+<span class="w">         </span><span class="err">│</span>
+<span class="w">         </span><span class="err">▼</span>
+<span class="err">┌─────────────────┐</span>
+<span class="err">│</span><span class="w"> </span><span class="mf">6.</span><span class="w"> </span><span class="n">Hypercare</span><span class="w">    </span><span class="err">│</span>
+<span class="err">└─────────────────┘</span>
+</code></pre></div>
+
+<h3 id="roles-and-responsibilities">Roles and Responsibilities</h3>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Responsibility</th>
+<th>Contact Person</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Service Owner</strong></td>
+<td>Overall service responsibility</td>
+<td>[TODO: Name]</td>
+</tr>
+<tr>
+<td><strong>IT Operations Manager</strong></td>
+<td>Coordinate operations takeover</td>
+<td>Andreas Huemmer</td>
+</tr>
+<tr>
+<td><strong>Technical Lead</strong></td>
+<td>Technical implementation</td>
+<td>[TODO: Name]</td>
+</tr>
+<tr>
+<td><strong>Service Desk Lead</strong></td>
+<td>Support readiness</td>
+<td>Julia Becker</td>
+</tr>
+<tr>
+<td><strong>Change Manager</strong></td>
+<td>Change approval</td>
+<td>[TODO: Name]</td>
+</tr>
+<tr>
+<td><strong>CIO</strong></td>
+<td>Final approval</td>
+<td>Anna Schmidt</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="go-live-checklist">Go-Live Checklist</h2>
+<h3 id="phase-1-preparation-4-6-weeks-before-go-live">Phase 1: Preparation (4-6 Weeks Before Go-Live)</h3>
+<h4 id="project-planning">Project Planning</h4>
+<ul>
+<li>[ ] Go-live date set and communicated</li>
+<li>[ ] Project team assembled</li>
+<li>[ ] Roles and responsibilities defined</li>
+<li>[ ] Communication plan created</li>
+<li>[ ] Risk assessment conducted</li>
+<li>[ ] Rollback plan created</li>
+</ul>
+<h4 id="infrastructure">Infrastructure</h4>
+<ul>
+<li>[ ] Hardware procured and installed</li>
+<li>[ ] Network connectivity configured</li>
+<li>[ ] Virtualization/cloud resources provisioned</li>
+<li>[ ] Storage capacity allocated</li>
+<li>[ ] Backup infrastructure set up</li>
+<li>[ ] Monitoring infrastructure prepared</li>
+</ul>
+<h4 id="software-and-licenses">Software and Licenses</h4>
+<ul>
+<li>[ ] Software licenses procured</li>
+<li>[ ] Software installed and configured</li>
+<li>[ ] Patches and updates applied</li>
+<li>[ ] License compliance verified</li>
+<li>[ ] Third-party software integrated</li>
+</ul>
+<h3 id="phase-2-documentation-3-4-weeks-before-go-live">Phase 2: Documentation (3-4 Weeks Before Go-Live)</h3>
+<h4 id="operations-documentation">Operations Documentation</h4>
+<ul>
+<li>[ ] Operations manual created (this document)</li>
+<li>[ ] System architecture documented (Chapter 0040)</li>
+<li>[ ] Infrastructure documented (Chapter 0050)</li>
+<li>[ ] Network diagrams created</li>
+<li>[ ] Configuration documentation complete</li>
+<li>[ ] CMDB entries created (Chapter 0090)</li>
+</ul>
+<h4 id="process-documentation">Process Documentation</h4>
+<ul>
+<li>[ ] Incident management process defined (Chapter 0120)</li>
+<li>[ ] Change management process defined (Chapter 0140)</li>
+<li>[ ] Backup process documented (Chapter 0150)</li>
+<li>[ ] Monitoring process documented (Chapter 0110)</li>
+<li>[ ] Escalation paths defined (Chapter 0070)</li>
+</ul>
+<h4 id="runbooks-and-guides">Runbooks and Guides</h4>
+<ul>
+<li>[ ] Standard runbooks created (Chapter 0240)</li>
+<li>[ ] Troubleshooting guides created</li>
+<li>[ ] Emergency runbooks created</li>
+<li>[ ] Maintenance checklists created</li>
+<li>[ ] FAQ document created (Chapter 0260)</li>
+</ul>
+<h3 id="phase-3-training-2-3-weeks-before-go-live">Phase 3: Training (2-3 Weeks Before Go-Live)</h3>
+<h4 id="service-desk-training">Service Desk Training</h4>
+<ul>
+<li>[ ] Service overview presented</li>
+<li>[ ] Incident handling trained</li>
+<li>[ ] Ticketing system trained</li>
+<li>[ ] Escalation processes explained</li>
+<li>[ ] FAQ and known issues reviewed</li>
+<li>[ ] Hands-on training conducted</li>
+</ul>
+<h4 id="operations-team-training">Operations Team Training</h4>
+<ul>
+<li>[ ] Technical architecture explained</li>
+<li>[ ] Monitoring tools trained</li>
+<li>[ ] Backup/restore procedures trained</li>
+<li>[ ] Change process reviewed</li>
+<li>[ ] Emergency procedures practiced</li>
+<li>[ ] Runbooks worked through</li>
+</ul>
+<h4 id="management-briefing">Management Briefing</h4>
+<ul>
+<li>[ ] Service overview presented</li>
+<li>[ ] SLAs and KPIs explained</li>
+<li>[ ] Risks and mitigations discussed</li>
+<li>[ ] Escalation processes communicated</li>
+<li>[ ] Reporting mechanisms explained</li>
+</ul>
+<h3 id="phase-4-testing-1-2-weeks-before-go-live">Phase 4: Testing (1-2 Weeks Before Go-Live)</h3>
+<h4 id="functional-tests">Functional Tests</h4>
+<ul>
+<li>[ ] Unit tests conducted</li>
+<li>[ ] Integration tests conducted</li>
+<li>[ ] End-to-end tests conducted</li>
+<li>[ ] User acceptance tests (UAT) conducted</li>
+<li>[ ] Performance tests conducted</li>
+<li>[ ] Security tests conducted</li>
+</ul>
+<h4 id="operational-tests">Operational Tests</h4>
+<ul>
+<li>[ ] Backup test conducted</li>
+<li>[ ] Restore test conducted</li>
+<li>[ ] Failover test conducted</li>
+<li>[ ] Monitoring alerts tested</li>
+<li>[ ] Incident process tested</li>
+<li>[ ] Escalation process tested</li>
+</ul>
+<h4 id="disaster-recovery-test">Disaster Recovery Test</h4>
+<ul>
+<li>[ ] DR plan tested</li>
+<li>[ ] Failover to DR site tested</li>
+<li>[ ] Failback to primary site tested</li>
+<li>[ ] RTO/RPO validated</li>
+<li>[ ] DR documentation updated</li>
+</ul>
+<h3 id="phase-5-go-live-go-live-day">Phase 5: Go-Live (Go-Live Day)</h3>
+<h4 id="pre-go-live-24-hours-before">Pre-Go-Live (24 Hours Before)</h4>
+<ul>
+<li>[ ] Go/No-Go meeting conducted</li>
+<li>[ ] All stakeholders informed</li>
+<li>[ ] Maintenance window communicated</li>
+<li>[ ] Rollback plan final review</li>
+<li>[ ] Backup before go-live created</li>
+<li>[ ] Change ticket approved</li>
+</ul>
+<h4 id="go-live-activities">Go-Live Activities</h4>
+<ul>
+<li>[ ] Maintenance window started</li>
+<li>[ ] Service migration performed</li>
+<li>[ ] Configuration changes applied</li>
+<li>[ ] Smoke tests conducted</li>
+<li>[ ] Monitoring activated</li>
+<li>[ ] Service status communicated</li>
+</ul>
+<h4 id="post-go-live-immediately-after-go-live">Post-Go-Live (Immediately After Go-Live)</h4>
+<ul>
+<li>[ ] Service availability confirmed</li>
+<li>[ ] Monitoring dashboards checked</li>
+<li>[ ] First transactions validated</li>
+<li>[ ] Performance metrics checked</li>
+<li>[ ] Stakeholders informed</li>
+<li>[ ] Go-live protocol created</li>
+</ul>
+<h3 id="phase-6-hypercare-1-4-weeks-after-go-live">Phase 6: Hypercare (1-4 Weeks After Go-Live)</h3>
+<h4 id="hypercare-support">Hypercare Support</h4>
+<ul>
+<li>[ ] Extended support hours activated</li>
+<li>[ ] Additional resources provided</li>
+<li>[ ] Daily status meetings conducted</li>
+<li>[ ] Incident tracking intensified</li>
+<li>[ ] Performance monitoring enhanced</li>
+<li>[ ] User feedback collected</li>
+</ul>
+<h4 id="stabilization">Stabilization</h4>
+<ul>
+<li>[ ] Critical issues resolved</li>
+<li>[ ] Performance optimized</li>
+<li>[ ] Documentation updated</li>
+<li>[ ] Known issues documented</li>
+<li>[ ] Lessons learned documented</li>
+<li>[ ] Post-implementation review conducted</li>
+</ul>
+<hr />
+<h2 id="handover-documentation">Handover Documentation</h2>
+<h3 id="handover-package">Handover Package</h3>
+<p>The handover package must contain the following documents:</p>
+<h4 id="technical-documentation">Technical Documentation</h4>
+<ol>
+<li><strong>System Architecture</strong> (Chapter 0040)</li>
+<li>Architecture diagrams</li>
+<li>Component descriptions</li>
+<li>Data flows</li>
+<li>
+<p>Dependencies</p>
+</li>
+<li>
+<p><strong>Infrastructure</strong> (Chapter 0050)</p>
+</li>
+<li>Hardware inventory</li>
+<li>Network configuration</li>
+<li>IP addressing</li>
+<li>
+<p>Virtualization/cloud resources</p>
+</li>
+<li>
+<p><strong>Configuration</strong> (Chapter 0090)</p>
+</li>
+<li>Configuration files</li>
+<li>CMDB entries</li>
+<li>Network configuration</li>
+<li>Security configuration</li>
+</ol>
+<h4 id="operations-documentation_1">Operations Documentation</h4>
+<ol>
+<li><strong>Operating Processes</strong> (Chapter 0070)</li>
+<li>Operating model</li>
+<li>ITIL processes</li>
+<li>Escalation paths</li>
+<li>
+<p>KPIs and metrics</p>
+</li>
+<li>
+<p><strong>Monitoring</strong> (Chapter 0110)</p>
+</li>
+<li>Monitoring strategy</li>
+<li>Alert configuration</li>
+<li>Dashboard overviews</li>
+<li>
+<p>Thresholds</p>
+</li>
+<li>
+<p><strong>Backup and Recovery</strong> (Chapter 0150)</p>
+</li>
+<li>Backup strategy</li>
+<li>Backup schedules</li>
+<li>Restore procedures</li>
+<li>RTO/RPO values</li>
+</ol>
+<h4 id="support-documentation">Support Documentation</h4>
+<ol>
+<li><strong>Runbooks</strong> (Chapter 0240)</li>
+<li>Standard operations</li>
+<li>Troubleshooting guides</li>
+<li>Emergency procedures</li>
+<li>
+<p>Maintenance checklists</p>
+</li>
+<li>
+<p><strong>Known Issues and FAQ</strong> (Chapter 0260)</p>
+</li>
+<li>Known problems</li>
+<li>Workarounds</li>
+<li>Frequently asked questions</li>
+<li>
+<p>Solutions</p>
+</li>
+<li>
+<p><strong>Contacts</strong> (Chapter 0270)</p>
+</li>
+<li>Contact persons</li>
+<li>Escalation contacts</li>
+<li>Vendor contacts</li>
+<li>On-call information</li>
+</ol>
+<h3 id="handover-meeting">Handover Meeting</h3>
+<p><strong>Agenda:</strong>
+1. Service overview and business purpose
+2. Technical architecture and infrastructure
+3. Operating processes and responsibilities
+4. Monitoring and alerting
+5. Incident and problem management
+6. Backup and disaster recovery
+7. Known issues and risks
+8. Questions and answers</p>
+<p><strong>Participants:</strong>
+- Service Owner
+- IT Operations Manager: Andreas Huemmer
+- Technical Lead
+- Service Desk Lead: Julia Becker
+- CIO: Anna Schmidt</p>
+<hr />
+<h2 id="acceptance-criteria">Acceptance Criteria</h2>
+<h3 id="technical-acceptance-criteria">Technical Acceptance Criteria</h3>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Requirement</th>
+<th>Status</th>
+<th>Verified By</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Functionality</strong></td>
+<td>All features work according to specification</td>
+<td>☐</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td><strong>Performance</strong></td>
+<td>Response times &lt; [TODO] ms</td>
+<td>☐</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td><strong>Availability</strong></td>
+<td>Service accessible 24/7</td>
+<td>☐</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td><strong>Scalability</strong></td>
+<td>Supports [TODO] concurrent users</td>
+<td>☐</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td><strong>Security</strong></td>
+<td>Security tests passed</td>
+<td>☐</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td><strong>Backup</strong></td>
+<td>Backup tests successful</td>
+<td>☐</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td><strong>Monitoring</strong></td>
+<td>All metrics captured</td>
+<td>☐</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td><strong>Integration</strong></td>
+<td>All interfaces functional</td>
+<td>☐</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="operational-acceptance-criteria">Operational Acceptance Criteria</h3>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Requirement</th>
+<th>Status</th>
+<th>Verified By</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Documentation</strong></td>
+<td>Complete operations documentation</td>
+<td>☐</td>
+<td>IT Ops Manager</td>
+</tr>
+<tr>
+<td><strong>Training</strong></td>
+<td>Team trained and ready</td>
+<td>☐</td>
+<td>Service Desk Lead</td>
+</tr>
+<tr>
+<td><strong>Runbooks</strong></td>
+<td>All runbooks created and tested</td>
+<td>☐</td>
+<td>IT Ops Manager</td>
+</tr>
+<tr>
+<td><strong>CMDB</strong></td>
+<td>All CIs documented</td>
+<td>☐</td>
+<td>CMDB Manager</td>
+</tr>
+<tr>
+<td><strong>SLA</strong></td>
+<td>SLAs defined and agreed</td>
+<td>☐</td>
+<td>Service Manager</td>
+</tr>
+<tr>
+<td><strong>Support</strong></td>
+<td>Support processes established</td>
+<td>☐</td>
+<td>Service Desk Lead</td>
+</tr>
+<tr>
+<td><strong>Monitoring</strong></td>
+<td>Monitoring active and functional</td>
+<td>☐</td>
+<td>Monitoring Team</td>
+</tr>
+<tr>
+<td><strong>Backup</strong></td>
+<td>Backup process established</td>
+<td>☐</td>
+<td>Backup Admin</td>
+</tr>
+</tbody>
+</table>
+<h3 id="business-acceptance-criteria">Business Acceptance Criteria</h3>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Requirement</th>
+<th>Status</th>
+<th>Verified By</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Business Requirements</strong></td>
+<td>All business requirements met</td>
+<td>☐</td>
+<td>Service Owner</td>
+</tr>
+<tr>
+<td><strong>User Acceptance</strong></td>
+<td>UAT successfully completed</td>
+<td>☐</td>
+<td>Business Users</td>
+</tr>
+<tr>
+<td><strong>Compliance</strong></td>
+<td>Compliance requirements met</td>
+<td>☐</td>
+<td>Compliance Officer</td>
+</tr>
+<tr>
+<td><strong>Budget</strong></td>
+<td>Within budget</td>
+<td>☐</td>
+<td>Maria Müller</td>
+</tr>
+<tr>
+<td><strong>Timeline</strong></td>
+<td>Schedule maintained</td>
+<td>☐</td>
+<td>Project Manager</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="gono-go-decision">Go/No-Go Decision</h2>
+<h3 id="gono-go-meeting">Go/No-Go Meeting</h3>
+<p><strong>Timing:</strong> 24 hours before planned go-live<br />
+<strong>Participants:</strong>
+- Service Owner
+- IT Operations Manager: Andreas Huemmer
+- Technical Lead
+- Change Manager
+- CIO: Anna Schmidt</p>
+<h3 id="decision-criteria">Decision Criteria</h3>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Go</th>
+<th>No-Go</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>All tests passed</strong></td>
+<td>✓</td>
+<td>✗</td>
+<td>☐</td>
+</tr>
+<tr>
+<td><strong>Documentation complete</strong></td>
+<td>✓</td>
+<td>✗</td>
+<td>☐</td>
+</tr>
+<tr>
+<td><strong>Team trained</strong></td>
+<td>✓</td>
+<td>✗</td>
+<td>☐</td>
+</tr>
+<tr>
+<td><strong>No critical issues</strong></td>
+<td>✓</td>
+<td>✗</td>
+<td>☐</td>
+</tr>
+<tr>
+<td><strong>Rollback plan available</strong></td>
+<td>✓</td>
+<td>✗</td>
+<td>☐</td>
+</tr>
+<tr>
+<td><strong>Stakeholders informed</strong></td>
+<td>✓</td>
+<td>✗</td>
+<td>☐</td>
+</tr>
+<tr>
+<td><strong>Change approved</strong></td>
+<td>✓</td>
+<td>✗</td>
+<td>☐</td>
+</tr>
+<tr>
+<td><strong>Backup created</strong></td>
+<td>✓</td>
+<td>✗</td>
+<td>☐</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Decision:</strong> ☐ GO ☐ NO-GO</p>
+<p><strong>Justification:</strong> [TODO]</p>
+<p><strong>Signatures:</strong>
+- Service Owner: <strong><em>_</em></strong><strong><em>_</em></strong><strong><em> Date: </em></strong><strong><em>_
+- IT Operations Manager: </em></strong><strong><em>_</em></strong><strong><em>_</em></strong> Date: <strong><em>_</em></strong>
+- CIO: <strong><em>_</em></strong><strong><em>_</em></strong><strong><em> Date: </em></strong>____</p>
+<hr />
+<h2 id="rollback-plan">Rollback Plan</h2>
+<h3 id="rollback-triggers">Rollback Triggers</h3>
+<p>Rollback is triggered by:
+- Critical functional failures
+- Severe performance problems
+- Data loss or data corruption
+- Security incidents
+- Unmet acceptance criteria</p>
+<h3 id="rollback-procedure">Rollback Procedure</h3>
+<ol>
+<li><strong>Decision:</strong> IT Operations Manager decides on rollback</li>
+<li><strong>Communication:</strong> Inform stakeholders</li>
+<li><strong>Maintenance Window:</strong> If required, activate maintenance window</li>
+<li><strong>Backup Restore:</strong> Restore last working backup</li>
+<li><strong>Configuration:</strong> Restore old configuration</li>
+<li><strong>Validation:</strong> Check functionality</li>
+<li><strong>Communication:</strong> Communicate rollback completion</li>
+<li><strong>Post-Mortem:</strong> Conduct root cause analysis</li>
+</ol>
+<h3 id="rollback-time-window">Rollback Time Window</h3>
+<ul>
+<li><strong>Within 4 hours after go-live:</strong> Quick rollback possible</li>
+<li><strong>4-24 hours after go-live:</strong> Rollback with increased effort</li>
+<li><strong>After 24 hours:</strong> Rollback only after careful analysis</li>
+</ul>
+<hr />
+<h2 id="post-implementation-review">Post-Implementation Review</h2>
+<h3 id="review-meeting">Review Meeting</h3>
+<p><strong>Timing:</strong> 2-4 weeks after go-live<br />
+<strong>Participants:</strong> All project stakeholders</p>
+<p><strong>Agenda:</strong>
+1. Go-live process review
+2. Lessons learned
+3. Issues and resolutions
+4. Performance analysis
+5. User feedback
+6. Improvement suggestions
+7. Next steps</p>
+<h3 id="lessons-learned">Lessons Learned</h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>What went well?</th>
+<th>What went poorly?</th>
+<th>Improvements</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Planning</strong></td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td><strong>Communication</strong></td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td><strong>Testing</strong></td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td><strong>Training</strong></td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td><strong>Go-Live</strong></td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td><strong>Support</strong></td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="metrics-after-go-live">Metrics After Go-Live</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th style="text-align: right;">Target Value</th>
+<th style="text-align: right;">Actual Value</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Availability (first week)</strong></td>
+<td style="text-align: right;">≥ 99%</td>
+<td style="text-align: right;">[TODO]%</td>
+<td>☐</td>
+</tr>
+<tr>
+<td><strong>Incidents (first week)</strong></td>
+<td style="text-align: right;">≤ 10</td>
+<td style="text-align: right;">[TODO]</td>
+<td>☐</td>
+</tr>
+<tr>
+<td><strong>MTTR (first week)</strong></td>
+<td style="text-align: right;">≤ 4h</td>
+<td style="text-align: right;">[TODO]h</td>
+<td>☐</td>
+</tr>
+<tr>
+<td><strong>User Satisfaction</strong></td>
+<td style="text-align: right;">≥ 80%</td>
+<td style="text-align: right;">[TODO]%</td>
+<td>☐</td>
+</tr>
+<tr>
+<td><strong>Performance</strong></td>
+<td style="text-align: right;">&lt; [TODO] ms</td>
+<td style="text-align: right;">[TODO] ms</td>
+<td>☐</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="contacts">Contacts</h2>
+<p><strong>Go-Live Team:</strong>
+- <strong>Service Owner:</strong> [TODO: Name] - [TODO: Email]
+- <strong>IT Operations Manager:</strong> Andreas Huemmer - andreas.huemmer@adminsend.de
+- <strong>Technical Lead:</strong> [TODO: Name] - [TODO: Email]
+- <strong>Service Desk Lead:</strong> Julia Becker - julia.becker@adminsend.de
+- <strong>Change Manager:</strong> [TODO: Name] - [TODO: Email]
+- <strong>CIO:</strong> Anna Schmidt - anna.schmidt@adminsend.de</p>
+<hr />
+<p><strong>Document Owner:</strong> IT Operations Manager<br />
+<strong>Approved by:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Organization:</strong> AdminSend GmbH</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0070_Operating_Concept_and_Processes.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0090_Configuration_Management_and_CMDB.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

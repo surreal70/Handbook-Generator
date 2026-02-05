@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0090 - Configuration Management and CMDB</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0090</div>
+            <h1>Configuration Management and CMDB</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0080_Operations_Handover_and_GoLive_Checklist.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0100_Access_and_Permission_Management.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="configuration-management-and-cmdb">Configuration Management and CMDB</h1>
+<h2 id="overview">Overview</h2>
+<p>This document describes configuration management and the Configuration Management Database (CMDB) for the IT service. It defines CI categories, attributes, relationships, and change processes for Configuration Items.</p>
+<p><strong>Service:</strong> {{ meta.service_name }}<br />
+<strong>Responsible:</strong> Andreas Huemmer<br />
+<strong>CMDB System:</strong> NetBox<br />
+<strong>Version:</strong> 1.0.0</p>
+<hr />
+<h2 id="configuration-management-process">Configuration Management Process</h2>
+<h3 id="configuration-management-objectives">Configuration Management Objectives</h3>
+<ul>
+<li><strong>Transparency:</strong> Complete overview of all IT assets and their relationships</li>
+<li><strong>Control:</strong> Controlled changes to Configuration Items</li>
+<li><strong>Compliance:</strong> Adherence to license and compliance requirements</li>
+<li><strong>Planning:</strong> Solid foundation for capacity and change planning</li>
+<li><strong>Incident Support:</strong> Faster incident resolution through CI information</li>
+</ul>
+<h3 id="itil-configuration-management-activities">ITIL Configuration Management Activities</h3>
+<ol>
+<li><strong>Management and Planning:</strong> Planning and control of configuration management</li>
+<li><strong>Configuration Identification:</strong> Identification and categorization of CIs</li>
+<li><strong>Configuration Control:</strong> Control of changes to CIs</li>
+<li><strong>Status Accounting:</strong> Recording and reporting of CI status</li>
+<li><strong>Verification and Audit:</strong> Verification of CMDB data quality</li>
+</ol>
+<hr />
+<h2 id="configuration-management-database-cmdb">Configuration Management Database (CMDB)</h2>
+<h3 id="cmdb-system-netbox">CMDB System: NetBox</h3>
+<p><strong>NetBox Instance:</strong>
+- <strong>URL:</strong> {{ netbox.url }}
+- <strong>Version:</strong> {{ netbox.version }}
+- <strong>Responsible:</strong> Andreas Huemmer</p>
+<p><strong>NetBox Functions:</strong>
+- IP Address Management (IPAM)
+- Data Center Infrastructure Management (DCIM)
+- Device Management
+- Circuit Management
+- Virtualization Management
+- Configuration Context</p>
+<h3 id="cmdb-structure">CMDB Structure</h3>
+<div class="codehilite"><pre><span></span><code>┌─────────────────────────────────────────────────────────────┐
+│                    CMDB (NetBox)                             │
+├─────────────────────────────────────────────────────────────┤
+│                                                              │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐     │
+│  │   Sites      │  │   Racks      │  │   Devices    │     │
+│  └──────────────┘  └──────────────┘  └──────────────┘     │
+│                                                              │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐     │
+│  │  IP Addresses│  │    VLANs     │  │   Circuits   │     │
+│  └──────────────┘  └──────────────┘  └──────────────┘     │
+│                                                              │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐     │
+│  │   Clusters   │  │Virtual Machines│ │  Interfaces  │     │
+│  └──────────────┘  └──────────────┘  └──────────────┘     │
+│                                                              │
+└─────────────────────────────────────────────────────────────┘
+</code></pre></div>
+
+<hr />
+<h2 id="ci-categories-and-attributes">CI Categories and Attributes</h2>
+<h3 id="hardware-cis">Hardware CIs</h3>
+<h4 id="servers">Servers</h4>
+<p><strong>Category:</strong> Hardware &gt; Server<br />
+<strong>Attributes:</strong>
+- <strong>Name:</strong> {{ netbox.device.name }}
+- <strong>Manufacturer:</strong> {{ netbox.device.manufacturer }}
+- <strong>Model:</strong> {{ netbox.device.model }}
+- <strong>Serial Number:</strong> {{ netbox.device.serial }}
+- <strong>Asset Tag:</strong> {{ netbox.device.asset_tag }}
+- <strong>Site:</strong> {{ netbox.device.site }}
+- <strong>Rack:</strong> {{ netbox.device.rack }}
+- <strong>Rack Position:</strong> {{ netbox.device.position }}
+- <strong>Status:</strong> Active, Planned, Staged, Failed, Decommissioned
+- <strong>Role:</strong> {{ netbox.device.role }}
+- <strong>Primary IP:</strong> {{ netbox.device.primary_ip }}</p>
+<h4 id="network-devices">Network Devices</h4>
+<p><strong>Category:</strong> Hardware &gt; Network<br />
+<strong>Attributes:</strong>
+- <strong>Name:</strong> {{ netbox.device.name }}
+- <strong>Type:</strong> Switch, Router, Firewall, Load Balancer
+- <strong>Manufacturer:</strong> {{ netbox.device.manufacturer }}
+- <strong>Model:</strong> {{ netbox.device.model }}
+- <strong>Management IP:</strong> {{ netbox.device.primary_ip }}
+- <strong>Site:</strong> {{ netbox.device.site }}
+- <strong>Interfaces:</strong> {{ netbox.device.interfaces }}
+- <strong>VLANs:</strong> {{ netbox.device.vlans }}</p>
+<h4 id="storage">Storage</h4>
+<p><strong>Category:</strong> Hardware &gt; Storage<br />
+<strong>Attributes:</strong>
+- <strong>Name:</strong> {{ netbox.device.name }}
+- <strong>Type:</strong> SAN, NAS, DAS
+- <strong>Capacity:</strong> [TODO] TB
+- <strong>Manufacturer:</strong> {{ netbox.device.manufacturer }}
+- <strong>Site:</strong> {{ netbox.device.site }}</p>
+<h3 id="software-cis">Software CIs</h3>
+<h4 id="operating-systems">Operating Systems</h4>
+<p><strong>Category:</strong> Software &gt; Operating System<br />
+<strong>Attributes:</strong>
+- <strong>Name:</strong> [TODO: e.g., Ubuntu Server 22.04]
+- <strong>Version:</strong> [TODO]
+- <strong>License:</strong> [TODO]
+- <strong>Installed on:</strong> {{ netbox.device.name }}
+- <strong>Patch Level:</strong> [TODO]</p>
+<h4 id="applications">Applications</h4>
+<p><strong>Category:</strong> Software &gt; Application<br />
+<strong>Attributes:</strong>
+- <strong>Name:</strong> [TODO: Application name]
+- <strong>Version:</strong> [TODO]
+- <strong>Vendor:</strong> [TODO]
+- <strong>License:</strong> [TODO]
+- <strong>License Count:</strong> [TODO]
+- <strong>Installed on:</strong> {{ netbox.device.name }}
+- <strong>Responsible:</strong> [TODO]</p>
+<h3 id="virtualization-cis">Virtualization CIs</h3>
+<h4 id="hypervisor-clusters">Hypervisor Clusters</h4>
+<p><strong>Category:</strong> Virtualization &gt; Cluster<br />
+<strong>Attributes:</strong>
+- <strong>Name:</strong> {{ netbox.cluster.name }}
+- <strong>Type:</strong> {{ netbox.cluster.type }}
+- <strong>Site:</strong> {{ netbox.cluster.site }}
+- <strong>Host Count:</strong> {{ netbox.cluster.device_count }}</p>
+<h4 id="virtual-machines">Virtual Machines</h4>
+<p><strong>Category:</strong> Virtualization &gt; Virtual Machine<br />
+<strong>Attributes:</strong>
+- <strong>Name:</strong> {{ netbox.vm.name }}
+- <strong>Cluster:</strong> {{ netbox.vm.cluster }}
+- <strong>vCPUs:</strong> {{ netbox.vm.vcpus }}
+- <strong>Memory:</strong> {{ netbox.vm.memory }} GB
+- <strong>Disk:</strong> {{ netbox.vm.disk }} GB
+- <strong>Status:</strong> Active, Offline, Staged
+- <strong>Primary IP:</strong> {{ netbox.vm.primary_ip }}
+- <strong>Operating System:</strong> [TODO]</p>
+<h3 id="network-cis">Network CIs</h3>
+<h4 id="ip-addresses">IP Addresses</h4>
+<p><strong>Category:</strong> Network &gt; IP Address<br />
+<strong>Attributes:</strong>
+- <strong>IP Address:</strong> {{ netbox.ip.address }}
+- <strong>VLAN:</strong> {{ netbox.ip.vlan }}
+- <strong>Status:</strong> Active, Reserved, Deprecated
+- <strong>DNS Name:</strong> {{ netbox.ip.dns_name }}
+- <strong>Assigned to:</strong> {{ netbox.ip.assigned_to }}</p>
+<h4 id="vlans">VLANs</h4>
+<p><strong>Category:</strong> Network &gt; VLAN<br />
+<strong>Attributes:</strong>
+- <strong>VLAN ID:</strong> {{ netbox.vlan.vid }}
+- <strong>Name:</strong> {{ netbox.vlan.name }}
+- <strong>Site:</strong> {{ netbox.vlan.site }}
+- <strong>Description:</strong> {{ netbox.vlan.description }}</p>
+<h4 id="circuits">Circuits</h4>
+<p><strong>Category:</strong> Network &gt; Circuit<br />
+<strong>Attributes:</strong>
+- <strong>Circuit ID:</strong> {{ netbox.circuit.cid }}
+- <strong>Provider:</strong> {{ netbox.circuit.provider }}
+- <strong>Type:</strong> {{ netbox.circuit.type }}
+- <strong>Bandwidth:</strong> {{ netbox.circuit.commit_rate }} Mbps
+- <strong>Status:</strong> Active, Planned, Decommissioned</p>
+<h3 id="location-cis">Location CIs</h3>
+<h4 id="sites">Sites</h4>
+<p><strong>Category:</strong> Location &gt; Site<br />
+<strong>Attributes:</strong>
+- <strong>Name:</strong> {{ netbox.site.name }}
+- <strong>Address:</strong> {{ netbox.site.physical_address }}
+- <strong>Facility:</strong> {{ netbox.site.facility }}
+- <strong>Status:</strong> Active, Planned, Retired
+- <strong>Contact:</strong> {{ netbox.site.contact_name }}</p>
+<hr />
+<h2 id="ci-relationships">CI Relationships</h2>
+<h3 id="relationship-types">Relationship Types</h3>
+<table>
+<thead>
+<tr>
+<th>Relationship</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Hosted on</strong></td>
+<td>CI runs on another CI</td>
+<td>VM hosted on Hypervisor</td>
+</tr>
+<tr>
+<td><strong>Connected to</strong></td>
+<td>Physical/logical connection</td>
+<td>Server connected to Switch</td>
+</tr>
+<tr>
+<td><strong>Depends on</strong></td>
+<td>Functional dependency</td>
+<td>Application depends on Database</td>
+</tr>
+<tr>
+<td><strong>Part of</strong></td>
+<td>Component of larger CI</td>
+<td>Disk part of Server</td>
+</tr>
+<tr>
+<td><strong>Uses</strong></td>
+<td>CI uses another CI</td>
+<td>Application uses IP Address</td>
+</tr>
+<tr>
+<td><strong>Managed by</strong></td>
+<td>Management relationship</td>
+<td>Device managed by Management System</td>
+</tr>
+</tbody>
+</table>
+<h3 id="relationship-diagram">Relationship Diagram</h3>
+<div class="codehilite"><pre><span></span><code>┌─────────────────┐
+│   Application   │
+└────────┬────────┘
+         │ depends on
+         ▼
+┌─────────────────┐
+│   Database      │
+└────────┬────────┘
+         │ hosted on
+         ▼
+┌─────────────────┐
+│  Virtual Machine│
+└────────┬────────┘
+         │ hosted on
+         ▼
+┌─────────────────┐
+│   Hypervisor    │
+└────────┬────────┘
+         │ installed on
+         ▼
+┌─────────────────┐
+│  Physical Server│
+└────────┬────────┘
+         │ connected to
+         ▼
+┌─────────────────┐
+│     Switch      │
+└─────────────────┘
+</code></pre></div>
+
+<h3 id="ci-dependencies">CI Dependencies</h3>
+<p><strong>Example: Web Application Stack</strong></p>
+<table>
+<thead>
+<tr>
+<th>CI</th>
+<th>Depends on</th>
+<th>Relationship Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Web Application</td>
+<td>Application Server</td>
+<td>depends on</td>
+</tr>
+<tr>
+<td>Application Server</td>
+<td>Database Server</td>
+<td>depends on</td>
+</tr>
+<tr>
+<td>Application Server</td>
+<td>Load Balancer</td>
+<td>connected to</td>
+</tr>
+<tr>
+<td>Database Server</td>
+<td>Storage Array</td>
+<td>uses</td>
+</tr>
+<tr>
+<td>Application Server</td>
+<td>Virtual Machine</td>
+<td>hosted on</td>
+</tr>
+<tr>
+<td>Virtual Machine</td>
+<td>Hypervisor Cluster</td>
+<td>hosted on</td>
+</tr>
+<tr>
+<td>Hypervisor Cluster</td>
+<td>Physical Servers</td>
+<td>consists of</td>
+</tr>
+<tr>
+<td>Physical Servers</td>
+<td>Network Switch</td>
+<td>connected to</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="change-processes-for-cis">Change Processes for CIs</h2>
+<h3 id="ci-lifecycle">CI Lifecycle</h3>
+<div class="codehilite"><pre><span></span><code>┌─────────────┐
+│   Planned   │
+└──────┬──────┘
+       │
+       ▼
+┌─────────────┐
+│   Staged    │
+└──────┬──────┘
+       │
+       ▼
+┌─────────────┐
+│   Active    │
+└──────┬──────┘
+       │
+       ▼
+┌─────────────┐
+│ Deprecated  │
+└──────┬──────┘
+       │
+       ▼
+┌─────────────┐
+│Decommissioned│
+└─────────────┘
+</code></pre></div>
+
+<h3 id="ci-change-process">CI Change Process</h3>
+<h4 id="1-ci-creation">1. CI Creation</h4>
+<p><strong>Trigger:</strong> New hardware/software procured<br />
+<strong>Process:</strong>
+1. Create CI in CMDB (Status: Planned)
+2. Capture attributes
+3. Define relationships
+4. Approval by IT Operations Manager
+5. Set status to "Staged"</p>
+<h4 id="2-ci-activation">2. CI Activation</h4>
+<p><strong>Trigger:</strong> CI put into operation<br />
+<strong>Process:</strong>
+1. Create change request (see Chapter 0140)
+2. Perform CI configuration
+3. Conduct tests
+4. Set status to "Active"
+5. Activate monitoring</p>
+<h4 id="3-ci-modification">3. CI Modification</h4>
+<p><strong>Trigger:</strong> Change to existing CI<br />
+<strong>Process:</strong>
+1. Create change request
+2. Conduct impact analysis
+3. Identify dependent CIs
+4. Perform change
+5. Update CMDB
+6. Conduct validation</p>
+<h4 id="4-ci-deactivation">4. CI Deactivation</h4>
+<p><strong>Trigger:</strong> Take CI out of operation<br />
+<strong>Process:</strong>
+1. Create change request
+2. Check dependencies
+3. Create backup
+4. Deactivate CI
+5. Set status to "Deprecated"
+6. Deactivate monitoring</p>
+<h4 id="5-ci-deletion">5. CI Deletion</h4>
+<p><strong>Trigger:</strong> Permanently remove CI<br />
+<strong>Process:</strong>
+1. Ensure no dependencies exist
+2. Archive data
+3. Return licenses
+4. Set status to "Decommissioned"
+5. Delete from CMDB after retention period</p>
+<h3 id="change-approval-for-cis">Change Approval for CIs</h3>
+<table>
+<thead>
+<tr>
+<th>CI Category</th>
+<th>Approval Required By</th>
+<th>Change Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Critical Servers</strong></td>
+<td>IT Operations Manager + CIO</td>
+<td>Normal Change</td>
+</tr>
+<tr>
+<td><strong>Network Core</strong></td>
+<td>IT Operations Manager + CIO</td>
+<td>Normal Change</td>
+</tr>
+<tr>
+<td><strong>Standard Servers</strong></td>
+<td>IT Operations Manager</td>
+<td>Standard Change</td>
+</tr>
+<tr>
+<td><strong>Workstations</strong></td>
+<td>Service Desk Lead</td>
+<td>Standard Change</td>
+</tr>
+<tr>
+<td><strong>IP Addresses</strong></td>
+<td>Network Administrator</td>
+<td>Standard Change</td>
+</tr>
+<tr>
+<td><strong>Virtual Machines</strong></td>
+<td>Virtualization Admin</td>
+<td>Standard Change</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="cmdb-data-quality">CMDB Data Quality</h2>
+<h3 id="data-quality-metrics">Data Quality Metrics</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th style="text-align: right;">Target Value</th>
+<th>Measurement Frequency</th>
+<th>Responsible</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Completeness</strong></td>
+<td style="text-align: right;">≥ 95%</td>
+<td>Monthly</td>
+<td>CMDB Manager</td>
+</tr>
+<tr>
+<td><strong>Accuracy</strong></td>
+<td style="text-align: right;">≥ 98%</td>
+<td>Monthly</td>
+<td>CMDB Manager</td>
+</tr>
+<tr>
+<td><strong>Timeliness</strong></td>
+<td style="text-align: right;">≤ 7 days</td>
+<td>Weekly</td>
+<td>CMDB Manager</td>
+</tr>
+<tr>
+<td><strong>Consistency</strong></td>
+<td style="text-align: right;">≥ 95%</td>
+<td>Monthly</td>
+<td>CMDB Manager</td>
+</tr>
+<tr>
+<td><strong>Uniqueness</strong></td>
+<td style="text-align: right;">100%</td>
+<td>Continuous</td>
+<td>CMDB Manager</td>
+</tr>
+</tbody>
+</table>
+<h3 id="data-quality-process">Data Quality Process</h3>
+<h4 id="regular-audits">Regular Audits</h4>
+<ul>
+<li><strong>Frequency:</strong> Quarterly</li>
+<li><strong>Scope:</strong> Sample of 10% of all CIs</li>
+<li><strong>Method:</strong> Compare CMDB data with actual state</li>
+<li><strong>Responsible:</strong> Andreas Huemmer</li>
+</ul>
+<h4 id="automatic-validation">Automatic Validation</h4>
+<ul>
+<li><strong>Discovery Tools:</strong> Automatic detection of devices and software</li>
+<li><strong>Reconciliation:</strong> Comparison between discovery and CMDB</li>
+<li><strong>Alerts:</strong> Notification of discrepancies</li>
+<li><strong>Correction:</strong> Automatic or manual correction</li>
+</ul>
+<h4 id="manual-verification">Manual Verification</h4>
+<ul>
+<li><strong>Trigger:</strong> Before each major change</li>
+<li><strong>Process:</strong> Manual verification of affected CIs</li>
+<li><strong>Documentation:</strong> Document changes</li>
+<li><strong>Approval:</strong> By IT Operations Manager</li>
+</ul>
+<hr />
+<h2 id="cmdb-access-and-permissions">CMDB Access and Permissions</h2>
+<h3 id="access-roles">Access Roles</h3>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Permission</th>
+<th>Access to</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CMDB Administrator</strong></td>
+<td>Full access</td>
+<td>All CIs</td>
+</tr>
+<tr>
+<td><strong>IT Operations Manager</strong></td>
+<td>Read, Write, Delete</td>
+<td>All CIs</td>
+</tr>
+<tr>
+<td><strong>Network Administrator</strong></td>
+<td>Read, Write</td>
+<td>Network CIs</td>
+</tr>
+<tr>
+<td><strong>Server Administrator</strong></td>
+<td>Read, Write</td>
+<td>Server CIs</td>
+</tr>
+<tr>
+<td><strong>Service Desk</strong></td>
+<td>Read</td>
+<td>All CIs</td>
+</tr>
+<tr>
+<td><strong>Auditor</strong></td>
+<td>Read</td>
+<td>All CIs (Read-only)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="access-control">Access Control</h3>
+<p><strong>CMDB Administrator:</strong> Andreas Huemmer<br />
+<strong>Access via:</strong> {{ netbox.url }}<br />
+<strong>Authentication:</strong> SSO/LDAP<br />
+<strong>Audit Logging:</strong> All changes are logged</p>
+<hr />
+<h2 id="cmdb-integration">CMDB Integration</h2>
+<h3 id="integrated-systems">Integrated Systems</h3>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Integration</th>
+<th>Data Flow</th>
+<th>Frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Monitoring</strong></td>
+<td>API</td>
+<td>CMDB → Monitoring</td>
+<td>Real-time</td>
+</tr>
+<tr>
+<td><strong>Ticketing</strong></td>
+<td>API</td>
+<td>CMDB ↔ Ticketing</td>
+<td>Real-time</td>
+</tr>
+<tr>
+<td><strong>Asset Management</strong></td>
+<td>API</td>
+<td>Asset Mgmt → CMDB</td>
+<td>Daily</td>
+</tr>
+<tr>
+<td><strong>Discovery Tools</strong></td>
+<td>API</td>
+<td>Discovery → CMDB</td>
+<td>Hourly</td>
+</tr>
+<tr>
+<td><strong>Backup System</strong></td>
+<td>API</td>
+<td>CMDB → Backup</td>
+<td>Daily</td>
+</tr>
+<tr>
+<td><strong>Change Management</strong></td>
+<td>API</td>
+<td>CMDB ↔ Change Mgmt</td>
+<td>Real-time</td>
+</tr>
+</tbody>
+</table>
+<h3 id="api-access">API Access</h3>
+<p><strong>NetBox API:</strong>
+- <strong>Endpoint:</strong> {{ netbox.url }}/api/
+- <strong>Authentication:</strong> API Token
+- <strong>Documentation:</strong> {{ netbox.url }}/api/docs/
+- <strong>Rate Limiting:</strong> [TODO: e.g., 1000 requests/hour]</p>
+<hr />
+<h2 id="cmdb-reporting">CMDB Reporting</h2>
+<h3 id="standard-reports">Standard Reports</h3>
+<h4 id="ci-inventory-report">CI Inventory Report</h4>
+<p><strong>Frequency:</strong> Monthly<br />
+<strong>Content:</strong>
+- Number of CIs per category
+- CI status distribution
+- New CIs in last month
+- Deactivated CIs in last month</p>
+<h4 id="license-compliance-report">License Compliance Report</h4>
+<p><strong>Frequency:</strong> Quarterly<br />
+<strong>Content:</strong>
+- Licensed software
+- Installed instances
+- License compliance status
+- Expiring licenses</p>
+<h4 id="network-inventory-report">Network Inventory Report</h4>
+<p><strong>Frequency:</strong> Monthly<br />
+<strong>Content:</strong>
+- IP address usage
+- VLAN overview
+- Network device status
+- Circuit overview</p>
+<h4 id="change-impact-report">Change Impact Report</h4>
+<p><strong>Frequency:</strong> Per change<br />
+<strong>Content:</strong>
+- Affected CIs
+- Dependent CIs
+- Risk assessment
+- Rollback plan</p>
+<hr />
+<h2 id="cmdb-maintenance">CMDB Maintenance</h2>
+<h3 id="maintenance-activities">Maintenance Activities</h3>
+<h4 id="daily-activities">Daily Activities</h4>
+<ul>
+<li>[ ] Review discovery results</li>
+<li>[ ] Validate new CIs</li>
+<li>[ ] Adopt changes from change tickets</li>
+<li>[ ] Check alerts for discrepancies</li>
+</ul>
+<h4 id="weekly-activities">Weekly Activities</h4>
+<ul>
+<li>[ ] Check data quality metrics</li>
+<li>[ ] Identify orphaned CIs</li>
+<li>[ ] Validate relationships</li>
+<li>[ ] Perform CMDB backup</li>
+</ul>
+<h4 id="monthly-activities">Monthly Activities</h4>
+<ul>
+<li>[ ] Conduct CMDB audit</li>
+<li>[ ] Generate and distribute reports</li>
+<li>[ ] Check license compliance</li>
+<li>[ ] Archive obsolete CIs</li>
+</ul>
+<h4 id="quarterly-activities">Quarterly Activities</h4>
+<ul>
+<li>[ ] Comprehensive CMDB audit</li>
+<li>[ ] Data quality review</li>
+<li>[ ] Process review</li>
+<li>[ ] Training for CMDB users</li>
+</ul>
+<hr />
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="cmdb-best-practices">CMDB Best Practices</h3>
+<ol>
+<li><strong>Unique Identification:</strong> Each CI must be uniquely identifiable</li>
+<li><strong>Consistent Naming Convention:</strong> Uniform naming of all CIs</li>
+<li><strong>Complete Attributes:</strong> Capture all relevant attributes</li>
+<li><strong>Current Relationships:</strong> Maintain relationships between CIs</li>
+<li><strong>Regular Audits:</strong> Continuously check data quality</li>
+<li><strong>Automation:</strong> Automate discovery and reconciliation</li>
+<li><strong>Integration:</strong> Integrate CMDB with other tools</li>
+<li><strong>Documentation:</strong> Document changes</li>
+<li><strong>Training:</strong> Train users regularly</li>
+<li><strong>Governance:</strong> Define clear responsibilities</li>
+</ol>
+<h3 id="naming-conventions">Naming Conventions</h3>
+<p><strong>Servers:</strong>
+- Format: <code>[Site]-[Type]-[Environment]-[Number]</code>
+- Example: <code>MUC-SRV-PROD-001</code></p>
+<p><strong>Virtual Machines:</strong>
+- Format: <code>[Site]-[Type]-[Environment]-[Application]-[Number]</code>
+- Example: <code>MUC-VM-PROD-WEB-001</code></p>
+<p><strong>Network Devices:</strong>
+- Format: <code>[Site]-[Type]-[Function]-[Number]</code>
+- Example: <code>MUC-SW-CORE-001</code></p>
+<hr />
+<h2 id="contacts">Contacts</h2>
+<p><strong>CMDB Responsible:</strong>
+- <strong>CMDB Administrator:</strong> Andreas Huemmer - andreas.huemmer@adminsend.de
+- <strong>Network Administrator:</strong> [TODO: Name] - [TODO: Email]
+- <strong>Server Administrator:</strong> [TODO: Name] - [TODO: Email]
+- <strong>CIO:</strong> Anna Schmidt - anna.schmidt@adminsend.de</p>
+<p><strong>NetBox Support:</strong>
+- <strong>URL:</strong> {{ netbox.url }}
+- <strong>Documentation:</strong> {{ netbox.url }}/docs/
+- <strong>Support:</strong> [TODO: Support contact]</p>
+<hr />
+<p><strong>Document Owner:</strong> IT Operations Manager<br />
+<strong>Approved by:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Organization:</strong> AdminSend GmbH</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0080_Operations_Handover_and_GoLive_Checklist.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0100_Access_and_Permission_Management.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0080 - Risikoregister (Template)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0080</div>
+            <h1>Risikoregister (Template)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0070_ISMS_Risikoakzeptanzkriterien.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0090_ISMS_Risikobehandlungsplan_RTP_Template.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="risikoregister-template">Risikoregister (Template)</h1>
+<p><strong>Dokument-ID:</strong> 0080<br />
+<strong>Dokumenttyp:</strong> ISMS-Register/Template<br />
+<strong>Standard-Referenz:</strong> ISO/IEC 27001:2022 Clause 6.1.2<br />
+<strong>Owner:</strong> Thomas Weber<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Freigegeben<br />
+<strong>Klassifizierung:</strong> Vertraulich<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.date }}<br />
+<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-zweck-und-anleitung">1. Zweck und Anleitung</h2>
+<h3 id="11-zweck">1.1 Zweck</h3>
+<p>Das Risikoregister dokumentiert alle identifizierten Informationssicherheitsrisiken im ISMS-Scope der <strong>AdminSend GmbH</strong>. Es dient als:
+- Zentrale Übersicht aller Risiken
+- Grundlage für Risikobehandlungsentscheidungen
+- Nachweis für Audits und Compliance
+- Basis für Risiko-Reporting</p>
+<h3 id="12-anleitung-zur-verwendung">1.2 Anleitung zur Verwendung</h3>
+<p><strong>Jede Zeile beschreibt ein Risiko:</strong>
+- Eindeutige Risiko-ID (R-001, R-002, etc.)
+- Betroffenes Asset oder Prozess
+- Bedrohung und Schwachstelle
+- Risikobewertung (Wahrscheinlichkeit, Auswirkung, Score)
+- Risiko-Eigentümer
+- Behandlungsstrategie
+- Verknüpfung zu Controls und Maßnahmen</p>
+<p><strong>Pflege:</strong>
+- Quartalsweise Review durch ISMS Manager
+- Anlassbezogene Updates bei neuen Risiken
+- Archivierung behandelter/geschlossener Risiken</p>
+<p><strong>Verknüpfungen:</strong>
+- Controls: Siehe <code>0100_ISMS_Statement_of_Applicability_SoA_Template.md</code>
+- Maßnahmen: Siehe <code>0090_ISMS_Risikobehandlungsplan_RTP_Template.md</code>
+- Evidence: Siehe <code>0700_Anhang_Nachweisregister_Evidence.md</code></p>
+<h2 id="2-risikoregister-tabelle">2. Risikoregister-Tabelle</h2>
+<h3 id="21-aktive-risiken">2.1 Aktive Risiken</h3>
+<table>
+<thead>
+<tr>
+<th>Risiko-ID</th>
+<th>Asset/Prozess</th>
+<th>Bedrohung</th>
+<th>Schwachstelle</th>
+<th>Auswirkung (1-5)</th>
+<th>Wahrscheinlichkeit (1-5)</th>
+<th>Score</th>
+<th>Risikostufe</th>
+<th>Risiko-Eigentümer</th>
+<th>Behandlung</th>
+<th>Maßnahme/Control</th>
+<th>Status</th>
+<th>Zieltermin</th>
+<th>Bemerkungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R-001</td>
+<td>{{ netbox.device.core_switch.name }}</td>
+<td>Hardware-Ausfall</td>
+<td>Keine Redundanz</td>
+<td>4</td>
+<td>3</td>
+<td>12</td>
+<td>Mittel</td>
+<td>Anna Schmidt</td>
+<td>Mindern</td>
+<td>Redundanter Switch beschaffen</td>
+<td>Offen</td>
+<td>2026-06-30</td>
+<td>Budget genehmigt</td>
+</tr>
+<tr>
+<td>R-002</td>
+<td>Kundendaten (DSGVO)</td>
+<td>Ransomware</td>
+<td>Unzureichende Backups</td>
+<td>5</td>
+<td>4</td>
+<td>20</td>
+<td>Hoch</td>
+<td>Thomas Weber</td>
+<td>Mindern</td>
+<td>Immutable Backups implementieren</td>
+<td>In Arbeit</td>
+<td>2026-03-31</td>
+<td>Siehe M-002</td>
+</tr>
+<tr>
+<td>R-003</td>
+<td>E-Mail-System</td>
+<td>Phishing</td>
+<td>Fehlende MFA</td>
+<td>4</td>
+<td>4</td>
+<td>16</td>
+<td>Hoch</td>
+<td>Anna Schmidt</td>
+<td>Mindern</td>
+<td>MFA für alle Benutzer</td>
+<td>In Arbeit</td>
+<td>2026-02-28</td>
+<td>80% abgeschlossen</td>
+</tr>
+<tr>
+<td>R-004</td>
+<td>Entwicklungsumgebung</td>
+<td>Secrets in Code</td>
+<td>Keine Secret-Scanning</td>
+<td>3</td>
+<td>3</td>
+<td>9</td>
+<td>Mittel</td>
+<td>Dev-Lead</td>
+<td>Mindern</td>
+<td>Secret-Scanning Tool</td>
+<td>Geplant</td>
+<td>2026-04-30</td>
+<td>Tool-Evaluierung läuft</td>
+</tr>
+<tr>
+<td>R-005</td>
+<td>Remote-Zugriff</td>
+<td>Unbefugter Zugriff</td>
+<td>Schwache VPN-Konfiguration</td>
+<td>4</td>
+<td>2</td>
+<td>8</td>
+<td>Mittel</td>
+<td>IT-Betrieb</td>
+<td>Mindern</td>
+<td>VPN-Hardening</td>
+<td>Offen</td>
+<td>2026-05-31</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p>[TODO: Weitere Risiken hinzufügen basierend auf Risikoanalyse]</p>
+<h3 id="22-akzeptierte-risiken">2.2 Akzeptierte Risiken</h3>
+<table>
+<thead>
+<tr>
+<th>Risiko-ID</th>
+<th>Asset/Prozess</th>
+<th>Bedrohung</th>
+<th>Schwachstelle</th>
+<th>Score</th>
+<th>Risikostufe</th>
+<th>Risiko-Eigentümer</th>
+<th>Akzeptiert durch</th>
+<th>Akzeptanzdatum</th>
+<th>Gültig bis</th>
+<th>Begründung</th>
+<th>Review-Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R-010</td>
+<td>Legacy-System XYZ</td>
+<td>Ungepatchte Schwachstellen</td>
+<td>System im Auslauf</td>
+<td>9</td>
+<td>Mittel</td>
+<td>Anna Schmidt</td>
+<td>Thomas Weber</td>
+<td>2026-01-15</td>
+<td>2026-06-30</td>
+<td>System wird am 30.06.2026 außer Betrieb genommen</td>
+<td>Aktiv</td>
+</tr>
+<tr>
+<td>R-011</td>
+<td>Testumgebung</td>
+<td>Fehlende Verschlüsselung</td>
+<td>Keine produktiven Daten</td>
+<td>6</td>
+<td>Niedrig</td>
+<td>Dev-Lead</td>
+<td>Thomas Weber</td>
+<td>2026-01-20</td>
+<td>2027-01-20</td>
+<td>Testumgebung enthält nur synthetische Daten</td>
+<td>Aktiv</td>
+</tr>
+</tbody>
+</table>
+<p>[TODO: Akzeptierte Risiken dokumentieren]</p>
+<h3 id="23-geschlossenebehandelte-risiken-archiv">2.3 Geschlossene/Behandelte Risiken (Archiv)</h3>
+<table>
+<thead>
+<tr>
+<th>Risiko-ID</th>
+<th>Asset/Prozess</th>
+<th>Bedrohung</th>
+<th>Score</th>
+<th>Behandlung</th>
+<th>Abschlussdatum</th>
+<th>Bemerkungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R-020</td>
+<td>Webserver</td>
+<td>Ungepatchte Schwachstelle CVE-2025-1234</td>
+<td>15</td>
+<td>Mindern</td>
+<td>2026-01-10</td>
+<td>Patch installiert, Vulnerability Scan bestätigt</td>
+</tr>
+<tr>
+<td>R-021</td>
+<td>Firewall</td>
+<td>Fehlkonfiguration</td>
+<td>12</td>
+<td>Mindern</td>
+<td>2026-01-15</td>
+<td>Konfiguration korrigiert, Audit durchgeführt</td>
+</tr>
+</tbody>
+</table>
+<p>[TODO: Geschlossene Risiken archivieren]</p>
+<h2 id="3-risikokategorien-und-klassifizierung">3. Risikokategorien und Klassifizierung</h2>
+<h3 id="31-risikokategorien">3.1 Risikokategorien</h3>
+<p><strong>Technische Risiken:</strong>
+- Infrastruktur (Hardware, Netzwerk, Cloud)
+- Anwendungen (Software, Entwicklung)
+- Daten (Datenbanken, Backups, Verschlüsselung)</p>
+<p><strong>Organisatorische Risiken:</strong>
+- Prozesse (Fehlende oder unzureichende Prozesse)
+- Personal (Fehlende Kompetenzen, Insider-Bedrohung)
+- Lieferanten (Third-Party-Risiken)</p>
+<p><strong>Physische Risiken:</strong>
+- Standorte (Zutritt, Umweltrisiken)
+- Hardware (Diebstahl, Zerstörung)</p>
+<p><strong>Compliance-Risiken:</strong>
+- Regulatorische Anforderungen (DSGVO, NIS2, etc.)
+- Vertragliche Verpflichtungen</p>
+<h3 id="32-bedrohungsquellen">3.2 Bedrohungsquellen</h3>
+<p><strong>Externe Bedrohungen:</strong>
+- Cyberkriminelle (Ransomware, Phishing, DDoS)
+- Hacktivisten
+- Nationalstaaten (APT)
+- Wettbewerber</p>
+<p><strong>Interne Bedrohungen:</strong>
+- Insider (böswillig oder fahrlässig)
+- Menschliche Fehler
+- Prozessfehler</p>
+<p><strong>Umweltbedrohungen:</strong>
+- Naturkatastrophen (Feuer, Wasser, Sturm)
+- Infrastrukturausfälle (Strom, Kühlung)</p>
+<h2 id="4-risikobewertung">4. Risikobewertung</h2>
+<h3 id="41-bewertungsskalen">4.1 Bewertungsskalen</h3>
+<p><strong>Wahrscheinlichkeit (Likelihood):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Stufe</th>
+<th>Beschreibung</th>
+<th>Häufigkeit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Sehr unwahrscheinlich</td>
+<td>&lt; 1 in 10 Jahren</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Unwahrscheinlich</td>
+<td>1 in 5-10 Jahren</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Möglich</td>
+<td>1 in 1-5 Jahren</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Wahrscheinlich</td>
+<td>1-5 mal pro Jahr</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Sehr wahrscheinlich</td>
+<td>&gt; 5 mal pro Jahr</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Auswirkung (Impact):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Stufe</th>
+<th>Beschreibung</th>
+<th>Finanziell</th>
+<th>Reputation</th>
+<th>Compliance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Vernachlässigbar</td>
+<td>&lt; 10k €</td>
+<td>Keine</td>
+<td>Keine</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Gering</td>
+<td>10-50k €</td>
+<td>Lokal</td>
+<td>Kleinere Verstöße</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Mittel</td>
+<td>50-250k €</td>
+<td>Regional</td>
+<td>Meldepflichtig</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Hoch</td>
+<td>250k-1M €</td>
+<td>National</td>
+<td>Bußgelder</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Sehr hoch</td>
+<td>&gt; 1M €</td>
+<td>International</td>
+<td>Geschäftsverbot</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Risikoscore:</strong> Wahrscheinlichkeit × Auswirkung</p>
+<p><strong>Risikostufen:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Score</th>
+<th>Risikostufe</th>
+<th>Farbe</th>
+<th>Behandlung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-2</td>
+<td>Sehr niedrig</td>
+<td>Grün</td>
+<td>Monitoring</td>
+</tr>
+<tr>
+<td>3-6</td>
+<td>Niedrig</td>
+<td>Grün</td>
+<td>Monitoring</td>
+</tr>
+<tr>
+<td>7-12</td>
+<td>Mittel</td>
+<td>Gelb</td>
+<td>Behandlung empfohlen</td>
+</tr>
+<tr>
+<td>13-20</td>
+<td>Hoch</td>
+<td>Orange</td>
+<td>Behandlung erforderlich</td>
+</tr>
+<tr>
+<td>21-25</td>
+<td>Sehr hoch</td>
+<td>Rot</td>
+<td>Sofortige Behandlung</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-behandlungsstrategien">4.2 Behandlungsstrategien</h3>
+<p><strong>Vermeiden (Avoid):</strong>
+- Aktivität einstellen, die das Risiko verursacht
+- Beispiel: Verzicht auf risikoreiche Technologie</p>
+<p><strong>Mindern (Mitigate):</strong>
+- Maßnahmen zur Reduzierung von Wahrscheinlichkeit oder Auswirkung
+- Beispiel: Implementierung von Controls (Firewall, MFA, Verschlüsselung)</p>
+<p><strong>Übertragen (Transfer):</strong>
+- Risiko auf Dritte übertragen
+- Beispiel: Cyber-Versicherung, Outsourcing mit SLA</p>
+<p><strong>Akzeptieren (Accept):</strong>
+- Bewusste Entscheidung, Risiko zu tragen
+- Nur für niedrige/mittlere Risiken nach Genehmigung
+- Siehe <code>0070_ISMS_Risikoakzeptanzkriterien.md</code></p>
+<h2 id="5-risiko-eigentumer-und-verantwortlichkeiten">5. Risiko-Eigentümer und Verantwortlichkeiten</h2>
+<h3 id="51-risiko-eigentumer-risk-owner">5.1 Risiko-Eigentümer (Risk Owner)</h3>
+<p><strong>Verantwortlichkeiten:</strong>
+- Verantwortlich für Risikobehandlung
+- Entscheidung über Behandlungsstrategie
+- Überwachung der Maßnahmenumsetzung
+- Regelmäßige Risikobewertung</p>
+<p><strong>Typische Risiko-Eigentümer:</strong>
+- <strong>CISO:</strong> Übergreifende Sicherheitsrisiken
+- <strong>CIO:</strong> IT-Infrastruktur-Risiken
+- <strong>Asset Owner:</strong> Asset-spezifische Risiken
+- <strong>Process Owner:</strong> Prozess-spezifische Risiken</p>
+<h3 id="52-raci-matrix-risikomanagement">5.2 RACI-Matrix: Risikomanagement</h3>
+<table>
+<thead>
+<tr>
+<th>Aktivität</th>
+<th>CISO</th>
+<th>ISMS Manager</th>
+<th>Risk Owner</th>
+<th>IT-Betrieb</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Risiko identifizieren</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Risiko bewerten</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Behandlung planen</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Maßnahmen umsetzen</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Risiko überwachen</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Risikoregister pflegen</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legende:</strong> R = Responsible, A = Accountable, C = Consulted, I = Informed</p>
+<h2 id="6-risiko-reporting">6. Risiko-Reporting</h2>
+<h3 id="61-regelmaiges-reporting">6.1 Regelmäßiges Reporting</h3>
+<p><strong>Quartalsweise:</strong>
+- Risiko-Dashboard an Informationssicherheitsgremium
+- Anzahl Risiken nach Stufe
+- Trend der Risikoscores
+- Status der Risikobehandlung</p>
+<p><strong>Jährlich:</strong>
+- Vollständiger Risikobericht im Management Review
+- Siehe <code>0140_ISMS_Management_Review_Template.md</code></p>
+<h3 id="62-ad-hoc-reporting">6.2 Ad-hoc-Reporting</h3>
+<p><strong>Trigger:</strong>
+- Neue kritische Risiken (Score ≥ 13)
+- Wesentliche Änderung bestehender Risiken
+- Security Incidents mit Risikorelevanz</p>
+<p><strong>Eskalation:</strong>
+- Hohe Risiken: Sofortige Meldung an CISO und CIO
+- Sehr hohe Risiken: Sofortige Meldung an Geschäftsführung</p>
+<h2 id="7-risiko-review-und-aktualisierung">7. Risiko-Review und Aktualisierung</h2>
+<h3 id="71-regelmaiger-review">7.1 Regelmäßiger Review</h3>
+<p><strong>Quartalsweise:</strong>
+- Review aller aktiven Risiken
+- Aktualisierung von Bewertungen
+- Status-Update der Maßnahmen
+- Review akzeptierter Risiken</p>
+<p><strong>Jährlich:</strong>
+- Vollständige Risikoanalyse
+- Identifikation neuer Risiken
+- Archivierung geschlossener Risiken</p>
+<h3 id="72-trigger-fur-auerplanmaigen-review">7.2 Trigger für außerplanmäßigen Review</h3>
+<p><strong>Externe Trigger:</strong>
+- Neue Bedrohungen (Zero-Day-Exploits, neue Malware)
+- Neue Schwachstellen (CVE-Veröffentlichungen)
+- Änderung der Bedrohungslage
+- Neue Compliance-Anforderungen</p>
+<p><strong>Interne Trigger:</strong>
+- Security Incidents
+- Audit-Findings
+- Wesentliche organisatorische Änderungen
+- Neue Assets oder Prozesse</p>
+<h2 id="8-verknupfungen-und-referenzen">8. Verknüpfungen und Referenzen</h2>
+<h3 id="81-verknupfung-zu-anderen-isms-dokumenten">8.1 Verknüpfung zu anderen ISMS-Dokumenten</h3>
+<p><strong>Risikobehandlungsplan (RTP):</strong>
+- Jedes Risiko mit Behandlung "Mindern" hat Maßnahmen im RTP
+- Siehe <code>0090_ISMS_Risikobehandlungsplan_RTP_Template.md</code></p>
+<p><strong>Statement of Applicability (SoA):</strong>
+- Controls im SoA sind basierend auf Risikoanalyse ausgewählt
+- Siehe <code>0100_ISMS_Statement_of_Applicability_SoA_Template.md</code></p>
+<p><strong>Asset-Inventar:</strong>
+- Risiken sind mit Assets verknüpft
+- Siehe <code>0720_Anhang_Asset_und_Systeminventar_Template.md</code></p>
+<p><strong>Incident Reports:</strong>
+- Incidents können neue Risiken identifizieren
+- Siehe <code>0400_Policy_Incident_Management.md</code></p>
+<h3 id="82-interne-dokumente">8.2 Interne Dokumente</h3>
+<ul>
+<li><code>0060_ISMS_Risikomanagement_Methodik.md</code> - Risk Management Methodology</li>
+<li><code>0070_ISMS_Risikoakzeptanzkriterien.md</code> - Risk Acceptance Criteria</li>
+<li><code>0090_ISMS_Risikobehandlungsplan_RTP_Template.md</code> - Risk Treatment Plan</li>
+<li><code>0100_ISMS_Statement_of_Applicability_SoA_Template.md</code> - SoA</li>
+</ul>
+<h3 id="83-externe-standards">8.3 Externe Standards</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022</strong> - Clause 6.1.2: Information security risk assessment</li>
+<li><strong>ISO/IEC 27005:2022</strong> - Information security risk management</li>
+<li><strong>NIST SP 800-30</strong> - Guide for Conducting Risk Assessments</li>
+</ul>
+<hr />
+<h2 id="anderungshistorie">Änderungshistorie</h2>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Datum</th>
+<th>Autor</th>
+<th>Beschreibung</th>
+<th>Genehmigt durch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>{{ meta.document.date }}</td>
+<td>Thomas Weber</td>
+<td>Initiale Version</td>
+<td>{{ meta.management.ceo }}</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Genehmigt durch:</strong><br />
+Thomas Weber, CISO<br />
+Datum: {{ meta.document.approval_date }}</p>
+<p><strong>Nächster Review:</strong> {{ meta.document.next_review }} (Quartalsweise)</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0070_ISMS_Risikoakzeptanzkriterien.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0090_ISMS_Risikobehandlungsplan_RTP_Template.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

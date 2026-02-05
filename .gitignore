@@ -44,9 +44,15 @@ config.yaml
 config.yml
 *.local.yaml
 
-# Output
+# Output (old structure - deprecated)
 Handbook/
-*.pdf
+PDF_Output/
+
+# Output (new structure - test mode)
+test-output/*/markdown/*.md
+test-output/*/pdf/*.pdf
+test-output/*/html/*.html
+# Keep directory structure but ignore generated files
 
 # OS
 .DS_Store

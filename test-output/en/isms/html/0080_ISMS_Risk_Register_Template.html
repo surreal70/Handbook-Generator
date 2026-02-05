@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0080 - Risk Register (Template)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0080</div>
+            <h1>Risk Register (Template)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0070_ISMS_Risk_Acceptance_Criteria.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0090_ISMS_Risk_Treatment_Plan_RTP_Template.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="risk-register-template">Risk Register (Template)</h1>
+<p><strong>Document ID:</strong> 0080<br />
+<strong>Document Type:</strong> ISMS Register/Template<br />
+<strong>Standard Reference:</strong> ISO/IEC 27001:2022 Clause 6.1.2<br />
+<strong>Owner:</strong> Thomas Weber<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Approved<br />
+<strong>Classification:</strong> Confidential<br />
+<strong>Last Updated:</strong> {{ meta.document.date }}<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-purpose-and-instructions">1. Purpose and Instructions</h2>
+<h3 id="11-purpose">1.1 Purpose</h3>
+<p>The risk register documents all identified information security risks within the ISMS scope of <strong>AdminSend GmbH</strong>. It serves as:
+- Central overview of all risks
+- Basis for risk treatment decisions
+- Evidence for audits and compliance
+- Basis for risk reporting</p>
+<h3 id="12-usage-instructions">1.2 Usage Instructions</h3>
+<p><strong>Each row describes a risk:</strong>
+- Unique risk ID (R-001, R-002, etc.)
+- Affected asset or process
+- Threat and vulnerability
+- Risk assessment (likelihood, impact, score)
+- Risk owner
+- Treatment strategy
+- Link to controls and measures</p>
+<p><strong>Maintenance:</strong>
+- Quarterly review by ISMS Manager
+- Event-driven updates for new risks
+- Archiving of treated/closed risks</p>
+<p><strong>Links:</strong>
+- Controls: See <code>0100_ISMS_Statement_of_Applicability_SoA_Template.md</code>
+- Measures: See <code>0090_ISMS_Risk_Treatment_Plan_RTP_Template.md</code>
+- Evidence: See <code>0700_Appendix_Evidence_Register.md</code></p>
+<h2 id="2-risk-register-table">2. Risk Register Table</h2>
+<h3 id="21-active-risks">2.1 Active Risks</h3>
+<table>
+<thead>
+<tr>
+<th>Risk ID</th>
+<th>Asset/Process</th>
+<th>Threat</th>
+<th>Vulnerability</th>
+<th>Impact (1-5)</th>
+<th>Likelihood (1-5)</th>
+<th>Score</th>
+<th>Risk Level</th>
+<th>Risk Owner</th>
+<th>Treatment</th>
+<th>Measure/Control</th>
+<th>Status</th>
+<th>Target Date</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R-001</td>
+<td>{{ netbox.device.core_switch.name }}</td>
+<td>Hardware failure</td>
+<td>No redundancy</td>
+<td>4</td>
+<td>3</td>
+<td>12</td>
+<td>Medium</td>
+<td>Anna Schmidt</td>
+<td>Mitigate</td>
+<td>Procure redundant switch</td>
+<td>Open</td>
+<td>2026-06-30</td>
+<td>Budget approved</td>
+</tr>
+<tr>
+<td>R-002</td>
+<td>Customer data (GDPR)</td>
+<td>Ransomware</td>
+<td>Insufficient backups</td>
+<td>5</td>
+<td>4</td>
+<td>20</td>
+<td>High</td>
+<td>Thomas Weber</td>
+<td>Mitigate</td>
+<td>Implement immutable backups</td>
+<td>In Progress</td>
+<td>2026-03-31</td>
+<td>See M-002</td>
+</tr>
+<tr>
+<td>R-003</td>
+<td>Email system</td>
+<td>Phishing</td>
+<td>Missing MFA</td>
+<td>4</td>
+<td>4</td>
+<td>16</td>
+<td>High</td>
+<td>Anna Schmidt</td>
+<td>Mitigate</td>
+<td>MFA for all users</td>
+<td>In Progress</td>
+<td>2026-02-28</td>
+<td>80% complete</td>
+</tr>
+<tr>
+<td>R-004</td>
+<td>Development environment</td>
+<td>Secrets in code</td>
+<td>No secret scanning</td>
+<td>3</td>
+<td>3</td>
+<td>9</td>
+<td>Medium</td>
+<td>Dev Lead</td>
+<td>Mitigate</td>
+<td>Secret scanning tool</td>
+<td>Planned</td>
+<td>2026-04-30</td>
+<td>Tool evaluation ongoing</td>
+</tr>
+<tr>
+<td>R-005</td>
+<td>Remote access</td>
+<td>Unauthorized access</td>
+<td>Weak VPN configuration</td>
+<td>4</td>
+<td>2</td>
+<td>8</td>
+<td>Medium</td>
+<td>IT Operations</td>
+<td>Mitigate</td>
+<td>VPN hardening</td>
+<td>Open</td>
+<td>2026-05-31</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p>[TODO: Add additional risks based on risk analysis]</p>
+<h3 id="22-accepted-risks">2.2 Accepted Risks</h3>
+<table>
+<thead>
+<tr>
+<th>Risk ID</th>
+<th>Asset/Process</th>
+<th>Threat</th>
+<th>Vulnerability</th>
+<th>Score</th>
+<th>Risk Level</th>
+<th>Risk Owner</th>
+<th>Accepted By</th>
+<th>Acceptance Date</th>
+<th>Valid Until</th>
+<th>Justification</th>
+<th>Review Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R-010</td>
+<td>Legacy system XYZ</td>
+<td>Unpatched vulnerabilities</td>
+<td>System being phased out</td>
+<td>9</td>
+<td>Medium</td>
+<td>Anna Schmidt</td>
+<td>Thomas Weber</td>
+<td>2026-01-15</td>
+<td>2026-06-30</td>
+<td>System will be decommissioned on 30.06.2026</td>
+<td>Active</td>
+</tr>
+<tr>
+<td>R-011</td>
+<td>Test environment</td>
+<td>Missing encryption</td>
+<td>No production data</td>
+<td>6</td>
+<td>Low</td>
+<td>Dev Lead</td>
+<td>Thomas Weber</td>
+<td>2026-01-20</td>
+<td>2027-01-20</td>
+<td>Test environment contains only synthetic data</td>
+<td>Active</td>
+</tr>
+</tbody>
+</table>
+<p>[TODO: Document accepted risks]</p>
+<h3 id="23-closedtreated-risks-archive">2.3 Closed/Treated Risks (Archive)</h3>
+<table>
+<thead>
+<tr>
+<th>Risk ID</th>
+<th>Asset/Process</th>
+<th>Threat</th>
+<th>Score</th>
+<th>Treatment</th>
+<th>Closure Date</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R-020</td>
+<td>Web server</td>
+<td>Unpatched vulnerability CVE-2025-1234</td>
+<td>15</td>
+<td>Mitigate</td>
+<td>2026-01-10</td>
+<td>Patch installed, vulnerability scan confirmed</td>
+</tr>
+<tr>
+<td>R-021</td>
+<td>Firewall</td>
+<td>Misconfiguration</td>
+<td>12</td>
+<td>Mitigate</td>
+<td>2026-01-15</td>
+<td>Configuration corrected, audit performed</td>
+</tr>
+</tbody>
+</table>
+<p>[TODO: Archive closed risks]</p>
+<h2 id="3-risk-categories-and-classification">3. Risk Categories and Classification</h2>
+<h3 id="31-risk-categories">3.1 Risk Categories</h3>
+<p><strong>Technical Risks:</strong>
+- Infrastructure (hardware, network, cloud)
+- Applications (software, development)
+- Data (databases, backups, encryption)</p>
+<p><strong>Organizational Risks:</strong>
+- Processes (missing or insufficient processes)
+- Personnel (lack of competence, insider threat)
+- Suppliers (third-party risks)</p>
+<p><strong>Physical Risks:</strong>
+- Locations (access, environmental risks)
+- Hardware (theft, destruction)</p>
+<p><strong>Compliance Risks:</strong>
+- Regulatory requirements (GDPR, NIS2, etc.)
+- Contractual obligations</p>
+<h3 id="32-threat-sources">3.2 Threat Sources</h3>
+<p><strong>External Threats:</strong>
+- Cybercriminals (ransomware, phishing, DDoS)
+- Hacktivists
+- Nation-states (APT)
+- Competitors</p>
+<p><strong>Internal Threats:</strong>
+- Insiders (malicious or negligent)
+- Human errors
+- Process failures</p>
+<p><strong>Environmental Threats:</strong>
+- Natural disasters (fire, water, storm)
+- Infrastructure failures (power, cooling)</p>
+<h2 id="4-risk-assessment">4. Risk Assessment</h2>
+<h3 id="41-assessment-scales">4.1 Assessment Scales</h3>
+<p><strong>Likelihood:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Description</th>
+<th>Frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Very unlikely</td>
+<td>&lt; 1 in 10 years</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Unlikely</td>
+<td>1 in 5-10 years</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Possible</td>
+<td>1 in 1-5 years</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Likely</td>
+<td>1-5 times per year</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Very likely</td>
+<td>&gt; 5 times per year</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Impact:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Description</th>
+<th>Financial</th>
+<th>Reputation</th>
+<th>Compliance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Negligible</td>
+<td>&lt; €10k</td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Low</td>
+<td>€10-50k</td>
+<td>Local</td>
+<td>Minor violations</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Medium</td>
+<td>€50-250k</td>
+<td>Regional</td>
+<td>Reportable</td>
+</tr>
+<tr>
+<td>4</td>
+<td>High</td>
+<td>€250k-1M</td>
+<td>National</td>
+<td>Fines</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Very high</td>
+<td>&gt; €1M</td>
+<td>International</td>
+<td>Business prohibition</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Risk Score:</strong> Likelihood × Impact</p>
+<p><strong>Risk Levels:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Score</th>
+<th>Risk Level</th>
+<th>Color</th>
+<th>Treatment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-2</td>
+<td>Very low</td>
+<td>Green</td>
+<td>Monitoring</td>
+</tr>
+<tr>
+<td>3-6</td>
+<td>Low</td>
+<td>Green</td>
+<td>Monitoring</td>
+</tr>
+<tr>
+<td>7-12</td>
+<td>Medium</td>
+<td>Yellow</td>
+<td>Treatment recommended</td>
+</tr>
+<tr>
+<td>13-20</td>
+<td>High</td>
+<td>Orange</td>
+<td>Treatment required</td>
+</tr>
+<tr>
+<td>21-25</td>
+<td>Very high</td>
+<td>Red</td>
+<td>Immediate treatment</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-treatment-strategies">4.2 Treatment Strategies</h3>
+<p><strong>Avoid:</strong>
+- Discontinue activity causing the risk
+- Example: Avoid risky technology</p>
+<p><strong>Mitigate:</strong>
+- Measures to reduce likelihood or impact
+- Example: Implement controls (firewall, MFA, encryption)</p>
+<p><strong>Transfer:</strong>
+- Transfer risk to third parties
+- Example: Cyber insurance, outsourcing with SLA</p>
+<p><strong>Accept:</strong>
+- Conscious decision to bear the risk
+- Only for low/medium risks after approval
+- See <code>0070_ISMS_Risk_Acceptance_Criteria.md</code></p>
+<h2 id="5-risk-owners-and-responsibilities">5. Risk Owners and Responsibilities</h2>
+<h3 id="51-risk-owner">5.1 Risk Owner</h3>
+<p><strong>Responsibilities:</strong>
+- Responsible for risk treatment
+- Decision on treatment strategy
+- Monitoring of measure implementation
+- Regular risk assessment</p>
+<p><strong>Typical Risk Owners:</strong>
+- <strong>CISO:</strong> Cross-cutting security risks
+- <strong>CIO:</strong> IT infrastructure risks
+- <strong>Asset Owner:</strong> Asset-specific risks
+- <strong>Process Owner:</strong> Process-specific risks</p>
+<h3 id="52-raci-matrix-risk-management">5.2 RACI Matrix: Risk Management</h3>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>CISO</th>
+<th>ISMS Manager</th>
+<th>Risk Owner</th>
+<th>IT Operations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Identify risk</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Assess risk</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Plan treatment</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Implement measures</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Monitor risk</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Maintain risk register</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legend:</strong> R = Responsible, A = Accountable, C = Consulted, I = Informed</p>
+<h2 id="6-risk-reporting">6. Risk Reporting</h2>
+<h3 id="61-regular-reporting">6.1 Regular Reporting</h3>
+<p><strong>Quarterly:</strong>
+- Risk dashboard to information security committee
+- Number of risks by level
+- Trend of risk scores
+- Status of risk treatment</p>
+<p><strong>Annually:</strong>
+- Complete risk report in management review
+- See <code>0140_ISMS_Management_Review_Template.md</code></p>
+<h3 id="62-ad-hoc-reporting">6.2 Ad-hoc Reporting</h3>
+<p><strong>Triggers:</strong>
+- New critical risks (score ≥ 13)
+- Significant change in existing risks
+- Security incidents with risk relevance</p>
+<p><strong>Escalation:</strong>
+- High risks: Immediate notification to CISO and CIO
+- Very high risks: Immediate notification to management</p>
+<h2 id="7-risk-review-and-update">7. Risk Review and Update</h2>
+<h3 id="71-regular-review">7.1 Regular Review</h3>
+<p><strong>Quarterly:</strong>
+- Review of all active risks
+- Update of assessments
+- Status update of measures
+- Review of accepted risks</p>
+<p><strong>Annually:</strong>
+- Complete risk analysis
+- Identification of new risks
+- Archiving of closed risks</p>
+<h3 id="72-triggers-for-unscheduled-review">7.2 Triggers for Unscheduled Review</h3>
+<p><strong>External Triggers:</strong>
+- New threats (zero-day exploits, new malware)
+- New vulnerabilities (CVE publications)
+- Change in threat landscape
+- New compliance requirements</p>
+<p><strong>Internal Triggers:</strong>
+- Security incidents
+- Audit findings
+- Significant organizational changes
+- New assets or processes</p>
+<h2 id="8-links-and-references">8. Links and References</h2>
+<h3 id="81-links-to-other-isms-documents">8.1 Links to Other ISMS Documents</h3>
+<p><strong>Risk Treatment Plan (RTP):</strong>
+- Each risk with treatment "Mitigate" has measures in RTP
+- See <code>0090_ISMS_Risk_Treatment_Plan_RTP_Template.md</code></p>
+<p><strong>Statement of Applicability (SoA):</strong>
+- Controls in SoA are selected based on risk analysis
+- See <code>0100_ISMS_Statement_of_Applicability_SoA_Template.md</code></p>
+<p><strong>Asset Inventory:</strong>
+- Risks are linked to assets
+- See <code>0720_Appendix_Asset_and_System_Inventory_Template.md</code></p>
+<p><strong>Incident Reports:</strong>
+- Incidents can identify new risks
+- See <code>0400_Policy_Incident_Management.md</code></p>
+<h3 id="82-internal-documents">8.2 Internal Documents</h3>
+<ul>
+<li><code>0060_ISMS_Risk_Management_Methodology.md</code> - Risk Management Methodology</li>
+<li><code>0070_ISMS_Risk_Acceptance_Criteria.md</code> - Risk Acceptance Criteria</li>
+<li><code>0090_ISMS_Risk_Treatment_Plan_RTP_Template.md</code> - Risk Treatment Plan</li>
+<li><code>0100_ISMS_Statement_of_Applicability_SoA_Template.md</code> - SoA</li>
+</ul>
+<h3 id="83-external-standards">8.3 External Standards</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022</strong> - Clause 6.1.2: Information security risk assessment</li>
+<li><strong>ISO/IEC 27005:2022</strong> - Information security risk management</li>
+<li><strong>NIST SP 800-30</strong> - Guide for Conducting Risk Assessments</li>
+</ul>
+<hr />
+<h2 id="change-history">Change History</h2>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Description</th>
+<th>Approved By</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>{{ meta.document.date }}</td>
+<td>Thomas Weber</td>
+<td>Initial version</td>
+<td>{{ meta.management.ceo }}</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Approved by:</strong><br />
+Thomas Weber, CISO<br />
+Date: {{ meta.document.approval_date }}</p>
+<p><strong>Next Review:</strong> {{ meta.document.next_review }} (Quarterly)</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0070_ISMS_Risk_Acceptance_Criteria.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0090_ISMS_Risk_Treatment_Plan_RTP_Template.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

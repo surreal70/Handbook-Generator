@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0600 - Policy: Network Security</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0600</div>
+            <h1>Policy: Network Security</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0590_Guideline_Records_Retention_and_Secure_Deletion.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0610_Guideline_Segmentation_Firewalling_and_Network_Access_Control.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="policy-network-security">Policy: Network Security</h1>
+<p><strong>Document ID:</strong> 0600<br />
+<strong>Document Type:</strong> Policy (abstract)<br />
+<strong>Standard Reference:</strong> ISO/IEC 27001:2022 Annex A.8.20-A.8.23 (incl. Amendment 1:2024)<br />
+<strong>Owner:</strong> Thomas Weber<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Approved<br />
+<strong>Classification:</strong> Internal<br />
+<strong>Last Updated:</strong> {{ meta.document.date }}<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This policy defines the requirements for network security at <strong>AdminSend GmbH</strong>. It ensures that networks are properly secured, segmented, and monitored to protect the confidentiality, integrity, and availability of information.</p>
+<h2 id="2-scope">2. Scope</h2>
+<p>This policy applies to:</p>
+<ul>
+<li><strong>Organizational Units:</strong> All departments and locations of AdminSend GmbH</li>
+<li><strong>Networks:</strong> All internal and external networks, LAN, WLAN, WAN, VPN</li>
+<li><strong>Systems:</strong> Firewalls, routers, switches, load balancers, IDS/IPS</li>
+<li><strong>Connections:</strong> All network connections (internal, external, partner, cloud)</li>
+<li><strong>Locations:</strong> {{ netbox.site.name }} and all other operational sites</li>
+</ul>
+<p><strong>Exceptions:</strong> Exceptions are only permitted through the defined exception process (<code>0640_Policy_Exceptions_and_Risk_Waivers.md</code>).</p>
+<h2 id="3-principles-policy-statements">3. Principles (Policy Statements)</h2>
+<h3 id="31-network-segmentation">3.1 Network Segmentation</h3>
+<p>Networks are segmented by protection requirements and function. Segmentation is achieved through firewalls, VLANs, and zones (e.g., DMZ, production network, management network).</p>
+<h3 id="32-defense-in-depth">3.2 Defense in Depth</h3>
+<p>Network security follows the defense-in-depth principle. Multiple security layers protect against attacks (perimeter, segmentation, host-based).</p>
+<h3 id="33-least-privilege-network-access">3.3 Least Privilege Network Access</h3>
+<p>Network access follows the least privilege principle. Only required connections are permitted (default deny, whitelist approach).</p>
+<h3 id="34-firewall-management">3.4 Firewall Management</h3>
+<p>Firewalls protect network boundaries. Firewall rules are documented, regularly reviewed, and changed according to change management process.</p>
+<h3 id="35-network-access-control-nac">3.5 Network Access Control (NAC)</h3>
+<p>Access to networks is controlled. NAC ensures that only authorized and compliant devices gain access.</p>
+<h3 id="36-intrusion-detectionprevention-idsips">3.6 Intrusion Detection/Prevention (IDS/IPS)</h3>
+<p>Networks are monitored for attacks. IDS/IPS systems detect and block suspicious activities.</p>
+<h3 id="37-vpn-and-remote-access">3.7 VPN and Remote Access</h3>
+<p>Remote access occurs via secure VPN connections. VPN connections are encrypted and authenticated (MFA).</p>
+<h3 id="38-wireless-security">3.8 Wireless Security</h3>
+<p>WLAN networks are secured (WPA3, 802.1X). Guest WLANs are separated from production network.</p>
+<h3 id="39-network-monitoring-and-logging">3.9 Network Monitoring and Logging</h3>
+<p>Network activities are monitored and logged. Logs are centrally collected and analyzed (SIEM).</p>
+<h2 id="4-roles-and-responsibilities">4. Roles and Responsibilities</h2>
+<h3 id="raci-matrix-network-security">RACI Matrix: Network Security</h3>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>CISO</th>
+<th>Network Security</th>
+<th>IT Operations</th>
+<th>SOC</th>
+<th>Network Admin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Policy Creation</td>
+<td>R/A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Network Segmentation</td>
+<td>R</td>
+<td>R/A</td>
+<td>R</td>
+<td>C</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Firewall Management</td>
+<td>C</td>
+<td>R/A</td>
+<td>R</td>
+<td>C</td>
+<td>R</td>
+</tr>
+<tr>
+<td>NAC Implementation</td>
+<td>C</td>
+<td>R/A</td>
+<td>R</td>
+<td>C</td>
+<td>R</td>
+</tr>
+<tr>
+<td>IDS/IPS Operations</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>R/A</td>
+<td>C</td>
+</tr>
+<tr>
+<td>VPN Management</td>
+<td>C</td>
+<td>R/A</td>
+<td>R</td>
+<td>C</td>
+<td>R</td>
+</tr>
+<tr>
+<td>WLAN Security</td>
+<td>C</td>
+<td>R/A</td>
+<td>R</td>
+<td>C</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Network Monitoring</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>R/A</td>
+<td>C</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legend:</strong> R = Responsible (Execution), A = Accountable (Ownership), C = Consulted, I = Informed</p>
+<h3 id="key-roles">Key Roles</h3>
+<ul>
+<li><strong>Policy Owner:</strong> Thomas Weber (CISO)</li>
+<li><strong>Network Security Manager:</strong> {{ meta.network.security_manager }}</li>
+<li><strong>Network Administrator:</strong> {{ meta.network.admin }}</li>
+<li><strong>SOC Manager:</strong> {{ meta.soc.manager }}</li>
+<li><strong>Implementation Responsible:</strong> IT Operations, Network Team</li>
+<li><strong>Control/Audit Function:</strong> ISMS, Internal Audit, SOC</li>
+</ul>
+<h2 id="5-derivatives-guidelinesstandardsprocesses">5. Derivatives (Guidelines/Standards/Processes)</h2>
+<p>Implementation details are defined in subordinate documents:</p>
+<h3 id="associated-guidelines">Associated Guidelines</h3>
+<ul>
+<li><strong>0610_Guideline_Segmentation_Firewalling_and_Network_Access_Control.md</strong> - Detailed implementation guideline</li>
+<li><code>0220_Policy_Access_Control_and_Identity_Management.md</code> - Access Control Policy</li>
+<li><code>0320_Policy_Logging_and_Monitoring.md</code> - Logging and Monitoring Policy</li>
+<li><code>0500_Policy_Mobile_Device_and_Remote_Work.md</code> - Remote Work Policy</li>
+</ul>
+<h3 id="associated-standardsbaselines">Associated Standards/Baselines</h3>
+<ul>
+<li>Network segmentation concept</li>
+<li>Firewall ruleset</li>
+<li>NAC configuration</li>
+<li>IDS/IPS signatures and rules</li>
+<li>VPN configuration</li>
+<li>WLAN security baseline</li>
+</ul>
+<h3 id="associated-processes">Associated Processes</h3>
+<ul>
+<li>Firewall change management</li>
+<li>NAC onboarding/offboarding</li>
+<li>IDS/IPS alert response</li>
+<li>VPN access request</li>
+<li>Network security monitoring</li>
+</ul>
+<h2 id="6-compliance-monitoring-and-enforcement">6. Compliance, Monitoring and Enforcement</h2>
+<h3 id="metrics-and-kpis">Metrics and KPIs</h3>
+<ul>
+<li>Network segmentation coverage (Target: 100% of critical systems)</li>
+<li>Firewall rule review frequency (Target: quarterly)</li>
+<li>NAC coverage (Target: 100% production network)</li>
+<li>IDS/IPS alert response time (Target: &lt; 15 minutes for critical alerts)</li>
+<li>VPN availability (Target: 99.5%)</li>
+<li>WLAN security compliance (Target: 100% WPA3)</li>
+<li>Number of blocked attacks (IDS/IPS)</li>
+</ul>
+<h3 id="evidence-and-proof">Evidence and Proof</h3>
+<ul>
+<li>Network diagrams and segmentation concept</li>
+<li>Firewall ruleset and change logs</li>
+<li>NAC configuration and device inventory</li>
+<li>IDS/IPS logs and alert reports</li>
+<li>VPN logs and access logs</li>
+<li>WLAN configuration and security scans</li>
+<li>Network monitoring dashboards</li>
+</ul>
+<h3 id="consequences-of-violations">Consequences of Violations</h3>
+<p>Violations of this policy are handled according to applicable HR and compliance processes:
+- <strong>Unauthorized Firewall Changes:</strong> Incident response, rollback, disciplinary action
+- <strong>Missing Segmentation:</strong> Completion, risk assessment
+- <strong>Insecure WLAN Configuration:</strong> Immediate correction, incident response
+- <strong>Repeated Violations:</strong> Employment consequences, access revocation</p>
+<h2 id="7-exceptions">7. Exceptions</h2>
+<p>Exceptions to this policy are only permitted in justified exceptional cases:</p>
+<ul>
+<li><strong>Exception Process:</strong> See <code>0640_Policy_Exceptions_and_Risk_Waivers.md</code></li>
+<li><strong>Approval:</strong> Exceptions must be approved by CISO and Network Security Manager</li>
+<li><strong>Documentation:</strong> All exceptions are documented in the risk register</li>
+<li><strong>Time Limitation:</strong> Exceptions are generally time-limited</li>
+</ul>
+<h2 id="8-references">8. References</h2>
+<h3 id="internal-documents">Internal Documents</h3>
+<ul>
+<li><code>0010_ISMS_Information_Security_Policy.md</code> - ISMS Policy</li>
+<li><code>0610_Guideline_Segmentation_Firewalling_and_Network_Access_Control.md</code> - Detailed Guideline</li>
+<li><code>0220_Policy_Access_Control_and_Identity_Management.md</code> - Access Control Policy</li>
+<li><code>0080_ISMS_Risk_Register_Template.md</code> - Risk Register</li>
+</ul>
+<h3 id="external-standards-and-requirements">External Standards and Requirements</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.8.20</strong> - Networks security</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.8.21</strong> - Security of network services</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.8.22</strong> - Segregation of networks</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.8.23</strong> - Web filtering</li>
+<li><strong>NIST SP 800-41</strong> - Guidelines on Firewalls and Firewall Policy</li>
+<li><strong>NIST SP 800-97</strong> - Establishing Wireless Robust Security Networks</li>
+<li><strong>BSI IT-Grundschutz</strong> - NET.1.1, NET.1.2, NET.3.2</li>
+</ul>
+<hr />
+<p><strong>Approved by:</strong><br />
+{{ meta.management.ceo }}, Management<br />
+Date: {{ meta.document.approval_date }}</p>
+<p><strong>Next Review:</strong> {{ meta.document.next_review }} (annually or as needed)</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0590_Guideline_Records_Retention_and_Secure_Deletion.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0610_Guideline_Segmentation_Firewalling_and_Network_Access_Control.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

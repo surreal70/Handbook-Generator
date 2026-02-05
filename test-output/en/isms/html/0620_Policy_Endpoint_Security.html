@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0620 - Policy: Endpoint Security</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0620</div>
+            <h1>Policy: Endpoint Security</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0610_Guideline_Segmentation_Firewalling_and_Network_Access_Control.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0630_Guideline_EDR_AV_Host_Firewall_and_Device_Compliance.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="policy-endpoint-security">Policy: Endpoint Security</h1>
+<p><strong>Document ID:</strong> 0620<br />
+<strong>Document Type:</strong> Policy (abstract)<br />
+<strong>Standard Reference:</strong> ISO/IEC 27001:2022 Annex A.8.1-A.8.3, A.6.7 (incl. Amendment 1:2024)<br />
+<strong>Owner:</strong> Thomas Weber<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Approved<br />
+<strong>Classification:</strong> Internal<br />
+<strong>Last Updated:</strong> {{ meta.document.date }}<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This policy defines the endpoint security requirements of <strong>AdminSend GmbH</strong>. It ensures that all endpoint devices (workstations, laptops, mobile devices) are appropriately secured and protected against threats.</p>
+<h2 id="2-scope">2. Scope</h2>
+<p>This policy applies to:</p>
+<ul>
+<li><strong>Organizational Units:</strong> All departments and locations of AdminSend GmbH</li>
+<li><strong>Devices:</strong> All endpoint devices (workstations, laptops, tablets, smartphones)</li>
+<li><strong>Operating Systems:</strong> Windows, macOS, Linux, iOS, Android</li>
+<li><strong>Ownership:</strong> Company-owned and BYOD devices (with corporate access)</li>
+<li><strong>Locations:</strong> {{ netbox.site.name }} and all other operational sites, remote work</li>
+</ul>
+<p><strong>Exceptions:</strong> Exceptions are only permitted through the defined exception process (<code>0640_Policy_Exceptions_and_Risk_Waivers.md</code>).</p>
+<h2 id="3-policy-statements">3. Policy Statements</h2>
+<h3 id="31-endpoint-protection-platform-epp">3.1 Endpoint Protection Platform (EPP)</h3>
+<p>All endpoint devices are equipped with endpoint protection. EPP includes antivirus, anti-malware, host firewall, and application control.</p>
+<h3 id="32-endpoint-detection-and-response-edr">3.2 Endpoint Detection and Response (EDR)</h3>
+<p>Critical endpoint devices are equipped with EDR solution. EDR enables advanced threat detection, incident response, and forensics.</p>
+<h3 id="33-device-compliance">3.3 Device Compliance</h3>
+<p>Endpoint devices must meet compliance requirements:
+- Current operating system version
+- Current security patches
+- EPP/EDR installed and active
+- Disk encryption enabled
+- Screen lock configured</p>
+<h3 id="34-disk-encryption">3.4 Disk Encryption</h3>
+<p>All endpoint devices with corporate data are encrypted (full disk encryption). Encryption protects against data loss in case of theft or loss.</p>
+<h3 id="35-host-based-firewall">3.5 Host-based Firewall</h3>
+<p>All endpoint devices have an enabled host firewall. Firewall rules follow the least privilege principle.</p>
+<h3 id="36-application-control">3.6 Application Control</h3>
+<p>Unauthorized applications are blocked (application whitelisting or blacklisting). Application control reduces malware risk.</p>
+<h3 id="37-patch-management">3.7 Patch Management</h3>
+<p>Endpoint devices are patched regularly. Security patches are installed promptly (see <code>0340_Policy_Vulnerability_and_Patch_Management.md</code>).</p>
+<h3 id="38-remote-wipe">3.8 Remote Wipe</h3>
+<p>Lost or stolen devices can be remotely wiped. Remote wipe protects against data loss.</p>
+<h3 id="39-byod-bring-your-own-device">3.9 BYOD (Bring Your Own Device)</h3>
+<p>BYOD devices with corporate access must meet minimum security requirements. BYOD is managed via MDM/MAM (see <code>0500_Policy_Mobile_Device_and_Remote_Work.md</code>).</p>
+<h2 id="4-roles-and-responsibilities">4. Roles and Responsibilities</h2>
+<h3 id="raci-matrix-endpoint-security">RACI Matrix: Endpoint Security</h3>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>CISO</th>
+<th>Endpoint Security</th>
+<th>IT Operations</th>
+<th>SOC</th>
+<th>End User</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Policy Creation</td>
+<td>R/A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>EPP/EDR Deployment</td>
+<td>C</td>
+<td>R/A</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Device Compliance</td>
+<td>C</td>
+<td>R/A</td>
+<td>R</td>
+<td>C</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Disk Encryption</td>
+<td>C</td>
+<td>R/A</td>
+<td>R</td>
+<td>I</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Patch Management</td>
+<td>C</td>
+<td>R</td>
+<td>R/A</td>
+<td>I</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Remote Wipe</td>
+<td>C</td>
+<td>R/A</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>BYOD Management</td>
+<td>C</td>
+<td>R/A</td>
+<td>R</td>
+<td>I</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Incident Response</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>R/A</td>
+<td>I</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legend:</strong> R = Responsible (Execution), A = Accountable (Ownership), C = Consulted, I = Informed</p>
+<h3 id="key-roles">Key Roles</h3>
+<ul>
+<li><strong>Policy Owner:</strong> Thomas Weber (CISO)</li>
+<li><strong>Endpoint Security Manager:</strong> {{ meta.endpoint.security_manager }}</li>
+<li><strong>IT Operations Manager:</strong> {{ meta.it.operations_manager }}</li>
+<li><strong>SOC Manager:</strong> {{ meta.soc.manager }}</li>
+<li><strong>Implementation Responsible:</strong> IT Operations, End Users</li>
+<li><strong>Control/Audit Function:</strong> ISMS, Internal Audit, SOC</li>
+</ul>
+<h2 id="5-derived-documents-guidelinesstandardsprocesses">5. Derived Documents (Guidelines/Standards/Processes)</h2>
+<p>Implementation details are defined in subordinate documents:</p>
+<h3 id="related-guidelines">Related Guidelines</h3>
+<ul>
+<li><strong>0630_Guideline_EDR_AV_Host_Firewall_and_Device_Compliance.md</strong> - Detailed implementation guideline</li>
+<li><code>0500_Policy_Mobile_Device_and_Remote_Work.md</code> - Mobile Device Policy</li>
+<li><code>0340_Policy_Vulnerability_and_Patch_Management.md</code> - Patch Management Policy</li>
+<li><code>0260_Policy_Cryptography_and_Key_Management.md</code> - Encryption Policy</li>
+</ul>
+<h3 id="related-standardsbaselines">Related Standards/Baselines</h3>
+<ul>
+<li>Endpoint Security Baseline (Windows, macOS, Linux)</li>
+<li>EPP/EDR Configuration</li>
+<li>Device Compliance Requirements</li>
+<li>Disk Encryption Standards</li>
+<li>Application Whitelist/Blacklist</li>
+</ul>
+<h3 id="related-processes">Related Processes</h3>
+<ul>
+<li>Endpoint Onboarding/Offboarding</li>
+<li>Device Compliance Monitoring</li>
+<li>EPP/EDR Alert Response</li>
+<li>Remote Wipe Process</li>
+<li>BYOD Enrollment</li>
+</ul>
+<h2 id="6-compliance-monitoring-and-enforcement">6. Compliance, Monitoring and Enforcement</h2>
+<h3 id="metrics-and-kpis">Metrics and KPIs</h3>
+<ul>
+<li>EPP/EDR Coverage (Target: 100% of all endpoints)</li>
+<li>Device Compliance Rate (Target: &gt;95%)</li>
+<li>Disk Encryption Coverage (Target: 100%)</li>
+<li>Patch Compliance (Target: &gt;95% within SLA)</li>
+<li>EPP/EDR Detection Rate</li>
+<li>Average Incident Response Time (Target: &lt; 30 minutes)</li>
+<li>Number of Remote Wipes</li>
+</ul>
+<h3 id="evidence-and-proof">Evidence and Proof</h3>
+<ul>
+<li>Endpoint Inventory</li>
+<li>EPP/EDR Deployment Status</li>
+<li>Device Compliance Reports</li>
+<li>Disk Encryption Status</li>
+<li>Patch Compliance Reports</li>
+<li>EPP/EDR Logs and Alerts</li>
+<li>Remote Wipe Logs</li>
+</ul>
+<h3 id="consequences-of-violations">Consequences of Violations</h3>
+<p>Violations of this policy are handled according to applicable HR and compliance processes:
+- <strong>Non-compliant Devices:</strong> Network access blocked until compliance is established
+- <strong>Disabled EPP/EDR:</strong> Immediate reactivation, incident response
+- <strong>Missing Disk Encryption:</strong> Remediation, access restriction
+- <strong>Repeated Violations:</strong> Employment consequences, device usage prohibited</p>
+<h2 id="7-exceptions">7. Exceptions</h2>
+<p>Exceptions to this policy are only permitted in justified exceptional cases:</p>
+<ul>
+<li><strong>Exception Process:</strong> See <code>0640_Policy_Exceptions_and_Risk_Waivers.md</code></li>
+<li><strong>Approval:</strong> Exceptions must be approved by CISO and Endpoint Security Manager</li>
+<li><strong>Documentation:</strong> All exceptions are documented in the risk register</li>
+<li><strong>Time Limitation:</strong> Exceptions are generally time-limited</li>
+</ul>
+<h2 id="8-references">8. References</h2>
+<h3 id="internal-documents">Internal Documents</h3>
+<ul>
+<li><code>0010_ISMS_Information_Security_Policy.md</code> - ISMS Policy</li>
+<li><code>0630_Guideline_EDR_AV_Host_Firewall_and_Device_Compliance.md</code> - Detailed Guideline</li>
+<li><code>0500_Policy_Mobile_Device_and_Remote_Work.md</code> - Mobile Device Policy</li>
+<li><code>0080_ISMS_Risk_Register_Template.md</code> - Risk Register</li>
+</ul>
+<h3 id="external-standards-and-regulations">External Standards and Regulations</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.8.1</strong> - User endpoint devices</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.8.2</strong> - Privileged access rights</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.8.3</strong> - Information access restriction</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.6.7</strong> - Remote working</li>
+<li><strong>NIST SP 800-124</strong> - Guidelines for Managing the Security of Mobile Devices</li>
+<li><strong>NIST SP 800-171</strong> - Protecting Controlled Unclassified Information</li>
+<li><strong>CIS Controls v8</strong> - Control 4 (Secure Configuration of Enterprise Assets)</li>
+</ul>
+<hr />
+<p><strong>Approved by:</strong><br />
+{{ meta.management.ceo }}, Executive Management<br />
+Date: {{ meta.document.approval_date }}</p>
+<p><strong>Next Review:</strong> {{ meta.document.next_review }} (annually or as needed)</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0610_Guideline_Segmentation_Firewalling_and_Network_Access_Control.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0630_Guideline_EDR_AV_Host_Firewall_and_Device_Compliance.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

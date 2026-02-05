@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0650 - Richtlinie: Ausnahmenprozess</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0650</div>
+            <h1>Richtlinie: Ausnahmenprozess</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0640_Policy_Ausnahmen_und_Risk_Waivers.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0660_Policy_Informationsuebertragung_und_Kommunikation.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="richtlinie-ausnahmenprozess">Richtlinie: Ausnahmenprozess</h1>
+<p><strong>Dokument-ID:</strong> 0650<br />
+<strong>Dokumenttyp:</strong> Richtlinie (detailliert)<br />
+<strong>Zugehörige Policy:</strong> 0640_Policy_Ausnahmen_und_Risk_Waivers.md<br />
+<strong>Standard-Referenz:</strong> ISO/IEC 27001:2022 Annex A.5.1<br />
+<strong>Owner:</strong> Thomas Weber<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Freigegeben<br />
+<strong>Klassifizierung:</strong> Intern<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.date }}</p>
+<hr />
+<h2 id="1-zweck-und-geltungsbereich">1. Zweck und Geltungsbereich</h2>
+<p>Diese Richtlinie konkretisiert die <code>0640_Policy_Ausnahmen_und_Risk_Waivers.md</code> und definiert:
+- Ausnahmenprozess für Security-Policies
+- Risk-Waiver-Verfahren
+- Kompensationskontrollen</p>
+<p><strong>Geltungsbereich:</strong> Alle Security-Policies bei <strong>AdminSend GmbH</strong></p>
+<h2 id="2-ausnahmen-kategorien">2. Ausnahmen-Kategorien</h2>
+<h3 id="21-temporare-ausnahmen">2.1 Temporäre Ausnahmen</h3>
+<p><strong>Definition:</strong> Zeitlich befristete Abweichung von Policy</p>
+<p><strong>Beispiele:</strong>
+- Verzögertes Patching (wegen Kompatibilitätsproblemen)
+- Temporäre Firewall-Regel für Projekt
+- Verzögerte Compliance (während Migration)</p>
+<p><strong>Maximale Dauer:</strong> 12 Monate</p>
+<h3 id="22-permanente-ausnahmen">2.2 Permanente Ausnahmen</h3>
+<p><strong>Definition:</strong> Dauerhafte Abweichung von Policy</p>
+<p><strong>Beispiele:</strong>
+- Legacy-Systeme, die Baseline nicht erfüllen können
+- Spezielle Geschäftsanforderungen
+- Technische Unmöglichkeit</p>
+<p><strong>Review-Frequenz:</strong> Jährlich</p>
+<h3 id="23-notfall-ausnahmen">2.3 Notfall-Ausnahmen</h3>
+<p><strong>Definition:</strong> Sofortige Ausnahme bei Notfällen</p>
+<p><strong>Beispiele:</strong>
+- Kritische Business-Anforderung
+- Systemausfall-Behebung
+- Security-Incident-Response</p>
+<p><strong>Nachträgliche Genehmigung:</strong> Innerhalb 48 Stunden</p>
+<h2 id="3-ausnahmenprozess">3. Ausnahmenprozess</h2>
+<h3 id="31-antragstellung">3.1 Antragstellung</h3>
+<p><strong>Antrag über:</strong> {{ meta.itsm.portal }} (Ticketsystem)</p>
+<p><strong>Pflichtangaben:</strong>
+- Betroffene Policy/Richtlinie
+- Beschreibung der Abweichung
+- Begründung (Business Justification)
+- Betroffene Systeme/Prozesse
+- Risikobewertung
+- Vorgeschlagene Kompensationskontrollen
+- Gewünschte Dauer</p>
+<p><strong>Antragsteller:</strong> System-Owner oder Fachbereichsleiter</p>
+<h3 id="32-risikobewertung">3.2 Risikobewertung</h3>
+<p><strong>Durchführung durch:</strong> IT-Security-Team</p>
+<p><strong>Bewertungskriterien:</strong>
+- Wahrscheinlichkeit eines Sicherheitsvorfalls
+- Potenzielle Auswirkungen
+- Betroffene Assets und Daten
+- Bestehende Kontrollen
+- Vorgeschlagene Kompensationskontrollen</p>
+<p><strong>Risiko-Matrix:</strong>
+| Wahrscheinlichkeit | Auswirkung Niedrig | Auswirkung Mittel | Auswirkung Hoch |
+|--------------------|-------------------|-------------------|-----------------|
+| Niedrig | Niedrig | Niedrig | Mittel |
+| Mittel | Niedrig | Mittel | Hoch |
+| Hoch | Mittel | Hoch | Kritisch |</p>
+<h3 id="33-kompensationskontrollen">3.3 Kompensationskontrollen</h3>
+<p><strong>Definition:</strong> Alternative Sicherheitsmaßnahmen zur Risikominimierung</p>
+<p><strong>Beispiele:</strong>
+- Netzwerk-Isolation (bei fehlenden Patches)
+- Erhöhtes Monitoring (bei schwächerer Authentifizierung)
+- Manuelle Prozesse (bei fehlender Automatisierung)
+- Zusätzliche Zugriffsbeschränkungen</p>
+<p><strong>Anforderung:</strong>
+- Kompensationskontrollen müssen Risiko auf akzeptables Niveau senken
+- Dokumentation der Wirksamkeit</p>
+<h3 id="34-genehmigung">3.4 Genehmigung</h3>
+<p><strong>Genehmigungsstufen:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Risiko</th>
+<th>Genehmiger</th>
+<th>SLA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Niedrig</td>
+<td>IT-Security-Manager</td>
+<td>3 Arbeitstage</td>
+</tr>
+<tr>
+<td>Mittel</td>
+<td>CISO</td>
+<td>5 Arbeitstage</td>
+</tr>
+<tr>
+<td>Hoch</td>
+<td>CISO + CIO</td>
+<td>7 Arbeitstage</td>
+</tr>
+<tr>
+<td>Kritisch</td>
+<td>CISO + CIO + Geschäftsführung</td>
+<td>10 Arbeitstage</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Genehmigungskriterien:</strong>
+- Business Justification nachvollziehbar
+- Risiko akzeptabel (mit Kompensationskontrollen)
+- Keine Alternative verfügbar
+- Zeitlich befristet (bei temporären Ausnahmen)</p>
+<p><strong>Ablehnung:</strong>
+- Begründung erforderlich
+- Alternative Lösungen vorschlagen</p>
+<h3 id="35-dokumentation">3.5 Dokumentation</h3>
+<p><strong>Ausnahmen-Register:</strong>
+- Alle genehmigten Ausnahmen
+- Antragsteller, Genehmiger, Datum
+- Risikobewertung
+- Kompensationskontrollen
+- Ablaufdatum
+- Review-Datum</p>
+<p><strong>Speicherort:</strong> {{ meta.compliance.exception_register }}</p>
+<h2 id="4-monitoring-und-review">4. Monitoring und Review</h2>
+<h3 id="41-laufende-uberwachung">4.1 Laufende Überwachung</h3>
+<p><strong>Verantwortlichkeit:</strong> IT-Security-Team</p>
+<p><strong>Aktivitäten:</strong>
+- Wirksamkeit der Kompensationskontrollen prüfen
+- Compliance mit Ausnahmen-Bedingungen
+- Incidents im Zusammenhang mit Ausnahmen</p>
+<p><strong>Frequenz:</strong> Monatlich (bei kritischen Ausnahmen), quartalsweise (bei anderen)</p>
+<h3 id="42-regelmaiger-review">4.2 Regelmäßiger Review</h3>
+<p><strong>Temporäre Ausnahmen:</strong>
+- Review 30 Tage vor Ablauf
+- Entscheidung: Verlängern, Beenden, Permanent machen</p>
+<p><strong>Permanente Ausnahmen:</strong>
+- Jährlicher Review
+- Prüfung auf Notwendigkeit
+- Aktualisierung der Risikobewertung</p>
+<p><strong>Notfall-Ausnahmen:</strong>
+- Review innerhalb 7 Tage nach Genehmigung
+- Regularisierung oder Beendigung</p>
+<h3 id="43-eskalation">4.3 Eskalation</h3>
+<p><strong>Bei Problemen:</strong>
+- Kompensationskontrollen unwirksam
+- Risiko gestiegen
+- Incidents im Zusammenhang mit Ausnahme</p>
+<p><strong>Eskalation an:</strong>
+- CISO (sofort)
+- Risk Committee (bei kritischen Ausnahmen)</p>
+<h2 id="5-beendigung-von-ausnahmen">5. Beendigung von Ausnahmen</h2>
+<h3 id="51-geplante-beendigung">5.1 Geplante Beendigung</h3>
+<p><strong>Bei Ablauf:</strong>
+1. Benachrichtigung an Antragsteller (30 Tage vorher)
+2. Remediation-Plan erstellen
+3. Umsetzung der Remediation
+4. Verifizierung
+5. Ausnahme schließen</p>
+<h3 id="52-vorzeitige-beendigung">5.2 Vorzeitige Beendigung</h3>
+<p><strong>Gründe:</strong>
+- Risiko nicht mehr akzeptabel
+- Kompensationskontrollen unwirksam
+- Alternative Lösung verfügbar
+- Geschäftsanforderung entfallen</p>
+<p><strong>Prozess:</strong>
+1. Entscheidung durch CISO
+2. Benachrichtigung an Antragsteller
+3. Sofortige Remediation (oder Systemabschaltung)
+4. Dokumentation</p>
+<h2 id="6-reporting">6. Reporting</h2>
+<h3 id="61-monatlicher-ausnahmen-report">6.1 Monatlicher Ausnahmen-Report</h3>
+<p><strong>Inhalte:</strong>
+- Anzahl aktiver Ausnahmen (nach Risiko)
+- Neue Ausnahmen im Monat
+- Abgelaufene Ausnahmen
+- Überfällige Reviews
+- Top-Ausnahmen nach Risiko</p>
+<p><strong>Empfänger:</strong> CISO, CIO, Risk Committee</p>
+<h3 id="62-quartalsweiser-management-report">6.2 Quartalsweiser Management-Report</h3>
+<p><strong>Inhalte:</strong>
+- Trend-Analyse
+- Ausnahmen nach Kategorie/Abteilung
+- Risiko-Posture
+- Verbesserungsmaßnahmen</p>
+<p><strong>Empfänger:</strong> Geschäftsführung, Audit Committee</p>
+<h2 id="7-compliance-und-audit">7. Compliance und Audit</h2>
+<h3 id="71-messgroen-kpis">7.1 Messgrößen (KPIs)</h3>
+<table>
+<thead>
+<tr>
+<th>Metrik</th>
+<th>Zielwert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ausnahmen mit aktuellem Review</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Überfällige Ausnahmen</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Ausnahmen mit Kompensationskontrollen</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Durchschnittliche Ausnahmen-Dauer</td>
+<td>&lt; 6 Monate</td>
+</tr>
+</tbody>
+</table>
+<h3 id="72-audit-nachweise">7.2 Audit-Nachweise</h3>
+<ul>
+<li>Ausnahmen-Register</li>
+<li>Anträge und Genehmigungen</li>
+<li>Risikobewertungen</li>
+<li>Review-Protokolle</li>
+<li>Monitoring-Berichte</li>
+</ul>
+<h2 id="8-beispiele">8. Beispiele</h2>
+<h3 id="81-beispiel-verzogertes-patching">8.1 Beispiel: Verzögertes Patching</h3>
+<p><strong>Szenario:</strong> Kritischer Patch verursacht Kompatibilitätsprobleme mit Business-Anwendung</p>
+<p><strong>Antrag:</strong>
+- Policy: Patch Management (Critical Patches innerhalb 7 Tage)
+- Abweichung: Verzögerung um 30 Tage
+- Begründung: Kompatibilitätsproblem, Vendor arbeitet an Fix
+- Risiko: Hoch (bekannter Exploit)</p>
+<p><strong>Kompensationskontrollen:</strong>
+- Netzwerk-Isolation des betroffenen Systems
+- IPS-Signatur aktiviert
+- Erhöhtes Monitoring
+- Zugriffsbeschränkungen</p>
+<p><strong>Genehmigung:</strong> CISO + CIO<br />
+<strong>Dauer:</strong> 30 Tage<br />
+<strong>Review:</strong> Wöchentlich</p>
+<h3 id="82-beispiel-legacy-system">8.2 Beispiel: Legacy-System</h3>
+<p><strong>Szenario:</strong> Legacy-System kann Security-Baseline nicht erfüllen</p>
+<p><strong>Antrag:</strong>
+- Policy: Security-Baseline (CIS Benchmark Level 1)
+- Abweichung: Veraltetes OS, keine Patches mehr verfügbar
+- Begründung: Kritische Business-Anwendung, keine Migration möglich (kurzfristig)
+- Risiko: Hoch</p>
+<p><strong>Kompensationskontrollen:</strong>
+- Dediziertes VLAN (isoliert)
+- Firewall-Regeln (nur erforderliche Verbindungen)
+- Kein Internet-Zugriff
+- Read-Only-Zugriff für Standard-Nutzer
+- Erhöhtes Monitoring und Logging
+- Jährliche Penetration-Tests</p>
+<p><strong>Genehmigung:</strong> CISO + CIO + Geschäftsführung<br />
+<strong>Dauer:</strong> Permanent (bis Migration)<br />
+<strong>Review:</strong> Jährlich</p>
+<h2 id="9-referenzen">9. Referenzen</h2>
+<h3 id="interne-dokumente">Interne Dokumente</h3>
+<ul>
+<li><code>0640_Policy_Ausnahmen_und_Risk_Waivers.md</code></li>
+<li>Alle Security-Policies und -Richtlinien</li>
+</ul>
+<h3 id="externe-standards">Externe Standards</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.1</strong> - Policies for information security</li>
+<li><strong>NIST SP 800-53</strong> - Security and Privacy Controls (Tailoring)</li>
+</ul>
+<hr />
+<p><strong>Genehmigt durch:</strong> Thomas Weber, CISO<br />
+<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0640_Policy_Ausnahmen_und_Risk_Waivers.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0660_Policy_Informationsuebertragung_und_Kommunikation.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

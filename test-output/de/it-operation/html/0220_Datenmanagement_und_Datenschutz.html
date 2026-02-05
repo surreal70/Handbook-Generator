@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0220 - Datenmanagement und Datenschutz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0220</div>
+            <h1>Datenmanagement und Datenschutz</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0210_Verfuegbarkeit_und_Service_Level.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0230_Wartung_und_Operations_Routinen.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="datenmanagement-und-datenschutz">Datenmanagement und Datenschutz</h1>
+<h2 id="ubersicht">Übersicht</h2>
+<p>Dieses Dokument beschreibt die Prozesse und Richtlinien für das Datenmanagement und den Datenschutz im IT-Service. Es definiert Datenklassifizierung, Datenschutzanforderungen gemäß DSGVO, Datenaufbewahrung und -löschung sowie Data-Governance-Strukturen.</p>
+<p><strong>Dokumentverantwortlicher:</strong> IT Operations Manager<br />
+<strong>Genehmigt durch:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Organisation:</strong> AdminSend GmbH</p>
+<hr />
+<h2 id="datenklassifizierung">Datenklassifizierung</h2>
+<h3 id="klassifizierungsstufen">Klassifizierungsstufen</h3>
+<table>
+<thead>
+<tr>
+<th>Stufe</th>
+<th>Beschreibung</th>
+<th>Beispiele</th>
+<th>Schutzmaßnahmen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Öffentlich</strong></td>
+<td>Für die Öffentlichkeit bestimmt</td>
+<td>Marketing-Material, Pressemitteilungen</td>
+<td>Keine besonderen Maßnahmen</td>
+</tr>
+<tr>
+<td><strong>Intern</strong></td>
+<td>Nur für interne Nutzung</td>
+<td>Interne Richtlinien, Organigramme</td>
+<td>Zugriffskontrolle</td>
+</tr>
+<tr>
+<td><strong>Vertraulich</strong></td>
+<td>Sensible Geschäftsinformationen</td>
+<td>Verträge, Finanzberichte, Strategien</td>
+<td>Verschlüsselung, strenge Zugriffskontrolle</td>
+</tr>
+<tr>
+<td><strong>Streng vertraulich</strong></td>
+<td>Höchst sensible Daten</td>
+<td>Personaldaten, Gesundheitsdaten, Gehälter</td>
+<td>Verschlüsselung, MFA, Audit-Logging</td>
+</tr>
+</tbody>
+</table>
+<h3 id="klassifizierungskriterien">Klassifizierungskriterien</h3>
+<h4 id="geschaftswert">Geschäftswert</h4>
+<ul>
+<li><strong>Hoch:</strong> Kritisch für Geschäftsbetrieb</li>
+<li><strong>Mittel:</strong> Wichtig für Geschäftsprozesse</li>
+<li><strong>Niedrig:</strong> Unterstützende Informationen</li>
+</ul>
+<h4 id="vertraulichkeit">Vertraulichkeit</h4>
+<ul>
+<li><strong>Hoch:</strong> Schwerwiegende Schäden bei Offenlegung</li>
+<li><strong>Mittel:</strong> Moderate Schäden bei Offenlegung</li>
+<li><strong>Niedrig:</strong> Geringe oder keine Schäden</li>
+</ul>
+<h4 id="integritat">Integrität</h4>
+<ul>
+<li><strong>Hoch:</strong> Kritisch für Entscheidungen</li>
+<li><strong>Mittel:</strong> Wichtig für Prozesse</li>
+<li><strong>Niedrig:</strong> Informativ</li>
+</ul>
+<h4 id="verfugbarkeit">Verfügbarkeit</h4>
+<ul>
+<li><strong>Hoch:</strong> Sofortige Verfügbarkeit erforderlich</li>
+<li><strong>Mittel:</strong> Verfügbarkeit innerhalb von Stunden</li>
+<li><strong>Niedrig:</strong> Verfügbarkeit innerhalb von Tagen</li>
+</ul>
+<h3 id="klassifizierungsprozess">Klassifizierungsprozess</h3>
+<ol>
+<li><strong>Datenidentifikation:</strong> Erfassung aller Datenbestände</li>
+<li><strong>Bewertung:</strong> Anwendung der Klassifizierungskriterien</li>
+<li><strong>Kennzeichnung:</strong> Markierung der Daten mit Klassifizierungsstufe</li>
+<li><strong>Dokumentation:</strong> Erfassung in Data-Inventory</li>
+<li><strong>Review:</strong> Jährliche Überprüfung der Klassifizierung</li>
+</ol>
+<h3 id="daten-inventory">Daten-Inventory</h3>
+<table>
+<thead>
+<tr>
+<th>Datenbestand</th>
+<th>Klassifizierung</th>
+<th>Speicherort</th>
+<th>Verantwortlich</th>
+<th>Aufbewahrung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>{{ netbox.storage.location }}</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>{{ netbox.storage.location }}</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>{{ netbox.storage.location }}</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="datenschutz-anforderungen-dsgvo">Datenschutz-Anforderungen (DSGVO)</h2>
+<h3 id="rechtliche-grundlagen">Rechtliche Grundlagen</h3>
+<h4 id="eu-datenschutz-grundverordnung-dsgvo">EU-Datenschutz-Grundverordnung (DSGVO)</h4>
+<ul>
+<li><strong>Gültig seit:</strong> 25. Mai 2018</li>
+<li><strong>Anwendungsbereich:</strong> Verarbeitung personenbezogener Daten in der EU</li>
+<li><strong>Bußgelder:</strong> Bis zu 20 Mio. EUR oder 4% des weltweiten Jahresumsatzes</li>
+</ul>
+<h4 id="bundesdatenschutzgesetz-bdsg">Bundesdatenschutzgesetz (BDSG)</h4>
+<ul>
+<li><strong>Gültig seit:</strong> 25. Mai 2018</li>
+<li><strong>Ergänzung:</strong> Nationale Regelungen zur DSGVO</li>
+<li><strong>Anwendung:</strong> Deutschland-spezifische Anforderungen</li>
+</ul>
+<h3 id="personenbezogene-daten">Personenbezogene Daten</h3>
+<h4 id="definition">Definition</h4>
+<p>Alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person beziehen.</p>
+<h4 id="kategorien">Kategorien</h4>
+<table>
+<thead>
+<tr>
+<th>Kategorie</th>
+<th>Beispiele</th>
+<th>Besondere Schutzmaßnahmen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Basisdaten</strong></td>
+<td>Name, Adresse, E-Mail, Telefon</td>
+<td>Zugriffskontrolle, Verschlüsselung</td>
+</tr>
+<tr>
+<td><strong>Identifikationsdaten</strong></td>
+<td>Personalausweisnummer, Sozialversicherungsnummer</td>
+<td>Strenge Zugriffskontrolle, Verschlüsselung</td>
+</tr>
+<tr>
+<td><strong>Besondere Kategorien</strong></td>
+<td>Gesundheit, Religion, politische Meinung</td>
+<td>Höchste Schutzmaßnahmen, explizite Einwilligung</td>
+</tr>
+<tr>
+<td><strong>Finanzdaten</strong></td>
+<td>Bankverbindung, Kreditkartennummer</td>
+<td>PCI-DSS-Compliance, Tokenisierung</td>
+</tr>
+<tr>
+<td><strong>Standortdaten</strong></td>
+<td>GPS-Koordinaten, IP-Adressen</td>
+<td>Anonymisierung, Pseudonymisierung</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dsgvo-grundsatze">DSGVO-Grundsätze</h3>
+<h4 id="rechtmaigkeit-verarbeitung-nach-treu-und-glauben-transparenz">Rechtmäßigkeit, Verarbeitung nach Treu und Glauben, Transparenz</h4>
+<ul>
+<li>Rechtsgrundlage für jede Verarbeitung</li>
+<li>Transparente Information der Betroffenen</li>
+<li>Dokumentation der Verarbeitungszwecke</li>
+</ul>
+<h4 id="zweckbindung">Zweckbindung</h4>
+<ul>
+<li>Daten nur für festgelegte Zwecke erheben</li>
+<li>Keine Weiterverarbeitung für andere Zwecke</li>
+<li>Dokumentation der Verarbeitungszwecke</li>
+</ul>
+<h4 id="datenminimierung">Datenminimierung</h4>
+<ul>
+<li>Nur notwendige Daten erheben</li>
+<li>Keine übermäßige Datensammlung</li>
+<li>Regelmäßige Überprüfung der Notwendigkeit</li>
+</ul>
+<h4 id="richtigkeit">Richtigkeit</h4>
+<ul>
+<li>Sicherstellung der Datenaktualität</li>
+<li>Korrektur unrichtiger Daten</li>
+<li>Löschung veralteter Daten</li>
+</ul>
+<h4 id="speicherbegrenzung">Speicherbegrenzung</h4>
+<ul>
+<li>Daten nur so lange speichern wie nötig</li>
+<li>Definierte Aufbewahrungsfristen</li>
+<li>Automatische Löschung nach Fristablauf</li>
+</ul>
+<h4 id="integritat-und-vertraulichkeit">Integrität und Vertraulichkeit</h4>
+<ul>
+<li>Schutz vor unbefugtem Zugriff</li>
+<li>Verschlüsselung sensibler Daten</li>
+<li>Zugriffskontrolle und Audit-Logging</li>
+</ul>
+<h4 id="rechenschaftspflicht">Rechenschaftspflicht</h4>
+<ul>
+<li>Nachweis der DSGVO-Compliance</li>
+<li>Dokumentation aller Verarbeitungstätigkeiten</li>
+<li>Regelmäßige Audits</li>
+</ul>
+<h3 id="betroffenenrechte">Betroffenenrechte</h3>
+<table>
+<thead>
+<tr>
+<th>Recht</th>
+<th>Beschreibung</th>
+<th>Reaktionszeit</th>
+<th>Verantwortlich</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Auskunftsrecht</strong></td>
+<td>Information über gespeicherte Daten</td>
+<td>1 Monat</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td><strong>Berichtigungsrecht</strong></td>
+<td>Korrektur unrichtiger Daten</td>
+<td>Unverzüglich</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td><strong>Löschungsrecht</strong></td>
+<td>Löschung personenbezogener Daten</td>
+<td>Unverzüglich</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td><strong>Einschränkung</strong></td>
+<td>Einschränkung der Verarbeitung</td>
+<td>Unverzüglich</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td><strong>Datenübertragbarkeit</strong></td>
+<td>Übertragung an anderen Verantwortlichen</td>
+<td>1 Monat</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td><strong>Widerspruchsrecht</strong></td>
+<td>Widerspruch gegen Verarbeitung</td>
+<td>Unverzüglich</td>
+<td>Thomas Weber</td>
+</tr>
+</tbody>
+</table>
+<h3 id="datenschutz-folgenabschatzung-dsfa">Datenschutz-Folgenabschätzung (DSFA)</h3>
+<h4 id="durchfuhrungspflicht">Durchführungspflicht</h4>
+<ul>
+<li>Hohes Risiko für Rechte und Freiheiten</li>
+<li>Neue Technologien</li>
+<li>Umfangreiche Verarbeitung besonderer Kategorien</li>
+<li>Systematische Überwachung</li>
+</ul>
+<h4 id="dsfa-prozess">DSFA-Prozess</h4>
+<ol>
+<li><strong>Beschreibung:</strong> Verarbeitungsvorgänge und Zwecke</li>
+<li><strong>Notwendigkeit:</strong> Bewertung der Erforderlichkeit</li>
+<li><strong>Risikobewertung:</strong> Identifikation und Bewertung von Risiken</li>
+<li><strong>Schutzmaßnahmen:</strong> Definition von Maßnahmen zur Risikominimierung</li>
+<li><strong>Dokumentation:</strong> Erstellung des DSFA-Berichts</li>
+<li><strong>Konsultation:</strong> Ggf. Konsultation der Aufsichtsbehörde</li>
+</ol>
+<h3 id="datenschutzbeauftragter-dsb">Datenschutzbeauftragter (DSB)</h3>
+<ul>
+<li><strong>Name:</strong> [TODO: Name des DSB]</li>
+<li><strong>Kontakt:</strong> [TODO: E-Mail und Telefon]</li>
+<li><strong>Aufgaben:</strong></li>
+<li>Überwachung der DSGVO-Compliance</li>
+<li>Beratung bei Datenschutzfragen</li>
+<li>Schulung der Mitarbeiter</li>
+<li>Zusammenarbeit mit Aufsichtsbehörden</li>
+<li>Anlaufstelle für Betroffene</li>
+</ul>
+<hr />
+<h2 id="datenaufbewahrung-und-loschung">Datenaufbewahrung und -löschung</h2>
+<h3 id="aufbewahrungsfristen">Aufbewahrungsfristen</h3>
+<h4 id="gesetzliche-aufbewahrungsfristen">Gesetzliche Aufbewahrungsfristen</h4>
+<table>
+<thead>
+<tr>
+<th>Datenart</th>
+<th>Aufbewahrungsfrist</th>
+<th>Rechtsgrundlage</th>
+<th>Verantwortlich</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Geschäftsbriefe</td>
+<td>6 Jahre</td>
+<td>HGB § 257</td>
+<td>Maria Müller</td>
+</tr>
+<tr>
+<td>Buchungsbelege</td>
+<td>10 Jahre</td>
+<td>HGB § 257, AO § 147</td>
+<td>Maria Müller</td>
+</tr>
+<tr>
+<td>Jahresabschlüsse</td>
+<td>10 Jahre</td>
+<td>HGB § 257</td>
+<td>Maria Müller</td>
+</tr>
+<tr>
+<td>Lohnunterlagen</td>
+<td>6 Jahre</td>
+<td>AO § 147</td>
+<td>Maria Müller</td>
+</tr>
+<tr>
+<td>Steuerunterlagen</td>
+<td>10 Jahre</td>
+<td>AO § 147</td>
+<td>Maria Müller</td>
+</tr>
+<tr>
+<td>Personalakten</td>
+<td>3-10 Jahre</td>
+<td>Verschiedene</td>
+<td>Peter Fischer</td>
+</tr>
+</tbody>
+</table>
+<h4 id="betriebliche-aufbewahrungsfristen">Betriebliche Aufbewahrungsfristen</h4>
+<table>
+<thead>
+<tr>
+<th>Datenart</th>
+<th>Aufbewahrungsfrist</th>
+<th>Grund</th>
+<th>Verantwortlich</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Verträge</td>
+<td>Vertragslaufzeit + 3 Jahre</td>
+<td>Gewährleistung</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Projektdokumentation</td>
+<td>5 Jahre</td>
+<td>Nachvollziehbarkeit</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Audit-Logs</td>
+<td>1 Jahr</td>
+<td>Sicherheit</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td>Backup-Daten</td>
+<td>30-90 Tage</td>
+<td>Wiederherstellung</td>
+<td>Andreas Huemmer</td>
+</tr>
+<tr>
+<td>E-Mails</td>
+<td>1-3 Jahre</td>
+<td>Geschäftskommunikation</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="loschkonzept">Löschkonzept</h3>
+<h4 id="loschprozess">Löschprozess</h4>
+<div class="codehilite"><pre><span></span><code>┌─────────────────────────────────────────────────────────┐
+│                                                         │
+│  1. Fristablauf  →  2. Prüfung  →  3. Genehmigung      │
+│       ↓                                    ↓            │
+│       │                                    │            │
+│  6. Dokumentation  ←  5. Verifikation  ←  4. Löschung  │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
+</code></pre></div>
+
+<h4 id="loschmethoden">Löschmethoden</h4>
+<table>
+<thead>
+<tr>
+<th>Datenträger</th>
+<th>Methode</th>
+<th>Standard</th>
+<th>Verantwortlich</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Festplatten</td>
+<td>Secure Erase / Degaussing</td>
+<td>NIST SP 800-88</td>
+<td>Andreas Huemmer</td>
+</tr>
+<tr>
+<td>SSDs</td>
+<td>Crypto Erase / Zerstörung</td>
+<td>NIST SP 800-88</td>
+<td>Andreas Huemmer</td>
+</tr>
+<tr>
+<td>Backup-Medien</td>
+<td>Überschreiben / Zerstörung</td>
+<td>NIST SP 800-88</td>
+<td>Andreas Huemmer</td>
+</tr>
+<tr>
+<td>Cloud-Daten</td>
+<td>API-basierte Löschung</td>
+<td>Provider-Standard</td>
+<td>Andreas Huemmer</td>
+</tr>
+<tr>
+<td>Datenbanken</td>
+<td>SQL DELETE / TRUNCATE</td>
+<td>Datenbankstandard</td>
+<td>Andreas Huemmer</td>
+</tr>
+<tr>
+<td>Papier</td>
+<td>Aktenvernichtung (P-4)</td>
+<td>DIN 66399</td>
+<td>Peter Fischer</td>
+</tr>
+</tbody>
+</table>
+<h4 id="loschnachweis">Löschnachweis</h4>
+<ul>
+<li>Dokumentation aller Löschvorgänge</li>
+<li>Protokollierung von Datum, Datenart, Methode</li>
+<li>Aufbewahrung der Löschnachweise für 3 Jahre</li>
+<li>Verantwortlich: Thomas Weber</li>
+</ul>
+<h3 id="archivierung">Archivierung</h3>
+<h4 id="archivierungsprozess">Archivierungsprozess</h4>
+<ol>
+<li><strong>Identifikation:</strong> Daten, die archiviert werden müssen</li>
+<li><strong>Vorbereitung:</strong> Datenbereinigung und -validierung</li>
+<li><strong>Archivierung:</strong> Transfer in Archivsystem</li>
+<li><strong>Indexierung:</strong> Metadaten für Wiederauffindbarkeit</li>
+<li><strong>Verifikation:</strong> Prüfung der Archivintegrität</li>
+<li><strong>Dokumentation:</strong> Erfassung im Archivregister</li>
+</ol>
+<h4 id="archivierungssysteme">Archivierungssysteme</h4>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Datenart</th>
+<th>Aufbewahrung</th>
+<th>Zugriff</th>
+<th>Verantwortlich</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Archivsystem]</td>
+<td>[TODO]</td>
+<td>[TODO] Jahre</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="data-governance">Data-Governance</h2>
+<h3 id="governance-struktur">Governance-Struktur</h3>
+<h4 id="data-governance-board">Data Governance Board</h4>
+<ul>
+<li><strong>Vorsitz:</strong> Anna Schmidt</li>
+<li><strong>Mitglieder:</strong> Thomas Weber, Maria Müller, Fachbereichsleiter</li>
+<li><strong>Frequenz:</strong> Quartalsweise</li>
+<li><strong>Aufgaben:</strong></li>
+<li>Strategische Daten-Governance</li>
+<li>Genehmigung von Data Policies</li>
+<li>Überwachung der Compliance</li>
+<li>Eskalation von Datenschutzvorfällen</li>
+</ul>
+<h4 id="data-stewards">Data Stewards</h4>
+<ul>
+<li><strong>Rolle:</strong> Fachliche Datenverantwortliche</li>
+<li><strong>Aufgaben:</strong></li>
+<li>Datenqualität sicherstellen</li>
+<li>Datenklassifizierung durchführen</li>
+<li>Zugriffsgenehmigungen erteilen</li>
+<li>Datenschutz-Compliance überwachen</li>
+</ul>
+<h4 id="data-custodians">Data Custodians</h4>
+<ul>
+<li><strong>Rolle:</strong> Technische Datenverantwortliche</li>
+<li><strong>Aufgaben:</strong></li>
+<li>Technische Umsetzung der Data Policies</li>
+<li>Datensicherheit gewährleisten</li>
+<li>Backup und Recovery</li>
+<li>Zugriffskontrolle implementieren</li>
+</ul>
+<h3 id="data-policies">Data Policies</h3>
+<h4 id="datennutzungsrichtlinie">Datennutzungsrichtlinie</h4>
+<ul>
+<li>Erlaubte und verbotene Datennutzungen</li>
+<li>Genehmigungsprozesse für Datennutzung</li>
+<li>Sanktionen bei Verstößen</li>
+</ul>
+<h4 id="datenzugriffsrichtlinie">Datenzugriffsrichtlinie</h4>
+<ul>
+<li>Zugriffskontrollmodell (RBAC, ABAC)</li>
+<li>Genehmigungsprozesse für Zugriffe</li>
+<li>Regelmäßige Zugriffsprüfungen</li>
+</ul>
+<h4 id="datensicherheitsrichtlinie">Datensicherheitsrichtlinie</h4>
+<ul>
+<li>Verschlüsselungsanforderungen</li>
+<li>Sicherheitsmaßnahmen nach Klassifizierung</li>
+<li>Incident-Response-Prozesse</li>
+</ul>
+<h4 id="datenqualitatsrichtlinie">Datenqualitätsrichtlinie</h4>
+<ul>
+<li>Datenqualitätskriterien</li>
+<li>Datenvalidierung und -bereinigung</li>
+<li>Datenqualitäts-Metriken</li>
+</ul>
+<h3 id="datenqualitatsmanagement">Datenqualitätsmanagement</h3>
+<h4 id="datenqualitatsdimensionen">Datenqualitätsdimensionen</h4>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Beschreibung</th>
+<th style="text-align: right;">Zielwert</th>
+<th>Messmethode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vollständigkeit</strong></td>
+<td>Alle erforderlichen Daten vorhanden</td>
+<td style="text-align: right;">&gt; 95%</td>
+<td>Automatische Prüfung</td>
+</tr>
+<tr>
+<td><strong>Richtigkeit</strong></td>
+<td>Daten korrekt und fehlerfrei</td>
+<td style="text-align: right;">&gt; 98%</td>
+<td>Stichproben</td>
+</tr>
+<tr>
+<td><strong>Konsistenz</strong></td>
+<td>Daten widerspruchsfrei</td>
+<td style="text-align: right;">&gt; 99%</td>
+<td>Automatische Prüfung</td>
+</tr>
+<tr>
+<td><strong>Aktualität</strong></td>
+<td>Daten auf dem neuesten Stand</td>
+<td style="text-align: right;">&gt; 95%</td>
+<td>Zeitstempel-Prüfung</td>
+</tr>
+<tr>
+<td><strong>Eindeutigkeit</strong></td>
+<td>Keine Duplikate</td>
+<td style="text-align: right;">&gt; 99%</td>
+<td>Duplikatsprüfung</td>
+</tr>
+</tbody>
+</table>
+<h4 id="datenqualitatsprozess">Datenqualitätsprozess</h4>
+<ol>
+<li><strong>Messung:</strong> Erfassung der Datenqualitäts-Metriken</li>
+<li><strong>Analyse:</strong> Identifikation von Qualitätsproblemen</li>
+<li><strong>Bereinigung:</strong> Korrektur fehlerhafter Daten</li>
+<li><strong>Prävention:</strong> Maßnahmen zur Vermeidung zukünftiger Probleme</li>
+<li><strong>Monitoring:</strong> Kontinuierliche Überwachung</li>
+</ol>
+<hr />
+<h2 id="datensicherheit">Datensicherheit</h2>
+<h3 id="verschlusselung">Verschlüsselung</h3>
+<h4 id="verschlusselung-im-ruhezustand-data-at-rest">Verschlüsselung im Ruhezustand (Data at Rest)</h4>
+<table>
+<thead>
+<tr>
+<th>Datenart</th>
+<th>Verschlüsselung</th>
+<th>Algorithmus</th>
+<th>Schlüssellänge</th>
+<th>Verantwortlich</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Streng vertraulich</td>
+<td>Pflicht</td>
+<td>AES</td>
+<td>256 Bit</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td>Vertraulich</td>
+<td>Pflicht</td>
+<td>AES</td>
+<td>256 Bit</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td>Intern</td>
+<td>Empfohlen</td>
+<td>AES</td>
+<td>128/256 Bit</td>
+<td>Andreas Huemmer</td>
+</tr>
+<tr>
+<td>Öffentlich</td>
+<td>Nicht erforderlich</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h4 id="verschlusselung-in-ubertragung-data-in-transit">Verschlüsselung in Übertragung (Data in Transit)</h4>
+<table>
+<thead>
+<tr>
+<th>Verbindungstyp</th>
+<th>Protokoll</th>
+<th>Mindestversion</th>
+<th>Verantwortlich</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Web-Traffic</td>
+<td>HTTPS/TLS</td>
+<td>TLS 1.2</td>
+<td>Andreas Huemmer</td>
+</tr>
+<tr>
+<td>E-Mail</td>
+<td>TLS/S/MIME</td>
+<td>TLS 1.2</td>
+<td>Andreas Huemmer</td>
+</tr>
+<tr>
+<td>Dateiübertragung</td>
+<td>SFTP/FTPS</td>
+<td>TLS 1.2</td>
+<td>Andreas Huemmer</td>
+</tr>
+<tr>
+<td>VPN</td>
+<td>IPsec/OpenVPN</td>
+<td>-</td>
+<td>Andreas Huemmer</td>
+</tr>
+<tr>
+<td>Datenbank</td>
+<td>TLS</td>
+<td>TLS 1.2</td>
+<td>Andreas Huemmer</td>
+</tr>
+</tbody>
+</table>
+<h3 id="zugriffskontrolle">Zugriffskontrolle</h3>
+<h4 id="zugriffskontrollmodell">Zugriffskontrollmodell</h4>
+<ul>
+<li><strong>Modell:</strong> Role-Based Access Control (RBAC)</li>
+<li><strong>Prinzip:</strong> Least Privilege, Need-to-Know</li>
+<li><strong>Authentifizierung:</strong> Multi-Faktor-Authentifizierung (MFA) für sensible Daten</li>
+<li><strong>Autorisierung:</strong> Rollenbasierte Berechtigungen</li>
+</ul>
+<h4 id="zugriffsrechte-review">Zugriffsrechte-Review</h4>
+<ul>
+<li><strong>Frequenz:</strong> Quartalsweise</li>
+<li><strong>Verantwortlich:</strong> Data Stewards</li>
+<li><strong>Prozess:</strong></li>
+<li>Export aller Zugriffsrechte</li>
+<li>Review durch Fachbereich</li>
+<li>Entfernung nicht mehr benötigter Rechte</li>
+<li>Dokumentation der Änderungen</li>
+</ul>
+<h3 id="audit-logging">Audit-Logging</h3>
+<h4 id="logging-anforderungen">Logging-Anforderungen</h4>
+<table>
+<thead>
+<tr>
+<th>Ereignistyp</th>
+<th>Logging</th>
+<th>Aufbewahrung</th>
+<th>Verantwortlich</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Datenzugriff (vertraulich)</td>
+<td>Pflicht</td>
+<td>1 Jahr</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td>Datenänderung</td>
+<td>Pflicht</td>
+<td>1 Jahr</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td>Datenlöschung</td>
+<td>Pflicht</td>
+<td>3 Jahre</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td>Zugriffsverweigerung</td>
+<td>Pflicht</td>
+<td>1 Jahr</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td>Admin-Aktivitäten</td>
+<td>Pflicht</td>
+<td>1 Jahr</td>
+<td>Thomas Weber</td>
+</tr>
+</tbody>
+</table>
+<h4 id="log-inhalte">Log-Inhalte</h4>
+<ul>
+<li>Zeitstempel</li>
+<li>Benutzer-ID</li>
+<li>Aktion (Lesen, Schreiben, Löschen)</li>
+<li>Betroffene Daten/Objekte</li>
+<li>Quell-IP-Adresse</li>
+<li>Ergebnis (Erfolg/Fehler)</li>
+</ul>
+<hr />
+<h2 id="datenschutzvorfalle">Datenschutzvorfälle</h2>
+<h3 id="meldepflicht">Meldepflicht</h3>
+<h4 id="dsgvo-meldepflicht">DSGVO-Meldepflicht</h4>
+<ul>
+<li><strong>Frist:</strong> 72 Stunden nach Bekanntwerden</li>
+<li><strong>Empfänger:</strong> Zuständige Aufsichtsbehörde</li>
+<li><strong>Inhalt:</strong></li>
+<li>Art der Verletzung</li>
+<li>Betroffene Datenkategorien und Personen</li>
+<li>Wahrscheinliche Folgen</li>
+<li>Ergriffene Maßnahmen</li>
+</ul>
+<h4 id="benachrichtigung-betroffener">Benachrichtigung Betroffener</h4>
+<ul>
+<li><strong>Voraussetzung:</strong> Hohes Risiko für Rechte und Freiheiten</li>
+<li><strong>Frist:</strong> Unverzüglich</li>
+<li><strong>Inhalt:</strong></li>
+<li>Art der Verletzung</li>
+<li>Kontaktstelle</li>
+<li>Wahrscheinliche Folgen</li>
+<li>Ergriffene Maßnahmen</li>
+</ul>
+<h3 id="incident-response-prozess">Incident-Response-Prozess</h3>
+<ol>
+<li><strong>Erkennung:</strong> Identifikation des Datenschutzvorfalls</li>
+<li><strong>Bewertung:</strong> Einschätzung des Risikos</li>
+<li><strong>Eindämmung:</strong> Sofortmaßnahmen zur Schadensbegrenzung</li>
+<li><strong>Meldung:</strong> Meldung an Aufsichtsbehörde (falls erforderlich)</li>
+<li><strong>Benachrichtigung:</strong> Information der Betroffenen (falls erforderlich)</li>
+<li><strong>Untersuchung:</strong> Root-Cause-Analyse</li>
+<li><strong>Behebung:</strong> Korrekturmaßnahmen</li>
+<li><strong>Dokumentation:</strong> Erfassung im Incident-Register</li>
+<li><strong>Lessons Learned:</strong> Prozessverbesserungen</li>
+</ol>
+<hr />
+<h2 id="prozesse-und-verantwortlichkeiten">Prozesse und Verantwortlichkeiten</h2>
+<h3 id="raci-matrix">RACI-Matrix</h3>
+<table>
+<thead>
+<tr>
+<th>Aktivität</th>
+<th>CIO</th>
+<th>CISO</th>
+<th>Ops Manager</th>
+<th>DSB</th>
+<th>Data Stewards</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Datenklassifizierung</td>
+<td>I</td>
+<td>C</td>
+<td>I</td>
+<td>C</td>
+<td>R/A</td>
+</tr>
+<tr>
+<td>DSGVO-Compliance</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Datenschutz-Folgenabschätzung</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>A</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Datenaufbewahrung</td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Datenlöschung</td>
+<td>I</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Data-Governance</td>
+<td>A</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Datensicherheit</td>
+<td>C</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Datenschutzvorfälle</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Legende:</strong> R = Responsible, A = Accountable, C = Consulted, I = Informed</p>
+</blockquote>
+<hr />
+<h2 id="compliance-und-standards">Compliance und Standards</h2>
+<h3 id="relevante-standards">Relevante Standards</h3>
+<ul>
+<li><strong>DSGVO:</strong> EU-Datenschutz-Grundverordnung</li>
+<li><strong>BDSG:</strong> Bundesdatenschutzgesetz</li>
+<li><strong>ISO 27001:</strong> Informationssicherheitsmanagement</li>
+<li><strong>ISO 27701:</strong> Privacy Information Management</li>
+<li><strong>NIST SP 800-88:</strong> Guidelines for Media Sanitization</li>
+</ul>
+<h3 id="audit-anforderungen">Audit-Anforderungen</h3>
+<ul>
+<li>Verzeichnis von Verarbeitungstätigkeiten</li>
+<li>Datenschutz-Folgenabschätzungen</li>
+<li>Auftragsverarbeitungsverträge</li>
+<li>Löschnachweise</li>
+<li>Audit-Logs</li>
+</ul>
+<hr />
+<h2 id="anhang">Anhang</h2>
+<h3 id="glossar">Glossar</h3>
+<table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DSGVO</td>
+<td>Datenschutz-Grundverordnung der EU</td>
+</tr>
+<tr>
+<td>Personenbezogene Daten</td>
+<td>Daten, die sich auf eine identifizierbare Person beziehen</td>
+</tr>
+<tr>
+<td>Data Steward</td>
+<td>Fachlicher Datenverantwortlicher</td>
+</tr>
+<tr>
+<td>Data Custodian</td>
+<td>Technischer Datenverantwortlicher</td>
+</tr>
+<tr>
+<td>DSFA</td>
+<td>Datenschutz-Folgenabschätzung</td>
+</tr>
+<tr>
+<td>Pseudonymisierung</td>
+<td>Verarbeitung ohne Zuordnung zu einer Person ohne Zusatzinformationen</td>
+</tr>
+<tr>
+<td>Anonymisierung</td>
+<td>Irreversible Entfernung des Personenbezugs</td>
+</tr>
+</tbody>
+</table>
+<h3 id="referenzen">Referenzen</h3>
+<ul>
+<li>EU-Datenschutz-Grundverordnung (DSGVO)</li>
+<li>Bundesdatenschutzgesetz (BDSG)</li>
+<li>ISO/IEC 27001:2013</li>
+<li>ISO/IEC 27701:2019</li>
+<li>NIST SP 800-88 Rev. 1</li>
+</ul>
+<hr />
+<p><strong>Letzte Aktualisierung:</strong> {{ meta.date }}<br />
+<strong>Nächste Review:</strong> [TODO: Datum]<br />
+<strong>Kontakt:</strong> thomas.weber@adminsend.de</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0210_Verfuegbarkeit_und_Service_Level.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0230_Wartung_und_Operations_Routinen.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

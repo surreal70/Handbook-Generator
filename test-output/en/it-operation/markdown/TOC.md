@@ -1,0 +1,38 @@
+# Table of Contents - IT-OPERATION Handbook
+
+Language: en
+
+## Templates
+
+- [0000 - metadata en it-operation](0000_metadata_en_it-operation.md)
+- [0010 - Introduction](0010_Introduction.md)
+- [0011 - Framework Conditions](0011_Framework_Conditions.md)
+- [0020 - Document Control and Versioning](0020_Document_Control_and_Versioning.md)
+- [0030 - Service Description and Criticality](0030_Service_Description_and_Criticality.md)
+- [0040 - System Overview and Architecture](0040_System_Overview_and_Architecture.md)
+- [0050 - Infrastructure and Platform](0050_Infrastructure_and_Platform.md)
+- [0060 - Roles and Responsibilities](0060_Roles_and_Responsibilities.md)
+- [0070 - Operating Concept and Processes](0070_Operating_Concept_and_Processes.md)
+- [0080 - Operations Handover and GoLive Checklist](0080_Operations_Handover_and_GoLive_Checklist.md)
+- [0090 - Configuration Management and CMDB](0090_Configuration_Management_and_CMDB.md)
+- [0100 - Access and Permission Management](0100_Access_and_Permission_Management.md)
+- [0110 - Monitoring Alerting and Observability](0110_Monitoring_Alerting_and_Observability.md)
+- [0120 - Incident Management Runbook](0120_Incident_Management_Runbook.md)
+- [0130 - Problem Management and Postmortems](0130_Problem_Management_and_Postmortems.md)
+- [0140 - Change and Release Management](0140_Change_and_Release_Management.md)
+- [0150 - Backup and Restore](0150_Backup_and_Restore.md)
+- [0160 - Disaster Recovery and Business Continuity](0160_Disaster_Recovery_and_Business_Continuity.md)
+- [0170 - Security Operations and Hardening](0170_Security_Operations_and_Hardening.md)
+- [0180 - Patch and Update Management](0180_Patch_and_Update_Management.md)
+- [0190 - Log Management and Audit](0190_Log_Management_and_Audit.md)
+- [0200 - Capacity and Performance Management](0200_Capacity_and_Performance_Management.md)
+- [0210 - Availability and Service Level](0210_Availability_and_Service_Level.md)
+- [0220 - Data Management and Privacy](0220_Data_Management_and_Privacy.md)
+- [0230 - Maintenance and Operations Routines](0230_Maintenance_and_Operations_Routines.md)
+- [0240 - Runbooks Standard Operations](0240_Runbooks_Standard_Operations.md)
+- [0250 - Tooling and Access Methods](0250_Tooling_and_Access_Methods.md)
+- [0260 - Known Issues and FAQ](0260_Known_Issues_and_FAQ.md)
+- [0270 - Contacts Escalation and Vendors](0270_Contacts_Escalation_and_Vendors.md)
+- [0280 - Compliance and Audits](0280_Compliance_and_Audits.md)
+- [0290 - Appendix Checklists and Templates](0290_Appendix_Checklists_and_Templates.md)
+- [READ - E](README.md)

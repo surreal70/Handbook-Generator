@@ -144,6 +144,55 @@ roles:
   # -------------------------
   # Add Custom Roles Here
   # -------------------------
+  # Extended Roles for BCM, ISMS, and BSI Grundschutz (NEW)
+  sysop:
+    name: "[SYSOP_NAME]"                        # e.g., "Michael Schneider"
+    title: "System Administrator"               # English: System Administrator
+    email: "[SYSOP_EMAIL]"                      # e.g., "michael.schneider@example.com"
+    phone: "[SYSOP_PHONE]"                      # e.g., "+49 30 12345678-260"
+    department: "IT Operations"
+    # Used in IT operations and security templates for system administration tasks
+  
+  datenschutzbeauftragter:
+    name: "[DPO_NAME]"                          # e.g., "Dr. Sarah Klein"
+    title: "Datenschutzbeauftragter"            # English: Data Protection Officer
+    email: "[DPO_EMAIL]"                        # e.g., "sarah.klein@example.com"
+    phone: "[DPO_PHONE]"                        # e.g., "+49 30 12345678-320"
+    department: "Legal & Compliance"
+    # Used in ISMS and BSI Grundschutz templates for GDPR compliance
+  
+  risikomanager:
+    name: "[RISK_MANAGER_NAME]"                 # e.g., "Frank Wagner"
+    title: "Risikomanager"                      # English: Risk Manager
+    email: "[RISK_MANAGER_EMAIL]"               # e.g., "frank.wagner@example.com"
+    phone: "[RISK_MANAGER_PHONE]"               # e.g., "+49 30 12345678-350"
+    department: "Risk Management"
+    # Used in BCM, ISMS, and BSI Grundschutz templates for risk management
+  
+  interner_auditor:
+    name: "[INTERNAL_AUDITOR_NAME]"             # e.g., "Dr. Klaus Hoffmann"
+    title: "Interner Auditor"                   # English: Internal Auditor
+    email: "[INTERNAL_AUDITOR_EMAIL]"           # e.g., "klaus.hoffmann@example.com"
+    phone: "[INTERNAL_AUDITOR_PHONE]"           # e.g., "+49 30 12345678-360"
+    department: "Internal Audit"
+    # Used in ISMS and BSI Grundschutz templates for internal audits
+  
+  personalleitung:
+    name: "[HR_MANAGER_NAME]"                   # e.g., "Sabine Richter"
+    title: "Personalleitung"                    # English: HR Manager
+    email: "[HR_MANAGER_EMAIL]"                 # e.g., "sabine.richter@example.com"
+    phone: "[HR_MANAGER_PHONE]"                 # e.g., "+49 30 12345678-600"
+    department: "Human Resources"
+    # Used in ISMS and BSI Grundschutz templates for HR security processes
+  
+  it_manager:
+    name: "[IT_MANAGER_NAME]"                   # e.g., "Martin Bauer"
+    title: "IT Manager"                         # English: IT Manager
+    email: "[IT_MANAGER_EMAIL]"                 # e.g., "martin.bauer@example.com"
+    phone: "[IT_MANAGER_PHONE]"                 # e.g., "+49 30 12345678-240"
+    department: "IT"
+    # Used in IT operations and security templates for IT management tasks
+  
   # Example: Add a Security Operations Manager
   # security_operations_manager:
   #   name: "[SECURITY_OPS_MANAGER_NAME]"
@@ -161,6 +210,49 @@ document:
   approver: "[DOCUMENT_APPROVER_ROLE]"          # e.g., "CIO"
   version: "1.0.0"                              # Semantic versioning (MAJOR.MINOR.PATCH)
   classification: "internal"                    # Options: public, internal, confidential, restricted
+
+# ============================================================================
+# PER-HANDBOOK VERSIONING AND RESPONSIBLE PERSONS
+# ============================================================================
+# Each handbook type can have its own version, owner, approver, and date.
+# This allows independent management of different handbook types.
+#
+# Supported handbook types:
+#   - bcm: Business Continuity Management
+#   - isms: Information Security Management System
+#   - bsi-grundschutz: BSI IT-Grundschutz
+#   - it-operation: IT Operations Handbook
+#
+# Placeholders available in templates:
+#   - {{ handbook.version }} - Version number for this specific handbook
+#   - {{ handbook.owner }} - Owner name for this specific handbook
+#   - {{ handbook.approver }} - Approver name for this specific handbook
+#   - {{ handbook.date }} - Date for this specific handbook
+
+handbooks:
+  bcm:
+    version: "1.0.0"                            # BCM handbook version
+    owner: "[BCM_OWNER_NAME]"                   # e.g., "Peter Fischer" or role name
+    approver: "[BCM_APPROVER_NAME]"             # e.g., "Max Mustermann" or role name
+    date: "2025-01-01"                          # ISO format: YYYY-MM-DD
+  
+  isms:
+    version: "1.0.0"                            # ISMS handbook version
+    owner: "[ISMS_OWNER_NAME]"                  # e.g., "Thomas Weber" (CISO)
+    approver: "[ISMS_APPROVER_NAME]"            # e.g., "Anna Schmidt" (CIO)
+    date: "2025-01-01"                          # ISO format: YYYY-MM-DD
+  
+  bsi-grundschutz:
+    version: "1.0.0"                            # BSI Grundschutz handbook version
+    owner: "[BSI_OWNER_NAME]"                   # e.g., "Thomas Weber" (CISO)
+    approver: "[BSI_APPROVER_NAME]"             # e.g., "Anna Schmidt" (CIO)
+    date: "2025-01-01"                          # ISO format: YYYY-MM-DD
+  
+  it-operation:
+    version: "1.0.0"                            # IT Operations handbook version
+    owner: "[IT_OPS_OWNER_NAME]"                # e.g., "Andreas Huemmer"
+    approver: "[IT_OPS_APPROVER_NAME]"          # e.g., "Anna Schmidt" (CIO)
+    date: "2025-01-01"                          # ISO format: YYYY-MM-DD
 
 # ============================================================================
 # DEFAULT VALUES

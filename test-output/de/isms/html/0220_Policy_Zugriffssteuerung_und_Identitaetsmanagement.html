@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0220 - Policy: Zugriffssteuerung und Identitätsmanagement</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0220</div>
+            <h1>Policy: Zugriffssteuerung und Identitätsmanagement</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0210_Richtlinie_Akzeptable_Nutzung_IT.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0230_Richtlinie_IAM_Joiner_Mover_Leaver_und_Zugriffsantraege.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="policy-zugriffssteuerung-und-identitatsmanagement">Policy: Zugriffssteuerung und Identitätsmanagement</h1>
+<p><strong>Dokument-ID:</strong> 0220<br />
+<strong>Dokumenttyp:</strong> Policy (abstrakt)<br />
+<strong>Standard-Referenz:</strong> ISO/IEC 27001:2022 Annex A.5.15-A.5.18 (inkl. Amendment 1:2024)<br />
+<strong>Owner:</strong> Thomas Weber<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Freigegeben<br />
+<strong>Klassifizierung:</strong> Intern<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.date }}<br />
+<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-zweck">1. Zweck</h2>
+<p>Diese Policy definiert die Grundsätze für Zugriffssteuerung und Identitätsmanagement (IAM) der <strong>AdminSend GmbH</strong>. Sie stellt sicher, dass der Zugriff auf Informationen und IT-Systeme ausschließlich autorisierten Personen gewährt wird und auf Basis des Need-to-Know-Prinzips und der geringsten Privilegien (Least Privilege) erfolgt.</p>
+<h2 id="2-geltungsbereich">2. Geltungsbereich</h2>
+<p>Diese Policy gilt für:</p>
+<ul>
+<li><strong>Organisationseinheiten:</strong> Alle Abteilungen und Standorte der AdminSend GmbH</li>
+<li><strong>Systeme:</strong> Alle IT-Systeme, Anwendungen, Datenbanken, Netzwerke, Cloud-Services</li>
+<li><strong>Personen:</strong> Alle Mitarbeiter, Auftragnehmer, Lieferanten und Dritte mit Zugang zu IT-Ressourcen</li>
+<li><strong>Zugriffsmethoden:</strong> Lokaler Zugriff, Remote-Zugriff, privilegierter Zugriff, API-Zugriff</li>
+<li><strong>Standorte:</strong> {{ netbox.site.name }} und alle weiteren Betriebsstandorte</li>
+</ul>
+<p><strong>Ausnahmen:</strong> Ausnahmen sind nur über den definierten Ausnahmenprozess (<code>0640_Policy_Ausnahmen_und_Risk_Waivers.md</code>) zulässig.</p>
+<h2 id="3-grundsatze-policy-statements">3. Grundsätze (Policy Statements)</h2>
+<h3 id="31-least-privilege-geringste-privilegien">3.1 Least Privilege (Geringste Privilegien)</h3>
+<p>Nutzer erhalten nur die minimalen Zugriffsrechte, die zur Erfüllung ihrer Aufgaben erforderlich sind. Privilegierte Zugriffe werden restriktiv vergeben und regelmäßig überprüft.</p>
+<h3 id="32-need-to-know-prinzip">3.2 Need-to-Know-Prinzip</h3>
+<p>Der Zugriff auf Informationen wird nur gewährt, wenn eine geschäftliche Notwendigkeit besteht. Zugriffe werden auf Basis von Rollen und Verantwortlichkeiten vergeben.</p>
+<h3 id="33-identitatslebenszyklus-joiner-mover-leaver">3.3 Identitätslebenszyklus (Joiner-Mover-Leaver)</h3>
+<p>Identitäten werden über den gesamten Lebenszyklus verwaltet:
+- <strong>Joiner:</strong> Zugriffsrechte werden bei Eintritt basierend auf Rolle und Funktion vergeben
+- <strong>Mover:</strong> Zugriffsrechte werden bei Rollenwechsel angepasst (alte Rechte entziehen, neue gewähren)
+- <strong>Leaver:</strong> Alle Zugriffsrechte werden bei Austritt unverzüglich entzogen</p>
+<h3 id="34-rollenbasierte-zugriffskontrolle-rbac">3.4 Rollenbasierte Zugriffskontrolle (RBAC)</h3>
+<p>Zugriffsrechte werden primär über Rollen und Gruppen vergeben, nicht über individuelle Berechtigungen. Rollenmodelle werden regelmäßig überprüft und aktualisiert.</p>
+<h3 id="35-segregation-of-duties-funktionstrennung">3.5 Segregation of Duties (Funktionstrennung)</h3>
+<p>Kritische Funktionen werden so aufgeteilt, dass keine einzelne Person alle Schritte eines sensiblen Prozesses durchführen kann. Dies verhindert Betrug und Fehler.</p>
+<h3 id="36-regelmaige-rezertifizierung">3.6 Regelmäßige Rezertifizierung</h3>
+<p>Zugriffsrechte werden regelmäßig (mindestens jährlich) überprüft und rezertifiziert. Nicht mehr benötigte Rechte werden entzogen.</p>
+<h3 id="37-privileged-access-management-pam">3.7 Privileged Access Management (PAM)</h3>
+<p>Privilegierte Accounts (Administratoren, Root, Service-Accounts) unterliegen besonderen Kontrollen:
+- Separate Accounts für privilegierte Tätigkeiten
+- Just-in-Time (JIT) Access wo möglich
+- Umfassende Protokollierung und Überwachung</p>
+<h3 id="38-zugriffsgenehmigung-und-dokumentation">3.8 Zugriffsgenehmigung und Dokumentation</h3>
+<p>Alle Zugriffsvergaben müssen durch den Ressourcen-Owner genehmigt und dokumentiert werden. Zugriffsentscheidungen sind nachvollziehbar und auditierbar.</p>
+<h2 id="4-rollen-und-verantwortlichkeiten">4. Rollen und Verantwortlichkeiten</h2>
+<h3 id="raci-matrix-zugriffssteuerung-und-iam">RACI-Matrix: Zugriffssteuerung und IAM</h3>
+<table>
+<thead>
+<tr>
+<th>Aktivität</th>
+<th>CISO</th>
+<th>IT-Betrieb</th>
+<th>Ressourcen-Owner</th>
+<th>HR</th>
+<th>Mitarbeiter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Policy-Erstellung</td>
+<td>R/A</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>IAM-System-Betrieb</td>
+<td>C</td>
+<td>R/A</td>
+<td>I</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Zugriff beantragen</td>
+<td>I</td>
+<td>I</td>
+<td>C</td>
+<td>I</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Zugriff genehmigen</td>
+<td>C</td>
+<td>I</td>
+<td>R/A</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Zugriff provisionieren</td>
+<td>I</td>
+<td>R</td>
+<td>I</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Rezertifizierung</td>
+<td>C</td>
+<td>C</td>
+<td>R/A</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Zugriff entziehen (Leaver)</td>
+<td>C</td>
+<td>R</td>
+<td>I</td>
+<td>R/A</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Monitoring und Audits</td>
+<td>R/A</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legende:</strong> R = Responsible (Durchführung), A = Accountable (Verantwortlich), C = Consulted (Konsultiert), I = Informed (Informiert)</p>
+<h3 id="schlusselrollen">Schlüsselrollen</h3>
+<ul>
+<li><strong>Policy Owner:</strong> Thomas Weber (CISO)</li>
+<li><strong>IAM-Verantwortlicher:</strong> {{ meta.it.iam_manager }}</li>
+<li><strong>Ressourcen-Owner:</strong> Fachbereichsleiter, Systemverantwortliche</li>
+<li><strong>Umsetzungsverantwortliche:</strong> IT-Betrieb, HR</li>
+<li><strong>Kontroll-/Prüfinstanz:</strong> ISMS, Internal Audit</li>
+</ul>
+<h2 id="5-ableitungen-richtlinienstandardsprozesse">5. Ableitungen (Richtlinien/Standards/Prozesse)</h2>
+<p>Details zur Umsetzung werden in nachgelagerten Dokumenten geregelt:</p>
+<h3 id="zugehorige-richtlinien">Zugehörige Richtlinien</h3>
+<ul>
+<li><strong>0230_Richtlinie_IAM_Joiner_Mover_Leaver_und_Zugriffsantraege.md</strong> - Detaillierte IAM-Richtlinie</li>
+<li><code>0240_Policy_Authentisierung_und_Passwoerter.md</code> - Authentication Policy</li>
+<li><code>0520_Policy_HR_Security.md</code> - HR Security Policy</li>
+<li><code>0640_Policy_Ausnahmen_und_Risk_Waivers.md</code> - Exception Policy</li>
+</ul>
+<h3 id="zugehorige-standardsbaselines">Zugehörige Standards/Baselines</h3>
+<ul>
+<li>Rollenmodell und RBAC-Matrix</li>
+<li>Privileged Access Management (PAM) Standard</li>
+<li>Rezertifizierungsprozess</li>
+<li>Service-Account-Management</li>
+</ul>
+<h3 id="zugehorige-prozesse">Zugehörige Prozesse</h3>
+<ul>
+<li>Joiner-Mover-Leaver-Prozess</li>
+<li>Zugriffsgenehmigungsprozess</li>
+<li>Rezertifizierungsprozess</li>
+<li>Incident Response bei unbefugtem Zugriff</li>
+</ul>
+<h2 id="6-compliance-monitoring-und-durchsetzung">6. Compliance, Monitoring und Durchsetzung</h2>
+<h3 id="messgroen-und-kpis">Messgrößen und KPIs</h3>
+<ul>
+<li>Anzahl offener Zugriffsanträge und durchschnittliche Bearbeitungszeit</li>
+<li>Rezertifizierungsrate (Ziel: 100% jährlich)</li>
+<li>Anzahl nicht rezertifizierter Accounts</li>
+<li>Anzahl privilegierter Accounts und deren Nutzungshäufigkeit</li>
+<li>Anzahl Verstöße gegen Least Privilege</li>
+<li>Durchschnittliche Zeit zur Deaktivierung von Leaver-Accounts (Ziel: &lt; 1 Tag)</li>
+</ul>
+<h3 id="nachweise-und-evidence">Nachweise und Evidence</h3>
+<ul>
+<li>IAM-System-Logs und Audit-Trails</li>
+<li>Zugriffsgenehmigungen und Anträge</li>
+<li>Rezertifizierungsnachweise</li>
+<li>Joiner-Mover-Leaver-Dokumentation</li>
+<li>Privileged Access Logs</li>
+<li>Audit-Berichte zu Zugriffsrechten</li>
+</ul>
+<h3 id="konsequenzen-bei-verstoen">Konsequenzen bei Verstößen</h3>
+<p>Verstöße gegen diese Policy werden nach den geltenden HR- und Compliance-Prozessen behandelt:
+- <strong>Unbefugte Zugriffsvergabe:</strong> Sofortige Sperrung, Untersuchung, ggf. Disziplinarmaßnahmen
+- <strong>Nicht rezertifizierte Accounts:</strong> Automatische Deaktivierung nach Frist
+- <strong>Missbrauch privilegierter Zugriffe:</strong> Sofortige Sperrung, arbeitsrechtliche Konsequenzen
+- <strong>Weitergabe von Zugangsdaten:</strong> Verwarnung bis Kündigung</p>
+<h2 id="7-ausnahmen">7. Ausnahmen</h2>
+<p>Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:</p>
+<ul>
+<li><strong>Ausnahmenprozess:</strong> Siehe <code>0640_Policy_Ausnahmen_und_Risk_Waivers.md</code></li>
+<li><strong>Genehmigung:</strong> Ausnahmen müssen vom CISO und Ressourcen-Owner genehmigt werden</li>
+<li><strong>Dokumentation:</strong> Alle Ausnahmen werden im Risikoregister dokumentiert</li>
+<li><strong>Befristung:</strong> Ausnahmen sind grundsätzlich zeitlich befristet und werden regelmäßig überprüft</li>
+</ul>
+<h2 id="8-referenzen">8. Referenzen</h2>
+<h3 id="interne-dokumente">Interne Dokumente</h3>
+<ul>
+<li><code>0010_ISMS_Informationssicherheitsleitlinie.md</code> - ISMS Policy</li>
+<li><code>0230_Richtlinie_IAM_Joiner_Mover_Leaver_und_Zugriffsantraege.md</code> - Detailed IAM Guideline</li>
+<li><code>0080_ISMS_Risikoregister_Template.md</code> - Risk Register</li>
+<li><code>0530_Richtlinie_HR_Onboarding_Rollenwechsel_Offboarding.md</code> - HR Security Guideline</li>
+</ul>
+<h3 id="externe-standards-und-vorgaben">Externe Standards und Vorgaben</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.15</strong> - Identity management</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.16</strong> - Access rights</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.17</strong> - Authentication information</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.18</strong> - Access rights review</li>
+<li><strong>ISO/IEC 27002:2022</strong> - Information security controls</li>
+<li><strong>NIST SP 800-63</strong> - Digital Identity Guidelines</li>
+</ul>
+<hr />
+<p><strong>Genehmigt durch:</strong><br />
+{{ meta.management.ceo }}, Geschäftsführung<br />
+Datum: {{ meta.document.approval_date }}</p>
+<p><strong>Nächster Review:</strong> {{ meta.document.next_review }} (jährlich oder anlassbezogen)</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0210_Richtlinie_Akzeptable_Nutzung_IT.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0230_Richtlinie_IAM_Joiner_Mover_Leaver_und_Zugriffsantraege.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

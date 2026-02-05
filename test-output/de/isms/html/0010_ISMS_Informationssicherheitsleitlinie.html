@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0010 - ISMS-Leitlinie / Informationssicherheits-Policy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0010</div>
+            <h1>ISMS-Leitlinie / Informationssicherheits-Policy</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0000_metadata_de_isms.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0020_ISMS_Geltungsbereich_Scope.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="isms-leitlinie-informationssicherheits-policy">ISMS-Leitlinie / Informationssicherheits-Policy</h1>
+<p><strong>Dokument-ID:</strong> 0010<br />
+<strong>Dokumenttyp:</strong> Policy (abstrakt)<br />
+<strong>Standard-Referenz:</strong> ISO/IEC 27001:2022 Clause 5.2 (inkl. Amendment 1:2024)<br />
+<strong>Owner:</strong> Thomas Weber<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Freigegeben<br />
+<strong>Klassifizierung:</strong> Intern<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.date }}<br />
+<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-zweck">1. Zweck</h2>
+<p>Diese Informationssicherheitsleitlinie definiert die strategischen Grundsätze und Verpflichtungen der <strong>AdminSend GmbH</strong> zum Schutz von Informationswerten. Sie bildet die Grundlage für das Information Security Management System (ISMS) nach ISO/IEC 27001:2022 und stellt sicher, dass Informationssicherheit als integraler Bestandteil aller Geschäftsprozesse verstanden und umgesetzt wird.</p>
+<h2 id="2-geltungsbereich">2. Geltungsbereich</h2>
+<p>Diese Policy gilt für:</p>
+<ul>
+<li><strong>Organisationseinheiten:</strong> Alle Abteilungen und Standorte der AdminSend GmbH</li>
+<li><strong>Systeme und Informationen:</strong> Alle IT-Systeme, Anwendungen, Daten und Informationsverarbeitungsprozesse</li>
+<li><strong>Personen:</strong> Alle Mitarbeiter, Auftragnehmer, Lieferanten und Dritte mit Zugang zu Informationswerten</li>
+<li><strong>Standorte:</strong> {{ netbox.site.name }} und alle weiteren Betriebsstandorte</li>
+</ul>
+<p><strong>Ausnahmen:</strong> Ausnahmen von dieser Policy sind nur über den definierten Ausnahmenprozess (siehe <code>0640_Policy_Ausnahmen_und_Risk_Waivers.md</code>) zulässig.</p>
+<h2 id="3-grundsatze-policy-statements">3. Grundsätze (Policy Statements)</h2>
+<p>Die AdminSend GmbH verpflichtet sich zu folgenden Grundsätzen der Informationssicherheit:</p>
+<h3 id="31-vertraulichkeit-confidentiality">3.1 Vertraulichkeit (Confidentiality)</h3>
+<p>Informationen werden nur autorisierten Personen, Systemen und Prozessen zugänglich gemacht. Der Zugriff erfolgt nach dem Need-to-Know-Prinzip und wird durch geeignete Zugangskontrollen geschützt.</p>
+<h3 id="32-integritat-integrity">3.2 Integrität (Integrity)</h3>
+<p>Die Richtigkeit, Vollständigkeit und Aktualität von Informationen wird durch geeignete Kontrollen sichergestellt. Unbefugte oder unbeabsichtigte Änderungen werden verhindert und erkannt.</p>
+<h3 id="33-verfugbarkeit-availability">3.3 Verfügbarkeit (Availability)</h3>
+<p>Informationen und IT-Systeme stehen autorisierten Nutzern bei Bedarf zur Verfügung. Geschäftskritische Systeme werden durch angemessene Redundanz- und Wiederherstellungsmaßnahmen geschützt.</p>
+<h3 id="34-compliance-und-rechtliche-anforderungen">3.4 Compliance und rechtliche Anforderungen</h3>
+<p>Die Organisation erfüllt alle anwendbaren gesetzlichen, regulatorischen und vertraglichen Anforderungen an die Informationssicherheit, einschließlich Datenschutz (DSGVO), Branchenstandards und Kundenanforderungen.</p>
+<h3 id="35-risikoorientierter-ansatz">3.5 Risikoorientierter Ansatz</h3>
+<p>Informationssicherheitsmaßnahmen werden auf Basis einer systematischen Risikoanalyse priorisiert und umgesetzt. Risiken werden identifiziert, bewertet und nach definierten Kriterien behandelt.</p>
+<h3 id="36-kontinuierliche-verbesserung">3.6 Kontinuierliche Verbesserung</h3>
+<p>Das ISMS wird kontinuierlich überwacht, gemessen und verbessert. Sicherheitsvorfälle, Audits und Reviews dienen als Grundlage für Verbesserungsmaßnahmen.</p>
+<h3 id="37-awareness-und-schulung">3.7 Awareness und Schulung</h3>
+<p>Alle Mitarbeiter werden regelmäßig über Informationssicherheitsrisiken und ihre Verantwortlichkeiten geschult. Sicherheitsbewusstsein ist Teil der Unternehmenskultur.</p>
+<h3 id="38-lieferanten-und-drittparteien-management">3.8 Lieferanten- und Drittparteien-Management</h3>
+<p>Lieferanten und Dritte, die Zugang zu Informationswerten haben, werden nach Sicherheitskriterien bewertet und vertraglich zur Einhaltung von Sicherheitsanforderungen verpflichtet.</p>
+<h2 id="4-rollen-und-verantwortlichkeiten">4. Rollen und Verantwortlichkeiten</h2>
+<h3 id="raci-matrix-isms-leitlinie">RACI-Matrix: ISMS-Leitlinie</h3>
+<table>
+<thead>
+<tr>
+<th>Aktivität</th>
+<th>CISO</th>
+<th>CIO</th>
+<th>Geschäftsführung</th>
+<th>IT-Betrieb</th>
+<th>Fachabteilungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Policy-Erstellung</td>
+<td>R/A</td>
+<td>C</td>
+<td>I</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Policy-Genehmigung</td>
+<td>C</td>
+<td>C</td>
+<td>A</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Policy-Kommunikation</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Policy-Umsetzung</td>
+<td>A</td>
+<td>R</td>
+<td>I</td>
+<td>R</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Policy-Überwachung</td>
+<td>R/A</td>
+<td>C</td>
+<td>I</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Policy-Review</td>
+<td>R/A</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legende:</strong> R = Responsible (Durchführung), A = Accountable (Verantwortlich), C = Consulted (Konsultiert), I = Informed (Informiert)</p>
+<h3 id="schlusselrollen">Schlüsselrollen</h3>
+<ul>
+<li><strong>CISO (Chief Information Security Officer):</strong> Thomas Weber (thomas.weber@adminsend.de)</li>
+<li>Verantwortlich für die Entwicklung, Umsetzung und Überwachung des ISMS</li>
+<li>
+<p>Berichtet an: Anna Schmidt</p>
+</li>
+<li>
+<p><strong>CIO (Chief Information Officer):</strong> Anna Schmidt (anna.schmidt@adminsend.de)</p>
+</li>
+<li>Verantwortlich für IT-Strategie und IT-Betrieb</li>
+<li>
+<p>Unterstützt ISMS-Umsetzung</p>
+</li>
+<li>
+<p><strong>Geschäftsführung:</strong> {{ meta.management.ceo }}</p>
+</li>
+<li>Genehmigt ISMS-Leitlinie und stellt Ressourcen bereit</li>
+<li>Trägt Gesamtverantwortung für Informationssicherheit</li>
+</ul>
+<h2 id="5-ableitungen-richtlinienstandardsprozesse">5. Ableitungen (Richtlinien/Standards/Prozesse)</h2>
+<p>Diese abstrakte Policy wird durch folgende detaillierte Dokumente konkretisiert:</p>
+<h3 id="basis-isms-dokumente">Basis-ISMS-Dokumente</h3>
+<ul>
+<li><code>0020_ISMS_Geltungsbereich_Scope.md</code> - ISMS Scope Definition</li>
+<li><code>0030_ISMS_Kontext_und_Interessierte_Parteien.md</code> - Context of Organization</li>
+<li><code>0040_ISMS_Governance_Rollen_und_Verantwortlichkeiten.md</code> - ISMS Governance</li>
+<li><code>0060_ISMS_Risikomanagement_Methodik.md</code> - Risk Management Methodology</li>
+</ul>
+<h3 id="themenspezifische-policies-abstract">Themenspezifische Policies (Abstract)</h3>
+<ul>
+<li><code>0220_Policy_Zugriffssteuerung_und_Identitaetsmanagement.md</code></li>
+<li><code>0240_Policy_Authentisierung_und_Passwoerter.md</code></li>
+<li><code>0260_Policy_Kryptografie_und_Schluesselmanagement.md</code></li>
+<li><code>0280_Policy_Datenklassifizierung_und_Informationshandling.md</code></li>
+<li>[Weitere Policies siehe ISMS-Dokumentenstruktur]</li>
+</ul>
+<h3 id="detaillierte-richtlinien-detailed-guidelines">Detaillierte Richtlinien (Detailed Guidelines)</h3>
+<ul>
+<li>Siehe entsprechende Richtlinien-Dokumente (0210-0690, ungerade Nummern)</li>
+</ul>
+<h2 id="6-compliance-monitoring-und-durchsetzung">6. Compliance, Monitoring und Durchsetzung</h2>
+<h3 id="messgroen-und-kpis">Messgrößen und KPIs</h3>
+<ul>
+<li>Anzahl Sicherheitsvorfälle pro Quartal</li>
+<li>Durchschnittliche Zeit zur Behebung kritischer Schwachstellen</li>
+<li>Schulungsteilnahme-Quote (Ziel: 100% jährlich)</li>
+<li>Audit-Findings und deren Behebungsrate</li>
+<li>Compliance-Rate mit Sicherheitsrichtlinien</li>
+</ul>
+<h3 id="nachweise-und-evidence">Nachweise und Evidence</h3>
+<ul>
+<li>ISMS-Dokumentation und Aufzeichnungen</li>
+<li>Audit-Berichte (intern und extern)</li>
+<li>Risikoregister und Risikobehandlungspläne</li>
+<li>Schulungsnachweise und Awareness-Kampagnen</li>
+<li>Incident-Reports und Lessons Learned</li>
+</ul>
+<h3 id="konsequenzen-bei-verstoen">Konsequenzen bei Verstößen</h3>
+<p>Verstöße gegen diese Policy werden nach den geltenden HR- und Compliance-Prozessen behandelt und können zu disziplinarischen Maßnahmen führen, einschließlich:
+- Verwarnung und Nachschulung
+- Entzug von Zugriffsrechten
+- Arbeitsrechtliche Konsequenzen
+- Rechtliche Schritte bei vorsätzlichen oder grob fahrlässigen Verstößen</p>
+<h2 id="7-ausnahmen">7. Ausnahmen</h2>
+<p>Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig und müssen über den definierten Ausnahmenprozess beantragt werden:</p>
+<ul>
+<li><strong>Ausnahmenprozess:</strong> Siehe <code>0640_Policy_Ausnahmen_und_Risk_Waivers.md</code></li>
+<li><strong>Genehmigung:</strong> Ausnahmen müssen vom CISO und ggf. der Geschäftsführung genehmigt werden</li>
+<li><strong>Dokumentation:</strong> Alle Ausnahmen werden im Risikoregister dokumentiert und regelmäßig überprüft</li>
+<li><strong>Befristung:</strong> Ausnahmen sind grundsätzlich zeitlich befristet und müssen regelmäßig erneuert werden</li>
+</ul>
+<h2 id="8-referenzen">8. Referenzen</h2>
+<h3 id="interne-dokumente">Interne Dokumente</h3>
+<ul>
+<li>ISMS-Dokumentenstruktur (siehe README.md)</li>
+<li>Risikoregister (<code>0080_ISMS_Risikoregister_Template.md</code>)</li>
+<li>Statement of Applicability (<code>0100_ISMS_Statement_of_Applicability_SoA_Template.md</code>)</li>
+<li>Internes Auditprogramm (<code>0130_ISMS_Internes_Auditprogramm.md</code>)</li>
+</ul>
+<h3 id="externe-standards-und-vorgaben">Externe Standards und Vorgaben</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022</strong> - Information security management systems - Requirements</li>
+<li><strong>ISO/IEC 27001:2022/Amd 1:2024</strong> - Amendment 1 (Annex A updates)</li>
+<li><strong>ISO/IEC 27002:2022</strong> - Information security controls</li>
+<li><strong>DSGVO (EU 2016/679)</strong> - Datenschutz-Grundverordnung</li>
+<li><strong>BSI IT-Grundschutz</strong> - Bundesamt für Sicherheit in der Informationstechnik</li>
+</ul>
+<hr />
+<p><strong>Genehmigt durch:</strong><br />
+{{ meta.management.ceo }}, Geschäftsführung<br />
+Datum: {{ meta.document.approval_date }}</p>
+<p><strong>Nächster Review:</strong> {{ meta.document.next_review }} (jährlich oder anlassbezogen)</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0000_metadata_de_isms.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0020_ISMS_Geltungsbereich_Scope.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

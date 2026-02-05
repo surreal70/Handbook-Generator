@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0050 - Dokumentenlenkung / Dokumentierte Information</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0050</div>
+            <h1>Dokumentenlenkung / Dokumentierte Information</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0040_ISMS_Governance_Rollen_und_Verantwortlichkeiten.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0060_ISMS_Risikomanagement_Methodik.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="dokumentenlenkung-dokumentierte-information">Dokumentenlenkung / Dokumentierte Information</h1>
+<p><strong>Dokument-ID:</strong> 0050<br />
+<strong>Dokumenttyp:</strong> ISMS-Grundlagendokument<br />
+<strong>Standard-Referenz:</strong> ISO/IEC 27001:2022 Clause 7.5<br />
+<strong>Owner:</strong> Thomas Weber<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Freigegeben<br />
+<strong>Klassifizierung:</strong> Intern<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.date }}<br />
+<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-zweck-und-geltungsbereich">1. Zweck und Geltungsbereich</h2>
+<p>Dieses Dokument definiert die Anforderungen an die Lenkung dokumentierter Informationen im Rahmen des ISMS der <strong>AdminSend GmbH</strong>. Es stellt sicher, dass:
+- Dokumente verfügbar und geeignet für die Verwendung sind
+- Dokumente angemessen geschützt werden
+- Dokumente kontrolliert erstellt, geprüft, genehmigt und aktualisiert werden</p>
+<h2 id="2-ablage-und-zugriff">2. Ablage und Zugriff</h2>
+<h3 id="21-offizieller-ablageort">2.1 Offizieller Ablageort</h3>
+<p><strong>Primärer Ablageort:</strong>
+- <strong>System:</strong> [TODO: SharePoint, Confluence, DMS]
+- <strong>Pfad:</strong> [TODO: /ISMS/Dokumentation/]
+- <strong>URL:</strong> [TODO: https://docs.organization.com/isms/]</p>
+<p><strong>Backup und Archivierung:</strong>
+- <strong>Backup-System:</strong> {{ netbox.backup.system }}
+- <strong>Backup-Frequenz:</strong> Täglich
+- <strong>Archivierungsdauer:</strong> 10 Jahre nach Außerbetriebnahme</p>
+<h3 id="22-zugriffskontrolle">2.2 Zugriffskontrolle</h3>
+<p><strong>Zugriffsberechtigungen:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Dokumenttyp</th>
+<th>CISO</th>
+<th>ISMS Manager</th>
+<th>IT-Betrieb</th>
+<th>Fachabteilungen</th>
+<th>Alle Mitarbeiter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ISMS-Leitlinie</td>
+<td>R/W</td>
+<td>R/W</td>
+<td>R</td>
+<td>R</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Policies (Abstract)</td>
+<td>R/W</td>
+<td>R/W</td>
+<td>R</td>
+<td>R</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Richtlinien (Detailed)</td>
+<td>R/W</td>
+<td>R/W</td>
+<td>R/W</td>
+<td>R</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Risikoregister</td>
+<td>R/W</td>
+<td>R/W</td>
+<td>R</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Audit-Berichte</td>
+<td>R/W</td>
+<td>R/W</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Incident Reports</td>
+<td>R/W</td>
+<td>R/W</td>
+<td>R/W</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legende:</strong> R = Read (Lesen), W = Write (Schreiben), - = Kein Zugriff</p>
+<p><strong>Zugriffsverwaltung:</strong>
+- Zugriffsrechte werden über IAM-System verwaltet
+- Siehe <code>0220_Policy_Zugriffssteuerung_und_Identitaetsmanagement.md</code>
+- Rezertifizierung: Quartalsweise</p>
+<h3 id="23-offline-notfallzugriff">2.3 Offline-/Notfallzugriff</h3>
+<p><strong>Notfallzugriff:</strong>
+- Kritische Dokumente (Notfallpläne, Kontaktlisten) werden zusätzlich offline gespeichert
+- Ablageort: [TODO: Physischer Safe, verschlüsselter USB-Stick]
+- Verantwortlich: Thomas Weber</p>
+<p><strong>Break-Glass-Zugriff:</strong>
+- Siehe <code>0200_Notfallzugang_BreakGlass.md</code> (BCM-Handbuch)
+- Notfallzugriff auf ISMS-Dokumentation bei Ausfall des primären Systems</p>
+<h2 id="3-dokumentenlebenszyklus">3. Dokumentenlebenszyklus</h2>
+<h3 id="31-erstellung">3.1 Erstellung</h3>
+<p><strong>Prozess:</strong>
+1. <strong>Initiierung:</strong> Bedarf wird identifiziert (z.B. neue Policy, neue Anforderung)
+2. <strong>Autor benennen:</strong> CISO oder ISMS Manager benennt Autor
+3. <strong>Template verwenden:</strong> Autor verwendet entsprechendes Template
+4. <strong>Entwurf erstellen:</strong> Autor erstellt Entwurf mit Status "Entwurf"
+5. <strong>Metadaten erfassen:</strong> Dokument-ID, Owner, Version, Klassifizierung</p>
+<p><strong>Verantwortlich:</strong> Dokumentautor (benannt durch CISO)</p>
+<h3 id="32-review">3.2 Review</h3>
+<p><strong>Review-Prozess:</strong>
+1. <strong>Peer Review:</strong> Fachliche Prüfung durch Kollegen
+2. <strong>Stakeholder Review:</strong> Konsultation betroffener Stakeholder
+3. <strong>CISO Review:</strong> Finale Prüfung durch CISO
+4. <strong>Status ändern:</strong> Von "Entwurf" zu "In Review"</p>
+<p><strong>Review-Kriterien:</strong>
+- Fachliche Korrektheit
+- Vollständigkeit
+- Konsistenz mit anderen ISMS-Dokumenten
+- Compliance mit ISO 27001:2022
+- Verständlichkeit und Umsetzbarkeit</p>
+<p><strong>Verantwortlich:</strong> CISO oder ISMS Manager</p>
+<h3 id="33-freigabe">3.3 Freigabe</h3>
+<p><strong>Freigabe-Prozess:</strong>
+1. <strong>Freigabe-Antrag:</strong> Nach erfolgreichem Review
+2. <strong>Genehmigung:</strong> Durch CISO (Policies) oder Geschäftsführung (ISMS-Leitlinie)
+3. <strong>Status ändern:</strong> Von "In Review" zu "Freigegeben"
+4. <strong>Versionsnummer:</strong> Finale Versionsnummer vergeben (z.B. 1.0)</p>
+<p><strong>Freigabe-Befugnisse:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Dokumenttyp</th>
+<th>Freigabe durch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ISMS-Leitlinie</td>
+<td>Geschäftsführung</td>
+</tr>
+<tr>
+<td>Policies (Abstract)</td>
+<td>CISO</td>
+</tr>
+<tr>
+<td>Richtlinien (Detailed)</td>
+<td>CISO oder ISMS Manager</td>
+</tr>
+<tr>
+<td>Prozessdokumente</td>
+<td>CISO oder ISMS Manager</td>
+</tr>
+<tr>
+<td>Templates</td>
+<td>ISMS Manager</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Verantwortlich:</strong> Siehe Tabelle oben</p>
+<h3 id="34-veroffentlichung-und-kommunikation">3.4 Veröffentlichung und Kommunikation</h3>
+<p><strong>Veröffentlichung:</strong>
+1. <strong>Upload:</strong> Dokument wird im offiziellen Ablageort veröffentlicht
+2. <strong>Dokumentenregister aktualisieren:</strong> Eintrag im Dokumentenregister
+3. <strong>Alte Version archivieren:</strong> Vorherige Version wird archiviert</p>
+<p><strong>Kommunikation:</strong>
+- <strong>Neue Dokumente:</strong> E-Mail-Benachrichtigung an alle betroffenen Stakeholder
+- <strong>Wesentliche Änderungen:</strong> E-Mail-Benachrichtigung + Awareness-Kampagne
+- <strong>Kleinere Änderungen:</strong> Eintrag im Change-Log, keine separate Benachrichtigung</p>
+<p><strong>Kommunikationskanäle:</strong>
+- E-Mail an alle Mitarbeiter
+- Intranet-News
+- Security Awareness Training
+- Team-Meetings</p>
+<p><strong>Verantwortlich:</strong> ISMS Manager</p>
+<h3 id="35-anderungsmanagement">3.5 Änderungsmanagement</h3>
+<p><strong>Änderungsprozess:</strong>
+1. <strong>Änderungsantrag:</strong> Bedarf für Änderung wird identifiziert
+2. <strong>Impact Assessment:</strong> Auswirkungen der Änderung bewerten
+3. <strong>Änderung durchführen:</strong> Dokument wird aktualisiert
+4. <strong>Review und Freigabe:</strong> Wie bei Neuerstellung
+5. <strong>Versionsnummer erhöhen:</strong> Major (1.0 → 2.0) oder Minor (1.0 → 1.1)</p>
+<p><strong>Versionierungsschema:</strong>
+- <strong>Major Version (X.0):</strong> Wesentliche Änderungen, neue Anforderungen
+- <strong>Minor Version (X.Y):</strong> Kleinere Änderungen, Korrekturen, Klarstellungen</p>
+<p><strong>Change-Log:</strong>
+Jedes Dokument enthält einen Change-Log mit:
+- Versionsnummer
+- Datum
+- Autor
+- Beschreibung der Änderung
+- Genehmiger</p>
+<p><strong>Verantwortlich:</strong> Dokumentautor, CISO</p>
+<h3 id="36-regelmaiger-review">3.6 Regelmäßiger Review</h3>
+<p><strong>Review-Intervalle:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Dokumenttyp</th>
+<th>Review-Intervall</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ISMS-Leitlinie</td>
+<td>Jährlich</td>
+</tr>
+<tr>
+<td>Policies (Abstract)</td>
+<td>Jährlich</td>
+</tr>
+<tr>
+<td>Richtlinien (Detailed)</td>
+<td>Jährlich oder bei Bedarf</td>
+</tr>
+<tr>
+<td>Risikoregister</td>
+<td>Quartalsweise</td>
+</tr>
+<tr>
+<td>SoA</td>
+<td>Jährlich oder bei Scope-Änderung</td>
+</tr>
+<tr>
+<td>Prozessdokumente</td>
+<td>Alle 2 Jahre</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Review-Trigger (anlassbezogen):</strong>
+- Neue gesetzliche Anforderungen
+- Wesentliche organisatorische Änderungen
+- Sicherheitsvorfälle mit Lessons Learned
+- Audit-Findings
+- Technologieänderungen</p>
+<p><strong>Review-Prozess:</strong>
+1. <strong>Review-Erinnerung:</strong> ISMS Manager erinnert Owner
+2. <strong>Review durchführen:</strong> Owner prüft Aktualität und Relevanz
+3. <strong>Entscheidung:</strong> Keine Änderung / Änderung erforderlich
+4. <strong>Dokumentation:</strong> Review-Datum im Dokument aktualisieren</p>
+<p><strong>Verantwortlich:</strong> Dokumentowner (siehe Dokumentenregister)</p>
+<h3 id="37-archivierung-und-loschung">3.7 Archivierung und Löschung</h3>
+<p><strong>Archivierung:</strong>
+- <strong>Alte Versionen:</strong> Werden archiviert, sobald neue Version freigegeben wird
+- <strong>Archivierungsdauer:</strong> 10 Jahre
+- <strong>Archivierungsort:</strong> [TODO: Archiv-System]</p>
+<p><strong>Löschung:</strong>
+- <strong>Außerbetriebnahme:</strong> Dokumente werden nach Ablauf der Archivierungsdauer gelöscht
+- <strong>Löschprozess:</strong> Sichere Löschung gemäß <code>0580_Policy_Aufbewahrung_und_Loeschung.md</code>
+- <strong>Genehmigung:</strong> Löschung muss durch CISO genehmigt werden</p>
+<p><strong>Verantwortlich:</strong> ISMS Manager</p>
+<h2 id="4-versionierung">4. Versionierung</h2>
+<h3 id="41-versionierungsschema">4.1 Versionierungsschema</h3>
+<p><strong>Format:</strong> X.Y</p>
+<ul>
+<li><strong>X (Major Version):</strong> Wesentliche Änderungen</li>
+<li>Neue Anforderungen</li>
+<li>Strukturelle Änderungen</li>
+<li>
+<p>Änderung des Geltungsbereichs</p>
+</li>
+<li>
+<p><strong>Y (Minor Version):</strong> Kleinere Änderungen</p>
+</li>
+<li>Korrekturen</li>
+<li>Klarstellungen</li>
+<li>Aktualisierung von Kontaktdaten</li>
+</ul>
+<p><strong>Beispiele:</strong>
+- 0.1 → Entwurf
+- 1.0 → Erste freigegebene Version
+- 1.1 → Kleinere Korrektur
+- 2.0 → Wesentliche Überarbeitung</p>
+<h3 id="42-change-log">4.2 Change-Log</h3>
+<p>Jedes Dokument enthält einen Change-Log am Ende:</p>
+<div class="codehilite"><pre><span></span><code><span class="gu">## Änderungshistorie</span>
+
+| Version | Datum | Autor | Beschreibung | Genehmigt durch |
+|---------|-------|-------|--------------|-----------------|
+| 1.0 | 2026-01-15 | Thomas Weber | Initiale Version | Geschäftsführung |
+| 1.1 | 2026-03-20 | ISMS Manager | Kontaktdaten aktualisiert | CISO |
+| 2.0 | 2026-12-01 | Thomas Weber | Neue Anforderungen aus NIS2 | Geschäftsführung |
+</code></pre></div>
+
+<h2 id="5-dokumentenregister">5. Dokumentenregister</h2>
+<p>Das Dokumentenregister ist die zentrale Übersicht aller ISMS-Dokumente.</p>
+<h3 id="51-dokumentenregister-struktur">5.1 Dokumentenregister-Struktur</h3>
+<table>
+<thead>
+<tr>
+<th>Dokument-ID</th>
+<th>Dokumenttitel</th>
+<th>Owner</th>
+<th>Status</th>
+<th>Version</th>
+<th>Letzte Änderung</th>
+<th>Nächster Review</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0010</td>
+<td>ISMS-Leitlinie</td>
+<td>Thomas Weber</td>
+<td>Freigegeben</td>
+<td>1.0</td>
+<td>{{ meta.document.date }}</td>
+<td>{{ meta.document.next_review }}</td>
+</tr>
+<tr>
+<td>0020</td>
+<td>ISMS-Geltungsbereich</td>
+<td>Thomas Weber</td>
+<td>Freigegeben</td>
+<td>1.0</td>
+<td>{{ meta.document.date }}</td>
+<td>{{ meta.document.next_review }}</td>
+</tr>
+<tr>
+<td>0030</td>
+<td>Kontext und Stakeholder</td>
+<td>Thomas Weber</td>
+<td>Freigegeben</td>
+<td>1.0</td>
+<td>{{ meta.document.date }}</td>
+<td>{{ meta.document.next_review }}</td>
+</tr>
+<tr>
+<td>0040</td>
+<td>ISMS-Governance</td>
+<td>Thomas Weber</td>
+<td>Freigegeben</td>
+<td>1.0</td>
+<td>{{ meta.document.date }}</td>
+<td>{{ meta.document.next_review }}</td>
+</tr>
+<tr>
+<td>0050</td>
+<td>Dokumentenlenkung</td>
+<td>Thomas Weber</td>
+<td>Freigegeben</td>
+<td>1.0</td>
+<td>{{ meta.document.date }}</td>
+<td>{{ meta.document.next_review }}</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+</tbody>
+</table>
+<p>[TODO: Vollständiges Dokumentenregister erstellen und pflegen]</p>
+<h3 id="52-pflege-des-dokumentenregisters">5.2 Pflege des Dokumentenregisters</h3>
+<p><strong>Verantwortlich:</strong> ISMS Manager</p>
+<p><strong>Aktualisierung:</strong>
+- Bei jeder Dokumentänderung
+- Bei Statusänderungen
+- Bei Owner-Wechsel</p>
+<p><strong>Zugriff:</strong>
+- Dokumentenregister ist für alle Mitarbeiter lesbar
+- Ablageort: [TODO: Link zum Dokumentenregister]</p>
+<h2 id="6-dokumentklassifizierung">6. Dokumentklassifizierung</h2>
+<p>Alle ISMS-Dokumente werden klassifiziert gemäß <code>0280_Policy_Datenklassifizierung_und_Informationshandling.md</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Klassifizierung</th>
+<th>Beschreibung</th>
+<th>Beispiele</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Öffentlich</strong></td>
+<td>Keine Vertraulichkeit</td>
+<td>Öffentliche Policies</td>
+</tr>
+<tr>
+<td><strong>Intern</strong></td>
+<td>Nur für Mitarbeiter</td>
+<td>Die meisten ISMS-Dokumente</td>
+</tr>
+<tr>
+<td><strong>Vertraulich</strong></td>
+<td>Eingeschränkter Zugriff</td>
+<td>Risikoregister, Audit-Berichte</td>
+</tr>
+<tr>
+<td><strong>Streng vertraulich</strong></td>
+<td>Sehr eingeschränkter Zugriff</td>
+<td>Incident Reports mit sensiblen Daten</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Kennzeichnung:</strong>
+- Klassifizierung wird im Dokument-Header angegeben
+- Klassifizierung bestimmt Zugriffsrechte und Handhabung</p>
+<h2 id="7-externe-dokumente">7. Externe Dokumente</h2>
+<p><strong>Externe Dokumente</strong> (z.B. Lieferanten-Policies, Zertifikate) werden ebenfalls kontrolliert:</p>
+<p><strong>Prozess:</strong>
+1. <strong>Identifikation:</strong> Relevante externe Dokumente identifizieren
+2. <strong>Bewertung:</strong> Relevanz und Vertrauenswürdigkeit prüfen
+3. <strong>Ablage:</strong> In separatem Bereich ablegen
+4. <strong>Kennzeichnung:</strong> Als "Externes Dokument" kennzeichnen
+5. <strong>Review:</strong> Regelmäßig auf Aktualität prüfen</p>
+<p><strong>Verantwortlich:</strong> ISMS Manager</p>
+<h2 id="8-aufbewahrungsfristen">8. Aufbewahrungsfristen</h2>
+<table>
+<thead>
+<tr>
+<th>Dokumenttyp</th>
+<th>Aufbewahrungsfrist</th>
+<th>Rechtsgrundlage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ISMS-Leitlinie</td>
+<td>10 Jahre nach Außerbetriebnahme</td>
+<td>ISO 27001</td>
+</tr>
+<tr>
+<td>Policies und Richtlinien</td>
+<td>10 Jahre nach Außerbetriebnahme</td>
+<td>ISO 27001</td>
+</tr>
+<tr>
+<td>Risikoregister</td>
+<td>10 Jahre</td>
+<td>ISO 27001</td>
+</tr>
+<tr>
+<td>Audit-Berichte</td>
+<td>10 Jahre</td>
+<td>ISO 27001, Handelsrecht</td>
+</tr>
+<tr>
+<td>Incident Reports</td>
+<td>10 Jahre</td>
+<td>DSGVO, NIS2</td>
+</tr>
+<tr>
+<td>Schulungsnachweise</td>
+<td>10 Jahre</td>
+<td>Nachweispflicht</td>
+</tr>
+<tr>
+<td>Verträge</td>
+<td>Gemäß Vertragsrecht</td>
+<td>Handelsrecht</td>
+</tr>
+</tbody>
+</table>
+<p>Siehe <code>0580_Policy_Aufbewahrung_und_Loeschung.md</code> für Details.</p>
+<h2 id="9-referenzen">9. Referenzen</h2>
+<h3 id="interne-dokumente">Interne Dokumente</h3>
+<ul>
+<li><code>0010_ISMS_Informationssicherheitsleitlinie.md</code> - ISMS Policy</li>
+<li><code>0040_ISMS_Governance_Rollen_und_Verantwortlichkeiten.md</code> - Governance</li>
+<li><code>0280_Policy_Datenklassifizierung_und_Informationshandling.md</code> - Data Classification</li>
+<li><code>0360_Policy_Change_und_Release_Management.md</code> - Change Management</li>
+<li><code>0580_Policy_Aufbewahrung_und_Loeschung.md</code> - Retention and Deletion</li>
+</ul>
+<h3 id="externe-standards">Externe Standards</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022</strong> - Clause 7.5: Documented information</li>
+<li><strong>ISO/IEC 27002:2022</strong> - Control 5.1: Policies for information security</li>
+</ul>
+<hr />
+<p><strong>Genehmigt durch:</strong><br />
+Thomas Weber, CISO<br />
+Datum: {{ meta.document.approval_date }}</p>
+<p><strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0040_ISMS_Governance_Rollen_und_Verantwortlichkeiten.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0060_ISMS_Risikomanagement_Methodik.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

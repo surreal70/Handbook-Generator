@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0680 - Policy: Security in Projects</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0680</div>
+            <h1>Policy: Security in Projects</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0670_Guideline_Email_Sharing_and_Collaboration_Tools.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0690_Guideline_Security_Requirements_in_Project_Lifecycle.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="policy-security-in-projects">Policy: Security in Projects</h1>
+<p><strong>Document ID:</strong> 0680<br />
+<strong>Document Type:</strong> Policy (abstract)<br />
+<strong>Standard Reference:</strong> ISO/IEC 27001:2022 Annex A.5.8, A.8.25, A.8.32 (incl. Amendment 1:2024)<br />
+<strong>Owner:</strong> Thomas Weber<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Approved<br />
+<strong>Classification:</strong> Internal<br />
+<strong>Last Updated:</strong> {{ meta.document.date }}<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This policy defines the requirements for integrating information security into projects of <strong>AdminSend GmbH</strong>. It ensures that security requirements are considered throughout the entire project lifecycle.</p>
+<h2 id="2-scope">2. Scope</h2>
+<p>This policy applies to:</p>
+<ul>
+<li><strong>Organizational Units:</strong> All departments and locations of AdminSend GmbH</li>
+<li><strong>Projects:</strong> All IT projects, infrastructure projects, software development projects</li>
+<li><strong>Project Phases:</strong> Initiation, planning, implementation, closure</li>
+<li><strong>Project Types:</strong> Internal projects, external projects, partner projects</li>
+<li><strong>Locations:</strong> {{ netbox.site.name }} and all other operational sites</li>
+</ul>
+<p><strong>Exceptions:</strong> Exceptions are only permitted through the defined exception process (<code>0640_Policy_Exceptions_and_Risk_Waivers.md</code>).</p>
+<h2 id="3-policy-statements">3. Policy Statements</h2>
+<h3 id="31-security-by-design">3.1 Security by Design</h3>
+<p>Security is integrated into projects from the beginning (security by design). Security requirements are defined during project initiation.</p>
+<h3 id="32-security-requirements">3.2 Security Requirements</h3>
+<p>Security requirements are defined for each project:
+- Confidentiality, integrity, availability
+- Compliance requirements
+- Data protection requirements
+- Technical security requirements</p>
+<h3 id="33-security-risk-assessment">3.3 Security Risk Assessment</h3>
+<p>A security risk assessment is conducted for each project. Risks are identified, evaluated, and treated.</p>
+<h3 id="34-security-architecture-review">3.4 Security Architecture Review</h3>
+<p>Project architectures are reviewed for security. Security architecture review occurs before implementation.</p>
+<h3 id="35-security-testing">3.5 Security Testing</h3>
+<p>Projects are tested for security:
+- Security testing (penetration tests, vulnerability scans)
+- Code reviews (SAST, DAST) for software projects
+- Configuration reviews for infrastructure projects</p>
+<h3 id="36-security-sign-off">3.6 Security Sign-Off</h3>
+<p>Projects receive security sign-off before go-live. Security sign-off confirms that security requirements are met.</p>
+<h3 id="37-change-management-integration">3.7 Change Management Integration</h3>
+<p>Security-relevant changes follow the change management process (see <code>0360_Policy_Change_and_Release_Management.md</code>).</p>
+<h3 id="38-third-party-security">3.8 Third-Party Security</h3>
+<p>For projects with third parties (suppliers, partners), security requirements are contractually agreed (see <code>0460_Policy_Supplier_and_Cloud_Security.md</code>).</p>
+<h3 id="39-security-documentation">3.9 Security Documentation</h3>
+<p>Security-relevant project documentation is created:
+- Security Requirements Specification
+- Security Architecture Document
+- Security Test Report
+- Security Sign-Off Document</p>
+<h2 id="4-roles-and-responsibilities">4. Roles and Responsibilities</h2>
+<h3 id="raci-matrix-security-in-projects">RACI Matrix: Security in Projects</h3>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>CISO</th>
+<th>Project Manager</th>
+<th>Security Architect</th>
+<th>IT Operations</th>
+<th>Business Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Policy Creation</td>
+<td>R/A</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Security Requirements</td>
+<td>R</td>
+<td>R/A</td>
+<td>R</td>
+<td>C</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Security Risk Assessment</td>
+<td>R/A</td>
+<td>R</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Security Architecture Review</td>
+<td>R/A</td>
+<td>C</td>
+<td>R/A</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Security Testing</td>
+<td>R</td>
+<td>R/A</td>
+<td>R</td>
+<td>R</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Security Sign-Off</td>
+<td>R/A</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Change Management</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>R/A</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Third-Party Security</td>
+<td>R/A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legend:</strong> R = Responsible (Execution), A = Accountable (Ownership), C = Consulted, I = Informed</p>
+<h3 id="key-roles">Key Roles</h3>
+<ul>
+<li><strong>Policy Owner:</strong> Thomas Weber (CISO)</li>
+<li><strong>Security Architect:</strong> {{ meta.security.architect }}</li>
+<li><strong>Project Manager:</strong> Project responsible persons</li>
+<li><strong>IT Operations Manager:</strong> {{ meta.it.operations_manager }}</li>
+<li><strong>Business Owner:</strong> Department responsible persons</li>
+<li><strong>Control/Audit Function:</strong> ISMS, Internal Audit</li>
+</ul>
+<h2 id="5-derived-documents-guidelinesstandardsprocesses">5. Derived Documents (Guidelines/Standards/Processes)</h2>
+<p>Implementation details are defined in subordinate documents:</p>
+<h3 id="related-guidelines">Related Guidelines</h3>
+<ul>
+<li><strong>0690_Guideline_Security_Requirements_in_Project_Lifecycle.md</strong> - Detailed implementation guideline</li>
+<li><code>0380_Policy_Secure_Development.md</code> - Secure Development Policy</li>
+<li><code>0360_Policy_Change_and_Release_Management.md</code> - Change Management Policy</li>
+<li><code>0460_Policy_Supplier_and_Cloud_Security.md</code> - Supplier Security Policy</li>
+</ul>
+<h3 id="related-standardsbaselines">Related Standards/Baselines</h3>
+<ul>
+<li>Security Requirements Template</li>
+<li>Security Risk Assessment Template</li>
+<li>Security Architecture Review Checklist</li>
+<li>Security Testing Standards</li>
+<li>Security Sign-Off Template</li>
+</ul>
+<h3 id="related-processes">Related Processes</h3>
+<ul>
+<li>Project Security Review Process</li>
+<li>Security Risk Assessment Process</li>
+<li>Security Architecture Review Process</li>
+<li>Security Testing Process</li>
+<li>Security Sign-Off Process</li>
+</ul>
+<h2 id="6-compliance-monitoring-and-enforcement">6. Compliance, Monitoring and Enforcement</h2>
+<h3 id="metrics-and-kpis">Metrics and KPIs</h3>
+<ul>
+<li>Number of projects with security requirements (Target: 100%)</li>
+<li>Number of security risk assessments conducted (Target: 100% of all projects)</li>
+<li>Number of security architecture reviews (Target: 100% of critical projects)</li>
+<li>Number of security tests (Target: 100% before go-live)</li>
+<li>Number of security sign-offs (Target: 100% before go-live)</li>
+<li>Average time for security review (Target: &lt; 5 days)</li>
+<li>Number of projects without security sign-off (Target: 0)</li>
+</ul>
+<h3 id="evidence-and-proof">Evidence and Proof</h3>
+<ul>
+<li>Security Requirements Specifications</li>
+<li>Security Risk Assessments</li>
+<li>Security Architecture Review Reports</li>
+<li>Security Test Reports (Penetration Tests, Vulnerability Scans)</li>
+<li>Security Sign-Off Documents</li>
+<li>Project Security Checklists</li>
+<li>Change Management Records</li>
+</ul>
+<h3 id="consequences-of-violations">Consequences of Violations</h3>
+<p>Violations of this policy are handled according to applicable HR and compliance processes:
+- <strong>Projects Without Security Requirements:</strong> Project stop until requirements defined
+- <strong>Missing Security Risk Assessments:</strong> Remediation before continuation
+- <strong>Go-Live Without Security Sign-Off:</strong> Project stop, escalation to management
+- <strong>Repeated Violations:</strong> Employment consequences, project responsibility removed</p>
+<h2 id="7-exceptions">7. Exceptions</h2>
+<p>Exceptions to this policy are only permitted in justified exceptional cases:</p>
+<ul>
+<li><strong>Exception Process:</strong> See <code>0640_Policy_Exceptions_and_Risk_Waivers.md</code></li>
+<li><strong>Approval:</strong> Exceptions must be approved by CISO and CIO</li>
+<li><strong>Documentation:</strong> All exceptions are documented in the risk register</li>
+<li><strong>Time Limitation:</strong> Exceptions are generally time-limited</li>
+</ul>
+<h2 id="8-references">8. References</h2>
+<h3 id="internal-documents">Internal Documents</h3>
+<ul>
+<li><code>0010_ISMS_Information_Security_Policy.md</code> - ISMS Policy</li>
+<li><code>0690_Guideline_Security_Requirements_in_Project_Lifecycle.md</code> - Detailed Guideline</li>
+<li><code>0380_Policy_Secure_Development.md</code> - Secure Development Policy</li>
+<li><code>0080_ISMS_Risk_Register_Template.md</code> - Risk Register</li>
+</ul>
+<h3 id="external-standards-and-regulations">External Standards and Regulations</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.8</strong> - Information security in project management</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.8.25</strong> - Secure development life cycle</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.8.32</strong> - Change management</li>
+<li><strong>NIST SP 800-64</strong> - Security Considerations in the System Development Life Cycle</li>
+<li><strong>OWASP SAMM</strong> - Software Assurance Maturity Model</li>
+<li><strong>BSIMM</strong> - Building Security In Maturity Model</li>
+<li><strong>ISO/IEC 27034</strong> - Application Security</li>
+</ul>
+<hr />
+<p><strong>Approved by:</strong><br />
+{{ meta.management.ceo }}, Executive Management<br />
+Date: {{ meta.document.approval_date }}</p>
+<p><strong>Next Review:</strong> {{ meta.document.next_review }} (annually or as needed)</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0670_Guideline_Email_Sharing_and_Collaboration_Tools.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0690_Guideline_Security_Requirements_in_Project_Lifecycle.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

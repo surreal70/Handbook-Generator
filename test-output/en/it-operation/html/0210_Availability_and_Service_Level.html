@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0210 - Availability and Service Level</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0210</div>
+            <h1>Availability and Service Level</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0200_Capacity_and_Performance_Management.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0220_Data_Management_and_Privacy.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="availability-and-service-level">Availability and Service Level</h1>
+<h2 id="overview">Overview</h2>
+<p>This document defines availability requirements, Service Level Agreements (SLAs), and Service Level Objectives (SLOs) for the IT service. It describes measurement methods, reporting processes, and measures for continuous improvement of service availability.</p>
+<p><strong>Document Owner:</strong> IT Operations Manager<br />
+<strong>Approved by:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Organization:</strong> AdminSend GmbH</p>
+<hr />
+<h2 id="availability-requirements">Availability Requirements</h2>
+<h3 id="service-classification">Service Classification</h3>
+<table>
+<thead>
+<tr>
+<th>Service Class</th>
+<th style="text-align: right;">Availability</th>
+<th style="text-align: right;">Max Downtime/Year</th>
+<th style="text-align: right;">Max Downtime/Month</th>
+<th>Business Criticality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Critical</td>
+<td style="text-align: right;">99.95%</td>
+<td style="text-align: right;">4.38 hours</td>
+<td style="text-align: right;">21.6 minutes</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Important</td>
+<td style="text-align: right;">99.5%</td>
+<td style="text-align: right;">43.8 hours</td>
+<td style="text-align: right;">3.6 hours</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Standard</td>
+<td style="text-align: right;">99.0%</td>
+<td style="text-align: right;">87.6 hours</td>
+<td style="text-align: right;">7.2 hours</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>Non-critical</td>
+<td style="text-align: right;">95.0%</td>
+<td style="text-align: right;">438 hours</td>
+<td style="text-align: right;">36 hours</td>
+<td>Very low</td>
+</tr>
+</tbody>
+</table>
+<h3 id="service-times">Service Times</h3>
+<h4 id="production-services">Production Services</h4>
+<ul>
+<li><strong>Availability:</strong> 24/7/365</li>
+<li><strong>Support Hours:</strong> 24/7 with on-call availability</li>
+<li><strong>Maintenance Window:</strong> Sunday 02:00-06:00 (after announcement)</li>
+<li><strong>Emergency Maintenance:</strong> After approval by Anna Schmidt</li>
+</ul>
+<h4 id="business-services">Business Services</h4>
+<ul>
+<li><strong>Availability:</strong> Mon-Fri 06:00-22:00</li>
+<li><strong>Support Hours:</strong> Mon-Fri 08:00-18:00</li>
+<li><strong>Maintenance Window:</strong> Saturday 20:00-24:00</li>
+<li><strong>Emergency Maintenance:</strong> After approval by Andreas Huemmer</li>
+</ul>
+<hr />
+<h2 id="service-level-agreements-sla">Service Level Agreements (SLA)</h2>
+<h3 id="sla-definitions">SLA Definitions</h3>
+<h4 id="availability-sla">Availability SLA</h4>
+<p><strong>Service:</strong> [TODO: Service Name]<br />
+<strong>Valid from:</strong> [TODO: Date]<br />
+<strong>Duration:</strong> 12 months with automatic renewal</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th style="text-align: right;">Target</th>
+<th>Measurement Method</th>
+<th>Measurement Interval</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Availability</td>
+<td style="text-align: right;">99.5%</td>
+<td>Uptime Monitoring</td>
+<td>Monthly</td>
+</tr>
+<tr>
+<td>Planned Downtime</td>
+<td style="text-align: right;">&lt; 4h/month</td>
+<td>Change Calendar</td>
+<td>Monthly</td>
+</tr>
+<tr>
+<td>Unplanned Downtime</td>
+<td style="text-align: right;">&lt; 2h/month</td>
+<td>Incident Tracking</td>
+<td>Monthly</td>
+</tr>
+<tr>
+<td>MTBF (Mean Time Between Failures)</td>
+<td style="text-align: right;">&gt; 720h</td>
+<td>Incident Analysis</td>
+<td>Quarterly</td>
+</tr>
+<tr>
+<td>MTTR (Mean Time To Repair)</td>
+<td style="text-align: right;">&lt; 2h</td>
+<td>Incident Tickets</td>
+<td>Monthly</td>
+</tr>
+</tbody>
+</table>
+<h4 id="performance-sla">Performance SLA</h4>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th style="text-align: right;">Target</th>
+<th style="text-align: right;">Warning Threshold</th>
+<th>Measurement Method</th>
+<th>Measurement Interval</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Response Time (Avg)</td>
+<td style="text-align: right;">&lt; 200ms</td>
+<td style="text-align: right;">&gt; 300ms</td>
+<td>APM Tool</td>
+<td>Continuous</td>
+</tr>
+<tr>
+<td>Response Time (95th)</td>
+<td style="text-align: right;">&lt; 500ms</td>
+<td style="text-align: right;">&gt; 750ms</td>
+<td>APM Tool</td>
+<td>Continuous</td>
+</tr>
+<tr>
+<td>Response Time (99th)</td>
+<td style="text-align: right;">&lt; 1000ms</td>
+<td style="text-align: right;">&gt; 1500ms</td>
+<td>APM Tool</td>
+<td>Continuous</td>
+</tr>
+<tr>
+<td>Throughput</td>
+<td style="text-align: right;">&gt; 1000 TPS</td>
+<td style="text-align: right;">&lt; 800 TPS</td>
+<td>APM Tool</td>
+<td>Continuous</td>
+</tr>
+<tr>
+<td>Error Rate</td>
+<td style="text-align: right;">&lt; 0.1%</td>
+<td style="text-align: right;">&gt; 0.5%</td>
+<td>APM Tool</td>
+<td>Continuous</td>
+</tr>
+</tbody>
+</table>
+<h4 id="support-sla">Support SLA</h4>
+<table>
+<thead>
+<tr>
+<th>Priority</th>
+<th>Response Time</th>
+<th>Resolution Time</th>
+<th>Availability</th>
+<th>Escalation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P1 - Critical</td>
+<td>15 minutes</td>
+<td>4 hours</td>
+<td>24/7</td>
+<td>Immediately to CIO</td>
+</tr>
+<tr>
+<td>P2 - High</td>
+<td>1 hour</td>
+<td>8 hours</td>
+<td>24/7</td>
+<td>After 4h to Ops Manager</td>
+</tr>
+<tr>
+<td>P3 - Medium</td>
+<td>4 hours</td>
+<td>24 hours</td>
+<td>Mon-Fri 08-18</td>
+<td>After 24h to Ops Manager</td>
+</tr>
+<tr>
+<td>P4 - Low</td>
+<td>8 hours</td>
+<td>72 hours</td>
+<td>Mon-Fri 08-18</td>
+<td>After 72h to Ops Manager</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="service-level-objectives-slo">Service Level Objectives (SLO)</h2>
+<h3 id="internal-slos">Internal SLOs</h3>
+<h4 id="infrastructure-slos">Infrastructure SLOs</h4>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th style="text-align: right;">SLO</th>
+<th>Measurement Method</th>
+<th>Responsible</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Compute Cluster</td>
+<td style="text-align: right;">99.9%</td>
+<td>Hypervisor Monitoring</td>
+<td>Andreas Huemmer</td>
+</tr>
+<tr>
+<td>Storage System</td>
+<td style="text-align: right;">99.95%</td>
+<td>Storage Monitoring</td>
+<td>Andreas Huemmer</td>
+</tr>
+<tr>
+<td>Network Core</td>
+<td style="text-align: right;">99.99%</td>
+<td>Network Monitoring</td>
+<td>Andreas Huemmer</td>
+</tr>
+<tr>
+<td>Firewall</td>
+<td style="text-align: right;">99.95%</td>
+<td>Security Monitoring</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td>Load Balancer</td>
+<td style="text-align: right;">99.9%</td>
+<td>LB Monitoring</td>
+<td>Andreas Huemmer</td>
+</tr>
+</tbody>
+</table>
+<h3 id="error-budget">Error Budget</h3>
+<h4 id="error-budget-concept">Error Budget Concept</h4>
+<ul>
+<li><strong>Definition:</strong> Tolerable downtime within the SLO period</li>
+<li><strong>Calculation:</strong> (100% - SLO) × Period</li>
+<li><strong>Usage:</strong> Balance between innovation and stability</li>
+</ul>
+<h4 id="error-budget-example-995-slo">Error Budget Example (99.5% SLO)</h4>
+<table>
+<thead>
+<tr>
+<th>Period</th>
+<th style="text-align: right;">Availability</th>
+<th style="text-align: right;">Error Budget</th>
+<th style="text-align: right;">Downtime</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Month</td>
+<td style="text-align: right;">99.5%</td>
+<td style="text-align: right;">0.5%</td>
+<td style="text-align: right;">3.6 hours</td>
+</tr>
+<tr>
+<td>Quarter</td>
+<td style="text-align: right;">99.5%</td>
+<td style="text-align: right;">0.5%</td>
+<td style="text-align: right;">10.8 hours</td>
+</tr>
+<tr>
+<td>Year</td>
+<td style="text-align: right;">99.5%</td>
+<td style="text-align: right;">0.5%</td>
+<td style="text-align: right;">43.8 hours</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="availability-measurement">Availability Measurement</h2>
+<h3 id="measurement-methods">Measurement Methods</h3>
+<h4 id="synthetic-monitoring">Synthetic Monitoring</h4>
+<ul>
+<li><strong>Method:</strong> Automated tests of defined endpoints</li>
+<li><strong>Frequency:</strong> Every 1-5 minutes</li>
+<li><strong>Locations:</strong> Multiple geographic locations</li>
+<li><strong>Metrics:</strong> Availability, Response Time, Functionality</li>
+</ul>
+<h4 id="real-user-monitoring-rum">Real User Monitoring (RUM)</h4>
+<ul>
+<li><strong>Method:</strong> Measurement of actual user interactions</li>
+<li><strong>Collection:</strong> Client-side metrics</li>
+<li><strong>Metrics:</strong> Page Load Time, User Experience, Error Rate</li>
+<li><strong>Privacy:</strong> GDPR compliant, anonymized</li>
+</ul>
+<hr />
+<h2 id="service-level-reporting">Service Level Reporting</h2>
+<h3 id="report-types">Report Types</h3>
+<h4 id="daily-availability-report">Daily Availability Report</h4>
+<ul>
+<li><strong>Recipients:</strong> IT Operations Team</li>
+<li><strong>Content:</strong></li>
+<li>Availability of last 24 hours</li>
+<li>Incidents and outages</li>
+<li>Performance metrics</li>
+<li>Current alerts</li>
+<li><strong>Delivery:</strong> Automatically at 08:00</li>
+</ul>
+<h4 id="weekly-sla-report">Weekly SLA Report</h4>
+<ul>
+<li><strong>Recipients:</strong> Andreas Huemmer</li>
+<li><strong>Content:</strong></li>
+<li>Weekly availability</li>
+<li>SLA compliance status</li>
+<li>Trend analysis</li>
+<li>Recommendations</li>
+<li><strong>Delivery:</strong> Every Monday</li>
+</ul>
+<h4 id="monthly-sla-report">Monthly SLA Report</h4>
+<ul>
+<li><strong>Recipients:</strong> Anna Schmidt, Stakeholders</li>
+<li><strong>Content:</strong></li>
+<li>Monthly availability</li>
+<li>SLA fulfillment vs. targets</li>
+<li>Incident summary</li>
+<li>Error Budget status</li>
+<li>Improvement measures</li>
+<li><strong>Delivery:</strong> First business day of following month</li>
+</ul>
+<hr />
+<h2 id="processes-and-responsibilities">Processes and Responsibilities</h2>
+<h3 id="raci-matrix">RACI Matrix</h3>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>CIO</th>
+<th>Ops Manager</th>
+<th>Ops Team</th>
+<th>Stakeholder</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SLA Definition</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Availability Measurement</td>
+<td>I</td>
+<td>A</td>
+<td>R</td>
+<td>-</td>
+</tr>
+<tr>
+<td>SLA Reporting</td>
+<td>C</td>
+<td>A</td>
+<td>R</td>
+<td>I</td>
+</tr>
+<tr>
+<td>SLA Review</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Improvement Measures</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Incident Response</td>
+<td>I</td>
+<td>A</td>
+<td>R</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Postmortems</td>
+<td>C</td>
+<td>A</td>
+<td>R</td>
+<td>I</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Legend:</strong> R = Responsible, A = Accountable, C = Consulted, I = Informed</p>
+</blockquote>
+<hr />
+<h2 id="compliance-and-standards">Compliance and Standards</h2>
+<h3 id="relevant-standards">Relevant Standards</h3>
+<ul>
+<li><strong>ITIL v4:</strong> Availability Management Practice</li>
+<li><strong>ISO 20000:</strong> Clause 8.9 - Availability Management</li>
+<li><strong>COBIT 2019:</strong> DSS01 - Managed Operations</li>
+</ul>
+<hr />
+<p><strong>Last Update:</strong> {{ meta.date }}<br />
+<strong>Next Review:</strong> [TODO: Date]<br />
+<strong>Contact:</strong> andreas.huemmer@adminsend.de</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0200_Capacity_and_Performance_Management.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0220_Data_Management_and_Privacy.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

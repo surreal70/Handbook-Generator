@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0230 - Guideline: IAM - Joiner, Mover, Leaver and Access Requests</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0230</div>
+            <h1>Guideline: IAM - Joiner, Mover, Leaver and Access Requests</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0220_Policy_Access_Control_and_Identity_Management.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0240_Policy_Authentication_and_Passwords.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="guideline-iam-joiner-mover-leaver-and-access-requests">Guideline: IAM - Joiner, Mover, Leaver and Access Requests</h1>
+<p><strong>Document ID:</strong> 0230<br />
+<strong>Document Type:</strong> Guideline (detailed)<br />
+<strong>Related Policy:</strong> 0220_Policy_Access_Control_and_Identity_Management.md<br />
+<strong>Standard Reference:</strong> ISO/IEC 27001:2022 Annex A.5.15, A.5.16, A.5.18<br />
+<strong>Owner:</strong> {{ meta.it_operations.manager }}<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Approved<br />
+<strong>Classification:</strong> Internal<br />
+<strong>Last Updated:</strong> {{ meta.document.date }}<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-purpose-and-scope">1. Purpose and Scope</h2>
+<p>This guideline implements the <code>0220_Policy_Access_Control_and_Identity_Management.md</code> and defines detailed processes for:
+- <strong>Joiner:</strong> Onboarding new employees and access provisioning
+- <strong>Mover:</strong> Role changes and access adjustments
+- <strong>Leaver:</strong> Offboarding and access revocation
+- <strong>Access Requests:</strong> Process for ad-hoc access requests</p>
+<p><strong>Scope:</strong> All employees, contractors, and third parties at <strong>AdminSend GmbH</strong></p>
+<h2 id="2-joiner-process-onboarding">2. Joiner Process (Onboarding)</h2>
+<h3 id="21-process-overview">2.1 Process Overview</h3>
+<p><strong>Trigger:</strong> HR creates new employee in HR system ({{ meta.hr.system }})</p>
+<p><strong>Timeline:</strong>
+- <strong>Standard Accounts:</strong> Provisioning by 1 day before start date
+- <strong>Special Access:</strong> Provisioning by 3 days before start date
+- <strong>External Contractors:</strong> Provisioning after contract signing</p>
+<h3 id="22-detailed-workflow">2.2 Detailed Workflow</h3>
+<p><strong>Phase 1: HR Initiation (T-5 days)</strong>
+1. HR creates employee record in {{ meta.hr.system }}
+2. HR defines:
+   - Department, role, location
+   - Supervisor, cost center
+   - Start date, contract type (permanent, temporary, internship)
+3. Automatic notification to IT operations</p>
+<p><strong>Phase 2: IT Provisioning (T-3 days)</strong>
+1. <strong>Account Creation:</strong>
+   - Active Directory / Azure AD account
+   - Email mailbox ({{ meta.email.system }})
+   - Username per schema: <code>{{ meta.naming.user_format }}</code> (e.g., firstname.lastname)
+   - Initial password (temporary, must be changed at first login)</p>
+<ol>
+<li><strong>Basic Access (automatic via role model):</strong></li>
+<li>Access to intranet and collaboration tools</li>
+<li>Standard applications for department</li>
+<li>Network drives according to department membership</li>
+<li>
+<p>VPN access (if remote work)</p>
+</li>
+<li>
+<p><strong>Hardware Provisioning:</strong></p>
+</li>
+<li>Laptop/desktop per role (see hardware catalog)</li>
+<li>Mobile device (if required)</li>
+<li>Peripherals (monitor, keyboard, mouse)</li>
+<li>Asset tagging and inventory</li>
+</ol>
+<p><strong>Phase 3: Special Access (T-2 days)</strong>
+1. Supervisor requests special access via self-service portal
+2. Approval by resource owner
+3. Provisioning by IT operations or automated</p>
+<p><strong>Phase 4: Onboarding Day (T-0)</strong>
+1. <strong>Welcome Email:</strong>
+   - Credentials (initial password)
+   - Links to training and policies
+   - IT support contact information
+2. <strong>First Login:</strong>
+   - Password change enforced
+   - MFA registration (authenticator app, hardware token)
+   - Acceptable Use Policy confirmation
+3. <strong>IT Orientation:</strong>
+   - Device usage, VPN access
+   - Password manager training
+   - Phishing awareness basics</p>
+<h3 id="23-role-based-access-rbac">2.3 Role-Based Access (RBAC)</h3>
+<p><strong>Standard Roles:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Description</th>
+<th>Automatic Access</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Employee_Standard</td>
+<td>All employees</td>
+<td>Intranet, email, Office 365, VPN</td>
+</tr>
+<tr>
+<td>Employee_Developer</td>
+<td>Developers</td>
+<td>+ Git, CI/CD, dev environments</td>
+</tr>
+<tr>
+<td>Employee_Finance</td>
+<td>Finance department</td>
+<td>+ ERP, accounting software</td>
+</tr>
+<tr>
+<td>Employee_HR</td>
+<td>Human resources</td>
+<td>+ HR system, applicant management</td>
+</tr>
+<tr>
+<td>Employee_Sales</td>
+<td>Sales</td>
+<td>+ CRM, quotation system</td>
+</tr>
+<tr>
+<td>Contractor_Standard</td>
+<td>External contractors</td>
+<td>Basic access, time-limited</td>
+</tr>
+<tr>
+<td>Contractor_Developer</td>
+<td>External developers</td>
+<td>+ Dev access, time-limited</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Privileged Roles:</strong>
+- <code>Admin_System</code>: System administrators (Windows, Linux)
+- <code>Admin_Network</code>: Network administrators
+- <code>Admin_Security</code>: Security team
+- <code>Admin_Database</code>: Database administrators</p>
+<h3 id="24-external-contractors-and-third-parties">2.4 External Contractors and Third Parties</h3>
+<p><strong>Special Considerations:</strong>
+- <strong>Contract Review:</strong> IT access only after contract signing and NDA
+- <strong>Time Limitation:</strong> Accounts automatically deactivated after contract end
+- <strong>Restricted Access:</strong> Only project-related resources
+- <strong>Sponsorship:</strong> Every external account requires internal sponsor
+- <strong>Recertification:</strong> Quarterly review by sponsor</p>
+<h2 id="3-mover-process-role-change">3. Mover Process (Role Change)</h2>
+<h3 id="31-process-overview">3.1 Process Overview</h3>
+<p><strong>Trigger:</strong> HR updates employee data (department change, promotion, new role)</p>
+<p><strong>Timeline:</strong> Access adjustment within 2 business days after HR change</p>
+<h3 id="32-detailed-workflow">3.2 Detailed Workflow</h3>
+<p><strong>Phase 1: HR Change</strong>
+1. HR updates employee record in {{ meta.hr.system }}
+2. Changes: Department, role, supervisor, location
+3. Automatic notification to IT operations and previous/new supervisors</p>
+<p><strong>Phase 2: Access Review</strong>
+1. <strong>Previous Supervisor:</strong> Confirms revocation of no longer needed access
+2. <strong>New Supervisor:</strong> Requests new required access
+3. <strong>IT Operations:</strong> Reviews current access and plans changes</p>
+<p><strong>Phase 3: Access Adjustment</strong>
+1. <strong>Revoke Old Access:</strong>
+   - Removal from old department groups
+   - Revocation of department-specific application access
+   - Archiving old emails (if mailbox change)
+2. <strong>Provision New Access:</strong>
+   - Addition to new department groups
+   - Provisioning new application access
+   - Adjustment of network drives and permissions</p>
+<p><strong>Phase 4: Documentation</strong>
+1. Update CMDB and asset management
+2. Documentation of access changes
+3. Notification to employee about changes</p>
+<h3 id="33-promotions-and-privilege-elevation">3.3 Promotions and Privilege Elevation</h3>
+<p><strong>Additional Checks for Privilege Elevation:</strong>
+- <strong>Approval:</strong> CISO approval for privileged roles
+- <strong>Background Check:</strong> Extended verification for admin rights
+- <strong>Training:</strong> Additional security training for privileged users
+- <strong>Monitoring:</strong> Increased monitoring of privileged activities</p>
+<h2 id="4-leaver-process-offboarding">4. Leaver Process (Offboarding)</h2>
+<h3 id="41-process-overview">4.1 Process Overview</h3>
+<p><strong>Trigger:</strong> HR marks employee as leaving in {{ meta.hr.system }}</p>
+<p><strong>Timeline:</strong>
+- <strong>Planned Departure:</strong> Deactivation on last working day
+- <strong>Unplanned Departure:</strong> Immediate deactivation (e.g., termination, emergency)</p>
+<h3 id="42-detailed-workflow">4.2 Detailed Workflow</h3>
+<p><strong>Phase 1: Preparation (T-14 days)</strong>
+1. HR informs IT operations about departure date
+2. <strong>Knowledge Transfer:</strong>
+   - Supervisor identifies critical access and information
+   - Handover to successor or team
+   - Documentation of passwords for shared accounts (in password manager)
+3. <strong>Data Backup:</strong>
+   - Backup of personal drives
+   - Email mailbox archiving
+   - Handover of project-relevant files</p>
+<p><strong>Phase 2: Last Working Day (T-0)</strong>
+1. <strong>Account Deactivation (End of Business Day):</strong>
+   - Active Directory / Azure AD account deactivated
+   - Email forwarding to supervisor (temporary, 30 days)
+   - VPN access blocked
+   - All application access revoked
+2. <strong>Hardware Return:</strong>
+   - Laptop, mobile device, peripherals
+   - Access cards, keys
+   - Asset inventory updated
+3. <strong>Exit Interview:</strong>
+   - Return of all company property
+   - Reminder of confidentiality obligations
+   - Confirmation of data return</p>
+<p><strong>Phase 3: Post-Offboarding (T+30 days)</strong>
+1. <strong>Account Deletion:</strong>
+   - After 30 days: Final account deletion
+   - Email archiving per retention policy ({{ meta.retention.email_years }} years)
+   - Deletion of personal data (GDPR compliant)
+2. <strong>License Release:</strong>
+   - Return of software licenses
+   - Update license management
+3. <strong>Documentation:</strong>
+   - Offboarding checklist completed
+   - Audit trail for compliance</p>
+<h3 id="43-emergency-offboarding">4.3 Emergency Offboarding</h3>
+<p><strong>Immediate Deactivation for:</strong>
+- Termination for cause
+- Security incidents or suspected abuse
+- Court orders</p>
+<p><strong>Process:</strong>
+1. <strong>Immediate Suspension (within 1 hour):</strong>
+   - All accounts deactivated
+   - VPN and remote access blocked
+   - Access cards deactivated
+   - Mobile devices remotely wiped (if MDM)
+2. <strong>Forensics:</strong>
+   - Backup of logs and activities
+   - Analysis in case of suspected data abuse
+   - Involvement of legal and HR
+3. <strong>Communication:</strong>
+   - Information to supervisor and security team
+   - Documentation for legal purposes</p>
+<h2 id="5-access-requests">5. Access Requests</h2>
+<h3 id="51-self-service-portal">5.1 Self-Service Portal</h3>
+<p><strong>Access:</strong> {{ meta.iam.portal_url }}</p>
+<p><strong>Functions:</strong>
+- Request new access (applications, network drives, groups)
+- Overview of own access
+- Status tracking of requests
+- Recertification of own access</p>
+<h3 id="52-request-workflow">5.2 Request Workflow</h3>
+<p><strong>Step 1: Request Submission</strong>
+1. Employee submits request via self-service portal
+2. <strong>Required Information:</strong>
+   - Resource/application
+   - Business justification
+   - Required permission level
+   - Time period (permanent or time-limited)</p>
+<p><strong>Step 2: Approval</strong>
+1. <strong>Supervisor:</strong> Reviews business necessity (1st approval)
+2. <strong>Resource Owner:</strong> Reviews technical authorization (2nd approval)
+3. <strong>CISO:</strong> Additional approval for privileged access
+4. <strong>Automatic Approval:</strong> For standard access per role model</p>
+<p><strong>Step 3: Provisioning</strong>
+1. <strong>Automatic:</strong> For standard applications (within 15 minutes)
+2. <strong>Manual:</strong> For special access (within 1 business day)
+3. <strong>Notification:</strong> Email to requester upon completion</p>
+<p><strong>Step 4: Documentation</strong>
+1. Audit trail in IAM system
+2. CMDB update
+3. Compliance reporting</p>
+<h3 id="53-time-limited-access">5.3 Time-Limited Access</h3>
+<p><strong>Use Cases:</strong>
+- Project-related access
+- Substitutions (vacation, illness)
+- External contractors
+- Test and development access</p>
+<p><strong>Automatic Deactivation:</strong>
+- System automatically deactivates access after expiration date
+- Notification to user 7 days before expiration
+- Extension only through new request</p>
+<h2 id="6-recertification">6. Recertification</h2>
+<h3 id="61-regular-access-reviews">6.1 Regular Access Reviews</h3>
+<p><strong>Frequency:</strong>
+- <strong>Standard Users:</strong> Annual recertification
+- <strong>Privileged Users:</strong> Quarterly recertification
+- <strong>External Contractors:</strong> Quarterly recertification
+- <strong>Critical Systems:</strong> Monthly recertification</p>
+<h3 id="62-recertification-process">6.2 Recertification Process</h3>
+<p><strong>Step 1: Automatic Campaign</strong>
+1. IAM system starts recertification campaign
+2. Email to supervisors with list of employee access
+3. Deadline: 14 days for confirmation</p>
+<p><strong>Step 2: Review by Supervisors</strong>
+1. Supervisor reviews each access:
+   - <strong>Confirm:</strong> Access still required
+   - <strong>Revoke:</strong> Access no longer needed
+   - <strong>Escalate:</strong> Uncertainty, query to resource owner
+2. Documentation of decision</p>
+<p><strong>Step 3: Automatic Enforcement</strong>
+1. Confirmed access remains active
+2. Unconfirmed access is automatically revoked after deadline
+3. Escalated cases are forwarded to CISO</p>
+<p><strong>Step 4: Reporting</strong>
+1. Compliance report for audit
+2. Identification of access anomalies
+3. Optimization of role model</p>
+<h3 id="63-privileged-access">6.3 Privileged Access</h3>
+<p><strong>Additional Controls:</strong>
+- <strong>Four-Eyes Principle:</strong> Two approvals required
+- <strong>Just-in-Time (JIT) Access:</strong> Privileges only when needed, time-limited
+- <strong>Privileged Access Management (PAM):</strong> Management via PAM system ({{ meta.security.pam_solution }})
+- <strong>Session Recording:</strong> Recording of privileged sessions for audit</p>
+<h2 id="7-technical-implementation">7. Technical Implementation</h2>
+<h3 id="71-iam-technology-stack">7.1 IAM Technology Stack</h3>
+<p><strong>Systems:</strong>
+- <strong>Identity Provider:</strong> {{ meta.iam.idp }} (e.g., Azure AD, Okta)
+- <strong>HR System:</strong> {{ meta.hr.system }} (e.g., SAP SuccessFactors, Workday)
+- <strong>IAM Portal:</strong> {{ meta.iam.portal }} (e.g., SailPoint, Saviynt)
+- <strong>PAM System:</strong> {{ meta.security.pam_solution }} (e.g., CyberArk, BeyondTrust)
+- <strong>CMDB:</strong> {{ meta.itsm.cmdb }} (e.g., ServiceNow, Jira Service Management)</p>
+<p><strong>Integration:</strong>
+- HR system → IAM system (automatic synchronization)
+- IAM system → Active Directory / Azure AD (provisioning)
+- IAM system → Applications (SCIM, SAML, API)</p>
+<h3 id="72-automation">7.2 Automation</h3>
+<p><strong>Automated Processes:</strong>
+- Account creation for joiner (within 1 hour after HR entry)
+- Role-based access provisioning (RBAC)
+- Account deactivation for leaver (on last working day)
+- Time-limited access (automatic deactivation)
+- Recertification campaigns (automatic start)</p>
+<p><strong>Manual Processes:</strong>
+- Special access outside role model
+- Privileged access (after approval)
+- Emergency offboarding (immediate suspension)</p>
+<h2 id="8-compliance-and-audit">8. Compliance and Audit</h2>
+<h3 id="81-key-performance-indicators-kpis">8.1 Key Performance Indicators (KPIs)</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Target Value</th>
+<th>Measurement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Joiner Provisioning</td>
+<td>&lt; 1 day</td>
+<td>IAM system</td>
+</tr>
+<tr>
+<td>Leaver Deactivation</td>
+<td>100% on last day</td>
+<td>IAM system</td>
+</tr>
+<tr>
+<td>Access Requests (Processing Time)</td>
+<td>&lt; 1 business day</td>
+<td>IAM system</td>
+</tr>
+<tr>
+<td>Recertification (Completion Rate)</td>
+<td>&gt; 95%</td>
+<td>IAM system</td>
+</tr>
+<tr>
+<td>Orphaned Accounts</td>
+<td>0</td>
+<td>Quarterly review</td>
+</tr>
+</tbody>
+</table>
+<h3 id="82-audit-evidence">8.2 Audit Evidence</h3>
+<p><strong>Documentation:</strong>
+- Joiner/Mover/Leaver logs (audit trail)
+- Access requests and approvals
+- Recertification reports
+- Privileged access and approvals
+- Emergency offboarding documentation</p>
+<p><strong>Audit Frequency:</strong>
+- Internal audits: Quarterly
+- External audits: Annually (ISO 27001)
+- Ad-hoc audits: For security incidents</p>
+<h2 id="9-references">9. References</h2>
+<h3 id="internal-documents">Internal Documents</h3>
+<ul>
+<li><code>0220_Policy_Access_Control_and_Identity_Management.md</code> - Parent policy</li>
+<li><code>0250_Richtlinie_MFA_Passwortregeln_und_Session_Management.md</code> - Authentication</li>
+<li><code>0530_Richtlinie_HR_Onboarding_Rollenwechsel_Offboarding.md</code> - HR security</li>
+<li><code>0640_Policy_Ausnahmen_und_Risk_Waivers.md</code> - Exception process</li>
+</ul>
+<h3 id="external-standards">External Standards</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.15</strong> - Access control</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.16</strong> - Identity management</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.18</strong> - Access rights</li>
+<li><strong>NIST SP 800-63</strong> - Digital Identity Guidelines</li>
+</ul>
+<hr />
+<p><strong>Approved by:</strong><br />
+Thomas Weber, CISO<br />
+Date: {{ meta.document.approval_date }}</p>
+<p><strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0220_Policy_Access_Control_and_Identity_Management.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0240_Policy_Authentication_and_Passwords.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

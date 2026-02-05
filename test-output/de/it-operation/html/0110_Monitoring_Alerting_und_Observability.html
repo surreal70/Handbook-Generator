@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0110 - Monitoring, Alerting und Observability</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0110</div>
+            <h1>Monitoring, Alerting und Observability</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0100_Access_und_Berechtigungsmanagement.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0120_Incident_Management_Runbook.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="monitoring-alerting-und-observability">Monitoring, Alerting und Observability</h1>
+<h2 id="ubersicht">Übersicht</h2>
+<p>Dieses Dokument beschreibt die Monitoring-, Alerting- und Observability-Strategie für den IT-Service. Es definiert Monitoring-Tools, Alerting-Regeln, Schwellwerte und Observability-Konzepte.</p>
+<p><strong>Service:</strong> {{ meta.service_name }}<br />
+<strong>Verantwortlich:</strong> Andreas Huemmer<br />
+<strong>Stand:</strong> 1.0.0</p>
+<hr />
+<h2 id="monitoring-strategie">Monitoring-Strategie</h2>
+<h3 id="monitoring-ziele">Monitoring-Ziele</h3>
+<ul>
+<li><strong>Proaktive Erkennung:</strong> Probleme erkennen bevor sie Auswirkungen haben</li>
+<li><strong>Performance-Optimierung:</strong> Engpässe identifizieren und beheben</li>
+<li><strong>Verfügbarkeit:</strong> Service-Verfügbarkeit sicherstellen</li>
+<li><strong>Kapazitätsplanung:</strong> Trends erkennen für Kapazitätsplanung</li>
+<li><strong>Compliance:</strong> Nachweis der Service-Level-Einhaltung</li>
+</ul>
+<h3 id="monitoring-ebenen">Monitoring-Ebenen</h3>
+<div class="codehilite"><pre><span></span><code>┌─────────────────────────────────────────────────────────────┐
+│ Layer 7: Business Metrics                                    │
+│ (Transaktionen, User Experience, Business KPIs)             │
+└────────────────────┬────────────────────────────────────────┘
+                     │
+┌────────────────────▼────────────────────────────────────────┐
+│ Layer 6: Application Monitoring                              │
+│ (Application Performance, Errors, Response Times)            │
+└────────────────────┬────────────────────────────────────────┘
+                     │
+┌────────────────────▼────────────────────────────────────────┐
+│ Layer 5: Service Monitoring                                  │
+│ (Service Health, API Endpoints, Dependencies)                │
+└────────────────────┬────────────────────────────────────────┘
+                     │
+┌────────────────────▼────────────────────────────────────────┐
+│ Layer 4: Infrastructure Monitoring                           │
+│ (Servers, Network, Storage, Virtualization)                  │
+└────────────────────┬────────────────────────────────────────┘
+                     │
+┌────────────────────▼────────────────────────────────────────┐
+│ Layer 3: System Monitoring                                   │
+│ (CPU, Memory, Disk, Network Interfaces)                      │
+└────────────────────┬────────────────────────────────────────┘
+                     │
+┌────────────────────▼────────────────────────────────────────┐
+│ Layer 2: Network Monitoring                                  │
+│ (Connectivity, Bandwidth, Latency, Packet Loss)              │
+└────────────────────┬────────────────────────────────────────┘
+                     │
+┌────────────────────▼────────────────────────────────────────┐
+│ Layer 1: Physical Monitoring                                 │
+│ (Power, Cooling, Environmental)                              │
+└─────────────────────────────────────────────────────────────┘
+</code></pre></div>
+
+<hr />
+<h2 id="monitoring-tools">Monitoring-Tools</h2>
+<h3 id="tool-stack">Tool-Stack</h3>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Verwendung</th>
+<th>Verantwortlich</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>[TODO: z.B. Prometheus]</strong></td>
+<td>Metriken-Sammlung</td>
+<td>Monitoring Team</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td><strong>[TODO: z.B. Grafana]</strong></td>
+<td>Visualisierung</td>
+<td>Monitoring Team</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td><strong>[TODO: z.B. Nagios/Zabbix]</strong></td>
+<td>Infrastructure Monitoring</td>
+<td>IT Operations</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td><strong>[TODO: z.B. ELK Stack]</strong></td>
+<td>Log-Aggregation</td>
+<td>IT Operations</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td><strong>[TODO: z.B. Jaeger]</strong></td>
+<td>Distributed Tracing</td>
+<td>Development Team</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td><strong>[TODO: z.B. Pingdom]</strong></td>
+<td>Synthetic Monitoring</td>
+<td>IT Operations</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td><strong>[TODO: z.B. New Relic/Datadog]</strong></td>
+<td>APM</td>
+<td>Development Team</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tool-integration">Tool-Integration</h3>
+<p><strong>Datenfluss:</strong></p>
+<div class="codehilite"><pre><span></span><code>┌─────────────┐
+│   Agents    │
+│  (Exporters)│
+└──────┬──────┘
+       │
+       ▼
+┌─────────────┐
+│  Collectors │
+│ (Prometheus)│
+└──────┬──────┘
+       │
+       ▼
+┌─────────────┐
+│   Storage   │
+│  (TSDB)     │
+└──────┬──────┘
+       │
+       ├──────────────┐
+       │              │
+       ▼              ▼
+┌─────────────┐  ┌─────────────┐
+│Visualization│  │  Alerting   │
+│  (Grafana)  │  │(Alertmanager)│
+└─────────────┘  └─────────────┘
+</code></pre></div>
+
+<hr />
+<h2 id="infrastructure-monitoring">Infrastructure Monitoring</h2>
+<h3 id="server-monitoring">Server-Monitoring</h3>
+<h4 id="metriken">Metriken</h4>
+<table>
+<thead>
+<tr>
+<th>Metrik</th>
+<th>Beschreibung</th>
+<th style="text-align: right;">Schwellwert Warning</th>
+<th style="text-align: right;">Schwellwert Critical</th>
+<th>Frequenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CPU Usage</strong></td>
+<td>CPU-Auslastung</td>
+<td style="text-align: right;">&gt; 80%</td>
+<td style="text-align: right;">&gt; 95%</td>
+<td>1 Min</td>
+</tr>
+<tr>
+<td><strong>Memory Usage</strong></td>
+<td>RAM-Auslastung</td>
+<td style="text-align: right;">&gt; 85%</td>
+<td style="text-align: right;">&gt; 95%</td>
+<td>1 Min</td>
+</tr>
+<tr>
+<td><strong>Disk Usage</strong></td>
+<td>Festplatten-Auslastung</td>
+<td style="text-align: right;">&gt; 80%</td>
+<td style="text-align: right;">&gt; 90%</td>
+<td>5 Min</td>
+</tr>
+<tr>
+<td><strong>Disk I/O</strong></td>
+<td>Disk-Operationen</td>
+<td style="text-align: right;">&gt; 80%</td>
+<td style="text-align: right;">&gt; 95%</td>
+<td>1 Min</td>
+</tr>
+<tr>
+<td><strong>Network Traffic</strong></td>
+<td>Netzwerk-Durchsatz</td>
+<td style="text-align: right;">&gt; 80%</td>
+<td style="text-align: right;">&gt; 95%</td>
+<td>1 Min</td>
+</tr>
+<tr>
+<td><strong>Load Average</strong></td>
+<td>System-Last</td>
+<td style="text-align: right;">&gt; 4.0</td>
+<td style="text-align: right;">&gt; 8.0</td>
+<td>1 Min</td>
+</tr>
+<tr>
+<td><strong>Swap Usage</strong></td>
+<td>Swap-Nutzung</td>
+<td style="text-align: right;">&gt; 50%</td>
+<td style="text-align: right;">&gt; 80%</td>
+<td>5 Min</td>
+</tr>
+</tbody>
+</table>
+<h4 id="uberwachte-server">Überwachte Server</h4>
+<table>
+<thead>
+<tr>
+<th>Server</th>
+<th>Standort</th>
+<th>Rolle</th>
+<th>Monitoring-Agent</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{{ netbox.device.name }}</td>
+<td>{{ netbox.device.site }}</td>
+<td>{{ netbox.device.role }}</td>
+<td>[TODO: Agent]</td>
+<td>☐ Aktiv</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>☐ Aktiv</td>
+</tr>
+</tbody>
+</table>
+<h3 id="netzwerk-monitoring">Netzwerk-Monitoring</h3>
+<h4 id="metriken_1">Metriken</h4>
+<table>
+<thead>
+<tr>
+<th>Metrik</th>
+<th>Beschreibung</th>
+<th style="text-align: right;">Schwellwert Warning</th>
+<th style="text-align: right;">Schwellwert Critical</th>
+<th>Frequenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Interface Status</strong></td>
+<td>Port Up/Down</td>
+<td style="text-align: right;">Down</td>
+<td style="text-align: right;">Down &gt; 5 Min</td>
+<td>30 Sek</td>
+</tr>
+<tr>
+<td><strong>Bandwidth Usage</strong></td>
+<td>Bandbreiten-Auslastung</td>
+<td style="text-align: right;">&gt; 80%</td>
+<td style="text-align: right;">&gt; 95%</td>
+<td>1 Min</td>
+</tr>
+<tr>
+<td><strong>Packet Loss</strong></td>
+<td>Paketverlust</td>
+<td style="text-align: right;">&gt; 1%</td>
+<td style="text-align: right;">&gt; 5%</td>
+<td>1 Min</td>
+</tr>
+<tr>
+<td><strong>Latency</strong></td>
+<td>Netzwerk-Latenz</td>
+<td style="text-align: right;">&gt; 50ms</td>
+<td style="text-align: right;">&gt; 100ms</td>
+<td>1 Min</td>
+</tr>
+<tr>
+<td><strong>Error Rate</strong></td>
+<td>Fehlerrate</td>
+<td style="text-align: right;">&gt; 0.1%</td>
+<td style="text-align: right;">&gt; 1%</td>
+<td>1 Min</td>
+</tr>
+<tr>
+<td><strong>CRC Errors</strong></td>
+<td>CRC-Fehler</td>
+<td style="text-align: right;">&gt; 0</td>
+<td style="text-align: right;">&gt; 100</td>
+<td>5 Min</td>
+</tr>
+</tbody>
+</table>
+<h4 id="uberwachte-netzwerkgerate">Überwachte Netzwerkgeräte</h4>
+<table>
+<thead>
+<tr>
+<th>Gerät</th>
+<th>Typ</th>
+<th>Standort</th>
+<th>Management-IP</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{{ netbox.device.name }}</td>
+<td>{{ netbox.device.device_type }}</td>
+<td>{{ netbox.device.site }}</td>
+<td>{{ netbox.device.primary_ip }}</td>
+<td>☐ Aktiv</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>☐ Aktiv</td>
+</tr>
+</tbody>
+</table>
+<h3 id="storage-monitoring">Storage-Monitoring</h3>
+<h4 id="metriken_2">Metriken</h4>
+<table>
+<thead>
+<tr>
+<th>Metrik</th>
+<th>Beschreibung</th>
+<th style="text-align: right;">Schwellwert Warning</th>
+<th style="text-align: right;">Schwellwert Critical</th>
+<th>Frequenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Capacity</strong></td>
+<td>Speicherkapazität</td>
+<td style="text-align: right;">&gt; 80%</td>
+<td style="text-align: right;">&gt; 90%</td>
+<td>5 Min</td>
+</tr>
+<tr>
+<td><strong>IOPS</strong></td>
+<td>I/O-Operationen</td>
+<td style="text-align: right;">&gt; 80% Max</td>
+<td style="text-align: right;">&gt; 95% Max</td>
+<td>1 Min</td>
+</tr>
+<tr>
+<td><strong>Throughput</strong></td>
+<td>Durchsatz</td>
+<td style="text-align: right;">&gt; 80% Max</td>
+<td style="text-align: right;">&gt; 95% Max</td>
+<td>1 Min</td>
+</tr>
+<tr>
+<td><strong>Latency</strong></td>
+<td>Zugriffszeit</td>
+<td style="text-align: right;">&gt; 20ms</td>
+<td style="text-align: right;">&gt; 50ms</td>
+<td>1 Min</td>
+</tr>
+<tr>
+<td><strong>Disk Health</strong></td>
+<td>Festplatten-Gesundheit</td>
+<td style="text-align: right;">SMART Warning</td>
+<td style="text-align: right;">SMART Error</td>
+<td>1 Stunde</td>
+</tr>
+</tbody>
+</table>
+<h3 id="virtualisierung-monitoring">Virtualisierung-Monitoring</h3>
+<h4 id="hypervisor-metriken">Hypervisor-Metriken</h4>
+<table>
+<thead>
+<tr>
+<th>Metrik</th>
+<th>Beschreibung</th>
+<th style="text-align: right;">Schwellwert Warning</th>
+<th style="text-align: right;">Schwellwert Critical</th>
+<th>Frequenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Host CPU</strong></td>
+<td>CPU-Auslastung Host</td>
+<td style="text-align: right;">&gt; 80%</td>
+<td style="text-align: right;">&gt; 95%</td>
+<td>1 Min</td>
+</tr>
+<tr>
+<td><strong>Host Memory</strong></td>
+<td>RAM-Auslastung Host</td>
+<td style="text-align: right;">&gt; 85%</td>
+<td style="text-align: right;">&gt; 95%</td>
+<td>1 Min</td>
+</tr>
+<tr>
+<td><strong>VM Count</strong></td>
+<td>Anzahl VMs</td>
+<td style="text-align: right;">&gt; 80% Max</td>
+<td style="text-align: right;">&gt; 95% Max</td>
+<td>5 Min</td>
+</tr>
+<tr>
+<td><strong>Datastore Usage</strong></td>
+<td>Datastore-Auslastung</td>
+<td style="text-align: right;">&gt; 80%</td>
+<td style="text-align: right;">&gt; 90%</td>
+<td>5 Min</td>
+</tr>
+<tr>
+<td><strong>VM Performance</strong></td>
+<td>VM-Performance</td>
+<td style="text-align: right;">Degraded</td>
+<td style="text-align: right;">Critical</td>
+<td>1 Min</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="application-monitoring">Application Monitoring</h2>
+<h3 id="application-performance-monitoring-apm">Application Performance Monitoring (APM)</h3>
+<h4 id="metriken_3">Metriken</h4>
+<table>
+<thead>
+<tr>
+<th>Metrik</th>
+<th>Beschreibung</th>
+<th style="text-align: right;">Schwellwert Warning</th>
+<th style="text-align: right;">Schwellwert Critical</th>
+<th>Frequenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Response Time</strong></td>
+<td>Antwortzeit</td>
+<td style="text-align: right;">&gt; 500ms</td>
+<td style="text-align: right;">&gt; 2000ms</td>
+<td>Real-time</td>
+</tr>
+<tr>
+<td><strong>Error Rate</strong></td>
+<td>Fehlerrate</td>
+<td style="text-align: right;">&gt; 1%</td>
+<td style="text-align: right;">&gt; 5%</td>
+<td>Real-time</td>
+</tr>
+<tr>
+<td><strong>Throughput</strong></td>
+<td>Requests/Sekunde</td>
+<td style="text-align: right;">&lt; 80% Normal</td>
+<td style="text-align: right;">&lt; 50% Normal</td>
+<td>Real-time</td>
+</tr>
+<tr>
+<td><strong>Apdex Score</strong></td>
+<td>User Satisfaction</td>
+<td style="text-align: right;">&lt; 0.85</td>
+<td style="text-align: right;">&lt; 0.70</td>
+<td>Real-time</td>
+</tr>
+<tr>
+<td><strong>Database Query Time</strong></td>
+<td>DB-Abfragezeit</td>
+<td style="text-align: right;">&gt; 100ms</td>
+<td style="text-align: right;">&gt; 500ms</td>
+<td>Real-time</td>
+</tr>
+<tr>
+<td><strong>External API Latency</strong></td>
+<td>API-Latenz</td>
+<td style="text-align: right;">&gt; 200ms</td>
+<td style="text-align: right;">&gt; 1000ms</td>
+<td>Real-time</td>
+</tr>
+</tbody>
+</table>
+<h3 id="synthetic-monitoring">Synthetic Monitoring</h3>
+<p><strong>Überwachte Endpunkte:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Endpunkt</th>
+<th>Typ</th>
+<th>Frequenz</th>
+<th>Erwartete Response</th>
+<th>Timeout</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: URL]</td>
+<td>HTTP/HTTPS</td>
+<td>1 Min</td>
+<td>200 OK</td>
+<td>5 Sek</td>
+</tr>
+<tr>
+<td>[TODO: URL]</td>
+<td>API</td>
+<td>1 Min</td>
+<td>200 OK</td>
+<td>3 Sek</td>
+</tr>
+<tr>
+<td>[TODO: URL]</td>
+<td>Health Check</td>
+<td>30 Sek</td>
+<td>200 OK</td>
+<td>2 Sek</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Prüfungen:</strong>
+- HTTP-Status-Code
+- Response-Zeit
+- Content-Validierung
+- SSL-Zertifikat-Gültigkeit
+- DNS-Auflösung</p>
+<hr />
+<h2 id="observability">Observability</h2>
+<h3 id="die-drei-saulen-der-observability">Die drei Säulen der Observability</h3>
+<h4 id="1-metrics-metriken">1. Metrics (Metriken)</h4>
+<p><strong>Definition:</strong> Numerische Werte über Zeit<br />
+<strong>Verwendung:</strong> Trends, Alerts, Dashboards<br />
+<strong>Tools:</strong> Prometheus, Grafana<br />
+<strong>Beispiele:</strong>
+- CPU-Auslastung
+- Request-Rate
+- Error-Rate
+- Response-Time</p>
+<h4 id="2-logs-protokolle">2. Logs (Protokolle)</h4>
+<p><strong>Definition:</strong> Ereignis-basierte Aufzeichnungen<br />
+<strong>Verwendung:</strong> Debugging, Audit, Troubleshooting<br />
+<strong>Tools:</strong> ELK Stack, Splunk<br />
+<strong>Beispiele:</strong>
+- Application-Logs
+- System-Logs
+- Access-Logs
+- Error-Logs</p>
+<h4 id="3-traces-ablaufverfolgung">3. Traces (Ablaufverfolgung)</h4>
+<p><strong>Definition:</strong> Request-Flow durch verteilte Systeme<br />
+<strong>Verwendung:</strong> Performance-Analyse, Bottleneck-Identifikation<br />
+<strong>Tools:</strong> Jaeger, Zipkin<br />
+<strong>Beispiele:</strong>
+- Distributed Tracing
+- Service-Dependencies
+- Latency-Breakdown
+- Error-Propagation</p>
+<h3 id="observability-strategie">Observability-Strategie</h3>
+<div class="codehilite"><pre><span></span><code><span class="err">┌─────────────────────────────────────────────────────────────┐</span>
+<span class="err">│</span><span class="w">                    </span><span class="n">User</span><span class="w"> </span><span class="n">Request</span><span class="w">                              </span><span class="err">│</span>
+<span class="err">└────────────────────┬────────────────────────────────────────┘</span>
+<span class="w">                     </span><span class="err">│</span>
+<span class="w">                     </span><span class="err">▼</span>
+<span class="w">         </span><span class="err">┌───────────────────────┐</span>
+<span class="w">         </span><span class="err">│</span><span class="w">   </span><span class="n">Metrics</span><span class="w"> </span><span class="n">Collection</span><span class="w">  </span><span class="err">│</span><span class="w"> </span><span class="err">──→</span><span class="w"> </span><span class="n">Prometheus</span>
+<span class="w">         </span><span class="err">└───────────────────────┘</span>
+<span class="w">                     </span><span class="err">│</span>
+<span class="w">                     </span><span class="err">▼</span>
+<span class="w">         </span><span class="err">┌───────────────────────┐</span>
+<span class="w">         </span><span class="err">│</span><span class="w">    </span><span class="n">Log</span><span class="w"> </span><span class="n">Aggregation</span><span class="w">    </span><span class="err">│</span><span class="w"> </span><span class="err">──→</span><span class="w"> </span><span class="n">ELK</span><span class="w"> </span><span class="n">Stack</span>
+<span class="w">         </span><span class="err">└───────────────────────┘</span>
+<span class="w">                     </span><span class="err">│</span>
+<span class="w">                     </span><span class="err">▼</span>
+<span class="w">         </span><span class="err">┌───────────────────────┐</span>
+<span class="w">         </span><span class="err">│</span><span class="w">  </span><span class="n">Distributed</span><span class="w"> </span><span class="n">Tracing</span><span class="w">  </span><span class="err">│</span><span class="w"> </span><span class="err">──→</span><span class="w"> </span><span class="n">Jaeger</span>
+<span class="w">         </span><span class="err">└───────────────────────┘</span>
+<span class="w">                     </span><span class="err">│</span>
+<span class="w">                     </span><span class="err">▼</span>
+<span class="w">         </span><span class="err">┌───────────────────────┐</span>
+<span class="w">         </span><span class="err">│</span><span class="w">   </span><span class="n">Correlation</span><span class="w"> </span><span class="o">&amp;</span><span class="w">       </span><span class="err">│</span>
+<span class="w">         </span><span class="err">│</span><span class="w">   </span><span class="n">Visualization</span><span class="w">       </span><span class="err">│</span><span class="w"> </span><span class="err">──→</span><span class="w"> </span><span class="n">Grafana</span>
+<span class="w">         </span><span class="err">└───────────────────────┘</span>
+</code></pre></div>
+
+<hr />
+<h2 id="alerting">Alerting</h2>
+<h3 id="alerting-strategie">Alerting-Strategie</h3>
+<p><strong>Prinzipien:</strong>
+- <strong>Actionable:</strong> Jeder Alert erfordert eine Aktion
+- <strong>Relevant:</strong> Nur kritische Ereignisse alarmieren
+- <strong>Timely:</strong> Alerts in Echtzeit
+- <strong>Clear:</strong> Eindeutige Alert-Beschreibungen
+- <strong>Escalation:</strong> Definierte Eskalationspfade</p>
+<h3 id="alert-severity-levels">Alert-Severity-Levels</h3>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Beschreibung</th>
+<th>Reaktionszeit</th>
+<th>Eskalation</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Critical</strong></td>
+<td>Service-Ausfall</td>
+<td>Sofort</td>
+<td>Sofort</td>
+<td>Service Down</td>
+</tr>
+<tr>
+<td><strong>High</strong></td>
+<td>Schwerwiegendes Problem</td>
+<td>15 Min</td>
+<td>Nach 30 Min</td>
+<td>CPU &gt; 95%</td>
+</tr>
+<tr>
+<td><strong>Medium</strong></td>
+<td>Problem erfordert Aufmerksamkeit</td>
+<td>1 Stunde</td>
+<td>Nach 4 Stunden</td>
+<td>Disk &gt; 85%</td>
+</tr>
+<tr>
+<td><strong>Low</strong></td>
+<td>Informativ, keine sofortige Aktion</td>
+<td>1 Tag</td>
+<td>Keine</td>
+<td>Backup Warning</td>
+</tr>
+<tr>
+<td><strong>Info</strong></td>
+<td>Informativ</td>
+<td>Keine</td>
+<td>Keine</td>
+<td>Backup Success</td>
+</tr>
+</tbody>
+</table>
+<h3 id="alerting-regeln">Alerting-Regeln</h3>
+<h4 id="infrastructure-alerts">Infrastructure Alerts</h4>
+<table>
+<thead>
+<tr>
+<th>Alert</th>
+<th>Bedingung</th>
+<th>Severity</th>
+<th>Aktion</th>
+<th>Verantwortlich</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Server Down</strong></td>
+<td>Ping failed &gt; 5 Min</td>
+<td>Critical</td>
+<td>Sofort prüfen</td>
+<td>Julia Becker</td>
+</tr>
+<tr>
+<td><strong>High CPU</strong></td>
+<td>CPU &gt; 95% für 5 Min</td>
+<td>High</td>
+<td>Performance prüfen</td>
+<td>IT Operations</td>
+</tr>
+<tr>
+<td><strong>High Memory</strong></td>
+<td>Memory &gt; 95% für 5 Min</td>
+<td>High</td>
+<td>Memory-Leak prüfen</td>
+<td>IT Operations</td>
+</tr>
+<tr>
+<td><strong>Disk Full</strong></td>
+<td>Disk &gt; 90%</td>
+<td>High</td>
+<td>Speicher freigeben</td>
+<td>IT Operations</td>
+</tr>
+<tr>
+<td><strong>Disk Warning</strong></td>
+<td>Disk &gt; 80%</td>
+<td>Medium</td>
+<td>Kapazität planen</td>
+<td>IT Operations</td>
+</tr>
+</tbody>
+</table>
+<h4 id="application-alerts">Application Alerts</h4>
+<table>
+<thead>
+<tr>
+<th>Alert</th>
+<th>Bedingung</th>
+<th>Severity</th>
+<th>Aktion</th>
+<th>Verantwortlich</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Service Down</strong></td>
+<td>Health Check failed</td>
+<td>Critical</td>
+<td>Service restart</td>
+<td>Julia Becker</td>
+</tr>
+<tr>
+<td><strong>High Error Rate</strong></td>
+<td>Errors &gt; 5% für 5 Min</td>
+<td>High</td>
+<td>Logs prüfen</td>
+<td>Development Team</td>
+</tr>
+<tr>
+<td><strong>Slow Response</strong></td>
+<td>Response Time &gt; 2s</td>
+<td>High</td>
+<td>Performance prüfen</td>
+<td>Development Team</td>
+</tr>
+<tr>
+<td><strong>API Failure</strong></td>
+<td>External API down</td>
+<td>High</td>
+<td>Vendor kontaktieren</td>
+<td>IT Operations</td>
+</tr>
+</tbody>
+</table>
+<h4 id="network-alerts">Network Alerts</h4>
+<table>
+<thead>
+<tr>
+<th>Alert</th>
+<th>Bedingung</th>
+<th>Severity</th>
+<th>Aktion</th>
+<th>Verantwortlich</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Link Down</strong></td>
+<td>Interface down &gt; 5 Min</td>
+<td>Critical</td>
+<td>Verbindung prüfen</td>
+<td>Network Team</td>
+</tr>
+<tr>
+<td><strong>High Bandwidth</strong></td>
+<td>Bandwidth &gt; 95%</td>
+<td>High</td>
+<td>Traffic analysieren</td>
+<td>Network Team</td>
+</tr>
+<tr>
+<td><strong>High Latency</strong></td>
+<td>Latency &gt; 100ms</td>
+<td>Medium</td>
+<td>Routing prüfen</td>
+<td>Network Team</td>
+</tr>
+<tr>
+<td><strong>Packet Loss</strong></td>
+<td>Loss &gt; 5%</td>
+<td>High</td>
+<td>Verbindung prüfen</td>
+<td>Network Team</td>
+</tr>
+</tbody>
+</table>
+<h3 id="alert-routing">Alert-Routing</h3>
+<div class="codehilite"><pre><span></span><code>┌─────────────────┐
+│  Alert Trigger  │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│ Alert Manager   │
+└────────┬────────┘
+         │
+         ├──────────────┬──────────────┬──────────────┐
+         │              │              │              │
+         ▼              ▼              ▼              ▼
+┌─────────────┐  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐
+│   E-Mail    │  │    Slack    │  │     SMS     │  │  PagerDuty  │
+└─────────────┘  └─────────────┘  └─────────────┘  └─────────────┘
+</code></pre></div>
+
+<h3 id="alert-empfanger">Alert-Empfänger</h3>
+<table>
+<thead>
+<tr>
+<th>Severity</th>
+<th>Primär</th>
+<th>Sekundär</th>
+<th>Eskalation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Critical</strong></td>
+<td>On-Call Engineer</td>
+<td>IT Ops Manager</td>
+<td>CIO</td>
+</tr>
+<tr>
+<td><strong>High</strong></td>
+<td>IT Operations Team</td>
+<td>IT Ops Manager</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Medium</strong></td>
+<td>IT Operations Team</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Low</strong></td>
+<td>E-Mail an Team</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><strong>On-Call-Rotation:</strong>
+- <strong>Woche 1:</strong> [TODO: Name]
+- <strong>Woche 2:</strong> [TODO: Name]
+- <strong>Woche 3:</strong> [TODO: Name]
+- <strong>Woche 4:</strong> [TODO: Name]</p>
+<hr />
+<h2 id="dashboards">Dashboards</h2>
+<h3 id="dashboard-ubersicht">Dashboard-Übersicht</h3>
+<h4 id="executive-dashboard">Executive Dashboard</h4>
+<p><strong>Zielgruppe:</strong> Management<br />
+<strong>Inhalt:</strong>
+- Service-Verfügbarkeit (aktuell und historisch)
+- SLA-Compliance
+- Incident-Übersicht
+- Performance-Trends
+- Kosten-Übersicht</p>
+<p><strong>URL:</strong> [TODO: Dashboard-URL]</p>
+<h4 id="operations-dashboard">Operations Dashboard</h4>
+<p><strong>Zielgruppe:</strong> IT Operations<br />
+<strong>Inhalt:</strong>
+- Aktuelle Alerts
+- System-Health-Status
+- Performance-Metriken
+- Capacity-Trends
+- Incident-Status</p>
+<p><strong>URL:</strong> [TODO: Dashboard-URL]</p>
+<h4 id="application-dashboard">Application Dashboard</h4>
+<p><strong>Zielgruppe:</strong> Development Team<br />
+<strong>Inhalt:</strong>
+- Application-Performance
+- Error-Rates
+- Response-Times
+- Database-Performance
+- API-Latencies</p>
+<p><strong>URL:</strong> [TODO: Dashboard-URL]</p>
+<h4 id="infrastructure-dashboard">Infrastructure Dashboard</h4>
+<p><strong>Zielgruppe:</strong> Infrastructure Team<br />
+<strong>Inhalt:</strong>
+- Server-Status
+- Network-Status
+- Storage-Status
+- Virtualization-Status
+- Environmental-Status</p>
+<p><strong>URL:</strong> [TODO: Dashboard-URL]</p>
+<h3 id="dashboard-best-practices">Dashboard-Best-Practices</h3>
+<ol>
+<li><strong>Single Pane of Glass:</strong> Alle wichtigen Informationen auf einen Blick</li>
+<li><strong>Color Coding:</strong> Rot (Critical), Orange (Warning), Grün (OK)</li>
+<li><strong>Drill-Down:</strong> Von Übersicht zu Details navigieren</li>
+<li><strong>Real-Time:</strong> Aktuelle Daten anzeigen</li>
+<li><strong>Historical:</strong> Trends über Zeit zeigen</li>
+<li><strong>Annotations:</strong> Wichtige Events markieren</li>
+</ol>
+<hr />
+<h2 id="monitoring-prozesse">Monitoring-Prozesse</h2>
+<h3 id="tagliche-monitoring-routinen">Tägliche Monitoring-Routinen</h3>
+<p><strong>Morgen-Check (08:00 Uhr):</strong>
+- [ ] Dashboards prüfen
+- [ ] Offene Alerts reviewen
+- [ ] Overnight-Incidents prüfen
+- [ ] Backup-Status validieren
+- [ ] Performance-Trends analysieren</p>
+<p><strong>Tages-Monitoring:</strong>
+- [ ] Kontinuierliche Alert-Überwachung
+- [ ] Incident-Response bei Alerts
+- [ ] Performance-Optimierung
+- [ ] Kapazitäts-Monitoring</p>
+<p><strong>Abend-Check (18:00 Uhr):</strong>
+- [ ] Tages-Alerts reviewen
+- [ ] Offene Issues dokumentieren
+- [ ] Handover an Nachtschicht (falls 24/7)
+- [ ] Wartungsarbeiten planen</p>
+<h3 id="wochentliche-aktivitaten">Wöchentliche Aktivitäten</h3>
+<ul>
+<li>[ ] Monitoring-Daten analysieren</li>
+<li>[ ] Alert-Tuning durchführen</li>
+<li>[ ] False-Positives reduzieren</li>
+<li>[ ] Dashboard-Updates</li>
+<li>[ ] Kapazitäts-Trends reviewen</li>
+</ul>
+<h3 id="monatliche-aktivitaten">Monatliche Aktivitäten</h3>
+<ul>
+<li>[ ] Monitoring-Coverage prüfen</li>
+<li>[ ] SLA-Reports erstellen</li>
+<li>[ ] Performance-Trends analysieren</li>
+<li>[ ] Monitoring-Tools aktualisieren</li>
+<li>[ ] Alert-Regeln optimieren</li>
+</ul>
+<hr />
+<h2 id="service-level-indicators-slis">Service Level Indicators (SLIs)</h2>
+<h3 id="definierte-slis">Definierte SLIs</h3>
+<table>
+<thead>
+<tr>
+<th>SLI</th>
+<th>Beschreibung</th>
+<th>Messung</th>
+<th>Zielwert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Availability</strong></td>
+<td>Service-Verfügbarkeit</td>
+<td>Uptime / Total Time</td>
+<td>≥ 99.5%</td>
+</tr>
+<tr>
+<td><strong>Latency</strong></td>
+<td>Response-Zeit</td>
+<td>P95 Response Time</td>
+<td>≤ 500ms</td>
+</tr>
+<tr>
+<td><strong>Error Rate</strong></td>
+<td>Fehlerrate</td>
+<td>Errors / Total Requests</td>
+<td>≤ 0.1%</td>
+</tr>
+<tr>
+<td><strong>Throughput</strong></td>
+<td>Durchsatz</td>
+<td>Requests / Second</td>
+<td>≥ [TODO]</td>
+</tr>
+<tr>
+<td><strong>Saturation</strong></td>
+<td>Ressourcen-Auslastung</td>
+<td>CPU/Memory/Disk Usage</td>
+<td>≤ 80%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sli-monitoring">SLI-Monitoring</h3>
+<p><strong>Datenquellen:</strong>
+- Synthetic Monitoring
+- Real User Monitoring (RUM)
+- Application Logs
+- Infrastructure Metrics</p>
+<p><strong>Reporting:</strong>
+- Echtzeit-Dashboards
+- Tägliche Reports
+- Monatliche SLA-Reports</p>
+<hr />
+<h2 id="incident-response">Incident Response</h2>
+<h3 id="monitoring-basierte-incident-response">Monitoring-basierte Incident Response</h3>
+<div class="codehilite"><pre><span></span><code>┌─────────────────┐
+│  Alert Trigger  │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│ Alert Received  │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│ Initial Triage  │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│ Incident Created│
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│ Investigation   │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│   Resolution    │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│ Post-Mortem     │
+└─────────────────┘
+</code></pre></div>
+
+<p><strong>Details:</strong> Siehe Kapitel 0120 (Incident Management)</p>
+<hr />
+<h2 id="monitoring-dokumentation">Monitoring-Dokumentation</h2>
+<h3 id="runbooks">Runbooks</h3>
+<p>Für jeden kritischen Alert existiert ein Runbook:
+- Alert-Beschreibung
+- Mögliche Ursachen
+- Diagnose-Schritte
+- Lösungsschritte
+- Eskalationspfad</p>
+<p><strong>Runbook-Verzeichnis:</strong> Siehe Kapitel 0240 (Runbooks)</p>
+<h3 id="known-issues">Known Issues</h3>
+<p>Bekannte Monitoring-Probleme und Workarounds:
+- False-Positive-Alerts
+- Monitoring-Gaps
+- Tool-Limitierungen</p>
+<p><strong>Known Issues:</strong> Siehe Kapitel 0260 (Bekannte Probleme und FAQ)</p>
+<hr />
+<h2 id="monitoring-tools-zugriff">Monitoring-Tools-Zugriff</h2>
+<h3 id="tool-zugange">Tool-Zugänge</h3>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>URL</th>
+<th>Authentifizierung</th>
+<th>Zugriff</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Monitoring-Tool]</td>
+<td>[TODO: URL]</td>
+<td>SSO</td>
+<td>IT Operations</td>
+</tr>
+<tr>
+<td>[TODO: Dashboard-Tool]</td>
+<td>[TODO: URL]</td>
+<td>SSO</td>
+<td>Alle</td>
+</tr>
+<tr>
+<td>[TODO: Log-Tool]</td>
+<td>[TODO: URL]</td>
+<td>SSO</td>
+<td>IT Operations</td>
+</tr>
+<tr>
+<td>[TODO: APM-Tool]</td>
+<td>[TODO: URL]</td>
+<td>SSO</td>
+<td>Development</td>
+</tr>
+</tbody>
+</table>
+<h3 id="berechtigungen">Berechtigungen</h3>
+<ul>
+<li><strong>Administrator:</strong> Andreas Huemmer</li>
+<li><strong>Operator:</strong> IT Operations Team</li>
+<li><strong>Read-Only:</strong> Management, Auditors</li>
+</ul>
+<hr />
+<h2 id="kontakte">Kontakte</h2>
+<p><strong>Monitoring-Team:</strong>
+- <strong>IT Operations Manager:</strong> Andreas Huemmer - andreas.huemmer@adminsend.de
+- <strong>Service Desk Lead:</strong> Julia Becker - julia.becker@adminsend.de
+- <strong>On-Call Engineer:</strong> [TODO: Rotation] - [TODO: On-Call-Nummer]</p>
+<p><strong>Eskalation:</strong>
+- <strong>Level 2:</strong> Andreas Huemmer - +49 89 12345678-250
+- <strong>Level 3:</strong> Anna Schmidt - +49 89 12345678-200</p>
+<hr />
+<p><strong>Dokumentverantwortlicher:</strong> IT Operations Manager<br />
+<strong>Genehmigt durch:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Organisation:</strong> AdminSend GmbH</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0100_Access_und_Berechtigungsmanagement.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0120_Incident_Management_Runbook.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

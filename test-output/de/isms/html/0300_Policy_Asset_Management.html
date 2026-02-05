@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0300 - Policy: Asset Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0300</div>
+            <h1>Policy: Asset Management</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0290_Richtlinie_Datenklassifizierung_Labeling_und_Handling.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0310_Richtlinie_Asset_Inventory_Tagging_und_Entsorgung.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="policy-asset-management">Policy: Asset Management</h1>
+<p><strong>Dokument-ID:</strong> 0300<br />
+<strong>Dokumenttyp:</strong> Policy (abstrakt)<br />
+<strong>Standard-Referenz:</strong> ISO/IEC 27001:2022 Annex A.5.9-A.5.11 (inkl. Amendment 1:2024)<br />
+<strong>Owner:</strong> Thomas Weber<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Freigegeben<br />
+<strong>Klassifizierung:</strong> Intern<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.date }}<br />
+<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-zweck">1. Zweck</h2>
+<p>Diese Policy definiert die Grundsätze für Asset Management und Inventarverwaltung der <strong>AdminSend GmbH</strong>. Sie stellt sicher, dass alle Informationswerte (Assets) identifiziert, dokumentiert, klassifiziert und über ihren gesamten Lebenszyklus angemessen geschützt werden.</p>
+<h2 id="2-geltungsbereich">2. Geltungsbereich</h2>
+<p>Diese Policy gilt für:</p>
+<ul>
+<li><strong>Organisationseinheiten:</strong> Alle Abteilungen und Standorte der AdminSend GmbH</li>
+<li><strong>Asset-Typen:</strong> Hardware, Software, Daten, Informationen, Dienste, Personen, immaterielle Werte</li>
+<li><strong>Systeme:</strong> Alle IT-Systeme, Netzwerkkomponenten, Endgeräte, Server, Cloud-Ressourcen</li>
+<li><strong>Lebenszyklus:</strong> Beschaffung, Inbetriebnahme, Betrieb, Wartung, Außerbetriebnahme, Entsorgung</li>
+<li><strong>Standorte:</strong> {{ netbox.site.name }} und alle weiteren Betriebsstandorte</li>
+</ul>
+<p><strong>Ausnahmen:</strong> Ausnahmen sind nur über den definierten Ausnahmenprozess (<code>0640_Policy_Ausnahmen_und_Risk_Waivers.md</code>) zulässig.</p>
+<h2 id="3-grundsatze-policy-statements">3. Grundsätze (Policy Statements)</h2>
+<h3 id="31-vollstandiges-asset-inventar">3.1 Vollständiges Asset-Inventar</h3>
+<p>Alle Assets der Organisation werden in einem zentralen Asset-Inventar erfasst und dokumentiert. Das Inventar wird regelmäßig aktualisiert und auf Vollständigkeit überprüft.</p>
+<h3 id="32-asset-owner-assignment">3.2 Asset Owner Assignment</h3>
+<p>Jedes Asset hat einen definierten Asset Owner, der verantwortlich ist für:
+- Klassifizierung des Assets
+- Definition von Schutzanforderungen
+- Genehmigung von Zugriffs- und Nutzungsrechten
+- Lifecycle-Management</p>
+<h3 id="33-asset-klassifizierung-und-tagging">3.3 Asset-Klassifizierung und Tagging</h3>
+<p>Assets werden klassifiziert und mit Metadaten versehen (Tagging):
+- Klassifizierung nach Schutzbedarf (Vertraulichkeit, Integrität, Verfügbarkeit)
+- Technische Tags (Umgebung, Applikation, Kostenstelle)
+- Compliance-Tags (DSGVO, PCI-DSS, etc.)</p>
+<h3 id="34-lifecycle-management">3.4 Lifecycle-Management</h3>
+<p>Assets werden über ihren gesamten Lebenszyklus verwaltet:
+- <strong>Beschaffung:</strong> Sicherheitsanforderungen, Genehmigungsprozess
+- <strong>Inbetriebnahme:</strong> Konfiguration, Härtung, Dokumentation
+- <strong>Betrieb:</strong> Wartung, Patching, Monitoring
+- <strong>Außerbetriebnahme:</strong> Datenlöschung, Dekommissionierung
+- <strong>Entsorgung:</strong> Sichere Vernichtung, Recycling</p>
+<h3 id="35-akzeptable-nutzung">3.5 Akzeptable Nutzung</h3>
+<p>Assets dürfen nur für genehmigte geschäftliche Zwecke genutzt werden. Private Nutzung ist nur im Rahmen der Acceptable Use Policy (<code>0200_Policy_Akzeptable_Nutzung_IT.md</code>) gestattet.</p>
+<h3 id="36-ruckgabe-von-assets">3.6 Rückgabe von Assets</h3>
+<p>Bei Rollenwechsel oder Austritt müssen alle Assets zurückgegeben werden. Der Rückgabeprozess ist Teil des Leaver-Prozesses.</p>
+<h3 id="37-schutz-vor-verlust-und-diebstahl">3.7 Schutz vor Verlust und Diebstahl</h3>
+<p>Assets werden durch geeignete Maßnahmen vor Verlust, Diebstahl und unbefugtem Zugriff geschützt:
+- Physische Sicherheit (Zutrittskontrolle, Alarmanlagen)
+- Verschlüsselung mobiler Geräte
+- Remote-Wipe-Funktionalität
+- Versicherung kritischer Assets</p>
+<h3 id="38-sichere-entsorgung">3.8 Sichere Entsorgung</h3>
+<p>Assets werden am Ende ihres Lebenszyklus sicher entsorgt:
+- Datenlöschung nach anerkannten Standards
+- Physische Zerstörung bei hochsensiblen Daten
+- Umweltgerechtes Recycling
+- Dokumentation der Entsorgung</p>
+<h2 id="4-rollen-und-verantwortlichkeiten">4. Rollen und Verantwortlichkeiten</h2>
+<h3 id="raci-matrix-asset-management">RACI-Matrix: Asset Management</h3>
+<table>
+<thead>
+<tr>
+<th>Aktivität</th>
+<th>CISO</th>
+<th>Asset Owner</th>
+<th>IT-Betrieb</th>
+<th>Procurement</th>
+<th>Facility Management</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Policy-Erstellung</td>
+<td>R/A</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Asset-Inventarisierung</td>
+<td>A</td>
+<td>R</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Asset Owner Assignment</td>
+<td>C</td>
+<td>R/A</td>
+<td>I</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Klassifizierung</td>
+<td>C</td>
+<td>R/A</td>
+<td>I</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Lifecycle-Management</td>
+<td>A</td>
+<td>R</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Sichere Entsorgung</td>
+<td>C</td>
+<td>A</td>
+<td>R</td>
+<td>I</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Monitoring und Audits</td>
+<td>R/A</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legende:</strong> R = Responsible (Durchführung), A = Accountable (Verantwortlich), C = Consulted (Konsultiert), I = Informed (Informiert)</p>
+<h3 id="schlusselrollen">Schlüsselrollen</h3>
+<ul>
+<li><strong>Policy Owner:</strong> Thomas Weber (CISO)</li>
+<li><strong>Asset Owner:</strong> Fachbereichsleiter, Systemverantwortliche</li>
+<li><strong>Asset Manager:</strong> {{ meta.it.asset_manager }}</li>
+<li><strong>Umsetzungsverantwortliche:</strong> IT-Betrieb, Procurement, Facility Management</li>
+<li><strong>Kontroll-/Prüfinstanz:</strong> ISMS, Internal Audit</li>
+</ul>
+<h2 id="5-ableitungen-richtlinienstandardsprozesse">5. Ableitungen (Richtlinien/Standards/Prozesse)</h2>
+<p>Details zur Umsetzung werden in nachgelagerten Dokumenten geregelt:</p>
+<h3 id="zugehorige-richtlinien">Zugehörige Richtlinien</h3>
+<ul>
+<li><strong>0310_Richtlinie_Asset_Inventory_Tagging_und_Entsorgung.md</strong> - Detaillierte Implementierungsrichtlinie</li>
+<li><code>0280_Policy_Datenklassifizierung_und_Informationshandling.md</code> - Data Classification Policy</li>
+<li><code>0200_Policy_Akzeptable_Nutzung_IT.md</code> - Acceptable Use Policy</li>
+<li><code>0480_Policy_Physische_Sicherheit.md</code> - Physical Security Policy</li>
+</ul>
+<h3 id="zugehorige-standardsbaselines">Zugehörige Standards/Baselines</h3>
+<ul>
+<li>Asset-Inventar-Schema (CMDB)</li>
+<li>Tagging-Standards</li>
+<li>Entsorgungsstandards</li>
+<li>Lifecycle-Management-Prozesse</li>
+</ul>
+<h3 id="zugehorige-prozesse">Zugehörige Prozesse</h3>
+<ul>
+<li>Asset-Beschaffungsprozess</li>
+<li>Asset-Onboarding und Konfiguration</li>
+<li>Asset-Rückgabeprozess (Leaver)</li>
+<li>Sichere Entsorgungsprozess</li>
+</ul>
+<h2 id="6-compliance-monitoring-und-durchsetzung">6. Compliance, Monitoring und Durchsetzung</h2>
+<h3 id="messgroen-und-kpis">Messgrößen und KPIs</h3>
+<ul>
+<li>Inventarisierungsrate (Ziel: 100% aller Assets erfasst)</li>
+<li>Anzahl Assets ohne Asset Owner</li>
+<li>Anzahl nicht klassifizierter Assets</li>
+<li>Durchschnittliche Zeit zur Asset-Registrierung</li>
+<li>Anzahl verlorener oder gestohlener Assets</li>
+<li>Compliance-Rate mit Entsorgungsstandards</li>
+</ul>
+<h3 id="nachweise-und-evidence">Nachweise und Evidence</h3>
+<ul>
+<li>Asset-Inventar (CMDB)</li>
+<li>Asset Owner Assignments</li>
+<li>Klassifizierungs-Register</li>
+<li>Entsorgungsnachweise</li>
+<li>Audit-Berichte zu Asset Management</li>
+<li>Versicherungsnachweise</li>
+</ul>
+<h3 id="konsequenzen-bei-verstoen">Konsequenzen bei Verstößen</h3>
+<p>Verstöße gegen diese Policy werden nach den geltenden HR- und Compliance-Prozessen behandelt:
+- <strong>Nicht registrierte Assets:</strong> Nachregistrierung, Nachschulung
+- <strong>Verlust von Assets:</strong> Untersuchung, ggf. Kostenerstattung
+- <strong>Unsachgemäße Entsorgung:</strong> Nachschulung, Disziplinarmaßnahmen
+- <strong>Wiederholte Verstöße:</strong> Arbeitsrechtliche Konsequenzen</p>
+<h2 id="7-ausnahmen">7. Ausnahmen</h2>
+<p>Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:</p>
+<ul>
+<li><strong>Ausnahmenprozess:</strong> Siehe <code>0640_Policy_Ausnahmen_und_Risk_Waivers.md</code></li>
+<li><strong>Genehmigung:</strong> Ausnahmen müssen vom CISO und Asset Owner genehmigt werden</li>
+<li><strong>Dokumentation:</strong> Alle Ausnahmen werden im Risikoregister dokumentiert</li>
+<li><strong>Befristung:</strong> Ausnahmen sind grundsätzlich zeitlich befristet</li>
+</ul>
+<h2 id="8-referenzen">8. Referenzen</h2>
+<h3 id="interne-dokumente">Interne Dokumente</h3>
+<ul>
+<li><code>0010_ISMS_Informationssicherheitsleitlinie.md</code> - ISMS Policy</li>
+<li><code>0310_Richtlinie_Asset_Inventory_Tagging_und_Entsorgung.md</code> - Detailed Guideline</li>
+<li><code>0720_Anhang_Asset_und_Systeminventar_Template.md</code> - Asset Inventory Template</li>
+<li><code>0080_ISMS_Risikoregister_Template.md</code> - Risk Register</li>
+</ul>
+<h3 id="externe-standards-und-vorgaben">Externe Standards und Vorgaben</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.9</strong> - Inventory of information and other associated assets</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.10</strong> - Acceptable use of information and other associated assets</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.11</strong> - Return of assets</li>
+<li><strong>ISO/IEC 27002:2022</strong> - Information security controls</li>
+<li><strong>ITIL 4</strong> - IT Asset Management</li>
+<li><strong>ISO/IEC 19770</strong> - IT Asset Management</li>
+</ul>
+<hr />
+<p><strong>Genehmigt durch:</strong><br />
+{{ meta.management.ceo }}, Geschäftsführung<br />
+Datum: {{ meta.document.approval_date }}</p>
+<p><strong>Nächster Review:</strong> {{ meta.document.next_review }} (jährlich oder anlassbezogen)</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0290_Richtlinie_Datenklassifizierung_Labeling_und_Handling.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0310_Richtlinie_Asset_Inventory_Tagging_und_Entsorgung.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -284,9 +284,28 @@ python -m src.cli --language de --template my-service --output-format both
 
 ### Ausgabeformate
 
-- `--output-format markdown` - Nur Markdown-Dateien
-- `--output-format pdf` - Nur PDF-Dateien
-- `--output-format both` - Markdown und PDF
+Das System unterstützt mehrere Ausgabeformate:
+
+- **Markdown (kombiniert):** Einzelne .md-Datei mit allen Kapiteln
+- **Markdown (separate Dateien):** Separate .md-Dateien für jedes Kapitel mit TOC.md (mit `--separate-files`)
+- **PDF (Standard):** Vollständiges Handbuch als PDF
+- **PDF (mit TOC):** PDF mit Inhaltsverzeichnis und Seitenumbrüchen zwischen Kapiteln (mit `--pdf-toc`)
+- **HTML:** Mini-Website mit Navigation zwischen Seiten
+
+**Beispiele:**
+
+```bash
+# Separate Markdown-Dateien generieren
+python -m src.cli --language de --template it-operation --test --separate-files
+
+# PDF mit Inhaltsverzeichnis generieren
+python -m src.cli --language de --template it-operation --output pdf --test --pdf-toc
+
+# Alle Formate mit allen Features
+python -m src.cli --language de --template it-operation --output all --test --separate-files --pdf-toc
+```
+
+Weitere Details zu allen Ausgabeformaten finden Sie in der [OUTPUT_FORMATS_GUIDE.md](../../../docs/OUTPUT_FORMATS_GUIDE.md).
 
 ## Konfiguration
 

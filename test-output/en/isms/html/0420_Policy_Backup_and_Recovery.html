@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0420 - Policy: Backup and Recovery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0420</div>
+            <h1>Policy: Backup and Recovery</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0410_Guideline_Incident_Response_and_Major_Incident_Process.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0430_Guideline_Backup_Restore_and_Regular_Tests.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="policy-backup-and-recovery">Policy: Backup and Recovery</h1>
+<p><strong>Document ID:</strong> 0420<br />
+<strong>Document Type:</strong> Policy (abstract)<br />
+<strong>Standard Reference:</strong> ISO/IEC 27001:2022 Annex A.8.13 (incl. Amendment 1:2024)<br />
+<strong>Owner:</strong> Thomas Weber<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Approved<br />
+<strong>Classification:</strong> Internal<br />
+<strong>Last Updated:</strong> {{ meta.document.date }}<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This policy defines the principles for backup and recovery at <strong>AdminSend GmbH</strong>. It ensures that critical data and systems can be restored in case of data loss, corruption, or disasters.</p>
+<h2 id="2-scope">2. Scope</h2>
+<p>This policy applies to:</p>
+<ul>
+<li><strong>Organizational Units:</strong> All departments and locations of AdminSend GmbH</li>
+<li><strong>Systems:</strong> All IT systems, databases, applications, file systems, VMs, cloud resources</li>
+<li><strong>Data:</strong> All business-critical and personal data</li>
+<li><strong>Backup Types:</strong> Full, incremental, differential, snapshot, cloud backup</li>
+<li><strong>Locations:</strong> {{ netbox.site.name }} and all other operational sites</li>
+</ul>
+<p><strong>Exceptions:</strong> Exceptions are only permitted through the defined exception process (<code>0640_Policy_Exceptions_and_Risk_Waivers.md</code>).</p>
+<h2 id="3-principles-policy-statements">3. Principles (Policy Statements)</h2>
+<h3 id="31-backup-strategy-based-on-rporto">3.1 Backup Strategy Based on RPO/RTO</h3>
+<p>Backup strategies are defined based on Recovery Point Objective (RPO) and Recovery Time Objective (RTO):
+- <strong>Critical Systems:</strong> RPO &lt; 1 hour, RTO &lt; 4 hours
+- <strong>Important Systems:</strong> RPO &lt; 24 hours, RTO &lt; 24 hours
+- <strong>Standard Systems:</strong> RPO &lt; 7 days, RTO &lt; 72 hours</p>
+<h3 id="32-3-2-1-backup-rule">3.2 3-2-1 Backup Rule</h3>
+<p>Backups follow the 3-2-1 rule:
+- <strong>3</strong> copies of data (original + 2 backups)
+- <strong>2</strong> different storage media/technologies
+- <strong>1</strong> copy offsite/offline (air-gapped or geographically separated)</p>
+<h3 id="33-encrypted-backups">3.3 Encrypted Backups</h3>
+<p>All backups are stored encrypted (at rest) and transmitted encrypted (in transit). Encryption keys are securely managed and stored separately from backups.</p>
+<h3 id="34-regular-backup-tests">3.4 Regular Backup Tests</h3>
+<p>Backups are regularly tested to ensure recoverability:
+- <strong>Critical Systems:</strong> Monthly restore tests
+- <strong>Important Systems:</strong> Quarterly restore tests
+- <strong>Standard Systems:</strong> Annual restore tests</p>
+<h3 id="35-immutable-backups">3.5 Immutable Backups</h3>
+<p>Critical backups are stored as immutable to provide protection against ransomware and accidental deletion.</p>
+<h3 id="36-backup-monitoring-and-alerting">3.6 Backup Monitoring and Alerting</h3>
+<p>Backup jobs are continuously monitored. Failed backups trigger immediate alerts and are prioritized for remediation.</p>
+<h3 id="37-retention-and-preservation">3.7 Retention and Preservation</h3>
+<p>Backups are retained according to legal, regulatory, and business requirements:
+- <strong>Daily Backups:</strong> 30 days
+- <strong>Weekly Backups:</strong> 12 weeks
+- <strong>Monthly Backups:</strong> 12 months
+- <strong>Annual Backups:</strong> 7 years (or per compliance requirements)</p>
+<h3 id="38-disaster-recovery-integration">3.8 Disaster Recovery Integration</h3>
+<p>Backup strategies are integrated into disaster recovery and business continuity plans.</p>
+<h2 id="4-roles-and-responsibilities">4. Roles and Responsibilities</h2>
+<h3 id="raci-matrix-backup-and-recovery">RACI Matrix: Backup and Recovery</h3>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>CISO</th>
+<th>Backup Administrator</th>
+<th>IT Operations</th>
+<th>System Owner</th>
+<th>BCM Manager</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Policy creation</td>
+<td>R/A</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Backup configuration</td>
+<td>C</td>
+<td>R/A</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Backup execution</td>
+<td>I</td>
+<td>R/A</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Backup monitoring</td>
+<td>C</td>
+<td>R/A</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Restore tests</td>
+<td>C</td>
+<td>R</td>
+<td>R</td>
+<td>R/A</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Disaster recovery</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Compliance review</td>
+<td>R/A</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+<td>C</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legend:</strong> R = Responsible (Execution), A = Accountable (Ownership), C = Consulted, I = Informed</p>
+<h3 id="key-roles">Key Roles</h3>
+<ul>
+<li><strong>Policy Owner:</strong> Thomas Weber (CISO)</li>
+<li><strong>Backup Administrator:</strong> {{ meta.it.backup_admin }}</li>
+<li><strong>BCM Manager:</strong> {{ meta.bcm.manager }}</li>
+<li><strong>Implementation Responsible:</strong> IT Operations, System Owners</li>
+<li><strong>Control/Audit Function:</strong> ISMS, Internal Audit</li>
+</ul>
+<h2 id="5-derivations-guidelinesstandardsprocesses">5. Derivations (Guidelines/Standards/Processes)</h2>
+<p>Implementation details are defined in subordinate documents:</p>
+<h3 id="related-guidelines">Related Guidelines</h3>
+<ul>
+<li><strong>0430_Guideline_Backup_Restore_and_Regular_Tests.md</strong> - Detailed implementation guideline</li>
+<li><code>0440_Policy_Business_Continuity_ICT_Readiness.md</code> - Business Continuity Policy</li>
+<li><code>0260_Policy_Cryptography_and_Key_Management.md</code> - Cryptography Policy</li>
+<li><code>0580_Policy_Retention_and_Deletion.md</code> - Retention Policy</li>
+</ul>
+<h3 id="related-standardsbaselines">Related Standards/Baselines</h3>
+<ul>
+<li>RPO/RTO matrix</li>
+<li>Backup schedule</li>
+<li>Retention requirements</li>
+<li>Restore test procedures</li>
+</ul>
+<h3 id="related-processes">Related Processes</h3>
+<ul>
+<li>Backup process</li>
+<li>Restore process</li>
+<li>Backup test process</li>
+<li>Disaster recovery process</li>
+</ul>
+<h2 id="6-compliance-monitoring-and-enforcement">6. Compliance, Monitoring and Enforcement</h2>
+<h3 id="metrics-and-kpis">Metrics and KPIs</h3>
+<ul>
+<li>Backup success rate (target: 99.9%)</li>
+<li>Number of failed backups</li>
+<li>Average backup duration</li>
+<li>Restore success rate (target: 100%)</li>
+<li>Average restore duration (RTO compliance)</li>
+<li>Backup test completion rate (target: 100%)</li>
+</ul>
+<h3 id="evidence-and-proof">Evidence and Proof</h3>
+<ul>
+<li>Backup logs and job status</li>
+<li>Restore test protocols</li>
+<li>Backup monitoring reports</li>
+<li>Disaster recovery test reports</li>
+<li>Compliance evidence (retention)</li>
+<li>Backup compliance audit reports</li>
+</ul>
+<h3 id="consequences-of-violations">Consequences of Violations</h3>
+<p>Violations of this policy are handled according to applicable HR and compliance processes:
+- <strong>Missing backups:</strong> Immediate remediation, investigation
+- <strong>Untested backups:</strong> Completion, retraining
+- <strong>Unencrypted backups:</strong> Immediate encryption, investigation
+- <strong>Repeated violations:</strong> Employment consequences</p>
+<h2 id="7-exceptions">7. Exceptions</h2>
+<p>Exceptions to this policy are only permitted in justified cases:</p>
+<ul>
+<li><strong>Exception Process:</strong> See <code>0640_Policy_Exceptions_and_Risk_Waivers.md</code></li>
+<li><strong>Approval:</strong> Exceptions must be approved by CISO and System Owner</li>
+<li><strong>Documentation:</strong> All exceptions are documented in the risk register</li>
+<li><strong>Time Limitation:</strong> Exceptions are generally time-limited</li>
+<li><strong>Compensating Controls:</strong> Exceptions require alternative security measures</li>
+</ul>
+<h2 id="8-references">8. References</h2>
+<h3 id="internal-documents">Internal Documents</h3>
+<ul>
+<li><code>0010_ISMS_Information_Security_Policy.md</code> - ISMS Policy</li>
+<li><code>0430_Guideline_Backup_Restore_and_Regular_Tests.md</code> - Detailed Guideline</li>
+<li><code>0440_Policy_Business_Continuity_ICT_Readiness.md</code> - Business Continuity Policy</li>
+<li><code>0080_ISMS_Risk_Register_Template.md</code> - Risk Register</li>
+</ul>
+<h3 id="external-standards-and-requirements">External Standards and Requirements</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.8.13</strong> - Information backup</li>
+<li><strong>ISO/IEC 27002:2022</strong> - Information security controls</li>
+<li><strong>ISO 22301</strong> - Business Continuity Management</li>
+<li><strong>GDPR (EU 2016/679)</strong> - General Data Protection Regulation (backup of personal data)</li>
+</ul>
+<hr />
+<p><strong>Approved by:</strong><br />
+{{ meta.management.ceo }}, Management<br />
+Date: {{ meta.document.approval_date }}</p>
+<p><strong>Next Review:</strong> {{ meta.document.next_review }} (annually or as needed)</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0410_Guideline_Incident_Response_and_Major_Incident_Process.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0430_Guideline_Backup_Restore_and_Regular_Tests.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

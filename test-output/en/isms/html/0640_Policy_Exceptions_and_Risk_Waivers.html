@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0640 - Policy: Exceptions and Risk Waivers</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0640</div>
+            <h1>Policy: Exceptions and Risk Waivers</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0630_Guideline_EDR_AV_Host_Firewall_and_Device_Compliance.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0650_Guideline_Exception_Process.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="policy-exceptions-and-risk-waivers">Policy: Exceptions and Risk Waivers</h1>
+<p><strong>Document ID:</strong> 0640<br />
+<strong>Document Type:</strong> Policy (abstract)<br />
+<strong>Standard Reference:</strong> ISO/IEC 27001:2022 Annex A.5.1, A.6.1.2 (incl. Amendment 1:2024)<br />
+<strong>Owner:</strong> Thomas Weber<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Approved<br />
+<strong>Classification:</strong> Internal<br />
+<strong>Last Updated:</strong> {{ meta.document.date }}<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This policy defines the process for exceptions and risk waivers from security policies of <strong>AdminSend GmbH</strong>. It ensures that exceptions are appropriately justified, approved, documented, and monitored.</p>
+<h2 id="2-scope">2. Scope</h2>
+<p>This policy applies to:</p>
+<ul>
+<li><strong>Organizational Units:</strong> All departments and locations of AdminSend GmbH</li>
+<li><strong>Policies:</strong> All security policies and standards</li>
+<li><strong>Systems:</strong> All IT systems and applications</li>
+<li><strong>Processes:</strong> All security-relevant processes</li>
+<li><strong>Locations:</strong> {{ netbox.site.name }} and all other operational sites</li>
+</ul>
+<p><strong>Exceptions:</strong> This policy itself is not subject to an exception process.</p>
+<h2 id="3-policy-statements">3. Policy Statements</h2>
+<h3 id="31-exceptions-as-exception">3.1 Exceptions as Exception</h3>
+<p>Exceptions to security policies are the exception, not the rule. Policies must generally be complied with.</p>
+<h3 id="32-formal-exception-process">3.2 Formal Exception Process</h3>
+<p>Exceptions must be requested through a formal process. Informal or verbal exceptions are not permitted.</p>
+<h3 id="33-justification-requirement">3.3 Justification Requirement</h3>
+<p>Every exception must be justified:
+- Business necessity
+- Technical impossibility
+- Disproportionate effort
+- Time limitation</p>
+<h3 id="34-risk-assessment">3.4 Risk Assessment</h3>
+<p>A risk assessment is conducted for every exception. Risks are identified, evaluated, and documented.</p>
+<h3 id="35-compensating-controls">3.5 Compensating Controls</h3>
+<p>Exceptions require compensating controls. Compensating controls reduce residual risk to an acceptable level.</p>
+<h3 id="36-approval-requirement">3.6 Approval Requirement</h3>
+<p>Exceptions must be approved by authorized persons:
+- <strong>Low Risk:</strong> CISO or deputy
+- <strong>Medium Risk:</strong> CISO + Business Owner
+- <strong>High Risk:</strong> CISO + CIO + Management</p>
+<h3 id="37-time-limitation">3.7 Time Limitation</h3>
+<p>Exceptions are generally time-limited. Maximum duration: 12 months. Extensions require renewed approval.</p>
+<h3 id="38-documentation">3.8 Documentation</h3>
+<p>All exceptions are centrally documented (exception register). Documentation includes:
+- Requester and date
+- Affected policy/standard
+- Justification
+- Risk assessment
+- Compensating controls
+- Approver and date
+- Duration and review date</p>
+<h3 id="39-monitoring-and-review">3.9 Monitoring and Review</h3>
+<p>Exceptions are reviewed regularly (at least quarterly). Exceptions no longer needed are withdrawn.</p>
+<h2 id="4-roles-and-responsibilities">4. Roles and Responsibilities</h2>
+<h3 id="raci-matrix-exceptions-and-risk-waivers">RACI Matrix: Exceptions and Risk Waivers</h3>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>CISO</th>
+<th>CIO</th>
+<th>Business Owner</th>
+<th>Risk Manager</th>
+<th>ISMS Team</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Policy Creation</td>
+<td>R/A</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Exception Request</td>
+<td>I</td>
+<td>I</td>
+<td>R</td>
+<td>I</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Risk Assessment</td>
+<td>R/A</td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Compensating Controls</td>
+<td>R/A</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Approval (Low)</td>
+<td>R/A</td>
+<td>I</td>
+<td>I</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Approval (Medium)</td>
+<td>R/A</td>
+<td>I</td>
+<td>R/A</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Approval (High)</td>
+<td>R/A</td>
+<td>R/A</td>
+<td>R/A</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Exception Register</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+<td>C</td>
+<td>R/A</td>
+</tr>
+<tr>
+<td>Monitoring &amp; Review</td>
+<td>R/A</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legend:</strong> R = Responsible (Execution), A = Accountable (Ownership), C = Consulted, I = Informed</p>
+<h3 id="key-roles">Key Roles</h3>
+<ul>
+<li><strong>Policy Owner:</strong> Thomas Weber (CISO)</li>
+<li><strong>CIO:</strong> Anna Schmidt</li>
+<li><strong>Risk Manager:</strong> {{ meta.risk.manager }}</li>
+<li><strong>ISMS Team:</strong> {{ meta.isms.team }}</li>
+<li><strong>Requester:</strong> Business Owner, IT Operations</li>
+<li><strong>Control/Audit Function:</strong> ISMS, Internal Audit</li>
+</ul>
+<h2 id="5-derived-documents-guidelinesstandardsprocesses">5. Derived Documents (Guidelines/Standards/Processes)</h2>
+<p>Implementation details are defined in subordinate documents:</p>
+<h3 id="related-guidelines">Related Guidelines</h3>
+<ul>
+<li><strong>0650_Guideline_Exception_Process.md</strong> - Detailed implementation guideline</li>
+<li><code>0060_ISMS_Risk_Management_Methodology.md</code> - Risk Management Methodology</li>
+<li><code>0080_ISMS_Risk_Register_Template.md</code> - Risk Register</li>
+</ul>
+<h3 id="related-standardsbaselines">Related Standards/Baselines</h3>
+<ul>
+<li>Exception Request Template</li>
+<li>Risk Assessment Template</li>
+<li>Compensating Controls Catalog</li>
+<li>Exception Register</li>
+</ul>
+<h3 id="related-processes">Related Processes</h3>
+<ul>
+<li>Exception Request Process</li>
+<li>Risk Assessment Process</li>
+<li>Approval Process</li>
+<li>Monitoring and Review Process</li>
+</ul>
+<h2 id="6-compliance-monitoring-and-enforcement">6. Compliance, Monitoring and Enforcement</h2>
+<h3 id="metrics-and-kpis">Metrics and KPIs</h3>
+<ul>
+<li>Number of active exceptions</li>
+<li>Average duration of exceptions</li>
+<li>Number of expired exceptions (Target: 0)</li>
+<li>Number of extended exceptions</li>
+<li>Exceptions by risk category (Low/Medium/High)</li>
+<li>Review compliance (Target: 100% quarterly)</li>
+<li>Number of withdrawn exceptions</li>
+</ul>
+<h3 id="evidence-and-proof">Evidence and Proof</h3>
+<ul>
+<li>Exception Register</li>
+<li>Exception requests and approvals</li>
+<li>Risk assessments</li>
+<li>Compensating controls documentation</li>
+<li>Review protocols</li>
+<li>Audit logs for exceptions</li>
+</ul>
+<h3 id="consequences-of-violations">Consequences of Violations</h3>
+<p>Violations of this policy are handled according to applicable HR and compliance processes:
+- <strong>Unapproved Exceptions:</strong> Immediate compliance establishment or system shutdown
+- <strong>Missing Documentation:</strong> Remediation, compliance investigation
+- <strong>Expired Exceptions:</strong> Immediate compliance establishment or extension request
+- <strong>Repeated Violations:</strong> Employment consequences, escalation to management</p>
+<h2 id="7-exceptions">7. Exceptions</h2>
+<p>This policy itself is not subject to an exception process. Changes to this policy require management approval.</p>
+<h2 id="8-references">8. References</h2>
+<h3 id="internal-documents">Internal Documents</h3>
+<ul>
+<li><code>0010_ISMS_Information_Security_Policy.md</code> - ISMS Policy</li>
+<li><code>0650_Guideline_Exception_Process.md</code> - Detailed Guideline</li>
+<li><code>0060_ISMS_Risk_Management_Methodology.md</code> - Risk Management Methodology</li>
+<li><code>0080_ISMS_Risk_Register_Template.md</code> - Risk Register</li>
+</ul>
+<h3 id="external-standards-and-regulations">External Standards and Regulations</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.1</strong> - Policies for information security</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.6.1.2</strong> - Segregation of duties</li>
+<li><strong>ISO/IEC 27005</strong> - Information security risk management</li>
+<li><strong>NIST SP 800-37</strong> - Risk Management Framework</li>
+<li><strong>COBIT 2019</strong> - APO12 (Managed Risk)</li>
+</ul>
+<hr />
+<p><strong>Approved by:</strong><br />
+{{ meta.management.ceo }}, Executive Management<br />
+Date: {{ meta.document.approval_date }}</p>
+<p><strong>Next Review:</strong> {{ meta.document.next_review }} (annually or as needed)</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0630_Guideline_EDR_AV_Host_Firewall_and_Device_Compliance.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0650_Guideline_Exception_Process.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

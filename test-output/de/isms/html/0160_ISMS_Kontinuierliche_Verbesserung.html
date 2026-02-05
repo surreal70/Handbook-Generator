@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0160 - Kontinuierliche Verbesserung (KVP) im ISMS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0160</div>
+            <h1>Kontinuierliche Verbesserung (KVP) im ISMS</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0150_ISMS_Nichtkonformitaeten_und_Korrekturmassnahmen.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0200_Policy_Akzeptable_Nutzung_IT.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="kontinuierliche-verbesserung-kvp-im-isms">Kontinuierliche Verbesserung (KVP) im ISMS</h1>
+<p><strong>Dokument-ID:</strong> 0160<br />
+<strong>Dokumenttyp:</strong> ISMS-Grundlagendokument<br />
+<strong>Standard-Referenz:</strong> ISO/IEC 27001:2022 Clause 10.2<br />
+<strong>Owner:</strong> Thomas Weber<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Freigegeben<br />
+<strong>Klassifizierung:</strong> Intern<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.date }}<br />
+<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-zweck-und-ziele">1. Zweck und Ziele</h2>
+<h3 id="11-zweck">1.1 Zweck</h3>
+<p>Das Programm zur kontinuierlichen Verbesserung (KVP) der <strong>AdminSend GmbH</strong> stellt sicher, dass:
+- Das ISMS kontinuierlich verbessert wird
+- Verbesserungspotenziale systematisch identifiziert werden
+- Verbesserungsmaßnahmen priorisiert und umgesetzt werden
+- Die Eignung, Angemessenheit und Wirksamkeit des ISMS erhalten bleibt</p>
+<h3 id="12-ziele">1.2 Ziele</h3>
+<ul>
+<li><strong>Kontinuierliche Verbesserung:</strong> Mindestens 10 Verbesserungsmaßnahmen pro Jahr</li>
+<li><strong>Lessons Learned:</strong> Systematische Auswertung aller Incidents und Audits</li>
+<li><strong>Innovation:</strong> Einsatz neuer Technologien und Best Practices</li>
+<li><strong>Effizienz:</strong> Optimierung von Prozessen und Controls</li>
+</ul>
+<h3 id="13-pdca-zyklus">1.3 PDCA-Zyklus</h3>
+<p>Das ISMS folgt dem PDCA-Zyklus (Plan-Do-Check-Act):</p>
+<div class="codehilite"><pre><span></span><code><span class="err">┌─────────────────────────────────────────────────────────┐</span>
+<span class="err">│</span><span class="w">                    </span><span class="nx">PDCA</span><span class="o">-</span><span class="nx">Zyklus</span><span class="w">                           </span><span class="err">│</span>
+<span class="err">└─────────────────────────────────────────────────────────┘</span>
+
+<span class="w">    </span><span class="nx">Plan</span><span class="w"> </span><span class="p">(</span><span class="nx">Planen</span><span class="p">)</span>
+<span class="w">    </span><span class="err">├─</span><span class="w"> </span><span class="nx">Ziele</span><span class="w"> </span><span class="nx">setzen</span>
+<span class="w">    </span><span class="err">├─</span><span class="w"> </span><span class="nx">Risiken</span><span class="w"> </span><span class="nx">analysieren</span>
+<span class="w">    </span><span class="err">├─</span><span class="w"> </span><span class="nx">Maßnahmen</span><span class="w"> </span><span class="nx">planen</span>
+<span class="w">    </span><span class="err">└─</span><span class="w"> </span><span class="nx">Ressourcen</span><span class="w"> </span><span class="nx">zuweisen</span>
+<span class="w">         </span><span class="err">│</span>
+<span class="w">         </span><span class="err">▼</span>
+<span class="w">    </span><span class="nx">Do</span><span class="w"> </span><span class="p">(</span><span class="nx">Umsetzen</span><span class="p">)</span>
+<span class="w">    </span><span class="err">├─</span><span class="w"> </span><span class="nx">Maßnahmen</span><span class="w"> </span><span class="nx">implementieren</span>
+<span class="w">    </span><span class="err">├─</span><span class="w"> </span><span class="nx">Schulungen</span><span class="w"> </span><span class="nx">durchführen</span>
+<span class="w">    </span><span class="err">├─</span><span class="w"> </span><span class="nx">Controls</span><span class="w"> </span><span class="nx">betreiben</span>
+<span class="w">    </span><span class="err">└─</span><span class="w"> </span><span class="nx">Dokumentieren</span>
+<span class="w">         </span><span class="err">│</span>
+<span class="w">         </span><span class="err">▼</span>
+<span class="w">    </span><span class="nx">Check</span><span class="w"> </span><span class="p">(</span><span class="nx">Überprüfen</span><span class="p">)</span>
+<span class="w">    </span><span class="err">├─</span><span class="w"> </span><span class="nx">Monitoring</span>
+<span class="w">    </span><span class="err">├─</span><span class="w"> </span><span class="nx">Audits</span>
+<span class="w">    </span><span class="err">├─</span><span class="w"> </span><span class="nx">Reviews</span>
+<span class="w">    </span><span class="err">└─</span><span class="w"> </span><span class="nx">KPIs</span><span class="w"> </span><span class="nx">messen</span>
+<span class="w">         </span><span class="err">│</span>
+<span class="w">         </span><span class="err">▼</span>
+<span class="w">    </span><span class="nx">Act</span><span class="w"> </span><span class="p">(</span><span class="nx">Handeln</span><span class="p">)</span>
+<span class="w">    </span><span class="err">├─</span><span class="w"> </span><span class="nx">Nichtkonformitäten</span><span class="w"> </span><span class="nx">beheben</span>
+<span class="w">    </span><span class="err">├─</span><span class="w"> </span><span class="nx">Verbesserungen</span><span class="w"> </span><span class="nx">umsetzen</span>
+<span class="w">    </span><span class="err">├─</span><span class="w"> </span><span class="nx">Lessons</span><span class="w"> </span><span class="nx">Learned</span>
+<span class="w">    </span><span class="err">└─</span><span class="w"> </span><span class="nx">Anpassungen</span><span class="w"> </span><span class="nx">vornehmen</span>
+<span class="w">         </span><span class="err">│</span>
+<span class="w">         </span><span class="err">└──────────┐</span>
+<span class="w">                    </span><span class="err">│</span>
+<span class="w">                    </span><span class="err">▼</span>
+<span class="w">         </span><span class="nx">Zurück</span><span class="w"> </span><span class="nx">zu</span><span class="w"> </span><span class="nx">Plan</span><span class="w"> </span><span class="p">(</span><span class="nx">Kontinuierlicher</span><span class="w"> </span><span class="nx">Zyklus</span><span class="p">)</span>
+</code></pre></div>
+
+<h2 id="2-quellen-fur-verbesserungen">2. Quellen für Verbesserungen</h2>
+<h3 id="21-audits-und-findings">2.1 Audits und Findings</h3>
+<p><strong>Interne Audits:</strong>
+- Audit-Findings (Major/Minor/Observations)
+- Opportunities for Improvement
+- Best Practices aus anderen Bereichen</p>
+<p><strong>Externe Audits:</strong>
+- Zertifizierungsaudits
+- Kundenaudits
+- Regulatorische Audits</p>
+<p><strong>Siehe:</strong> <code>0130_ISMS_Internes_Auditprogramm.md</code></p>
+<h3 id="22-incidents-und-postmortems">2.2 Incidents und Postmortems</h3>
+<p><strong>Security Incidents:</strong>
+- Root Cause Analysis
+- Lessons Learned
+- Präventivmaßnahmen</p>
+<p><strong>Near Misses:</strong>
+- Beinahe-Vorfälle
+- Frühwarnindikatoren
+- Proaktive Maßnahmen</p>
+<p><strong>Siehe:</strong> <code>0400_Policy_Incident_Management.md</code></p>
+<h3 id="23-risikobewertungen">2.3 Risikobewertungen</h3>
+<p><strong>Risikoanalyse:</strong>
+- Neue Risiken
+- Geänderte Risikobewertungen
+- Emerging Threats</p>
+<p><strong>Risikobehandlung:</strong>
+- Wirksamkeit von Maßnahmen
+- Neue Behandlungsoptionen
+- Optimierungspotenziale</p>
+<p><strong>Siehe:</strong> <code>0080_ISMS_Risikoregister_Template.md</code></p>
+<h3 id="24-kpis-und-monitoring">2.4 KPIs und Monitoring</h3>
+<p><strong>Performance-Metriken:</strong>
+- KPI-Trends
+- Abweichungen von Zielwerten
+- Benchmarking</p>
+<p><strong>Monitoring-Daten:</strong>
+- SIEM-Alerts
+- Vulnerability Scans
+- Log-Analysen</p>
+<p><strong>Siehe:</strong> <code>0110_ISMS_Sicherheitsziele_und_Metriken.md</code></p>
+<h3 id="25-anderungen-im-kontext">2.5 Änderungen im Kontext</h3>
+<p><strong>Externe Änderungen:</strong>
+- Neue Bedrohungen
+- Neue Technologien
+- Neue Regulierungen
+- Branchentrends</p>
+<p><strong>Interne Änderungen:</strong>
+- Organisatorische Änderungen
+- Neue Systeme/Prozesse
+- Strategische Ausrichtung</p>
+<p><strong>Siehe:</strong> <code>0030_ISMS_Kontext_und_Interessierte_Parteien.md</code></p>
+<h3 id="26-stakeholder-feedback">2.6 Stakeholder-Feedback</h3>
+<p><strong>Kunden:</strong>
+- Sicherheitsanforderungen
+- Zufriedenheitsumfragen
+- Beschwerden</p>
+<p><strong>Mitarbeiter:</strong>
+- Feedback zu Prozessen
+- Verbesserungsvorschläge
+- Usability-Probleme</p>
+<p><strong>Management:</strong>
+- Strategische Vorgaben
+- Ressourcen-Entscheidungen</p>
+<h3 id="27-best-practices-und-innovation">2.7 Best Practices und Innovation</h3>
+<p><strong>Externe Quellen:</strong>
+- Branchenstandards (NIST, CIS, etc.)
+- Security-Konferenzen
+- Threat Intelligence
+- Peer-Austausch</p>
+<p><strong>Interne Innovation:</strong>
+- Proof of Concepts
+- Pilotprojekte
+- Technologie-Evaluierungen</p>
+<h2 id="3-kvp-backlog">3. KVP-Backlog</h2>
+<h3 id="31-verbesserungsvorschlage">3.1 Verbesserungsvorschläge</h3>
+<table>
+<thead>
+<tr>
+<th>Item-ID</th>
+<th>Titel</th>
+<th>Quelle</th>
+<th>Beschreibung</th>
+<th>Nutzen</th>
+<th>Aufwand</th>
+<th>Owner</th>
+<th>Priorität</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>KVP-001</td>
+<td>SIEM-Automatisierung</td>
+<td>Monitoring</td>
+<td>Automatische Response-Playbooks</td>
+<td>Schnellere Incident Response</td>
+<td>40 PT</td>
+<td>Security Team</td>
+<td>Hoch</td>
+<td>Geplant</td>
+</tr>
+<tr>
+<td>KVP-002</td>
+<td>Zero-Trust-Architektur</td>
+<td>Best Practice</td>
+<td>Implementierung Zero-Trust-Prinzipien</td>
+<td>Verbesserte Segmentierung</td>
+<td>200 PT</td>
+<td>Anna Schmidt</td>
+<td>Mittel</td>
+<td>Evaluierung</td>
+</tr>
+<tr>
+<td>KVP-003</td>
+<td>Security Champions Program</td>
+<td>Awareness</td>
+<td>Multiplikatoren in allen Teams</td>
+<td>Höheres Security Awareness</td>
+<td>20 PT</td>
+<td>Thomas Weber</td>
+<td>Hoch</td>
+<td>In Arbeit</td>
+</tr>
+<tr>
+<td>KVP-004</td>
+<td>Immutable Infrastructure</td>
+<td>DevOps</td>
+<td>Infrastructure as Code mit Immutability</td>
+<td>Bessere Compliance, weniger Drift</td>
+<td>80 PT</td>
+<td>DevOps</td>
+<td>Mittel</td>
+<td>Geplant</td>
+</tr>
+</tbody>
+</table>
+<p>[TODO: Weitere Verbesserungsvorschläge hinzufügen]</p>
+<h3 id="32-priorisierung">3.2 Priorisierung</h3>
+<p><strong>Priorisierungskriterien:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Kriterium</th>
+<th>Gewichtung</th>
+<th>Bewertung (1-5)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Risikoreduktion</td>
+<td>40%</td>
+<td>Wie stark wird Risiko reduziert?</td>
+</tr>
+<tr>
+<td>Compliance-Nutzen</td>
+<td>20%</td>
+<td>Verbessert Compliance?</td>
+</tr>
+<tr>
+<td>Effizienzgewinn</td>
+<td>20%</td>
+<td>Spart Zeit/Ressourcen?</td>
+</tr>
+<tr>
+<td>Aufwand</td>
+<td>10%</td>
+<td>Wie hoch ist der Aufwand? (invertiert)</td>
+</tr>
+<tr>
+<td>Strategische Ausrichtung</td>
+<td>10%</td>
+<td>Passt zur Strategie?</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Priorisierungsformel:</strong></p>
+<div class="codehilite"><pre><span></span><code>Priorität = (Risikoreduktion × 0,4) + (Compliance × 0,2) + 
+            (Effizienz × 0,2) + ((6 - Aufwand) × 0,1) + 
+            (Strategie × 0,1)
+</code></pre></div>
+
+<p><strong>Prioritätsstufen:</strong>
+- <strong>Sehr hoch (4,0-5,0):</strong> Sofort umsetzen
+- <strong>Hoch (3,0-3,9):</strong> Innerhalb 6 Monate
+- <strong>Mittel (2,0-2,9):</strong> Innerhalb 12 Monate
+- <strong>Niedrig (&lt; 2,0):</strong> Nach Verfügbarkeit</p>
+<h2 id="4-verbesserungsprozess">4. Verbesserungsprozess</h2>
+<h3 id="41-prozessschritte">4.1 Prozessschritte</h3>
+<div class="codehilite"><pre><span></span><code><span class="mf">1.</span><span class="w"> </span><span class="n">Identifikation</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Verbesserungspotenzial</span><span class="w"> </span><span class="n">erkennen</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Beschreibung</span><span class="w"> </span><span class="n">erstellen</span>
+<span class="w">   </span><span class="err">└─</span><span class="w"> </span><span class="n">In</span><span class="w"> </span><span class="n">Backlog</span><span class="w"> </span><span class="n">aufnehmen</span>
+
+<span class="mf">2.</span><span class="w"> </span><span class="n">Bewertung</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Nutzen</span><span class="w"> </span><span class="n">bewerten</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Aufwand</span><span class="w"> </span><span class="n">schätzen</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Priorisieren</span>
+<span class="w">   </span><span class="err">└─</span><span class="w"> </span><span class="n">Genehmigung</span><span class="w"> </span><span class="n">einholen</span>
+
+<span class="mf">3.</span><span class="w"> </span><span class="n">Planung</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Detailplanung</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Ressourcen</span><span class="w"> </span><span class="n">zuweisen</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Zeitplan</span><span class="w"> </span><span class="n">erstellen</span>
+<span class="w">   </span><span class="err">└─</span><span class="w"> </span><span class="n">Stakeholder</span><span class="w"> </span><span class="n">informieren</span>
+
+<span class="mf">4.</span><span class="w"> </span><span class="n">Umsetzung</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Implementierung</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Testing</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Dokumentation</span>
+<span class="w">   </span><span class="err">└─</span><span class="w"> </span><span class="n">Schulung</span>
+
+<span class="mf">5.</span><span class="w"> </span><span class="n">Review</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Wirksamkeit</span><span class="w"> </span><span class="n">prüfen</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Lessons</span><span class="w"> </span><span class="n">Learned</span>
+<span class="w">   </span><span class="err">├─</span><span class="w"> </span><span class="n">Dokumentation</span>
+<span class="w">   </span><span class="err">└─</span><span class="w"> </span><span class="n">Kommunikation</span>
+</code></pre></div>
+
+<h3 id="42-genehmigungsprozess">4.2 Genehmigungsprozess</h3>
+<p><strong>Kleine Verbesserungen (&lt; 10 PT, &lt; 5.000 €):</strong>
+- Genehmigung durch CISO</p>
+<p><strong>Mittlere Verbesserungen (10-40 PT, 5.000-25.000 €):</strong>
+- Genehmigung durch CISO und CIO</p>
+<p><strong>Große Verbesserungen (&gt; 40 PT, &gt; 25.000 €):</strong>
+- Genehmigung durch Geschäftsführung
+- Präsentation im Informationssicherheitsgremium</p>
+<h2 id="5-verbesserungskategorien">5. Verbesserungskategorien</h2>
+<h3 id="51-prozessverbesserungen">5.1 Prozessverbesserungen</h3>
+<p><strong>Ziel:</strong> Effizienzsteigerung, Fehlerreduktion</p>
+<p><strong>Beispiele:</strong>
+- Automatisierung manueller Prozesse
+- Vereinfachung komplexer Prozesse
+- Integration von Tools
+- Standardisierung</p>
+<h3 id="52-control-verbesserungen">5.2 Control-Verbesserungen</h3>
+<p><strong>Ziel:</strong> Erhöhung der Wirksamkeit</p>
+<p><strong>Beispiele:</strong>
+- Neue Security Controls
+- Verbesserung bestehender Controls
+- Automatisierung von Controls
+- Monitoring-Erweiterungen</p>
+<h3 id="53-technologie-verbesserungen">5.3 Technologie-Verbesserungen</h3>
+<p><strong>Ziel:</strong> Modernisierung, Innovation</p>
+<p><strong>Beispiele:</strong>
+- Neue Security-Tools
+- Cloud-Migration
+- Zero-Trust-Architektur
+- KI/ML-basierte Security</p>
+<h3 id="54-awareness-verbesserungen">5.4 Awareness-Verbesserungen</h3>
+<p><strong>Ziel:</strong> Erhöhung des Sicherheitsbewusstseins</p>
+<p><strong>Beispiele:</strong>
+- Neue Schulungsformate
+- Gamification
+- Security Champions
+- Awareness-Kampagnen</p>
+<h3 id="55-dokumentations-verbesserungen">5.5 Dokumentations-Verbesserungen</h3>
+<p><strong>Ziel:</strong> Klarheit, Vollständigkeit</p>
+<p><strong>Beispiele:</strong>
+- Aktualisierung veralteter Dokumente
+- Neue Templates
+- Bessere Strukturierung
+- Automatisierte Dokumentation</p>
+<h2 id="6-lessons-learned">6. Lessons Learned</h2>
+<h3 id="61-lessons-learned-prozess">6.1 Lessons-Learned-Prozess</h3>
+<p><strong>Nach jedem Incident/Audit/Projekt:</strong>
+1. Lessons-Learned-Session durchführen
+2. Erkenntnisse dokumentieren
+3. Verbesserungsmaßnahmen ableiten
+4. In KVP-Backlog aufnehmen
+5. Kommunizieren</p>
+<h3 id="62-lessons-learned-datenbank">6.2 Lessons-Learned-Datenbank</h3>
+<p><strong>Struktur:</strong>
+- Datum und Kontext
+- Was ist passiert?
+- Was haben wir gelernt?
+- Was hat gut funktioniert?
+- Was könnte verbessert werden?
+- Abgeleitete Maßnahmen
+- Status der Maßnahmen</p>
+<p><strong>Zugriff:</strong>
+- Alle Mitarbeiter (lesend)
+- ISMS-Team (schreibend)</p>
+<h3 id="63-kommunikation">6.3 Kommunikation</h3>
+<p><strong>Zielgruppen:</strong>
+- Betroffene Teams
+- ISMS-Gremium
+- Management
+- Alle Mitarbeiter (bei relevanten Lessons Learned)</p>
+<p><strong>Kanäle:</strong>
+- Lessons-Learned-Datenbank
+- Security Newsletter
+- Team-Meetings
+- Awareness-Kampagnen</p>
+<h2 id="7-innovation-und-best-practices">7. Innovation und Best Practices</h2>
+<h3 id="71-technologie-radar">7.1 Technologie-Radar</h3>
+<p><strong>Beobachtung neuer Technologien:</strong>
+- Emerging Security Technologies
+- Cloud Security
+- Zero Trust
+- AI/ML in Security
+- DevSecOps</p>
+<p><strong>Bewertung:</strong>
+- Adopt (Einsetzen)
+- Trial (Ausprobieren)
+- Assess (Bewerten)
+- Hold (Abwarten)</p>
+<h3 id="72-proof-of-concepts-pocs">7.2 Proof of Concepts (PoCs)</h3>
+<p><strong>Prozess:</strong>
+1. Technologie identifizieren
+2. PoC-Scope definieren
+3. PoC durchführen
+4. Evaluieren
+5. Entscheidung: Adopt / Reject</p>
+<p><strong>Budget:</strong>
+- Jährliches PoC-Budget: [TODO] €</p>
+<h3 id="73-benchmarking">7.3 Benchmarking</h3>
+<p><strong>Vergleich mit:</strong>
+- Branchenstandards
+- Peer-Organisationen
+- Best Practices</p>
+<p><strong>Quellen:</strong>
+- NIST Cybersecurity Framework
+- CIS Controls
+- SANS Top 20
+- Gartner/Forrester Reports</p>
+<h2 id="8-metriken-und-reporting">8. Metriken und Reporting</h2>
+<h3 id="81-kvp-kpis">8.1 KVP-KPIs</h3>
+<table>
+<thead>
+<tr>
+<th>Metrik</th>
+<th>Zielwert</th>
+<th>Aktuell</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Anzahl Verbesserungsmaßnahmen pro Jahr</td>
+<td>≥ 10</td>
+<td>[TODO]</td>
+<td>✓ / ✗</td>
+</tr>
+<tr>
+<td>Durchschnittliche Umsetzungszeit</td>
+<td>&lt; 90 Tage</td>
+<td>[TODO] Tage</td>
+<td>✓ / ✗</td>
+</tr>
+<tr>
+<td>Umgesetzte Verbesserungen</td>
+<td>≥ 80%</td>
+<td>[TODO]%</td>
+<td>✓ / ✗</td>
+</tr>
+<tr>
+<td>Lessons Learned dokumentiert</td>
+<td>100%</td>
+<td>[TODO]%</td>
+<td>✓ / ✗</td>
+</tr>
+<tr>
+<td>PoCs durchgeführt</td>
+<td>≥ 3 pro Jahr</td>
+<td>[TODO]</td>
+<td>✓ / ✗</td>
+</tr>
+</tbody>
+</table>
+<h3 id="82-reporting">8.2 Reporting</h3>
+<p><strong>Quartalsweise:</strong>
+- Status KVP-Backlog
+- Umgesetzte Verbesserungen
+- Lessons Learned Zusammenfassung</p>
+<p><strong>Jährlich:</strong>
+- Vollständiger KVP-Bericht im Management Review
+- Trend-Analyse
+- Erfolgsgeschichten</p>
+<h2 id="9-rollen-und-verantwortlichkeiten">9. Rollen und Verantwortlichkeiten</h2>
+<h3 id="91-raci-matrix-kontinuierliche-verbesserung">9.1 RACI-Matrix: Kontinuierliche Verbesserung</h3>
+<table>
+<thead>
+<tr>
+<th>Aktivität</th>
+<th>CISO</th>
+<th>ISMS Manager</th>
+<th>Verbesserungs-Owner</th>
+<th>Teams</th>
+<th>Geschäftsführung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Verbesserungen identifizieren</td>
+<td>A</td>
+<td>R</td>
+<td>R</td>
+<td>R</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Verbesserungen bewerten</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Verbesserungen priorisieren</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Verbesserungen genehmigen</td>
+<td>A</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Verbesserungen umsetzen</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>R</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Wirksamkeit prüfen</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Lessons Learned dokumentieren</td>
+<td>A</td>
+<td>R</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legende:</strong> R = Responsible, A = Accountable, C = Consulted, I = Informed</p>
+<h2 id="10-referenzen">10. Referenzen</h2>
+<h3 id="101-interne-dokumente">10.1 Interne Dokumente</h3>
+<ul>
+<li><code>0110_ISMS_Sicherheitsziele_und_Metriken.md</code> - Security Objectives</li>
+<li><code>0130_ISMS_Internes_Auditprogramm.md</code> - Internal Audit Program</li>
+<li><code>0140_ISMS_Management_Review_Template.md</code> - Management Review</li>
+<li><code>0150_ISMS_Nichtkonformitaeten_und_Korrekturmassnahmen.md</code> - Non-conformities</li>
+<li><code>0400_Policy_Incident_Management.md</code> - Incident Management</li>
+</ul>
+<h3 id="102-externe-standards">10.2 Externe Standards</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022</strong> - Clause 10.2: Continual improvement</li>
+<li><strong>ISO 9001:2015</strong> - Clause 10.3: Continual improvement</li>
+<li><strong>NIST Cybersecurity Framework</strong> - Continuous improvement practices</li>
+</ul>
+<hr />
+<p><strong>Genehmigt durch:</strong><br />
+Thomas Weber, CISO<br />
+{{ meta.management.ceo }}, Geschäftsführung<br />
+Datum: {{ meta.document.approval_date }}</p>
+<p><strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0150_ISMS_Nichtkonformitaeten_und_Korrekturmassnahmen.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0200_Policy_Akzeptable_Nutzung_IT.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

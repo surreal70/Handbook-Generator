@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0040 - Notfallorganisation: Rollen und Gremien</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0040</div>
+            <h1>Notfallorganisation: Rollen und Gremien</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0030_Dokumentenlenkung_und_Versionierung.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0050_Kontakte_und_Eskalation.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="notfallorganisation-rollen-und-gremien">Notfallorganisation: Rollen und Gremien</h1>
+<p><strong>Dokument-ID:</strong> BCM-0040<br />
+<strong>Organisation:</strong> AdminSend GmbH<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Genehmigt durch:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Entwurf / In Review / Freigegeben<br />
+<strong>Klassifizierung:</strong> internal<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-organisationsmodell">1. Organisationsmodell</h2>
+<h3 id="11-notfallorganisationsstruktur">1.1 Notfallorganisationsstruktur</h3>
+<p>Die Notfallorganisation der AdminSend GmbH besteht aus folgenden Ebenen:</p>
+<div class="codehilite"><pre><span></span><code><span class="x">┌─────────────────────────────────────┐</span>
+<span class="x">│      Krisenstab (Strategic)         │</span>
+<span class="x">│   Leitung: </span><span class="cp">{{</span> <span class="nv">meta.roles.ceo.name</span> <span class="cp">}}</span><span class="x">│</span>
+<span class="x">└──────────────┬──────────────────────┘</span>
+<span class="x">               │</span>
+<span class="x">    ┌──────────┴──────────┬────────────────┐</span>
+<span class="x">    │                     │                │</span>
+<span class="x">┌───▼────────┐  ┌────────▼─────┐  ┌──────▼──────┐</span>
+<span class="x">│ BCM-Manager│  │ IT-DR-Team   │  │ Fachbereichs│</span>
+<span class="x">│            │  │              │  │ BCP-Teams   │</span>
+<span class="x">└────────────┘  └──────────────┘  └─────────────┘</span>
+</code></pre></div>
+
+<p><strong>Ebene 1: Krisenstab (Strategic Level)</strong>
+- Strategische Entscheidungen und Gesamtkoordination
+- Aktivierung bei schwerwiegenden Vorfällen
+- Kommunikation mit externen Stakeholdern</p>
+<p><strong>Ebene 2: BCM-Manager / Koordination (Tactical Level)</strong>
+- Operative Koordination der BCM-Maßnahmen
+- Schnittstelle zwischen Krisenstab und operativen Teams
+- Dokumentation und Reporting</p>
+<p><strong>Ebene 3: Operative Teams (Operational Level)</strong>
+- IT-DR-Team: Wiederherstellung IT-Systeme
+- Fachbereichs-BCP-Teams: Wiederherstellung Geschäftsprozesse
+- Support-Teams: Logistik, Kommunikation, HR</p>
+<h3 id="12-organigramm">1.2 Organigramm</h3>
+<p>[TODO: Fügen Sie ein detailliertes Organigramm ein]</p>
+<p><strong>Verweis:</strong> Siehe <code>diagrams/bcm_organization.png</code></p>
+<h2 id="2-rollenbeschreibungen">2. Rollenbeschreibungen</h2>
+<h3 id="21-krisenstabsleitung">2.1 Krisenstabsleitung</h3>
+<p><strong>Rolle:</strong> Krisenstabsleitung / Crisis Management Team Lead</p>
+<p><strong>Verantwortlich:</strong> {{ meta.roles.ceo.name }}<br />
+<strong>Stellvertretung:</strong> {{ meta.roles.coo.name }}<br />
+<strong>Kontakt:</strong> {{ meta.roles.ceo.email }} / {{ meta.roles.ceo.phone }}</p>
+<p><strong>Aufgaben:</strong>
+- Gesamtverantwortung für Krisenmanagement und BCM-Aktivierung
+- Strategische Entscheidungen über Ressourceneinsatz und Priorisierung
+- Freigabe von Kommunikation an externe Stakeholder
+- Entscheidung über Aktivierung von Ausweichstandorten
+- Genehmigung außerordentlicher Maßnahmen und Budgets</p>
+<p><strong>Entscheidungskompetenzen:</strong>
+- Aktivierung und Deaktivierung des Krisenstabs
+- Freigabe von Notfallbudgets bis [TODO: Betrag]
+- Entscheidung über Geschäftsfortführung oder -einstellung
+- Genehmigung von Notfallzugängen (Break-Glass)</p>
+<p><strong>Berichtspflichten:</strong>
+- An Aufsichtsrat / Gesellschafter bei schwerwiegenden Krisen
+- An Aufsichtsbehörden gemäß regulatorischen Anforderungen</p>
+<h3 id="22-bcm-manager-bcm-koordinator">2.2 BCM-Manager / BCM-Koordinator</h3>
+<p><strong>Rolle:</strong> BCM-Manager / Business Continuity Coordinator</p>
+<p><strong>Verantwortlich:</strong> [TODO: BCM-Manager Name]<br />
+<strong>Stellvertretung:</strong> [TODO: Stellvertreter]<br />
+<strong>Kontakt:</strong> [TODO: E-Mail / Telefon]</p>
+<p><strong>Aufgaben:</strong>
+- Operative Leitung des BCMS im Normalbetrieb
+- Koordination von BIA, Risikoanalyse und BCM-Planung
+- Organisation und Durchführung von BCM-Übungen und Tests
+- Pflege der BCM-Dokumentation und Kontaktlisten
+- Schulung und Sensibilisierung der Mitarbeiter
+- Reporting an Geschäftsführung und Krisenstab</p>
+<p><strong>Reporting:</strong>
+- Quartalsweise BCM-Status-Reports an {{ meta.roles.ceo.name }}
+- Ad-hoc-Reporting bei kritischen Ereignissen
+- Jährlicher BCM-Jahresbericht</p>
+<p><strong>Schnittstellen:</strong>
+- ISMS / CISO: {{ meta.roles.ciso.name }}
+- IT-Operations: {{ meta.roles.it_operations_manager.name }}
+- Fachbereiche: Jeweilige Bereichsleiter</p>
+<h3 id="23-incident-commander-einsatzleitung-operativ">2.3 Incident Commander / Einsatzleitung (operativ)</h3>
+<p><strong>Rolle:</strong> Incident Commander / Operational Lead</p>
+<p><strong>Verantwortlich:</strong> [TODO: Incident Commander Name]<br />
+<strong>Stellvertretung:</strong> [TODO: Stellvertreter]<br />
+<strong>Kontakt:</strong> [TODO: E-Mail / Telefon]</p>
+<p><strong>Aufgaben:</strong>
+- Operative Leitung der Notfallmaßnahmen vor Ort
+- Koordination der operativen Teams (IT-DR, BCP-Teams)
+- Lagebeurteilung und Statusreporting an Krisenstab
+- Umsetzung der vom Krisenstab beschlossenen Maßnahmen
+- Dokumentation aller Maßnahmen und Entscheidungen</p>
+<p><strong>Schnittstelle zu ITSM/Incident:</strong>
+- Übernahme von Major Incidents aus ITSM-Prozess
+- Eskalation an Krisenstab bei Überschreitung definierter Schwellwerte
+- Rückführung in ITSM-Prozess nach Stabilisierung</p>
+<p><strong>Entscheidungskompetenzen:</strong>
+- Operative Maßnahmen ohne Budgetüberschreitung
+- Priorisierung von Wiederherstellungsmaßnahmen
+- Anforderung zusätzlicher Ressourcen</p>
+<h3 id="24-kommunikation-sprecherrolle">2.4 Kommunikation / Sprecherrolle</h3>
+<p><strong>Rolle:</strong> Krisenkommunikation / Spokesperson</p>
+<p><strong>Verantwortlich:</strong> [TODO: Kommunikationsverantwortlicher]<br />
+<strong>Stellvertretung:</strong> [TODO: Stellvertreter]<br />
+<strong>Kontakt:</strong> [TODO: E-Mail / Telefon]</p>
+<p><strong>Aufgaben:</strong>
+- Interne Krisenkommunikation (Mitarbeiter, Management)
+- Externe Krisenkommunikation (Medien, Kunden, Partner, Behörden)
+- Erstellung und Freigabe von Pressemitteilungen
+- Social Media Monitoring und Response
+- Stakeholder-Management</p>
+<p><strong>Freigabeprozesse:</strong>
+- Interne Kommunikation: Freigabe durch Krisenstabsleitung
+- Externe Kommunikation: Freigabe durch {{ meta.roles.ceo.name }}
+- Pressemitteilungen: Freigabe durch Geschäftsführung und ggf. Rechtsabteilung</p>
+<p><strong>Kommunikationskanäle:</strong>
+- Intern: E-Mail, Intranet, Mitarbeiter-App, Telefon
+- Extern: Website, Social Media, Pressemitteilungen, Kundenhotline</p>
+<h3 id="25-it-dr-lead">2.5 IT-DR-Lead</h3>
+<p><strong>Rolle:</strong> IT Disaster Recovery Lead</p>
+<p><strong>Verantwortlich:</strong> {{ meta.roles.it_operations_manager.name }}<br />
+<strong>Stellvertretung:</strong> [TODO: Stellvertreter]<br />
+<strong>Kontakt:</strong> {{ meta.roles.it_operations_manager.email }} / {{ meta.roles.it_operations_manager.phone }}</p>
+<p><strong>Aufgaben:</strong>
+- Leitung des IT-DR-Teams
+- Koordination der IT-Wiederherstellungsmaßnahmen
+- Umsetzung der IT-Disaster-Recovery-Pläne
+- Priorisierung der Systemwiederherstellung gemäß BIA
+- Statusreporting an Incident Commander und Krisenstab</p>
+<p><strong>Runbooks und Wiederanlaufkoordination:</strong>
+- Verwaltung und Pflege der IT-DR-Runbooks
+- Koordination der Systemwiederherstellung in definierter Reihenfolge
+- Durchführung von Restore-Tests
+- Dokumentation der Wiederherstellungsmaßnahmen</p>
+<p><strong>Schnittstellen:</strong>
+- IT-Operations-Team
+- Externe IT-Dienstleister und Cloud-Provider
+- Fachbereiche (für Systemfreigaben)</p>
+<h2 id="3-raci-matrix-krisenmanagement">3. RACI-Matrix Krisenmanagement</h2>
+<table>
+<thead>
+<tr>
+<th>Aktivität</th>
+<th>Krisenstabs-leitung</th>
+<th>BCM-Manager</th>
+<th>Incident Commander</th>
+<th>IT-DR-Lead</th>
+<th>Fachbereich</th>
+<th>Kommunikation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Krise aktivieren</td>
+<td><strong>A</strong></td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Lagebeurteilung</td>
+<td>C</td>
+<td>C</td>
+<td><strong>A/R</strong></td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Strategische Entscheidungen</td>
+<td><strong>A</strong></td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Operative Maßnahmen</td>
+<td>I</td>
+<td>C</td>
+<td><strong>A</strong></td>
+<td>R</td>
+<td>R</td>
+<td>I</td>
+</tr>
+<tr>
+<td>IT-Wiederherstellung</td>
+<td>I</td>
+<td>C</td>
+<td>C</td>
+<td><strong>A/R</strong></td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>BCP-Umsetzung</td>
+<td>I</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td><strong>A/R</strong></td>
+<td>I</td>
+</tr>
+<tr>
+<td>Interne Kommunikation</td>
+<td>A</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+<td><strong>R</strong></td>
+</tr>
+<tr>
+<td>Externe Kommunikation</td>
+<td><strong>A</strong></td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+<td>I</td>
+<td><strong>R</strong></td>
+</tr>
+<tr>
+<td>Dokumentation</td>
+<td>I</td>
+<td><strong>A</strong></td>
+<td>R</td>
+<td>R</td>
+<td>R</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Krise beenden</td>
+<td><strong>A</strong></td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legende:</strong>
+- <strong>R</strong> = Responsible (Durchführungsverantwortung)
+- <strong>A</strong> = Accountable (Gesamtverantwortung, Entscheidungsbefugnis)
+- <strong>C</strong> = Consulted (Konsultiert, Fachexpertise)
+- <strong>I</strong> = Informed (Informiert)</p>
+<h2 id="4-erreichbarkeit-und-rufbereitschaft">4. Erreichbarkeit und Rufbereitschaft</h2>
+<h3 id="41-bereitschaftsmodelle">4.1 Bereitschaftsmodelle</h3>
+<p>[TODO: Definieren Sie Bereitschaftsmodelle für kritische Rollen]</p>
+<p><strong>Beispiel:</strong></p>
+<p><strong>Krisenstab:</strong>
+- <strong>Erreichbarkeit:</strong> 24/7 über Mobiltelefon
+- <strong>Reaktionszeit:</strong> Innerhalb von 2 Stunden einsatzbereit
+- <strong>Bereitschaftsplan:</strong> Rotierendes Modell, quartalsweise Aktualisierung</p>
+<p><strong>IT-DR-Team:</strong>
+- <strong>Erreichbarkeit:</strong> 24/7 Rufbereitschaft
+- <strong>Reaktionszeit:</strong> Innerhalb von 1 Stunde einsatzbereit
+- <strong>Bereitschaftsplan:</strong> Wöchentliche Rotation</p>
+<p><strong>BCM-Manager:</strong>
+- <strong>Erreichbarkeit:</strong> Werktags 08:00-18:00 Uhr, außerhalb über Mobiltelefon
+- <strong>Reaktionszeit:</strong> Innerhalb von 4 Stunden einsatzbereit</p>
+<h3 id="42-eskalationszeiten">4.2 Eskalationszeiten</h3>
+<table>
+<thead>
+<tr>
+<th>Schweregrad</th>
+<th>Reaktionszeit</th>
+<th>Eskalation an</th>
+<th>Eskalationszeit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Niedrig</strong></td>
+<td>4 Stunden</td>
+<td>IT-Operations</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Mittel</strong></td>
+<td>2 Stunden</td>
+<td>Incident Commander</td>
+<td>Nach 4 Stunden</td>
+</tr>
+<tr>
+<td><strong>Hoch</strong></td>
+<td>1 Stunde</td>
+<td>Krisenstab</td>
+<td>Nach 2 Stunden</td>
+</tr>
+<tr>
+<td><strong>Kritisch</strong></td>
+<td>Sofort</td>
+<td>Krisenstabsleitung</td>
+<td>Sofort</td>
+</tr>
+</tbody>
+</table>
+<h3 id="43-alarmierungsprozess">4.3 Alarmierungsprozess</h3>
+<p>[TODO: Beschreiben Sie den Alarmierungsprozess]</p>
+<p><strong>Beispiel:</strong>
+1. <strong>Ersterkennung:</strong> Incident wird erkannt (Monitoring, Meldung, etc.)
+2. <strong>Erstbewertung:</strong> IT-Operations bewertet Schweregrad
+3. <strong>Alarmierung:</strong> Bei Major Incident → Alarmierung Incident Commander
+4. <strong>Eskalation:</strong> Bei BCM-Aktivierung → Alarmierung Krisenstab
+5. <strong>Bestätigung:</strong> Alle alarmierten Personen bestätigen Empfang</p>
+<p><strong>Alarmierungskanäle:</strong>
+- Primär: Telefon (Mobiltelefon)
+- Sekundär: SMS / Messenger
+- Tertiär: E-Mail</p>
+<h2 id="5-vertretungsregelungen">5. Vertretungsregelungen</h2>
+<h3 id="51-stellvertreterlisten">5.1 Stellvertreterlisten</h3>
+<p>Für alle kritischen Rollen sind Stellvertreter definiert:</p>
+<table>
+<thead>
+<tr>
+<th>Rolle</th>
+<th>Primär</th>
+<th>Stellvertreter 1</th>
+<th>Stellvertreter 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Krisenstabsleitung</td>
+<td>{{ meta.roles.ceo.name }}</td>
+<td>{{ meta.roles.coo.name }}</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>BCM-Manager</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Incident Commander</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>IT-DR-Lead</td>
+<td>{{ meta.roles.it_operations_manager.name }}</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Kommunikation</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-ubergabeprozess">5.2 Übergabeprozess</h3>
+<p>Bei Vertretung oder Schichtwechsel erfolgt eine strukturierte Übergabe:</p>
+<p><strong>Übergabeinhalte:</strong>
+- Aktueller Lagestatus
+- Laufende Maßnahmen und deren Status
+- Offene Entscheidungen und Eskalationen
+- Kritische Informationen und Kontakte</p>
+<p><strong>Übergabedokumentation:</strong>
+- Übergabeprotokoll (Template: [TODO: Link])
+- Logbuch-Eintrag
+- Briefing des Nachfolgers</p>
+<hr />
+<p><strong>Dokumenthistorie:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Datum</th>
+<th>Autor</th>
+<th>Änderungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Initiale Erstellung</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0030_Dokumentenlenkung_und_Versionierung.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0050_Kontakte_und_Eskalation.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0260 - Bekannte Probleme und FAQ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0260</div>
+            <h1>Bekannte Probleme und FAQ</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0250_Tooling_und_Zugangswege.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0270_Kontakte_Eskalation_und_Anbieter.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="bekannte-probleme-und-faq">Bekannte Probleme und FAQ</h1>
+<h2 id="ubersicht">Übersicht</h2>
+<p>Dieses Dokument enthält bekannte Probleme und Workarounds, häufig gestellte Fragen (FAQ) sowie Troubleshooting-Tipps für den IT-Service. Ziel ist es, schnelle Lösungen für wiederkehrende Probleme bereitzustellen und die Effizienz des Supports zu erhöhen.</p>
+<p><strong>Dokumentverantwortlicher:</strong> IT Operations Manager<br />
+<strong>Genehmigt durch:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Organisation:</strong> AdminSend GmbH</p>
+<hr />
+<h2 id="bekannte-probleme">Bekannte Probleme</h2>
+<h3 id="problem-tracking">Problem-Tracking</h3>
+<p>Alle bekannten Probleme werden im Ticketing-System mit dem Label "Known Issue" erfasst und hier dokumentiert.</p>
+<p><strong>Verantwortlich:</strong> Andreas Huemmer<br />
+<strong>Review-Zyklus:</strong> Monatlich</p>
+<hr />
+<h3 id="ki-001-todo-problem-titel">KI-001: [TODO: Problem-Titel]</h3>
+<p><strong>Status:</strong> Offen / In Bearbeitung / Gelöst<br />
+<strong>Priorität:</strong> P1 (Kritisch) / P2 (Hoch) / P3 (Mittel) / P4 (Niedrig)<br />
+<strong>Erstellt:</strong> [TODO: Datum]<br />
+<strong>Letzte Aktualisierung:</strong> [TODO: Datum]<br />
+<strong>Ticket-ID:</strong> [TODO: Ticket-Nummer]</p>
+<h4 id="beschreibung">Beschreibung</h4>
+<p>[TODO: Detaillierte Beschreibung des Problems]</p>
+<h4 id="betroffene-systeme">Betroffene Systeme</h4>
+<ul>
+<li>[TODO: System 1]</li>
+<li>[TODO: System 2]</li>
+</ul>
+<h4 id="symptome">Symptome</h4>
+<ul>
+<li>[TODO: Symptom 1]</li>
+<li>[TODO: Symptom 2]</li>
+</ul>
+<h4 id="root-cause">Root Cause</h4>
+<p>[TODO: Ursache des Problems, falls bekannt]</p>
+<h4 id="workaround">Workaround</h4>
+<div class="codehilite"><pre><span></span><code><span class="k">[TODO: Schritt-für-Schritt-Workaround]</span>
+<span class="na">1. Schritt 1</span>
+<span class="na">2. Schritt 2</span>
+<span class="na">3. Schritt 3</span>
+</code></pre></div>
+
+<h4 id="permanente-losung">Permanente Lösung</h4>
+<ul>
+<li><strong>Status:</strong> Geplant / In Entwicklung / Getestet / Deployed</li>
+<li><strong>ETA:</strong> [TODO: Voraussichtliches Datum]</li>
+<li><strong>Verantwortlich:</strong> [TODO: Name]</li>
+</ul>
+<h4 id="betroffene-benutzer">Betroffene Benutzer</h4>
+<p>[TODO: Anzahl oder Beschreibung der betroffenen Benutzer]</p>
+<h4 id="kommunikation">Kommunikation</h4>
+<ul>
+<li>[TODO: Datum] - Benutzer informiert</li>
+<li>[TODO: Datum] - Update kommuniziert</li>
+<li>[TODO: Datum] - Lösung kommuniziert</li>
+</ul>
+<hr />
+<h3 id="ki-002-intermittierende-netzwerk-timeouts">KI-002: Intermittierende Netzwerk-Timeouts</h3>
+<p><strong>Status:</strong> In Bearbeitung<br />
+<strong>Priorität:</strong> P2 (Hoch)<br />
+<strong>Erstellt:</strong> 2025-01-15<br />
+<strong>Letzte Aktualisierung:</strong> 2025-01-28<br />
+<strong>Ticket-ID:</strong> INC-12345</p>
+<h4 id="beschreibung_1">Beschreibung</h4>
+<p>Benutzer erleben sporadische Netzwerk-Timeouts beim Zugriff auf interne Anwendungen. Die Timeouts treten unregelmäßig auf und dauern 30-60 Sekunden.</p>
+<h4 id="betroffene-systeme_1">Betroffene Systeme</h4>
+<ul>
+<li>Intranet-Portal</li>
+<li>File-Server</li>
+<li>E-Mail-System</li>
+</ul>
+<h4 id="symptome_1">Symptome</h4>
+<ul>
+<li>Verbindungsabbrüche ohne Fehlermeldung</li>
+<li>Langsame Ladezeiten</li>
+<li>Timeout-Fehler nach 30-60 Sekunden</li>
+</ul>
+<h4 id="root-cause_1">Root Cause</h4>
+<p>Überlastung des Core-Switches während Backup-Zeiten (22:00-02:00 Uhr).</p>
+<h4 id="workaround_1">Workaround</h4>
+<div class="codehilite"><pre><span></span><code><span class="mf">1.</span><span class="w"> </span><span class="n">Kritische</span><span class="w"> </span><span class="n">Arbeiten</span><span class="w"> </span><span class="n">außerhalb</span><span class="w"> </span><span class="n">der</span><span class="w"> </span><span class="n">Backup</span><span class="o">-</span><span class="n">Zeiten</span><span class="w"> </span><span class="n">durchführen</span>
+<span class="mf">2.</span><span class="w"> </span><span class="n">Bei</span><span class="w"> </span><span class="n">Timeout</span><span class="p">:</span><span class="w"> </span><span class="n">Seite</span><span class="w"> </span><span class="n">neu</span><span class="w"> </span><span class="n">laden</span><span class="w"> </span><span class="p">(</span><span class="n">F5</span><span class="p">)</span>
+<span class="mf">3.</span><span class="w"> </span><span class="n">Alternative</span><span class="w"> </span><span class="n">Route</span><span class="w"> </span><span class="n">über</span><span class="w"> </span><span class="n">VPN</span><span class="w"> </span><span class="n">nutzen</span><span class="w"> </span><span class="p">(</span><span class="n">falls</span><span class="w"> </span><span class="n">verfügbar</span><span class="p">)</span>
+</code></pre></div>
+
+<h4 id="permanente-losung_1">Permanente Lösung</h4>
+<ul>
+<li><strong>Status:</strong> Geplant</li>
+<li><strong>ETA:</strong> Q2 2026</li>
+<li><strong>Maßnahme:</strong> Upgrade des Core-Switches auf höhere Bandbreite</li>
+<li><strong>Verantwortlich:</strong> Andreas Huemmer</li>
+</ul>
+<h4 id="betroffene-benutzer_1">Betroffene Benutzer</h4>
+<p>Alle internen Benutzer während Backup-Zeiten</p>
+<hr />
+<h3 id="ki-003-langsame-datenbank-queries">KI-003: Langsame Datenbank-Queries</h3>
+<p><strong>Status:</strong> Gelöst<br />
+<strong>Priorität:</strong> P2 (Hoch)<br />
+<strong>Erstellt:</strong> 2025-01-10<br />
+<strong>Gelöst:</strong> 2025-01-25<br />
+<strong>Ticket-ID:</strong> INC-12340</p>
+<h4 id="beschreibung_2">Beschreibung</h4>
+<p>Bestimmte Datenbank-Queries liefen sehr langsam (&gt; 10 Sekunden), was zu Timeouts in der Anwendung führte.</p>
+<h4 id="betroffene-systeme_2">Betroffene Systeme</h4>
+<ul>
+<li>Produktions-Datenbank</li>
+<li>Web-Anwendung</li>
+</ul>
+<h4 id="symptome_2">Symptome</h4>
+<ul>
+<li>Langsame Seitenladezeiten</li>
+<li>Timeout-Fehler</li>
+<li>Hohe CPU-Last auf DB-Server</li>
+</ul>
+<h4 id="root-cause_2">Root Cause</h4>
+<p>Fehlende Indizes auf häufig abgefragten Tabellen.</p>
+<h4 id="losung">Lösung</h4>
+<div class="codehilite"><pre><span></span><code><span class="c1">-- Fehlende Indizes hinzugefügt</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_users_email</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">users</span><span class="p">(</span><span class="n">email</span><span class="p">);</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_orders_date</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">orders</span><span class="p">(</span><span class="n">order_date</span><span class="p">);</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_products_category</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">products</span><span class="p">(</span><span class="n">category_id</span><span class="p">);</span>
+
+<span class="c1">-- Statistiken aktualisiert</span>
+<span class="k">ANALYZE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span><span class="p">;</span>
+<span class="k">ANALYZE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">orders</span><span class="p">;</span>
+<span class="k">ANALYZE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">products</span><span class="p">;</span>
+</code></pre></div>
+
+<h4 id="ergebnis">Ergebnis</h4>
+<ul>
+<li>Query-Zeit reduziert von 10+ Sekunden auf &lt; 100ms</li>
+<li>CPU-Last auf DB-Server normalisiert</li>
+<li>Keine Timeouts mehr</li>
+</ul>
+<hr />
+<h2 id="haufig-gestellte-fragen-faq">Häufig gestellte Fragen (FAQ)</h2>
+<h3 id="allgemeine-fragen">Allgemeine Fragen</h3>
+<h4 id="f-wie-erreiche-ich-den-it-support">F: Wie erreiche ich den IT-Support?</h4>
+<p><strong>A:</strong> Der IT-Support ist über folgende Kanäle erreichbar:
+- <strong>E-Mail:</strong> julia.becker@adminsend.de
+- <strong>Telefon:</strong> +49 89 12345678-111
+- <strong>Ticketing-System:</strong> [TODO: URL]
+- <strong>Chat:</strong> [TODO: Chat-Kanal]</p>
+<p><strong>Support-Zeiten:</strong>
+- Mo-Fr: 08:00-18:00 Uhr
+- 24/7 für kritische Incidents (P1)</p>
+<hr />
+<h4 id="f-wie-erstelle-ich-ein-support-ticket">F: Wie erstelle ich ein Support-Ticket?</h4>
+<p><strong>A:</strong> Support-Tickets können über folgende Wege erstellt werden:</p>
+<ol>
+<li><strong>Web-Portal:</strong></li>
+<li>[TODO: Ticketing-URL] aufrufen</li>
+<li>Mit SSO anmelden</li>
+<li>"Neues Ticket" klicken</li>
+<li>
+<p>Formular ausfüllen und absenden</p>
+</li>
+<li>
+<p><strong>E-Mail:</strong></p>
+</li>
+<li>E-Mail an julia.becker@adminsend.de</li>
+<li>Betreff: Kurze Problembeschreibung</li>
+<li>
+<p>Inhalt: Detaillierte Beschreibung, Screenshots</p>
+</li>
+<li>
+<p><strong>Telefon:</strong></p>
+</li>
+<li>+49 89 12345678-111 anrufen</li>
+<li>Problem schildern</li>
+<li>Ticket-Nummer notieren</li>
+</ol>
+<hr />
+<h4 id="f-wie-priorisiert-der-support-tickets">F: Wie priorisiert der Support Tickets?</h4>
+<p><strong>A:</strong> Tickets werden nach folgenden Prioritäten bearbeitet:</p>
+<table>
+<thead>
+<tr>
+<th>Priorität</th>
+<th>Beschreibung</th>
+<th>Reaktionszeit</th>
+<th>Lösungszeit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P1 - Kritisch</td>
+<td>Kompletter Systemausfall</td>
+<td>15 Minuten</td>
+<td>4 Stunden</td>
+</tr>
+<tr>
+<td>P2 - Hoch</td>
+<td>Teilausfall, viele Benutzer betroffen</td>
+<td>1 Stunde</td>
+<td>8 Stunden</td>
+</tr>
+<tr>
+<td>P3 - Mittel</td>
+<td>Einzelne Benutzer betroffen</td>
+<td>4 Stunden</td>
+<td>24 Stunden</td>
+</tr>
+<tr>
+<td>P4 - Niedrig</td>
+<td>Fragen, Feature-Requests</td>
+<td>8 Stunden</td>
+<td>72 Stunden</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="zugriff-und-authentifizierung">Zugriff und Authentifizierung</h3>
+<h4 id="f-ich-habe-mein-passwort-vergessen-was-soll-ich-tun">F: Ich habe mein Passwort vergessen. Was soll ich tun?</h4>
+<p><strong>A:</strong> Passwort-Reset über Self-Service-Portal:</p>
+<ol>
+<li>[TODO: Self-Service-URL] aufrufen</li>
+<li>"Passwort vergessen" klicken</li>
+<li>Benutzername oder E-Mail eingeben</li>
+<li>Sicherheitsfragen beantworten oder Code per E-Mail/SMS erhalten</li>
+<li>Neues Passwort setzen</li>
+</ol>
+<p><strong>Alternativ:</strong> IT-Support kontaktieren</p>
+<hr />
+<h4 id="f-wie-richte-ich-mfa-multi-faktor-authentifizierung-ein">F: Wie richte ich MFA (Multi-Faktor-Authentifizierung) ein?</h4>
+<p><strong>A:</strong> MFA-Einrichtung:</p>
+<ol>
+<li>[TODO: MFA-Portal-URL] aufrufen</li>
+<li>Mit aktuellem Passwort anmelden</li>
+<li>MFA-Methode wählen:</li>
+<li><strong>Authenticator-App</strong> (empfohlen): QR-Code scannen</li>
+<li><strong>SMS:</strong> Telefonnummer verifizieren</li>
+<li><strong>Hardware-Token:</strong> Token registrieren</li>
+<li>Backup-Codes generieren und sicher speichern</li>
+<li>MFA testen</li>
+</ol>
+<p><strong>Wichtig:</strong> Backup-Codes an sicherem Ort aufbewahren!</p>
+<hr />
+<h4 id="f-ich-kann-mich-nicht-per-vpn-verbinden-was-kann-ich-tun">F: Ich kann mich nicht per VPN verbinden. Was kann ich tun?</h4>
+<p><strong>A:</strong> VPN-Troubleshooting:</p>
+<ol>
+<li><strong>Credentials prüfen:</strong></li>
+<li>Benutzername korrekt?</li>
+<li>Passwort korrekt?</li>
+<li>
+<p>MFA-Token aktuell?</p>
+</li>
+<li>
+<p><strong>VPN-Client prüfen:</strong></p>
+</li>
+<li>Neueste Version installiert?</li>
+<li>
+<p>Profil korrekt konfiguriert?</p>
+</li>
+<li>
+<p><strong>Netzwerk prüfen:</strong></p>
+</li>
+<li>Internet-Verbindung funktioniert?</li>
+<li>
+<p>Firewall blockiert VPN nicht?</p>
+</li>
+<li>
+<p><strong>Alternativen:</strong></p>
+</li>
+<li>Anderen VPN-Gateway versuchen</li>
+<li>VPN-Client neu installieren</li>
+</ol>
+<p><strong>Wenn nichts hilft:</strong> IT-Support kontaktieren mit:
+- VPN-Client-Version
+- Fehlermeldung (Screenshot)
+- Zeitpunkt des Problems</p>
+<hr />
+<h3 id="anwendungen">Anwendungen</h3>
+<h4 id="f-die-anwendung-ladt-sehr-langsam-was-kann-ich-tun">F: Die Anwendung lädt sehr langsam. Was kann ich tun?</h4>
+<p><strong>A:</strong> Performance-Troubleshooting:</p>
+<ol>
+<li><strong>Browser-Cache leeren:</strong></li>
+<li>Chrome: Strg+Shift+Entf</li>
+<li>Firefox: Strg+Shift+Entf</li>
+<li>
+<p>Edge: Strg+Shift+Entf</p>
+</li>
+<li>
+<p><strong>Browser-Erweiterungen deaktivieren:</strong></p>
+</li>
+<li>Temporär alle Erweiterungen deaktivieren</li>
+<li>
+<p>Testen ob Performance besser</p>
+</li>
+<li>
+<p><strong>Anderen Browser testen:</strong></p>
+</li>
+<li>
+<p>Chrome, Firefox, oder Edge versuchen</p>
+</li>
+<li>
+<p><strong>Netzwerk prüfen:</strong></p>
+</li>
+<li>Speedtest durchführen</li>
+<li>
+<p>VPN-Verbindung prüfen</p>
+</li>
+<li>
+<p><strong>System-Ressourcen prüfen:</strong></p>
+</li>
+<li>Task-Manager öffnen</li>
+<li>CPU/RAM-Auslastung prüfen</li>
+<li>Andere Programme schließen</li>
+</ol>
+<p><strong>Wenn Problem weiterhin besteht:</strong> Ticket erstellen mit:
+- Browser und Version
+- Betroffene Anwendung
+- Zeitpunkt des Problems
+- Screenshot</p>
+<hr />
+<h4 id="f-ich-erhalte-einen-500-internal-server-error-was-bedeutet-das">F: Ich erhalte einen "500 Internal Server Error". Was bedeutet das?</h4>
+<p><strong>A:</strong> Ein 500-Fehler bedeutet, dass ein Problem auf dem Server aufgetreten ist.</p>
+<p><strong>Sofortmaßnahmen:</strong>
+1. Seite neu laden (F5)
+2. 5 Minuten warten und erneut versuchen
+3. Browser-Cache leeren
+4. Anderen Browser versuchen</p>
+<p><strong>Wenn Fehler weiterhin auftritt:</strong>
+- Ticket erstellen (P2 - Hoch)
+- Screenshot des Fehlers anhängen
+- Genaue URL angeben
+- Zeitpunkt notieren</p>
+<p><strong>Für IT-Team:</strong>
+- Server-Logs prüfen
+- Anwendungs-Logs prüfen
+- Monitoring-Alerts prüfen</p>
+<hr />
+<h3 id="e-mail">E-Mail</h3>
+<h4 id="f-ich-kann-keine-e-mails-senden-was-soll-ich-tun">F: Ich kann keine E-Mails senden. Was soll ich tun?</h4>
+<p><strong>A:</strong> E-Mail-Versand-Troubleshooting:</p>
+<ol>
+<li><strong>Postausgang prüfen:</strong></li>
+<li>Sind E-Mails im Postausgang hängen geblieben?</li>
+<li>
+<p>Fehlermeldung vorhanden?</p>
+</li>
+<li>
+<p><strong>Postfach-Größe prüfen:</strong></p>
+</li>
+<li>Ist das Postfach voll?</li>
+<li>
+<p>Alte E-Mails archivieren/löschen</p>
+</li>
+<li>
+<p><strong>Anhänge prüfen:</strong></p>
+</li>
+<li>Sind Anhänge zu groß? (Max: [TODO: Größe])</li>
+<li>
+<p>Anhänge komprimieren oder über File-Sharing senden</p>
+</li>
+<li>
+<p><strong>Empfänger-Adresse prüfen:</strong></p>
+</li>
+<li>Ist die E-Mail-Adresse korrekt?</li>
+<li>
+<p>Tippfehler?</p>
+</li>
+<li>
+<p><strong>Spam-Filter:</strong></p>
+</li>
+<li>Wurde E-Mail als Spam markiert?</li>
+</ol>
+<p><strong>Wenn Problem weiterhin besteht:</strong> IT-Support kontaktieren</p>
+<hr />
+<h4 id="f-ich-erhalte-viele-spam-e-mails-was-kann-ich-tun">F: Ich erhalte viele Spam-E-Mails. Was kann ich tun?</h4>
+<p><strong>A:</strong> Spam-Reduzierung:</p>
+<ol>
+<li><strong>Spam-Filter trainieren:</strong></li>
+<li>Spam-E-Mails als "Spam" markieren</li>
+<li>
+<p>Nicht als "Spam" markierte E-Mails als "Kein Spam" markieren</p>
+</li>
+<li>
+<p><strong>Absender blockieren:</strong></p>
+</li>
+<li>
+<p>Absender zur Blocklist hinzufügen</p>
+</li>
+<li>
+<p><strong>E-Mail-Regeln erstellen:</strong></p>
+</li>
+<li>
+<p>Automatische Filterung basierend auf Absender/Betreff</p>
+</li>
+<li>
+<p><strong>Vorsicht bei E-Mail-Weitergabe:</strong></p>
+</li>
+<li>E-Mail-Adresse nicht öffentlich posten</li>
+<li>Separate E-Mail für Newsletter verwenden</li>
+</ol>
+<p><strong>Bei verdächtigen E-Mails:</strong>
+- <strong>NICHT</strong> auf Links klicken
+- <strong>NICHT</strong> Anhänge öffnen
+- An thomas.weber@adminsend.de weiterleiten
+- E-Mail löschen</p>
+<hr />
+<h3 id="dateien-und-storage">Dateien und Storage</h3>
+<h4 id="f-ich-habe-versehentlich-eine-datei-geloscht-kann-sie-wiederhergestellt-werden">F: Ich habe versehentlich eine Datei gelöscht. Kann sie wiederhergestellt werden?</h4>
+<p><strong>A:</strong> Datei-Wiederherstellung:</p>
+<ol>
+<li><strong>Papierkorb prüfen:</strong></li>
+<li>Windows: Papierkorb auf Desktop</li>
+<li>macOS: Papierkorb im Dock</li>
+<li>
+<p>Linux: Trash-Ordner</p>
+</li>
+<li>
+<p><strong>Netzwerk-Laufwerk:</strong></p>
+</li>
+<li>Vorgängerversionen prüfen (Rechtsklick → Eigenschaften → Vorgängerversionen)</li>
+<li>
+<p>Shadow Copies verfügbar?</p>
+</li>
+<li>
+<p><strong>Backup-Wiederherstellung:</strong></p>
+</li>
+<li>Ticket erstellen (P3 - Mittel)</li>
+<li>Dateiname, Pfad und ungefähres Löschdatum angeben</li>
+<li>IT-Team stellt aus Backup wieder her</li>
+</ol>
+<p><strong>Wichtig:</strong> Je schneller gemeldet, desto höher die Erfolgsaussicht!</p>
+<p><strong>Backup-Retention:</strong>
+- Tägliche Backups: 30 Tage
+- Wöchentliche Backups: 90 Tage
+- Monatliche Backups: 1 Jahr</p>
+<hr />
+<h4 id="f-mein-netzwerk-laufwerk-ist-voll-was-soll-ich-tun">F: Mein Netzwerk-Laufwerk ist voll. Was soll ich tun?</h4>
+<p><strong>A:</strong> Storage-Management:</p>
+<ol>
+<li><strong>Speicherplatz analysieren:</strong></li>
+<li>Große Dateien identifizieren</li>
+<li>
+<p>Alte/unnötige Dateien löschen</p>
+</li>
+<li>
+<p><strong>Dateien archivieren:</strong></p>
+</li>
+<li>Alte Projekte archivieren</li>
+<li>
+<p>Auf Archiv-Storage verschieben</p>
+</li>
+<li>
+<p><strong>Duplikate entfernen:</strong></p>
+</li>
+<li>
+<p>Doppelte Dateien identifizieren und löschen</p>
+</li>
+<li>
+<p><strong>Komprimierung:</strong></p>
+</li>
+<li>
+<p>Große Dateien komprimieren (ZIP, 7z)</p>
+</li>
+<li>
+<p><strong>Quota-Erhöhung beantragen:</strong></p>
+</li>
+<li>Ticket erstellen mit Begründung</li>
+<li>Genehmigung durch Manager erforderlich</li>
+</ol>
+<p><strong>Quota-Limits:</strong>
+- Standard-Benutzer: [TODO: Größe]
+- Power-User: [TODO: Größe]
+- Projekt-Shares: [TODO: Größe]</p>
+<hr />
+<h3 id="hardware">Hardware</h3>
+<h4 id="f-mein-computer-ist-sehr-langsam-was-kann-ich-tun">F: Mein Computer ist sehr langsam. Was kann ich tun?</h4>
+<p><strong>A:</strong> Performance-Optimierung:</p>
+<ol>
+<li><strong>Neustart:</strong></li>
+<li>Computer neu starten</li>
+<li>
+<p>Oft löst dies bereits das Problem</p>
+</li>
+<li>
+<p><strong>Programme schließen:</strong></p>
+</li>
+<li>Unnötige Programme beenden</li>
+<li>
+<p>Task-Manager prüfen (Strg+Shift+Esc)</p>
+</li>
+<li>
+<p><strong>Disk-Cleanup:</strong></p>
+</li>
+<li>Temporäre Dateien löschen</li>
+<li>
+<p>Disk-Cleanup-Tool ausführen</p>
+</li>
+<li>
+<p><strong>Updates prüfen:</strong></p>
+</li>
+<li>Windows-Updates installieren</li>
+<li>
+<p>Anwendungs-Updates installieren</p>
+</li>
+<li>
+<p><strong>Malware-Scan:</strong></p>
+</li>
+<li>Antivirus-Scan durchführen</li>
+</ol>
+<p><strong>Wenn Problem weiterhin besteht:</strong>
+- Ticket erstellen
+- Hardware-Upgrade prüfen
+- Neuinstallation erwägen</p>
+<hr />
+<h4 id="f-wie-beantrage-ich-neue-hardware">F: Wie beantrage ich neue Hardware?</h4>
+<p><strong>A:</strong> Hardware-Anforderung:</p>
+<ol>
+<li><strong>Ticket erstellen:</strong></li>
+<li>Kategorie: "Hardware-Anfrage"</li>
+<li>Gewünschte Hardware spezifizieren</li>
+<li>
+<p>Begründung angeben</p>
+</li>
+<li>
+<p><strong>Genehmigung:</strong></p>
+</li>
+<li>Manager-Genehmigung erforderlich</li>
+<li>
+<p>Budget-Prüfung durch Maria Müller</p>
+</li>
+<li>
+<p><strong>Beschaffung:</strong></p>
+</li>
+<li>IT-Team bestellt Hardware</li>
+<li>
+<p>Lieferzeit: [TODO: Zeitraum]</p>
+</li>
+<li>
+<p><strong>Installation:</strong></p>
+</li>
+<li>Termin mit IT-Team vereinbaren</li>
+<li>Alte Hardware wird zurückgenommen</li>
+</ol>
+<p><strong>Standard-Hardware:</strong>
+- Laptop: [TODO: Modell]
+- Desktop: [TODO: Modell]
+- Monitor: [TODO: Modell]
+- Peripherie: Maus, Tastatur, Headset</p>
+<hr />
+<h2 id="troubleshooting-tipps">Troubleshooting-Tipps</h2>
+<h3 id="allgemeine-troubleshooting-schritte">Allgemeine Troubleshooting-Schritte</h3>
+<ol>
+<li><strong>Neustart:</strong></li>
+<li>Oft die einfachste Lösung</li>
+<li>
+<p>Computer, Anwendung, oder Service neu starten</p>
+</li>
+<li>
+<p><strong>Fehler dokumentieren:</strong></p>
+</li>
+<li>Screenshot erstellen</li>
+<li>Fehlermeldung notieren</li>
+<li>
+<p>Zeitpunkt festhalten</p>
+</li>
+<li>
+<p><strong>Reproduzieren:</strong></p>
+</li>
+<li>Problem erneut auslösen</li>
+<li>
+<p>Schritte dokumentieren</p>
+</li>
+<li>
+<p><strong>Isolieren:</strong></p>
+</li>
+<li>Anderer Computer?</li>
+<li>Anderer Browser?</li>
+<li>
+<p>Anderes Netzwerk?</p>
+</li>
+<li>
+<p><strong>Recherchieren:</strong></p>
+</li>
+<li>Bekannte Probleme prüfen (dieses Dokument)</li>
+<li>Wiki durchsuchen</li>
+<li>
+<p>Kollegen fragen</p>
+</li>
+<li>
+<p><strong>Eskalieren:</strong></p>
+</li>
+<li>Ticket erstellen</li>
+<li>IT-Support kontaktieren</li>
+</ol>
+<hr />
+<h3 id="browser-probleme">Browser-Probleme</h3>
+<p><strong>Symptome:</strong>
+- Seite lädt nicht
+- Fehlerhafte Darstellung
+- Funktionen funktionieren nicht</p>
+<p><strong>Lösungen:</strong>
+1. Cache leeren (Strg+Shift+Entf)
+2. Cookies löschen
+3. Browser-Erweiterungen deaktivieren
+4. Inkognito-Modus testen
+5. Anderen Browser testen
+6. Browser neu installieren</p>
+<hr />
+<h3 id="netzwerk-probleme">Netzwerk-Probleme</h3>
+<p><strong>Symptome:</strong>
+- Keine Verbindung
+- Langsame Verbindung
+- Intermittierende Verbindung</p>
+<p><strong>Lösungen:</strong>
+1. Netzwerk-Kabel prüfen
+2. WLAN-Verbindung prüfen
+3. Router neu starten
+4. IP-Konfiguration erneuern (ipconfig /renew)
+5. DNS-Cache leeren (ipconfig /flushdns)
+6. VPN-Verbindung prüfen</p>
+<hr />
+<h3 id="anwendungs-probleme">Anwendungs-Probleme</h3>
+<p><strong>Symptome:</strong>
+- Anwendung startet nicht
+- Anwendung stürzt ab
+- Funktionen fehlen</p>
+<p><strong>Lösungen:</strong>
+1. Anwendung neu starten
+2. Computer neu starten
+3. Anwendung neu installieren
+4. Updates installieren
+5. Kompatibilitätsmodus testen (Windows)
+6. Logs prüfen</p>
+<hr />
+<h2 id="self-service-ressourcen">Self-Service-Ressourcen</h2>
+<h3 id="dokumentation">Dokumentation</h3>
+<ul>
+<li><strong>Wiki:</strong> [TODO: Wiki-URL]</li>
+<li><strong>Video-Tutorials:</strong> [TODO: Video-URL]</li>
+<li><strong>Handbücher:</strong> [TODO: Handbuch-URL]</li>
+</ul>
+<h3 id="tools">Tools</h3>
+<ul>
+<li><strong>Self-Service-Portal:</strong> [TODO: Portal-URL]</li>
+<li><strong>Passwort-Reset:</strong> [TODO: Reset-URL]</li>
+<li><strong>Software-Download:</strong> [TODO: Download-URL]</li>
+</ul>
+<h3 id="schulungen">Schulungen</h3>
+<ul>
+<li><strong>Online-Kurse:</strong> [TODO: Kurs-URL]</li>
+<li><strong>Webinare:</strong> [TODO: Webinar-Kalender]</li>
+<li><strong>Präsenz-Schulungen:</strong> Anfrage über IT-Support</li>
+</ul>
+<hr />
+<h2 id="feedback-und-verbesserungen">Feedback und Verbesserungen</h2>
+<h3 id="feedback-geben">Feedback geben</h3>
+<p>Haben Sie Vorschläge zur Verbesserung dieses Dokuments oder der IT-Services?</p>
+<p><strong>Kontakt:</strong>
+- <strong>E-Mail:</strong> andreas.huemmer@adminsend.de
+- <strong>Feedback-Formular:</strong> [TODO: Formular-URL]</p>
+<h3 id="dokument-updates">Dokument-Updates</h3>
+<p>Dieses Dokument wird regelmäßig aktualisiert basierend auf:
+- Neuen bekannten Problemen
+- Häufig gestellten Fragen
+- Benutzer-Feedback
+- Prozessverbesserungen</p>
+<p><strong>Review-Zyklus:</strong> Monatlich<br />
+<strong>Verantwortlich:</strong> Andreas Huemmer</p>
+<hr />
+<h2 id="prozesse-und-verantwortlichkeiten">Prozesse und Verantwortlichkeiten</h2>
+<h3 id="raci-matrix">RACI-Matrix</h3>
+<table>
+<thead>
+<tr>
+<th>Aktivität</th>
+<th>Ops Manager</th>
+<th>Ops Team</th>
+<th>Service Desk</th>
+<th>Benutzer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bekannte Probleme dokumentieren</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>FAQ aktualisieren</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Workarounds entwickeln</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Benutzer-Support</td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Feedback sammeln</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>R</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Legende:</strong> R = Responsible, A = Accountable, C = Consulted, I = Informed</p>
+</blockquote>
+<hr />
+<h2 id="compliance-und-standards">Compliance und Standards</h2>
+<h3 id="relevante-standards">Relevante Standards</h3>
+<ul>
+<li><strong>ITIL v4:</strong> Service Desk Practice, Knowledge Management</li>
+<li><strong>ISO 20000:</strong> Clause 8.2 - Service Desk</li>
+<li><strong>COBIT 2019:</strong> DSS02 - Managed Service Requests and Incidents</li>
+</ul>
+<hr />
+<h2 id="anhang">Anhang</h2>
+<h3 id="glossar">Glossar</h3>
+<table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Known Issue</td>
+<td>Bekanntes Problem mit dokumentiertem Workaround</td>
+</tr>
+<tr>
+<td>FAQ</td>
+<td>Frequently Asked Questions - Häufig gestellte Fragen</td>
+</tr>
+<tr>
+<td>Workaround</td>
+<td>Temporäre Lösung für ein Problem</td>
+</tr>
+<tr>
+<td>Root Cause</td>
+<td>Grundursache eines Problems</td>
+</tr>
+<tr>
+<td>Self-Service</td>
+<td>Benutzer löst Problem selbst ohne Support</td>
+</tr>
+</tbody>
+</table>
+<h3 id="referenzen">Referenzen</h3>
+<ul>
+<li>ITIL v4 Foundation Handbook</li>
+<li>ISO/IEC 20000-1:2018</li>
+<li>COBIT 2019 Framework</li>
+</ul>
+<hr />
+<p><strong>Letzte Aktualisierung:</strong> {{ meta.date }}<br />
+<strong>Nächste Review:</strong> [TODO: Datum]<br />
+<strong>Kontakt:</strong> andreas.huemmer@adminsend.de</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0250_Tooling_und_Zugangswege.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0270_Kontakte_Eskalation_und_Anbieter.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

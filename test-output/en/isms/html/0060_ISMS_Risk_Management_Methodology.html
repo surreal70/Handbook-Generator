@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0060 - Risk Management – Methodology</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0060</div>
+            <h1>Risk Management – Methodology</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0050_ISMS_Document_Control.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0070_ISMS_Risk_Acceptance_Criteria.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="risk-management-methodology">Risk Management – Methodology</h1>
+<p><strong>Document ID:</strong> 0060<br />
+<strong>Document Type:</strong> ISMS Foundation Document<br />
+<strong>Standard Reference:</strong> ISO/IEC 27001:2022 Clause 6.1.2<br />
+<strong>Owner:</strong> Thomas Weber<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Approved<br />
+<strong>Classification:</strong> Internal<br />
+<strong>Last Updated:</strong> {{ meta.document.date }}<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-objective-and-scope">1. Objective and Scope</h2>
+<h3 id="11-objective">1.1 Objective</h3>
+<p>This methodology defines how <strong>AdminSend GmbH</strong> systematically identifies, assesses, treats, and monitors information security risks. It ensures that:
+- Risks are assessed consistently and transparently
+- Risk treatment measures are prioritized
+- Risks are reduced to an acceptable level
+- Management can make informed decisions</p>
+<h3 id="12-scope">1.2 Scope</h3>
+<p>This methodology applies to all information security risks within the ISMS scope (see <code>0020_ISMS_Scope.md</code>):
+- IT systems and infrastructure
+- Business processes
+- Information assets and data
+- Suppliers and third parties
+- Physical security</p>
+<h2 id="2-risk-objects">2. Risk Objects</h2>
+<h3 id="21-assets-information-assets">2.1 Assets (Information Assets)</h3>
+<p><strong>Categories:</strong>
+- <strong>Information and Data:</strong> Customer data, business data, technical data, employee data
+- <strong>IT Systems:</strong> Servers, network components, endpoints, cloud infrastructure
+- <strong>Applications:</strong> Business applications, development tools, communication platforms
+- <strong>Services:</strong> IT services, business services
+- <strong>People:</strong> Employees with critical knowledge
+- <strong>Physical Assets:</strong> Data centers, offices, hardware</p>
+<p><strong>Asset Inventory:</strong>
+- See <code>0720_Appendix_Asset_and_System_Inventory_Template.md</code>
+- Asset owners are responsible for their assets</p>
+<h3 id="22-business-processes">2.2 Business Processes</h3>
+<p><strong>Critical Business Processes:</strong>
+- [TODO: List of critical business processes]
+- See Business Impact Analysis (BIA) in BCM handbook</p>
+<p><strong>Process Owners:</strong>
+- Responsible for risks in their process
+- See <code>0040_ISMS_Governance_Roles_and_Responsibilities.md</code></p>
+<h3 id="23-suppliers-and-outsourcing">2.3 Suppliers and Outsourcing</h3>
+<p><strong>Critical Suppliers:</strong>
+- Cloud providers (AWS, Azure, GCP)
+- Managed service providers
+- Software suppliers
+- See <code>0460_Policy_Suppliers_and_Cloud_Security.md</code></p>
+<p><strong>Third-Party Risk Assessment:</strong>
+- Separate risk assessment for critical suppliers
+- See <code>0470_Guideline_Third_Party_Risk_Assessment_and_Cloud_Controls.md</code></p>
+<h2 id="3-risk-management-methodology">3. Risk Management Methodology</h2>
+<h3 id="31-risk-management-process">3.1 Risk Management Process</h3>
+<div class="codehilite"><pre><span></span><code>┌─────────────────────────────────────────────────────────┐
+│              Risk Management Cycle                       │
+└─────────────────────────────────────────────────────────┘
+                          │
+                          ▼
+        ┌─────────────────────────────────┐
+        │  1. Risk Identification         │
+        │  (Threats + Vulnerabilities)    │
+        └────────────┬────────────────────┘
+                     │
+                     ▼
+        ┌─────────────────────────────────┐
+        │  2. Risk Assessment             │
+        │  (Likelihood × Impact)          │
+        └────────────┬────────────────────┘
+                     │
+                     ▼
+        ┌─────────────────────────────────┐
+        │  3. Risk Treatment              │
+        │  (Avoid, Mitigate,              │
+        │   Transfer, Accept)             │
+        └────────────┬────────────────────┘
+                     │
+                     ▼
+        ┌─────────────────────────────────┐
+        │  4. Risk Monitoring             │
+        │  (Monitoring, Review)           │
+        └────────────┬────────────────────┘
+                     │
+                     └──────────┐
+                                │
+                                ▼
+                    ┌───────────────────────┐
+                    │  Continuous           │
+                    │  Improvement          │
+                    └───────────────────────┘
+</code></pre></div>
+
+<h3 id="32-risk-identification">3.2 Risk Identification</h3>
+<p><strong>Methods:</strong>
+1. <strong>Asset-based:</strong> Identification of threats and vulnerabilities for each asset
+2. <strong>Scenario-based:</strong> Analysis of threat scenarios (e.g., ransomware, DDoS, insider threat)
+3. <strong>Compliance-based:</strong> Identification of compliance risks (GDPR, NIS2, etc.)</p>
+<p><strong>Risk Formula:</strong></p>
+<div class="codehilite"><pre><span></span><code>Risk = Threat × Vulnerability × Asset Value
+</code></pre></div>
+
+<p><strong>Threats:</strong>
+- <strong>Cyber Threats:</strong> Ransomware, phishing, DDoS, APT, malware
+- <strong>Human Threats:</strong> Insider threat, social engineering, errors
+- <strong>Environmental Threats:</strong> Fire, water, power outage, natural disasters
+- <strong>Technical Threats:</strong> Hardware failure, software bugs, configuration errors</p>
+<p><strong>Vulnerabilities:</strong>
+- <strong>Technical Vulnerabilities:</strong> Unpatched systems, misconfigurations, weak encryption
+- <strong>Organizational Vulnerabilities:</strong> Missing policies, insufficient training, weak processes
+- <strong>Physical Vulnerabilities:</strong> Insufficient access control, missing redundancy</p>
+<p><strong>Sources for Risk Identification:</strong>
+- Threat Intelligence (CERT, MITRE ATT&amp;CK, vendor advisories)
+- Vulnerability Scans (CVE, CVSS)
+- Penetration Tests
+- Security Incidents and Lessons Learned
+- Audit Findings
+- Compliance Requirements</p>
+<h3 id="33-risk-assessment">3.3 Risk Assessment</h3>
+<p><strong>Assessment Scales:</strong></p>
+<p><strong>Likelihood:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Description</th>
+<th>Frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 - Very Unlikely</td>
+<td>Event is theoretically possible but very unlikely</td>
+<td>&lt; 1 in 10 years</td>
+</tr>
+<tr>
+<td>2 - Unlikely</td>
+<td>Event could occur but is unlikely</td>
+<td>1 in 5-10 years</td>
+</tr>
+<tr>
+<td>3 - Possible</td>
+<td>Event could occur</td>
+<td>1 in 1-5 years</td>
+</tr>
+<tr>
+<td>4 - Likely</td>
+<td>Event will probably occur</td>
+<td>1-5 times per year</td>
+</tr>
+<tr>
+<td>5 - Very Likely</td>
+<td>Event will almost certainly occur</td>
+<td>&gt; 5 times per year</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Impact:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Description</th>
+<th>Financial Damage</th>
+<th>Reputational Damage</th>
+<th>Compliance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 - Negligible</td>
+<td>Minimal impact</td>
+<td>&lt; €10,000</td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr>
+<td>2 - Low</td>
+<td>Minor impact</td>
+<td>€10,000 - €50,000</td>
+<td>Local</td>
+<td>Minor violations</td>
+</tr>
+<tr>
+<td>3 - Medium</td>
+<td>Moderate impact</td>
+<td>€50,000 - €250,000</td>
+<td>Regional</td>
+<td>Reportable incidents</td>
+</tr>
+<tr>
+<td>4 - High</td>
+<td>Significant impact</td>
+<td>€250,000 - €1M</td>
+<td>National</td>
+<td>Fines</td>
+</tr>
+<tr>
+<td>5 - Very High</td>
+<td>Catastrophic impact</td>
+<td>&gt; €1M</td>
+<td>International</td>
+<td>Business prohibition</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Risk Matrix:</strong></p>
+<div class="codehilite"><pre><span></span><code>Impact ↑
+  5 │  M   H   H   VH  VH
+  4 │  M   M   H   H   VH
+  3 │  L   M   M   H   H
+  2 │  L   L   M   M   H
+  1 │  VL  L   L   M   M
+    └─────────────────────→ Likelihood
+      1   2   3   4   5
+
+Legend:
+VL = Very Low
+L  = Low
+M  = Medium
+H  = High
+VH = Very High
+</code></pre></div>
+
+<p><strong>Risk Score Calculation:</strong></p>
+<div class="codehilite"><pre><span></span><code>Risk Score = Likelihood × Impact
+
+Example:
+Likelihood = 4 (Likely)
+Impact = 3 (Medium)
+Risk Score = 4 × 3 = 12 (High)
+</code></pre></div>
+
+<h3 id="34-risk-owner">3.4 Risk Owner</h3>
+<p><strong>Responsibilities:</strong>
+- Each identified risk has a risk owner
+- Risk owner is responsible for risk treatment
+- Typically: Asset owner, process owner, or CISO</p>
+<p><strong>Escalation:</strong>
+- High and very high risks are escalated to management
+- See <code>0070_ISMS_Risk_Acceptance_Criteria.md</code></p>
+<h2 id="4-sources-for-risk-information">4. Sources for Risk Information</h2>
+<h3 id="41-threat-intelligence">4.1 Threat Intelligence</h3>
+<p><strong>External Sources:</strong>
+- <strong>CERT-Bund:</strong> https://www.cert-bund.de/
+- <strong>MITRE ATT&amp;CK:</strong> https://attack.mitre.org/
+- <strong>NIST NVD:</strong> https://nvd.nist.gov/
+- <strong>Vendor Security Advisories:</strong> Microsoft, Cisco, etc.
+- <strong>Threat Intelligence Feeds:</strong> [TODO: Commercial feeds]</p>
+<p><strong>Internal Sources:</strong>
+- Security incidents and lessons learned
+- Penetration test reports
+- Red team exercises</p>
+<h3 id="42-vulnerabilities">4.2 Vulnerabilities</h3>
+<p><strong>Vulnerability Scanning:</strong>
+- <strong>Tools:</strong> [TODO: Nessus, Qualys, OpenVAS]
+- <strong>Frequency:</strong> Weekly (automated)
+- <strong>Scope:</strong> All systems in ISMS scope</p>
+<p><strong>CVE and CVSS:</strong>
+- Common Vulnerabilities and Exposures (CVE)
+- Common Vulnerability Scoring System (CVSS)
+- Prioritization by CVSS score</p>
+<p><strong>Patch Management:</strong>
+- See <code>0340_Policy_Vulnerability_and_Patch_Management.md</code></p>
+<h3 id="43-incidents-and-findings">4.3 Incidents and Findings</h3>
+<p><strong>Security Incidents:</strong>
+- Each incident is reviewed for risk relevance
+- Lessons learned flow into risk analysis
+- See <code>0400_Policy_Incident_Management.md</code></p>
+<p><strong>Audit Findings:</strong>
+- Internal and external audit findings
+- Findings are assessed as risks
+- See <code>0130_ISMS_Internal_Audit_Program.md</code></p>
+<h2 id="5-outputs-of-risk-management">5. Outputs of Risk Management</h2>
+<h3 id="51-risk-register">5.1 Risk Register</h3>
+<p><strong>Content:</strong>
+- All identified risks
+- Risk assessment (likelihood, impact, score)
+- Risk owner
+- Risk treatment strategy
+- Status and measures</p>
+<p><strong>Document:</strong> <code>0080_ISMS_Risk_Register_Template.md</code></p>
+<p><strong>Maintenance:</strong>
+- Quarterly review
+- Event-driven updates (new threats, incidents)</p>
+<h3 id="52-risk-treatment-plan-rtp">5.2 Risk Treatment Plan (RTP)</h3>
+<p><strong>Content:</strong>
+- Planned measures for risk treatment
+- Responsible parties and deadlines
+- Budget and resources
+- Prioritization</p>
+<p><strong>Document:</strong> <code>0090_ISMS_Risk_Treatment_Plan_RTP_Template.md</code></p>
+<p><strong>Tracking:</strong>
+- Measures are tracked in RTP
+- Regular reporting to CISO and management</p>
+<h3 id="53-statement-of-applicability-soa">5.3 Statement of Applicability (SoA)</h3>
+<p><strong>Content:</strong>
+- Selection and justification of Annex A controls
+- Based on risk analysis and compliance requirements
+- Documentation of exclusions</p>
+<p><strong>Document:</strong> <code>0100_ISMS_Statement_of_Applicability_SoA_Template.md</code></p>
+<p><strong>Relationship:</strong>
+- Risk analysis → Identification of required controls
+- SoA → Documentation of control selection
+- RTP → Implementation of controls</p>
+<h2 id="6-risk-management-cycle">6. Risk Management Cycle</h2>
+<h3 id="61-regular-review">6.1 Regular Review</h3>
+<p><strong>Frequency:</strong>
+- <strong>Quarterly:</strong> Review of risk register
+- <strong>Annually:</strong> Complete risk analysis
+- <strong>Event-driven:</strong> For significant changes</p>
+<p><strong>Triggers for Event-Driven Review:</strong>
+- New threats (e.g., zero-day exploits)
+- Significant organizational changes
+- New compliance requirements
+- Major security incidents
+- Audit findings</p>
+<h3 id="62-risk-monitoring">6.2 Risk Monitoring</h3>
+<p><strong>Continuous Monitoring:</strong>
+- Security monitoring (SIEM, IDS/IPS)
+- Vulnerability scanning
+- Threat intelligence feeds
+- Incident tracking</p>
+<p><strong>KPIs:</strong>
+- Number of open risks (by risk level)
+- Average time to risk remediation
+- Number of accepted risks
+- Trend of risk scores</p>
+<p><strong>Reporting:</strong>
+- Quarterly to information security committee
+- Annually in management review</p>
+<h3 id="63-continuous-improvement">6.3 Continuous Improvement</h3>
+<p><strong>Lessons Learned:</strong>
+- From security incidents
+- From audit findings
+- From penetration tests</p>
+<p><strong>Improvement Measures:</strong>
+- Adjustment of risk assessment scales
+- Improvement of risk identification methods
+- Optimization of risk management process</p>
+<h2 id="7-roles-and-responsibilities">7. Roles and Responsibilities</h2>
+<h3 id="71-raci-matrix-risk-management">7.1 RACI Matrix: Risk Management</h3>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>CISO</th>
+<th>ISMS Manager</th>
+<th>Risk Owner</th>
+<th>IT Operations</th>
+<th>Management</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Define risk management methodology</td>
+<td>R/A</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Risk identification</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Risk assessment</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Plan risk treatment</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Implement measures</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>R</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Risk acceptance (low/medium)</td>
+<td>A</td>
+<td>I</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Risk acceptance (high/very high)</td>
+<td>C</td>
+<td>I</td>
+<td>C</td>
+<td>I</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Risk monitoring</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Risk reporting</td>
+<td>R</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legend:</strong> R = Responsible, A = Accountable, C = Consulted, I = Informed</p>
+<h2 id="8-references">8. References</h2>
+<h3 id="internal-documents">Internal Documents</h3>
+<ul>
+<li><code>0020_ISMS_Scope.md</code> - ISMS Scope</li>
+<li><code>0040_ISMS_Governance_Roles_and_Responsibilities.md</code> - Governance</li>
+<li><code>0070_ISMS_Risk_Acceptance_Criteria.md</code> - Risk Acceptance Criteria</li>
+<li><code>0080_ISMS_Risk_Register_Template.md</code> - Risk Register</li>
+<li><code>0090_ISMS_Risk_Treatment_Plan_RTP_Template.md</code> - Risk Treatment Plan</li>
+<li><code>0100_ISMS_Statement_of_Applicability_SoA_Template.md</code> - SoA</li>
+<li><code>0340_Policy_Vulnerability_and_Patch_Management.md</code> - Vulnerability Management</li>
+<li><code>0400_Policy_Incident_Management.md</code> - Incident Management</li>
+</ul>
+<h3 id="external-standards">External Standards</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022</strong> - Clause 6.1.2: Information security risk assessment</li>
+<li><strong>ISO/IEC 27001:2022</strong> - Clause 6.1.3: Information security risk treatment</li>
+<li><strong>ISO/IEC 27005:2022</strong> - Information security risk management</li>
+<li><strong>NIST SP 800-30</strong> - Guide for Conducting Risk Assessments</li>
+</ul>
+<hr />
+<p><strong>Approved by:</strong><br />
+Thomas Weber, CISO<br />
+{{ meta.management.ceo }}, Management<br />
+Date: {{ meta.document.approval_date }}</p>
+<p><strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0050_ISMS_Document_Control.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0070_ISMS_Risk_Acceptance_Criteria.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

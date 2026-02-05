@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0410 - Richtlinie: Incident Response und Major Incident Prozess</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0410</div>
+            <h1>Richtlinie: Incident Response und Major Incident Prozess</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0400_Policy_Incident_Management.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0420_Policy_Backup_und_Wiederherstellung.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="richtlinie-incident-response-und-major-incident-prozess">Richtlinie: Incident Response und Major Incident Prozess</h1>
+<p><strong>Dokument-ID:</strong> 0410<br />
+<strong>Dokumenttyp:</strong> Richtlinie (detailliert)<br />
+<strong>Zugehörige Policy:</strong> 0400_Policy_Incident_Management.md<br />
+<strong>Standard-Referenz:</strong> ISO/IEC 27001:2022 Annex A.5.24, A.5.25, A.5.26<br />
+<strong>Owner:</strong> {{ meta.it_operations.manager }}<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Freigegeben<br />
+<strong>Klassifizierung:</strong> Vertraulich<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.date }}</p>
+<hr />
+<h2 id="1-zweck-und-geltungsbereich">1. Zweck und Geltungsbereich</h2>
+<p>Diese Richtlinie konkretisiert die <code>0400_Policy_Incident_Management.md</code> und definiert:
+- Incident-Response-Prozesse und -Workflows
+- Major-Incident-Management
+- Security-Incident-Response und Forensik</p>
+<p><strong>Geltungsbereich:</strong> Alle Incidents bei <strong>AdminSend GmbH</strong></p>
+<h2 id="2-incident-kategorien">2. Incident-Kategorien</h2>
+<h3 id="21-severity-level">2.1 Severity-Level</h3>
+<table>
+<thead>
+<tr>
+<th>Severity</th>
+<th>Definition</th>
+<th>Beispiele</th>
+<th>Response-Zeit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P1 (Critical)</td>
+<td>Kritischer Service-Ausfall</td>
+<td>Produktionsausfall, Datenverlust, aktiver Cyberangriff</td>
+<td>15 Minuten</td>
+</tr>
+<tr>
+<td>P2 (High)</td>
+<td>Schwere Beeinträchtigung</td>
+<td>Performance-Probleme, Teilausfall</td>
+<td>1 Stunde</td>
+</tr>
+<tr>
+<td>P3 (Medium)</td>
+<td>Moderate Beeinträchtigung</td>
+<td>Einzelne Nutzer betroffen</td>
+<td>4 Stunden</td>
+</tr>
+<tr>
+<td>P4 (Low)</td>
+<td>Geringe Beeinträchtigung</td>
+<td>Kosmetische Fehler</td>
+<td>1 Arbeitstag</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-security-incidents">2.2 Security Incidents</h3>
+<p><strong>Kategorien:</strong>
+- Malware-Infektionen
+- Phishing-Angriffe
+- Unauthorized Access
+- Data Breaches
+- DDoS-Angriffe
+- Insider Threats</p>
+<p><strong>Alle Security Incidents mindestens P2</strong></p>
+<h2 id="3-incident-response-prozess">3. Incident-Response-Prozess</h2>
+<h3 id="31-detection-reporting">3.1 Detection &amp; Reporting</h3>
+<p><strong>Meldewege:</strong>
+- <strong>IT-Support:</strong> {{ meta.support.phone }}, {{ meta.support.email }}
+- <strong>Security-Team:</strong> {{ meta.security.email }}, {{ meta.security.phone }}
+- <strong>Self-Service-Portal:</strong> {{ meta.itsm.portal }}</p>
+<p><strong>Pflichtangaben:</strong>
+- Beschreibung des Problems
+- Betroffene Systeme/Nutzer
+- Zeitpunkt des Auftretens
+- Auswirkungen</p>
+<h3 id="32-triage-classification">3.2 Triage &amp; Classification</h3>
+<p><strong>Prozess:</strong>
+1. Incident-Ticket erstellen
+2. Severity-Level bestimmen
+3. Kategorie zuordnen
+4. Zuständiges Team zuweisen
+5. Erste Response innerhalb SLA</p>
+<p><strong>Eskalation:</strong>
+- P1: Sofortige Eskalation an On-Call
+- P2: Eskalation nach 1 Stunde ohne Fortschritt
+- Security Incidents: Parallel an Security-Team</p>
+<h3 id="33-investigation-diagnosis">3.3 Investigation &amp; Diagnosis</h3>
+<p><strong>Schritte:</strong>
+1. Symptome analysieren
+2. Logs prüfen
+3. Betroffene Systeme identifizieren
+4. Root Cause ermitteln
+5. Workaround identifizieren (falls möglich)</p>
+<p><strong>Dokumentation:</strong>
+- Alle Schritte im Ticket dokumentieren
+- Logs und Screenshots anhängen
+- Zeitstempel für alle Aktionen</p>
+<h3 id="34-resolution-recovery">3.4 Resolution &amp; Recovery</h3>
+<p><strong>Prozess:</strong>
+1. Fix implementieren oder Workaround anwenden
+2. Funktionstest durchführen
+3. Nutzer informieren
+4. Monitoring auf Wiederauftreten</p>
+<p><strong>Verifizierung:</strong>
+- Nutzer bestätigt Lösung
+- Monitoring zeigt normale Werte
+- Keine weiteren Meldungen</p>
+<h3 id="35-closure-post-incident-review">3.5 Closure &amp; Post-Incident Review</h3>
+<p><strong>Closure:</strong>
+- Ticket schließen nach Nutzer-Bestätigung
+- Dokumentation vervollständigen
+- Kategorisierung prüfen</p>
+<p><strong>Post-Incident Review (PIR):</strong>
+- Bei P1/P2 Incidents verpflichtend
+- Innerhalb 7 Tage nach Closure
+- Lessons Learned dokumentieren
+- Verbesserungsmaßnahmen definieren</p>
+<h2 id="4-major-incident-management">4. Major Incident Management</h2>
+<h3 id="41-major-incident-kriterien">4.1 Major Incident Kriterien</h3>
+<p><strong>Ein Incident ist "Major" wenn:</strong>
+- Severity P1
+- Mehrere kritische Services betroffen
+- Viele Nutzer betroffen (&gt; 100)
+- Medienaufmerksamkeit möglich
+- Regulatorische Meldepflicht</p>
+<h3 id="42-major-incident-team">4.2 Major Incident Team</h3>
+<p><strong>Rollen:</strong>
+- <strong>Incident Manager:</strong> Koordination, Kommunikation
+- <strong>Technical Lead:</strong> Technische Lösung
+- <strong>Communications Lead:</strong> Stakeholder-Kommunikation
+- <strong>Security Lead:</strong> Bei Security Incidents
+- <strong>Management Representative:</strong> Entscheidungen</p>
+<p><strong>Verfügbarkeit:</strong> 24/7 On-Call-Rotation</p>
+<h3 id="43-major-incident-prozess">4.3 Major Incident Prozess</h3>
+<p><strong>Phase 1: Mobilisierung (0-15 Minuten)</strong>
+1. Major Incident deklarieren
+2. Major Incident Team alarmieren
+3. War Room einrichten (physisch oder virtuell)
+4. Incident-Bridge aufbauen (Telefonkonferenz)</p>
+<p><strong>Phase 2: Containment (15-60 Minuten)</strong>
+1. Auswirkungen begrenzen
+2. Workaround implementieren (falls möglich)
+3. Stakeholder informieren
+4. Monitoring intensivieren</p>
+<p><strong>Phase 3: Resolution (variabel)</strong>
+1. Root Cause identifizieren
+2. Permanente Lösung implementieren
+3. Schrittweise Wiederherstellung
+4. Verifizierung</p>
+<p><strong>Phase 4: Recovery (variabel)</strong>
+1. Alle Services wiederhergestellt
+2. Monitoring auf Normalzustand
+3. Nutzer informieren
+4. Major Incident beenden</p>
+<p><strong>Phase 5: Post-Incident Review (innerhalb 48 Stunden)</strong>
+1. Timeline rekonstruieren
+2. Root Cause Analysis
+3. Lessons Learned
+4. Action Items definieren
+5. Management-Bericht</p>
+<h3 id="44-kommunikation">4.4 Kommunikation</h3>
+<p><strong>Interne Kommunikation:</strong>
+- Status-Updates alle 30 Minuten
+- Stakeholder-Benachrichtigungen
+- Intranet-Status-Page</p>
+<p><strong>Externe Kommunikation:</strong>
+- Kunden-Benachrichtigungen (falls zutreffend)
+- Medien-Statement (bei Bedarf)
+- Regulatorische Meldungen</p>
+<h2 id="5-security-incident-response">5. Security Incident Response</h2>
+<h3 id="51-security-incident-response-team-sirt">5.1 Security Incident Response Team (SIRT)</h3>
+<p><strong>Mitglieder:</strong>
+- CISO oder Security Lead
+- IT-Security-Analysten
+- IT-Forensik-Experte
+- Legal/Compliance
+- HR (bei Insider Threats)</p>
+<h3 id="52-security-incident-prozess">5.2 Security Incident Prozess</h3>
+<p><strong>Phase 1: Preparation</strong>
+- Incident-Response-Plan aktuell
+- Tools und Playbooks bereit
+- Team geschult</p>
+<p><strong>Phase 2: Identification</strong>
+- Security-Event detektiert (SIEM, EDR, etc.)
+- Triage: Ist es ein Incident?
+- Severity bestimmen</p>
+<p><strong>Phase 3: Containment</strong>
+- <strong>Short-term:</strong> Sofortige Maßnahmen (Account sperren, Netzwerk isolieren)
+- <strong>Long-term:</strong> Dauerhafte Isolation</p>
+<p><strong>Phase 4: Eradication</strong>
+- Malware entfernen
+- Schwachstellen patchen
+- Kompromittierte Credentials ändern</p>
+<p><strong>Phase 5: Recovery</strong>
+- Systeme wiederherstellen
+- Monitoring intensivieren
+- Schrittweise Rückkehr zum Normalbetrieb</p>
+<p><strong>Phase 6: Lessons Learned</strong>
+- Post-Incident Review
+- Playbook-Updates
+- Training-Bedarf identifizieren</p>
+<h3 id="53-forensik">5.3 Forensik</h3>
+<p><strong>Wann erforderlich:</strong>
+- Data Breaches
+- Insider Threats
+- Rechtliche Ermittlungen
+- Schwere Security Incidents</p>
+<p><strong>Prozess:</strong>
+1. <strong>Preservation:</strong> Beweise sichern
+2. <strong>Collection:</strong> Daten sammeln (Disk Images, Logs, Memory Dumps)
+3. <strong>Analysis:</strong> Forensische Analyse
+4. <strong>Reporting:</strong> Forensik-Bericht
+5. <strong>Chain of Custody:</strong> Lückenlose Dokumentation</p>
+<p><strong>Tools:</strong> {{ meta.security.forensics_tools }}</p>
+<h3 id="54-meldepflichten">5.4 Meldepflichten</h3>
+<p><strong>Intern:</strong>
+- CISO: Sofort
+- Management: Innerhalb 4 Stunden
+- Datenschutzbeauftragter: Bei Datenschutzverletzung</p>
+<p><strong>Extern:</strong>
+- <strong>DSGVO:</strong> Datenschutzbehörde innerhalb 72 Stunden (bei Datenschutzverletzung)
+- <strong>Betroffene Personen:</strong> Ohne unangemessene Verzögerung
+- <strong>Strafverfolgung:</strong> Bei kriminellen Handlungen</p>
+<h2 id="6-incident-kommunikation">6. Incident-Kommunikation</h2>
+<h3 id="61-status-updates">6.1 Status-Updates</h3>
+<p><strong>Frequenz:</strong>
+- P1: Alle 30 Minuten
+- P2: Alle 2 Stunden
+- P3/P4: Täglich</p>
+<p><strong>Kanäle:</strong>
+- E-Mail an Stakeholder
+- Status-Page ({{ meta.status.url }})
+- Intranet-Benachrichtigungen</p>
+<h3 id="62-stakeholder-matrix">6.2 Stakeholder-Matrix</h3>
+<table>
+<thead>
+<tr>
+<th>Stakeholder</th>
+<th>P1</th>
+<th>P2</th>
+<th>P3</th>
+<th>P4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Betroffene Nutzer</td>
+<td>Sofort</td>
+<td>1h</td>
+<td>4h</td>
+<td>1d</td>
+</tr>
+<tr>
+<td>Management</td>
+<td>15min</td>
+<td>2h</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CISO (Security)</td>
+<td>Sofort</td>
+<td>Sofort</td>
+<td>4h</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Kunden (extern)</td>
+<td>1h</td>
+<td>4h</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-compliance-und-audit">7. Compliance und Audit</h2>
+<h3 id="71-messgroen-kpis">7.1 Messgrößen (KPIs)</h3>
+<table>
+<thead>
+<tr>
+<th>Metrik</th>
+<th>Zielwert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P1 Response-Zeit</td>
+<td>&lt; 15 Minuten</td>
+</tr>
+<tr>
+<td>P1 Resolution-Zeit</td>
+<td>&lt; 4 Stunden</td>
+</tr>
+<tr>
+<td>Major Incident PIR-Completion</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Security Incident Detection-Zeit</td>
+<td>&lt; 1 Stunde</td>
+</tr>
+</tbody>
+</table>
+<h3 id="72-audit-nachweise">7.2 Audit-Nachweise</h3>
+<ul>
+<li>Incident-Tickets und -Logs</li>
+<li>Post-Incident-Review-Berichte</li>
+<li>Kommunikations-Logs</li>
+<li>Forensik-Berichte (bei Security Incidents)</li>
+</ul>
+<h2 id="8-referenzen">8. Referenzen</h2>
+<h3 id="interne-dokumente">Interne Dokumente</h3>
+<ul>
+<li><code>0400_Policy_Incident_Management.md</code></li>
+<li><code>0320_Policy_Logging_und_Monitoring.md</code></li>
+</ul>
+<h3 id="externe-standards">Externe Standards</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.24</strong> - Information security incident management planning</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.25</strong> - Assessment and decision on information security events</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.26</strong> - Response to information security incidents</li>
+<li><strong>NIST SP 800-61</strong> - Computer Security Incident Handling Guide</li>
+</ul>
+<hr />
+<p><strong>Genehmigt durch:</strong> Thomas Weber, CISO<br />
+<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0400_Policy_Incident_Management.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0420_Policy_Backup_und_Wiederherstellung.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0510 - Guideline: MDM, Bring Your Own Device and Remote Access</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0510</div>
+            <h1>Guideline: MDM, Bring Your Own Device and Remote Access</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0500_Policy_Mobile_Device_and_Remote_Work.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0520_Policy_HR_Security.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="guideline-mdm-bring-your-own-device-and-remote-access">Guideline: MDM, Bring Your Own Device and Remote Access</h1>
+<p><strong>Document ID:</strong> 0510<br />
+<strong>Document Type:</strong> Guideline (detailed)<br />
+<strong>Associated Policy:</strong> 0500_Policy_Mobile_Device_and_Remote_Work.md<br />
+<strong>Standard Reference:</strong> ISO/IEC 27001:2022 Annex A.6.7, A.8.9<br />
+<strong>Owner:</strong> {{ meta.it_operations.manager }}<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Approved<br />
+<strong>Classification:</strong> Internal<br />
+<strong>Last Updated:</strong> {{ meta.document.date }}</p>
+<hr />
+<h2 id="1-purpose-and-scope">1. Purpose and Scope</h2>
+<p>This guideline specifies the <code>0500_Policy_Mobile_Device_and_Remote_Work.md</code> and defines:
+- Mobile Device Management (MDM) requirements
+- BYOD guidelines and processes
+- Remote access controls</p>
+<p><strong>Scope:</strong> All mobile devices and remote access at <strong>AdminSend GmbH</strong></p>
+<h2 id="2-mobile-device-management-mdm">2. Mobile Device Management (MDM)</h2>
+<h3 id="21-mdm-system">2.1 MDM System</h3>
+<p><strong>Platform:</strong> {{ meta.mdm.system }} (e.g., Microsoft Intune, Jamf, MobileIron)</p>
+<p><strong>Managed Devices:</strong>
+- Corporate-owned smartphones and tablets
+- BYOD devices with corporate access
+- Laptops (optional, depending on MDM capability)</p>
+<h3 id="22-mdm-enrollment">2.2 MDM Enrollment</h3>
+<p><strong>Process:</strong>
+1. Receive device or BYOD request approved
+2. Install MDM app
+3. Perform enrollment
+4. Pass compliance checks
+5. Corporate access activated</p>
+<p><strong>Mandatory Enrollment:</strong>
+- All corporate-owned devices
+- All BYOD devices with email access or corporate apps</p>
+<h3 id="23-mdm-policies">2.3 MDM Policies</h3>
+<p><strong>Enforced Settings:</strong>
+- Device encryption enabled
+- PIN/passcode (min. 6 characters) or biometrics
+- Automatic screen lock (5 minutes)
+- OS updates within 30 days
+- Jailbreak/root detection</p>
+<p><strong>Prohibited Activities:</strong>
+- Jailbreak or rooting
+- Installation from unknown sources
+- Disabling security features</p>
+<h3 id="24-compliance-checks">2.4 Compliance Checks</h3>
+<p><strong>Automatic Checks:</strong>
+- OS version current?
+- Encryption active?
+- Jailbreak/root detected?
+- Malware detected?</p>
+<p><strong>For Non-Compliance:</strong>
+- Warning to user (24-hour deadline)
+- Restricted access
+- Complete block after 7 days</p>
+<h2 id="3-byod-bring-your-own-device">3. BYOD (Bring Your Own Device)</h2>
+<h3 id="31-byod-authorization">3.1 BYOD Authorization</h3>
+<p><strong>Prerequisites:</strong>
+- Request via self-service portal
+- Approval by supervisor
+- Sign BYOD agreement
+- MDM enrollment</p>
+<p><strong>Eligible Devices:</strong>
+- Smartphones (iOS, Android)
+- Tablets (iOS, Android)
+- Laptops (case-by-case review)</p>
+<h3 id="32-byod-agreement">3.2 BYOD Agreement</h3>
+<p><strong>Contents:</strong>
+- Terms of use
+- Security requirements
+- MDM enrollment requirement
+- Remote wipe consent
+- Data protection (separation private/business)
+- Liability for loss</p>
+<h3 id="33-containerization">3.3 Containerization</h3>
+<p><strong>Technology:</strong>
+- Separate containers for business data
+- Encrypted containers
+- No mixing private/business</p>
+<p><strong>Examples:</strong>
+- iOS: Managed Apps
+- Android: Work Profile
+- Windows: Windows Information Protection (WIP)</p>
+<h3 id="34-byod-offboarding">3.4 BYOD Offboarding</h3>
+<p><strong>At Contract End or BYOD Termination:</strong>
+1. Remote wipe of business container
+2. Removal of corporate apps
+3. Revocation of certificates
+4. MDM unenrollment
+5. Private data remains intact</p>
+<h2 id="4-remote-access">4. Remote Access</h2>
+<h3 id="41-vpn-access">4.1 VPN Access</h3>
+<p><strong>VPN System:</strong> {{ meta.network.vpn_solution }}</p>
+<p><strong>Requirements:</strong>
+- Multi-factor authentication (MFA)
+- Endpoint compliance check before connection
+- Split tunneling prohibited (full tunnel)
+- Session timeout: 8 hours</p>
+<p><strong>VPN Clients:</strong>
+- Corporate-approved clients
+- Automatic updates
+- Kill switch enabled</p>
+<h3 id="42-zero-trust-network-access-ztna">4.2 Zero Trust Network Access (ZTNA)</h3>
+<p><strong>Principles:</strong>
+- Never Trust, Always Verify
+- Least Privilege Access
+- Micro-segmentation</p>
+<p><strong>Implementation:</strong>
+- Identity-based access control
+- Device posture checks
+- Continuous authentication</p>
+<h3 id="43-remote-desktop">4.3 Remote Desktop</h3>
+<p><strong>Technologies:</strong>
+- RDP over VPN (Windows)
+- SSH over VPN (Linux)
+- Citrix/VMware Horizon (Virtual Desktops)</p>
+<p><strong>Security Controls:</strong>
+- MFA for remote desktop
+- Session recording (privileged access)
+- Idle timeout: 30 minutes</p>
+<h2 id="5-remote-work-security">5. Remote Work Security</h2>
+<h3 id="51-home-office-requirements">5.1 Home Office Requirements</h3>
+<p><strong>Network:</strong>
+- Secure Wi-Fi (WPA3 or WPA2)
+- No public Wi-Fi without VPN
+- Router firmware current</p>
+<p><strong>Workspace:</strong>
+- Private workspace (no third-party visibility)
+- Screen lock when absent
+- No use by family members</p>
+<h3 id="52-public-places">5.2 Public Places</h3>
+<p><strong>Allowed with Restrictions:</strong>
+- Work in cafes, airports, hotels
+- VPN mandatory
+- Privacy screen for laptop
+- No confidential conversations</p>
+<p><strong>Prohibited:</strong>
+- Public computers (internet cafes)
+- Unsecured Wi-Fi without VPN
+- Unattended device</p>
+<h3 id="53-travel">5.3 Travel</h3>
+<p><strong>International Travel:</strong>
+- Report to IT Security (high-risk countries)
+- Travel laptop without confidential data
+- Encryption mandatory
+- No use of local USB drives</p>
+<h2 id="6-mobile-application-management-mam">6. Mobile Application Management (MAM)</h2>
+<h3 id="61-approved-apps">6.1 Approved Apps</h3>
+<p><strong>Corporate Apps:</strong>
+- Email ({{ meta.email.mobile_app }})
+- Collaboration ({{ meta.collaboration.mobile_app }})
+- VPN client
+- Authenticator app</p>
+<p><strong>Approval Process:</strong>
+- Request via IT portal
+- Security review
+- Approval by IT Security</p>
+<h3 id="62-app-wrapping">6.2 App Wrapping</h3>
+<p><strong>For Corporate-Owned Apps:</strong>
+- MDM policies integrated into app
+- Enforce encryption
+- Copy/paste control</p>
+<h2 id="7-incident-response">7. Incident Response</h2>
+<h3 id="71-device-loss">7.1 Device Loss</h3>
+<p><strong>Immediate Actions:</strong>
+1. Report to IT Support ({{ meta.support.phone }})
+2. Trigger remote wipe (within 1 hour)
+3. Change passwords
+4. Create incident ticket
+5. Police report (in case of theft)</p>
+<h3 id="72-compromise">7.2 Compromise</h3>
+<p><strong>For Suspected Malware:</strong>
+1. Disconnect device from network
+2. Inform IT Security
+3. Forensic analysis (if required)
+4. Rebuild device
+5. Lessons learned</p>
+<h2 id="8-compliance-and-audit">8. Compliance and Audit</h2>
+<h3 id="81-metrics-kpis">8.1 Metrics (KPIs)</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Target Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MDM enrollment rate</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Compliance rate</td>
+<td>&gt; 95%</td>
+</tr>
+<tr>
+<td>OS update rate (30 days)</td>
+<td>&gt; 90%</td>
+</tr>
+<tr>
+<td>Remote wipe success rate</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="82-audit-evidence">8.2 Audit Evidence</h3>
+<ul>
+<li>MDM enrollment logs</li>
+<li>Compliance reports</li>
+<li>BYOD agreements</li>
+<li>Remote access logs</li>
+</ul>
+<h2 id="9-references">9. References</h2>
+<h3 id="internal-documents">Internal Documents</h3>
+<ul>
+<li><code>0500_Policy_Mobile_Device_and_Remote_Work.md</code></li>
+<li><code>0250_Guideline_MFA_Password_Rules_and_Session_Management.md</code></li>
+</ul>
+<h3 id="external-standards">External Standards</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.6.7</strong> - Remote working</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.8.9</strong> - Configuration management</li>
+<li><strong>NIST SP 800-124</strong> - Guidelines for Managing the Security of Mobile Devices</li>
+</ul>
+<hr />
+<p><strong>Approved by:</strong> Thomas Weber, CISO<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0500_Policy_Mobile_Device_and_Remote_Work.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0520_Policy_HR_Security.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

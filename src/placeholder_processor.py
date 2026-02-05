@@ -128,19 +128,21 @@ class PlaceholderProcessor:
     Processes templates to detect and replace placeholders.
     
     Placeholders follow the format: {{ source.field }}
-    where source is the data source name (e.g., "netbox", "meta")
+    where source is the data source name (e.g., "netbox", "meta", "meta-netbox")
     and field is the field path (e.g., "device_name" or "device.name")
     
     Supported sources:
     - netbox: NetBox data source for infrastructure data
     - meta: Meta data source for organization-wide metadata
+    - meta-netbox: NetBox metadata loaded from metadata-netbox.yaml
     - metadata: Legacy metadata source (date, author, version)
     """
     
     # Regex pattern for placeholder detection
     # Matches: {{ source.field }} where field can have dots for nested paths
-    # Supports any source name (netbox, meta, metadata, etc.)
-    PLACEHOLDER_PATTERN = re.compile(r'\{\{\s*(\w+)\.(\w+(?:\.\w+)*)\s*\}\}')
+    # Supports any source name (netbox, meta, metadata, meta-netbox, etc.)
+    # Source names can contain alphanumeric characters and hyphens
+    PLACEHOLDER_PATTERN = re.compile(r'\{\{\s*([\w-]+)\.(\w+(?:\.\w+)*)\s*\}\}')
     
     def __init__(self, data_sources: Optional[dict] = None, metadata: Optional[dict] = None):
         """
@@ -222,6 +224,53 @@ class PlaceholderProcessor:
         # Handle legacy metadata placeholders (date, author, version)
         if placeholder.source == 'metadata':
             return self._replace_metadata_placeholder(placeholder)
+        
+        # Route handbook placeholders to meta adapter
+        # {{ handbook.version }} should be handled by meta adapter as "handbook.version"
+        if placeholder.source == 'handbook':
+            if 'meta' not in self.data_sources:
+                context = ErrorContext(
+                    line_number=placeholder.line_number,
+                    placeholder=placeholder.raw,
+                    additional_info="Handbook placeholders require 'meta' data source"
+                )
+                warning = ErrorHandler.placeholder_error(
+                    context,
+                    "unknown_data_source",
+                    "Configure 'meta' data source to use handbook placeholders"
+                )
+                return None, warning
+            
+            # Route to meta adapter with full field path
+            adapter = self.data_sources['meta']
+            full_field_path = f"handbook.{placeholder.field}"
+            try:
+                value = adapter.get_field(full_field_path)
+                
+                if value is None:
+                    context = ErrorContext(
+                        line_number=placeholder.line_number,
+                        placeholder=placeholder.raw,
+                        additional_info=f"Field: {full_field_path}"
+                    )
+                    warning = ErrorHandler.placeholder_error(
+                        context,
+                        "field_not_found"
+                    )
+                    return None, warning
+                
+                return str(value), None
+            except Exception as e:
+                context = ErrorContext(
+                    line_number=placeholder.line_number,
+                    placeholder=placeholder.raw,
+                    additional_info=str(e)
+                )
+                warning = ErrorHandler.placeholder_error(
+                    context,
+                    "adapter_error"
+                )
+                return None, warning
         
         # Check if data source is available (handles both "meta" and "netbox" sources)
         if placeholder.source not in self.data_sources:

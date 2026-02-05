@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0070 - Modellierung: Bausteinzuordnung (Template)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0070</div>
+            <h1>Modellierung: Bausteinzuordnung (Template)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0060_Schutzbedarfsfeststellung_Template.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0080_Basis_Sicherheitscheck_Gapanalyse_Template.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="modellierung-bausteinzuordnung-template">Modellierung: Bausteinzuordnung (Template)</h1>
+<p><strong>Dokument-ID:</strong> 0070<br />
+<strong>Dokumenttyp:</strong> Methodik-Artefakt<br />
+<strong>Referenzrahmen:</strong> BSI IT-Grundschutz (BSI Standard 200-2, IT-Grundschutz-Kompendium)<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> {{ meta.document.status }}<br />
+<strong>Klassifizierung:</strong> internal<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.last_updated }}<br />
+<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-ziel-und-zweck">1. Ziel und Zweck</h2>
+<p>Die Modellierung ordnet den Objekten des Informationsverbunds von <strong>AdminSend GmbH</strong> geeignete IT-Grundschutz-Bausteine zu. Sie bildet die Grundlage für:
+- Basis-Sicherheitscheck (Dokument 0080)
+- Identifikation umzusetzender Anforderungen
+- Systematische Sicherheitsmaßnahmen-Planung</p>
+<p><strong>Verantwortlich:</strong> Thomas Weber (ISB)</p>
+<p><strong>Wichtig:</strong> Dieses Dokument referenziert nur Bausteine. Die vollständigen Bausteintexte befinden sich im BSI IT-Grundschutz-Kompendium und werden nicht kopiert.</p>
+<h2 id="2-it-grundschutz-bausteine-ubersicht">2. IT-Grundschutz-Bausteine: Übersicht</h2>
+<h3 id="21-bausteinstruktur">2.1 Bausteinstruktur</h3>
+<p>Das BSI IT-Grundschutz-Kompendium gliedert Bausteine in folgende Schichten:</p>
+<table>
+<thead>
+<tr>
+<th>Schicht</th>
+<th>Kürzel</th>
+<th>Beschreibung</th>
+<th>Beispiele</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ISMS</strong></td>
+<td>ISMS</td>
+<td>Sicherheitsmanagement</td>
+<td>ISMS.1 Sicherheitsmanagement</td>
+</tr>
+<tr>
+<td><strong>Organisation und Personal</strong></td>
+<td>ORP</td>
+<td>Organisatorische Prozesse</td>
+<td>ORP.1 Organisation, ORP.3 Sensibilisierung und Schulung</td>
+</tr>
+<tr>
+<td><strong>Konzeption und Vorgehensweisen</strong></td>
+<td>CON</td>
+<td>Konzepte und Methoden</td>
+<td>CON.1 Kryptokonzept, CON.3 Datensicherungskonzept</td>
+</tr>
+<tr>
+<td><strong>Betrieb</strong></td>
+<td>OPS</td>
+<td>IT-Betriebsprozesse</td>
+<td>OPS.1.1.2 Ordnungsgemäße IT-Administration</td>
+</tr>
+<tr>
+<td><strong>Detektion und Reaktion</strong></td>
+<td>DER</td>
+<td>Incident Management</td>
+<td>DER.1 Detektion von sicherheitsrelevanten Ereignissen</td>
+</tr>
+<tr>
+<td><strong>Systeme</strong></td>
+<td>SYS</td>
+<td>IT-Systeme</td>
+<td>SYS.1.1 Allgemeiner Server, SYS.2.1 Allgemeiner Client</td>
+</tr>
+<tr>
+<td><strong>Anwendungen</strong></td>
+<td>APP</td>
+<td>Anwendungssoftware</td>
+<td>APP.1.1 Office-Produkte, APP.3.1 Webanwendungen</td>
+</tr>
+<tr>
+<td><strong>IT-Systeme</strong></td>
+<td>NET</td>
+<td>Netzwerke und Kommunikation</td>
+<td>NET.1.1 Netzarchitektur und -design, NET.3.1 Router und Switches</td>
+</tr>
+<tr>
+<td><strong>Industrielle IT</strong></td>
+<td>IND</td>
+<td>OT/ICS-Systeme</td>
+<td>IND.1 Betriebs- und Steuerungstechnik</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-zuordnungslogik">2.2 Zuordnungslogik</h3>
+<p><strong>Prinzipien:</strong>
+1. <strong>Vollständigkeit:</strong> Alle relevanten Objekte erhalten Bausteinzuordnungen
+2. <strong>Angemessenheit:</strong> Bausteine passen zum Objekttyp und Schutzbedarf
+3. <strong>Keine Redundanz:</strong> Jeder Baustein wird nur einmal pro Objekt zugeordnet
+4. <strong>Granularität:</strong> Zuordnung auf sinnvoller Abstraktionsebene</p>
+<p><strong>Vorgehen:</strong>
+1. Objekte aus Strukturanalyse (Dokument 0050) übernehmen
+2. Passende Bausteine aus IT-Grundschutz-Kompendium identifizieren
+3. Zuordnung dokumentieren
+4. Validierung durch IT-Leitung und ISB</p>
+<h2 id="3-bausteinzuordnung">3. Bausteinzuordnung</h2>
+<h3 id="31-isms-und-organisation-isms-orp">3.1 ISMS und Organisation (ISMS, ORP)</h3>
+<table>
+<thead>
+<tr>
+<th>Objekt-ID</th>
+<th>Objekt</th>
+<th>Objektklasse</th>
+<th>Zugeordnete Bausteine</th>
+<th>Begründung</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ORG-001</td>
+<td>AdminSend GmbH</td>
+<td>Organisation</td>
+<td>ISMS.1 Sicherheitsmanagement</td>
+<td>Gesamtorganisation</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td>ORG-001</td>
+<td>AdminSend GmbH</td>
+<td>Organisation</td>
+<td>ORP.1 Organisation</td>
+<td>Organisationsstruktur</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td>ORG-001</td>
+<td>AdminSend GmbH</td>
+<td>Organisation</td>
+<td>ORP.2 Personal</td>
+<td>Personalmanagement</td>
+<td>[TODO: HR]</td>
+</tr>
+<tr>
+<td>ORG-001</td>
+<td>AdminSend GmbH</td>
+<td>Organisation</td>
+<td>ORP.3 Sensibilisierung und Schulung</td>
+<td>Awareness-Programm</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td>ORG-001</td>
+<td>AdminSend GmbH</td>
+<td>Organisation</td>
+<td>ORP.4 Identitäts- und Berechtigungsmanagement</td>
+<td>IAM-Prozesse</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>ORG-001</td>
+<td>AdminSend GmbH</td>
+<td>Organisation</td>
+<td>ORP.5 Compliance Management (Anforderungsmanagement)</td>
+<td>Compliance</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-konzeption-und-vorgehensweisen-con">3.2 Konzeption und Vorgehensweisen (CON)</h3>
+<table>
+<thead>
+<tr>
+<th>Objekt-ID</th>
+<th>Objekt</th>
+<th>Objektklasse</th>
+<th>Zugeordnete Bausteine</th>
+<th>Begründung</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CON-001</td>
+<td>Kryptokonzept</td>
+<td>Konzept</td>
+<td>CON.1 Kryptokonzept</td>
+<td>Verschlüsselungsstrategie</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td>CON-002</td>
+<td>Datensicherungskonzept</td>
+<td>Konzept</td>
+<td>CON.3 Datensicherungskonzept</td>
+<td>Backup-Strategie</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>CON-003</td>
+<td>Löschkonzept</td>
+<td>Konzept</td>
+<td>CON.6 Löschen und Vernichten</td>
+<td>Datenlöschung</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td>CON-004</td>
+<td>Patch- und Änderungsmanagement</td>
+<td>Konzept</td>
+<td>CON.7 Informationssicherheit auf Auslandsreisen</td>
+<td>[TODO: falls zutreffend]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>CON-005</td>
+<td>Softwareentwicklung</td>
+<td>Konzept</td>
+<td>CON.8 Software-Entwicklung</td>
+<td>[TODO: falls zutreffend]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="33-betrieb-ops">3.3 Betrieb (OPS)</h3>
+<table>
+<thead>
+<tr>
+<th>Objekt-ID</th>
+<th>Objekt</th>
+<th>Objektklasse</th>
+<th>Zugeordnete Bausteine</th>
+<th>Begründung</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OPS-001</td>
+<td>IT-Betrieb</td>
+<td>Betriebsprozess</td>
+<td>OPS.1.1.2 Ordnungsgemäße IT-Administration</td>
+<td>IT-Administration</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>OPS-002</td>
+<td>Patch Management</td>
+<td>Betriebsprozess</td>
+<td>OPS.1.1.3 Patch- und Änderungsmanagement</td>
+<td>Patch-Prozess</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>OPS-003</td>
+<td>Schutz vor Schadprogrammen</td>
+<td>Betriebsprozess</td>
+<td>OPS.1.1.4 Schutz vor Schadprogrammen</td>
+<td>Malware-Schutz</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>OPS-004</td>
+<td>Datensicherung</td>
+<td>Betriebsprozess</td>
+<td>OPS.1.1.5 Protokollierung</td>
+<td>Logging</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>OPS-005</td>
+<td>Software-Tests</td>
+<td>Betriebsprozess</td>
+<td>OPS.1.1.6 Software-Tests und -Freigaben</td>
+<td>[TODO: falls zutreffend]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>OPS-006</td>
+<td>Outsourcing</td>
+<td>Betriebsprozess</td>
+<td>OPS.2.1 Outsourcing für Kunden</td>
+<td>[TODO: falls zutreffend]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>OPS-007</td>
+<td>Cloud-Nutzung</td>
+<td>Betriebsprozess</td>
+<td>OPS.2.2 Cloud-Nutzung</td>
+<td>Cloud-Services</td>
+<td>Anna Schmidt</td>
+</tr>
+</tbody>
+</table>
+<h3 id="34-detektion-und-reaktion-der">3.4 Detektion und Reaktion (DER)</h3>
+<table>
+<thead>
+<tr>
+<th>Objekt-ID</th>
+<th>Objekt</th>
+<th>Objektklasse</th>
+<th>Zugeordnete Bausteine</th>
+<th>Begründung</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DER-001</td>
+<td>Detektion</td>
+<td>Prozess</td>
+<td>DER.1 Detektion von sicherheitsrelevanten Ereignissen</td>
+<td>SIEM, Monitoring</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>DER-002</td>
+<td>Incident Management</td>
+<td>Prozess</td>
+<td>DER.2.1 Behandlung von Sicherheitsvorfällen</td>
+<td>Incident Response</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td>DER-003</td>
+<td>Forensik</td>
+<td>Prozess</td>
+<td>DER.2.2 Vorsorge für die IT-Forensik</td>
+<td>[TODO: falls zutreffend]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>DER-004</td>
+<td>Audits</td>
+<td>Prozess</td>
+<td>DER.3.1 Audits und Revisionen</td>
+<td>Internal Audit</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="35-anwendungen-app">3.5 Anwendungen (APP)</h3>
+<table>
+<thead>
+<tr>
+<th>Objekt-ID</th>
+<th>Objekt</th>
+<th>Objektklasse</th>
+<th>Zugeordnete Bausteine</th>
+<th>Begründung</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A-001</td>
+<td>[TODO: Anwendung 1]</td>
+<td>Anwendung</td>
+<td>APP.1.1 Office-Produkte</td>
+<td>[TODO: falls Office-Anwendung]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>A-002</td>
+<td>[TODO: Anwendung 2]</td>
+<td>Anwendung</td>
+<td>APP.3.1 Webanwendungen</td>
+<td>[TODO: falls Webanwendung]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>A-003</td>
+<td>[TODO: Anwendung 3]</td>
+<td>Anwendung</td>
+<td>APP.3.2 Webserver</td>
+<td>[TODO: falls Webserver]</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>A-004</td>
+<td>[TODO: Anwendung 4]</td>
+<td>Anwendung</td>
+<td>APP.3.3 Fileserver</td>
+<td>[TODO: falls Fileserver]</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>A-005</td>
+<td>[TODO: Anwendung 5]</td>
+<td>Anwendung</td>
+<td>APP.3.6 DNS-Server</td>
+<td>[TODO: falls DNS]</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>A-006</td>
+<td>[TODO: Anwendung 6]</td>
+<td>Anwendung</td>
+<td>APP.4.3 Relationale Datenbanksysteme</td>
+<td>[TODO: falls Datenbank]</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>A-007</td>
+<td>[TODO: Anwendung 7]</td>
+<td>Anwendung</td>
+<td>APP.5.1 Allgemeine Groupware</td>
+<td>[TODO: falls Groupware]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>A-008</td>
+<td>[TODO: Anwendung 8]</td>
+<td>Anwendung</td>
+<td>APP.5.2 Microsoft Exchange und Outlook</td>
+<td>[TODO: falls Exchange]</td>
+<td>Anna Schmidt</td>
+</tr>
+</tbody>
+</table>
+<h3 id="36-it-systeme-sys">3.6 IT-Systeme (SYS)</h3>
+<table>
+<thead>
+<tr>
+<th>Objekt-ID</th>
+<th>Objekt</th>
+<th>Objektklasse</th>
+<th>Zugeordnete Bausteine</th>
+<th>Begründung</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S-001</td>
+<td>{{ netbox.device.server_001 }}</td>
+<td>Server</td>
+<td>SYS.1.1 Allgemeiner Server</td>
+<td>Allgemeiner Server</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>S-002</td>
+<td>[TODO: Linux-Server]</td>
+<td>Server</td>
+<td>SYS.1.3 Server unter Linux und Unix</td>
+<td>Linux-Server</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>S-003</td>
+<td>[TODO: Windows-Server]</td>
+<td>Server</td>
+<td>SYS.1.2.3 Windows Server</td>
+<td>Windows-Server</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>S-004</td>
+<td>[TODO: Virtualisierung]</td>
+<td>Virtualisierung</td>
+<td>SYS.1.5 Virtualisierung</td>
+<td>VMware/Hyper-V</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>S-005</td>
+<td>[TODO: Container]</td>
+<td>Container</td>
+<td>SYS.1.6 Containerisierung</td>
+<td>Docker/Kubernetes</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>S-006</td>
+<td>[TODO: Storage]</td>
+<td>Storage</td>
+<td>SYS.1.8 Speicherlösungen</td>
+<td>SAN/NAS</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>S-007</td>
+<td>[TODO: Client]</td>
+<td>Client</td>
+<td>SYS.2.1 Allgemeiner Client</td>
+<td>Workstations</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>S-008</td>
+<td>[TODO: Windows-Client]</td>
+<td>Client</td>
+<td>SYS.2.2.3 Clients unter Windows</td>
+<td>Windows-Clients</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>S-009</td>
+<td>[TODO: macOS-Client]</td>
+<td>Client</td>
+<td>SYS.2.4 Clients unter macOS</td>
+<td>macOS-Clients</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>S-010</td>
+<td>[TODO: Mobile Device]</td>
+<td>Mobile</td>
+<td>SYS.3.2.1 Allgemeine Smartphones und Tablets</td>
+<td>Mobile Devices</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>S-011</td>
+<td>[TODO: IoT]</td>
+<td>IoT</td>
+<td>SYS.4.4 Allgemeines IoT-Gerät</td>
+<td>[TODO: falls IoT]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="37-netzwerke-und-kommunikation-net">3.7 Netzwerke und Kommunikation (NET)</h3>
+<table>
+<thead>
+<tr>
+<th>Objekt-ID</th>
+<th>Objekt</th>
+<th>Objektklasse</th>
+<th>Zugeordnete Bausteine</th>
+<th>Begründung</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>N-001</td>
+<td>Netzwerkarchitektur</td>
+<td>Netzwerk</td>
+<td>NET.1.1 Netzarchitektur und -design</td>
+<td>Gesamtnetzwerk</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>N-002</td>
+<td>Netzwerkmanagement</td>
+<td>Netzwerk</td>
+<td>NET.1.2 Netzmanagement</td>
+<td>Netzwerk-Monitoring</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>N-003</td>
+<td>[TODO: Router/Switches]</td>
+<td>Netzwerkkomponente</td>
+<td>NET.3.1 Router und Switches</td>
+<td>Netzwerkgeräte</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>N-004</td>
+<td>[TODO: Firewall]</td>
+<td>Sicherheitskomponente</td>
+<td>NET.3.2 Firewall</td>
+<td>Perimeter-Schutz</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>N-005</td>
+<td>[TODO: VPN]</td>
+<td>Sicherheitskomponente</td>
+<td>NET.3.3 VPN</td>
+<td>Remote-Zugriff</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>N-006</td>
+<td>[TODO: WLAN]</td>
+<td>Netzwerk</td>
+<td>NET.2.1 WLAN-Betrieb</td>
+<td>Wireless-Netzwerk</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>N-007</td>
+<td>[TODO: E-Mail]</td>
+<td>Kommunikation</td>
+<td>NET.4.1 TLS-Verschlüsselung</td>
+<td>[TODO: falls zutreffend]</td>
+<td>Anna Schmidt</td>
+</tr>
+</tbody>
+</table>
+<h3 id="38-industrielle-it-ind-optional">3.8 Industrielle IT (IND) - Optional</h3>
+<table>
+<thead>
+<tr>
+<th>Objekt-ID</th>
+<th>Objekt</th>
+<th>Objektklasse</th>
+<th>Zugeordnete Bausteine</th>
+<th>Begründung</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IND-001</td>
+<td>[TODO: OT-System]</td>
+<td>OT/ICS</td>
+<td>IND.1 Betriebs- und Steuerungstechnik</td>
+<td>[TODO: falls OT im Scope]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>IND-002</td>
+<td>[TODO: ICS-Komponente]</td>
+<td>OT/ICS</td>
+<td>IND.2.1 Allgemeine ICS-Komponente</td>
+<td>[TODO: falls ICS im Scope]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="39-raume-und-infrastruktur-inf">3.9 Räume und Infrastruktur (INF)</h3>
+<table>
+<thead>
+<tr>
+<th>Objekt-ID</th>
+<th>Objekt</th>
+<th>Objektklasse</th>
+<th>Zugeordnete Bausteine</th>
+<th>Begründung</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R-001</td>
+<td>Rechenzentrum</td>
+<td>Raum</td>
+<td>INF.2 Rechenzentrum sowie Serverraum</td>
+<td>Kritischer Serverraum</td>
+<td>[TODO: Facility]</td>
+</tr>
+<tr>
+<td>R-002</td>
+<td>{{ meta.organization.primary_location }}</td>
+<td>Gebäude</td>
+<td>INF.1 Allgemeines Gebäude</td>
+<td>Hauptstandort</td>
+<td>[TODO: Facility]</td>
+</tr>
+<tr>
+<td>R-003</td>
+<td>[TODO: Büroraum]</td>
+<td>Raum</td>
+<td>INF.8 Häuslicher Arbeitsplatz</td>
+<td>[TODO: falls Home Office]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-zusammenfassung-und-statistik">4. Zusammenfassung und Statistik</h2>
+<h3 id="41-zuordnungsstatistik">4.1 Zuordnungsstatistik</h3>
+<table>
+<thead>
+<tr>
+<th>Bausteinschicht</th>
+<th>Anzahl zugeordneter Bausteine</th>
+<th>Anzahl betroffener Objekte</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ISMS</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>ORP (Organisation und Personal)</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>CON (Konzeption)</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>OPS (Betrieb)</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>DER (Detektion und Reaktion)</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>APP (Anwendungen)</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>SYS (Systeme)</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>NET (Netzwerke)</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>IND (Industrielle IT)</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>INF (Infrastruktur)</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td><strong>Gesamt</strong></td>
+<td><strong>[TODO]</strong></td>
+<td><strong>[TODO]</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-vollstandigkeitsprufung">4.2 Vollständigkeitsprüfung</h3>
+<table>
+<thead>
+<tr>
+<th>Objekttyp</th>
+<th>Anzahl Objekte</th>
+<th>Anzahl mit Bausteinzuordnung</th>
+<th>Vollständigkeit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Prozesse</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO: %]</td>
+</tr>
+<tr>
+<td>Anwendungen</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO: %]</td>
+</tr>
+<tr>
+<td>IT-Systeme</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO: %]</td>
+</tr>
+<tr>
+<td>Netzwerke</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO: %]</td>
+</tr>
+<tr>
+<td>Räume</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO: %]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="43-offene-punkte">4.3 Offene Punkte</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Objekt</th>
+<th>Problem</th>
+<th>Verantwortlich</th>
+<th>Frist</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO: Kein passender Baustein gefunden]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO: Unklare Zuordnung]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-validierung-und-qualitatssicherung">5. Validierung und Qualitätssicherung</h2>
+<h3 id="51-validierungsprozess">5.1 Validierungsprozess</h3>
+<p>Die Bausteinzuordnung wird validiert durch:
+1. <strong>Review durch IT-Leitung:</strong> Anna Schmidt - Technische Korrektheit
+2. <strong>Review durch Informationsverbund-Verantwortliche:</strong> Vollständigkeit
+3. <strong>Abgleich mit IT-Grundschutz-Kompendium:</strong> Aktualität der Bausteine
+4. <strong>Freigabe durch ISB:</strong> Thomas Weber</p>
+<h3 id="52-qualitatskriterien">5.2 Qualitätskriterien</h3>
+<table>
+<thead>
+<tr>
+<th>Kriterium</th>
+<th>Status</th>
+<th>Bemerkungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Alle Objekte haben Bausteinzuordnungen</td>
+<td>[TODO: ✓/✗]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Bausteine sind aktuell (IT-Grundschutz-Kompendium Edition [TODO])</td>
+<td>[TODO: ✓/✗]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Zuordnungen sind nachvollziehbar begründet</td>
+<td>[TODO: ✓/✗]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Keine Redundanzen</td>
+<td>[TODO: ✓/✗]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Owner sind benannt</td>
+<td>[TODO: ✓/✗]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-nachste-schritte">6. Nächste Schritte</h2>
+<p>Nach Abschluss der Modellierung folgen:
+1. <strong>Basis-Sicherheitscheck (Dokument 0080):</strong> Abgleich Soll-Ist für alle zugeordneten Bausteine
+2. <strong>Risikoanalyse (Dokument 0090):</strong> Für Objekte mit erhöhtem Schutzbedarf oder nicht modellierbaren Risiken
+3. <strong>Maßnahmenplanung (Dokument 0100):</strong> Umsetzungsplanung identifizierter Anforderungen</p>
+<h2 id="7-aktualisierung-und-pflege">7. Aktualisierung und Pflege</h2>
+<p>Die Bausteinzuordnung wird aktualisiert bei:
+- Neuen IT-Systemen oder Anwendungen
+- Änderungen in der IT-Architektur
+- Neuer Edition des IT-Grundschutz-Kompendiums
+- Mindestens jährlich im Rahmen des ISMS-Reviews</p>
+<p><strong>Verantwortlich:</strong> Thomas Weber (ISB)<br />
+<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+<h2 id="8-freigabe">8. Freigabe</h2>
+<table>
+<thead>
+<tr>
+<th>Rolle</th>
+<th>Name</th>
+<th>Datum</th>
+<th>Freigabe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ISB</td>
+<td>Thomas Weber</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+<tr>
+<td>IT-Leitung</td>
+<td>Anna Schmidt</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Referenzen:</strong>
+- BSI Standard 200-2: IT-Grundschutz-Methodik (Kapitel 7: Modellierung)
+- BSI IT-Grundschutz-Kompendium (aktuelle Edition)
+- BSI IT-Grundschutz-Kompendium: https://www.bsi.bund.de/grundschutz-kompendium</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0060_Schutzbedarfsfeststellung_Template.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0080_Basis_Sicherheitscheck_Gapanalyse_Template.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

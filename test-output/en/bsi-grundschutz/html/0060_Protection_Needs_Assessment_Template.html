@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0060 - Protection Needs Assessment (Template)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0060</div>
+            <h1>Protection Needs Assessment (Template)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0050_Structure_Analysis_Template.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0070_Modeling_Module_Assignment_Template.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="protection-needs-assessment-template">Protection Needs Assessment (Template)</h1>
+<p><strong>Document ID:</strong> 0060<br />
+<strong>Document Type:</strong> Methodology Artifact<br />
+<strong>Reference Framework:</strong> BSI IT-Grundschutz (BSI Standard 200-2)<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> {{ meta.document.status }}<br />
+<strong>Classification:</strong> internal<br />
+<strong>Last Updated:</strong> {{ meta.document.last_updated }}<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-objective-and-purpose">1. Objective and Purpose</h2>
+<p>The protection needs assessment systematically determines the protection requirements for business processes, information, applications, and IT systems of <strong>AdminSend GmbH</strong>. It forms the basis for:
+- Selection of appropriate security measures
+- Prioritization of security investments
+- Risk analysis (Document 0090)
+- Compliance evidence</p>
+<p><strong>Responsible:</strong> Thomas Weber (ISB)</p>
+<h2 id="2-protection-needs-categories-and-criteria">2. Protection Needs Categories and Criteria</h2>
+<h3 id="21-protection-objectives">2.1 Protection Objectives</h3>
+<p>The protection needs assessment is conducted for the following protection objectives:</p>
+<h4 id="211-confidentiality">2.1.1 Confidentiality</h4>
+<p>Protection against unauthorized disclosure of information.</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Description</th>
+<th>Damage Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Normal</strong></td>
+<td>Limited negative impacts</td>
+<td>Minor impairment, internal embarrassment</td>
+</tr>
+<tr>
+<td><strong>High</strong></td>
+<td>Considerable negative impacts</td>
+<td>Violation of laws, significant financial damage, reputational damage</td>
+</tr>
+<tr>
+<td><strong>Very High</strong></td>
+<td>Existential impacts</td>
+<td>Existential threat, catastrophic reputational damage, criminal consequences</td>
+</tr>
+</tbody>
+</table>
+<h4 id="212-integrity">2.1.2 Integrity</h4>
+<p>Protection against unauthorized modification of information.</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Description</th>
+<th>Damage Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Normal</strong></td>
+<td>Limited negative impacts</td>
+<td>Correctable errors, minor impact on business processes</td>
+</tr>
+<tr>
+<td><strong>High</strong></td>
+<td>Considerable negative impacts</td>
+<td>Significant business process disruptions, financial losses, compliance violations</td>
+</tr>
+<tr>
+<td><strong>Very High</strong></td>
+<td>Existential impacts</td>
+<td>Critical business process failures, existential financial damage</td>
+</tr>
+</tbody>
+</table>
+<h4 id="213-availability">2.1.3 Availability</h4>
+<p>Ensuring the availability of information and systems.</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Description</th>
+<th>Tolerable Downtime</th>
+<th>Damage Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Normal</strong></td>
+<td>Limited negative impacts</td>
+<td>&gt; 24 hours</td>
+<td>Minor productivity losses, inconveniences</td>
+</tr>
+<tr>
+<td><strong>High</strong></td>
+<td>Considerable negative impacts</td>
+<td>4-24 hours</td>
+<td>Significant productivity losses, customer complaints, financial losses</td>
+</tr>
+<tr>
+<td><strong>Very High</strong></td>
+<td>Existential impacts</td>
+<td>&lt; 4 hours</td>
+<td>Critical business process failures, massive financial losses, existential threat</td>
+</tr>
+</tbody>
+</table>
+<h4 id="214-authenticity-optional">2.1.4 Authenticity (Optional)</h4>
+<p>Ensuring the genuineness and credibility of information.</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Description</th>
+<th>Damage Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Normal</strong></td>
+<td>Limited negative impacts</td>
+<td>Minor doubts about authenticity, correctable</td>
+</tr>
+<tr>
+<td><strong>High</strong></td>
+<td>Considerable negative impacts</td>
+<td>Significant legal or financial consequences</td>
+</tr>
+<tr>
+<td><strong>Very High</strong></td>
+<td>Existential impacts</td>
+<td>Existential legal or financial consequences</td>
+</tr>
+</tbody>
+</table>
+<h4 id="215-accountability-optional">2.1.5 Accountability (Optional)</h4>
+<p>Ensuring the traceability of actions.</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Description</th>
+<th>Damage Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Normal</strong></td>
+<td>Limited negative impacts</td>
+<td>Difficult troubleshooting, minor compliance risks</td>
+</tr>
+<tr>
+<td><strong>High</strong></td>
+<td>Considerable negative impacts</td>
+<td>Compliance violations, difficult incident investigation</td>
+</tr>
+<tr>
+<td><strong>Very High</strong></td>
+<td>Existential impacts</td>
+<td>Severe compliance violations, impossible incident investigation</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-assessment-scale">2.2 Assessment Scale</h3>
+<p><strong>Assessment Criteria:</strong>
+- Legal and regulatory requirements (GDPR, IT Security Act, etc.)
+- Contractual obligations
+- Business criticality
+- Financial impacts
+- Reputational risks
+- Personal data
+- Trade secrets</p>
+<h2 id="3-protection-needs-assessment">3. Protection Needs Assessment</h2>
+<h3 id="31-business-processes">3.1 Business Processes</h3>
+<table>
+<thead>
+<tr>
+<th>Process ID</th>
+<th>Process</th>
+<th>Owner</th>
+<th>C</th>
+<th>I</th>
+<th>A</th>
+<th>Justification</th>
+<th>Overall Protection Need</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P-001</td>
+<td>[TODO: Process 1]</td>
+<td>[TODO]</td>
+<td>Normal/High/Very High</td>
+<td>Normal/High/Very High</td>
+<td>Normal/High/Very High</td>
+<td>[TODO: Justification]</td>
+<td>[TODO: Maximum Principle]</td>
+</tr>
+<tr>
+<td>P-002</td>
+<td>[TODO: Process 2]</td>
+<td>[TODO]</td>
+<td>Normal/High/Very High</td>
+<td>Normal/High/Very High</td>
+<td>Normal/High/Very High</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>P-003</td>
+<td>[TODO: Process 3]</td>
+<td>[TODO]</td>
+<td>Normal/High/Very High</td>
+<td>Normal/High/Very High</td>
+<td>Normal/High/Very High</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total Number of Processes:</strong> [TODO]<br />
+<strong>Distribution:</strong>
+- Normal: [TODO]
+- High: [TODO]
+- Very High: [TODO]</p>
+<h3 id="32-information-and-data">3.2 Information and Data</h3>
+<table>
+<thead>
+<tr>
+<th>Info ID</th>
+<th>Information/Data Type</th>
+<th>Process</th>
+<th>C</th>
+<th>I</th>
+<th>A</th>
+<th>Justification</th>
+<th>Overall Protection Need</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I-001</td>
+<td>Personal Data (GDPR)</td>
+<td>[TODO]</td>
+<td>High</td>
+<td>High</td>
+<td>Normal</td>
+<td>GDPR requirements</td>
+<td>High</td>
+</tr>
+<tr>
+<td>I-002</td>
+<td>Trade Secrets</td>
+<td>[TODO]</td>
+<td>Very High</td>
+<td>High</td>
+<td>Normal</td>
+<td>Competitive advantage</td>
+<td>Very High</td>
+</tr>
+<tr>
+<td>I-003</td>
+<td>Financial Data</td>
+<td>[TODO]</td>
+<td>High</td>
+<td>Very High</td>
+<td>High</td>
+<td>Legal requirements</td>
+<td>Very High</td>
+</tr>
+<tr>
+<td>I-004</td>
+<td>[TODO: Additional Data]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total Number of Information Types:</strong> [TODO]</p>
+<h3 id="33-applications">3.3 Applications</h3>
+<table>
+<thead>
+<tr>
+<th>Application ID</th>
+<th>Application</th>
+<th>Process</th>
+<th>C</th>
+<th>I</th>
+<th>A</th>
+<th>Justification</th>
+<th>Overall Protection Need</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A-001</td>
+<td>[TODO: Application 1]</td>
+<td>P-001</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Inherited from Process P-001</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>A-002</td>
+<td>[TODO: Application 2]</td>
+<td>P-002</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>A-003</td>
+<td>[TODO: Application 3]</td>
+<td>P-003</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total Number of Applications:</strong> [TODO]</p>
+<h3 id="34-it-systems-and-components">3.4 IT Systems and Components</h3>
+<table>
+<thead>
+<tr>
+<th>System ID</th>
+<th>System/Component</th>
+<th>Application</th>
+<th>C</th>
+<th>I</th>
+<th>A</th>
+<th>Justification</th>
+<th>Overall Protection Need</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S-001</td>
+<td>{{ netbox.device.server_001 }}</td>
+<td>A-001</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Inherited from Application A-001</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>S-002</td>
+<td>[TODO: System 2]</td>
+<td>A-002</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>S-003</td>
+<td>[TODO: System 3]</td>
+<td>A-003</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total Number of IT Systems:</strong> [TODO]</p>
+<h3 id="35-networks">3.5 Networks</h3>
+<table>
+<thead>
+<tr>
+<th>Network ID</th>
+<th>Network/Zone</th>
+<th>Systems</th>
+<th>C</th>
+<th>I</th>
+<th>A</th>
+<th>Justification</th>
+<th>Overall Protection Need</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>N-001</td>
+<td>Management Network</td>
+<td>S-001, S-002</td>
+<td>Very High</td>
+<td>Very High</td>
+<td>High</td>
+<td>Critical administrative access</td>
+<td>Very High</td>
+</tr>
+<tr>
+<td>N-002</td>
+<td>Production Network</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>N-003</td>
+<td>DMZ</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total Number of Networks:</strong> [TODO]</p>
+<h3 id="36-rooms-and-locations">3.6 Rooms and Locations</h3>
+<table>
+<thead>
+<tr>
+<th>Room ID</th>
+<th>Room/Location</th>
+<th>Systems</th>
+<th>C</th>
+<th>I</th>
+<th>A</th>
+<th>Justification</th>
+<th>Overall Protection Need</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R-001</td>
+<td>Data Center</td>
+<td>All critical servers</td>
+<td>Very High</td>
+<td>Very High</td>
+<td>Very High</td>
+<td>Hosting critical systems</td>
+<td>Very High</td>
+</tr>
+<tr>
+<td>R-002</td>
+<td>{{ meta.organization.primary_location }}</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total Number of Rooms:</strong> [TODO]</p>
+<h2 id="4-protection-needs-inheritance-and-dependencies">4. Protection Needs Inheritance and Dependencies</h2>
+<h3 id="41-inheritance-principle">4.1 Inheritance Principle</h3>
+<p>Protection needs are inherited according to the <strong>Maximum Principle</strong>:</p>
+<div class="codehilite"><pre><span></span><code>Business Process
+    ↓ (inherits protection need)
+Information
+    ↓ (inherits protection need)
+Applications
+    ↓ (inherits protection need)
+IT Systems
+    ↓ (inherits protection need)
+Networks, Rooms
+</code></pre></div>
+
+<p><strong>Example:</strong>
+- Process P-001 has protection need "Very High" for confidentiality
+- Application A-001 supports Process P-001
+- → Application A-001 inherits protection need "Very High" for confidentiality
+- Server S-001 hosts Application A-001
+- → Server S-001 inherits protection need "Very High" for confidentiality</p>
+<h3 id="42-inheritance-table">4.2 Inheritance Table</h3>
+<table>
+<thead>
+<tr>
+<th>From (Source)</th>
+<th>To (Target)</th>
+<th>Inherited Protection Need</th>
+<th>Justification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P-001</td>
+<td>A-001</td>
+<td>C: Very High, I: High, A: High</td>
+<td>Application supports critical process</td>
+</tr>
+<tr>
+<td>A-001</td>
+<td>S-001</td>
+<td>C: Very High, I: High, A: High</td>
+<td>Server hosts critical application</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="43-exceptions-and-justifications">4.3 Exceptions and Justifications</h3>
+<p><strong>Exceptions to the Maximum Principle:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Object</th>
+<th>Expected Protection Need</th>
+<th>Actual Protection Need</th>
+<th>Justification</th>
+<th>Approved By</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Object]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO: Justification for deviation]</td>
+<td>Thomas Weber</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Important:</strong> Exceptions must be documented and approved.</p>
+<h3 id="44-cumulative-effects">4.4 Cumulative Effects</h3>
+<p>When a system hosts multiple applications with different protection needs, the <strong>Maximum Principle</strong> applies:</p>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Application 1</th>
+<th>Application 2</th>
+<th>Application 3</th>
+<th>Resulting Protection Need</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S-001</td>
+<td>C: High</td>
+<td>C: Very High</td>
+<td>C: Normal</td>
+<td>C: Very High (Maximum)</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-validation-and-quality-assurance">5. Validation and Quality Assurance</h2>
+<h3 id="51-validation-process">5.1 Validation Process</h3>
+<p>The protection needs assessment is validated by:</p>
+<ol>
+<li><strong>Review by Process Owners:</strong> Confirmation of business criticality</li>
+<li><strong>Review by IT Management:</strong> Anna Schmidt - Technical feasibility</li>
+<li><strong>Review by Legal/Compliance:</strong> Legal requirements</li>
+<li><strong>Review by Data Protection:</strong> GDPR compliance</li>
+<li><strong>Approval by ISB:</strong> Thomas Weber</li>
+</ol>
+<h3 id="52-consistency-check">5.2 Consistency Check</h3>
+<table>
+<thead>
+<tr>
+<th>Check Criterion</th>
+<th>Status</th>
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>All processes assessed</td>
+<td>[TODO: ✓/✗]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>All applications assessed</td>
+<td>[TODO: ✓/✗]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>All IT systems assessed</td>
+<td>[TODO: ✓/✗]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Inheritance consistent</td>
+<td>[TODO: ✓/✗]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Exceptions documented</td>
+<td>[TODO: ✓/✗]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Justifications complete</td>
+<td>[TODO: ✓/✗]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-impact-on-security-measures">6. Impact on Security Measures</h2>
+<h3 id="61-measures-by-protection-need">6.1 Measures by Protection Need</h3>
+<table>
+<thead>
+<tr>
+<th>Protection Need</th>
+<th>Exemplary Measures</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Normal</strong></td>
+<td>Standard security measures, basic hardening, standard backup</td>
+</tr>
+<tr>
+<td><strong>High</strong></td>
+<td>Enhanced security measures, encryption, MFA, extended monitoring, redundant systems</td>
+</tr>
+<tr>
+<td><strong>Very High</strong></td>
+<td>Maximum security measures, end-to-end encryption, hardware tokens, 24/7 monitoring, high availability, disaster recovery</td>
+</tr>
+</tbody>
+</table>
+<h3 id="62-prioritization-of-measures">6.2 Prioritization of Measures</h3>
+<p>Security measures are prioritized according to:
+1. <strong>Very High Protection Need:</strong> Highest priority
+2. <strong>High Protection Need:</strong> High priority
+3. <strong>Normal Protection Need:</strong> Normal priority</p>
+<h2 id="7-documentation-and-evidence">7. Documentation and Evidence</h2>
+<p>The following documents and evidence are maintained:
+- This protection needs assessment document
+- Assessment workshop protocols
+- Process owner approvals
+- Exception approvals
+- Change logs</p>
+<h2 id="8-update-and-maintenance">8. Update and Maintenance</h2>
+<p>The protection needs assessment is updated when:
+- New business processes or applications are introduced
+- Significant changes to existing processes occur
+- New legal requirements emerge
+- Security incidents occur
+- At least annually as part of the ISMS review</p>
+<p><strong>Responsible:</strong> Thomas Weber (ISB)<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<h2 id="9-approval">9. Approval</h2>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Name</th>
+<th>Date</th>
+<th>Approval</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ISB</td>
+<td>Thomas Weber</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+<tr>
+<td>IT Management</td>
+<td>Anna Schmidt</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+<tr>
+<td>Executive Management</td>
+<td>Max Mustermann</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>References:</strong>
+- BSI Standard 200-2: IT-Grundschutz Methodology (Chapter 6: Protection Needs Assessment)
+- BSI IT-Grundschutz Compendium</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0050_Structure_Analysis_Template.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0070_Modeling_Module_Assignment_Template.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

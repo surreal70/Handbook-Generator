@@ -60,12 +60,82 @@ roles:
     email: "julia.becker@adminsend.de"
     phone: "+49 89 12345678-111"
     department: "Service Desk"
+  
+  # Extended Roles for BCM, ISMS, and BSI Grundschutz
+  sysop:
+    name: "Michael Schneider"
+    title: "System Administrator"
+    email: "michael.schneider@adminsend.de"
+    phone: "+49 89 12345678-260"
+    department: "IT Operations"
+  
+  datenschutzbeauftragter:
+    name: "Dr. Sarah Klein"
+    title: "Data Protection Officer"
+    email: "sarah.klein@adminsend.de"
+    phone: "+49 89 12345678-320"
+    department: "Legal & Compliance"
+  
+  risikomanager:
+    name: "Frank Wagner"
+    title: "Risk Manager"
+    email: "frank.wagner@adminsend.de"
+    phone: "+49 89 12345678-350"
+    department: "Risk Management"
+  
+  interner_auditor:
+    name: "Dr. Klaus Hoffmann"
+    title: "Internal Auditor"
+    email: "klaus.hoffmann@adminsend.de"
+    phone: "+49 89 12345678-360"
+    department: "Internal Audit"
+  
+  personalleitung:
+    name: "Sabine Richter"
+    title: "HR Manager"
+    email: "sabine.richter@adminsend.de"
+    phone: "+49 89 12345678-600"
+    department: "Human Resources"
+  
+  it_manager:
+    name: "Martin Bauer"
+    title: "IT Manager"
+    email: "martin.bauer@adminsend.de"
+    phone: "+49 89 12345678-240"
+    department: "IT"
 
 document:
   owner: "IT Operations Manager"
   approver: "CIO"
   version: "1.0.0"
   classification: "internal"  # public, internal, confidential, restricted
+
+# Per-Handbook Versioning and Responsible Persons
+# Each handbook type can have its own version, owner, approver, and date
+handbooks:
+  bcm:
+    version: "1.0.0"
+    owner: "Peter Fischer"  # COO
+    approver: "Max Mustermann"  # CEO
+    date: "2025-02-05"
+  
+  isms:
+    version: "2.1.0"
+    owner: "Thomas Weber"  # CISO
+    approver: "Anna Schmidt"  # CIO
+    date: "2025-02-01"
+  
+  bsi-grundschutz:
+    version: "1.5.0"
+    owner: "Thomas Weber"  # CISO
+    approver: "Anna Schmidt"  # CIO
+    date: "2025-01-28"
+  
+  it-operation:
+    version: "3.0.0"
+    owner: "Andreas Huemmer"  # IT Operations Manager
+    approver: "Anna Schmidt"  # CIO
+    date: "2025-01-15"
 
 defaults:
   author: "Andreas Huemmer [andreas.huemmer@adminsend.de]"

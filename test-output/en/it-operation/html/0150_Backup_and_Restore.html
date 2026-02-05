@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0150 - Backup and Restore</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0150</div>
+            <h1>Backup and Restore</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0140_Change_and_Release_Management.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0160_Disaster_Recovery_and_Business_Continuity.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="backup-and-restore">Backup and Restore</h1>
+<h2 id="purpose-and-scope">Purpose and Scope</h2>
+<p>This document describes the backup and restore strategies for AdminSend GmbH. It defines backup methods, schedules, retention periods, RPO/RTO objectives, and restore procedures to ensure data integrity and availability.</p>
+<p><strong>Scope:</strong> All IT systems, databases, applications, and data of AdminSend GmbH</p>
+<p><strong>Responsible:</strong> Andreas Huemmer (andreas.huemmer@adminsend.de)</p>
+<h2 id="backup-fundamentals">Backup Fundamentals</h2>
+<h3 id="backup-objectives">Backup Objectives</h3>
+<p><strong>Primary Objectives:</strong>
+- <strong>Data Protection:</strong> Protection against data loss
+- <strong>Disaster Recovery:</strong> Recovery after disasters
+- <strong>Compliance:</strong> Meeting regulatory requirements
+- <strong>Business Continuity:</strong> Minimizing downtime
+- <strong>Ransomware Protection:</strong> Recovery after cyber attacks</p>
+<h3 id="recovery-objectives">Recovery Objectives</h3>
+<h4 id="recovery-point-objective-rpo">Recovery Point Objective (RPO)</h4>
+<p><strong>Definition:</strong> Maximum tolerable data loss (time period between last backup and failure)</p>
+<p><strong>RPO Categories:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>RPO</th>
+<th>Backup Frequency</th>
+<th>Application</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Critical</strong></td>
+<td>&lt; 1 hour</td>
+<td>Continuous / Hourly</td>
+<td>Transaction systems, databases</td>
+</tr>
+<tr>
+<td><strong>Important</strong></td>
+<td>&lt; 4 hours</td>
+<td>4x daily</td>
+<td>Business applications</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>&lt; 24 hours</td>
+<td>Daily</td>
+<td>File servers, email</td>
+</tr>
+<tr>
+<td><strong>Non-Critical</strong></td>
+<td>&lt; 7 days</td>
+<td>Weekly</td>
+<td>Archive data, test systems</td>
+</tr>
+</tbody>
+</table>
+<h4 id="recovery-time-objective-rto">Recovery Time Objective (RTO)</h4>
+<p><strong>Definition:</strong> Maximum tolerable downtime (time until restoration)</p>
+<p><strong>RTO Categories:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>RTO</th>
+<th>Restore Method</th>
+<th>Application</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Critical</strong></td>
+<td>&lt; 1 hour</td>
+<td>Hot standby, snapshots</td>
+<td>Production databases</td>
+</tr>
+<tr>
+<td><strong>Important</strong></td>
+<td>&lt; 4 hours</td>
+<td>Fast restore systems</td>
+<td>Business applications</td>
+</tr>
+<tr>
+<td><strong>Standard</strong></td>
+<td>&lt; 24 hours</td>
+<td>Standard restore</td>
+<td>File servers</td>
+</tr>
+<tr>
+<td><strong>Non-Critical</strong></td>
+<td>&lt; 7 days</td>
+<td>Archive restore</td>
+<td>Test systems</td>
+</tr>
+</tbody>
+</table>
+<h3 id="backup-strategies">Backup Strategies</h3>
+<h4 id="full-backup">Full Backup</h4>
+<p><strong>Description:</strong> Complete backup of all data</p>
+<p><strong>Advantages:</strong>
+- Simple restoration
+- Only one backup set required
+- Fast restore time</p>
+<p><strong>Disadvantages:</strong>
+- Long backup duration
+- High storage requirements
+- High network load</p>
+<p><strong>Application:</strong> Weekly base backups</p>
+<h4 id="incremental-backup">Incremental Backup</h4>
+<p><strong>Description:</strong> Backup only of data changed since last backup (full or incremental)</p>
+<p><strong>Advantages:</strong>
+- Fast backup duration
+- Low storage requirements
+- Low network load</p>
+<p><strong>Disadvantages:</strong>
+- Complex restoration
+- All incremental backups required
+- Longer restore time</p>
+<p><strong>Application:</strong> Daily backups between full backups</p>
+<h4 id="differential-backup">Differential Backup</h4>
+<p><strong>Description:</strong> Backup of all data changed since last full backup</p>
+<p><strong>Advantages:</strong>
+- Faster restoration than incremental
+- Only full + last differential required
+- Moderate backup duration</p>
+<p><strong>Disadvantages:</strong>
+- Growing backup size
+- Higher storage requirements than incremental</p>
+<p><strong>Application:</strong> Alternative to incremental for critical systems</p>
+<h4 id="continuous-data-protection-cdp">Continuous Data Protection (CDP)</h4>
+<p><strong>Description:</strong> Continuous backup of all changes in real-time</p>
+<p><strong>Advantages:</strong>
+- Minimal data loss (RPO &lt; 1 min)
+- Point-in-time recovery
+- No backup windows required</p>
+<p><strong>Disadvantages:</strong>
+- High costs
+- Complex infrastructure
+- High performance requirements</p>
+<p><strong>Application:</strong> Critical databases and transaction systems</p>
+<h3 id="backup-architecture">Backup Architecture</h3>
+<h4 id="3-2-1-backup-rule">3-2-1 Backup Rule</h4>
+<p><strong>Rule:</strong> 3 copies, 2 different media, 1 offsite copy</p>
+<p><strong>Implementation:</strong>
+- <strong>3 Copies:</strong> Production data + 2 backups
+- <strong>2 Media:</strong> Disk + tape or cloud
+- <strong>1 Offsite:</strong> Geographically separated copy</p>
+<p><strong>Example:</strong>
+1. Production data on {{ netbox.storage.primary }}
+2. Backup on {{ netbox.storage.backup_disk }}
+3. Offsite backup in {{ meta.backup_cloud_provider }}</p>
+<h4 id="backup-tiers">Backup Tiers</h4>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>Storage Type</th>
+<th>Restore Time</th>
+<th>Cost</th>
+<th>Application</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tier 1</strong></td>
+<td>SSD / NVMe</td>
+<td>Minutes</td>
+<td>High</td>
+<td>Snapshots, CDP</td>
+</tr>
+<tr>
+<td><strong>Tier 2</strong></td>
+<td>HDD / NAS</td>
+<td>Hours</td>
+<td>Medium</td>
+<td>Daily backups</td>
+</tr>
+<tr>
+<td><strong>Tier 3</strong></td>
+<td>Tape / Object Storage</td>
+<td>Days</td>
+<td>Low</td>
+<td>Long-term archiving</td>
+</tr>
+<tr>
+<td><strong>Tier 4</strong></td>
+<td>Cloud Cold Storage</td>
+<td>Weeks</td>
+<td>Very low</td>
+<td>Compliance archive</td>
+</tr>
+</tbody>
+</table>
+<h2 id="backup-schedules">Backup Schedules</h2>
+<h3 id="production-systems">Production Systems</h3>
+<h4 id="databases-critical">Databases (Critical)</h4>
+<p><strong>System:</strong> {{ netbox.database.server }}</p>
+<p><strong>Backup Strategy:</strong>
+- <strong>Full Backup:</strong> Sunday 02:00
+- <strong>Differential Backup:</strong> Daily 02:00 (Mon-Sat)
+- <strong>Transaction Log Backup:</strong> Hourly
+- <strong>Snapshots:</strong> Every 4 hours</p>
+<p><strong>RPO:</strong> &lt; 1 hour<br />
+<strong>RTO:</strong> &lt; 1 hour</p>
+<p><strong>Retention:</strong>
+- Daily backups: 30 days
+- Weekly backups: 12 weeks
+- Monthly backups: 12 months
+- Yearly backups: 7 years</p>
+<h4 id="application-servers-important">Application Servers (Important)</h4>
+<p><strong>System:</strong> {{ netbox.application.server }}</p>
+<p><strong>Backup Strategy:</strong>
+- <strong>Full Backup:</strong> Sunday 03:00
+- <strong>Incremental Backup:</strong> Daily 03:00 (Mon-Sat)
+- <strong>Snapshots:</strong> Daily before deployments</p>
+<p><strong>RPO:</strong> &lt; 24 hours<br />
+<strong>RTO:</strong> &lt; 4 hours</p>
+<p><strong>Retention:</strong>
+- Daily backups: 14 days
+- Weekly backups: 8 weeks
+- Monthly backups: 6 months</p>
+<h4 id="file-servers-standard">File Servers (Standard)</h4>
+<p><strong>System:</strong> {{ netbox.fileserver.server }}</p>
+<p><strong>Backup Strategy:</strong>
+- <strong>Full Backup:</strong> Sunday 01:00
+- <strong>Incremental Backup:</strong> Daily 01:00 (Mon-Sat)</p>
+<p><strong>RPO:</strong> &lt; 24 hours<br />
+<strong>RTO:</strong> &lt; 24 hours</p>
+<p><strong>Retention:</strong>
+- Daily backups: 7 days
+- Weekly backups: 4 weeks
+- Monthly backups: 3 months</p>
+<h3 id="backup-calendar">Backup Calendar</h3>
+<table>
+<thead>
+<tr>
+<th>Day</th>
+<th>01:00</th>
+<th>02:00</th>
+<th>03:00</th>
+<th>Hourly</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sunday</strong></td>
+<td>File Server (Full)</td>
+<td>Database (Full)</td>
+<td>App Server (Full)</td>
+<td>DB Logs</td>
+</tr>
+<tr>
+<td><strong>Monday</strong></td>
+<td>File Server (Inc)</td>
+<td>Database (Diff)</td>
+<td>App Server (Inc)</td>
+<td>DB Logs</td>
+</tr>
+<tr>
+<td><strong>Tuesday</strong></td>
+<td>File Server (Inc)</td>
+<td>Database (Diff)</td>
+<td>App Server (Inc)</td>
+<td>DB Logs</td>
+</tr>
+<tr>
+<td><strong>Wednesday</strong></td>
+<td>File Server (Inc)</td>
+<td>Database (Diff)</td>
+<td>App Server (Inc)</td>
+<td>DB Logs</td>
+</tr>
+<tr>
+<td><strong>Thursday</strong></td>
+<td>File Server (Inc)</td>
+<td>Database (Diff)</td>
+<td>App Server (Inc)</td>
+<td>DB Logs</td>
+</tr>
+<tr>
+<td><strong>Friday</strong></td>
+<td>File Server (Inc)</td>
+<td>Database (Diff)</td>
+<td>App Server (Inc)</td>
+<td>DB Logs</td>
+</tr>
+<tr>
+<td><strong>Saturday</strong></td>
+<td>File Server (Inc)</td>
+<td>Database (Diff)</td>
+<td>App Server (Inc)</td>
+<td>DB Logs</td>
+</tr>
+</tbody>
+</table>
+<h2 id="backup-processes">Backup Processes</h2>
+<h3 id="backup-process-overview">Backup Process Overview</h3>
+<div class="codehilite"><pre><span></span><code>┌─────────────────┐
+│ Backup          │
+│ Scheduling      │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Pre-Backup      │
+│ Checks          │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Backup          │
+│ Execution       │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Backup          │
+│ Verification    │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Backup          │
+│ Reporting       │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Offsite         │
+│ Replication     │
+└─────────────────┘
+</code></pre></div>
+
+<h3 id="1-backup-scheduling">1. Backup Scheduling</h3>
+<p><strong>Automation:</strong>
+- Backup jobs configured in {{ meta.backup_system }}
+- Time-controlled execution
+- Dependencies between jobs
+- Retry mechanisms on errors</p>
+<p><strong>Responsible:</strong> Backup Administrator</p>
+<h3 id="2-pre-backup-checks">2. Pre-Backup Checks</h3>
+<p><strong>Checks:</strong>
+- Sufficient storage space available
+- Backup target reachable
+- Source system available
+- No ongoing maintenance
+- Previous backup successful</p>
+<p><strong>On Errors:</strong> Alert to operations team</p>
+<h3 id="3-backup-execution">3. Backup Execution</h3>
+<p><strong>Activities:</strong>
+- Create application-consistent snapshots
+- Compress data
+- Encrypt data (AES-256)
+- Transfer data to backup target
+- Store metadata</p>
+<p><strong>Monitoring:</strong> Real-time monitoring in {{ meta.monitoring_system }}</p>
+<h3 id="4-backup-verification">4. Backup Verification</h3>
+<p><strong>Verification Methods:</strong>
+- <strong>Checksum Validation:</strong> MD5/SHA-256 checksums
+- <strong>Catalog Check:</strong> Backup catalog consistency
+- <strong>Restore Test:</strong> Sample restores (monthly)
+- <strong>Integrity Scan:</strong> Backup data integrity</p>
+<p><strong>On Errors:</strong> Repeat backup, escalate alert</p>
+<h3 id="5-backup-reporting">5. Backup Reporting</h3>
+<p><strong>Reports:</strong>
+- Backup status (success/failure)
+- Backup size and duration
+- Storage space utilization
+- Failed backups
+- Trend analyses</p>
+<p><strong>Recipients:</strong> andreas.huemmer@adminsend.de</p>
+<h3 id="6-offsite-replication">6. Offsite Replication</h3>
+<p><strong>Replication Methods:</strong>
+- <strong>Cloud Sync:</strong> Automatic replication to {{ meta.backup_cloud_provider }}
+- <strong>Tape Rotation:</strong> Weekly tape offsite storage
+- <strong>Remote Site:</strong> Replication to {{ netbox.site.dr_location }}</p>
+<p><strong>Encryption:</strong> TLS in transit, AES-256 at rest</p>
+<h2 id="restore-processes">Restore Processes</h2>
+<h3 id="restore-process-overview">Restore Process Overview</h3>
+<div class="codehilite"><pre><span></span><code>┌─────────────────┐
+│ Restore         │
+│ Request         │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Restore         │
+│ Planning        │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Restore         │
+│ Preparation     │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Restore         │
+│ Execution       │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Restore         │
+│ Verification    │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Restore         │
+│ Documentation   │
+└─────────────────┘
+</code></pre></div>
+
+<h3 id="1-restore-request">1. Restore Request</h3>
+<p><strong>Restore Reasons:</strong>
+- Data loss (accidental deletion)
+- Data corruption
+- Ransomware attack
+- Hardware failure
+- Disaster recovery
+- Test/development</p>
+<p><strong>Required Information:</strong>
+- What should be restored?
+- Which point in time? (Point-in-time)
+- Where should it be restored?
+- Urgency (RTO)
+- Approval</p>
+<p><strong>Tool:</strong> {{ meta.ticketing_system }}</p>
+<h3 id="2-restore-planning">2. Restore Planning</h3>
+<p><strong>Planning Activities:</strong>
+- Identify backup set
+- Select restore method
+- Prepare restore target
+- Plan downtime (if required)
+- Inform stakeholders</p>
+<p><strong>Restore Methods:</strong>
+- <strong>File-Level Restore:</strong> Individual files/folders
+- <strong>Volume-Level Restore:</strong> Complete volumes
+- <strong>System-Level Restore:</strong> Bare-metal recovery
+- <strong>Database Restore:</strong> Database restoration
+- <strong>VM Restore:</strong> Virtual machines</p>
+<h3 id="3-restore-preparation">3. Restore Preparation</h3>
+<p><strong>Preparations:</strong>
+- Check backup integrity
+- Provide restore target
+- Ensure sufficient storage space
+- Check network connectivity
+- Mount backup media (if tape)</p>
+<h3 id="4-restore-execution">4. Restore Execution</h3>
+<p><strong>Restore Steps:</strong></p>
+<h4 id="file-level-restore">File-Level Restore</h4>
+<ol>
+<li>Browse backup catalog</li>
+<li>Select files/folders</li>
+<li>Specify restore target</li>
+<li>Start restore</li>
+<li>Monitor progress</li>
+</ol>
+<p><strong>Estimated Duration:</strong> 10 GB/hour (from disk)</p>
+<h4 id="database-restore">Database Restore</h4>
+<ol>
+<li>Stop database service</li>
+<li>Restore full backup</li>
+<li>Apply differential backup (if available)</li>
+<li>Apply transaction logs (point-in-time)</li>
+<li>Check database consistency</li>
+<li>Start database service</li>
+</ol>
+<p><strong>Estimated Duration:</strong> 100 GB/hour</p>
+<h4 id="vm-restore">VM Restore</h4>
+<ol>
+<li>Power off VM (if running)</li>
+<li>Select VM backup</li>
+<li>Select restore target (datastore)</li>
+<li>Restore VM</li>
+<li>Check VM configuration</li>
+<li>Start VM</li>
+</ol>
+<p><strong>Estimated Duration:</strong> 50 GB/hour</p>
+<h4 id="bare-metal-restore">Bare-Metal Restore</h4>
+<ol>
+<li>Create boot media</li>
+<li>Boot system from boot media</li>
+<li>Connect backup source</li>
+<li>Select system backup</li>
+<li>Perform restore to hardware</li>
+<li>Restart system</li>
+</ol>
+<p><strong>Estimated Duration:</strong> 20 GB/hour</p>
+<h3 id="5-restore-verification">5. Restore Verification</h3>
+<p><strong>Verification Steps:</strong>
+- Check data completeness
+- Validate data integrity
+- Test application functionality
+- Perform performance check
+- Obtain user acceptance</p>
+<p><strong>Verification Checklist:</strong>
+- [ ] All requested data restored
+- [ ] Data integrity confirmed
+- [ ] Application functional
+- [ ] Performance acceptable
+- [ ] Users informed</p>
+<h3 id="6-restore-documentation">6. Restore Documentation</h3>
+<p><strong>Documentation:</strong>
+- Update restore ticket
+- Document restore duration
+- Record problems and solutions
+- Identify lessons learned
+- Capture metrics</p>
+<h2 id="backup-technologies">Backup Technologies</h2>
+<h3 id="backup-software">Backup Software</h3>
+<p><strong>Primary Backup System:</strong>
+- <strong>System:</strong> {{ meta.backup_system }}
+- <strong>Version:</strong> {{ meta.backup_system_version }}
+- <strong>License:</strong> {{ meta.backup_system_license }}</p>
+<p><strong>Features:</strong>
+- Application-consistent backups
+- Deduplication
+- Compression
+- Encryption
+- Cloud integration
+- Automatic verification</p>
+<h3 id="snapshot-technology">Snapshot Technology</h3>
+<p><strong>Storage Snapshots:</strong>
+- <strong>System:</strong> {{ netbox.storage.system }}
+- <strong>Snapshot Frequency:</strong> Every 4 hours
+- <strong>Retention:</strong> 48 hours
+- <strong>Usage:</strong> Quick rollbacks, pre-change snapshots</p>
+<p><strong>VM Snapshots:</strong>
+- <strong>System:</strong> {{ netbox.hypervisor.system }}
+- <strong>Snapshot Type:</strong> Crash-consistent
+- <strong>Usage:</strong> Pre-deployment snapshots
+- <strong>Warning:</strong> Not a long-term backup solution</p>
+<h3 id="cloud-backup">Cloud Backup</h3>
+<p><strong>Cloud Provider:</strong>
+- <strong>Provider:</strong> {{ meta.backup_cloud_provider }}
+- <strong>Region:</strong> {{ meta.backup_cloud_region }}
+- <strong>Storage Tier:</strong> Standard / Glacier</p>
+<p><strong>Advantages:</strong>
+- Offsite backup automatic
+- Scalable
+- Geo-redundancy
+- Pay-per-use</p>
+<p><strong>Disadvantages:</strong>
+- Dependency on internet connection
+- Restore duration for large data volumes
+- Ongoing costs</p>
+<h2 id="backup-security">Backup Security</h2>
+<h3 id="encryption">Encryption</h3>
+<p><strong>In Transit:</strong>
+- TLS 1.3 for network transmission
+- VPN for remote backups</p>
+<p><strong>At Rest:</strong>
+- AES-256 encryption
+- Separate key management
+- Key rotation every 90 days</p>
+<p><strong>Key Management:</strong>
+- Keys in {{ meta.key_management_system }}
+- Access only for authorized administrators
+- Backup of keys (escrow)</p>
+<h3 id="immutable-backups">Immutable Backups</h3>
+<p><strong>Concept:</strong> Backups cannot be modified or deleted (protection against ransomware)</p>
+<p><strong>Implementation:</strong>
+- Object lock in cloud storage
+- WORM tapes (Write Once Read Many)
+- Air-gapped backups</p>
+<p><strong>Retention:</strong> At least 30 days immutable</p>
+<h3 id="access-control">Access Control</h3>
+<p><strong>Permissions:</strong>
+- Backup administrators: Full access
+- System administrators: Restore permission
+- Service desk: No backup permission</p>
+<p><strong>Audit Logging:</strong>
+- All backup/restore activities logged
+- Logs in SIEM system {{ meta.siem_system }}
+- Monthly audit reviews</p>
+<h2 id="backup-testing">Backup Testing</h2>
+<h3 id="test-strategy">Test Strategy</h3>
+<p><strong>Test Types:</strong>
+- <strong>Verification Tests:</strong> Automatic after each backup
+- <strong>Restore Tests:</strong> Monthly samples
+- <strong>DR Tests:</strong> Quarterly full restore tests
+- <strong>Compliance Tests:</strong> Annual audits</p>
+<h3 id="restore-test-process">Restore Test Process</h3>
+<p><strong>Monthly Restore Test:</strong>
+1. Select random system
+2. Restore to isolated test environment
+3. Validate functionality
+4. Measure restore duration
+5. Document results</p>
+<p><strong>Test Criteria:</strong>
+- Restore successful
+- RTO maintained
+- Data complete
+- Application functional</p>
+<p><strong>On Errors:</strong>
+- Create incident ticket
+- Review backup strategy
+- Implement corrective measures
+- Perform re-test</p>
+<h3 id="dr-test">DR Test</h3>
+<p><strong>Quarterly DR Test:</strong>
+1. Simulate disaster scenario
+2. Restore complete system to DR site
+3. Perform failover
+4. Test business processes
+5. Perform failback</p>
+<p><strong>Documentation:</strong>
+- Test plan
+- Test results
+- Identified problems
+- Improvement measures</p>
+<h2 id="metrics-and-reporting">Metrics and Reporting</h2>
+<h3 id="backup-metrics">Backup Metrics</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Target Value</th>
+<th>Measurement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Backup Success Rate</strong></td>
+<td>&gt; 98%</td>
+<td>Successful backups / Total backups</td>
+</tr>
+<tr>
+<td><strong>Backup Window Compliance</strong></td>
+<td>&gt; 95%</td>
+<td>Backups in time window / Total backups</td>
+</tr>
+<tr>
+<td><strong>Restore Success Rate</strong></td>
+<td>&gt; 99%</td>
+<td>Successful restores / Total restores</td>
+</tr>
+<tr>
+<td><strong>RTO Compliance</strong></td>
+<td>&gt; 95%</td>
+<td>Restores within RTO / Total restores</td>
+</tr>
+<tr>
+<td><strong>RPO Compliance</strong></td>
+<td>&gt; 99%</td>
+<td>Data loss &lt; RPO / Total incidents</td>
+</tr>
+</tbody>
+</table>
+<h3 id="reporting">Reporting</h3>
+<p><strong>Daily Backup Report:</strong>
+- Backup status (success/failure)
+- Failed backups
+- Storage space utilization
+- Alerts and warnings</p>
+<p><strong>Monthly Backup Report:</strong>
+- Backup statistics
+- Restore activities
+- Metrics dashboard
+- Trend analyses
+- Capacity planning</p>
+<p><strong>Quarterly Management Report:</strong>
+- Backup strategy review
+- DR test results
+- Compliance status
+- Improvement measures
+- Budget planning</p>
+<h2 id="roles-and-responsibilities">Roles and Responsibilities</h2>
+<h3 id="backup-administrator">Backup Administrator</h3>
+<p><strong>Responsibilities:</strong>
+- Backup system management
+- Backup job configuration
+- Monitoring and alerting
+- Restore execution
+- Reporting</p>
+<p><strong>Person:</strong> [Name]</p>
+<h3 id="storage-administrator">Storage Administrator</h3>
+<p><strong>Responsibilities:</strong>
+- Backup storage management
+- Capacity planning
+- Performance optimization
+- Snapshot management</p>
+<p><strong>Person:</strong> [Name]</p>
+<h3 id="it-operations-manager">IT Operations Manager</h3>
+<p><strong>Responsibilities:</strong>
+- Backup strategy ownership
+- Budget responsibility
+- Compliance assurance
+- Escalation management</p>
+<p><strong>Person:</strong> Andreas Huemmer</p>
+<h2 id="compliance-and-regulation">Compliance and Regulation</h2>
+<h3 id="regulatory-requirements">Regulatory Requirements</h3>
+<p><strong>GDPR:</strong>
+- Data encryption
+- Access control
+- Audit logging
+- Data deletion after retention period</p>
+<p><strong>ISO 27001:</strong>
+- Backup policy documented
+- Regular backup tests
+- Incident response plan
+- Continuous improvement</p>
+<p><strong>Industry-Specific:</strong>
+- [Additional regulatory requirements]</p>
+<h3 id="retention-periods">Retention Periods</h3>
+<table>
+<thead>
+<tr>
+<th>Data Type</th>
+<th>Retention Period</th>
+<th>Justification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Financial Data</strong></td>
+<td>10 years</td>
+<td>Tax law</td>
+</tr>
+<tr>
+<td><strong>Personnel Data</strong></td>
+<td>7 years</td>
+<td>Labor law</td>
+</tr>
+<tr>
+<td><strong>Contract Data</strong></td>
+<td>6 years</td>
+<td>Contract law</td>
+</tr>
+<tr>
+<td><strong>Emails</strong></td>
+<td>6 years</td>
+<td>Compliance</td>
+</tr>
+<tr>
+<td><strong>System Logs</strong></td>
+<td>1 year</td>
+<td>Security</td>
+</tr>
+<tr>
+<td><strong>Backup Logs</strong></td>
+<td>3 years</td>
+<td>Audit</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<ul>
+<li>ITIL v4 - Service Continuity Management</li>
+<li>ISO/IEC 27001:2013 - Backup Controls</li>
+<li>GDPR - Article 32 (Data Security)</li>
+<li>3-2-1 Backup Rule</li>
+<li>Backup System Documentation: {{ meta.backup_system_docs }}</li>
+</ul>
+<hr />
+<p><strong>Document Owner:</strong> IT Operations Manager<br />
+<strong>Approved by:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Classification:</strong> internal<br />
+<strong>Last Updated:</strong> {{ meta.date }}</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0140_Change_and_Release_Management.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0160_Disaster_Recovery_and_Business_Continuity.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

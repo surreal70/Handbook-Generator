@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0490 - Guideline: Access, Visitors and Equipment Protection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0490</div>
+            <h1>Guideline: Access, Visitors and Equipment Protection</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0480_Policy_Physical_Security.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0500_Policy_Mobile_Device_and_Remote_Work.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="guideline-access-visitors-and-equipment-protection">Guideline: Access, Visitors and Equipment Protection</h1>
+<p><strong>Document ID:</strong> 0490<br />
+<strong>Document Type:</strong> Guideline (detailed)<br />
+<strong>Associated Policy:</strong> 0480_Policy_Physical_Security.md<br />
+<strong>Standard Reference:</strong> ISO/IEC 27001:2022 Annex A.7.1, A.7.2, A.7.3, A.7.4<br />
+<strong>Owner:</strong> {{ meta.facilities.manager }}<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Approved<br />
+<strong>Classification:</strong> Internal<br />
+<strong>Last Updated:</strong> {{ meta.document.date }}</p>
+<hr />
+<h2 id="1-purpose-and-scope">1. Purpose and Scope</h2>
+<p>This guideline specifies the <code>0480_Policy_Physical_Security.md</code> and defines:
+- Access control systems and processes
+- Visitor management
+- Physical protection of IT equipment</p>
+<p><strong>Scope:</strong> All locations of <strong>AdminSend GmbH</strong></p>
+<h2 id="2-security-zones">2. Security Zones</h2>
+<h3 id="21-zone-classification">2.1 Zone Classification</h3>
+<p><strong>Zone 1 (Public):</strong>
+- Reception area, lobby
+- No access control
+- Video surveillance</p>
+<p><strong>Zone 2 (Internal):</strong>
+- Office areas, meeting rooms
+- Access card required
+- Employees and registered visitors</p>
+<p><strong>Zone 3 (Restricted):</strong>
+- Server rooms, data centers
+- Additional authentication (PIN, biometrics)
+- Authorized personnel only</p>
+<p><strong>Zone 4 (High Security):</strong>
+- Critical infrastructure
+- Four-eyes principle
+- Video surveillance and logging</p>
+<h2 id="3-access-control-system">3. Access Control System</h2>
+<h3 id="31-access-cards">3.1 Access Cards</h3>
+<p><strong>Card Type:</strong> RFID cards with photo<br />
+<strong>Issuance:</strong> During onboarding by HR<br />
+<strong>Validity:</strong> Until contract end</p>
+<p><strong>Card Loss:</strong>
+1. Immediate report to Security
+2. Disable card (within 15 minutes)
+3. Issue new card
+4. Documentation</p>
+<h3 id="32-biometric-authentication">3.2 Biometric Authentication</h3>
+<p><strong>For Zone 3/4:</strong>
+- Fingerprint scanner
+- Iris scanner (optional)
+- Data protection compliant (GDPR)</p>
+<h3 id="33-access-logs">3.3 Access Logs</h3>
+<p><strong>Logging:</strong>
+- All access attempts (success and failure)
+- Timestamp, person, door/zone
+- Retention: {{ meta.retention.access_years }} years</p>
+<p><strong>Monitoring:</strong>
+- Alerts for unauthorized access attempts
+- Alerts for access outside business hours (Zone 3/4)</p>
+<h2 id="4-visitor-management">4. Visitor Management</h2>
+<h3 id="41-visitor-registration">4.1 Visitor Registration</h3>
+<p><strong>Process:</strong>
+1. Host pre-registers visitor (email, portal)
+2. Visitor reports to reception
+3. ID check (ID card, driver's license)
+4. Issue visitor badge
+5. Host picks up visitor</p>
+<p><strong>Visitor Badge:</strong>
+- Temporary RFID card
+- Validity: 1 day
+- Automatic deactivation after expiration</p>
+<h3 id="42-escort">4.2 Escort</h3>
+<p><strong>Requirement:</strong>
+- Visitors must be escorted at all times
+- No unaccompanied visitors in Zone 2/3/4
+- Host responsible</p>
+<p><strong>Exceptions:</strong>
+- Long-term contractors with own badge
+- After background check and NDA</p>
+<h3 id="43-visitor-log">4.3 Visitor Log</h3>
+<p><strong>Documentation:</strong>
+- Name, company, ID number
+- Host, purpose of visit
+- Entry and exit time
+- Retention: {{ meta.retention.visitor_years }} years</p>
+<h2 id="5-physical-protection-of-equipment">5. Physical Protection of Equipment</h2>
+<h3 id="51-server-rooms-and-data-centers">5.1 Server Rooms and Data Centers</h3>
+<p><strong>Requirements:</strong>
+- Air conditioning (18-27°C, 40-60% humidity)
+- Fire detection and suppression system
+- Uninterruptible power supply (UPS)
+- Emergency generator
+- Water sensors (leak detection)</p>
+<p><strong>Access Control:</strong>
+- Zone 3 or 4
+- Logging of all access
+- Video surveillance</p>
+<h3 id="52-workspaces">5.2 Workspaces</h3>
+<p><strong>Clean Desk Policy:</strong>
+- No confidential documents on desk (end of day)
+- Screen lock when absent
+- Lockable cabinets for confidential materials</p>
+<p><strong>Kensington Locks:</strong>
+- Mandatory for laptops in offices
+- Theft protection</p>
+<h3 id="53-mobile-devices">5.3 Mobile Devices</h3>
+<p><strong>Security Requirements:</strong>
+- Encryption (BitLocker, FileVault)
+- Remote wipe capability (MDM)
+- No confidential data locally (prefer cloud storage)</p>
+<p><strong>In Case of Loss:</strong>
+1. Immediate report to IT support
+2. Trigger remote wipe
+3. Create incident ticket
+4. Police report (in case of theft)</p>
+<h2 id="6-video-surveillance">6. Video Surveillance</h2>
+<h3 id="61-monitored-areas">6.1 Monitored Areas</h3>
+<p><strong>Cameras:</strong>
+- Entrances and exits
+- Server rooms (Zone 3/4)
+- Parking lots
+- No surveillance in offices, restrooms, changing rooms</p>
+<h3 id="62-data-protection">6.2 Data Protection</h3>
+<p><strong>GDPR Compliance:</strong>
+- Signs indicating video surveillance
+- Purpose limitation (security, access control)
+- Access only for authorized personnel
+- Retention: 30 days (then automatic deletion)</p>
+<h2 id="7-emergency-access">7. Emergency Access</h2>
+<h3 id="71-break-glass-procedure">7.1 Break-Glass Procedure</h3>
+<p><strong>For Emergencies:</strong>
+- Physical key in sealed envelope
+- Storage in safe
+- Use only in emergencies (fire, medical emergency)
+- Documentation of each use</p>
+<h3 id="72-evacuation">7.2 Evacuation</h3>
+<p><strong>Evacuation Plan:</strong>
+- Escape routes marked
+- Assembly points defined
+- Regular evacuation drills (annually)</p>
+<h2 id="8-compliance-and-audit">8. Compliance and Audit</h2>
+<h3 id="81-metrics-kpis">8.1 Metrics (KPIs)</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Target Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unescorted visitors</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Access card losses</td>
+<td>&lt; 5 per year</td>
+</tr>
+<tr>
+<td>Clean-desk compliance</td>
+<td>&gt; 90%</td>
+</tr>
+<tr>
+<td>Evacuation drills</td>
+<td>1 per year</td>
+</tr>
+</tbody>
+</table>
+<h3 id="82-audit-evidence">8.2 Audit Evidence</h3>
+<ul>
+<li>Access logs</li>
+<li>Visitor logs</li>
+<li>Video recordings (30 days)</li>
+<li>Evacuation drill protocols</li>
+</ul>
+<h2 id="9-references">9. References</h2>
+<h3 id="internal-documents">Internal Documents</h3>
+<ul>
+<li><code>0480_Policy_Physical_Security.md</code></li>
+<li><code>0300_Policy_Asset_Management.md</code></li>
+</ul>
+<h3 id="external-standards">External Standards</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.7.1</strong> - Physical security perimeters</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.7.2</strong> - Physical entry</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.7.3</strong> - Securing offices, rooms and facilities</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.7.4</strong> - Physical security monitoring</li>
+</ul>
+<hr />
+<p><strong>Approved by:</strong> Thomas Weber, CISO<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0480_Policy_Physical_Security.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0500_Policy_Mobile_Device_and_Remote_Work.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

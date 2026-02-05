@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0240 - Runbooks und Standardoperationen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0240</div>
+            <h1>Runbooks und Standardoperationen</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0230_Wartung_und_Operations_Routinen.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0250_Tooling_und_Zugangswege.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="runbooks-und-standardoperationen">Runbooks und Standardoperationen</h1>
+<h2 id="ubersicht">Übersicht</h2>
+<p>Dieses Dokument enthält Standard-Runbooks, Schritt-für-Schritt-Anleitungen und Troubleshooting-Guides für häufige Betriebsaufgaben. Ziel ist es, konsistente und effiziente Durchführung von Standardoperationen zu gewährleisten.</p>
+<p><strong>Dokumentverantwortlicher:</strong> IT Operations Manager<br />
+<strong>Genehmigt durch:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Organisation:</strong> AdminSend GmbH</p>
+<hr />
+<h2 id="runbook-struktur">Runbook-Struktur</h2>
+<h3 id="runbook-template">Runbook-Template</h3>
+<p>Jedes Runbook folgt dieser standardisierten Struktur:</p>
+<div class="codehilite"><pre><span></span><code><span class="gh"># [RUNBOOK-TITEL]</span>
+
+<span class="gs">**Runbook-ID:**</span> RB-[NUMMER]
+<span class="gs">**Version:**</span> [VERSION]
+<span class="gs">**Letzte Aktualisierung:**</span> [DATUM]
+<span class="gs">**Verantwortlich:**</span> [NAME]
+
+<span class="gu">## Zweck</span>
+[Beschreibung des Zwecks und Anwendungsfalls]
+
+<span class="gu">## Voraussetzungen</span>
+<span class="k">-</span><span class="w"> </span>[Erforderliche Berechtigungen]
+<span class="k">-</span><span class="w"> </span>[Erforderliche Tools]
+<span class="k">-</span><span class="w"> </span>[Erforderliches Wissen]
+
+<span class="gu">## Geschätzte Dauer</span>
+[ZEIT] Minuten/Stunden
+
+<span class="gu">## Risikobewertung</span>
+<span class="k">-</span><span class="w"> </span><span class="gs">**Risiko:**</span> Niedrig / Mittel / Hoch
+<span class="k">-</span><span class="w"> </span><span class="gs">**Impact:**</span> Niedrig / Mittel / Hoch
+<span class="k">-</span><span class="w"> </span><span class="gs">**Rollback möglich:**</span> Ja / Nein
+
+<span class="gu">## Schritte</span>
+<span class="k">1.</span> [Schritt 1]
+<span class="k">2.</span> [Schritt 2]
+<span class="k">3.</span> [Schritt 3]
+
+<span class="gu">## Validierung</span>
+<span class="k">-</span><span class="w"> </span>[Validierungsschritt 1]
+<span class="k">-</span><span class="w"> </span>[Validierungsschritt 2]
+
+<span class="gu">## Rollback</span>
+[Rollback-Prozedur falls erforderlich]
+
+<span class="gu">## Troubleshooting</span>
+[Häufige Probleme und Lösungen]
+
+<span class="gu">## Referenzen</span>
+<span class="k">-</span><span class="w"> </span>[Dokumentation]
+<span class="k">-</span><span class="w"> </span>[Tickets]
+</code></pre></div>
+
+<hr />
+<h2 id="system-management-runbooks">System-Management Runbooks</h2>
+<h3 id="rb-001-server-neustart">RB-001: Server-Neustart</h3>
+<p><strong>Runbook-ID:</strong> RB-001<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Verantwortlich:</strong> Andreas Huemmer</p>
+<h4 id="zweck">Zweck</h4>
+<p>Kontrollierter Neustart eines Servers zur Behebung von Problemen oder nach Updates.</p>
+<h4 id="voraussetzungen">Voraussetzungen</h4>
+<ul>
+<li>Root/Administrator-Zugriff auf Server</li>
+<li>Genehmigung für Neustart (bei Produktionssystemen)</li>
+<li>Wartungsfenster (falls erforderlich)</li>
+</ul>
+<h4 id="geschatzte-dauer">Geschätzte Dauer</h4>
+<p>15-30 Minuten</p>
+<h4 id="risikobewertung">Risikobewertung</h4>
+<ul>
+<li><strong>Risiko:</strong> Mittel</li>
+<li><strong>Impact:</strong> Hoch (bei Produktionssystemen)</li>
+<li><strong>Rollback möglich:</strong> Nein</li>
+</ul>
+<h4 id="schritte">Schritte</h4>
+<ol>
+<li><strong>Vorbereitung</strong>
+   ```bash
+   # Aktuelle Systemlast prüfen
+   uptime
+   top</li>
+</ol>
+<p># Laufende Prozesse prüfen
+   ps aux | grep [kritische_prozesse]</p>
+<p># Benutzer informieren (falls erforderlich)
+   wall "System wird in 5 Minuten neu gestartet"
+   ```</p>
+<ol>
+<li><strong>Services stoppen</strong>
+   ```bash
+   # Anwendungs-Services stoppen
+   systemctl stop [service_name]</li>
+</ol>
+<p># Status prüfen
+   systemctl status [service_name]
+   ```</p>
+<ol>
+<li>
+<p><strong>Neustart durchführen</strong>
+   <code>bash
+   # Neustart initiieren
+   shutdown -r now
+   # oder
+   reboot</code></p>
+</li>
+<li>
+<p><strong>Nach Neustart: Validierung</strong>
+   ```bash
+   # System-Uptime prüfen
+   uptime</p>
+</li>
+</ol>
+<p># Services prüfen
+   systemctl status [service_name]</p>
+<p># Logs prüfen
+   journalctl -xe
+   tail -f /var/log/syslog
+   ```</p>
+<h4 id="validierung">Validierung</h4>
+<ul>
+<li>[ ] Server ist erreichbar (ping, SSH)</li>
+<li>[ ] Alle kritischen Services laufen</li>
+<li>[ ] Keine Fehler in System-Logs</li>
+<li>[ ] Monitoring zeigt grünen Status</li>
+<li>[ ] Anwendung ist funktionsfähig</li>
+</ul>
+<h4 id="troubleshooting">Troubleshooting</h4>
+<ul>
+<li><strong>Problem:</strong> Server startet nicht</li>
+<li><strong>Lösung:</strong> Console-Zugriff nutzen, Boot-Logs prüfen</li>
+<li><strong>Problem:</strong> Services starten nicht</li>
+<li><strong>Lösung:</strong> Manuell starten, Logs prüfen, Dependencies prüfen</li>
+</ul>
+<hr />
+<h3 id="rb-002-service-neustart">RB-002: Service-Neustart</h3>
+<p><strong>Runbook-ID:</strong> RB-002<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Verantwortlich:</strong> Andreas Huemmer</p>
+<h4 id="zweck_1">Zweck</h4>
+<p>Neustart eines einzelnen Services ohne System-Neustart.</p>
+<h4 id="voraussetzungen_1">Voraussetzungen</h4>
+<ul>
+<li>Sudo/Administrator-Rechte</li>
+<li>Service-Name bekannt</li>
+</ul>
+<h4 id="geschatzte-dauer_1">Geschätzte Dauer</h4>
+<p>5-10 Minuten</p>
+<h4 id="schritte_1">Schritte</h4>
+<ol>
+<li><strong>Service-Status prüfen</strong>
+   ```bash
+   # Linux
+   systemctl status [service_name]</li>
+</ol>
+<p># Windows
+   Get-Service [service_name]
+   ```</p>
+<ol>
+<li><strong>Service stoppen</strong>
+   ```bash
+   # Linux
+   systemctl stop [service_name]</li>
+</ol>
+<p># Windows
+   Stop-Service [service_name]
+   ```</p>
+<ol>
+<li><strong>Warten und validieren</strong>
+   ```bash
+   # Prozess-Ende bestätigen
+   ps aux | grep [service_name]</li>
+</ol>
+<p># Ports freigegeben prüfen
+   netstat -tulpn | grep [port]
+   ```</p>
+<ol>
+<li><strong>Service starten</strong>
+   ```bash
+   # Linux
+   systemctl start [service_name]</li>
+</ol>
+<p># Windows
+   Start-Service [service_name]
+   ```</p>
+<ol>
+<li><strong>Validierung</strong>
+   ```bash
+   # Status prüfen
+   systemctl status [service_name]</li>
+</ol>
+<p># Logs prüfen
+   journalctl -u [service_name] -f
+   ```</p>
+<h4 id="validierung_1">Validierung</h4>
+<ul>
+<li>[ ] Service läuft (Status: active/running)</li>
+<li>[ ] Keine Fehler in Logs</li>
+<li>[ ] Port ist gebunden</li>
+<li>[ ] Anwendung antwortet</li>
+</ul>
+<hr />
+<h3 id="rb-003-disk-space-cleanup">RB-003: Disk-Space-Cleanup</h3>
+<p><strong>Runbook-ID:</strong> RB-003<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Verantwortlich:</strong> Andreas Huemmer</p>
+<h4 id="zweck_2">Zweck</h4>
+<p>Freigabe von Speicherplatz bei kritischer Disk-Auslastung.</p>
+<h4 id="voraussetzungen_2">Voraussetzungen</h4>
+<ul>
+<li>Root/Administrator-Zugriff</li>
+<li>Backup vor größeren Löschungen</li>
+</ul>
+<h4 id="geschatzte-dauer_2">Geschätzte Dauer</h4>
+<p>30-60 Minuten</p>
+<h4 id="schritte_2">Schritte</h4>
+<ol>
+<li><strong>Disk-Auslastung analysieren</strong>
+   ```bash
+   # Gesamtübersicht
+   df -h</li>
+</ol>
+<p># Größte Verzeichnisse finden
+   du -h / | sort -rh | head -20</p>
+<p># Größte Dateien finden
+   find / -type f -size +100M -exec ls -lh {} \; 2&gt;/dev/null
+   ```</p>
+<ol>
+<li><strong>Log-Dateien bereinigen</strong>
+   ```bash
+   # Alte Logs löschen
+   find /var/log -type f -name "*.log" -mtime +30 -delete</li>
+</ol>
+<p># Komprimierte Logs löschen
+   find /var/log -type f -name "*.gz" -mtime +90 -delete</p>
+<p># Journal-Logs bereinigen
+   journalctl --vacuum-time=30d
+   ```</p>
+<ol>
+<li><strong>Temporäre Dateien löschen</strong>
+   ```bash
+   # /tmp bereinigen
+   find /tmp -type f -atime +7 -delete</li>
+</ol>
+<p># /var/tmp bereinigen
+   find /var/tmp -type f -atime +30 -delete
+   ```</p>
+<ol>
+<li><strong>Package-Cache bereinigen</strong>
+   ```bash
+   # Debian/Ubuntu
+   apt-get clean
+   apt-get autoclean
+   apt-get autoremove</li>
+</ol>
+<p># RedHat/CentOS
+   yum clean all</p>
+<p># Docker
+   docker system prune -a
+   ```</p>
+<ol>
+<li><strong>Alte Backups archivieren/löschen</strong>
+   ```bash
+   # Alte Backups identifizieren
+   find /backup -type f -mtime +90</li>
+</ol>
+<p># Nach Genehmigung löschen
+   find /backup -type f -mtime +90 -delete
+   ```</p>
+<h4 id="validierung_2">Validierung</h4>
+<ul>
+<li>[ ] Disk-Auslastung unter 80%</li>
+<li>[ ] Kritische Services laufen weiter</li>
+<li>[ ] Keine wichtigen Daten gelöscht</li>
+<li>[ ] Monitoring-Alerts gelöst</li>
+</ul>
+<hr />
+<h2 id="datenbank-management-runbooks">Datenbank-Management Runbooks</h2>
+<h3 id="rb-010-datenbank-backup">RB-010: Datenbank-Backup</h3>
+<p><strong>Runbook-ID:</strong> RB-010<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Verantwortlich:</strong> Database Administrator</p>
+<h4 id="zweck_3">Zweck</h4>
+<p>Manuelles Datenbank-Backup vor kritischen Änderungen.</p>
+<h4 id="voraussetzungen_3">Voraussetzungen</h4>
+<ul>
+<li>Datenbank-Admin-Rechte</li>
+<li>Ausreichend Speicherplatz</li>
+<li>Backup-Verzeichnis vorhanden</li>
+</ul>
+<h4 id="geschatzte-dauer_3">Geschätzte Dauer</h4>
+<p>15-60 Minuten (abhängig von DB-Größe)</p>
+<h4 id="schritte_3">Schritte</h4>
+<p><strong>PostgreSQL:</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Full Backup</span>
+pg_dump<span class="w"> </span>-U<span class="w"> </span>postgres<span class="w"> </span>-F<span class="w"> </span>c<span class="w"> </span>-b<span class="w"> </span>-v<span class="w"> </span>-f<span class="w"> </span>/backup/db_<span class="k">$(</span>date<span class="w"> </span>+%Y%m%d_%H%M%S<span class="k">)</span>.backup<span class="w"> </span><span class="o">[</span>database_name<span class="o">]</span>
+
+<span class="c1"># Schema-only Backup</span>
+pg_dump<span class="w"> </span>-U<span class="w"> </span>postgres<span class="w"> </span>-s<span class="w"> </span>-f<span class="w"> </span>/backup/schema_<span class="k">$(</span>date<span class="w"> </span>+%Y%m%d_%H%M%S<span class="k">)</span>.sql<span class="w"> </span><span class="o">[</span>database_name<span class="o">]</span>
+</code></pre></div>
+
+<p><strong>MySQL/MariaDB:</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Full Backup</span>
+mysqldump<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p<span class="w"> </span>--single-transaction<span class="w"> </span>--routines<span class="w"> </span>--triggers<span class="w"> </span><span class="o">[</span>database_name<span class="o">]</span><span class="w"> </span>&gt;<span class="w"> </span>/backup/db_<span class="k">$(</span>date<span class="w"> </span>+%Y%m%d_%H%M%S<span class="k">)</span>.sql
+
+<span class="c1"># All Databases</span>
+mysqldump<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p<span class="w"> </span>--all-databases<span class="w"> </span>&gt;<span class="w"> </span>/backup/all_dbs_<span class="k">$(</span>date<span class="w"> </span>+%Y%m%d_%H%M%S<span class="k">)</span>.sql
+</code></pre></div>
+
+<p><strong>MongoDB:</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Full Backup</span>
+mongodump<span class="w"> </span>--out<span class="w"> </span>/backup/mongodb_<span class="k">$(</span>date<span class="w"> </span>+%Y%m%d_%H%M%S<span class="k">)</span>
+
+<span class="c1"># Specific Database</span>
+mongodump<span class="w"> </span>--db<span class="w"> </span><span class="o">[</span>database_name<span class="o">]</span><span class="w"> </span>--out<span class="w"> </span>/backup/mongodb_<span class="k">$(</span>date<span class="w"> </span>+%Y%m%d_%H%M%S<span class="k">)</span>
+</code></pre></div>
+
+<h4 id="validierung_3">Validierung</h4>
+<ul>
+<li>[ ] Backup-Datei erstellt</li>
+<li>[ ] Backup-Größe plausibel</li>
+<li>[ ] Backup-Integrität geprüft</li>
+<li>[ ] Backup-Speicherort dokumentiert</li>
+</ul>
+<hr />
+<h3 id="rb-011-datenbank-restore">RB-011: Datenbank-Restore</h3>
+<p><strong>Runbook-ID:</strong> RB-011<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Verantwortlich:</strong> Database Administrator</p>
+<h4 id="zweck_4">Zweck</h4>
+<p>Wiederherstellung einer Datenbank aus Backup.</p>
+<h4 id="voraussetzungen_4">Voraussetzungen</h4>
+<ul>
+<li>Datenbank-Admin-Rechte</li>
+<li>Gültiges Backup vorhanden</li>
+<li>Wartungsfenster (für Produktionssysteme)</li>
+</ul>
+<h4 id="geschatzte-dauer_4">Geschätzte Dauer</h4>
+<p>30-120 Minuten (abhängig von DB-Größe)</p>
+<h4 id="risikobewertung_1">Risikobewertung</h4>
+<ul>
+<li><strong>Risiko:</strong> Hoch</li>
+<li><strong>Impact:</strong> Hoch</li>
+<li><strong>Rollback möglich:</strong> Ja (mit aktuellem Backup)</li>
+</ul>
+<h4 id="schritte_4">Schritte</h4>
+<ol>
+<li><strong>Vorbereitung</strong>
+   ```bash
+   # Aktuelles Backup erstellen (Sicherheit!)
+   [siehe RB-010]</li>
+</ol>
+<p># Benutzer informieren
+   # Services stoppen
+   ```</p>
+<ol>
+<li><strong>Restore durchführen</strong></li>
+</ol>
+<p><strong>PostgreSQL:</strong>
+   ```bash
+   # Datenbank löschen und neu erstellen
+   dropdb [database_name]
+   createdb [database_name]</p>
+<p># Restore
+   pg_restore -U postgres -d [database_name] -v /backup/db_backup.backup
+   ```</p>
+<p><strong>MySQL/MariaDB:</strong>
+   <code>bash
+   # Restore
+   mysql -u root -p [database_name] &lt; /backup/db_backup.sql</code></p>
+<p><strong>MongoDB:</strong>
+   <code>bash
+   # Restore
+   mongorestore --db [database_name] /backup/mongodb_backup/[database_name]</code></p>
+<ol>
+<li><strong>Validierung</strong>
+   <code>bash
+   # Tabellen/Collections prüfen
+   # Datensätze zählen
+   # Integrität prüfen</code></li>
+</ol>
+<h4 id="validierung_4">Validierung</h4>
+<ul>
+<li>[ ] Datenbank ist erreichbar</li>
+<li>[ ] Alle Tabellen/Collections vorhanden</li>
+<li>[ ] Datensatz-Anzahl plausibel</li>
+<li>[ ] Anwendung funktioniert</li>
+<li>[ ] Keine Fehler in Logs</li>
+</ul>
+<hr />
+<h2 id="netzwerk-management-runbooks">Netzwerk-Management Runbooks</h2>
+<h3 id="rb-020-firewall-regel-hinzufugen">RB-020: Firewall-Regel hinzufügen</h3>
+<p><strong>Runbook-ID:</strong> RB-020<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Verantwortlich:</strong> Thomas Weber</p>
+<h4 id="zweck_5">Zweck</h4>
+<p>Hinzufügen einer neuen Firewall-Regel.</p>
+<h4 id="voraussetzungen_5">Voraussetzungen</h4>
+<ul>
+<li>Firewall-Admin-Rechte</li>
+<li>Change-Ticket genehmigt</li>
+<li>Regel-Details dokumentiert</li>
+</ul>
+<h4 id="geschatzte-dauer_5">Geschätzte Dauer</h4>
+<p>15-30 Minuten</p>
+<h4 id="schritte_5">Schritte</h4>
+<ol>
+<li><strong>Regel-Details dokumentieren</strong></li>
+<li>Quell-IP/Netzwerk</li>
+<li>Ziel-IP/Netzwerk</li>
+<li>Port/Protokoll</li>
+<li>Aktion (Allow/Deny)</li>
+<li>
+<p>Begründung</p>
+</li>
+<li>
+<p><strong>Regel hinzufügen</strong></p>
+</li>
+</ol>
+<p><strong>iptables (Linux):</strong>
+   ```bash
+   # Regel hinzufügen
+   iptables -A INPUT -s [source_ip] -p tcp --dport [port] -j ACCEPT</p>
+<p># Regel speichern
+   iptables-save &gt; /etc/iptables/rules.v4
+   ```</p>
+<p><strong>firewalld (Linux):</strong>
+   ```bash
+   # Port öffnen
+   firewall-cmd --permanent --add-port=[port]/tcp</p>
+<p># Reload
+   firewall-cmd --reload
+   ```</p>
+<p><strong>Windows Firewall:</strong>
+   <code>powershell
+   # Regel hinzufügen
+   New-NetFirewallRule -DisplayName "[Rule Name]" -Direction Inbound -Protocol TCP -LocalPort [port] -Action Allow</code></p>
+<ol>
+<li><strong>Validierung</strong>
+   ```bash
+   # Regel prüfen
+   iptables -L -n -v</li>
+</ol>
+<p># Konnektivität testen
+   telnet [target_ip] [port]
+   nc -zv [target_ip] [port]
+   ```</p>
+<h4 id="validierung_5">Validierung</h4>
+<ul>
+<li>[ ] Regel ist aktiv</li>
+<li>[ ] Konnektivität funktioniert</li>
+<li>[ ] Keine unerwünschten Nebeneffekte</li>
+<li>[ ] Regel dokumentiert</li>
+</ul>
+<hr />
+<h2 id="benutzer-management-runbooks">Benutzer-Management Runbooks</h2>
+<h3 id="rb-030-benutzer-account-erstellen">RB-030: Benutzer-Account erstellen</h3>
+<p><strong>Runbook-ID:</strong> RB-030<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Verantwortlich:</strong> Andreas Huemmer</p>
+<h4 id="zweck_6">Zweck</h4>
+<p>Erstellung eines neuen Benutzer-Accounts.</p>
+<h4 id="voraussetzungen_6">Voraussetzungen</h4>
+<ul>
+<li>Admin-Rechte</li>
+<li>Genehmigtes Ticket</li>
+<li>Benutzer-Details vorhanden</li>
+</ul>
+<h4 id="geschatzte-dauer_6">Geschätzte Dauer</h4>
+<p>10-15 Minuten</p>
+<h4 id="schritte_6">Schritte</h4>
+<ol>
+<li><strong>Benutzer-Details sammeln</strong></li>
+<li>Vollständiger Name</li>
+<li>E-Mail-Adresse</li>
+<li>Abteilung</li>
+<li>Erforderliche Gruppen/Rollen</li>
+<li>
+<p>Manager/Genehmiger</p>
+</li>
+<li>
+<p><strong>Account erstellen</strong></p>
+</li>
+</ol>
+<p><strong>Linux:</strong>
+   ```bash
+   # Benutzer erstellen
+   useradd -m -s /bin/bash -c "[Full Name]" [username]</p>
+<p># Passwort setzen
+   passwd [username]</p>
+<p># Zu Gruppen hinzufügen
+   usermod -aG [group1],[group2] [username]
+   ```</p>
+<p><strong>Active Directory:</strong>
+   <code>``powershell
+   # Benutzer erstellen
+   New-ADUser -Name "[Full Name]" -GivenName "[First]" -Surname "[Last]"</code>
+     -SamAccountName [username] -UserPrincipalName [username]@domain.com <code>-Path "OU=Users,DC=domain,DC=com" -AccountPassword (ConvertTo-SecureString "[password]" -AsPlainText -Force)</code>
+     -Enabled $true</p>
+<p># Zu Gruppen hinzufügen
+   Add-ADGroupMember -Identity "[Group Name]" -Members [username]
+   ```</p>
+<ol>
+<li><strong>Berechtigungen zuweisen</strong></li>
+<li>Dateisystem-Berechtigungen</li>
+<li>Anwendungs-Zugriffe</li>
+<li>E-Mail-Account</li>
+<li>
+<p>VPN-Zugang</p>
+</li>
+<li>
+<p><strong>Benutzer informieren</strong></p>
+</li>
+<li>Willkommens-E-Mail senden</li>
+<li>Zugangsdaten übermitteln (sicher!)</li>
+<li>Dokumentation bereitstellen</li>
+</ol>
+<h4 id="validierung_6">Validierung</h4>
+<ul>
+<li>[ ] Account ist aktiv</li>
+<li>[ ] Login funktioniert</li>
+<li>[ ] Berechtigungen korrekt</li>
+<li>[ ] Benutzer informiert</li>
+<li>[ ] Dokumentiert in CMDB</li>
+</ul>
+<hr />
+<h3 id="rb-031-benutzer-account-deaktivieren">RB-031: Benutzer-Account deaktivieren</h3>
+<p><strong>Runbook-ID:</strong> RB-031<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Verantwortlich:</strong> Andreas Huemmer</p>
+<h4 id="zweck_7">Zweck</h4>
+<p>Deaktivierung eines Benutzer-Accounts (z.B. bei Austritt).</p>
+<h4 id="voraussetzungen_7">Voraussetzungen</h4>
+<ul>
+<li>Admin-Rechte</li>
+<li>Genehmigtes Ticket</li>
+<li>Offboarding-Checkliste</li>
+</ul>
+<h4 id="geschatzte-dauer_7">Geschätzte Dauer</h4>
+<p>20-30 Minuten</p>
+<h4 id="schritte_7">Schritte</h4>
+<ol>
+<li><strong>Account deaktivieren</strong></li>
+</ol>
+<p><strong>Linux:</strong>
+   ```bash
+   # Account sperren
+   usermod -L [username]
+   passwd -l [username]</p>
+<p># Shell deaktivieren
+   usermod -s /sbin/nologin [username]
+   ```</p>
+<p><strong>Active Directory:</strong>
+   ```powershell
+   # Account deaktivieren
+   Disable-ADAccount -Identity [username]</p>
+<p># Beschreibung aktualisieren
+   Set-ADUser -Identity [username] -Description "Deactivated on $(Get-Date -Format 'yyyy-MM-dd')"
+   ```</p>
+<ol>
+<li><strong>Zugriffe entfernen</strong></li>
+<li>VPN-Zugang deaktivieren</li>
+<li>E-Mail-Weiterleitung einrichten</li>
+<li>Gruppen-Mitgliedschaften entfernen</li>
+<li>Anwendungs-Zugriffe widerrufen</li>
+<li>
+<p>Hardware zurückfordern</p>
+</li>
+<li>
+<p><strong>Daten sichern</strong></p>
+</li>
+<li>Home-Verzeichnis archivieren</li>
+<li>E-Mails archivieren</li>
+<li>
+<p>Wichtige Dateien sichern</p>
+</li>
+<li>
+<p><strong>Dokumentation</strong></p>
+</li>
+<li>Offboarding-Checkliste abarbeiten</li>
+<li>CMDB aktualisieren</li>
+<li>Manager informieren</li>
+</ol>
+<h4 id="validierung_7">Validierung</h4>
+<ul>
+<li>[ ] Account ist deaktiviert</li>
+<li>[ ] Login nicht mehr möglich</li>
+<li>[ ] Alle Zugriffe entfernt</li>
+<li>[ ] Daten gesichert</li>
+<li>[ ] Dokumentiert</li>
+</ul>
+<hr />
+<h2 id="monitoring-und-alerting-runbooks">Monitoring und Alerting Runbooks</h2>
+<h3 id="rb-040-alert-untersuchung">RB-040: Alert-Untersuchung</h3>
+<p><strong>Runbook-ID:</strong> RB-040<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Verantwortlich:</strong> Andreas Huemmer</p>
+<h4 id="zweck_8">Zweck</h4>
+<p>Systematische Untersuchung eines Monitoring-Alerts.</p>
+<h4 id="voraussetzungen_8">Voraussetzungen</h4>
+<ul>
+<li>Zugriff auf Monitoring-System</li>
+<li>Zugriff auf betroffene Systeme</li>
+</ul>
+<h4 id="geschatzte-dauer_8">Geschätzte Dauer</h4>
+<p>15-60 Minuten</p>
+<h4 id="schritte_8">Schritte</h4>
+<ol>
+<li><strong>Alert-Details erfassen</strong></li>
+<li>Alert-Name und Severity</li>
+<li>Betroffenes System/Service</li>
+<li>Zeitpunkt des Auftretens</li>
+<li>
+<p>Alert-Beschreibung</p>
+</li>
+<li>
+<p><strong>Erste Analyse</strong>
+   ```bash
+   # System-Status prüfen
+   uptime
+   top
+   df -h
+   free -m</p>
+</li>
+</ol>
+<p># Service-Status prüfen
+   systemctl status [service]</p>
+<p># Logs prüfen
+   journalctl -xe
+   tail -f /var/log/[relevant_log]
+   ```</p>
+<ol>
+<li><strong>Ursache identifizieren</strong></li>
+<li>Korrelation mit anderen Events</li>
+<li>Änderungen in letzter Zeit</li>
+<li>Bekannte Probleme prüfen</li>
+<li>
+<p>Metriken analysieren</p>
+</li>
+<li>
+<p><strong>Maßnahmen ergreifen</strong></p>
+</li>
+<li>Sofortmaßnahmen (falls erforderlich)</li>
+<li>Incident-Ticket erstellen</li>
+<li>Eskalation (falls erforderlich)</li>
+<li>
+<p>Dokumentation</p>
+</li>
+<li>
+<p><strong>Validierung</strong></p>
+</li>
+<li>Alert ist gelöst</li>
+<li>System funktioniert normal</li>
+<li>Keine weiteren Alerts</li>
+</ol>
+<h4 id="troubleshooting-matrix">Troubleshooting-Matrix</h4>
+<table>
+<thead>
+<tr>
+<th>Alert-Typ</th>
+<th>Erste Prüfung</th>
+<th>Häufige Ursachen</th>
+<th>Sofortmaßnahme</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>High CPU</td>
+<td>top, ps aux</td>
+<td>Runaway-Prozess</td>
+<td>Prozess beenden</td>
+</tr>
+<tr>
+<td>High Memory</td>
+<td>free -m, ps aux</td>
+<td>Memory-Leak</td>
+<td>Service-Neustart</td>
+</tr>
+<tr>
+<td>Disk Full</td>
+<td>df -h, du -h</td>
+<td>Log-Dateien, Backups</td>
+<td>Cleanup durchführen</td>
+</tr>
+<tr>
+<td>Service Down</td>
+<td>systemctl status</td>
+<td>Crash, Config-Fehler</td>
+<td>Service-Neustart</td>
+</tr>
+<tr>
+<td>High Latency</td>
+<td>ping, traceroute</td>
+<td>Netzwerk, Last</td>
+<td>Load-Balancing prüfen</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="backup-und-recovery-runbooks">Backup und Recovery Runbooks</h2>
+<h3 id="rb-050-backup-verifikation">RB-050: Backup-Verifikation</h3>
+<p><strong>Runbook-ID:</strong> RB-050<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Verantwortlich:</strong> Andreas Huemmer</p>
+<h4 id="zweck_9">Zweck</h4>
+<p>Regelmäßige Überprüfung der Backup-Integrität.</p>
+<h4 id="voraussetzungen_9">Voraussetzungen</h4>
+<ul>
+<li>Zugriff auf Backup-System</li>
+<li>Test-Umgebung verfügbar</li>
+</ul>
+<h4 id="geschatzte-dauer_9">Geschätzte Dauer</h4>
+<p>30-60 Minuten</p>
+<h4 id="schritte_9">Schritte</h4>
+<ol>
+<li><strong>Backup-Status prüfen</strong>
+   ```bash
+   # Letzte Backups anzeigen
+   [backup_tool] list --last 7</li>
+</ol>
+<p># Backup-Logs prüfen
+   tail -100 /var/log/backup.log
+   ```</p>
+<ol>
+<li><strong>Backup-Integrität prüfen</strong>
+   ```bash
+   # Checksummen validieren
+   [backup_tool] verify [backup_id]</li>
+</ol>
+<p># Backup-Größe prüfen
+   ls -lh /backup/
+   ```</p>
+<ol>
+<li><strong>Restore-Test durchführen</strong></li>
+<li>Zufälliges Backup auswählen</li>
+<li>In Test-Umgebung wiederherstellen</li>
+<li>Funktionalität validieren</li>
+<li>
+<p>Ergebnis dokumentieren</p>
+</li>
+<li>
+<p><strong>Dokumentation</strong></p>
+</li>
+<li>Test-Ergebnis festhalten</li>
+<li>Probleme dokumentieren</li>
+<li>Verbesserungen identifizieren</li>
+</ol>
+<h4 id="validierung_8">Validierung</h4>
+<ul>
+<li>[ ] Alle Backups erfolgreich</li>
+<li>[ ] Integrität bestätigt</li>
+<li>[ ] Restore-Test erfolgreich</li>
+<li>[ ] Dokumentiert</li>
+</ul>
+<hr />
+<h2 id="troubleshooting-guides">Troubleshooting-Guides</h2>
+<h3 id="allgemeine-troubleshooting-methodik">Allgemeine Troubleshooting-Methodik</h3>
+<ol>
+<li><strong>Problem identifizieren</strong></li>
+<li>Symptome sammeln</li>
+<li>Fehlermeldungen notieren</li>
+<li>
+<p>Zeitpunkt des Auftretens</p>
+</li>
+<li>
+<p><strong>Informationen sammeln</strong></p>
+</li>
+<li>Logs analysieren</li>
+<li>Monitoring-Daten prüfen</li>
+<li>
+<p>Änderungen identifizieren</p>
+</li>
+<li>
+<p><strong>Hypothese bilden</strong></p>
+</li>
+<li>Mögliche Ursachen auflisten</li>
+<li>Wahrscheinlichkeit bewerten</li>
+<li>
+<p>Priorisieren</p>
+</li>
+<li>
+<p><strong>Testen</strong></p>
+</li>
+<li>Hypothese testen</li>
+<li>Ergebnisse dokumentieren</li>
+<li>
+<p>Nächste Hypothese</p>
+</li>
+<li>
+<p><strong>Lösung implementieren</strong></p>
+</li>
+<li>Korrekturmaßnahme durchführen</li>
+<li>Validieren</li>
+<li>
+<p>Dokumentieren</p>
+</li>
+<li>
+<p><strong>Prävention</strong></p>
+</li>
+<li>Root-Cause-Analysis</li>
+<li>Verbesserungen identifizieren</li>
+<li>Implementieren</li>
+</ol>
+<h3 id="haufige-probleme-und-losungen">Häufige Probleme und Lösungen</h3>
+<h4 id="problem-service-startet-nicht">Problem: Service startet nicht</h4>
+<p><strong>Symptome:</strong>
+- Service-Status: failed
+- Fehlermeldung in Logs</p>
+<p><strong>Diagnose:</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Status prüfen</span>
+systemctl<span class="w"> </span>status<span class="w"> </span><span class="o">[</span>service<span class="o">]</span>
+
+<span class="c1"># Logs prüfen</span>
+journalctl<span class="w"> </span>-u<span class="w"> </span><span class="o">[</span>service<span class="o">]</span><span class="w"> </span>-n<span class="w"> </span><span class="m">50</span>
+
+<span class="c1"># Config-Test</span>
+<span class="o">[</span>service<span class="o">]</span><span class="w"> </span>-t<span class="w">  </span><span class="c1"># (z.B. nginx -t, apache2ctl configtest)</span>
+</code></pre></div>
+
+<p><strong>Lösungen:</strong>
+1. Config-Fehler korrigieren
+2. Dependencies prüfen
+3. Berechtigungen prüfen
+4. Ports prüfen (bereits belegt?)</p>
+<hr />
+<h4 id="problem-hohe-cpu-last">Problem: Hohe CPU-Last</h4>
+<p><strong>Symptome:</strong>
+- CPU-Auslastung &gt; 80%
+- System langsam</p>
+<p><strong>Diagnose:</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Top-Prozesse identifizieren</span>
+top
+htop
+
+<span class="c1"># Prozess-Details</span>
+ps<span class="w"> </span>aux<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-nrk<span class="w"> </span><span class="m">3</span>,3<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-n<span class="w"> </span><span class="m">5</span>
+</code></pre></div>
+
+<p><strong>Lösungen:</strong>
+1. Runaway-Prozess beenden
+2. Ressourcen-Limits setzen
+3. Skalierung prüfen
+4. Code-Optimierung</p>
+<hr />
+<h4 id="problem-disk-voll">Problem: Disk voll</h4>
+<p><strong>Symptome:</strong>
+- Disk-Auslastung &gt; 90%
+- "No space left on device" Fehler</p>
+<p><strong>Diagnose:</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Auslastung prüfen</span>
+df<span class="w"> </span>-h
+
+<span class="c1"># Große Dateien finden</span>
+du<span class="w"> </span>-h<span class="w"> </span>/<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-rh<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-20
+find<span class="w"> </span>/<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-size<span class="w"> </span>+100M
+</code></pre></div>
+
+<p><strong>Lösungen:</strong>
+1. Logs bereinigen
+2. Temporäre Dateien löschen
+3. Alte Backups archivieren
+4. Storage erweitern</p>
+<hr />
+<h2 id="prozesse-und-verantwortlichkeiten">Prozesse und Verantwortlichkeiten</h2>
+<h3 id="raci-matrix">RACI-Matrix</h3>
+<table>
+<thead>
+<tr>
+<th>Aktivität</th>
+<th>CIO</th>
+<th>Ops Manager</th>
+<th>Ops Team</th>
+<th>On-Call</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Runbook-Erstellung</td>
+<td>C</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Runbook-Ausführung</td>
+<td>I</td>
+<td>C</td>
+<td>R</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Runbook-Aktualisierung</td>
+<td>I</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Troubleshooting</td>
+<td>I</td>
+<td>C</td>
+<td>R</td>
+<td>R</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Legende:</strong> R = Responsible, A = Accountable, C = Consulted, I = Informed</p>
+</blockquote>
+<hr />
+<h2 id="compliance-und-standards">Compliance und Standards</h2>
+<h3 id="relevante-standards">Relevante Standards</h3>
+<ul>
+<li><strong>ITIL v4:</strong> Service Operation Practice</li>
+<li><strong>ISO 20000:</strong> Clause 8.1 - Operational Planning and Control</li>
+<li><strong>COBIT 2019:</strong> DSS01 - Managed Operations</li>
+</ul>
+<hr />
+<h2 id="anhang">Anhang</h2>
+<h3 id="glossar">Glossar</h3>
+<table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Runbook</td>
+<td>Dokumentierte Schritt-für-Schritt-Anleitung für Standardoperationen</td>
+</tr>
+<tr>
+<td>Troubleshooting</td>
+<td>Systematische Fehlersuche und -behebung</td>
+</tr>
+<tr>
+<td>Standard Operating Procedure (SOP)</td>
+<td>Standardisierte Betriebsanweisung</td>
+</tr>
+</tbody>
+</table>
+<h3 id="referenzen">Referenzen</h3>
+<ul>
+<li>ITIL v4 Foundation Handbook</li>
+<li>ISO/IEC 20000-1:2018</li>
+<li>COBIT 2019 Framework</li>
+</ul>
+<hr />
+<p><strong>Letzte Aktualisierung:</strong> {{ meta.date }}<br />
+<strong>Nächste Review:</strong> [TODO: Datum]<br />
+<strong>Kontakt:</strong> andreas.huemmer@adminsend.de</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0230_Wartung_und_Operations_Routinen.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0250_Tooling_und_Zugangswege.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

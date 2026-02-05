@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0610 - Guideline: Segmentation, Firewalling and Network Access Control</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0610</div>
+            <h1>Guideline: Segmentation, Firewalling and Network Access Control</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0600_Policy_Network_Security.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0620_Policy_Endpoint_Security.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="guideline-segmentation-firewalling-and-network-access-control">Guideline: Segmentation, Firewalling and Network Access Control</h1>
+<p><strong>Document ID:</strong> 0610<br />
+<strong>Document Type:</strong> Guideline (detailed)<br />
+<strong>Associated Policy:</strong> 0600_Policy_Network_Security.md<br />
+<strong>Standard Reference:</strong> ISO/IEC 27001:2022 Annex A.8.20, A.8.21, A.8.22<br />
+<strong>Owner:</strong> {{ meta.network.manager }}<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Approved<br />
+<strong>Classification:</strong> Confidential<br />
+<strong>Last Updated:</strong> {{ meta.document.date }}</p>
+<hr />
+<h2 id="1-purpose-and-scope">1. Purpose and Scope</h2>
+<p>This guideline specifies the <code>0600_Policy_Network_Security.md</code> and defines:
+- Network segmentation and zone model
+- Firewall rules and management
+- Network Access Control (NAC)</p>
+<p><strong>Scope:</strong> All networks at <strong>AdminSend GmbH</strong></p>
+<h2 id="2-network-segmentation">2. Network Segmentation</h2>
+<h3 id="21-zone-model">2.1 Zone Model</h3>
+<p><strong>Zone 1: Internet (Untrusted)</strong>
+- Public internet
+- No trust relationship</p>
+<p><strong>Zone 2: DMZ (Demilitarized Zone)</strong>
+- Internet-facing services (web servers, email gateway)
+- Restricted access to internal resources</p>
+<p><strong>Zone 3: Corporate Network</strong>
+- Internal office networks
+- Workstations, printers
+- Standard security controls</p>
+<p><strong>Zone 4: Server Network</strong>
+- Internal servers (file servers, application servers)
+- Enhanced security controls</p>
+<p><strong>Zone 5: Management Network</strong>
+- Management interfaces (IPMI, iLO, iDRAC)
+- Out-of-band management
+- Highest security controls</p>
+<p><strong>Zone 6: Production Network</strong>
+- Critical production systems
+- Databases, ERP
+- Highest security controls</p>
+<h3 id="22-vlan-segmentation">2.2 VLAN Segmentation</h3>
+<p><strong>VLAN Schema:</strong>
+- VLAN 10: Management
+- VLAN 20: Servers
+- VLAN 30: Workstations
+- VLAN 40: Guest/BYOD
+- VLAN 50: IoT/OT
+- VLAN 60: DMZ</p>
+<p><strong>Inter-VLAN Routing:</strong>
+- Via firewall (not Layer 3 switch)
+- Explicit firewall rules required</p>
+<h3 id="23-micro-segmentation">2.3 Micro-Segmentation</h3>
+<p><strong>For Critical Systems:</strong>
+- Segmentation at workload level
+- Software-Defined Networking (SDN)
+- Zero Trust Network Access (ZTNA)</p>
+<h2 id="3-firewall-management">3. Firewall Management</h2>
+<h3 id="31-firewall-architecture">3.1 Firewall Architecture</h3>
+<p><strong>Perimeter Firewall:</strong>
+- Internet ↔ DMZ
+- Internet ↔ Corporate Network
+- High availability (Active/Active or Active/Passive)</p>
+<p><strong>Internal Firewalls:</strong>
+- Between zones
+- Micro-segmentation</p>
+<p><strong>Firewall Platform:</strong> {{ meta.network.firewall }}</p>
+<h3 id="32-firewall-rules">3.2 Firewall Rules</h3>
+<p><strong>Default Deny:</strong>
+- All connections blocked by default
+- Only explicitly allowed connections</p>
+<p><strong>Rule Structure:</strong>
+- Source (IP/network)
+- Destination (IP/network)
+- Service (port/protocol)
+- Action (Allow/Deny)
+- Logging (Enabled)
+- Justification (business justification)</p>
+<p><strong>Rule Order:</strong>
+1. Deny rules (specific)
+2. Allow rules (specific to general)
+3. Default deny (implicit)</p>
+<h3 id="33-firewall-change-process">3.3 Firewall Change Process</h3>
+<p><strong>Request:</strong>
+- Change request via ticket system
+- Justification (business justification)
+- Source and destination IP/port
+- Time limitation (where possible)</p>
+<p><strong>Approval:</strong>
+- IT Security: Mandatory
+- Network team: Technical feasibility
+- Application owner: Business justification</p>
+<p><strong>Implementation:</strong>
+- Testing in dev/test (where possible)
+- Implementation in maintenance window
+- Verification
+- Documentation</p>
+<p><strong>Details:</strong> See <code>0370_Guideline_Change_Management_with_Security_Approvals</code></p>
+<h3 id="34-firewall-review">3.4 Firewall Review</h3>
+<p><strong>Regular Reviews:</strong>
+- Quarterly: Review all firewall rules
+- Identify unused rules
+- Extend or delete temporary rules
+- Update documentation</p>
+<h2 id="4-network-access-control-nac">4. Network Access Control (NAC)</h2>
+<h3 id="41-nac-system">4.1 NAC System</h3>
+<p><strong>Platform:</strong> {{ meta.network.nac_solution }} (e.g., Cisco ISE, Aruba ClearPass)</p>
+<p><strong>Functions:</strong>
+- 802.1X authentication
+- MAC address authentication (MAB)
+- Guest access
+- Posture assessment</p>
+<h3 id="42-8021x-authentication">4.2 802.1X Authentication</h3>
+<p><strong>For Workstations:</strong>
+- Computer authentication (machine auth)
+- User authentication (user auth)
+- Certificate-based or EAP-TLS</p>
+<p><strong>For Servers:</strong>
+- Certificate-based authentication
+- Dedicated VLANs</p>
+<h3 id="43-posture-assessment">4.3 Posture Assessment</h3>
+<p><strong>Compliance Checks:</strong>
+- Antivirus active and current?
+- Firewall enabled?
+- OS patches current?
+- Disk encryption enabled?</p>
+<p><strong>For Non-Compliance:</strong>
+- Quarantine VLAN
+- Restricted access (patch servers only)
+- Notification to user</p>
+<h3 id="44-guest-access">4.4 Guest Access</h3>
+<p><strong>Guest VLAN:</strong>
+- Isolated from corporate network
+- Internet access only
+- Captive portal for registration</p>
+<p><strong>Process:</strong>
+1. Guest registers (self-service or sponsor)
+2. Credentials via SMS/email
+3. Time-limited access (max. 24 hours)
+4. Automatic deactivation</p>
+<h2 id="5-intrusion-detectionprevention-idsips">5. Intrusion Detection/Prevention (IDS/IPS)</h2>
+<h3 id="51-idsips-placement">5.1 IDS/IPS Placement</h3>
+<p><strong>Perimeter:</strong>
+- Before firewall (IDS)
+- Behind firewall (IPS)</p>
+<p><strong>Internal:</strong>
+- Between critical zones
+- IPS mode</p>
+<p><strong>IDS/IPS System:</strong> {{ meta.security.ids_ips }}</p>
+<h3 id="52-signatures-and-policies">5.2 Signatures and Policies</h3>
+<p><strong>Signature Updates:</strong>
+- Automatic, daily
+- Critical signatures: Immediate</p>
+<p><strong>IPS Policies:</strong>
+- Balanced (standard)
+- Connectivity (less aggressive)
+- Security (more aggressive)</p>
+<h3 id="53-alerting">5.3 Alerting</h3>
+<p><strong>SIEM Integration:</strong>
+- All IDS/IPS alerts to SIEM
+- Correlation with other events
+- Automatic response (for critical alerts)</p>
+<h2 id="6-vpn-and-remote-access">6. VPN and Remote Access</h2>
+<h3 id="61-vpn-types">6.1 VPN Types</h3>
+<p><strong>Site-to-Site VPN:</strong>
+- Between locations
+- IPsec
+- Always-on</p>
+<p><strong>Remote Access VPN:</strong>
+- For remote employees
+- SSL-VPN or IPsec
+- MFA mandatory</p>
+<p><strong>Details:</strong> See <code>0510_Guideline_MDM_BringYourOwnDevice_and_Remote_Access.md</code></p>
+<h3 id="62-vpn-segmentation">6.2 VPN Segmentation</h3>
+<p><strong>VPN Users in Separate VLAN:</strong>
+- Not directly in corporate network
+- Firewall rules for access
+- Posture assessment before access</p>
+<h2 id="7-wireless-security">7. Wireless Security</h2>
+<h3 id="71-wlan-segmentation">7.1 WLAN Segmentation</h3>
+<p><strong>Corporate WLAN:</strong>
+- 802.1X authentication
+- WPA3-Enterprise
+- Access to corporate resources</p>
+<p><strong>Guest WLAN:</strong>
+- Captive portal
+- WPA2/WPA3-Personal
+- Internet access only</p>
+<p><strong>IoT WLAN:</strong>
+- Separate VLAN
+- MAC address whitelist
+- Restricted access</p>
+<h3 id="72-wlan-security">7.2 WLAN Security</h3>
+<p><strong>Encryption:</strong>
+- WPA3-Enterprise (corporate)
+- WPA2/WPA3-Personal (guest)
+- No WEP, WPA</p>
+<p><strong>Rogue AP Detection:</strong>
+- Automatic scans
+- Alerts for unauthorized APs</p>
+<h2 id="8-network-monitoring">8. Network Monitoring</h2>
+<h3 id="81-flow-monitoring">8.1 Flow Monitoring</h3>
+<p><strong>NetFlow/sFlow:</strong>
+- Collection of flow data
+- Analysis of traffic patterns
+- Anomaly detection</p>
+<p><strong>Tools:</strong> {{ meta.network.flow_tool }}</p>
+<h3 id="82-packet-capture">8.2 Packet Capture</h3>
+<p><strong>For Forensics:</strong>
+- Packet capture at critical points
+- Retention: 7 days
+- Access only for security team</p>
+<h2 id="9-compliance-and-audit">9. Compliance and Audit</h2>
+<h3 id="91-metrics-kpis">9.1 Metrics (KPIs)</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Target Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Firewall rule review completion</td>
+<td>100% quarterly</td>
+</tr>
+<tr>
+<td>Unused firewall rules</td>
+<td>&lt; 10%</td>
+</tr>
+<tr>
+<td>NAC compliance rate</td>
+<td>&gt; 95%</td>
+</tr>
+<tr>
+<td>IPS false positive rate</td>
+<td>&lt; 5%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="92-audit-evidence">9.2 Audit Evidence</h3>
+<ul>
+<li>Firewall configurations</li>
+<li>Firewall change logs</li>
+<li>NAC compliance reports</li>
+<li>IDS/IPS alerts and responses</li>
+</ul>
+<h2 id="10-references">10. References</h2>
+<h3 id="internal-documents">Internal Documents</h3>
+<ul>
+<li><code>0600_Policy_Network_Security.md</code></li>
+<li><code>0370_Guideline_Change_Management_with_Security_Approvals.md</code></li>
+</ul>
+<h3 id="external-standards">External Standards</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.8.20</strong> - Networks security</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.8.21</strong> - Security of network services</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.8.22</strong> - Segregation of networks</li>
+<li><strong>NIST SP 800-41</strong> - Guidelines on Firewalls and Firewall Policy</li>
+</ul>
+<hr />
+<p><strong>Approved by:</strong> Thomas Weber, CISO<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0600_Policy_Network_Security.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0620_Policy_Endpoint_Security.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

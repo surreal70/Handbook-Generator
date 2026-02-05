@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0080 - Basic Security Check / Gap Analysis (Template)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0080</div>
+            <h1>Basic Security Check / Gap Analysis (Template)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0070_Modeling_Module_Assignment_Template.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0090_Risk_Analysis_per_BSI_200_3_Template.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="basic-security-check-gap-analysis-template">Basic Security Check / Gap Analysis (Template)</h1>
+<p><strong>Document ID:</strong> 0080<br />
+<strong>Document Type:</strong> Methodology Artifact<br />
+<strong>Reference Framework:</strong> BSI IT-Grundschutz (BSI Standard 200-2)<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> {{ meta.document.status }}<br />
+<strong>Classification:</strong> internal<br />
+<strong>Last Updated:</strong> {{ meta.document.last_updated }}<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-objective-and-purpose">1. Objective and Purpose</h2>
+<p>The basic security check systematically assesses the extent to which the IT-Grundschutz requirements modeled for the information domain of <strong>AdminSend GmbH</strong> have been implemented. It forms the basis for:
+- Identification of security gaps
+- Prioritization of measures
+- Measure planning (Document 0100)
+- Compliance evidence</p>
+<p><strong>Responsible:</strong> Thomas Weber (ISB)</p>
+<h2 id="2-approach-and-methodology">2. Approach and Methodology</h2>
+<h3 id="21-data-sources">2.1 Data Sources</h3>
+<p>The following sources are used for the basic security check:</p>
+<table>
+<thead>
+<tr>
+<th>Data Source</th>
+<th>Type</th>
+<th>Responsible</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Interviews with stakeholders</td>
+<td>Primary source</td>
+<td>Thomas Weber</td>
+<td>Process and organizational requirements</td>
+</tr>
+<tr>
+<td>Configuration evidence</td>
+<td>Technical</td>
+<td>Anna Schmidt</td>
+<td>Technical requirements</td>
+</tr>
+<tr>
+<td>Policies and guidelines</td>
+<td>Document</td>
+<td>Thomas Weber</td>
+<td>Organizational requirements</td>
+</tr>
+<tr>
+<td>Tickets and change records</td>
+<td>System</td>
+<td>Anna Schmidt</td>
+<td>Implementation evidence</td>
+</tr>
+<tr>
+<td>Logs and monitoring data</td>
+<td>System</td>
+<td>Anna Schmidt</td>
+<td>Operational requirements</td>
+</tr>
+<tr>
+<td>Audit reports</td>
+<td>Document</td>
+<td>[TODO: Internal Audit]</td>
+<td>External validation</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-assessment-logic">2.2 Assessment Logic</h3>
+<p><strong>Fulfillment Levels:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Abbreviation</th>
+<th>Description</th>
+<th>Criteria</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fulfilled</strong></td>
+<td>F</td>
+<td>Requirement fully implemented</td>
+<td>All aspects of the requirement are implemented and evidenced</td>
+</tr>
+<tr>
+<td><strong>Partially Fulfilled</strong></td>
+<td>P</td>
+<td>Requirement partially implemented</td>
+<td>Essential aspects implemented, but gaps exist</td>
+</tr>
+<tr>
+<td><strong>Not Fulfilled</strong></td>
+<td>N</td>
+<td>Requirement not implemented</td>
+<td>Requirement not or only minimally implemented</td>
+</tr>
+<tr>
+<td><strong>Not Applicable</strong></td>
+<td>N/A</td>
+<td>Requirement not relevant</td>
+<td>Requirement does not apply to organization</td>
+</tr>
+<tr>
+<td><strong>Not Assessed</strong></td>
+<td>-</td>
+<td>Not yet reviewed</td>
+<td>Assessment pending</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-sample-size">2.3 Sample Size</h3>
+<p><strong>Review Depth:</strong>
+- <strong>Critical Requirements (Protection Need "Very High"):</strong> 100% review
+- <strong>Important Requirements (Protection Need "High"):</strong> 50% sample
+- <strong>Standard Requirements (Protection Need "Normal"):</strong> 25% sample</p>
+<p><strong>Review Methods:</strong>
+- Document review
+- Configuration review
+- Interviews
+- Technical tests (samples)</p>
+<h3 id="24-execution">2.4 Execution</h3>
+<p><strong>Timeline:</strong>
+- <strong>Start:</strong> [TODO]
+- <strong>Data Collection:</strong> [TODO: e.g., 4 weeks]
+- <strong>Assessment:</strong> [TODO: e.g., 2 weeks]
+- <strong>Validation:</strong> [TODO: e.g., 1 week]
+- <strong>Completion:</strong> [TODO]</p>
+<p><strong>Participants:</strong>
+- ISB: Thomas Weber
+- IT Management: Anna Schmidt
+- Information Domain Responsible: [TODO]
+- Departments: [TODO]</p>
+<h2 id="3-basic-security-check-results">3. Basic Security Check: Results</h2>
+<h3 id="31-isms-and-organization-isms-orp">3.1 ISMS and Organization (ISMS, ORP)</h3>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Requirement (Short)</th>
+<th>Object</th>
+<th>Status</th>
+<th>Evidence</th>
+<th>Finding</th>
+<th>Measure</th>
+<th>Owner</th>
+<th>Target Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ISMS.1</td>
+<td>Security policy created</td>
+<td>AdminSend GmbH</td>
+<td>F</td>
+<td>Document 0010</td>
+<td>-</td>
+<td>-</td>
+<td>Thomas Weber</td>
+<td>-</td>
+</tr>
+<tr>
+<td>ISMS.1</td>
+<td>ISMS organization defined</td>
+<td>AdminSend GmbH</td>
+<td>F</td>
+<td>Document 0020</td>
+<td>-</td>
+<td>-</td>
+<td>Thomas Weber</td>
+<td>-</td>
+</tr>
+<tr>
+<td>ISMS.1</td>
+<td>Resources provided</td>
+<td>AdminSend GmbH</td>
+<td>P</td>
+<td>Budget evidence</td>
+<td>Budget insufficient</td>
+<td>Increase budget</td>
+<td>Max Mustermann</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>ORP.1</td>
+<td>Roles and responsibilities defined</td>
+<td>AdminSend GmbH</td>
+<td>F</td>
+<td>Document 0020</td>
+<td>-</td>
+<td>-</td>
+<td>Thomas Weber</td>
+<td>-</td>
+</tr>
+<tr>
+<td>ORP.2</td>
+<td>Onboarding of new employees</td>
+<td>AdminSend GmbH</td>
+<td>P</td>
+<td>HR process</td>
+<td>No security training in onboarding</td>
+<td>Integrate security training</td>
+<td>[TODO: HR]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>ORP.3</td>
+<td>Awareness program</td>
+<td>AdminSend GmbH</td>
+<td>N</td>
+<td>-</td>
+<td>No awareness program exists</td>
+<td>Establish awareness program</td>
+<td>Thomas Weber</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>ORP.4</td>
+<td>IAM process</td>
+<td>AdminSend GmbH</td>
+<td>P</td>
+<td>IAM guideline</td>
+<td>Recertification missing</td>
+<td>Implement recertification process</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-conception-and-approaches-con">3.2 Conception and Approaches (CON)</h3>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Requirement (Short)</th>
+<th>Object</th>
+<th>Status</th>
+<th>Evidence</th>
+<th>Finding</th>
+<th>Measure</th>
+<th>Owner</th>
+<th>Target Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CON.1</td>
+<td>Crypto concept created</td>
+<td>Crypto concept</td>
+<td>N</td>
+<td>-</td>
+<td>No crypto concept exists</td>
+<td>Create crypto concept</td>
+<td>Thomas Weber</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>CON.3</td>
+<td>Data backup concept created</td>
+<td>Backup concept</td>
+<td>F</td>
+<td>Backup documentation</td>
+<td>-</td>
+<td>-</td>
+<td>Anna Schmidt</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CON.3</td>
+<td>Backup tests performed</td>
+<td>Backup process</td>
+<td>P</td>
+<td>Test protocols</td>
+<td>Tests not regular</td>
+<td>Establish quarterly backup tests</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>CON.6</td>
+<td>Deletion concept created</td>
+<td>Deletion concept</td>
+<td>N</td>
+<td>-</td>
+<td>No deletion concept exists</td>
+<td>Create deletion concept</td>
+<td>Thomas Weber</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="33-operations-ops">3.3 Operations (OPS)</h3>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Requirement (Short)</th>
+<th>Object</th>
+<th>Status</th>
+<th>Evidence</th>
+<th>Finding</th>
+<th>Measure</th>
+<th>Owner</th>
+<th>Target Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OPS.1.1.2</td>
+<td>Administration concept</td>
+<td>IT administration</td>
+<td>P</td>
+<td>Admin guideline</td>
+<td>Privileged Access Management missing</td>
+<td>Implement PAM solution</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>OPS.1.1.3</td>
+<td>Patch process established</td>
+<td>Patch management</td>
+<td>F</td>
+<td>Patch documentation</td>
+<td>-</td>
+<td>-</td>
+<td>Anna Schmidt</td>
+<td>-</td>
+</tr>
+<tr>
+<td>OPS.1.1.3</td>
+<td>Patch SLAs defined</td>
+<td>Patch management</td>
+<td>P</td>
+<td>SLA document</td>
+<td>Critical patches &gt; 30 days</td>
+<td>Reduce SLA to 7 days</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>OPS.1.1.4</td>
+<td>Malware protection implemented</td>
+<td>All systems</td>
+<td>F</td>
+<td>Antivirus solution</td>
+<td>-</td>
+<td>-</td>
+<td>Anna Schmidt</td>
+<td>-</td>
+</tr>
+<tr>
+<td>OPS.1.1.5</td>
+<td>Logging activated</td>
+<td>All systems</td>
+<td>P</td>
+<td>Log configuration</td>
+<td>Central log collection missing</td>
+<td>Implement SIEM</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>OPS.2.2</td>
+<td>Cloud security concept</td>
+<td>Cloud services</td>
+<td>N</td>
+<td>-</td>
+<td>No cloud security concept</td>
+<td>Create cloud security concept</td>
+<td>Thomas Weber</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="34-detection-and-response-der">3.4 Detection and Response (DER)</h3>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Requirement (Short)</th>
+<th>Object</th>
+<th>Status</th>
+<th>Evidence</th>
+<th>Finding</th>
+<th>Measure</th>
+<th>Owner</th>
+<th>Target Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DER.1</td>
+<td>Detection established</td>
+<td>Monitoring</td>
+<td>P</td>
+<td>Monitoring tools</td>
+<td>SIEM missing</td>
+<td>Implement SIEM</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>DER.2.1</td>
+<td>Incident response process</td>
+<td>Incident management</td>
+<td>P</td>
+<td>IR guideline</td>
+<td>No incident response exercises</td>
+<td>Establish annual IR exercise</td>
+<td>Thomas Weber</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>DER.2.2</td>
+<td>Forensics preparation</td>
+<td>Forensics</td>
+<td>N</td>
+<td>-</td>
+<td>No forensics preparation</td>
+<td>Create forensics concept</td>
+<td>Thomas Weber</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="35-applications-app">3.5 Applications (APP)</h3>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Requirement (Short)</th>
+<th>Object</th>
+<th>Status</th>
+<th>Evidence</th>
+<th>Finding</th>
+<th>Measure</th>
+<th>Owner</th>
+<th>Target Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>APP.3.1</td>
+<td>Secure web application development</td>
+<td>[TODO: Web application]</td>
+<td>P</td>
+<td>SDLC process</td>
+<td>SAST/DAST missing</td>
+<td>Integrate security testing</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>APP.3.2</td>
+<td>Web server hardening</td>
+<td>[TODO: Web server]</td>
+<td>F</td>
+<td>Hardening checklist</td>
+<td>-</td>
+<td>-</td>
+<td>Anna Schmidt</td>
+<td>-</td>
+</tr>
+<tr>
+<td>APP.4.3</td>
+<td>Database hardening</td>
+<td>[TODO: Database]</td>
+<td>P</td>
+<td>DB configuration</td>
+<td>Encryption at rest missing</td>
+<td>Activate TDE</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="36-it-systems-sys">3.6 IT Systems (SYS)</h3>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Requirement (Short)</th>
+<th>Object</th>
+<th>Status</th>
+<th>Evidence</th>
+<th>Finding</th>
+<th>Measure</th>
+<th>Owner</th>
+<th>Target Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SYS.1.1</td>
+<td>Server hardening</td>
+<td>{{ netbox.device.server_001 }}</td>
+<td>F</td>
+<td>Hardening baseline</td>
+<td>-</td>
+<td>-</td>
+<td>Anna Schmidt</td>
+<td>-</td>
+</tr>
+<tr>
+<td>SYS.1.3</td>
+<td>Linux hardening</td>
+<td>[TODO: Linux server]</td>
+<td>P</td>
+<td>CIS Benchmark</td>
+<td>Not all CIS controls implemented</td>
+<td>Complete CIS implementation</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>SYS.1.5</td>
+<td>Virtualization security</td>
+<td>[TODO: VMware]</td>
+<td>P</td>
+<td>VMware configuration</td>
+<td>Network segmentation insufficient</td>
+<td>Implement microsegmentation</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>SYS.2.1</td>
+<td>Client hardening</td>
+<td>Workstations</td>
+<td>P</td>
+<td>GPO configuration</td>
+<td>BitLocker not comprehensive</td>
+<td>Activate BitLocker on all clients</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>SYS.3.2.1</td>
+<td>Mobile device management</td>
+<td>Mobile devices</td>
+<td>N</td>
+<td>-</td>
+<td>No MDM exists</td>
+<td>Implement MDM solution</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="37-networks-and-communication-net">3.7 Networks and Communication (NET)</h3>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Requirement (Short)</th>
+<th>Object</th>
+<th>Status</th>
+<th>Evidence</th>
+<th>Finding</th>
+<th>Measure</th>
+<th>Owner</th>
+<th>Target Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NET.1.1</td>
+<td>Network segmentation</td>
+<td>Network architecture</td>
+<td>P</td>
+<td>Network diagram</td>
+<td>Segmentation insufficient</td>
+<td>Implement microsegmentation</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>NET.1.2</td>
+<td>Network monitoring</td>
+<td>Network management</td>
+<td>F</td>
+<td>Monitoring tools</td>
+<td>-</td>
+<td>-</td>
+<td>Anna Schmidt</td>
+<td>-</td>
+</tr>
+<tr>
+<td>NET.3.1</td>
+<td>Router/switch hardening</td>
+<td>Network devices</td>
+<td>P</td>
+<td>Configuration evidence</td>
+<td>SNMP v3 not everywhere</td>
+<td>SNMP v3 comprehensive</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>NET.3.2</td>
+<td>Firewall ruleset</td>
+<td>Firewall</td>
+<td>F</td>
+<td>Firewall rules</td>
+<td>-</td>
+<td>-</td>
+<td>Anna Schmidt</td>
+<td>-</td>
+</tr>
+<tr>
+<td>NET.3.3</td>
+<td>VPN security</td>
+<td>VPN</td>
+<td>P</td>
+<td>VPN configuration</td>
+<td>MFA for VPN missing</td>
+<td>Implement MFA for VPN</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>NET.2.1</td>
+<td>WLAN security</td>
+<td>WLAN</td>
+<td>F</td>
+<td>WLAN configuration</td>
+<td>-</td>
+<td>-</td>
+<td>Anna Schmidt</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="38-infrastructure-inf">3.8 Infrastructure (INF)</h3>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Requirement (Short)</th>
+<th>Object</th>
+<th>Status</th>
+<th>Evidence</th>
+<th>Finding</th>
+<th>Measure</th>
+<th>Owner</th>
+<th>Target Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>INF.1</td>
+<td>Building security</td>
+<td>{{ meta.organization.primary_location }}</td>
+<td>P</td>
+<td>Security concept</td>
+<td>Visitor management insufficient</td>
+<td>Visitor management system</td>
+<td>[TODO: Facility]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>INF.2</td>
+<td>Data center security</td>
+<td>Data center</td>
+<td>F</td>
+<td>DC documentation</td>
+<td>-</td>
+<td>-</td>
+<td>[TODO: Facility]</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-summary-and-statistics">4. Summary and Statistics</h2>
+<h3 id="41-fulfillment-statistics">4.1 Fulfillment Statistics</h3>
+<table>
+<thead>
+<tr>
+<th>Module Layer</th>
+<th>Total</th>
+<th>Fulfilled (F)</th>
+<th>Partial (P)</th>
+<th>Not Fulfilled (N)</th>
+<th>N/A</th>
+<th>Fulfillment Rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ISMS</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO: %]</td>
+</tr>
+<tr>
+<td>ORP</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO: %]</td>
+</tr>
+<tr>
+<td>CON</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO: %]</td>
+</tr>
+<tr>
+<td>OPS</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO: %]</td>
+</tr>
+<tr>
+<td>DER</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO: %]</td>
+</tr>
+<tr>
+<td>APP</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO: %]</td>
+</tr>
+<tr>
+<td>SYS</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO: %]</td>
+</tr>
+<tr>
+<td>NET</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO: %]</td>
+</tr>
+<tr>
+<td>INF</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO: %]</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>[TODO]</strong></td>
+<td><strong>[TODO]</strong></td>
+<td><strong>[TODO]</strong></td>
+<td><strong>[TODO]</strong></td>
+<td><strong>[TODO]</strong></td>
+<td><strong>[TODO: %]</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Overall Fulfillment Rate:</strong> [TODO: %]</p>
+<h3 id="42-critical-gaps-priority-1">4.2 Critical Gaps (Priority 1)</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Requirement</th>
+<th>Object</th>
+<th>Risk</th>
+<th>Measure</th>
+<th>Owner</th>
+<th>Target Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GAP-001</td>
+<td>[TODO: Critical gap 1]</td>
+<td>[TODO]</td>
+<td>Very high</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>GAP-002</td>
+<td>[TODO: Critical gap 2]</td>
+<td>[TODO]</td>
+<td>Very high</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="43-quick-wins-priority-2">4.3 Quick Wins (Priority 2)</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Requirement</th>
+<th>Object</th>
+<th>Effort</th>
+<th>Benefit</th>
+<th>Measure</th>
+<th>Owner</th>
+<th>Target Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>QW-001</td>
+<td>[TODO: Quick win 1]</td>
+<td>[TODO]</td>
+<td>Low</td>
+<td>High</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>QW-002</td>
+<td>[TODO: Quick win 2]</td>
+<td>[TODO]</td>
+<td>Low</td>
+<td>High</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="44-medium-term-measures-priority-3">4.4 Medium-Term Measures (Priority 3)</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Requirement</th>
+<th>Object</th>
+<th>Effort</th>
+<th>Measure</th>
+<th>Owner</th>
+<th>Target Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MF-001</td>
+<td>[TODO: Medium-term measure 1]</td>
+<td>[TODO]</td>
+<td>Medium</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>MF-002</td>
+<td>[TODO: Medium-term measure 2]</td>
+<td>[TODO]</td>
+<td>Medium</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-management-summary">5. Management Summary</h2>
+<h3 id="51-overall-assessment">5.1 Overall Assessment</h3>
+<p><strong>Fulfillment Rate:</strong> [TODO: %]</p>
+<p><strong>Assessment:</strong>
+- [TODO: Summary assessment of security level]
+- [TODO: Main findings]
+- [TODO: Critical action areas]</p>
+<h3 id="52-top-5-findings">5.2 Top 5 Findings</h3>
+<ol>
+<li><strong>[TODO: Finding 1]:</strong> [TODO: Description and impact]</li>
+<li><strong>[TODO: Finding 2]:</strong> [TODO: Description and impact]</li>
+<li><strong>[TODO: Finding 3]:</strong> [TODO: Description and impact]</li>
+<li><strong>[TODO: Finding 4]:</strong> [TODO: Description and impact]</li>
+<li><strong>[TODO: Finding 5]:</strong> [TODO: Description and impact]</li>
+</ol>
+<h3 id="53-resource-requirements">5.3 Resource Requirements</h3>
+<p><strong>Estimated Effort for Measure Implementation:</strong>
+- <strong>Person-days:</strong> [TODO]
+- <strong>Budget:</strong> [TODO]
+- <strong>External Support:</strong> [TODO]
+- <strong>Timeframe:</strong> [TODO]</p>
+<h3 id="54-dependencies">5.4 Dependencies</h3>
+<table>
+<thead>
+<tr>
+<th>Measure</th>
+<th>Dependency</th>
+<th>Impact</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Measure 1]</td>
+<td>[TODO: Dependency]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: Measure 2]</td>
+<td>[TODO: Dependency]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-next-steps">6. Next Steps</h2>
+<ol>
+<li><strong>Measure Planning (Document 0100):</strong> Detailed planning of identified measures</li>
+<li><strong>Risk Analysis (Document 0090):</strong> For objects with increased protection needs or non-modelable risks</li>
+<li><strong>Management Presentation:</strong> Presentation of results to executive management</li>
+<li><strong>Measure Implementation:</strong> Start of implementation of prioritized measures</li>
+</ol>
+<h2 id="7-update-and-maintenance">7. Update and Maintenance</h2>
+<p>The basic security check is repeated:
+- After completion of significant measures
+- When significant changes occur in IT infrastructure
+- At least annually as part of the ISMS review</p>
+<p><strong>Responsible:</strong> Thomas Weber (ISB)<br />
+<strong>Next Check:</strong> {{ meta.document.next_review }}</p>
+<h2 id="8-approval">8. Approval</h2>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Name</th>
+<th>Date</th>
+<th>Approval</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ISB</td>
+<td>Thomas Weber</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+<tr>
+<td>IT Management</td>
+<td>Anna Schmidt</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+<tr>
+<td>Executive Management</td>
+<td>Max Mustermann</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>References:</strong>
+- BSI Standard 200-2: IT-Grundschutz Methodology (Chapter 8: Basic Security Check)
+- BSI IT-Grundschutz Compendium</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0070_Modeling_Module_Assignment_Template.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0090_Risk_Analysis_per_BSI_200_3_Template.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

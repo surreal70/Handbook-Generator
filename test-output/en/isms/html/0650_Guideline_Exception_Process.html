@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0650 - Guideline: Exception Process</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0650</div>
+            <h1>Guideline: Exception Process</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0640_Policy_Exceptions_and_Risk_Waivers.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0660_Policy_Information_Transfer_and_Communication.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="guideline-exception-process">Guideline: Exception Process</h1>
+<p><strong>Document ID:</strong> 0650<br />
+<strong>Document Type:</strong> Guideline (detailed)<br />
+<strong>Related Policy:</strong> 0640_Policy_Exceptions_and_Risk_Waivers.md<br />
+<strong>Standard Reference:</strong> ISO/IEC 27001:2022 Annex A.5.1<br />
+<strong>Owner:</strong> Thomas Weber<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Approved<br />
+<strong>Classification:</strong> Internal<br />
+<strong>Last Updated:</strong> {{ meta.document.date }}</p>
+<hr />
+<h2 id="1-purpose-and-scope">1. Purpose and Scope</h2>
+<p>This guideline implements <code>0640_Policy_Exceptions_and_Risk_Waivers.md</code> and defines:
+- Exception process for security policies
+- Risk waiver procedures
+- Compensating controls</p>
+<p><strong>Scope:</strong> All security policies at <strong>AdminSend GmbH</strong></p>
+<h2 id="2-exception-categories">2. Exception Categories</h2>
+<h3 id="21-temporary-exceptions">2.1 Temporary Exceptions</h3>
+<p><strong>Definition:</strong> Time-limited deviation from policy</p>
+<p><strong>Examples:</strong>
+- Delayed patching (due to compatibility issues)
+- Temporary firewall rule for project
+- Delayed compliance (during migration)</p>
+<p><strong>Maximum Duration:</strong> 12 months</p>
+<h3 id="22-permanent-exceptions">2.2 Permanent Exceptions</h3>
+<p><strong>Definition:</strong> Permanent deviation from policy</p>
+<p><strong>Examples:</strong>
+- Legacy systems that cannot meet baseline
+- Special business requirements
+- Technical impossibility</p>
+<p><strong>Review Frequency:</strong> Annually</p>
+<h3 id="23-emergency-exceptions">2.3 Emergency Exceptions</h3>
+<p><strong>Definition:</strong> Immediate exception in emergencies</p>
+<p><strong>Examples:</strong>
+- Critical business requirement
+- System outage remediation
+- Security incident response</p>
+<p><strong>Retroactive Approval:</strong> Within 48 hours</p>
+<h2 id="3-exception-process">3. Exception Process</h2>
+<h3 id="31-request-submission">3.1 Request Submission</h3>
+<p><strong>Request via:</strong> {{ meta.itsm.portal }} (ticketing system)</p>
+<p><strong>Mandatory Information:</strong>
+- Affected policy/guideline
+- Description of deviation
+- Justification (business justification)
+- Affected systems/processes
+- Risk assessment
+- Proposed compensating controls
+- Desired duration</p>
+<p><strong>Requester:</strong> System owner or department head</p>
+<h3 id="32-risk-assessment">3.2 Risk Assessment</h3>
+<p><strong>Conducted by:</strong> IT Security Team</p>
+<p><strong>Assessment Criteria:</strong>
+- Likelihood of security incident
+- Potential impact
+- Affected assets and data
+- Existing controls
+- Proposed compensating controls</p>
+<p><strong>Risk Matrix:</strong>
+| Likelihood | Low Impact | Medium Impact | High Impact |
+|------------|-----------|---------------|-------------|
+| Low | Low | Low | Medium |
+| Medium | Low | Medium | High |
+| High | Medium | High | Critical |</p>
+<h3 id="33-compensating-controls">3.3 Compensating Controls</h3>
+<p><strong>Definition:</strong> Alternative security measures to minimize risk</p>
+<p><strong>Examples:</strong>
+- Network isolation (for missing patches)
+- Increased monitoring (for weaker authentication)
+- Manual processes (for missing automation)
+- Additional access restrictions</p>
+<p><strong>Requirement:</strong>
+- Compensating controls must reduce risk to acceptable level
+- Documentation of effectiveness</p>
+<h3 id="34-approval">3.4 Approval</h3>
+<p><strong>Approval Levels:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Risk</th>
+<th>Approver</th>
+<th>SLA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Low</td>
+<td>IT Security Manager</td>
+<td>3 business days</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>CISO</td>
+<td>5 business days</td>
+</tr>
+<tr>
+<td>High</td>
+<td>CISO + CIO</td>
+<td>7 business days</td>
+</tr>
+<tr>
+<td>Critical</td>
+<td>CISO + CIO + Executive Management</td>
+<td>10 business days</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Approval Criteria:</strong>
+- Business justification comprehensible
+- Risk acceptable (with compensating controls)
+- No alternative available
+- Time-limited (for temporary exceptions)</p>
+<p><strong>Rejection:</strong>
+- Justification required
+- Propose alternative solutions</p>
+<h3 id="35-documentation">3.5 Documentation</h3>
+<p><strong>Exception Register:</strong>
+- All approved exceptions
+- Requester, approver, date
+- Risk assessment
+- Compensating controls
+- Expiration date
+- Review date</p>
+<p><strong>Storage Location:</strong> {{ meta.compliance.exception_register }}</p>
+<h2 id="4-monitoring-and-review">4. Monitoring and Review</h2>
+<h3 id="41-ongoing-monitoring">4.1 Ongoing Monitoring</h3>
+<p><strong>Responsibility:</strong> IT Security Team</p>
+<p><strong>Activities:</strong>
+- Verify effectiveness of compensating controls
+- Compliance with exception conditions
+- Incidents related to exceptions</p>
+<p><strong>Frequency:</strong> Monthly (for critical exceptions), quarterly (for others)</p>
+<h3 id="42-regular-review">4.2 Regular Review</h3>
+<p><strong>Temporary Exceptions:</strong>
+- Review 30 days before expiration
+- Decision: Extend, terminate, make permanent</p>
+<p><strong>Permanent Exceptions:</strong>
+- Annual review
+- Verify necessity
+- Update risk assessment</p>
+<p><strong>Emergency Exceptions:</strong>
+- Review within 7 days after approval
+- Regularization or termination</p>
+<h3 id="43-escalation">4.3 Escalation</h3>
+<p><strong>In Case of Problems:</strong>
+- Compensating controls ineffective
+- Risk increased
+- Incidents related to exception</p>
+<p><strong>Escalate to:</strong>
+- CISO (immediately)
+- Risk Committee (for critical exceptions)</p>
+<h2 id="5-exception-termination">5. Exception Termination</h2>
+<h3 id="51-planned-termination">5.1 Planned Termination</h3>
+<p><strong>Upon Expiration:</strong>
+1. Notification to requester (30 days in advance)
+2. Create remediation plan
+3. Implement remediation
+4. Verification
+5. Close exception</p>
+<h3 id="52-early-termination">5.2 Early Termination</h3>
+<p><strong>Reasons:</strong>
+- Risk no longer acceptable
+- Compensating controls ineffective
+- Alternative solution available
+- Business requirement no longer exists</p>
+<p><strong>Process:</strong>
+1. Decision by CISO
+2. Notification to requester
+3. Immediate remediation (or system shutdown)
+4. Documentation</p>
+<h2 id="6-reporting">6. Reporting</h2>
+<h3 id="61-monthly-exception-report">6.1 Monthly Exception Report</h3>
+<p><strong>Contents:</strong>
+- Number of active exceptions (by risk)
+- New exceptions in month
+- Expired exceptions
+- Overdue reviews
+- Top exceptions by risk</p>
+<p><strong>Recipients:</strong> CISO, CIO, Risk Committee</p>
+<h3 id="62-quarterly-management-report">6.2 Quarterly Management Report</h3>
+<p><strong>Contents:</strong>
+- Trend analysis
+- Exceptions by category/department
+- Risk posture
+- Improvement measures</p>
+<p><strong>Recipients:</strong> Executive Management, Audit Committee</p>
+<h2 id="7-compliance-and-audit">7. Compliance and Audit</h2>
+<h3 id="71-metrics-kpis">7.1 Metrics (KPIs)</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Target Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Exceptions with current review</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Overdue exceptions</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Exceptions with compensating controls</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Average exception duration</td>
+<td>&lt; 6 months</td>
+</tr>
+</tbody>
+</table>
+<h3 id="72-audit-evidence">7.2 Audit Evidence</h3>
+<ul>
+<li>Exception Register</li>
+<li>Requests and approvals</li>
+<li>Risk assessments</li>
+<li>Review protocols</li>
+<li>Monitoring reports</li>
+</ul>
+<h2 id="8-examples">8. Examples</h2>
+<h3 id="81-example-delayed-patching">8.1 Example: Delayed Patching</h3>
+<p><strong>Scenario:</strong> Critical patch causes compatibility issues with business application</p>
+<p><strong>Request:</strong>
+- Policy: Patch Management (critical patches within 7 days)
+- Deviation: Delay by 30 days
+- Justification: Compatibility issue, vendor working on fix
+- Risk: High (known exploit)</p>
+<p><strong>Compensating Controls:</strong>
+- Network isolation of affected system
+- IPS signature activated
+- Increased monitoring
+- Access restrictions</p>
+<p><strong>Approval:</strong> CISO + CIO<br />
+<strong>Duration:</strong> 30 days<br />
+<strong>Review:</strong> Weekly</p>
+<h3 id="82-example-legacy-system">8.2 Example: Legacy System</h3>
+<p><strong>Scenario:</strong> Legacy system cannot meet security baseline</p>
+<p><strong>Request:</strong>
+- Policy: Security Baseline (CIS Benchmark Level 1)
+- Deviation: Outdated OS, no patches available
+- Justification: Critical business application, no migration possible (short-term)
+- Risk: High</p>
+<p><strong>Compensating Controls:</strong>
+- Dedicated VLAN (isolated)
+- Firewall rules (only required connections)
+- No internet access
+- Read-only access for standard users
+- Increased monitoring and logging
+- Annual penetration tests</p>
+<p><strong>Approval:</strong> CISO + CIO + Executive Management<br />
+<strong>Duration:</strong> Permanent (until migration)<br />
+<strong>Review:</strong> Annually</p>
+<h2 id="9-references">9. References</h2>
+<h3 id="internal-documents">Internal Documents</h3>
+<ul>
+<li><code>0640_Policy_Exceptions_and_Risk_Waivers.md</code></li>
+<li>All security policies and guidelines</li>
+</ul>
+<h3 id="external-standards">External Standards</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.1</strong> - Policies for information security</li>
+<li><strong>NIST SP 800-53</strong> - Security and Privacy Controls (Tailoring)</li>
+</ul>
+<hr />
+<p><strong>Approved by:</strong> Thomas Weber, CISO<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0640_Policy_Exceptions_and_Risk_Waivers.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0660_Policy_Information_Transfer_and_Communication.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

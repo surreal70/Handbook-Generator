@@ -1,6 +1,6 @@
 # Version Management
 
-## Current Version: 0.0.2
+## Current Version: 0.0.3
 
 ### Single Source of Truth
 
@@ -32,6 +32,18 @@ To update the version number:
 **Do not** hardcode version numbers elsewhere in the codebase.
 
 ### Version History
+
+- **0.0.3** (2025-02-05): Complete handbook generation with PDF support
+  - ✅ Generated all 8 handbooks in HTML format (388 HTML files)
+  - ✅ Generated all 8 handbooks in PDF format (8 PDFs, 3.4 MB total)
+  - ✅ Implemented Pandoc + XeLaTeX PDF generation pipeline
+  - ✅ Created batch generation scripts (generate_all_handbooks.sh, generate_pdfs_pandoc.sh)
+  - ✅ Moved helper scripts to helpers/ directory
+  - ✅ Updated documentation with current state
+  - ✅ Separate directory structure per handbook type
+  - ✅ Professional PDF formatting with TOC and section numbering
+  - ✅ 784 total files generated (388 HTML + 8 PDF + 388 Markdown)
+  - ✅ Production-ready output in all formats
 
 - **0.0.2** (2025-02-04): Documentation update
   - Updated README.md with accurate template counts (186 total)

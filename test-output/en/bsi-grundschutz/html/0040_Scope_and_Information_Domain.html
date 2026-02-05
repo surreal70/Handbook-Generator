@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0040 - Scope and Information Domain (Boundaries)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0040</div>
+            <h1>Scope and Information Domain (Boundaries)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0030_Document_Control_and_Document_Register.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0050_Structure_Analysis_Template.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="scope-and-information-domain-boundaries">Scope and Information Domain (Boundaries)</h1>
+<p><strong>Document ID:</strong> 0040<br />
+<strong>Document Type:</strong> Foundation Document<br />
+<strong>Reference Framework:</strong> BSI IT-Grundschutz (BSI Standards 200-1/200-2/200-3)<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> {{ meta.document.status }}<br />
+<strong>Classification:</strong> internal<br />
+<strong>Last Updated:</strong> {{ meta.document.last_updated }}<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-purpose-and-objectives">1. Purpose and Objectives</h2>
+<p>This document defines the scope of the Information Security Management System (ISMS) of <strong>AdminSend GmbH</strong> and delineates the information domain. The clear definition of scope is the foundation for all further IT-Grundschutz activities (structure analysis, protection needs assessment, modeling).</p>
+<h2 id="2-scope-definition">2. Scope Definition</h2>
+<h3 id="21-organizational-units-and-locations">2.1 Organizational Units and Locations</h3>
+<p><strong>Organization:</strong> AdminSend GmbH</p>
+<p><strong>Locations in Scope:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Location</th>
+<th>Address</th>
+<th>Type</th>
+<th>Employees</th>
+<th>In Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{{ meta.organization.primary_location }}</td>
+<td>[TODO]</td>
+<td>Main location</td>
+<td>[TODO]</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>[TODO: Additional locations]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>✓/✗</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Organizational Units in Scope:</strong>
+- Executive Management
+- IT Department
+- [TODO: Additional departments]</p>
+<h3 id="22-business-processes-and-services">2.2 Business Processes and Services</h3>
+<p><strong>Critical Business Processes in Scope:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Process</th>
+<th>Description</th>
+<th>Criticality</th>
+<th>Owner</th>
+<th>In Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Process 1]</td>
+<td>[TODO]</td>
+<td>High/Medium/Low</td>
+<td>[TODO]</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>[TODO: Process 2]</td>
+<td>[TODO]</td>
+<td>High/Medium/Low</td>
+<td>[TODO]</td>
+<td>✓</td>
+</tr>
+</tbody>
+</table>
+<p><strong>IT Services in Scope:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Description</th>
+<th>Users</th>
+<th>Service Owner</th>
+<th>In Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Service 1]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Anna Schmidt</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>[TODO: Service 2]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Anna Schmidt</td>
+<td>✓</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-it-infrastructure">2.3 IT Infrastructure</h3>
+<p><strong>IT Systems in Scope:</strong></p>
+<h4 id="231-on-premise-it">2.3.1 On-Premise IT</h4>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Systems</th>
+<th>Quantity</th>
+<th>In Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Servers</td>
+<td>{{ netbox.device.servers }}</td>
+<td>[TODO]</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Network</td>
+<td>{{ netbox.device.network }}</td>
+<td>[TODO]</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Storage</td>
+<td>{{ netbox.device.storage }}</td>
+<td>[TODO]</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Clients</td>
+<td>Workstations, Laptops</td>
+<td>[TODO]</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Mobile Devices</td>
+<td>Smartphones, Tablets</td>
+<td>[TODO]</td>
+<td>✓</td>
+</tr>
+</tbody>
+</table>
+<h4 id="232-cloud-services">2.3.2 Cloud Services</h4>
+<table>
+<thead>
+<tr>
+<th>Cloud Service</th>
+<th>Provider</th>
+<th>Type (IaaS/PaaS/SaaS)</th>
+<th>In Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Cloud Service 1]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>[TODO: Cloud Service 2]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>✓</td>
+</tr>
+</tbody>
+</table>
+<h4 id="233-otiot-if-applicable">2.3.3 OT/IoT (if applicable)</h4>
+<table>
+<thead>
+<tr>
+<th>OT/IoT System</th>
+<th>Description</th>
+<th>Location</th>
+<th>In Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: OT System 1]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>✓/✗</td>
+</tr>
+</tbody>
+</table>
+<h3 id="24-applications-and-data">2.4 Applications and Data</h3>
+<p><strong>Business Applications in Scope:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Application</th>
+<th>Type</th>
+<th>Criticality</th>
+<th>Data Classification</th>
+<th>In Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Application 1]</td>
+<td>[TODO]</td>
+<td>High/Medium/Low</td>
+<td>Confidential/Internal</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>[TODO: Application 2]</td>
+<td>[TODO]</td>
+<td>High/Medium/Low</td>
+<td>Confidential/Internal</td>
+<td>✓</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Data Types in Scope:</strong>
+- Personal data (GDPR-relevant)
+- Trade secrets
+- Customer data
+- Financial data
+- [TODO: Additional data types]</p>
+<h2 id="3-information-domain-boundaries">3. Information Domain Boundaries</h2>
+<h3 id="31-in-scope">3.1 In Scope</h3>
+<p><strong>The following elements are in scope of the ISMS:</strong></p>
+<ol>
+<li><strong>Infrastructure:</strong></li>
+<li>All servers and network components at location {{ meta.organization.primary_location }}</li>
+<li>
+<p>[TODO: Additional infrastructure]</p>
+</li>
+<li>
+<p><strong>Applications:</strong></p>
+</li>
+<li>All business-critical applications</li>
+<li>
+<p>[TODO: Specific applications]</p>
+</li>
+<li>
+<p><strong>Data:</strong></p>
+</li>
+<li>All personal data</li>
+<li>All business data classified as "Confidential" or higher</li>
+<li>
+<p>[TODO: Additional data]</p>
+</li>
+<li>
+<p><strong>People:</strong></p>
+</li>
+<li>All employees of AdminSend GmbH</li>
+<li>External service providers with access to scope systems</li>
+<li>
+<p>[TODO: Additional groups]</p>
+</li>
+<li>
+<p><strong>Processes:</strong></p>
+</li>
+<li>All IT operations processes</li>
+<li>All business-critical processes</li>
+<li>[TODO: Additional processes]</li>
+</ol>
+<h3 id="32-out-of-scope">3.2 Out of Scope</h3>
+<p><strong>The following elements are NOT in scope of the ISMS:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Justification</th>
+<th>Risk Assessment</th>
+<th>Interfaces to Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Out-of-Scope Element 1]</td>
+<td>[TODO: Justification]</td>
+<td>[TODO: Risk]</td>
+<td>[TODO: Interfaces]</td>
+</tr>
+<tr>
+<td>[TODO: Out-of-Scope Element 2]</td>
+<td>[TODO: Justification]</td>
+<td>[TODO: Risk]</td>
+<td>[TODO: Interfaces]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Important:</strong> Even out-of-scope elements must be assessed for their risks to the scope, especially when interfaces exist.</p>
+<h3 id="33-justification-of-boundaries">3.3 Justification of Boundaries</h3>
+<p>[TODO: Explain the reasons for the chosen scope boundaries]</p>
+<p>Examples of justifications:
+- Focus on critical business processes
+- Resource constraints (phased expansion planned)
+- External responsibility (e.g. outsourced processes)
+- Low criticality</p>
+<h2 id="4-interfaces-and-dependencies">4. Interfaces and Dependencies</h2>
+<h3 id="41-external-service-providers">4.1 External Service Providers</h3>
+<table>
+<thead>
+<tr>
+<th>Service Provider</th>
+<th>Service</th>
+<th>Criticality</th>
+<th>Contractual Arrangements</th>
+<th>Security Requirements</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Provider 1]</td>
+<td>[TODO]</td>
+<td>High/Medium/Low</td>
+<td>[TODO: Contract available]</td>
+<td>[TODO: SLA, Certifications]</td>
+</tr>
+<tr>
+<td>[TODO: Provider 2]</td>
+<td>[TODO]</td>
+<td>High/Medium/Low</td>
+<td>[TODO: Contract available]</td>
+<td>[TODO: SLA, Certifications]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-critical-interfaces">4.2 Critical Interfaces</h3>
+<p><strong>Interfaces between Scope and Out-of-Scope:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Interface</th>
+<th>From (Scope)</th>
+<th>To (Out-of-Scope)</th>
+<th>Data Flow</th>
+<th>Security Measures</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Interface 1]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO: Encryption, Firewall, etc.]</td>
+</tr>
+<tr>
+<td>[TODO: Interface 2]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Interfaces to External Partners:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Partner</th>
+<th>Purpose</th>
+<th>Data Types</th>
+<th>Security Measures</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Partner 1]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: Partner 2]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="43-dependencies">4.3 Dependencies</h3>
+<p><strong>Critical Dependencies of the Scope:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Dependency</th>
+<th>Type</th>
+<th>Impact of Failure</th>
+<th>Mitigation Measures</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Internet Connection</td>
+<td>External Infrastructure</td>
+<td>[TODO]</td>
+<td>[TODO: Redundancy, Backup line]</td>
+</tr>
+<tr>
+<td>Power Supply</td>
+<td>External Infrastructure</td>
+<td>[TODO]</td>
+<td>[TODO: UPS, Emergency power]</td>
+</tr>
+<tr>
+<td>[TODO: Additional dependencies]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-information-domain-diagram">5. Information Domain Diagram</h2>
+<p><img alt="Information Domain Diagram" src="diagrams/informationsverbund.png" /></p>
+<p><strong>Diagram Legend:</strong>
+- <strong>Green Line:</strong> Scope boundary (in ISMS)
+- <strong>Red Line:</strong> Out-of-scope boundary
+- <strong>Blue Arrows:</strong> Data flows
+- <strong>Yellow Symbols:</strong> Critical interfaces</p>
+<p>[TODO: Create an information domain diagram]</p>
+<h2 id="6-scope-changes">6. Scope Changes</h2>
+<h3 id="61-change-process">6.1 Change Process</h3>
+<p>Scope changes require:
+1. <strong>Request:</strong> Formal change request to ISO
+2. <strong>Assessment:</strong> Assessment of impacts (risks, resources, compliance)
+3. <strong>Approval:</strong> Approval by executive management
+4. <strong>Implementation:</strong> Update of all affected documents
+5. <strong>Communication:</strong> Information to all stakeholders</p>
+<p><strong>Responsible:</strong> Thomas Weber (ISO)</p>
+<h3 id="62-scope-review">6.2 Scope Review</h3>
+<p>The scope is regularly reviewed:
+- <strong>Frequency:</strong> Annually or upon significant changes
+- <strong>Triggers:</strong> New business processes, IT systems, locations, regulatory requirements
+- <strong>Responsible:</strong> ISO</p>
+<p><strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<h2 id="7-documentation-and-evidence">7. Documentation and Evidence</h2>
+<p>The following documents and evidence are maintained for the scope:
+- This scope document
+- Information domain diagram
+- Asset inventory (see Appendix 0710)
+- Data flow diagrams (see Appendix 0720)
+- Contracts with external service providers
+- Scope change logs</p>
+<h2 id="8-approval">8. Approval</h2>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Name</th>
+<th>Date</th>
+<th>Approval</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Executive Management</td>
+<td>Max Mustermann</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+<tr>
+<td>ISO</td>
+<td>Thomas Weber</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>References:</strong>
+- BSI Standard 200-1: Management Systems for Information Security (ISMS)
+- BSI Standard 200-2: IT-Grundschutz Methodology (Chapter 4: Scope Definition)
+- BSI IT-Grundschutz Compendium</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0030_Document_Control_and_Document_Register.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0050_Structure_Analysis_Template.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

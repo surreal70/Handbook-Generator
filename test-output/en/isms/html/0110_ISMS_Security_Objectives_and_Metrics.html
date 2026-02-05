@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0110 - Information Security Objectives and Metrics</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0110</div>
+            <h1>Information Security Objectives and Metrics</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0100_ISMS_Statement_of_Applicability_SoA_Template.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0120_ISMS_Training_Awareness_and_Competence.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="information-security-objectives-and-metrics">Information Security Objectives and Metrics</h1>
+<p><strong>Document ID:</strong> 0110<br />
+<strong>Document Type:</strong> ISMS Foundation Document<br />
+<strong>Standard Reference:</strong> ISO/IEC 27001:2022 Clause 6.2<br />
+<strong>Owner:</strong> Thomas Weber<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Approved<br />
+<strong>Classification:</strong> Internal<br />
+<strong>Last Updated:</strong> {{ meta.document.date }}<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-information-security-objectives">1. Information Security Objectives</h2>
+<h3 id="11-strategic-objectives">1.1 Strategic Objectives</h3>
+<p><strong>AdminSend GmbH</strong> defines the following strategic information security objectives:</p>
+<table>
+<thead>
+<tr>
+<th>Objective ID</th>
+<th>Objective</th>
+<th>Description</th>
+<th>KPI/Metric</th>
+<th>Target Value</th>
+<th>Measurement Method</th>
+<th>Owner</th>
+<th>Frequency</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>O-001</strong></td>
+<td>Ensure compliance</td>
+<td>Compliance with all legal and contractual requirements</td>
+<td>Number of compliance violations</td>
+<td>0</td>
+<td>Audit reports, incident reports</td>
+<td>Thomas Weber</td>
+<td>Quarterly</td>
+<td>Active</td>
+</tr>
+<tr>
+<td><strong>O-002</strong></td>
+<td>Minimize risks</td>
+<td>Reduction of high and very high risks</td>
+<td>Number of risks with score ≥ 13</td>
+<td>&lt; 5</td>
+<td>Risk register</td>
+<td>Thomas Weber</td>
+<td>Quarterly</td>
+<td>Active</td>
+</tr>
+<tr>
+<td><strong>O-003</strong></td>
+<td>Ensure availability</td>
+<td>Ensure availability of critical systems</td>
+<td>Uptime of critical systems</td>
+<td>≥ 99.5%</td>
+<td>Monitoring system</td>
+<td>Anna Schmidt</td>
+<td>Monthly</td>
+<td>Active</td>
+</tr>
+<tr>
+<td><strong>O-004</strong></td>
+<td>Reduce incidents</td>
+<td>Reduction of number of security incidents</td>
+<td>Number of security incidents</td>
+<td>&lt; 10 per quarter</td>
+<td>Incident management system</td>
+<td>Thomas Weber</td>
+<td>Quarterly</td>
+<td>Active</td>
+</tr>
+<tr>
+<td><strong>O-005</strong></td>
+<td>Increase awareness</td>
+<td>Increase security awareness</td>
+<td>Training participation rate</td>
+<td>100%</td>
+<td>LMS, training records</td>
+<td>Thomas Weber</td>
+<td>Annually</td>
+<td>Active</td>
+</tr>
+<tr>
+<td><strong>O-006</strong></td>
+<td>Patch compliance</td>
+<td>Timely installation of critical patches</td>
+<td>Average time to install patches (critical)</td>
+<td>&lt; 7 days</td>
+<td>Vulnerability management system</td>
+<td>IT Operations</td>
+<td>Monthly</td>
+<td>Active</td>
+</tr>
+</tbody>
+</table>
+<p>[TODO: Add additional organization-specific objectives]</p>
+<h3 id="12-operational-objectives">1.2 Operational Objectives</h3>
+<table>
+<thead>
+<tr>
+<th>Objective ID</th>
+<th>Objective</th>
+<th>KPI/Metric</th>
+<th>Target Value</th>
+<th>Owner</th>
+<th>Frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>O-010</strong></td>
+<td>Complete MFA rollout</td>
+<td>MFA activation rate</td>
+<td>100%</td>
+<td>IT Operations</td>
+<td>Monthly</td>
+</tr>
+<tr>
+<td><strong>O-011</strong></td>
+<td>Vulnerability management</td>
+<td>Average time to remediate high vulnerabilities</td>
+<td>&lt; 30 days</td>
+<td>IT Operations</td>
+<td>Monthly</td>
+</tr>
+<tr>
+<td><strong>O-012</strong></td>
+<td>Backup tests</td>
+<td>Success rate of restore tests</td>
+<td>100%</td>
+<td>IT Operations</td>
+<td>Quarterly</td>
+</tr>
+<tr>
+<td><strong>O-013</strong></td>
+<td>Phishing resilience</td>
+<td>Phishing click rate in simulations</td>
+<td>&lt; 5%</td>
+<td>Thomas Weber</td>
+<td>Quarterly</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-key-performance-indicators-kpis">2. Key Performance Indicators (KPIs)</h2>
+<h3 id="21-security-kpis">2.1 Security KPIs</h3>
+<p><strong>Risk Management:</strong>
+- Number of identified risks (by level)
+- Number of treated risks per quarter
+- Average risk remediation time
+- Number of accepted risks</p>
+<p><strong>Incident Management:</strong>
+- Number of security incidents (by severity)
+- Mean Time to Detect (MTTD)
+- Mean Time to Respond (MTTR)
+- Mean Time to Recover (MTTR)</p>
+<p><strong>Vulnerability Management:</strong>
+- Number of open vulnerabilities (by CVSS score)
+- Average time to install patches
+- Patch compliance rate</p>
+<p><strong>Access Management:</strong>
+- Number of privileged accounts
+- MFA activation rate
+- Recertification rate
+- Number of access violations</p>
+<p><strong>Awareness and Training:</strong>
+- Training participation rate
+- Phishing simulation results
+- Number of security incidents reported by employees</p>
+<h3 id="22-compliance-kpis">2.2 Compliance KPIs</h3>
+<ul>
+<li>Number of audit findings (by severity)</li>
+<li>Average time to remediate findings</li>
+<li>Compliance rate with policies</li>
+<li>Number of compliance violations</li>
+</ul>
+<h3 id="23-operational-kpis">2.3 Operational KPIs</h3>
+<ul>
+<li>Uptime of critical systems</li>
+<li>Backup success rate</li>
+<li>Restore test success rate</li>
+<li>Number of change requests with security review</li>
+</ul>
+<h2 id="3-measurement-methods-and-data-sources">3. Measurement Methods and Data Sources</h2>
+<h3 id="31-data-sources">3.1 Data Sources</h3>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th>Data Source</th>
+<th>Responsible</th>
+<th>Automation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Number of incidents</td>
+<td>Incident management system</td>
+<td>Security Team</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Risk scores</td>
+<td>Risk register</td>
+<td>ISMS Manager</td>
+<td>Partial</td>
+</tr>
+<tr>
+<td>Vulnerabilities</td>
+<td>Vulnerability scanner</td>
+<td>IT Operations</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Uptime</td>
+<td>Monitoring system</td>
+<td>IT Operations</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Training participation</td>
+<td>LMS</td>
+<td>HR / CISO</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Patch compliance</td>
+<td>Patch management system</td>
+<td>IT Operations</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-reporting-dashboards">3.2 Reporting Dashboards</h3>
+<p><strong>Monthly Dashboard:</strong>
+- Incident statistics
+- Vulnerability status
+- Patch compliance
+- Uptime statistics</p>
+<p><strong>Quarterly Dashboard:</strong>
+- Risk overview
+- Audit findings status
+- Training statistics
+- Trend analyses</p>
+<p><strong>Annual Dashboard:</strong>
+- Objective achievement
+- Year-over-year comparison
+- Strategic recommendations</p>
+<h2 id="4-measures-for-objective-achievement">4. Measures for Objective Achievement</h2>
+<h3 id="41-linkage-to-risk-treatment-plan">4.1 Linkage to Risk Treatment Plan</h3>
+<p>Each objective is linked to measures in the risk treatment plan:
+- See <code>0090_ISMS_Risk_Treatment_Plan_RTP_Template.md</code></p>
+<p><strong>Example:</strong>
+- <strong>Objective O-002:</strong> Minimize risks
+- <strong>Measures:</strong> M-001 (Redundant switch), M-002 (Immutable backups), M-003 (MFA rollout)</p>
+<h3 id="42-continuous-improvement">4.2 Continuous Improvement</h3>
+<p><strong>Improvement Cycle:</strong>
+1. Define objectives
+2. Plan measures
+3. Implement measures
+4. Measure KPIs
+5. Analyze results
+6. Identify improvements
+7. Adjust objectives</p>
+<h2 id="5-review-and-adjustment">5. Review and Adjustment</h2>
+<h3 id="51-regular-review">5.1 Regular Review</h3>
+<p><strong>Quarterly:</strong>
+- Review of KPI values
+- Analysis of deviations
+- Adjustment of measures</p>
+<p><strong>Annually:</strong>
+- Complete review of all objectives
+- Adjustment of target values
+- Definition of new objectives
+- As part of management review</p>
+<h3 id="52-triggers-for-unscheduled-review">5.2 Triggers for Unscheduled Review</h3>
+<ul>
+<li>Significant changes to ISMS scope</li>
+<li>New compliance requirements</li>
+<li>Major security incidents</li>
+<li>Audit findings</li>
+</ul>
+<h2 id="6-references">6. References</h2>
+<h3 id="internal-documents">Internal Documents</h3>
+<ul>
+<li><code>0010_ISMS_Information_Security_Policy.md</code> - ISMS Policy</li>
+<li><code>0080_ISMS_Risk_Register_Template.md</code> - Risk Register</li>
+<li><code>0090_ISMS_Risk_Treatment_Plan_RTP_Template.md</code> - Risk Treatment Plan</li>
+<li><code>0140_ISMS_Management_Review_Template.md</code> - Management Review</li>
+</ul>
+<h3 id="external-standards">External Standards</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022</strong> - Clause 6.2: Information security objectives</li>
+<li><strong>ISO/IEC 27001:2022</strong> - Clause 9.1: Monitoring, measurement, analysis and evaluation</li>
+</ul>
+<hr />
+<p><strong>Approved by:</strong><br />
+Thomas Weber, CISO<br />
+{{ meta.management.ceo }}, Management<br />
+Date: {{ meta.document.approval_date }}</p>
+<p><strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0100_ISMS_Statement_of_Applicability_SoA_Template.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0120_ISMS_Training_Awareness_and_Competence.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

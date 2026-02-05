@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0280 - Compliance und Audits</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0280</div>
+            <h1>Compliance und Audits</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0270_Kontakte_Eskalation_und_Anbieter.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0290_Anhang_Checklisten_und_Vorlagen.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="compliance-und-audits">Compliance und Audits</h1>
+<h2 id="zweck-und-geltungsbereich">Zweck und Geltungsbereich</h2>
+<p>Dieses Dokument beschreibt die Compliance- und Audit-Prozesse für AdminSend GmbH. Es definiert relevante Standards, Audit-Prozesse, Compliance-Kontrollen, Nachweise und Non-Compliance-Risiken zur Sicherstellung der Einhaltung regulatorischer und vertraglicher Anforderungen.</p>
+<p><strong>Geltungsbereich:</strong> Alle IT-Systeme, Prozesse und Aktivitäten von AdminSend GmbH</p>
+<p><strong>Verantwortlich:</strong> {{ meta.compliance_officer }} ({{ meta.compliance_officer_email }})</p>
+<h2 id="compliance-grundlagen">Compliance-Grundlagen</h2>
+<h3 id="compliance-definition">Compliance-Definition</h3>
+<p><strong>Compliance:</strong> Einhaltung von Gesetzen, Vorschriften, Standards, Richtlinien und vertraglichen Verpflichtungen</p>
+<p><strong>Ziele:</strong>
+- <strong>Rechtssicherheit:</strong> Vermeidung rechtlicher Konsequenzen
+- <strong>Risikominimierung:</strong> Reduzierung von Compliance-Risiken
+- <strong>Reputation:</strong> Schutz des Unternehmensrufs
+- <strong>Vertrauen:</strong> Vertrauen von Kunden und Partnern
+- <strong>Wettbewerbsvorteil:</strong> Zertifizierungen als Differenzierungsmerkmal</p>
+<h3 id="compliance-bereiche">Compliance-Bereiche</h3>
+<p><strong>Regulatorische Compliance:</strong>
+- Gesetzliche Anforderungen (DSGVO, IT-Sicherheitsgesetz)
+- Branchenspezifische Regulierungen
+- Datenschutz-Anforderungen</p>
+<p><strong>Standard-Compliance:</strong>
+- ISO-Standards (ISO 27001, ISO 20000)
+- Branchenstandards (PCI-DSS, HIPAA)
+- Best-Practice-Frameworks (ITIL, COBIT)</p>
+<p><strong>Vertragliche Compliance:</strong>
+- Service-Level-Agreements (SLAs)
+- Kunden-Verträge
+- Lieferanten-Verträge</p>
+<p><strong>Interne Compliance:</strong>
+- Unternehmens-Policies
+- IT-Richtlinien
+- Sicherheits-Standards</p>
+<h2 id="relevante-standards-und-regulierungen">Relevante Standards und Regulierungen</h2>
+<h3 id="isoiec-270012013-informationssicherheits-management">ISO/IEC 27001:2013 - Informationssicherheits-Management</h3>
+<p><strong>Beschreibung:</strong> Internationaler Standard für Informationssicherheits-Managementsysteme (ISMS)</p>
+<p><strong>Geltungsbereich:</strong> Alle IT-Systeme und Informationsverarbeitung</p>
+<p><strong>Status:</strong> {{ meta.iso27001_status }}<br />
+<strong>Zertifizierung:</strong> {{ meta.iso27001_certification }}<br />
+<strong>Zertifizierungs-Stelle:</strong> {{ meta.iso27001_certifier }}<br />
+<strong>Gültig bis:</strong> {{ meta.iso27001_valid_until }}</p>
+<p><strong>Kern-Anforderungen:</strong>
+- ISMS etablieren, implementieren, betreiben, überwachen, reviewen, warten und verbessern
+- Risiko-Assessment und -Treatment
+- 114 Controls in 14 Kategorien (Annex A)
+- Management-Review und kontinuierliche Verbesserung</p>
+<p><strong>Audit-Frequenz:</strong>
+- <strong>Zertifizierungs-Audit:</strong> Alle 3 Jahre
+- <strong>Überwachungs-Audit:</strong> Jährlich
+- <strong>Internes Audit:</strong> Quartalsweise</p>
+<p><strong>Verantwortlich:</strong> Thomas Weber</p>
+<h3 id="isoiec-20000-12018-it-service-management">ISO/IEC 20000-1:2018 - IT-Service-Management</h3>
+<p><strong>Beschreibung:</strong> Internationaler Standard für IT-Service-Management-Systeme (SMS)</p>
+<p><strong>Geltungsbereich:</strong> IT-Service-Management-Prozesse</p>
+<p><strong>Status:</strong> {{ meta.iso20000_status }}</p>
+<p><strong>Kern-Anforderungen:</strong>
+- Service-Management-System (SMS)
+- Service-Planung und -Bereitstellung
+- Relationship-Prozesse
+- Resolution-Prozesse
+- Control-Prozesse</p>
+<p><strong>Alignment:</strong> ITIL v4 Framework</p>
+<p><strong>Verantwortlich:</strong> Andreas Huemmer</p>
+<h3 id="dsgvo-gdpr-datenschutz-grundverordnung">DSGVO (GDPR) - Datenschutz-Grundverordnung</h3>
+<p><strong>Beschreibung:</strong> EU-Verordnung zum Schutz personenbezogener Daten</p>
+<p><strong>Geltungsbereich:</strong> Alle Verarbeitungen personenbezogener Daten</p>
+<p><strong>Inkrafttreten:</strong> 25. Mai 2018</p>
+<p><strong>Kern-Anforderungen:</strong>
+- Rechtmäßigkeit der Verarbeitung (Art. 6)
+- Informationspflichten (Art. 13, 14)
+- Betroffenenrechte (Art. 15-22)
+- Technische und organisatorische Maßnahmen (Art. 32)
+- Meldepflicht bei Data Breach (Art. 33, 34)
+- Datenschutz-Folgenabschätzung (Art. 35)</p>
+<p><strong>Bußgelder:</strong> Bis zu 20 Mio. € oder 4% des weltweiten Jahresumsatzes</p>
+<p><strong>Datenschutzbeauftragter:</strong> {{ meta.data_protection_officer }}</p>
+<p><strong>Verzeichnis von Verarbeitungstätigkeiten:</strong> {{ meta.processing_activities_register }}</p>
+<h3 id="bsi-it-grundschutz">BSI IT-Grundschutz</h3>
+<p><strong>Beschreibung:</strong> Methodik des Bundesamts für Sicherheit in der Informationstechnik</p>
+<p><strong>Geltungsbereich:</strong> IT-Sicherheit</p>
+<p><strong>Status:</strong> {{ meta.bsi_grundschutz_status }}</p>
+<p><strong>Absicherungs-Level:</strong>
+- <strong>Basis-Absicherung:</strong> Standard-Sicherheitsmaßnahmen
+- <strong>Kern-Absicherung:</strong> Erhöhte Sicherheitsanforderungen
+- <strong>Standard-Absicherung:</strong> Vollständige Umsetzung</p>
+<p><strong>Bausteine:</strong> IT-Grundschutz-Kompendium</p>
+<p><strong>Verantwortlich:</strong> Thomas Weber</p>
+<h3 id="pci-dss-payment-card-industry-data-security-standard">PCI-DSS (Payment Card Industry Data Security Standard)</h3>
+<p><strong>Beschreibung:</strong> Sicherheitsstandard für Kreditkarten-Datenverarbeitung</p>
+<p><strong>Geltungsbereich:</strong> Systeme, die Kreditkarten-Daten verarbeiten, speichern oder übertragen</p>
+<p><strong>Status:</strong> {{ meta.pci_dss_status }}</p>
+<p><strong>12 Anforderungen:</strong>
+1. Firewall-Konfiguration
+2. Keine Standard-Passwörter
+3. Schutz gespeicherter Karteninhaber-Daten
+4. Verschlüsselung bei Übertragung
+5. Antivirus-Software
+6. Sichere Systeme und Applikationen
+7. Zugriffsbeschränkung (Need-to-Know)
+8. Eindeutige IDs für Zugriffe
+9. Physischer Zugriff beschränken
+10. Tracking und Monitoring
+11. Regelmäßige Security-Tests
+12. Informationssicherheits-Policy</p>
+<p><strong>Compliance-Level:</strong> {{ meta.pci_dss_level }}<br />
+<strong>QSA (Qualified Security Assessor):</strong> {{ meta.pci_dss_qsa }}</p>
+<h3 id="sox-sarbanes-oxley-act">SOX (Sarbanes-Oxley Act)</h3>
+<p><strong>Beschreibung:</strong> US-Gesetz für finanzielle Berichterstattung</p>
+<p><strong>Geltungsbereich:</strong> Finanzrelevante IT-Systeme (falls börsennotiert)</p>
+<p><strong>Status:</strong> {{ meta.sox_status }}</p>
+<p><strong>IT-relevante Anforderungen:</strong>
+- Section 302: Management-Verantwortung für interne Kontrollen
+- Section 404: Assessment der internen Kontrollen
+- Section 409: Zeitnahe Offenlegung
+- IT-General-Controls (ITGC)
+- Application-Controls</p>
+<p><strong>Verantwortlich:</strong> Maria Müller</p>
+<h3 id="cobit-2019">COBIT 2019</h3>
+<p><strong>Beschreibung:</strong> Framework für IT-Governance und -Management</p>
+<p><strong>Geltungsbereich:</strong> IT-Governance</p>
+<p><strong>Status:</strong> {{ meta.cobit_status }}</p>
+<p><strong>Governance-Objectives:</strong>
+- EDM01: Ensured Governance Framework Setting and Maintenance
+- EDM02: Ensured Benefits Delivery
+- EDM03: Ensured Risk Optimization
+- EDM04: Ensured Resource Optimization
+- EDM05: Ensured Stakeholder Engagement</p>
+<p><strong>Management-Objectives:</strong> 40 Objectives in 5 Domänen (APO, BAI, DSS, MEA, EDM)</p>
+<h3 id="branchenspezifische-regulierungen">Branchenspezifische Regulierungen</h3>
+<p><strong>Telekommunikation:</strong>
+- Telekommunikationsgesetz (TKG)
+- Vorratsdatenspeicherung</p>
+<p><strong>Gesundheitswesen:</strong>
+- HIPAA (Health Insurance Portability and Accountability Act)
+- Patientendaten-Schutz-Gesetz</p>
+<p><strong>Finanzsektor:</strong>
+- MaRisk (Mindestanforderungen an das Risikomanagement)
+- BAIT (Bankaufsichtliche Anforderungen an die IT)</p>
+<p><strong>Energie:</strong>
+- IT-Sicherheitskatalog nach § 11 Abs. 1a EnWG</p>
+<h2 id="compliance-management-prozess">Compliance-Management-Prozess</h2>
+<h3 id="prozess-ubersicht">Prozess-Übersicht</h3>
+<div class="codehilite"><pre><span></span><code>┌─────────────────┐
+│ Compliance      │
+│ Identification  │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Gap             │
+│ Analysis        │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Remediation     │
+│ Planning        │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Implementation  │
+│ &amp; Monitoring    │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Audit &amp;         │
+│ Assessment      │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Continuous      │
+│ Improvement     │
+└─────────────────┘
+</code></pre></div>
+
+<h3 id="1-compliance-identification">1. Compliance Identification</h3>
+<p><strong>Aktivitäten:</strong>
+- Relevante Gesetze und Regulierungen identifizieren
+- Anwendbare Standards ermitteln
+- Vertragliche Verpflichtungen erfassen
+- Interne Policies definieren</p>
+<p><strong>Quellen:</strong>
+- Rechtsabteilung
+- Branchenverbände
+- Kunden-Anforderungen
+- Management-Vorgaben</p>
+<p><strong>Dokumentation:</strong> Compliance-Register</p>
+<p><strong>Verantwortlich:</strong> Compliance-Officer</p>
+<h3 id="2-gap-analysis">2. Gap Analysis</h3>
+<p><strong>Aktivitäten:</strong>
+- Ist-Zustand erfassen
+- Soll-Zustand definieren
+- Gaps identifizieren
+- Risiken bewerten
+- Priorisierung</p>
+<p><strong>Methoden:</strong>
+- Self-Assessment
+- Compliance-Scans
+- Dokumenten-Review
+- Interviews</p>
+<p><strong>Output:</strong> Gap-Analysis-Report</p>
+<p><strong>Verantwortlich:</strong> Compliance-Team, Fachbereiche</p>
+<h3 id="3-remediation-planning">3. Remediation Planning</h3>
+<p><strong>Aktivitäten:</strong>
+- Maßnahmen definieren
+- Verantwortlichkeiten zuweisen
+- Zeitpläne erstellen
+- Budget planen
+- Risiken managen</p>
+<p><strong>Priorisierung:</strong>
+- <strong>Critical:</strong> Sofort (&lt; 30 Tage)
+- <strong>High:</strong> Kurzfristig (&lt; 90 Tage)
+- <strong>Medium:</strong> Mittelfristig (&lt; 180 Tage)
+- <strong>Low:</strong> Langfristig (&lt; 365 Tage)</p>
+<p><strong>Output:</strong> Remediation-Plan</p>
+<p><strong>Verantwortlich:</strong> Compliance-Officer, Fachbereichs-Leiter</p>
+<h3 id="4-implementation-monitoring">4. Implementation &amp; Monitoring</h3>
+<p><strong>Aktivitäten:</strong>
+- Maßnahmen umsetzen
+- Fortschritt überwachen
+- Probleme eskalieren
+- Dokumentation pflegen</p>
+<p><strong>Monitoring:</strong>
+- Wöchentliche Status-Updates
+- Monatliche Reviews
+- Quartalsweise Management-Reports</p>
+<p><strong>Tools:</strong>
+- Compliance-Management-System
+- Ticketing-System
+- Projekt-Management-Tools</p>
+<p><strong>Verantwortlich:</strong> Fachbereiche, Compliance-Team</p>
+<h3 id="5-audit-assessment">5. Audit &amp; Assessment</h3>
+<p><strong>Aktivitäten:</strong>
+- Interne Audits durchführen
+- Externe Audits koordinieren
+- Findings dokumentieren
+- Corrective Actions planen</p>
+<p><strong>Audit-Typen:</strong>
+- Interne Audits
+- Externe Audits (Zertifizierung)
+- Kunden-Audits
+- Regulierungs-Audits</p>
+<p><strong>Verantwortlich:</strong> Internal Audit, Externe Auditoren</p>
+<h3 id="6-continuous-improvement">6. Continuous Improvement</h3>
+<p><strong>Aktivitäten:</strong>
+- Lessons Learned dokumentieren
+- Prozesse optimieren
+- Best Practices implementieren
+- Training durchführen</p>
+<p><strong>Methoden:</strong>
+- PDCA-Zyklus (Plan-Do-Check-Act)
+- Root-Cause-Analysis
+- Benchmarking</p>
+<p><strong>Verantwortlich:</strong> Compliance-Officer, Management</p>
+<h2 id="audit-prozesse">Audit-Prozesse</h2>
+<h3 id="audit-typen">Audit-Typen</h3>
+<h4 id="interne-audits">Interne Audits</h4>
+<p><strong>Zweck:</strong> Selbstbewertung der Compliance</p>
+<p><strong>Frequenz:</strong>
+- <strong>ISO 27001:</strong> Quartalsweise
+- <strong>ISO 20000:</strong> Quartalsweise
+- <strong>DSGVO:</strong> Halbjährlich
+- <strong>Interne Policies:</strong> Jährlich</p>
+<p><strong>Durchführung:</strong>
+- Internal Audit Team
+- Unabhängig von geprüftem Bereich
+- Risiko-basierter Ansatz</p>
+<p><strong>Prozess:</strong>
+1. Audit-Planung
+2. Audit-Vorbereitung
+3. Audit-Durchführung (Interviews, Dokumenten-Review, Tests)
+4. Findings dokumentieren
+5. Audit-Report erstellen
+6. Corrective Actions planen
+7. Follow-up</p>
+<p><strong>Verantwortlich:</strong> Internal Audit Team</p>
+<h4 id="externe-audits-zertifizierung">Externe Audits (Zertifizierung)</h4>
+<p><strong>Zweck:</strong> Zertifizierung nach Standards</p>
+<p><strong>Frequenz:</strong>
+- <strong>Zertifizierungs-Audit:</strong> Alle 3 Jahre
+- <strong>Überwachungs-Audit:</strong> Jährlich
+- <strong>Re-Zertifizierung:</strong> Alle 3 Jahre</p>
+<p><strong>Durchführung:</strong>
+- Akkreditierte Zertifizierungs-Stelle
+- Unabhängige Auditoren
+- Dokumenten-Review und On-Site-Audit</p>
+<p><strong>Audit-Phasen:</strong>
+- <strong>Stage 1:</strong> Dokumenten-Review
+- <strong>Stage 2:</strong> On-Site-Audit
+- <strong>Surveillance:</strong> Jährliche Überwachung</p>
+<p><strong>Zertifizierungs-Stellen:</strong>
+- ISO 27001: {{ meta.iso27001_certifier }}
+- ISO 20000: {{ meta.iso20000_certifier }}</p>
+<h4 id="kunden-audits">Kunden-Audits</h4>
+<p><strong>Zweck:</strong> Nachweis der Compliance gegenüber Kunden</p>
+<p><strong>Frequenz:</strong> Nach Kunden-Anforderung</p>
+<p><strong>Durchführung:</strong>
+- Kunden-Auditoren
+- Vor-Ort oder Remote
+- Fokus auf vertragliche Anforderungen</p>
+<p><strong>Vorbereitung:</strong>
+- Audit-Scope klären
+- Dokumentation bereitstellen
+- Ansprechpartner benennen
+- Räumlichkeiten vorbereiten</p>
+<p><strong>Verantwortlich:</strong> Account-Manager, Compliance-Officer</p>
+<h4 id="regulierungs-audits">Regulierungs-Audits</h4>
+<p><strong>Zweck:</strong> Überprüfung durch Aufsichtsbehörden</p>
+<p><strong>Frequenz:</strong> Ad-hoc oder regelmäßig (je nach Regulierung)</p>
+<p><strong>Durchführung:</strong>
+- Aufsichtsbehörden (z.B. Datenschutzbehörde, BaFin)
+- Angekündigt oder unangekündigt
+- Umfassende Prüfung</p>
+<p><strong>Beispiele:</strong>
+- Datenschutzbehörde (DSGVO-Compliance)
+- BaFin (Finanzsektor)
+- Bundesnetzagentur (Telekommunikation)</p>
+<p><strong>Vorbereitung:</strong>
+- Dokumentation aktuell halten
+- Prozesse etabliert
+- Ansprechpartner definiert</p>
+<h3 id="audit-vorbereitung">Audit-Vorbereitung</h3>
+<p><strong>Checkliste:</strong>
+- [ ] Audit-Scope definiert
+- [ ] Audit-Plan erstellt
+- [ ] Dokumentation aktualisiert
+- [ ] Ansprechpartner benannt
+- [ ] Räumlichkeiten vorbereitet
+- [ ] IT-Systeme zugänglich
+- [ ] Stakeholder informiert
+- [ ] Pre-Audit-Meeting durchgeführt</p>
+<p><strong>Dokumentation:</strong>
+- Policies und Procedures
+- Risiko-Assessments
+- Asset-Inventar
+- Netzwerk-Diagramme
+- Zugriffs-Kontrollen
+- Incident-Reports
+- Change-Logs
+- Audit-Logs
+- Training-Records
+- Vendor-Verträge</p>
+<p><strong>Verantwortlich:</strong> Compliance-Officer, Fachbereiche</p>
+<h3 id="audit-durchfuhrung">Audit-Durchführung</h3>
+<p><strong>Audit-Methoden:</strong></p>
+<h4 id="dokumenten-review">Dokumenten-Review</h4>
+<p><strong>Aktivitäten:</strong>
+- Policies und Procedures prüfen
+- Dokumentations-Vollständigkeit
+- Aktualität der Dokumente
+- Konsistenz</p>
+<h4 id="interviews">Interviews</h4>
+<p><strong>Aktivitäten:</strong>
+- Mitarbeiter-Interviews
+- Management-Interviews
+- Prozess-Verständnis prüfen
+- Awareness-Level bewerten</p>
+<p><strong>Interviewpartner:</strong>
+- Management
+- IT-Operations
+- Security-Team
+- Entwickler
+- End-User</p>
+<h4 id="system-tests">System-Tests</h4>
+<p><strong>Aktivitäten:</strong>
+- Konfigurations-Reviews
+- Zugriffs-Kontrollen testen
+- Log-Reviews
+- Vulnerability-Scans
+- Penetration-Tests (falls Scope)</p>
+<h4 id="observations">Observations</h4>
+<p><strong>Aktivitäten:</strong>
+- Prozess-Beobachtungen
+- Arbeitsplatz-Inspektionen
+- Physische Sicherheit prüfen
+- Verhaltens-Compliance</p>
+<h3 id="audit-findings">Audit-Findings</h3>
+<p><strong>Finding-Kategorien:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Kategorie</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Critical</strong></td>
+<td>Schwerwiegende Non-Compliance</td>
+<td>Fehlende Verschlüsselung sensibler Daten</td>
+</tr>
+<tr>
+<td><strong>Major</strong></td>
+<td>Signifikante Non-Compliance</td>
+<td>Unvollständige Dokumentation</td>
+</tr>
+<tr>
+<td><strong>Minor</strong></td>
+<td>Kleinere Abweichungen</td>
+<td>Veraltete Dokumente</td>
+</tr>
+<tr>
+<td><strong>Observation</strong></td>
+<td>Verbesserungs-Potenzial</td>
+<td>Prozess-Optimierung möglich</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Finding-Dokumentation:</strong>
+- Finding-ID
+- Kategorie (Critical/Major/Minor/Observation)
+- Beschreibung
+- Betroffene Systeme/Prozesse
+- Anforderung (Standard-Referenz)
+- Evidenz
+- Risiko-Bewertung
+- Empfohlene Corrective Action</p>
+<p><strong>Beispiel-Finding:</strong></p>
+<div class="codehilite"><pre><span></span><code>Finding-ID: AUD-2024-001
+Kategorie: Major
+Beschreibung: Passwort-Policy nicht durchgesetzt
+Anforderung: ISO 27001 A.9.4.3
+Evidenz: 15 von 50 Accounts ohne Passwort-Ablauf
+Risiko: Hoch (Unauthorized Access)
+Empfehlung: Passwort-Policy via GPO durchsetzen
+Frist: 30 Tage
+</code></pre></div>
+
+<h3 id="corrective-actions">Corrective Actions</h3>
+<p><strong>Corrective-Action-Prozess:</strong></p>
+<ol>
+<li><strong>Finding-Review</strong></li>
+<li>Finding verstehen</li>
+<li>Root-Cause identifizieren</li>
+<li>
+<p>Impact bewerten</p>
+</li>
+<li>
+<p><strong>Action-Planning</strong></p>
+</li>
+<li>Maßnahmen definieren</li>
+<li>Verantwortliche benennen</li>
+<li>Zeitplan erstellen</li>
+<li>
+<p>Ressourcen planen</p>
+</li>
+<li>
+<p><strong>Implementation</strong></p>
+</li>
+<li>Maßnahmen umsetzen</li>
+<li>Fortschritt überwachen</li>
+<li>
+<p>Dokumentation pflegen</p>
+</li>
+<li>
+<p><strong>Verification</strong></p>
+</li>
+<li>Wirksamkeit prüfen</li>
+<li>Evidenz sammeln</li>
+<li>
+<p>Auditor informieren</p>
+</li>
+<li>
+<p><strong>Closure</strong></p>
+</li>
+<li>Finding schließen</li>
+<li>Lessons Learned</li>
+<li>Prozess-Verbesserung</li>
+</ol>
+<p><strong>Corrective-Action-Plan:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Finding-ID</th>
+<th>Maßnahme</th>
+<th>Verantwortlich</th>
+<th>Frist</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AUD-2024-001</td>
+<td>GPO für Passwort-Policy</td>
+<td>IT-Admin</td>
+<td>30 Tage</td>
+<td>In Progress</td>
+</tr>
+<tr>
+<td>AUD-2024-002</td>
+<td>Dokumentation aktualisieren</td>
+<td>Compliance</td>
+<td>14 Tage</td>
+<td>Completed</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tracking:</strong> Compliance-Management-System</p>
+<h3 id="audit-reporting">Audit-Reporting</h3>
+<p><strong>Audit-Report-Inhalte:</strong>
+- Executive Summary
+- Audit-Scope und -Methodik
+- Findings (nach Kategorie)
+- Positive Observations
+- Corrective-Action-Plan
+- Recommendations
+- Conclusion</p>
+<p><strong>Report-Empfänger:</strong>
+- Management
+- Audit-Committee
+- Betroffene Fachbereiche
+- Externe Auditoren (bei Follow-up)</p>
+<p><strong>Vertraulichkeit:</strong> Confidential</p>
+<h2 id="compliance-kontrollen-und-nachweise">Compliance-Kontrollen und Nachweise</h2>
+<h3 id="technische-kontrollen">Technische Kontrollen</h3>
+<h4 id="zugriffskontrolle">Zugriffskontrolle</h4>
+<p><strong>Kontrollen:</strong>
+- Multi-Factor-Authentication (MFA)
+- Role-Based Access Control (RBAC)
+- Least-Privilege-Prinzip
+- Privileged Access Management (PAM)
+- Access-Reviews (quartalsweise)</p>
+<p><strong>Nachweise:</strong>
+- Access-Control-Matrix
+- User-Access-Reports
+- Access-Review-Protokolle
+- MFA-Aktivierungs-Rate</p>
+<h4 id="verschlusselung">Verschlüsselung</h4>
+<p><strong>Kontrollen:</strong>
+- Encryption at Rest (AES-256)
+- Encryption in Transit (TLS 1.3)
+- Key-Management
+- Certificate-Management</p>
+<p><strong>Nachweise:</strong>
+- Verschlüsselungs-Inventar
+- Key-Management-Procedures
+- Certificate-Inventar
+- Encryption-Scan-Reports</p>
+<h4 id="logging-und-monitoring">Logging und Monitoring</h4>
+<p><strong>Kontrollen:</strong>
+- Zentrale Log-Sammlung
+- SIEM-Monitoring
+- Audit-Trails
+- Log-Retention (nach Policy)</p>
+<p><strong>Nachweise:</strong>
+- Log-Collection-Status
+- SIEM-Use-Cases
+- Audit-Log-Samples
+- Retention-Compliance-Reports</p>
+<h4 id="vulnerability-management">Vulnerability Management</h4>
+<p><strong>Kontrollen:</strong>
+- Regelmäßige Vulnerability-Scans
+- Patch-Management
+- Penetration-Tests
+- Security-Assessments</p>
+<p><strong>Nachweise:</strong>
+- Scan-Reports
+- Patch-Compliance-Reports
+- Pentest-Reports
+- Remediation-Tracking</p>
+<h3 id="organisatorische-kontrollen">Organisatorische Kontrollen</h3>
+<h4 id="policies-und-procedures">Policies und Procedures</h4>
+<p><strong>Kontrollen:</strong>
+- Dokumentierte Policies
+- Regelmäßige Reviews
+- Management-Approval
+- Kommunikation an Mitarbeiter</p>
+<p><strong>Nachweise:</strong>
+- Policy-Dokumente
+- Review-Protokolle
+- Approval-Signaturen
+- Kommunikations-Nachweise</p>
+<h4 id="training-und-awareness">Training und Awareness</h4>
+<p><strong>Kontrollen:</strong>
+- Security-Awareness-Training
+- Role-spezifisches Training
+- Phishing-Simulationen
+- Training-Tracking</p>
+<p><strong>Nachweise:</strong>
+- Training-Records
+- Teilnahme-Listen
+- Phishing-Simulation-Results
+- Awareness-Kampagnen-Dokumentation</p>
+<h4 id="incident-management">Incident Management</h4>
+<p><strong>Kontrollen:</strong>
+- Incident-Response-Plan
+- Incident-Tracking
+- Post-Incident-Reviews
+- Lessons-Learned-Prozess</p>
+<p><strong>Nachweise:</strong>
+- Incident-Reports
+- Response-Timelines
+- Post-Incident-Review-Protokolle
+- Improvement-Actions</p>
+<h4 id="change-management">Change Management</h4>
+<p><strong>Kontrollen:</strong>
+- Change-Approval-Prozess
+- Change-Advisory-Board (CAB)
+- Change-Dokumentation
+- Rollback-Procedures</p>
+<p><strong>Nachweise:</strong>
+- Change-Tickets
+- CAB-Meeting-Protokolle
+- Change-Success-Rate
+- Rollback-Dokumentation</p>
+<h3 id="physische-kontrollen">Physische Kontrollen</h3>
+<h4 id="zutrittskontrolle">Zutrittskontrolle</h4>
+<p><strong>Kontrollen:</strong>
+- Badge-System
+- Besucher-Management
+- Video-Überwachung
+- Alarm-Systeme</p>
+<p><strong>Nachweise:</strong>
+- Zutritts-Logs
+- Besucher-Logs
+- Video-Aufzeichnungen (falls erlaubt)
+- Alarm-Protokolle</p>
+<h4 id="umgebungs-kontrollen">Umgebungs-Kontrollen</h4>
+<p><strong>Kontrollen:</strong>
+- Klimatisierung
+- USV (Unterbrechungsfreie Stromversorgung)
+- Brandschutz
+- Wasser-Schutz</p>
+<p><strong>Nachweise:</strong>
+- Wartungs-Protokolle
+- USV-Test-Protokolle
+- Brandschutz-Übungen
+- Umgebungs-Monitoring-Logs</p>
+<h2 id="non-compliance-risiken-und-manahmen">Non-Compliance-Risiken und Maßnahmen</h2>
+<h3 id="risiko-kategorien">Risiko-Kategorien</h3>
+<h4 id="rechtliche-risiken">Rechtliche Risiken</h4>
+<p><strong>Risiken:</strong>
+- Bußgelder und Strafen
+- Gerichtsverfahren
+- Haftungsansprüche
+- Geschäftsführer-Haftung</p>
+<p><strong>Beispiele:</strong>
+- DSGVO-Verstoß: Bis zu 20 Mio. € oder 4% Jahresumsatz
+- PCI-DSS-Verstoß: Bis zu 500.000 $ pro Monat
+- SOX-Verstoß: Strafrechtliche Konsequenzen</p>
+<p><strong>Mitigations:</strong>
+- Compliance-Programm etablieren
+- Regelmäßige Audits
+- Legal-Counsel einbinden
+- Versicherungen (Cyber-Insurance)</p>
+<h4 id="finanzielle-risiken">Finanzielle Risiken</h4>
+<p><strong>Risiken:</strong>
+- Bußgelder
+- Vertragsstrafen
+- Umsatzverluste
+- Erhöhte Versicherungs-Prämien</p>
+<p><strong>Beispiele:</strong>
+- SLA-Verstöße: Vertragsstrafen
+- Zertifizierungs-Verlust: Kunden-Verlust
+- Data Breach: Schadenersatz</p>
+<p><strong>Mitigations:</strong>
+- Risiko-Assessment
+- Finanzielle Rücklagen
+- Versicherungen
+- Vertrags-Management</p>
+<h4 id="reputations-risiken">Reputations-Risiken</h4>
+<p><strong>Risiken:</strong>
+- Vertrauensverlust
+- Negative Presse
+- Kunden-Abwanderung
+- Schwierigkeiten bei Neukundengewinnung</p>
+<p><strong>Beispiele:</strong>
+- Data Breach öffentlich bekannt
+- Compliance-Verstöße in Medien
+- Zertifizierungs-Entzug</p>
+<p><strong>Mitigations:</strong>
+- Proaktive Kommunikation
+- Crisis-Management-Plan
+- PR-Strategie
+- Transparenz</p>
+<h4 id="operative-risiken">Operative Risiken</h4>
+<p><strong>Risiken:</strong>
+- Service-Unterbrechungen
+- Ineffiziente Prozesse
+- Mitarbeiter-Frustration
+- Vendor-Probleme</p>
+<p><strong>Beispiele:</strong>
+- Audit-Findings führen zu Service-Änderungen
+- Compliance-Anforderungen verzögern Projekte
+- Zusätzlicher Aufwand für Dokumentation</p>
+<p><strong>Mitigations:</strong>
+- Compliance by Design
+- Prozess-Automatisierung
+- Training und Awareness
+- Vendor-Management</p>
+<h3 id="risiko-management">Risiko-Management</h3>
+<p><strong>Risiko-Bewertung:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Wahrscheinlichkeit</th>
+<th>Impact</th>
+<th>Risiko-Level</th>
+<th>Maßnahmen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Hoch</strong></td>
+<td><strong>Hoch</strong></td>
+<td>Kritisch</td>
+<td>Sofortige Maßnahmen</td>
+</tr>
+<tr>
+<td><strong>Hoch</strong></td>
+<td><strong>Mittel</strong></td>
+<td>Hoch</td>
+<td>Kurzfristige Maßnahmen</td>
+</tr>
+<tr>
+<td><strong>Mittel</strong></td>
+<td><strong>Hoch</strong></td>
+<td>Hoch</td>
+<td>Kurzfristige Maßnahmen</td>
+</tr>
+<tr>
+<td><strong>Mittel</strong></td>
+<td><strong>Mittel</strong></td>
+<td>Mittel</td>
+<td>Mittelfristige Maßnahmen</td>
+</tr>
+<tr>
+<td><strong>Niedrig</strong></td>
+<td><strong>Hoch</strong></td>
+<td>Mittel</td>
+<td>Monitoring</td>
+</tr>
+<tr>
+<td><strong>Niedrig</strong></td>
+<td><strong>Mittel</strong></td>
+<td>Niedrig</td>
+<td>Akzeptieren oder Monitoring</td>
+</tr>
+<tr>
+<td><strong>Niedrig</strong></td>
+<td><strong>Niedrig</strong></td>
+<td>Sehr niedrig</td>
+<td>Akzeptieren</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Risiko-Treatment-Optionen:</strong>
+- <strong>Avoid:</strong> Risiko vermeiden (Aktivität einstellen)
+- <strong>Mitigate:</strong> Risiko reduzieren (Kontrollen implementieren)
+- <strong>Transfer:</strong> Risiko übertragen (Versicherung, Outsourcing)
+- <strong>Accept:</strong> Risiko akzeptieren (mit Management-Genehmigung)</p>
+<p><strong>Risiko-Register:</strong> {{ meta.risk_register }}</p>
+<h3 id="incident-response-bei-non-compliance">Incident-Response bei Non-Compliance</h3>
+<p><strong>Prozess:</strong></p>
+<ol>
+<li><strong>Detection</strong></li>
+<li>Non-Compliance identifiziert</li>
+<li>Severity bewerten</li>
+<li>
+<p>Stakeholder informieren</p>
+</li>
+<li>
+<p><strong>Assessment</strong></p>
+</li>
+<li>Scope ermitteln</li>
+<li>Impact analysieren</li>
+<li>
+<p>Meldepflichten prüfen</p>
+</li>
+<li>
+<p><strong>Containment</strong></p>
+</li>
+<li>Sofort-Maßnahmen</li>
+<li>Weitere Verstöße verhindern</li>
+<li>
+<p>Dokumentation starten</p>
+</li>
+<li>
+<p><strong>Remediation</strong></p>
+</li>
+<li>Corrective Actions</li>
+<li>Root-Cause-Analysis</li>
+<li>
+<p>Preventive Actions</p>
+</li>
+<li>
+<p><strong>Reporting</strong></p>
+</li>
+<li>Interne Meldung</li>
+<li>Externe Meldung (falls erforderlich)</li>
+<li>
+<p>Management-Briefing</p>
+</li>
+<li>
+<p><strong>Lessons Learned</strong></p>
+</li>
+<li>Post-Incident-Review</li>
+<li>Prozess-Verbesserungen</li>
+<li>Training-Updates</li>
+</ol>
+<h2 id="compliance-metriken-und-reporting">Compliance-Metriken und Reporting</h2>
+<h3 id="key-performance-indicators-kpis">Key Performance Indicators (KPIs)</h3>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th>Zielwert</th>
+<th>Messung</th>
+<th>Frequenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Audit-Findings-Rate</strong></td>
+<td>&lt; 5 Major Findings</td>
+<td>Findings pro Audit</td>
+<td>Nach Audit</td>
+</tr>
+<tr>
+<td><strong>Corrective-Action-Closure-Rate</strong></td>
+<td>&gt; 95% in Frist</td>
+<td>Geschlossene CAs / Gesamt-CAs</td>
+<td>Monatlich</td>
+</tr>
+<tr>
+<td><strong>Training-Completion-Rate</strong></td>
+<td>100%</td>
+<td>Absolvierte Trainings / Pflicht-Trainings</td>
+<td>Quartalsweise</td>
+</tr>
+<tr>
+<td><strong>Policy-Review-Compliance</strong></td>
+<td>100%</td>
+<td>Reviewte Policies / Gesamt-Policies</td>
+<td>Jährlich</td>
+</tr>
+<tr>
+<td><strong>Incident-Reporting-Time</strong></td>
+<td>&lt; 24h</td>
+<td>Zeit von Incident bis Meldung</td>
+<td>Pro Incident</td>
+</tr>
+<tr>
+<td><strong>Vulnerability-Remediation-SLA</strong></td>
+<td>&gt; 95%</td>
+<td>Remediated in SLA / Gesamt</td>
+<td>Monatlich</td>
+</tr>
+</tbody>
+</table>
+<h3 id="compliance-dashboard">Compliance-Dashboard</h3>
+<p><strong>Metriken:</strong>
+- Compliance-Status nach Standard
+- Offene Audit-Findings
+- Corrective-Actions-Status
+- Training-Completion-Rate
+- Policy-Review-Status
+- Incident-Trends</p>
+<p><strong>Tool:</strong> {{ meta.compliance_dashboard }}</p>
+<p><strong>Zugriff:</strong> Management, Compliance-Team, Auditoren</p>
+<h3 id="reporting">Reporting</h3>
+<h4 id="monatliches-compliance-status-report">Monatliches Compliance-Status-Report</h4>
+<p><strong>Inhalte:</strong>
+- Compliance-Status-Übersicht
+- Neue Findings
+- Corrective-Actions-Fortschritt
+- Upcoming Audits
+- Risiken und Issues</p>
+<p><strong>Empfänger:</strong> Compliance-Officer, Management</p>
+<h4 id="quartalsweises-compliance-management-report">Quartalsweises Compliance-Management-Report</h4>
+<p><strong>Inhalte:</strong>
+- Compliance-KPIs
+- Audit-Zusammenfassung
+- Risiko-Assessment
+- Training-Status
+- Budget und Ressourcen
+- Strategische Empfehlungen</p>
+<p><strong>Empfänger:</strong> Management, Audit-Committee, Board</p>
+<h4 id="jahrliches-compliance-review">Jährliches Compliance-Review</h4>
+<p><strong>Inhalte:</strong>
+- Jahres-Rückblick
+- Zertifizierungs-Status
+- Compliance-Programm-Effektivität
+- Lessons Learned
+- Strategische Planung für nächstes Jahr
+- Budget-Planung</p>
+<p><strong>Empfänger:</strong> Management, Board, Stakeholder</p>
+<h2 id="compliance-tools-und-systeme">Compliance-Tools und -Systeme</h2>
+<h3 id="governance-risk-and-compliance-grc-platform">Governance, Risk, and Compliance (GRC) Platform</h3>
+<p><strong>System:</strong> {{ meta.grc_system }}<br />
+<strong>Version:</strong> {{ meta.grc_version }}<br />
+<strong>Management-URL:</strong> {{ meta.grc_url }}</p>
+<p><strong>Funktionen:</strong>
+- Compliance-Management
+- Risiko-Management
+- Audit-Management
+- Policy-Management
+- Incident-Management
+- Reporting und Dashboards</p>
+<h3 id="dokumenten-management">Dokumenten-Management</h3>
+<p><strong>System:</strong> {{ meta.document_management_system }}</p>
+<p><strong>Funktionen:</strong>
+- Zentrale Dokumenten-Ablage
+- Versions-Kontrolle
+- Approval-Workflows
+- Zugriffs-Kontrolle
+- Audit-Trail</p>
+<p><strong>Dokumenten-Typen:</strong>
+- Policies und Procedures
+- Audit-Reports
+- Compliance-Nachweise
+- Training-Materialien
+- Verträge</p>
+<h3 id="compliance-scanning-tools">Compliance-Scanning-Tools</h3>
+<p><strong>Vulnerability-Scanner:</strong> {{ meta.vulnerability_scanner }}<br />
+<strong>Configuration-Scanner:</strong> {{ meta.config_scanner }}<br />
+<strong>Compliance-Scanner:</strong> {{ meta.compliance_scanner }}</p>
+<p><strong>Funktionen:</strong>
+- Automatische Compliance-Checks
+- Konfigurations-Audits
+- Benchmark-Vergleiche (CIS, STIG)
+- Continuous-Compliance-Monitoring</p>
+<h3 id="training-management">Training-Management</h3>
+<p><strong>System:</strong> {{ meta.training_system }}</p>
+<p><strong>Funktionen:</strong>
+- Training-Katalog
+- Enrollment und Tracking
+- Zertifikate
+- Reporting
+- Phishing-Simulationen</p>
+<h2 id="rollen-und-verantwortlichkeiten">Rollen und Verantwortlichkeiten</h2>
+<h3 id="compliance-officer">Compliance-Officer</h3>
+<p><strong>Verantwortlichkeiten:</strong>
+- Compliance-Programm-Ownership
+- Compliance-Strategie
+- Audit-Koordination
+- Risiko-Management
+- Reporting an Management</p>
+<p><strong>Person:</strong> {{ meta.compliance_officer }}</p>
+<h3 id="data-protection-officer-dpo">Data Protection Officer (DPO)</h3>
+<p><strong>Verantwortlichkeiten:</strong>
+- DSGVO-Compliance
+- Datenschutz-Beratung
+- Überwachung der Datenverarbeitung
+- Zusammenarbeit mit Aufsichtsbehörden
+- Schulungen</p>
+<p><strong>Person:</strong> {{ meta.data_protection_officer }}</p>
+<h3 id="internal-audit-team">Internal Audit Team</h3>
+<p><strong>Verantwortlichkeiten:</strong>
+- Interne Audits durchführen
+- Audit-Planung
+- Findings dokumentieren
+- Follow-up auf Corrective Actions</p>
+<p><strong>Team-Lead:</strong> {{ meta.internal_audit_lead }}</p>
+<h3 id="ciso-chief-information-security-officer">CISO (Chief Information Security Officer)</h3>
+<p><strong>Verantwortlichkeiten:</strong>
+- Security-Compliance
+- ISO 27001-Ownership
+- Security-Audits
+- Risiko-Management</p>
+<p><strong>Person:</strong> Thomas Weber</p>
+<h3 id="it-operations-manager">IT Operations Manager</h3>
+<p><strong>Verantwortlichkeiten:</strong>
+- Operative Compliance-Umsetzung
+- ISO 20000-Ownership
+- Prozess-Compliance
+- Tool-Implementation</p>
+<p><strong>Person:</strong> Andreas Huemmer</p>
+<h3 id="fachbereichs-leiter">Fachbereichs-Leiter</h3>
+<p><strong>Verantwortlichkeiten:</strong>
+- Compliance in ihrem Bereich
+- Mitarbeiter-Training
+- Corrective-Actions-Umsetzung
+- Dokumentation</p>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="compliance-best-practices">Compliance-Best-Practices</h3>
+<ol>
+<li><strong>Compliance by Design</strong></li>
+<li>Compliance von Anfang an berücksichtigen</li>
+<li>Nicht nachträglich "aufsetzen"</li>
+<li>
+<p>In Entwicklungs-Prozesse integrieren</p>
+</li>
+<li>
+<p><strong>Automatisierung</strong></p>
+</li>
+<li>Compliance-Checks automatisieren</li>
+<li>Continuous-Compliance-Monitoring</li>
+<li>
+<p>Automatische Reporting</p>
+</li>
+<li>
+<p><strong>Dokumentation</strong></p>
+</li>
+<li>Alles dokumentieren</li>
+<li>Dokumentation aktuell halten</li>
+<li>
+<p>Zentrale Ablage</p>
+</li>
+<li>
+<p><strong>Training und Awareness</strong></p>
+</li>
+<li>Regelmäßige Trainings</li>
+<li>Role-spezifische Schulungen</li>
+<li>
+<p>Awareness-Kampagnen</p>
+</li>
+<li>
+<p><strong>Proaktives Management</strong></p>
+</li>
+<li>Nicht auf Audits warten</li>
+<li>Regelmäßige Self-Assessments</li>
+<li>
+<p>Continuous Improvement</p>
+</li>
+<li>
+<p><strong>Stakeholder-Engagement</strong></p>
+</li>
+<li>Management-Support sichern</li>
+<li>Fachbereiche einbinden</li>
+<li>
+<p>Kommunikation fördern</p>
+</li>
+<li>
+<p><strong>Risiko-basierter Ansatz</strong></p>
+</li>
+<li>Fokus auf kritische Bereiche</li>
+<li>Ressourcen effizient einsetzen</li>
+<li>
+<p>Priorisierung</p>
+</li>
+<li>
+<p><strong>Vendor-Management</strong></p>
+</li>
+<li>Vendor-Compliance prüfen</li>
+<li>Verträge mit Compliance-Klauseln</li>
+<li>Regelmäßige Vendor-Audits</li>
+</ol>
+<h2 id="audit-kalender">Audit-Kalender</h2>
+<h3 id="jahrlicher-audit-kalender">Jährlicher Audit-Kalender</h3>
+<table>
+<thead>
+<tr>
+<th>Monat</th>
+<th>Audit-Typ</th>
+<th>Standard</th>
+<th>Durchführung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Januar</strong></td>
+<td>Internes Audit</td>
+<td>ISO 27001</td>
+<td>Internal Audit Team</td>
+</tr>
+<tr>
+<td><strong>Februar</strong></td>
+<td>Compliance-Review</td>
+<td>DSGVO</td>
+<td>DPO</td>
+</tr>
+<tr>
+<td><strong>März</strong></td>
+<td>Internes Audit</td>
+<td>ISO 20000</td>
+<td>Internal Audit Team</td>
+</tr>
+<tr>
+<td><strong>April</strong></td>
+<td>Externes Audit</td>
+<td>ISO 27001</td>
+<td>Zertifizierungs-Stelle</td>
+</tr>
+<tr>
+<td><strong>Mai</strong></td>
+<td>Vulnerability-Assessment</td>
+<td>PCI-DSS</td>
+<td>QSA</td>
+</tr>
+<tr>
+<td><strong>Juni</strong></td>
+<td>Internes Audit</td>
+<td>ISO 27001</td>
+<td>Internal Audit Team</td>
+</tr>
+<tr>
+<td><strong>Juli</strong></td>
+<td>Compliance-Review</td>
+<td>Interne Policies</td>
+<td>Compliance-Officer</td>
+</tr>
+<tr>
+<td><strong>August</strong></td>
+<td>Internes Audit</td>
+<td>ISO 20000</td>
+<td>Internal Audit Team</td>
+</tr>
+<tr>
+<td><strong>September</strong></td>
+<td>Externes Audit</td>
+<td>ISO 20000</td>
+<td>Zertifizierungs-Stelle</td>
+</tr>
+<tr>
+<td><strong>Oktober</strong></td>
+<td>Internes Audit</td>
+<td>ISO 27001</td>
+<td>Internal Audit Team</td>
+</tr>
+<tr>
+<td><strong>November</strong></td>
+<td>Penetration-Test</td>
+<td>Security</td>
+<td>Externe Pentester</td>
+</tr>
+<tr>
+<td><strong>Dezember</strong></td>
+<td>Jahres-Review</td>
+<td>Alle Standards</td>
+<td>Compliance-Officer</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Hinweis:</strong> Kunden-Audits und Regulierungs-Audits werden ad-hoc eingeplant</p>
+<h2 id="referenzen">Referenzen</h2>
+<ul>
+<li>ISO/IEC 27001:2013 - Information Security Management</li>
+<li>ISO/IEC 20000-1:2018 - IT Service Management</li>
+<li>DSGVO (EU 2016/679) - Datenschutz-Grundverordnung</li>
+<li>BSI IT-Grundschutz-Kompendium</li>
+<li>PCI-DSS v4.0 - Payment Card Industry Data Security Standard</li>
+<li>SOX (Sarbanes-Oxley Act)</li>
+<li>COBIT 2019 - Control Objectives for Information and Related Technologies</li>
+<li>NIST SP 800-53 - Security and Privacy Controls</li>
+<li>CIS Controls v8 - Center for Internet Security Controls</li>
+</ul>
+<hr />
+<p><strong>Dokumentverantwortlicher:</strong> IT Operations Manager<br />
+<strong>Genehmigt durch:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Klassifizierung:</strong> internal<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.date }}</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0270_Kontakte_Eskalation_und_Anbieter.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0290_Anhang_Checklisten_und_Vorlagen.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

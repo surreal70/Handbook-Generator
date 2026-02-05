@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0280 - Policy: Data Classification and Information Handling</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0280</div>
+            <h1>Policy: Data Classification and Information Handling</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0270_Guideline_Key_Management_and_Encryption.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0290_Guideline_Data_Classification_Labeling_and_Handling.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="policy-data-classification-and-information-handling">Policy: Data Classification and Information Handling</h1>
+<p><strong>Document ID:</strong> 0280<br />
+<strong>Document Type:</strong> Policy (abstract)<br />
+<strong>Standard Reference:</strong> ISO/IEC 27001:2022 Annex A.5.12-A.5.14 (incl. Amendment 1:2024)<br />
+<strong>Owner:</strong> Thomas Weber<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Approved<br />
+<strong>Classification:</strong> Internal<br />
+<strong>Last Updated:</strong> {{ meta.document.date }}<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This policy defines the principles for data classification and information handling at <strong>AdminSend GmbH</strong>. It ensures that information is classified according to its sensitivity and protection requirements, labeled appropriately, and protected throughout its entire lifecycle.</p>
+<h2 id="2-scope">2. Scope</h2>
+<p>This policy applies to:</p>
+<ul>
+<li><strong>Organizational Units:</strong> All departments and locations of AdminSend GmbH</li>
+<li><strong>Information:</strong> All information in any form (digital, physical, verbal)</li>
+<li><strong>Systems:</strong> All IT systems, applications, databases, storage media</li>
+<li><strong>Persons:</strong> All employees, contractors, suppliers, and third parties with access to information</li>
+<li><strong>Lifecycle:</strong> Creation, storage, processing, transmission, archiving, destruction</li>
+<li><strong>Locations:</strong> {{ netbox.site.name }} and all other operational sites</li>
+</ul>
+<p><strong>Exceptions:</strong> Exceptions are only permitted through the defined exception process (<code>0640_Policy_Ausnahmen_und_Risk_Waivers.md</code>).</p>
+<h2 id="3-principles-policy-statements">3. Principles (Policy Statements)</h2>
+<h3 id="31-mandatory-classification">3.1 Mandatory Classification</h3>
+<p>All organizational information must be classified. Classification is performed by the information owner based on confidentiality, integrity, and availability.</p>
+<h3 id="32-classification-levels">3.2 Classification Levels</h3>
+<p>The organization uses the following classification levels:
+- <strong>Public:</strong> Information that is or may be publicly accessible
+- <strong>Internal:</strong> Information for internal use, not intended for the public
+- <strong>Confidential:</strong> Sensitive information whose disclosure could harm the organization
+- <strong>Highly Confidential:</strong> Highly sensitive information with the highest protection requirements</p>
+<h3 id="33-labeling-and-marking">3.3 Labeling and Marking</h3>
+<p>Classified information is labeled accordingly:
+- Digital documents: Metadata, headers/footers, watermarks
+- Physical documents: Stamps, stickers, cover sheets
+- Emails: Subject prefix, banner
+- Storage media: Labels</p>
+<h3 id="34-handling-requirements">3.4 Handling Requirements</h3>
+<p>Specific handling requirements apply to each classification level:
+- Access control and permissions
+- Encryption (at rest, in transit)
+- Storage and archiving
+- Transmission and sharing
+- Destruction and deletion</p>
+<h3 id="35-information-owner-responsibility">3.5 Information Owner Responsibility</h3>
+<p>Each piece of information has a defined information owner who is responsible for:
+- Classifying the information
+- Defining access rights
+- Regular review of classification
+- Approving access and sharing requests</p>
+<h3 id="36-sharing-and-distribution">3.6 Sharing and Distribution</h3>
+<p>Sharing of classified information follows the need-to-know principle:
+- Internal sharing: After approval by information owner
+- External sharing: After approval and with appropriate protective measures (NDA, encryption)
+- Cloud storage: Only in approved cloud services with adequate security controls</p>
+<h3 id="37-secure-destruction">3.7 Secure Destruction</h3>
+<p>Information is securely destroyed at the end of its lifecycle:
+- Digital data: Secure deletion (overwriting, degaussing)
+- Physical documents: Shredding, burning
+- Storage media: Physical destruction for highly sensitive data</p>
+<h3 id="38-data-protection-compliance">3.8 Data Protection Compliance</h3>
+<p>Classification and handling of personal data complies with GDPR and other data protection regulations.</p>
+<h2 id="4-roles-and-responsibilities">4. Roles and Responsibilities</h2>
+<h3 id="raci-matrix-data-classification-and-information-handling">RACI Matrix: Data Classification and Information Handling</h3>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>CISO</th>
+<th>Information Owner</th>
+<th>Employee</th>
+<th>IT Operations</th>
+<th>Data Protection Officer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Policy Creation</td>
+<td>R/A</td>
+<td>C</td>
+<td>I</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Classification</td>
+<td>C</td>
+<td>R/A</td>
+<td>I</td>
+<td>I</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Labeling</td>
+<td>I</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Access Approval</td>
+<td>C</td>
+<td>R/A</td>
+<td>I</td>
+<td>I</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Handling Compliance</td>
+<td>A</td>
+<td>R</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Sharing Approval</td>
+<td>C</td>
+<td>R/A</td>
+<td>I</td>
+<td>I</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Secure Destruction</td>
+<td>C</td>
+<td>A</td>
+<td>I</td>
+<td>R</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Monitoring and Audits</td>
+<td>R/A</td>
+<td>C</td>
+<td>I</td>
+<td>C</td>
+<td>C</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legend:</strong> R = Responsible (Execution), A = Accountable (Accountable), C = Consulted (Consulted), I = Informed (Informed)</p>
+<h3 id="key-roles">Key Roles</h3>
+<ul>
+<li><strong>Policy Owner:</strong> Thomas Weber (CISO)</li>
+<li><strong>Information Owners:</strong> Department heads, system owners</li>
+<li><strong>Data Protection Officer:</strong> {{ meta.dpo.name }}</li>
+<li><strong>Implementation Responsible:</strong> All employees, IT operations</li>
+<li><strong>Control/Audit Function:</strong> ISMS, internal audit, DPO</li>
+</ul>
+<h2 id="5-derivations-guidelinesstandardsprocesses">5. Derivations (Guidelines/Standards/Processes)</h2>
+<p>Implementation details are defined in subordinate documents:</p>
+<h3 id="related-guidelines">Related Guidelines</h3>
+<ul>
+<li><strong>0290_Richtlinie_Datenklassifizierung_Labeling_und_Handling.md</strong> - Detailed implementation guideline</li>
+<li><code>0260_Policy_Kryptografie_und_Schluesselmanagement.md</code> - Cryptography policy</li>
+<li><code>0560_Policy_Datenschutz_Schnittstellen.md</code> - Data protection policy</li>
+<li><code>0580_Policy_Aufbewahrung_und_Loeschung.md</code> - Retention and deletion policy</li>
+</ul>
+<h3 id="related-standardsbaselines">Related Standards/Baselines</h3>
+<ul>
+<li>Classification scheme and handling matrix</li>
+<li>Labeling standards (digital and physical)</li>
+<li>Encryption requirements per classification level</li>
+<li>Destruction standards</li>
+</ul>
+<h3 id="related-processes">Related Processes</h3>
+<ul>
+<li>Classification process</li>
+<li>Information owner assignment</li>
+<li>Sharing and distribution approval process</li>
+<li>Secure destruction process</li>
+</ul>
+<h2 id="6-compliance-monitoring-and-enforcement">6. Compliance, Monitoring, and Enforcement</h2>
+<h3 id="metrics-and-kpis">Metrics and KPIs</h3>
+<ul>
+<li>Percentage of classified information (target: 100%)</li>
+<li>Percentage of correctly labeled documents</li>
+<li>Number of handling requirement violations</li>
+<li>Number of unauthorized disclosures</li>
+<li>Average time to classify new information</li>
+<li>Compliance rate with destruction requirements</li>
+</ul>
+<h3 id="evidence-and-proof">Evidence and Proof</h3>
+<ul>
+<li>Classification register</li>
+<li>Information owner assignments</li>
+<li>Sharing approvals</li>
+<li>Destruction certificates</li>
+<li>DLP (Data Loss Prevention) logs</li>
+<li>Audit reports on classification and handling</li>
+</ul>
+<h3 id="consequences-for-violations">Consequences for Violations</h3>
+<p>Violations of this policy are handled according to applicable HR and compliance processes:
+- <strong>Missing classification:</strong> Retraining, correction
+- <strong>Incorrect labeling:</strong> Correction, retraining
+- <strong>Unauthorized disclosure:</strong> Warning up to termination, possible legal action
+- <strong>Improper destruction:</strong> Investigation, retraining
+- <strong>Repeated violations:</strong> Employment law consequences</p>
+<h2 id="7-exceptions">7. Exceptions</h2>
+<p>Exceptions to this policy are only permitted in justified exceptional cases:</p>
+<ul>
+<li><strong>Exception Process:</strong> See <code>0640_Policy_Ausnahmen_und_Risk_Waivers.md</code></li>
+<li><strong>Approval:</strong> Exceptions must be approved by CISO and information owner</li>
+<li><strong>Documentation:</strong> All exceptions are documented in the risk register</li>
+<li><strong>Time Limit:</strong> Exceptions are generally time-limited and regularly reviewed</li>
+<li><strong>Compensating Controls:</strong> Exceptions require alternative security measures</li>
+</ul>
+<h2 id="8-references">8. References</h2>
+<h3 id="internal-documents">Internal Documents</h3>
+<ul>
+<li><code>0010_ISMS_Informationssicherheitsleitlinie.md</code> - ISMS policy</li>
+<li><code>0290_Richtlinie_Datenklassifizierung_Labeling_und_Handling.md</code> - Detailed guideline</li>
+<li><code>0300_Policy_Asset_Management.md</code> - Asset management policy</li>
+<li><code>0080_ISMS_Risikoregister_Template.md</code> - Risk register</li>
+</ul>
+<h3 id="external-standards-and-requirements">External Standards and Requirements</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.12</strong> - Classification of information</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.13</strong> - Labelling of information</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.14</strong> - Information transfer</li>
+<li><strong>ISO/IEC 27002:2022</strong> - Information security controls</li>
+<li><strong>GDPR (EU 2016/679)</strong> - General Data Protection Regulation</li>
+<li><strong>BSI IT-Grundschutz</strong> - Module CON.6 Deletion and Destruction</li>
+</ul>
+<hr />
+<p><strong>Approved by:</strong><br />
+{{ meta.management.ceo }}, Management<br />
+Date: {{ meta.document.approval_date }}</p>
+<p><strong>Next Review:</strong> {{ meta.document.next_review }} (annually or as needed)</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0270_Guideline_Key_Management_and_Encryption.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0290_Guideline_Data_Classification_Labeling_and_Handling.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

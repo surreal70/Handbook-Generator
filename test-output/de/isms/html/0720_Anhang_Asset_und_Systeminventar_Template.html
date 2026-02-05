@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0720 - Anhang B: Asset- und Systeminventar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0720</div>
+            <h1>Anhang B: Asset- und Systeminventar</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0710_Anhang_AnnexA_Mapping_Template.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0730_Anhang_Datenfluss_und_Schnittstellen_Template.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="anhang-b-asset-und-systeminventar">Anhang B: Asset- und Systeminventar</h1>
+<p><strong>Dokumenttyp:</strong> Anhang<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Datum:</strong> {{ meta.document.date }}<br />
+<strong>Klassifizierung:</strong> internal</p>
+<hr />
+<h2 id="zweck">Zweck</h2>
+<p>Dieses Dokument stellt das zentrale Asset- und Systeminventar der Organisation dar. Es erfüllt die Anforderungen von ISO/IEC 27001:2022 Annex A 5.9 (Inventory of Information and Other Associated Assets) und dient als Grundlage für:</p>
+<ul>
+<li>Asset Management und Lifecycle-Verwaltung</li>
+<li>Risikobewertung und Schutzbedarfsfeststellung</li>
+<li>Incident Response und Business Continuity Planning</li>
+<li>Compliance-Nachweisführung und Audits</li>
+</ul>
+<p>Das Inventar wird kontinuierlich gepflegt und mindestens quartalsweise überprüft.</p>
+<h2 id="geltungsbereich">Geltungsbereich</h2>
+<p><strong>Organisation:</strong> AdminSend GmbH<br />
+<strong>ISMS Scope:</strong> {{ meta.isms.scope }}<br />
+<strong>Verantwortlich:</strong> Asset Management Team, Thomas Weber</p>
+<hr />
+<h2 id="asset-kategorien">Asset-Kategorien</h2>
+<p>Das Inventar umfasst folgende Asset-Kategorien:</p>
+<ol>
+<li><strong>Hardware Assets:</strong> Server, Netzwerkgeräte, Endpoints, Storage</li>
+<li><strong>Software Assets:</strong> Betriebssysteme, Anwendungen, Lizenzen</li>
+<li><strong>Daten Assets:</strong> Datenbanken, Dateisysteme, Repositories</li>
+<li><strong>Netzwerk Assets:</strong> VLANs, Subnetze, Verbindungen</li>
+<li><strong>Cloud Assets:</strong> Cloud Services, SaaS-Anwendungen</li>
+<li><strong>Physische Assets:</strong> Räume, Infrastruktur, Dokumentation</li>
+</ol>
+<hr />
+<h2 id="asset-klassifizierung">Asset-Klassifizierung</h2>
+<p>Jedes Asset wird nach folgenden Kriterien klassifiziert:</p>
+<h3 id="schutzbedarf-confidentiality-integrity-availability">Schutzbedarf (Confidentiality, Integrity, Availability)</h3>
+<table>
+<thead>
+<tr>
+<th>Stufe</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Hoch</strong></td>
+<td>Kritisch für Geschäftsbetrieb, hoher Schaden bei Kompromittierung</td>
+<td>Produktionsdatenbanken, Core Banking Systems</td>
+</tr>
+<tr>
+<td><strong>Mittel</strong></td>
+<td>Wichtig für Geschäftsbetrieb, mittlerer Schaden bei Kompromittierung</td>
+<td>Interne Anwendungen, Entwicklungssysteme</td>
+</tr>
+<tr>
+<td><strong>Niedrig</strong></td>
+<td>Unkritisch, geringer Schaden bei Kompromittierung</td>
+<td>Test-Systeme, öffentliche Informationen</td>
+</tr>
+</tbody>
+</table>
+<h3 id="kritikalitat">Kritikalität</h3>
+<table>
+<thead>
+<tr>
+<th>Stufe</th>
+<th>RTO</th>
+<th>RPO</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tier 1</strong></td>
+<td>&lt; 4h</td>
+<td>&lt; 1h</td>
+<td>Geschäftskritisch, sofortige Wiederherstellung erforderlich</td>
+</tr>
+<tr>
+<td><strong>Tier 2</strong></td>
+<td>&lt; 24h</td>
+<td>&lt; 4h</td>
+<td>Wichtig, Wiederherstellung innerhalb eines Arbeitstages</td>
+</tr>
+<tr>
+<td><strong>Tier 3</strong></td>
+<td>&lt; 72h</td>
+<td>&lt; 24h</td>
+<td>Standard, Wiederherstellung innerhalb von 3 Tagen</td>
+</tr>
+<tr>
+<td><strong>Tier 4</strong></td>
+<td>&gt; 72h</td>
+<td>&gt; 24h</td>
+<td>Unkritisch, keine zeitkritische Wiederherstellung</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="hardware-assets">Hardware Assets</h2>
+<h3 id="server">Server</h3>
+<table>
+<thead>
+<tr>
+<th>Asset-ID</th>
+<th>Hostname</th>
+<th>Typ</th>
+<th>Standort</th>
+<th>Owner</th>
+<th>Schutzbedarf (C/I/A)</th>
+<th>Kritikalität</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SRV-001</td>
+<td>{{ netbox.device.primary_server.name }}</td>
+<td>Physical Server</td>
+<td>{{ netbox.site.name }}</td>
+<td>IT Operations</td>
+<td>Hoch/Hoch/Hoch</td>
+<td>Tier 1</td>
+<td>Produktiv</td>
+</tr>
+<tr>
+<td>SRV-002</td>
+<td>{{ netbox.device.backup_server.name }}</td>
+<td>Physical Server</td>
+<td>{{ netbox.site.name }}</td>
+<td>IT Operations</td>
+<td>Hoch/Hoch/Mittel</td>
+<td>Tier 2</td>
+<td>Produktiv</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO: Hostname]</td>
+<td>[TODO: Typ]</td>
+<td>[TODO: Standort]</td>
+<td>[TODO: Owner]</td>
+<td>[TODO: C/I/A]</td>
+<td>[TODO: Tier]</td>
+<td>[TODO: Status]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Hinweis:</strong> Vollständige Server-Liste aus NetBox/CMDB importieren.</p>
+<hr />
+<h3 id="netzwerkgerate">Netzwerkgeräte</h3>
+<table>
+<thead>
+<tr>
+<th>Asset-ID</th>
+<th>Hostname</th>
+<th>Typ</th>
+<th>Standort</th>
+<th>Owner</th>
+<th>Schutzbedarf (C/I/A)</th>
+<th>Kritikalität</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NET-001</td>
+<td>{{ netbox.device.core_switch.name }}</td>
+<td>Core Switch</td>
+<td>{{ netbox.site.name }}</td>
+<td>Network Team</td>
+<td>Mittel/Hoch/Hoch</td>
+<td>Tier 1</td>
+<td>Produktiv</td>
+</tr>
+<tr>
+<td>NET-002</td>
+<td>{{ netbox.device.firewall.name }}</td>
+<td>Firewall</td>
+<td>{{ netbox.site.name }}</td>
+<td>Security Team</td>
+<td>Hoch/Hoch/Hoch</td>
+<td>Tier 1</td>
+<td>Produktiv</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO: Hostname]</td>
+<td>[TODO: Typ]</td>
+<td>[TODO: Standort]</td>
+<td>[TODO: Owner]</td>
+<td>[TODO: C/I/A]</td>
+<td>[TODO: Tier]</td>
+<td>[TODO: Status]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Hinweis:</strong> Vollständige Netzwerkgeräte-Liste aus NetBox importieren.</p>
+<hr />
+<h3 id="endpoints">Endpoints</h3>
+<table>
+<thead>
+<tr>
+<th>Asset-ID</th>
+<th>Hostname</th>
+<th>Typ</th>
+<th>Benutzer</th>
+<th>Owner</th>
+<th>Schutzbedarf (C/I/A)</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WS-001</td>
+<td>{{ meta.ciso.workstation }}</td>
+<td>Laptop</td>
+<td>Thomas Weber</td>
+<td>IT Operations</td>
+<td>Hoch/Mittel/Mittel</td>
+<td>Produktiv</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO: Hostname]</td>
+<td>[TODO: Typ]</td>
+<td>[TODO: Benutzer]</td>
+<td>[TODO: Owner]</td>
+<td>[TODO: C/I/A]</td>
+<td>[TODO: Status]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Hinweis:</strong> Endpoint-Inventar aus MDM/Endpoint Management System importieren.</p>
+<hr />
+<h3 id="storage-systeme">Storage-Systeme</h3>
+<table>
+<thead>
+<tr>
+<th>Asset-ID</th>
+<th>Name</th>
+<th>Typ</th>
+<th>Kapazität</th>
+<th>Standort</th>
+<th>Owner</th>
+<th>Schutzbedarf (C/I/A)</th>
+<th>Kritikalität</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>STO-001</td>
+<td>{{ netbox.device.storage.name }}</td>
+<td>SAN</td>
+<td>[TODO: Kapazität]</td>
+<td>{{ netbox.site.name }}</td>
+<td>IT Operations</td>
+<td>Hoch/Hoch/Hoch</td>
+<td>Tier 1</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO: Name]</td>
+<td>[TODO: Typ]</td>
+<td>[TODO: Kapazität]</td>
+<td>[TODO: Standort]</td>
+<td>[TODO: Owner]</td>
+<td>[TODO: C/I/A]</td>
+<td>[TODO: Tier]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="software-assets">Software Assets</h2>
+<h3 id="betriebssysteme">Betriebssysteme</h3>
+<table>
+<thead>
+<tr>
+<th>Asset-ID</th>
+<th>Name</th>
+<th>Version</th>
+<th>Lizenztyp</th>
+<th>Anzahl Lizenzen</th>
+<th>Owner</th>
+<th>Kritikalität</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OS-001</td>
+<td>Windows Server</td>
+<td>2022</td>
+<td>Volume License</td>
+<td>[TODO: Anzahl]</td>
+<td>IT Operations</td>
+<td>Tier 1</td>
+</tr>
+<tr>
+<td>OS-002</td>
+<td>Red Hat Enterprise Linux</td>
+<td>9.x</td>
+<td>Subscription</td>
+<td>[TODO: Anzahl]</td>
+<td>IT Operations</td>
+<td>Tier 1</td>
+</tr>
+<tr>
+<td>OS-003</td>
+<td>Ubuntu Server</td>
+<td>22.04 LTS</td>
+<td>Open Source</td>
+<td>Unbegrenzt</td>
+<td>IT Operations</td>
+<td>Tier 2</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO: Name]</td>
+<td>[TODO: Version]</td>
+<td>[TODO: Lizenztyp]</td>
+<td>[TODO: Anzahl]</td>
+<td>[TODO: Owner]</td>
+<td>[TODO: Tier]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="geschaftsanwendungen">Geschäftsanwendungen</h3>
+<table>
+<thead>
+<tr>
+<th>Asset-ID</th>
+<th>Name</th>
+<th>Version</th>
+<th>Vendor</th>
+<th>Lizenztyp</th>
+<th>Owner</th>
+<th>Schutzbedarf (C/I/A)</th>
+<th>Kritikalität</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>APP-001</td>
+<td>[TODO: ERP System]</td>
+<td>[TODO: Version]</td>
+<td>[TODO: Vendor]</td>
+<td>[TODO: Lizenztyp]</td>
+<td>Business Owner</td>
+<td>Hoch/Hoch/Hoch</td>
+<td>Tier 1</td>
+</tr>
+<tr>
+<td>APP-002</td>
+<td>[TODO: CRM System]</td>
+<td>[TODO: Version]</td>
+<td>[TODO: Vendor]</td>
+<td>[TODO: Lizenztyp]</td>
+<td>Sales</td>
+<td>Hoch/Mittel/Mittel</td>
+<td>Tier 2</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO: Name]</td>
+<td>[TODO: Version]</td>
+<td>[TODO: Vendor]</td>
+<td>[TODO: Lizenztyp]</td>
+<td>[TODO: Owner]</td>
+<td>[TODO: C/I/A]</td>
+<td>[TODO: Tier]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="sicherheitssoftware">Sicherheitssoftware</h3>
+<table>
+<thead>
+<tr>
+<th>Asset-ID</th>
+<th>Name</th>
+<th>Version</th>
+<th>Typ</th>
+<th>Abdeckung</th>
+<th>Owner</th>
+<th>Kritikalität</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SEC-001</td>
+<td>[TODO: EDR Solution]</td>
+<td>[TODO: Version]</td>
+<td>Endpoint Detection &amp; Response</td>
+<td>Alle Endpoints</td>
+<td>Security Team</td>
+<td>Tier 1</td>
+</tr>
+<tr>
+<td>SEC-002</td>
+<td>[TODO: SIEM]</td>
+<td>[TODO: Version]</td>
+<td>Security Information &amp; Event Management</td>
+<td>Alle Systeme</td>
+<td>Security Team</td>
+<td>Tier 1</td>
+</tr>
+<tr>
+<td>SEC-003</td>
+<td>[TODO: Firewall]</td>
+<td>[TODO: Version]</td>
+<td>Next-Gen Firewall</td>
+<td>Perimeter</td>
+<td>Security Team</td>
+<td>Tier 1</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO: Name]</td>
+<td>[TODO: Version]</td>
+<td>[TODO: Typ]</td>
+<td>[TODO: Abdeckung]</td>
+<td>[TODO: Owner]</td>
+<td>[TODO: Tier]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="daten-assets">Daten Assets</h2>
+<h3 id="datenbanken">Datenbanken</h3>
+<table>
+<thead>
+<tr>
+<th>Asset-ID</th>
+<th>Name</th>
+<th>Typ</th>
+<th>Version</th>
+<th>Server</th>
+<th>Owner</th>
+<th>Schutzbedarf (C/I/A)</th>
+<th>Kritikalität</th>
+<th>Backup</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DB-001</td>
+<td>[TODO: Produktions-DB]</td>
+<td>[TODO: PostgreSQL/MySQL/Oracle]</td>
+<td>[TODO: Version]</td>
+<td>SRV-001</td>
+<td>DBA Team</td>
+<td>Hoch/Hoch/Hoch</td>
+<td>Tier 1</td>
+<td>Täglich</td>
+</tr>
+<tr>
+<td>DB-002</td>
+<td>[TODO: Test-DB]</td>
+<td>[TODO: Typ]</td>
+<td>[TODO: Version]</td>
+<td>[TODO: Server]</td>
+<td>DBA Team</td>
+<td>Niedrig/Mittel/Niedrig</td>
+<td>Tier 3</td>
+<td>Wöchentlich</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO: Name]</td>
+<td>[TODO: Typ]</td>
+<td>[TODO: Version]</td>
+<td>[TODO: Server]</td>
+<td>[TODO: Owner]</td>
+<td>[TODO: C/I/A]</td>
+<td>[TODO: Tier]</td>
+<td>[TODO: Backup]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="dateisysteme-und-shares">Dateisysteme und Shares</h3>
+<table>
+<thead>
+<tr>
+<th>Asset-ID</th>
+<th>Name</th>
+<th>Typ</th>
+<th>Pfad</th>
+<th>Server</th>
+<th>Owner</th>
+<th>Schutzbedarf (C/I/A)</th>
+<th>Backup</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FS-001</td>
+<td>[TODO: Abteilungs-Share]</td>
+<td>SMB Share</td>
+<td>[TODO: Pfad]</td>
+<td>[TODO: Server]</td>
+<td>IT Operations</td>
+<td>Mittel/Mittel/Mittel</td>
+<td>Täglich</td>
+</tr>
+<tr>
+<td>FS-002</td>
+<td>[TODO: Projekt-Share]</td>
+<td>SMB Share</td>
+<td>[TODO: Pfad]</td>
+<td>[TODO: Server]</td>
+<td>Project Management</td>
+<td>Hoch/Mittel/Mittel</td>
+<td>Täglich</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO: Name]</td>
+<td>[TODO: Typ]</td>
+<td>[TODO: Pfad]</td>
+<td>[TODO: Server]</td>
+<td>[TODO: Owner]</td>
+<td>[TODO: C/I/A]</td>
+<td>[TODO: Backup]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="code-repositories">Code Repositories</h3>
+<table>
+<thead>
+<tr>
+<th>Asset-ID</th>
+<th>Name</th>
+<th>Typ</th>
+<th>URL</th>
+<th>Owner</th>
+<th>Schutzbedarf (C/I/A)</th>
+<th>Backup</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>REPO-001</td>
+<td>[TODO: Main Repository]</td>
+<td>Git</td>
+<td>[TODO: URL]</td>
+<td>Development Team</td>
+<td>Hoch/Hoch/Mittel</td>
+<td>Täglich</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO: Name]</td>
+<td>[TODO: Typ]</td>
+<td>[TODO: URL]</td>
+<td>[TODO: Owner]</td>
+<td>[TODO: C/I/A]</td>
+<td>[TODO: Backup]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="netzwerk-assets">Netzwerk Assets</h2>
+<h3 id="vlans">VLANs</h3>
+<table>
+<thead>
+<tr>
+<th>VLAN-ID</th>
+<th>Name</th>
+<th>Subnet</th>
+<th>Zweck</th>
+<th>Sicherheitszone</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{{ netbox.vlan.management.vid }}</td>
+<td>{{ netbox.vlan.management.name }}</td>
+<td>{{ netbox.vlan.management.subnet }}</td>
+<td>Management</td>
+<td>Restricted</td>
+<td>Network Team</td>
+</tr>
+<tr>
+<td>{{ netbox.vlan.production.vid }}</td>
+<td>{{ netbox.vlan.production.name }}</td>
+<td>{{ netbox.vlan.production.subnet }}</td>
+<td>Production</td>
+<td>Internal</td>
+<td>Network Team</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO: Name]</td>
+<td>[TODO: Subnet]</td>
+<td>[TODO: Zweck]</td>
+<td>[TODO: Zone]</td>
+<td>[TODO: Owner]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Hinweis:</strong> Vollständige VLAN-Liste aus NetBox importieren.</p>
+<hr />
+<h3 id="externe-verbindungen">Externe Verbindungen</h3>
+<table>
+<thead>
+<tr>
+<th>Verbindungs-ID</th>
+<th>Typ</th>
+<th>Provider</th>
+<th>Bandbreite</th>
+<th>Zweck</th>
+<th>Owner</th>
+<th>Kritikalität</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WAN-001</td>
+<td>Internet</td>
+<td>[TODO: Provider]</td>
+<td>[TODO: Bandbreite]</td>
+<td>Internet Access</td>
+<td>Network Team</td>
+<td>Tier 1</td>
+</tr>
+<tr>
+<td>WAN-002</td>
+<td>MPLS</td>
+<td>[TODO: Provider]</td>
+<td>[TODO: Bandbreite]</td>
+<td>Site-to-Site</td>
+<td>Network Team</td>
+<td>Tier 1</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO: Typ]</td>
+<td>[TODO: Provider]</td>
+<td>[TODO: Bandbreite]</td>
+<td>[TODO: Zweck]</td>
+<td>[TODO: Owner]</td>
+<td>[TODO: Tier]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="cloud-assets">Cloud Assets</h2>
+<h3 id="cloud-services-iaaspaas">Cloud Services (IaaS/PaaS)</h3>
+<table>
+<thead>
+<tr>
+<th>Asset-ID</th>
+<th>Service Name</th>
+<th>Provider</th>
+<th>Typ</th>
+<th>Region</th>
+<th>Owner</th>
+<th>Schutzbedarf (C/I/A)</th>
+<th>Kritikalität</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CLOUD-001</td>
+<td>[TODO: VM Instances]</td>
+<td>[TODO: AWS/Azure/GCP]</td>
+<td>IaaS</td>
+<td>[TODO: Region]</td>
+<td>Cloud Team</td>
+<td>Hoch/Hoch/Hoch</td>
+<td>Tier 1</td>
+</tr>
+<tr>
+<td>CLOUD-002</td>
+<td>[TODO: Database Service]</td>
+<td>[TODO: Provider]</td>
+<td>PaaS</td>
+<td>[TODO: Region]</td>
+<td>DBA Team</td>
+<td>Hoch/Hoch/Hoch</td>
+<td>Tier 1</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO: Service]</td>
+<td>[TODO: Provider]</td>
+<td>[TODO: Typ]</td>
+<td>[TODO: Region]</td>
+<td>[TODO: Owner]</td>
+<td>[TODO: C/I/A]</td>
+<td>[TODO: Tier]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="saas-anwendungen">SaaS-Anwendungen</h3>
+<table>
+<thead>
+<tr>
+<th>Asset-ID</th>
+<th>Service Name</th>
+<th>Provider</th>
+<th>Zweck</th>
+<th>Benutzeranzahl</th>
+<th>Owner</th>
+<th>Schutzbedarf (C/I/A)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SAAS-001</td>
+<td>Microsoft 365</td>
+<td>Microsoft</td>
+<td>Productivity</td>
+<td>[TODO: Anzahl]</td>
+<td>IT Operations</td>
+<td>Hoch/Mittel/Hoch</td>
+</tr>
+<tr>
+<td>SAAS-002</td>
+<td>[TODO: CRM SaaS]</td>
+<td>[TODO: Provider]</td>
+<td>Customer Management</td>
+<td>[TODO: Anzahl]</td>
+<td>Sales</td>
+<td>Hoch/Mittel/Mittel</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO: Service]</td>
+<td>[TODO: Provider]</td>
+<td>[TODO: Zweck]</td>
+<td>[TODO: Anzahl]</td>
+<td>[TODO: Owner]</td>
+<td>[TODO: C/I/A]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="physische-assets">Physische Assets</h2>
+<h3 id="standorte-und-raume">Standorte und Räume</h3>
+<table>
+<thead>
+<tr>
+<th>Standort-ID</th>
+<th>Name</th>
+<th>Adresse</th>
+<th>Typ</th>
+<th>Sicherheitsstufe</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SITE-001</td>
+<td>{{ netbox.site.name }}</td>
+<td>{{ netbox.site.address }}</td>
+<td>Hauptstandort</td>
+<td>Hoch</td>
+<td>Facility Management</td>
+</tr>
+<tr>
+<td>SITE-002</td>
+<td>[TODO: Zweigstelle]</td>
+<td>[TODO: Adresse]</td>
+<td>Zweigstelle</td>
+<td>Mittel</td>
+<td>Facility Management</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO: Name]</td>
+<td>[TODO: Adresse]</td>
+<td>[TODO: Typ]</td>
+<td>[TODO: Sicherheit]</td>
+<td>[TODO: Owner]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="serverraume-und-rechenzentren">Serverräume und Rechenzentren</h3>
+<table>
+<thead>
+<tr>
+<th>Raum-ID</th>
+<th>Name</th>
+<th>Standort</th>
+<th>Typ</th>
+<th>Größe</th>
+<th>Klimatisierung</th>
+<th>Brandschutz</th>
+<th>Zutrittskontrolle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ROOM-001</td>
+<td>Serverraum 1</td>
+<td>SITE-001</td>
+<td>Serverraum</td>
+<td>[TODO: m²]</td>
+<td>Redundant</td>
+<td>FM-200</td>
+<td>Biometrisch</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO: Name]</td>
+<td>[TODO: Standort]</td>
+<td>[TODO: Typ]</td>
+<td>[TODO: Größe]</td>
+<td>[TODO: Klima]</td>
+<td>[TODO: Brand]</td>
+<td>[TODO: Zutritt]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="kritische-infrastruktur">Kritische Infrastruktur</h3>
+<table>
+<thead>
+<tr>
+<th>Asset-ID</th>
+<th>Name</th>
+<th>Typ</th>
+<th>Standort</th>
+<th>Kapazität</th>
+<th>Redundanz</th>
+<th>Owner</th>
+<th>Kritikalität</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>INFRA-001</td>
+<td>USV Anlage 1</td>
+<td>USV</td>
+<td>SITE-001</td>
+<td>[TODO: kVA]</td>
+<td>N+1</td>
+<td>Facility Management</td>
+<td>Tier 1</td>
+</tr>
+<tr>
+<td>INFRA-002</td>
+<td>Klimaanlage 1</td>
+<td>Klimatisierung</td>
+<td>SITE-001</td>
+<td>[TODO: kW]</td>
+<td>N+1</td>
+<td>Facility Management</td>
+<td>Tier 1</td>
+</tr>
+<tr>
+<td>INFRA-003</td>
+<td>Notstromgenerator</td>
+<td>Generator</td>
+<td>SITE-001</td>
+<td>[TODO: kW]</td>
+<td>N</td>
+<td>Facility Management</td>
+<td>Tier 1</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO: Name]</td>
+<td>[TODO: Typ]</td>
+<td>[TODO: Standort]</td>
+<td>[TODO: Kapazität]</td>
+<td>[TODO: Redundanz]</td>
+<td>[TODO: Owner]</td>
+<td>[TODO: Tier]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="asset-lifecycle-management">Asset Lifecycle Management</h2>
+<h3 id="lifecycle-phasen">Lifecycle-Phasen</h3>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Beschreibung</th>
+<th>Verantwortlich</th>
+<th>Prozess</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Planung</strong></td>
+<td>Bedarfsermittlung, Budgetierung</td>
+<td>Business Owner</td>
+<td>Anforderungsmanagement</td>
+</tr>
+<tr>
+<td><strong>Beschaffung</strong></td>
+<td>Auswahl, Bestellung, Lieferung</td>
+<td>Procurement</td>
+<td>Beschaffungsprozess</td>
+</tr>
+<tr>
+<td><strong>Inbetriebnahme</strong></td>
+<td>Installation, Konfiguration, Tests</td>
+<td>IT Operations</td>
+<td>Change Management</td>
+</tr>
+<tr>
+<td><strong>Betrieb</strong></td>
+<td>Nutzung, Wartung, Monitoring</td>
+<td>IT Operations</td>
+<td>Betriebsprozesse</td>
+</tr>
+<tr>
+<td><strong>Wartung</strong></td>
+<td>Updates, Patches, Reparaturen</td>
+<td>IT Operations</td>
+<td>Patch Management</td>
+</tr>
+<tr>
+<td><strong>Außerbetriebnahme</strong></td>
+<td>Dekommissionierung, Datenlöschung</td>
+<td>IT Operations</td>
+<td>Decommissioning Process</td>
+</tr>
+<tr>
+<td><strong>Entsorgung</strong></td>
+<td>Sichere Entsorgung oder Wiederverwendung</td>
+<td>IT Operations</td>
+<td>Disposal Process</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="asset-owner-und-verantwortlichkeiten">Asset Owner und Verantwortlichkeiten</h3>
+<table>
+<thead>
+<tr>
+<th>Rolle</th>
+<th>Verantwortlichkeiten</th>
+<th>Kontakt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Asset Owner</strong></td>
+<td>Geschäftliche Verantwortung, Genehmigungen, Budget</td>
+<td>[TODO: Name/Abteilung]</td>
+</tr>
+<tr>
+<td><strong>Technical Owner</strong></td>
+<td>Technische Verantwortung, Betrieb, Wartung</td>
+<td>IT Operations</td>
+</tr>
+<tr>
+<td><strong>Security Owner</strong></td>
+<td>Sicherheitsanforderungen, Risikobewertung</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td><strong>Data Owner</strong></td>
+<td>Datenklassifizierung, Zugriffskontrolle</td>
+<td>[TODO: Name/Abteilung]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="asset-tagging-und-kennzeichnung">Asset-Tagging und Kennzeichnung</h2>
+<h3 id="tagging-schema">Tagging-Schema</h3>
+<p>Alle Assets werden mit folgenden Tags versehen:</p>
+<table>
+<thead>
+<tr>
+<th>Tag-Kategorie</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Environment</strong></td>
+<td>Umgebung</td>
+<td>Production, Development, Test, QA</td>
+</tr>
+<tr>
+<td><strong>Criticality</strong></td>
+<td>Kritikalität</td>
+<td>Tier1, Tier2, Tier3, Tier4</td>
+</tr>
+<tr>
+<td><strong>Owner</strong></td>
+<td>Verantwortlicher</td>
+<td>IT-Ops, Security, Development</td>
+</tr>
+<tr>
+<td><strong>CostCenter</strong></td>
+<td>Kostenstelle</td>
+<td>[TODO: Kostenstellen]</td>
+</tr>
+<tr>
+<td><strong>Project</strong></td>
+<td>Projekt</td>
+<td>[TODO: Projektname]</td>
+</tr>
+<tr>
+<td><strong>Compliance</strong></td>
+<td>Compliance-Anforderungen</td>
+<td>PCI-DSS, GDPR, ISO27001</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Hinweis:</strong> Tagging wird in CMDB/Asset Management System gepflegt.</p>
+<hr />
+<h2 id="inventarisierungsprozess">Inventarisierungsprozess</h2>
+<h3 id="regelmaige-uberprufung">Regelmäßige Überprüfung</h3>
+<table>
+<thead>
+<tr>
+<th>Aktivität</th>
+<th>Frequenz</th>
+<th>Verantwortlich</th>
+<th>Dokumentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vollständige Inventur</strong></td>
+<td>Jährlich</td>
+<td>Asset Management Team</td>
+<td>Inventurbericht</td>
+</tr>
+<tr>
+<td><strong>Quartalsweise Überprüfung</strong></td>
+<td>Quartalsweise</td>
+<td>Asset Owners</td>
+<td>Review-Protokoll</td>
+</tr>
+<tr>
+<td><strong>Automatische Discovery</strong></td>
+<td>Täglich</td>
+<td>IT Operations</td>
+<td>Discovery Logs</td>
+</tr>
+<tr>
+<td><strong>Änderungsverfolgung</strong></td>
+<td>Kontinuierlich</td>
+<td>Change Management</td>
+<td>Change Records</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="discovery-tools">Discovery-Tools</h3>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Zweck</th>
+<th>Abdeckung</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NetBox</td>
+<td>Netzwerk- und Infrastruktur-Inventar</td>
+<td>Netzwerkgeräte, Server, VLANs</td>
+<td>Network Team</td>
+</tr>
+<tr>
+<td>CMDB</td>
+<td>Configuration Management Database</td>
+<td>Alle IT-Assets</td>
+<td>IT Operations</td>
+</tr>
+<tr>
+<td>MDM</td>
+<td>Mobile Device Management</td>
+<td>Endpoints, Mobile Devices</td>
+<td>IT Operations</td>
+</tr>
+<tr>
+<td>Cloud Asset Inventory</td>
+<td>Cloud Resources</td>
+<td>Cloud Services</td>
+<td>Cloud Team</td>
+</tr>
+<tr>
+<td>[TODO: Tool]</td>
+<td>[TODO: Zweck]</td>
+<td>[TODO: Abdeckung]</td>
+<td>[TODO: Owner]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="compliance-und-audit">Compliance und Audit</h2>
+<h3 id="audit-anforderungen">Audit-Anforderungen</h3>
+<p>Dieses Inventar erfüllt folgende Compliance-Anforderungen:</p>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A 5.9:</strong> Inventory of Information and Other Associated Assets</li>
+<li><strong>ISO/IEC 27001:2022 Annex A 5.10:</strong> Acceptable Use of Information and Other Associated Assets</li>
+<li><strong>ISO/IEC 27001:2022 Annex A 8.9:</strong> Configuration Management</li>
+<li><strong>[TODO: Weitere Compliance-Anforderungen]</strong></li>
+</ul>
+<hr />
+<h3 id="audit-trail">Audit Trail</h3>
+<table>
+<thead>
+<tr>
+<th>Datum</th>
+<th>Änderung</th>
+<th>Durchgeführt von</th>
+<th>Genehmigt von</th>
+<th>Grund</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{{ meta.document.date }}</td>
+<td>Initiale Erstellung</td>
+<td>{{ meta.document.author }}</td>
+<td>Thomas Weber</td>
+<td>ISMS-Implementierung</td>
+</tr>
+<tr>
+<td>[TODO: Datum]</td>
+<td>[TODO: Änderung]</td>
+<td>[TODO: Name]</td>
+<td>[TODO: Name]</td>
+<td>[TODO: Grund]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="referenzen">Referenzen</h2>
+<ul>
+<li>Policy: 0300_Policy_Asset_Management.md</li>
+<li>Richtlinie: 0310_Richtlinie_Asset_Inventory_Tagging_und_Entsorgung.md</li>
+<li>Dokument: 0100_ISMS_Statement_of_Applicability_SoA_Template.md</li>
+<li>Anhang: 0730_Anhang_Datenfluss_und_Schnittstellen_Template.md</li>
+</ul>
+<hr />
+<p><strong>Dokumentverantwortlicher:</strong> Asset Management Team<br />
+<strong>Genehmigt durch:</strong> Thomas Weber<br />
+<strong>Nächste Überprüfung:</strong> Quartalsweise</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0710_Anhang_AnnexA_Mapping_Template.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0730_Anhang_Datenfluss_und_Schnittstellen_Template.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

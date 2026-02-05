@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0310 - Richtlinie: Asset Inventory, Tagging und Entsorgung</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0310</div>
+            <h1>Richtlinie: Asset Inventory, Tagging und Entsorgung</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0300_Policy_Asset_Management.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0320_Policy_Logging_und_Monitoring.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="richtlinie-asset-inventory-tagging-und-entsorgung">Richtlinie: Asset Inventory, Tagging und Entsorgung</h1>
+<p><strong>Dokument-ID:</strong> 0310<br />
+<strong>Dokumenttyp:</strong> Richtlinie (detailliert)<br />
+<strong>Zugehörige Policy:</strong> 0300_Policy_Asset_Management.md<br />
+<strong>Standard-Referenz:</strong> ISO/IEC 27001:2022 Annex A.5.9, A.5.10<br />
+<strong>Owner:</strong> {{ meta.it_operations.manager }}<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Freigegeben<br />
+<strong>Klassifizierung:</strong> Intern<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.date }}</p>
+<hr />
+<h2 id="1-zweck-und-geltungsbereich">1. Zweck und Geltungsbereich</h2>
+<p>Diese Richtlinie konkretisiert die <code>0300_Policy_Asset_Management.md</code> und definiert:
+- Asset-Inventarisierung und CMDB-Verwaltung
+- Asset-Tagging und Kennzeichnung
+- Lifecycle-Management und Entsorgung</p>
+<p><strong>Geltungsbereich:</strong> Alle IT-Assets bei <strong>AdminSend GmbH</strong></p>
+<h2 id="2-asset-kategorien">2. Asset-Kategorien</h2>
+<h3 id="21-hardware-assets">2.1 Hardware-Assets</h3>
+<ul>
+<li>Laptops, Desktops, Server</li>
+<li>Netzwerkgeräte (Switches, Router, Firewalls)</li>
+<li>Mobilgeräte (Smartphones, Tablets)</li>
+<li>Peripherie (Monitore, Drucker, Scanner)</li>
+<li>Speichermedien (USB-Sticks, externe Festplatten)</li>
+</ul>
+<h3 id="22-software-assets">2.2 Software-Assets</h3>
+<ul>
+<li>Betriebssysteme und Lizenzen</li>
+<li>Anwendungssoftware</li>
+<li>Cloud-Subscriptions (SaaS)</li>
+<li>Entwicklungstools</li>
+</ul>
+<h3 id="23-informations-assets">2.3 Informations-Assets</h3>
+<ul>
+<li>Datenbanken</li>
+<li>Dateisysteme und Shares</li>
+<li>Dokumentensammlungen</li>
+<li>Backup-Medien</li>
+</ul>
+<h3 id="24-services">2.4 Services</h3>
+<ul>
+<li>Cloud-Services (IaaS, PaaS, SaaS)</li>
+<li>Managed Services</li>
+<li>Support-Verträge</li>
+</ul>
+<h2 id="3-asset-inventarisierung">3. Asset-Inventarisierung</h2>
+<h3 id="31-cmdb-configuration-management-database">3.1 CMDB (Configuration Management Database)</h3>
+<p><strong>System:</strong> {{ meta.itsm.cmdb }} (z.B. ServiceNow, Jira Service Management)</p>
+<p><strong>Pflichtfelder pro Asset:</strong>
+- Asset-ID (eindeutig)
+- Asset-Typ und Kategorie
+- Hersteller, Modell, Seriennummer
+- Standort, Raum
+- Owner, Nutzer
+- Anschaffungsdatum, Kosten
+- Wartungsvertrag, Support-Ende
+- Status (In Betrieb, Lager, Defekt, Entsorgt)</p>
+<p><strong>Zusatzfelder:</strong>
+- IP-Adresse, MAC-Adresse (Netzwerkgeräte)
+- Betriebssystem, Patch-Level
+- Installierte Software
+- Klassifizierung (Kritikalität)
+- Abhängigkeiten zu anderen Assets</p>
+<h3 id="32-automatische-inventarisierung">3.2 Automatische Inventarisierung</h3>
+<p><strong>Tools:</strong>
+- <strong>Endpoint-Management:</strong> {{ meta.endpoint.management }} (z.B. Microsoft Intune, Jamf)
+- <strong>Network Discovery:</strong> {{ meta.network.discovery }} (z.B. Nmap, Lansweeper)
+- <strong>Cloud Asset Inventory:</strong> Native Cloud-Tools (Azure Resource Graph, AWS Config)</p>
+<p><strong>Prozess:</strong>
+- Tägliche automatische Scans
+- Abgleich mit CMDB
+- Alerts bei unbekannten Assets (Shadow IT)
+- Automatische Aktualisierung von Attributen</p>
+<h3 id="33-manuelle-inventarisierung">3.3 Manuelle Inventarisierung</h3>
+<p><strong>Anlässe:</strong>
+- Neue Asset-Beschaffung
+- Asset-Übergabe an Mitarbeiter
+- Standortwechsel
+- Wartung oder Reparatur
+- Außerbetriebnahme</p>
+<p><strong>Prozess:</strong>
+1. Asset physisch prüfen
+2. CMDB-Eintrag erstellen/aktualisieren
+3. Asset-Tag anbringen
+4. Dokumentation (Fotos bei Bedarf)
+5. Übergabeprotokoll (bei Mitarbeiter-Zuweisung)</p>
+<h2 id="4-asset-tagging">4. Asset-Tagging</h2>
+<h3 id="41-tagging-schema">4.1 Tagging-Schema</h3>
+<p><strong>Asset-ID-Format:</strong> <code>{{ meta.asset.id_format }}</code><br />
+Beispiel: <code>LAP-2024-001234</code> (Laptop, Jahr, laufende Nummer)</p>
+<p><strong>Präfixe:</strong>
+- LAP: Laptop
+- DSK: Desktop
+- SRV: Server
+- NET: Netzwerkgerät
+- MOB: Mobilgerät
+- PER: Peripherie</p>
+<h3 id="42-physische-tags">4.2 Physische Tags</h3>
+<p><strong>Barcode/QR-Code-Labels:</strong>
+- Selbstklebend, manipulationssicher
+- Anbringung an sichtbarer Stelle
+- Enthält Asset-ID und QR-Code für CMDB-Link</p>
+<p><strong>RFID-Tags (optional):</strong>
+- Für hochwertige Assets
+- Automatische Erfassung bei Standortwechsel
+- Integration mit Zutrittskontrollsystem</p>
+<h3 id="43-digitale-tags">4.3 Digitale Tags</h3>
+<p><strong>Hostname-Konvention:</strong>
+- Format: <code>{{ meta.naming.hostname_format }}</code>
+- Beispiel: <code>lap-jdoe-001</code> (Typ-Nutzer-Nummer)</p>
+<p><strong>Metadaten:</strong>
+- Cloud-Resources: Tags für Owner, Kostenstelle, Umgebung
+- Virtuelle Maschinen: Tags für Anwendung, Kritikalität</p>
+<h2 id="5-asset-lifecycle-management">5. Asset-Lifecycle-Management</h2>
+<h3 id="51-beschaffung">5.1 Beschaffung</h3>
+<p><strong>Prozess:</strong>
+1. Bedarfsanforderung über Ticketsystem
+2. Genehmigung durch Vorgesetzten und IT-Leitung
+3. Beschaffung über genehmigte Lieferanten
+4. Wareneingang und Qualitätsprüfung
+5. CMDB-Eintrag erstellen
+6. Asset-Tag anbringen
+7. Bereitstellung an Nutzer</p>
+<p><strong>Dokumentation:</strong>
+- Bestellung, Rechnung
+- Garantie- und Wartungsverträge
+- Übergabeprotokoll</p>
+<h3 id="52-betrieb">5.2 Betrieb</h3>
+<p><strong>Wartung:</strong>
+- Regelmäßige Wartung gemäß Herstellervorgaben
+- Dokumentation in CMDB
+- Firmware- und Software-Updates</p>
+<p><strong>Monitoring:</strong>
+- Hardware-Health-Checks
+- Kapazitätsplanung
+- Lebenszyklusende-Tracking</p>
+<h3 id="53-auerbetriebnahme">5.3 Außerbetriebnahme</h3>
+<p><strong>Trigger:</strong>
+- Ende der Nutzungsdauer (typisch 3-5 Jahre)
+- Defekt, nicht reparabel
+- Technologiewechsel
+- Mitarbeiter-Offboarding</p>
+<p><strong>Prozess:</strong>
+1. Asset aus Betrieb nehmen
+2. Daten sichern (falls erforderlich)
+3. Daten sicher löschen (siehe Abschnitt 6)
+4. CMDB-Status auf "Außer Betrieb" setzen
+5. Entscheidung: Wiederverwendung, Verkauf oder Entsorgung</p>
+<h2 id="6-sichere-datenvernichtung">6. Sichere Datenvernichtung</h2>
+<h3 id="61-datentrager-loschung">6.1 Datenträger-Löschung</h3>
+<p><strong>Methoden nach DIN 66399:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Datenträger</th>
+<th>Klassifizierung</th>
+<th>Methode</th>
+<th>Standard</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HDD</td>
+<td>Intern</td>
+<td>Software-Löschung (3-Pass)</td>
+<td>DIN 66399 H-3</td>
+</tr>
+<tr>
+<td>HDD</td>
+<td>Vertraulich</td>
+<td>Degaussing + Löschung</td>
+<td>DIN 66399 H-4</td>
+</tr>
+<tr>
+<td>HDD</td>
+<td>Streng Vertraulich</td>
+<td>Physische Zerstörung</td>
+<td>DIN 66399 H-5</td>
+</tr>
+<tr>
+<td>SSD</td>
+<td>Intern</td>
+<td>Secure Erase (ATA)</td>
+<td>DIN 66399 H-3</td>
+</tr>
+<tr>
+<td>SSD</td>
+<td>Vertraulich/Streng Vertraulich</td>
+<td>Kryptographische Löschung + Zerstörung</td>
+<td>DIN 66399 H-5</td>
+</tr>
+<tr>
+<td>USB/SD</td>
+<td>Alle</td>
+<td>Physische Zerstörung</td>
+<td>DIN 66399 H-4</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tools:</strong>
+- <strong>Software:</strong> DBAN, Blancco, Parted Magic
+- <strong>Hardware:</strong> Degausser, Shredder</p>
+<p><strong>Dokumentation:</strong>
+- Löschprotokoll mit Asset-ID, Datum, Methode, Durchführender
+- Zertifikat bei Dienstleister-Entsorgung</p>
+<h3 id="62-mobile-gerate">6.2 Mobile Geräte</h3>
+<p><strong>Prozess:</strong>
+1. Remote Wipe über MDM ({{ meta.mdm.system }})
+2. Factory Reset vor Ort
+3. Entfernung von SIM-Karten und SD-Karten
+4. Physische Prüfung der Löschung
+5. Dokumentation</p>
+<h3 id="63-cloud-daten">6.3 Cloud-Daten</h3>
+<p><strong>Löschung:</strong>
+- Logische Löschung in Cloud-Service
+- Warten auf Retention-Period-Ablauf
+- Bestätigung der endgültigen Löschung durch Provider
+- Dokumentation (Löschbestätigung)</p>
+<h2 id="7-asset-entsorgung">7. Asset-Entsorgung</h2>
+<h3 id="71-wiederverwendung">7.1 Wiederverwendung</h3>
+<p><strong>Intern:</strong>
+- Aufbereitung und Neuinstallation
+- Zuweisung an anderen Mitarbeiter
+- Nutzung als Test- oder Entwicklungsgerät</p>
+<p><strong>Spende:</strong>
+- Datenvernichtung gemäß Abschnitt 6
+- Entfernung aller Asset-Tags und Firmenlogos
+- Dokumentation der Spende (Steuer)</p>
+<h3 id="72-verkauf">7.2 Verkauf</h3>
+<p><strong>Remarketing:</strong>
+- Nur nach vollständiger Datenvernichtung
+- Verkauf über zertifizierte Remarketing-Partner
+- Erlös-Dokumentation</p>
+<h3 id="73-entsorgung">7.3 Entsorgung</h3>
+<p><strong>Zertifizierte Entsorgungspartner:</strong>
+- WEEE-zertifiziert (Waste Electrical and Electronic Equipment)
+- Entsorgungsnachweis erforderlich
+- Umweltgerechte Entsorgung</p>
+<p><strong>Prozess:</strong>
+1. Datenvernichtung (siehe Abschnitt 6)
+2. Übergabe an Entsorgungspartner
+3. Entsorgungsnachweis erhalten
+4. CMDB-Status auf "Entsorgt" setzen
+5. Dokumentation archivieren</p>
+<h2 id="8-compliance-und-audit">8. Compliance und Audit</h2>
+<h3 id="81-messgroen-kpis">8.1 Messgrößen (KPIs)</h3>
+<table>
+<thead>
+<tr>
+<th>Metrik</th>
+<th>Zielwert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CMDB-Vollständigkeit</td>
+<td>&gt; 95%</td>
+</tr>
+<tr>
+<td>Asset-Tagging-Rate</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Inventur-Abweichungen</td>
+<td>&lt; 2%</td>
+</tr>
+<tr>
+<td>Entsorgungsnachweise</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="82-regelmaige-inventuren">8.2 Regelmäßige Inventuren</h3>
+<p><strong>Frequenz:</strong>
+- Vollständige Inventur: Jährlich
+- Stichproben: Quartalsweise
+- Ad-hoc bei Verdacht auf Verlust</p>
+<p><strong>Prozess:</strong>
+1. CMDB-Export
+2. Physische Prüfung vor Ort
+3. Abgleich CMDB vs. Realität
+4. Klärung von Abweichungen
+5. CMDB-Korrektur
+6. Bericht an Management</p>
+<h3 id="83-audit-nachweise">8.3 Audit-Nachweise</h3>
+<ul>
+<li>CMDB-Berichte</li>
+<li>Asset-Übergabeprotokolle</li>
+<li>Löschprotokolle</li>
+<li>Entsorgungsnachweise</li>
+<li>Inventur-Berichte</li>
+</ul>
+<h2 id="9-referenzen">9. Referenzen</h2>
+<h3 id="interne-dokumente">Interne Dokumente</h3>
+<ul>
+<li><code>0300_Policy_Asset_Management.md</code></li>
+<li><code>0280_Policy_Datenklassifizierung_und_Informationshandling.md</code></li>
+</ul>
+<h3 id="externe-standards">Externe Standards</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.9</strong> - Inventory of information and other associated assets</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.10</strong> - Acceptable use of information</li>
+<li><strong>DIN 66399</strong> - Vernichtung von Datenträgern</li>
+<li><strong>WEEE-Richtlinie</strong> - Elektro- und Elektronikgeräte-Entsorgung</li>
+</ul>
+<hr />
+<p><strong>Genehmigt durch:</strong> Thomas Weber, CISO<br />
+<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0300_Policy_Asset_Management.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0320_Policy_Logging_und_Monitoring.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

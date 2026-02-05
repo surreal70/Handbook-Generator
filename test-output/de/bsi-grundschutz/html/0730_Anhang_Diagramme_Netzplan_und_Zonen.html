@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0730 - Anhang: Netzplan und Zonenmodell (Template)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0730</div>
+            <h1>Anhang: Netzplan und Zonenmodell (Template)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0720_Anhang_Datenfluesse_und_Schnittstellen_Template.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0740_Anhang_Begriffe_und_Abkuerzungen.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="anhang-netzplan-und-zonenmodell-template">Anhang: Netzplan und Zonenmodell (Template)</h1>
+<p><strong>Dokument-ID:</strong> 0730<br />
+<strong>Dokumenttyp:</strong> Anhang<br />
+<strong>Referenzrahmen:</strong> BSI IT-Grundschutz (BSI Standards 200-1/200-2)<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> {{ meta.document.status }}<br />
+<strong>Klassifizierung:</strong> internal<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.last_updated }}<br />
+<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-zweck-und-zielsetzung">1. Zweck und Zielsetzung</h2>
+<p>Die Dokumentation der Netzarchitektur und des Zonenmodells von <strong>AdminSend GmbH</strong> dient:
+- Strukturanalyse (Dokument 0050)
+- Risikoanalyse (Dokument 0090)
+- Netzwerksicherheit (Dokument 0460/0470)
+- Incident Response (Dokument 0320/0330)</p>
+<p><strong>Verantwortlich:</strong> Anna Schmidt (IT-Leitung)</p>
+<h2 id="2-high-level-netzplan">2. High-Level Netzplan</h2>
+<p><strong>Ablageort:</strong> <code>diagrams/network-highlevel.png</code> oder [TODO: Confluence/SharePoint]</p>
+<p><strong>Darstellung:</strong>
+- Alle Netzwerkzonen
+- Firewalls und Trust Boundaries
+- Hauptverbindungen (Internet, WAN, VPN)
+- Kritische Systeme</p>
+<p><strong>Tools:</strong> [TODO: z.B. Lucidchart, Draw.io, Visio]</p>
+<h2 id="3-netzwerkzonen-und-segmentierung">3. Netzwerkzonen und Segmentierung</h2>
+<table>
+<thead>
+<tr>
+<th>Zone-ID</th>
+<th>Zonenname</th>
+<th>Beschreibung</th>
+<th>Trust Level</th>
+<th>Zugriffskontrolle</th>
+<th>Verantwortlich</th>
+<th>Notiz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Z-001</td>
+<td>Internet</td>
+<td>Öffentliches Internet</td>
+<td>Untrusted</td>
+<td>Firewall (Deny All)</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Z-002</td>
+<td>DMZ</td>
+<td>Demilitarisierte Zone (Webserver, Mail-Gateway)</td>
+<td>Low Trust</td>
+<td>Firewall (Whitelist)</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Z-003</td>
+<td>Internal LAN</td>
+<td>Internes Unternehmensnetzwerk</td>
+<td>Trusted</td>
+<td>Firewall (Default Allow)</td>
+<td>Anna Schmidt</td>
+<td>{{ netbox.vlan.name }}</td>
+</tr>
+<tr>
+<td>Z-004</td>
+<td>Server VLAN</td>
+<td>Produktionsserver</td>
+<td>High Trust</td>
+<td>Firewall (Whitelist)</td>
+<td>Anna Schmidt</td>
+<td>{{ netbox.vlan.name }}</td>
+</tr>
+<tr>
+<td>Z-005</td>
+<td>Database VLAN</td>
+<td>Datenbank-Server</td>
+<td>High Trust</td>
+<td>Firewall (Strict Whitelist)</td>
+<td>Anna Schmidt</td>
+<td>{{ netbox.vlan.name }}</td>
+</tr>
+<tr>
+<td>Z-006</td>
+<td>Management VLAN</td>
+<td>Management-Netzwerk (Monitoring, Backup, Admin)</td>
+<td>High Trust</td>
+<td>Firewall (Strict Whitelist)</td>
+<td>Anna Schmidt</td>
+<td>{{ netbox.vlan.name }}</td>
+</tr>
+<tr>
+<td>Z-007</td>
+<td>Guest WiFi</td>
+<td>Gast-WLAN</td>
+<td>Untrusted</td>
+<td>Captive Portal, Firewall</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Z-008</td>
+<td>VPN</td>
+<td>Remote-Zugriff (VPN)</td>
+<td>Trusted (nach Authentisierung)</td>
+<td>VPN-Gateway, MFA</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-trust-boundaries-und-firewall-regeln">4. Trust Boundaries und Firewall-Regeln</h2>
+<h3 id="41-trust-boundaries">4.1 Trust Boundaries</h3>
+<p><strong>Definition:</strong> Trust Boundaries sind Grenzen zwischen Netzwerkzonen mit unterschiedlichem Vertrauensniveau.</p>
+<p><strong>Hauptgrenzen:</strong>
+1. <strong>Internet ↔ DMZ:</strong> Firewall mit strikten Regeln (nur HTTP/HTTPS eingehend)
+2. <strong>DMZ ↔ Internal LAN:</strong> Firewall mit Whitelist (nur definierte Verbindungen)
+3. <strong>Internal LAN ↔ Server VLAN:</strong> Firewall mit Whitelist
+4. <strong>Server VLAN ↔ Database VLAN:</strong> Firewall mit strikter Whitelist (nur DB-Ports)
+5. <strong>Management VLAN ↔ Alle Zonen:</strong> Firewall mit strikter Whitelist (nur Admin-Zugriffe)</p>
+<h3 id="42-firewall-regeln-beispiel">4.2 Firewall-Regeln (Beispiel)</h3>
+<table>
+<thead>
+<tr>
+<th>Regel-ID</th>
+<th>Quelle</th>
+<th>Ziel</th>
+<th>Service/Port</th>
+<th>Aktion</th>
+<th>Begründung</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FW-001</td>
+<td>Internet</td>
+<td>DMZ (Webserver)</td>
+<td>HTTPS (443)</td>
+<td>Allow</td>
+<td>Öffentlicher Webzugriff</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>FW-002</td>
+<td>DMZ (Webserver)</td>
+<td>Server VLAN (App-Server)</td>
+<td>HTTPS (8443)</td>
+<td>Allow</td>
+<td>Backend-Kommunikation</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>FW-003</td>
+<td>Server VLAN (App-Server)</td>
+<td>Database VLAN (DB-Server)</td>
+<td>PostgreSQL (5432)</td>
+<td>Allow</td>
+<td>Datenbank-Zugriff</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>FW-004</td>
+<td>Management VLAN</td>
+<td>Alle Zonen</td>
+<td>SSH (22), RDP (3389)</td>
+<td>Allow</td>
+<td>Admin-Zugriff</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>FW-005</td>
+<td>Guest WiFi</td>
+<td>Internet</td>
+<td>HTTP/HTTPS (80/443)</td>
+<td>Allow</td>
+<td>Internet-Zugriff für Gäste</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>FW-006</td>
+<td>Guest WiFi</td>
+<td>Internal LAN</td>
+<td>Alle</td>
+<td>Deny</td>
+<td>Isolation von internem Netzwerk</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Referenz:</strong> Dokument 0460/0470 (Netzwerksicherheit)</p>
+<h2 id="5-netzwerkgerate">5. Netzwerkgeräte</h2>
+<table>
+<thead>
+<tr>
+<th>Gerät-ID</th>
+<th>Typ</th>
+<th>Modell</th>
+<th>Standort</th>
+<th>IP-Adresse</th>
+<th>Management-IP</th>
+<th>Rolle</th>
+<th>Owner</th>
+<th>Notiz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{{ netbox.device.id }}</td>
+<td>{{ netbox.device.type }}</td>
+<td>{{ netbox.device.model }}</td>
+<td>{{ netbox.site.name }}</td>
+<td>{{ netbox.ipaddress.address }}</td>
+<td>[TODO]</td>
+<td>{{ netbox.device.role }}</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>Firewall</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Perimeter-Firewall</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>Switch</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Core-Switch</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>Router</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Internet-Router</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>NetBox-Integration:</strong> {{ netbox.url }}</p>
+<h2 id="6-vlans">6. VLANs</h2>
+<table>
+<thead>
+<tr>
+<th>VLAN-ID</th>
+<th>VLAN-Name</th>
+<th>Netzwerk (CIDR)</th>
+<th>Gateway</th>
+<th>Beschreibung</th>
+<th>Zone</th>
+<th>Notiz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{{ netbox.vlan.id }}</td>
+<td>{{ netbox.vlan.name }}</td>
+<td>[TODO: z.B. 10.0.10.0/24]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>Management</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Management-Netzwerk</td>
+<td>Z-006</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>Servers</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Produktionsserver</td>
+<td>Z-004</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>Database</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Datenbank-Server</td>
+<td>Z-005</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-administrative-zugange">7. Administrative Zugänge</h2>
+<h3 id="71-bastionjump-hosts">7.1 Bastion/Jump Hosts</h3>
+<p><strong>Bastion Host:</strong> [TODO: Hostname/IP]<br />
+<strong>Zweck:</strong> Zentraler Zugangspunkt für administrative Zugriffe auf Produktionssysteme<br />
+<strong>Authentisierung:</strong> MFA (Multi-Factor Authentication)<br />
+<strong>Protokolle:</strong> SSH, RDP<br />
+<strong>Logging:</strong> Alle Zugriffe werden geloggt (SIEM)</p>
+<p><strong>Referenz:</strong> Dokument 0200/0210 (Zugriffssteuerung)</p>
+<h3 id="72-remote-admin">7.2 Remote Admin</h3>
+<p><strong>VPN-Gateway:</strong> [TODO: Hostname/IP]<br />
+<strong>Authentisierung:</strong> MFA (Multi-Factor Authentication)<br />
+<strong>Protokoll:</strong> IPsec/IKEv2 oder OpenVPN<br />
+<strong>Zugriff:</strong> Nur für autorisierte Administratoren<br />
+<strong>Logging:</strong> Alle VPN-Verbindungen werden geloggt</p>
+<p><strong>Referenz:</strong> Dokument 0470 (VPN und Admin-Zugänge)</p>
+<h3 id="73-break-glass-zugang">7.3 Break-Glass-Zugang</h3>
+<p><strong>Notfallzugang:</strong> [TODO: Beschreibung]<br />
+<strong>Aktivierung:</strong> Nur in Notfällen (dokumentiert)<br />
+<strong>Überwachung:</strong> Sofortige Benachrichtigung bei Nutzung</p>
+<p><strong>Referenz:</strong> BCM-Dokument (Notfallzugang)</p>
+<h2 id="8-netzwerk-monitoring">8. Netzwerk-Monitoring</h2>
+<p><strong>Monitoring-Tools:</strong>
+- <strong>SIEM:</strong> [TODO: z.B. Splunk, ELK]
+- <strong>Network Monitoring:</strong> [TODO: z.B. Nagios, Zabbix, PRTG]
+- <strong>Flow Analysis:</strong> [TODO: z.B. NetFlow, sFlow]</p>
+<p><strong>Überwachte Metriken:</strong>
+- Bandbreitennutzung
+- Firewall-Logs
+- Anomalien (z.B. Port-Scans, DDoS)
+- VPN-Verbindungen</p>
+<p><strong>Referenz:</strong> Dokument 0300/0310 (Logging und Monitoring)</p>
+<h2 id="9-netzwerk-diagramme">9. Netzwerk-Diagramme</h2>
+<p><strong>Verfügbare Diagramme:</strong>
+1. <strong>High-Level Netzplan:</strong> Übersicht über alle Zonen und Hauptverbindungen
+2. <strong>Detaillierter Netzplan:</strong> Alle Geräte, VLANs, IP-Adressen
+3. <strong>Firewall-Topologie:</strong> Alle Firewalls und Trust Boundaries
+4. <strong>WAN-Topologie:</strong> Standortvernetzung (falls zutreffend)
+5. <strong>Cloud-Integration:</strong> Verbindungen zu Cloud-Providern (AWS, Azure, etc.)</p>
+<p><strong>Ablageort:</strong> <code>diagrams/</code> oder [TODO: Confluence/SharePoint]</p>
+<h2 id="10-standortvernetzung-wan">10. Standortvernetzung (WAN)</h2>
+<p><strong>Falls zutreffend:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Standort</th>
+<th>Verbindungstyp</th>
+<th>Bandbreite</th>
+<th>Provider</th>
+<th>Backup-Verbindung</th>
+<th>Verschlüsselung</th>
+<th>Notiz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{{ netbox.site.name }}</td>
+<td>[TODO: z.B. MPLS, VPN]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="11-cloud-integration">11. Cloud-Integration</h2>
+<p><strong>Cloud-Provider:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Provider</th>
+<th>Service</th>
+<th>Verbindungstyp</th>
+<th>Verschlüsselung</th>
+<th>Region</th>
+<th>Notiz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AWS</td>
+<td>EC2, S3, RDS</td>
+<td>VPN (Site-to-Site)</td>
+<td>IPsec</td>
+<td>EU-West-1</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Azure</td>
+<td>[TODO]</td>
+<td>ExpressRoute</td>
+<td>[TODO]</td>
+<td>West Europe</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Referenz:</strong> Dokument 0400/0410 (Lieferanten und Cloud-Sicherheit)</p>
+<h2 id="12-verantwortlichkeiten-raci">12. Verantwortlichkeiten (RACI)</h2>
+<table>
+<thead>
+<tr>
+<th>Aktivität</th>
+<th>IT-Leitung</th>
+<th>Netzwerk-Admin</th>
+<th>ISB</th>
+<th>Firewall-Admin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Netzplan pflegen</td>
+<td>A</td>
+<td>R</td>
+<td>I</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Firewall-Regeln ändern</td>
+<td>A</td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+</tr>
+<tr>
+<td>VLAN-Konfiguration</td>
+<td>A</td>
+<td>R</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Netzwerk-Monitoring</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Jährlicher Review</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legende:</strong>
+- <strong>R</strong> = Responsible (Durchführungsverantwortung)
+- <strong>A</strong> = Accountable (Gesamtverantwortung)
+- <strong>C</strong> = Consulted (Konsultiert)
+- <strong>I</strong> = Informed (Informiert)</p>
+<h2 id="13-anderungsmanagement">13. Änderungsmanagement</h2>
+<p><strong>Änderungen an Netzwerkarchitektur:</strong>
+- Alle Änderungen erfordern Change-Ticket
+- Sicherheitsrelevante Änderungen erfordern ISB-Freigabe
+- Netzplan muss nach Änderungen aktualisiert werden</p>
+<p><strong>Referenz:</strong> Dokument 0380/0390 (Change Management)</p>
+<h2 id="14-freigabe">14. Freigabe</h2>
+<table>
+<thead>
+<tr>
+<th>Rolle</th>
+<th>Name</th>
+<th>Datum</th>
+<th>Freigabe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IT-Leitung</td>
+<td>Anna Schmidt</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+<tr>
+<td>ISB</td>
+<td>Thomas Weber</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Referenzen:</strong>
+- BSI IT-Grundschutz-Kompendium: NET.1.1 Netzarchitektur und -design
+- BSI IT-Grundschutz-Kompendium: NET.1.2 Netzmanagement
+- BSI IT-Grundschutz-Kompendium: NET.3.2 Firewall
+- Dokument 0050: Strukturanalyse
+- Dokument 0090: Risikoanalyse
+- Dokument 0460/0470: Netzwerksicherheit</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0720_Anhang_Datenfluesse_und_Schnittstellen_Template.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0740_Anhang_Begriffe_und_Abkuerzungen.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0200 - Policy: Acceptable Use of IT</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0200</div>
+            <h1>Policy: Acceptable Use of IT</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0160_ISMS_Continuous_Improvement.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0210_Guideline_Acceptable_Use_of_IT.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="policy-acceptable-use-of-it">Policy: Acceptable Use of IT</h1>
+<p><strong>Document ID:</strong> 0200<br />
+<strong>Document Type:</strong> Policy (Abstract)<br />
+<strong>Standard Reference:</strong> ISO/IEC 27001:2022 Annex A.5.10 (incl. Amendment 1:2024)<br />
+<strong>Owner:</strong> Thomas Weber<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Approved<br />
+<strong>Classification:</strong> Internal<br />
+<strong>Last Updated:</strong> {{ meta.document.date }}<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This policy defines the principles for acceptable use of IT resources at <strong>AdminSend GmbH</strong>. It ensures that IT systems, applications, and information are used exclusively for business purposes and in compliance with legal and regulatory requirements.</p>
+<h2 id="2-scope">2. Scope</h2>
+<p>This policy applies to:</p>
+<ul>
+<li><strong>Organizational Units:</strong> All departments and locations of AdminSend GmbH</li>
+<li><strong>Systems:</strong> All IT systems, networks, applications, email, internet, cloud services</li>
+<li><strong>Persons:</strong> All employees, contractors, temporary workers, interns, and third parties with access to IT resources</li>
+<li><strong>Devices:</strong> Company-owned and private devices (BYOD) accessing company resources</li>
+<li><strong>Locations:</strong> {{ netbox.site.name }} and all operational sites</li>
+</ul>
+<p><strong>Exceptions:</strong> Exceptions are only permitted through the defined exception process (<code>0640_Policy_Exceptions_and_Risk_Waivers.md</code>).</p>
+<h2 id="3-principles-policy-statements">3. Principles (Policy Statements)</h2>
+<h3 id="31-business-use">3.1 Business Use</h3>
+<p>IT resources of the organization are provided primarily for business purposes. Personal use is permitted only to the extent that it does not interfere with business use and complies with security policies.</p>
+<h3 id="32-responsible-use">3.2 Responsible Use</h3>
+<p>Users are required to use IT resources responsibly, efficiently, and in accordance with all applicable policies. Misuse, waste, or damage to IT resources is prohibited.</p>
+<h3 id="33-prohibited-activities">3.3 Prohibited Activities</h3>
+<p>The following activities are expressly prohibited:
+- Accessing, storing, or distributing illegal, offensive, or inappropriate content
+- Circumventing security controls or unauthorized access to systems
+- Installing unauthorized software or modifying system configurations
+- Using IT resources for commercial purposes outside business activities
+- Sending spam, phishing, or other malicious communications</p>
+<h3 id="34-privacy-and-confidentiality">3.4 Privacy and Confidentiality</h3>
+<p>Users must maintain the confidentiality of company information and must not share or publish confidential information without authorization.</p>
+<h3 id="35-monitoring-and-surveillance">3.5 Monitoring and Surveillance</h3>
+<p>The organization reserves the right to monitor the use of IT resources to ensure security, compliance, and proper use. Users have no expectation of privacy when using company resources.</p>
+<h3 id="36-personal-responsibility">3.6 Personal Responsibility</h3>
+<p>Users are personally responsible for all activities performed under their credentials. Credentials must not be shared.</p>
+<h2 id="4-roles-and-responsibilities">4. Roles and Responsibilities</h2>
+<h3 id="raci-matrix-acceptable-use-of-it">RACI Matrix: Acceptable Use of IT</h3>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>CISO</th>
+<th>IT Operations</th>
+<th>HR</th>
+<th>Employee</th>
+<th>Legal/Compliance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Policy creation</td>
+<td>R/A</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Policy communication</td>
+<td>R</td>
+<td>C</td>
+<td>R</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Training and awareness</td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+<td>R</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Monitoring and surveillance</td>
+<td>A</td>
+<td>R</td>
+<td>I</td>
+<td>I</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Investigate violations</td>
+<td>R</td>
+<td>C</td>
+<td>R</td>
+<td>I</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Enforce sanctions</td>
+<td>C</td>
+<td>I</td>
+<td>R/A</td>
+<td>I</td>
+<td>C</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legend:</strong> R = Responsible, A = Accountable, C = Consulted, I = Informed</p>
+<h3 id="key-roles">Key Roles</h3>
+<ul>
+<li><strong>Policy Owner:</strong> Thomas Weber (CISO)</li>
+<li><strong>Implementation Responsible:</strong> IT Operations, HR</li>
+<li><strong>Control/Audit Authority:</strong> ISMS, Internal Audit, Legal/Compliance</li>
+</ul>
+<h2 id="5-derivatives-guidelinesstandardsprocesses">5. Derivatives (Guidelines/Standards/Processes)</h2>
+<p>Implementation details are defined in subordinate documents:</p>
+<h3 id="related-guidelines">Related Guidelines</h3>
+<ul>
+<li><strong>0210_Guideline_Acceptable_Use_of_IT.md</strong> - Detailed implementation guideline</li>
+<li><code>0220_Policy_Access_Control_and_Identity_Management.md</code> - Access Control Policy</li>
+<li><code>0500_Policy_Mobile_Device_and_Remote_Work.md</code> - Mobile Device Policy</li>
+<li><code>0660_Policy_Information_Transfer_and_Communication.md</code> - Communication Policy</li>
+</ul>
+<h3 id="related-standardsbaselines">Related Standards/Baselines</h3>
+<ul>
+<li>Email usage guidelines</li>
+<li>Internet usage guidelines</li>
+<li>BYOD guidelines (Bring Your Own Device)</li>
+<li>Social media guidelines</li>
+</ul>
+<h3 id="related-processes">Related Processes</h3>
+<ul>
+<li>User onboarding/offboarding</li>
+<li>Incident response for policy violations</li>
+<li>HR disciplinary procedures</li>
+</ul>
+<h2 id="6-compliance-monitoring-and-enforcement">6. Compliance, Monitoring and Enforcement</h2>
+<h3 id="metrics-and-kpis">Metrics and KPIs</h3>
+<ul>
+<li>Number of policy violations per quarter</li>
+<li>Training participation rate (Target: 100% annually)</li>
+<li>Number of blocked inappropriate accesses</li>
+<li>Average time to investigate violations</li>
+<li>Repeat offender rate</li>
+</ul>
+<h3 id="evidence">Evidence</h3>
+<ul>
+<li>Training records and confirmations</li>
+<li>Monitoring logs and audit trails</li>
+<li>Incident reports for violations</li>
+<li>Disciplinary action documentation</li>
+<li>Awareness campaign metrics</li>
+</ul>
+<h3 id="consequences-for-violations">Consequences for Violations</h3>
+<p>Violations of this policy will be handled according to applicable HR and compliance processes:
+- <strong>Minor Violations:</strong> Warning, retraining, monitoring
+- <strong>Medium Violations:</strong> Written warning, temporary access restrictions
+- <strong>Severe Violations:</strong> Employment consequences up to termination, legal action
+- <strong>Intentional Violations:</strong> Immediate suspension, termination, criminal prosecution</p>
+<h2 id="7-exceptions">7. Exceptions</h2>
+<p>Exceptions to this policy are only permitted in justified cases:</p>
+<ul>
+<li><strong>Exception Process:</strong> See <code>0640_Policy_Exceptions_and_Risk_Waivers.md</code></li>
+<li><strong>Approval:</strong> Exceptions must be approved by CISO and, if applicable, HR</li>
+<li><strong>Documentation:</strong> All exceptions are documented and regularly reviewed</li>
+<li><strong>Time Limit:</strong> Exceptions are generally time-limited</li>
+</ul>
+<h2 id="8-references">8. References</h2>
+<h3 id="internal-documents">Internal Documents</h3>
+<ul>
+<li><code>0010_ISMS_Information_Security_Policy.md</code> - ISMS Policy</li>
+<li><code>0210_Guideline_Acceptable_Use_of_IT.md</code> - Detailed Guideline</li>
+<li><code>0400_Policy_Incident_Management.md</code> - Incident Management Policy</li>
+<li><code>0530_Guideline_HR_Onboarding_Role_Change_Offboarding.md</code> - HR Security Guideline</li>
+</ul>
+<h3 id="external-standards-and-requirements">External Standards and Requirements</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.10</strong> - Acceptable use of information and other associated assets</li>
+<li><strong>ISO/IEC 27002:2022</strong> - Information security controls</li>
+<li><strong>GDPR (EU 2016/679)</strong> - General Data Protection Regulation</li>
+<li>Employment law requirements for IT use</li>
+</ul>
+<hr />
+<p><strong>Approved by:</strong><br />
+{{ meta.management.ceo }}, Management<br />
+Date: {{ meta.document.approval_date }}</p>
+<p><strong>Next Review:</strong> {{ meta.document.next_review }} (annually or as needed)</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0160_ISMS_Continuous_Improvement.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0210_Guideline_Acceptable_Use_of_IT.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

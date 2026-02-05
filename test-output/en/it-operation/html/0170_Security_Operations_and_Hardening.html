@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0170 - Security Operations and Hardening</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0170</div>
+            <h1>Security Operations and Hardening</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0160_Disaster_Recovery_and_Business_Continuity.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0180_Patch_and_Update_Management.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="security-operations-and-hardening">Security Operations and Hardening</h1>
+<h2 id="purpose-and-scope">Purpose and Scope</h2>
+<p>This document describes the security operations processes and hardening guidelines for AdminSend GmbH. It defines security monitoring, incident response processes, vulnerability management, and compliance requirements to ensure information security.</p>
+<p><strong>Scope:</strong> All IT systems, networks, applications, and data of AdminSend GmbH</p>
+<p><strong>Responsible:</strong> Thomas Weber (thomas.weber@adminsend.de)</p>
+<h2 id="security-fundamentals">Security Fundamentals</h2>
+<h3 id="security-objectives-cia-triad">Security Objectives (CIA Triad)</h3>
+<p><strong>Confidentiality:</strong>
+- Protection against unauthorized access
+- Encryption of sensitive data
+- Access control and authentication
+- Data Loss Prevention (DLP)</p>
+<p><strong>Integrity:</strong>
+- Protection against unauthorized modification
+- Digital signatures
+- Checksums and hashing
+- Change management processes</p>
+<p><strong>Availability:</strong>
+- Protection against denial of service
+- Redundancy and high availability
+- Backup and disaster recovery
+- Capacity management</p>
+<h3 id="defense-in-depth-strategy">Defense-in-Depth Strategy</h3>
+<p><strong>Security Layers:</strong></p>
+<div class="codehilite"><pre><span></span><code>┌─────────────────────────────────────┐
+│  Perimeter Security                 │  Firewall, IDS/IPS, DDoS protection
+├─────────────────────────────────────┤
+│  Network Security                   │  Segmentation, VLANs, NAC
+├─────────────────────────────────────┤
+│  Host Security                      │  Hardening, antivirus, EDR
+├─────────────────────────────────────┤
+│  Application Security               │  WAF, input validation, SAST/DAST
+├─────────────────────────────────────┤
+│  Data Security                      │  Encryption, DLP, backup
+├─────────────────────────────────────┤
+│  Identity &amp; Access Management       │  MFA, RBAC, PAM
+└─────────────────────────────────────┘
+</code></pre></div>
+
+<h3 id="security-frameworks">Security Frameworks</h3>
+<p><strong>ISO 27001:2013:</strong>
+- Information Security Management System (ISMS)
+- 114 controls in 14 categories
+- Risk-based approach
+- Continuous improvement</p>
+<p><strong>BSI Grundschutz:</strong>
+- IT-Grundschutz Compendium
+- Building blocks for IT systems
+- Standard security measures
+- Basic and core protection</p>
+<p><strong>NIST Cybersecurity Framework:</strong>
+- Identify, Protect, Detect, Respond, Recover
+- Risk management approach
+- Cross-industry applicable</p>
+<p><strong>CIS Controls:</strong>
+- 18 critical security controls
+- Prioritized implementation
+- Measurable implementation</p>
+<h2 id="hardening-guidelines">Hardening Guidelines</h2>
+<h3 id="operating-system-hardening">Operating System Hardening</h3>
+<h4 id="linux-server-hardening">Linux Server Hardening</h4>
+<p><strong>Basic Hardening:</strong>
+- Minimal installation (only required packages)
+- Regular updates and patches
+- Disable unused services
+- Firewall configuration (iptables/nftables)
+- Enable SELinux or AppArmor</p>
+<p><strong>Users and Authentication:</strong>
+- Disable root login via SSH
+- SSH key-based authentication
+- Sudo instead of direct root access
+- Password policies (complexity, expiration)
+- Account lockout after failed attempts</p>
+<p><strong>Network Hardening:</strong>
+- Disable unnecessary network services
+- Configure TCP wrappers
+- Restrictive iptables rules
+- Disable IPv6 (if not required)</p>
+<p><strong>Logging and Monitoring:</strong>
+- Syslog server configuration
+- Enable audit daemon (auditd)
+- Configure log rotation
+- Central log collection</p>
+<p><strong>Reference:</strong> CIS Benchmark for Linux</p>
+<h4 id="windows-server-hardening">Windows Server Hardening</h4>
+<p><strong>Basic Hardening:</strong>
+- Automatic Windows updates
+- Disable unnecessary features
+- Enable Windows Firewall
+- Enable Windows Defender
+- BitLocker for disk encryption</p>
+<p><strong>Users and Authentication:</strong>
+- Rename local administrator accounts
+- Password policies via GPO
+- Account lockout policies
+- Privileged Access Management (PAM)
+- LAPS for local admin passwords</p>
+<p><strong>Network Hardening:</strong>
+- Disable SMBv1
+- Disable LLMNR and NetBIOS
+- Restrictive Windows Firewall rules
+- IPSec for server communication</p>
+<p><strong>Logging and Monitoring:</strong>
+- Configure Advanced Audit Policy
+- Enable PowerShell logging
+- Event log forwarding
+- Install Sysmon</p>
+<p><strong>Reference:</strong> CIS Benchmark for Windows Server, Microsoft Security Baseline</p>
+<h3 id="network-hardening">Network Hardening</h3>
+<h4 id="firewall-configuration">Firewall Configuration</h4>
+<p><strong>Principles:</strong>
+- Default deny (deny all, allow only required)
+- Least privilege (minimal permissions)
+- Segmentation (network zones)</p>
+<p><strong>Firewall Rules:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Destination</th>
+<th>Port</th>
+<th>Protocol</th>
+<th>Action</th>
+<th>Justification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Internet</td>
+<td>DMZ</td>
+<td>443</td>
+<td>TCP</td>
+<td>Allow</td>
+<td>HTTPS traffic</td>
+</tr>
+<tr>
+<td>DMZ</td>
+<td>Internal</td>
+<td>3306</td>
+<td>TCP</td>
+<td>Allow</td>
+<td>Database access</td>
+</tr>
+<tr>
+<td>Internal</td>
+<td>Internet</td>
+<td>80,443</td>
+<td>TCP</td>
+<td>Allow</td>
+<td>Web access</td>
+</tr>
+<tr>
+<td>Any</td>
+<td>Any</td>
+<td>Any</td>
+<td>Any</td>
+<td>Deny</td>
+<td>Default rule</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Firewall System:</strong> {{ netbox.firewall.system }}<br />
+<strong>Management:</strong> {{ netbox.firewall.management_url }}</p>
+<h4 id="network-segmentation">Network Segmentation</h4>
+<p><strong>Network Zones:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Zone</th>
+<th>VLAN</th>
+<th>Subnet</th>
+<th>Purpose</th>
+<th>Security Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DMZ</strong></td>
+<td>{{ netbox.vlan.dmz }}</td>
+<td>{{ netbox.subnet.dmz }}</td>
+<td>Public services</td>
+<td>High</td>
+</tr>
+<tr>
+<td><strong>Production</strong></td>
+<td>{{ netbox.vlan.production }}</td>
+<td>{{ netbox.subnet.production }}</td>
+<td>Production systems</td>
+<td>Very high</td>
+</tr>
+<tr>
+<td><strong>Management</strong></td>
+<td>{{ netbox.vlan.management }}</td>
+<td>{{ netbox.subnet.management }}</td>
+<td>Admin access</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td><strong>User</strong></td>
+<td>{{ netbox.vlan.user }}</td>
+<td>{{ netbox.subnet.user }}</td>
+<td>User network</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td><strong>Guest</strong></td>
+<td>{{ netbox.vlan.guest }}</td>
+<td>{{ netbox.subnet.guest }}</td>
+<td>Guest WLAN</td>
+<td>Low</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Segmentation Rules:</strong>
+- No direct communication between zones
+- Traffic via firewall/router
+- Micro-segmentation for critical systems
+- Zero-trust principle</p>
+<h4 id="vpn-hardening">VPN Hardening</h4>
+<p><strong>VPN Type:</strong> {{ meta.vpn_type }}<br />
+<strong>Encryption:</strong> AES-256<br />
+<strong>Authentication:</strong> Certificate-based + MFA</p>
+<p><strong>Hardening Measures:</strong>
+- Strong encryption algorithms
+- Perfect Forward Secrecy (PFS)
+- Certificate-based authentication
+- Multi-Factor Authentication (MFA)
+- Disable split tunneling
+- Inactivity timeout (15 min)</p>
+<h3 id="application-hardening">Application Hardening</h3>
+<h4 id="web-applications">Web Applications</h4>
+<p><strong>OWASP Top 10 Mitigations:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Risk</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Injection</strong></td>
+<td>Prepared statements, input validation</td>
+</tr>
+<tr>
+<td><strong>Broken Authentication</strong></td>
+<td>MFA, session management, password policies</td>
+</tr>
+<tr>
+<td><strong>Sensitive Data Exposure</strong></td>
+<td>Encryption at rest/transit, HTTPS</td>
+</tr>
+<tr>
+<td><strong>XML External Entities</strong></td>
+<td>Disable XML external entity processing</td>
+</tr>
+<tr>
+<td><strong>Broken Access Control</strong></td>
+<td>RBAC, least privilege</td>
+</tr>
+<tr>
+<td><strong>Security Misconfiguration</strong></td>
+<td>Hardening, security headers</td>
+</tr>
+<tr>
+<td><strong>XSS</strong></td>
+<td>Input validation, output encoding, CSP</td>
+</tr>
+<tr>
+<td><strong>Insecure Deserialization</strong></td>
+<td>Input validation, integrity checks</td>
+</tr>
+<tr>
+<td><strong>Using Components with Known Vulnerabilities</strong></td>
+<td>Dependency scanning, updates</td>
+</tr>
+<tr>
+<td><strong>Insufficient Logging</strong></td>
+<td>Security logging, monitoring</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Security Headers:</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="nt">Strict-Transport-Security</span><span class="o">:</span><span class="w"> </span><span class="nt">max-age</span><span class="o">=</span><span class="nt">31536000</span><span class="o">;</span><span class="w"> </span><span class="nt">includeSubDomains</span>
+<span class="nt">X-Frame-Options</span><span class="o">:</span><span class="w"> </span><span class="nt">DENY</span>
+<span class="nt">X-Content-Type-Options</span><span class="o">:</span><span class="w"> </span><span class="nt">nosniff</span>
+<span class="nt">Content-Security-Policy</span><span class="o">:</span><span class="w"> </span><span class="nt">default-src</span><span class="w"> </span><span class="s1">&#39;self&#39;</span>
+<span class="nt">X-XSS-Protection</span><span class="o">:</span><span class="w"> </span><span class="nt">1</span><span class="o">;</span><span class="w"> </span><span class="nt">mode</span><span class="o">=</span><span class="nt">block</span>
+<span class="nt">Referrer-Policy</span><span class="o">:</span><span class="w"> </span><span class="nt">no-referrer</span>
+</code></pre></div>
+
+<h4 id="database-hardening">Database Hardening</h4>
+<p><strong>MySQL/MariaDB:</strong>
+- Change root password
+- Remove anonymous users
+- Delete test database
+- Disable remote root login
+- Least privilege for application users
+- SSL/TLS for connections
+- Enable audit plugin</p>
+<p><strong>PostgreSQL:</strong>
+- Configure pg_hba.conf restrictively
+- Enforce SSL connections
+- Password encryption (SCRAM-SHA-256)
+- Enable audit logging
+- Least privilege permissions</p>
+<p><strong>Reference:</strong> CIS Benchmark for databases</p>
+<h3 id="cloud-hardening">Cloud Hardening</h3>
+<h4 id="aws-hardening">AWS Hardening</h4>
+<p><strong>IAM Best Practices:</strong>
+- Don't use root account
+- MFA for all users
+- Least privilege policies
+- Roles instead of users for services
+- Rotate access keys</p>
+<p><strong>Network Security:</strong>
+- Restrictive security groups
+- NACLs for additional control
+- Enable VPC Flow Logs
+- Private subnets for backend
+- VPN/Direct Connect for hybrid</p>
+<p><strong>Monitoring:</strong>
+- Enable CloudTrail
+- Enable GuardDuty
+- Config rules for compliance
+- CloudWatch alarms</p>
+<p><strong>Reference:</strong> CIS AWS Foundations Benchmark</p>
+<h4 id="azure-hardening">Azure Hardening</h4>
+<p><strong>Identity Management:</strong>
+- Azure AD with MFA
+- Conditional Access Policies
+- Privileged Identity Management (PIM)
+- Identity Protection</p>
+<p><strong>Network Security:</strong>
+- Network Security Groups (NSG)
+- Azure Firewall
+- DDoS Protection Standard
+- Private Endpoints</p>
+<p><strong>Monitoring:</strong>
+- Azure Security Center
+- Azure Sentinel
+- Activity Logs
+- Diagnostic Settings</p>
+<p><strong>Reference:</strong> CIS Microsoft Azure Foundations Benchmark</p>
+<h2 id="security-monitoring">Security Monitoring</h2>
+<h3 id="security-information-and-event-management-siem">Security Information and Event Management (SIEM)</h3>
+<p><strong>SIEM System:</strong> {{ meta.siem_system }}<br />
+<strong>Version:</strong> {{ meta.siem_version }}<br />
+<strong>Management:</strong> {{ meta.siem_url }}</p>
+<p><strong>Log Sources:</strong>
+- Firewalls and IDS/IPS
+- Servers (Windows, Linux)
+- Network devices (switches, routers)
+- Applications
+- Cloud services (AWS, Azure)
+- Endpoint security (EDR)
+- Identity management (AD, Azure AD)</p>
+<p><strong>Use Cases:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Use Case</th>
+<th>Description</th>
+<th>Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Failed Login Attempts</strong></td>
+<td>Multiple failed logins</td>
+<td>High</td>
+</tr>
+<tr>
+<td><strong>Privilege Escalation</strong></td>
+<td>Unexpected admin rights</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td><strong>Malware Detection</strong></td>
+<td>Antivirus/EDR alerts</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td><strong>Data Exfiltration</strong></td>
+<td>Unusual data transfers</td>
+<td>High</td>
+</tr>
+<tr>
+<td><strong>Lateral Movement</strong></td>
+<td>Unusual network connections</td>
+<td>High</td>
+</tr>
+<tr>
+<td><strong>Account Anomalies</strong></td>
+<td>Unusual account activities</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td><strong>Configuration Changes</strong></td>
+<td>Changes to critical systems</td>
+<td>Medium</td>
+</tr>
+</tbody>
+</table>
+<h3 id="intrusion-detectionprevention-idsips">Intrusion Detection/Prevention (IDS/IPS)</h3>
+<p><strong>IDS/IPS System:</strong> {{ netbox.ids.system }}<br />
+<strong>Deployment:</strong> Inline (IPS mode)<br />
+<strong>Location:</strong> {{ netbox.ids.location }}</p>
+<p><strong>Detection Methods:</strong>
+- <strong>Signature-based:</strong> Known attack patterns
+- <strong>Anomaly-based:</strong> Deviations from normal behavior
+- <strong>Heuristic-based:</strong> Suspicious behavior</p>
+<p><strong>Rule Sets:</strong>
+- Emerging Threats
+- Snort Community Rules
+- Custom rules for specific environment</p>
+<p><strong>Tuning:</strong>
+- False positive reduction
+- Rule prioritization
+- Whitelist for legitimate traffic</p>
+<h3 id="endpoint-detection-and-response-edr">Endpoint Detection and Response (EDR)</h3>
+<p><strong>EDR System:</strong> {{ meta.edr_system }}<br />
+<strong>Coverage:</strong> All workstations and servers</p>
+<p><strong>Features:</strong>
+- Real-time threat detection
+- Behavioral analysis
+- Automated response
+- Forensic capabilities
+- Threat hunting</p>
+<p><strong>Response Actions:</strong>
+- Generate alert
+- Terminate process
+- Block network connection
+- Isolate host
+- Collect forensic data</p>
+<h3 id="security-metrics">Security Metrics</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Target Value</th>
+<th>Measurement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Mean Time to Detect (MTTD)</strong></td>
+<td>&lt; 1 hour</td>
+<td>Average detection time</td>
+</tr>
+<tr>
+<td><strong>Mean Time to Respond (MTTR)</strong></td>
+<td>&lt; 4 hours</td>
+<td>Average response time</td>
+</tr>
+<tr>
+<td><strong>False Positive Rate</strong></td>
+<td>&lt; 5%</td>
+<td>False positives / Total alerts</td>
+</tr>
+<tr>
+<td><strong>Security Incidents</strong></td>
+<td>Decreasing trend</td>
+<td>Number of incidents per month</td>
+</tr>
+<tr>
+<td><strong>Patch Compliance</strong></td>
+<td>&gt; 95%</td>
+<td>Patched systems / Total systems</td>
+</tr>
+</tbody>
+</table>
+<h2 id="vulnerability-management">Vulnerability Management</h2>
+<h3 id="vulnerability-scanning">Vulnerability Scanning</h3>
+<p><strong>Scanning Tools:</strong>
+- <strong>Network Scanner:</strong> {{ meta.vulnerability_scanner }}
+- <strong>Web App Scanner:</strong> {{ meta.web_scanner }}
+- <strong>Container Scanner:</strong> {{ meta.container_scanner }}</p>
+<p><strong>Scan Frequency:</strong>
+- <strong>Critical Systems:</strong> Weekly
+- <strong>Production Systems:</strong> Monthly
+- <strong>Development Systems:</strong> Quarterly
+- <strong>Ad-hoc:</strong> After new vulnerabilities (zero-days)</p>
+<p><strong>Scan Types:</strong>
+- <strong>Authenticated Scans:</strong> With credentials (more detailed)
+- <strong>Unauthenticated Scans:</strong> Without credentials (attacker perspective)
+- <strong>Internal Scans:</strong> From internal network
+- <strong>External Scans:</strong> From internet</p>
+<h3 id="vulnerability-assessment">Vulnerability Assessment</h3>
+<p><strong>CVSS Score (Common Vulnerability Scoring System):</strong></p>
+<table>
+<thead>
+<tr>
+<th>CVSS Score</th>
+<th>Severity</th>
+<th>SLA for Remediation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>9.0 - 10.0</strong></td>
+<td>Critical</td>
+<td>7 days</td>
+</tr>
+<tr>
+<td><strong>7.0 - 8.9</strong></td>
+<td>High</td>
+<td>30 days</td>
+</tr>
+<tr>
+<td><strong>4.0 - 6.9</strong></td>
+<td>Medium</td>
+<td>90 days</td>
+</tr>
+<tr>
+<td><strong>0.1 - 3.9</strong></td>
+<td>Low</td>
+<td>180 days</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Prioritization Factors:</strong>
+- CVSS score
+- Exploit availability
+- Asset criticality
+- Exposure (internet-facing)
+- Data sensitivity</p>
+<h3 id="remediation-process">Remediation Process</h3>
+<div class="codehilite"><pre><span></span><code>┌─────────────────┐
+│ Vulnerability   │
+│ Identified      │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Risk            │
+│ Assessment      │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Remediation     │
+│ Planning        │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Patch/Fix       │
+│ Implementation  │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│ Verification    │
+│ &amp; Closure       │
+└─────────────────┘
+</code></pre></div>
+
+<p><strong>Remediation Options:</strong>
+- <strong>Patching:</strong> Install software updates
+- <strong>Configuration Change:</strong> Secure configuration
+- <strong>Workaround:</strong> Temporary mitigation
+- <strong>Compensating Control:</strong> Alternative security measure
+- <strong>Accept Risk:</strong> Accept risk (with management approval)</p>
+<h3 id="penetration-testing">Penetration Testing</h3>
+<p><strong>Test Frequency:</strong> Annually + after major changes</p>
+<p><strong>Test Types:</strong>
+- <strong>Black-Box:</strong> No prior knowledge
+- <strong>Gray-Box:</strong> Partial information
+- <strong>White-Box:</strong> Complete information</p>
+<p><strong>Test Scope:</strong>
+- External infrastructure (internet-facing)
+- Internal network segments
+- Web applications
+- Mobile apps
+- Social engineering</p>
+<p><strong>Penetration Test Provider:</strong> {{ meta.pentest_provider }}</p>
+<h2 id="security-incident-response">Security Incident Response</h2>
+<h3 id="incident-categories">Incident Categories</h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Examples</th>
+<th>Severity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Malware</strong></td>
+<td>Virus, ransomware, trojan</td>
+<td>High - Critical</td>
+</tr>
+<tr>
+<td><strong>Unauthorized Access</strong></td>
+<td>Compromised accounts, brute force</td>
+<td>High</td>
+</tr>
+<tr>
+<td><strong>Data Breach</strong></td>
+<td>Data exfiltration, data leak</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td><strong>DDoS</strong></td>
+<td>Denial-of-service attacks</td>
+<td>High</td>
+</tr>
+<tr>
+<td><strong>Phishing</strong></td>
+<td>Phishing emails, social engineering</td>
+<td>Medium - High</td>
+</tr>
+<tr>
+<td><strong>Insider Threat</strong></td>
+<td>Malicious insider activities</td>
+<td>High - Critical</td>
+</tr>
+<tr>
+<td><strong>Policy Violation</strong></td>
+<td>Security policy violations</td>
+<td>Low - Medium</td>
+</tr>
+</tbody>
+</table>
+<h3 id="incident-response-process">Incident Response Process</h3>
+<h4 id="1-preparation">1. Preparation</h4>
+<p><strong>Preparation Activities:</strong>
+- Define incident response team
+- Create incident response plan
+- Provide tools and resources
+- Conduct training and exercises
+- Maintain contact lists</p>
+<p><strong>IR Team:</strong>
+- <strong>IR Manager:</strong> Thomas Weber
+- <strong>Technical Lead:</strong> Andreas Huemmer
+- <strong>Forensic Analyst:</strong> [Name]
+- <strong>Communication Lead:</strong> [Name]
+- <strong>Legal Counsel:</strong> [Name]</p>
+<h4 id="2-detection-analysis">2. Detection &amp; Analysis</h4>
+<p><strong>Detection Sources:</strong>
+- SIEM alerts
+- IDS/IPS alerts
+- EDR alerts
+- User reports
+- Threat intelligence</p>
+<p><strong>Analysis Activities:</strong>
+- Alert validation (true/false positive)
+- Scope determination (affected systems)
+- Impact assessment
+- Incident classification
+- Incident prioritization</p>
+<p><strong>Incident Ticket:</strong> {{ meta.ticketing_system }}</p>
+<h4 id="3-containment">3. Containment</h4>
+<p><strong>Short-term Containment:</strong>
+- Isolate affected systems
+- Block network connections
+- Disable compromised accounts
+- Stop malware spread</p>
+<p><strong>Long-term Containment:</strong>
+- Implement temporary fixes
+- Move systems to isolated environment
+- Increase monitoring</p>
+<h4 id="4-eradication">4. Eradication</h4>
+<p><strong>Eradication Activities:</strong>
+- Remove malware
+- Close backdoors
+- Delete compromised accounts
+- Patch vulnerabilities
+- Rebuild systems (if required)</p>
+<h4 id="5-recovery">5. Recovery</h4>
+<p><strong>Recovery Activities:</strong>
+- Restore systems from clean backups
+- Reset passwords
+- Harden systems
+- Enable monitoring
+- Gradually return to production</p>
+<p><strong>Validation:</strong>
+- No malware traces
+- No backdoors
+- Normal functionality
+- Acceptable performance</p>
+<h4 id="6-post-incident-activity">6. Post-Incident Activity</h4>
+<p><strong>Lessons Learned Meeting:</strong>
+- What happened?
+- How was it detected?
+- What went well?
+- What went wrong?
+- Improvement measures</p>
+<p><strong>Documentation:</strong>
+- Create incident report
+- Document timeline
+- Collect IOCs (Indicators of Compromise)
+- Record costs</p>
+<p><strong>Follow-up:</strong>
+- Implement improvement measures
+- Update policies
+- Conduct training
+- Share threat intelligence</p>
+<h3 id="incident-response-playbooks">Incident Response Playbooks</h3>
+<p><strong>Ransomware Playbook:</strong>
+1. Immediately isolate affected systems
+2. No ransom payment (policy)
+3. Conduct forensic analysis
+4. Inform law enforcement
+5. Restore from backups
+6. Patch vulnerabilities</p>
+<p><strong>Data Breach Playbook:</strong>
+1. Determine scope (which data, how many affected)
+2. Stop exfiltration
+3. Forensic analysis
+4. Involve legal team
+5. Check reporting obligations (GDPR: 72h)
+6. Inform affected parties
+7. Report to supervisory authority</p>
+<p><strong>Phishing Playbook:</strong>
+1. Identify phishing email
+2. Update email filter
+3. Identify affected users
+4. Reset passwords (if credentials entered)
+5. Conduct awareness training</p>
+<h2 id="compliance-and-regulation">Compliance and Regulation</h2>
+<h3 id="iso-270012013">ISO 27001:2013</h3>
+<p><strong>Implementation Status:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Annex A Control</th>
+<th>Title</th>
+<th>Status</th>
+<th>Responsible</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A.9</strong></td>
+<td>Access Control</td>
+<td>Implemented</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td><strong>A.10</strong></td>
+<td>Cryptography</td>
+<td>Implemented</td>
+<td>IT Security</td>
+</tr>
+<tr>
+<td><strong>A.12</strong></td>
+<td>Operations Security</td>
+<td>Implemented</td>
+<td>IT Operations</td>
+</tr>
+<tr>
+<td><strong>A.13</strong></td>
+<td>Communications Security</td>
+<td>Implemented</td>
+<td>Network Team</td>
+</tr>
+<tr>
+<td><strong>A.14</strong></td>
+<td>System Acquisition</td>
+<td>Partial</td>
+<td>IT Management</td>
+</tr>
+<tr>
+<td><strong>A.16</strong></td>
+<td>Incident Management</td>
+<td>Implemented</td>
+<td>IR Team</td>
+</tr>
+<tr>
+<td><strong>A.17</strong></td>
+<td>Business Continuity</td>
+<td>Implemented</td>
+<td>BC Manager</td>
+</tr>
+<tr>
+<td><strong>A.18</strong></td>
+<td>Compliance</td>
+<td>Implemented</td>
+<td>Compliance Officer</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Audit Frequency:</strong> Annually (external), Quarterly (internal)</p>
+<p><strong>Next Audit:</strong> {{ meta.next_iso_audit }}</p>
+<h3 id="bsi-grundschutz">BSI Grundschutz</h3>
+<p><strong>Basic Protection:</strong>
+- All basic protection building blocks implemented
+- Standard security measures implemented
+- Documentation complete</p>
+<p><strong>Core Protection:</strong>
+- Critical building blocks identified
+- Enhanced security measures implemented
+- Regular reviews</p>
+<p><strong>Certification:</strong> [Planned/In Progress/Certified]</p>
+<h3 id="gdpr">GDPR</h3>
+<p><strong>Technical and Organizational Measures (TOMs):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Measure</th>
+<th>Implementation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Encryption</strong></td>
+<td>AES-256 at rest, TLS 1.3 in transit</td>
+</tr>
+<tr>
+<td><strong>Pseudonymization</strong></td>
+<td>Implemented where possible</td>
+</tr>
+<tr>
+<td><strong>Access Control</strong></td>
+<td>RBAC, MFA, PAM</td>
+</tr>
+<tr>
+<td><strong>Logging</strong></td>
+<td>Central log collection, SIEM</td>
+</tr>
+<tr>
+<td><strong>Backup</strong></td>
+<td>3-2-1 rule, encrypted</td>
+</tr>
+<tr>
+<td><strong>Incident Response</strong></td>
+<td>IR plan, 72h reporting obligation</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Data Protection Impact Assessment (DPIA):</strong>
+- Conducted for high-risk processing
+- Documented and approved</p>
+<p><strong>Data Protection Officer:</strong> {{ meta.data_protection_officer }}</p>
+<h3 id="other-standards">Other Standards</h3>
+<p><strong>PCI-DSS:</strong> [If applicable]<br />
+<strong>HIPAA:</strong> [If applicable]<br />
+<strong>SOX:</strong> [If applicable]</p>
+<h2 id="security-awareness-and-training">Security Awareness and Training</h2>
+<h3 id="awareness-program">Awareness Program</h3>
+<p><strong>Target Audience:</strong> All employees</p>
+<p><strong>Training Topics:</strong>
+- Password security
+- Phishing recognition
+- Social engineering
+- Secure use of IT systems
+- Data classification
+- Incident reporting
+- GDPR basics</p>
+<p><strong>Training Frequency:</strong>
+- Onboarding: Immediate
+- Refresher: Annually
+- Phishing simulations: Quarterly</p>
+<p><strong>Phishing Simulations:</strong>
+- Quarterly campaigns
+- Various phishing types
+- Immediate feedback
+- Additional training on click</p>
+<h3 id="security-champions">Security Champions</h3>
+<p><strong>Concept:</strong> Security contact persons in each department</p>
+<p><strong>Tasks:</strong>
+- Promote security awareness
+- Answer security questions
+- Report security incidents
+- Spread best practices</p>
+<p><strong>Training:</strong> Extended security training</p>
+<h2 id="roles-and-responsibilities">Roles and Responsibilities</h2>
+<h3 id="chief-information-security-officer-ciso">Chief Information Security Officer (CISO)</h3>
+<p><strong>Responsibilities:</strong>
+- Security strategy ownership
+- Risk management
+- Compliance assurance
+- Incident response coordination
+- Security budget</p>
+<p><strong>Person:</strong> Thomas Weber</p>
+<h3 id="security-operations-team">Security Operations Team</h3>
+<p><strong>Responsibilities:</strong>
+- SIEM monitoring
+- Incident response
+- Vulnerability management
+- Security tool management</p>
+<p><strong>Team Size:</strong> [Number]</p>
+<h3 id="it-operations-team">IT Operations Team</h3>
+<p><strong>Responsibilities:</strong>
+- System hardening
+- Patch management
+- Security configuration
+- Backup security</p>
+<p><strong>Lead:</strong> Andreas Huemmer</p>
+<h2 id="metrics-and-reporting">Metrics and Reporting</h2>
+<h3 id="security-metrics_1">Security Metrics</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Target Value</th>
+<th>Frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Security Incidents</strong></td>
+<td>Decreasing trend</td>
+<td>Monthly</td>
+</tr>
+<tr>
+<td><strong>MTTD</strong></td>
+<td>&lt; 1 hour</td>
+<td>Monthly</td>
+</tr>
+<tr>
+<td><strong>MTTR</strong></td>
+<td>&lt; 4 hours</td>
+<td>Monthly</td>
+</tr>
+<tr>
+<td><strong>Patch Compliance</strong></td>
+<td>&gt; 95%</td>
+<td>Weekly</td>
+</tr>
+<tr>
+<td><strong>Vulnerability Remediation</strong></td>
+<td>&gt; 90% in SLA</td>
+<td>Monthly</td>
+</tr>
+<tr>
+<td><strong>Phishing Click Rate</strong></td>
+<td>&lt; 5%</td>
+<td>Quarterly</td>
+</tr>
+<tr>
+<td><strong>Security Training Completion</strong></td>
+<td>100%</td>
+<td>Annually</td>
+</tr>
+</tbody>
+</table>
+<h3 id="reporting">Reporting</h3>
+<p><strong>Weekly Security Dashboard:</strong>
+- New security incidents
+- Open vulnerabilities
+- Patch status
+- SIEM alert statistics</p>
+<p><strong>Monthly Security Report:</strong>
+- Security metrics
+- Incident summary
+- Vulnerability trends
+- Compliance status</p>
+<p><strong>Quarterly Management Report:</strong>
+- Security posture assessment
+- Risk assessment
+- Compliance status
+- Budget and resources
+- Strategic recommendations</p>
+<h2 id="references">References</h2>
+<ul>
+<li>ISO/IEC 27001:2013 - Information Security Management</li>
+<li>BSI IT-Grundschutz Compendium</li>
+<li>NIST Cybersecurity Framework</li>
+<li>CIS Controls v8</li>
+<li>OWASP Top 10</li>
+<li>SANS Top 25 Software Errors</li>
+<li>MITRE ATT&amp;CK Framework</li>
+<li>GDPR</li>
+</ul>
+<hr />
+<p><strong>Document Owner:</strong> IT Operations Manager<br />
+<strong>Approved by:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Classification:</strong> internal<br />
+<strong>Last Updated:</strong> {{ meta.date }}</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0160_Disaster_Recovery_and_Business_Continuity.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0180_Patch_and_Update_Management.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -3,6 +3,7 @@
 <div align="center">
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
+[![Version](https://img.shields.io/badge/version-0.0.3-blue.svg)](VERSION.md)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Code Coverage](https://img.shields.io/badge/coverage-86%25-brightgreen.svg)](htmlcov/index.html)
 [![Tests](https://img.shields.io/badge/tests-450%20passed-success.svg)](tests/)
@@ -22,7 +23,9 @@ A Python tool for generating professional handbooks from Markdown templates with
 
 ## Overview
 
-The Handbook Generator creates professional handbooks in various formats (Markdown, PDF) from structured Markdown templates. The system replaces placeholders in templates with real data from external systems like NetBox and supports multilingual handbooks.
+The Handbook Generator creates professional handbooks in various formats (HTML, PDF, Markdown) from structured Markdown templates. The system replaces placeholders in templates with real data from external systems like NetBox and supports multilingual handbooks.
+
+**Version 0.0.3** - Complete handbook generation with PDF support
 
 ## Features
 
@@ -30,13 +33,16 @@ The Handbook Generator creates professional handbooks in various formats (Markdo
 - 📚 **Four Handbook Types** - BCM, ISMS, BSI Grundschutz, IT-Operations
 - 🔄 **Placeholder Replacement** - Automatic data integration from external sources (NetBox, Metadata)
 - 🌍 **Multilingual Support** - German and English with identical structure
-- 📄 **Multi-Format Output** - Markdown and PDF (WeasyPrint)
+- 📄 **Multi-Format Output** - HTML, PDF (Pandoc + XeLaTeX), Markdown
+- 🎨 **HTML Mini-Websites** - Professional HTML output with navigation and styling
+- 📑 **PDF with Table of Contents** - Professional PDFs with TOC and page numbering
 - 💬 **HTML Comment Support** - Non-rendered documentation for template authors
 - ⚙️ **Configurable Data Sources** - Flexible integration of external systems
 - 🔍 **Verbose Logging** - Detailed debugging and error analysis
 - ✅ **Comprehensively Tested** - 86% Code Coverage, 450+ Tests (Unit & Property-Based)
 - 📋 **Framework Compliance** - ISO 22301, ISO 27001:2022, BSI Standards, ITIL v4
 - 📦 **186 Templates** - Professional, standards-compliant templates
+- 🚀 **Batch Generation** - Automatic generation of all handbooks
 
 ## Handbook Types
 
@@ -47,12 +53,27 @@ The Handbook Generator creates professional handbooks in various formats (Markdo
 | **BSI Grundschutz** | BSI 200-1/2/3 | 54 | IT-Grundschutz according to BSI |
 | **IT-Operation** | ITIL v4, ISO 20000-1 | 31 | IT Operations Handbook |
 
+## New in Version 0.0.3 🎉
+
+- ✅ **Complete PDF Generation** - All 8 handbooks available as PDF (3.4 MB)
+- ✅ **Pandoc + XeLaTeX Integration** - Professional PDF generation with TOC
+- ✅ **Batch Generation** - Automatic generation of all handbooks
+- ✅ **784 Files Generated** - 388 HTML + 8 PDF + 388 Markdown
+- ✅ **Helper Scripts** - Automated generation scripts in `helpers/`
+- ✅ **Separate Directories** - Each handbook in its own directory
+- ✅ **Production Ready** - All formats ready for use
+
+**Generated Handbooks:**
+- 🇩🇪 German: BCM, ISMS, BSI Grundschutz, IT-Operation (HTML + PDF)
+- 🇬🇧 English: BCM, ISMS, BSI Grundschutz, IT-Operation (HTML + PDF)
+
 ## Installation
 
 ### Prerequisites
 
 - Python 3.8 or higher (recommended: Python 3.11+)
 - pip (Python Package Manager)
+- Pandoc + XeLaTeX (for PDF generation)
 
 ### Setup
 
@@ -74,6 +95,47 @@ venv\Scripts\activate  # Windows
 ```bash
 pip install -r requirements.txt
 ```
+
+4. Enable PDF generation (recommended):
+```bash
+# For PDF generation with Pandoc + XeLaTeX (recommended)
+sudo apt-get install pandoc texlive-xetex
+
+# Or for WeasyPrint (experimental, not recommended)
+sudo apt-get install libpango-1.0-0 libpangocairo-1.0-0
+```
+
+## Quick Start
+
+### Generate Single Handbook
+
+```bash
+# Generate HTML handbook
+./handbook-generator -l en -t bcm -o html --test
+
+# Generate PDF handbook (requires Pandoc + XeLaTeX)
+./handbook-generator -l en -t isms -o pdf --test --pdf-toc
+
+# Generate all formats
+./handbook-generator -l en -t bcm -o all --test --separate-files --pdf-toc
+```
+
+### Generate All Handbooks (Batch)
+
+```bash
+# Generate all HTML handbooks (8 handbooks)
+bash helpers/generate_all_handbooks.sh
+
+# Generate all PDF handbooks (8 PDFs)
+bash helpers/generate_pdfs_pandoc.sh
+```
+
+**Result:**
+- 8 handbooks (4 types × 2 languages)
+- 388 HTML files
+- 8 PDF files (3.4 MB)
+- 388 Markdown files
+- Total: 784 files
 
 ## Usage
 
@@ -135,24 +197,26 @@ The system displays available languages and handbook types and asks for your sel
 
 #### Command Line Parameters
 
+**Important:** Since version 2.0, the `--test` flag is required to generate outputs. This prevents accidental file overwrites.
+
 ```bash
-# Generate IT-Operations handbook in English
-python -m src.cli --language en --template it-operation
+# Generate IT-Operations handbook in English (test mode required)
+python -m src.cli --language en --template it-operation --test
 
 # Generate BCM handbook in German
-python -m src.cli --language de --template bcm
+python -m src.cli --language de --template bcm --test
 
 # Generate ISMS handbook in English, PDF only
-python -m src.cli --language en --template isms --output pdf
+python -m src.cli --language en --template isms --output pdf --test
 
 # Generate BSI Grundschutz handbook in German
-python -m src.cli --language de --template bsi-grundschutz
+python -m src.cli --language de --template bsi-grundschutz --test
 
 # Generate BCM handbook with verbose logging
-python -m src.cli --language en --template bcm --verbose
+python -m src.cli --language en --template bcm --verbose --test
 
 # Use custom configuration file
-python -m src.cli --config /path/to/config.yaml --language en --template it-operation
+python -m src.cli --config /path/to/config.yaml --language en --template it-operation --test
 ```
 
 #### Available Parameters
@@ -160,8 +224,72 @@ python -m src.cli --config /path/to/config.yaml --language en --template it-oper
 - `--language, -l`: Select language (`de`, `en`)
 - `--template, -t`: Select handbook type (`bcm`, `isms`, `bsi-grundschutz`, `it-operation`)
 - `--output, -o`: Output format (`markdown`, `pdf`, `both`) [Default: `both`]
+- `--test`: Enable test mode (required for output generation)
 - `--verbose, -v`: Enable verbose logging
 - `--config, -c`: Path to configuration file [Default: `config.yaml`]
+
+#### Test Mode and Output Structure
+
+**Since version 2.0**, the generator uses a consolidated output structure and requires the `--test` flag for safety.
+
+**Since version 2.1**, each handbook is stored in a separate directory:
+
+**New Output Structure (Version 2.1+):**
+```
+test-output/
+├── de/                          # German outputs
+│   ├── bcm/                     # BCM handbook
+│   │   ├── markdown/            # Separate markdown files
+│   │   │   ├── TOC.md          # Table of contents with links
+│   │   │   ├── 0010_Zweck_und_Geltungsbereich.md
+│   │   │   ├── 0020_BCM_Leitlinie_Policy.md
+│   │   │   └── ...
+│   │   ├── pdf/                 # PDF outputs
+│   │   │   └── bcm_handbook.pdf
+│   │   └── html/                # HTML mini-website
+│   │       ├── index.html
+│   │       └── ...
+│   ├── isms/                    # ISMS handbook
+│   │   ├── markdown/
+│   │   ├── pdf/
+│   │   └── html/
+│   ├── bsi-grundschutz/         # BSI Grundschutz handbook
+│   │   ├── markdown/
+│   │   ├── pdf/
+│   │   └── html/
+│   └── it-operation/            # IT-Operations handbook
+│       ├── markdown/
+│       ├── pdf/
+│       └── html/
+└── en/                          # English outputs
+    ├── bcm/
+    ├── isms/
+    ├── bsi-grundschutz/
+    └── it-operation/
+```
+
+**Advantages of new structure:**
+- ✅ Each handbook has its own directory
+- ✅ No file conflicts between different handbook types
+- ✅ Easier navigation and organization
+- ✅ Parallel generation of multiple handbooks possible
+- ✅ Each handbook is self-contained and complete
+
+**Why Test Mode?**
+- **Safety**: Prevents accidental overwriting of production files
+- **Consolidation**: All outputs in one place instead of scattered across `Handbook/` and `PDF_Output/`
+- **Clarity**: Explicit activation makes output generation intentional
+
+**Migration from Old Structure:**
+- Old structure: `Handbook/{language}/{type}/` and `PDF_Output/{language}/{type}/`
+- New structure: `test-output/{language}/{type}/{format}/`
+- Files are named by template type (e.g., `bcm_handbook.pdf`)
+
+**Without --test Flag:**
+```bash
+$ python -m src.cli --language en --template bcm
+ERROR: Output generation requires --test flag. Use --test to enable test mode output.
+```
 
 #### Handbook Types
 
@@ -278,28 +406,69 @@ Your content here...
 
 ### Output
 
-Generated handbooks are saved in the `Handbook/` directory:
+Generated handbooks are saved in the `test-output/` directory:
 
 ```
-Handbook/
+test-output/
 ├── de/
 │   ├── bcm/
-│   │   ├── bcm_handbook_de.md
-│   │   └── bcm_handbook_de.pdf
+│   │   ├── markdown/
+│   │   ├── pdf/
+│   │   │   └── bcm_handbook_de.pdf
+│   │   └── html/
 │   ├── isms/
-│   │   ├── isms_handbook_de.md
-│   │   └── isms_handbook_de.pdf
+│   │   ├── markdown/
+│   │   ├── pdf/
+│   │   │   └── isms_handbook_de.pdf
+│   │   └── html/
 │   ├── bsi-grundschutz/
-│   │   ├── bsi-grundschutz_handbook_de.md
-│   │   └── bsi-grundschutz_handbook_de.pdf
+│   │   ├── markdown/
+│   │   ├── pdf/
+│   │   │   └── bsi-grundschutz_handbook_de.pdf
+│   │   └── html/
 │   └── it-operation/
-│       ├── it-operation_handbook_de.md
-│       └── it-operation_handbook_de.pdf
+│       ├── markdown/
+│       ├── pdf/
+│       │   └── it-operation_handbook_de.pdf
+│       └── html/
 └── en/
     ├── bcm/
     ├── isms/
     ├── bsi-grundschutz/
     └── it-operation/
+```
+
+### Viewing Generated Handbooks
+
+After generation, you can view the handbooks as follows:
+
+**HTML Handbooks:**
+```bash
+# Open in browser
+firefox test-output/en/bcm/html/index.html
+
+# Or start local web server
+cd test-output
+python3 -m http.server 8000
+# Then open: http://localhost:8000/
+```
+
+**PDF Handbooks:**
+```bash
+# Open PDF
+evince test-output/en/isms/pdf/isms_handbook_en.pdf
+
+# List all PDFs
+ls test-output/*/*/pdf/*.pdf
+```
+
+**Markdown Files:**
+```bash
+# View individual markdown files
+cat test-output/en/bcm/markdown/0010_Purpose_and_Scope.md
+
+# View table of contents
+cat test-output/en/bcm/markdown/TOC.md
 ```
 
 ## Project Structure
@@ -345,6 +514,7 @@ Handbook-Generator/
 
 Comprehensive documentation can be found in the `docs/` directory:
 
+- **[OUTPUT_FORMATS_GUIDE.md](docs/OUTPUT_FORMATS_GUIDE.md)** - Detailed guide to all output formats (Separate Markdown, PDF with TOC, HTML)
 - **[FRAMEWORK_MAPPING.md](docs/FRAMEWORK_MAPPING.md)** - Framework compliance mappings (ISO 22301, ISO 27001, BSI, ITIL)
 - **[MIGRATION_GUIDE.md](docs/MIGRATION_GUIDE.md)** - Migration guide for existing users
 - **[PDF_GENERATION_GUIDE.md](docs/PDF_GENERATION_GUIDE.md)** - Detailed guide for PDF generation
@@ -362,10 +532,25 @@ Each template directory contains a `README.md` with:
 
 ### Helper Scripts
 
-The `helpers/` directory contains optional utility scripts:
-- PDF generation with various backends (WeasyPrint, Pandoc, ReportLab)
-- Framework section insertion
-- See [helpers/README.md](helpers/README.md) for details
+The `helpers/` directory contains batch generation scripts:
+
+**generate_all_handbooks.sh** - Generates all HTML handbooks automatically
+```bash
+bash helpers/generate_all_handbooks.sh
+```
+- Generates 8 handbooks (4 types × 2 languages)
+- 388 HTML files
+- Automatic progress tracking
+
+**generate_pdfs_pandoc.sh** - Generates all PDF handbooks automatically
+```bash
+bash helpers/generate_pdfs_pandoc.sh
+```
+- Generates 8 PDFs (4 types × 2 languages)
+- 3.4 MB total size
+- Professional formatting with TOC
+
+More details: [helpers/README.md](helpers/README.md)
 
 ## Development
 

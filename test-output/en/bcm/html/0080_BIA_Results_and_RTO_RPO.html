@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0080 - BIA – Results and Target Values (RTO/RPO)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0080</div>
+            <h1>BIA – Results and Target Values (RTO/RPO)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0070_BIA_Methodology.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0090_Risk_Analysis_and_Scenarios.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="bia-results-and-target-values-rtorpo">BIA – Results and Target Values (RTO/RPO)</h1>
+<p><strong>Document ID:</strong> BCM-0080<br />
+<strong>Organization:</strong> AdminSend GmbH<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Approved by:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Draft / In Review / Approved<br />
+<strong>Classification:</strong> Confidential<br />
+<strong>Last Updated:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-summary">1. Summary</h2>
+<h3 id="11-top-critical-processes-and-services">1.1 Top-Critical Processes and Services</h3>
+<p>The following processes have been identified as business-critical (RTO &lt; 24 hours):</p>
+<p>[TODO: List the top-critical processes]</p>
+<p><strong>Examples:</strong>
+1. <strong>Order Processing</strong> - RTO: 4 hours, RPO: 15 minutes
+2. <strong>Customer Service (24/7)</strong> - RTO: 2 hours, RPO: 1 hour
+3. <strong>Production Control</strong> - RTO: 8 hours, RPO: 30 minutes
+4. <strong>Payment Transactions</strong> - RTO: 4 hours, RPO: 15 minutes
+5. <strong>Email and Communication</strong> - RTO: 4 hours, RPO: 1 hour</p>
+<h3 id="12-key-findings">1.2 Key Findings</h3>
+<p>[TODO: Document the most important findings from the BIA]</p>
+<p><strong>Example Findings:</strong>
+- <strong>Single Points of Failure:</strong> ERP system has no redundancy, critical dependency
+- <strong>Personnel Dependencies:</strong> Key persons in production without adequate backup
+- <strong>Supplier Risks:</strong> Critical supplier has no own BCM
+- <strong>IT Infrastructure:</strong> Network infrastructure partially not redundantly designed</p>
+<h2 id="2-bia-results-table">2. BIA Results Table</h2>
+<h3 id="21-business-critical-processes-criticality-high">2.1 Business-Critical Processes (Criticality: HIGH)</h3>
+<table>
+<thead>
+<tr>
+<th>Service/Process</th>
+<th>MTPD/MAO</th>
+<th>RTO</th>
+<th>RPO</th>
+<th>Manual Workarounds Possible?</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Process 1]</td>
+<td>[TODO: 24h]</td>
+<td>[TODO: 4h]</td>
+<td>[TODO: 15min]</td>
+<td>Yes/No/Partially</td>
+<td>[TODO: Remarks]</td>
+</tr>
+<tr>
+<td>[TODO: Process 2]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Yes/No/Partially</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example:</strong>
+| Service/Process | MTPD/MAO | RTO | RPO | Manual Workarounds Possible? | Remarks |
+|-----------------|----------|-----|-----|------------------------------|---------|
+| Order Processing | 24h | 4h | 15min | Partially (Excel lists) | ERP system critical |
+| Customer Service | 8h | 2h | 1h | Yes (phone, email) | CRM system helpful but not mandatory |
+| Production Control | 48h | 8h | 30min | No | Fully automated, no manual alternative |</p>
+<h3 id="22-important-processes-criticality-medium">2.2 Important Processes (Criticality: MEDIUM)</h3>
+<table>
+<thead>
+<tr>
+<th>Service/Process</th>
+<th>MTPD/MAO</th>
+<th>RTO</th>
+<th>RPO</th>
+<th>Manual Workarounds Possible?</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Process 1]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Yes/No/Partially</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-supporting-processes-criticality-low">2.3 Supporting Processes (Criticality: LOW)</h3>
+<table>
+<thead>
+<tr>
+<th>Service/Process</th>
+<th>MTPD/MAO</th>
+<th>RTO</th>
+<th>RPO</th>
+<th>Manual Workarounds Possible?</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Process 1]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Yes/No/Partially</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-dependencies-per-critical-process">3. Dependencies per Critical Process</h2>
+<h3 id="31-process-todo-process-name">3.1 Process: [TODO: Process Name]</h3>
+<p><strong>People (Personnel):</strong>
+- [TODO: Minimum staffing, key persons, specialized knowledge]
+- Example: At least 3 order processors, backup arrangement required</p>
+<p><strong>Facilities (Locations and Premises):</strong>
+- [TODO: Required locations, rooms, infrastructure]
+- Example: Office workstations, home office as alternative possible</p>
+<p><strong>Technology (IT Systems):</strong>
+- [TODO: Critical IT systems and applications]
+- Example: ERP system (SAP), email, network access</p>
+<p><strong>Information (Data):</strong>
+- [TODO: Critical data and information]
+- Example: Order database, customer master data, product configurations</p>
+<p><strong>Suppliers (Suppliers and Partners):</strong>
+- [TODO: Critical suppliers and service providers]
+- Example: Logistics service provider, cloud provider, payment service provider</p>
+<h3 id="32-dependency-matrix">3.2 Dependency Matrix</h3>
+<p>[TODO: Create a dependency matrix for all critical processes]</p>
+<table>
+<thead>
+<tr>
+<th>Process</th>
+<th>People</th>
+<th>Facilities</th>
+<th>Technology</th>
+<th>Information</th>
+<th>Suppliers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Order Processing</td>
+<td>3 employees</td>
+<td>Office/Home-Office</td>
+<td>ERP, Email</td>
+<td>Order data</td>
+<td>Logistics</td>
+</tr>
+<tr>
+<td>Customer Service</td>
+<td>5 employees</td>
+<td>Call center</td>
+<td>CRM, Phone</td>
+<td>Customer data</td>
+<td>Telco</td>
+</tr>
+<tr>
+<td>Production</td>
+<td>10 employees</td>
+<td>Production hall</td>
+<td>MES, SCADA</td>
+<td>Production data</td>
+<td>Suppliers</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-manual-workarounds-and-emergency-operations">4. Manual Workarounds and Emergency Operations</h2>
+<h3 id="41-workaround-strategies">4.1 Workaround Strategies</h3>
+<p>[TODO: Document manual workarounds for critical processes]</p>
+<p><strong>Example for process "Order Processing":</strong></p>
+<p><strong>In case of ERP system failure:</strong>
+- <strong>Workaround:</strong> Manual order entry in Excel lists
+- <strong>Capacity:</strong> Reduced to 30% of normal operations
+- <strong>Duration:</strong> Maximum 24 hours (then data entry backlog too large)
+- <strong>Prerequisites:</strong> Excel templates available, employees trained
+- <strong>Limitations:</strong> No real-time inventory check, no automatic invoicing</p>
+<p><strong>In case of site failure:</strong>
+- <strong>Workaround:</strong> Home office for order processing
+- <strong>Capacity:</strong> 80% of normal operations
+- <strong>Duration:</strong> Unlimited
+- <strong>Prerequisites:</strong> VPN access, laptops, telephony via softphone
+- <strong>Limitations:</strong> No physical document processing</p>
+<h3 id="42-emergency-operations-capacities">4.2 Emergency Operations Capacities</h3>
+<table>
+<thead>
+<tr>
+<th>Process</th>
+<th>Normal Operations</th>
+<th>Emergency Operations (manual)</th>
+<th>Emergency Operations (IT-DR)</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Order Processing</td>
+<td>100%</td>
+<td>30%</td>
+<td>80%</td>
+<td>Manual entry very labor-intensive</td>
+</tr>
+<tr>
+<td>Customer Service</td>
+<td>100%</td>
+<td>70%</td>
+<td>90%</td>
+<td>Phone as fallback</td>
+</tr>
+<tr>
+<td>Production</td>
+<td>100%</td>
+<td>0%</td>
+<td>100%</td>
+<td>No manual alternative</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-open-items-and-measures">5. Open Items and Measures</h2>
+<h3 id="51-identified-risks-and-measures">5.1 Identified Risks and Measures</h3>
+<table>
+<thead>
+<tr>
+<th>Measure</th>
+<th>Description</th>
+<th>Owner</th>
+<th>Priority</th>
+<th>Due</th>
+<th>Status</th>
+<th>Cost (estimated)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Measure 1]</td>
+<td>[TODO: Description]</td>
+<td>[TODO: Owner]</td>
+<td>High/Medium/Low</td>
+<td>[TODO: Date]</td>
+<td>Open/In Progress/Done</td>
+<td>[TODO: Amount]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Examples:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Measure</th>
+<th>Description</th>
+<th>Owner</th>
+<th>Priority</th>
+<th>Due</th>
+<th>Status</th>
+<th>Cost (estimated)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ERP Redundancy</td>
+<td>Implementation of high-availability cluster</td>
+<td>{{ meta.roles.cio.name }}</td>
+<td>High</td>
+<td>Q2 2026</td>
+<td>In Progress</td>
+<td>150,000 €</td>
+</tr>
+<tr>
+<td>Backup Personnel</td>
+<td>Training of backups for key persons</td>
+<td>HR</td>
+<td>High</td>
+<td>Q1 2026</td>
+<td>Open</td>
+<td>20,000 €</td>
+</tr>
+<tr>
+<td>Supplier BCM</td>
+<td>Request BCM evidence from critical suppliers</td>
+<td>Procurement</td>
+<td>Medium</td>
+<td>Q2 2026</td>
+<td>Open</td>
+<td>5,000 €</td>
+</tr>
+<tr>
+<td>Network Redundancy</td>
+<td>Second internet connection</td>
+<td>{{ meta.roles.it_operations_manager.name }}</td>
+<td>High</td>
+<td>Q1 2026</td>
+<td>In Progress</td>
+<td>30,000 €</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-prioritization-of-measures">5.2 Prioritization of Measures</h3>
+<p><strong>Priority HIGH (implement immediately):</strong>
+- Measures to eliminate single points of failure
+- Measures to meet critical RTO/RPO values
+- Measures to fulfill regulatory requirements</p>
+<p><strong>Priority MEDIUM (within 6-12 months):</strong>
+- Measures to improve resilience
+- Measures to reduce dependencies
+- Measures to improve workarounds</p>
+<p><strong>Priority LOW (Nice-to-have):</strong>
+- Measures for further optimization
+- Measures for less critical processes</p>
+<h2 id="6-recovery-prioritization">6. Recovery Prioritization</h2>
+<h3 id="61-prioritization-matrix">6.1 Prioritization Matrix</h3>
+<p>In case of comprehensive failure, recovery occurs in the following order:</p>
+<p><strong>Priority 1 (0-4 hours):</strong>
+1. Network infrastructure and internet connection
+2. Email and communication
+3. Authentication and access control</p>
+<p><strong>Priority 2 (4-8 hours):</strong>
+4. ERP system (order processing, finance)
+5. CRM system (customer service)
+6. Production control systems</p>
+<p><strong>Priority 3 (8-24 hours):</strong>
+7. Other business applications
+8. Development and test environments
+9. Reporting and analytics</p>
+<h3 id="62-dependencies-in-recovery">6.2 Dependencies in Recovery</h3>
+<div class="codehilite"><pre><span></span><code>┌─────────────────────┐
+│ Network/Internet    │
+└──────────┬──────────┘
+           │
+    ┌──────┴──────┬──────────────┐
+    │             │              │
+┌───▼────┐  ┌────▼─────┐  ┌────▼─────┐
+│ Email  │  │ Authenti-│  │ Firewall │
+│        │  │ cation   │  │          │
+└───┬────┘  └────┬─────┘  └────┬─────┘
+    │            │             │
+    └────────────┴─────────────┘
+                 │
+         ┌───────┴───────┐
+         │               │
+    ┌────▼────┐    ┌────▼────┐
+    │ ERP     │    │ CRM     │
+    └─────────┘    └─────────┘
+</code></pre></div>
+
+<h2 id="7-approval-and-authorization">7. Approval and Authorization</h2>
+<h3 id="71-approval-by-departments">7.1 Approval by Departments</h3>
+<table>
+<thead>
+<tr>
+<th>Department</th>
+<th>Responsible</th>
+<th>Date</th>
+<th>Signature</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Department 1]</td>
+<td>[TODO: Name]</td>
+<td>[TODO: Date]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: Department 2]</td>
+<td>[TODO: Name]</td>
+<td>[TODO: Date]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="72-management-approval">7.2 Management Approval</h3>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Name</th>
+<th>Date</th>
+<th>Signature</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CEO</td>
+<td>{{ meta.roles.ceo.name }}</td>
+<td>[TODO: Date]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>CIO</td>
+<td>{{ meta.roles.cio.name }}</td>
+<td>[TODO: Date]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>BCM Manager</td>
+<td>[TODO: Name]</td>
+<td>[TODO: Date]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Document History:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Initial creation</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0070_BIA_Methodology.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0090_Risk_Analysis_and_Scenarios.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

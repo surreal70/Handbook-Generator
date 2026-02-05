@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0210 - Richtlinie: Akzeptable Nutzung IT</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0210</div>
+            <h1>Richtlinie: Akzeptable Nutzung IT</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0200_Policy_Akzeptable_Nutzung_IT.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0220_Policy_Zugriffssteuerung_und_Identitaetsmanagement.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="richtlinie-akzeptable-nutzung-it">Richtlinie: Akzeptable Nutzung IT</h1>
+<p><strong>Dokument-ID:</strong> 0210<br />
+<strong>Dokumenttyp:</strong> Richtlinie (detailliert)<br />
+<strong>Zugehörige Policy:</strong> 0200_Policy_Akzeptable_Nutzung_IT.md<br />
+<strong>Standard-Referenz:</strong> ISO/IEC 27001:2022 Annex A.5.10<br />
+<strong>Owner:</strong> {{ meta.it_operations.manager }}<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Freigegeben<br />
+<strong>Klassifizierung:</strong> Intern<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.date }}<br />
+<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-zweck-und-geltungsbereich">1. Zweck und Geltungsbereich</h2>
+<p>Diese Richtlinie konkretisiert die <code>0200_Policy_Akzeptable_Nutzung_IT.md</code> und definiert detaillierte Regeln, Verfahren und technische Kontrollen für die akzeptable Nutzung von IT-Ressourcen bei <strong>AdminSend GmbH</strong>.</p>
+<p><strong>Geltungsbereich:</strong>
+- Alle Mitarbeiter, Auftragnehmer und Dritte mit Zugang zu IT-Ressourcen
+- Alle IT-Systeme, Netzwerke, Anwendungen und Geräte
+- Standorte: {{ netbox.site.name }} und alle Betriebsstandorte</p>
+<h2 id="2-detaillierte-nutzungsregeln">2. Detaillierte Nutzungsregeln</h2>
+<h3 id="21-e-mail-nutzung">2.1 E-Mail-Nutzung</h3>
+<p><strong>Erlaubte Nutzung:</strong>
+- Geschäftliche Kommunikation mit Kunden, Partnern und Kollegen
+- Begrenzte private Nutzung (max. 10 E-Mails pro Tag, keine großen Anhänge)
+- Anmeldung bei geschäftlichen Online-Diensten</p>
+<p><strong>Verbotene Aktivitäten:</strong>
+- Versand von Spam, Kettenmails oder unerwünschten Massenmails
+- Versand vertraulicher Informationen ohne Verschlüsselung
+- Nutzung privater E-Mail-Konten für geschäftliche Kommunikation
+- Öffnen verdächtiger Anhänge oder Links (siehe Phishing-Awareness)
+- Automatische Weiterleitung geschäftlicher E-Mails an externe Adressen</p>
+<p><strong>Technische Kontrollen:</strong>
+- E-Mail-Filtering und Anti-Spam-Systeme
+- DLP (Data Loss Prevention) für ausgehende E-Mails
+- E-Mail-Archivierung für Compliance (Aufbewahrung: {{ meta.retention.email_years }} Jahre)
+- Verschlüsselung für vertrauliche E-Mails (S/MIME oder PGP)</p>
+<h3 id="22-internet-nutzung">2.2 Internet-Nutzung</h3>
+<p><strong>Erlaubte Nutzung:</strong>
+- Recherche für geschäftliche Zwecke
+- Zugriff auf genehmigte Cloud-Services und SaaS-Anwendungen
+- Begrenzte private Nutzung in Pausen (max. 30 Minuten pro Tag)
+- Zugriff auf Fachportale, Dokumentationen und Schulungsressourcen</p>
+<p><strong>Verbotene Aktivitäten:</strong>
+- Zugriff auf illegale, pornografische oder gewaltverherrlichende Inhalte
+- Download nicht genehmigter Software oder Dateien
+- Streaming von Videos/Musik während der Arbeitszeit (außer geschäftlich)
+- Nutzung von Anonymisierungsdiensten (VPN, Proxy) ohne Genehmigung
+- Online-Shopping, Glücksspiel oder private Geschäftstätigkeiten</p>
+<p><strong>Technische Kontrollen:</strong>
+- Web-Filtering und URL-Kategorisierung
+- Blockierung bekannter Malware- und Phishing-Sites
+- Bandbreitenmanagement für Streaming-Dienste
+- Logging und Monitoring der Internet-Nutzung
+- SSL-Inspection für verschlüsselten Traffic (mit Datenschutz-Compliance)</p>
+<h3 id="23-software-installation-und-nutzung">2.3 Software-Installation und -Nutzung</h3>
+<p><strong>Erlaubte Aktivitäten:</strong>
+- Nutzung genehmigter Software aus dem Software-Katalog
+- Installation von Software durch IT-Betrieb oder über Self-Service-Portal
+- Nutzung von Browser-Extensions aus genehmigter Whitelist</p>
+<p><strong>Verbotene Aktivitäten:</strong>
+- Installation nicht genehmigter Software (Shadow IT)
+- Nutzung von Raubkopien oder unlizenzierter Software
+- Installation von Peer-to-Peer-Software (Torrents, File-Sharing)
+- Deaktivierung oder Umgehung von Sicherheitssoftware (Antivirus, EDR)
+- Änderung von Systemkonfigurationen ohne Genehmigung</p>
+<p><strong>Technische Kontrollen:</strong>
+- Application Whitelisting (nur genehmigte Software kann ausgeführt werden)
+- Software Asset Management (SAM) für Lizenz-Compliance
+- Endpoint Protection (Antivirus, EDR) mit Tamper Protection
+- Regelmäßige Software-Inventarisierung
+- Patch Management für genehmigte Software</p>
+<h3 id="24-datenhandling-und-speicherung">2.4 Datenhandling und Speicherung</h3>
+<p><strong>Erlaubte Aktivitäten:</strong>
+- Speicherung geschäftlicher Daten auf genehmigten Netzlaufwerken und Cloud-Speichern
+- Nutzung von {{ meta.cloud.storage_service }} für Dateiablage
+- Verschlüsselung vertraulicher Daten gemäß Klassifizierung</p>
+<p><strong>Verbotene Aktivitäten:</strong>
+- Speicherung geschäftlicher Daten auf privaten Cloud-Diensten (Dropbox, Google Drive privat)
+- Speicherung vertraulicher Daten auf lokalen Festplatten ohne Verschlüsselung
+- Weitergabe von Zugangsdaten oder Passwörtern
+- Exfiltration großer Datenmengen ohne Genehmigung</p>
+<p><strong>Technische Kontrollen:</strong>
+- DLP (Data Loss Prevention) für Datentransfer-Überwachung
+- Verschlüsselung von Festplatten (BitLocker, FileVault)
+- Cloud Access Security Broker (CASB) für Cloud-Service-Überwachung
+- Netzwerk-Segmentierung für sensible Daten
+- Backup und Retention gemäß <code>0420_Policy_Backup_und_Wiederherstellung.md</code></p>
+<h3 id="25-mobile-gerate-und-byod">2.5 Mobile Geräte und BYOD</h3>
+<p><strong>Erlaubte Aktivitäten:</strong>
+- Nutzung unternehmenseigener Mobilgeräte für geschäftliche Zwecke
+- BYOD (Bring Your Own Device) nach Registrierung und MDM-Enrollment
+- Zugriff auf genehmigte Unternehmensanwendungen über Mobile Apps</p>
+<p><strong>Verbotene Aktivitäten:</strong>
+- Jailbreak oder Rooting von Geräten
+- Installation nicht genehmigter Apps auf BYOD-Geräten mit Unternehmenszugriff
+- Speicherung vertraulicher Daten auf privaten Geräten ohne Container
+- Nutzung unsicherer WLAN-Netzwerke ohne VPN</p>
+<p><strong>Technische Kontrollen:</strong>
+- Mobile Device Management (MDM) für alle Geräte mit Unternehmenszugriff
+- Containerisierung für geschäftliche Daten auf BYOD-Geräten
+- Remote Wipe bei Verlust oder Diebstahl
+- Erzwungene Verschlüsselung und PIN/Biometrie
+- Compliance-Checks (OS-Version, Jailbreak-Detection)</p>
+<p><strong>Details:</strong> Siehe <code>0500_Policy_Mobile_Device_und_Remote_Work.md</code></p>
+<h3 id="26-social-media-und-externe-kommunikation">2.6 Social Media und externe Kommunikation</h3>
+<p><strong>Erlaubte Aktivitäten:</strong>
+- Nutzung von Social Media für Marketing und Unternehmenskommunikation (autorisierte Accounts)
+- Professionelle Nutzung von LinkedIn, Xing für Networking
+- Teilnahme an Fachforen und Communities (mit Disclaimer)</p>
+<p><strong>Verbotene Aktivitäten:</strong>
+- Veröffentlichung vertraulicher Unternehmensinformationen
+- Negative Äußerungen über Unternehmen, Kunden oder Kollegen
+- Vortäuschen einer offiziellen Unternehmensmeinung ohne Autorisierung
+- Nutzung von Unternehmenslogos ohne Genehmigung</p>
+<p><strong>Richtlinien:</strong>
+- Social Media Guidelines für Mitarbeiter
+- Genehmigungsprozess für offizielle Unternehmens-Accounts
+- Schulung zu Social Engineering und Phishing über Social Media</p>
+<h3 id="27-remote-work-und-vpn-nutzung">2.7 Remote Work und VPN-Nutzung</h3>
+<p><strong>Erlaubte Aktivitäten:</strong>
+- Remote-Zugriff über genehmigte VPN-Verbindungen
+- Nutzung von Remote Desktop (RDP, Citrix) für Systemzugriff
+- Arbeit von Home Office nach Genehmigung</p>
+<p><strong>Verbotene Aktivitäten:</strong>
+- Nutzung unsicherer Netzwerke ohne VPN
+- Weitergabe von VPN-Zugangsdaten
+- Arbeit in öffentlichen Bereichen mit Einsicht auf Bildschirm (Shoulder Surfing)
+- Nutzung privater Geräte ohne MDM-Enrollment</p>
+<p><strong>Technische Kontrollen:</strong>
+- VPN mit Multi-Faktor-Authentifizierung (MFA)
+- Zero Trust Network Access (ZTNA) für granulare Zugriffskontrolle
+- Endpoint Compliance Checks vor VPN-Zugriff
+- Session-Timeouts und Idle-Disconnects</p>
+<p><strong>Details:</strong> Siehe <code>0500_Policy_Mobile_Device_und_Remote_Work.md</code></p>
+<h2 id="3-monitoring-und-uberwachung">3. Monitoring und Überwachung</h2>
+<h3 id="31-monitoring-umfang">3.1 Monitoring-Umfang</h3>
+<p>Die Organisation überwacht folgende Aktivitäten zur Sicherstellung von Sicherheit und Compliance:</p>
+<ul>
+<li><strong>E-Mail-Verkehr:</strong> Metadaten (Absender, Empfänger, Betreff), DLP-Scans</li>
+<li><strong>Internet-Nutzung:</strong> Besuchte URLs, Kategorien, Bandbreitennutzung</li>
+<li><strong>Dateitransfers:</strong> Uploads/Downloads, Cloud-Service-Nutzung</li>
+<li><strong>Systemzugriffe:</strong> Login-Aktivitäten, privilegierte Zugriffe</li>
+<li><strong>Anwendungsnutzung:</strong> Genutzte Anwendungen, Nutzungsdauer</li>
+</ul>
+<h3 id="32-datenschutz-und-privatsphare">3.2 Datenschutz und Privatsphäre</h3>
+<p><strong>Grundsätze:</strong>
+- Monitoring erfolgt zweckgebunden für Sicherheit und Compliance
+- Keine anlasslose Überwachung individueller Mitarbeiter
+- Monitoring-Daten werden nur bei begründetem Verdacht analysiert
+- Einhaltung der DSGVO und Betriebsvereinbarungen</p>
+<p><strong>Transparenz:</strong>
+- Mitarbeiter werden über Monitoring-Maßnahmen informiert (Onboarding, Schulungen)
+- Betriebsrat wird bei Monitoring-Maßnahmen einbezogen
+- Datenschutzbeauftragter prüft Monitoring-Konzepte</p>
+<h3 id="33-incident-response-bei-verstoen">3.3 Incident Response bei Verstößen</h3>
+<p><strong>Prozess:</strong>
+1. <strong>Detektion:</strong> Automatische Alerts bei Policy-Verstößen (DLP, Web-Filter, SIEM)
+2. <strong>Triage:</strong> IT-Security prüft Alert und bewertet Schweregrad
+3. <strong>Untersuchung:</strong> Bei begründetem Verdacht: Detaillierte Analyse, Einbeziehung HR
+4. <strong>Maßnahmen:</strong> Je nach Schweregrad: Verwarnung, Schulung, Disziplinarmaßnahmen
+5. <strong>Dokumentation:</strong> Incident-Report, Lessons Learned</p>
+<p><strong>Eskalation:</strong>
+- Leichte Verstöße: IT-Betrieb informiert Vorgesetzten
+- Mittlere Verstöße: CISO und HR werden einbezogen
+- Schwere Verstöße: Geschäftsführung, Legal, ggf. Strafverfolgung</p>
+<h2 id="4-schulung-und-awareness">4. Schulung und Awareness</h2>
+<h3 id="41-pflichtschulungen">4.1 Pflichtschulungen</h3>
+<p><strong>Onboarding:</strong>
+- Acceptable Use Policy Training (1 Stunde)
+- Phishing-Awareness-Training
+- Datenschutz-Grundlagen</p>
+<p><strong>Jährliche Auffrischung:</strong>
+- Acceptable Use Policy Refresher (30 Minuten)
+- Aktuelle Bedrohungen und Best Practices
+- Quiz zur Wissensüberprüfung (Bestehensgrenze: 80%)</p>
+<h3 id="42-awareness-kampagnen">4.2 Awareness-Kampagnen</h3>
+<p><strong>Regelmäßige Maßnahmen:</strong>
+- Monatliche Security-Newsletter
+- Phishing-Simulationen (quartalsweise)
+- Poster und Infografiken zu Sicherheitsthemen
+- Lunch &amp; Learn Sessions zu aktuellen Themen</p>
+<h3 id="43-dokumentation">4.3 Dokumentation</h3>
+<p><strong>Nachweise:</strong>
+- Schulungsteilnahme-Tracking in LMS (Learning Management System)
+- Bestätigungen der Policy-Kenntnisnahme (jährlich)
+- Quiz-Ergebnisse und Zertifikate
+- Phishing-Simulation-Ergebnisse</p>
+<h2 id="5-ausnahmen-und-sonderfalle">5. Ausnahmen und Sonderfälle</h2>
+<h3 id="51-ausnahmenprozess">5.1 Ausnahmenprozess</h3>
+<p><strong>Antrag:</strong>
+- Formular: Ausnahmeantrag mit Begründung und Risikobewertung
+- Genehmigung: CISO (bei technischen Ausnahmen), HR (bei Nutzungsausnahmen)
+- Befristung: Max. 12 Monate, danach erneute Prüfung</p>
+<p><strong>Beispiele für Ausnahmen:</strong>
+- Installation spezieller Software für Projekte
+- Erweiterte Internet-Zugriffe für Forschung
+- Nutzung privater Geräte ohne MDM (temporär)</p>
+<p><strong>Dokumentation:</strong> Siehe <code>0640_Policy_Ausnahmen_und_Risk_Waivers.md</code></p>
+<h3 id="52-privilegierte-nutzer">5.2 Privilegierte Nutzer</h3>
+<p><strong>Administratoren und IT-Betrieb:</strong>
+- Erweiterte Rechte für Systemadministration
+- Zusätzliche Schulungen und Background Checks
+- Erhöhtes Monitoring privilegierter Aktivitäten
+- Vier-Augen-Prinzip bei kritischen Änderungen</p>
+<p><strong>Details:</strong> Siehe <code>0230_Richtlinie_IAM_Joiner_Mover_Leaver_und_Zugriffsantraege.md</code></p>
+<h2 id="6-technische-implementierung">6. Technische Implementierung</h2>
+<h3 id="61-technologie-stack">6.1 Technologie-Stack</h3>
+<p><strong>Sicherheitstools:</strong>
+- <strong>Web-Filter:</strong> {{ meta.security.web_filter }} (z.B. Cisco Umbrella, Zscaler)
+- <strong>E-Mail-Security:</strong> {{ meta.security.email_gateway }} (z.B. Proofpoint, Mimecast)
+- <strong>DLP:</strong> {{ meta.security.dlp_solution }} (z.B. Microsoft Purview, Symantec DLP)
+- <strong>Endpoint Protection:</strong> {{ meta.security.edr_solution }} (z.B. CrowdStrike, SentinelOne)
+- <strong>CASB:</strong> {{ meta.security.casb_solution }} (z.B. Microsoft Defender for Cloud Apps)</p>
+<p><strong>Monitoring und Logging:</strong>
+- <strong>SIEM:</strong> {{ meta.security.siem_solution }} (z.B. Splunk, Microsoft Sentinel)
+- <strong>Log-Retention:</strong> {{ meta.retention.log_years }} Jahre für Security-Logs
+- <strong>Alerting:</strong> Automatische Alerts bei kritischen Verstößen</p>
+<h3 id="62-konfigurationsbeispiele">6.2 Konfigurationsbeispiele</h3>
+<p><strong>Web-Filter-Kategorien (blockiert):</strong>
+- Adult Content, Gambling, Illegal Drugs
+- Malware, Phishing, Command &amp; Control
+- Anonymizers, Proxy Avoidance
+- Peer-to-Peer, File Sharing (außer genehmigte Dienste)</p>
+<p><strong>DLP-Regeln:</strong>
+- Blockierung von Kreditkartennummern in E-Mails
+- Warnung bei Versand von Dokumenten mit "Vertraulich"-Klassifizierung
+- Blockierung von Uploads zu nicht genehmigten Cloud-Diensten
+- Erkennung von PII (Personally Identifiable Information) in Dateitransfers</p>
+<p><strong>Application Whitelisting:</strong>
+- Nur signierte Anwendungen aus genehmigtem Katalog
+- Blockierung von PowerShell/CMD für Standard-Nutzer
+- Ausnahmen für Entwickler und Administratoren</p>
+<h2 id="7-compliance-und-audit">7. Compliance und Audit</h2>
+<h3 id="71-messgroen-kpis">7.1 Messgrößen (KPIs)</h3>
+<table>
+<thead>
+<tr>
+<th>Metrik</th>
+<th>Zielwert</th>
+<th>Messung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Schulungsteilnahme</td>
+<td>100% jährlich</td>
+<td>LMS-Reports</td>
+</tr>
+<tr>
+<td>Policy-Verstöße</td>
+<td>&lt; 5 pro Monat</td>
+<td>SIEM-Alerts</td>
+</tr>
+<tr>
+<td>Phishing-Klickrate</td>
+<td>&lt; 5%</td>
+<td>Simulation-Ergebnisse</td>
+</tr>
+<tr>
+<td>Nicht genehmigte Software</td>
+<td>0 Installationen</td>
+<td>Software-Inventar</td>
+</tr>
+<tr>
+<td>DLP-Incidents</td>
+<td>&lt; 10 pro Monat</td>
+<td>DLP-Reports</td>
+</tr>
+</tbody>
+</table>
+<h3 id="72-audit-nachweise">7.2 Audit-Nachweise</h3>
+<p><strong>Dokumentation:</strong>
+- Policy-Dokumente und Versionshistorie
+- Schulungsnachweise und Bestätigungen
+- Monitoring-Logs und Incident-Reports
+- Ausnahmen-Register
+- Audit-Trails für Zugriffe und Änderungen</p>
+<p><strong>Audit-Frequenz:</strong>
+- Interne Audits: Jährlich
+- Externe Audits: Bei ISO 27001-Zertifizierung
+- Ad-hoc-Audits: Bei Verdacht auf Verstöße</p>
+<h2 id="8-review-und-aktualisierung">8. Review und Aktualisierung</h2>
+<p><strong>Review-Zyklus:</strong>
+- Jährlicher Review durch CISO und IT-Betrieb
+- Ad-hoc-Updates bei neuen Bedrohungen oder Technologien
+- Einbeziehung von HR und Legal bei Änderungen</p>
+<p><strong>Change Management:</strong>
+- Änderungen werden über Change-Prozess gesteuert
+- Kommunikation an alle Mitarbeiter bei wesentlichen Änderungen
+- Aktualisierung von Schulungsmaterialien</p>
+<h2 id="9-referenzen">9. Referenzen</h2>
+<h3 id="interne-dokumente">Interne Dokumente</h3>
+<ul>
+<li><code>0200_Policy_Akzeptable_Nutzung_IT.md</code> - Übergeordnete Policy</li>
+<li><code>0220_Policy_Zugriffssteuerung_und_Identitaetsmanagement.md</code> - Access Control</li>
+<li><code>0320_Policy_Logging_und_Monitoring.md</code> - Logging Policy</li>
+<li><code>0400_Policy_Incident_Management.md</code> - Incident Management</li>
+<li><code>0500_Policy_Mobile_Device_und_Remote_Work.md</code> - Mobile Device Policy</li>
+<li><code>0640_Policy_Ausnahmen_und_Risk_Waivers.md</code> - Exception Process</li>
+</ul>
+<h3 id="externe-standards">Externe Standards</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.10</strong> - Acceptable use of information</li>
+<li><strong>ISO/IEC 27002:2022</strong> - Information security controls</li>
+<li><strong>DSGVO (EU 2016/679)</strong> - Datenschutz-Grundverordnung</li>
+<li><strong>Betriebsverfassungsgesetz (BetrVG)</strong> - Mitbestimmung bei Monitoring</li>
+</ul>
+<hr />
+<p><strong>Genehmigt durch:</strong><br />
+Thomas Weber, CISO<br />
+Datum: {{ meta.document.approval_date }}</p>
+<p><strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0200_Policy_Akzeptable_Nutzung_IT.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0220_Policy_Zugriffssteuerung_und_Identitaetsmanagement.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

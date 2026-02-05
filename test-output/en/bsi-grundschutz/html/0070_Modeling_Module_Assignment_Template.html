@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0070 - Modeling: Module Assignment (Template)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0070</div>
+            <h1>Modeling: Module Assignment (Template)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0060_Protection_Needs_Assessment_Template.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0080_Basic_Security_Check_Gap_Analysis_Template.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="modeling-module-assignment-template">Modeling: Module Assignment (Template)</h1>
+<p><strong>Document ID:</strong> 0070<br />
+<strong>Document Type:</strong> Methodology Artifact<br />
+<strong>Reference Framework:</strong> BSI IT-Grundschutz (BSI Standard 200-2, IT-Grundschutz Compendium)<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> {{ meta.document.status }}<br />
+<strong>Classification:</strong> internal<br />
+<strong>Last Updated:</strong> {{ meta.document.last_updated }}<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-objective-and-purpose">1. Objective and Purpose</h2>
+<p>The modeling assigns appropriate IT-Grundschutz modules to the objects of the information domain of <strong>AdminSend GmbH</strong>. It forms the basis for:
+- Basic security check (Document 0080)
+- Identification of requirements to be implemented
+- Systematic security measure planning</p>
+<p><strong>Responsible:</strong> Thomas Weber (ISB)</p>
+<p><strong>Important:</strong> This document only references modules. The complete module texts are located in the BSI IT-Grundschutz Compendium and are not copied.</p>
+<h2 id="2-it-grundschutz-modules-overview">2. IT-Grundschutz Modules: Overview</h2>
+<h3 id="21-module-structure">2.1 Module Structure</h3>
+<p>The BSI IT-Grundschutz Compendium organizes modules into the following layers:</p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Abbreviation</th>
+<th>Description</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ISMS</strong></td>
+<td>ISMS</td>
+<td>Security Management</td>
+<td>ISMS.1 Security Management</td>
+</tr>
+<tr>
+<td><strong>Organization and Personnel</strong></td>
+<td>ORP</td>
+<td>Organizational Processes</td>
+<td>ORP.1 Organization, ORP.3 Awareness and Training</td>
+</tr>
+<tr>
+<td><strong>Conception and Approaches</strong></td>
+<td>CON</td>
+<td>Concepts and Methods</td>
+<td>CON.1 Crypto Concept, CON.3 Data Backup Concept</td>
+</tr>
+<tr>
+<td><strong>Operations</strong></td>
+<td>OPS</td>
+<td>IT Operations Processes</td>
+<td>OPS.1.1.2 Proper IT Administration</td>
+</tr>
+<tr>
+<td><strong>Detection and Response</strong></td>
+<td>DER</td>
+<td>Incident Management</td>
+<td>DER.1 Detection of Security-Relevant Events</td>
+</tr>
+<tr>
+<td><strong>Systems</strong></td>
+<td>SYS</td>
+<td>IT Systems</td>
+<td>SYS.1.1 General Server, SYS.2.1 General Client</td>
+</tr>
+<tr>
+<td><strong>Applications</strong></td>
+<td>APP</td>
+<td>Application Software</td>
+<td>APP.1.1 Office Products, APP.3.1 Web Applications</td>
+</tr>
+<tr>
+<td><strong>IT Systems</strong></td>
+<td>NET</td>
+<td>Networks and Communication</td>
+<td>NET.1.1 Network Architecture and Design, NET.3.1 Routers and Switches</td>
+</tr>
+<tr>
+<td><strong>Industrial IT</strong></td>
+<td>IND</td>
+<td>OT/ICS Systems</td>
+<td>IND.1 Operational and Control Technology</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-assignment-logic">2.2 Assignment Logic</h3>
+<p><strong>Principles:</strong>
+1. <strong>Completeness:</strong> All relevant objects receive module assignments
+2. <strong>Appropriateness:</strong> Modules match the object type and protection need
+3. <strong>No Redundancy:</strong> Each module is assigned only once per object
+4. <strong>Granularity:</strong> Assignment at a meaningful abstraction level</p>
+<p><strong>Approach:</strong>
+1. Adopt objects from structure analysis (Document 0050)
+2. Identify suitable modules from IT-Grundschutz Compendium
+3. Document assignment
+4. Validation by IT management and ISB</p>
+<h2 id="3-module-assignment">3. Module Assignment</h2>
+<h3 id="31-isms-and-organization-isms-orp">3.1 ISMS and Organization (ISMS, ORP)</h3>
+<table>
+<thead>
+<tr>
+<th>Object ID</th>
+<th>Object</th>
+<th>Object Class</th>
+<th>Assigned Modules</th>
+<th>Justification</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ORG-001</td>
+<td>AdminSend GmbH</td>
+<td>Organization</td>
+<td>ISMS.1 Security Management</td>
+<td>Overall organization</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td>ORG-001</td>
+<td>AdminSend GmbH</td>
+<td>Organization</td>
+<td>ORP.1 Organization</td>
+<td>Organizational structure</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td>ORG-001</td>
+<td>AdminSend GmbH</td>
+<td>Organization</td>
+<td>ORP.2 Personnel</td>
+<td>Personnel management</td>
+<td>[TODO: HR]</td>
+</tr>
+<tr>
+<td>ORG-001</td>
+<td>AdminSend GmbH</td>
+<td>Organization</td>
+<td>ORP.3 Awareness and Training</td>
+<td>Awareness program</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td>ORG-001</td>
+<td>AdminSend GmbH</td>
+<td>Organization</td>
+<td>ORP.4 Identity and Access Management</td>
+<td>IAM processes</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>ORG-001</td>
+<td>AdminSend GmbH</td>
+<td>Organization</td>
+<td>ORP.5 Compliance Management (Requirements Management)</td>
+<td>Compliance</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-conception-and-approaches-con">3.2 Conception and Approaches (CON)</h3>
+<table>
+<thead>
+<tr>
+<th>Object ID</th>
+<th>Object</th>
+<th>Object Class</th>
+<th>Assigned Modules</th>
+<th>Justification</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CON-001</td>
+<td>Crypto Concept</td>
+<td>Concept</td>
+<td>CON.1 Crypto Concept</td>
+<td>Encryption strategy</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td>CON-002</td>
+<td>Data Backup Concept</td>
+<td>Concept</td>
+<td>CON.3 Data Backup Concept</td>
+<td>Backup strategy</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>CON-003</td>
+<td>Deletion Concept</td>
+<td>Concept</td>
+<td>CON.6 Deletion and Destruction</td>
+<td>Data deletion</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td>CON-004</td>
+<td>Patch and Change Management</td>
+<td>Concept</td>
+<td>CON.7 Information Security on Business Trips</td>
+<td>[TODO: if applicable]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>CON-005</td>
+<td>Software Development</td>
+<td>Concept</td>
+<td>CON.8 Software Development</td>
+<td>[TODO: if applicable]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="33-operations-ops">3.3 Operations (OPS)</h3>
+<table>
+<thead>
+<tr>
+<th>Object ID</th>
+<th>Object</th>
+<th>Object Class</th>
+<th>Assigned Modules</th>
+<th>Justification</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OPS-001</td>
+<td>IT Operations</td>
+<td>Operations Process</td>
+<td>OPS.1.1.2 Proper IT Administration</td>
+<td>IT administration</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>OPS-002</td>
+<td>Patch Management</td>
+<td>Operations Process</td>
+<td>OPS.1.1.3 Patch and Change Management</td>
+<td>Patch process</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>OPS-003</td>
+<td>Protection Against Malware</td>
+<td>Operations Process</td>
+<td>OPS.1.1.4 Protection Against Malware</td>
+<td>Malware protection</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>OPS-004</td>
+<td>Data Backup</td>
+<td>Operations Process</td>
+<td>OPS.1.1.5 Logging</td>
+<td>Logging</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>OPS-005</td>
+<td>Software Tests</td>
+<td>Operations Process</td>
+<td>OPS.1.1.6 Software Tests and Releases</td>
+<td>[TODO: if applicable]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>OPS-006</td>
+<td>Outsourcing</td>
+<td>Operations Process</td>
+<td>OPS.2.1 Outsourcing for Customers</td>
+<td>[TODO: if applicable]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>OPS-007</td>
+<td>Cloud Usage</td>
+<td>Operations Process</td>
+<td>OPS.2.2 Cloud Usage</td>
+<td>Cloud services</td>
+<td>Anna Schmidt</td>
+</tr>
+</tbody>
+</table>
+<h3 id="34-detection-and-response-der">3.4 Detection and Response (DER)</h3>
+<table>
+<thead>
+<tr>
+<th>Object ID</th>
+<th>Object</th>
+<th>Object Class</th>
+<th>Assigned Modules</th>
+<th>Justification</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DER-001</td>
+<td>Detection</td>
+<td>Process</td>
+<td>DER.1 Detection of Security-Relevant Events</td>
+<td>SIEM, Monitoring</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>DER-002</td>
+<td>Incident Management</td>
+<td>Process</td>
+<td>DER.2.1 Handling of Security Incidents</td>
+<td>Incident response</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td>DER-003</td>
+<td>Forensics</td>
+<td>Process</td>
+<td>DER.2.2 Preparation for IT Forensics</td>
+<td>[TODO: if applicable]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>DER-004</td>
+<td>Audits</td>
+<td>Process</td>
+<td>DER.3.1 Audits and Reviews</td>
+<td>Internal audit</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="35-applications-app">3.5 Applications (APP)</h3>
+<table>
+<thead>
+<tr>
+<th>Object ID</th>
+<th>Object</th>
+<th>Object Class</th>
+<th>Assigned Modules</th>
+<th>Justification</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A-001</td>
+<td>[TODO: Application 1]</td>
+<td>Application</td>
+<td>APP.1.1 Office Products</td>
+<td>[TODO: if office application]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>A-002</td>
+<td>[TODO: Application 2]</td>
+<td>Application</td>
+<td>APP.3.1 Web Applications</td>
+<td>[TODO: if web application]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>A-003</td>
+<td>[TODO: Application 3]</td>
+<td>Application</td>
+<td>APP.3.2 Web Server</td>
+<td>[TODO: if web server]</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>A-004</td>
+<td>[TODO: Application 4]</td>
+<td>Application</td>
+<td>APP.3.3 File Server</td>
+<td>[TODO: if file server]</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>A-005</td>
+<td>[TODO: Application 5]</td>
+<td>Application</td>
+<td>APP.3.6 DNS Server</td>
+<td>[TODO: if DNS]</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>A-006</td>
+<td>[TODO: Application 6]</td>
+<td>Application</td>
+<td>APP.4.3 Relational Database Systems</td>
+<td>[TODO: if database]</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>A-007</td>
+<td>[TODO: Application 7]</td>
+<td>Application</td>
+<td>APP.5.1 General Groupware</td>
+<td>[TODO: if groupware]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>A-008</td>
+<td>[TODO: Application 8]</td>
+<td>Application</td>
+<td>APP.5.2 Microsoft Exchange and Outlook</td>
+<td>[TODO: if Exchange]</td>
+<td>Anna Schmidt</td>
+</tr>
+</tbody>
+</table>
+<h3 id="36-it-systems-sys">3.6 IT Systems (SYS)</h3>
+<table>
+<thead>
+<tr>
+<th>Object ID</th>
+<th>Object</th>
+<th>Object Class</th>
+<th>Assigned Modules</th>
+<th>Justification</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S-001</td>
+<td>{{ netbox.device.server_001 }}</td>
+<td>Server</td>
+<td>SYS.1.1 General Server</td>
+<td>General server</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>S-002</td>
+<td>[TODO: Linux Server]</td>
+<td>Server</td>
+<td>SYS.1.3 Server under Linux and Unix</td>
+<td>Linux server</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>S-003</td>
+<td>[TODO: Windows Server]</td>
+<td>Server</td>
+<td>SYS.1.2.3 Windows Server</td>
+<td>Windows server</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>S-004</td>
+<td>[TODO: Virtualization]</td>
+<td>Virtualization</td>
+<td>SYS.1.5 Virtualization</td>
+<td>VMware/Hyper-V</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>S-005</td>
+<td>[TODO: Container]</td>
+<td>Container</td>
+<td>SYS.1.6 Containerization</td>
+<td>Docker/Kubernetes</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>S-006</td>
+<td>[TODO: Storage]</td>
+<td>Storage</td>
+<td>SYS.1.8 Storage Solutions</td>
+<td>SAN/NAS</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>S-007</td>
+<td>[TODO: Client]</td>
+<td>Client</td>
+<td>SYS.2.1 General Client</td>
+<td>Workstations</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>S-008</td>
+<td>[TODO: Windows Client]</td>
+<td>Client</td>
+<td>SYS.2.2.3 Clients under Windows</td>
+<td>Windows clients</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>S-009</td>
+<td>[TODO: macOS Client]</td>
+<td>Client</td>
+<td>SYS.2.4 Clients under macOS</td>
+<td>macOS clients</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>S-010</td>
+<td>[TODO: Mobile Device]</td>
+<td>Mobile</td>
+<td>SYS.3.2.1 General Smartphones and Tablets</td>
+<td>Mobile devices</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>S-011</td>
+<td>[TODO: IoT]</td>
+<td>IoT</td>
+<td>SYS.4.4 General IoT Device</td>
+<td>[TODO: if IoT]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="37-networks-and-communication-net">3.7 Networks and Communication (NET)</h3>
+<table>
+<thead>
+<tr>
+<th>Object ID</th>
+<th>Object</th>
+<th>Object Class</th>
+<th>Assigned Modules</th>
+<th>Justification</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>N-001</td>
+<td>Network Architecture</td>
+<td>Network</td>
+<td>NET.1.1 Network Architecture and Design</td>
+<td>Overall network</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>N-002</td>
+<td>Network Management</td>
+<td>Network</td>
+<td>NET.1.2 Network Management</td>
+<td>Network monitoring</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>N-003</td>
+<td>[TODO: Routers/Switches]</td>
+<td>Network Component</td>
+<td>NET.3.1 Routers and Switches</td>
+<td>Network devices</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>N-004</td>
+<td>[TODO: Firewall]</td>
+<td>Security Component</td>
+<td>NET.3.2 Firewall</td>
+<td>Perimeter protection</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>N-005</td>
+<td>[TODO: VPN]</td>
+<td>Security Component</td>
+<td>NET.3.3 VPN</td>
+<td>Remote access</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>N-006</td>
+<td>[TODO: WLAN]</td>
+<td>Network</td>
+<td>NET.2.1 WLAN Operations</td>
+<td>Wireless network</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td>N-007</td>
+<td>[TODO: Email]</td>
+<td>Communication</td>
+<td>NET.4.1 TLS Encryption</td>
+<td>[TODO: if applicable]</td>
+<td>Anna Schmidt</td>
+</tr>
+</tbody>
+</table>
+<h3 id="38-industrial-it-ind-optional">3.8 Industrial IT (IND) - Optional</h3>
+<table>
+<thead>
+<tr>
+<th>Object ID</th>
+<th>Object</th>
+<th>Object Class</th>
+<th>Assigned Modules</th>
+<th>Justification</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IND-001</td>
+<td>[TODO: OT System]</td>
+<td>OT/ICS</td>
+<td>IND.1 Operational and Control Technology</td>
+<td>[TODO: if OT in scope]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>IND-002</td>
+<td>[TODO: ICS Component]</td>
+<td>OT/ICS</td>
+<td>IND.2.1 General ICS Component</td>
+<td>[TODO: if ICS in scope]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="39-rooms-and-infrastructure-inf">3.9 Rooms and Infrastructure (INF)</h3>
+<table>
+<thead>
+<tr>
+<th>Object ID</th>
+<th>Object</th>
+<th>Object Class</th>
+<th>Assigned Modules</th>
+<th>Justification</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R-001</td>
+<td>Data Center</td>
+<td>Room</td>
+<td>INF.2 Data Center and Server Room</td>
+<td>Critical server room</td>
+<td>[TODO: Facility]</td>
+</tr>
+<tr>
+<td>R-002</td>
+<td>{{ meta.organization.primary_location }}</td>
+<td>Building</td>
+<td>INF.1 General Building</td>
+<td>Main location</td>
+<td>[TODO: Facility]</td>
+</tr>
+<tr>
+<td>R-003</td>
+<td>[TODO: Office Room]</td>
+<td>Room</td>
+<td>INF.8 Home Office</td>
+<td>[TODO: if home office]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-summary-and-statistics">4. Summary and Statistics</h2>
+<h3 id="41-assignment-statistics">4.1 Assignment Statistics</h3>
+<table>
+<thead>
+<tr>
+<th>Module Layer</th>
+<th>Number of Assigned Modules</th>
+<th>Number of Affected Objects</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ISMS</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>ORP (Organization and Personnel)</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>CON (Conception)</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>OPS (Operations)</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>DER (Detection and Response)</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>APP (Applications)</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>SYS (Systems)</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>NET (Networks)</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>IND (Industrial IT)</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>INF (Infrastructure)</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>[TODO]</strong></td>
+<td><strong>[TODO]</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-completeness-check">4.2 Completeness Check</h3>
+<table>
+<thead>
+<tr>
+<th>Object Type</th>
+<th>Number of Objects</th>
+<th>Number with Module Assignment</th>
+<th>Completeness</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Processes</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO: %]</td>
+</tr>
+<tr>
+<td>Applications</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO: %]</td>
+</tr>
+<tr>
+<td>IT Systems</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO: %]</td>
+</tr>
+<tr>
+<td>Networks</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO: %]</td>
+</tr>
+<tr>
+<td>Rooms</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO: %]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="43-open-items">4.3 Open Items</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Object</th>
+<th>Issue</th>
+<th>Responsible</th>
+<th>Deadline</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO: No suitable module found]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO: Unclear assignment]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-validation-and-quality-assurance">5. Validation and Quality Assurance</h2>
+<h3 id="51-validation-process">5.1 Validation Process</h3>
+<p>The module assignment is validated by:
+1. <strong>Review by IT Management:</strong> Anna Schmidt - Technical correctness
+2. <strong>Review by Information Domain Responsible:</strong> Completeness
+3. <strong>Comparison with IT-Grundschutz Compendium:</strong> Currency of modules
+4. <strong>Approval by ISB:</strong> Thomas Weber</p>
+<h3 id="52-quality-criteria">5.2 Quality Criteria</h3>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Status</th>
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>All objects have module assignments</td>
+<td>[TODO: ✓/✗]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Modules are current (IT-Grundschutz Compendium Edition [TODO])</td>
+<td>[TODO: ✓/✗]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Assignments are comprehensibly justified</td>
+<td>[TODO: ✓/✗]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>No redundancies</td>
+<td>[TODO: ✓/✗]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Owners are named</td>
+<td>[TODO: ✓/✗]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-next-steps">6. Next Steps</h2>
+<p>After completing the modeling, the following steps follow:
+1. <strong>Basic Security Check (Document 0080):</strong> Target-actual comparison for all assigned modules
+2. <strong>Risk Analysis (Document 0090):</strong> For objects with increased protection needs or non-modelable risks
+3. <strong>Measure Planning (Document 0100):</strong> Implementation planning of identified requirements</p>
+<h2 id="7-update-and-maintenance">7. Update and Maintenance</h2>
+<p>The module assignment is updated when:
+- New IT systems or applications are introduced
+- Changes in IT architecture occur
+- New edition of IT-Grundschutz Compendium is released
+- At least annually as part of the ISMS review</p>
+<p><strong>Responsible:</strong> Thomas Weber (ISB)<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<h2 id="8-approval">8. Approval</h2>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Name</th>
+<th>Date</th>
+<th>Approval</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ISB</td>
+<td>Thomas Weber</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+<tr>
+<td>IT Management</td>
+<td>Anna Schmidt</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>References:</strong>
+- BSI Standard 200-2: IT-Grundschutz Methodology (Chapter 7: Modeling)
+- BSI IT-Grundschutz Compendium (current edition)
+- BSI IT-Grundschutz Compendium: https://www.bsi.bund.de/grundschutz-kompendium</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0060_Protection_Needs_Assessment_Template.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0080_Basic_Security_Check_Gap_Analysis_Template.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

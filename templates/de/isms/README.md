@@ -324,17 +324,33 @@ Für jedes implementierte Control sollten Nachweise dokumentiert werden:
 ### CLI-Verwendung
 
 ```bash
-# Deutsches ISMS-Handbuch generieren
-python src/cli.py --language de --template isms --output Handbook/de/isms/
+# Deutsches ISMS-Handbuch generieren (Test-Modus erforderlich)
+python -m src.cli --language de --template isms --test
+
+# Separate Markdown-Dateien pro Template generieren
+python -m src.cli --language de --template isms --test --separate-files
+
+# PDF mit Inhaltsverzeichnis und Seitenumbrüchen generieren
+python -m src.cli --language de --template isms --output pdf --test --pdf-toc
+
+# Alle Formate mit allen Features generieren
+python -m src.cli --language de --template isms --output all --test --separate-files --pdf-toc
 
 # Englisches ISMS-Handbuch generieren
-python src/cli.py --language en --template isms --output Handbook/en/isms/
+python -m src.cli --language en --template isms --test
 ```
 
 ### Ausgabeformate
 
-- **Markdown:** Einzelne .md-Dateien für jedes Kapitel
-- **PDF:** Vollständiges Handbuch als PDF (erfordert Pandoc)
+Das System unterstützt mehrere Ausgabeformate:
+
+- **Markdown (kombiniert):** Einzelne .md-Datei mit allen Kapiteln
+- **Markdown (separate Dateien):** Separate .md-Dateien für jedes Kapitel mit TOC.md
+- **PDF (Standard):** Vollständiges Handbuch als PDF
+- **PDF (mit TOC):** PDF mit Inhaltsverzeichnis und Seitenumbrüchen zwischen Kapiteln
+- **HTML:** Mini-Website mit Navigation zwischen Seiten
+
+Weitere Details zu allen Ausgabeformaten finden Sie in der [OUTPUT_FORMATS_GUIDE.md](../../../docs/OUTPUT_FORMATS_GUIDE.md).
 
 ### Konfiguration
 

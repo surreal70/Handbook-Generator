@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0640 - Policy: Ausnahmen und Risk Waivers</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0640</div>
+            <h1>Policy: Ausnahmen und Risk Waivers</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0630_Richtlinie_EDR_AV_Host_Firewall_und_Device_Compliance.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0650_Richtlinie_Ausnahmenprozess.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="policy-ausnahmen-und-risk-waivers">Policy: Ausnahmen und Risk Waivers</h1>
+<p><strong>Dokument-ID:</strong> 0640<br />
+<strong>Dokumenttyp:</strong> Policy (abstrakt)<br />
+<strong>Standard-Referenz:</strong> ISO/IEC 27001:2022 Annex A.5.1, A.6.1.2 (inkl. Amendment 1:2024)<br />
+<strong>Owner:</strong> Thomas Weber<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Freigegeben<br />
+<strong>Klassifizierung:</strong> Intern<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.date }}<br />
+<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-zweck">1. Zweck</h2>
+<p>Diese Policy definiert den Prozess für Ausnahmen (Exceptions) und Risk Waivers von Sicherheitsrichtlinien der <strong>AdminSend GmbH</strong>. Sie stellt sicher, dass Ausnahmen angemessen begründet, genehmigt, dokumentiert und überwacht werden.</p>
+<h2 id="2-geltungsbereich">2. Geltungsbereich</h2>
+<p>Diese Policy gilt für:</p>
+<ul>
+<li><strong>Organisationseinheiten:</strong> Alle Abteilungen und Standorte der AdminSend GmbH</li>
+<li><strong>Policies:</strong> Alle Sicherheitsrichtlinien und -standards</li>
+<li><strong>Systeme:</strong> Alle IT-Systeme und Anwendungen</li>
+<li><strong>Prozesse:</strong> Alle sicherheitsrelevanten Prozesse</li>
+<li><strong>Standorte:</strong> {{ netbox.site.name }} und alle weiteren Betriebsstandorte</li>
+</ul>
+<p><strong>Ausnahmen:</strong> Diese Policy selbst unterliegt keinem Ausnahmenprozess.</p>
+<h2 id="3-grundsatze-policy-statements">3. Grundsätze (Policy Statements)</h2>
+<h3 id="31-ausnahmen-als-ausnahme">3.1 Ausnahmen als Ausnahme</h3>
+<p>Ausnahmen von Sicherheitsrichtlinien sind die Ausnahme, nicht die Regel. Richtlinien sind grundsätzlich einzuhalten.</p>
+<h3 id="32-formaler-ausnahmenprozess">3.2 Formaler Ausnahmenprozess</h3>
+<p>Ausnahmen müssen über einen formalen Prozess beantragt werden. Informelle oder mündliche Ausnahmen sind nicht zulässig.</p>
+<h3 id="33-begrundungspflicht">3.3 Begründungspflicht</h3>
+<p>Jede Ausnahme muss begründet werden:
+- Geschäftliche Notwendigkeit
+- Technische Unmöglichkeit
+- Unverhältnismäßiger Aufwand
+- Zeitliche Befristung</p>
+<h3 id="34-risikobewertung">3.4 Risikobewertung</h3>
+<p>Für jede Ausnahme wird eine Risikobewertung durchgeführt. Risiken werden identifiziert, bewertet und dokumentiert.</p>
+<h3 id="35-kompensationsmanahmen">3.5 Kompensationsmaßnahmen</h3>
+<p>Ausnahmen erfordern Kompensationsmaßnahmen. Kompensationsmaßnahmen reduzieren das Restrisiko auf ein akzeptables Niveau.</p>
+<h3 id="36-genehmigungspflicht">3.6 Genehmigungspflicht</h3>
+<p>Ausnahmen müssen von autorisierten Personen genehmigt werden:
+- <strong>Low Risk:</strong> CISO oder Stellvertreter
+- <strong>Medium Risk:</strong> CISO + Business Owner
+- <strong>High Risk:</strong> CISO + CIO + Management</p>
+<h3 id="37-zeitliche-befristung">3.7 Zeitliche Befristung</h3>
+<p>Ausnahmen sind grundsätzlich zeitlich befristet. Maximale Laufzeit: 12 Monate. Verlängerungen erfordern erneute Genehmigung.</p>
+<h3 id="38-dokumentation">3.8 Dokumentation</h3>
+<p>Alle Ausnahmen werden zentral dokumentiert (Ausnahmenregister). Dokumentation umfasst:
+- Antragsteller und Datum
+- Betroffene Policy/Standard
+- Begründung
+- Risikobewertung
+- Kompensationsmaßnahmen
+- Genehmiger und Datum
+- Laufzeit und Review-Datum</p>
+<h3 id="39-monitoring-und-review">3.9 Monitoring und Review</h3>
+<p>Ausnahmen werden regelmäßig überprüft (mindestens quartalsweise). Nicht mehr benötigte Ausnahmen werden zurückgezogen.</p>
+<h2 id="4-rollen-und-verantwortlichkeiten">4. Rollen und Verantwortlichkeiten</h2>
+<h3 id="raci-matrix-ausnahmen-und-risk-waivers">RACI-Matrix: Ausnahmen und Risk Waivers</h3>
+<table>
+<thead>
+<tr>
+<th>Aktivität</th>
+<th>CISO</th>
+<th>CIO</th>
+<th>Business Owner</th>
+<th>Risk Manager</th>
+<th>ISMS Team</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Policy-Erstellung</td>
+<td>R/A</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Ausnahmenantrag</td>
+<td>I</td>
+<td>I</td>
+<td>R</td>
+<td>I</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Risikobewertung</td>
+<td>R/A</td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Kompensationsmaßnahmen</td>
+<td>R/A</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Genehmigung (Low)</td>
+<td>R/A</td>
+<td>I</td>
+<td>I</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Genehmigung (Medium)</td>
+<td>R/A</td>
+<td>I</td>
+<td>R/A</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Genehmigung (High)</td>
+<td>R/A</td>
+<td>R/A</td>
+<td>R/A</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Ausnahmenregister</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+<td>C</td>
+<td>R/A</td>
+</tr>
+<tr>
+<td>Monitoring &amp; Review</td>
+<td>R/A</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legende:</strong> R = Responsible (Durchführung), A = Accountable (Verantwortlich), C = Consulted (Konsultiert), I = Informed (Informiert)</p>
+<h3 id="schlusselrollen">Schlüsselrollen</h3>
+<ul>
+<li><strong>Policy Owner:</strong> Thomas Weber (CISO)</li>
+<li><strong>CIO:</strong> Anna Schmidt</li>
+<li><strong>Risk Manager:</strong> {{ meta.risk.manager }}</li>
+<li><strong>ISMS Team:</strong> {{ meta.isms.team }}</li>
+<li><strong>Antragsteller:</strong> Business Owner, IT-Betrieb</li>
+<li><strong>Kontroll-/Prüfinstanz:</strong> ISMS, Internal Audit</li>
+</ul>
+<h2 id="5-ableitungen-richtlinienstandardsprozesse">5. Ableitungen (Richtlinien/Standards/Prozesse)</h2>
+<p>Details zur Umsetzung werden in nachgelagerten Dokumenten geregelt:</p>
+<h3 id="zugehorige-richtlinien">Zugehörige Richtlinien</h3>
+<ul>
+<li><strong>0650_Richtlinie_Ausnahmenprozess.md</strong> - Detaillierte Implementierungsrichtlinie</li>
+<li><code>0060_ISMS_Risikomanagement_Methodik.md</code> - Risk Management Methodology</li>
+<li><code>0080_ISMS_Risikoregister_Template.md</code> - Risk Register</li>
+</ul>
+<h3 id="zugehorige-standardsbaselines">Zugehörige Standards/Baselines</h3>
+<ul>
+<li>Ausnahmenantrag-Template</li>
+<li>Risikobewertungs-Template</li>
+<li>Kompensationsmaßnahmen-Katalog</li>
+<li>Ausnahmenregister</li>
+</ul>
+<h3 id="zugehorige-prozesse">Zugehörige Prozesse</h3>
+<ul>
+<li>Ausnahmenantragsprozess</li>
+<li>Risikobewertungsprozess</li>
+<li>Genehmigungsprozess</li>
+<li>Monitoring und Review Prozess</li>
+</ul>
+<h2 id="6-compliance-monitoring-und-durchsetzung">6. Compliance, Monitoring und Durchsetzung</h2>
+<h3 id="messgroen-und-kpis">Messgrößen und KPIs</h3>
+<ul>
+<li>Anzahl aktiver Ausnahmen</li>
+<li>Durchschnittliche Laufzeit von Ausnahmen</li>
+<li>Anzahl abgelaufener Ausnahmen (Ziel: 0)</li>
+<li>Anzahl verlängerter Ausnahmen</li>
+<li>Ausnahmen nach Risikokategorie (Low/Medium/High)</li>
+<li>Review-Compliance (Ziel: 100% quartalsweise)</li>
+<li>Anzahl zurückgezogener Ausnahmen</li>
+</ul>
+<h3 id="nachweise-und-evidence">Nachweise und Evidence</h3>
+<ul>
+<li>Ausnahmenregister</li>
+<li>Ausnahmenanträge und Genehmigungen</li>
+<li>Risikobewertungen</li>
+<li>Kompensationsmaßnahmen-Dokumentation</li>
+<li>Review-Protokolle</li>
+<li>Audit Logs für Ausnahmen</li>
+</ul>
+<h3 id="konsequenzen-bei-verstoen">Konsequenzen bei Verstößen</h3>
+<p>Verstöße gegen diese Policy werden nach den geltenden HR- und Compliance-Prozessen behandelt:
+- <strong>Nicht genehmigte Ausnahmen:</strong> Sofortige Compliance-Herstellung oder Systemabschaltung
+- <strong>Fehlende Dokumentation:</strong> Nachholung, Compliance-Untersuchung
+- <strong>Abgelaufene Ausnahmen:</strong> Sofortige Compliance-Herstellung oder Verlängerungsantrag
+- <strong>Wiederholte Verstöße:</strong> Arbeitsrechtliche Konsequenzen, Eskalation an Management</p>
+<h2 id="7-ausnahmen">7. Ausnahmen</h2>
+<p>Diese Policy selbst unterliegt keinem Ausnahmenprozess. Änderungen an dieser Policy erfordern Management-Genehmigung.</p>
+<h2 id="8-referenzen">8. Referenzen</h2>
+<h3 id="interne-dokumente">Interne Dokumente</h3>
+<ul>
+<li><code>0010_ISMS_Informationssicherheitsleitlinie.md</code> - ISMS Policy</li>
+<li><code>0650_Richtlinie_Ausnahmenprozess.md</code> - Detailed Guideline</li>
+<li><code>0060_ISMS_Risikomanagement_Methodik.md</code> - Risk Management Methodology</li>
+<li><code>0080_ISMS_Risikoregister_Template.md</code> - Risk Register</li>
+</ul>
+<h3 id="externe-standards-und-vorgaben">Externe Standards und Vorgaben</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.1</strong> - Policies for information security</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.6.1.2</strong> - Segregation of duties</li>
+<li><strong>ISO/IEC 27005</strong> - Information security risk management</li>
+<li><strong>NIST SP 800-37</strong> - Risk Management Framework</li>
+<li><strong>COBIT 2019</strong> - APO12 (Managed Risk)</li>
+</ul>
+<hr />
+<p><strong>Genehmigt durch:</strong><br />
+{{ meta.management.ceo }}, Geschäftsführung<br />
+Datum: {{ meta.document.approval_date }}</p>
+<p><strong>Nächster Review:</strong> {{ meta.document.next_review }} (jährlich oder anlassbezogen)</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0630_Richtlinie_EDR_AV_Host_Firewall_und_Device_Compliance.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0650_Richtlinie_Ausnahmenprozess.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

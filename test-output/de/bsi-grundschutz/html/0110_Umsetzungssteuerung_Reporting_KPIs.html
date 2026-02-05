@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0110 - Umsetzungssteuerung, Reporting und KPIs</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0110</div>
+            <h1>Umsetzungssteuerung, Reporting und KPIs</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0100_Sicherheitskonzept_und_Massnahmenplan.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0200_Policy_Zugriffssteuerung_und_Berechtigungen.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="umsetzungssteuerung-reporting-und-kpis">Umsetzungssteuerung, Reporting und KPIs</h1>
+<p><strong>Dokument-ID:</strong> 0110<br />
+<strong>Dokumenttyp:</strong> Steuerungsdokument<br />
+<strong>Referenzrahmen:</strong> BSI IT-Grundschutz (BSI Standards 200-1/200-2)<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> {{ meta.document.status }}<br />
+<strong>Klassifizierung:</strong> internal<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.last_updated }}<br />
+<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-steuerungsmodell">1. Steuerungsmodell</h2>
+<h3 id="11-governance-struktur">1.1 Governance-Struktur</h3>
+<p><strong>ISMS-Steuerung erfolgt auf drei Ebenen:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Ebene</th>
+<th>Gremium</th>
+<th>Frequenz</th>
+<th>Teilnehmer</th>
+<th>Fokus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Strategisch</strong></td>
+<td>Management Review</td>
+<td>Jährlich</td>
+<td>Geschäftsführung, ISB, IT-Leitung</td>
+<td>Strategische Ausrichtung, Ressourcen</td>
+</tr>
+<tr>
+<td><strong>Taktisch</strong></td>
+<td>ISMS-Team-Meeting</td>
+<td>Monatlich</td>
+<td>ISB, IT-Leitung, Informationsverbund-Verantwortliche</td>
+<td>Maßnahmenplanung, Risiken</td>
+</tr>
+<tr>
+<td><strong>Operativ</strong></td>
+<td>Maßnahmen-Status-Update</td>
+<td>Wöchentlich</td>
+<td>ISB, IT-Leitung, Maßnahmen-Owner</td>
+<td>Umsetzungsfortschritt</td>
+</tr>
+</tbody>
+</table>
+<h3 id="12-regeltermine">1.2 Regeltermine</h3>
+<p><strong>Wöchentlich - Maßnahmen-Status-Update:</strong>
+- <strong>Termin:</strong> [TODO: z.B. Montag 10:00]
+- <strong>Dauer:</strong> 30 Minuten
+- <strong>Teilnehmer:</strong> ISB, IT-Leitung, aktuelle Maßnahmen-Owner
+- <strong>Agenda:</strong> Status laufender Maßnahmen, Blocker, Eskalationen</p>
+<p><strong>Monatlich - ISMS-Team-Meeting:</strong>
+- <strong>Termin:</strong> [TODO: z.B. erster Donnerstag im Monat, 14:00]
+- <strong>Dauer:</strong> 2 Stunden
+- <strong>Teilnehmer:</strong> ISMS-Team (siehe Dokument 0020)
+- <strong>Agenda:</strong> 
+  - KPI-Review
+  - Maßnahmenfortschritt
+  - Neue Risiken und Vorfälle
+  - Compliance-Updates
+  - Entscheidungen und Eskalationen</p>
+<p><strong>Quartalsweise - Management-Review:</strong>
+- <strong>Termin:</strong> [TODO: z.B. letzter Freitag im Quartal]
+- <strong>Dauer:</strong> 1 Stunde
+- <strong>Teilnehmer:</strong> Geschäftsführung, ISB, IT-Leitung
+- <strong>Agenda:</strong>
+  - ISMS-Performance (KPIs)
+  - Maßnahmenumsetzung
+  - Risiko-Dashboard
+  - Budget und Ressourcen
+  - Strategische Entscheidungen</p>
+<p><strong>Jährlich - Management Review (umfassend):</strong>
+- <strong>Termin:</strong> [TODO: z.B. Q4]
+- <strong>Dauer:</strong> Halber Tag
+- <strong>Teilnehmer:</strong> Geschäftsführung, ISB, IT-Leitung, ISMS-Team
+- <strong>Agenda:</strong> Siehe Dokument 0140 (Management Review Template)</p>
+<h3 id="13-reporting-kanale">1.3 Reporting-Kanäle</h3>
+<table>
+<thead>
+<tr>
+<th>Bericht</th>
+<th>Frequenz</th>
+<th>Ersteller</th>
+<th>Empfänger</th>
+<th>Tool/Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Maßnahmen-Status</td>
+<td>Wöchentlich</td>
+<td>ISB</td>
+<td>IT-Leitung</td>
+<td>[TODO: Ticketing-System]</td>
+</tr>
+<tr>
+<td>ISMS-Status-Report</td>
+<td>Monatlich</td>
+<td>ISB</td>
+<td>Geschäftsführung, ISMS-Team</td>
+<td>[TODO: Dashboard/PDF]</td>
+</tr>
+<tr>
+<td>Sicherheitsvorfälle</td>
+<td>Monatlich</td>
+<td>ISB</td>
+<td>Geschäftsführung</td>
+<td>[TODO: Incident-Tool]</td>
+</tr>
+<tr>
+<td>Risiko-Dashboard</td>
+<td>Quartalsweise</td>
+<td>ISB</td>
+<td>Geschäftsführung</td>
+<td>[TODO: GRC-Tool]</td>
+</tr>
+<tr>
+<td>Management Review</td>
+<td>Jährlich</td>
+<td>ISB</td>
+<td>Geschäftsführung</td>
+<td>Präsentation</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-key-performance-indicators-kpis">2. Key Performance Indicators (KPIs)</h2>
+<h3 id="21-manahmenumsetzung">2.1 Maßnahmenumsetzung</h3>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th>Definition</th>
+<th>Ziel</th>
+<th>Quelle</th>
+<th>Frequenz</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Maßnahmenplan-Erfüllung</strong></td>
+<td>% abgeschlossene Maßnahmen vs. geplant</td>
+<td>100%</td>
+<td>Maßnahmenplan (Dokument 0100)</td>
+<td>Monatlich</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td><strong>P1-Maßnahmen-Erfüllung</strong></td>
+<td>% abgeschlossene P1-Maßnahmen</td>
+<td>100% in [TODO] Monaten</td>
+<td>Maßnahmenplan</td>
+<td>Wöchentlich</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td><strong>Maßnahmen-Verzögerung</strong></td>
+<td>Durchschnittliche Verzögerung in Tagen</td>
+<td>&lt; 14 Tage</td>
+<td>Maßnahmenplan</td>
+<td>Monatlich</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td><strong>Budget-Einhaltung</strong></td>
+<td>% genutztes Budget vs. geplant</td>
+<td>100% ± 10%</td>
+<td>Finanzcontrolling</td>
+<td>Monatlich</td>
+<td>Max Mustermann</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-it-grundschutz-compliance">2.2 IT-Grundschutz-Compliance</h3>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th>Definition</th>
+<th>Ziel</th>
+<th>Quelle</th>
+<th>Frequenz</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Erfüllungsgrad IT-Grundschutz</strong></td>
+<td>% erfüllte Anforderungen</td>
+<td>&gt; 80%</td>
+<td>Basis-Sicherheitscheck (Dokument 0080)</td>
+<td>Quartalsweise</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td><strong>Kritische Lücken</strong></td>
+<td>Anzahl nicht erfüllter P1-Anforderungen</td>
+<td>0</td>
+<td>Basis-Sicherheitscheck</td>
+<td>Monatlich</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td><strong>Baustein-Abdeckung</strong></td>
+<td>% modellierte Bausteine mit Soll-Ist-Vergleich</td>
+<td>100%</td>
+<td>Modellierung (Dokument 0070)</td>
+<td>Quartalsweise</td>
+<td>Thomas Weber</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-risikomanagement">2.3 Risikomanagement</h3>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th>Definition</th>
+<th>Ziel</th>
+<th>Quelle</th>
+<th>Frequenz</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Risiko-Exposition</strong></td>
+<td>Anzahl "Sehr hoch"-Risiken</td>
+<td>0</td>
+<td>Risikoregister (Dokument 0090)</td>
+<td>Monatlich</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td><strong>Risikoreduktion</strong></td>
+<td>% reduzierte Risiken vs. identifiziert</td>
+<td>&gt; 80%</td>
+<td>Risikoregister</td>
+<td>Quartalsweise</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td><strong>Risikoakzeptanz-Quote</strong></td>
+<td>% akzeptierte Risiken (ohne Maßnahmen)</td>
+<td>&lt; 10%</td>
+<td>Risikoregister</td>
+<td>Quartalsweise</td>
+<td>Thomas Weber</td>
+</tr>
+</tbody>
+</table>
+<h3 id="24-patch-und-vulnerability-management">2.4 Patch- und Vulnerability Management</h3>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th>Definition</th>
+<th>Ziel</th>
+<th>Quelle</th>
+<th>Frequenz</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Patch-Compliance</strong></td>
+<td>% Systeme mit aktuellen Patches</td>
+<td>&gt; 95%</td>
+<td>Patch-Management-Tool</td>
+<td>Monatlich</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td><strong>Kritische Patches (SLA)</strong></td>
+<td>% kritische Patches innerhalb SLA (7 Tage)</td>
+<td>100%</td>
+<td>Patch-Management-Tool</td>
+<td>Wöchentlich</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td><strong>Vulnerability-Remediation</strong></td>
+<td>Durchschnittliche Zeit bis Behebung (Tage)</td>
+<td>&lt; 30 Tage (Hoch), &lt; 90 Tage (Mittel)</td>
+<td>Vulnerability Scanner</td>
+<td>Monatlich</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td><strong>Offene Schwachstellen</strong></td>
+<td>Anzahl offener Schwachstellen (Kritisch/Hoch)</td>
+<td>&lt; 10</td>
+<td>Vulnerability Scanner</td>
+<td>Wöchentlich</td>
+<td>Anna Schmidt</td>
+</tr>
+</tbody>
+</table>
+<h3 id="25-backup-und-recovery">2.5 Backup und Recovery</h3>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th>Definition</th>
+<th>Ziel</th>
+<th>Quelle</th>
+<th>Frequenz</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Backup-Erfolgsrate</strong></td>
+<td>% erfolgreiche Backups</td>
+<td>&gt; 99%</td>
+<td>Backup-System</td>
+<td>Täglich</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td><strong>Backup-Testquote</strong></td>
+<td>% erfolgreiche Restore-Tests</td>
+<td>100%</td>
+<td>Test-Protokolle</td>
+<td>Quartalsweise</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td><strong>Recovery Time Actual (RTA)</strong></td>
+<td>Tatsächliche Wiederherstellungszeit</td>
+<td>&lt; RTO</td>
+<td>Test-Protokolle</td>
+<td>Quartalsweise</td>
+<td>Anna Schmidt</td>
+</tr>
+</tbody>
+</table>
+<h3 id="26-incident-management">2.6 Incident Management</h3>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th>Definition</th>
+<th>Ziel</th>
+<th>Quelle</th>
+<th>Frequenz</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sicherheitsvorfälle</strong></td>
+<td>Anzahl Sicherheitsvorfälle</td>
+<td>Trend abnehmend</td>
+<td>Incident-Management-System</td>
+<td>Monatlich</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td><strong>Mean Time to Detect (MTTD)</strong></td>
+<td>Durchschnittliche Erkennungszeit</td>
+<td>&lt; 24 Stunden</td>
+<td>SIEM</td>
+<td>Monatlich</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td><strong>Mean Time to Respond (MTTR)</strong></td>
+<td>Durchschnittliche Reaktionszeit</td>
+<td>&lt; 4 Stunden (Kritisch)</td>
+<td>Incident-Management-System</td>
+<td>Monatlich</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td><strong>Incident-Closure-Rate</strong></td>
+<td>% geschlossene Incidents innerhalb SLA</td>
+<td>&gt; 95%</td>
+<td>Incident-Management-System</td>
+<td>Monatlich</td>
+<td>Thomas Weber</td>
+</tr>
+</tbody>
+</table>
+<h3 id="27-awareness-und-schulung">2.7 Awareness und Schulung</h3>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th>Definition</th>
+<th>Ziel</th>
+<th>Quelle</th>
+<th>Frequenz</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Schulungsquote</strong></td>
+<td>% Mitarbeitende mit Awareness-Schulung</td>
+<td>100%</td>
+<td>HR-System</td>
+<td>Quartalsweise</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td><strong>Phishing-Test-Erfolgsrate</strong></td>
+<td>% Mitarbeitende, die Phishing-Test bestehen</td>
+<td>&gt; 90%</td>
+<td>Phishing-Simulation</td>
+<td>Quartalsweise</td>
+<td>Thomas Weber</td>
+</tr>
+<tr>
+<td><strong>Security-Champion-Quote</strong></td>
+<td>Anzahl Security Champions pro Abteilung</td>
+<td>Min. 1 pro Abteilung</td>
+<td>ISMS-Team</td>
+<td>Jährlich</td>
+<td>Thomas Weber</td>
+</tr>
+</tbody>
+</table>
+<h3 id="28-access-management">2.8 Access Management</h3>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th>Definition</th>
+<th>Ziel</th>
+<th>Quelle</th>
+<th>Frequenz</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Privileged Account Compliance</strong></td>
+<td>% privilegierte Accounts mit MFA</td>
+<td>100%</td>
+<td>IAM-System</td>
+<td>Monatlich</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td><strong>Access Review Compliance</strong></td>
+<td>% durchgeführte Zugriffsrezertifizierungen</td>
+<td>100%</td>
+<td>IAM-System</td>
+<td>Quartalsweise</td>
+<td>Anna Schmidt</td>
+</tr>
+<tr>
+<td><strong>Orphaned Accounts</strong></td>
+<td>Anzahl verwaister Accounts</td>
+<td>0</td>
+<td>IAM-System</td>
+<td>Monatlich</td>
+<td>Anna Schmidt</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-kpi-dashboard">3. KPI-Dashboard</h2>
+<h3 id="31-ampel-status">3.1 Ampel-Status</h3>
+<table>
+<thead>
+<tr>
+<th>KPI-Kategorie</th>
+<th>Aktueller Wert</th>
+<th>Ziel</th>
+<th>Status</th>
+<th>Trend</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Maßnahmenumsetzung</td>
+<td>[TODO: %]</td>
+<td>100%</td>
+<td>🟢/🟡/🔴</td>
+<td>↗/→/↘</td>
+</tr>
+<tr>
+<td>IT-Grundschutz-Compliance</td>
+<td>[TODO: %]</td>
+<td>&gt; 80%</td>
+<td>🟢/🟡/🔴</td>
+<td>↗/→/↘</td>
+</tr>
+<tr>
+<td>Risikomanagement</td>
+<td>[TODO]</td>
+<td>0 "Sehr hoch"</td>
+<td>🟢/🟡/🔴</td>
+<td>↗/→/↘</td>
+</tr>
+<tr>
+<td>Patch-Compliance</td>
+<td>[TODO: %]</td>
+<td>&gt; 95%</td>
+<td>🟢/🟡/🔴</td>
+<td>↗/→/↘</td>
+</tr>
+<tr>
+<td>Backup-Erfolgsrate</td>
+<td>[TODO: %]</td>
+<td>&gt; 99%</td>
+<td>🟢/🟡/🔴</td>
+<td>↗/→/↘</td>
+</tr>
+<tr>
+<td>Sicherheitsvorfälle</td>
+<td>[TODO]</td>
+<td>Trend ↘</td>
+<td>🟢/🟡/🔴</td>
+<td>↗/→/↘</td>
+</tr>
+<tr>
+<td>Awareness-Schulung</td>
+<td>[TODO: %]</td>
+<td>100%</td>
+<td>🟢/🟡/🔴</td>
+<td>↗/→/↘</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ampel-Logik:</strong>
+- 🟢 <strong>Grün:</strong> Ziel erreicht oder übertroffen
+- 🟡 <strong>Gelb:</strong> Ziel nicht erreicht, aber akzeptabel (&lt; 10% Abweichung)
+- 🔴 <strong>Rot:</strong> Ziel deutlich verfehlt (&gt; 10% Abweichung), Eskalation erforderlich</p>
+<h3 id="32-trend-analyse">3.2 Trend-Analyse</h3>
+<p>[TODO: Diagramme und Trend-Visualisierungen einfügen]</p>
+<h2 id="4-eskalationsregeln">4. Eskalationsregeln</h2>
+<h3 id="41-eskalationsstufen">4.1 Eskalationsstufen</h3>
+<table>
+<thead>
+<tr>
+<th>Stufe</th>
+<th>Trigger</th>
+<th>Eskalation an</th>
+<th>Reaktionszeit</th>
+<th>Maßnahmen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Stufe 1</strong></td>
+<td>KPI 🟡 für 1 Monat</td>
+<td>IT-Leitung</td>
+<td>1 Woche</td>
+<td>Ursachenanalyse, Korrekturmaßnahmen</td>
+</tr>
+<tr>
+<td><strong>Stufe 2</strong></td>
+<td>KPI 🔴 oder 🟡 für 2 Monate</td>
+<td>ISB</td>
+<td>3 Tage</td>
+<td>Eskalationsmeeting, Ressourcen prüfen</td>
+</tr>
+<tr>
+<td><strong>Stufe 3</strong></td>
+<td>KPI 🔴 für 1 Monat</td>
+<td>Geschäftsführung</td>
+<td>Sofort</td>
+<td>Management-Entscheidung, Ressourcen freigeben</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-eskalationsprozess">4.2 Eskalationsprozess</h3>
+<ol>
+<li><strong>Identifikation:</strong> KPI-Abweichung wird erkannt</li>
+<li><strong>Analyse:</strong> Ursachenanalyse durch Owner</li>
+<li><strong>Eskalation:</strong> Eskalation gemäß Stufe</li>
+<li><strong>Maßnahmen:</strong> Korrekturmaßnahmen definieren und umsetzen</li>
+<li><strong>Monitoring:</strong> Engmaschiges Monitoring bis Zielerreichung</li>
+<li><strong>Lessons Learned:</strong> Dokumentation und Prozessverbesserung</li>
+</ol>
+<h2 id="5-reporting-templates">5. Reporting-Templates</h2>
+<h3 id="51-monatlicher-isms-status-report">5.1 Monatlicher ISMS-Status-Report</h3>
+<p><strong>Berichtsstruktur:</strong>
+1. <strong>Executive Summary:</strong> Gesamtstatus (1 Seite)
+2. <strong>KPI-Dashboard:</strong> Ampel-Status und Trends
+3. <strong>Maßnahmenfortschritt:</strong> Top 10 Maßnahmen
+4. <strong>Sicherheitsvorfälle:</strong> Zusammenfassung
+5. <strong>Risiken:</strong> Top 5 Risiken
+6. <strong>Eskalationen:</strong> Offene Eskalationen
+7. <strong>Nächste Schritte:</strong> Geplante Aktivitäten</p>
+<h3 id="52-quartalsweises-risiko-dashboard">5.2 Quartalsweises Risiko-Dashboard</h3>
+<p><strong>Berichtsstruktur:</strong>
+1. <strong>Risiko-Heatmap:</strong> Visualisierung aller Risiken
+2. <strong>Top 10 Risiken:</strong> Detailbeschreibung
+3. <strong>Risikoreduktion:</strong> Fortschritt seit letztem Quartal
+4. <strong>Neue Risiken:</strong> Identifizierte neue Risiken
+5. <strong>Risikoakzeptanz:</strong> Akzeptierte Risiken mit Begründung</p>
+<h3 id="53-jahrliches-management-review">5.3 Jährliches Management Review</h3>
+<p><strong>Berichtsstruktur:</strong> Siehe Dokument 0140 (Management Review Template)</p>
+<h2 id="6-continuous-improvement">6. Continuous Improvement</h2>
+<h3 id="61-verbesserungsprozess">6.1 Verbesserungsprozess</h3>
+<p><strong>PDCA-Zyklus:</strong>
+1. <strong>Plan:</strong> Ziele und KPIs definieren
+2. <strong>Do:</strong> Maßnahmen umsetzen
+3. <strong>Check:</strong> KPIs messen und bewerten
+4. <strong>Act:</strong> Verbesserungsmaßnahmen ableiten</p>
+<h3 id="62-lessons-learned">6.2 Lessons Learned</h3>
+<p>Nach jedem größeren Vorfall oder Projekt:
+1. <strong>Retrospektive:</strong> Was lief gut? Was nicht?
+2. <strong>Root Cause Analysis:</strong> Ursachen identifizieren
+3. <strong>Verbesserungsmaßnahmen:</strong> Konkrete Maßnahmen definieren
+4. <strong>Dokumentation:</strong> Lessons Learned dokumentieren
+5. <strong>Kommunikation:</strong> Erkenntnisse teilen</p>
+<h2 id="7-tools-und-systeme">7. Tools und Systeme</h2>
+<table>
+<thead>
+<tr>
+<th>Tool/System</th>
+<th>Zweck</th>
+<th>Owner</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: GRC-Tool]</td>
+<td>Risikomanagement, Compliance</td>
+<td>Thomas Weber</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: Ticketing-System]</td>
+<td>Maßnahmentracking</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: SIEM]</td>
+<td>Security Monitoring</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: Vulnerability Scanner]</td>
+<td>Schwachstellen-Management</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: Dashboard-Tool]</td>
+<td>KPI-Visualisierung</td>
+<td>Thomas Weber</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="8-freigabe">8. Freigabe</h2>
+<table>
+<thead>
+<tr>
+<th>Rolle</th>
+<th>Name</th>
+<th>Datum</th>
+<th>Freigabe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ISB</td>
+<td>Thomas Weber</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+<tr>
+<td>IT-Leitung</td>
+<td>Anna Schmidt</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+<tr>
+<td>Geschäftsführung</td>
+<td>Max Mustermann</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Referenzen:</strong>
+- BSI Standard 200-1: Managementsysteme für Informationssicherheit (ISMS)
+- BSI Standard 200-2: IT-Grundschutz-Methodik</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0100_Sicherheitskonzept_und_Massnahmenplan.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0200_Policy_Zugriffssteuerung_und_Berechtigungen.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

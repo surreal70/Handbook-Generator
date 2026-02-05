@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0080 - Basis-Sicherheitscheck / Gap-Analyse (Template)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0080</div>
+            <h1>Basis-Sicherheitscheck / Gap-Analyse (Template)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0070_Modellierung_Bausteinzuordnung_Template.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0090_Risikoanalyse_nach_BSI_200_3_Template.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="basis-sicherheitscheck-gap-analyse-template">Basis-Sicherheitscheck / Gap-Analyse (Template)</h1>
+<p><strong>Dokument-ID:</strong> 0080<br />
+<strong>Dokumenttyp:</strong> Methodik-Artefakt<br />
+<strong>Referenzrahmen:</strong> BSI IT-Grundschutz (BSI Standard 200-2)<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> {{ meta.document.status }}<br />
+<strong>Klassifizierung:</strong> internal<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.last_updated }}<br />
+<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-ziel-und-zweck">1. Ziel und Zweck</h2>
+<p>Der Basis-Sicherheitscheck bewertet systematisch, inwieweit die für den Informationsverbund von <strong>AdminSend GmbH</strong> modellierten IT-Grundschutz-Anforderungen umgesetzt sind. Er bildet die Grundlage für:
+- Identifikation von Sicherheitslücken (Gaps)
+- Priorisierung von Maßnahmen
+- Maßnahmenplanung (Dokument 0100)
+- Compliance-Nachweis</p>
+<p><strong>Verantwortlich:</strong> Thomas Weber (ISB)</p>
+<h2 id="2-vorgehen-und-methodik">2. Vorgehen und Methodik</h2>
+<h3 id="21-datenquellen">2.1 Datenquellen</h3>
+<p>Folgende Quellen werden für den Basis-Sicherheitscheck genutzt:</p>
+<table>
+<thead>
+<tr>
+<th>Datenquelle</th>
+<th>Typ</th>
+<th>Verantwortlich</th>
+<th>Verwendung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Interviews mit Stakeholdern</td>
+<td>Primärquelle</td>
+<td>Thomas Weber</td>
+<td>Prozess- und Organisationsanforderungen</td>
+</tr>
+<tr>
+<td>Konfigurationsnachweise</td>
+<td>Technisch</td>
+<td>Anna Schmidt</td>
+<td>Technische Anforderungen</td>
+</tr>
+<tr>
+<td>Policies und Richtlinien</td>
+<td>Dokument</td>
+<td>Thomas Weber</td>
+<td>Organisatorische Anforderungen</td>
+</tr>
+<tr>
+<td>Tickets und Change-Records</td>
+<td>System</td>
+<td>Anna Schmidt</td>
+<td>Umsetzungsnachweise</td>
+</tr>
+<tr>
+<td>Logs und Monitoring-Daten</td>
+<td>System</td>
+<td>Anna Schmidt</td>
+<td>Betriebsanforderungen</td>
+</tr>
+<tr>
+<td>Audit-Berichte</td>
+<td>Dokument</td>
+<td>[TODO: Internal Audit]</td>
+<td>Externe Validierung</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-bewertungslogik">2.2 Bewertungslogik</h3>
+<p><strong>Erfüllungsgrade:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Kürzel</th>
+<th>Beschreibung</th>
+<th>Kriterien</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Erfüllt</strong></td>
+<td>E</td>
+<td>Anforderung vollständig umgesetzt</td>
+<td>Alle Aspekte der Anforderung sind implementiert und nachgewiesen</td>
+</tr>
+<tr>
+<td><strong>Teilweise erfüllt</strong></td>
+<td>T</td>
+<td>Anforderung teilweise umgesetzt</td>
+<td>Wesentliche Aspekte umgesetzt, aber Lücken vorhanden</td>
+</tr>
+<tr>
+<td><strong>Nicht erfüllt</strong></td>
+<td>N</td>
+<td>Anforderung nicht umgesetzt</td>
+<td>Anforderung nicht oder nur minimal umgesetzt</td>
+</tr>
+<tr>
+<td><strong>Nicht anwendbar</strong></td>
+<td>N/A</td>
+<td>Anforderung nicht relevant</td>
+<td>Anforderung trifft auf Organisation nicht zu</td>
+</tr>
+<tr>
+<td><strong>Nicht bewertet</strong></td>
+<td>-</td>
+<td>Noch nicht geprüft</td>
+<td>Bewertung steht noch aus</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-stichprobenumfang">2.3 Stichprobenumfang</h3>
+<p><strong>Prüftiefe:</strong>
+- <strong>Kritische Anforderungen (Schutzbedarf "Sehr hoch"):</strong> 100% Prüfung
+- <strong>Wichtige Anforderungen (Schutzbedarf "Hoch"):</strong> Stichprobe 50%
+- <strong>Standard-Anforderungen (Schutzbedarf "Normal"):</strong> Stichprobe 25%</p>
+<p><strong>Prüfmethoden:</strong>
+- Dokumentenprüfung
+- Konfigurationsprüfung
+- Interviews
+- Technische Tests (Stichproben)</p>
+<h3 id="24-durchfuhrung">2.4 Durchführung</h3>
+<p><strong>Zeitplan:</strong>
+- <strong>Start:</strong> [TODO]
+- <strong>Datenerhebung:</strong> [TODO: z.B. 4 Wochen]
+- <strong>Bewertung:</strong> [TODO: z.B. 2 Wochen]
+- <strong>Validierung:</strong> [TODO: z.B. 1 Woche]
+- <strong>Abschluss:</strong> [TODO]</p>
+<p><strong>Beteiligte:</strong>
+- ISB: Thomas Weber
+- IT-Leitung: Anna Schmidt
+- Informationsverbund-Verantwortliche: [TODO]
+- Fachabteilungen: [TODO]</p>
+<h2 id="3-basis-sicherheitscheck-ergebnisse">3. Basis-Sicherheitscheck: Ergebnisse</h2>
+<h3 id="31-isms-und-organisation-isms-orp">3.1 ISMS und Organisation (ISMS, ORP)</h3>
+<table>
+<thead>
+<tr>
+<th>Baustein</th>
+<th>Anforderung (Kurz)</th>
+<th>Objekt</th>
+<th>Status</th>
+<th>Nachweis/Evidence</th>
+<th>Finding</th>
+<th>Maßnahme</th>
+<th>Owner</th>
+<th>Zieltermin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ISMS.1</td>
+<td>Sicherheitsleitlinie erstellt</td>
+<td>AdminSend GmbH</td>
+<td>E</td>
+<td>Dokument 0010</td>
+<td>-</td>
+<td>-</td>
+<td>Thomas Weber</td>
+<td>-</td>
+</tr>
+<tr>
+<td>ISMS.1</td>
+<td>ISMS-Organisation definiert</td>
+<td>AdminSend GmbH</td>
+<td>E</td>
+<td>Dokument 0020</td>
+<td>-</td>
+<td>-</td>
+<td>Thomas Weber</td>
+<td>-</td>
+</tr>
+<tr>
+<td>ISMS.1</td>
+<td>Ressourcen bereitgestellt</td>
+<td>AdminSend GmbH</td>
+<td>T</td>
+<td>Budget-Nachweis</td>
+<td>Budget unzureichend</td>
+<td>Budget erhöhen</td>
+<td>Max Mustermann</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>ORP.1</td>
+<td>Rollen und Verantwortlichkeiten definiert</td>
+<td>AdminSend GmbH</td>
+<td>E</td>
+<td>Dokument 0020</td>
+<td>-</td>
+<td>-</td>
+<td>Thomas Weber</td>
+<td>-</td>
+</tr>
+<tr>
+<td>ORP.2</td>
+<td>Einarbeitung neuer Mitarbeitender</td>
+<td>AdminSend GmbH</td>
+<td>T</td>
+<td>HR-Prozess</td>
+<td>Keine Security-Schulung im Onboarding</td>
+<td>Security-Schulung integrieren</td>
+<td>[TODO: HR]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>ORP.3</td>
+<td>Awareness-Programm</td>
+<td>AdminSend GmbH</td>
+<td>N</td>
+<td>-</td>
+<td>Kein Awareness-Programm vorhanden</td>
+<td>Awareness-Programm aufbauen</td>
+<td>Thomas Weber</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>ORP.4</td>
+<td>IAM-Prozess</td>
+<td>AdminSend GmbH</td>
+<td>T</td>
+<td>IAM-Richtlinie</td>
+<td>Rezertifizierung fehlt</td>
+<td>Rezertifizierungsprozess implementieren</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-konzeption-und-vorgehensweisen-con">3.2 Konzeption und Vorgehensweisen (CON)</h3>
+<table>
+<thead>
+<tr>
+<th>Baustein</th>
+<th>Anforderung (Kurz)</th>
+<th>Objekt</th>
+<th>Status</th>
+<th>Nachweis/Evidence</th>
+<th>Finding</th>
+<th>Maßnahme</th>
+<th>Owner</th>
+<th>Zieltermin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CON.1</td>
+<td>Kryptokonzept erstellt</td>
+<td>Kryptokonzept</td>
+<td>N</td>
+<td>-</td>
+<td>Kein Kryptokonzept vorhanden</td>
+<td>Kryptokonzept erstellen</td>
+<td>Thomas Weber</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>CON.3</td>
+<td>Datensicherungskonzept erstellt</td>
+<td>Backup-Konzept</td>
+<td>E</td>
+<td>Backup-Dokumentation</td>
+<td>-</td>
+<td>-</td>
+<td>Anna Schmidt</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CON.3</td>
+<td>Backup-Tests durchgeführt</td>
+<td>Backup-Prozess</td>
+<td>T</td>
+<td>Test-Protokolle</td>
+<td>Tests nicht regelmäßig</td>
+<td>Quartalsweise Backup-Tests etablieren</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>CON.6</td>
+<td>Löschkonzept erstellt</td>
+<td>Löschkonzept</td>
+<td>N</td>
+<td>-</td>
+<td>Kein Löschkonzept vorhanden</td>
+<td>Löschkonzept erstellen</td>
+<td>Thomas Weber</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="33-betrieb-ops">3.3 Betrieb (OPS)</h3>
+<table>
+<thead>
+<tr>
+<th>Baustein</th>
+<th>Anforderung (Kurz)</th>
+<th>Objekt</th>
+<th>Status</th>
+<th>Nachweis/Evidence</th>
+<th>Finding</th>
+<th>Maßnahme</th>
+<th>Owner</th>
+<th>Zieltermin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OPS.1.1.2</td>
+<td>Administrationskonzept</td>
+<td>IT-Administration</td>
+<td>T</td>
+<td>Admin-Richtlinie</td>
+<td>Privileged Access Management fehlt</td>
+<td>PAM-Lösung implementieren</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>OPS.1.1.3</td>
+<td>Patch-Prozess etabliert</td>
+<td>Patch Management</td>
+<td>E</td>
+<td>Patch-Dokumentation</td>
+<td>-</td>
+<td>-</td>
+<td>Anna Schmidt</td>
+<td>-</td>
+</tr>
+<tr>
+<td>OPS.1.1.3</td>
+<td>Patch-SLAs definiert</td>
+<td>Patch Management</td>
+<td>T</td>
+<td>SLA-Dokument</td>
+<td>Kritische Patches &gt; 30 Tage</td>
+<td>SLA auf 7 Tage reduzieren</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>OPS.1.1.4</td>
+<td>Malware-Schutz implementiert</td>
+<td>Alle Systeme</td>
+<td>E</td>
+<td>Antivirus-Lösung</td>
+<td>-</td>
+<td>-</td>
+<td>Anna Schmidt</td>
+<td>-</td>
+</tr>
+<tr>
+<td>OPS.1.1.5</td>
+<td>Logging aktiviert</td>
+<td>Alle Systeme</td>
+<td>T</td>
+<td>Log-Konfiguration</td>
+<td>Zentrale Log-Sammlung fehlt</td>
+<td>SIEM implementieren</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>OPS.2.2</td>
+<td>Cloud-Sicherheitskonzept</td>
+<td>Cloud-Services</td>
+<td>N</td>
+<td>-</td>
+<td>Kein Cloud-Sicherheitskonzept</td>
+<td>Cloud-Sicherheitskonzept erstellen</td>
+<td>Thomas Weber</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="34-detektion-und-reaktion-der">3.4 Detektion und Reaktion (DER)</h3>
+<table>
+<thead>
+<tr>
+<th>Baustein</th>
+<th>Anforderung (Kurz)</th>
+<th>Objekt</th>
+<th>Status</th>
+<th>Nachweis/Evidence</th>
+<th>Finding</th>
+<th>Maßnahme</th>
+<th>Owner</th>
+<th>Zieltermin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DER.1</td>
+<td>Detektion etabliert</td>
+<td>Monitoring</td>
+<td>T</td>
+<td>Monitoring-Tools</td>
+<td>SIEM fehlt</td>
+<td>SIEM implementieren</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>DER.2.1</td>
+<td>Incident-Response-Prozess</td>
+<td>Incident Management</td>
+<td>T</td>
+<td>IR-Richtlinie</td>
+<td>Keine Incident-Response-Übungen</td>
+<td>Jährliche IR-Übung etablieren</td>
+<td>Thomas Weber</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>DER.2.2</td>
+<td>Forensik-Vorbereitung</td>
+<td>Forensik</td>
+<td>N</td>
+<td>-</td>
+<td>Keine Forensik-Vorbereitung</td>
+<td>Forensik-Konzept erstellen</td>
+<td>Thomas Weber</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="35-anwendungen-app">3.5 Anwendungen (APP)</h3>
+<table>
+<thead>
+<tr>
+<th>Baustein</th>
+<th>Anforderung (Kurz)</th>
+<th>Objekt</th>
+<th>Status</th>
+<th>Nachweis/Evidence</th>
+<th>Finding</th>
+<th>Maßnahme</th>
+<th>Owner</th>
+<th>Zieltermin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>APP.3.1</td>
+<td>Sichere Webanwendungsentwicklung</td>
+<td>[TODO: Webanwendung]</td>
+<td>T</td>
+<td>SDLC-Prozess</td>
+<td>SAST/DAST fehlt</td>
+<td>Security-Testing integrieren</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>APP.3.2</td>
+<td>Webserver-Härtung</td>
+<td>[TODO: Webserver]</td>
+<td>E</td>
+<td>Härtungs-Checkliste</td>
+<td>-</td>
+<td>-</td>
+<td>Anna Schmidt</td>
+<td>-</td>
+</tr>
+<tr>
+<td>APP.4.3</td>
+<td>Datenbank-Härtung</td>
+<td>[TODO: Datenbank]</td>
+<td>T</td>
+<td>DB-Konfiguration</td>
+<td>Verschlüsselung at rest fehlt</td>
+<td>TDE aktivieren</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="36-it-systeme-sys">3.6 IT-Systeme (SYS)</h3>
+<table>
+<thead>
+<tr>
+<th>Baustein</th>
+<th>Anforderung (Kurz)</th>
+<th>Objekt</th>
+<th>Status</th>
+<th>Nachweis/Evidence</th>
+<th>Finding</th>
+<th>Maßnahme</th>
+<th>Owner</th>
+<th>Zieltermin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SYS.1.1</td>
+<td>Server-Härtung</td>
+<td>{{ netbox.device.server_001 }}</td>
+<td>E</td>
+<td>Härtungs-Baseline</td>
+<td>-</td>
+<td>-</td>
+<td>Anna Schmidt</td>
+<td>-</td>
+</tr>
+<tr>
+<td>SYS.1.3</td>
+<td>Linux-Härtung</td>
+<td>[TODO: Linux-Server]</td>
+<td>T</td>
+<td>CIS Benchmark</td>
+<td>Nicht alle CIS-Controls umgesetzt</td>
+<td>Vollständige CIS-Umsetzung</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>SYS.1.5</td>
+<td>Virtualisierungs-Sicherheit</td>
+<td>[TODO: VMware]</td>
+<td>T</td>
+<td>VMware-Konfiguration</td>
+<td>Netzwerksegmentierung unzureichend</td>
+<td>Mikrosegmentierung implementieren</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>SYS.2.1</td>
+<td>Client-Härtung</td>
+<td>Workstations</td>
+<td>T</td>
+<td>GPO-Konfiguration</td>
+<td>BitLocker nicht flächendeckend</td>
+<td>BitLocker auf allen Clients aktivieren</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>SYS.3.2.1</td>
+<td>Mobile Device Management</td>
+<td>Mobile Devices</td>
+<td>N</td>
+<td>-</td>
+<td>Kein MDM vorhanden</td>
+<td>MDM-Lösung implementieren</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="37-netzwerke-und-kommunikation-net">3.7 Netzwerke und Kommunikation (NET)</h3>
+<table>
+<thead>
+<tr>
+<th>Baustein</th>
+<th>Anforderung (Kurz)</th>
+<th>Objekt</th>
+<th>Status</th>
+<th>Nachweis/Evidence</th>
+<th>Finding</th>
+<th>Maßnahme</th>
+<th>Owner</th>
+<th>Zieltermin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NET.1.1</td>
+<td>Netzwerksegmentierung</td>
+<td>Netzwerkarchitektur</td>
+<td>T</td>
+<td>Netzwerkdiagramm</td>
+<td>Segmentierung unzureichend</td>
+<td>Mikrosegmentierung implementieren</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>NET.1.2</td>
+<td>Netzwerk-Monitoring</td>
+<td>Netzwerkmanagement</td>
+<td>E</td>
+<td>Monitoring-Tools</td>
+<td>-</td>
+<td>-</td>
+<td>Anna Schmidt</td>
+<td>-</td>
+</tr>
+<tr>
+<td>NET.3.1</td>
+<td>Router/Switch-Härtung</td>
+<td>Netzwerkgeräte</td>
+<td>T</td>
+<td>Konfigurationsnachweise</td>
+<td>SNMP v3 nicht überall</td>
+<td>SNMP v3 flächendeckend</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>NET.3.2</td>
+<td>Firewall-Regelwerk</td>
+<td>Firewall</td>
+<td>E</td>
+<td>Firewall-Rules</td>
+<td>-</td>
+<td>-</td>
+<td>Anna Schmidt</td>
+<td>-</td>
+</tr>
+<tr>
+<td>NET.3.3</td>
+<td>VPN-Sicherheit</td>
+<td>VPN</td>
+<td>T</td>
+<td>VPN-Konfiguration</td>
+<td>MFA für VPN fehlt</td>
+<td>MFA für VPN implementieren</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>NET.2.1</td>
+<td>WLAN-Sicherheit</td>
+<td>WLAN</td>
+<td>E</td>
+<td>WLAN-Konfiguration</td>
+<td>-</td>
+<td>-</td>
+<td>Anna Schmidt</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="38-infrastruktur-inf">3.8 Infrastruktur (INF)</h3>
+<table>
+<thead>
+<tr>
+<th>Baustein</th>
+<th>Anforderung (Kurz)</th>
+<th>Objekt</th>
+<th>Status</th>
+<th>Nachweis/Evidence</th>
+<th>Finding</th>
+<th>Maßnahme</th>
+<th>Owner</th>
+<th>Zieltermin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>INF.1</td>
+<td>Gebäudesicherheit</td>
+<td>{{ meta.organization.primary_location }}</td>
+<td>T</td>
+<td>Sicherheitskonzept</td>
+<td>Besuchermanagement unzureichend</td>
+<td>Besuchermanagement-System</td>
+<td>[TODO: Facility]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>INF.2</td>
+<td>Rechenzentrum-Sicherheit</td>
+<td>Rechenzentrum</td>
+<td>E</td>
+<td>RZ-Dokumentation</td>
+<td>-</td>
+<td>-</td>
+<td>[TODO: Facility]</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-zusammenfassung-und-statistik">4. Zusammenfassung und Statistik</h2>
+<h3 id="41-erfullungsstatistik">4.1 Erfüllungsstatistik</h3>
+<table>
+<thead>
+<tr>
+<th>Bausteinschicht</th>
+<th>Gesamt</th>
+<th>Erfüllt (E)</th>
+<th>Teilweise (T)</th>
+<th>Nicht erfüllt (N)</th>
+<th>N/A</th>
+<th>Erfüllungsgrad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ISMS</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO: %]</td>
+</tr>
+<tr>
+<td>ORP</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO: %]</td>
+</tr>
+<tr>
+<td>CON</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO: %]</td>
+</tr>
+<tr>
+<td>OPS</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO: %]</td>
+</tr>
+<tr>
+<td>DER</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO: %]</td>
+</tr>
+<tr>
+<td>APP</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO: %]</td>
+</tr>
+<tr>
+<td>SYS</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO: %]</td>
+</tr>
+<tr>
+<td>NET</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO: %]</td>
+</tr>
+<tr>
+<td>INF</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO: %]</td>
+</tr>
+<tr>
+<td><strong>Gesamt</strong></td>
+<td><strong>[TODO]</strong></td>
+<td><strong>[TODO]</strong></td>
+<td><strong>[TODO]</strong></td>
+<td><strong>[TODO]</strong></td>
+<td><strong>[TODO]</strong></td>
+<td><strong>[TODO: %]</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Gesamterfüllungsgrad:</strong> [TODO: %]</p>
+<h3 id="42-kritische-lucken-prioritat-1">4.2 Kritische Lücken (Priorität 1)</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Anforderung</th>
+<th>Objekt</th>
+<th>Risiko</th>
+<th>Maßnahme</th>
+<th>Owner</th>
+<th>Zieltermin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GAP-001</td>
+<td>[TODO: Kritische Lücke 1]</td>
+<td>[TODO]</td>
+<td>Sehr hoch</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>GAP-002</td>
+<td>[TODO: Kritische Lücke 2]</td>
+<td>[TODO]</td>
+<td>Sehr hoch</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="43-quick-wins-prioritat-2">4.3 Quick Wins (Priorität 2)</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Anforderung</th>
+<th>Objekt</th>
+<th>Aufwand</th>
+<th>Nutzen</th>
+<th>Maßnahme</th>
+<th>Owner</th>
+<th>Zieltermin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>QW-001</td>
+<td>[TODO: Quick Win 1]</td>
+<td>[TODO]</td>
+<td>Niedrig</td>
+<td>Hoch</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>QW-002</td>
+<td>[TODO: Quick Win 2]</td>
+<td>[TODO]</td>
+<td>Niedrig</td>
+<td>Hoch</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="44-mittelfristige-manahmen-prioritat-3">4.4 Mittelfristige Maßnahmen (Priorität 3)</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Anforderung</th>
+<th>Objekt</th>
+<th>Aufwand</th>
+<th>Maßnahme</th>
+<th>Owner</th>
+<th>Zieltermin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MF-001</td>
+<td>[TODO: Mittelfristige Maßnahme 1]</td>
+<td>[TODO]</td>
+<td>Mittel</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>MF-002</td>
+<td>[TODO: Mittelfristige Maßnahme 2]</td>
+<td>[TODO]</td>
+<td>Mittel</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-management-summary">5. Management Summary</h2>
+<h3 id="51-gesamtbewertung">5.1 Gesamtbewertung</h3>
+<p><strong>Erfüllungsgrad:</strong> [TODO: %]</p>
+<p><strong>Bewertung:</strong>
+- [TODO: Zusammenfassende Bewertung des Sicherheitsniveaus]
+- [TODO: Haupterkenntnisse]
+- [TODO: Kritische Handlungsfelder]</p>
+<h3 id="52-top-5-findings">5.2 Top 5 Findings</h3>
+<ol>
+<li><strong>[TODO: Finding 1]:</strong> [TODO: Beschreibung und Auswirkung]</li>
+<li><strong>[TODO: Finding 2]:</strong> [TODO: Beschreibung und Auswirkung]</li>
+<li><strong>[TODO: Finding 3]:</strong> [TODO: Beschreibung und Auswirkung]</li>
+<li><strong>[TODO: Finding 4]:</strong> [TODO: Beschreibung und Auswirkung]</li>
+<li><strong>[TODO: Finding 5]:</strong> [TODO: Beschreibung und Auswirkung]</li>
+</ol>
+<h3 id="53-ressourcenbedarf">5.3 Ressourcenbedarf</h3>
+<p><strong>Geschätzter Aufwand für Maßnahmenumsetzung:</strong>
+- <strong>Personentage:</strong> [TODO]
+- <strong>Budget:</strong> [TODO]
+- <strong>Externe Unterstützung:</strong> [TODO]
+- <strong>Zeitrahmen:</strong> [TODO]</p>
+<h3 id="54-abhangigkeiten">5.4 Abhängigkeiten</h3>
+<table>
+<thead>
+<tr>
+<th>Maßnahme</th>
+<th>Abhängigkeit</th>
+<th>Auswirkung</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Maßnahme 1]</td>
+<td>[TODO: Abhängigkeit]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: Maßnahme 2]</td>
+<td>[TODO: Abhängigkeit]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-nachste-schritte">6. Nächste Schritte</h2>
+<ol>
+<li><strong>Maßnahmenplanung (Dokument 0100):</strong> Detaillierte Planung der identifizierten Maßnahmen</li>
+<li><strong>Risikoanalyse (Dokument 0090):</strong> Für Objekte mit erhöhtem Schutzbedarf oder nicht modellierbaren Risiken</li>
+<li><strong>Management-Präsentation:</strong> Vorstellung der Ergebnisse an Geschäftsführung</li>
+<li><strong>Maßnahmenumsetzung:</strong> Start der Umsetzung priorisierter Maßnahmen</li>
+</ol>
+<h2 id="7-aktualisierung-und-pflege">7. Aktualisierung und Pflege</h2>
+<p>Der Basis-Sicherheitscheck wird wiederholt:
+- Nach Abschluss wesentlicher Maßnahmen
+- Bei wesentlichen Änderungen in der IT-Infrastruktur
+- Mindestens jährlich im Rahmen des ISMS-Reviews</p>
+<p><strong>Verantwortlich:</strong> Thomas Weber (ISB)<br />
+<strong>Nächster Check:</strong> {{ meta.document.next_review }}</p>
+<h2 id="8-freigabe">8. Freigabe</h2>
+<table>
+<thead>
+<tr>
+<th>Rolle</th>
+<th>Name</th>
+<th>Datum</th>
+<th>Freigabe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ISB</td>
+<td>Thomas Weber</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+<tr>
+<td>IT-Leitung</td>
+<td>Anna Schmidt</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+<tr>
+<td>Geschäftsführung</td>
+<td>Max Mustermann</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Referenzen:</strong>
+- BSI Standard 200-2: IT-Grundschutz-Methodik (Kapitel 8: Basis-Sicherheitscheck)
+- BSI IT-Grundschutz-Kompendium</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0070_Modellierung_Bausteinzuordnung_Template.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0090_Risikoanalyse_nach_BSI_200_3_Template.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

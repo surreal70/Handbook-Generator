@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0100 - Access and Permission Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0100</div>
+            <h1>Access and Permission Management</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0090_Configuration_Management_and_CMDB.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0110_Monitoring_Alerting_and_Observability.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="access-and-permission-management">Access and Permission Management</h1>
+<h2 id="overview">Overview</h2>
+<p>This document describes access and permission management for the IT service. It defines access control models, permission concepts, and role-based access control (RBAC).</p>
+<p><strong>Service:</strong> {{ meta.service_name }}<br />
+<strong>Responsible:</strong> Andreas Huemmer<br />
+<strong>Security Officer:</strong> Thomas Weber<br />
+<strong>Version:</strong> 1.0.0</p>
+<hr />
+<h2 id="access-management-strategy">Access Management Strategy</h2>
+<h3 id="objectives">Objectives</h3>
+<ul>
+<li><strong>Least Privilege:</strong> Minimum necessary permissions</li>
+<li><strong>Separation of Duties:</strong> Task separation for risk minimization</li>
+<li><strong>Need-to-Know:</strong> Access only to required information</li>
+<li><strong>Accountability:</strong> Traceability of all access</li>
+<li><strong>Compliance:</strong> Adherence to regulatory requirements</li>
+</ul>
+<h3 id="core-principles">Core Principles</h3>
+<ol>
+<li><strong>Default Deny:</strong> No access by default, explicit approval required</li>
+<li><strong>Time-Limited Access:</strong> Time-limited permissions where possible</li>
+<li><strong>Regular Review:</strong> Regular review of permissions</li>
+<li><strong>Audit Trail:</strong> Complete logging of all access</li>
+<li><strong>Multi-Factor Authentication:</strong> MFA for privileged access</li>
+</ol>
+<hr />
+<h2 id="access-control-model">Access Control Model</h2>
+<h3 id="authentication">Authentication</h3>
+<h4 id="authentication-methods">Authentication Methods</h4>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Usage</th>
+<th>Security Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Username/Password</strong></td>
+<td>Standard access</td>
+<td>Basic</td>
+</tr>
+<tr>
+<td><strong>Multi-Factor Authentication (MFA)</strong></td>
+<td>Privileged access</td>
+<td>High</td>
+</tr>
+<tr>
+<td><strong>Certificate-Based</strong></td>
+<td>System-to-system</td>
+<td>Very High</td>
+</tr>
+<tr>
+<td><strong>SSO (Single Sign-On)</strong></td>
+<td>Enterprise applications</td>
+<td>Medium-High</td>
+</tr>
+<tr>
+<td><strong>API Keys</strong></td>
+<td>Programmatic access</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td><strong>Biometric</strong></td>
+<td>High-security areas</td>
+<td>Very High</td>
+</tr>
+</tbody>
+</table>
+<h4 id="authentication-infrastructure">Authentication Infrastructure</h4>
+<p><strong>Identity Provider:</strong>
+- <strong>System:</strong> [TODO: e.g., Active Directory, Azure AD, Okta]
+- <strong>URL:</strong> [TODO: SSO URL]
+- <strong>Responsible:</strong> Andreas Huemmer</p>
+<p><strong>MFA System:</strong>
+- <strong>System:</strong> [TODO: e.g., Duo, Microsoft Authenticator]
+- <strong>Required for:</strong> Administrators, privileged accounts
+- <strong>Responsible:</strong> Thomas Weber</p>
+<h3 id="authorization">Authorization</h3>
+<h4 id="authorization-models">Authorization Models</h4>
+<p><strong>Role-Based Access Control (RBAC):</strong>
+- Permissions assigned to roles
+- Users receive roles
+- Simplifies permission management</p>
+<p><strong>Attribute-Based Access Control (ABAC):</strong>
+- Permissions based on attributes
+- More flexible than RBAC
+- More complex implementation</p>
+<p><strong>Current Model:</strong> [TODO: Select RBAC/ABAC/Hybrid]</p>
+<hr />
+<h2 id="role-based-access-control-rbac">Role-Based Access Control (RBAC)</h2>
+<h3 id="role-hierarchy">Role Hierarchy</h3>
+<div class="codehilite"><pre><span></span><code>┌─────────────────────────────────────────────────────────────┐
+│                    Administrator                             │
+│  (Full access to all systems and data)                      │
+└────────────────────┬────────────────────────────────────────┘
+                     │
+         ┌───────────┴───────────┐
+         │                       │
+┌────────▼────────┐    ┌────────▼────────────────────────────┐
+│  Power User     │    │     Operator                         │
+│  (Extended      │    │  (Operations access)                 │
+│   permissions)  │    └────────┬────────────────────────────┘
+└─────────────────┘             │
+                                │
+                    ┌───────────┴───────────┐
+                    │                       │
+           ┌────────▼────────┐    ┌────────▼────────┐
+           │   Standard User │    │   Read-Only     │
+           │  (Basic access) │    │  (Read only)    │
+           └─────────────────┘    └─────────────────┘
+</code></pre></div>
+
+<h3 id="role-definitions">Role Definitions</h3>
+<h4 id="administrator">Administrator</h4>
+<p><strong>Description:</strong> Full access to all systems and functions<br />
+<strong>Permissions:</strong>
+- Full access to all systems
+- User management
+- Configuration changes
+- System administration
+- Backup/restore</p>
+<p><strong>Assigned to:</strong>
+- Andreas Huemmer
+- [TODO: Additional administrators]</p>
+<p><strong>MFA:</strong> Required</p>
+<h4 id="power-user">Power User</h4>
+<p><strong>Description:</strong> Extended permissions for special tasks<br />
+<strong>Permissions:</strong>
+- Read and write in assigned areas
+- Use advanced functions
+- Create reports
+- Configuration in own area</p>
+<p><strong>Assigned to:</strong>
+- [TODO: List power users]</p>
+<p><strong>MFA:</strong> Recommended</p>
+<h4 id="operator">Operator</h4>
+<p><strong>Description:</strong> Operations access for daily tasks<br />
+<strong>Permissions:</strong>
+- Monitoring access
+- Incident processing
+- Standard operations
+- Log access (read-only)</p>
+<p><strong>Assigned to:</strong>
+- Julia Becker
+- [TODO: Additional operators]</p>
+<p><strong>MFA:</strong> Optional</p>
+<h4 id="standard-user">Standard User</h4>
+<p><strong>Description:</strong> Basic access for normal users<br />
+<strong>Permissions:</strong>
+- Access to own data
+- Use standard functions
+- Create tickets
+- Manage own profile</p>
+<p><strong>Assigned to:</strong>
+- All employees</p>
+<p><strong>MFA:</strong> Optional</p>
+<h4 id="read-only">Read-Only</h4>
+<p><strong>Description:</strong> Read-only access for reporting and auditing<br />
+<strong>Permissions:</strong>
+- Read access to data
+- View reports
+- View dashboards
+- No changes possible</p>
+<p><strong>Assigned to:</strong>
+- Auditors
+- Management
+- [TODO: Additional read-only users]</p>
+<p><strong>MFA:</strong> Optional</p>
+<hr />
+<h2 id="permission-matrix">Permission Matrix</h2>
+<h3 id="system-permissions">System Permissions</h3>
+<table>
+<thead>
+<tr>
+<th>System/Resource</th>
+<th>Administrator</th>
+<th>Power User</th>
+<th>Operator</th>
+<th>Standard User</th>
+<th>Read-Only</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Server Administration</strong></td>
+<td>Full access</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>Read</td>
+</tr>
+<tr>
+<td><strong>Network Configuration</strong></td>
+<td>Full access</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>Read</td>
+</tr>
+<tr>
+<td><strong>Monitoring System</strong></td>
+<td>Full access</td>
+<td>Read/Write</td>
+<td>Read</td>
+<td>-</td>
+<td>Read</td>
+</tr>
+<tr>
+<td><strong>Ticketing System</strong></td>
+<td>Full access</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Create tickets</td>
+<td>Read</td>
+</tr>
+<tr>
+<td><strong>CMDB</strong></td>
+<td>Full access</td>
+<td>Read/Write</td>
+<td>Read</td>
+<td>-</td>
+<td>Read</td>
+</tr>
+<tr>
+<td><strong>Backup System</strong></td>
+<td>Full access</td>
+<td>-</td>
+<td>Read</td>
+<td>-</td>
+<td>Read</td>
+</tr>
+<tr>
+<td><strong>Log Management</strong></td>
+<td>Full access</td>
+<td>Read</td>
+<td>Read</td>
+<td>-</td>
+<td>Read</td>
+</tr>
+<tr>
+<td><strong>Documentation</strong></td>
+<td>Full access</td>
+<td>Read/Write</td>
+<td>Read</td>
+<td>Read</td>
+<td>Read</td>
+</tr>
+</tbody>
+</table>
+<h3 id="data-permissions">Data Permissions</h3>
+<table>
+<thead>
+<tr>
+<th>Data Classification</th>
+<th>Administrator</th>
+<th>Power User</th>
+<th>Operator</th>
+<th>Standard User</th>
+<th>Read-Only</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Public</strong></td>
+<td>Full access</td>
+<td>Read/Write</td>
+<td>Read</td>
+<td>Read</td>
+<td>Read</td>
+</tr>
+<tr>
+<td><strong>Internal</strong></td>
+<td>Full access</td>
+<td>Read/Write</td>
+<td>Read</td>
+<td>Read</td>
+<td>Read</td>
+</tr>
+<tr>
+<td><strong>Confidential</strong></td>
+<td>Full access</td>
+<td>As needed</td>
+<td>-</td>
+<td>-</td>
+<td>As needed</td>
+</tr>
+<tr>
+<td><strong>Restricted</strong></td>
+<td>As needed</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="access-request-process">Access Request Process</h2>
+<h3 id="access-request">Access Request</h3>
+<div class="codehilite"><pre><span></span><code>┌─────────────────┐
+│ 1. Submit       │
+│    Request      │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│ 2. Manager      │
+│    Approval     │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│ 3. Security     │
+│    Review       │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│ 4. Provisioning │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│ 5. Confirmation │
+└─────────────────┘
+</code></pre></div>
+
+<h3 id="request-process">Request Process</h3>
+<h4 id="1-submit-request">1. Submit Request</h4>
+<p><strong>Who:</strong> User or manager<br />
+<strong>How:</strong> Ticket in service desk system<br />
+<strong>Information:</strong>
+- Username
+- Requested role/permission
+- Business justification
+- Time period (if temporary)
+- Manager approval</p>
+<h4 id="2-manager-approval">2. Manager Approval</h4>
+<p><strong>Who:</strong> Direct supervisor<br />
+<strong>Review:</strong>
+- Business necessity
+- Least privilege principle
+- Separation of duties</p>
+<p><strong>Decision:</strong> Approve / Reject / Request clarification</p>
+<h4 id="3-security-review">3. Security Review</h4>
+<p><strong>Who:</strong> Thomas Weber or security team<br />
+<strong>Review:</strong>
+- Compliance requirements
+- Risk assessment
+- Conflict check (separation of duties)</p>
+<p><strong>Decision:</strong> Approve / Reject / Modify</p>
+<h4 id="4-provisioning">4. Provisioning</h4>
+<p><strong>Who:</strong> Andreas Huemmer or IT operations<br />
+<strong>Activities:</strong>
+- Create/modify account
+- Assign permissions
+- Set up MFA (if required)
+- Documentation in CMDB</p>
+<p><strong>SLA:</strong> Within 1 business day</p>
+<h4 id="5-confirmation">5. Confirmation</h4>
+<p><strong>Who:</strong> IT operations<br />
+<strong>Activities:</strong>
+- Inform user
+- Provide access credentials
+- Complete documentation
+- Close ticket</p>
+<hr />
+<h2 id="privileged-access-management-pam">Privileged Access Management (PAM)</h2>
+<h3 id="privileged-accounts">Privileged Accounts</h3>
+<h4 id="definition">Definition</h4>
+<p>Privileged accounts have extended permissions and access to critical systems.</p>
+<p><strong>Examples:</strong>
+- Root/administrator accounts
+- Service accounts
+- Database admin accounts
+- Network admin accounts
+- Backup admin accounts</p>
+<h3 id="pam-requirements">PAM Requirements</h3>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Description</th>
+<th>Implementation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Separate Accounts</strong></td>
+<td>Privileged accounts separate from standard accounts</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td><strong>MFA</strong></td>
+<td>Multi-factor authentication required</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td><strong>Session Recording</strong></td>
+<td>Recording of privileged sessions</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td><strong>Just-in-Time Access</strong></td>
+<td>Temporary privilege assignment</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td><strong>Password Vault</strong></td>
+<td>Centralized password management</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td><strong>Regular Rotation</strong></td>
+<td>Regular password rotation</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td><strong>Audit Logging</strong></td>
+<td>Complete logging</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pam-system">PAM System</h3>
+<p><strong>System:</strong> [TODO: e.g., CyberArk, BeyondTrust, Thycotic]<br />
+<strong>Responsible:</strong> Thomas Weber<br />
+<strong>Access:</strong> [TODO: PAM system URL]</p>
+<hr />
+<h2 id="service-accounts">Service Accounts</h2>
+<h3 id="service-account-management">Service Account Management</h3>
+<p><strong>Definition:</strong> Accounts for automated processes and system integrations</p>
+<p><strong>Requirements:</strong>
+- Unique naming (e.g., <code>svc_backup</code>, <code>svc_monitoring</code>)
+- Documentation in CMDB
+- Minimal permissions
+- No interactive logins
+- Regular password rotation
+- Usage monitoring</p>
+<h3 id="service-account-inventory">Service Account Inventory</h3>
+<table>
+<thead>
+<tr>
+<th>Service Account</th>
+<th>Usage</th>
+<th>System</th>
+<th>Permissions</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>svc_backup</code></td>
+<td>Backup processes</td>
+<td>Backup system</td>
+<td>Read, backup</td>
+<td>Backup admin</td>
+</tr>
+<tr>
+<td><code>svc_monitoring</code></td>
+<td>Monitoring</td>
+<td>Monitoring system</td>
+<td>Read</td>
+<td>Monitoring team</td>
+</tr>
+<tr>
+<td><code>svc_integration</code></td>
+<td>System integration</td>
+<td>Integration platform</td>
+<td>API access</td>
+<td>Integration team</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="access-review-process">Access Review Process</h2>
+<h3 id="regular-reviews">Regular Reviews</h3>
+<h4 id="quarterly-reviews">Quarterly Reviews</h4>
+<p><strong>Frequency:</strong> Every 3 months<br />
+<strong>Scope:</strong> All user permissions<br />
+<strong>Responsible:</strong> Manager + IT operations<br />
+<strong>Process:</strong>
+1. Generate review report
+2. Managers review their employees' permissions
+3. Remove no longer needed permissions
+4. Document changes</p>
+<h4 id="annual-reviews">Annual Reviews</h4>
+<p><strong>Frequency:</strong> Annually<br />
+<strong>Scope:</strong> Complete access review<br />
+<strong>Responsible:</strong> Thomas Weber<br />
+<strong>Process:</strong>
+1. Comprehensive audit of all accounts
+2. Review privileged accounts
+3. Validate service accounts
+4. Compliance check
+5. Create audit report</p>
+<h3 id="automatic-reviews">Automatic Reviews</h3>
+<p><strong>Triggers:</strong>
+- Employee change (department/role)
+- Project end
+- Inactive accounts (&gt; 90 days)
+- Expiration of temporary permissions</p>
+<p><strong>Action:</strong>
+- Automatic notification to manager
+- Deactivation after deadline
+- Documentation</p>
+<hr />
+<h2 id="onboarding-and-offboarding">Onboarding and Offboarding</h2>
+<h3 id="onboarding-process">Onboarding Process</h3>
+<h4 id="new-employee">New Employee</h4>
+<p><strong>Trigger:</strong> HR notification<br />
+<strong>Timeframe:</strong> Before first day of work</p>
+<p><strong>Activities:</strong>
+1. [ ] Create account
+2. [ ] Assign basic permissions
+3. [ ] Set up email account
+4. [ ] Provide VPN access
+5. [ ] Set up MFA
+6. [ ] Provide access credentials
+7. [ ] Documentation in CMDB
+8. [ ] Send welcome email</p>
+<p><strong>Responsible:</strong> Julia Becker</p>
+<h3 id="offboarding-process">Offboarding Process</h3>
+<h4 id="employee-departure">Employee Departure</h4>
+<p><strong>Trigger:</strong> HR notification<br />
+<strong>Timeframe:</strong> On last day of work</p>
+<p><strong>Activities:</strong>
+1. [ ] Deactivate account
+2. [ ] Remove all permissions
+3. [ ] Set up email forwarding (if required)
+4. [ ] Block VPN access
+5. [ ] Return hardware
+6. [ ] Archive data
+7. [ ] Update documentation
+8. [ ] Inform manager</p>
+<p><strong>Responsible:</strong> Julia Becker</p>
+<h4 id="role-change">Role Change</h4>
+<p><strong>Trigger:</strong> HR notification or manager request<br />
+<strong>Timeframe:</strong> On change date</p>
+<p><strong>Activities:</strong>
+1. [ ] Remove old permissions
+2. [ ] Assign new permissions
+3. [ ] Conduct access review
+4. [ ] Update documentation
+5. [ ] Inform user</p>
+<hr />
+<h2 id="compliance-and-auditing">Compliance and Auditing</h2>
+<h3 id="compliance-requirements">Compliance Requirements</h3>
+<table>
+<thead>
+<tr>
+<th>Standard</th>
+<th>Requirement</th>
+<th>Implementation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GDPR</strong></td>
+<td>Access control for personal data</td>
+<td>RBAC, audit logging</td>
+</tr>
+<tr>
+<td><strong>ISO 27001</strong></td>
+<td>Access control policy</td>
+<td>This document</td>
+</tr>
+<tr>
+<td><strong>SOX</strong></td>
+<td>Separation of duties</td>
+<td>Role separation</td>
+</tr>
+<tr>
+<td><strong>PCI DSS</strong></td>
+<td>Restricted access to cardholder data</td>
+<td>Permission matrix</td>
+</tr>
+</tbody>
+</table>
+<h3 id="audit-logging">Audit Logging</h3>
+<p><strong>Logged Events:</strong>
+- Login attempts (successful and failed)
+- Permission changes
+- Privileged actions
+- Access to sensitive data
+- Account creation/deletion
+- Password changes</p>
+<p><strong>Log Retention:</strong> [TODO: e.g., 1 year]<br />
+<strong>Log System:</strong> [TODO: e.g., Splunk, ELK]<br />
+<strong>Responsible:</strong> Thomas Weber</p>
+<h3 id="audit-reports">Audit Reports</h3>
+<p><strong>Monthly Reports:</strong>
+- New accounts
+- Deleted accounts
+- Permission changes
+- Failed login attempts
+- Privileged access</p>
+<p><strong>Quarterly Reports:</strong>
+- Access review results
+- Compliance status
+- Risk assessment
+- Improvement suggestions</p>
+<hr />
+<h2 id="emergency-access">Emergency Access</h2>
+<h3 id="break-glass-accounts">Break-Glass Accounts</h3>
+<p><strong>Definition:</strong> Emergency accounts for critical situations</p>
+<p><strong>Usage:</strong>
+- Only for critical outages
+- When normal access paths unavailable
+- After approval by Anna Schmidt</p>
+<p><strong>Requirements:</strong>
+- Physically secured passwords
+- Complete logging
+- Immediate notification to management
+- Post-incident review</p>
+<p><strong>Accounts:</strong>
+- <code>emergency_admin</code> - Full access to all systems
+- <code>emergency_network</code> - Network emergency access</p>
+<p><strong>Password Management:</strong>
+- Sealed envelopes in safe
+- Access only by Anna Schmidt or Thomas Weber</p>
+<hr />
+<h2 id="contacts">Contacts</h2>
+<p><strong>Access Management Team:</strong>
+- <strong>IT Operations Manager:</strong> Andreas Huemmer - andreas.huemmer@adminsend.de
+- <strong>CISO:</strong> Thomas Weber - thomas.weber@adminsend.de
+- <strong>Service Desk Lead:</strong> Julia Becker - julia.becker@adminsend.de
+- <strong>CIO:</strong> Anna Schmidt - anna.schmidt@adminsend.de</p>
+<p><strong>Emergency Contacts:</strong>
+- <strong>Break-Glass Approval:</strong> Anna Schmidt - +49 89 12345678-200
+- <strong>Security Incident:</strong> Thomas Weber - +49 89 12345678-300</p>
+<hr />
+<p><strong>Document Owner:</strong> IT Operations Manager<br />
+<strong>Approved by:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Organization:</strong> AdminSend GmbH</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0090_Configuration_Management_and_CMDB.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0110_Monitoring_Alerting_and_Observability.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

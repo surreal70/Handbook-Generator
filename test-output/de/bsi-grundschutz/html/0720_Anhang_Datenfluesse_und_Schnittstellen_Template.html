@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0720 - Anhang: Datenflüsse und Schnittstellen (Template)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0720</div>
+            <h1>Anhang: Datenflüsse und Schnittstellen (Template)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0710_Anhang_Assetinventar_Template.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0730_Anhang_Diagramme_Netzplan_und_Zonen.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="anhang-datenflusse-und-schnittstellen-template">Anhang: Datenflüsse und Schnittstellen (Template)</h1>
+<p><strong>Dokument-ID:</strong> 0720<br />
+<strong>Dokumenttyp:</strong> Anhang/Template<br />
+<strong>Referenzrahmen:</strong> BSI IT-Grundschutz (BSI Standards 200-1/200-2)<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> {{ meta.document.status }}<br />
+<strong>Klassifizierung:</strong> internal<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.last_updated }}<br />
+<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-zweck-und-zielsetzung">1. Zweck und Zielsetzung</h2>
+<p>Die Dokumentation der Datenflüsse und Schnittstellen von <strong>AdminSend GmbH</strong> unterstützt:
+- Schutzbedarfsfeststellung (Dokument 0060)
+- Risikoanalyse (Dokument 0090)
+- Kryptokonzept (Dokument 0340/0350)
+- Datenschutz-Compliance (Dokument 0420/0430)</p>
+<p><strong>Verantwortlich:</strong> Thomas Weber (ISB), Anna Schmidt (IT-Leitung)</p>
+<h2 id="2-datenfluss-register">2. Datenfluss-Register</h2>
+<table>
+<thead>
+<tr>
+<th>Datenfluss-ID</th>
+<th>Quelle</th>
+<th>Ziel</th>
+<th>Datenarten</th>
+<th>Schutzbedarf (C/I/A)</th>
+<th>Transportweg</th>
+<th>Verschlüsselung</th>
+<th>Speicherung</th>
+<th>Provider/Drittland</th>
+<th>Owner</th>
+<th>Rechtsgrundlage</th>
+<th>Notiz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DF-001</td>
+<td>Webserver ({{ netbox.device.name }})</td>
+<td>Datenbank-Server</td>
+<td>Kundendaten (personenbezogen)</td>
+<td>Sehr hoch/Hoch/Hoch</td>
+<td>{{ netbox.vlan.name }} (intern)</td>
+<td>TLS 1.3</td>
+<td>Verschlüsselt (AES-256)</td>
+<td>Intern</td>
+<td>Anna Schmidt</td>
+<td>DSGVO Art. 6(1)(b)</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>DF-002</td>
+<td>Backup-Server</td>
+<td>Cloud-Storage (AWS S3)</td>
+<td>Backup-Daten</td>
+<td>Hoch/Hoch/Hoch</td>
+<td>Internet (VPN)</td>
+<td>TLS 1.3 + AES-256</td>
+<td>Verschlüsselt (AES-256)</td>
+<td>AWS (EU-West-1)</td>
+<td>Anna Schmidt</td>
+<td>DSGVO Art. 28</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>DF-003</td>
+<td>Mitarbeiter (Remote)</td>
+<td>VPN-Gateway</td>
+<td>Geschäftsdaten</td>
+<td>Hoch/Hoch/Normal</td>
+<td>Internet</td>
+<td>IPsec/IKEv2</td>
+<td>N/A</td>
+<td>Intern</td>
+<td>Anna Schmidt</td>
+<td>-</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>DF-004</td>
+<td>ERP-System</td>
+<td>Payment-Gateway</td>
+<td>Zahlungsdaten</td>
+<td>Sehr hoch/Sehr hoch/Hoch</td>
+<td>Internet (HTTPS)</td>
+<td>TLS 1.3</td>
+<td>Nicht gespeichert</td>
+<td>Payment Provider (EU)</td>
+<td>Anna Schmidt</td>
+<td>PCI-DSS</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>DF-005</td>
+<td>SIEM</td>
+<td>Log-Archiv</td>
+<td>Log-Daten</td>
+<td>Normal/Hoch/Normal</td>
+<td>{{ netbox.vlan.name }} (Management)</td>
+<td>TLS 1.2</td>
+<td>Verschlüsselt</td>
+<td>Intern</td>
+<td>Thomas Weber</td>
+<td>-</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-schnittstellen-register">3. Schnittstellen-Register</h2>
+<table>
+<thead>
+<tr>
+<th>Schnittstellen-ID</th>
+<th>System A</th>
+<th>System B</th>
+<th>Protokoll</th>
+<th>Port</th>
+<th>Authentisierung</th>
+<th>Verschlüsselung</th>
+<th>Datenrichtung</th>
+<th>Frequenz</th>
+<th>Owner</th>
+<th>Notiz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IF-001</td>
+<td>Webserver</td>
+<td>Datenbank</td>
+<td>PostgreSQL</td>
+<td>5432</td>
+<td>Zertifikat</td>
+<td>TLS 1.3</td>
+<td>Bidirektional</td>
+<td>Permanent</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>IF-002</td>
+<td>ERP</td>
+<td>CRM</td>
+<td>REST API</td>
+<td>443</td>
+<td>OAuth 2.0</td>
+<td>TLS 1.3</td>
+<td>Bidirektional</td>
+<td>Echtzeit</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>IF-003</td>
+<td>Monitoring</td>
+<td>SIEM</td>
+<td>Syslog</td>
+<td>514</td>
+<td>Zertifikat</td>
+<td>TLS 1.2</td>
+<td>Unidirektional</td>
+<td>Permanent</td>
+<td>Thomas Weber</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>IF-004</td>
+<td>AD</td>
+<td>LDAP-Clients</td>
+<td>LDAPS</td>
+<td>636</td>
+<td>Kerberos</td>
+<td>TLS 1.2</td>
+<td>Bidirektional</td>
+<td>On-Demand</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>IF-005</td>
+<td>Backup-Server</td>
+<td>Cloud-Storage</td>
+<td>S3 API</td>
+<td>443</td>
+<td>API-Key</td>
+<td>TLS 1.3</td>
+<td>Unidirektional</td>
+<td>Täglich</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-externe-schnittstellen-und-drittanbieter">4. Externe Schnittstellen und Drittanbieter</h2>
+<table>
+<thead>
+<tr>
+<th>Drittanbieter</th>
+<th>Service</th>
+<th>Datenarten</th>
+<th>Schutzbedarf</th>
+<th>Standort/Drittland</th>
+<th>Vertrag</th>
+<th>Datenschutz-Vereinbarung</th>
+<th>Owner</th>
+<th>Notiz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AWS</td>
+<td>Cloud-Hosting (EC2, S3)</td>
+<td>Geschäftsdaten, Backup</td>
+<td>Hoch/Hoch/Hoch</td>
+<td>EU-West-1</td>
+<td>[TODO: Vertragsnummer]</td>
+<td>Ja (Art. 28 DSGVO)</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Microsoft</td>
+<td>Office 365</td>
+<td>E-Mail, Dokumente</td>
+<td>Hoch/Hoch/Normal</td>
+<td>EU</td>
+<td>[TODO]</td>
+<td>Ja</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Payment Provider</td>
+<td>Zahlungsabwicklung</td>
+<td>Zahlungsdaten</td>
+<td>Sehr hoch/Sehr hoch/Hoch</td>
+<td>EU</td>
+<td>[TODO]</td>
+<td>Ja</td>
+<td>Anna Schmidt</td>
+<td>PCI-DSS zertifiziert</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Referenz:</strong> Dokument 0400/0410 (Lieferanten und Auslagerungsmanagement)</p>
+<h2 id="5-datenfluss-diagramme">5. Datenfluss-Diagramme</h2>
+<p><strong>Ablageort:</strong> <code>diagrams/dataflows.png</code> oder [TODO: Confluence/SharePoint]</p>
+<p><strong>Empfohlene Diagramme:</strong>
+1. <strong>High-Level Datenfluss:</strong> Übersicht über alle Hauptdatenflüsse
+2. <strong>Detaillierte Datenflüsse:</strong> Pro kritischem System/Service
+3. <strong>Externe Datenflüsse:</strong> Alle Datenflüsse zu Drittanbietern
+4. <strong>Personenbezogene Daten:</strong> DSGVO-relevante Datenflüsse</p>
+<p><strong>Tools:</strong> [TODO: z.B. Lucidchart, Draw.io, Visio]</p>
+<h2 id="6-datenkategorien">6. Datenkategorien</h2>
+<h3 id="61-personenbezogene-daten-dsgvo">6.1 Personenbezogene Daten (DSGVO)</h3>
+<ul>
+<li>Kundendaten (Name, Adresse, E-Mail, etc.)</li>
+<li>Mitarbeiterdaten (HR-Daten)</li>
+<li>Besondere Kategorien (Art. 9 DSGVO): [TODO: falls zutreffend]</li>
+</ul>
+<h3 id="62-geschaftsdaten">6.2 Geschäftsdaten</h3>
+<ul>
+<li>Verträge</li>
+<li>Finanzdaten</li>
+<li>Geschäftsgeheimnisse</li>
+<li>Strategische Dokumente</li>
+</ul>
+<h3 id="63-technische-daten">6.3 Technische Daten</h3>
+<ul>
+<li>Log-Daten</li>
+<li>Monitoring-Daten</li>
+<li>Konfigurationsdaten</li>
+</ul>
+<h3 id="64-offentliche-daten">6.4 Öffentliche Daten</h3>
+<ul>
+<li>Marketing-Materialien</li>
+<li>Öffentliche Website-Inhalte</li>
+</ul>
+<h2 id="7-verschlusselungsanforderungen">7. Verschlüsselungsanforderungen</h2>
+<table>
+<thead>
+<tr>
+<th>Datenart</th>
+<th>Schutzbedarf</th>
+<th>Transport-Verschlüsselung</th>
+<th>Speicher-Verschlüsselung</th>
+<th>Schlüsselverwaltung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Personenbezogene Daten</td>
+<td>Sehr hoch</td>
+<td>TLS 1.3 (min. TLS 1.2)</td>
+<td>AES-256</td>
+<td>HSM/KMS</td>
+</tr>
+<tr>
+<td>Geschäftsdaten</td>
+<td>Hoch</td>
+<td>TLS 1.3 (min. TLS 1.2)</td>
+<td>AES-256</td>
+<td>KMS</td>
+</tr>
+<tr>
+<td>Log-Daten</td>
+<td>Normal</td>
+<td>TLS 1.2</td>
+<td>Optional</td>
+<td>KMS</td>
+</tr>
+<tr>
+<td>Öffentliche Daten</td>
+<td>Normal</td>
+<td>TLS 1.2</td>
+<td>Nicht erforderlich</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Referenz:</strong> Dokument 0340/0350 (Kryptografie und Key Management)</p>
+<h2 id="8-grenzuberschreitende-datenubermittlung">8. Grenzüberschreitende Datenübermittlung</h2>
+<p><strong>Datenübermittlung in Drittländer:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Zielland</th>
+<th>Datenarten</th>
+<th>Rechtsgrundlage</th>
+<th>Garantien</th>
+<th>Genehmigung</th>
+<th>Notiz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>USA</td>
+<td>[TODO]</td>
+<td>Standardvertragsklauseln (SCC)</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Referenz:</strong> Dokument 0420/0430 (Datenschutz)</p>
+<h2 id="9-verantwortlichkeiten-raci">9. Verantwortlichkeiten (RACI)</h2>
+<table>
+<thead>
+<tr>
+<th>Aktivität</th>
+<th>IT-Leitung</th>
+<th>ISB</th>
+<th>Datenschutzbeauftragter</th>
+<th>Fachbereich</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Datenflüsse dokumentieren</td>
+<td>A</td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Schutzbedarf festlegen</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Verschlüsselung implementieren</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Drittanbieter-Verträge prüfen</td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Jährlicher Review</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legende:</strong>
+- <strong>R</strong> = Responsible (Durchführungsverantwortung)
+- <strong>A</strong> = Accountable (Gesamtverantwortung)
+- <strong>C</strong> = Consulted (Konsultiert)
+- <strong>I</strong> = Informed (Informiert)</p>
+<h2 id="10-anderungsmanagement">10. Änderungsmanagement</h2>
+<p><strong>Änderungen an Datenflüssen:</strong>
+- Neue Datenflüsse müssen vor Inbetriebnahme dokumentiert werden
+- Änderungen an bestehenden Datenflüssen erfordern Change-Ticket
+- Sicherheitsrelevante Änderungen erfordern ISB-Freigabe</p>
+<p><strong>Referenz:</strong> Dokument 0380/0390 (Change Management)</p>
+<h2 id="11-freigabe">11. Freigabe</h2>
+<table>
+<thead>
+<tr>
+<th>Rolle</th>
+<th>Name</th>
+<th>Datum</th>
+<th>Freigabe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ISB</td>
+<td>Thomas Weber</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+<tr>
+<td>IT-Leitung</td>
+<td>Anna Schmidt</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+<tr>
+<td>Datenschutzbeauftragter</td>
+<td>[TODO]</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Referenzen:</strong>
+- BSI Standard 200-2: IT-Grundschutz-Methodik (Strukturanalyse)
+- BSI IT-Grundschutz-Kompendium: CON.1 Kryptokonzept
+- Dokument 0050: Strukturanalyse
+- Dokument 0060: Schutzbedarfsfeststellung
+- Dokument 0090: Risikoanalyse
+- Dokument 0340/0350: Kryptografie und Key Management
+- Dokument 0420/0430: Datenschutz</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0710_Anhang_Assetinventar_Template.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0730_Anhang_Diagramme_Netzplan_und_Zonen.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

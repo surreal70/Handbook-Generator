@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0040 - ISMS Governance: Roles and Responsibilities</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0040</div>
+            <h1>ISMS Governance: Roles and Responsibilities</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0030_ISMS_Context_and_Interested_Parties.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0050_ISMS_Document_Control.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="isms-governance-roles-and-responsibilities">ISMS Governance: Roles and Responsibilities</h1>
+<p><strong>Document ID:</strong> 0040<br />
+<strong>Document Type:</strong> ISMS Foundation Document<br />
+<strong>Standard Reference:</strong> ISO/IEC 27001:2022 Clause 5.3<br />
+<strong>Owner:</strong> Thomas Weber<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Approved<br />
+<strong>Classification:</strong> Internal<br />
+<strong>Last Updated:</strong> {{ meta.document.date }}<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-isms-governance-structure">1. ISMS Governance Structure</h2>
+<h3 id="11-governance-overview">1.1 Governance Overview</h3>
+<p>The ISMS governance of <strong>AdminSend GmbH</strong> is integrated into the overall organization and ensures that information security is anchored at all levels.</p>
+<div class="codehilite"><pre><span></span><code><span class="x">┌─────────────────────────────────────────────────────────┐</span>
+<span class="x">│              Management / Top Management                 │</span>
+<span class="x">│                 (</span><span class="cp">{{</span> <span class="nv">meta.management.ceo</span> <span class="cp">}}</span><span class="x">)              │</span>
+<span class="x">└────────────────────┬────────────────────────────────────┘</span>
+<span class="x">                     │</span>
+<span class="x">         ┌───────────┴───────────┐</span>
+<span class="x">         │                       │</span>
+<span class="x">┌────────▼────────┐    ┌────────▼────────┐</span>
+<span class="x">│  CIO             │    │  CISO            │</span>
+<span class="x">│  Anna Schmidt  │    │  Thomas Weber  │</span>
+<span class="x">└─────────────────┘    └─────────────────┘</span>
+<span class="x">         │                       │</span>
+<span class="x">         │              ┌────────┴────────┐</span>
+<span class="x">         │              │                 │</span>
+<span class="x">         │     ┌────────▼────────┐ ┌─────▼──────┐</span>
+<span class="x">         │     │ ISMS Manager    │ │ Security   │</span>
+<span class="x">         │     │                 │ │ Team       │</span>
+<span class="x">         │     └─────────────────┘ └────────────┘</span>
+<span class="x">         │</span>
+<span class="x">┌────────▼────────────────────────────────────────────────┐</span>
+<span class="x">│        Information Security Committee                    │</span>
+<span class="x">│        (Security Steering Committee)                     │</span>
+<span class="x">│  - CISO (Chair)                                         │</span>
+<span class="x">│  - CIO                                                  │</span>
+<span class="x">│  - Business Unit Representatives                        │</span>
+<span class="x">│  - IT Operations                                        │</span>
+<span class="x">│  - Data Protection Officer                              │</span>
+<span class="x">│  - Internal Audit (advisory)                            │</span>
+<span class="x">└─────────────────────────────────────────────────────────┘</span>
+</code></pre></div>
+
+<h3 id="12-key-committees">1.2 Key Committees</h3>
+<p><strong>Information Security Committee (Security Steering Committee):</strong>
+- <strong>Chair:</strong> Thomas Weber (CISO)
+- <strong>Members:</strong> CIO, business unit representatives, IT operations, data protection officer
+- <strong>Frequency:</strong> Quarterly or as needed
+- <strong>Responsibilities:</strong>
+  - Strategic direction of the ISMS
+  - Approval of security policies
+  - Monitoring ISMS performance
+  - Risk acceptance decisions
+  - Budget approval for security measures</p>
+<h3 id="13-interfaces-to-other-functions">1.3 Interfaces to Other Functions</h3>
+<p><strong>IT Service Management (ITSM):</strong>
+- Integration of security into ITIL processes
+- Incident management, change management, problem management
+- Contact: {{ meta.it.service_manager }}</p>
+<p><strong>Data Protection (DPMS):</strong>
+- Interface to GDPR compliance
+- Joint risk analysis and data protection impact assessment
+- Contact: {{ meta.privacy.dpo }}</p>
+<p><strong>Risk Management:</strong>
+- Integration into Enterprise Risk Management (ERM)
+- Shared risk register
+- Contact: {{ meta.risk.manager }}</p>
+<p><strong>Business Continuity Management (BCM):</strong>
+- Interface to BCM handbook
+- Joint BIA and emergency planning
+- Contact: {{ meta.bcm.manager }}</p>
+<p><strong>Internal Audit:</strong>
+- Independent review of the ISMS
+- Audit planning and execution
+- Contact: {{ meta.audit.manager }}</p>
+<h2 id="2-role-descriptions">2. Role Descriptions</h2>
+<h3 id="21-management-top-management">2.1 Management / Top Management</h3>
+<p><strong>Role:</strong> {{ meta.management.ceo }}</p>
+<p><strong>Responsibilities:</strong>
+- Overall responsibility for information security
+- Approval of ISMS policy
+- Provision of resources for the ISMS
+- Promotion of security culture
+- Participation in management review</p>
+<p><strong>Authorities:</strong>
+- Approval of security budgets
+- Decision on strategic security initiatives
+- Approval of risk acceptances (for high risks)</p>
+<h3 id="22-ciso-chief-information-security-officer">2.2 CISO (Chief Information Security Officer)</h3>
+<p><strong>Role:</strong> Thomas Weber (thomas.weber@adminsend.de)</p>
+<p><strong>Responsibilities:</strong>
+- Development, implementation, and monitoring of the ISMS
+- Leadership of the information security committee
+- Creation and maintenance of security policies
+- Conducting risk analyses
+- Incident response coordination
+- Reporting to management
+- Awareness and training</p>
+<p><strong>Authorities:</strong>
+- Approval of security policies
+- Ordering security measures
+- Escalation for critical security incidents
+- Access to all security-relevant information</p>
+<p><strong>Reporting Line:</strong> Reports to Anna Schmidt (CIO) and management</p>
+<h3 id="23-cio-chief-information-officer">2.3 CIO (Chief Information Officer)</h3>
+<p><strong>Role:</strong> Anna Schmidt (anna.schmidt@adminsend.de)</p>
+<p><strong>Responsibilities:</strong>
+- IT strategy and IT operations
+- Support of ISMS implementation
+- Provision of IT resources for security measures
+- Integration of security into IT processes</p>
+<p><strong>Authorities:</strong>
+- Approval of IT projects with security relevance
+- Resource allocation for IT security</p>
+<h3 id="24-isms-manager">2.4 ISMS Manager</h3>
+<p><strong>Role:</strong> [TODO: Name and contact]</p>
+<p><strong>Responsibilities:</strong>
+- Operational implementation of the ISMS
+- Maintenance of ISMS documentation
+- Coordination of audits and reviews
+- Tracking of measures and findings
+- Support of the CISO</p>
+<p><strong>Authorities:</strong>
+- Coordination of ISMS activities
+- Request for information for audits</p>
+<h3 id="25-asset-owner-process-owner">2.5 Asset Owner / Process Owner</h3>
+<p><strong>Role:</strong> Business unit managers, process owners</p>
+<p><strong>Responsibilities:</strong>
+- Responsibility for information assets in their area
+- Classification of information
+- Definition of access rights
+- Implementation of security measures in their area
+- Reporting of security incidents</p>
+<p><strong>Authorities:</strong>
+- Approval of access rights for their assets
+- Decision on security measures in their area</p>
+<h3 id="26-control-owner">2.6 Control Owner</h3>
+<p><strong>Role:</strong> Responsible for specific security controls</p>
+<p><strong>Responsibilities:</strong>
+- Implementation and operation of security controls
+- Evidence of effectiveness
+- Reporting on control status
+- Remediation of control deficiencies</p>
+<p><strong>Authorities:</strong>
+- Implementation of security measures within their control</p>
+<p><strong>Examples:</strong>
+- Patch Management Control Owner: IT Operations
+- Access Control Owner: IAM Team
+- Backup Control Owner: Backup Administrator</p>
+<h3 id="27-it-operations">2.7 IT Operations</h3>
+<p><strong>Role:</strong> IT Operations Team</p>
+<p><strong>Responsibilities:</strong>
+- Implementation of technical security measures
+- Monitoring and alerting
+- Incident response (technical)
+- Patch management
+- Backup and recovery</p>
+<p><strong>Authorities:</strong>
+- Execution of security measures
+- Emergency access during incidents</p>
+<h3 id="28-employees-all">2.8 Employees (all)</h3>
+<p><strong>Role:</strong> All employees, contractors, third parties</p>
+<p><strong>Responsibilities:</strong>
+- Compliance with security policies
+- Reporting of security incidents
+- Participation in security awareness training
+- Protection of credentials and information</p>
+<p><strong>Authorities:</strong>
+- Access to information according to need-to-know principle</p>
+<h3 id="29-internal-audit-compliance">2.9 Internal Audit / Compliance</h3>
+<p><strong>Role:</strong> {{ meta.audit.manager }}</p>
+<p><strong>Responsibilities:</strong>
+- Independent review of the ISMS
+- Audit planning and execution
+- Reporting of audit findings
+- Monitoring of measure implementation</p>
+<p><strong>Authorities:</strong>
+- Access to all ISMS-relevant information
+- Request for evidence and interviews</p>
+<h2 id="3-raci-matrix-isms-processes">3. RACI Matrix: ISMS Processes</h2>
+<h3 id="31-isms-core-processes">3.1 ISMS Core Processes</h3>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>CISO</th>
+<th>CIO</th>
+<th>ISMS Manager</th>
+<th>Asset Owner</th>
+<th>IT Operations</th>
+<th>Internal Audit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Develop ISMS strategy</strong></td>
+<td>R/A</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td><strong>Create policies</strong></td>
+<td>R/A</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td><strong>Conduct risk analysis</strong></td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td><strong>Plan risk treatment</strong></td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>R</td>
+<td>I</td>
+</tr>
+<tr>
+<td><strong>Maintain SoA</strong></td>
+<td>A</td>
+<td>I</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td><strong>Implement controls</strong></td>
+<td>A</td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+<td>R</td>
+<td>I</td>
+</tr>
+<tr>
+<td><strong>Perform monitoring</strong></td>
+<td>A</td>
+<td>I</td>
+<td>C</td>
+<td>I</td>
+<td>R</td>
+<td>I</td>
+</tr>
+<tr>
+<td><strong>Manage incidents</strong></td>
+<td>A</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+<td>R</td>
+<td>I</td>
+</tr>
+<tr>
+<td><strong>Conduct audits</strong></td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>R/A</td>
+</tr>
+<tr>
+<td><strong>Management review</strong></td>
+<td>R</td>
+<td>C</td>
+<td>R</td>
+<td>I</td>
+<td>I</td>
+<td>C</td>
+</tr>
+<tr>
+<td><strong>Awareness training</strong></td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>I</td>
+<td>I</td>
+<td>I</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legend:</strong> R = Responsible (Execution), A = Accountable (Ownership), C = Consulted, I = Informed</p>
+<h3 id="32-annex-a-controls-examples">3.2 Annex A Controls (Examples)</h3>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>Control Owner</th>
+<th>Responsible</th>
+<th>Accountable</th>
+<th>Consulted</th>
+<th>Informed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A.5.1 Policies</strong></td>
+<td>CISO</td>
+<td>ISMS Manager</td>
+<td>CISO</td>
+<td>CIO, Business Units</td>
+<td>All</td>
+</tr>
+<tr>
+<td><strong>A.5.7 Threat Intelligence</strong></td>
+<td>Security Team</td>
+<td>Security Analyst</td>
+<td>CISO</td>
+<td>IT Operations</td>
+<td>ISMS Manager</td>
+</tr>
+<tr>
+<td><strong>A.5.10 Acceptable Use</strong></td>
+<td>CISO</td>
+<td>HR</td>
+<td>CISO</td>
+<td>IT Operations</td>
+<td>All</td>
+</tr>
+<tr>
+<td><strong>A.5.15 Access Control</strong></td>
+<td>IAM Team</td>
+<td>IAM Admin</td>
+<td>CIO</td>
+<td>CISO</td>
+<td>IT Operations</td>
+</tr>
+<tr>
+<td><strong>A.5.23 Cloud Services</strong></td>
+<td>Cloud Architect</td>
+<td>Cloud Admin</td>
+<td>CIO</td>
+<td>CISO</td>
+<td>IT Operations</td>
+</tr>
+<tr>
+<td><strong>A.8.8 Backup</strong></td>
+<td>IT Operations</td>
+<td>Backup Admin</td>
+<td>CIO</td>
+<td>CISO</td>
+<td>ISMS Manager</td>
+</tr>
+<tr>
+<td><strong>A.8.16 Monitoring</strong></td>
+<td>Security Team</td>
+<td>SOC Analyst</td>
+<td>CISO</td>
+<td>IT Operations</td>
+<td>ISMS Manager</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-escalation-paths">4. Escalation Paths</h2>
+<h3 id="41-security-incidents">4.1 Security Incidents</h3>
+<div class="codehilite"><pre><span></span><code><span class="nv">Incident</span><span class="w"> </span><span class="nv">Detection</span>
+<span class="w">       </span>│
+<span class="w">       </span>▼
+<span class="nv">IT</span><span class="w"> </span><span class="nv">Operations</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nv">SOC</span>
+<span class="w">       </span>│
+<span class="w">       </span>▼
+<span class="nv">CISO</span><span class="w"> </span><span class="ss">(</span><span class="k">for</span><span class="w"> </span><span class="nv">critical</span><span class="w"> </span><span class="nv">incidents</span><span class="ss">)</span>
+<span class="w">       </span>│
+<span class="w">       </span>▼
+<span class="nv">CIO</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nv">Management</span><span class="w"> </span><span class="ss">(</span><span class="k">for</span><span class="w"> </span><span class="nv">major</span><span class="w"> </span><span class="nv">incidents</span><span class="ss">)</span>
+<span class="w">       </span>│
+<span class="w">       </span>▼
+<span class="nv">External</span><span class="w"> </span><span class="nv">Reporting</span><span class="w"> </span><span class="ss">(</span><span class="nv">authorities</span>,<span class="w"> </span><span class="nv">customers</span><span class="ss">)</span>
+</code></pre></div>
+
+<p>See <code>0400_Policy_Incident_Management.md</code> for details.</p>
+<h3 id="42-risk-acceptance">4.2 Risk Acceptance</h3>
+<div class="codehilite"><pre><span></span><code><span class="nv">Risk</span><span class="w"> </span><span class="nv">Identification</span>
+<span class="w">       </span>│
+<span class="w">       </span>▼
+<span class="nv">CISO</span><span class="w"> </span><span class="ss">(</span><span class="nv">risk</span><span class="w"> </span><span class="nv">assessment</span><span class="ss">)</span>
+<span class="w">       </span>│
+<span class="w">       </span>▼
+<span class="nv">CISO</span><span class="w"> </span><span class="ss">(</span><span class="nv">risk</span><span class="w"> </span><span class="nv">acceptance</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">low</span><span class="o">/</span><span class="nv">medium</span><span class="w"> </span><span class="nv">risks</span><span class="ss">)</span>
+<span class="w">       </span>│
+<span class="w">       </span>▼
+<span class="nv">Management</span><span class="w"> </span><span class="ss">(</span><span class="nv">risk</span><span class="w"> </span><span class="nv">acceptance</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">high</span><span class="w"> </span><span class="nv">risks</span><span class="ss">)</span>
+</code></pre></div>
+
+<p>See <code>0070_ISMS_Risk_Acceptance_Criteria.md</code> for details.</p>
+<h2 id="5-references">5. References</h2>
+<h3 id="internal-documents">Internal Documents</h3>
+<ul>
+<li><code>0010_ISMS_Information_Security_Policy.md</code> - ISMS Policy</li>
+<li><code>0030_ISMS_Context_and_Interested_Parties.md</code> - Context</li>
+<li><code>0060_ISMS_Risk_Management_Methodology.md</code> - Risk Management</li>
+<li><code>0130_ISMS_Internal_Audit_Program.md</code> - Internal Audit Program</li>
+</ul>
+<h3 id="external-standards">External Standards</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022</strong> - Clause 5.3: Organizational roles, responsibilities and authorities</li>
+<li><strong>ISO/IEC 27002:2022</strong> - Control 5.2: Information security roles and responsibilities</li>
+</ul>
+<hr />
+<p><strong>Approved by:</strong><br />
+{{ meta.management.ceo }}, Management<br />
+Date: {{ meta.document.approval_date }}</p>
+<p><strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0030_ISMS_Context_and_Interested_Parties.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0050_ISMS_Document_Control.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

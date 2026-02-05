@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0230 - Maintenance and Operations Routines</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0230</div>
+            <h1>Maintenance and Operations Routines</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0220_Data_Management_and_Privacy.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0240_Runbooks_Standard_Operations.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="maintenance-and-operations-routines">Maintenance and Operations Routines</h1>
+<h2 id="overview">Overview</h2>
+<p>This document describes regular maintenance tasks, operations checklists, and housekeeping procedures for the IT service. The goal is to ensure system stability, performance, and security through proactive maintenance.</p>
+<p><strong>Document Owner:</strong> IT Operations Manager<br />
+<strong>Approved by:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Organization:</strong> AdminSend GmbH</p>
+<hr />
+<h2 id="maintenance-overview">Maintenance Overview</h2>
+<h3 id="maintenance-categories">Maintenance Categories</h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Description</th>
+<th>Frequency</th>
+<th>Responsible</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Preventive</strong></td>
+<td>Preventive measures to avoid failures</td>
+<td>Regular</td>
+<td>Andreas Huemmer</td>
+</tr>
+<tr>
+<td><strong>Corrective</strong></td>
+<td>Fixing known problems</td>
+<td>As needed</td>
+<td>Andreas Huemmer</td>
+</tr>
+<tr>
+<td><strong>Adaptive</strong></td>
+<td>Adaptation to new requirements</td>
+<td>As needed</td>
+<td>Andreas Huemmer</td>
+</tr>
+<tr>
+<td><strong>Perfective</strong></td>
+<td>Improvement and optimization</td>
+<td>Planned</td>
+<td>Andreas Huemmer</td>
+</tr>
+</tbody>
+</table>
+<h3 id="maintenance-windows">Maintenance Windows</h3>
+<h4 id="regular-maintenance-windows">Regular Maintenance Windows</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Time Window</th>
+<th>Duration</th>
+<th>Announcement</th>
+<th>Approval</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Weekly</td>
+<td>Sunday 02:00-04:00</td>
+<td>2 hours</td>
+<td>3 days</td>
+<td>Ops Manager</td>
+</tr>
+<tr>
+<td>Monthly</td>
+<td>First Sunday 02:00-06:00</td>
+<td>4 hours</td>
+<td>7 days</td>
+<td>Ops Manager</td>
+</tr>
+<tr>
+<td>Quarterly</td>
+<td>First Sunday of quarter 00:00-08:00</td>
+<td>8 hours</td>
+<td>14 days</td>
+<td>CIO</td>
+</tr>
+</tbody>
+</table>
+<h4 id="emergency-maintenance">Emergency Maintenance</h4>
+<ul>
+<li><strong>Time Window:</strong> Anytime after approval</li>
+<li><strong>Announcement:</strong> Minimum 4 hours (if possible)</li>
+<li><strong>Approval:</strong> Anna Schmidt</li>
+<li><strong>Communication:</strong> Inform all stakeholders</li>
+</ul>
+<hr />
+<h2 id="daily-routines">Daily Routines</h2>
+<h3 id="morning-checks-0800">Morning Checks (08:00)</h3>
+<h4 id="system-health-check">System Health Check</h4>
+<ul>
+<li>[ ] Check monitoring dashboard</li>
+<li>[ ] Review critical alerts</li>
+<li>[ ] Validate system availability</li>
+<li>[ ] Check performance metrics</li>
+<li>[ ] Verify backup status</li>
+</ul>
+<h4 id="incident-review">Incident Review</h4>
+<ul>
+<li>[ ] Check overnight incidents</li>
+<li>[ ] Review open tickets</li>
+<li>[ ] Set priorities for the day</li>
+<li>[ ] Identify escalations</li>
+</ul>
+<h4 id="capacity-check">Capacity Check</h4>
+<ul>
+<li>[ ] Check CPU utilization</li>
+<li>[ ] Check RAM utilization</li>
+<li>[ ] Check storage utilization</li>
+<li>[ ] Check network utilization</li>
+</ul>
+<p><strong>Responsible:</strong> Operations Team<br />
+<strong>Duration:</strong> 15-30 minutes<br />
+<strong>Documentation:</strong> Daily Operations Log</p>
+<h3 id="midday-checks-1200">Midday Checks (12:00)</h3>
+<h4 id="performance-monitoring">Performance Monitoring</h4>
+<ul>
+<li>[ ] Check response times</li>
+<li>[ ] Review error rates</li>
+<li>[ ] Validate throughput</li>
+<li>[ ] Check queue lengths</li>
+</ul>
+<h4 id="security-check">Security Check</h4>
+<ul>
+<li>[ ] Check security alerts</li>
+<li>[ ] Review failed login attempts</li>
+<li>[ ] Check firewall logs</li>
+<li>[ ] Identify anomalies</li>
+</ul>
+<p><strong>Responsible:</strong> Operations Team<br />
+<strong>Duration:</strong> 10-15 minutes<br />
+<strong>Documentation:</strong> Daily Operations Log</p>
+<h3 id="evening-checks-1800">Evening Checks (18:00)</h3>
+<h4 id="end-of-day">End of Day</h4>
+<ul>
+<li>[ ] Review all incidents of the day</li>
+<li>[ ] Update open tickets</li>
+<li>[ ] Prepare backup jobs for the night</li>
+<li>[ ] Plan maintenance work for the night</li>
+</ul>
+<h4 id="handover-to-night-shifton-call">Handover to Night Shift/On-Call</h4>
+<ul>
+<li>[ ] Communicate critical issues</li>
+<li>[ ] Document ongoing work</li>
+<li>[ ] Update on-call contacts</li>
+<li>[ ] Confirm escalation paths</li>
+</ul>
+<p><strong>Responsible:</strong> Operations Team<br />
+<strong>Duration:</strong> 15-20 minutes<br />
+<strong>Documentation:</strong> Shift Handover Log</p>
+<hr />
+<h2 id="weekly-routines">Weekly Routines</h2>
+<h3 id="monday-week-planning">Monday: Week Planning</h3>
+<h4 id="week-start-meeting-0900">Week Start Meeting (09:00)</h4>
+<ul>
+<li>[ ] Review weekend incidents</li>
+<li>[ ] Define week goals</li>
+<li>[ ] Plan maintenance work</li>
+<li>[ ] Assign resources</li>
+<li>[ ] Identify risks</li>
+</ul>
+<p><strong>Participants:</strong> Andreas Huemmer, Operations Team<br />
+<strong>Duration:</strong> 30 minutes<br />
+<strong>Documentation:</strong> Weekly Planning Notes</p>
+<h3 id="tuesday-backup-validation">Tuesday: Backup Validation</h3>
+<h4 id="backup-verification">Backup Verification</h4>
+<ul>
+<li>[ ] Check backup logs of last week</li>
+<li>[ ] Validate backup success rate</li>
+<li>[ ] Review backup sizes</li>
+<li>[ ] Analyze failed backups</li>
+<li>[ ] Perform restore test (sample)</li>
+</ul>
+<p><strong>Responsible:</strong> Operations Team<br />
+<strong>Duration:</strong> 1-2 hours<br />
+<strong>Documentation:</strong> Backup Verification Report</p>
+<h3 id="wednesday-performance-analysis">Wednesday: Performance Analysis</h3>
+<h4 id="weekly-performance-review">Weekly Performance Review</h4>
+<ul>
+<li>[ ] Analyze performance trends</li>
+<li>[ ] Identify bottlenecks</li>
+<li>[ ] Update capacity forecasts</li>
+<li>[ ] Identify optimization potentials</li>
+</ul>
+<p><strong>Responsible:</strong> Operations Team<br />
+<strong>Duration:</strong> 1 hour<br />
+<strong>Documentation:</strong> Weekly Performance Report</p>
+<h3 id="thursday-security-review">Thursday: Security Review</h3>
+<h4 id="weekly-security-check">Weekly Security Check</h4>
+<ul>
+<li>[ ] Analyze security logs</li>
+<li>[ ] Review vulnerability scans</li>
+<li>[ ] Check patch status</li>
+<li>[ ] Review security incidents</li>
+<li>[ ] Check compliance status</li>
+</ul>
+<p><strong>Responsible:</strong> Operations Team, Thomas Weber<br />
+<strong>Duration:</strong> 1-2 hours<br />
+<strong>Documentation:</strong> Weekly Security Report</p>
+<h3 id="friday-week-closure">Friday: Week Closure</h3>
+<h4 id="week-closure-meeting-1500">Week Closure Meeting (15:00)</h4>
+<ul>
+<li>[ ] Review week goals</li>
+<li>[ ] Summarize incidents of the week</li>
+<li>[ ] Discuss lessons learned</li>
+<li>[ ] Prepare next week</li>
+<li>[ ] Brief weekend on-call</li>
+</ul>
+<p><strong>Participants:</strong> Andreas Huemmer, Operations Team<br />
+<strong>Duration:</strong> 30 minutes<br />
+<strong>Documentation:</strong> Weekly Summary Report</p>
+<h3 id="sunday-maintenance-window">Sunday: Maintenance Window</h3>
+<h4 id="weekly-maintenance-0200-0400">Weekly Maintenance (02:00-04:00)</h4>
+<ul>
+<li>[ ] Install system updates</li>
+<li>[ ] Perform database maintenance</li>
+<li>[ ] Log archiving</li>
+<li>[ ] Disk cleanup</li>
+<li>[ ] Performance optimization</li>
+</ul>
+<p><strong>Responsible:</strong> On-Call Engineer<br />
+<strong>Duration:</strong> 2 hours<br />
+<strong>Documentation:</strong> Maintenance Log</p>
+<hr />
+<h2 id="monthly-routines">Monthly Routines</h2>
+<h3 id="first-week-month-planning">First Week: Month Planning</h3>
+<h4 id="month-start-meeting">Month Start Meeting</h4>
+<ul>
+<li>[ ] Review previous month</li>
+<li>[ ] Define month goals</li>
+<li>[ ] Plan major maintenance work</li>
+<li>[ ] Check budget status</li>
+<li>[ ] Update capacity planning</li>
+</ul>
+<p><strong>Participants:</strong> Anna Schmidt, Andreas Huemmer, Team Leads<br />
+<strong>Duration:</strong> 1 hour<br />
+<strong>Documentation:</strong> Monthly Planning Document</p>
+<h3 id="first-week-patch-management">First Week: Patch Management</h3>
+<h4 id="monthly-patch-deployment">Monthly Patch Deployment</h4>
+<ul>
+<li>[ ] Check patch availability</li>
+<li>[ ] Assess criticality</li>
+<li>[ ] Patch test environment</li>
+<li>[ ] Perform validation</li>
+<li>[ ] Plan production deployment</li>
+<li>[ ] Create rollback plan</li>
+</ul>
+<p><strong>Responsible:</strong> Operations Team<br />
+<strong>Duration:</strong> 4-8 hours (over several days)<br />
+<strong>Documentation:</strong> Patch Management Report</p>
+<h3 id="second-week-capacity-review">Second Week: Capacity Review</h3>
+<h4 id="monthly-capacity-analysis">Monthly Capacity Analysis</h4>
+<ul>
+<li>[ ] Analyze resource utilization</li>
+<li>[ ] Identify growth trends</li>
+<li>[ ] Create capacity forecasts</li>
+<li>[ ] Assess scaling needs</li>
+<li>[ ] Check budget implications</li>
+</ul>
+<p><strong>Responsible:</strong> Andreas Huemmer<br />
+<strong>Duration:</strong> 2-3 hours<br />
+<strong>Documentation:</strong> Monthly Capacity Report</p>
+<h3 id="third-week-security-audit">Third Week: Security Audit</h3>
+<h4 id="monthly-security-audit">Monthly Security Audit</h4>
+<ul>
+<li>[ ] Review access rights</li>
+<li>[ ] Deactivate inactive accounts</li>
+<li>[ ] Check password policies</li>
+<li>[ ] Review firewall rules</li>
+<li>[ ] Perform vulnerability scan</li>
+<li>[ ] Check compliance status</li>
+</ul>
+<p><strong>Responsible:</strong> Thomas Weber, Operations Team<br />
+<strong>Duration:</strong> 3-4 hours<br />
+<strong>Documentation:</strong> Monthly Security Audit Report</p>
+<h3 id="fourth-week-disaster-recovery-test">Fourth Week: Disaster Recovery Test</h3>
+<h4 id="monthly-dr-test">Monthly DR Test</h4>
+<ul>
+<li>[ ] Select DR scenario</li>
+<li>[ ] Create test plan</li>
+<li>[ ] Execute DR procedures</li>
+<li>[ ] Document results</li>
+<li>[ ] Identify improvements</li>
+<li>[ ] Update DR plan</li>
+</ul>
+<p><strong>Responsible:</strong> Andreas Huemmer<br />
+<strong>Duration:</strong> 2-4 hours<br />
+<strong>Documentation:</strong> DR Test Report</p>
+<hr />
+<h2 id="quarterly-routines">Quarterly Routines</h2>
+<h3 id="first-week-quarter-planning">First Week: Quarter Planning</h3>
+<h4 id="quarter-start-meeting">Quarter Start Meeting</h4>
+<ul>
+<li>[ ] Review previous quarter</li>
+<li>[ ] Define quarter goals</li>
+<li>[ ] Plan major projects</li>
+<li>[ ] Conduct budget review</li>
+<li>[ ] Update resource planning</li>
+</ul>
+<p><strong>Participants:</strong> Max Mustermann, Anna Schmidt, Andreas Huemmer<br />
+<strong>Duration:</strong> 2 hours<br />
+<strong>Documentation:</strong> Quarterly Planning Document</p>
+<h3 id="second-week-infrastructure-review">Second Week: Infrastructure Review</h3>
+<h4 id="quarterly-infrastructure-analysis">Quarterly Infrastructure Analysis</h4>
+<ul>
+<li>[ ] Check hardware condition</li>
+<li>[ ] Identify end-of-life systems</li>
+<li>[ ] Assess upgrade needs</li>
+<li>[ ] Identify consolidation potentials</li>
+<li>[ ] Conduct investment planning</li>
+</ul>
+<p><strong>Responsible:</strong> Andreas Huemmer<br />
+<strong>Duration:</strong> 1 day<br />
+<strong>Documentation:</strong> Quarterly Infrastructure Report</p>
+<hr />
+<h2 id="annual-routines">Annual Routines</h2>
+<h3 id="q1-annual-planning">Q1: Annual Planning</h3>
+<h4 id="year-start-meeting">Year Start Meeting</h4>
+<ul>
+<li>[ ] Review previous year</li>
+<li>[ ] Define year goals</li>
+<li>[ ] Plan strategic initiatives</li>
+<li>[ ] Finalize annual budget</li>
+<li>[ ] Resource planning for the year</li>
+</ul>
+<p><strong>Participants:</strong> Max Mustermann, Anna Schmidt, Maria Müller, Andreas Huemmer<br />
+<strong>Duration:</strong> 1 day<br />
+<strong>Documentation:</strong> Annual Planning Document</p>
+<h3 id="q2-infrastructure-audit">Q2: Infrastructure Audit</h3>
+<h4 id="annual-infrastructure-audit">Annual Infrastructure Audit</h4>
+<ul>
+<li>[ ] Complete hardware inventory</li>
+<li>[ ] Software license audit</li>
+<li>[ ] Conduct compliance audit</li>
+<li>[ ] Security assessment</li>
+<li>[ ] Architecture review</li>
+<li>[ ] Identify modernization needs</li>
+</ul>
+<p><strong>Responsible:</strong> Anna Schmidt, Andreas Huemmer<br />
+<strong>Duration:</strong> 1 week<br />
+<strong>Documentation:</strong> Annual Infrastructure Audit Report</p>
+<hr />
+<h2 id="housekeeping-procedures">Housekeeping Procedures</h2>
+<h3 id="database-maintenance">Database Maintenance</h3>
+<h4 id="weekly-database-maintenance">Weekly Database Maintenance</h4>
+<ul>
+<li>[ ] Check index fragmentation</li>
+<li>[ ] Update statistics</li>
+<li>[ ] Clean transaction logs</li>
+<li>[ ] Check database integrity</li>
+<li>[ ] Analyze performance metrics</li>
+</ul>
+<p><strong>Responsible:</strong> Database Administrator<br />
+<strong>Frequency:</strong> Weekly (Sunday 02:00)<br />
+<strong>Duration:</strong> 1-2 hours</p>
+<h3 id="log-management">Log Management</h3>
+<h4 id="daily-log-rotation">Daily Log Rotation</h4>
+<ul>
+<li>[ ] Rotate application logs</li>
+<li>[ ] Rotate system logs</li>
+<li>[ ] Compress old logs</li>
+<li>[ ] Send logs to central system</li>
+</ul>
+<p><strong>Responsible:</strong> Automated<br />
+<strong>Frequency:</strong> Daily (00:00)<br />
+<strong>Duration:</strong> Automatic</p>
+<hr />
+<h2 id="automation">Automation</h2>
+<h3 id="automated-routines">Automated Routines</h3>
+<table>
+<thead>
+<tr>
+<th>Routine</th>
+<th>Frequency</th>
+<th>Tool/Script</th>
+<th>Responsible</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Backup Jobs</td>
+<td>Daily</td>
+<td>[TODO: Backup Tool]</td>
+<td>Andreas Huemmer</td>
+</tr>
+<tr>
+<td>Log Rotation</td>
+<td>Daily</td>
+<td>logrotate</td>
+<td>Automated</td>
+</tr>
+<tr>
+<td>Health Checks</td>
+<td>Hourly</td>
+<td>[TODO: Monitoring Tool]</td>
+<td>Automated</td>
+</tr>
+<tr>
+<td>Disk Cleanup</td>
+<td>Weekly</td>
+<td>[TODO: Script]</td>
+<td>Automated</td>
+</tr>
+<tr>
+<td>Security Scans</td>
+<td>Daily</td>
+<td>[TODO: Security Tool]</td>
+<td>Automated</td>
+</tr>
+<tr>
+<td>Performance Reports</td>
+<td>Weekly</td>
+<td>[TODO: Script]</td>
+<td>Automated</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="processes-and-responsibilities">Processes and Responsibilities</h2>
+<h3 id="raci-matrix">RACI Matrix</h3>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>CIO</th>
+<th>Ops Manager</th>
+<th>Ops Team</th>
+<th>On-Call</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Daily Routines</td>
+<td>I</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Weekly Routines</td>
+<td>I</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Monthly Routines</td>
+<td>C</td>
+<td>A</td>
+<td>R</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Quarterly Routines</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Annual Routines</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Automation</td>
+<td>C</td>
+<td>A</td>
+<td>R</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Housekeeping</td>
+<td>I</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Legend:</strong> R = Responsible, A = Accountable, C = Consulted, I = Informed</p>
+</blockquote>
+<hr />
+<h2 id="compliance-and-standards">Compliance and Standards</h2>
+<h3 id="relevant-standards">Relevant Standards</h3>
+<ul>
+<li><strong>ITIL v4:</strong> Service Operation Practice</li>
+<li><strong>ISO 20000:</strong> Clause 8.1 - Operational Planning and Control</li>
+<li><strong>COBIT 2019:</strong> DSS01 - Managed Operations</li>
+</ul>
+<hr />
+<p><strong>Last Update:</strong> {{ meta.date }}<br />
+<strong>Next Review:</strong> [TODO: Date]<br />
+<strong>Contact:</strong> andreas.huemmer@adminsend.de</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0220_Data_Management_and_Privacy.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0240_Runbooks_Standard_Operations.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

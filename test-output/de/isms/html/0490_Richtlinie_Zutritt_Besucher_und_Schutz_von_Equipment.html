@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0490 - Richtlinie: Zutritt, Besucher und Schutz von Equipment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0490</div>
+            <h1>Richtlinie: Zutritt, Besucher und Schutz von Equipment</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0480_Policy_Physische_Sicherheit.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0500_Policy_Mobile_Device_und_Remote_Work.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="richtlinie-zutritt-besucher-und-schutz-von-equipment">Richtlinie: Zutritt, Besucher und Schutz von Equipment</h1>
+<p><strong>Dokument-ID:</strong> 0490<br />
+<strong>Dokumenttyp:</strong> Richtlinie (detailliert)<br />
+<strong>Zugehörige Policy:</strong> 0480_Policy_Physische_Sicherheit.md<br />
+<strong>Standard-Referenz:</strong> ISO/IEC 27001:2022 Annex A.7.1, A.7.2, A.7.3, A.7.4<br />
+<strong>Owner:</strong> {{ meta.facilities.manager }}<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Freigegeben<br />
+<strong>Klassifizierung:</strong> Intern<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.date }}</p>
+<hr />
+<h2 id="1-zweck-und-geltungsbereich">1. Zweck und Geltungsbereich</h2>
+<p>Diese Richtlinie konkretisiert die <code>0480_Policy_Physische_Sicherheit.md</code> und definiert:
+- Zutrittskontrollsysteme und -prozesse
+- Besuchermanagement
+- Physischer Schutz von IT-Equipment</p>
+<p><strong>Geltungsbereich:</strong> Alle Standorte von <strong>AdminSend GmbH</strong></p>
+<h2 id="2-sicherheitszonen">2. Sicherheitszonen</h2>
+<h3 id="21-zonen-klassifizierung">2.1 Zonen-Klassifizierung</h3>
+<p><strong>Zone 1 (Öffentlich):</strong>
+- Empfangsbereich, Lobby
+- Keine Zutrittskontrolle
+- Videoüberwachung</p>
+<p><strong>Zone 2 (Intern):</strong>
+- Bürobereiche, Besprechungsräume
+- Zutrittskarte erforderlich
+- Mitarbeiter und registrierte Besucher</p>
+<p><strong>Zone 3 (Eingeschränkt):</strong>
+- Serverräume, Rechenzentren
+- Zusätzliche Authentifizierung (PIN, Biometrie)
+- Nur autorisiertes Personal</p>
+<p><strong>Zone 4 (Hochsicherheit):</strong>
+- Kritische Infrastruktur
+- Vier-Augen-Prinzip
+- Videoüberwachung und Logging</p>
+<h2 id="3-zutrittskontrollsystem">3. Zutrittskontrollsystem</h2>
+<h3 id="31-zutrittskarten">3.1 Zutrittskarten</h3>
+<p><strong>Kartentyp:</strong> RFID-Karten mit Foto<br />
+<strong>Ausgabe:</strong> Bei Onboarding durch HR<br />
+<strong>Gültigkeit:</strong> Bis Vertragsende</p>
+<p><strong>Kartenverlust:</strong>
+1. Sofortige Meldung an Security
+2. Karte sperren (innerhalb 15 Minuten)
+3. Neue Karte ausstellen
+4. Dokumentation</p>
+<h3 id="32-biometrische-authentifizierung">3.2 Biometrische Authentifizierung</h3>
+<p><strong>Für Zone 3/4:</strong>
+- Fingerabdruck-Scanner
+- Iris-Scanner (optional)
+- Datenschutz-konform (DSGVO)</p>
+<h3 id="33-zugriffsprotokolle">3.3 Zugriffsprotokolle</h3>
+<p><strong>Logging:</strong>
+- Alle Zutrittsversuche (Erfolg und Fehler)
+- Timestamp, Person, Tür/Zone
+- Retention: {{ meta.retention.access_years }} Jahre</p>
+<p><strong>Monitoring:</strong>
+- Alerts bei unautorisierten Zugriffsversuchen
+- Alerts bei Zugriff außerhalb Geschäftszeiten (Zone 3/4)</p>
+<h2 id="4-besuchermanagement">4. Besuchermanagement</h2>
+<h3 id="41-besucheranmeldung">4.1 Besucheranmeldung</h3>
+<p><strong>Prozess:</strong>
+1. Gastgeber meldet Besucher vorab an (E-Mail, Portal)
+2. Besucher meldet sich am Empfang
+3. Ausweis-Kontrolle (Personalausweis, Führerschein)
+4. Besucherausweis ausgeben
+5. Gastgeber abholen</p>
+<p><strong>Besucherausweis:</strong>
+- Temporäre RFID-Karte
+- Gültigkeit: 1 Tag
+- Automatische Deaktivierung nach Ablauf</p>
+<h3 id="42-begleitung">4.2 Begleitung</h3>
+<p><strong>Pflicht:</strong>
+- Besucher müssen jederzeit begleitet werden
+- Keine unbeaufsichtigten Besucher in Zone 2/3/4
+- Gastgeber verantwortlich</p>
+<p><strong>Ausnahmen:</strong>
+- Langzeit-Auftragnehmer mit eigenem Badge
+- Nach Background-Check und NDA</p>
+<h3 id="43-besucherprotokoll">4.3 Besucherprotokoll</h3>
+<p><strong>Dokumentation:</strong>
+- Name, Firma, Ausweisnummer
+- Gastgeber, Zweck des Besuchs
+- Ein- und Austrittszeit
+- Retention: {{ meta.retention.visitor_years }} Jahre</p>
+<h2 id="5-physischer-schutz-von-equipment">5. Physischer Schutz von Equipment</h2>
+<h3 id="51-serverraume-und-rechenzentren">5.1 Serverräume und Rechenzentren</h3>
+<p><strong>Anforderungen:</strong>
+- Klimatisierung (18-27°C, 40-60% Luftfeuchtigkeit)
+- Brandmeldeanlage und Löschsystem
+- Unterbrechungsfreie Stromversorgung (USV)
+- Notstromgenerator
+- Wassersensoren (Leckage-Erkennung)</p>
+<p><strong>Zutrittskontrolle:</strong>
+- Zone 3 oder 4
+- Logging aller Zutritte
+- Videoüberwachung</p>
+<h3 id="52-arbeitsplatze">5.2 Arbeitsplätze</h3>
+<p><strong>Clean Desk Policy:</strong>
+- Keine vertraulichen Dokumente auf Schreibtisch (Feierabend)
+- Bildschirmsperre bei Abwesenheit
+- Abschließbare Schränke für vertrauliche Unterlagen</p>
+<p><strong>Kensington-Locks:</strong>
+- Pflicht für Laptops in Büros
+- Diebstahlschutz</p>
+<h3 id="53-mobile-gerate">5.3 Mobile Geräte</h3>
+<p><strong>Sicherheitsanforderungen:</strong>
+- Verschlüsselung (BitLocker, FileVault)
+- Remote Wipe-Fähigkeit (MDM)
+- Keine vertraulichen Daten lokal (Cloud-Storage bevorzugen)</p>
+<p><strong>Bei Verlust:</strong>
+1. Sofortige Meldung an IT-Support
+2. Remote Wipe auslösen
+3. Incident-Ticket erstellen
+4. Polizeimeldung (bei Diebstahl)</p>
+<h2 id="6-videouberwachung">6. Videoüberwachung</h2>
+<h3 id="61-uberwachte-bereiche">6.1 Überwachte Bereiche</h3>
+<p><strong>Kameras:</strong>
+- Eingänge und Ausgänge
+- Serverräume (Zone 3/4)
+- Parkplätze
+- Keine Überwachung in Büros, Toiletten, Umkleiden</p>
+<h3 id="62-datenschutz">6.2 Datenschutz</h3>
+<p><strong>DSGVO-Compliance:</strong>
+- Hinweisschilder auf Videoüberwachung
+- Zweckbindung (Sicherheit, Zutrittskontrolle)
+- Zugriff nur für autorisiertes Personal
+- Retention: 30 Tage (dann automatische Löschung)</p>
+<h2 id="7-notfallzugang">7. Notfallzugang</h2>
+<h3 id="71-break-glass-verfahren">7.1 Break-Glass-Verfahren</h3>
+<p><strong>Für Notfälle:</strong>
+- Physischer Schlüssel in versiegeltem Umschlag
+- Aufbewahrung in Safe
+- Nutzung nur bei Notfällen (Feuer, medizinischer Notfall)
+- Dokumentation jeder Nutzung</p>
+<h3 id="72-evakuierung">7.2 Evakuierung</h3>
+<p><strong>Evakuierungsplan:</strong>
+- Fluchtwege ausgeschildert
+- Sammelplätze definiert
+- Regelmäßige Evakuierungsübungen (jährlich)</p>
+<h2 id="8-compliance-und-audit">8. Compliance und Audit</h2>
+<h3 id="81-messgroen-kpis">8.1 Messgrößen (KPIs)</h3>
+<table>
+<thead>
+<tr>
+<th>Metrik</th>
+<th>Zielwert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unbegleitete Besucher</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Zutrittskarten-Verluste</td>
+<td>&lt; 5 pro Jahr</td>
+</tr>
+<tr>
+<td>Clean-Desk-Compliance</td>
+<td>&gt; 90%</td>
+</tr>
+<tr>
+<td>Evakuierungsübungen</td>
+<td>1 pro Jahr</td>
+</tr>
+</tbody>
+</table>
+<h3 id="82-audit-nachweise">8.2 Audit-Nachweise</h3>
+<ul>
+<li>Zutrittsprotokolle</li>
+<li>Besucherprotokolle</li>
+<li>Videoaufzeichnungen (30 Tage)</li>
+<li>Evakuierungsübungs-Protokolle</li>
+</ul>
+<h2 id="9-referenzen">9. Referenzen</h2>
+<h3 id="interne-dokumente">Interne Dokumente</h3>
+<ul>
+<li><code>0480_Policy_Physische_Sicherheit.md</code></li>
+<li><code>0300_Policy_Asset_Management.md</code></li>
+</ul>
+<h3 id="externe-standards">Externe Standards</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.7.1</strong> - Physical security perimeters</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.7.2</strong> - Physical entry</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.7.3</strong> - Securing offices, rooms and facilities</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.7.4</strong> - Physical security monitoring</li>
+</ul>
+<hr />
+<p><strong>Genehmigt durch:</strong> Thomas Weber, CISO<br />
+<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0480_Policy_Physische_Sicherheit.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0500_Policy_Mobile_Device_und_Remote_Work.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

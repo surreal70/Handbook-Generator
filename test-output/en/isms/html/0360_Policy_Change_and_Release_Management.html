@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0360 - Policy: Change and Release Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0360</div>
+            <h1>Policy: Change and Release Management</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0350_Guideline_Vulnerability_Scans_Patching_and_Exploitation_Response.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0370_Guideline_Change_Management_with_Security_Approvals.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="policy-change-and-release-management">Policy: Change and Release Management</h1>
+<p><strong>Document ID:</strong> 0360<br />
+<strong>Document Type:</strong> Policy (abstract)<br />
+<strong>Standard Reference:</strong> ISO/IEC 27001:2022 Annex A.8.32 (incl. Amendment 1:2024)<br />
+<strong>Owner:</strong> Thomas Weber<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Approved<br />
+<strong>Classification:</strong> Internal<br />
+<strong>Last Updated:</strong> {{ meta.document.date }}<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This policy defines the principles for change and release management at <strong>AdminSend GmbH</strong>. It ensures that changes to IT systems are controlled, tested, and documented to minimize operational disruptions and security risks.</p>
+<h2 id="2-scope">2. Scope</h2>
+<p>This policy applies to:</p>
+<ul>
+<li><strong>Organizational Units:</strong> All departments and locations of AdminSend GmbH</li>
+<li><strong>Systems:</strong> All IT systems, applications, infrastructure, networks, cloud services</li>
+<li><strong>Change Types:</strong> Standard changes, normal changes, emergency changes</li>
+<li><strong>Environments:</strong> Production, test, development</li>
+<li><strong>Locations:</strong> {{ netbox.site.name }} and all other operational sites</li>
+</ul>
+<p><strong>Exceptions:</strong> Exceptions are only permitted through the defined exception process (<code>0640_Policy_Exceptions_and_Risk_Waivers.md</code>).</p>
+<h2 id="3-principles-policy-statements">3. Principles (Policy Statements)</h2>
+<h3 id="31-controlled-changes">3.1 Controlled Changes</h3>
+<p>All changes to production IT systems must be approved, documented, and tracked through the change management process.</p>
+<h3 id="32-change-categorization">3.2 Change Categorization</h3>
+<p>Changes are categorized by risk and impact:
+- <strong>Standard Changes:</strong> Pre-approved, low-risk, recurring changes
+- <strong>Normal Changes:</strong> Regular changes with CAB approval
+- <strong>Emergency Changes:</strong> Urgent changes to resolve critical issues</p>
+<h3 id="33-change-advisory-board-cab">3.3 Change Advisory Board (CAB)</h3>
+<p>A Change Advisory Board evaluates and approves normal and emergency changes. The CAB consists of representatives from IT, security, business, and change management.</p>
+<h3 id="34-risk-and-impact-analysis">3.4 Risk and Impact Analysis</h3>
+<p>A risk and impact analysis is performed before each change. Security risks are assessed and mitigation measures defined.</p>
+<h3 id="35-testing-and-validation">3.5 Testing and Validation</h3>
+<p>Changes are validated in test environments before being rolled out to production. Critical changes require comprehensive testing.</p>
+<h3 id="36-rollback-planning">3.6 Rollback Planning</h3>
+<p>A rollback plan exists for every change to quickly return to the previous state in case of problems.</p>
+<h3 id="37-documentation-and-traceability">3.7 Documentation and Traceability</h3>
+<p>All changes are documented (description, justification, approval, execution, result). Changes are traceable and auditable.</p>
+<h3 id="38-security-review">3.8 Security Review</h3>
+<p>Changes with security relevance require a security review by the security team before approval.</p>
+<h2 id="4-roles-and-responsibilities">4. Roles and Responsibilities</h2>
+<h3 id="raci-matrix-change-and-release-management">RACI Matrix: Change and Release Management</h3>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>Change Manager</th>
+<th>CAB</th>
+<th>CISO</th>
+<th>Change Requester</th>
+<th>IT Operations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Policy creation</td>
+<td>C</td>
+<td>C</td>
+<td>R/A</td>
+<td>I</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Change request</td>
+<td>I</td>
+<td>I</td>
+<td>I</td>
+<td>R</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Risk analysis</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>CAB approval</td>
+<td>R</td>
+<td>A</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Security review</td>
+<td>C</td>
+<td>C</td>
+<td>R/A</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Change implementation</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+<td>I</td>
+<td>R/A</td>
+</tr>
+<tr>
+<td>Rollback</td>
+<td>R</td>
+<td>I</td>
+<td>C</td>
+<td>I</td>
+<td>R/A</td>
+</tr>
+<tr>
+<td>Post-implementation review</td>
+<td>R/A</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legend:</strong> R = Responsible (Execution), A = Accountable (Ownership), C = Consulted, I = Informed</p>
+<h3 id="key-roles">Key Roles</h3>
+<ul>
+<li><strong>Policy Owner:</strong> Thomas Weber (CISO)</li>
+<li><strong>Change Manager:</strong> {{ meta.it.change_manager }}</li>
+<li><strong>CAB Chair:</strong> {{ meta.it.cab_chair }}</li>
+<li><strong>Implementation Responsible:</strong> IT Operations, Development</li>
+<li><strong>Control/Audit Function:</strong> ISMS, Internal Audit</li>
+</ul>
+<h2 id="5-derivations-guidelinesstandardsprocesses">5. Derivations (Guidelines/Standards/Processes)</h2>
+<p>Implementation details are defined in subordinate documents:</p>
+<h3 id="related-guidelines">Related Guidelines</h3>
+<ul>
+<li><strong>0370_Guideline_Change_Management_with_Security_Approvals.md</strong> - Detailed implementation guideline</li>
+<li><code>0340_Policy_Vulnerability_and_Patch_Management.md</code> - Patch Management Policy</li>
+<li><code>0380_Policy_Secure_Development.md</code> - Secure Development Policy</li>
+<li><code>0400_Policy_Incident_Management.md</code> - Incident Management Policy</li>
+</ul>
+<h3 id="related-standardsbaselines">Related Standards/Baselines</h3>
+<ul>
+<li>Change categorization and approval processes</li>
+<li>CAB composition and decision criteria</li>
+<li>Testing and validation requirements</li>
+<li>Rollback procedures</li>
+</ul>
+<h3 id="related-processes">Related Processes</h3>
+<ul>
+<li>Change management process</li>
+<li>Emergency change process</li>
+<li>Release management process</li>
+<li>Post-implementation review</li>
+</ul>
+<h2 id="6-compliance-monitoring-and-enforcement">6. Compliance, Monitoring and Enforcement</h2>
+<h3 id="metrics-and-kpis">Metrics and KPIs</h3>
+<ul>
+<li>Number of changes per category (standard, normal, emergency)</li>
+<li>Change success rate (target: &gt;95%)</li>
+<li>Number of failed changes and rollbacks</li>
+<li>Average change lead time</li>
+<li>Number of unauthorized changes (target: 0)</li>
+<li>Security review coverage for security-relevant changes (target: 100%)</li>
+</ul>
+<h3 id="evidence-and-proof">Evidence and Proof</h3>
+<ul>
+<li>Change tickets and approvals</li>
+<li>CAB meeting minutes</li>
+<li>Security review documentation</li>
+<li>Test results</li>
+<li>Rollback documentation</li>
+<li>Post-implementation review reports</li>
+</ul>
+<h3 id="consequences-of-violations">Consequences of Violations</h3>
+<p>Violations of this policy are handled according to applicable HR and compliance processes:
+- <strong>Unauthorized change:</strong> Rollback, investigation, retraining
+- <strong>Missing documentation:</strong> Completion, warning
+- <strong>Skipped security review:</strong> Investigation, disciplinary action
+- <strong>Repeated violations:</strong> Employment consequences</p>
+<h2 id="7-exceptions">7. Exceptions</h2>
+<p>Exceptions to this policy are only permitted in justified cases:</p>
+<ul>
+<li><strong>Exception Process:</strong> See <code>0640_Policy_Exceptions_and_Risk_Waivers.md</code></li>
+<li><strong>Approval:</strong> Exceptions must be approved by Change Manager and CISO</li>
+<li><strong>Documentation:</strong> All exceptions are documented and discussed in post-implementation review</li>
+<li><strong>Time Limitation:</strong> Exceptions are generally time-limited</li>
+</ul>
+<h2 id="8-references">8. References</h2>
+<h3 id="internal-documents">Internal Documents</h3>
+<ul>
+<li><code>0010_ISMS_Information_Security_Policy.md</code> - ISMS Policy</li>
+<li><code>0370_Guideline_Change_Management_with_Security_Approvals.md</code> - Detailed Guideline</li>
+<li><code>0340_Policy_Vulnerability_and_Patch_Management.md</code> - Patch Management Policy</li>
+<li><code>0080_ISMS_Risk_Register_Template.md</code> - Risk Register</li>
+</ul>
+<h3 id="external-standards-and-requirements">External Standards and Requirements</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.8.32</strong> - Change management</li>
+<li><strong>ISO/IEC 27002:2022</strong> - Information security controls</li>
+<li><strong>ITIL 4</strong> - Change Enablement</li>
+<li><strong>ISO/IEC 20000</strong> - IT Service Management</li>
+</ul>
+<hr />
+<p><strong>Approved by:</strong><br />
+{{ meta.management.ceo }}, Management<br />
+Date: {{ meta.document.approval_date }}</p>
+<p><strong>Next Review:</strong> {{ meta.document.next_review }} (annually or as needed)</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0350_Guideline_Vulnerability_Scans_Patching_and_Exploitation_Response.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0370_Guideline_Change_Management_with_Security_Approvals.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

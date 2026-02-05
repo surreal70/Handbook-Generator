@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0020 - BCM-Leitlinie / BCM-Policy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0020</div>
+            <h1>BCM-Leitlinie / BCM-Policy</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0010_Zweck_und_Geltungsbereich.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0030_Dokumentenlenkung_und_Versionierung.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="bcm-leitlinie-bcm-policy">BCM-Leitlinie / BCM-Policy</h1>
+<p><strong>Dokument-ID:</strong> BCM-0020<br />
+<strong>Organisation:</strong> AdminSend GmbH<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Genehmigt durch:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Entwurf / In Review / Freigegeben<br />
+<strong>Klassifizierung:</strong> internal<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-leitlinie-policy-statement">1. Leitlinie (Policy Statement)</h2>
+<p>Die Geschäftsführung der AdminSend GmbH verpflichtet sich zur Implementierung und kontinuierlichen Verbesserung eines Business Continuity Management Systems (BCMS) gemäß <strong>ISO 22301:2019</strong>.</p>
+<h3 id="11-management-commitment">1.1 Management-Commitment</h3>
+<p>Die Geschäftsführung, vertreten durch <strong>{{ meta.roles.ceo.name }}</strong> (CEO), erklärt hiermit:</p>
+<ul>
+<li><strong>Höchste Priorität:</strong> Business Continuity hat strategische Bedeutung für den Schutz unserer Organisation, unserer Mitarbeiter, Kunden und Stakeholder</li>
+<li><strong>Ressourcenbereitstellung:</strong> Angemessene finanzielle, personelle und technische Ressourcen werden für das BCMS bereitgestellt</li>
+<li><strong>Führungsverantwortung:</strong> Die Geschäftsführung übernimmt die Gesamtverantwortung für das BCMS und dessen Wirksamkeit</li>
+<li><strong>Kontinuierliche Verbesserung:</strong> Das BCMS wird regelmäßig überprüft und kontinuierlich verbessert</li>
+</ul>
+<h3 id="12-grundsatze-des-bcms">1.2 Grundsätze des BCMS</h3>
+<p>Das BCMS der AdminSend GmbH basiert auf folgenden Grundsätzen:</p>
+<ol>
+<li><strong>Risikobasierter Ansatz:</strong> Identifikation, Bewertung und Behandlung von Risiken für die Geschäftskontinuität</li>
+<li><strong>Kontinuierliche Verbesserung:</strong> Systematische Weiterentwicklung der BCM-Fähigkeiten durch Übungen, Tests und Lessons Learned</li>
+<li><strong>Verantwortlichkeit:</strong> Klare Zuweisung von Rollen und Verantwortlichkeiten auf allen Organisationsebenen</li>
+<li><strong>Übung und Test:</strong> Regelmäßige Übungen und Tests zur Validierung der BCM-Maßnahmen</li>
+<li><strong>Dokumentation und Nachweisbarkeit:</strong> Vollständige Dokumentation aller BCM-Aktivitäten und -Entscheidungen</li>
+<li><strong>Compliance:</strong> Einhaltung aller relevanten gesetzlichen, regulatorischen und vertraglichen Anforderungen</li>
+</ol>
+<h3 id="13-verpflichtungen">1.3 Verpflichtungen</h3>
+<p>Die AdminSend GmbH verpflichtet sich zu:</p>
+<ul>
+<li><strong>Schutz von Menschenleben:</strong> Sicherheit und Wohlergehen von Mitarbeitern, Kunden und Besuchern haben oberste Priorität</li>
+<li><strong>Geschäftskontinuität:</strong> Aufrechterhaltung kritischer Geschäftsprozesse auch bei schwerwiegenden Störungen</li>
+<li><strong>Stakeholder-Kommunikation:</strong> Transparente und zeitnahe Kommunikation mit allen betroffenen Stakeholdern</li>
+<li><strong>Lieferantenmanagement:</strong> Sicherstellung der Business Continuity-Fähigkeiten kritischer Lieferanten</li>
+<li><strong>Compliance und Nachweisführung:</strong> Erfüllung aller relevanten Anforderungen und Bereitstellung von Nachweisen</li>
+</ul>
+<h2 id="2-ziele-und-grundprinzipien">2. Ziele und Grundprinzipien</h2>
+<h3 id="21-strategische-bcm-ziele">2.1 Strategische BCM-Ziele</h3>
+<p>Die AdminSend GmbH verfolgt folgende strategische BCM-Ziele:</p>
+<p><strong>Ziel 1: Minimierung von Ausfallzeiten</strong>
+- Wiederherstellung kritischer Geschäftsprozesse innerhalb definierter Recovery Time Objectives (RTO)
+- Begrenzung von Datenverlusten innerhalb definierter Recovery Point Objectives (RPO)
+- Messbare Reduktion der durchschnittlichen Wiederherstellungszeit um [TODO: X%] pro Jahr</p>
+<p><strong>Ziel 2: Krisenreaktionsfähigkeit</strong>
+- Etablierung einer 24/7-Krisenorganisation mit klaren Eskalationswegen
+- Schulung aller Mitarbeiter in BCM-Grundlagen und Notfallverhalten
+- Durchführung von mindestens [TODO: X] BCM-Übungen pro Jahr</p>
+<p><strong>Ziel 3: Compliance und Nachweisbarkeit</strong>
+- Erfüllung aller regulatorischen Anforderungen an Business Continuity
+- Bereitstellung vollständiger Nachweise für Audits und Zertifizierungen
+- Aufrechterhaltung der ISO 22301-Zertifizierung (falls angestrebt)</p>
+<p><strong>Ziel 4: Stakeholder-Vertrauen</strong>
+- Transparente Kommunikation der BCM-Fähigkeiten gegenüber Kunden und Partnern
+- Nachweis der Business Continuity-Fähigkeiten in Ausschreibungen und Verträgen
+- Schutz der Reputation und des Markenwertes</p>
+<p><strong>Ziel 5: Kontinuierliche Verbesserung</strong>
+- Systematische Auswertung von Übungen, Tests und realen Vorfällen
+- Implementierung von Lessons Learned und Best Practices
+- Regelmäßige Aktualisierung der BCM-Dokumentation und -Pläne</p>
+<h3 id="22-operative-grundprinzipien">2.2 Operative Grundprinzipien</h3>
+<p><strong>Prinzip 1: Safety First</strong>
+- Menschenleben und Gesundheit haben immer Vorrang vor materiellen Werten
+- Im Notfall gilt: Erst Personen in Sicherheit bringen, dann Sachschäden minimieren</p>
+<p><strong>Prinzip 2: Kommunikation vor Aktion</strong>
+- Strukturierte Kommunikation und Koordination vor unabgestimmten Einzelaktionen
+- Klare Befehlsketten und Eskalationswege in der Krise</p>
+<p><strong>Prinzip 3: Dokumentation und Nachvollziehbarkeit</strong>
+- Alle Entscheidungen und Maßnahmen werden dokumentiert
+- Nachvollziehbarkeit für Post-Incident-Reviews und Audits</p>
+<p><strong>Prinzip 4: Flexibilität und Anpassungsfähigkeit</strong>
+- BCM-Pläne sind Leitlinien, keine starren Vorgaben
+- Situationsgerechte Anpassung der Maßnahmen ist erlaubt und erwünscht</p>
+<h2 id="3-geltungsbereich">3. Geltungsbereich</h2>
+<p>Der Geltungsbereich des BCMS ist definiert in:</p>
+<p>→ <strong>Siehe Dokument:</strong> <code>0010_Zweck_und_Geltungsbereich.md</code></p>
+<p>Das BCMS umfasst alle kritischen Geschäftsprozesse, IT-Systeme und Standorte der AdminSend GmbH gemäß der im Scope-Dokument definierten Abgrenzung.</p>
+<h2 id="4-governance-und-verantwortlichkeiten">4. Governance und Verantwortlichkeiten</h2>
+<h3 id="41-raci-matrix-bcm-governance">4.1 RACI-Matrix BCM-Governance</h3>
+<table>
+<thead>
+<tr>
+<th>Aktivität</th>
+<th>CEO</th>
+<th>CIO</th>
+<th>CISO</th>
+<th>BCM-Manager</th>
+<th>Fachbereich</th>
+<th>IT-Ops</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BCM-Policy genehmigen</td>
+<td><strong>A</strong></td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>BCM-Strategie festlegen</td>
+<td><strong>A</strong></td>
+<td>R</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>BCM-Budget freigeben</td>
+<td><strong>A</strong></td>
+<td>C</td>
+<td>I</td>
+<td>R</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>BIA durchführen</td>
+<td>I</td>
+<td>C</td>
+<td>I</td>
+<td><strong>A</strong></td>
+<td>R</td>
+<td>C</td>
+</tr>
+<tr>
+<td>BCM-Pläne erstellen</td>
+<td>I</td>
+<td>C</td>
+<td>C</td>
+<td><strong>A</strong></td>
+<td>R</td>
+<td>R</td>
+</tr>
+<tr>
+<td>BCM-Übungen durchführen</td>
+<td>I</td>
+<td>C</td>
+<td>C</td>
+<td><strong>A</strong></td>
+<td>R</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Krise aktivieren</td>
+<td><strong>A</strong></td>
+<td>R</td>
+<td>R</td>
+<td>R</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Management Review</td>
+<td><strong>A</strong></td>
+<td>R</td>
+<td>C</td>
+<td>R</td>
+<td>I</td>
+<td>I</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legende:</strong>
+- <strong>R</strong> = Responsible (Durchführungsverantwortung)
+- <strong>A</strong> = Accountable (Gesamtverantwortung, Entscheidungsbefugnis)
+- <strong>C</strong> = Consulted (Konsultiert, Fachexpertise)
+- <strong>I</strong> = Informed (Informiert)</p>
+<h3 id="42-rollen-und-verantwortlichkeiten">4.2 Rollen und Verantwortlichkeiten</h3>
+<p><strong>Geschäftsführung (CEO)</strong>
+- <strong>Verantwortlich:</strong> {{ meta.roles.ceo.name }} ({{ meta.roles.ceo.email }})
+- <strong>Aufgaben:</strong> Gesamtverantwortung für BCMS, Genehmigung der BCM-Policy, Freigabe von Ressourcen, Krisenaktivierung</p>
+<p><strong>Chief Information Officer (CIO)</strong>
+- <strong>Verantwortlich:</strong> {{ meta.roles.cio.name }} ({{ meta.roles.cio.email }})
+- <strong>Aufgaben:</strong> Verantwortung für IT-Continuity, IT-Disaster-Recovery, technische BCM-Maßnahmen</p>
+<p><strong>Chief Information Security Officer (CISO)</strong>
+- <strong>Verantwortlich:</strong> {{ meta.roles.ciso.name }} ({{ meta.roles.ciso.email }})
+- <strong>Aufgaben:</strong> Schnittstelle ISMS-BCMS, Security-Incident-Response, Cyber-Resilience</p>
+<p><strong>BCM-Manager</strong>
+- <strong>Verantwortlich:</strong> [TODO: BCM-Manager Name und Kontakt]
+- <strong>Aufgaben:</strong> Operative Leitung des BCMS, Koordination von BIA und Risikoanalyse, BCM-Übungen, Pflege der BCM-Dokumentation</p>
+<p><strong>Fachbereiche</strong>
+- <strong>Verantwortlich:</strong> Jeweilige Bereichsleiter
+- <strong>Aufgaben:</strong> Identifikation kritischer Prozesse, Mitwirkung bei BIA, Erstellung fachlicher BCM-Pläne, Teilnahme an Übungen</p>
+<p><strong>IT-Operations</strong>
+- <strong>Verantwortlich:</strong> {{ meta.roles.it_operations_manager.name }} ({{ meta.roles.it_operations_manager.email }})
+- <strong>Aufgaben:</strong> Implementierung technischer BCM-Maßnahmen, IT-Disaster-Recovery, Backup und Restore</p>
+<h2 id="5-freigaben-und-genehmigungen">5. Freigaben und Genehmigungen</h2>
+<p>Diese BCM-Policy wurde geprüft und genehmigt durch:</p>
+<table>
+<thead>
+<tr>
+<th>Rolle</th>
+<th>Name</th>
+<th>Funktion</th>
+<th>Datum</th>
+<th>Unterschrift/Approval</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Geschäftsführung</strong></td>
+<td>{{ meta.roles.ceo.name }}</td>
+<td>CEO</td>
+<td>[TODO: Datum]</td>
+<td>[TODO: Unterschrift]</td>
+</tr>
+<tr>
+<td><strong>BCM-Owner</strong></td>
+<td>[TODO: BCM-Manager]</td>
+<td>BCM-Manager</td>
+<td>[TODO: Datum]</td>
+<td>[TODO: Unterschrift]</td>
+</tr>
+<tr>
+<td><strong>IT-Leitung</strong></td>
+<td>{{ meta.roles.cio.name }}</td>
+<td>CIO</td>
+<td>[TODO: Datum]</td>
+<td>[TODO: Unterschrift]</td>
+</tr>
+<tr>
+<td><strong>Informationssicherheit</strong></td>
+<td>{{ meta.roles.ciso.name }}</td>
+<td>CISO</td>
+<td>[TODO: Datum]</td>
+<td>[TODO: Unterschrift]</td>
+</tr>
+<tr>
+<td><strong>Compliance</strong></td>
+<td>[TODO: Compliance-Verantwortlicher]</td>
+<td>Compliance Officer</td>
+<td>[TODO: Datum]</td>
+<td>[TODO: Unterschrift]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-uberprufung-und-aktualisierung">6. Überprüfung und Aktualisierung</h2>
+<p>Diese BCM-Policy wird:</p>
+<ul>
+<li><strong>Jährlich</strong> durch die Geschäftsführung im Rahmen des Management Reviews überprüft</li>
+<li>Bei <strong>wesentlichen Änderungen</strong> der Organisation, Geschäftsprozesse oder regulatorischen Anforderungen aktualisiert</li>
+<li>Nach <strong>schwerwiegenden Vorfällen</strong> oder Übungen auf Anpassungsbedarf geprüft</li>
+</ul>
+<p><strong>Nächste geplante Überprüfung:</strong> [TODO: Datum]</p>
+<hr />
+<p><strong>Dokumenthistorie:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Datum</th>
+<th>Autor</th>
+<th>Änderungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Initiale Erstellung</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0010_Zweck_und_Geltungsbereich.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0030_Dokumentenlenkung_und_Versionierung.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

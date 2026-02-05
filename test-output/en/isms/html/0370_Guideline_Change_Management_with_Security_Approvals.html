@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0370 - Guideline: Change Management with Security Approvals</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0370</div>
+            <h1>Guideline: Change Management with Security Approvals</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0360_Policy_Change_and_Release_Management.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0380_Policy_Secure_Development.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="guideline-change-management-with-security-approvals">Guideline: Change Management with Security Approvals</h1>
+<p><strong>Document ID:</strong> 0370<br />
+<strong>Document Type:</strong> Guideline (detailed)<br />
+<strong>Related Policy:</strong> 0360_Policy_Change_and_Release_Management.md<br />
+<strong>Standard Reference:</strong> ISO/IEC 27001:2022 Annex A.8.32<br />
+<strong>Owner:</strong> {{ meta.it_operations.manager }}<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Approved<br />
+<strong>Classification:</strong> Internal<br />
+<strong>Last Updated:</strong> {{ meta.document.date }}</p>
+<hr />
+<h2 id="1-purpose-and-scope">1. Purpose and Scope</h2>
+<p>This guideline implements the <code>0360_Policy_Change_and_Release_Management.md</code> and defines:
+- Change management processes with security reviews
+- Change categories and approval workflows
+- Rollback procedures and post-implementation reviews</p>
+<p><strong>Scope:</strong> All IT changes at <strong>AdminSend GmbH</strong></p>
+<h2 id="2-change-categories">2. Change Categories</h2>
+<h3 id="21-standard-changes">2.1 Standard Changes</h3>
+<p><strong>Definition:</strong> Pre-approved, low-risk, frequent changes</p>
+<p><strong>Examples:</strong>
+- Password resets
+- Software updates (tested)
+- Adding users to standard groups</p>
+<p><strong>Approval:</strong> No individual approval required<br />
+<strong>Security Review:</strong> Not required</p>
+<h3 id="22-normal-changes">2.2 Normal Changes</h3>
+<p><strong>Definition:</strong> Planned changes with medium risk</p>
+<p><strong>Examples:</strong>
+- Configuration changes
+- Software installations
+- Network changes</p>
+<p><strong>Approval:</strong> Change Advisory Board (CAB)<br />
+<strong>Security Review:</strong> For security-relevant changes</p>
+<h3 id="23-emergency-changes">2.3 Emergency Changes</h3>
+<p><strong>Definition:</strong> Unplanned, urgent changes</p>
+<p><strong>Examples:</strong>
+- Critical security patches
+- System outages
+- Active security incidents</p>
+<p><strong>Approval:</strong> Emergency CAB (ECAB)<br />
+<strong>Security Review:</strong> Retrospectively</p>
+<h2 id="3-change-management-process">3. Change Management Process</h2>
+<h3 id="31-change-request-rfc">3.1 Change Request (RFC)</h3>
+<p><strong>Mandatory Fields:</strong>
+- Change title and description
+- Justification (business justification)
+- Affected systems and services
+- Risk assessment
+- Rollback plan
+- Test results
+- Planned time window</p>
+<p><strong>Security-Relevant Additional Fields:</strong>
+- Impact on security controls
+- Changes to firewall rules
+- New external connections
+- Privileged access required</p>
+<h3 id="32-risk-assessment">3.2 Risk Assessment</h3>
+<p><strong>Risk Matrix:</strong>
+| Likelihood | Impact Low | Impact Medium | Impact High |
+|------------|------------|---------------|-------------|
+| Low | Low | Low | Medium |
+| Medium | Low | Medium | High |
+| High | Medium | High | Critical |</p>
+<p><strong>Impact:</strong>
+- <strong>Low:</strong> Single user affected
+- <strong>Medium:</strong> Department affected
+- <strong>High:</strong> Entire organization affected</p>
+<h3 id="33-security-review">3.3 Security Review</h3>
+<p><strong>Triggers:</strong>
+- Changes to security systems (firewall, IDS, etc.)
+- New external connections
+- Privileged access
+- Changes to authentication/authorization
+- Risk "High" or "Critical"</p>
+<p><strong>Review by IT Security:</strong>
+- Review of change request
+- Assess security impact
+- Recommend additional controls
+- Approval or rejection</p>
+<p><strong>SLA:</strong> Security review within 2 business days</p>
+<h3 id="34-change-advisory-board-cab">3.4 Change Advisory Board (CAB)</h3>
+<p><strong>Members:</strong>
+- Change Manager (chair)
+- IT Operations
+- IT Security (for security-relevant changes)
+- Application Owner (for application changes)
+- Business Representative</p>
+<p><strong>Frequency:</strong> Weekly (Tuesday 10:00 AM)</p>
+<p><strong>Tasks:</strong>
+- Review and approval of normal changes
+- Prioritization in case of conflicts
+- Risk assessment
+- Schedule planning</p>
+<h3 id="35-implementation">3.5 Implementation</h3>
+<p><strong>Pre-Implementation:</strong>
+- Create backup
+- Provide rollback plan
+- Communication to affected users
+- Prepare monitoring</p>
+<p><strong>Implementation:</strong>
+- Execute change according to plan
+- Document all steps
+- Document deviations</p>
+<p><strong>Post-Implementation:</strong>
+- Functional test
+- Monitor for errors (24 hours)
+- Update change status
+- Complete documentation</p>
+<h3 id="36-rollback">3.6 Rollback</h3>
+<p><strong>Triggers:</strong>
+- Functional test failed
+- Critical errors in production
+- Security issues detected</p>
+<p><strong>Process:</strong>
+1. Rollback decision by Change Manager
+2. Rollback according to rollback plan
+3. Verify restoration
+4. Root cause analysis
+5. New change request for retry</p>
+<h2 id="4-emergency-changes">4. Emergency Changes</h2>
+<h3 id="41-emergency-cab-ecab">4.1 Emergency CAB (ECAB)</h3>
+<p><strong>Members:</strong>
+- Change Manager or deputy
+- IT Operations (on-call)
+- CISO or IT Security (on-call)</p>
+<p><strong>Availability:</strong> 24/7</p>
+<p><strong>Approval Process:</strong>
+- Telephone or email approval
+- Documentation retrospectively
+- Review in next regular CAB</p>
+<h3 id="42-emergency-change-process">4.2 Emergency Change Process</h3>
+<p><strong>Accelerated Workflow:</strong>
+1. <strong>Initiation:</strong> Incident Manager creates emergency RFC
+2. <strong>Assessment:</strong> ECAB assesses urgency and risk
+3. <strong>Approval:</strong> ECAB approves (or rejects)
+4. <strong>Implementation:</strong> Immediate execution
+5. <strong>Documentation:</strong> Retrospective completion
+6. <strong>Review:</strong> In next CAB</p>
+<p><strong>Security Review:</strong>
+- For critical security patches: Retrospectively
+- For other emergency changes: Before implementation (if possible)</p>
+<h2 id="5-security-controls">5. Security Controls</h2>
+<h3 id="51-segregation-of-duties">5.1 Segregation of Duties</h3>
+<p><strong>Principle:</strong> No person may request, approve, and implement a change</p>
+<p><strong>Roles:</strong>
+- <strong>Requester:</strong> Requests change
+- <strong>Approver:</strong> Approves change (CAB)
+- <strong>Implementer:</strong> Executes change
+- <strong>Reviewer:</strong> Reviews post-implementation</p>
+<h3 id="52-privileged-changes">5.2 Privileged Changes</h3>
+<p><strong>Additional Requirements:</strong>
+- Four-eyes principle during implementation
+- Session recording
+- Detailed documentation
+- Post-implementation security review</p>
+<h3 id="53-firewall-changes">5.3 Firewall Changes</h3>
+<p><strong>Special Requirements:</strong>
+- Justification for each new rule
+- Document source and destination IP/port
+- Time limitation (where possible)
+- Regular review (quarterly)</p>
+<p><strong>Approval:</strong>
+- IT Security: Mandatory
+- Network Team: Technical feasibility
+- Application Owner: Business justification</p>
+<h2 id="6-testing-and-validation">6. Testing and Validation</h2>
+<h3 id="61-test-environments">6.1 Test Environments</h3>
+<p><strong>Requirements:</strong>
+- Dev/test environment for all critical systems
+- As identical to production as possible
+- Isolated from production</p>
+<p><strong>Test Process:</strong>
+1. Implement change in dev/test
+2. Perform functional test
+3. Performance test (if needed)
+4. Security test (for security-relevant changes)
+5. Document test results</p>
+<h3 id="62-security-testing">6.2 Security Testing</h3>
+<p><strong>For Security-Relevant Changes:</strong>
+- Vulnerability scan after change
+- Penetration test (for critical changes)
+- Code review (for software changes)
+- Configuration review</p>
+<h2 id="7-documentation-and-audit">7. Documentation and Audit</h2>
+<h3 id="71-change-documentation">7.1 Change Documentation</h3>
+<p><strong>Mandatory Documentation:</strong>
+- Change Request (RFC)
+- Approvals
+- Implementation log
+- Test results
+- Post-implementation review</p>
+<p><strong>Retention:</strong> {{ meta.retention.change_years }} years</p>
+<h3 id="72-post-implementation-review-pir">7.2 Post-Implementation Review (PIR)</h3>
+<p><strong>Execution:</strong>
+- Within 7 days after implementation
+- For all normal and emergency changes</p>
+<p><strong>Content:</strong>
+- Success of implementation
+- Problems encountered
+- Lessons learned
+- Improvement suggestions</p>
+<h3 id="73-compliance-and-audit">7.3 Compliance and Audit</h3>
+<p><strong>Key Performance Indicators (KPIs):</strong>
+| Metric | Target Value |
+|--------|--------------|
+| Successful changes | &gt; 95% |
+| Emergency changes | &lt; 10% of all changes |
+| Unauthorized changes | 0 |
+| PIR completion rate | 100% |</p>
+<p><strong>Audit Evidence:</strong>
+- Change logs
+- Approvals
+- Security reviews
+- PIR reports</p>
+<h2 id="8-references">8. References</h2>
+<h3 id="internal-documents">Internal Documents</h3>
+<ul>
+<li><code>0360_Policy_Change_and_Release_Management.md</code></li>
+<li><code>0400_Policy_Incident_Management.md</code></li>
+</ul>
+<h3 id="external-standards">External Standards</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.8.32</strong> - Change management</li>
+<li><strong>ITIL 4</strong> - Change Enablement Practice</li>
+</ul>
+<hr />
+<p><strong>Approved by:</strong> Thomas Weber, CISO<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0360_Policy_Change_and_Release_Management.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0380_Policy_Secure_Development.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

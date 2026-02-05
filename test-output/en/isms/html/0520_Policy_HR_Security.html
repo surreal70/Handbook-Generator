@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0520 - Policy: HR Security</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0520</div>
+            <h1>Policy: HR Security</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0510_Guideline_MDM_BringYourOwnDevice_and_Remote_Access.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0530_Guideline_HR_Onboarding_Role_Change_Offboarding.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="policy-hr-security">Policy: HR Security</h1>
+<p><strong>Document ID:</strong> 0520<br />
+<strong>Document Type:</strong> Policy (abstract)<br />
+<strong>Standard Reference:</strong> ISO/IEC 27001:2022 Annex A.6.1-A.6.4 (incl. Amendment 1:2024)<br />
+<strong>Owner:</strong> Thomas Weber<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Approved<br />
+<strong>Classification:</strong> Internal<br />
+<strong>Last Updated:</strong> {{ meta.document.date }}<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This policy defines the principles for HR Security at <strong>AdminSend GmbH</strong>. It ensures that security responsibilities are understood and fulfilled throughout the employment lifecycle - from hiring through termination.</p>
+<h2 id="2-scope">2. Scope</h2>
+<p>This policy applies to:</p>
+<ul>
+<li><strong>Organizational Units:</strong> All departments and locations of AdminSend GmbH</li>
+<li><strong>Persons:</strong> All employees, contractors, temporary workers, interns</li>
+<li><strong>Lifecycle:</strong> Pre-employment, onboarding, employment, offboarding</li>
+<li><strong>Locations:</strong> {{ netbox.site.name }} and all other operational sites</li>
+</ul>
+<p><strong>Exceptions:</strong> Exceptions are only permitted through the defined exception process (<code>0640_Policy_Exceptions_and_Risk_Waivers.md</code>).</p>
+<h2 id="3-principles-policy-statements">3. Principles (Policy Statements)</h2>
+<h3 id="31-pre-employment-screening">3.1 Pre-Employment Screening</h3>
+<p>Appropriate background checks are conducted before hiring (references, qualifications, criminal record if applicable). Screening is based on role and protection requirements.</p>
+<h3 id="32-contractual-security-obligations">3.2 Contractual Security Obligations</h3>
+<p>Employment contracts contain security clauses:
+- Confidentiality agreements (NDA)
+- Acceptable Use Policy acknowledgement
+- Data protection obligations
+- Intellectual property rights</p>
+<h3 id="33-security-awareness-and-training">3.3 Security Awareness and Training</h3>
+<p>All employees undergo security awareness training:
+- <strong>Onboarding:</strong> Initial security training
+- <strong>Annually:</strong> Refresher training
+- <strong>Role-specific:</strong> Additional training for privileged roles</p>
+<h3 id="34-joiner-mover-leaver-process">3.4 Joiner-Mover-Leaver Process</h3>
+<p>Security-relevant activities are performed throughout the employment lifecycle:
+- <strong>Joiner:</strong> Access provisioning, training, equipment issuance
+- <strong>Mover:</strong> Access adjustment for role changes
+- <strong>Leaver:</strong> Access revocation, equipment return, exit interview</p>
+<h3 id="35-disciplinary-process">3.5 Disciplinary Process</h3>
+<p>Security violations are handled according to defined disciplinary procedures. Violations are documented and may lead to employment consequences.</p>
+<h3 id="36-responsibilities-and-duties">3.6 Responsibilities and Duties</h3>
+<p>Employees are obligated to:
+- Comply with security policies
+- Report security incidents
+- Participate in security training
+- Maintain confidentiality</p>
+<h3 id="37-privileged-roles">3.7 Privileged Roles</h3>
+<p>Employees with privileged access are subject to enhanced requirements:
+- Extended background checks
+- Additional security training
+- Regular recertification
+- Strict monitoring</p>
+<h3 id="38-offboarding-and-access-revocation">3.8 Offboarding and Access Revocation</h3>
+<p>Upon termination of employment, all access is immediately revoked:
+- IT access deactivated (Target: &lt; 1 day)
+- Equipment returned
+- Confidentiality obligations renewed
+- Exit interview conducted</p>
+<h2 id="4-roles-and-responsibilities">4. Roles and Responsibilities</h2>
+<h3 id="raci-matrix-hr-security">RACI Matrix: HR Security</h3>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>CISO</th>
+<th>HR</th>
+<th>Hiring Manager</th>
+<th>IT Operations</th>
+<th>Legal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Policy Creation</td>
+<td>R/A</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Background Checks</td>
+<td>C</td>
+<td>R/A</td>
+<td>C</td>
+<td>I</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Contract Clauses</td>
+<td>C</td>
+<td>R</td>
+<td>I</td>
+<td>I</td>
+<td>R/A</td>
+</tr>
+<tr>
+<td>Security Training</td>
+<td>R/A</td>
+<td>C</td>
+<td>I</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Joiner Process</td>
+<td>C</td>
+<td>R</td>
+<td>R/A</td>
+<td>R</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Mover Process</td>
+<td>C</td>
+<td>R</td>
+<td>R/A</td>
+<td>R</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Leaver Process</td>
+<td>C</td>
+<td>R/A</td>
+<td>C</td>
+<td>R</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Disciplinary Process</td>
+<td>C</td>
+<td>R/A</td>
+<td>C</td>
+<td>I</td>
+<td>C</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legend:</strong> R = Responsible (Execution), A = Accountable (Ownership), C = Consulted, I = Informed</p>
+<h3 id="key-roles">Key Roles</h3>
+<ul>
+<li><strong>Policy Owner:</strong> Thomas Weber (CISO)</li>
+<li><strong>HR Manager:</strong> {{ meta.hr.manager }}</li>
+<li><strong>Security Awareness Manager:</strong> {{ meta.security.awareness_manager }}</li>
+<li><strong>Implementation Responsible:</strong> HR, Hiring Manager, IT Operations</li>
+<li><strong>Control/Audit Function:</strong> ISMS, Internal Audit</li>
+</ul>
+<h2 id="5-derivatives-guidelinesstandardsprocesses">5. Derivatives (Guidelines/Standards/Processes)</h2>
+<p>Implementation details are defined in subordinate documents:</p>
+<h3 id="associated-guidelines">Associated Guidelines</h3>
+<ul>
+<li><strong>0530_Guideline_HR_Onboarding_Role_Change_Offboarding.md</strong> - Detailed implementation guideline</li>
+<li><code>0220_Policy_Access_Control_and_Identity_Management.md</code> - Access Control Policy</li>
+<li><code>0200_Policy_Acceptable_Use_of_IT.md</code> - Acceptable Use Policy</li>
+<li><code>0120_ISMS_Training_Awareness_and_Competence.md</code> - Training and Awareness</li>
+</ul>
+<h3 id="associated-standardsbaselines">Associated Standards/Baselines</h3>
+<ul>
+<li>Background check requirements</li>
+<li>Contractual security clauses (templates)</li>
+<li>Security training curriculum</li>
+<li>Joiner-Mover-Leaver checklists</li>
+</ul>
+<h3 id="associated-processes">Associated Processes</h3>
+<ul>
+<li>Pre-employment screening process</li>
+<li>Joiner-Mover-Leaver process</li>
+<li>Security training process</li>
+<li>Disciplinary process</li>
+</ul>
+<h2 id="6-compliance-monitoring-and-enforcement">6. Compliance, Monitoring and Enforcement</h2>
+<h3 id="metrics-and-kpis">Metrics and KPIs</h3>
+<ul>
+<li>Background check completion rate (Target: 100%)</li>
+<li>Security training completion rate (Target: 100% annually)</li>
+<li>Average time to access provisioning (Joiner)</li>
+<li>Average time to access revocation (Leaver) (Target: &lt; 1 day)</li>
+<li>Number of security violations and disciplinary procedures</li>
+<li>NDA signing rate (Target: 100%)</li>
+</ul>
+<h3 id="evidence-and-proof">Evidence and Proof</h3>
+<ul>
+<li>Background check documentation</li>
+<li>Contracts with security clauses</li>
+<li>Security training evidence</li>
+<li>Joiner-Mover-Leaver checklists</li>
+<li>Disciplinary procedure documentation</li>
+<li>Exit interview protocols</li>
+</ul>
+<h3 id="consequences-of-violations">Consequences of Violations</h3>
+<p>Violations of this policy are handled according to applicable HR and compliance processes:
+- <strong>Missing Background Checks:</strong> Completion before access provisioning
+- <strong>Incomplete Training:</strong> Access restriction until completion
+- <strong>Security Violations:</strong> Disciplinary procedure per HR process
+- <strong>Repeated Violations:</strong> Employment consequences up to termination</p>
+<h2 id="7-exceptions">7. Exceptions</h2>
+<p>Exceptions to this policy are only permitted in justified exceptional cases:</p>
+<ul>
+<li><strong>Exception Process:</strong> See <code>0640_Policy_Exceptions_and_Risk_Waivers.md</code></li>
+<li><strong>Approval:</strong> Exceptions must be approved by CISO and HR Manager</li>
+<li><strong>Documentation:</strong> All exceptions are documented in the risk register</li>
+<li><strong>Time Limitation:</strong> Exceptions are generally time-limited</li>
+</ul>
+<h2 id="8-references">8. References</h2>
+<h3 id="internal-documents">Internal Documents</h3>
+<ul>
+<li><code>0010_ISMS_Information_Security_Policy.md</code> - ISMS Policy</li>
+<li><code>0530_Guideline_HR_Onboarding_Role_Change_Offboarding.md</code> - Detailed Guideline</li>
+<li><code>0220_Policy_Access_Control_and_Identity_Management.md</code> - Access Control Policy</li>
+<li><code>0080_ISMS_Risk_Register_Template.md</code> - Risk Register</li>
+</ul>
+<h3 id="external-standards-and-requirements">External Standards and Requirements</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.6.1</strong> - Screening</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.6.2</strong> - Terms and conditions of employment</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.6.3</strong> - Information security awareness, education and training</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.6.4</strong> - Disciplinary process</li>
+<li>Employment law requirements (Germany)</li>
+<li><strong>GDPR (EU 2016/679)</strong> - Data protection for background checks</li>
+</ul>
+<hr />
+<p><strong>Approved by:</strong><br />
+{{ meta.management.ceo }}, Management<br />
+Date: {{ meta.document.approval_date }}</p>
+<p><strong>Next Review:</strong> {{ meta.document.next_review }} (annually or as needed)</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0510_Guideline_MDM_BringYourOwnDevice_and_Remote_Access.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0530_Guideline_HR_Onboarding_Role_Change_Offboarding.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

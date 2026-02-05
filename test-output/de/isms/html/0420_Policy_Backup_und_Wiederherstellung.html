@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0420 - Policy: Backup und Wiederherstellung</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0420</div>
+            <h1>Policy: Backup und Wiederherstellung</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0410_Richtlinie_Incident_Response_und_Major_Incident_Prozess.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0430_Richtlinie_Backup_Restore_und_Regelmaessige_Tests.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="policy-backup-und-wiederherstellung">Policy: Backup und Wiederherstellung</h1>
+<p><strong>Dokument-ID:</strong> 0420<br />
+<strong>Dokumenttyp:</strong> Policy (abstrakt)<br />
+<strong>Standard-Referenz:</strong> ISO/IEC 27001:2022 Annex A.8.13 (inkl. Amendment 1:2024)<br />
+<strong>Owner:</strong> Thomas Weber<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Freigegeben<br />
+<strong>Klassifizierung:</strong> Intern<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.date }}<br />
+<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-zweck">1. Zweck</h2>
+<p>Diese Policy definiert die Grundsätze für Backup und Wiederherstellung der <strong>AdminSend GmbH</strong>. Sie stellt sicher, dass kritische Daten und Systeme im Falle von Datenverlust, Korruption oder Katastrophen wiederhergestellt werden können.</p>
+<h2 id="2-geltungsbereich">2. Geltungsbereich</h2>
+<p>Diese Policy gilt für:</p>
+<ul>
+<li><strong>Organisationseinheiten:</strong> Alle Abteilungen und Standorte der AdminSend GmbH</li>
+<li><strong>Systeme:</strong> Alle IT-Systeme, Datenbanken, Anwendungen, Dateisysteme, VMs, Cloud-Ressourcen</li>
+<li><strong>Daten:</strong> Alle geschäftskritischen und personenbezogenen Daten</li>
+<li><strong>Backup-Typen:</strong> Full, Incremental, Differential, Snapshot, Cloud Backup</li>
+<li><strong>Standorte:</strong> {{ netbox.site.name }} und alle weiteren Betriebsstandorte</li>
+</ul>
+<p><strong>Ausnahmen:</strong> Ausnahmen sind nur über den definierten Ausnahmenprozess (<code>0640_Policy_Ausnahmen_und_Risk_Waivers.md</code>) zulässig.</p>
+<h2 id="3-grundsatze-policy-statements">3. Grundsätze (Policy Statements)</h2>
+<h3 id="31-backup-strategie-basierend-auf-rporto">3.1 Backup-Strategie basierend auf RPO/RTO</h3>
+<p>Backup-Strategien werden basierend auf Recovery Point Objective (RPO) und Recovery Time Objective (RTO) definiert:
+- <strong>Kritische Systeme:</strong> RPO &lt; 1 Stunde, RTO &lt; 4 Stunden
+- <strong>Wichtige Systeme:</strong> RPO &lt; 24 Stunden, RTO &lt; 24 Stunden
+- <strong>Standard-Systeme:</strong> RPO &lt; 7 Tage, RTO &lt; 72 Stunden</p>
+<h3 id="32-3-2-1-backup-regel">3.2 3-2-1 Backup-Regel</h3>
+<p>Backups folgen der 3-2-1-Regel:
+- <strong>3</strong> Kopien der Daten (Original + 2 Backups)
+- <strong>2</strong> verschiedene Speichermedien/Technologien
+- <strong>1</strong> Kopie offsite/offline (Air-Gapped oder geografisch getrennt)</p>
+<h3 id="33-verschlusselte-backups">3.3 Verschlüsselte Backups</h3>
+<p>Alle Backups werden verschlüsselt gespeichert (at rest) und übertragen (in transit). Verschlüsselungsschlüssel werden sicher verwaltet und getrennt von Backups gespeichert.</p>
+<h3 id="34-regelmaige-backup-tests">3.4 Regelmäßige Backup-Tests</h3>
+<p>Backups werden regelmäßig getestet, um die Wiederherstellbarkeit sicherzustellen:
+- <strong>Kritische Systeme:</strong> Monatliche Restore-Tests
+- <strong>Wichtige Systeme:</strong> Quartalsweise Restore-Tests
+- <strong>Standard-Systeme:</strong> Jährliche Restore-Tests</p>
+<h3 id="35-immutable-backups">3.5 Immutable Backups</h3>
+<p>Kritische Backups werden als immutable (unveränderlich) gespeichert, um Schutz vor Ransomware und versehentlicher Löschung zu bieten.</p>
+<h3 id="36-backup-monitoring-und-alerting">3.6 Backup-Monitoring und Alerting</h3>
+<p>Backup-Jobs werden kontinuierlich überwacht. Fehlgeschlagene Backups lösen sofortige Alerts aus und werden priorisiert behoben.</p>
+<h3 id="37-retention-und-aufbewahrung">3.7 Retention und Aufbewahrung</h3>
+<p>Backups werden entsprechend gesetzlicher, regulatorischer und geschäftlicher Anforderungen aufbewahrt:
+- <strong>Tägliche Backups:</strong> 30 Tage
+- <strong>Wöchentliche Backups:</strong> 12 Wochen
+- <strong>Monatliche Backups:</strong> 12 Monate
+- <strong>Jährliche Backups:</strong> 7 Jahre (oder nach Compliance-Anforderungen)</p>
+<h3 id="38-disaster-recovery-integration">3.8 Disaster Recovery Integration</h3>
+<p>Backup-Strategien sind in die Disaster Recovery und Business Continuity Pläne integriert.</p>
+<h2 id="4-rollen-und-verantwortlichkeiten">4. Rollen und Verantwortlichkeiten</h2>
+<h3 id="raci-matrix-backup-und-wiederherstellung">RACI-Matrix: Backup und Wiederherstellung</h3>
+<table>
+<thead>
+<tr>
+<th>Aktivität</th>
+<th>CISO</th>
+<th>Backup Administrator</th>
+<th>IT-Betrieb</th>
+<th>System Owner</th>
+<th>BCM Manager</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Policy-Erstellung</td>
+<td>R/A</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Backup-Konfiguration</td>
+<td>C</td>
+<td>R/A</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Backup-Durchführung</td>
+<td>I</td>
+<td>R/A</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Backup-Monitoring</td>
+<td>C</td>
+<td>R/A</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Restore-Tests</td>
+<td>C</td>
+<td>R</td>
+<td>R</td>
+<td>R/A</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Disaster Recovery</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Compliance-Prüfung</td>
+<td>R/A</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+<td>C</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legende:</strong> R = Responsible (Durchführung), A = Accountable (Verantwortlich), C = Consulted (Konsultiert), I = Informed (Informiert)</p>
+<h3 id="schlusselrollen">Schlüsselrollen</h3>
+<ul>
+<li><strong>Policy Owner:</strong> Thomas Weber (CISO)</li>
+<li><strong>Backup Administrator:</strong> {{ meta.it.backup_admin }}</li>
+<li><strong>BCM Manager:</strong> {{ meta.bcm.manager }}</li>
+<li><strong>Umsetzungsverantwortliche:</strong> IT-Betrieb, System Owner</li>
+<li><strong>Kontroll-/Prüfinstanz:</strong> ISMS, Internal Audit</li>
+</ul>
+<h2 id="5-ableitungen-richtlinienstandardsprozesse">5. Ableitungen (Richtlinien/Standards/Prozesse)</h2>
+<p>Details zur Umsetzung werden in nachgelagerten Dokumenten geregelt:</p>
+<h3 id="zugehorige-richtlinien">Zugehörige Richtlinien</h3>
+<ul>
+<li><strong>0430_Richtlinie_Backup_Restore_und_Regelmaessige_Tests.md</strong> - Detaillierte Implementierungsrichtlinie</li>
+<li><code>0440_Policy_Business_Continuity_ICT_Readiness.md</code> - Business Continuity Policy</li>
+<li><code>0260_Policy_Kryptografie_und_Schluesselmanagement.md</code> - Cryptography Policy</li>
+<li><code>0580_Policy_Aufbewahrung_und_Loeschung.md</code> - Retention Policy</li>
+</ul>
+<h3 id="zugehorige-standardsbaselines">Zugehörige Standards/Baselines</h3>
+<ul>
+<li>RPO/RTO-Matrix</li>
+<li>Backup-Schedule</li>
+<li>Retention-Anforderungen</li>
+<li>Restore-Test-Prozeduren</li>
+</ul>
+<h3 id="zugehorige-prozesse">Zugehörige Prozesse</h3>
+<ul>
+<li>Backup-Prozess</li>
+<li>Restore-Prozess</li>
+<li>Backup-Test-Prozess</li>
+<li>Disaster Recovery Prozess</li>
+</ul>
+<h2 id="6-compliance-monitoring-und-durchsetzung">6. Compliance, Monitoring und Durchsetzung</h2>
+<h3 id="messgroen-und-kpis">Messgrößen und KPIs</h3>
+<ul>
+<li>Backup Success Rate (Ziel: 99.9%)</li>
+<li>Anzahl fehlgeschlagener Backups</li>
+<li>Durchschnittliche Backup-Dauer</li>
+<li>Restore Success Rate (Ziel: 100%)</li>
+<li>Durchschnittliche Restore-Dauer (RTO-Compliance)</li>
+<li>Backup-Test-Completion-Rate (Ziel: 100%)</li>
+</ul>
+<h3 id="nachweise-und-evidence">Nachweise und Evidence</h3>
+<ul>
+<li>Backup-Logs und Job-Status</li>
+<li>Restore-Test-Protokolle</li>
+<li>Backup-Monitoring-Reports</li>
+<li>Disaster Recovery Test Reports</li>
+<li>Compliance-Nachweise (Retention)</li>
+<li>Audit-Berichte zu Backup-Compliance</li>
+</ul>
+<h3 id="konsequenzen-bei-verstoen">Konsequenzen bei Verstößen</h3>
+<p>Verstöße gegen diese Policy werden nach den geltenden HR- und Compliance-Prozessen behandelt:
+- <strong>Fehlende Backups:</strong> Sofortige Remediation, Untersuchung
+- <strong>Nicht getestete Backups:</strong> Nachholung, Nachschulung
+- <strong>Unverschlüsselte Backups:</strong> Sofortige Verschlüsselung, Untersuchung
+- <strong>Wiederholte Verstöße:</strong> Arbeitsrechtliche Konsequenzen</p>
+<h2 id="7-ausnahmen">7. Ausnahmen</h2>
+<p>Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:</p>
+<ul>
+<li><strong>Ausnahmenprozess:</strong> Siehe <code>0640_Policy_Ausnahmen_und_Risk_Waivers.md</code></li>
+<li><strong>Genehmigung:</strong> Ausnahmen müssen vom CISO und System Owner genehmigt werden</li>
+<li><strong>Dokumentation:</strong> Alle Ausnahmen werden im Risikoregister dokumentiert</li>
+<li><strong>Befristung:</strong> Ausnahmen sind grundsätzlich zeitlich befristet</li>
+<li><strong>Kompensationsmaßnahmen:</strong> Ausnahmen erfordern alternative Sicherheitsmaßnahmen</li>
+</ul>
+<h2 id="8-referenzen">8. Referenzen</h2>
+<h3 id="interne-dokumente">Interne Dokumente</h3>
+<ul>
+<li><code>0010_ISMS_Informationssicherheitsleitlinie.md</code> - ISMS Policy</li>
+<li><code>0430_Richtlinie_Backup_Restore_und_Regelmaessige_Tests.md</code> - Detailed Guideline</li>
+<li><code>0440_Policy_Business_Continuity_ICT_Readiness.md</code> - Business Continuity Policy</li>
+<li><code>0080_ISMS_Risikoregister_Template.md</code> - Risk Register</li>
+</ul>
+<h3 id="externe-standards-und-vorgaben">Externe Standards und Vorgaben</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.8.13</strong> - Information backup</li>
+<li><strong>ISO/IEC 27002:2022</strong> - Information security controls</li>
+<li><strong>ISO 22301</strong> - Business Continuity Management</li>
+<li><strong>DSGVO (EU 2016/679)</strong> - Datenschutz-Grundverordnung (Backup von personenbezogenen Daten)</li>
+</ul>
+<hr />
+<p><strong>Genehmigt durch:</strong><br />
+{{ meta.management.ceo }}, Geschäftsführung<br />
+Datum: {{ meta.document.approval_date }}</p>
+<p><strong>Nächster Review:</strong> {{ meta.document.next_review }} (jährlich oder anlassbezogen)</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0410_Richtlinie_Incident_Response_und_Major_Incident_Prozess.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0430_Richtlinie_Backup_Restore_und_Regelmaessige_Tests.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

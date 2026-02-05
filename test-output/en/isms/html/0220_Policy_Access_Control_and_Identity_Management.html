@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0220 - Policy: Access Control and Identity Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0220</div>
+            <h1>Policy: Access Control and Identity Management</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0210_Guideline_Acceptable_Use_of_IT.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0230_Guideline_IAM_Joiner_Mover_Leaver_and_Access_Requests.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="policy-access-control-and-identity-management">Policy: Access Control and Identity Management</h1>
+<p><strong>Document ID:</strong> 0220<br />
+<strong>Document Type:</strong> Policy (abstract)<br />
+<strong>Standard Reference:</strong> ISO/IEC 27001:2022 Annex A.5.15-A.5.18 (incl. Amendment 1:2024)<br />
+<strong>Owner:</strong> Thomas Weber<br />
+<strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Approved<br />
+<strong>Classification:</strong> Internal<br />
+<strong>Last Updated:</strong> {{ meta.document.date }}<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This policy defines the principles for access control and identity management (IAM) at <strong>AdminSend GmbH</strong>. It ensures that access to information and IT systems is granted exclusively to authorized persons based on the need-to-know principle and least privilege.</p>
+<h2 id="2-scope">2. Scope</h2>
+<p>This policy applies to:</p>
+<ul>
+<li><strong>Organizational Units:</strong> All departments and locations of AdminSend GmbH</li>
+<li><strong>Systems:</strong> All IT systems, applications, databases, networks, cloud services</li>
+<li><strong>Persons:</strong> All employees, contractors, suppliers, and third parties with access to IT resources</li>
+<li><strong>Access Methods:</strong> Local access, remote access, privileged access, API access</li>
+<li><strong>Locations:</strong> {{ netbox.site.name }} and all other operational sites</li>
+</ul>
+<p><strong>Exceptions:</strong> Exceptions are only permitted through the defined exception process (<code>0640_Policy_Ausnahmen_und_Risk_Waivers.md</code>).</p>
+<h2 id="3-principles-policy-statements">3. Principles (Policy Statements)</h2>
+<h3 id="31-least-privilege">3.1 Least Privilege</h3>
+<p>Users receive only the minimum access rights required to fulfill their duties. Privileged access is granted restrictively and reviewed regularly.</p>
+<h3 id="32-need-to-know-principle">3.2 Need-to-Know Principle</h3>
+<p>Access to information is only granted when there is a business necessity. Access is granted based on roles and responsibilities.</p>
+<h3 id="33-identity-lifecycle-joiner-mover-leaver">3.3 Identity Lifecycle (Joiner-Mover-Leaver)</h3>
+<p>Identities are managed throughout their entire lifecycle:
+- <strong>Joiner:</strong> Access rights are granted upon entry based on role and function
+- <strong>Mover:</strong> Access rights are adjusted during role changes (revoke old rights, grant new ones)
+- <strong>Leaver:</strong> All access rights are immediately revoked upon departure</p>
+<h3 id="34-role-based-access-control-rbac">3.4 Role-Based Access Control (RBAC)</h3>
+<p>Access rights are primarily granted through roles and groups, not through individual permissions. Role models are regularly reviewed and updated.</p>
+<h3 id="35-segregation-of-duties">3.5 Segregation of Duties</h3>
+<p>Critical functions are divided so that no single person can perform all steps of a sensitive process. This prevents fraud and errors.</p>
+<h3 id="36-regular-recertification">3.6 Regular Recertification</h3>
+<p>Access rights are regularly reviewed and recertified (at least annually). Rights that are no longer needed are revoked.</p>
+<h3 id="37-privileged-access-management-pam">3.7 Privileged Access Management (PAM)</h3>
+<p>Privileged accounts (administrators, root, service accounts) are subject to special controls:
+- Separate accounts for privileged activities
+- Just-in-Time (JIT) access where possible
+- Comprehensive logging and monitoring</p>
+<h3 id="38-access-approval-and-documentation">3.8 Access Approval and Documentation</h3>
+<p>All access grants must be approved and documented by the resource owner. Access decisions are traceable and auditable.</p>
+<h2 id="4-roles-and-responsibilities">4. Roles and Responsibilities</h2>
+<h3 id="raci-matrix-access-control-and-iam">RACI Matrix: Access Control and IAM</h3>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>CISO</th>
+<th>IT Operations</th>
+<th>Resource Owner</th>
+<th>HR</th>
+<th>Employee</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Policy Creation</td>
+<td>R/A</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>IAM System Operations</td>
+<td>C</td>
+<td>R/A</td>
+<td>I</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Request Access</td>
+<td>I</td>
+<td>I</td>
+<td>C</td>
+<td>I</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Approve Access</td>
+<td>C</td>
+<td>I</td>
+<td>R/A</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Provision Access</td>
+<td>I</td>
+<td>R</td>
+<td>I</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Recertification</td>
+<td>C</td>
+<td>C</td>
+<td>R/A</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Revoke Access (Leaver)</td>
+<td>C</td>
+<td>R</td>
+<td>I</td>
+<td>R/A</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Monitoring and Audits</td>
+<td>R/A</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legend:</strong> R = Responsible (Execution), A = Accountable (Accountable), C = Consulted (Consulted), I = Informed (Informed)</p>
+<h3 id="key-roles">Key Roles</h3>
+<ul>
+<li><strong>Policy Owner:</strong> Thomas Weber (CISO)</li>
+<li><strong>IAM Manager:</strong> {{ meta.it.iam_manager }}</li>
+<li><strong>Resource Owners:</strong> Department heads, system owners</li>
+<li><strong>Implementation Responsible:</strong> IT operations, HR</li>
+<li><strong>Control/Audit Function:</strong> ISMS, internal audit</li>
+</ul>
+<h2 id="5-derivations-guidelinesstandardsprocesses">5. Derivations (Guidelines/Standards/Processes)</h2>
+<p>Implementation details are defined in subordinate documents:</p>
+<h3 id="related-guidelines">Related Guidelines</h3>
+<ul>
+<li><strong>0230_Richtlinie_IAM_Joiner_Mover_Leaver_und_Zugriffsantraege.md</strong> - Detailed IAM guideline</li>
+<li><code>0240_Policy_Authentisierung_und_Passwoerter.md</code> - Authentication policy</li>
+<li><code>0520_Policy_HR_Security.md</code> - HR security policy</li>
+<li><code>0640_Policy_Ausnahmen_und_Risk_Waivers.md</code> - Exception policy</li>
+</ul>
+<h3 id="related-standardsbaselines">Related Standards/Baselines</h3>
+<ul>
+<li>Role model and RBAC matrix</li>
+<li>Privileged Access Management (PAM) standard</li>
+<li>Recertification process</li>
+<li>Service account management</li>
+</ul>
+<h3 id="related-processes">Related Processes</h3>
+<ul>
+<li>Joiner-Mover-Leaver process</li>
+<li>Access approval process</li>
+<li>Recertification process</li>
+<li>Incident response for unauthorized access</li>
+</ul>
+<h2 id="6-compliance-monitoring-and-enforcement">6. Compliance, Monitoring, and Enforcement</h2>
+<h3 id="metrics-and-kpis">Metrics and KPIs</h3>
+<ul>
+<li>Number of open access requests and average processing time</li>
+<li>Recertification rate (target: 100% annually)</li>
+<li>Number of non-recertified accounts</li>
+<li>Number of privileged accounts and their usage frequency</li>
+<li>Number of least privilege violations</li>
+<li>Average time to deactivate leaver accounts (target: &lt; 1 day)</li>
+</ul>
+<h3 id="evidence-and-proof">Evidence and Proof</h3>
+<ul>
+<li>IAM system logs and audit trails</li>
+<li>Access approvals and requests</li>
+<li>Recertification evidence</li>
+<li>Joiner-Mover-Leaver documentation</li>
+<li>Privileged access logs</li>
+<li>Audit reports on access rights</li>
+</ul>
+<h3 id="consequences-for-violations">Consequences for Violations</h3>
+<p>Violations of this policy are handled according to applicable HR and compliance processes:
+- <strong>Unauthorized access grants:</strong> Immediate suspension, investigation, possible disciplinary action
+- <strong>Non-recertified accounts:</strong> Automatic deactivation after deadline
+- <strong>Abuse of privileged access:</strong> Immediate suspension, employment law consequences
+- <strong>Sharing of credentials:</strong> Warning up to termination</p>
+<h2 id="7-exceptions">7. Exceptions</h2>
+<p>Exceptions to this policy are only permitted in justified exceptional cases:</p>
+<ul>
+<li><strong>Exception Process:</strong> See <code>0640_Policy_Ausnahmen_und_Risk_Waivers.md</code></li>
+<li><strong>Approval:</strong> Exceptions must be approved by CISO and resource owner</li>
+<li><strong>Documentation:</strong> All exceptions are documented in the risk register</li>
+<li><strong>Time Limit:</strong> Exceptions are generally time-limited and regularly reviewed</li>
+</ul>
+<h2 id="8-references">8. References</h2>
+<h3 id="internal-documents">Internal Documents</h3>
+<ul>
+<li><code>0010_ISMS_Informationssicherheitsleitlinie.md</code> - ISMS policy</li>
+<li><code>0230_Richtlinie_IAM_Joiner_Mover_Leaver_und_Zugriffsantraege.md</code> - Detailed IAM guideline</li>
+<li><code>0080_ISMS_Risikoregister_Template.md</code> - Risk register</li>
+<li><code>0530_Richtlinie_HR_Onboarding_Rollenwechsel_Offboarding.md</code> - HR security guideline</li>
+</ul>
+<h3 id="external-standards-and-requirements">External Standards and Requirements</h3>
+<ul>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.15</strong> - Identity management</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.16</strong> - Access rights</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.17</strong> - Authentication information</li>
+<li><strong>ISO/IEC 27001:2022 Annex A.5.18</strong> - Access rights review</li>
+<li><strong>ISO/IEC 27002:2022</strong> - Information security controls</li>
+<li><strong>NIST SP 800-63</strong> - Digital Identity Guidelines</li>
+</ul>
+<hr />
+<p><strong>Approved by:</strong><br />
+{{ meta.management.ceo }}, Management<br />
+Date: {{ meta.document.approval_date }}</p>
+<p><strong>Next Review:</strong> {{ meta.document.next_review }} (annually or as needed)</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0210_Guideline_Acceptable_Use_of_IT.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0230_Guideline_IAM_Joiner_Mover_Leaver_and_Access_Requests.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

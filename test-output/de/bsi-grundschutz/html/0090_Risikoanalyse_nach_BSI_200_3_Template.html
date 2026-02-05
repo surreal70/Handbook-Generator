@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0090 - Risikoanalyse (BSI Standard 200-3) – Template</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0090</div>
+            <h1>Risikoanalyse (BSI Standard 200-3) – Template</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0080_Basis_Sicherheitscheck_Gapanalyse_Template.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0100_Sicherheitskonzept_und_Massnahmenplan.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="risikoanalyse-bsi-standard-200-3-template">Risikoanalyse (BSI Standard 200-3) – Template</h1>
+<p><strong>Dokument-ID:</strong> 0090<br />
+<strong>Dokumenttyp:</strong> Methodik-Artefakt<br />
+<strong>Referenzrahmen:</strong> BSI IT-Grundschutz (BSI Standard 200-3)<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> {{ meta.document.status }}<br />
+<strong>Klassifizierung:</strong> internal<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.last_updated }}<br />
+<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-ziel-und-ausloser">1. Ziel und Auslöser</h2>
+<p>Die Risikoanalyse nach BSI Standard 200-3 identifiziert und bewertet Risiken für <strong>AdminSend GmbH</strong>, die nicht durch IT-Grundschutz-Bausteine abgedeckt sind.</p>
+<p><strong>Verantwortlich:</strong> Thomas Weber (ISB)</p>
+<p><strong>Auslöser für Risikoanalyse:</strong>
+- Hoher oder sehr hoher Schutzbedarf (siehe Dokument 0060)
+- Besondere Bedrohungslage (z.B. gezielte Angriffe)
+- Abweichungen von IT-Grundschutz-Anforderungen
+- Neue Technologien ohne passende Bausteine
+- Externe Anforderungen (Kunden, Regulierung)</p>
+<p>[TODO: Spezifische Auslöser für diese Risikoanalyse dokumentieren]</p>
+<h2 id="2-risikoobjekte-und-scope">2. Risikoobjekte und Scope</h2>
+<p><strong>Betroffene Objekte:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Objekt-ID</th>
+<th>Objekt</th>
+<th>Typ</th>
+<th>Schutzbedarf</th>
+<th>Begründung für Risikoanalyse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Prozess/Anwendung/System</td>
+<td>Sehr hoch</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Prozess/Anwendung/System</td>
+<td>Sehr hoch</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Schnittstellen und Provider:</strong>
+- [TODO: Externe Schnittstellen und Dienstleister dokumentieren]</p>
+<h2 id="3-bedrohungen-schwachstellen-und-szenarien">3. Bedrohungen, Schwachstellen und Szenarien</h2>
+<h3 id="31-bedrohungskatalog">3.1 Bedrohungskatalog</h3>
+<table>
+<thead>
+<tr>
+<th>Bedrohungs-ID</th>
+<th>Bedrohung</th>
+<th>Kategorie</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T-001</td>
+<td>Gezielte Cyberangriffe</td>
+<td>Extern</td>
+<td>APT-Angriffe auf kritische Systeme</td>
+</tr>
+<tr>
+<td>T-002</td>
+<td>Ransomware</td>
+<td>Extern</td>
+<td>Verschlüsselung kritischer Daten</td>
+</tr>
+<tr>
+<td>T-003</td>
+<td>Insider-Bedrohung</td>
+<td>Intern</td>
+<td>Missbrauch privilegierter Zugriffe</td>
+</tr>
+<tr>
+<td>T-004</td>
+<td>DDoS-Angriffe</td>
+<td>Extern</td>
+<td>Verfügbarkeitsbeeinträchtigung</td>
+</tr>
+<tr>
+<td>T-005</td>
+<td>Supply Chain Attacks</td>
+<td>Extern</td>
+<td>Kompromittierung über Lieferanten</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-schwachstellenkatalog">3.2 Schwachstellenkatalog</h3>
+<table>
+<thead>
+<tr>
+<th>Schwachstellen-ID</th>
+<th>Schwachstelle</th>
+<th>Objekt</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>V-001</td>
+<td>Unzureichende Segmentierung</td>
+<td>Netzwerk</td>
+<td>Fehlende Mikrosegmentierung</td>
+</tr>
+<tr>
+<td>V-002</td>
+<td>Fehlende MFA</td>
+<td>VPN-Zugang</td>
+<td>Nur Passwort-Authentifizierung</td>
+</tr>
+<tr>
+<td>V-003</td>
+<td>Veraltete Software</td>
+<td>[TODO: System]</td>
+<td>End-of-Life Software im Einsatz</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="33-risikoszenarien">3.3 Risikoszenarien</h3>
+<table>
+<thead>
+<tr>
+<th>Szenario-ID</th>
+<th>Szenario</th>
+<th>Bedrohung</th>
+<th>Schwachstelle</th>
+<th>Betroffenes Objekt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S-001</td>
+<td>Ransomware-Angriff auf Produktionssysteme</td>
+<td>T-002</td>
+<td>V-001, V-002</td>
+<td>[TODO: Produktionssystem]</td>
+</tr>
+<tr>
+<td>S-002</td>
+<td>Datendiebstahl durch Insider</td>
+<td>T-003</td>
+<td>V-002</td>
+<td>[TODO: Datenbank]</td>
+</tr>
+<tr>
+<td>S-003</td>
+<td>DDoS auf öffentliche Services</td>
+<td>T-004</td>
+<td>[TODO]</td>
+<td>[TODO: Webserver]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-risikobewertung">4. Risikobewertung</h2>
+<h3 id="41-bewertungsskala">4.1 Bewertungsskala</h3>
+<p><strong>Eintrittswahrscheinlichkeit:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Stufe</th>
+<th>Beschreibung</th>
+<th>Häufigkeit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 - Sehr gering</td>
+<td>Unwahrscheinlich</td>
+<td>&lt; 1x in 10 Jahren</td>
+</tr>
+<tr>
+<td>2 - Gering</td>
+<td>Selten</td>
+<td>1x in 5-10 Jahren</td>
+</tr>
+<tr>
+<td>3 - Mittel</td>
+<td>Gelegentlich</td>
+<td>1x in 1-5 Jahren</td>
+</tr>
+<tr>
+<td>4 - Hoch</td>
+<td>Wahrscheinlich</td>
+<td>1x pro Jahr</td>
+</tr>
+<tr>
+<td>5 - Sehr hoch</td>
+<td>Sehr wahrscheinlich</td>
+<td>Mehrmals pro Jahr</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Auswirkung (Schadenshöhe):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Stufe</th>
+<th>Beschreibung</th>
+<th>Finanzielle Auswirkung</th>
+<th>Geschäftsauswirkung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 - Sehr gering</td>
+<td>Vernachlässigbar</td>
+<td>&lt; 10.000 €</td>
+<td>Keine wesentliche Beeinträchtigung</td>
+</tr>
+<tr>
+<td>2 - Gering</td>
+<td>Begrenzt</td>
+<td>10.000 - 50.000 €</td>
+<td>Geringe Beeinträchtigung</td>
+</tr>
+<tr>
+<td>3 - Mittel</td>
+<td>Beträchtlich</td>
+<td>50.000 - 250.000 €</td>
+<td>Merkliche Beeinträchtigung</td>
+</tr>
+<tr>
+<td>4 - Hoch</td>
+<td>Schwerwiegend</td>
+<td>250.000 - 1.000.000 €</td>
+<td>Erhebliche Beeinträchtigung</td>
+</tr>
+<tr>
+<td>5 - Sehr hoch</td>
+<td>Katastrophal</td>
+<td>&gt; 1.000.000 €</td>
+<td>Existenzbedrohend</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Risikomatrix:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Eintrittswahrscheinlichkeit</th>
+<th>Auswirkung 1</th>
+<th>Auswirkung 2</th>
+<th>Auswirkung 3</th>
+<th>Auswirkung 4</th>
+<th>Auswirkung 5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5 - Sehr hoch</td>
+<td>Mittel</td>
+<td>Hoch</td>
+<td>Hoch</td>
+<td>Sehr hoch</td>
+<td>Sehr hoch</td>
+</tr>
+<tr>
+<td>4 - Hoch</td>
+<td>Mittel</td>
+<td>Mittel</td>
+<td>Hoch</td>
+<td>Hoch</td>
+<td>Sehr hoch</td>
+</tr>
+<tr>
+<td>3 - Mittel</td>
+<td>Niedrig</td>
+<td>Mittel</td>
+<td>Mittel</td>
+<td>Hoch</td>
+<td>Hoch</td>
+</tr>
+<tr>
+<td>2 - Gering</td>
+<td>Niedrig</td>
+<td>Niedrig</td>
+<td>Mittel</td>
+<td>Mittel</td>
+<td>Hoch</td>
+</tr>
+<tr>
+<td>1 - Sehr gering</td>
+<td>Niedrig</td>
+<td>Niedrig</td>
+<td>Niedrig</td>
+<td>Mittel</td>
+<td>Mittel</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-risikoakzeptanzkriterien">4.2 Risikoakzeptanzkriterien</h3>
+<table>
+<thead>
+<tr>
+<th>Risikostufe</th>
+<th>Behandlung</th>
+<th>Genehmigung erforderlich</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sehr hoch</strong></td>
+<td>Muss behandelt werden</td>
+<td>Geschäftsführung</td>
+</tr>
+<tr>
+<td><strong>Hoch</strong></td>
+<td>Sollte behandelt werden</td>
+<td>ISB</td>
+</tr>
+<tr>
+<td><strong>Mittel</strong></td>
+<td>Kann behandelt werden</td>
+<td>ISB</td>
+</tr>
+<tr>
+<td><strong>Niedrig</strong></td>
+<td>Kann akzeptiert werden</td>
+<td>Informationsverbund-Verantwortlicher</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-risikoregister">5. Risikoregister</h2>
+<table>
+<thead>
+<tr>
+<th>Risiko-ID</th>
+<th>Objekt</th>
+<th>Szenario</th>
+<th>Bedrohung</th>
+<th>Schwachstelle</th>
+<th>Bestehende Maßnahmen</th>
+<th>Eintritts­wahrscheinlichkeit</th>
+<th>Auswirkung</th>
+<th>Risiko (vorher)</th>
+<th>Behandlung</th>
+<th>Zusätzliche Maßnahme</th>
+<th>Owner</th>
+<th>Termin</th>
+<th>Risiko (nachher)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R-001</td>
+<td>[TODO]</td>
+<td>S-001</td>
+<td>T-002</td>
+<td>V-001, V-002</td>
+<td>Antivirus, Backup</td>
+<td>4</td>
+<td>5</td>
+<td>Sehr hoch</td>
+<td>Mindern</td>
+<td>Mikrosegmentierung, MFA</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+<td>Mittel</td>
+</tr>
+<tr>
+<td>R-002</td>
+<td>[TODO]</td>
+<td>S-002</td>
+<td>T-003</td>
+<td>V-002</td>
+<td>Logging, IAM</td>
+<td>3</td>
+<td>4</td>
+<td>Hoch</td>
+<td>Mindern</td>
+<td>PAM, DLP</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+<td>Niedrig</td>
+</tr>
+<tr>
+<td>R-003</td>
+<td>[TODO]</td>
+<td>S-003</td>
+<td>T-004</td>
+<td>[TODO]</td>
+<td>Firewall</td>
+<td>3</td>
+<td>3</td>
+<td>Mittel</td>
+<td>Mindern</td>
+<td>DDoS-Protection</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+<td>Niedrig</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Risikobehandlungsoptionen:</strong>
+- <strong>Mindern:</strong> Zusätzliche Maßnahmen implementieren
+- <strong>Vermeiden:</strong> Risikoquelle eliminieren
+- <strong>Übertragen:</strong> Risiko auf Dritte übertragen (Versicherung, Outsourcing)
+- <strong>Akzeptieren:</strong> Risiko bewusst akzeptieren (mit Genehmigung)</p>
+<h2 id="6-risikobewertung-zusammenfassung">6. Risikobewertung: Zusammenfassung</h2>
+<p><strong>Risikoverteilung (vor Behandlung):</strong>
+- Sehr hoch: [TODO]
+- Hoch: [TODO]
+- Mittel: [TODO]
+- Niedrig: [TODO]</p>
+<p><strong>Risikoverteilung (nach Behandlung):</strong>
+- Sehr hoch: [TODO]
+- Hoch: [TODO]
+- Mittel: [TODO]
+- Niedrig: [TODO]</p>
+<p><strong>Top 5 Risiken:</strong>
+1. [TODO: Risiko 1]
+2. [TODO: Risiko 2]
+3. [TODO: Risiko 3]
+4. [TODO: Risiko 4]
+5. [TODO: Risiko 5]</p>
+<h2 id="7-freigabe-und-risikoakzeptanz">7. Freigabe und Risikoakzeptanz</h2>
+<h3 id="71-risikoeigner">7.1 Risikoeigner</h3>
+<table>
+<thead>
+<tr>
+<th>Risiko-ID</th>
+<th>Risiko</th>
+<th>Risikoeigner</th>
+<th>Akzeptanz</th>
+<th>Datum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R-001</td>
+<td>[TODO]</td>
+<td>Max Mustermann</td>
+<td>Akzeptiert nach Maßnahmenumsetzung</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>R-002</td>
+<td>[TODO]</td>
+<td>Thomas Weber</td>
+<td>Akzeptiert nach Maßnahmenumsetzung</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="72-management-freigabe">7.2 Management-Freigabe</h3>
+<table>
+<thead>
+<tr>
+<th>Rolle</th>
+<th>Name</th>
+<th>Datum</th>
+<th>Freigabe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ISB</td>
+<td>Thomas Weber</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+<tr>
+<td>IT-Leitung</td>
+<td>Anna Schmidt</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+<tr>
+<td>Geschäftsführung</td>
+<td>Max Mustermann</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+</tbody>
+</table>
+<h2 id="8-aktualisierung-und-pflege">8. Aktualisierung und Pflege</h2>
+<p>Die Risikoanalyse wird aktualisiert bei:
+- Wesentlichen Änderungen in der Bedrohungslage
+- Neuen Schwachstellen oder Sicherheitsvorfällen
+- Änderungen am Informationsverbund
+- Mindestens jährlich im Rahmen des ISMS-Reviews</p>
+<p><strong>Verantwortlich:</strong> Thomas Weber (ISB)<br />
+<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<p><strong>Referenzen:</strong>
+- BSI Standard 200-3: Risikoanalyse auf der Basis von IT-Grundschutz
+- BSI IT-Grundschutz-Kompendium</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0080_Basis_Sicherheitscheck_Gapanalyse_Template.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0100_Sicherheitskonzept_und_Massnahmenplan.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

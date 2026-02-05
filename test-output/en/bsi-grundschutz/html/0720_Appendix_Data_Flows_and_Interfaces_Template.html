@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0720 - Appendix: Data Flows and Interfaces (Template)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0720</div>
+            <h1>Appendix: Data Flows and Interfaces (Template)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0710_Appendix_Asset_Inventory_Template.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0730_Appendix_Diagrams_Network_Plan_and_Zones.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="appendix-data-flows-and-interfaces-template">Appendix: Data Flows and Interfaces (Template)</h1>
+<p><strong>Document ID:</strong> 0720<br />
+<strong>Document Type:</strong> Appendix/Template<br />
+<strong>Reference Framework:</strong> BSI IT-Grundschutz (BSI Standards 200-1/200-2)<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> {{ meta.document.status }}<br />
+<strong>Classification:</strong> internal<br />
+<strong>Last Updated:</strong> {{ meta.document.last_updated }}<br />
+<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<hr />
+<h2 id="1-purpose-and-objectives">1. Purpose and Objectives</h2>
+<p>The documentation of data flows and interfaces of <strong>AdminSend GmbH</strong> supports:
+- Protection Needs Assessment (Document 0060)
+- Risk Analysis (Document 0090)
+- Crypto Concept (Document 0340/0350)
+- Data Protection Compliance (Document 0420/0430)</p>
+<p><strong>Responsible:</strong> Thomas Weber (CISO), Anna Schmidt (IT Management)</p>
+<h2 id="2-data-flow-register">2. Data Flow Register</h2>
+<table>
+<thead>
+<tr>
+<th>Data Flow ID</th>
+<th>Source</th>
+<th>Destination</th>
+<th>Data Types</th>
+<th>Protection Need (C/I/A)</th>
+<th>Transport Path</th>
+<th>Encryption</th>
+<th>Storage</th>
+<th>Provider/Third Country</th>
+<th>Owner</th>
+<th>Legal Basis</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DF-001</td>
+<td>Web Server ({{ netbox.device.name }})</td>
+<td>Database Server</td>
+<td>Customer Data (personal)</td>
+<td>Very High/High/High</td>
+<td>{{ netbox.vlan.name }} (internal)</td>
+<td>TLS 1.3</td>
+<td>Encrypted (AES-256)</td>
+<td>Internal</td>
+<td>Anna Schmidt</td>
+<td>GDPR Art. 6(1)(b)</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>DF-002</td>
+<td>Backup Server</td>
+<td>Cloud Storage (AWS S3)</td>
+<td>Backup Data</td>
+<td>High/High/High</td>
+<td>Internet (VPN)</td>
+<td>TLS 1.3 + AES-256</td>
+<td>Encrypted (AES-256)</td>
+<td>AWS (EU-West-1)</td>
+<td>Anna Schmidt</td>
+<td>GDPR Art. 28</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>DF-003</td>
+<td>Employee (Remote)</td>
+<td>VPN Gateway</td>
+<td>Business Data</td>
+<td>High/High/Normal</td>
+<td>Internet</td>
+<td>IPsec/IKEv2</td>
+<td>N/A</td>
+<td>Internal</td>
+<td>Anna Schmidt</td>
+<td>-</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>DF-004</td>
+<td>ERP System</td>
+<td>Payment Gateway</td>
+<td>Payment Data</td>
+<td>Very High/Very High/High</td>
+<td>Internet (HTTPS)</td>
+<td>TLS 1.3</td>
+<td>Not Stored</td>
+<td>Payment Provider (EU)</td>
+<td>Anna Schmidt</td>
+<td>PCI-DSS</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>DF-005</td>
+<td>SIEM</td>
+<td>Log Archive</td>
+<td>Log Data</td>
+<td>Normal/High/Normal</td>
+<td>{{ netbox.vlan.name }} (Management)</td>
+<td>TLS 1.2</td>
+<td>Encrypted</td>
+<td>Internal</td>
+<td>Thomas Weber</td>
+<td>-</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-interface-register">3. Interface Register</h2>
+<table>
+<thead>
+<tr>
+<th>Interface ID</th>
+<th>System A</th>
+<th>System B</th>
+<th>Protocol</th>
+<th>Port</th>
+<th>Authentication</th>
+<th>Encryption</th>
+<th>Data Direction</th>
+<th>Frequency</th>
+<th>Owner</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IF-001</td>
+<td>Web Server</td>
+<td>Database</td>
+<td>PostgreSQL</td>
+<td>5432</td>
+<td>Certificate</td>
+<td>TLS 1.3</td>
+<td>Bidirectional</td>
+<td>Permanent</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>IF-002</td>
+<td>ERP</td>
+<td>CRM</td>
+<td>REST API</td>
+<td>443</td>
+<td>OAuth 2.0</td>
+<td>TLS 1.3</td>
+<td>Bidirectional</td>
+<td>Real-time</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>IF-003</td>
+<td>Monitoring</td>
+<td>SIEM</td>
+<td>Syslog</td>
+<td>514</td>
+<td>Certificate</td>
+<td>TLS 1.2</td>
+<td>Unidirectional</td>
+<td>Permanent</td>
+<td>Thomas Weber</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>IF-004</td>
+<td>AD</td>
+<td>LDAP Clients</td>
+<td>LDAPS</td>
+<td>636</td>
+<td>Kerberos</td>
+<td>TLS 1.2</td>
+<td>Bidirectional</td>
+<td>On-Demand</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>IF-005</td>
+<td>Backup Server</td>
+<td>Cloud Storage</td>
+<td>S3 API</td>
+<td>443</td>
+<td>API Key</td>
+<td>TLS 1.3</td>
+<td>Unidirectional</td>
+<td>Daily</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-external-interfaces-and-third-parties">4. External Interfaces and Third Parties</h2>
+<table>
+<thead>
+<tr>
+<th>Third Party</th>
+<th>Service</th>
+<th>Data Types</th>
+<th>Protection Need</th>
+<th>Location/Third Country</th>
+<th>Contract</th>
+<th>Data Protection Agreement</th>
+<th>Owner</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AWS</td>
+<td>Cloud Hosting (EC2, S3)</td>
+<td>Business Data, Backup</td>
+<td>High/High/High</td>
+<td>EU-West-1</td>
+<td>[TODO: Contract Number]</td>
+<td>Yes (Art. 28 GDPR)</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Microsoft</td>
+<td>Office 365</td>
+<td>Email, Documents</td>
+<td>High/High/Normal</td>
+<td>EU</td>
+<td>[TODO]</td>
+<td>Yes</td>
+<td>Anna Schmidt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Payment Provider</td>
+<td>Payment Processing</td>
+<td>Payment Data</td>
+<td>Very High/Very High/High</td>
+<td>EU</td>
+<td>[TODO]</td>
+<td>Yes</td>
+<td>Anna Schmidt</td>
+<td>PCI-DSS certified</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Reference:</strong> Document 0400/0410 (Supplier and Outsourcing Management)</p>
+<h2 id="5-data-flow-diagrams">5. Data Flow Diagrams</h2>
+<p><strong>Storage Location:</strong> <code>diagrams/dataflows.png</code> or [TODO: Confluence/SharePoint]</p>
+<p><strong>Recommended Diagrams:</strong>
+1. <strong>High-Level Data Flow:</strong> Overview of all main data flows
+2. <strong>Detailed Data Flows:</strong> Per critical system/service
+3. <strong>External Data Flows:</strong> All data flows to third parties
+4. <strong>Personal Data:</strong> GDPR-relevant data flows</p>
+<p><strong>Tools:</strong> [TODO: e.g., Lucidchart, Draw.io, Visio]</p>
+<h2 id="6-data-categories">6. Data Categories</h2>
+<h3 id="61-personal-data-gdpr">6.1 Personal Data (GDPR)</h3>
+<ul>
+<li>Customer Data (name, address, email, etc.)</li>
+<li>Employee Data (HR data)</li>
+<li>Special Categories (Art. 9 GDPR): [TODO: if applicable]</li>
+</ul>
+<h3 id="62-business-data">6.2 Business Data</h3>
+<ul>
+<li>Contracts</li>
+<li>Financial Data</li>
+<li>Trade Secrets</li>
+<li>Strategic Documents</li>
+</ul>
+<h3 id="63-technical-data">6.3 Technical Data</h3>
+<ul>
+<li>Log Data</li>
+<li>Monitoring Data</li>
+<li>Configuration Data</li>
+</ul>
+<h3 id="64-public-data">6.4 Public Data</h3>
+<ul>
+<li>Marketing Materials</li>
+<li>Public Website Content</li>
+</ul>
+<h2 id="7-encryption-requirements">7. Encryption Requirements</h2>
+<table>
+<thead>
+<tr>
+<th>Data Type</th>
+<th>Protection Need</th>
+<th>Transport Encryption</th>
+<th>Storage Encryption</th>
+<th>Key Management</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Personal Data</td>
+<td>Very High</td>
+<td>TLS 1.3 (min. TLS 1.2)</td>
+<td>AES-256</td>
+<td>HSM/KMS</td>
+</tr>
+<tr>
+<td>Business Data</td>
+<td>High</td>
+<td>TLS 1.3 (min. TLS 1.2)</td>
+<td>AES-256</td>
+<td>KMS</td>
+</tr>
+<tr>
+<td>Log Data</td>
+<td>Normal</td>
+<td>TLS 1.2</td>
+<td>Optional</td>
+<td>KMS</td>
+</tr>
+<tr>
+<td>Public Data</td>
+<td>Normal</td>
+<td>TLS 1.2</td>
+<td>Not Required</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Reference:</strong> Document 0340/0350 (Cryptography and Key Management)</p>
+<h2 id="8-cross-border-data-transfer">8. Cross-Border Data Transfer</h2>
+<p><strong>Data Transfer to Third Countries:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Destination Country</th>
+<th>Data Types</th>
+<th>Legal Basis</th>
+<th>Safeguards</th>
+<th>Approval</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>USA</td>
+<td>[TODO]</td>
+<td>Standard Contractual Clauses (SCC)</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Reference:</strong> Document 0420/0430 (Data Protection)</p>
+<h2 id="9-responsibilities-raci">9. Responsibilities (RACI)</h2>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>IT Management</th>
+<th>CISO</th>
+<th>Data Protection Officer</th>
+<th>Business Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Document Data Flows</td>
+<td>A</td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Determine Protection Need</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Implement Encryption</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Review Third-Party Contracts</td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Annual Review</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legend:</strong>
+- <strong>R</strong> = Responsible (Execution responsibility)
+- <strong>A</strong> = Accountable (Overall responsibility)
+- <strong>C</strong> = Consulted
+- <strong>I</strong> = Informed</p>
+<h2 id="10-change-management">10. Change Management</h2>
+<p><strong>Changes to Data Flows:</strong>
+- New data flows must be documented before commissioning
+- Changes to existing data flows require change ticket
+- Security-relevant changes require CISO approval</p>
+<p><strong>Reference:</strong> Document 0380/0390 (Change Management)</p>
+<h2 id="11-approval">11. Approval</h2>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Name</th>
+<th>Date</th>
+<th>Approval</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CISO</td>
+<td>Thomas Weber</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+<tr>
+<td>IT Management</td>
+<td>Anna Schmidt</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+<tr>
+<td>Data Protection Officer</td>
+<td>[TODO]</td>
+<td>{{ meta.document.approval_date }}</td>
+<td>{{ meta.document.approval_status }}</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>References:</strong>
+- BSI Standard 200-2: IT-Grundschutz Methodology (Structure Analysis)
+- BSI IT-Grundschutz-Kompendium: CON.1 Crypto Concept
+- Document 0050: Structure Analysis
+- Document 0060: Protection Needs Assessment
+- Document 0090: Risk Analysis
+- Document 0340/0350: Cryptography and Key Management
+- Document 0420/0430: Data Protection</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0710_Appendix_Asset_Inventory_Template.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0730_Appendix_Diagrams_Network_Plan_and_Zones.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

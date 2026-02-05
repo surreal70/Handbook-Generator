@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0230 - Wartung und Operations-Routinen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0230</div>
+            <h1>Wartung und Operations-Routinen</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0220_Datenmanagement_und_Datenschutz.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0240_Runbooks_Standardoperationen.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="wartung-und-operations-routinen">Wartung und Operations-Routinen</h1>
+<h2 id="ubersicht">Übersicht</h2>
+<p>Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Checklisten und Housekeeping-Prozeduren für den IT-Service. Ziel ist es, die Systemstabilität, Performance und Sicherheit durch proaktive Wartung zu gewährleisten.</p>
+<p><strong>Dokumentverantwortlicher:</strong> IT Operations Manager<br />
+<strong>Genehmigt durch:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Organisation:</strong> AdminSend GmbH</p>
+<hr />
+<h2 id="wartungsubersicht">Wartungsübersicht</h2>
+<h3 id="wartungskategorien">Wartungskategorien</h3>
+<table>
+<thead>
+<tr>
+<th>Kategorie</th>
+<th>Beschreibung</th>
+<th>Frequenz</th>
+<th>Verantwortlich</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Präventiv</strong></td>
+<td>Vorbeugende Maßnahmen zur Fehlervermeidung</td>
+<td>Regelmäßig</td>
+<td>Andreas Huemmer</td>
+</tr>
+<tr>
+<td><strong>Korrektiv</strong></td>
+<td>Behebung bekannter Probleme</td>
+<td>Bei Bedarf</td>
+<td>Andreas Huemmer</td>
+</tr>
+<tr>
+<td><strong>Adaptiv</strong></td>
+<td>Anpassung an neue Anforderungen</td>
+<td>Bei Bedarf</td>
+<td>Andreas Huemmer</td>
+</tr>
+<tr>
+<td><strong>Perfektiv</strong></td>
+<td>Verbesserung und Optimierung</td>
+<td>Geplant</td>
+<td>Andreas Huemmer</td>
+</tr>
+</tbody>
+</table>
+<h3 id="wartungsfenster">Wartungsfenster</h3>
+<h4 id="regulare-wartungsfenster">Reguläre Wartungsfenster</h4>
+<table>
+<thead>
+<tr>
+<th>Typ</th>
+<th>Zeitfenster</th>
+<th>Dauer</th>
+<th>Ankündigung</th>
+<th>Genehmigung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wöchentlich</td>
+<td>Sonntag 02:00-04:00</td>
+<td>2 Stunden</td>
+<td>3 Tage</td>
+<td>Ops Manager</td>
+</tr>
+<tr>
+<td>Monatlich</td>
+<td>Erster Sonntag 02:00-06:00</td>
+<td>4 Stunden</td>
+<td>7 Tage</td>
+<td>Ops Manager</td>
+</tr>
+<tr>
+<td>Quartalsweise</td>
+<td>Erster Sonntag im Quartal 00:00-08:00</td>
+<td>8 Stunden</td>
+<td>14 Tage</td>
+<td>CIO</td>
+</tr>
+</tbody>
+</table>
+<h4 id="notfall-wartung">Notfall-Wartung</h4>
+<ul>
+<li><strong>Zeitfenster:</strong> Jederzeit nach Genehmigung</li>
+<li><strong>Ankündigung:</strong> Minimum 4 Stunden (wenn möglich)</li>
+<li><strong>Genehmigung:</strong> Anna Schmidt</li>
+<li><strong>Kommunikation:</strong> Alle Stakeholder informieren</li>
+</ul>
+<hr />
+<h2 id="tagliche-routinen">Tägliche Routinen</h2>
+<h3 id="morgen-checks-0800-uhr">Morgen-Checks (08:00 Uhr)</h3>
+<h4 id="system-health-check">System-Health-Check</h4>
+<ul>
+<li>[ ] Monitoring-Dashboard prüfen</li>
+<li>[ ] Kritische Alerts überprüfen</li>
+<li>[ ] System-Verfügbarkeit validieren</li>
+<li>[ ] Performance-Metriken prüfen</li>
+<li>[ ] Backup-Status überprüfen</li>
+</ul>
+<h4 id="incident-review">Incident-Review</h4>
+<ul>
+<li>[ ] Overnight-Incidents prüfen</li>
+<li>[ ] Offene Tickets reviewen</li>
+<li>[ ] Prioritäten für den Tag setzen</li>
+<li>[ ] Eskalationen identifizieren</li>
+</ul>
+<h4 id="kapazitats-check">Kapazitäts-Check</h4>
+<ul>
+<li>[ ] CPU-Auslastung prüfen</li>
+<li>[ ] RAM-Auslastung prüfen</li>
+<li>[ ] Storage-Auslastung prüfen</li>
+<li>[ ] Netzwerk-Auslastung prüfen</li>
+</ul>
+<p><strong>Verantwortlich:</strong> Operations Team<br />
+<strong>Dauer:</strong> 15-30 Minuten<br />
+<strong>Dokumentation:</strong> Daily Operations Log</p>
+<h3 id="mittags-checks-1200-uhr">Mittags-Checks (12:00 Uhr)</h3>
+<h4 id="performance-monitoring">Performance-Monitoring</h4>
+<ul>
+<li>[ ] Response-Times prüfen</li>
+<li>[ ] Error-Rates überprüfen</li>
+<li>[ ] Throughput validieren</li>
+<li>[ ] Queue-Längen prüfen</li>
+</ul>
+<h4 id="security-check">Security-Check</h4>
+<ul>
+<li>[ ] Security-Alerts prüfen</li>
+<li>[ ] Failed-Login-Attempts reviewen</li>
+<li>[ ] Firewall-Logs prüfen</li>
+<li>[ ] Anomalien identifizieren</li>
+</ul>
+<p><strong>Verantwortlich:</strong> Operations Team<br />
+<strong>Dauer:</strong> 10-15 Minuten<br />
+<strong>Dokumentation:</strong> Daily Operations Log</p>
+<h3 id="abend-checks-1800-uhr">Abend-Checks (18:00 Uhr)</h3>
+<h4 id="tagesabschluss">Tagesabschluss</h4>
+<ul>
+<li>[ ] Alle Incidents des Tages reviewen</li>
+<li>[ ] Offene Tickets aktualisieren</li>
+<li>[ ] Backup-Jobs für die Nacht vorbereiten</li>
+<li>[ ] Wartungsarbeiten für die Nacht planen</li>
+</ul>
+<h4 id="ubergabe-an-nachtschichton-call">Übergabe an Nachtschicht/On-Call</h4>
+<ul>
+<li>[ ] Kritische Themen kommunizieren</li>
+<li>[ ] Laufende Arbeiten dokumentieren</li>
+<li>[ ] On-Call-Kontakte aktualisieren</li>
+<li>[ ] Eskalationspfade bestätigen</li>
+</ul>
+<p><strong>Verantwortlich:</strong> Operations Team<br />
+<strong>Dauer:</strong> 15-20 Minuten<br />
+<strong>Dokumentation:</strong> Shift Handover Log</p>
+<hr />
+<h2 id="wochentliche-routinen">Wöchentliche Routinen</h2>
+<h3 id="montag-wochenplanung">Montag: Wochenplanung</h3>
+<h4 id="wochenstart-meeting-0900-uhr">Wochenstart-Meeting (09:00 Uhr)</h4>
+<ul>
+<li>[ ] Wochenend-Incidents reviewen</li>
+<li>[ ] Wochenziele definieren</li>
+<li>[ ] Wartungsarbeiten planen</li>
+<li>[ ] Ressourcen zuweisen</li>
+<li>[ ] Risiken identifizieren</li>
+</ul>
+<p><strong>Teilnehmer:</strong> Andreas Huemmer, Operations Team<br />
+<strong>Dauer:</strong> 30 Minuten<br />
+<strong>Dokumentation:</strong> Weekly Planning Notes</p>
+<h4 id="system-updates-prufen">System-Updates prüfen</h4>
+<ul>
+<li>[ ] Verfügbare Updates identifizieren</li>
+<li>[ ] Kritikalität bewerten</li>
+<li>[ ] Test-Planung durchführen</li>
+<li>[ ] Deployment-Zeitplan erstellen</li>
+</ul>
+<p><strong>Verantwortlich:</strong> Operations Team<br />
+<strong>Dauer:</strong> 1 Stunde</p>
+<h3 id="dienstag-backup-validierung">Dienstag: Backup-Validierung</h3>
+<h4 id="backup-verifikation">Backup-Verifikation</h4>
+<ul>
+<li>[ ] Backup-Logs der letzten Woche prüfen</li>
+<li>[ ] Backup-Erfolgsrate validieren</li>
+<li>[ ] Backup-Größen überprüfen</li>
+<li>[ ] Fehlgeschlagene Backups analysieren</li>
+<li>[ ] Restore-Test durchführen (stichprobenartig)</li>
+</ul>
+<p><strong>Verantwortlich:</strong> Operations Team<br />
+<strong>Dauer:</strong> 1-2 Stunden<br />
+<strong>Dokumentation:</strong> Backup Verification Report</p>
+<h3 id="mittwoch-performance-analyse">Mittwoch: Performance-Analyse</h3>
+<h4 id="wochentliche-performance-review">Wöchentliche Performance-Review</h4>
+<ul>
+<li>[ ] Performance-Trends analysieren</li>
+<li>[ ] Bottlenecks identifizieren</li>
+<li>[ ] Kapazitätsprognosen aktualisieren</li>
+<li>[ ] Optimierungspotenziale identifizieren</li>
+</ul>
+<p><strong>Verantwortlich:</strong> Operations Team<br />
+<strong>Dauer:</strong> 1 Stunde<br />
+<strong>Dokumentation:</strong> Weekly Performance Report</p>
+<h3 id="donnerstag-security-review">Donnerstag: Security-Review</h3>
+<h4 id="wochentlicher-security-check">Wöchentlicher Security-Check</h4>
+<ul>
+<li>[ ] Security-Logs analysieren</li>
+<li>[ ] Vulnerability-Scans reviewen</li>
+<li>[ ] Patch-Status prüfen</li>
+<li>[ ] Security-Incidents reviewen</li>
+<li>[ ] Compliance-Status prüfen</li>
+</ul>
+<p><strong>Verantwortlich:</strong> Operations Team, Thomas Weber<br />
+<strong>Dauer:</strong> 1-2 Stunden<br />
+<strong>Dokumentation:</strong> Weekly Security Report</p>
+<h3 id="freitag-wochenabschluss">Freitag: Wochenabschluss</h3>
+<h4 id="wochenabschluss-meeting-1500-uhr">Wochenabschluss-Meeting (15:00 Uhr)</h4>
+<ul>
+<li>[ ] Wochenziele reviewen</li>
+<li>[ ] Incidents der Woche zusammenfassen</li>
+<li>[ ] Lessons Learned diskutieren</li>
+<li>[ ] Nächste Woche vorbereiten</li>
+<li>[ ] Wochenend-On-Call briefen</li>
+</ul>
+<p><strong>Teilnehmer:</strong> Andreas Huemmer, Operations Team<br />
+<strong>Dauer:</strong> 30 Minuten<br />
+<strong>Dokumentation:</strong> Weekly Summary Report</p>
+<h4 id="housekeeping">Housekeeping</h4>
+<ul>
+<li>[ ] Temporäre Dateien bereinigen</li>
+<li>[ ] Log-Rotation durchführen</li>
+<li>[ ] Alte Tickets archivieren</li>
+<li>[ ] Dokumentation aktualisieren</li>
+</ul>
+<p><strong>Verantwortlich:</strong> Operations Team<br />
+<strong>Dauer:</strong> 1 Stunde</p>
+<h3 id="sonntag-wartungsfenster">Sonntag: Wartungsfenster</h3>
+<h4 id="wochentliche-wartung-0200-0400-uhr">Wöchentliche Wartung (02:00-04:00 Uhr)</h4>
+<ul>
+<li>[ ] System-Updates installieren</li>
+<li>[ ] Datenbank-Wartung durchführen</li>
+<li>[ ] Log-Archivierung</li>
+<li>[ ] Disk-Cleanup</li>
+<li>[ ] Performance-Optimierung</li>
+</ul>
+<p><strong>Verantwortlich:</strong> On-Call Engineer<br />
+<strong>Dauer:</strong> 2 Stunden<br />
+<strong>Dokumentation:</strong> Maintenance Log</p>
+<hr />
+<h2 id="monatliche-routinen">Monatliche Routinen</h2>
+<h3 id="erste-woche-monatsplanung">Erste Woche: Monatsplanung</h3>
+<h4 id="monatsstart-meeting">Monatsstart-Meeting</h4>
+<ul>
+<li>[ ] Vormonat reviewen</li>
+<li>[ ] Monatsziele definieren</li>
+<li>[ ] Größere Wartungsarbeiten planen</li>
+<li>[ ] Budget-Status prüfen</li>
+<li>[ ] Kapazitätsplanung aktualisieren</li>
+</ul>
+<p><strong>Teilnehmer:</strong> Anna Schmidt, Andreas Huemmer, Team Leads<br />
+<strong>Dauer:</strong> 1 Stunde<br />
+<strong>Dokumentation:</strong> Monthly Planning Document</p>
+<h3 id="erste-woche-patch-management">Erste Woche: Patch-Management</h3>
+<h4 id="monatliches-patch-deployment">Monatliches Patch-Deployment</h4>
+<ul>
+<li>[ ] Patch-Verfügbarkeit prüfen</li>
+<li>[ ] Kritikalität bewerten</li>
+<li>[ ] Test-Umgebung patchen</li>
+<li>[ ] Validierung durchführen</li>
+<li>[ ] Produktions-Deployment planen</li>
+<li>[ ] Rollback-Plan erstellen</li>
+</ul>
+<p><strong>Verantwortlich:</strong> Operations Team<br />
+<strong>Dauer:</strong> 4-8 Stunden (über mehrere Tage)<br />
+<strong>Dokumentation:</strong> Patch Management Report</p>
+<h3 id="zweite-woche-capacity-review">Zweite Woche: Capacity-Review</h3>
+<h4 id="monatliche-kapazitatsanalyse">Monatliche Kapazitätsanalyse</h4>
+<ul>
+<li>[ ] Ressourcen-Auslastung analysieren</li>
+<li>[ ] Wachstumstrends identifizieren</li>
+<li>[ ] Kapazitätsprognosen erstellen</li>
+<li>[ ] Skalierungsbedarf bewerten</li>
+<li>[ ] Budget-Implikationen prüfen</li>
+</ul>
+<p><strong>Verantwortlich:</strong> Andreas Huemmer<br />
+<strong>Dauer:</strong> 2-3 Stunden<br />
+<strong>Dokumentation:</strong> Monthly Capacity Report</p>
+<h3 id="dritte-woche-security-audit">Dritte Woche: Security-Audit</h3>
+<h4 id="monatliches-security-audit">Monatliches Security-Audit</h4>
+<ul>
+<li>[ ] Zugriffsrechte reviewen</li>
+<li>[ ] Inaktive Accounts deaktivieren</li>
+<li>[ ] Passwort-Policies prüfen</li>
+<li>[ ] Firewall-Regeln reviewen</li>
+<li>[ ] Vulnerability-Scan durchführen</li>
+<li>[ ] Compliance-Status prüfen</li>
+</ul>
+<p><strong>Verantwortlich:</strong> Thomas Weber, Operations Team<br />
+<strong>Dauer:</strong> 3-4 Stunden<br />
+<strong>Dokumentation:</strong> Monthly Security Audit Report</p>
+<h3 id="vierte-woche-disaster-recovery-test">Vierte Woche: Disaster-Recovery-Test</h3>
+<h4 id="monatlicher-dr-test">Monatlicher DR-Test</h4>
+<ul>
+<li>[ ] DR-Szenario auswählen</li>
+<li>[ ] Test-Plan erstellen</li>
+<li>[ ] DR-Prozeduren durchführen</li>
+<li>[ ] Ergebnisse dokumentieren</li>
+<li>[ ] Verbesserungen identifizieren</li>
+<li>[ ] DR-Plan aktualisieren</li>
+</ul>
+<p><strong>Verantwortlich:</strong> Andreas Huemmer<br />
+<strong>Dauer:</strong> 2-4 Stunden<br />
+<strong>Dokumentation:</strong> DR Test Report</p>
+<h3 id="monatsende-reporting">Monatsende: Reporting</h3>
+<h4 id="monatliche-reports-erstellen">Monatliche Reports erstellen</h4>
+<ul>
+<li>[ ] Verfügbarkeits-Report</li>
+<li>[ ] Performance-Report</li>
+<li>[ ] Incident-Report</li>
+<li>[ ] Capacity-Report</li>
+<li>[ ] Security-Report</li>
+<li>[ ] SLA-Compliance-Report</li>
+</ul>
+<p><strong>Verantwortlich:</strong> Andreas Huemmer<br />
+<strong>Dauer:</strong> 2-3 Stunden<br />
+<strong>Empfänger:</strong> Anna Schmidt, Stakeholder</p>
+<hr />
+<h2 id="quartalsweise-routinen">Quartalsweise Routinen</h2>
+<h3 id="erste-woche-quartalsplanung">Erste Woche: Quartalsplanung</h3>
+<h4 id="quartalsstart-meeting">Quartalsstart-Meeting</h4>
+<ul>
+<li>[ ] Vorquartal reviewen</li>
+<li>[ ] Quartalsziele definieren</li>
+<li>[ ] Größere Projekte planen</li>
+<li>[ ] Budget-Review durchführen</li>
+<li>[ ] Ressourcenplanung aktualisieren</li>
+</ul>
+<p><strong>Teilnehmer:</strong> Max Mustermann, Anna Schmidt, Andreas Huemmer<br />
+<strong>Dauer:</strong> 2 Stunden<br />
+<strong>Dokumentation:</strong> Quarterly Planning Document</p>
+<h3 id="zweite-woche-infrastruktur-review">Zweite Woche: Infrastruktur-Review</h3>
+<h4 id="quartalsweise-infrastruktur-analyse">Quartalsweise Infrastruktur-Analyse</h4>
+<ul>
+<li>[ ] Hardware-Zustand prüfen</li>
+<li>[ ] End-of-Life-Systeme identifizieren</li>
+<li>[ ] Upgrade-Bedarf bewerten</li>
+<li>[ ] Konsolidierungspotenziale identifizieren</li>
+<li>[ ] Investitionsplanung durchführen</li>
+</ul>
+<p><strong>Verantwortlich:</strong> Andreas Huemmer<br />
+<strong>Dauer:</strong> 1 Tag<br />
+<strong>Dokumentation:</strong> Quarterly Infrastructure Report</p>
+<h3 id="dritte-woche-prozess-review">Dritte Woche: Prozess-Review</h3>
+<h4 id="quartalsweise-prozess-optimierung">Quartalsweise Prozess-Optimierung</h4>
+<ul>
+<li>[ ] Betriebsprozesse reviewen</li>
+<li>[ ] Ineffizienzen identifizieren</li>
+<li>[ ] Automatisierungspotenziale bewerten</li>
+<li>[ ] Verbesserungsmaßnahmen definieren</li>
+<li>[ ] Implementierungsplan erstellen</li>
+</ul>
+<p><strong>Verantwortlich:</strong> Andreas Huemmer, Team Leads<br />
+<strong>Dauer:</strong> 1 Tag<br />
+<strong>Dokumentation:</strong> Process Improvement Plan</p>
+<h3 id="vierte-woche-disaster-recovery-volltest">Vierte Woche: Disaster-Recovery-Volltest</h3>
+<h4 id="quartalsweiser-vollstandiger-dr-test">Quartalsweiser vollständiger DR-Test</h4>
+<ul>
+<li>[ ] Vollständiges DR-Szenario durchführen</li>
+<li>[ ] Alle kritischen Systeme testen</li>
+<li>[ ] RTO/RPO validieren</li>
+<li>[ ] Team-Koordination testen</li>
+<li>[ ] Kommunikationsprozesse validieren</li>
+<li>[ ] Lessons Learned dokumentieren</li>
+</ul>
+<p><strong>Verantwortlich:</strong> Anna Schmidt, Andreas Huemmer<br />
+<strong>Dauer:</strong> 1 Tag<br />
+<strong>Dokumentation:</strong> Quarterly DR Test Report</p>
+<hr />
+<h2 id="jahrliche-routinen">Jährliche Routinen</h2>
+<h3 id="q1-jahresplanung">Q1: Jahresplanung</h3>
+<h4 id="jahresstart-meeting">Jahresstart-Meeting</h4>
+<ul>
+<li>[ ] Vorjahr reviewen</li>
+<li>[ ] Jahresziele definieren</li>
+<li>[ ] Strategische Initiativen planen</li>
+<li>[ ] Jahresbudget finalisieren</li>
+<li>[ ] Ressourcenplanung für das Jahr</li>
+</ul>
+<p><strong>Teilnehmer:</strong> Max Mustermann, Anna Schmidt, Maria Müller, Andreas Huemmer<br />
+<strong>Dauer:</strong> 1 Tag<br />
+<strong>Dokumentation:</strong> Annual Planning Document</p>
+<h3 id="q2-infrastruktur-audit">Q2: Infrastruktur-Audit</h3>
+<h4 id="jahrliches-infrastruktur-audit">Jährliches Infrastruktur-Audit</h4>
+<ul>
+<li>[ ] Vollständiges Hardware-Inventory</li>
+<li>[ ] Software-Lizenz-Audit</li>
+<li>[ ] Compliance-Audit durchführen</li>
+<li>[ ] Security-Assessment</li>
+<li>[ ] Architektur-Review</li>
+<li>[ ] Modernisierungsbedarf identifizieren</li>
+</ul>
+<p><strong>Verantwortlich:</strong> Anna Schmidt, Andreas Huemmer<br />
+<strong>Dauer:</strong> 1 Woche<br />
+<strong>Dokumentation:</strong> Annual Infrastructure Audit Report</p>
+<h3 id="q3-disaster-recovery-volltest">Q3: Disaster-Recovery-Volltest</h3>
+<h4 id="jahrlicher-umfassender-dr-test">Jährlicher umfassender DR-Test</h4>
+<ul>
+<li>[ ] Vollständiger Failover-Test</li>
+<li>[ ] Alle Systeme und Prozesse testen</li>
+<li>[ ] Business-Continuity-Plan validieren</li>
+<li>[ ] Externe Stakeholder einbeziehen</li>
+<li>[ ] Kommunikationsprozesse testen</li>
+<li>[ ] Umfassende Dokumentation</li>
+</ul>
+<p><strong>Verantwortlich:</strong> Anna Schmidt, Andreas Huemmer<br />
+<strong>Dauer:</strong> 2-3 Tage<br />
+<strong>Dokumentation:</strong> Annual DR Test Report</p>
+<h3 id="q4-jahresabschluss">Q4: Jahresabschluss</h3>
+<h4 id="jahresabschluss-review">Jahresabschluss-Review</h4>
+<ul>
+<li>[ ] Jahresziele reviewen</li>
+<li>[ ] KPIs analysieren</li>
+<li>[ ] Budget-Abweichungen prüfen</li>
+<li>[ ] Lessons Learned dokumentieren</li>
+<li>[ ] Nächstes Jahr vorbereiten</li>
+<li>[ ] Management-Präsentation erstellen</li>
+</ul>
+<p><strong>Teilnehmer:</strong> Max Mustermann, Anna Schmidt, Maria Müller, Andreas Huemmer<br />
+<strong>Dauer:</strong> 1 Tag<br />
+<strong>Dokumentation:</strong> Annual Review Report</p>
+<hr />
+<h2 id="housekeeping-prozeduren">Housekeeping-Prozeduren</h2>
+<h3 id="datenbank-wartung">Datenbank-Wartung</h3>
+<h4 id="wochentliche-datenbank-wartung">Wöchentliche Datenbank-Wartung</h4>
+<ul>
+<li>[ ] Index-Fragmentierung prüfen</li>
+<li>[ ] Statistiken aktualisieren</li>
+<li>[ ] Transaktionslogs bereinigen</li>
+<li>[ ] Datenbank-Integrität prüfen</li>
+<li>[ ] Performance-Metriken analysieren</li>
+</ul>
+<p><strong>Verantwortlich:</strong> Database Administrator<br />
+<strong>Frequenz:</strong> Wöchentlich (Sonntag 02:00 Uhr)<br />
+<strong>Dauer:</strong> 1-2 Stunden</p>
+<h4 id="monatliche-datenbank-wartung">Monatliche Datenbank-Wartung</h4>
+<ul>
+<li>[ ] Index-Rebuild durchführen</li>
+<li>[ ] Datenbank-Shrink (falls erforderlich)</li>
+<li>[ ] Alte Daten archivieren</li>
+<li>[ ] Backup-Strategie validieren</li>
+<li>[ ] Disaster-Recovery-Test</li>
+</ul>
+<p><strong>Verantwortlich:</strong> Database Administrator<br />
+<strong>Frequenz:</strong> Monatlich (Erster Sonntag 02:00 Uhr)<br />
+<strong>Dauer:</strong> 2-4 Stunden</p>
+<h3 id="log-management">Log-Management</h3>
+<h4 id="tagliche-log-rotation">Tägliche Log-Rotation</h4>
+<ul>
+<li>[ ] Application-Logs rotieren</li>
+<li>[ ] System-Logs rotieren</li>
+<li>[ ] Alte Logs komprimieren</li>
+<li>[ ] Logs zu zentralem System senden</li>
+</ul>
+<p><strong>Verantwortlich:</strong> Automatisiert<br />
+<strong>Frequenz:</strong> Täglich (00:00 Uhr)<br />
+<strong>Dauer:</strong> Automatisch</p>
+<h4 id="wochentliche-log-archivierung">Wöchentliche Log-Archivierung</h4>
+<ul>
+<li>[ ] Logs der letzten Woche archivieren</li>
+<li>[ ] Archiv-Integrität prüfen</li>
+<li>[ ] Alte Archive löschen (nach Retention-Policy)</li>
+<li>[ ] Archiv-Speicherplatz prüfen</li>
+</ul>
+<p><strong>Verantwortlich:</strong> Operations Team<br />
+<strong>Frequenz:</strong> Wöchentlich (Sonntag)<br />
+<strong>Dauer:</strong> 30 Minuten</p>
+<h3 id="storage-housekeeping">Storage-Housekeeping</h3>
+<h4 id="wochentliches-storage-cleanup">Wöchentliches Storage-Cleanup</h4>
+<ul>
+<li>[ ] Temporäre Dateien löschen</li>
+<li>[ ] Alte Downloads bereinigen</li>
+<li>[ ] Cache-Verzeichnisse leeren</li>
+<li>[ ] Verwaiste Dateien identifizieren</li>
+<li>[ ] Storage-Auslastung prüfen</li>
+</ul>
+<p><strong>Verantwortlich:</strong> Operations Team<br />
+<strong>Frequenz:</strong> Wöchentlich (Freitag)<br />
+<strong>Dauer:</strong> 1 Stunde</p>
+<h4 id="monatliches-storage-audit">Monatliches Storage-Audit</h4>
+<ul>
+<li>[ ] Storage-Auslastung analysieren</li>
+<li>[ ] Große Dateien identifizieren</li>
+<li>[ ] Duplikate finden und entfernen</li>
+<li>[ ] Archivierungskandidaten identifizieren</li>
+<li>[ ] Storage-Optimierung durchführen</li>
+</ul>
+<p><strong>Verantwortlich:</strong> Operations Team<br />
+<strong>Frequenz:</strong> Monatlich<br />
+<strong>Dauer:</strong> 2-3 Stunden</p>
+<h3 id="system-cleanup">System-Cleanup</h3>
+<h4 id="wochentliches-system-cleanup">Wöchentliches System-Cleanup</h4>
+<ul>
+<li>[ ] Temporäre Dateien löschen</li>
+<li>[ ] Package-Cache bereinigen</li>
+<li>[ ] Alte Kernel-Versionen entfernen</li>
+<li>[ ] Verwaiste Packages entfernen</li>
+<li>[ ] System-Logs bereinigen</li>
+</ul>
+<p><strong>Verantwortlich:</strong> Operations Team<br />
+<strong>Frequenz:</strong> Wöchentlich (Sonntag)<br />
+<strong>Dauer:</strong> 30 Minuten</p>
+<hr />
+<h2 id="automatisierung">Automatisierung</h2>
+<h3 id="automatisierte-routinen">Automatisierte Routinen</h3>
+<table>
+<thead>
+<tr>
+<th>Routine</th>
+<th>Frequenz</th>
+<th>Tool/Script</th>
+<th>Verantwortlich</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Backup-Jobs</td>
+<td>Täglich</td>
+<td>[TODO: Backup-Tool]</td>
+<td>Andreas Huemmer</td>
+</tr>
+<tr>
+<td>Log-Rotation</td>
+<td>Täglich</td>
+<td>logrotate</td>
+<td>Automatisiert</td>
+</tr>
+<tr>
+<td>Health-Checks</td>
+<td>Stündlich</td>
+<td>[TODO: Monitoring-Tool]</td>
+<td>Automatisiert</td>
+</tr>
+<tr>
+<td>Disk-Cleanup</td>
+<td>Wöchentlich</td>
+<td>[TODO: Script]</td>
+<td>Automatisiert</td>
+</tr>
+<tr>
+<td>Security-Scans</td>
+<td>Täglich</td>
+<td>[TODO: Security-Tool]</td>
+<td>Automatisiert</td>
+</tr>
+<tr>
+<td>Performance-Reports</td>
+<td>Wöchentlich</td>
+<td>[TODO: Script]</td>
+<td>Automatisiert</td>
+</tr>
+</tbody>
+</table>
+<h3 id="automatisierungs-roadmap">Automatisierungs-Roadmap</h3>
+<table>
+<thead>
+<tr>
+<th>Quartal</th>
+<th>Routine</th>
+<th>Erwarteter Nutzen</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q1 2026</td>
+<td>[TODO]</td>
+<td>[TODO] Stunden/Monat</td>
+<td>Geplant</td>
+</tr>
+<tr>
+<td>Q2 2026</td>
+<td>[TODO]</td>
+<td>[TODO] Stunden/Monat</td>
+<td>Geplant</td>
+</tr>
+<tr>
+<td>Q3 2026</td>
+<td>[TODO]</td>
+<td>[TODO] Stunden/Monat</td>
+<td>Geplant</td>
+</tr>
+<tr>
+<td>Q4 2026</td>
+<td>[TODO]</td>
+<td>[TODO] Stunden/Monat</td>
+<td>Geplant</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="checklisten-vorlagen">Checklisten-Vorlagen</h2>
+<h3 id="daily-operations-checklist">Daily Operations Checklist</h3>
+<div class="codehilite"><pre><span></span><code><span class="gh"># Daily Operations Checklist - [DATUM]</span>
+
+<span class="gu">## Morgen-Check (08:00)</span>
+<span class="k">- [ ]</span> Monitoring-Dashboard geprüft
+<span class="k">- [ ]</span> Kritische Alerts überprüft
+<span class="k">- [ ]</span> System-Verfügbarkeit validiert
+<span class="k">- [ ]</span> Backup-Status überprüft
+<span class="k">- [ ]</span> Overnight-Incidents geprüft
+
+<span class="gu">## Mittags-Check (12:00)</span>
+<span class="k">- [ ]</span> Performance-Metriken geprüft
+<span class="k">- [ ]</span> Security-Alerts überprüft
+<span class="k">- [ ]</span> Kapazitäts-Status validiert
+
+<span class="gu">## Abend-Check (18:00)</span>
+<span class="k">- [ ]</span> Tages-Incidents reviewt
+<span class="k">- [ ]</span> Offene Tickets aktualisiert
+<span class="k">- [ ]</span> Nachtschicht-Übergabe durchgeführt
+
+<span class="gs">**Durchgeführt von:**</span> [NAME]
+<span class="gs">**Besonderheiten:**</span> [NOTIZEN]
+</code></pre></div>
+
+<h3 id="weekly-maintenance-checklist">Weekly Maintenance Checklist</h3>
+<div class="codehilite"><pre><span></span><code><span class="gh"># Weekly Maintenance Checklist - KW [NUMMER]</span>
+
+<span class="gu">## Montag: Planung</span>
+<span class="k">- [ ]</span> Wochenend-Incidents reviewt
+<span class="k">- [ ]</span> Wochenziele definiert
+<span class="k">- [ ]</span> Wartungsarbeiten geplant
+
+<span class="gu">## Dienstag: Backup</span>
+<span class="k">- [ ]</span> Backup-Logs geprüft
+<span class="k">- [ ]</span> Restore-Test durchgeführt
+
+<span class="gu">## Mittwoch: Performance</span>
+<span class="k">- [ ]</span> Performance-Trends analysiert
+<span class="k">- [ ]</span> Bottlenecks identifiziert
+
+<span class="gu">## Donnerstag: Security</span>
+<span class="k">- [ ]</span> Security-Logs analysiert
+<span class="k">- [ ]</span> Vulnerability-Scans reviewt
+
+<span class="gu">## Freitag: Abschluss</span>
+<span class="k">- [ ]</span> Wochenziele reviewt
+<span class="k">- [ ]</span> Housekeeping durchgeführt
+<span class="k">- [ ]</span> Wochenend-On-Call gebrieft
+
+<span class="gu">## Sonntag: Wartung</span>
+<span class="k">- [ ]</span> System-Updates installiert
+<span class="k">- [ ]</span> Datenbank-Wartung durchgeführt
+<span class="k">- [ ]</span> Disk-Cleanup durchgeführt
+
+<span class="gs">**Durchgeführt von:**</span> [NAME]
+<span class="gs">**Besonderheiten:**</span> [NOTIZEN]
+</code></pre></div>
+
+<hr />
+<h2 id="prozesse-und-verantwortlichkeiten">Prozesse und Verantwortlichkeiten</h2>
+<h3 id="raci-matrix">RACI-Matrix</h3>
+<table>
+<thead>
+<tr>
+<th>Aktivität</th>
+<th>CIO</th>
+<th>Ops Manager</th>
+<th>Ops Team</th>
+<th>On-Call</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tägliche Routinen</td>
+<td>I</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Wöchentliche Routinen</td>
+<td>I</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Monatliche Routinen</td>
+<td>C</td>
+<td>A</td>
+<td>R</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Quartalsweise Routinen</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Jährliche Routinen</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Automatisierung</td>
+<td>C</td>
+<td>A</td>
+<td>R</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Housekeeping</td>
+<td>I</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Legende:</strong> R = Responsible, A = Accountable, C = Consulted, I = Informed</p>
+</blockquote>
+<hr />
+<h2 id="compliance-und-standards">Compliance und Standards</h2>
+<h3 id="relevante-standards">Relevante Standards</h3>
+<ul>
+<li><strong>ITIL v4:</strong> Service Operation Practice</li>
+<li><strong>ISO 20000:</strong> Clause 8.1 - Operational Planning and Control</li>
+<li><strong>COBIT 2019:</strong> DSS01 - Managed Operations</li>
+</ul>
+<h3 id="audit-anforderungen">Audit-Anforderungen</h3>
+<ul>
+<li>Wartungsprotokolle</li>
+<li>Checklisten-Dokumentation</li>
+<li>Automatisierungs-Scripts</li>
+<li>Compliance-Nachweise</li>
+</ul>
+<hr />
+<h2 id="anhang">Anhang</h2>
+<h3 id="glossar">Glossar</h3>
+<table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Housekeeping</td>
+<td>Regelmäßige Aufräum- und Wartungsarbeiten</td>
+</tr>
+<tr>
+<td>Operations Routine</td>
+<td>Wiederkehrende betriebliche Aufgabe</td>
+</tr>
+<tr>
+<td>Preventive Maintenance</td>
+<td>Vorbeugende Wartung zur Fehlervermeidung</td>
+</tr>
+<tr>
+<td>Corrective Maintenance</td>
+<td>Behebung bekannter Probleme</td>
+</tr>
+</tbody>
+</table>
+<h3 id="referenzen">Referenzen</h3>
+<ul>
+<li>ITIL v4 Foundation Handbook</li>
+<li>ISO/IEC 20000-1:2018</li>
+<li>COBIT 2019 Framework</li>
+</ul>
+<hr />
+<p><strong>Letzte Aktualisierung:</strong> {{ meta.date }}<br />
+<strong>Nächste Review:</strong> [TODO: Datum]<br />
+<strong>Kontakt:</strong> andreas.huemmer@adminsend.de</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0220_Datenmanagement_und_Datenschutz.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0240_Runbooks_Standardoperationen.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>
