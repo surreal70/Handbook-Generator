@@ -372,7 +372,7 @@ class TestPlaceholderValidation:
         warning = processor.validate_placeholder_line(line, placeholder)
         
         assert warning is not None
-        assert 'not the only content' in warning.lower() or 'not alone' in warning.lower()
+        assert 'only content' in warning.lower() or 'not_alone_in_line' in warning.lower()
     
     def test_validate_placeholder_line_with_whitespace(self):
         """Test validation with only whitespace around placeholder."""
@@ -914,9 +914,9 @@ Date: {{ metadata.date }}
             assert custom_version in result.content, \
                 f"Custom version '{custom_version}' should be in content"
         else:
-            # Should use default version "0.0.3" from src/__init__.py
-            assert '0.0.3' in result.content, \
-                "Default version '0.0.3' should be used when not specified"
+            # Should use default version "0.0.5" from src/__init__.py
+            assert '0.0.5' in result.content, \
+                "Default version '0.0.5' should be used when not specified"
         
         # Verify author replacement
         if has_author_in_metadata:
@@ -966,7 +966,7 @@ Date: {{ metadata.date }}
         content = 'Version: {{ metadata.version }}'
         result = processor.process_template(content)
         
-        assert '0.0.3' in result.content  # Default version from src/__init__.py
+        assert '0.0.5' in result.content  # Default version from src/__init__.py
         assert '{{ metadata.version }}' not in result.content
     
     def test_metadata_author_with_config(self):

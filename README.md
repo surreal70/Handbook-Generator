@@ -3,7 +3,7 @@
 <div align="center">
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
-[![Version](https://img.shields.io/badge/version-0.0.4-blue.svg)](VERSION.md)
+[![Version](https://img.shields.io/badge/version-0.0.5-blue.svg)](VERSION.md)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Code Coverage](https://img.shields.io/badge/coverage-84%25-brightgreen.svg)](htmlcov/index.html)
 [![Tests](https://img.shields.io/badge/tests-765%20passed-success.svg)](tests/)
@@ -25,7 +25,7 @@ Ein Python-Tool zur Generierung professioneller Handbücher aus Markdown-Vorlage
 
 Der Handbuch-Generator erstellt aus strukturierten Markdown-Vorlagen professionelle Handbücher in verschiedenen Formaten (HTML, PDF, Markdown). Das System ersetzt Platzhalter in den Vorlagen durch echte Daten aus externen Systemen wie NetBox und unterstützt mehrsprachige Handbücher.
 
-**Version 0.0.4** - CIS Controls v8 Hardening Templates Integration
+**Version 0.0.5** - Placeholder System Validation & Testing
 
 ## Features
 
@@ -54,9 +54,13 @@ Der Handbuch-Generator erstellt aus strukturierten Markdown-Vorlagen professione
 | **IT-Operation** | ITIL v4, ISO 20000-1 | 31 | IT-Betriebshandbuch |
 | **CIS Controls** | CIS Controls v8 | 27 | CIS Controls v8 Hardening |
 
-## Neu in Version 0.0.4 🎉
+## Neu in Version 0.0.5 🎉
 
-- ✅ **CIS Controls v8 Integration** - Fünfter Handbuchtyp für System-Härtung
+- ✅ **Placeholder System Validation** - Comprehensive testing and validation
+- ✅ **Metadata Configuration Validation** - Automated validation of metadata.yaml
+- ✅ **Placeholder Consistency Reports** - Cross-handbook placeholder analysis
+- ✅ **Test Suite Enhancement** - 93% pass rate with 144 placeholder tests
+- ✅ **Documentation Updates** - Complete validation and test reports
 - ✅ **27 neue Templates** - Hardening-Baselines für OS und Applikationen (54 mit DE/EN)
 - ✅ **Foundation Templates** - Überblick, Scope, Lifecycle, Ausnahmen, Testing
 - ✅ **OS Hardening** - Windows Server/Client, Linux, macOS, Container
