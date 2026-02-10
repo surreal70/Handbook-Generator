@@ -358,3 +358,11 @@ The following appendix templates are available:
 ---
 
 **Note:** This mapping document should be updated whenever templates change or when new PCI-DSS versions are released.
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

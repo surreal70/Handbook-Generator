@@ -204,3 +204,10 @@ This document describes the implementation of the right of access in {{ meta.org
 4. Train employees on providing access
 5. Document all requests in access register
 
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

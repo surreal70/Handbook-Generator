@@ -35,3 +35,11 @@
 - Mean time to remediate (config drift)
 - Number of active exceptions & age
 - Patch compliance (critical systems)
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

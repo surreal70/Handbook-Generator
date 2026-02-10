@@ -133,3 +133,11 @@ For questions about using these templates or Common Criteria evaluation, contact
 - Your internal security team
 - Accredited evaluation laboratories
 - National certification bodies (e.g., BSI in Germany)
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

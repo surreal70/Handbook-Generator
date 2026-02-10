@@ -190,3 +190,11 @@ The records are made available to the supervisory authority upon request.
 3. Implement an update process
 4. Train employees to report new processing
 5. Review records regularly for completeness
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

@@ -269,3 +269,11 @@ This guideline specifies the `0500_Policy_Mobile_Device_and_Remote_Work.md` and 
 
 **Approved by:** {{ meta.ciso.name }}, CISO  
 **Next Review:** {{ meta.document.next_review }}
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

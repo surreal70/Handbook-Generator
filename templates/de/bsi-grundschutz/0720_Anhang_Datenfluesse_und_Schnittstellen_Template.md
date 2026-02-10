@@ -161,4 +161,12 @@ Die Dokumentation der Datenflüsse und Schnittstellen von **{{ meta.organization
 - Dokument 0340/0350: Kryptografie und Key Management
 - Dokument 0420/0430: Datenschutz
 
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
+
 <!-- End of template -->

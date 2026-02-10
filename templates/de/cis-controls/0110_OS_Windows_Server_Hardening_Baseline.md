@@ -94,3 +94,11 @@
 ### 12.3 Services & Rollen
 - Standardmäßig deaktiviert: [TODO]
 - Remote Management (WinRM/RDP) abgesichert: [TODO]
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

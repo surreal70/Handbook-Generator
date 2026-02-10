@@ -477,3 +477,11 @@ Alle Informationen, die sich auf eine identifizierte oder identifizierbare natü
 **Letzte Aktualisierung:** {{ meta.date }}  
 **Nächste Review:** [TODO: Datum]  
 **Kontakt:** {{ meta.ciso.email }}
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

@@ -178,3 +178,10 @@ Dieses Dokument definiert, wie {{ meta.organization }} Ressourcen bestimmt und b
 5. Implementiere Ressourcenüberwachungsprozess
 6. Überprüfe Ressourcenangemessenheit regelmäßig
 
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

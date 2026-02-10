@@ -319,3 +319,11 @@ This document defines how {{ meta.organization }} implements production and serv
 3. Define handling and storage requirements
 4. Establish release process
 5. Implement non-conformity management
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

@@ -330,3 +330,11 @@ Die Coverage Matrices demonstrieren vollständige und konsistente Rückverfolgba
 4. Erstelle Traceability Diagram
 5. Führe Peer-Review durch
 6. Halte Matrices bei Änderungen aktuell
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

@@ -404,3 +404,11 @@ Datenschutzverletzung bestätigt?
 3. Führe Breach-Response-Übungen durch (mindestens jährlich)
 4. Halte den Plan aktuell
 5. Stelle sicher, dass alle Teammitglieder den Plan kennen
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

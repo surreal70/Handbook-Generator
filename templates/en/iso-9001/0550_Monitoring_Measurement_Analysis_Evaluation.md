@@ -242,3 +242,11 @@ This document defines how {{ meta.organization }} monitors, measures, analyzes a
 4. Conduct regular analyses
 5. Report results to relevant parties
 6. Identify and prioritize improvements
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

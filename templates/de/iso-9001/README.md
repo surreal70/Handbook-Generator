@@ -134,3 +134,11 @@ Bei Fragen zur Vorlagennutzung oder -anpassung beziehen Sie sich auf:
 ---
 
 **Hinweis:** Diese Vorlagen bieten einen Ausgangspunkt für die ISO 9001:2015 Dokumentation. Sie müssen an den spezifischen Kontext, die Prozesse und Anforderungen Ihrer Organisation angepasst werden.
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

@@ -160,3 +160,10 @@ The quality policy supports:
 5. Establish quality objectives based on policy framework
 6. Schedule regular policy reviews
 
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

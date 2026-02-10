@@ -330,3 +330,11 @@ Data subjects must be informed about third country transfers:
 3. Implement appropriate safeguards (SCCs, BCRs)
 4. Conduct Transfer Impact Assessments
 5. Inform data subjects transparently
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

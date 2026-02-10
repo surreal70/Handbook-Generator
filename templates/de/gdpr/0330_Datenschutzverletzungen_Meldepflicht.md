@@ -266,3 +266,11 @@ Der Verantwortliche dokumentiert alle Datenschutzverletzungen, einschließlich a
 3. Erstellen Sie Vorlagen für Meldungen und Benachrichtigungen
 4. Führen Sie regelmäßige Incident-Response-Übungen durch
 5. Etablieren Sie ein Breach-Register
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

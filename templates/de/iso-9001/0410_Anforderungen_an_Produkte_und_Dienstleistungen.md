@@ -185,3 +185,11 @@ Dieses Dokument definiert, wie {{ meta.organization }} Anforderungen an Produkte
 3. Implementiere Überprüfungsprozess
 4. Schule Mitarbeiter in Anforderungsmanagement
 5. Überwache Wirksamkeit des Prozesses
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

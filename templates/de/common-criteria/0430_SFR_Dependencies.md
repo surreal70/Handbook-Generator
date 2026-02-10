@@ -336,3 +336,11 @@ die Abhängigkeit zu FDP_ACC.1 (Subset access control).
 4. Erstelle Abhängigkeitsgraph
 5. Führe Peer-Review durch
 6. Aktualisiere bei Änderungen an SFRs
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

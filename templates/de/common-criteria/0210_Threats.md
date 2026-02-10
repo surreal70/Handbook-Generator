@@ -451,3 +451,10 @@ Referenz: ISO/IEC 15408-1:2022, Abschnitt 8.3.1 (Threats)
 5. Dokumentiere Angriffsketten
 6. Überprüfe Konsistenz mit Assets (Template 0200) und Security Objectives (Template 0300)
 
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

@@ -285,3 +285,10 @@ Personenbezogene Daten müssen in einer Weise verarbeitet werden, die eine angem
 4. Richten Sie Backup- und Recovery-Prozesse ein
 5. Etablieren Sie Incident Response Prozess
 
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

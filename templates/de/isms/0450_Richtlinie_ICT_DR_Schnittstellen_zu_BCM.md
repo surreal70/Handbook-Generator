@@ -217,3 +217,11 @@ Diese Richtlinie konkretisiert die `0440_Policy_Business_Continuity_ICT_Readines
 
 **Genehmigt durch:** {{ meta.ciso.name }}, CISO  
 **Nächster Review:** {{ meta.document.next_review }}
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

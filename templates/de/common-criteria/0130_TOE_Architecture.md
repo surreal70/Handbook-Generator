@@ -423,3 +423,11 @@ Der TOE ist in folgende Schichten organisiert:
 3. Dokumentiere alle Architekturentscheidungen vollständig
 4. Überprüfe die Konsistenz mit anderen TOE-Beschreibungsdokumenten
 5. Stelle sicher, dass die Sicherheitsarchitektur vollständig dokumentiert ist
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

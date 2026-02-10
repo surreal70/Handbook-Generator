@@ -330,3 +330,10 @@ Personnel receive training on:
 5. Implement risk monitoring and review process
 6. Train personnel on risk-based thinking
 
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

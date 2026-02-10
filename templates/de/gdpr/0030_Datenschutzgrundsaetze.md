@@ -186,3 +186,11 @@ Der Verantwortliche ist für die Einhaltung der Grundsätze verantwortlich und m
 3. Dokumentieren Sie Nachweise für Rechenschaftspflicht
 4. Schulen Sie Mitarbeiter zu den Grundsätzen
 5. Etablieren Sie regelmäßige Überprüfungsprozesse
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

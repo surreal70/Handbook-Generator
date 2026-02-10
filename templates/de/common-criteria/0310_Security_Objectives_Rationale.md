@@ -394,5 +394,5 @@ Nach der Rationale für Sicherheitsziele:
 
 | Version | Datum | Autor | Änderungen |
 |---------|-------|-------|------------|
-| {{ meta.version }} | {{ meta.date }} | {{ meta.owner }} | Initiale Version |
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 

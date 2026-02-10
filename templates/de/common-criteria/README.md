@@ -133,3 +133,11 @@ Bei Fragen zur Verwendung dieser Templates oder zur Common Criteria Evaluierung 
 - Ihr internes Sicherheitsteam
 - Akkreditierte Evaluierungslabore
 - Nationale Zertifizierungsstellen (z.B. BSI in Deutschland)
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

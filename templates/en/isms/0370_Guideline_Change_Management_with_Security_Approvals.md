@@ -298,3 +298,11 @@ This guideline implements the `0360_Policy_Change_and_Release_Management.md` and
 
 **Approved by:** {{ meta.ciso.name }}, CISO  
 **Next Review:** {{ meta.document.next_review }}
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

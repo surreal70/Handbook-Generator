@@ -278,3 +278,11 @@ Process changes are controlled through:
 4. Establish KPIs and monitoring methods
 5. Provide resources and information
 6. Implement continual improvement
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

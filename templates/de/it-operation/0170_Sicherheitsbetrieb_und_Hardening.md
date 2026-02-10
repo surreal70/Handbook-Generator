@@ -778,3 +778,11 @@ Referrer-Policy: no-referrer
 **Version:** {{ meta.document.version }}  
 **Klassifizierung:** {{ meta.document.classification }}  
 **Letzte Aktualisierung:** {{ meta.date }}
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

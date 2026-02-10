@@ -179,3 +179,11 @@ This document defines the roles and responsibilities in data protection manageme
 3. Check designation obligation for Data Protection Officer
 4. Document all processor relationships
 5. Implement training program
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

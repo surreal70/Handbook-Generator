@@ -311,3 +311,10 @@ Die oberste Leitung demonstriert Führung und Verpflichtung in Bezug auf Kundenf
 5. Implementiere Einbindungs- und Unterstützungsmechanismen
 6. Überprüfe Führungswirksamkeit regelmäßig
 
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

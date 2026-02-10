@@ -263,3 +263,10 @@ This document defines the process for planning changes to the quality management
 5. Conduct post-implementation reviews
 6. Continuously improve change process
 
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

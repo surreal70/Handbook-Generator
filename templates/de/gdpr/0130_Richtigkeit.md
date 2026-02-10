@@ -229,3 +229,10 @@ Personenbezogene Daten müssen sachlich richtig und erforderlichenfalls auf dem 
 4. Implementieren Sie Benachrichtigungsprozess für Empfänger
 5. Führen Sie regelmäßige Datenqualitätskontrollen durch
 
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

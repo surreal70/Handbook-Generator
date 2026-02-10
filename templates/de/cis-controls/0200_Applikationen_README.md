@@ -23,3 +23,11 @@ Empfehlung: Definiere zunächst eine **Baseline pro Anwendungsklasse** (Web, DB,
 - Datenbanken: 0260–0290
 - Container/Kubernetes: 0300–0310
 - Infrastruktur-Dienste: 0320–0330
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

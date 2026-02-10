@@ -394,3 +394,11 @@ Reference: GDPR Art. 35 (Data protection impact assessment)
 ---
 
 **Note:** This DPIA is a living document and must be updated upon changes in processing or new insights about risks.
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

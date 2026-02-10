@@ -208,3 +208,10 @@ Personenbezogene Daten müssen auf rechtmäßige Weise, nach Treu und Glauben un
 4. Schulen Sie Mitarbeiter zu Transparenzanforderungen
 5. Dokumentieren Sie alle Maßnahmen für Accountability
 
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

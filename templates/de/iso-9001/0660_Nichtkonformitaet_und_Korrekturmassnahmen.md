@@ -335,3 +335,11 @@ Dieses Dokument definiert, wie {{ meta.organization }} mit Nichtkonformitäten u
 4. Definiere Eskalationsprozess
 5. Überwache Wirksamkeit von Maßnahmen
 6. Werte NCs regelmäßig aus
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

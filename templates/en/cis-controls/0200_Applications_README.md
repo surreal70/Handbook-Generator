@@ -23,3 +23,11 @@ Recommendation: First define a **baseline per application class** (web, DB, Kube
 - Databases: 0260–0290
 - Container/Kubernetes: 0300–0310
 - Infrastructure Services: 0320–0330
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

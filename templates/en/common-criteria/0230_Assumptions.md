@@ -448,3 +448,10 @@ Assumptions define expectations about the TOE's operational environment:
 5. Create validation schedule
 6. Verify consistency with Threats (Template 0210), OSPs (Template 0220), and Security Objectives (Template 0300)
 
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

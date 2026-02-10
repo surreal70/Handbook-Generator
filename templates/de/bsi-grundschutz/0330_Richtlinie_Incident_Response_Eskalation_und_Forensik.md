@@ -122,4 +122,12 @@ Diese Richtlinie wird regelmäßig überprüft:
 - BSI IT-Grundschutz-Kompendium
 - Dokument 0320: Policy: Incident Management
 
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
+
 <!-- End of template -->

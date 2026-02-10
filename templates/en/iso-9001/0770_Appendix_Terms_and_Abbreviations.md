@@ -287,3 +287,11 @@ Risk management - Guidelines
 ---
 
 **Note:** Terms and definitions from ISO 9000:2015 are authoritative. This appendix serves as a reference for frequently used terms in the QMS.
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

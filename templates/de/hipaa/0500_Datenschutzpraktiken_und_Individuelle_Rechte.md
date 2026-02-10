@@ -652,3 +652,11 @@ Die Erklärung muss folgende Rechte beschreiben:
 | 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Ersterstellung |
 
 <!-- Ende des Templates -->
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

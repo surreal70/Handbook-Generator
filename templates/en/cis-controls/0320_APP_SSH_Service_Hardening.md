@@ -35,3 +35,11 @@ Secure configuration of SSH service for administrative access.
 
 ## 5. Exceptions
 - Reference: `0040_Exceptions_Risk_Acceptance.md`
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

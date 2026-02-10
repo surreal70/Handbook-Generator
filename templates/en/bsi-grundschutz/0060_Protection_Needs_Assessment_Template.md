@@ -295,4 +295,12 @@ The protection needs assessment is updated when:
 - BSI Standard 200-2: IT-Grundschutz Methodology (Chapter 6: Protection Needs Assessment)
 - BSI IT-Grundschutz Compendium
 
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
+
 <!-- End of template -->

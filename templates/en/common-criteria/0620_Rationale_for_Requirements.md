@@ -406,3 +406,11 @@ This chapter provides the rationale demonstrating that the defined security requ
 6. Conduct completeness, adequacy, and consistency analyses
 7. Identify and address gaps and inconsistencies
 8. Have the rationale reviewed by evaluators
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

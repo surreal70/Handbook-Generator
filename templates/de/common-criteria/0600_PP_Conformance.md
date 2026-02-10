@@ -226,3 +226,11 @@ Dieses Kapitel dokumentiert die Konformität des Security Target (ST) mit releva
 4. Dokumentieren Sie alle Abweichungen und Zusatzanforderungen
 5. Erstellen Sie Mapping-Tabellen zwischen PP und ST
 6. Lassen Sie die PP-Konformität durch Evaluatoren prüfen
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

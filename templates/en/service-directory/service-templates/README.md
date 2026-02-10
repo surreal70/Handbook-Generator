@@ -21,3 +21,11 @@ For the German version, see: `templates/de/service-templates/`
 ## Version
 
 Version 1.0 - Initial template set
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

@@ -263,4 +263,12 @@ Import all measures from document 0090 (Risk Analysis).
 - Document 0080: Basic Security Check
 - Document 0090: Risk Analysis
 
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
+
 <!-- End of template -->

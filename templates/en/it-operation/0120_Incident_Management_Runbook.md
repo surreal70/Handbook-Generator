@@ -552,3 +552,11 @@ A **major incident** is an incident with:
 **Version:** {{ meta.document.version }}  
 **Classification:** {{ meta.document.classification }}  
 **Last Update:** {{ meta.date }}
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

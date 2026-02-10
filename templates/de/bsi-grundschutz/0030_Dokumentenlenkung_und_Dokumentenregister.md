@@ -228,4 +228,12 @@ Der Dokumentenlenkungsprozess wird regelmäßig überwacht:
 - BSI Standard 200-1: Managementsysteme für Informationssicherheit (ISMS)
 - BSI Standard 200-2: IT-Grundschutz-Methodik
 
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
+
 <!-- End of template -->

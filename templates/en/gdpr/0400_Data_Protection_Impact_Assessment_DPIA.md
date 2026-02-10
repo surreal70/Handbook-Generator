@@ -312,3 +312,11 @@ The DPIA is reviewed when:
 3. Document risks and measures
 4. Consult Data Protection Officer
 5. Review DPIAs regularly
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

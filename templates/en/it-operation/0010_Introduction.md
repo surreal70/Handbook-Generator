@@ -9,3 +9,11 @@ The IT Operations Handbook defines processes and responsibilities for stable IT 
 ## 1.2 Scope
 
 This handbook applies to all IT systems and services of the organization.
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

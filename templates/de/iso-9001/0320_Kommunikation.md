@@ -226,3 +226,10 @@ Dieses Dokument definiert interne und externe Kommunikationen, die für das Qual
 5. Überwache Kommunikationswirksamkeit
 6. Verbessere Kommunikationsprozesse kontinuierlich
 
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

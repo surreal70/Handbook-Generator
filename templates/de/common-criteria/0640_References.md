@@ -408,3 +408,11 @@ Version [TODO: Version], [TODO: Datum]
 6. Überprüfen Sie die Aktualität aller Referenzen
 7. Stellen Sie sicher, dass alle Referenzen verfügbar sind
 8. Aktualisieren Sie die Referenzliste bei Änderungen am ST
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

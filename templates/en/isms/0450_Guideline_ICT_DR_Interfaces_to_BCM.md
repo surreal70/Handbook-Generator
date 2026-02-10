@@ -217,3 +217,11 @@ This guideline implements the `0440_Policy_Business_Continuity_ICT_Readiness.md`
 
 **Approved by:** {{ meta.ciso.name }}, CISO  
 **Next Review:** {{ meta.document.next_review }}
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

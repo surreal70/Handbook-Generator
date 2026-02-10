@@ -228,3 +228,10 @@ Dieses Dokument definiert, wie {{ meta.organization }} Kompetenz von Mitarbeiter
 6. Pflege Kompetenz- und Schulungsunterlagen
 7. Fördere laufendes QMS-Bewusstsein
 
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

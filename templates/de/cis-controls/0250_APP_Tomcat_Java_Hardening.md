@@ -87,3 +87,11 @@
 - JVM Security Flags (wo sinnvoll): [TODO]
 - Dependencies/Libs regelmäßig patchen: [TODO]
 - Secrets via Vault/Env, nicht im Code: [TODO]
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

@@ -17,3 +17,11 @@
 - Alle Änderungen müssen dokumentiert werden
 - Kritische Änderungen erfordern Change Advisory Board Genehmigung
 - Rollback-Plan ist für alle Änderungen verpflichtend
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

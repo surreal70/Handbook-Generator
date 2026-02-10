@@ -88,3 +88,11 @@ Die Templates sind aligned mit folgenden CIS Benchmarks:
 
 **Version:** 1.0.0  
 **Datum:** 2026-02-10
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

@@ -217,3 +217,10 @@ Personenbezogene Daten müssen für festgelegte, eindeutige und legitime Zwecke 
 4. Schulen Sie Mitarbeiter zur Zweckbindung
 5. Überprüfen Sie regelmäßig die Einhaltung der Zweckbindung
 
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

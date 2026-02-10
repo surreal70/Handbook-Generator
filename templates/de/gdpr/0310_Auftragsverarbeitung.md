@@ -246,3 +246,11 @@ Der Auftragsverarbeiter muss den Verantwortlichen unverzüglich über Datenschut
 3. Implementieren Sie einen Kontrollplan für regelmäßige Audits
 4. Definieren Sie Weisungsprozesse und -berechtigungen
 5. Etablieren Sie ein Weisungsregister
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

@@ -306,3 +306,11 @@ This guideline specifies the `0560_Policy_Data_Protection_Interfaces.md` and def
 
 **Approved by:** {{ meta.dpo.name }}, Data Protection Officer  
 **Next Review:** {{ meta.document.next_review }}
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

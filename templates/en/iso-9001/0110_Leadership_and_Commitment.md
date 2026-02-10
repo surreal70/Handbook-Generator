@@ -311,3 +311,10 @@ Top management demonstrates leadership and commitment with respect to customer f
 5. Implement engagement and support mechanisms
 6. Review leadership effectiveness regularly
 
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

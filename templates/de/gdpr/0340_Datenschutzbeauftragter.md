@@ -296,3 +296,11 @@ Der Datenschutzbeauftragte kann andere Aufgaben wahrnehmen, sofern diese nicht z
 3. Veröffentlichen Sie die Kontaktdaten intern und extern
 4. Stellen Sie ausreichende Ressourcen bereit
 5. Definieren Sie klare Aufgaben und Verantwortlichkeiten
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

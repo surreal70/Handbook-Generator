@@ -249,3 +249,10 @@ This document describes the implementation of the right to data portability in {
 4. Train employees on data portability
 5. Document all requests in register
 
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

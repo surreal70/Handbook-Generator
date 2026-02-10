@@ -344,3 +344,10 @@ This document defines how {{ meta.organization }} determines and provides resour
 5. Implement resource monitoring process
 6. Review resource adequacy regularly
 
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

@@ -224,3 +224,11 @@ Das gewählte EAL und Zertifizierungsschema ermöglicht die Anerkennung in folge
 3. Bestätige die Verfügbarkeit von Ressourcen für die Evaluierung
 4. Kontaktiere potenzielle Evaluierungslabore
 5. Erstelle detaillierten Projektplan für die Evaluierung
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

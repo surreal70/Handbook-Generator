@@ -465,3 +465,11 @@ Priorität = (Risikoreduktion × 0,4) + (Compliance × 0,2) +
 Datum: {{ meta.document.approval_date }}
 
 **Nächster Review:** {{ meta.document.next_review }}
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

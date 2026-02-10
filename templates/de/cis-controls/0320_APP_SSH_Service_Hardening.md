@@ -35,3 +35,11 @@ Sichere Konfiguration des SSH-Dienstes für Administrationszugriffe.
 
 ## 5. Ausnahmen
 - Verweis: `0040_Ausnahmen_Risk_Acceptance.md`
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

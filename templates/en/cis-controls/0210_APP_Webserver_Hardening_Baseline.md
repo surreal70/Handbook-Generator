@@ -88,3 +88,11 @@
 - Logging (access/error + correlation IDs): [TODO]
 - Admin interfaces not public: [TODO]
 - WAF/reverse proxy integration: [TODO]
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

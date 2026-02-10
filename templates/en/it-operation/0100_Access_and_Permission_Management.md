@@ -522,3 +522,11 @@ Privileged accounts have extended permissions and access to critical systems.
 **Approved by:** {{ meta.document.approver }}  
 **Version:** {{ meta.document.version }}  
 **Organization:** {{ meta.organization.name }}
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

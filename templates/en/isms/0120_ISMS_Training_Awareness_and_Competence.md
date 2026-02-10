@@ -326,3 +326,11 @@ For audits, the following evidence is provided:
 Date: {{ meta.document.approval_date }}
 
 **Next Review:** {{ meta.document.next_review }}
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

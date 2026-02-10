@@ -180,3 +180,10 @@ Dieses Dokument definiert den Prozess für die Planung von Änderungen am Qualit
 5. Führe Nachimplementierungsüberprüfungen durch
 6. Verbessere Änderungsprozess kontinuierlich
 
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

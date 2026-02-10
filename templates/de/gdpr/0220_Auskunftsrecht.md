@@ -204,3 +204,10 @@ Dieses Dokument beschreibt die Umsetzung des Auskunftsrechts in der {{ meta.orga
 4. Schulen Sie Mitarbeiter zur Auskunftserteilung
 5. Dokumentieren Sie alle Anfragen im Auskunftsregister
 
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

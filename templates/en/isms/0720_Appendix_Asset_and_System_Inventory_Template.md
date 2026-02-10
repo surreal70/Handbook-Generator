@@ -364,3 +364,11 @@ Manual maintenance is error-prone and should be minimized.
 Ensure all assets are tagged with correct protection requirements and criticality.
 Integrate this inventory into your risk assessment and BIA processes.
 -->
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

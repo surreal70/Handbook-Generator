@@ -288,3 +288,11 @@ For a complete overview of all 93 Annex A controls see:
 Date: {{ meta.document.approval_date }}
 
 **Next Review:** {{ meta.document.next_review }} (Annually)
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

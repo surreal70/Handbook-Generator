@@ -88,3 +88,11 @@
 - At-Rest Encryption: [TODO]
 - Auditing/DB Logs: [TODO]
 - Backup/Restore + Test: [TODO]
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

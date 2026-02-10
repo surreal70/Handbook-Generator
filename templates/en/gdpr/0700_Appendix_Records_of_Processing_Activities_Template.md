@@ -224,3 +224,11 @@ If Yes:
 - This record must be updated upon changes
 - The record must be made available to the supervisory authority upon request
 - Regular review (at least annually) required
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

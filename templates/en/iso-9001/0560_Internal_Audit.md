@@ -303,3 +303,11 @@ This document defines the internal audit program of {{ meta.organization }} to e
 4. Conduct audits according to plan
 5. Follow up corrective actions
 6. Evaluate program effectiveness
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

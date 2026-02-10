@@ -44,3 +44,11 @@ Secure default configuration for container base images to reduce attack surface 
 
 ## 6. Exceptions
 - Reference: `0040_Exceptions_Risk_Acceptance.md`
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

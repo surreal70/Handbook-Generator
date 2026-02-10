@@ -122,4 +122,12 @@ The evidence register of **{{ meta.organization.name }}** provides a central ove
 - BSI Standard 200-2: IT-Grundschutz Methodology (Evidence Management)
 - All ISMS Documents (0010-0630)
 
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
+
 <!-- End of template -->

@@ -334,3 +334,11 @@ This document defines how {{ meta.organization }} deals with nonconformities and
 4. Define escalation process
 5. Monitor effectiveness of actions
 6. Evaluate NCs regularly
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

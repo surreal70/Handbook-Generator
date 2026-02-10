@@ -198,3 +198,11 @@ Dieser Anhang bietet eine Vorlage zur Durchführung einer HIPAA Security Rule-Ri
 - **Risikostufe:** Kombination aus Wahrscheinlichkeit und Auswirkung
 
 <!-- Ende des Templates -->
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

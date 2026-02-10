@@ -161,4 +161,12 @@ After closing critical or recurring findings:
 - BSI Standard 200-1: ISMS (Non-conformities and Corrective Actions)
 - Document 0610: Internal Audit Program
 
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
+
 <!-- End of template -->

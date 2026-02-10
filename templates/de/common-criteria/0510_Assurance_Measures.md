@@ -552,3 +552,11 @@ Alle erforderlichen Nachweise werden dem Evaluator bereitgestellt:
 |---------|-------|-------|------------|
 | 0.1 | [TODO] | [TODO] | Initiale Version |
 | 1.0 | [TODO] | [TODO] | [TODO] |
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

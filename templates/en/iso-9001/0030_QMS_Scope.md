@@ -217,3 +217,11 @@ The scope forms the basis for:
 4. Justify any exclusions of ISO 9001 requirements
 5. Communicate the scope to all relevant parties
 6. Review the scope regularly
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

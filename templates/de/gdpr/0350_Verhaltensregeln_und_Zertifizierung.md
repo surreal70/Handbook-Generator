@@ -269,3 +269,11 @@ Betroffene Personen werden über die Zertifizierung informiert:
 3. Führen Sie eine Gap-Analyse durch
 4. Erstellen Sie einen Zertifizierungsplan
 5. Kommunizieren Sie erhaltene Zertifizierungen transparent
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

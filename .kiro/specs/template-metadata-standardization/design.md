@@ -72,17 +72,19 @@ All metadata files will follow this structure:
 
 {Framework-specific references}
 
-## Änderungshistorie
+## Dokumenthistorie
 
-| Version | Datum | Autor | Änderung |
-|---------|-------|-------|----------|
-| {{ meta.version }} | {{ meta.date }} | {{ meta.author }} | Initiale Version |
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 <!-- 
 Dieses Dokument ist Teil des {Framework}-Handbuchs und unterliegt der Dokumentenlenkung.
 Template-Version: 1.0 - Revision: 0
 -->
 ```
+
+**Note:** The document history section uses "Dokumenthistorie" (not "Änderungshistorie") and initializes with version 0.1 to track template creation.
 
 ### Required Metadata Fields
 
@@ -235,6 +237,125 @@ python helpers/validate_metadata.py --report output.json
    - Check all files moved successfully
    - Verify no broken links
    - Test handbook generation with new paths
+
+### 4. Document History Standardization
+
+**Purpose:** Ensure all template markdown files have a standardized document history section.
+
+**Implementation:**
+
+```python
+class DocumentHistoryStandardizer:
+    def __init__(self, templates_dir: str):
+        """Initialize with templates directory path"""
+        
+    def scan_template_files(self) -> List[str]:
+        """Scan all template markdown files (excluding metadata files)"""
+        
+    def has_document_history(self, filepath: str) -> bool:
+        """Check if file contains document history section"""
+        
+    def add_document_history(self, filepath: str, language: str) -> bool:
+        """Add standardized document history section to template file"""
+        
+    def validate_document_history_format(self, filepath: str) -> ValidationResult:
+        """Validate document history section format"""
+        
+    def generate_history_section(self, language: str) -> str:
+        """Generate standardized document history section"""
+```
+
+**Document History Template (German):**
+```markdown
+## Dokumenthistorie
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
+```
+
+**Document History Template (English):**
+```markdown
+## Document History
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
+```
+
+**Insertion Strategy:**
+- Insert document history section at the end of each template file
+- Preserve existing content
+- Add blank line before section for readability
+- Skip metadata files (0000_metadata_*.md)
+
+### 5. Metadata Role Cleanup
+
+**Purpose:** Remove duplicate roles and reorganize IT operations roles in metadata.example.yaml.
+
+**Implementation:**
+
+```python
+class MetadataRoleCleanup:
+    def __init__(self, metadata_file: str = "metadata.example.yaml"):
+        """Initialize with metadata file path"""
+        
+    def detect_duplicate_roles(self) -> List[DuplicateRole]:
+        """Detect duplicate role definitions"""
+        
+    def remove_duplicate_role(self, role_name: str) -> bool:
+        """Remove duplicate role from metadata file"""
+        
+    def reorganize_it_operations_roles(self) -> bool:
+        """Move it_manager and sysop to IT Operations Roles section"""
+        
+    def validate_role_structure(self) -> ValidationResult:
+        """Validate role organization and detect duplicates"""
+        
+    def update_template_references(self, old_role: str, new_role: str) -> int:
+        """Update template files that reference removed roles"""
+```
+
+**Role Cleanup Actions:**
+
+1. **Remove Duplicate Role:**
+   - Identify `datenschutzbeauftragter` as duplicate of `data_protection_officer`
+   - Remove `datenschutzbeauftragter` from metadata.example.yaml
+   - Scan all template files for references to `datenschutzbeauftragter`
+   - Replace with `data_protection_officer` placeholder
+
+2. **Reorganize IT Operations Roles:**
+   - Move `it_manager` from "Add Custom Roles Here" section to "IT Operations Roles"
+   - Move `sysop` from "Add Custom Roles Here" section to "IT Operations Roles"
+   - Ensure proper section ordering:
+     - C-Level Executives
+     - IT Operations Roles (it_operations_manager, service_desk_lead, it_manager, sysop)
+     - BCM and Security Roles (bcm_manager, information_security_officer, data_protection_officer, risikomanager, interner_auditor, personalleitung)
+
+**Updated Role Structure:**
+```yaml
+roles:
+  # C-Level Executives
+  ceo: {...}
+  cio: {...}
+  ciso: {...}
+  cfo: {...}
+  coo: {...}
+  
+  # IT Operations Roles
+  it_operations_manager: {...}
+  service_desk_lead: {...}
+  it_manager: {...}
+  sysop: {...}
+  
+  # BCM and Security Roles
+  bcm_manager: {...}
+  information_security_officer: {...}
+  data_protection_officer: {...}
+  risikomanager: {...}
+  interner_auditor: {...}
+  personalleitung: {...}
+```
 
 ## Framework-Specific Metadata
 
@@ -407,6 +528,69 @@ def test_service_directory_exists_and_old_removed(language):
         assert os.path.exists(f'{service_dir}/email-service')
 ```
 
+### Property 7: Document History Presence
+**Statement:** All template markdown files (excluding metadata files) SHALL contain a document history section.
+
+**Validation:**
+```python
+def test_document_history_present(template_file):
+    content = read_file(template_file)
+    assert 'Dokumenthistorie' in content or 'Document History' in content
+    assert '| Version | Datum | Autor | Änderungen |' in content or \
+           '| Version | Date | Author | Changes |' in content
+```
+
+**Property-Based Test:**
+```python
+@given(framework=st.sampled_from(ALL_FRAMEWORKS),
+       language=st.sampled_from(['de', 'en']))
+def test_all_templates_have_document_history(framework, language):
+    template_files = get_template_files(framework, language, exclude_metadata=True)
+    for template_file in template_files:
+        assert has_document_history_section(template_file)
+        assert document_history_format_valid(template_file, language)
+```
+
+### Property 8: No Duplicate Roles
+**Statement:** metadata.example.yaml SHALL NOT contain duplicate role definitions.
+
+**Validation:**
+```python
+def test_no_duplicate_roles():
+    metadata = load_yaml('metadata.example.yaml')
+    roles = metadata['roles']
+    
+    # Check datenschutzbeauftragter is removed
+    assert 'datenschutzbeauftragter' not in roles
+    
+    # Check data_protection_officer exists
+    assert 'data_protection_officer' in roles
+    
+    # Check for semantic duplicates
+    role_purposes = {}
+    for role_name, role_data in roles.items():
+        purpose = normalize_role_purpose(role_data['title'])
+        assert purpose not in role_purposes, f"Duplicate role purpose: {purpose}"
+        role_purposes[purpose] = role_name
+```
+
+**Property-Based Test:**
+```python
+def test_metadata_role_structure():
+    metadata = load_yaml('metadata.example.yaml')
+    roles = list(metadata['roles'].keys())
+    
+    # Verify it_manager and sysop are in IT Operations section
+    it_ops_roles = ['it_operations_manager', 'service_desk_lead', 'it_manager', 'sysop']
+    it_ops_start = roles.index('it_operations_manager')
+    it_ops_end = roles.index('sysop')
+    
+    for role in it_ops_roles:
+        role_index = roles.index(role)
+        assert it_ops_start <= role_index <= it_ops_end, \
+            f"{role} not in IT Operations section"
+```
+
 ## Error Handling
 
 ### Error Categories
@@ -503,6 +687,18 @@ def safe_metadata_operation(operation):
    - Test writing metadata files
    - Test file path handling
 
+5. **Document History Operations**
+   - Test detecting document history sections
+   - Test adding document history to files
+   - Test validating document history format
+   - Test language-specific history sections
+
+6. **Role Cleanup Operations**
+   - Test detecting duplicate roles
+   - Test removing duplicate roles
+   - Test reorganizing role sections
+   - Test updating template references
+
 ### Integration Tests
 
 1. **End-to-End Standardization**
@@ -520,13 +716,26 @@ def safe_metadata_operation(operation):
    - Verify handbook generation still works
    - Test with missing optional fields
 
+4. **Document History Integration**
+   - Add document history to all template files
+   - Verify bilingual consistency
+   - Test handbook generation with history sections
+
+5. **Role Cleanup Integration**
+   - Remove duplicate roles from metadata
+   - Reorganize IT operations roles
+   - Update all template references
+   - Verify handbook generation with cleaned roles
+
 ### Property-Based Tests
 
-All 6 correctness properties will be tested using Hypothesis with:
+All 8 correctness properties will be tested using Hypothesis with:
 - Minimum 100 test cases per property
 - All 12 frameworks tested
 - Both languages (de/en) tested
 - Edge cases: empty files, malformed syntax, missing sections
+- Document history format validation
+- Role duplication detection
 
 ## Migration Path
 
@@ -541,6 +750,9 @@ All 6 correctness properties will be tested using Hypothesis with:
 2. Create missing metadata files
 3. Enhance existing metadata files
 4. Add template_version and revision fields
+5. Add document history sections to all template files
+6. Clean up duplicate roles in metadata.example.yaml
+7. Reorganize IT operations roles
 
 ### Phase 3: Service Directory Reorganization
 1. Create service-directory structure
@@ -552,13 +764,17 @@ All 6 correctness properties will be tested using Hypothesis with:
 1. Run validation on all frameworks
 2. Fix any validation errors
 3. Verify bilingual consistency
-4. Test handbook generation
+4. Validate document history sections
+5. Verify no duplicate roles exist
+6. Test handbook generation
 
 ### Phase 5: Documentation
 1. Update README.md
 2. Create migration guide
 3. Document new metadata fields
-4. Update framework-specific docs
+4. Document document history standardization
+5. Document role cleanup changes
+6. Update framework-specific docs
 
 ## Backward Compatibility
 
@@ -619,6 +835,21 @@ If you have existing handbooks, follow these steps:
 - **revision**: Set to "0" for all existing templates
 
 These fields enable future compatibility tracking and customization management.
+
+## Document History Sections
+
+All template markdown files will have a standardized document history section added:
+- German templates: "Dokumenthistorie" with German column headers
+- English templates: "Document History" with English column headers
+- Initial version 0.1 with placeholder for date and author
+
+## Role Changes
+
+The following role changes have been made to metadata.example.yaml:
+- **Removed**: `datenschutzbeauftragter` (duplicate of `data_protection_officer`)
+- **Reorganized**: `it_manager` and `sysop` moved to IT Operations Roles section
+
+If your templates reference `datenschutzbeauftragter`, update them to use `data_protection_officer` instead.
 ```
 
 ## Performance Considerations
@@ -674,3 +905,6 @@ The implementation will be considered successful when:
 6. **Documentation**: Migration guide and examples available
 7. **Tests**: All unit and property-based tests pass
 8. **Organization**: Service templates reorganized successfully
+9. **Document History**: All template files have standardized document history sections
+10. **Role Cleanup**: No duplicate roles in metadata.example.yaml
+11. **Role Organization**: IT operations roles properly grouped

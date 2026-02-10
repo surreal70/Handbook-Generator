@@ -148,4 +148,12 @@ Reference: BSI Standard 200-1 (Management Review)
 - BSI Standard 200-1: ISMS (Management Review)
 - All ISMS Documents (0010-0630)
 
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
+
 <!-- End of template -->

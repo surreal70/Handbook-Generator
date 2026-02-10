@@ -40,3 +40,11 @@
 - Asset Owner: [TODO]
 - Platform Team: [TODO]
 - Security/ISMS: [TODO]
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

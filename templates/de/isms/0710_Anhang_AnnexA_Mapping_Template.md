@@ -1389,3 +1389,11 @@ Dieses Mapping muss bei jeder Änderung an Policies oder Richtlinien aktualisier
 Stellen Sie sicher, dass alle Verweise auf andere ISMS-Dokumente korrekt sind.
 Passen Sie den Implementierungsstatus an die tatsächliche Situation Ihrer Organisation an.
 -->
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

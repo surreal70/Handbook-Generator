@@ -441,3 +441,11 @@ This chapter documents all evidence and documentation required for the Common Cr
 6. Deliver evidence to evaluation laboratory
 7. Archive all evidence according to requirements
 8. Update evidence documentation when changes occur
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

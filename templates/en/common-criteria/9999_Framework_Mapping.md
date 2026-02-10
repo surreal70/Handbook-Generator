@@ -375,3 +375,11 @@ For questions about this framework mapping or Common Criteria evaluation:
 - Common Criteria Portal: https://www.commoncriteriaportal.org/
 - National certification schemes (e.g., BSI, ANSSI, NIAP)
 - Accredited evaluation laboratories
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

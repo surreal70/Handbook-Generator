@@ -91,4 +91,12 @@ Das interne Auditprogramm von **{{ meta.organization.name }}** stellt die Wirksa
 - BSI Standard 200-1: ISMS
 - BSI IT-Grundschutz-Kompendium: DER.3.1 Audits und Revisionen
 
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
+
 <!-- End of template -->

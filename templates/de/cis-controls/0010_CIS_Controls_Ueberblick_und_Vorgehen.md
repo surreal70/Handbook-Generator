@@ -35,3 +35,11 @@ Beschreibt, wie CIS Controls v8 als Rahmen genutzt werden, um Hardening-Baseline
 - OS Baselines: 0110–0150
 - Applikationsstandards: 0210+
 - Evidence/Reporting: 0410
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

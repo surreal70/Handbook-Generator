@@ -319,3 +319,11 @@ Signature: _______________________
 ---
 
 **Note:** This template is a template and must be adapted to specific requirements. Legal review is recommended.
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

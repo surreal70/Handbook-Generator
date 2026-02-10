@@ -174,3 +174,11 @@ Der Geltungsbereich wird überprüft:
 3. Dokumentieren Sie Ausnahmen und Sonderfälle
 4. Erstellen Sie das Verzeichnis von Verarbeitungstätigkeiten (Art. 30)
 5. Überprüfen Sie regelmäßig bei Änderungen
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

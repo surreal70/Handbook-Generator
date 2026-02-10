@@ -248,3 +248,11 @@ Dieser Anhang stellt die Prozesslandkarte von {{ meta.organization }} dar und be
 ---
 
 **Hinweis:** Diese Prozesslandkarte ist ein lebendes Dokument und wird bei Bedarf aktualisiert.
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

@@ -173,4 +173,12 @@ This policy is reviewed and updated at least annually or in case of significant 
 - BSI Standard 200-3: Risk Analysis Based on IT-Grundschutz
 - BSI IT-Grundschutz Compendium
 
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
+
 <!-- End of template -->

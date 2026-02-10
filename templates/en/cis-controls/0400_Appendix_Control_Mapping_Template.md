@@ -22,3 +22,11 @@ Uniform mapping of baseline requirements to CIS Controls/Safeguards and evidence
 | Document | Requirement ID | Requirement (brief) | CIS Control | Safeguard/Intent (brief) | Evidence | Owner | Review |
 |---|---|---|---|---|---|---|---|
 | 0110 | WS-001 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

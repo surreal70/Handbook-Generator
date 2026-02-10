@@ -384,3 +384,11 @@ Selecting one or more options from a predefined list in an SFR.
 5. Verify terminology consistency throughout the ST
 6. Update the glossary when changes are made to the ST
 7. Have the glossary reviewed by subject matter experts
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

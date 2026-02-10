@@ -17,3 +17,11 @@ For the German version, see: `templates/de/bcm/9999_Framework_Mapping.md`
 | Version | Date | Changes |
 |---------|------|---------|
 | 1.0 | 2026-02-10 | Initial placeholder file |
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

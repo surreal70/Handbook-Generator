@@ -208,3 +208,10 @@ Personal data must be processed lawfully, fairly and in a transparent manner in 
 4. Train employees on transparency requirements
 5. Document all measures for accountability
 
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

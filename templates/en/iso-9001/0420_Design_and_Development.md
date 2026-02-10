@@ -229,3 +229,11 @@ This document defines how {{ meta.organization }} designs and develops products 
 4. Establish change management
 5. Train development team
 6. Monitor development projects
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

@@ -256,4 +256,12 @@ After each major incident or project:
 - BSI Standard 200-1: Management Systems for Information Security (ISMS)
 - BSI Standard 200-2: IT-Grundschutz Methodology
 
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
+
 <!-- End of template -->

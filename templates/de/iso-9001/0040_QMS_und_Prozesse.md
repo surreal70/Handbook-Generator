@@ -279,3 +279,11 @@ Prozessänderungen werden gesteuert durch:
 4. Legen Sie KPIs und Überwachungsmethoden fest
 5. Stellen Sie Ressourcen und Informationen bereit
 6. Implementieren Sie kontinuierliche Verbesserung
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

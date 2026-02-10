@@ -195,3 +195,10 @@ Dieses Dokument beschreibt die Umsetzung der Informationspflichten in der {{ met
 4. Schulen Sie Mitarbeiter zu Informationspflichten
 5. Überprüfen Sie regelmäßig Vollständigkeit und Aktualität
 
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

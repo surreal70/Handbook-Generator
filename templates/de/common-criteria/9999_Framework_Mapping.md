@@ -375,3 +375,11 @@ Für Fragen zu diesem Framework-Mapping oder Common Criteria Evaluierung:
 - Common Criteria Portal: https://www.commoncriteriaportal.org/
 - Nationale Zertifizierungsstellen (z.B. BSI, ANSSI, NIAP)
 - Akkreditierte Evaluierungslabore
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

@@ -336,3 +336,11 @@ the dependency on FDP_ACC.1 (Subset access control).
 4. Create dependency graph
 5. Conduct peer review
 6. Update when SFRs change
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

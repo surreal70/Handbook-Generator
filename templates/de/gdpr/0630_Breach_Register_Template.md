@@ -248,3 +248,11 @@ Dieses Register dokumentiert alle Datenschutzverletzungen bei {{ meta.organizati
 - Alle Einträge müssen vollständig und wahrheitsgemäß sein
 - Das Register muss bei Audits und auf Anfrage der Aufsichtsbehörde vorgelegt werden können
 - Regelmäßige Überprüfung und Aktualisierung erforderlich
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

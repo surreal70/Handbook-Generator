@@ -94,3 +94,11 @@
 ### 12.3 Services & Roles
 - Disabled by default: [TODO]
 - Remote management (WinRM/RDP) secured: [TODO]
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

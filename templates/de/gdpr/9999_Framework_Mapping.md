@@ -313,3 +313,11 @@ Diese Zuordnung sollte überprüft und aktualisiert werden:
 ---
 
 **Hinweis:** Diese Zuordnung basiert auf der DSGVO zum Dokumentdatum. Konsultieren Sie immer den aktuellen Verordnungstext und relevante Leitlinien der Aufsichtsbehörden für autoritative Informationen.
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

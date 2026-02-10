@@ -257,3 +257,11 @@ Diese Richtlinie konkretisiert die `0280_Policy_Datenklassifizierung_und_Informa
 
 **Genehmigt durch:** {{ meta.ciso.name }}, CISO  
 **Nächster Review:** {{ meta.document.next_review }}
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

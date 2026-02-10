@@ -312,3 +312,11 @@ Die DSFA wird überprüft, wenn:
 3. Dokumentieren Sie Risiken und Maßnahmen
 4. Konsultieren Sie den Datenschutzbeauftragten
 5. Überprüfen Sie DSFAs regelmäßig
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

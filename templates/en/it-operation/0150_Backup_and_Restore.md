@@ -703,3 +703,11 @@ This document describes the backup and restore strategies for {{ meta.organizati
 **Version:** {{ meta.document.version }}  
 **Classification:** {{ meta.document.classification }}  
 **Last Updated:** {{ meta.date }}
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

@@ -193,3 +193,11 @@ Folgende Dokumente werden normativ in diesem ST referenziert:
 2. Verifiziere Konsistenz der Terminologieverwendung
 3. Stelle sicher, dass alle Abkürzungen definiert sind
 4. Prüfe, dass alle Referenzen vollständig sind
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

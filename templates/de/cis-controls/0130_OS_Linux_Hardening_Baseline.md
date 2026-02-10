@@ -87,3 +87,11 @@
 - sudo/privileged access: [TODO]
 - Kernel/sysctl Baseline: [TODO]
 - SELinux/AppArmor Profile: [TODO]
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

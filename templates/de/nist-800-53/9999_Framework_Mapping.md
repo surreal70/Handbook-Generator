@@ -356,3 +356,11 @@ Dieses Dokument bildet die Zuordnung zwischen den NIST 800-53 Rev. 5 Kontrollfam
 **Version:** 1.0.0  
 **Letzte Aktualisierung:** 2026-02-07  
 **Maintainer:** NIST-800-53-Template-Team
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

@@ -226,3 +226,11 @@ This chapter documents the conformance of the Security Target (ST) with relevant
 4. Document all deviations and additional requirements
 5. Create mapping tables between PP and ST
 6. Have PP conformance reviewed by evaluators
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

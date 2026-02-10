@@ -75,3 +75,11 @@ Die Organisation bietet eine Incident Response-Unterstützungsressource.
 | 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Ersterstellung |
 
 <!-- Ende des Templates -->
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

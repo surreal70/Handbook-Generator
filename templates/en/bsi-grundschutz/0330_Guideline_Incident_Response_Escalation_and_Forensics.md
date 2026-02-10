@@ -122,4 +122,12 @@ This guideline is reviewed regularly:
 - BSI IT-Grundschutz Compendium
 - Document 0320: Policy: Incident Management
 
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
+
 <!-- End of template -->

@@ -306,3 +306,11 @@ Diese Richtlinie konkretisiert die `0560_Policy_Datenschutz_Schnittstellen.md` u
 
 **Genehmigt durch:** {{ meta.dpo.name }}, Datenschutzbeauftragter  
 **Nächster Review:** {{ meta.document.next_review }}
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

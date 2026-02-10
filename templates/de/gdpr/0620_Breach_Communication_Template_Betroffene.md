@@ -142,3 +142,10 @@ Mit freundlichen Grüßen
 
 **Anhang:** [Optional: Detaillierte technische Informationen, FAQ]
 
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

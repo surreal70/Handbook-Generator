@@ -130,3 +130,11 @@ Das ST ist wie folgt strukturiert:
 2. Überprüfen Sie die Konsistenz mit anderen ST-Abschnitten
 3. Stellen Sie sicher, dass alle Referenzen korrekt sind
 4. Lassen Sie das Dokument von relevanten Stakeholdern reviewen
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

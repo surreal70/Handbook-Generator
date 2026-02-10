@@ -33,3 +33,11 @@ Enable risk-based, time-limited exceptions from hardening requirements, includin
 | Exception ID | Asset/Scope | Requirement | Justification | Compensating Controls | Risk | Owner | Valid Until | Status |
 |---|---|---|---|---|---|---|---|---|
 | EX-001 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | Open |
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

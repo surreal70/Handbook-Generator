@@ -251,3 +251,10 @@ Der Verantwortliche muss:
 4. Schulen Sie Mitarbeiter zu Betroffenenrechten
 5. Dokumentieren Sie alle Anfragen im Anfragenregister
 
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

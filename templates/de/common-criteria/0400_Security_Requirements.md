@@ -267,3 +267,11 @@ Eine vollständige Übersicht aller SARs entsprechend dem gewählten EAL findet 
 3. Verifiziere die Vollständigkeit der SFR-Abhängigkeiten (siehe Dokument 0430)
 4. Stelle sicher, dass alle SFRs aus den Sicherheitszielen abgeleitet sind
 5. Dokumentiere die Rationale in Dokument 0420
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

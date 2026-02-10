@@ -411,3 +411,11 @@ Update this document with every change to interfaces or data flows.
 Conduct regular reviews to identify obsolete or unused interfaces.
 Integrate this document into your Data Protection Impact Assessments (DPIA).
 -->
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

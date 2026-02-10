@@ -353,3 +353,11 @@ Die logischen Grenzen wurden wie folgt definiert:
 3. Dokumentiere alle Sicherheitsmechanismen vollständig
 4. Überprüfe die Konsistenz mit dem physischen Umfang (Template 0100)
 5. Stelle sicher, dass alle Sicherheitsfunktionen dokumentiert sind
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

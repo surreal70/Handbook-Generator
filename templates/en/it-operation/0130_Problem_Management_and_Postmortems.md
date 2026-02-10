@@ -677,3 +677,11 @@ A **postmortem** is a structured analysis of a major incident or critical proble
 **Version:** {{ meta.document.version }}  
 **Classification:** {{ meta.document.classification }}  
 **Last Updated:** {{ meta.date }}
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

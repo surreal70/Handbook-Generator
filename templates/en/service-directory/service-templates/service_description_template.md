@@ -194,3 +194,11 @@
 **Approved By:** {{ meta.document.approver }}  
 **Organization:** {{ meta.organization.name }}  
 **Classification:** {{ meta.document.classification }}
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

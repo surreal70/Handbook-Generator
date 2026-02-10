@@ -224,3 +224,10 @@ Dieses Dokument beschreibt die Umsetzung des Rechts auf Einschränkung der Verar
 4. Schulen Sie Mitarbeiter zu Einschränkungs- und Widerspruchsrecht
 5. Dokumentieren Sie alle Anträge im Register
 
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

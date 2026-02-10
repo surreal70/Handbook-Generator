@@ -282,3 +282,11 @@ Die Sicherheitsanforderungen sind angemessen:
 3. Verifiziere alle Abhängigkeiten
 4. Führe Peer-Review der Rationale durch
 5. Aktualisiere bei Änderungen an Zielen oder Anforderungen
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

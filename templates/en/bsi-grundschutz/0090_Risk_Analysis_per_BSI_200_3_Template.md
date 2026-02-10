@@ -190,4 +190,12 @@ The risk analysis is updated when:
 - BSI Standard 200-3: Risk Analysis based on IT-Grundschutz
 - BSI IT-Grundschutz Compendium
 
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
+
 <!-- End of template -->

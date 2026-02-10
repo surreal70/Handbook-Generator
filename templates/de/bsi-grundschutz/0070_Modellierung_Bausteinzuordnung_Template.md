@@ -275,4 +275,12 @@ Die Bausteinzuordnung wird aktualisiert bei:
 - BSI IT-Grundschutz-Kompendium (aktuelle Edition)
 - BSI IT-Grundschutz-Kompendium: https://www.bsi.bund.de/grundschutz-kompendium
 
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
+
 <!-- End of template -->

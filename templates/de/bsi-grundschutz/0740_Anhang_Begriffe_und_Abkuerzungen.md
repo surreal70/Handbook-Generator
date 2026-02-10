@@ -333,4 +333,12 @@ Zusätzliche Anforderungen für Assets mit hohem oder sehr hohem Schutzbedarf
 - ISO 27000: Information security management systems – Overview and vocabulary
 - Alle ISMS-Dokumente (0010-0630)
 
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
+
 <!-- End of template -->

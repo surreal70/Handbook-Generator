@@ -408,3 +408,11 @@ Version [TODO: Version], [TODO: Date]
 6. Verify currency of all references
 7. Ensure all references are available
 8. Update the reference list when changes are made to the ST
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

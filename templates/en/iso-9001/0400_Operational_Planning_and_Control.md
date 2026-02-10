@@ -125,3 +125,11 @@ This document defines how {{ meta.organization }} conducts operational planning 
 3. Implement control measures
 4. Establish performance indicators
 5. Monitor and measure regularly
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

@@ -136,3 +136,11 @@ Bei Fragen zur Verwendung dieser Templates oder zu CIS Controls:
 **Version:** 1.0.0  
 **Letzte Aktualisierung:** 2026-02-10  
 **Maintainer:** CIS Controls Template-Team
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

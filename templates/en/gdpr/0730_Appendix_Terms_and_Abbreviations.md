@@ -314,3 +314,11 @@ Rights of natural persons vis-à-vis the controller:
 ---
 
 **Note:** These definitions are based on GDPR and serve as a reference. For legal questions, a data protection expert or lawyer should be consulted.
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

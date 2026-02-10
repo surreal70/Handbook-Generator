@@ -96,4 +96,12 @@ Violations of this policy may result in the following measures:
 - BSI Standards 200-1, 200-2, 200-3
 - Document 0490: Guideline: MDM EDR Device Compliance and Remote Work
 
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
+
 <!-- End of template -->

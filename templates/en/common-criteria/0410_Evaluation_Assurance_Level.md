@@ -224,3 +224,11 @@ The selected EAL and certification scheme enables recognition in the following c
 3. Confirm availability of resources for evaluation
 4. Contact potential evaluation laboratories
 5. Create detailed project plan for evaluation
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

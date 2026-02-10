@@ -302,3 +302,11 @@ Reference: Best practice for incident management
 - [ ] Technical report
 - [ ] Communication materials
 - [ ] Action plan (detailed)
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

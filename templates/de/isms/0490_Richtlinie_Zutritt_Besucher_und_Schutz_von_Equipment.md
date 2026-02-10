@@ -221,3 +221,11 @@ Diese Richtlinie konkretisiert die `0480_Policy_Physische_Sicherheit.md` und def
 
 **Genehmigt durch:** {{ meta.ciso.name }}, CISO  
 **Nächster Review:** {{ meta.document.next_review }}
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

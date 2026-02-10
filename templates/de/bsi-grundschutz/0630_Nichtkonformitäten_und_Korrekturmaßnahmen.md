@@ -161,4 +161,12 @@ Nach Abschluss kritischer oder wiederkehrender Findings:
 - BSI Standard 200-1: ISMS (Non-conformities and Corrective Actions)
 - Dokument 0610: Internes Auditprogramm
 
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
+
 <!-- End of template -->

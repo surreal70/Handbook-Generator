@@ -218,3 +218,10 @@ Personenbezogene Daten müssen dem Zweck angemessen und erheblich sowie auf das 
 4. Schulen Sie Mitarbeiter zu Datenminimierung
 5. Etablieren Sie regelmäßige Datenbestandsprüfungen
 
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

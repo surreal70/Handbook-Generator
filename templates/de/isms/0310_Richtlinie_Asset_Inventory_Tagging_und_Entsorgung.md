@@ -306,3 +306,11 @@ Beispiel: `LAP-2024-001234` (Laptop, Jahr, laufende Nummer)
 
 **Genehmigt durch:** {{ meta.ciso.name }}, CISO  
 **Nächster Review:** {{ meta.document.next_review }}
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

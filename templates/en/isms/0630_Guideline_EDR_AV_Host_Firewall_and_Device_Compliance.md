@@ -318,3 +318,11 @@ This guideline implements `0620_Policy_Endpoint_Security.md` and defines:
 
 **Approved by:** {{ meta.ciso.name }}, CISO  
 **Next Review:** {{ meta.document.next_review }}
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

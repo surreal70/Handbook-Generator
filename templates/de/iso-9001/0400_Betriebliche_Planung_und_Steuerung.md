@@ -119,3 +119,11 @@ Dieses Dokument definiert, wie {{ meta.organization }} die betriebliche Planung 
 3. Implementiere Steuerungsmaßnahmen
 4. Etabliere Leistungsindikatoren
 5. Überwache und messe regelmäßig
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

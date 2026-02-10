@@ -396,3 +396,10 @@ This document defines how {{ meta.organization }} controls documented informatio
 5. Conduct regular document reviews
 6. Monitor document control effectiveness
 
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

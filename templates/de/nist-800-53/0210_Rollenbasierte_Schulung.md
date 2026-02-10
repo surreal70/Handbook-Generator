@@ -93,3 +93,11 @@ Die Organisation bietet rollenbasierte Sicherheits- und Datenschutzschulungen f√
 | 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Ersterstellung |
 
 <!-- Ende des Templates -->
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | √Ñnderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

@@ -376,3 +376,11 @@ According to Schrems-II judgment, a TIA must be conducted in addition to SCCs.
 3. Complete all annexes fully
 4. Conduct a Transfer Impact Assessment
 5. Conclude SCCs with all data importers
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

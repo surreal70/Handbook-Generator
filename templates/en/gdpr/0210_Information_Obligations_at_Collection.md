@@ -195,3 +195,10 @@ This document describes the implementation of information obligations in {{ meta
 4. Train employees on information obligations
 5. Regularly review completeness and currency
 
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

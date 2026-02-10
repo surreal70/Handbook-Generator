@@ -236,3 +236,11 @@ This guideline specifies the `0580_Policy_Retention_and_Deletion.md` and defines
 
 **Approved by:** {{ meta.ciso.name }}, CISO  
 **Next Review:** {{ meta.document.next_review }}
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

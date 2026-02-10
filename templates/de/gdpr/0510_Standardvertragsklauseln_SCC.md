@@ -376,3 +376,11 @@ Gemäß Schrems-II-Urteil muss zusätzlich zu den SCCs ein TIA durchgeführt wer
 3. Füllen Sie alle Anhänge vollständig aus
 4. Führen Sie ein Transfer Impact Assessment durch
 5. Schließen Sie die SCCs mit allen Datenimporteuren ab
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

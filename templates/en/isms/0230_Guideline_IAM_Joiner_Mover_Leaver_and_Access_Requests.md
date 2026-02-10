@@ -402,3 +402,11 @@ This guideline implements the `0220_Policy_Access_Control_and_Identity_Managemen
 Date: {{ meta.document.approval_date }}
 
 **Next Review:** {{ meta.document.next_review }}
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

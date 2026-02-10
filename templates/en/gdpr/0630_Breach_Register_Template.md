@@ -248,3 +248,11 @@ This register documents all data breaches at {{ meta.organization }} according t
 - All entries must be complete and truthful
 - The register must be available for audits and upon request by the supervisory authority
 - Regular review and update required
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

@@ -319,3 +319,11 @@ Unterschrift: _______________________
 ---
 
 **Hinweis:** Dieses Template ist eine Vorlage und muss an die spezifischen Anforderungen angepasst werden. Eine rechtliche Prüfung wird empfohlen.
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

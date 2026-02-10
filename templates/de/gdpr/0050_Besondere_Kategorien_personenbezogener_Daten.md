@@ -253,3 +253,11 @@ Für jede Verarbeitung besonderer Kategorien muss dokumentiert werden:
 3. Implementieren Sie erhöhte Schutzmaßnahmen
 4. Führen Sie DSFA durch
 5. Schulen Sie betroffene Mitarbeiter
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

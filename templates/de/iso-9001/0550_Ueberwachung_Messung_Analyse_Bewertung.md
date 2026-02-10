@@ -243,3 +243,11 @@ Dieses Dokument definiert, wie {{ meta.organization }} die Leistung und Wirksamk
 4. Führe regelmäßige Analysen durch
 5. Berichte Ergebnisse an relevante Parteien
 6. Identifiziere und priorisiere Verbesserungen
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

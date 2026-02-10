@@ -130,3 +130,11 @@ The ST is structured as follows:
 2. Verify consistency with other ST sections
 3. Ensure all references are correct
 4. Have the document reviewed by relevant stakeholders
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

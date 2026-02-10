@@ -258,4 +258,12 @@ Diese Organisationsstruktur wird mindestens jährlich oder bei wesentlichen Änd
 - BSI Standard 200-2: IT-Grundschutz-Methodik
 - BSI IT-Grundschutz-Kompendium
 
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
+
 <!-- End of template -->

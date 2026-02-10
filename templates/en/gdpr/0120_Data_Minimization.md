@@ -218,3 +218,10 @@ Personal data must be adequate, relevant and limited to what is necessary in rel
 4. Train employees on data minimization
 5. Establish regular data inventory reviews
 
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

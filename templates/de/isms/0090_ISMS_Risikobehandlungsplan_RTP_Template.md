@@ -368,3 +368,11 @@ Für jede implementierte Maßnahme muss die Wirksamkeit nachgewiesen werden:
 Datum: {{ meta.document.approval_date }}
 
 **Nächster Review:** {{ meta.document.next_review }} (Monatlich)
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

@@ -234,3 +234,11 @@ Die physischen Grenzen wurden wie folgt definiert:
 3. Dokumentiere alle Versionen und Build-Informationen
 4. Überprüfe die Konsistenz mit dem logischen Umfang (Template 0110)
 5. Stelle sicher, dass alle Lieferkomponenten dokumentiert sind
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

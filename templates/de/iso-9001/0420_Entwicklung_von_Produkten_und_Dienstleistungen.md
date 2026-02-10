@@ -230,3 +230,11 @@ Dieses Dokument definiert, wie {{ meta.organization }} Produkte und Dienstleistu
 4. Etabliere Änderungsmanagement
 5. Schule Entwicklungsteam
 6. Überwache Entwicklungsprojekte
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

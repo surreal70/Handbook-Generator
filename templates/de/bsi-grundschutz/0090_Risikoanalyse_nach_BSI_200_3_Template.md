@@ -190,4 +190,12 @@ Die Risikoanalyse wird aktualisiert bei:
 - BSI Standard 200-3: Risikoanalyse auf der Basis von IT-Grundschutz
 - BSI IT-Grundschutz-Kompendium
 
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
+
 <!-- End of template -->

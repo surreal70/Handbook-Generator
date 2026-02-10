@@ -190,3 +190,11 @@ Das Verzeichnis wird auf Anfrage der Aufsichtsbehörde zur Verfügung gestellt.
 3. Implementieren Sie einen Aktualisierungsprozess
 4. Schulen Sie Mitarbeiter zur Meldung neuer Verarbeitungen
 5. Überprüfen Sie das Verzeichnis regelmäßig auf Vollständigkeit
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

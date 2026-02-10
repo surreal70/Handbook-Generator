@@ -359,3 +359,11 @@ Die folgenden Appendix-Templates sind vorhanden:
 ---
 
 **Hinweis:** Dieses Mapping-Dokument sollte bei jeder Änderung der Templates oder bei Veröffentlichung neuer PCI-DSS-Versionen aktualisiert werden.
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

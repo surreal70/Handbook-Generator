@@ -224,3 +224,11 @@ Zusätzlich erforderlich bei (Beispiele):
 **Kontakt:**
 - Datenschutzbeauftragter: [TODO: Kontakt]
 - Aufsichtsbehörde: [TODO: Kontakt]
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

@@ -284,3 +284,11 @@ This document defines how {{ meta.organization }} implements continual improveme
 4. Start improvement projects
 5. Train employees in improvement methods
 6. Measure and communicate successes
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

@@ -406,3 +406,11 @@ Dieses Kapitel liefert die Rationale, die nachweist, dass die definierten Sicher
 6. Führen Sie Vollständigkeits-, Angemessenheits- und Konsistenzanalysen durch
 7. Identifizieren und beheben Sie Lücken und Inkonsistenzen
 8. Lassen Sie die Rationale durch Evaluatoren prüfen
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

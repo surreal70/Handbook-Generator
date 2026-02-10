@@ -190,3 +190,11 @@ Für jede Verarbeitungstätigkeit muss die Rechtsgrundlage dokumentiert werden:
 3. Führen Sie Interessenabwägungen für berechtigte Interessen durch
 4. Aktualisieren Sie das Verzeichnis von Verarbeitungstätigkeiten
 5. Schulen Sie Mitarbeiter zur Identifikation von Rechtsgrundlagen
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

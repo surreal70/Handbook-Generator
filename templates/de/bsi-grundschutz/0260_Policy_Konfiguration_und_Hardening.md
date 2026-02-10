@@ -96,4 +96,12 @@ Verstöße gegen diese Policy können zu folgenden Maßnahmen führen:
 - BSI Standards 200-1, 200-2, 200-3
 - Dokument 0270: Richtlinie: Sicherheitsbaselines und Abweichungsmanagement
 
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
+
 <!-- End of template -->

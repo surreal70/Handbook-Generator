@@ -190,3 +190,11 @@ This document defines availability requirements, Service Level Agreements (SLAs)
 **Last Update:** {{ meta.date }}  
 **Next Review:** [TODO: Date]  
 **Contact:** {{ meta.it_operations_manager.email }}
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

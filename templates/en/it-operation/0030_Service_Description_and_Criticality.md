@@ -241,3 +241,11 @@ Criticality is assessed according to the dimensions of availability, integrity, 
 **Approved by:** {{ meta.document.approver }}  
 **Version:** {{ meta.document.version }}  
 **Organization:** {{ meta.organization.name }}
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

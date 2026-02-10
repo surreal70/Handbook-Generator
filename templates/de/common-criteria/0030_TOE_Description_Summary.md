@@ -146,3 +146,11 @@ Der TOE implementiert folgende Sicherheitsfunktionen:
 1. Vervollständige alle [TODO]-Platzhalter
 2. Stelle Konsistenz mit der detaillierten TOE-Beschreibung sicher
 3. Überprüfe, dass alle Komponenten aufgelistet sind
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

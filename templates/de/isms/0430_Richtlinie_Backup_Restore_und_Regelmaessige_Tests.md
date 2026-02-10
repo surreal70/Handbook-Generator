@@ -330,3 +330,11 @@ Diese Richtlinie konkretisiert die `0420_Policy_Backup_und_Wiederherstellung.md`
 
 **Genehmigt durch:** {{ meta.ciso.name }}, CISO  
 **Nächster Review:** {{ meta.document.next_review }}
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

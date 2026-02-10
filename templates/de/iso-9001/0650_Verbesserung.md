@@ -285,3 +285,11 @@ Dieses Dokument definiert, wie {{ meta.organization }} kontinuierliche Verbesser
 4. Starte Verbesserungsprojekte
 5. Schule Mitarbeiter in Verbesserungsmethoden
 6. Messe und kommuniziere Erfolge
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

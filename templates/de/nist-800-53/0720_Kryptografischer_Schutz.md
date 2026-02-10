@@ -79,3 +79,11 @@ Dieses Dokument umfasst kryptografische Schutzkontrollen.
 | 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Ersterstellung |
 
 <!-- Ende des Templates -->
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

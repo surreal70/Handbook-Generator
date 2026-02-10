@@ -217,3 +217,10 @@ Personal data must be collected for specified, explicit and legitimate purposes 
 4. Train employees on purpose limitation
 5. Regularly review compliance with purpose limitation
 
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

@@ -264,3 +264,11 @@ Die Templates bieten zusätzliche Unterstützung über die Mindestanforderungen 
 ---
 
 **Hinweis:** Dieses Mapping basiert auf ISO 9001:2015. Bei Aktualisierungen der Norm sollte dieses Dokument entsprechend überarbeitet werden.
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

@@ -161,3 +161,11 @@ Reference: ISO/IEC 15408-1:2022, Section 8.3 (Conformance Claims)
 2. Verify conformance with selected standards
 3. Document all deviations completely
 4. Ensure consistency with other ST sections
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

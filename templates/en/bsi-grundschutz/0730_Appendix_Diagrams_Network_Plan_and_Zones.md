@@ -220,4 +220,12 @@ The documentation of network architecture and zone model of **{{ meta.organizati
 - Document 0090: Risk Analysis
 - Document 0460/0470: Network Security
 
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
+
 <!-- End of template -->

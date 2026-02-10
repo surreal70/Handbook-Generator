@@ -93,4 +93,12 @@ The training and awareness program of **{{ meta.organization.name }}** ensures t
 - BSI Standard 200-1: ISMS
 - BSI IT-Grundschutz-Kompendium: ORP.3 Awareness and Training
 
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
+
 <!-- End of template -->

@@ -122,4 +122,12 @@ Das Nachweisregister von **{{ meta.organization.name }}** bietet eine zentrale �
 - BSI Standard 200-2: IT-Grundschutz-Methodik (Nachweisführung)
 - Alle ISMS-Dokumente (0010-0630)
 
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
+
 <!-- End of template -->

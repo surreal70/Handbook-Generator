@@ -320,3 +320,11 @@ Dieses Dokument definiert, wie {{ meta.organization }} Produktion und Dienstleis
 3. Definiere Handhabungs- und Lagerungsanforderungen
 4. Etabliere Freigabeprozess
 5. Implementiere Nichtkonformitätsmanagement
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

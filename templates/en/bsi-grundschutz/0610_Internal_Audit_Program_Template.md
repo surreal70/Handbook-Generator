@@ -91,4 +91,12 @@ The internal audit program of **{{ meta.organization.name }}** ensures the effec
 - BSI Standard 200-1: ISMS
 - BSI IT-Grundschutz-Kompendium: DER.3.1 Audits and Reviews
 
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
+
 <!-- End of template -->

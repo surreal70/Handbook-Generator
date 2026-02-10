@@ -518,3 +518,468 @@ Revision: 5
         
         placeholder = standardizer._get_field_placeholder("revision")
         assert placeholder == "0"
+
+
+class TestDocumentHistoryStandardizer:
+    """Unit tests for DocumentHistoryStandardizer class."""
+    
+    @pytest.fixture
+    def temp_templates_dir(self):
+        """Create a temporary templates directory for testing."""
+        temp_dir = tempfile.mkdtemp()
+        templates_dir = Path(temp_dir) / "templates"
+        templates_dir.mkdir()
+        
+        # Create language directories
+        (templates_dir / "de").mkdir()
+        (templates_dir / "en").mkdir()
+        
+        yield templates_dir
+        
+        # Cleanup
+        shutil.rmtree(temp_dir)
+    
+    @pytest.fixture
+    def doc_history_standardizer(self, temp_templates_dir):
+        """Create a DocumentHistoryStandardizer instance with temp directory."""
+        from src.metadata_standardizer import DocumentHistoryStandardizer
+        return DocumentHistoryStandardizer(str(temp_templates_dir))
+    
+    def test_init(self, temp_templates_dir):
+        """Test DocumentHistoryStandardizer initialization."""
+        from src.metadata_standardizer import DocumentHistoryStandardizer
+        standardizer = DocumentHistoryStandardizer(str(temp_templates_dir))
+        
+        assert standardizer.templates_dir == temp_templates_dir
+    
+    def test_scan_template_files_empty(self, doc_history_standardizer):
+        """Test scanning template files with empty directory."""
+        files = doc_history_standardizer.scan_template_files()
+        
+        assert isinstance(files, list)
+        assert len(files) == 0
+    
+    def test_scan_template_files_with_templates(self, doc_history_standardizer, temp_templates_dir):
+        """Test scanning template files with multiple templates."""
+        # Create framework directories and template files
+        gdpr_de_dir = temp_templates_dir / "de" / "gdpr"
+        gdpr_de_dir.mkdir(parents=True)
+        
+        # Create template files
+        (gdpr_de_dir / "0001_introduction.md").write_text("# Introduction", encoding='utf-8')
+        (gdpr_de_dir / "0002_scope.md").write_text("# Scope", encoding='utf-8')
+        
+        # Create metadata file (should be excluded)
+        (gdpr_de_dir / "0000_metadata_de_gdpr.md").write_text("# Metadata", encoding='utf-8')
+        
+        iso_en_dir = temp_templates_dir / "en" / "iso-9001"
+        iso_en_dir.mkdir(parents=True)
+        (iso_en_dir / "0001_quality.md").write_text("# Quality", encoding='utf-8')
+        
+        files = doc_history_standardizer.scan_template_files()
+        
+        assert len(files) == 3
+        assert any("0001_introduction.md" in f for f in files)
+        assert any("0002_scope.md" in f for f in files)
+        assert any("0001_quality.md" in f for f in files)
+        # Metadata file should be excluded
+        assert not any("0000_metadata_de_gdpr.md" in f for f in files)
+    
+    def test_scan_template_files_excludes_metadata(self, doc_history_standardizer, temp_templates_dir):
+        """Test that metadata files are excluded from scanning."""
+        gdpr_de_dir = temp_templates_dir / "de" / "gdpr"
+        gdpr_de_dir.mkdir(parents=True)
+        
+        # Create metadata file
+        (gdpr_de_dir / "0000_metadata_de_gdpr.md").write_text("# Metadata", encoding='utf-8')
+        
+        # Create regular template
+        (gdpr_de_dir / "0001_template.md").write_text("# Template", encoding='utf-8')
+        
+        files = doc_history_standardizer.scan_template_files()
+        
+        assert len(files) == 1
+        assert "0001_template.md" in files[0]
+        assert not any("0000_metadata" in f for f in files)
+    
+    def test_has_document_history_missing_file(self, doc_history_standardizer):
+        """Test document history detection with non-existent file."""
+        result = doc_history_standardizer.has_document_history("/nonexistent/file.md")
+        
+        assert result is False
+    
+    def test_has_document_history_no_history(self, doc_history_standardizer, temp_templates_dir):
+        """Test document history detection when no history section exists."""
+        gdpr_de_dir = temp_templates_dir / "de" / "gdpr"
+        gdpr_de_dir.mkdir(parents=True)
+        
+        template_file = gdpr_de_dir / "0001_template.md"
+        template_file.write_text("# Template\n\nSome content", encoding='utf-8')
+        
+        result = doc_history_standardizer.has_document_history(str(template_file))
+        
+        assert result is False
+    
+    def test_has_document_history_with_german_history(self, doc_history_standardizer, temp_templates_dir):
+        """Test document history detection with German history section."""
+        gdpr_de_dir = temp_templates_dir / "de" / "gdpr"
+        gdpr_de_dir.mkdir(parents=True)
+        
+        template_file = gdpr_de_dir / "0001_template.md"
+        content = """# Template
+
+Some content
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | 2025-01-01 | Test | Initiale Erstellung |
+"""
+        template_file.write_text(content, encoding='utf-8')
+        
+        result = doc_history_standardizer.has_document_history(str(template_file))
+        
+        assert result is True
+    
+    def test_has_document_history_with_english_history(self, doc_history_standardizer, temp_templates_dir):
+        """Test document history detection with English history section."""
+        iso_en_dir = temp_templates_dir / "en" / "iso-9001"
+        iso_en_dir.mkdir(parents=True)
+        
+        template_file = iso_en_dir / "0001_template.md"
+        content = """# Template
+
+Some content
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | 2025-01-01 | Test | Initial Creation |
+"""
+        template_file.write_text(content, encoding='utf-8')
+        
+        result = doc_history_standardizer.has_document_history(str(template_file))
+        
+        assert result is True
+    
+    def test_has_document_history_with_header_format(self, doc_history_standardizer, temp_templates_dir):
+        """Test document history detection with ## header format."""
+        gdpr_de_dir = temp_templates_dir / "de" / "gdpr"
+        gdpr_de_dir.mkdir(parents=True)
+        
+        template_file = gdpr_de_dir / "0001_template.md"
+        content = """# Template
+
+Some content
+
+## Dokumenthistorie
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | 2025-01-01 | Test | Initiale Erstellung |
+"""
+        template_file.write_text(content, encoding='utf-8')
+        
+        result = doc_history_standardizer.has_document_history(str(template_file))
+        
+        assert result is True
+    
+    def test_generate_history_section_german(self, doc_history_standardizer):
+        """Test document history section generation for German."""
+        section = doc_history_standardizer.generate_history_section('de')
+        
+        assert '**Dokumenthistorie:**' in section
+        assert '| Version | Datum | Autor | Änderungen |' in section
+        assert '| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |' in section
+    
+    def test_generate_history_section_english(self, doc_history_standardizer):
+        """Test document history section generation for English."""
+        section = doc_history_standardizer.generate_history_section('en')
+        
+        assert '**Document History:**' in section
+        assert '| Version | Date | Author | Changes |' in section
+        assert '| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |' in section
+    
+    def test_add_document_history_success(self, doc_history_standardizer, temp_templates_dir):
+        """Test successful document history addition."""
+        gdpr_de_dir = temp_templates_dir / "de" / "gdpr"
+        gdpr_de_dir.mkdir(parents=True)
+        
+        template_file = gdpr_de_dir / "0001_template.md"
+        template_file.write_text("# Template\n\nSome content", encoding='utf-8')
+        
+        result = doc_history_standardizer.add_document_history(str(template_file), 'de')
+        
+        assert result is True
+        
+        # Verify content
+        content = template_file.read_text(encoding='utf-8')
+        assert '**Dokumenthistorie:**' in content
+        assert '| Version | Datum | Autor | Änderungen |' in content
+        assert '| 0.1 |' in content
+    
+    def test_add_document_history_with_end_marker(self, doc_history_standardizer, temp_templates_dir):
+        """Test document history addition with end marker."""
+        gdpr_de_dir = temp_templates_dir / "de" / "gdpr"
+        gdpr_de_dir.mkdir(parents=True)
+        
+        template_file = gdpr_de_dir / "0001_template.md"
+        content = """# Template
+
+Some content
+
+<!-- End of template -->
+"""
+        template_file.write_text(content, encoding='utf-8')
+        
+        result = doc_history_standardizer.add_document_history(str(template_file), 'de')
+        
+        assert result is True
+        
+        # Verify history is before end marker
+        new_content = template_file.read_text(encoding='utf-8')
+        assert '**Dokumenthistorie:**' in new_content
+        
+        # Check that history comes before end marker
+        history_pos = new_content.find('**Dokumenthistorie:**')
+        marker_pos = new_content.find('<!-- End of template -->')
+        assert history_pos < marker_pos
+    
+    def test_add_document_history_skips_metadata_files(self, doc_history_standardizer, temp_templates_dir):
+        """Test that document history addition skips metadata files."""
+        gdpr_de_dir = temp_templates_dir / "de" / "gdpr"
+        gdpr_de_dir.mkdir(parents=True)
+        
+        metadata_file = gdpr_de_dir / "0000_metadata_de_gdpr.md"
+        metadata_file.write_text("# Metadata", encoding='utf-8')
+        
+        result = doc_history_standardizer.add_document_history(str(metadata_file), 'de')
+        
+        assert result is False
+        
+        # Verify content unchanged
+        content = metadata_file.read_text(encoding='utf-8')
+        assert '**Dokumenthistorie:**' not in content
+    
+    def test_add_document_history_preserves_existing_content(self, doc_history_standardizer, temp_templates_dir):
+        """Test that document history addition preserves existing content."""
+        gdpr_de_dir = temp_templates_dir / "de" / "gdpr"
+        gdpr_de_dir.mkdir(parents=True)
+        
+        template_file = gdpr_de_dir / "0001_template.md"
+        original_content = """# Template Title
+
+## Section 1
+
+Some important content here.
+
+## Section 2
+
+More content.
+"""
+        template_file.write_text(original_content, encoding='utf-8')
+        
+        result = doc_history_standardizer.add_document_history(str(template_file), 'de')
+        
+        assert result is True
+        
+        # Verify original content is preserved
+        new_content = template_file.read_text(encoding='utf-8')
+        assert '# Template Title' in new_content
+        assert '## Section 1' in new_content
+        assert 'Some important content here.' in new_content
+        assert '## Section 2' in new_content
+        assert 'More content.' in new_content
+        assert '**Dokumenthistorie:**' in new_content
+    
+    def test_add_document_history_already_exists(self, doc_history_standardizer, temp_templates_dir):
+        """Test document history addition when history already exists."""
+        gdpr_de_dir = temp_templates_dir / "de" / "gdpr"
+        gdpr_de_dir.mkdir(parents=True)
+        
+        template_file = gdpr_de_dir / "0001_template.md"
+        content = """# Template
+
+Some content
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | 2025-01-01 | Test | Initiale Erstellung |
+"""
+        template_file.write_text(content, encoding='utf-8')
+        
+        result = doc_history_standardizer.add_document_history(str(template_file), 'de')
+        
+        # Should return True (already has history)
+        assert result is True
+    
+    def test_add_document_history_file_not_found(self, doc_history_standardizer):
+        """Test document history addition with non-existent file."""
+        result = doc_history_standardizer.add_document_history("/nonexistent/file.md", 'de')
+        
+        assert result is False
+    
+    def test_add_document_history_english(self, doc_history_standardizer, temp_templates_dir):
+        """Test document history addition for English template."""
+        iso_en_dir = temp_templates_dir / "en" / "iso-9001"
+        iso_en_dir.mkdir(parents=True)
+        
+        template_file = iso_en_dir / "0001_template.md"
+        template_file.write_text("# Template\n\nSome content", encoding='utf-8')
+        
+        result = doc_history_standardizer.add_document_history(str(template_file), 'en')
+        
+        assert result is True
+        
+        # Verify English content
+        content = template_file.read_text(encoding='utf-8')
+        assert '**Document History:**' in content
+        assert '| Version | Date | Author | Changes |' in content
+        assert '| 0.1 |' in content
+        assert 'Initial Creation' in content
+    
+    def test_validate_document_history_format_missing_file(self, doc_history_standardizer):
+        """Test document history format validation with non-existent file."""
+        result = doc_history_standardizer.validate_document_history_format("/nonexistent/file.md")
+        
+        assert isinstance(result, ValidationResult)
+        assert not result.is_valid
+        assert len(result.warnings) > 0
+    
+    def test_validate_document_history_format_skips_metadata(self, doc_history_standardizer, temp_templates_dir):
+        """Test that validation skips metadata files."""
+        gdpr_de_dir = temp_templates_dir / "de" / "gdpr"
+        gdpr_de_dir.mkdir(parents=True)
+        
+        metadata_file = gdpr_de_dir / "0000_metadata_de_gdpr.md"
+        metadata_file.write_text("# Metadata", encoding='utf-8')
+        
+        result = doc_history_standardizer.validate_document_history_format(str(metadata_file))
+        
+        assert result.is_valid
+        assert any("Skipped metadata file" in w for w in result.warnings)
+    
+    def test_validate_document_history_format_no_history(self, doc_history_standardizer, temp_templates_dir):
+        """Test validation when no document history section exists."""
+        gdpr_de_dir = temp_templates_dir / "de" / "gdpr"
+        gdpr_de_dir.mkdir(parents=True)
+        
+        template_file = gdpr_de_dir / "0001_template.md"
+        template_file.write_text("# Template\n\nSome content", encoding='utf-8')
+        
+        result = doc_history_standardizer.validate_document_history_format(str(template_file))
+        
+        # Should return True (warning, not error for backward compatibility)
+        assert result.is_valid
+        assert any("Missing document history section" in w for w in result.warnings)
+    
+    def test_validate_document_history_format_valid_german(self, doc_history_standardizer, temp_templates_dir):
+        """Test validation of valid German document history."""
+        gdpr_de_dir = temp_templates_dir / "de" / "gdpr"
+        gdpr_de_dir.mkdir(parents=True)
+        
+        template_file = gdpr_de_dir / "0001_template.md"
+        content = """# Template
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | 2025-01-01 | Test | Initiale Erstellung |
+"""
+        template_file.write_text(content, encoding='utf-8')
+        
+        result = doc_history_standardizer.validate_document_history_format(str(template_file))
+        
+        assert result.is_valid
+        assert len(result.warnings) == 0
+    
+    def test_validate_document_history_format_valid_english(self, doc_history_standardizer, temp_templates_dir):
+        """Test validation of valid English document history."""
+        iso_en_dir = temp_templates_dir / "en" / "iso-9001"
+        iso_en_dir.mkdir(parents=True)
+        
+        template_file = iso_en_dir / "0001_template.md"
+        content = """# Template
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | 2025-01-01 | Test | Initial Creation |
+"""
+        template_file.write_text(content, encoding='utf-8')
+        
+        result = doc_history_standardizer.validate_document_history_format(str(template_file))
+        
+        assert result.is_valid
+        assert len(result.warnings) == 0
+    
+    def test_validate_document_history_format_invalid_headers(self, doc_history_standardizer, temp_templates_dir):
+        """Test validation with invalid table headers."""
+        gdpr_de_dir = temp_templates_dir / "de" / "gdpr"
+        gdpr_de_dir.mkdir(parents=True)
+        
+        template_file = gdpr_de_dir / "0001_template.md"
+        content = """# Template
+
+**Dokumenthistorie:**
+
+| Ver | Date | Who | What |
+|-----|------|-----|------|
+| 0.1 | 2025-01-01 | Test | Initial |
+"""
+        template_file.write_text(content, encoding='utf-8')
+        
+        result = doc_history_standardizer.validate_document_history_format(str(template_file))
+        
+        # Should still be valid (warning only)
+        assert result.is_valid
+        assert any("table headers do not match" in w for w in result.warnings)
+    
+    def test_validate_document_history_format_missing_version(self, doc_history_standardizer, temp_templates_dir):
+        """Test validation when initial version 0.1 is missing."""
+        gdpr_de_dir = temp_templates_dir / "de" / "gdpr"
+        gdpr_de_dir.mkdir(parents=True)
+        
+        template_file = gdpr_de_dir / "0001_template.md"
+        content = """# Template
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 1.0 | 2025-01-01 | Test | First release |
+"""
+        template_file.write_text(content, encoding='utf-8')
+        
+        result = doc_history_standardizer.validate_document_history_format(str(template_file))
+        
+        # Should still be valid (warning only)
+        assert result.is_valid
+        assert any("missing initial version 0.1" in w for w in result.warnings)
+    
+    def test_validate_document_history_format_header_format(self, doc_history_standardizer, temp_templates_dir):
+        """Test validation with ## header format."""
+        gdpr_de_dir = temp_templates_dir / "de" / "gdpr"
+        gdpr_de_dir.mkdir(parents=True)
+        
+        template_file = gdpr_de_dir / "0001_template.md"
+        content = """# Template
+
+## Dokumenthistorie
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | 2025-01-01 | Test | Initiale Erstellung |
+"""
+        template_file.write_text(content, encoding='utf-8')
+        
+        result = doc_history_standardizer.validate_document_history_format(str(template_file))
+        
+        assert result.is_valid
+        assert len(result.warnings) == 0

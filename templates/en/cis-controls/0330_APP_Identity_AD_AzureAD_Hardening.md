@@ -34,3 +34,11 @@ Secure identity services as Tier-0 component (AuthN/AuthZ, MFA, conditional acce
 - CA policies export: [TODO]
 - Role assignments report: [TODO]
 - Audit log samples: [TODO]
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

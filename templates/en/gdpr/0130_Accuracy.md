@@ -229,3 +229,10 @@ Personal data must be accurate and, where necessary, kept up to date; every reas
 4. Implement notification process for recipients
 5. Conduct regular data quality controls
 
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

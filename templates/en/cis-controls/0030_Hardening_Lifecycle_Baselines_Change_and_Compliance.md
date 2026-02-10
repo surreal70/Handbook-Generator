@@ -31,3 +31,11 @@
 ## 4. Drift & Remediation
 - Auto-remediation vs. ticket: [TODO]
 - Exception handling: [TODO]
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

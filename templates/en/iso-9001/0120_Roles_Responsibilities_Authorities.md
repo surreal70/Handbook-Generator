@@ -471,3 +471,10 @@ Updates to roles are:
 5. Ensure understanding through training and acknowledgment
 6. Review and update roles regularly
 
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

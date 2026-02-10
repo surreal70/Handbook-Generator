@@ -39,3 +39,11 @@ Absicherung der Container-Runtime und Host-Integration (Daemon, Permissions, Nam
 ## 5. Betrieb
 - Updates: [TODO]
 - Monitoring: [TODO]
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

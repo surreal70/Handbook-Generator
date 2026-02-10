@@ -276,3 +276,10 @@ Dieses Dokument definiert, wie {{ meta.organization }} dokumentierte Information
 5. Führe regelmäßige Dokumentenüberprüfungen durch
 6. Überwache Dokumentenlenkungswirksamkeit
 
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

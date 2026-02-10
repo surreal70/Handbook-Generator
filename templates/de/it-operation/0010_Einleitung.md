@@ -9,3 +9,11 @@ Das IT-Operations-Handbuch definiert Prozesse und Verantwortlichkeiten für den 
 ## 1.2 Geltungsbereich
 
 Dieses Handbuch gilt für alle IT-Systeme und -Services der Organisation.
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

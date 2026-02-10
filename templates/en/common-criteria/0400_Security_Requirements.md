@@ -267,3 +267,11 @@ A complete overview of all SARs according to the selected EAL can be found in do
 3. Verify completeness of SFR dependencies (see document 0430)
 4. Ensure all SFRs are derived from security objectives
 5. Document the rationale in document 0420
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

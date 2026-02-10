@@ -423,3 +423,11 @@ The TOE is organized into the following layers:
 3. Document all architecture decisions completely
 4. Verify consistency with other TOE description documents
 5. Ensure the security architecture is fully documented
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

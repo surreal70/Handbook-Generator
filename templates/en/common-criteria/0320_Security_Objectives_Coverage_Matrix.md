@@ -300,5 +300,5 @@ After the Coverage Matrix:
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
-| {{ meta.version }} | {{ meta.date }} | {{ meta.owner }} | Initial version |
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
 

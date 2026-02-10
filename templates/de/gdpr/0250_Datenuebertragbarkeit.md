@@ -249,3 +249,10 @@ Dieses Dokument beschreibt die Umsetzung des Rechts auf Datenübertragbarkeit in
 4. Schulen Sie Mitarbeiter zu Datenübertragbarkeit
 5. Dokumentieren Sie alle Anfragen im Register
 
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

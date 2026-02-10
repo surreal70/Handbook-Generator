@@ -355,3 +355,10 @@ This document defines how {{ meta.organization }} ensures competence of personne
 6. Maintain competence and training records
 7. Promote ongoing QMS awareness
 
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

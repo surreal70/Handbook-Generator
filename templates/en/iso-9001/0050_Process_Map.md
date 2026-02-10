@@ -323,3 +323,11 @@ The process map is updated when:
 4. Define interface responsibilities
 5. Monitor effectiveness of process interactions
 6. Update the process map regularly
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

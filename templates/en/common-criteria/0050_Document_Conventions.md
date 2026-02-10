@@ -193,3 +193,11 @@ The following documents are referenced normatively in this ST:
 2. Verify consistency of terminology usage
 3. Ensure all abbreviations are defined
 4. Check that all references are complete
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

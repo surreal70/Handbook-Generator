@@ -93,4 +93,12 @@ Das Schulungs- und Awareness-Programm von **{{ meta.organization.name }}** stell
 - BSI Standard 200-1: ISMS
 - BSI IT-Grundschutz-Kompendium: ORP.3 Sensibilisierung und Schulung
 
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
+
 <!-- End of template -->

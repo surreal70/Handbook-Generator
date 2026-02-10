@@ -140,6 +140,36 @@ The standardization will enable better template lifecycle management, compatibil
 7. WHEN documentation is updated, THEN it SHALL include migration guide for existing handbooks
 8. WHEN documentation is updated, THEN it SHALL be available in both README.md and framework-specific docs
 
+### Requirement 9: Standardized Document History Section
+
+**User Story:** Als Handbuch-Autor möchte ich eine einheitliche Dokumenthistorie in allen Templates, damit Änderungen konsistent nachvollziehbar sind.
+
+#### Acceptance Criteria
+
+1. WHEN a template markdown file is created, THEN it SHALL include a standardized document history section
+2. WHEN a document history section is created, THEN it SHALL use the format "Dokumenthistorie" (German) or "Document History" (English)
+3. WHEN a document history table is created, THEN it SHALL use the column headers: "Version | Datum | Autor | Änderungen" (German) or "Version | Date | Author | Changes" (English)
+4. WHEN a document history table is initialized, THEN it SHALL include one initial row with version "0.1", date "{{ meta.document.last_updated }}", author "{{ meta.defaults.author }}", and changes "Initiale Erstellung" (German) or "Initial Creation" (English)
+5. WHEN validating templates, THEN the system SHALL verify that all template files contain a document history section
+6. WHEN validating document history, THEN the system SHALL verify the table format matches the standard structure
+7. WHEN bilingual templates exist, THEN both language variants SHALL have document history sections with appropriate language-specific labels
+8. WHEN a document history section is missing, THEN the validation SHALL report it as a warning (not error) for backward compatibility
+
+### Requirement 10: Metadata Role Cleanup and Reorganization
+
+**User Story:** Als System-Administrator möchte ich duplicate Rollen entfernen und IT-Operations-Rollen korrekt organisieren, damit die Metadatenstruktur klar und wartbar ist.
+
+#### Acceptance Criteria
+
+1. WHEN metadata roles are validated, THEN duplicate role "datenschutzbeauftragter" SHALL be identified as redundant with "data_protection_officer"
+2. WHEN metadata cleanup is performed, THEN "datenschutzbeauftragter" SHALL be removed from metadata.example.yaml
+3. WHEN metadata cleanup is performed, THEN references to "datenschutzbeauftragter" SHALL be replaced with "data_protection_officer"
+4. WHEN IT operations roles are reorganized, THEN "it_manager" and "sysop" SHALL be grouped under the "IT Operations Roles" section
+5. WHEN role sections are organized, THEN they SHALL follow the structure: C-Level Executives, IT Operations Roles, BCM and Security Roles
+6. WHEN role cleanup is documented, THEN migration notes SHALL explain the removal of "datenschutzbeauftragter"
+7. WHEN templates reference removed roles, THEN they SHALL be updated to use the canonical role names
+8. WHEN validation runs, THEN it SHALL check for duplicate role definitions and report them as errors
+
 ## Framework Coverage
 
 The following 12 frameworks SHALL be standardized:
@@ -163,9 +193,12 @@ The implementation SHALL be considered successful when:
 
 1. All 12 frameworks have complete metadata files with unified structure
 2. All metadata files include template_version (1.0) and revision (0) fields
-3. Service-related templates are organized in service-directory/
-4. Metadata validation passes for all frameworks
-5. Existing handbook generation continues to work without errors
-6. Documentation is updated with new metadata features
-7. All tests pass (unit tests and property-based tests)
-8. Migration guide is available for existing users
+3. All template markdown files include standardized document history sections
+4. Duplicate role "datenschutzbeauftragter" is removed from metadata.example.yaml
+5. IT operations roles (it_manager, sysop) are properly organized in the IT Operations Roles section
+6. Service-related templates are organized in service-directory/
+7. Metadata validation passes for all frameworks
+8. Existing handbook generation continues to work without errors
+9. Documentation is updated with new metadata features
+10. All tests pass (unit tests and property-based tests)
+11. Migration guide is available for existing users

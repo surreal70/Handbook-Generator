@@ -214,3 +214,10 @@ Rollen, Verantwortlichkeiten und Befugnisse werden überprüft:
 5. Stelle Verständnis durch Schulung und Bestätigung sicher
 6. Überprüfe und aktualisiere Rollen regelmäßig
 
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

@@ -224,3 +224,11 @@ Falls Ja:
 - Dieses Verzeichnis muss bei Änderungen aktualisiert werden
 - Das Verzeichnis muss der Aufsichtsbehörde auf Anfrage vorgelegt werden
 - Regelmäßige Überprüfung (mindestens jährlich) erforderlich
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

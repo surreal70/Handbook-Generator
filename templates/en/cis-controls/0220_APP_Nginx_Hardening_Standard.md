@@ -87,3 +87,11 @@
 - Logging format incl. request ID: [TODO]
 - `limit_req` / `limit_conn`: [TODO]
 - Access to status/stub internal only: [TODO]
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

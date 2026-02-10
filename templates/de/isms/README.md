@@ -487,3 +487,11 @@ Bei Fragen oder Problemen:
 **Version:** 1.0.0  
 **Letzte Aktualisierung:** 2026-02-02  
 **Maintainer:** ISMS-Template-Team
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

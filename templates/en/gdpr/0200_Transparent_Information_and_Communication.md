@@ -251,3 +251,10 @@ The controller must:
 4. Train employees on data subject rights
 5. Document all requests in request register
 
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

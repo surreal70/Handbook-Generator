@@ -285,3 +285,10 @@ Personal data must be processed in a manner that ensures appropriate security of
 4. Set up backup and recovery processes
 5. Establish incident response process
 
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

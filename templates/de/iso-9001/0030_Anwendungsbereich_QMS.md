@@ -218,3 +218,11 @@ Der Anwendungsbereich bildet die Grundlage für:
 4. Begründen Sie eventuelle Ausschlüsse von ISO 9001 Anforderungen
 5. Kommunizieren Sie den Anwendungsbereich an alle relevanten Parteien
 6. Überprüfen Sie den Anwendungsbereich regelmäßig
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

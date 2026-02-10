@@ -246,3 +246,11 @@ For each processing of special categories, document:
 3. Implement enhanced protection measures
 4. Conduct DPIA
 5. Train affected employees
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

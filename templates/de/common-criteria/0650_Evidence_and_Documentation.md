@@ -441,3 +441,11 @@ Dieses Kapitel dokumentiert alle Nachweise und Dokumentationen, die für die Com
 6. Stellen Sie Nachweise dem Evaluierungslabor bereit
 7. Archivieren Sie alle Nachweise gemäß den Anforderungen
 8. Aktualisieren Sie die Nachweisdokumentation bei Änderungen
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

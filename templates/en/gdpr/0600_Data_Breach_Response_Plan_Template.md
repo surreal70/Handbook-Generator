@@ -404,3 +404,11 @@ Data breach confirmed?
 3. Conduct breach response exercises (at least annually)
 4. Keep the plan current
 5. Ensure all team members know the plan
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

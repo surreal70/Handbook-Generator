@@ -323,3 +323,11 @@ Die Prozesslandkarte wird aktualisiert bei:
 4. Definieren Sie Schnittstellenverantwortlichkeiten
 5. Überwachen Sie die Wirksamkeit der Prozessinteraktionen
 6. Aktualisieren Sie die Prozesslandkarte regelmäßig
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

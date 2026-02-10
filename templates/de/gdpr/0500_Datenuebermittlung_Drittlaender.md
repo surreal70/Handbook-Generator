@@ -330,3 +330,11 @@ Betroffene Personen müssen über Drittlandübermittlungen informiert werden:
 3. Implementieren Sie geeignete Garantien (SCCs, BCRs)
 4. Führen Sie Transfer Impact Assessments durch
 5. Informieren Sie betroffene Personen transparent
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

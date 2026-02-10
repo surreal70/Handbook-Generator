@@ -308,3 +308,10 @@ Dieses Dokument definiert das Sicherheitsproblem, das der TOE lösen soll. Es be
 5. Erstelle Bedrohungsmodell und Angriffsszenarien
 6. Überprüfe die Konsistenz mit Security Objectives (Template 0300)
 
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

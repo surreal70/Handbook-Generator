@@ -541,3 +541,11 @@ External Service Providers + Vendors
 **Version:** {{ meta.document.version }}  
 **Classification:** {{ meta.document.classification }}  
 **Organization:** {{ meta.organization.name }}
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

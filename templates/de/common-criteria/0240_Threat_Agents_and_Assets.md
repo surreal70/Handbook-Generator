@@ -479,3 +479,10 @@ Dieses Dokument definiert:
 5. Erstelle Asset-Abhängigkeitsdiagramme
 6. Überprüfe Konsistenz mit Threats (Template 0210) und Security Objectives (Template 0300)
 
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

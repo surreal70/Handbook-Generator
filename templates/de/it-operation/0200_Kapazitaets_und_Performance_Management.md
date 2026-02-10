@@ -428,3 +428,11 @@ Dieses Dokument beschreibt die Prozesse und Methoden für das Kapazitäts- und P
 **Letzte Aktualisierung:** {{ meta.date }}  
 **Nächste Review:** [TODO: Datum]  
 **Kontakt:** {{ meta.it_operations_manager.email }}
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

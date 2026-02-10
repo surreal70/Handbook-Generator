@@ -269,3 +269,11 @@ Dieses Dokument definiert, wie {{ meta.organization }} extern bereitgestellte Pr
 4. Implementiere Leistungsbewertung
 5. Führe regelmäßige Anbieteraudits durch
 6. Pflege Anbieterregister
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

@@ -96,4 +96,12 @@ Violations of this policy may result in the following actions:
 - BSI Standards 200-1, 200-2, 200-3
 - Document 0250: Guideline: Asset Lifecycle Tagging and Disposal
 
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
+
 <!-- End of template -->

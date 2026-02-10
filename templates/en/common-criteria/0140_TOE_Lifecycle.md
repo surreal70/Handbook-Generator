@@ -415,3 +415,11 @@ The TOE lifecycle includes the following phases:
 3. Document all security measures completely
 4. Verify consistency with other TOE description documents
 5. Ensure all phases and transitions are documented
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

@@ -384,3 +384,11 @@ Das Auswählen einer oder mehrerer Optionen aus einer vorgegebenen Liste in eine
 5. Überprüfen Sie die Konsistenz der Terminologie im gesamten ST
 6. Aktualisieren Sie das Glossar bei Änderungen am ST
 7. Lassen Sie das Glossar durch Fachexperten prüfen
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

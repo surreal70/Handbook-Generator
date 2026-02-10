@@ -312,3 +312,11 @@ Risikomanagement - Leitlinien
 ---
 
 **Hinweis:** Begriffe und Definitionen aus ISO 9000:2015 sind maßgeblich. Dieser Anhang dient als Referenz für häufig verwendete Begriffe im QMS.
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

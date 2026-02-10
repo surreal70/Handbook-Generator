@@ -275,4 +275,12 @@ The module assignment is updated when:
 - BSI IT-Grundschutz Compendium (current edition)
 - BSI IT-Grundschutz Compendium: https://www.bsi.bund.de/grundschutz-kompendium
 
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
+
 <!-- End of template -->

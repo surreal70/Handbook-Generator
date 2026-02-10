@@ -314,3 +314,11 @@ Rechte natürlicher Personen gegenüber dem Verantwortlichen:
 ---
 
 **Hinweis:** Diese Definitionen basieren auf der DSGVO und dienen als Referenz. Bei rechtlichen Fragen sollte ein Datenschutzexperte oder Rechtsanwalt konsultiert werden.
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

@@ -1,6 +1,6 @@
 # Version Management
 
-## Current Version: 0.0.7
+## Current Version: 0.0.8
 
 ### Single Source of Truth
 
@@ -33,6 +33,15 @@ To update the version number:
 
 ### Version History
 
+- **0.0.8** (2026-02-10): Role Cleanup & Documentation Enhancement
+  - ✅ Removed duplicate role 'datenschutzbeauftragter' (use 'data_protection_officer')
+  - ✅ Reorganized IT operations roles (it_manager, sysop moved to IT Operations section)
+  - ✅ Enhanced metadata.example.yaml inline comments with migration guidance
+  - ✅ Created comprehensive role cleanup migration guide (ROLE_CLEANUP_MIGRATION.md)
+  - ✅ Updated README.md and README.en.md with role cleanup documentation
+  - ✅ Improved role organization: C-Level → IT Operations → BCM/Security → Custom
+  - ✅ Complete migration instructions with examples and verification commands
+  - ✅ All documentation cross-referenced and consistent
 - **0.0.7** (2026-02-10): Template Metadata Standardization
   - ✅ Unified metadata structure across all 12 frameworks
   - ✅ Added template_version field (1.0) for template format tracking

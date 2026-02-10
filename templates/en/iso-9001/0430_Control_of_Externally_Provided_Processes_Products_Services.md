@@ -268,3 +268,11 @@ This document defines how {{ meta.organization }} controls externally provided p
 4. Implement performance evaluation
 5. Conduct regular provider audits
 6. Maintain provider register
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

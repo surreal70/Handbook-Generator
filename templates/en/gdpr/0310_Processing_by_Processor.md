@@ -246,3 +246,11 @@ The processor must inform the controller without undue delay about data breaches
 3. Implement a control plan for regular audits
 4. Define instruction processes and authorizations
 5. Establish an instruction register
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

@@ -147,3 +147,11 @@ For each processing activity, the legal basis must be documented:
 3. Perform balancing tests for legitimate interests
 4. Update records of processing activities
 5. Train employees on identifying legal bases
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

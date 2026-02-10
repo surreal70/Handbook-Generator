@@ -298,3 +298,11 @@ This document defines how {{ meta.organization }} conducts regular management re
 5. Document results
 6. Communicate decisions
 7. Follow up action implementation
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

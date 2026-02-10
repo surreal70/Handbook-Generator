@@ -178,3 +178,10 @@ Qualitätsziele werden kommuniziert durch:
 5. Implementiere Überwachungs- und Berichtssysteme
 6. Überprüfe Fortschritt regelmäßig und passe bei Bedarf an
 
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

@@ -326,3 +326,11 @@ Geprüft von: [TODO: Datenschutzbeauftragter]
 Freigegeben von: [TODO: Geschäftsführung]  
 Übermittelt am: [TODO: YYYY-MM-DD HH:MM]  
 Aktenzeichen Behörde: [TODO: Nach Erhalt eintragen]
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

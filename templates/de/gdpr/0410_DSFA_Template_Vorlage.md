@@ -394,3 +394,11 @@ Referenz: DSGVO Art. 35 (Datenschutz-Folgenabschätzung)
 ---
 
 **Hinweis:** Diese DSFA ist ein lebendes Dokument und muss bei Änderungen der Verarbeitung oder neuen Erkenntnissen über Risiken aktualisiert werden.
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

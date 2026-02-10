@@ -215,3 +215,11 @@ Die Umgebung muss bereitstellen:
 2. Erstelle Architektur- und Datenflussdiagramme
 3. Überprüfe die Konsistenz mit der detaillierten TOE-Beschreibung
 4. Stelle sicher, dass alle Schnittstellen dokumentiert sind
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

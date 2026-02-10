@@ -162,3 +162,11 @@ Diese Kontextanalyse bildet die Grundlage für:
 3. Priorisieren Sie Themen nach Relevanz
 4. Verknüpfen Sie die Kontextanalyse mit der Risiko- und Chancenbewertung
 5. Überprüfen und aktualisieren Sie die Analyse regelmäßig
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

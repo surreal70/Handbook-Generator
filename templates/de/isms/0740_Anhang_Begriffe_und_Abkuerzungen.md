@@ -646,3 +646,11 @@ Dieses Glossar sollte bei Einführung neuer Begriffe oder Abkürzungen aktualisi
 Stellen Sie sicher, dass alle Begriffe konsistent in der gesamten ISMS-Dokumentation verwendet werden.
 Ergänzen Sie organisationsspezifische Begriffe und Abkürzungen.
 -->
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

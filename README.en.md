@@ -3,7 +3,7 @@
 <div align="center">
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
-[![Version](https://img.shields.io/badge/version-0.0.7-blue.svg)](VERSION.md)
+[![Version](https://img.shields.io/badge/version-0.0.8-blue.svg)](VERSION.md)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Code Coverage](https://img.shields.io/badge/coverage-84%25-brightgreen.svg)](htmlcov/index.html)
 [![Tests](https://img.shields.io/badge/tests-765%20passed-success.svg)](tests/)
@@ -25,7 +25,7 @@ A Python tool for generating professional handbooks from Markdown templates with
 
 The Handbook Generator creates professional handbooks in various formats (HTML, PDF, Markdown) from structured Markdown templates. The system replaces placeholders in templates with real data from external systems like NetBox and supports multilingual handbooks.
 
-**Version 0.0.7** - Template Metadata Standardization
+**Version 0.0.8** - Template Metadata Standardization & Role Cleanup
 
 ## Features
 
@@ -144,6 +144,66 @@ python3 examples/enhance_metadata.py
 - Revision number validity (non-negative integer)
 - Placeholder syntax ({{ source.field }})
 - Bilingual consistency (DE/EN matching)
+
+### Metadata Role Cleanup
+
+As part of the Template Metadata Standardization, roles in `metadata.example.yaml` have been cleaned up and reorganized:
+
+**Removed Duplicates:**
+- `datenschutzbeauftragter` removed (duplicate of `data_protection_officer`)
+- Use `data_protection_officer` as the canonical role for Data Protection Officer / Datenschutzbeauftragter
+
+**Reorganized IT Operations Roles:**
+- `it_manager` and `sysop` moved from "Add Custom Roles Here" to "IT Operations Roles"
+- Better organization: C-Level → IT Operations → BCM/Security → Custom Roles
+
+**Migration:**
+```bash
+# Check if you're using datenschutzbeauftragter
+grep -i "datenschutzbeauftragter:" metadata.yaml
+
+# If found, rename to data_protection_officer
+# See docs/ROLE_CLEANUP_MIGRATION.md for detailed instructions
+```
+
+**New Role Structure:**
+```yaml
+roles:
+  # C-Level Executives
+  ceo, cio, ciso, cfo, coo
+  
+  # IT Operations Roles (reorganized)
+  it_operations_manager, service_desk_lead, it_manager, sysop
+  
+  # BCM and Security Roles
+  bcm_manager, information_security_officer, data_protection_officer, ...
+  
+  # Add Custom Roles Here
+  # (Your custom roles)
+```
+
+See [ROLE_CLEANUP_MIGRATION.md](docs/ROLE_CLEANUP_MIGRATION.md) for complete migration information.
+
+### Backward Compatibility
+
+The system is fully backward compatible:
+- Existing handbooks work without changes
+- Missing new fields generate warnings (not errors)
+- Placeholders without data are preserved
+- Old metadata formats are supported
+
+See [MIGRATION_GUIDE.md](docs/MIGRATION_GUIDE.md) for migration information.
+
+## New in Version 0.0.8 🎉
+
+- ✅ **Role Cleanup** - Removed duplicate role 'datenschutzbeauftragter' (use 'data_protection_officer')
+- ✅ **IT Operations Roles Reorganized** - it_manager and sysop moved to IT Operations Roles section
+- ✅ **Enhanced Inline Comments** - metadata.example.yaml with detailed migration guidance
+- ✅ **Comprehensive Migration Guide** - ROLE_CLEANUP_MIGRATION.md with step-by-step instructions
+- ✅ **Updated Documentation** - README.md and README.en.md with role cleanup sections
+- ✅ **Better Role Organization** - C-Level → IT Operations → BCM/Security → Custom
+- ✅ **Full Backward Compatibility** - Existing handbooks continue to work
+- ✅ **Migration Examples** - Commands and examples for easy migration
 
 ## New in Version 0.0.6
 
@@ -685,6 +745,8 @@ Comprehensive documentation can be found in the `docs/` directory:
 - **[OUTPUT_FORMATS_GUIDE.md](docs/OUTPUT_FORMATS_GUIDE.md)** - Detailed guide to all output formats (Separate Markdown, PDF with TOC, HTML)
 - **[FRAMEWORK_MAPPING.md](docs/FRAMEWORK_MAPPING.md)** - Framework compliance mappings (ISO 22301, ISO 27001, BSI, ITIL)
 - **[MIGRATION_GUIDE.md](docs/MIGRATION_GUIDE.md)** - Migration guide for existing users
+- **[ROLE_CLEANUP_MIGRATION.md](docs/ROLE_CLEANUP_MIGRATION.md)** - Migration guide for role cleanup (datenschutzbeauftragter → data_protection_officer)
+- **[DOCUMENT_HISTORY_GUIDE.md](docs/DOCUMENT_HISTORY_GUIDE.md)** - Guide to standardized document history in templates
 - **[PDF_GENERATION_GUIDE.md](docs/PDF_GENERATION_GUIDE.md)** - Detailed guide for PDF generation
 - **[PDF_GENERATION_SUMMARY.md](docs/PDF_GENERATION_SUMMARY.md)** - PDF generation summary
 - **[QUICK_START_PDF.md](docs/QUICK_START_PDF.md)** - Quick start for PDF generation

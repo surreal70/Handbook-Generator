@@ -322,3 +322,11 @@ Dieser Anhang enthält eine Übersicht aller Formulare und Vorlagen, die im QMS 
 ---
 
 **Hinweis:** Alle Formulare sind im Dokumentenmanagementsystem verfügbar.
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

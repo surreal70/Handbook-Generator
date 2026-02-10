@@ -3,7 +3,7 @@
 <div align="center">
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
-[![Version](https://img.shields.io/badge/version-0.0.7-blue.svg)](VERSION.md)
+[![Version](https://img.shields.io/badge/version-0.0.8-blue.svg)](VERSION.md)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Code Coverage](https://img.shields.io/badge/coverage-84%25-brightgreen.svg)](htmlcov/index.html)
 [![Tests](https://img.shields.io/badge/tests-765%20passed-success.svg)](tests/)
@@ -25,7 +25,7 @@ Ein Python-Tool zur Generierung professioneller Handbücher aus Markdown-Vorlage
 
 Der Handbuch-Generator erstellt aus strukturierten Markdown-Vorlagen professionelle Handbücher in verschiedenen Formaten (HTML, PDF, Markdown). Das System ersetzt Platzhalter in den Vorlagen durch echte Daten aus externen Systemen wie NetBox und unterstützt mehrsprachige Handbücher.
 
-**Version 0.0.7** - Template Metadata Standardization
+**Version 0.0.8** - Template Metadata Standardization & Role Cleanup
 
 ## Features
 
@@ -158,6 +158,45 @@ python helpers/validate_metadata.py --all --report metadata_report.json
 - Bilinguale Konsistenz (DE/EN Struktur-Übereinstimmung)
 - Platzhalter-Syntax (`{{ source.field }}`)
 
+### Metadata Role Cleanup
+
+Als Teil der Template Metadata Standardisierung wurden die Rollen in `metadata.example.yaml` bereinigt und reorganisiert:
+
+**Entfernte Duplikate:**
+- `datenschutzbeauftragter` wurde entfernt (Duplikat von `data_protection_officer`)
+- Verwenden Sie `data_protection_officer` als kanonische Rolle für Data Protection Officer / Datenschutzbeauftragter
+
+**Reorganisierte IT Operations Rollen:**
+- `it_manager` und `sysop` wurden von "Add Custom Roles Here" zu "IT Operations Roles" verschoben
+- Bessere Organisation: C-Level → IT Operations → BCM/Security → Custom Roles
+
+**Migration:**
+```bash
+# Prüfen, ob Sie datenschutzbeauftragter verwenden
+grep -i "datenschutzbeauftragter:" metadata.yaml
+
+# Wenn gefunden, umbenennen zu data_protection_officer
+# Siehe docs/ROLE_CLEANUP_MIGRATION.md für detaillierte Anleitung
+```
+
+**Neue Rollenstruktur:**
+```yaml
+roles:
+  # C-Level Executives
+  ceo, cio, ciso, cfo, coo
+  
+  # IT Operations Roles (reorganisiert)
+  it_operations_manager, service_desk_lead, it_manager, sysop
+  
+  # BCM and Security Roles
+  bcm_manager, information_security_officer, data_protection_officer, ...
+  
+  # Add Custom Roles Here
+  # (Ihre benutzerdefinierten Rollen)
+```
+
+Siehe [ROLE_CLEANUP_MIGRATION.md](docs/ROLE_CLEANUP_MIGRATION.md) für vollständige Migrationsinformationen.
+
 ### Backward Compatibility
 
 Das System ist vollständig rückwärtskompatibel:
@@ -167,6 +206,17 @@ Das System ist vollständig rückwärtskompatibel:
 - Alte Metadaten-Formate werden unterstützt
 
 Siehe [MIGRATION_GUIDE.md](docs/MIGRATION_GUIDE.md) für Migrationsinformationen.
+
+## Neu in Version 0.0.8 🎉
+
+- ✅ **Rollen-Bereinigung** - Duplikat-Rolle 'datenschutzbeauftragter' entfernt (verwenden Sie 'data_protection_officer')
+- ✅ **IT Operations Rollen reorganisiert** - it_manager und sysop in IT Operations Roles Sektion verschoben
+- ✅ **Verbesserte Inline-Kommentare** - metadata.example.yaml mit detaillierten Migrations-Hinweisen
+- ✅ **Umfassender Migrations-Leitfaden** - ROLE_CLEANUP_MIGRATION.md mit Schritt-für-Schritt-Anleitung
+- ✅ **Aktualisierte Dokumentation** - README.md und README.en.md mit Rollen-Bereinigung-Abschnitten
+- ✅ **Bessere Rollen-Organisation** - C-Level → IT Operations → BCM/Security → Custom
+- ✅ **Vollständige Rückwärtskompatibilität** - Bestehende Handbücher funktionieren weiterhin
+- ✅ **Migrations-Beispiele** - Kommandos und Beispiele für einfache Migration
 
 ## Neu in Version 0.0.6 🎉
 
@@ -890,6 +940,8 @@ Umfassende Dokumentation finden Sie im `docs/` Verzeichnis:
 - **[OUTPUT_FORMATS_GUIDE.md](docs/OUTPUT_FORMATS_GUIDE.md)** - Detaillierte Anleitung zu allen Ausgabeformaten (Separate Markdown, PDF mit TOC, HTML)
 - **[FRAMEWORK_MAPPING.md](docs/FRAMEWORK_MAPPING.md)** - Framework-Compliance-Mappings (ISO 22301, ISO 27001, BSI, ITIL)
 - **[MIGRATION_GUIDE.md](docs/MIGRATION_GUIDE.md)** - Migrationsleitfaden für bestehende Nutzer
+- **[ROLE_CLEANUP_MIGRATION.md](docs/ROLE_CLEANUP_MIGRATION.md)** - Migrationsleitfaden für Rollen-Bereinigung (datenschutzbeauftragter → data_protection_officer)
+- **[DOCUMENT_HISTORY_GUIDE.md](docs/DOCUMENT_HISTORY_GUIDE.md)** - Leitfaden zur standardisierten Dokumenthistorie in Templates
 - **[PDF_GENERATION_GUIDE.md](docs/PDF_GENERATION_GUIDE.md)** - Detaillierte Anleitung zur PDF-Generierung
 - **[PDF_GENERATION_SUMMARY.md](docs/PDF_GENERATION_SUMMARY.md)** - Zusammenfassung der PDF-Generierung
 - **[QUICK_START_PDF.md](docs/QUICK_START_PDF.md)** - Schnellstart für PDF-Generierung

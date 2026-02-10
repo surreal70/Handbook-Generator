@@ -308,3 +308,10 @@ This document defines the security problem that the TOE shall solve. It describe
 5. Create threat model and attack scenarios
 6. Verify consistency with Security Objectives (Template 0300)
 
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

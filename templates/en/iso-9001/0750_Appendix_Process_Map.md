@@ -247,3 +247,11 @@ This appendix presents the process map of {{ meta.organization }} and describes 
 ---
 
 **Note:** This process map is a living document and will be updated as needed.
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

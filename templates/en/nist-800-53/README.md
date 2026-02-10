@@ -262,3 +262,11 @@ For questions or issues:
 **Version:** 1.0.0  
 **Last Updated:** 2026-02-07  
 **Maintainer:** NIST-800-53-Template-Team
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

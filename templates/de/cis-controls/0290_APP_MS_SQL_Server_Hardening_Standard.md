@@ -86,3 +86,11 @@
 - Verschlüsselung (TDE/TLS): [TODO]
 - Auditing: [TODO]
 - Service Account least privilege: [TODO]
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

@@ -313,3 +313,11 @@ This mapping should be reviewed and updated:
 ---
 
 **Note:** This mapping is based on the GDPR as of the document date. Always consult the current regulation text and relevant supervisory authority guidance for authoritative information.
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

@@ -364,3 +364,11 @@ Manuelle Pflege ist fehleranfällig und sollte minimiert werden.
 Stellen Sie sicher, dass alle Assets mit korrekten Schutzbedarfen und Kritikalitäten versehen sind.
 Integrieren Sie dieses Inventar in Ihre Risikobewertungs- und BIA-Prozesse.
 -->
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

@@ -411,3 +411,11 @@ Aktualisieren Sie dieses Dokument bei jeder Änderung an Schnittstellen oder Dat
 Führen Sie regelmäßige Reviews durch, um veraltete oder nicht mehr genutzte Schnittstellen zu identifizieren.
 Integrieren Sie dieses Dokument in Ihre Datenschutz-Folgenabschätzungen (DPIA).
 -->
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

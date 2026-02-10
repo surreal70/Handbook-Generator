@@ -209,3 +209,10 @@ Dieses Dokument beschreibt die Umsetzung des Rechts auf Berichtigung und Löschu
 4. Schulen Sie Mitarbeiter zu Berichtigungs- und Löschrecht
 5. Dokumentieren Sie alle Anträge im Register
 
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

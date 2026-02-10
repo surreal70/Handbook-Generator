@@ -296,3 +296,11 @@ The Data Protection Officer may fulfill other tasks, provided these do not resul
 3. Publish contact details internally and externally
 4. Provide sufficient resources
 5. Define clear tasks and responsibilities
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

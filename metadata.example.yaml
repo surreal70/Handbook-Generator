@@ -45,17 +45,22 @@ organization:
 # These roles are used throughout the handbooks for RACI matrices,
 # contact lists, and responsibility assignments.
 #
-# Standard roles (recommended to define):
-#   - ceo: Chief Executive Officer
-#   - cio: Chief Information Officer
-#   - ciso: Chief Information Security Officer
-#   - cfo: Chief Financial Officer
-#   - coo: Chief Operating Officer
+# Role Organization (Updated in Template Metadata Standardization):
+#   1. C-Level Executives: Core executive leadership
+#   2. IT Operations Roles: IT operations and management (it_manager, sysop moved here)
+#   3. BCM and Security Roles: Business continuity, security, compliance
+#   4. Add Custom Roles Here: Your organization-specific roles
 #
-# Additional roles (customize as needed):
-#   - it_operations_manager: IT Operations Manager
-#   - service_desk_lead: Service Desk Lead
-#   - Add more roles as needed for your organization
+# IMPORTANT CHANGES:
+# - REMOVED: 'datenschutzbeauftragter' role (duplicate of 'data_protection_officer')
+# - MOVED: 'it_manager' from custom roles to IT Operations Roles section
+# - MOVED: 'sysop' from custom roles to IT Operations Roles section
+#
+# Migration Guide:
+# - If using 'datenschutzbeauftragter' in your metadata.yaml, rename to 'data_protection_officer'
+# - Update template references: {{ meta.datenschutzbeauftragter.* }} → {{ meta.data_protection_officer.* }}
+# - No action needed for it_manager and sysop - they still work, just better organized
+# - See docs/ROLE_CLEANUP_MIGRATION.md for detailed migration instructions
 
 roles:
   # -------------------------
@@ -100,6 +105,15 @@ roles:
   # -------------------------
   # IT Operations Roles
   # -------------------------
+  # Core IT operations and management roles
+  # 
+  # REORGANIZATION NOTE: The following roles were moved here from the
+  # "Add Custom Roles Here" section for better organization:
+  # - it_manager: Core IT management role
+  # - sysop: System administration role
+  #
+  # These are standard IT operations roles and belong with other IT roles
+  # rather than in the custom roles section.
   it_operations_manager:
     name: "[IT_OPS_MANAGER_NAME]"               # e.g., "David Miller"
     title: "IT Operations Manager"
@@ -113,10 +127,44 @@ roles:
     email: "[SERVICE_DESK_LEAD_EMAIL]"          # e.g., "emma.davis@example.com"
     phone: "[SERVICE_DESK_LEAD_PHONE]"          # e.g., "+49 30 12345678-111"
     department: "Service Desk"
+
+
+  it_manager:
+    name: "[IT_MANAGER_NAME]"                   # e.g., "Martin Bauer"
+    title: "IT Manager"                         # English: IT Manager
+    email: "[IT_MANAGER_EMAIL]"                 # e.g., "martin.bauer@example.com"
+    phone: "[IT_MANAGER_PHONE]"                 # e.g., "+49 30 12345678-240"
+    department: "IT"
+    # Used in IT operations and security templates for IT management tasks
+  
+  # Example: Add a Security Operations Manager
+  # security_operations_manager:
+  #   name: "[SECURITY_OPS_MANAGER_NAME]"
+  #   title: "Security Operations Manager"
+  #   email: "[SECURITY_OPS_MANAGER_EMAIL]"
+  #   phone: "[SECURITY_OPS_MANAGER_PHONE]"
+  #   department: "IT Security"
+
+
+  sysop:
+    name: "[SYSOP_NAME]"                        # e.g., "Michael Schneider"
+    title: "System Administrator"               # English: System Administrator
+    email: "[SYSOP_EMAIL]"                      # e.g., "michael.schneider@example.com"
+    phone: "[SYSOP_PHONE]"                      # e.g., "+49 30 12345678-260"
+    department: "IT Operations"
+    # Used in IT operations and security templates for system administration tasks
   
   # -------------------------
-  # BCM and Security Roles (Optional but recommended for BCM, ISMS, BSI Grundschutz)
+  # BCM and Security Roles
   # -------------------------
+  # Business continuity, security, and compliance roles
+  #
+  # IMPORTANT: Use 'data_protection_officer' as the canonical role for
+  # Data Protection Officer / Datenschutzbeauftragter.
+  #
+  # The 'datenschutzbeauftragter' role was removed as it was a duplicate.
+  # Migration: Replace any references to 'datenschutzbeauftragter' with
+  # 'data_protection_officer' in your metadata.yaml and custom templates.
   bcm_manager:
     name: "[BCM_MANAGER_NAME]"                  # e.g., "Frank Wilson"
     title: "Business Continuity Manager"
@@ -140,26 +188,7 @@ roles:
     phone: "[DPO_PHONE]"                        # e.g., "+49 30 12345678-320"
     department: "Legal & Compliance"
     # Used in ISMS and BSI Grundschutz templates for GDPR compliance
-  
-  # -------------------------
-  # Add Custom Roles Here
-  # -------------------------
-  # Extended Roles for BCM, ISMS, and BSI Grundschutz (NEW)
-  sysop:
-    name: "[SYSOP_NAME]"                        # e.g., "Michael Schneider"
-    title: "System Administrator"               # English: System Administrator
-    email: "[SYSOP_EMAIL]"                      # e.g., "michael.schneider@example.com"
-    phone: "[SYSOP_PHONE]"                      # e.g., "+49 30 12345678-260"
-    department: "IT Operations"
-    # Used in IT operations and security templates for system administration tasks
-  
-  datenschutzbeauftragter:
-    name: "[DPO_NAME]"                          # e.g., "Dr. Sarah Klein"
-    title: "Datenschutzbeauftragter"            # English: Data Protection Officer
-    email: "[DPO_EMAIL]"                        # e.g., "sarah.klein@example.com"
-    phone: "[DPO_PHONE]"                        # e.g., "+49 30 12345678-320"
-    department: "Legal & Compliance"
-    # Used in ISMS and BSI Grundschutz templates for GDPR compliance
+    # Note: This is the canonical role - 'datenschutzbeauftragter' was removed as duplicate
   
   risikomanager:
     name: "[RISK_MANAGER_NAME]"                 # e.g., "Frank Wagner"
@@ -185,15 +214,11 @@ roles:
     department: "Human Resources"
     # Used in ISMS and BSI Grundschutz templates for HR security processes
   
-  it_manager:
-    name: "[IT_MANAGER_NAME]"                   # e.g., "Martin Bauer"
-    title: "IT Manager"                         # English: IT Manager
-    email: "[IT_MANAGER_EMAIL]"                 # e.g., "martin.bauer@example.com"
-    phone: "[IT_MANAGER_PHONE]"                 # e.g., "+49 30 12345678-240"
-    department: "IT"
-    # Used in IT operations and security templates for IT management tasks
-  
-  # Example: Add a Security Operations Manager
+  # -------------------------
+  # Add Custom Roles Here
+  # -------------------------
+  # Add your organization-specific custom roles below this line
+  # Example:
   # security_operations_manager:
   #   name: "[SECURITY_OPS_MANAGER_NAME]"
   #   title: "Security Operations Manager"

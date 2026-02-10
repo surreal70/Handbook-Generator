@@ -269,3 +269,11 @@ Data subjects are informed about certification:
 3. Conduct a gap analysis
 4. Create a certification plan
 5. Communicate obtained certifications transparently
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

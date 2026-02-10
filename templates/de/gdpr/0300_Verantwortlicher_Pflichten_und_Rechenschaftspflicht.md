@@ -188,3 +188,11 @@ Die Maßnahmen berücksichtigen:
 3. Implementieren Sie Privacy by Design und Privacy by Default in allen Projekten
 4. Stellen Sie sicher, dass alle Nachweisdokumente aktuell und verfügbar sind
 5. Definieren Sie klare Verantwortlichkeiten für die Rechenschaftspflicht
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

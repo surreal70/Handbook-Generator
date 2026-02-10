@@ -161,4 +161,12 @@ The documentation of data flows and interfaces of **{{ meta.organization.name }}
 - Document 0340/0350: Cryptography and Key Management
 - Document 0420/0430: Data Protection
 
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
+
 <!-- End of template -->

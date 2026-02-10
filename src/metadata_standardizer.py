@@ -1271,3 +1271,744 @@ Revision: 0
         }
         
         return placeholders.get(field_name, f'{{{{ meta.{field_name} }}}}')
+
+
+
+class DocumentHistoryStandardizer:
+    """
+    Manages document history standardization across all template files.
+    
+    Provides functionality to:
+    - Scan template markdown files (excluding metadata files)
+    - Detect existing document history sections
+    - Add standardized document history sections
+    - Validate document history format
+    """
+    
+    # Pattern for metadata files to skip
+    METADATA_PATTERN = re.compile(r'^0000_metadata_[a-z]{2}_.*\.md$')
+    
+    # Supported languages
+    SUPPORTED_LANGUAGES = ['de', 'en']
+    
+    def __init__(self, templates_dir: str):
+        """
+        Initialize DocumentHistoryStandardizer with templates directory.
+        
+        Args:
+            templates_dir: Path to the templates directory
+        """
+        self.templates_dir = Path(templates_dir)
+    
+    def scan_template_files(self) -> List[str]:
+        """
+        Scan all template markdown files (excluding metadata files).
+        
+        Returns:
+            List of template file paths
+        """
+        template_files = []
+        
+        if not self.templates_dir.exists():
+            return template_files
+        
+        # Scan both language directories
+        for language in self.SUPPORTED_LANGUAGES:
+            lang_dir = self.templates_dir / language
+            
+            if not lang_dir.exists():
+                continue
+            
+            # Recursively find all .md files
+            for md_file in lang_dir.rglob('*.md'):
+                # Skip metadata files
+                if not self.METADATA_PATTERN.match(md_file.name):
+                    template_files.append(str(md_file))
+        
+        return template_files
+    
+    def has_document_history(self, filepath: str) -> bool:
+        """
+        Check if file contains document history section.
+        
+        Args:
+            filepath: Path to template file
+        
+        Returns:
+            True if document history section exists, False otherwise
+        """
+        path = Path(filepath)
+        
+        if not path.exists():
+            return False
+        
+        try:
+            content = path.read_text(encoding='utf-8')
+        except Exception:
+            return False
+        
+        # Check for German or English document history headers (both old and new format)
+        return ('**Dokumenthistorie:**' in content or 
+                '**Document History:**' in content or
+                '## Dokumenthistorie' in content or 
+                '## Document History' in content)
+    
+    def generate_history_section(self, language: str) -> str:
+        """
+        Generate standardized document history section for DE/EN templates.
+        
+        Args:
+            language: Language code ('de' or 'en')
+        
+        Returns:
+            Formatted document history section
+        """
+        if language == 'de':
+            return """**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
+"""
+        else:  # English
+            return """**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
+"""
+    
+    def add_document_history(self, filepath: str, language: str) -> bool:
+        """
+        Add standardized document history section to template file.
+        
+        Inserts section before <!-- End of template --> marker if present,
+        otherwise at end of file.
+        Skips metadata files (0000_metadata_*.md).
+        Preserves existing file content.
+        Removes duplicate document history sections.
+        
+        Args:
+            filepath: Path to template file
+            language: Language code ('de' or 'en')
+        
+        Returns:
+            True if history added successfully, False otherwise
+        """
+        path = Path(filepath)
+        
+        # Skip metadata files
+        if self.METADATA_PATTERN.match(path.name):
+            return False
+        
+        if not path.exists():
+            return False
+        
+        try:
+            content = path.read_text(encoding='utf-8')
+        except Exception as e:
+            print(f"Error reading file {filepath}: {e}")
+            return False
+        
+        # Check if already has the correct format
+        if self.has_document_history(filepath):
+            # Check if it's in the correct position (before <!-- End of template -->)
+            end_marker = '<!-- End of template -->'
+            if end_marker in content:
+                # Check if history is before the marker
+                parts = content.split(end_marker)
+                if '**Dokumenthistorie:**' in parts[0] or '**Document History:**' in parts[0]:
+                    # Already in correct position
+                    return True
+                # History is after marker, need to move it
+            else:
+                # No marker, history is at end - this is correct
+                return True
+        
+        # Remove any existing document history sections
+        # Pattern 1: ## Dokumenthistorie / ## Document History
+        content = re.sub(
+            r'\n+## (Dokumenthistorie|Document History)\n+\| Version.*?\n\|.*?\n\| 0\.1.*?\n*',
+            '',
+            content,
+            flags=re.DOTALL
+        )
+        
+        # Pattern 2: **Dokumenthistorie:** / **Document History:**
+        content = re.sub(
+            r'\n+\*\*(Dokumenthistorie|Document History):\*\*\n+\| Version.*?\n\|.*?\n\| 0\.1.*?\n*',
+            '',
+            content,
+            flags=re.DOTALL
+        )
+        
+        # Pattern 3: With separator before
+        content = re.sub(
+            r'\n+---\n+\*\*(Dokumenthistorie|Document History):\*\*\n+\| Version.*?\n\|.*?\n\| 0\.1.*?\n*',
+            '',
+            content,
+            flags=re.DOTALL
+        )
+        
+        # Clean up trailing whitespace and separators
+        content = content.rstrip()
+        while content.endswith('\n---'):
+            content = content[:-4].rstrip()
+        
+        # Generate history section
+        history_section = self.generate_history_section(language)
+        
+        # Find the <!-- End of template --> marker
+        end_marker = '<!-- End of template -->'
+        
+        if end_marker in content:
+            # Insert before the end marker
+            parts = content.split(end_marker, 1)
+            enhanced_content = parts[0].rstrip() + '\n\n---\n\n' + history_section.rstrip() + '\n\n' + end_marker
+            if len(parts) > 1:
+                enhanced_content += parts[1]
+        else:
+            # No end marker, add at the end
+            enhanced_content = content + '\n\n---\n\n' + history_section
+        
+        # Write enhanced content
+        try:
+            path.write_text(enhanced_content, encoding='utf-8')
+            return True
+        except Exception as e:
+            print(f"Error writing file {filepath}: {e}")
+            return False
+    
+    def validate_document_history_format(self, filepath: str) -> ValidationResult:
+        """
+        Validate document history section format.
+        
+        Checks for:
+        - Presence of "**Dokumenthistorie:**" or "**Document History:**"
+        - Table format with correct column headers
+        - Initial row with version 0.1
+        
+        Returns validation warnings (not errors) for backward compatibility.
+        
+        Args:
+            filepath: Path to template file
+        
+        Returns:
+            ValidationResult with validation status and warnings
+        """
+        path = Path(filepath)
+        
+        # Skip metadata files
+        if self.METADATA_PATTERN.match(path.name):
+            return ValidationResult(
+                is_valid=True,
+                warnings=["Skipped metadata file"]
+            )
+        
+        if not path.exists():
+            return ValidationResult(
+                is_valid=False,
+                warnings=[f"File does not exist: {filepath}"]
+            )
+        
+        try:
+            content = path.read_text(encoding='utf-8')
+        except Exception as e:
+            return ValidationResult(
+                is_valid=False,
+                warnings=[f"Could not read file: {e}"]
+            )
+        
+        warnings = []
+        
+        # Check for document history header (old format with bold)
+        has_de_header = '**Dokumenthistorie:**' in content
+        has_en_header = '**Document History:**' in content
+        
+        # Also check for new format (## header)
+        has_de_header_new = '## Dokumenthistorie' in content
+        has_en_header_new = '## Document History' in content
+        
+        if not (has_de_header or has_en_header or has_de_header_new or has_en_header_new):
+            warnings.append("Missing document history section")
+            return ValidationResult(
+                is_valid=True,  # Warning, not error for backward compatibility
+                warnings=warnings
+            )
+        
+        # Determine language
+        if has_de_header or has_de_header_new:
+            language = 'de'
+        else:
+            language = 'en'
+        
+        # Check for table headers
+        if language == 'de':
+            expected_headers = ['Version', 'Datum', 'Autor', 'Änderungen']
+            header_pattern = r'\|\s*Version\s*\|\s*Datum\s*\|\s*Autor\s*\|\s*Änderungen\s*\|'
+        else:
+            expected_headers = ['Version', 'Date', 'Author', 'Changes']
+            header_pattern = r'\|\s*Version\s*\|\s*Date\s*\|\s*Author\s*\|\s*Changes\s*\|'
+        
+        if not re.search(header_pattern, content):
+            warnings.append(f"Document history table headers do not match expected format: {', '.join(expected_headers)}")
+        
+        # Check for initial version 0.1
+        version_pattern = r'\|\s*0\.1\s*\|'
+        if not re.search(version_pattern, content):
+            warnings.append("Document history missing initial version 0.1")
+        
+        return ValidationResult(
+            is_valid=True,  # Always return True for backward compatibility
+            warnings=warnings
+        )
+
+
+
+@dataclass
+class DuplicateRole:
+    """
+    Information about a duplicate role definition.
+    
+    Attributes:
+        role_name: Name of the duplicate role
+        canonical_role: Name of the canonical role it duplicates
+        reason: Explanation of why it's considered a duplicate
+    """
+    role_name: str
+    canonical_role: str
+    reason: str
+
+
+class MetadataRoleCleanup:
+    """
+    Manages role cleanup and reorganization in metadata.example.yaml.
+    
+    Provides functionality to:
+    - Detect duplicate role definitions
+    - Remove duplicate roles from YAML
+    - Reorganize IT operations roles into proper sections
+    - Validate role structure and organization
+    - Update template references to removed roles
+    """
+    
+    def __init__(self, metadata_file: str = "metadata.example.yaml"):
+        """
+        Initialize MetadataRoleCleanup with metadata file path.
+        
+        Args:
+            metadata_file: Path to metadata.example.yaml file
+        """
+        self.metadata_file = Path(metadata_file)
+        self._yaml_content: Optional[str] = None
+        self._roles_data: Optional[Dict] = None
+    
+    def detect_duplicate_roles(self) -> List[DuplicateRole]:
+        """
+        Detect duplicate role definitions based on semantic analysis.
+        
+        Identifies roles that serve the same purpose but have different names.
+        Currently detects:
+        - datenschutzbeauftragter (duplicate of data_protection_officer)
+        
+        Returns:
+            List of DuplicateRole objects
+        """
+        duplicates = []
+        
+        if not self.metadata_file.exists():
+            return duplicates
+        
+        try:
+            import yaml
+            with open(self.metadata_file, 'r', encoding='utf-8') as f:
+                data = yaml.safe_load(f)
+        except Exception as e:
+            print(f"Error loading YAML file: {e}")
+            return duplicates
+        
+        if 'roles' not in data:
+            return duplicates
+        
+        roles = data['roles']
+        
+        # Check for datenschutzbeauftragter (German) vs data_protection_officer (English)
+        if 'datenschutzbeauftragter' in roles and 'data_protection_officer' in roles:
+            duplicates.append(DuplicateRole(
+                role_name='datenschutzbeauftragter',
+                canonical_role='data_protection_officer',
+                reason='German name for Data Protection Officer - duplicate of data_protection_officer'
+            ))
+        
+        # Could add more semantic duplicate detection here in the future
+        # For example, checking role titles or responsibilities
+        
+        return duplicates
+    
+    def remove_duplicate_role(self, role_name: str) -> bool:
+        """
+        Remove duplicate role from metadata YAML file.
+        
+        Preserves formatting, comments, and structure of the YAML file.
+        Uses line-by-line processing to maintain exact formatting.
+        
+        Args:
+            role_name: Name of the role to remove
+        
+        Returns:
+            True if role removed successfully, False otherwise
+        """
+        if not self.metadata_file.exists():
+            print(f"Metadata file not found: {self.metadata_file}")
+            return False
+        
+        try:
+            with open(self.metadata_file, 'r', encoding='utf-8') as f:
+                lines = f.readlines()
+        except Exception as e:
+            print(f"Error reading metadata file: {e}")
+            return False
+        
+        # Find the role definition and remove it
+        new_lines = []
+        in_role_block = False
+        role_indent = 0
+        skip_until_next_role = False
+        
+        i = 0
+        while i < len(lines):
+            line = lines[i]
+            
+            # Check if this is the start of the role we want to remove
+            if line.strip().startswith(f'{role_name}:'):
+                # Found the role to remove
+                in_role_block = True
+                skip_until_next_role = True
+                # Determine indentation level
+                role_indent = len(line) - len(line.lstrip())
+                i += 1
+                continue
+            
+            # If we're skipping a role block
+            if skip_until_next_role:
+                # Check if we've reached the next role or end of roles section
+                stripped = line.strip()
+                
+                # Empty lines or comments within the role block
+                if not stripped or stripped.startswith('#'):
+                    i += 1
+                    continue
+                
+                # Check indentation to see if we're still in the role block
+                current_indent = len(line) - len(line.lstrip())
+                
+                # If indentation is same or less than role indent, we've left the role block
+                if current_indent <= role_indent and stripped:
+                    skip_until_next_role = False
+                    in_role_block = False
+                    # Don't skip this line, process it normally
+                else:
+                    # Still in the role block, skip this line
+                    i += 1
+                    continue
+            
+            # Keep this line
+            new_lines.append(line)
+            i += 1
+        
+        # Write the modified content back
+        try:
+            with open(self.metadata_file, 'w', encoding='utf-8') as f:
+                f.writelines(new_lines)
+            return True
+        except Exception as e:
+            print(f"Error writing metadata file: {e}")
+            return False
+    
+    def reorganize_it_operations_roles(self) -> bool:
+        """
+        Reorganize IT operations roles into proper sections.
+        
+        Moves it_manager and sysop from "Add Custom Roles Here" section
+        to "IT Operations Roles" section.
+        
+        Ensures proper section ordering:
+        - C-Level Executives
+        - IT Operations Roles
+        - BCM and Security Roles
+        - Add Custom Roles Here
+        
+        Returns:
+            True if reorganization successful, False otherwise
+        """
+        if not self.metadata_file.exists():
+            print(f"Metadata file not found: {self.metadata_file}")
+            return False
+        
+        try:
+            with open(self.metadata_file, 'r', encoding='utf-8') as f:
+                lines = f.readlines()
+        except Exception as e:
+            print(f"Error reading metadata file: {e}")
+            return False
+        
+        # Find the roles to move and their definitions
+        roles_to_move = ['it_manager', 'sysop']
+        role_definitions = {}  # role_name -> list of lines
+        
+        # First pass: extract role definitions and mark for removal
+        i = 0
+        while i < len(lines):
+            line = lines[i]
+            
+            for role_name in roles_to_move:
+                if line.strip().startswith(f'{role_name}:'):
+                    # Found a role to move, extract its full definition
+                    role_lines = [line]
+                    role_indent = len(line) - len(line.lstrip())
+                    i += 1
+                    
+                    # Collect all lines that belong to this role
+                    while i < len(lines):
+                        next_line = lines[i]
+                        next_stripped = next_line.strip()
+                        
+                        # Empty lines or comments
+                        if not next_stripped or next_stripped.startswith('#'):
+                            role_lines.append(next_line)
+                            i += 1
+                            continue
+                        
+                        # Check indentation
+                        next_indent = len(next_line) - len(next_line.lstrip())
+                        
+                        # If same or less indentation and not empty, we've left the role
+                        if next_indent <= role_indent:
+                            break
+                        
+                        role_lines.append(next_line)
+                        i += 1
+                    
+                    role_definitions[role_name] = role_lines
+                    break
+            else:
+                i += 1
+        
+        if not role_definitions:
+            # Roles not found or already in correct position
+            return True
+        
+        # Second pass: build new file with roles moved
+        new_lines = []
+        skip_role = None
+        role_indent = 0
+        inserted_roles = False
+        
+        i = 0
+        while i < len(lines):
+            line = lines[i]
+            stripped = line.strip()
+            
+            # Check if we should skip this role (it's being moved)
+            if not skip_role:
+                for role_name in roles_to_move:
+                    if stripped.startswith(f'{role_name}:'):
+                        skip_role = role_name
+                        role_indent = len(line) - len(line.lstrip())
+                        i += 1
+                        break
+                
+                if skip_role:
+                    continue
+            
+            # If we're currently skipping a role
+            if skip_role:
+                # Check if we've left the role block
+                if not stripped or stripped.startswith('#'):
+                    # Empty line or comment within role block
+                    i += 1
+                    continue
+                
+                current_indent = len(line) - len(line.lstrip())
+                
+                if current_indent <= role_indent and stripped:
+                    # We've left the role block
+                    skip_role = None
+                    # Don't skip this line, process it normally
+                else:
+                    # Still in the role block, skip this line
+                    i += 1
+                    continue
+            
+            # Check if this is service_desk_lead (insert point for moved roles)
+            if not inserted_roles and stripped.startswith('service_desk_lead:'):
+                # Add service_desk_lead
+                new_lines.append(line)
+                role_indent = len(line) - len(line.lstrip())
+                i += 1
+                
+                # Collect all lines of service_desk_lead
+                while i < len(lines):
+                    next_line = lines[i]
+                    next_stripped = next_line.strip()
+                    
+                    if not next_stripped or next_stripped.startswith('#'):
+                        new_lines.append(next_line)
+                        i += 1
+                        continue
+                    
+                    next_indent = len(next_line) - len(next_line.lstrip())
+                    if next_indent <= role_indent:
+                        break
+                    
+                    new_lines.append(next_line)
+                    i += 1
+                
+                # Insert the moved roles here
+                for role_name in ['it_manager', 'sysop']:
+                    if role_name in role_definitions:
+                        new_lines.append('\n')
+                        new_lines.extend(role_definitions[role_name])
+                
+                inserted_roles = True
+                continue
+            
+            # Keep this line
+            new_lines.append(line)
+            i += 1
+        
+        # Write the modified content back
+        try:
+            with open(self.metadata_file, 'w', encoding='utf-8') as f:
+                f.writelines(new_lines)
+            return True
+        except Exception as e:
+            print(f"Error writing metadata file: {e}")
+            return False
+    
+    def validate_role_structure(self) -> ValidationResult:
+        """
+        Validate role organization and detect duplicates.
+        
+        Checks for:
+        - Duplicate role definitions
+        - Proper section organization
+        - IT operations roles in correct section
+        
+        Returns:
+            ValidationResult with validation status and details
+        """
+        if not self.metadata_file.exists():
+            return ValidationResult(
+                is_valid=False,
+                warnings=[f"Metadata file not found: {self.metadata_file}"]
+            )
+        
+        try:
+            import yaml
+            with open(self.metadata_file, 'r', encoding='utf-8') as f:
+                data = yaml.safe_load(f)
+        except Exception as e:
+            return ValidationResult(
+                is_valid=False,
+                warnings=[f"Error loading YAML file: {e}"]
+            )
+        
+        if 'roles' not in data:
+            return ValidationResult(
+                is_valid=False,
+                warnings=["No roles section found in metadata file"]
+            )
+        
+        roles = data['roles']
+        invalid_fields = []
+        warnings = []
+        
+        # Check for duplicate roles
+        duplicates = self.detect_duplicate_roles()
+        if duplicates:
+            for dup in duplicates:
+                invalid_fields.append(
+                    f"Duplicate role '{dup.role_name}' (duplicate of '{dup.canonical_role}'): {dup.reason}"
+                )
+        
+        # Check role ordering (this is a simplified check)
+        role_names = list(roles.keys())
+        
+        # Check if it_manager and sysop are after service_desk_lead
+        if 'service_desk_lead' in role_names:
+            service_desk_idx = role_names.index('service_desk_lead')
+            
+            if 'it_manager' in role_names:
+                it_manager_idx = role_names.index('it_manager')
+                if it_manager_idx < service_desk_idx:
+                    warnings.append("it_manager should be in IT Operations Roles section (after service_desk_lead)")
+            
+            if 'sysop' in role_names:
+                sysop_idx = role_names.index('sysop')
+                if sysop_idx < service_desk_idx:
+                    warnings.append("sysop should be in IT Operations Roles section (after service_desk_lead)")
+        
+        is_valid = len(invalid_fields) == 0
+        
+        return ValidationResult(
+            is_valid=is_valid,
+            invalid_fields=invalid_fields,
+            warnings=warnings
+        )
+    
+    def update_template_references(self, old_role: str, new_role: str, templates_dir: str = "templates") -> int:
+        """
+        Update template files that reference removed roles.
+        
+        Scans all template markdown files and replaces references to old_role
+        with new_role in placeholder format.
+        
+        Args:
+            old_role: Old role name to replace (e.g., 'datenschutzbeauftragter')
+            new_role: New role name to use (e.g., 'data_protection_officer')
+            templates_dir: Path to templates directory
+        
+        Returns:
+            Number of files updated
+        """
+        templates_path = Path(templates_dir)
+        
+        if not templates_path.exists():
+            print(f"Templates directory not found: {templates_dir}")
+            return 0
+        
+        files_updated = 0
+        
+        # Pattern to match {{ meta.old_role.* }}
+        old_pattern = re.compile(
+            r'\{\{\s*meta\.' + re.escape(old_role) + r'\.([a-zA-Z_]+)\s*\}\}'
+        )
+        
+        # Scan all markdown files
+        for md_file in templates_path.rglob('*.md'):
+            try:
+                content = md_file.read_text(encoding='utf-8')
+            except Exception as e:
+                print(f"Error reading {md_file}: {e}")
+                continue
+            
+            # Check if file contains references to old role
+            if f'meta.{old_role}.' not in content:
+                continue
+            
+            # Replace all occurrences
+            new_content = old_pattern.sub(
+                r'{{ meta.' + new_role + r'.\1 }}',
+                content
+            )
+            
+            if new_content != content:
+                try:
+                    md_file.write_text(new_content, encoding='utf-8')
+                    files_updated += 1
+                    print(f"Updated: {md_file}")
+                except Exception as e:
+                    print(f"Error writing {md_file}: {e}")
+        
+        return files_updated

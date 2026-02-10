@@ -451,3 +451,10 @@ Reference: ISO/IEC 15408-1:2022, Section 8.3.1 (Threats)
 5. Document attack chains
 6. Verify consistency with Assets (Template 0200) and Security Objectives (Template 0300)
 
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

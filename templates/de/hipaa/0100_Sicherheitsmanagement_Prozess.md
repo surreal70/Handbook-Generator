@@ -313,3 +313,11 @@ Nach Implementierung von Kontrollen Risikolevel neu bewerten, um Restrisiko zu b
 | 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Ersterstellung |
 
 <!-- Ende der Vorlage -->
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

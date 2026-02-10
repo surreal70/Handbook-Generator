@@ -304,3 +304,11 @@ Dieses Dokument definiert das interne Auditprogramm von {{ meta.organization }},
 4. Führe Audits gemäß Plan durch
 5. Verfolge Korrekturmaßnahmen
 6. Bewerte Programmwirksamkeit
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

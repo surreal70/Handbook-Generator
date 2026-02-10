@@ -398,3 +398,11 @@ Der TOE bietet folgende Schnittstellenkategorien:
 3. Dokumentiere alle Sicherheitsmechanismen für jede Schnittstelle
 4. Überprüfe die Konsistenz mit der TOE-Architektur (Template 0130)
 5. Stelle sicher, dass alle Schnittstellen vollständig dokumentiert sind
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

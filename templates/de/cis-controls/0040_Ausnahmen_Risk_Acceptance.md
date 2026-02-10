@@ -33,3 +33,11 @@ Risikobasierte, zeitlich befristete Ausnahmen von Hardening-Anforderungen ermög
 | Ausnahme-ID | Asset/Scope | Requirement | Begründung | Kompensationsmaßnahmen | Risiko | Owner | Gültig bis | Status |
 |---|---|---|---|---|---|---|---|---|
 | EX-001 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | Offen |
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

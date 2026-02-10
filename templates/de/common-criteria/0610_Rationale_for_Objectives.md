@@ -326,3 +326,11 @@ Dieses Kapitel liefert die Rationale, die nachweist, dass die definierten Sicher
 5. Führen Sie Vollständigkeits- und Angemessenheitsanalysen durch
 6. Identifizieren und beheben Sie Lücken
 7. Lassen Sie die Rationale durch Evaluatoren prüfen
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

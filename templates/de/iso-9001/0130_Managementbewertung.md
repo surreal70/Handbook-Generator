@@ -410,3 +410,11 @@ Managementbewertung integriert mit:
 4. Erste Managementbewertung durchführen
 5. Maßnahmenverfolgungssystem implementieren
 6. Managementbewertungsprozess überprüfen und verbessern
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

@@ -260,3 +260,10 @@ Nach Ablauf der Speicherdauer müssen Daten:
 4. Dokumentieren Sie Löschkonzept und -protokolle
 5. Schulen Sie Mitarbeiter zu Löschpflichten
 
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

@@ -161,3 +161,11 @@ Referenz: ISO/IEC 15408-1:2022, Abschnitt 8.3 (Conformance Claims)
 2. Verifiziere Konformität mit gewählten Standards
 3. Dokumentiere alle Abweichungen vollständig
 4. Stelle Konsistenz mit anderen ST-Abschnitten sicher
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

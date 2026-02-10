@@ -326,3 +326,11 @@ This chapter provides the rationale demonstrating that the defined security obje
 5. Conduct completeness and adequacy analyses
 6. Identify and address gaps
 7. Have the rationale reviewed by evaluators
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

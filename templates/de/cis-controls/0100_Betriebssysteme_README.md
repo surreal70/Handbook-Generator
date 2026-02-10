@@ -23,3 +23,11 @@ Empfehlung: Erstelle je OS-Version/Edition eine **parameterisierte Baseline** un
 - Linux (Generic): 0130
 - macOS: 0140
 - Container Base Images: 0150
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

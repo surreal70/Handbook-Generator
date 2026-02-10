@@ -179,3 +179,11 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 Datum: {{ meta.document.approval_date }}
 
 **Nächster Review:** {{ meta.document.next_review }} (jährlich oder anlassbezogen)
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

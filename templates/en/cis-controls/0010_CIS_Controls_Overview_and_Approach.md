@@ -35,3 +35,11 @@ Describes how CIS Controls v8 is used as a framework to derive hardening baselin
 - OS Baselines: 0110–0150
 - Application Standards: 0210+
 - Evidence/Reporting: 0410
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

@@ -295,4 +295,12 @@ Die Schutzbedarfsfeststellung wird aktualisiert bei:
 - BSI Standard 200-2: IT-Grundschutz-Methodik (Kapitel 6: Schutzbedarfsfeststellung)
 - BSI IT-Grundschutz-Kompendium
 
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
+
 <!-- End of template -->

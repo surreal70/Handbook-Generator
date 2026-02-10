@@ -34,3 +34,11 @@ Absicherung von Identitätsdiensten als Tier-0-Komponente (AuthN/AuthZ, MFA, Con
 - CA Policies Export: [TODO]
 - Role Assignments Report: [TODO]
 - Audit Log Samples: [TODO]
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

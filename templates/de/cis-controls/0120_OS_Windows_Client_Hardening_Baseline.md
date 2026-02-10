@@ -86,3 +86,11 @@
 - BitLocker/Device Encryption: [TODO]
 - Browser Hardening (Policy): [TODO]
 - USB/Device Control: [TODO]
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

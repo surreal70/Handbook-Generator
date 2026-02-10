@@ -206,3 +206,11 @@ Alle Personen, die Zugang zu personenbezogenen Daten haben, werden auf Vertrauli
 3. Prüfen Sie die Benennungspflicht für einen Datenschutzbeauftragten
 4. Dokumentieren Sie alle Auftragsverarbeiter-Beziehungen
 5. Implementieren Sie ein Schulungsprogramm
+
+---
+
+**Dokumenthistorie:**
+
+| Version | Datum | Autor | Änderungen |
+|---------|-------|-------|------------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

@@ -141,3 +141,11 @@ The controller shall be responsible for, and be able to demonstrate compliance w
 3. Document evidence for accountability
 4. Train employees on principles
 5. Establish regular review processes
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
