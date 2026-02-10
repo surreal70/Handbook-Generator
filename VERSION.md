@@ -1,6 +1,6 @@
 # Version Management
 
-## Current Version: 0.0.6
+## Current Version: 0.0.7
 
 ### Single Source of Truth
 
@@ -33,6 +33,18 @@ To update the version number:
 
 ### Version History
 
+- **0.0.7** (2026-02-10): Template Metadata Standardization
+  - ✅ Unified metadata structure across all 12 frameworks
+  - ✅ Added template_version field (1.0) for template format tracking
+  - ✅ Added revision field (0) for customization tracking
+  - ✅ Service directory reorganization (templates/*/service-directory/)
+  - ✅ Comprehensive metadata validation system
+  - ✅ 100% metadata validation success rate (24/24 files)
+  - ✅ 100/100 metadata standardization tests passing
+  - ✅ Property-based testing with 100+ iterations
+  - ✅ Complete backward compatibility maintained
+  - ✅ Migration guide and documentation updates
+  - ✅ All 12 frameworks standardized (BCM, ISMS, BSI, IT-Ops, CIS, CC, GDPR, HIPAA, ISO 9001, NIST, PCI-DSS, TSC)
 - **0.0.6** (2026-02-10): Final Checkpoint & Quality Improvements
   - ✅ Fixed FRAMEWORK_MAPPING.md naming convention (renamed to 9999_Framework_Mapping.md)
   - ✅ Created missing English framework mapping files (5 frameworks)

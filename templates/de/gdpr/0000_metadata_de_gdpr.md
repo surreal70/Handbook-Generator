@@ -7,6 +7,8 @@
 **Klassifizierung:** {{ meta.classification }}  
 **Letzte Aktualisierung:** {{ meta.date }}  
 
+**Template-Version:** 1.0  
+**Revision:** 0  
 ---
 
 ## Handbuch-Informationen
@@ -45,4 +47,10 @@ Das Datenschutz-Managementsystem gilt für:
 Dieses Dokument ist Teil des DSGVO-Datenschutz-Handbuchs und unterliegt der Dokumentenlenkung
 gemäß den Datenschutzverfahren. Alle Metadaten-Platzhalter (z.B. {{ meta.author }}, {{ meta.version }})
 werden automatisch durch das Handbook-Generator-System ersetzt.
+-->
+
+
+<!-- 
+Dieses Dokument unterliegt der Dokumentenlenkung.
+Template-Version: 1.0 - Revision: 0
 -->

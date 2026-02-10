@@ -93,6 +93,57 @@ Vorlagen sind mit einem 4-stelligen Präfix und 10er-Schritten nummeriert (0010,
 - **0740:** Datenschutzerklärungen
 - **0750:** Glossar und Begriffsdefinitionen
 
+## Metadata-Struktur
+
+Dieses Framework verwendet eine standardisierte Metadatenstruktur mit 13 Pflichtfeldern:
+
+### Metadaten-Datei
+
+**Datei:** `0000_metadata_de_gdpr.md`
+
+Die Metadaten-Datei enthält:
+- **Dokument-ID:** Eindeutige Identifikation (0000)
+- **Owner:** Dokumentenverantwortlicher (`{{ meta.owner }}`)
+- **Version:** Dokumentversion (`{{ meta.version }}`)
+- **Status:** Dokumentstatus (`{{ meta.status }}`)
+- **Klassifizierung:** Sicherheitsklassifizierung (`{{ meta.classification }}`)
+- **Letzte Aktualisierung:** Datum (`{{ meta.date }}`)
+- **Template-Version:** Template-Format-Version (z.B. "1.0")
+- **Revision:** Anpassungs-Revisionsnummer (z.B. "0")
+- **Organisation:** Organisationsname (`{{ meta.organization }}`)
+- **Autor:** Dokumentautor (`{{ meta.author }}`)
+- **Geltungsbereich:** Anwendungsbereich (`{{ meta.scope }}`)
+- **Gültig ab:** Gültigkeitsbeginn (`{{ meta.valid_from }}`)
+- **Nächste Überprüfung:** Überprüfungsdatum (`{{ meta.next_review }}`)
+
+### Template-Versionierung
+
+**Template-Version** (`template_version`):
+- Verfolgt Änderungen am Template-Format
+- Format: `MAJOR.MINOR` (z.B. "1.0", "1.1", "2.0")
+- Ermöglicht Kompatibilitätsprüfung bei Migrationen
+- Wird mit `--test` Flag verwaltet
+
+**Revision** (`revision`):
+- Verfolgt individuelle Anpassungen
+- Format: Integer (z.B. 0, 1, 2, 3)
+- Für zukünftige Customization-Tracking-Funktionalität
+
+### Metadaten validieren
+
+```bash
+# GDPR-Metadaten validieren
+python helpers/validate_metadata.py --framework gdpr
+
+# Alle Frameworks validieren
+python helpers/validate_metadata.py --all
+
+# Bilinguale Konsistenz prüfen
+python helpers/validate_metadata.py --framework gdpr --check-bilingual
+```
+
+Siehe [METADATA_VALIDATION_GUIDE.md](../../../docs/METADATA_VALIDATION_GUIDE.md) für Details.
+
 ## Nutzungshinweise
 
 ### Anpassung

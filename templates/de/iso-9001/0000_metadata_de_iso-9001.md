@@ -7,6 +7,8 @@
 **Klassifizierung:** {{ meta.classification }}  
 **Letzte Aktualisierung:** {{ meta.date }}  
 
+**Template-Version:** 1.0  
+**Revision:** 0  
 ---
 
 ## Handbuch-Informationen
@@ -48,3 +50,9 @@ gemäß den QMS-Verfahren. Alle Metadaten-Platzhalter (z.B. {{ meta.author }}, {
 werden automatisch durch das Handbook-Generator-System ersetzt.
 -->
 
+
+
+<!-- 
+Dieses Dokument unterliegt der Dokumentenlenkung.
+Template-Version: 1.0 - Revision: 0
+-->

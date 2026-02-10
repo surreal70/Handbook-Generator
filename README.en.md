@@ -3,7 +3,7 @@
 <div align="center">
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
-[![Version](https://img.shields.io/badge/version-0.0.6-blue.svg)](VERSION.md)
+[![Version](https://img.shields.io/badge/version-0.0.7-blue.svg)](VERSION.md)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Code Coverage](https://img.shields.io/badge/coverage-84%25-brightgreen.svg)](htmlcov/index.html)
 [![Tests](https://img.shields.io/badge/tests-765%20passed-success.svg)](tests/)
@@ -25,7 +25,7 @@ A Python tool for generating professional handbooks from Markdown templates with
 
 The Handbook Generator creates professional handbooks in various formats (HTML, PDF, Markdown) from structured Markdown templates. The system replaces placeholders in templates with real data from external systems like NetBox and supports multilingual handbooks.
 
-**Version 0.0.6** - Final Checkpoint & Quality Improvements
+**Version 0.0.7** - Template Metadata Standardization
 
 ## Features
 
@@ -46,15 +46,106 @@ The Handbook Generator creates professional handbooks in various formats (HTML, 
 
 ## Handbook Types
 
-| Type | Standard | Templates | Description |
-|------|----------|-----------|-------------|
-| **BCM** | ISO 22301, BSI BCM | 30 | Business Continuity Management |
-| **ISMS** | ISO 27001:2022, Annex A | 71 | Information Security Management System |
-| **BSI Grundschutz** | BSI 200-1/2/3 | 54 | IT-Grundschutz according to BSI |
-| **IT-Operation** | ITIL v4, ISO 20000-1 | 31 | IT Operations Handbook |
-| **CIS Controls** | CIS Controls v8 | 27 | CIS Controls v8 Hardening |
+| Type | Standard | Templates (DE/EN) | Description |
+|------|----------|-------------------|-------------|
+| **BCM** | ISO 22301, BSI BCM | 29/29 | Business Continuity Management |
+| **ISMS** | ISO 27001:2022, Annex A | 70/70 | Information Security Management System |
+| **BSI Grundschutz** | BSI 200-1/2/3 | 54/54 | IT-Grundschutz according to BSI |
+| **IT-Operation** | ITIL v4, ISO 20000-1 | 30/30 | IT Operations Handbook |
+| **CIS Controls** | CIS Controls v8 | 27/27 | CIS Controls v8 Hardening |
+| **Common Criteria** | ISO/IEC 15408 | 35/35 | Common Criteria Security Evaluation |
+| **GDPR** | EU GDPR 2016/679 | 36/36 | General Data Protection Regulation |
+| **HIPAA** | HIPAA Security Rule | 13/13 | Health Insurance Portability and Accountability Act |
+| **ISO 9001** | ISO 9001:2015 | 29/29 | Quality Management System |
+| **NIST 800-53** | NIST SP 800-53 Rev. 5 | 52/52 | NIST Security and Privacy Controls |
+| **PCI-DSS** | PCI-DSS v4.0 | 14/14 | Payment Card Industry Data Security Standard |
+| **TSC** | SOC 2 Trust Services | 17/17 | Trust Services Criteria (SOC 2) |
 
-## New in Version 0.0.6 🎉
+## New in Version 0.0.7 🎉
+
+### Template Metadata Standardization
+
+- ✅ **Unified Metadata Structure** - All 12 frameworks standardized with 13 required fields
+- ✅ **Template Version Tracking** - Added template_version field (1.0) for format tracking
+- ✅ **Revision Number Support** - Added revision field (0) for customization tracking
+- ✅ **Service Directory Reorganization** - Improved structure (templates/*/service-directory/)
+- ✅ **Comprehensive Validation** - 100% validation success rate (24/24 files)
+- ✅ **100 Tests Passing** - All metadata standardization tests passing
+- ✅ **Property-Based Testing** - 100+ iterations per test for correctness validation
+- ✅ **Full Backward Compatibility** - Existing handbooks continue to work
+- ✅ **Migration Guide** - Complete documentation for existing users
+- ✅ **Validation Tools** - New metadata validation and enhancement scripts
+
+### Template Metadata Structure
+
+Each framework now includes a metadata file (`0000_metadata_{lang}_{framework}.md`) with standardized fields:
+
+**Required Fields:**
+- `document_id` - Document identifier (e.g., "0000")
+- `owner` - Document owner (placeholder: `{{ meta.owner }}`)
+- `version` - Document version (placeholder: `{{ meta.version }}`)
+- `status` - Document status (placeholder: `{{ meta.status }}`)
+- `classification` - Security classification (placeholder: `{{ meta.classification }}`)
+- `date` - Last update (placeholder: `{{ meta.date }}`)
+- `template_version` - Template format version (e.g., "1.0")
+- `revision` - Customization revision number (e.g., "0")
+- `organization` - Organization name (placeholder: `{{ meta.organization }}`)
+- `author` - Document author (placeholder: `{{ meta.author }}`)
+- `scope` - Scope of applicability (placeholder: `{{ meta.scope }}`)
+- `valid_from` - Valid from date (placeholder: `{{ meta.valid_from }}`)
+- `next_review` - Next review date (placeholder: `{{ meta.next_review }}`)
+
+### Template Version Tracking
+
+**Template Version** (`template_version`):
+- Tracks changes to the template format itself
+- Format: `MAJOR.MINOR` (e.g., "1.0", "1.1", "2.0")
+- Follows semantic versioning principles
+- Managed with `--test` flag
+- Enables compatibility checking for migrations
+
+**Example:**
+- `1.0` - Initial template version
+- `1.1` - Minor template improvements (backward compatible)
+- `2.0` - Major template structure changes (breaking changes)
+
+**Revision Number** (`revision`):
+- Tracks individual handbook customizations
+- Format: Non-negative integer (e.g., 0, 1, 2, 3)
+- Incremented when handbook is customized
+- Foundation for future customization tracking
+
+### Validation and Tools
+
+**New Validation Script:**
+```bash
+# Validate all frameworks
+python3 helpers/validate_metadata.py --all
+
+# Validate specific framework
+python3 helpers/validate_metadata.py --framework gdpr
+
+# Validate specific language
+python3 helpers/validate_metadata.py --language de
+```
+
+**Metadata Management:**
+```bash
+# Scan metadata status
+python3 examples/scan_metadata.py
+
+# Enhance existing metadata
+python3 examples/enhance_metadata.py
+```
+
+**Validation Checks:**
+- All 13 required fields present
+- Template version format (MAJOR.MINOR)
+- Revision number validity (non-negative integer)
+- Placeholder syntax ({{ source.field }})
+- Bilingual consistency (DE/EN matching)
+
+## New in Version 0.0.6
 
 - ✅ **Seven New Compliance Frameworks** - Common Criteria, GDPR, HIPAA, ISO 9001, NIST 800-53, PCI-DSS, TSC
 - ✅ **300+ New Templates** - Professional templates for all new frameworks (815+ total)

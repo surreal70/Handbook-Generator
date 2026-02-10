@@ -7,6 +7,9 @@
 **Classification:** Confidential  
 **Last Update:** {{ meta.date }}  
 
+**Last Updated:** {{ meta.date }}  
+**Template Version:** 1.0  
+**Revision:** 0  
 ---
 
 ## Handbook Information
@@ -18,6 +21,8 @@
 **Version:** {{ meta.version }}  
 **Scope:** {{ meta.scope }}  
 
+**Valid from:** {{ meta.valid_from }}  
+**Next Review:** {{ meta.next_review }}  
 ---
 
 ## Purpose
@@ -51,6 +56,8 @@ The Security Target follows the structure of ISO/IEC 15408-1:2022 and includes:
 - The ST must be consistent with the chosen Protection Profile (PP)
 - All security requirements must be derived from ISO/IEC 15408-2 and 15408-3
 
+**Valid from:** {{ meta.valid_from }}  
+**Next Review:** {{ meta.next_review }}  
 ---
 
 **Document History:**
@@ -58,3 +65,31 @@ The Security Target follows the structure of ISO/IEC 15408-1:2022 and includes:
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | {{ meta.version }} | {{ meta.date }} | {{ meta.author }} | Initial version |
+
+
+## Document Purpose
+
+[TODO: Add document purpose description]
+
+## Scope
+
+{{ meta.scope }}
+
+## Normative References
+
+[TODO: Add normative references]
+
+## Change History
+
+| Version | Date | Author | Change |
+|---------|------|--------|--------|
+| {{ meta.version }} | {{ meta.date }} | {{ meta.author }} | Initial Version |
+
+<!-- 
+This document is subject to document control.
+
+<!-- 
+This document is subject to document control.
+Template-Version: 1.0
+Revision: 0
+-->

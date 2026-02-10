@@ -3,7 +3,7 @@
 <div align="center">
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
-[![Version](https://img.shields.io/badge/version-0.0.6-blue.svg)](VERSION.md)
+[![Version](https://img.shields.io/badge/version-0.0.7-blue.svg)](VERSION.md)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Code Coverage](https://img.shields.io/badge/coverage-84%25-brightgreen.svg)](htmlcov/index.html)
 [![Tests](https://img.shields.io/badge/tests-765%20passed-success.svg)](tests/)
@@ -25,7 +25,7 @@ Ein Python-Tool zur Generierung professioneller Handbücher aus Markdown-Vorlage
 
 Der Handbuch-Generator erstellt aus strukturierten Markdown-Vorlagen professionelle Handbücher in verschiedenen Formaten (HTML, PDF, Markdown). Das System ersetzt Platzhalter in den Vorlagen durch echte Daten aus externen Systemen wie NetBox und unterstützt mehrsprachige Handbücher.
 
-**Version 0.0.6** - Final Checkpoint & Quality Improvements
+**Version 0.0.7** - Template Metadata Standardization
 
 ## Features
 
@@ -61,6 +61,113 @@ Der Handbuch-Generator erstellt aus strukturierten Markdown-Vorlagen professione
 | **PCI-DSS** | PCI-DSS v4.0 | 14/14 | Payment Card Industry Data Security Standard |
 | **TSC** | SOC 2 Trust Services | 17/17 | Trust Services Criteria (SOC 2) |
 
+## Template Metadata Standardisierung
+
+Alle Template-Frameworks verwenden eine einheitliche Metadatenstruktur für konsistente Dokumenteninformationen und Versionsverwaltung.
+
+### Unified Metadata Structure
+
+Jedes Framework enthält eine Metadaten-Datei (`0000_metadata_{lang}_{framework}.md`) mit standardisierten Feldern:
+
+**Pflichtfelder:**
+- `document_id` - Dokument-Identifikator (z.B. "0000")
+- `owner` - Dokumentenverantwortlicher (Platzhalter: `{{ meta.owner }}`)
+- `version` - Dokumentversion (Platzhalter: `{{ meta.version }}`)
+- `status` - Dokumentstatus (Platzhalter: `{{ meta.status }}`)
+- `classification` - Sicherheitsklassifizierung (Platzhalter: `{{ meta.classification }}`)
+- `date` - Letzte Aktualisierung (Platzhalter: `{{ meta.date }}`)
+- `template_version` - Template-Format-Version (z.B. "1.0")
+- `revision` - Anpassungs-Revisionsnummer (z.B. "0")
+- `organization` - Organisationsname (Platzhalter: `{{ meta.organization }}`)
+- `author` - Dokumentautor (Platzhalter: `{{ meta.author }}`)
+- `scope` - Geltungsbereich (Platzhalter: `{{ meta.scope }}`)
+- `valid_from` - Gültig ab (Platzhalter: `{{ meta.valid_from }}`)
+- `next_review` - Nächste Überprüfung (Platzhalter: `{{ meta.next_review }}`)
+
+### Template Version Tracking
+
+**Template-Version** (`template_version`):
+- Verfolgt Änderungen am Template-Format selbst
+- Format: `MAJOR.MINOR` (z.B. "1.0", "1.1", "2.0")
+- Folgt Semantic Versioning Prinzipien
+- Wird mit `--test` Flag verwaltet
+- Ermöglicht Kompatibilitätsprüfung bei Migrationen
+
+**Beispiel:**
+- `1.0` - Initiale Template-Version
+- `1.1` - Kleinere Template-Verbesserungen (abwärtskompatibel)
+- `2.0` - Größere Template-Strukturänderungen (Breaking Changes)
+
+### Revision Number Support
+
+**Revision** (`revision`):
+- Verfolgt individuelle Anpassungen an spezifischen Handbüchern
+- Format: Integer (z.B. 0, 1, 2, 3)
+- Initial auf "0" gesetzt
+- Für zukünftige Customization-Tracking-Funktionalität vorbereitet
+
+**Verwendung:**
+```yaml
+# In metadata.yaml
+template_version: "1.0"  # Template-Format-Version
+revision: 0              # Individuelle Anpassungen
+```
+
+### Service Directory Reorganisation
+
+Service-bezogene Templates sind in einem dedizierten Verzeichnis organisiert:
+
+```
+templates/
+├── de/
+│   └── service-directory/
+│       ├── email-service/        # E-Mail-Service-Beispiele
+│       └── service-templates/    # Allgemeine Service-Templates
+└── en/
+    └── service-directory/
+        └── service-templates/    # Allgemeine Service-Templates
+```
+
+**Vorteile:**
+- Klarere Repository-Struktur
+- Einfachere Wartung
+- Bessere Trennung von Framework- und Service-Templates
+
+### Metadata Validation
+
+Validieren Sie Metadaten mit dem Validierungsskript:
+
+```bash
+# Alle Frameworks validieren
+python helpers/validate_metadata.py --all
+
+# Einzelnes Framework validieren
+python helpers/validate_metadata.py --framework gdpr
+
+# Nur deutsche Metadaten validieren
+python helpers/validate_metadata.py --language de
+
+# JSON-Report generieren
+python helpers/validate_metadata.py --all --report metadata_report.json
+```
+
+**Validierungsprüfungen:**
+- Vollständigkeit aller Pflichtfelder
+- Template-Version-Format (MAJOR.MINOR)
+- Revisionsnummer-Gültigkeit (nicht-negative Ganzzahl)
+- Bilinguale Konsistenz (DE/EN Struktur-Übereinstimmung)
+- Platzhalter-Syntax (`{{ source.field }}`)
+
+### Backward Compatibility
+
+Das System ist vollständig rückwärtskompatibel:
+- Bestehende Handbücher funktionieren ohne Änderungen
+- Fehlende neue Felder generieren Warnungen (keine Fehler)
+- Platzhalter ohne Daten bleiben erhalten
+- Alte Metadaten-Formate werden unterstützt
+
+Siehe [MIGRATION_GUIDE.md](docs/MIGRATION_GUIDE.md) für Migrationsinformationen.
+
 ## Neu in Version 0.0.6 🎉
 
 - ✅ **Sieben neue Compliance-Frameworks** - Common Criteria, GDPR, HIPAA, ISO 9001, NIST 800-53, PCI-DSS, TSC
@@ -69,6 +176,9 @@ Der Handbuch-Generator erstellt aus strukturierten Markdown-Vorlagen professione
 - ✅ **Fehlende englische Dokumentation** - 5 neue englische Framework-Mapping-Dateien erstellt
 - ✅ **Output-Verzeichnisstruktur korrigiert** - Rückwärtskompatibilität wiederhergestellt
 - ✅ **PDF-Generierung dokumentiert** - Systemanforderungen und Alternativen dokumentiert
+- ✅ **Template Metadata Standardisierung** - Einheitliche Metadatenstruktur über alle Frameworks
+- ✅ **Template-Versionierung** - Version Tracking für Template-Format-Änderungen
+- ✅ **Service-Directory Reorganisation** - Verbesserte Template-Organisation
 - ✅ **82% Testabdeckung** - 941 von 1.149 Tests bestehen
 - ✅ **Produktionsreif** - Alle Kernfunktionen vollständig funktionsfähig
 - ✅ **12 Handbuchtypen gesamt** - Vollständige Compliance-Framework-Abdeckung

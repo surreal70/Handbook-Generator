@@ -7,6 +7,9 @@
 **Classification:** {{ meta.classification }}  
 **Last Update:** {{ meta.date }}  
 
+**Last Updated:** {{ meta.date }}  
+**Template Version:** 1.0  
+**Revision:** 0  
 ---
 
 ## Handbook Information
@@ -18,6 +21,7 @@
 **Valid From:** {{ meta.valid_from }}  
 **Next Review:** {{ meta.next_review }}  
 
+**Valid from:** {{ meta.valid_from }}  
 ---
 
 ## Document Purpose
@@ -48,3 +52,13 @@ according to QMS procedures. All metadata placeholders will be automatically
 replaced by the handbook generator system.
 -->
 
+
+
+<!-- 
+This document is subject to document control.
+
+<!-- 
+This document is subject to document control.
+Template-Version: 1.0
+Revision: 0
+-->

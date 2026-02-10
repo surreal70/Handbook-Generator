@@ -140,12 +140,28 @@ class TemplateManager:
                 category = category_dir.name
                 template_files = []
                 
-                # Collect all .md files in the category directory
-                for template_file in category_dir.glob('*.md'):
-                    template_files.append(template_file)
-                
-                if template_files:
-                    templates[language][category] = template_files
+                # Special handling for service-directory: scan subdirectories
+                if category == 'service-directory':
+                    for service_subdir in category_dir.iterdir():
+                        if not service_subdir.is_dir():
+                            continue
+                        
+                        service_category = service_subdir.name
+                        service_files = []
+                        
+                        # Collect all .md files in the service subdirectory
+                        for template_file in service_subdir.glob('*.md'):
+                            service_files.append(template_file)
+                        
+                        if service_files:
+                            templates[language][service_category] = service_files
+                else:
+                    # Collect all .md files in the category directory
+                    for template_file in category_dir.glob('*.md'):
+                        template_files.append(template_file)
+                    
+                    if template_files:
+                        templates[language][category] = template_files
         
         return templates
     
@@ -210,7 +226,11 @@ class TemplateManager:
         
         # Edge case: No valid templates after parsing
         if not templates:
-            template_path = self.template_root / language / template_type
+            # Construct path (handle service templates)
+            if template_type in ['email-service', 'service-templates']:
+                template_path = self.template_root / language / 'service-directory' / template_type
+            else:
+                template_path = self.template_root / language / template_type
             error_msg = ErrorHandler.empty_template_directory_error(template_path)
             raise ValueError(error_msg)
         
@@ -345,7 +365,11 @@ class TemplateManager:
         
         if language not in discovered:
             available_languages, available_types = self.get_available_options()
-            expected_path = self.template_root / language / template_type
+            # Construct expected path (handle service templates)
+            if template_type in ['email-service', 'service-templates']:
+                expected_path = self.template_root / language / 'service-directory' / template_type
+            else:
+                expected_path = self.template_root / language / template_type
             return ErrorHandler.template_not_found_error(
                 language, template_type, expected_path,
                 available_languages, available_types
@@ -353,7 +377,11 @@ class TemplateManager:
         
         if template_type not in discovered[language]:
             available_languages, available_types = self.get_available_options()
-            expected_path = self.template_root / language / template_type
+            # Construct expected path (handle service templates)
+            if template_type in ['email-service', 'service-templates']:
+                expected_path = self.template_root / language / 'service-directory' / template_type
+            else:
+                expected_path = self.template_root / language / template_type
             return ErrorHandler.template_not_found_error(
                 language, template_type, expected_path,
                 available_languages, available_types
