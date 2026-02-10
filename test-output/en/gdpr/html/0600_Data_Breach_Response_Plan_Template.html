@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0600 - Data Breach Response Plan (Template)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0600</div>
+            <h1>Data Breach Response Plan (Template)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0510_Standard_Contractual_Clauses_SCC.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0610_Breach_Notification_Template_Supervisory_Authority.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="data-breach-response-plan-template">Data Breach Response Plan (Template)</h1>
+<p><strong>Document-ID:</strong> 0600<br />
+<strong>Owner:</strong> {{ meta.owner }}<br />
+<strong>Version:</strong> {{ meta.version }}<br />
+<strong>Status:</strong> Draft<br />
+<strong>Classification:</strong> Confidential<br />
+<strong>Last Update:</strong> {{ meta.date }}  </p>
+<hr />
+<h2 id="purpose">Purpose</h2>
+<p>This response plan defines the steps for managing data breaches at {{ meta.organization }}. It ensures that data breaches are quickly detected, assessed, and handled according to GDPR Art. 33-34.</p>
+<h2 id="scope">Scope</h2>
+<p>This plan applies to all data breaches affecting personal data processed by {{ meta.organization }}.</p>
+<h2 id="breach-response-team">Breach Response Team</h2>
+<h3 id="core-team">Core Team</h3>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Name</th>
+<th>Contact</th>
+<th>Responsibilities</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Incident Commander</strong></td>
+<td>[TODO]</td>
+<td>[TODO: Phone, Email]</td>
+<td>Overall responsibility, decisions</td>
+</tr>
+<tr>
+<td><strong>Data Protection Officer</strong></td>
+<td>[TODO]</td>
+<td>[TODO: Phone, Email]</td>
+<td>Legal assessment, notification obligation</td>
+</tr>
+<tr>
+<td><strong>IT Security Lead</strong></td>
+<td>[TODO]</td>
+<td>[TODO: Phone, Email]</td>
+<td>Technical analysis, containment</td>
+</tr>
+<tr>
+<td><strong>Legal Counsel</strong></td>
+<td>[TODO]</td>
+<td>[TODO: Phone, Email]</td>
+<td>Legal advice</td>
+</tr>
+<tr>
+<td><strong>Communications Lead</strong></td>
+<td>[TODO]</td>
+<td>[TODO: Phone, Email]</td>
+<td>Internal/external communication</td>
+</tr>
+</tbody>
+</table>
+<h3 id="extended-stakeholders">Extended Stakeholders</h3>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Name</th>
+<th>Contact</th>
+<th>When to involve</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Management</strong></td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>For high risk</td>
+</tr>
+<tr>
+<td><strong>HR</strong></td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>For employee data</td>
+</tr>
+<tr>
+<td><strong>Compliance</strong></td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>For regulatory questions</td>
+</tr>
+<tr>
+<td><strong>PR/Marketing</strong></td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>For public communication</td>
+</tr>
+</tbody>
+</table>
+<h2 id="breach-response-process">Breach Response Process</h2>
+<h3 id="phase-1-detection-and-reporting-0-2-hours">Phase 1: Detection and Reporting (0-2 hours)</h3>
+<h4 id="11-detect-breach">1.1 Detect Breach</h4>
+<p><strong>Detection Sources:</strong>
+- Monitoring systems and alerts
+- Employee reports
+- External reports (customers, partners)
+- Audit findings
+- Media reports</p>
+<h4 id="12-initial-report">1.2 Initial Report</h4>
+<p><strong>Who reports:</strong>
+- Any employee who discovers a potential data breach</p>
+<p><strong>To whom:</strong>
+- IT Security: [TODO: Email/Phone]
+- Data Protection Officer: [TODO: Email/Phone]</p>
+<p><strong>Report Form:</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="n">INITIAL</span><span class="w"> </span><span class="n">BREACH</span><span class="w"> </span><span class="n">REPORT</span>
+
+<span class="nl">Reporter</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="n">Name</span><span class="p">,</span><span class="w"> </span><span class="n">Department</span><span class="p">,</span><span class="w"> </span><span class="n">Contact</span><span class="p">]</span>
+<span class="n">Date</span><span class="o">/</span><span class="n">Time</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">Discovery</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="n">YYYY</span><span class="o">-</span><span class="n">MM</span><span class="o">-</span><span class="n">DD</span><span class="w"> </span><span class="n">HH</span><span class="o">:</span><span class="n">MM</span><span class="p">]</span>
+<span class="n">Discovery</span><span class="w"> </span><span class="n">Method</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="n">Monitoring</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">Employee</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">External</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">Audit</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">Other</span><span class="p">]</span>
+
+<span class="n">Brief</span><span class="w"> </span><span class="n">Description</span><span class="o">:</span>
+<span class="p">[</span><span class="n">What</span><span class="w"> </span><span class="n">happened</span><span class="o">?</span><span class="p">]</span>
+
+<span class="n">Affected</span><span class="w"> </span><span class="n">Systems</span><span class="o">:</span>
+<span class="p">[</span><span class="n">Which</span><span class="w"> </span><span class="n">systems</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">affected</span><span class="o">?</span><span class="p">]</span>
+
+<span class="n">Affected</span><span class="w"> </span><span class="n">Data</span><span class="w"> </span><span class="p">(</span><span class="n">initial</span><span class="w"> </span><span class="n">assessment</span><span class="p">)</span><span class="o">:</span>
+<span class="p">[</span><span class="n">What</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">data</span><span class="o">?</span><span class="p">]</span>
+
+<span class="n">Number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">Data</span><span class="w"> </span><span class="n">Subjects</span><span class="w"> </span><span class="p">(</span><span class="n">estimate</span><span class="p">)</span><span class="o">:</span>
+<span class="p">[</span><span class="n">Approximate</span><span class="w"> </span><span class="n">number</span><span class="p">]</span>
+
+<span class="n">Immediate</span><span class="w"> </span><span class="n">Actions</span><span class="w"> </span><span class="n">Taken</span><span class="o">:</span>
+<span class="p">[</span><span class="n">What</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">been</span><span class="w"> </span><span class="n">done</span><span class="w"> </span><span class="n">already</span><span class="o">?</span><span class="p">]</span>
+</code></pre></div>
+
+<h4 id="13-activate-breach-response-team">1.3 Activate Breach Response Team</h4>
+<p><strong>Incident Commander:</strong>
+- Activates core team
+- Schedules initial meeting (within 2 hours)
+- Creates Breach-ID: <code>BREACH-[YYYY]-[NNN]</code></p>
+<h3 id="phase-2-assessment-and-containment-2-12-hours">Phase 2: Assessment and Containment (2-12 hours)</h3>
+<h4 id="21-initial-assessment">2.1 Initial Assessment</h4>
+<p><strong>Checklist:</strong>
+- [ ] Is there actually a data breach?
+- [ ] Which category: Confidentiality / Integrity / Availability?
+- [ ] What data is affected?
+- [ ] How many persons are affected?
+- [ ] Are special categories (Art. 9) affected?
+- [ ] How did the breach occur?
+- [ ] Is the breach still active?</p>
+<p><strong>Documentation:</strong>
+- Document all findings in breach register
+- Secure screenshots and logs
+- Forensic preservation if needed</p>
+<h4 id="22-immediate-containment">2.2 Immediate Containment</h4>
+<p><strong>Technical Measures:</strong>
+- [ ] Isolate affected systems
+- [ ] Block access
+- [ ] Reset passwords
+- [ ] Close security gaps
+- [ ] Prevent further data loss</p>
+<p><strong>Responsible:</strong> IT Security Lead</p>
+<p><strong>Timeframe:</strong> Within 4 hours</p>
+<h4 id="23-scope-determination">2.3 Scope Determination</h4>
+<p><strong>To clarify:</strong>
+- Exact number of affected persons
+- Exact data categories
+- Period of breach
+- Cause of breach
+- Potential impacts</p>
+<p><strong>Methods:</strong>
+- Log analysis
+- Database queries
+- System forensics
+- Interviews with involved parties</p>
+<h3 id="phase-3-risk-assessment-12-24-hours">Phase 3: Risk Assessment (12-24 hours)</h3>
+<h4 id="31-assess-risk-to-data-subjects">3.1 Assess Risk to Data Subjects</h4>
+<p><strong>Assessment Criteria:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Assessment</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type of Data</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- General contact data</td>
+<td>Low</td>
+<td>1</td>
+</tr>
+<tr>
+<td>- Financial data, credentials</td>
+<td>Medium</td>
+<td>2</td>
+</tr>
+<tr>
+<td>- Special categories (Art. 9)</td>
+<td>High</td>
+<td>3</td>
+</tr>
+<tr>
+<td><strong>Number of Data Subjects</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- &lt; 100 persons</td>
+<td>Low</td>
+<td>1</td>
+</tr>
+<tr>
+<td>- 100-1,000 persons</td>
+<td>Medium</td>
+<td>2</td>
+</tr>
+<tr>
+<td>- &gt; 1,000 persons</td>
+<td>High</td>
+<td>3</td>
+</tr>
+<tr>
+<td><strong>Protective Measures</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- Encrypted, pseudonymized</td>
+<td>Low</td>
+<td>1</td>
+</tr>
+<tr>
+<td>- Partially protected</td>
+<td>Medium</td>
+<td>2</td>
+</tr>
+<tr>
+<td>- Unencrypted, plaintext</td>
+<td>High</td>
+<td>3</td>
+</tr>
+<tr>
+<td><strong>Data Subjects</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- Employees (internal)</td>
+<td>Low</td>
+<td>1</td>
+</tr>
+<tr>
+<td>- Customers, partners</td>
+<td>Medium</td>
+<td>2</td>
+</tr>
+<tr>
+<td>- Children, vulnerable groups</td>
+<td>High</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Overall Risk:</strong>
+- 4-6 points: Low risk
+- 7-9 points: Medium risk (notification required)
+- 10-12 points: High risk (notification + communication required)</p>
+<h4 id="32-check-notification-obligation">3.2 Check Notification Obligation</h4>
+<p><strong>Decision Tree:</strong></p>
+<div class="codehilite"><pre><span></span><code>Data breach confirmed?
+├─ No → Document, no further action required
+└─ Yes → Risk to rights and freedoms?
+    ├─ No (&lt; 7 points) → Only document
+    └─ Yes (≥ 7 points) → Notification to supervisory authority required
+        └─ High risk (≥ 10 points)?
+            ├─ No → Only notification
+            └─ Yes → Notification + Communication to data subjects
+</code></pre></div>
+
+<p><strong>Responsible:</strong> Data Protection Officer</p>
+<h3 id="phase-4-notification-and-communication-24-72-hours">Phase 4: Notification and Communication (24-72 hours)</h3>
+<h4 id="41-notification-to-supervisory-authority-if-required">4.1 Notification to Supervisory Authority (if required)</h4>
+<p><strong>Deadline:</strong> 72 hours from awareness</p>
+<p><strong>Competent Authority:</strong>
+- Name: [TODO: e.g., Data Protection Authority]
+- Notification Portal: [TODO: URL]
+- Contact: [TODO: Email, Phone]</p>
+<p><strong>Prepare Notification:</strong>
+- Use Template 0610 (Breach Notification Template)
+- Compile all required information
+- Have Data Protection Officer review
+- Obtain management approval</p>
+<p><strong>Responsible:</strong> Data Protection Officer</p>
+<h4 id="42-communication-to-data-subjects-if-required">4.2 Communication to Data Subjects (if required)</h4>
+<p><strong>Prerequisite:</strong> High risk (≥ 10 points)</p>
+<p><strong>Exceptions (no communication):</strong>
+- Data was encrypted/pseudonymized
+- Subsequent measures eliminate high risk
+- Disproportionate effort (then public communication)</p>
+<p><strong>Prepare Communication:</strong>
+- Use Template 0620 (Breach Communication Template)
+- Clear, understandable language
+- Concrete action recommendations
+- Contact options</p>
+<p><strong>Communication Channels:</strong>
+- Email (preferred)
+- Letter (if no email)
+- Public announcement (if disproportionate effort)</p>
+<p><strong>Responsible:</strong> Communications Lead, Data Protection Officer</p>
+<h4 id="43-internal-communication">4.3 Internal Communication</h4>
+<p><strong>To inform:</strong>
+- Management
+- Affected departments
+- Works council (for employee data)
+- All employees (if needed)</p>
+<p><strong>Communication Plan:</strong>
+- Initial information: Within 24 hours
+- Regular updates: Daily during active phase
+- Final report: After incident closure</p>
+<h3 id="phase-5-recovery-72-hours-weeks">Phase 5: Recovery (72 hours - weeks)</h3>
+<h4 id="51-restore-systems">5.1 Restore Systems</h4>
+<p><strong>Checklist:</strong>
+- [ ] Security gaps closed
+- [ ] Systems patched/updated
+- [ ] Access controls reviewed
+- [ ] Monitoring enhanced
+- [ ] Backup strategy reviewed</p>
+<p><strong>Responsible:</strong> IT Security Lead</p>
+<h4 id="52-preventive-measures">5.2 Preventive Measures</h4>
+<p><strong>To implement:</strong>
+- Technical improvements
+- Process adjustments
+- Training
+- Enhanced monitoring</p>
+<h3 id="phase-6-post-incident-review-after-completion">Phase 6: Post-Incident Review (After completion)</h3>
+<h4 id="61-post-breach-review">6.1 Post-Breach Review</h4>
+<p><strong>Use Template 0640 (Post-Breach Review Template)</strong></p>
+<p><strong>To be conducted within:</strong> 2 weeks after incident closure</p>
+<p><strong>Participants:</strong>
+- Breach Response Team
+- Affected departments
+- Management</p>
+<p><strong>Topics:</strong>
+- What went well?
+- What went poorly?
+- Lessons learned
+- Improvement measures</p>
+<h4 id="62-complete-documentation">6.2 Complete Documentation</h4>
+<p><strong>Checklist:</strong>
+- [ ] Breach register updated
+- [ ] All notifications archived
+- [ ] Timeline documented
+- [ ] Costs recorded
+- [ ] Measures documented</p>
+<p><strong>Retention Period:</strong> At least 3 years</p>
+<h2 id="communication-guidelines">Communication Guidelines</h2>
+<h3 id="internal-communication">Internal Communication</h3>
+<p><strong>Principles:</strong>
+- Transparent but confidential
+- Fact-based
+- Regular updates
+- Clear responsibilities</p>
+<h3 id="external-communication">External Communication</h3>
+<p><strong>Principles:</strong>
+- Only through authorized spokespersons
+- Coordinated with Legal and Data Protection Officer
+- No speculation
+- Focus on measures and support</p>
+<p><strong>Media Inquiries:</strong>
+- All inquiries to Communications Lead
+- No spontaneous statements
+- Preparation of Q&amp;A</p>
+<h2 id="escalation">Escalation</h2>
+<h3 id="escalation-levels">Escalation Levels</h3>
+<p><strong>Level 1: Routine</strong>
+- Low risk
+- &lt; 100 data subjects
+- No special categories
+- Core team sufficient</p>
+<p><strong>Level 2: Elevated</strong>
+- Medium risk
+- 100-1,000 data subjects
+- Notification obligation
+- Inform management</p>
+<p><strong>Level 3: Critical</strong>
+- High risk
+- &gt; 1,000 data subjects
+- Special categories
+- Communication obligation
+- Actively involve management
+- Consider external advisors</p>
+<p><strong>Level 4: Crisis</strong>
+- Very high risk
+- Massive impact
+- Public interest
+- Activate crisis management
+- External PR support
+- Inform supervisory board</p>
+<h2 id="contacts-and-resources">Contacts and Resources</h2>
+<h3 id="internal-contacts">Internal Contacts</h3>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Name</th>
+<th>Phone</th>
+<th>Email</th>
+<th>Availability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Incident Commander</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>24/7</td>
+</tr>
+<tr>
+<td>Data Protection Officer</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>24/7</td>
+</tr>
+<tr>
+<td>IT Security Lead</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>24/7</td>
+</tr>
+<tr>
+<td>Legal Counsel</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Business hours</td>
+</tr>
+<tr>
+<td>Communications Lead</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Business hours</td>
+</tr>
+</tbody>
+</table>
+<h3 id="external-contacts">External Contacts</h3>
+<table>
+<thead>
+<tr>
+<th>Organization</th>
+<th>Contact</th>
+<th>Phone</th>
+<th>Email</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Supervisory Authority</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Notification</td>
+</tr>
+<tr>
+<td>Forensics Provider</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Analysis</td>
+</tr>
+<tr>
+<td>External Lawyer</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Advice</td>
+</tr>
+<tr>
+<td>PR Agency</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Crisis communication</td>
+</tr>
+<tr>
+<td>Cyber Insurance</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Claim reporting</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tools-and-systems">Tools and Systems</h3>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Purpose</th>
+<th>Access</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: SIEM]</td>
+<td>Monitoring, log analysis</td>
+<td>[TODO: URL]</td>
+</tr>
+<tr>
+<td>[TODO: Ticketing System]</td>
+<td>Incident tracking</td>
+<td>[TODO: URL]</td>
+</tr>
+<tr>
+<td>[TODO: Breach Register]</td>
+<td>Documentation</td>
+<td>[TODO: URL/File]</td>
+</tr>
+<tr>
+<td>[TODO: Communication Platform]</td>
+<td>Team coordination</td>
+<td>[TODO: URL]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="appendices">Appendices</h2>
+<ul>
+<li><strong>Template 0610:</strong> Breach Notification Template (Supervisory Authority)</li>
+<li><strong>Template 0620:</strong> Breach Communication Template (Data Subjects)</li>
+<li><strong>Template 0630:</strong> Breach Register Template</li>
+<li><strong>Template 0640:</strong> Post-Breach Review Template</li>
+</ul>
+<hr />
+<p><strong>Next Steps:</strong>
+1. Adapt this plan to your organization
+2. Define all roles and contacts
+3. Conduct breach response exercises (at least annually)
+4. Keep the plan current
+5. Ensure all team members know the plan</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0510_Standard_Contractual_Clauses_SCC.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0610_Breach_Notification_Template_Supervisory_Authority.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

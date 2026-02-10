@@ -377,6 +377,184 @@ class TemplateValidator:
                     )
         
         return warnings
+
+    def validate_framework(self, language: str, framework: str, templates_base_dir: Path = None) -> ValidationResult:
+        """
+        Validate all templates in a framework.
+
+        Checks:
+        - File naming convention (NNNN_name.md)
+        - Unique template numbers
+        - Metadata template exists
+        - README.md exists
+        - Placeholder syntax
+        - Bilingual consistency (if both languages present)
+
+        Args:
+            language: Language code (de, en)
+            framework: Framework name (pci-dss, hipaa, nist-800-53, etc.)
+            templates_base_dir: Base directory for templates (defaults to ./templates)
+
+        Returns:
+            ValidationResult with errors and warnings
+        """
+        result = ValidationResult(is_valid=True, warnings=[], errors=[])
+
+        if templates_base_dir is None:
+            templates_base_dir = Path("templates")
+
+        template_dir = templates_base_dir / language / framework
+
+        # Check directory exists
+        if not template_dir.exists():
+            result.add_error(f"Template directory not found: {template_dir}")
+            return result
+
+        # Check README exists
+        readme_path = template_dir / "README.md"
+        if not readme_path.exists():
+            result.add_warning(f"README.md not found in {template_dir}")
+
+        # Check metadata template exists
+        metadata_pattern = f"0000_metadata_{language}_{framework}.md"
+        metadata_path = template_dir / metadata_pattern
+        if not metadata_path.exists():
+            result.add_error(f"Metadata template not found: {metadata_pattern}")
+
+        # Validate each template file
+        template_numbers = set()
+        for file_path in template_dir.glob("*.md"):
+            # Skip special files
+            if file_path.name in ["README.md", "FRAMEWORK_MAPPING.md"]:
+                continue
+
+            # Validate filename format (NNNN_name.md)
+            if not re.match(r'^\d{4}_[\w\-äöüÄÖÜß]+\.md$', file_path.name):
+                result.add_error(f"Invalid filename format: {file_path.name} (expected NNNN_name.md)")
+                continue
+
+            # Check for duplicate numbers
+            number = int(file_path.name[:4])
+            if number in template_numbers:
+                result.add_error(f"Duplicate template number: {number:04d}")
+            template_numbers.add(number)
+
+            # Validate template content
+            self._validate_template_content(file_path, result)
+
+        # Check bilingual consistency if this is German
+        if language == 'de':
+            self._check_bilingual_consistency(framework, templates_base_dir, result)
+
+        return result
+
+    def _validate_template_content(self, file_path: Path, result: ValidationResult) -> None:
+        """
+        Validate individual template content.
+
+        Args:
+            file_path: Path to template file
+            result: ValidationResult to add warnings/errors to
+        """
+        try:
+            content = file_path.read_text(encoding='utf-8')
+        except Exception as e:
+            result.add_error(f"{file_path.name}: Failed to read file: {e}")
+            return
+
+        # Check for required header fields (for non-metadata templates)
+        if not file_path.name.startswith('0000_metadata'):
+            required_fields = ['Dokument-ID', 'Owner', 'Version', 'Status']
+            for field in required_fields:
+                if f"**{field}:**" not in content and f"**{field}**:" not in content:
+                    result.add_warning(f"{file_path.name}: Missing header field '{field}'")
+
+        # Validate placeholder syntax
+        placeholders = re.findall(r'\{\{[^}]+\}\}', content)
+        for placeholder in placeholders:
+            # Valid format: {{ source.field }} or {{ source.nested.field }}
+            if not re.match(r'^\{\{\s*[a-zA-Z0-9_]+\.[a-zA-Z0-9_.]+\s*\}\}$', placeholder):
+                result.add_error(f"{file_path.name}: Invalid placeholder syntax: {placeholder}")
+
+    def _check_bilingual_consistency(self, framework: str, templates_base_dir: Path, result: ValidationResult) -> None:
+        """
+        Check that German and English templates match in structure.
+
+        Args:
+            framework: Framework name
+            templates_base_dir: Base directory for templates
+            result: ValidationResult to add warnings/errors to
+        """
+        de_dir = templates_base_dir / 'de' / framework
+        en_dir = templates_base_dir / 'en' / framework
+
+        if not en_dir.exists():
+            result.add_warning(f"English templates not found for framework '{framework}'")
+            return
+
+        de_files = {f.name for f in de_dir.glob("*.md") if f.name not in ["README.md", "FRAMEWORK_MAPPING.md"]}
+        en_files = {f.name for f in en_dir.glob("*.md") if f.name not in ["README.md", "FRAMEWORK_MAPPING.md"]}
+
+        # Extract template numbers for comparison
+        de_numbers = {int(f[:4]) for f in de_files if re.match(r'^\d{4}_', f)}
+        en_numbers = {int(f[:4]) for f in en_files if re.match(r'^\d{4}_', f)}
+
+        # Check for missing translations by number
+        missing_en = de_numbers - en_numbers
+        missing_de = en_numbers - de_numbers
+
+        if missing_en:
+            result.add_warning(f"Missing English translations for template numbers: {sorted(missing_en)}")
+        if missing_de:
+            result.add_warning(f"Missing German translations for template numbers: {sorted(missing_de)}")
+
+        # Check matching markdown structure for common templates
+        common_numbers = de_numbers & en_numbers
+        for number in common_numbers:
+            de_file = next((f for f in de_dir.glob(f"{number:04d}_*.md")), None)
+            en_file = next((f for f in en_dir.glob(f"{number:04d}_*.md")), None)
+
+            if de_file and en_file:
+                self._check_matching_structure(de_file, en_file, result)
+
+    def _check_matching_structure(self, de_file: Path, en_file: Path, result: ValidationResult) -> None:
+        """
+        Check that two template files have matching markdown structure.
+
+        Args:
+            de_file: German template file
+            en_file: English template file
+            result: ValidationResult to add warnings/errors to
+        """
+        try:
+            de_content = de_file.read_text(encoding='utf-8')
+            en_content = en_file.read_text(encoding='utf-8')
+        except Exception as e:
+            result.add_warning(f"Failed to read files for structure comparison: {e}")
+            return
+
+        # Extract markdown headers
+        de_headers = re.findall(r'^#{1,6}\s+.+$', de_content, re.MULTILINE)
+        en_headers = re.findall(r'^#{1,6}\s+.+$', en_content, re.MULTILINE)
+
+        # Check header count matches
+        if len(de_headers) != len(en_headers):
+            result.add_warning(
+                f"Structure mismatch between {de_file.name} and {en_file.name}: "
+                f"Different number of headers ({len(de_headers)} vs {len(en_headers)})"
+            )
+
+        # Extract placeholders
+        de_placeholders = re.findall(r'\{\{[^}]+\}\}', de_content)
+        en_placeholders = re.findall(r'\{\{[^}]+\}\}', en_content)
+
+        # Check placeholder positions match (same placeholders in same order)
+        if de_placeholders != en_placeholders:
+            result.add_warning(
+                f"Placeholder mismatch between {de_file.name} and {en_file.name}: "
+                f"Placeholders differ or are in different positions"
+            )
+
     
     def validate_template_directory(
         self,

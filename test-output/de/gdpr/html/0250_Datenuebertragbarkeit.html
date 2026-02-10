@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0250 - Datenübertragbarkeit</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0250</div>
+            <h1>Datenübertragbarkeit</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0240_Einschraenkung_und_Widerspruch.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0300_Verantwortlicher_Pflichten_und_Rechenschaftspflicht.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="datenubertragbarkeit">Datenübertragbarkeit</h1>
+<p><strong>Dokument-ID:</strong> 0250<br />
+<strong>Owner:</strong> {{ meta.owner }}<br />
+<strong>Version:</strong> {{ meta.version }}<br />
+<strong>Status:</strong> Entwurf<br />
+<strong>Klassifizierung:</strong> Intern<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.date }}  </p>
+<hr />
+<h2 id="zweck">Zweck</h2>
+<p>Dieses Dokument beschreibt die Umsetzung des Rechts auf Datenübertragbarkeit in der {{ meta.organization }}. Betroffene Personen haben das Recht, ihre Daten in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten.</p>
+<h2 id="recht-auf-datenubertragbarkeit-art-20">Recht auf Datenübertragbarkeit (Art. 20)</h2>
+<h3 id="voraussetzungen">Voraussetzungen</h3>
+<p><strong>Datenübertragbarkeit gilt nur, wenn:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Voraussetzung</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rechtsgrundlage</td>
+<td>Einwilligung (Art. 6 Abs. 1 lit. a) oder Vertrag (Art. 6 Abs. 1 lit. b)</td>
+</tr>
+<tr>
+<td>Bereitstellung</td>
+<td>Daten wurden von betroffener Person bereitgestellt</td>
+</tr>
+<tr>
+<td>Automatisierte Verarbeitung</td>
+<td>Verarbeitung erfolgt automatisiert</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Nicht anwendbar bei:</strong>
+- Verarbeitung aufgrund anderer Rechtsgrundlagen (lit. c, d, e, f)
+- Nicht automatisierte Verarbeitung
+- Daten, die nicht von betroffener Person bereitgestellt wurden</p>
+<h3 id="umfang-der-datenubertragbarkeit">Umfang der Datenübertragbarkeit</h3>
+<p><strong>Betroffene Daten:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Datenart</th>
+<th>Übertragbar?</th>
+<th>Begründung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Von Person bereitgestellt</td>
+<td>Ja</td>
+<td>Direkt eingegeben oder hochgeladen</td>
+</tr>
+<tr>
+<td>Durch Beobachtung generiert</td>
+<td>Ja</td>
+<td>Nutzungsdaten, Standortdaten</td>
+</tr>
+<tr>
+<td>Abgeleitete/berechnete Daten</td>
+<td>Nein</td>
+<td>Algorithmen, Analysen, Profile</td>
+</tr>
+<tr>
+<td>Daten Dritter</td>
+<td>Nein</td>
+<td>Rechte Dritter betroffen</td>
+</tr>
+</tbody>
+</table>
+<h3 id="zwei-varianten">Zwei Varianten</h3>
+<p><strong>1. Übertragung an betroffene Person:</strong>
+- Bereitstellung in strukturiertem Format
+- Gängiges Format (CSV, JSON, XML)
+- Maschinenlesbar</p>
+<p><strong>2. Direkte Übertragung an anderen Verantwortlichen:</strong>
+- Soweit technisch machbar
+- Direkte Übermittlung
+- Keine Verpflichtung bei fehlender Schnittstelle</p>
+<h2 id="technische-umsetzung">Technische Umsetzung</h2>
+<h3 id="datenformate">Datenformate</h3>
+<p><strong>Unterstützte Formate:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Format</th>
+<th>Beschreibung</th>
+<th>Anwendungsfall</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: JSON]</td>
+<td>JavaScript Object Notation</td>
+<td>Standard für strukturierte Daten</td>
+</tr>
+<tr>
+<td>[TODO: CSV]</td>
+<td>Comma-Separated Values</td>
+<td>Tabellarische Daten</td>
+</tr>
+<tr>
+<td>[TODO: XML]</td>
+<td>Extensible Markup Language</td>
+<td>Hierarchische Daten</td>
+</tr>
+<tr>
+<td>[TODO: PDF]</td>
+<td>Portable Document Format</td>
+<td>Lesbare Darstellung (zusätzlich)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="datenstruktur">Datenstruktur</h3>
+<p><strong>Beispiel JSON-Struktur:</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;export_date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-01-15&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;data_subject&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;12345&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Max Mustermann&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;max@example.com&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;personal_data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;profile&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;created&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-01-01&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;last_updated&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-01-10&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;fields&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Max Mustermann&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;max@example.com&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;phone&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;+49123456789&quot;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;orders&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;order_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ORD-001&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2023-12-01&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">]</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;usage_data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;logins&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span>
+<span class="w">      </span><span class="nt">&quot;page_views&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="schnittstellen">Schnittstellen</h3>
+<p><strong>Technische Übertragungsmöglichkeiten:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Methode</th>
+<th>Beschreibung</th>
+<th>Implementierung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Download-Portal]</td>
+<td>Selbstbedienungsportal</td>
+<td>Web-Interface</td>
+</tr>
+<tr>
+<td>[TODO: API]</td>
+<td>Programmatische Schnittstelle</td>
+<td>REST API</td>
+</tr>
+<tr>
+<td>[TODO: E-Mail]</td>
+<td>Versand als Anhang</td>
+<td>Verschlüsselt</td>
+</tr>
+<tr>
+<td>[TODO: Direkte Übertragung]</td>
+<td>An anderen Verantwortlichen</td>
+<td>API-to-API</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ubertragungsprozess">Übertragungsprozess</h2>
+<h3 id="prozess-fur-datenubertragbarkeitsanfragen">Prozess für Datenübertragbarkeitsanfragen</h3>
+<p><strong>Standardprozess:</strong></p>
+<ol>
+<li><strong>Eingang der Anfrage (Tag 0)</strong></li>
+<li>Registrierung</li>
+<li>Eingangsbestätigung</li>
+<li>
+<p>Klärung: An Person oder anderen Verantwortlichen?</p>
+</li>
+<li>
+<p><strong>Prüfung (Tag 1-10)</strong></p>
+</li>
+<li>Identifikation der betroffenen Person</li>
+<li>Prüfung der Voraussetzungen</li>
+<li>
+<p>Identifikation übertragbarer Daten</p>
+</li>
+<li>
+<p><strong>Datenexport (Tag 11-20)</strong></p>
+</li>
+<li>Zusammenstellung der Daten</li>
+<li>Konvertierung in gewünschtes Format</li>
+<li>
+<p>Qualitätsprüfung</p>
+</li>
+<li>
+<p><strong>Übertragung (Tag 21-25)</strong></p>
+</li>
+<li>Bereitstellung zum Download oder</li>
+<li>Direkte Übertragung an anderen Verantwortlichen</li>
+<li>
+<p>Dokumentation</p>
+</li>
+<li>
+<p><strong>Rückmeldung (Tag 26-30)</strong></p>
+</li>
+<li>Information über Bereitstellung</li>
+<li>Zugangslink oder Bestätigung der Übertragung</li>
+</ol>
+<h3 id="direkte-ubertragung">Direkte Übertragung</h3>
+<p><strong>Prozess für direkte Übertragung:</strong></p>
+<ol>
+<li><strong>Identifikation des Empfängers</strong></li>
+<li>Name und Kontaktdaten</li>
+<li>
+<p>Technische Schnittstelle</p>
+</li>
+<li>
+<p><strong>Prüfung der technischen Machbarkeit</strong></p>
+</li>
+<li>Verfügbarkeit von Schnittstellen</li>
+<li>
+<p>Kompatibilität der Formate</p>
+</li>
+<li>
+<p><strong>Durchführung der Übertragung</strong></p>
+</li>
+<li>Sichere Übermittlung</li>
+<li>Bestätigung des Empfangs</li>
+<li>Dokumentation</li>
+</ol>
+<p><strong>Bei fehlender technischer Machbarkeit:</strong>
+- Bereitstellung an betroffene Person
+- Information über fehlende Schnittstelle</p>
+<h2 id="ausnahmen-und-einschrankungen">Ausnahmen und Einschränkungen</h2>
+<h3 id="rechte-und-freiheiten-dritter-art-20-abs-4">Rechte und Freiheiten Dritter (Art. 20 Abs. 4)</h3>
+<p><strong>Datenübertragbarkeit darf nicht beeinträchtigen:</strong>
+- Rechte und Freiheiten anderer Personen
+- Geschäftsgeheimnisse
+- Geistiges Eigentum</p>
+<p><strong>Maßnahmen:</strong>
+- Anonymisierung von Drittdaten
+- Ausschluss geschützter Informationen
+- Begründung bei Einschränkung</p>
+<h3 id="keine-loschpflicht">Keine Löschpflicht</h3>
+<p><strong>Datenübertragbarkeit bedeutet nicht:</strong>
+- Automatische Löschung beim Verantwortlichen
+- Beendigung der Verarbeitung
+- Separate Löschanfrage erforderlich</p>
+<h2 id="dokumentation">Dokumentation</h2>
+<h3 id="datenubertragbarkeitsregister">Datenübertragbarkeitsregister</h3>
+<table>
+<thead>
+<tr>
+<th>Datum</th>
+<th>Betroffene Person</th>
+<th>Format</th>
+<th>Empfänger</th>
+<th>Umfang</th>
+<th>Status</th>
+<th>Bearbeiter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>JSON</td>
+<td>Betroffene Person</td>
+<td>Vollständig</td>
+<td>Bereitgestellt</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>CSV</td>
+<td>Anderer Verantwortlicher</td>
+<td>Vollständig</td>
+<td>Übertragen</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>JSON</td>
+<td>Betroffene Person</td>
+<td>Teilweise (Drittrechte)</td>
+<td>Bereitgestellt</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="nachweispflichten">Nachweispflichten</h3>
+<p><strong>Dokumentation für Accountability:</strong>
+- Alle Datenübertragbarkeitsanfragen
+- Bereitgestellte Daten und Formate
+- Direkte Übertragungen
+- Einschränkungen und deren Begründung
+- Technische Machbarkeitsprüfungen</p>
+<h2 id="fristen">Fristen</h2>
+<p><strong>Bearbeitungsfrist:</strong>
+- Unverzüglich, spätestens 1 Monat
+- Verlängerung um 2 Monate bei Komplexität möglich
+- Begründung der Verlängerung erforderlich</p>
+<h2 id="verknupfung-zu-anderen-dokumenten">Verknüpfung zu anderen Dokumenten</h2>
+<ul>
+<li><strong>Transparenz (Art. 12):</strong> Modalitäten der Übertragung</li>
+<li><strong>Rechtsgrundlagen (Art. 6):</strong> Voraussetzungen für Übertragbarkeit</li>
+<li><strong>Informationspflichten (Art. 13-14):</strong> Information über Recht</li>
+<li><strong>Auskunftsrecht (Art. 15):</strong> Ergänzendes Recht</li>
+</ul>
+<h2 id="haufige-verstoe-und-deren-vermeidung">Häufige Verstöße und deren Vermeidung</h2>
+<table>
+<thead>
+<tr>
+<th>Verstoß</th>
+<th>Beispiel</th>
+<th>Vermeidung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unstrukturiertes Format</td>
+<td>PDF-Scan</td>
+<td>Maschinenlesbares Format</td>
+</tr>
+<tr>
+<td>Unvollständige Daten</td>
+<td>Nur Stammdaten</td>
+<td>Alle übertragbaren Daten</td>
+</tr>
+<tr>
+<td>Fehlende Schnittstelle</td>
+<td>Keine direkte Übertragung</td>
+<td>API bereitstellen</td>
+</tr>
+<tr>
+<td>Verzögerte Bereitstellung</td>
+<td>Bereitstellung nach 3 Monaten</td>
+<td>Fristenkontrolle</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Nächste Schritte:</strong>
+1. Etablieren Sie Prozess für Datenübertragbarkeitsanfragen
+2. Implementieren Sie Export in strukturierten Formaten
+3. Entwickeln Sie Schnittstellen für direkte Übertragung
+4. Schulen Sie Mitarbeiter zu Datenübertragbarkeit
+5. Dokumentieren Sie alle Anfragen im Register</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0240_Einschraenkung_und_Widerspruch.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0300_Verantwortlicher_Pflichten_und_Rechenschaftspflicht.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

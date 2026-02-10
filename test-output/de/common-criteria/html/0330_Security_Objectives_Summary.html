@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0330 - Zusammenfassung der Sicherheitsziele (Security Objectives Summary)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0330</div>
+            <h1>Zusammenfassung der Sicherheitsziele (Security Objectives Summary)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0320_Security_Objectives_Coverage_Matrix.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0400_Security_Requirements.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="zusammenfassung-der-sicherheitsziele-security-objectives-summary">Zusammenfassung der Sicherheitsziele (Security Objectives Summary)</h1>
+<p><strong>Dokument-ID:</strong> 0330<br />
+<strong>Owner:</strong> {{ meta.owner }}<br />
+<strong>Version:</strong> {{ meta.version }}<br />
+<strong>Status:</strong> Entwurf / In Review / Freigegeben<br />
+<strong>Klassifizierung:</strong> Intern / Vertraulich / Streng vertraulich<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.date }}  </p>
+<hr />
+<blockquote>
+<p><strong>Hinweis:</strong> Dieses Dokument ist ein Template. Ersetze alle <code>[TODO]</code>-Platzhalter und passe die Inhalte an dein spezifisches TOE (Target of Evaluation) an.</p>
+</blockquote>
+<h2 id="1-einleitung">1. Einleitung</h2>
+<p>Dieses Dokument bietet eine kompakte Zusammenfassung aller Sicherheitsziele für das TOE <strong>{{ meta.toe_name }}</strong> und dessen Betriebsumgebung. Die Sicherheitsziele beschreiben die beabsichtigten Sicherheitseigenschaften, die zur Bewältigung der identifizierten Bedrohungen, zur Einhaltung der organisatorischen Sicherheitsrichtlinien und zur Erfüllung der Annahmen erforderlich sind.</p>
+<h3 id="11-zweck">1.1 Zweck</h3>
+<p>Diese Zusammenfassung dient als:
+- <strong>Schnellreferenz</strong> für alle Sicherheitsziele
+- <strong>Executive Summary</strong> für Management-Entscheidungen
+- <strong>Kommunikationswerkzeug</strong> für Stakeholder
+- <strong>Audit-Dokumentation</strong> für Evaluatoren</p>
+<h3 id="12-dokumentstruktur">1.2 Dokumentstruktur</h3>
+<ul>
+<li>Abschnitt 2: Übersicht der TOE-Sicherheitsziele</li>
+<li>Abschnitt 3: Übersicht der Umgebungsziele</li>
+<li>Abschnitt 4: Kategorisierung nach Sicherheitsbereichen</li>
+<li>Abschnitt 5: Abdeckungsstatistiken</li>
+<li>Abschnitt 6: Grafische Darstellungen</li>
+</ul>
+<h2 id="2-toe-sicherheitsziele-ubersicht">2. TOE-Sicherheitsziele (Übersicht)</h2>
+<p>Die folgenden Sicherheitsziele werden durch das TOE selbst erfüllt:</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Ziel</th>
+<th>Kurzbeschreibung</th>
+<th>Kategorie</th>
+<th>Priorität</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>O.ACCESS_CONTROL</strong></td>
+<td>Zugriffskontrolle</td>
+<td>Kontrolliert Zugriff auf geschützte Ressourcen basierend auf Benutzeridentität und Berechtigungen</td>
+<td>Zugriffskontrolle</td>
+<td>Hoch</td>
+</tr>
+<tr>
+<td><strong>O.IDENTIFICATION_AUTHENTICATION</strong></td>
+<td>Identifikation &amp; Authentifizierung</td>
+<td>Identifiziert und authentifiziert alle Benutzer vor Zugriff auf geschützte Funktionen</td>
+<td>Zugriffskontrolle</td>
+<td>Hoch</td>
+</tr>
+<tr>
+<td><strong>O.AUDIT_GENERATION</strong></td>
+<td>Audit-Aufzeichnung</td>
+<td>Zeichnet sicherheitsrelevante Ereignisse auf</td>
+<td>Audit &amp; Nachvollziehbarkeit</td>
+<td>Hoch</td>
+</tr>
+<tr>
+<td><strong>O.AUDIT_PROTECTION</strong></td>
+<td>Audit-Schutz</td>
+<td>Schützt Audit-Aufzeichnungen vor unbefugter Änderung und Löschung</td>
+<td>Audit &amp; Nachvollziehbarkeit</td>
+<td>Hoch</td>
+</tr>
+<tr>
+<td><strong>O.DATA_CONFIDENTIALITY</strong></td>
+<td>Datenvertraulichkeit</td>
+<td>Schützt sensible Benutzerdaten vor unbefugter Offenlegung</td>
+<td>Datenschutz</td>
+<td>Hoch</td>
+</tr>
+<tr>
+<td><strong>O.CRYPTOGRAPHIC_OPERATIONS</strong></td>
+<td>Kryptografische Operationen</td>
+<td>Führt kryptografische Operationen zur Verschlüsselung und Integritätssicherung durch</td>
+<td>Datenschutz</td>
+<td>Mittel</td>
+</tr>
+<tr>
+<td><strong>O.DATA_INTEGRITY</strong></td>
+<td>Datenintegrität</td>
+<td>Schützt Datenintegrität gegen unbefugte Änderung</td>
+<td>Integrität</td>
+<td>Hoch</td>
+</tr>
+<tr>
+<td><strong>O.SECURITY_MANAGEMENT</strong></td>
+<td>Sicherheitsmanagement</td>
+<td>Ermöglicht autorisierten Administratoren die Verwaltung von Sicherheitsfunktionen</td>
+<td>Management</td>
+<td>Mittel</td>
+</tr>
+<tr>
+<td><strong>O.SECURE_STATE</strong></td>
+<td>Sicherer Zustand</td>
+<td>Startet in sicherem Zustand und geht bei Fehlern in sicheren Zustand über</td>
+<td>Selbstschutz</td>
+<td>Hoch</td>
+</tr>
+<tr>
+<td><strong>O.TSF_PROTECTION</strong></td>
+<td>TSF-Schutz</td>
+<td>Schützt eigene Sicherheitsfunktionen vor Manipulation und Umgehung</td>
+<td>Selbstschutz</td>
+<td>Hoch</td>
+</tr>
+<tr>
+<td><strong>[TODO]</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Gesamtzahl TOE-Sicherheitsziele:</strong> 10 <strong>[TODO: Aktualisiere Anzahl]</strong></p>
+<h3 id="21-kategorisierung-der-toe-sicherheitsziele">2.1 Kategorisierung der TOE-Sicherheitsziele</h3>
+<p><strong>Zugriffskontrolle (2 Ziele):</strong>
+- O.ACCESS_CONTROL
+- O.IDENTIFICATION_AUTHENTICATION</p>
+<p><strong>Audit &amp; Nachvollziehbarkeit (2 Ziele):</strong>
+- O.AUDIT_GENERATION
+- O.AUDIT_PROTECTION</p>
+<p><strong>Datenschutz (2 Ziele):</strong>
+- O.DATA_CONFIDENTIALITY
+- O.CRYPTOGRAPHIC_OPERATIONS</p>
+<p><strong>Integrität (1 Ziel):</strong>
+- O.DATA_INTEGRITY</p>
+<p><strong>Management (1 Ziel):</strong>
+- O.SECURITY_MANAGEMENT</p>
+<p><strong>Selbstschutz (2 Ziele):</strong>
+- O.SECURE_STATE
+- O.TSF_PROTECTION</p>
+<p><strong>[TODO: Ergänze weitere Kategorien]</strong></p>
+<h2 id="3-umgebungsziele-ubersicht">3. Umgebungsziele (Übersicht)</h2>
+<p>Die folgenden Sicherheitsziele müssen durch die Betriebsumgebung erfüllt werden:</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Ziel</th>
+<th>Kurzbeschreibung</th>
+<th>Kategorie</th>
+<th>Verantwortlich</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>OE.PHYSICAL_PROTECTION</strong></td>
+<td>Physischer Schutz</td>
+<td>Schützt TOE vor physischem Zugriff durch unbefugte Personen</td>
+<td>Physische Sicherheit</td>
+<td>Betreiber</td>
+</tr>
+<tr>
+<td><strong>OE.TRUSTED_ADMIN</strong></td>
+<td>Vertrauenswürdige Administratoren</td>
+<td>Stellt sicher, dass Administratoren vertrauenswürdig, geschult und kompetent sind</td>
+<td>Personal</td>
+<td>Organisation</td>
+</tr>
+<tr>
+<td><strong>OE.USER_TRAINING</strong></td>
+<td>Benutzerschulung</td>
+<td>Stellt sicher, dass Benutzer in sicherer Verwendung des TOE geschult sind</td>
+<td>Personal</td>
+<td>Organisation</td>
+</tr>
+<tr>
+<td><strong>OE.NETWORK_PROTECTION</strong></td>
+<td>Netzwerkschutz</td>
+<td>Schützt TOE vor Netzwerkangriffen durch Firewalls und andere Mechanismen</td>
+<td>Netzwerk</td>
+<td>IT-Abteilung</td>
+</tr>
+<tr>
+<td><strong>OE.EXTERNAL_SYSTEMS</strong></td>
+<td>Sichere externe Systeme</td>
+<td>Stellt sicher, dass externe Systeme vertrauenswürdig und sicher sind</td>
+<td>Integration</td>
+<td>IT-Abteilung</td>
+</tr>
+<tr>
+<td><strong>OE.TIME_STAMPS</strong></td>
+<td>Zuverlässige Zeitstempel</td>
+<td>Bietet zuverlässige Zeitstempel für Audit-Aufzeichnungen</td>
+<td>Infrastruktur</td>
+<td>IT-Abteilung</td>
+</tr>
+<tr>
+<td><strong>[TODO]</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Gesamtzahl Umgebungsziele:</strong> 6 <strong>[TODO: Aktualisiere Anzahl]</strong></p>
+<h3 id="31-kategorisierung-der-umgebungsziele">3.1 Kategorisierung der Umgebungsziele</h3>
+<p><strong>Physische Sicherheit (1 Ziel):</strong>
+- OE.PHYSICAL_PROTECTION</p>
+<p><strong>Personal (2 Ziele):</strong>
+- OE.TRUSTED_ADMIN
+- OE.USER_TRAINING</p>
+<p><strong>Netzwerk (1 Ziel):</strong>
+- OE.NETWORK_PROTECTION</p>
+<p><strong>Integration (1 Ziel):</strong>
+- OE.EXTERNAL_SYSTEMS</p>
+<p><strong>Infrastruktur (1 Ziel):</strong>
+- OE.TIME_STAMPS</p>
+<p><strong>[TODO: Ergänze weitere Kategorien]</strong></p>
+<h2 id="4-sicherheitsziele-nach-sicherheitsbereichen">4. Sicherheitsziele nach Sicherheitsbereichen</h2>
+<h3 id="41-zugriffskontrolle-und-authentifizierung">4.1 Zugriffskontrolle und Authentifizierung</h3>
+<p><strong>TOE-Ziele:</strong>
+- O.ACCESS_CONTROL: Zugriffskontrolle auf Ressourcen
+- O.IDENTIFICATION_AUTHENTICATION: Benutzeridentifikation und -authentifizierung</p>
+<p><strong>Umgebungsziele:</strong>
+- OE.TRUSTED_ADMIN: Vertrauenswürdige Administratoren</p>
+<p><strong>Zusammenfassung:</strong> Das TOE implementiert technische Zugriffskontroll- und Authentifizierungsmechanismen, während die Umgebung vertrauenswürdige Administratoren bereitstellt.</p>
+<h3 id="42-audit-und-nachvollziehbarkeit">4.2 Audit und Nachvollziehbarkeit</h3>
+<p><strong>TOE-Ziele:</strong>
+- O.AUDIT_GENERATION: Aufzeichnung sicherheitsrelevanter Ereignisse
+- O.AUDIT_PROTECTION: Schutz von Audit-Aufzeichnungen</p>
+<p><strong>Umgebungsziele:</strong>
+- OE.TIME_STAMPS: Zuverlässige Zeitstempel</p>
+<p><strong>Zusammenfassung:</strong> Das TOE zeichnet Ereignisse auf und schützt Audit-Daten, während die Umgebung zuverlässige Zeitstempel bereitstellt.</p>
+<h3 id="43-datenschutz-und-vertraulichkeit">4.3 Datenschutz und Vertraulichkeit</h3>
+<p><strong>TOE-Ziele:</strong>
+- O.DATA_CONFIDENTIALITY: Schutz sensibler Daten vor Offenlegung
+- O.CRYPTOGRAPHIC_OPERATIONS: Kryptografische Operationen</p>
+<p><strong>Umgebungsziele:</strong>
+- OE.NETWORK_PROTECTION: Netzwerkschutz</p>
+<p><strong>Zusammenfassung:</strong> Das TOE schützt Daten durch Zugriffskontrolle und Verschlüsselung, während die Umgebung Netzwerkschutz bereitstellt.</p>
+<h3 id="44-datenintegritat">4.4 Datenintegrität</h3>
+<p><strong>TOE-Ziele:</strong>
+- O.DATA_INTEGRITY: Schutz der Datenintegrität
+- O.CRYPTOGRAPHIC_OPERATIONS: Kryptografische Integritätssicherung</p>
+<p><strong>Umgebungsziele:</strong>
+- Keine direkten Umgebungsziele</p>
+<p><strong>Zusammenfassung:</strong> Das TOE ist primär verantwortlich für Integritätsschutz.</p>
+<h3 id="45-sicherheitsmanagement">4.5 Sicherheitsmanagement</h3>
+<p><strong>TOE-Ziele:</strong>
+- O.SECURITY_MANAGEMENT: Verwaltung von Sicherheitsfunktionen</p>
+<p><strong>Umgebungsziele:</strong>
+- OE.TRUSTED_ADMIN: Vertrauenswürdige Administratoren
+- OE.USER_TRAINING: Benutzerschulung</p>
+<p><strong>Zusammenfassung:</strong> Das TOE bietet Verwaltungsfunktionen, während die Umgebung geschultes Personal bereitstellt.</p>
+<h3 id="46-selbstschutz-und-verfugbarkeit">4.6 Selbstschutz und Verfügbarkeit</h3>
+<p><strong>TOE-Ziele:</strong>
+- O.SECURE_STATE: Sicherer Zustand bei Start und Fehlern
+- O.TSF_PROTECTION: Schutz der Sicherheitsfunktionen</p>
+<p><strong>Umgebungsziele:</strong>
+- OE.PHYSICAL_PROTECTION: Physischer Schutz
+- OE.EXTERNAL_SYSTEMS: Sichere externe Systeme</p>
+<p><strong>Zusammenfassung:</strong> Das TOE schützt sich selbst, während die Umgebung physischen Schutz und sichere Integration bereitstellt.</p>
+<p><strong>[TODO: Ergänze weitere Sicherheitsbereiche]</strong></p>
+<h2 id="5-abdeckungsstatistiken">5. Abdeckungsstatistiken</h2>
+<h3 id="51-bedrohungsabdeckung">5.1 Bedrohungsabdeckung</h3>
+<table>
+<thead>
+<tr>
+<th>Kategorie</th>
+<th>Anzahl</th>
+<th>Abgedeckt durch TOE-Ziele</th>
+<th>Abgedeckt durch Umgebungsziele</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zugriffskontrolle</td>
+<td>3</td>
+<td>3</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Datenoffenlegung</td>
+<td>2</td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Datenmanipulation</td>
+<td>2</td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Audit-Kompromittierung</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Systemfehler</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>TSF-Kompromittierung</td>
+<td>2</td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Physische Angriffe</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td><strong>Gesamt</strong></td>
+<td><strong>12</strong></td>
+<td><strong>11</strong></td>
+<td><strong>1</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>[TODO: Aktualisiere Statistiken basierend auf deinen Bedrohungen]</strong></p>
+<h3 id="52-osp-abdeckung">5.2 OSP-Abdeckung</h3>
+<table>
+<thead>
+<tr>
+<th>OSP</th>
+<th>Umsetzende TOE-Ziele</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P.ACCESS_CONTROL</td>
+<td>O.ACCESS_CONTROL</td>
+<td>✓ Umgesetzt</td>
+</tr>
+<tr>
+<td>P.ACCOUNTABILITY</td>
+<td>O.AUDIT_GENERATION, O.AUDIT_PROTECTION</td>
+<td>✓ Umgesetzt</td>
+</tr>
+<tr>
+<td>P.CONFIDENTIALITY</td>
+<td>O.DATA_CONFIDENTIALITY</td>
+<td>✓ Umgesetzt</td>
+</tr>
+<tr>
+<td>P.INTEGRITY</td>
+<td>O.DATA_INTEGRITY</td>
+<td>✓ Umgesetzt</td>
+</tr>
+<tr>
+<td>P.MANAGEMENT</td>
+<td>O.SECURITY_MANAGEMENT</td>
+<td>✓ Umgesetzt</td>
+</tr>
+<tr>
+<td><strong>[TODO]</strong></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Gesamtzahl OSPs:</strong> 5 <strong>[TODO: Aktualisiere Anzahl]</strong><br />
+<strong>Umgesetzte OSPs:</strong> 5 (100%)</p>
+<h3 id="53-annahmenabdeckung">5.3 Annahmenabdeckung</h3>
+<table>
+<thead>
+<tr>
+<th>Annahme</th>
+<th>Erfüllendes Umgebungsziel</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A.PHYSICAL_SECURITY</td>
+<td>OE.PHYSICAL_PROTECTION</td>
+<td>✓ Erfüllt</td>
+</tr>
+<tr>
+<td>A.TRUSTED_ADMIN</td>
+<td>OE.TRUSTED_ADMIN</td>
+<td>✓ Erfüllt</td>
+</tr>
+<tr>
+<td>A.USER_TRAINING</td>
+<td>OE.USER_TRAINING</td>
+<td>✓ Erfüllt</td>
+</tr>
+<tr>
+<td>A.NETWORK_SECURITY</td>
+<td>OE.NETWORK_PROTECTION</td>
+<td>✓ Erfüllt</td>
+</tr>
+<tr>
+<td>A.EXTERNAL_SYSTEMS</td>
+<td>OE.EXTERNAL_SYSTEMS</td>
+<td>✓ Erfüllt</td>
+</tr>
+<tr>
+<td>A.TIME_SOURCE</td>
+<td>OE.TIME_STAMPS</td>
+<td>✓ Erfüllt</td>
+</tr>
+<tr>
+<td><strong>[TODO]</strong></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Gesamtzahl Annahmen:</strong> 6 <strong>[TODO: Aktualisiere Anzahl]</strong><br />
+<strong>Erfüllte Annahmen:</strong> 6 (100%)</p>
+<h3 id="54-vollstandigkeitsbewertung">5.4 Vollständigkeitsbewertung</h3>
+<table>
+<thead>
+<tr>
+<th>Kriterium</th>
+<th>Status</th>
+<th>Prozentsatz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Alle Bedrohungen abgedeckt</td>
+<td>✓ Ja</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Alle OSPs umgesetzt</td>
+<td>✓ Ja</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Alle Annahmen erfüllt</td>
+<td>✓ Ja</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>Alle Ziele gerechtfertigt</td>
+<td>✓ Ja</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Gesamtbewertung:</strong> ✓ Vollständig und konsistent</p>
+<h2 id="6-grafische-darstellungen">6. Grafische Darstellungen</h2>
+<h3 id="61-verteilung-der-toe-sicherheitsziele-nach-kategorie">6.1 Verteilung der TOE-Sicherheitsziele nach Kategorie</h3>
+<div class="codehilite"><pre><span></span><code>Zugriffskontrolle:        ██████████ (20%)
+Audit &amp; Nachvollziehbarkeit: ██████████ (20%)
+Datenschutz:              ██████████ (20%)
+Integrität:               █████ (10%)
+Management:               █████ (10%)
+Selbstschutz:             ██████████ (20%)
+</code></pre></div>
+
+<p><strong>[TODO: Erstelle Diagramm mit tatsächlichen Werten]</strong></p>
+<h3 id="62-verteilung-der-umgebungsziele-nach-verantwortlichkeit">6.2 Verteilung der Umgebungsziele nach Verantwortlichkeit</h3>
+<div class="codehilite"><pre><span></span><code>Betreiber (Physisch):     ████████████████ (17%)
+Organisation (Personal):  ████████████████████████████████ (33%)
+IT-Abteilung (Technisch): ██████████████████████████████████████████████████ (50%)
+</code></pre></div>
+
+<p><strong>[TODO: Erstelle Diagramm mit tatsächlichen Werten]</strong></p>
+<h3 id="63-beziehungsdiagramm-vereinfacht">6.3 Beziehungsdiagramm (vereinfacht)</h3>
+<div class="codehilite"><pre><span></span><code>Bedrohungen (12)  ──────▶  TOE-Ziele (10)  ──────▶  SFRs
+                                                      (nächster Schritt)
+OSPs (5)          ──────▶  TOE-Ziele (10)  ──────▶
+
+Annahmen (6)      ──────▶  Umgebungsziele (6)  ───▶  Umgebungs-
+                                                      anforderungen
+</code></pre></div>
+
+<p><strong>[TODO: Erstelle detailliertes Diagramm]</strong></p>
+<h2 id="7-prioritaten-und-abhangigkeiten">7. Prioritäten und Abhängigkeiten</h2>
+<h3 id="71-hochprioritare-sicherheitsziele">7.1 Hochprioritäre Sicherheitsziele</h3>
+<p>Die folgenden Sicherheitsziele haben höchste Priorität und müssen zuerst implementiert werden:</p>
+<ol>
+<li><strong>O.TSF_PROTECTION</strong> - Fundamental für alle anderen Ziele</li>
+<li><strong>O.ACCESS_CONTROL</strong> - Basis für Zugriffskontrolle</li>
+<li><strong>O.IDENTIFICATION_AUTHENTICATION</strong> - Voraussetzung für Zugriffskontrolle</li>
+<li><strong>O.DATA_CONFIDENTIALITY</strong> - Schutz sensibler Daten</li>
+<li><strong>O.DATA_INTEGRITY</strong> - Schutz der Datenintegrität</li>
+<li><strong>O.AUDIT_GENERATION</strong> - Nachvollziehbarkeit</li>
+<li><strong>O.SECURE_STATE</strong> - Sicherer Betrieb</li>
+</ol>
+<p><strong>[TODO: Passe Prioritäten an dein TOE an]</strong></p>
+<h3 id="72-abhangigkeiten-zwischen-sicherheitszielen">7.2 Abhängigkeiten zwischen Sicherheitszielen</h3>
+<table>
+<thead>
+<tr>
+<th>Ziel</th>
+<th>Abhängig von</th>
+<th>Begründung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O.ACCESS_CONTROL</td>
+<td>O.IDENTIFICATION_AUTHENTICATION</td>
+<td>Zugriffskontrolle erfordert Authentifizierung</td>
+</tr>
+<tr>
+<td>O.AUDIT_GENERATION</td>
+<td>OE.TIME_STAMPS</td>
+<td>Audit-Aufzeichnungen benötigen Zeitstempel</td>
+</tr>
+<tr>
+<td>O.DATA_CONFIDENTIALITY</td>
+<td>O.ACCESS_CONTROL</td>
+<td>Vertraulichkeit erfordert Zugriffskontrolle</td>
+</tr>
+<tr>
+<td>O.DATA_INTEGRITY</td>
+<td>O.ACCESS_CONTROL</td>
+<td>Integrität erfordert Zugriffskontrolle</td>
+</tr>
+<tr>
+<td>O.SECURITY_MANAGEMENT</td>
+<td>OE.TRUSTED_ADMIN</td>
+<td>Verwaltung erfordert vertrauenswürdige Admins</td>
+</tr>
+<tr>
+<td><strong>[TODO]</strong></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="8-zusammenfassung-und-bewertung">8. Zusammenfassung und Bewertung</h2>
+<h3 id="81-starken-der-sicherheitsziele">8.1 Stärken der Sicherheitsziele</h3>
+<ol>
+<li><strong>Vollständige Abdeckung:</strong> Alle Bedrohungen, OSPs und Annahmen sind adressiert</li>
+<li><strong>Klare Trennung:</strong> TOE- und Umgebungsverantwortlichkeiten sind klar definiert</li>
+<li><strong>Defense-in-Depth:</strong> Mehrfache Schutzschichten durch überlappende Ziele</li>
+<li><strong>Rückverfolgbarkeit:</strong> Alle Ziele sind durch Sicherheitsprobleme gerechtfertigt</li>
+<li><strong>Ausgewogenheit:</strong> Gute Balance zwischen verschiedenen Sicherheitsbereichen</li>
+</ol>
+<p><strong>[TODO: Ergänze spezifische Stärken für dein TOE]</strong></p>
+<h3 id="82-potenzielle-herausforderungen">8.2 Potenzielle Herausforderungen</h3>
+<ol>
+<li><strong>Komplexität:</strong> Viele Sicherheitsziele erfordern sorgfältige Implementierung</li>
+<li><strong>Abhängigkeiten:</strong> Einige Ziele sind voneinander abhängig</li>
+<li><strong>Umgebungsanforderungen:</strong> Erfolg hängt von korrekter Umgebungskonfiguration ab</li>
+</ol>
+<p><strong>[TODO: Identifiziere spezifische Herausforderungen für dein TOE]</strong></p>
+<h3 id="83-empfehlungen">8.3 Empfehlungen</h3>
+<ol>
+<li>Priorisiere Implementierung hochprioritärer Ziele</li>
+<li>Berücksichtige Abhängigkeiten bei der Implementierungsplanung</li>
+<li>Stelle sicher, dass Umgebungsanforderungen erfüllbar sind</li>
+<li>Dokumentiere Implementierungsentscheidungen für Evaluatoren</li>
+</ol>
+<p><strong>[TODO: Ergänze spezifische Empfehlungen]</strong></p>
+<h2 id="9-nachste-schritte">9. Nächste Schritte</h2>
+<p>Nach der Zusammenfassung der Sicherheitsziele:</p>
+<ol>
+<li><strong>Sicherheitsanforderungen ableiten</strong> (Template 0400-0450)</li>
+<li>Leite Security Functional Requirements (SFRs) aus TOE-Zielen ab</li>
+<li>Definiere Security Assurance Requirements (SARs)</li>
+<li>
+<p>Wähle Evaluation Assurance Level (EAL)</p>
+</li>
+<li>
+<p><strong>Rationale für Anforderungen erstellen</strong></p>
+</li>
+<li>Zeige, wie SFRs die Sicherheitsziele erfüllen</li>
+<li>
+<p>Dokumentiere SFR-Abhängigkeiten</p>
+</li>
+<li>
+<p><strong>TOE Summary Specification entwickeln</strong></p>
+</li>
+<li>Beschreibe, wie das TOE die SFRs implementiert</li>
+</ol>
+<h2 id="10-referenzen">10. Referenzen</h2>
+<ul>
+<li>ISO/IEC 15408-1: Security Target Evaluation</li>
+<li>ISO/IEC 15408-2: Security Functional Components</li>
+<li>ISO/IEC 15408-3: Security Assurance Components</li>
+<li>Template 0200-0240: Sicherheitsproblem-Definition</li>
+<li>Template 0300: Sicherheitsziele</li>
+<li>Template 0310: Rationale für Sicherheitsziele</li>
+<li>Template 0320: Security Objectives Coverage Matrix</li>
+<li>Template 0400-0450: Sicherheitsanforderungen</li>
+</ul>
+<hr />
+<p><strong>Dokumenthistorie:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Datum</th>
+<th>Autor</th>
+<th>Änderungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{{ meta.version }}</td>
+<td>{{ meta.date }}</td>
+<td>{{ meta.owner }}</td>
+<td>Initiale Version</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0320_Security_Objectives_Coverage_Matrix.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0400_Security_Requirements.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

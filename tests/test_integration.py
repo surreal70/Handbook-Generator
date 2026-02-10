@@ -198,7 +198,7 @@ def test_end_to_end_handbook_generation(temp_workspace, complete_template_set, m
         assert "Datacenter Munich" in all_content
         assert "192.168.1.100" in all_content
         assert "Andreas Huemmer" in all_content
-        assert "0.0.5" in all_content  # Version from src/__init__.py
+        assert "0.0.6" in all_content  # Version from src/__init__.py
         # Date will be current date (check for year 2026 or 2025)
         assert "2026-" in all_content or "2025-" in all_content
         

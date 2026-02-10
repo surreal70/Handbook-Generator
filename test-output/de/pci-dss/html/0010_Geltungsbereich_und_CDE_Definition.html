@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0010 - Geltungsbereich und CDE-Definition</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0010</div>
+            <h1>Geltungsbereich und CDE-Definition</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0000_metadata_de_pci-dss.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0020_Netzwerksegmentierung.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="geltungsbereich-und-cde-definition">Geltungsbereich und CDE-Definition</h1>
+<p><strong>Dokument-ID:</strong> PCI-0010<br />
+<strong>Organisation:</strong> AdminSend GmbH<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Genehmigt durch:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Entwurf / In Review / Freigegeben<br />
+<strong>Klassifizierung:</strong> internal<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-zweck">1. Zweck</h2>
+<p>Dieses Dokument definiert den Geltungsbereich der PCI-DSS-Compliance für AdminSend GmbH und beschreibt das Cardholder Data Environment (CDE).</p>
+<h3 id="11-ziele">1.1 Ziele</h3>
+<ul>
+<li><strong>Scope-Definition:</strong> Klare Abgrenzung des CDE vom restlichen Netzwerk</li>
+<li><strong>Compliance-Fokus:</strong> Identifikation aller PCI-DSS-relevanten Systeme und Prozesse</li>
+<li><strong>Risikominimierung:</strong> Reduktion des Compliance-Scope durch Segmentierung</li>
+<li><strong>Audit-Vorbereitung:</strong> Dokumentation für QSA-Assessments</li>
+</ul>
+<h3 id="12-referenzen">1.2 Referenzen</h3>
+<ul>
+<li><strong>PCI-DSS v4.0:</strong> Requirements 1, 2, 11, 12</li>
+<li><strong>PCI-DSS Information Supplement:</strong> Guidance for PCI DSS Scoping and Network Segmentation</li>
+<li><strong>PA-DSS:</strong> Payment Application Data Security Standard (falls zutreffend)</li>
+</ul>
+<h2 id="2-merchantservice-provider-information">2. Merchant/Service Provider Information</h2>
+<h3 id="21-organisationsinformationen">2.1 Organisationsinformationen</h3>
+<p><strong>Organisation:</strong> AdminSend GmbH<br />
+<strong>Adresse:</strong> Musterstraße 123, 80331 München<br />
+<strong>Land:</strong> Deutschland<br />
+<strong>Website:</strong> https://www.adminsend.de  </p>
+<h3 id="22-pci-dss-klassifizierung">2.2 PCI-DSS-Klassifizierung</h3>
+<p><strong>Merchant Level:</strong> [TODO: Level 1/2/3/4]<br />
+<strong>Service Provider Level:</strong> [TODO: Level 1/2 oder N/A]<br />
+<strong>Merchant ID:</strong> {{ meta.pci.merchant_id }}<br />
+<strong>Service Provider ID:</strong> {{ meta.pci.service_provider_id }}  </p>
+<p><strong>Transaktionsvolumen (jährlich):</strong>
+- Visa: [TODO: Anzahl Transaktionen]
+- Mastercard: [TODO: Anzahl Transaktionen]
+- American Express: [TODO: Anzahl Transaktionen]
+- Discover: [TODO: Anzahl Transaktionen]
+- Gesamt: [TODO: Anzahl Transaktionen]</p>
+<h3 id="23-acquiring-banks">2.3 Acquiring Banks</h3>
+<table>
+<thead>
+<tr>
+<th>Bank Name</th>
+<th>Kontakt</th>
+<th>Merchant ID</th>
+<th>Kartenmarken</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Bank 1]</td>
+<td>[TODO: Kontakt]</td>
+<td>[TODO: ID]</td>
+<td>Visa, Mastercard</td>
+</tr>
+<tr>
+<td>[TODO: Bank 2]</td>
+<td>[TODO: Kontakt]</td>
+<td>[TODO: ID]</td>
+<td>American Express</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-cardholder-data-environment-cde">3. Cardholder Data Environment (CDE)</h2>
+<h3 id="31-cde-definition">3.1 CDE-Definition</h3>
+<p>Das Cardholder Data Environment (CDE) umfasst:</p>
+<ol>
+<li><strong>Systeme:</strong> Alle Systeme, die Karteninhaberdaten (CHD) speichern, verarbeiten oder übertragen</li>
+<li><strong>Netzwerke:</strong> Alle Netzwerksegmente, die mit CDE-Systemen verbunden sind</li>
+<li><strong>Personen:</strong> Alle Mitarbeiter und Dienstleister mit Zugriff auf CHD</li>
+<li><strong>Prozesse:</strong> Alle Geschäftsprozesse, die CHD involvieren</li>
+</ol>
+<h3 id="32-karteninhaberdaten-chd">3.2 Karteninhaberdaten (CHD)</h3>
+<p><strong>Primäre Kontonummer (PAN):</strong>
+- 13-19-stellige Kartennummer
+- <strong>Speicherung:</strong> [TODO: Ja/Nein, wo?]
+- <strong>Verschlüsselung:</strong> [TODO: Algorithmus, z.B. AES-256]</p>
+<p><strong>Karteninhabername:</strong>
+- Name des Karteninhabers
+- <strong>Speicherung:</strong> [TODO: Ja/Nein, wo?]</p>
+<p><strong>Service Code:</strong>
+- 3-stelliger Code auf Magnetstreifen
+- <strong>Speicherung:</strong> [TODO: Ja/Nein, wo?]</p>
+<p><strong>Ablaufdatum:</strong>
+- Gültigkeitsdatum der Karte
+- <strong>Speicherung:</strong> [TODO: Ja/Nein, wo?]</p>
+<h3 id="33-sensitive-authentication-data-sad">3.3 Sensitive Authentication Data (SAD)</h3>
+<p><strong>DARF NICHT nach Autorisierung gespeichert werden:</strong></p>
+<ul>
+<li><strong>Full Track Data:</strong> Magnetstreifendaten (Track 1, Track 2)</li>
+<li><strong>CAV2/CVC2/CVV2/CID:</strong> Kartenprüfnummer (3-4 Stellen)</li>
+<li><strong>PIN/PIN Block:</strong> PIN-Daten</li>
+</ul>
+<p><strong>Bestätigung:</strong> AdminSend GmbH speichert KEINE Sensitive Authentication Data nach Autorisierung. [TODO: Bestätigen]</p>
+<h2 id="4-cde-systeme-und-komponenten">4. CDE-Systeme und -Komponenten</h2>
+<h3 id="41-systeme-im-cde">4.1 Systeme im CDE</h3>
+<table>
+<thead>
+<tr>
+<th>System-ID</th>
+<th>Systemname</th>
+<th>Typ</th>
+<th>Funktion</th>
+<th>CHD-Typ</th>
+<th>Standort</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: SYS-001]</td>
+<td>[TODO: Payment Gateway]</td>
+<td>Server</td>
+<td>Zahlungsabwicklung</td>
+<td>PAN, Name</td>
+<td>[TODO: RZ1]</td>
+</tr>
+<tr>
+<td>[TODO: SYS-002]</td>
+<td>[TODO: POS-Terminal]</td>
+<td>Endpoint</td>
+<td>Karteneingabe</td>
+<td>PAN</td>
+<td>[TODO: Filiale 1]</td>
+</tr>
+<tr>
+<td>[TODO: SYS-003]</td>
+<td>[TODO: Datenbank]</td>
+<td>Database</td>
+<td>CHD-Speicherung</td>
+<td>PAN (verschlüsselt)</td>
+<td>[TODO: RZ1]</td>
+</tr>
+<tr>
+<td>[TODO: SYS-004]</td>
+<td>[TODO: Webserver]</td>
+<td>Server</td>
+<td>E-Commerce</td>
+<td>PAN (Transit)</td>
+<td>[TODO: RZ1]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-netzwerkkomponenten-im-cde">4.2 Netzwerkkomponenten im CDE</h3>
+<table>
+<thead>
+<tr>
+<th>Komponente</th>
+<th>Typ</th>
+<th>Funktion</th>
+<th>Standort</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: FW-CDE-01]</td>
+<td>Firewall</td>
+<td>CDE-Segmentierung</td>
+<td>[TODO: RZ1]</td>
+</tr>
+<tr>
+<td>[TODO: SW-CDE-01]</td>
+<td>Switch</td>
+<td>CDE-Netzwerk</td>
+<td>[TODO: RZ1]</td>
+</tr>
+<tr>
+<td>[TODO: RTR-CDE-01]</td>
+<td>Router</td>
+<td>CDE-Routing</td>
+<td>[TODO: RZ1]</td>
+</tr>
+<tr>
+<td>[TODO: IDS-CDE-01]</td>
+<td>IDS/IPS</td>
+<td>Intrusion Detection</td>
+<td>[TODO: RZ1]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="43-anwendungen-im-cde">4.3 Anwendungen im CDE</h3>
+<table>
+<thead>
+<tr>
+<th>Anwendung</th>
+<th>Version</th>
+<th>Hersteller</th>
+<th>PA-DSS-zertifiziert</th>
+<th>Funktion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Payment App]</td>
+<td>[TODO: v2.1]</td>
+<td>[TODO: Vendor]</td>
+<td>[TODO: Ja/Nein]</td>
+<td>Zahlungsabwicklung</td>
+</tr>
+<tr>
+<td>[TODO: POS-Software]</td>
+<td>[TODO: v3.0]</td>
+<td>[TODO: Vendor]</td>
+<td>[TODO: Ja/Nein]</td>
+<td>Point of Sale</td>
+</tr>
+<tr>
+<td>[TODO: E-Commerce]</td>
+<td>[TODO: v1.5]</td>
+<td>[TODO: Vendor]</td>
+<td>[TODO: Ja/Nein]</td>
+<td>Online-Shop</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-standorte-und-lokationen">5. Standorte und Lokationen</h2>
+<h3 id="51-physische-standorte-mit-cde">5.1 Physische Standorte mit CDE</h3>
+<table>
+<thead>
+<tr>
+<th>Standort-ID</th>
+<th>Standortname</th>
+<th>Adresse</th>
+<th>CDE-Systeme</th>
+<th>Mitarbeiter mit CHD-Zugriff</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: LOC-01]</td>
+<td>Hauptsitz</td>
+<td>[TODO: Adresse]</td>
+<td>[TODO: Liste]</td>
+<td>[TODO: Anzahl]</td>
+</tr>
+<tr>
+<td>[TODO: LOC-02]</td>
+<td>Rechenzentrum</td>
+<td>[TODO: Adresse]</td>
+<td>[TODO: Liste]</td>
+<td>[TODO: Anzahl]</td>
+</tr>
+<tr>
+<td>[TODO: LOC-03]</td>
+<td>Filiale 1</td>
+<td>[TODO: Adresse]</td>
+<td>[TODO: POS]</td>
+<td>[TODO: Anzahl]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-remote-zugriff-auf-cde">5.2 Remote-Zugriff auf CDE</h3>
+<p><strong>Remote-Zugriff erlaubt:</strong> [TODO: Ja/Nein]</p>
+<p>Falls ja:
+- <strong>Zugriffsmethode:</strong> [TODO: VPN, Jump Server, etc.]
+- <strong>Multi-Faktor-Authentifizierung:</strong> [TODO: Ja/Nein, Methode]
+- <strong>Berechtigte Benutzer:</strong> [TODO: Rollen/Personen]</p>
+<h2 id="6-datenflusse">6. Datenflüsse</h2>
+<h3 id="61-karteninhaberdaten-flusse">6.1 Karteninhaberdaten-Flüsse</h3>
+<p>[TODO: Fügen Sie Datenflussdiagramm ein - siehe PCI-0040]</p>
+<p><strong>Hauptdatenflüsse:</strong></p>
+<ol>
+<li><strong>Karteneingabe → Autorisierung:</strong></li>
+<li>Quelle: [TODO: POS-Terminal/Webformular]</li>
+<li>Ziel: [TODO: Payment Gateway]</li>
+<li>Protokoll: [TODO: TLS 1.2+]</li>
+<li>
+<p>Verschlüsselung: [TODO: Ja/Nein]</p>
+</li>
+<li>
+<p><strong>Autorisierung → Speicherung:</strong></p>
+</li>
+<li>Quelle: [TODO: Payment Gateway]</li>
+<li>Ziel: [TODO: Datenbank]</li>
+<li>Verschlüsselung: [TODO: AES-256]</li>
+<li>
+<p>Tokenisierung: [TODO: Ja/Nein]</p>
+</li>
+<li>
+<p><strong>Reporting/Abfrage:</strong></p>
+</li>
+<li>Quelle: [TODO: Datenbank]</li>
+<li>Ziel: [TODO: Reporting-System]</li>
+<li>Maskierung: [TODO: Ja, nur letzte 4 Ziffern]</li>
+</ol>
+<h3 id="62-externe-verbindungen">6.2 Externe Verbindungen</h3>
+<table>
+<thead>
+<tr>
+<th>Verbindung</th>
+<th>Quelle</th>
+<th>Ziel</th>
+<th>Zweck</th>
+<th>Verschlüsselung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Acquiring Bank]</td>
+<td>CDE</td>
+<td>Bank</td>
+<td>Autorisierung</td>
+<td>TLS 1.2+</td>
+</tr>
+<tr>
+<td>[TODO: Payment Processor]</td>
+<td>CDE</td>
+<td>Processor</td>
+<td>Abwicklung</td>
+<td>TLS 1.2+</td>
+</tr>
+<tr>
+<td>[TODO: ASV Scans]</td>
+<td>Internet</td>
+<td>CDE</td>
+<td>Vulnerability Scans</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-scope-ausschlusse">7. Scope-Ausschlüsse</h2>
+<h3 id="71-systeme-auerhalb-des-cde">7.1 Systeme außerhalb des CDE</h3>
+<p>Folgende Systeme sind NICHT Teil des CDE:</p>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Begründung</th>
+<th>Segmentierung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Intranet]</td>
+<td>Keine CHD-Verarbeitung</td>
+<td>Firewall-Trennung</td>
+</tr>
+<tr>
+<td>[TODO: E-Mail-Server]</td>
+<td>Keine CHD-Speicherung</td>
+<td>Separate VLAN</td>
+</tr>
+<tr>
+<td>[TODO: Entwicklungsumgebung]</td>
+<td>Keine Produktionsdaten</td>
+<td>Physisch getrennt</td>
+</tr>
+</tbody>
+</table>
+<h3 id="72-ausgeschlossene-standorte">7.2 Ausgeschlossene Standorte</h3>
+<p>[TODO: Listen Sie Standorte auf, die keine CHD verarbeiten]</p>
+<h2 id="8-netzwerksegmentierung">8. Netzwerksegmentierung</h2>
+<h3 id="81-segmentierungsstrategie">8.1 Segmentierungsstrategie</h3>
+<p><strong>Segmentierungsmethode:</strong> [TODO: VLAN, Firewall, physische Trennung]</p>
+<p><strong>CDE-Segmente:</strong>
+- <strong>CDE-Core:</strong> Systeme mit CHD-Speicherung
+- <strong>CDE-DMZ:</strong> Systeme mit CHD-Transit (keine Speicherung)
+- <strong>Management:</strong> Administrative Systeme für CDE</p>
+<p><strong>Nicht-CDE-Segmente:</strong>
+- <strong>Corporate:</strong> Büronetzwerk
+- <strong>Guest:</strong> Gast-WLAN
+- <strong>Development:</strong> Entwicklungsumgebung</p>
+<h3 id="82-segmentierungsvalidierung">8.2 Segmentierungsvalidierung</h3>
+<p><strong>Letzte Validierung:</strong> [TODO: Datum]<br />
+<strong>Durchgeführt von:</strong> [TODO: Name/Firma]<br />
+<strong>Methode:</strong> [TODO: Penetrationstest, Netzwerk-Scan]<br />
+<strong>Ergebnis:</strong> [TODO: Erfolgreich/Fehlgeschlagen]<br />
+<strong>Nächste Validierung:</strong> [TODO: Datum]</p>
+<h2 id="9-personal-mit-cde-zugriff">9. Personal mit CDE-Zugriff</h2>
+<h3 id="91-rollen-mit-chd-zugriff">9.1 Rollen mit CHD-Zugriff</h3>
+<table>
+<thead>
+<tr>
+<th>Rolle</th>
+<th>Anzahl Personen</th>
+<th>Zugriffslevel</th>
+<th>Begründung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Payment Admin]</td>
+<td>[TODO: 2]</td>
+<td>Voll</td>
+<td>Administration</td>
+</tr>
+<tr>
+<td>[TODO: Kassierer]</td>
+<td>[TODO: 10]</td>
+<td>Eingeschränkt</td>
+<td>POS-Bedienung</td>
+</tr>
+<tr>
+<td>[TODO: Support]</td>
+<td>[TODO: 3]</td>
+<td>Nur Abfrage</td>
+<td>Kundenservice</td>
+</tr>
+</tbody>
+</table>
+<h3 id="92-dienstleister-mit-cde-zugriff">9.2 Dienstleister mit CDE-Zugriff</h3>
+<table>
+<thead>
+<tr>
+<th>Dienstleister</th>
+<th>Zweck</th>
+<th>Zugriffsmethode</th>
+<th>PCI-DSS-Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Payment Processor]</td>
+<td>Zahlungsabwicklung</td>
+<td>API</td>
+<td>AOC vorhanden</td>
+</tr>
+<tr>
+<td>[TODO: Hosting Provider]</td>
+<td>Server-Hosting</td>
+<td>Remote-Admin</td>
+<td>AOC vorhanden</td>
+</tr>
+<tr>
+<td>[TODO: QSA]</td>
+<td>Audit</td>
+<td>Vor-Ort</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<h2 id="10-scope-anderungen">10. Scope-Änderungen</h2>
+<h3 id="101-anderungsmanagement">10.1 Änderungsmanagement</h3>
+<p><strong>Prozess für Scope-Änderungen:</strong></p>
+<ol>
+<li><strong>Identifikation:</strong> Neue Systeme/Prozesse mit CHD</li>
+<li><strong>Bewertung:</strong> PCI-DSS-Relevanz prüfen</li>
+<li><strong>Dokumentation:</strong> Scope-Dokument aktualisieren</li>
+<li><strong>Genehmigung:</strong> CISO-Freigabe erforderlich</li>
+<li><strong>Implementation:</strong> PCI-DSS-Kontrollen anwenden</li>
+</ol>
+<h3 id="102-anderungshistorie">10.2 Änderungshistorie</h3>
+<table>
+<thead>
+<tr>
+<th>Datum</th>
+<th>Änderung</th>
+<th>Begründung</th>
+<th>Genehmigt durch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: 2026-01-15]</td>
+<td>Neues POS-System</td>
+<td>Filialerweiterung</td>
+<td>[TODO: CISO]</td>
+</tr>
+<tr>
+<td>[TODO: 2026-02-01]</td>
+<td>Tokenisierung</td>
+<td>Scope-Reduktion</td>
+<td>[TODO: CISO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="11-compliance-verantwortlichkeiten">11. Compliance-Verantwortlichkeiten</h2>
+<h3 id="111-verantwortliche-personen">11.1 Verantwortliche Personen</h3>
+<p><strong>PCI-DSS Program Manager:</strong> [TODO: Name] ([TODO: E-Mail])<br />
+<strong>CISO:</strong> {{ meta.roles.ciso.name }} ({{ meta.roles.ciso.email }})<br />
+<strong>IT-Leiter:</strong> [TODO: Name] ([TODO: E-Mail])<br />
+<strong>QSA (Qualified Security Assessor):</strong> [TODO: Firma/Name]<br />
+<strong>ASV (Approved Scanning Vendor):</strong> [TODO: Firma]  </p>
+<h3 id="112-raci-matrix">11.2 RACI-Matrix</h3>
+<table>
+<thead>
+<tr>
+<th>Aktivität</th>
+<th>PCI Manager</th>
+<th>CISO</th>
+<th>IT-Leiter</th>
+<th>QSA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scope-Definition</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Netzwerksegmentierung</td>
+<td>C</td>
+<td>A</td>
+<td>R</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Compliance-Monitoring</td>
+<td>R</td>
+<td>A</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Jährliches Assessment</td>
+<td>C</td>
+<td>A</td>
+<td>I</td>
+<td>R</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legende:</strong> R = Responsible, A = Accountable, C = Consulted, I = Informed</p>
+<hr />
+<p><strong>Dokumenthistorie:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Datum</th>
+<th>Autor</th>
+<th>Änderungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Initiale Erstellung</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0000_metadata_de_pci-dss.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0020_Netzwerksegmentierung.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

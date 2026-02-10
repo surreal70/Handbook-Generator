@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0410 - Benutzerauthentifizierung</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0410</div>
+            <h1>Benutzerauthentifizierung</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0400_Zugriffskontrolle.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0420_Physische_Sicherheit.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="benutzerauthentifizierung">Benutzerauthentifizierung</h1>
+<p><strong>Dokument-ID:</strong> PCI-0410<br />
+<strong>Organisation:</strong> AdminSend GmbH<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Genehmigt durch:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Entwurf / In Review / Freigegeben<br />
+<strong>Klassifizierung:</strong> internal<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-zweck">1. Zweck</h2>
+<p>Dieses Dokument definiert die Authentifizierungsrichtlinien für AdminSend GmbH gemäß PCI-DSS Requirement 8.</p>
+<h3 id="11-ziele">1.1 Ziele</h3>
+<ul>
+<li><strong>Eindeutige Identifikation:</strong> Jeder Benutzer eindeutig identifizierbar</li>
+<li><strong>Starke Authentifizierung:</strong> Multi-Faktor-Authentifizierung (MFA)</li>
+<li><strong>Sichere Passwörter:</strong> Passwortrichtlinien durchsetzen</li>
+<li><strong>Compliance:</strong> Erfüllung von PCI-DSS Requirement 8</li>
+</ul>
+<h3 id="12-geltungsbereich">1.2 Geltungsbereich</h3>
+<p><strong>Betroffene Systeme:</strong>
+- Alle CDE-Systeme
+- Administrative Systeme
+- Anwendungen mit CHD-Zugriff
+- Remote-Zugriffssysteme</p>
+<h2 id="2-benutzeridentifikation">2. Benutzeridentifikation</h2>
+<h3 id="21-eindeutige-benutzer-ids">2.1 Eindeutige Benutzer-IDs</h3>
+<p><strong>Anforderungen:</strong>
+- Jeder Benutzer hat eindeutige ID
+- Keine Shared Accounts
+- Keine Generic Accounts (außer dokumentierte Ausnahmen)
+- Benutzer-ID darf nicht wiederverwendet werden</p>
+<p><strong>Namenskonvention:</strong>
+- Format: <code>vorname.nachname</code>
+- Bei Duplikaten: <code>vorname.nachname2</code>
+- Service-Accounts: <code>svc-servicename</code>
+- Admin-Accounts: <code>vorname.nachname-admin</code></p>
+<h3 id="22-verbotene-account-typen">2.2 Verbotene Account-Typen</h3>
+<p><strong>Nicht erlaubt:</strong>
+- Shared Accounts (mehrere Personen, ein Account)
+- Generic Accounts (z.B., "admin", "user", "test")
+- Group Accounts
+- Vendor Default Accounts (müssen deaktiviert werden)</p>
+<p><strong>Ausnahmen:</strong>
+- Notfall-Accounts (Break-Glass) - dokumentiert
+- Service-Accounts - dokumentiert und überwacht
+- Konsolen-Zugriff (nur mit Logging)</p>
+<h2 id="3-authentifizierungsmethoden">3. Authentifizierungsmethoden</h2>
+<h3 id="31-multi-faktor-authentifizierung-mfa">3.1 Multi-Faktor-Authentifizierung (MFA)</h3>
+<p><strong>MFA erforderlich für:</strong>
+- Alle CDE-Zugriffe
+- Administrative Zugriffe
+- Remote-Zugriffe (VPN, Jump Server)
+- Privilegierte Accounts
+- Zugriff auf CHD</p>
+<p><strong>MFA-Faktoren:</strong></p>
+<ol>
+<li><strong>Etwas, das Sie wissen:</strong></li>
+<li>Passwort</li>
+<li>
+<p>PIN</p>
+</li>
+<li>
+<p><strong>Etwas, das Sie haben:</strong></p>
+</li>
+<li>Hardware-Token</li>
+<li>Software-Token (Authenticator App)</li>
+<li>Smart Card</li>
+<li>
+<p>SMS (nur als Backup)</p>
+</li>
+<li>
+<p><strong>Etwas, das Sie sind:</strong></p>
+</li>
+<li>Biometrie (Fingerabdruck, Gesichtserkennung)</li>
+</ol>
+<p><strong>MFA-Implementierung:</strong>
+- Mindestens 2 verschiedene Faktoren
+- Faktoren müssen unabhängig sein
+- MFA-System: [TODO: Name des MFA-Systems]</p>
+<h3 id="32-passwort-authentifizierung">3.2 Passwort-Authentifizierung</h3>
+<p><strong>Passwortanforderungen:</strong></p>
+<ul>
+<li><strong>Mindestlänge:</strong> 12 Zeichen (15 für Admin-Accounts)</li>
+<li><strong>Komplexität:</strong></li>
+<li>Großbuchstaben (A-Z)</li>
+<li>Kleinbuchstaben (a-z)</li>
+<li>Ziffern (0-9)</li>
+<li>Sonderzeichen (!@#$%^&amp;*)</li>
+<li><strong>Keine Wörterbuch-Wörter</strong></li>
+<li><strong>Keine persönlichen Informationen</strong> (Name, Geburtsdatum, etc.)</li>
+<li><strong>Keine Wiederholung</strong> der letzten 4 Passwörter</li>
+</ul>
+<p><strong>Passwortänderung:</strong>
+- Alle 90 Tage für Standard-Benutzer
+- Alle 90 Tage für Admin-Accounts
+- Sofort bei Verdacht auf Kompromittierung
+- Bei Erstanmeldung</p>
+<p><strong>Passwort-Speicherung:</strong>
+- Nur als Hash (bcrypt, PBKDF2, Argon2)
+- Niemals im Klartext
+- Salt für jeden Hash
+- Keine reversible Verschlüsselung</p>
+<h3 id="33-zertifikatsbasierte-authentifizierung">3.3 Zertifikatsbasierte Authentifizierung</h3>
+<p><strong>Verwendung:</strong>
+- Server-zu-Server-Kommunikation
+- API-Authentifizierung
+- VPN-Zugriff (zusätzlich zu MFA)</p>
+<p><strong>Anforderungen:</strong>
+- Zertifikate von vertrauenswürdiger CA
+- Regelmäßige Erneuerung
+- Widerrufsprüfung (CRL/OCSP)
+- Sichere Schlüsselspeicherung</p>
+<h2 id="4-account-management">4. Account-Management</h2>
+<h3 id="41-account-erstellung">4.1 Account-Erstellung</h3>
+<p><strong>Prozess:</strong>
+1. Genehmigter Zugriffsantrag
+2. Eindeutige Benutzer-ID erstellen
+3. Temporäres Passwort generieren
+4. MFA-Registrierung
+5. Benutzer benachrichtigen
+6. Passwortänderung bei Erstanmeldung erzwingen</p>
+<h3 id="42-account-deaktivierung">4.2 Account-Deaktivierung</h3>
+<p><strong>Automatische Deaktivierung:</strong>
+- Nach 90 Tagen Inaktivität
+- Bei Ausscheiden des Mitarbeiters
+- Bei Rollenänderung (alter Account)</p>
+<p><strong>Manuelle Deaktivierung:</strong>
+- Bei Sicherheitsvorfällen
+- Bei Verdacht auf Kompromittierung
+- Auf Anfrage des Managers</p>
+<p><strong>Prozess:</strong>
+1. Account deaktivieren (nicht löschen)
+2. Alle Sessions beenden
+3. Zugriff validieren (sollte blockiert sein)
+4. Dokumentieren</p>
+<h3 id="43-account-loschung">4.3 Account-Löschung</h3>
+<p><strong>Zeitrahmen:</strong>
+- 90 Tage nach Deaktivierung
+- Nach Abschluss von Audits/Untersuchungen
+- Nach Aufbewahrungspflicht</p>
+<p><strong>Prozess:</strong>
+1. Bestätigung, dass Account nicht mehr benötigt
+2. Backup der Account-Daten (falls erforderlich)
+3. Account löschen
+4. Dokumentieren</p>
+<h2 id="5-passwort-management">5. Passwort-Management</h2>
+<h3 id="51-passwort-reset">5.1 Passwort-Reset</h3>
+<p><strong>Self-Service-Reset:</strong>
+- Über Identity Management System
+- Nach erfolgreicher Identitätsprüfung
+- Sicherheitsfragen oder E-Mail-Verifizierung
+- MFA-Verifizierung</p>
+<p><strong>Helpdesk-Reset:</strong>
+- Identitätsprüfung erforderlich
+- Temporäres Passwort
+- Passwortänderung bei nächster Anmeldung erzwingen
+- Dokumentation des Resets</p>
+<h3 id="52-passwort-sperrung">5.2 Passwort-Sperrung</h3>
+<p><strong>Account-Sperrung nach:</strong>
+- 6 fehlgeschlagenen Anmeldeversuchen
+- Sperrung für 30 Minuten
+- Oder manuelle Entsperrung durch Admin</p>
+<p><strong>Entsperrung:</strong>
+- Automatisch nach 30 Minuten
+- Oder durch Helpdesk nach Identitätsprüfung
+- Dokumentation der Entsperrung</p>
+<h3 id="53-passwort-vault">5.3 Passwort-Vault</h3>
+<p><strong>Für privilegierte Passwörter:</strong>
+- Zentrale Passwort-Vault-Lösung
+- Automatische Passwortrotation
+- Check-out/Check-in-Prozess
+- Session-Recording
+- Vollständiges Logging</p>
+<p><strong>Vault-System:</strong> [TODO: Name des Vault-Systems]</p>
+<h2 id="6-session-management">6. Session-Management</h2>
+<h3 id="61-session-timeouts">6.1 Session-Timeouts</h3>
+<p><strong>Inaktivitäts-Timeout:</strong>
+- 15 Minuten für CDE-Systeme
+- 30 Minuten für Corporate-Systeme
+- 5 Minuten für privilegierte Sessions</p>
+<p><strong>Maximale Session-Dauer:</strong>
+- 8 Stunden für Standard-Benutzer
+- 4 Stunden für Admin-Sessions
+- Re-Authentifizierung erforderlich</p>
+<h3 id="62-session-sicherheit">6.2 Session-Sicherheit</h3>
+<p><strong>Anforderungen:</strong>
+- Eindeutige Session-IDs
+- Session-ID-Rotation nach Login
+- Sichere Session-Cookies (HttpOnly, Secure, SameSite)
+- Session-Invalidierung bei Logout
+- Keine Session-IDs in URLs</p>
+<h3 id="63-concurrent-sessions">6.3 Concurrent Sessions</h3>
+<p><strong>Beschränkungen:</strong>
+- Maximal 2 gleichzeitige Sessions pro Benutzer
+- Nur 1 privilegierte Session gleichzeitig
+- Warnung bei neuer Session
+- Option zum Beenden alter Sessions</p>
+<h2 id="7-remote-authentifizierung">7. Remote-Authentifizierung</h2>
+<h3 id="71-vpn-zugriff">7.1 VPN-Zugriff</h3>
+<p><strong>Authentifizierung:</strong>
+- Benutzername + Passwort
+- Plus MFA (Hardware-Token oder Authenticator App)
+- Zertifikatsbasierte Authentifizierung (optional)</p>
+<p><strong>Autorisierung:</strong>
+- Nur autorisierte Benutzer
+- Zugriff auf spezifische Netzwerksegmente
+- Vollständiges Logging</p>
+<h3 id="72-jump-server">7.2 Jump Server</h3>
+<p><strong>Authentifizierung:</strong>
+- MFA erforderlich
+- Privilegierte Accounts
+- Session-Recording
+- Zeitlich begrenzter Zugriff</p>
+<p><strong>Zugriffskontrolle:</strong>
+- Nur von autorisierten Quell-IPs
+- Nur zu autorisierten Ziel-Systemen
+- Vollständiges Logging</p>
+<h2 id="8-anwendungs-authentifizierung">8. Anwendungs-Authentifizierung</h2>
+<h3 id="81-web-anwendungen">8.1 Web-Anwendungen</h3>
+<p><strong>Authentifizierung:</strong>
+- Benutzername + Passwort
+- MFA für CDE-Anwendungen
+- Session-Management
+- HTTPS erforderlich</p>
+<p><strong>Sicherheitsmaßnahmen:</strong>
+- Schutz vor Brute-Force (Rate Limiting)
+- CAPTCHA nach mehreren Fehlversuchen
+- Account-Sperrung
+- Sichere Passwort-Speicherung</p>
+<h3 id="82-api-authentifizierung">8.2 API-Authentifizierung</h3>
+<p><strong>Methoden:</strong>
+- API-Keys (mit Ablaufdatum)
+- OAuth 2.0
+- JWT (JSON Web Tokens)
+- Mutual TLS</p>
+<p><strong>Anforderungen:</strong>
+- Keine API-Keys in Code
+- Rotation von API-Keys
+- Scope-basierte Autorisierung
+- Rate Limiting</p>
+<h2 id="9-service-account-management">9. Service-Account-Management</h2>
+<h3 id="91-service-accounts">9.1 Service-Accounts</h3>
+<p><strong>Anforderungen:</strong>
+- Eindeutige Service-Account-IDs
+- Dokumentierte Verwendung
+- Starke Passwörter (32+ Zeichen)
+- Regelmäßige Passwortrotation (90 Tage)
+- Keine interaktiven Logins</p>
+<p><strong>Namenskonvention:</strong>
+- Format: <code>svc-servicename</code>
+- Beispiel: <code>svc-payment-gateway</code></p>
+<h3 id="92-service-account-uberwachung">9.2 Service-Account-Überwachung</h3>
+<p><strong>Monitoring:</strong>
+- Alle Service-Account-Aktivitäten loggen
+- Alerts bei ungewöhnlichen Aktivitäten
+- Regelmäßige Überprüfung der Verwendung
+- Deaktivierung ungenutzter Accounts</p>
+<h2 id="10-authentifizierungs-logging">10. Authentifizierungs-Logging</h2>
+<h3 id="101-geloggte-ereignisse">10.1 Geloggte Ereignisse</h3>
+<p><strong>Erfolgreiche Authentifizierung:</strong>
+- Benutzer-ID
+- Zeitstempel
+- Quell-IP-Adresse
+- Ziel-System
+- Authentifizierungsmethode</p>
+<p><strong>Fehlgeschlagene Authentifizierung:</strong>
+- Benutzer-ID (oder Versuch)
+- Zeitstempel
+- Quell-IP-Adresse
+- Ziel-System
+- Fehlergrund</p>
+<p><strong>Weitere Ereignisse:</strong>
+- Passwortänderungen
+- Account-Sperrungen
+- Account-Entsperrungen
+- MFA-Registrierung
+- Privilegierte Aktionen</p>
+<h3 id="102-log-retention">10.2 Log-Retention</h3>
+<p><strong>Aufbewahrung:</strong>
+- 90 Tage online
+- 1 Jahr Archiv
+- Unveränderlich (WORM)</p>
+<p><strong>Log-Forwarding:</strong>
+- An SIEM-System
+- Echtzeitübertragung
+- Verschlüsselte Übertragung</p>
+<h2 id="11-authentifizierungs-monitoring">11. Authentifizierungs-Monitoring</h2>
+<h3 id="111-alerting">11.1 Alerting</h3>
+<table>
+<thead>
+<tr>
+<th>Alert</th>
+<th>Bedingung</th>
+<th>Schweregrad</th>
+<th>Benachrichtigung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mehrfache fehlgeschlagene Logins</td>
+<td>&gt;5 in 15 Min</td>
+<td>Mittel</td>
+<td>SOC</td>
+</tr>
+<tr>
+<td>Admin-Login außerhalb Geschäftszeiten</td>
+<td>Nach 22:00 Uhr</td>
+<td>Mittel</td>
+<td>SOC + Manager</td>
+</tr>
+<tr>
+<td>MFA-Fehler</td>
+<td>&gt;3 Fehler</td>
+<td>Niedrig</td>
+<td>SOC</td>
+</tr>
+<tr>
+<td>Account-Sperrung</td>
+<td>Jede Sperrung</td>
+<td>Niedrig</td>
+<td>Helpdesk</td>
+</tr>
+<tr>
+<td>Privilegierter Zugriff</td>
+<td>Jeder Zugriff</td>
+<td>Niedrig</td>
+<td>SIEM</td>
+</tr>
+<tr>
+<td>Passwortänderung</td>
+<td>Außerhalb Geschäftszeiten</td>
+<td>Niedrig</td>
+<td>SIEM</td>
+</tr>
+</tbody>
+</table>
+<h3 id="112-anomalie-erkennung">11.2 Anomalie-Erkennung</h3>
+<p><strong>Überwachung:</strong>
+- Ungewöhnliche Login-Zeiten
+- Ungewöhnliche Quell-IPs
+- Geografische Anomalien
+- Mehrfache gleichzeitige Logins
+- Privilegierte Zugriffe</p>
+<h2 id="12-vendor-default-accounts">12. Vendor Default Accounts</h2>
+<h3 id="121-default-account-management">12.1 Default Account Management</h3>
+<p><strong>Anforderungen:</strong>
+- Alle Default Accounts identifizieren
+- Default Accounts deaktivieren oder löschen
+- Falls erforderlich: Passwort ändern
+- Dokumentation aller Default Accounts</p>
+<p><strong>Beispiele:</strong>
+- admin/admin
+- root/root
+- Administrator/password
+- sa (SQL Server)</p>
+<h3 id="122-default-account-inventory">12.2 Default Account Inventory</h3>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Default Account</th>
+<th>Status</th>
+<th>Aktion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: System 1]</td>
+<td>admin</td>
+<td>Deaktiviert</td>
+<td>Gelöscht</td>
+</tr>
+<tr>
+<td>[TODO: System 2]</td>
+<td>root</td>
+<td>Aktiv</td>
+<td>Passwort geändert</td>
+</tr>
+<tr>
+<td>[TODO: System 3]</td>
+<td>Administrator</td>
+<td>Deaktiviert</td>
+<td>Umbenannt</td>
+</tr>
+</tbody>
+</table>
+<h2 id="13-authentifizierungs-testing">13. Authentifizierungs-Testing</h2>
+<h3 id="131-penetrationstests">13.1 Penetrationstests</h3>
+<p><strong>Jährlich:</strong>
+- Authentifizierungsmechanismen testen
+- Brute-Force-Angriffe simulieren
+- MFA-Bypass-Versuche
+- Session-Management-Tests</p>
+<h3 id="132-vulnerability-scans">13.2 Vulnerability Scans</h3>
+<p><strong>Quartalsweise:</strong>
+- Schwache Passwörter identifizieren
+- Default Accounts identifizieren
+- Authentifizierungs-Schwachstellen</p>
+<h2 id="14-compliance-validierung">14. Compliance-Validierung</h2>
+<h3 id="141-validierungsaktivitaten">14.1 Validierungsaktivitäten</h3>
+<p><strong>Quartalsweise:</strong>
+- Passwortrichtlinien-Compliance
+- MFA-Implementierung validieren
+- Inaktive Accounts identifizieren
+- Default Accounts überprüfen</p>
+<p><strong>Jährlich:</strong>
+- Vollständige Authentifizierungs-Audit
+- Penetrationstest
+- Compliance-Assessment</p>
+<h3 id="142-validierungsdokumentation">14.2 Validierungsdokumentation</h3>
+<p><strong>Erforderliche Nachweise:</strong>
+- Authentifizierungsrichtlinien
+- MFA-Konfiguration
+- Passwortrichtlinien-Konfiguration
+- Account-Management-Protokolle
+- Penetrationstest-Berichte</p>
+<hr />
+<p><strong>Dokumenthistorie:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Datum</th>
+<th>Autor</th>
+<th>Änderungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Initiale Erstellung</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0400_Zugriffskontrolle.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0420_Physische_Sicherheit.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

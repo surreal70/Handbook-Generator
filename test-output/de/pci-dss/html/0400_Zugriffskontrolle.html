@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0400 - Zugriffskontrolle</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0400</div>
+            <h1>Zugriffskontrolle</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0100_Firewall_Konfiguration.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0410_Benutzerauthentifizierung.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="zugriffskontrolle">Zugriffskontrolle</h1>
+<p><strong>Dokument-ID:</strong> PCI-0400<br />
+<strong>Organisation:</strong> AdminSend GmbH<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Genehmigt durch:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Entwurf / In Review / Freigegeben<br />
+<strong>Klassifizierung:</strong> internal<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-zweck">1. Zweck</h2>
+<p>Dieses Dokument definiert die Zugriffskontrollrichtlinien für AdminSend GmbH gemäß PCI-DSS Requirement 7.</p>
+<h3 id="11-ziele">1.1 Ziele</h3>
+<ul>
+<li><strong>Need-to-Know-Prinzip:</strong> Zugriff nur für berechtigte Personen</li>
+<li><strong>Least Privilege:</strong> Minimale erforderliche Zugriffsrechte</li>
+<li><strong>Rollenbasierte Zugriffskontrolle:</strong> RBAC-Implementierung</li>
+<li><strong>Compliance:</strong> Erfüllung von PCI-DSS Requirement 7</li>
+</ul>
+<h3 id="12-geltungsbereich">1.2 Geltungsbereich</h3>
+<p><strong>Betroffene Systeme:</strong>
+- Alle CDE-Systeme
+- Systeme mit Karteninhaberdaten
+- Administrative Systeme
+- Datenbanken mit CHD</p>
+<h2 id="2-zugriffskontrollprinzipien">2. Zugriffskontrollprinzipien</h2>
+<h3 id="21-need-to-know">2.1 Need-to-Know</h3>
+<p><strong>Grundsatz:</strong>
+- Zugriff nur für Personen mit geschäftlicher Notwendigkeit
+- Dokumentierte Begründung erforderlich
+- Regelmäßige Überprüfung der Zugriffsrechte</p>
+<h3 id="22-least-privilege">2.2 Least Privilege</h3>
+<p><strong>Grundsatz:</strong>
+- Minimale erforderliche Berechtigungen
+- Keine unnötigen Administratorrechte
+- Zeitlich begrenzte privilegierte Zugriffe</p>
+<h3 id="23-separation-of-duties">2.3 Separation of Duties</h3>
+<p><strong>Grundsatz:</strong>
+- Trennung kritischer Funktionen
+- Keine Einzelperson mit vollständiger Kontrolle
+- Vier-Augen-Prinzip für kritische Operationen</p>
+<h2 id="3-rollenbasierte-zugriffskontrolle-rbac">3. Rollenbasierte Zugriffskontrolle (RBAC)</h2>
+<h3 id="31-definierte-rollen">3.1 Definierte Rollen</h3>
+<table>
+<thead>
+<tr>
+<th>Rolle</th>
+<th>Beschreibung</th>
+<th>CDE-Zugriff</th>
+<th>CHD-Zugriff</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Payment Administrator</td>
+<td>Vollständige Payment-System-Administration</td>
+<td>Ja</td>
+<td>Ja (vollständig)</td>
+</tr>
+<tr>
+<td>System Administrator</td>
+<td>Server- und Netzwerkadministration</td>
+<td>Ja</td>
+<td>Nein</td>
+</tr>
+<tr>
+<td>Database Administrator</td>
+<td>Datenbankverwaltung</td>
+<td>Ja</td>
+<td>Ja (verschlüsselt)</td>
+</tr>
+<tr>
+<td>Application Administrator</td>
+<td>Anwendungsverwaltung</td>
+<td>Ja</td>
+<td>Nein</td>
+</tr>
+<tr>
+<td>Security Administrator</td>
+<td>Sicherheitssystem-Administration</td>
+<td>Ja</td>
+<td>Nein</td>
+</tr>
+<tr>
+<td>Kassierer</td>
+<td>POS-Bedienung</td>
+<td>Eingeschränkt</td>
+<td>Ja (nur Eingabe)</td>
+</tr>
+<tr>
+<td>Support Mitarbeiter</td>
+<td>Kundenservice</td>
+<td>Eingeschränkt</td>
+<td>Ja (nur Abfrage, maskiert)</td>
+</tr>
+<tr>
+<td>Entwickler</td>
+<td>Softwareentwicklung</td>
+<td>Nein</td>
+<td>Nein</td>
+</tr>
+<tr>
+<td>Auditor</td>
+<td>Compliance-Prüfung</td>
+<td>Lesezugriff</td>
+<td>Ja (nur Logs)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-berechtigungsmatrix">3.2 Berechtigungsmatrix</h3>
+<table>
+<thead>
+<tr>
+<th>System/Ressource</th>
+<th>Payment Admin</th>
+<th>Sys Admin</th>
+<th>DB Admin</th>
+<th>App Admin</th>
+<th>Kassierer</th>
+<th>Support</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Payment Gateway</td>
+<td>RWX</td>
+<td>RW</td>
+<td>R</td>
+<td>RW</td>
+<td>-</td>
+<td>R</td>
+</tr>
+<tr>
+<td>CDE-Datenbank</td>
+<td>RWX</td>
+<td>R</td>
+<td>RWX</td>
+<td>R</td>
+<td>-</td>
+<td>R (maskiert)</td>
+</tr>
+<tr>
+<td>POS-Terminal</td>
+<td>RW</td>
+<td>RW</td>
+<td>-</td>
+<td>RW</td>
+<td>RW</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Firewall</td>
+<td>RW</td>
+<td>RWX</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>SIEM</td>
+<td>RW</td>
+<td>RW</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Backup-System</td>
+<td>RW</td>
+<td>RWX</td>
+<td>RW</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legende:</strong> R = Read, W = Write, X = Execute, - = Kein Zugriff</p>
+<h2 id="4-zugriffsverwaltungsprozess">4. Zugriffsverwaltungsprozess</h2>
+<h3 id="41-zugriffsanforderung">4.1 Zugriffsanforderung</h3>
+<p><strong>Prozess:</strong></p>
+<ol>
+<li><strong>Antrag:</strong> Formular mit Begründung</li>
+<li><strong>Manager-Genehmigung:</strong> Vorgesetzter genehmigt</li>
+<li><strong>Security Review:</strong> IT Security prüft</li>
+<li><strong>CISO-Genehmigung:</strong> Bei CDE-Zugriff erforderlich</li>
+<li><strong>Provisionierung:</strong> IT implementiert Zugriff</li>
+<li><strong>Dokumentation:</strong> Zugriff wird dokumentiert</li>
+<li><strong>Benachrichtigung:</strong> Benutzer wird informiert</li>
+</ol>
+<p><strong>Genehmigungsmatrix:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Zugriffs-Typ</th>
+<th>Genehmiger</th>
+<th>Dokumentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CDE-Zugriff</td>
+<td>CISO</td>
+<td>Vollständig</td>
+</tr>
+<tr>
+<td>CHD-Zugriff</td>
+<td>CISO + Manager</td>
+<td>Vollständig</td>
+</tr>
+<tr>
+<td>Corporate-Zugriff</td>
+<td>Manager</td>
+<td>Standard</td>
+</tr>
+<tr>
+<td>Temporärer Zugriff</td>
+<td>IT Security</td>
+<td>Mit Ablaufdatum</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-zugriffsanderung">4.2 Zugriffsänderung</h3>
+<p><strong>Prozess bei Rollenänderung:</strong></p>
+<ol>
+<li><strong>Identifikation:</strong> Rollenänderung erkannt</li>
+<li><strong>Bewertung:</strong> Neue Zugriffsanforderungen</li>
+<li><strong>Genehmigung:</strong> Wie bei Neuantrag</li>
+<li><strong>Entzug:</strong> Alte Berechtigungen entfernen</li>
+<li><strong>Provisionierung:</strong> Neue Berechtigungen erteilen</li>
+<li><strong>Validierung:</strong> Zugriff testen</li>
+</ol>
+<h3 id="43-zugriffsentzug">4.3 Zugriffsentzug</h3>
+<p><strong>Prozess bei Ausscheiden:</strong></p>
+<ol>
+<li><strong>Benachrichtigung:</strong> HR informiert IT</li>
+<li><strong>Sofortiger Entzug:</strong> Alle Zugänge deaktivieren</li>
+<li><strong>Rückgabe:</strong> Hardware und Zugangsmittel</li>
+<li><strong>Dokumentation:</strong> Entzug dokumentieren</li>
+<li><strong>Validierung:</strong> Zugriff testen (sollte blockiert sein)</li>
+</ol>
+<p><strong>Zeitrahmen:</strong>
+- Bei Kündigung: Sofort am letzten Arbeitstag
+- Bei Versetzung: Innerhalb 24 Stunden
+- Bei Verdacht: Sofort</p>
+<h2 id="5-privilegierte-zugriffe">5. Privilegierte Zugriffe</h2>
+<h3 id="51-administrative-accounts">5.1 Administrative Accounts</h3>
+<p><strong>Anforderungen:</strong>
+- Separate Admin-Accounts (nicht für tägliche Arbeit)
+- Starke Authentifizierung (MFA erforderlich)
+- Vollständiges Logging aller Aktionen
+- Regelmäßige Überprüfung</p>
+<p><strong>Namenskonvention:</strong>
+- Standard-User: <code>vorname.nachname</code>
+- Admin-User: <code>vorname.nachname-admin</code>
+- Service-Account: <code>svc-servicename</code></p>
+<h3 id="52-privileged-access-management-pam">5.2 Privileged Access Management (PAM)</h3>
+<p><strong>PAM-System:</strong> [TODO: Name des PAM-Systems]</p>
+<p><strong>Funktionen:</strong>
+- Just-in-Time (JIT) Zugriff
+- Session-Recording
+- Passwort-Vaulting
+- Automatische Passwortrotation</p>
+<p><strong>Prozess:</strong>
+1. Admin beantragt privilegierten Zugriff
+2. Genehmigung durch CISO (automatisch oder manuell)
+3. Zeitlich begrenzter Zugriff gewährt
+4. Session wird aufgezeichnet
+5. Automatischer Entzug nach Ablauf</p>
+<h3 id="53-emergency-access">5.3 Emergency Access</h3>
+<p><strong>Break-Glass-Accounts:</strong>
+- Nur für Notfälle
+- Passwort in versiegeltem Umschlag
+- Verwendung muss dokumentiert werden
+- Passwort nach Verwendung ändern</p>
+<p><strong>Prozess:</strong>
+1. Notfall identifiziert
+2. Umschlag öffnen (mit Zeugen)
+3. Zugriff verwenden
+4. Incident dokumentieren
+5. Passwort sofort ändern
+6. CISO informieren</p>
+<h2 id="6-zugriffskontrolle-fur-karteninhaberdaten">6. Zugriffskontrolle für Karteninhaberdaten</h2>
+<h3 id="61-chd-zugriffsbeschrankungen">6.1 CHD-Zugriffsbeschränkungen</h3>
+<p><strong>Vollständiger PAN-Zugriff:</strong>
+- Nur für autorisierte Rollen
+- Dokumentierte Business-Begründung
+- CISO-Genehmigung erforderlich
+- Vollständiges Logging</p>
+<p><strong>Maskierter PAN-Zugriff:</strong>
+- Nur letzte 4 Ziffern sichtbar
+- Für Support und Reporting
+- Standard-Genehmigung ausreichend</p>
+<p><strong>Kein PAN-Zugriff:</strong>
+- Alle anderen Benutzer
+- Entwickler (nur Testdaten)
+- Externe Dienstleister (ohne Notwendigkeit)</p>
+<h3 id="62-datenmaskierung">6.2 Datenmaskierung</h3>
+<p><strong>Maskierungsregeln:</strong>
+- PAN: Nur erste 6 und letzte 4 Ziffern (z.B., 123456<strong><em>*</em>*1234)
+- Ablaufdatum: Vollständig maskiert
+- CVV: Niemals anzeigen (darf nicht gespeichert werden)
+- Karteninhaber-Name: Teilweise maskiert (z.B., Max M</strong>****)</p>
+<p><strong>Ausnahmen:</strong>
+- Payment-Administratoren (vollständiger Zugriff)
+- Nur mit CISO-Genehmigung
+- Vollständiges Logging</p>
+<h2 id="7-zugriffskontrolle-fur-anwendungen">7. Zugriffskontrolle für Anwendungen</h2>
+<h3 id="71-anwendungsberechtigungen">7.1 Anwendungsberechtigungen</h3>
+<p><strong>Berechtigungsmodell:</strong>
+- Rollenbasierte Berechtigungen
+- Granulare Funktionsrechte
+- Keine Shared Accounts
+- Eindeutige Benutzer-IDs</p>
+<p><strong>Beispiel (Payment Application):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Funktion</th>
+<th>Payment Admin</th>
+<th>Kassierer</th>
+<th>Support</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Transaktion durchführen</td>
+<td>Ja</td>
+<td>Ja</td>
+<td>Nein</td>
+</tr>
+<tr>
+<td>Transaktion stornieren</td>
+<td>Ja</td>
+<td>Eingeschränkt</td>
+<td>Nein</td>
+</tr>
+<tr>
+<td>Berichte anzeigen</td>
+<td>Ja</td>
+<td>Nein</td>
+<td>Ja (maskiert)</td>
+</tr>
+<tr>
+<td>Konfiguration ändern</td>
+<td>Ja</td>
+<td>Nein</td>
+<td>Nein</td>
+</tr>
+<tr>
+<td>Benutzer verwalten</td>
+<td>Ja</td>
+<td>Nein</td>
+<td>Nein</td>
+</tr>
+</tbody>
+</table>
+<h3 id="72-api-zugriffskontrolle">7.2 API-Zugriffskontrolle</h3>
+<p><strong>API-Authentifizierung:</strong>
+- API-Keys mit Ablaufdatum
+- OAuth 2.0 für externe APIs
+- Mutual TLS für kritische APIs
+- Rate Limiting</p>
+<p><strong>API-Autorisierung:</strong>
+- Scope-basierte Berechtigungen
+- Minimale erforderliche Scopes
+- Logging aller API-Aufrufe</p>
+<h2 id="8-zugriffskontrolle-fur-datenbanken">8. Zugriffskontrolle für Datenbanken</h2>
+<h3 id="81-datenbank-berechtigungen">8.1 Datenbank-Berechtigungen</h3>
+<p><strong>Berechtigungsmodell:</strong>
+- Separate DB-Accounts pro Anwendung
+- Keine Shared Accounts
+- Least Privilege für Anwendungen
+- DBA-Zugriff nur für Administration</p>
+<p><strong>Beispiel:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Account</th>
+<th>Typ</th>
+<th>Berechtigungen</th>
+<th>Zweck</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>app_payment</td>
+<td>Application</td>
+<td>SELECT, INSERT, UPDATE</td>
+<td>Payment-Anwendung</td>
+</tr>
+<tr>
+<td>app_reporting</td>
+<td>Application</td>
+<td>SELECT</td>
+<td>Reporting</td>
+</tr>
+<tr>
+<td>dba_admin</td>
+<td>DBA</td>
+<td>ALL</td>
+<td>Administration</td>
+</tr>
+<tr>
+<td>backup_user</td>
+<td>Service</td>
+<td>SELECT</td>
+<td>Backup</td>
+</tr>
+</tbody>
+</table>
+<h3 id="82-verschlusselte-spalten">8.2 Verschlüsselte Spalten</h3>
+<p><strong>CHD-Spalten:</strong>
+- PAN: Verschlüsselt (AES-256)
+- Zugriff nur über Entschlüsselungsfunktion
+- Logging aller Entschlüsselungen
+- Nur autorisierte Accounts</p>
+<h2 id="9-zugriffskontrolle-fur-netzwerk">9. Zugriffskontrolle für Netzwerk</h2>
+<h3 id="91-netzwerkzugriff">9.1 Netzwerkzugriff</h3>
+<p><strong>Zugriffsmethoden:</strong>
+- VPN für Remote-Zugriff
+- Jump Server für Admin-Zugriff
+- Keine direkte Internet-Verbindung zu CDE</p>
+<p><strong>Authentifizierung:</strong>
+- Multi-Faktor-Authentifizierung (MFA)
+- Zertifikatsbasierte Authentifizierung
+- Starke Passwörter</p>
+<h3 id="92-netzwerksegmentierung">9.2 Netzwerksegmentierung</h3>
+<p><strong>Zugriffskontrolle zwischen Segmenten:</strong>
+- Firewall-Regeln
+- ACLs auf Switches
+- Micro-Segmentierung</p>
+<h2 id="10-zugriffskontrolle-fur-physischen-zugang">10. Zugriffskontrolle für physischen Zugang</h2>
+<h3 id="101-rechenzentrum">10.1 Rechenzentrum</h3>
+<p><strong>Zugriffskontrolle:</strong>
+- Badge-System
+- Biometrische Authentifizierung
+- Begleitpflicht für Besucher
+- Logging aller Zutritte</p>
+<p><strong>Autorisierte Personen:</strong>
+- Datacenter-Personal
+- Autorisierte Administratoren
+- Wartungspersonal (mit Begleitung)</p>
+<h3 id="102-buroraume-mit-cde-zugriff">10.2 Büroräume mit CDE-Zugriff</h3>
+<p><strong>Zugriffskontrolle:</strong>
+- Gesperrte Räume
+- Badge-Zugang
+- Besucherprotokoll</p>
+<h2 id="11-zugriffskontrolle-fur-dienstleister">11. Zugriffskontrolle für Dienstleister</h2>
+<h3 id="111-dienstleister-zugriff">11.1 Dienstleister-Zugriff</h3>
+<p><strong>Anforderungen:</strong>
+- Separate Accounts für jeden Dienstleister
+- Zeitlich begrenzter Zugriff
+- Vollständiges Logging
+- PCI-DSS AOC erforderlich</p>
+<p><strong>Genehmigungsprozess:</strong>
+1. Dienstleister-Vertrag mit PCI-Klauseln
+2. AOC-Validierung
+3. CISO-Genehmigung
+4. Zeitlich begrenzter Zugriff
+5. Überwachung während Zugriff</p>
+<h3 id="112-remote-support">11.2 Remote-Support</h3>
+<p><strong>Prozess:</strong>
+- Nur nach Genehmigung
+- Session-Recording
+- Begleitung durch internen Admin
+- Sofortiger Entzug nach Abschluss</p>
+<h2 id="12-zugriffskontrolle-uberwachung">12. Zugriffskontrolle-Überwachung</h2>
+<h3 id="121-logging">12.1 Logging</h3>
+<p><strong>Geloggte Ereignisse:</strong>
+- Erfolgreiche Anmeldungen
+- Fehlgeschlagene Anmeldungen
+- Privilegierte Aktionen
+- Zugriff auf CHD
+- Berechtigungsänderungen</p>
+<p><strong>Log-Retention:</strong> [TODO: 90 Tage online, 1 Jahr Archiv]</p>
+<h3 id="122-alerting">12.2 Alerting</h3>
+<table>
+<thead>
+<tr>
+<th>Alert</th>
+<th>Bedingung</th>
+<th>Schweregrad</th>
+<th>Benachrichtigung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mehrfache fehlgeschlagene Logins</td>
+<td>&gt;5 in 15 Min</td>
+<td>Mittel</td>
+<td>SOC</td>
+</tr>
+<tr>
+<td>Admin-Login außerhalb Geschäftszeiten</td>
+<td>Nach 22:00 Uhr</td>
+<td>Mittel</td>
+<td>SOC + Manager</td>
+</tr>
+<tr>
+<td>CHD-Zugriff</td>
+<td>Jeder Zugriff</td>
+<td>Niedrig</td>
+<td>SIEM</td>
+</tr>
+<tr>
+<td>Berechtigungsänderung</td>
+<td>Jede Änderung</td>
+<td>Mittel</td>
+<td>IT Security</td>
+</tr>
+</tbody>
+</table>
+<h2 id="13-zugriffskontrolle-reviews">13. Zugriffskontrolle-Reviews</h2>
+<h3 id="131-quartalsweise-uberprufung">13.1 Quartalsweise Überprüfung</h3>
+<p><strong>Überprüfungsprozess:</strong></p>
+<ol>
+<li><strong>Benutzer-Review:</strong> Alle Benutzer mit CDE-Zugriff</li>
+<li><strong>Berechtigungs-Review:</strong> Alle Berechtigungen validieren</li>
+<li><strong>Inaktive Accounts:</strong> Identifizieren und deaktivieren</li>
+<li><strong>Dokumentation:</strong> Ergebnisse dokumentieren</li>
+<li><strong>Genehmigung:</strong> CISO-Bestätigung</li>
+</ol>
+<p><strong>Letzte Überprüfung:</strong> [TODO: Datum]<br />
+<strong>Nächste Überprüfung:</strong> [TODO: Datum]<br />
+<strong>Verantwortlich:</strong> [TODO: IT Security Team]</p>
+<h3 id="132-rezertifizierung">13.2 Rezertifizierung</h3>
+<p><strong>Jährliche Rezertifizierung:</strong>
+- Alle Benutzer mit CDE-Zugriff
+- Manager bestätigt Business-Notwendigkeit
+- IT Security validiert Berechtigungen
+- CISO genehmigt</p>
+<h2 id="14-compliance-validierung">14. Compliance-Validierung</h2>
+<h3 id="141-validierungsaktivitaten">14.1 Validierungsaktivitäten</h3>
+<p><strong>Quartalsweise:</strong>
+- Zugriffskontrolle-Review
+- Inaktive Account-Cleanup
+- Berechtigungsdokumentation</p>
+<p><strong>Jährlich:</strong>
+- Vollständige Rezertifizierung
+- Penetrationstest
+- Compliance-Audit</p>
+<h3 id="142-validierungsdokumentation">14.2 Validierungsdokumentation</h3>
+<p><strong>Erforderliche Nachweise:</strong>
+- Zugriffskontrollrichtlinien
+- Berechtigungsmatrix
+- Genehmigungsnachweise
+- Review-Protokolle
+- Rezertifizierungsnachweise</p>
+<hr />
+<p><strong>Dokumenthistorie:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Datum</th>
+<th>Autor</th>
+<th>Änderungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Initiale Erstellung</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0100_Firewall_Konfiguration.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0410_Benutzerauthentifizierung.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

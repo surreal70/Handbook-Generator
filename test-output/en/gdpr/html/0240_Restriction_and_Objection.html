@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0240 - Restriction and Objection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0240</div>
+            <h1>Restriction and Objection</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0230_Rectification_and_Erasure.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0250_Data_Portability.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="restriction-and-objection">Restriction and Objection</h1>
+<p><strong>Document-ID:</strong> 0240<br />
+<strong>Owner:</strong> {{ meta.owner }}<br />
+<strong>Version:</strong> {{ meta.version }}<br />
+<strong>Status:</strong> Draft<br />
+<strong>Classification:</strong> Internal<br />
+<strong>Last Update:</strong> {{ meta.date }}  </p>
+<hr />
+<h2 id="purpose">Purpose</h2>
+<p>This document describes the implementation of the right to restriction of processing and the right to object in {{ meta.organization }}.</p>
+<h2 id="right-to-restriction-art-18">Right to Restriction (Art. 18)</h2>
+<h3 id="grounds-for-restriction">Grounds for Restriction</h3>
+<p><strong>Restriction is required when:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Ground</th>
+<th>Description</th>
+<th>Duration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Accuracy Contested</td>
+<td>Data subject contests accuracy</td>
+<td>Until verification</td>
+</tr>
+<tr>
+<td>Unlawful Processing</td>
+<td>Processing unlawful, but no erasure desired</td>
+<td>Until clarification</td>
+</tr>
+<tr>
+<td>No Longer Necessary</td>
+<td>Data no longer necessary, but needed for legal claims</td>
+<td>Until clarification</td>
+</tr>
+<tr>
+<td>Objection Lodged</td>
+<td>Objection according to Art. 21(1)</td>
+<td>Until balancing of interests</td>
+</tr>
+</tbody>
+</table>
+<h3 id="meaning-of-restriction">Meaning of Restriction</h3>
+<p><strong>During restriction:</strong>
+- Data may only be stored
+- No further processing (except storage)</p>
+<p><strong>Exceptions (processing permissible with consent):</strong>
+- Establishment of legal claims
+- Protection of rights of other persons
+- Important reasons of public interest</p>
+<h3 id="technical-implementation">Technical Implementation</h3>
+<p><strong>Methods for Restriction:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Marking]</td>
+<td>Mark record as "restricted"</td>
+<td>Standard</td>
+</tr>
+<tr>
+<td>[TODO: Access Lock]</td>
+<td>Technical access restriction</td>
+<td>Sensitive data</td>
+</tr>
+<tr>
+<td>[TODO: Separation]</td>
+<td>Move to separate system</td>
+<td>Long-term restriction</td>
+</tr>
+<tr>
+<td>[TODO: Pseudonymization]</td>
+<td>Separation of identification data</td>
+<td>Additional protection</td>
+</tr>
+</tbody>
+</table>
+<h3 id="restriction-process">Restriction Process</h3>
+<p><strong>Standard Process:</strong></p>
+<ol>
+<li><strong>Receipt of Request (Day 0)</strong></li>
+<li>Registration</li>
+<li>Acknowledgment</li>
+<li>
+<p>Assignment</p>
+</li>
+<li>
+<p><strong>Review (Day 1-10)</strong></p>
+</li>
+<li>Identification of data subject</li>
+<li>Review of restriction grounds</li>
+<li>
+<p>Identification of affected data</p>
+</li>
+<li>
+<p><strong>Implementation (Day 11-25)</strong></p>
+</li>
+<li>Technical restriction in all systems</li>
+<li>Notification of recipients (Art. 19)</li>
+<li>
+<p>Documentation</p>
+</li>
+<li>
+<p><strong>Response (Day 26-30)</strong></p>
+</li>
+<li>Information about restriction performed</li>
+<li>Information about lifting of restriction</li>
+</ol>
+<h3 id="lifting-of-restriction">Lifting of Restriction</h3>
+<p><strong>Restriction is lifted when:</strong>
+- Reason for restriction no longer applies
+- Data subject consents
+- Restriction reason clarified</p>
+<p><strong>Before lifting:</strong>
+- Information to data subject required
+- Documentation of lifting</p>
+<h2 id="right-to-object-art-21">Right to Object (Art. 21)</h2>
+<h3 id="objection-to-processing-art-211">Objection to Processing (Art. 21(1))</h3>
+<p><strong>Right to object for:</strong>
+- Processing based on public interest (Art. 6(1)(e))
+- Processing based on legitimate interests (Art. 6(1)(f))</p>
+<p><strong>Consequence of Objection:</strong>
+- Processing must be stopped
+- Unless: Compelling legitimate grounds override</p>
+<h3 id="balancing-of-interests">Balancing of Interests</h3>
+<p><strong>Assessment After Objection:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Assessment Question</th>
+<th>Evaluation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Compelling Grounds</td>
+<td>Are there compelling legitimate grounds?</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Legal Claims</td>
+<td>Are legal claims affected?</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Interests of Person</td>
+<td>What interests does the data subject have?</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Balancing</td>
+<td>Do controller's grounds override?</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Result:</strong>
+- Compelling grounds override: Processing permissible
+- No compelling grounds: Stop processing</p>
+<h3 id="objection-to-direct-marketing-art-212">Objection to Direct Marketing (Art. 21(2))</h3>
+<p><strong>Special Features:</strong>
+- Absolute right to object
+- No balancing of interests required
+- Processing must be stopped immediately</p>
+<p><strong>Implementation:</strong>
+- Entry in suppression list
+- No further advertising
+- Information to all marketing channels</p>
+<h3 id="objection-to-profiling-art-213">Objection to Profiling (Art. 21(3))</h3>
+<p><strong>Right to object for:</strong>
+- Profiling in connection with direct marketing
+- Profiling based on legitimate interests</p>
+<h3 id="objection-process">Objection Process</h3>
+<p><strong>Standard Process:</strong></p>
+<ol>
+<li><strong>Receipt of Objection (Day 0)</strong></li>
+<li>Registration</li>
+<li>Acknowledgment</li>
+<li>
+<p>Immediate stop for direct marketing</p>
+</li>
+<li>
+<p><strong>Review (Day 1-15)</strong></p>
+</li>
+<li>Identification of data subject</li>
+<li>Review of legal basis</li>
+<li>
+<p>For Art. 6(1)(f): Balancing of interests</p>
+</li>
+<li>
+<p><strong>Decision (Day 16-20)</strong></p>
+</li>
+<li>Stop processing or</li>
+<li>
+<p>Reasoned refusal (compelling grounds)</p>
+</li>
+<li>
+<p><strong>Implementation (Day 21-25)</strong></p>
+</li>
+<li>Stop in all systems</li>
+<li>Notification of recipients</li>
+<li>
+<p>Documentation</p>
+</li>
+<li>
+<p><strong>Response (Day 26-30)</strong></p>
+</li>
+<li>Information about stop or refusal</li>
+<li>If refusal: Justification and remedies</li>
+</ol>
+<h2 id="notification-obligation-art-19">Notification Obligation (Art. 19)</h2>
+<h3 id="notification-of-recipients">Notification of Recipients</h3>
+<p><strong>Recipients must be informed of restriction or objection:</strong>
+- Processors
+- Third party recipients
+- Public authorities</p>
+<p><strong>Exceptions:</strong>
+- Impossible
+- Disproportionate effort</p>
+<h2 id="documentation">Documentation</h2>
+<h3 id="restriction-and-objection-register">Restriction and Objection Register</h3>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Data Subject</th>
+<th>Type</th>
+<th>Reason</th>
+<th>Status</th>
+<th>Lifting</th>
+<th>Processor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Restriction</td>
+<td>Accuracy contested</td>
+<td>Active</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Objection</td>
+<td>Direct marketing</td>
+<td>Implemented</td>
+<td>N/A</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Objection</td>
+<td>Legitimate interest</td>
+<td>Refused</td>
+<td>N/A</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="evidence-requirements">Evidence Requirements</h3>
+<p><strong>Documentation for Accountability:</strong>
+- All restriction and objection requests
+- Performed restrictions
+- Balancing of interests for objections
+- Refusals and their justification
+- Notifications to recipients
+- Lifting of restrictions</p>
+<h2 id="links-to-other-documents">Links to Other Documents</h2>
+<ul>
+<li><strong>Transparency (Art. 12):</strong> Modalities of processing</li>
+<li><strong>Legitimate Interests (Art. 6(1)(f)):</strong> Balancing of interests</li>
+<li><strong>Notification Obligation (Art. 19):</strong> Notification of recipients</li>
+<li><strong>Erasure (Art. 17):</strong> Alternative to restriction</li>
+</ul>
+<h2 id="common-violations-and-their-prevention">Common Violations and Their Prevention</h2>
+<table>
+<thead>
+<tr>
+<th>Violation</th>
+<th>Example</th>
+<th>Prevention</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No Restriction</td>
+<td>Continued processing despite request</td>
+<td>Immediate implementation</td>
+</tr>
+<tr>
+<td>Missing Balancing</td>
+<td>Refusal without review</td>
+<td>Careful balancing</td>
+</tr>
+<tr>
+<td>Delayed Implementation</td>
+<td>Advertising after objection</td>
+<td>Immediate stop</td>
+</tr>
+<tr>
+<td>No Notification</td>
+<td>Recipients not informed</td>
+<td>Notification process</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Next Steps:</strong>
+1. Establish processes for restriction and objection requests
+2. Implement technical restriction mechanisms
+3. Define balancing of interests process
+4. Train employees on restriction and objection rights
+5. Document all requests in register</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0230_Rectification_and_Erasure.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0250_Data_Portability.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

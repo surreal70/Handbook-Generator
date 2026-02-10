@@ -577,6 +577,146 @@ class TestTemplateTypeValidation:
         
         assert args.template == 'cis-controls'
     
+    def test_valid_template_type_pci_dss(self):
+        """
+        Test that 'pci-dss' template type is accepted.
+        
+        Validates: Requirements 10.7, 15.1
+        """
+        test_args = [
+            'cli.py',
+            '--language', 'de',
+            '--template', 'pci-dss'
+        ]
+        
+        with patch.object(sys, 'argv', test_args):
+            args = parse_arguments()
+        
+        assert args.template == 'pci-dss'
+    
+    def test_valid_template_type_hipaa(self):
+        """
+        Test that 'hipaa' template type is accepted.
+        
+        Validates: Requirements 10.7, 15.1
+        """
+        test_args = [
+            'cli.py',
+            '--language', 'en',
+            '--template', 'hipaa'
+        ]
+        
+        with patch.object(sys, 'argv', test_args):
+            args = parse_arguments()
+        
+        assert args.template == 'hipaa'
+    
+    def test_valid_template_type_nist_800_53(self):
+        """
+        Test that 'nist-800-53' template type is accepted.
+        
+        Validates: Requirements 10.7, 15.1
+        """
+        test_args = [
+            'cli.py',
+            '--language', 'de',
+            '--template', 'nist-800-53'
+        ]
+        
+        with patch.object(sys, 'argv', test_args):
+            args = parse_arguments()
+        
+        assert args.template == 'nist-800-53'
+    
+    def test_valid_template_type_tsc(self):
+        """
+        Test that 'tsc' template type is accepted.
+        
+        Validates: Requirements 10.7, 15.1
+        """
+        test_args = [
+            'cli.py',
+            '--language', 'en',
+            '--template', 'tsc'
+        ]
+        
+        with patch.object(sys, 'argv', test_args):
+            args = parse_arguments()
+        
+        assert args.template == 'tsc'
+    
+    def test_valid_template_type_common_criteria(self):
+        """
+        Test that 'common-criteria' template type is accepted.
+        
+        Validates: Requirements 10.7, 15.1
+        """
+        test_args = [
+            'cli.py',
+            '--language', 'de',
+            '--template', 'common-criteria'
+        ]
+        
+        with patch.object(sys, 'argv', test_args):
+            args = parse_arguments()
+        
+        assert args.template == 'common-criteria'
+    
+    def test_valid_template_type_iso_9001(self):
+        """
+        Test that 'iso-9001' template type is accepted.
+        
+        Validates: Requirements 10.7, 15.1
+        """
+        test_args = [
+            'cli.py',
+            '--language', 'en',
+            '--template', 'iso-9001'
+        ]
+        
+        with patch.object(sys, 'argv', test_args):
+            args = parse_arguments()
+        
+        assert args.template == 'iso-9001'
+    
+    def test_valid_template_type_gdpr(self):
+        """
+        Test that 'gdpr' template type is accepted.
+        
+        Validates: Requirements 10.7, 15.1
+        """
+        test_args = [
+            'cli.py',
+            '--language', 'de',
+            '--template', 'gdpr'
+        ]
+        
+        with patch.object(sys, 'argv', test_args):
+            args = parse_arguments()
+        
+        assert args.template == 'gdpr'
+    
+    def test_new_frameworks_with_short_flags(self):
+        """
+        Test that new framework names work with short flags.
+        
+        Validates: Requirements 10.7, 15.1
+        """
+        new_frameworks = ['pci-dss', 'hipaa', 'nist-800-53', 'tsc', 'common-criteria', 'iso-9001', 'gdpr']
+        
+        for framework in new_frameworks:
+            test_args = [
+                'cli.py',
+                '-l', 'en',
+                '-t', framework
+            ]
+            
+            with patch.object(sys, 'argv', test_args):
+                args = parse_arguments()
+            
+            assert args.template == framework, \
+                f"New framework '{framework}' should be accepted with short flags"
+    
     def test_cis_controls_appears_in_help_text(self, capsys):
         """
         Test that 'cis-controls' appears in help text.
@@ -624,7 +764,7 @@ class TestTemplateTypeValidation:
         """
         Test that invalid template type shows available choices in error message.
         
-        Validates: Requirements 21.5
+        Validates: Requirements 21.5, 15.1
         """
         test_args = [
             'cli.py',
@@ -647,14 +787,24 @@ class TestTemplateTypeValidation:
         assert 'cis-controls' in error_output
         assert 'isms' in error_output
         assert 'it-operation' in error_output
+        # Verify new frameworks appear in error message
+        assert 'pci-dss' in error_output
+        assert 'hipaa' in error_output
+        assert 'nist-800-53' in error_output
+        assert 'tsc' in error_output
+        assert 'common-criteria' in error_output
+        assert 'iso-9001' in error_output
+        assert 'gdpr' in error_output
     
     def test_all_valid_template_types_accepted(self):
         """
         Test that all valid template types are accepted.
         
-        Validates: Requirements 21.1, 21.2, 21.3, 21.5, 3.1
+        Validates: Requirements 21.1, 21.2, 21.3, 21.5, 3.1, 10.7
         """
-        valid_types = ['backup', 'bcm', 'bsi-grundschutz', 'cis-controls', 'isms', 'it-operation']
+        valid_types = ['backup', 'bcm', 'bsi-grundschutz', 'cis-controls', 'common-criteria', 
+                       'email-service', 'gdpr', 'hipaa', 'isms', 'iso-9001', 'it-operation', 
+                       'nist-800-53', 'pci-dss', 'service-templates', 'tsc']
         
         for template_type in valid_types:
             test_args = [
@@ -671,19 +821,21 @@ class TestTemplateTypeValidation:
     
     @settings(max_examples=100)
     @given(
-        template_type=st.sampled_from(['backup', 'bcm', 'bsi-grundschutz', 'cis-controls', 'isms', 'it-operation']),
+        template_type=st.sampled_from(['backup', 'bcm', 'bsi-grundschutz', 'cis-controls', 'common-criteria', 
+                                       'email-service', 'gdpr', 'hipaa', 'isms', 'iso-9001', 'it-operation', 
+                                       'nist-800-53', 'pci-dss', 'service-templates', 'tsc']),
         language=st.sampled_from(['de', 'en'])
     )
     def test_property_14_cli_template_type_validation(self, template_type, language):
         """
-        Feature: template-system-extension
+        Feature: template-system-extension, compliance-framework-templates
         Property 14: CLI Template Type Validation
         
         For any CLI invocation with --template parameter, if the template type
-        is in the valid set (backup, bcm, bsi-grundschutz, cis-controls, isms, it-operation),
-        the system SHALL accept the input without error.
+        is in the valid set (all supported frameworks), the system SHALL accept 
+        the input without error.
         
-        Validates: Requirements 21.5, 3.1
+        Validates: Requirements 21.5, 3.1, 10.7
         """
         test_args = [
             'cli.py',
@@ -706,18 +858,20 @@ class TestTemplateTypeValidation:
             alphabet=st.characters(blacklist_categories=('Cs',)),
             min_size=1,
             max_size=50
-        ).filter(lambda x: x not in ['backup', 'bcm', 'bsi-grundschutz', 'cis-controls', 'isms', 'it-operation'])
+        ).filter(lambda x: x not in ['backup', 'bcm', 'bsi-grundschutz', 'cis-controls', 'common-criteria', 
+                                      'email-service', 'gdpr', 'hipaa', 'isms', 'iso-9001', 'it-operation', 
+                                      'nist-800-53', 'pci-dss', 'service-templates', 'tsc'])
     )
     def test_property_14_cli_invalid_template_rejection(self, invalid_template):
         """
-        Feature: template-system-extension
+        Feature: template-system-extension, compliance-framework-templates
         Property 14: CLI Template Type Validation
         
         For any CLI invocation with --template parameter, if the template type
         is NOT in the valid set, the system SHALL reject the input with an
         error message listing valid options.
         
-        Validates: Requirements 21.5
+        Validates: Requirements 21.5, 10.7, 15.1
         """
         test_args = [
             'cli.py',

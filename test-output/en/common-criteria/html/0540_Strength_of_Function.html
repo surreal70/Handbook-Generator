@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0540 - Strength of Function</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0540</div>
+            <h1>Strength of Function</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0530_Coverage_Matrix.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0600_PP_Conformance.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="strength-of-function">Strength of Function</h1>
+<p><strong>Document-ID:</strong> 0540<br />
+<strong>Owner:</strong> {{ meta.owner }}<br />
+<strong>Version:</strong> {{ meta.version }}<br />
+<strong>Status:</strong> Draft / In Review / Approved<br />
+<strong>Classification:</strong> Internal / Confidential / Strictly Confidential<br />
+<strong>Last Update:</strong> {{ meta.date }}  </p>
+<hr />
+<blockquote>
+<p><strong>Note:</strong> This document is a template. Replace all <code>[TODO]</code> placeholders and adapt the content to your specific TOE (Target of Evaluation).</p>
+</blockquote>
+<h2 id="1-introduction">1. Introduction</h2>
+<h3 id="11-purpose">1.1 Purpose</h3>
+<p>This document analyzes the Strength of Function (SOF) for <strong>[TODO: TOE Name]</strong>. The SOF analysis evaluates the strength of probabilistic or permutation-based security mechanisms against various types of attacks.</p>
+<h3 id="12-sof-concept">1.2 SOF Concept</h3>
+<p><strong>Definition:</strong>
+The Strength of Function is a measure of the minimum strength that a TOE security mechanism provides against direct attacks. It is expressed as the probability that an attacker can overcome the mechanism in a given time with given resources.</p>
+<p><strong>SOF Levels:</strong>
+- <strong>SOF-basic</strong>: Protection against attackers with limited resources and capabilities
+- <strong>SOF-medium</strong>: Protection against attackers with moderate resources and capabilities
+- <strong>SOF-high</strong>: Protection against attackers with high resources and capabilities</p>
+<h3 id="13-applicability">1.3 Applicability</h3>
+<p>SOF applies to the following types of mechanisms:
+- Password-based authentication
+- Biometric authentication
+- Random number generators
+- Cryptographic key generation (for probabilistic methods)
+- Challenge-response mechanisms</p>
+<p>SOF does NOT apply to:
+- Deterministic access control mechanisms
+- Cryptographic algorithms themselves (these are evaluated separately)
+- Audit mechanisms
+- Timestamp mechanisms</p>
+<h2 id="2-sof-claim">2. SOF-Claim</h2>
+<h3 id="21-claimed-sof-level">2.1 Claimed SOF Level</h3>
+<p>The TOE claims the following SOF level:</p>
+<p><strong>SOF-Claim:</strong> [TODO: SOF-basic / SOF-medium / SOF-high]</p>
+<p><strong>Rationale for SOF-Claim:</strong></p>
+<p>[TODO: Justify the choice of SOF level. Example:]</p>
+<p>The TOE is deployed in an environment where the following threats exist:
+- [TODO: Describe relevant Threats from Chapter 2]
+- [TODO: Describe expected attacker capabilities]
+- [TODO: Describe security objectives]</p>
+<p>Based on this analysis, SOF-[TODO] is appropriate because:
+- [TODO: Rationale 1]
+- [TODO: Rationale 2]
+- [TODO: Rationale 3]</p>
+<h2 id="3-identification-of-probabilistic-mechanisms">3. Identification of Probabilistic Mechanisms</h2>
+<h3 id="31-overview">3.1 Overview</h3>
+<p>The following probabilistic or permutation-based mechanisms have been identified in the TOE:</p>
+<table>
+<thead>
+<tr>
+<th>Mechanism-ID</th>
+<th>Mechanism-Name</th>
+<th>TSF-ID</th>
+<th>Type</th>
+<th>SOF-relevant</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M-1</td>
+<td>[TODO]</td>
+<td>TSF-[TODO]</td>
+<td>[TODO: Password/Biometric/RNG/etc.]</td>
+<td>Yes/No</td>
+</tr>
+<tr>
+<td>M-2</td>
+<td>[TODO]</td>
+<td>TSF-[TODO]</td>
+<td>[TODO]</td>
+<td>Yes/No</td>
+</tr>
+<tr>
+<td>M-3</td>
+<td>[TODO]</td>
+<td>TSF-[TODO]</td>
+<td>[TODO]</td>
+<td>Yes/No</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-non-sof-relevant-mechanisms">3.2 Non-SOF-relevant Mechanisms</h3>
+<p>The following mechanisms are NOT SOF-relevant because they are deterministic:</p>
+<table>
+<thead>
+<tr>
+<th>Mechanism-ID</th>
+<th>Mechanism-Name</th>
+<th>TSF-ID</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>TSF-[TODO]</td>
+<td>[TODO: Why not SOF-relevant?]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-sof-analysis">4. SOF Analysis</h2>
+<h3 id="41-mechanism-m-1-todo-name">4.1 Mechanism M-1: [TODO: Name]</h3>
+<p><strong>Mechanism-ID:</strong> M-1<br />
+<strong>TSF-ID:</strong> TSF-[TODO]<br />
+<strong>Type:</strong> [TODO: e.g., Password Authentication]</p>
+<h4 id="411-mechanism-description">4.1.1 Mechanism Description</h4>
+<p>[TODO: Describe the mechanism in detail. Example:]</p>
+<p>The password authentication mechanism uses:
+- Password length: Minimum [TODO] characters, Maximum [TODO] characters
+- Character set: [TODO: e.g., Upper/lowercase letters, digits, special characters]
+- Password complexity rules: [TODO: Describe the rules]
+- Storage: [TODO: e.g., SHA-256 hash with salt]
+- Failed attempt handling: [TODO: e.g., Account lockout after X attempts]</p>
+<h4 id="412-attack-scenarios">4.1.2 Attack Scenarios</h4>
+<p><strong>Possible Attack Types:</strong></p>
+<ol>
+<li><strong>Brute-Force Attack</strong></li>
+<li>Description: Systematic trying of all possible passwords</li>
+<li>Resources: [TODO: Describe required resources]</li>
+<li>
+<p>Time required: [TODO: Calculate time required]</p>
+</li>
+<li>
+<p><strong>Dictionary Attack</strong></p>
+</li>
+<li>Description: Trying commonly used passwords</li>
+<li>Resources: [TODO: Describe required resources]</li>
+<li>
+<p>Time required: [TODO: Calculate time required]</p>
+</li>
+<li>
+<p><strong>Guessing Attack</strong></p>
+</li>
+<li>Description: Guessing passwords based on user information</li>
+<li>Resources: [TODO: Describe required resources]</li>
+<li>Success probability: [TODO: Estimate probability]</li>
+</ol>
+<h4 id="413-sof-calculation">4.1.3 SOF Calculation</h4>
+<p><strong>Assumptions:</strong>
+- [TODO: List all assumptions, e.g.:]
+- Users choose passwords randomly from the allowed character set
+- Attacker has no access to the password hash
+- Attacker can perform maximum [TODO] attempts per time unit</p>
+<p><strong>Calculation:</strong></p>
+<p>[TODO: Perform the SOF calculation. Example:]</p>
+<p><strong>Character Set Size:</strong>
+- Lowercase letters: 26
+- Uppercase letters: 26
+- Digits: 10
+- Special characters: 10
+- Total: 72 characters</p>
+<p><strong>Password Space:</strong>
+- Minimum password length: 8 characters
+- Number of possible passwords: 72^8 = 7.22 × 10^14</p>
+<p><strong>Brute-Force Attack:</strong>
+- Attempts per second: [TODO: e.g., 1000]
+- Time for complete enumeration: 7.22 × 10^14 / 1000 / 86400 / 365 = approx. 22.9 million years
+- Success probability after 1 year: 1 / 22,900,000 ≈ 4.4 × 10^-8</p>
+<p><strong>Account Lockout:</strong>
+- Maximum failed attempts: [TODO: e.g., 5]
+- Success probability: 5 / 7.22 × 10^14 ≈ 6.9 × 10^-15</p>
+<p><strong>Dictionary Attack:</strong>
+- Dictionary size: [TODO: e.g., 1 million common passwords]
+- Success probability (without lockout): 1,000,000 / 7.22 × 10^14 ≈ 1.4 × 10^-9
+- Success probability (with lockout): 5 / 1,000,000 = 5 × 10^-6</p>
+<h4 id="414-sof-evaluation">4.1.4 SOF Evaluation</h4>
+<p><strong>Determined SOF Level:</strong> [TODO: SOF-basic / SOF-medium / SOF-high]</p>
+<p><strong>Rationale:</strong></p>
+<p>[TODO: Justify the determined SOF level. Example:]</p>
+<p>Based on the analysis:
+- Brute-force attacks are practically impossible (success probability &lt; 10^-10)
+- Dictionary attacks are effectively prevented by account lockout (success probability &lt; 10^-5)
+- The mechanism provides protection against attackers with [TODO: limited/moderate/high] resources</p>
+<p>The determined SOF level is <strong>SOF-[TODO]</strong>.</p>
+<p><strong>Comparison with SOF-Claim:</strong>
+- SOF-Claim: SOF-[TODO]
+- Determined SOF: SOF-[TODO]
+- Fulfillment: ✓ Yes / ✗ No</p>
+<h3 id="42-mechanism-m-2-todo-name">4.2 Mechanism M-2: [TODO: Name]</h3>
+<p><strong>Mechanism-ID:</strong> M-2<br />
+<strong>TSF-ID:</strong> TSF-[TODO]<br />
+<strong>Type:</strong> [TODO]</p>
+<h4 id="421-mechanism-description">4.2.1 Mechanism Description</h4>
+<p>[TODO: Description analogous to 4.1.1]</p>
+<h4 id="422-attack-scenarios">4.2.2 Attack Scenarios</h4>
+<p>[TODO: Analysis analogous to 4.1.2]</p>
+<h4 id="423-sof-calculation">4.2.3 SOF Calculation</h4>
+<p>[TODO: Calculation analogous to 4.1.3]</p>
+<h4 id="424-sof-evaluation">4.2.4 SOF Evaluation</h4>
+<p>[TODO: Evaluation analogous to 4.1.4]</p>
+<h3 id="43-mechanism-m-3-todo-name">4.3 Mechanism M-3: [TODO: Name]</h3>
+<p>[TODO: Analyze additional mechanisms following the same schema]</p>
+<h2 id="5-summary-of-sof-analysis">5. Summary of SOF Analysis</h2>
+<h3 id="51-overview-of-all-mechanisms">5.1 Overview of All Mechanisms</h3>
+<table>
+<thead>
+<tr>
+<th>Mechanism-ID</th>
+<th>Mechanism-Name</th>
+<th>Determined SOF</th>
+<th>SOF-Claim</th>
+<th>Fulfillment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M-1</td>
+<td>[TODO]</td>
+<td>SOF-[TODO]</td>
+<td>SOF-[TODO]</td>
+<td>✓/✗</td>
+</tr>
+<tr>
+<td>M-2</td>
+<td>[TODO]</td>
+<td>SOF-[TODO]</td>
+<td>SOF-[TODO]</td>
+<td>✓/✗</td>
+</tr>
+<tr>
+<td>M-3</td>
+<td>[TODO]</td>
+<td>SOF-[TODO]</td>
+<td>SOF-[TODO]</td>
+<td>✓/✗</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-fulfillment-of-sof-claim">5.2 Fulfillment of SOF-Claim</h3>
+<p><strong>SOF-Claim:</strong> SOF-[TODO]</p>
+<p><strong>Analysis:</strong></p>
+<p>[TODO: Analyze whether all mechanisms fulfill the SOF-Claim. Example:]</p>
+<ul>
+<li>Number of analyzed mechanisms: [TODO]</li>
+<li>Number of mechanisms fulfilling SOF-Claim: [TODO]</li>
+<li>Number of mechanisms not fulfilling SOF-Claim: [TODO]</li>
+</ul>
+<p><strong>Result:</strong></p>
+<p>[TODO: Choose one of the following options:]</p>
+<p>✓ <strong>All mechanisms fulfill the SOF-Claim</strong>
+- The SOF-Claim of SOF-[TODO] is met or exceeded by all analyzed mechanisms.</p>
+<p>✗ <strong>Not all mechanisms fulfill the SOF-Claim</strong>
+- The following mechanisms do not fulfill the SOF-Claim: [TODO: List]
+- Actions: [TODO: Describe planned actions]</p>
+<h3 id="53-weakest-mechanism">5.3 Weakest Mechanism</h3>
+<p><strong>Weakest Mechanism:</strong> [TODO: Mechanism-ID and Name]<br />
+<strong>SOF Level:</strong> SOF-[TODO]</p>
+<p><strong>Rationale:</strong>
+[TODO: Explain why this mechanism is the weakest and whether this is acceptable.]</p>
+<h3 id="54-assumptions-and-limitations">5.4 Assumptions and Limitations</h3>
+<p><strong>Assumptions:</strong>
+[TODO: List all assumptions made for the SOF analysis. Example:]
+- Users choose passwords randomly
+- Attacker has no physical access to the system
+- Attacker has no insider information
+- [TODO: Additional assumptions]</p>
+<p><strong>Limitations:</strong>
+[TODO: List all limitations of the analysis. Example:]
+- The analysis does not consider side-channel attacks
+- The analysis does not consider social engineering attacks
+- [TODO: Additional limitations]</p>
+<h2 id="6-recommendations">6. Recommendations</h2>
+<h3 id="61-improvement-opportunities">6.1 Improvement Opportunities</h3>
+<p>[TODO: Provide recommendations for improving SOF. Example:]</p>
+<ol>
+<li><strong>Increase Password Complexity</strong></li>
+<li>Current minimum length: [TODO]</li>
+<li>Recommended minimum length: [TODO]</li>
+<li>
+<p>Expected SOF improvement: [TODO]</p>
+</li>
+<li>
+<p><strong>Multi-Factor Authentication</strong></p>
+</li>
+<li>Implementation of a second factor (e.g., OTP, hardware token)</li>
+<li>
+<p>Expected SOF improvement: [TODO]</p>
+</li>
+<li>
+<p><strong>Adaptive Authentication</strong></p>
+</li>
+<li>Adjustment of security requirements based on risk assessment</li>
+<li>Expected SOF improvement: [TODO]</li>
+</ol>
+<h3 id="62-maintenance-and-monitoring">6.2 Maintenance and Monitoring</h3>
+<p>[TODO: Describe measures to maintain SOF. Example:]</p>
+<ul>
+<li>Regular review of password policies</li>
+<li>Monitoring of authentication attempts</li>
+<li>Update of SOF analysis when TOE changes</li>
+<li>Consideration of new attack techniques</li>
+</ul>
+<h2 id="7-summary">7. Summary</h2>
+<h3 id="71-result-of-sof-analysis">7.1 Result of SOF Analysis</h3>
+<p>The SOF analysis for <strong>[TODO: TOE Name]</strong> shows:</p>
+<ul>
+<li>✓ All probabilistic mechanisms have been identified</li>
+<li>✓ All mechanisms have been analyzed</li>
+<li>✓ SOF calculations are documented</li>
+<li>✓ SOF-Claim is fulfilled / ✗ SOF-Claim is not fulfilled</li>
+</ul>
+<p><strong>Overall Assessment:</strong> [TODO: Summary assessment]</p>
+<h3 id="72-reference-to-additional-documents">7.2 Reference to Additional Documents</h3>
+<p>For further information see:</p>
+<ul>
+<li><strong>0500_TOE_Summary_Specification.md</strong>: Detailed description of TSFs</li>
+<li><strong>0510_Assurance_Measures.md</strong>: AVA_SOF.1 Assurance Measure</li>
+<li><strong>Chapter 4 of the Security Target</strong>: Definition of SFRs</li>
+</ul>
+<hr />
+<p><strong>Document History:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Initial version</td>
+</tr>
+<tr>
+<td>1.0</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0530_Coverage_Matrix.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0600_PP_Conformance.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

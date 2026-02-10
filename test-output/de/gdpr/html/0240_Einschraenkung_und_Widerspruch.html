@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0240 - Einschränkung und Widerspruch</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0240</div>
+            <h1>Einschränkung und Widerspruch</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0230_Berichtigung_und_Loeschung.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0250_Datenuebertragbarkeit.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="einschrankung-und-widerspruch">Einschränkung und Widerspruch</h1>
+<p><strong>Dokument-ID:</strong> 0240<br />
+<strong>Owner:</strong> {{ meta.owner }}<br />
+<strong>Version:</strong> {{ meta.version }}<br />
+<strong>Status:</strong> Entwurf<br />
+<strong>Klassifizierung:</strong> Intern<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.date }}  </p>
+<hr />
+<h2 id="zweck">Zweck</h2>
+<p>Dieses Dokument beschreibt die Umsetzung des Rechts auf Einschränkung der Verarbeitung und des Widerspruchsrechts in der {{ meta.organization }}.</p>
+<h2 id="recht-auf-einschrankung-art-18">Recht auf Einschränkung (Art. 18)</h2>
+<h3 id="grunde-fur-einschrankung">Gründe für Einschränkung</h3>
+<p><strong>Einschränkung ist erforderlich, wenn:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Grund</th>
+<th>Beschreibung</th>
+<th>Dauer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Richtigkeit bestritten</td>
+<td>Betroffene Person bestreitet Richtigkeit</td>
+<td>Bis zur Überprüfung</td>
+</tr>
+<tr>
+<td>Unrechtmäßige Verarbeitung</td>
+<td>Verarbeitung unrechtmäßig, aber keine Löschung gewünscht</td>
+<td>Bis zur Klärung</td>
+</tr>
+<tr>
+<td>Nicht mehr erforderlich</td>
+<td>Daten nicht mehr erforderlich, aber für Rechtsansprüche benötigt</td>
+<td>Bis zur Klärung</td>
+</tr>
+<tr>
+<td>Widerspruch eingelegt</td>
+<td>Widerspruch nach Art. 21 Abs. 1</td>
+<td>Bis zur Interessenabwägung</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bedeutung-der-einschrankung">Bedeutung der Einschränkung</h3>
+<p><strong>Bei Einschränkung:</strong>
+- Daten dürfen nur gespeichert werden
+- Keine weitere Verarbeitung (außer Speicherung)</p>
+<p><strong>Ausnahmen (Verarbeitung zulässig mit Einwilligung):</strong>
+- Geltendmachung von Rechtsansprüchen
+- Schutz der Rechte anderer Personen
+- Wichtige Gründe des öffentlichen Interesses</p>
+<h3 id="technische-umsetzung">Technische Umsetzung</h3>
+<p><strong>Methoden zur Einschränkung:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Methode</th>
+<th>Beschreibung</th>
+<th>Anwendungsfall</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Markierung]</td>
+<td>Datensatz als "eingeschränkt" markieren</td>
+<td>Standard</td>
+</tr>
+<tr>
+<td>[TODO: Zugriffssperre]</td>
+<td>Technische Zugriffsbeschränkung</td>
+<td>Sensible Daten</td>
+</tr>
+<tr>
+<td>[TODO: Separierung]</td>
+<td>Verschiebung in separates System</td>
+<td>Langfristige Einschränkung</td>
+</tr>
+<tr>
+<td>[TODO: Pseudonymisierung]</td>
+<td>Trennung von Identifikationsdaten</td>
+<td>Zusätzlicher Schutz</td>
+</tr>
+</tbody>
+</table>
+<h3 id="einschrankungsprozess">Einschränkungsprozess</h3>
+<p><strong>Standardprozess:</strong></p>
+<ol>
+<li><strong>Eingang des Antrags (Tag 0)</strong></li>
+<li>Registrierung</li>
+<li>Eingangsbestätigung</li>
+<li>
+<p>Zuweisung</p>
+</li>
+<li>
+<p><strong>Prüfung (Tag 1-10)</strong></p>
+</li>
+<li>Identifikation der betroffenen Person</li>
+<li>Prüfung der Einschränkungsgründe</li>
+<li>
+<p>Identifikation betroffener Daten</p>
+</li>
+<li>
+<p><strong>Durchführung (Tag 11-25)</strong></p>
+</li>
+<li>Technische Einschränkung in allen Systemen</li>
+<li>Benachrichtigung von Empfängern (Art. 19)</li>
+<li>
+<p>Dokumentation</p>
+</li>
+<li>
+<p><strong>Rückmeldung (Tag 26-30)</strong></p>
+</li>
+<li>Information über durchgeführte Einschränkung</li>
+<li>Information über Aufhebung der Einschränkung</li>
+</ol>
+<h3 id="aufhebung-der-einschrankung">Aufhebung der Einschränkung</h3>
+<p><strong>Einschränkung wird aufgehoben, wenn:</strong>
+- Grund für Einschränkung entfällt
+- Betroffene Person zustimmt
+- Einschränkungsgrund geklärt</p>
+<p><strong>Vor Aufhebung:</strong>
+- Information der betroffenen Person erforderlich
+- Dokumentation der Aufhebung</p>
+<h2 id="widerspruchsrecht-art-21">Widerspruchsrecht (Art. 21)</h2>
+<h3 id="widerspruch-gegen-verarbeitung-art-21-abs-1">Widerspruch gegen Verarbeitung (Art. 21 Abs. 1)</h3>
+<p><strong>Widerspruchsrecht bei:</strong>
+- Verarbeitung aufgrund öffentlichen Interesses (Art. 6 Abs. 1 lit. e)
+- Verarbeitung aufgrund berechtigten Interesses (Art. 6 Abs. 1 lit. f)</p>
+<p><strong>Folge des Widerspruchs:</strong>
+- Verarbeitung muss eingestellt werden
+- Außer: Zwingende schutzwürdige Gründe überwiegen</p>
+<h3 id="interessenabwagung">Interessenabwägung</h3>
+<p><strong>Prüfung nach Widerspruch:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Kriterium</th>
+<th>Prüffrage</th>
+<th>Bewertung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zwingende Gründe</td>
+<td>Gibt es zwingende schutzwürdige Gründe?</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Rechtsansprüche</td>
+<td>Sind Rechtsansprüche betroffen?</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Interessen der Person</td>
+<td>Welche Interessen hat die betroffene Person?</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Abwägung</td>
+<td>Überwiegen die Gründe des Verantwortlichen?</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ergebnis:</strong>
+- Überwiegen zwingende Gründe: Verarbeitung zulässig
+- Keine zwingenden Gründe: Verarbeitung einstellen</p>
+<h3 id="widerspruch-gegen-direktwerbung-art-21-abs-2">Widerspruch gegen Direktwerbung (Art. 21 Abs. 2)</h3>
+<p><strong>Besonderheiten:</strong>
+- Absolutes Widerspruchsrecht
+- Keine Interessenabwägung erforderlich
+- Verarbeitung muss sofort eingestellt werden</p>
+<p><strong>Umsetzung:</strong>
+- Eintrag in Sperrliste
+- Keine weitere Werbung
+- Information an alle Marketingkanäle</p>
+<h3 id="widerspruch-gegen-profiling-art-21-abs-3">Widerspruch gegen Profiling (Art. 21 Abs. 3)</h3>
+<p><strong>Widerspruchsrecht bei:</strong>
+- Profiling im Zusammenhang mit Direktwerbung
+- Profiling aufgrund berechtigten Interesses</p>
+<h3 id="widerspruchsprozess">Widerspruchsprozess</h3>
+<p><strong>Standardprozess:</strong></p>
+<ol>
+<li><strong>Eingang des Widerspruchs (Tag 0)</strong></li>
+<li>Registrierung</li>
+<li>Eingangsbestätigung</li>
+<li>
+<p>Sofortige Einstellung bei Direktwerbung</p>
+</li>
+<li>
+<p><strong>Prüfung (Tag 1-15)</strong></p>
+</li>
+<li>Identifikation der betroffenen Person</li>
+<li>Prüfung der Rechtsgrundlage</li>
+<li>
+<p>Bei Art. 6 Abs. 1 lit. f: Interessenabwägung</p>
+</li>
+<li>
+<p><strong>Entscheidung (Tag 16-20)</strong></p>
+</li>
+<li>Einstellung der Verarbeitung oder</li>
+<li>
+<p>Begründete Ablehnung (zwingende Gründe)</p>
+</li>
+<li>
+<p><strong>Durchführung (Tag 21-25)</strong></p>
+</li>
+<li>Einstellung in allen Systemen</li>
+<li>Benachrichtigung von Empfängern</li>
+<li>
+<p>Dokumentation</p>
+</li>
+<li>
+<p><strong>Rückmeldung (Tag 26-30)</strong></p>
+</li>
+<li>Information über Einstellung oder Ablehnung</li>
+<li>Bei Ablehnung: Begründung und Rechtsbehelfe</li>
+</ol>
+<h2 id="benachrichtigungspflicht-art-19">Benachrichtigungspflicht (Art. 19)</h2>
+<h3 id="benachrichtigung-von-empfangern">Benachrichtigung von Empfängern</h3>
+<p><strong>Bei Einschränkung oder Widerspruch müssen Empfänger informiert werden:</strong>
+- Auftragsverarbeiter
+- Dritte Empfänger
+- Öffentliche Stellen</p>
+<p><strong>Ausnahmen:</strong>
+- Unmöglich
+- Unverhältnismäßiger Aufwand</p>
+<h2 id="dokumentation">Dokumentation</h2>
+<h3 id="einschrankungs-und-widerspruchsregister">Einschränkungs- und Widerspruchsregister</h3>
+<table>
+<thead>
+<tr>
+<th>Datum</th>
+<th>Betroffene Person</th>
+<th>Art</th>
+<th>Grund</th>
+<th>Status</th>
+<th>Aufhebung</th>
+<th>Bearbeiter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Einschränkung</td>
+<td>Richtigkeit bestritten</td>
+<td>Aktiv</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Widerspruch</td>
+<td>Direktwerbung</td>
+<td>Umgesetzt</td>
+<td>N/A</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Widerspruch</td>
+<td>Berechtigtes Interesse</td>
+<td>Abgelehnt</td>
+<td>N/A</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="nachweispflichten">Nachweispflichten</h3>
+<p><strong>Dokumentation für Accountability:</strong>
+- Alle Einschränkungs- und Widerspruchsanträge
+- Durchgeführte Einschränkungen
+- Interessenabwägungen bei Widerspruch
+- Ablehnungen und deren Begründung
+- Benachrichtigungen an Empfänger
+- Aufhebungen von Einschränkungen</p>
+<h2 id="verknupfung-zu-anderen-dokumenten">Verknüpfung zu anderen Dokumenten</h2>
+<ul>
+<li><strong>Transparenz (Art. 12):</strong> Modalitäten der Bearbeitung</li>
+<li><strong>Berechtigtes Interesse (Art. 6 Abs. 1 lit. f):</strong> Interessenabwägung</li>
+<li><strong>Mitteilungspflicht (Art. 19):</strong> Benachrichtigung von Empfängern</li>
+<li><strong>Löschung (Art. 17):</strong> Alternative zur Einschränkung</li>
+</ul>
+<h2 id="haufige-verstoe-und-deren-vermeidung">Häufige Verstöße und deren Vermeidung</h2>
+<table>
+<thead>
+<tr>
+<th>Verstoß</th>
+<th>Beispiel</th>
+<th>Vermeidung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Keine Einschränkung</td>
+<td>Weiterverarbeitung trotz Antrag</td>
+<td>Sofortige Umsetzung</td>
+</tr>
+<tr>
+<td>Fehlende Interessenabwägung</td>
+<td>Ablehnung ohne Prüfung</td>
+<td>Sorgfältige Abwägung</td>
+</tr>
+<tr>
+<td>Verzögerte Umsetzung</td>
+<td>Werbung nach Widerspruch</td>
+<td>Sofortige Einstellung</td>
+</tr>
+<tr>
+<td>Keine Benachrichtigung</td>
+<td>Empfänger nicht informiert</td>
+<td>Benachrichtigungsprozess</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Nächste Schritte:</strong>
+1. Etablieren Sie Prozesse für Einschränkungs- und Widerspruchsanträge
+2. Implementieren Sie technische Einschränkungsmechanismen
+3. Definieren Sie Interessenabwägungsprozess
+4. Schulen Sie Mitarbeiter zu Einschränkungs- und Widerspruchsrecht
+5. Dokumentieren Sie alle Anträge im Register</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0230_Berichtigung_und_Loeschung.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0250_Datenuebertragbarkeit.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

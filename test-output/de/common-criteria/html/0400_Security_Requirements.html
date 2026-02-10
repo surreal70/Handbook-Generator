@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0400 - Sicherheitsanforderungen (Security Requirements)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0400</div>
+            <h1>Sicherheitsanforderungen (Security Requirements)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0330_Security_Objectives_Summary.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0410_Evaluation_Assurance_Level.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="sicherheitsanforderungen-security-requirements">Sicherheitsanforderungen (Security Requirements)</h1>
+<p><strong>Dokument-ID:</strong> 0400<br />
+<strong>Owner:</strong> {{ meta.owner }}<br />
+<strong>Version:</strong> {{ meta.version }}<br />
+<strong>Status:</strong> Entwurf / In Review / Freigegeben<br />
+<strong>Klassifizierung:</strong> Intern / Vertraulich / Streng vertraulich<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.date }}  </p>
+<hr />
+<blockquote>
+<p><strong>Hinweis:</strong> Dieses Dokument ist ein Template. Ersetze alle <code>[TODO]</code>-Platzhalter und passe die Inhalte an dein spezifisches Target of Evaluation (TOE) an.</p>
+</blockquote>
+<h2 id="1-einleitung">1. Einleitung</h2>
+<p>Dieses Kapitel spezifiziert die Sicherheitsanforderungen für das TOE gemäß ISO/IEC 15408 (Common Criteria). Die Sicherheitsanforderungen gliedern sich in:</p>
+<ul>
+<li><strong>Security Functional Requirements (SFRs)</strong>: Funktionale Sicherheitsanforderungen, die das TOE erfüllen muss</li>
+<li><strong>Security Assurance Requirements (SARs)</strong>: Vertrauenswürdigkeitsanforderungen für die Evaluierung des TOE</li>
+</ul>
+<p>Alle Sicherheitsanforderungen sind aus den in Kapitel 0300 definierten Sicherheitszielen abgeleitet und adressieren die in Kapitel 0200 identifizierten Bedrohungen, organisatorischen Sicherheitsrichtlinien und Annahmen.</p>
+<h2 id="2-security-functional-requirements-sfrs">2. Security Functional Requirements (SFRs)</h2>
+<h3 id="21-ubersicht-der-sfrs">2.1 Übersicht der SFRs</h3>
+<p>Die folgenden Security Functional Requirements aus ISO/IEC 15408-2 wurden für das TOE ausgewählt:</p>
+<table>
+<thead>
+<tr>
+<th>SFR-ID</th>
+<th>Klasse</th>
+<th>Familie</th>
+<th>Komponente</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO]</td>
+<td>[TODO: z.B. FAU]</td>
+<td>[TODO: z.B. FAU_GEN]</td>
+<td>[TODO: z.B. FAU_GEN.1]</td>
+<td>[TODO: Kurzbeschreibung]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-security-audit-fau">2.2 Security Audit (FAU)</h3>
+<h4 id="fau_gen1-audit-data-generation">FAU_GEN.1 Audit data generation</h4>
+<p><strong>Hierarchical to:</strong> Keine<br />
+<strong>Dependencies:</strong> FPT_STM.1 Reliable time stamps</p>
+<p><strong>FAU_GEN.1.1</strong> Das TSF muss in der Lage sein, einen Audit-Datensatz für die folgenden auditierbaren Ereignisse zu erzeugen:
+- [assignment: Liste der auditierbaren Ereignisse]
+- [TODO: Spezifiziere konkrete Ereignisse]</p>
+<p><strong>FAU_GEN.1.2</strong> Das TSF muss in jedem Audit-Datensatz mindestens die folgenden Informationen aufzeichnen:
+- Datum und Uhrzeit des Ereignisses
+- Art des Ereignisses
+- Subjekt-Identität
+- Ergebnis (Erfolg oder Fehler) des Ereignisses
+- [assignment: Weitere Audit-relevante Informationen]</p>
+<h3 id="23-cryptographic-support-fcs">2.3 Cryptographic Support (FCS)</h3>
+<h4 id="fcs_cop1-cryptographic-operation">FCS_COP.1 Cryptographic operation</h4>
+<p><strong>Hierarchical to:</strong> Keine<br />
+<strong>Dependencies:</strong> 
+- FDP_ITC.1 Import of user data without security attributes oder FDP_ITC.2 Import of user data with security attributes oder FCS_CKM.1 Cryptographic key generation</p>
+<p><strong>FCS_COP.1.1</strong> Das TSF muss [assignment: kryptographische Operation] gemäß einem spezifizierten kryptographischen Algorithmus [assignment: kryptographischer Algorithmus] und kryptographischen Schlüssellängen [assignment: Schlüssellängen] durchführen, die [selection: Standards, Regeln, Richtlinien] entsprechen.</p>
+<p>[TODO: Spezifiziere konkrete kryptographische Operationen, Algorithmen und Schlüssellängen]</p>
+<h3 id="24-user-data-protection-fdp">2.4 User Data Protection (FDP)</h3>
+<h4 id="fdp_acc1-subset-access-control">FDP_ACC.1 Subset access control</h4>
+<p><strong>Hierarchical to:</strong> Keine<br />
+<strong>Dependencies:</strong> FDP_ACF.1 Security attribute based access control</p>
+<p><strong>FDP_ACC.1.1</strong> Das TSF muss [assignment: Zugriffskontrollrichtlinie] auf [assignment: Subjekte, Objekte und Operationen] durchsetzen.</p>
+<p>[TODO: Definiere Zugriffskontrollrichtlinie, Subjekte, Objekte und Operationen]</p>
+<h3 id="25-identification-and-authentication-fia">2.5 Identification and Authentication (FIA)</h3>
+<h4 id="fia_uid1-timing-of-identification">FIA_UID.1 Timing of identification</h4>
+<p><strong>Hierarchical to:</strong> Keine<br />
+<strong>Dependencies:</strong> Keine</p>
+<p><strong>FIA_UID.1.1</strong> Das TSF muss es jedem Benutzer erlauben, sich zu identifizieren, bevor das TSF dem Benutzer erlaubt, andere TSF-vermittelte Aktionen durchzuführen, die [selection: keine anderen Aktionen, [assignment: Liste der TSF-vermittelten Aktionen]] ausschließen.</p>
+<p>[TODO: Spezifiziere Ausnahmen, falls vorhanden]</p>
+<h3 id="26-security-management-fmt">2.6 Security Management (FMT)</h3>
+<h4 id="fmt_smf1-specification-of-management-functions">FMT_SMF.1 Specification of Management Functions</h4>
+<p><strong>Hierarchical to:</strong> Keine<br />
+<strong>Dependencies:</strong> Keine</p>
+<p><strong>FMT_SMF.1.1</strong> Das TSF muss in der Lage sein, die folgenden Sicherheitsmanagement-Funktionen durchzuführen:
+- [assignment: Liste der Sicherheitsmanagement-Funktionen]</p>
+<p>[TODO: Liste alle Sicherheitsmanagement-Funktionen auf]</p>
+<h3 id="27-protection-of-the-tsf-fpt">2.7 Protection of the TSF (FPT)</h3>
+<h4 id="fpt_stm1-reliable-time-stamps">FPT_STM.1 Reliable time stamps</h4>
+<p><strong>Hierarchical to:</strong> Keine<br />
+<strong>Dependencies:</strong> Keine</p>
+<p><strong>FPT_STM.1.1</strong> Das TSF muss in der Lage sein, zuverlässige Zeitstempel für den eigenen Gebrauch bereitzustellen.</p>
+<h3 id="28-toe-access-fta">2.8 TOE Access (FTA)</h3>
+<h3 id="29-trusted-pathchannels-ftp">2.9 Trusted Path/Channels (FTP)</h3>
+<h3 id="210-weitere-sfr-klassen">2.10 Weitere SFR-Klassen</h3>
+<h2 id="3-security-assurance-requirements-sars">3. Security Assurance Requirements (SARs)</h2>
+<h3 id="31-ubersicht-der-sars">3.1 Übersicht der SARs</h3>
+<p>Die Security Assurance Requirements definieren die Vertrauenswürdigkeitsanforderungen für die Evaluierung des TOE. Die SARs sind durch die Auswahl des Evaluation Assurance Level (EAL) bestimmt.</p>
+<p><strong>Gewähltes EAL:</strong> [TODO: z.B. EAL4]</p>
+<h3 id="32-assurance-class-security-target-evaluation-ase">3.2 Assurance Class: Security Target Evaluation (ASE)</h3>
+<p>Die folgenden ASE-Komponenten sind für alle EALs erforderlich:</p>
+<ul>
+<li><strong>ASE_CCL.1</strong> Conformance claims</li>
+<li><strong>ASE_ECD.1</strong> Extended components definition</li>
+<li><strong>ASE_INT.1</strong> ST introduction</li>
+<li><strong>ASE_OBJ.2</strong> Security objectives</li>
+<li><strong>ASE_REQ.2</strong> Derived security requirements</li>
+<li><strong>ASE_SPD.1</strong> Security problem definition</li>
+<li><strong>ASE_TSS.1</strong> TOE summary specification</li>
+</ul>
+<p>[TODO: Passe an gewähltes EAL an]</p>
+<h3 id="33-assurance-class-development-adv">3.3 Assurance Class: Development (ADV)</h3>
+<p>Für EAL [TODO: X] sind folgende ADV-Komponenten erforderlich:</p>
+<ul>
+<li><strong>ADV_ARC.1</strong> Security architecture description</li>
+<li><strong>ADV_FSP.4</strong> Complete functional specification</li>
+<li><strong>ADV_IMP.1</strong> Implementation representation of the TSF</li>
+<li><strong>ADV_TDS.3</strong> Basic modular design</li>
+</ul>
+<p>[TODO: Passe an gewähltes EAL an]</p>
+<h3 id="34-assurance-class-guidance-documents-agd">3.4 Assurance Class: Guidance Documents (AGD)</h3>
+<ul>
+<li><strong>AGD_OPE.1</strong> Operational user guidance</li>
+<li><strong>AGD_PRE.1</strong> Preparative procedures</li>
+</ul>
+<h3 id="35-assurance-class-life-cycle-support-alc">3.5 Assurance Class: Life-cycle Support (ALC)</h3>
+<p>Für EAL [TODO: X] sind folgende ALC-Komponenten erforderlich:</p>
+<ul>
+<li><strong>ALC_CMC.4</strong> Production support, acceptance procedures and automation</li>
+<li><strong>ALC_CMS.4</strong> Problem tracking CM coverage</li>
+<li><strong>ALC_DEL.1</strong> Delivery procedures</li>
+<li><strong>ALC_DVS.1</strong> Identification of security measures</li>
+<li><strong>ALC_LCD.1</strong> Developer defined life-cycle model</li>
+<li><strong>ALC_TAT.1</strong> Well-defined development tools</li>
+</ul>
+<p>[TODO: Passe an gewähltes EAL an]</p>
+<h3 id="36-assurance-class-tests-ate">3.6 Assurance Class: Tests (ATE)</h3>
+<ul>
+<li><strong>ATE_COV.2</strong> Analysis of coverage</li>
+<li><strong>ATE_DPT.1</strong> Testing: high-level design</li>
+<li><strong>ATE_FUN.1</strong> Functional testing</li>
+<li><strong>ATE_IND.2</strong> Independent testing - sample</li>
+</ul>
+<p>[TODO: Passe an gewähltes EAL an]</p>
+<h3 id="37-assurance-class-vulnerability-assessment-ava">3.7 Assurance Class: Vulnerability Assessment (AVA)</h3>
+<ul>
+<li><strong>AVA_VAN.3</strong> Focused vulnerability analysis</li>
+</ul>
+<p>[TODO: Passe an gewähltes EAL an]</p>
+<h2 id="4-security-requirements-rationale">4. Security Requirements Rationale</h2>
+<p>Die Begründung für die Auswahl der Sicherheitsanforderungen wird in Dokument 0420 detailliert dargestellt.</p>
+<p>Zusammenfassung:
+- Alle SFRs sind aus den Sicherheitszielen für das TOE abgeleitet
+- Alle SFR-Abhängigkeiten sind erfüllt (siehe Dokument 0430)
+- Die gewählten SARs entsprechen dem Evaluation Assurance Level [TODO: X]
+- Die Sicherheitsanforderungen sind vollständig, konsistent und intern widerspruchsfrei</p>
+<h2 id="5-operationen-auf-sfrs">5. Operationen auf SFRs</h2>
+<p>Gemäß ISO/IEC 15408-2 können folgende Operationen auf SFRs durchgeführt werden:</p>
+<ul>
+<li><strong>Assignment</strong>: Spezifizierung von Parametern (markiert mit [assignment: ...])</li>
+<li><strong>Selection</strong>: Auswahl aus vorgegebenen Optionen (markiert mit [selection: ...])</li>
+<li><strong>Refinement</strong>: Verfeinerung der Anforderung (kursiv dargestellt)</li>
+<li><strong>Iteration</strong>: Mehrfache Verwendung einer Komponente (durch Suffix gekennzeichnet, z.B. FDP_ACC.1/1, FDP_ACC.1/2)</li>
+</ul>
+<p>Alle durchgeführten Operationen sind in den SFR-Spezifikationen oben dokumentiert.</p>
+<h2 id="6-referenzen">6. Referenzen</h2>
+<ul>
+<li>ISO/IEC 15408-2:2022 - Security functional requirements</li>
+<li>ISO/IEC 15408-3:2022 - Security assurance requirements</li>
+<li>[TODO: Weitere relevante Standards und Spezifikationen]</li>
+</ul>
+<h2 id="7-anhange">7. Anhänge</h2>
+<h3 id="71-sfr-ubersichtstabelle">7.1 SFR-Übersichtstabelle</h3>
+<p>Eine vollständige Übersicht aller SFRs mit Abhängigkeiten findet sich in Dokument 0430.</p>
+<h3 id="72-sar-ubersichtstabelle">7.2 SAR-Übersichtstabelle</h3>
+<p>Eine vollständige Übersicht aller SARs entsprechend dem gewählten EAL findet sich in Dokument 0410.</p>
+<hr />
+<p><strong>Nächste Schritte:</strong>
+1. Vervollständige alle [TODO]-Platzhalter
+2. Spezifiziere alle Assignments und Selections in den SFRs
+3. Verifiziere die Vollständigkeit der SFR-Abhängigkeiten (siehe Dokument 0430)
+4. Stelle sicher, dass alle SFRs aus den Sicherheitszielen abgeleitet sind
+5. Dokumentiere die Rationale in Dokument 0420</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0330_Security_Objectives_Summary.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0410_Evaluation_Assurance_Level.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

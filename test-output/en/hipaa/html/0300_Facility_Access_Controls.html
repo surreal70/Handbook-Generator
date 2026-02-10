@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0300 - Facility Access Controls</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0300</div>
+            <h1>Facility Access Controls</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0110_Workforce_Security.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0310_Workstation_Use_and_Security.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="facility-access-controls">Facility Access Controls</h1>
+<p><strong>Document ID:</strong> HIPAA-0300<br />
+<strong>Organization:</strong> AdminSend GmbH<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Approved by:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Draft / In Review / Approved<br />
+<strong>Classification:</strong> internal<br />
+<strong>Last Updated:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This document describes the Facility Access Controls for AdminSend GmbH to limit physical access to electronic information systems and the facilities in which they are housed, while ensuring properly authorized access is allowed.</p>
+<h3 id="11-hipaa-requirement">1.1 HIPAA Requirement</h3>
+<p><strong>Standard:</strong> §164.310(a)(1) - Facility Access Controls (Required)</p>
+<p><strong>Implementation Specifications:</strong>
+- §164.310(a)(2)(i) - Contingency Operations (Addressable)
+- §164.310(a)(2)(ii) - Facility Security Plan (Addressable)
+- §164.310(a)(2)(iii) - Access Control and Validation Procedures (Addressable)
+- §164.310(a)(2)(iv) - Maintenance Records (Addressable)</p>
+<h2 id="2-facility-inventory">2. Facility Inventory</h2>
+<h3 id="21-facilities-with-ephi">2.1 Facilities with ePHI</h3>
+<table>
+<thead>
+<tr>
+<th>Facility ID</th>
+<th>Facility Name</th>
+<th>Address</th>
+<th>Type</th>
+<th>ePHI Systems</th>
+<th>Access Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: FAC-001]</td>
+<td>Main Data Center</td>
+<td>[TODO: Address]</td>
+<td>Data Center</td>
+<td>All production systems</td>
+<td>Restricted</td>
+</tr>
+<tr>
+<td>[TODO: FAC-002]</td>
+<td>Main Clinic</td>
+<td>[TODO: Address]</td>
+<td>Clinical</td>
+<td>EHR workstations</td>
+<td>Controlled</td>
+</tr>
+<tr>
+<td>[TODO: FAC-003]</td>
+<td>Administrative Office</td>
+<td>[TODO: Address]</td>
+<td>Office</td>
+<td>Billing systems</td>
+<td>Controlled</td>
+</tr>
+<tr>
+<td>[TODO: FAC-004]</td>
+<td>Backup Site</td>
+<td>[TODO: Address]</td>
+<td>DR Site</td>
+<td>Backup systems</td>
+<td>Restricted</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-facility-classification">2.2 Facility Classification</h3>
+<p><strong>Restricted Access:</strong>
+- Data centers
+- Server rooms
+- Network equipment rooms
+- Backup storage areas</p>
+<p><strong>Controlled Access:</strong>
+- Clinical areas
+- Administrative offices
+- Medical records rooms</p>
+<p><strong>Public Access:</strong>
+- Waiting rooms
+- Public corridors
+- Cafeteria</p>
+<h2 id="3-contingency-operations">3. Contingency Operations</h2>
+<h3 id="31-emergency-access-procedures">3.1 Emergency Access Procedures</h3>
+<p><strong>Purpose:</strong> Establish procedures to allow facility access in support of restoration of lost data under the disaster recovery and emergency mode operations plan.</p>
+<p><strong>Emergency Scenarios:</strong>
+- Fire or natural disaster
+- Power failure
+- System failure requiring immediate access
+- Security incident requiring investigation</p>
+<p><strong>Emergency Access Process:</strong>
+1. <strong>Authorization:</strong> Security Officer or designee authorizes emergency access
+2. <strong>Escort:</strong> Emergency personnel escorted by authorized staff
+3. <strong>Documentation:</strong> All emergency access logged
+4. <strong>Restoration:</strong> Normal access controls restored after emergency
+5. <strong>Review:</strong> Post-incident review of emergency access</p>
+<p><strong>Emergency Contacts:</strong>
+| Role | Name | Phone (24/7) | Backup |
+|------|------|--------------|--------|
+| Security Officer | {{ meta.roles.security_officer.name }} | [TODO: Phone] | [TODO: Backup name/phone] |
+| Facility Manager | [TODO: Name] | [TODO: Phone] | [TODO: Backup] |
+| IT Manager | [TODO: Name] | [TODO: Phone] | [TODO: Backup] |</p>
+<h3 id="32-emergency-access-equipment">3.2 Emergency Access Equipment</h3>
+<p><strong>Emergency Access Tools:</strong>
+- Master keys (secured in break-glass box)
+- Access cards (emergency override)
+- Lock bypass tools (authorized personnel only)
+- Emergency lighting
+- Communication devices</p>
+<p><strong>Storage Location:</strong> [TODO: Secure location with documented access]</p>
+<h2 id="4-facility-security-plan">4. Facility Security Plan</h2>
+<h3 id="41-physical-security-measures">4.1 Physical Security Measures</h3>
+<p><strong>Perimeter Security:</strong>
+- Fencing: [TODO: Yes/No, Description]
+- Gates: [TODO: Yes/No, Description]
+- Lighting: [TODO: Description]
+- Signage: [TODO: "Authorized Personnel Only" signs]
+- Landscaping: [TODO: Clear sight lines]</p>
+<p><strong>Building Security:</strong>
+- Exterior doors: [TODO: Number, locking mechanisms]
+- Windows: [TODO: Security measures]
+- Loading docks: [TODO: Security measures]
+- Roof access: [TODO: Security measures]</p>
+<p><strong>Interior Security:</strong>
+- Reception/Security desk: [TODO: Yes/No, Hours]
+- Security guards: [TODO: Yes/No, Schedule]
+- Visitor management: [TODO: System/Process]
+- Escort requirements: [TODO: Areas requiring escort]</p>
+<p><strong>Data Center/Server Room Security:</strong>
+- Dedicated room: [TODO: Yes/No]
+- Reinforced walls: [TODO: Yes/No]
+- Raised floor: [TODO: Yes/No]
+- Fire suppression: [TODO: Type]
+- Environmental monitoring: [TODO: Temperature, humidity]
+- Water detection: [TODO: Yes/No]
+- Backup power: [TODO: UPS, generator]</p>
+<h3 id="42-access-control-systems">4.2 Access Control Systems</h3>
+<p><strong>Physical Access Control System:</strong>
+- <strong>System Type:</strong> [TODO: Card reader, biometric, keypad]
+- <strong>Vendor:</strong> [TODO: Vendor name]
+- <strong>Coverage:</strong> [TODO: Doors/areas covered]
+- <strong>Monitoring:</strong> [TODO: 24/7 monitoring, alerts]</p>
+<p><strong>Access Control Features:</strong>
+- Individual identification
+- Time-based access restrictions
+- Area-based access restrictions
+- Anti-passback
+- Audit logging
+- Real-time alerts</p>
+<p><strong>Access Card Management:</strong>
+- Card issuance process
+- Card deactivation process
+- Lost/stolen card procedures
+- Card return upon termination</p>
+<h3 id="43-surveillance-systems">4.3 Surveillance Systems</h3>
+<p><strong>Video Surveillance:</strong>
+- <strong>Coverage:</strong> [TODO: Entrances, exits, server rooms, etc.]
+- <strong>Camera Type:</strong> [TODO: Fixed, PTZ, resolution]
+- <strong>Recording:</strong> [TODO: Continuous, motion-activated]
+- <strong>Retention:</strong> [TODO: Days/months]
+- <strong>Monitoring:</strong> [TODO: Live monitoring, review schedule]</p>
+<p><strong>Surveillance Locations:</strong>
+| Location | Camera Count | Recording | Retention | Purpose |
+|----------|--------------|-----------|-----------|---------|
+| [TODO: Main entrance] | [TODO: 2] | Continuous | [TODO: 90 days] | Access monitoring |
+| [TODO: Server room] | [TODO: 1] | Continuous | [TODO: 90 days] | Security monitoring |
+| [TODO: Parking lot] | [TODO: 4] | Motion | [TODO: 30 days] | Perimeter security |</p>
+<h2 id="5-access-control-and-validation-procedures">5. Access Control and Validation Procedures</h2>
+<h3 id="51-access-authorization">5.1 Access Authorization</h3>
+<p><strong>Authorization Process:</strong>
+1. <strong>Request:</strong> Manager submits access request
+2. <strong>Justification:</strong> Business need documented
+3. <strong>Approval:</strong> Security Officer approves
+4. <strong>Provisioning:</strong> Facility Manager provisions access
+5. <strong>Documentation:</strong> Access logged in system
+6. <strong>Notification:</strong> Employee notified of access granted</p>
+<p><strong>Access Levels:</strong>
+| Level | Description | Authorization Required | Areas Accessible |
+|-------|-------------|------------------------|------------------|
+| Level 1 - Public | General public | None | Waiting areas, public corridors |
+| Level 2 - Employee | Regular employees | Manager approval | Office areas, break rooms |
+| Level 3 - Clinical | Clinical staff | Manager + Privacy Officer | Clinical areas, medical records |
+| Level 4 - IT | IT staff | IT Manager + Security Officer | Server rooms, network closets |
+| Level 5 - Executive | Executive access | CEO approval | All areas |</p>
+<h3 id="52-visitor-management">5.2 Visitor Management</h3>
+<p><strong>Visitor Procedures:</strong>
+1. <strong>Check-in:</strong> Visitor checks in at reception
+2. <strong>Identification:</strong> Photo ID required and recorded
+3. <strong>Badge:</strong> Visitor badge issued
+4. <strong>Escort:</strong> Visitor escorted at all times in restricted areas
+5. <strong>Log:</strong> Visit logged (name, company, purpose, time in/out, host)
+6. <strong>Check-out:</strong> Visitor returns badge and checks out</p>
+<p><strong>Visitor Types:</strong>
+- Vendors/contractors
+- Business associates
+- Auditors
+- Guests
+- Delivery personnel</p>
+<p><strong>Visitor Badge:</strong> Clearly marked "VISITOR" badge, different color from employee badges</p>
+<h3 id="53-access-validation">5.3 Access Validation</h3>
+<p><strong>Access Review Process:</strong>
+- <strong>Frequency:</strong> Quarterly
+- <strong>Reviewer:</strong> Facility Manager + Security Officer
+- <strong>Scope:</strong> All active access permissions
+- <strong>Actions:</strong> Revoke unnecessary access, update records</p>
+<p><strong>Access Validation Checklist:</strong>
+- [ ] Verify employee still requires access
+- [ ] Verify access level appropriate for role
+- [ ] Verify no terminated employees have active access
+- [ ] Verify no expired temporary access
+- [ ] Update access documentation</p>
+<h3 id="54-access-termination">5.4 Access Termination</h3>
+<p><strong>Termination Process:</strong>
+1. <strong>Notification:</strong> HR notifies Facility Manager and Security Officer
+2. <strong>Immediate Revocation:</strong> Access revoked immediately upon termination
+3. <strong>Badge Collection:</strong> Employee badge collected
+4. <strong>Key Collection:</strong> All keys collected
+5. <strong>Verification:</strong> Access termination verified in system
+6. <strong>Documentation:</strong> Termination logged</p>
+<p><strong>Termination Checklist:</strong>
+- [ ] Access card deactivated
+- [ ] Keys returned
+- [ ] Alarm codes changed (if applicable)
+- [ ] Visitor escort privileges revoked
+- [ ] Documentation updated</p>
+<h2 id="6-maintenance-records">6. Maintenance Records</h2>
+<h3 id="61-facility-maintenance">6.1 Facility Maintenance</h3>
+<p><strong>Maintenance Activities:</strong>
+- Access control system maintenance
+- Surveillance system maintenance
+- Lock and key maintenance
+- Alarm system maintenance
+- Fire suppression system maintenance
+- Environmental controls maintenance
+- Emergency lighting maintenance</p>
+<p><strong>Maintenance Schedule:</strong>
+| System | Maintenance Type | Frequency | Vendor | Last Service | Next Service |
+|--------|------------------|-----------|--------|--------------|--------------|
+| [TODO: Access control] | Preventive | Quarterly | [TODO: Vendor] | [TODO: Date] | [TODO: Date] |
+| [TODO: Surveillance] | Preventive | Semi-annual | [TODO: Vendor] | [TODO: Date] | [TODO: Date] |
+| [TODO: Fire suppression] | Inspection | Annual | [TODO: Vendor] | [TODO: Date] | [TODO: Date] |</p>
+<h3 id="62-maintenance-documentation">6.2 Maintenance Documentation</h3>
+<p><strong>Required Documentation:</strong>
+- Maintenance work orders
+- Service reports
+- Parts replaced
+- System tests performed
+- Technician credentials
+- Access logs for maintenance personnel</p>
+<p><strong>Retention:</strong> [TODO: 6 years]</p>
+<h3 id="63-maintenance-access-control">6.3 Maintenance Access Control</h3>
+<p><strong>Vendor Access:</strong>
+- Vendor escorted during maintenance
+- Vendor access logged
+- Vendor credentials verified
+- Background checks for regular vendors
+- Business Associate Agreement (if PHI access possible)</p>
+<h2 id="7-physical-security-incidents">7. Physical Security Incidents</h2>
+<h3 id="71-incident-types">7.1 Incident Types</h3>
+<ul>
+<li>Unauthorized facility access</li>
+<li>Tailgating</li>
+<li>Lost/stolen access cards or keys</li>
+<li>Forced entry</li>
+<li>Surveillance system tampering</li>
+<li>Alarm system failures</li>
+</ul>
+<h3 id="72-incident-response">7.2 Incident Response</h3>
+<p><strong>Response Process:</strong>
+1. <strong>Detection:</strong> Incident detected (alarm, observation, report)
+2. <strong>Notification:</strong> Security Officer notified immediately
+3. <strong>Assessment:</strong> Assess severity and impact
+4. <strong>Containment:</strong> Secure area, change access codes if needed
+5. <strong>Investigation:</strong> Review logs, surveillance footage
+6. <strong>Remediation:</strong> Implement corrective actions
+7. <strong>Documentation:</strong> Document incident and response
+8. <strong>Review:</strong> Post-incident review and lessons learned</p>
+<h3 id="73-incident-log">7.3 Incident Log</h3>
+<table>
+<thead>
+<tr>
+<th>Incident ID</th>
+<th>Date</th>
+<th>Type</th>
+<th>Location</th>
+<th>Description</th>
+<th>Response</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: INC-001]</td>
+<td>[TODO: Date]</td>
+<td>[TODO: Type]</td>
+<td>[TODO: Location]</td>
+<td>[TODO: Description]</td>
+<td>[TODO: Actions taken]</td>
+<td>[TODO: Closed]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="8-documentation-and-records">8. Documentation and Records</h2>
+<h3 id="81-required-documentation">8.1 Required Documentation</h3>
+<ul>
+<li>Facility security plan</li>
+<li>Access authorization records</li>
+<li>Visitor logs</li>
+<li>Access review records</li>
+<li>Maintenance records</li>
+<li>Incident reports</li>
+<li>Surveillance footage (per retention policy)</li>
+</ul>
+<h3 id="82-retention">8.2 Retention</h3>
+<p><strong>Retention Period:</strong> [TODO: 6 years from creation or last effective date]</p>
+<p><strong>Storage Location:</strong> [TODO: Document management system location]</p>
+<hr />
+<p><strong>Document History:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Initial creation</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0110_Workforce_Security.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0310_Workstation_Use_and_Security.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

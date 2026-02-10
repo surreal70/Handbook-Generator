@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0400 - Access Control</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0400</div>
+            <h1>Access Control</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0310_Workstation_Use_and_Security.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0500_Privacy_Practices_and_Individual_Rights.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="access-control">Access Control</h1>
+<p><strong>Document ID:</strong> HIPAA-0400<br />
+<strong>Organization:</strong> AdminSend GmbH<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Approved by:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Draft / In Review / Approved<br />
+<strong>Classification:</strong> internal<br />
+<strong>Last Updated:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This document describes the Access Control technical safeguards for AdminSend GmbH to implement technical policies and procedures for electronic information systems that maintain ePHI to allow access only to authorized persons or software programs.</p>
+<h3 id="11-hipaa-requirement">1.1 HIPAA Requirement</h3>
+<p><strong>Standard:</strong> §164.312(a)(1) - Access Control (Required)</p>
+<p><strong>Implementation Specifications:</strong>
+- §164.312(a)(2)(i) - Unique User Identification (Required)
+- §164.312(a)(2)(ii) - Emergency Access Procedure (Required)
+- §164.312(a)(2)(iii) - Automatic Logoff (Addressable)
+- §164.312(a)(2)(iv) - Encryption and Decryption (Addressable)</p>
+<h2 id="2-unique-user-identification">2. Unique User Identification</h2>
+<h3 id="21-user-id-requirements">2.1 User ID Requirements</h3>
+<p><strong>Requirement:</strong> Assign a unique name and/or number for identifying and tracking user identity.</p>
+<p><strong>User ID Standards:</strong>
+- Unique to each individual user
+- Not shared between users
+- Not reused after termination
+- Format: [TODO: firstname.lastname, employee ID, etc.]
+- Minimum length: [TODO: 6 characters]</p>
+<p><strong>Prohibited Practices:</strong>
+- Shared accounts
+- Generic accounts (except for specific approved purposes)
+- Default accounts (must be disabled or renamed)
+- Guest accounts (must be disabled)</p>
+<h3 id="22-user-account-management">2.2 User Account Management</h3>
+<p><strong>Account Creation Process:</strong>
+1. Manager submits access request
+2. HR verifies employment status
+3. Security Officer approves based on role
+4. IT creates unique user account
+5. User notified of account creation
+6. User completes initial login and password setup</p>
+<p><strong>Account Types:</strong>
+| Account Type | Purpose | Approval Required | Monitoring |
+|--------------|---------|-------------------|------------|
+| Standard User | Regular workforce member | Manager | Standard |
+| Privileged User | System administration | IT Manager + Security Officer | Enhanced |
+| Service Account | Automated processes | Security Officer | Enhanced |
+| Emergency Access | Break-glass access | Security Officer | Immediate review |</p>
+<h3 id="23-authentication-methods">2.3 Authentication Methods</h3>
+<p><strong>Primary Authentication:</strong>
+- Username and password
+- Minimum password requirements:
+  - Length: [TODO: 12 characters minimum]
+  - Complexity: Upper, lower, number, special character
+  - History: [TODO: 12 previous passwords remembered]
+  - Age: Maximum [TODO: 90 days], minimum [TODO: 1 day]
+  - Lockout: [TODO: 5 failed attempts], lockout duration [TODO: 30 minutes]</p>
+<p><strong>Multi-Factor Authentication (MFA):</strong>
+- Required for: Remote access, privileged accounts, ePHI access from untrusted networks
+- Methods: SMS code, authenticator app, hardware token, biometric
+- Backup codes provided for MFA recovery</p>
+<p><strong>Single Sign-On (SSO):</strong>
+- Centralized authentication
+- Reduces password fatigue
+- Audit trail of access
+- Integration with MFA</p>
+<h2 id="3-emergency-access-procedure">3. Emergency Access Procedure</h2>
+<h3 id="31-emergency-access-definition">3.1 Emergency Access Definition</h3>
+<p><strong>Emergency Situations:</strong>
+- System failure preventing normal authentication
+- Natural disaster
+- Cyberattack requiring immediate response
+- Life-threatening patient situation requiring immediate ePHI access
+- Critical system maintenance</p>
+<h3 id="32-break-glass-accounts">3.2 Break-Glass Accounts</h3>
+<p><strong>Break-Glass Account Characteristics:</strong>
+- Highly privileged access
+- Used only in emergencies
+- Credentials secured (sealed envelope, password vault)
+- Immediate notification upon use
+- Automatic logging of all activities
+- Immediate review required</p>
+<p><strong>Break-Glass Account Inventory:</strong>
+| Account ID | System | Access Level | Credential Location | Last Used | Reviewed By |
+|------------|--------|--------------|---------------------|-----------|-------------|
+| [TODO: BG-001] | Active Directory | Domain Admin | [TODO: Secure vault] | [TODO: Date] | [TODO: Security Officer] |
+| [TODO: BG-002] | EHR System | System Admin | [TODO: Secure vault] | [TODO: Date] | [TODO: Security Officer] |</p>
+<h3 id="33-emergency-access-process">3.3 Emergency Access Process</h3>
+<p><strong>Process Steps:</strong>
+1. <strong>Determination:</strong> Determine emergency situation exists
+2. <strong>Authorization:</strong> Security Officer or designee authorizes emergency access
+3. <strong>Access:</strong> Use break-glass credentials
+4. <strong>Logging:</strong> All activities automatically logged
+5. <strong>Notification:</strong> Security Officer immediately notified
+6. <strong>Monitoring:</strong> Real-time monitoring of emergency access activities
+7. <strong>Review:</strong> Immediate post-access review
+8. <strong>Documentation:</strong> Document emergency, actions taken, justification
+9. <strong>Credential Rotation:</strong> Change break-glass credentials after use</p>
+<p><strong>Emergency Access Log:</strong>
+| Date/Time | User | System | Reason | Authorized By | Actions Taken | Review Date |
+|-----------|------|--------|--------|---------------|---------------|-------------|
+| [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |</p>
+<h2 id="4-automatic-logoff">4. Automatic Logoff</h2>
+<h3 id="41-automatic-logoff-requirements">4.1 Automatic Logoff Requirements</h3>
+<p><strong>Requirement:</strong> Implement electronic procedures that terminate an electronic session after a predetermined time of inactivity.</p>
+<p><strong>Rationale:</strong> Prevent unauthorized access to ePHI when workstation left unattended.</p>
+<h3 id="42-timeout-settings">4.2 Timeout Settings</h3>
+<p><strong>Inactivity Timeouts:</strong>
+| System/Application | Timeout Period | Action | Override Allowed |
+|--------------------|----------------|--------|------------------|
+| Workstations | [TODO: 15 minutes] | Screen lock | No |
+| EHR System | [TODO: 10 minutes] | Session timeout | No |
+| Web Applications | [TODO: 20 minutes] | Session timeout | No |
+| VPN | [TODO: 30 minutes] | Disconnect | No |
+| Mobile Devices | [TODO: 5 minutes] | Screen lock | No |</p>
+<p><strong>Timeout Actions:</strong>
+- <strong>Screen Lock:</strong> Requires password to unlock, session remains active
+- <strong>Session Timeout:</strong> Terminates session, requires re-authentication
+- <strong>Disconnect:</strong> Terminates network connection</p>
+<h3 id="43-implementation">4.3 Implementation</h3>
+<p><strong>Technical Implementation:</strong>
+- Group Policy (Windows)
+- Configuration profiles (macOS, iOS)
+- Application-level timeouts
+- Network-level timeouts (VPN, firewall)</p>
+<p><strong>User Notification:</strong>
+- Warning before timeout (e.g., 2 minutes)
+- Clear indication of locked state
+- Instructions for unlocking</p>
+<h2 id="5-encryption-and-decryption">5. Encryption and Decryption</h2>
+<h3 id="51-encryption-requirements">5.1 Encryption Requirements</h3>
+<p><strong>Requirement:</strong> Implement a mechanism to encrypt and decrypt ePHI.</p>
+<p><strong>Encryption Use Cases:</strong>
+- ePHI at rest (stored data)
+- ePHI in transit (transmitted data)
+- Backup media
+- Mobile devices
+- Removable media
+- Email containing ePHI</p>
+<h3 id="52-encryption-standards">5.2 Encryption Standards</h3>
+<p><strong>Approved Encryption Algorithms:</strong>
+- <strong>Symmetric:</strong> AES-256, AES-128
+- <strong>Asymmetric:</strong> RSA-2048 or higher, ECC
+- <strong>Hashing:</strong> SHA-256, SHA-512
+- <strong>TLS:</strong> TLS 1.2 or higher</p>
+<p><strong>Prohibited Algorithms:</strong>
+- DES, 3DES
+- MD5, SHA-1
+- SSL, TLS 1.0, TLS 1.1
+- RC4</p>
+<h3 id="53-encryption-at-rest">5.3 Encryption at Rest</h3>
+<p><strong>Full Disk Encryption:</strong>
+- All workstations and laptops: [TODO: BitLocker, FileVault, LUKS]
+- All servers with ePHI: [TODO: BitLocker, dm-crypt]
+- All mobile devices: [TODO: Native device encryption]</p>
+<p><strong>Database Encryption:</strong>
+- Transparent Data Encryption (TDE) for databases
+- Column-level encryption for sensitive fields
+- Encryption key management</p>
+<p><strong>File/Folder Encryption:</strong>
+- Encrypted file systems
+- Encrypted containers
+- Document-level encryption</p>
+<h3 id="54-encryption-in-transit">5.4 Encryption in Transit</h3>
+<p><strong>Network Encryption:</strong>
+- TLS 1.2+ for all web traffic
+- VPN for remote access (IPsec, SSL VPN)
+- Encrypted email (S/MIME, PGP)
+- SFTP/SCP for file transfers (no FTP)
+- HTTPS for all web applications</p>
+<p><strong>Wireless Encryption:</strong>
+- WPA3 or WPA2-Enterprise
+- No WEP or open networks
+- Certificate-based authentication</p>
+<h3 id="55-key-management">5.5 Key Management</h3>
+<p><strong>Key Management Lifecycle:</strong>
+1. <strong>Generation:</strong> Cryptographically secure random generation
+2. <strong>Distribution:</strong> Secure key distribution mechanisms
+3. <strong>Storage:</strong> Hardware Security Module (HSM) or secure key vault
+4. <strong>Rotation:</strong> Regular key rotation schedule
+5. <strong>Backup:</strong> Secure backup of encryption keys
+6. <strong>Destruction:</strong> Secure destruction when no longer needed</p>
+<p><strong>Key Management System:</strong>
+- Centralized key management
+- Access controls on keys
+- Audit logging of key access
+- Key escrow/recovery procedures</p>
+<p><strong>Key Rotation Schedule:</strong>
+| Key Type | Rotation Frequency | Responsible |
+|----------|-------------------|-------------|
+| Disk encryption keys | [TODO: Annually] | IT Security |
+| Database encryption keys | [TODO: Annually] | Database Admin |
+| TLS certificates | [TODO: Annually or per vendor] | IT Security |
+| VPN keys | [TODO: Quarterly] | Network Admin |</p>
+<h2 id="6-access-control-lists-acls">6. Access Control Lists (ACLs)</h2>
+<h3 id="61-acl-management">6.1 ACL Management</h3>
+<p><strong>ACL Principles:</strong>
+- Least privilege
+- Need-to-know
+- Separation of duties
+- Defense in depth</p>
+<p><strong>ACL Components:</strong>
+- User/group identity
+- Resource (file, folder, application, database)
+- Permissions (read, write, execute, delete)
+- Conditions (time, location, device)</p>
+<h3 id="62-permission-levels">6.2 Permission Levels</h3>
+<p><strong>Standard Permission Levels:</strong>
+| Level | Description | Typical Roles |
+|-------|-------------|---------------|
+| No Access | No permissions | Default for all users |
+| Read | View only | Auditors, read-only users |
+| Read/Write | View and modify | Standard users |
+| Full Control | All permissions | Administrators, owners |</p>
+<h3 id="63-acl-review">6.3 ACL Review</h3>
+<p><strong>Review Process:</strong>
+- <strong>Frequency:</strong> Quarterly
+- <strong>Scope:</strong> All ePHI resources
+- <strong>Reviewers:</strong> Resource owners + Security Officer
+- <strong>Actions:</strong> Remove unnecessary permissions, update for role changes</p>
+<h2 id="7-privileged-access-management-pam">7. Privileged Access Management (PAM)</h2>
+<h3 id="71-privileged-account-definition">7.1 Privileged Account Definition</h3>
+<p><strong>Privileged Accounts:</strong>
+- System administrators
+- Database administrators
+- Network administrators
+- Application administrators
+- Security administrators</p>
+<p><strong>Privileged Access Characteristics:</strong>
+- Elevated permissions
+- Access to sensitive systems
+- Ability to modify security controls
+- Access to all ePHI</p>
+<h3 id="72-pam-controls">7.2 PAM Controls</h3>
+<p><strong>PAM Requirements:</strong>
+- Separate privileged accounts from standard accounts
+- Just-in-time (JIT) privilege elevation
+- Session recording for privileged access
+- Enhanced monitoring and alerting
+- Regular access reviews
+- MFA required for privileged access</p>
+<p><strong>PAM Solution:</strong> [TODO: CyberArk, BeyondTrust, Thycotic, etc.]</p>
+<h2 id="8-monitoring-and-auditing">8. Monitoring and Auditing</h2>
+<h3 id="81-access-monitoring">8.1 Access Monitoring</h3>
+<p><strong>Monitoring Activities:</strong>
+- Failed login attempts
+- Successful logins (especially after hours)
+- Privileged account usage
+- Emergency access usage
+- Permission changes
+- Account creation/deletion
+- Password resets</p>
+<p><strong>Monitoring Tools:</strong>
+- SIEM (Security Information and Event Management)
+- Log aggregation and analysis
+- User behavior analytics (UBA)
+- Automated alerting</p>
+<h3 id="82-access-auditing">8.2 Access Auditing</h3>
+<p><strong>Audit Activities:</strong>
+- User access reviews
+- Privileged access reviews
+- ACL reviews
+- Inactive account reviews
+- Orphaned account reviews</p>
+<p><strong>Audit Frequency:</strong>
+| Activity | Frequency | Responsible |
+|----------|-----------|-------------|
+| User access review | Quarterly | Managers + Security Officer |
+| Privileged access review | Monthly | Security Officer |
+| ACL review | Quarterly | Resource owners |
+| Inactive account review | Monthly | IT + HR |</p>
+<h2 id="9-documentation-and-records">9. Documentation and Records</h2>
+<h3 id="91-required-documentation">9.1 Required Documentation</h3>
+<ul>
+<li>User account inventory</li>
+<li>Privileged account inventory</li>
+<li>Break-glass account procedures</li>
+<li>Emergency access logs</li>
+<li>Access review records</li>
+<li>ACL documentation</li>
+<li>Encryption key inventory</li>
+<li>Timeout configuration documentation</li>
+</ul>
+<h3 id="92-retention">9.2 Retention</h3>
+<p><strong>Retention Period:</strong> [TODO: 6 years from creation or last effective date]</p>
+<p><strong>Storage Location:</strong> [TODO: Identity management system, document repository]</p>
+<hr />
+<p><strong>Document History:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Initial creation</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0310_Workstation_Use_and_Security.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0500_Privacy_Practices_and_Individual_Rights.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

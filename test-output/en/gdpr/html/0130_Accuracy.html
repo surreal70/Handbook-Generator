@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0130 - Accuracy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0130</div>
+            <h1>Accuracy</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0120_Data_Minimization.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0140_Storage_Limitation.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="accuracy">Accuracy</h1>
+<p><strong>Document-ID:</strong> 0130<br />
+<strong>Owner:</strong> {{ meta.owner }}<br />
+<strong>Version:</strong> {{ meta.version }}<br />
+<strong>Status:</strong> Draft<br />
+<strong>Classification:</strong> Internal<br />
+<strong>Last Update:</strong> {{ meta.date }}  </p>
+<hr />
+<h2 id="purpose">Purpose</h2>
+<p>This document describes the implementation of the principle of accuracy in {{ meta.organization }}. Personal data must be accurate and up to date.</p>
+<h2 id="principle-according-to-art-51d-gdpr">Principle according to Art. 5(1)(d) GDPR</h2>
+<p><strong>Legal Requirement:</strong><br />
+Personal data must be accurate and, where necessary, kept up to date; every reasonable step must be taken to ensure that personal data that are inaccurate, having regard to the purposes for which they are processed, are erased or rectified without delay.</p>
+<h3 id="two-components">Two Components</h3>
+<ol>
+<li><strong>Factual Accuracy:</strong> Data must correspond to facts</li>
+<li><strong>Currency:</strong> Data must be kept up to date</li>
+</ol>
+<h2 id="measures-to-ensure-accuracy">Measures to Ensure Accuracy</h2>
+<h3 id="data-quality-management">Data Quality Management</h3>
+<p><strong>Quality Assurance Processes:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Measure</th>
+<th>Description</th>
+<th>Responsible</th>
+<th>Frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Input Validation]</td>
+<td>Check at data entry</td>
+<td>IT</td>
+<td>Continuous</td>
+</tr>
+<tr>
+<td>[TODO: Plausibility Check]</td>
+<td>Automatic consistency check</td>
+<td>IT</td>
+<td>Continuous</td>
+</tr>
+<tr>
+<td>[TODO: Data Reconciliation]</td>
+<td>Comparison with external sources</td>
+<td>Department</td>
+<td>[TODO: Monthly]</td>
+</tr>
+<tr>
+<td>[TODO: Update Reminder]</td>
+<td>Reminder for data update</td>
+<td>IT</td>
+<td>[TODO: Annually]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="input-validation">Input Validation</h3>
+<p><strong>Technical Measures at Data Entry:</strong>
+- [TODO: Format validation (email, phone, postal code)]
+- [TODO: Mandatory field validation]
+- [TODO: Value range validation]
+- [TODO: Duplicate check]
+- [TODO: Consistency check between fields]</p>
+<h3 id="data-updates">Data Updates</h3>
+<p><strong>Processes for Currency Assurance:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Data Type</th>
+<th>Update Process</th>
+<th>Frequency</th>
+<th>Responsible</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Customer master data]</td>
+<td>[TODO: Update on contact]</td>
+<td>As needed</td>
+<td>Sales</td>
+</tr>
+<tr>
+<td>[TODO: Employee data]</td>
+<td>[TODO: Annual review]</td>
+<td>Annually</td>
+<td>HR</td>
+</tr>
+<tr>
+<td>[TODO: Contact data]</td>
+<td>[TODO: Validation on use]</td>
+<td>On use</td>
+<td>IT</td>
+</tr>
+<tr>
+<td>[TODO: Contract data]</td>
+<td>[TODO: Update on contract change]</td>
+<td>On change</td>
+<td>Legal</td>
+</tr>
+</tbody>
+</table>
+<h2 id="right-to-rectification-art-16-gdpr">Right to Rectification (Art. 16 GDPR)</h2>
+<h3 id="implementation-of-rectification-right">Implementation of Rectification Right</h3>
+<p><strong>Data subjects have the right to:</strong>
+- Immediate rectification of inaccurate data
+- Completion of incomplete data
+- Supplementary statement</p>
+<p><strong>Process for Rectification Requests:</strong></p>
+<ol>
+<li><strong>Receipt of Request</strong></li>
+<li>Identification of data subject</li>
+<li>Documentation of request</li>
+<li>
+<p>Confirmation of receipt</p>
+</li>
+<li>
+<p><strong>Review of Inaccuracy</strong></p>
+</li>
+<li>Verification of contested data</li>
+<li>Comparison with evidence</li>
+<li>
+<p>Decision on rectification</p>
+</li>
+<li>
+<p><strong>Implementation of Rectification</strong></p>
+</li>
+<li>Correction in all systems</li>
+<li>Information to recipients (Art. 19)</li>
+<li>
+<p>Documentation of rectification</p>
+</li>
+<li>
+<p><strong>Response to Data Subject</strong></p>
+</li>
+<li>Information about rectification performed</li>
+<li>Deadline: Without delay, at most 1 month</li>
+</ol>
+<h3 id="rectification-channels">Rectification Channels</h3>
+<table>
+<thead>
+<tr>
+<th>Channel</th>
+<th>Description</th>
+<th>Processing Time</th>
+<th>Responsible</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Online Portal]</td>
+<td>Self-rectification by user</td>
+<td>Immediate</td>
+<td>IT</td>
+</tr>
+<tr>
+<td>[TODO: Email]</td>
+<td>Request by email</td>
+<td>1 month</td>
+<td>DPO</td>
+</tr>
+<tr>
+<td>[TODO: Written]</td>
+<td>Request by mail</td>
+<td>1 month</td>
+<td>DPO</td>
+</tr>
+<tr>
+<td>[TODO: Phone]</td>
+<td>Telephone rectification</td>
+<td>Immediate</td>
+<td>Customer Service</td>
+</tr>
+</tbody>
+</table>
+<h2 id="error-correction-procedures">Error Correction Procedures</h2>
+<h3 id="error-identification">Error Identification</h3>
+<p><strong>Error Sources:</strong>
+- Input errors during data capture
+- Outdated data due to time lapse
+- Faulty data transmission
+- System errors in data processing
+- Incomplete data collection</p>
+<p><strong>Error Detection:</strong>
+- [TODO: Automatic plausibility check]
+- [TODO: Report by data subjects]
+- [TODO: Regular data quality check]
+- [TODO: Feedback from recipients]</p>
+<h3 id="correction-process">Correction Process</h3>
+<p><strong>Steps Upon Error Detection:</strong></p>
+<ol>
+<li><strong>Error Analysis</strong></li>
+<li>Type of error</li>
+<li>Scope of impact</li>
+<li>
+<p>Cause of error</p>
+</li>
+<li>
+<p><strong>Error Correction</strong></p>
+</li>
+<li>Rectification of erroneous data</li>
+<li>Correction in all affected systems</li>
+<li>
+<p>Documentation of correction</p>
+</li>
+<li>
+<p><strong>Notification</strong></p>
+</li>
+<li>Information to data subject</li>
+<li>Communication to recipients (Art. 19)</li>
+<li>
+<p>Documentation of notifications</p>
+</li>
+<li>
+<p><strong>Root Cause Elimination</strong></p>
+</li>
+<li>Analysis of error cause</li>
+<li>Measures for error prevention</li>
+<li>Process improvement</li>
+</ol>
+<h2 id="notification-obligation-art-19-gdpr">Notification Obligation (Art. 19 GDPR)</h2>
+<h3 id="notification-of-recipients">Notification of Recipients</h3>
+<p><strong>Recipients must be informed of rectification or erasure:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Recipient Type</th>
+<th>Notification Obligation</th>
+<th>Exception</th>
+<th>Documentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Processors</td>
+<td>Yes</td>
+<td>Impossible/disproportionate</td>
+<td>Notification log</td>
+</tr>
+<tr>
+<td>Third Party Recipients</td>
+<td>Yes</td>
+<td>Impossible/disproportionate</td>
+<td>Notification log</td>
+</tr>
+<tr>
+<td>Public Authorities</td>
+<td>Yes</td>
+<td>Impossible/disproportionate</td>
+<td>Notification log</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Process:</strong>
+1. Identification of all recipients
+2. Notification of rectification/erasure
+3. Documentation of notifications
+4. Information to data subject about recipients (on request)</p>
+<h2 id="data-quality-controls">Data Quality Controls</h2>
+<h3 id="regular-reviews">Regular Reviews</h3>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>Frequency</th>
+<th>Responsible</th>
+<th>Documentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Quality Audit</td>
+<td>Annually</td>
+<td>DPO</td>
+<td>Audit report</td>
+</tr>
+<tr>
+<td>Sample Check</td>
+<td>Quarterly</td>
+<td>Department</td>
+<td>Review protocol</td>
+</tr>
+<tr>
+<td>System Validation</td>
+<td>On changes</td>
+<td>IT</td>
+<td>Test protocol</td>
+</tr>
+<tr>
+<td>Rectification Statistics</td>
+<td>Monthly</td>
+<td>DPO</td>
+<td>Statistics report</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quality-metrics">Quality Metrics</h3>
+<p><strong>KPIs for Data Quality:</strong>
+- Error rate in data entry
+- Number of rectification requests
+- Average processing time
+- Proportion of outdated records
+- Completeness level of data</p>
+<h2 id="documentation">Documentation</h2>
+<h3 id="evidence-requirements">Evidence Requirements</h3>
+<p><strong>Documentation for Accountability:</strong>
+- Processes to ensure accuracy
+- Rectification procedures and deadlines
+- Processed rectification requests
+- Notifications to recipients
+- Data quality controls and their results</p>
+<h3 id="rectification-register">Rectification Register</h3>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Data Subject</th>
+<th>Type of Rectification</th>
+<th>Recipients Notified</th>
+<th>Processor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Yes/No</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="links-to-other-documents">Links to Other Documents</h2>
+<ul>
+<li><strong>Data Protection Principles (Art. 5):</strong> Accuracy as core principle</li>
+<li><strong>Right to Rectification (Art. 16):</strong> Implementation of data subject right</li>
+<li><strong>Notification Obligation (Art. 19):</strong> Notification of recipients</li>
+<li><strong>Records (Art. 30):</strong> Documentation of data quality</li>
+<li><strong>TOM (Art. 32):</strong> Technical measures for quality assurance</li>
+</ul>
+<h2 id="common-violations-and-their-prevention">Common Violations and Their Prevention</h2>
+<table>
+<thead>
+<tr>
+<th>Violation</th>
+<th>Example</th>
+<th>Prevention</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Outdated data</td>
+<td>No updates</td>
+<td>Regular review</td>
+</tr>
+<tr>
+<td>Erroneous input</td>
+<td>No validation</td>
+<td>Input validation</td>
+</tr>
+<tr>
+<td>Delayed rectification</td>
+<td>Long processing time</td>
+<td>Process optimization</td>
+</tr>
+<tr>
+<td>Missing notification</td>
+<td>Recipients not informed</td>
+<td>Notification process</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Next Steps:</strong>
+1. Implement input validation and plausibility checks
+2. Establish processes for regular data updates
+3. Set up rectification procedures according to Art. 16
+4. Implement notification process for recipients
+5. Conduct regular data quality controls</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0120_Data_Minimization.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0140_Storage_Limitation.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0410 - Evaluation Assurance Level (EAL)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0410</div>
+            <h1>Evaluation Assurance Level (EAL)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0400_Security_Requirements.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0420_Requirements_Rationale.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="evaluation-assurance-level-eal">Evaluation Assurance Level (EAL)</h1>
+<p><strong>Document-ID:</strong> 0410<br />
+<strong>Owner:</strong> {{ meta.owner }}<br />
+<strong>Version:</strong> {{ meta.version }}<br />
+<strong>Status:</strong> Draft / In Review / Approved<br />
+<strong>Classification:</strong> Internal / Confidential / Strictly Confidential<br />
+<strong>Last Update:</strong> {{ meta.date }}  </p>
+<hr />
+<blockquote>
+<p><strong>Note:</strong> This document is a template. Replace all <code>[TODO]</code> placeholders and adapt the content to your specific Target of Evaluation (TOE).</p>
+</blockquote>
+<h2 id="1-introduction">1. Introduction</h2>
+<p>This document describes the selection and justification of the Evaluation Assurance Level (EAL) for the TOE. The EAL defines the depth and rigor of the security evaluation according to ISO/IEC 15408-3.</p>
+<h2 id="2-eal-overview">2. EAL Overview</h2>
+<p>Common Criteria defines seven predefined Evaluation Assurance Levels:</p>
+<table>
+<thead>
+<tr>
+<th>EAL</th>
+<th>Designation</th>
+<th>Description</th>
+<th>Typical Application</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EAL1</td>
+<td>Functionally tested</td>
+<td>Basic functional testing</td>
+<td>Commercial off-the-shelf products</td>
+</tr>
+<tr>
+<td>EAL2</td>
+<td>Structurally tested</td>
+<td>Structural testing with developer documentation</td>
+<td>Commercial products with security functions</td>
+</tr>
+<tr>
+<td>EAL3</td>
+<td>Methodically tested and checked</td>
+<td>Methodical testing and checking</td>
+<td>Security products with moderate requirements</td>
+</tr>
+<tr>
+<td>EAL4</td>
+<td>Methodically designed, tested, and reviewed</td>
+<td>Methodical design, testing, and review</td>
+<td>Security products for commercial environments</td>
+</tr>
+<tr>
+<td>EAL5</td>
+<td>Semiformally designed and tested</td>
+<td>Semiformal design and testing</td>
+<td>High-security products</td>
+</tr>
+<tr>
+<td>EAL6</td>
+<td>Semiformally verified design and tested</td>
+<td>Semiformal verification and testing</td>
+<td>High-security environments with high risk</td>
+</tr>
+<tr>
+<td>EAL7</td>
+<td>Formally verified design and tested</td>
+<td>Formal verification and testing</td>
+<td>Extremely high security requirements</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-selected-eal">3. Selected EAL</h2>
+<p><strong>Selected Evaluation Assurance Level:</strong> [TODO: e.g., EAL4]</p>
+<h3 id="31-justification-for-eal-selection">3.1 Justification for EAL Selection</h3>
+<p>[TODO: Justify the EAL selection based on:]
+- Threat landscape and risk assessment
+- Protection needs of assets to be protected
+- Operational environment of the TOE
+- Cost-benefit ratio
+- Market requirements and regulatory mandates
+- Development resources and timeline</p>
+<p><strong>Example:</strong></p>
+<div class="codehilite"><pre><span></span><code>EAL4 was selected as it provides a balanced ratio between security assurance and 
+development effort. The TOE will be deployed in commercial environments with moderate to 
+high security requirements. EAL4 requires methodical design, testing, and review, which 
+corresponds to the security requirements of the target environment without requiring the 
+formal verification requirements of higher EALs.
+</code></pre></div>
+
+<h3 id="32-alternatives-and-trade-offs">3.2 Alternatives and Trade-offs</h3>
+<p>[TODO: Discuss alternative EALs and why they were not selected]</p>
+<p><strong>Lower EALs (e.g., EAL3):</strong>
+- [TODO: Why not sufficient?]</p>
+<p><strong>Higher EALs (e.g., EAL5+):</strong>
+- [TODO: Why not required or not practical?]</p>
+<h2 id="4-security-assurance-requirements-sars-for-selected-eal">4. Security Assurance Requirements (SARs) for Selected EAL</h2>
+<h3 id="41-mandatory-sars-for-eal-todo-x">4.1 Mandatory SARs for EAL [TODO: X]</h3>
+<p>The following Security Assurance Requirements are mandatory for EAL [TODO: X]:</p>
+<h4 id="411-security-target-evaluation-ase">4.1.1 Security Target Evaluation (ASE)</h4>
+<ul>
+<li><strong>ASE_CCL.1</strong> Conformance claims</li>
+<li><strong>ASE_ECD.1</strong> Extended components definition</li>
+<li><strong>ASE_INT.1</strong> ST introduction</li>
+<li><strong>ASE_OBJ.2</strong> Security objectives</li>
+<li><strong>ASE_REQ.2</strong> Derived security requirements</li>
+<li><strong>ASE_SPD.1</strong> Security problem definition</li>
+<li><strong>ASE_TSS.1</strong> TOE summary specification</li>
+</ul>
+<h4 id="412-development-adv">4.1.2 Development (ADV)</h4>
+<p>[TODO: Add ADV components for selected EAL]</p>
+<p><strong>For EAL4:</strong>
+- <strong>ADV_ARC.1</strong> Security architecture description
+- <strong>ADV_FSP.4</strong> Complete functional specification
+- <strong>ADV_IMP.1</strong> Implementation representation of the TSF
+- <strong>ADV_TDS.3</strong> Basic modular design</p>
+<h4 id="413-guidance-documents-agd">4.1.3 Guidance Documents (AGD)</h4>
+<ul>
+<li><strong>AGD_OPE.1</strong> Operational user guidance</li>
+<li><strong>AGD_PRE.1</strong> Preparative procedures</li>
+</ul>
+<h4 id="414-life-cycle-support-alc">4.1.4 Life-cycle Support (ALC)</h4>
+<p>[TODO: Add ALC components for selected EAL]</p>
+<p><strong>For EAL4:</strong>
+- <strong>ALC_CMC.4</strong> Production support, acceptance procedures and automation
+- <strong>ALC_CMS.4</strong> Problem tracking CM coverage
+- <strong>ALC_DEL.1</strong> Delivery procedures
+- <strong>ALC_DVS.1</strong> Identification of security measures
+- <strong>ALC_LCD.1</strong> Developer defined life-cycle model
+- <strong>ALC_TAT.1</strong> Well-defined development tools</p>
+<h4 id="415-tests-ate">4.1.5 Tests (ATE)</h4>
+<p>[TODO: Add ATE components for selected EAL]</p>
+<p><strong>For EAL4:</strong>
+- <strong>ATE_COV.2</strong> Analysis of coverage
+- <strong>ATE_DPT.1</strong> Testing: high-level design
+- <strong>ATE_FUN.1</strong> Functional testing
+- <strong>ATE_IND.2</strong> Independent testing - sample</p>
+<h4 id="416-vulnerability-assessment-ava">4.1.6 Vulnerability Assessment (AVA)</h4>
+<p>[TODO: Add AVA components for selected EAL]</p>
+<p><strong>For EAL4:</strong>
+- <strong>AVA_VAN.3</strong> Focused vulnerability analysis</p>
+<h3 id="42-augmentation-additional-sars">4.2 Augmentation (Additional SARs)</h3>
+<p>[TODO: If additional SARs beyond the selected EAL are used, list and justify them here]</p>
+<p><strong>Example:</strong></p>
+<div class="codehilite"><pre><span></span><code>In addition to the EAL4 requirements, the following SARs are added:
+<span class="k">-</span> ALC_FLR.2 Flaw reporting procedures (from EAL5)
+  Justification: Enhanced vulnerability management for production environments
+</code></pre></div>
+
+<h2 id="5-development-and-evaluation-effort">5. Development and Evaluation Effort</h2>
+<h3 id="51-development-effort">5.1 Development Effort</h3>
+<p>[TODO: Estimate the additional development effort for the selected EAL]</p>
+<p><strong>Documentation Effort:</strong>
+- [TODO: Required documents and estimated effort]</p>
+<p><strong>Process Requirements:</strong>
+- [TODO: Required development processes and tools]</p>
+<p><strong>Testing Effort:</strong>
+- [TODO: Required tests and test coverage]</p>
+<h3 id="52-evaluation-effort">5.2 Evaluation Effort</h3>
+<p>[TODO: Estimate duration and costs of evaluation]</p>
+<p><strong>Estimated Evaluation Duration:</strong> [TODO: e.g., 6-12 months]<br />
+<strong>Estimated Evaluation Costs:</strong> [TODO: Cost range]<br />
+<strong>Evaluation Laboratory:</strong> [TODO: Planned or selected laboratory]</p>
+<h2 id="6-compliance-and-certification">6. Compliance and Certification</h2>
+<h3 id="61-certification-scheme">6.1 Certification Scheme</h3>
+<p>[TODO: Specify the certification scheme]</p>
+<p><strong>Examples:</strong>
+- Common Criteria Recognition Arrangement (CCRA)
+- National scheme (e.g., BSI Germany, ANSSI France)
+- [TODO: Specific scheme]</p>
+<h3 id="62-mutual-recognition">6.2 Mutual Recognition</h3>
+<p>[TODO: Describe Mutual Recognition Agreements if relevant]</p>
+<p>The selected EAL and certification scheme enables recognition in the following countries:
+- [TODO: List of countries with Mutual Recognition]</p>
+<h2 id="7-timeline-and-milestones">7. Timeline and Milestones</h2>
+<p>[TODO: Create a rough timeline for the evaluation]</p>
+<table>
+<thead>
+<tr>
+<th>Milestone</th>
+<th>Planned Date</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ST Completion</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Evaluation Start</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>ADV Phase Completed</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>ATE Phase Completed</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>AVA Phase Completed</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Certification</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="8-risks-and-mitigation">8. Risks and Mitigation</h2>
+<p>[TODO: Identify risks for the evaluation]</p>
+<table>
+<thead>
+<tr>
+<th>Risk</th>
+<th>Probability</th>
+<th>Impact</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: e.g., Delays in documentation]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="9-references">9. References</h2>
+<ul>
+<li>ISO/IEC 15408-3:2022 - Security assurance requirements</li>
+<li>Common Criteria for Information Technology Security Evaluation - Evaluation Assurance Levels</li>
+<li>[TODO: National certification guidelines]</li>
+<li>[TODO: Other relevant documents]</li>
+</ul>
+<hr />
+<p><strong>Next Steps:</strong>
+1. Complete all [TODO] placeholders
+2. Validate EAL selection with stakeholders
+3. Confirm availability of resources for evaluation
+4. Contact potential evaluation laboratories
+5. Create detailed project plan for evaluation</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0400_Security_Requirements.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0420_Requirements_Rationale.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0100 - Firewall Configuration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0100</div>
+            <h1>Firewall Configuration</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0050_Compliance_Program.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0400_Access_Control.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="firewall-configuration">Firewall Configuration</h1>
+<p><strong>Document ID:</strong> PCI-0100<br />
+<strong>Organization:</strong> AdminSend GmbH<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Approved by:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Draft / In Review / Approved<br />
+<strong>Classification:</strong> internal<br />
+<strong>Last Updated:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This document defines firewall configuration standards for AdminSend GmbH per PCI-DSS Requirement 1.</p>
+<h3 id="11-objectives">1.1 Objectives</h3>
+<ul>
+<li><strong>Network Security:</strong> Protect CDE through firewall controls</li>
+<li><strong>Access Control:</strong> Restrict unauthorized network access</li>
+<li><strong>Compliance:</strong> Meet PCI-DSS Requirement 1</li>
+<li><strong>Documentation:</strong> Traceable firewall configuration</li>
+</ul>
+<h3 id="12-scope">1.2 Scope</h3>
+<p><strong>Affected Systems:</strong>
+- Perimeter firewalls (Internet border)
+- Internal firewalls (CDE segmentation)
+- Host-based firewalls (servers, workstations)
+- Cloud firewalls (if applicable)</p>
+<h2 id="2-firewall-standards">2. Firewall Standards</h2>
+<h3 id="21-basic-principles">2.1 Basic Principles</h3>
+<p><strong>Default Deny:</strong>
+- All connections blocked by default
+- Only explicitly approved connections allowed
+- Documentation of all exceptions required</p>
+<p><strong>Least Privilege:</strong>
+- Minimum required access rights
+- Specific source and destination IP addresses
+- Specific ports and protocols</p>
+<p><strong>Defense in Depth:</strong>
+- Multiple firewall layers
+- Perimeter + internal segmentation
+- Host-based firewalls as additional layer</p>
+<h3 id="22-firewall-architecture">2.2 Firewall Architecture</h3>
+<p><strong>Firewall Layers:</strong></p>
+<ol>
+<li><strong>Perimeter Firewall:</strong></li>
+<li>Protection from Internet threats</li>
+<li>Inbound and outbound traffic</li>
+<li>
+<p>DMZ for public services</p>
+</li>
+<li>
+<p><strong>Internal Firewall:</strong></p>
+</li>
+<li>CDE segmentation</li>
+<li>Separation of corporate and CDE</li>
+<li>
+<p>Access control between segments</p>
+</li>
+<li>
+<p><strong>Host-based Firewall:</strong></p>
+</li>
+<li>Protection of individual systems</li>
+<li>Additional defense layer</li>
+<li>Protection during network compromise</li>
+</ol>
+<h2 id="3-firewall-rule-management">3. Firewall Rule Management</h2>
+<h3 id="31-rule-requirements">3.1 Rule Requirements</h3>
+<p><strong>Each firewall rule must contain:</strong>
+- Unique rule ID
+- Source (IP address/network)
+- Destination (IP address/network)
+- Port/protocol
+- Action (Allow/Deny)
+- Business justification
+- Approver
+- Creation date
+- Review date</p>
+<h3 id="32-rule-approval-process">3.2 Rule Approval Process</h3>
+<p><strong>Process for new rules:</strong></p>
+<ol>
+<li><strong>Request:</strong> Change request with justification</li>
+<li><strong>Security Review:</strong> Assessment by IT Security</li>
+<li><strong>Approval:</strong> CISO approval for CDE rules</li>
+<li><strong>Implementation:</strong> Configuration by network team</li>
+<li><strong>Documentation:</strong> Update of ruleset</li>
+<li><strong>Validation:</strong> Test of rule</li>
+</ol>
+<p><strong>Approval Matrix:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Rule Type</th>
+<th>Approver</th>
+<th>Documentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CDE-related</td>
+<td>CISO</td>
+<td>Complete</td>
+</tr>
+<tr>
+<td>Corporate</td>
+<td>IT Manager</td>
+<td>Standard</td>
+</tr>
+<tr>
+<td>Temporary</td>
+<td>IT Security</td>
+<td>With expiration date</td>
+</tr>
+</tbody>
+</table>
+<h3 id="33-quarterly-rule-review">3.3 Quarterly Rule Review</h3>
+<p><strong>Review Process:</strong></p>
+<ol>
+<li><strong>Review all rules:</strong> Complete review</li>
+<li><strong>Validation:</strong> Business justification still valid?</li>
+<li><strong>Cleanup:</strong> Removal of unused rules</li>
+<li><strong>Documentation:</strong> Update documentation</li>
+<li><strong>Approval:</strong> CISO confirmation</li>
+</ol>
+<p><strong>Last Review:</strong> [TODO: Date]<br />
+<strong>Next Review:</strong> [TODO: Date]<br />
+<strong>Responsible:</strong> [TODO: Network Security Team]  </p>
+<h2 id="4-firewall-configuration-standards">4. Firewall Configuration Standards</h2>
+<h3 id="41-perimeter-firewall">4.1 Perimeter Firewall</h3>
+<p><strong>Inbound Traffic:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Port</th>
+<th>Protocol</th>
+<th>Source</th>
+<th>Destination</th>
+<th>Allowed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HTTPS</td>
+<td>443</td>
+<td>TCP</td>
+<td>Any</td>
+<td>Web Server (DMZ)</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>SSH</td>
+<td>22</td>
+<td>TCP</td>
+<td>Admin IPs</td>
+<td>Jump Server</td>
+<td>Yes (with MFA)</td>
+</tr>
+<tr>
+<td>All others</td>
+<td>*</td>
+<td>*</td>
+<td>Any</td>
+<td>CDE</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Outbound Traffic:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Port</th>
+<th>Protocol</th>
+<th>Source</th>
+<th>Destination</th>
+<th>Allowed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HTTPS</td>
+<td>443</td>
+<td>TCP</td>
+<td>CDE</td>
+<td>Acquiring Bank</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>DNS</td>
+<td>53</td>
+<td>UDP</td>
+<td>CDE</td>
+<td>DNS Server</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>NTP</td>
+<td>123</td>
+<td>UDP</td>
+<td>CDE</td>
+<td>NTP Server</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>All others</td>
+<td>*</td>
+<td>*</td>
+<td>CDE</td>
+<td>Internet</td>
+<td>No (Default Deny)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-internal-firewall-cde-segmentation">4.2 Internal Firewall (CDE Segmentation)</h3>
+<p><strong>CDE → Corporate:</strong>
+- Blocked by default
+- Exceptions only with CISO approval
+- Logging of all connection attempts</p>
+<p><strong>Corporate → CDE:</strong>
+- Only authorized admin access
+- MFA required
+- Via jump server/VPN
+- Complete logging</p>
+<h3 id="43-host-based-firewalls">4.3 Host-based Firewalls</h3>
+<p><strong>Requirements:</strong>
+- Enabled on all CDE systems
+- Configuration per hardening standards
+- Central management (if possible)
+- Logging enabled</p>
+<p><strong>Example Configuration (Linux iptables):</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Default Deny</span>
+iptables<span class="w"> </span>-P<span class="w"> </span>INPUT<span class="w"> </span>DROP
+iptables<span class="w"> </span>-P<span class="w"> </span>FORWARD<span class="w"> </span>DROP
+iptables<span class="w"> </span>-P<span class="w"> </span>OUTPUT<span class="w"> </span>DROP
+
+<span class="c1"># Allow established connections</span>
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-m<span class="w"> </span>state<span class="w"> </span>--state<span class="w"> </span>ESTABLISHED,RELATED<span class="w"> </span>-j<span class="w"> </span>ACCEPT
+
+<span class="c1"># Allow specific services</span>
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">443</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT<span class="w">  </span><span class="c1"># HTTPS</span>
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">22</span><span class="w"> </span>-s<span class="w"> </span><span class="m">10</span>.1.102.0/24<span class="w"> </span>-j<span class="w"> </span>ACCEPT<span class="w">  </span><span class="c1"># SSH from Management</span>
+
+<span class="c1"># Log dropped packets</span>
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-j<span class="w"> </span>LOG<span class="w"> </span>--log-prefix<span class="w"> </span><span class="s2">&quot;FW-DROP: &quot;</span>
+</code></pre></div>
+
+<h2 id="5-prohibited-configurations">5. Prohibited Configurations</h2>
+<p><strong>The following configurations are NOT allowed:</strong></p>
+<ul>
+<li><strong>Any-Any Rules:</strong> No rules with Source=Any and Destination=Any</li>
+<li><strong>Direct Internet Connections:</strong> CDE systems must not communicate directly with Internet</li>
+<li><strong>Unencrypted Protocols:</strong> Telnet, FTP, HTTP (except redirect to HTTPS)</li>
+<li><strong>Deprecated Protocols:</strong> SSLv2, SSLv3, TLS 1.0, TLS 1.1</li>
+<li><strong>Undocumented Rules:</strong> All rules must be documented</li>
+</ul>
+<h2 id="6-change-management">6. Change Management</h2>
+<h3 id="61-emergency-changes">6.1 Emergency Changes</h3>
+<p><strong>Emergency changes allowed for:</strong>
+- Active security incidents
+- Critical system failures
+- Immediate threats</p>
+<p><strong>Process:</strong>
+1. Verbal approval by CISO
+2. Immediate implementation
+3. Retrospective documentation (within 24h)
+4. Formal approval (within 48h)</p>
+<h3 id="62-change-history">6.2 Change History</h3>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Rule ID</th>
+<th>Change</th>
+<th>Justification</th>
+<th>Approved By</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: 2026-01-15]</td>
+<td>FW-105</td>
+<td>New rule</td>
+<td>Payment API</td>
+<td>[TODO: CISO]</td>
+</tr>
+<tr>
+<td>[TODO: 2026-02-01]</td>
+<td>FW-042</td>
+<td>Removed</td>
+<td>No longer needed</td>
+<td>[TODO: CISO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-monitoring-and-alerting">7. Monitoring and Alerting</h2>
+<h3 id="71-firewall-logging">7.1 Firewall Logging</h3>
+<p><strong>Logging Requirements:</strong>
+- All blocked connections
+- All allowed connections to/from CDE
+- Firewall configuration changes
+- Firewall system events (start, stop, errors)</p>
+<p><strong>Log Retention:</strong> [TODO: 90 days online, 1 year archive]<br />
+<strong>Log Forwarding:</strong> [TODO: SIEM system]  </p>
+<h3 id="72-alerting-rules">7.2 Alerting Rules</h3>
+<table>
+<thead>
+<tr>
+<th>Alert</th>
+<th>Condition</th>
+<th>Severity</th>
+<th>Notification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unauthorized CDE access</td>
+<td>Blocked connection to CDE</td>
+<td>High</td>
+<td>SOC + IT Security</td>
+</tr>
+<tr>
+<td>Firewall rule change</td>
+<td>Configuration change</td>
+<td>Medium</td>
+<td>Network Team</td>
+</tr>
+<tr>
+<td>Firewall failure</td>
+<td>Firewall unreachable</td>
+<td>Critical</td>
+<td>SOC + CISO</td>
+</tr>
+</tbody>
+</table>
+<h2 id="8-compliance-validation">8. Compliance Validation</h2>
+<h3 id="81-validation-activities">8.1 Validation Activities</h3>
+<p><strong>Quarterly:</strong>
+- Firewall rule review
+- Documentation validation
+- Unused rule cleanup</p>
+<p><strong>Annual:</strong>
+- Penetration test of firewall configuration
+- Segmentation validation
+- Compliance audit</p>
+<h3 id="82-validation-documentation">8.2 Validation Documentation</h3>
+<p><strong>Required Evidence:</strong>
+- Firewall configuration files
+- Rule review logs
+- Change logs
+- Approval records</p>
+<hr />
+<p><strong>Document History:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Initial creation</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0050_Compliance_Program.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0400_Access_Control.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0000 - Common Criteria Security Target Templates (ISO/IEC 15408)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0000</div>
+            <h1>Common Criteria Security Target Templates (ISO/IEC 15408)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0000_FRAMEWORK_MAPPING.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<span class="nav-next disabled">—</span>
+        </nav>
+        
+        <main>
+<h1 id="common-criteria-security-target-templates-isoiec-15408">Common Criteria Security Target Templates (ISO/IEC 15408)</h1>
+<p>This directory contains templates for creating a Security Target (ST) according to ISO/IEC 15408 (Common Criteria for Information Technology Security Evaluation).</p>
+<h2 id="overview">Overview</h2>
+<p>The Common Criteria (CC) is an international standard for evaluating the security of IT products and systems. A Security Target documents the security properties of a Target of Evaluation (TOE) and serves as the basis for certification.</p>
+<h2 id="template-structure">Template Structure</h2>
+<p>The templates are organized according to the structure of ISO/IEC 15408-1:2022:</p>
+<h3 id="foundation-0010-0050">Foundation (0010-0050)</h3>
+<ul>
+<li><strong>0010</strong>: ST Introduction - Introduction and ST identification</li>
+<li><strong>0020</strong>: TOE Overview - Overview of the evaluation object</li>
+<li><strong>0030</strong>: TOE Description Summary - Summary of TOE description</li>
+<li><strong>0040</strong>: Conformance Claims - Conformance claims (PP, Package, CC Version)</li>
+<li><strong>0050</strong>: Document Conventions - Documentation conventions and terminology</li>
+</ul>
+<h3 id="toe-description-0100-0150">TOE Description (0100-0150)</h3>
+<ul>
+<li><strong>0100</strong>: TOE Physical Scope - Physical scope (hardware, software, firmware)</li>
+<li><strong>0110</strong>: TOE Logical Scope - Logical scope (security functions)</li>
+<li><strong>0120</strong>: TOE Interfaces - TOE interfaces</li>
+<li><strong>0130</strong>: TOE Architecture - Architecture and components</li>
+<li><strong>0140</strong>: TOE Lifecycle - Lifecycle (development, operation, maintenance)</li>
+</ul>
+<h3 id="security-problem-definition-0200-0250">Security Problem Definition (0200-0250)</h3>
+<ul>
+<li><strong>0200</strong>: Threats - Threats to the TOE</li>
+<li><strong>0210</strong>: Organizational Security Policies - Organizational security policies</li>
+<li><strong>0220</strong>: Assumptions - Assumptions about the operational environment</li>
+<li><strong>0230</strong>: Threat Agents - Attackers and their capabilities</li>
+<li><strong>0240</strong>: Assets - Assets to be protected</li>
+</ul>
+<h3 id="security-objectives-0300-0350">Security Objectives (0300-0350)</h3>
+<ul>
+<li><strong>0300</strong>: Security Objectives for TOE - Security objectives for the TOE</li>
+<li><strong>0310</strong>: Security Objectives for Environment - Security objectives for the environment</li>
+<li><strong>0320</strong>: Security Objectives Rationale - Rationale for security objectives</li>
+<li><strong>0330</strong>: Objectives Coverage Matrix - Coverage matrix objectives/threats</li>
+</ul>
+<h3 id="security-requirements-0400-0450">Security Requirements (0400-0450)</h3>
+<ul>
+<li><strong>0400</strong>: Security Functional Requirements (SFR) - Functional security requirements</li>
+<li><strong>0410</strong>: Security Assurance Requirements (SAR) - Assurance requirements</li>
+<li><strong>0420</strong>: Evaluation Assurance Level (EAL) - Evaluation assurance level</li>
+<li><strong>0430</strong>: Security Requirements Rationale - Rationale for requirements</li>
+<li><strong>0440</strong>: SFR Dependencies - Dependencies between SFRs</li>
+<li><strong>0450</strong>: Requirements Coverage Matrix - Coverage matrix requirements/objectives</li>
+</ul>
+<h3 id="toe-summary-specification-0500-0550">TOE Summary Specification (0500-0550)</h3>
+<ul>
+<li><strong>0500</strong>: Security Functions - Security functions of the TOE</li>
+<li><strong>0510</strong>: Assurance Measures - Assurance measures</li>
+<li><strong>0520</strong>: Security Functions Rationale - Rationale for security functions</li>
+<li><strong>0530</strong>: Functions Coverage Matrix - Coverage matrix functions/SFRs</li>
+<li><strong>0540</strong>: Strength of Function Claims - Strength of function claims</li>
+</ul>
+<h3 id="appendices-0600-0650">Appendices (0600-0650)</h3>
+<ul>
+<li><strong>0600</strong>: Protection Profile Conformance - PP conformance</li>
+<li><strong>0610</strong>: Rationale for Security Objectives - Detailed rationale</li>
+<li><strong>0620</strong>: Rationale for Security Requirements - Detailed rationale</li>
+<li><strong>0630</strong>: Glossary and Acronyms - Glossary and acronyms</li>
+<li><strong>0640</strong>: References - References and standards</li>
+<li><strong>0650</strong>: Evidence and Documentation - Evidence and documentation</li>
+</ul>
+<h2 id="numbering-scheme">Numbering Scheme</h2>
+<ul>
+<li>Templates use 4-digit numbers with 10-step increments (0010, 0020, 0030, ...)</li>
+<li>This allows for future insertions between existing templates</li>
+<li>Number ranges group related topics</li>
+</ul>
+<h2 id="usage">Usage</h2>
+<ol>
+<li><strong>Preparation</strong>: Determine the Evaluation Assurance Level (EAL1-EAL7)</li>
+<li><strong>TOE Definition</strong>: Clearly define the scope of the TOE</li>
+<li><strong>PP Selection</strong>: Select an appropriate Protection Profile (optional)</li>
+<li><strong>Customization</strong>: Adapt the templates to your specific product</li>
+<li><strong>Placeholders</strong>: Replace all <code>[TODO]</code> markers</li>
+<li><strong>Consistency</strong>: Ensure consistency across all sections</li>
+<li><strong>Rationale</strong>: Document all rationales completely</li>
+</ol>
+<h2 id="placeholders">Placeholders</h2>
+<p>Templates support two types of placeholders:</p>
+<ul>
+<li><strong>Manual Placeholders</strong>: <code>[TODO: Description]</code> - must be replaced manually</li>
+<li><strong>Automatic Placeholders</strong>: <code>{{ source.field }}</code> - populated from data sources</li>
+</ul>
+<p>Examples of automatic placeholders:
+- <code>{{ meta.organization }}</code> - Organization name
+- <code>Andreas Huemmer [andreas.huemmer@adminsend.de]</code> - Author
+- <code>{{ meta.version }}</code> - Version number
+- <code>{{ meta.date }}</code> - Date</p>
+<h2 id="common-criteria-versions">Common Criteria Versions</h2>
+<p>These templates are based on:
+- ISO/IEC 15408-1:2022 (Part 1: Introduction and general model)
+- ISO/IEC 15408-2:2022 (Part 2: Security functional components)
+- ISO/IEC 15408-3:2022 (Part 3: Security assurance components)</p>
+<h2 id="evaluation-assurance-levels-eal">Evaluation Assurance Levels (EAL)</h2>
+<ul>
+<li><strong>EAL1</strong>: Functionally tested</li>
+<li><strong>EAL2</strong>: Structurally tested</li>
+<li><strong>EAL3</strong>: Methodically tested and checked</li>
+<li><strong>EAL4</strong>: Methodically designed, tested, and reviewed</li>
+<li><strong>EAL5</strong>: Semiformally designed and tested</li>
+<li><strong>EAL6</strong>: Semiformally verified design and tested</li>
+<li><strong>EAL7</strong>: Formally verified design and tested</li>
+</ul>
+<h2 id="important-notes">Important Notes</h2>
+<ul>
+<li>The ST must be complete and consistent</li>
+<li>All SFRs must be derived from ISO/IEC 15408-2</li>
+<li>All SARs must be derived from ISO/IEC 15408-3</li>
+<li>The rationale must demonstrate all relationships</li>
+<li>Dependencies between SFRs must be satisfied</li>
+<li>The ST must be evaluated by an accredited laboratory</li>
+</ul>
+<h2 id="framework-mapping">Framework Mapping</h2>
+<p>See <code>FRAMEWORK_MAPPING.md</code> for a detailed mapping of templates to ISO/IEC 15408 components.</p>
+<h2 id="additional-resources">Additional Resources</h2>
+<ul>
+<li>Common Criteria Portal: https://www.commoncriteriaportal.org/</li>
+<li>ISO/IEC 15408 Standard</li>
+<li>Protection Profiles Repository</li>
+<li>Certified Products List</li>
+<li>Evaluation Schemes (e.g., BSI, ANSSI, NIAP)</li>
+</ul>
+<h2 id="support">Support</h2>
+<p>For questions about using these templates or Common Criteria evaluation, contact:
+- Your internal security team
+- Accredited evaluation laboratories
+- National certification bodies (e.g., BSI in Germany)</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0000_FRAMEWORK_MAPPING.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<span class="nav-next disabled">—</span>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

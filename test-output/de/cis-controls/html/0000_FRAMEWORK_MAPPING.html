@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0000 - CIS Controls v8 Framework-Mapping</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0000</div>
+            <h1>CIS Controls v8 Framework-Mapping</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0410_Anhang_Checklisten_und_Evidence.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0000_README.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="cis-controls-v8-framework-mapping">CIS Controls v8 Framework-Mapping</h1>
+<h2 id="uberblick">Überblick</h2>
+<p>Dieses Dokument bildet die CIS Controls v8 Hardening Templates auf die CIS Controls v8 Framework-Komponenten ab.</p>
+<h2 id="template-mapping-zu-cis-controls-v8">Template-Mapping zu CIS Controls v8</h2>
+<h3 id="foundation-templates">Foundation Templates</h3>
+<table>
+<thead>
+<tr>
+<th>Template</th>
+<th>CIS Controls</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0010_CIS_Controls_Ueberblick_und_Vorgehen.md</td>
+<td>Alle Controls</td>
+<td>Überblick und Implementierungsansatz</td>
+</tr>
+<tr>
+<td>0020_Geltungsbereich_Assetgruppen_und_Tiering.md</td>
+<td>Control 1, 2</td>
+<td>Asset Inventory und Scoping</td>
+</tr>
+<tr>
+<td>0030_Hardening_Lifecycle_und_Prozesse.md</td>
+<td>Control 4</td>
+<td>Secure Configuration Management</td>
+</tr>
+<tr>
+<td>0040_Ausnahmen_und_Risikoakzeptanz.md</td>
+<td>Control 4</td>
+<td>Exception Management</td>
+</tr>
+<tr>
+<td>0050_Test_und_Validierung.md</td>
+<td>Control 7, 18</td>
+<td>Testing und Validation</td>
+</tr>
+</tbody>
+</table>
+<h3 id="betriebssystem-hardening">Betriebssystem-Hardening</h3>
+<table>
+<thead>
+<tr>
+<th>Template</th>
+<th>CIS Controls</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0100_Windows_Server_Hardening_Baseline.md</td>
+<td>Control 4, 5, 6</td>
+<td>Windows Server Secure Configuration</td>
+</tr>
+<tr>
+<td>0110_Windows_Client_Hardening_Baseline.md</td>
+<td>Control 4, 5, 6</td>
+<td>Windows Client Secure Configuration</td>
+</tr>
+<tr>
+<td>0120_Linux_Hardening_Baseline.md</td>
+<td>Control 4, 5, 6</td>
+<td>Linux Secure Configuration</td>
+</tr>
+<tr>
+<td>0130_macOS_Hardening_Baseline.md</td>
+<td>Control 4, 5, 6</td>
+<td>macOS Secure Configuration</td>
+</tr>
+<tr>
+<td>0140_Container_Base_Images_Hardening.md</td>
+<td>Control 4, 16</td>
+<td>Container Security</td>
+</tr>
+<tr>
+<td>0150_Mobile_Device_Hardening.md</td>
+<td>Control 4, 6</td>
+<td>Mobile Device Security</td>
+</tr>
+</tbody>
+</table>
+<h3 id="applikations-hardening">Applikations-Hardening</h3>
+<table>
+<thead>
+<tr>
+<th>Template</th>
+<th>CIS Controls</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0200_Nginx_Webserver_Hardening.md</td>
+<td>Control 4, 16</td>
+<td>Nginx Secure Configuration</td>
+</tr>
+<tr>
+<td>0210_Apache_Webserver_Hardening.md</td>
+<td>Control 4, 16</td>
+<td>Apache Secure Configuration</td>
+</tr>
+<tr>
+<td>0220_IIS_Webserver_Hardening.md</td>
+<td>Control 4, 16</td>
+<td>IIS Secure Configuration</td>
+</tr>
+<tr>
+<td>0230_Tomcat_Application_Server_Hardening.md</td>
+<td>Control 4, 16</td>
+<td>Tomcat Secure Configuration</td>
+</tr>
+<tr>
+<td>0240_PostgreSQL_Database_Hardening.md</td>
+<td>Control 3, 4, 6</td>
+<td>PostgreSQL Security</td>
+</tr>
+<tr>
+<td>0250_MySQL_MariaDB_Database_Hardening.md</td>
+<td>Control 3, 4, 6</td>
+<td>MySQL/MariaDB Security</td>
+</tr>
+<tr>
+<td>0260_MS_SQL_Server_Database_Hardening.md</td>
+<td>Control 3, 4, 6</td>
+<td>MS SQL Server Security</td>
+</tr>
+<tr>
+<td>0270_MongoDB_Database_Hardening.md</td>
+<td>Control 3, 4, 6</td>
+<td>MongoDB Security</td>
+</tr>
+<tr>
+<td>0280_Kubernetes_Cluster_Hardening.md</td>
+<td>Control 4, 12, 13</td>
+<td>Kubernetes Security</td>
+</tr>
+<tr>
+<td>0290_Docker_Engine_Hardening.md</td>
+<td>Control 4, 16</td>
+<td>Docker Security</td>
+</tr>
+<tr>
+<td>0300_SSH_Service_Hardening.md</td>
+<td>Control 4, 6</td>
+<td>SSH Secure Configuration</td>
+</tr>
+<tr>
+<td>0310_Active_Directory_Hardening.md</td>
+<td>Control 5, 6</td>
+<td>Active Directory Security</td>
+</tr>
+<tr>
+<td>0320_Identity_Provider_Hardening.md</td>
+<td>Control 5, 6</td>
+<td>Identity Provider Security</td>
+</tr>
+<tr>
+<td>0330_Cloud_Platform_Hardening.md</td>
+<td>Control 4, 14</td>
+<td>Cloud Security</td>
+</tr>
+</tbody>
+</table>
+<h3 id="anhange">Anhänge</h3>
+<table>
+<thead>
+<tr>
+<th>Template</th>
+<th>CIS Controls</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0400_Control_Mapping_Template.md</td>
+<td>Alle Controls</td>
+<td>Control-Mapping-Matrix</td>
+</tr>
+<tr>
+<td>0410_Checklisten_und_Evidence.md</td>
+<td>Alle Controls</td>
+<td>Compliance-Nachweise</td>
+</tr>
+</tbody>
+</table>
+<h2 id="cis-controls-v8-implementation-groups">CIS Controls v8 Implementation Groups</h2>
+<p>Die Templates unterstützen alle drei Implementation Groups:</p>
+<ul>
+<li><strong>IG1</strong>: Essential Cyber Hygiene (Basis-Hardening)</li>
+<li><strong>IG2</strong>: Foundational (Erweiterte Konfiguration)</li>
+<li><strong>IG3</strong>: Advanced (Fortgeschrittene Sicherheitsmaßnahmen)</li>
+</ul>
+<h2 id="cis-benchmarks-alignment">CIS Benchmarks Alignment</h2>
+<p>Die Templates sind aligned mit folgenden CIS Benchmarks:</p>
+<ul>
+<li>CIS Microsoft Windows Server Benchmark</li>
+<li>CIS Microsoft Windows Desktop Benchmark</li>
+<li>CIS Distribution Independent Linux Benchmark</li>
+<li>CIS Apple macOS Benchmark</li>
+<li>CIS Docker Benchmark</li>
+<li>CIS Kubernetes Benchmark</li>
+<li>CIS PostgreSQL Benchmark</li>
+<li>CIS MySQL Benchmark</li>
+<li>CIS Microsoft SQL Server Benchmark</li>
+<li>CIS MongoDB Benchmark</li>
+<li>CIS Apache HTTP Server Benchmark</li>
+<li>CIS NGINX Benchmark</li>
+<li>CIS Microsoft IIS Benchmark</li>
+</ul>
+<h2 id="referenzen">Referenzen</h2>
+<ul>
+<li>CIS Controls v8: https://www.cisecurity.org/controls/v8</li>
+<li>CIS Benchmarks: https://www.cisecurity.org/cis-benchmarks/</li>
+</ul>
+<hr />
+<p><strong>Version:</strong> 1.0.0<br />
+<strong>Datum:</strong> 2026-02-10</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0410_Anhang_Checklisten_und_Evidence.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0000_README.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

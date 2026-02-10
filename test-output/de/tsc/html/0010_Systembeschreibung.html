@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0010 - Systembeschreibung</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0010</div>
+            <h1>Systembeschreibung</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0000_metadata_de_tsc.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0020_System_Boundaries.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="systembeschreibung">Systembeschreibung</h1>
+<p><strong>Dokument-ID:</strong> TSC-0010<br />
+<strong>Organisation:</strong> AdminSend GmbH<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Genehmigt durch:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Entwurf / In Review / Freigegeben<br />
+<strong>Klassifizierung:</strong> internal<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-zweck">1. Zweck</h2>
+<p>Dieses Dokument beschreibt das Service-System von AdminSend GmbH, das Gegenstand des SOC 2-Audits ist.</p>
+<h3 id="11-ziele">1.1 Ziele</h3>
+<ul>
+<li><strong>System Description:</strong> Vollständige Beschreibung des Service-Systems</li>
+<li><strong>Boundary Definition:</strong> Klare Abgrenzung der Systemgrenzen</li>
+<li><strong>Component Identification:</strong> Identifikation aller Systemkomponenten</li>
+<li><strong>Service Commitments:</strong> Dokumentation der Service-Zusagen</li>
+</ul>
+<h3 id="12-referenzen">1.2 Referenzen</h3>
+<ul>
+<li><strong>AICPA TSC:</strong> Trust Services Criteria</li>
+<li><strong>SOC 2 Reporting:</strong> Description Criteria for a Description of a Service Organization's System</li>
+<li><strong>Service Level Agreements:</strong> [TODO: Referenz zu SLAs]</li>
+</ul>
+<h2 id="2-organisationsinformationen">2. Organisationsinformationen</h2>
+<h3 id="21-service-organization">2.1 Service Organization</h3>
+<p><strong>Organisation:</strong> AdminSend GmbH<br />
+<strong>Adresse:</strong> Musterstraße 123, 80331 München<br />
+<strong>Land:</strong> Deutschland<br />
+<strong>Website:</strong> https://www.adminsend.de  </p>
+<p><strong>Geschäftsbereich:</strong> [TODO: z.B. Cloud-Hosting, SaaS, Managed Services]<br />
+<strong>Gründungsjahr:</strong> [TODO: Jahr]<br />
+<strong>Mitarbeiteranzahl:</strong> [TODO: Anzahl]  </p>
+<h3 id="22-service-description">2.2 Service Description</h3>
+<p><strong>Service Name:</strong> {{ meta.tsc.system_name }}<br />
+<strong>Service Type:</strong> [TODO: z.B. Cloud-basierte Anwendung, Hosting-Service]<br />
+<strong>Service Purpose:</strong> [TODO: Zweck des Service]  </p>
+<p><strong>Hauptfunktionen:</strong>
+- [TODO: Funktion 1]
+- [TODO: Funktion 2]
+- [TODO: Funktion 3]</p>
+<h3 id="23-report-period">2.3 Report Period</h3>
+<p><strong>Report Type:</strong> [TODO: Type I / Type II]<br />
+<strong>Report Period:</strong> {{ meta.tsc.report_period }}<br />
+<strong>Report Date:</strong> [TODO: Datum für Type I oder Enddatum für Type II]  </p>
+<h2 id="3-system-boundaries">3. System Boundaries</h2>
+<h3 id="31-in-scope-systems">3.1 In-Scope Systems</h3>
+<p><strong>Systeme innerhalb des Scope:</strong></p>
+<table>
+<thead>
+<tr>
+<th>System-ID</th>
+<th>Systemname</th>
+<th>Typ</th>
+<th>Funktion</th>
+<th>Standort</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: SYS-001]</td>
+<td>[TODO: Web Application]</td>
+<td>Application</td>
+<td>Hauptanwendung</td>
+<td>[TODO: Cloud/On-Prem]</td>
+</tr>
+<tr>
+<td>[TODO: SYS-002]</td>
+<td>[TODO: Database Server]</td>
+<td>Database</td>
+<td>Datenspeicherung</td>
+<td>[TODO: Cloud/On-Prem]</td>
+</tr>
+<tr>
+<td>[TODO: SYS-003]</td>
+<td>[TODO: API Gateway]</td>
+<td>Infrastructure</td>
+<td>API-Management</td>
+<td>[TODO: Cloud/On-Prem]</td>
+</tr>
+<tr>
+<td>[TODO: SYS-004]</td>
+<td>[TODO: Load Balancer]</td>
+<td>Infrastructure</td>
+<td>Traffic-Verteilung</td>
+<td>[TODO: Cloud/On-Prem]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-out-of-scope-systems">3.2 Out-of-Scope Systems</h3>
+<p><strong>Systeme außerhalb des Scope:</strong></p>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Begründung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Internal HR System]</td>
+<td>Nicht Teil des Kundenservice</td>
+</tr>
+<tr>
+<td>[TODO: Development Environment]</td>
+<td>Keine Produktionsdaten</td>
+</tr>
+<tr>
+<td>[TODO: Marketing Website]</td>
+<td>Keine Kundendaten</td>
+</tr>
+</tbody>
+</table>
+<h3 id="33-system-interfaces">3.3 System Interfaces</h3>
+<p><strong>Externe Schnittstellen:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Schnittstelle</th>
+<th>Typ</th>
+<th>Zweck</th>
+<th>Sicherheit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Payment Gateway]</td>
+<td>API</td>
+<td>Zahlungsabwicklung</td>
+<td>TLS 1.2+</td>
+</tr>
+<tr>
+<td>[TODO: Email Service]</td>
+<td>SMTP</td>
+<td>Benachrichtigungen</td>
+<td>TLS</td>
+</tr>
+<tr>
+<td>[TODO: Identity Provider]</td>
+<td>SAML/OAuth</td>
+<td>Authentifizierung</td>
+<td>HTTPS</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-infrastructure">4. Infrastructure</h2>
+<h3 id="41-physical-infrastructure">4.1 Physical Infrastructure</h3>
+<p><strong>Hosting-Modell:</strong> [TODO: Cloud / On-Premises / Hybrid]</p>
+<p><strong>Cloud Provider (falls zutreffend):</strong>
+- <strong>Provider:</strong> [TODO: AWS / Azure / GCP / andere]
+- <strong>Regionen:</strong> [TODO: eu-central-1, us-east-1]
+- <strong>Availability Zones:</strong> [TODO: Anzahl]</p>
+<p><strong>Data Centers (falls On-Premises):</strong>
+- <strong>Primäres Rechenzentrum:</strong> [TODO: Standort]
+- <strong>Sekundäres Rechenzentrum:</strong> [TODO: Standort]
+- <strong>Zertifizierungen:</strong> [TODO: ISO 27001, SOC 2]</p>
+<h3 id="42-network-architecture">4.2 Network Architecture</h3>
+<p><strong>Netzwerksegmentierung:</strong>
+- <strong>Production Network:</strong> [TODO: VLAN/Subnet]
+- <strong>Management Network:</strong> [TODO: VLAN/Subnet]
+- <strong>DMZ:</strong> [TODO: VLAN/Subnet]</p>
+<p><strong>Netzwerksicherheit:</strong>
+- <strong>Firewalls:</strong> [TODO: Typ und Anzahl]
+- <strong>IDS/IPS:</strong> [TODO: Ja/Nein, Typ]
+- <strong>DDoS Protection:</strong> [TODO: Ja/Nein, Anbieter]</p>
+<h3 id="43-compute-resources">4.3 Compute Resources</h3>
+<table>
+<thead>
+<tr>
+<th>Resource Type</th>
+<th>Specification</th>
+<th>Quantity</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Web Servers]</td>
+<td>[TODO: 4 vCPU, 16GB RAM]</td>
+<td>[TODO: 3]</td>
+<td>Application hosting</td>
+</tr>
+<tr>
+<td>[TODO: Database Servers]</td>
+<td>[TODO: 8 vCPU, 32GB RAM]</td>
+<td>[TODO: 2]</td>
+<td>Data storage</td>
+</tr>
+<tr>
+<td>[TODO: Cache Servers]</td>
+<td>[TODO: 2 vCPU, 8GB RAM]</td>
+<td>[TODO: 2]</td>
+<td>Performance</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-software">5. Software</h2>
+<h3 id="51-application-software">5.1 Application Software</h3>
+<table>
+<thead>
+<tr>
+<th>Application</th>
+<th>Version</th>
+<th>Vendor</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Main Application]</td>
+<td>[TODO: v2.5]</td>
+<td>[TODO: Internal/Vendor]</td>
+<td>Core service</td>
+</tr>
+<tr>
+<td>[TODO: API Service]</td>
+<td>[TODO: v1.3]</td>
+<td>[TODO: Internal/Vendor]</td>
+<td>API endpoints</td>
+</tr>
+<tr>
+<td>[TODO: Admin Portal]</td>
+<td>[TODO: v1.1]</td>
+<td>[TODO: Internal/Vendor]</td>
+<td>Administration</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-system-software">5.2 System Software</h3>
+<table>
+<thead>
+<tr>
+<th>Software</th>
+<th>Version</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Operating System]</td>
+<td>[TODO: Ubuntu 22.04]</td>
+<td>Server OS</td>
+</tr>
+<tr>
+<td>[TODO: Database]</td>
+<td>[TODO: PostgreSQL 15]</td>
+<td>Data storage</td>
+</tr>
+<tr>
+<td>[TODO: Web Server]</td>
+<td>[TODO: Nginx 1.24]</td>
+<td>HTTP server</td>
+</tr>
+<tr>
+<td>[TODO: Application Server]</td>
+<td>[TODO: Node.js 18]</td>
+<td>Runtime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="53-security-software">5.3 Security Software</h3>
+<table>
+<thead>
+<tr>
+<th>Software</th>
+<th>Version</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Antivirus]</td>
+<td>[TODO: Latest]</td>
+<td>Malware protection</td>
+</tr>
+<tr>
+<td>[TODO: SIEM]</td>
+<td>[TODO: Version]</td>
+<td>Security monitoring</td>
+</tr>
+<tr>
+<td>[TODO: Vulnerability Scanner]</td>
+<td>[TODO: Version]</td>
+<td>Vulnerability management</td>
+</tr>
+<tr>
+<td>[TODO: Backup Software]</td>
+<td>[TODO: Version]</td>
+<td>Data backup</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-people">6. People</h2>
+<h3 id="61-organizational-structure">6.1 Organizational Structure</h3>
+<p><strong>Management:</strong>
+- <strong>CEO:</strong> [TODO: Name]
+- <strong>CTO:</strong> [TODO: Name]
+- <strong>CISO:</strong> {{ meta.roles.ciso.name }}
+- <strong>COO:</strong> [TODO: Name]</p>
+<p><strong>Teams:</strong>
+- <strong>Engineering:</strong> [TODO: Anzahl Mitarbeiter]
+- <strong>Operations:</strong> [TODO: Anzahl Mitarbeiter]
+- <strong>Security:</strong> [TODO: Anzahl Mitarbeiter]
+- <strong>Support:</strong> [TODO: Anzahl Mitarbeiter]</p>
+<h3 id="62-roles-and-responsibilities">6.2 Roles and Responsibilities</h3>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Responsibilities</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: System Administrator]</td>
+<td>System management, patching</td>
+<td>[TODO: 3]</td>
+</tr>
+<tr>
+<td>[TODO: Security Engineer]</td>
+<td>Security monitoring, incident response</td>
+<td>[TODO: 2]</td>
+</tr>
+<tr>
+<td>[TODO: Developer]</td>
+<td>Application development</td>
+<td>[TODO: 10]</td>
+</tr>
+<tr>
+<td>[TODO: Support Engineer]</td>
+<td>Customer support</td>
+<td>[TODO: 5]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="63-training-and-qualifications">6.3 Training and Qualifications</h3>
+<p><strong>Mandatory Training:</strong>
+- Security Awareness Training (jährlich)
+- Role-specific Technical Training
+- Compliance Training</p>
+<p><strong>Certifications:</strong>
+- [TODO: CISSP, CISM, AWS Certified, etc.]</p>
+<h2 id="7-processes">7. Processes</h2>
+<h3 id="71-operational-processes">7.1 Operational Processes</h3>
+<p><strong>Key Processes:</strong></p>
+<ol>
+<li><strong>Change Management</strong></li>
+<li>Change request and approval</li>
+<li>Testing and validation</li>
+<li>
+<p>Deployment and rollback</p>
+</li>
+<li>
+<p><strong>Incident Management</strong></p>
+</li>
+<li>Incident detection and logging</li>
+<li>Incident response and resolution</li>
+<li>
+<p>Post-incident review</p>
+</li>
+<li>
+<p><strong>Monitoring and Alerting</strong></p>
+</li>
+<li>System health monitoring</li>
+<li>Security event monitoring</li>
+<li>
+<p>Performance monitoring</p>
+</li>
+<li>
+<p><strong>Backup and Recovery</strong></p>
+</li>
+<li>Regular backups</li>
+<li>Backup testing</li>
+<li>Disaster recovery procedures</li>
+</ol>
+<h3 id="72-security-processes">7.2 Security Processes</h3>
+<p><strong>Security Operations:</strong></p>
+<ol>
+<li><strong>Access Management</strong></li>
+<li>User provisioning and deprovisioning</li>
+<li>Access reviews</li>
+<li>
+<p>Privileged access management</p>
+</li>
+<li>
+<p><strong>Vulnerability Management</strong></p>
+</li>
+<li>Regular vulnerability scans</li>
+<li>Patch management</li>
+<li>
+<p>Penetration testing</p>
+</li>
+<li>
+<p><strong>Security Monitoring</strong></p>
+</li>
+<li>Log collection and analysis</li>
+<li>Security event correlation</li>
+<li>Threat intelligence</li>
+</ol>
+<h2 id="8-data">8. Data</h2>
+<h3 id="81-data-types">8.1 Data Types</h3>
+<p><strong>Customer Data:</strong>
+- <strong>Personal Information:</strong> [TODO: Name, Email, etc.]
+- <strong>Account Information:</strong> [TODO: Credentials, Preferences]
+- <strong>Transaction Data:</strong> [TODO: Usage, Billing]
+- <strong>Content Data:</strong> [TODO: User-generated content]</p>
+<p><strong>System Data:</strong>
+- <strong>Configuration Data:</strong> System settings
+- <strong>Log Data:</strong> Audit logs, system logs
+- <strong>Monitoring Data:</strong> Metrics, alerts</p>
+<h3 id="82-data-classification">8.2 Data Classification</h3>
+<table>
+<thead>
+<tr>
+<th>Classification</th>
+<th>Description</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Public</td>
+<td>Publicly available</td>
+<td>Marketing materials</td>
+</tr>
+<tr>
+<td>Internal</td>
+<td>Internal use only</td>
+<td>Policies, procedures</td>
+</tr>
+<tr>
+<td>Confidential</td>
+<td>Sensitive business data</td>
+<td>Customer data, financial data</td>
+</tr>
+<tr>
+<td>Restricted</td>
+<td>Highly sensitive</td>
+<td>Encryption keys, credentials</td>
+</tr>
+</tbody>
+</table>
+<h3 id="83-data-flow">8.3 Data Flow</h3>
+<p>[TODO: Fügen Sie Datenflussdiagramm ein]</p>
+<p><strong>Main Data Flows:</strong></p>
+<ol>
+<li><strong>User Registration:</strong></li>
+<li>User → Web Application → Database</li>
+<li>
+<p>Encryption: TLS 1.2+ in transit, AES-256 at rest</p>
+</li>
+<li>
+<p><strong>Data Processing:</strong></p>
+</li>
+<li>Application → Processing Service → Database</li>
+<li>
+<p>Validation and integrity checks</p>
+</li>
+<li>
+<p><strong>Data Backup:</strong></p>
+</li>
+<li>Database → Backup Service → Offsite Storage</li>
+<li>Encrypted backups</li>
+</ol>
+<h2 id="9-service-commitments-and-system-requirements">9. Service Commitments and System Requirements</h2>
+<h3 id="91-service-level-agreements-slas">9.1 Service Level Agreements (SLAs)</h3>
+<p><strong>Availability:</strong>
+- <strong>Target:</strong> [TODO: 99.9% uptime]
+- <strong>Measurement:</strong> Monthly uptime percentage
+- <strong>Exclusions:</strong> Planned maintenance windows</p>
+<p><strong>Performance:</strong>
+- <strong>Response Time:</strong> [TODO: &lt; 200ms for 95% of requests]
+- <strong>Throughput:</strong> [TODO: 1000 requests/second]</p>
+<p><strong>Support:</strong>
+- <strong>Response Time:</strong> [TODO: &lt; 1 hour for critical issues]
+- <strong>Resolution Time:</strong> [TODO: &lt; 4 hours for critical issues]</p>
+<h3 id="92-security-commitments">9.2 Security Commitments</h3>
+<p><strong>Data Protection:</strong>
+- Encryption of data in transit and at rest
+- Access control based on least privilege
+- Regular security assessments</p>
+<p><strong>Availability:</strong>
+- Redundant infrastructure
+- Disaster recovery capabilities
+- Regular backup testing</p>
+<p><strong>Confidentiality:</strong>
+- Confidentiality agreements with employees
+- Secure data disposal procedures
+- Access logging and monitoring</p>
+<h3 id="93-compliance-requirements">9.3 Compliance Requirements</h3>
+<p><strong>Regulatory Compliance:</strong>
+- [TODO: GDPR, HIPAA, PCI-DSS, etc.]</p>
+<p><strong>Industry Standards:</strong>
+- [TODO: ISO 27001, NIST, CIS Controls]</p>
+<h2 id="10-subservice-organizations">10. Subservice Organizations</h2>
+<h3 id="101-subservice-providers">10.1 Subservice Providers</h3>
+<table>
+<thead>
+<tr>
+<th>Provider</th>
+<th>Service</th>
+<th>SOC 2 Status</th>
+<th>Carve-Out/Inclusive</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Cloud Provider]</td>
+<td>Infrastructure</td>
+<td>Type II available</td>
+<td>Inclusive</td>
+</tr>
+<tr>
+<td>[TODO: Email Service]</td>
+<td>Email delivery</td>
+<td>Type II available</td>
+<td>Carve-Out</td>
+</tr>
+<tr>
+<td>[TODO: Payment Processor]</td>
+<td>Payment processing</td>
+<td>Type II available</td>
+<td>Carve-Out</td>
+</tr>
+</tbody>
+</table>
+<h3 id="102-complementary-user-entity-controls-cuec">10.2 Complementary User Entity Controls (CUEC)</h3>
+<p><strong>Controls that require customer implementation:</strong></p>
+<ol>
+<li><strong>User Access Management</strong></li>
+<li>Customers must implement strong password policies</li>
+<li>
+<p>Customers must enable multi-factor authentication</p>
+</li>
+<li>
+<p><strong>Data Backup</strong></p>
+</li>
+<li>Customers must regularly export their data</li>
+<li>
+<p>Customers must test data restoration procedures</p>
+</li>
+<li>
+<p><strong>Security Configuration</strong></p>
+</li>
+<li>Customers must configure security settings appropriately</li>
+<li>Customers must review access logs regularly</li>
+</ol>
+<h2 id="11-changes-to-the-system">11. Changes to the System</h2>
+<h3 id="111-significant-changes-during-report-period">11.1 Significant Changes During Report Period</h3>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Change Description</th>
+<th>Impact</th>
+<th>Approval</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: 2026-01-15]</td>
+<td>[TODO: New feature deployment]</td>
+<td>[TODO: Low]</td>
+<td>[TODO: CTO]</td>
+</tr>
+<tr>
+<td>[TODO: 2026-02-01]</td>
+<td>[TODO: Infrastructure upgrade]</td>
+<td>[TODO: Medium]</td>
+<td>[TODO: CTO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="112-planned-changes">11.2 Planned Changes</h3>
+<p><strong>Upcoming Changes:</strong>
+- [TODO: Beschreibung geplanter Änderungen]</p>
+<hr />
+<p><strong>Dokumenthistorie:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Datum</th>
+<th>Autor</th>
+<th>Änderungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Initiale Erstellung</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0000_metadata_de_tsc.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0020_System_Boundaries.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0050 - Continuous Monitoring Strategy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0050</div>
+            <h1>Continuous Monitoring Strategy</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0040_Risk_Management_Framework.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0100_Access_Control_Policy.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="continuous-monitoring-strategy">Continuous Monitoring Strategy</h1>
+<p><strong>Dokument-ID:</strong> NIST-0050<br />
+<strong>Organisation:</strong> AdminSend GmbH<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Entwurf / In Review / Freigegeben<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-zweck">1. Zweck</h2>
+<p>Dieses Dokument beschreibt die Strategie für die kontinuierliche Überwachung (Continuous Monitoring) des Systems {{ meta.nist.system_name }}.</p>
+<h2 id="2-continuous-monitoring-ubersicht">2. Continuous Monitoring-Übersicht</h2>
+<h3 id="21-ziele">2.1 Ziele</h3>
+<ul>
+<li><strong>Sicherheitsstatus:</strong> Kontinuierliche Überwachung des Sicherheitsstatus</li>
+<li><strong>Risikomanagement:</strong> Frühzeitige Erkennung von Risiken</li>
+<li><strong>Compliance:</strong> Sicherstellung der fortlaufenden Compliance</li>
+<li><strong>Incident Detection:</strong> Schnelle Erkennung von Sicherheitsvorfällen</li>
+</ul>
+<h3 id="22-referenzen">2.2 Referenzen</h3>
+<ul>
+<li><strong>NIST SP 800-137:</strong> Information Security Continuous Monitoring (ISCM)</li>
+<li><strong>NIST SP 800-53 Rev. 5:</strong> CA-7 Continuous Monitoring</li>
+</ul>
+<h2 id="3-monitoring-strategie">3. Monitoring-Strategie</h2>
+<h3 id="31-monitoring-bereiche">3.1 Monitoring-Bereiche</h3>
+<table>
+<thead>
+<tr>
+<th>Bereich</th>
+<th>Beschreibung</th>
+<th>Frequenz</th>
+<th>Verantwortlich</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Schwachstellen</td>
+<td>Vulnerability Scanning</td>
+<td>[TODO: Wöchentlich]</td>
+<td>[TODO: ISSO]</td>
+</tr>
+<tr>
+<td>Konfiguration</td>
+<td>Configuration Compliance</td>
+<td>[TODO: Täglich]</td>
+<td>[TODO: ISSO]</td>
+</tr>
+<tr>
+<td>Patches</td>
+<td>Patch Status</td>
+<td>[TODO: Wöchentlich]</td>
+<td>[TODO: System Admin]</td>
+</tr>
+<tr>
+<td>Zugriffe</td>
+<td>Access Control Review</td>
+<td>[TODO: Monatlich]</td>
+<td>[TODO: ISSO]</td>
+</tr>
+<tr>
+<td>Logs</td>
+<td>Log Analysis</td>
+<td>[TODO: Täglich]</td>
+<td>[TODO: SOC]</td>
+</tr>
+<tr>
+<td>Incidents</td>
+<td>Incident Tracking</td>
+<td>[TODO: Kontinuierlich]</td>
+<td>[TODO: ISSO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-monitoring-tools">3.2 Monitoring-Tools</h3>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Zweck</th>
+<th>Hersteller</th>
+<th>Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Vulnerability Scanner]</td>
+<td>Schwachstellenscans</td>
+<td>[TODO: Vendor]</td>
+<td>[TODO: Version]</td>
+</tr>
+<tr>
+<td>[TODO: SIEM]</td>
+<td>Log-Analyse</td>
+<td>[TODO: Vendor]</td>
+<td>[TODO: Version]</td>
+</tr>
+<tr>
+<td>[TODO: Configuration Management]</td>
+<td>Konfigurationsüberwachung</td>
+<td>[TODO: Vendor]</td>
+<td>[TODO: Version]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-metriken-und-indikatoren">4. Metriken und Indikatoren</h2>
+<h3 id="41-sicherheitsmetriken">4.1 Sicherheitsmetriken</h3>
+<table>
+<thead>
+<tr>
+<th>Metrik</th>
+<th>Zielwert</th>
+<th>Messmethode</th>
+<th>Reporting-Frequenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kritische Schwachstellen</td>
+<td>0</td>
+<td>Vulnerability Scan</td>
+<td>Wöchentlich</td>
+</tr>
+<tr>
+<td>Patch-Compliance</td>
+<td>&gt; 95%</td>
+<td>Patch Management System</td>
+<td>Monatlich</td>
+</tr>
+<tr>
+<td>Konfigurationsabweichungen</td>
+<td>&lt; 5%</td>
+<td>Configuration Scanner</td>
+<td>Wöchentlich</td>
+</tr>
+<tr>
+<td>Incident Response Time</td>
+<td>&lt; 1 Stunde</td>
+<td>Incident Tracking</td>
+<td>Monatlich</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-compliance-indikatoren">4.2 Compliance-Indikatoren</h3>
+<table>
+<thead>
+<tr>
+<th>Indikator</th>
+<th>Beschreibung</th>
+<th>Schwellenwert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Control Effectiveness</td>
+<td>Prozentsatz wirksamer Kontrollen</td>
+<td>&gt; 90%</td>
+</tr>
+<tr>
+<td>POA&amp;M Completion</td>
+<td>Abgeschlossene POA&amp;M-Items</td>
+<td>&gt; 80%</td>
+</tr>
+<tr>
+<td>Assessment Findings</td>
+<td>Offene Assessment-Findings</td>
+<td>&lt; 10</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-reporting">5. Reporting</h2>
+<h3 id="51-reporting-struktur">5.1 Reporting-Struktur</h3>
+<p><strong>Monatliche Berichte an AO:</strong>
+- Sicherheitsstatus-Zusammenfassung
+- Metriken und Trends
+- Neue Risiken und Schwachstellen
+- POA&amp;M-Status
+- Empfehlungen</p>
+<p><strong>Quartalsweise Berichte:</strong>
+- Umfassende Sicherheitsbewertung
+- Compliance-Status
+- Änderungen am System
+- Reauthorization-Vorbereitung</p>
+<h3 id="52-eskalation">5.2 Eskalation</h3>
+<p><strong>Eskalationskriterien:</strong>
+- Kritische Schwachstellen
+- Sicherheitsvorfälle
+- Compliance-Verstöße
+- Signifikante Systemänderungen</p>
+<p><strong>Eskalationspfad:</strong>
+1. ISSO → ISSM
+2. ISSM → AO
+3. AO → Senior Leadership</p>
+<h2 id="6-anderungsmanagement">6. Änderungsmanagement</h2>
+<h3 id="61-anderungskategorien">6.1 Änderungskategorien</h3>
+<table>
+<thead>
+<tr>
+<th>Kategorie</th>
+<th>Beschreibung</th>
+<th>Genehmigung erforderlich</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Signifikant</td>
+<td>Auswirkung auf Autorisierung</td>
+<td>AO</td>
+</tr>
+<tr>
+<td>Moderat</td>
+<td>Auswirkung auf Sicherheitskontrollen</td>
+<td>ISSO</td>
+</tr>
+<tr>
+<td>Minor</td>
+<td>Keine Sicherheitsauswirkung</td>
+<td>System Owner</td>
+</tr>
+</tbody>
+</table>
+<h3 id="62-anderungsprozess">6.2 Änderungsprozess</h3>
+<ol>
+<li>Änderungsantrag</li>
+<li>Sicherheitsbewertung</li>
+<li>Genehmigung</li>
+<li>Implementierung</li>
+<li>Verifikation</li>
+<li>Dokumentation</li>
+</ol>
+<h2 id="7-reauthorization">7. Reauthorization</h2>
+<p><strong>Reauthorization-Intervall:</strong> [TODO: 3 Jahre]<br />
+<strong>Nächste Reauthorization:</strong> [TODO: Datum]</p>
+<p><strong>Reauthorization-Auslöser:</strong>
+- Ablauf der ATO
+- Signifikante Systemänderungen
+- Neue Bedrohungen
+- Compliance-Anforderungen</p>
+<hr />
+<p><strong>Dokumenthistorie:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Datum</th>
+<th>Autor</th>
+<th>Änderungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Initiale Erstellung</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0040_Risk_Management_Framework.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0100_Access_Control_Policy.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

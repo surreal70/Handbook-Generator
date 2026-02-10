@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0320 - Security Objectives Coverage Matrix</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0320</div>
+            <h1>Security Objectives Coverage Matrix</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0310_Security_Objectives_Rationale.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0330_Security_Objectives_Summary.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="security-objectives-coverage-matrix">Security Objectives Coverage Matrix</h1>
+<p><strong>Dokument-ID:</strong> 0320<br />
+<strong>Owner:</strong> {{ meta.owner }}<br />
+<strong>Version:</strong> {{ meta.version }}<br />
+<strong>Status:</strong> Entwurf / In Review / Freigegeben<br />
+<strong>Klassifizierung:</strong> Intern / Vertraulich / Streng vertraulich<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.date }}  </p>
+<hr />
+<blockquote>
+<p><strong>Hinweis:</strong> Dieses Dokument ist ein Template. Ersetze alle <code>[TODO]</code>-Platzhalter und passe die Inhalte an dein spezifisches TOE (Target of Evaluation) an.</p>
+</blockquote>
+<h2 id="1-einleitung">1. Einleitung</h2>
+<p>Dieses Dokument präsentiert die Coverage Matrix (Abdeckungsmatrix) für die Sicherheitsziele des TOE <strong>{{ meta.toe_name }}</strong>. Die Matrix visualisiert die Beziehungen zwischen:</p>
+<ul>
+<li>Sicherheitszielen und Bedrohungen</li>
+<li>Sicherheitszielen und organisatorischen Sicherheitsrichtlinien (OSPs)</li>
+<li>Umgebungszielen und Annahmen</li>
+</ul>
+<h3 id="11-zweck">1.1 Zweck</h3>
+<p>Die Coverage Matrix dient als:
+- <strong>Vollständigkeitsnachweis</strong>: Alle Elemente der Sicherheitsproblem-Definition sind abgedeckt
+- <strong>Rückverfolgbarkeitswerkzeug</strong>: Schnelle Identifikation von Beziehungen
+- <strong>Audit-Dokumentation</strong>: Nachweis für Evaluatoren und Auditoren
+- <strong>Änderungsmanagement</strong>: Identifikation von Auswirkungen bei Änderungen</p>
+<h3 id="12-legende">1.2 Legende</h3>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Bedeutung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X</td>
+<td>Primäre Zuordnung - Das Ziel adressiert direkt die Bedrohung/OSP/Annahme</td>
+</tr>
+<tr>
+<td>•</td>
+<td>Unterstützende Zuordnung - Das Ziel unterstützt indirekt</td>
+</tr>
+<tr>
+<td>-</td>
+<td>Keine Zuordnung</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-bedrohungen-vs-sicherheitsziele">2. Bedrohungen vs. Sicherheitsziele</h2>
+<p>Die folgende Matrix zeigt, welche Sicherheitsziele welche Bedrohungen adressieren:</p>
+<table>
+<thead>
+<tr>
+<th>Bedrohung</th>
+<th>O.ACCESS_CONTROL</th>
+<th>O.IDENTIFICATION_AUTHENTICATION</th>
+<th>O.AUDIT_GENERATION</th>
+<th>O.AUDIT_PROTECTION</th>
+<th>O.DATA_CONFIDENTIALITY</th>
+<th>O.CRYPTOGRAPHIC_OPERATIONS</th>
+<th>O.DATA_INTEGRITY</th>
+<th>O.SECURITY_MANAGEMENT</th>
+<th>O.SECURE_STATE</th>
+<th>O.TSF_PROTECTION</th>
+<th>OE.PHYSICAL_PROTECTION</th>
+<th><strong>[TODO]</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>T.UNAUTHORIZED_ACCESS</strong></td>
+<td>X</td>
+<td>•</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>T.PRIVILEGE_ESCALATION</strong></td>
+<td>X</td>
+<td>•</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>T.MASQUERADE</strong></td>
+<td>•</td>
+<td>X</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>T.AUDIT_COMPROMISE</strong></td>
+<td>-</td>
+<td>-</td>
+<td>X</td>
+<td>X</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>T.DATA_DISCLOSURE</strong></td>
+<td>•</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>X</td>
+<td>X</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>T.EAVESDROPPING</strong></td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>X</td>
+<td>X</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>T.DATA_MODIFICATION</strong></td>
+<td>•</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>X</td>
+<td>X</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>T.DATA_CORRUPTION</strong></td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>X</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>T.MALFUNCTION</strong></td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>X</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>T.TSF_COMPROMISE</strong></td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>X</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>T.TSF_BYPASS</strong></td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>X</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>T.PHYSICAL_ATTACK</strong></td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>[TODO: Weitere Bedrohungen]</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Analyse:</strong>
+- Alle Bedrohungen sind durch mindestens ein Sicherheitsziel abgedeckt ✓
+- Mehrfachabdeckung zeigt Defense-in-Depth Ansatz
+- <strong>[TODO: Ergänze spezifische Analysen für dein TOE]</strong></p>
+<h2 id="3-organisatorische-sicherheitsrichtlinien-vs-sicherheitsziele">3. Organisatorische Sicherheitsrichtlinien vs. Sicherheitsziele</h2>
+<p>Die folgende Matrix zeigt, welche Sicherheitsziele welche OSPs umsetzen:</p>
+<table>
+<thead>
+<tr>
+<th>OSP</th>
+<th>O.ACCESS_CONTROL</th>
+<th>O.IDENTIFICATION_AUTHENTICATION</th>
+<th>O.AUDIT_GENERATION</th>
+<th>O.AUDIT_PROTECTION</th>
+<th>O.DATA_CONFIDENTIALITY</th>
+<th>O.CRYPTOGRAPHIC_OPERATIONS</th>
+<th>O.DATA_INTEGRITY</th>
+<th>O.SECURITY_MANAGEMENT</th>
+<th>O.SECURE_STATE</th>
+<th>O.TSF_PROTECTION</th>
+<th><strong>[TODO]</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>P.ACCESS_CONTROL</strong></td>
+<td>X</td>
+<td>•</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>P.ACCOUNTABILITY</strong></td>
+<td>-</td>
+<td>-</td>
+<td>X</td>
+<td>X</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>P.CONFIDENTIALITY</strong></td>
+<td>•</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>X</td>
+<td>•</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>P.INTEGRITY</strong></td>
+<td>•</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>•</td>
+<td>X</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>P.MANAGEMENT</strong></td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>X</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>[TODO: Weitere OSPs]</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Analyse:</strong>
+- Alle OSPs sind durch mindestens ein Sicherheitsziel umgesetzt ✓
+- Klare Zuordnung zwischen Richtlinien und technischen Zielen
+- <strong>[TODO: Ergänze spezifische Analysen für dein TOE]</strong></p>
+<h2 id="4-annahmen-vs-umgebungsziele">4. Annahmen vs. Umgebungsziele</h2>
+<p>Die folgende Matrix zeigt, welche Umgebungsziele welche Annahmen erfüllen:</p>
+<table>
+<thead>
+<tr>
+<th>Annahme</th>
+<th>OE.PHYSICAL_PROTECTION</th>
+<th>OE.TRUSTED_ADMIN</th>
+<th>OE.USER_TRAINING</th>
+<th>OE.NETWORK_PROTECTION</th>
+<th>OE.EXTERNAL_SYSTEMS</th>
+<th>OE.TIME_STAMPS</th>
+<th><strong>[TODO]</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A.PHYSICAL_SECURITY</strong></td>
+<td>X</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>A.TRUSTED_ADMIN</strong></td>
+<td>-</td>
+<td>X</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>A.USER_TRAINING</strong></td>
+<td>-</td>
+<td>-</td>
+<td>X</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>A.NETWORK_SECURITY</strong></td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>X</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>A.EXTERNAL_SYSTEMS</strong></td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>X</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>A.TIME_SOURCE</strong></td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>[TODO: Weitere Annahmen]</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Analyse:</strong>
+- Alle Annahmen sind durch mindestens ein Umgebungsziel erfüllt ✓
+- Klare Trennung zwischen TOE- und Umgebungsverantwortlichkeiten
+- <strong>[TODO: Ergänze spezifische Analysen für dein TOE]</strong></p>
+<h2 id="5-umgekehrte-ruckverfolgbarkeit-sicherheitsziele-zu-sicherheitsproblemen">5. Umgekehrte Rückverfolgbarkeit: Sicherheitsziele zu Sicherheitsproblemen</h2>
+<p>Die folgende Matrix zeigt die umgekehrte Perspektive - welche Bedrohungen/OSPs/Annahmen jedes Sicherheitsziel rechtfertigen:</p>
+<h3 id="51-toe-sicherheitsziele">5.1 TOE-Sicherheitsziele</h3>
+<table>
+<thead>
+<tr>
+<th>Sicherheitsziel</th>
+<th>Adressierte Bedrohungen</th>
+<th>Umgesetzte OSPs</th>
+<th>Begründung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>O.ACCESS_CONTROL</strong></td>
+<td>T.UNAUTHORIZED_ACCESS, T.PRIVILEGE_ESCALATION</td>
+<td>P.ACCESS_CONTROL</td>
+<td>Kontrolliert Zugriff auf Ressourcen</td>
+</tr>
+<tr>
+<td><strong>O.IDENTIFICATION_AUTHENTICATION</strong></td>
+<td>T.MASQUERADE</td>
+<td>-</td>
+<td>Verhindert Identitätsvortäuschung</td>
+</tr>
+<tr>
+<td><strong>O.AUDIT_GENERATION</strong></td>
+<td>T.AUDIT_COMPROMISE</td>
+<td>P.ACCOUNTABILITY</td>
+<td>Zeichnet sicherheitsrelevante Ereignisse auf</td>
+</tr>
+<tr>
+<td><strong>O.AUDIT_PROTECTION</strong></td>
+<td>T.AUDIT_COMPROMISE</td>
+<td>-</td>
+<td>Schützt Audit-Daten vor Manipulation</td>
+</tr>
+<tr>
+<td><strong>O.DATA_CONFIDENTIALITY</strong></td>
+<td>T.DATA_DISCLOSURE, T.EAVESDROPPING</td>
+<td>P.CONFIDENTIALITY</td>
+<td>Schützt sensible Daten vor Offenlegung</td>
+</tr>
+<tr>
+<td><strong>O.CRYPTOGRAPHIC_OPERATIONS</strong></td>
+<td>T.DATA_DISCLOSURE, T.DATA_MODIFICATION</td>
+<td>-</td>
+<td>Bietet kryptografische Mechanismen</td>
+</tr>
+<tr>
+<td><strong>O.DATA_INTEGRITY</strong></td>
+<td>T.DATA_MODIFICATION, T.DATA_CORRUPTION</td>
+<td>P.INTEGRITY</td>
+<td>Schützt Datenintegrität</td>
+</tr>
+<tr>
+<td><strong>O.SECURITY_MANAGEMENT</strong></td>
+<td>-</td>
+<td>P.MANAGEMENT</td>
+<td>Ermöglicht Verwaltung von Sicherheitsfunktionen</td>
+</tr>
+<tr>
+<td><strong>O.SECURE_STATE</strong></td>
+<td>T.MALFUNCTION</td>
+<td>-</td>
+<td>Gewährleistet sicheren Zustand bei Fehlern</td>
+</tr>
+<tr>
+<td><strong>O.TSF_PROTECTION</strong></td>
+<td>T.TSF_COMPROMISE, T.TSF_BYPASS</td>
+<td>-</td>
+<td>Schützt Sicherheitsfunktionen selbst</td>
+</tr>
+<tr>
+<td><strong>[TODO: Weitere Ziele]</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ergebnis:</strong> Alle TOE-Sicherheitsziele sind durch Bedrohungen oder OSPs gerechtfertigt ✓</p>
+<h3 id="52-umgebungsziele">5.2 Umgebungsziele</h3>
+<table>
+<thead>
+<tr>
+<th>Umgebungsziel</th>
+<th>Erfüllte Annahmen</th>
+<th>Adressierte Bedrohungen</th>
+<th>Begründung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>OE.PHYSICAL_PROTECTION</strong></td>
+<td>A.PHYSICAL_SECURITY</td>
+<td>T.PHYSICAL_ATTACK</td>
+<td>Schützt TOE vor physischem Zugriff</td>
+</tr>
+<tr>
+<td><strong>OE.TRUSTED_ADMIN</strong></td>
+<td>A.TRUSTED_ADMIN</td>
+<td>-</td>
+<td>Stellt vertrauenswürdige Administratoren sicher</td>
+</tr>
+<tr>
+<td><strong>OE.USER_TRAINING</strong></td>
+<td>A.USER_TRAINING</td>
+<td>-</td>
+<td>Schult Benutzer in sicherer Verwendung</td>
+</tr>
+<tr>
+<td><strong>OE.NETWORK_PROTECTION</strong></td>
+<td>A.NETWORK_SECURITY</td>
+<td>-</td>
+<td>Schützt TOE vor Netzwerkangriffen</td>
+</tr>
+<tr>
+<td><strong>OE.EXTERNAL_SYSTEMS</strong></td>
+<td>A.EXTERNAL_SYSTEMS</td>
+<td>-</td>
+<td>Stellt Sicherheit externer Systeme sicher</td>
+</tr>
+<tr>
+<td><strong>OE.TIME_STAMPS</strong></td>
+<td>A.TIME_SOURCE</td>
+<td>-</td>
+<td>Bietet zuverlässige Zeitstempel</td>
+</tr>
+<tr>
+<td><strong>[TODO: Weitere Ziele]</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ergebnis:</strong> Alle Umgebungsziele sind durch Annahmen gerechtfertigt ✓</p>
+<h2 id="6-vollstandigkeitsanalyse">6. Vollständigkeitsanalyse</h2>
+<h3 id="61-bedrohungsabdeckung">6.1 Bedrohungsabdeckung</h3>
+<p><strong>Gesamtzahl der Bedrohungen:</strong> 12 <strong>[TODO: Aktualisiere Anzahl]</strong><br />
+<strong>Abgedeckte Bedrohungen:</strong> 12 <strong>[TODO: Aktualisiere Anzahl]</strong><br />
+<strong>Nicht abgedeckte Bedrohungen:</strong> 0 <strong>[TODO: Aktualisiere Anzahl]</strong></p>
+<p><strong>Status:</strong> ✓ Vollständig abgedeckt</p>
+<p><strong>[TODO: Liste nicht abgedeckte Bedrohungen auf, falls vorhanden]</strong></p>
+<h3 id="62-osp-abdeckung">6.2 OSP-Abdeckung</h3>
+<p><strong>Gesamtzahl der OSPs:</strong> 5 <strong>[TODO: Aktualisiere Anzahl]</strong><br />
+<strong>Umgesetzte OSPs:</strong> 5 <strong>[TODO: Aktualisiere Anzahl]</strong><br />
+<strong>Nicht umgesetzte OSPs:</strong> 0 <strong>[TODO: Aktualisiere Anzahl]</strong></p>
+<p><strong>Status:</strong> ✓ Vollständig umgesetzt</p>
+<p><strong>[TODO: Liste nicht umgesetzte OSPs auf, falls vorhanden]</strong></p>
+<h3 id="63-annahmenabdeckung">6.3 Annahmenabdeckung</h3>
+<p><strong>Gesamtzahl der Annahmen:</strong> 6 <strong>[TODO: Aktualisiere Anzahl]</strong><br />
+<strong>Erfüllte Annahmen:</strong> 6 <strong>[TODO: Aktualisiere Anzahl]</strong><br />
+<strong>Nicht erfüllte Annahmen:</strong> 0 <strong>[TODO: Aktualisiere Anzahl]</strong></p>
+<p><strong>Status:</strong> ✓ Vollständig erfüllt</p>
+<p><strong>[TODO: Liste nicht erfüllte Annahmen auf, falls vorhanden]</strong></p>
+<h3 id="64-zielrechtfertigung">6.4 Zielrechtfertigung</h3>
+<p><strong>Gesamtzahl der Sicherheitsziele:</strong> 16 <strong>[TODO: Aktualisiere Anzahl]</strong><br />
+<strong>Gerechtfertigte Ziele:</strong> 16 <strong>[TODO: Aktualisiere Anzahl]</strong><br />
+<strong>Nicht gerechtfertigte Ziele:</strong> 0 <strong>[TODO: Aktualisiere Anzahl]</strong></p>
+<p><strong>Status:</strong> ✓ Alle Ziele gerechtfertigt</p>
+<p><strong>[TODO: Liste nicht gerechtfertigte Ziele auf, falls vorhanden]</strong></p>
+<h2 id="7-luckenanalyse">7. Lückenanalyse</h2>
+<h3 id="71-identifizierte-lucken">7.1 Identifizierte Lücken</h3>
+<p><strong>[TODO: Dokumentiere identifizierte Lücken in der Abdeckung]</strong></p>
+<p>Beispiel:
+- <strong>Lücke 1:</strong> Bedrohung T.XXX ist nicht durch Sicherheitsziele abgedeckt
+  - <strong>Auswirkung:</strong> [Beschreibung]
+  - <strong>Empfohlene Maßnahme:</strong> Ergänze Sicherheitsziel O.XXX</p>
+<ul>
+<li><strong>Lücke 2:</strong> Sicherheitsziel O.YYY ist nicht durch Bedrohungen/OSPs gerechtfertigt</li>
+<li><strong>Auswirkung:</strong> [Beschreibung]</li>
+<li><strong>Empfohlene Maßnahme:</strong> Entferne Ziel oder identifiziere rechtfertigende Bedrohung</li>
+</ul>
+<p><strong>Aktueller Status:</strong> Keine Lücken identifiziert ✓</p>
+<h3 id="72-redundanzen-und-uberlappungen">7.2 Redundanzen und Überlappungen</h3>
+<p><strong>[TODO: Dokumentiere Redundanzen zwischen Sicherheitszielen]</strong></p>
+<p>Beispiel:
+- <strong>Überlappung 1:</strong> O.XXX und O.YYY adressieren beide T.ZZZ
+  - <strong>Analyse:</strong> [Ist dies beabsichtigt? Defense-in-Depth?]
+  - <strong>Empfehlung:</strong> [Konsolidieren oder beibehalten]</p>
+<p><strong>Aktueller Status:</strong> Überlappungen sind beabsichtigt (Defense-in-Depth) ✓</p>
+<h2 id="8-anderungsmanagement">8. Änderungsmanagement</h2>
+<h3 id="81-auswirkungsanalyse-bei-anderungen">8.1 Auswirkungsanalyse bei Änderungen</h3>
+<p>Wenn Änderungen an der Sicherheitsproblem-Definition oder den Sicherheitszielen vorgenommen werden, muss die Coverage Matrix aktualisiert werden:</p>
+<p><strong>Bei Hinzufügen einer neuen Bedrohung:</strong>
+1. Füge Zeile in Matrix 2 hinzu
+2. Identifiziere adressierende Sicherheitsziele
+3. Falls keine Ziele vorhanden: Erstelle neues Sicherheitsziel
+4. Aktualisiere Vollständigkeitsanalyse</p>
+<p><strong>Bei Hinzufügen eines neuen Sicherheitsziels:</strong>
+1. Füge Spalte in Matrix 2 und 3 hinzu
+2. Identifiziere adressierte Bedrohungen/OSPs
+3. Falls keine Bedrohungen/OSPs: Prüfe Notwendigkeit des Ziels
+4. Aktualisiere umgekehrte Rückverfolgbarkeit</p>
+<p><strong>Bei Entfernen einer Bedrohung:</strong>
+1. Entferne Zeile aus Matrix 2
+2. Prüfe, ob zugeordnete Sicherheitsziele noch gerechtfertigt sind
+3. Aktualisiere Vollständigkeitsanalyse</p>
+<p><strong>Bei Entfernen eines Sicherheitsziels:</strong>
+1. Entferne Spalte aus Matrizen
+2. Prüfe, ob alle Bedrohungen/OSPs noch abgedeckt sind
+3. Falls nicht: Identifiziere alternatives Ziel oder erstelle neues Ziel</p>
+<h3 id="82-anderungshistorie">8.2 Änderungshistorie</h3>
+<table>
+<thead>
+<tr>
+<th>Datum</th>
+<th>Änderung</th>
+<th>Auswirkung</th>
+<th>Bearbeiter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{{ meta.date }}</td>
+<td>Initiale Version</td>
+<td>-</td>
+<td>{{ meta.owner }}</td>
+</tr>
+<tr>
+<td><strong>[TODO]</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="9-zusammenfassung">9. Zusammenfassung</h2>
+<p>Die Coverage Matrix demonstriert:</p>
+<ol>
+<li><strong>Vollständigkeit:</strong> ✓</li>
+<li>Alle Bedrohungen sind durch Sicherheitsziele abgedeckt</li>
+<li>Alle OSPs sind durch Sicherheitsziele umgesetzt</li>
+<li>
+<p>Alle Annahmen sind durch Umgebungsziele erfüllt</p>
+</li>
+<li>
+<p><strong>Rückverfolgbarkeit:</strong> ✓</p>
+</li>
+<li>Alle Sicherheitsziele sind durch Bedrohungen/OSPs gerechtfertigt</li>
+<li>
+<p>Alle Umgebungsziele sind durch Annahmen gerechtfertigt</p>
+</li>
+<li>
+<p><strong>Konsistenz:</strong> ✓</p>
+</li>
+<li>Keine Lücken in der Abdeckung</li>
+<li>Keine ungerechtfertigten Ziele</li>
+</ol>
+<p>Die Sicherheitsziele bilden eine vollständige und konsistente Grundlage für die Ableitung der Sicherheitsanforderungen (SFRs und SARs).</p>
+<h2 id="10-nachste-schritte">10. Nächste Schritte</h2>
+<p>Nach der Coverage Matrix:
+1. Leite Sicherheitsanforderungen (SFRs) aus den TOE-Sicherheitszielen ab (siehe Template 0400-0450)
+2. Definiere Sicherheitsanforderungen für die Umgebung basierend auf Umgebungszielen
+3. Erstelle Rationale für Sicherheitsanforderungen</p>
+<h2 id="11-referenzen">11. Referenzen</h2>
+<ul>
+<li>ISO/IEC 15408-1: Security Target Evaluation</li>
+<li>ISO/IEC 15408-2: Security Functional Components</li>
+<li>Template 0200-0240: Sicherheitsproblem-Definition</li>
+<li>Template 0300: Sicherheitsziele</li>
+<li>Template 0310: Rationale für Sicherheitsziele</li>
+<li>Template 0400-0450: Sicherheitsanforderungen</li>
+</ul>
+<hr />
+<p><strong>Dokumenthistorie:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Datum</th>
+<th>Autor</th>
+<th>Änderungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{{ meta.version }}</td>
+<td>{{ meta.date }}</td>
+<td>{{ meta.owner }}</td>
+<td>Initiale Version</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0310_Security_Objectives_Rationale.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0330_Security_Objectives_Summary.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

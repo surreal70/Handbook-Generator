@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0210 - APP Hardening Baseline: Webserver / Reverse Proxy (generic)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0210</div>
+            <h1>APP Hardening Baseline: Webserver / Reverse Proxy (generic)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0200_Applications_README.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0220_APP_Nginx_Hardening_Standard.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="app-hardening-baseline-webserver-reverse-proxy-generic">APP Hardening Baseline: Webserver / Reverse Proxy (generic)</h1>
+<p><strong>Document ID:</strong> 0210<br />
+<strong>Document Type:</strong> Standard/Baseline<br />
+<strong>Reference Framework:</strong> CIS Controls v8 (Hardening Program; no benchmark texts)<br />
+<strong>Owner:</strong> [TODO]<br />
+<strong>Version:</strong> 0.1 (Draft)<br />
+<strong>Status:</strong> Draft / In Review / Approved<br />
+<strong>Classification:</strong> Internal / Confidential / Strictly Confidential<br />
+<strong>Last Updated:</strong> 2026-01-31<br />
+<strong>Next Review:</strong> [TODO]</p>
+<hr />
+<blockquote>
+<p><strong>Note:</strong> Template. Replace all <code>[TODO]</code> placeholders and remove non-applicable sections.<br />
+<strong>Important:</strong> This template does not paraphrase CIS original texts. Use it to derive and demonstrably implement <strong>internal baselines/standards</strong>.</p>
+</blockquote>
+<h2 id="1-purpose">1. Purpose</h2>
+<p>[TODO] (e.g., attack surface reduction, uniform baseline, auditability)</p>
+<h2 id="2-scope">2. Scope</h2>
+<ul>
+<li>Target platform(s): [TODO]</li>
+<li>Versions/editions: [TODO]</li>
+<li>Environments: Prod / Test / Dev / End-user</li>
+<li>Exceptions: only via exception process (<code>0040_Exceptions_Risk_Acceptance.md</code>)</li>
+</ul>
+<h2 id="3-target-state-and-principles">3. Target State and Principles</h2>
+<ul>
+<li>Default-deny where appropriate (e.g., inbound firewall): [TODO]</li>
+<li>Least privilege / role-based admin: [TODO]</li>
+<li>Secure by default (new systems are compliant): [TODO]</li>
+<li>Automation preferred (IaC/config mgmt): [TODO]</li>
+</ul>
+<h2 id="4-cis-control-mapping">4. CIS Control Mapping</h2>
+<blockquote>
+<p>Enter the relevant CIS Controls/Safeguards that support this baseline.
+| CIS Control | Safeguard/Intent (brief) | Baseline Requirement | Evidence |
+|---|---|---|---|
+| [TODO] | [TODO] | [TODO] | [TODO] |</p>
+</blockquote>
+<h2 id="5-baseline-requirements-must">5. Baseline Requirements (MUST)</h2>
+<blockquote>
+<p>Formulate auditable requirements (not "should"), including responsibility and measurement criteria.
+| Area | Requirement (MUST) | Default Value/Target | Responsible | Verification |
+|---|---|---|---|---|
+| Accounts | [TODO] | [TODO] | [TODO] | [TODO] |
+| Network | [TODO] | [TODO] | [TODO] | [TODO] |
+| Updates | [TODO] | [TODO] | [TODO] | [TODO] |
+| Logging | [TODO] | [TODO] | [TODO] | [TODO] |
+| Services | [TODO] | [TODO] | [TODO] | [TODO] |</p>
+</blockquote>
+<h2 id="6-recommendations-should">6. Recommendations (SHOULD)</h2>
+<ul>
+<li>[TODO]</li>
+<li>[TODO]</li>
+</ul>
+<h2 id="7-implementation">7. Implementation</h2>
+<h3 id="71-implementation-method">7.1 Implementation Method</h3>
+<ul>
+<li>Manual / GPO / MDM / Ansible / SCCM / Puppet / Chef / IaC: [TODO]</li>
+<li>Rollout strategy (pilot, stages, waves): [TODO]</li>
+</ul>
+<h3 id="72-step-sequence-high-level">7.2 Step Sequence (High-Level)</h3>
+<ol>
+<li>Define baseline parameters (parameter file): [TODO]</li>
+<li>Define and test pilot group: [TODO]</li>
+<li>Rollout with change management: [TODO]</li>
+<li>Activate continuous compliance verification: [TODO]</li>
+</ol>
+<h2 id="8-validation-and-testing">8. Validation and Testing</h2>
+<ul>
+<li>Smoke tests: [TODO]</li>
+<li>Regression tests: [TODO]</li>
+<li>Security tests (scan/config audit): [TODO]</li>
+<li>Acceptance criteria: [TODO]</li>
+</ul>
+<h2 id="9-monitoring-and-compliance">9. Monitoring and Compliance</h2>
+<ul>
+<li>Config drift detection: [TODO]</li>
+<li>Reporting (KPIs): [TODO]</li>
+<li>Remediation (auto-fix / ticket): [TODO]</li>
+</ul>
+<h2 id="10-exceptions">10. Exceptions</h2>
+<ul>
+<li>Reference: <code>0040_Exceptions_Risk_Acceptance.md</code></li>
+<li>Document temporary deviations: [TODO]</li>
+</ul>
+<h2 id="11-appendices">11. Appendices</h2>
+<ul>
+<li>Parameter list/example values: [TODO]</li>
+<li>Checklist: see <code>0410_Appendix_Checklists_and_Evidence.md</code></li>
+</ul>
+<h2 id="12-webserver-specific-areas-examples">12. Webserver-Specific Areas (Examples)</h2>
+<ul>
+<li>TLS configuration (protocols/ciphers): [TODO]</li>
+<li>Security headers (HSTS, CSP, etc.): [TODO]</li>
+<li>Request limits / rate limiting: [TODO]</li>
+<li>Logging (access/error + correlation IDs): [TODO]</li>
+<li>Admin interfaces not public: [TODO]</li>
+<li>WAF/reverse proxy integration: [TODO]</li>
+</ul>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0200_Applications_README.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0220_APP_Nginx_Hardening_Standard.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0410 - DPIA Template</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0410</div>
+            <h1>DPIA Template</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0400_Data_Protection_Impact_Assessment_DPIA.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0500_Data_Transfers_to_Third_Countries.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="dpia-template">DPIA Template</h1>
+<p><strong>Document-ID:</strong> 0410<br />
+<strong>Owner:</strong> {{ meta.owner }}<br />
+<strong>Version:</strong> {{ meta.version }}<br />
+<strong>Status:</strong> Draft<br />
+<strong>Classification:</strong> Internal<br />
+<strong>Last Update:</strong> {{ meta.date }}  </p>
+<hr />
+<h2 id="dpia-identification">DPIA Identification</h2>
+<p><strong>DPIA-ID:</strong> [TODO: e.g., DPIA-2024-001]<br />
+<strong>Processing:</strong> [TODO: Name of processing]<br />
+<strong>Controller:</strong> [TODO: Name, Department]<br />
+<strong>Created on:</strong> [TODO: Date]<br />
+<strong>Created by:</strong> [TODO: Name, Role]<br />
+<strong>Status:</strong> Draft / Under Review / Approved</p>
+<hr />
+<h2 id="1-description-of-processing">1. Description of Processing</h2>
+<h3 id="11-purposes-of-processing">1.1 Purposes of Processing</h3>
+<p><strong>Main Purpose:</strong>
+[TODO: Describe the main purpose of processing]</p>
+<p><strong>Further Purposes:</strong>
+- [TODO: Purpose 1]
+- [TODO: Purpose 2]</p>
+<h3 id="12-categories-of-personal-data">1.2 Categories of Personal Data</h3>
+<table>
+<thead>
+<tr>
+<th>Data Category</th>
+<th>Examples</th>
+<th>Special Category (Art. 9)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: e.g., Master Data]</td>
+<td>[TODO: Name, Address, Date of birth]</td>
+<td>No</td>
+</tr>
+<tr>
+<td>[TODO: e.g., Contact Data]</td>
+<td>[TODO: Email, Phone]</td>
+<td>No</td>
+</tr>
+<tr>
+<td>[TODO: e.g., Health Data]</td>
+<td>[TODO: Diagnoses, Treatments]</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Estimated Data Volume:</strong> [TODO: e.g., 10,000 records]</p>
+<h3 id="13-categories-of-data-subjects">1.3 Categories of Data Subjects</h3>
+<ul>
+<li>[TODO: e.g., Customers]</li>
+<li>[TODO: e.g., Employees]</li>
+<li>[TODO: e.g., Patients]</li>
+</ul>
+<p><strong>Estimated Number:</strong> [TODO: e.g., 5,000 persons]</p>
+<p><strong>Vulnerable Groups:</strong> [TODO: e.g., Children, Patients - Yes/No]</p>
+<h3 id="14-recipients-of-data">1.4 Recipients of Data</h3>
+<p><strong>Internal Recipients:</strong>
+- [TODO: e.g., Sales, Accounting]</p>
+<p><strong>External Recipients:</strong>
+- [TODO: e.g., Payment service providers]</p>
+<p><strong>Processors:</strong>
+- [TODO: e.g., Cloud providers, IT service providers]</p>
+<p><strong>Third Country Transfer:</strong> [TODO: Yes/No - if Yes, which countries]</p>
+<h3 id="15-storage-duration">1.5 Storage Duration</h3>
+<p><strong>Standard Case:</strong> [TODO: e.g., 3 years after contract end]<br />
+<strong>Legal Retention Obligations:</strong> [TODO: e.g., 10 years commercial law]<br />
+<strong>Erasure Concept:</strong> [TODO: Reference to document or description]</p>
+<h3 id="16-functional-description">1.6 Functional Description</h3>
+<p>[TODO: Describe processing in detail:
+- How is data collected?
+- How is data processed?
+- Which systems are involved?
+- Which technologies are used?
+- Are there automated decisions?
+- Is there profiling?]</p>
+<h3 id="17-data-flow-diagram">1.7 Data Flow Diagram</h3>
+<p>[TODO: Insert diagram visualizing data flow]</p>
+<div class="codehilite"><pre><span></span><code><span class="p">[</span><span class="n">Data</span><span class="w"> </span><span class="n">Source</span><span class="p">]</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="p">[</span><span class="n">Processing</span><span class="w"> </span><span class="n">System</span><span class="p">]</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="p">[</span><span class="n">Storage</span><span class="p">]</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="p">[</span><span class="n">Recipient</span><span class="p">]</span>
+</code></pre></div>
+
+<hr />
+<h2 id="2-necessity-and-proportionality">2. Necessity and Proportionality</h2>
+<h3 id="21-legal-basis">2.1 Legal Basis</h3>
+<p><strong>Legal Basis:</strong> [TODO: Art. 6(1) lit. a/b/c/d/e/f]</p>
+<p><strong>Justification:</strong>
+[TODO: Explain why this legal basis is applicable]</p>
+<p><strong>For Special Categories (Art. 9):</strong>
+<strong>Legal Basis:</strong> [TODO: Art. 9(2) lit. a-j]</p>
+<h3 id="22-necessity">2.2 Necessity</h3>
+<p><strong>Is processing necessary to achieve purpose?</strong>
+[TODO: Yes/No - Justification]</p>
+<p><strong>Are there less invasive alternatives?</strong>
+[TODO: Yes/No - if Yes, why are they not used?]</p>
+<h3 id="23-proportionality">2.3 Proportionality</h3>
+<p><strong>Are means appropriate?</strong>
+[TODO: Assessment of proportionality]</p>
+<p><strong>Data Protection Principles (Art. 5):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Principle</th>
+<th>Compliance</th>
+<th>Justification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lawfulness, Fairness, Transparency</td>
+<td>Yes/No</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Purpose Limitation</td>
+<td>Yes/No</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Data Minimization</td>
+<td>Yes/No</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Accuracy</td>
+<td>Yes/No</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Storage Limitation</td>
+<td>Yes/No</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Integrity and Confidentiality</td>
+<td>Yes/No</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="24-balancing-of-interests-for-art-61f">2.4 Balancing of Interests (for Art. 6(1)(f))</h3>
+<p><strong>Legitimate Interest of Controller:</strong>
+[TODO: Describe legitimate interest]</p>
+<p><strong>Interests of Data Subjects:</strong>
+[TODO: Describe interests and fundamental rights of data subjects]</p>
+<p><strong>Balancing:</strong>
+[TODO: Do controller's interests or data subjects' interests prevail?]</p>
+<hr />
+<h2 id="3-risk-assessment">3. Risk Assessment</h2>
+<h3 id="31-risk-identification">3.1 Risk Identification</h3>
+<p><strong>Identified Risks:</strong></p>
+<h4 id="risk-1-todo-name-of-risk">Risk 1: [TODO: Name of Risk]</h4>
+<p><strong>Description:</strong> [TODO: Detailed description of risk]</p>
+<p><strong>Threat:</strong> [TODO: e.g., Unauthorized access, Data loss, Manipulation]</p>
+<p><strong>Affected Rights and Freedoms:</strong>
+- [TODO: e.g., Right to privacy]
+- [TODO: e.g., Right to data protection]</p>
+<p><strong>Possible Consequences for Data Subjects:</strong>
+- [TODO: e.g., Identity theft]
+- [TODO: e.g., Financial losses]
+- [TODO: e.g., Discrimination]
+- [TODO: e.g., Reputational damage]</p>
+<p><strong>Likelihood:</strong> [TODO: Low / Medium / High]</p>
+<p><strong>Justification of Likelihood:</strong>
+[TODO: Why is likelihood assessed this way?]</p>
+<p><strong>Severity of Impact:</strong> [TODO: Low / Medium / High]</p>
+<p><strong>Justification of Severity:</strong>
+[TODO: Why is severity assessed this way?]</p>
+<p><strong>Risk Level:</strong> [TODO: Calculate from Likelihood × Severity]</p>
+<hr />
+<h4 id="risk-2-todo-name-of-risk">Risk 2: [TODO: Name of Risk]</h4>
+<p>[TODO: Repeat structure for additional risks]</p>
+<hr />
+<h3 id="32-risk-assessment-matrix">3.2 Risk Assessment Matrix</h3>
+<table>
+<thead>
+<tr>
+<th>Risk</th>
+<th>Likelihood</th>
+<th>Severity</th>
+<th>Risk Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Risk 1</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Risk 2</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Overall Risk:</strong> [TODO: Low / Medium / High / Very High]</p>
+<hr />
+<h2 id="4-measures-for-risk-mitigation">4. Measures for Risk Mitigation</h2>
+<h3 id="41-technical-measures">4.1 Technical Measures</h3>
+<h4 id="measure-1-todo-name-of-measure">Measure 1: [TODO: Name of Measure]</h4>
+<p><strong>Description:</strong> [TODO: Detailed description]</p>
+<p><strong>Addressed Risk:</strong> [TODO: Risk 1, Risk 2, ...]</p>
+<p><strong>Effectiveness:</strong> [TODO: High / Medium / Low]</p>
+<p><strong>Implementation Status:</strong> [TODO: Implemented / In Progress / Planned]</p>
+<p><strong>Responsible:</strong> [TODO: Role/Name]</p>
+<p><strong>Deadline:</strong> [TODO: Date]</p>
+<hr />
+<h4 id="measure-2-todo-name-of-measure">Measure 2: [TODO: Name of Measure]</h4>
+<p>[TODO: Repeat structure for additional measures]</p>
+<hr />
+<h3 id="42-organizational-measures">4.2 Organizational Measures</h3>
+<h4 id="measure-1-todo-name-of-measure_1">Measure 1: [TODO: Name of Measure]</h4>
+<p><strong>Description:</strong> [TODO: Detailed description]</p>
+<p><strong>Addressed Risk:</strong> [TODO: Risk 1, Risk 2, ...]</p>
+<p><strong>Effectiveness:</strong> [TODO: High / Medium / Low]</p>
+<p><strong>Implementation Status:</strong> [TODO: Implemented / In Progress / Planned]</p>
+<p><strong>Responsible:</strong> [TODO: Role/Name]</p>
+<p><strong>Deadline:</strong> [TODO: Date]</p>
+<hr />
+<h3 id="43-data-protection-by-design">4.3 Data Protection by Design</h3>
+<p><strong>Implemented Principles:</strong>
+- [ ] Data minimization from the start
+- [ ] Pseudonymization where possible
+- [ ] Encryption as standard
+- [ ] Transparency in processing
+- [ ] User-friendly data protection features</p>
+<p><strong>Description:</strong>
+[TODO: How were Privacy by Design principles implemented?]</p>
+<h3 id="44-data-protection-by-default">4.4 Data Protection by Default</h3>
+<p><strong>Implemented Principles:</strong>
+- [ ] Only necessary data processed by default
+- [ ] Minimal storage duration as default
+- [ ] Restricted access as default
+- [ ] Opt-in instead of opt-out</p>
+<p><strong>Description:</strong>
+[TODO: How were Privacy by Default principles implemented?]</p>
+<hr />
+<h2 id="5-residual-risk-assessment">5. Residual Risk Assessment</h2>
+<h3 id="51-risks-after-measures">5.1 Risks After Measures</h3>
+<table>
+<thead>
+<tr>
+<th>Risk</th>
+<th>Original Risk Level</th>
+<th>Measures</th>
+<th>Residual Risk</th>
+<th>Acceptable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Risk 1</td>
+<td>[TODO: High]</td>
+<td>[TODO: Measures 1, 2]</td>
+<td>[TODO: Medium]</td>
+<td>Yes/No</td>
+</tr>
+<tr>
+<td>Risk 2</td>
+<td>[TODO: Medium]</td>
+<td>[TODO: Measure 3]</td>
+<td>[TODO: Low]</td>
+<td>Yes/No</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-overall-assessment">5.2 Overall Assessment</h3>
+<p><strong>Residual Risk After Measures:</strong> [TODO: Low / Medium / High]</p>
+<p><strong>Is residual risk acceptable?</strong> [TODO: Yes / No]</p>
+<p><strong>Justification:</strong>
+[TODO: Why is residual risk acceptable or not acceptable?]</p>
+<hr />
+<h2 id="6-consultation-of-data-protection-officer">6. Consultation of Data Protection Officer</h2>
+<p><strong>Data Protection Officer:</strong> [TODO: Name]</p>
+<p><strong>Consultation Date:</strong> [TODO: Date]</p>
+<p><strong>Opinion:</strong>
+[TODO: Summary of Data Protection Officer's recommendations]</p>
+<p><strong>Consideration of Recommendations:</strong>
+[TODO: How were recommendations implemented?]</p>
+<p><strong>Signature Data Protection Officer:</strong> <strong><em>_</em></strong><strong><em>_</em></strong>_____</p>
+<hr />
+<h2 id="7-seeking-views-of-data-subjects">7. Seeking Views of Data Subjects</h2>
+<p><strong>Were views of data subjects sought?</strong> [TODO: Yes / No]</p>
+<p><strong>If Yes:</strong></p>
+<p><strong>Method:</strong> [TODO: e.g., Survey, Focus group, Consultation]</p>
+<p><strong>Date:</strong> [TODO: Date]</p>
+<p><strong>Results:</strong>
+[TODO: Summary of views and concerns]</p>
+<p><strong>Consideration:</strong>
+[TODO: How were views considered?]</p>
+<hr />
+<h2 id="8-prior-consultation-with-supervisory-authority">8. Prior Consultation with Supervisory Authority</h2>
+<p><strong>Is consultation with supervisory authority required?</strong> [TODO: Yes / No]</p>
+<p><strong>Justification:</strong>
+[TODO: Why is/isn't consultation required?]</p>
+<p><strong>If Yes:</strong></p>
+<p><strong>Request Date:</strong> [TODO: Date]</p>
+<p><strong>Supervisory Authority Opinion:</strong>
+[TODO: Summary of opinion]</p>
+<p><strong>Implementation of Recommendations:</strong>
+[TODO: How were recommendations implemented?]</p>
+<hr />
+<h2 id="9-approval">9. Approval</h2>
+<p><strong>Controller:</strong> [TODO: Name, Role]</p>
+<p><strong>Date:</strong> [TODO: Date]</p>
+<p><strong>Decision:</strong> [ ] Approved [ ] Approved with Conditions [ ] Rejected</p>
+<p><strong>Conditions (if applicable):</strong>
+[TODO: List of conditions]</p>
+<p><strong>Signature:</strong> <strong><em>_</em></strong><strong><em>_</em></strong>_____</p>
+<hr />
+<h2 id="10-review-and-update">10. Review and Update</h2>
+<p><strong>Next Review Planned:</strong> [TODO: Date]</p>
+<p><strong>Review Triggers:</strong>
+- [ ] Annual review
+- [ ] Change in processing
+- [ ] New technologies
+- [ ] Security incident
+- [ ] New insights about risks</p>
+<h3 id="change-history">Change History</h3>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Change</th>
+<th>Changed By</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>[TODO]</td>
+<td>Initial version</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>1.1</td>
+<td>[TODO]</td>
+<td>[TODO: Description]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="appendices">Appendices</h2>
+<ul>
+<li>[ ] Data flow diagrams</li>
+<li>[ ] TOM documentation</li>
+<li>[ ] Processor agreements</li>
+<li>[ ] Consent forms</li>
+<li>[ ] Other relevant documents</li>
+</ul>
+<hr />
+<p><strong>Note:</strong> This DPIA is a living document and must be updated upon changes in processing or new insights about risks.</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0400_Data_Protection_Impact_Assessment_DPIA.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0500_Data_Transfers_to_Third_Countries.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

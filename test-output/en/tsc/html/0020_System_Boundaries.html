@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0020 - System Boundaries and Interfaces</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0020</div>
+            <h1>System Boundaries and Interfaces</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0010_System_Description.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0030_System_Components.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="system-boundaries-and-interfaces">System Boundaries and Interfaces</h1>
+<p><strong>Document ID:</strong> TSC-0020<br />
+<strong>Organization:</strong> AdminSend GmbH<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Approved by:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Draft / In Review / Approved<br />
+<strong>Classification:</strong> internal<br />
+<strong>Last Updated:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This document defines the boundaries of the service system and documents all interfaces to external systems and organizations.</p>
+<h2 id="2-system-boundaries">2. System Boundaries</h2>
+<h3 id="21-in-scope-components">2.1 In-Scope Components</h3>
+<p><strong>Infrastructure:</strong>
+- [TODO: Production servers]
+- [TODO: Database servers]
+- [TODO: Network components]
+- [TODO: Security appliances]</p>
+<p><strong>Applications:</strong>
+- [TODO: Main application]
+- [TODO: API services]
+- [TODO: Admin portal]</p>
+<p><strong>Processes:</strong>
+- [TODO: Change management]
+- [TODO: Incident management]
+- [TODO: Access management]</p>
+<p><strong>Personnel:</strong>
+- [TODO: Operations team]
+- [TODO: Security team]
+- [TODO: Development team]</p>
+<h3 id="22-out-of-scope-components">2.2 Out-of-Scope Components</h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Justification</th>
+<th>Alternative Control</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: HR System]</td>
+<td>No customer data</td>
+<td>Separate security controls</td>
+</tr>
+<tr>
+<td>[TODO: Dev Environment]</td>
+<td>No production data</td>
+<td>Isolated environment</td>
+</tr>
+<tr>
+<td>[TODO: Marketing Tools]</td>
+<td>No direct service relation</td>
+<td>Standard IT controls</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-external-interfaces">3. External Interfaces</h2>
+<h3 id="31-customer-interfaces">3.1 Customer Interfaces</h3>
+<p><strong>User Interfaces:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Interface</th>
+<th>Type</th>
+<th>Access Method</th>
+<th>Security</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Web Portal]</td>
+<td>HTTPS</td>
+<td>Browser</td>
+<td>TLS 1.2+, MFA</td>
+</tr>
+<tr>
+<td>[TODO: Mobile App]</td>
+<td>HTTPS</td>
+<td>Native App</td>
+<td>TLS 1.2+, Certificate Pinning</td>
+</tr>
+<tr>
+<td>[TODO: API]</td>
+<td>REST API</td>
+<td>HTTP Client</td>
+<td>OAuth 2.0, API Keys</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-subservice-organization-interfaces">3.2 Subservice Organization Interfaces</h3>
+<table>
+<thead>
+<tr>
+<th>Subservice Org</th>
+<th>Interface Type</th>
+<th>Purpose</th>
+<th>Security Controls</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Cloud Provider]</td>
+<td>API</td>
+<td>Infrastructure</td>
+<td>IAM, Encryption</td>
+</tr>
+<tr>
+<td>[TODO: Email Service]</td>
+<td>SMTP/API</td>
+<td>Notifications</td>
+<td>TLS, API Keys</td>
+</tr>
+<tr>
+<td>[TODO: Payment Gateway]</td>
+<td>REST API</td>
+<td>Payments</td>
+<td>TLS, Tokenization</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-data-flows-across-boundaries">4. Data Flows Across Boundaries</h2>
+<h3 id="41-inbound-data-flows">4.1 Inbound Data Flows</h3>
+<table>
+<thead>
+<tr>
+<th>Data Flow</th>
+<th>Source</th>
+<th>Destination</th>
+<th>Data Type</th>
+<th>Security</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: User Input]</td>
+<td>Customer Browser</td>
+<td>Web Application</td>
+<td>Form Data</td>
+<td>TLS 1.2+, Input Validation</td>
+</tr>
+<tr>
+<td>[TODO: API Requests]</td>
+<td>Customer System</td>
+<td>API Gateway</td>
+<td>JSON</td>
+<td>OAuth 2.0, Rate Limiting</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-outbound-data-flows">4.2 Outbound Data Flows</h3>
+<table>
+<thead>
+<tr>
+<th>Data Flow</th>
+<th>Source</th>
+<th>Destination</th>
+<th>Data Type</th>
+<th>Security</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: API Response]</td>
+<td>Application</td>
+<td>Customer System</td>
+<td>JSON</td>
+<td>TLS 1.2+, Data Filtering</td>
+</tr>
+<tr>
+<td>[TODO: Email Notifications]</td>
+<td>Application</td>
+<td>Customer Email</td>
+<td>Email</td>
+<td>TLS, SPF/DKIM</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-trust-boundaries">5. Trust Boundaries</h2>
+<h3 id="51-external-trust-boundary">5.1 External Trust Boundary</h3>
+<p><strong>Internet-facing Components:</strong>
+- Web Application (DMZ)
+- API Gateway (DMZ)
+- Load Balancer (DMZ)</p>
+<p><strong>Security Controls:</strong>
+- Web Application Firewall (WAF)
+- DDoS Protection
+- Rate Limiting
+- Input Validation</p>
+<h3 id="52-internal-trust-boundaries">5.2 Internal Trust Boundaries</h3>
+<p><strong>Production vs. Non-Production:</strong>
+- Separate networks
+- No direct connectivity
+- Controlled data migration</p>
+<h2 id="6-complementary-user-entity-controls-cuec">6. Complementary User Entity Controls (CUEC)</h2>
+<h3 id="61-customer-responsibilities">6.1 Customer Responsibilities</h3>
+<p><strong>Access Management:</strong>
+- Customers must implement strong authentication
+- Customers must regularly review user access
+- Customers must promptly remove access for terminated users</p>
+<p><strong>Data Protection:</strong>
+- Customers must classify their data appropriately
+- Customers must configure access controls
+- Customers must encrypt sensitive data before upload (if applicable)</p>
+<hr />
+<p><strong>Document History:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Initial creation</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0010_System_Description.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0030_System_Components.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

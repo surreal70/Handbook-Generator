@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0300 - Einrichtungszugangskontrollen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0300</div>
+            <h1>Einrichtungszugangskontrollen</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0110_Mitarbeitersicherheit.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0310_Arbeitsplatznutzung_und_Sicherheit.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="einrichtungszugangskontrollen">Einrichtungszugangskontrollen</h1>
+<p><strong>Dokument-ID:</strong> HIPAA-0300<br />
+<strong>Organisation:</strong> AdminSend GmbH<br />
+<strong>Verantwortlich:</strong> IT Operations Manager<br />
+<strong>Genehmigt durch:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Entwurf / In Prüfung / Genehmigt<br />
+<strong>Klassifizierung:</strong> internal<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-zweck">1. Zweck</h2>
+<p>Dieses Dokument beschreibt die Einrichtungszugangskontrollen für AdminSend GmbH, um den physischen Zugang zu elektronischen Informationssystemen und den Einrichtungen, in denen sie untergebracht sind, zu begrenzen und gleichzeitig ordnungsgemäß autorisierten Zugang zu ermöglichen.</p>
+<h3 id="11-hipaa-anforderung">1.1 HIPAA-Anforderung</h3>
+<p><strong>Standard:</strong> §164.310(a)(1) - Facility Access Controls (Erforderlich)</p>
+<p><strong>Implementierungsspezifikationen:</strong>
+- §164.310(a)(2)(i) - Notfallbetrieb (Adressierbar)
+- §164.310(a)(2)(ii) - Einrichtungssicherheitsplan (Adressierbar)
+- §164.310(a)(2)(iii) - Zugriffskontroll- und Validierungsverfahren (Adressierbar)
+- §164.310(a)(2)(iv) - Wartungsaufzeichnungen (Adressierbar)</p>
+<h2 id="2-einrichtungsinventar">2. Einrichtungsinventar</h2>
+<h3 id="21-einrichtungen-mit-ephi">2.1 Einrichtungen mit ePHI</h3>
+<table>
+<thead>
+<tr>
+<th>Einrichtungs-ID</th>
+<th>Einrichtungsname</th>
+<th>Adresse</th>
+<th>Typ</th>
+<th>ePHI-Systeme</th>
+<th>Zugriffsstufe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: FAC-001]</td>
+<td>Hauptrechenzentrum</td>
+<td>[TODO: Adresse]</td>
+<td>Rechenzentrum</td>
+<td>Alle Produktionssysteme</td>
+<td>Eingeschränkt</td>
+</tr>
+<tr>
+<td>[TODO: FAC-002]</td>
+<td>Hauptklinik</td>
+<td>[TODO: Adresse]</td>
+<td>Klinisch</td>
+<td>EHR-Workstations</td>
+<td>Kontrolliert</td>
+</tr>
+<tr>
+<td>[TODO: FAC-003]</td>
+<td>Verwaltungsbüro</td>
+<td>[TODO: Adresse]</td>
+<td>Büro</td>
+<td>Abrechnungssysteme</td>
+<td>Kontrolliert</td>
+</tr>
+<tr>
+<td>[TODO: FAC-004]</td>
+<td>Backup-Standort</td>
+<td>[TODO: Adresse]</td>
+<td>DR-Standort</td>
+<td>Backup-Systeme</td>
+<td>Eingeschränkt</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-einrichtungsklassifizierung">2.2 Einrichtungsklassifizierung</h3>
+<p><strong>Eingeschränkter Zugang:</strong>
+- Rechenzentren
+- Serverräume
+- Netzwerkgeräteräume
+- Backup-Speicherbereiche</p>
+<p><strong>Kontrollierter Zugang:</strong>
+- Klinische Bereiche
+- Verwaltungsbüros
+- Patientenaktenräume</p>
+<p><strong>Öffentlicher Zugang:</strong>
+- Wartezimmer
+- Öffentliche Korridore
+- Cafeteria</p>
+<h2 id="3-notfallbetrieb">3. Notfallbetrieb</h2>
+<h3 id="31-notfallzugangsverfahren">3.1 Notfallzugangsverfahren</h3>
+<p><strong>Zweck:</strong> Verfahren festlegen, um Einrichtungszugang zur Unterstützung der Wiederherstellung verlorener Daten im Rahmen des Disaster-Recovery- und Notfallbetriebsplans zu ermöglichen.</p>
+<p><strong>Notfallszenarien:</strong>
+- Feuer oder Naturkatastrophe
+- Stromausfall
+- Systemausfall, der sofortigen Zugang erfordert
+- Sicherheitsvorfall, der Untersuchung erfordert</p>
+<p><strong>Notfallzugangsprozess:</strong>
+1. <strong>Autorisierung:</strong> Security Officer oder Beauftragter autorisiert Notfallzugang
+2. <strong>Begleitung:</strong> Notfallpersonal wird von autorisiertem Personal begleitet
+3. <strong>Dokumentation:</strong> Aller Notfallzugang wird protokolliert
+4. <strong>Wiederherstellung:</strong> Normale Zugangskontrollen nach Notfall wiederhergestellt
+5. <strong>Überprüfung:</strong> Nachträgliche Überprüfung des Notfallzugangs</p>
+<p><strong>Notfallkontakte:</strong>
+| Rolle | Name | Telefon (24/7) | Backup |
+|-------|------|----------------|--------|
+| Security Officer | {{ meta.roles.security_officer.name }} | [TODO: Telefon] | [TODO: Backup-Name/Telefon] |
+| Facility Manager | [TODO: Name] | [TODO: Telefon] | [TODO: Backup] |
+| IT Manager | [TODO: Name] | [TODO: Telefon] | [TODO: Backup] |</p>
+<h3 id="32-notfallzugangsausrustung">3.2 Notfallzugangsausrüstung</h3>
+<p><strong>Notfallzugangswerkzeuge:</strong>
+- Hauptschlüssel (gesichert in Notfallbox)
+- Zugangskarten (Notfall-Override)
+- Schlossumgehungswerkzeuge (nur autorisiertes Personal)
+- Notbeleuchtung
+- Kommunikationsgeräte</p>
+<p><strong>Speicherort:</strong> [TODO: Sicherer Ort mit dokumentiertem Zugang]</p>
+<h2 id="4-einrichtungssicherheitsplan">4. Einrichtungssicherheitsplan</h2>
+<h3 id="41-physische-sicherheitsmanahmen">4.1 Physische Sicherheitsmaßnahmen</h3>
+<p><strong>Perimetersicherheit:</strong>
+- Zaun: [TODO: Ja/Nein, Beschreibung]
+- Tore: [TODO: Ja/Nein, Beschreibung]
+- Beleuchtung: [TODO: Beschreibung]
+- Beschilderung: [TODO: "Nur autorisiertes Personal"-Schilder]
+- Landschaftsgestaltung: [TODO: Klare Sichtlinien]</p>
+<p><strong>Gebäudesicherheit:</strong>
+- Außentüren: [TODO: Anzahl, Schließmechanismen]
+- Fenster: [TODO: Sicherheitsmaßnahmen]
+- Ladedocks: [TODO: Sicherheitsmaßnahmen]
+- Dachzugang: [TODO: Sicherheitsmaßnahmen]</p>
+<p><strong>Innensicherheit:</strong>
+- Empfang/Sicherheitsschalter: [TODO: Ja/Nein, Öffnungszeiten]
+- Sicherheitspersonal: [TODO: Ja/Nein, Zeitplan]
+- Besucherverwaltung: [TODO: System/Prozess]
+- Begleitanforderungen: [TODO: Bereiche, die Begleitung erfordern]</p>
+<p><strong>Rechenzentrum/Serverraum-Sicherheit:</strong>
+- Dedizierter Raum: [TODO: Ja/Nein]
+- Verstärkte Wände: [TODO: Ja/Nein]
+- Doppelboden: [TODO: Ja/Nein]
+- Brandbekämpfung: [TODO: Typ]
+- Umgebungsüberwachung: [TODO: Temperatur, Luftfeuchtigkeit]
+- Wassererkennung: [TODO: Ja/Nein]
+- Notstromversorgung: [TODO: USV, Generator]</p>
+<h3 id="42-zugriffskontrollsysteme">4.2 Zugriffskontrollsysteme</h3>
+<p><strong>Physisches Zugriffskontrollsystem:</strong>
+- <strong>Systemtyp:</strong> [TODO: Kartenleser, biometrisch, Tastenfeld]
+- <strong>Anbieter:</strong> [TODO: Anbietername]
+- <strong>Abdeckung:</strong> [TODO: Abgedeckte Türen/Bereiche]
+- <strong>Überwachung:</strong> [TODO: 24/7-Überwachung, Alarme]</p>
+<p><strong>Zugriffskontrollfunktionen:</strong>
+- Individuelle Identifikation
+- Zeitbasierte Zugriffsbeschränkungen
+- Bereichsbasierte Zugriffsbeschränkungen
+- Anti-Passback
+- Audit-Protokollierung
+- Echtzeitalarme</p>
+<p><strong>Zugangskartenverwaltung:</strong>
+- Kartenausgabeprozess
+- Kartendeaktivierungsprozess
+- Verfahren bei verlorenen/gestohlenen Karten
+- Kartenrückgabe bei Kündigung</p>
+<h3 id="43-uberwachungssysteme">4.3 Überwachungssysteme</h3>
+<p><strong>Videoüberwachung:</strong>
+- <strong>Abdeckung:</strong> [TODO: Eingänge, Ausgänge, Serverräume usw.]
+- <strong>Kameratyp:</strong> [TODO: Fest, PTZ, Auflösung]
+- <strong>Aufzeichnung:</strong> [TODO: Kontinuierlich, bewegungsaktiviert]
+- <strong>Aufbewahrung:</strong> [TODO: Tage/Monate]
+- <strong>Überwachung:</strong> [TODO: Live-Überwachung, Überprüfungszeitplan]</p>
+<p><strong>Überwachungsstandorte:</strong>
+| Standort | Kameraanzahl | Aufzeichnung | Aufbewahrung | Zweck |
+|----------|--------------|--------------|--------------|-------|
+| [TODO: Haupteingang] | [TODO: 2] | Kontinuierlich | [TODO: 90 Tage] | Zugangsüberwachung |
+| [TODO: Serverraum] | [TODO: 1] | Kontinuierlich | [TODO: 90 Tage] | Sicherheitsüberwachung |
+| [TODO: Parkplatz] | [TODO: 4] | Bewegung | [TODO: 30 Tage] | Perimetersicherheit |</p>
+<h2 id="5-zugriffskontroll-und-validierungsverfahren">5. Zugriffskontroll- und Validierungsverfahren</h2>
+<h3 id="51-zugriffsautorisierung">5.1 Zugriffsautorisierung</h3>
+<p><strong>Autorisierungsprozess:</strong>
+1. <strong>Anfrage:</strong> Manager reicht Zugriffsanfrage ein
+2. <strong>Begründung:</strong> Geschäftlicher Bedarf dokumentiert
+3. <strong>Genehmigung:</strong> Security Officer genehmigt
+4. <strong>Bereitstellung:</strong> Facility Manager stellt Zugriff bereit
+5. <strong>Dokumentation:</strong> Zugriff im System protokolliert
+6. <strong>Benachrichtigung:</strong> Mitarbeiter über gewährten Zugriff benachrichtigt</p>
+<p><strong>Zugriffsstufen:</strong>
+| Stufe | Beschreibung | Erforderliche Autorisierung | Zugängliche Bereiche |
+|-------|--------------|----------------------------|----------------------|
+| Stufe 1 - Öffentlich | Allgemeine Öffentlichkeit | Keine | Wartebereiche, öffentliche Korridore |
+| Stufe 2 - Mitarbeiter | Reguläre Mitarbeiter | Manager-Genehmigung | Bürobereiche, Pausenräume |
+| Stufe 3 - Klinisch | Klinisches Personal | Manager + Privacy Officer | Klinische Bereiche, Patientenakten |
+| Stufe 4 - IT | IT-Personal | IT-Manager + Security Officer | Serverräume, Netzwerkschränke |
+| Stufe 5 - Führungsebene | Führungszugang | CEO-Genehmigung | Alle Bereiche |</p>
+<h3 id="52-besucherverwaltung">5.2 Besucherverwaltung</h3>
+<p><strong>Besucherverfahren:</strong>
+1. <strong>Check-in:</strong> Besucher meldet sich am Empfang an
+2. <strong>Identifikation:</strong> Lichtbildausweis erforderlich und aufgezeichnet
+3. <strong>Ausweis:</strong> Besucherausweis ausgestellt
+4. <strong>Begleitung:</strong> Besucher wird in eingeschränkten Bereichen jederzeit begleitet
+5. <strong>Protokoll:</strong> Besuch protokolliert (Name, Firma, Zweck, Zeit ein/aus, Gastgeber)
+6. <strong>Check-out:</strong> Besucher gibt Ausweis zurück und meldet sich ab</p>
+<p><strong>Besuchertypen:</strong>
+- Lieferanten/Auftragnehmer
+- Business Associates
+- Auditoren
+- Gäste
+- Lieferpersonal</p>
+<p><strong>Besucherausweis:</strong> Deutlich mit "BESUCHER" gekennzeichneter Ausweis, andere Farbe als Mitarbeiterausweise</p>
+<h3 id="53-zugriffvalidierung">5.3 Zugriffvalidierung</h3>
+<p><strong>Zugriffsüberprüfungsprozess:</strong>
+- <strong>Häufigkeit:</strong> Vierteljährlich
+- <strong>Prüfer:</strong> Facility Manager + Security Officer
+- <strong>Umfang:</strong> Alle aktiven Zugriffsberechtigungen
+- <strong>Maßnahmen:</strong> Unnötigen Zugriff widerrufen, Aufzeichnungen aktualisieren</p>
+<p><strong>Zugriffvalidierungs-Checkliste:</strong>
+- [ ] Überprüfen, ob Mitarbeiter noch Zugriff benötigt
+- [ ] Überprüfen, ob Zugriffsstufe für Rolle angemessen ist
+- [ ] Überprüfen, dass keine gekündigten Mitarbeiter aktiven Zugriff haben
+- [ ] Überprüfen, dass kein abgelaufener temporärer Zugriff besteht
+- [ ] Zugriffsdokumentation aktualisieren</p>
+<h3 id="54-zugriffskundigung">5.4 Zugriffskündigung</h3>
+<p><strong>Kündigungsprozess:</strong>
+1. <strong>Benachrichtigung:</strong> HR benachrichtigt Facility Manager und Security Officer
+2. <strong>Sofortiger Widerruf:</strong> Zugriff wird sofort bei Kündigung widerrufen
+3. <strong>Ausweiseinsammlung:</strong> Mitarbeiterausweis eingesammelt
+4. <strong>Schlüsseleinsammlung:</strong> Alle Schlüssel eingesammelt
+5. <strong>Überprüfung:</strong> Zugriffskündigung im System überprüft
+6. <strong>Dokumentation:</strong> Kündigung protokolliert</p>
+<p><strong>Kündigungs-Checkliste:</strong>
+- [ ] Zugangskarte deaktiviert
+- [ ] Schlüssel zurückgegeben
+- [ ] Alarmcodes geändert (falls zutreffend)
+- [ ] Besucherbegleitrechte widerrufen
+- [ ] Dokumentation aktualisiert</p>
+<h2 id="6-wartungsaufzeichnungen">6. Wartungsaufzeichnungen</h2>
+<h3 id="61-einrichtungswartung">6.1 Einrichtungswartung</h3>
+<p><strong>Wartungsaktivitäten:</strong>
+- Wartung des Zugriffskontrollsystems
+- Wartung des Überwachungssystems
+- Schloss- und Schlüsselwartung
+- Alarmsystemwartung
+- Brandbekämpfungssystemwartung
+- Wartung der Umgebungskontrollen
+- Notbeleuchtungswartung</p>
+<p><strong>Wartungsplan:</strong>
+| System | Wartungstyp | Häufigkeit | Anbieter | Letzter Service | Nächster Service |
+|--------|-------------|-----------|----------|-----------------|------------------|
+| [TODO: Zugriffskontrolle] | Präventiv | Vierteljährlich | [TODO: Anbieter] | [TODO: Datum] | [TODO: Datum] |
+| [TODO: Überwachung] | Präventiv | Halbjährlich | [TODO: Anbieter] | [TODO: Datum] | [TODO: Datum] |
+| [TODO: Brandbekämpfung] | Inspektion | Jährlich | [TODO: Anbieter] | [TODO: Datum] | [TODO: Datum] |</p>
+<h3 id="62-wartungsdokumentation">6.2 Wartungsdokumentation</h3>
+<p><strong>Erforderliche Dokumentation:</strong>
+- Wartungsarbeitsaufträge
+- Serviceberichte
+- Ersetzte Teile
+- Durchgeführte Systemtests
+- Technikerqualifikationen
+- Zugriffsprotokolle für Wartungspersonal</p>
+<p><strong>Aufbewahrung:</strong> [TODO: 6 Jahre]</p>
+<h3 id="63-wartungszugriffskontrolle">6.3 Wartungszugriffskontrolle</h3>
+<p><strong>Anbieterzugang:</strong>
+- Anbieter wird während Wartung begleitet
+- Anbieterzugang wird protokolliert
+- Anbieterqualifikationen werden überprüft
+- Hintergrundprüfungen für reguläre Anbieter
+- Business Associate Agreement (falls PHI-Zugriff möglich)</p>
+<h2 id="7-physische-sicherheitsvorfalle">7. Physische Sicherheitsvorfälle</h2>
+<h3 id="71-vorfalltypen">7.1 Vorfalltypen</h3>
+<ul>
+<li>Unbefugter Einrichtungszugang</li>
+<li>Tailgating</li>
+<li>Verlorene/gestohlene Zugangskarten oder Schlüssel</li>
+<li>Gewaltsamer Zutritt</li>
+<li>Manipulation des Überwachungssystems</li>
+<li>Alarmsystemausfälle</li>
+</ul>
+<h3 id="72-vorfallreaktion">7.2 Vorfallreaktion</h3>
+<p><strong>Reaktionsprozess:</strong>
+1. <strong>Erkennung:</strong> Vorfall erkannt (Alarm, Beobachtung, Meldung)
+2. <strong>Benachrichtigung:</strong> Security Officer sofort benachrichtigt
+3. <strong>Bewertung:</strong> Schweregrad und Auswirkung bewerten
+4. <strong>Eindämmung:</strong> Bereich sichern, Zugriffscodes bei Bedarf ändern
+5. <strong>Untersuchung:</strong> Protokolle, Überwachungsaufnahmen überprüfen
+6. <strong>Behebung:</strong> Korrekturmaßnahmen umsetzen
+7. <strong>Dokumentation:</strong> Vorfall und Reaktion dokumentieren
+8. <strong>Überprüfung:</strong> Nachträgliche Überprüfung und Lessons Learned</p>
+<h3 id="73-vorfallprotokoll">7.3 Vorfallprotokoll</h3>
+<table>
+<thead>
+<tr>
+<th>Vorfall-ID</th>
+<th>Datum</th>
+<th>Typ</th>
+<th>Standort</th>
+<th>Beschreibung</th>
+<th>Reaktion</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: INC-001]</td>
+<td>[TODO: Datum]</td>
+<td>[TODO: Typ]</td>
+<td>[TODO: Standort]</td>
+<td>[TODO: Beschreibung]</td>
+<td>[TODO: Ergriffene Maßnahmen]</td>
+<td>[TODO: Geschlossen]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="8-dokumentation-und-aufzeichnungen">8. Dokumentation und Aufzeichnungen</h2>
+<h3 id="81-erforderliche-dokumentation">8.1 Erforderliche Dokumentation</h3>
+<ul>
+<li>Einrichtungssicherheitsplan</li>
+<li>Zugriffsautorisierungsaufzeichnungen</li>
+<li>Besucherprotokolle</li>
+<li>Zugriffsüberprüfungsaufzeichnungen</li>
+<li>Wartungsaufzeichnungen</li>
+<li>Vorfallberichte</li>
+<li>Überwachungsaufnahmen (gemäß Aufbewahrungsrichtlinie)</li>
+</ul>
+<h3 id="82-aufbewahrung">8.2 Aufbewahrung</h3>
+<p><strong>Aufbewahrungsfrist:</strong> [TODO: 6 Jahre ab Erstellung oder letztem Gültigkeitsdatum]</p>
+<p><strong>Speicherort:</strong> [TODO: Dokumentenmanagementsystem-Standort]</p>
+<hr />
+<p><strong>Dokumentenhistorie:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Datum</th>
+<th>Autor</th>
+<th>Änderungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Ersterstellung</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0110_Mitarbeitersicherheit.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0310_Arbeitsplatznutzung_und_Sicherheit.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

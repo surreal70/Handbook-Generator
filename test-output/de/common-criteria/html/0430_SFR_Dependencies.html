@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0430 - SFR-Abhängigkeiten (SFR Dependencies)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0430</div>
+            <h1>SFR-Abhängigkeiten (SFR Dependencies)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0420_Requirements_Rationale.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0440_Coverage_Matrix.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="sfr-abhangigkeiten-sfr-dependencies">SFR-Abhängigkeiten (SFR Dependencies)</h1>
+<p><strong>Dokument-ID:</strong> 0430<br />
+<strong>Owner:</strong> {{ meta.owner }}<br />
+<strong>Version:</strong> {{ meta.version }}<br />
+<strong>Status:</strong> Entwurf / In Review / Freigegeben<br />
+<strong>Klassifizierung:</strong> Intern / Vertraulich / Streng vertraulich<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.date }}  </p>
+<hr />
+<blockquote>
+<p><strong>Hinweis:</strong> Dieses Dokument ist ein Template. Ersetze alle <code>[TODO]</code>-Platzhalter und passe die Inhalte an dein spezifisches Target of Evaluation (TOE) an.</p>
+</blockquote>
+<h2 id="1-einleitung">1. Einleitung</h2>
+<p>Dieses Dokument dokumentiert alle Abhängigkeiten zwischen den Security Functional Requirements (SFRs) des TOE und demonstriert deren Erfüllung. Gemäß ISO/IEC 15408-2 können SFRs Abhängigkeiten zu anderen SFRs haben, die erfüllt sein müssen, damit die Anforderung korrekt funktioniert.</p>
+<h2 id="2-ubersicht-der-sfr-abhangigkeiten">2. Übersicht der SFR-Abhängigkeiten</h2>
+<h3 id="21-zusammenfassung">2.1 Zusammenfassung</h3>
+<p><strong>Statistik:</strong>
+- Anzahl der ausgewählten SFRs: [TODO: X]
+- Anzahl der SFRs mit Abhängigkeiten: [TODO: X]
+- Gesamtzahl der Abhängigkeiten: [TODO: X]
+- Anzahl der erfüllten Abhängigkeiten: [TODO: X]
+- Anzahl der nicht erfüllten Abhängigkeiten: [TODO: 0]</p>
+<p><strong>Status:</strong> [TODO: ✓ Alle Abhängigkeiten erfüllt / ⚠ Abhängigkeiten nicht erfüllt]</p>
+<h3 id="22-vollstandige-abhangigkeitstabelle">2.2 Vollständige Abhängigkeitstabelle</h3>
+<table>
+<thead>
+<tr>
+<th>SFR-ID</th>
+<th>SFR-Name</th>
+<th>Abhängigkeit</th>
+<th>Erfüllt durch</th>
+<th>Status</th>
+<th>Anmerkungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FAU_GEN.1</td>
+<td>Audit data generation</td>
+<td>FPT_STM.1</td>
+<td>FPT_STM.1</td>
+<td>✓</td>
+<td>Zeitstempel für Audit-Einträge</td>
+</tr>
+<tr>
+<td>FAU_SAR.1</td>
+<td>Audit review</td>
+<td>FAU_GEN.1</td>
+<td>FAU_GEN.1</td>
+<td>✓</td>
+<td>Audit-Daten müssen generiert werden</td>
+</tr>
+<tr>
+<td>FCS_CKM.1</td>
+<td>Cryptographic key generation</td>
+<td>[FCS_CKM.2 oder FCS_COP.1]</td>
+<td>FCS_COP.1</td>
+<td>✓</td>
+<td>Schlüssel für kryptographische Operationen</td>
+</tr>
+<tr>
+<td>FCS_COP.1</td>
+<td>Cryptographic operation</td>
+<td>[FDP_ITC.1 oder FDP_ITC.2 oder FCS_CKM.1]</td>
+<td>FCS_CKM.1</td>
+<td>✓</td>
+<td>Schlüsselgenerierung</td>
+</tr>
+<tr>
+<td>FDP_ACC.1</td>
+<td>Subset access control</td>
+<td>FDP_ACF.1</td>
+<td>FDP_ACF.1</td>
+<td>✓</td>
+<td>Zugriffskontrollfunktionen</td>
+</tr>
+<tr>
+<td>FDP_ACF.1</td>
+<td>Security attribute based access control</td>
+<td>FDP_ACC.1, FMT_MSA.3</td>
+<td>FDP_ACC.1, FMT_MSA.3</td>
+<td>✓</td>
+<td>Zugriffskontrollrichtlinie und Attributverwaltung</td>
+</tr>
+<tr>
+<td>FIA_UAU.1</td>
+<td>Timing of authentication</td>
+<td>FIA_UID.1</td>
+<td>FIA_UID.1</td>
+<td>✓</td>
+<td>Identifikation vor Authentisierung</td>
+</tr>
+<tr>
+<td>FIA_UID.1</td>
+<td>Timing of identification</td>
+<td>Keine</td>
+<td>N/A</td>
+<td>✓</td>
+<td>Keine Abhängigkeiten</td>
+</tr>
+<tr>
+<td>FMT_MSA.1</td>
+<td>Management of security attributes</td>
+<td>[FDP_ACC.1 oder FDP_IFC.1], FMT_SMR.1, FMT_SMF.1</td>
+<td>FDP_ACC.1, FMT_SMR.1, FMT_SMF.1</td>
+<td>✓</td>
+<td>Zugriffskontrolle und Rollenverwaltung</td>
+</tr>
+<tr>
+<td>FMT_MSA.3</td>
+<td>Static attribute initialisation</td>
+<td>FMT_MSA.1, FMT_SMR.1</td>
+<td>FMT_MSA.1, FMT_SMR.1</td>
+<td>✓</td>
+<td>Attributverwaltung und Rollen</td>
+</tr>
+<tr>
+<td>FMT_SMF.1</td>
+<td>Specification of Management Functions</td>
+<td>Keine</td>
+<td>N/A</td>
+<td>✓</td>
+<td>Keine Abhängigkeiten</td>
+</tr>
+<tr>
+<td>FMT_SMR.1</td>
+<td>Security roles</td>
+<td>FIA_UID.1</td>
+<td>FIA_UID.1</td>
+<td>✓</td>
+<td>Identifikation für Rollenzuweisung</td>
+</tr>
+<tr>
+<td>FPT_STM.1</td>
+<td>Reliable time stamps</td>
+<td>Keine</td>
+<td>N/A</td>
+<td>✓</td>
+<td>Keine Abhängigkeiten</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-detaillierte-abhangigkeitsanalyse">3. Detaillierte Abhängigkeitsanalyse</h2>
+<h3 id="31-security-audit-fau">3.1 Security Audit (FAU)</h3>
+<h4 id="fau_gen1-audit-data-generation">FAU_GEN.1 Audit data generation</h4>
+<p><strong>Abhängigkeiten:</strong>
+- FPT_STM.1 Reliable time stamps</p>
+<p><strong>Erfüllung:</strong>
+FPT_STM.1 ist im Security Target enthalten und stellt zuverlässige Zeitstempel für Audit-Einträge bereit.</p>
+<p><strong>Begründung:</strong>
+Audit-Einträge müssen mit präzisen Zeitstempeln versehen werden, um eine chronologische Nachvollziehbarkeit von Sicherheitsereignissen zu gewährleisten.</p>
+<h4 id="fau_sar1-audit-review">FAU_SAR.1 Audit review</h4>
+<p><strong>Abhängigkeiten:</strong>
+- FAU_GEN.1 Audit data generation</p>
+<p><strong>Erfüllung:</strong>
+FAU_GEN.1 ist im Security Target enthalten und generiert die Audit-Daten, die durch FAU_SAR.1 überprüft werden.</p>
+<p><strong>Begründung:</strong>
+Audit-Daten müssen existieren, bevor sie überprüft werden können.</p>
+<h3 id="32-cryptographic-support-fcs">3.2 Cryptographic Support (FCS)</h3>
+<h4 id="fcs_ckm1-cryptographic-key-generation">FCS_CKM.1 Cryptographic key generation</h4>
+<p><strong>Abhängigkeiten:</strong>
+- [FCS_CKM.2 Cryptographic key distribution] oder [FCS_COP.1 Cryptographic operation]</p>
+<p><strong>Erfüllung:</strong>
+FCS_COP.1 ist im Security Target enthalten. Generierte Schlüssel werden für kryptographische Operationen verwendet.</p>
+<p><strong>Begründung:</strong>
+Schlüssel müssen für einen Zweck generiert werden. In diesem Fall werden sie für kryptographische Operationen (FCS_COP.1) verwendet.</p>
+<h4 id="fcs_cop1-cryptographic-operation">FCS_COP.1 Cryptographic operation</h4>
+<p><strong>Abhängigkeiten:</strong>
+- [FDP_ITC.1 Import of user data without security attributes] oder [FDP_ITC.2 Import of user data with security attributes] oder [FCS_CKM.1 Cryptographic key generation]</p>
+<p><strong>Erfüllung:</strong>
+FCS_CKM.1 ist im Security Target enthalten und generiert die für kryptographische Operationen benötigten Schlüssel.</p>
+<p><strong>Begründung:</strong>
+Kryptographische Operationen benötigen Schlüssel, die entweder importiert oder generiert werden müssen.</p>
+<h3 id="33-user-data-protection-fdp">3.3 User Data Protection (FDP)</h3>
+<h4 id="fdp_acc1-subset-access-control">FDP_ACC.1 Subset access control</h4>
+<p><strong>Abhängigkeiten:</strong>
+- FDP_ACF.1 Security attribute based access control</p>
+<p><strong>Erfüllung:</strong>
+FDP_ACF.1 ist im Security Target enthalten und definiert die Zugriffskontrollfunktionen.</p>
+<p><strong>Begründung:</strong>
+Eine Zugriffskontrollrichtlinie (FDP_ACC.1) benötigt Zugriffskontrollfunktionen (FDP_ACF.1) für die Durchsetzung.</p>
+<h4 id="fdp_acf1-security-attribute-based-access-control">FDP_ACF.1 Security attribute based access control</h4>
+<p><strong>Abhängigkeiten:</strong>
+- FDP_ACC.1 Subset access control
+- FMT_MSA.3 Static attribute initialisation</p>
+<p><strong>Erfüllung:</strong>
+Beide Abhängigkeiten sind im Security Target enthalten.</p>
+<p><strong>Begründung:</strong>
+- FDP_ACC.1: Zugriffskontrollfunktionen benötigen eine Zugriffskontrollrichtlinie
+- FMT_MSA.3: Sicherheitsattribute müssen initialisiert werden, bevor sie für Zugriffsentscheidungen verwendet werden können</p>
+<h3 id="34-identification-and-authentication-fia">3.4 Identification and Authentication (FIA)</h3>
+<h4 id="fia_uid1-timing-of-identification">FIA_UID.1 Timing of identification</h4>
+<p><strong>Abhängigkeiten:</strong>
+Keine</p>
+<p><strong>Erfüllung:</strong>
+N/A</p>
+<h4 id="fia_uau1-timing-of-authentication">FIA_UAU.1 Timing of authentication</h4>
+<p><strong>Abhängigkeiten:</strong>
+- FIA_UID.1 Timing of identification</p>
+<p><strong>Erfüllung:</strong>
+FIA_UID.1 ist im Security Target enthalten.</p>
+<p><strong>Begründung:</strong>
+Benutzer müssen identifiziert werden, bevor sie authentisiert werden können.</p>
+<h3 id="35-security-management-fmt">3.5 Security Management (FMT)</h3>
+<h4 id="fmt_msa1-management-of-security-attributes">FMT_MSA.1 Management of security attributes</h4>
+<p><strong>Abhängigkeiten:</strong>
+- [FDP_ACC.1 Subset access control] oder [FDP_IFC.1 Subset information flow control]
+- FMT_SMR.1 Security roles
+- FMT_SMF.1 Specification of Management Functions</p>
+<p><strong>Erfüllung:</strong>
+Alle Abhängigkeiten sind im Security Target enthalten.</p>
+<p><strong>Begründung:</strong>
+- FDP_ACC.1: Sicherheitsattribute werden für Zugriffskontrolle verwendet
+- FMT_SMR.1: Verwaltung von Attributen erfordert Rollendefinitionen
+- FMT_SMF.1: Verwaltungsfunktionen müssen spezifiziert sein</p>
+<h4 id="fmt_msa3-static-attribute-initialisation">FMT_MSA.3 Static attribute initialisation</h4>
+<p><strong>Abhängigkeiten:</strong>
+- FMT_MSA.1 Management of security attributes
+- FMT_SMR.1 Security roles</p>
+<p><strong>Erfüllung:</strong>
+Beide Abhängigkeiten sind im Security Target enthalten.</p>
+<p><strong>Begründung:</strong>
+Attributinitialisierung benötigt Attributverwaltung und Rollendefinitionen.</p>
+<h4 id="fmt_smf1-specification-of-management-functions">FMT_SMF.1 Specification of Management Functions</h4>
+<p><strong>Abhängigkeiten:</strong>
+Keine</p>
+<p><strong>Erfüllung:</strong>
+N/A</p>
+<h4 id="fmt_smr1-security-roles">FMT_SMR.1 Security roles</h4>
+<p><strong>Abhängigkeiten:</strong>
+- FIA_UID.1 Timing of identification</p>
+<p><strong>Erfüllung:</strong>
+FIA_UID.1 ist im Security Target enthalten.</p>
+<p><strong>Begründung:</strong>
+Rollen können nur identifizierten Benutzern zugewiesen werden.</p>
+<h3 id="36-protection-of-the-tsf-fpt">3.6 Protection of the TSF (FPT)</h3>
+<h4 id="fpt_stm1-reliable-time-stamps">FPT_STM.1 Reliable time stamps</h4>
+<p><strong>Abhängigkeiten:</strong>
+Keine</p>
+<p><strong>Erfüllung:</strong>
+N/A</p>
+<h3 id="37-todo-weitere-sfr-klassen">3.7 [TODO: Weitere SFR-Klassen]</h3>
+<p>[TODO: Füge Abhängigkeitsanalysen für alle weiteren verwendeten SFRs hinzu]</p>
+<h2 id="4-abhangigkeitsgraph">4. Abhängigkeitsgraph</h2>
+<h3 id="41-visualisierung">4.1 Visualisierung</h3>
+<p>[TODO: Erstelle einen Abhängigkeitsgraphen, der die Beziehungen zwischen SFRs visualisiert]</p>
+<div class="codehilite"><pre><span></span><code>Beispiel-Graph (als Text):
+
+FIA_UID.1 ──┬──&gt; FIA_UAU.1
+            └──&gt; FMT_SMR.1 ──┬──&gt; FMT_MSA.1 ──&gt; FDP_ACF.1 ──┐
+                             └──&gt; FMT_MSA.3 ──────────────┘
+                                                           │
+FPT_STM.1 ──&gt; FAU_GEN.1 ──&gt; FAU_SAR.1                     │
+                                                           ▼
+FCS_CKM.1 ◄──&gt; FCS_COP.1                          FDP_ACC.1 ◄──┘
+</code></pre></div>
+
+<h3 id="42-kritische-pfade">4.2 Kritische Pfade</h3>
+<p>[TODO: Identifiziere kritische Abhängigkeitspfade]</p>
+<p><strong>Kritischer Pfad 1: Zugriffskontrolle</strong></p>
+<div class="codehilite"><pre><span></span><code>FIA_UID.1 → FMT_SMR.1 → FMT_MSA.1 → FDP_ACF.1 ↔ FDP_ACC.1
+</code></pre></div>
+
+<p><strong>Kritischer Pfad 2: Audit</strong></p>
+<div class="codehilite"><pre><span></span><code>FPT_STM.1 → FAU_GEN.1 → FAU_SAR.1
+</code></pre></div>
+
+<h2 id="5-nicht-erfullte-abhangigkeiten">5. Nicht erfüllte Abhängigkeiten</h2>
+<h3 id="51-ubersicht">5.1 Übersicht</h3>
+<p>[TODO: Falls Abhängigkeiten nicht erfüllt sind, dokumentiere sie hier]</p>
+<p><strong>Status:</strong> [TODO: Keine nicht erfüllten Abhängigkeiten / X nicht erfüllte Abhängigkeiten]</p>
+<h3 id="52-begrundung-fur-nicht-erfullte-abhangigkeiten">5.2 Begründung für nicht erfüllte Abhängigkeiten</h3>
+<p>[TODO: Für jede nicht erfüllte Abhängigkeit, gebe eine detaillierte Begründung]</p>
+<p><strong>Beispiel (falls zutreffend):</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="n">SFR</span><span class="o">:</span><span class="w"> </span><span class="n">FCS_CKM</span><span class="o">.</span><span class="mi">1</span>
+<span class="n">Abhängigkeit</span><span class="o">:</span><span class="w"> </span><span class="n">FCS_CKM</span><span class="o">.</span><span class="mi">2</span><span class="w"> </span><span class="n">oder</span><span class="w"> </span><span class="n">FCS_COP</span><span class="o">.</span><span class="mi">1</span>
+<span class="n">Status</span><span class="o">:</span><span class="w"> </span><span class="n">Teilweise</span><span class="w"> </span><span class="n">erfüllt</span><span class="w"> </span><span class="o">(</span><span class="n">nur</span><span class="w"> </span><span class="n">FCS_COP</span><span class="o">.</span><span class="mi">1</span><span class="o">)</span>
+
+<span class="n">Begründung</span><span class="o">:</span><span class="w"> </span><span class="n">FCS_CKM</span><span class="o">.</span><span class="mi">2</span><span class="w"> </span><span class="o">(</span><span class="n">Key</span><span class="w"> </span><span class="n">distribution</span><span class="o">)</span><span class="w"> </span><span class="n">ist</span><span class="w"> </span><span class="n">nicht</span><span class="w"> </span><span class="n">erforderlich</span><span class="o">,</span><span class="w"> </span><span class="n">da</span><span class="w"> </span><span class="n">das</span><span class="w"> </span><span class="n">TOE</span><span class="w"> </span><span class="n">keine</span><span class="w"> </span>
+<span class="n">Schlüsselverteilung</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">externe</span><span class="w"> </span><span class="n">Entitäten</span><span class="w"> </span><span class="n">durchführt</span><span class="o">.</span><span class="w"> </span><span class="n">Alle</span><span class="w"> </span><span class="n">Schlüssel</span><span class="w"> </span><span class="n">werden</span><span class="w"> </span><span class="n">intern</span><span class="w"> </span>
+<span class="n">generiert</span><span class="w"> </span><span class="n">und</span><span class="w"> </span><span class="n">verwendet</span><span class="w"> </span><span class="o">(</span><span class="n">FCS_COP</span><span class="o">.</span><span class="mi">1</span><span class="o">).</span>
+</code></pre></div>
+
+<h2 id="6-hierarchische-beziehungen">6. Hierarchische Beziehungen</h2>
+<h3 id="61-verwendung-hierarchischer-komponenten">6.1 Verwendung hierarchischer Komponenten</h3>
+<p>[TODO: Dokumentiere, falls hierarchisch höhere SFR-Komponenten verwendet werden]</p>
+<p>Gemäß ISO/IEC 15408-2 erfüllt eine hierarchisch höhere Komponente automatisch die Abhängigkeiten niedrigerer Komponenten.</p>
+<p><strong>Beispiel:</strong></p>
+<div class="codehilite"><pre><span></span><code>Falls FDP_ACC.2 (Complete access control) verwendet wird, erfüllt dies automatisch 
+die Abhängigkeit zu FDP_ACC.1 (Subset access control).
+</code></pre></div>
+
+<h2 id="7-iterationen">7. Iterationen</h2>
+<h3 id="71-iterierte-sfrs">7.1 Iterierte SFRs</h3>
+<p>[TODO: Falls SFRs mehrfach verwendet werden (Iteration), dokumentiere die Abhängigkeiten für jede Iteration]</p>
+<table>
+<thead>
+<tr>
+<th>Iterierte SFR</th>
+<th>Iteration</th>
+<th>Abhängigkeiten</th>
+<th>Erfüllung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: z.B. FDP_ACC.1/1]</td>
+<td>1</td>
+<td>FDP_ACF.1/1</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>[TODO: z.B. FDP_ACC.1/2]</td>
+<td>2</td>
+<td>FDP_ACF.1/2</td>
+<td>✓</td>
+</tr>
+</tbody>
+</table>
+<h2 id="8-validierung">8. Validierung</h2>
+<h3 id="81-validierungscheckliste">8.1 Validierungscheckliste</h3>
+<ul>
+<li>[ ] Alle SFRs sind in der Abhängigkeitstabelle aufgeführt</li>
+<li>[ ] Alle Abhängigkeiten sind gemäß ISO/IEC 15408-2 korrekt identifiziert</li>
+<li>[ ] Alle Abhängigkeiten sind erfüllt oder begründet</li>
+<li>[ ] Hierarchische Beziehungen sind korrekt berücksichtigt</li>
+<li>[ ] Iterationen sind vollständig dokumentiert</li>
+<li>[ ] Abhängigkeitsgraph ist konsistent mit der Tabelle</li>
+</ul>
+<h3 id="82-peer-review">8.2 Peer-Review</h3>
+<p><strong>Reviewer:</strong> [TODO: Name]<br />
+<strong>Datum:</strong> [TODO: Datum]<br />
+<strong>Status:</strong> [TODO: Approved / Changes requested]<br />
+<strong>Kommentare:</strong> [TODO: Kommentare]</p>
+<h2 id="9-referenzen">9. Referenzen</h2>
+<ul>
+<li>Dokument 0400: Security Requirements</li>
+<li>Dokument 0420: Requirements Rationale</li>
+<li>ISO/IEC 15408-2:2022 - Security functional requirements (Anhang B: Dependencies)</li>
+<li>[TODO: Weitere relevante Dokumente]</li>
+</ul>
+<hr />
+<p><strong>Nächste Schritte:</strong>
+1. Vervollständige alle [TODO]-Platzhalter
+2. Erstelle vollständige Abhängigkeitstabelle
+3. Verifiziere alle Abhängigkeiten gegen ISO/IEC 15408-2
+4. Erstelle Abhängigkeitsgraph
+5. Führe Peer-Review durch
+6. Aktualisiere bei Änderungen an SFRs</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0420_Requirements_Rationale.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0440_Coverage_Matrix.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0020 - Covered Entities und Healthcare-Komponenten</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0020</div>
+            <h1>Covered Entities und Healthcare-Komponenten</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0010_Geltungsbereich_und_Anwendbarkeit.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0030_Business_Associates_und_Subunternehmer.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="covered-entities-und-healthcare-komponenten">Covered Entities und Healthcare-Komponenten</h1>
+<p><strong>Dokument-ID:</strong> HIPAA-0020<br />
+<strong>Organisation:</strong> AdminSend GmbH<br />
+<strong>Verantwortlich:</strong> IT Operations Manager<br />
+<strong>Genehmigt durch:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Entwurf / In Prüfung / Genehmigt<br />
+<strong>Klassifizierung:</strong> internal<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-zweck">1. Zweck</h2>
+<p>Dieses Dokument definiert den Status von AdminSend GmbH als HIPAA Covered Entity und dokumentiert alle Healthcare-Komponenten und abgedeckten Funktionen.</p>
+<h3 id="11-zielsetzungen">1.1 Zielsetzungen</h3>
+<ul>
+<li><strong>Entity-Klassifizierung:</strong> Organisationsstatus unter HIPAA klar definieren</li>
+<li><strong>Komponentenidentifizierung:</strong> Alle Healthcare-Komponenten dokumentieren (falls Hybrid Entity)</li>
+<li><strong>Funktionsdokumentation:</strong> Alle abgedeckten Funktionen und Aktivitäten auflisten</li>
+<li><strong>Compliance-Grenzen:</strong> Klare Grenzen für HIPAA-Compliance festlegen</li>
+</ul>
+<h2 id="2-covered-entity-bestimmung">2. Covered Entity-Bestimmung</h2>
+<h3 id="21-covered-entity-definition">2.1 Covered Entity-Definition</h3>
+<p>Unter HIPAA ist eine Covered Entity:
+1. <strong>Healthcare Provider</strong> (Gesundheitsdienstleister), der bestimmte Transaktionen elektronisch durchführt
+2. <strong>Health Plan</strong> (Krankenversicherung), der medizinische Versorgung bereitstellt oder bezahlt
+3. <strong>Healthcare Clearinghouse</strong> (Abrechnungsstelle), das Gesundheitsinformationen verarbeitet</p>
+<h3 id="22-organisationsklassifizierung">2.2 Organisationsklassifizierung</h3>
+<p><strong>AdminSend GmbH ist ein:</strong> [TODO: Eine auswählen]</p>
+<ul>
+<li>[ ] <strong>Healthcare Provider</strong> (45 CFR §160.103)</li>
+<li>[ ] <strong>Health Plan</strong> (45 CFR §160.103)</li>
+<li>[ ] <strong>Healthcare Clearinghouse</strong> (45 CFR §160.103)</li>
+<li>[ ] <strong>Hybrid Entity</strong> (45 CFR §164.105(a))</li>
+</ul>
+<p><strong>Klassifizierungsbegründung:</strong> [TODO: Erklären, warum die Organisation die Covered Entity-Definition erfüllt]</p>
+<h2 id="3-healthcare-provider-details">3. Healthcare Provider-Details</h2>
+<p><strong>Diesen Abschnitt ausfüllen, falls die Organisation ein Healthcare Provider ist</strong></p>
+<h3 id="31-provider-informationen">3.1 Provider-Informationen</h3>
+<p><strong>Provider-Typ:</strong> [TODO: Zutreffendes auswählen]
+- [ ] Krankenhaus
+- [ ] Arztpraxis
+- [ ] Klinik
+- [ ] Pflegeheim
+- [ ] Apotheke
+- [ ] Labor
+- [ ] Rettungsdienst
+- [ ] Sonstiges: [TODO: Angeben]</p>
+<p><strong>National Provider Identifier (NPI):</strong>
+- <strong>NPI-Nummer:</strong> [TODO: 10-stellige NPI]
+- <strong>NPI-Typ:</strong> [TODO: Typ 1 (Individuell) oder Typ 2 (Organisation)]
+- <strong>Registrierungsdatum:</strong> [TODO: Datum]</p>
+<p><strong>Medizinische Fachgebiete:</strong>
+| Fachgebiet | Taxonomie-Code | Anbieter |
+|-----------|----------------|----------|
+| [TODO: Allgemeinmedizin] | [TODO: Code] | [TODO: Anzahl] |
+| [TODO: Fachgebiet 1] | [TODO: Code] | [TODO: Anzahl] |
+| [TODO: Fachgebiet 2] | [TODO: Code] | [TODO: Anzahl] |</p>
+<h3 id="32-elektronische-transaktionen">3.2 Elektronische Transaktionen</h3>
+<p><strong>Überträgt die Organisation Gesundheitsinformationen elektronisch im Zusammenhang mit einer HIPAA-Standardtransaktion?</strong> [TODO: Ja/Nein]</p>
+<p><strong>Durchgeführte HIPAA-Standardtransaktionen:</strong>
+- [ ] Gesundheitsansprüche oder gleichwertige Begegnungsinformationen (837)
+- [ ] Berechtigung für einen Gesundheitsplan (270/271)
+- [ ] Überweisungszertifizierung und -autorisierung (278)
+- [ ] Gesundheitsanspruchsstatus (276/277)
+- [ ] Anmeldung und Abmeldung bei einem Gesundheitsplan (834)
+- [ ] Gesundheitszahlung und Überweisungsberatung (835)
+- [ ] Gesundheitsplan-Prämienzahlungen (820)
+- [ ] Koordination der Leistungen (837)</p>
+<p><strong>Transaktionsvolumen (Jährlich):</strong>
+| Transaktionstyp | Volumen | Primärer Handelspartner |
+|-----------------|---------|-------------------------|
+| [TODO: Ansprüche] | [TODO: Anzahl] | [TODO: Zahler-Name] |
+| [TODO: Berechtigung] | [TODO: Anzahl] | [TODO: Zahler-Name] |</p>
+<h3 id="33-bereitgestellte-gesundheitsdienstleistungen">3.3 Bereitgestellte Gesundheitsdienstleistungen</h3>
+<p><strong>Angebotene Dienstleistungen:</strong>
+| Dienstleistung | Beschreibung | Standort | PHI generiert |
+|----------------|--------------|----------|---------------|
+| [TODO: Allgemeinmedizin] | [TODO: Beschreibung] | [TODO: Standort] | Ja |
+| [TODO: Diagnostische Dienste] | [TODO: Beschreibung] | [TODO: Standort] | Ja |
+| [TODO: Behandlungsdienste] | [TODO: Beschreibung] | [TODO: Standort] | Ja |</p>
+<h2 id="4-health-plan-details">4. Health Plan-Details</h2>
+<p><strong>Diesen Abschnitt ausfüllen, falls die Organisation ein Health Plan ist</strong></p>
+<h3 id="41-health-plan-informationen">4.1 Health Plan-Informationen</h3>
+<p><strong>Plan-Typ:</strong> [TODO: Zutreffendes auswählen]
+- [ ] Gruppenkrankenversicherung
+- [ ] Krankenversicherer
+- [ ] HMO (Health Maintenance Organization)
+- [ ] Medicare
+- [ ] Medicaid
+- [ ] Medicare Advantage
+- [ ] Medicare Part D
+- [ ] TRICARE
+- [ ] Sonstiges: [TODO: Angeben]</p>
+<p><strong>Plan-Merkmale:</strong>
+- <strong>Anzahl der Teilnehmer:</strong> [TODO: Anzahl]
+- <strong>Small Health Plan:</strong> [TODO: Ja/Nein - Weniger als 50 Teilnehmer]
+- <strong>Selbstversichert:</strong> [TODO: Ja/Nein]
+- <strong>Vollversichert:</strong> [TODO: Ja/Nein]</p>
+<p><strong>Plan-Sponsor-Informationen:</strong>
+- <strong>Sponsor-Name:</strong> [TODO: Name]
+- <strong>Sponsor-Typ:</strong> [TODO: Arbeitgeber, Gewerkschaft, etc.]
+- <strong>Beziehung zum Plan:</strong> [TODO: Beschreibung]</p>
+<h3 id="42-health-plan-funktionen">4.2 Health Plan-Funktionen</h3>
+<p><strong>Durchgeführte Funktionen:</strong>
+- [ ] Anspruchsbearbeitung
+- [ ] Berechtigungsbestimmung
+- [ ] Anmeldung und Abmeldung
+- [ ] Prämieneinzug
+- [ ] Anbieternetzwerkverwaltung
+- [ ] Nutzungsüberprüfung
+- [ ] Fallmanagement
+- [ ] Krankheitsmanagement</p>
+<p><strong>PHI verwendet für:</strong>
+- [ ] Zahlung
+- [ ] Gesundheitsbetrieb
+- [ ] Behandlungskoordination
+- [ ] Qualitätsverbesserung
+- [ ] Betrugserkennung</p>
+<h2 id="5-healthcare-clearinghouse-details">5. Healthcare Clearinghouse-Details</h2>
+<p><strong>Diesen Abschnitt ausfüllen, falls die Organisation ein Healthcare Clearinghouse ist</strong></p>
+<h3 id="51-clearinghouse-informationen">5.1 Clearinghouse-Informationen</h3>
+<p><strong>Bereitgestellte Dienstleistungen:</strong>
+- [ ] Anspruchsbearbeitung
+- [ ] Anspruchsbereinigung
+- [ ] Formatkonvertierung
+- [ ] Transaktionsweiterleitung
+- [ ] Berechtigungsüberprüfung
+- [ ] Sonstiges: [TODO: Angeben]</p>
+<p><strong>Betreute Covered Entities:</strong>
+- <strong>Anzahl der Anbieter:</strong> [TODO: Anzahl]
+- <strong>Anzahl der Zahler:</strong> [TODO: Anzahl]
+- <strong>Transaktionsvolumen (Monatlich):</strong> [TODO: Anzahl]</p>
+<p><strong>Unterstützte Standardformate:</strong>
+| Transaktion | Format | Version |
+|-------------|--------|---------|
+| [TODO: Ansprüche] | X12 837 | [TODO: 5010] |
+| [TODO: Berechtigung] | X12 270/271 | [TODO: 5010] |</p>
+<h2 id="6-hybrid-entity-bezeichnung">6. Hybrid Entity-Bezeichnung</h2>
+<p><strong>Diesen Abschnitt ausfüllen, falls die Organisation eine Hybrid Entity ist</strong></p>
+<h3 id="61-hybrid-entity-definition">6.1 Hybrid Entity-Definition</h3>
+<p>Eine Hybrid Entity ist eine Organisation, die:
+1. Sowohl abgedeckte als auch nicht abgedeckte Funktionen ausführt
+2. Ihre Healthcare-Komponenten formal bezeichnet hat
+3. HIPAA nur auf bezeichnete Healthcare-Komponenten anwendet</p>
+<p><strong>Ist AdminSend GmbH eine Hybrid Entity?</strong> [TODO: Ja/Nein]</p>
+<h3 id="62-healthcare-komponenten">6.2 Healthcare-Komponenten</h3>
+<p><strong>Bezeichnete Healthcare-Komponenten:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Komponenten-ID</th>
+<th>Komponentenname</th>
+<th>Funktion</th>
+<th>Standort</th>
+<th>Mitarbeiteranzahl</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: HC-001]</td>
+<td>[TODO: Medizinische Klinik]</td>
+<td>Healthcare Provider</td>
+<td>[TODO: Gebäude A]</td>
+<td>[TODO: 25]</td>
+</tr>
+<tr>
+<td>[TODO: HC-002]</td>
+<td>[TODO: Mitarbeiter-Gesundheitsplan]</td>
+<td>Health Plan</td>
+<td>[TODO: HR-Abteilung]</td>
+<td>[TODO: 5]</td>
+</tr>
+<tr>
+<td>[TODO: HC-003]</td>
+<td>[TODO: Arbeitsmedizin]</td>
+<td>Healthcare Provider</td>
+<td>[TODO: Gebäude B]</td>
+<td>[TODO: 10]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Healthcare-Komponentenfunktionen:</strong>
+| Komponente | Abgedeckte Funktionen | Erstellte/Gepflegte PHI |
+|-----------|----------------------|-------------------------|
+| [TODO: Medizinische Klinik] | Patientenversorgung, Abrechnung | Patientenakten, Abrechnungsdaten |
+| [TODO: Mitarbeiter-Gesundheitsplan] | Anspruchsbearbeitung | Ansprüche, Anmeldedaten |</p>
+<h3 id="63-nicht-healthcare-komponenten">6.3 Nicht-Healthcare-Komponenten</h3>
+<p><strong>Nicht abgedeckte Komponenten:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Komponenten-ID</th>
+<th>Komponentenname</th>
+<th>Funktion</th>
+<th>PHI-Zugriff</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: NC-001]</td>
+<td>[TODO: Fertigung]</td>
+<td>Produktherstellung</td>
+<td>Nein</td>
+</tr>
+<tr>
+<td>[TODO: NC-002]</td>
+<td>[TODO: Vertrieb]</td>
+<td>Produktverkauf</td>
+<td>Nein</td>
+</tr>
+<tr>
+<td>[TODO: NC-003]</td>
+<td>[TODO: Unternehmens-IT]</td>
+<td>IT-Support (nicht Healthcare)</td>
+<td>Nein</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Begründung für nicht abgedeckten Status:</strong> [TODO: Erklären, warum diese Komponenten keine abgedeckten Funktionen sind]</p>
+<h3 id="64-hybrid-entity-dokumentation">6.4 Hybrid Entity-Dokumentation</h3>
+<p><strong>Formales Bezeichnungsdokument:</strong>
+- <strong>Dokumenttitel:</strong> [TODO: "Hybrid Entity-Bezeichnung"]
+- <strong>Bezeichnungsdatum:</strong> [TODO: Datum]
+- <strong>Genehmigt durch:</strong> [TODO: Vorstand, CEO, etc.]
+- <strong>Dokumentstandort:</strong> [TODO: Dateipfad oder Verweis]</p>
+<p><strong>Bezeichnungskriterien:</strong>
+- Klare Trennung abgedeckter und nicht abgedeckter Funktionen
+- Separate Verwaltung und Betrieb
+- Unterschiedliche Belegschaftszuweisungen
+- Separate physische Standorte (falls zutreffend)</p>
+<h3 id="65-belegschaftszuweisung">6.5 Belegschaftszuweisung</h3>
+<p><strong>Healthcare-Komponenten-Belegschaft:</strong>
+| Mitarbeiter-ID | Name | Rolle | Komponente | PHI-Zugriff |
+|----------------|------|------|-----------|-------------|
+| [TODO: EMP-001] | [TODO: Name] | [TODO: Arzt] | HC-001 | Vollständig |
+| [TODO: EMP-002] | [TODO: Name] | [TODO: Pflegekraft] | HC-001 | Vollständig |
+| [TODO: EMP-003] | [TODO: Name] | [TODO: Anspruchsbearbeiter] | HC-002 | Eingeschränkt |</p>
+<p><strong>Gemeinsame Belegschaft:</strong>
+| Mitarbeiter-ID | Name | Rolle | Zugriff auf Healthcare-Komponenten |
+|----------------|------|------|------------------------------------|
+| [TODO: EMP-100] | [TODO: Name] | [TODO: IT-Support] | HC-001, HC-002 (nur Systemadministration) |
+| [TODO: EMP-101] | [TODO: Name] | [TODO: Recht] | Alle Komponenten (nach Bedarf) |</p>
+<p><strong>Belegschaftsschulung:</strong>
+- Healthcare-Komponenten-Belegschaft: Vollständige HIPAA-Schulung
+- Gemeinsame Belegschaft: HIPAA-Schulung für Healthcare-Komponentenzugriff
+- Nicht-Healthcare-Belegschaft: Keine HIPAA-Schulung erforderlich (außer bei PHI-Zugriff)</p>
+<h2 id="7-abgedeckte-funktionen">7. Abgedeckte Funktionen</h2>
+<h3 id="71-healthcare-operations">7.1 Healthcare Operations</h3>
+<p><strong>Durchgeführte Healthcare Operations:</strong>
+- [ ] Qualitätsbewertung und -verbesserung
+- [ ] Fallmanagement und Versorgungskoordination
+- [ ] Überprüfung der Kompetenz von Gesundheitsfachkräften
+- [ ] Underwriting und Prämienbewertung (Gesundheitspläne)
+- [ ] Medizinische Überprüfung und Nutzungsüberprüfung
+- [ ] Betrugs- und Missbrauchserkennung
+- [ ] Geschäftsplanung und -entwicklung
+- [ ] Geschäftsführung und allgemeine Verwaltungsaktivitäten</p>
+<p><strong>Für Healthcare Operations verwendete PHI:</strong>
+| Operation | Verwendete PHI-Elemente | Häufigkeit | Verantwortliche Abteilung |
+|-----------|------------------------|-----------|---------------------------|
+| [TODO: Qualitätsverbesserung] | [TODO: Klinische Daten] | [TODO: Vierteljährlich] | [TODO: Qualitätsabteilung] |
+| [TODO: Nutzungsüberprüfung] | [TODO: Anspruchsdaten] | [TODO: Laufend] | [TODO: UM-Abteilung] |</p>
+<h3 id="72-behandlungsaktivitaten">7.2 Behandlungsaktivitäten</h3>
+<p><strong>Behandlungsfunktionen:</strong>
+- [ ] Bereitstellung von Gesundheitsdienstleistungen
+- [ ] Versorgungskoordination
+- [ ] Patientenüberweisung
+- [ ] Konsultation zwischen Anbietern
+- [ ] Fallmanagement</p>
+<p><strong>Behandlungsstandorte:</strong>
+| Standort | Dienstleistungen | Anbieter | Patientenvolumen |
+|----------|------------------|----------|------------------|
+| [TODO: Hauptklinik] | [TODO: Allgemeinmedizin] | [TODO: 5 Ärzte] | [TODO: 100/Tag] |
+| [TODO: Satellitenbüro] | [TODO: Fachversorgung] | [TODO: 2 Spezialisten] | [TODO: 30/Tag] |</p>
+<h3 id="73-zahlungsaktivitaten">7.3 Zahlungsaktivitäten</h3>
+<p><strong>Zahlungsfunktionen:</strong>
+- [ ] Abrechnung und Anspruchsverwaltung
+- [ ] Anspruchsbearbeitung
+- [ ] Zahlungseinzug
+- [ ] Erstattung
+- [ ] Nutzungsüberprüfung für Zahlung
+- [ ] Vorautorisierung</p>
+<p><strong>Zahlungssysteme:</strong>
+| System | Funktion | Verarbeitete PHI | Volumen |
+|--------|----------|------------------|---------|
+| [TODO: Abrechnungssystem] | Anspruchserstellung | Abrechnungsdaten | [TODO: 500/Tag] |
+| [TODO: Zahlungsportal] | Patientenzahlungen | Demografie, Konto | [TODO: 100/Tag] |</p>
+<h2 id="8-compliance-auswirkungen">8. Compliance-Auswirkungen</h2>
+<h3 id="81-anwendbarkeit-der-hipaa-regeln">8.1 Anwendbarkeit der HIPAA-Regeln</h3>
+<p><strong>Für Covered Entity:</strong>
+- <strong>Privacy Rule:</strong> Gilt für alle PHI
+- <strong>Security Rule:</strong> Gilt für alle ePHI
+- <strong>Breach Notification Rule:</strong> Gilt für alle ungesicherten PHI</p>
+<p><strong>Für Hybrid Entity:</strong>
+- <strong>Privacy Rule:</strong> Gilt nur für Healthcare-Komponenten
+- <strong>Security Rule:</strong> Gilt nur für Healthcare-Komponenten
+- <strong>Breach Notification Rule:</strong> Gilt nur für Healthcare-Komponenten
+- <strong>Hinweis:</strong> Gemeinsame Belegschaft und Infrastruktur müssen beim Zugriff auf Healthcare-Komponenten-PHI konform sein</p>
+<h3 id="82-dokumentationsanforderungen">8.2 Dokumentationsanforderungen</h3>
+<p><strong>Erforderliche Dokumentation:</strong>
+- [ ] Covered Entity-Bestimmung
+- [ ] Hybrid Entity-Bezeichnung (falls zutreffend)
+- [ ] Healthcare-Komponentendefinitionen
+- [ ] Belegschaftszuweisungen
+- [ ] Business Associate Agreements
+- [ ] Richtlinien und Verfahren
+- [ ] Schulungsunterlagen</p>
+<p><strong>Dokumentationsaufbewahrung:</strong> [TODO: 6 Jahre ab Erstellung oder letztem Gültigkeitsdatum]</p>
+<hr />
+<p><strong>Dokumentenhistorie:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Datum</th>
+<th>Autor</th>
+<th>Änderungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Ersterstellung</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0010_Geltungsbereich_und_Anwendbarkeit.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0030_Business_Associates_und_Subunternehmer.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

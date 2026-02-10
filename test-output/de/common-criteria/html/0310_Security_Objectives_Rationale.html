@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0310 - Rationale für Sicherheitsziele (Security Objectives Rationale)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0310</div>
+            <h1>Rationale für Sicherheitsziele (Security Objectives Rationale)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0300_Security_Objectives.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0320_Security_Objectives_Coverage_Matrix.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="rationale-fur-sicherheitsziele-security-objectives-rationale">Rationale für Sicherheitsziele (Security Objectives Rationale)</h1>
+<p><strong>Dokument-ID:</strong> 0310<br />
+<strong>Owner:</strong> {{ meta.owner }}<br />
+<strong>Version:</strong> {{ meta.version }}<br />
+<strong>Status:</strong> Entwurf / In Review / Freigegeben<br />
+<strong>Klassifizierung:</strong> Intern / Vertraulich / Streng vertraulich<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.date }}  </p>
+<hr />
+<blockquote>
+<p><strong>Hinweis:</strong> Dieses Dokument ist ein Template. Ersetze alle <code>[TODO]</code>-Platzhalter und passe die Inhalte an dein spezifisches TOE (Target of Evaluation) an.</p>
+</blockquote>
+<h2 id="1-einleitung">1. Einleitung</h2>
+<p>Dieses Dokument liefert die Rationale (Begründung) für die Sicherheitsziele des TOE <strong>{{ meta.toe_name }}</strong> und dessen Betriebsumgebung. Die Rationale demonstriert, dass die definierten Sicherheitsziele ausreichend und angemessen sind, um:</p>
+<ul>
+<li>Alle identifizierten Bedrohungen zu bewältigen</li>
+<li>Alle organisatorischen Sicherheitsrichtlinien (OSPs) umzusetzen</li>
+<li>Alle Annahmen über die Betriebsumgebung zu erfüllen</li>
+</ul>
+<h3 id="11-zweck">1.1 Zweck</h3>
+<p>Die Rationale dient als Nachweis für:
+- <strong>Vollständigkeit</strong>: Alle Elemente der Sicherheitsproblem-Definition sind durch Ziele abgedeckt
+- <strong>Angemessenheit</strong>: Jedes Ziel ist geeignet, die zugeordneten Bedrohungen/OSPs/Annahmen zu adressieren
+- <strong>Rückverfolgbarkeit</strong>: Klare Verbindung zwischen Sicherheitsproblemen und Zielen</p>
+<h3 id="12-methodik">1.2 Methodik</h3>
+<p>Für jedes Sicherheitsziel wird dokumentiert:
+1. Welche Bedrohungen, OSPs oder Annahmen es adressiert
+2. Wie es diese Sicherheitsprobleme bewältigt
+3. Warum es angemessen und ausreichend ist</p>
+<h2 id="2-rationale-fur-toe-sicherheitsziele">2. Rationale für TOE-Sicherheitsziele</h2>
+<h3 id="21-oaccess_control">2.1 O.ACCESS_CONTROL</h3>
+<p><strong>Adressierte Bedrohungen:</strong>
+- T.UNAUTHORIZED_ACCESS: Unbefugter Zugriff auf geschützte Ressourcen
+- T.PRIVILEGE_ESCALATION: Erlangung höherer Berechtigungen</p>
+<p><strong>Adressierte OSPs:</strong>
+- P.ACCESS_CONTROL: Zugriff muss basierend auf Berechtigungen kontrolliert werden</p>
+<p><strong>Rationale:</strong>
+Das Ziel O.ACCESS_CONTROL bewältigt die Bedrohungen T.UNAUTHORIZED_ACCESS und T.PRIVILEGE_ESCALATION, indem es sicherstellt, dass das TOE den Zugriff auf geschützte Ressourcen basierend auf Benutzeridentität und zugewiesenen Berechtigungen kontrolliert. Nur authentifizierte Benutzer mit entsprechenden Berechtigungen können auf Ressourcen zugreifen. Dies setzt die organisatorische Sicherheitsrichtlinie P.ACCESS_CONTROL um, die eine rollenbasierte Zugriffskontrolle vorschreibt.</p>
+<p><strong>[TODO: Passe die Rationale an dein spezifisches TOE an]</strong></p>
+<h3 id="22-oidentification_authentication">2.2 O.IDENTIFICATION_AUTHENTICATION</h3>
+<p><strong>Adressierte Bedrohungen:</strong>
+- T.MASQUERADE: Vortäuschen einer falschen Identität</p>
+<p><strong>Rationale:</strong>
+Das Ziel O.IDENTIFICATION_AUTHENTICATION bewältigt die Bedrohung T.MASQUERADE, indem es sicherstellt, dass alle Benutzer eindeutig identifiziert und authentifiziert werden, bevor Zugriff auf geschützte Funktionen gewährt wird. Dies verhindert, dass Angreifer sich als legitime Benutzer ausgeben können. Das Ziel unterstützt auch O.ACCESS_CONTROL, da eine zuverlässige Identifikation Voraussetzung für eine wirksame Zugriffskontrolle ist.</p>
+<p><strong>[TODO: Ergänze weitere Details zur Authentifizierung]</strong></p>
+<h3 id="23-oaudit_generation">2.3 O.AUDIT_GENERATION</h3>
+<p><strong>Adressierte Bedrohungen:</strong>
+- T.AUDIT_COMPROMISE: Manipulation oder Löschung von Audit-Daten</p>
+<p><strong>Adressierte OSPs:</strong>
+- P.ACCOUNTABILITY: Benutzeraktionen müssen nachvollziehbar sein</p>
+<p><strong>Rationale:</strong>
+Das Ziel O.AUDIT_GENERATION bewältigt die Bedrohung T.AUDIT_COMPROMISE teilweise, indem es sicherstellt, dass sicherheitsrelevante Ereignisse aufgezeichnet werden. Die Aufzeichnung ermöglicht die Nachvollziehbarkeit von Benutzeraktionen und Sicherheitsereignissen, was die organisatorische Sicherheitsrichtlinie P.ACCOUNTABILITY umsetzt. In Kombination mit O.AUDIT_PROTECTION wird ein vollständiger Schutz der Audit-Daten erreicht.</p>
+<p><strong>[TODO: Definiere welche Ereignisse aufgezeichnet werden]</strong></p>
+<h3 id="24-oaudit_protection">2.4 O.AUDIT_PROTECTION</h3>
+<p><strong>Adressierte Bedrohungen:</strong>
+- T.AUDIT_COMPROMISE: Manipulation oder Löschung von Audit-Daten</p>
+<p><strong>Rationale:</strong>
+Das Ziel O.AUDIT_PROTECTION bewältigt die Bedrohung T.AUDIT_COMPROMISE, indem es sicherstellt, dass Audit-Aufzeichnungen vor unbefugter Änderung und Löschung geschützt sind. Dies gewährleistet die Integrität und Verfügbarkeit der Audit-Daten, die für forensische Analysen und Compliance-Nachweise erforderlich sind. Das Ziel ergänzt O.AUDIT_GENERATION und stellt einen vollständigen Audit-Schutz sicher.</p>
+<p><strong>[TODO: Beschreibe Schutzmechanismen]</strong></p>
+<h3 id="25-odata_confidentiality">2.5 O.DATA_CONFIDENTIALITY</h3>
+<p><strong>Adressierte Bedrohungen:</strong>
+- T.DATA_DISCLOSURE: Unbefugte Offenlegung sensibler Daten
+- T.EAVESDROPPING: Abhören von Datenübertragungen</p>
+<p><strong>Adressierte OSPs:</strong>
+- P.CONFIDENTIALITY: Sensible Daten müssen vertraulich behandelt werden</p>
+<p><strong>Rationale:</strong>
+Das Ziel O.DATA_CONFIDENTIALITY bewältigt die Bedrohungen T.DATA_DISCLOSURE und T.EAVESDROPPING, indem es sicherstellt, dass sensible Benutzerdaten vor unbefugter Offenlegung geschützt werden. Dies wird durch Zugriffskontrolle, Verschlüsselung und sichere Datenübertragung erreicht. Das Ziel setzt die organisatorische Sicherheitsrichtlinie P.CONFIDENTIALITY um, die den Schutz vertraulicher Informationen vorschreibt.</p>
+<p><strong>[TODO: Spezifiziere geschützte Datentypen]</strong></p>
+<h3 id="26-ocryptographic_operations">2.6 O.CRYPTOGRAPHIC_OPERATIONS</h3>
+<p><strong>Adressierte Bedrohungen:</strong>
+- T.DATA_DISCLOSURE: Unbefugte Offenlegung sensibler Daten
+- T.DATA_MODIFICATION: Unbefugte Änderung von Daten</p>
+<p><strong>Rationale:</strong>
+Das Ziel O.CRYPTOGRAPHIC_OPERATIONS unterstützt O.DATA_CONFIDENTIALITY und O.DATA_INTEGRITY, indem es kryptografische Mechanismen zur Verschlüsselung und Integritätssicherung von Daten bereitstellt. Kryptografische Operationen schützen Daten sowohl im Ruhezustand als auch während der Übertragung vor Offenlegung und Manipulation.</p>
+<p><strong>[TODO: Definiere erforderliche kryptografische Algorithmen]</strong></p>
+<h3 id="27-odata_integrity">2.7 O.DATA_INTEGRITY</h3>
+<p><strong>Adressierte Bedrohungen:</strong>
+- T.DATA_MODIFICATION: Unbefugte Änderung von Daten
+- T.DATA_CORRUPTION: Beschädigung von Daten</p>
+<p><strong>Adressierte OSPs:</strong>
+- P.INTEGRITY: Datenintegrität muss gewährleistet sein</p>
+<p><strong>Rationale:</strong>
+Das Ziel O.DATA_INTEGRITY bewältigt die Bedrohungen T.DATA_MODIFICATION und T.DATA_CORRUPTION, indem es sicherstellt, dass Benutzerdaten und Systemdaten vor unbefugter Änderung geschützt sind. Dies wird durch Integritätsprüfungen, Zugriffskontrolle und kryptografische Mechanismen erreicht. Das Ziel setzt die organisatorische Sicherheitsrichtlinie P.INTEGRITY um.</p>
+<p><strong>[TODO: Beschreibe Integritätsschutzmechanismen]</strong></p>
+<h3 id="28-osecurity_management">2.8 O.SECURITY_MANAGEMENT</h3>
+<p><strong>Adressierte OSPs:</strong>
+- P.MANAGEMENT: Sicherheitsfunktionen müssen verwaltbar sein</p>
+<p><strong>Rationale:</strong>
+Das Ziel O.SECURITY_MANAGEMENT setzt die organisatorische Sicherheitsrichtlinie P.MANAGEMENT um, indem es autorisierten Administratoren die Verwaltung von Sicherheitsfunktionen und -richtlinien ermöglicht. Dies umfasst die Konfiguration von Zugriffskontrollrichtlinien, Audit-Einstellungen und anderen Sicherheitsparametern. Eine wirksame Verwaltung ist Voraussetzung für die Aufrechterhaltung der Sicherheit über den gesamten Lebenszyklus des TOE.</p>
+<p><strong>[TODO: Definiere Verwaltungsfunktionen]</strong></p>
+<h3 id="29-osecure_state">2.9 O.SECURE_STATE</h3>
+<p><strong>Adressierte Bedrohungen:</strong>
+- T.MALFUNCTION: Fehlfunktion des TOE</p>
+<p><strong>Rationale:</strong>
+Das Ziel O.SECURE_STATE bewältigt die Bedrohung T.MALFUNCTION, indem es sicherstellt, dass das TOE in einem sicheren Zustand startet und bei Fehlern in einen sicheren Zustand übergeht. Dies verhindert, dass Fehlfunktionen zu Sicherheitsverletzungen führen. Das TOE muss auch bei unerwarteten Ereignissen seine Sicherheitseigenschaften aufrechterhalten.</p>
+<p><strong>[TODO: Beschreibe sichere Zustände]</strong></p>
+<h3 id="210-otsf_protection">2.10 O.TSF_PROTECTION</h3>
+<p><strong>Adressierte Bedrohungen:</strong>
+- T.TSF_COMPROMISE: Manipulation der Sicherheitsfunktionen
+- T.TSF_BYPASS: Umgehung der Sicherheitsfunktionen</p>
+<p><strong>Rationale:</strong>
+Das Ziel O.TSF_PROTECTION bewältigt die Bedrohungen T.TSF_COMPROMISE und T.TSF_BYPASS, indem es sicherstellt, dass die Sicherheitsfunktionen (TSF) des TOE vor Manipulation und Umgehung geschützt sind. Dies ist fundamental für die Wirksamkeit aller anderen Sicherheitsziele, da kompromittierte Sicherheitsfunktionen alle Schutzmechanismen unwirksam machen würden.</p>
+<p><strong>[TODO: Beschreibe TSF-Schutzmechanismen]</strong></p>
+<h3 id="211-weitere-toe-sicherheitsziele">2.11 Weitere TOE-Sicherheitsziele</h3>
+<p><strong>[TODO: Ergänze Rationale für weitere spezifische Sicherheitsziele]</strong></p>
+<h4 id="ocustom_objective_1">O.[CUSTOM_OBJECTIVE_1]</h4>
+<p><strong>Adressierte Bedrohungen/OSPs:</strong>
+- [TODO: Liste Bedrohungen/OSPs auf]</p>
+<p><strong>Rationale:</strong>
+[TODO: Erkläre, wie das Ziel die Bedrohungen/OSPs bewältigt]</p>
+<h2 id="3-rationale-fur-umgebungsziele">3. Rationale für Umgebungsziele</h2>
+<h3 id="31-oephysical_protection">3.1 OE.PHYSICAL_PROTECTION</h3>
+<p><strong>Erfüllte Annahmen:</strong>
+- A.PHYSICAL_SECURITY: Das TOE wird in einer physisch gesicherten Umgebung betrieben</p>
+<p><strong>Adressierte Bedrohungen:</strong>
+- T.PHYSICAL_ATTACK: Physischer Angriff auf das TOE</p>
+<p><strong>Rationale:</strong>
+Das Ziel OE.PHYSICAL_PROTECTION erfüllt die Annahme A.PHYSICAL_SECURITY, indem es sicherstellt, dass die Betriebsumgebung das TOE vor physischem Zugriff durch unbefugte Personen schützt. Dies bewältigt auch die Bedrohung T.PHYSICAL_ATTACK. Physische Schutzmaßnahmen wie Zugangskontrollen, Überwachung und sichere Räumlichkeiten verhindern, dass Angreifer direkten Zugriff auf die Hardware erhalten.</p>
+<p><strong>[TODO: Definiere erforderliche physische Schutzmaßnahmen]</strong></p>
+<h3 id="32-oetrusted_admin">3.2 OE.TRUSTED_ADMIN</h3>
+<p><strong>Erfüllte Annahmen:</strong>
+- A.TRUSTED_ADMIN: Administratoren sind vertrauenswürdig und kompetent</p>
+<p><strong>Rationale:</strong>
+Das Ziel OE.TRUSTED_ADMIN erfüllt die Annahme A.TRUSTED_ADMIN, indem es sicherstellt, dass Administratoren vertrauenswürdig, geschult und kompetent sind. Dies reduziert das Risiko von Insider-Bedrohungen und Fehlkonfigurationen. Vertrauenswürdige Administratoren sind essentiell, da sie weitreichende Berechtigungen haben und Sicherheitsmechanismen umgehen könnten.</p>
+<p><strong>[TODO: Beschreibe Anforderungen an Administratoren]</strong></p>
+<h3 id="33-oeuser_training">3.3 OE.USER_TRAINING</h3>
+<p><strong>Erfüllte Annahmen:</strong>
+- A.USER_TRAINING: Benutzer sind in der sicheren Verwendung des TOE geschult</p>
+<p><strong>Rationale:</strong>
+Das Ziel OE.USER_TRAINING erfüllt die Annahme A.USER_TRAINING, indem es sicherstellt, dass Benutzer in der sicheren Verwendung des TOE geschult sind. Dies reduziert das Risiko von Benutzerfehlern, Social Engineering und unbeabsichtigten Sicherheitsverletzungen. Geschulte Benutzer verstehen Sicherheitsrichtlinien und können verdächtige Aktivitäten erkennen.</p>
+<p><strong>[TODO: Definiere Schulungsanforderungen]</strong></p>
+<h3 id="34-oenetwork_protection">3.4 OE.NETWORK_PROTECTION</h3>
+<p><strong>Erfüllte Annahmen:</strong>
+- A.NETWORK_SECURITY: Das Netzwerk ist durch Firewalls und andere Mechanismen geschützt</p>
+<p><strong>Rationale:</strong>
+Das Ziel OE.NETWORK_PROTECTION erfüllt die Annahme A.NETWORK_SECURITY, indem es sicherstellt, dass die Betriebsumgebung das TOE vor Netzwerkangriffen schützt. Firewalls, Intrusion Detection Systeme und Netzwerksegmentierung reduzieren die Angriffsfläche und verhindern unbefugten Netzwerkzugriff auf das TOE.</p>
+<p><strong>[TODO: Spezifiziere erforderliche Netzwerkschutzmaßnahmen]</strong></p>
+<h3 id="35-oeexternal_systems">3.5 OE.EXTERNAL_SYSTEMS</h3>
+<p><strong>Erfüllte Annahmen:</strong>
+- A.EXTERNAL_SYSTEMS: Externe Systeme sind vertrauenswürdig und sicher</p>
+<p><strong>Rationale:</strong>
+Das Ziel OE.EXTERNAL_SYSTEMS erfüllt die Annahme A.EXTERNAL_SYSTEMS, indem es sicherstellt, dass externe Systeme, mit denen das TOE interagiert, vertrauenswürdig und sicher sind. Dies reduziert Risiken durch kompromittierte Drittanbieter-Komponenten oder unsichere Schnittstellen. Die Umgebung muss die Sicherheit externer Systeme bewerten und überwachen.</p>
+<p><strong>[TODO: Definiere Anforderungen an externe Systeme]</strong></p>
+<h3 id="36-oetime_stamps">3.6 OE.TIME_STAMPS</h3>
+<p><strong>Erfüllte Annahmen:</strong>
+- A.TIME_SOURCE: Eine zuverlässige Zeitquelle ist verfügbar</p>
+<p><strong>Rationale:</strong>
+Das Ziel OE.TIME_STAMPS erfüllt die Annahme A.TIME_SOURCE, indem es sicherstellt, dass die Betriebsumgebung zuverlässige Zeitstempel für Audit-Aufzeichnungen und Sicherheitsereignisse bereitstellt. Genaue Zeitstempel sind essentiell für forensische Analysen, Korrelation von Ereignissen und Compliance-Nachweise. Das Ziel unterstützt O.AUDIT_GENERATION.</p>
+<p><strong>[TODO: Beschreibe Anforderungen an Zeitquellen]</strong></p>
+<h3 id="37-weitere-umgebungsziele">3.7 Weitere Umgebungsziele</h3>
+<p><strong>[TODO: Ergänze Rationale für weitere Umgebungsziele]</strong></p>
+<h4 id="oecustom_env_objective">OE.[CUSTOM_ENV_OBJECTIVE]</h4>
+<p><strong>Erfüllte Annahmen:</strong>
+- [TODO: Liste Annahmen auf]</p>
+<p><strong>Rationale:</strong>
+[TODO: Erkläre, wie das Ziel die Annahmen erfüllt]</p>
+<h2 id="4-vollstandigkeitsnachweis">4. Vollständigkeitsnachweis</h2>
+<h3 id="41-abdeckung-der-bedrohungen">4.1 Abdeckung der Bedrohungen</h3>
+<p>Die folgende Tabelle zeigt, dass jede identifizierte Bedrohung durch mindestens ein Sicherheitsziel adressiert wird:</p>
+<table>
+<thead>
+<tr>
+<th>Bedrohung</th>
+<th>Adressierende Ziele</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T.UNAUTHORIZED_ACCESS</td>
+<td>O.ACCESS_CONTROL</td>
+<td>✓ Abgedeckt</td>
+</tr>
+<tr>
+<td>T.PRIVILEGE_ESCALATION</td>
+<td>O.ACCESS_CONTROL</td>
+<td>✓ Abgedeckt</td>
+</tr>
+<tr>
+<td>T.MASQUERADE</td>
+<td>O.IDENTIFICATION_AUTHENTICATION</td>
+<td>✓ Abgedeckt</td>
+</tr>
+<tr>
+<td>T.AUDIT_COMPROMISE</td>
+<td>O.AUDIT_GENERATION, O.AUDIT_PROTECTION</td>
+<td>✓ Abgedeckt</td>
+</tr>
+<tr>
+<td>T.DATA_DISCLOSURE</td>
+<td>O.DATA_CONFIDENTIALITY, O.CRYPTOGRAPHIC_OPERATIONS</td>
+<td>✓ Abgedeckt</td>
+</tr>
+<tr>
+<td>T.EAVESDROPPING</td>
+<td>O.DATA_CONFIDENTIALITY, O.CRYPTOGRAPHIC_OPERATIONS</td>
+<td>✓ Abgedeckt</td>
+</tr>
+<tr>
+<td>T.DATA_MODIFICATION</td>
+<td>O.DATA_INTEGRITY, O.CRYPTOGRAPHIC_OPERATIONS</td>
+<td>✓ Abgedeckt</td>
+</tr>
+<tr>
+<td>T.DATA_CORRUPTION</td>
+<td>O.DATA_INTEGRITY</td>
+<td>✓ Abgedeckt</td>
+</tr>
+<tr>
+<td>T.MALFUNCTION</td>
+<td>O.SECURE_STATE</td>
+<td>✓ Abgedeckt</td>
+</tr>
+<tr>
+<td>T.TSF_COMPROMISE</td>
+<td>O.TSF_PROTECTION</td>
+<td>✓ Abgedeckt</td>
+</tr>
+<tr>
+<td>T.TSF_BYPASS</td>
+<td>O.TSF_PROTECTION</td>
+<td>✓ Abgedeckt</td>
+</tr>
+<tr>
+<td>T.PHYSICAL_ATTACK</td>
+<td>OE.PHYSICAL_PROTECTION</td>
+<td>✓ Abgedeckt</td>
+</tr>
+<tr>
+<td><strong>[TODO: Weitere Bedrohungen]</strong></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ergebnis:</strong> Alle Bedrohungen sind durch Sicherheitsziele abgedeckt. ✓</p>
+<h3 id="42-abdeckung-der-organisatorischen-sicherheitsrichtlinien">4.2 Abdeckung der organisatorischen Sicherheitsrichtlinien</h3>
+<p>Die folgende Tabelle zeigt, dass jede OSP durch mindestens ein Sicherheitsziel umgesetzt wird:</p>
+<table>
+<thead>
+<tr>
+<th>OSP</th>
+<th>Umsetzende Ziele</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P.ACCESS_CONTROL</td>
+<td>O.ACCESS_CONTROL</td>
+<td>✓ Abgedeckt</td>
+</tr>
+<tr>
+<td>P.ACCOUNTABILITY</td>
+<td>O.AUDIT_GENERATION, O.AUDIT_PROTECTION</td>
+<td>✓ Abgedeckt</td>
+</tr>
+<tr>
+<td>P.CONFIDENTIALITY</td>
+<td>O.DATA_CONFIDENTIALITY</td>
+<td>✓ Abgedeckt</td>
+</tr>
+<tr>
+<td>P.INTEGRITY</td>
+<td>O.DATA_INTEGRITY</td>
+<td>✓ Abgedeckt</td>
+</tr>
+<tr>
+<td>P.MANAGEMENT</td>
+<td>O.SECURITY_MANAGEMENT</td>
+<td>✓ Abgedeckt</td>
+</tr>
+<tr>
+<td><strong>[TODO: Weitere OSPs]</strong></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ergebnis:</strong> Alle OSPs sind durch Sicherheitsziele umgesetzt. ✓</p>
+<h3 id="43-abdeckung-der-annahmen">4.3 Abdeckung der Annahmen</h3>
+<p>Die folgende Tabelle zeigt, dass jede Annahme durch mindestens ein Umgebungsziel erfüllt wird:</p>
+<table>
+<thead>
+<tr>
+<th>Annahme</th>
+<th>Erfüllende Ziele</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A.PHYSICAL_SECURITY</td>
+<td>OE.PHYSICAL_PROTECTION</td>
+<td>✓ Abgedeckt</td>
+</tr>
+<tr>
+<td>A.TRUSTED_ADMIN</td>
+<td>OE.TRUSTED_ADMIN</td>
+<td>✓ Abgedeckt</td>
+</tr>
+<tr>
+<td>A.USER_TRAINING</td>
+<td>OE.USER_TRAINING</td>
+<td>✓ Abgedeckt</td>
+</tr>
+<tr>
+<td>A.NETWORK_SECURITY</td>
+<td>OE.NETWORK_PROTECTION</td>
+<td>✓ Abgedeckt</td>
+</tr>
+<tr>
+<td>A.EXTERNAL_SYSTEMS</td>
+<td>OE.EXTERNAL_SYSTEMS</td>
+<td>✓ Abgedeckt</td>
+</tr>
+<tr>
+<td>A.TIME_SOURCE</td>
+<td>OE.TIME_STAMPS</td>
+<td>✓ Abgedeckt</td>
+</tr>
+<tr>
+<td><strong>[TODO: Weitere Annahmen]</strong></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ergebnis:</strong> Alle Annahmen sind durch Umgebungsziele erfüllt. ✓</p>
+<h3 id="44-ruckverfolgbarkeit-der-sicherheitsziele">4.4 Rückverfolgbarkeit der Sicherheitsziele</h3>
+<p>Die folgende Tabelle zeigt, dass jedes Sicherheitsziel auf mindestens eine Bedrohung, OSP oder Annahme zurückgeführt werden kann:</p>
+<table>
+<thead>
+<tr>
+<th>Sicherheitsziel</th>
+<th>Bedrohungen</th>
+<th>OSPs</th>
+<th>Annahmen</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O.ACCESS_CONTROL</td>
+<td>T.UNAUTHORIZED_ACCESS, T.PRIVILEGE_ESCALATION</td>
+<td>P.ACCESS_CONTROL</td>
+<td>-</td>
+<td>✓ Gerechtfertigt</td>
+</tr>
+<tr>
+<td>O.IDENTIFICATION_AUTHENTICATION</td>
+<td>T.MASQUERADE</td>
+<td>-</td>
+<td>-</td>
+<td>✓ Gerechtfertigt</td>
+</tr>
+<tr>
+<td>O.AUDIT_GENERATION</td>
+<td>T.AUDIT_COMPROMISE</td>
+<td>P.ACCOUNTABILITY</td>
+<td>-</td>
+<td>✓ Gerechtfertigt</td>
+</tr>
+<tr>
+<td>O.AUDIT_PROTECTION</td>
+<td>T.AUDIT_COMPROMISE</td>
+<td>-</td>
+<td>-</td>
+<td>✓ Gerechtfertigt</td>
+</tr>
+<tr>
+<td>O.DATA_CONFIDENTIALITY</td>
+<td>T.DATA_DISCLOSURE, T.EAVESDROPPING</td>
+<td>P.CONFIDENTIALITY</td>
+<td>-</td>
+<td>✓ Gerechtfertigt</td>
+</tr>
+<tr>
+<td>O.CRYPTOGRAPHIC_OPERATIONS</td>
+<td>T.DATA_DISCLOSURE, T.DATA_MODIFICATION</td>
+<td>-</td>
+<td>-</td>
+<td>✓ Gerechtfertigt</td>
+</tr>
+<tr>
+<td>O.DATA_INTEGRITY</td>
+<td>T.DATA_MODIFICATION, T.DATA_CORRUPTION</td>
+<td>P.INTEGRITY</td>
+<td>-</td>
+<td>✓ Gerechtfertigt</td>
+</tr>
+<tr>
+<td>O.SECURITY_MANAGEMENT</td>
+<td>-</td>
+<td>P.MANAGEMENT</td>
+<td>-</td>
+<td>✓ Gerechtfertigt</td>
+</tr>
+<tr>
+<td>O.SECURE_STATE</td>
+<td>T.MALFUNCTION</td>
+<td>-</td>
+<td>-</td>
+<td>✓ Gerechtfertigt</td>
+</tr>
+<tr>
+<td>O.TSF_PROTECTION</td>
+<td>T.TSF_COMPROMISE, T.TSF_BYPASS</td>
+<td>-</td>
+<td>-</td>
+<td>✓ Gerechtfertigt</td>
+</tr>
+<tr>
+<td>OE.PHYSICAL_PROTECTION</td>
+<td>T.PHYSICAL_ATTACK</td>
+<td>-</td>
+<td>A.PHYSICAL_SECURITY</td>
+<td>✓ Gerechtfertigt</td>
+</tr>
+<tr>
+<td>OE.TRUSTED_ADMIN</td>
+<td>-</td>
+<td>-</td>
+<td>A.TRUSTED_ADMIN</td>
+<td>✓ Gerechtfertigt</td>
+</tr>
+<tr>
+<td>OE.USER_TRAINING</td>
+<td>-</td>
+<td>-</td>
+<td>A.USER_TRAINING</td>
+<td>✓ Gerechtfertigt</td>
+</tr>
+<tr>
+<td>OE.NETWORK_PROTECTION</td>
+<td>-</td>
+<td>-</td>
+<td>A.NETWORK_SECURITY</td>
+<td>✓ Gerechtfertigt</td>
+</tr>
+<tr>
+<td>OE.EXTERNAL_SYSTEMS</td>
+<td>-</td>
+<td>-</td>
+<td>A.EXTERNAL_SYSTEMS</td>
+<td>✓ Gerechtfertigt</td>
+</tr>
+<tr>
+<td>OE.TIME_STAMPS</td>
+<td>-</td>
+<td>-</td>
+<td>A.TIME_SOURCE</td>
+<td>✓ Gerechtfertigt</td>
+</tr>
+<tr>
+<td><strong>[TODO: Weitere Ziele]</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ergebnis:</strong> Alle Sicherheitsziele sind gerechtfertigt. ✓</p>
+<h2 id="5-zusammenfassung">5. Zusammenfassung</h2>
+<p>Die Rationale demonstriert, dass die definierten Sicherheitsziele:</p>
+<ol>
+<li><strong>Vollständig</strong> sind: Alle Bedrohungen, OSPs und Annahmen sind abgedeckt</li>
+<li><strong>Angemessen</strong> sind: Jedes Ziel ist geeignet, die zugeordneten Sicherheitsprobleme zu bewältigen</li>
+<li><strong>Rückverfolgbar</strong> sind: Jedes Ziel kann auf Sicherheitsprobleme zurückgeführt werden</li>
+<li><strong>Konsistent</strong> sind: Keine Widersprüche zwischen Zielen</li>
+</ol>
+<p>Die Sicherheitsziele bilden eine solide Grundlage für die Ableitung der Sicherheitsanforderungen (SFRs und SARs) im nächsten Schritt des Security Target.</p>
+<h2 id="6-nachste-schritte">6. Nächste Schritte</h2>
+<p>Nach der Rationale für Sicherheitsziele:
+1. Erstelle die Coverage Matrix (siehe Template 0320)
+2. Leite die Sicherheitsanforderungen (SFRs und SARs) aus den Zielen ab (siehe Template 0400-0450)</p>
+<h2 id="7-referenzen">7. Referenzen</h2>
+<ul>
+<li>ISO/IEC 15408-1: Security Target Evaluation</li>
+<li>Template 0200-0240: Sicherheitsproblem-Definition</li>
+<li>Template 0300: Sicherheitsziele</li>
+<li>Template 0320: Security Objectives Coverage Matrix</li>
+<li>Template 0400-0450: Sicherheitsanforderungen</li>
+</ul>
+<hr />
+<p><strong>Dokumenthistorie:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Datum</th>
+<th>Autor</th>
+<th>Änderungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{{ meta.version }}</td>
+<td>{{ meta.date }}</td>
+<td>{{ meta.owner }}</td>
+<td>Initiale Version</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0300_Security_Objectives.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0320_Security_Objectives_Coverage_Matrix.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

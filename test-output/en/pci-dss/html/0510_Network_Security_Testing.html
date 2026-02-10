@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0510 - Network Security Testing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0510</div>
+            <h1>Network Security Testing</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0500_Logging_and_Monitoring.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0600_Information_Security_Policy.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="network-security-testing">Network Security Testing</h1>
+<p><strong>Document ID:</strong> PCI-0510<br />
+<strong>Organization:</strong> AdminSend GmbH<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Approved by:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Draft / In Review / Approved<br />
+<strong>Classification:</strong> internal<br />
+<strong>Last Updated:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This document defines the network security testing requirements for AdminSend GmbH in accordance with PCI-DSS Requirement 11.</p>
+<h3 id="11-objectives">1.1 Objectives</h3>
+<ul>
+<li><strong>Vulnerability Identification:</strong> Regular vulnerability scans</li>
+<li><strong>Penetration Testing:</strong> Annual security tests</li>
+<li><strong>Intrusion Detection:</strong> IDS/IPS implementation</li>
+<li><strong>Compliance:</strong> Fulfillment of PCI-DSS Requirement 11</li>
+</ul>
+<h3 id="12-scope">1.2 Scope</h3>
+<p><strong>Affected Systems:</strong>
+- All CDE systems
+- Perimeter systems
+- Internal networks
+- Web applications</p>
+<h2 id="2-vulnerability-scanning">2. Vulnerability Scanning</h2>
+<h3 id="21-quarterly-scans">2.1 Quarterly Scans</h3>
+<p><strong>Requirements:</strong>
+- Quarterly external scans by ASV
+- Quarterly internal scans
+- After significant changes
+- All systems in CDE</p>
+<p><strong>ASV (Approved Scanning Vendor):</strong>
+- Name: [TODO: ASV name]
+- Contact: [TODO: Contact]
+- Last scan: [TODO: Date]
+- Next scan: [TODO: Date]</p>
+<h3 id="22-external-vulnerability-scans">2.2 External Vulnerability Scans</h3>
+<p><strong>Process:</strong>
+1. Commission ASV scan
+2. Perform scan
+3. Analyze results
+4. Remediate vulnerabilities
+5. Perform re-scan
+6. Achieve passing scan
+7. Archive ASV report</p>
+<p><strong>Passing Scan Criteria:</strong>
+- No vulnerabilities with CVSS ≥ 4.0
+- All critical vulnerabilities remediated
+- ASV confirmation</p>
+<h3 id="23-internal-vulnerability-scans">2.3 Internal Vulnerability Scans</h3>
+<p><strong>Process:</strong>
+- Quarterly scans of all internal systems
+- Authenticated scans (with credentials)
+- Complete network scans
+- Vulnerability prioritization
+- Remediation plan</p>
+<p><strong>Scan Tool:</strong> [TODO: Name of scan tool]</p>
+<p><strong>Scan Scope:</strong>
+- All CDE systems
+- All systems with CHD access
+- Network components
+- Databases
+- Web applications</p>
+<h3 id="24-vulnerability-management">2.4 Vulnerability Management</h3>
+<p><strong>Prioritization:</strong></p>
+<table>
+<thead>
+<tr>
+<th>CVSS Score</th>
+<th>Severity</th>
+<th>Remediation Deadline</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9.0 - 10.0</td>
+<td>Critical</td>
+<td>7 days</td>
+</tr>
+<tr>
+<td>7.0 - 8.9</td>
+<td>High</td>
+<td>30 days</td>
+</tr>
+<tr>
+<td>4.0 - 6.9</td>
+<td>Medium</td>
+<td>90 days</td>
+</tr>
+<tr>
+<td>0.1 - 3.9</td>
+<td>Low</td>
+<td>180 days</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Remediation Process:</strong>
+1. Vulnerability identified
+2. Risk assessment
+3. Create remediation plan
+4. Implement patch/fix
+5. Validation
+6. Documentation</p>
+<h2 id="3-penetration-testing">3. Penetration Testing</h2>
+<h3 id="31-annual-penetration-tests">3.1 Annual Penetration Tests</h3>
+<p><strong>Requirements:</strong>
+- Annually by qualified testers
+- After significant changes
+- External and internal tests
+- Network and application tests</p>
+<p><strong>Penetration Testing Firm:</strong>
+- Name: [TODO: Company]
+- Contact: [TODO: Contact]
+- Last test: [TODO: Date]
+- Next test: [TODO: Date]</p>
+<h3 id="32-external-penetration-tests">3.2 External Penetration Tests</h3>
+<p><strong>Scope:</strong>
+- Perimeter systems
+- Publicly accessible web applications
+- VPN access
+- Email systems</p>
+<p><strong>Methodology:</strong>
+- Black-box testing
+- Exploitation of vulnerabilities
+- Social engineering (optional)
+- Documentation of all findings</p>
+<h3 id="33-internal-penetration-tests">3.3 Internal Penetration Tests</h3>
+<p><strong>Scope:</strong>
+- CDE network
+- Internal applications
+- Lateral movement tests
+- Privilege escalation</p>
+<p><strong>Methodology:</strong>
+- Gray-box testing
+- Authenticated tests
+- Exploitation
+- Post-exploitation</p>
+<h3 id="34-segmentation-testing">3.4 Segmentation Testing</h3>
+<p><strong>Requirements:</strong>
+- Validation of network segmentation
+- Attempts to cross CDE boundaries
+- Firewall rule validation
+- Documentation of results</p>
+<p><strong>Process:</strong>
+1. Document segmentation
+2. Define test scenarios
+3. Perform penetration test
+4. Analyze results
+5. Remediate vulnerabilities
+6. Re-test
+7. Documentation</p>
+<h2 id="4-intrusion-detectionprevention">4. Intrusion Detection/Prevention</h2>
+<h3 id="41-idsips-implementation">4.1 IDS/IPS Implementation</h3>
+<p><strong>Requirements:</strong>
+- IDS/IPS at all CDE boundaries
+- Real-time monitoring
+- Automatic alerts
+- Regular signature updates</p>
+<p><strong>IDS/IPS Systems:</strong></p>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Type</th>
+<th>Location</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: IDS-01]</td>
+<td>Network IDS</td>
+<td>Perimeter</td>
+<td>Detection</td>
+</tr>
+<tr>
+<td>[TODO: IPS-01]</td>
+<td>Network IPS</td>
+<td>CDE boundary</td>
+<td>Prevention</td>
+</tr>
+<tr>
+<td>[TODO: HIDS-01]</td>
+<td>Host IDS</td>
+<td>CDE servers</td>
+<td>Detection</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-idsips-signatures">4.2 IDS/IPS Signatures</h3>
+<p><strong>Requirements:</strong>
+- Current signatures
+- Daily updates
+- Custom signatures for known threats
+- Regular review</p>
+<p><strong>Update Process:</strong>
+1. Download signature updates
+2. Test in test environment
+3. Deploy to production
+4. Validation
+5. Documentation</p>
+<h3 id="43-idsips-alerting">4.3 IDS/IPS Alerting</h3>
+<p><strong>Alert Categories:</strong>
+- Critical: Immediate action required
+- High: Investigation within 1 hour
+- Medium: Investigation within 4 hours
+- Low: Review within 24 hours</p>
+<p><strong>Alert Response:</strong>
+- Automatic notification to SOC
+- Initial investigation
+- Escalation if needed
+- Incident response
+- Documentation</p>
+<h2 id="5-file-integrity-monitoring-fim">5. File Integrity Monitoring (FIM)</h2>
+<h3 id="51-fim-implementation">5.1 FIM Implementation</h3>
+<p><strong>Requirements:</strong>
+- FIM on all CDE systems
+- Monitoring of critical files
+- Real-time monitoring
+- Automatic alerts</p>
+<p><strong>FIM Tool:</strong> [TODO: Name of FIM tool]</p>
+<h3 id="52-monitored-files">5.2 Monitored Files</h3>
+<p><strong>Critical Files:</strong>
+- System files
+- Configuration files
+- Application files
+- Log files
+- Database files</p>
+<p><strong>Examples:</strong>
+- <code>/etc/passwd</code>, <code>/etc/shadow</code> (Linux)
+- <code>C:\Windows\System32\config\SAM</code> (Windows)
+- Firewall configurations
+- Web server configurations
+- Database configurations</p>
+<h3 id="53-fim-alerting">5.3 FIM Alerting</h3>
+<p><strong>Alerts on:</strong>
+- File changes
+- File deletions
+- New files
+- Permission changes
+- Owner changes</p>
+<p><strong>Alert Response:</strong>
+1. Receive alert
+2. Validate change
+3. Authorized change? (Change Request)
+4. If unauthorized: Incident response
+5. Documentation</p>
+<h2 id="6-change-detection">6. Change Detection</h2>
+<h3 id="61-change-detection-mechanisms">6.1 Change Detection Mechanisms</h3>
+<p><strong>Requirements:</strong>
+- Automatic detection of changes
+- Comparison with baseline
+- Alerting on unauthorized changes
+- Documentation of all changes</p>
+<p><strong>Monitored Changes:</strong>
+- Configuration changes
+- Software installations
+- Patch installations
+- User changes
+- Permission changes</p>
+<h3 id="62-baseline-management">6.2 Baseline Management</h3>
+<p><strong>Process:</strong>
+1. Create initial baseline
+2. Document baseline
+3. Regular validation
+4. Update after approved changes
+5. Documentation</p>
+<p><strong>Baseline Components:</strong>
+- System configuration
+- Installed software
+- Network configuration
+- Users and permissions
+- Services and processes</p>
+<h2 id="7-wireless-security-testing">7. Wireless Security Testing</h2>
+<h3 id="71-wireless-access-point-detection">7.1 Wireless Access Point Detection</h3>
+<p><strong>Requirements:</strong>
+- Quarterly scans for wireless APs
+- Detection of rogue APs
+- Validation of authorized APs
+- Documentation</p>
+<p><strong>Scan Methods:</strong>
+- Wireless scanners
+- Physical inspections
+- Network scans</p>
+<h3 id="72-wireless-security-standards">7.2 Wireless Security Standards</h3>
+<p><strong>Requirements for Authorized WLANs:</strong>
+- WPA3 or WPA2 with AES
+- Strong authentication (802.1X)
+- Separate VLAN for WLAN
+- No connection to CDE without additional controls</p>
+<h2 id="8-web-application-security-testing">8. Web Application Security Testing</h2>
+<h3 id="81-application-security-tests">8.1 Application Security Tests</h3>
+<p><strong>Requirements:</strong>
+- Annual security tests
+- After significant changes
+- OWASP Top 10 coverage
+- Authenticated and unauthenticated tests</p>
+<p><strong>Test Methods:</strong>
+- Automated scans (DAST)
+- Manual penetration tests
+- Code reviews (SAST)
+- Fuzzing</p>
+<h3 id="82-owasp-top-10">8.2 OWASP Top 10</h3>
+<p><strong>Vulnerabilities to Test:</strong>
+1. Broken Access Control
+2. Cryptographic Failures
+3. Injection
+4. Insecure Design
+5. Security Misconfiguration
+6. Vulnerable and Outdated Components
+7. Identification and Authentication Failures
+8. Software and Data Integrity Failures
+9. Security Logging and Monitoring Failures
+10. Server-Side Request Forgery (SSRF)</p>
+<h2 id="9-social-engineering-testing">9. Social Engineering Testing</h2>
+<h3 id="91-phishing-simulations">9.1 Phishing Simulations</h3>
+<p><strong>Requirements:</strong>
+- Regular phishing tests
+- Various scenarios
+- Employee awareness
+- Documentation of results</p>
+<p><strong>Process:</strong>
+1. Plan phishing campaign
+2. Send emails
+3. Measure click rates
+4. Train employees
+5. Documentation</p>
+<h3 id="92-physical-social-engineering">9.2 Physical Social Engineering</h3>
+<p><strong>Tests:</strong>
+- Tailgating attempts
+- Badge cloning
+- Dumpster diving
+- Pretexting</p>
+<p><strong>Documentation:</strong>
+- Successful attacks
+- Identify vulnerabilities
+- Improvement measures
+- Employee awareness</p>
+<h2 id="10-compliance-validation">10. Compliance Validation</h2>
+<h3 id="101-validation-activities">10.1 Validation Activities</h3>
+<p><strong>Quarterly:</strong>
+- Vulnerability scans (external and internal)
+- Wireless AP scans
+- FIM validation</p>
+<p><strong>Annually:</strong>
+- Penetration tests (external and internal)
+- Segmentation tests
+- Web application security tests
+- Social engineering tests</p>
+<h3 id="102-validation-documentation">10.2 Validation Documentation</h3>
+<p><strong>Required Evidence:</strong>
+- ASV scan reports (4 per year)
+- Internal scan reports (4 per year)
+- Penetration test reports (1 per year)
+- Segmentation test reports
+- FIM configuration and logs
+- IDS/IPS configuration and logs</p>
+<hr />
+<p><strong>Document History:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Initial creation</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0500_Logging_and_Monitoring.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0600_Information_Security_Policy.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

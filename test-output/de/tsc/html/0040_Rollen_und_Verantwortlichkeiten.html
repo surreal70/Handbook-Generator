@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0040 - Rollen und Verantwortlichkeiten</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0040</div>
+            <h1>Rollen und Verantwortlichkeiten</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0030_System_Komponenten.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0050_Control_Environment.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="rollen-und-verantwortlichkeiten">Rollen und Verantwortlichkeiten</h1>
+<p><strong>Dokument-ID:</strong> TSC-0040<br />
+<strong>Organisation:</strong> AdminSend GmbH<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Genehmigt durch:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Entwurf / In Review / Freigegeben<br />
+<strong>Klassifizierung:</strong> internal<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-zweck">1. Zweck</h2>
+<p>Dieses Dokument definiert die Rollen und Verantwortlichkeiten für TSC-Compliance und SOC 2-Audits.</p>
+<h2 id="2-management-rollen">2. Management-Rollen</h2>
+<h3 id="21-executive-management">2.1 Executive Management</h3>
+<p><strong>CEO:</strong>
+- <strong>Name:</strong> [TODO: Name]
+- <strong>Verantwortlichkeiten:</strong>
+  - Gesamtverantwortung für Compliance
+  - Genehmigung von Richtlinien
+  - Ressourcenzuweisung</p>
+<p><strong>CTO:</strong>
+- <strong>Name:</strong> [TODO: Name]
+- <strong>Verantwortlichkeiten:</strong>
+  - Technische Strategie
+  - System-Architektur
+  - Change Approval</p>
+<p><strong>CISO:</strong>
+- <strong>Name:</strong> {{ meta.roles.ciso.name }}
+- <strong>Email:</strong> {{ meta.roles.ciso.email }}
+- <strong>Verantwortlichkeiten:</strong>
+  - Sicherheitsstrategie
+  - Risikomanagement
+  - Incident Response</p>
+<h2 id="3-operational-rollen">3. Operational Rollen</h2>
+<h3 id="31-system-administration">3.1 System Administration</h3>
+<p><strong>System Administrators:</strong>
+- <strong>Anzahl:</strong> [TODO: #]
+- <strong>Verantwortlichkeiten:</strong>
+  - System-Wartung
+  - Patch-Management
+  - Backup-Verwaltung</p>
+<h3 id="32-security-operations">3.2 Security Operations</h3>
+<p><strong>Security Engineers:</strong>
+- <strong>Anzahl:</strong> [TODO: #]
+- <strong>Verantwortlichkeiten:</strong>
+  - Security Monitoring
+  - Incident Response
+  - Vulnerability Management</p>
+<h3 id="33-development">3.3 Development</h3>
+<p><strong>Developers:</strong>
+- <strong>Anzahl:</strong> [TODO: #]
+- <strong>Verantwortlichkeiten:</strong>
+  - Application Development
+  - Code Reviews
+  - Security Testing</p>
+<h2 id="4-compliance-rollen">4. Compliance-Rollen</h2>
+<h3 id="41-soc-2-program-manager">4.1 SOC 2 Program Manager</h3>
+<p><strong>Name:</strong> [TODO: Name]<br />
+<strong>Email:</strong> [TODO: Email]<br />
+<strong>Verantwortlichkeiten:</strong>
+- SOC 2-Programm-Management
+- Audit-Koordination
+- Dokumentation
+- Compliance-Reporting</p>
+<h3 id="42-service-auditor">4.2 Service Auditor</h3>
+<p><strong>Firma:</strong> {{ meta.roles.auditor.name }}<br />
+<strong>Kontakt:</strong> {{ meta.roles.auditor.email }}<br />
+<strong>Verantwortlichkeiten:</strong>
+- SOC 2-Audit durchführen
+- Kontrollwirksamkeit prüfen
+- SOC 2-Bericht erstellen</p>
+<h2 id="5-raci-matrix">5. RACI-Matrix</h2>
+<h3 id="51-control-environment">5.1 Control Environment</h3>
+<table>
+<thead>
+<tr>
+<th>Aktivität</th>
+<th>CEO</th>
+<th>CTO</th>
+<th>CISO</th>
+<th>Ops</th>
+<th>Audit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Policy Approval</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Risk Assessment</td>
+<td>C</td>
+<td>C</td>
+<td>A/R</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Control Design</td>
+<td>I</td>
+<td>C</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Control Testing</td>
+<td>I</td>
+<td>I</td>
+<td>C</td>
+<td>R</td>
+<td>A</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-operations">5.2 Operations</h3>
+<table>
+<thead>
+<tr>
+<th>Aktivität</th>
+<th>CTO</th>
+<th>CISO</th>
+<th>Ops</th>
+<th>Dev</th>
+<th>Audit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Change Management</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>R</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Incident Response</td>
+<td>C</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Monitoring</td>
+<td>C</td>
+<td>A</td>
+<td>R</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Backup/Recovery</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>I</td>
+<td>I</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legende:</strong> R = Responsible, A = Accountable, C = Consulted, I = Informed</p>
+<h2 id="6-training-und-qualifikationen">6. Training und Qualifikationen</h2>
+<h3 id="61-mandatory-training">6.1 Mandatory Training</h3>
+<ul>
+<li>Security Awareness (jährlich)</li>
+<li>Role-specific Training</li>
+<li>Compliance Training</li>
+</ul>
+<h3 id="62-certifications">6.2 Certifications</h3>
+<p><strong>Security Team:</strong>
+- [TODO: CISSP, CISM, CEH]</p>
+<p><strong>Operations Team:</strong>
+- [TODO: AWS Certified, Azure Certified]</p>
+<hr />
+<p><strong>Dokumenthistorie:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Datum</th>
+<th>Autor</th>
+<th>Änderungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Initiale Erstellung</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0030_System_Komponenten.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0050_Control_Environment.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

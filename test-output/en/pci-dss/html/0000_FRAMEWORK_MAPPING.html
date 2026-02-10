@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0000 - PCI-DSS Framework Mapping</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0000</div>
+            <h1>PCI-DSS Framework Mapping</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0710_Appendix_Glossary.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0000_README.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="pci-dss-framework-mapping">PCI-DSS Framework Mapping</h1>
+<h2 id="overview">Overview</h2>
+<p>This document maps PCI-DSS v4.0 requirements to the corresponding template files in this template set. It serves as a reference for compliance audits and to identify coverage gaps.</p>
+<p><strong>PCI-DSS Version:</strong> 4.0<br />
+<strong>Template Set Version:</strong> 1.0<br />
+<strong>Last Updated:</strong> 2026-02-06<br />
+<strong>Responsible:</strong> Compliance Team  </p>
+<h2 id="pci-dss-requirement-structure">PCI-DSS Requirement Structure</h2>
+<p>PCI-DSS v4.0 is organized into 12 main requirements grouped into 6 objective areas:</p>
+<h3 id="objective-1-build-and-maintain-a-secure-network-and-systems">Objective 1: Build and Maintain a Secure Network and Systems</h3>
+<ul>
+<li>Requirement 1: Install and Maintain Network Security Controls</li>
+<li>Requirement 2: Apply Secure Configurations to All System Components</li>
+</ul>
+<h3 id="objective-2-protect-account-data">Objective 2: Protect Account Data</h3>
+<ul>
+<li>Requirement 3: Protect Stored Account Data</li>
+<li>Requirement 4: Protect Cardholder Data with Strong Cryptography During Transmission Over Open, Public Networks</li>
+</ul>
+<h3 id="objective-3-maintain-a-vulnerability-management-program">Objective 3: Maintain a Vulnerability Management Program</h3>
+<ul>
+<li>Requirement 5: Protect All Systems and Networks from Malicious Software</li>
+<li>Requirement 6: Develop and Maintain Secure Systems and Software</li>
+</ul>
+<h3 id="objective-4-implement-strong-access-control-measures">Objective 4: Implement Strong Access Control Measures</h3>
+<ul>
+<li>Requirement 7: Restrict Access to System Components and Cardholder Data by Business Need to Know</li>
+<li>Requirement 8: Identify Users and Authenticate Access to System Components</li>
+<li>Requirement 9: Restrict Physical Access to Cardholder Data</li>
+</ul>
+<h3 id="objective-5-regularly-monitor-and-test-networks">Objective 5: Regularly Monitor and Test Networks</h3>
+<ul>
+<li>Requirement 10: Log and Monitor All Access to System Components and Cardholder Data</li>
+<li>Requirement 11: Test Security of Systems and Networks Regularly</li>
+</ul>
+<h3 id="objective-6-maintain-an-information-security-policy">Objective 6: Maintain an Information Security Policy</h3>
+<ul>
+<li>Requirement 12: Support Information Security with Organizational Policies and Programs</li>
+</ul>
+<h2 id="template-mapping-by-pci-dss-requirements">Template Mapping by PCI-DSS Requirements</h2>
+<h3 id="foundation-templates-0010-0050">Foundation Templates (0010-0050)</h3>
+<p>These templates form the foundation for the entire PCI-DSS compliance program:</p>
+<table>
+<thead>
+<tr>
+<th>Template</th>
+<th>Filename</th>
+<th>PCI-DSS Requirements</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0010</td>
+<td>Scope_and_CDE_Definition.md</td>
+<td>All (Scope Definition)</td>
+</tr>
+<tr>
+<td>0020</td>
+<td>Network_Segmentation.md</td>
+<td>Req 1, Req 2</td>
+</tr>
+<tr>
+<td>0030</td>
+<td>Roles_and_Responsibilities.md</td>
+<td>Req 12</td>
+</tr>
+<tr>
+<td>0040</td>
+<td>Data_Flow_Diagrams.md</td>
+<td>Req 1, Req 3, Req 4</td>
+</tr>
+<tr>
+<td>0050</td>
+<td>Compliance_Program.md</td>
+<td>Req 12</td>
+</tr>
+</tbody>
+</table>
+<h3 id="requirement-1-install-and-maintain-network-security-controls">Requirement 1: Install and Maintain Network Security Controls</h3>
+<p><strong>Objective:</strong> Install and maintain network security controls to protect cardholder data.</p>
+<table>
+<thead>
+<tr>
+<th>Sub-Requirement</th>
+<th>Description</th>
+<th>Template</th>
+<th>Filename</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.1</td>
+<td>Processes and mechanisms for network security controls</td>
+<td>0100</td>
+<td>Firewall_Configuration.md</td>
+</tr>
+<tr>
+<td>1.2</td>
+<td>Configure network security controls</td>
+<td>0100</td>
+<td>Firewall_Configuration.md</td>
+</tr>
+<tr>
+<td>1.3</td>
+<td>Restrict network access to and from the CDE</td>
+<td>0100, 0020</td>
+<td>Firewall_Configuration.md, Network_Segmentation.md</td>
+</tr>
+<tr>
+<td>1.4</td>
+<td>Restrict network connections between trusted and untrusted networks</td>
+<td>0100, 0020</td>
+<td>Firewall_Configuration.md, Network_Segmentation.md</td>
+</tr>
+<tr>
+<td>1.5</td>
+<td>Mitigate risks to the CDE from use of services, protocols, and ports</td>
+<td>0100</td>
+<td>Firewall_Configuration.md</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Coverage:</strong> Complete<br />
+<strong>Notes:</strong> Templates cover firewall configuration, network segmentation, and access control.</p>
+<h3 id="requirement-2-apply-secure-configurations-to-all-system-components">Requirement 2: Apply Secure Configurations to All System Components</h3>
+<p><strong>Objective:</strong> Apply secure configurations to all system components.</p>
+<table>
+<thead>
+<tr>
+<th>Sub-Requirement</th>
+<th>Description</th>
+<th>Template</th>
+<th>Filename</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2.1</td>
+<td>Processes and mechanisms for secure configurations</td>
+<td>-</td>
+<td><strong>GAP</strong></td>
+</tr>
+<tr>
+<td>2.2</td>
+<td>Apply secure configurations to all system components</td>
+<td>-</td>
+<td><strong>GAP</strong></td>
+</tr>
+<tr>
+<td>2.3</td>
+<td>Secure wireless environments</td>
+<td>-</td>
+<td><strong>GAP</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Coverage:</strong> Partial (via 0100 Firewall Configuration)<br />
+<strong>Notes:</strong> <strong>IDENTIFIED GAP</strong> - Dedicated templates for system hardening and secure configurations are missing.</p>
+<h3 id="requirement-3-protect-stored-account-data">Requirement 3: Protect Stored Account Data</h3>
+<p><strong>Objective:</strong> Protect stored account data.</p>
+<table>
+<thead>
+<tr>
+<th>Sub-Requirement</th>
+<th>Description</th>
+<th>Template</th>
+<th>Filename</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3.1</td>
+<td>Processes and mechanisms for protecting stored account data</td>
+<td>-</td>
+<td><strong>GAP</strong></td>
+</tr>
+<tr>
+<td>3.2</td>
+<td>Minimize storage of account data after authorization</td>
+<td>-</td>
+<td><strong>GAP</strong></td>
+</tr>
+<tr>
+<td>3.3</td>
+<td>Do not store Sensitive Authentication Data (SAD) after authorization</td>
+<td>-</td>
+<td><strong>GAP</strong></td>
+</tr>
+<tr>
+<td>3.4</td>
+<td>Restrict access to displays of full PAN</td>
+<td>0400</td>
+<td>Access_Control.md</td>
+</tr>
+<tr>
+<td>3.5</td>
+<td>Render PAN unreadable wherever stored</td>
+<td>-</td>
+<td><strong>GAP</strong></td>
+</tr>
+<tr>
+<td>3.6</td>
+<td>Secure cryptographic keys used to protect stored account data</td>
+<td>-</td>
+<td><strong>GAP</strong></td>
+</tr>
+<tr>
+<td>3.7</td>
+<td>Manage cryptography for protection of stored account data</td>
+<td>-</td>
+<td><strong>GAP</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Coverage:</strong> Minimal<br />
+<strong>Notes:</strong> <strong>IDENTIFIED GAP</strong> - Templates for data encryption, key management, and data storage are missing.</p>
+<h3 id="requirement-4-protect-cardholder-data-with-strong-cryptography-during-transmission">Requirement 4: Protect Cardholder Data with Strong Cryptography During Transmission</h3>
+<p><strong>Objective:</strong> Protect cardholder data with strong cryptography during transmission.</p>
+<table>
+<thead>
+<tr>
+<th>Sub-Requirement</th>
+<th>Description</th>
+<th>Template</th>
+<th>Filename</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4.1</td>
+<td>Processes and mechanisms for protecting CHD during transmission</td>
+<td>-</td>
+<td><strong>GAP</strong></td>
+</tr>
+<tr>
+<td>4.2</td>
+<td>Protect PAN with strong cryptography during transmission over open, public networks</td>
+<td>-</td>
+<td><strong>GAP</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Coverage:</strong> None<br />
+<strong>Notes:</strong> <strong>IDENTIFIED GAP</strong> - Templates for encryption in transit are missing.</p>
+<h3 id="requirement-5-protect-all-systems-and-networks-from-malicious-software">Requirement 5: Protect All Systems and Networks from Malicious Software</h3>
+<p><strong>Objective:</strong> Protect all systems and networks from malicious software.</p>
+<table>
+<thead>
+<tr>
+<th>Sub-Requirement</th>
+<th>Description</th>
+<th>Template</th>
+<th>Filename</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5.1</td>
+<td>Processes and mechanisms for protecting from malware</td>
+<td>-</td>
+<td><strong>GAP</strong></td>
+</tr>
+<tr>
+<td>5.2</td>
+<td>Implement malware protection on all systems</td>
+<td>-</td>
+<td><strong>GAP</strong></td>
+</tr>
+<tr>
+<td>5.3</td>
+<td>Keep anti-malware mechanisms and processes active</td>
+<td>-</td>
+<td><strong>GAP</strong></td>
+</tr>
+<tr>
+<td>5.4</td>
+<td>Implement anti-phishing mechanisms</td>
+<td>-</td>
+<td><strong>GAP</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Coverage:</strong> None<br />
+<strong>Notes:</strong> <strong>IDENTIFIED GAP</strong> - Templates for malware protection and anti-phishing are missing.</p>
+<h3 id="requirement-6-develop-and-maintain-secure-systems-and-software">Requirement 6: Develop and Maintain Secure Systems and Software</h3>
+<p><strong>Objective:</strong> Develop and maintain secure systems and software.</p>
+<table>
+<thead>
+<tr>
+<th>Sub-Requirement</th>
+<th>Description</th>
+<th>Template</th>
+<th>Filename</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>6.1</td>
+<td>Processes and mechanisms for secure systems and software</td>
+<td>-</td>
+<td><strong>GAP</strong></td>
+</tr>
+<tr>
+<td>6.2</td>
+<td>Protect bona fide software and applications from threats</td>
+<td>-</td>
+<td><strong>GAP</strong></td>
+</tr>
+<tr>
+<td>6.3</td>
+<td>Identify and address security vulnerabilities</td>
+<td>-</td>
+<td><strong>GAP</strong></td>
+</tr>
+<tr>
+<td>6.4</td>
+<td>Protect public-facing web applications from attacks</td>
+<td>-</td>
+<td><strong>GAP</strong></td>
+</tr>
+<tr>
+<td>6.5</td>
+<td>Securely manage changes to all system components</td>
+<td>-</td>
+<td><strong>GAP</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Coverage:</strong> None<br />
+<strong>Notes:</strong> <strong>IDENTIFIED GAP</strong> - Templates for secure development, vulnerability management, and change management are missing.</p>
+<h3 id="requirement-7-restrict-access-to-system-components-and-cardholder-data">Requirement 7: Restrict Access to System Components and Cardholder Data</h3>
+<p><strong>Objective:</strong> Restrict access to system components and cardholder data by business need-to-know.</p>
+<table>
+<thead>
+<tr>
+<th>Sub-Requirement</th>
+<th>Description</th>
+<th>Template</th>
+<th>Filename</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7.1</td>
+<td>Processes and mechanisms for restricting access</td>
+<td>0400</td>
+<td>Access_Control.md</td>
+</tr>
+<tr>
+<td>7.2</td>
+<td>Establish access to system components and data by need-to-know</td>
+<td>0400</td>
+<td>Access_Control.md</td>
+</tr>
+<tr>
+<td>7.3</td>
+<td>Establish access to system components and data via applications and systems</td>
+<td>0400</td>
+<td>Access_Control.md</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Coverage:</strong> Complete<br />
+<strong>Notes:</strong> Template 0400 covers RBAC, least privilege, need-to-know, and access management.</p>
+<h3 id="requirement-8-identify-users-and-authenticate-access-to-system-components">Requirement 8: Identify Users and Authenticate Access to System Components</h3>
+<p><strong>Objective:</strong> Identify users and authenticate access to system components.</p>
+<table>
+<thead>
+<tr>
+<th>Sub-Requirement</th>
+<th>Description</th>
+<th>Template</th>
+<th>Filename</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8.1</td>
+<td>Processes and mechanisms for user identification and authentication</td>
+<td>0410</td>
+<td>User_Authentication.md</td>
+</tr>
+<tr>
+<td>8.2</td>
+<td>Identify users before access to system components</td>
+<td>0410</td>
+<td>User_Authentication.md</td>
+</tr>
+<tr>
+<td>8.3</td>
+<td>Establish strong authentication for users</td>
+<td>0410</td>
+<td>User_Authentication.md</td>
+</tr>
+<tr>
+<td>8.4</td>
+<td>Implement multi-factor authentication (MFA)</td>
+<td>0410</td>
+<td>User_Authentication.md</td>
+</tr>
+<tr>
+<td>8.5</td>
+<td>Protect MFA systems from misuse</td>
+<td>0410</td>
+<td>User_Authentication.md</td>
+</tr>
+<tr>
+<td>8.6</td>
+<td>Manage use of application and system accounts</td>
+<td>0410</td>
+<td>User_Authentication.md</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Coverage:</strong> Complete<br />
+<strong>Notes:</strong> Template 0410 covers authentication, MFA, password policies, and account management.</p>
+<h3 id="requirement-9-restrict-physical-access-to-cardholder-data">Requirement 9: Restrict Physical Access to Cardholder Data</h3>
+<p><strong>Objective:</strong> Restrict physical access to cardholder data.</p>
+<table>
+<thead>
+<tr>
+<th>Sub-Requirement</th>
+<th>Description</th>
+<th>Template</th>
+<th>Filename</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9.1</td>
+<td>Processes and mechanisms for restricting physical access</td>
+<td>0420</td>
+<td>Physical_Security.md</td>
+</tr>
+<tr>
+<td>9.2</td>
+<td>Restrict physical access to CDE</td>
+<td>0420</td>
+<td>Physical_Security.md</td>
+</tr>
+<tr>
+<td>9.3</td>
+<td>Control physical access for personnel and visitors</td>
+<td>0420</td>
+<td>Physical_Security.md</td>
+</tr>
+<tr>
+<td>9.4</td>
+<td>Secure media with cardholder data</td>
+<td>0420</td>
+<td>Physical_Security.md</td>
+</tr>
+<tr>
+<td>9.5</td>
+<td>Protect point-of-interaction (POI) devices from tampering</td>
+<td>0420</td>
+<td>Physical_Security.md</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Coverage:</strong> Complete<br />
+<strong>Notes:</strong> Template 0420 covers physical access controls, visitor management, and media security.</p>
+<h3 id="requirement-10-log-and-monitor-all-access-to-system-components-and-cardholder-data">Requirement 10: Log and Monitor All Access to System Components and Cardholder Data</h3>
+<p><strong>Objective:</strong> Log and monitor all access to system components and cardholder data.</p>
+<table>
+<thead>
+<tr>
+<th>Sub-Requirement</th>
+<th>Description</th>
+<th>Template</th>
+<th>Filename</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10.1</td>
+<td>Processes and mechanisms for logging and monitoring</td>
+<td>0500</td>
+<td>Logging_and_Monitoring.md</td>
+</tr>
+<tr>
+<td>10.2</td>
+<td>Implement audit logs to reconstruct user activities</td>
+<td>0500</td>
+<td>Logging_and_Monitoring.md</td>
+</tr>
+<tr>
+<td>10.3</td>
+<td>Protect audit logs from destruction and unauthorized changes</td>
+<td>0500</td>
+<td>Logging_and_Monitoring.md</td>
+</tr>
+<tr>
+<td>10.4</td>
+<td>Review audit logs to identify anomalies or suspicious activity</td>
+<td>0500</td>
+<td>Logging_and_Monitoring.md</td>
+</tr>
+<tr>
+<td>10.5</td>
+<td>Retain audit log history</td>
+<td>0500</td>
+<td>Logging_and_Monitoring.md</td>
+</tr>
+<tr>
+<td>10.6</td>
+<td>Detect and respond to security vulnerabilities and anomalies through security monitoring</td>
+<td>0500</td>
+<td>Logging_and_Monitoring.md</td>
+</tr>
+<tr>
+<td>10.7</td>
+<td>Detect and respond to failures of security systems in a timely manner</td>
+<td>0500</td>
+<td>Logging_and_Monitoring.md</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Coverage:</strong> Complete<br />
+<strong>Notes:</strong> Template 0500 covers logging requirements, SIEM, log retention, monitoring, and alerting.</p>
+<h3 id="requirement-11-test-security-of-systems-and-networks-regularly">Requirement 11: Test Security of Systems and Networks Regularly</h3>
+<p><strong>Objective:</strong> Test security of systems and networks regularly.</p>
+<table>
+<thead>
+<tr>
+<th>Sub-Requirement</th>
+<th>Description</th>
+<th>Template</th>
+<th>Filename</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>11.1</td>
+<td>Processes and mechanisms for regular security testing</td>
+<td>0510</td>
+<td>Network_Security_Testing.md</td>
+</tr>
+<tr>
+<td>11.2</td>
+<td>Identify and monitor wireless access points</td>
+<td>0510</td>
+<td>Network_Security_Testing.md</td>
+</tr>
+<tr>
+<td>11.3</td>
+<td>Identify and address external and internal vulnerabilities</td>
+<td>0510</td>
+<td>Network_Security_Testing.md</td>
+</tr>
+<tr>
+<td>11.4</td>
+<td>Perform external and internal penetration testing</td>
+<td>0510</td>
+<td>Network_Security_Testing.md</td>
+</tr>
+<tr>
+<td>11.5</td>
+<td>Detect and respond to network intrusions and manipulations</td>
+<td>0510</td>
+<td>Network_Security_Testing.md</td>
+</tr>
+<tr>
+<td>11.6</td>
+<td>Detect and respond to unauthorized changes to payment pages</td>
+<td>0510</td>
+<td>Network_Security_Testing.md</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Coverage:</strong> Complete<br />
+<strong>Notes:</strong> Template 0510 covers vulnerability scanning, penetration testing, IDS/IPS, and change detection.</p>
+<h3 id="requirement-12-support-information-security-with-organizational-policies-and-programs">Requirement 12: Support Information Security with Organizational Policies and Programs</h3>
+<p><strong>Objective:</strong> Support information security with organizational policies and programs.</p>
+<table>
+<thead>
+<tr>
+<th>Sub-Requirement</th>
+<th>Description</th>
+<th>Template</th>
+<th>Filename</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12.1</td>
+<td>Processes and mechanisms for information security policies</td>
+<td>0600</td>
+<td>Information_Security_Policy.md</td>
+</tr>
+<tr>
+<td>12.2</td>
+<td>Implement acceptable use policies</td>
+<td>0600</td>
+<td>Information_Security_Policy.md</td>
+</tr>
+<tr>
+<td>12.3</td>
+<td>Assess and manage risks to information assets</td>
+<td>0600</td>
+<td>Information_Security_Policy.md</td>
+</tr>
+<tr>
+<td>12.4</td>
+<td>Ensure PCI-DSS compliance through risk assessment of service providers</td>
+<td>0600</td>
+<td>Information_Security_Policy.md</td>
+</tr>
+<tr>
+<td>12.5</td>
+<td>Manage PCI-DSS requirements in business-as-usual (BAU) processes</td>
+<td>0050, 0600</td>
+<td>Compliance_Program.md, Information_Security_Policy.md</td>
+</tr>
+<tr>
+<td>12.6</td>
+<td>Maintain security awareness</td>
+<td>0600</td>
+<td>Information_Security_Policy.md</td>
+</tr>
+<tr>
+<td>12.7</td>
+<td>Screen personnel prior to hire and regularly</td>
+<td>0600</td>
+<td>Information_Security_Policy.md</td>
+</tr>
+<tr>
+<td>12.8</td>
+<td>Manage risk from service providers and other third parties</td>
+<td>0600</td>
+<td>Information_Security_Policy.md</td>
+</tr>
+<tr>
+<td>12.9</td>
+<td>Service providers acknowledge PCI-DSS requirements at least annually</td>
+<td>0600</td>
+<td>Information_Security_Policy.md</td>
+</tr>
+<tr>
+<td>12.10</td>
+<td>Document and communicate suspected and confirmed security incidents</td>
+<td>0600</td>
+<td>Information_Security_Policy.md</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Coverage:</strong> Complete<br />
+<strong>Notes:</strong> Templates 0050 and 0600 cover policies, risk management, awareness, and incident response.</p>
+<h2 id="coverage-summary">Coverage Summary</h2>
+<h3 id="fully-covered-requirements">Fully Covered Requirements</h3>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Title</th>
+<th>Primary Template(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Network Security Controls</td>
+<td>0100, 0020</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Access Control</td>
+<td>0400</td>
+</tr>
+<tr>
+<td>8</td>
+<td>User Authentication</td>
+<td>0410</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Physical Security</td>
+<td>0420</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Logging and Monitoring</td>
+<td>0500</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Security Testing</td>
+<td>0510</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Information Security Policy</td>
+<td>0600, 0050</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Coverage Rate:</strong> 7 out of 12 requirements (58%)</p>
+<h3 id="identified-coverage-gaps">Identified Coverage Gaps</h3>
+<p>The following PCI-DSS requirements are <strong>not fully</strong> covered by templates:</p>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Title</th>
+<th>Missing Templates</th>
+<th>Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>Secure Configurations</td>
+<td>System Hardening, Secure Configurations, Wireless Security</td>
+<td><strong>HIGH</strong></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Protect Stored Account Data</td>
+<td>Data Encryption, Key Management, Data Storage, Data Retention</td>
+<td><strong>CRITICAL</strong></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Protect Data in Transit</td>
+<td>Encryption in Transit, TLS Configuration</td>
+<td><strong>CRITICAL</strong></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Malware Protection</td>
+<td>Anti-Malware, Anti-Phishing</td>
+<td><strong>HIGH</strong></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Secure Development</td>
+<td>Secure SDLC, Vulnerability Management, Change Management, Patch Management</td>
+<td><strong>HIGH</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="recommended-additional-templates">Recommended Additional Templates</h3>
+<p>To achieve complete PCI-DSS compliance, the following templates should be created:</p>
+<h4 id="requirement-2-secure-configurations">Requirement 2: Secure Configurations</h4>
+<ul>
+<li><strong>0110_System_Hardening.md</strong> - Secure system configurations and hardening standards</li>
+<li><strong>0120_Wireless_Security.md</strong> - Wireless network security</li>
+<li><strong>0130_Default_Accounts_and_Passwords.md</strong> - Management of default accounts and passwords</li>
+</ul>
+<h4 id="requirement-3-protect-stored-account-data_1">Requirement 3: Protect Stored Account Data</h4>
+<ul>
+<li><strong>0200_Data_Storage_and_Retention.md</strong> - Data storage and retention policies</li>
+<li><strong>0210_Data_Encryption.md</strong> - Encryption of stored data</li>
+<li><strong>0220_Key_Management.md</strong> - Cryptographic key management</li>
+<li><strong>0230_PAN_Masking.md</strong> - PAN masking and display controls</li>
+</ul>
+<h4 id="requirement-4-protect-data-in-transit">Requirement 4: Protect Data in Transit</h4>
+<ul>
+<li><strong>0240_Encryption_in_Transit.md</strong> - Encryption during data transmission</li>
+<li><strong>0250_TLS_Configuration.md</strong> - TLS/SSL configuration and management</li>
+</ul>
+<h4 id="requirement-5-malware-protection">Requirement 5: Malware Protection</h4>
+<ul>
+<li><strong>0300_Anti_Malware.md</strong> - Anti-malware protection and management</li>
+<li><strong>0310_Anti_Phishing.md</strong> - Anti-phishing measures</li>
+</ul>
+<h4 id="requirement-6-secure-development">Requirement 6: Secure Development</h4>
+<ul>
+<li><strong>0320_Secure_SDLC.md</strong> - Secure Software Development Lifecycle</li>
+<li><strong>0330_Vulnerability_Management.md</strong> - Vulnerability management</li>
+<li><strong>0340_Patch_Management.md</strong> - Patch management process</li>
+<li><strong>0350_Change_Management.md</strong> - Change management</li>
+<li><strong>0360_Web_Application_Security.md</strong> - Web application security (WAF, code reviews)</li>
+</ul>
+<h3 id="appendix-templates-0700-0750">Appendix Templates (0700-0750)</h3>
+<p>The following appendix templates are available:</p>
+<table>
+<thead>
+<tr>
+<th>Template</th>
+<th>Filename</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0700</td>
+<td>Appendix_Evidence_Register.md</td>
+<td>Documentation of compliance evidence</td>
+</tr>
+<tr>
+<td>0710</td>
+<td>Appendix_Glossary.md</td>
+<td>Terms and definitions</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recommended Additional Appendix Templates:</strong>
+- <strong>0720_Appendix_Checklists.md</strong> - Compliance checklists for all 12 requirements
+- <strong>0730_Appendix_Audit_Logs.md</strong> - Examples of audit log formats
+- <strong>0740_Appendix_Forms.md</strong> - Standard forms (access requests, change requests, etc.)
+- <strong>0750_Appendix_Contacts.md</strong> - Emergency contacts and escalation paths</p>
+<h2 id="usage-guidelines">Usage Guidelines</h2>
+<h3 id="for-compliance-audits">For Compliance Audits</h3>
+<ol>
+<li>
+<p><strong>Requirement Mapping:</strong> Use this document to identify which templates are relevant for each PCI-DSS requirement.</p>
+</li>
+<li>
+<p><strong>Gap Analysis:</strong> Review the identified gaps and prioritize creation of missing templates.</p>
+</li>
+<li>
+<p><strong>Evidence Collection:</strong> Use template 0700 (Evidence Register) to document all compliance evidence.</p>
+</li>
+<li>
+<p><strong>Audit Preparation:</strong> Ensure all relevant templates are completed and current.</p>
+</li>
+</ol>
+<h3 id="for-template-customization">For Template Customization</h3>
+<ol>
+<li>
+<p><strong>Organization-Specific Customization:</strong> Replace all <code>[TODO]</code> placeholders with organization-specific information.</p>
+</li>
+<li>
+<p><strong>Placeholder Substitution:</strong> Use the placeholder system (<code>{{ meta.* }}</code>) for automatic data insertion.</p>
+</li>
+<li>
+<p><strong>Additional Sections:</strong> Add additional sections as needed that are relevant to your organization.</p>
+</li>
+<li>
+<p><strong>Version Control:</strong> Document all changes in the document history at the end of each template.</p>
+</li>
+</ol>
+<h3 id="for-continuous-compliance">For Continuous Compliance</h3>
+<ol>
+<li>
+<p><strong>Regular Reviews:</strong> Review templates quarterly for currency.</p>
+</li>
+<li>
+<p><strong>Change Management:</strong> Update templates when processes or technologies change.</p>
+</li>
+<li>
+<p><strong>PCI-DSS Updates:</strong> Adapt templates when new PCI-DSS versions are released.</p>
+</li>
+<li>
+<p><strong>Lessons Learned:</strong> Integrate insights from audits and incidents into templates.</p>
+</li>
+</ol>
+<h2 id="references">References</h2>
+<ul>
+<li><strong>PCI-DSS v4.0:</strong> <a href="https://www.pcisecuritystandards.org/">PCI Security Standards Council</a></li>
+<li><strong>PCI-DSS v4.0 Summary of Changes:</strong> Documents changes from v3.2.1 to v4.0</li>
+<li><strong>PCI-DSS v4.0 ROC Template:</strong> Report on Compliance Template</li>
+<li><strong>PCI-DSS v4.0 SAQ:</strong> Self-Assessment Questionnaires</li>
+</ul>
+<h2 id="change-history">Change History</h2>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>2026-02-06</td>
+<td>Compliance Team</td>
+<td>Initial creation of framework mapping</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Note:</strong> This mapping document should be updated whenever templates change or when new PCI-DSS versions are released.</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0710_Appendix_Glossary.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0000_README.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

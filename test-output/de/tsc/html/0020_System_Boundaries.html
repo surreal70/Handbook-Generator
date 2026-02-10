@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0020 - System-Grenzen und Schnittstellen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0020</div>
+            <h1>System-Grenzen und Schnittstellen</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0010_Systembeschreibung.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0030_System_Komponenten.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="system-grenzen-und-schnittstellen">System-Grenzen und Schnittstellen</h1>
+<p><strong>Dokument-ID:</strong> TSC-0020<br />
+<strong>Organisation:</strong> AdminSend GmbH<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Genehmigt durch:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Entwurf / In Review / Freigegeben<br />
+<strong>Klassifizierung:</strong> internal<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-zweck">1. Zweck</h2>
+<p>Dieses Dokument definiert die Grenzen des Service-Systems und dokumentiert alle Schnittstellen zu externen Systemen und Organisationen.</p>
+<h3 id="11-ziele">1.1 Ziele</h3>
+<ul>
+<li><strong>Boundary Definition:</strong> Klare Abgrenzung des Systems</li>
+<li><strong>Interface Documentation:</strong> Dokumentation aller Schnittstellen</li>
+<li><strong>Trust Boundaries:</strong> Identifikation von Vertrauensgrenzen</li>
+<li><strong>Scope Management:</strong> Basis für Audit-Scope</li>
+</ul>
+<h2 id="2-system-grenzen">2. System-Grenzen</h2>
+<h3 id="21-in-scope-komponenten">2.1 In-Scope Komponenten</h3>
+<p><strong>Infrastruktur:</strong>
+- [TODO: Produktions-Server]
+- [TODO: Datenbank-Server]
+- [TODO: Netzwerk-Komponenten]
+- [TODO: Sicherheits-Appliances]</p>
+<p><strong>Anwendungen:</strong>
+- [TODO: Haupt-Anwendung]
+- [TODO: API-Services]
+- [TODO: Admin-Portal]</p>
+<p><strong>Prozesse:</strong>
+- [TODO: Change Management]
+- [TODO: Incident Management]
+- [TODO: Access Management]</p>
+<p><strong>Personal:</strong>
+- [TODO: Operations Team]
+- [TODO: Security Team]
+- [TODO: Development Team]</p>
+<h3 id="22-out-of-scope-komponenten">2.2 Out-of-Scope Komponenten</h3>
+<table>
+<thead>
+<tr>
+<th>Komponente</th>
+<th>Begründung</th>
+<th>Alternative Kontrolle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: HR System]</td>
+<td>Keine Kundendaten</td>
+<td>Separate Sicherheitskontrollen</td>
+</tr>
+<tr>
+<td>[TODO: Dev Environment]</td>
+<td>Keine Produktionsdaten</td>
+<td>Isolierte Umgebung</td>
+</tr>
+<tr>
+<td>[TODO: Marketing Tools]</td>
+<td>Kein direkter Service-Bezug</td>
+<td>Standard IT-Kontrollen</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-boundary-diagram">2.3 Boundary Diagram</h3>
+<p>[TODO: Fügen Sie System-Boundary-Diagramm ein]</p>
+<div class="codehilite"><pre><span></span><code>┌─────────────────────────────────────────────────────┐
+│                  System Boundary                     │
+│                                                       │
+│  ┌──────────────┐    ┌──────────────┐              │
+│  │ Web App      │───▶│ Database     │              │
+│  └──────────────┘    └──────────────┘              │
+│         │                    │                       │
+│         ▼                    ▼                       │
+│  ┌──────────────┐    ┌──────────────┐              │
+│  │ API Gateway  │    │ Backup       │              │
+│  └──────────────┘    └──────────────┘              │
+│                                                       │
+└─────────────────────────────────────────────────────┘
+         │                    │
+         ▼                    ▼
+   External Systems    Subservice Orgs
+</code></pre></div>
+
+<h2 id="3-externe-schnittstellen">3. Externe Schnittstellen</h2>
+<h3 id="31-kundensch-nittstellen">3.1 Kundensch nittstellen</h3>
+<p><strong>User Interfaces:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Interface</th>
+<th>Type</th>
+<th>Access Method</th>
+<th>Security</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Web Portal]</td>
+<td>HTTPS</td>
+<td>Browser</td>
+<td>TLS 1.2+, MFA</td>
+</tr>
+<tr>
+<td>[TODO: Mobile App]</td>
+<td>HTTPS</td>
+<td>Native App</td>
+<td>TLS 1.2+, Certificate Pinning</td>
+</tr>
+<tr>
+<td>[TODO: API]</td>
+<td>REST API</td>
+<td>HTTP Client</td>
+<td>OAuth 2.0, API Keys</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Data Interfaces:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Interface</th>
+<th>Protocol</th>
+<th>Data Type</th>
+<th>Encryption</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: File Upload]</td>
+<td>HTTPS</td>
+<td>Documents</td>
+<td>TLS 1.2+, AES-256 at rest</td>
+</tr>
+<tr>
+<td>[TODO: Bulk Import]</td>
+<td>SFTP</td>
+<td>CSV/JSON</td>
+<td>SSH, GPG encryption</td>
+</tr>
+<tr>
+<td>[TODO: Webhook]</td>
+<td>HTTPS</td>
+<td>JSON</td>
+<td>TLS 1.2+, HMAC signature</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-subservice-organization-interfaces">3.2 Subservice Organization Interfaces</h3>
+<table>
+<thead>
+<tr>
+<th>Subservice Org</th>
+<th>Interface Type</th>
+<th>Purpose</th>
+<th>Security Controls</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Cloud Provider]</td>
+<td>API</td>
+<td>Infrastructure</td>
+<td>IAM, Encryption</td>
+</tr>
+<tr>
+<td>[TODO: Email Service]</td>
+<td>SMTP/API</td>
+<td>Notifications</td>
+<td>TLS, API Keys</td>
+</tr>
+<tr>
+<td>[TODO: Payment Gateway]</td>
+<td>REST API</td>
+<td>Payments</td>
+<td>TLS, Tokenization</td>
+</tr>
+<tr>
+<td>[TODO: Identity Provider]</td>
+<td>SAML/OAuth</td>
+<td>Authentication</td>
+<td>SAML Assertion, TLS</td>
+</tr>
+</tbody>
+</table>
+<h3 id="33-administrative-interfaces">3.3 Administrative Interfaces</h3>
+<table>
+<thead>
+<tr>
+<th>Interface</th>
+<th>Purpose</th>
+<th>Access Control</th>
+<th>Audit Logging</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: SSH]</td>
+<td>Server administration</td>
+<td>Key-based, MFA</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>[TODO: Admin Console]</td>
+<td>System configuration</td>
+<td>RBAC, MFA</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>[TODO: Database Console]</td>
+<td>Database management</td>
+<td>IP whitelist, MFA</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-datenflusse-uber-grenzen">4. Datenflüsse über Grenzen</h2>
+<h3 id="41-inbound-data-flows">4.1 Inbound Data Flows</h3>
+<p><strong>Von Kunden:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Data Flow</th>
+<th>Source</th>
+<th>Destination</th>
+<th>Data Type</th>
+<th>Security</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: User Input]</td>
+<td>Customer Browser</td>
+<td>Web Application</td>
+<td>Form Data</td>
+<td>TLS 1.2+, Input Validation</td>
+</tr>
+<tr>
+<td>[TODO: API Requests]</td>
+<td>Customer System</td>
+<td>API Gateway</td>
+<td>JSON</td>
+<td>OAuth 2.0, Rate Limiting</td>
+</tr>
+<tr>
+<td>[TODO: File Uploads]</td>
+<td>Customer</td>
+<td>Storage Service</td>
+<td>Files</td>
+<td>TLS 1.2+, Virus Scanning</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Von Subservice Organizations:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Data Flow</th>
+<th>Source</th>
+<th>Destination</th>
+<th>Data Type</th>
+<th>Security</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Auth Response]</td>
+<td>Identity Provider</td>
+<td>Application</td>
+<td>SAML Token</td>
+<td>TLS, Signature Verification</td>
+</tr>
+<tr>
+<td>[TODO: Payment Status]</td>
+<td>Payment Gateway</td>
+<td>Application</td>
+<td>JSON</td>
+<td>TLS, Webhook Signature</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-outbound-data-flows">4.2 Outbound Data Flows</h3>
+<p><strong>Zu Kunden:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Data Flow</th>
+<th>Source</th>
+<th>Destination</th>
+<th>Data Type</th>
+<th>Security</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: API Response]</td>
+<td>Application</td>
+<td>Customer System</td>
+<td>JSON</td>
+<td>TLS 1.2+, Data Filtering</td>
+</tr>
+<tr>
+<td>[TODO: Email Notifications]</td>
+<td>Application</td>
+<td>Customer Email</td>
+<td>Email</td>
+<td>TLS, SPF/DKIM</td>
+</tr>
+<tr>
+<td>[TODO: Reports]</td>
+<td>Application</td>
+<td>Customer</td>
+<td>PDF</td>
+<td>TLS 1.2+, Access Control</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Zu Subservice Organizations:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Data Flow</th>
+<th>Source</th>
+<th>Destination</th>
+<th>Data Type</th>
+<th>Security</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Logs]</td>
+<td>Application</td>
+<td>SIEM</td>
+<td>Log Data</td>
+<td>TLS, Encryption</td>
+</tr>
+<tr>
+<td>[TODO: Backups]</td>
+<td>Database</td>
+<td>Backup Service</td>
+<td>Database Dump</td>
+<td>Encryption, Access Control</td>
+</tr>
+<tr>
+<td>[TODO: Metrics]</td>
+<td>Application</td>
+<td>Monitoring</td>
+<td>Metrics</td>
+<td>TLS, API Keys</td>
+</tr>
+</tbody>
+</table>
+<h3 id="43-internal-data-flows">4.3 Internal Data Flows</h3>
+<table>
+<thead>
+<tr>
+<th>Data Flow</th>
+<th>Source</th>
+<th>Destination</th>
+<th>Data Type</th>
+<th>Security</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: App to DB]</td>
+<td>Application</td>
+<td>Database</td>
+<td>SQL Queries</td>
+<td>TLS, Parameterized Queries</td>
+</tr>
+<tr>
+<td>[TODO: Cache Updates]</td>
+<td>Application</td>
+<td>Cache</td>
+<td>Key-Value</td>
+<td>Internal Network, Encryption</td>
+</tr>
+<tr>
+<td>[TODO: Log Shipping]</td>
+<td>Servers</td>
+<td>Log Server</td>
+<td>Logs</td>
+<td>TLS, Authentication</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-trust-boundaries">5. Trust Boundaries</h2>
+<h3 id="51-external-trust-boundary">5.1 External Trust Boundary</h3>
+<p><strong>Internet-facing Components:</strong>
+- Web Application (DMZ)
+- API Gateway (DMZ)
+- Load Balancer (DMZ)</p>
+<p><strong>Security Controls:</strong>
+- Web Application Firewall (WAF)
+- DDoS Protection
+- Rate Limiting
+- Input Validation</p>
+<h3 id="52-internal-trust-boundaries">5.2 Internal Trust Boundaries</h3>
+<p><strong>Production vs. Non-Production:</strong>
+- Separate networks
+- No direct connectivity
+- Controlled data migration</p>
+<p><strong>Application vs. Database:</strong>
+- Database firewall
+- Least privilege access
+- Encrypted connections</p>
+<p><strong>Management vs. Production:</strong>
+- Jump servers/bastion hosts
+- MFA required
+- Session recording</p>
+<h3 id="53-subservice-organization-boundaries">5.3 Subservice Organization Boundaries</h3>
+<p><strong>Carve-Out Services:</strong>
+- [TODO: Email Service] - Customer responsible for email security
+- [TODO: Payment Processing] - Separate SOC 2 report</p>
+<p><strong>Inclusive Services:</strong>
+- [TODO: Cloud Infrastructure] - Covered by our controls</p>
+<h2 id="6-network-segmentation">6. Network Segmentation</h2>
+<h3 id="61-network-zones">6.1 Network Zones</h3>
+<table>
+<thead>
+<tr>
+<th>Zone</th>
+<th>Purpose</th>
+<th>Security Level</th>
+<th>Access Control</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: DMZ]</td>
+<td>Internet-facing services</td>
+<td>High</td>
+<td>Firewall, WAF</td>
+</tr>
+<tr>
+<td>[TODO: Application]</td>
+<td>Application servers</td>
+<td>High</td>
+<td>Firewall, VLAN</td>
+</tr>
+<tr>
+<td>[TODO: Database]</td>
+<td>Data storage</td>
+<td>Very High</td>
+<td>Firewall, IP Whitelist</td>
+</tr>
+<tr>
+<td>[TODO: Management]</td>
+<td>Administrative access</td>
+<td>Very High</td>
+<td>VPN, MFA, Jump Server</td>
+</tr>
+</tbody>
+</table>
+<h3 id="62-firewall-rules">6.2 Firewall Rules</h3>
+<p><strong>DMZ to Application:</strong>
+- Allow: HTTPS (443) from Load Balancer to Web Servers
+- Deny: All other traffic</p>
+<p><strong>Application to Database:</strong>
+- Allow: PostgreSQL (5432) from App Servers to DB Servers
+- Deny: All other traffic</p>
+<p><strong>Management to Production:</strong>
+- Allow: SSH (22) from Jump Server to Servers (with MFA)
+- Allow: HTTPS (443) from Admin Console to Management Interfaces
+- Deny: All other traffic</p>
+<h3 id="63-network-diagram">6.3 Network Diagram</h3>
+<p>[TODO: Fügen Sie detailliertes Netzwerkdiagramm ein]</p>
+<h2 id="7-complementary-user-entity-controls-cuec">7. Complementary User Entity Controls (CUEC)</h2>
+<h3 id="71-customer-responsibilities">7.1 Customer Responsibilities</h3>
+<p><strong>Access Management:</strong>
+- Customers must implement strong authentication
+- Customers must regularly review user access
+- Customers must promptly remove access for terminated users</p>
+<p><strong>Data Protection:</strong>
+- Customers must classify their data appropriately
+- Customers must configure access controls
+- Customers must encrypt sensitive data before upload (if applicable)</p>
+<p><strong>Monitoring:</strong>
+- Customers must monitor their usage and access logs
+- Customers must report suspicious activity
+- Customers must review security alerts</p>
+<h3 id="72-cuec-documentation">7.2 CUEC Documentation</h3>
+<table>
+<thead>
+<tr>
+<th>Control Area</th>
+<th>Customer Responsibility</th>
+<th>Service Org Responsibility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>User Authentication</td>
+<td>Enforce strong passwords, enable MFA</td>
+<td>Provide MFA capability</td>
+</tr>
+<tr>
+<td>Access Control</td>
+<td>Assign appropriate roles</td>
+<td>Enforce RBAC</td>
+</tr>
+<tr>
+<td>Data Backup</td>
+<td>Export data regularly</td>
+<td>Provide backup functionality</td>
+</tr>
+<tr>
+<td>Incident Response</td>
+<td>Report security incidents</td>
+<td>Respond to incidents</td>
+</tr>
+</tbody>
+</table>
+<h2 id="8-boundary-changes">8. Boundary Changes</h2>
+<h3 id="81-change-management-process">8.1 Change Management Process</h3>
+<p><strong>Adding New Interfaces:</strong>
+1. Security review required
+2. Architecture review
+3. Approval from CISO
+4. Documentation update
+5. Audit notification</p>
+<p><strong>Removing Interfaces:</strong>
+1. Impact assessment
+2. Customer notification (if applicable)
+3. Decommissioning plan
+4. Documentation update</p>
+<h3 id="82-recent-boundary-changes">8.2 Recent Boundary Changes</h3>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Change</th>
+<th>Impact</th>
+<th>Approval</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: 2026-01-15]</td>
+<td>[TODO: New API endpoint]</td>
+<td>New interface</td>
+<td>[TODO: CISO]</td>
+</tr>
+<tr>
+<td>[TODO: 2026-02-01]</td>
+<td>[TODO: Removed legacy interface]</td>
+<td>Reduced attack surface</td>
+<td>[TODO: CISO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="9-boundary-validation">9. Boundary Validation</h2>
+<h3 id="91-validation-activities">9.1 Validation Activities</h3>
+<p><strong>Regular Activities:</strong>
+- Quarterly network scans
+- Annual penetration testing
+- Continuous vulnerability scanning
+- Firewall rule reviews</p>
+<p><strong>Validation Results:</strong>
+- [TODO: Last validation date]
+- [TODO: Findings summary]
+- [TODO: Remediation status]</p>
+<h3 id="92-boundary-testing">9.2 Boundary Testing</h3>
+<p><strong>Test Procedures:</strong>
+1. Network segmentation testing
+2. Firewall rule validation
+3. Access control testing
+4. Data flow verification</p>
+<p><strong>Next Scheduled Test:</strong> [TODO: Datum]</p>
+<hr />
+<p><strong>Dokumenthistorie:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Datum</th>
+<th>Autor</th>
+<th>Änderungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Initiale Erstellung</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0010_Systembeschreibung.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0030_System_Komponenten.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

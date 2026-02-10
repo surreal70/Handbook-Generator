@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0710 - Appendix: Glossary and Abbreviations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0710</div>
+            <h1>Appendix: Glossary and Abbreviations</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0700_Appendix_Evidence_Register.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0000_FRAMEWORK_MAPPING.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="appendix-glossary-and-abbreviations">Appendix: Glossary and Abbreviations</h1>
+<p><strong>Document ID:</strong> PCI-0710<br />
+<strong>Organization:</strong> AdminSend GmbH<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Approved by:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Draft / In Review / Approved<br />
+<strong>Classification:</strong> internal<br />
+<strong>Last Updated:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This document defines all terms and abbreviations used in the PCI-DSS documentation of AdminSend GmbH.</p>
+<h2 id="2-pci-dss-terms">2. PCI-DSS Terms</h2>
+<h3 id="a">A</h3>
+<p><strong>Acquiring Bank (Acquirer)</strong>
+- Bank that processes payment card transactions for merchants
+- Responsible for merchant's PCI-DSS compliance</p>
+<p><strong>AOC (Attestation of Compliance)</strong>
+- Confirmation of PCI-DSS compliance
+- Issued by QSA or through self-assessment</p>
+<p><strong>ASV (Approved Scanning Vendor)</strong>
+- Vendor approved by PCI SSC for vulnerability scans
+- Performs quarterly external scans</p>
+<p><strong>Authentication</strong>
+- Process of identity verification
+- Typically through password, token, or biometrics</p>
+<p><strong>Authorization</strong>
+- Process of permission verification
+- Determines which actions a user may perform</p>
+<h3 id="c">C</h3>
+<p><strong>Cardholder Data (CHD)</strong>
+- Cardholder data
+- Includes PAN, cardholder name, expiration date, service code</p>
+<p><strong>Cardholder Data Environment (CDE)</strong>
+- Environment that stores, processes, or transmits cardholder data
+- Includes systems, networks, people, and processes</p>
+<p><strong>CDE Segmentation</strong>
+- Network segmentation to isolate CDE
+- Reduces compliance scope</p>
+<p><strong>CVV/CVC/CVV2/CVC2</strong>
+- Card Verification Value/Code
+- 3-4 digit security code
+- Must NOT be stored after authorization</p>
+<h3 id="d">D</h3>
+<p><strong>Data Retention</strong>
+- Data retention policy
+- Defines how long data may be stored</p>
+<p><strong>Default Account</strong>
+- Vendor pre-configured account
+- Must be disabled or password changed</p>
+<p><strong>DMZ (Demilitarized Zone)</strong>
+- Network segment between internet and internal network
+- For publicly accessible services</p>
+<h3 id="e">E</h3>
+<p><strong>Encryption</strong>
+- Encryption of data
+- Required for stored and transmitted CHD</p>
+<p><strong>Encryption Key</strong>
+- Key for encryption and decryption
+- Must be securely stored and managed</p>
+<h3 id="f">F</h3>
+<p><strong>FIM (File Integrity Monitoring)</strong>
+- File integrity monitoring
+- Detects unauthorized changes to critical files</p>
+<p><strong>Firewall</strong>
+- Network security device
+- Controls traffic between network segments</p>
+<h3 id="h">H</h3>
+<p><strong>Hashing</strong>
+- One-way encryption
+- For password storage</p>
+<p><strong>Hardening</strong>
+- System hardening
+- Removal of unnecessary services and functions</p>
+<h3 id="i">I</h3>
+<p><strong>IDS/IPS (Intrusion Detection/Prevention System)</strong>
+- System for detecting and preventing attacks
+- Required at all CDE boundaries</p>
+<p><strong>Incident Response</strong>
+- Response to security incidents
+- Structured process for handling incidents</p>
+<h3 id="k">K</h3>
+<p><strong>Key Management</strong>
+- Management of cryptographic keys
+- Includes generation, storage, rotation, destruction</p>
+<h3 id="l">L</h3>
+<p><strong>Least Privilege</strong>
+- Principle of minimum permissions
+- Users receive only required access rights</p>
+<p><strong>Logging</strong>
+- Recording of events
+- Required for all access to CDE and CHD</p>
+<h3 id="m">M</h3>
+<p><strong>Malware</strong>
+- Malicious software
+- Viruses, trojans, ransomware, etc.</p>
+<p><strong>Merchant</strong>
+- Merchant that accepts payment cards
+- Subject to PCI-DSS compliance</p>
+<p><strong>MFA (Multi-Factor Authentication)</strong>
+- Multi-factor authentication
+- Required for CDE access</p>
+<h3 id="n">N</h3>
+<p><strong>Need-to-Know</strong>
+- Principle of authorized knowledge
+- Access only with business necessity</p>
+<p><strong>Network Segmentation</strong>
+- Network segmentation
+- Separation of CDE and corporate network</p>
+<p><strong>NTP (Network Time Protocol)</strong>
+- Protocol for time synchronization
+- Required for correct timestamps in logs</p>
+<h3 id="p">P</h3>
+<p><strong>PA-DSS (Payment Application Data Security Standard)</strong>
+- Security standard for payment applications
+- Complements PCI-DSS</p>
+<p><strong>PAN (Primary Account Number)</strong>
+- Primary account number
+- 13-19 digit card number
+- Core of cardholder data</p>
+<p><strong>Penetration Test</strong>
+- Security test through simulated attacks
+- Required annually</p>
+<p><strong>PCI DSS (Payment Card Industry Data Security Standard)</strong>
+- Security standard for payment card industry
+- Defines requirements for protecting cardholder data</p>
+<p><strong>PCI SSC (Payment Card Industry Security Standards Council)</strong>
+- Organization that develops and manages PCI-DSS</p>
+<p><strong>POS (Point of Sale)</strong>
+- Point of sale
+- Terminal for card input</p>
+<h3 id="q">Q</h3>
+<p><strong>QSA (Qualified Security Assessor)</strong>
+- Qualified security assessor
+- Performs PCI-DSS assessments</p>
+<h3 id="r">R</h3>
+<p><strong>RBAC (Role-Based Access Control)</strong>
+- Role-based access control
+- Permissions based on roles</p>
+<p><strong>Risk Assessment</strong>
+- Risk analysis
+- Required annually</p>
+<p><strong>ROC (Report on Compliance)</strong>
+- Compliance report
+- Created by QSA after assessment</p>
+<h3 id="s">S</h3>
+<p><strong>SAD (Sensitive Authentication Data)</strong>
+- Sensitive authentication data
+- Full track data, CVV, PIN
+- Must NOT be stored after authorization</p>
+<p><strong>SAQ (Self-Assessment Questionnaire)</strong>
+- Self-assessment questionnaire
+- For smaller merchants without QSA assessment</p>
+<p><strong>Scope</strong>
+- Scope of PCI-DSS compliance
+- All systems that store, process, or transmit CHD</p>
+<p><strong>Segmentation</strong>
+- See Network Segmentation</p>
+<p><strong>Service Provider</strong>
+- Service provider that processes CHD on behalf
+- Subject to PCI-DSS compliance</p>
+<p><strong>SIEM (Security Information and Event Management)</strong>
+- System for central log management and analysis</p>
+<p><strong>Strong Cryptography</strong>
+- Strong encryption
+- At least AES-128, RSA-2048</p>
+<h3 id="t">T</h3>
+<p><strong>Tokenization</strong>
+- Replacement of PAN with token
+- Reduces compliance scope</p>
+<p><strong>TLS (Transport Layer Security)</strong>
+- Encryption protocol for data transmission
+- At least TLS 1.2 required</p>
+<p><strong>Track Data</strong>
+- Magnetic stripe data
+- Track 1 and Track 2
+- Must NOT be stored after authorization</p>
+<h3 id="v">V</h3>
+<p><strong>Vulnerability</strong>
+- Vulnerability in system or application
+- Must be identified and remediated</p>
+<p><strong>Vulnerability Scan</strong>
+- Vulnerability scan
+- Required quarterly (external and internal)</p>
+<h3 id="w">W</h3>
+<p><strong>WAF (Web Application Firewall)</strong>
+- Firewall for web applications
+- Protection against OWASP Top 10</p>
+<p><strong>WORM (Write Once Read Many)</strong>
+- Storage that can only be written once
+- For log storage to ensure integrity</p>
+<h2 id="3-abbreviations">3. Abbreviations</h2>
+<table>
+<thead>
+<tr>
+<th>Abbreviation</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ACL</td>
+<td>Access Control List</td>
+</tr>
+<tr>
+<td>AES</td>
+<td>Advanced Encryption Standard</td>
+</tr>
+<tr>
+<td>AOC</td>
+<td>Attestation of Compliance</td>
+</tr>
+<tr>
+<td>API</td>
+<td>Application Programming Interface</td>
+</tr>
+<tr>
+<td>ASV</td>
+<td>Approved Scanning Vendor</td>
+</tr>
+<tr>
+<td>AV</td>
+<td>Antivirus</td>
+</tr>
+<tr>
+<td>BAA</td>
+<td>Business Associate Agreement</td>
+</tr>
+<tr>
+<td>CA</td>
+<td>Certificate Authority</td>
+</tr>
+<tr>
+<td>CDE</td>
+<td>Cardholder Data Environment</td>
+</tr>
+<tr>
+<td>CHD</td>
+<td>Cardholder Data</td>
+</tr>
+<tr>
+<td>CISO</td>
+<td>Chief Information Security Officer</td>
+</tr>
+<tr>
+<td>CRL</td>
+<td>Certificate Revocation List</td>
+</tr>
+<tr>
+<td>CVV</td>
+<td>Card Verification Value</td>
+</tr>
+<tr>
+<td>CVSS</td>
+<td>Common Vulnerability Scoring System</td>
+</tr>
+<tr>
+<td>DAST</td>
+<td>Dynamic Application Security Testing</td>
+</tr>
+<tr>
+<td>DBA</td>
+<td>Database Administrator</td>
+</tr>
+<tr>
+<td>DMZ</td>
+<td>Demilitarized Zone</td>
+</tr>
+<tr>
+<td>DPA</td>
+<td>Data Processing Agreement</td>
+</tr>
+<tr>
+<td>EAL</td>
+<td>Evaluation Assurance Level</td>
+</tr>
+<tr>
+<td>EDR</td>
+<td>Endpoint Detection and Response</td>
+</tr>
+<tr>
+<td>FIM</td>
+<td>File Integrity Monitoring</td>
+</tr>
+<tr>
+<td>GDPR</td>
+<td>General Data Protection Regulation</td>
+</tr>
+<tr>
+<td>HIDS</td>
+<td>Host-based Intrusion Detection System</td>
+</tr>
+<tr>
+<td>HTTPS</td>
+<td>Hypertext Transfer Protocol Secure</td>
+</tr>
+<tr>
+<td>IAM</td>
+<td>Identity and Access Management</td>
+</tr>
+<tr>
+<td>IDS</td>
+<td>Intrusion Detection System</td>
+</tr>
+<tr>
+<td>IPS</td>
+<td>Intrusion Prevention System</td>
+</tr>
+<tr>
+<td>ISO</td>
+<td>International Organization for Standardization</td>
+</tr>
+<tr>
+<td>JIT</td>
+<td>Just-in-Time</td>
+</tr>
+<tr>
+<td>KPI</td>
+<td>Key Performance Indicator</td>
+</tr>
+<tr>
+<td>LDAP</td>
+<td>Lightweight Directory Access Protocol</td>
+</tr>
+<tr>
+<td>MAC</td>
+<td>Media Access Control</td>
+</tr>
+<tr>
+<td>MDM</td>
+<td>Mobile Device Management</td>
+</tr>
+<tr>
+<td>MFA</td>
+<td>Multi-Factor Authentication</td>
+</tr>
+<tr>
+<td>NIDS</td>
+<td>Network-based Intrusion Detection System</td>
+</tr>
+<tr>
+<td>NIST</td>
+<td>National Institute of Standards and Technology</td>
+</tr>
+<tr>
+<td>NTP</td>
+<td>Network Time Protocol</td>
+</tr>
+<tr>
+<td>OCSP</td>
+<td>Online Certificate Status Protocol</td>
+</tr>
+<tr>
+<td>OS</td>
+<td>Operating System</td>
+</tr>
+<tr>
+<td>OWASP</td>
+<td>Open Web Application Security Project</td>
+</tr>
+<tr>
+<td>PA-DSS</td>
+<td>Payment Application Data Security Standard</td>
+</tr>
+<tr>
+<td>PAM</td>
+<td>Privileged Access Management</td>
+</tr>
+<tr>
+<td>PAN</td>
+<td>Primary Account Number</td>
+</tr>
+<tr>
+<td>PCI DSS</td>
+<td>Payment Card Industry Data Security Standard</td>
+</tr>
+<tr>
+<td>PCI SSC</td>
+<td>Payment Card Industry Security Standards Council</td>
+</tr>
+<tr>
+<td>PIN</td>
+<td>Personal Identification Number</td>
+</tr>
+<tr>
+<td>PKI</td>
+<td>Public Key Infrastructure</td>
+</tr>
+<tr>
+<td>POA&amp;M</td>
+<td>Plan of Action and Milestones</td>
+</tr>
+<tr>
+<td>POS</td>
+<td>Point of Sale</td>
+</tr>
+<tr>
+<td>QSA</td>
+<td>Qualified Security Assessor</td>
+</tr>
+<tr>
+<td>RACI</td>
+<td>Responsible, Accountable, Consulted, Informed</td>
+</tr>
+<tr>
+<td>RBAC</td>
+<td>Role-Based Access Control</td>
+</tr>
+<tr>
+<td>RFC</td>
+<td>Request for Comments</td>
+</tr>
+<tr>
+<td>ROC</td>
+<td>Report on Compliance</td>
+</tr>
+<tr>
+<td>RPO</td>
+<td>Recovery Point Objective</td>
+</tr>
+<tr>
+<td>RSA</td>
+<td>Rivest-Shamir-Adleman (encryption algorithm)</td>
+</tr>
+<tr>
+<td>RTO</td>
+<td>Recovery Time Objective</td>
+</tr>
+<tr>
+<td>SAD</td>
+<td>Sensitive Authentication Data</td>
+</tr>
+<tr>
+<td>SAQ</td>
+<td>Self-Assessment Questionnaire</td>
+</tr>
+<tr>
+<td>SAST</td>
+<td>Static Application Security Testing</td>
+</tr>
+<tr>
+<td>SDLC</td>
+<td>Software Development Lifecycle</td>
+</tr>
+<tr>
+<td>SIEM</td>
+<td>Security Information and Event Management</td>
+</tr>
+<tr>
+<td>SOC</td>
+<td>Security Operations Center</td>
+</tr>
+<tr>
+<td>SQL</td>
+<td>Structured Query Language</td>
+</tr>
+<tr>
+<td>SSH</td>
+<td>Secure Shell</td>
+</tr>
+<tr>
+<td>SSL</td>
+<td>Secure Sockets Layer (deprecated, replaced by TLS)</td>
+</tr>
+<tr>
+<td>SSO</td>
+<td>Single Sign-On</td>
+</tr>
+<tr>
+<td>TLS</td>
+<td>Transport Layer Security</td>
+</tr>
+<tr>
+<td>TOE</td>
+<td>Target of Evaluation</td>
+</tr>
+<tr>
+<td>UTC</td>
+<td>Coordinated Universal Time</td>
+</tr>
+<tr>
+<td>VLAN</td>
+<td>Virtual Local Area Network</td>
+</tr>
+<tr>
+<td>VPN</td>
+<td>Virtual Private Network</td>
+</tr>
+<tr>
+<td>WAF</td>
+<td>Web Application Firewall</td>
+</tr>
+<tr>
+<td>WORM</td>
+<td>Write Once Read Many</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-organization-specific-terms">4. Organization-Specific Terms</h2>
+<p>[TODO: Add organization-specific terms and abbreviations here]</p>
+<table>
+<thead>
+<tr>
+<th>Term/Abbreviation</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Document History:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Initial creation</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0700_Appendix_Evidence_Register.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0000_FRAMEWORK_MAPPING.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

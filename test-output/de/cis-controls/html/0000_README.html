@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0000 - CIS Controls v8 Hardening Templates (Deutsch)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0000</div>
+            <h1>CIS Controls v8 Hardening Templates (Deutsch)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0000_FRAMEWORK_MAPPING.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<span class="nav-next disabled">—</span>
+        </nav>
+        
+        <main>
+<h1 id="cis-controls-v8-hardening-templates-deutsch">CIS Controls v8 Hardening Templates (Deutsch)</h1>
+<h2 id="uberblick">Überblick</h2>
+<p>Diese Templates bilden die Grundlage für ein vollständiges CIS Controls v8 Hardening-Handbuch. Das Handbuch umfasst 27 strukturierte Dokumente, die Hardening-Baselines für Betriebssysteme und Applikationen nach den <strong>CIS Controls v8</strong> Framework abdecken.</p>
+<h2 id="template-struktur">Template-Struktur</h2>
+<h3 id="foundation-0010-0050-5-templates">Foundation (0010-0050) - 5 Templates</h3>
+<ul>
+<li><strong>0010</strong>: CIS Controls Überblick und Vorgehen</li>
+<li><strong>0020</strong>: Geltungsbereich, Assetgruppen und Tiering</li>
+<li><strong>0030</strong>: Hardening-Lifecycle und Prozesse</li>
+<li><strong>0040</strong>: Ausnahmen und Risikoakzeptanz</li>
+<li><strong>0050</strong>: Test und Validierung</li>
+</ul>
+<h3 id="betriebssysteme-0100-0150-6-templates">Betriebssysteme (0100-0150) - 6 Templates</h3>
+<ul>
+<li><strong>0100</strong>: Windows Server Hardening Baseline</li>
+<li><strong>0110</strong>: Windows Client Hardening Baseline</li>
+<li><strong>0120</strong>: Linux Hardening Baseline</li>
+<li><strong>0130</strong>: macOS Hardening Baseline</li>
+<li><strong>0140</strong>: Container Base Images Hardening</li>
+<li><strong>0150</strong>: Mobile Device Hardening</li>
+</ul>
+<h3 id="applikationen-0200-0330-14-templates">Applikationen (0200-0330) - 14 Templates</h3>
+<ul>
+<li><strong>0200</strong>: Nginx Webserver Hardening</li>
+<li><strong>0210</strong>: Apache Webserver Hardening</li>
+<li><strong>0220</strong>: IIS Webserver Hardening</li>
+<li><strong>0230</strong>: Tomcat Application Server Hardening</li>
+<li><strong>0240</strong>: PostgreSQL Database Hardening</li>
+<li><strong>0250</strong>: MySQL/MariaDB Database Hardening</li>
+<li><strong>0260</strong>: MS SQL Server Database Hardening</li>
+<li><strong>0270</strong>: MongoDB Database Hardening</li>
+<li><strong>0280</strong>: Kubernetes Cluster Hardening</li>
+<li><strong>0290</strong>: Docker Engine Hardening</li>
+<li><strong>0300</strong>: SSH Service Hardening</li>
+<li><strong>0310</strong>: Active Directory Hardening</li>
+<li><strong>0320</strong>: Identity Provider Hardening</li>
+<li><strong>0330</strong>: Cloud Platform Hardening</li>
+</ul>
+<h3 id="anhange-0400-0410-2-templates">Anhänge (0400-0410) - 2 Templates</h3>
+<ul>
+<li><strong>0400</strong>: Control Mapping Template</li>
+<li><strong>0410</strong>: Checklisten und Evidence</li>
+</ul>
+<h2 id="nummerierungsschema">Nummerierungsschema</h2>
+<ul>
+<li>Templates verwenden 4-stellige Nummern mit 10er-Schritten (0010, 0020, 0030, ...)</li>
+<li>Dies ermöglicht spätere Einfügungen zwischen bestehenden Templates</li>
+<li>Nummernbereiche gruppieren zusammengehörige Themen</li>
+</ul>
+<h2 id="verwendung">Verwendung</h2>
+<ol>
+<li><strong>Vorbereitung</strong>: Bestimmen Sie die Asset-Gruppen und Tiering-Stufen</li>
+<li><strong>Baseline-Auswahl</strong>: Wählen Sie relevante Hardening-Baselines</li>
+<li><strong>Anpassung</strong>: Passen Sie die Templates an Ihre Umgebung an</li>
+<li><strong>Platzhalter</strong>: Ersetzen Sie alle <code>[TODO]</code>-Markierungen</li>
+<li><strong>Testing</strong>: Validieren Sie Hardening-Maßnahmen in Testumgebung</li>
+<li><strong>Rollout</strong>: Implementieren Sie schrittweise in Produktion</li>
+</ol>
+<h2 id="platzhalter">Platzhalter</h2>
+<p>Templates unterstützen zwei Arten von Platzhaltern:</p>
+<ul>
+<li><strong>Manuelle Platzhalter</strong>: <code>[TODO: Beschreibung]</code> - müssen manuell ersetzt werden</li>
+<li><strong>Automatische Platzhalter</strong>: <code>{{ source.field }}</code> - werden aus Datenquellen befüllt</li>
+</ul>
+<p>Beispiele für automatische Platzhalter:
+- <code>{{ meta.organization }}</code> - Organisationsname
+- <code>Andreas Huemmer [andreas.huemmer@adminsend.de]</code> - Autor
+- <code>{{ meta.version }}</code> - Versionsnummer
+- <code>{{ meta.date }}</code> - Datum</p>
+<h2 id="cis-controls-v8-framework">CIS Controls v8 Framework</h2>
+<p>Die Templates basieren auf dem CIS Controls v8 Framework mit 18 Controls:</p>
+<ul>
+<li><strong>CIS Control 1</strong>: Inventory and Control of Enterprise Assets</li>
+<li><strong>CIS Control 2</strong>: Inventory and Control of Software Assets</li>
+<li><strong>CIS Control 3</strong>: Data Protection</li>
+<li><strong>CIS Control 4</strong>: Secure Configuration of Enterprise Assets and Software</li>
+<li><strong>CIS Control 5</strong>: Account Management</li>
+<li><strong>CIS Control 6</strong>: Access Control Management</li>
+<li><strong>CIS Control 7</strong>: Continuous Vulnerability Management</li>
+<li><strong>CIS Control 8</strong>: Audit Log Management</li>
+<li><strong>CIS Control 9</strong>: Email and Web Browser Protections</li>
+<li><strong>CIS Control 10</strong>: Malware Defenses</li>
+<li><strong>CIS Control 11</strong>: Data Recovery</li>
+<li><strong>CIS Control 12</strong>: Network Infrastructure Management</li>
+<li><strong>CIS Control 13</strong>: Network Monitoring and Defense</li>
+<li><strong>CIS Control 14</strong>: Security Awareness and Skills Training</li>
+<li><strong>CIS Control 15</strong>: Service Provider Management</li>
+<li><strong>CIS Control 16</strong>: Application Software Security</li>
+<li><strong>CIS Control 17</strong>: Incident Response Management</li>
+<li><strong>CIS Control 18</strong>: Penetration Testing</li>
+</ul>
+<h2 id="implementation-groups-ig">Implementation Groups (IG)</h2>
+<p>Die CIS Controls definieren drei Implementation Groups:</p>
+<ul>
+<li><strong>IG1</strong>: Essential Cyber Hygiene (für kleine Organisationen)</li>
+<li><strong>IG2</strong>: Foundational (für mittlere Organisationen)</li>
+<li><strong>IG3</strong>: Advanced (für große Organisationen mit hohem Risiko)</li>
+</ul>
+<h2 id="generierung-des-handbuchs">Generierung des Handbuchs</h2>
+<h3 id="cli-verwendung">CLI-Verwendung</h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Deutsches CIS Controls-Handbuch generieren</span>
+./handbook-generator<span class="w"> </span>--language<span class="w"> </span>de<span class="w"> </span>--template<span class="w"> </span>cis-controls<span class="w"> </span>--test
+
+<span class="c1"># Englisches CIS Controls-Handbuch generieren</span>
+./handbook-generator<span class="w"> </span>--language<span class="w"> </span>en<span class="w"> </span>--template<span class="w"> </span>cis-controls<span class="w"> </span>--test
+
+<span class="c1"># Alle Formate mit allen Features generieren</span>
+./handbook-generator<span class="w"> </span>--language<span class="w"> </span>de<span class="w"> </span>--template<span class="w"> </span>cis-controls<span class="w"> </span>--output<span class="w"> </span>all<span class="w"> </span>--test<span class="w"> </span>--separate-files<span class="w"> </span>--pdf-toc
+</code></pre></div>
+
+<h2 id="framework-mapping">Framework Mapping</h2>
+<p>Siehe <code>FRAMEWORK_MAPPING.md</code> für eine detaillierte Zuordnung der Templates zu CIS Controls v8 Komponenten.</p>
+<h2 id="weitere-ressourcen">Weitere Ressourcen</h2>
+<ul>
+<li>CIS Controls Website: https://www.cisecurity.org/controls/</li>
+<li>CIS Benchmarks: https://www.cisecurity.org/cis-benchmarks/</li>
+<li>CIS-CAT Pro Tool für automatisierte Compliance-Prüfung</li>
+</ul>
+<h2 id="support">Support</h2>
+<p>Bei Fragen zur Verwendung dieser Templates oder zu CIS Controls:
+- Ihr internes Sicherheitsteam
+- CIS Community: https://www.cisecurity.org/community/</p>
+<hr />
+<p><strong>Version:</strong> 1.0.0<br />
+<strong>Letzte Aktualisierung:</strong> 2026-02-10<br />
+<strong>Maintainer:</strong> CIS Controls Template-Team</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0000_FRAMEWORK_MAPPING.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<span class="nav-next disabled">—</span>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

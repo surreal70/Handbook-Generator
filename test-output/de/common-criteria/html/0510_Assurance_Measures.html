@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0510 - Assurance Measures (Sicherungsmaßnahmen)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0510</div>
+            <h1>Assurance Measures (Sicherungsmaßnahmen)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0500_TOE_Summary_Specification.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0520_Functions_Rationale.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="assurance-measures-sicherungsmanahmen">Assurance Measures (Sicherungsmaßnahmen)</h1>
+<p><strong>Dokument-ID:</strong> 0510<br />
+<strong>Owner:</strong> {{ meta.owner }}<br />
+<strong>Version:</strong> {{ meta.version }}<br />
+<strong>Status:</strong> Entwurf / In Review / Freigegeben<br />
+<strong>Klassifizierung:</strong> Intern / Vertraulich / Streng vertraulich<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.date }}  </p>
+<hr />
+<blockquote>
+<p><strong>Hinweis:</strong> Dieses Dokument ist ein Template. Ersetze alle <code>[TODO]</code>-Platzhalter und passe die Inhalte an dein spezifisches TOE (Target of Evaluation) an.</p>
+</blockquote>
+<h2 id="1-einleitung">1. Einleitung</h2>
+<h3 id="11-zweck">1.1 Zweck</h3>
+<p>Dieses Dokument beschreibt die Assurance Measures (Sicherungsmaßnahmen), die implementiert werden, um die Security Assurance Requirements (SARs) für <strong>[TODO: TOE-Name]</strong> zu erfüllen.</p>
+<p>Die Assurance Measures demonstrieren, dass:
+- Das TOE korrekt entwickelt wurde
+- Das TOE angemessen getestet wurde
+- Das TOE ordnungsgemäß dokumentiert ist
+- Das TOE sicher ausgeliefert und betrieben werden kann</p>
+<h3 id="12-evaluation-assurance-level">1.2 Evaluation Assurance Level</h3>
+<p>Das TOE wird auf <strong>[TODO: EAL-Level, z.B. EAL4]</strong> evaluiert.</p>
+<p><strong>Begründung für EAL-Wahl:</strong>
+[TODO: Erkläre, warum dieses EAL für das TOE angemessen ist. Berücksichtige:
+- Die Bedrohungslandschaft
+- Die Kritikalität des TOE
+- Die Anforderungen der Stakeholder
+- Die Kosten-Nutzen-Abwägung]</p>
+<h2 id="2-assurance-measures-nach-sar-klassen">2. Assurance Measures nach SAR-Klassen</h2>
+<h3 id="21-configuration-management-acm">2.1 Configuration Management (ACM)</h3>
+<h4 id="211-acm_cap-cm-capabilities">2.1.1 ACM_CAP: CM Capabilities</h4>
+<p><strong>SAR:</strong> [TODO: z.B. ACM_CAP.4 - Generation support and acceptance procedures]</p>
+<p><strong>Assurance Measure:</strong></p>
+<p>[TODO: Beschreibe die Configuration Management Capabilities. Beispiel:]</p>
+<p>Das Projekt verwendet Git als Versionskontrollsystem. Alle TOE-Komponenten (Quellcode, Konfigurationsdateien, Build-Skripte) und Dokumentation sind im Repository versioniert.</p>
+<p><strong>CM-Prozess:</strong>
+1. Alle Änderungen werden in Feature-Branches entwickelt
+2. Code Reviews sind vor dem Merge erforderlich
+3. Automatisierte Tests müssen erfolgreich sein
+4. Releases werden mit Git-Tags markiert
+5. Jeder Release hat eine eindeutige Versionsnummer</p>
+<p><strong>CM-Tools:</strong>
+- Versionskontrolle: Git
+- Repository: [TODO: URL]
+- Issue Tracking: [TODO: System]
+- Build System: [TODO: System]</p>
+<p><strong>Nachweise:</strong>
+- CM-Plan: [TODO: Dokumentpfad]
+- Repository-Zugriff: [TODO: URL]
+- Build-Logs: [TODO: Speicherort]</p>
+<h4 id="212-acm_scp-cm-scope">2.1.2 ACM_SCP: CM Scope</h4>
+<p><strong>SAR:</strong> [TODO: z.B. ACM_SCP.2 - Problem tracking CM coverage]</p>
+<p><strong>Assurance Measure:</strong></p>
+<p>[TODO: Beschreibe den Umfang des Configuration Management. Beispiel:]</p>
+<p>Das Configuration Management umfasst:
+- Alle Quellcode-Dateien des TOE
+- Build-Skripte und Konfigurationsdateien
+- Security Target und zugehörige Dokumentation
+- Test-Suites und Test-Dokumentation
+- Evaluations-Artefakte</p>
+<p><strong>CM-Items:</strong>
+| Item-ID | Beschreibung | Typ | Repository-Pfad |
+|---------|--------------|-----|-----------------|
+| [TODO] | [TODO] | Source Code | [TODO] |
+| [TODO] | [TODO] | Documentation | [TODO] |
+| [TODO] | [TODO] | Test Suite | [TODO] |</p>
+<p><strong>Nachweise:</strong>
+- CM-Scope-Dokument: [TODO: Dokumentpfad]
+- Configuration Item List: [TODO: Dokumentpfad]</p>
+<h3 id="22-delivery-and-operation-ado">2.2 Delivery and Operation (ADO)</h3>
+<h4 id="221-ado_del-delivery">2.2.1 ADO_DEL: Delivery</h4>
+<p><strong>SAR:</strong> [TODO: z.B. ADO_DEL.2 - Detection of modification]</p>
+<p><strong>Assurance Measure:</strong></p>
+<p>[TODO: Beschreibe die Delivery-Maßnahmen. Beispiel:]</p>
+<p>Das TOE wird mit folgenden Sicherheitsmaßnahmen ausgeliefert:</p>
+<p><strong>Integritätsschutz:</strong>
+- Alle Releases werden mit SHA-256 gehasht
+- Hashes werden auf der offiziellen Website veröffentlicht
+- Releases werden digital signiert (GPG/PGP)
+- Signaturschlüssel sind über sichere Kanäle verfügbar</p>
+<p><strong>Auslieferungsprozess:</strong>
+1. Build des TOE aus versioniertem Quellcode
+2. Automatisierte Tests
+3. Erstellung von Checksums
+4. Digitale Signatur
+5. Upload auf sichere Download-Server
+6. Veröffentlichung von Checksums und Signaturen</p>
+<p><strong>Nachweise:</strong>
+- Delivery Procedures: [TODO: Dokumentpfad]
+- Beispiel-Checksums: [TODO: URL]
+- Public Key: [TODO: URL]</p>
+<h4 id="222-ado_igs-installation-generation-and-start-up">2.2.2 ADO_IGS: Installation, Generation, and Start-up</h4>
+<p><strong>SAR:</strong> [TODO: z.B. ADO_IGS.1 - Installation, generation, and start-up procedures]</p>
+<p><strong>Assurance Measure:</strong></p>
+<p>[TODO: Beschreibe die Installations- und Start-Prozeduren. Beispiel:]</p>
+<p><strong>Installationsanleitung:</strong>
+- Detaillierte Schritt-für-Schritt-Anleitung
+- Systemvoraussetzungen
+- Sicherheitskonfiguration
+- Verifikation der Installation</p>
+<p><strong>Nachweise:</strong>
+- Installation Guide: [TODO: Dokumentpfad]
+- Administrator Guide: [TODO: Dokumentpfad]</p>
+<h3 id="23-development-adv">2.3 Development (ADV)</h3>
+<h4 id="231-adv_fsp-functional-specification">2.3.1 ADV_FSP: Functional Specification</h4>
+<p><strong>SAR:</strong> [TODO: z.B. ADV_FSP.2 - Security-enforcing functional specification]</p>
+<p><strong>Assurance Measure:</strong></p>
+<p>[TODO: Beschreibe die Functional Specification. Beispiel:]</p>
+<p>Die Functional Specification beschreibt alle externen Schnittstellen des TOE:</p>
+<p><strong>Dokumentation:</strong>
+- TOE Security Functions (TSFs) sind vollständig spezifiziert
+- Alle TSF-Schnittstellen sind dokumentiert
+- Parameter, Rückgabewerte und Fehlerbehandlung sind beschrieben
+- Sicherheitsrelevante Effekte sind dokumentiert</p>
+<p><strong>Nachweise:</strong>
+- Functional Specification: [TODO: Dokumentpfad]
+- API Documentation: [TODO: Dokumentpfad]</p>
+<h4 id="232-adv_imp-implementation-representation">2.3.2 ADV_IMP: Implementation Representation</h4>
+<p><strong>SAR:</strong> [TODO: z.B. ADV_IMP.1 - Implementation representation of the TSF]</p>
+<p><strong>Assurance Measure:</strong></p>
+<p>[TODO: Beschreibe die Implementation Representation. Beispiel:]</p>
+<p>Der Quellcode des TOE ist verfügbar und dokumentiert:</p>
+<p><strong>Code-Dokumentation:</strong>
+- Inline-Kommentare für komplexe Logik
+- Funktions- und Klassen-Dokumentation
+- Architektur-Dokumentation
+- Mapping zwischen Design und Code</p>
+<p><strong>Nachweise:</strong>
+- Source Code: [TODO: Repository-URL]
+- Code Documentation: [TODO: Dokumentpfad]
+- Architecture Document: [TODO: Dokumentpfad]</p>
+<h4 id="233-adv_tds-toe-design">2.3.3 ADV_TDS: TOE Design</h4>
+<p><strong>SAR:</strong> [TODO: z.B. ADV_TDS.2 - Architectural design]</p>
+<p><strong>Assurance Measure:</strong></p>
+<p>[TODO: Beschreibe das TOE Design. Beispiel:]</p>
+<p>Das TOE-Design ist auf mehreren Abstraktionsebenen dokumentiert:</p>
+<p><strong>Design-Dokumentation:</strong>
+- High-Level Architecture
+- Subsystem-Design
+- Modul-Design
+- Sicherheitsarchitektur</p>
+<p><strong>Nachweise:</strong>
+- TOE Design Document: [TODO: Dokumentpfad]
+- Architecture Diagrams: [TODO: Dokumentpfad]</p>
+<h3 id="24-guidance-documents-agd">2.4 Guidance Documents (AGD)</h3>
+<h4 id="241-agd_adm-administrator-guidance">2.4.1 AGD_ADM: Administrator Guidance</h4>
+<p><strong>SAR:</strong> [TODO: z.B. AGD_ADM.1 - Administrator guidance]</p>
+<p><strong>Assurance Measure:</strong></p>
+<p>[TODO: Beschreibe die Administrator Guidance. Beispiel:]</p>
+<p><strong>Administrator-Dokumentation umfasst:</strong>
+- Sichere Installation und Konfiguration
+- Sicherheitsparameter und deren Bedeutung
+- Wartung und Updates
+- Audit-Log-Verwaltung
+- Backup und Recovery
+- Incident Response</p>
+<p><strong>Nachweise:</strong>
+- Administrator Guide: [TODO: Dokumentpfad]
+- Security Configuration Guide: [TODO: Dokumentpfad]</p>
+<h4 id="242-agd_usr-user-guidance">2.4.2 AGD_USR: User Guidance</h4>
+<p><strong>SAR:</strong> [TODO: z.B. AGD_USR.1 - User guidance]</p>
+<p><strong>Assurance Measure:</strong></p>
+<p>[TODO: Beschreibe die User Guidance. Beispiel:]</p>
+<p><strong>Benutzer-Dokumentation umfasst:</strong>
+- Sichere Nutzung des TOE
+- Sicherheitsfunktionen und deren Verwendung
+- Sicherheitshinweise und Warnungen
+- Verantwortlichkeiten der Benutzer</p>
+<p><strong>Nachweise:</strong>
+- User Guide: [TODO: Dokumentpfad]
+- Security User Manual: [TODO: Dokumentpfad]</p>
+<h3 id="25-life-cycle-support-alc">2.5 Life Cycle Support (ALC)</h3>
+<h4 id="251-alc_dvs-development-security">2.5.1 ALC_DVS: Development Security</h4>
+<p><strong>SAR:</strong> [TODO: z.B. ALC_DVS.1 - Identification of security measures]</p>
+<p><strong>Assurance Measure:</strong></p>
+<p>[TODO: Beschreibe die Development Security Measures. Beispiel:]</p>
+<p><strong>Sicherheitsmaßnahmen in der Entwicklung:</strong>
+- Zugriffskontrolle auf Entwicklungssysteme
+- Sichere Entwicklungsumgebung
+- Code Review-Prozess
+- Security Testing während der Entwicklung
+- Vertraulichkeitsvereinbarungen für Entwickler</p>
+<p><strong>Nachweise:</strong>
+- Development Security Policy: [TODO: Dokumentpfad]
+- Access Control Matrix: [TODO: Dokumentpfad]</p>
+<h4 id="252-alc_lcd-life-cycle-definition">2.5.2 ALC_LCD: Life Cycle Definition</h4>
+<p><strong>SAR:</strong> [TODO: z.B. ALC_LCD.1 - Developer defined life-cycle model]</p>
+<p><strong>Assurance Measure:</strong></p>
+<p>[TODO: Beschreibe das Life Cycle Model. Beispiel:]</p>
+<p><strong>Entwicklungslebenszyklus:</strong>
+1. Requirements Analysis
+2. Design
+3. Implementation
+4. Testing
+5. Release
+6. Maintenance</p>
+<p><strong>Nachweise:</strong>
+- Life Cycle Model Document: [TODO: Dokumentpfad]
+- Development Process Description: [TODO: Dokumentpfad]</p>
+<h4 id="253-alc_tat-tools-and-techniques">2.5.3 ALC_TAT: Tools and Techniques</h4>
+<p><strong>SAR:</strong> [TODO: z.B. ALC_TAT.1 - Well-defined development tools]</p>
+<p><strong>Assurance Measure:</strong></p>
+<p>[TODO: Beschreibe die verwendeten Tools und Techniken. Beispiel:]</p>
+<p><strong>Entwicklungs-Tools:</strong>
+| Tool | Version | Zweck | Sicherheitsrelevanz |
+|------|---------|-------|---------------------|
+| [TODO] | [TODO] | [TODO] | [TODO] |</p>
+<p><strong>Nachweise:</strong>
+- Tools and Techniques Document: [TODO: Dokumentpfad]</p>
+<h3 id="26-tests-ate">2.6 Tests (ATE)</h3>
+<h4 id="261-ate_cov-coverage">2.6.1 ATE_COV: Coverage</h4>
+<p><strong>SAR:</strong> [TODO: z.B. ATE_COV.2 - Analysis of coverage]</p>
+<p><strong>Assurance Measure:</strong></p>
+<p>[TODO: Beschreibe die Test Coverage. Beispiel:]</p>
+<p><strong>Test-Abdeckung:</strong>
+- Alle TSF-Schnittstellen werden getestet
+- Alle SFRs werden durch Tests abgedeckt
+- Coverage-Analyse wird durchgeführt</p>
+<p><strong>Test-Coverage-Matrix:</strong>
+| TSF-ID | Test-ID | SFR-ID | Coverage |
+|--------|---------|--------|----------|
+| [TODO] | [TODO] | [TODO] | [TODO]% |</p>
+<p><strong>Nachweise:</strong>
+- Test Coverage Report: [TODO: Dokumentpfad]
+- Coverage Matrix: [TODO: Dokumentpfad]</p>
+<h4 id="262-ate_dpt-depth">2.6.2 ATE_DPT: Depth</h4>
+<p><strong>SAR:</strong> [TODO: z.B. ATE_DPT.1 - Testing: high-level design]</p>
+<p><strong>Assurance Measure:</strong></p>
+<p>[TODO: Beschreibe die Test Depth. Beispiel:]</p>
+<p><strong>Test-Tiefe:</strong>
+- Unit Tests für einzelne Module
+- Integration Tests für Subsysteme
+- System Tests für das gesamte TOE
+- Security Tests für TSFs</p>
+<p><strong>Nachweise:</strong>
+- Test Plan: [TODO: Dokumentpfad]
+- Test Results: [TODO: Dokumentpfad]</p>
+<h4 id="263-ate_fun-functional-tests">2.6.3 ATE_FUN: Functional Tests</h4>
+<p><strong>SAR:</strong> [TODO: z.B. ATE_FUN.1 - Functional testing]</p>
+<p><strong>Assurance Measure:</strong></p>
+<p>[TODO: Beschreibe die Functional Tests. Beispiel:]</p>
+<p><strong>Funktionale Tests:</strong>
+- Alle TSFs werden getestet
+- Positive und negative Testfälle
+- Grenzwert-Tests
+- Fehlerbehandlungs-Tests</p>
+<p><strong>Nachweise:</strong>
+- Test Specification: [TODO: Dokumentpfad]
+- Test Results: [TODO: Dokumentpfad]</p>
+<h4 id="264-ate_ind-independent-testing">2.6.4 ATE_IND: Independent Testing</h4>
+<p><strong>SAR:</strong> [TODO: z.B. ATE_IND.2 - Independent testing - sample]</p>
+<p><strong>Assurance Measure:</strong></p>
+<p>[TODO: Beschreibe die Independent Testing Measures. Beispiel:]</p>
+<p><strong>Unabhängige Tests:</strong>
+- Evaluator führt eine Auswahl von Tests durch
+- Evaluator kann eigene Tests entwickeln
+- Testumgebung wird bereitgestellt</p>
+<p><strong>Nachweise:</strong>
+- Test Environment Description: [TODO: Dokumentpfad]
+- Sample Test Results: [TODO: Dokumentpfad]</p>
+<h3 id="27-vulnerability-assessment-ava">2.7 Vulnerability Assessment (AVA)</h3>
+<h4 id="271-ava_msu-misuse">2.7.1 AVA_MSU: Misuse</h4>
+<p><strong>SAR:</strong> [TODO: z.B. AVA_MSU.2 - Validation of analysis]</p>
+<p><strong>Assurance Measure:</strong></p>
+<p>[TODO: Beschreibe die Misuse Analysis. Beispiel:]</p>
+<p><strong>Misuse-Analyse:</strong>
+- Analyse von Fehlkonfigurationen
+- Analyse von unsicherer Nutzung
+- Dokumentation von Sicherheitshinweisen</p>
+<p><strong>Nachweise:</strong>
+- Misuse Analysis: [TODO: Dokumentpfad]
+- Security Warnings: [TODO: Dokumentpfad]</p>
+<h4 id="272-ava_sof-strength-of-function">2.7.2 AVA_SOF: Strength of Function</h4>
+<p><strong>SAR:</strong> [TODO: z.B. AVA_SOF.1 - Strength of TOE security function evaluation]</p>
+<p><strong>Assurance Measure:</strong></p>
+<p>[TODO: Beschreibe die SOF Evaluation. Beispiel:]</p>
+<p><strong>SOF-Evaluation:</strong>
+- Analyse aller probabilistischen Mechanismen
+- Berechnung der Angriffsstärke
+- Vergleich mit SOF-Claim</p>
+<p><strong>Nachweise:</strong>
+- SOF Analysis: [TODO: Dokumentpfad, siehe 0540_Strength_of_Function.md]</p>
+<h4 id="273-ava_vla-vulnerability-analysis">2.7.3 AVA_VLA: Vulnerability Analysis</h4>
+<p><strong>SAR:</strong> [TODO: z.B. AVA_VLA.2 - Independent vulnerability analysis]</p>
+<p><strong>Assurance Measure:</strong></p>
+<p>[TODO: Beschreibe die Vulnerability Analysis. Beispiel:]</p>
+<p><strong>Vulnerability-Analyse:</strong>
+- Analyse bekannter Schwachstellen
+- Penetration Testing
+- Code-Analyse auf Sicherheitslücken
+- Analyse öffentlicher Vulnerability Databases</p>
+<p><strong>Nachweise:</strong>
+- Vulnerability Analysis Report: [TODO: Dokumentpfad]
+- Penetration Test Results: [TODO: Dokumentpfad]</p>
+<h2 id="3-zusammenfassung-der-assurance-measures">3. Zusammenfassung der Assurance Measures</h2>
+<h3 id="31-vollstandigkeitsprufung">3.1 Vollständigkeitsprüfung</h3>
+<p>Die folgende Tabelle zeigt die Zuordnung aller SARs zu Assurance Measures:</p>
+<table>
+<thead>
+<tr>
+<th>SAR-ID</th>
+<th>SAR-Name</th>
+<th>Assurance Measure</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>✓</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Zusammenfassung:</strong>
+- Anzahl der SARs: [TODO]
+- Anzahl der abgedeckten SARs: [TODO]
+- Abdeckungsgrad: [TODO]%</p>
+<h3 id="32-nachweise-und-artefakte">3.2 Nachweise und Artefakte</h3>
+<p>Die folgenden Dokumente und Artefakte dienen als Nachweise für die Assurance Measures:</p>
+<table>
+<thead>
+<tr>
+<th>Dokument</th>
+<th>Typ</th>
+<th>Speicherort</th>
+<th>SAR-Zuordnung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-evaluator-aktivitaten">4. Evaluator-Aktivitäten</h2>
+<h3 id="41-erforderliche-evaluator-aktivitaten">4.1 Erforderliche Evaluator-Aktivitäten</h3>
+<p>Für jede SAR sind spezifische Evaluator-Aktivitäten erforderlich:</p>
+<p>[TODO: Liste die Evaluator-Aktivitäten für jede SAR auf. Beispiel:]</p>
+<p><strong>ACM_CAP.4:</strong>
+- Prüfung des CM-Systems
+- Verifikation der Versionskontrolle
+- Prüfung der Acceptance Procedures</p>
+<p><strong>ADV_FSP.2:</strong>
+- Review der Functional Specification
+- Verifikation der TSF-Beschreibungen
+- Prüfung der Vollständigkeit</p>
+<h3 id="42-bereitstellung-von-nachweisen">4.2 Bereitstellung von Nachweisen</h3>
+<p>Alle erforderlichen Nachweise werden dem Evaluator bereitgestellt:</p>
+<p><strong>Bereitstellungsmethode:</strong>
+- [TODO: z.B. Secure File Transfer, Evaluator Portal, etc.]</p>
+<p><strong>Zugriff auf Systeme:</strong>
+- [TODO: Beschreibe, wie der Evaluator Zugriff auf Entwicklungssysteme, Test-Umgebungen, etc. erhält]</p>
+<hr />
+<p><strong>Dokumentenhistorie:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Datum</th>
+<th>Autor</th>
+<th>Änderungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Initiale Version</td>
+</tr>
+<tr>
+<td>1.0</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0500_TOE_Summary_Specification.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0520_Functions_Rationale.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

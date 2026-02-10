@@ -1,29 +1,64 @@
-# Migration Guide: Template System Extension
+# Migration Guide: Compliance Framework Templates Extension
 
 ## Overview
 
-This guide helps existing users migrate to the extended template system that includes three new template types (BCM, ISMS, BSI Grundschutz) and HTML comment support. The extension maintains **full backward compatibility** with existing it-operation templates.
+This guide helps existing users migrate to the extended template system that now includes **twelve compliance framework types** covering major international standards. The extension maintains **full backward compatibility** with all existing templates.
 
 ## What's New
 
-### New Template Types
+### Twelve Compliance Framework Types
 
-1. **BCM (Business Continuity Management)**
-   - 30 templates covering ISO 22301 and BSI BCM standards
-   - Available in German and English
-   - Includes BIA, RTO/RPO, crisis management, and DR planning
+The system now supports twelve comprehensive compliance frameworks:
 
-2. **ISMS (Information Security Management System)**
-   - ~50 templates covering ISO 27001:2022 (including Amendment 1:2024)
+1. **BCM (Business Continuity Management)** - 29 templates
+   - ISO 22301 and BSI BCM standards
+   - BIA, RTO/RPO, crisis management, DR planning
+
+2. **ISMS (Information Security Management System)** - 70 templates
+   - ISO 27001:2022 with complete Annex A control mapping
    - Three-tier structure: Basis ISMS, Abstract Policies, Detailed Guidelines
-   - Complete Annex A control mapping
-   - Available in German and English
 
-3. **BSI Grundschutz**
-   - ~40 templates covering BSI Standards 200-1, 200-2, 200-3
+3. **BSI Grundschutz** - 54 templates
+   - BSI Standards 200-1, 200-2, 200-3
    - BSI Baustein references throughout
-   - Policy-Guideline pairs for 17 security areas
-   - Available in German and English
+
+4. **IT-Operation** - 30 templates
+   - ITIL v4, ISO 20000-1, COBIT 2019
+   - IT operations and service management
+
+5. **CIS Controls** - 27 templates
+   - CIS Controls v8 Framework
+   - Hardening baselines for OS and applications
+
+6. **Common Criteria** - 35 templates
+   - ISO/IEC 15408 Security Evaluation
+   - Security Target (ST) documentation
+
+7. **GDPR** - 36 templates
+   - EU GDPR 2016/679
+   - Data protection and privacy compliance
+
+8. **HIPAA** - 13 templates
+   - HIPAA Security Rule
+   - Healthcare data protection
+
+9. **ISO 9001** - 29 templates
+   - ISO 9001:2015 Quality Management System
+   - Process and quality documentation
+
+10. **NIST 800-53** - 52 templates
+    - NIST SP 800-53 Rev. 5
+    - Security and privacy controls
+
+11. **PCI-DSS** - 14 templates
+    - PCI-DSS v4.0
+    - Payment card industry security
+
+12. **TSC (SOC 2)** - 17 templates
+    - SOC 2 Trust Services Criteria
+    - Service organization controls
+
+**Total: 408 templates in German + 407 templates in English = 815+ templates**
 
 ### HTML Comment Support
 
@@ -95,16 +130,40 @@ python -m src.cli --language de --template it-operation
    pip install -r requirements.txt
    ```
 
-2. **Generate new handbook types**:
+2. **Generate handbooks for any framework**:
    ```bash
    # BCM handbook
-   python -m src.cli --language de --template bcm
+   ./handbook-generator --language de --template bcm --test
    
    # ISMS handbook
-   python -m src.cli --language en --template isms
+   ./handbook-generator --language en --template isms --test
    
    # BSI Grundschutz handbook
-   python -m src.cli --language de --template bsi-grundschutz
+   ./handbook-generator --language de --template bsi-grundschutz --test
+   
+   # CIS Controls handbook
+   ./handbook-generator --language de --template cis-controls --test
+   
+   # Common Criteria handbook
+   ./handbook-generator --language en --template common-criteria --test
+   
+   # GDPR handbook
+   ./handbook-generator --language de --template gdpr --test
+   
+   # HIPAA handbook
+   ./handbook-generator --language en --template hipaa --test
+   
+   # ISO 9001 handbook
+   ./handbook-generator --language de --template iso-9001 --test
+   
+   # NIST 800-53 handbook
+   ./handbook-generator --language en --template nist-800-53 --test
+   
+   # PCI-DSS handbook
+   ./handbook-generator --language de --template pci-dss --test
+   
+   # TSC (SOC 2) handbook
+   ./handbook-generator --language en --template tsc --test
    ```
 
 3. **No configuration changes required** - your existing `config.yaml` and `metadata.yaml` work with all template types.
@@ -317,30 +376,40 @@ All template types use the **same placeholder syntax**:
 
 ### New Template Type Options
 
-The `--template` parameter now accepts four values:
+The `--template` parameter now accepts twelve values:
 
 ```bash
---template it-operation      # Existing (unchanged)
---template bcm               # New
---template isms              # New
---template bsi-grundschutz   # New
+--template bcm                # Business Continuity Management (ISO 22301)
+--template isms               # Information Security (ISO 27001:2022)
+--template bsi-grundschutz    # BSI IT-Grundschutz
+--template it-operation       # IT Operations (ITIL v4, ISO 20000-1)
+--template cis-controls       # CIS Controls v8 Hardening
+--template common-criteria    # Common Criteria (ISO/IEC 15408)
+--template gdpr               # GDPR Compliance (EU 2016/679)
+--template hipaa              # HIPAA Security Rule
+--template iso-9001           # Quality Management (ISO 9001:2015)
+--template nist-800-53        # NIST Security Controls (SP 800-53 Rev. 5)
+--template pci-dss            # Payment Card Security (PCI-DSS v4.0)
+--template tsc                # SOC 2 Trust Services
 ```
 
 ### Interactive Mode
 
-When running without parameters, the system now shows all four template types:
+When running without parameters, the system now shows all twelve template types:
 
 ```bash
-$ python -m src.cli
+$ ./handbook-generator
 
 Available languages: de, en
-Available template types: bcm, bsi-grundschutz, isms, it-operation
+Available template types: bcm, bsi-grundschutz, cis-controls, common-criteria, 
+                         gdpr, hipaa, isms, iso-9001, it-operation, 
+                         nist-800-53, pci-dss, tsc
 
 Select language (de/en): de
-Select template type: bcm
-Select output format (markdown/pdf/both): both
+Select template type: gdpr
+Select output format (markdown/pdf/html/all): all
 
-Generating BCM handbook in German...
+Generating GDPR handbook in German...
 ```
 
 ### All Other Parameters Unchanged
@@ -373,15 +442,31 @@ Handbook/
 ```
 Handbook/
 ├── de/
-│   ├── bcm/                    # New
-│   ├── isms/                   # New
-│   ├── bsi-grundschutz/        # New
-│   └── it-operation/           # Unchanged
+│   ├── bcm/                    # Business Continuity Management
+│   ├── isms/                   # Information Security
+│   ├── bsi-grundschutz/        # BSI IT-Grundschutz
+│   ├── it-operation/           # IT Operations
+│   ├── cis-controls/           # CIS Controls v8
+│   ├── common-criteria/        # Common Criteria
+│   ├── gdpr/                   # GDPR Compliance
+│   ├── hipaa/                  # HIPAA Security
+│   ├── iso-9001/               # Quality Management
+│   ├── nist-800-53/            # NIST Controls
+│   ├── pci-dss/                # Payment Card Security
+│   └── tsc/                    # SOC 2 Trust Services
 └── en/
-    ├── bcm/                    # New
-    ├── isms/                   # New
-    ├── bsi-grundschutz/        # New
-    └── it-operation/           # Unchanged
+    ├── bcm/
+    ├── isms/
+    ├── bsi-grundschutz/
+    ├── it-operation/
+    ├── cis-controls/
+    ├── common-criteria/
+    ├── gdpr/
+    ├── hipaa/
+    ├── iso-9001/
+    ├── nist-800-53/
+    ├── pci-dss/
+    └── tsc/
 ```
 
 **File naming pattern:** `{template-type}_handbook_{language}.{ext}`
@@ -404,13 +489,37 @@ diff Handbook/de/it-operation/it-operation_handbook_de.md <previous_version>
 
 ```bash
 # Test BCM
-python -m src.cli --language de --template bcm --output markdown
+./handbook-generator --language de --template bcm --test
 
 # Test ISMS
-python -m src.cli --language en --template isms --output markdown
+./handbook-generator --language en --template isms --test
 
 # Test BSI Grundschutz
-python -m src.cli --language de --template bsi-grundschutz --output markdown
+./handbook-generator --language de --template bsi-grundschutz --test
+
+# Test CIS Controls
+./handbook-generator --language de --template cis-controls --test
+
+# Test Common Criteria
+./handbook-generator --language en --template common-criteria --test
+
+# Test GDPR
+./handbook-generator --language de --template gdpr --test
+
+# Test HIPAA
+./handbook-generator --language en --template hipaa --test
+
+# Test ISO 9001
+./handbook-generator --language de --template iso-9001 --test
+
+# Test NIST 800-53
+./handbook-generator --language en --template nist-800-53 --test
+
+# Test PCI-DSS
+./handbook-generator --language de --template pci-dss --test
+
+# Test TSC
+./handbook-generator --language en --template tsc --test
 ```
 
 **Expected result:** New handbooks generated successfully
@@ -489,6 +598,15 @@ git pull origin main
 - **BCM:** `templates/de/bcm/README.md` and `templates/en/bcm/README.md`
 - **ISMS:** `templates/de/isms/README.md` and `templates/en/isms/README.md`
 - **BSI Grundschutz:** `templates/de/bsi-grundschutz/README.md` and `templates/en/bsi-grundschutz/README.md`
+- **IT-Operation:** `templates/de/it-operation/README.md` and `templates/en/it-operation/README.md`
+- **CIS Controls:** `templates/de/cis-controls/README.md` and `templates/en/cis-controls/README.md`
+- **Common Criteria:** `templates/de/common-criteria/README.md` and `templates/en/common-criteria/README.md`
+- **GDPR:** `templates/de/gdpr/README.md` and `templates/en/gdpr/README.md`
+- **HIPAA:** `templates/de/hipaa/README.md` and `templates/en/hipaa/README.md`
+- **ISO 9001:** `templates/de/iso-9001/README.md` and `templates/en/iso-9001/README.md`
+- **NIST 800-53:** `templates/de/nist-800-53/README.md` and `templates/en/nist-800-53/README.md`
+- **PCI-DSS:** `templates/de/pci-dss/README.md` and `templates/en/pci-dss/README.md`
+- **TSC:** `templates/de/tsc/README.md` and `templates/en/tsc/README.md`
 
 ### Support
 
@@ -505,7 +623,9 @@ For questions or issues:
 
 ✅ **No action required for existing users** - everything continues to work
 
-✅ **Three new template types available** - BCM, ISMS, BSI Grundschutz
+✅ **Twelve compliance frameworks available** - BCM, ISMS, BSI Grundschutz, IT-Operation, CIS Controls, Common Criteria, GDPR, HIPAA, ISO 9001, NIST 800-53, PCI-DSS, TSC
+
+✅ **815+ templates total** - 408 German + 407 English templates
 
 ✅ **HTML comments supported** - for template documentation
 
@@ -518,12 +638,12 @@ For questions or issues:
 ### Next Steps
 
 1. **Continue using existing templates** - no changes needed
-2. **Explore new template types** - try generating BCM, ISMS, or BSI Grundschutz handbooks
+2. **Explore new compliance frameworks** - try generating handbooks for your compliance needs
 3. **Add HTML comments to custom templates** - improve template documentation
-4. **Review framework mappings** - see `docs/FRAMEWORK_MAPPING.md` for compliance details
+4. **Review framework mappings** - see each framework's `FRAMEWORK_MAPPING.md` for compliance details
 
 ---
 
-**Document Version:** 1.0.0  
-**Last Updated:** 2025-02-03  
-**Applies to:** Template System Extension v2.0.0+
+**Document Version:** 2.0.0  
+**Last Updated:** 2026-02-10  
+**Applies to:** Compliance Framework Templates Extension v0.0.6+

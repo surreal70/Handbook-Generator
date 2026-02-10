@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0410 - User Authentication</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0410</div>
+            <h1>User Authentication</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0400_Access_Control.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0420_Physical_Security.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="user-authentication">User Authentication</h1>
+<p><strong>Document ID:</strong> PCI-0410<br />
+<strong>Organization:</strong> AdminSend GmbH<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Approved by:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Draft / In Review / Approved<br />
+<strong>Classification:</strong> internal<br />
+<strong>Last Updated:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This document defines the authentication policies for AdminSend GmbH in accordance with PCI-DSS Requirement 8.</p>
+<h3 id="11-objectives">1.1 Objectives</h3>
+<ul>
+<li><strong>Unique Identification:</strong> Each user uniquely identifiable</li>
+<li><strong>Strong Authentication:</strong> Multi-Factor Authentication (MFA)</li>
+<li><strong>Secure Passwords:</strong> Enforce password policies</li>
+<li><strong>Compliance:</strong> Fulfillment of PCI-DSS Requirement 8</li>
+</ul>
+<h3 id="12-scope">1.2 Scope</h3>
+<p><strong>Affected Systems:</strong>
+- All CDE systems
+- Administrative systems
+- Applications with CHD access
+- Remote access systems</p>
+<h2 id="2-user-identification">2. User Identification</h2>
+<h3 id="21-unique-user-ids">2.1 Unique User IDs</h3>
+<p><strong>Requirements:</strong>
+- Each user has unique ID
+- No shared accounts
+- No generic accounts (except documented exceptions)
+- User ID must not be reused</p>
+<p><strong>Naming Convention:</strong>
+- Format: <code>firstname.lastname</code>
+- For duplicates: <code>firstname.lastname2</code>
+- Service accounts: <code>svc-servicename</code>
+- Admin accounts: <code>firstname.lastname-admin</code></p>
+<h3 id="22-prohibited-account-types">2.2 Prohibited Account Types</h3>
+<p><strong>Not Allowed:</strong>
+- Shared accounts (multiple people, one account)
+- Generic accounts (e.g., "admin", "user", "test")
+- Group accounts
+- Vendor default accounts (must be disabled)</p>
+<p><strong>Exceptions:</strong>
+- Emergency accounts (Break-Glass) - documented
+- Service accounts - documented and monitored
+- Console access (only with logging)</p>
+<h2 id="3-authentication-methods">3. Authentication Methods</h2>
+<h3 id="31-multi-factor-authentication-mfa">3.1 Multi-Factor Authentication (MFA)</h3>
+<p><strong>MFA Required for:</strong>
+- All CDE access
+- Administrative access
+- Remote access (VPN, Jump Server)
+- Privileged accounts
+- Access to CHD</p>
+<p><strong>MFA Factors:</strong></p>
+<ol>
+<li><strong>Something You Know:</strong></li>
+<li>Password</li>
+<li>
+<p>PIN</p>
+</li>
+<li>
+<p><strong>Something You Have:</strong></p>
+</li>
+<li>Hardware token</li>
+<li>Software token (Authenticator App)</li>
+<li>Smart card</li>
+<li>
+<p>SMS (backup only)</p>
+</li>
+<li>
+<p><strong>Something You Are:</strong></p>
+</li>
+<li>Biometrics (fingerprint, facial recognition)</li>
+</ol>
+<p><strong>MFA Implementation:</strong>
+- At least 2 different factors
+- Factors must be independent
+- MFA System: [TODO: Name of MFA system]</p>
+<h3 id="32-password-authentication">3.2 Password Authentication</h3>
+<p><strong>Password Requirements:</strong></p>
+<ul>
+<li><strong>Minimum Length:</strong> 12 characters (15 for admin accounts)</li>
+<li><strong>Complexity:</strong></li>
+<li>Uppercase letters (A-Z)</li>
+<li>Lowercase letters (a-z)</li>
+<li>Digits (0-9)</li>
+<li>Special characters (!@#$%^&amp;*)</li>
+<li><strong>No Dictionary Words</strong></li>
+<li><strong>No Personal Information</strong> (name, birthdate, etc.)</li>
+<li><strong>No Reuse</strong> of last 4 passwords</li>
+</ul>
+<p><strong>Password Change:</strong>
+- Every 90 days for standard users
+- Every 90 days for admin accounts
+- Immediately upon suspicion of compromise
+- Upon first login</p>
+<p><strong>Password Storage:</strong>
+- Only as hash (bcrypt, PBKDF2, Argon2)
+- Never in cleartext
+- Salt for each hash
+- No reversible encryption</p>
+<h3 id="33-certificate-based-authentication">3.3 Certificate-Based Authentication</h3>
+<p><strong>Usage:</strong>
+- Server-to-server communication
+- API authentication
+- VPN access (in addition to MFA)</p>
+<p><strong>Requirements:</strong>
+- Certificates from trusted CA
+- Regular renewal
+- Revocation checking (CRL/OCSP)
+- Secure key storage</p>
+<h2 id="4-account-management">4. Account Management</h2>
+<h3 id="41-account-creation">4.1 Account Creation</h3>
+<p><strong>Process:</strong>
+1. Approved access request
+2. Create unique user ID
+3. Generate temporary password
+4. MFA registration
+5. Notify user
+6. Force password change on first login</p>
+<h3 id="42-account-deactivation">4.2 Account Deactivation</h3>
+<p><strong>Automatic Deactivation:</strong>
+- After 90 days of inactivity
+- Upon employee termination
+- Upon role change (old account)</p>
+<p><strong>Manual Deactivation:</strong>
+- During security incidents
+- Upon suspicion of compromise
+- At manager's request</p>
+<p><strong>Process:</strong>
+1. Deactivate account (do not delete)
+2. Terminate all sessions
+3. Validate access (should be blocked)
+4. Document</p>
+<h3 id="43-account-deletion">4.3 Account Deletion</h3>
+<p><strong>Timeframe:</strong>
+- 90 days after deactivation
+- After completion of audits/investigations
+- After retention requirements</p>
+<p><strong>Process:</strong>
+1. Confirm account no longer needed
+2. Backup account data (if required)
+3. Delete account
+4. Document</p>
+<h2 id="5-password-management">5. Password Management</h2>
+<h3 id="51-password-reset">5.1 Password Reset</h3>
+<p><strong>Self-Service Reset:</strong>
+- Via Identity Management System
+- After successful identity verification
+- Security questions or email verification
+- MFA verification</p>
+<p><strong>Helpdesk Reset:</strong>
+- Identity verification required
+- Temporary password
+- Force password change on next login
+- Document reset</p>
+<h3 id="52-password-lockout">5.2 Password Lockout</h3>
+<p><strong>Account Lockout After:</strong>
+- 6 failed login attempts
+- Lockout for 30 minutes
+- Or manual unlock by admin</p>
+<p><strong>Unlock:</strong>
+- Automatically after 30 minutes
+- Or by helpdesk after identity verification
+- Document unlock</p>
+<h3 id="53-password-vault">5.3 Password Vault</h3>
+<p><strong>For Privileged Passwords:</strong>
+- Central password vault solution
+- Automatic password rotation
+- Check-out/check-in process
+- Session recording
+- Complete logging</p>
+<p><strong>Vault System:</strong> [TODO: Name of vault system]</p>
+<h2 id="6-session-management">6. Session Management</h2>
+<h3 id="61-session-timeouts">6.1 Session Timeouts</h3>
+<p><strong>Inactivity Timeout:</strong>
+- 15 minutes for CDE systems
+- 30 minutes for corporate systems
+- 5 minutes for privileged sessions</p>
+<p><strong>Maximum Session Duration:</strong>
+- 8 hours for standard users
+- 4 hours for admin sessions
+- Re-authentication required</p>
+<h3 id="62-session-security">6.2 Session Security</h3>
+<p><strong>Requirements:</strong>
+- Unique session IDs
+- Session ID rotation after login
+- Secure session cookies (HttpOnly, Secure, SameSite)
+- Session invalidation on logout
+- No session IDs in URLs</p>
+<h3 id="63-concurrent-sessions">6.3 Concurrent Sessions</h3>
+<p><strong>Restrictions:</strong>
+- Maximum 2 concurrent sessions per user
+- Only 1 privileged session at a time
+- Warning on new session
+- Option to terminate old sessions</p>
+<h2 id="7-remote-authentication">7. Remote Authentication</h2>
+<h3 id="71-vpn-access">7.1 VPN Access</h3>
+<p><strong>Authentication:</strong>
+- Username + Password
+- Plus MFA (Hardware token or Authenticator App)
+- Certificate-based authentication (optional)</p>
+<p><strong>Authorization:</strong>
+- Only authorized users
+- Access to specific network segments
+- Complete logging</p>
+<h3 id="72-jump-server">7.2 Jump Server</h3>
+<p><strong>Authentication:</strong>
+- MFA required
+- Privileged accounts
+- Session recording
+- Time-limited access</p>
+<p><strong>Access Control:</strong>
+- Only from authorized source IPs
+- Only to authorized target systems
+- Complete logging</p>
+<h2 id="8-application-authentication">8. Application Authentication</h2>
+<h3 id="81-web-applications">8.1 Web Applications</h3>
+<p><strong>Authentication:</strong>
+- Username + Password
+- MFA for CDE applications
+- Session management
+- HTTPS required</p>
+<p><strong>Security Measures:</strong>
+- Brute-force protection (Rate Limiting)
+- CAPTCHA after multiple failures
+- Account lockout
+- Secure password storage</p>
+<h3 id="82-api-authentication">8.2 API Authentication</h3>
+<p><strong>Methods:</strong>
+- API Keys (with expiration)
+- OAuth 2.0
+- JWT (JSON Web Tokens)
+- Mutual TLS</p>
+<p><strong>Requirements:</strong>
+- No API keys in code
+- API key rotation
+- Scope-based authorization
+- Rate limiting</p>
+<h2 id="9-service-account-management">9. Service Account Management</h2>
+<h3 id="91-service-accounts">9.1 Service Accounts</h3>
+<p><strong>Requirements:</strong>
+- Unique service account IDs
+- Documented usage
+- Strong passwords (32+ characters)
+- Regular password rotation (90 days)
+- No interactive logins</p>
+<p><strong>Naming Convention:</strong>
+- Format: <code>svc-servicename</code>
+- Example: <code>svc-payment-gateway</code></p>
+<h3 id="92-service-account-monitoring">9.2 Service Account Monitoring</h3>
+<p><strong>Monitoring:</strong>
+- Log all service account activities
+- Alerts on unusual activities
+- Regular review of usage
+- Deactivation of unused accounts</p>
+<h2 id="10-authentication-logging">10. Authentication Logging</h2>
+<h3 id="101-logged-events">10.1 Logged Events</h3>
+<p><strong>Successful Authentication:</strong>
+- User ID
+- Timestamp
+- Source IP address
+- Target system
+- Authentication method</p>
+<p><strong>Failed Authentication:</strong>
+- User ID (or attempt)
+- Timestamp
+- Source IP address
+- Target system
+- Failure reason</p>
+<p><strong>Other Events:</strong>
+- Password changes
+- Account lockouts
+- Account unlocks
+- MFA registration
+- Privileged actions</p>
+<h3 id="102-log-retention">10.2 Log Retention</h3>
+<p><strong>Retention:</strong>
+- 90 days online
+- 1 year archive
+- Immutable (WORM)</p>
+<p><strong>Log Forwarding:</strong>
+- To SIEM system
+- Real-time transmission
+- Encrypted transmission</p>
+<h2 id="11-authentication-monitoring">11. Authentication Monitoring</h2>
+<h3 id="111-alerting">11.1 Alerting</h3>
+<table>
+<thead>
+<tr>
+<th>Alert</th>
+<th>Condition</th>
+<th>Severity</th>
+<th>Notification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Multiple failed logins</td>
+<td>&gt;5 in 15 min</td>
+<td>Medium</td>
+<td>SOC</td>
+</tr>
+<tr>
+<td>Admin login outside business hours</td>
+<td>After 10 PM</td>
+<td>Medium</td>
+<td>SOC + Manager</td>
+</tr>
+<tr>
+<td>MFA failure</td>
+<td>&gt;3 failures</td>
+<td>Low</td>
+<td>SOC</td>
+</tr>
+<tr>
+<td>Account lockout</td>
+<td>Any lockout</td>
+<td>Low</td>
+<td>Helpdesk</td>
+</tr>
+<tr>
+<td>Privileged access</td>
+<td>Any access</td>
+<td>Low</td>
+<td>SIEM</td>
+</tr>
+<tr>
+<td>Password change</td>
+<td>Outside business hours</td>
+<td>Low</td>
+<td>SIEM</td>
+</tr>
+</tbody>
+</table>
+<h3 id="112-anomaly-detection">11.2 Anomaly Detection</h3>
+<p><strong>Monitoring:</strong>
+- Unusual login times
+- Unusual source IPs
+- Geographic anomalies
+- Multiple concurrent logins
+- Privileged access</p>
+<h2 id="12-vendor-default-accounts">12. Vendor Default Accounts</h2>
+<h3 id="121-default-account-management">12.1 Default Account Management</h3>
+<p><strong>Requirements:</strong>
+- Identify all default accounts
+- Disable or delete default accounts
+- If required: Change password
+- Document all default accounts</p>
+<p><strong>Examples:</strong>
+- admin/admin
+- root/root
+- Administrator/password
+- sa (SQL Server)</p>
+<h3 id="122-default-account-inventory">12.2 Default Account Inventory</h3>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Default Account</th>
+<th>Status</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: System 1]</td>
+<td>admin</td>
+<td>Disabled</td>
+<td>Deleted</td>
+</tr>
+<tr>
+<td>[TODO: System 2]</td>
+<td>root</td>
+<td>Active</td>
+<td>Password changed</td>
+</tr>
+<tr>
+<td>[TODO: System 3]</td>
+<td>Administrator</td>
+<td>Disabled</td>
+<td>Renamed</td>
+</tr>
+</tbody>
+</table>
+<h2 id="13-authentication-testing">13. Authentication Testing</h2>
+<h3 id="131-penetration-tests">13.1 Penetration Tests</h3>
+<p><strong>Annually:</strong>
+- Test authentication mechanisms
+- Simulate brute-force attacks
+- MFA bypass attempts
+- Session management tests</p>
+<h3 id="132-vulnerability-scans">13.2 Vulnerability Scans</h3>
+<p><strong>Quarterly:</strong>
+- Identify weak passwords
+- Identify default accounts
+- Authentication vulnerabilities</p>
+<h2 id="14-compliance-validation">14. Compliance Validation</h2>
+<h3 id="141-validation-activities">14.1 Validation Activities</h3>
+<p><strong>Quarterly:</strong>
+- Password policy compliance
+- Validate MFA implementation
+- Identify inactive accounts
+- Review default accounts</p>
+<p><strong>Annually:</strong>
+- Complete authentication audit
+- Penetration testing
+- Compliance assessment</p>
+<h3 id="142-validation-documentation">14.2 Validation Documentation</h3>
+<p><strong>Required Evidence:</strong>
+- Authentication policies
+- MFA configuration
+- Password policy configuration
+- Account management protocols
+- Penetration test reports</p>
+<hr />
+<p><strong>Document History:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Initial creation</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0400_Access_Control.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0420_Physical_Security.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

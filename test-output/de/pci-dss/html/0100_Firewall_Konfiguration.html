@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0100 - Firewall-Konfiguration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0100</div>
+            <h1>Firewall-Konfiguration</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0050_Compliance_Programm.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0400_Zugriffskontrolle.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="firewall-konfiguration">Firewall-Konfiguration</h1>
+<p><strong>Dokument-ID:</strong> PCI-0100<br />
+<strong>Organisation:</strong> AdminSend GmbH<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Genehmigt durch:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Entwurf / In Review / Freigegeben<br />
+<strong>Klassifizierung:</strong> internal<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-zweck">1. Zweck</h2>
+<p>Dieses Dokument definiert die Firewall-Konfigurationsstandards für AdminSend GmbH gemäß PCI-DSS Requirement 1.</p>
+<h3 id="11-ziele">1.1 Ziele</h3>
+<ul>
+<li><strong>Netzwerksicherheit:</strong> Schutz des CDE durch Firewall-Kontrollen</li>
+<li><strong>Zugriffskontrolle:</strong> Restriktion unautorisierten Netzwerkzugriffs</li>
+<li><strong>Compliance:</strong> Erfüllung von PCI-DSS Requirement 1</li>
+<li><strong>Dokumentation:</strong> Nachvollziehbare Firewall-Konfiguration</li>
+</ul>
+<h3 id="12-geltungsbereich">1.2 Geltungsbereich</h3>
+<p><strong>Betroffene Systeme:</strong>
+- Perimeter-Firewalls (Internet-Grenze)
+- Interne Firewalls (CDE-Segmentierung)
+- Host-basierte Firewalls (Server, Workstations)
+- Cloud-Firewalls (falls zutreffend)</p>
+<h2 id="2-firewall-standards">2. Firewall-Standards</h2>
+<h3 id="21-grundprinzipien">2.1 Grundprinzipien</h3>
+<p><strong>Default Deny:</strong>
+- Alle Verbindungen standardmäßig blockiert
+- Nur explizit genehmigte Verbindungen erlaubt
+- Dokumentation aller Ausnahmen erforderlich</p>
+<p><strong>Least Privilege:</strong>
+- Minimale erforderliche Zugriffsrechte
+- Spezifische Quell- und Ziel-IP-Adressen
+- Spezifische Ports und Protokolle</p>
+<p><strong>Defense in Depth:</strong>
+- Mehrere Firewall-Ebenen
+- Perimeter + interne Segmentierung
+- Host-basierte Firewalls als zusätzliche Schicht</p>
+<h3 id="22-firewall-architektur">2.2 Firewall-Architektur</h3>
+<p><strong>Firewall-Ebenen:</strong></p>
+<ol>
+<li><strong>Perimeter Firewall:</strong></li>
+<li>Schutz vor Internet-Bedrohungen</li>
+<li>Eingehender und ausgehender Traffic</li>
+<li>
+<p>DMZ für öffentliche Dienste</p>
+</li>
+<li>
+<p><strong>Internal Firewall:</strong></p>
+</li>
+<li>CDE-Segmentierung</li>
+<li>Trennung von Corporate und CDE</li>
+<li>
+<p>Zugriffskontrolle zwischen Segmenten</p>
+</li>
+<li>
+<p><strong>Host-based Firewall:</strong></p>
+</li>
+<li>Schutz einzelner Systeme</li>
+<li>Zusätzliche Verteidigungsebene</li>
+<li>Schutz bei Netzwerk-Kompromittierung</li>
+</ol>
+<h2 id="3-firewall-regelmanagement">3. Firewall-Regelmanagement</h2>
+<h3 id="31-regel-anforderungen">3.1 Regel-Anforderungen</h3>
+<p><strong>Jede Firewall-Regel muss enthalten:</strong>
+- Eindeutige Regel-ID
+- Quelle (IP-Adresse/Netzwerk)
+- Ziel (IP-Adresse/Netzwerk)
+- Port/Protokoll
+- Aktion (Allow/Deny)
+- Business-Begründung
+- Genehmiger
+- Erstellungsdatum
+- Überprüfungsdatum</p>
+<h3 id="32-regel-genehmigungsprozess">3.2 Regel-Genehmigungsprozess</h3>
+<p><strong>Prozess für neue Regeln:</strong></p>
+<ol>
+<li><strong>Anfrage:</strong> Change Request mit Begründung</li>
+<li><strong>Security Review:</strong> Bewertung durch IT Security</li>
+<li><strong>Genehmigung:</strong> CISO-Freigabe für CDE-Regeln</li>
+<li><strong>Implementation:</strong> Konfiguration durch Network Team</li>
+<li><strong>Dokumentation:</strong> Aktualisierung des Regelwerks</li>
+<li><strong>Validation:</strong> Test der Regel</li>
+</ol>
+<p><strong>Genehmigungsmatrix:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Regel-Typ</th>
+<th>Genehmiger</th>
+<th>Dokumentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CDE-bezogen</td>
+<td>CISO</td>
+<td>Vollständig</td>
+</tr>
+<tr>
+<td>Corporate</td>
+<td>IT Manager</td>
+<td>Standard</td>
+</tr>
+<tr>
+<td>Temporär</td>
+<td>IT Security</td>
+<td>Mit Ablaufdatum</td>
+</tr>
+</tbody>
+</table>
+<h3 id="33-quartalsweise-regeluberprufung">3.3 Quartalsweise Regelüberprüfung</h3>
+<p><strong>Überprüfungsprozess:</strong></p>
+<ol>
+<li><strong>Review aller Regeln:</strong> Vollständige Durchsicht</li>
+<li><strong>Validierung:</strong> Business-Begründung noch gültig?</li>
+<li><strong>Cleanup:</strong> Entfernung ungenutzter Regeln</li>
+<li><strong>Dokumentation:</strong> Aktualisierung der Dokumentation</li>
+<li><strong>Genehmigung:</strong> CISO-Bestätigung</li>
+</ol>
+<p><strong>Letzte Überprüfung:</strong> [TODO: Datum]<br />
+<strong>Nächste Überprüfung:</strong> [TODO: Datum]<br />
+<strong>Verantwortlich:</strong> [TODO: Network Security Team]  </p>
+<h2 id="4-firewall-konfigurationsstandards">4. Firewall-Konfigurationsstandards</h2>
+<h3 id="41-perimeter-firewall">4.1 Perimeter-Firewall</h3>
+<p><strong>Eingehender Traffic (Inbound):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Port</th>
+<th>Protokoll</th>
+<th>Quelle</th>
+<th>Ziel</th>
+<th>Erlaubt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HTTPS</td>
+<td>443</td>
+<td>TCP</td>
+<td>Any</td>
+<td>Web Server (DMZ)</td>
+<td>Ja</td>
+</tr>
+<tr>
+<td>SSH</td>
+<td>22</td>
+<td>TCP</td>
+<td>Admin IPs</td>
+<td>Jump Server</td>
+<td>Ja (mit MFA)</td>
+</tr>
+<tr>
+<td>Alle anderen</td>
+<td>*</td>
+<td>*</td>
+<td>Any</td>
+<td>CDE</td>
+<td>Nein</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ausgehender Traffic (Outbound):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Port</th>
+<th>Protokoll</th>
+<th>Quelle</th>
+<th>Ziel</th>
+<th>Erlaubt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HTTPS</td>
+<td>443</td>
+<td>TCP</td>
+<td>CDE</td>
+<td>Acquiring Bank</td>
+<td>Ja</td>
+</tr>
+<tr>
+<td>DNS</td>
+<td>53</td>
+<td>UDP</td>
+<td>CDE</td>
+<td>DNS Server</td>
+<td>Ja</td>
+</tr>
+<tr>
+<td>NTP</td>
+<td>123</td>
+<td>UDP</td>
+<td>CDE</td>
+<td>NTP Server</td>
+<td>Ja</td>
+</tr>
+<tr>
+<td>Alle anderen</td>
+<td>*</td>
+<td>*</td>
+<td>CDE</td>
+<td>Internet</td>
+<td>Nein (Default Deny)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-interne-firewall-cde-segmentierung">4.2 Interne Firewall (CDE-Segmentierung)</h3>
+<p><strong>CDE → Corporate:</strong>
+- Standardmäßig blockiert
+- Ausnahmen nur mit CISO-Genehmigung
+- Logging aller Verbindungsversuche</p>
+<p><strong>Corporate → CDE:</strong>
+- Nur autorisierte Admin-Zugriffe
+- MFA erforderlich
+- Über Jump Server/VPN
+- Vollständiges Logging</p>
+<h3 id="43-host-basierte-firewalls">4.3 Host-basierte Firewalls</h3>
+<p><strong>Anforderungen:</strong>
+- Aktiviert auf allen CDE-Systemen
+- Konfiguration gemäß Hardening-Standards
+- Zentrale Verwaltung (falls möglich)
+- Logging aktiviert</p>
+<p><strong>Beispiel-Konfiguration (Linux iptables):</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Default Deny</span>
+iptables<span class="w"> </span>-P<span class="w"> </span>INPUT<span class="w"> </span>DROP
+iptables<span class="w"> </span>-P<span class="w"> </span>FORWARD<span class="w"> </span>DROP
+iptables<span class="w"> </span>-P<span class="w"> </span>OUTPUT<span class="w"> </span>DROP
+
+<span class="c1"># Allow established connections</span>
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-m<span class="w"> </span>state<span class="w"> </span>--state<span class="w"> </span>ESTABLISHED,RELATED<span class="w"> </span>-j<span class="w"> </span>ACCEPT
+
+<span class="c1"># Allow specific services</span>
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">443</span><span class="w"> </span>-j<span class="w"> </span>ACCEPT<span class="w">  </span><span class="c1"># HTTPS</span>
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-p<span class="w"> </span>tcp<span class="w"> </span>--dport<span class="w"> </span><span class="m">22</span><span class="w"> </span>-s<span class="w"> </span><span class="m">10</span>.1.102.0/24<span class="w"> </span>-j<span class="w"> </span>ACCEPT<span class="w">  </span><span class="c1"># SSH from Management</span>
+
+<span class="c1"># Log dropped packets</span>
+iptables<span class="w"> </span>-A<span class="w"> </span>INPUT<span class="w"> </span>-j<span class="w"> </span>LOG<span class="w"> </span>--log-prefix<span class="w"> </span><span class="s2">&quot;FW-DROP: &quot;</span>
+</code></pre></div>
+
+<h2 id="5-verbotene-konfigurationen">5. Verbotene Konfigurationen</h2>
+<p><strong>Folgende Konfigurationen sind NICHT erlaubt:</strong></p>
+<ul>
+<li><strong>Any-Any-Regeln:</strong> Keine Regeln mit Quelle=Any und Ziel=Any</li>
+<li><strong>Direkte Internet-Verbindungen:</strong> CDE-Systeme dürfen nicht direkt mit Internet kommunizieren</li>
+<li><strong>Unverschlüsselte Protokolle:</strong> Telnet, FTP, HTTP (außer Redirect zu HTTPS)</li>
+<li><strong>Veraltete Protokolle:</strong> SSLv2, SSLv3, TLS 1.0, TLS 1.1</li>
+<li><strong>Undokumentierte Regeln:</strong> Alle Regeln müssen dokumentiert sein</li>
+</ul>
+<h2 id="6-anderungsmanagement">6. Änderungsmanagement</h2>
+<h3 id="61-emergency-changes">6.1 Emergency Changes</h3>
+<p><strong>Notfall-Änderungen erlaubt bei:</strong>
+- Aktiven Sicherheitsvorfällen
+- Kritischen Systemausfällen
+- Unmittelbarer Bedrohung</p>
+<p><strong>Prozess:</strong>
+1. Mündliche Genehmigung durch CISO
+2. Sofortige Implementation
+3. Nachträgliche Dokumentation (innerhalb 24h)
+4. Formale Genehmigung (innerhalb 48h)</p>
+<h3 id="62-anderungshistorie">6.2 Änderungshistorie</h3>
+<table>
+<thead>
+<tr>
+<th>Datum</th>
+<th>Regel-ID</th>
+<th>Änderung</th>
+<th>Begründung</th>
+<th>Genehmigt durch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: 2026-01-15]</td>
+<td>FW-105</td>
+<td>Neue Regel</td>
+<td>Payment API</td>
+<td>[TODO: CISO]</td>
+</tr>
+<tr>
+<td>[TODO: 2026-02-01]</td>
+<td>FW-042</td>
+<td>Entfernt</td>
+<td>Nicht mehr benötigt</td>
+<td>[TODO: CISO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-monitoring-und-alerting">7. Monitoring und Alerting</h2>
+<h3 id="71-firewall-logging">7.1 Firewall-Logging</h3>
+<p><strong>Logging-Anforderungen:</strong>
+- Alle blockierten Verbindungen
+- Alle erlaubten Verbindungen zum/vom CDE
+- Firewall-Konfigurationsänderungen
+- Firewall-Systemereignisse (Start, Stop, Fehler)</p>
+<p><strong>Log-Retention:</strong> [TODO: 90 Tage online, 1 Jahr Archiv]<br />
+<strong>Log-Forwarding:</strong> [TODO: SIEM-System]  </p>
+<h3 id="72-alerting-regeln">7.2 Alerting-Regeln</h3>
+<table>
+<thead>
+<tr>
+<th>Alert</th>
+<th>Bedingung</th>
+<th>Schweregrad</th>
+<th>Benachrichtigung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unerlaubter CDE-Zugriff</td>
+<td>Blockierte Verbindung zu CDE</td>
+<td>Hoch</td>
+<td>SOC + IT Security</td>
+</tr>
+<tr>
+<td>Firewall-Regel-Änderung</td>
+<td>Konfigurationsänderung</td>
+<td>Mittel</td>
+<td>Network Team</td>
+</tr>
+<tr>
+<td>Firewall-Ausfall</td>
+<td>Firewall nicht erreichbar</td>
+<td>Kritisch</td>
+<td>SOC + CISO</td>
+</tr>
+</tbody>
+</table>
+<h2 id="8-compliance-validierung">8. Compliance-Validierung</h2>
+<h3 id="81-validierungsaktivitaten">8.1 Validierungsaktivitäten</h3>
+<p><strong>Quartalsweise:</strong>
+- Firewall-Regelüberprüfung
+- Dokumentationsvalidierung
+- Ungenutzter Regel-Cleanup</p>
+<p><strong>Jährlich:</strong>
+- Penetrationstest der Firewall-Konfiguration
+- Segmentierungsvalidierung
+- Compliance-Audit</p>
+<h3 id="82-validierungsdokumentation">8.2 Validierungsdokumentation</h3>
+<p><strong>Erforderliche Nachweise:</strong>
+- Firewall-Konfigurationsdateien
+- Regelüberprüfungsprotokolle
+- Änderungsprotokolle
+- Genehmigungsnachweise</p>
+<hr />
+<p><strong>Dokumenthistorie:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Datum</th>
+<th>Autor</th>
+<th>Änderungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Initiale Erstellung</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0050_Compliance_Programm.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0400_Zugriffskontrolle.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

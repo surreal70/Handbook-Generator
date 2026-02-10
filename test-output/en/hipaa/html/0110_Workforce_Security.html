@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0110 - Workforce Security</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0110</div>
+            <h1>Workforce Security</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0100_Security_Management_Process.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0300_Facility_Access_Controls.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="workforce-security">Workforce Security</h1>
+<p><strong>Document ID:</strong> HIPAA-0110<br />
+<strong>Organization:</strong> AdminSend GmbH<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Approved by:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Draft / In Review / Approved<br />
+<strong>Classification:</strong> internal<br />
+<strong>Last Updated:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This document describes the Workforce Security procedures for AdminSend GmbH to ensure that all workforce members have appropriate access to ePHI and to prevent unauthorized access.</p>
+<h3 id="11-hipaa-requirement">1.1 HIPAA Requirement</h3>
+<p><strong>Standard:</strong> §164.308(a)(3) - Workforce Security (Required)</p>
+<p><strong>Implementation Specifications:</strong>
+- §164.308(a)(3)(ii)(A) - Authorization and/or Supervision (Addressable)
+- §164.308(a)(3)(ii)(B) - Workforce Clearance Procedure (Addressable)
+- §164.308(a)(3)(ii)(C) - Termination Procedures (Addressable)</p>
+<h2 id="2-authorization-and-supervision">2. Authorization and Supervision</h2>
+<h3 id="21-access-authorization">2.1 Access Authorization</h3>
+<p><strong>Principle:</strong> Access to ePHI is granted based on role, job function, and minimum necessary standard.</p>
+<p><strong>Authorization Process:</strong>
+1. <strong>Job Analysis:</strong> Determine ePHI access requirements for role
+2. <strong>Access Request:</strong> Manager submits access request
+3. <strong>Justification:</strong> Document business need
+4. <strong>Approval:</strong> Privacy Officer and/or Security Officer approve
+5. <strong>Provisioning:</strong> IT provisions access
+6. <strong>Documentation:</strong> Access logged
+7. <strong>Acknowledgment:</strong> Employee acknowledges responsibilities</p>
+<p><strong>Authorization Criteria:</strong>
+- Job role requires ePHI access
+- Minimum necessary access only
+- Appropriate training completed
+- Background check completed (if required)
+- Confidentiality agreement signed</p>
+<h3 id="22-supervision-requirements">2.2 Supervision Requirements</h3>
+<p><strong>Supervised Access:</strong>
+Workforce members with limited training or temporary status may require supervision when accessing ePHI.</p>
+<p><strong>Supervision Levels:</strong>
+| Workforce Type | Supervision Required | Supervisor | Duration |
+|----------------|---------------------|------------|----------|
+| New employees (&lt; 90 days) | Yes | Direct manager | Until training complete |
+| Temporary staff | Yes | Assigned supervisor | Duration of assignment |
+| Interns/students | Yes | Preceptor/instructor | Duration of program |
+| Contractors (short-term) | Yes | Project manager | Duration of contract |</p>
+<p><strong>Supervisor Responsibilities:</strong>
+- Monitor workforce member's ePHI access
+- Ensure compliance with policies
+- Provide guidance and training
+- Report violations
+- Document supervision activities</p>
+<h2 id="3-workforce-clearance-procedure">3. Workforce Clearance Procedure</h2>
+<h3 id="31-pre-employment-screening">3.1 Pre-Employment Screening</h3>
+<p><strong>Background Check Requirements:</strong></p>
+<p><strong>All Workforce with ePHI Access:</strong>
+- Identity verification
+- Employment history verification (7 years)
+- Education verification
+- Professional license verification (if applicable)</p>
+<p><strong>Workforce with Elevated Access:</strong>
+- Criminal background check
+- Credit check (for financial roles)
+- Reference checks (minimum 3)</p>
+<p><strong>Background Check Process:</strong>
+1. <strong>Conditional Offer:</strong> Offer contingent on background check
+2. <strong>Authorization:</strong> Candidate authorizes background check
+3. <strong>Screening:</strong> Third-party vendor conducts check
+4. <strong>Review:</strong> HR reviews results
+5. <strong>Decision:</strong> Hire/no-hire decision
+6. <strong>Documentation:</strong> Results documented and secured
+7. <strong>Adverse Action:</strong> Follow FCRA requirements if adverse action taken</p>
+<p><strong>Background Check Vendor:</strong> [TODO: Vendor name]</p>
+<h3 id="32-clearance-levels">3.2 Clearance Levels</h3>
+<table>
+<thead>
+<tr>
+<th>Clearance Level</th>
+<th>Requirements</th>
+<th>Roles</th>
+<th>ePHI Access</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Level 1 - Basic</td>
+<td>Identity verification, employment history</td>
+<td>Administrative staff</td>
+<td>Limited ePHI</td>
+</tr>
+<tr>
+<td>Level 2 - Standard</td>
+<td>Level 1 + education verification</td>
+<td>Clinical staff</td>
+<td>Full ePHI for patient care</td>
+</tr>
+<tr>
+<td>Level 3 - Elevated</td>
+<td>Level 2 + criminal background check</td>
+<td>IT staff, billing</td>
+<td>System-level ePHI access</td>
+</tr>
+<tr>
+<td>Level 4 - Executive</td>
+<td>Level 3 + credit check, references</td>
+<td>Executives, compliance</td>
+<td>All ePHI</td>
+</tr>
+</tbody>
+</table>
+<h3 id="33-ongoing-clearance">3.3 Ongoing Clearance</h3>
+<p><strong>Periodic Re-screening:</strong>
+- <strong>Frequency:</strong> [TODO: Every 3-5 years or as required by role]
+- <strong>Scope:</strong> Criminal background check, license verification
+- <strong>Trigger Events:</strong> Promotion, role change, security incident</p>
+<p><strong>Continuous Monitoring:</strong>
+- Professional license status
+- Sanctions or disciplinary actions
+- Criminal convictions (if permitted by law)</p>
+<h2 id="4-termination-procedures">4. Termination Procedures</h2>
+<h3 id="41-termination-process">4.1 Termination Process</h3>
+<p><strong>Termination Types:</strong>
+- Voluntary resignation
+- Involuntary termination
+- Retirement
+- End of contract/temporary assignment
+- Death</p>
+<p><strong>Termination Checklist:</strong></p>
+<p><strong>Immediate Actions (Day of Termination):</strong>
+- [ ] Disable all system access (within 1 hour of notification)
+- [ ] Disable email account
+- [ ] Disable VPN access
+- [ ] Disable physical access (badge, keys)
+- [ ] Collect company devices (laptop, phone, tablet)
+- [ ] Collect access badges and keys
+- [ ] Change shared passwords/codes known to employee
+- [ ] Notify IT, Security, and Facilities</p>
+<p><strong>Within 24 Hours:</strong>
+- [ ] Review and archive employee's files
+- [ ] Forward email to manager (if appropriate)
+- [ ] Remove from distribution lists
+- [ ] Update organizational charts
+- [ ] Notify relevant departments
+- [ ] Document termination in HR system</p>
+<p><strong>Within 1 Week:</strong>
+- [ ] Conduct exit interview
+- [ ] Remind of confidentiality obligations
+- [ ] Collect signed acknowledgment of obligations
+- [ ] Final paycheck processing
+- [ ] COBRA notification (if applicable)
+- [ ] Return of property verification</p>
+<h3 id="42-access-termination">4.2 Access Termination</h3>
+<p><strong>System Access Termination:</strong>
+| System | Termination Method | Responsible | Verification |
+|--------|-------------------|-------------|--------------|
+| Active Directory | Account disabled | IT | Automated report |
+| EHR System | User deactivated | IT | Manual verification |
+| Email | Mailbox disabled | IT | Automated report |
+| VPN | Certificate revoked | IT | Manual verification |
+| Physical Access | Badge deactivated | Facilities | Access log review |</p>
+<p><strong>Termination Verification:</strong>
+- IT generates termination report
+- Security Officer reviews report
+- Exceptions investigated and resolved
+- Documentation retained</p>
+<h3 id="43-knowledge-transfer">4.3 Knowledge Transfer</h3>
+<p><strong>Knowledge Transfer Process:</strong>
+1. <strong>Identification:</strong> Identify critical knowledge and responsibilities
+2. <strong>Documentation:</strong> Document processes and procedures
+3. <strong>Training:</strong> Train replacement or team members
+4. <strong>Transition:</strong> Gradual transition of responsibilities (if possible)
+5. <strong>Verification:</strong> Verify knowledge transfer complete</p>
+<p><strong>Critical Knowledge Areas:</strong>
+- System access and passwords
+- Ongoing projects
+- Key contacts
+- Pending issues
+- Documentation locations</p>
+<h3 id="44-post-termination-monitoring">4.4 Post-Termination Monitoring</h3>
+<p><strong>Monitoring Activities:</strong>
+- Review audit logs for terminated employee accounts
+- Monitor for unauthorized access attempts
+- Review for data exfiltration
+- Monitor for policy violations prior to termination</p>
+<p><strong>Monitoring Period:</strong> [TODO: 90 days post-termination]</p>
+<h2 id="5-role-based-access-control-rbac">5. Role-Based Access Control (RBAC)</h2>
+<h3 id="51-role-definitions">5.1 Role Definitions</h3>
+<table>
+<thead>
+<tr>
+<th>Role ID</th>
+<th>Role Name</th>
+<th>Department</th>
+<th>ePHI Access Level</th>
+<th>Systems</th>
+<th>Approval Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: ROLE-001]</td>
+<td>Physician</td>
+<td>Clinical</td>
+<td>Full patient care</td>
+<td>EHR, Lab, Imaging</td>
+<td>Medical Director</td>
+</tr>
+<tr>
+<td>[TODO: ROLE-002]</td>
+<td>Nurse</td>
+<td>Clinical</td>
+<td>Full patient care</td>
+<td>EHR, Medication</td>
+<td>Nurse Manager</td>
+</tr>
+<tr>
+<td>[TODO: ROLE-003]</td>
+<td>Medical Assistant</td>
+<td>Clinical</td>
+<td>Limited</td>
+<td>EHR (vitals, scheduling)</td>
+<td>Clinical Manager</td>
+</tr>
+<tr>
+<td>[TODO: ROLE-004]</td>
+<td>Billing Specialist</td>
+<td>Billing</td>
+<td>Billing data only</td>
+<td>Billing system</td>
+<td>Billing Manager</td>
+</tr>
+<tr>
+<td>[TODO: ROLE-005]</td>
+<td>IT Administrator</td>
+<td>IT</td>
+<td>System admin</td>
+<td>All systems</td>
+<td>IT Manager + Security Officer</td>
+</tr>
+<tr>
+<td>[TODO: ROLE-006]</td>
+<td>Receptionist</td>
+<td>Front Desk</td>
+<td>Demographics only</td>
+<td>EHR (scheduling)</td>
+<td>Office Manager</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-access-matrix">5.2 Access Matrix</h3>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Patient Demographics</th>
+<th>Clinical Notes</th>
+<th>Lab Results</th>
+<th>Medications</th>
+<th>Billing</th>
+<th>System Admin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Physician</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Nurse</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read</td>
+<td>Read/Write</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Medical Assistant</td>
+<td>Read/Write</td>
+<td>Read</td>
+<td>Read</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Billing Specialist</td>
+<td>Read</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>Read/Write</td>
+<td>No</td>
+</tr>
+<tr>
+<td>IT Administrator</td>
+<td>No*</td>
+<td>No*</td>
+<td>No*</td>
+<td>No*</td>
+<td>No*</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Receptionist</td>
+<td>Read/Write</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p>*IT Administrators have technical access but should not access ePHI unless required for troubleshooting</p>
+<h2 id="6-training-requirements">6. Training Requirements</h2>
+<h3 id="61-workforce-security-training">6.1 Workforce Security Training</h3>
+<p><strong>Initial Training (Within 30 days of hire):</strong>
+- HIPAA overview
+- Workforce security policies
+- Access control procedures
+- Password requirements
+- Confidentiality obligations
+- Sanctions for violations</p>
+<p><strong>Annual Training:</strong>
+- Workforce security refresher
+- Policy updates
+- Case studies
+- Emerging threats</p>
+<p><strong>Role-Specific Training:</strong>
+- Supervisors: Supervision responsibilities
+- IT Staff: Technical safeguards
+- Managers: Access authorization procedures</p>
+<h3 id="62-training-documentation">6.2 Training Documentation</h3>
+<p><strong>Required Documentation:</strong>
+- Training attendance records
+- Training materials
+- Test scores (if applicable)
+- Acknowledgment of understanding
+- Training certificates</p>
+<p><strong>Retention:</strong> [TODO: 6 years]</p>
+<h2 id="7-confidentiality-agreements">7. Confidentiality Agreements</h2>
+<h3 id="71-confidentiality-agreement-requirements">7.1 Confidentiality Agreement Requirements</h3>
+<p><strong>All Workforce Members Must Sign:</strong>
+- Confidentiality agreement
+- Acceptable use policy
+- HIPAA acknowledgment
+- Security policy acknowledgment</p>
+<p><strong>Timing:</strong>
+- Before access to ePHI granted
+- Upon policy changes (re-acknowledgment)
+- Annually (re-acknowledgment)</p>
+<h3 id="72-agreement-content">7.2 Agreement Content</h3>
+<p><strong>Confidentiality Agreement Must Include:</strong>
+- Obligation to protect PHI/ePHI
+- Prohibition on unauthorized access
+- Prohibition on unauthorized disclosure
+- Reporting requirements for incidents
+- Sanctions for violations
+- Obligations continue after termination
+- Acknowledgment of understanding</p>
+<p><strong>Agreement Storage:</strong> [TODO: HR personnel files, electronic repository]</p>
+<h2 id="8-monitoring-and-compliance">8. Monitoring and Compliance</h2>
+<h3 id="81-workforce-security-monitoring">8.1 Workforce Security Monitoring</h3>
+<p><strong>Monitoring Activities:</strong>
+- Access log reviews
+- Inappropriate access investigations
+- Policy compliance audits
+- Training completion tracking
+- Background check compliance
+- Termination procedure compliance</p>
+<p><strong>Monitoring Frequency:</strong>
+| Activity | Frequency | Responsible |
+|----------|-----------|-------------|
+| Access log review | Monthly | Security Officer |
+| Training compliance | Quarterly | HR + Privacy Officer |
+| Background check compliance | Annual | HR |
+| Termination procedure audit | Quarterly | Security Officer |</p>
+<h3 id="82-compliance-metrics">8.2 Compliance Metrics</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Target</th>
+<th>Current</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Training completion rate</td>
+<td>100%</td>
+<td>[TODO: %]</td>
+<td>[TODO: Green/Yellow/Red]</td>
+</tr>
+<tr>
+<td>Background checks completed</td>
+<td>100%</td>
+<td>[TODO: %]</td>
+<td>[TODO: Green/Yellow/Red]</td>
+</tr>
+<tr>
+<td>Termination procedures followed</td>
+<td>100%</td>
+<td>[TODO: %]</td>
+<td>[TODO: Green/Yellow/Red]</td>
+</tr>
+<tr>
+<td>Access reviews completed</td>
+<td>100%</td>
+<td>[TODO: %]</td>
+<td>[TODO: Green/Yellow/Red]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="9-documentation-and-records">9. Documentation and Records</h2>
+<h3 id="91-required-documentation">9.1 Required Documentation</h3>
+<ul>
+<li>Access authorization forms</li>
+<li>Background check results</li>
+<li>Confidentiality agreements</li>
+<li>Training records</li>
+<li>Termination checklists</li>
+<li>Access termination verification</li>
+<li>Supervision logs</li>
+<li>Incident reports</li>
+</ul>
+<h3 id="92-retention">9.2 Retention</h3>
+<p><strong>Retention Period:</strong> [TODO: 6 years from termination of employment or last effective date]</p>
+<p><strong>Storage Location:</strong> [TODO: HR system, document management system]</p>
+<hr />
+<p><strong>Document History:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Initial creation</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0100_Security_Management_Process.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0300_Facility_Access_Controls.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

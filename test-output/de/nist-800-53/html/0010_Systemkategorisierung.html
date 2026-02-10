@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0010 - Systemkategorisierung</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0010</div>
+            <h1>Systemkategorisierung</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0000_metadata_de_nist-800-53.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0020_Geltungsbereich_und_Systemgrenzen.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="systemkategorisierung">Systemkategorisierung</h1>
+<p><strong>Dokument-ID:</strong> NIST-0010<br />
+<strong>Organisation:</strong> AdminSend GmbH<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Genehmigt durch:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Entwurf / In Review / Freigegeben<br />
+<strong>Klassifizierung:</strong> internal<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-zweck">1. Zweck</h2>
+<p>Dieses Dokument beschreibt die Kategorisierung des Informationssystems {{ meta.nist.system_name }} gemäß FIPS 199 und NIST SP 800-60.</p>
+<h3 id="11-ziele">1.1 Ziele</h3>
+<ul>
+<li><strong>FIPS 199-Konformität:</strong> Kategorisierung nach Sicherheitszielen (Vertraulichkeit, Integrität, Verfügbarkeit)</li>
+<li><strong>Risikobewertung:</strong> Bestimmung der potenziellen Auswirkungen bei Sicherheitsverletzungen</li>
+<li><strong>Baseline-Auswahl:</strong> Grundlage für die Auswahl der Sicherheitskontrollen</li>
+<li><strong>Compliance:</strong> Erfüllung bundesweiter Anforderungen</li>
+</ul>
+<h3 id="12-referenzen">1.2 Referenzen</h3>
+<ul>
+<li><strong>FIPS 199:</strong> Standards for Security Categorization of Federal Information and Information Systems</li>
+<li><strong>NIST SP 800-60 Vol. 1 Rev. 1:</strong> Guide for Mapping Types of Information and Information Systems to Security Categories</li>
+<li><strong>NIST SP 800-60 Vol. 2 Rev. 1:</strong> Appendices to Guide for Mapping Types of Information and Information Systems to Security Categories</li>
+<li><strong>NIST SP 800-53 Rev. 5:</strong> Security and Privacy Controls for Information Systems and Organizations</li>
+</ul>
+<h2 id="2-systeminformationen">2. Systeminformationen</h2>
+<h3 id="21-systemidentifikation">2.1 Systemidentifikation</h3>
+<p><strong>Systemname:</strong> {{ meta.nist.system_name }}<br />
+<strong>System-ID:</strong> {{ meta.nist.system_id }}<br />
+<strong>System Owner:</strong> [TODO: Name] ([TODO: E-Mail])<br />
+<strong>Authorizing Official (AO):</strong> {{ meta.roles.ao.name }} ({{ meta.roles.ao.email }})<br />
+<strong>Information System Security Officer (ISSO):</strong> {{ meta.roles.isso.name }} ({{ meta.roles.isso.email }})  </p>
+<h3 id="22-systembeschreibung">2.2 Systembeschreibung</h3>
+<p><strong>Zweck:</strong> [TODO: Beschreibung des Systemzwecks]</p>
+<p><strong>Funktionen:</strong>
+- [TODO: Hauptfunktion 1]
+- [TODO: Hauptfunktion 2]
+- [TODO: Hauptfunktion 3]</p>
+<p><strong>Benutzer:</strong>
+- <strong>Interne Benutzer:</strong> [TODO: Anzahl und Rollen]
+- <strong>Externe Benutzer:</strong> [TODO: Anzahl und Rollen]
+- <strong>Privilegierte Benutzer:</strong> [TODO: Anzahl und Rollen]</p>
+<h3 id="23-informationstypen">2.3 Informationstypen</h3>
+<table>
+<thead>
+<tr>
+<th>Informationstyp</th>
+<th>Beschreibung</th>
+<th>Quelle (NIST 800-60)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Typ 1]</td>
+<td>[TODO: Beschreibung]</td>
+<td>[TODO: C.2.x.x]</td>
+</tr>
+<tr>
+<td>[TODO: Typ 2]</td>
+<td>[TODO: Beschreibung]</td>
+<td>[TODO: C.3.x.x]</td>
+</tr>
+<tr>
+<td>[TODO: Typ 3]</td>
+<td>[TODO: Beschreibung]</td>
+<td>[TODO: C.4.x.x]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-fips-199-kategorisierung">3. FIPS 199 Kategorisierung</h2>
+<h3 id="31-sicherheitsziele-und-impact-levels">3.1 Sicherheitsziele und Impact Levels</h3>
+<p>Die Kategorisierung erfolgt nach den drei Sicherheitszielen:</p>
+<h4 id="311-vertraulichkeit-confidentiality">3.1.1 Vertraulichkeit (Confidentiality)</h4>
+<p><strong>Definition:</strong> Schutz vor unbefugter Offenlegung von Informationen.</p>
+<p><strong>Impact Level:</strong> [TODO: Low / Moderate / High]</p>
+<p><strong>Begründung:</strong>
+[TODO: Beschreiben Sie die potenziellen Auswirkungen einer unbefugten Offenlegung]</p>
+<p><strong>Beispiele für Auswirkungen:</strong>
+- <strong>Low:</strong> Begrenzte negative Auswirkungen auf Organisationsoperationen, -vermögen oder -personen
+- <strong>Moderate:</strong> Ernsthafte negative Auswirkungen
+- <strong>High:</strong> Schwerwiegende oder katastrophale negative Auswirkungen</p>
+<p><strong>Spezifische Auswirkungen für dieses System:</strong>
+- [TODO: Auswirkung 1]
+- [TODO: Auswirkung 2]
+- [TODO: Auswirkung 3]</p>
+<h4 id="312-integritat-integrity">3.1.2 Integrität (Integrity)</h4>
+<p><strong>Definition:</strong> Schutz vor unbefugter Änderung oder Zerstörung von Informationen.</p>
+<p><strong>Impact Level:</strong> [TODO: Low / Moderate / High]</p>
+<p><strong>Begründung:</strong>
+[TODO: Beschreiben Sie die potenziellen Auswirkungen einer unbefugten Änderung]</p>
+<p><strong>Spezifische Auswirkungen für dieses System:</strong>
+- [TODO: Auswirkung 1]
+- [TODO: Auswirkung 2]
+- [TODO: Auswirkung 3]</p>
+<h4 id="313-verfugbarkeit-availability">3.1.3 Verfügbarkeit (Availability)</h4>
+<p><strong>Definition:</strong> Sicherstellung des rechtzeitigen und zuverlässigen Zugriffs auf Informationen.</p>
+<p><strong>Impact Level:</strong> [TODO: Low / Moderate / High]</p>
+<p><strong>Begründung:</strong>
+[TODO: Beschreiben Sie die potenziellen Auswirkungen eines Verfügbarkeitsverlusts]</p>
+<p><strong>Spezifische Auswirkungen für dieses System:</strong>
+- [TODO: Auswirkung 1]
+- [TODO: Auswirkung 2]
+- [TODO: Auswirkung 3]</p>
+<h3 id="32-gesamtkategorisierung">3.2 Gesamtkategorisierung</h3>
+<p><strong>FIPS 199 Security Category:</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="x">SC </span><span class="cp">{{</span> <span class="nv">meta.nist.system_name</span> <span class="cp">}}</span><span class="x"> = {(confidentiality, [TODO: impact]), (integrity, [TODO: impact]), (availability, [TODO: impact])}</span>
+</code></pre></div>
+
+<p><strong>Beispiel:</strong></p>
+<div class="codehilite"><pre><span></span><code>SC Information System = {(confidentiality, MODERATE), (integrity, MODERATE), (availability, LOW)}
+</code></pre></div>
+
+<p><strong>Overall System Categorization:</strong> [TODO: Low / Moderate / High]</p>
+<blockquote>
+<p><strong>Hinweis:</strong> Die Gesamtkategorisierung entspricht dem höchsten Impact Level der drei Sicherheitsziele (High-Water Mark).</p>
+</blockquote>
+<h2 id="4-kategorisierung-nach-informationstypen">4. Kategorisierung nach Informationstypen</h2>
+<h3 id="41-informationstyp-analyse">4.1 Informationstyp-Analyse</h3>
+<p>Für jeden Informationstyp wird die Kategorisierung gemäß NIST SP 800-60 durchgeführt:</p>
+<h4 id="informationstyp-1-todo-name">Informationstyp 1: [TODO: Name]</h4>
+<p><strong>Beschreibung:</strong> [TODO: Beschreibung des Informationstyps]</p>
+<p><strong>NIST 800-60 Referenz:</strong> [TODO: C.x.x.x]</p>
+<table>
+<thead>
+<tr>
+<th>Sicherheitsziel</th>
+<th>Provisional Impact</th>
+<th>Angepasster Impact</th>
+<th>Begründung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vertraulichkeit</td>
+<td>[TODO: L/M/H]</td>
+<td>[TODO: L/M/H]</td>
+<td>[TODO: Begründung]</td>
+</tr>
+<tr>
+<td>Integrität</td>
+<td>[TODO: L/M/H]</td>
+<td>[TODO: L/M/H]</td>
+<td>[TODO: Begründung]</td>
+</tr>
+<tr>
+<td>Verfügbarkeit</td>
+<td>[TODO: L/M/H]</td>
+<td>[TODO: L/M/H]</td>
+<td>[TODO: Begründung]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="informationstyp-2-todo-name">Informationstyp 2: [TODO: Name]</h4>
+<p><strong>Beschreibung:</strong> [TODO: Beschreibung des Informationstyps]</p>
+<p><strong>NIST 800-60 Referenz:</strong> [TODO: C.x.x.x]</p>
+<table>
+<thead>
+<tr>
+<th>Sicherheitsziel</th>
+<th>Provisional Impact</th>
+<th>Angepasster Impact</th>
+<th>Begründung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vertraulichkeit</td>
+<td>[TODO: L/M/H]</td>
+<td>[TODO: L/M/H]</td>
+<td>[TODO: Begründung]</td>
+</tr>
+<tr>
+<td>Integrität</td>
+<td>[TODO: L/M/H]</td>
+<td>[TODO: L/M/H]</td>
+<td>[TODO: Begründung]</td>
+</tr>
+<tr>
+<td>Verfügbarkeit</td>
+<td>[TODO: L/M/H]</td>
+<td>[TODO: L/M/H]</td>
+<td>[TODO: Begründung]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-aggregierte-kategorisierung">4.2 Aggregierte Kategorisierung</h3>
+<p><strong>Methode:</strong> High-Water Mark (höchster Impact Level über alle Informationstypen)</p>
+<table>
+<thead>
+<tr>
+<th>Sicherheitsziel</th>
+<th>Aggregierter Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vertraulichkeit</td>
+<td>[TODO: Low / Moderate / High]</td>
+</tr>
+<tr>
+<td>Integrität</td>
+<td>[TODO: Low / Moderate / High]</td>
+</tr>
+<tr>
+<td>Verfügbarkeit</td>
+<td>[TODO: Low / Moderate / High]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-baseline-auswahl">5. Baseline-Auswahl</h2>
+<h3 id="51-nist-800-53-baseline">5.1 NIST 800-53 Baseline</h3>
+<p>Basierend auf der Gesamtkategorisierung wird folgende Baseline ausgewählt:</p>
+<p><strong>Ausgewählte Baseline:</strong> [TODO: Low / Moderate / High Baseline]</p>
+<p><strong>Baseline-Kontrollen:</strong>
+- <strong>Low Baseline:</strong> NIST SP 800-53B, Appendix A
+- <strong>Moderate Baseline:</strong> NIST SP 800-53B, Appendix B
+- <strong>High Baseline:</strong> NIST SP 800-53B, Appendix C</p>
+<h3 id="52-tailoring">5.2 Tailoring</h3>
+<p><strong>Tailoring-Aktivitäten:</strong>
+- <strong>Hinzugefügte Kontrollen:</strong> [TODO: Liste zusätzlicher Kontrollen]
+- <strong>Entfernte Kontrollen:</strong> [TODO: Liste entfernter Kontrollen mit Begründung]
+- <strong>Angepasste Kontrollen:</strong> [TODO: Liste angepasster Kontrollen]</p>
+<h2 id="6-kategorisierungsprozess">6. Kategorisierungsprozess</h2>
+<h3 id="61-prozessschritte">6.1 Prozessschritte</h3>
+<ol>
+<li><strong>Systemidentifikation:</strong> Identifikation des zu kategorisierenden Systems</li>
+<li><strong>Informationstyp-Identifikation:</strong> Identifikation aller verarbeiteten Informationstypen</li>
+<li><strong>Provisional Impact:</strong> Bestimmung der provisorischen Impact Levels gemäß NIST 800-60</li>
+<li><strong>Impact-Anpassung:</strong> Anpassung basierend auf organisationsspezifischen Faktoren</li>
+<li><strong>Aggregation:</strong> Aggregation zu Gesamtkategorisierung</li>
+<li><strong>Dokumentation:</strong> Dokumentation der Kategorisierung</li>
+<li><strong>Genehmigung:</strong> Genehmigung durch Authorizing Official</li>
+</ol>
+<h3 id="62-beteiligte-rollen">6.2 Beteiligte Rollen</h3>
+<table>
+<thead>
+<tr>
+<th>Rolle</th>
+<th>Name</th>
+<th>Verantwortlichkeit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>System Owner</td>
+<td>[TODO: Name]</td>
+<td>Systemverantwortung</td>
+</tr>
+<tr>
+<td>Information Owner</td>
+<td>[TODO: Name]</td>
+<td>Informationsverantwortung</td>
+</tr>
+<tr>
+<td>ISSO</td>
+<td>{{ meta.roles.isso.name }}</td>
+<td>Sicherheitsbewertung</td>
+</tr>
+<tr>
+<td>ISSM</td>
+<td>{{ meta.roles.issm.name }}</td>
+<td>Sicherheitsmanagement</td>
+</tr>
+<tr>
+<td>Authorizing Official (AO)</td>
+<td>{{ meta.roles.ao.name }}</td>
+<td>Genehmigung</td>
+</tr>
+</tbody>
+</table>
+<h3 id="63-kategorisierungsdatum">6.3 Kategorisierungsdatum</h3>
+<p><strong>Initiale Kategorisierung:</strong> [TODO: Datum]<br />
+<strong>Letzte Überprüfung:</strong> [TODO: Datum]<br />
+<strong>Nächste Überprüfung:</strong> [TODO: Datum]  </p>
+<h2 id="7-auswirkungsanalyse">7. Auswirkungsanalyse</h2>
+<h3 id="71-vertraulichkeitsverlust">7.1 Vertraulichkeitsverlust</h3>
+<p><strong>Potenzielle Auswirkungen bei unbefugter Offenlegung:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Bereich</th>
+<th>Auswirkung</th>
+<th>Schweregrad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Organisationsoperationen</td>
+<td>[TODO: Beschreibung]</td>
+<td>[TODO: L/M/H]</td>
+</tr>
+<tr>
+<td>Organisationsvermögen</td>
+<td>[TODO: Beschreibung]</td>
+<td>[TODO: L/M/H]</td>
+</tr>
+<tr>
+<td>Personen</td>
+<td>[TODO: Beschreibung]</td>
+<td>[TODO: L/M/H]</td>
+</tr>
+<tr>
+<td>Nationale Sicherheit</td>
+<td>[TODO: Beschreibung]</td>
+<td>[TODO: L/M/H]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="72-integritatsverlust">7.2 Integritätsverlust</h3>
+<p><strong>Potenzielle Auswirkungen bei unbefugter Änderung:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Bereich</th>
+<th>Auswirkung</th>
+<th>Schweregrad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Organisationsoperationen</td>
+<td>[TODO: Beschreibung]</td>
+<td>[TODO: L/M/H]</td>
+</tr>
+<tr>
+<td>Organisationsvermögen</td>
+<td>[TODO: Beschreibung]</td>
+<td>[TODO: L/M/H]</td>
+</tr>
+<tr>
+<td>Personen</td>
+<td>[TODO: Beschreibung]</td>
+<td>[TODO: L/M/H]</td>
+</tr>
+<tr>
+<td>Nationale Sicherheit</td>
+<td>[TODO: Beschreibung]</td>
+<td>[TODO: L/M/H]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="73-verfugbarkeitsverlust">7.3 Verfügbarkeitsverlust</h3>
+<p><strong>Potenzielle Auswirkungen bei Systemausfall:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Bereich</th>
+<th>Auswirkung</th>
+<th>Schweregrad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Organisationsoperationen</td>
+<td>[TODO: Beschreibung]</td>
+<td>[TODO: L/M/H]</td>
+</tr>
+<tr>
+<td>Organisationsvermögen</td>
+<td>[TODO: Beschreibung]</td>
+<td>[TODO: L/M/H]</td>
+</tr>
+<tr>
+<td>Personen</td>
+<td>[TODO: Beschreibung]</td>
+<td>[TODO: L/M/H]</td>
+</tr>
+<tr>
+<td>Nationale Sicherheit</td>
+<td>[TODO: Beschreibung]</td>
+<td>[TODO: L/M/H]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="8-genehmigung">8. Genehmigung</h2>
+<h3 id="81-kategorisierungsgenehmigung">8.1 Kategorisierungsgenehmigung</h3>
+<p><strong>Kategorisierung genehmigt durch:</strong></p>
+<p><strong>Name:</strong> {{ meta.roles.ao.name }}<br />
+<strong>Titel:</strong> Authorizing Official (AO)<br />
+<strong>Datum:</strong> [TODO: Datum]<br />
+<strong>Unterschrift:</strong> [TODO: Unterschrift oder elektronische Genehmigung]  </p>
+<h3 id="82-uberprufungsintervall">8.2 Überprüfungsintervall</h3>
+<p><strong>Überprüfungsfrequenz:</strong> [TODO: Jährlich / Bei signifikanten Änderungen]</p>
+<p><strong>Auslöser für Neukategorisierung:</strong>
+- Signifikante Änderungen am System
+- Neue Informationstypen
+- Änderungen in der Bedrohungslandschaft
+- Organisatorische Änderungen
+- Gesetzliche oder regulatorische Änderungen</p>
+<h2 id="9-anhang">9. Anhang</h2>
+<h3 id="91-fips-199-impact-level-definitionen">9.1 FIPS 199 Impact Level Definitionen</h3>
+<p><strong>Low Impact:</strong></p>
+<blockquote>
+<p>The potential impact is LOW if the loss of confidentiality, integrity, or availability could be expected to have a limited adverse effect on organizational operations, organizational assets, or individuals.</p>
+</blockquote>
+<p><strong>Moderate Impact:</strong></p>
+<blockquote>
+<p>The potential impact is MODERATE if the loss of confidentiality, integrity, or availability could be expected to have a serious adverse effect on organizational operations, organizational assets, or individuals.</p>
+</blockquote>
+<p><strong>High Impact:</strong></p>
+<blockquote>
+<p>The potential impact is HIGH if the loss of confidentiality, integrity, or availability could be expected to have a severe or catastrophic adverse effect on organizational operations, organizational assets, or individuals.</p>
+</blockquote>
+<h3 id="92-kategorisierungsmatrix">9.2 Kategorisierungsmatrix</h3>
+<table>
+<thead>
+<tr>
+<th>Informationstyp</th>
+<th>Vertraulichkeit</th>
+<th>Integrität</th>
+<th>Verfügbarkeit</th>
+<th>Gesamt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Typ 1]</td>
+<td>[TODO: L/M/H]</td>
+<td>[TODO: L/M/H]</td>
+<td>[TODO: L/M/H]</td>
+<td>[TODO: L/M/H]</td>
+</tr>
+<tr>
+<td>[TODO: Typ 2]</td>
+<td>[TODO: L/M/H]</td>
+<td>[TODO: L/M/H]</td>
+<td>[TODO: L/M/H]</td>
+<td>[TODO: L/M/H]</td>
+</tr>
+<tr>
+<td>[TODO: Typ 3]</td>
+<td>[TODO: L/M/H]</td>
+<td>[TODO: L/M/H]</td>
+<td>[TODO: L/M/H]</td>
+<td>[TODO: L/M/H]</td>
+</tr>
+<tr>
+<td><strong>System Gesamt</strong></td>
+<td><strong>[TODO: L/M/H]</strong></td>
+<td><strong>[TODO: L/M/H]</strong></td>
+<td><strong>[TODO: L/M/H]</strong></td>
+<td><strong>[TODO: L/M/H]</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Dokumenthistorie:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Datum</th>
+<th>Autor</th>
+<th>Änderungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Initiale Erstellung</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0000_metadata_de_nist-800-53.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0020_Geltungsbereich_und_Systemgrenzen.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

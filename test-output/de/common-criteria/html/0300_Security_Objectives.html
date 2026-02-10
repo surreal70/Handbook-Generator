@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0300 - Sicherheitsziele (Security Objectives)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0300</div>
+            <h1>Sicherheitsziele (Security Objectives)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0240_Threat_Agents_and_Assets.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0310_Security_Objectives_Rationale.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="sicherheitsziele-security-objectives">Sicherheitsziele (Security Objectives)</h1>
+<p><strong>Dokument-ID:</strong> 0300<br />
+<strong>Owner:</strong> {{ meta.owner }}<br />
+<strong>Version:</strong> {{ meta.version }}<br />
+<strong>Status:</strong> Entwurf / In Review / Freigegeben<br />
+<strong>Klassifizierung:</strong> Intern / Vertraulich / Streng vertraulich<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.date }}  </p>
+<hr />
+<blockquote>
+<p><strong>Hinweis:</strong> Dieses Dokument ist ein Template. Ersetze alle <code>[TODO]</code>-Platzhalter und passe die Inhalte an dein spezifisches TOE (Target of Evaluation) an.</p>
+</blockquote>
+<h2 id="1-einleitung">1. Einleitung</h2>
+<p>Dieses Dokument definiert die Sicherheitsziele für das TOE <strong>{{ meta.toe_name }}</strong> und dessen Betriebsumgebung. Die Sicherheitsziele leiten sich aus der Sicherheitsproblem-Definition ab und beschreiben die beabsichtigten Sicherheitseigenschaften, die zur Bewältigung der identifizierten Bedrohungen, zur Einhaltung der organisatorischen Sicherheitsrichtlinien und zur Erfüllung der Annahmen erforderlich sind.</p>
+<h3 id="11-zweck">1.1 Zweck</h3>
+<p>Die Sicherheitsziele dienen als Brücke zwischen:
+- Der Sicherheitsproblem-Definition (Bedrohungen, OSPs, Annahmen)
+- Den Sicherheitsanforderungen (SFRs und SARs)</p>
+<p>Sie beschreiben <strong>was</strong> erreicht werden soll, nicht <strong>wie</strong> es implementiert wird.</p>
+<h3 id="12-struktur">1.2 Struktur</h3>
+<p>Die Sicherheitsziele sind in zwei Kategorien unterteilt:
+- <strong>Sicherheitsziele für das TOE (O.xxx)</strong>: Ziele, die durch das TOE selbst erreicht werden
+- <strong>Sicherheitsziele für die Umgebung (OE.xxx)</strong>: Ziele, die durch die Betriebsumgebung erfüllt werden müssen</p>
+<h2 id="2-sicherheitsziele-fur-das-toe">2. Sicherheitsziele für das TOE</h2>
+<h3 id="21-zugriffskontrolle-und-authentifizierung">2.1 Zugriffskontrolle und Authentifizierung</h3>
+<h4 id="oaccess_control">O.ACCESS_CONTROL</h4>
+<p><strong>Beschreibung:</strong> Das TOE muss den Zugriff auf geschützte Ressourcen basierend auf Benutzeridentität und Berechtigungen kontrollieren.</p>
+<p><strong>Rationale:</strong> Dieses Ziel adressiert die Bedrohungen T.UNAUTHORIZED_ACCESS und T.PRIVILEGE_ESCALATION sowie die organisatorische Sicherheitsrichtlinie P.ACCESS_CONTROL.</p>
+<p><strong>[TODO: Passe die Beschreibung an dein spezifisches TOE an]</strong></p>
+<h4 id="oidentification_authentication">O.IDENTIFICATION_AUTHENTICATION</h4>
+<p><strong>Beschreibung:</strong> Das TOE muss alle Benutzer eindeutig identifizieren und authentifizieren, bevor Zugriff auf geschützte Funktionen gewährt wird.</p>
+<p><strong>Rationale:</strong> Dieses Ziel adressiert die Bedrohung T.MASQUERADE und unterstützt O.ACCESS_CONTROL.</p>
+<p><strong>[TODO: Ergänze weitere Authentifizierungsziele falls erforderlich]</strong></p>
+<h3 id="22-audit-und-nachvollziehbarkeit">2.2 Audit und Nachvollziehbarkeit</h3>
+<h4 id="oaudit_generation">O.AUDIT_GENERATION</h4>
+<p><strong>Beschreibung:</strong> Das TOE muss sicherheitsrelevante Ereignisse aufzeichnen, einschließlich Benutzeraktionen, Sicherheitsverletzungen und Systemereignisse.</p>
+<p><strong>Rationale:</strong> Dieses Ziel adressiert die Bedrohung T.AUDIT_COMPROMISE und die organisatorische Sicherheitsrichtlinie P.ACCOUNTABILITY.</p>
+<p><strong>[TODO: Definiere spezifische Audit-Anforderungen]</strong></p>
+<h4 id="oaudit_protection">O.AUDIT_PROTECTION</h4>
+<p><strong>Beschreibung:</strong> Das TOE muss Audit-Aufzeichnungen vor unbefugter Änderung und Löschung schützen.</p>
+<p><strong>Rationale:</strong> Dieses Ziel adressiert die Bedrohung T.AUDIT_COMPROMISE und stellt die Integrität der Audit-Daten sicher.</p>
+<p><strong>[TODO: Beschreibe Schutzmechanismen für Audit-Daten]</strong></p>
+<h3 id="23-datenschutz-und-vertraulichkeit">2.3 Datenschutz und Vertraulichkeit</h3>
+<h4 id="odata_confidentiality">O.DATA_CONFIDENTIALITY</h4>
+<p><strong>Beschreibung:</strong> Das TOE muss sensible Benutzerdaten vor unbefugter Offenlegung schützen.</p>
+<p><strong>Rationale:</strong> Dieses Ziel adressiert die Bedrohungen T.DATA_DISCLOSURE und T.EAVESDROPPING sowie die organisatorische Sicherheitsrichtlinie P.CONFIDENTIALITY.</p>
+<p><strong>[TODO: Definiere welche Daten geschützt werden müssen]</strong></p>
+<h4 id="ocryptographic_operations">O.CRYPTOGRAPHIC_OPERATIONS</h4>
+<p><strong>Beschreibung:</strong> Das TOE muss kryptografische Operationen zur Verschlüsselung und Integritätssicherung von Daten durchführen.</p>
+<p><strong>Rationale:</strong> Dieses Ziel unterstützt O.DATA_CONFIDENTIALITY und O.DATA_INTEGRITY durch Bereitstellung kryptografischer Mechanismen.</p>
+<p><strong>[TODO: Spezifiziere erforderliche kryptografische Funktionen]</strong></p>
+<h3 id="24-datenintegritat">2.4 Datenintegrität</h3>
+<h4 id="odata_integrity">O.DATA_INTEGRITY</h4>
+<p><strong>Beschreibung:</strong> Das TOE muss die Integrität von Benutzerdaten und Systemdaten gegen unbefugte Änderung schützen.</p>
+<p><strong>Rationale:</strong> Dieses Ziel adressiert die Bedrohungen T.DATA_MODIFICATION und T.DATA_CORRUPTION sowie die organisatorische Sicherheitsrichtlinie P.INTEGRITY.</p>
+<p><strong>[TODO: Beschreibe Integritätsschutzmechanismen]</strong></p>
+<h3 id="25-sicherheitsmanagement">2.5 Sicherheitsmanagement</h3>
+<h4 id="osecurity_management">O.SECURITY_MANAGEMENT</h4>
+<p><strong>Beschreibung:</strong> Das TOE muss autorisierten Administratoren die Verwaltung von Sicherheitsfunktionen und -richtlinien ermöglichen.</p>
+<p><strong>Rationale:</strong> Dieses Ziel adressiert die organisatorische Sicherheitsrichtlinie P.MANAGEMENT und ermöglicht die Konfiguration und Wartung des TOE.</p>
+<p><strong>[TODO: Definiere Verwaltungsfunktionen]</strong></p>
+<h4 id="osecure_state">O.SECURE_STATE</h4>
+<p><strong>Beschreibung:</strong> Das TOE muss in einem sicheren Zustand starten und bei Fehlern in einen sicheren Zustand übergehen.</p>
+<p><strong>Rationale:</strong> Dieses Ziel adressiert die Bedrohung T.MALFUNCTION und stellt sicher, dass das TOE auch bei Fehlern sicher bleibt.</p>
+<p><strong>[TODO: Beschreibe sichere Zustände und Fehlerbehandlung]</strong></p>
+<h3 id="26-selbstschutz">2.6 Selbstschutz</h3>
+<h4 id="otsf_protection">O.TSF_PROTECTION</h4>
+<p><strong>Beschreibung:</strong> Das TOE muss seine eigenen Sicherheitsfunktionen (TSF) vor Manipulation und Umgehung schützen.</p>
+<p><strong>Rationale:</strong> Dieses Ziel adressiert die Bedrohungen T.TSF_COMPROMISE und T.TSF_BYPASS und stellt die Integrität der Sicherheitsfunktionen sicher.</p>
+<p><strong>[TODO: Beschreibe TSF-Schutzmechanismen]</strong></p>
+<h3 id="27-weitere-toe-sicherheitsziele">2.7 Weitere TOE-Sicherheitsziele</h3>
+<p><strong>[TODO: Ergänze weitere spezifische Sicherheitsziele für dein TOE]</strong></p>
+<h4 id="ocustom_objective_1">O.[CUSTOM_OBJECTIVE_1]</h4>
+<p><strong>Beschreibung:</strong> [TODO: Beschreibung]</p>
+<p><strong>Rationale:</strong> [TODO: Begründung und Bezug zu Bedrohungen/OSPs]</p>
+<h4 id="ocustom_objective_2">O.[CUSTOM_OBJECTIVE_2]</h4>
+<p><strong>Beschreibung:</strong> [TODO: Beschreibung]</p>
+<p><strong>Rationale:</strong> [TODO: Begründung und Bezug zu Bedrohungen/OSPs]</p>
+<h2 id="3-sicherheitsziele-fur-die-umgebung">3. Sicherheitsziele für die Umgebung</h2>
+<h3 id="31-physische-sicherheit">3.1 Physische Sicherheit</h3>
+<h4 id="oephysical_protection">OE.PHYSICAL_PROTECTION</h4>
+<p><strong>Beschreibung:</strong> Die Betriebsumgebung muss das TOE vor physischem Zugriff durch unbefugte Personen schützen.</p>
+<p><strong>Rationale:</strong> Dieses Ziel erfüllt die Annahme A.PHYSICAL_SECURITY und adressiert die Bedrohung T.PHYSICAL_ATTACK.</p>
+<p><strong>[TODO: Definiere erforderliche physische Schutzmaßnahmen]</strong></p>
+<h3 id="32-personal-und-vertrauen">3.2 Personal und Vertrauen</h3>
+<h4 id="oetrusted_admin">OE.TRUSTED_ADMIN</h4>
+<p><strong>Beschreibung:</strong> Die Betriebsumgebung muss sicherstellen, dass Administratoren vertrauenswürdig, geschult und kompetent sind.</p>
+<p><strong>Rationale:</strong> Dieses Ziel erfüllt die Annahme A.TRUSTED_ADMIN und reduziert das Risiko von Insider-Bedrohungen.</p>
+<p><strong>[TODO: Beschreibe Anforderungen an Administratoren]</strong></p>
+<h4 id="oeuser_training">OE.USER_TRAINING</h4>
+<p><strong>Beschreibung:</strong> Die Betriebsumgebung muss sicherstellen, dass Benutzer in der sicheren Verwendung des TOE geschult sind.</p>
+<p><strong>Rationale:</strong> Dieses Ziel erfüllt die Annahme A.USER_TRAINING und reduziert das Risiko von Benutzerfehlern.</p>
+<p><strong>[TODO: Definiere Schulungsanforderungen]</strong></p>
+<h3 id="33-netzwerk-und-konnektivitat">3.3 Netzwerk und Konnektivität</h3>
+<h4 id="oenetwork_protection">OE.NETWORK_PROTECTION</h4>
+<p><strong>Beschreibung:</strong> Die Betriebsumgebung muss das TOE vor Netzwerkangriffen durch Firewalls, Intrusion Detection und andere Schutzmechanismen schützen.</p>
+<p><strong>Rationale:</strong> Dieses Ziel erfüllt die Annahme A.NETWORK_SECURITY und adressiert Bedrohungen aus dem Netzwerk.</p>
+<p><strong>[TODO: Spezifiziere erforderliche Netzwerkschutzmaßnahmen]</strong></p>
+<h3 id="34-externe-systeme-und-dienste">3.4 Externe Systeme und Dienste</h3>
+<h4 id="oeexternal_systems">OE.EXTERNAL_SYSTEMS</h4>
+<p><strong>Beschreibung:</strong> Die Betriebsumgebung muss sicherstellen, dass externe Systeme, mit denen das TOE interagiert, vertrauenswürdig und sicher sind.</p>
+<p><strong>Rationale:</strong> Dieses Ziel erfüllt die Annahme A.EXTERNAL_SYSTEMS und reduziert Risiken durch Drittanbieter-Komponenten.</p>
+<p><strong>[TODO: Definiere Anforderungen an externe Systeme]</strong></p>
+<h3 id="35-zeitdienste">3.5 Zeitdienste</h3>
+<h4 id="oetime_stamps">OE.TIME_STAMPS</h4>
+<p><strong>Beschreibung:</strong> Die Betriebsumgebung muss zuverlässige Zeitstempel für Audit-Aufzeichnungen und Sicherheitsereignisse bereitstellen.</p>
+<p><strong>Rationale:</strong> Dieses Ziel erfüllt die Annahme A.TIME_SOURCE und unterstützt O.AUDIT_GENERATION.</p>
+<p><strong>[TODO: Beschreibe Anforderungen an Zeitquellen]</strong></p>
+<h3 id="36-weitere-umgebungsziele">3.6 Weitere Umgebungsziele</h3>
+<p><strong>[TODO: Ergänze weitere spezifische Sicherheitsziele für die Umgebung]</strong></p>
+<h4 id="oecustom_env_objective_1">OE.[CUSTOM_ENV_OBJECTIVE_1]</h4>
+<p><strong>Beschreibung:</strong> [TODO: Beschreibung]</p>
+<p><strong>Rationale:</strong> [TODO: Begründung und Bezug zu Annahmen]</p>
+<h4 id="oecustom_env_objective_2">OE.[CUSTOM_ENV_OBJECTIVE_2]</h4>
+<p><strong>Beschreibung:</strong> [TODO: Beschreibung]</p>
+<p><strong>Rationale:</strong> [TODO: Begründung und Bezug zu Annahmen]</p>
+<h2 id="4-zusammenfassung-der-sicherheitsziele">4. Zusammenfassung der Sicherheitsziele</h2>
+<h3 id="41-toe-sicherheitsziele-ubersicht">4.1 TOE-Sicherheitsziele (Übersicht)</h3>
+<table>
+<thead>
+<tr>
+<th>Ziel-ID</th>
+<th>Kurzbeschreibung</th>
+<th>Kategorie</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O.ACCESS_CONTROL</td>
+<td>Zugriffskontrolle auf Ressourcen</td>
+<td>Zugriffskontrolle</td>
+</tr>
+<tr>
+<td>O.IDENTIFICATION_AUTHENTICATION</td>
+<td>Benutzeridentifikation und -authentifizierung</td>
+<td>Zugriffskontrolle</td>
+</tr>
+<tr>
+<td>O.AUDIT_GENERATION</td>
+<td>Aufzeichnung sicherheitsrelevanter Ereignisse</td>
+<td>Audit</td>
+</tr>
+<tr>
+<td>O.AUDIT_PROTECTION</td>
+<td>Schutz von Audit-Aufzeichnungen</td>
+<td>Audit</td>
+</tr>
+<tr>
+<td>O.DATA_CONFIDENTIALITY</td>
+<td>Schutz sensibler Daten vor Offenlegung</td>
+<td>Datenschutz</td>
+</tr>
+<tr>
+<td>O.CRYPTOGRAPHIC_OPERATIONS</td>
+<td>Kryptografische Operationen</td>
+<td>Datenschutz</td>
+</tr>
+<tr>
+<td>O.DATA_INTEGRITY</td>
+<td>Schutz der Datenintegrität</td>
+<td>Integrität</td>
+</tr>
+<tr>
+<td>O.SECURITY_MANAGEMENT</td>
+<td>Verwaltung von Sicherheitsfunktionen</td>
+<td>Management</td>
+</tr>
+<tr>
+<td>O.SECURE_STATE</td>
+<td>Sicherer Zustand bei Start und Fehlern</td>
+<td>Selbstschutz</td>
+</tr>
+<tr>
+<td>O.TSF_PROTECTION</td>
+<td>Schutz der Sicherheitsfunktionen</td>
+<td>Selbstschutz</td>
+</tr>
+<tr>
+<td><strong>[TODO: Weitere Ziele]</strong></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-umgebungsziele-ubersicht">4.2 Umgebungsziele (Übersicht)</h3>
+<table>
+<thead>
+<tr>
+<th>Ziel-ID</th>
+<th>Kurzbeschreibung</th>
+<th>Kategorie</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OE.PHYSICAL_PROTECTION</td>
+<td>Physischer Schutz des TOE</td>
+<td>Physische Sicherheit</td>
+</tr>
+<tr>
+<td>OE.TRUSTED_ADMIN</td>
+<td>Vertrauenswürdige Administratoren</td>
+<td>Personal</td>
+</tr>
+<tr>
+<td>OE.USER_TRAINING</td>
+<td>Benutzerschulung</td>
+<td>Personal</td>
+</tr>
+<tr>
+<td>OE.NETWORK_PROTECTION</td>
+<td>Netzwerkschutz</td>
+<td>Netzwerk</td>
+</tr>
+<tr>
+<td>OE.EXTERNAL_SYSTEMS</td>
+<td>Sichere externe Systeme</td>
+<td>Integration</td>
+</tr>
+<tr>
+<td>OE.TIME_STAMPS</td>
+<td>Zuverlässige Zeitstempel</td>
+<td>Infrastruktur</td>
+</tr>
+<tr>
+<td><strong>[TODO: Weitere Ziele]</strong></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-nachste-schritte">5. Nächste Schritte</h2>
+<p>Nach der Definition der Sicherheitsziele:
+1. Erstelle die Rationale (Begründung) für die Sicherheitsziele (siehe Template 0310)
+2. Erstelle die Coverage Matrix (siehe Template 0320)
+3. Leite die Sicherheitsanforderungen (SFRs und SARs) aus den Zielen ab</p>
+<h2 id="6-referenzen">6. Referenzen</h2>
+<ul>
+<li>ISO/IEC 15408-1: Security Target Evaluation</li>
+<li>ISO/IEC 15408-2: Security Functional Components</li>
+<li>ISO/IEC 15408-3: Security Assurance Components</li>
+<li>Template 0200-0240: Sicherheitsproblem-Definition</li>
+<li>Template 0310: Rationale für Sicherheitsziele</li>
+<li>Template 0320: Security Objectives Coverage Matrix</li>
+</ul>
+<hr />
+<p><strong>Dokumenthistorie:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Datum</th>
+<th>Autor</th>
+<th>Änderungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{{ meta.version }}</td>
+<td>{{ meta.date }}</td>
+<td>{{ meta.owner }}</td>
+<td>Initiale Version</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0240_Threat_Agents_and_Assets.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0310_Security_Objectives_Rationale.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

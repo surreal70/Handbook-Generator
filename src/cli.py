@@ -74,8 +74,8 @@ Examples:
     parser.add_argument(
         '--template', '-t',
         type=str,
-        choices=['backup', 'bcm', 'bsi-grundschutz', 'cis-controls', 'isms', 'it-operation'],
-        help='Template type/category for handbook (backup=Backup procedures, bcm=Business Continuity Management, bsi-grundschutz=BSI IT-Grundschutz, cis-controls=CIS Controls v8 Hardening, isms=Information Security Management System, it-operation=IT Operations)'
+        choices=['backup', 'bcm', 'bsi-grundschutz', 'cis-controls', 'common-criteria', 'email-service', 'gdpr', 'hipaa', 'isms', 'iso-9001', 'it-operation', 'nist-800-53', 'pci-dss', 'service-templates', 'tsc'],
+        help='Template type/category for handbook (backup=Backup procedures, bcm=Business Continuity Management, bsi-grundschutz=BSI IT-Grundschutz, cis-controls=CIS Controls v8 Hardening, common-criteria=Common Criteria EAL, email-service=Email Service Management, gdpr=GDPR Compliance, hipaa=HIPAA Compliance, isms=Information Security Management System, iso-9001=ISO 9001 Quality Management, it-operation=IT Operations, nist-800-53=NIST 800-53 Security Controls, pci-dss=PCI-DSS Payment Card Security, service-templates=Service Management Templates, tsc=Trust Services Criteria SOC2)'
     )
     
     parser.add_argument(

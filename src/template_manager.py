@@ -70,6 +70,25 @@ class TemplateManager:
     Manages template discovery, validation, and sorting.
     """
     
+    # Supported compliance and operational frameworks
+    SUPPORTED_FRAMEWORKS = [
+        'backup',
+        'bcm',
+        'bsi-grundschutz',
+        'cis-controls',
+        'common-criteria',
+        'email-service',
+        'gdpr',
+        'hipaa',
+        'isms',
+        'iso-9001',
+        'it-operation',
+        'nist-800-53',
+        'pci-dss',
+        'service-templates',
+        'tsc'
+    ]
+    
     # Pattern for metadata templates: 0000_metadata_[language]_[templatename].md
     METADATA_PATTERN = re.compile(r'^0000_metadata_([a-z]{2})_(.+)\.md$')
     
@@ -293,6 +312,23 @@ class TemplateManager:
         available_languages = list(discovered.keys())
         available_types = {lang: list(categories.keys()) for lang, categories in discovered.items()}
         return available_languages, available_types
+    
+    def get_discovered_frameworks(self) -> set[str]:
+        """
+        Get all discovered framework directories across all languages.
+        Automatically detects new framework directories without requiring
+        updates to SUPPORTED_FRAMEWORKS list.
+        
+        Returns:
+            Set of framework names discovered in template directories
+        """
+        discovered = self.discover_templates()
+        frameworks = set()
+        
+        for lang_templates in discovered.values():
+            frameworks.update(lang_templates.keys())
+        
+        return frameworks
     
     def validate_template_exists(self, language: str, template_type: str) -> Optional[str]:
         """

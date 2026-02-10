@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0130 - TOE Architecture</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0130</div>
+            <h1>TOE Architecture</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0120_TOE_Interfaces.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0140_TOE_Lifecycle.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="toe-architecture">TOE Architecture</h1>
+<p><strong>Dokument-ID:</strong> 0130<br />
+<strong>Owner:</strong> {{ meta.owner }}<br />
+<strong>Version:</strong> {{ meta.version }}<br />
+<strong>Status:</strong> Entwurf<br />
+<strong>Klassifizierung:</strong> Vertraulich<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.date }}  </p>
+<hr />
+<h2 id="1-architecture-overview">1. Architecture Overview</h2>
+<h3 id="11-high-level-architecture">1.1 High-Level Architecture</h3>
+<p>[TODO: Beschreibe die High-Level-Architektur des TOE]</p>
+<p>Der TOE folgt einer [TODO: z.B. geschichteten, modularen, serviceorientierten] Architektur mit folgenden Hauptkomponenten:</p>
+<div class="codehilite"><pre><span></span><code>[TODO: High-Level-Architekturdiagramm einfügen]
+</code></pre></div>
+
+<h3 id="12-architecture-style">1.2 Architecture Style</h3>
+<p><strong>Architekturstil:</strong> [TODO: z.B. Layered, Microservices, Client-Server, Event-Driven]</p>
+<p><strong>Begründung:</strong>
+[TODO: Erkläre, warum dieser Architekturstil gewählt wurde]</p>
+<h3 id="13-architecture-principles">1.3 Architecture Principles</h3>
+<p><strong>Leitende Architekturprinzipien:</strong>
+1. [TODO: Prinzip 1, z.B. Separation of Concerns]
+2. [TODO: Prinzip 2, z.B. Least Privilege]
+3. [TODO: Prinzip 3, z.B. Defense in Depth]
+4. [TODO: Prinzip 4, z.B. Fail Secure]
+5. [TODO: Prinzip 5, z.B. Simplicity]</p>
+<h2 id="2-layered-architecture">2. Layered Architecture</h2>
+<h3 id="21-architecture-layers">2.1 Architecture Layers</h3>
+<p>Der TOE ist in folgende Schichten organisiert:</p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Name</th>
+<th>Responsibility</th>
+<th>Components</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Layer 1]</td>
+<td>[TODO: Name]</td>
+<td>[TODO: Verantwortlichkeit]</td>
+<td>[TODO: Komponenten]</td>
+</tr>
+<tr>
+<td>[TODO: Layer 2]</td>
+<td>[TODO: Name]</td>
+<td>[TODO: Verantwortlichkeit]</td>
+<td>[TODO: Komponenten]</td>
+</tr>
+<tr>
+<td>[TODO: Layer 3]</td>
+<td>[TODO: Name]</td>
+<td>[TODO: Verantwortlichkeit]</td>
+<td>[TODO: Komponenten]</td>
+</tr>
+<tr>
+<td>[TODO: Layer 4]</td>
+<td>[TODO: Name]</td>
+<td>[TODO: Verantwortlichkeit]</td>
+<td>[TODO: Komponenten]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-layer-interactions">2.2 Layer Interactions</h3>
+<p>[TODO: Beschreibe, wie Schichten miteinander interagieren]</p>
+<p><strong>Interaktionsregeln:</strong>
+- [TODO: Regel 1, z.B. Schichten dürfen nur mit benachbarten Schichten kommunizieren]
+- [TODO: Regel 2, z.B. Keine Umgehung von Schichten]
+- [TODO: Regel 3]</p>
+<div class="codehilite"><pre><span></span><code>[TODO: Schichteninteraktionsdiagramm einfügen]
+</code></pre></div>
+
+<h3 id="23-layer-details">2.3 Layer Details</h3>
+<h4 id="layer-todo-schichtname-1">Layer: [TODO: Schichtname 1]</h4>
+<p><strong>Zweck:</strong> [TODO: Beschreibung]</p>
+<p><strong>Komponenten:</strong>
+- [TODO: Komponente 1]: [TODO: Beschreibung]
+- [TODO: Komponente 2]: [TODO: Beschreibung]</p>
+<p><strong>Schnittstellen:</strong>
+- Nach oben: [TODO: Bereitgestellte Schnittstellen]
+- Nach unten: [TODO: Verwendete Schnittstellen]</p>
+<p><strong>Sicherheitsverantwortlichkeiten:</strong>
+- [TODO: Sicherheitsverantwortlichkeit 1]
+- [TODO: Sicherheitsverantwortlichkeit 2]</p>
+<h4 id="layer-todo-schichtname-2">Layer: [TODO: Schichtname 2]</h4>
+<p>[TODO: Details wie oben]</p>
+<h2 id="3-component-architecture">3. Component Architecture</h2>
+<h3 id="31-component-overview">3.1 Component Overview</h3>
+<p><strong>Hauptkomponenten des TOE:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Component ID</th>
+<th>Name</th>
+<th>Type</th>
+<th>Layer</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: COMP-001]</td>
+<td>[TODO: Name]</td>
+<td>Core/Security/Support</td>
+<td>[TODO: Layer]</td>
+<td>[TODO: Zweck]</td>
+</tr>
+<tr>
+<td>[TODO: COMP-002]</td>
+<td>[TODO: Name]</td>
+<td>Core/Security/Support</td>
+<td>[TODO: Layer]</td>
+<td>[TODO: Zweck]</td>
+</tr>
+<tr>
+<td>[TODO: COMP-003]</td>
+<td>[TODO: Name]</td>
+<td>Core/Security/Support</td>
+<td>[TODO: Layer]</td>
+<td>[TODO: Zweck]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-component-relationships">3.2 Component Relationships</h3>
+<p>[TODO: Beschreibe Beziehungen zwischen Komponenten]</p>
+<div class="codehilite"><pre><span></span><code>[TODO: Komponentenbeziehungsdiagramm einfügen]
+</code></pre></div>
+
+<h3 id="33-component-details">3.3 Component Details</h3>
+<h4 id="component-todo-komponentenname-1">Component: [TODO: Komponentenname 1]</h4>
+<p><strong>Allgemeine Informationen:</strong>
+- ID: [TODO: COMP-001]
+- Typ: [TODO: Core/Security/Support]
+- Schicht: [TODO: Schicht]
+- Technologie: [TODO: z.B. Java, C++, Python]</p>
+<p><strong>Zweck:</strong>
+[TODO: Beschreibe den Zweck dieser Komponente]</p>
+<p><strong>Verantwortlichkeiten:</strong>
+- [TODO: Verantwortlichkeit 1]
+- [TODO: Verantwortlichkeit 2]
+- [TODO: Verantwortlichkeit 3]</p>
+<p><strong>Bereitgestellte Schnittstellen:</strong>
+| Interface | Type | Consumers |
+|-----------|------|-----------|
+| [TODO: Interface 1] | [TODO: Typ] | [TODO: Konsumenten] |
+| [TODO: Interface 2] | [TODO: Typ] | [TODO: Konsumenten] |</p>
+<p><strong>Verwendete Schnittstellen:</strong>
+| Interface | Provider | Purpose |
+|-----------|----------|---------|
+| [TODO: Interface 1] | [TODO: Anbieter] | [TODO: Zweck] |
+| [TODO: Interface 2] | [TODO: Anbieter] | [TODO: Zweck] |</p>
+<p><strong>Abhängigkeiten:</strong>
+- [TODO: Abhängigkeit 1]
+- [TODO: Abhängigkeit 2]</p>
+<p><strong>Sicherheitsrelevanz:</strong>
+[TODO: Beschreibe die Sicherheitsrelevanz dieser Komponente]</p>
+<h4 id="component-todo-komponentenname-2">Component: [TODO: Komponentenname 2]</h4>
+<p>[TODO: Details wie oben]</p>
+<h2 id="4-security-architecture">4. Security Architecture</h2>
+<h3 id="41-security-architecture-overview">4.1 Security Architecture Overview</h3>
+<p>[TODO: Beschreibe die Sicherheitsarchitektur des TOE]</p>
+<div class="codehilite"><pre><span></span><code>[TODO: Sicherheitsarchitekturdiagramm einfügen]
+</code></pre></div>
+
+<h3 id="42-trust-boundaries">4.2 Trust Boundaries</h3>
+<p><strong>Vertrauensgrenzen im TOE:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Boundary</th>
+<th>Description</th>
+<th>Protection Mechanism</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Grenze 1]</td>
+<td>[TODO: Beschreibung]</td>
+<td>[TODO: Schutzmechanismus]</td>
+</tr>
+<tr>
+<td>[TODO: Grenze 2]</td>
+<td>[TODO: Beschreibung]</td>
+<td>[TODO: Schutzmechanismus]</td>
+</tr>
+<tr>
+<td>[TODO: Grenze 3]</td>
+<td>[TODO: Beschreibung]</td>
+<td>[TODO: Schutzmechanismus]</td>
+</tr>
+</tbody>
+</table>
+<div class="codehilite"><pre><span></span><code>[TODO: Vertrauensgrenzendiagramm einfügen]
+</code></pre></div>
+
+<h3 id="43-security-zones">4.3 Security Zones</h3>
+<p><strong>Sicherheitszonen:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Zone</th>
+<th>Trust Level</th>
+<th>Components</th>
+<th>Access Control</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Zone 1]</td>
+<td>High/Medium/Low</td>
+<td>[TODO: Komponenten]</td>
+<td>[TODO: Zugriffskontrolle]</td>
+</tr>
+<tr>
+<td>[TODO: Zone 2]</td>
+<td>High/Medium/Low</td>
+<td>[TODO: Komponenten]</td>
+<td>[TODO: Zugriffskontrolle]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="44-security-enforcement-points">4.4 Security Enforcement Points</h3>
+<p><strong>Sicherheitsdurchsetzungspunkte:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Enforcement Point</th>
+<th>Location</th>
+<th>Enforced Policies</th>
+<th>Mechanism</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Punkt 1]</td>
+<td>[TODO: Ort]</td>
+<td>[TODO: Richtlinien]</td>
+<td>[TODO: Mechanismus]</td>
+</tr>
+<tr>
+<td>[TODO: Punkt 2]</td>
+<td>[TODO: Ort]</td>
+<td>[TODO: Richtlinien]</td>
+<td>[TODO: Mechanismus]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="45-security-functions-mapping">4.5 Security Functions Mapping</h3>
+<p><strong>Zuordnung von Sicherheitsfunktionen zu Komponenten:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Security Function</th>
+<th>Implementing Component</th>
+<th>Layer</th>
+<th>Mechanism</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Funktion 1]</td>
+<td>[TODO: Komponente]</td>
+<td>[TODO: Schicht]</td>
+<td>[TODO: Mechanismus]</td>
+</tr>
+<tr>
+<td>[TODO: Funktion 2]</td>
+<td>[TODO: Komponente]</td>
+<td>[TODO: Schicht]</td>
+<td>[TODO: Mechanismus]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-data-architecture">5. Data Architecture</h2>
+<h3 id="51-data-flow-architecture">5.1 Data Flow Architecture</h3>
+<p>[TODO: Beschreibe die Datenflussarchitektur]</p>
+<div class="codehilite"><pre><span></span><code>[TODO: Datenflussarchitekturdiagramm einfügen]
+</code></pre></div>
+
+<h3 id="52-data-storage-architecture">5.2 Data Storage Architecture</h3>
+<p><strong>Datenspeicherarchitektur:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Data Store</th>
+<th>Type</th>
+<th>Purpose</th>
+<th>Security</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Speicher 1]</td>
+<td>Database/File/Memory</td>
+<td>[TODO: Zweck]</td>
+<td>[TODO: Sicherheit]</td>
+</tr>
+<tr>
+<td>[TODO: Speicher 2]</td>
+<td>Database/File/Memory</td>
+<td>[TODO: Zweck]</td>
+<td>[TODO: Sicherheit]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="53-data-protection-architecture">5.3 Data Protection Architecture</h3>
+<p><strong>Datenschutzarchitektur:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Data Type</th>
+<th>Classification</th>
+<th>Protection Mechanism</th>
+<th>Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Datentyp 1]</td>
+<td>Public/Internal/Confidential/Secret</td>
+<td>[TODO: Schutzmechanismus]</td>
+<td>[TODO: Ort]</td>
+</tr>
+<tr>
+<td>[TODO: Datentyp 2]</td>
+<td>Public/Internal/Confidential/Secret</td>
+<td>[TODO: Schutzmechanismus]</td>
+<td>[TODO: Ort]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="54-data-flow-paths">5.4 Data Flow Paths</h3>
+<p><strong>Kritische Datenflusspfade:</strong></p>
+<p><strong>[TODO: Datenflusspfad 1]</strong>
+- Quelle: [TODO: Quelle]
+- Ziel: [TODO: Ziel]
+- Durchlaufene Komponenten: [TODO: Komponenten]
+- Sicherheitsmaßnahmen: [TODO: Maßnahmen]</p>
+<p><strong>[TODO: Datenflusspfad 2]</strong>
+- [TODO: Details]</p>
+<h2 id="6-deployment-architecture">6. Deployment Architecture</h2>
+<h3 id="61-deployment-overview">6.1 Deployment Overview</h3>
+<p>[TODO: Beschreibe die Deployment-Architektur]</p>
+<div class="codehilite"><pre><span></span><code>[TODO: Deployment-Diagramm einfügen]
+</code></pre></div>
+
+<h3 id="62-deployment-scenarios">6.2 Deployment Scenarios</h3>
+<p><strong>Unterstützte Deployment-Szenarien:</strong></p>
+<p><strong>Szenario 1: [TODO: Szenarioname]</strong>
+- Beschreibung: [TODO: Beschreibung]
+- Komponenten: [TODO: Deployierte Komponenten]
+- Infrastruktur: [TODO: Erforderliche Infrastruktur]
+- Sicherheitsaspekte: [TODO: Sicherheitsaspekte]</p>
+<p><strong>Szenario 2: [TODO: Szenarioname]</strong>
+- [TODO: Details]</p>
+<h3 id="63-physical-deployment">6.3 Physical Deployment</h3>
+<p><strong>Physische Deployment-Topologie:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Type</th>
+<th>Hosted Components</th>
+<th>Network</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Node 1]</td>
+<td>Server/Client/Appliance</td>
+<td>[TODO: Komponenten]</td>
+<td>[TODO: Netzwerk]</td>
+</tr>
+<tr>
+<td>[TODO: Node 2]</td>
+<td>Server/Client/Appliance</td>
+<td>[TODO: Komponenten]</td>
+<td>[TODO: Netzwerk]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="64-network-architecture">6.4 Network Architecture</h3>
+<p><strong>Netzwerkarchitektur:</strong></p>
+<div class="codehilite"><pre><span></span><code>[TODO: Netzwerkarchitekturdiagramm einfügen]
+</code></pre></div>
+
+<p><strong>Netzwerksegmente:</strong>
+| Segment | Purpose | Components | Security |
+|---------|---------|------------|----------|
+| [TODO: Segment 1] | [TODO: Zweck] | [TODO: Komponenten] | [TODO: Sicherheit] |
+| [TODO: Segment 2] | [TODO: Zweck] | [TODO: Komponenten] | [TODO: Sicherheit] |</p>
+<h2 id="7-runtime-architecture">7. Runtime Architecture</h2>
+<h3 id="71-process-architecture">7.1 Process Architecture</h3>
+<p><strong>Prozessarchitektur:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Process</th>
+<th>Type</th>
+<th>Components</th>
+<th>Privileges</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Prozess 1]</td>
+<td>Service/Daemon/Application</td>
+<td>[TODO: Komponenten]</td>
+<td>[TODO: Berechtigungen]</td>
+</tr>
+<tr>
+<td>[TODO: Prozess 2]</td>
+<td>Service/Daemon/Application</td>
+<td>[TODO: Komponenten]</td>
+<td>[TODO: Berechtigungen]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="72-thread-architecture">7.2 Thread Architecture</h3>
+<p><strong>Thread-Modell:</strong>
+[TODO: Beschreibe das Threading-Modell des TOE]</p>
+<h3 id="73-memory-architecture">7.3 Memory Architecture</h3>
+<p><strong>Speicherarchitektur:</strong>
+- Heap-Management: [TODO: Beschreibung]
+- Stack-Management: [TODO: Beschreibung]
+- Speicherschutz: [TODO: Mechanismen]</p>
+<h3 id="74-execution-flow">7.4 Execution Flow</h3>
+<p><strong>Ausführungsfluss:</strong></p>
+<div class="codehilite"><pre><span></span><code>[TODO: Ausführungsflussdiagramm einfügen]
+</code></pre></div>
+
+<h2 id="8-integration-architecture">8. Integration Architecture</h2>
+<h3 id="81-external-system-integration">8.1 External System Integration</h3>
+<p><strong>Integration mit externen Systemen:</strong></p>
+<table>
+<thead>
+<tr>
+<th>External System</th>
+<th>Integration Type</th>
+<th>Protocol</th>
+<th>Security</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: System 1]</td>
+<td>API/Message Queue/Database</td>
+<td>[TODO: Protokoll]</td>
+<td>[TODO: Sicherheit]</td>
+</tr>
+<tr>
+<td>[TODO: System 2]</td>
+<td>API/Message Queue/Database</td>
+<td>[TODO: Protokoll]</td>
+<td>[TODO: Sicherheit]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="82-integration-patterns">8.2 Integration Patterns</h3>
+<p><strong>Verwendete Integrationsmuster:</strong>
+- [TODO: Muster 1, z.B. Request-Response]
+- [TODO: Muster 2, z.B. Publish-Subscribe]
+- [TODO: Muster 3, z.B. Message Queue]</p>
+<h3 id="83-integration-security">8.3 Integration Security</h3>
+<p><strong>Sicherheit bei Integration:</strong>
+- Authentifizierung: [TODO: Mechanismus]
+- Autorisierung: [TODO: Mechanismus]
+- Verschlüsselung: [TODO: Mechanismus]
+- Datenvalidierung: [TODO: Mechanismus]</p>
+<h2 id="9-scalability-and-performance-architecture">9. Scalability and Performance Architecture</h2>
+<h3 id="91-scalability-design">9.1 Scalability Design</h3>
+<p><strong>Skalierbarkeitsdesign:</strong>
+- Horizontale Skalierung: [TODO: Beschreibung]
+- Vertikale Skalierung: [TODO: Beschreibung]
+- Lastverteilung: [TODO: Mechanismus]</p>
+<h3 id="92-performance-considerations">9.2 Performance Considerations</h3>
+<p><strong>Performance-Überlegungen:</strong>
+- Caching-Strategie: [TODO: Beschreibung]
+- Datenbankoptimierung: [TODO: Beschreibung]
+- Netzwerkoptimierung: [TODO: Beschreibung]</p>
+<h3 id="93-resource-management">9.3 Resource Management</h3>
+<p><strong>Ressourcenverwaltung:</strong>
+- CPU-Verwaltung: [TODO: Beschreibung]
+- Speicherverwaltung: [TODO: Beschreibung]
+- I/O-Verwaltung: [TODO: Beschreibung]</p>
+<h2 id="10-resilience-architecture">10. Resilience Architecture</h2>
+<h3 id="101-fault-tolerance">10.1 Fault Tolerance</h3>
+<p><strong>Fehlertoleranz:</strong>
+- Redundanz: [TODO: Beschreibung]
+- Failover: [TODO: Mechanismus]
+- Recovery: [TODO: Mechanismus]</p>
+<h3 id="102-error-handling">10.2 Error Handling</h3>
+<p><strong>Fehlerbehandlung:</strong>
+- Fehlererkennungsstrategie: [TODO: Beschreibung]
+- Fehlerbehandlungsstrategie: [TODO: Beschreibung]
+- Fehlerprotokollierung: [TODO: Beschreibung]</p>
+<h3 id="103-availability-design">10.3 Availability Design</h3>
+<p><strong>Verfügbarkeitsdesign:</strong>
+- Ziel-Verfügbarkeit: [TODO: z.B. 99.9%]
+- Hochverfügbarkeitsmechanismen: [TODO: Beschreibung]
+- Wartungsfenster: [TODO: Beschreibung]</p>
+<h2 id="11-architecture-decisions">11. Architecture Decisions</h2>
+<h3 id="111-key-architecture-decisions">11.1 Key Architecture Decisions</h3>
+<p><strong>Wichtige Architekturentscheidungen:</strong></p>
+<p><strong>Entscheidung 1: [TODO: Entscheidungstitel]</strong>
+- Kontext: [TODO: Kontext]
+- Entscheidung: [TODO: Getroffene Entscheidung]
+- Alternativen: [TODO: Betrachtete Alternativen]
+- Begründung: [TODO: Begründung]
+- Konsequenzen: [TODO: Konsequenzen]</p>
+<p><strong>Entscheidung 2: [TODO: Entscheidungstitel]</strong>
+- [TODO: Details]</p>
+<h3 id="112-trade-offs">11.2 Trade-offs</h3>
+<p><strong>Architektur-Trade-offs:</strong>
+- [TODO: Trade-off 1, z.B. Performance vs. Security]
+- [TODO: Trade-off 2, z.B. Complexity vs. Maintainability]
+- [TODO: Trade-off 3]</p>
+<h3 id="113-constraints">11.3 Constraints</h3>
+<p><strong>Architektur-Constraints:</strong>
+- Technische Constraints: [TODO: Liste]
+- Organisatorische Constraints: [TODO: Liste]
+- Regulatorische Constraints: [TODO: Liste]</p>
+<h2 id="12-architecture-documentation">12. Architecture Documentation</h2>
+<h3 id="121-architecture-views">12.1 Architecture Views</h3>
+<p><strong>Verfügbare Architekturansichten:</strong>
+- Logische Ansicht: [TODO: Speicherort]
+- Prozessansicht: [TODO: Speicherort]
+- Entwicklungsansicht: [TODO: Speicherort]
+- Physische Ansicht: [TODO: Speicherort]
+- Szenarioansicht: [TODO: Speicherort]</p>
+<h3 id="122-architecture-models">12.2 Architecture Models</h3>
+<p><strong>Architekturmodelle:</strong>
+- UML-Modelle: [TODO: Speicherort]
+- C4-Modelle: [TODO: Speicherort]
+- Datenmodelle: [TODO: Speicherort]</p>
+<h3 id="123-architecture-standards">12.3 Architecture Standards</h3>
+<p><strong>Verwendete Architekturstandards:</strong>
+- [TODO: Standard 1]
+- [TODO: Standard 2]
+- [TODO: Standard 3]</p>
+<hr />
+<p><strong>Nächste Schritte:</strong>
+1. Vervollständige alle [TODO]-Platzhalter mit TOE-spezifischen Informationen
+2. Erstelle alle erforderlichen Architekturdiagramme
+3. Dokumentiere alle Architekturentscheidungen vollständig
+4. Überprüfe die Konsistenz mit anderen TOE-Beschreibungsdokumenten
+5. Stelle sicher, dass die Sicherheitsarchitektur vollständig dokumentiert ist</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0120_TOE_Interfaces.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0140_TOE_Lifecycle.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

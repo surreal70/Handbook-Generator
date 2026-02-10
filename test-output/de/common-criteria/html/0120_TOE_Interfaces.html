@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0120 - TOE Interfaces</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0120</div>
+            <h1>TOE Interfaces</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0110_TOE_Logical_Scope.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0130_TOE_Architecture.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="toe-interfaces">TOE Interfaces</h1>
+<p><strong>Dokument-ID:</strong> 0120<br />
+<strong>Owner:</strong> {{ meta.owner }}<br />
+<strong>Version:</strong> {{ meta.version }}<br />
+<strong>Status:</strong> Entwurf<br />
+<strong>Klassifizierung:</strong> Vertraulich<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.date }}  </p>
+<hr />
+<h2 id="1-interface-overview">1. Interface Overview</h2>
+<h3 id="11-interface-categories">1.1 Interface Categories</h3>
+<p>Der TOE bietet folgende Schnittstellenkategorien:</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Count</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>User Interfaces</td>
+<td>[TODO: Anzahl]</td>
+<td>Schnittstellen für Endbenutzer</td>
+</tr>
+<tr>
+<td>Administrative Interfaces</td>
+<td>[TODO: Anzahl]</td>
+<td>Schnittstellen für Administratoren</td>
+</tr>
+<tr>
+<td>External Interfaces</td>
+<td>[TODO: Anzahl]</td>
+<td>Schnittstellen zu externen Systemen</td>
+</tr>
+<tr>
+<td>Internal Interfaces</td>
+<td>[TODO: Anzahl]</td>
+<td>Schnittstellen zwischen TOE-Komponenten</td>
+</tr>
+</tbody>
+</table>
+<h3 id="12-interface-architecture">1.2 Interface Architecture</h3>
+<p>[TODO: Beschreibe die Schnittstellenarchitektur]</p>
+<div class="codehilite"><pre><span></span><code>[TODO: Schnittstellenarchitekturdiagramm einfügen]
+</code></pre></div>
+
+<h2 id="2-user-interfaces">2. User Interfaces</h2>
+<h3 id="21-graphical-user-interface-gui">2.1 Graphical User Interface (GUI)</h3>
+<p><strong>[TODO: GUI-Name]</strong></p>
+<p><strong>Allgemeine Informationen:</strong>
+- Typ: Web-basiert / Desktop-Anwendung / Mobile App
+- Technologie: [TODO: z.B. HTML5, React, Qt, etc.]
+- Zugriff: [TODO: z.B. Browser, Native App]
+- Authentifizierung: [TODO: Authentifizierungsmethode]</p>
+<p><strong>Funktionen:</strong>
+- [TODO: Funktion 1]: [TODO: Beschreibung]
+- [TODO: Funktion 2]: [TODO: Beschreibung]
+- [TODO: Funktion 3]: [TODO: Beschreibung]</p>
+<p><strong>Sicherheitsmerkmale:</strong>
+- Session-Management: [TODO: Beschreibung]
+- Input-Validierung: [TODO: Beschreibung]
+- Output-Encoding: [TODO: Beschreibung]
+- CSRF-Schutz: [TODO: Beschreibung]</p>
+<p><strong>Benutzerrollen:</strong>
+| Role | Access Level | Available Functions |
+|------|--------------|---------------------|
+| [TODO: Rolle 1] | [TODO: Level] | [TODO: Funktionen] |
+| [TODO: Rolle 2] | [TODO: Level] | [TODO: Funktionen] |</p>
+<h3 id="22-command-line-interface-cli">2.2 Command Line Interface (CLI)</h3>
+<p><strong>[TODO: CLI-Name]</strong></p>
+<p><strong>Allgemeine Informationen:</strong>
+- Zugriff: [TODO: z.B. SSH, Lokale Konsole]
+- Shell: [TODO: z.B. Bash, PowerShell, Custom Shell]
+- Authentifizierung: [TODO: Authentifizierungsmethode]</p>
+<p><strong>Verfügbare Befehle:</strong>
+| Command | Syntax | Description | Required Privilege |
+|---------|--------|-------------|-------------------|
+| [TODO: Befehl 1] | [TODO: Syntax] | [TODO: Beschreibung] | [TODO: Berechtigung] |
+| [TODO: Befehl 2] | [TODO: Syntax] | [TODO: Beschreibung] | [TODO: Berechtigung] |
+| [TODO: Befehl 3] | [TODO: Syntax] | [TODO: Beschreibung] | [TODO: Berechtigung] |</p>
+<p><strong>Sicherheitsmerkmale:</strong>
+- Befehlsvalidierung: [TODO: Beschreibung]
+- Audit-Logging: [TODO: Beschreibung]
+- Privilegientrennung: [TODO: Beschreibung]</p>
+<h3 id="23-application-programming-interface-api">2.3 Application Programming Interface (API)</h3>
+<p><strong>[TODO: API-Name]</strong></p>
+<p><strong>Allgemeine Informationen:</strong>
+- Typ: REST / SOAP / GraphQL / gRPC
+- Protokoll: HTTPS / HTTP / Custom
+- Authentifizierung: [TODO: z.B. OAuth 2.0, API Keys, JWT]
+- Autorisierung: [TODO: Autorisierungsmechanismus]</p>
+<p><strong>API-Endpunkte:</strong>
+| Endpoint | Method | Description | Authentication | Authorization |
+|----------|--------|-------------|----------------|---------------|
+| [TODO: /api/endpoint1] | GET/POST/PUT/DELETE | [TODO: Beschreibung] | [TODO: Auth] | [TODO: Authz] |
+| [TODO: /api/endpoint2] | GET/POST/PUT/DELETE | [TODO: Beschreibung] | [TODO: Auth] | [TODO: Authz] |
+| [TODO: /api/endpoint3] | GET/POST/PUT/DELETE | [TODO: Beschreibung] | [TODO: Auth] | [TODO: Authz] |</p>
+<p><strong>Sicherheitsmerkmale:</strong>
+- TLS-Verschlüsselung: [TODO: Version und Cipher Suites]
+- Rate Limiting: [TODO: Beschreibung]
+- Input-Validierung: [TODO: Beschreibung]
+- API-Versionierung: [TODO: Beschreibung]</p>
+<p><strong>API-Dokumentation:</strong>
+- Format: [TODO: z.B. OpenAPI/Swagger, WSDL]
+- Zugriff: [TODO: URL oder Speicherort]</p>
+<h2 id="3-administrative-interfaces">3. Administrative Interfaces</h2>
+<h3 id="31-configuration-interface">3.1 Configuration Interface</h3>
+<p><strong>[TODO: Konfigurationsschnittstelle]</strong></p>
+<p><strong>Allgemeine Informationen:</strong>
+- Typ: GUI / CLI / API / Konfigurationsdatei
+- Zugriff: [TODO: Zugriffsmethode]
+- Authentifizierung: [TODO: Authentifizierungsmethode]
+- Autorisierung: [TODO: Erforderliche Berechtigung]</p>
+<p><strong>Konfigurierbare Parameter:</strong>
+| Parameter | Type | Default | Description | Security Impact |
+|-----------|------|---------|-------------|-----------------|
+| [TODO: Parameter 1] | [TODO: Typ] | [TODO: Default] | [TODO: Beschreibung] | High/Medium/Low |
+| [TODO: Parameter 2] | [TODO: Typ] | [TODO: Default] | [TODO: Beschreibung] | High/Medium/Low |
+| [TODO: Parameter 3] | [TODO: Typ] | [TODO: Default] | [TODO: Beschreibung] | High/Medium/Low |</p>
+<p><strong>Sicherheitsmerkmale:</strong>
+- Konfigurationsvalidierung: [TODO: Beschreibung]
+- Änderungsaudit: [TODO: Beschreibung]
+- Rollback-Mechanismus: [TODO: Beschreibung]</p>
+<h3 id="32-monitoring-interface">3.2 Monitoring Interface</h3>
+<p><strong>[TODO: Monitoring-Schnittstelle]</strong></p>
+<p><strong>Allgemeine Informationen:</strong>
+- Typ: GUI / CLI / API
+- Protokoll: [TODO: z.B. SNMP, REST, Proprietary]
+- Authentifizierung: [TODO: Authentifizierungsmethode]</p>
+<p><strong>Überwachte Metriken:</strong>
+| Metric | Type | Unit | Threshold | Alert |
+|--------|------|------|-----------|-------|
+| [TODO: Metrik 1] | Performance/Security/Availability | [TODO: Einheit] | [TODO: Schwellwert] | [TODO: Alarm] |
+| [TODO: Metrik 2] | Performance/Security/Availability | [TODO: Einheit] | [TODO: Schwellwert] | [TODO: Alarm] |</p>
+<p><strong>Sicherheitsmerkmale:</strong>
+- Zugriffskontrolle: [TODO: Beschreibung]
+- Datenintegrität: [TODO: Beschreibung]</p>
+<h3 id="33-logging-interface">3.3 Logging Interface</h3>
+<p><strong>[TODO: Logging-Schnittstelle]</strong></p>
+<p><strong>Allgemeine Informationen:</strong>
+- Typ: Syslog / File-based / Database / SIEM Integration
+- Protokoll: [TODO: z.B. Syslog, REST]
+- Format: [TODO: z.B. JSON, CEF, Plain Text]</p>
+<p><strong>Log-Kategorien:</strong>
+| Category | Events | Severity Levels | Retention |
+|----------|--------|-----------------|-----------|
+| [TODO: Kategorie 1] | [TODO: Ereignisse] | [TODO: Levels] | [TODO: Aufbewahrung] |
+| [TODO: Kategorie 2] | [TODO: Ereignisse] | [TODO: Levels] | [TODO: Aufbewahrung] |</p>
+<p><strong>Sicherheitsmerkmale:</strong>
+- Log-Integrität: [TODO: Beschreibung]
+- Verschlüsselung: [TODO: Beschreibung]
+- Zugriffskontrolle: [TODO: Beschreibung]</p>
+<h3 id="34-backup-and-restore-interface">3.4 Backup and Restore Interface</h3>
+<p><strong>[TODO: Backup/Restore-Schnittstelle]</strong></p>
+<p><strong>Allgemeine Informationen:</strong>
+- Typ: CLI / API / GUI
+- Authentifizierung: [TODO: Authentifizierungsmethode]
+- Autorisierung: [TODO: Erforderliche Berechtigung]</p>
+<p><strong>Funktionen:</strong>
+- Backup-Erstellung: [TODO: Beschreibung]
+- Backup-Wiederherstellung: [TODO: Beschreibung]
+- Backup-Verifikation: [TODO: Beschreibung]</p>
+<p><strong>Sicherheitsmerkmale:</strong>
+- Backup-Verschlüsselung: [TODO: Algorithmus]
+- Integritätsschutz: [TODO: Mechanismus]
+- Zugriffskontrolle: [TODO: Beschreibung]</p>
+<h2 id="4-external-interfaces">4. External Interfaces</h2>
+<h3 id="41-network-interfaces">4.1 Network Interfaces</h3>
+<p><strong>[TODO: Netzwerkschnittstelle 1]</strong></p>
+<p><strong>Allgemeine Informationen:</strong>
+- Typ: Ethernet / Wi-Fi / Serial / etc.
+- Protokoll: [TODO: z.B. TCP/IP, UDP]
+- Port: [TODO: Port-Nummer]
+- Richtung: Inbound / Outbound / Bidirectional</p>
+<p><strong>Kommunikationspartner:</strong>
+| Partner | Purpose | Protocol | Security |
+|---------|---------|----------|----------|
+| [TODO: System 1] | [TODO: Zweck] | [TODO: Protokoll] | [TODO: Sicherheit] |
+| [TODO: System 2] | [TODO: Zweck] | [TODO: Protokoll] | [TODO: Sicherheit] |</p>
+<p><strong>Sicherheitsmerkmale:</strong>
+- Verschlüsselung: [TODO: z.B. TLS 1.3]
+- Authentifizierung: [TODO: Mechanismus]
+- Firewall-Regeln: [TODO: Beschreibung]</p>
+<h3 id="42-database-interfaces">4.2 Database Interfaces</h3>
+<p><strong>[TODO: Datenbankschnittstelle]</strong></p>
+<p><strong>Allgemeine Informationen:</strong>
+- Datenbank-Typ: [TODO: z.B. PostgreSQL, MySQL, Oracle]
+- Verbindungsprotokoll: [TODO: z.B. JDBC, ODBC, Native]
+- Authentifizierung: [TODO: Authentifizierungsmethode]</p>
+<p><strong>Datenbankoperationen:</strong>
+| Operation | Tables | Purpose | Frequency |
+|-----------|--------|---------|-----------|
+| [TODO: Operation 1] | [TODO: Tabellen] | [TODO: Zweck] | [TODO: Häufigkeit] |
+| [TODO: Operation 2] | [TODO: Tabellen] | [TODO: Zweck] | [TODO: Häufigkeit] |</p>
+<p><strong>Sicherheitsmerkmale:</strong>
+- Verbindungsverschlüsselung: [TODO: Beschreibung]
+- SQL-Injection-Schutz: [TODO: Beschreibung]
+- Zugriffskontrolle: [TODO: Beschreibung]</p>
+<h3 id="43-directory-service-interfaces">4.3 Directory Service Interfaces</h3>
+<p><strong>[TODO: Directory-Service-Schnittstelle]</strong></p>
+<p><strong>Allgemeine Informationen:</strong>
+- Typ: LDAP / Active Directory / Azure AD / etc.
+- Protokoll: [TODO: z.B. LDAPS, Kerberos]
+- Zweck: [TODO: z.B. Authentifizierung, Autorisierung]</p>
+<p><strong>Operationen:</strong>
+- Authentifizierung: [TODO: Beschreibung]
+- Attributabfrage: [TODO: Beschreibung]
+- Gruppenmitgliedschaft: [TODO: Beschreibung]</p>
+<p><strong>Sicherheitsmerkmale:</strong>
+- Verschlüsselung: [TODO: Beschreibung]
+- Zertifikatsvalidierung: [TODO: Beschreibung]</p>
+<h3 id="44-external-system-interfaces">4.4 External System Interfaces</h3>
+<p><strong>[TODO: Externes System 1]</strong></p>
+<p><strong>Allgemeine Informationen:</strong>
+- System: [TODO: Systemname]
+- Zweck: [TODO: Integrationszweck]
+- Protokoll: [TODO: Kommunikationsprotokoll]
+- Datenformat: [TODO: z.B. JSON, XML, Binary]</p>
+<p><strong>Datenaustausch:</strong>
+| Data Type | Direction | Format | Frequency | Security |
+|-----------|-----------|--------|-----------|----------|
+| [TODO: Datentyp 1] | In/Out/Both | [TODO: Format] | [TODO: Häufigkeit] | [TODO: Sicherheit] |
+| [TODO: Datentyp 2] | In/Out/Both | [TODO: Format] | [TODO: Häufigkeit] | [TODO: Sicherheit] |</p>
+<p><strong>Sicherheitsmerkmale:</strong>
+- Authentifizierung: [TODO: Mechanismus]
+- Verschlüsselung: [TODO: Mechanismus]
+- Datenvalidierung: [TODO: Beschreibung]</p>
+<h2 id="5-internal-interfaces">5. Internal Interfaces</h2>
+<h3 id="51-inter-component-interfaces">5.1 Inter-Component Interfaces</h3>
+<p><strong>[TODO: Interne Schnittstelle 1]</strong></p>
+<p><strong>Allgemeine Informationen:</strong>
+- Quelle: [TODO: Quellkomponente]
+- Ziel: [TODO: Zielkomponente]
+- Typ: Function Call / IPC / Message Queue / etc.
+- Protokoll: [TODO: Internes Protokoll]</p>
+<p><strong>Datenaustausch:</strong>
+| Data Type | Purpose | Format | Security |
+|-----------|---------|--------|----------|
+| [TODO: Datentyp 1] | [TODO: Zweck] | [TODO: Format] | [TODO: Sicherheit] |
+| [TODO: Datentyp 2] | [TODO: Zweck] | [TODO: Format] | [TODO: Sicherheit] |</p>
+<p><strong>Sicherheitsmerkmale:</strong>
+- Zugriffskontrolle: [TODO: Beschreibung]
+- Datenvalidierung: [TODO: Beschreibung]</p>
+<h3 id="52-module-interfaces">5.2 Module Interfaces</h3>
+<p><strong>[TODO: Modulschnittstelle 1]</strong></p>
+<p><strong>Allgemeine Informationen:</strong>
+- Modul: [TODO: Modulname]
+- Typ: API / Library / Service
+- Programmiersprache: [TODO: Sprache]</p>
+<p><strong>Bereitgestellte Funktionen:</strong>
+| Function | Parameters | Return Type | Description |
+|----------|------------|-------------|-------------|
+| [TODO: Funktion 1] | [TODO: Parameter] | [TODO: Rückgabetyp] | [TODO: Beschreibung] |
+| [TODO: Funktion 2] | [TODO: Parameter] | [TODO: Rückgabetyp] | [TODO: Beschreibung] |</p>
+<p><strong>Sicherheitsmerkmale:</strong>
+- Input-Validierung: [TODO: Beschreibung]
+- Error-Handling: [TODO: Beschreibung]</p>
+<h2 id="6-interface-security">6. Interface Security</h2>
+<h3 id="61-authentication-mechanisms">6.1 Authentication Mechanisms</h3>
+<p><strong>Schnittstellenauthentifizierung:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Interface</th>
+<th>Authentication Method</th>
+<th>Credential Type</th>
+<th>Multi-Factor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Schnittstelle 1]</td>
+<td>[TODO: Methode]</td>
+<td>[TODO: Credential-Typ]</td>
+<td>Yes/No</td>
+</tr>
+<tr>
+<td>[TODO: Schnittstelle 2]</td>
+<td>[TODO: Methode]</td>
+<td>[TODO: Credential-Typ]</td>
+<td>Yes/No</td>
+</tr>
+</tbody>
+</table>
+<h3 id="62-authorization-mechanisms">6.2 Authorization Mechanisms</h3>
+<p><strong>Schnittstellenautorisierung:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Interface</th>
+<th>Authorization Model</th>
+<th>Enforcement Point</th>
+<th>Policy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Schnittstelle 1]</td>
+<td>[TODO: Modell]</td>
+<td>[TODO: Punkt]</td>
+<td>[TODO: Richtlinie]</td>
+</tr>
+<tr>
+<td>[TODO: Schnittstelle 2]</td>
+<td>[TODO: Modell]</td>
+<td>[TODO: Punkt]</td>
+<td>[TODO: Richtlinie]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="63-encryption-and-integrity">6.3 Encryption and Integrity</h3>
+<p><strong>Verschlüsselung und Integrität:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Interface</th>
+<th>Encryption</th>
+<th>Algorithm</th>
+<th>Integrity Protection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Schnittstelle 1]</td>
+<td>Yes/No</td>
+<td>[TODO: Algorithmus]</td>
+<td>[TODO: Mechanismus]</td>
+</tr>
+<tr>
+<td>[TODO: Schnittstelle 2]</td>
+<td>Yes/No</td>
+<td>[TODO: Algorithmus]</td>
+<td>[TODO: Mechanismus]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="64-input-validation">6.4 Input Validation</h3>
+<p><strong>Eingabevalidierung:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Interface</th>
+<th>Validation Type</th>
+<th>Sanitization</th>
+<th>Error Handling</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Schnittstelle 1]</td>
+<td>[TODO: Typ]</td>
+<td>[TODO: Sanitization]</td>
+<td>[TODO: Error-Handling]</td>
+</tr>
+<tr>
+<td>[TODO: Schnittstelle 2]</td>
+<td>[TODO: Typ]</td>
+<td>[TODO: Sanitization]</td>
+<td>[TODO: Error-Handling]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-interface-protocols">7. Interface Protocols</h2>
+<h3 id="71-communication-protocols">7.1 Communication Protocols</h3>
+<p><strong>Verwendete Kommunikationsprotokolle:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Protocol</th>
+<th>Version</th>
+<th>Purpose</th>
+<th>Security Features</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Protokoll 1]</td>
+<td>[TODO: Version]</td>
+<td>[TODO: Zweck]</td>
+<td>[TODO: Sicherheitsmerkmale]</td>
+</tr>
+<tr>
+<td>[TODO: Protokoll 2]</td>
+<td>[TODO: Version]</td>
+<td>[TODO: Zweck]</td>
+<td>[TODO: Sicherheitsmerkmale]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="72-data-formats">7.2 Data Formats</h3>
+<p><strong>Verwendete Datenformate:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Format</th>
+<th>Purpose</th>
+<th>Schema</th>
+<th>Validation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Format 1]</td>
+<td>[TODO: Zweck]</td>
+<td>[TODO: Schema]</td>
+<td>[TODO: Validierung]</td>
+</tr>
+<tr>
+<td>[TODO: Format 2]</td>
+<td>[TODO: Zweck]</td>
+<td>[TODO: Schema]</td>
+<td>[TODO: Validierung]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="73-error-handling">7.3 Error Handling</h3>
+<p><strong>Fehlerbehandlung an Schnittstellen:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Interface</th>
+<th>Error Types</th>
+<th>Error Codes</th>
+<th>Error Messages</th>
+<th>Logging</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Schnittstelle 1]</td>
+<td>[TODO: Typen]</td>
+<td>[TODO: Codes]</td>
+<td>[TODO: Messages]</td>
+<td>Yes/No</td>
+</tr>
+<tr>
+<td>[TODO: Schnittstelle 2]</td>
+<td>[TODO: Typen]</td>
+<td>[TODO: Codes]</td>
+<td>[TODO: Messages]</td>
+<td>Yes/No</td>
+</tr>
+</tbody>
+</table>
+<h2 id="8-interface-documentation">8. Interface Documentation</h2>
+<h3 id="81-user-interface-documentation">8.1 User Interface Documentation</h3>
+<ul>
+<li>[TODO: GUI-Benutzerhandbuch]: [TODO: Speicherort]</li>
+<li>[TODO: CLI-Referenz]: [TODO: Speicherort]</li>
+<li>[TODO: API-Dokumentation]: [TODO: Speicherort]</li>
+</ul>
+<h3 id="82-administrator-interface-documentation">8.2 Administrator Interface Documentation</h3>
+<ul>
+<li>[TODO: Konfigurationshandbuch]: [TODO: Speicherort]</li>
+<li>[TODO: Monitoring-Handbuch]: [TODO: Speicherort]</li>
+<li>[TODO: Logging-Handbuch]: [TODO: Speicherort]</li>
+</ul>
+<h3 id="83-developer-interface-documentation">8.3 Developer Interface Documentation</h3>
+<ul>
+<li>[TODO: API-Spezifikation]: [TODO: Speicherort]</li>
+<li>[TODO: Integrationshandbuch]: [TODO: Speicherort]</li>
+<li>[TODO: Protokolldokumentation]: [TODO: Speicherort]</li>
+</ul>
+<hr />
+<p><strong>Nächste Schritte:</strong>
+1. Vervollständige alle [TODO]-Platzhalter mit TOE-spezifischen Informationen
+2. Erstelle detaillierte Schnittstellendiagramme
+3. Dokumentiere alle Sicherheitsmechanismen für jede Schnittstelle
+4. Überprüfe die Konsistenz mit der TOE-Architektur (Template 0130)
+5. Stelle sicher, dass alle Schnittstellen vollständig dokumentiert sind</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0110_TOE_Logical_Scope.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0130_TOE_Architecture.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0260 - APP Hardening Baseline: Datenbanken (generisch)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0260</div>
+            <h1>APP Hardening Baseline: Datenbanken (generisch)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0250_APP_Tomcat_Java_Hardening.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0270_APP_PostgreSQL_Hardening_Standard.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="app-hardening-baseline-datenbanken-generisch">APP Hardening Baseline: Datenbanken (generisch)</h1>
+<p><strong>Dokument-ID:</strong> 0260<br />
+<strong>Dokumenttyp:</strong> Standard/Baseline<br />
+<strong>Referenzrahmen:</strong> CIS Controls v8 (Hardening-Programm; keine Benchmarks-Texte)<br />
+<strong>Owner:</strong> [TODO]<br />
+<strong>Version:</strong> 0.1 (Entwurf)<br />
+<strong>Status:</strong> Entwurf / In Review / Freigegeben<br />
+<strong>Klassifizierung:</strong> Intern / Vertraulich / Streng vertraulich<br />
+<strong>Letzte Aktualisierung:</strong> 2026-01-31<br />
+<strong>Nächster Review:</strong> [TODO]</p>
+<hr />
+<blockquote>
+<p><strong>Hinweis:</strong> Template. Ersetze alle <code>[TODO]</code>-Platzhalter und entferne nicht zutreffende Abschnitte.<br />
+<strong>Wichtig:</strong> Dieses Template paraphrasiert keine CIS-Originaltexte. Nutze es, um <strong>interne Baselines/Standards</strong> abzuleiten und nachweisbar umzusetzen.</p>
+</blockquote>
+<h2 id="1-zweck">1. Zweck</h2>
+<p>[TODO] (z. B. Reduktion Angriffsfläche, einheitliche Baseline, Auditierbarkeit)</p>
+<h2 id="2-geltungsbereich">2. Geltungsbereich</h2>
+<ul>
+<li>Zielplattform(en): [TODO]</li>
+<li>Versionen/Editionen: [TODO]</li>
+<li>Umgebungen: Prod / Test / Dev / Enduser</li>
+<li>Ausnahmen: nur über Ausnahmenprozess (<code>0040_Ausnahmen_Risk_Acceptance.md</code>)</li>
+</ul>
+<h2 id="3-zielbild-und-prinzipien">3. Zielbild und Prinzipien</h2>
+<ul>
+<li>Default-Deny wo sinnvoll (z. B. eingehende Firewall): [TODO]</li>
+<li>Least Privilege / Role Based Admin: [TODO]</li>
+<li>Secure by Default (neue Systeme sind compliant): [TODO]</li>
+<li>Automatisierung (IaC/Config Mgmt) bevorzugt: [TODO]</li>
+</ul>
+<h2 id="4-cis-control-bezug-mapping">4. CIS-Control-Bezug (Mapping)</h2>
+<blockquote>
+<p>Trage die relevanten CIS Controls/Safeguards ein, die diese Baseline stützt.
+| CIS Control | Safeguard/Intent (kurz) | Baseline-Anforderung | Nachweis/Evidence |
+|---|---|---|---|
+| [TODO] | [TODO] | [TODO] | [TODO] |</p>
+</blockquote>
+<h2 id="5-baseline-anforderungen-muss">5. Baseline-Anforderungen (MUSS)</h2>
+<blockquote>
+<p>Formuliere prüfbare Anforderungen (nicht „sollte“), inkl. Verantwortlichkeit und Messkriterium.
+| Bereich | Requirement (MUSS) | Standardwert/Ziel | Verantwortlich | Verifikation |
+|---|---|---|---|---|
+| Accounts | [TODO] | [TODO] | [TODO] | [TODO] |
+| Netzwerk | [TODO] | [TODO] | [TODO] | [TODO] |
+| Updates | [TODO] | [TODO] | [TODO] | [TODO] |
+| Logging | [TODO] | [TODO] | [TODO] | [TODO] |
+| Services | [TODO] | [TODO] | [TODO] | [TODO] |</p>
+</blockquote>
+<h2 id="6-empfehlungen-soll">6. Empfehlungen (SOLL)</h2>
+<ul>
+<li>[TODO]</li>
+<li>[TODO]</li>
+</ul>
+<h2 id="7-implementierung">7. Implementierung</h2>
+<h3 id="71-umsetzungsmethode">7.1 Umsetzungsmethode</h3>
+<ul>
+<li>Manuell / GPO / MDM / Ansible / SCCM / Puppet / Chef / IaC: [TODO]</li>
+<li>Rollout-Strategie (Pilot, Stufen, Wellen): [TODO]</li>
+</ul>
+<h3 id="72-schrittfolge-high-level">7.2 Schrittfolge (High-Level)</h3>
+<ol>
+<li>Baseline-Parameter festlegen (Parameterdatei): [TODO]</li>
+<li>Pilotgruppe definieren und testen: [TODO]</li>
+<li>Rollout mit Change-Management: [TODO]</li>
+<li>Kontinuierliche Compliance-Prüfung aktivieren: [TODO]</li>
+</ol>
+<h2 id="8-validierung-und-tests">8. Validierung und Tests</h2>
+<ul>
+<li>Smoke Tests: [TODO]</li>
+<li>Regressionstests: [TODO]</li>
+<li>Security Tests (Scan/Config Audit): [TODO]</li>
+<li>Abnahmekriterien: [TODO]</li>
+</ul>
+<h2 id="9-monitoring-und-compliance">9. Monitoring und Compliance</h2>
+<ul>
+<li>Config-Drift Detection: [TODO]</li>
+<li>Reporting (KPIs): [TODO]</li>
+<li>Remediation (Auto-Fix / Ticket): [TODO]</li>
+</ul>
+<h2 id="10-ausnahmen">10. Ausnahmen</h2>
+<ul>
+<li>Verweis: <code>0040_Ausnahmen_Risk_Acceptance.md</code></li>
+<li>Temporäre Abweichungen dokumentieren: [TODO]</li>
+</ul>
+<h2 id="11-anhange">11. Anhänge</h2>
+<ul>
+<li>Parameterliste/Beispielwerte: [TODO]</li>
+<li>Checkliste: siehe <code>0410_Anhang_Checklisten_und_Evidence.md</code></li>
+</ul>
+<h2 id="12-db-spezifische-bereiche-beispiele">12. DB-spezifische Bereiche (Beispiele)</h2>
+<ul>
+<li>AuthN/AuthZ (Rollen, Least Privilege): [TODO]</li>
+<li>Network Exposure (nur App-Subnetze): [TODO]</li>
+<li>TLS in Transit: [TODO]</li>
+<li>At-Rest Encryption: [TODO]</li>
+<li>Auditing/DB Logs: [TODO]</li>
+<li>Backup/Restore + Test: [TODO]</li>
+</ul>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0250_APP_Tomcat_Java_Hardening.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0270_APP_PostgreSQL_Hardening_Standard.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

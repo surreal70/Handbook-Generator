@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0500 - TOE Summary Specification</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0500</div>
+            <h1>TOE Summary Specification</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0440_Coverage_Matrix.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0510_Assurance_Measures.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="toe-summary-specification">TOE Summary Specification</h1>
+<p><strong>Dokument-ID:</strong> 0500<br />
+<strong>Owner:</strong> {{ meta.owner }}<br />
+<strong>Version:</strong> {{ meta.version }}<br />
+<strong>Status:</strong> Entwurf / In Review / Freigegeben<br />
+<strong>Klassifizierung:</strong> Intern / Vertraulich / Streng vertraulich<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.date }}  </p>
+<hr />
+<blockquote>
+<p><strong>Hinweis:</strong> Dieses Dokument ist ein Template. Ersetze alle <code>[TODO]</code>-Platzhalter und passe die Inhalte an dein spezifisches TOE (Target of Evaluation) an.</p>
+</blockquote>
+<h2 id="1-einleitung">1. Einleitung</h2>
+<h3 id="11-zweck">1.1 Zweck</h3>
+<p>Dieses Dokument beschreibt die TOE Summary Specification (TSS) für <strong>[TODO: TOE-Name]</strong>. Die TSS zeigt, wie das TOE die in Kapitel 4 (Security Requirements) definierten Sicherheitsfunktionsanforderungen (SFRs) und Sicherungsanforderungen (SARs) erfüllt.</p>
+<h3 id="12-struktur-der-tss">1.2 Struktur der TSS</h3>
+<p>Die TOE Summary Specification ist wie folgt strukturiert:</p>
+<ul>
+<li><strong>Kapitel 2</strong>: Übersicht der TOE-Sicherheitsfunktionen (TSFs)</li>
+<li><strong>Kapitel 3</strong>: Detaillierte Beschreibung der Sicherheitsfunktionen</li>
+<li><strong>Kapitel 4</strong>: Zuordnung von Sicherheitsfunktionen zu SFRs (Coverage Matrix)</li>
+<li><strong>Kapitel 5</strong>: Sicherungsmaßnahmen (Assurance Measures)</li>
+<li><strong>Kapitel 6</strong>: Stärke der Sicherheitsfunktionen (Strength of Function)</li>
+</ul>
+<h2 id="2-ubersicht-der-toe-sicherheitsfunktionen">2. Übersicht der TOE-Sicherheitsfunktionen</h2>
+<h3 id="21-sicherheitsfunktionen-ubersicht">2.1 Sicherheitsfunktionen - Übersicht</h3>
+<p>Das TOE implementiert folgende Sicherheitsfunktionen (TSFs):</p>
+<table>
+<thead>
+<tr>
+<th>TSF-ID</th>
+<th>Sicherheitsfunktion</th>
+<th>Beschreibung</th>
+<th>Zugeordnete SFRs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TSF-1</td>
+<td>[TODO: Name]</td>
+<td>[TODO: Kurzbeschreibung]</td>
+<td>[TODO: SFR-IDs]</td>
+</tr>
+<tr>
+<td>TSF-2</td>
+<td>[TODO: Name]</td>
+<td>[TODO: Kurzbeschreibung]</td>
+<td>[TODO: SFR-IDs]</td>
+</tr>
+<tr>
+<td>TSF-3</td>
+<td>[TODO: Name]</td>
+<td>[TODO: Kurzbeschreibung]</td>
+<td>[TODO: SFR-IDs]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-architektur-der-sicherheitsfunktionen">2.2 Architektur der Sicherheitsfunktionen</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">[TODO: Diagramm einfügen - Architektur der TSFs]</span>
+
+<span class="na">Beispiel</span><span class="o">:</span>
+<span class="na">┌─────────────────────────────────────────────────┐</span>
+<span class="na">│           TOE Security Functions                │</span>
+<span class="na">├─────────────────────────────────────────────────┤</span>
+<span class="na">│  ┌──────────────┐  ┌──────────────┐            │</span>
+<span class="na">│  │ TSF-1</span><span class="o">:</span><span class="w"> </span><span class="s">I&amp;A   │  │ TSF-2: Access│            │</span>
+<span class="na">│  │              │  │ Control      │            │</span>
+<span class="na">│  └──────────────┘  └──────────────┘            │</span>
+<span class="na">│  ┌──────────────┐  ┌──────────────┐            │</span>
+<span class="na">│  │ TSF-3</span><span class="o">:</span><span class="w"> </span><span class="s">Audit │  │ TSF-4: Crypto│            │</span>
+<span class="na">│  │              │  │              │            │</span>
+<span class="na">│  └──────────────┘  └──────────────┘            │</span>
+<span class="na">└─────────────────────────────────────────────────┘</span>
+</code></pre></div>
+
+<p><strong>Beschreibung:</strong></p>
+<p>[TODO: Beschreibe die Architektur der Sicherheitsfunktionen. Erkläre, wie die verschiedenen TSFs zusammenarbeiten und welche Abhängigkeiten bestehen.]</p>
+<h2 id="3-detaillierte-beschreibung-der-sicherheitsfunktionen">3. Detaillierte Beschreibung der Sicherheitsfunktionen</h2>
+<h3 id="31-tsf-1-todo-name-der-sicherheitsfunktion">3.1 TSF-1: [TODO: Name der Sicherheitsfunktion]</h3>
+<p><strong>TSF-ID:</strong> TSF-1<br />
+<strong>Zugeordnete SFRs:</strong> [TODO: z.B. FIA_UID.1, FIA_UAU.1]</p>
+<h4 id="311-funktionsbeschreibung">3.1.1 Funktionsbeschreibung</h4>
+<p>[TODO: Beschreibe die Sicherheitsfunktion im Detail. Erkläre:
+- Was die Funktion tut
+- Wie sie funktioniert (auf angemessenem Abstraktionsniveau)
+- Welche Eingaben sie verarbeitet
+- Welche Ausgaben sie erzeugt
+- Welche Sicherheitseigenschaften sie gewährleistet]</p>
+<p><strong>Beispiel:</strong>
+Die Identifikations- und Authentisierungsfunktion (TSF-1) stellt sicher, dass alle Benutzer vor dem Zugriff auf TOE-Funktionen identifiziert und authentisiert werden. Die Funktion verwendet einen Benutzernamen zur Identifikation und ein Passwort zur Authentisierung. Passwörter werden mit SHA-256 gehasht und gesalzen gespeichert.</p>
+<h4 id="312-erfullung-der-sfrs">3.1.2 Erfüllung der SFRs</h4>
+<p>[TODO: Erkläre für jede zugeordnete SFR, wie diese Sicherheitsfunktion die Anforderung erfüllt.]</p>
+<p><strong>SFR [TODO: ID]:</strong>
+- [TODO: Beschreibung, wie die SFR erfüllt wird]</p>
+<p><strong>SFR [TODO: ID]:</strong>
+- [TODO: Beschreibung, wie die SFR erfüllt wird]</p>
+<h4 id="313-schnittstellen">3.1.3 Schnittstellen</h4>
+<p>[TODO: Beschreibe die Schnittstellen dieser TSF zu anderen TSFs oder externen Komponenten.]</p>
+<ul>
+<li><strong>Schnittstelle zu TSF-X:</strong> [TODO: Beschreibung]</li>
+<li><strong>Externe Schnittstellen:</strong> [TODO: Beschreibung]</li>
+</ul>
+<h3 id="32-tsf-2-todo-name-der-sicherheitsfunktion">3.2 TSF-2: [TODO: Name der Sicherheitsfunktion]</h3>
+<p><strong>TSF-ID:</strong> TSF-2<br />
+<strong>Zugeordnete SFRs:</strong> [TODO: SFR-IDs]</p>
+<h4 id="321-funktionsbeschreibung">3.2.1 Funktionsbeschreibung</h4>
+<p>[TODO: Beschreibung analog zu 3.1.1]</p>
+<h4 id="322-erfullung-der-sfrs">3.2.2 Erfüllung der SFRs</h4>
+<p>[TODO: Beschreibung analog zu 3.1.2]</p>
+<h4 id="323-schnittstellen">3.2.3 Schnittstellen</h4>
+<p>[TODO: Beschreibung analog zu 3.1.3]</p>
+<h3 id="33-tsf-3-todo-name-der-sicherheitsfunktion">3.3 TSF-3: [TODO: Name der Sicherheitsfunktion]</h3>
+<p>[TODO: Weitere Sicherheitsfunktionen nach dem gleichen Schema beschreiben]</p>
+<h2 id="4-zuordnung-von-sicherheitsfunktionen-zu-sfrs">4. Zuordnung von Sicherheitsfunktionen zu SFRs</h2>
+<h3 id="41-coverage-matrix">4.1 Coverage Matrix</h3>
+<p>Die folgende Tabelle zeigt die Zuordnung zwischen Sicherheitsfunktionen (TSFs) und Sicherheitsfunktionsanforderungen (SFRs):</p>
+<table>
+<thead>
+<tr>
+<th>SFR-ID</th>
+<th>SFR-Name</th>
+<th>TSF-1</th>
+<th>TSF-2</th>
+<th>TSF-3</th>
+<th>TSF-4</th>
+<th>TSF-5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>X</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>X</td>
+<td>X</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td></td>
+<td>X</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td></td>
+<td></td>
+<td>X</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-vollstandigkeitsprufung">4.2 Vollständigkeitsprüfung</h3>
+<p><strong>Abdeckung der SFRs:</strong>
+- Anzahl der SFRs: [TODO: Anzahl]
+- Anzahl der abgedeckten SFRs: [TODO: Anzahl]
+- Abdeckungsgrad: [TODO: Prozent]</p>
+<p><strong>Nicht abgedeckte SFRs:</strong>
+[TODO: Liste alle SFRs auf, die nicht durch TSFs abgedeckt sind. Wenn alle abgedeckt sind, schreibe "Keine".]</p>
+<h2 id="5-sicherungsmanahmen-assurance-measures">5. Sicherungsmaßnahmen (Assurance Measures)</h2>
+<h3 id="51-ubersicht">5.1 Übersicht</h3>
+<p>Die folgenden Sicherungsmaßnahmen (Assurance Measures) werden implementiert, um die Sicherungsanforderungen (SARs) zu erfüllen:</p>
+<table>
+<thead>
+<tr>
+<th>SAR-ID</th>
+<th>SAR-Name</th>
+<th>Assurance Measure</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-zuordnung-zu-evaluation-assurance-level">5.2 Zuordnung zu Evaluation Assurance Level</h3>
+<p>Das TOE wird auf <strong>[TODO: EAL-Level, z.B. EAL4]</strong> evaluiert. Die folgenden Assurance Measures unterstützen dieses EAL:</p>
+<p>[TODO: Liste die Assurance Measures auf, die für das gewählte EAL erforderlich sind.]</p>
+<p><strong>Beispiel für EAL4:</strong>
+- Configuration Management (ACM_CAP.4, ACM_SCP.2)
+- Delivery and Operation (ADO_DEL.2, ADO_IGS.1)
+- Development (ADV_FSP.2, ADV_IMP.1, ADV_TDS.2)
+- Guidance Documents (AGD_ADM.1, AGD_USR.1)
+- Life Cycle Support (ALC_DVS.1, ALC_LCD.1, ALC_TAT.1)
+- Tests (ATE_COV.2, ATE_DPT.1, ATE_FUN.1, ATE_IND.2)
+- Vulnerability Assessment (AVA_MSU.2, AVA_SOF.1, AVA_VLA.2)</p>
+<h2 id="6-starke-der-sicherheitsfunktionen-strength-of-function">6. Stärke der Sicherheitsfunktionen (Strength of Function)</h2>
+<h3 id="61-sof-claim">6.1 SOF-Claim</h3>
+<p>Das TOE beansprucht folgende Stärke der Sicherheitsfunktionen (Strength of Function):</p>
+<p><strong>SOF-Claim:</strong> [TODO: SOF-basic / SOF-medium / SOF-high]</p>
+<h3 id="62-sof-analyse">6.2 SOF-Analyse</h3>
+<p>Die folgende Tabelle zeigt die Stärke der einzelnen probabilistischen oder permutationsbasierten Sicherheitsmechanismen:</p>
+<table>
+<thead>
+<tr>
+<th>TSF-ID</th>
+<th>Mechanismus</th>
+<th>SOF-Level</th>
+<th>Begründung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="63-erfullung-des-sof-claims">6.3 Erfüllung des SOF-Claims</h3>
+<p>[TODO: Erkläre, wie die analysierten Mechanismen den SOF-Claim erfüllen. Zeige, dass alle relevanten Mechanismen mindestens das beanspruchte SOF-Level erreichen.]</p>
+<p><strong>Zusammenfassung:</strong>
+- Anzahl der analysierten Mechanismen: [TODO]
+- Niedrigstes SOF-Level: [TODO]
+- Erfüllung des SOF-Claims: [TODO: Ja/Nein]</p>
+<h2 id="7-zusammenfassung">7. Zusammenfassung</h2>
+<h3 id="71-vollstandigkeit-der-tss">7.1 Vollständigkeit der TSS</h3>
+<p>Die TOE Summary Specification ist vollständig und deckt alle Aspekte ab:</p>
+<ul>
+<li>✓ Alle SFRs sind durch TSFs abgedeckt</li>
+<li>✓ Alle SARs sind durch Assurance Measures abgedeckt</li>
+<li>✓ SOF-Claim ist analysiert und begründet</li>
+<li>✓ Alle Sicherheitsfunktionen sind detailliert beschrieben</li>
+</ul>
+<h3 id="72-verweis-auf-weitere-dokumente">7.2 Verweis auf weitere Dokumente</h3>
+<p>Für detaillierte Informationen siehe:</p>
+<ul>
+<li><strong>0510_Assurance_Measures.md</strong>: Detaillierte Beschreibung der Sicherungsmaßnahmen</li>
+<li><strong>0520_Functions_Rationale.md</strong>: Begründung der Zuordnung von TSFs zu SFRs</li>
+<li><strong>0530_Coverage_Matrix.md</strong>: Vollständige Coverage Matrix</li>
+<li><strong>0540_Strength_of_Function.md</strong>: Detaillierte SOF-Analyse</li>
+</ul>
+<hr />
+<p><strong>Dokumentenhistorie:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Datum</th>
+<th>Autor</th>
+<th>Änderungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Initiale Version</td>
+</tr>
+<tr>
+<td>1.0</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0440_Coverage_Matrix.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0510_Assurance_Measures.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0330 - Data Breaches and Notification Obligation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0330</div>
+            <h1>Data Breaches and Notification Obligation</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0320_Records_of_Processing_Activities.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0340_Data_Protection_Officer.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="data-breaches-and-notification-obligation">Data Breaches and Notification Obligation</h1>
+<p><strong>Document-ID:</strong> 0330<br />
+<strong>Owner:</strong> {{ meta.owner }}<br />
+<strong>Version:</strong> {{ meta.version }}<br />
+<strong>Status:</strong> Draft<br />
+<strong>Classification:</strong> Internal<br />
+<strong>Last Update:</strong> {{ meta.date }}  </p>
+<hr />
+<h2 id="purpose">Purpose</h2>
+<p>This document regulates handling of data breaches at {{ meta.organization }} according to Art. 33-34 GDPR. It defines notification obligations, deadlines, and processes for managing data protection incidents.</p>
+<h2 id="definition-of-data-breach-art-412">Definition of Data Breach (Art. 4(12))</h2>
+<p>A personal data breach means a breach of security leading to the accidental or unlawful destruction, loss, alteration, unauthorized disclosure of, or access to, personal data.</p>
+<h3 id="categories-of-data-breaches">Categories of Data Breaches</h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Description</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Confidentiality Breach</strong></td>
+<td>Unauthorized disclosure or access</td>
+<td>Data leak, hacking, accidental disclosure</td>
+</tr>
+<tr>
+<td><strong>Integrity Breach</strong></td>
+<td>Unauthorized alteration</td>
+<td>Manipulation, data corruption</td>
+</tr>
+<tr>
+<td><strong>Availability Breach</strong></td>
+<td>Loss or destruction</td>
+<td>Ransomware, hardware failure, accidental deletion</td>
+</tr>
+</tbody>
+</table>
+<h2 id="notification-to-supervisory-authority-art-33">Notification to Supervisory Authority (Art. 33)</h2>
+<h3 id="principle-art-331">Principle (Art. 33(1))</h3>
+<p>The controller notifies a personal data breach to the competent supervisory authority without undue delay and, where feasible, not later than 72 hours, unless the breach is unlikely to result in a risk to the rights and freedoms of natural persons.</p>
+<h3 id="risk-assessment">Risk Assessment</h3>
+<p><strong>Criteria for Risk Assessment:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Low Risk</th>
+<th>High Risk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type of Data</td>
+<td>General contact data</td>
+<td>Special categories (Art. 9), Financial data</td>
+</tr>
+<tr>
+<td>Scope</td>
+<td>Few data subjects</td>
+<td>Many data subjects</td>
+</tr>
+<tr>
+<td>Severity</td>
+<td>Minor impact</td>
+<td>Severe impact</td>
+</tr>
+<tr>
+<td>Protective Measures</td>
+<td>Encrypted, pseudonymized</td>
+<td>Unencrypted, plaintext</td>
+</tr>
+<tr>
+<td>Data Subjects</td>
+<td>Employees (internal)</td>
+<td>Customers, Children, vulnerable groups</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Decision Tree:</strong>
+1. Is there a data breach? → Yes/No
+2. Is there a risk to rights and freedoms? → Yes/No
+3. If Yes: Notification required
+4. If high risk: Additionally notify data subjects</p>
+<h3 id="mandatory-content-of-notification-art-333">Mandatory Content of Notification (Art. 33(3))</h3>
+<p>The notification must contain at least the following information:</p>
+<h4 id="a-nature-of-breach">a) Nature of Breach</h4>
+<ul>
+<li>Description of the data breach</li>
+<li>Categories and approximate number of data subjects concerned</li>
+<li>Categories and approximate number of data records concerned</li>
+</ul>
+<h4 id="b-contact-point">b) Contact Point</h4>
+<ul>
+<li>Name and contact details of the Data Protection Officer or other contact point</li>
+</ul>
+<h4 id="c-description-of-consequences">c) Description of Consequences</h4>
+<ul>
+<li>Description of the likely consequences of the data breach</li>
+</ul>
+<h4 id="d-measures-taken">d) Measures Taken</h4>
+<ul>
+<li>Description of measures taken or proposed to address and mitigate the breach</li>
+</ul>
+<h3 id="notification-deadline">Notification Deadline</h3>
+<p><strong>72-Hour Deadline from Awareness</strong></p>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T+0 (Discovery)</td>
+<td>Activate incident response, initial assessment</td>
+</tr>
+<tr>
+<td>T+24h</td>
+<td>Risk assessment completed, notification obligation clarified</td>
+</tr>
+<tr>
+<td>T+48h</td>
+<td>Notification prepared</td>
+</tr>
+<tr>
+<td>T+72h</td>
+<td>Notification submitted to supervisory authority</td>
+</tr>
+</tbody>
+</table>
+<p><strong>If 72-Hour Deadline Exceeded:</strong>
+- Justification for delay required (Art. 33(1))</p>
+<h3 id="competent-supervisory-authority">Competent Supervisory Authority</h3>
+<p><strong>Supervisory Authority:</strong> [TODO: Name of competent authority]<br />
+<strong>Address:</strong> [TODO: Address]<br />
+<strong>Notification Portal:</strong> [TODO: URL to online notification form]<br />
+<strong>Contact:</strong> [TODO: Email, Phone]</p>
+<h2 id="communication-to-data-subjects-art-34">Communication to Data Subjects (Art. 34)</h2>
+<h3 id="notification-obligation-art-341">Notification Obligation (Art. 34(1))</h3>
+<p>When the data breach is likely to result in a high risk to the rights and freedoms of natural persons, the controller communicates the breach to the data subject without undue delay.</p>
+<h3 id="criteria-for-high-risk">Criteria for High Risk</h3>
+<ul>
+<li><strong>Special categories of personal data (Art. 9)</strong></li>
+<li><strong>Financial data, access credentials</strong></li>
+<li><strong>Large number of data subjects</strong></li>
+<li><strong>Vulnerable groups (children, patients)</strong></li>
+<li><strong>Severe consequences (identity theft, financial losses)</strong></li>
+</ul>
+<h3 id="content-of-communication-art-342">Content of Communication (Art. 34(2))</h3>
+<p>The communication must contain:</p>
+<ul>
+<li>Nature of the data breach</li>
+<li>Name and contact details of the Data Protection Officer</li>
+<li>Likely consequences of the data breach</li>
+<li>Measures taken or proposed to address and mitigate the breach</li>
+<li>Recommendations for data subjects (e.g., change password)</li>
+</ul>
+<h3 id="exceptions-from-communication-art-343">Exceptions from Communication (Art. 34(3))</h3>
+<p>No communication required if:</p>
+<p><strong>a) Protective Measures:</strong> Data was encrypted or otherwise protected<br />
+<strong>b) Subsequent Measures:</strong> Measures taken that eliminate high risk<br />
+<strong>c) Disproportionate Effort:</strong> Public communication instead</p>
+<h2 id="incident-response-process">Incident Response Process</h2>
+<h3 id="phase-1-detection-and-assessment">Phase 1: Detection and Assessment</h3>
+<p><strong>Timeframe: 0-4 hours</strong></p>
+<ol>
+<li>Detect and report incident</li>
+<li>Activate incident response team</li>
+<li>Conduct initial assessment</li>
+<li>Confirm data breach</li>
+</ol>
+<p><strong>Responsible:</strong> [TODO: IT Security, Data Protection Officer]</p>
+<h3 id="phase-2-containment">Phase 2: Containment</h3>
+<p><strong>Timeframe: 4-12 hours</strong></p>
+<ol>
+<li>Immediate measures for damage control</li>
+<li>Isolate affected systems</li>
+<li>Prevent further data loss</li>
+<li>Forensic preservation</li>
+</ol>
+<p><strong>Responsible:</strong> [TODO: IT Security]</p>
+<h3 id="phase-3-analysis-and-risk-assessment">Phase 3: Analysis and Risk Assessment</h3>
+<p><strong>Timeframe: 12-24 hours</strong></p>
+<ol>
+<li>Determine scope of breach</li>
+<li>Identify affected data and persons</li>
+<li>Conduct risk assessment</li>
+<li>Check notification obligation</li>
+</ol>
+<p><strong>Responsible:</strong> [TODO: Data Protection Officer, IT Security]</p>
+<h3 id="phase-4-notification-and-communication">Phase 4: Notification and Communication</h3>
+<p><strong>Timeframe: 24-72 hours</strong></p>
+<ol>
+<li>Notification to supervisory authority (if required)</li>
+<li>Communication to data subjects (if required)</li>
+<li>Internal communication</li>
+<li>External communication (if required)</li>
+</ol>
+<p><strong>Responsible:</strong> [TODO: Data Protection Officer, Management]</p>
+<h3 id="phase-5-recovery">Phase 5: Recovery</h3>
+<p><strong>Timeframe: 72 hours - weeks</strong></p>
+<ol>
+<li>Restore systems</li>
+<li>Close security gaps</li>
+<li>Implement preventive measures</li>
+<li>Enhance monitoring</li>
+</ol>
+<p><strong>Responsible:</strong> [TODO: IT Security]</p>
+<h3 id="phase-6-post-incident-review">Phase 6: Post-Incident Review</h3>
+<p><strong>Timeframe: After completion</strong></p>
+<ol>
+<li>Document incident</li>
+<li>Conduct lessons learned</li>
+<li>Adapt processes</li>
+<li>Update training</li>
+</ol>
+<p><strong>Responsible:</strong> [TODO: Data Protection Officer, IT Security]</p>
+<h2 id="documentation-obligation-art-335">Documentation Obligation (Art. 33(5))</h2>
+<p>The controller documents all data breaches, including all facts, effects, and remedial action taken.</p>
+<h3 id="breach-register">Breach Register</h3>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Type of Breach</th>
+<th>Affected Data</th>
+<th>Number of Data Subjects</th>
+<th>Risk</th>
+<th>Notified</th>
+<th>Communicated</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Low/High</td>
+<td>Yes/No</td>
+<td>Yes/No</td>
+<td>Open/Closed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="retention-period">Retention Period</h3>
+<p><strong>Documentation:</strong> At least 3 years after incident closure</p>
+<h2 id="communication-plans">Communication Plans</h2>
+<h3 id="internal-communication">Internal Communication</h3>
+<p><strong>Escalation Chain:</strong>
+1. Discoverer → IT Security
+2. IT Security → Data Protection Officer
+3. Data Protection Officer → Management
+4. Management → Supervisory Board (for severe incidents)</p>
+<h3 id="external-communication">External Communication</h3>
+<p><strong>Stakeholders:</strong>
+- Supervisory authority
+- Data subjects
+- Media (for public interest)
+- Business partners (if affected)
+- Insurance</p>
+<p><strong>Communication Responsible:</strong> [TODO: Role]</p>
+<h2 id="responsibilities">Responsibilities</h2>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Responsible</th>
+<th>Accountable</th>
+<th>Consulted</th>
+<th>Informed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Incident Detection</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Risk Assessment</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Notification to Authority</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Communication to Data Subjects</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="links-to-other-documents">Links to Other Documents</h2>
+<ul>
+<li><strong>Security of Processing (Art. 32):</strong> Preventive measures</li>
+<li><strong>Processing by Processor (Art. 28):</strong> Processor notification obligation</li>
+<li><strong>Data Protection Impact Assessment (Art. 35):</strong> Risk assessment</li>
+<li><strong>Incident Response Plan:</strong> Detailed technical processes</li>
+</ul>
+<hr />
+<p><strong>Next Steps:</strong>
+1. Implement an incident response process
+2. Define escalation paths and responsibilities
+3. Create templates for notifications and communications
+4. Conduct regular incident response exercises
+5. Establish a breach register</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0320_Records_of_Processing_Activities.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0340_Data_Protection_Officer.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

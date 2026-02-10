@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0110 - Mitarbeitersicherheit</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0110</div>
+            <h1>Mitarbeitersicherheit</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0100_Sicherheitsmanagement_Prozess.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0300_Einrichtungszugangskontrollen.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="mitarbeitersicherheit">Mitarbeitersicherheit</h1>
+<p><strong>Dokument-ID:</strong> HIPAA-0110<br />
+<strong>Organisation:</strong> AdminSend GmbH<br />
+<strong>Verantwortlich:</strong> IT Operations Manager<br />
+<strong>Genehmigt durch:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Entwurf / In Prüfung / Genehmigt<br />
+<strong>Klassifizierung:</strong> internal<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-zweck">1. Zweck</h2>
+<p>Dieses Dokument beschreibt die Verfahren zur Mitarbeitersicherheit für AdminSend GmbH, um sicherzustellen, dass alle Mitarbeiter angemessenen Zugang zu ePHI haben und unbefugter Zugriff verhindert wird.</p>
+<h3 id="11-hipaa-anforderung">1.1 HIPAA-Anforderung</h3>
+<p><strong>Standard:</strong> §164.308(a)(3) - Workforce Security (Erforderlich)</p>
+<p><strong>Implementierungsspezifikationen:</strong>
+- §164.308(a)(3)(ii)(A) - Autorisierung und/oder Überwachung (Adressierbar)
+- §164.308(a)(3)(ii)(B) - Verfahren zur Mitarbeiterfreigabe (Adressierbar)
+- §164.308(a)(3)(ii)(C) - Kündigungsverfahren (Adressierbar)</p>
+<h2 id="2-autorisierung-und-uberwachung">2. Autorisierung und Überwachung</h2>
+<h3 id="21-zugriffsautorisierung">2.1 Zugriffsautorisierung</h3>
+<p><strong>Prinzip:</strong> Der Zugriff auf ePHI wird basierend auf Rolle, Jobfunktion und dem Prinzip der minimalen Notwendigkeit gewährt.</p>
+<p><strong>Autorisierungsprozess:</strong>
+1. <strong>Jobanalyse:</strong> Ermittlung der ePHI-Zugriffsanforderungen für die Rolle
+2. <strong>Zugriffsanfrage:</strong> Manager reicht Zugriffsanfrage ein
+3. <strong>Begründung:</strong> Dokumentation des geschäftlichen Bedarfs
+4. <strong>Genehmigung:</strong> Privacy Officer und/oder Security Officer genehmigen
+5. <strong>Bereitstellung:</strong> IT stellt Zugriff bereit
+6. <strong>Dokumentation:</strong> Zugriff wird protokolliert
+7. <strong>Bestätigung:</strong> Mitarbeiter bestätigt Verantwortlichkeiten</p>
+<p><strong>Autorisierungskriterien:</strong>
+- Jobrolle erfordert ePHI-Zugriff
+- Nur minimal notwendiger Zugriff
+- Angemessene Schulung abgeschlossen
+- Hintergrundprüfung abgeschlossen (falls erforderlich)
+- Vertraulichkeitsvereinbarung unterzeichnet</p>
+<h3 id="22-uberwachungsanforderungen">2.2 Überwachungsanforderungen</h3>
+<p><strong>Überwachter Zugriff:</strong>
+Mitarbeiter mit begrenzter Schulung oder temporärem Status benötigen möglicherweise Überwachung beim Zugriff auf ePHI.</p>
+<p><strong>Überwachungsstufen:</strong>
+| Mitarbeitertyp | Überwachung erforderlich | Vorgesetzter | Dauer |
+|----------------|-------------------------|--------------|-------|
+| Neue Mitarbeiter (&lt; 90 Tage) | Ja | Direkter Vorgesetzter | Bis Schulung abgeschlossen |
+| Zeitarbeitskräfte | Ja | Zugewiesener Vorgesetzter | Dauer der Beauftragung |
+| Praktikanten/Studenten | Ja | Betreuer/Ausbilder | Dauer des Programms |
+| Auftragnehmer (kurzfristig) | Ja | Projektmanager | Dauer des Vertrags |</p>
+<p><strong>Verantwortlichkeiten des Vorgesetzten:</strong>
+- Überwachung des ePHI-Zugriffs des Mitarbeiters
+- Sicherstellung der Einhaltung von Richtlinien
+- Bereitstellung von Anleitung und Schulung
+- Meldung von Verstößen
+- Dokumentation der Überwachungsaktivitäten</p>
+<h2 id="3-verfahren-zur-mitarbeiterfreigabe">3. Verfahren zur Mitarbeiterfreigabe</h2>
+<h3 id="31-voreinstellungsuberprufung">3.1 Voreinstellungsüberprüfung</h3>
+<p><strong>Anforderungen an Hintergrundprüfungen:</strong></p>
+<p><strong>Alle Mitarbeiter mit ePHI-Zugriff:</strong>
+- Identitätsüberprüfung
+- Überprüfung der Beschäftigungshistorie (7 Jahre)
+- Überprüfung der Ausbildung
+- Überprüfung der beruflichen Lizenz (falls zutreffend)</p>
+<p><strong>Mitarbeiter mit erhöhtem Zugriff:</strong>
+- Kriminelle Hintergrundprüfung
+- Bonitätsprüfung (für Finanzrollen)
+- Referenzprüfungen (mindestens 3)</p>
+<p><strong>Hintergrundprüfungsprozess:</strong>
+1. <strong>Bedingtes Angebot:</strong> Angebot abhängig von Hintergrundprüfung
+2. <strong>Autorisierung:</strong> Kandidat autorisiert Hintergrundprüfung
+3. <strong>Überprüfung:</strong> Drittanbieter führt Prüfung durch
+4. <strong>Prüfung:</strong> HR prüft Ergebnisse
+5. <strong>Entscheidung:</strong> Einstellungs-/Nicht-Einstellungsentscheidung
+6. <strong>Dokumentation:</strong> Ergebnisse dokumentiert und gesichert
+7. <strong>Nachteilige Maßnahme:</strong> FCRA-Anforderungen befolgen, falls nachteilige Maßnahme ergriffen wird</p>
+<p><strong>Hintergrundprüfungsanbieter:</strong> [TODO: Anbietername]</p>
+<h3 id="32-freigabestufen">3.2 Freigabestufen</h3>
+<table>
+<thead>
+<tr>
+<th>Freigabestufe</th>
+<th>Anforderungen</th>
+<th>Rollen</th>
+<th>ePHI-Zugriff</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stufe 1 - Basis</td>
+<td>Identitätsüberprüfung, Beschäftigungshistorie</td>
+<td>Verwaltungspersonal</td>
+<td>Begrenzter ePHI</td>
+</tr>
+<tr>
+<td>Stufe 2 - Standard</td>
+<td>Stufe 1 + Ausbildungsüberprüfung</td>
+<td>Klinisches Personal</td>
+<td>Vollständiger ePHI für Patientenversorgung</td>
+</tr>
+<tr>
+<td>Stufe 3 - Erhöht</td>
+<td>Stufe 2 + kriminelle Hintergrundprüfung</td>
+<td>IT-Personal, Abrechnung</td>
+<td>Systemebenen-ePHI-Zugriff</td>
+</tr>
+<tr>
+<td>Stufe 4 - Führungsebene</td>
+<td>Stufe 3 + Bonitätsprüfung, Referenzen</td>
+<td>Führungskräfte, Compliance</td>
+<td>Alle ePHI</td>
+</tr>
+</tbody>
+</table>
+<h3 id="33-laufende-freigabe">3.3 Laufende Freigabe</h3>
+<p><strong>Periodische Nachprüfung:</strong>
+- <strong>Häufigkeit:</strong> [TODO: Alle 3-5 Jahre oder wie für Rolle erforderlich]
+- <strong>Umfang:</strong> Kriminelle Hintergrundprüfung, Lizenzüberprüfung
+- <strong>Auslösende Ereignisse:</strong> Beförderung, Rollenwechsel, Sicherheitsvorfall</p>
+<p><strong>Kontinuierliche Überwachung:</strong>
+- Status der beruflichen Lizenz
+- Sanktionen oder Disziplinarmaßnahmen
+- Strafrechtliche Verurteilungen (falls gesetzlich zulässig)</p>
+<h2 id="4-kundigungsverfahren">4. Kündigungsverfahren</h2>
+<h3 id="41-kundigungsprozess">4.1 Kündigungsprozess</h3>
+<p><strong>Kündigungsarten:</strong>
+- Freiwillige Kündigung
+- Unfreiwillige Kündigung
+- Ruhestand
+- Ende des Vertrags/temporäre Beauftragung
+- Tod</p>
+<p><strong>Kündigungs-Checkliste:</strong></p>
+<p><strong>Sofortige Maßnahmen (Tag der Kündigung):</strong>
+- [ ] Deaktivierung aller Systemzugriffe (innerhalb 1 Stunde nach Benachrichtigung)
+- [ ] Deaktivierung des E-Mail-Kontos
+- [ ] Deaktivierung des VPN-Zugriffs
+- [ ] Deaktivierung des physischen Zugriffs (Ausweis, Schlüssel)
+- [ ] Einsammeln von Firmengeräten (Laptop, Telefon, Tablet)
+- [ ] Einsammeln von Zugangsausweisen und Schlüsseln
+- [ ] Änderung gemeinsam genutzter Passwörter/Codes, die dem Mitarbeiter bekannt sind
+- [ ] Benachrichtigung von IT, Security und Facilities</p>
+<p><strong>Innerhalb von 24 Stunden:</strong>
+- [ ] Überprüfung und Archivierung der Dateien des Mitarbeiters
+- [ ] Weiterleitung von E-Mails an Manager (falls angemessen)
+- [ ] Entfernung aus Verteilerlisten
+- [ ] Aktualisierung von Organigrammen
+- [ ] Benachrichtigung relevanter Abteilungen
+- [ ] Dokumentation der Kündigung im HR-System</p>
+<p><strong>Innerhalb von 1 Woche:</strong>
+- [ ] Durchführung eines Austrittsgespräches
+- [ ] Erinnerung an Vertraulichkeitsverpflichtungen
+- [ ] Einsammeln der unterzeichneten Bestätigung der Verpflichtungen
+- [ ] Abschlusszahlung
+- [ ] COBRA-Benachrichtigung (falls zutreffend)
+- [ ] Überprüfung der Rückgabe von Eigentum</p>
+<h3 id="42-zugriffskundigung">4.2 Zugriffskündigung</h3>
+<p><strong>Systemzugriffskündigung:</strong>
+| System | Kündigungsmethode | Verantwortlich | Überprüfung |
+|--------|-------------------|----------------|-------------|
+| Active Directory | Konto deaktiviert | IT | Automatisierter Bericht |
+| EHR-System | Benutzer deaktiviert | IT | Manuelle Überprüfung |
+| E-Mail | Postfach deaktiviert | IT | Automatisierter Bericht |
+| VPN | Zertifikat widerrufen | IT | Manuelle Überprüfung |
+| Physischer Zugang | Ausweis deaktiviert | Facilities | Zugriffsprotokollprüfung |</p>
+<p><strong>Kündigungsüberprüfung:</strong>
+- IT erstellt Kündigungsbericht
+- Security Officer prüft Bericht
+- Ausnahmen werden untersucht und behoben
+- Dokumentation wird aufbewahrt</p>
+<h3 id="43-wissenstransfer">4.3 Wissenstransfer</h3>
+<p><strong>Wissenstransferprozess:</strong>
+1. <strong>Identifikation:</strong> Identifikation kritischen Wissens und Verantwortlichkeiten
+2. <strong>Dokumentation:</strong> Dokumentation von Prozessen und Verfahren
+3. <strong>Schulung:</strong> Schulung von Ersatz oder Teammitgliedern
+4. <strong>Übergang:</strong> Schrittweiser Übergang von Verantwortlichkeiten (falls möglich)
+5. <strong>Überprüfung:</strong> Überprüfung, dass Wissenstransfer abgeschlossen ist</p>
+<p><strong>Kritische Wissensbereiche:</strong>
+- Systemzugriff und Passwörter
+- Laufende Projekte
+- Wichtige Kontakte
+- Ausstehende Probleme
+- Dokumentationsspeicherorte</p>
+<h3 id="44-uberwachung-nach-kundigung">4.4 Überwachung nach Kündigung</h3>
+<p><strong>Überwachungsaktivitäten:</strong>
+- Überprüfung von Audit-Protokollen für gekündigte Mitarbeiterkonten
+- Überwachung auf unbefugte Zugriffsversuche
+- Überprüfung auf Datenexfiltration
+- Überwachung auf Richtlinienverstöße vor Kündigung</p>
+<p><strong>Überwachungszeitraum:</strong> [TODO: 90 Tage nach Kündigung]</p>
+<h2 id="5-rollenbasierte-zugriffskontrolle-rbac">5. Rollenbasierte Zugriffskontrolle (RBAC)</h2>
+<h3 id="51-rollendefinitionen">5.1 Rollendefinitionen</h3>
+<table>
+<thead>
+<tr>
+<th>Rollen-ID</th>
+<th>Rollenname</th>
+<th>Abteilung</th>
+<th>ePHI-Zugriffsstufe</th>
+<th>Systeme</th>
+<th>Genehmigung erforderlich</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: ROLE-001]</td>
+<td>Arzt</td>
+<td>Klinisch</td>
+<td>Vollständige Patientenversorgung</td>
+<td>EHR, Labor, Bildgebung</td>
+<td>Ärztlicher Direktor</td>
+</tr>
+<tr>
+<td>[TODO: ROLE-002]</td>
+<td>Krankenschwester</td>
+<td>Klinisch</td>
+<td>Vollständige Patientenversorgung</td>
+<td>EHR, Medikation</td>
+<td>Pflegedienstleitung</td>
+</tr>
+<tr>
+<td>[TODO: ROLE-003]</td>
+<td>Medizinischer Assistent</td>
+<td>Klinisch</td>
+<td>Begrenzt</td>
+<td>EHR (Vitalwerte, Terminplanung)</td>
+<td>Klinischer Manager</td>
+</tr>
+<tr>
+<td>[TODO: ROLE-004]</td>
+<td>Abrechnungsspezialist</td>
+<td>Abrechnung</td>
+<td>Nur Abrechnungsdaten</td>
+<td>Abrechnungssystem</td>
+<td>Abrechnungsmanager</td>
+</tr>
+<tr>
+<td>[TODO: ROLE-005]</td>
+<td>IT-Administrator</td>
+<td>IT</td>
+<td>Systemadministrator</td>
+<td>Alle Systeme</td>
+<td>IT-Manager + Security Officer</td>
+</tr>
+<tr>
+<td>[TODO: ROLE-006]</td>
+<td>Rezeptionist</td>
+<td>Empfang</td>
+<td>Nur demografische Daten</td>
+<td>EHR (Terminplanung)</td>
+<td>Büroleiter</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-zugriffsmatrix">5.2 Zugriffsmatrix</h3>
+<table>
+<thead>
+<tr>
+<th>Rolle</th>
+<th>Patientendemografie</th>
+<th>Klinische Notizen</th>
+<th>Laborergebnisse</th>
+<th>Medikamente</th>
+<th>Abrechnung</th>
+<th>Systemadministrator</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Arzt</td>
+<td>Lesen/Schreiben</td>
+<td>Lesen/Schreiben</td>
+<td>Lesen/Schreiben</td>
+<td>Lesen/Schreiben</td>
+<td>Lesen</td>
+<td>Nein</td>
+</tr>
+<tr>
+<td>Krankenschwester</td>
+<td>Lesen/Schreiben</td>
+<td>Lesen/Schreiben</td>
+<td>Lesen</td>
+<td>Lesen/Schreiben</td>
+<td>Nein</td>
+<td>Nein</td>
+</tr>
+<tr>
+<td>Medizinischer Assistent</td>
+<td>Lesen/Schreiben</td>
+<td>Lesen</td>
+<td>Lesen</td>
+<td>Nein</td>
+<td>Nein</td>
+<td>Nein</td>
+</tr>
+<tr>
+<td>Abrechnungsspezialist</td>
+<td>Lesen</td>
+<td>Nein</td>
+<td>Nein</td>
+<td>Nein</td>
+<td>Lesen/Schreiben</td>
+<td>Nein</td>
+</tr>
+<tr>
+<td>IT-Administrator</td>
+<td>Nein*</td>
+<td>Nein*</td>
+<td>Nein*</td>
+<td>Nein*</td>
+<td>Nein*</td>
+<td>Ja</td>
+</tr>
+<tr>
+<td>Rezeptionist</td>
+<td>Lesen/Schreiben</td>
+<td>Nein</td>
+<td>Nein</td>
+<td>Nein</td>
+<td>Nein</td>
+<td>Nein</td>
+</tr>
+</tbody>
+</table>
+<p>*IT-Administratoren haben technischen Zugriff, sollten aber nicht auf ePHI zugreifen, es sei denn, dies ist für die Fehlerbehebung erforderlich</p>
+<h2 id="6-schulungsanforderungen">6. Schulungsanforderungen</h2>
+<h3 id="61-schulung-zur-mitarbeitersicherheit">6.1 Schulung zur Mitarbeitersicherheit</h3>
+<p><strong>Erstschulung (Innerhalb von 30 Tagen nach Einstellung):</strong>
+- HIPAA-Überblick
+- Richtlinien zur Mitarbeitersicherheit
+- Zugriffskontrollverfahren
+- Passwortanforderungen
+- Vertraulichkeitsverpflichtungen
+- Sanktionen bei Verstößen</p>
+<p><strong>Jährliche Schulung:</strong>
+- Auffrischung zur Mitarbeitersicherheit
+- Richtlinienaktualisierungen
+- Fallstudien
+- Neue Bedrohungen</p>
+<p><strong>Rollenspezifische Schulung:</strong>
+- Vorgesetzte: Überwachungsverantwortlichkeiten
+- IT-Personal: Technische Schutzmaßnahmen
+- Manager: Verfahren zur Zugriffsgenehmigung</p>
+<h3 id="62-schulungsdokumentation">6.2 Schulungsdokumentation</h3>
+<p><strong>Erforderliche Dokumentation:</strong>
+- Schulungsteilnahmeprotokolle
+- Schulungsmaterialien
+- Testergebnisse (falls zutreffend)
+- Bestätigung des Verständnisses
+- Schulungszertifikate</p>
+<p><strong>Aufbewahrung:</strong> [TODO: 6 Jahre]</p>
+<h2 id="7-vertraulichkeitsvereinbarungen">7. Vertraulichkeitsvereinbarungen</h2>
+<h3 id="71-anforderungen-an-vertraulichkeitsvereinbarungen">7.1 Anforderungen an Vertraulichkeitsvereinbarungen</h3>
+<p><strong>Alle Mitarbeiter müssen unterzeichnen:</strong>
+- Vertraulichkeitsvereinbarung
+- Richtlinie zur akzeptablen Nutzung
+- HIPAA-Bestätigung
+- Sicherheitsrichtlinienbestätigung</p>
+<p><strong>Zeitpunkt:</strong>
+- Vor Gewährung des Zugriffs auf ePHI
+- Bei Richtlinienänderungen (erneute Bestätigung)
+- Jährlich (erneute Bestätigung)</p>
+<h3 id="72-vereinbarungsinhalt">7.2 Vereinbarungsinhalt</h3>
+<p><strong>Vertraulichkeitsvereinbarung muss enthalten:</strong>
+- Verpflichtung zum Schutz von PHI/ePHI
+- Verbot unbefugten Zugriffs
+- Verbot unbefugter Offenlegung
+- Meldepflichten für Vorfälle
+- Sanktionen bei Verstößen
+- Verpflichtungen bestehen nach Kündigung fort
+- Bestätigung des Verständnisses</p>
+<p><strong>Vereinbarungsspeicherung:</strong> [TODO: HR-Personalakten, elektronisches Repository]</p>
+<h2 id="8-uberwachung-und-compliance">8. Überwachung und Compliance</h2>
+<h3 id="81-uberwachung-der-mitarbeitersicherheit">8.1 Überwachung der Mitarbeitersicherheit</h3>
+<p><strong>Überwachungsaktivitäten:</strong>
+- Überprüfung von Zugriffsprotokollen
+- Untersuchungen unangemessenen Zugriffs
+- Audits zur Richtlinieneinhaltung
+- Verfolgung der Schulungsabschlüsse
+- Compliance bei Hintergrundprüfungen
+- Compliance bei Kündigungsverfahren</p>
+<p><strong>Überwachungshäufigkeit:</strong>
+| Aktivität | Häufigkeit | Verantwortlich |
+|-----------|-----------|----------------|
+| Zugriffsprotokollprüfung | Monatlich | Security Officer |
+| Schulungs-Compliance | Vierteljährlich | HR + Privacy Officer |
+| Hintergrundprüfungs-Compliance | Jährlich | HR |
+| Kündigungsverfahrensaudit | Vierteljährlich | Security Officer |</p>
+<h3 id="82-compliance-metriken">8.2 Compliance-Metriken</h3>
+<table>
+<thead>
+<tr>
+<th>Metrik</th>
+<th>Ziel</th>
+<th>Aktuell</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Schulungsabschlussrate</td>
+<td>100%</td>
+<td>[TODO: %]</td>
+<td>[TODO: Grün/Gelb/Rot]</td>
+</tr>
+<tr>
+<td>Hintergrundprüfungen abgeschlossen</td>
+<td>100%</td>
+<td>[TODO: %]</td>
+<td>[TODO: Grün/Gelb/Rot]</td>
+</tr>
+<tr>
+<td>Kündigungsverfahren befolgt</td>
+<td>100%</td>
+<td>[TODO: %]</td>
+<td>[TODO: Grün/Gelb/Rot]</td>
+</tr>
+<tr>
+<td>Zugriffsüberprüfungen abgeschlossen</td>
+<td>100%</td>
+<td>[TODO: %]</td>
+<td>[TODO: Grün/Gelb/Rot]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="9-dokumentation-und-aufzeichnungen">9. Dokumentation und Aufzeichnungen</h2>
+<h3 id="91-erforderliche-dokumentation">9.1 Erforderliche Dokumentation</h3>
+<ul>
+<li>Zugriffsautorisierungsformulare</li>
+<li>Hintergrundprüfungsergebnisse</li>
+<li>Vertraulichkeitsvereinbarungen</li>
+<li>Schulungsunterlagen</li>
+<li>Kündigungs-Checklisten</li>
+<li>Überprüfung der Zugriffskündigung</li>
+<li>Überwachungsprotokolle</li>
+<li>Vorfallberichte</li>
+</ul>
+<h3 id="92-aufbewahrung">9.2 Aufbewahrung</h3>
+<p><strong>Aufbewahrungsfrist:</strong> [TODO: 6 Jahre ab Beendigung des Arbeitsverhältnisses oder letztem Gültigkeitsdatum]</p>
+<p><strong>Speicherort:</strong> [TODO: HR-System, Dokumentenmanagementsystem]</p>
+<hr />
+<p><strong>Dokumentenhistorie:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Datum</th>
+<th>Autor</th>
+<th>Änderungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Ersterstellung</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0100_Sicherheitsmanagement_Prozess.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0300_Einrichtungszugangskontrollen.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

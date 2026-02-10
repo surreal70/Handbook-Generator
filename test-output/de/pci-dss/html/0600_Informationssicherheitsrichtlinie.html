@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0600 - Informationssicherheitsrichtlinie</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0600</div>
+            <h1>Informationssicherheitsrichtlinie</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0510_Netzwerksicherheitstests.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0700_Anhang_Nachweisregister.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="informationssicherheitsrichtlinie">Informationssicherheitsrichtlinie</h1>
+<p><strong>Dokument-ID:</strong> PCI-0600<br />
+<strong>Organisation:</strong> AdminSend GmbH<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Genehmigt durch:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Entwurf / In Review / Freigegeben<br />
+<strong>Klassifizierung:</strong> internal<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-zweck">1. Zweck</h2>
+<p>Dieses Dokument definiert die Informationssicherheitsrichtlinie für AdminSend GmbH gemäß PCI-DSS Requirement 12.</p>
+<h3 id="11-ziele">1.1 Ziele</h3>
+<ul>
+<li><strong>Security Governance:</strong> Etablierung eines Sicherheits-Frameworks</li>
+<li><strong>Risikomanagement:</strong> Systematische Risikoidentifikation und -behandlung</li>
+<li><strong>Compliance:</strong> Erfüllung von PCI-DSS Requirement 12</li>
+<li><strong>Awareness:</strong> Sensibilisierung aller Mitarbeiter</li>
+</ul>
+<h3 id="12-geltungsbereich">1.2 Geltungsbereich</h3>
+<p><strong>Betroffene Personen:</strong>
+- Alle Mitarbeiter
+- Alle Dienstleister
+- Alle Personen mit Zugriff auf CDE oder CHD</p>
+<h2 id="2-informationssicherheitsrichtlinie">2. Informationssicherheitsrichtlinie</h2>
+<h3 id="21-sicherheitsziele">2.1 Sicherheitsziele</h3>
+<p><strong>Vertraulichkeit:</strong>
+- Schutz von Karteninhaberdaten vor unbefugtem Zugriff
+- Zugriffskontrolle nach Need-to-Know-Prinzip
+- Verschlüsselung sensibler Daten</p>
+<p><strong>Integrität:</strong>
+- Schutz vor unbefugter Änderung
+- Validierung von Datenänderungen
+- Audit Trails für alle Änderungen</p>
+<p><strong>Verfügbarkeit:</strong>
+- Sicherstellung der Systemverfügbarkeit
+- Business Continuity Planning
+- Disaster Recovery</p>
+<h3 id="22-sicherheitsprinzipien">2.2 Sicherheitsprinzipien</h3>
+<p><strong>Defense in Depth:</strong>
+- Mehrschichtige Sicherheitskontrollen
+- Keine Single Point of Failure
+- Redundanz kritischer Systeme</p>
+<p><strong>Least Privilege:</strong>
+- Minimale erforderliche Berechtigungen
+- Regelmäßige Überprüfung
+- Zeitlich begrenzte privilegierte Zugriffe</p>
+<p><strong>Separation of Duties:</strong>
+- Trennung kritischer Funktionen
+- Vier-Augen-Prinzip
+- Keine Einzelperson mit vollständiger Kontrolle</p>
+<p><strong>Secure by Default:</strong>
+- Sichere Standardkonfigurationen
+- Deaktivierung unnötiger Dienste
+- Härtung aller Systeme</p>
+<h2 id="3-rollen-und-verantwortlichkeiten">3. Rollen und Verantwortlichkeiten</h2>
+<h3 id="31-governance-struktur">3.1 Governance-Struktur</h3>
+<p><strong>Executive Management:</strong>
+- Gesamtverantwortung für Informationssicherheit
+- Genehmigung der Sicherheitsrichtlinien
+- Bereitstellung von Ressourcen</p>
+<p><strong>CISO (Chief Information Security Officer):</strong>
+- Verantwortlich für Sicherheitsprogramm
+- Überwachung der Compliance
+- Incident Response-Koordination
+- Reporting an Executive Management</p>
+<p><strong>PCI-DSS Program Manager:</strong>
+- Verantwortlich für PCI-DSS-Compliance
+- Koordination von Assessments
+- Dokumentation und Nachweisführung
+- Liaison zu QSA und Acquiring Banks</p>
+<p><strong>IT Security Team:</strong>
+- Implementierung von Sicherheitskontrollen
+- Security Monitoring
+- Vulnerability Management
+- Incident Response</p>
+<p><strong>IT Operations:</strong>
+- Systemadministration
+- Patch Management
+- Backup und Recovery
+- Change Management</p>
+<p><strong>Alle Mitarbeiter:</strong>
+- Einhaltung der Sicherheitsrichtlinien
+- Meldung von Sicherheitsvorfällen
+- Teilnahme an Security Awareness Training</p>
+<h3 id="32-raci-matrix">3.2 RACI-Matrix</h3>
+<table>
+<thead>
+<tr>
+<th>Aktivität</th>
+<th>Executive</th>
+<th>CISO</th>
+<th>PCI Manager</th>
+<th>IT Security</th>
+<th>IT Ops</th>
+<th>Mitarbeiter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Richtlinien-Genehmigung</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Sicherheitskontrollen</td>
+<td>C</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>R</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Compliance-Monitoring</td>
+<td>I</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Incident Response</td>
+<td>I</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Security Awareness</td>
+<td>C</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>I</td>
+<td>R</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legende:</strong> R = Responsible, A = Accountable, C = Consulted, I = Informed</p>
+<h2 id="4-risikomanagement">4. Risikomanagement</h2>
+<h3 id="41-risikoanalyse-prozess">4.1 Risikoanalyse-Prozess</h3>
+<p><strong>Jährliche Risikoanalyse:</strong>
+1. Asset-Identifikation
+2. Bedrohungsidentifikation
+3. Schwachstellenanalyse
+4. Risikobewertung
+5. Risikobehandlung
+6. Dokumentation</p>
+<p><strong>Risikobewertung:</strong>
+- Eintrittswahrscheinlichkeit (1-5)
+- Auswirkung (1-5)
+- Risiko-Score = Wahrscheinlichkeit × Auswirkung</p>
+<p><strong>Risiko-Matrix:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Risiko-Score</th>
+<th>Kategorie</th>
+<th>Behandlung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>20-25</td>
+<td>Kritisch</td>
+<td>Sofortige Maßnahmen</td>
+</tr>
+<tr>
+<td>15-19</td>
+<td>Hoch</td>
+<td>Maßnahmen innerhalb 30 Tage</td>
+</tr>
+<tr>
+<td>10-14</td>
+<td>Mittel</td>
+<td>Maßnahmen innerhalb 90 Tage</td>
+</tr>
+<tr>
+<td>5-9</td>
+<td>Niedrig</td>
+<td>Überwachung</td>
+</tr>
+<tr>
+<td>1-4</td>
+<td>Sehr niedrig</td>
+<td>Akzeptieren</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-risikobehandlung">4.2 Risikobehandlung</h3>
+<p><strong>Optionen:</strong>
+- <strong>Vermeiden:</strong> Aktivität einstellen
+- <strong>Reduzieren:</strong> Kontrollen implementieren
+- <strong>Übertragen:</strong> Versicherung, Outsourcing
+- <strong>Akzeptieren:</strong> Risiko bewusst akzeptieren (mit Genehmigung)</p>
+<p><strong>Risikoakzeptanz:</strong>
+- Nur durch CISO oder Executive Management
+- Dokumentierte Begründung
+- Regelmäßige Überprüfung
+- Zeitlich begrenzt</p>
+<h2 id="5-security-awareness-program">5. Security Awareness Program</h2>
+<h3 id="51-schulungsprogramm">5.1 Schulungsprogramm</h3>
+<p><strong>Pflichtschulungen:</strong>
+- Onboarding-Schulung (bei Einstellung)
+- Jährliche Auffrischungsschulung
+- Rollenspezifische Schulungen
+- Ad-hoc-Schulungen bei Bedarf</p>
+<p><strong>Schulungsinhalte:</strong>
+- PCI-DSS-Grundlagen
+- Umgang mit Karteninhaberdaten
+- Passwort-Sicherheit
+- Phishing-Erkennung
+- Social Engineering
+- Incident Reporting
+- Clean Desk Policy
+- Acceptable Use Policy</p>
+<h3 id="52-schulungsdokumentation">5.2 Schulungsdokumentation</h3>
+<p><strong>Erforderliche Nachweise:</strong>
+- Schulungsteilnahme-Listen
+- Schulungsmaterialien
+- Schulungszertifikate
+- Wissenstests
+- Auffrischungsschulungen</p>
+<p><strong>Tracking:</strong>
+- Schulungsdatenbank
+- Automatische Erinnerungen
+- Compliance-Reporting</p>
+<h3 id="53-awareness-kampagnen">5.3 Awareness-Kampagnen</h3>
+<p><strong>Regelmäßige Kampagnen:</strong>
+- Monatliche Security-Newsletter
+- Phishing-Simulationen
+- Security-Poster
+- Intranet-Artikel
+- Team-Meetings</p>
+<h2 id="6-incident-response">6. Incident Response</h2>
+<h3 id="61-incident-response-plan">6.1 Incident Response Plan</h3>
+<p><strong>Phasen:</strong>
+1. <strong>Preparation:</strong> Vorbereitung und Training
+2. <strong>Detection:</strong> Erkennung von Incidents
+3. <strong>Analysis:</strong> Analyse und Bewertung
+4. <strong>Containment:</strong> Eindämmung
+5. <strong>Eradication:</strong> Beseitigung
+6. <strong>Recovery:</strong> Wiederherstellung
+7. <strong>Post-Incident:</strong> Lessons Learned</p>
+<p><strong>Incident Response Team:</strong>
+- Incident Response Manager
+- IT Security Analysts
+- IT Operations
+- Legal/Compliance
+- PR/Communications
+- Executive Management (bei Major Incidents)</p>
+<h3 id="62-incident-klassifizierung">6.2 Incident-Klassifizierung</h3>
+<p><strong>Schweregrade:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Schweregrad</th>
+<th>Beschreibung</th>
+<th>Beispiele</th>
+<th>Response-Zeit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kritisch</td>
+<td>Massive Auswirkung</td>
+<td>Datenexfiltration, Ransomware</td>
+<td>Sofort</td>
+</tr>
+<tr>
+<td>Hoch</td>
+<td>Signifikante Auswirkung</td>
+<td>Malware-Infektion, Unauthorized Access</td>
+<td>&lt; 1 Stunde</td>
+</tr>
+<tr>
+<td>Mittel</td>
+<td>Moderate Auswirkung</td>
+<td>Phishing-Erfolg, Policy-Verletzung</td>
+<td>&lt; 4 Stunden</td>
+</tr>
+<tr>
+<td>Niedrig</td>
+<td>Geringe Auswirkung</td>
+<td>Verdächtige Aktivität</td>
+<td>&lt; 24 Stunden</td>
+</tr>
+</tbody>
+</table>
+<h3 id="63-incident-reporting">6.3 Incident Reporting</h3>
+<p><strong>Meldepflicht:</strong>
+- Alle Mitarbeiter müssen Incidents melden
+- Meldung an IT Security oder Helpdesk
+- Keine Angst vor Konsequenzen bei Meldung
+- Schnelle Meldung ist wichtig</p>
+<p><strong>Meldekanäle:</strong>
+- E-Mail: [TODO: security@organization.com]
+- Telefon: [TODO: +49 XXX XXXXXXX]
+- Incident-Portal: [TODO: URL]
+- Helpdesk: [TODO: Telefon]</p>
+<h3 id="64-breach-notification">6.4 Breach Notification</h3>
+<p><strong>Bei Datenschutzverletzungen:</strong>
+- Benachrichtigung der Acquiring Banks
+- Benachrichtigung der Kartenmarken
+- Benachrichtigung der Datenschutzbehörde (DSGVO)
+- Benachrichtigung betroffener Karteninhaber
+- Forensische Untersuchung</p>
+<p><strong>Zeitrahmen:</strong>
+- Acquiring Banks: Sofort
+- Kartenmarken: Gemäß Vorgaben
+- Datenschutzbehörde: 72 Stunden (DSGVO)
+- Karteninhaber: Ohne unangemessene Verzögerung</p>
+<h2 id="7-dienstleister-management">7. Dienstleister-Management</h2>
+<h3 id="71-dienstleister-auswahl">7.1 Dienstleister-Auswahl</h3>
+<p><strong>Due Diligence:</strong>
+- PCI-DSS-Compliance-Status prüfen
+- AOC (Attestation of Compliance) anfordern
+- Sicherheitskontrollen bewerten
+- Vertragliche Sicherheitsanforderungen</p>
+<p><strong>Anforderungen:</strong>
+- PCI-DSS-compliant (falls CHD-Zugriff)
+- Aktuelle AOC
+- Incident Response-Prozess
+- Versicherung</p>
+<h3 id="72-dienstleister-uberwachung">7.2 Dienstleister-Überwachung</h3>
+<p><strong>Jährliche Überprüfung:</strong>
+- AOC-Validierung
+- Sicherheitskontrollen-Review
+- Incident-Review
+- Vertragskonformität</p>
+<p><strong>Dokumentation:</strong>
+- Liste aller Dienstleister
+- AOCs
+- Verträge mit PCI-Klauseln
+- Review-Protokolle</p>
+<h3 id="73-dienstleister-vertrage">7.3 Dienstleister-Verträge</h3>
+<p><strong>Erforderliche Klauseln:</strong>
+- PCI-DSS-Compliance-Verpflichtung
+- Incident Notification
+- Audit-Rechte
+- Datenschutz (DSGVO)
+- Haftung
+- Kündigung bei Non-Compliance</p>
+<h2 id="8-dokumentenmanagement">8. Dokumentenmanagement</h2>
+<h3 id="81-dokumentenlenkung">8.1 Dokumentenlenkung</h3>
+<p><strong>Anforderungen:</strong>
+- Versionskontrolle
+- Genehmigungsprozess
+- Regelmäßige Reviews
+- Archivierung alter Versionen</p>
+<p><strong>Dokumenten-Lifecycle:</strong>
+1. Erstellung
+2. Review
+3. Genehmigung
+4. Veröffentlichung
+5. Jährlicher Review
+6. Aktualisierung oder Archivierung</p>
+<h3 id="82-dokumenten-aufbewahrung">8.2 Dokumenten-Aufbewahrung</h3>
+<p><strong>Aufbewahrungsfristen:</strong>
+- Richtlinien: Aktuell + 3 Jahre
+- Audit-Berichte: 3 Jahre
+- Logs: 1 Jahr
+- Incident-Berichte: 3 Jahre
+- Schulungsnachweise: 3 Jahre</p>
+<h2 id="9-compliance-monitoring">9. Compliance-Monitoring</h2>
+<h3 id="91-kontinuierliche-uberwachung">9.1 Kontinuierliche Überwachung</h3>
+<p><strong>Monitoring-Aktivitäten:</strong>
+- Tägliches Security Monitoring
+- Wöchentliche Compliance-Checks
+- Monatliche Compliance-Reports
+- Quartalsweise Reviews
+- Jährliche Assessments</p>
+<h3 id="92-compliance-reporting">9.2 Compliance-Reporting</h3>
+<p><strong>Berichte:</strong>
+- Monatlicher Compliance-Status an CISO
+- Quartalsweiser Bericht an Executive Management
+- Jährlicher Compliance-Bericht
+- Ad-hoc-Berichte bei Incidents</p>
+<h3 id="93-interne-audits">9.3 Interne Audits</h3>
+<p><strong>Jährliche Audits:</strong>
+- Alle PCI-DSS-Requirements
+- Stichproben-basiert
+- Dokumentation von Findings
+- Korrekturmaßnahmen
+- Follow-up</p>
+<h2 id="10-richtlinien-review">10. Richtlinien-Review</h2>
+<h3 id="101-jahrlicher-review">10.1 Jährlicher Review</h3>
+<p><strong>Prozess:</strong>
+1. Alle Richtlinien reviewen
+2. Änderungen identifizieren
+3. Aktualisierungen vornehmen
+4. Genehmigung einholen
+5. Kommunikation an Mitarbeiter
+6. Schulungen aktualisieren</p>
+<p><strong>Verantwortlich:</strong> CISO</p>
+<h3 id="102-ad-hoc-reviews">10.2 Ad-hoc-Reviews</h3>
+<p><strong>Anlässe:</strong>
+- Signifikante Änderungen im CDE
+- Neue Bedrohungen
+- Regulatorische Änderungen
+- Nach Major Incidents
+- Audit-Findings</p>
+<h2 id="11-compliance-validierung">11. Compliance-Validierung</h2>
+<h3 id="111-validierungsaktivitaten">11.1 Validierungsaktivitäten</h3>
+<p><strong>Quartalsweise:</strong>
+- Richtlinien-Compliance-Checks
+- Schulungsstatus-Review
+- Dienstleister-AOC-Validierung</p>
+<p><strong>Jährlich:</strong>
+- Vollständige Risikoanalyse
+- Interne Audits
+- QSA-Assessment
+- Richtlinien-Review</p>
+<h3 id="112-validierungsdokumentation">11.2 Validierungsdokumentation</h3>
+<p><strong>Erforderliche Nachweise:</strong>
+- Informationssicherheitsrichtlinie
+- Risikoanalyse-Berichte
+- Schulungsnachweise
+- Incident Response-Protokolle
+- Dienstleister-AOCs
+- Audit-Berichte</p>
+<hr />
+<p><strong>Dokumenthistorie:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Datum</th>
+<th>Autor</th>
+<th>Änderungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Initiale Erstellung</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0510_Netzwerksicherheitstests.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0700_Anhang_Nachweisregister.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

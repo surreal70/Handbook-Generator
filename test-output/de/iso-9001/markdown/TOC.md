@@ -1,0 +1,38 @@
+# Table of Contents - ISO-9001 Handbook
+
+Language: de
+
+## Templates
+
+- [0000 - metadata de iso-9001](0000_metadata_de_iso-9001.md)
+- [0010 - Kontext der Organisation](0010_Kontext_der_Organisation.md)
+- [0020 - Interessierte Parteien](0020_Interessierte_Parteien.md)
+- [0030 - Anwendungsbereich QMS](0030_Anwendungsbereich_QMS.md)
+- [0040 - QMS und Prozesse](0040_QMS_und_Prozesse.md)
+- [0050 - Prozesslandkarte](0050_Prozesslandkarte.md)
+- [0100 - Qualitaetspolitik](0100_Qualitaetspolitik.md)
+- [0110 - Fuehrung und Verpflichtung](0110_Fuehrung_und_Verpflichtung.md)
+- [0120 - Rollen Verantwortlichkeiten Befugnisse](0120_Rollen_Verantwortlichkeiten_Befugnisse.md)
+- [0130 - Managementbewertung](0130_Managementbewertung.md)
+- [0200 - Risiko und Chancenbewertung](0200_Risiko_und_Chancenbewertung.md)
+- [0210 - Qualitaetsziele](0210_Qualitaetsziele.md)
+- [0220 - Planung von Aenderungen](0220_Planung_von_Aenderungen.md)
+- [0300 - Ressourcen](0300_Ressourcen.md)
+- [0310 - Kompetenz Schulung Bewusstsein](0310_Kompetenz_Schulung_Bewusstsein.md)
+- [0320 - Kommunikation](0320_Kommunikation.md)
+- [0330 - Dokumentierte Information](0330_Dokumentierte_Information.md)
+- [0400 - Betriebliche Planung und Steuerung](0400_Betriebliche_Planung_und_Steuerung.md)
+- [0410 - Anforderungen an Produkte und Dienstleistungen](0410_Anforderungen_an_Produkte_und_Dienstleistungen.md)
+- [0420 - Entwicklung von Produkten und Dienstleistungen](0420_Entwicklung_von_Produkten_und_Dienstleistungen.md)
+- [0430 - Steuerung extern bereitgestellter Prozesse Produkte Dienstleistungen](0430_Steuerung_extern_bereitgestellter_Prozesse_Produkte_Dienstleistungen.md)
+- [0440 - Produktion und Dienstleistungserbringung](0440_Produktion_und_Dienstleistungserbringung.md)
+- [0550 - Ueberwachung Messung Analyse Bewertung](0550_Ueberwachung_Messung_Analyse_Bewertung.md)
+- [0560 - Internes Audit](0560_Internes_Audit.md)
+- [0570 - Managementbewertung](0570_Managementbewertung.md)
+- [0650 - Verbesserung](0650_Verbesserung.md)
+- [0660 - Nichtkonformitaet und Korrekturmassnahmen](0660_Nichtkonformitaet_und_Korrekturmassnahmen.md)
+- [0750 - Anhang Prozesslandkarte](0750_Anhang_Prozesslandkarte.md)
+- [0760 - Anhang Formulare und Vorlagen](0760_Anhang_Formulare_und_Vorlagen.md)
+- [0770 - Anhang Begriffe und Abkuerzungen](0770_Anhang_Begriffe_und_Abkuerzungen.md)
+- [FRAM - WORK MAPPING](FRAMEWORK_MAPPING.md)
+- [READ - E](README.md)

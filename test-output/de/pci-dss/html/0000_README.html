@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0000 - PCI-DSS Compliance Handbuch-Templates (Deutsch)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0000</div>
+            <h1>PCI-DSS Compliance Handbuch-Templates (Deutsch)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0000_FRAMEWORK_MAPPING.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<span class="nav-next disabled">—</span>
+        </nav>
+        
+        <main>
+<h1 id="pci-dss-compliance-handbuch-templates-deutsch">PCI-DSS Compliance Handbuch-Templates (Deutsch)</h1>
+<h2 id="ubersicht">Übersicht</h2>
+<p>Diese Templates bilden die Grundlage für ein vollständiges PCI-DSS (Payment Card Industry Data Security Standard) Compliance-Handbuch nach <strong>PCI-DSS v4.0</strong>.</p>
+<p>Das PCI-DSS Handbuch der AdminSend GmbH umfasst strukturierte Dokumente, die alle 12 PCI-DSS-Anforderungen abdecken und die Sicherheit von Karteninhaberdaten gewährleisten.</p>
+<h2 id="template-struktur">Template-Struktur</h2>
+<h3 id="foundation-grundlagen-0010-0050">Foundation (Grundlagen, 0010-0050)</h3>
+<table>
+<thead>
+<tr>
+<th>Dokument-ID</th>
+<th>Titel</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PCI-0010</td>
+<td>Geltungsbereich und CDE-Definition</td>
+<td>Definition des Cardholder Data Environment (CDE) und Scope</td>
+</tr>
+<tr>
+<td>PCI-0020</td>
+<td>Netzwerksegmentierung</td>
+<td>Dokumentation der Netzwerksegmentierung und Isolation des CDE</td>
+</tr>
+<tr>
+<td>PCI-0030</td>
+<td>Rollen und Verantwortlichkeiten</td>
+<td>PCI-DSS-spezifische Rollen und RACI-Matrizen</td>
+</tr>
+<tr>
+<td>PCI-0040</td>
+<td>Datenfluss-Diagramme</td>
+<td>Visualisierung der Karteninhaberdaten-Flüsse</td>
+</tr>
+<tr>
+<td>PCI-0050</td>
+<td>Compliance-Programm</td>
+<td>PCI-DSS Compliance-Management und Governance</td>
+</tr>
+</tbody>
+</table>
+<h3 id="build-and-maintain-secure-network-anforderungen-1-2-0100-0150">Build and Maintain Secure Network (Anforderungen 1-2, 0100-0150)</h3>
+<table>
+<thead>
+<tr>
+<th>Dokument-ID</th>
+<th>Titel</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PCI-0100</td>
+<td>Firewall-Konfiguration</td>
+<td>Firewall- und Router-Konfigurationsstandards (Req 1)</td>
+</tr>
+<tr>
+<td>PCI-0110</td>
+<td>Netzwerk-Zugriffskontrolle</td>
+<td>Zugriffskontrolle auf Netzwerkebene</td>
+</tr>
+<tr>
+<td>PCI-0120</td>
+<td>Systemhärtung</td>
+<td>Sichere Konfiguration von Systemen (Req 2)</td>
+</tr>
+<tr>
+<td>PCI-0130</td>
+<td>Vendor Defaults</td>
+<td>Änderung von Herstellerstandards</td>
+</tr>
+<tr>
+<td>PCI-0140</td>
+<td>Wireless Security</td>
+<td>Sicherheit drahtloser Netzwerke</td>
+</tr>
+</tbody>
+</table>
+<h3 id="protect-cardholder-data-anforderungen-3-4-0200-0250">Protect Cardholder Data (Anforderungen 3-4, 0200-0250)</h3>
+<table>
+<thead>
+<tr>
+<th>Dokument-ID</th>
+<th>Titel</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PCI-0200</td>
+<td>Datenspeicherung</td>
+<td>Schutz gespeicherter Karteninhaberdaten (Req 3)</td>
+</tr>
+<tr>
+<td>PCI-0210</td>
+<td>Verschlüsselung</td>
+<td>Verschlüsselungsstandards und Key Management</td>
+</tr>
+<tr>
+<td>PCI-0220</td>
+<td>Datenübertragung</td>
+<td>Schutz bei Übertragung über öffentliche Netzwerke (Req 4)</td>
+</tr>
+<tr>
+<td>PCI-0230</td>
+<td>Datenaufbewahrung</td>
+<td>Aufbewahrungsfristen und sichere Löschung</td>
+</tr>
+<tr>
+<td>PCI-0240</td>
+<td>Maskierung und Tokenisierung</td>
+<td>PAN-Maskierung und Tokenisierungsverfahren</td>
+</tr>
+</tbody>
+</table>
+<h3 id="maintain-vulnerability-management-anforderungen-5-6-0300-0350">Maintain Vulnerability Management (Anforderungen 5-6, 0300-0350)</h3>
+<table>
+<thead>
+<tr>
+<th>Dokument-ID</th>
+<th>Titel</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PCI-0300</td>
+<td>Malware-Schutz</td>
+<td>Anti-Malware-Programme und -Prozesse (Req 5)</td>
+</tr>
+<tr>
+<td>PCI-0310</td>
+<td>Patch Management</td>
+<td>Sicherheitspatches und Updates (Req 6)</td>
+</tr>
+<tr>
+<td>PCI-0320</td>
+<td>Secure Development</td>
+<td>Sichere Softwareentwicklung</td>
+</tr>
+<tr>
+<td>PCI-0330</td>
+<td>Vulnerability Scanning</td>
+<td>Quartalsweise Schwachstellenscans</td>
+</tr>
+<tr>
+<td>PCI-0340</td>
+<td>Penetration Testing</td>
+<td>Jährliche Penetrationstests</td>
+</tr>
+</tbody>
+</table>
+<h3 id="implement-strong-access-control-anforderungen-7-9-0400-0450">Implement Strong Access Control (Anforderungen 7-9, 0400-0450)</h3>
+<table>
+<thead>
+<tr>
+<th>Dokument-ID</th>
+<th>Titel</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PCI-0400</td>
+<td>Zugriffskontrolle</td>
+<td>Need-to-know-Prinzip (Req 7)</td>
+</tr>
+<tr>
+<td>PCI-0410</td>
+<td>Authentifizierung</td>
+<td>Benutzeridentifikation und Authentifizierung (Req 8)</td>
+</tr>
+<tr>
+<td>PCI-0420</td>
+<td>Multi-Faktor-Authentifizierung</td>
+<td>MFA für CDE-Zugriff</td>
+</tr>
+<tr>
+<td>PCI-0430</td>
+<td>Physische Sicherheit</td>
+<td>Physischer Zugang zum CDE (Req 9)</td>
+</tr>
+<tr>
+<td>PCI-0440</td>
+<td>Medienhandhabung</td>
+<td>Sichere Handhabung physischer Medien</td>
+</tr>
+</tbody>
+</table>
+<h3 id="monitor-and-test-networks-anforderungen-10-11-0500-0550">Monitor and Test Networks (Anforderungen 10-11, 0500-0550)</h3>
+<table>
+<thead>
+<tr>
+<th>Dokument-ID</th>
+<th>Titel</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PCI-0500</td>
+<td>Logging und Monitoring</td>
+<td>Protokollierung aller Zugriffe (Req 10)</td>
+</tr>
+<tr>
+<td>PCI-0510</td>
+<td>Log-Überprüfung</td>
+<td>Tägliche Log-Überprüfung</td>
+</tr>
+<tr>
+<td>PCI-0520</td>
+<td>Sicherheitstests</td>
+<td>Regelmäßige Sicherheitstests (Req 11)</td>
+</tr>
+<tr>
+<td>PCI-0530</td>
+<td>Intrusion Detection</td>
+<td>IDS/IPS-Systeme</td>
+</tr>
+<tr>
+<td>PCI-0540</td>
+<td>File Integrity Monitoring</td>
+<td>Überwachung kritischer Dateien</td>
+</tr>
+</tbody>
+</table>
+<h3 id="maintain-information-security-policy-anforderung-12-0600-0650">Maintain Information Security Policy (Anforderung 12, 0600-0650)</h3>
+<table>
+<thead>
+<tr>
+<th>Dokument-ID</th>
+<th>Titel</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PCI-0600</td>
+<td>Sicherheitsrichtlinie</td>
+<td>Informationssicherheitsrichtlinie (Req 12)</td>
+</tr>
+<tr>
+<td>PCI-0610</td>
+<td>Risikobewertung</td>
+<td>Jährliche Risikobewertung</td>
+</tr>
+<tr>
+<td>PCI-0620</td>
+<td>Schulungsprogramm</td>
+<td>Security Awareness Training</td>
+</tr>
+<tr>
+<td>PCI-0630</td>
+<td>Incident Response</td>
+<td>Incident-Response-Plan</td>
+</tr>
+<tr>
+<td>PCI-0640</td>
+<td>Dienstleister-Management</td>
+<td>Management von Dienstleistern</td>
+</tr>
+</tbody>
+</table>
+<h3 id="appendices-anhange-0700-0750">Appendices (Anhänge, 0700-0750)</h3>
+<table>
+<thead>
+<tr>
+<th>Dokument-ID</th>
+<th>Titel</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PCI-0700</td>
+<td>Compliance-Nachweise</td>
+<td>Dokumentation für Audits</td>
+</tr>
+<tr>
+<td>PCI-0710</td>
+<td>Scan-Berichte</td>
+<td>Quartalsweise Vulnerability-Scan-Berichte</td>
+</tr>
+<tr>
+<td>PCI-0720</td>
+<td>Penetrationstest-Berichte</td>
+<td>Jährliche Penetrationstest-Dokumentation</td>
+</tr>
+<tr>
+<td>PCI-0730</td>
+<td>Checklisten</td>
+<td>PCI-DSS Self-Assessment Questionnaire (SAQ)</td>
+</tr>
+<tr>
+<td>PCI-0740</td>
+<td>Glossar</td>
+<td>PCI-DSS-spezifische Begriffe und Abkürzungen</td>
+</tr>
+</tbody>
+</table>
+<h2 id="platzhalter-verwendung">Platzhalter-Verwendung</h2>
+<h3 id="meta-platzhalter-organisationsdaten">Meta-Platzhalter (Organisationsdaten)</h3>
+<p>Die Templates verwenden Platzhalter aus der <code>metadata.yaml</code> Datei:</p>
+<div class="codehilite"><pre><span></span><code><span class="gs">**Organisation:**</span> AdminSend GmbH
+<span class="gs">**QSA:**</span> {{ meta.roles.qsa.name }} ({{ meta.roles.qsa.email }})
+<span class="gs">**CISO:**</span> {{ meta.roles.ciso.name }} ({{ meta.roles.ciso.email }})
+<span class="gs">**Merchant ID:**</span> {{ meta.pci.merchant_id }}
+<span class="gs">**Service Provider ID:**</span> {{ meta.pci.service_provider_id }}
+</code></pre></div>
+
+<h3 id="todo-markierungen">[TODO]-Markierungen</h3>
+<p>Alle Templates enthalten <code>[TODO]</code>-Markierungen für organisationsspezifische Anpassungen:</p>
+<div class="codehilite"><pre><span></span><code><span class="gs">**CDE-Systeme:**</span> [TODO: Liste der Systeme im CDE]
+<span class="gs">**Verschlüsselungsalgorithmus:**</span> [TODO: AES-256]
+<span class="gs">**Scan-Vendor:**</span> [TODO: Approved Scanning Vendor Name]
+</code></pre></div>
+
+<h2 id="pci-dss-v40-compliance-mapping">PCI-DSS v4.0 Compliance-Mapping</h2>
+<table>
+<thead>
+<tr>
+<th>PCI-DSS Anforderung</th>
+<th>PCI-Dokument</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Req 1: Firewall Configuration</td>
+<td>PCI-0100, PCI-0110</td>
+<td>Firewall- und Netzwerksicherheit</td>
+</tr>
+<tr>
+<td>Req 2: Secure Configuration</td>
+<td>PCI-0120, PCI-0130, PCI-0140</td>
+<td>Systemhärtung</td>
+</tr>
+<tr>
+<td>Req 3: Protect Stored Data</td>
+<td>PCI-0200, PCI-0210, PCI-0230</td>
+<td>Datenspeicherung</td>
+</tr>
+<tr>
+<td>Req 4: Encrypt Transmission</td>
+<td>PCI-0220</td>
+<td>Datenübertragung</td>
+</tr>
+<tr>
+<td>Req 5: Protect Against Malware</td>
+<td>PCI-0300</td>
+<td>Malware-Schutz</td>
+</tr>
+<tr>
+<td>Req 6: Secure Systems</td>
+<td>PCI-0310, PCI-0320</td>
+<td>Patch Management</td>
+</tr>
+<tr>
+<td>Req 7: Restrict Access</td>
+<td>PCI-0400</td>
+<td>Zugriffskontrolle</td>
+</tr>
+<tr>
+<td>Req 8: Identify Users</td>
+<td>PCI-0410, PCI-0420</td>
+<td>Authentifizierung</td>
+</tr>
+<tr>
+<td>Req 9: Physical Access</td>
+<td>PCI-0430, PCI-0440</td>
+<td>Physische Sicherheit</td>
+</tr>
+<tr>
+<td>Req 10: Log and Monitor</td>
+<td>PCI-0500, PCI-0510</td>
+<td>Logging</td>
+</tr>
+<tr>
+<td>Req 11: Test Security</td>
+<td>PCI-0520, PCI-0530, PCI-0540</td>
+<td>Sicherheitstests</td>
+</tr>
+<tr>
+<td>Req 12: Security Policy</td>
+<td>PCI-0600-PCI-0640</td>
+<td>Richtlinien</td>
+</tr>
+</tbody>
+</table>
+<h2 id="wichtige-pci-dss-konzepte">Wichtige PCI-DSS-Konzepte</h2>
+<h3 id="cardholder-data-environment-cde">Cardholder Data Environment (CDE)</h3>
+<p>Das CDE umfasst:
+- <strong>Systeme:</strong> Alle Systeme, die Karteninhaberdaten speichern, verarbeiten oder übertragen
+- <strong>Netzwerke:</strong> Netzwerksegmente, die mit CDE-Systemen verbunden sind
+- <strong>Personen:</strong> Mitarbeiter mit Zugriff auf Karteninhaberdaten</p>
+<h3 id="karteninhaberdaten-chd">Karteninhaberdaten (CHD)</h3>
+<ul>
+<li><strong>Primary Account Number (PAN):</strong> 13-19-stellige Kartennummer</li>
+<li><strong>Cardholder Name:</strong> Name des Karteninhabers</li>
+<li><strong>Service Code:</strong> 3-stelliger Code</li>
+<li><strong>Expiration Date:</strong> Ablaufdatum</li>
+</ul>
+<h3 id="sensitive-authentication-data-sad">Sensitive Authentication Data (SAD)</h3>
+<p><strong>Darf NICHT nach Autorisierung gespeichert werden:</strong>
+- <strong>Full Track Data:</strong> Magnetstreifendaten
+- <strong>CAV2/CVC2/CVV2/CID:</strong> Kartenprüfnummer
+- <strong>PIN/PIN Block:</strong> PIN-Daten</p>
+<h3 id="merchant-levels">Merchant Levels</h3>
+<ul>
+<li><strong>Level 1:</strong> &gt; 6 Millionen Transaktionen/Jahr</li>
+<li><strong>Level 2:</strong> 1-6 Millionen Transaktionen/Jahr</li>
+<li><strong>Level 3:</strong> 20.000-1 Million E-Commerce-Transaktionen/Jahr</li>
+<li><strong>Level 4:</strong> &lt; 20.000 E-Commerce-Transaktionen/Jahr oder &lt; 1 Million Transaktionen/Jahr</li>
+</ul>
+<h2 id="best-practices-fur-pci-dss-compliance">Best Practices für PCI-DSS-Compliance</h2>
+<h3 id="1-scope-reduction">1. Scope Reduction</h3>
+<ul>
+<li><strong>Netzwerksegmentierung:</strong> CDE vom restlichen Netzwerk isolieren</li>
+<li><strong>Tokenisierung:</strong> PAN durch Token ersetzen</li>
+<li><strong>Point-to-Point-Verschlüsselung (P2PE):</strong> Verschlüsselung am Point of Sale</li>
+<li><strong>Outsourcing:</strong> Nutzung PCI-DSS-zertifizierter Service Provider</li>
+</ul>
+<h3 id="2-quartalsweise-aktivitaten">2. Quartalsweise Aktivitäten</h3>
+<ul>
+<li><strong>Vulnerability Scans:</strong> Durch Approved Scanning Vendor (ASV)</li>
+<li><strong>Log-Überprüfung:</strong> Tägliche Überprüfung kritischer Logs</li>
+<li><strong>Firewall-Regelüberprüfung:</strong> Quartalsweise Review</li>
+</ul>
+<h3 id="3-jahrliche-aktivitaten">3. Jährliche Aktivitäten</h3>
+<ul>
+<li><strong>Penetrationstests:</strong> Durch qualifizierte Tester</li>
+<li><strong>Risikobewertung:</strong> Formale Risikobewertung</li>
+<li><strong>Security Awareness Training:</strong> Für alle Mitarbeiter</li>
+<li><strong>Richtlinienüberprüfung:</strong> Review aller Sicherheitsrichtlinien</li>
+</ul>
+<h3 id="4-dokumentation">4. Dokumentation</h3>
+<ul>
+<li><strong>Netzwerkdiagramme:</strong> Aktuell halten</li>
+<li><strong>Datenflussdiagramme:</strong> Alle CHD-Flüsse dokumentieren</li>
+<li><strong>System-Inventar:</strong> Alle CDE-Systeme erfassen</li>
+<li><strong>Änderungsprotokolle:</strong> Alle Änderungen dokumentieren</li>
+</ul>
+<h2 id="generierung-des-handbuchs">Generierung des Handbuchs</h2>
+<h3 id="cli-verwendung">CLI-Verwendung</h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Deutsches PCI-DSS-Handbuch generieren</span>
+python<span class="w"> </span>-m<span class="w"> </span>src.cli<span class="w"> </span>--language<span class="w"> </span>de<span class="w"> </span>--template<span class="w"> </span>pci-dss<span class="w"> </span>--test
+
+<span class="c1"># Englisches PCI-DSS-Handbuch generieren</span>
+python<span class="w"> </span>-m<span class="w"> </span>src.cli<span class="w"> </span>--language<span class="w"> </span>en<span class="w"> </span>--template<span class="w"> </span>pci-dss<span class="w"> </span>--test
+
+<span class="c1"># PDF mit Inhaltsverzeichnis generieren</span>
+python<span class="w"> </span>-m<span class="w"> </span>src.cli<span class="w"> </span>--language<span class="w"> </span>de<span class="w"> </span>--template<span class="w"> </span>pci-dss<span class="w"> </span>--output<span class="w"> </span>pdf<span class="w"> </span>--test<span class="w"> </span>--pdf-toc
+
+<span class="c1"># Alle Formate generieren</span>
+python<span class="w"> </span>-m<span class="w"> </span>src.cli<span class="w"> </span>--language<span class="w"> </span>de<span class="w"> </span>--template<span class="w"> </span>pci-dss<span class="w"> </span>--output<span class="w"> </span>all<span class="w"> </span>--test<span class="w"> </span>--separate-files<span class="w"> </span>--pdf-toc
+</code></pre></div>
+
+<h2 id="wartung-und-aktualisierung">Wartung und Aktualisierung</h2>
+<h3 id="aktualisierungsintervalle">Aktualisierungsintervalle</h3>
+<ul>
+<li><strong>Jährlich:</strong> Vollständige Überprüfung vor Re-Assessment</li>
+<li><strong>Quartalsweise:</strong> Scan-Berichte und Log-Reviews</li>
+<li><strong>Ad-hoc:</strong> Bei Änderungen am CDE oder nach Incidents</li>
+</ul>
+<h3 id="versionierung">Versionierung</h3>
+<ul>
+<li><strong>MAJOR:</strong> Neue PCI-DSS-Version (z.B. v4.0 → v5.0)</li>
+<li><strong>MINOR:</strong> Ergänzungen und Aktualisierungen</li>
+<li><strong>PATCH:</strong> Korrekturen und redaktionelle Änderungen</li>
+</ul>
+<h2 id="support-und-feedback">Support und Feedback</h2>
+<p>Bei Fragen oder Problemen:</p>
+<ul>
+<li><strong>Dokumentation:</strong> Siehe Haupt-README.md</li>
+<li><strong>PCI SSC:</strong> https://www.pcisecuritystandards.org/</li>
+<li><strong>Issues:</strong> GitHub Issues für Fehlerberichte</li>
+</ul>
+<hr />
+<p><strong>Version:</strong> 1.0.0<br />
+<strong>Letzte Aktualisierung:</strong> 2026-02-06<br />
+<strong>Maintainer:</strong> PCI-DSS-Template-Team</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0000_FRAMEWORK_MAPPING.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<span class="nav-next disabled">—</span>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+# Access Control Policy
+
+**Document-ID:** NIST-0100  
+**Control Family:** Access Control (AC)  
+**Control:** AC-1  
+**Organization:** {{ meta.organization.name }}  
+**Owner:** {{ meta.document.owner }}  
+**Version:** {{ meta.document.version }}  
+**Status:** Draft / In Review / Approved  
+**Last Updated:** {{ meta.document.last_updated }}  
+
+---
+
+## 1. Control Description
+
+**AC-1 Policy and Procedures**
+
+The organization develops, documents, and disseminates access control policy and procedures.
+
+## 2. Control Implementation
+
+### 2.1 Access Control Policy
+
+**Policy Statement:**
+[TODO: Describe organization's access control policy]
+
+**Scope:** [TODO: Scope]  
+**Roles and Responsibilities:** [TODO: Roles]  
+**Compliance:** [TODO: Compliance requirements]  
+
+### 2.2 Access Control Procedures
+
+**Procedures:**
+- [TODO: Procedure 1]
+- [TODO: Procedure 2]
+- [TODO: Procedure 3]
+
+## 3. Control Enhancements
+
+[TODO: List applicable control enhancements]
+
+## 4. Implementation Status
+
+**Status:** [TODO: Implemented / Partially Implemented / Planned / Not Applicable]  
+**Implementation Date:** [TODO: Date]  
+**Responsible:** [TODO: Name/Role]  
+
+## 5. Assessment
+
+**Assessment Method:** [TODO: Examine / Interview / Test]  
+**Assessment Status:** [TODO: Satisfied / Other than Satisfied / Not Applicable]  
+**Findings:** [TODO: Description]  
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
+
+<!-- End of template -->

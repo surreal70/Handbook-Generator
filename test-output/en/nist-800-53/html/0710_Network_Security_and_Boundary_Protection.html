@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0710 - Network Security and Boundary Protection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0710</div>
+            <h1>Network Security and Boundary Protection</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0700_System_and_Communications_Protection.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0720_Cryptographic_Protection.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="network-security-and-boundary-protection">Network Security and Boundary Protection</h1>
+<p><strong>Document ID:</strong> NIST-0710<br />
+<strong>Control Family:</strong> System and Communications Protection (SC)<br />
+<strong>Controls:</strong> SC-5, SC-7, SC-20, SC-21, SC-22<br />
+<strong>Organization:</strong> AdminSend GmbH<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Draft / In Review / Approved<br />
+<strong>Last Updated:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-control-description">1. Control Description</h2>
+<p>This document covers network security and boundary protection controls:
+- <strong>SC-5:</strong> Denial-of-Service Protection
+- <strong>SC-7:</strong> Boundary Protection
+- <strong>SC-20:</strong> Secure Name/Address Resolution Service (Authoritative Source)
+- <strong>SC-21:</strong> Secure Name/Address Resolution Service (Recursive or Caching Resolver)
+- <strong>SC-22:</strong> Architecture and Provisioning for Name/Address Resolution Service</p>
+<h2 id="2-control-implementation">2. Control Implementation</h2>
+<h3 id="21-denial-of-service-protection-sc-5">2.1 Denial-of-Service Protection (SC-5)</h3>
+<p><strong>Protection Mechanisms:</strong>
+- Rate limiting
+- Traffic filtering
+- Load balancing
+- DDoS mitigation services
+- Redundant systems</p>
+<p>[TODO: Define DoS protection mechanisms]</p>
+<p><strong>Detection and Response:</strong>
+- Traffic monitoring
+- Anomaly detection
+- Automated response
+- Incident escalation</p>
+<p>[TODO: Define detection and response procedures]</p>
+<p><strong>Capacity Planning:</strong>
+- Bandwidth capacity
+- Processing capacity
+- Storage capacity
+- Redundancy</p>
+<p>[TODO: Define capacity requirements]</p>
+<h3 id="22-boundary-protection-sc-7">2.2 Boundary Protection (SC-7)</h3>
+<p><strong>Network Boundaries:</strong>
+| Boundary | Protection Mechanism | Monitoring |
+|----------|---------------------|------------|
+| Internet perimeter | Firewall, IPS | 24/7 |
+| DMZ | Firewall, WAF | 24/7 |
+| Internal segments | Firewall, VLAN | 24/7 |
+| Wireless | NAC, 802.1X | 24/7 |
+| [TODO] | [TODO] | [TODO] |</p>
+<p><strong>Managed Interfaces:</strong>
+- External connections documented
+- Connection security requirements
+- Traffic flow restrictions
+- Monitoring requirements</p>
+<p>[TODO: Document managed interfaces]</p>
+<p><strong>Network Segmentation:</strong>
+- Production network
+- Development network
+- Management network
+- Guest network</p>
+<p>[TODO: Define network segments]</p>
+<p><strong>Access Control:</strong>
+- Inbound traffic rules
+- Outbound traffic rules
+- Default deny policy
+- Exception management</p>
+<p>[TODO: Define access control rules]</p>
+<h3 id="23-dns-security-sc-20-sc-21-sc-22">2.3 DNS Security (SC-20, SC-21, SC-22)</h3>
+<p><strong>Authoritative DNS (SC-20):</strong>
+- DNSSEC implementation
+- Zone signing
+- Key management
+- Validation</p>
+<p>[TODO: Define authoritative DNS security]</p>
+<p><strong>Recursive DNS (SC-21):</strong>
+- DNSSEC validation
+- Response filtering
+- Cache poisoning protection
+- Query logging</p>
+<p>[TODO: Define recursive DNS security]</p>
+<p><strong>DNS Architecture (SC-22):</strong>
+- Redundant DNS servers
+- Geographic distribution
+- Fault tolerance
+- Performance optimization</p>
+<p>[TODO: Define DNS architecture]</p>
+<p><strong>DNS Security Measures:</strong>
+- Access controls
+- Rate limiting
+- Monitoring and logging
+- Incident response</p>
+<p>[TODO: Define DNS security measures]</p>
+<h2 id="3-control-enhancements">3. Control Enhancements</h2>
+<ul>
+<li><strong>SC-5(1):</strong> Restrict Ability to Attack Other Systems</li>
+<li><strong>SC-5(2):</strong> Capacity, Bandwidth, and Redundancy</li>
+<li><strong>SC-5(3):</strong> Detection and Monitoring</li>
+<li><strong>SC-7(3):</strong> Access Points</li>
+<li><strong>SC-7(4):</strong> External Telecommunications Services</li>
+<li><strong>SC-7(5):</strong> Deny by Default - Allow by Exception</li>
+<li><strong>SC-7(7):</strong> Split Tunneling for Remote Devices</li>
+<li><strong>SC-7(8):</strong> Route Traffic to Authenticated Proxy Servers</li>
+<li><strong>SC-7(10):</strong> Prevent Exfiltration</li>
+<li><strong>SC-7(11):</strong> Restrict Incoming Communications Traffic</li>
+<li><strong>SC-7(12):</strong> Host-Based Protection</li>
+<li><strong>SC-7(13):</strong> Isolation of Security Tools, Mechanisms, and Support Components</li>
+<li><strong>SC-7(18):</strong> Fail Secure</li>
+<li><strong>SC-7(20):</strong> Dynamic Isolation and Segregation</li>
+<li><strong>SC-7(21):</strong> Isolation of System Components</li>
+<li><strong>SC-20(1):</strong> Child Subspaces</li>
+<li><strong>SC-20(2):</strong> Data Origin and Integrity</li>
+<li><strong>SC-21(1):</strong> Data Origin and Integrity</li>
+</ul>
+<p>[TODO: Mark applicable enhancements]</p>
+<h2 id="4-implementation-status">4. Implementation Status</h2>
+<p><strong>Status:</strong> [TODO: Implemented / Partially Implemented / Planned / Not Applicable]<br />
+<strong>Implementation Date:</strong> [TODO: Date]<br />
+<strong>Responsible:</strong> [TODO: Name/Role]  </p>
+<h2 id="5-assessment">5. Assessment</h2>
+<p><strong>Assessment Method:</strong> Examine, Interview, Test<br />
+<strong>Assessment Status:</strong> [TODO: Satisfied / Other than Satisfied / Not Applicable]<br />
+<strong>Findings:</strong> [TODO: Description]  </p>
+<hr />
+<p><strong>Document History:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Initial creation</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0700_System_and_Communications_Protection.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0720_Cryptographic_Protection.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

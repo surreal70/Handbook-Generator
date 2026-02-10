@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0000 - HIPAA Compliance Handbook Templates</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0000</div>
+            <h1>HIPAA Compliance Handbook Templates</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0000_FRAMEWORK_MAPPING.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<span class="nav-next disabled">—</span>
+        </nav>
+        
+        <main>
+<h1 id="hipaa-compliance-handbook-templates">HIPAA Compliance Handbook Templates</h1>
+<h2 id="overview">Overview</h2>
+<p>This directory contains comprehensive templates for creating a HIPAA (Health Insurance Portability and Accountability Act) compliance handbook. The templates cover the HIPAA Security Rule, Privacy Rule, and Breach Notification requirements.</p>
+<h2 id="template-structure">Template Structure</h2>
+<p>The templates are organized using a numeric prefix system (0010, 0020, 0030, etc.) that determines the rendering order in the generated handbook. This numbering scheme uses increments of 10 to allow for future insertions.</p>
+<h3 id="template-organization">Template Organization</h3>
+<ul>
+<li><strong>0010-0050</strong>: Foundation (Scope, Covered Entities, Business Associates, Roles)</li>
+<li><strong>0100-0200</strong>: Administrative Safeguards</li>
+<li><strong>0300-0350</strong>: Physical Safeguards</li>
+<li><strong>0400-0450</strong>: Technical Safeguards</li>
+<li><strong>0500-0550</strong>: Privacy Rule</li>
+<li><strong>0600-0650</strong>: Breach Notification and Incident Response</li>
+<li><strong>0700-0750</strong>: Appendices (Risk Analysis, BAA Templates, Evidence)</li>
+</ul>
+<h2 id="hipaa-framework-coverage">HIPAA Framework Coverage</h2>
+<p>These templates address:</p>
+<h3 id="security-rule-45-cfr-164302-164318">Security Rule (45 CFR §§ 164.302-164.318)</h3>
+<ul>
+<li><strong>Administrative Safeguards</strong> (§164.308): Security management, workforce security, information access management, security awareness and training, security incident procedures, contingency planning, evaluation, business associate contracts</li>
+<li><strong>Physical Safeguards</strong> (§164.310): Facility access controls, workstation use and security, device and media controls</li>
+<li><strong>Technical Safeguards</strong> (§164.312): Access control, audit controls, integrity, person or entity authentication, transmission security</li>
+</ul>
+<h3 id="privacy-rule-45-cfr-164500-164534">Privacy Rule (45 CFR §§ 164.500-164.534)</h3>
+<ul>
+<li>Individual rights (access, amendment, accounting of disclosures)</li>
+<li>Notice of privacy practices</li>
+<li>Minimum necessary standard</li>
+<li>Uses and disclosures of PHI</li>
+</ul>
+<h3 id="breach-notification-rule-45-cfr-164400-164414">Breach Notification Rule (45 CFR §§ 164.400-164.414)</h3>
+<ul>
+<li>Breach discovery and assessment</li>
+<li>Notification to individuals, HHS, and media</li>
+<li>Business associate breach notification obligations</li>
+</ul>
+<h2 id="customization-guide">Customization Guide</h2>
+<h3 id="required-customizations">Required Customizations</h3>
+<p>Each template contains <code>[TODO]</code> markers and placeholder syntax <code>{{ source.field }}</code> that must be customized:</p>
+<ol>
+<li><strong>Organization Information</strong>: Replace with your covered entity or business associate details</li>
+<li><strong>Roles and Responsibilities</strong>: Assign specific individuals to HIPAA roles</li>
+<li><strong>Technical Controls</strong>: Document your specific security implementations</li>
+<li><strong>Policies and Procedures</strong>: Adapt to your organization's workflows</li>
+<li><strong>Risk Analysis Results</strong>: Include your organization's risk assessment findings</li>
+</ol>
+<h3 id="placeholder-syntax">Placeholder Syntax</h3>
+<p>Templates use the following placeholder formats:
+- <code>AdminSend GmbH</code>: Organization name from metadata
+- <code>{{ meta.roles.privacy_officer.name }}</code>: Role assignments
+- <code>[TODO: Description]</code>: Manual customization required</p>
+<h2 id="usage">Usage</h2>
+<ol>
+<li><strong>Review Requirements</strong>: Understand HIPAA requirements applicable to your organization</li>
+<li><strong>Customize Templates</strong>: Replace all <code>[TODO]</code> markers and placeholders</li>
+<li><strong>Add Evidence</strong>: Document your security controls and procedures</li>
+<li><strong>Generate Handbook</strong>: Use the handbook generator to create HTML, PDF, or Markdown output</li>
+<li><strong>Review and Approve</strong>: Have your Privacy Officer and Security Officer review</li>
+<li><strong>Maintain</strong>: Update regularly as your environment changes</li>
+</ol>
+<h2 id="compliance-notes">Compliance Notes</h2>
+<ul>
+<li><strong>Covered Entities</strong>: Healthcare providers, health plans, healthcare clearinghouses</li>
+<li><strong>Business Associates</strong>: Service providers that handle PHI on behalf of covered entities</li>
+<li><strong>Hybrid Entities</strong>: Organizations with both covered and non-covered functions must clearly designate healthcare components</li>
+<li><strong>Small Health Plans</strong>: May have extended compliance deadlines for certain requirements</li>
+</ul>
+<h2 id="references">References</h2>
+<ul>
+<li><strong>HIPAA Security Rule</strong>: 45 CFR Part 164, Subpart C</li>
+<li><strong>HIPAA Privacy Rule</strong>: 45 CFR Part 164, Subpart E</li>
+<li><strong>Breach Notification Rule</strong>: 45 CFR Part 164, Subpart D</li>
+<li><strong>HHS Guidance</strong>: https://www.hhs.gov/hipaa/</li>
+<li><strong>OCR Audit Protocol</strong>: https://www.hhs.gov/hipaa/for-professionals/compliance-enforcement/audit/protocol/index.html</li>
+</ul>
+<h2 id="framework-mapping">Framework Mapping</h2>
+<p>See <code>FRAMEWORK_MAPPING.md</code> for detailed mapping between templates and specific HIPAA requirements.</p>
+<h2 id="support">Support</h2>
+<p>For questions about these templates or HIPAA compliance:
+- Consult with your Privacy Officer and Security Officer
+- Review HHS Office for Civil Rights (OCR) guidance
+- Consider engaging a HIPAA compliance consultant
+- Refer to the FRAMEWORK_MAPPING.md for requirement traceability</p>
+<hr />
+<p><strong>Version</strong>: 1.0<br />
+<strong>Last Updated</strong>: 2026-02-07<br />
+<strong>Maintained by</strong>: Handbook Generator Project</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0000_FRAMEWORK_MAPPING.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<span class="nav-next disabled">—</span>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

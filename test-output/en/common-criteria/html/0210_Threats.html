@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0210 - Threats</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0210</div>
+            <h1>Threats</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0200_Security_Problem_Definition.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0220_Organizational_Security_Policies.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="threats">Threats</h1>
+<p><strong>Document-ID:</strong> 0210<br />
+<strong>Owner:</strong> {{ meta.owner }}<br />
+<strong>Version:</strong> {{ meta.version }}<br />
+<strong>Status:</strong> Draft<br />
+<strong>Classification:</strong> Confidential<br />
+<strong>Last Update:</strong> {{ meta.date }}  </p>
+<hr />
+<h2 id="1-threat-overview">1. Threat Overview</h2>
+<h3 id="11-threat-identification-methodology">1.1 Threat Identification Methodology</h3>
+<p><strong>Threat Identification Methodology:</strong>
+[TODO: Describe the methodology used, e.g., STRIDE, PASTA, Attack Trees]</p>
+<p><strong>Frameworks Used:</strong>
+- [TODO: e.g., MITRE ATT&amp;CK]
+- [TODO: e.g., OWASP Top 10]
+- [TODO: e.g., CWE Top 25]</p>
+<h3 id="12-threat-categories">1.2 Threat Categories</h3>
+<p><strong>Threat Categories:</strong>
+- <strong>Confidentiality Threats</strong>: Threats to confidentiality
+- <strong>Integrity Threats</strong>: Threats to integrity
+- <strong>Availability Threats</strong>: Threats to availability
+- <strong>Authentication Threats</strong>: Threats to authentication
+- <strong>Authorization Threats</strong>: Threats to authorization
+- <strong>Non-Repudiation Threats</strong>: Threats to non-repudiation</p>
+<h3 id="13-threat-scope">1.3 Threat Scope</h3>
+<p><strong>In Scope:</strong>
+[TODO: Which threats are considered?]</p>
+<p><strong>Out of Scope:</strong>
+[TODO: Which threats are not considered and why?]</p>
+<h2 id="2-confidentiality-threats">2. Confidentiality Threats</h2>
+<h3 id="tunauthorized_access">T.UNAUTHORIZED_ACCESS</h3>
+<p><strong>Threat ID:</strong> T.UNAUTHORIZED_ACCESS<br />
+<strong>Category:</strong> Confidentiality<br />
+<strong>Priority:</strong> [TODO: High/Medium/Low]</p>
+<p><strong>Description:</strong>
+[TODO: An attacker could gain unauthorized access to confidential data]</p>
+<p><strong>Affected Assets:</strong>
+- [TODO: A.001 - User Data]
+- [TODO: A.002 - Configuration Data]</p>
+<p><strong>Threat Agent:</strong>
+- [TODO: TA.001 - External Attacker]
+- [TODO: TA.002 - Malicious Insider]</p>
+<p><strong>Attack Scenario:</strong>
+1. [TODO: Attacker identifies vulnerability in access control]
+2. [TODO: Attacker bypasses authentication]
+3. [TODO: Attacker accesses confidential data]
+4. [TODO: Attacker exfiltrates data]</p>
+<p><strong>Prerequisites:</strong>
+- [TODO: Network access to TOE]
+- [TODO: Knowledge of system architecture]</p>
+<p><strong>Impact:</strong>
+- <strong>Confidentiality:</strong> High - Complete loss of data control
+- <strong>Integrity:</strong> None
+- <strong>Availability:</strong> None</p>
+<p><strong>Likelihood:</strong> [TODO: High/Medium/Low]<br />
+<strong>Risk Assessment:</strong> [TODO: High/Medium/Low]</p>
+<p><strong>MITRE ATT&amp;CK Mapping:</strong>
+- [TODO: T1078 - Valid Accounts]
+- [TODO: T1552 - Unsecured Credentials]</p>
+<hr />
+<h3 id="teavesdropping">T.EAVESDROPPING</h3>
+<p><strong>Threat ID:</strong> T.EAVESDROPPING<br />
+<strong>Category:</strong> Confidentiality<br />
+<strong>Priority:</strong> [TODO: High/Medium/Low]</p>
+<p><strong>Description:</strong>
+[TODO: An attacker could eavesdrop on communication and obtain confidential information]</p>
+<p><strong>Affected Assets:</strong>
+- [TODO: A.003 - Communication Data]</p>
+<p><strong>Threat Agent:</strong>
+- [TODO: TA.003 - Network Attacker]</p>
+<p><strong>Attack Scenario:</strong>
+1. [TODO: Attacker positions themselves in network path]
+2. [TODO: Attacker intercepts unencrypted communication]
+3. [TODO: Attacker analyzes intercepted data]</p>
+<p><strong>Prerequisites:</strong>
+- [TODO: Access to network infrastructure]
+- [TODO: Unencrypted communication]</p>
+<p><strong>Impact:</strong>
+- <strong>Confidentiality:</strong> High
+- <strong>Integrity:</strong> None
+- <strong>Availability:</strong> None</p>
+<p><strong>Likelihood:</strong> [TODO: High/Medium/Low]<br />
+<strong>Risk Assessment:</strong> [TODO: High/Medium/Low]</p>
+<hr />
+<h3 id="tdata_leakage">T.DATA_LEAKAGE</h3>
+<p><strong>Threat ID:</strong> T.DATA_LEAKAGE<br />
+<strong>Category:</strong> Confidentiality<br />
+<strong>Priority:</strong> [TODO: High/Medium/Low]</p>
+<p><strong>Description:</strong>
+[TODO: Confidential data could be unintentionally disclosed through errors or vulnerabilities]</p>
+<p>[TODO: Add more Confidentiality Threats]</p>
+<h2 id="3-integrity-threats">3. Integrity Threats</h2>
+<h3 id="tdata_manipulation">T.DATA_MANIPULATION</h3>
+<p><strong>Threat ID:</strong> T.DATA_MANIPULATION<br />
+<strong>Category:</strong> Integrity<br />
+<strong>Priority:</strong> [TODO: High/Medium/Low]</p>
+<p><strong>Description:</strong>
+[TODO: An attacker could unauthorized modify or manipulate data]</p>
+<p><strong>Affected Assets:</strong>
+- [TODO: A.004 - Transaction Data]
+- [TODO: A.005 - Configuration Data]</p>
+<p><strong>Threat Agent:</strong>
+- [TODO: TA.001 - External Attacker]
+- [TODO: TA.002 - Malicious Insider]</p>
+<p><strong>Attack Scenario:</strong>
+1. [TODO: Attacker gains write access]
+2. [TODO: Attacker modifies critical data]
+3. [TODO: Modification remains undetected]
+4. [TODO: System processes manipulated data]</p>
+<p><strong>Prerequisites:</strong>
+- [TODO: Write access to data]
+- [TODO: Missing integrity checks]</p>
+<p><strong>Impact:</strong>
+- <strong>Confidentiality:</strong> None
+- <strong>Integrity:</strong> High - Data integrity compromised
+- <strong>Availability:</strong> None</p>
+<p><strong>Likelihood:</strong> [TODO: High/Medium/Low]<br />
+<strong>Risk Assessment:</strong> [TODO: High/Medium/Low]</p>
+<hr />
+<h3 id="tcode_injection">T.CODE_INJECTION</h3>
+<p><strong>Threat ID:</strong> T.CODE_INJECTION<br />
+<strong>Category:</strong> Integrity<br />
+<strong>Priority:</strong> [TODO: High/Medium/Low]</p>
+<p><strong>Description:</strong>
+[TODO: An attacker could inject malicious code into the system]</p>
+<p>[TODO: Add more Integrity Threats]</p>
+<h2 id="4-availability-threats">4. Availability Threats</h2>
+<h3 id="tdenial_of_service">T.DENIAL_OF_SERVICE</h3>
+<p><strong>Threat ID:</strong> T.DENIAL_OF_SERVICE<br />
+<strong>Category:</strong> Availability<br />
+<strong>Priority:</strong> [TODO: High/Medium/Low]</p>
+<p><strong>Description:</strong>
+[TODO: An attacker could impair TOE availability through overload]</p>
+<p><strong>Affected Assets:</strong>
+- [TODO: A.006 - Service Availability]</p>
+<p><strong>Threat Agent:</strong>
+- [TODO: TA.003 - Network Attacker]</p>
+<p><strong>Attack Scenario:</strong>
+1. [TODO: Attacker sends large number of requests]
+2. [TODO: System resources are exhausted]
+3. [TODO: Legitimate requests can no longer be processed]</p>
+<p><strong>Prerequisites:</strong>
+- [TODO: Network access]
+- [TODO: Missing rate limiting]</p>
+<p><strong>Impact:</strong>
+- <strong>Confidentiality:</strong> None
+- <strong>Integrity:</strong> None
+- <strong>Availability:</strong> High - Service unavailable</p>
+<p><strong>Likelihood:</strong> [TODO: High/Medium/Low]<br />
+<strong>Risk Assessment:</strong> [TODO: High/Medium/Low]</p>
+<hr />
+<h3 id="tresource_exhaustion">T.RESOURCE_EXHAUSTION</h3>
+<p><strong>Threat ID:</strong> T.RESOURCE_EXHAUSTION<br />
+<strong>Category:</strong> Availability<br />
+<strong>Priority:</strong> [TODO: High/Medium/Low]</p>
+<p><strong>Description:</strong>
+[TODO: An attacker could exhaust system resources]</p>
+<p>[TODO: Add more Availability Threats]</p>
+<h2 id="5-authentication-threats">5. Authentication Threats</h2>
+<h3 id="tauthentication_bypass">T.AUTHENTICATION_BYPASS</h3>
+<p><strong>Threat ID:</strong> T.AUTHENTICATION_BYPASS<br />
+<strong>Category:</strong> Authentication<br />
+<strong>Priority:</strong> [TODO: High/Medium/Low]</p>
+<p><strong>Description:</strong>
+[TODO: An attacker could bypass authentication mechanisms]</p>
+<p><strong>Affected Assets:</strong>
+- [TODO: A.007 - Authentication System]</p>
+<p><strong>Threat Agent:</strong>
+- [TODO: TA.001 - External Attacker]</p>
+<p><strong>Attack Scenario:</strong>
+1. [TODO: Attacker identifies vulnerability in authentication]
+2. [TODO: Attacker bypasses authentication check]
+3. [TODO: Attacker gains unauthorized access]</p>
+<p><strong>Prerequisites:</strong>
+- [TODO: Access to authentication interface]
+- [TODO: Vulnerability in authentication logic]</p>
+<p><strong>Impact:</strong>
+- <strong>Confidentiality:</strong> High
+- <strong>Integrity:</strong> High
+- <strong>Availability:</strong> Medium</p>
+<p><strong>Likelihood:</strong> [TODO: High/Medium/Low]<br />
+<strong>Risk Assessment:</strong> [TODO: High/Medium/Low]</p>
+<hr />
+<h3 id="tcredential_theft">T.CREDENTIAL_THEFT</h3>
+<p><strong>Threat ID:</strong> T.CREDENTIAL_THEFT<br />
+<strong>Category:</strong> Authentication<br />
+<strong>Priority:</strong> [TODO: High/Medium/Low]</p>
+<p><strong>Description:</strong>
+[TODO: An attacker could steal authentication credentials]</p>
+<p>[TODO: Add more Authentication Threats]</p>
+<h2 id="6-authorization-threats">6. Authorization Threats</h2>
+<h3 id="tprivilege_escalation">T.PRIVILEGE_ESCALATION</h3>
+<p><strong>Threat ID:</strong> T.PRIVILEGE_ESCALATION<br />
+<strong>Category:</strong> Authorization<br />
+<strong>Priority:</strong> [TODO: High/Medium/Low]</p>
+<p><strong>Description:</strong>
+[TODO: An attacker could unauthorized escalate their privileges]</p>
+<p><strong>Affected Assets:</strong>
+- [TODO: A.008 - Authorization System]</p>
+<p><strong>Threat Agent:</strong>
+- [TODO: TA.002 - Malicious Insider]</p>
+<p><strong>Attack Scenario:</strong>
+1. [TODO: Attacker with low privileges identifies vulnerability]
+2. [TODO: Attacker exploits vulnerability for privilege escalation]
+3. [TODO: Attacker gains administrative rights]</p>
+<p><strong>Prerequisites:</strong>
+- [TODO: Valid user account]
+- [TODO: Vulnerability in authorization check]</p>
+<p><strong>Impact:</strong>
+- <strong>Confidentiality:</strong> High
+- <strong>Integrity:</strong> High
+- <strong>Availability:</strong> High</p>
+<p><strong>Likelihood:</strong> [TODO: High/Medium/Low]<br />
+<strong>Risk Assessment:</strong> [TODO: High/Medium/Low]</p>
+<hr />
+<h3 id="tunauthorized_function_access">T.UNAUTHORIZED_FUNCTION_ACCESS</h3>
+<p><strong>Threat ID:</strong> T.UNAUTHORIZED_FUNCTION_ACCESS<br />
+<strong>Category:</strong> Authorization<br />
+<strong>Priority:</strong> [TODO: High/Medium/Low]</p>
+<p><strong>Description:</strong>
+[TODO: An attacker could access functions they are not authorized for]</p>
+<p>[TODO: Add more Authorization Threats]</p>
+<h2 id="7-non-repudiation-threats">7. Non-Repudiation Threats</h2>
+<h3 id="trepudiation">T.REPUDIATION</h3>
+<p><strong>Threat ID:</strong> T.REPUDIATION<br />
+<strong>Category:</strong> Non-Repudiation<br />
+<strong>Priority:</strong> [TODO: High/Medium/Low]</p>
+<p><strong>Description:</strong>
+[TODO: A user could deny performed actions]</p>
+<p><strong>Affected Assets:</strong>
+- [TODO: A.009 - Audit Logs]</p>
+<p><strong>Threat Agent:</strong>
+- [TODO: TA.002 - Malicious Insider]</p>
+<p><strong>Attack Scenario:</strong>
+1. [TODO: User performs critical action]
+2. [TODO: User manipulates or deletes audit logs]
+3. [TODO: User denies action]</p>
+<p><strong>Prerequisites:</strong>
+- [TODO: Access to audit system]
+- [TODO: Missing log integrity]</p>
+<p><strong>Impact:</strong>
+- <strong>Confidentiality:</strong> None
+- <strong>Integrity:</strong> High
+- <strong>Availability:</strong> None</p>
+<p><strong>Likelihood:</strong> [TODO: High/Medium/Low]<br />
+<strong>Risk Assessment:</strong> [TODO: High/Medium/Low]</p>
+<hr />
+<h3 id="tlog_tampering">T.LOG_TAMPERING</h3>
+<p><strong>Threat ID:</strong> T.LOG_TAMPERING<br />
+<strong>Category:</strong> Non-Repudiation<br />
+<strong>Priority:</strong> [TODO: High/Medium/Low]</p>
+<p><strong>Description:</strong>
+[TODO: An attacker could manipulate or delete audit logs]</p>
+<p>[TODO: Add more Non-Repudiation Threats]</p>
+<h2 id="8-threat-summary">8. Threat Summary</h2>
+<h3 id="81-threat-statistics">8.1 Threat Statistics</h3>
+<p><strong>Threat Statistics:</strong>
+- Total number of threats: [TODO: Number]
+- Confidentiality Threats: [TODO: Number]
+- Integrity Threats: [TODO: Number]
+- Availability Threats: [TODO: Number]
+- Authentication Threats: [TODO: Number]
+- Authorization Threats: [TODO: Number]
+- Non-Repudiation Threats: [TODO: Number]</p>
+<h3 id="82-risk-distribution">8.2 Risk Distribution</h3>
+<p><strong>Risk Distribution:</strong>
+- High Risk: [TODO: Number] ([TODO: %])
+- Medium Risk: [TODO: Number] ([TODO: %])
+- Low Risk: [TODO: Number] ([TODO: %])</p>
+<h3 id="83-threat-priority-matrix">8.3 Threat Priority Matrix</h3>
+<p><strong>Priority Matrix:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Priority</th>
+<th>Likelihood High</th>
+<th>Likelihood Medium</th>
+<th>Likelihood Low</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Impact High</strong></td>
+<td>[TODO: Threat IDs]</td>
+<td>[TODO: Threat IDs]</td>
+<td>[TODO: Threat IDs]</td>
+</tr>
+<tr>
+<td><strong>Impact Medium</strong></td>
+<td>[TODO: Threat IDs]</td>
+<td>[TODO: Threat IDs]</td>
+<td>[TODO: Threat IDs]</td>
+</tr>
+<tr>
+<td><strong>Impact Low</strong></td>
+<td>[TODO: Threat IDs]</td>
+<td>[TODO: Threat IDs]</td>
+<td>[TODO: Threat IDs]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="9-threat-model">9. Threat Model</h2>
+<h3 id="91-attack-trees">9.1 Attack Trees</h3>
+<p><strong>Attack Trees for Critical Threats:</strong></p>
+<p>[TODO: Create attack trees for the most important threats]</p>
+<div class="codehilite"><pre><span></span><code>[TODO: Insert attack tree diagram]
+</code></pre></div>
+
+<h3 id="92-threat-relationships">9.2 Threat Relationships</h3>
+<p><strong>Relationships Between Threats:</strong></p>
+<p>[TODO: Describe how threats relate or enable each other]</p>
+<div class="codehilite"><pre><span></span><code>[TODO: Insert threat relationship diagram]
+</code></pre></div>
+
+<h3 id="93-attack-chains">9.3 Attack Chains</h3>
+<p><strong>Attack Chains:</strong></p>
+<p><strong>Chain 1: [TODO: Name]</strong>
+1. [TODO: T.001] → [TODO: T.003] → [TODO: T.005]
+2. [TODO: Description of attack chain]</p>
+<p><strong>Chain 2: [TODO: Name]</strong>
+1. [TODO: T.002] → [TODO: T.004]
+2. [TODO: Description of attack chain]</p>
+<h2 id="10-traceability">10. Traceability</h2>
+<h3 id="101-threat-to-asset-mapping">10.1 Threat-to-Asset Mapping</h3>
+<p><strong>Mapping Threats to Assets:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Threat ID</th>
+<th>Affected Assets</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: T.001]</td>
+<td>[TODO: A.001, A.002]</td>
+<td>[TODO: High]</td>
+</tr>
+<tr>
+<td>[TODO: T.002]</td>
+<td>[TODO: A.003]</td>
+<td>[TODO: Medium]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="102-threat-to-agent-mapping">10.2 Threat-to-Agent Mapping</h3>
+<p><strong>Mapping Threats to Agents:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Threat ID</th>
+<th>Threat Agents</th>
+<th>Capability Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: T.001]</td>
+<td>[TODO: TA.001, TA.002]</td>
+<td>[TODO: High]</td>
+</tr>
+<tr>
+<td>[TODO: T.002]</td>
+<td>[TODO: TA.003]</td>
+<td>[TODO: Medium]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Next Steps:</strong>
+1. Complete all [TODO] placeholders with TOE-specific threats
+2. Conduct complete threat analysis
+3. Create attack trees for critical threats
+4. Assess risks for all threats
+5. Document attack chains
+6. Verify consistency with Assets (Template 0200) and Security Objectives (Template 0300)</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0200_Security_Problem_Definition.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0220_Organizational_Security_Policies.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

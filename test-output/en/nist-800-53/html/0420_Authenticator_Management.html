@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0420 - Authenticator Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0420</div>
+            <h1>Authenticator Management</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0410_User_and_Device_Authentication.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0430_Incident_Response_Policy.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="authenticator-management">Authenticator Management</h1>
+<p><strong>Document ID:</strong> NIST-0420<br />
+<strong>Control Family:</strong> Identification and Authentication (IA)<br />
+<strong>Controls:</strong> IA-5, IA-7<br />
+<strong>Organization:</strong> AdminSend GmbH<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Draft / In Review / Approved<br />
+<strong>Last Updated:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-control-description">1. Control Description</h2>
+<p>This document covers authenticator management controls:
+- <strong>IA-5:</strong> Authenticator Management
+- <strong>IA-7:</strong> Cryptographic Module Authentication</p>
+<h2 id="2-control-implementation">2. Control Implementation</h2>
+<h3 id="21-authenticator-management-ia-5">2.1 Authenticator Management (IA-5)</h3>
+<p><strong>Password Requirements:</strong>
+- Minimum length: [TODO: e.g., 12 characters]
+- Complexity: [TODO: e.g., Upper, lower, number, special character]
+- Maximum age: [TODO: e.g., 90 days]
+- Password history: [TODO: e.g., Last 12 passwords]
+- Account lockout: [TODO: e.g., 5 failed attempts]</p>
+<p><strong>Initial Authenticator Distribution:</strong>
+- Secure delivery method
+- Temporary password requirements
+- Forced change on first use
+- Verification of recipient identity</p>
+<p>[TODO: Define distribution procedures]</p>
+<p><strong>Authenticator Types:</strong>
+| Type | Use Case | Strength | Lifecycle |
+|------|----------|----------|-----------|
+| Password | Standard access | Medium | [TODO] |
+| MFA token | Privileged access | High | [TODO] |
+| Certificate | System-to-system | High | [TODO] |
+| Biometric | Physical access | High | N/A |</p>
+<p><strong>Authenticator Protection:</strong>
+- Encrypted storage
+- Secure transmission
+- Protection against replay attacks
+- Secure backup and recovery</p>
+<p>[TODO: Define protection measures]</p>
+<p><strong>Authenticator Lifecycle:</strong>
+1. Generation/issuance
+2. Distribution
+3. Activation
+4. Renewal
+5. Revocation
+6. Destruction</p>
+<p>[TODO: Detail lifecycle procedures]</p>
+<p><strong>Compromised Authenticators:</strong>
+- Reporting procedures
+- Immediate revocation
+- Investigation
+- Reissuance
+- Documentation</p>
+<p>[TODO: Define procedures]</p>
+<h3 id="22-cryptographic-module-authentication-ia-7">2.2 Cryptographic Module Authentication (IA-7)</h3>
+<p><strong>Cryptographic Modules:</strong>
+- Hardware security modules (HSMs)
+- Trusted platform modules (TPMs)
+- Smart cards
+- USB tokens</p>
+<p>[TODO: List cryptographic modules in use]</p>
+<p><strong>Authentication Requirements:</strong>
+- FIPS 140-2/140-3 validated modules
+- Certificate-based authentication
+- Strong cryptographic algorithms
+- Key management procedures</p>
+<p>[TODO: Define requirements]</p>
+<p><strong>Module Management:</strong>
+- Procurement standards
+- Configuration requirements
+- Monitoring and logging
+- Decommissioning procedures</p>
+<p>[TODO: Define management procedures]</p>
+<h2 id="3-control-enhancements">3. Control Enhancements</h2>
+<ul>
+<li><strong>IA-5(1):</strong> Password-Based Authentication</li>
+<li><strong>IA-5(2):</strong> Public Key-Based Authentication</li>
+<li><strong>IA-5(3):</strong> In-Person or Trusted External Party Registration</li>
+<li><strong>IA-5(4):</strong> Automated Support for Password Strength Determination</li>
+<li><strong>IA-5(6):</strong> Protection of Authenticators</li>
+<li><strong>IA-5(7):</strong> No Embedded Unencrypted Static Authenticators</li>
+<li><strong>IA-5(8):</strong> Multiple System Accounts</li>
+<li><strong>IA-5(9):</strong> Federated Credential Management</li>
+<li><strong>IA-5(10):</strong> Dynamic Credential Binding</li>
+<li><strong>IA-5(13):</strong> Expiration of Cached Authenticators</li>
+<li><strong>IA-5(15):</strong> GSA-Approved Products and Services</li>
+<li><strong>IA-5(18):</strong> Password Managers</li>
+</ul>
+<p>[TODO: Mark applicable enhancements]</p>
+<h2 id="4-implementation-status">4. Implementation Status</h2>
+<p><strong>Status:</strong> [TODO: Implemented / Partially Implemented / Planned / Not Applicable]<br />
+<strong>Implementation Date:</strong> [TODO: Date]<br />
+<strong>Responsible:</strong> [TODO: Name/Role]  </p>
+<h2 id="5-assessment">5. Assessment</h2>
+<p><strong>Assessment Method:</strong> Examine, Interview, Test<br />
+<strong>Assessment Status:</strong> [TODO: Satisfied / Other than Satisfied / Not Applicable]<br />
+<strong>Findings:</strong> [TODO: Description]  </p>
+<hr />
+<p><strong>Document History:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Initial creation</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0410_User_and_Device_Authentication.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0430_Incident_Response_Policy.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

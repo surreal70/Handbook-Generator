@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0210 - Threats (Bedrohungen)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0210</div>
+            <h1>Threats (Bedrohungen)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0200_Security_Problem_Definition.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0220_Organizational_Security_Policies.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="threats-bedrohungen">Threats (Bedrohungen)</h1>
+<p><strong>Dokument-ID:</strong> 0210<br />
+<strong>Owner:</strong> {{ meta.owner }}<br />
+<strong>Version:</strong> {{ meta.version }}<br />
+<strong>Status:</strong> Entwurf<br />
+<strong>Klassifizierung:</strong> Vertraulich<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.date }}  </p>
+<hr />
+<h2 id="1-threat-overview">1. Threat Overview</h2>
+<h3 id="11-threat-identification-methodology">1.1 Threat Identification Methodology</h3>
+<p><strong>Methodik zur Bedrohungsidentifikation:</strong>
+[TODO: Beschreibe die verwendete Methodik, z.B. STRIDE, PASTA, Attack Trees]</p>
+<p><strong>Verwendete Frameworks:</strong>
+- [TODO: z.B. MITRE ATT&amp;CK]
+- [TODO: z.B. OWASP Top 10]
+- [TODO: z.B. CWE Top 25]</p>
+<h3 id="12-threat-categories">1.2 Threat Categories</h3>
+<p><strong>Bedrohungskategorien:</strong>
+- <strong>Confidentiality Threats</strong>: Bedrohungen der Vertraulichkeit
+- <strong>Integrity Threats</strong>: Bedrohungen der Integrität
+- <strong>Availability Threats</strong>: Bedrohungen der Verfügbarkeit
+- <strong>Authentication Threats</strong>: Bedrohungen der Authentifizierung
+- <strong>Authorization Threats</strong>: Bedrohungen der Autorisierung
+- <strong>Non-Repudiation Threats</strong>: Bedrohungen der Nicht-Abstreitbarkeit</p>
+<h3 id="13-threat-scope">1.3 Threat Scope</h3>
+<p><strong>Im Scope:</strong>
+[TODO: Welche Bedrohungen werden betrachtet?]</p>
+<p><strong>Außerhalb des Scope:</strong>
+[TODO: Welche Bedrohungen werden nicht betrachtet und warum?]</p>
+<h2 id="2-confidentiality-threats">2. Confidentiality Threats</h2>
+<h3 id="tunauthorized_access">T.UNAUTHORIZED_ACCESS</h3>
+<p><strong>Bedrohungs-ID:</strong> T.UNAUTHORIZED_ACCESS<br />
+<strong>Kategorie:</strong> Confidentiality<br />
+<strong>Priorität:</strong> [TODO: High/Medium/Low]</p>
+<p><strong>Beschreibung:</strong>
+[TODO: Ein Angreifer könnte unbefugten Zugriff auf vertrauliche Daten erlangen]</p>
+<p><strong>Betroffene Assets:</strong>
+- [TODO: A.001 - Benutzerdaten]
+- [TODO: A.002 - Konfigurationsdaten]</p>
+<p><strong>Bedrohungsagent:</strong>
+- [TODO: TA.001 - Externer Angreifer]
+- [TODO: TA.002 - Böswilliger Insider]</p>
+<p><strong>Angriffsszenario:</strong>
+1. [TODO: Angreifer identifiziert Schwachstelle in Zugriffskontrolle]
+2. [TODO: Angreifer umgeht Authentifizierung]
+3. [TODO: Angreifer greift auf vertrauliche Daten zu]
+4. [TODO: Angreifer exfiltriert Daten]</p>
+<p><strong>Voraussetzungen:</strong>
+- [TODO: Netzwerkzugriff auf TOE]
+- [TODO: Kenntnis der Systemarchitektur]</p>
+<p><strong>Auswirkungen:</strong>
+- <strong>Vertraulichkeit:</strong> High - Vollständiger Verlust der Datenkontrolle
+- <strong>Integrität:</strong> None
+- <strong>Verfügbarkeit:</strong> None</p>
+<p><strong>Wahrscheinlichkeit:</strong> [TODO: High/Medium/Low]<br />
+<strong>Risikobewertung:</strong> [TODO: High/Medium/Low]</p>
+<p><strong>MITRE ATT&amp;CK Mapping:</strong>
+- [TODO: T1078 - Valid Accounts]
+- [TODO: T1552 - Unsecured Credentials]</p>
+<hr />
+<h3 id="teavesdropping">T.EAVESDROPPING</h3>
+<p><strong>Bedrohungs-ID:</strong> T.EAVESDROPPING<br />
+<strong>Kategorie:</strong> Confidentiality<br />
+<strong>Priorität:</strong> [TODO: High/Medium/Low]</p>
+<p><strong>Beschreibung:</strong>
+[TODO: Ein Angreifer könnte Kommunikation abhören und vertrauliche Informationen erlangen]</p>
+<p><strong>Betroffene Assets:</strong>
+- [TODO: A.003 - Kommunikationsdaten]</p>
+<p><strong>Bedrohungsagent:</strong>
+- [TODO: TA.003 - Network Attacker]</p>
+<p><strong>Angriffsszenario:</strong>
+1. [TODO: Angreifer positioniert sich im Netzwerkpfad]
+2. [TODO: Angreifer fängt unverschlüsselte Kommunikation ab]
+3. [TODO: Angreifer analysiert abgefangene Daten]</p>
+<p><strong>Voraussetzungen:</strong>
+- [TODO: Zugriff auf Netzwerkinfrastruktur]
+- [TODO: Unverschlüsselte Kommunikation]</p>
+<p><strong>Auswirkungen:</strong>
+- <strong>Vertraulichkeit:</strong> High
+- <strong>Integrität:</strong> None
+- <strong>Verfügbarkeit:</strong> None</p>
+<p><strong>Wahrscheinlichkeit:</strong> [TODO: High/Medium/Low]<br />
+<strong>Risikobewertung:</strong> [TODO: High/Medium/Low]</p>
+<hr />
+<h3 id="tdata_leakage">T.DATA_LEAKAGE</h3>
+<p><strong>Bedrohungs-ID:</strong> T.DATA_LEAKAGE<br />
+<strong>Kategorie:</strong> Confidentiality<br />
+<strong>Priorität:</strong> [TODO: High/Medium/Low]</p>
+<p><strong>Beschreibung:</strong>
+[TODO: Vertrauliche Daten könnten durch Fehler oder Schwachstellen unbeabsichtigt offengelegt werden]</p>
+<p>[TODO: Füge weitere Confidentiality Threats hinzu]</p>
+<h2 id="3-integrity-threats">3. Integrity Threats</h2>
+<h3 id="tdata_manipulation">T.DATA_MANIPULATION</h3>
+<p><strong>Bedrohungs-ID:</strong> T.DATA_MANIPULATION<br />
+<strong>Kategorie:</strong> Integrity<br />
+<strong>Priorität:</strong> [TODO: High/Medium/Low]</p>
+<p><strong>Beschreibung:</strong>
+[TODO: Ein Angreifer könnte Daten unbefugt ändern oder manipulieren]</p>
+<p><strong>Betroffene Assets:</strong>
+- [TODO: A.004 - Transaktionsdaten]
+- [TODO: A.005 - Konfigurationsdaten]</p>
+<p><strong>Bedrohungsagent:</strong>
+- [TODO: TA.001 - Externer Angreifer]
+- [TODO: TA.002 - Böswilliger Insider]</p>
+<p><strong>Angriffsszenario:</strong>
+1. [TODO: Angreifer erlangt Schreibzugriff]
+2. [TODO: Angreifer modifiziert kritische Daten]
+3. [TODO: Modifikation bleibt unentdeckt]
+4. [TODO: System verarbeitet manipulierte Daten]</p>
+<p><strong>Voraussetzungen:</strong>
+- [TODO: Schreibzugriff auf Daten]
+- [TODO: Fehlende Integritätsprüfungen]</p>
+<p><strong>Auswirkungen:</strong>
+- <strong>Vertraulichkeit:</strong> None
+- <strong>Integrität:</strong> High - Datenintegrität kompromittiert
+- <strong>Verfügbarkeit:</strong> None</p>
+<p><strong>Wahrscheinlichkeit:</strong> [TODO: High/Medium/Low]<br />
+<strong>Risikobewertung:</strong> [TODO: High/Medium/Low]</p>
+<hr />
+<h3 id="tcode_injection">T.CODE_INJECTION</h3>
+<p><strong>Bedrohungs-ID:</strong> T.CODE_INJECTION<br />
+<strong>Kategorie:</strong> Integrity<br />
+<strong>Priorität:</strong> [TODO: High/Medium/Low]</p>
+<p><strong>Beschreibung:</strong>
+[TODO: Ein Angreifer könnte schädlichen Code in das System einschleusen]</p>
+<p>[TODO: Füge weitere Integrity Threats hinzu]</p>
+<h2 id="4-availability-threats">4. Availability Threats</h2>
+<h3 id="tdenial_of_service">T.DENIAL_OF_SERVICE</h3>
+<p><strong>Bedrohungs-ID:</strong> T.DENIAL_OF_SERVICE<br />
+<strong>Kategorie:</strong> Availability<br />
+<strong>Priorität:</strong> [TODO: High/Medium/Low]</p>
+<p><strong>Beschreibung:</strong>
+[TODO: Ein Angreifer könnte die Verfügbarkeit des TOE durch Überlastung beeinträchtigen]</p>
+<p><strong>Betroffene Assets:</strong>
+- [TODO: A.006 - Service-Verfügbarkeit]</p>
+<p><strong>Bedrohungsagent:</strong>
+- [TODO: TA.003 - Network Attacker]</p>
+<p><strong>Angriffsszenario:</strong>
+1. [TODO: Angreifer sendet große Anzahl von Anfragen]
+2. [TODO: System-Ressourcen werden erschöpft]
+3. [TODO: Legitime Anfragen können nicht mehr verarbeitet werden]</p>
+<p><strong>Voraussetzungen:</strong>
+- [TODO: Netzwerkzugriff]
+- [TODO: Fehlende Rate-Limiting]</p>
+<p><strong>Auswirkungen:</strong>
+- <strong>Vertraulichkeit:</strong> None
+- <strong>Integrität:</strong> None
+- <strong>Verfügbarkeit:</strong> High - Service nicht verfügbar</p>
+<p><strong>Wahrscheinlichkeit:</strong> [TODO: High/Medium/Low]<br />
+<strong>Risikobewertung:</strong> [TODO: High/Medium/Low]</p>
+<hr />
+<h3 id="tresource_exhaustion">T.RESOURCE_EXHAUSTION</h3>
+<p><strong>Bedrohungs-ID:</strong> T.RESOURCE_EXHAUSTION<br />
+<strong>Kategorie:</strong> Availability<br />
+<strong>Priorität:</strong> [TODO: High/Medium/Low]</p>
+<p><strong>Beschreibung:</strong>
+[TODO: Ein Angreifer könnte System-Ressourcen erschöpfen]</p>
+<p>[TODO: Füge weitere Availability Threats hinzu]</p>
+<h2 id="5-authentication-threats">5. Authentication Threats</h2>
+<h3 id="tauthentication_bypass">T.AUTHENTICATION_BYPASS</h3>
+<p><strong>Bedrohungs-ID:</strong> T.AUTHENTICATION_BYPASS<br />
+<strong>Kategorie:</strong> Authentication<br />
+<strong>Priorität:</strong> [TODO: High/Medium/Low]</p>
+<p><strong>Beschreibung:</strong>
+[TODO: Ein Angreifer könnte Authentifizierungsmechanismen umgehen]</p>
+<p><strong>Betroffene Assets:</strong>
+- [TODO: A.007 - Authentifizierungssystem]</p>
+<p><strong>Bedrohungsagent:</strong>
+- [TODO: TA.001 - Externer Angreifer]</p>
+<p><strong>Angriffsszenario:</strong>
+1. [TODO: Angreifer identifiziert Schwachstelle in Authentifizierung]
+2. [TODO: Angreifer umgeht Authentifizierungsprüfung]
+3. [TODO: Angreifer erlangt unbefugten Zugriff]</p>
+<p><strong>Voraussetzungen:</strong>
+- [TODO: Zugriff auf Authentifizierungsschnittstelle]
+- [TODO: Schwachstelle in Authentifizierungslogik]</p>
+<p><strong>Auswirkungen:</strong>
+- <strong>Vertraulichkeit:</strong> High
+- <strong>Integrität:</strong> High
+- <strong>Verfügbarkeit:</strong> Medium</p>
+<p><strong>Wahrscheinlichkeit:</strong> [TODO: High/Medium/Low]<br />
+<strong>Risikobewertung:</strong> [TODO: High/Medium/Low]</p>
+<hr />
+<h3 id="tcredential_theft">T.CREDENTIAL_THEFT</h3>
+<p><strong>Bedrohungs-ID:</strong> T.CREDENTIAL_THEFT<br />
+<strong>Kategorie:</strong> Authentication<br />
+<strong>Priorität:</strong> [TODO: High/Medium/Low]</p>
+<p><strong>Beschreibung:</strong>
+[TODO: Ein Angreifer könnte Authentifizierungsdaten stehlen]</p>
+<p>[TODO: Füge weitere Authentication Threats hinzu]</p>
+<h2 id="6-authorization-threats">6. Authorization Threats</h2>
+<h3 id="tprivilege_escalation">T.PRIVILEGE_ESCALATION</h3>
+<p><strong>Bedrohungs-ID:</strong> T.PRIVILEGE_ESCALATION<br />
+<strong>Kategorie:</strong> Authorization<br />
+<strong>Priorität:</strong> [TODO: High/Medium/Low]</p>
+<p><strong>Beschreibung:</strong>
+[TODO: Ein Angreifer könnte seine Berechtigungen unbefugt erweitern]</p>
+<p><strong>Betroffene Assets:</strong>
+- [TODO: A.008 - Autorisierungssystem]</p>
+<p><strong>Bedrohungsagent:</strong>
+- [TODO: TA.002 - Böswilliger Insider]</p>
+<p><strong>Angriffsszenario:</strong>
+1. [TODO: Angreifer mit niedrigen Rechten identifiziert Schwachstelle]
+2. [TODO: Angreifer nutzt Schwachstelle zur Rechteausweitung]
+3. [TODO: Angreifer erlangt administrative Rechte]</p>
+<p><strong>Voraussetzungen:</strong>
+- [TODO: Gültiges Benutzerkonto]
+- [TODO: Schwachstelle in Autorisierungsprüfung]</p>
+<p><strong>Auswirkungen:</strong>
+- <strong>Vertraulichkeit:</strong> High
+- <strong>Integrität:</strong> High
+- <strong>Verfügbarkeit:</strong> High</p>
+<p><strong>Wahrscheinlichkeit:</strong> [TODO: High/Medium/Low]<br />
+<strong>Risikobewertung:</strong> [TODO: High/Medium/Low]</p>
+<hr />
+<h3 id="tunauthorized_function_access">T.UNAUTHORIZED_FUNCTION_ACCESS</h3>
+<p><strong>Bedrohungs-ID:</strong> T.UNAUTHORIZED_FUNCTION_ACCESS<br />
+<strong>Kategorie:</strong> Authorization<br />
+<strong>Priorität:</strong> [TODO: High/Medium/Low]</p>
+<p><strong>Beschreibung:</strong>
+[TODO: Ein Angreifer könnte auf Funktionen zugreifen, für die er nicht autorisiert ist]</p>
+<p>[TODO: Füge weitere Authorization Threats hinzu]</p>
+<h2 id="7-non-repudiation-threats">7. Non-Repudiation Threats</h2>
+<h3 id="trepudiation">T.REPUDIATION</h3>
+<p><strong>Bedrohungs-ID:</strong> T.REPUDIATION<br />
+<strong>Kategorie:</strong> Non-Repudiation<br />
+<strong>Priorität:</strong> [TODO: High/Medium/Low]</p>
+<p><strong>Beschreibung:</strong>
+[TODO: Ein Benutzer könnte durchgeführte Aktionen abstreiten]</p>
+<p><strong>Betroffene Assets:</strong>
+- [TODO: A.009 - Audit-Logs]</p>
+<p><strong>Bedrohungsagent:</strong>
+- [TODO: TA.002 - Böswilliger Insider]</p>
+<p><strong>Angriffsszenario:</strong>
+1. [TODO: Benutzer führt kritische Aktion durch]
+2. [TODO: Benutzer manipuliert oder löscht Audit-Logs]
+3. [TODO: Benutzer streitet Aktion ab]</p>
+<p><strong>Voraussetzungen:</strong>
+- [TODO: Zugriff auf Audit-System]
+- [TODO: Fehlende Log-Integrität]</p>
+<p><strong>Auswirkungen:</strong>
+- <strong>Vertraulichkeit:</strong> None
+- <strong>Integrität:</strong> High
+- <strong>Verfügbarkeit:</strong> None</p>
+<p><strong>Wahrscheinlichkeit:</strong> [TODO: High/Medium/Low]<br />
+<strong>Risikobewertung:</strong> [TODO: High/Medium/Low]</p>
+<hr />
+<h3 id="tlog_tampering">T.LOG_TAMPERING</h3>
+<p><strong>Bedrohungs-ID:</strong> T.LOG_TAMPERING<br />
+<strong>Kategorie:</strong> Non-Repudiation<br />
+<strong>Priorität:</strong> [TODO: High/Medium/Low]</p>
+<p><strong>Beschreibung:</strong>
+[TODO: Ein Angreifer könnte Audit-Logs manipulieren oder löschen]</p>
+<p>[TODO: Füge weitere Non-Repudiation Threats hinzu]</p>
+<h2 id="8-threat-summary">8. Threat Summary</h2>
+<h3 id="81-threat-statistics">8.1 Threat Statistics</h3>
+<p><strong>Bedrohungsstatistik:</strong>
+- Gesamtanzahl Bedrohungen: [TODO: Anzahl]
+- Confidentiality Threats: [TODO: Anzahl]
+- Integrity Threats: [TODO: Anzahl]
+- Availability Threats: [TODO: Anzahl]
+- Authentication Threats: [TODO: Anzahl]
+- Authorization Threats: [TODO: Anzahl]
+- Non-Repudiation Threats: [TODO: Anzahl]</p>
+<h3 id="82-risk-distribution">8.2 Risk Distribution</h3>
+<p><strong>Risikoverteilung:</strong>
+- High Risk: [TODO: Anzahl] ([TODO: %])
+- Medium Risk: [TODO: Anzahl] ([TODO: %])
+- Low Risk: [TODO: Anzahl] ([TODO: %])</p>
+<h3 id="83-threat-priority-matrix">8.3 Threat Priority Matrix</h3>
+<p><strong>Priorisierungsmatrix:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Priority</th>
+<th>Likelihood High</th>
+<th>Likelihood Medium</th>
+<th>Likelihood Low</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Impact High</strong></td>
+<td>[TODO: Threat IDs]</td>
+<td>[TODO: Threat IDs]</td>
+<td>[TODO: Threat IDs]</td>
+</tr>
+<tr>
+<td><strong>Impact Medium</strong></td>
+<td>[TODO: Threat IDs]</td>
+<td>[TODO: Threat IDs]</td>
+<td>[TODO: Threat IDs]</td>
+</tr>
+<tr>
+<td><strong>Impact Low</strong></td>
+<td>[TODO: Threat IDs]</td>
+<td>[TODO: Threat IDs]</td>
+<td>[TODO: Threat IDs]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="9-threat-model">9. Threat Model</h2>
+<h3 id="91-attack-trees">9.1 Attack Trees</h3>
+<p><strong>Attack Tree für kritische Bedrohungen:</strong></p>
+<p>[TODO: Erstelle Attack Trees für die wichtigsten Bedrohungen]</p>
+<div class="codehilite"><pre><span></span><code>[TODO: Attack Tree Diagramm einfügen]
+</code></pre></div>
+
+<h3 id="92-threat-relationships">9.2 Threat Relationships</h3>
+<p><strong>Beziehungen zwischen Bedrohungen:</strong></p>
+<p>[TODO: Beschreibe, wie Bedrohungen zusammenhängen oder sich gegenseitig ermöglichen]</p>
+<div class="codehilite"><pre><span></span><code>[TODO: Bedrohungsbeziehungsdiagramm einfügen]
+</code></pre></div>
+
+<h3 id="93-attack-chains">9.3 Attack Chains</h3>
+<p><strong>Angriffsketten:</strong></p>
+<p><strong>Chain 1: [TODO: Name]</strong>
+1. [TODO: T.001] → [TODO: T.003] → [TODO: T.005]
+2. [TODO: Beschreibung der Angriffskette]</p>
+<p><strong>Chain 2: [TODO: Name]</strong>
+1. [TODO: T.002] → [TODO: T.004]
+2. [TODO: Beschreibung der Angriffskette]</p>
+<h2 id="10-traceability">10. Traceability</h2>
+<h3 id="101-threat-to-asset-mapping">10.1 Threat-to-Asset Mapping</h3>
+<p><strong>Zuordnung Bedrohungen zu Assets:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Threat ID</th>
+<th>Affected Assets</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: T.001]</td>
+<td>[TODO: A.001, A.002]</td>
+<td>[TODO: High]</td>
+</tr>
+<tr>
+<td>[TODO: T.002]</td>
+<td>[TODO: A.003]</td>
+<td>[TODO: Medium]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="102-threat-to-agent-mapping">10.2 Threat-to-Agent Mapping</h3>
+<p><strong>Zuordnung Bedrohungen zu Agenten:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Threat ID</th>
+<th>Threat Agents</th>
+<th>Capability Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: T.001]</td>
+<td>[TODO: TA.001, TA.002]</td>
+<td>[TODO: High]</td>
+</tr>
+<tr>
+<td>[TODO: T.002]</td>
+<td>[TODO: TA.003]</td>
+<td>[TODO: Medium]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Nächste Schritte:</strong>
+1. Vervollständige alle [TODO]-Platzhalter mit TOE-spezifischen Bedrohungen
+2. Führe vollständige Bedrohungsanalyse durch
+3. Erstelle Attack Trees für kritische Bedrohungen
+4. Bewerte Risiken für alle Bedrohungen
+5. Dokumentiere Angriffsketten
+6. Überprüfe Konsistenz mit Assets (Template 0200) und Security Objectives (Template 0300)</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0200_Security_Problem_Definition.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0220_Organizational_Security_Policies.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

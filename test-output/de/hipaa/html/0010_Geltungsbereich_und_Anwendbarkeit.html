@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0010 - Geltungsbereich und Anwendbarkeit</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0010</div>
+            <h1>Geltungsbereich und Anwendbarkeit</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0000_metadata_de_hipaa.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0020_Covered_Entities_und_Healthcare_Komponenten.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="geltungsbereich-und-anwendbarkeit">Geltungsbereich und Anwendbarkeit</h1>
+<p><strong>Dokument-ID:</strong> HIPAA-0010<br />
+<strong>Organisation:</strong> AdminSend GmbH<br />
+<strong>Verantwortlich:</strong> IT Operations Manager<br />
+<strong>Genehmigt durch:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Entwurf / In Prüfung / Genehmigt<br />
+<strong>Klassifizierung:</strong> internal<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-zweck">1. Zweck</h2>
+<p>Dieses Dokument definiert den Geltungsbereich der HIPAA-Compliance für AdminSend GmbH und legt die Anwendbarkeit der Anforderungen der HIPAA Security Rule, Privacy Rule und Breach Notification Rule fest.</p>
+<h3 id="11-zielsetzungen">1.1 Zielsetzungen</h3>
+<ul>
+<li><strong>Geltungsbereichsdefinition:</strong> Klare Identifizierung HIPAA-regulierter Aktivitäten und Systeme</li>
+<li><strong>Compliance-Rahmen:</strong> Grundlage für das HIPAA-Compliance-Programm schaffen</li>
+<li><strong>Rollenklärung:</strong> Rolle der Organisation als Covered Entity oder Business Associate definieren</li>
+<li><strong>PHI-Identifizierung:</strong> Alle geschützten Gesundheitsinformationen im Geltungsbereich dokumentieren</li>
+</ul>
+<h3 id="12-referenzen">1.2 Referenzen</h3>
+<ul>
+<li><strong>HIPAA Security Rule</strong>: 45 CFR §§ 164.302-164.318</li>
+<li><strong>HIPAA Privacy Rule</strong>: 45 CFR §§ 164.500-164.534</li>
+<li><strong>Breach Notification Rule</strong>: 45 CFR §§ 164.400-164.414</li>
+<li><strong>HITECH Act</strong>: Health Information Technology for Economic and Clinical Health Act</li>
+<li><strong>Omnibus Rule</strong>: Abschließende Änderungen zu HIPAA (2013)</li>
+</ul>
+<h2 id="2-organisationsinformationen">2. Organisationsinformationen</h2>
+<h3 id="21-organisationsdetails">2.1 Organisationsdetails</h3>
+<p><strong>Organisationsname:</strong> AdminSend GmbH<br />
+<strong>Adresse:</strong> Musterstraße 123, 80331 München<br />
+<strong>Bundesstaat:</strong> {{ meta.organization.state }}<br />
+<strong>Land:</strong> Deutschland<br />
+<strong>Website:</strong> https://www.adminsend.de<br />
+<strong>Steuer-ID (EIN):</strong> {{ meta.organization.tax_id }}  </p>
+<h3 id="22-organisationstyp">2.2 Organisationstyp</h3>
+<p><strong>Primäre Klassifizierung:</strong> [TODO: Eine auswählen]
+- [ ] Covered Entity - Healthcare Provider (Gesundheitsdienstleister)
+- [ ] Covered Entity - Health Plan (Krankenversicherung)
+- [ ] Covered Entity - Healthcare Clearinghouse (Abrechnungsstelle)
+- [ ] Business Associate (Geschäftspartner)
+- [ ] Hybrid Entity (sowohl abgedeckte als auch nicht abgedeckte Funktionen)</p>
+<p><strong>Falls Healthcare Provider:</strong>
+- <strong>Provider-Typ:</strong> [TODO: Krankenhaus, Klinik, Arztpraxis, etc.]
+- <strong>NPI (National Provider Identifier):</strong> [TODO: 10-stellige NPI]
+- <strong>Fachgebiete:</strong> [TODO: Medizinische Fachgebiete auflisten]
+- <strong>Elektronische Transaktionen:</strong> [TODO: Ja/Nein - Übertragen Sie Gesundheitsinformationen elektronisch?]</p>
+<p><strong>Falls Health Plan:</strong>
+- <strong>Plan-Typ:</strong> [TODO: Gruppenkrankenversicherung, Krankenversicherer, HMO, Medicare, Medicaid, etc.]
+- <strong>Anzahl der Teilnehmer:</strong> [TODO: Anzahl]
+- <strong>Small Health Plan:</strong> [TODO: Ja/Nein - Weniger als 50 Teilnehmer]</p>
+<p><strong>Falls Healthcare Clearinghouse:</strong>
+- <strong>Bereitgestellte Dienstleistungen:</strong> [TODO: Anspruchsbearbeitung, Abrechnungsdienste, etc.]
+- <strong>Betreute Covered Entities:</strong> [TODO: Anzahl und Typen]</p>
+<p><strong>Falls Business Associate:</strong>
+- <strong>Bereitgestellte Dienstleistungen:</strong> [TODO: IT-Dienste, Abrechnung, Recht, Beratung, etc.]
+- <strong>Covered Entity-Kunden:</strong> [TODO: Anzahl]
+- <strong>Subunternehmer:</strong> [TODO: Ja/Nein]</p>
+<h3 id="23-hybrid-entity-bezeichnung">2.3 Hybrid Entity-Bezeichnung</h3>
+<p><strong>Ist dies eine Hybrid Entity?</strong> [TODO: Ja/Nein]</p>
+<p>Falls ja, Folgendes ausfüllen:</p>
+<p><strong>Healthcare-Komponenten (Abgedeckte Funktionen):</strong>
+| Komponente | Funktion | Standort | PHI-Zugriff |
+|-----------|----------|----------|-------------|
+| [TODO: Abteilung] | [TODO: Funktion] | [TODO: Standort] | [TODO: Ja/Nein] |</p>
+<p><strong>Nicht-Healthcare-Komponenten (Nicht abgedeckte Funktionen):</strong>
+| Komponente | Funktion | Standort | PHI-Zugriff |
+|-----------|----------|----------|-------------|
+| [TODO: Abteilung] | [TODO: Funktion] | [TODO: Standort] | [TODO: Nein] |</p>
+<p><strong>Bezeichnungsdokumentation:</strong> [TODO: Verweis auf formale Hybrid Entity-Bezeichnung]</p>
+<h2 id="3-protected-health-information-phi">3. Protected Health Information (PHI)</h2>
+<h3 id="31-phi-definition">3.1 PHI-Definition</h3>
+<p>Protected Health Information (PHI) umfasst individuell identifizierbare Gesundheitsinformationen, die:
+1. Von einem Gesundheitsdienstleister, einer Krankenversicherung, einem Arbeitgeber oder einer Abrechnungsstelle erstellt oder empfangen wurden
+2. Sich auf vergangene, gegenwärtige oder zukünftige körperliche oder geistige Gesundheit, Gesundheitsversorgung oder Zahlung für Gesundheitsversorgung beziehen
+3. Die Person identifizieren oder zur Identifizierung der Person verwendet werden könnten</p>
+<h3 id="32-phi-elemente">3.2 PHI-Elemente</h3>
+<p><strong>Demografische Identifikatoren (18 HIPAA-Identifikatoren):</strong>
+1. Namen
+2. Geografische Unterteilungen kleiner als Bundesstaat (Straßenadresse, Stadt, Landkreis, Postleitzahl)
+3. Daten (Geburt, Aufnahme, Entlassung, Tod) - außer Jahr
+4. Telefonnummern
+5. Faxnummern
+6. E-Mail-Adressen
+7. Sozialversicherungsnummern
+8. Krankenakten-Nummern
+9. Krankenversicherungs-Begünstigten-Nummern
+10. Kontonummern
+11. Zertifikats-/Lizenznummern
+12. Fahrzeugkennzeichen und Seriennummern
+13. Gerätekennzeichen und Seriennummern
+14. Web-URLs
+15. IP-Adressen
+16. Biometrische Identifikatoren (Fingerabdrücke, Stimmabdrücke)
+17. Ganzkörper-Fotografien
+18. Jede andere eindeutige Identifikationsnummer, Merkmal oder Code</p>
+<p><strong>Gesundheitsinformationen:</strong>
+- Krankengeschichte und Diagnosen
+- Behandlungs- und Verfahrensinformationen
+- Medikamentenaufzeichnungen
+- Labor- und Testergebnisse
+- Versicherungs- und Abrechnungsinformationen
+- Klinische Notizen und Beurteilungen</p>
+<h3 id="33-phi-in-der-organisation">3.3 PHI in der Organisation</h3>
+<p><strong>Arten von gepflegten PHI:</strong> [TODO: Alle zutreffenden markieren]
+- [ ] Electronic PHI (ePHI) - elektronisch gespeichert
+- [ ] Paper PHI - physische Aufzeichnungen
+- [ ] Oral PHI - mündliche Kommunikation</p>
+<p><strong>Erfasste PHI-Datenelemente:</strong>
+| Datenelement | Format | Speicherort | Aufbewahrungsfrist |
+|--------------|--------|-------------|-------------------|
+| [TODO: Patientendemografie] | Elektronisch | [TODO: EHR-System] | [TODO: Jahre] |
+| [TODO: Krankenakten] | Elektronisch/Papier | [TODO: Standort] | [TODO: Jahre] |
+| [TODO: Abrechnungsinformationen] | Elektronisch | [TODO: System] | [TODO: Jahre] |
+| [TODO: Laborergebnisse] | Elektronisch | [TODO: System] | [TODO: Jahre] |</p>
+<h2 id="4-systeme-und-anwendungen">4. Systeme und Anwendungen</h2>
+<h3 id="41-systeme-mit-phi">4.1 Systeme mit PHI</h3>
+<table>
+<thead>
+<tr>
+<th>System-ID</th>
+<th>Systemname</th>
+<th>Typ</th>
+<th>PHI-Elemente</th>
+<th>Standort</th>
+<th>Anbieter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: SYS-001]</td>
+<td>[TODO: EHR-System]</td>
+<td>Anwendung</td>
+<td>Alle PHI</td>
+<td>[TODO: On-Premise/Cloud]</td>
+<td>[TODO: Anbieter]</td>
+</tr>
+<tr>
+<td>[TODO: SYS-002]</td>
+<td>[TODO: Praxisverwaltung]</td>
+<td>Anwendung</td>
+<td>Demografie, Abrechnung</td>
+<td>[TODO: Standort]</td>
+<td>[TODO: Anbieter]</td>
+</tr>
+<tr>
+<td>[TODO: SYS-003]</td>
+<td>[TODO: Laborsystem]</td>
+<td>Anwendung</td>
+<td>Laborergebnisse</td>
+<td>[TODO: Standort]</td>
+<td>[TODO: Anbieter]</td>
+</tr>
+<tr>
+<td>[TODO: SYS-004]</td>
+<td>[TODO: Bildgebungssystem]</td>
+<td>Anwendung</td>
+<td>Radiologiebilder</td>
+<td>[TODO: Standort]</td>
+<td>[TODO: Anbieter]</td>
+</tr>
+<tr>
+<td>[TODO: SYS-005]</td>
+<td>[TODO: E-Mail-System]</td>
+<td>Infrastruktur</td>
+<td>PHI in Übertragung</td>
+<td>[TODO: Standort]</td>
+<td>[TODO: Anbieter]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-infrastrukturkomponenten">4.2 Infrastrukturkomponenten</h3>
+<table>
+<thead>
+<tr>
+<th>Komponente</th>
+<th>Typ</th>
+<th>Funktion</th>
+<th>PHI-Zugriff</th>
+<th>Standort</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: DB-001]</td>
+<td>Datenbankserver</td>
+<td>PHI-Speicherung</td>
+<td>Ja</td>
+<td>[TODO: Rechenzentrum]</td>
+</tr>
+<tr>
+<td>[TODO: APP-001]</td>
+<td>Anwendungsserver</td>
+<td>PHI-Verarbeitung</td>
+<td>Ja</td>
+<td>[TODO: Rechenzentrum]</td>
+</tr>
+<tr>
+<td>[TODO: WEB-001]</td>
+<td>Webserver</td>
+<td>Patientenportal</td>
+<td>Ja</td>
+<td>[TODO: Cloud]</td>
+</tr>
+<tr>
+<td>[TODO: FILE-001]</td>
+<td>Dateiserver</td>
+<td>Dokumentenspeicherung</td>
+<td>Ja</td>
+<td>[TODO: On-Premise]</td>
+</tr>
+<tr>
+<td>[TODO: BACKUP-001]</td>
+<td>Backup-System</td>
+<td>PHI-Backup</td>
+<td>Ja</td>
+<td>[TODO: Standort]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="43-netzwerkarchitektur">4.3 Netzwerkarchitektur</h3>
+<p><strong>Netzwerksegmente mit PHI:</strong>
+- <strong>Klinisches Netzwerk:</strong> [TODO: Beschreibung]
+- <strong>Administratives Netzwerk:</strong> [TODO: Beschreibung]
+- <strong>DMZ:</strong> [TODO: Beschreibung]
+- <strong>Drahtlose Netzwerke:</strong> [TODO: Beschreibung]</p>
+<p><strong>Netzwerkdiagramm:</strong> [TODO: Verweis auf Netzwerkdiagramm im diagrams/-Ordner]</p>
+<h2 id="5-physische-standorte">5. Physische Standorte</h2>
+<h3 id="51-einrichtungen-mit-phi">5.1 Einrichtungen mit PHI</h3>
+<table>
+<thead>
+<tr>
+<th>Standort-ID</th>
+<th>Einrichtungsname</th>
+<th>Adresse</th>
+<th>Typ</th>
+<th>PHI vorhanden</th>
+<th>Mitarbeiteranzahl</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: LOC-001]</td>
+<td>Hauptklinik</td>
+<td>[TODO: Adresse]</td>
+<td>Klinisch</td>
+<td>Ja</td>
+<td>[TODO: Anzahl]</td>
+</tr>
+<tr>
+<td>[TODO: LOC-002]</td>
+<td>Verwaltungsbüro</td>
+<td>[TODO: Adresse]</td>
+<td>Administrativ</td>
+<td>Ja</td>
+<td>[TODO: Anzahl]</td>
+</tr>
+<tr>
+<td>[TODO: LOC-003]</td>
+<td>Rechenzentrum</td>
+<td>[TODO: Adresse]</td>
+<td>IT-Infrastruktur</td>
+<td>Ja</td>
+<td>[TODO: Anzahl]</td>
+</tr>
+<tr>
+<td>[TODO: LOC-004]</td>
+<td>Satellitenklinik</td>
+<td>[TODO: Adresse]</td>
+<td>Klinisch</td>
+<td>Ja</td>
+<td>[TODO: Anzahl]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-fernzugriff">5.2 Fernzugriff</h3>
+<p><strong>Fernzugriff auf PHI erlaubt:</strong> [TODO: Ja/Nein]</p>
+<p>Falls ja:
+- <strong>Zugriffsmethode:</strong> [TODO: VPN, Remote Desktop, Webportal]
+- <strong>Authentifizierung:</strong> [TODO: Benutzername/Passwort, MFA, Smart Card]
+- <strong>Autorisierte Benutzer:</strong> [TODO: Rollen/Anzahl]
+- <strong>Geräte:</strong> [TODO: Firmeneigene, BYOD, Beides]
+- <strong>Mobile Device Management:</strong> [TODO: Ja/Nein, Lösungsname]</p>
+<h2 id="6-belegschaft">6. Belegschaft</h2>
+<h3 id="61-belegschaft-mit-phi-zugriff">6.1 Belegschaft mit PHI-Zugriff</h3>
+<table>
+<thead>
+<tr>
+<th>Rolle/Abteilung</th>
+<th>Mitarbeiteranzahl</th>
+<th>PHI-Zugriffsebene</th>
+<th>Zugriffsbegründung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Ärzte]</td>
+<td>[TODO: Anzahl]</td>
+<td>Vollständig</td>
+<td>Direkte Patientenversorgung</td>
+</tr>
+<tr>
+<td>[TODO: Pflegekräfte]</td>
+<td>[TODO: Anzahl]</td>
+<td>Vollständig</td>
+<td>Direkte Patientenversorgung</td>
+</tr>
+<tr>
+<td>[TODO: Medizinische Assistenten]</td>
+<td>[TODO: Anzahl]</td>
+<td>Eingeschränkt</td>
+<td>Patientenaufnahme</td>
+</tr>
+<tr>
+<td>[TODO: Abrechnungspersonal]</td>
+<td>[TODO: Anzahl]</td>
+<td>Nur Abrechnungsdaten</td>
+<td>Anspruchsbearbeitung</td>
+</tr>
+<tr>
+<td>[TODO: IT-Personal]</td>
+<td>[TODO: Anzahl]</td>
+<td>Systemadministration</td>
+<td>Systemwartung</td>
+</tr>
+<tr>
+<td>[TODO: Empfang]</td>
+<td>[TODO: Anzahl]</td>
+<td>Nur Demografie</td>
+<td>Terminplanung</td>
+</tr>
+</tbody>
+</table>
+<h3 id="62-belegschaftsschulung">6.2 Belegschaftsschulung</h3>
+<p><strong>HIPAA-Schulung erforderlich:</strong> Ja (Jährlich)<br />
+<strong>Schulungsthemen:</strong>
+- HIPAA Privacy Rule
+- HIPAA Security Rule
+- Breach Notification-Anforderungen
+- Organisationsrichtlinien und -verfahren
+- Sanktionen bei Verstößen</p>
+<p><strong>Aufbewahrung von Schulungsunterlagen:</strong> [TODO: Jahre]</p>
+<h2 id="7-business-associates">7. Business Associates</h2>
+<h3 id="71-business-associate-beziehungen">7.1 Business Associate-Beziehungen</h3>
+<table>
+<thead>
+<tr>
+<th>Business Associate</th>
+<th>Bereitgestellte Dienstleistung</th>
+<th>PHI-Zugriff</th>
+<th>BAA unterzeichnet</th>
+<th>BAA-Datum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: IT-Anbieter]</td>
+<td>IT-Support</td>
+<td>Ja</td>
+<td>[TODO: Ja/Nein]</td>
+<td>[TODO: Datum]</td>
+</tr>
+<tr>
+<td>[TODO: Abrechnungsdienst]</td>
+<td>Medizinische Abrechnung</td>
+<td>Ja</td>
+<td>[TODO: Ja/Nein]</td>
+<td>[TODO: Datum]</td>
+</tr>
+<tr>
+<td>[TODO: Cloud-Anbieter]</td>
+<td>Daten-Hosting</td>
+<td>Ja</td>
+<td>[TODO: Ja/Nein]</td>
+<td>[TODO: Datum]</td>
+</tr>
+<tr>
+<td>[TODO: Aktenvernichtungsdienst]</td>
+<td>Dokumentenvernichtung</td>
+<td>Ja</td>
+<td>[TODO: Ja/Nein]</td>
+<td>[TODO: Datum]</td>
+</tr>
+<tr>
+<td>[TODO: Rechtsanwalt]</td>
+<td>Rechtsdienstleistungen</td>
+<td>Ja</td>
+<td>[TODO: Ja/Nein]</td>
+<td>[TODO: Datum]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="72-subunternehmer-beziehungen">7.2 Subunternehmer-Beziehungen</h3>
+<p><strong>Nutzen Business Associates Subunternehmer?</strong> [TODO: Ja/Nein]</p>
+<p>Falls ja:
+| Subunternehmer | Dienstleistung | Primärer BA | BAA vorhanden |
+|----------------|----------------|-------------|---------------|
+| [TODO: Name] | [TODO: Dienstleistung] | [TODO: BA-Name] | [TODO: Ja/Nein] |</p>
+<h2 id="8-compliance-geltungsbereich">8. Compliance-Geltungsbereich</h2>
+<h3 id="81-anwendbare-hipaa-regeln">8.1 Anwendbare HIPAA-Regeln</h3>
+<p><strong>Security Rule (45 CFR Part 164, Subpart C):</strong> [TODO: Anwendbar/Nicht anwendbar]
+- Administrative Safeguards (§164.308)
+- Physical Safeguards (§164.310)
+- Technical Safeguards (§164.312)
+- Organizational Requirements (§164.314)
+- Policies and Procedures (§164.316)</p>
+<p><strong>Privacy Rule (45 CFR Part 164, Subpart E):</strong> [TODO: Anwendbar/Nicht anwendbar]
+- Uses and Disclosures (§164.502-§164.514)
+- Individual Rights (§164.520-§164.528)
+- Administrative Requirements (§164.530-§164.534)</p>
+<p><strong>Breach Notification Rule (45 CFR Part 164, Subpart D):</strong> [TODO: Anwendbar/Nicht anwendbar]
+- Breach Discovery and Notification (§164.404-§164.410)
+- Notification by Business Associates (§164.410)</p>
+<h3 id="82-ausschlusse-vom-geltungsbereich">8.2 Ausschlüsse vom Geltungsbereich</h3>
+<p><strong>Systeme/Prozesse NICHT im Geltungsbereich:</strong>
+| System/Prozess | Grund für Ausschluss |
+|----------------|----------------------|
+| [TODO: HR-System] | Keine PHI - nur Mitarbeiterdaten |
+| [TODO: Marketing-Datenbank] | Nur de-identifizierte Daten |
+| [TODO: Öffentliche Website] | Keine PHI erfasst |</p>
+<h2 id="9-compliance-verantwortlichkeiten">9. Compliance-Verantwortlichkeiten</h2>
+<h3 id="91-schlusselrollen">9.1 Schlüsselrollen</h3>
+<p><strong>Privacy Officer:</strong>
+- <strong>Name:</strong> {{ meta.roles.privacy_officer.name }}
+- <strong>E-Mail:</strong> {{ meta.roles.privacy_officer.email }}
+- <strong>Telefon:</strong> {{ meta.roles.privacy_officer.phone }}</p>
+<p><strong>Security Officer:</strong>
+- <strong>Name:</strong> {{ meta.roles.security_officer.name }}
+- <strong>E-Mail:</strong> {{ meta.roles.security_officer.email }}
+- <strong>Telefon:</strong> {{ meta.roles.security_officer.phone }}</p>
+<p><strong>HIPAA Compliance Officer:</strong>
+- <strong>Name:</strong> [TODO: Name]
+- <strong>E-Mail:</strong> [TODO: E-Mail]
+- <strong>Telefon:</strong> [TODO: Telefon]</p>
+<p><strong>Kontaktperson (für Personen, die Rechte ausüben):</strong>
+- <strong>Name:</strong> [TODO: Name]
+- <strong>E-Mail:</strong> [TODO: E-Mail]
+- <strong>Telefon:</strong> [TODO: Telefon]
+- <strong>Adresse:</strong> [TODO: Postanschrift]</p>
+<h3 id="92-governance-struktur">9.2 Governance-Struktur</h3>
+<p><strong>HIPAA Compliance Committee:</strong>
+- <strong>Vorsitz:</strong> [TODO: Name, Titel]
+- <strong>Mitglieder:</strong> [TODO: Mitglieder und Titel auflisten]
+- <strong>Sitzungshäufigkeit:</strong> [TODO: Monatlich/Vierteljährlich]
+- <strong>Verantwortlichkeiten:</strong> Aufsicht über HIPAA-Compliance-Programm</p>
+<h2 id="10-geltungsbereichsanderungen">10. Geltungsbereichsänderungen</h2>
+<h3 id="101-change-management-prozess">10.1 Change Management-Prozess</h3>
+<p><strong>Auslöser für Geltungsbereichsprüfung:</strong>
+1. Neue Systeme oder Anwendungen, die PHI verarbeiten
+2. Neue Business Associate-Beziehungen
+3. Neue physische Standorte
+4. Änderungen in bereitgestellten Dienstleistungen
+5. Organisatorische Umstrukturierung
+6. Regulatorische Änderungen</p>
+<p><strong>Prüfungsprozess:</strong>
+1. Änderung identifizieren
+2. HIPAA-Anwendbarkeit bewerten
+3. Geltungsbereichsdokumentation aktualisieren
+4. Erforderliche Schutzmaßnahmen implementieren
+5. Richtlinien und Verfahren aktualisieren
+6. Betroffene Belegschaft schulen
+7. Änderungen dokumentieren</p>
+<h3 id="102-geltungsbereichsprufungsplan">10.2 Geltungsbereichsprüfungsplan</h3>
+<p><strong>Jährliche Prüfung:</strong> [TODO: Monat]<br />
+<strong>Letztes Prüfungsdatum:</strong> [TODO: Datum]<br />
+<strong>Nächstes Prüfungsdatum:</strong> [TODO: Datum]<br />
+<strong>Geprüft von:</strong> [TODO: Name, Titel]</p>
+<h3 id="103-anderungshistorie">10.3 Änderungshistorie</h3>
+<table>
+<thead>
+<tr>
+<th>Datum</th>
+<th>Änderungsbeschreibung</th>
+<th>Auswirkung</th>
+<th>Genehmigt durch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Datum]</td>
+<td>Initiale Geltungsbereichsdefinition</td>
+<td>N/A</td>
+<td>[TODO: Name]</td>
+</tr>
+<tr>
+<td>[TODO: Datum]</td>
+<td>Neues EHR-System hinzugefügt</td>
+<td>Erweiterter ePHI-Geltungsbereich</td>
+<td>[TODO: Name]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Dokumentenhistorie:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Datum</th>
+<th>Autor</th>
+<th>Änderungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Ersterstellung</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0000_metadata_de_hipaa.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0020_Covered_Entities_und_Healthcare_Komponenten.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

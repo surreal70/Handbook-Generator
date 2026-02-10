@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0050 - Document Conventions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0050</div>
+            <h1>Document Conventions</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0040_Conformance_Claims.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0100_TOE_Physical_Scope.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="document-conventions">Document Conventions</h1>
+<p><strong>Document-ID:</strong> 0050<br />
+<strong>Owner:</strong> {{ meta.owner }}<br />
+<strong>Version:</strong> {{ meta.version }}<br />
+<strong>Status:</strong> Draft<br />
+<strong>Classification:</strong> Confidential<br />
+<strong>Last Update:</strong> {{ meta.date }}  </p>
+<hr />
+<h2 id="1-terminology-and-notation">1. Terminology and Notation</h2>
+<h3 id="11-common-criteria-terminology">1.1 Common Criteria Terminology</h3>
+<p>This Security Target uses terminology from ISO/IEC 15408:2022:</p>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TOE</strong></td>
+<td>Target of Evaluation - the IT product or system being evaluated</td>
+</tr>
+<tr>
+<td><strong>TSF</strong></td>
+<td>TOE Security Functionality - combined functionality of all hardware, software, and firmware of the TOE that must be relied upon for the correct enforcement of the SFRs</td>
+</tr>
+<tr>
+<td><strong>TSP</strong></td>
+<td>TOE Security Policy - set of rules that regulate how assets are managed, protected, and distributed within the TOE</td>
+</tr>
+<tr>
+<td><strong>SFR</strong></td>
+<td>Security Functional Requirement - requirement for security enforcement by the TOE</td>
+</tr>
+<tr>
+<td><strong>SAR</strong></td>
+<td>Security Assurance Requirement - requirement to assure the security of the TOE</td>
+</tr>
+<tr>
+<td><strong>PP</strong></td>
+<td>Protection Profile - implementation-independent statement of security needs for a TOE type</td>
+</tr>
+<tr>
+<td><strong>ST</strong></td>
+<td>Security Target - implementation-dependent statement of security needs for a specific identified TOE</td>
+</tr>
+<tr>
+<td><strong>EAL</strong></td>
+<td>Evaluation Assurance Level - package of assurance requirements</td>
+</tr>
+</tbody>
+</table>
+<h3 id="12-toe-specific-terminology">1.2 TOE-Specific Terminology</h3>
+<p>[TODO: Define TOE-specific terms]</p>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Term 1]</td>
+<td>[TODO: Definition]</td>
+</tr>
+<tr>
+<td>[TODO: Term 2]</td>
+<td>[TODO: Definition]</td>
+</tr>
+<tr>
+<td>[TODO: Term 3]</td>
+<td>[TODO: Definition]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-notation-conventions">2. Notation Conventions</h2>
+<h3 id="21-sfr-notation">2.1 SFR Notation</h3>
+<p>Security Functional Requirements are identified using the notation from ISO/IEC 15408-2:2022:</p>
+<p><strong>Format:</strong> <code>CLASS.FAMILY.COMPONENT.ELEMENT</code></p>
+<p><strong>Example:</strong> <code>FIA_UAU.1.1</code>
+- <strong>FIA</strong> = Class (Identification and Authentication)
+- <strong>UAU</strong> = Family (User Authentication)
+- <strong>1</strong> = Component number
+- <strong>1</strong> = Element number</p>
+<h3 id="22-sar-notation">2.2 SAR Notation</h3>
+<p>Security Assurance Requirements are identified using the notation from ISO/IEC 15408-3:2022:</p>
+<p><strong>Format:</strong> <code>CLASS.FAMILY.COMPONENT</code></p>
+<p><strong>Example:</strong> <code>ADV_FSP.1</code>
+- <strong>ADV</strong> = Class (Development)
+- <strong>FSP</strong> = Family (Functional Specification)
+- <strong>1</strong> = Component number</p>
+<h3 id="23-operations-on-requirements">2.3 Operations on Requirements</h3>
+<p>The following operations can be performed on SFRs and SARs:</p>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Symbol</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Assignment</strong></td>
+<td>[assignment:]</td>
+<td>Specify a parameter</td>
+</tr>
+<tr>
+<td><strong>Selection</strong></td>
+<td>[selection:]</td>
+<td>Choose from a list of options</td>
+</tr>
+<tr>
+<td><strong>Refinement</strong></td>
+<td><strong>bold</strong></td>
+<td>Add detail or restrict</td>
+</tr>
+<tr>
+<td><strong>Iteration</strong></td>
+<td>/iteration</td>
+<td>Apply requirement multiple times</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example:</strong>
+- Original: "The TSF shall authenticate [assignment: list of users]"
+- Completed: "The TSF shall authenticate [assignment: administrators, operators]"</p>
+<h2 id="3-document-structure">3. Document Structure</h2>
+<h3 id="31-section-organization">3.1 Section Organization</h3>
+<p>This ST is organized according to ISO/IEC 15408-1:2022:</p>
+<ol>
+<li><strong>ST Introduction</strong> - Identification and overview</li>
+<li><strong>TOE Description</strong> - Physical and logical description</li>
+<li><strong>Security Problem Definition</strong> - Threats, OSPs, assumptions</li>
+<li><strong>Security Objectives</strong> - Objectives for TOE and environment</li>
+<li><strong>Security Requirements</strong> - SFRs and SARs</li>
+<li><strong>TOE Summary Specification</strong> - Security functions</li>
+<li><strong>Appendices</strong> - Supporting information</li>
+</ol>
+<h3 id="32-cross-references">3.2 Cross-References</h3>
+<p>Cross-references within this ST use the following format:
+- Section references: "See Section X.Y"
+- Table references: "See Table X"
+- Figure references: "See Figure X"</p>
+<h2 id="4-formatting-conventions">4. Formatting Conventions</h2>
+<h3 id="41-text-formatting">4.1 Text Formatting</h3>
+<table>
+<thead>
+<tr>
+<th>Format</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bold</strong></td>
+<td>Emphasis, refinements</td>
+</tr>
+<tr>
+<td><em>Italic</em></td>
+<td>Definitions, first use of terms</td>
+</tr>
+<tr>
+<td><code>Monospace</code></td>
+<td>Code, commands, identifiers</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>Placeholder requiring completion</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-lists-and-tables">4.2 Lists and Tables</h3>
+<ul>
+<li><strong>Bulleted lists</strong>: Used for unordered items</li>
+<li><strong>Numbered lists</strong>: Used for sequential steps or ordered items</li>
+<li><strong>Tables</strong>: Used for structured data and mappings</li>
+</ul>
+<h3 id="43-diagrams">4.3 Diagrams</h3>
+<p>[TODO: Describe diagram conventions if applicable]
+- Architecture diagrams: [TODO]
+- Data flow diagrams: [TODO]
+- Sequence diagrams: [TODO]</p>
+<h2 id="5-abbreviations-and-acronyms">5. Abbreviations and Acronyms</h2>
+<h3 id="51-common-criteria-abbreviations">5.1 Common Criteria Abbreviations</h3>
+<table>
+<thead>
+<tr>
+<th>Abbreviation</th>
+<th>Full Term</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CC</td>
+<td>Common Criteria</td>
+</tr>
+<tr>
+<td>CEM</td>
+<td>Common Evaluation Methodology</td>
+</tr>
+<tr>
+<td>EAL</td>
+<td>Evaluation Assurance Level</td>
+</tr>
+<tr>
+<td>IT</td>
+<td>Information Technology</td>
+</tr>
+<tr>
+<td>OSP</td>
+<td>Organizational Security Policy</td>
+</tr>
+<tr>
+<td>PP</td>
+<td>Protection Profile</td>
+</tr>
+<tr>
+<td>SAR</td>
+<td>Security Assurance Requirement</td>
+</tr>
+<tr>
+<td>SFR</td>
+<td>Security Functional Requirement</td>
+</tr>
+<tr>
+<td>ST</td>
+<td>Security Target</td>
+</tr>
+<tr>
+<td>TOE</td>
+<td>Target of Evaluation</td>
+</tr>
+<tr>
+<td>TSF</td>
+<td>TOE Security Functionality</td>
+</tr>
+<tr>
+<td>TSP</td>
+<td>TOE Security Policy</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-toe-specific-abbreviations">5.2 TOE-Specific Abbreviations</h3>
+<p>[TODO: List TOE-specific abbreviations]</p>
+<table>
+<thead>
+<tr>
+<th>Abbreviation</th>
+<th>Full Term</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Abbr 1]</td>
+<td>[TODO: Full term]</td>
+</tr>
+<tr>
+<td>[TODO: Abbr 2]</td>
+<td>[TODO: Full term]</td>
+</tr>
+<tr>
+<td>[TODO: Abbr 3]</td>
+<td>[TODO: Full term]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-references">6. References</h2>
+<h3 id="61-normative-references">6.1 Normative References</h3>
+<p>The following documents are referenced normatively in this ST:</p>
+<ol>
+<li>ISO/IEC 15408-1:2022, Information technology — Security techniques — Evaluation criteria for IT security — Part 1: Introduction and general model</li>
+<li>ISO/IEC 15408-2:2022, Information technology — Security techniques — Evaluation criteria for IT security — Part 2: Security functional components</li>
+<li>ISO/IEC 15408-3:2022, Information technology — Security techniques — Evaluation criteria for IT security — Part 3: Security assurance components</li>
+<li>Common Methodology for Information Technology Security Evaluation (CEM)</li>
+</ol>
+<h3 id="62-informative-references">6.2 Informative References</h3>
+<p>[TODO: List informative references]</p>
+<ol>
+<li>[TODO: Reference 1]</li>
+<li>[TODO: Reference 2]</li>
+<li>[TODO: Reference 3]</li>
+</ol>
+<h2 id="7-document-conventions-summary">7. Document Conventions Summary</h2>
+<h3 id="71-key-conventions">7.1 Key Conventions</h3>
+<ul>
+<li>All SFRs are from ISO/IEC 15408-2:2022 unless marked as extended</li>
+<li>All SARs are from ISO/IEC 15408-3:2022 unless marked as augmented</li>
+<li>Operations on requirements are clearly marked</li>
+<li>All [TODO] placeholders must be completed before finalization</li>
+</ul>
+<h3 id="72-consistency-rules">7.2 Consistency Rules</h3>
+<ul>
+<li>Terminology must be consistent throughout the ST</li>
+<li>All cross-references must be valid</li>
+<li>All tables and figures must be numbered sequentially</li>
+<li>All requirements must be uniquely identified</li>
+</ul>
+<hr />
+<p><strong>Next Steps:</strong>
+1. Complete all [TODO] placeholders
+2. Verify consistency of terminology usage
+3. Ensure all abbreviations are defined
+4. Check that all references are complete</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0040_Conformance_Claims.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0100_TOE_Physical_Scope.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

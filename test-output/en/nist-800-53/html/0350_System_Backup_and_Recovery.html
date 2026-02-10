@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0350 - System Backup and Recovery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0350</div>
+            <h1>System Backup and Recovery</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0340_Contingency_Plan_and_Alternate_Sites.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0400_Identification_and_Authentication_Policy.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="system-backup-and-recovery">System Backup and Recovery</h1>
+<p><strong>Document ID:</strong> NIST-0350<br />
+<strong>Control Family:</strong> Contingency Planning (CP)<br />
+<strong>Controls:</strong> CP-9, CP-10<br />
+<strong>Organization:</strong> AdminSend GmbH<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Draft / In Review / Approved<br />
+<strong>Last Updated:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-control-description">1. Control Description</h2>
+<p>This document covers system backup and recovery controls:
+- <strong>CP-9:</strong> System Backup
+- <strong>CP-10:</strong> System Recovery and Reconstitution</p>
+<h2 id="2-control-implementation">2. Control Implementation</h2>
+<h3 id="21-system-backup-cp-9">2.1 System Backup (CP-9)</h3>
+<p><strong>Backup Types:</strong>
+| Backup Type | Frequency | Retention | Storage Location |
+|-------------|-----------|-----------|------------------|
+| Full backup | [TODO: e.g., Weekly] | [TODO: e.g., 4 weeks] | [TODO: Location] |
+| Incremental backup | [TODO: e.g., Daily] | [TODO: e.g., 1 week] | [TODO: Location] |
+| Differential backup | [TODO: e.g., Daily] | [TODO: e.g., 1 week] | [TODO: Location] |</p>
+<p><strong>Backup Scope:</strong>
+- User-level information
+- System-level information
+- System state information
+- Application data
+- Configuration files
+- Documentation</p>
+<p>[TODO: Define backup scope]</p>
+<p><strong>Backup Procedures:</strong>
+1. Initiate backup
+2. Verify backup completion
+3. Test backup integrity
+4. Transfer to alternate storage
+5. Document backup</p>
+<p>[TODO: Detail backup procedures]</p>
+<p><strong>Backup Protection:</strong>
+- Encryption at rest
+- Encryption in transit
+- Access controls
+- Physical security
+- Integrity verification</p>
+<p>[TODO: Specify protection measures]</p>
+<p><strong>Backup Testing:</strong>
+- Test frequency: [TODO: e.g., Quarterly]
+- Test procedures: [TODO: Define]
+- Success criteria: [TODO: Define]</p>
+<h3 id="22-system-recovery-and-reconstitution-cp-10">2.2 System Recovery and Reconstitution (CP-10)</h3>
+<p><strong>Recovery Procedures:</strong>
+1. Assess damage
+2. Activate recovery team
+3. Restore from backup
+4. Verify system integrity
+5. Resume operations
+6. Document recovery</p>
+<p>[TODO: Detail recovery procedures]</p>
+<p><strong>Recovery Time Objectives (RTO):</strong>
+| System/Application | RTO | Priority |
+|-------------------|-----|----------|
+| [TODO] | [TODO] | [High/Medium/Low] |</p>
+<p><strong>Recovery Point Objectives (RPO):</strong>
+| System/Application | RPO | Data Loss Tolerance |
+|-------------------|-----|---------------------|
+| [TODO] | [TODO] | [TODO] |</p>
+<p><strong>Reconstitution:</strong>
+- Deactivate alternate processing site
+- Restore primary site
+- Migrate operations back to primary
+- Verify full functionality
+- Document lessons learned</p>
+<p>[TODO: Define reconstitution procedures]</p>
+<p><strong>Transaction Recovery:</strong>
+[TODO: Define procedures for recovering incomplete transactions]</p>
+<h2 id="3-control-enhancements">3. Control Enhancements</h2>
+<ul>
+<li><strong>CP-9(1):</strong> Testing for Reliability and Integrity</li>
+<li><strong>CP-9(2):</strong> Test Restoration Using Sampling</li>
+<li><strong>CP-9(3):</strong> Separate Storage for Critical Information</li>
+<li><strong>CP-9(5):</strong> Transfer to Alternate Storage Site</li>
+<li><strong>CP-9(6):</strong> Redundant Secondary System</li>
+<li><strong>CP-9(7):</strong> Dual Authorization for Deletion or Destruction</li>
+<li><strong>CP-9(8):</strong> Cryptographic Protection</li>
+<li><strong>CP-10(2):</strong> Transaction Recovery</li>
+<li><strong>CP-10(4):</strong> Restore Within Time Period</li>
+<li><strong>CP-10(6):</strong> Component Protection</li>
+</ul>
+<p>[TODO: Mark applicable enhancements]</p>
+<h2 id="4-implementation-status">4. Implementation Status</h2>
+<p><strong>Status:</strong> [TODO: Implemented / Partially Implemented / Planned / Not Applicable]<br />
+<strong>Implementation Date:</strong> [TODO: Date]<br />
+<strong>Responsible:</strong> [TODO: Name/Role]  </p>
+<h2 id="5-assessment">5. Assessment</h2>
+<p><strong>Assessment Method:</strong> Examine, Interview, Test<br />
+<strong>Assessment Status:</strong> [TODO: Satisfied / Other than Satisfied / Not Applicable]<br />
+<strong>Findings:</strong> [TODO: Description]  </p>
+<hr />
+<p><strong>Document History:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Initial creation</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0340_Contingency_Plan_and_Alternate_Sites.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0400_Identification_and_Authentication_Policy.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

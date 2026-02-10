@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0510 - Assurance Measures</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0510</div>
+            <h1>Assurance Measures</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0500_TOE_Summary_Specification.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0520_Functions_Rationale.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="assurance-measures">Assurance Measures</h1>
+<p><strong>Document-ID:</strong> 0510<br />
+<strong>Owner:</strong> {{ meta.owner }}<br />
+<strong>Version:</strong> {{ meta.version }}<br />
+<strong>Status:</strong> Draft / In Review / Approved<br />
+<strong>Classification:</strong> Internal / Confidential / Strictly Confidential<br />
+<strong>Last Update:</strong> {{ meta.date }}  </p>
+<hr />
+<blockquote>
+<p><strong>Note:</strong> This document is a template. Replace all <code>[TODO]</code> placeholders and adapt the content to your specific TOE (Target of Evaluation).</p>
+</blockquote>
+<h2 id="1-introduction">1. Introduction</h2>
+<h3 id="11-purpose">1.1 Purpose</h3>
+<p>This document describes the Assurance Measures implemented to fulfill the Security Assurance Requirements (SARs) for <strong>[TODO: TOE Name]</strong>.</p>
+<p>The Assurance Measures demonstrate that:
+- The TOE has been correctly developed
+- The TOE has been adequately tested
+- The TOE is properly documented
+- The TOE can be securely delivered and operated</p>
+<h3 id="12-evaluation-assurance-level">1.2 Evaluation Assurance Level</h3>
+<p>The TOE is evaluated at <strong>[TODO: EAL level, e.g., EAL4]</strong>.</p>
+<p><strong>Rationale for EAL Selection:</strong>
+[TODO: Explain why this EAL is appropriate for the TOE. Consider:
+- The threat landscape
+- The criticality of the TOE
+- Stakeholder requirements
+- Cost-benefit considerations]</p>
+<h2 id="2-assurance-measures-by-sar-classes">2. Assurance Measures by SAR Classes</h2>
+<h3 id="21-configuration-management-acm">2.1 Configuration Management (ACM)</h3>
+<h4 id="211-acm_cap-cm-capabilities">2.1.1 ACM_CAP: CM Capabilities</h4>
+<p><strong>SAR:</strong> [TODO: e.g., ACM_CAP.4 - Generation support and acceptance procedures]</p>
+<p><strong>Assurance Measure:</strong></p>
+<p>[TODO: Describe the Configuration Management Capabilities. Example:]</p>
+<p>The project uses Git as a version control system. All TOE components (source code, configuration files, build scripts) and documentation are versioned in the repository.</p>
+<p><strong>CM Process:</strong>
+1. All changes are developed in feature branches
+2. Code reviews are required before merging
+3. Automated tests must pass
+4. Releases are marked with Git tags
+5. Each release has a unique version number</p>
+<p><strong>CM Tools:</strong>
+- Version Control: Git
+- Repository: [TODO: URL]
+- Issue Tracking: [TODO: System]
+- Build System: [TODO: System]</p>
+<p><strong>Evidence:</strong>
+- CM Plan: [TODO: Document path]
+- Repository Access: [TODO: URL]
+- Build Logs: [TODO: Location]</p>
+<h4 id="212-acm_scp-cm-scope">2.1.2 ACM_SCP: CM Scope</h4>
+<p><strong>SAR:</strong> [TODO: e.g., ACM_SCP.2 - Problem tracking CM coverage]</p>
+<p><strong>Assurance Measure:</strong></p>
+<p>[TODO: Describe the scope of Configuration Management. Example:]</p>
+<p>Configuration Management covers:
+- All TOE source code files
+- Build scripts and configuration files
+- Security Target and associated documentation
+- Test suites and test documentation
+- Evaluation artifacts</p>
+<p><strong>CM Items:</strong>
+| Item-ID | Description | Type | Repository Path |
+|---------|-------------|------|-----------------|
+| [TODO] | [TODO] | Source Code | [TODO] |
+| [TODO] | [TODO] | Documentation | [TODO] |
+| [TODO] | [TODO] | Test Suite | [TODO] |</p>
+<p><strong>Evidence:</strong>
+- CM Scope Document: [TODO: Document path]
+- Configuration Item List: [TODO: Document path]</p>
+<h3 id="22-delivery-and-operation-ado">2.2 Delivery and Operation (ADO)</h3>
+<h4 id="221-ado_del-delivery">2.2.1 ADO_DEL: Delivery</h4>
+<p><strong>SAR:</strong> [TODO: e.g., ADO_DEL.2 - Detection of modification]</p>
+<p><strong>Assurance Measure:</strong></p>
+<p>[TODO: Describe the Delivery measures. Example:]</p>
+<p>The TOE is delivered with the following security measures:</p>
+<p><strong>Integrity Protection:</strong>
+- All releases are hashed with SHA-256
+- Hashes are published on the official website
+- Releases are digitally signed (GPG/PGP)
+- Signature keys are available through secure channels</p>
+<p><strong>Delivery Process:</strong>
+1. Build TOE from versioned source code
+2. Automated tests
+3. Creation of checksums
+4. Digital signature
+5. Upload to secure download servers
+6. Publication of checksums and signatures</p>
+<p><strong>Evidence:</strong>
+- Delivery Procedures: [TODO: Document path]
+- Example Checksums: [TODO: URL]
+- Public Key: [TODO: URL]</p>
+<h4 id="222-ado_igs-installation-generation-and-start-up">2.2.2 ADO_IGS: Installation, Generation, and Start-up</h4>
+<p><strong>SAR:</strong> [TODO: e.g., ADO_IGS.1 - Installation, generation, and start-up procedures]</p>
+<p><strong>Assurance Measure:</strong></p>
+<p>[TODO: Describe the installation and start-up procedures. Example:]</p>
+<p><strong>Installation Guide:</strong>
+- Detailed step-by-step instructions
+- System requirements
+- Security configuration
+- Installation verification</p>
+<p><strong>Evidence:</strong>
+- Installation Guide: [TODO: Document path]
+- Administrator Guide: [TODO: Document path]</p>
+<h3 id="23-development-adv">2.3 Development (ADV)</h3>
+<h4 id="231-adv_fsp-functional-specification">2.3.1 ADV_FSP: Functional Specification</h4>
+<p><strong>SAR:</strong> [TODO: e.g., ADV_FSP.2 - Security-enforcing functional specification]</p>
+<p><strong>Assurance Measure:</strong></p>
+<p>[TODO: Describe the Functional Specification. Example:]</p>
+<p>The Functional Specification describes all external interfaces of the TOE:</p>
+<p><strong>Documentation:</strong>
+- TOE Security Functions (TSFs) are fully specified
+- All TSF interfaces are documented
+- Parameters, return values, and error handling are described
+- Security-relevant effects are documented</p>
+<p><strong>Evidence:</strong>
+- Functional Specification: [TODO: Document path]
+- API Documentation: [TODO: Document path]</p>
+<h4 id="232-adv_imp-implementation-representation">2.3.2 ADV_IMP: Implementation Representation</h4>
+<p><strong>SAR:</strong> [TODO: e.g., ADV_IMP.1 - Implementation representation of the TSF]</p>
+<p><strong>Assurance Measure:</strong></p>
+<p>[TODO: Describe the Implementation Representation. Example:]</p>
+<p>The TOE source code is available and documented:</p>
+<p><strong>Code Documentation:</strong>
+- Inline comments for complex logic
+- Function and class documentation
+- Architecture documentation
+- Mapping between design and code</p>
+<p><strong>Evidence:</strong>
+- Source Code: [TODO: Repository URL]
+- Code Documentation: [TODO: Document path]
+- Architecture Document: [TODO: Document path]</p>
+<h4 id="233-adv_tds-toe-design">2.3.3 ADV_TDS: TOE Design</h4>
+<p><strong>SAR:</strong> [TODO: e.g., ADV_TDS.2 - Architectural design]</p>
+<p><strong>Assurance Measure:</strong></p>
+<p>[TODO: Describe the TOE Design. Example:]</p>
+<p>The TOE design is documented at multiple levels of abstraction:</p>
+<p><strong>Design Documentation:</strong>
+- High-Level Architecture
+- Subsystem Design
+- Module Design
+- Security Architecture</p>
+<p><strong>Evidence:</strong>
+- TOE Design Document: [TODO: Document path]
+- Architecture Diagrams: [TODO: Document path]</p>
+<h3 id="24-guidance-documents-agd">2.4 Guidance Documents (AGD)</h3>
+<h4 id="241-agd_adm-administrator-guidance">2.4.1 AGD_ADM: Administrator Guidance</h4>
+<p><strong>SAR:</strong> [TODO: e.g., AGD_ADM.1 - Administrator guidance]</p>
+<p><strong>Assurance Measure:</strong></p>
+<p>[TODO: Describe the Administrator Guidance. Example:]</p>
+<p><strong>Administrator Documentation includes:</strong>
+- Secure installation and configuration
+- Security parameters and their meaning
+- Maintenance and updates
+- Audit log management
+- Backup and recovery
+- Incident response</p>
+<p><strong>Evidence:</strong>
+- Administrator Guide: [TODO: Document path]
+- Security Configuration Guide: [TODO: Document path]</p>
+<h4 id="242-agd_usr-user-guidance">2.4.2 AGD_USR: User Guidance</h4>
+<p><strong>SAR:</strong> [TODO: e.g., AGD_USR.1 - User guidance]</p>
+<p><strong>Assurance Measure:</strong></p>
+<p>[TODO: Describe the User Guidance. Example:]</p>
+<p><strong>User Documentation includes:</strong>
+- Secure use of the TOE
+- Security functions and their use
+- Security notices and warnings
+- User responsibilities</p>
+<p><strong>Evidence:</strong>
+- User Guide: [TODO: Document path]
+- Security User Manual: [TODO: Document path]</p>
+<h3 id="25-life-cycle-support-alc">2.5 Life Cycle Support (ALC)</h3>
+<h4 id="251-alc_dvs-development-security">2.5.1 ALC_DVS: Development Security</h4>
+<p><strong>SAR:</strong> [TODO: e.g., ALC_DVS.1 - Identification of security measures]</p>
+<p><strong>Assurance Measure:</strong></p>
+<p>[TODO: Describe the Development Security Measures. Example:]</p>
+<p><strong>Security Measures in Development:</strong>
+- Access control to development systems
+- Secure development environment
+- Code review process
+- Security testing during development
+- Confidentiality agreements for developers</p>
+<p><strong>Evidence:</strong>
+- Development Security Policy: [TODO: Document path]
+- Access Control Matrix: [TODO: Document path]</p>
+<h4 id="252-alc_lcd-life-cycle-definition">2.5.2 ALC_LCD: Life Cycle Definition</h4>
+<p><strong>SAR:</strong> [TODO: e.g., ALC_LCD.1 - Developer defined life-cycle model]</p>
+<p><strong>Assurance Measure:</strong></p>
+<p>[TODO: Describe the Life Cycle Model. Example:]</p>
+<p><strong>Development Life Cycle:</strong>
+1. Requirements Analysis
+2. Design
+3. Implementation
+4. Testing
+5. Release
+6. Maintenance</p>
+<p><strong>Evidence:</strong>
+- Life Cycle Model Document: [TODO: Document path]
+- Development Process Description: [TODO: Document path]</p>
+<h4 id="253-alc_tat-tools-and-techniques">2.5.3 ALC_TAT: Tools and Techniques</h4>
+<p><strong>SAR:</strong> [TODO: e.g., ALC_TAT.1 - Well-defined development tools]</p>
+<p><strong>Assurance Measure:</strong></p>
+<p>[TODO: Describe the tools and techniques used. Example:]</p>
+<p><strong>Development Tools:</strong>
+| Tool | Version | Purpose | Security Relevance |
+|------|---------|---------|-------------------|
+| [TODO] | [TODO] | [TODO] | [TODO] |</p>
+<p><strong>Evidence:</strong>
+- Tools and Techniques Document: [TODO: Document path]</p>
+<h3 id="26-tests-ate">2.6 Tests (ATE)</h3>
+<h4 id="261-ate_cov-coverage">2.6.1 ATE_COV: Coverage</h4>
+<p><strong>SAR:</strong> [TODO: e.g., ATE_COV.2 - Analysis of coverage]</p>
+<p><strong>Assurance Measure:</strong></p>
+<p>[TODO: Describe the Test Coverage. Example:]</p>
+<p><strong>Test Coverage:</strong>
+- All TSF interfaces are tested
+- All SFRs are covered by tests
+- Coverage analysis is performed</p>
+<p><strong>Test Coverage Matrix:</strong>
+| TSF-ID | Test-ID | SFR-ID | Coverage |
+|--------|---------|--------|----------|
+| [TODO] | [TODO] | [TODO] | [TODO]% |</p>
+<p><strong>Evidence:</strong>
+- Test Coverage Report: [TODO: Document path]
+- Coverage Matrix: [TODO: Document path]</p>
+<h4 id="262-ate_dpt-depth">2.6.2 ATE_DPT: Depth</h4>
+<p><strong>SAR:</strong> [TODO: e.g., ATE_DPT.1 - Testing: high-level design]</p>
+<p><strong>Assurance Measure:</strong></p>
+<p>[TODO: Describe the Test Depth. Example:]</p>
+<p><strong>Test Depth:</strong>
+- Unit tests for individual modules
+- Integration tests for subsystems
+- System tests for the entire TOE
+- Security tests for TSFs</p>
+<p><strong>Evidence:</strong>
+- Test Plan: [TODO: Document path]
+- Test Results: [TODO: Document path]</p>
+<h4 id="263-ate_fun-functional-tests">2.6.3 ATE_FUN: Functional Tests</h4>
+<p><strong>SAR:</strong> [TODO: e.g., ATE_FUN.1 - Functional testing]</p>
+<p><strong>Assurance Measure:</strong></p>
+<p>[TODO: Describe the Functional Tests. Example:]</p>
+<p><strong>Functional Tests:</strong>
+- All TSFs are tested
+- Positive and negative test cases
+- Boundary value tests
+- Error handling tests</p>
+<p><strong>Evidence:</strong>
+- Test Specification: [TODO: Document path]
+- Test Results: [TODO: Document path]</p>
+<h4 id="264-ate_ind-independent-testing">2.6.4 ATE_IND: Independent Testing</h4>
+<p><strong>SAR:</strong> [TODO: e.g., ATE_IND.2 - Independent testing - sample]</p>
+<p><strong>Assurance Measure:</strong></p>
+<p>[TODO: Describe the Independent Testing Measures. Example:]</p>
+<p><strong>Independent Testing:</strong>
+- Evaluator performs a selection of tests
+- Evaluator can develop own tests
+- Test environment is provided</p>
+<p><strong>Evidence:</strong>
+- Test Environment Description: [TODO: Document path]
+- Sample Test Results: [TODO: Document path]</p>
+<h3 id="27-vulnerability-assessment-ava">2.7 Vulnerability Assessment (AVA)</h3>
+<h4 id="271-ava_msu-misuse">2.7.1 AVA_MSU: Misuse</h4>
+<p><strong>SAR:</strong> [TODO: e.g., AVA_MSU.2 - Validation of analysis]</p>
+<p><strong>Assurance Measure:</strong></p>
+<p>[TODO: Describe the Misuse Analysis. Example:]</p>
+<p><strong>Misuse Analysis:</strong>
+- Analysis of misconfigurations
+- Analysis of insecure usage
+- Documentation of security warnings</p>
+<p><strong>Evidence:</strong>
+- Misuse Analysis: [TODO: Document path]
+- Security Warnings: [TODO: Document path]</p>
+<h4 id="272-ava_sof-strength-of-function">2.7.2 AVA_SOF: Strength of Function</h4>
+<p><strong>SAR:</strong> [TODO: e.g., AVA_SOF.1 - Strength of TOE security function evaluation]</p>
+<p><strong>Assurance Measure:</strong></p>
+<p>[TODO: Describe the SOF Evaluation. Example:]</p>
+<p><strong>SOF Evaluation:</strong>
+- Analysis of all probabilistic mechanisms
+- Calculation of attack strength
+- Comparison with SOF-Claim</p>
+<p><strong>Evidence:</strong>
+- SOF Analysis: [TODO: Document path, see 0540_Strength_of_Function.md]</p>
+<h4 id="273-ava_vla-vulnerability-analysis">2.7.3 AVA_VLA: Vulnerability Analysis</h4>
+<p><strong>SAR:</strong> [TODO: e.g., AVA_VLA.2 - Independent vulnerability analysis]</p>
+<p><strong>Assurance Measure:</strong></p>
+<p>[TODO: Describe the Vulnerability Analysis. Example:]</p>
+<p><strong>Vulnerability Analysis:</strong>
+- Analysis of known vulnerabilities
+- Penetration testing
+- Code analysis for security flaws
+- Analysis of public vulnerability databases</p>
+<p><strong>Evidence:</strong>
+- Vulnerability Analysis Report: [TODO: Document path]
+- Penetration Test Results: [TODO: Document path]</p>
+<h2 id="3-summary-of-assurance-measures">3. Summary of Assurance Measures</h2>
+<h3 id="31-completeness-check">3.1 Completeness Check</h3>
+<p>The following table shows the mapping of all SARs to Assurance Measures:</p>
+<table>
+<thead>
+<tr>
+<th>SAR-ID</th>
+<th>SAR-Name</th>
+<th>Assurance Measure</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>✓</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Summary:</strong>
+- Number of SARs: [TODO]
+- Number of covered SARs: [TODO]
+- Coverage rate: [TODO]%</p>
+<h3 id="32-evidence-and-artifacts">3.2 Evidence and Artifacts</h3>
+<p>The following documents and artifacts serve as evidence for the Assurance Measures:</p>
+<table>
+<thead>
+<tr>
+<th>Document</th>
+<th>Type</th>
+<th>Location</th>
+<th>SAR Mapping</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-evaluator-activities">4. Evaluator Activities</h2>
+<h3 id="41-required-evaluator-activities">4.1 Required Evaluator Activities</h3>
+<p>Specific evaluator activities are required for each SAR:</p>
+<p>[TODO: List the evaluator activities for each SAR. Example:]</p>
+<p><strong>ACM_CAP.4:</strong>
+- Review of CM system
+- Verification of version control
+- Review of acceptance procedures</p>
+<p><strong>ADV_FSP.2:</strong>
+- Review of Functional Specification
+- Verification of TSF descriptions
+- Completeness check</p>
+<h3 id="42-provision-of-evidence">4.2 Provision of Evidence</h3>
+<p>All required evidence will be provided to the evaluator:</p>
+<p><strong>Delivery Method:</strong>
+- [TODO: e.g., Secure File Transfer, Evaluator Portal, etc.]</p>
+<p><strong>System Access:</strong>
+- [TODO: Describe how the evaluator gains access to development systems, test environments, etc.]</p>
+<hr />
+<p><strong>Document History:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Initial version</td>
+</tr>
+<tr>
+<td>1.0</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0500_TOE_Summary_Specification.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0520_Functions_Rationale.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0400 - Access Control</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0400</div>
+            <h1>Access Control</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0100_Firewall_Configuration.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0410_User_Authentication.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="access-control">Access Control</h1>
+<p><strong>Document ID:</strong> PCI-0400<br />
+<strong>Organization:</strong> AdminSend GmbH<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Approved by:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Draft / In Review / Approved<br />
+<strong>Classification:</strong> internal<br />
+<strong>Last Updated:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This document defines the access control policies for AdminSend GmbH in accordance with PCI-DSS Requirement 7.</p>
+<h3 id="11-objectives">1.1 Objectives</h3>
+<ul>
+<li><strong>Need-to-Know Principle:</strong> Access only for authorized personnel</li>
+<li><strong>Least Privilege:</strong> Minimum required access rights</li>
+<li><strong>Role-Based Access Control:</strong> RBAC implementation</li>
+<li><strong>Compliance:</strong> Fulfillment of PCI-DSS Requirement 7</li>
+</ul>
+<h3 id="12-scope">1.2 Scope</h3>
+<p><strong>Affected Systems:</strong>
+- All CDE systems
+- Systems with cardholder data
+- Administrative systems
+- Databases with CHD</p>
+<h2 id="2-access-control-principles">2. Access Control Principles</h2>
+<h3 id="21-need-to-know">2.1 Need-to-Know</h3>
+<p><strong>Principle:</strong>
+- Access only for persons with business necessity
+- Documented justification required
+- Regular review of access rights</p>
+<h3 id="22-least-privilege">2.2 Least Privilege</h3>
+<p><strong>Principle:</strong>
+- Minimum required permissions
+- No unnecessary administrator rights
+- Time-limited privileged access</p>
+<h3 id="23-separation-of-duties">2.3 Separation of Duties</h3>
+<p><strong>Principle:</strong>
+- Separation of critical functions
+- No single person with complete control
+- Four-eyes principle for critical operations</p>
+<h2 id="3-role-based-access-control-rbac">3. Role-Based Access Control (RBAC)</h2>
+<h3 id="31-defined-roles">3.1 Defined Roles</h3>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Description</th>
+<th>CDE Access</th>
+<th>CHD Access</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Payment Administrator</td>
+<td>Full payment system administration</td>
+<td>Yes</td>
+<td>Yes (full)</td>
+</tr>
+<tr>
+<td>System Administrator</td>
+<td>Server and network administration</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Database Administrator</td>
+<td>Database management</td>
+<td>Yes</td>
+<td>Yes (encrypted)</td>
+</tr>
+<tr>
+<td>Application Administrator</td>
+<td>Application management</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Security Administrator</td>
+<td>Security system administration</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Cashier</td>
+<td>POS operation</td>
+<td>Limited</td>
+<td>Yes (input only)</td>
+</tr>
+<tr>
+<td>Support Staff</td>
+<td>Customer service</td>
+<td>Limited</td>
+<td>Yes (query only, masked)</td>
+</tr>
+<tr>
+<td>Developer</td>
+<td>Software development</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Auditor</td>
+<td>Compliance review</td>
+<td>Read-only</td>
+<td>Yes (logs only)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-permission-matrix">3.2 Permission Matrix</h3>
+<table>
+<thead>
+<tr>
+<th>System/Resource</th>
+<th>Payment Admin</th>
+<th>Sys Admin</th>
+<th>DB Admin</th>
+<th>App Admin</th>
+<th>Cashier</th>
+<th>Support</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Payment Gateway</td>
+<td>RWX</td>
+<td>RW</td>
+<td>R</td>
+<td>RW</td>
+<td>-</td>
+<td>R</td>
+</tr>
+<tr>
+<td>CDE Database</td>
+<td>RWX</td>
+<td>R</td>
+<td>RWX</td>
+<td>R</td>
+<td>-</td>
+<td>R (masked)</td>
+</tr>
+<tr>
+<td>POS Terminal</td>
+<td>RW</td>
+<td>RW</td>
+<td>-</td>
+<td>RW</td>
+<td>RW</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Firewall</td>
+<td>RW</td>
+<td>RWX</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>SIEM</td>
+<td>RW</td>
+<td>RW</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Backup System</td>
+<td>RW</td>
+<td>RWX</td>
+<td>RW</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legend:</strong> R = Read, W = Write, X = Execute, - = No Access</p>
+<h2 id="4-access-management-process">4. Access Management Process</h2>
+<h3 id="41-access-request">4.1 Access Request</h3>
+<p><strong>Process:</strong></p>
+<ol>
+<li><strong>Request:</strong> Form with justification</li>
+<li><strong>Manager Approval:</strong> Supervisor approves</li>
+<li><strong>Security Review:</strong> IT Security reviews</li>
+<li><strong>CISO Approval:</strong> Required for CDE access</li>
+<li><strong>Provisioning:</strong> IT implements access</li>
+<li><strong>Documentation:</strong> Access is documented</li>
+<li><strong>Notification:</strong> User is informed</li>
+</ol>
+<p><strong>Approval Matrix:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Access Type</th>
+<th>Approver</th>
+<th>Documentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CDE Access</td>
+<td>CISO</td>
+<td>Complete</td>
+</tr>
+<tr>
+<td>CHD Access</td>
+<td>CISO + Manager</td>
+<td>Complete</td>
+</tr>
+<tr>
+<td>Corporate Access</td>
+<td>Manager</td>
+<td>Standard</td>
+</tr>
+<tr>
+<td>Temporary Access</td>
+<td>IT Security</td>
+<td>With expiration date</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-access-modification">4.2 Access Modification</h3>
+<p><strong>Process for Role Change:</strong></p>
+<ol>
+<li><strong>Identification:</strong> Role change detected</li>
+<li><strong>Assessment:</strong> New access requirements</li>
+<li><strong>Approval:</strong> Same as new request</li>
+<li><strong>Revocation:</strong> Remove old permissions</li>
+<li><strong>Provisioning:</strong> Grant new permissions</li>
+<li><strong>Validation:</strong> Test access</li>
+</ol>
+<h3 id="43-access-revocation">4.3 Access Revocation</h3>
+<p><strong>Process for Termination:</strong></p>
+<ol>
+<li><strong>Notification:</strong> HR informs IT</li>
+<li><strong>Immediate Revocation:</strong> Deactivate all access</li>
+<li><strong>Return:</strong> Hardware and access credentials</li>
+<li><strong>Documentation:</strong> Document revocation</li>
+<li><strong>Validation:</strong> Test access (should be blocked)</li>
+</ol>
+<p><strong>Timeframe:</strong>
+- Upon termination: Immediately on last working day
+- Upon transfer: Within 24 hours
+- Upon suspicion: Immediately</p>
+<h2 id="5-privileged-access">5. Privileged Access</h2>
+<h3 id="51-administrative-accounts">5.1 Administrative Accounts</h3>
+<p><strong>Requirements:</strong>
+- Separate admin accounts (not for daily work)
+- Strong authentication (MFA required)
+- Complete logging of all actions
+- Regular review</p>
+<p><strong>Naming Convention:</strong>
+- Standard user: <code>firstname.lastname</code>
+- Admin user: <code>firstname.lastname-admin</code>
+- Service account: <code>svc-servicename</code></p>
+<h3 id="52-privileged-access-management-pam">5.2 Privileged Access Management (PAM)</h3>
+<p><strong>PAM System:</strong> [TODO: Name of PAM system]</p>
+<p><strong>Functions:</strong>
+- Just-in-Time (JIT) access
+- Session recording
+- Password vaulting
+- Automatic password rotation</p>
+<p><strong>Process:</strong>
+1. Admin requests privileged access
+2. Approval by CISO (automatic or manual)
+3. Time-limited access granted
+4. Session is recorded
+5. Automatic revocation after expiration</p>
+<h3 id="53-emergency-access">5.3 Emergency Access</h3>
+<p><strong>Break-Glass Accounts:</strong>
+- Only for emergencies
+- Password in sealed envelope
+- Usage must be documented
+- Change password after use</p>
+<p><strong>Process:</strong>
+1. Emergency identified
+2. Open envelope (with witness)
+3. Use access
+4. Document incident
+5. Change password immediately
+6. Inform CISO</p>
+<h2 id="6-access-control-for-cardholder-data">6. Access Control for Cardholder Data</h2>
+<h3 id="61-chd-access-restrictions">6.1 CHD Access Restrictions</h3>
+<p><strong>Full PAN Access:</strong>
+- Only for authorized roles
+- Documented business justification
+- CISO approval required
+- Complete logging</p>
+<p><strong>Masked PAN Access:</strong>
+- Only last 4 digits visible
+- For support and reporting
+- Standard approval sufficient</p>
+<p><strong>No PAN Access:</strong>
+- All other users
+- Developers (test data only)
+- External service providers (without necessity)</p>
+<h3 id="62-data-masking">6.2 Data Masking</h3>
+<p><strong>Masking Rules:</strong>
+- PAN: Only first 6 and last 4 digits (e.g., 123456<strong><em>*</em>*1234)
+- Expiration date: Fully masked
+- CVV: Never display (must not be stored)
+- Cardholder name: Partially masked (e.g., John D</strong>****)</p>
+<p><strong>Exceptions:</strong>
+- Payment administrators (full access)
+- Only with CISO approval
+- Complete logging</p>
+<h2 id="7-application-access-control">7. Application Access Control</h2>
+<h3 id="71-application-permissions">7.1 Application Permissions</h3>
+<p><strong>Permission Model:</strong>
+- Role-based permissions
+- Granular function rights
+- No shared accounts
+- Unique user IDs</p>
+<p><strong>Example (Payment Application):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Payment Admin</th>
+<th>Cashier</th>
+<th>Support</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Perform transaction</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Cancel transaction</td>
+<td>Yes</td>
+<td>Limited</td>
+<td>No</td>
+</tr>
+<tr>
+<td>View reports</td>
+<td>Yes</td>
+<td>No</td>
+<td>Yes (masked)</td>
+</tr>
+<tr>
+<td>Change configuration</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Manage users</td>
+<td>Yes</td>
+<td>No</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h3 id="72-api-access-control">7.2 API Access Control</h3>
+<p><strong>API Authentication:</strong>
+- API keys with expiration
+- OAuth 2.0 for external APIs
+- Mutual TLS for critical APIs
+- Rate limiting</p>
+<p><strong>API Authorization:</strong>
+- Scope-based permissions
+- Minimum required scopes
+- Logging of all API calls</p>
+<h2 id="8-database-access-control">8. Database Access Control</h2>
+<h3 id="81-database-permissions">8.1 Database Permissions</h3>
+<p><strong>Permission Model:</strong>
+- Separate DB accounts per application
+- No shared accounts
+- Least privilege for applications
+- DBA access only for administration</p>
+<p><strong>Example:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Account</th>
+<th>Type</th>
+<th>Permissions</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>app_payment</td>
+<td>Application</td>
+<td>SELECT, INSERT, UPDATE</td>
+<td>Payment application</td>
+</tr>
+<tr>
+<td>app_reporting</td>
+<td>Application</td>
+<td>SELECT</td>
+<td>Reporting</td>
+</tr>
+<tr>
+<td>dba_admin</td>
+<td>DBA</td>
+<td>ALL</td>
+<td>Administration</td>
+</tr>
+<tr>
+<td>backup_user</td>
+<td>Service</td>
+<td>SELECT</td>
+<td>Backup</td>
+</tr>
+</tbody>
+</table>
+<h3 id="82-encrypted-columns">8.2 Encrypted Columns</h3>
+<p><strong>CHD Columns:</strong>
+- PAN: Encrypted (AES-256)
+- Access only via decryption function
+- Logging of all decryptions
+- Only authorized accounts</p>
+<h2 id="9-network-access-control">9. Network Access Control</h2>
+<h3 id="91-network-access">9.1 Network Access</h3>
+<p><strong>Access Methods:</strong>
+- VPN for remote access
+- Jump server for admin access
+- No direct internet connection to CDE</p>
+<p><strong>Authentication:</strong>
+- Multi-Factor Authentication (MFA)
+- Certificate-based authentication
+- Strong passwords</p>
+<h3 id="92-network-segmentation">9.2 Network Segmentation</h3>
+<p><strong>Access Control Between Segments:</strong>
+- Firewall rules
+- ACLs on switches
+- Micro-segmentation</p>
+<h2 id="10-physical-access-control">10. Physical Access Control</h2>
+<h3 id="101-data-center">10.1 Data Center</h3>
+<p><strong>Access Control:</strong>
+- Badge system
+- Biometric authentication
+- Escort requirement for visitors
+- Logging of all access</p>
+<p><strong>Authorized Persons:</strong>
+- Data center personnel
+- Authorized administrators
+- Maintenance personnel (with escort)</p>
+<h3 id="102-offices-with-cde-access">10.2 Offices with CDE Access</h3>
+<p><strong>Access Control:</strong>
+- Locked rooms
+- Badge access
+- Visitor log</p>
+<h2 id="11-service-provider-access-control">11. Service Provider Access Control</h2>
+<h3 id="111-service-provider-access">11.1 Service Provider Access</h3>
+<p><strong>Requirements:</strong>
+- Separate accounts for each service provider
+- Time-limited access
+- Complete logging
+- PCI-DSS AOC required</p>
+<p><strong>Approval Process:</strong>
+1. Service provider contract with PCI clauses
+2. AOC validation
+3. CISO approval
+4. Time-limited access
+5. Monitoring during access</p>
+<h3 id="112-remote-support">11.2 Remote Support</h3>
+<p><strong>Process:</strong>
+- Only after approval
+- Session recording
+- Accompanied by internal admin
+- Immediate revocation after completion</p>
+<h2 id="12-access-control-monitoring">12. Access Control Monitoring</h2>
+<h3 id="121-logging">12.1 Logging</h3>
+<p><strong>Logged Events:</strong>
+- Successful logins
+- Failed logins
+- Privileged actions
+- Access to CHD
+- Permission changes</p>
+<p><strong>Log Retention:</strong> [TODO: 90 days online, 1 year archive]</p>
+<h3 id="122-alerting">12.2 Alerting</h3>
+<table>
+<thead>
+<tr>
+<th>Alert</th>
+<th>Condition</th>
+<th>Severity</th>
+<th>Notification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Multiple failed logins</td>
+<td>&gt;5 in 15 min</td>
+<td>Medium</td>
+<td>SOC</td>
+</tr>
+<tr>
+<td>Admin login outside business hours</td>
+<td>After 10 PM</td>
+<td>Medium</td>
+<td>SOC + Manager</td>
+</tr>
+<tr>
+<td>CHD access</td>
+<td>Any access</td>
+<td>Low</td>
+<td>SIEM</td>
+</tr>
+<tr>
+<td>Permission change</td>
+<td>Any change</td>
+<td>Medium</td>
+<td>IT Security</td>
+</tr>
+</tbody>
+</table>
+<h2 id="13-access-control-reviews">13. Access Control Reviews</h2>
+<h3 id="131-quarterly-review">13.1 Quarterly Review</h3>
+<p><strong>Review Process:</strong></p>
+<ol>
+<li><strong>User Review:</strong> All users with CDE access</li>
+<li><strong>Permission Review:</strong> Validate all permissions</li>
+<li><strong>Inactive Accounts:</strong> Identify and deactivate</li>
+<li><strong>Documentation:</strong> Document results</li>
+<li><strong>Approval:</strong> CISO confirmation</li>
+</ol>
+<p><strong>Last Review:</strong> [TODO: Date]<br />
+<strong>Next Review:</strong> [TODO: Date]<br />
+<strong>Responsible:</strong> [TODO: IT Security Team]</p>
+<h3 id="132-recertification">13.2 Recertification</h3>
+<p><strong>Annual Recertification:</strong>
+- All users with CDE access
+- Manager confirms business necessity
+- IT Security validates permissions
+- CISO approves</p>
+<h2 id="14-compliance-validation">14. Compliance Validation</h2>
+<h3 id="141-validation-activities">14.1 Validation Activities</h3>
+<p><strong>Quarterly:</strong>
+- Access control review
+- Inactive account cleanup
+- Permission documentation</p>
+<p><strong>Annually:</strong>
+- Complete recertification
+- Penetration testing
+- Compliance audit</p>
+<h3 id="142-validation-documentation">14.2 Validation Documentation</h3>
+<p><strong>Required Evidence:</strong>
+- Access control policies
+- Permission matrix
+- Approval evidence
+- Review protocols
+- Recertification evidence</p>
+<hr />
+<p><strong>Document History:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Initial creation</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0100_Firewall_Configuration.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0410_User_Authentication.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

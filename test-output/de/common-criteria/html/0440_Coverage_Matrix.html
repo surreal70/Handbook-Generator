@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0440 - Coverage Matrix</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0440</div>
+            <h1>Coverage Matrix</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0430_SFR_Dependencies.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0500_TOE_Summary_Specification.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="coverage-matrix">Coverage Matrix</h1>
+<p><strong>Dokument-ID:</strong> 0440<br />
+<strong>Owner:</strong> {{ meta.owner }}<br />
+<strong>Version:</strong> {{ meta.version }}<br />
+<strong>Status:</strong> Entwurf / In Review / Freigegeben<br />
+<strong>Klassifizierung:</strong> Intern / Vertraulich / Streng vertraulich<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.date }}  </p>
+<hr />
+<blockquote>
+<p><strong>Hinweis:</strong> Dieses Dokument ist ein Template. Ersetze alle <code>[TODO]</code>-Platzhalter und passe die Inhalte an dein spezifisches Target of Evaluation (TOE) an.</p>
+</blockquote>
+<h2 id="1-einleitung">1. Einleitung</h2>
+<p>Dieses Dokument stellt umfassende Coverage Matrices bereit, die die Rückverfolgbarkeit zwischen allen Elementen des Security Target demonstrieren:</p>
+<ul>
+<li>Bedrohungen (Threats)</li>
+<li>Organisatorische Sicherheitsrichtlinien (OSPs)</li>
+<li>Annahmen (Assumptions)</li>
+<li>Sicherheitsziele (Security Objectives)</li>
+<li>Sicherheitsanforderungen (Security Requirements)</li>
+</ul>
+<p>Die Matrices gewährleisten vollständige Abdeckung und Konsistenz des Security Target.</p>
+<h2 id="2-bedrohungen-sicherheitsziele">2. Bedrohungen → Sicherheitsziele</h2>
+<h3 id="21-threat-coverage-matrix">2.1 Threat Coverage Matrix</h3>
+<p>Diese Matrix zeigt, wie jede identifizierte Bedrohung durch Sicherheitsziele adressiert wird.</p>
+<table>
+<thead>
+<tr>
+<th>Bedrohung</th>
+<th>Beschreibung</th>
+<th>Adressierende Sicherheitsziele</th>
+<th>Abdeckung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T.UNAUTH_ACCESS</td>
+<td>Unautorisierter Zugriff auf TOE-Funktionen</td>
+<td>O.ACCESS, O.IDENTIFY, O.AUTHENTICATE</td>
+<td>✓ Vollständig</td>
+</tr>
+<tr>
+<td>T.DATA_DISCLOSURE</td>
+<td>Unbefugte Offenlegung von Daten</td>
+<td>O.CRYPTO, O.ACCESS</td>
+<td>✓ Vollständig</td>
+</tr>
+<tr>
+<td>T.DATA_MANIPULATION</td>
+<td>Unbefugte Manipulation von Daten</td>
+<td>O.INTEGRITY, O.ACCESS, O.AUDIT</td>
+<td>✓ Vollständig</td>
+</tr>
+<tr>
+<td>T.MASQUERADE</td>
+<td>Identitätsvortäuschung</td>
+<td>O.AUTHENTICATE, O.IDENTIFY</td>
+<td>✓ Vollständig</td>
+</tr>
+<tr>
+<td>T.AUDIT_COMPROMISE</td>
+<td>Kompromittierung von Audit-Daten</td>
+<td>O.AUDIT, O.PROTECT_TSF</td>
+<td>✓ Vollständig</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-vollstandigkeitsanalyse">2.2 Vollständigkeitsanalyse</h3>
+<p><strong>Statistik:</strong>
+- Anzahl identifizierter Bedrohungen: [TODO: X]
+- Anzahl vollständig adressierter Bedrohungen: [TODO: X]
+- Anzahl teilweise adressierter Bedrohungen: [TODO: 0]
+- Anzahl nicht adressierter Bedrohungen: [TODO: 0]</p>
+<p><strong>Status:</strong> [TODO: ✓ Alle Bedrohungen adressiert / ⚠ Lücken vorhanden]</p>
+<h3 id="23-nicht-adressierte-bedrohungen">2.3 Nicht adressierte Bedrohungen</h3>
+<p>[TODO: Falls Bedrohungen nicht vollständig adressiert sind, begründe dies]</p>
+<p><strong>Beispiel (falls zutreffend):</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="n">Bedrohung</span><span class="o">:</span><span class="w"> </span><span class="n">T</span><span class="o">.</span><span class="na">PHYSICAL_ATTACK</span>
+<span class="n">Status</span><span class="o">:</span><span class="w"> </span><span class="n">Nicht</span><span class="w"> </span><span class="n">durch</span><span class="w"> </span><span class="n">TOE</span><span class="w"> </span><span class="n">adressiert</span>
+<span class="n">Begründung</span><span class="o">:</span><span class="w"> </span><span class="n">Physische</span><span class="w"> </span><span class="n">Angriffe</span><span class="w"> </span><span class="n">werden</span><span class="w"> </span><span class="n">durch</span><span class="w"> </span><span class="n">Umgebungsannahmen</span><span class="w"> </span><span class="o">(</span><span class="n">A</span><span class="o">.</span><span class="na">PHYSICAL_PROTECTION</span><span class="o">)</span><span class="w"> </span>
+<span class="n">und</span><span class="w"> </span><span class="n">organisatorische</span><span class="w"> </span><span class="n">Maßnahmen</span><span class="w"> </span><span class="n">adressiert</span><span class="o">,</span><span class="w"> </span><span class="n">nicht</span><span class="w"> </span><span class="n">durch</span><span class="w"> </span><span class="n">TOE</span><span class="o">-</span><span class="n">Funktionalität</span><span class="o">.</span>
+</code></pre></div>
+
+<h2 id="3-osps-sicherheitsziele">3. OSPs → Sicherheitsziele</h2>
+<h3 id="31-osp-coverage-matrix">3.1 OSP Coverage Matrix</h3>
+<p>Diese Matrix zeigt, wie organisatorische Sicherheitsrichtlinien durch Sicherheitsziele umgesetzt werden.</p>
+<table>
+<thead>
+<tr>
+<th>OSP</th>
+<th>Beschreibung</th>
+<th>Adressierende Sicherheitsziele</th>
+<th>Abdeckung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P.ACCOUNTABILITY</td>
+<td>Benutzeraktionen müssen nachvollziehbar sein</td>
+<td>O.AUDIT, O.IDENTIFY</td>
+<td>✓ Vollständig</td>
+</tr>
+<tr>
+<td>P.AUTHORIZED_USERS</td>
+<td>Nur autorisierte Benutzer dürfen auf TOE zugreifen</td>
+<td>O.ACCESS, O.AUTHENTICATE</td>
+<td>✓ Vollständig</td>
+</tr>
+<tr>
+<td>P.CRYPTOGRAPHY</td>
+<td>Sensible Daten müssen verschlüsselt werden</td>
+<td>O.CRYPTO</td>
+<td>✓ Vollständig</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-vollstandigkeitsanalyse">3.2 Vollständigkeitsanalyse</h3>
+<p><strong>Statistik:</strong>
+- Anzahl definierter OSPs: [TODO: X]
+- Anzahl vollständig umgesetzter OSPs: [TODO: X]
+- Anzahl teilweise umgesetzter OSPs: [TODO: 0]
+- Anzahl nicht umgesetzter OSPs: [TODO: 0]</p>
+<p><strong>Status:</strong> [TODO: ✓ Alle OSPs umgesetzt / ⚠ Lücken vorhanden]</p>
+<h2 id="4-annahmen-sicherheitsziele-fur-die-umgebung">4. Annahmen → Sicherheitsziele für die Umgebung</h2>
+<h3 id="41-assumption-coverage-matrix">4.1 Assumption Coverage Matrix</h3>
+<p>Diese Matrix zeigt, wie Annahmen durch Sicherheitsziele für die Umgebung adressiert werden.</p>
+<table>
+<thead>
+<tr>
+<th>Annahme</th>
+<th>Beschreibung</th>
+<th>Adressierende Umgebungsziele</th>
+<th>Abdeckung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A.PHYSICAL_PROTECTION</td>
+<td>TOE ist physisch geschützt</td>
+<td>OE.PHYSICAL</td>
+<td>✓ Vollständig</td>
+</tr>
+<tr>
+<td>A.TRUSTED_ADMIN</td>
+<td>Administratoren sind vertrauenswürdig</td>
+<td>OE.ADMIN_TRAINING, OE.ADMIN_VETTING</td>
+<td>✓ Vollständig</td>
+</tr>
+<tr>
+<td>A.NETWORK_PROTECTION</td>
+<td>Netzwerk ist gegen externe Angriffe geschützt</td>
+<td>OE.NETWORK_SECURITY</td>
+<td>✓ Vollständig</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-vollstandigkeitsanalyse">4.2 Vollständigkeitsanalyse</h3>
+<p><strong>Statistik:</strong>
+- Anzahl definierter Annahmen: [TODO: X]
+- Anzahl vollständig adressierter Annahmen: [TODO: X]
+- Anzahl teilweise adressierter Annahmen: [TODO: 0]
+- Anzahl nicht adressierter Annahmen: [TODO: 0]</p>
+<p><strong>Status:</strong> [TODO: ✓ Alle Annahmen adressiert / ⚠ Lücken vorhanden]</p>
+<h2 id="5-sicherheitsziele-fur-toe-sfrs">5. Sicherheitsziele für TOE → SFRs</h2>
+<h3 id="51-security-objectives-to-sfrs-matrix">5.1 Security Objectives to SFRs Matrix</h3>
+<p>Diese Matrix zeigt, wie Sicherheitsziele für das TOE durch Security Functional Requirements erfüllt werden.</p>
+<table>
+<thead>
+<tr>
+<th>Sicherheitsziel</th>
+<th>Beschreibung</th>
+<th>Erfüllende SFRs</th>
+<th>Abdeckung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O.ACCESS</td>
+<td>Zugriffskontrolle auf TOE-Ressourcen</td>
+<td>FDP_ACC.1, FDP_ACF.1, FMT_MSA.1, FMT_MSA.3</td>
+<td>✓ Vollständig</td>
+</tr>
+<tr>
+<td>O.IDENTIFY</td>
+<td>Identifikation von Benutzern</td>
+<td>FIA_UID.1</td>
+<td>✓ Vollständig</td>
+</tr>
+<tr>
+<td>O.AUTHENTICATE</td>
+<td>Authentisierung von Benutzern</td>
+<td>FIA_UAU.1, FIA_AFL.1</td>
+<td>✓ Vollständig</td>
+</tr>
+<tr>
+<td>O.AUDIT</td>
+<td>Audit-Aufzeichnung sicherheitsrelevanter Ereignisse</td>
+<td>FAU_GEN.1, FAU_SAR.1, FPT_STM.1</td>
+<td>✓ Vollständig</td>
+</tr>
+<tr>
+<td>O.CRYPTO</td>
+<td>Kryptographischer Schutz sensibler Daten</td>
+<td>FCS_CKM.1, FCS_COP.1</td>
+<td>✓ Vollständig</td>
+</tr>
+<tr>
+<td>O.INTEGRITY</td>
+<td>Schutz der Datenintegrität</td>
+<td>FDP_SDI.1, FPT_TST.1</td>
+<td>✓ Vollständig</td>
+</tr>
+<tr>
+<td>O.PROTECT_TSF</td>
+<td>Schutz der TSF-Funktionalität</td>
+<td>FPT_STM.1, FPT_TST.1</td>
+<td>✓ Vollständig</td>
+</tr>
+<tr>
+<td>O.MANAGE</td>
+<td>Sichere Verwaltung des TOE</td>
+<td>FMT_SMF.1, FMT_SMR.1, FMT_MOF.1</td>
+<td>✓ Vollständig</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-vollstandigkeitsanalyse">5.2 Vollständigkeitsanalyse</h3>
+<p><strong>Statistik:</strong>
+- Anzahl Sicherheitsziele für TOE: [TODO: X]
+- Anzahl vollständig erfüllter Ziele: [TODO: X]
+- Anzahl teilweise erfüllter Ziele: [TODO: 0]
+- Anzahl nicht erfüllter Ziele: [TODO: 0]</p>
+<p><strong>Status:</strong> [TODO: ✓ Alle Ziele erfüllt / ⚠ Lücken vorhanden]</p>
+<h3 id="53-nicht-erfullte-sicherheitsziele">5.3 Nicht erfüllte Sicherheitsziele</h3>
+<p>[TODO: Falls Sicherheitsziele nicht vollständig durch SFRs erfüllt sind, begründe dies]</p>
+<h2 id="6-umgekehrte-ruckverfolgbarkeit-sfrs-sicherheitsziele">6. Umgekehrte Rückverfolgbarkeit: SFRs → Sicherheitsziele</h2>
+<h3 id="61-sfrs-to-security-objectives-matrix">6.1 SFRs to Security Objectives Matrix</h3>
+<p>Diese Matrix zeigt die umgekehrte Rückverfolgbarkeit: Jede SFR muss mindestens ein Sicherheitsziel erfüllen.</p>
+<table>
+<thead>
+<tr>
+<th>SFR</th>
+<th>Erfüllte Sicherheitsziele</th>
+<th>Notwendigkeit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FAU_GEN.1</td>
+<td>O.AUDIT</td>
+<td>✓ Notwendig</td>
+</tr>
+<tr>
+<td>FAU_SAR.1</td>
+<td>O.AUDIT</td>
+<td>✓ Notwendig</td>
+</tr>
+<tr>
+<td>FCS_CKM.1</td>
+<td>O.CRYPTO</td>
+<td>✓ Notwendig</td>
+</tr>
+<tr>
+<td>FCS_COP.1</td>
+<td>O.CRYPTO</td>
+<td>✓ Notwendig</td>
+</tr>
+<tr>
+<td>FDP_ACC.1</td>
+<td>O.ACCESS</td>
+<td>✓ Notwendig</td>
+</tr>
+<tr>
+<td>FDP_ACF.1</td>
+<td>O.ACCESS</td>
+<td>✓ Notwendig</td>
+</tr>
+<tr>
+<td>FDP_SDI.1</td>
+<td>O.INTEGRITY</td>
+<td>✓ Notwendig</td>
+</tr>
+<tr>
+<td>FIA_AFL.1</td>
+<td>O.AUTHENTICATE</td>
+<td>✓ Notwendig</td>
+</tr>
+<tr>
+<td>FIA_UAU.1</td>
+<td>O.AUTHENTICATE</td>
+<td>✓ Notwendig</td>
+</tr>
+<tr>
+<td>FIA_UID.1</td>
+<td>O.IDENTIFY</td>
+<td>✓ Notwendig</td>
+</tr>
+<tr>
+<td>FMT_MOF.1</td>
+<td>O.MANAGE</td>
+<td>✓ Notwendig</td>
+</tr>
+<tr>
+<td>FMT_MSA.1</td>
+<td>O.ACCESS, O.MANAGE</td>
+<td>✓ Notwendig</td>
+</tr>
+<tr>
+<td>FMT_MSA.3</td>
+<td>O.ACCESS</td>
+<td>✓ Notwendig</td>
+</tr>
+<tr>
+<td>FMT_SMF.1</td>
+<td>O.MANAGE</td>
+<td>✓ Notwendig</td>
+</tr>
+<tr>
+<td>FMT_SMR.1</td>
+<td>O.MANAGE</td>
+<td>✓ Notwendig</td>
+</tr>
+<tr>
+<td>FPT_STM.1</td>
+<td>O.AUDIT, O.PROTECT_TSF</td>
+<td>✓ Notwendig</td>
+</tr>
+<tr>
+<td>FPT_TST.1</td>
+<td>O.INTEGRITY, O.PROTECT_TSF</td>
+<td>✓ Notwendig</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="62-uberflussige-sfrs">6.2 Überflüssige SFRs</h3>
+<p>[TODO: Identifiziere SFRs, die kein Sicherheitsziel erfüllen (sollte keine geben)]</p>
+<p><strong>Status:</strong> [TODO: ✓ Keine überflüssigen SFRs / ⚠ Überflüssige SFRs identifiziert]</p>
+<h2 id="7-vollstandige-traceability-matrix">7. Vollständige Traceability Matrix</h2>
+<h3 id="71-end-to-end-traceability">7.1 End-to-End Traceability</h3>
+<p>Diese Matrix zeigt die vollständige Rückverfolgbarkeit von Bedrohungen bis zu SFRs.</p>
+<table>
+<thead>
+<tr>
+<th>Bedrohung/OSP/Annahme</th>
+<th>Sicherheitsziel</th>
+<th>SFR</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T.UNAUTH_ACCESS</td>
+<td>O.ACCESS</td>
+<td>FDP_ACC.1, FDP_ACF.1</td>
+<td>Zugriffskontrolle verhindert unautorisierten Zugriff</td>
+</tr>
+<tr>
+<td>T.UNAUTH_ACCESS</td>
+<td>O.IDENTIFY</td>
+<td>FIA_UID.1</td>
+<td>Identifikation erforderlich vor Zugriff</td>
+</tr>
+<tr>
+<td>T.UNAUTH_ACCESS</td>
+<td>O.AUTHENTICATE</td>
+<td>FIA_UAU.1</td>
+<td>Authentisierung verifiziert Identität</td>
+</tr>
+<tr>
+<td>T.DATA_DISCLOSURE</td>
+<td>O.CRYPTO</td>
+<td>FCS_COP.1</td>
+<td>Verschlüsselung schützt vor Offenlegung</td>
+</tr>
+<tr>
+<td>T.DATA_DISCLOSURE</td>
+<td>O.ACCESS</td>
+<td>FDP_ACC.1</td>
+<td>Zugriffskontrolle begrenzt Datenzugriff</td>
+</tr>
+<tr>
+<td>T.DATA_MANIPULATION</td>
+<td>O.INTEGRITY</td>
+<td>FDP_SDI.1</td>
+<td>Integritätsprüfung erkennt Manipulation</td>
+</tr>
+<tr>
+<td>T.DATA_MANIPULATION</td>
+<td>O.ACCESS</td>
+<td>FDP_ACC.1</td>
+<td>Zugriffskontrolle verhindert unbefugte Änderungen</td>
+</tr>
+<tr>
+<td>T.DATA_MANIPULATION</td>
+<td>O.AUDIT</td>
+<td>FAU_GEN.1</td>
+<td>Audit-Aufzeichnung dokumentiert Änderungen</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="8-coverage-gaps-analysis">8. Coverage Gaps Analysis</h2>
+<h3 id="81-identifizierte-lucken">8.1 Identifizierte Lücken</h3>
+<p>[TODO: Identifiziere und dokumentiere Lücken in der Abdeckung]</p>
+<p><strong>Lückentypen:</strong>
+- Bedrohungen ohne Sicherheitsziele
+- Sicherheitsziele ohne SFRs
+- SFRs ohne Sicherheitsziele
+- OSPs ohne Umsetzung</p>
+<p><strong>Status:</strong> [TODO: ✓ Keine Lücken / ⚠ X Lücken identifiziert]</p>
+<h3 id="82-begrundung-fur-lucken">8.2 Begründung für Lücken</h3>
+<p>[TODO: Für jede identifizierte Lücke, gebe eine Begründung]</p>
+<p><strong>Beispiel (falls zutreffend):</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="n">Lücke</span><span class="o">:</span><span class="w"> </span><span class="n">Bedrohung</span><span class="w"> </span><span class="n">T</span><span class="o">.</span><span class="na">PHYSICAL_ATTACK</span><span class="w"> </span><span class="n">hat</span><span class="w"> </span><span class="n">kein</span><span class="w"> </span><span class="n">TOE</span><span class="o">-</span><span class="n">Sicherheitsziel</span>
+<span class="n">Begründung</span><span class="o">:</span><span class="w"> </span><span class="n">Physische</span><span class="w"> </span><span class="n">Bedrohungen</span><span class="w"> </span><span class="n">werden</span><span class="w"> </span><span class="n">durch</span><span class="w"> </span><span class="n">Umgebungsannahmen</span><span class="w"> </span><span class="n">und</span><span class="w"> </span><span class="o">-</span><span class="n">ziele</span><span class="w"> </span><span class="n">adressiert</span><span class="o">,</span>
+<span class="n">nicht</span><span class="w"> </span><span class="n">durch</span><span class="w"> </span><span class="n">TOE</span><span class="o">-</span><span class="n">Funktionalität</span><span class="o">.</span><span class="w"> </span><span class="n">Siehe</span><span class="w"> </span><span class="n">A</span><span class="o">.</span><span class="na">PHYSICAL_PROTECTION</span><span class="w"> </span><span class="n">und</span><span class="w"> </span><span class="n">OE</span><span class="o">.</span><span class="na">PHYSICAL</span><span class="o">.</span>
+</code></pre></div>
+
+<h2 id="9-visualisierung">9. Visualisierung</h2>
+<h3 id="91-traceability-diagram">9.1 Traceability Diagram</h3>
+<p>[TODO: Erstelle ein Diagramm, das die Rückverfolgbarkeit visualisiert]</p>
+<div class="codehilite"><pre><span></span><code>Beispiel (als Text):
+
+Bedrohungen          Sicherheitsziele         SFRs
+─────────────        ─────────────────        ────────────
+T.UNAUTH_ACCESS ───┬─&gt; O.ACCESS ──────────┬─&gt; FDP_ACC.1
+                   │                      └─&gt; FDP_ACF.1
+                   ├─&gt; O.IDENTIFY ─────────&gt; FIA_UID.1
+                   └─&gt; O.AUTHENTICATE ────&gt; FIA_UAU.1
+
+T.DATA_DISCLOSURE ─┬─&gt; O.CRYPTO ──────────┬─&gt; FCS_CKM.1
+                   │                      └─&gt; FCS_COP.1
+                   └─&gt; O.ACCESS ──────────&gt; FDP_ACC.1
+
+T.DATA_MANIPULATION┬─&gt; O.INTEGRITY ───────&gt; FDP_SDI.1
+                   ├─&gt; O.ACCESS ──────────&gt; FDP_ACC.1
+                   └─&gt; O.AUDIT ───────────┬─&gt; FAU_GEN.1
+                                          └─&gt; FPT_STM.1
+</code></pre></div>
+
+<h2 id="10-validierung-und-wartung">10. Validierung und Wartung</h2>
+<h3 id="101-validierungscheckliste">10.1 Validierungscheckliste</h3>
+<ul>
+<li>[ ] Alle Bedrohungen sind durch Sicherheitsziele adressiert</li>
+<li>[ ] Alle OSPs sind durch Sicherheitsziele umgesetzt</li>
+<li>[ ] Alle Annahmen sind durch Umgebungsziele adressiert</li>
+<li>[ ] Alle Sicherheitsziele für TOE sind durch SFRs erfüllt</li>
+<li>[ ] Alle SFRs erfüllen mindestens ein Sicherheitsziel</li>
+<li>[ ] Keine Lücken in der Abdeckung (oder begründet)</li>
+<li>[ ] Traceability ist bidirektional vollständig</li>
+</ul>
+<h3 id="102-wartungshinweise">10.2 Wartungshinweise</h3>
+<p><strong>Bei Änderungen:</strong>
+- Neue Bedrohung → Sicherheitsziel hinzufügen → SFR hinzufügen
+- Neue SFR → Sicherheitsziel zuordnen → Bedrohung/OSP zuordnen
+- Entfernte Bedrohung → Prüfe, ob Sicherheitsziel noch benötigt wird
+- Entfernte SFR → Prüfe, ob Sicherheitsziel noch erfüllt ist</p>
+<p><strong>Aktualisierungsfrequenz:</strong>
+- Bei jeder Änderung an Bedrohungen, Zielen oder Anforderungen
+- Vor jedem Review-Meilenstein
+- Vor Einreichung zur Evaluierung</p>
+<h2 id="11-zusammenfassung">11. Zusammenfassung</h2>
+<h3 id="111-coverage-summary">11.1 Coverage Summary</h3>
+<p><strong>Vollständigkeit:</strong>
+- ✓ Alle Bedrohungen adressiert: [TODO: X/X]
+- ✓ Alle OSPs umgesetzt: [TODO: X/X]
+- ✓ Alle Annahmen adressiert: [TODO: X/X]
+- ✓ Alle Sicherheitsziele erfüllt: [TODO: X/X]
+- ✓ Alle SFRs notwendig: [TODO: X/X]</p>
+<p><strong>Gesamtstatus:</strong> [TODO: ✓ Vollständig / ⚠ Lücken vorhanden]</p>
+<h3 id="112-audit-bereitschaft">11.2 Audit-Bereitschaft</h3>
+<p>[TODO: Bestätige Bereitschaft für Audit]</p>
+<p>Die Coverage Matrices demonstrieren vollständige und konsistente Rückverfolgbarkeit zwischen allen Elementen des Security Target. Das TOE ist bereit für die Evaluierung.</p>
+<h2 id="12-referenzen">12. Referenzen</h2>
+<ul>
+<li>Dokument 0200: Security Problem Definition</li>
+<li>Dokument 0300: Security Objectives</li>
+<li>Dokument 0400: Security Requirements</li>
+<li>Dokument 0420: Requirements Rationale</li>
+<li>Dokument 0430: SFR Dependencies</li>
+<li>ISO/IEC 15408-1:2022 - Introduction and general model</li>
+<li>ISO/IEC 15408-2:2022 - Security functional requirements</li>
+<li>ISO/IEC 15408-3:2022 - Security assurance requirements</li>
+</ul>
+<hr />
+<p><strong>Nächste Schritte:</strong>
+1. Vervollständige alle [TODO]-Platzhalter
+2. Erstelle vollständige Coverage Matrices
+3. Identifiziere und begründe Lücken
+4. Erstelle Traceability Diagram
+5. Führe Peer-Review durch
+6. Halte Matrices bei Änderungen aktuell</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0430_SFR_Dependencies.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0500_TOE_Summary_Specification.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

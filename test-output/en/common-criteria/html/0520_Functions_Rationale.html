@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0520 - Functions Rationale</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0520</div>
+            <h1>Functions Rationale</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0510_Assurance_Measures.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0530_Coverage_Matrix.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="functions-rationale">Functions Rationale</h1>
+<p><strong>Document-ID:</strong> 0520<br />
+<strong>Owner:</strong> {{ meta.owner }}<br />
+<strong>Version:</strong> {{ meta.version }}<br />
+<strong>Status:</strong> Draft / In Review / Approved<br />
+<strong>Classification:</strong> Internal / Confidential / Strictly Confidential<br />
+<strong>Last Update:</strong> {{ meta.date }}  </p>
+<hr />
+<blockquote>
+<p><strong>Note:</strong> This document is a template. Replace all <code>[TODO]</code> placeholders and adapt the content to your specific TOE (Target of Evaluation).</p>
+</blockquote>
+<h2 id="1-introduction">1. Introduction</h2>
+<h3 id="11-purpose">1.1 Purpose</h3>
+<p>This document provides the rationale for the mapping of TOE Security Functions (TSFs) to Security Functional Requirements (SFRs) for <strong>[TODO: TOE Name]</strong>.</p>
+<p>The Functions Rationale demonstrates that:
+- Each SFR is fulfilled by at least one TSF
+- The TSFs implement the SFRs completely and correctly
+- No gaps exist in the security functionality
+- The mapping between TSFs and SFRs is traceable</p>
+<h3 id="12-structure">1.2 Structure</h3>
+<p>This document is structured as follows:</p>
+<ul>
+<li><strong>Chapter 2</strong>: Overview of TSF ↔ SFR mapping</li>
+<li><strong>Chapter 3</strong>: Detailed rationale for each SFR</li>
+<li><strong>Chapter 4</strong>: Completeness analysis</li>
+<li><strong>Chapter 5</strong>: Summary</li>
+</ul>
+<h2 id="2-mapping-overview">2. Mapping Overview</h2>
+<h3 id="21-mapping-matrix">2.1 Mapping Matrix</h3>
+<p>The following matrix shows the mapping between TSFs and SFRs:</p>
+<table>
+<thead>
+<tr>
+<th>SFR-ID</th>
+<th>SFR-Name</th>
+<th>TSF-1</th>
+<th>TSF-2</th>
+<th>TSF-3</th>
+<th>TSF-4</th>
+<th>TSF-5</th>
+<th>TSF-6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>●</td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td></td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td></td>
+<td></td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td></td>
+<td></td>
+<td>●</td>
+<td>●</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legend:</strong>
+- ● = TSF fulfills this SFR (completely or partially)</p>
+<h3 id="22-tsf-overview">2.2 TSF Overview</h3>
+<table>
+<thead>
+<tr>
+<th>TSF-ID</th>
+<th>TSF-Name</th>
+<th>Number of Associated SFRs</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TSF-1</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO: Brief description]</td>
+</tr>
+<tr>
+<td>TSF-2</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO: Brief description]</td>
+</tr>
+<tr>
+<td>TSF-3</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO: Brief description]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-detailed-rationale">3. Detailed Rationale</h2>
+<h3 id="31-security-audit-fau">3.1 Security Audit (FAU)</h3>
+<h4 id="311-fau_gen1-audit-data-generation">3.1.1 FAU_GEN.1: Audit Data Generation</h4>
+<p><strong>SFR Description:</strong>
+[TODO: Brief description of the SFR. Example:]
+The TOE must be able to generate audit records for security-relevant events.</p>
+<p><strong>Associated TSFs:</strong>
+- TSF-[TODO]: [TODO: TSF Name]</p>
+<p><strong>Rationale:</strong></p>
+<p>[TODO: Detailed rationale. Example:]</p>
+<p>TSF-3 (Audit Function) fulfills FAU_GEN.1 through the following mechanisms:</p>
+<ol>
+<li><strong>Event Detection</strong>: The audit function monitors all security-relevant events, including:</li>
+<li>Authentication attempts (successful and failed)</li>
+<li>Access to protected resources</li>
+<li>Changes to security parameters</li>
+<li>
+<p>Administrative actions</p>
+</li>
+<li>
+<p><strong>Audit Records</strong>: For each event, an audit record is generated containing:</p>
+</li>
+<li>Timestamp</li>
+<li>Event type</li>
+<li>User ID</li>
+<li>Result (Success/Failure)</li>
+<li>
+<p>Additional event-specific information</p>
+</li>
+<li>
+<p><strong>Completeness</strong>: All events required by FAU_GEN.1 are captured.</p>
+</li>
+</ol>
+<p><strong>Fulfillment Level:</strong> Completely fulfilled ✓</p>
+<h4 id="312-fau_sar1-audit-review">3.1.2 FAU_SAR.1: Audit Review</h4>
+<p><strong>SFR Description:</strong>
+[TODO: Description of the SFR]</p>
+<p><strong>Associated TSFs:</strong>
+- TSF-[TODO]: [TODO: TSF Name]</p>
+<p><strong>Rationale:</strong></p>
+<p>[TODO: Detailed rationale analogous to 3.1.1]</p>
+<p><strong>Fulfillment Level:</strong> [TODO: Completely fulfilled / Partially fulfilled / With limitations]</p>
+<h3 id="32-cryptographic-support-fcs">3.2 Cryptographic Support (FCS)</h3>
+<h4 id="321-fcs_ckm1-cryptographic-key-generation">3.2.1 FCS_CKM.1: Cryptographic Key Generation</h4>
+<p><strong>SFR Description:</strong>
+[TODO: Description of the SFR]</p>
+<p><strong>Associated TSFs:</strong>
+- TSF-[TODO]: [TODO: TSF Name]</p>
+<p><strong>Rationale:</strong></p>
+<p>[TODO: Detailed rationale]</p>
+<p><strong>Fulfillment Level:</strong> [TODO]</p>
+<h4 id="322-fcs_cop1-cryptographic-operation">3.2.2 FCS_COP.1: Cryptographic Operation</h4>
+<p><strong>SFR Description:</strong>
+[TODO: Description of the SFR]</p>
+<p><strong>Associated TSFs:</strong>
+- TSF-[TODO]: [TODO: TSF Name]</p>
+<p><strong>Rationale:</strong></p>
+<p>[TODO: Detailed rationale]</p>
+<p><strong>Fulfillment Level:</strong> [TODO]</p>
+<h3 id="33-user-data-protection-fdp">3.3 User Data Protection (FDP)</h3>
+<h4 id="331-fdp_acc1-subset-access-control">3.3.1 FDP_ACC.1: Subset Access Control</h4>
+<p><strong>SFR Description:</strong>
+[TODO: Description of the SFR]</p>
+<p><strong>Associated TSFs:</strong>
+- TSF-[TODO]: [TODO: TSF Name]</p>
+<p><strong>Rationale:</strong></p>
+<p>[TODO: Detailed rationale]</p>
+<p><strong>Fulfillment Level:</strong> [TODO]</p>
+<h4 id="332-fdp_acf1-security-attribute-based-access-control">3.3.2 FDP_ACF.1: Security Attribute Based Access Control</h4>
+<p><strong>SFR Description:</strong>
+[TODO: Description of the SFR]</p>
+<p><strong>Associated TSFs:</strong>
+- TSF-[TODO]: [TODO: TSF Name]</p>
+<p><strong>Rationale:</strong></p>
+<p>[TODO: Detailed rationale]</p>
+<p><strong>Fulfillment Level:</strong> [TODO]</p>
+<h3 id="34-identification-and-authentication-fia">3.4 Identification and Authentication (FIA)</h3>
+<h4 id="341-fia_uid1-timing-of-identification">3.4.1 FIA_UID.1: Timing of Identification</h4>
+<p><strong>SFR Description:</strong>
+[TODO: Description of the SFR]</p>
+<p><strong>Associated TSFs:</strong>
+- TSF-[TODO]: [TODO: TSF Name]</p>
+<p><strong>Rationale:</strong></p>
+<p>[TODO: Detailed rationale]</p>
+<p><strong>Fulfillment Level:</strong> [TODO]</p>
+<h4 id="342-fia_uau1-timing-of-authentication">3.4.2 FIA_UAU.1: Timing of Authentication</h4>
+<p><strong>SFR Description:</strong>
+[TODO: Description of the SFR]</p>
+<p><strong>Associated TSFs:</strong>
+- TSF-[TODO]: [TODO: TSF Name]</p>
+<p><strong>Rationale:</strong></p>
+<p>[TODO: Detailed rationale]</p>
+<p><strong>Fulfillment Level:</strong> [TODO]</p>
+<h4 id="343-fia_afl1-authentication-failure-handling">3.4.3 FIA_AFL.1: Authentication Failure Handling</h4>
+<p><strong>SFR Description:</strong>
+[TODO: Description of the SFR]</p>
+<p><strong>Associated TSFs:</strong>
+- TSF-[TODO]: [TODO: TSF Name]</p>
+<p><strong>Rationale:</strong></p>
+<p>[TODO: Detailed rationale]</p>
+<p><strong>Fulfillment Level:</strong> [TODO]</p>
+<h3 id="35-security-management-fmt">3.5 Security Management (FMT)</h3>
+<h4 id="351-fmt_smf1-specification-of-management-functions">3.5.1 FMT_SMF.1: Specification of Management Functions</h4>
+<p><strong>SFR Description:</strong>
+[TODO: Description of the SFR]</p>
+<p><strong>Associated TSFs:</strong>
+- TSF-[TODO]: [TODO: TSF Name]</p>
+<p><strong>Rationale:</strong></p>
+<p>[TODO: Detailed rationale]</p>
+<p><strong>Fulfillment Level:</strong> [TODO]</p>
+<h4 id="352-fmt_smr1-security-roles">3.5.2 FMT_SMR.1: Security Roles</h4>
+<p><strong>SFR Description:</strong>
+[TODO: Description of the SFR]</p>
+<p><strong>Associated TSFs:</strong>
+- TSF-[TODO]: [TODO: TSF Name]</p>
+<p><strong>Rationale:</strong></p>
+<p>[TODO: Detailed rationale]</p>
+<p><strong>Fulfillment Level:</strong> [TODO]</p>
+<h3 id="36-protection-of-the-tsf-fpt">3.6 Protection of the TSF (FPT)</h3>
+<h4 id="361-fpt_stm1-reliable-time-stamps">3.6.1 FPT_STM.1: Reliable Time Stamps</h4>
+<p><strong>SFR Description:</strong>
+[TODO: Description of the SFR]</p>
+<p><strong>Associated TSFs:</strong>
+- TSF-[TODO]: [TODO: TSF Name]</p>
+<p><strong>Rationale:</strong></p>
+<p>[TODO: Detailed rationale]</p>
+<p><strong>Fulfillment Level:</strong> [TODO]</p>
+<h3 id="37-toe-access-fta">3.7 TOE Access (FTA)</h3>
+<h4 id="371-fta_ssl1-tsf-initiated-session-locking">3.7.1 FTA_SSL.1: TSF-initiated Session Locking</h4>
+<p><strong>SFR Description:</strong>
+[TODO: Description of the SFR]</p>
+<p><strong>Associated TSFs:</strong>
+- TSF-[TODO]: [TODO: TSF Name]</p>
+<p><strong>Rationale:</strong></p>
+<p>[TODO: Detailed rationale]</p>
+<p><strong>Fulfillment Level:</strong> [TODO]</p>
+<h3 id="38-trusted-pathchannels-ftp">3.8 Trusted Path/Channels (FTP)</h3>
+<h4 id="381-ftp_trp1-trusted-path">3.8.1 FTP_TRP.1: Trusted Path</h4>
+<p><strong>SFR Description:</strong>
+[TODO: Description of the SFR]</p>
+<p><strong>Associated TSFs:</strong>
+- TSF-[TODO]: [TODO: TSF Name]</p>
+<p><strong>Rationale:</strong></p>
+<p>[TODO: Detailed rationale]</p>
+<p><strong>Fulfillment Level:</strong> [TODO]</p>
+<h2 id="4-completeness-analysis">4. Completeness Analysis</h2>
+<h3 id="41-coverage-of-sfrs">4.1 Coverage of SFRs</h3>
+<p><strong>Statistics:</strong>
+- Total number of SFRs: [TODO]
+- Completely fulfilled SFRs: [TODO]
+- Partially fulfilled SFRs: [TODO]
+- Unfulfilled SFRs: [TODO]</p>
+<p><strong>Coverage Rate:</strong> [TODO]%</p>
+<h3 id="42-unfulfilled-or-partially-fulfilled-sfrs">4.2 Unfulfilled or Partially Fulfilled SFRs</h3>
+<p>[TODO: If SFRs are not completely fulfilled, list them here and justify:]</p>
+<table>
+<thead>
+<tr>
+<th>SFR-ID</th>
+<th>Status</th>
+<th>Rationale</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO]</td>
+<td>Partially fulfilled</td>
+<td>[TODO: Why only partially?]</td>
+<td>[TODO: Planned actions]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> If all SFRs are completely fulfilled, write: "All SFRs are completely fulfilled."</p>
+<h3 id="43-multiple-mappings">4.3 Multiple Mappings</h3>
+<p>Some SFRs are fulfilled by multiple TSFs. This is the case in the following situations:</p>
+<table>
+<thead>
+<tr>
+<th>SFR-ID</th>
+<th>Associated TSFs</th>
+<th>Rationale for Multiple Mapping</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO]</td>
+<td>TSF-X, TSF-Y</td>
+<td>[TODO: Why multiple TSFs?]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="44-tsf-coverage">4.4 TSF Coverage</h3>
+<p>The following table shows which TSFs fulfill how many SFRs:</p>
+<table>
+<thead>
+<tr>
+<th>TSF-ID</th>
+<th>TSF-Name</th>
+<th>Number of Fulfilled SFRs</th>
+<th>Percentage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TSF-1</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]%</td>
+</tr>
+<tr>
+<td>TSF-2</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]%</td>
+</tr>
+<tr>
+<td>TSF-3</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Analysis:</strong>
+[TODO: Analyze the distribution. Are there TSFs that fulfill many SFRs? Is the distribution balanced?]</p>
+<h2 id="5-summary">5. Summary</h2>
+<h3 id="51-completeness-of-mapping">5.1 Completeness of Mapping</h3>
+<p>The mapping between TSFs and SFRs is complete:</p>
+<ul>
+<li>✓ All SFRs are covered by at least one TSF</li>
+<li>✓ All mappings are justified</li>
+<li>✓ No gaps in security functionality</li>
+<li>✓ Multiple mappings are explained</li>
+</ul>
+<h3 id="52-correctness-of-mapping">5.2 Correctness of Mapping</h3>
+<p>The rationales demonstrate that:</p>
+<ul>
+<li>The TSFs correctly implement the SFRs</li>
+<li>The TSFs provide the required functionality</li>
+<li>The TSFs ensure the security properties</li>
+<li>The mapping is traceable and convincing</li>
+</ul>
+<h3 id="53-reference-to-additional-documents">5.3 Reference to Additional Documents</h3>
+<p>For further information see:</p>
+<ul>
+<li><strong>0500_TOE_Summary_Specification.md</strong>: Detailed description of TSFs</li>
+<li><strong>0530_Coverage_Matrix.md</strong>: Complete Coverage Matrix</li>
+<li><strong>Chapter 4 of the Security Target</strong>: Definition of SFRs</li>
+</ul>
+<hr />
+<p><strong>Document History:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Initial version</td>
+</tr>
+<tr>
+<td>1.0</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0510_Assurance_Measures.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0530_Coverage_Matrix.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

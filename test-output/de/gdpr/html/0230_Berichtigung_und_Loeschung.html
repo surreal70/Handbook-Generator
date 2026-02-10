@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0230 - Berichtigung und Löschung</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0230</div>
+            <h1>Berichtigung und Löschung</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0220_Auskunftsrecht.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0240_Einschraenkung_und_Widerspruch.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="berichtigung-und-loschung">Berichtigung und Löschung</h1>
+<p><strong>Dokument-ID:</strong> 0230<br />
+<strong>Owner:</strong> {{ meta.owner }}<br />
+<strong>Version:</strong> {{ meta.version }}<br />
+<strong>Status:</strong> Entwurf<br />
+<strong>Klassifizierung:</strong> Intern<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.date }}  </p>
+<hr />
+<h2 id="zweck">Zweck</h2>
+<p>Dieses Dokument beschreibt die Umsetzung des Rechts auf Berichtigung und Löschung in der {{ meta.organization }}. Betroffene Personen haben das Recht auf Berichtigung unrichtiger und Löschung nicht mehr erforderlicher Daten.</p>
+<h2 id="recht-auf-berichtigung-art-16">Recht auf Berichtigung (Art. 16)</h2>
+<h3 id="umfang-des-berichtigungsrechts">Umfang des Berichtigungsrechts</h3>
+<p><strong>Betroffene Personen haben Recht auf:</strong>
+- Unverzügliche Berichtigung unrichtiger Daten
+- Vervollständigung unvollständiger Daten
+- Ergänzende Erklärung</p>
+<h3 id="berichtigungsprozess">Berichtigungsprozess</h3>
+<p><strong>Standardprozess:</strong></p>
+<ol>
+<li><strong>Eingang des Antrags (Tag 0)</strong></li>
+<li>Registrierung</li>
+<li>Eingangsbestätigung</li>
+<li>
+<p>Zuweisung</p>
+</li>
+<li>
+<p><strong>Prüfung (Tag 1-10)</strong></p>
+</li>
+<li>Identifikation der betroffenen Person</li>
+<li>Prüfung der Unrichtigkeit</li>
+<li>
+<p>Abgleich mit Nachweisen</p>
+</li>
+<li>
+<p><strong>Durchführung (Tag 11-25)</strong></p>
+</li>
+<li>Berichtigung in allen Systemen</li>
+<li>Benachrichtigung von Empfängern (Art. 19)</li>
+<li>
+<p>Dokumentation</p>
+</li>
+<li>
+<p><strong>Rückmeldung (Tag 26-30)</strong></p>
+</li>
+<li>Information über durchgeführte Berichtigung</li>
+<li>Liste der benachrichtigten Empfänger</li>
+</ol>
+<h3 id="berichtigungsmatrix">Berichtigungsmatrix</h3>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Verantwortlich</th>
+<th>Berichtigungsverfahren</th>
+<th>Dokumentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: CRM]</td>
+<td>IT</td>
+<td>Manuelle Änderung</td>
+<td>Change-Log</td>
+</tr>
+<tr>
+<td>[TODO: ERP]</td>
+<td>IT</td>
+<td>Workflow-gesteuert</td>
+<td>Audit-Trail</td>
+</tr>
+<tr>
+<td>[TODO: Datenbank]</td>
+<td>IT</td>
+<td>SQL-Update</td>
+<td>Änderungsprotokoll</td>
+</tr>
+<tr>
+<td>[TODO: Backup]</td>
+<td>IT</td>
+<td>Markierung</td>
+<td>Backup-Log</td>
+</tr>
+</tbody>
+</table>
+<h2 id="recht-auf-loschung-art-17">Recht auf Löschung (Art. 17)</h2>
+<h3 id="loschgrunde">Löschgründe</h3>
+<p><strong>Löschung ist erforderlich, wenn:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Grund</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nicht mehr erforderlich</td>
+<td>Zweck erfüllt</td>
+<td>Bewerberdaten nach Absage</td>
+</tr>
+<tr>
+<td>Widerruf der Einwilligung</td>
+<td>Einwilligung zurückgezogen</td>
+<td>Newsletter-Abmeldung</td>
+</tr>
+<tr>
+<td>Widerspruch</td>
+<td>Widerspruch eingelegt (Art. 21)</td>
+<td>Werbewiderspruch</td>
+</tr>
+<tr>
+<td>Unrechtmäßige Verarbeitung</td>
+<td>Ohne Rechtsgrundlage</td>
+<td>Daten ohne Einwilligung</td>
+</tr>
+<tr>
+<td>Rechtliche Verpflichtung</td>
+<td>Gesetzliche Löschpflicht</td>
+<td>Datenschutzverstoß</td>
+</tr>
+<tr>
+<td>Kinder</td>
+<td>Dienste der Informationsgesellschaft</td>
+<td>Social Media unter 16</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ausnahmen-vom-loschrecht">Ausnahmen vom Löschrecht</h3>
+<p><strong>Löschung nicht erforderlich bei:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Ausnahme</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Meinungsfreiheit</td>
+<td>Ausübung des Rechts auf freie Meinungsäußerung</td>
+</tr>
+<tr>
+<td>Rechtliche Verpflichtung</td>
+<td>Erfüllung rechtlicher Verpflichtungen</td>
+</tr>
+<tr>
+<td>Öffentliches Interesse</td>
+<td>Aufgaben im öffentlichen Interesse</td>
+</tr>
+<tr>
+<td>Gesundheitswesen</td>
+<td>Gesundheitsvorsorge, Arbeitsmedizin</td>
+</tr>
+<tr>
+<td>Archivzwecke</td>
+<td>Archivierung im öffentlichen Interesse</td>
+</tr>
+<tr>
+<td>Rechtsansprüche</td>
+<td>Geltendmachung, Ausübung oder Verteidigung</td>
+</tr>
+</tbody>
+</table>
+<h3 id="loschprozess">Löschprozess</h3>
+<p><strong>Standardprozess:</strong></p>
+<ol>
+<li><strong>Eingang des Antrags (Tag 0)</strong></li>
+<li>Registrierung</li>
+<li>Eingangsbestätigung</li>
+<li>
+<p>Zuweisung</p>
+</li>
+<li>
+<p><strong>Prüfung (Tag 1-10)</strong></p>
+</li>
+<li>Identifikation der betroffenen Person</li>
+<li>Prüfung der Löschgründe</li>
+<li>Prüfung von Ausnahmen</li>
+<li>
+<p>Prüfung gesetzlicher Aufbewahrungsfristen</p>
+</li>
+<li>
+<p><strong>Entscheidung (Tag 11-15)</strong></p>
+</li>
+<li>Löschung oder begründete Ablehnung</li>
+<li>
+<p>Bei Ablehnung: Prüfung der Einschränkung (Art. 18)</p>
+</li>
+<li>
+<p><strong>Durchführung (Tag 16-25)</strong></p>
+</li>
+<li>Löschung in allen Systemen</li>
+<li>Benachrichtigung von Empfängern (Art. 19)</li>
+<li>
+<p>Dokumentation</p>
+</li>
+<li>
+<p><strong>Rückmeldung (Tag 26-30)</strong></p>
+</li>
+<li>Information über Löschung oder Ablehnung</li>
+<li>Bei Ablehnung: Begründung und Rechtsbehelfe</li>
+</ol>
+<h3 id="loschverfahren">Löschverfahren</h3>
+<p><strong>Technische Löschung:</strong></p>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Löschmethode</th>
+<th>Verantwortlich</th>
+<th>Dokumentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Produktivsysteme]</td>
+<td>Sofortige Löschung</td>
+<td>IT</td>
+<td>Löschprotokoll</td>
+</tr>
+<tr>
+<td>[TODO: Backups]</td>
+<td>Markierung/Überschreiben</td>
+<td>IT</td>
+<td>Backup-Log</td>
+</tr>
+<tr>
+<td>[TODO: Archive]</td>
+<td>Physische Vernichtung</td>
+<td>IT</td>
+<td>Vernichtungsprotokoll</td>
+</tr>
+<tr>
+<td>[TODO: Cloud]</td>
+<td>API-gesteuerte Löschung</td>
+<td>IT</td>
+<td>API-Log</td>
+</tr>
+</tbody>
+</table>
+<h2 id="mitteilungspflicht-art-19">Mitteilungspflicht (Art. 19)</h2>
+<h3 id="benachrichtigung-von-empfangern">Benachrichtigung von Empfängern</h3>
+<p><strong>Bei Berichtigung oder Löschung müssen Empfänger informiert werden:</strong></p>
+<p><strong>Prozess:</strong>
+1. Identifikation aller Empfänger
+2. Benachrichtigung über Berichtigung/Löschung
+3. Dokumentation der Benachrichtigungen
+4. Information der betroffenen Person über Empfänger (auf Verlangen)</p>
+<p><strong>Ausnahmen:</strong>
+- Unmöglich
+- Unverhältnismäßiger Aufwand</p>
+<h3 id="empfangermatrix">Empfängermatrix</h3>
+<table>
+<thead>
+<tr>
+<th>Empfängertyp</th>
+<th>Benachrichtigungspflicht</th>
+<th>Methode</th>
+<th>Dokumentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Auftragsverarbeiter]</td>
+<td>Ja</td>
+<td>E-Mail</td>
+<td>Benachrichtigungslog</td>
+</tr>
+<tr>
+<td>[TODO: Dritte Empfänger]</td>
+<td>Ja</td>
+<td>E-Mail/Schriftlich</td>
+<td>Benachrichtigungslog</td>
+</tr>
+<tr>
+<td>[TODO: Öffentliche Stellen]</td>
+<td>Ja</td>
+<td>Schriftlich</td>
+<td>Benachrichtigungslog</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dokumentation">Dokumentation</h2>
+<h3 id="berichtigungs-und-loschregister">Berichtigungs- und Löschregister</h3>
+<table>
+<thead>
+<tr>
+<th>Datum</th>
+<th>Betroffene Person</th>
+<th>Art</th>
+<th>Grund</th>
+<th>Durchgeführt</th>
+<th>Empfänger benachrichtigt</th>
+<th>Bearbeiter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Berichtigung</td>
+<td>Unrichtig</td>
+<td>Ja</td>
+<td>Ja</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Löschung</td>
+<td>Nicht erforderlich</td>
+<td>Ja</td>
+<td>Ja</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Löschung</td>
+<td>Abgelehnt (Aufbewahrungsfrist)</td>
+<td>Nein</td>
+<td>N/A</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="nachweispflichten">Nachweispflichten</h3>
+<p><strong>Dokumentation für Accountability:</strong>
+- Alle Berichtigungs- und Löschanträge
+- Durchgeführte Berichtigungen und Löschungen
+- Ablehnungen und deren Begründung
+- Benachrichtigungen an Empfänger
+- Ausnahmen und deren Begründung</p>
+<h2 id="fristen">Fristen</h2>
+<p><strong>Bearbeitungsfrist:</strong>
+- Unverzüglich, spätestens 1 Monat
+- Verlängerung um 2 Monate bei Komplexität möglich
+- Begründung der Verlängerung erforderlich</p>
+<h2 id="verknupfung-zu-anderen-dokumenten">Verknüpfung zu anderen Dokumenten</h2>
+<ul>
+<li><strong>Transparenz (Art. 12):</strong> Modalitäten der Bearbeitung</li>
+<li><strong>Richtigkeit (Art. 5 Abs. 1 lit. d):</strong> Grundsatz der Richtigkeit</li>
+<li><strong>Speicherbegrenzung (Art. 5 Abs. 1 lit. e):</strong> Grundsatz der Löschung</li>
+<li><strong>Mitteilungspflicht (Art. 19):</strong> Benachrichtigung von Empfängern</li>
+<li><strong>Einschränkung (Art. 18):</strong> Alternative zur Löschung</li>
+</ul>
+<h2 id="haufige-verstoe-und-deren-vermeidung">Häufige Verstöße und deren Vermeidung</h2>
+<table>
+<thead>
+<tr>
+<th>Verstoß</th>
+<th>Beispiel</th>
+<th>Vermeidung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unvollständige Berichtigung</td>
+<td>Nur in einem System</td>
+<td>Alle Systeme prüfen</td>
+</tr>
+<tr>
+<td>Verzögerte Löschung</td>
+<td>Löschung nach 3 Monaten</td>
+<td>Fristenkontrolle</td>
+</tr>
+<tr>
+<td>Fehlende Benachrichtigung</td>
+<td>Empfänger nicht informiert</td>
+<td>Benachrichtigungsprozess</td>
+</tr>
+<tr>
+<td>Unbegründete Ablehnung</td>
+<td>Ablehnung ohne Prüfung</td>
+<td>Sorgfältige Prüfung</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Nächste Schritte:</strong>
+1. Etablieren Sie Prozesse für Berichtigungs- und Löschanträge
+2. Implementieren Sie Löschverfahren für alle Systeme
+3. Definieren Sie Benachrichtigungsprozess für Empfänger
+4. Schulen Sie Mitarbeiter zu Berichtigungs- und Löschrecht
+5. Dokumentieren Sie alle Anträge im Register</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0220_Auskunftsrecht.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0240_Einschraenkung_und_Widerspruch.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

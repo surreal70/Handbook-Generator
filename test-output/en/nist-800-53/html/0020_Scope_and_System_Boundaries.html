@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0020 - Scope and System Boundaries</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0020</div>
+            <h1>Scope and System Boundaries</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0010_System_Categorization.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0030_Roles_and_Responsibilities.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="scope-and-system-boundaries">Scope and System Boundaries</h1>
+<p><strong>Document-ID:</strong> NIST-0020<br />
+<strong>Organization:</strong> AdminSend GmbH<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Draft / In Review / Approved<br />
+<strong>Last Updated:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This document defines the scope and authorization boundaries of the information system {{ meta.nist.system_name }}.</p>
+<h2 id="2-system-identification">2. System Identification</h2>
+<p><strong>System Name:</strong> {{ meta.nist.system_name }}<br />
+<strong>System ID:</strong> {{ meta.nist.system_id }}<br />
+<strong>FIPS 199 Categorization:</strong> [TODO: Low / Moderate / High]<br />
+<strong>System Owner:</strong> [TODO: Name]<br />
+<strong>Authorizing Official (AO):</strong> {{ meta.roles.ao.name }}  </p>
+<h2 id="3-authorization-boundary">3. Authorization Boundary</h2>
+<h3 id="31-boundary-definition">3.1 Boundary Definition</h3>
+<p>The authorization boundary includes all components under a single authorization decision.</p>
+<p><strong>Authorization Boundary:</strong> [TODO: Description of boundary]</p>
+<p><strong>Included Components:</strong>
+- [TODO: Component 1]
+- [TODO: Component 2]</p>
+<p><strong>Excluded Components:</strong>
+- [TODO: Component 1 - Rationale]</p>
+<h3 id="32-network-diagram">3.2 Network Diagram</h3>
+<p>[TODO: Insert network diagram showing authorization boundary]</p>
+<h2 id="4-system-components">4. System Components</h2>
+<h3 id="41-hardware-components">4.1 Hardware Components</h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Type</th>
+<th>Location</th>
+<th>Function</th>
+<th>Criticality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Server 1]</td>
+<td>Server</td>
+<td>[TODO: DC1]</td>
+<td>[TODO: Function]</td>
+<td>[TODO: H/M/L]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-software-components">4.2 Software Components</h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Version</th>
+<th>Vendor</th>
+<th>Function</th>
+<th>License</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: OS]</td>
+<td>[TODO: Version]</td>
+<td>[TODO: Vendor]</td>
+<td>Operating System</td>
+<td>[TODO: License]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="43-data-components">4.3 Data Components</h3>
+<table>
+<thead>
+<tr>
+<th>Data Type</th>
+<th>Classification</th>
+<th>Storage Location</th>
+<th>Retention</th>
+<th>Backup</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Data 1]</td>
+<td>[TODO: Classification]</td>
+<td>[TODO: Location]</td>
+<td>[TODO: Time]</td>
+<td>[TODO: Yes/No]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-external-interfaces">5. External Interfaces</h2>
+<h3 id="51-system-connections">5.1 System Connections</h3>
+<table>
+<thead>
+<tr>
+<th>Connected System</th>
+<th>Connection Type</th>
+<th>Protocol</th>
+<th>Purpose</th>
+<th>Authorization</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: System 1]</td>
+<td>[TODO: Type]</td>
+<td>[TODO: Protocol]</td>
+<td>[TODO: Purpose]</td>
+<td>[TODO: ATO Number]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-locations">6. Locations</h2>
+<h3 id="61-physical-locations">6.1 Physical Locations</h3>
+<table>
+<thead>
+<tr>
+<th>Location-ID</th>
+<th>Location Name</th>
+<th>Address</th>
+<th>Components</th>
+<th>Security Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: LOC-01]</td>
+<td>[TODO: Name]</td>
+<td>[TODO: Address]</td>
+<td>[TODO: List]</td>
+<td>[TODO: Level]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-personnel">7. Personnel</h2>
+<h3 id="71-user-roles">7.1 User Roles</h3>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Count</th>
+<th>Access Level</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Admin]</td>
+<td>[TODO: Count]</td>
+<td>Privileged</td>
+<td>Administration</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Document History:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Initial creation</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0010_System_Categorization.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0030_Roles_and_Responsibilities.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

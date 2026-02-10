@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0420 - Physical Security</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0420</div>
+            <h1>Physical Security</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0410_User_Authentication.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0500_Logging_and_Monitoring.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="physical-security">Physical Security</h1>
+<p><strong>Document ID:</strong> PCI-0420<br />
+<strong>Organization:</strong> AdminSend GmbH<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Approved by:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Draft / In Review / Approved<br />
+<strong>Classification:</strong> internal<br />
+<strong>Last Updated:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This document defines the physical security controls for AdminSend GmbH in accordance with PCI-DSS Requirement 9.</p>
+<h3 id="11-objectives">1.1 Objectives</h3>
+<ul>
+<li><strong>Physical Protection:</strong> Protect CDE systems from unauthorized access</li>
+<li><strong>Access Control:</strong> Restrict physical access</li>
+<li><strong>Media Security:</strong> Secure handling of media</li>
+<li><strong>Compliance:</strong> Fulfillment of PCI-DSS Requirement 9</li>
+</ul>
+<h3 id="12-scope">1.2 Scope</h3>
+<p><strong>Affected Locations:</strong>
+- Data centers with CDE systems
+- Server rooms
+- Offices with POS terminals
+- Media storage rooms</p>
+<h2 id="2-physical-access-control">2. Physical Access Control</h2>
+<h3 id="21-access-control-systems">2.1 Access Control Systems</h3>
+<p><strong>Implemented Systems:</strong>
+- Badge system: [TODO: Name of system]
+- Biometric authentication: [TODO: Type]
+- Video surveillance: [TODO: Number of cameras]
+- Alarm system: [TODO: Name of system]</p>
+<p><strong>Requirements:</strong>
+- Unique identification of each person
+- Logging of all access
+- Automatic lockout after business hours
+- Alerting on unauthorized access</p>
+<h3 id="22-access-authorization">2.2 Access Authorization</h3>
+<p><strong>Authorization Levels:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Authorization</th>
+<th>Areas</th>
+<th>Personnel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Level 1</td>
+<td>Full access</td>
+<td>All areas</td>
+<td>Facility Manager, CISO</td>
+</tr>
+<tr>
+<td>Level 2</td>
+<td>CDE access</td>
+<td>Data center, server rooms</td>
+<td>IT Administrators</td>
+</tr>
+<tr>
+<td>Level 3</td>
+<td>Limited</td>
+<td>Offices with POS</td>
+<td>Cashiers, Support</td>
+</tr>
+<tr>
+<td>Level 4</td>
+<td>Escorted</td>
+<td>All areas</td>
+<td>Visitors, Service providers</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Approval Process:</strong>
+1. Request by manager
+2. Security review
+3. CISO approval (for CDE areas)
+4. Badge issuance
+5. Documentation</p>
+<h3 id="23-data-center-access-control">2.3 Data Center Access Control</h3>
+<p><strong>Requirements:</strong>
+- Two-factor authentication (Badge + Biometrics)
+- Mantrap/Airlock
+- Video surveillance (24/7)
+- Alerting on unauthorized access
+- Logging of all access</p>
+<p><strong>Authorized Personnel:</strong>
+- Data center personnel
+- Authorized IT administrators
+- Maintenance personnel (with escort only)</p>
+<p><strong>Visitor Policy:</strong>
+- Pre-registration required
+- Escort requirement
+- Visitor badge
+- Logging</p>
+<h2 id="3-visitor-management">3. Visitor Management</h2>
+<h3 id="31-visitor-registration">3.1 Visitor Registration</h3>
+<p><strong>Process:</strong>
+1. Pre-registration by host
+2. Identity verification upon arrival
+3. Issue visitor badge
+4. Security briefing
+5. Escort by authorized employee
+6. Return badge upon departure</p>
+<p><strong>Visitor Badge:</strong>
+- Clearly visible
+- Time-limited
+- Unique number
+- Photo (optional)</p>
+<h3 id="32-visitor-escort">3.2 Visitor Escort</h3>
+<p><strong>Requirements:</strong>
+- Constant escort in CDE areas
+- Escort must be authorized
+- No unattended visitors
+- Document escort</p>
+<p><strong>Exceptions:</strong>
+- Public areas (reception, cafeteria)
+- Only after security briefing</p>
+<h3 id="33-visitor-log">3.3 Visitor Log</h3>
+<p><strong>Logged Information:</strong>
+- Visitor name
+- Company
+- Purpose of visit
+- Host
+- Arrival time
+- Departure time
+- Areas visited
+- Escort</p>
+<p><strong>Retention:</strong> 90 days</p>
+<h2 id="4-employee-identification">4. Employee Identification</h2>
+<h3 id="41-employee-badges">4.1 Employee Badges</h3>
+<p><strong>Requirements:</strong>
+- Photo ID
+- Name
+- Employee number
+- Department
+- Expiration date
+- Visibly worn</p>
+<p><strong>Issuance:</strong>
+- Upon hiring
+- After identity verification
+- Documentation</p>
+<p><strong>Return:</strong>
+- Upon termination
+- Upon loss (deactivation + reissuance)</p>
+<h3 id="42-employeevisitor-distinction">4.2 Employee/Visitor Distinction</h3>
+<p><strong>Measures:</strong>
+- Different badge colors
+- Clear "VISITOR" marking
+- Time-limited visitor badges</p>
+<h2 id="5-video-surveillance">5. Video Surveillance</h2>
+<h3 id="51-camera-locations">5.1 Camera Locations</h3>
+<p><strong>Monitored Areas:</strong>
+- All data center entrances
+- Server rooms
+- Areas with POS terminals
+- Media storage rooms
+- Parking lots (optional)</p>
+<p><strong>Camera Specifications:</strong>
+- Minimum resolution: 1080p
+- Night vision capable
+- Motion detection
+- Tamper protection</p>
+<h3 id="52-recording-and-storage">5.2 Recording and Storage</h3>
+<p><strong>Requirements:</strong>
+- Continuous recording (24/7)
+- Retention: 90 days
+- Secure storage (encrypted)
+- Access control to recordings
+- Backup of recordings</p>
+<p><strong>Access to Recordings:</strong>
+- Only authorized personnel
+- Logging of all access
+- Approval by Security Manager</p>
+<h3 id="53-privacy">5.3 Privacy</h3>
+<p><strong>Measures:</strong>
+- Signs indicating video surveillance
+- Privacy policy
+- No surveillance of private areas (restrooms, changing rooms)
+- GDPR compliance</p>
+<h2 id="6-media-handling">6. Media Handling</h2>
+<h3 id="61-media-classification">6.1 Media Classification</h3>
+<p><strong>Classification Levels:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Description</th>
+<th>Examples</th>
+<th>Handling</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Critical</td>
+<td>CHD in cleartext</td>
+<td>Backup tapes with unencrypted CHD</td>
+<td>Encrypted, secured</td>
+</tr>
+<tr>
+<td>Confidential</td>
+<td>CHD encrypted</td>
+<td>Encrypted backups</td>
+<td>Secured</td>
+</tr>
+<tr>
+<td>Internal</td>
+<td>No CHD</td>
+<td>System logs</td>
+<td>Standard</td>
+</tr>
+<tr>
+<td>Public</td>
+<td>No sensitive data</td>
+<td>Marketing material</td>
+<td>No restriction</td>
+</tr>
+</tbody>
+</table>
+<h3 id="62-media-storage">6.2 Media Storage</h3>
+<p><strong>Requirements:</strong>
+- Secured storage room
+- Access control
+- Climate control
+- Fire protection
+- Inventory management</p>
+<p><strong>Storage Room Specifications:</strong>
+- Fire-resistant cabinets for critical media
+- Locked cabinets
+- Access control (badge system)
+- Video surveillance
+- Logging of all access</p>
+<h3 id="63-media-transport">6.3 Media Transport</h3>
+<p><strong>Internal Transport:</strong>
+- Sealed containers
+- Escort person
+- Documentation (handover protocol)</p>
+<p><strong>External Transport:</strong>
+- Encrypted media
+- Sealed containers
+- Trusted courier
+- Tracking
+- Insurance
+- Documentation</p>
+<p><strong>Courier Requirements:</strong>
+- Background check
+- Confidentiality agreement
+- Insurance
+- Tracking system</p>
+<h2 id="7-media-destruction">7. Media Destruction</h2>
+<h3 id="71-destruction-methods">7.1 Destruction Methods</h3>
+<p><strong>Paper:</strong>
+- Cross-cut shredder (DIN 66399 P-4 or higher)
+- For CHD: P-5 or higher
+- Secure disposal of shreds</p>
+<p><strong>Electronic Media:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Media Type</th>
+<th>Method</th>
+<th>Standard</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hard drives</td>
+<td>Degaussing + physical destruction</td>
+<td>NIST 800-88</td>
+</tr>
+<tr>
+<td>SSDs</td>
+<td>Cryptographic erasure + destruction</td>
+<td>NIST 800-88</td>
+</tr>
+<tr>
+<td>USB drives</td>
+<td>Physical destruction</td>
+<td>NIST 800-88</td>
+</tr>
+<tr>
+<td>CDs/DVDs</td>
+<td>Shredding</td>
+<td>DIN 66399 O-4</td>
+</tr>
+<tr>
+<td>Backup tapes</td>
+<td>Degaussing + shredding</td>
+<td>NIST 800-88</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Certification:</strong>
+- Destruction certificate required
+- Document all destroyed media
+- Record serial numbers</p>
+<h3 id="72-destruction-service-provider">7.2 Destruction Service Provider</h3>
+<p><strong>Requirements:</strong>
+- Certified service provider (e.g., DIN 66399)
+- Confidentiality agreement
+- On-site destruction or secure pickup
+- Destruction certificate
+- Insurance</p>
+<p><strong>Service Provider:</strong> [TODO: Name of service provider]</p>
+<h3 id="73-destruction-log">7.3 Destruction Log</h3>
+<p><strong>Logged Information:</strong>
+- Date of destruction
+- Media type
+- Serial number (if available)
+- Destruction method
+- Performed by
+- Certificate number</p>
+<p><strong>Retention:</strong> 3 years</p>
+<h2 id="8-point-of-sale-pos-security">8. Point-of-Sale (POS) Security</h2>
+<h3 id="81-pos-terminal-protection">8.1 POS Terminal Protection</h3>
+<p><strong>Physical Security:</strong>
+- Tamper protection (Tamper-evident Seals)
+- Regular inspection
+- Secure mounting
+- Video surveillance of area</p>
+<p><strong>Inspection:</strong>
+- Daily before business opening
+- After maintenance
+- Upon suspicion of tampering</p>
+<p><strong>Checklist:</strong>
+- [ ] Tamper seal intact
+- [ ] No unusual devices connected
+- [ ] No damage
+- [ ] Firmware version correct</p>
+<h3 id="82-pos-terminal-inventory">8.2 POS Terminal Inventory</h3>
+<p><strong>Inventory Management:</strong>
+- List of all POS terminals
+- Serial numbers
+- Locations
+- Responsible persons
+- Maintenance history</p>
+<p><strong>Quarterly Review:</strong>
+- Validate inventory
+- Check locations
+- Verify tamper seals
+- Documentation</p>
+<h3 id="83-pos-terminal-maintenance">8.3 POS Terminal Maintenance</h3>
+<p><strong>Maintenance Process:</strong>
+1. Announce maintenance
+2. Escort by authorized employee
+3. Document all activities
+4. Apply new tamper seals
+5. Functional test
+6. Documentation</p>
+<h2 id="9-backup-media">9. Backup Media</h2>
+<h3 id="91-backup-media-security">9.1 Backup Media Security</h3>
+<p><strong>Requirements:</strong>
+- Encrypted backups
+- Secure storage
+- Offsite storage
+- Access control
+- Inventory management</p>
+<p><strong>Storage:</strong>
+- Onsite: Fire-resistant safe
+- Offsite: Secure data center or vault</p>
+<h3 id="92-backup-media-transport">9.2 Backup Media Transport</h3>
+<p><strong>Process:</strong>
+- Encrypted media
+- Sealed containers
+- Trusted courier
+- Handover protocol
+- Documentation</p>
+<h2 id="10-workplace-security">10. Workplace Security</h2>
+<h3 id="101-clean-desk-policy">10.1 Clean Desk Policy</h3>
+<p><strong>Requirements:</strong>
+- No sensitive documents on desks
+- Lock screens when absent
+- Documents in locked cabinets
+- No passwords on sticky notes</p>
+<p><strong>Controls:</strong>
+- Regular inspections
+- Employee awareness</p>
+<h3 id="102-screen-privacy">10.2 Screen Privacy</h3>
+<p><strong>Requirements:</strong>
+- Privacy filters for screens with CHD
+- Screens not visible from outside
+- Automatic screen lock (15 minutes)</p>
+<h2 id="11-emergency-access">11. Emergency Access</h2>
+<h3 id="111-break-glass-procedure">11.1 Break-Glass Procedure</h3>
+<p><strong>Process:</strong>
+- Sealed envelope with emergency access credentials
+- Storage in safe
+- Access only with witness
+- Document each use
+- Immediate password change after use</p>
+<p><strong>Documentation:</strong>
+- Date and time
+- Reason for emergency access
+- Performed by
+- Witness
+- Actions performed</p>
+<h3 id="112-emergency-evacuation">11.2 Emergency Evacuation</h3>
+<p><strong>Process:</strong>
+- Evacuation plan
+- Assembly points
+- Responsible persons
+- Regular drills</p>
+<p><strong>Security Measures:</strong>
+- Automatic lockdown of all systems
+- Activate alarm system
+- Notify security</p>
+<h2 id="12-compliance-validation">12. Compliance Validation</h2>
+<h3 id="121-validation-activities">12.1 Validation Activities</h3>
+<p><strong>Quarterly:</strong>
+- POS terminal inspection
+- Media inventory
+- Visitor log review
+- Video surveillance test</p>
+<p><strong>Annually:</strong>
+- Physical security audit
+- Penetration test (physical)
+- Employee awareness</p>
+<h3 id="122-validation-documentation">12.2 Validation Documentation</h3>
+<p><strong>Required Evidence:</strong>
+- Access control logs
+- Visitor logs
+- POS inspection logs
+- Media destruction certificates
+- Video recordings (90 days)</p>
+<hr />
+<p><strong>Document History:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Initial creation</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0410_User_Authentication.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0500_Logging_and_Monitoring.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

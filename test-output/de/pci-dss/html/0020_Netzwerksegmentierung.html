@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0020 - Netzwerksegmentierung</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0020</div>
+            <h1>Netzwerksegmentierung</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0010_Geltungsbereich_und_CDE_Definition.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0030_Rollen_und_Verantwortlichkeiten.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="netzwerksegmentierung">Netzwerksegmentierung</h1>
+<p><strong>Dokument-ID:</strong> PCI-0020<br />
+<strong>Organisation:</strong> AdminSend GmbH<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Genehmigt durch:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Entwurf / In Review / Freigegeben<br />
+<strong>Klassifizierung:</strong> internal<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-zweck">1. Zweck</h2>
+<p>Dieses Dokument beschreibt die Netzwerksegmentierung zur Isolation des Cardholder Data Environment (CDE) vom restlichen Unternehmensnetzwerk.</p>
+<h3 id="11-ziele">1.1 Ziele</h3>
+<ul>
+<li><strong>Scope-Reduktion:</strong> Minimierung der PCI-DSS-relevanten Systeme</li>
+<li><strong>Risikominimierung:</strong> Begrenzung potenzieller Angriffsflächen</li>
+<li><strong>Compliance:</strong> Erfüllung von PCI-DSS Requirement 1</li>
+<li><strong>Sicherheit:</strong> Schutz von Karteninhaberdaten durch Netzwerkisolation</li>
+</ul>
+<h2 id="2-netzwerkarchitektur">2. Netzwerkarchitektur</h2>
+<h3 id="21-netzwerksegmente">2.1 Netzwerksegmente</h3>
+<p><strong>CDE-Segmente:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Segment-ID</th>
+<th>Segmentname</th>
+<th>VLAN-ID</th>
+<th>IP-Bereich</th>
+<th>Zweck</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: CDE-CORE]</td>
+<td>CDE Core</td>
+<td>[TODO: 100]</td>
+<td>[TODO: 10.1.100.0/24]</td>
+<td>CHD-Speicherung</td>
+</tr>
+<tr>
+<td>[TODO: CDE-DMZ]</td>
+<td>CDE DMZ</td>
+<td>[TODO: 101]</td>
+<td>[TODO: 10.1.101.0/24]</td>
+<td>CHD-Transit</td>
+</tr>
+<tr>
+<td>[TODO: CDE-MGMT]</td>
+<td>CDE Management</td>
+<td>[TODO: 102]</td>
+<td>[TODO: 10.1.102.0/24]</td>
+<td>CDE-Administration</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Nicht-CDE-Segmente:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Segment-ID</th>
+<th>Segmentname</th>
+<th>VLAN-ID</th>
+<th>IP-Bereich</th>
+<th>Zweck</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: CORP]</td>
+<td>Corporate</td>
+<td>[TODO: 10]</td>
+<td>[TODO: 10.1.10.0/24]</td>
+<td>Büronetzwerk</td>
+</tr>
+<tr>
+<td>[TODO: GUEST]</td>
+<td>Guest</td>
+<td>[TODO: 20]</td>
+<td>[TODO: 10.1.20.0/24]</td>
+<td>Gast-WLAN</td>
+</tr>
+<tr>
+<td>[TODO: DEV]</td>
+<td>Development</td>
+<td>[TODO: 30]</td>
+<td>[TODO: 10.1.30.0/24]</td>
+<td>Entwicklung</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-netzwerkdiagramm">2.2 Netzwerkdiagramm</h3>
+<p>[TODO: Fügen Sie Netzwerkdiagramm ein - siehe diagrams/network_segmentation.png]</p>
+<div class="codehilite"><pre><span></span><code><span class="n">Internet</span>
+<span class="w">    </span><span class="o">|</span>
+<span class="p">[</span><span class="n">Perimeter</span><span class="w"> </span><span class="n">Firewall</span><span class="p">]</span>
+<span class="w">    </span><span class="o">|</span>
+<span class="w">    </span><span class="o">+---</span><span class="w"> </span><span class="p">[</span><span class="n">CDE</span><span class="o">-</span><span class="n">DMZ</span><span class="p">]</span><span class="w"> </span><span class="o">---</span><span class="w"> </span><span class="p">[</span><span class="n">CDE</span><span class="w"> </span><span class="n">Firewall</span><span class="p">]</span><span class="w"> </span><span class="o">---</span><span class="w"> </span><span class="p">[</span><span class="n">CDE</span><span class="o">-</span><span class="n">CORE</span><span class="p">]</span>
+<span class="w">    </span><span class="o">|</span><span class="w">                                          </span><span class="o">|</span>
+<span class="w">    </span><span class="o">|</span><span class="w">                                     </span><span class="p">[</span><span class="n">CDE</span><span class="o">-</span><span class="n">MGMT</span><span class="p">]</span>
+<span class="w">    </span><span class="o">|</span>
+<span class="w">    </span><span class="o">+---</span><span class="w"> </span><span class="p">[</span><span class="n">Corporate</span><span class="w"> </span><span class="n">Network</span><span class="p">]</span>
+<span class="w">    </span><span class="o">|</span>
+<span class="w">    </span><span class="o">+---</span><span class="w"> </span><span class="p">[</span><span class="n">Guest</span><span class="w"> </span><span class="n">Network</span><span class="p">]</span>
+<span class="w">    </span><span class="o">|</span>
+<span class="w">    </span><span class="o">+---</span><span class="w"> </span><span class="p">[</span><span class="n">Development</span><span class="w"> </span><span class="n">Network</span><span class="p">]</span>
+</code></pre></div>
+
+<h2 id="3-firewall-konfiguration">3. Firewall-Konfiguration</h2>
+<h3 id="31-firewall-ubersicht">3.1 Firewall-Übersicht</h3>
+<table>
+<thead>
+<tr>
+<th>Firewall-ID</th>
+<th>Typ</th>
+<th>Standort</th>
+<th>Funktion</th>
+<th>Hersteller/Modell</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: FW-PERIMETER]</td>
+<td>Perimeter</td>
+<td>[TODO: RZ1]</td>
+<td>Internet-Grenze</td>
+<td>[TODO: Vendor/Model]</td>
+</tr>
+<tr>
+<td>[TODO: FW-CDE]</td>
+<td>Internal</td>
+<td>[TODO: RZ1]</td>
+<td>CDE-Segmentierung</td>
+<td>[TODO: Vendor/Model]</td>
+</tr>
+<tr>
+<td>[TODO: FW-MGMT]</td>
+<td>Internal</td>
+<td>[TODO: RZ1]</td>
+<td>Management-Zugriff</td>
+<td>[TODO: Vendor/Model]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-firewall-regeln-cde-segmentierung">3.2 Firewall-Regeln (CDE-Segmentierung)</h3>
+<p><strong>Grundprinzip:</strong> Default Deny (alle Verbindungen standardmäßig blockiert)</p>
+<h4 id="321-eingehende-verbindungen-zum-cde">3.2.1 Eingehende Verbindungen zum CDE</h4>
+<table>
+<thead>
+<tr>
+<th>Regel-ID</th>
+<th>Quelle</th>
+<th>Ziel</th>
+<th>Port/Protokoll</th>
+<th>Zweck</th>
+<th>Genehmigt durch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: FW-001]</td>
+<td>Internet</td>
+<td>CDE-DMZ</td>
+<td>443/TCP</td>
+<td>HTTPS E-Commerce</td>
+<td>[TODO: CISO]</td>
+</tr>
+<tr>
+<td>[TODO: FW-002]</td>
+<td>Corporate</td>
+<td>CDE-MGMT</td>
+<td>22/TCP</td>
+<td>SSH Admin</td>
+<td>[TODO: CISO]</td>
+</tr>
+<tr>
+<td>[TODO: FW-003]</td>
+<td>Acquiring Bank</td>
+<td>CDE-CORE</td>
+<td>443/TCP</td>
+<td>Payment API</td>
+<td>[TODO: CISO]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="322-ausgehende-verbindungen-vom-cde">3.2.2 Ausgehende Verbindungen vom CDE</h4>
+<table>
+<thead>
+<tr>
+<th>Regel-ID</th>
+<th>Quelle</th>
+<th>Ziel</th>
+<th>Port/Protokoll</th>
+<th>Zweck</th>
+<th>Genehmigt durch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: FW-101]</td>
+<td>CDE-CORE</td>
+<td>Acquiring Bank</td>
+<td>443/TCP</td>
+<td>Autorisierung</td>
+<td>[TODO: CISO]</td>
+</tr>
+<tr>
+<td>[TODO: FW-102]</td>
+<td>CDE-CORE</td>
+<td>Update Server</td>
+<td>443/TCP</td>
+<td>Security Updates</td>
+<td>[TODO: CISO]</td>
+</tr>
+<tr>
+<td>[TODO: FW-103]</td>
+<td>CDE-MGMT</td>
+<td>SIEM</td>
+<td>514/TCP</td>
+<td>Log-Forwarding</td>
+<td>[TODO: CISO]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="323-blockierte-verbindungen">3.2.3 Blockierte Verbindungen</h4>
+<p><strong>Explizit blockiert:</strong>
+- CDE → Corporate Network (außer Management)
+- Corporate → CDE (außer autorisierte Admin-Zugriffe)
+- CDE → Internet (außer explizit erlaubte Dienste)
+- Guest → CDE (alle Verbindungen)</p>
+<h3 id="33-firewall-regeluberprufung">3.3 Firewall-Regelüberprüfung</h3>
+<p><strong>Überprüfungsintervall:</strong> Quartalsweise<br />
+<strong>Verantwortlich:</strong> [TODO: Network Security Team]<br />
+<strong>Letzte Überprüfung:</strong> [TODO: Datum]<br />
+<strong>Nächste Überprüfung:</strong> [TODO: Datum]  </p>
+<p><strong>Überprüfungsprozess:</strong>
+1. Review aller Firewall-Regeln
+2. Identifikation ungenutzter Regeln
+3. Validierung der Business-Begründung
+4. Dokumentation von Änderungen
+5. Genehmigung durch CISO</p>
+<h2 id="4-router-konfiguration">4. Router-Konfiguration</h2>
+<h3 id="41-router-ubersicht">4.1 Router-Übersicht</h3>
+<table>
+<thead>
+<tr>
+<th>Router-ID</th>
+<th>Standort</th>
+<th>Funktion</th>
+<th>Hersteller/Modell</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: RTR-CORE]</td>
+<td>[TODO: RZ1]</td>
+<td>Core Routing</td>
+<td>[TODO: Vendor/Model]</td>
+</tr>
+<tr>
+<td>[TODO: RTR-CDE]</td>
+<td>[TODO: RZ1]</td>
+<td>CDE Routing</td>
+<td>[TODO: Vendor/Model]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-access-control-lists-acls">4.2 Access Control Lists (ACLs)</h3>
+<p>[TODO: Dokumentieren Sie Router-ACLs analog zu Firewall-Regeln]</p>
+<h2 id="5-segmentierungsvalidierung">5. Segmentierungsvalidierung</h2>
+<h3 id="51-validierungsmethoden">5.1 Validierungsmethoden</h3>
+<p><strong>Jährliche Validierung erforderlich (PCI-DSS Req 11.4.6):</strong></p>
+<ol>
+<li><strong>Penetrationstests:</strong></li>
+<li>Versuch, CDE-Segmentierung zu umgehen</li>
+<li>Test von Firewall-Regeln</li>
+<li>
+<p>Validierung der Netzwerkisolation</p>
+</li>
+<li>
+<p><strong>Netzwerk-Scans:</strong></p>
+</li>
+<li>Port-Scans von verschiedenen Segmenten</li>
+<li>Erreichbarkeitstests</li>
+<li>
+<p>Routing-Validierung</p>
+</li>
+<li>
+<p><strong>Konfigurationsüberprüfung:</strong></p>
+</li>
+<li>Review von Firewall-Konfigurationen</li>
+<li>Überprüfung von Router-ACLs</li>
+<li>VLAN-Konfigurationsvalidierung</li>
+</ol>
+<h3 id="52-validierungshistorie">5.2 Validierungshistorie</h3>
+<table>
+<thead>
+<tr>
+<th>Datum</th>
+<th>Methode</th>
+<th>Durchgeführt von</th>
+<th>Ergebnis</th>
+<th>Maßnahmen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: 2025-12-01]</td>
+<td>Penetrationstest</td>
+<td>[TODO: Firma]</td>
+<td>Erfolgreich</td>
+<td>Keine</td>
+</tr>
+<tr>
+<td>[TODO: 2025-06-15]</td>
+<td>Netzwerk-Scan</td>
+<td>[TODO: Team]</td>
+<td>1 Schwachstelle</td>
+<td>Regel FW-042 entfernt</td>
+</tr>
+</tbody>
+</table>
+<h3 id="53-nachste-validierung">5.3 Nächste Validierung</h3>
+<p><strong>Geplantes Datum:</strong> [TODO: Datum]<br />
+<strong>Methode:</strong> [TODO: Penetrationstest/Scan]<br />
+<strong>Durchführende Firma:</strong> [TODO: Name]  </p>
+<h2 id="6-wireless-networks">6. Wireless Networks</h2>
+<h3 id="61-wireless-segmentierung">6.1 Wireless-Segmentierung</h3>
+<p><strong>Wireless-Netzwerke:</strong></p>
+<table>
+<thead>
+<tr>
+<th>SSID</th>
+<th>Segment</th>
+<th>Verschlüsselung</th>
+<th>CDE-Zugriff</th>
+<th>Zweck</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Corp-WiFi]</td>
+<td>Corporate</td>
+<td>WPA3-Enterprise</td>
+<td>Nein</td>
+<td>Mitarbeiter</td>
+</tr>
+<tr>
+<td>[TODO: Guest-WiFi]</td>
+<td>Guest</td>
+<td>WPA3-Personal</td>
+<td>Nein</td>
+<td>Gäste</td>
+</tr>
+<tr>
+<td>[TODO: CDE-WiFi]</td>
+<td>CDE-MGMT</td>
+<td>WPA3-Enterprise + MFA</td>
+<td>Ja</td>
+<td>CDE-Admin</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Wichtig:</strong> Wireless-Netzwerke mit CDE-Zugriff erfordern:
+- WPA3 oder höher
+- Multi-Faktor-Authentifizierung
+- Separate VLAN-Segmentierung
+- Verschlüsselte Übertragung</p>
+<h3 id="62-wireless-access-points">6.2 Wireless Access Points</h3>
+<table>
+<thead>
+<tr>
+<th>AP-ID</th>
+<th>Standort</th>
+<th>SSID</th>
+<th>Segment</th>
+<th>Firmware-Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: AP-001]</td>
+<td>[TODO: Büro]</td>
+<td>Corp-WiFi</td>
+<td>Corporate</td>
+<td>[TODO: v2.1]</td>
+</tr>
+<tr>
+<td>[TODO: AP-002]</td>
+<td>[TODO: RZ]</td>
+<td>CDE-WiFi</td>
+<td>CDE-MGMT</td>
+<td>[TODO: v2.1]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-remote-access">7. Remote Access</h2>
+<h3 id="71-vpn-konfiguration">7.1 VPN-Konfiguration</h3>
+<p><strong>VPN-Zugriff zum CDE:</strong></p>
+<table>
+<thead>
+<tr>
+<th>VPN-Typ</th>
+<th>Zielgruppe</th>
+<th>Authentifizierung</th>
+<th>Ziel-Segment</th>
+<th>Verschlüsselung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: SSL-VPN]</td>
+<td>Administratoren</td>
+<td>MFA (Token)</td>
+<td>CDE-MGMT</td>
+<td>TLS 1.3</td>
+</tr>
+<tr>
+<td>[TODO: IPSec-VPN]</td>
+<td>Dienstleister</td>
+<td>MFA (Zertifikat)</td>
+<td>CDE-MGMT</td>
+<td>AES-256</td>
+</tr>
+</tbody>
+</table>
+<p><strong>VPN-Anforderungen:</strong>
+- Multi-Faktor-Authentifizierung (MFA) erforderlich
+- Verschlüsselung: TLS 1.2+ oder IPSec mit AES-256
+- Session-Timeout: [TODO: 15 Minuten Inaktivität]
+- Logging aller VPN-Verbindungen</p>
+<h3 id="72-jump-server-bastion-hosts">7.2 Jump Server / Bastion Hosts</h3>
+<p><strong>Jump Server für CDE-Zugriff:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Server-ID</th>
+<th>Standort</th>
+<th>Funktion</th>
+<th>Zugriffsmethode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: JUMP-01]</td>
+<td>CDE-MGMT</td>
+<td>Admin-Zugriff</td>
+<td>SSH/RDP über VPN</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Jump Server-Anforderungen:</strong>
+- Keine direkte Internet-Verbindung
+- Zugriff nur über VPN mit MFA
+- Vollständiges Logging aller Sessions
+- Keine lokale Datenspeicherung</p>
+<h2 id="8-monitoring-und-alerting">8. Monitoring und Alerting</h2>
+<h3 id="81-netzwerk-monitoring">8.1 Netzwerk-Monitoring</h3>
+<p><strong>Überwachte Metriken:</strong>
+- Firewall-Regel-Verletzungen
+- Unerwartete Verbindungsversuche zum CDE
+- Änderungen an Firewall-Konfigurationen
+- Anomalien im Netzwerkverkehr</p>
+<p><strong>Monitoring-Tools:</strong>
+- [TODO: SIEM-System]
+- [TODO: Network Monitoring Tool]
+- [TODO: IDS/IPS]</p>
+<h3 id="82-alerting-regeln">8.2 Alerting-Regeln</h3>
+<table>
+<thead>
+<tr>
+<th>Alert-ID</th>
+<th>Bedingung</th>
+<th>Schweregrad</th>
+<th>Benachrichtigung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: ALT-001]</td>
+<td>Verbindung von Corporate zu CDE-CORE</td>
+<td>Kritisch</td>
+<td>SOC + CISO</td>
+</tr>
+<tr>
+<td>[TODO: ALT-002]</td>
+<td>Firewall-Regel-Änderung</td>
+<td>Hoch</td>
+<td>Network Team</td>
+</tr>
+<tr>
+<td>[TODO: ALT-003]</td>
+<td>Fehlgeschlagene VPN-Anmeldung (3x)</td>
+<td>Mittel</td>
+<td>Security Team</td>
+</tr>
+</tbody>
+</table>
+<h2 id="9-anderungsmanagement">9. Änderungsmanagement</h2>
+<h3 id="91-anderungsprozess">9.1 Änderungsprozess</h3>
+<p><strong>Prozess für Netzwerkänderungen:</strong></p>
+<ol>
+<li><strong>Change Request:</strong> Formale Anfrage mit Begründung</li>
+<li><strong>Security Review:</strong> Bewertung der PCI-DSS-Auswirkungen</li>
+<li><strong>Testing:</strong> Test in Nicht-Produktionsumgebung</li>
+<li><strong>Genehmigung:</strong> CISO-Freigabe für CDE-Änderungen</li>
+<li><strong>Implementation:</strong> Durchführung mit Rollback-Plan</li>
+<li><strong>Dokumentation:</strong> Aktualisierung dieses Dokuments</li>
+<li><strong>Validation:</strong> Überprüfung der Segmentierung</li>
+</ol>
+<h3 id="92-anderungshistorie">9.2 Änderungshistorie</h3>
+<table>
+<thead>
+<tr>
+<th>Datum</th>
+<th>Änderung</th>
+<th>Begründung</th>
+<th>Genehmigt durch</th>
+<th>Validiert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: 2026-01-15]</td>
+<td>Neue Firewall-Regel FW-105</td>
+<td>Payment API</td>
+<td>[TODO: CISO]</td>
+<td>Ja</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Dokumenthistorie:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Datum</th>
+<th>Autor</th>
+<th>Änderungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Initiale Erstellung</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0010_Geltungsbereich_und_CDE_Definition.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0030_Rollen_und_Verantwortlichkeiten.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

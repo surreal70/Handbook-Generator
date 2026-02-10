@@ -164,9 +164,16 @@ class OutputGenerator:
         validation_warnings = self.validate_markdown(markdown_content)
         result.warnings.extend(validation_warnings)
         
-        # Ensure output directory exists (uses 'markdown' as output_type, includes handbook_type)
+        # Ensure output directory exists (backward compatible: no format subdirectory for markdown)
         try:
-            output_dir = self.ensure_output_structure(language, 'markdown', template_type)
+            if not self.test_mode:
+                raise RuntimeError(
+                    "Output generation requires --test flag. "
+                    "Use --test to enable test mode output."
+                )
+            # Create directory structure: output_dir/language/template_type/
+            output_dir = self.output_dir / language / template_type
+            output_dir.mkdir(parents=True, exist_ok=True)
         except RuntimeError as e:
             result.errors.append(str(e))
             return result

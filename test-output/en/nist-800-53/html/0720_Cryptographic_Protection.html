@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0720 - Cryptographic Protection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0720</div>
+            <h1>Cryptographic Protection</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0710_Network_Security_and_Boundary_Protection.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0730_System_and_Information_Integrity_Policy.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="cryptographic-protection">Cryptographic Protection</h1>
+<p><strong>Document ID:</strong> NIST-0720<br />
+<strong>Control Family:</strong> System and Communications Protection (SC)<br />
+<strong>Controls:</strong> SC-8, SC-12, SC-13, SC-17, SC-28<br />
+<strong>Organization:</strong> AdminSend GmbH<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Draft / In Review / Approved<br />
+<strong>Last Updated:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-control-description">1. Control Description</h2>
+<p>This document covers cryptographic protection controls:
+- <strong>SC-8:</strong> Transmission Confidentiality and Integrity
+- <strong>SC-12:</strong> Cryptographic Key Establishment and Management
+- <strong>SC-13:</strong> Cryptographic Protection
+- <strong>SC-17:</strong> Public Key Infrastructure Certificates
+- <strong>SC-28:</strong> Protection of Information at Rest</p>
+<h2 id="2-control-implementation">2. Control Implementation</h2>
+<h3 id="21-transmission-confidentiality-and-integrity-sc-8">2.1 Transmission Confidentiality and Integrity (SC-8)</h3>
+<p><strong>Encryption Requirements:</strong>
+| Data Type | Encryption Method | Key Length | Protocol |
+|-----------|------------------|------------|----------|
+| Web traffic | TLS 1.2/1.3 | 256-bit | HTTPS |
+| Email | TLS, S/MIME | 256-bit | SMTP/TLS |
+| File transfer | SFTP, FTPS | 256-bit | SSH, TLS |
+| Database | TLS | 256-bit | DB-specific |
+| VPN | IPsec, SSL/TLS | 256-bit | Various |</p>
+<p><strong>Approved Algorithms:</strong>
+- Symmetric: AES-256, ChaCha20
+- Asymmetric: RSA-2048+, ECDSA P-256+
+- Hash: SHA-256, SHA-384, SHA-512
+- Key exchange: ECDHE, DHE</p>
+<p>[TODO: Specify approved algorithms]</p>
+<h3 id="22-cryptographic-key-management-sc-12">2.2 Cryptographic Key Management (SC-12)</h3>
+<p><strong>Key Lifecycle:</strong>
+1. <strong>Generation</strong>
+   - Secure random number generation
+   - Approved algorithms
+   - Appropriate key lengths</p>
+<ol>
+<li><strong>Distribution</strong></li>
+<li>Secure key exchange protocols</li>
+<li>Out-of-band verification</li>
+<li>
+<p>Access controls</p>
+</li>
+<li>
+<p><strong>Storage</strong></p>
+</li>
+<li>Hardware security modules (HSMs)</li>
+<li>Key encryption keys (KEKs)</li>
+<li>
+<p>Access controls</p>
+</li>
+<li>
+<p><strong>Usage</strong></p>
+</li>
+<li>Purpose-specific keys</li>
+<li>Usage logging</li>
+<li>
+<p>Access controls</p>
+</li>
+<li>
+<p><strong>Rotation</strong></p>
+</li>
+<li>Rotation schedule</li>
+<li>Automated rotation</li>
+<li>
+<p>Key history</p>
+</li>
+<li>
+<p><strong>Destruction</strong></p>
+</li>
+<li>Secure deletion</li>
+<li>Verification</li>
+<li>Documentation</li>
+</ol>
+<p>[TODO: Define key management procedures]</p>
+<p><strong>Key Management System:</strong>
+- Centralized key management
+- HSM integration
+- Automated key rotation
+- Audit logging</p>
+<p>[TODO: Describe key management system]</p>
+<h3 id="23-cryptographic-protection-sc-13">2.3 Cryptographic Protection (SC-13)</h3>
+<p><strong>Cryptographic Modules:</strong>
+- FIPS 140-2/140-3 validated modules
+- Approved algorithms
+- Proper implementation
+- Regular updates</p>
+<p>[TODO: List cryptographic modules in use]</p>
+<p><strong>Implementation Requirements:</strong>
+- No custom cryptography
+- Use of established libraries
+- Proper initialization
+- Secure defaults</p>
+<p>[TODO: Define implementation requirements]</p>
+<h3 id="24-pki-certificates-sc-17">2.4 PKI Certificates (SC-17)</h3>
+<p><strong>Certificate Management:</strong>
+- Certificate issuance
+- Certificate renewal
+- Certificate revocation
+- Certificate validation</p>
+<p>[TODO: Define certificate management procedures]</p>
+<p><strong>Certificate Authorities:</strong>
+| CA Type | Purpose | Validation Level |
+|---------|---------|------------------|
+| Internal CA | Internal systems | Domain validation |
+| Public CA | External services | Extended validation |
+| [TODO] | [TODO] | [TODO] |</p>
+<p><strong>Certificate Policies:</strong>
+- Certificate lifetimes
+- Key lengths
+- Allowed uses
+- Revocation procedures</p>
+<p>[TODO: Define certificate policies]</p>
+<h3 id="25-protection-of-information-at-rest-sc-28">2.5 Protection of Information at Rest (SC-28)</h3>
+<p><strong>Encryption at Rest:</strong>
+| Data Type | Encryption Method | Key Management |
+|-----------|------------------|----------------|
+| Database | Transparent Data Encryption (TDE) | HSM |
+| File systems | Full disk encryption | TPM/HSM |
+| Backups | AES-256 | HSM |
+| Archives | AES-256 | HSM |
+| Mobile devices | Device encryption | Device-based |</p>
+<p><strong>Encryption Scope:</strong>
+- All sensitive data
+- All regulated data
+- All backup media
+- All portable media</p>
+<p>[TODO: Define encryption scope]</p>
+<p><strong>Key Management:</strong>
+- Separate encryption keys per system
+- Regular key rotation
+- Secure key storage
+- Key backup and recovery</p>
+<p>[TODO: Define key management for data at rest]</p>
+<h2 id="3-control-enhancements">3. Control Enhancements</h2>
+<ul>
+<li><strong>SC-8(1):</strong> Cryptographic Protection</li>
+<li><strong>SC-8(2):</strong> Pre- and Post-Transmission Handling</li>
+<li><strong>SC-8(3):</strong> Cryptographic Protection for Message Externals</li>
+<li><strong>SC-8(4):</strong> Conceal or Randomize Communications</li>
+<li><strong>SC-12(1):</strong> Availability</li>
+<li><strong>SC-12(2):</strong> Symmetric Keys</li>
+<li><strong>SC-12(3):</strong> Asymmetric Keys</li>
+<li><strong>SC-12(6):</strong> Physical Control of Keys</li>
+<li><strong>SC-13(1):</strong> FIPS-Validated Cryptography</li>
+<li><strong>SC-17(1):</strong> Receiver Checks</li>
+<li><strong>SC-17(2):</strong> Validation of Binding</li>
+<li><strong>SC-28(1):</strong> Cryptographic Protection</li>
+<li><strong>SC-28(2):</strong> Offline Storage</li>
+<li><strong>SC-28(3):</strong> Cryptographic Keys</li>
+</ul>
+<p>[TODO: Mark applicable enhancements]</p>
+<h2 id="4-implementation-status">4. Implementation Status</h2>
+<p><strong>Status:</strong> [TODO: Implemented / Partially Implemented / Planned / Not Applicable]<br />
+<strong>Implementation Date:</strong> [TODO: Date]<br />
+<strong>Responsible:</strong> [TODO: Name/Role]  </p>
+<h2 id="5-assessment">5. Assessment</h2>
+<p><strong>Assessment Method:</strong> Examine, Interview, Test<br />
+<strong>Assessment Status:</strong> [TODO: Satisfied / Other than Satisfied / Not Applicable]<br />
+<strong>Findings:</strong> [TODO: Description]  </p>
+<hr />
+<p><strong>Document History:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Initial creation</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0710_Network_Security_and_Boundary_Protection.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0730_System_and_Information_Integrity_Policy.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

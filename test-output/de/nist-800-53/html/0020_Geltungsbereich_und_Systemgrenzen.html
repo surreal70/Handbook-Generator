@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0020 - Geltungsbereich und Systemgrenzen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0020</div>
+            <h1>Geltungsbereich und Systemgrenzen</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0010_Systemkategorisierung.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0030_Rollen_und_Verantwortlichkeiten.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="geltungsbereich-und-systemgrenzen">Geltungsbereich und Systemgrenzen</h1>
+<p><strong>Dokument-ID:</strong> NIST-0020<br />
+<strong>Organisation:</strong> AdminSend GmbH<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Genehmigt durch:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Entwurf / In Review / Freigegeben<br />
+<strong>Klassifizierung:</strong> internal<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-zweck">1. Zweck</h2>
+<p>Dieses Dokument definiert den Geltungsbereich und die Autorisierungsgrenzen des Informationssystems {{ meta.nist.system_name }}.</p>
+<h3 id="11-ziele">1.1 Ziele</h3>
+<ul>
+<li><strong>Scope-Definition:</strong> Klare Abgrenzung des Systems</li>
+<li><strong>Autorisierungsgrenze:</strong> Definition der Autorisierungsgrenze</li>
+<li><strong>Komponenten-Identifikation:</strong> Identifikation aller Systemkomponenten</li>
+<li><strong>Schnittstellen:</strong> Dokumentation externer Schnittstellen</li>
+</ul>
+<h3 id="12-referenzen">1.2 Referenzen</h3>
+<ul>
+<li><strong>NIST SP 800-37 Rev. 2:</strong> Risk Management Framework for Information Systems and Organizations</li>
+<li><strong>NIST SP 800-53 Rev. 5:</strong> Security and Privacy Controls</li>
+<li><strong>NIST SP 800-18 Rev. 1:</strong> Guide for Developing Security Plans</li>
+</ul>
+<h2 id="2-systemidentifikation">2. Systemidentifikation</h2>
+<h3 id="21-systeminformationen">2.1 Systeminformationen</h3>
+<p><strong>Systemname:</strong> {{ meta.nist.system_name }}<br />
+<strong>System-ID:</strong> {{ meta.nist.system_id }}<br />
+<strong>FIPS 199 Kategorisierung:</strong> [TODO: Low / Moderate / High]<br />
+<strong>System Owner:</strong> [TODO: Name]<br />
+<strong>Authorizing Official (AO):</strong> {{ meta.roles.ao.name }}  </p>
+<h3 id="22-systembeschreibung">2.2 Systembeschreibung</h3>
+<p><strong>Zweck:</strong> [TODO: Beschreibung des Systemzwecks]</p>
+<p><strong>Hauptfunktionen:</strong>
+- [TODO: Funktion 1]
+- [TODO: Funktion 2]
+- [TODO: Funktion 3]</p>
+<p><strong>Geschäftsprozesse:</strong>
+- [TODO: Prozess 1]
+- [TODO: Prozess 2]</p>
+<h2 id="3-autorisierungsgrenze">3. Autorisierungsgrenze</h2>
+<h3 id="31-definition-der-autorisierungsgrenze">3.1 Definition der Autorisierungsgrenze</h3>
+<p>Die Autorisierungsgrenze umfasst alle Komponenten, die unter einer einzigen Autorisierungsentscheidung fallen.</p>
+<p><strong>Autorisierungsgrenze:</strong> [TODO: Beschreibung der Grenze]</p>
+<p><strong>Eingeschlossene Komponenten:</strong>
+- [TODO: Komponente 1]
+- [TODO: Komponente 2]
+- [TODO: Komponente 3]</p>
+<p><strong>Ausgeschlossene Komponenten:</strong>
+- [TODO: Komponente 1 - Begründung]
+- [TODO: Komponente 2 - Begründung]</p>
+<h3 id="32-netzwerkdiagramm">3.2 Netzwerkdiagramm</h3>
+<p>[TODO: Fügen Sie Netzwerkdiagramm ein, das die Autorisierungsgrenze zeigt]</p>
+<h2 id="4-systemkomponenten">4. Systemkomponenten</h2>
+<h3 id="41-hardware-komponenten">4.1 Hardware-Komponenten</h3>
+<table>
+<thead>
+<tr>
+<th>Komponente</th>
+<th>Typ</th>
+<th>Standort</th>
+<th>Funktion</th>
+<th>Kritikalität</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Server 1]</td>
+<td>Server</td>
+<td>[TODO: RZ1]</td>
+<td>[TODO: Funktion]</td>
+<td>[TODO: H/M/L]</td>
+</tr>
+<tr>
+<td>[TODO: Firewall 1]</td>
+<td>Netzwerk</td>
+<td>[TODO: RZ1]</td>
+<td>[TODO: Funktion]</td>
+<td>[TODO: H/M/L]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-software-komponenten">4.2 Software-Komponenten</h3>
+<table>
+<thead>
+<tr>
+<th>Komponente</th>
+<th>Version</th>
+<th>Hersteller</th>
+<th>Funktion</th>
+<th>Lizenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: OS]</td>
+<td>[TODO: Version]</td>
+<td>[TODO: Vendor]</td>
+<td>Betriebssystem</td>
+<td>[TODO: Lizenz]</td>
+</tr>
+<tr>
+<td>[TODO: App]</td>
+<td>[TODO: Version]</td>
+<td>[TODO: Vendor]</td>
+<td>Anwendung</td>
+<td>[TODO: Lizenz]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="43-datenkomponenten">4.3 Datenkomponenten</h3>
+<table>
+<thead>
+<tr>
+<th>Datentyp</th>
+<th>Klassifizierung</th>
+<th>Speicherort</th>
+<th>Retention</th>
+<th>Backup</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Daten 1]</td>
+<td>[TODO: Klassifizierung]</td>
+<td>[TODO: Ort]</td>
+<td>[TODO: Zeit]</td>
+<td>[TODO: Ja/Nein]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-externe-schnittstellen">5. Externe Schnittstellen</h2>
+<h3 id="51-systemverbindungen">5.1 Systemverbindungen</h3>
+<table>
+<thead>
+<tr>
+<th>Verbundenes System</th>
+<th>Verbindungstyp</th>
+<th>Protokoll</th>
+<th>Zweck</th>
+<th>Autorisierung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: System 1]</td>
+<td>[TODO: Typ]</td>
+<td>[TODO: Protokoll]</td>
+<td>[TODO: Zweck]</td>
+<td>[TODO: ATO-Nummer]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-datenflusse">5.2 Datenflüsse</h3>
+<p><strong>Eingehende Datenflüsse:</strong>
+- [TODO: Quelle → Ziel: Beschreibung]</p>
+<p><strong>Ausgehende Datenflüsse:</strong>
+- [TODO: Quelle → Ziel: Beschreibung]</p>
+<h2 id="6-standorte">6. Standorte</h2>
+<h3 id="61-physische-standorte">6.1 Physische Standorte</h3>
+<table>
+<thead>
+<tr>
+<th>Standort-ID</th>
+<th>Standortname</th>
+<th>Adresse</th>
+<th>Komponenten</th>
+<th>Sicherheitslevel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: LOC-01]</td>
+<td>[TODO: Name]</td>
+<td>[TODO: Adresse]</td>
+<td>[TODO: Liste]</td>
+<td>[TODO: Level]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-personal">7. Personal</h2>
+<h3 id="71-benutzerrollen">7.1 Benutzerrollen</h3>
+<table>
+<thead>
+<tr>
+<th>Rolle</th>
+<th>Anzahl</th>
+<th>Zugriffslevel</th>
+<th>Begründung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Admin]</td>
+<td>[TODO: Anzahl]</td>
+<td>Privilegiert</td>
+<td>Administration</td>
+</tr>
+<tr>
+<td>[TODO: User]</td>
+<td>[TODO: Anzahl]</td>
+<td>Standard</td>
+<td>Normale Nutzung</td>
+</tr>
+</tbody>
+</table>
+<h3 id="72-externe-benutzer">7.2 Externe Benutzer</h3>
+<table>
+<thead>
+<tr>
+<th>Benutzergruppe</th>
+<th>Organisation</th>
+<th>Zugriffsmethode</th>
+<th>Zweck</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Partner]</td>
+<td>[TODO: Org]</td>
+<td>[TODO: VPN]</td>
+<td>[TODO: Zweck]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="8-genehmigung">8. Genehmigung</h2>
+<p><strong>Genehmigt durch:</strong> {{ meta.roles.ao.name }}<br />
+<strong>Datum:</strong> [TODO: Datum]  </p>
+<hr />
+<p><strong>Dokumenthistorie:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Datum</th>
+<th>Autor</th>
+<th>Änderungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Initiale Erstellung</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0010_Systemkategorisierung.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0030_Rollen_und_Verantwortlichkeiten.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

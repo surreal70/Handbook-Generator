@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0150 - Integrität und Vertraulichkeit</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0150</div>
+            <h1>Integrität und Vertraulichkeit</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0140_Speicherbegrenzung.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0200_Transparente_Information_und_Kommunikation.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="integritat-und-vertraulichkeit">Integrität und Vertraulichkeit</h1>
+<p><strong>Dokument-ID:</strong> 0150<br />
+<strong>Owner:</strong> {{ meta.owner }}<br />
+<strong>Version:</strong> {{ meta.version }}<br />
+<strong>Status:</strong> Entwurf<br />
+<strong>Klassifizierung:</strong> Intern<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.date }}  </p>
+<hr />
+<h2 id="zweck">Zweck</h2>
+<p>Dieses Dokument beschreibt die Umsetzung des Grundsatzes der Integrität und Vertraulichkeit in der {{ meta.organization }}. Personenbezogene Daten müssen sicher verarbeitet und vor unbefugtem Zugriff geschützt werden.</p>
+<h2 id="grundsatz-gema-art-5-abs-1-lit-f-dsgvo">Grundsatz gemäß Art. 5 Abs. 1 lit. f DSGVO</h2>
+<p><strong>Rechtliche Anforderung:</strong><br />
+Personenbezogene Daten müssen in einer Weise verarbeitet werden, die eine angemessene Sicherheit der personenbezogenen Daten gewährleistet, einschließlich Schutz vor unbefugter oder unrechtmäßiger Verarbeitung und vor unbeabsichtigtem Verlust, unbeabsichtigter Zerstörung oder unbeabsichtigter Schädigung durch geeignete technische und organisatorische Maßnahmen.</p>
+<h3 id="schutzziele">Schutzziele</h3>
+<ol>
+<li><strong>Vertraulichkeit:</strong> Schutz vor unbefugtem Zugriff</li>
+<li><strong>Integrität:</strong> Schutz vor unbefugter Veränderung</li>
+<li><strong>Verfügbarkeit:</strong> Schutz vor Verlust oder Zerstörung</li>
+<li><strong>Belastbarkeit:</strong> Widerstandsfähigkeit der Systeme</li>
+</ol>
+<h2 id="technische-und-organisatorische-manahmen-tom">Technische und Organisatorische Maßnahmen (TOM)</h2>
+<h3 id="ubersicht-der-manahmenkategorien-art-32-dsgvo">Übersicht der Maßnahmenkategorien (Art. 32 DSGVO)</h3>
+<table>
+<thead>
+<tr>
+<th>Kategorie</th>
+<th>Beschreibung</th>
+<th>Beispiele</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zutrittskontrolle</td>
+<td>Schutz vor unbefugtem Zutritt</td>
+<td>Zugangskontrollen, Alarmanlagen, Videoüberwachung</td>
+</tr>
+<tr>
+<td>Zugangskontrolle</td>
+<td>Schutz vor unbefugter Systemnutzung</td>
+<td>Benutzerauthentifizierung, Passwortrichtlinien, MFA</td>
+</tr>
+<tr>
+<td>Zugriffskontrolle</td>
+<td>Schutz vor unbefugtem Datenzugriff</td>
+<td>Berechtigungskonzept, Rollenmodell, Need-to-know</td>
+</tr>
+<tr>
+<td>Weitergabekontrolle</td>
+<td>Schutz bei Datenübermittlung</td>
+<td>Verschlüsselung, VPN, sichere Protokolle</td>
+</tr>
+<tr>
+<td>Eingabekontrolle</td>
+<td>Nachvollziehbarkeit von Eingaben</td>
+<td>Logging, Audit-Trails, Versionierung</td>
+</tr>
+<tr>
+<td>Auftragskontrolle</td>
+<td>Sicherheit bei Auftragsverarbeitung</td>
+<td>AVV, Kontrollen, Audits</td>
+</tr>
+<tr>
+<td>Verfügbarkeitskontrolle</td>
+<td>Schutz vor Datenverlust</td>
+<td>Backups, Redundanz, Disaster Recovery</td>
+</tr>
+<tr>
+<td>Trennungskontrolle</td>
+<td>Trennung unterschiedlicher Zwecke</td>
+<td>Mandantenfähigkeit, Datensegmentierung</td>
+</tr>
+</tbody>
+</table>
+<h2 id="zutrittskontrolle">Zutrittskontrolle</h2>
+<h3 id="physische-sicherheit">Physische Sicherheit</h3>
+<p><strong>Maßnahmen zum Schutz vor unbefugtem Zutritt:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Maßnahme</th>
+<th>Beschreibung</th>
+<th>Verantwortlich</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Zugangskontrollen]</td>
+<td>Chipkarten, Schlüssel, Codes</td>
+<td>Facility Management</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: Besucherregistrierung]</td>
+<td>Anmeldung und Begleitung</td>
+<td>Empfang</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: Videoüberwachung]</td>
+<td>Überwachung sensibler Bereiche</td>
+<td>Security</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: Alarmanlagen]</td>
+<td>Einbruchmeldesysteme</td>
+<td>Security</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: Serverraum-Sicherung]</td>
+<td>Besonderer Schutz für Server</td>
+<td>IT</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="zugangskontrolle">Zugangskontrolle</h2>
+<h3 id="authentifizierung-und-autorisierung">Authentifizierung und Autorisierung</h3>
+<p><strong>Maßnahmen zur Systemzugangskontrolle:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Maßnahme</th>
+<th>Beschreibung</th>
+<th>Implementierung</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Benutzerauthentifizierung]</td>
+<td>Eindeutige Benutzerkonten</td>
+<td>Active Directory</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: Passwortrichtlinie]</td>
+<td>Komplexität, Länge, Ablauf</td>
+<td>Gruppenrichtlinien</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: Multi-Faktor-Authentifizierung]</td>
+<td>Zusätzlicher Authentifizierungsfaktor</td>
+<td>MFA-System</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: Single Sign-On]</td>
+<td>Zentrale Authentifizierung</td>
+<td>SSO-Lösung</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: Automatische Sperrung]</td>
+<td>Nach Inaktivität</td>
+<td>Systemeinstellung</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="passwortrichtlinie">Passwortrichtlinie</h3>
+<p><strong>Anforderungen:</strong>
+- Mindestlänge: [TODO: z.B. 12 Zeichen]
+- Komplexität: [TODO: Groß-/Kleinbuchstaben, Zahlen, Sonderzeichen]
+- Ablauf: [TODO: z.B. 90 Tage]
+- Historie: [TODO: z.B. letzte 5 Passwörter nicht wiederverwendbar]
+- Sperrung: [TODO: Nach 5 Fehlversuchen]</p>
+<h2 id="zugriffskontrolle">Zugriffskontrolle</h2>
+<h3 id="berechtigungskonzept">Berechtigungskonzept</h3>
+<p><strong>Prinzipien:</strong>
+- Need-to-know: Nur erforderliche Zugriffe
+- Least Privilege: Minimale Berechtigungen
+- Rollenbased Access Control (RBAC): Rollenbasierte Zugriffe
+- Regelmäßige Überprüfung: Quartalsweise Rezertifizierung</p>
+<h3 id="berechtigungsmatrix">Berechtigungsmatrix</h3>
+<table>
+<thead>
+<tr>
+<th>Rolle</th>
+<th>System/Daten</th>
+<th>Zugriff</th>
+<th>Begründung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Administrator]</td>
+<td>Alle Systeme</td>
+<td>Vollzugriff</td>
+<td>Systemverwaltung</td>
+</tr>
+<tr>
+<td>[TODO: Vertrieb]</td>
+<td>CRM</td>
+<td>Lesen/Schreiben</td>
+<td>Kundenbetreuung</td>
+</tr>
+<tr>
+<td>[TODO: Buchhaltung]</td>
+<td>Finanzsystem</td>
+<td>Lesen/Schreiben</td>
+<td>Rechnungswesen</td>
+</tr>
+<tr>
+<td>[TODO: Support]</td>
+<td>Ticketsystem</td>
+<td>Lesen/Schreiben</td>
+<td>Kundenservice</td>
+</tr>
+</tbody>
+</table>
+<h3 id="zugriffskontrollprozesse">Zugriffskontrollprozesse</h3>
+<table>
+<thead>
+<tr>
+<th>Prozess</th>
+<th>Beschreibung</th>
+<th>Verantwortlich</th>
+<th>Frequenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Berechtigungsvergabe</td>
+<td>Antrag und Genehmigung</td>
+<td>IT/Vorgesetzter</td>
+<td>Bei Bedarf</td>
+</tr>
+<tr>
+<td>Rezertifizierung</td>
+<td>Überprüfung bestehender Rechte</td>
+<td>IT/Vorgesetzter</td>
+<td>Quartalsweise</td>
+</tr>
+<tr>
+<td>Entzug bei Austritt</td>
+<td>Sofortige Sperrung</td>
+<td>HR/IT</td>
+<td>Bei Austritt</td>
+</tr>
+<tr>
+<td>Privilegierte Zugriffe</td>
+<td>Besondere Kontrolle</td>
+<td>IT-Sicherheit</td>
+<td>Monatlich</td>
+</tr>
+</tbody>
+</table>
+<h2 id="weitergabekontrolle">Weitergabekontrolle</h2>
+<h3 id="verschlusselung">Verschlüsselung</h3>
+<p><strong>Verschlüsselungsmaßnahmen:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Bereich</th>
+<th>Methode</th>
+<th>Standard</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Datenübertragung]</td>
+<td>TLS/SSL</td>
+<td>TLS 1.2+</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: E-Mail]</td>
+<td>S/MIME oder PGP</td>
+<td>-</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: Datenträger]</td>
+<td>Festplattenverschlüsselung</td>
+<td>AES-256</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: Datenbanken]</td>
+<td>Transparent Data Encryption</td>
+<td>AES-256</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: Backups]</td>
+<td>Verschlüsselte Backups</td>
+<td>AES-256</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sichere-datenubermittlung">Sichere Datenübermittlung</h3>
+<p><strong>Maßnahmen:</strong>
+- [TODO: VPN für Remote-Zugriffe]
+- [TODO: HTTPS für Webanwendungen]
+- [TODO: SFTP für Dateitransfers]
+- [TODO: Verschlüsselte E-Mail für sensible Daten]
+- [TODO: Sichere Cloud-Verbindungen]</p>
+<h2 id="eingabekontrolle">Eingabekontrolle</h2>
+<h3 id="logging-und-audit-trails">Logging und Audit-Trails</h3>
+<p><strong>Protokollierung von:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Ereignis</th>
+<th>Details</th>
+<th>Aufbewahrung</th>
+<th>Zugriff</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Anmeldungen]</td>
+<td>Erfolg/Fehlschlag, Zeitpunkt</td>
+<td>90 Tage</td>
+<td>IT-Sicherheit</td>
+</tr>
+<tr>
+<td>[TODO: Datenänderungen]</td>
+<td>Wer, Was, Wann</td>
+<td>1 Jahr</td>
+<td>DSB</td>
+</tr>
+<tr>
+<td>[TODO: Zugriffe auf sensible Daten]</td>
+<td>Benutzer, Zeitpunkt, Daten</td>
+<td>1 Jahr</td>
+<td>DSB</td>
+</tr>
+<tr>
+<td>[TODO: Systemänderungen]</td>
+<td>Administrator, Änderung</td>
+<td>2 Jahre</td>
+<td>IT</td>
+</tr>
+<tr>
+<td>[TODO: Sicherheitsereignisse]</td>
+<td>Art, Zeitpunkt, Quelle</td>
+<td>2 Jahre</td>
+<td>IT-Sicherheit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="nachvollziehbarkeit">Nachvollziehbarkeit</h3>
+<p><strong>Maßnahmen:</strong>
+- Eindeutige Benutzeridentifikation
+- Zeitstempel für alle Aktionen
+- Unveränderbare Protokolle
+- Regelmäßige Auswertung
+- Langfristige Archivierung</p>
+<h2 id="verfugbarkeitskontrolle">Verfügbarkeitskontrolle</h2>
+<h3 id="backup-und-recovery">Backup und Recovery</h3>
+<p><strong>Backup-Strategie:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Backup-Typ</th>
+<th>Frequenz</th>
+<th>Aufbewahrung</th>
+<th>Speicherort</th>
+<th>Verantwortlich</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Vollbackup]</td>
+<td>Wöchentlich</td>
+<td>4 Wochen</td>
+<td>Offsite</td>
+<td>IT</td>
+</tr>
+<tr>
+<td>[TODO: Inkrementell]</td>
+<td>Täglich</td>
+<td>7 Tage</td>
+<td>Onsite</td>
+<td>IT</td>
+</tr>
+<tr>
+<td>[TODO: Archiv]</td>
+<td>Monatlich</td>
+<td>1 Jahr</td>
+<td>Offsite</td>
+<td>IT</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recovery-Prozess:</strong>
+- Regelmäßige Restore-Tests
+- Dokumentierte Recovery-Verfahren
+- Recovery Time Objective (RTO): [TODO]
+- Recovery Point Objective (RPO): [TODO]</p>
+<h3 id="business-continuity">Business Continuity</h3>
+<p><strong>Maßnahmen:</strong>
+- [TODO: Redundante Systeme]
+- [TODO: Disaster Recovery Plan]
+- [TODO: Notfallhandbuch]
+- [TODO: Regelmäßige Tests]</p>
+<h2 id="incident-response">Incident Response</h2>
+<h3 id="sicherheitsvorfalle">Sicherheitsvorfälle</h3>
+<p><strong>Prozess bei Sicherheitsvorfällen:</strong></p>
+<ol>
+<li><strong>Erkennung und Meldung</strong></li>
+<li>Identifikation des Vorfalls</li>
+<li>Sofortige Meldung an IT-Sicherheit</li>
+<li>
+<p>Erste Bewertung</p>
+</li>
+<li>
+<p><strong>Eindämmung</strong></p>
+</li>
+<li>Isolation betroffener Systeme</li>
+<li>Schadensbegrenzung</li>
+<li>
+<p>Beweissicherung</p>
+</li>
+<li>
+<p><strong>Analyse</strong></p>
+</li>
+<li>Ursachenanalyse</li>
+<li>Umfang der Betroffenheit</li>
+<li>
+<p>Bewertung der Auswirkungen</p>
+</li>
+<li>
+<p><strong>Behebung</strong></p>
+</li>
+<li>Beseitigung der Ursache</li>
+<li>Wiederherstellung des Normalbetriebs</li>
+<li>
+<p>Dokumentation</p>
+</li>
+<li>
+<p><strong>Nachbereitung</strong></p>
+</li>
+<li>Lessons Learned</li>
+<li>Verbesserungsmaßnahmen</li>
+<li>Schulungen</li>
+</ol>
+<h3 id="datenschutzverletzungen-art-33-34-dsgvo">Datenschutzverletzungen (Art. 33-34 DSGVO)</h3>
+<p><strong>Bei Datenschutzverletzungen zusätzlich:</strong>
+- Meldung an Aufsichtsbehörde (innerhalb 72 Stunden)
+- Benachrichtigung betroffener Personen (bei hohem Risiko)
+- Dokumentation im Verzeichnis von Datenschutzverletzungen</p>
+<h2 id="kontrollen-und-uberwachung">Kontrollen und Überwachung</h2>
+<h3 id="regelmaige-uberprufungen">Regelmäßige Überprüfungen</h3>
+<table>
+<thead>
+<tr>
+<th>Kontrolle</th>
+<th>Frequenz</th>
+<th>Verantwortlich</th>
+<th>Dokumentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sicherheitsaudit</td>
+<td>Jährlich</td>
+<td>IT-Sicherheit</td>
+<td>Audit-Bericht</td>
+</tr>
+<tr>
+<td>Penetrationstest</td>
+<td>Jährlich</td>
+<td>Externer Dienstleister</td>
+<td>Testbericht</td>
+</tr>
+<tr>
+<td>Berechtigungsprüfung</td>
+<td>Quartalsweise</td>
+<td>IT</td>
+<td>Prüfprotokoll</td>
+</tr>
+<tr>
+<td>Backup-Test</td>
+<td>Monatlich</td>
+<td>IT</td>
+<td>Testprotokoll</td>
+</tr>
+<tr>
+<td>Log-Auswertung</td>
+<td>Wöchentlich</td>
+<td>IT-Sicherheit</td>
+<td>Analysebericht</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dokumentation">Dokumentation</h2>
+<h3 id="nachweispflichten">Nachweispflichten</h3>
+<p><strong>Dokumentation der TOM:</strong>
+- Beschreibung aller technischen und organisatorischen Maßnahmen
+- Begründung der Angemessenheit
+- Wirksamkeitsnachweise (Tests, Audits)
+- Aktualisierung bei Änderungen</p>
+<h3 id="sicherheitskonzept">Sicherheitskonzept</h3>
+<p><strong>Inhalte:</strong>
+- Schutzziele und Risikobewertung
+- Technische Maßnahmen
+- Organisatorische Maßnahmen
+- Verantwortlichkeiten
+- Kontrollen und Tests
+- Incident Response Plan</p>
+<h2 id="verknupfung-zu-anderen-dokumenten">Verknüpfung zu anderen Dokumenten</h2>
+<ul>
+<li><strong>Datenschutzgrundsätze (Art. 5):</strong> Integrität und Vertraulichkeit als Grundprinzip</li>
+<li><strong>Sicherheit der Verarbeitung (Art. 32):</strong> Detaillierte Anforderungen an TOM</li>
+<li><strong>Datenschutzverletzungen (Art. 33-34):</strong> Meldepflichten bei Sicherheitsvorfällen</li>
+<li><strong>Verzeichnis (Art. 30):</strong> Dokumentation der TOM</li>
+<li><strong>DSFA (Art. 35):</strong> Risikobewertung und Maßnahmen</li>
+</ul>
+<h2 id="haufige-verstoe-und-deren-vermeidung">Häufige Verstöße und deren Vermeidung</h2>
+<table>
+<thead>
+<tr>
+<th>Verstoß</th>
+<th>Beispiel</th>
+<th>Vermeidung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Schwache Passwörter</td>
+<td>Einfache Passwörter</td>
+<td>Passwortrichtlinie durchsetzen</td>
+</tr>
+<tr>
+<td>Fehlende Verschlüsselung</td>
+<td>Unverschlüsselte Übertragung</td>
+<td>TLS/SSL implementieren</td>
+</tr>
+<tr>
+<td>Übermäßige Berechtigungen</td>
+<td>Alle haben Admin-Rechte</td>
+<td>Berechtigungskonzept umsetzen</td>
+</tr>
+<tr>
+<td>Keine Backups</td>
+<td>Datenverlust ohne Recovery</td>
+<td>Backup-Strategie implementieren</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Nächste Schritte:</strong>
+1. Implementieren Sie umfassende TOM gemäß Art. 32
+2. Etablieren Sie Zugriffskontroll- und Berechtigungskonzept
+3. Implementieren Sie Verschlüsselung für Daten in Ruhe und Übertragung
+4. Richten Sie Backup- und Recovery-Prozesse ein
+5. Etablieren Sie Incident Response Prozess</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0140_Speicherbegrenzung.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0200_Transparente_Information_und_Kommunikation.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

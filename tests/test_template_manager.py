@@ -398,7 +398,7 @@ class TestTemplateSorting:
             
             # Verify warnings are generated for unnumbered templates
             warnings = manager.validate_template_structure()
-            unnumbered_warnings = [w for w in warnings if 'without proper numbering' in w.lower()]
+            unnumbered_warnings = [w for w in warnings if 'invalid template filename' in w.lower()]
             assert len(unnumbered_warnings) == num_unnumbered_templates, \
                 f"Expected {num_unnumbered_templates} warnings, got {len(unnumbered_warnings)}"
 
@@ -498,7 +498,7 @@ class TestTemplateValidation:
         warnings = manager.validate_template_structure()
         
         assert len(warnings) > 0
-        assert 'invalid template filename' in warnings[0].lower() or 'without proper numbering' in warnings[0].lower()
+        assert 'invalid template filename' in warnings[0].lower()
 
 
 class TestExampleTemplates:

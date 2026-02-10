@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0050 - Compliance-Programm</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0050</div>
+            <h1>Compliance-Programm</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0040_Datenfluss_Diagramme.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0100_Firewall_Konfiguration.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="compliance-programm">Compliance-Programm</h1>
+<p><strong>Dokument-ID:</strong> PCI-0050<br />
+<strong>Organisation:</strong> AdminSend GmbH<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Genehmigt durch:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Entwurf / In Review / Freigegeben<br />
+<strong>Klassifizierung:</strong> internal<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-zweck">1. Zweck</h2>
+<p>Dieses Dokument beschreibt das PCI-DSS-Compliance-Programm der AdminSend GmbH.</p>
+<h3 id="11-ziele">1.1 Ziele</h3>
+<ul>
+<li><strong>Kontinuierliche Compliance:</strong> Aufrechterhaltung der PCI-DSS-Compliance</li>
+<li><strong>Governance:</strong> Strukturierte Überwachung und Steuerung</li>
+<li><strong>Risikomanagement:</strong> Proaktive Identifikation und Behandlung von Risiken</li>
+<li><strong>Audit-Readiness:</strong> Vorbereitung auf Assessments und Audits</li>
+</ul>
+<h2 id="2-compliance-governance">2. Compliance-Governance</h2>
+<h3 id="21-governance-struktur">2.1 Governance-Struktur</h3>
+<p><strong>PCI-DSS Steering Committee:</strong>
+- <strong>Vorsitz:</strong> {{ meta.roles.ciso.name }}
+- <strong>Mitglieder:</strong> CEO, CIO, PCI Program Manager, Legal, Operations Manager
+- <strong>Frequenz:</strong> Quartalsweise
+- <strong>Zweck:</strong> Strategische Entscheidungen, Budget, Risikobewertung</p>
+<p><strong>PCI-DSS Working Group:</strong>
+- <strong>Leitung:</strong> PCI Program Manager
+- <strong>Mitglieder:</strong> IT Security, Network, Development, Operations
+- <strong>Frequenz:</strong> Monatlich
+- <strong>Zweck:</strong> Operative Umsetzung, Problemlösung, Koordination</p>
+<h3 id="22-management-commitment">2.2 Management-Commitment</h3>
+<p><strong>Informationssicherheitsrichtlinie:</strong>
+- Genehmigt durch: {{ meta.roles.ceo.name }}
+- Datum: [TODO: Datum]
+- Jährliche Überprüfung: [TODO: Monat]</p>
+<p><strong>PCI-DSS-Verpflichtung:</strong>
+AdminSend GmbH verpflichtet sich zur Einhaltung aller PCI-DSS-Anforderungen zum Schutz von Karteninhaberdaten.</p>
+<h2 id="3-compliance-aktivitaten">3. Compliance-Aktivitäten</h2>
+<h3 id="31-jahrliche-aktivitaten">3.1 Jährliche Aktivitäten</h3>
+<table>
+<thead>
+<tr>
+<th>Aktivität</th>
+<th>Verantwortlich</th>
+<th>Zeitraum</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PCI-DSS Assessment (QSA)</td>
+<td>PCI Program Manager</td>
+<td>[TODO: Q1]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Penetrationstest</td>
+<td>IT Security</td>
+<td>[TODO: Q2]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Risikobewertung</td>
+<td>CISO</td>
+<td>[TODO: Q3]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Richtlinienüberprüfung</td>
+<td>CISO</td>
+<td>[TODO: Q4]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Security Awareness Training</td>
+<td>HR + PCI Mgr</td>
+<td>[TODO: Laufend]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-quartalsweise-aktivitaten">3.2 Quartalsweise Aktivitäten</h3>
+<table>
+<thead>
+<tr>
+<th>Aktivität</th>
+<th>Verantwortlich</th>
+<th>Frequenz</th>
+<th>Letzte Durchführung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ASV Vulnerability Scans</td>
+<td>ASV</td>
+<td>Quartalsweise</td>
+<td>[TODO: Datum]</td>
+</tr>
+<tr>
+<td>Firewall-Regelüberprüfung</td>
+<td>Network Team</td>
+<td>Quartalsweise</td>
+<td>[TODO: Datum]</td>
+</tr>
+<tr>
+<td>Steering Committee Meeting</td>
+<td>CISO</td>
+<td>Quartalsweise</td>
+<td>[TODO: Datum]</td>
+</tr>
+<tr>
+<td>Compliance-Reporting</td>
+<td>PCI Program Manager</td>
+<td>Quartalsweise</td>
+<td>[TODO: Datum]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="33-monatliche-aktivitaten">3.3 Monatliche Aktivitäten</h3>
+<table>
+<thead>
+<tr>
+<th>Aktivität</th>
+<th>Verantwortlich</th>
+<th>Frequenz</th>
+<th>Letzte Durchführung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Working Group Meeting</td>
+<td>PCI Program Manager</td>
+<td>Monatlich</td>
+<td>[TODO: Datum]</td>
+</tr>
+<tr>
+<td>Compliance-Dashboard-Review</td>
+<td>CISO</td>
+<td>Monatlich</td>
+<td>[TODO: Datum]</td>
+</tr>
+<tr>
+<td>Patch-Status-Review</td>
+<td>IT Security</td>
+<td>Monatlich</td>
+<td>[TODO: Datum]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="34-tagliche-aktivitaten">3.4 Tägliche Aktivitäten</h3>
+<table>
+<thead>
+<tr>
+<th>Aktivität</th>
+<th>Verantwortlich</th>
+<th>Frequenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Log-Überprüfung</td>
+<td>IT Security</td>
+<td>Täglich</td>
+</tr>
+<tr>
+<td>Incident Monitoring</td>
+<td>SOC</td>
+<td>24/7</td>
+</tr>
+<tr>
+<td>Backup-Überprüfung</td>
+<td>System Admin</td>
+<td>Täglich</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-compliance-metriken-und-kpis">4. Compliance-Metriken und KPIs</h2>
+<h3 id="41-key-performance-indicators">4.1 Key Performance Indicators</h3>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th>Zielwert</th>
+<th>Messung</th>
+<th>Verantwortlich</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vulnerability Remediation Time</td>
+<td>&lt; 30 Tage (High/Critical)</td>
+<td>Monatlich</td>
+<td>IT Security</td>
+</tr>
+<tr>
+<td>Patch Compliance Rate</td>
+<td>&gt; 95%</td>
+<td>Monatlich</td>
+<td>System Admin</td>
+</tr>
+<tr>
+<td>Security Training Completion</td>
+<td>100%</td>
+<td>Jährlich</td>
+<td>HR</td>
+</tr>
+<tr>
+<td>Failed Login Attempts</td>
+<td>&lt; 100/Tag</td>
+<td>Täglich</td>
+<td>IT Security</td>
+</tr>
+<tr>
+<td>Firewall Rule Changes</td>
+<td>Alle genehmigt</td>
+<td>Monatlich</td>
+<td>Network Team</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-compliance-dashboard">4.2 Compliance-Dashboard</h3>
+<p><strong>Überwachte Metriken:</strong>
+- Anzahl offener Schwachstellen (nach Schweregrad)
+- Patch-Status aller CDE-Systeme
+- Anzahl Sicherheitsvorfälle
+- Schulungsstatus der Mitarbeiter
+- Status quartalsweiser ASV-Scans
+- Firewall-Regel-Compliance</p>
+<p><strong>Dashboard-Zugriff:</strong> [TODO: URL/System]<br />
+<strong>Aktualisierung:</strong> Täglich automatisch  </p>
+<h2 id="5-audit-und-assessment">5. Audit und Assessment</h2>
+<h3 id="51-jahrliches-pci-dss-assessment">5.1 Jährliches PCI-DSS Assessment</h3>
+<p><strong>Assessment-Typ:</strong> [TODO: SAQ oder ROC]<br />
+<strong>QSA:</strong> [TODO: Firma/Name]<br />
+<strong>Letztes Assessment:</strong> [TODO: Datum]<br />
+<strong>Nächstes Assessment:</strong> [TODO: Datum]<br />
+<strong>Ergebnis:</strong> [TODO: Compliant/Non-Compliant]  </p>
+<p><strong>Assessment-Vorbereitung:</strong>
+1. Dokumentensammlung (3 Monate vor Assessment)
+2. Pre-Assessment-Audit (2 Monate vor Assessment)
+3. Remediation offener Punkte (1 Monat vor Assessment)
+4. QSA-Assessment (geplanter Termin)
+5. Nachbereitung und AOC-Erhalt</p>
+<h3 id="52-attestation-of-compliance-aoc">5.2 Attestation of Compliance (AOC)</h3>
+<p><strong>Letzte AOC:</strong> [TODO: Datum]<br />
+<strong>Gültig bis:</strong> [TODO: Datum]<br />
+<strong>Eingereicht bei:</strong> [TODO: Acquiring Banks]  </p>
+<p><strong>AOC-Verteilung:</strong>
+- Acquiring Banks
+- Payment Brands (falls erforderlich)
+- Geschäftspartner (auf Anfrage)</p>
+<h3 id="53-interne-audits">5.3 Interne Audits</h3>
+<p><strong>Frequenz:</strong> Halbjährlich<br />
+<strong>Verantwortlich:</strong> Internal Audit Team<br />
+<strong>Scope:</strong> Stichproben aller 12 PCI-DSS-Anforderungen  </p>
+<p><strong>Letztes Audit:</strong> [TODO: Datum]<br />
+<strong>Nächstes Audit:</strong> [TODO: Datum]  </p>
+<h2 id="6-risikomanagement">6. Risikomanagement</h2>
+<h3 id="61-jahrliche-risikobewertung">6.1 Jährliche Risikobewertung</h3>
+<p><strong>Methodik:</strong> [TODO: z.B. ISO 27005, NIST 800-30]<br />
+<strong>Letzte Bewertung:</strong> [TODO: Datum]<br />
+<strong>Nächste Bewertung:</strong> [TODO: Datum]  </p>
+<p><strong>Identifizierte Risiken:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Risiko-ID</th>
+<th>Beschreibung</th>
+<th>Wahrscheinlichkeit</th>
+<th>Auswirkung</th>
+<th>Maßnahmen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: R-001]</td>
+<td>Datenschutzverletzung</td>
+<td>Mittel</td>
+<td>Hoch</td>
+<td>Verschlüsselung, Monitoring</td>
+</tr>
+<tr>
+<td>[TODO: R-002]</td>
+<td>Insider-Bedrohung</td>
+<td>Niedrig</td>
+<td>Hoch</td>
+<td>Zugriffskontrolle, Logging</td>
+</tr>
+</tbody>
+</table>
+<h3 id="62-risikominderung">6.2 Risikominderung</h3>
+<p><strong>Risikominderungsstrategien:</strong>
+- Technische Kontrollen (Verschlüsselung, Firewalls, IDS/IPS)
+- Organisatorische Kontrollen (Richtlinien, Schulungen)
+- Physische Kontrollen (Zutrittskontrolle, Videoüberwachung)
+- Versicherung (Cyber-Versicherung)</p>
+<h2 id="7-incident-response">7. Incident Response</h2>
+<h3 id="71-incident-response-plan">7.1 Incident-Response-Plan</h3>
+<p><strong>Dokumentiert in:</strong> PCI-0630 Incident Response  </p>
+<p><strong>Incident-Kategorien:</strong>
+- Datenschutzverletzung (Breach)
+- Malware-Infektion
+- Unautorisierten Zugriff
+- Denial of Service
+- Physischer Sicherheitsvorfall</p>
+<h3 id="72-breach-notification">7.2 Breach Notification</h3>
+<p><strong>Meldepflichten:</strong>
+- Acquiring Banks: Unverzüglich
+- Payment Brands: Gemäß Brand-Anforderungen
+- Betroffene Karteninhaber: Gemäß lokaler Gesetzgebung
+- Aufsichtsbehörden: Gemäß DSGVO (72 Stunden)</p>
+<p><strong>Verantwortlich:</strong> Legal Counsel + CISO  </p>
+<h2 id="8-schulung-und-awareness">8. Schulung und Awareness</h2>
+<h3 id="81-schulungsprogramm">8.1 Schulungsprogramm</h3>
+<p><strong>Zielgruppen:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Zielgruppe</th>
+<th>Schulungsinhalt</th>
+<th>Frequenz</th>
+<th>Dauer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Alle Mitarbeiter</td>
+<td>Security Awareness</td>
+<td>Jährlich</td>
+<td>1 Stunde</td>
+</tr>
+<tr>
+<td>CDE-Administratoren</td>
+<td>PCI-DSS Deep Dive</td>
+<td>Jährlich</td>
+<td>4 Stunden</td>
+</tr>
+<tr>
+<td>Entwickler</td>
+<td>Secure Coding</td>
+<td>Jährlich</td>
+<td>8 Stunden</td>
+</tr>
+<tr>
+<td>Kassierer/POS</td>
+<td>PCI-DSS Basics</td>
+<td>Bei Einstellung</td>
+<td>2 Stunden</td>
+</tr>
+</tbody>
+</table>
+<h3 id="82-schulungsmaterialien">8.2 Schulungsmaterialien</h3>
+<p><strong>Verfügbare Materialien:</strong>
+- E-Learning-Module
+- Präsentationen
+- Checklisten
+- Poster und Infografiken
+- Phishing-Simulationen</p>
+<p><strong>Speicherort:</strong> [TODO: Intranet/LMS-URL]  </p>
+<h2 id="9-dokumentenmanagement">9. Dokumentenmanagement</h2>
+<h3 id="91-pci-dss-dokumentation">9.1 PCI-DSS-Dokumentation</h3>
+<p><strong>Dokumentenregister:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Dokument-ID</th>
+<th>Titel</th>
+<th>Version</th>
+<th>Letzte Aktualisierung</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PCI-0010</td>
+<td>Scope und CDE</td>
+<td>1.0</td>
+<td>[TODO]</td>
+<td>PCI Mgr</td>
+</tr>
+<tr>
+<td>PCI-0020</td>
+<td>Netzwerksegmentierung</td>
+<td>1.0</td>
+<td>[TODO]</td>
+<td>Network</td>
+</tr>
+<tr>
+<td>PCI-0030</td>
+<td>Rollen</td>
+<td>1.0</td>
+<td>[TODO]</td>
+<td>PCI Mgr</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Dokumentenaufbewahrung:</strong> Mindestens 3 Jahre<br />
+<strong>Zugriffskontrolle:</strong> Nur autorisierte Personen  </p>
+<h3 id="92-nachweisfuhrung-evidence">9.2 Nachweisführung (Evidence)</h3>
+<p><strong>Erforderliche Nachweise:</strong>
+- Firewall-Konfigurationen
+- Scan-Berichte (ASV)
+- Penetrationstest-Berichte
+- Schulungsnachweise
+- Log-Reviews
+- Änderungsprotokolle</p>
+<p><strong>Speicherort:</strong> [TODO: Dokumentenmanagementsystem]  </p>
+<h2 id="10-kontinuierliche-verbesserung">10. Kontinuierliche Verbesserung</h2>
+<h3 id="101-verbesserungsprozess">10.1 Verbesserungsprozess</h3>
+<p><strong>Quellen für Verbesserungen:</strong>
+- Audit-Findings
+- Incident-Lessons-Learned
+- Vulnerability-Scan-Ergebnisse
+- Mitarbeiter-Feedback
+- Branchentrends</p>
+<h3 id="102-verbesserungsmanahmen">10.2 Verbesserungsmaßnahmen</h3>
+<table>
+<thead>
+<tr>
+<th>Maßnahme</th>
+<th>Priorität</th>
+<th>Verantwortlich</th>
+<th>Zieldatum</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Tokenisierung]</td>
+<td>Hoch</td>
+<td>IT Security</td>
+<td>[TODO]</td>
+<td>In Arbeit</td>
+</tr>
+<tr>
+<td>[TODO: SIEM-Upgrade]</td>
+<td>Mittel</td>
+<td>IT Security</td>
+<td>[TODO]</td>
+<td>Geplant</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Dokumenthistorie:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Datum</th>
+<th>Autor</th>
+<th>Änderungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Initiale Erstellung</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0040_Datenfluss_Diagramme.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0100_Firewall_Konfiguration.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

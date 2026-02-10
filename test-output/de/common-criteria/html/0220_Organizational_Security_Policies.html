@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0220 - Organizational Security Policies (OSPs)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0220</div>
+            <h1>Organizational Security Policies (OSPs)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0210_Threats.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0230_Assumptions.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="organizational-security-policies-osps">Organizational Security Policies (OSPs)</h1>
+<p><strong>Dokument-ID:</strong> 0220<br />
+<strong>Owner:</strong> {{ meta.owner }}<br />
+<strong>Version:</strong> {{ meta.version }}<br />
+<strong>Status:</strong> Entwurf<br />
+<strong>Klassifizierung:</strong> Vertraulich<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.date }}  </p>
+<hr />
+<h2 id="1-osp-overview">1. OSP Overview</h2>
+<h3 id="11-purpose">1.1 Purpose</h3>
+<p>Organisatorische Sicherheitsrichtlinien (OSPs) definieren Sicherheitsregeln und -praktiken, die:
+- Von der Organisation vorgegeben werden
+- Vom TOE durchgesetzt oder unterstützt werden müssen
+- Unabhängig von spezifischen Bedrohungen gelten
+- Compliance-Anforderungen erfüllen</p>
+<h3 id="12-osp-categories">1.2 OSP Categories</h3>
+<p><strong>Richtlinienkategorien:</strong>
+- <strong>Access Control Policies</strong>: Zugriffskontrollrichtlinien
+- <strong>Audit Policies</strong>: Audit- und Protokollierungsrichtlinien
+- <strong>Cryptographic Policies</strong>: Kryptografierichtlinien
+- <strong>Data Protection Policies</strong>: Datenschutzrichtlinien
+- <strong>Authentication Policies</strong>: Authentifizierungsrichtlinien
+- <strong>Configuration Policies</strong>: Konfigurationsrichtlinien
+- <strong>Operational Policies</strong>: Betriebsrichtlinien</p>
+<h3 id="13-policy-scope">1.3 Policy Scope</h3>
+<p><strong>Im Scope:</strong>
+[TODO: Welche Richtlinien werden vom TOE durchgesetzt?]</p>
+<p><strong>Außerhalb des Scope:</strong>
+[TODO: Welche Richtlinien werden nicht vom TOE durchgesetzt?]</p>
+<h2 id="2-access-control-policies">2. Access Control Policies</h2>
+<h3 id="paccess_control">P.ACCESS_CONTROL</h3>
+<p><strong>Richtlinien-ID:</strong> P.ACCESS_CONTROL<br />
+<strong>Kategorie:</strong> Access Control<br />
+<strong>Verpflichtend:</strong> [TODO: Yes/No]<br />
+<strong>Priorität:</strong> [TODO: High/Medium/Low]</p>
+<p><strong>Beschreibung:</strong>
+[TODO: Der TOE muss Zugriffskontrollmechanismen implementieren, die sicherstellen, dass nur autorisierte Benutzer auf geschützte Ressourcen zugreifen können]</p>
+<p><strong>Zweck:</strong>
+[TODO: Schutz vor unbefugtem Zugriff auf sensible Daten und Funktionen]</p>
+<p><strong>Anforderungen:</strong>
+- [TODO: Implementierung von Role-Based Access Control (RBAC)]
+- [TODO: Durchsetzung des Least-Privilege-Prinzips]
+- [TODO: Regelmäßige Überprüfung von Zugriffsrechten]
+- [TODO: Dokumentation aller Zugriffsentscheidungen]</p>
+<p><strong>Anwendungsbereich:</strong>
+[TODO: Alle Benutzer und Administratoren des TOE]</p>
+<p><strong>Durchsetzung:</strong>
+- <strong>TOE-Verantwortlichkeit:</strong> [TODO: Zugriffskontrollmechanismen implementieren]
+- <strong>Umgebungsverantwortlichkeit:</strong> [TODO: Benutzerrollen definieren und zuweisen]</p>
+<p><strong>Compliance-Anforderungen:</strong>
+- ISO 27001: A.9.1, A.9.2, A.9.4
+- NIST 800-53: AC-2, AC-3, AC-6
+- [TODO: Weitere Standards]</p>
+<p><strong>Verifikation:</strong>
+[TODO: Wie wird die Einhaltung dieser Richtlinie überprüft?]</p>
+<hr />
+<h3 id="pneed_to_know">P.NEED_TO_KNOW</h3>
+<p><strong>Richtlinien-ID:</strong> P.NEED_TO_KNOW<br />
+<strong>Kategorie:</strong> Access Control<br />
+<strong>Verpflichtend:</strong> [TODO: Yes/No]<br />
+<strong>Priorität:</strong> [TODO: High/Medium/Low]</p>
+<p><strong>Beschreibung:</strong>
+[TODO: Zugriff auf Informationen darf nur gewährt werden, wenn ein berechtigtes Interesse besteht]</p>
+<p>[TODO: Füge weitere Access Control Policies hinzu]</p>
+<h2 id="3-audit-policies">3. Audit Policies</h2>
+<h3 id="paudit_logging">P.AUDIT_LOGGING</h3>
+<p><strong>Richtlinien-ID:</strong> P.AUDIT_LOGGING<br />
+<strong>Kategorie:</strong> Audit<br />
+<strong>Verpflichtend:</strong> [TODO: Yes/No]<br />
+<strong>Priorität:</strong> [TODO: High/Medium/Low]</p>
+<p><strong>Beschreibung:</strong>
+[TODO: Der TOE muss alle sicherheitsrelevanten Ereignisse protokollieren und Audit-Logs vor unbefugter Änderung schützen]</p>
+<p><strong>Zweck:</strong>
+[TODO: Nachvollziehbarkeit von Aktionen und Unterstützung forensischer Analysen]</p>
+<p><strong>Anforderungen:</strong>
+- [TODO: Protokollierung aller Authentifizierungsversuche]
+- [TODO: Protokollierung aller Zugriffe auf sensible Daten]
+- [TODO: Protokollierung aller administrativen Aktionen]
+- [TODO: Schutz der Audit-Logs vor Manipulation]
+- [TODO: Regelmäßige Überprüfung der Audit-Logs]
+- [TODO: Aufbewahrung der Logs für [TODO: Zeitraum]]</p>
+<p><strong>Anwendungsbereich:</strong>
+[TODO: Alle Benutzer und Systemkomponenten]</p>
+<p><strong>Durchsetzung:</strong>
+- <strong>TOE-Verantwortlichkeit:</strong> [TODO: Audit-Mechanismen implementieren]
+- <strong>Umgebungsverantwortlichkeit:</strong> [TODO: Log-Speicher bereitstellen und überwachen]</p>
+<p><strong>Compliance-Anforderungen:</strong>
+- ISO 27001: A.12.4
+- NIST 800-53: AU-2, AU-3, AU-9
+- [TODO: Weitere Standards]</p>
+<p><strong>Verifikation:</strong>
+[TODO: Wie wird die Einhaltung dieser Richtlinie überprüft?]</p>
+<hr />
+<h3 id="paudit_review">P.AUDIT_REVIEW</h3>
+<p><strong>Richtlinien-ID:</strong> P.AUDIT_REVIEW<br />
+<strong>Kategorie:</strong> Audit<br />
+<strong>Verpflichtend:</strong> [TODO: Yes/No]<br />
+<strong>Priorität:</strong> [TODO: High/Medium/Low]</p>
+<p><strong>Beschreibung:</strong>
+[TODO: Audit-Logs müssen regelmäßig überprüft werden, um Sicherheitsvorfälle zu erkennen]</p>
+<p>[TODO: Füge weitere Audit Policies hinzu]</p>
+<h2 id="4-cryptographic-policies">4. Cryptographic Policies</h2>
+<h3 id="pcryptography">P.CRYPTOGRAPHY</h3>
+<p><strong>Richtlinien-ID:</strong> P.CRYPTOGRAPHY<br />
+<strong>Kategorie:</strong> Cryptographic<br />
+<strong>Verpflichtend:</strong> [TODO: Yes/No]<br />
+<strong>Priorität:</strong> [TODO: High/Medium/Low]</p>
+<p><strong>Beschreibung:</strong>
+[TODO: Der TOE muss kryptografische Mechanismen verwenden, um Vertraulichkeit und Integrität zu gewährleisten]</p>
+<p><strong>Zweck:</strong>
+[TODO: Schutz sensibler Daten durch Verschlüsselung]</p>
+<p><strong>Anforderungen:</strong>
+- [TODO: Verwendung von zugelassenen kryptografischen Algorithmen]
+- [TODO: Mindestschlüssellängen: AES-256, RSA-2048, etc.]
+- [TODO: Sichere Schlüsselverwaltung und -speicherung]
+- [TODO: Regelmäßige Schlüsselrotation]
+- [TODO: Verwendung von TLS 1.2 oder höher für Kommunikation]
+- [TODO: Verwendung von FIPS 140-2 validierten Kryptomodulen]</p>
+<p><strong>Anwendungsbereich:</strong>
+[TODO: Alle verschlüsselten Daten und Kommunikationskanäle]</p>
+<p><strong>Durchsetzung:</strong>
+- <strong>TOE-Verantwortlichkeit:</strong> [TODO: Kryptografische Funktionen implementieren]
+- <strong>Umgebungsverantwortlichkeit:</strong> [TODO: Kryptografische Schlüssel verwalten]</p>
+<p><strong>Compliance-Anforderungen:</strong>
+- ISO 27001: A.10.1
+- NIST 800-53: SC-12, SC-13
+- FIPS 140-2
+- [TODO: Weitere Standards]</p>
+<p><strong>Verifikation:</strong>
+[TODO: Wie wird die Einhaltung dieser Richtlinie überprüft?]</p>
+<hr />
+<h3 id="pkey_management">P.KEY_MANAGEMENT</h3>
+<p><strong>Richtlinien-ID:</strong> P.KEY_MANAGEMENT<br />
+<strong>Kategorie:</strong> Cryptographic<br />
+<strong>Verpflichtend:</strong> [TODO: Yes/No]<br />
+<strong>Priorität:</strong> [TODO: High/Medium/Low]</p>
+<p><strong>Beschreibung:</strong>
+[TODO: Kryptografische Schlüssel müssen sicher generiert, gespeichert und verwaltet werden]</p>
+<p>[TODO: Füge weitere Cryptographic Policies hinzu]</p>
+<h2 id="5-data-protection-policies">5. Data Protection Policies</h2>
+<h3 id="pdata_classification">P.DATA_CLASSIFICATION</h3>
+<p><strong>Richtlinien-ID:</strong> P.DATA_CLASSIFICATION<br />
+<strong>Kategorie:</strong> Data Protection<br />
+<strong>Verpflichtend:</strong> [TODO: Yes/No]<br />
+<strong>Priorität:</strong> [TODO: High/Medium/Low]</p>
+<p><strong>Beschreibung:</strong>
+[TODO: Alle Daten müssen klassifiziert und entsprechend ihrer Klassifizierung geschützt werden]</p>
+<p><strong>Zweck:</strong>
+[TODO: Angemessener Schutz von Daten basierend auf ihrer Sensitivität]</p>
+<p><strong>Anforderungen:</strong>
+- [TODO: Klassifizierungsschema: Public, Internal, Confidential, Restricted]
+- [TODO: Kennzeichnung aller Daten mit Klassifizierung]
+- [TODO: Schutzmaßnahmen entsprechend Klassifizierung]
+- [TODO: Regelmäßige Überprüfung der Klassifizierung]</p>
+<p><strong>Anwendungsbereich:</strong>
+[TODO: Alle im TOE verarbeiteten Daten]</p>
+<p><strong>Durchsetzung:</strong>
+- <strong>TOE-Verantwortlichkeit:</strong> [TODO: Klassifizierungsbasierte Zugriffskontrolle]
+- <strong>Umgebungsverantwortlichkeit:</strong> [TODO: Datenklassifizierung durchführen]</p>
+<p><strong>Compliance-Anforderungen:</strong>
+- ISO 27001: A.8.2
+- GDPR: Article 32
+- [TODO: Weitere Standards]</p>
+<p><strong>Verifikation:</strong>
+[TODO: Wie wird die Einhaltung dieser Richtlinie überprüft?]</p>
+<hr />
+<h3 id="pdata_retention">P.DATA_RETENTION</h3>
+<p><strong>Richtlinien-ID:</strong> P.DATA_RETENTION<br />
+<strong>Kategorie:</strong> Data Protection<br />
+<strong>Verpflichtend:</strong> [TODO: Yes/No]<br />
+<strong>Priorität:</strong> [TODO: High/Medium/Low]</p>
+<p><strong>Beschreibung:</strong>
+[TODO: Daten müssen gemäß Aufbewahrungsrichtlinien gespeichert und gelöscht werden]</p>
+<p>[TODO: Füge weitere Data Protection Policies hinzu]</p>
+<h2 id="6-authentication-policies">6. Authentication Policies</h2>
+<h3 id="pstrong_authentication">P.STRONG_AUTHENTICATION</h3>
+<p><strong>Richtlinien-ID:</strong> P.STRONG_AUTHENTICATION<br />
+<strong>Kategorie:</strong> Authentication<br />
+<strong>Verpflichtend:</strong> [TODO: Yes/No]<br />
+<strong>Priorität:</strong> [TODO: High/Medium/Low]</p>
+<p><strong>Beschreibung:</strong>
+[TODO: Der TOE muss starke Authentifizierungsmechanismen implementieren]</p>
+<p><strong>Zweck:</strong>
+[TODO: Sicherstellung der Benutzeridentität]</p>
+<p><strong>Anforderungen:</strong>
+- [TODO: Multi-Faktor-Authentifizierung (MFA) für privilegierte Konten]
+- [TODO: Passwortrichtlinien: Mindestlänge, Komplexität, Ablauf]
+- [TODO: Account-Lockout nach fehlgeschlagenen Anmeldeversuchen]
+- [TODO: Sichere Speicherung von Authentifizierungsdaten (Hashing)]
+- [TODO: Session-Timeout nach Inaktivität]</p>
+<p><strong>Anwendungsbereich:</strong>
+[TODO: Alle Benutzer des TOE]</p>
+<p><strong>Durchsetzung:</strong>
+- <strong>TOE-Verantwortlichkeit:</strong> [TODO: Authentifizierungsmechanismen implementieren]
+- <strong>Umgebungsverantwortlichkeit:</strong> [TODO: Benutzer schulen und überwachen]</p>
+<p><strong>Compliance-Anforderungen:</strong>
+- ISO 27001: A.9.4
+- NIST 800-53: IA-2, IA-5
+- [TODO: Weitere Standards]</p>
+<p><strong>Verifikation:</strong>
+[TODO: Wie wird die Einhaltung dieser Richtlinie überprüft?]</p>
+<hr />
+<h3 id="ppassword_policy">P.PASSWORD_POLICY</h3>
+<p><strong>Richtlinien-ID:</strong> P.PASSWORD_POLICY<br />
+<strong>Kategorie:</strong> Authentication<br />
+<strong>Verpflichtend:</strong> [TODO: Yes/No]<br />
+<strong>Priorität:</strong> [TODO: High/Medium/Low]</p>
+<p><strong>Beschreibung:</strong>
+[TODO: Passwörter müssen bestimmte Komplexitäts- und Sicherheitsanforderungen erfüllen]</p>
+<p>[TODO: Füge weitere Authentication Policies hinzu]</p>
+<h2 id="7-configuration-policies">7. Configuration Policies</h2>
+<h3 id="psecure_configuration">P.SECURE_CONFIGURATION</h3>
+<p><strong>Richtlinien-ID:</strong> P.SECURE_CONFIGURATION<br />
+<strong>Kategorie:</strong> Configuration<br />
+<strong>Verpflichtend:</strong> [TODO: Yes/No]<br />
+<strong>Priorität:</strong> [TODO: High/Medium/Low]</p>
+<p><strong>Beschreibung:</strong>
+[TODO: Der TOE muss in einer sicheren Konfiguration betrieben werden]</p>
+<p><strong>Zweck:</strong>
+[TODO: Minimierung der Angriffsfläche durch sichere Konfiguration]</p>
+<p><strong>Anforderungen:</strong>
+- [TODO: Deaktivierung nicht benötigter Dienste und Funktionen]
+- [TODO: Verwendung sicherer Standardeinstellungen]
+- [TODO: Regelmäßige Überprüfung der Konfiguration]
+- [TODO: Dokumentation aller Konfigurationsänderungen]
+- [TODO: Change-Management-Prozess für Konfigurationsänderungen]</p>
+<p><strong>Anwendungsbereich:</strong>
+[TODO: Alle TOE-Komponenten]</p>
+<p><strong>Durchsetzung:</strong>
+- <strong>TOE-Verantwortlichkeit:</strong> [TODO: Sichere Standardkonfiguration bereitstellen]
+- <strong>Umgebungsverantwortlichkeit:</strong> [TODO: Konfiguration überwachen und verwalten]</p>
+<p><strong>Compliance-Anforderungen:</strong>
+- ISO 27001: A.12.6
+- NIST 800-53: CM-6, CM-7
+- CIS Controls
+- [TODO: Weitere Standards]</p>
+<p><strong>Verifikation:</strong>
+[TODO: Wie wird die Einhaltung dieser Richtlinie überprüft?]</p>
+<hr />
+<h3 id="pconfiguration_management">P.CONFIGURATION_MANAGEMENT</h3>
+<p><strong>Richtlinien-ID:</strong> P.CONFIGURATION_MANAGEMENT<br />
+<strong>Kategorie:</strong> Configuration<br />
+<strong>Verpflichtend:</strong> [TODO: Yes/No]<br />
+<strong>Priorität:</strong> [TODO: High/Medium/Low]</p>
+<p><strong>Beschreibung:</strong>
+[TODO: Konfigurationsänderungen müssen kontrolliert und dokumentiert werden]</p>
+<p>[TODO: Füge weitere Configuration Policies hinzu]</p>
+<h2 id="8-operational-policies">8. Operational Policies</h2>
+<h3 id="psecurity_updates">P.SECURITY_UPDATES</h3>
+<p><strong>Richtlinien-ID:</strong> P.SECURITY_UPDATES<br />
+<strong>Kategorie:</strong> Operational<br />
+<strong>Verpflichtend:</strong> [TODO: Yes/No]<br />
+<strong>Priorität:</strong> [TODO: High/Medium/Low]</p>
+<p><strong>Beschreibung:</strong>
+[TODO: Sicherheitsupdates müssen zeitnah installiert werden]</p>
+<p><strong>Zweck:</strong>
+[TODO: Schutz vor bekannten Schwachstellen]</p>
+<p><strong>Anforderungen:</strong>
+- [TODO: Regelmäßige Überprüfung auf verfügbare Updates]
+- [TODO: Bewertung und Priorisierung von Updates]
+- [TODO: Zeitnahe Installation kritischer Sicherheitsupdates]
+- [TODO: Testing von Updates vor Produktivinstallation]
+- [TODO: Dokumentation aller installierten Updates]</p>
+<p><strong>Anwendungsbereich:</strong>
+[TODO: Alle TOE-Komponenten]</p>
+<p><strong>Durchsetzung:</strong>
+- <strong>TOE-Verantwortlichkeit:</strong> [TODO: Update-Mechanismus bereitstellen]
+- <strong>Umgebungsverantwortlichkeit:</strong> [TODO: Updates installieren und verwalten]</p>
+<p><strong>Compliance-Anforderungen:</strong>
+- ISO 27001: A.12.6.1
+- NIST 800-53: SI-2
+- [TODO: Weitere Standards]</p>
+<p><strong>Verifikation:</strong>
+[TODO: Wie wird die Einhaltung dieser Richtlinie überprüft?]</p>
+<hr />
+<h3 id="pbackup_recovery">P.BACKUP_RECOVERY</h3>
+<p><strong>Richtlinien-ID:</strong> P.BACKUP_RECOVERY<br />
+<strong>Kategorie:</strong> Operational<br />
+<strong>Verpflichtend:</strong> [TODO: Yes/No]<br />
+<strong>Priorität:</strong> [TODO: High/Medium/Low]</p>
+<p><strong>Beschreibung:</strong>
+[TODO: Regelmäßige Backups müssen erstellt und getestet werden]</p>
+<p>[TODO: Füge weitere Operational Policies hinzu]</p>
+<h2 id="9-policy-compliance-matrix">9. Policy Compliance Matrix</h2>
+<h3 id="91-standards-mapping">9.1 Standards Mapping</h3>
+<p><strong>Zuordnung zu externen Standards:</strong></p>
+<table>
+<thead>
+<tr>
+<th>OSP ID</th>
+<th>ISO 27001</th>
+<th>NIST 800-53</th>
+<th>PCI-DSS</th>
+<th>GDPR</th>
+<th>HIPAA</th>
+<th>SOC 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: P.001]</td>
+<td>[TODO: A.9.1]</td>
+<td>[TODO: AC-2]</td>
+<td>[TODO: 7.1]</td>
+<td>[TODO: Art. 32]</td>
+<td>[TODO: §164.312]</td>
+<td>[TODO: CC6.1]</td>
+</tr>
+<tr>
+<td>[TODO: P.002]</td>
+<td>[TODO: A.12.4]</td>
+<td>[TODO: AU-2]</td>
+<td>[TODO: 10.1]</td>
+<td>[TODO: Art. 30]</td>
+<td>[TODO: §164.312]</td>
+<td>[TODO: CC7.2]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="92-regulatory-compliance">9.2 Regulatory Compliance</h3>
+<p><strong>Regulatorische Anforderungen:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Regulation</th>
+<th>Applicable OSPs</th>
+<th>Compliance Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: GDPR]</td>
+<td>[TODO: P.001, P.003, P.005]</td>
+<td>[TODO: Compliant/Partial/Non-Compliant]</td>
+</tr>
+<tr>
+<td>[TODO: HIPAA]</td>
+<td>[TODO: P.002, P.004]</td>
+<td>[TODO: Compliant/Partial/Non-Compliant]</td>
+</tr>
+<tr>
+<td>[TODO: PCI-DSS]</td>
+<td>[TODO: P.001, P.002, P.006]</td>
+<td>[TODO: Compliant/Partial/Non-Compliant]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="93-industry-standards">9.3 Industry Standards</h3>
+<p><strong>Branchenstandards:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Standard</th>
+<th>Applicable OSPs</th>
+<th>Compliance Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: ISO 27001]</td>
+<td>[TODO: Alle OSPs]</td>
+<td>[TODO: Compliant/Partial/Non-Compliant]</td>
+</tr>
+<tr>
+<td>[TODO: NIST 800-53]</td>
+<td>[TODO: P.001-P.010]</td>
+<td>[TODO: Compliant/Partial/Non-Compliant]</td>
+</tr>
+<tr>
+<td>[TODO: CIS Controls]</td>
+<td>[TODO: P.003, P.007]</td>
+<td>[TODO: Compliant/Partial/Non-Compliant]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="10-policy-summary">10. Policy Summary</h2>
+<h3 id="101-policy-statistics">10.1 Policy Statistics</h3>
+<p><strong>Richtlinienstatistik:</strong>
+- Gesamtanzahl OSPs: [TODO: Anzahl]
+- Verpflichtende Richtlinien: [TODO: Anzahl]
+- Optionale Richtlinien: [TODO: Anzahl]
+- Access Control Policies: [TODO: Anzahl]
+- Audit Policies: [TODO: Anzahl]
+- Cryptographic Policies: [TODO: Anzahl]
+- Data Protection Policies: [TODO: Anzahl]
+- Authentication Policies: [TODO: Anzahl]
+- Configuration Policies: [TODO: Anzahl]
+- Operational Policies: [TODO: Anzahl]</p>
+<h3 id="102-enforcement-responsibility">10.2 Enforcement Responsibility</h3>
+<p><strong>Durchsetzungsverantwortlichkeit:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Responsibility</th>
+<th>Number of OSPs</th>
+<th>OSP IDs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TOE Only</strong></td>
+<td>[TODO: Anzahl]</td>
+<td>[TODO: P.001, P.003]</td>
+</tr>
+<tr>
+<td><strong>Environment Only</strong></td>
+<td>[TODO: Anzahl]</td>
+<td>[TODO: P.005]</td>
+</tr>
+<tr>
+<td><strong>Shared (TOE + Environment)</strong></td>
+<td>[TODO: Anzahl]</td>
+<td>[TODO: P.002, P.004]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="103-priority-distribution">10.3 Priority Distribution</h3>
+<p><strong>Prioritätsverteilung:</strong>
+- High Priority: [TODO: Anzahl] ([TODO: %])
+- Medium Priority: [TODO: Anzahl] ([TODO: %])
+- Low Priority: [TODO: Anzahl] ([TODO: %])</p>
+<h2 id="11-traceability">11. Traceability</h2>
+<h3 id="111-osp-to-threat-mapping">11.1 OSP-to-Threat Mapping</h3>
+<p><strong>Zuordnung OSPs zu Bedrohungen:</strong></p>
+<table>
+<thead>
+<tr>
+<th>OSP ID</th>
+<th>Addresses Threats</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: P.001]</td>
+<td>[TODO: T.001, T.003]</td>
+<td>[TODO: Begründung]</td>
+</tr>
+<tr>
+<td>[TODO: P.002]</td>
+<td>[TODO: T.002, T.005]</td>
+<td>[TODO: Begründung]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="112-osp-to-asset-mapping">11.2 OSP-to-Asset Mapping</h3>
+<p><strong>Zuordnung OSPs zu Assets:</strong></p>
+<table>
+<thead>
+<tr>
+<th>OSP ID</th>
+<th>Protects Assets</th>
+<th>Protection Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: P.001]</td>
+<td>[TODO: A.001, A.002]</td>
+<td>[TODO: Confidentiality/Integrity/Availability]</td>
+</tr>
+<tr>
+<td>[TODO: P.002]</td>
+<td>[TODO: A.003]</td>
+<td>[TODO: Integrity]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Nächste Schritte:</strong>
+1. Vervollständige alle [TODO]-Platzhalter mit organisationsspezifischen Richtlinien
+2. Dokumentiere alle relevanten OSPs
+3. Ordne OSPs zu externen Standards zu
+4. Definiere Durchsetzungsmechanismen
+5. Erstelle Compliance-Matrix
+6. Überprüfe Konsistenz mit Threats (Template 0210) und Security Objectives (Template 0300)</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0210_Threats.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0230_Assumptions.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0240 - Threat Agents and Assets</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0240</div>
+            <h1>Threat Agents and Assets</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0230_Assumptions.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0300_Security_Objectives.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="threat-agents-and-assets">Threat Agents and Assets</h1>
+<p><strong>Document-ID:</strong> 0240<br />
+<strong>Owner:</strong> {{ meta.owner }}<br />
+<strong>Version:</strong> {{ meta.version }}<br />
+<strong>Status:</strong> Draft<br />
+<strong>Classification:</strong> Confidential<br />
+<strong>Last Update:</strong> {{ meta.date }}  </p>
+<hr />
+<h2 id="1-overview">1. Overview</h2>
+<h3 id="11-purpose">1.1 Purpose</h3>
+<p>This document defines:
+- <strong>Threat Agents</strong>: Potential attackers with their capabilities and motivations
+- <strong>Assets</strong>: Resources, data, and functions to be protected</p>
+<h3 id="12-scope">1.2 Scope</h3>
+<p><strong>In Scope:</strong>
+[TODO: What is covered in this document?]</p>
+<p><strong>Out of Scope:</strong>
+[TODO: What is not covered?]</p>
+<h2 id="2-assets">2. Assets</h2>
+<h3 id="21-asset-identification">2.1 Asset Identification</h3>
+<h4 id="211-asset-categories">2.1.1 Asset Categories</h4>
+<p><strong>Asset Categories:</strong>
+- <strong>Data Assets</strong>: Data and information
+- <strong>Service Assets</strong>: Services and functions
+- <strong>System Assets</strong>: System components and infrastructure
+- <strong>Credential Assets</strong>: Authentication and authorization data
+- <strong>Configuration Assets</strong>: Configuration data and settings</p>
+<h4 id="212-asset-inventory">2.1.2 Asset Inventory</h4>
+<p><strong>Asset Inventory:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Asset ID</th>
+<th>Asset Name</th>
+<th>Category</th>
+<th>Owner</th>
+<th>Location</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: A.001]</td>
+<td>[TODO: Name]</td>
+<td>[TODO: Data/Service/System]</td>
+<td>[TODO: Owner]</td>
+<td>[TODO: Location]</td>
+<td>[TODO: Description]</td>
+</tr>
+<tr>
+<td>[TODO: A.002]</td>
+<td>[TODO: Name]</td>
+<td>[TODO: Category]</td>
+<td>[TODO: Owner]</td>
+<td>[TODO: Location]</td>
+<td>[TODO: Description]</td>
+</tr>
+<tr>
+<td>[TODO: A.003]</td>
+<td>[TODO: Name]</td>
+<td>[TODO: Category]</td>
+<td>[TODO: Owner]</td>
+<td>[TODO: Location]</td>
+<td>[TODO: Description]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-data-assets">2.2 Data Assets</h3>
+<h4 id="auser_data">A.USER_DATA</h4>
+<p><strong>Asset ID:</strong> A.USER_DATA<br />
+<strong>Category:</strong> Data<br />
+<strong>Type:</strong> [TODO: Personal Data / Business Data / Technical Data]</p>
+<p><strong>Description:</strong>
+[TODO: User data including personal information, preferences, and profile data]</p>
+<p><strong>Properties:</strong>
+- <strong>Confidentiality:</strong> [TODO: High/Medium/Low]
+- <strong>Integrity:</strong> [TODO: High/Medium/Low]
+- <strong>Availability:</strong> [TODO: High/Medium/Low]
+- <strong>Data Volume:</strong> [TODO: e.g., 1 TB]
+- <strong>Data Format:</strong> [TODO: e.g., JSON, XML, Database]</p>
+<p><strong>Protection Needs:</strong>
+- <strong>Confidentiality:</strong> [TODO: Rationale for protection need]
+- <strong>Integrity:</strong> [TODO: Rationale for protection need]
+- <strong>Availability:</strong> [TODO: Rationale for protection need]</p>
+<p><strong>Regulatory Requirements:</strong>
+- [TODO: GDPR Article 32 - Security of processing]
+- [TODO: HIPAA §164.312 - Technical safeguards]
+- [TODO: Additional requirements]</p>
+<p><strong>Value:</strong>
+- <strong>Business Value:</strong> [TODO: High/Medium/Low]
+- <strong>Monetary Value:</strong> [TODO: Estimate]
+- <strong>Reputation Value:</strong> [TODO: High/Medium/Low]</p>
+<p><strong>Lifecycle:</strong>
+- <strong>Creation:</strong> [TODO: How is data created?]
+- <strong>Storage:</strong> [TODO: Where is data stored?]
+- <strong>Processing:</strong> [TODO: How is data processed?]
+- <strong>Transmission:</strong> [TODO: How is data transmitted?]
+- <strong>Archiving:</strong> [TODO: How is data archived?]
+- <strong>Deletion:</strong> [TODO: How is data deleted?]</p>
+<hr />
+<h4 id="aauthentication_data">A.AUTHENTICATION_DATA</h4>
+<p><strong>Asset ID:</strong> A.AUTHENTICATION_DATA<br />
+<strong>Category:</strong> Credential<br />
+<strong>Type:</strong> [TODO: Passwords / Tokens / Certificates]</p>
+<p><strong>Description:</strong>
+[TODO: Authentication data such as passwords, tokens, certificates]</p>
+<p>[TODO: Add more Data Assets]</p>
+<h3 id="23-service-assets">2.3 Service Assets</h3>
+<h4 id="aauthentication_service">A.AUTHENTICATION_SERVICE</h4>
+<p><strong>Asset ID:</strong> A.AUTHENTICATION_SERVICE<br />
+<strong>Category:</strong> Service<br />
+<strong>Type:</strong> [TODO: Authentication / Authorization / Identity Management]</p>
+<p><strong>Description:</strong>
+[TODO: Authentication service that verifies user identities]</p>
+<p><strong>Properties:</strong>
+- <strong>Availability:</strong> [TODO: 99.9% SLA]
+- <strong>Performance:</strong> [TODO: &lt; 100ms Response Time]
+- <strong>Capacity:</strong> [TODO: 1000 req/sec]</p>
+<p><strong>Protection Needs:</strong>
+- <strong>Availability:</strong> [TODO: High - Critical for system access]
+- <strong>Integrity:</strong> [TODO: High - False authentication compromises security]
+- <strong>Confidentiality:</strong> [TODO: Medium - Metadata can be sensitive]</p>
+<p><strong>Dependencies:</strong>
+- [TODO: A.AUTHENTICATION_DATA]
+- [TODO: A.USER_DATABASE]
+- [TODO: A.NETWORK_CONNECTIVITY]</p>
+<p><strong>Value:</strong>
+- <strong>Business Value:</strong> [TODO: High - Fundamental security function]
+- <strong>Criticality:</strong> [TODO: High - System unusable without authentication]</p>
+<hr />
+<h4 id="adata_processing_service">A.DATA_PROCESSING_SERVICE</h4>
+<p><strong>Asset ID:</strong> A.DATA_PROCESSING_SERVICE<br />
+<strong>Category:</strong> Service<br />
+<strong>Type:</strong> [TODO: Processing / Computation / Transformation]</p>
+<p><strong>Description:</strong>
+[TODO: Service for processing business data]</p>
+<p>[TODO: Add more Service Assets]</p>
+<h3 id="24-system-assets">2.4 System Assets</h3>
+<h4 id="atoe_platform">A.TOE_PLATFORM</h4>
+<p><strong>Asset ID:</strong> A.TOE_PLATFORM<br />
+<strong>Category:</strong> System<br />
+<strong>Type:</strong> [TODO: Hardware / Software / Firmware]</p>
+<p><strong>Description:</strong>
+[TODO: The platform on which the TOE runs]</p>
+<p><strong>Components:</strong>
+- [TODO: Operating system]
+- [TODO: Hardware platform]
+- [TODO: Virtualization layer]
+- [TODO: Container runtime]</p>
+<p><strong>Protection Needs:</strong>
+- <strong>Availability:</strong> [TODO: High]
+- <strong>Integrity:</strong> [TODO: High]
+- <strong>Confidentiality:</strong> [TODO: Medium]</p>
+<p><strong>Criticality:</strong>
+[TODO: High - Platform compromise endangers all assets]</p>
+<hr />
+<h4 id="acryptographic_keys">A.CRYPTOGRAPHIC_KEYS</h4>
+<p><strong>Asset ID:</strong> A.CRYPTOGRAPHIC_KEYS<br />
+<strong>Category:</strong> System<br />
+<strong>Type:</strong> [TODO: Encryption Keys / Signing Keys / Certificates]</p>
+<p><strong>Description:</strong>
+[TODO: Cryptographic keys for encryption and signing]</p>
+<p>[TODO: Add more System Assets]</p>
+<h3 id="25-asset-classification">2.5 Asset Classification</h3>
+<h4 id="251-classification-scheme">2.5.1 Classification Scheme</h4>
+<p><strong>Classification Scheme:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Classification</th>
+<th>Confidentiality</th>
+<th>Integrity</th>
+<th>Availability</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Critical</strong></td>
+<td>High</td>
+<td>High</td>
+<td>High</td>
+<td>[TODO: A.001, A.003]</td>
+</tr>
+<tr>
+<td><strong>High</strong></td>
+<td>High</td>
+<td>High</td>
+<td>Medium</td>
+<td>[TODO: A.002, A.005]</td>
+</tr>
+<tr>
+<td><strong>Medium</strong></td>
+<td>Medium</td>
+<td>Medium</td>
+<td>Medium</td>
+<td>[TODO: A.004, A.006]</td>
+</tr>
+<tr>
+<td><strong>Low</strong></td>
+<td>Low</td>
+<td>Low</td>
+<td>Low</td>
+<td>[TODO: A.007]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="252-asset-value-matrix">2.5.2 Asset Value Matrix</h4>
+<p><strong>Asset Value Matrix:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Asset ID</th>
+<th>Business Value</th>
+<th>Regulatory Value</th>
+<th>Reputation Value</th>
+<th>Total Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: A.001]</td>
+<td>[TODO: High]</td>
+<td>[TODO: High]</td>
+<td>[TODO: High]</td>
+<td>[TODO: Critical]</td>
+</tr>
+<tr>
+<td>[TODO: A.002]</td>
+<td>[TODO: Medium]</td>
+<td>[TODO: High]</td>
+<td>[TODO: Medium]</td>
+<td>[TODO: High]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="26-asset-dependencies">2.6 Asset Dependencies</h3>
+<h4 id="261-dependency-graph">2.6.1 Dependency Graph</h4>
+<p><strong>Asset Dependencies:</strong></p>
+<p>[TODO: Create a diagram showing asset dependencies]</p>
+<div class="codehilite"><pre><span></span><code>[TODO: Insert asset dependency diagram]
+</code></pre></div>
+
+<h4 id="262-dependency-matrix">2.6.2 Dependency Matrix</h4>
+<p><strong>Dependency Matrix:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Asset</th>
+<th>Depends On</th>
+<th>Impact if Unavailable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: A.001]</td>
+<td>[TODO: A.003, A.005]</td>
+<td>[TODO: Service unavailable]</td>
+</tr>
+<tr>
+<td>[TODO: A.002]</td>
+<td>[TODO: A.004]</td>
+<td>[TODO: Data processing not possible]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-threat-agents">3. Threat Agents</h2>
+<h3 id="31-threat-agent-identification">3.1 Threat Agent Identification</h3>
+<h4 id="311-agent-categories">3.1.1 Agent Categories</h4>
+<p><strong>Agent Categories:</strong>
+- <strong>External Attackers</strong>: External attackers without legitimate access
+- <strong>Insiders</strong>: Employees with legitimate access
+- <strong>Privileged Insiders</strong>: Administrators with privileged access
+- <strong>Nation-State Actors</strong>: State-sponsored attackers
+- <strong>Organized Crime</strong>: Organized crime
+- <strong>Hacktivists</strong>: Ideologically motivated attackers
+- <strong>Script Kiddies</strong>: Inexperienced attackers with pre-made tools</p>
+<h4 id="312-agent-inventory">3.1.2 Agent Inventory</h4>
+<p><strong>Agent Inventory:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Agent ID</th>
+<th>Agent Type</th>
+<th>Motivation</th>
+<th>Capability</th>
+<th>Resources</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: TA.001]</td>
+<td>[TODO: External Attacker]</td>
+<td>[TODO: Financial]</td>
+<td>[TODO: High]</td>
+<td>[TODO: High]</td>
+<td>[TODO: Description]</td>
+</tr>
+<tr>
+<td>[TODO: TA.002]</td>
+<td>[TODO: Insider]</td>
+<td>[TODO: Revenge]</td>
+<td>[TODO: Medium]</td>
+<td>[TODO: Medium]</td>
+<td>[TODO: Description]</td>
+</tr>
+<tr>
+<td>[TODO: TA.003]</td>
+<td>[TODO: Nation-State]</td>
+<td>[TODO: Espionage]</td>
+<td>[TODO: Very High]</td>
+<td>[TODO: Very High]</td>
+<td>[TODO: Description]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-threat-agent-profiles">3.2 Threat Agent Profiles</h3>
+<h4 id="taexternal_attacker">TA.EXTERNAL_ATTACKER</h4>
+<p><strong>Agent ID:</strong> TA.EXTERNAL_ATTACKER<br />
+<strong>Type:</strong> External Attacker<br />
+<strong>Skill Level:</strong> [TODO: Expert / Proficient / Layman]</p>
+<p><strong>Description:</strong>
+[TODO: External attacker without legitimate system access attempting to intrude via network or other external interfaces]</p>
+<p><strong>Motivation:</strong>
+- <strong>Primary:</strong> [TODO: e.g., Financial gain, data theft]
+- <strong>Secondary:</strong> [TODO: e.g., Reputation, challenge]</p>
+<p><strong>Capabilities:</strong>
+- <strong>Technical Expertise:</strong> [TODO: High - Knowledge in network security, exploitation]
+- <strong>Tools:</strong> [TODO: Metasploit, Burp Suite, Custom Scripts]
+- <strong>Knowledge:</strong> [TODO: Publicly available information, OSINT]
+- <strong>Access:</strong> [TODO: Network access, no physical access]</p>
+<p><strong>Resources:</strong>
+- <strong>Time:</strong> [TODO: Weeks to months]
+- <strong>Budget:</strong> [TODO: $10,000 - $100,000]
+- <strong>Team:</strong> [TODO: 1-5 people]
+- <strong>Infrastructure:</strong> [TODO: Cloud resources, botnets]</p>
+<p><strong>Attack Vectors:</strong>
+- [TODO: Network attacks (SQL Injection, XSS, etc.)]
+- [TODO: Social engineering (phishing)]
+- [TODO: Exploitation of known vulnerabilities]
+- [TODO: Brute-force attacks]
+- [TODO: DDoS attacks]</p>
+<p><strong>Attack Potential:</strong>
+[TODO: High - Based on CCRA Attack Potential Methodology]</p>
+<p><strong>Example Scenarios:</strong>
+1. [TODO: Scenario 1]
+2. [TODO: Scenario 2]</p>
+<hr />
+<h4 id="tamalicious_insider">TA.MALICIOUS_INSIDER</h4>
+<p><strong>Agent ID:</strong> TA.MALICIOUS_INSIDER<br />
+<strong>Type:</strong> Insider<br />
+<strong>Skill Level:</strong> [TODO: Expert / Proficient / Layman]</p>
+<p><strong>Description:</strong>
+[TODO: Malicious employee with legitimate system access]</p>
+<p><strong>Motivation:</strong>
+- <strong>Primary:</strong> [TODO: e.g., Revenge, financial gain]
+- <strong>Secondary:</strong> [TODO: e.g., Ideology, blackmail]</p>
+<p><strong>Capabilities:</strong>
+- <strong>Technical Expertise:</strong> [TODO: Medium - Basic IT knowledge]
+- <strong>Tools:</strong> [TODO: Standard user tools, USB drives]
+- <strong>Knowledge:</strong> [TODO: Insider knowledge of systems and processes]
+- <strong>Access:</strong> [TODO: Legitimate user access, physical access]</p>
+<p><strong>Resources:</strong>
+- <strong>Time:</strong> [TODO: Days to weeks]
+- <strong>Budget:</strong> [TODO: Minimal]
+- <strong>Team:</strong> [TODO: Individual]
+- <strong>Infrastructure:</strong> [TODO: Company resources]</p>
+<p><strong>Attack Vectors:</strong>
+- [TODO: Data exfiltration via USB or email]
+- [TODO: Sabotage of systems or data]
+- [TODO: Abuse of access rights]
+- [TODO: Sharing credentials with external parties]</p>
+<p><strong>Attack Potential:</strong>
+[TODO: Medium-High - Insider access compensates for lower technical skills]</p>
+<hr />
+<h4 id="taprivileged_admin">TA.PRIVILEGED_ADMIN</h4>
+<p><strong>Agent ID:</strong> TA.PRIVILEGED_ADMIN<br />
+<strong>Type:</strong> Privileged Insider<br />
+<strong>Skill Level:</strong> [TODO: Expert]</p>
+<p><strong>Description:</strong>
+[TODO: Malicious administrator with privileged access]</p>
+<p><strong>Motivation:</strong>
+- <strong>Primary:</strong> [TODO: e.g., Financial gain, blackmail]
+- <strong>Secondary:</strong> [TODO: e.g., Revenge, ideology]</p>
+<p><strong>Capabilities:</strong>
+- <strong>Technical Expertise:</strong> [TODO: High - Deep system understanding]
+- <strong>Tools:</strong> [TODO: Administrative tools, root access]
+- <strong>Knowledge:</strong> [TODO: Complete insider knowledge, access to documentation]
+- <strong>Access:</strong> [TODO: Privileged access, physical access]</p>
+<p><strong>Resources:</strong>
+- <strong>Time:</strong> [TODO: Hours to days]
+- <strong>Budget:</strong> [TODO: Minimal]
+- <strong>Team:</strong> [TODO: Individual]
+- <strong>Infrastructure:</strong> [TODO: Full access to company resources]</p>
+<p><strong>Attack Vectors:</strong>
+- [TODO: Direct data manipulation]
+- [TODO: Disabling security mechanisms]
+- [TODO: Creating backdoors]
+- [TODO: Manipulating audit logs]
+- [TODO: Privilege escalation for other accounts]</p>
+<p><strong>Attack Potential:</strong>
+[TODO: Very High - Privileged access enables almost all attacks]</p>
+<hr />
+<h4 id="tanation_state">TA.NATION_STATE</h4>
+<p><strong>Agent ID:</strong> TA.NATION_STATE<br />
+<strong>Type:</strong> Nation-State Actor<br />
+<strong>Skill Level:</strong> [TODO: Expert]</p>
+<p><strong>Description:</strong>
+[TODO: State-sponsored attacker with extensive resources]</p>
+<p>[TODO: Add more Threat Agents]</p>
+<h3 id="33-attack-potential-assessment">3.3 Attack Potential Assessment</h3>
+<h4 id="331-ccra-methodology">3.3.1 CCRA Methodology</h4>
+<p><strong>Common Criteria Recognition Arrangement (CCRA) Attack Potential:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Level</th>
+<th>Points</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Elapsed Time</strong></td>
+<td>&lt; 1 day</td>
+<td>0</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td></td>
+<td>&lt; 1 week</td>
+<td>1</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td></td>
+<td>&lt; 1 month</td>
+<td>4</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td></td>
+<td>&lt; 6 months</td>
+<td>10</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td></td>
+<td>&gt; 6 months</td>
+<td>17</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td><strong>Expertise</strong></td>
+<td>Layman</td>
+<td>0</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td></td>
+<td>Proficient</td>
+<td>3</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td></td>
+<td>Expert</td>
+<td>6</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td><strong>Knowledge</strong></td>
+<td>Public</td>
+<td>0</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td></td>
+<td>Restricted</td>
+<td>3</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td></td>
+<td>Sensitive</td>
+<td>7</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td><strong>Window of Opportunity</strong></td>
+<td>Unnecessary</td>
+<td>0</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td></td>
+<td>Easy</td>
+<td>1</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td></td>
+<td>Moderate</td>
+<td>4</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td></td>
+<td>Difficult</td>
+<td>10</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td><strong>Equipment</strong></td>
+<td>Standard</td>
+<td>0</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td></td>
+<td>Specialized</td>
+<td>4</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td></td>
+<td>Bespoke</td>
+<td>7</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="332-attack-potential-ratings">3.3.2 Attack Potential Ratings</h4>
+<p><strong>Attack Potential Ratings:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Agent ID</th>
+<th>Elapsed Time</th>
+<th>Expertise</th>
+<th>Knowledge</th>
+<th>Window</th>
+<th>Equipment</th>
+<th>Total</th>
+<th>Rating</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: TA.001]</td>
+<td>[TODO: 4]</td>
+<td>[TODO: 6]</td>
+<td>[TODO: 3]</td>
+<td>[TODO: 1]</td>
+<td>[TODO: 4]</td>
+<td>[TODO: 18]</td>
+<td>[TODO: Moderate]</td>
+</tr>
+<tr>
+<td>[TODO: TA.002]</td>
+<td>[TODO: 1]</td>
+<td>[TODO: 3]</td>
+<td>[TODO: 7]</td>
+<td>[TODO: 0]</td>
+<td>[TODO: 0]</td>
+<td>[TODO: 11]</td>
+<td>[TODO: Enhanced-Basic]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Rating Scale:</strong>
+- <strong>0-9 points:</strong> Basic
+- <strong>10-13 points:</strong> Enhanced-Basic
+- <strong>14-19 points:</strong> Moderate
+- <strong>20-24 points:</strong> High
+- <strong>≥25 points:</strong> Beyond High</p>
+<h3 id="34-threat-agent-capabilities-matrix">3.4 Threat Agent Capabilities Matrix</h3>
+<p><strong>Capabilities Matrix:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Agent</th>
+<th>Network Access</th>
+<th>Physical Access</th>
+<th>Insider Knowledge</th>
+<th>Technical Skills</th>
+<th>Resources</th>
+<th>Persistence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: TA.001]</td>
+<td>[TODO: Yes]</td>
+<td>[TODO: No]</td>
+<td>[TODO: No]</td>
+<td>[TODO: High]</td>
+<td>[TODO: High]</td>
+<td>[TODO: High]</td>
+</tr>
+<tr>
+<td>[TODO: TA.002]</td>
+<td>[TODO: Yes]</td>
+<td>[TODO: Yes]</td>
+<td>[TODO: Yes]</td>
+<td>[TODO: Medium]</td>
+<td>[TODO: Low]</td>
+<td>[TODO: Medium]</td>
+</tr>
+<tr>
+<td>[TODO: TA.003]</td>
+<td>[TODO: Yes]</td>
+<td>[TODO: No]</td>
+<td>[TODO: No]</td>
+<td>[TODO: Expert]</td>
+<td>[TODO: Very High]</td>
+<td>[TODO: Very High]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-asset-agent-relationships">4. Asset-Agent Relationships</h2>
+<h3 id="41-asset-agent-threat-matrix">4.1 Asset-Agent Threat Matrix</h3>
+<p><strong>Which agents threaten which assets:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Asset</th>
+<th>TA.001</th>
+<th>TA.002</th>
+<th>TA.003</th>
+<th>TA.004</th>
+<th>TA.005</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: A.001]</td>
+<td>[TODO: High]</td>
+<td>[TODO: Medium]</td>
+<td>[TODO: High]</td>
+<td>[TODO: Low]</td>
+<td>[TODO: Medium]</td>
+</tr>
+<tr>
+<td>[TODO: A.002]</td>
+<td>[TODO: Medium]</td>
+<td>[TODO: High]</td>
+<td>[TODO: Medium]</td>
+<td>[TODO: Low]</td>
+<td>[TODO: Low]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-high-risk-combinations">4.2 High-Risk Combinations</h3>
+<p><strong>High-Risk Combinations:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Asset</th>
+<th>Agent</th>
+<th>Risk Level</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: A.001]</td>
+<td>[TODO: TA.003]</td>
+<td>[TODO: Critical]</td>
+<td>[TODO: High-value data + highly skilled attacker]</td>
+</tr>
+<tr>
+<td>[TODO: A.002]</td>
+<td>[TODO: TA.002]</td>
+<td>[TODO: High]</td>
+<td>[TODO: Critical service + insider access]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-summary">5. Summary</h2>
+<h3 id="51-asset-summary">5.1 Asset Summary</h3>
+<p><strong>Asset Summary:</strong>
+- Total number of assets: [TODO: Number]
+- Critical assets: [TODO: Number]
+- High-value assets: [TODO: Number]
+- Medium-value assets: [TODO: Number]
+- Low-value assets: [TODO: Number]</p>
+<h3 id="52-threat-agent-summary">5.2 Threat Agent Summary</h3>
+<p><strong>Agent Summary:</strong>
+- Total number of agents: [TODO: Number]
+- External attackers: [TODO: Number]
+- Insiders: [TODO: Number]
+- Privileged insiders: [TODO: Number]
+- Nation-state actors: [TODO: Number]
+- Other: [TODO: Number]</p>
+<h3 id="53-risk-overview">5.3 Risk Overview</h3>
+<p><strong>Risk Overview:</strong>
+- Critical risk combinations: [TODO: Number]
+- High risk combinations: [TODO: Number]
+- Medium risk combinations: [TODO: Number]
+- Low risk combinations: [TODO: Number]</p>
+<hr />
+<p><strong>Next Steps:</strong>
+1. Complete all [TODO] placeholders with TOE-specific assets and agents
+2. Conduct complete asset identification
+3. Document all relevant threat agents
+4. Assess attack potential for all agents
+5. Create asset dependency diagrams
+6. Verify consistency with Threats (Template 0210) and Security Objectives (Template 0300)</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0230_Assumptions.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0300_Security_Objectives.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

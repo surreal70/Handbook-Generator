@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0010 - ST Introduction</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0010</div>
+            <h1>ST Introduction</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0000_metadata_en_common-criteria.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0020_TOE_Overview.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="st-introduction">ST Introduction</h1>
+<p><strong>Document-ID:</strong> 0010<br />
+<strong>Owner:</strong> {{ meta.owner }}<br />
+<strong>Version:</strong> {{ meta.version }}<br />
+<strong>Status:</strong> Draft<br />
+<strong>Classification:</strong> Confidential<br />
+<strong>Last Update:</strong> {{ meta.date }}  </p>
+<hr />
+<h2 id="1-st-identification">1. ST Identification</h2>
+<h3 id="11-st-title">1.1 ST Title</h3>
+<p><strong>ST Title:</strong> [TODO: Full title of the Security Target]<br />
+<strong>ST Version:</strong> {{ meta.version }}<br />
+<strong>ST Date:</strong> {{ meta.date }}  </p>
+<h3 id="12-st-author">1.2 ST Author</h3>
+<p><strong>Author:</strong> Andreas Huemmer [andreas.huemmer@adminsend.de]<br />
+<strong>Organization:</strong> {{ meta.organization }}<br />
+<strong>Contact:</strong> [TODO: Contact information]  </p>
+<h3 id="13-toe-identification">1.3 TOE Identification</h3>
+<p><strong>TOE Name:</strong> [TODO: Name of the Target of Evaluation]<br />
+<strong>TOE Version:</strong> [TODO: Version of the TOE]<br />
+<strong>TOE Developer:</strong> [TODO: Manufacturer/Developer]<br />
+<strong>TOE Type:</strong> [TODO: Product type, e.g., Firewall, Smartcard, Operating System]  </p>
+<h2 id="2-st-overview">2. ST Overview</h2>
+<h3 id="21-purpose">2.1 Purpose</h3>
+<p>This Security Target (ST) describes the security properties of [TODO: TOE Name] according to ISO/IEC 15408 (Common Criteria for Information Technology Security Evaluation). The ST serves as the basis for the evaluation and certification of the TOE.</p>
+<h3 id="22-scope">2.2 Scope</h3>
+<p>The ST includes:
+- Physical and logical description of the TOE
+- Definition of security problems (threats, OSPs, assumptions)
+- Security objectives for TOE and environment
+- Security requirements (SFRs and SARs)
+- Summary of security functions
+- Rationales for all relationships</p>
+<h3 id="23-intended-readership">2.3 Intended Readership</h3>
+<p>This ST is intended for:
+- Evaluators and certification bodies
+- Product developers and security architects
+- Customers and procurers
+- Auditors and compliance officers</p>
+<h2 id="3-st-reference">3. ST Reference</h2>
+<h3 id="31-st-identification">3.1 ST Identification</h3>
+<p><strong>ST Reference:</strong> [TODO: Unique reference, e.g., ST-PRODUCT-v1.0]<br />
+<strong>ST Registration:</strong> [TODO: Registration number with certification body]  </p>
+<h3 id="32-toe-reference">3.2 TOE Reference</h3>
+<p><strong>TOE Reference:</strong> [TODO: Unique TOE reference]<br />
+<strong>TOE Platform:</strong> [TODO: Hardware/Software platform]<br />
+<strong>TOE Delivery:</strong> [TODO: Delivery form, e.g., Software download, Hardware device]  </p>
+<h2 id="4-document-organization">4. Document Organization</h2>
+<h3 id="41-st-structure">4.1 ST Structure</h3>
+<p>The ST is structured as follows:</p>
+<ol>
+<li><strong>ST Introduction</strong> (this document) - Introduction and identification</li>
+<li><strong>TOE Description</strong> - Detailed description of the TOE</li>
+<li><strong>Security Problem Definition</strong> - Threats, OSPs, assumptions</li>
+<li><strong>Security Objectives</strong> - Security objectives</li>
+<li><strong>Security Requirements</strong> - SFRs and SARs</li>
+<li><strong>TOE Summary Specification</strong> - Security functions</li>
+<li><strong>Appendices</strong> - PP conformance, rationales, glossary</li>
+</ol>
+<h3 id="42-document-conventions">4.2 Document Conventions</h3>
+<ul>
+<li><strong>SFR</strong>: Security Functional Requirement</li>
+<li><strong>SAR</strong>: Security Assurance Requirement</li>
+<li><strong>TOE</strong>: Target of Evaluation</li>
+<li><strong>TSF</strong>: TOE Security Functionality</li>
+<li><strong>PP</strong>: Protection Profile</li>
+<li><strong>EAL</strong>: Evaluation Assurance Level</li>
+</ul>
+<h2 id="5-related-documentation">5. Related Documentation</h2>
+<h3 id="51-common-criteria-documentation">5.1 Common Criteria Documentation</h3>
+<ul>
+<li>ISO/IEC 15408-1:2022 - Introduction and general model</li>
+<li>ISO/IEC 15408-2:2022 - Security functional components</li>
+<li>ISO/IEC 15408-3:2022 - Security assurance components</li>
+<li>Common Methodology for Information Technology Security Evaluation (CEM)</li>
+</ul>
+<h3 id="52-protection-profiles">5.2 Protection Profiles</h3>
+<p>[TODO: List of relevant Protection Profiles, if applicable]
+- PP Name: [TODO]
+- PP Version: [TODO]
+- PP Registration: [TODO]</p>
+<h3 id="53-toe-documentation">5.3 TOE Documentation</h3>
+<p>[TODO: List of TOE documentation]
+- User Guide: [TODO]
+- Administrator Guide: [TODO]
+- Security Guide: [TODO]
+- Installation Guide: [TODO]</p>
+<h2 id="6-revision-history">6. Revision History</h2>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{{ meta.version }}</td>
+<td>{{ meta.date }}</td>
+<td>Andreas Huemmer [andreas.huemmer@adminsend.de]</td>
+<td>Initial version</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO: Description of changes]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Next Steps:</strong>
+1. Complete all [TODO] placeholders
+2. Verify consistency with other ST sections
+3. Ensure all references are correct
+4. Have the document reviewed by relevant stakeholders</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0000_metadata_en_common-criteria.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0020_TOE_Overview.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0230 - Rectification and Erasure</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0230</div>
+            <h1>Rectification and Erasure</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0220_Right_of_Access.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0240_Restriction_and_Objection.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="rectification-and-erasure">Rectification and Erasure</h1>
+<p><strong>Document-ID:</strong> 0230<br />
+<strong>Owner:</strong> {{ meta.owner }}<br />
+<strong>Version:</strong> {{ meta.version }}<br />
+<strong>Status:</strong> Draft<br />
+<strong>Classification:</strong> Internal<br />
+<strong>Last Update:</strong> {{ meta.date }}  </p>
+<hr />
+<h2 id="purpose">Purpose</h2>
+<p>This document describes the implementation of the right to rectification and erasure in {{ meta.organization }}. Data subjects have the right to rectification of inaccurate data and erasure of data no longer necessary.</p>
+<h2 id="right-to-rectification-art-16">Right to Rectification (Art. 16)</h2>
+<h3 id="scope-of-rectification-right">Scope of Rectification Right</h3>
+<p><strong>Data subjects have the right to:</strong>
+- Immediate rectification of inaccurate data
+- Completion of incomplete data
+- Supplementary statement</p>
+<h3 id="rectification-process">Rectification Process</h3>
+<p><strong>Standard Process:</strong></p>
+<ol>
+<li><strong>Receipt of Request (Day 0)</strong></li>
+<li>Registration</li>
+<li>Acknowledgment</li>
+<li>
+<p>Assignment</p>
+</li>
+<li>
+<p><strong>Review (Day 1-10)</strong></p>
+</li>
+<li>Identification of data subject</li>
+<li>Review of inaccuracy</li>
+<li>
+<p>Comparison with evidence</p>
+</li>
+<li>
+<p><strong>Implementation (Day 11-25)</strong></p>
+</li>
+<li>Rectification in all systems</li>
+<li>Notification of recipients (Art. 19)</li>
+<li>
+<p>Documentation</p>
+</li>
+<li>
+<p><strong>Response (Day 26-30)</strong></p>
+</li>
+<li>Information about rectification performed</li>
+<li>List of notified recipients</li>
+</ol>
+<h3 id="rectification-matrix">Rectification Matrix</h3>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Responsible</th>
+<th>Rectification Procedure</th>
+<th>Documentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: CRM]</td>
+<td>IT</td>
+<td>Manual change</td>
+<td>Change log</td>
+</tr>
+<tr>
+<td>[TODO: ERP]</td>
+<td>IT</td>
+<td>Workflow-driven</td>
+<td>Audit trail</td>
+</tr>
+<tr>
+<td>[TODO: Database]</td>
+<td>IT</td>
+<td>SQL update</td>
+<td>Change protocol</td>
+</tr>
+<tr>
+<td>[TODO: Backup]</td>
+<td>IT</td>
+<td>Marking</td>
+<td>Backup log</td>
+</tr>
+</tbody>
+</table>
+<h2 id="right-to-erasure-art-17">Right to Erasure (Art. 17)</h2>
+<h3 id="grounds-for-erasure">Grounds for Erasure</h3>
+<p><strong>Erasure is required when:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Ground</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No Longer Necessary</td>
+<td>Purpose fulfilled</td>
+<td>Applicant data after rejection</td>
+</tr>
+<tr>
+<td>Withdrawal of Consent</td>
+<td>Consent withdrawn</td>
+<td>Newsletter unsubscribe</td>
+</tr>
+<tr>
+<td>Objection</td>
+<td>Objection lodged (Art. 21)</td>
+<td>Marketing objection</td>
+</tr>
+<tr>
+<td>Unlawful Processing</td>
+<td>Without legal basis</td>
+<td>Data without consent</td>
+</tr>
+<tr>
+<td>Legal Obligation</td>
+<td>Legal erasure obligation</td>
+<td>Data protection violation</td>
+</tr>
+<tr>
+<td>Children</td>
+<td>Information society services</td>
+<td>Social media under 16</td>
+</tr>
+</tbody>
+</table>
+<h3 id="exceptions-to-right-of-erasure">Exceptions to Right of Erasure</h3>
+<p><strong>Erasure not required for:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Exception</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Freedom of Expression</td>
+<td>Exercise of right to freedom of expression</td>
+</tr>
+<tr>
+<td>Legal Obligation</td>
+<td>Compliance with legal obligations</td>
+</tr>
+<tr>
+<td>Public Interest</td>
+<td>Tasks in the public interest</td>
+</tr>
+<tr>
+<td>Healthcare</td>
+<td>Healthcare, occupational medicine</td>
+</tr>
+<tr>
+<td>Archiving Purposes</td>
+<td>Archiving in the public interest</td>
+</tr>
+<tr>
+<td>Legal Claims</td>
+<td>Establishment, exercise or defense</td>
+</tr>
+</tbody>
+</table>
+<h3 id="erasure-process">Erasure Process</h3>
+<p><strong>Standard Process:</strong></p>
+<ol>
+<li><strong>Receipt of Request (Day 0)</strong></li>
+<li>Registration</li>
+<li>Acknowledgment</li>
+<li>
+<p>Assignment</p>
+</li>
+<li>
+<p><strong>Review (Day 1-10)</strong></p>
+</li>
+<li>Identification of data subject</li>
+<li>Review of erasure grounds</li>
+<li>Review of exceptions</li>
+<li>
+<p>Review of legal retention periods</p>
+</li>
+<li>
+<p><strong>Decision (Day 11-15)</strong></p>
+</li>
+<li>Erasure or reasoned refusal</li>
+<li>
+<p>If refusal: Review of restriction (Art. 18)</p>
+</li>
+<li>
+<p><strong>Implementation (Day 16-25)</strong></p>
+</li>
+<li>Erasure in all systems</li>
+<li>Notification of recipients (Art. 19)</li>
+<li>
+<p>Documentation</p>
+</li>
+<li>
+<p><strong>Response (Day 26-30)</strong></p>
+</li>
+<li>Information about erasure or refusal</li>
+<li>If refusal: Justification and remedies</li>
+</ol>
+<h3 id="erasure-procedures">Erasure Procedures</h3>
+<p><strong>Technical Erasure:</strong></p>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Erasure Method</th>
+<th>Responsible</th>
+<th>Documentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Production Systems]</td>
+<td>Immediate erasure</td>
+<td>IT</td>
+<td>Erasure log</td>
+</tr>
+<tr>
+<td>[TODO: Backups]</td>
+<td>Marking/overwriting</td>
+<td>IT</td>
+<td>Backup log</td>
+</tr>
+<tr>
+<td>[TODO: Archives]</td>
+<td>Physical destruction</td>
+<td>IT</td>
+<td>Destruction log</td>
+</tr>
+<tr>
+<td>[TODO: Cloud]</td>
+<td>API-driven erasure</td>
+<td>IT</td>
+<td>API log</td>
+</tr>
+</tbody>
+</table>
+<h2 id="notification-obligation-art-19">Notification Obligation (Art. 19)</h2>
+<h3 id="notification-of-recipients">Notification of Recipients</h3>
+<p><strong>Recipients must be informed of rectification or erasure:</strong></p>
+<p><strong>Process:</strong>
+1. Identification of all recipients
+2. Notification of rectification/erasure
+3. Documentation of notifications
+4. Information to data subject about recipients (on request)</p>
+<p><strong>Exceptions:</strong>
+- Impossible
+- Disproportionate effort</p>
+<h3 id="recipient-matrix">Recipient Matrix</h3>
+<table>
+<thead>
+<tr>
+<th>Recipient Type</th>
+<th>Notification Obligation</th>
+<th>Method</th>
+<th>Documentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Processors]</td>
+<td>Yes</td>
+<td>Email</td>
+<td>Notification log</td>
+</tr>
+<tr>
+<td>[TODO: Third Party Recipients]</td>
+<td>Yes</td>
+<td>Email/written</td>
+<td>Notification log</td>
+</tr>
+<tr>
+<td>[TODO: Public Authorities]</td>
+<td>Yes</td>
+<td>Written</td>
+<td>Notification log</td>
+</tr>
+</tbody>
+</table>
+<h2 id="documentation">Documentation</h2>
+<h3 id="rectification-and-erasure-register">Rectification and Erasure Register</h3>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Data Subject</th>
+<th>Type</th>
+<th>Reason</th>
+<th>Performed</th>
+<th>Recipients Notified</th>
+<th>Processor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Rectification</td>
+<td>Inaccurate</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Erasure</td>
+<td>No longer necessary</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Erasure</td>
+<td>Refused (retention period)</td>
+<td>No</td>
+<td>N/A</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="evidence-requirements">Evidence Requirements</h3>
+<p><strong>Documentation for Accountability:</strong>
+- All rectification and erasure requests
+- Performed rectifications and erasures
+- Refusals and their justification
+- Notifications to recipients
+- Exceptions and their justification</p>
+<h2 id="deadlines">Deadlines</h2>
+<p><strong>Processing Deadline:</strong>
+- Without delay, at most 1 month
+- Extension by 2 months possible for complexity
+- Justification of extension required</p>
+<h2 id="links-to-other-documents">Links to Other Documents</h2>
+<ul>
+<li><strong>Transparency (Art. 12):</strong> Modalities of processing</li>
+<li><strong>Accuracy (Art. 5(1)(d)):</strong> Principle of accuracy</li>
+<li><strong>Storage Limitation (Art. 5(1)(e)):</strong> Principle of erasure</li>
+<li><strong>Notification Obligation (Art. 19):</strong> Notification of recipients</li>
+<li><strong>Restriction (Art. 18):</strong> Alternative to erasure</li>
+</ul>
+<h2 id="common-violations-and-their-prevention">Common Violations and Their Prevention</h2>
+<table>
+<thead>
+<tr>
+<th>Violation</th>
+<th>Example</th>
+<th>Prevention</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Incomplete Rectification</td>
+<td>Only in one system</td>
+<td>Check all systems</td>
+</tr>
+<tr>
+<td>Delayed Erasure</td>
+<td>Erasure after 3 months</td>
+<td>Deadline control</td>
+</tr>
+<tr>
+<td>Missing Notification</td>
+<td>Recipients not informed</td>
+<td>Notification process</td>
+</tr>
+<tr>
+<td>Unjustified Refusal</td>
+<td>Refusal without review</td>
+<td>Careful review</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Next Steps:</strong>
+1. Establish processes for rectification and erasure requests
+2. Implement erasure procedures for all systems
+3. Define notification process for recipients
+4. Train employees on rectification and erasure rights
+5. Document all requests in register</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0220_Right_of_Access.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0240_Restriction_and_Objection.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

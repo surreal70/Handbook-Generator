@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0530 - Coverage Matrix</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0530</div>
+            <h1>Coverage Matrix</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0520_Functions_Rationale.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0540_Strength_of_Function.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="coverage-matrix">Coverage Matrix</h1>
+<p><strong>Document-ID:</strong> 0530<br />
+<strong>Owner:</strong> {{ meta.owner }}<br />
+<strong>Version:</strong> {{ meta.version }}<br />
+<strong>Status:</strong> Draft / In Review / Approved<br />
+<strong>Classification:</strong> Internal / Confidential / Strictly Confidential<br />
+<strong>Last Update:</strong> {{ meta.date }}  </p>
+<hr />
+<blockquote>
+<p><strong>Note:</strong> This document is a template. Replace all <code>[TODO]</code> placeholders and adapt the content to your specific TOE (Target of Evaluation).</p>
+</blockquote>
+<h2 id="1-introduction">1. Introduction</h2>
+<h3 id="11-purpose">1.1 Purpose</h3>
+<p>This document contains the complete Coverage Matrix for <strong>[TODO: TOE Name]</strong>. The matrix shows the mapping between:</p>
+<ul>
+<li>Security Objectives ↔ Threats, OSPs, Assumptions</li>
+<li>Security Functional Requirements (SFRs) ↔ Security Objectives</li>
+<li>TOE Security Functions (TSFs) ↔ SFRs</li>
+<li>Tests ↔ TSFs and SFRs</li>
+<li>Assurance Measures ↔ Security Assurance Requirements (SARs)</li>
+</ul>
+<h3 id="12-legend">1.2 Legend</h3>
+<p><strong>Coverage Levels:</strong>
+- ● = Complete coverage
+- ◐ = Partial coverage
+- ○ = Supporting coverage
+- (empty) = No coverage</p>
+<h2 id="2-security-objectives-coverage">2. Security Objectives Coverage</h2>
+<h3 id="21-security-objectives-for-toe-threats">2.1 Security Objectives for TOE ↔ Threats</h3>
+<p>This matrix shows how the Security Objectives for TOE address the identified Threats:</p>
+<table>
+<thead>
+<tr>
+<th>Threat-ID</th>
+<th>Threat-Name</th>
+<th>O.TOE-1</th>
+<th>O.TOE-2</th>
+<th>O.TOE-3</th>
+<th>O.TOE-4</th>
+<th>O.TOE-5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T.[TODO]</td>
+<td>[TODO]</td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T.[TODO]</td>
+<td>[TODO]</td>
+<td>●</td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T.[TODO]</td>
+<td>[TODO]</td>
+<td></td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T.[TODO]</td>
+<td>[TODO]</td>
+<td></td>
+<td></td>
+<td>●</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T.[TODO]</td>
+<td>[TODO]</td>
+<td></td>
+<td></td>
+<td>●</td>
+<td>◐</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Completeness Check:</strong>
+- Number of Threats: [TODO]
+- Number of covered Threats: [TODO]
+- Uncovered Threats: [TODO: List or "None"]</p>
+<h3 id="22-security-objectives-for-toe-organizational-security-policies">2.2 Security Objectives for TOE ↔ Organizational Security Policies</h3>
+<p>This matrix shows how the Security Objectives for TOE fulfill the OSPs:</p>
+<table>
+<thead>
+<tr>
+<th>OSP-ID</th>
+<th>OSP-Name</th>
+<th>O.TOE-1</th>
+<th>O.TOE-2</th>
+<th>O.TOE-3</th>
+<th>O.TOE-4</th>
+<th>O.TOE-5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P.[TODO]</td>
+<td>[TODO]</td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>P.[TODO]</td>
+<td>[TODO]</td>
+<td></td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>P.[TODO]</td>
+<td>[TODO]</td>
+<td></td>
+<td></td>
+<td>●</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Completeness Check:</strong>
+- Number of OSPs: [TODO]
+- Number of covered OSPs: [TODO]
+- Uncovered OSPs: [TODO: List or "None"]</p>
+<h3 id="23-security-objectives-for-environment-threats">2.3 Security Objectives for Environment ↔ Threats</h3>
+<p>This matrix shows how the Security Objectives for Environment address the Threats:</p>
+<table>
+<thead>
+<tr>
+<th>Threat-ID</th>
+<th>Threat-Name</th>
+<th>O.ENV-1</th>
+<th>O.ENV-2</th>
+<th>O.ENV-3</th>
+<th>O.ENV-4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T.[TODO]</td>
+<td>[TODO]</td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T.[TODO]</td>
+<td>[TODO]</td>
+<td></td>
+<td>●</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>T.[TODO]</td>
+<td>[TODO]</td>
+<td></td>
+<td></td>
+<td>●</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="24-security-objectives-for-environment-assumptions">2.4 Security Objectives for Environment ↔ Assumptions</h3>
+<p>This matrix shows how the Security Objectives for Environment fulfill the Assumptions:</p>
+<table>
+<thead>
+<tr>
+<th>Assumption-ID</th>
+<th>Assumption-Name</th>
+<th>O.ENV-1</th>
+<th>O.ENV-2</th>
+<th>O.ENV-3</th>
+<th>O.ENV-4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A.[TODO]</td>
+<td>[TODO]</td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>A.[TODO]</td>
+<td>[TODO]</td>
+<td></td>
+<td>●</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>A.[TODO]</td>
+<td>[TODO]</td>
+<td></td>
+<td></td>
+<td>●</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Completeness Check:</strong>
+- Number of Assumptions: [TODO]
+- Number of covered Assumptions: [TODO]
+- Uncovered Assumptions: [TODO: List or "None"]</p>
+<h2 id="3-security-functional-requirements-coverage">3. Security Functional Requirements Coverage</h2>
+<h3 id="31-sfrs-security-objectives-for-toe">3.1 SFRs ↔ Security Objectives for TOE</h3>
+<p>This matrix shows how the SFRs fulfill the Security Objectives for TOE:</p>
+<table>
+<thead>
+<tr>
+<th>SFR-ID</th>
+<th>SFR-Name</th>
+<th>O.TOE-1</th>
+<th>O.TOE-2</th>
+<th>O.TOE-3</th>
+<th>O.TOE-4</th>
+<th>O.TOE-5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FAU_GEN.1</td>
+<td>Audit data generation</td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FAU_SAR.1</td>
+<td>Audit review</td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FCS_CKM.1</td>
+<td>Cryptographic key generation</td>
+<td></td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FCS_COP.1</td>
+<td>Cryptographic operation</td>
+<td></td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FDP_ACC.1</td>
+<td>Subset access control</td>
+<td></td>
+<td></td>
+<td>●</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FDP_ACF.1</td>
+<td>Security attribute based access control</td>
+<td></td>
+<td></td>
+<td>●</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FIA_UID.1</td>
+<td>Timing of identification</td>
+<td></td>
+<td></td>
+<td></td>
+<td>●</td>
+<td></td>
+</tr>
+<tr>
+<td>FIA_UAU.1</td>
+<td>Timing of authentication</td>
+<td></td>
+<td></td>
+<td></td>
+<td>●</td>
+<td></td>
+</tr>
+<tr>
+<td>FIA_AFL.1</td>
+<td>Authentication failure handling</td>
+<td></td>
+<td></td>
+<td></td>
+<td>●</td>
+<td></td>
+</tr>
+<tr>
+<td>FMT_SMF.1</td>
+<td>Specification of management functions</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>●</td>
+</tr>
+<tr>
+<td>FMT_SMR.1</td>
+<td>Security roles</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>●</td>
+</tr>
+<tr>
+<td>FPT_STM.1</td>
+<td>Reliable time stamps</td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FTA_SSL.1</td>
+<td>TSF-initiated session locking</td>
+<td></td>
+<td></td>
+<td></td>
+<td>●</td>
+<td></td>
+</tr>
+<tr>
+<td>FTP_TRP.1</td>
+<td>Trusted path</td>
+<td></td>
+<td></td>
+<td></td>
+<td>●</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Completeness Check:</strong>
+- Number of SFRs: [TODO]
+- Number of Security Objectives for TOE: [TODO]
+- Uncovered SFRs: [TODO: List or "None"]
+- Uncovered Objectives: [TODO: List or "None"]</p>
+<h2 id="4-toe-security-functions-coverage">4. TOE Security Functions Coverage</h2>
+<h3 id="41-tsfs-sfrs">4.1 TSFs ↔ SFRs</h3>
+<p>This matrix shows how the TSFs implement the SFRs:</p>
+<table>
+<thead>
+<tr>
+<th>SFR-ID</th>
+<th>SFR-Name</th>
+<th>TSF-1</th>
+<th>TSF-2</th>
+<th>TSF-3</th>
+<th>TSF-4</th>
+<th>TSF-5</th>
+<th>TSF-6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FAU_GEN.1</td>
+<td>Audit data generation</td>
+<td></td>
+<td></td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FAU_SAR.1</td>
+<td>Audit review</td>
+<td></td>
+<td></td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FCS_CKM.1</td>
+<td>Cryptographic key generation</td>
+<td></td>
+<td></td>
+<td></td>
+<td>●</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FCS_COP.1</td>
+<td>Cryptographic operation</td>
+<td></td>
+<td></td>
+<td></td>
+<td>●</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FDP_ACC.1</td>
+<td>Subset access control</td>
+<td></td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FDP_ACF.1</td>
+<td>Security attribute based access control</td>
+<td></td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FIA_UID.1</td>
+<td>Timing of identification</td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FIA_UAU.1</td>
+<td>Timing of authentication</td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FIA_AFL.1</td>
+<td>Authentication failure handling</td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FMT_SMF.1</td>
+<td>Specification of management functions</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>●</td>
+<td></td>
+</tr>
+<tr>
+<td>FMT_SMR.1</td>
+<td>Security roles</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>●</td>
+<td></td>
+</tr>
+<tr>
+<td>FPT_STM.1</td>
+<td>Reliable time stamps</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>●</td>
+</tr>
+<tr>
+<td>FTA_SSL.1</td>
+<td>TSF-initiated session locking</td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FTP_TRP.1</td>
+<td>Trusted path</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>●</td>
+</tr>
+</tbody>
+</table>
+<p><strong>TSF Descriptions:</strong></p>
+<table>
+<thead>
+<tr>
+<th>TSF-ID</th>
+<th>TSF-Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TSF-1</td>
+<td>[TODO]</td>
+<td>[TODO: Brief description]</td>
+</tr>
+<tr>
+<td>TSF-2</td>
+<td>[TODO]</td>
+<td>[TODO: Brief description]</td>
+</tr>
+<tr>
+<td>TSF-3</td>
+<td>[TODO]</td>
+<td>[TODO: Brief description]</td>
+</tr>
+<tr>
+<td>TSF-4</td>
+<td>[TODO]</td>
+<td>[TODO: Brief description]</td>
+</tr>
+<tr>
+<td>TSF-5</td>
+<td>[TODO]</td>
+<td>[TODO: Brief description]</td>
+</tr>
+<tr>
+<td>TSF-6</td>
+<td>[TODO]</td>
+<td>[TODO: Brief description]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Completeness Check:</strong>
+- Number of SFRs: [TODO]
+- Number of covered SFRs: [TODO]
+- Uncovered SFRs: [TODO: List or "None"]</p>
+<h2 id="5-test-coverage">5. Test Coverage</h2>
+<h3 id="51-tests-tsfs">5.1 Tests ↔ TSFs</h3>
+<p>This matrix shows how the tests verify the TSFs:</p>
+<table>
+<thead>
+<tr>
+<th>TSF-ID</th>
+<th>TSF-Name</th>
+<th>Test-1</th>
+<th>Test-2</th>
+<th>Test-3</th>
+<th>Test-4</th>
+<th>Test-5</th>
+<th>Test-6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TSF-1</td>
+<td>[TODO]</td>
+<td>●</td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>TSF-2</td>
+<td>[TODO]</td>
+<td></td>
+<td></td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>TSF-3</td>
+<td>[TODO]</td>
+<td></td>
+<td></td>
+<td></td>
+<td>●</td>
+<td>●</td>
+<td></td>
+</tr>
+<tr>
+<td>TSF-4</td>
+<td>[TODO]</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>●</td>
+</tr>
+<tr>
+<td>TSF-5</td>
+<td>[TODO]</td>
+<td></td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>TSF-6</td>
+<td>[TODO]</td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Test Descriptions:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Test-ID</th>
+<th>Test-Name</th>
+<th>Description</th>
+<th>Test Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Test-1</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Unit / Integration / System</td>
+</tr>
+<tr>
+<td>Test-2</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Unit / Integration / System</td>
+</tr>
+<tr>
+<td>Test-3</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Unit / Integration / System</td>
+</tr>
+<tr>
+<td>Test-4</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Unit / Integration / System</td>
+</tr>
+<tr>
+<td>Test-5</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Unit / Integration / System</td>
+</tr>
+<tr>
+<td>Test-6</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Unit / Integration / System</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Completeness Check:</strong>
+- Number of TSFs: [TODO]
+- Number of tested TSFs: [TODO]
+- Untested TSFs: [TODO: List or "None"]</p>
+<h3 id="52-tests-sfrs-indirect-via-tsfs">5.2 Tests ↔ SFRs (indirect via TSFs)</h3>
+<p>This matrix shows the indirect coverage of SFRs by tests:</p>
+<table>
+<thead>
+<tr>
+<th>SFR-ID</th>
+<th>SFR-Name</th>
+<th>Test-1</th>
+<th>Test-2</th>
+<th>Test-3</th>
+<th>Test-4</th>
+<th>Test-5</th>
+<th>Test-6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FAU_GEN.1</td>
+<td>Audit data generation</td>
+<td></td>
+<td></td>
+<td></td>
+<td>●</td>
+<td>●</td>
+<td></td>
+</tr>
+<tr>
+<td>FAU_SAR.1</td>
+<td>Audit review</td>
+<td></td>
+<td></td>
+<td></td>
+<td>●</td>
+<td>●</td>
+<td></td>
+</tr>
+<tr>
+<td>FCS_CKM.1</td>
+<td>Cryptographic key generation</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>●</td>
+</tr>
+<tr>
+<td>FCS_COP.1</td>
+<td>Cryptographic operation</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>●</td>
+</tr>
+<tr>
+<td>FDP_ACC.1</td>
+<td>Subset access control</td>
+<td></td>
+<td></td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FDP_ACF.1</td>
+<td>Security attribute based access control</td>
+<td></td>
+<td></td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FIA_UID.1</td>
+<td>Timing of identification</td>
+<td>●</td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FIA_UAU.1</td>
+<td>Timing of authentication</td>
+<td>●</td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FIA_AFL.1</td>
+<td>Authentication failure handling</td>
+<td>●</td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FMT_SMF.1</td>
+<td>Specification of management functions</td>
+<td></td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FMT_SMR.1</td>
+<td>Security roles</td>
+<td></td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FPT_STM.1</td>
+<td>Reliable time stamps</td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FTA_SSL.1</td>
+<td>TSF-initiated session locking</td>
+<td>●</td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FTP_TRP.1</td>
+<td>Trusted path</td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Completeness Check:</strong>
+- Number of SFRs: [TODO]
+- Number of tested SFRs: [TODO]
+- Untested SFRs: [TODO: List or "None"]</p>
+<h2 id="6-assurance-measures-coverage">6. Assurance Measures Coverage</h2>
+<h3 id="61-assurance-measures-sars">6.1 Assurance Measures ↔ SARs</h3>
+<p>This matrix shows how the Assurance Measures fulfill the SARs:</p>
+<table>
+<thead>
+<tr>
+<th>SAR-ID</th>
+<th>SAR-Name</th>
+<th>AM-1</th>
+<th>AM-2</th>
+<th>AM-3</th>
+<th>AM-4</th>
+<th>AM-5</th>
+<th>AM-6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ACM_CAP.4</td>
+<td>Generation support and acceptance procedures</td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ACM_SCP.2</td>
+<td>Problem tracking CM coverage</td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ADO_DEL.2</td>
+<td>Detection of modification</td>
+<td></td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ADO_IGS.1</td>
+<td>Installation, generation, and start-up procedures</td>
+<td></td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ADV_FSP.2</td>
+<td>Security-enforcing functional specification</td>
+<td></td>
+<td></td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ADV_IMP.1</td>
+<td>Implementation representation of the TSF</td>
+<td></td>
+<td></td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ADV_TDS.2</td>
+<td>Architectural design</td>
+<td></td>
+<td></td>
+<td>●</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>AGD_ADM.1</td>
+<td>Administrator guidance</td>
+<td></td>
+<td></td>
+<td></td>
+<td>●</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>AGD_USR.1</td>
+<td>User guidance</td>
+<td></td>
+<td></td>
+<td></td>
+<td>●</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ALC_DVS.1</td>
+<td>Identification of security measures</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>●</td>
+<td></td>
+</tr>
+<tr>
+<td>ALC_LCD.1</td>
+<td>Developer defined life-cycle model</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>●</td>
+<td></td>
+</tr>
+<tr>
+<td>ALC_TAT.1</td>
+<td>Well-defined development tools</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>●</td>
+<td></td>
+</tr>
+<tr>
+<td>ATE_COV.2</td>
+<td>Analysis of coverage</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>●</td>
+</tr>
+<tr>
+<td>ATE_DPT.1</td>
+<td>Testing: high-level design</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>●</td>
+</tr>
+<tr>
+<td>ATE_FUN.1</td>
+<td>Functional testing</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>●</td>
+</tr>
+<tr>
+<td>ATE_IND.2</td>
+<td>Independent testing - sample</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>●</td>
+</tr>
+<tr>
+<td>AVA_MSU.2</td>
+<td>Validation of analysis</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>●</td>
+</tr>
+<tr>
+<td>AVA_SOF.1</td>
+<td>Strength of TOE security function evaluation</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>●</td>
+</tr>
+<tr>
+<td>AVA_VLA.2</td>
+<td>Independent vulnerability analysis</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>●</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Assurance Measure Descriptions:</strong></p>
+<table>
+<thead>
+<tr>
+<th>AM-ID</th>
+<th>AM-Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AM-1</td>
+<td>Configuration Management</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>AM-2</td>
+<td>Delivery and Operation</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>AM-3</td>
+<td>Development Documentation</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>AM-4</td>
+<td>Guidance Documents</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>AM-5</td>
+<td>Life Cycle Support</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>AM-6</td>
+<td>Testing and Vulnerability Assessment</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Completeness Check:</strong>
+- Number of SARs: [TODO]
+- Number of covered SARs: [TODO]
+- Uncovered SARs: [TODO: List or "None"]</p>
+<h2 id="7-overall-summary">7. Overall Summary</h2>
+<h3 id="71-end-to-end-traceability">7.1 End-to-End Traceability</h3>
+<p>This overview shows the complete traceability from Threats to Tests:</p>
+<div class="codehilite"><pre><span></span><code>Threats/OSPs/Assumptions
+    ↓
+Security Objectives (TOE &amp; Environment)
+    ↓
+Security Functional Requirements (SFRs)
+    ↓
+TOE Security Functions (TSFs)
+    ↓
+Tests
+</code></pre></div>
+
+<p><strong>Completeness Check:</strong>
+- ✓ All Threats are covered by Security Objectives
+- ✓ All Security Objectives are fulfilled by SFRs
+- ✓ All SFRs are implemented by TSFs
+- ✓ All TSFs are verified by Tests
+- ✓ All SARs are fulfilled by Assurance Measures</p>
+<h3 id="72-statistics">7.2 Statistics</h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Count</th>
+<th>Covered</th>
+<th>Coverage Rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Threats</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]%</td>
+</tr>
+<tr>
+<td>OSPs</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]%</td>
+</tr>
+<tr>
+<td>Assumptions</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]%</td>
+</tr>
+<tr>
+<td>Security Objectives (TOE)</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]%</td>
+</tr>
+<tr>
+<td>Security Objectives (ENV)</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]%</td>
+</tr>
+<tr>
+<td>SFRs</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]%</td>
+</tr>
+<tr>
+<td>TSFs</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]%</td>
+</tr>
+<tr>
+<td>Tests</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]%</td>
+</tr>
+<tr>
+<td>SARs</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]%</td>
+</tr>
+<tr>
+<td>Assurance Measures</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="73-identified-gaps">7.3 Identified Gaps</h3>
+<p>[TODO: List all identified gaps in coverage. If no gaps exist, write "No gaps identified".]</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Element</th>
+<th>Gap</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="8-summary">8. Summary</h2>
+<p>The Coverage Matrix demonstrates:</p>
+<ul>
+<li>✓ Complete traceability from Threats to Tests</li>
+<li>✓ All security requirements are covered</li>
+<li>✓ All security functions are tested</li>
+<li>✓ All Assurance Requirements are fulfilled</li>
+<li>✓ No critical gaps in coverage</li>
+</ul>
+<p><strong>Status:</strong> [TODO: Complete / With Gaps / In Progress]</p>
+<hr />
+<p><strong>Document History:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>Initial version</td>
+</tr>
+<tr>
+<td>1.0</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0520_Functions_Rationale.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0540_Strength_of_Function.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0410 - User and Device Authentication</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0410</div>
+            <h1>User and Device Authentication</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0400_Identification_and_Authentication_Policy.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0420_Authenticator_Management.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="user-and-device-authentication">User and Device Authentication</h1>
+<p><strong>Document ID:</strong> NIST-0410<br />
+<strong>Control Family:</strong> Identification and Authentication (IA)<br />
+<strong>Controls:</strong> IA-2, IA-3, IA-4, IA-6, IA-8<br />
+<strong>Organization:</strong> AdminSend GmbH<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Draft / In Review / Approved<br />
+<strong>Last Updated:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-control-description">1. Control Description</h2>
+<p>This document covers user and device authentication controls:
+- <strong>IA-2:</strong> Identification and Authentication (Organizational Users)
+- <strong>IA-3:</strong> Device Identification and Authentication
+- <strong>IA-4:</strong> Identifier Management
+- <strong>IA-6:</strong> Authentication Feedback
+- <strong>IA-8:</strong> Identification and Authentication (Non-Organizational Users)</p>
+<h2 id="2-control-implementation">2. Control Implementation</h2>
+<h3 id="21-user-authentication-ia-2">2.1 User Authentication (IA-2)</h3>
+<p><strong>Authentication Methods:</strong>
+- Username and password
+- Multi-factor authentication (MFA)
+- Biometric authentication
+- Smart cards/tokens
+- Certificate-based authentication</p>
+<p>[TODO: Specify authentication methods by system/application]</p>
+<p><strong>MFA Requirements:</strong>
+| System/Application | MFA Required | MFA Type |
+|-------------------|--------------|----------|
+| [TODO] | Yes/No | [TODO: SMS, App, Hardware token] |</p>
+<h3 id="22-device-authentication-ia-3">2.2 Device Authentication (IA-3)</h3>
+<p><strong>Device Types:</strong>
+- Workstations
+- Servers
+- Mobile devices
+- Network devices
+- IoT devices</p>
+<p>[TODO: Define device authentication requirements]</p>
+<p><strong>Authentication Mechanisms:</strong>
+- Device certificates
+- MAC address filtering
+- Network access control (NAC)
+- Device registration</p>
+<p>[TODO: Specify mechanisms]</p>
+<h3 id="23-identifier-management-ia-4">2.3 Identifier Management (IA-4)</h3>
+<p><strong>Identifier Assignment:</strong>
+- Unique identifiers for each user
+- Naming conventions: [TODO: Define]
+- Identifier reuse policy: [TODO: Define]</p>
+<p><strong>Identifier Lifecycle:</strong>
+1. Creation
+2. Assignment
+3. Modification
+4. Suspension
+5. Deletion</p>
+<p>[TODO: Define lifecycle procedures]</p>
+<p><strong>Identifier Types:</strong>
+| Identifier Type | Format | Example |
+|----------------|--------|---------|
+| User ID | [TODO] | [TODO] |
+| Service Account | [TODO] | [TODO] |
+| Device ID | [TODO] | [TODO] |</p>
+<h3 id="24-authentication-feedback-ia-6">2.4 Authentication Feedback (IA-6)</h3>
+<p><strong>Feedback Restrictions:</strong>
+- No password display during entry
+- Generic error messages for failed authentication
+- No indication of which credential failed
+- Masking of authentication information</p>
+<p>[TODO: Define feedback restrictions]</p>
+<h3 id="25-non-organizational-user-authentication-ia-8">2.5 Non-Organizational User Authentication (IA-8)</h3>
+<p><strong>External User Types:</strong>
+- Contractors
+- Partners
+- Customers
+- Vendors
+- Public users</p>
+<p>[TODO: Define external user types]</p>
+<p><strong>Authentication Requirements:</strong>
+| User Type | Authentication Method | Access Level |
+|-----------|----------------------|--------------|
+| [TODO] | [TODO] | [TODO] |</p>
+<p><strong>Federated Authentication:</strong>
+- Supported identity providers: [TODO: List]
+- Federation protocols: SAML, OAuth, OpenID Connect
+- Trust relationships: [TODO: Define]</p>
+<h2 id="3-control-enhancements">3. Control Enhancements</h2>
+<ul>
+<li><strong>IA-2(1):</strong> Multi-Factor Authentication to Privileged Accounts</li>
+<li><strong>IA-2(2):</strong> Multi-Factor Authentication to Non-Privileged Accounts</li>
+<li><strong>IA-2(5):</strong> Individual Authentication with Group Authentication</li>
+<li><strong>IA-2(6):</strong> Access to Accounts - Separate Device</li>
+<li><strong>IA-2(8):</strong> Access to Accounts - Replay Resistant</li>
+<li><strong>IA-2(12):</strong> Acceptance of PIV Credentials</li>
+<li><strong>IA-3(1):</strong> Cryptographic Bidirectional Authentication</li>
+<li><strong>IA-3(4):</strong> Device Attestation</li>
+<li><strong>IA-4(4):</strong> Identify User Status</li>
+<li><strong>IA-8(1):</strong> Acceptance of PIV Credentials from Other Agencies</li>
+<li><strong>IA-8(2):</strong> Acceptance of External Authenticators</li>
+<li><strong>IA-8(4):</strong> Use of Defined Profiles</li>
+</ul>
+<p>[TODO: Mark applicable enhancements]</p>
+<h2 id="4-implementation-status">4. Implementation Status</h2>
+<p><strong>Status:</strong> [TODO: Implemented / Partially Implemented / Planned / Not Applicable]<br />
+<strong>Implementation Date:</strong> [TODO: Date]<br />
+<strong>Responsible:</strong> [TODO: Name/Role]  </p>
+<h2 id="5-assessment">5. Assessment</h2>
+<p><strong>Assessment Method:</strong> Examine, Interview, Test<br />
+<strong>Assessment Status:</strong> [TODO: Satisfied / Other than Satisfied / Not Applicable]<br />
+<strong>Findings:</strong> [TODO: Description]  </p>
+<hr />
+<p><strong>Document History:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Initial creation</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0400_Identification_and_Authentication_Policy.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0420_Authenticator_Management.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

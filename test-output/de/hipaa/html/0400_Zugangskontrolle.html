@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0400 - Zugangskontrolle</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0400</div>
+            <h1>Zugangskontrolle</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0310_Arbeitsplatznutzung_und_Sicherheit.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0500_Datenschutzpraktiken_und_Individuelle_Rechte.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="zugangskontrolle">Zugangskontrolle</h1>
+<p><strong>Dokument-ID:</strong> HIPAA-0400<br />
+<strong>Organisation:</strong> AdminSend GmbH<br />
+<strong>Verantwortlich:</strong> IT Operations Manager<br />
+<strong>Genehmigt durch:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Entwurf / In Prüfung / Genehmigt<br />
+<strong>Klassifizierung:</strong> internal<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-zweck">1. Zweck</h2>
+<p>Dieses Dokument beschreibt die technischen Schutzmaßnahmen zur Zugangskontrolle für AdminSend GmbH, um technische Richtlinien und Verfahren für elektronische Informationssysteme zu implementieren, die ePHI verwalten, um nur autorisierten Personen oder Softwareprogrammen Zugang zu gewähren.</p>
+<h3 id="11-hipaa-anforderung">1.1 HIPAA-Anforderung</h3>
+<p><strong>Standard:</strong> §164.312(a)(1) - Access Control (Erforderlich)</p>
+<p><strong>Implementierungsspezifikationen:</strong>
+- §164.312(a)(2)(i) - Eindeutige Benutzeridentifikation (Erforderlich)
+- §164.312(a)(2)(ii) - Notfallzugangsverfahren (Erforderlich)
+- §164.312(a)(2)(iii) - Automatische Abmeldung (Adressierbar)
+- §164.312(a)(2)(iv) - Verschlüsselung und Entschlüsselung (Adressierbar)</p>
+<h2 id="2-eindeutige-benutzeridentifikation">2. Eindeutige Benutzeridentifikation</h2>
+<h3 id="21-benutzer-id-anforderungen">2.1 Benutzer-ID-Anforderungen</h3>
+<p><strong>Anforderung:</strong> Zuweisung eines eindeutigen Namens und/oder einer Nummer zur Identifizierung und Verfolgung der Benutzeridentität.</p>
+<p><strong>Benutzer-ID-Standards:</strong>
+- Eindeutig für jeden einzelnen Benutzer
+- Nicht zwischen Benutzern geteilt
+- Nach Kündigung nicht wiederverwendet
+- Format: [TODO: vorname.nachname, Mitarbeiter-ID usw.]
+- Mindestlänge: [TODO: 6 Zeichen]</p>
+<p><strong>Verbotene Praktiken:</strong>
+- Gemeinsam genutzte Konten
+- Generische Konten (außer für spezifische genehmigte Zwecke)
+- Standardkonten (müssen deaktiviert oder umbenannt werden)
+- Gastkonten (müssen deaktiviert werden)</p>
+<h3 id="22-benutzerkontenverwaltung">2.2 Benutzerkontenverwaltung</h3>
+<p><strong>Kontoerstellungsprozess:</strong>
+1. Manager reicht Zugriffsanfrage ein
+2. HR überprüft Beschäftigungsstatus
+3. Security Officer genehmigt basierend auf Rolle
+4. IT erstellt eindeutiges Benutzerkonto
+5. Benutzer über Kontoerstellung benachrichtigt
+6. Benutzer schließt erste Anmeldung und Passworteinrichtung ab</p>
+<p><strong>Kontotypen:</strong>
+| Kontotyp | Zweck | Erforderliche Genehmigung | Überwachung |
+|----------|-------|---------------------------|-------------|
+| Standardbenutzer | Reguläres Mitglied | Manager | Standard |
+| Privilegierter Benutzer | Systemadministration | IT-Manager + Security Officer | Erweitert |
+| Dienstkonto | Automatisierte Prozesse | Security Officer | Erweitert |
+| Notfallzugang | Break-Glass-Zugang | Security Officer | Sofortige Überprüfung |</p>
+<h3 id="23-authentifizierungsmethoden">2.3 Authentifizierungsmethoden</h3>
+<p><strong>Primäre Authentifizierung:</strong>
+- Benutzername und Passwort
+- Mindestpasswortanforderungen:
+  - Länge: [TODO: 12 Zeichen Minimum]
+  - Komplexität: Groß-, Kleinbuchstaben, Zahl, Sonderzeichen
+  - Historie: [TODO: 12 vorherige Passwörter gespeichert]
+  - Alter: Maximum [TODO: 90 Tage], Minimum [TODO: 1 Tag]
+  - Sperrung: [TODO: 5 fehlgeschlagene Versuche], Sperrdauer [TODO: 30 Minuten]</p>
+<p><strong>Multi-Faktor-Authentifizierung (MFA):</strong>
+- Erforderlich für: Fernzugriff, privilegierte Konten, ePHI-Zugriff aus nicht vertrauenswürdigen Netzwerken
+- Methoden: SMS-Code, Authenticator-App, Hardware-Token, biometrisch
+- Backup-Codes für MFA-Wiederherstellung bereitgestellt</p>
+<p><strong>Single Sign-On (SSO):</strong>
+- Zentralisierte Authentifizierung
+- Reduziert Passwortmüdigkeit
+- Audit-Trail des Zugriffs
+- Integration mit MFA</p>
+<h2 id="3-notfallzugangsverfahren">3. Notfallzugangsverfahren</h2>
+<h3 id="31-notfallzugangsdefinition">3.1 Notfallzugangsdefinition</h3>
+<p><strong>Notfallsituationen:</strong>
+- Systemausfall, der normale Authentifizierung verhindert
+- Naturkatastrophe
+- Cyberangriff, der sofortige Reaktion erfordert
+- Lebensbedrohliche Patientensituation, die sofortigen ePHI-Zugriff erfordert
+- Kritische Systemwartung</p>
+<h3 id="32-break-glass-konten">3.2 Break-Glass-Konten</h3>
+<p><strong>Break-Glass-Konto-Eigenschaften:</strong>
+- Hochprivilegierter Zugriff
+- Nur in Notfällen verwendet
+- Anmeldedaten gesichert (versiegelter Umschlag, Passworttresor)
+- Sofortige Benachrichtigung bei Verwendung
+- Automatische Protokollierung aller Aktivitäten
+- Sofortige Überprüfung erforderlich</p>
+<p><strong>Break-Glass-Konto-Inventar:</strong>
+| Konto-ID | System | Zugriffsstufe | Anmeldedatenspeicherort | Zuletzt verwendet | Überprüft von |
+|----------|--------|---------------|-------------------------|-------------------|---------------|
+| [TODO: BG-001] | Active Directory | Domain Admin | [TODO: Sicherer Tresor] | [TODO: Datum] | [TODO: Security Officer] |
+| [TODO: BG-002] | EHR-System | System Admin | [TODO: Sicherer Tresor] | [TODO: Datum] | [TODO: Security Officer] |</p>
+<h3 id="33-notfallzugangsprozess">3.3 Notfallzugangsprozess</h3>
+<p><strong>Prozessschritte:</strong>
+1. <strong>Feststellung:</strong> Notfallsituation festgestellt
+2. <strong>Autorisierung:</strong> Security Officer oder Beauftragter autorisiert Notfallzugang
+3. <strong>Zugriff:</strong> Break-Glass-Anmeldedaten verwenden
+4. <strong>Protokollierung:</strong> Alle Aktivitäten automatisch protokolliert
+5. <strong>Benachrichtigung:</strong> Security Officer sofort benachrichtigt
+6. <strong>Überwachung:</strong> Echtzeitüberwachung der Notfallzugriffsaktivitäten
+7. <strong>Überprüfung:</strong> Sofortige Überprüfung nach Zugriff
+8. <strong>Dokumentation:</strong> Notfall, ergriffene Maßnahmen, Begründung dokumentieren
+9. <strong>Anmeldedatenrotation:</strong> Break-Glass-Anmeldedaten nach Verwendung ändern</p>
+<p><strong>Notfallzugriffsprotokoll:</strong>
+| Datum/Zeit | Benutzer | System | Grund | Autorisiert von | Ergriffene Maßnahmen | Überprüfungsdatum |
+|------------|----------|--------|-------|-----------------|----------------------|-------------------|
+| [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |</p>
+<h2 id="4-automatische-abmeldung">4. Automatische Abmeldung</h2>
+<h3 id="41-anforderungen-an-automatische-abmeldung">4.1 Anforderungen an automatische Abmeldung</h3>
+<p><strong>Anforderung:</strong> Implementierung elektronischer Verfahren, die eine elektronische Sitzung nach einer vorbestimmten Zeit der Inaktivität beenden.</p>
+<p><strong>Begründung:</strong> Unbefugten Zugriff auf ePHI verhindern, wenn Arbeitsplatz unbeaufsichtigt gelassen wird.</p>
+<h3 id="42-timeout-einstellungen">4.2 Timeout-Einstellungen</h3>
+<p><strong>Inaktivitäts-Timeouts:</strong>
+| System/Anwendung | Timeout-Zeitraum | Aktion | Override erlaubt |
+|------------------|------------------|--------|------------------|
+| Arbeitsplätze | [TODO: 15 Minuten] | Bildschirmsperre | Nein |
+| EHR-System | [TODO: 10 Minuten] | Sitzungs-Timeout | Nein |
+| Webanwendungen | [TODO: 20 Minuten] | Sitzungs-Timeout | Nein |
+| VPN | [TODO: 30 Minuten] | Trennen | Nein |
+| Mobile Geräte | [TODO: 5 Minuten] | Bildschirmsperre | Nein |</p>
+<p><strong>Timeout-Aktionen:</strong>
+- <strong>Bildschirmsperre:</strong> Passwort zum Entsperren erforderlich, Sitzung bleibt aktiv
+- <strong>Sitzungs-Timeout:</strong> Beendet Sitzung, erneute Authentifizierung erforderlich
+- <strong>Trennen:</strong> Beendet Netzwerkverbindung</p>
+<h3 id="43-implementierung">4.3 Implementierung</h3>
+<p><strong>Technische Implementierung:</strong>
+- Gruppenrichtlinie (Windows)
+- Konfigurationsprofile (macOS, iOS)
+- Anwendungsebenen-Timeouts
+- Netzwerkebenen-Timeouts (VPN, Firewall)</p>
+<p><strong>Benutzerbenachrichtigung:</strong>
+- Warnung vor Timeout (z.B. 2 Minuten)
+- Klare Anzeige des gesperrten Zustands
+- Anweisungen zum Entsperren</p>
+<h2 id="5-verschlusselung-und-entschlusselung">5. Verschlüsselung und Entschlüsselung</h2>
+<h3 id="51-verschlusselungsanforderungen">5.1 Verschlüsselungsanforderungen</h3>
+<p><strong>Anforderung:</strong> Implementierung eines Mechanismus zur Verschlüsselung und Entschlüsselung von ePHI.</p>
+<p><strong>Verschlüsselungsanwendungsfälle:</strong>
+- ePHI im Ruhezustand (gespeicherte Daten)
+- ePHI in Übertragung (übertragene Daten)
+- Backup-Medien
+- Mobile Geräte
+- Wechselmedien
+- E-Mail mit ePHI</p>
+<h3 id="52-verschlusselungsstandards">5.2 Verschlüsselungsstandards</h3>
+<p><strong>Genehmigte Verschlüsselungsalgorithmen:</strong>
+- <strong>Symmetrisch:</strong> AES-256, AES-128
+- <strong>Asymmetrisch:</strong> RSA-2048 oder höher, ECC
+- <strong>Hashing:</strong> SHA-256, SHA-512
+- <strong>TLS:</strong> TLS 1.2 oder höher</p>
+<p><strong>Verbotene Algorithmen:</strong>
+- DES, 3DES
+- MD5, SHA-1
+- SSL, TLS 1.0, TLS 1.1
+- RC4</p>
+<h3 id="53-verschlusselung-im-ruhezustand">5.3 Verschlüsselung im Ruhezustand</h3>
+<p><strong>Vollständige Festplattenverschlüsselung:</strong>
+- Alle Arbeitsplätze und Laptops: [TODO: BitLocker, FileVault, LUKS]
+- Alle Server mit ePHI: [TODO: BitLocker, dm-crypt]
+- Alle mobilen Geräte: [TODO: Native Geräteverschlüsselung]</p>
+<p><strong>Datenbankverschlüsselung:</strong>
+- Transparent Data Encryption (TDE) für Datenbanken
+- Spaltenebenen-Verschlüsselung für sensible Felder
+- Verschlüsselungsschlüsselverwaltung</p>
+<p><strong>Datei-/Ordnerverschlüsselung:</strong>
+- Verschlüsselte Dateisysteme
+- Verschlüsselte Container
+- Dokumentenebenen-Verschlüsselung</p>
+<h3 id="54-verschlusselung-in-ubertragung">5.4 Verschlüsselung in Übertragung</h3>
+<p><strong>Netzwerkverschlüsselung:</strong>
+- TLS 1.2+ für allen Webverkehr
+- VPN für Fernzugriff (IPsec, SSL VPN)
+- Verschlüsselte E-Mail (S/MIME, PGP)
+- SFTP/SCP für Dateiübertragungen (kein FTP)
+- HTTPS für alle Webanwendungen</p>
+<p><strong>Drahtlosverschlüsselung:</strong>
+- WPA3 oder WPA2-Enterprise
+- Kein WEP oder offene Netzwerke
+- Zertifikatbasierte Authentifizierung</p>
+<h3 id="55-schlusselverwaltung">5.5 Schlüsselverwaltung</h3>
+<p><strong>Schlüsselverwaltungs-Lebenszyklus:</strong>
+1. <strong>Generierung:</strong> Kryptografisch sichere Zufallsgenerierung
+2. <strong>Verteilung:</strong> Sichere Schlüsselverteilungsmechanismen
+3. <strong>Speicherung:</strong> Hardware Security Module (HSM) oder sicherer Schlüsseltresor
+4. <strong>Rotation:</strong> Regelmäßiger Schlüsselrotationsplan
+5. <strong>Backup:</strong> Sichere Sicherung von Verschlüsselungsschlüsseln
+6. <strong>Vernichtung:</strong> Sichere Vernichtung, wenn nicht mehr benötigt</p>
+<p><strong>Schlüsselverwaltungssystem:</strong>
+- Zentralisierte Schlüsselverwaltung
+- Zugriffskontrollen auf Schlüssel
+- Audit-Protokollierung des Schlüsselzugriffs
+- Schlüsselhinterlegungs-/Wiederherstellungsverfahren</p>
+<p><strong>Schlüsselrotationsplan:</strong>
+| Schlüsseltyp | Rotationshäufigkeit | Verantwortlich |
+|--------------|---------------------|----------------|
+| Festplattenverschlüsselungsschlüssel | [TODO: Jährlich] | IT Security |
+| Datenbankverschlüsselungsschlüssel | [TODO: Jährlich] | Database Admin |
+| TLS-Zertifikate | [TODO: Jährlich oder gemäß Anbieter] | IT Security |
+| VPN-Schlüssel | [TODO: Vierteljährlich] | Network Admin |</p>
+<h2 id="6-zugriffskontrolllisten-acls">6. Zugriffskontrolllisten (ACLs)</h2>
+<h3 id="61-acl-verwaltung">6.1 ACL-Verwaltung</h3>
+<p><strong>ACL-Prinzipien:</strong>
+- Geringste Privilegien
+- Need-to-know
+- Aufgabentrennung
+- Defense in Depth</p>
+<p><strong>ACL-Komponenten:</strong>
+- Benutzer-/Gruppenidentität
+- Ressource (Datei, Ordner, Anwendung, Datenbank)
+- Berechtigungen (Lesen, Schreiben, Ausführen, Löschen)
+- Bedingungen (Zeit, Standort, Gerät)</p>
+<h3 id="62-berechtigungsstufen">6.2 Berechtigungsstufen</h3>
+<p><strong>Standard-Berechtigungsstufen:</strong>
+| Stufe | Beschreibung | Typische Rollen |
+|-------|--------------|-----------------|
+| Kein Zugriff | Keine Berechtigungen | Standard für alle Benutzer |
+| Lesen | Nur Ansicht | Auditoren, Nur-Lese-Benutzer |
+| Lesen/Schreiben | Ansicht und Änderung | Standardbenutzer |
+| Vollzugriff | Alle Berechtigungen | Administratoren, Eigentümer |</p>
+<h3 id="63-acl-uberprufung">6.3 ACL-Überprüfung</h3>
+<p><strong>Überprüfungsprozess:</strong>
+- <strong>Häufigkeit:</strong> Vierteljährlich
+- <strong>Umfang:</strong> Alle ePHI-Ressourcen
+- <strong>Prüfer:</strong> Ressourceneigentümer + Security Officer
+- <strong>Maßnahmen:</strong> Unnötige Berechtigungen entfernen, für Rollenänderungen aktualisieren</p>
+<h2 id="7-privileged-access-management-pam">7. Privileged Access Management (PAM)</h2>
+<h3 id="71-definition-privilegierter-konten">7.1 Definition privilegierter Konten</h3>
+<p><strong>Privilegierte Konten:</strong>
+- Systemadministratoren
+- Datenbankadministratoren
+- Netzwerkadministratoren
+- Anwendungsadministratoren
+- Sicherheitsadministratoren</p>
+<p><strong>Eigenschaften privilegierten Zugriffs:</strong>
+- Erhöhte Berechtigungen
+- Zugriff auf sensible Systeme
+- Fähigkeit zur Änderung von Sicherheitskontrollen
+- Zugriff auf alle ePHI</p>
+<h3 id="72-pam-kontrollen">7.2 PAM-Kontrollen</h3>
+<p><strong>PAM-Anforderungen:</strong>
+- Trennung privilegierter Konten von Standardkonten
+- Just-in-Time (JIT) Privilegienerweiterung
+- Sitzungsaufzeichnung für privilegierten Zugriff
+- Erweiterte Überwachung und Alarmierung
+- Regelmäßige Zugriffsüberprüfungen
+- MFA für privilegierten Zugriff erforderlich</p>
+<p><strong>PAM-Lösung:</strong> [TODO: CyberArk, BeyondTrust, Thycotic usw.]</p>
+<h2 id="8-uberwachung-und-auditing">8. Überwachung und Auditing</h2>
+<h3 id="81-zugriffsuberwachung">8.1 Zugriffsüberwachung</h3>
+<p><strong>Überwachungsaktivitäten:</strong>
+- Fehlgeschlagene Anmeldeversuche
+- Erfolgreiche Anmeldungen (insbesondere außerhalb der Geschäftszeiten)
+- Nutzung privilegierter Konten
+- Nutzung von Notfallzugang
+- Berechtigungsänderungen
+- Kontoerstellung/-löschung
+- Passwortzurücksetzungen</p>
+<p><strong>Überwachungstools:</strong>
+- SIEM (Security Information and Event Management)
+- Log-Aggregation und -Analyse
+- User Behavior Analytics (UBA)
+- Automatisierte Alarmierung</p>
+<h3 id="82-zugriffs-auditing">8.2 Zugriffs-Auditing</h3>
+<p><strong>Audit-Aktivitäten:</strong>
+- Benutzerzugriffsüberprüfungen
+- Privilegierte Zugriffsüberprüfungen
+- ACL-Überprüfungen
+- Inaktive Kontoüberprüfungen
+- Verwaiste Kontoüberprüfungen</p>
+<p><strong>Audit-Häufigkeit:</strong>
+| Aktivität | Häufigkeit | Verantwortlich |
+|-----------|-----------|----------------|
+| Benutzerzugriffsüberprüfung | Vierteljährlich | Manager + Security Officer |
+| Privilegierte Zugriffsüberprüfung | Monatlich | Security Officer |
+| ACL-Überprüfung | Vierteljährlich | Ressourceneigentümer |
+| Inaktive Kontoüberprüfung | Monatlich | IT + HR |</p>
+<h2 id="9-dokumentation-und-aufzeichnungen">9. Dokumentation und Aufzeichnungen</h2>
+<h3 id="91-erforderliche-dokumentation">9.1 Erforderliche Dokumentation</h3>
+<ul>
+<li>Benutzerkontoinventar</li>
+<li>Privilegiertes Kontoinventar</li>
+<li>Break-Glass-Kontoverfahren</li>
+<li>Notfallzugriffsprotokolle</li>
+<li>Zugriffsüberprüfungsaufzeichnungen</li>
+<li>ACL-Dokumentation</li>
+<li>Verschlüsselungsschlüsselinventar</li>
+<li>Timeout-Konfigurationsdokumentation</li>
+</ul>
+<h3 id="92-aufbewahrung">9.2 Aufbewahrung</h3>
+<p><strong>Aufbewahrungsfrist:</strong> [TODO: 6 Jahre ab Erstellung oder letztem Gültigkeitsdatum]</p>
+<p><strong>Speicherort:</strong> [TODO: Identitätsverwaltungssystem, Dokumenten-Repository]</p>
+<hr />
+<p><strong>Dokumentenhistorie:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Datum</th>
+<th>Autor</th>
+<th>Änderungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Ersterstellung</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0310_Arbeitsplatznutzung_und_Sicherheit.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0500_Datenschutzpraktiken_und_Individuelle_Rechte.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

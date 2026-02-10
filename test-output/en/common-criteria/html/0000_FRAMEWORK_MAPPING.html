@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0000 - Common Criteria Framework Mapping</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0000</div>
+            <h1>Common Criteria Framework Mapping</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0650_Evidence_and_Documentation.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0000_README.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="common-criteria-framework-mapping">Common Criteria Framework Mapping</h1>
+<h2 id="overview">Overview</h2>
+<p>This document maps the Common Criteria Security Target templates to the ISO/IEC 15408 standard components and Evaluation Assurance Levels (EAL). It provides traceability between template files and specific Common Criteria requirements, ensuring comprehensive coverage of the Security Target structure.</p>
+<h2 id="isoiec-15408-standard-structure">ISO/IEC 15408 Standard Structure</h2>
+<p>The Common Criteria standard consists of three parts:</p>
+<ul>
+<li><strong>ISO/IEC 15408-1</strong>: Introduction and general model</li>
+<li><strong>ISO/IEC 15408-2</strong>: Security functional components (SFRs)</li>
+<li><strong>ISO/IEC 15408-3</strong>: Security assurance components (SARs)</li>
+</ul>
+<h2 id="template-mapping-to-isoiec-15408-1-security-target-structure">Template Mapping to ISO/IEC 15408-1 (Security Target Structure)</h2>
+<h3 id="part-1-st-introduction-isoiec-15408-1-section-81">Part 1: ST Introduction (ISO/IEC 15408-1, Section 8.1)</h3>
+<table>
+<thead>
+<tr>
+<th>Template</th>
+<th>ISO/IEC 15408-1 Reference</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0010_ST_Introduction.md</td>
+<td>Section 8.1.1</td>
+<td>ST identification, ST overview, ST conventions</td>
+</tr>
+<tr>
+<td>0020_TOE_Overview.md</td>
+<td>Section 8.1.2</td>
+<td>TOE overview and general description</td>
+</tr>
+<tr>
+<td>0030_TOE_Description_Summary.md</td>
+<td>Section 8.1.2</td>
+<td>Summary of TOE description</td>
+</tr>
+<tr>
+<td>0040_Conformance_Claims.md</td>
+<td>Section 8.1.3</td>
+<td>CC conformance claim, PP conformance claim, Package conformance claim</td>
+</tr>
+<tr>
+<td>0050_Document_Conventions.md</td>
+<td>Section 8.1.4</td>
+<td>Notation, terminology, and conventions</td>
+</tr>
+</tbody>
+</table>
+<h3 id="part-2-toe-description-isoiec-15408-1-section-82">Part 2: TOE Description (ISO/IEC 15408-1, Section 8.2)</h3>
+<table>
+<thead>
+<tr>
+<th>Template</th>
+<th>ISO/IEC 15408-1 Reference</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0100_TOE_Physical_Scope.md</td>
+<td>Section 8.2.1</td>
+<td>Physical scope of the TOE (hardware, software, firmware, guidance)</td>
+</tr>
+<tr>
+<td>0110_TOE_Logical_Scope.md</td>
+<td>Section 8.2.2</td>
+<td>Logical scope of the TOE (security features and functions)</td>
+</tr>
+<tr>
+<td>0120_TOE_Interfaces.md</td>
+<td>Section 8.2.3</td>
+<td>TOE interfaces (user, administrator, external systems)</td>
+</tr>
+<tr>
+<td>0130_TOE_Architecture.md</td>
+<td>Section 8.2.4</td>
+<td>TOE architecture and subsystems</td>
+</tr>
+<tr>
+<td>0140_TOE_Lifecycle.md</td>
+<td>Section 8.2.5</td>
+<td>TOE lifecycle (development, deployment, operation, maintenance)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="part-3-security-problem-definition-isoiec-15408-1-section-83">Part 3: Security Problem Definition (ISO/IEC 15408-1, Section 8.3)</h3>
+<table>
+<thead>
+<tr>
+<th>Template</th>
+<th>ISO/IEC 15408-1 Reference</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0200_Security_Problem_Definition.md</td>
+<td>Section 8.3</td>
+<td>Overview of security problem definition</td>
+</tr>
+<tr>
+<td>0210_Threats.md</td>
+<td>Section 8.3.1</td>
+<td>Threats to the TOE and assets</td>
+</tr>
+<tr>
+<td>0220_Organizational_Security_Policies.md</td>
+<td>Section 8.3.2</td>
+<td>Organizational security policies (OSPs)</td>
+</tr>
+<tr>
+<td>0230_Assumptions.md</td>
+<td>Section 8.3.3</td>
+<td>Assumptions about the operational environment</td>
+</tr>
+<tr>
+<td>0240_Threat_Agents_and_Assets.md</td>
+<td>Section 8.3.1</td>
+<td>Threat agents (attackers) and assets to be protected</td>
+</tr>
+</tbody>
+</table>
+<h3 id="part-4-security-objectives-isoiec-15408-1-section-84">Part 4: Security Objectives (ISO/IEC 15408-1, Section 8.4)</h3>
+<table>
+<thead>
+<tr>
+<th>Template</th>
+<th>ISO/IEC 15408-1 Reference</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0300_Security_Objectives.md</td>
+<td>Section 8.4</td>
+<td>Overview of security objectives</td>
+</tr>
+<tr>
+<td>0310_Security_Objectives_Rationale.md</td>
+<td>Section 8.4.1, 8.4.2</td>
+<td>Security objectives for the TOE and operational environment</td>
+</tr>
+<tr>
+<td>0320_Security_Objectives_Coverage_Matrix.md</td>
+<td>Section 8.4.3</td>
+<td>Security objectives rationale and coverage matrix</td>
+</tr>
+<tr>
+<td>0330_Security_Objectives_Summary.md</td>
+<td>Section 8.4</td>
+<td>Summary of security objectives</td>
+</tr>
+</tbody>
+</table>
+<h3 id="part-5-security-requirements-isoiec-15408-1-section-85">Part 5: Security Requirements (ISO/IEC 15408-1, Section 8.5)</h3>
+<table>
+<thead>
+<tr>
+<th>Template</th>
+<th>ISO/IEC 15408-1 Reference</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0400_Security_Requirements.md</td>
+<td>Section 8.5</td>
+<td>Overview of security requirements</td>
+</tr>
+<tr>
+<td>0410_Evaluation_Assurance_Level.md</td>
+<td>Section 8.5.2</td>
+<td>Security Assurance Requirements (SARs) and EAL selection</td>
+</tr>
+<tr>
+<td>0420_Requirements_Rationale.md</td>
+<td>Section 8.5.3</td>
+<td>Security requirements rationale</td>
+</tr>
+<tr>
+<td>0430_SFR_Dependencies.md</td>
+<td>Section 8.5.3</td>
+<td>SFR dependencies and satisfaction</td>
+</tr>
+<tr>
+<td>0440_Coverage_Matrix.md</td>
+<td>Section 8.5.3</td>
+<td>Requirements coverage matrix (SFRs/objectives)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="part-6-toe-summary-specification-isoiec-15408-1-section-86">Part 6: TOE Summary Specification (ISO/IEC 15408-1, Section 8.6)</h3>
+<table>
+<thead>
+<tr>
+<th>Template</th>
+<th>ISO/IEC 15408-1 Reference</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0500_TOE_Summary_Specification.md</td>
+<td>Section 8.6</td>
+<td>Overview of TOE summary specification</td>
+</tr>
+<tr>
+<td>0510_Assurance_Measures.md</td>
+<td>Section 8.6.2</td>
+<td>Assurance measures</td>
+</tr>
+<tr>
+<td>0520_Functions_Rationale.md</td>
+<td>Section 8.6.3</td>
+<td>TOE security functions rationale</td>
+</tr>
+<tr>
+<td>0530_Coverage_Matrix.md</td>
+<td>Section 8.6.3</td>
+<td>Functions coverage matrix (TSFs/SFRs)</td>
+</tr>
+<tr>
+<td>0540_Strength_of_Function.md</td>
+<td>Section 8.6.1</td>
+<td>Strength of function claims</td>
+</tr>
+</tbody>
+</table>
+<h3 id="part-7-appendices-and-supporting-documentation">Part 7: Appendices and Supporting Documentation</h3>
+<table>
+<thead>
+<tr>
+<th>Template</th>
+<th>ISO/IEC 15408-1 Reference</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0600_PP_Conformance.md</td>
+<td>Section 8.1.3</td>
+<td>Protection Profile conformance demonstration</td>
+</tr>
+<tr>
+<td>0610_Rationale_for_Objectives.md</td>
+<td>Section 8.4.3</td>
+<td>Detailed rationale for security objectives</td>
+</tr>
+<tr>
+<td>0620_Rationale_for_Requirements.md</td>
+<td>Section 8.5.3</td>
+<td>Detailed rationale for security requirements</td>
+</tr>
+<tr>
+<td>0630_Glossary.md</td>
+<td>Section 8.1.4</td>
+<td>Glossary of terms and acronyms</td>
+</tr>
+<tr>
+<td>0640_References.md</td>
+<td>N/A</td>
+<td>References to standards, specifications, and documentation</td>
+</tr>
+<tr>
+<td>0650_Evidence_and_Documentation.md</td>
+<td>N/A</td>
+<td>Supporting evidence and evaluation documentation</td>
+</tr>
+</tbody>
+</table>
+<h2 id="security-functional-requirements-isoiec-15408-2">Security Functional Requirements (ISO/IEC 15408-2)</h2>
+<p>The Security Functional Requirements (SFRs) are defined in ISO/IEC 15408-2 and organized into 11 functional classes. Templates 0400-0440 should reference appropriate SFRs from these classes:</p>
+<h3 id="sfr-classes">SFR Classes</h3>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Name</th>
+<th>Description</th>
+<th>Template Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FAU</td>
+<td>Security audit</td>
+<td>Audit data generation, analysis, review, storage</td>
+<td>0400, 0430, 0440</td>
+</tr>
+<tr>
+<td>FCO</td>
+<td>Communication</td>
+<td>Non-repudiation of origin and receipt</td>
+<td>0400, 0430, 0440</td>
+</tr>
+<tr>
+<td>FCS</td>
+<td>Cryptographic support</td>
+<td>Cryptographic key management and operations</td>
+<td>0400, 0430, 0440</td>
+</tr>
+<tr>
+<td>FDP</td>
+<td>User data protection</td>
+<td>Access control, data authentication, residual information protection</td>
+<td>0400, 0430, 0440</td>
+</tr>
+<tr>
+<td>FIA</td>
+<td>Identification and authentication</td>
+<td>User authentication, authentication failures</td>
+<td>0400, 0430, 0440</td>
+</tr>
+<tr>
+<td>FMT</td>
+<td>Security management</td>
+<td>Management of security attributes, functions, and data</td>
+<td>0400, 0430, 0440</td>
+</tr>
+<tr>
+<td>FPR</td>
+<td>Privacy</td>
+<td>Anonymity, pseudonymity, unlinkability, unobservability</td>
+<td>0400, 0430, 0440</td>
+</tr>
+<tr>
+<td>FPT</td>
+<td>Protection of the TSF</td>
+<td>TSF physical protection, self-test, trusted recovery</td>
+<td>0400, 0430, 0440</td>
+</tr>
+<tr>
+<td>FRU</td>
+<td>Resource utilization</td>
+<td>Fault tolerance, priority of service, resource allocation</td>
+<td>0400, 0430, 0440</td>
+</tr>
+<tr>
+<td>FTA</td>
+<td>TOE access</td>
+<td>Session locking, TOE access history, access banners</td>
+<td>0400, 0430, 0440</td>
+</tr>
+<tr>
+<td>FTP</td>
+<td>Trusted path/channels</td>
+<td>Trusted path, trusted channels</td>
+<td>0400, 0430, 0440</td>
+</tr>
+</tbody>
+</table>
+<h2 id="security-assurance-requirements-isoiec-15408-3">Security Assurance Requirements (ISO/IEC 15408-3)</h2>
+<p>The Security Assurance Requirements (SARs) are defined in ISO/IEC 15408-3 and organized into 10 assurance classes. Templates 0410 and 0510 should reference appropriate SARs based on the selected EAL:</p>
+<h3 id="sar-classes">SAR Classes</h3>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Name</th>
+<th>Description</th>
+<th>Template Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADV</td>
+<td>Development</td>
+<td>Security architecture, functional specification, implementation representation</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>AGD</td>
+<td>Guidance documents</td>
+<td>Operational user guidance, preparative procedures</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ALC</td>
+<td>Life-cycle support</td>
+<td>CM capabilities, delivery, development security, flaw remediation</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ATE</td>
+<td>Tests</td>
+<td>Coverage, depth, functional tests, independent testing</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>AVA</td>
+<td>Vulnerability assessment</td>
+<td>Vulnerability analysis, covert channel analysis, misuse analysis</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ACO</td>
+<td>Composition</td>
+<td>Composition rationale (for composed evaluations)</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ASE</td>
+<td>Security Target evaluation</td>
+<td>ST introduction, conformance claims, security problem definition</td>
+<td>0410, 0510</td>
+</tr>
+</tbody>
+</table>
+<h2 id="evaluation-assurance-levels-eal">Evaluation Assurance Levels (EAL)</h2>
+<p>The templates support all seven Evaluation Assurance Levels. Template 0410 should specify the selected EAL and corresponding SARs:</p>
+<h3 id="eal1-functionally-tested">EAL1: Functionally Tested</h3>
+<table>
+<thead>
+<tr>
+<th>SAR Component</th>
+<th>Description</th>
+<th>Template Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADV_FSP.1</td>
+<td>Basic functional specification</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>AGD_OPE.1</td>
+<td>Operational user guidance</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>AGD_PRE.1</td>
+<td>Preparative procedures</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ALC_CMC.1</td>
+<td>Labelling of the TOE</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ALC_CMS.1</td>
+<td>TOE CM coverage</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ATE_IND.1</td>
+<td>Independent testing - conformance</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>AVA_VAN.1</td>
+<td>Vulnerability survey</td>
+<td>0410, 0510</td>
+</tr>
+</tbody>
+</table>
+<h3 id="eal2-structurally-tested">EAL2: Structurally Tested</h3>
+<p>EAL2 includes all EAL1 components plus:</p>
+<table>
+<thead>
+<tr>
+<th>SAR Component</th>
+<th>Description</th>
+<th>Template Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADV_ARC.1</td>
+<td>Security architecture description</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ADV_FSP.2</td>
+<td>Security-enforcing functional specification</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>AGD_OPE.1</td>
+<td>Operational user guidance</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>AGD_PRE.1</td>
+<td>Preparative procedures</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ALC_CMC.2</td>
+<td>Use of a CM system</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ALC_CMS.2</td>
+<td>Parts of the TOE CM coverage</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ALC_DEL.1</td>
+<td>Delivery procedures</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ATE_COV.1</td>
+<td>Evidence of coverage</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ATE_FUN.1</td>
+<td>Functional testing</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ATE_IND.2</td>
+<td>Independent testing - sample</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>AVA_VAN.2</td>
+<td>Vulnerability analysis</td>
+<td>0410, 0510</td>
+</tr>
+</tbody>
+</table>
+<h3 id="eal3-methodically-tested-and-checked">EAL3: Methodically Tested and Checked</h3>
+<p>EAL3 includes all EAL2 components plus:</p>
+<table>
+<thead>
+<tr>
+<th>SAR Component</th>
+<th>Description</th>
+<th>Template Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADV_FSP.3</td>
+<td>Functional specification with complete summary</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ADV_TDS.1</td>
+<td>Basic design</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ALC_CMC.3</td>
+<td>Authorization controls</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ALC_CMS.3</td>
+<td>Implementation representation CM coverage</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ALC_DEL.1</td>
+<td>Delivery procedures</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ALC_DVS.1</td>
+<td>Identification of security measures</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ALC_LCD.1</td>
+<td>Developer defined life-cycle model</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ATE_DPT.1</td>
+<td>Testing: basic design</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ATE_FUN.1</td>
+<td>Functional testing</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ATE_IND.2</td>
+<td>Independent testing - sample</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>AVA_VAN.2</td>
+<td>Vulnerability analysis</td>
+<td>0410, 0510</td>
+</tr>
+</tbody>
+</table>
+<h3 id="eal4-methodically-designed-tested-and-reviewed">EAL4: Methodically Designed, Tested, and Reviewed</h3>
+<p>EAL4 includes all EAL3 components plus:</p>
+<table>
+<thead>
+<tr>
+<th>SAR Component</th>
+<th>Description</th>
+<th>Template Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADV_ARC.1</td>
+<td>Security architecture description</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ADV_FSP.4</td>
+<td>Complete functional specification</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ADV_IMP.1</td>
+<td>Implementation representation of the TSF</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ADV_TDS.2</td>
+<td>Architectural design</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ALC_CMC.4</td>
+<td>Production support, acceptance procedures and automation</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ALC_CMS.4</td>
+<td>Problem tracking CM coverage</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ALC_TAT.1</td>
+<td>Well-defined development tools</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ATE_COV.2</td>
+<td>Analysis of coverage</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ATE_DPT.1</td>
+<td>Testing: basic design</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ATE_FUN.1</td>
+<td>Functional testing</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ATE_IND.2</td>
+<td>Independent testing - sample</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>AVA_VAN.3</td>
+<td>Focused vulnerability analysis</td>
+<td>0410, 0510</td>
+</tr>
+</tbody>
+</table>
+<h3 id="eal5-semiformally-designed-and-tested">EAL5: Semiformally Designed and Tested</h3>
+<p>EAL5 includes all EAL4 components plus:</p>
+<table>
+<thead>
+<tr>
+<th>SAR Component</th>
+<th>Description</th>
+<th>Template Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADV_ARC.1</td>
+<td>Security architecture description</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ADV_FSP.5</td>
+<td>Complete semi-formal functional specification</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ADV_IMP.1</td>
+<td>Implementation representation of the TSF</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ADV_INT.2</td>
+<td>Well-structured internals</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ADV_TDS.3</td>
+<td>Basic modular design</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ALC_DVS.1</td>
+<td>Identification of security measures</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ATE_COV.2</td>
+<td>Analysis of coverage</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ATE_DPT.2</td>
+<td>Testing: security enforcing modules</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ATE_FUN.1</td>
+<td>Functional testing</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ATE_IND.2</td>
+<td>Independent testing - sample</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>AVA_VAN.4</td>
+<td>Methodical vulnerability analysis</td>
+<td>0410, 0510</td>
+</tr>
+</tbody>
+</table>
+<h3 id="eal6-semiformally-verified-design-and-tested">EAL6: Semiformally Verified Design and Tested</h3>
+<p>EAL6 includes all EAL5 components plus:</p>
+<table>
+<thead>
+<tr>
+<th>SAR Component</th>
+<th>Description</th>
+<th>Template Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADV_ARC.1</td>
+<td>Security architecture description</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ADV_FSP.5</td>
+<td>Complete semi-formal functional specification</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ADV_IMP.2</td>
+<td>Complete mapping of the implementation representation of the TSF</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ADV_INT.3</td>
+<td>Minimally complex internals</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ADV_SPM.1</td>
+<td>Formal TOE security policy model</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ADV_TDS.4</td>
+<td>Semiformal modular design</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ALC_DVS.2</td>
+<td>Sufficiency of security measures</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ATE_COV.3</td>
+<td>Rigorous analysis of coverage</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ATE_DPT.3</td>
+<td>Testing: modular design</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ATE_FUN.2</td>
+<td>Ordered functional testing</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ATE_IND.2</td>
+<td>Independent testing - sample</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>AVA_VAN.5</td>
+<td>Advanced methodical vulnerability analysis</td>
+<td>0410, 0510</td>
+</tr>
+</tbody>
+</table>
+<h3 id="eal7-formally-verified-design-and-tested">EAL7: Formally Verified Design and Tested</h3>
+<p>EAL7 includes all EAL6 components plus:</p>
+<table>
+<thead>
+<tr>
+<th>SAR Component</th>
+<th>Description</th>
+<th>Template Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADV_ARC.1</td>
+<td>Security architecture description</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ADV_FSP.6</td>
+<td>Complete semi-formal functional specification with additional error information</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ADV_IMP.2</td>
+<td>Complete mapping of the implementation representation of the TSF</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ADV_INT.3</td>
+<td>Minimally complex internals</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ADV_SPM.1</td>
+<td>Formal TOE security policy model</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ADV_TDS.5</td>
+<td>Complete semiformal modular design</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ALC_DVS.2</td>
+<td>Sufficiency of security measures</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ATE_COV.3</td>
+<td>Rigorous analysis of coverage</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ATE_DPT.4</td>
+<td>Testing: implementation representation</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ATE_FUN.2</td>
+<td>Ordered functional testing</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>ATE_IND.3</td>
+<td>Independent testing - complete</td>
+<td>0410, 0510</td>
+</tr>
+<tr>
+<td>AVA_VAN.5</td>
+<td>Advanced methodical vulnerability analysis</td>
+<td>0410, 0510</td>
+</tr>
+</tbody>
+</table>
+<h2 id="protection-profile-conformance">Protection Profile Conformance</h2>
+<p>When claiming conformance to a Protection Profile (PP), the following templates are relevant:</p>
+<table>
+<thead>
+<tr>
+<th>Template</th>
+<th>PP Conformance Aspect</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0040_Conformance_Claims.md</td>
+<td>PP identification</td>
+<td>Identify the PP(s) to which the ST claims conformance</td>
+</tr>
+<tr>
+<td>0600_PP_Conformance.md</td>
+<td>PP conformance demonstration</td>
+<td>Demonstrate how the ST satisfies PP requirements</td>
+</tr>
+<tr>
+<td>0610_Rationale_for_Objectives.md</td>
+<td>Objectives consistency</td>
+<td>Show consistency between ST and PP objectives</td>
+</tr>
+<tr>
+<td>0620_Rationale_for_Requirements.md</td>
+<td>Requirements consistency</td>
+<td>Show consistency between ST and PP requirements</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pp-conformance-types">PP Conformance Types</h3>
+<ul>
+<li><strong>Strict Conformance</strong>: ST contains all PP requirements without additions</li>
+<li><strong>Demonstrable Conformance</strong>: ST contains all PP requirements plus additional requirements</li>
+<li><strong>Package Augmentation</strong>: ST augments a PP with additional assurance requirements</li>
+</ul>
+<h2 id="coverage-analysis">Coverage Analysis</h2>
+<h3 id="security-problem-coverage">Security Problem Coverage</h3>
+<table>
+<thead>
+<tr>
+<th>Security Problem Element</th>
+<th>Addressed By</th>
+<th>Template Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Threats</td>
+<td>Security Objectives for TOE</td>
+<td>0210, 0300, 0310, 0320</td>
+</tr>
+<tr>
+<td>Organizational Security Policies</td>
+<td>Security Objectives for TOE</td>
+<td>0220, 0300, 0310, 0320</td>
+</tr>
+<tr>
+<td>Assumptions</td>
+<td>Security Objectives for Environment</td>
+<td>0230, 0300, 0310, 0320</td>
+</tr>
+</tbody>
+</table>
+<h3 id="security-objectives-coverage">Security Objectives Coverage</h3>
+<table>
+<thead>
+<tr>
+<th>Security Objective Element</th>
+<th>Addressed By</th>
+<th>Template Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Security Objectives for TOE</td>
+<td>Security Functional Requirements (SFRs)</td>
+<td>0300, 0400, 0420, 0440</td>
+</tr>
+<tr>
+<td>Security Objectives for Environment</td>
+<td>Non-TOE security measures</td>
+<td>0300, 0310, 0320</td>
+</tr>
+</tbody>
+</table>
+<h3 id="security-requirements-coverage">Security Requirements Coverage</h3>
+<table>
+<thead>
+<tr>
+<th>Security Requirement Element</th>
+<th>Addressed By</th>
+<th>Template Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Security Functional Requirements (SFRs)</td>
+<td>TOE Security Functions (TSFs)</td>
+<td>0400, 0500, 0520, 0530</td>
+</tr>
+<tr>
+<td>Security Assurance Requirements (SARs)</td>
+<td>Assurance Measures</td>
+<td>0410, 0510</td>
+</tr>
+</tbody>
+</table>
+<h2 id="rationale-requirements">Rationale Requirements</h2>
+<p>The Common Criteria requires comprehensive rationale documentation to demonstrate:</p>
+<ol>
+<li><strong>Security Objectives Rationale</strong> (Template 0310, 0610)</li>
+<li>Each threat is countered by at least one security objective</li>
+<li>Each OSP is covered by at least one security objective</li>
+<li>
+<p>Each assumption is covered by at least one security objective for the environment</p>
+</li>
+<li>
+<p><strong>Security Requirements Rationale</strong> (Template 0420, 0620)</p>
+</li>
+<li>Each security objective for the TOE is addressed by at least one SFR</li>
+<li>Each SFR contributes to at least one security objective</li>
+<li>
+<p>All SFR dependencies are satisfied</p>
+</li>
+<li>
+<p><strong>TOE Summary Specification Rationale</strong> (Template 0520)</p>
+</li>
+<li>Each SFR is implemented by at least one TSF</li>
+<li>Each TSF implements at least one SFR</li>
+</ol>
+<h2 id="coverage-matrices">Coverage Matrices</h2>
+<p>The templates include several coverage matrices to demonstrate completeness:</p>
+<table>
+<thead>
+<tr>
+<th>Matrix</th>
+<th>Template</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Threats/Objectives Matrix</td>
+<td>0320</td>
+<td>Maps threats to security objectives</td>
+</tr>
+<tr>
+<td>OSPs/Objectives Matrix</td>
+<td>0320</td>
+<td>Maps OSPs to security objectives</td>
+</tr>
+<tr>
+<td>Assumptions/Objectives Matrix</td>
+<td>0320</td>
+<td>Maps assumptions to security objectives for environment</td>
+</tr>
+<tr>
+<td>Objectives/SFRs Matrix</td>
+<td>0440</td>
+<td>Maps security objectives to SFRs</td>
+</tr>
+<tr>
+<td>SFRs/TSFs Matrix</td>
+<td>0530</td>
+<td>Maps SFRs to TOE security functions</td>
+</tr>
+<tr>
+<td>SFR Dependencies Matrix</td>
+<td>0430</td>
+<td>Shows satisfaction of SFR dependencies</td>
+</tr>
+</tbody>
+</table>
+<h2 id="template-completeness-checklist">Template Completeness Checklist</h2>
+<p>To ensure complete coverage of ISO/IEC 15408 requirements, verify that:</p>
+<ul>
+<li>[ ] All mandatory ST sections are present (templates 0010-0650)</li>
+<li>[ ] TOE description is complete and unambiguous (templates 0100-0140)</li>
+<li>[ ] All threats, OSPs, and assumptions are identified (templates 0210-0240)</li>
+<li>[ ] Security objectives address all security problem elements (templates 0300-0330)</li>
+<li>[ ] All SFRs are from ISO/IEC 15408-2 (template 0400)</li>
+<li>[ ] All SARs match the selected EAL (template 0410)</li>
+<li>[ ] All SFR dependencies are satisfied (template 0430)</li>
+<li>[ ] All rationales are complete and traceable (templates 0310, 0420, 0520, 0610, 0620)</li>
+<li>[ ] All coverage matrices are complete (templates 0320, 0440, 0530)</li>
+<li>[ ] PP conformance is demonstrated (if applicable) (templates 0040, 0600)</li>
+</ul>
+<h2 id="gap-analysis">Gap Analysis</h2>
+<h3 id="current-coverage">Current Coverage</h3>
+<p>The template set provides comprehensive coverage of:
+- ✅ All mandatory ST sections per ISO/IEC 15408-1, Section 8
+- ✅ Support for all EAL levels (EAL1-EAL7)
+- ✅ All SFR classes from ISO/IEC 15408-2
+- ✅ All SAR classes from ISO/IEC 15408-3
+- ✅ Protection Profile conformance demonstration
+- ✅ Complete rationale documentation
+- ✅ Coverage matrices for traceability</p>
+<h3 id="optional-enhancements">Optional Enhancements</h3>
+<p>The following optional elements could be added in future versions:
+- Extended packages (e.g., CCEVS, ANSSI-specific requirements)
+- Composed evaluation templates (ACO class)
+- Formal methods templates for EAL6/EAL7
+- Specific PP templates for common domains (e.g., operating systems, smart cards, network devices)</p>
+<h2 id="references">References</h2>
+<ul>
+<li>ISO/IEC 15408-1:2022 - Information security, cybersecurity and privacy protection — Evaluation criteria for IT security — Part 1: Introduction and general model</li>
+<li>ISO/IEC 15408-2:2022 - Part 2: Security functional components</li>
+<li>ISO/IEC 15408-3:2022 - Part 3: Security assurance components</li>
+<li>Common Criteria Portal: https://www.commoncriteriaportal.org/</li>
+<li>Common Methodology for Information Technology Security Evaluation (CEM)</li>
+</ul>
+<h2 id="version-history">Version History</h2>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>2026-02-08</td>
+<td>Initial framework mapping document</td>
+</tr>
+</tbody>
+</table>
+<h2 id="contact">Contact</h2>
+<p>For questions about this framework mapping or Common Criteria evaluation:
+- Common Criteria Portal: https://www.commoncriteriaportal.org/
+- National certification schemes (e.g., BSI, ANSSI, NIAP)
+- Accredited evaluation laboratories</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0650_Evidence_and_Documentation.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0000_README.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

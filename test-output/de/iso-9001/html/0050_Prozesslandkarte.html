@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0050 - Prozessinteraktion und Prozesslandkarte</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0050</div>
+            <h1>Prozessinteraktion und Prozesslandkarte</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0040_QMS_und_Prozesse.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0100_Qualitaetspolitik.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="prozessinteraktion-und-prozesslandkarte">Prozessinteraktion und Prozesslandkarte</h1>
+<p><strong>Dokument-ID:</strong> 0050<br />
+<strong>Owner:</strong> {{ meta.owner }}<br />
+<strong>Version:</strong> {{ meta.version }}<br />
+<strong>Status:</strong> Entwurf<br />
+<strong>Klassifizierung:</strong> Intern<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.date }}  </p>
+<hr />
+<h2 id="zweck">Zweck</h2>
+<p>Dieses Dokument visualisiert die Prozesslandkarte des Qualitätsmanagementsystems und beschreibt die Wechselwirkungen zwischen den Prozessen. Es dient als Übersicht über das gesamte QMS und zeigt, wie die einzelnen Prozesse zusammenwirken, um die beabsichtigten Ergebnisse zu erreichen.</p>
+<h2 id="prozesslandkarte">Prozesslandkarte</h2>
+<h3 id="ubersicht">Übersicht</h3>
+<p>Die Prozesslandkarte gliedert sich in drei Hauptebenen:</p>
+<div class="codehilite"><pre><span></span><code>┌─────────────────────────────────────────────────────────────┐
+│                    MANAGEMENTPROZESSE                        │
+│  Strategische Planung | Managementbewertung | Internes Audit│
+└─────────────────────────────────────────────────────────────┘
+                              ↓
+┌─────────────────────────────────────────────────────────────┐
+│                      KERNPROZESSE                            │
+│  [TODO: Prozess 1] → [TODO: Prozess 2] → [TODO: Prozess 3] │
+└─────────────────────────────────────────────────────────────┘
+                              ↑
+┌─────────────────────────────────────────────────────────────┐
+│                  UNTERSTÜTZUNGSPROZESSE                      │
+│  Personal | Ressourcen | Dokumentation | IT | Einkauf       │
+└─────────────────────────────────────────────────────────────┘
+</code></pre></div>
+
+<h3 id="detaillierte-prozesslandkarte">Detaillierte Prozesslandkarte</h3>
+<p>[TODO: Hier detaillierte Prozesslandkarte als Diagramm einfügen]</p>
+<p><strong>Hinweis:</strong> Die Prozesslandkarte sollte als Diagramm im Ordner <code>diagrams/</code> gespeichert und hier referenziert werden.</p>
+<h2 id="prozessinteraktionen">Prozessinteraktionen</h2>
+<h3 id="managementprozesse">Managementprozesse</h3>
+<h4 id="strategische-planung">Strategische Planung</h4>
+<p><strong>Eingaben von:</strong>
+- Kontext der Organisation (4.1)
+- Interessierte Parteien (4.2)
+- Leistungsdaten aus allen Prozessen</p>
+<p><strong>Ausgaben an:</strong>
+- Alle Prozesse: Qualitätspolitik, Qualitätsziele
+- Managementbewertung: Strategische Vorgaben
+- Ressourcenmanagement: Ressourcenanforderungen</p>
+<h4 id="managementbewertung">Managementbewertung</h4>
+<p><strong>Eingaben von:</strong>
+- Internes Audit: Audit-Ergebnisse
+- Alle Prozesse: Leistungsdaten, KPIs
+- Kundenzufriedenheit: Feedback-Daten
+- Risikomanagement: Risikobewertungen</p>
+<p><strong>Ausgaben an:</strong>
+- Strategische Planung: Verbesserungsbedarf
+- Alle Prozesse: Managemententscheidungen
+- Ressourcenmanagement: Ressourcenentscheidungen</p>
+<h4 id="internes-audit">Internes Audit</h4>
+<p><strong>Eingaben von:</strong>
+- Alle Prozesse: Prozessdokumentation
+- Managementbewertung: Auditprogramm
+- Risikomanagement: Risikobereiche</p>
+<p><strong>Ausgaben an:</strong>
+- Managementbewertung: Audit-Ergebnisse
+- Betroffene Prozesse: Nichtkonformitäten
+- Verbesserungsprozess: Verbesserungspotenziale</p>
+<h3 id="kernprozesse">Kernprozesse</h3>
+<h4 id="todo-kernprozess-1-zb-vertriebkundenmanagement">[TODO: Kernprozess 1 - z.B. Vertrieb/Kundenmanagement]</h4>
+<p><strong>Eingaben von:</strong>
+- Kunden: Anfragen, Anforderungen
+- Marketing: Marktinformationen
+- Produktentwicklung: Produktinformationen</p>
+<p><strong>Ausgaben an:</strong>
+- [TODO: Kernprozess 2]: Aufträge, Spezifikationen
+- Kunden: Angebote, Auftragsbestätigungen
+- Kundenzufriedenheit: Feedback-Anfragen</p>
+<h4 id="todo-kernprozess-2-zb-produktentwicklung">[TODO: Kernprozess 2 - z.B. Produktentwicklung]</h4>
+<p><strong>Eingaben von:</strong>
+- Vertrieb: Kundenanforderungen
+- Marktforschung: Markttrends
+- Qualitätsmanagement: Qualitätsanforderungen</p>
+<p><strong>Ausgaben an:</strong>
+- [TODO: Kernprozess 3]: Produktspezifikationen
+- Einkauf: Materiallisten
+- Produktion: Fertigungsunterlagen</p>
+<h4 id="todo-kernprozess-3-zb-produktiondienstleistungserbringung">[TODO: Kernprozess 3 - z.B. Produktion/Dienstleistungserbringung]</h4>
+<p><strong>Eingaben von:</strong>
+- Produktentwicklung: Spezifikationen
+- Einkauf: Materialien, Komponenten
+- Qualitätskontrolle: Prüfvorgaben</p>
+<p><strong>Ausgaben an:</strong>
+- Qualitätskontrolle: Produkte zur Prüfung
+- Versand: Fertige Produkte
+- Lager: Lagerbestand</p>
+<h4 id="todo-kernprozess-4-zb-qualitatskontrolle">[TODO: Kernprozess 4 - z.B. Qualitätskontrolle]</h4>
+<p><strong>Eingaben von:</strong>
+- Produktion: Produkte zur Prüfung
+- Produktentwicklung: Prüfspezifikationen
+- Wareneingang: Eingangsmaterialien</p>
+<p><strong>Ausgaben an:</strong>
+- Produktion: Prüfergebnisse, Freigaben
+- Versand: Freigabe für Auslieferung
+- Qualitätsmanagement: Qualitätsdaten</p>
+<h4 id="todo-kernprozess-5-zb-versandauslieferung">[TODO: Kernprozess 5 - z.B. Versand/Auslieferung]</h4>
+<p><strong>Eingaben von:</strong>
+- Qualitätskontrolle: Freigegebene Produkte
+- Vertrieb: Lieferanweisungen
+- Lager: Verfügbare Produkte</p>
+<p><strong>Ausgaben an:</strong>
+- Kunden: Ausgelieferte Produkte
+- Vertrieb: Lieferbestätigungen
+- After-Sales: Übergabe für Support</p>
+<h3 id="unterstutzungsprozesse">Unterstützungsprozesse</h3>
+<h4 id="personalmanagement">Personalmanagement</h4>
+<p><strong>Eingaben von:</strong>
+- Alle Prozesse: Personalbedarf, Kompetenzanforderungen
+- Strategische Planung: Personalstrategie</p>
+<p><strong>Ausgaben an:</strong>
+- Alle Prozesse: Qualifiziertes Personal
+- Schulungsmanagement: Schulungsbedarfe</p>
+<h4 id="ressourcenmanagement">Ressourcenmanagement</h4>
+<p><strong>Eingaben von:</strong>
+- Alle Prozesse: Ressourcenanforderungen
+- Strategische Planung: Budgetvorgaben</p>
+<p><strong>Ausgaben an:</strong>
+- Alle Prozesse: Infrastruktur, Ausrüstung
+- Instandhaltung: Wartungspläne</p>
+<h4 id="dokumentenmanagement">Dokumentenmanagement</h4>
+<p><strong>Eingaben von:</strong>
+- Alle Prozesse: Dokumente, Änderungsanforderungen
+- Qualitätsmanagement: Dokumentationsanforderungen</p>
+<p><strong>Ausgaben an:</strong>
+- Alle Prozesse: Gelenkte Dokumente
+- Internes Audit: Dokumentationsnachweise</p>
+<h4 id="it-management">IT-Management</h4>
+<p><strong>Eingaben von:</strong>
+- Alle Prozesse: IT-Anforderungen
+- Strategische Planung: IT-Strategie</p>
+<p><strong>Ausgaben an:</strong>
+- Alle Prozesse: IT-Systeme, Support
+- Datensicherheit: Sicherheitsmaßnahmen</p>
+<h4 id="einkauf">Einkauf</h4>
+<p><strong>Eingaben von:</strong>
+- Produktion: Materialbedarfe
+- Produktentwicklung: Spezifikationen
+- Qualitätsmanagement: Lieferantenanforderungen</p>
+<p><strong>Ausgaben an:</strong>
+- Produktion: Materialien, Komponenten
+- Wareneingang: Lieferungen
+- Lieferantenmanagement: Lieferantenbewertungen</p>
+<h2 id="prozessfluss-und-wertschopfungskette">Prozessfluss und Wertschöpfungskette</h2>
+<h3 id="hauptwertschopfungskette">Hauptwertschöpfungskette</h3>
+<div class="codehilite"><pre><span></span><code>Kunde → Vertrieb → [TODO: Entwicklung] → [TODO: Produktion] → 
+[TODO: Qualitätskontrolle] → [TODO: Versand] → Kunde
+</code></pre></div>
+
+<h3 id="unterstutzende-prozesse">Unterstützende Prozesse</h3>
+<p>Alle Kernprozesse werden unterstützt durch:
+- Personalmanagement (Kompetente Mitarbeiter)
+- Ressourcenmanagement (Infrastruktur, Ausrüstung)
+- Dokumentenmanagement (Dokumentierte Informationen)
+- IT-Management (IT-Systeme)
+- Einkauf (Materialien, Dienstleistungen)</p>
+<h3 id="steuernde-prozesse">Steuernde Prozesse</h3>
+<p>Alle Prozesse werden gesteuert durch:
+- Strategische Planung (Vorgaben, Ziele)
+- Managementbewertung (Entscheidungen, Ressourcen)
+- Internes Audit (Überwachung, Verbesserung)</p>
+<h2 id="schnittstellen-zu-externen-parteien">Schnittstellen zu externen Parteien</h2>
+<h3 id="kunden">Kunden</h3>
+<p><strong>Schnittstellen:</strong>
+- Anfragen und Anforderungen → Vertrieb
+- Feedback und Beschwerden → Kundenzufriedenheit
+- Ausgelieferte Produkte ← Versand
+- After-Sales-Support ← Service</p>
+<h3 id="lieferanten">Lieferanten</h3>
+<p><strong>Schnittstellen:</strong>
+- Bestellungen → Einkauf
+- Lieferungen → Wareneingang
+- Qualitätsdaten ← Qualitätskontrolle
+- Lieferantenbewertungen ← Lieferantenmanagement</p>
+<h3 id="regulierungsbehorden">Regulierungsbehörden</h3>
+<p><strong>Schnittstellen:</strong>
+- Compliance-Anforderungen → Qualitätsmanagement
+- Nachweise und Berichte ← Qualitätsmanagement
+- Audits und Inspektionen ↔ Qualitätsmanagement</p>
+<h3 id="zertifizierungsstellen">Zertifizierungsstellen</h3>
+<p><strong>Schnittstellen:</strong>
+- Zertifizierungsaudits ↔ Qualitätsmanagement
+- Zertifikate ← Zertifizierungsstelle
+- Überwachungsaudits ↔ Qualitätsmanagement</p>
+<h2 id="prozessleistung-und-uberwachung">Prozessleistung und -überwachung</h2>
+<h3 id="prozess-kpi-ubersicht">Prozess-KPI-Übersicht</h3>
+<table>
+<thead>
+<tr>
+<th>Prozess</th>
+<th>Haupt-KPI</th>
+<th>Zielwert</th>
+<th>Messfrequenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Prozess 1]</td>
+<td>[TODO: KPI]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: Prozess 2]</td>
+<td>[TODO: KPI]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: Prozess 3]</td>
+<td>[TODO: KPI]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="gesamtsystem-kpis">Gesamtsystem-KPIs</h3>
+<p><strong>Qualitätsziele auf Systemebene:</strong>
+1. [TODO: z.B. Kundenzufriedenheit &gt; 90%]
+2. [TODO: z.B. Ausschussrate &lt; 2%]
+3. [TODO: z.B. Liefertreue &gt; 95%]
+4. [TODO: z.B. Reklamationsquote &lt; 1%]</p>
+<h2 id="risiken-und-chancen-in-prozessinteraktionen">Risiken und Chancen in Prozessinteraktionen</h2>
+<h3 id="identifizierte-schnittstellenrisiken">Identifizierte Schnittstellenrisiken</h3>
+<table>
+<thead>
+<tr>
+<th>Schnittstelle</th>
+<th>Risiko</th>
+<th>Auswirkung</th>
+<th>Maßnahme</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Prozess A → B]</td>
+<td>[TODO: Risiko]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: Prozess C → D]</td>
+<td>[TODO: Risiko]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="chancen-in-prozessinteraktionen">Chancen in Prozessinteraktionen</h3>
+<table>
+<thead>
+<tr>
+<th>Schnittstelle</th>
+<th>Chance</th>
+<th>Potenzial</th>
+<th>Maßnahme</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Prozess A → B]</td>
+<td>[TODO: Chance]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: Prozess C → D]</td>
+<td>[TODO: Chance]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="pflege-und-aktualisierung">Pflege und Aktualisierung</h2>
+<h3 id="verantwortlichkeiten">Verantwortlichkeiten</h3>
+<ul>
+<li><strong>Pflege der Prozesslandkarte:</strong> [TODO: Qualitätsmanagementbeauftragter]</li>
+<li><strong>Aktualisierung bei Prozessänderungen:</strong> [TODO: Prozesseigner]</li>
+<li><strong>Genehmigung:</strong> [TODO: Geschäftsführung]</li>
+</ul>
+<h3 id="aktualisierungsanlasse">Aktualisierungsanlässe</h3>
+<p>Die Prozesslandkarte wird aktualisiert bei:
+- Neuen oder geänderten Prozessen
+- Änderungen in Prozessinteraktionen
+- Organisatorischen Änderungen
+- Ergebnissen der Managementbewertung
+- Audit-Feststellungen</p>
+<h2 id="anhange">Anhänge</h2>
+<ul>
+<li><strong>Anhang A:</strong> Detaillierte Prozesslandkarte (Diagramm)</li>
+<li><strong>Anhang B:</strong> Prozessinteraktionsmatrix</li>
+<li><strong>Anhang C:</strong> SIPOC-Diagramme (Supplier-Input-Process-Output-Customer)</li>
+<li><strong>Anhang D:</strong> Prozessflussdiagramme</li>
+</ul>
+<hr />
+<p><strong>Nächste Schritte:</strong>
+1. Erstellen Sie eine visuelle Prozesslandkarte
+2. Dokumentieren Sie alle Prozessinteraktionen
+3. Identifizieren Sie kritische Schnittstellen
+4. Definieren Sie Schnittstellenverantwortlichkeiten
+5. Überwachen Sie die Wirksamkeit der Prozessinteraktionen
+6. Aktualisieren Sie die Prozesslandkarte regelmäßig</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0040_QMS_und_Prozesse.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0100_Qualitaetspolitik.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

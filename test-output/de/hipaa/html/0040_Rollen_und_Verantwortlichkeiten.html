@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0040 - Rollen und Verantwortlichkeiten</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0040</div>
+            <h1>Rollen und Verantwortlichkeiten</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0030_Business_Associates_und_Subunternehmer.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0050_HIPAA_Compliance_Programm.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="rollen-und-verantwortlichkeiten">Rollen und Verantwortlichkeiten</h1>
+<p><strong>Dokument-ID:</strong> HIPAA-0040<br />
+<strong>Organisation:</strong> AdminSend GmbH<br />
+<strong>Verantwortlich:</strong> IT Operations Manager<br />
+<strong>Genehmigt durch:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Entwurf / In Prüfung / Genehmigt<br />
+<strong>Klassifizierung:</strong> internal<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-zweck">1. Zweck</h2>
+<p>Dieses Dokument definiert die Rollen, Verantwortlichkeiten und Zuständigkeiten für die HIPAA-Compliance bei AdminSend GmbH.</p>
+<h3 id="11-zielsetzungen">1.1 Zielsetzungen</h3>
+<ul>
+<li><strong>Rollendefinition:</strong> HIPAA-erforderliche und unterstützende Rollen klar definieren</li>
+<li><strong>Verantwortlichkeit:</strong> Entscheidungsbefugnisse festlegen</li>
+<li><strong>Compliance:</strong> HIPAA-Anforderungen für benannte Beauftragte erfüllen</li>
+<li><strong>Kommunikation:</strong> Klare Kommunikations- und Eskalationswege etablieren</li>
+</ul>
+<h3 id="12-hipaa-erforderliche-rollen">1.2 HIPAA-erforderliche Rollen</h3>
+<p><strong>HIPAA-Mandate:</strong>
+- <strong>Privacy Officer</strong> (45 CFR §164.530(a)(1)(i)) - Erforderlich
+- <strong>Security Officer</strong> (45 CFR §164.308(a)(2)) - Erforderlich
+- <strong>Kontaktperson</strong> für individuelle Rechte (45 CFR §164.530(a)(1)(ii)) - Erforderlich</p>
+<h2 id="2-geschaftsfuhrung">2. Geschäftsführung</h2>
+<h3 id="21-chief-executive-officer-ceo">2.1 Chief Executive Officer (CEO)</h3>
+<p><strong>Name:</strong> {{ meta.roles.ceo.name }}<br />
+<strong>E-Mail:</strong> {{ meta.roles.ceo.email }}<br />
+<strong>Telefon:</strong> {{ meta.roles.ceo.phone }}  </p>
+<p><strong>Verantwortlichkeiten:</strong>
+- Ultimative Verantwortung für HIPAA-Compliance
+- Genehmigung von HIPAA-Richtlinien und -Verfahren
+- Ressourcenzuweisung für Compliance-Programm
+- Aufsicht über Privacy und Security Officers
+- Finale Eskalationsstelle für Compliance-Fragen
+- Genehmigung von Sanktionen bei Richtlinienverstößen</p>
+<h3 id="22-chief-information-officer-cio">2.2 Chief Information Officer (CIO)</h3>
+<p><strong>Name:</strong> {{ meta.roles.cio.name }}<br />
+<strong>E-Mail:</strong> {{ meta.roles.cio.email }}<br />
+<strong>Telefon:</strong> {{ meta.roles.cio.phone }}  </p>
+<p><strong>Verantwortlichkeiten:</strong>
+- IT-Infrastruktur zur Unterstützung der HIPAA-Compliance
+- Technologieinvestitionen für Sicherheit und Datenschutz
+- Aufsicht über Security Officer
+- Genehmigung technischer Schutzmaßnahmen
+- IT-Risikomanagement</p>
+<h2 id="3-hipaa-erforderliche-rollen">3. HIPAA-erforderliche Rollen</h2>
+<h3 id="31-privacy-officer">3.1 Privacy Officer</h3>
+<p><strong>Name:</strong> {{ meta.roles.privacy_officer.name }}<br />
+<strong>E-Mail:</strong> {{ meta.roles.privacy_officer.email }}<br />
+<strong>Telefon:</strong> {{ meta.roles.privacy_officer.phone }}<br />
+<strong>Bürostandort:</strong> [TODO: Standort]  </p>
+<p><strong>HIPAA-Anforderung:</strong> 45 CFR §164.530(a)(1)(i)</p>
+<p><strong>Verantwortlichkeiten:</strong>
+- Entwicklung und Implementierung von Datenschutzrichtlinien und -verfahren
+- Verwaltung des Datenschutz-Schulungsprogramms
+- Untersuchung von Datenschutzbeschwerden
+- Datenschutz-Incident-Response
+- Bearbeitung individueller Rechtsanfragen (Zugriff, Änderung, Rechenschaftspflicht)
+- Aufsicht über Business Associate Agreements
+- Datenschutz-Risikobewertungen
+- Pflege der Notice of Privacy Practices
+- Datenschutz-Compliance-Überwachung
+- Verbindung zum HHS Office for Civil Rights (OCR)</p>
+<p><strong>Befugnisse:</strong>
+- Zugriff auf alle PHI und Systeme
+- Befugnis zur Untersuchung von Datenschutzangelegenheiten
+- Empfehlung von Sanktionen bei Datenschutzverstößen
+- Genehmigung datenschutzbezogener Richtlinien
+- Stoppen von Aktivitäten, die Datenschutzanforderungen verletzen</p>
+<p><strong>Backup Privacy Officer:</strong>
+- <strong>Name:</strong> [TODO: Name]
+- <strong>E-Mail:</strong> [TODO: E-Mail]
+- <strong>Telefon:</strong> [TODO: Telefon]</p>
+<h3 id="32-security-officer">3.2 Security Officer</h3>
+<p><strong>Name:</strong> {{ meta.roles.security_officer.name }}<br />
+<strong>E-Mail:</strong> {{ meta.roles.security_officer.email }}<br />
+<strong>Telefon:</strong> {{ meta.roles.security_officer.phone }}<br />
+<strong>Bürostandort:</strong> [TODO: Standort]  </p>
+<p><strong>HIPAA-Anforderung:</strong> 45 CFR §164.308(a)(2)</p>
+<p><strong>Verantwortlichkeiten:</strong>
+- Entwicklung und Implementierung von Sicherheitsrichtlinien und -verfahren
+- Sicherheitsrisikoanalyse und Risikomanagement
+- Verwaltung des Sicherheits-Schulungsprogramms
+- Sicherheits-Incident-Response
+- Implementierung technischer, physischer und administrativer Schutzmaßnahmen
+- Zugriffskontrollverwaltung
+- Audit-Log-Überprüfung und -Überwachung
+- Schwachstellenmanagement
+- Sicherheits-Compliance-Überwachung
+- Verbindung zu Sicherheitsanbietern und -beratern</p>
+<p><strong>Befugnisse:</strong>
+- Zugriff auf alle Systeme und Sicherheitskontrollen
+- Befugnis zur Untersuchung von Sicherheitsvorfällen
+- Empfehlung von Sanktionen bei Sicherheitsverstößen
+- Genehmigung sicherheitsbezogener Richtlinien
+- Notfallbefugnis zum Deaktivieren von Zugriff oder Systemen</p>
+<p><strong>Backup Security Officer:</strong>
+- <strong>Name:</strong> [TODO: Name]
+- <strong>E-Mail:</strong> [TODO: E-Mail]
+- <strong>Telefon:</strong> [TODO: Telefon]</p>
+<h3 id="33-kontaktperson-fur-individuelle-rechte">3.3 Kontaktperson für individuelle Rechte</h3>
+<p><strong>Name:</strong> [TODO: Name]<br />
+<strong>E-Mail:</strong> [TODO: E-Mail]<br />
+<strong>Telefon:</strong> [TODO: Telefon]<br />
+<strong>Postanschrift:</strong> [TODO: Adresse]  </p>
+<p><strong>HIPAA-Anforderung:</strong> 45 CFR §164.530(a)(1)(ii)</p>
+<p><strong>Verantwortlichkeiten:</strong>
+- Empfang und Bearbeitung von Anfragen auf Zugriff auf PHI
+- Empfang und Bearbeitung von Anfragen auf Änderung von PHI
+- Empfang und Bearbeitung von Anfragen auf Rechenschaftspflicht über Offenlegungen
+- Empfang und Bearbeitung von Anfragen auf Einschränkungen
+- Empfang und Bearbeitung von Anfragen auf vertrauliche Kommunikation
+- Empfang von Datenschutzbeschwerden
+- Bereitstellung der Notice of Privacy Practices</p>
+<p><strong>Hinweis:</strong> Diese Rolle kann vom Privacy Officer oder einem Beauftragten ausgefüllt werden.</p>
+<h2 id="4-unterstutzende-rollen">4. Unterstützende Rollen</h2>
+<h3 id="41-hipaa-compliance-manager">4.1 HIPAA Compliance Manager</h3>
+<p><strong>Name:</strong> [TODO: Name]<br />
+<strong>E-Mail:</strong> [TODO: E-Mail]<br />
+<strong>Telefon:</strong> [TODO: Telefon]  </p>
+<p><strong>Verantwortlichkeiten:</strong>
+- Tägliche HIPAA-Compliance-Programmverwaltung
+- Richtlinien- und Verfahrenspflege
+- Schulungskoordination
+- Compliance-Überwachung und -Prüfung
+- Dokumentationsverwaltung
+- Lieferantenverwaltungsunterstützung
+- Compliance-Berichterstattung</p>
+<h3 id="42-it-sicherheitsmanager">4.2 IT-Sicherheitsmanager</h3>
+<p><strong>Name:</strong> [TODO: Name]<br />
+<strong>E-Mail:</strong> [TODO: E-Mail]<br />
+<strong>Telefon:</strong> [TODO: Telefon]  </p>
+<p><strong>Verantwortlichkeiten:</strong>
+- Implementierung technischer Schutzmaßnahmen
+- Zugriffskontrollverwaltung
+- Sicherheitsüberwachung und -protokollierung
+- Schwachstellenscanning und -behebung
+- Patch-Management
+- Verschlüsselungsimplementierung
+- Netzwerksicherheit
+- Incident Response (technisch)</p>
+<h2 id="5-raci-matrizen">5. RACI-Matrizen</h2>
+<h3 id="51-privacy-rule-compliance">5.1 Privacy Rule-Compliance</h3>
+<table>
+<thead>
+<tr>
+<th>Aktivität</th>
+<th>CEO</th>
+<th>Privacy Officer</th>
+<th>Security Officer</th>
+<th>Abteilungsleiter</th>
+<th>Recht</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Datenschutzrichtlinien</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Notice of Privacy Practices</td>
+<td>A</td>
+<td>R</td>
+<td>I</td>
+<td>I</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Individuelle Zugriffsanfragen</td>
+<td>I</td>
+<td>A/R</td>
+<td>I</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Datenschutzbeschwerden</td>
+<td>I</td>
+<td>A/R</td>
+<td>I</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Datenschutzschulung</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Datenschutzvorfälle</td>
+<td>I</td>
+<td>A/R</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>BAA-Verwaltung</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-security-rule-compliance">5.2 Security Rule-Compliance</h3>
+<table>
+<thead>
+<tr>
+<th>Aktivität</th>
+<th>CEO</th>
+<th>Privacy Officer</th>
+<th>Security Officer</th>
+<th>IT-Manager</th>
+<th>Abteilungsleiter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sicherheitsrichtlinien</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Risikoanalyse</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Zugriffskontrolle</td>
+<td>I</td>
+<td>C</td>
+<td>A/R</td>
+<td>R</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Audit-Kontrollen</td>
+<td>I</td>
+<td>C</td>
+<td>A/R</td>
+<td>R</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Sicherheitsvorfälle</td>
+<td>I</td>
+<td>C</td>
+<td>A/R</td>
+<td>R</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Sicherheitsschulung</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Schwachstellenmanagement</td>
+<td>I</td>
+<td>I</td>
+<td>A</td>
+<td>R</td>
+<td>I</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legende:</strong>
+- <strong>R</strong> (Responsible): Führt die Arbeit aus
+- <strong>A</strong> (Accountable): Ultimative Verantwortung, genehmigt Arbeit (nur ein A pro Aktivität)
+- <strong>C</strong> (Consulted): Stellt Input bereit, bidirektionale Kommunikation
+- <strong>I</strong> (Informed): Wird informiert, unidirektionale Kommunikation</p>
+<h2 id="6-hipaa-compliance-committee">6. HIPAA Compliance Committee</h2>
+<h3 id="61-committee-struktur">6.1 Committee-Struktur</h3>
+<p><strong>Committee-Name:</strong> HIPAA Compliance Committee</p>
+<p><strong>Vorsitz:</strong> {{ meta.roles.privacy_officer.name }} (Privacy Officer)</p>
+<p><strong>Mitglieder:</strong>
+- CEO oder Beauftragter
+- Privacy Officer
+- Security Officer
+- CIO oder IT-Direktor
+- Compliance Officer
+- Rechtsberater
+- Risikomanager
+- HR-Direktor
+- Klinischer Direktor (falls zutreffend)
+- Abteilungsvertreter</p>
+<p><strong>Sitzungshäufigkeit:</strong> [TODO: Monatlich/Vierteljährlich]</p>
+<p><strong>Quorum:</strong> [TODO: Mindestanzahl der Mitglieder]</p>
+<h3 id="62-committee-verantwortlichkeiten">6.2 Committee-Verantwortlichkeiten</h3>
+<ul>
+<li>Aufsicht über HIPAA-Compliance-Programm</li>
+<li>Überprüfung und Genehmigung von Richtlinien und Verfahren</li>
+<li>Überprüfung von Risikobewertungen und Minderungsplänen</li>
+<li>Überprüfung von Datenschutz- und Sicherheitsvorfällen</li>
+<li>Überprüfung der Schulungseffektivität</li>
+<li>Budgetempfehlungen für Compliance-Aktivitäten</li>
+<li>Überprüfung regulatorischer Updates</li>
+<li>Überprüfung von Audit-Ergebnissen</li>
+<li>Kontinuierliche Verbesserungsinitiativen</li>
+</ul>
+<h2 id="7-eskalationsverfahren">7. Eskalationsverfahren</h2>
+<h3 id="71-datenschutzvorfall-eskalation">7.1 Datenschutzvorfall-Eskalation</h3>
+<p><strong>Ebene 1:</strong> Datenschutzkoordinator (Abteilung)<br />
+<strong>Ebene 2:</strong> Privacy Officer<br />
+<strong>Ebene 3:</strong> CEO + Rechtsberater  </p>
+<p><strong>Eskalationskriterien:</strong>
+- Vermuteter Verstoß gegen ungesicherte PHI
+- Unbefugter Zugriff auf PHI
+- Datenschutzbeschwerde von Einzelperson
+- OCR-Untersuchung
+- Medienanfrage</p>
+<p><strong>Reaktionszeit:</strong>
+- Ebene 1: Sofort
+- Ebene 2: Innerhalb 1 Stunde
+- Ebene 3: Innerhalb 4 Stunden</p>
+<h3 id="72-sicherheitsvorfall-eskalation">7.2 Sicherheitsvorfall-Eskalation</h3>
+<p><strong>Ebene 1:</strong> IT-Help-Desk / Systemadministrator<br />
+<strong>Ebene 2:</strong> Security Officer<br />
+<strong>Ebene 3:</strong> CIO + CEO  </p>
+<p><strong>Eskalationskriterien:</strong>
+- Vermuteter Sicherheitsverstoß
+- Malware-Infektion
+- Unbefugter Systemzugriff
+- Systemkompromittierung
+- Datenexfiltration
+- Ransomware</p>
+<p><strong>Reaktionszeit:</strong>
+- Ebene 1: Sofort
+- Ebene 2: Innerhalb 30 Minuten
+- Ebene 3: Innerhalb 1 Stunde</p>
+<h3 id="73-247-kontaktinformationen">7.3 24/7-Kontaktinformationen</h3>
+<p><strong>Sicherheits-Hotline:</strong> [TODO: Telefonnummer]<br />
+<strong>Datenschutz-Hotline:</strong> [TODO: Telefonnummer]<br />
+<strong>Außerhalb der Geschäftszeiten:</strong> [TODO: Bereitschaftsrotation oder Anrufbeantworter]  </p>
+<p><strong>Notfallkontakte:</strong>
+| Rolle | Name | Mobil | E-Mail |
+|------|------|-------|--------|
+| Privacy Officer | {{ meta.roles.privacy_officer.name }} | [TODO: Mobil] | {{ meta.roles.privacy_officer.email }} |
+| Security Officer | {{ meta.roles.security_officer.name }} | [TODO: Mobil] | {{ meta.roles.security_officer.email }} |
+| CEO | {{ meta.roles.ceo.name }} | [TODO: Mobil] | {{ meta.roles.ceo.email }} |</p>
+<h2 id="8-schulung-und-kompetenz">8. Schulung und Kompetenz</h2>
+<h3 id="81-rollenspezifische-schulung">8.1 Rollenspezifische Schulung</h3>
+<table>
+<thead>
+<tr>
+<th>Rolle</th>
+<th>Erforderliche Schulung</th>
+<th>Häufigkeit</th>
+<th>Anbieter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Alle Belegschaft</td>
+<td>HIPAA-Grundlagen</td>
+<td>Jährlich</td>
+<td>[TODO: LMS/Anbieter]</td>
+</tr>
+<tr>
+<td>Privacy Officer</td>
+<td>Privacy Rule-Vertiefung</td>
+<td>Jährlich</td>
+<td>[TODO: Extern]</td>
+</tr>
+<tr>
+<td>Security Officer</td>
+<td>Security Rule-Vertiefung</td>
+<td>Jährlich</td>
+<td>[TODO: Extern]</td>
+</tr>
+<tr>
+<td>IT-Personal</td>
+<td>Technische Schutzmaßnahmen</td>
+<td>Jährlich</td>
+<td>[TODO: Intern/Extern]</td>
+</tr>
+<tr>
+<td>Klinisches Personal</td>
+<td>PHI-Handhabung</td>
+<td>Jährlich</td>
+<td>[TODO: Intern]</td>
+</tr>
+<tr>
+<td>Manager</td>
+<td>Belegschaftsverwaltung</td>
+<td>Jährlich</td>
+<td>[TODO: Intern]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="82-kompetenzanforderungen">8.2 Kompetenzanforderungen</h3>
+<p><strong>Privacy Officer:</strong>
+- Kenntnisse der HIPAA Privacy Rule
+- Verständnis des Gesundheitswesens
+- Untersuchungsfähigkeiten
+- Kommunikationsfähigkeiten
+- Erfahrung in Richtlinienentwicklung</p>
+<p><strong>Security Officer:</strong>
+- Kenntnisse der HIPAA Security Rule
+- Technische Sicherheitsexpertise
+- Risikobewertungsfähigkeiten
+- Incident-Response-Erfahrung
+- Kenntnisse der Sicherheitsarchitektur</p>
+<h2 id="9-leistungsmetriken">9. Leistungsmetriken</h2>
+<h3 id="91-compliance-metriken">9.1 Compliance-Metriken</h3>
+<table>
+<thead>
+<tr>
+<th>Metrik</th>
+<th>Ziel</th>
+<th>Messung</th>
+<th>Häufigkeit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Schulungsabschlussrate</td>
+<td>100%</td>
+<td>% geschulte Belegschaft</td>
+<td>Vierteljährlich</td>
+</tr>
+<tr>
+<td>Incident-Response-Zeit</td>
+<td>&lt; 1 Stunde</td>
+<td>Zeit bis Eindämmung</td>
+<td>Pro Vorfall</td>
+</tr>
+<tr>
+<td>Zugriffsanfrage-Reaktionszeit</td>
+<td>&lt; 30 Tage</td>
+<td>Tage bis Erfüllung</td>
+<td>Pro Anfrage</td>
+</tr>
+<tr>
+<td>Risikobewertungsabschluss</td>
+<td>100%</td>
+<td>Jährlicher Abschluss</td>
+<td>Jährlich</td>
+</tr>
+<tr>
+<td>Richtlinienüberprüfungsabschluss</td>
+<td>100%</td>
+<td>% überprüfte Richtlinien</td>
+<td>Jährlich</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Dokumentenhistorie:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Datum</th>
+<th>Autor</th>
+<th>Änderungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Ersterstellung</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0030_Business_Associates_und_Subunternehmer.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0050_HIPAA_Compliance_Programm.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

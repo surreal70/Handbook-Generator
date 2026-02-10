@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0700 - Anhang: Risikoanalyse-Vorlage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0700</div>
+            <h1>Anhang: Risikoanalyse-Vorlage</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0600_Datenschutzverletzungsmeldung_und_Incident_Response.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0000_FRAMEWORK_MAPPING.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="anhang-risikoanalyse-vorlage">Anhang: Risikoanalyse-Vorlage</h1>
+<p><strong>Dokument-ID:</strong> HIPAA-0700<br />
+<strong>Organisation:</strong> AdminSend GmbH<br />
+<strong>Verantwortlich:</strong> IT Operations Manager<br />
+<strong>Genehmigt durch:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Entwurf / In Prüfung / Genehmigt<br />
+<strong>Klassifizierung:</strong> internal<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-zweck">1. Zweck</h2>
+<p>Dieser Anhang bietet eine Vorlage zur Durchführung einer HIPAA Security Rule-Risikoanalyse gemäß §164.308(a)(1)(ii)(A).</p>
+<h2 id="2-risikoanalyse-vorlage">2. Risikoanalyse-Vorlage</h2>
+<h3 id="21-umfangsdefinition">2.1 Umfangsdefinition</h3>
+<p><strong>ePHI-Inventar:</strong>
+| Datenelement | Format | Speicherort | Zugriffskontrollen | Verschlüsselung |
+|--------------|--------|-------------|---------------------|-----------------|
+| [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |</p>
+<h3 id="22-bedrohungs-und-schwachstellenbewertung">2.2 Bedrohungs- und Schwachstellenbewertung</h3>
+<table>
+<thead>
+<tr>
+<th>Bedrohung</th>
+<th>Schwachstelle</th>
+<th>Wahrscheinlichkeit</th>
+<th>Auswirkung</th>
+<th>Risikostufe</th>
+<th>Minderung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-risikobehandlungsplan">2.3 Risikobehandlungsplan</h3>
+<table>
+<thead>
+<tr>
+<th>Risiko-ID</th>
+<th>Behandlung</th>
+<th>Kontrollen</th>
+<th>Zeitplan</th>
+<th>Verantwortlich</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Dokumentenhistorie:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Datum</th>
+<th>Autor</th>
+<th>Änderungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Ersterstellung</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Beispiel-ePHI-Inventar:</strong>
+| Datenelement | Format | Speicherort | Zugriffskontrollen | Verschlüsselung |
+|--------------|--------|-------------|---------------------|-----------------|
+| Patientendemografie | Elektronisch | EHR-Datenbank | Rollenbasiert, MFA | TDE, AES-256 |
+| Klinische Notizen | Elektronisch | EHR-Datenbank | Rollenbasiert, MFA | TDE, AES-256 |
+| Laborergebnisse | Elektronisch | Labor-System | Rollenbasiert | TDE, AES-256 |
+| Bildgebungsstudien | Elektronisch | PACS | Rollenbasiert | AES-256 |
+| Abrechnungsdaten | Elektronisch | Abrechnungssystem | Rollenbasiert | TDE, AES-256 |</p>
+<p><strong>Systeminventar:</strong>
+| System | Zweck | ePHI-Typ | Standort | Kritikalität |
+|--------|-------|----------|----------|--------------|
+| EHR-System | Patientenakten | Alle PHI | Rechenzentrum | Kritisch |
+| Labor-System | Laborergebnisse | Laborwerte | Rechenzentrum | Hoch |
+| PACS | Medizinische Bildgebung | Bilder, Berichte | Rechenzentrum | Hoch |
+| Abrechnungssystem | Abrechnung | Demografische, Abrechnungsdaten | Rechenzentrum | Hoch |</p>
+<p><strong>Bedrohungskategorien:</strong>
+1. <strong>Externe Bedrohungen:</strong> Hacker, Malware, Ransomware
+2. <strong>Interne Bedrohungen:</strong> Böswillige Insider, fahrlässige Mitarbeiter
+3. <strong>Naturkatastrophen:</strong> Feuer, Überschwemmung, Erdbeben
+4. <strong>Technische Ausfälle:</strong> Hardware-Ausfall, Software-Fehler
+5. <strong>Menschliches Versagen:</strong> Versehentliche Offenlegung, Konfigurationsfehler</p>
+<p><strong>Beispiel-Bedrohungs- und Schwachstellenmatrix:</strong>
+| Bedrohung | Schwachstelle | Wahrscheinlichkeit | Auswirkung | Risikostufe | Minderung |
+|-----------|---------------|-------------------|------------|-------------|-----------|
+| Ransomware-Angriff | Ungepatchte Systeme | Mittel | Hoch | Hoch | Patch-Management, EDR, Backups |
+| Unbefugter Zugriff | Schwache Passwörter | Hoch | Mittel | Hoch | MFA, Passwortrichtlinie |
+| Datenverlust | Fehlende Backups | Niedrig | Hoch | Mittel | Backup-Strategie, Tests |
+| Insider-Bedrohung | Übermäßige Berechtigungen | Mittel | Hoch | Hoch | Least Privilege, Überwachung |
+| Phishing | Ungeschulte Mitarbeiter | Hoch | Mittel | Hoch | Schulung, E-Mail-Filterung |</p>
+<p><strong>Wahrscheinlichkeitsskala:</strong>
+- <strong>Niedrig:</strong> Unwahrscheinlich innerhalb von 3 Jahren
+- <strong>Mittel:</strong> Möglich innerhalb von 3 Jahren
+- <strong>Hoch:</strong> Wahrscheinlich innerhalb von 1 Jahr</p>
+<p><strong>Auswirkungsskala:</strong>
+- <strong>Niedrig:</strong> Minimale Auswirkung auf Vertraulichkeit, Integrität, Verfügbarkeit
+- <strong>Mittel:</strong> Moderate Auswirkung, begrenzte PHI-Offenlegung
+- <strong>Hoch:</strong> Schwerwiegende Auswirkung, umfangreiche PHI-Offenlegung</p>
+<p><strong>Risikobehandlungsoptionen:</strong>
+1. <strong>Mindern:</strong> Kontrollen implementieren, um Risiko zu reduzieren
+2. <strong>Übertragen:</strong> Risiko auf Dritte übertragen (Versicherung)
+3. <strong>Vermeiden:</strong> Aktivität einstellen, die Risiko verursacht
+4. <strong>Akzeptieren:</strong> Risiko akzeptieren (mit Genehmigung)</p>
+<p><strong>Beispiel-Risikobehandlungsplan:</strong>
+| Risiko-ID | Risiko | Behandlung | Kontrollen | Zeitplan | Verantwortlich | Status | Kosten |
+|-----------|--------|------------|------------|----------|----------------|--------|--------|
+| R-001 | Ransomware | Mindern | EDR, Backups, Patch-Management | Q1 2024 | IT Security | In Arbeit | €50.000 |
+| R-002 | Schwache Passwörter | Mindern | MFA, Passwortrichtlinie | Q1 2024 | IT | Abgeschlossen | €10.000 |
+| R-003 | Datenverlust | Mindern | Backup-Strategie, Offsite-Backups | Q2 2024 | IT | Geplant | €30.000 |
+| R-004 | Insider-Bedrohung | Mindern | Least Privilege, SIEM, UBA | Q2 2024 | IT Security | Geplant | €40.000 |</p>
+<h3 id="24-kontrollbewertung">2.4 Kontrollbewertung</h3>
+<p><strong>Bestehende Kontrollen:</strong>
+| Kontroll-ID | Kontrollname | Typ | Implementiert | Effektiv | Lücken |
+|-------------|--------------|-----|---------------|----------|--------|
+| AC-001 | Eindeutige Benutzer-IDs | Technisch | Ja | Ja | Keine |
+| AC-002 | Multi-Faktor-Authentifizierung | Technisch | Teilweise | Teilweise | Nicht für alle Systeme |
+| AC-003 | Automatische Abmeldung | Technisch | Ja | Ja | Keine |
+| PE-001 | Physische Zugangskontrollen | Physisch | Ja | Teilweise | Einige Bereiche ungesichert |
+| AD-001 | Zugriffsautorisierung | Administrativ | Ja | Teilweise | Inkonsistente Durchsetzung |</p>
+<h3 id="25-gap-analyse">2.5 Gap-Analyse</h3>
+<p><strong>Identifizierte Lücken:</strong>
+| Lücken-ID | Beschreibung | Betroffene Systeme | Risikostufe | Empfohlene Maßnahme | Priorität |
+|-----------|--------------|-------------------|-------------|---------------------|-----------|
+| G-001 | MFA nicht für alle Systeme | Labor-System, PACS | Hoch | MFA implementieren | Hoch |
+| G-002 | Ungesicherte physische Bereiche | Lagerräume | Mittel | Zugangskontrollen hinzufügen | Mittel |
+| G-003 | Inkonsistente Zugriffsautorisierung | Alle Systeme | Hoch | Prozess standardisieren | Hoch |
+| G-004 | Niedrige Schulungsabschlussrate | Organisation | Mittel | Schulungsprogramm verbessern | Mittel |</p>
+<h2 id="3-risikoanalyse-methodik">3. Risikoanalyse-Methodik</h2>
+<h3 id="31-risikoanalyse-ansatz">3.1 Risikoanalyse-Ansatz</h3>
+<p><strong>Methodik:</strong>
+- <strong>Qualitativ:</strong> Beschreibende Bewertung (Niedrig, Mittel, Hoch)
+- <strong>Quantitativ:</strong> Numerische Bewertung (z.B. ALE - Annual Loss Expectancy)
+- <strong>Hybrid:</strong> Kombination aus qualitativ und quantitativ</p>
+<h3 id="32-risikoanalyse-prozess">3.2 Risikoanalyse-Prozess</h3>
+<p><strong>10-Schritte-Prozess:</strong>
+1. <strong>Vorbereitung:</strong> Umfang definieren, Team zusammenstellen
+2. <strong>Informationssammlung:</strong> ePHI-Inventar, Systeminventar erstellen
+3. <strong>Bedrohungsidentifikation:</strong> Externe und interne Bedrohungen identifizieren
+4. <strong>Schwachstellenidentifikation:</strong> Technische, physische, administrative Schwachstellen
+5. <strong>Kontrollanalyse:</strong> Bestehende Kontrollen bewerten
+6. <strong>Wahrscheinlichkeitsbestimmung:</strong> Wahrscheinlichkeit für jede Bedrohung
+7. <strong>Auswirkungsanalyse:</strong> Auswirkung auf Vertraulichkeit, Integrität, Verfügbarkeit
+8. <strong>Risikobestimmung:</strong> Risikostufe berechnen
+9. <strong>Kontrollempfehlungen:</strong> Kontrollen zur Risikominderung empfehlen
+10. <strong>Dokumentation:</strong> Risikoanalysebericht erstellen</p>
+<h3 id="33-risikoanalyse-haufigkeit">3.3 Risikoanalyse-Häufigkeit</h3>
+<p><strong>Regelmäßige Überprüfungen:</strong>
+- Jährlich (Minimum)
+- Bei wesentlichen Änderungen
+- Nach Sicherheitsvorfällen
+- Bei neuen Bedrohungen</p>
+<h2 id="4-anhange">4. Anhänge</h2>
+<h3 id="41-anhang-a-risikoanalyse-checkliste">4.1 Anhang A: Risikoanalyse-Checkliste</h3>
+<p><strong>Vorbereitungsphase:</strong>
+- [ ] Umfang definiert
+- [ ] Team zusammengestellt
+- [ ] Ressourcen zugewiesen
+- [ ] Zeitplan erstellt</p>
+<p><strong>Informationssammlungsphase:</strong>
+- [ ] ePHI-Inventar erstellt
+- [ ] Systeminventar erstellt
+- [ ] Netzwerkdiagramme überprüft
+- [ ] Richtlinien überprüft
+- [ ] Interviews durchgeführt</p>
+<p><strong>Bewertungsphase:</strong>
+- [ ] Bedrohungen identifiziert
+- [ ] Schwachstellen identifiziert
+- [ ] Kontrollen bewertet
+- [ ] Wahrscheinlichkeit bestimmt
+- [ ] Auswirkung analysiert
+- [ ] Risiken berechnet</p>
+<p><strong>Berichtsphase:</strong>
+- [ ] Bericht erstellt
+- [ ] Überprüft
+- [ ] Genehmigt
+- [ ] Verteilt</p>
+<h3 id="42-anhang-b-glossar">4.2 Anhang B: Glossar</h3>
+<p><strong>Begriffe:</strong>
+- <strong>ePHI:</strong> Elektronisch geschützte Gesundheitsinformationen
+- <strong>Bedrohung:</strong> Potenzielle Ursache eines unerwünschten Vorfalls
+- <strong>Schwachstelle:</strong> Schwäche, die von Bedrohung ausgenutzt werden kann
+- <strong>Risiko:</strong> Wahrscheinlichkeit, dass Bedrohung Schwachstelle ausnutzt
+- <strong>Kontrolle:</strong> Schutzmaßnahme zur Risikominderung
+- <strong>Wahrscheinlichkeit:</strong> Chance, dass Ereignis eintritt
+- <strong>Auswirkung:</strong> Schaden, wenn Ereignis eintritt
+- <strong>Risikostufe:</strong> Kombination aus Wahrscheinlichkeit und Auswirkung</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0600_Datenschutzverletzungsmeldung_und_Incident_Response.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0000_FRAMEWORK_MAPPING.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0030 - Rollen und Verantwortlichkeiten</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0030</div>
+            <h1>Rollen und Verantwortlichkeiten</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0020_Netzwerksegmentierung.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0040_Datenfluss_Diagramme.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="rollen-und-verantwortlichkeiten">Rollen und Verantwortlichkeiten</h1>
+<p><strong>Dokument-ID:</strong> PCI-0030<br />
+<strong>Organisation:</strong> AdminSend GmbH<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Genehmigt durch:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Entwurf / In Review / Freigegeben<br />
+<strong>Klassifizierung:</strong> internal<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-zweck">1. Zweck</h2>
+<p>Dieses Dokument definiert die Rollen, Verantwortlichkeiten und Zuständigkeiten für die PCI-DSS-Compliance bei AdminSend GmbH.</p>
+<h3 id="11-ziele">1.1 Ziele</h3>
+<ul>
+<li><strong>Klare Verantwortlichkeiten:</strong> Eindeutige Zuweisung von PCI-DSS-Aufgaben</li>
+<li><strong>Accountability:</strong> Festlegung von Entscheidungsbefugnissen</li>
+<li><strong>Compliance:</strong> Erfüllung von PCI-DSS Requirement 12.4</li>
+<li><strong>Kommunikation:</strong> Transparente Kommunikationswege</li>
+</ul>
+<h2 id="2-organisationsstruktur">2. Organisationsstruktur</h2>
+<h3 id="21-executive-management">2.1 Executive Management</h3>
+<p><strong>Chief Executive Officer (CEO):</strong>
+- <strong>Name:</strong> {{ meta.roles.ceo.name }}
+- <strong>E-Mail:</strong> {{ meta.roles.ceo.email }}
+- <strong>Telefon:</strong> {{ meta.roles.ceo.phone }}</p>
+<p><strong>Verantwortlichkeiten:</strong>
+- Gesamtverantwortung für PCI-DSS-Compliance
+- Genehmigung des PCI-DSS-Budgets
+- Genehmigung der Informationssicherheitsrichtlinie
+- Eskalationspunkt für kritische Compliance-Themen</p>
+<p><strong>Chief Information Security Officer (CISO):</strong>
+- <strong>Name:</strong> {{ meta.roles.ciso.name }}
+- <strong>E-Mail:</strong> {{ meta.roles.ciso.email }}
+- <strong>Telefon:</strong> {{ meta.roles.ciso.phone }}</p>
+<p><strong>Verantwortlichkeiten:</strong>
+- Leitung des PCI-DSS-Compliance-Programms
+- Genehmigung von Sicherheitsrichtlinien und -standards
+- Überwachung der Compliance-Aktivitäten
+- Berichterstattung an Executive Management
+- Genehmigung von Ausnahmen (Risk Acceptance)</p>
+<h3 id="22-pci-dss-program-management">2.2 PCI-DSS Program Management</h3>
+<p><strong>PCI-DSS Program Manager:</strong>
+- <strong>Name:</strong> [TODO: Name]
+- <strong>E-Mail:</strong> [TODO: E-Mail]
+- <strong>Telefon:</strong> [TODO: Telefon]</p>
+<p><strong>Verantwortlichkeiten:</strong>
+- Tägliche Leitung des PCI-DSS-Programms
+- Koordination aller Compliance-Aktivitäten
+- Vorbereitung von Audits und Assessments
+- Pflege der PCI-DSS-Dokumentation
+- Schulungskoordination
+- Liaison zu QSA und Acquiring Banks</p>
+<p><strong>PCI-DSS Compliance Team:</strong>
+- <strong>Mitglieder:</strong> [TODO: Liste der Teammitglieder]</p>
+<p><strong>Verantwortlichkeiten:</strong>
+- Unterstützung des Program Managers
+- Durchführung von Compliance-Checks
+- Dokumentation von Nachweisen
+- Koordination mit Fachabteilungen</p>
+<h3 id="23-it-und-operations">2.3 IT und Operations</h3>
+<p><strong>Chief Information Officer (CIO):</strong>
+- <strong>Name:</strong> {{ meta.roles.cio.name }}
+- <strong>E-Mail:</strong> {{ meta.roles.cio.email }}
+- <strong>Telefon:</strong> {{ meta.roles.cio.phone }}</p>
+<p><strong>Verantwortlichkeiten:</strong>
+- Verantwortung für IT-Infrastruktur und -Systeme
+- Genehmigung von IT-Änderungen im CDE
+- Bereitstellung von Ressourcen für PCI-DSS-Compliance
+- Eskalationspunkt für IT-bezogene Compliance-Themen</p>
+<p><strong>IT Security Manager:</strong>
+- <strong>Name:</strong> [TODO: Name]
+- <strong>E-Mail:</strong> [TODO: E-Mail]
+- <strong>Telefon:</strong> [TODO: Telefon]</p>
+<p><strong>Verantwortlichkeiten:</strong>
+- Implementation von Sicherheitskontrollen
+- Verwaltung von Firewalls und Netzwerksegmentierung
+- Patch Management und Vulnerability Management
+- Incident Response
+- Log-Monitoring und -Analyse</p>
+<p><strong>System Administrators:</strong>
+- <strong>Anzahl:</strong> [TODO: Anzahl]
+- <strong>Kontakt:</strong> [TODO: Team-E-Mail]</p>
+<p><strong>Verantwortlichkeiten:</strong>
+- Administration von CDE-Systemen
+- Durchführung von Sicherheitsupdates
+- Backup und Recovery
+- Einhaltung von Hardening-Standards</p>
+<p><strong>Network Administrators:</strong>
+- <strong>Anzahl:</strong> [TODO: Anzahl]
+- <strong>Kontakt:</strong> [TODO: Team-E-Mail]</p>
+<p><strong>Verantwortlichkeiten:</strong>
+- Verwaltung von Netzwerkkomponenten
+- Firewall-Konfiguration und -Wartung
+- Netzwerksegmentierung
+- VPN-Verwaltung</p>
+<h3 id="24-application-development">2.4 Application Development</h3>
+<p><strong>Development Manager:</strong>
+- <strong>Name:</strong> [TODO: Name]
+- <strong>E-Mail:</strong> [TODO: E-Mail]
+- <strong>Telefon:</strong> [TODO: Telefon]</p>
+<p><strong>Verantwortlichkeiten:</strong>
+- Sichere Softwareentwicklung (Secure SDLC)
+- Code Reviews und Security Testing
+- Einhaltung von Secure Coding Standards
+- Vulnerability Management in Anwendungen</p>
+<p><strong>Developers:</strong>
+- <strong>Anzahl:</strong> [TODO: Anzahl]
+- <strong>Kontakt:</strong> [TODO: Team-E-Mail]</p>
+<p><strong>Verantwortlichkeiten:</strong>
+- Entwicklung sicherer Anwendungen
+- Teilnahme an Security Training
+- Behebung von Sicherheitslücken
+- Dokumentation von Anwendungen</p>
+<h3 id="25-business-operations">2.5 Business Operations</h3>
+<p><strong>Operations Manager:</strong>
+- <strong>Name:</strong> [TODO: Name]
+- <strong>E-Mail:</strong> [TODO: E-Mail]
+- <strong>Telefon:</strong> [TODO: Telefon]</p>
+<p><strong>Verantwortlichkeiten:</strong>
+- Geschäftsprozesse mit Karteninhaberdaten
+- Schulung von Mitarbeitern
+- Einhaltung von Betriebsverfahren
+- Incident Reporting</p>
+<p><strong>Store/Branch Managers:</strong>
+- <strong>Anzahl:</strong> [TODO: Anzahl]
+- <strong>Kontakt:</strong> [TODO: Kontaktliste]</p>
+<p><strong>Verantwortlichkeiten:</strong>
+- Physische Sicherheit an Standorten
+- Schulung von Kassierern/POS-Bedienern
+- Einhaltung von PCI-DSS-Verfahren
+- Meldung von Sicherheitsvorfällen</p>
+<h3 id="26-human-resources">2.6 Human Resources</h3>
+<p><strong>HR Manager:</strong>
+- <strong>Name:</strong> [TODO: Name]
+- <strong>E-Mail:</strong> [TODO: E-Mail]
+- <strong>Telefon:</strong> [TODO: Telefon]</p>
+<p><strong>Verantwortlichkeiten:</strong>
+- Background Checks für Mitarbeiter mit CDE-Zugriff
+- Onboarding und Offboarding
+- Schulungskoordination
+- Vertraulichkeitsvereinbarungen (NDAs)</p>
+<h3 id="27-legal-und-compliance">2.7 Legal und Compliance</h3>
+<p><strong>Legal Counsel:</strong>
+- <strong>Name:</strong> [TODO: Name]
+- <strong>E-Mail:</strong> [TODO: E-Mail]
+- <strong>Telefon:</strong> [TODO: Telefon]</p>
+<p><strong>Verantwortlichkeiten:</strong>
+- Rechtliche Beratung zu PCI-DSS
+- Vertragsüberprüfung (Dienstleister)
+- Datenschutz und Compliance
+- Breach Notification (rechtliche Aspekte)</p>
+<p><strong>Data Protection Officer (DPO):</strong>
+- <strong>Name:</strong> [TODO: Name]
+- <strong>E-Mail:</strong> [TODO: E-Mail]
+- <strong>Telefon:</strong> [TODO: Telefon]</p>
+<p><strong>Verantwortlichkeiten:</strong>
+- Datenschutz-Compliance (DSGVO)
+- Schnittstelle zwischen PCI-DSS und Datenschutz
+- Datenschutz-Folgenabschätzungen
+- Meldung von Datenschutzverletzungen</p>
+<h2 id="3-externe-rollen">3. Externe Rollen</h2>
+<h3 id="31-qualified-security-assessor-qsa">3.1 Qualified Security Assessor (QSA)</h3>
+<p><strong>Firma:</strong> [TODO: QSA-Firma]<br />
+<strong>Ansprechpartner:</strong> [TODO: Name]<br />
+<strong>E-Mail:</strong> [TODO: E-Mail]<br />
+<strong>Telefon:</strong> [TODO: Telefon]<br />
+<strong>QSA-ID:</strong> [TODO: QSA-ID]  </p>
+<p><strong>Verantwortlichkeiten:</strong>
+- Durchführung des jährlichen PCI-DSS-Assessments
+- Erstellung des Report on Compliance (ROC)
+- Beratung zu Compliance-Fragen
+- Validierung von Sicherheitskontrollen</p>
+<h3 id="32-approved-scanning-vendor-asv">3.2 Approved Scanning Vendor (ASV)</h3>
+<p><strong>Firma:</strong> [TODO: ASV-Firma]<br />
+<strong>Ansprechpartner:</strong> [TODO: Name]<br />
+<strong>E-Mail:</strong> [TODO: E-Mail]<br />
+<strong>Telefon:</strong> [TODO: Telefon]<br />
+<strong>ASV-ID:</strong> [TODO: ASV-ID]  </p>
+<p><strong>Verantwortlichkeiten:</strong>
+- Quartalsweise Vulnerability Scans
+- Erstellung von Scan-Berichten
+- Validierung von Remediation
+- Passing Scan Attestation</p>
+<h3 id="33-penetration-testing-firm">3.3 Penetration Testing Firm</h3>
+<p><strong>Firma:</strong> [TODO: Pentest-Firma]<br />
+<strong>Ansprechpartner:</strong> [TODO: Name]<br />
+<strong>E-Mail:</strong> [TODO: E-Mail]<br />
+<strong>Telefon:</strong> [TODO: Telefon]  </p>
+<p><strong>Verantwortlichkeiten:</strong>
+- Jährliche Penetrationstests
+- Segmentierungsvalidierung
+- Erstellung von Pentest-Berichten
+- Retest nach Remediation</p>
+<h3 id="34-service-providers">3.4 Service Providers</h3>
+<table>
+<thead>
+<tr>
+<th>Dienstleister</th>
+<th>Kontakt</th>
+<th>Rolle</th>
+<th>PCI-DSS-Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Payment Processor]</td>
+<td>[TODO: Kontakt]</td>
+<td>Zahlungsabwicklung</td>
+<td>AOC vorhanden</td>
+</tr>
+<tr>
+<td>[TODO: Hosting Provider]</td>
+<td>[TODO: Kontakt]</td>
+<td>Server-Hosting</td>
+<td>AOC vorhanden</td>
+</tr>
+<tr>
+<td>[TODO: Managed Security]</td>
+<td>[TODO: Kontakt]</td>
+<td>SIEM/SOC</td>
+<td>AOC vorhanden</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-raci-matrizen">4. RACI-Matrizen</h2>
+<h3 id="41-pci-dss-requirement-1-firewall-configuration">4.1 PCI-DSS Requirement 1: Firewall Configuration</h3>
+<table>
+<thead>
+<tr>
+<th>Aktivität</th>
+<th>CISO</th>
+<th>PCI Mgr</th>
+<th>IT Sec</th>
+<th>Network</th>
+<th>QSA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Firewall-Richtlinie erstellen</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Firewall-Regeln konfigurieren</td>
+<td>C</td>
+<td>I</td>
+<td>A</td>
+<td>R</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Quartalsweise Regelüberprüfung</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Änderungen genehmigen</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>I</td>
+<td>I</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-pci-dss-requirement-3-protect-stored-data">4.2 PCI-DSS Requirement 3: Protect Stored Data</h3>
+<table>
+<thead>
+<tr>
+<th>Aktivität</th>
+<th>CISO</th>
+<th>PCI Mgr</th>
+<th>IT Sec</th>
+<th>Dev Mgr</th>
+<th>QSA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Verschlüsselungsrichtlinie</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Key Management</td>
+<td>C</td>
+<td>I</td>
+<td>A</td>
+<td>R</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Datenlöschung</td>
+<td>C</td>
+<td>R</td>
+<td>A</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Tokenisierung</td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>A</td>
+<td>I</td>
+</tr>
+</tbody>
+</table>
+<h3 id="43-pci-dss-requirement-6-secure-development">4.3 PCI-DSS Requirement 6: Secure Development</h3>
+<table>
+<thead>
+<tr>
+<th>Aktivität</th>
+<th>CISO</th>
+<th>PCI Mgr</th>
+<th>IT Sec</th>
+<th>Dev Mgr</th>
+<th>Developers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Secure Coding Standards</td>
+<td>A</td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Code Reviews</td>
+<td>C</td>
+<td>I</td>
+<td>C</td>
+<td>A</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Vulnerability Scanning</td>
+<td>C</td>
+<td>R</td>
+<td>A</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Patch Deployment</td>
+<td>C</td>
+<td>R</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+</tr>
+</tbody>
+</table>
+<h3 id="44-pci-dss-requirement-8-authentication">4.4 PCI-DSS Requirement 8: Authentication</h3>
+<table>
+<thead>
+<tr>
+<th>Aktivität</th>
+<th>CISO</th>
+<th>PCI Mgr</th>
+<th>IT Sec</th>
+<th>HR</th>
+<th>QSA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authentifizierungsrichtlinie</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Benutzerverwaltung</td>
+<td>C</td>
+<td>I</td>
+<td>A</td>
+<td>R</td>
+<td>I</td>
+</tr>
+<tr>
+<td>MFA-Implementation</td>
+<td>C</td>
+<td>R</td>
+<td>A</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Zugriffsentfernung (Offboarding)</td>
+<td>C</td>
+<td>R</td>
+<td>A</td>
+<td>R</td>
+<td>I</td>
+</tr>
+</tbody>
+</table>
+<h3 id="45-pci-dss-requirement-10-logging">4.5 PCI-DSS Requirement 10: Logging</h3>
+<table>
+<thead>
+<tr>
+<th>Aktivität</th>
+<th>CISO</th>
+<th>PCI Mgr</th>
+<th>IT Sec</th>
+<th>Ops Mgr</th>
+<th>QSA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Logging-Richtlinie</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Log-Konfiguration</td>
+<td>C</td>
+<td>I</td>
+<td>A</td>
+<td>R</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Tägliche Log-Überprüfung</td>
+<td>C</td>
+<td>R</td>
+<td>A</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Log-Retention</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+</tr>
+</tbody>
+</table>
+<h3 id="46-pci-dss-requirement-12-security-policy">4.6 PCI-DSS Requirement 12: Security Policy</h3>
+<table>
+<thead>
+<tr>
+<th>Aktivität</th>
+<th>CEO</th>
+<th>CISO</th>
+<th>PCI Mgr</th>
+<th>Legal</th>
+<th>QSA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sicherheitsrichtlinie genehmigen</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Jährliche Risikobewertung</td>
+<td>C</td>
+<td>A</td>
+<td>R</td>
+<td>I</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Schulungsprogramm</td>
+<td>C</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Incident Response Plan</td>
+<td>C</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legende:</strong>
+- <strong>R</strong> (Responsible): Durchführungsverantwortung
+- <strong>A</strong> (Accountable): Gesamtverantwortung, Entscheidungsbefugnis (nur eine Person pro Aktivität)
+- <strong>C</strong> (Consulted): Konsultiert, Fachexpertise
+- <strong>I</strong> (Informed): Informiert</p>
+<h2 id="5-eskalationspfade">5. Eskalationspfade</h2>
+<h3 id="51-compliance-eskalation">5.1 Compliance-Eskalation</h3>
+<p><strong>Level 1:</strong> PCI-DSS Program Manager<br />
+<strong>Level 2:</strong> CISO<br />
+<strong>Level 3:</strong> CEO  </p>
+<p><strong>Eskalationskriterien:</strong>
+- Kritische Compliance-Lücken
+- Fehlgeschlagene Audits
+- Datenschutzverletzungen
+- Nicht behebbare Schwachstellen</p>
+<h3 id="52-security-incident-eskalation">5.2 Security Incident-Eskalation</h3>
+<p><strong>Level 1:</strong> IT Security Manager (24/7 Bereitschaft)<br />
+<strong>Level 2:</strong> CISO<br />
+<strong>Level 3:</strong> CEO + Legal Counsel  </p>
+<p><strong>Eskalationskriterien:</strong>
+- Verdacht auf Datenschutzverletzung
+- Kompromittierung von CDE-Systemen
+- Malware-Infektion im CDE
+- Unautorisierten Zugriff auf Karteninhaberdaten</p>
+<h3 id="53-kontaktinformationen-fur-notfalle">5.3 Kontaktinformationen für Notfälle</h3>
+<p><strong>24/7 Security Hotline:</strong> [TODO: Telefonnummer]<br />
+<strong>Security E-Mail:</strong> [TODO: security@organization.com]<br />
+<strong>Incident Response Team:</strong> [TODO: Kontaktliste]  </p>
+<h2 id="6-schulung-und-awareness">6. Schulung und Awareness</h2>
+<h3 id="61-schulungsanforderungen">6.1 Schulungsanforderungen</h3>
+<table>
+<thead>
+<tr>
+<th>Rolle</th>
+<th>Schulungsthemen</th>
+<th>Häufigkeit</th>
+<th>Verantwortlich</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Alle Mitarbeiter</td>
+<td>Security Awareness</td>
+<td>Jährlich</td>
+<td>HR + PCI Mgr</td>
+</tr>
+<tr>
+<td>CDE-Administratoren</td>
+<td>PCI-DSS Deep Dive</td>
+<td>Jährlich</td>
+<td>PCI Mgr</td>
+</tr>
+<tr>
+<td>Entwickler</td>
+<td>Secure Coding</td>
+<td>Jährlich</td>
+<td>Dev Mgr</td>
+</tr>
+<tr>
+<td>Kassierer/POS</td>
+<td>PCI-DSS Basics</td>
+<td>Bei Einstellung + jährlich</td>
+<td>Ops Mgr</td>
+</tr>
+</tbody>
+</table>
+<h3 id="62-schulungsdokumentation">6.2 Schulungsdokumentation</h3>
+<p><strong>Schulungsnachweis erforderlich:</strong>
+- Teilnehmerliste
+- Schulungsmaterialien
+- Bestätigungen der Teilnehmer
+- Testergebnisse (falls zutreffend)</p>
+<p><strong>Aufbewahrungsfrist:</strong> [TODO: 3 Jahre]</p>
+<hr />
+<p><strong>Dokumenthistorie:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Datum</th>
+<th>Autor</th>
+<th>Änderungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Initiale Erstellung</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0020_Netzwerksegmentierung.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0040_Datenfluss_Diagramme.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

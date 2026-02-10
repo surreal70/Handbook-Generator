@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0500 - Logging und Monitoring</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0500</div>
+            <h1>Logging und Monitoring</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0420_Physische_Sicherheit.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0510_Netzwerksicherheitstests.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="logging-und-monitoring">Logging und Monitoring</h1>
+<p><strong>Dokument-ID:</strong> PCI-0500<br />
+<strong>Organisation:</strong> AdminSend GmbH<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Genehmigt durch:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Entwurf / In Review / Freigegeben<br />
+<strong>Klassifizierung:</strong> internal<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-zweck">1. Zweck</h2>
+<p>Dieses Dokument definiert die Logging- und Monitoring-Anforderungen für AdminSend GmbH gemäß PCI-DSS Requirement 10.</p>
+<h3 id="11-ziele">1.1 Ziele</h3>
+<ul>
+<li><strong>Nachvollziehbarkeit:</strong> Alle Zugriffe auf CDE und CHD loggen</li>
+<li><strong>Anomalie-Erkennung:</strong> Verdächtige Aktivitäten identifizieren</li>
+<li><strong>Incident Response:</strong> Forensische Untersuchungen ermöglichen</li>
+<li><strong>Compliance:</strong> Erfüllung von PCI-DSS Requirement 10</li>
+</ul>
+<h3 id="12-geltungsbereich">1.2 Geltungsbereich</h3>
+<p><strong>Betroffene Systeme:</strong>
+- Alle CDE-Systeme
+- Systeme mit CHD-Zugriff
+- Netzwerkkomponenten
+- Sicherheitssysteme</p>
+<h2 id="2-logging-anforderungen">2. Logging-Anforderungen</h2>
+<h3 id="21-zu-loggende-ereignisse">2.1 Zu loggende Ereignisse</h3>
+<p><strong>Benutzer-Zugriffe:</strong>
+- Alle Anmeldungen (erfolgreich und fehlgeschlagen)
+- Alle Abmeldungen
+- Privilegierte Aktionen
+- Zugriff auf CHD
+- Berechtigungsänderungen</p>
+<p><strong>System-Ereignisse:</strong>
+- System-Starts und -Stops
+- Konfigurationsänderungen
+- Software-Installationen
+- Patch-Installationen
+- Dienst-Starts und -Stops</p>
+<p><strong>Netzwerk-Ereignisse:</strong>
+- Firewall-Regel-Änderungen
+- Blockierte Verbindungen
+- VPN-Verbindungen
+- IDS/IPS-Alerts</p>
+<p><strong>Sicherheits-Ereignisse:</strong>
+- Antivirus-Detektionen
+- Sicherheitsrichtlinien-Verletzungen
+- Account-Sperrungen
+- Passwortänderungen</p>
+<p><strong>Datenbank-Ereignisse:</strong>
+- Alle Zugriffe auf CHD-Tabellen
+- Schema-Änderungen
+- Privilegierte Datenbankoperationen
+- Fehlgeschlagene Zugriffe</p>
+<h3 id="22-log-eintrage-format">2.2 Log-Einträge-Format</h3>
+<p><strong>Erforderliche Felder:</strong>
+- <strong>Benutzer-ID:</strong> Wer hat die Aktion durchgeführt?
+- <strong>Ereignistyp:</strong> Was ist passiert?
+- <strong>Zeitstempel:</strong> Wann ist es passiert? (synchronisierte Zeit)
+- <strong>Erfolg/Fehler:</strong> War die Aktion erfolgreich?
+- <strong>Quelle:</strong> Von wo kam die Aktion? (IP-Adresse, Hostname)
+- <strong>Ziel:</strong> Welches System/Ressource war betroffen?
+- <strong>Zusätzliche Details:</strong> Relevante Kontextinformationen</p>
+<p><strong>Beispiel:</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="mf">2026</span><span class="o">-</span><span class="mf">02</span><span class="o">-</span><span class="mf">06</span><span class="w"> </span><span class="mf">14</span><span class="p">:</span><span class="mf">32</span><span class="p">:</span><span class="mf">15</span><span class="w"> </span><span class="n">UTC</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="n">USER</span><span class="o">=</span><span class="n">john</span><span class="mf">.</span><span class="n">doe</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="n">EVENT</span><span class="o">=</span><span class="nb">LOG</span><span class="n">IN_SUCCESS</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="n">SOURCE</span><span class="o">=</span><span class="mf">10.1.100.50</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="n">TARGET</span><span class="o">=</span><span class="n">payment</span><span class="o">-</span><span class="n">gateway</span><span class="o">-</span><span class="mf">01</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="n">DETAILS</span><span class="o">=</span><span class="n">MFA_VERIFIED</span>
+</code></pre></div>
+
+<h2 id="3-siem-system">3. SIEM-System</h2>
+<h3 id="31-siem-implementierung">3.1 SIEM-Implementierung</h3>
+<p><strong>SIEM-System:</strong> [TODO: Name des SIEM-Systems]</p>
+<p><strong>Funktionen:</strong>
+- Zentrale Log-Sammlung
+- Echtzeitanalyse
+- Korrelation von Ereignissen
+- Alerting
+- Reporting
+- Forensische Suche</p>
+<p><strong>Architektur:</strong>
+- Log-Quellen → Log-Forwarder → SIEM
+- Verschlüsselte Übertragung (TLS 1.2+)
+- Redundante SIEM-Server
+- Sichere Log-Speicherung</p>
+<h3 id="32-log-forwarding">3.2 Log-Forwarding</h3>
+<p><strong>Konfiguration:</strong>
+- Alle CDE-Systeme senden Logs an SIEM
+- Echtzeitübertragung (&lt; 5 Minuten Verzögerung)
+- Verschlüsselte Übertragung
+- Authentifizierung der Log-Quellen</p>
+<p><strong>Log-Forwarder:</strong>
+- Syslog (RFC 5424)
+- Windows Event Forwarding
+- Agent-basiert (z.B., Splunk Forwarder, Elastic Beats)</p>
+<h3 id="33-log-parsing-und-normalisierung">3.3 Log-Parsing und -Normalisierung</h3>
+<p><strong>Anforderungen:</strong>
+- Einheitliches Log-Format
+- Parsing aller relevanten Felder
+- Normalisierung von Zeitstempeln
+- Anreicherung mit Kontext (z.B., Geo-IP)</p>
+<h2 id="4-log-retention">4. Log-Retention</h2>
+<h3 id="41-aufbewahrungsfristen">4.1 Aufbewahrungsfristen</h3>
+<p><strong>Online-Speicherung:</strong>
+- 90 Tage in SIEM (schneller Zugriff)
+- Volltext-Suche möglich
+- Echtzeitanalyse</p>
+<p><strong>Archiv-Speicherung:</strong>
+- 1 Jahr in Archiv
+- Komprimiert
+- Verschlüsselt
+- WORM-Speicher (Write Once Read Many)</p>
+<p><strong>Langzeit-Archivierung:</strong>
+- Nach gesetzlichen Anforderungen
+- Sichere Lagerung
+- Dokumentation</p>
+<h3 id="42-log-backup">4.2 Log-Backup</h3>
+<p><strong>Anforderungen:</strong>
+- Tägliche Backups der Logs
+- Offsite-Lagerung
+- Verschlüsselte Backups
+- Regelmäßige Restore-Tests</p>
+<h2 id="5-log-integritat">5. Log-Integrität</h2>
+<h3 id="51-schutz-vor-manipulation">5.1 Schutz vor Manipulation</h3>
+<p><strong>Maßnahmen:</strong>
+- WORM-Speicher für Logs
+- Digitale Signaturen
+- Hash-Werte für Log-Dateien
+- Zugriffskontrolle auf Logs
+- Logging von Log-Zugriffen</p>
+<p><strong>Validierung:</strong>
+- Regelmäßige Integritätsprüfung
+- Automatische Alerts bei Manipulation
+- Forensische Untersuchung bei Verdacht</p>
+<h3 id="52-log-zugriffskontrolle">5.2 Log-Zugriffskontrolle</h3>
+<p><strong>Berechtigungen:</strong>
+- Nur autorisiertes Personal
+- Read-Only-Zugriff für die meisten Benutzer
+- Vollzugriff nur für Log-Administratoren
+- Logging aller Log-Zugriffe</p>
+<p><strong>Rollen:</strong>
+- Log-Administrator: Vollzugriff
+- Security-Analyst: Lesezugriff, Suche, Alerting
+- Auditor: Lesezugriff
+- Standard-Benutzer: Kein Zugriff</p>
+<h2 id="6-zeitsynchronisation">6. Zeitsynchronisation</h2>
+<h3 id="61-ntp-konfiguration">6.1 NTP-Konfiguration</h3>
+<p><strong>Anforderungen:</strong>
+- Alle Systeme synchronisiert mit NTP
+- Interne NTP-Server
+- Externe NTP-Quellen (Stratum 1 oder 2)
+- Redundante NTP-Server</p>
+<p><strong>NTP-Server:</strong>
+- Primär: [TODO: IP-Adresse]
+- Sekundär: [TODO: IP-Adresse]
+- Externe Quelle: [TODO: z.B., ptbtime1.ptb.de]</p>
+<p><strong>Zeitzone:</strong>
+- UTC für alle Logs
+- Lokale Zeitzone für Anzeige (mit UTC-Offset)</p>
+<h3 id="62-zeitabweichungs-monitoring">6.2 Zeitabweichungs-Monitoring</h3>
+<p><strong>Überwachung:</strong>
+- Maximale Abweichung: 1 Sekunde
+- Alerts bei Abweichung &gt; 1 Sekunde
+- Automatische Korrektur
+- Logging von Zeitänderungen</p>
+<h2 id="7-monitoring-und-alerting">7. Monitoring und Alerting</h2>
+<h3 id="71-security-monitoring">7.1 Security Monitoring</h3>
+<p><strong>24/7 Monitoring:</strong>
+- Security Operations Center (SOC)
+- Echtzeitüberwachung aller Alerts
+- Incident Response bei kritischen Alerts
+- Eskalation nach Schweregrad</p>
+<p><strong>SOC-Team:</strong>
+- SOC-Analyst (Tier 1)
+- Senior SOC-Analyst (Tier 2)
+- Security Engineer (Tier 3)
+- CISO (Eskalation)</p>
+<h3 id="72-alerting-regeln">7.2 Alerting-Regeln</h3>
+<p><strong>Kritische Alerts:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Alert</th>
+<th>Bedingung</th>
+<th>Aktion</th>
+<th>Eskalation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mehrfache fehlgeschlagene Logins</td>
+<td>&gt;10 in 5 Min</td>
+<td>Sofortige Untersuchung</td>
+<td>SOC → CISO</td>
+</tr>
+<tr>
+<td>Unbefugter CDE-Zugriff</td>
+<td>Blockierte Verbindung zu CDE</td>
+<td>Sofortige Untersuchung</td>
+<td>SOC → IT Security</td>
+</tr>
+<tr>
+<td>Malware-Detektion</td>
+<td>Antivirus-Alert</td>
+<td>Isolation des Systems</td>
+<td>SOC → IT Security</td>
+</tr>
+<tr>
+<td>Datenexfiltration</td>
+<td>Große Datenübertragung</td>
+<td>Verbindung blockieren</td>
+<td>SOC → CISO</td>
+</tr>
+<tr>
+<td>Privilegierte Aktion</td>
+<td>Root/Admin-Aktion</td>
+<td>Logging, Review</td>
+<td>SOC</td>
+</tr>
+<tr>
+<td>Firewall-Regel-Änderung</td>
+<td>Konfigurationsänderung</td>
+<td>Validierung</td>
+<td>SOC → Network Team</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Hohe Alerts:</strong>
+- Admin-Login außerhalb Geschäftszeiten
+- Zugriff auf CHD
+- Konfigurationsänderungen
+- Neue Software-Installation</p>
+<p><strong>Mittlere Alerts:</strong>
+- Fehlgeschlagene Authentifizierung
+- Passwortänderung
+- Account-Sperrung</p>
+<p><strong>Niedrige Alerts:</strong>
+- Informative Ereignisse
+- Routine-Aktivitäten</p>
+<h3 id="73-alert-response">7.3 Alert-Response</h3>
+<p><strong>Prozess:</strong>
+1. Alert empfangen
+2. Schweregrad bewerten
+3. Initiale Untersuchung
+4. Eskalation (falls erforderlich)
+5. Incident Response (falls erforderlich)
+6. Dokumentation
+7. Follow-up</p>
+<p><strong>Response-Zeiten:</strong>
+- Kritisch: Sofort (&lt; 15 Minuten)
+- Hoch: &lt; 1 Stunde
+- Mittel: &lt; 4 Stunden
+- Niedrig: &lt; 24 Stunden</p>
+<h2 id="8-log-review">8. Log-Review</h2>
+<h3 id="81-tagliche-log-review">8.1 Tägliche Log-Review</h3>
+<p><strong>Prozess:</strong>
+- Automatisierte Analyse durch SIEM
+- Review kritischer Alerts
+- Identifikation von Anomalien
+- Dokumentation von Findings</p>
+<p><strong>Verantwortlich:</strong> SOC-Team</p>
+<h3 id="82-wochentliche-log-review">8.2 Wöchentliche Log-Review</h3>
+<p><strong>Prozess:</strong>
+- Review aller Alerts der Woche
+- Trend-Analyse
+- Identifikation von Mustern
+- Optimierung von Alerting-Regeln</p>
+<p><strong>Verantwortlich:</strong> Senior SOC-Analyst</p>
+<h3 id="83-monatliche-log-review">8.3 Monatliche Log-Review</h3>
+<p><strong>Prozess:</strong>
+- Umfassende Analyse aller Logs
+- Compliance-Validierung
+- Reporting an Management
+- Identifikation von Verbesserungen</p>
+<p><strong>Verantwortlich:</strong> IT Security Manager</p>
+<h2 id="9-use-cases-und-korrelationsregeln">9. Use Cases und Korrelationsregeln</h2>
+<h3 id="91-definierte-use-cases">9.1 Definierte Use Cases</h3>
+<p><strong>Authentifizierung:</strong>
+- Brute-Force-Angriffe
+- Credential Stuffing
+- Ungewöhnliche Login-Zeiten
+- Geografische Anomalien</p>
+<p><strong>Zugriffskontrolle:</strong>
+- Unbefugte Zugriffe
+- Privilegien-Eskalation
+- Lateral Movement</p>
+<p><strong>Datenexfiltration:</strong>
+- Große Datenübertragungen
+- Ungewöhnliche Datenzugriffe
+- Zugriff auf viele Datensätze</p>
+<p><strong>Malware:</strong>
+- Antivirus-Detektionen
+- Verdächtige Prozesse
+- Command &amp; Control-Kommunikation</p>
+<p><strong>Insider-Bedrohungen:</strong>
+- Ungewöhnliche Benutzeraktivitäten
+- Zugriff außerhalb Arbeitszeiten
+- Massendownloads</p>
+<h3 id="92-korrelationsregeln">9.2 Korrelationsregeln</h3>
+<p><strong>Beispiel-Regel: Brute-Force-Angriff</strong></p>
+<div class="codehilite"><pre><span></span><code>IF (fehlgeschlagene_logins &gt; 10 IN 5 Minuten)
+AND (gleiche_quell_ip)
+THEN
+  ALERT &quot;Brute-Force-Angriff erkannt&quot;
+  SEVERITY = CRITICAL
+  ACTION = Block_IP
+</code></pre></div>
+
+<p><strong>Beispiel-Regel: Privilegien-Eskalation</strong></p>
+<div class="codehilite"><pre><span></span><code>IF (benutzer_erhält_admin_rechte)
+AND (benutzer_führt_privilegierte_aktion_aus IN 10 Minuten)
+THEN
+  ALERT &quot;Mögliche Privilegien-Eskalation&quot;
+  SEVERITY = HIGH
+  ACTION = Investigate
+</code></pre></div>
+
+<h2 id="10-audit-trails">10. Audit Trails</h2>
+<h3 id="101-audit-trail-anforderungen">10.1 Audit Trail-Anforderungen</h3>
+<p><strong>Für alle CHD-Zugriffe:</strong>
+- Vollständige Audit Trails
+- Unveränderlich
+- Nachvollziehbar
+- Zeitlich geordnet</p>
+<p><strong>Informationen:</strong>
+- Wer hat zugegriffen?
+- Wann wurde zugegriffen?
+- Welche Daten wurden zugegriffen?
+- Welche Aktion wurde durchgeführt?
+- War die Aktion erfolgreich?</p>
+<h3 id="102-audit-trail-review">10.2 Audit Trail-Review</h3>
+<p><strong>Prozess:</strong>
+- Regelmäßige Review (täglich für kritische Systeme)
+- Identifikation von Anomalien
+- Dokumentation von Findings
+- Follow-up bei Auffälligkeiten</p>
+<h2 id="11-forensische-untersuchungen">11. Forensische Untersuchungen</h2>
+<h3 id="111-log-analyse-fur-forensik">11.1 Log-Analyse für Forensik</h3>
+<p><strong>Prozess:</strong>
+1. Incident identifiziert
+2. Relevante Logs sammeln
+3. Timeline erstellen
+4. Ursachenanalyse
+5. Dokumentation
+6. Lessons Learned</p>
+<p><strong>Tools:</strong>
+- SIEM-Forensik-Funktionen
+- Log-Analyse-Tools
+- Timeline-Analyse-Tools</p>
+<h3 id="112-chain-of-custody">11.2 Chain of Custody</h3>
+<p><strong>Anforderungen:</strong>
+- Dokumentation aller Log-Zugriffe
+- Unveränderlichkeit der Logs
+- Nachvollziehbare Beweiskette
+- Rechtssichere Dokumentation</p>
+<h2 id="12-compliance-validierung">12. Compliance-Validierung</h2>
+<h3 id="121-validierungsaktivitaten">12.1 Validierungsaktivitäten</h3>
+<p><strong>Täglich:</strong>
+- Log-Review
+- Alert-Response
+- Anomalie-Erkennung</p>
+<p><strong>Wöchentlich:</strong>
+- Trend-Analyse
+- Use Case-Validierung</p>
+<p><strong>Monatlich:</strong>
+- Umfassende Log-Review
+- Compliance-Reporting</p>
+<p><strong>Quartalsweise:</strong>
+- Log-Retention-Validierung
+- SIEM-Konfiguration-Review</p>
+<p><strong>Jährlich:</strong>
+- Vollständige Logging-Audit
+- Penetrationstest
+- Compliance-Assessment</p>
+<h3 id="122-validierungsdokumentation">12.2 Validierungsdokumentation</h3>
+<p><strong>Erforderliche Nachweise:</strong>
+- Logging-Konfiguration
+- SIEM-Konfiguration
+- Log-Review-Protokolle
+- Alert-Response-Protokolle
+- Forensische Untersuchungsberichte</p>
+<hr />
+<p><strong>Dokumenthistorie:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Datum</th>
+<th>Autor</th>
+<th>Änderungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Initiale Erstellung</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0420_Physische_Sicherheit.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0510_Netzwerksicherheitstests.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

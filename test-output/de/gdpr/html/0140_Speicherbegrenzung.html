@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0140 - Speicherbegrenzung</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0140</div>
+            <h1>Speicherbegrenzung</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0130_Richtigkeit.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0150_Integritaet_und_Vertraulichkeit.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="speicherbegrenzung">Speicherbegrenzung</h1>
+<p><strong>Dokument-ID:</strong> 0140<br />
+<strong>Owner:</strong> {{ meta.owner }}<br />
+<strong>Version:</strong> {{ meta.version }}<br />
+<strong>Status:</strong> Entwurf<br />
+<strong>Klassifizierung:</strong> Intern<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.date }}  </p>
+<hr />
+<h2 id="zweck">Zweck</h2>
+<p>Dieses Dokument beschreibt die Umsetzung des Grundsatzes der Speicherbegrenzung in der {{ meta.organization }}. Personenbezogene Daten dürfen nur so lange gespeichert werden, wie es für den Verarbeitungszweck erforderlich ist.</p>
+<h2 id="grundsatz-gema-art-5-abs-1-lit-e-dsgvo">Grundsatz gemäß Art. 5 Abs. 1 lit. e DSGVO</h2>
+<p><strong>Rechtliche Anforderung:</strong><br />
+Personenbezogene Daten müssen in einer Form gespeichert werden, die die Identifizierung der betroffenen Personen nur so lange ermöglicht, wie es für die Zwecke, für die sie verarbeitet werden, erforderlich ist.</p>
+<h3 id="kernprinzip">Kernprinzip</h3>
+<p><strong>Speicherdauer = Zweckerfüllung + gesetzliche Aufbewahrungsfristen</strong></p>
+<p>Nach Ablauf der Speicherdauer müssen Daten:
+- Gelöscht werden, oder
+- Anonymisiert werden, oder
+- Archiviert werden (mit Zugriffsbeschränkungen)</p>
+<h2 id="loschkonzept">Löschkonzept</h2>
+<h3 id="festlegung-von-loschfristen">Festlegung von Löschfristen</h3>
+<p><strong>Kriterien für Löschfristen:</strong>
+1. Zweck der Verarbeitung
+2. Gesetzliche Aufbewahrungsfristen
+3. Vertragliche Verpflichtungen
+4. Berechtigte Interessen
+5. Verjährungsfristen</p>
+<h3 id="loschfristenmatrix">Löschfristenmatrix</h3>
+<table>
+<thead>
+<tr>
+<th>Verarbeitungszweck</th>
+<th>Datenart</th>
+<th>Löschfrist</th>
+<th>Rechtsgrundlage</th>
+<th>Ausnahmen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Kundenbestellung]</td>
+<td>Bestelldaten</td>
+<td>Nach Vertragserfüllung + 2 Jahre</td>
+<td>Gewährleistung</td>
+<td>Steuerrecht: 10 Jahre</td>
+</tr>
+<tr>
+<td>[TODO: Newsletter]</td>
+<td>E-Mail, Name</td>
+<td>Bis Widerruf</td>
+<td>Einwilligung</td>
+<td>Keine</td>
+</tr>
+<tr>
+<td>[TODO: Bewerbung]</td>
+<td>Bewerberdaten</td>
+<td>6 Monate nach Absage</td>
+<td>Berechtigtes Interesse</td>
+<td>Mit Einwilligung länger</td>
+</tr>
+<tr>
+<td>[TODO: Buchhaltung]</td>
+<td>Rechnungsdaten</td>
+<td>10 Jahre</td>
+<td>AO, HGB</td>
+<td>Keine</td>
+</tr>
+<tr>
+<td>[TODO: Mitarbeiterdaten]</td>
+<td>Personaldaten</td>
+<td>10 Jahre nach Austritt</td>
+<td>Sozialversicherung</td>
+<td>Keine</td>
+</tr>
+</tbody>
+</table>
+<h2 id="gesetzliche-aufbewahrungsfristen">Gesetzliche Aufbewahrungsfristen</h2>
+<h3 id="steuerrecht-deutschland">Steuerrecht (Deutschland)</h3>
+<table>
+<thead>
+<tr>
+<th>Dokumentart</th>
+<th>Aufbewahrungsfrist</th>
+<th>Rechtsgrundlage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bücher, Aufzeichnungen, Jahresabschlüsse</td>
+<td>10 Jahre</td>
+<td>§ 147 AO</td>
+</tr>
+<tr>
+<td>Handelsbriefe, Buchungsbelege</td>
+<td>10 Jahre</td>
+<td>§ 147 AO</td>
+</tr>
+<tr>
+<td>Sonstige Unterlagen</td>
+<td>6 Jahre</td>
+<td>§ 147 AO</td>
+</tr>
+</tbody>
+</table>
+<h3 id="handelsrecht-deutschland">Handelsrecht (Deutschland)</h3>
+<table>
+<thead>
+<tr>
+<th>Dokumentart</th>
+<th>Aufbewahrungsfrist</th>
+<th>Rechtsgrundlage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Handelsbücher, Inventare, Bilanzen</td>
+<td>10 Jahre</td>
+<td>§ 257 HGB</td>
+</tr>
+<tr>
+<td>Handelsbriefe</td>
+<td>6 Jahre</td>
+<td>§ 257 HGB</td>
+</tr>
+<tr>
+<td>Buchungsbelege</td>
+<td>10 Jahre</td>
+<td>§ 257 HGB</td>
+</tr>
+</tbody>
+</table>
+<h3 id="weitere-gesetzliche-fristen">Weitere gesetzliche Fristen</h3>
+<ul>
+<li>[TODO: Sozialversicherungsrecht]</li>
+<li>[TODO: Arbeitsrecht]</li>
+<li>[TODO: Produkthaftung]</li>
+<li>[TODO: Branchenspezifische Vorschriften]</li>
+</ul>
+<h2 id="loschprozesse">Löschprozesse</h2>
+<h3 id="routinemaige-loschung">Routinemäßige Löschung</h3>
+<p><strong>Automatisierte Löschprozesse:</strong></p>
+<table>
+<thead>
+<tr>
+<th>System/Datenbank</th>
+<th>Löschrhythmus</th>
+<th>Methode</th>
+<th>Verantwortlich</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: CRM-System]</td>
+<td>Monatlich</td>
+<td>Automatisiert</td>
+<td>IT</td>
+</tr>
+<tr>
+<td>[TODO: Webserver-Logs]</td>
+<td>Täglich</td>
+<td>Automatisiert</td>
+<td>IT</td>
+</tr>
+<tr>
+<td>[TODO: Backup-Systeme]</td>
+<td>Bei Löschung</td>
+<td>Manuell</td>
+<td>IT</td>
+</tr>
+<tr>
+<td>[TODO: Archiv]</td>
+<td>Jährlich</td>
+<td>Manuell</td>
+<td>Fachabteilung</td>
+</tr>
+</tbody>
+</table>
+<h3 id="loschverfahren">Löschverfahren</h3>
+<p><strong>Schritte bei Löschung:</strong></p>
+<ol>
+<li><strong>Identifikation löschbarer Daten</strong></li>
+<li>Automatische Prüfung der Löschfristen</li>
+<li>Berücksichtigung von Ausnahmen</li>
+<li>
+<p>Erstellung Löschliste</p>
+</li>
+<li>
+<p><strong>Prüfung vor Löschung</strong></p>
+</li>
+<li>Keine laufenden Verfahren</li>
+<li>Keine gesetzlichen Aufbewahrungspflichten</li>
+<li>
+<p>Keine vertraglichen Verpflichtungen</p>
+</li>
+<li>
+<p><strong>Durchführung der Löschung</strong></p>
+</li>
+<li>Löschung in allen Systemen</li>
+<li>Löschung in Backups (oder Markierung)</li>
+<li>
+<p>Sichere Löschung (unwiederbringlich)</p>
+</li>
+<li>
+<p><strong>Dokumentation</strong></p>
+</li>
+<li>Protokollierung der Löschung</li>
+<li>Nachweis der Löschung</li>
+<li>Aufbewahrung des Löschprotokolls</li>
+</ol>
+<h3 id="sichere-loschung">Sichere Löschung</h3>
+<p><strong>Technische Löschmethoden:</strong>
+- Überschreiben von Datenträgern
+- Kryptografische Löschung (Schlüsselvernichtung)
+- Physische Vernichtung von Datenträgern
+- Sichere Löschung in Cloud-Systemen</p>
+<h2 id="ausnahmen-von-der-loschpflicht">Ausnahmen von der Löschpflicht</h2>
+<h3 id="archivierung-im-offentlichen-interesse-art-89-dsgvo">Archivierung im öffentlichen Interesse (Art. 89 DSGVO)</h3>
+<p><strong>Zulässige Archivierung für:</strong>
+- Archivzwecke im öffentlichen Interesse
+- Wissenschaftliche oder historische Forschungszwecke
+- Statistische Zwecke</p>
+<p><strong>Voraussetzungen:</strong>
+- Geeignete Garantien (Pseudonymisierung, Zugriffsbeschränkungen)
+- Datenminimierung
+- Technische und organisatorische Maßnahmen</p>
+<h3 id="aufbewahrung-fur-rechtsanspruche">Aufbewahrung für Rechtsansprüche</h3>
+<p><strong>Aufbewahrung zulässig bei:</strong>
+- Laufenden Gerichtsverfahren
+- Drohenden Rechtsstreitigkeiten
+- Verjährungsfristen noch nicht abgelaufen</p>
+<p><strong>Maßnahmen:</strong>
+- Einschränkung der Verarbeitung (Art. 18)
+- Zugriffsbeschränkungen
+- Dokumentation der Aufbewahrungsgründe</p>
+<h2 id="loschrecht-art-17-dsgvo">Löschrecht (Art. 17 DSGVO)</h2>
+<h3 id="umsetzung-des-loschrechts">Umsetzung des Löschrechts</h3>
+<p><strong>Betroffene Personen haben Recht auf Löschung, wenn:</strong>
+- Daten nicht mehr erforderlich
+- Einwilligung widerrufen
+- Widerspruch eingelegt (Art. 21)
+- Daten unrechtmäßig verarbeitet
+- Rechtliche Verpflichtung zur Löschung</p>
+<p><strong>Ausnahmen vom Löschrecht:</strong>
+- Ausübung des Rechts auf freie Meinungsäußerung
+- Erfüllung rechtlicher Verpflichtungen
+- Geltendmachung von Rechtsansprüchen
+- Archivzwecke im öffentlichen Interesse</p>
+<h3 id="loschantragsprozess">Löschantragsprozess</h3>
+<ol>
+<li><strong>Eingang des Antrags</strong></li>
+<li>Identifikation der betroffenen Person</li>
+<li>Dokumentation des Antrags</li>
+<li>
+<p>Bestätigung des Eingangs</p>
+</li>
+<li>
+<p><strong>Prüfung der Löschpflicht</strong></p>
+</li>
+<li>Sind Daten noch erforderlich?</li>
+<li>Bestehen Aufbewahrungspflichten?</li>
+<li>
+<p>Greifen Ausnahmen?</p>
+</li>
+<li>
+<p><strong>Durchführung oder Ablehnung</strong></p>
+</li>
+<li>Bei Löschpflicht: Löschung durchführen</li>
+<li>Bei Ausnahme: Begründete Ablehnung</li>
+<li>
+<p>Benachrichtigung von Empfängern (Art. 19)</p>
+</li>
+<li>
+<p><strong>Rückmeldung</strong></p>
+</li>
+<li>Information über Löschung oder Ablehnung</li>
+<li>Frist: Unverzüglich, spätestens 1 Monat</li>
+</ol>
+<h2 id="kontrollen-und-uberwachung">Kontrollen und Überwachung</h2>
+<h3 id="regelmaige-uberprufungen">Regelmäßige Überprüfungen</h3>
+<table>
+<thead>
+<tr>
+<th>Kontrolle</th>
+<th>Frequenz</th>
+<th>Verantwortlich</th>
+<th>Dokumentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Löschfristenprüfung</td>
+<td>Monatlich</td>
+<td>IT</td>
+<td>Löschprotokoll</td>
+</tr>
+<tr>
+<td>Löschkonzept-Review</td>
+<td>Jährlich</td>
+<td>DSB</td>
+<td>Review-Bericht</td>
+</tr>
+<tr>
+<td>Backup-Löschung</td>
+<td>Quartalsweise</td>
+<td>IT</td>
+<td>Backup-Protokoll</td>
+</tr>
+<tr>
+<td>Löschanträge</td>
+<td>Bei Eingang</td>
+<td>DSB</td>
+<td>Antragsregister</td>
+</tr>
+</tbody>
+</table>
+<h3 id="loschprotokollierung">Löschprotokollierung</h3>
+<p><strong>Dokumentation jeder Löschung:</strong>
+- Datum und Uhrzeit
+- Gelöschte Datenarten
+- Anzahl gelöschter Datensätze
+- Löschgrund (Frist, Antrag, etc.)
+- Durchführende Person
+- Betroffene Systeme</p>
+<h2 id="dokumentation">Dokumentation</h2>
+<h3 id="nachweispflichten">Nachweispflichten</h3>
+<p><strong>Für Accountability dokumentieren:</strong>
+- Löschkonzept mit Fristen
+- Löschprozesse und -verfahren
+- Durchgeführte Löschungen (Protokolle)
+- Bearbeitete Löschanträge
+- Ausnahmen und deren Begründung</p>
+<h3 id="verzeichnis-von-verarbeitungstatigkeiten-art-30">Verzeichnis von Verarbeitungstätigkeiten (Art. 30)</h3>
+<p><strong>Dokumentation der Speicherdauer:</strong>
+- Löschfristen für jede Verarbeitungstätigkeit
+- Begründung der Fristen
+- Gesetzliche Aufbewahrungspflichten
+- Löschverfahren</p>
+<h2 id="verknupfung-zu-anderen-dokumenten">Verknüpfung zu anderen Dokumenten</h2>
+<ul>
+<li><strong>Datenschutzgrundsätze (Art. 5):</strong> Speicherbegrenzung als Grundprinzip</li>
+<li><strong>Löschrecht (Art. 17):</strong> Umsetzung des Betroffenenrechts</li>
+<li><strong>Einschränkung (Art. 18):</strong> Alternative zur Löschung</li>
+<li><strong>Mitteilungspflicht (Art. 19):</strong> Benachrichtigung von Empfängern</li>
+<li><strong>Verzeichnis (Art. 30):</strong> Dokumentation der Löschfristen</li>
+</ul>
+<h2 id="haufige-verstoe-und-deren-vermeidung">Häufige Verstöße und deren Vermeidung</h2>
+<table>
+<thead>
+<tr>
+<th>Verstoß</th>
+<th>Beispiel</th>
+<th>Vermeidung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unbegrenzte Speicherung</td>
+<td>"Für alle Fälle aufbewahren"</td>
+<td>Löschfristen definieren</td>
+</tr>
+<tr>
+<td>Fehlende Löschprozesse</td>
+<td>Keine automatisierte Löschung</td>
+<td>Löschroutinen implementieren</td>
+</tr>
+<tr>
+<td>Ignorieren von Löschanträgen</td>
+<td>Verzögerte Bearbeitung</td>
+<td>Prozess etablieren</td>
+</tr>
+<tr>
+<td>Unvollständige Löschung</td>
+<td>Nur in einem System gelöscht</td>
+<td>Alle Systeme prüfen</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Nächste Schritte:</strong>
+1. Definieren Sie Löschfristen für alle Verarbeitungstätigkeiten
+2. Implementieren Sie automatisierte Löschprozesse
+3. Etablieren Sie Verfahren für Löschanträge
+4. Dokumentieren Sie Löschkonzept und -protokolle
+5. Schulen Sie Mitarbeiter zu Löschpflichten</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0130_Richtigkeit.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0150_Integritaet_und_Vertraulichkeit.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0120 - Data Minimization</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0120</div>
+            <h1>Data Minimization</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0110_Purpose_Limitation.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0130_Accuracy.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="data-minimization">Data Minimization</h1>
+<p><strong>Document-ID:</strong> 0120<br />
+<strong>Owner:</strong> {{ meta.owner }}<br />
+<strong>Version:</strong> {{ meta.version }}<br />
+<strong>Status:</strong> Draft<br />
+<strong>Classification:</strong> Internal<br />
+<strong>Last Update:</strong> {{ meta.date }}  </p>
+<hr />
+<h2 id="purpose">Purpose</h2>
+<p>This document describes the implementation of the principle of data minimization in {{ meta.organization }}. Only personal data that is actually necessary for the respective purpose may be collected.</p>
+<h2 id="principle-according-to-art-51c-gdpr">Principle according to Art. 5(1)(c) GDPR</h2>
+<p><strong>Legal Requirement:</strong><br />
+Personal data must be adequate, relevant and limited to what is necessary in relation to the purposes for which they are processed.</p>
+<h3 id="three-criteria">Three Criteria</h3>
+<ol>
+<li><strong>Adequate:</strong> Data must be in reasonable proportion to the purpose</li>
+<li><strong>Relevant:</strong> Data must be relevant to the purpose</li>
+<li><strong>Limited to Necessary:</strong> Collect only minimally required data</li>
+</ol>
+<h2 id="necessity-assessment">Necessity Assessment</h2>
+<h3 id="assessment-process-for-data-collection">Assessment Process for Data Collection</h3>
+<p><strong>Before each data collection, assess:</strong></p>
+<ol>
+<li><strong>Is data collection necessary for the purpose?</strong></li>
+<li>Can the purpose be achieved without this data?</li>
+<li>Are there milder means?</li>
+<li>
+<p>Is data collection proportionate?</p>
+</li>
+<li>
+<p><strong>What data is minimally required?</strong></p>
+</li>
+<li>Which data is absolutely necessary?</li>
+<li>Which data is "nice-to-have" (to avoid)?</li>
+<li>
+<p>Can data be anonymized or pseudonymized?</p>
+</li>
+<li>
+<p><strong>Documentation of Necessity</strong></p>
+</li>
+<li>Justification in records of processing activities</li>
+<li>Evidence of necessity assessment</li>
+<li>Regular review</li>
+</ol>
+<h3 id="necessity-matrix">Necessity Matrix</h3>
+<table>
+<thead>
+<tr>
+<th>Data Type</th>
+<th>Purpose</th>
+<th>Necessary?</th>
+<th>Justification</th>
+<th>Alternative</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Name]</td>
+<td>[TODO: Contract fulfillment]</td>
+<td>Yes</td>
+<td>[TODO: Identification]</td>
+<td>None</td>
+</tr>
+<tr>
+<td>[TODO: Date of birth]</td>
+<td>[TODO: Newsletter]</td>
+<td>No</td>
+<td>[TODO: Not required]</td>
+<td>Omit</td>
+</tr>
+<tr>
+<td>[TODO: Address]</td>
+<td>[TODO: Delivery]</td>
+<td>Yes</td>
+<td>[TODO: Shipping]</td>
+<td>Parcel station</td>
+</tr>
+<tr>
+<td>[TODO: Phone]</td>
+<td>[TODO: Contact]</td>
+<td>Partially</td>
+<td>[TODO: Alternative email]</td>
+<td>Email</td>
+</tr>
+</tbody>
+</table>
+<h2 id="implementation-in-our-organization">Implementation in Our Organization</h2>
+<h3 id="data-collection-by-categories">Data Collection by Categories</h3>
+<p><strong>Mandatory vs. voluntary information:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Processing Purpose</th>
+<th>Mandatory Information</th>
+<th>Voluntary Information</th>
+<th>Not Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Order]</td>
+<td>[TODO: Name, address, payment]</td>
+<td>[TODO: Phone]</td>
+<td>[TODO: Date of birth]</td>
+</tr>
+<tr>
+<td>[TODO: Newsletter]</td>
+<td>[TODO: Email]</td>
+<td>[TODO: Name]</td>
+<td>[TODO: Address]</td>
+</tr>
+<tr>
+<td>[TODO: Customer Account]</td>
+<td>[TODO: Email, password]</td>
+<td>[TODO: Profile picture]</td>
+<td>[TODO: Social media]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Marking in Forms:</strong>
+- Mark mandatory fields with *
+- Clearly mark voluntary fields
+- Explain why data is needed</p>
+<h3 id="measures-for-data-minimization">Measures for Data Minimization</h3>
+<table>
+<thead>
+<tr>
+<th>Measure</th>
+<th>Description</th>
+<th>Responsible</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Necessity Assessment]</td>
+<td>Review before new processing</td>
+<td>DPO</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: Form Optimization]</td>
+<td>Reduction of input fields</td>
+<td>IT</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: Anonymization]</td>
+<td>Use anonymous data where possible</td>
+<td>IT</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: Pseudonymization]</td>
+<td>Pseudonyms instead of clear data</td>
+<td>IT</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="technical-implementation">Technical Implementation</h2>
+<h3 id="privacy-by-design-art-25">Privacy by Design (Art. 25)</h3>
+<p><strong>Data minimization through design:</strong></p>
+<ul>
+<li>[TODO: Forms with only required fields]</li>
+<li>[TODO: Optional fields clearly marked]</li>
+<li>[TODO: Automatic anonymization after purpose fulfillment]</li>
+<li>[TODO: Pseudonymization of sensitive data]</li>
+<li>[TODO: Aggregation instead of individual data for statistics]</li>
+</ul>
+<h3 id="anonymization-and-pseudonymization">Anonymization and Pseudonymization</h3>
+<p><strong>Anonymization:</strong>
+- Complete removal of personal reference
+- No traceability to persons
+- No GDPR application anymore</p>
+<p><strong>Pseudonymization:</strong>
+- Separation of identification and content data
+- Traceability only with additional information
+- Still GDPR application, but lower risk</p>
+<p><strong>Use Cases:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Purpose</th>
+<th>Method</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Statistics]</td>
+<td>Anonymization</td>
+<td>Aggregated usage data</td>
+</tr>
+<tr>
+<td>[TODO: Analysis]</td>
+<td>Pseudonymization</td>
+<td>User ID instead of name</td>
+</tr>
+<tr>
+<td>[TODO: Research]</td>
+<td>Anonymization</td>
+<td>Removal of all identifiers</td>
+</tr>
+<tr>
+<td>[TODO: Backup]</td>
+<td>Pseudonymization</td>
+<td>Encrypted personal data</td>
+</tr>
+</tbody>
+</table>
+<h2 id="avoiding-excessive-data-collection">Avoiding Excessive Data Collection</h2>
+<h3 id="common-mistakes">Common Mistakes</h3>
+<table>
+<thead>
+<tr>
+<th>Mistake</th>
+<th>Example</th>
+<th>Correction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"Nice-to-have" data</td>
+<td>Date of birth for newsletter</td>
+<td>Collect only email</td>
+</tr>
+<tr>
+<td>Excessive profiling</td>
+<td>Tracking all activities</td>
+<td>Only necessary tracking</td>
+</tr>
+<tr>
+<td>Data retention</td>
+<td>"Might be useful someday"</td>
+<td>Only with specific purpose</td>
+</tr>
+<tr>
+<td>Missing differentiation</td>
+<td>All data as mandatory</td>
+<td>Separate mandatory vs. voluntary</td>
+</tr>
+</tbody>
+</table>
+<h3 id="checklist-against-excessive-data-collection">Checklist Against Excessive Data Collection</h3>
+<ul>
+<li>[ ] Each data field has documented purpose</li>
+<li>[ ] No "nice-to-have" data fields</li>
+<li>[ ] Mandatory and voluntary fields separated</li>
+<li>[ ] Anonymization/pseudonymization assessed</li>
+<li>[ ] No data retention</li>
+<li>[ ] Regular review of necessity</li>
+<li>[ ] Employees trained on data minimization</li>
+</ul>
+<h2 id="regular-review">Regular Review</h2>
+<h3 id="data-inventory-review">Data Inventory Review</h3>
+<p><strong>Quarterly review:</strong></p>
+<ol>
+<li><strong>What data is collected?</strong></li>
+<li>Inventory of all data fields</li>
+<li>
+<p>Assignment to processing purposes</p>
+</li>
+<li>
+<p><strong>Is all data still necessary?</strong></p>
+</li>
+<li>Necessity assessment for existing data</li>
+<li>
+<p>Identification of superfluous data</p>
+</li>
+<li>
+<p><strong>Can data be reduced?</strong></p>
+</li>
+<li>Possibilities for anonymization</li>
+<li>Possibilities for pseudonymization</li>
+<li>Deletion of no longer required data</li>
+</ol>
+<h3 id="controls">Controls</h3>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>Frequency</th>
+<th>Responsible</th>
+<th>Documentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Necessity Assessment</td>
+<td>For new processing</td>
+<td>DPO</td>
+<td>Review protocol</td>
+</tr>
+<tr>
+<td>Data Inventory Review</td>
+<td>Quarterly</td>
+<td>DPO</td>
+<td>Inventory list</td>
+</tr>
+<tr>
+<td>Form Review</td>
+<td>Annually</td>
+<td>IT/DPO</td>
+<td>Review report</td>
+</tr>
+<tr>
+<td>Anonymization Potential</td>
+<td>Annually</td>
+<td>IT</td>
+<td>Analysis report</td>
+</tr>
+</tbody>
+</table>
+<h2 id="documentation">Documentation</h2>
+<h3 id="evidence-requirements">Evidence Requirements</h3>
+<p><strong>Document for each processing:</strong>
+- What data is collected?
+- Why is each data type necessary?
+- Were alternatives assessed (anonymization, pseudonymization)?
+- How is necessity regularly reviewed?</p>
+<h3 id="records-of-processing-activities-art-30">Records of Processing Activities (Art. 30)</h3>
+<p><strong>Documentation of data minimization:</strong>
+- Categories of personal data
+- Justification of necessity
+- Minimization measures
+- Anonymization/pseudonymization</p>
+<h2 id="links-to-other-documents">Links to Other Documents</h2>
+<ul>
+<li><strong>Data Protection Principles (Art. 5):</strong> Data minimization as core principle</li>
+<li><strong>Purpose Limitation (Art. 5(1)(b)):</strong> Purpose-related necessity</li>
+<li><strong>Privacy by Design (Art. 25):</strong> Technical implementation</li>
+<li><strong>Records (Art. 30):</strong> Documentation of data types</li>
+<li><strong>Information Obligations (Art. 13-14):</strong> Information about collected data</li>
+</ul>
+<h2 id="common-violations-and-their-prevention">Common Violations and Their Prevention</h2>
+<table>
+<thead>
+<tr>
+<th>Violation</th>
+<th>Example</th>
+<th>Prevention</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Excessive data collection</td>
+<td>All data "just in case"</td>
+<td>Necessity assessment</td>
+</tr>
+<tr>
+<td>Missing differentiation</td>
+<td>All fields as mandatory</td>
+<td>Mandatory vs. voluntary</td>
+</tr>
+<tr>
+<td>Data retention</td>
+<td>Data without specific purpose</td>
+<td>Observe purpose limitation</td>
+</tr>
+<tr>
+<td>No anonymization</td>
+<td>Clear data where not needed</td>
+<td>Assess anonymization</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Next Steps:</strong>
+1. Conduct necessity assessment for all data collections
+2. Optimize forms and reduce data fields
+3. Implement anonymization and pseudonymization
+4. Train employees on data minimization
+5. Establish regular data inventory reviews</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0110_Purpose_Limitation.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0130_Accuracy.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

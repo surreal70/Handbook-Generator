@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0230 - Assumptions (Annahmen)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0230</div>
+            <h1>Assumptions (Annahmen)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0220_Organizational_Security_Policies.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0240_Threat_Agents_and_Assets.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="assumptions-annahmen">Assumptions (Annahmen)</h1>
+<p><strong>Dokument-ID:</strong> 0230<br />
+<strong>Owner:</strong> {{ meta.owner }}<br />
+<strong>Version:</strong> {{ meta.version }}<br />
+<strong>Status:</strong> Entwurf<br />
+<strong>Klassifizierung:</strong> Vertraulich<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.date }}  </p>
+<hr />
+<h2 id="1-assumptions-overview">1. Assumptions Overview</h2>
+<h3 id="11-purpose">1.1 Purpose</h3>
+<p>Annahmen definieren Erwartungen an die Betriebsumgebung des TOE:
+- <strong>Physische Umgebung</strong>: Annahmen über physische Sicherheit und Infrastruktur
+- <strong>Personal</strong>: Annahmen über Benutzer, Administratoren und deren Verhalten
+- <strong>Konnektivität</strong>: Annahmen über Netzwerk und Kommunikationsinfrastruktur
+- <strong>Technische Umgebung</strong>: Annahmen über IT-Infrastruktur und Plattformen</p>
+<h3 id="12-assumption-categories">1.2 Assumption Categories</h3>
+<p><strong>Annahmenkategorien:</strong>
+- <strong>Physical Assumptions</strong>: Physische Sicherheitsannahmen
+- <strong>Personnel Assumptions</strong>: Personalannahmen
+- <strong>Connectivity Assumptions</strong>: Konnektivitätsannahmen
+- <strong>Platform Assumptions</strong>: Plattformannahmen
+- <strong>Operational Assumptions</strong>: Betriebsannahmen</p>
+<h3 id="13-assumption-scope">1.3 Assumption Scope</h3>
+<p><strong>Im Scope:</strong>
+[TODO: Welche Aspekte der Umgebung werden durch Annahmen abgedeckt?]</p>
+<p><strong>Außerhalb des Scope:</strong>
+[TODO: Welche Aspekte werden nicht durch Annahmen abgedeckt?]</p>
+<h2 id="2-physical-assumptions">2. Physical Assumptions</h2>
+<h3 id="aphysical_security">A.PHYSICAL_SECURITY</h3>
+<p><strong>Annahme-ID:</strong> A.PHYSICAL_SECURITY<br />
+<strong>Kategorie:</strong> Physical<br />
+<strong>Kritikalität:</strong> [TODO: High/Medium/Low]<br />
+<strong>Verpflichtend:</strong> [TODO: Yes/No]</p>
+<p><strong>Beschreibung:</strong>
+[TODO: Der TOE wird in einer physisch gesicherten Umgebung betrieben, die vor unbefugtem physischen Zugriff geschützt ist]</p>
+<p><strong>Begründung:</strong>
+[TODO: Physische Sicherheit ist erforderlich, um Hardware-Manipulation und direkten Zugriff auf das System zu verhindern]</p>
+<p><strong>Anforderungen:</strong>
+- [TODO: Zutrittskontrolle zu Serverräumen]
+- [TODO: Videoüberwachung kritischer Bereiche]
+- [TODO: Alarmanlage bei unbefugtem Zutritt]
+- [TODO: Sichere Aufbewahrung von Backup-Medien]
+- [TODO: Besucherprotokoll und Begleitpflicht]</p>
+<p><strong>Auswirkungen bei Nichterfüllung:</strong>
+[TODO: Beschreibe die Sicherheitsrisiken, wenn diese Annahme nicht erfüllt ist]
+- Risiko: [TODO: z.B. Hardware-Manipulation, Diebstahl]
+- Betroffene Assets: [TODO: A.001, A.002]
+- Betroffene Bedrohungen: [TODO: T.001, T.003]</p>
+<p><strong>Verantwortlichkeit:</strong>
+- <strong>Primär:</strong> [TODO: Facility Management]
+- <strong>Sekundär:</strong> [TODO: Security Team]</p>
+<p><strong>Verifikation:</strong>
+[TODO: Wie wird überprüft, dass diese Annahme erfüllt ist?]
+- Methode: [TODO: z.B. Physische Inspektion, Audit]
+- Frequenz: [TODO: z.B. Jährlich, Quartalsweise]
+- Dokumentation: [TODO: z.B. Audit-Bericht, Checkliste]</p>
+<hr />
+<h3 id="aenvironmental_protection">A.ENVIRONMENTAL_PROTECTION</h3>
+<p><strong>Annahme-ID:</strong> A.ENVIRONMENTAL_PROTECTION<br />
+<strong>Kategorie:</strong> Physical<br />
+<strong>Kritikalität:</strong> [TODO: High/Medium/Low]<br />
+<strong>Verpflichtend:</strong> [TODO: Yes/No]</p>
+<p><strong>Beschreibung:</strong>
+[TODO: Der TOE wird in einer Umgebung betrieben, die vor Umwelteinflüssen geschützt ist]</p>
+<p><strong>Begründung:</strong>
+[TODO: Schutz vor Feuer, Wasser, Temperatur, Feuchtigkeit ist erforderlich für Verfügbarkeit]</p>
+<p><strong>Anforderungen:</strong>
+- [TODO: Klimatisierung und Temperaturkontrolle]
+- [TODO: Brandmeldeanlage und Löschsystem]
+- [TODO: Wasserschutz und Leckageerkennung]
+- [TODO: Unterbrechungsfreie Stromversorgung (USV)]
+- [TODO: Notstromversorgung]</p>
+<p>[TODO: Füge weitere Physical Assumptions hinzu]</p>
+<h2 id="3-personnel-assumptions">3. Personnel Assumptions</h2>
+<h3 id="atrusted_admin">A.TRUSTED_ADMIN</h3>
+<p><strong>Annahme-ID:</strong> A.TRUSTED_ADMIN<br />
+<strong>Kategorie:</strong> Personnel<br />
+<strong>Kritikalität:</strong> [TODO: High/Medium/Low]<br />
+<strong>Verpflichtend:</strong> [TODO: Yes/No]</p>
+<p><strong>Beschreibung:</strong>
+[TODO: Administratoren sind vertrauenswürdig, kompetent und handeln nicht böswillig]</p>
+<p><strong>Begründung:</strong>
+[TODO: Administratoren haben privilegierten Zugriff und können Sicherheitsmechanismen umgehen]</p>
+<p><strong>Anforderungen:</strong>
+- [TODO: Hintergrundüberprüfung vor Einstellung]
+- [TODO: Unterzeichnung von Vertraulichkeitsvereinbarungen]
+- [TODO: Regelmäßige Sicherheitsschulungen]
+- [TODO: Vier-Augen-Prinzip für kritische Operationen]
+- [TODO: Überwachung administrativer Aktivitäten]
+- [TODO: Regelmäßige Überprüfung von Administratorrechten]</p>
+<p><strong>Auswirkungen bei Nichterfüllung:</strong>
+[TODO: Beschreibe die Sicherheitsrisiken]
+- Risiko: [TODO: z.B. Insider-Bedrohung, Sabotage, Datendiebstahl]
+- Betroffene Assets: [TODO: Alle Assets]
+- Betroffene Bedrohungen: [TODO: T.002, T.004, T.006]</p>
+<p><strong>Verantwortlichkeit:</strong>
+- <strong>Primär:</strong> [TODO: HR Department]
+- <strong>Sekundär:</strong> [TODO: Security Team, IT Management]</p>
+<p><strong>Verifikation:</strong>
+[TODO: Wie wird überprüft, dass diese Annahme erfüllt ist?]
+- Methode: [TODO: z.B. Background Checks, Audit-Log-Review]
+- Frequenz: [TODO: z.B. Bei Einstellung, Jährlich]
+- Dokumentation: [TODO: z.B. HR-Akte, Schulungsnachweise]</p>
+<hr />
+<h3 id="auser_training">A.USER_TRAINING</h3>
+<p><strong>Annahme-ID:</strong> A.USER_TRAINING<br />
+<strong>Kategorie:</strong> Personnel<br />
+<strong>Kritikalität:</strong> [TODO: High/Medium/Low]<br />
+<strong>Verpflichtend:</strong> [TODO: Yes/No]</p>
+<p><strong>Beschreibung:</strong>
+[TODO: Benutzer sind geschult und befolgen Sicherheitsrichtlinien]</p>
+<p><strong>Begründung:</strong>
+[TODO: Benutzer müssen Sicherheitsmechanismen verstehen und korrekt verwenden]</p>
+<p><strong>Anforderungen:</strong>
+- [TODO: Sicherheitsschulung vor Systemzugang]
+- [TODO: Regelmäßige Auffrischungsschulungen]
+- [TODO: Phishing-Awareness-Training]
+- [TODO: Schulung zu Passwortrichtlinien]
+- [TODO: Schulung zu Datenklassifizierung]
+- [TODO: Incident-Reporting-Schulung]</p>
+<p>[TODO: Füge weitere Personnel Assumptions hinzu]</p>
+<h2 id="4-connectivity-assumptions">4. Connectivity Assumptions</h2>
+<h3 id="anetwork_security">A.NETWORK_SECURITY</h3>
+<p><strong>Annahme-ID:</strong> A.NETWORK_SECURITY<br />
+<strong>Kategorie:</strong> Connectivity<br />
+<strong>Kritikalität:</strong> [TODO: High/Medium/Low]<br />
+<strong>Verpflichtend:</strong> [TODO: Yes/No]</p>
+<p><strong>Beschreibung:</strong>
+[TODO: Das Netzwerk, in dem der TOE betrieben wird, ist durch Firewalls und andere Sicherheitsmechanismen geschützt]</p>
+<p><strong>Begründung:</strong>
+[TODO: Netzwerksicherheit ist erforderlich, um externe Angriffe abzuwehren]</p>
+<p><strong>Anforderungen:</strong>
+- [TODO: Firewall zwischen TOE und Internet]
+- [TODO: Netzwerksegmentierung]
+- [TODO: Intrusion Detection/Prevention System (IDS/IPS)]
+- [TODO: Regelmäßige Netzwerk-Scans]
+- [TODO: VPN für Remote-Zugriff]
+- [TODO: DDoS-Schutz]</p>
+<p><strong>Auswirkungen bei Nichterfüllung:</strong>
+[TODO: Beschreibe die Sicherheitsrisiken]
+- Risiko: [TODO: z.B. Netzwerkangriffe, Datenabfluss]
+- Betroffene Assets: [TODO: A.003, A.004]
+- Betroffene Bedrohungen: [TODO: T.005, T.007]</p>
+<p><strong>Verantwortlichkeit:</strong>
+- <strong>Primär:</strong> [TODO: Network Team]
+- <strong>Sekundär:</strong> [TODO: Security Team]</p>
+<p><strong>Verifikation:</strong>
+[TODO: Wie wird überprüft, dass diese Annahme erfüllt ist?]
+- Methode: [TODO: z.B. Netzwerk-Audit, Penetration Test]
+- Frequenz: [TODO: z.B. Quartalsweise]
+- Dokumentation: [TODO: z.B. Netzwerkdiagramm, Firewall-Regeln]</p>
+<hr />
+<h3 id="asecure_communication">A.SECURE_COMMUNICATION</h3>
+<p><strong>Annahme-ID:</strong> A.SECURE_COMMUNICATION<br />
+<strong>Kategorie:</strong> Connectivity<br />
+<strong>Kritikalität:</strong> [TODO: High/Medium/Low]<br />
+<strong>Verpflichtend:</strong> [TODO: Yes/No]</p>
+<p><strong>Beschreibung:</strong>
+[TODO: Kommunikationskanäle zwischen TOE und externen Systemen sind verschlüsselt]</p>
+<p><strong>Begründung:</strong>
+[TODO: Verschlüsselung schützt vor Abhören und Man-in-the-Middle-Angriffen]</p>
+<p><strong>Anforderungen:</strong>
+- [TODO: TLS 1.2 oder höher für alle Verbindungen]
+- [TODO: Zertifikatsvalidierung]
+- [TODO: Sichere Cipher Suites]
+- [TODO: Regelmäßige Zertifikatserneuerung]</p>
+<p>[TODO: Füge weitere Connectivity Assumptions hinzu]</p>
+<h2 id="5-platform-assumptions">5. Platform Assumptions</h2>
+<h3 id="atrusted_platform">A.TRUSTED_PLATFORM</h3>
+<p><strong>Annahme-ID:</strong> A.TRUSTED_PLATFORM<br />
+<strong>Kategorie:</strong> Platform<br />
+<strong>Kritikalität:</strong> [TODO: High/Medium/Low]<br />
+<strong>Verpflichtend:</strong> [TODO: Yes/No]</p>
+<p><strong>Beschreibung:</strong>
+[TODO: Die Plattform, auf der der TOE läuft, ist vertrauenswürdig und sicher konfiguriert]</p>
+<p><strong>Begründung:</strong>
+[TODO: TOE-Sicherheit hängt von der Sicherheit der zugrunde liegenden Plattform ab]</p>
+<p><strong>Anforderungen:</strong>
+- [TODO: Aktuelles und gepatchtes Betriebssystem]
+- [TODO: Hardening gemäß Best Practices (z.B. CIS Benchmarks)]
+- [TODO: Deaktivierung nicht benötigter Dienste]
+- [TODO: Host-basierte Firewall]
+- [TODO: Antivirus/Endpoint Protection]
+- [TODO: Regelmäßige Schwachstellenscans]</p>
+<p><strong>Auswirkungen bei Nichterfüllung:</strong>
+[TODO: Beschreibe die Sicherheitsrisiken]
+- Risiko: [TODO: z.B. Kompromittierung der Plattform, Privilege Escalation]
+- Betroffene Assets: [TODO: Alle Assets]
+- Betroffene Bedrohungen: [TODO: T.008, T.009]</p>
+<p><strong>Verantwortlichkeit:</strong>
+- <strong>Primär:</strong> [TODO: System Administration]
+- <strong>Sekundär:</strong> [TODO: Security Team]</p>
+<p><strong>Verifikation:</strong>
+[TODO: Wie wird überprüft, dass diese Annahme erfüllt ist?]
+- Methode: [TODO: z.B. Configuration Audit, Vulnerability Scan]
+- Frequenz: [TODO: z.B. Monatlich]
+- Dokumentation: [TODO: z.B. Scan-Berichte, Konfigurationsdokumentation]</p>
+<hr />
+<h3 id="aplatform_availability">A.PLATFORM_AVAILABILITY</h3>
+<p><strong>Annahme-ID:</strong> A.PLATFORM_AVAILABILITY<br />
+<strong>Kategorie:</strong> Platform<br />
+<strong>Kritikalität:</strong> [TODO: High/Medium/Low]<br />
+<strong>Verpflichtend:</strong> [TODO: Yes/No]</p>
+<p><strong>Beschreibung:</strong>
+[TODO: Die Plattform bietet ausreichende Ressourcen und Verfügbarkeit für den TOE-Betrieb]</p>
+<p><strong>Begründung:</strong>
+[TODO: TOE benötigt ausreichende Ressourcen für ordnungsgemäßen Betrieb]</p>
+<p><strong>Anforderungen:</strong>
+- [TODO: Ausreichende CPU-Kapazität]
+- [TODO: Ausreichender Arbeitsspeicher]
+- [TODO: Ausreichender Speicherplatz]
+- [TODO: Hochverfügbarkeitsarchitektur (falls erforderlich)]
+- [TODO: Regelmäßige Kapazitätsplanung]</p>
+<p>[TODO: Füge weitere Platform Assumptions hinzu]</p>
+<h2 id="6-operational-assumptions">6. Operational Assumptions</h2>
+<h3 id="asecurity_monitoring">A.SECURITY_MONITORING</h3>
+<p><strong>Annahme-ID:</strong> A.SECURITY_MONITORING<br />
+<strong>Kategorie:</strong> Operational<br />
+<strong>Kritikalität:</strong> [TODO: High/Medium/Low]<br />
+<strong>Verpflichtend:</strong> [TODO: Yes/No]</p>
+<p><strong>Beschreibung:</strong>
+[TODO: Sicherheitsereignisse werden kontinuierlich überwacht und analysiert]</p>
+<p><strong>Begründung:</strong>
+[TODO: Frühzeitige Erkennung von Sicherheitsvorfällen ist kritisch]</p>
+<p><strong>Anforderungen:</strong>
+- [TODO: 24/7 Security Operations Center (SOC)]
+- [TODO: SIEM-System für Log-Aggregation und -Analyse]
+- [TODO: Automatische Alerting bei kritischen Ereignissen]
+- [TODO: Definierte Incident-Response-Prozesse]
+- [TODO: Regelmäßige Überprüfung von Sicherheitsereignissen]</p>
+<p><strong>Auswirkungen bei Nichterfüllung:</strong>
+[TODO: Beschreibe die Sicherheitsrisiken]
+- Risiko: [TODO: z.B. Verspätete Erkennung von Angriffen]
+- Betroffene Assets: [TODO: Alle Assets]
+- Betroffene Bedrohungen: [TODO: Alle Bedrohungen]</p>
+<p><strong>Verantwortlichkeit:</strong>
+- <strong>Primär:</strong> [TODO: Security Operations Team]
+- <strong>Sekundär:</strong> [TODO: IT Operations]</p>
+<p><strong>Verifikation:</strong>
+[TODO: Wie wird überprüft, dass diese Annahme erfüllt ist?]
+- Methode: [TODO: z.B. SOC-Audit, Incident-Response-Test]
+- Frequenz: [TODO: z.B. Quartalsweise]
+- Dokumentation: [TODO: z.B. SOC-Berichte, Incident-Logs]</p>
+<hr />
+<h3 id="abackup_recovery">A.BACKUP_RECOVERY</h3>
+<p><strong>Annahme-ID:</strong> A.BACKUP_RECOVERY<br />
+<strong>Kategorie:</strong> Operational<br />
+<strong>Kritikalität:</strong> [TODO: High/Medium/Low]<br />
+<strong>Verpflichtend:</strong> [TODO: Yes/No]</p>
+<p><strong>Beschreibung:</strong>
+[TODO: Regelmäßige Backups werden erstellt und Wiederherstellungsprozesse sind getestet]</p>
+<p><strong>Begründung:</strong>
+[TODO: Backups sind erforderlich für Disaster Recovery und Business Continuity]</p>
+<p><strong>Anforderungen:</strong>
+- [TODO: Tägliche inkrementelle Backups]
+- [TODO: Wöchentliche vollständige Backups]
+- [TODO: Offsite-Speicherung von Backups]
+- [TODO: Verschlüsselung von Backup-Daten]
+- [TODO: Regelmäßige Wiederherstellungstests]
+- [TODO: Dokumentierte Recovery-Prozeduren]</p>
+<p>[TODO: Füge weitere Operational Assumptions hinzu]</p>
+<h2 id="7-assumption-summary">7. Assumption Summary</h2>
+<h3 id="71-assumption-statistics">7.1 Assumption Statistics</h3>
+<p><strong>Annahmenstatistik:</strong>
+- Gesamtanzahl Annahmen: [TODO: Anzahl]
+- Physical Assumptions: [TODO: Anzahl]
+- Personnel Assumptions: [TODO: Anzahl]
+- Connectivity Assumptions: [TODO: Anzahl]
+- Platform Assumptions: [TODO: Anzahl]
+- Operational Assumptions: [TODO: Anzahl]</p>
+<h3 id="72-criticality-distribution">7.2 Criticality Distribution</h3>
+<p><strong>Kritikalitätsverteilung:</strong>
+- High Criticality: [TODO: Anzahl] ([TODO: %])
+- Medium Criticality: [TODO: Anzahl] ([TODO: %])
+- Low Criticality: [TODO: Anzahl] ([TODO: %])</p>
+<h3 id="73-mandatory-vs-optional">7.3 Mandatory vs. Optional</h3>
+<p><strong>Verpflichtende vs. Optionale Annahmen:</strong>
+- Mandatory: [TODO: Anzahl] ([TODO: %])
+- Optional: [TODO: Anzahl] ([TODO: %])</p>
+<h2 id="8-assumption-validation">8. Assumption Validation</h2>
+<h3 id="81-validation-methods">8.1 Validation Methods</h3>
+<p><strong>Validierungsmethoden:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Assumption ID</th>
+<th>Validation Method</th>
+<th>Frequency</th>
+<th>Responsible Party</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: A.001]</td>
+<td>[TODO: Methode]</td>
+<td>[TODO: Frequenz]</td>
+<td>[TODO: Verantwortlich]</td>
+</tr>
+<tr>
+<td>[TODO: A.002]</td>
+<td>[TODO: Methode]</td>
+<td>[TODO: Frequenz]</td>
+<td>[TODO: Verantwortlich]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="82-validation-schedule">8.2 Validation Schedule</h3>
+<p><strong>Validierungsplan:</strong>
+- [TODO: Monatlich]: [TODO: A.001, A.003]
+- [TODO: Quartalsweise]: [TODO: A.002, A.004, A.005]
+- [TODO: Jährlich]: [TODO: A.006, A.007]</p>
+<h3 id="83-validation-documentation">8.3 Validation Documentation</h3>
+<p><strong>Validierungsdokumentation:</strong>
+[TODO: Beschreibe, wie Validierungsergebnisse dokumentiert werden]</p>
+<h2 id="9-responsibility-matrix">9. Responsibility Matrix</h2>
+<h3 id="91-primary-responsibilities">9.1 Primary Responsibilities</h3>
+<p><strong>Primäre Verantwortlichkeiten:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Organization Unit</th>
+<th>Assumptions</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Facility Management]</td>
+<td>[TODO: A.001, A.002]</td>
+<td>[TODO: 2]</td>
+</tr>
+<tr>
+<td>[TODO: HR Department]</td>
+<td>[TODO: A.003, A.004]</td>
+<td>[TODO: 2]</td>
+</tr>
+<tr>
+<td>[TODO: Network Team]</td>
+<td>[TODO: A.005, A.006]</td>
+<td>[TODO: 2]</td>
+</tr>
+<tr>
+<td>[TODO: System Administration]</td>
+<td>[TODO: A.007, A.008]</td>
+<td>[TODO: 2]</td>
+</tr>
+<tr>
+<td>[TODO: Security Operations]</td>
+<td>[TODO: A.009, A.010]</td>
+<td>[TODO: 2]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="92-shared-responsibilities">9.2 Shared Responsibilities</h3>
+<p><strong>Geteilte Verantwortlichkeiten:</strong>
+[TODO: Beschreibe Annahmen mit geteilten Verantwortlichkeiten]</p>
+<h2 id="10-traceability">10. Traceability</h2>
+<h3 id="101-assumption-to-threat-mapping">10.1 Assumption-to-Threat Mapping</h3>
+<p><strong>Zuordnung Annahmen zu Bedrohungen:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Assumption ID</th>
+<th>Mitigates Threats</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: A.001]</td>
+<td>[TODO: T.001, T.003]</td>
+<td>[TODO: Begründung]</td>
+</tr>
+<tr>
+<td>[TODO: A.002]</td>
+<td>[TODO: T.002, T.005]</td>
+<td>[TODO: Begründung]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="102-assumption-to-asset-mapping">10.2 Assumption-to-Asset Mapping</h3>
+<p><strong>Zuordnung Annahmen zu Assets:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Assumption ID</th>
+<th>Protects Assets</th>
+<th>Protection Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: A.001]</td>
+<td>[TODO: A.001, A.002]</td>
+<td>[TODO: Physical Protection]</td>
+</tr>
+<tr>
+<td>[TODO: A.002]</td>
+<td>[TODO: A.003]</td>
+<td>[TODO: Availability]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="103-assumption-to-osp-mapping">10.3 Assumption-to-OSP Mapping</h3>
+<p><strong>Zuordnung Annahmen zu OSPs:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Assumption ID</th>
+<th>Supports OSPs</th>
+<th>Relationship</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: A.001]</td>
+<td>[TODO: P.001, P.003]</td>
+<td>[TODO: Enables enforcement]</td>
+</tr>
+<tr>
+<td>[TODO: A.002]</td>
+<td>[TODO: P.002]</td>
+<td>[TODO: Prerequisite]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Nächste Schritte:</strong>
+1. Vervollständige alle [TODO]-Platzhalter mit umgebungsspezifischen Annahmen
+2. Dokumentiere alle relevanten Annahmen
+3. Definiere Validierungsmethoden
+4. Weise Verantwortlichkeiten zu
+5. Erstelle Validierungsplan
+6. Überprüfe Konsistenz mit Threats (Template 0210), OSPs (Template 0220) und Security Objectives (Template 0300)</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0220_Organizational_Security_Policies.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0240_Threat_Agents_and_Assets.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

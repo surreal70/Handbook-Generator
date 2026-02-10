@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0150 - Integrity and Confidentiality</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0150</div>
+            <h1>Integrity and Confidentiality</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0140_Storage_Limitation.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0200_Transparent_Information_and_Communication.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="integrity-and-confidentiality">Integrity and Confidentiality</h1>
+<p><strong>Document-ID:</strong> 0150<br />
+<strong>Owner:</strong> {{ meta.owner }}<br />
+<strong>Version:</strong> {{ meta.version }}<br />
+<strong>Status:</strong> Draft<br />
+<strong>Classification:</strong> Internal<br />
+<strong>Last Update:</strong> {{ meta.date }}  </p>
+<hr />
+<h2 id="purpose">Purpose</h2>
+<p>This document describes the implementation of the principle of integrity and confidentiality in {{ meta.organization }}. Personal data must be processed securely and protected from unauthorized access.</p>
+<h2 id="principle-according-to-art-51f-gdpr">Principle according to Art. 5(1)(f) GDPR</h2>
+<p><strong>Legal Requirement:</strong><br />
+Personal data must be processed in a manner that ensures appropriate security of the personal data, including protection against unauthorized or unlawful processing and against accidental loss, destruction or damage, using appropriate technical or organizational measures.</p>
+<h3 id="protection-goals">Protection Goals</h3>
+<ol>
+<li><strong>Confidentiality:</strong> Protection against unauthorized access</li>
+<li><strong>Integrity:</strong> Protection against unauthorized modification</li>
+<li><strong>Availability:</strong> Protection against loss or destruction</li>
+<li><strong>Resilience:</strong> Resistance of systems</li>
+</ol>
+<h2 id="technical-and-organizational-measures-tom">Technical and Organizational Measures (TOM)</h2>
+<h3 id="overview-of-measure-categories-art-32-gdpr">Overview of Measure Categories (Art. 32 GDPR)</h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Description</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Access Control</td>
+<td>Protection against unauthorized entry</td>
+<td>Access controls, alarms, video surveillance</td>
+</tr>
+<tr>
+<td>Authentication Control</td>
+<td>Protection against unauthorized system use</td>
+<td>User authentication, password policies, MFA</td>
+</tr>
+<tr>
+<td>Authorization Control</td>
+<td>Protection against unauthorized data access</td>
+<td>Permission concept, role model, need-to-know</td>
+</tr>
+<tr>
+<td>Transmission Control</td>
+<td>Protection during data transmission</td>
+<td>Encryption, VPN, secure protocols</td>
+</tr>
+<tr>
+<td>Input Control</td>
+<td>Traceability of inputs</td>
+<td>Logging, audit trails, versioning</td>
+</tr>
+<tr>
+<td>Processing Control</td>
+<td>Security in data processing</td>
+<td>DPA, controls, audits</td>
+</tr>
+<tr>
+<td>Availability Control</td>
+<td>Protection against data loss</td>
+<td>Backups, redundancy, disaster recovery</td>
+</tr>
+<tr>
+<td>Separation Control</td>
+<td>Separation of different purposes</td>
+<td>Multi-tenancy, data segmentation</td>
+</tr>
+</tbody>
+</table>
+<h2 id="access-control">Access Control</h2>
+<h3 id="physical-security">Physical Security</h3>
+<p><strong>Measures to protect against unauthorized entry:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Measure</th>
+<th>Description</th>
+<th>Responsible</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Access Controls]</td>
+<td>Chip cards, keys, codes</td>
+<td>Facility Management</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: Visitor Registration]</td>
+<td>Registration and escort</td>
+<td>Reception</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: Video Surveillance]</td>
+<td>Monitoring of sensitive areas</td>
+<td>Security</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: Alarm Systems]</td>
+<td>Intrusion detection systems</td>
+<td>Security</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: Server Room Security]</td>
+<td>Special protection for servers</td>
+<td>IT</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="authentication-control">Authentication Control</h2>
+<h3 id="authentication-and-authorization">Authentication and Authorization</h3>
+<p><strong>Measures for system access control:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Measure</th>
+<th>Description</th>
+<th>Implementation</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: User Authentication]</td>
+<td>Unique user accounts</td>
+<td>Active Directory</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: Password Policy]</td>
+<td>Complexity, length, expiration</td>
+<td>Group policies</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: Multi-Factor Authentication]</td>
+<td>Additional authentication factor</td>
+<td>MFA system</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: Single Sign-On]</td>
+<td>Central authentication</td>
+<td>SSO solution</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: Automatic Lockout]</td>
+<td>After inactivity</td>
+<td>System setting</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="password-policy">Password Policy</h3>
+<p><strong>Requirements:</strong>
+- Minimum length: [TODO: e.g., 12 characters]
+- Complexity: [TODO: Upper/lowercase, numbers, special characters]
+- Expiration: [TODO: e.g., 90 days]
+- History: [TODO: e.g., last 5 passwords not reusable]
+- Lockout: [TODO: After 5 failed attempts]</p>
+<h2 id="authorization-control">Authorization Control</h2>
+<h3 id="permission-concept">Permission Concept</h3>
+<p><strong>Principles:</strong>
+- Need-to-know: Only necessary access
+- Least Privilege: Minimal permissions
+- Role-Based Access Control (RBAC): Role-based access
+- Regular Review: Quarterly recertification</p>
+<h3 id="permission-matrix">Permission Matrix</h3>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>System/Data</th>
+<th>Access</th>
+<th>Justification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Administrator]</td>
+<td>All systems</td>
+<td>Full access</td>
+<td>System administration</td>
+</tr>
+<tr>
+<td>[TODO: Sales]</td>
+<td>CRM</td>
+<td>Read/Write</td>
+<td>Customer service</td>
+</tr>
+<tr>
+<td>[TODO: Accounting]</td>
+<td>Financial system</td>
+<td>Read/Write</td>
+<td>Accounting</td>
+</tr>
+<tr>
+<td>[TODO: Support]</td>
+<td>Ticket system</td>
+<td>Read/Write</td>
+<td>Customer service</td>
+</tr>
+</tbody>
+</table>
+<h3 id="access-control-processes">Access Control Processes</h3>
+<table>
+<thead>
+<tr>
+<th>Process</th>
+<th>Description</th>
+<th>Responsible</th>
+<th>Frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Permission Grant</td>
+<td>Request and approval</td>
+<td>IT/Supervisor</td>
+<td>As needed</td>
+</tr>
+<tr>
+<td>Recertification</td>
+<td>Review of existing rights</td>
+<td>IT/Supervisor</td>
+<td>Quarterly</td>
+</tr>
+<tr>
+<td>Revocation on Departure</td>
+<td>Immediate lockout</td>
+<td>HR/IT</td>
+<td>On departure</td>
+</tr>
+<tr>
+<td>Privileged Access</td>
+<td>Special control</td>
+<td>IT Security</td>
+<td>Monthly</td>
+</tr>
+</tbody>
+</table>
+<h2 id="transmission-control">Transmission Control</h2>
+<h3 id="encryption">Encryption</h3>
+<p><strong>Encryption Measures:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Method</th>
+<th>Standard</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Data Transmission]</td>
+<td>TLS/SSL</td>
+<td>TLS 1.2+</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: Email]</td>
+<td>S/MIME or PGP</td>
+<td>-</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: Data Carriers]</td>
+<td>Disk encryption</td>
+<td>AES-256</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: Databases]</td>
+<td>Transparent Data Encryption</td>
+<td>AES-256</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: Backups]</td>
+<td>Encrypted backups</td>
+<td>AES-256</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="secure-data-transmission">Secure Data Transmission</h3>
+<p><strong>Measures:</strong>
+- [TODO: VPN for remote access]
+- [TODO: HTTPS for web applications]
+- [TODO: SFTP for file transfers]
+- [TODO: Encrypted email for sensitive data]
+- [TODO: Secure cloud connections]</p>
+<h2 id="input-control">Input Control</h2>
+<h3 id="logging-and-audit-trails">Logging and Audit Trails</h3>
+<p><strong>Logging of:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Details</th>
+<th>Retention</th>
+<th>Access</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Logins]</td>
+<td>Success/failure, timestamp</td>
+<td>90 days</td>
+<td>IT Security</td>
+</tr>
+<tr>
+<td>[TODO: Data Changes]</td>
+<td>Who, what, when</td>
+<td>1 year</td>
+<td>DPO</td>
+</tr>
+<tr>
+<td>[TODO: Access to Sensitive Data]</td>
+<td>User, timestamp, data</td>
+<td>1 year</td>
+<td>DPO</td>
+</tr>
+<tr>
+<td>[TODO: System Changes]</td>
+<td>Administrator, change</td>
+<td>2 years</td>
+<td>IT</td>
+</tr>
+<tr>
+<td>[TODO: Security Events]</td>
+<td>Type, timestamp, source</td>
+<td>2 years</td>
+<td>IT Security</td>
+</tr>
+</tbody>
+</table>
+<h3 id="traceability">Traceability</h3>
+<p><strong>Measures:</strong>
+- Unique user identification
+- Timestamps for all actions
+- Immutable logs
+- Regular analysis
+- Long-term archiving</p>
+<h2 id="availability-control">Availability Control</h2>
+<h3 id="backup-and-recovery">Backup and Recovery</h3>
+<p><strong>Backup Strategy:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Backup Type</th>
+<th>Frequency</th>
+<th>Retention</th>
+<th>Location</th>
+<th>Responsible</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Full Backup]</td>
+<td>Weekly</td>
+<td>4 weeks</td>
+<td>Offsite</td>
+<td>IT</td>
+</tr>
+<tr>
+<td>[TODO: Incremental]</td>
+<td>Daily</td>
+<td>7 days</td>
+<td>Onsite</td>
+<td>IT</td>
+</tr>
+<tr>
+<td>[TODO: Archive]</td>
+<td>Monthly</td>
+<td>1 year</td>
+<td>Offsite</td>
+<td>IT</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recovery Process:</strong>
+- Regular restore tests
+- Documented recovery procedures
+- Recovery Time Objective (RTO): [TODO]
+- Recovery Point Objective (RPO): [TODO]</p>
+<h3 id="business-continuity">Business Continuity</h3>
+<p><strong>Measures:</strong>
+- [TODO: Redundant systems]
+- [TODO: Disaster recovery plan]
+- [TODO: Emergency manual]
+- [TODO: Regular tests]</p>
+<h2 id="incident-response">Incident Response</h2>
+<h3 id="security-incidents">Security Incidents</h3>
+<p><strong>Process for Security Incidents:</strong></p>
+<ol>
+<li><strong>Detection and Reporting</strong></li>
+<li>Identification of incident</li>
+<li>Immediate report to IT Security</li>
+<li>
+<p>Initial assessment</p>
+</li>
+<li>
+<p><strong>Containment</strong></p>
+</li>
+<li>Isolation of affected systems</li>
+<li>Damage limitation</li>
+<li>
+<p>Evidence preservation</p>
+</li>
+<li>
+<p><strong>Analysis</strong></p>
+</li>
+<li>Root cause analysis</li>
+<li>Scope of impact</li>
+<li>
+<p>Assessment of consequences</p>
+</li>
+<li>
+<p><strong>Remediation</strong></p>
+</li>
+<li>Elimination of cause</li>
+<li>Restoration of normal operations</li>
+<li>
+<p>Documentation</p>
+</li>
+<li>
+<p><strong>Post-Incident</strong></p>
+</li>
+<li>Lessons learned</li>
+<li>Improvement measures</li>
+<li>Training</li>
+</ol>
+<h3 id="data-breaches-art-33-34-gdpr">Data Breaches (Art. 33-34 GDPR)</h3>
+<p><strong>For data breaches additionally:</strong>
+- Notification to supervisory authority (within 72 hours)
+- Notification of data subjects (if high risk)
+- Documentation in register of data breaches</p>
+<h2 id="controls-and-monitoring">Controls and Monitoring</h2>
+<h3 id="regular-reviews">Regular Reviews</h3>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>Frequency</th>
+<th>Responsible</th>
+<th>Documentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Security Audit</td>
+<td>Annually</td>
+<td>IT Security</td>
+<td>Audit report</td>
+</tr>
+<tr>
+<td>Penetration Test</td>
+<td>Annually</td>
+<td>External Provider</td>
+<td>Test report</td>
+</tr>
+<tr>
+<td>Permission Review</td>
+<td>Quarterly</td>
+<td>IT</td>
+<td>Review protocol</td>
+</tr>
+<tr>
+<td>Backup Test</td>
+<td>Monthly</td>
+<td>IT</td>
+<td>Test protocol</td>
+</tr>
+<tr>
+<td>Log Analysis</td>
+<td>Weekly</td>
+<td>IT Security</td>
+<td>Analysis report</td>
+</tr>
+</tbody>
+</table>
+<h2 id="documentation">Documentation</h2>
+<h3 id="evidence-requirements">Evidence Requirements</h3>
+<p><strong>Documentation of TOM:</strong>
+- Description of all technical and organizational measures
+- Justification of appropriateness
+- Evidence of effectiveness (tests, audits)
+- Updates on changes</p>
+<h3 id="security-concept">Security Concept</h3>
+<p><strong>Contents:</strong>
+- Protection goals and risk assessment
+- Technical measures
+- Organizational measures
+- Responsibilities
+- Controls and tests
+- Incident response plan</p>
+<h2 id="links-to-other-documents">Links to Other Documents</h2>
+<ul>
+<li><strong>Data Protection Principles (Art. 5):</strong> Integrity and confidentiality as core principle</li>
+<li><strong>Security of Processing (Art. 32):</strong> Detailed requirements for TOM</li>
+<li><strong>Data Breaches (Art. 33-34):</strong> Notification obligations for security incidents</li>
+<li><strong>Records (Art. 30):</strong> Documentation of TOM</li>
+<li><strong>DPIA (Art. 35):</strong> Risk assessment and measures</li>
+</ul>
+<h2 id="common-violations-and-their-prevention">Common Violations and Their Prevention</h2>
+<table>
+<thead>
+<tr>
+<th>Violation</th>
+<th>Example</th>
+<th>Prevention</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Weak passwords</td>
+<td>Simple passwords</td>
+<td>Enforce password policy</td>
+</tr>
+<tr>
+<td>Missing encryption</td>
+<td>Unencrypted transmission</td>
+<td>Implement TLS/SSL</td>
+</tr>
+<tr>
+<td>Excessive permissions</td>
+<td>Everyone has admin rights</td>
+<td>Implement permission concept</td>
+</tr>
+<tr>
+<td>No backups</td>
+<td>Data loss without recovery</td>
+<td>Implement backup strategy</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Next Steps:</strong>
+1. Implement comprehensive TOM according to Art. 32
+2. Establish access control and permission concept
+3. Implement encryption for data at rest and in transit
+4. Set up backup and recovery processes
+5. Establish incident response process</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0140_Storage_Limitation.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0200_Transparent_Information_and_Communication.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

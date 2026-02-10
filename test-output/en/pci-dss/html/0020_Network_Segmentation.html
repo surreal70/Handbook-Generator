@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0020 - Network Segmentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0020</div>
+            <h1>Network Segmentation</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0010_Scope_and_CDE_Definition.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0030_Roles_and_Responsibilities.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="network-segmentation">Network Segmentation</h1>
+<p><strong>Document ID:</strong> PCI-0020<br />
+<strong>Organization:</strong> AdminSend GmbH<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Approved by:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Draft / In Review / Approved<br />
+<strong>Classification:</strong> internal<br />
+<strong>Last Updated:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This document describes the network segmentation used to isolate the Cardholder Data Environment (CDE) from the rest of the corporate network.</p>
+<h3 id="11-objectives">1.1 Objectives</h3>
+<ul>
+<li><strong>Scope Reduction:</strong> Minimize PCI-DSS-relevant systems</li>
+<li><strong>Risk Minimization:</strong> Limit potential attack surfaces</li>
+<li><strong>Compliance:</strong> Meet PCI-DSS Requirement 1</li>
+<li><strong>Security:</strong> Protect cardholder data through network isolation</li>
+</ul>
+<h2 id="2-network-architecture">2. Network Architecture</h2>
+<h3 id="21-network-segments">2.1 Network Segments</h3>
+<p><strong>CDE Segments:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Segment ID</th>
+<th>Segment Name</th>
+<th>VLAN ID</th>
+<th>IP Range</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: CDE-CORE]</td>
+<td>CDE Core</td>
+<td>[TODO: 100]</td>
+<td>[TODO: 10.1.100.0/24]</td>
+<td>CHD Storage</td>
+</tr>
+<tr>
+<td>[TODO: CDE-DMZ]</td>
+<td>CDE DMZ</td>
+<td>[TODO: 101]</td>
+<td>[TODO: 10.1.101.0/24]</td>
+<td>CHD Transit</td>
+</tr>
+<tr>
+<td>[TODO: CDE-MGMT]</td>
+<td>CDE Management</td>
+<td>[TODO: 102]</td>
+<td>[TODO: 10.1.102.0/24]</td>
+<td>CDE Administration</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Non-CDE Segments:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Segment ID</th>
+<th>Segment Name</th>
+<th>VLAN ID</th>
+<th>IP Range</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: CORP]</td>
+<td>Corporate</td>
+<td>[TODO: 10]</td>
+<td>[TODO: 10.1.10.0/24]</td>
+<td>Office Network</td>
+</tr>
+<tr>
+<td>[TODO: GUEST]</td>
+<td>Guest</td>
+<td>[TODO: 20]</td>
+<td>[TODO: 10.1.20.0/24]</td>
+<td>Guest WiFi</td>
+</tr>
+<tr>
+<td>[TODO: DEV]</td>
+<td>Development</td>
+<td>[TODO: 30]</td>
+<td>[TODO: 10.1.30.0/24]</td>
+<td>Development</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-network-diagram">2.2 Network Diagram</h3>
+<p>[TODO: Insert network diagram - see diagrams/network_segmentation.png]</p>
+<div class="codehilite"><pre><span></span><code><span class="n">Internet</span>
+<span class="w">    </span><span class="o">|</span>
+<span class="p">[</span><span class="n">Perimeter</span><span class="w"> </span><span class="n">Firewall</span><span class="p">]</span>
+<span class="w">    </span><span class="o">|</span>
+<span class="w">    </span><span class="o">+---</span><span class="w"> </span><span class="p">[</span><span class="n">CDE</span><span class="o">-</span><span class="n">DMZ</span><span class="p">]</span><span class="w"> </span><span class="o">---</span><span class="w"> </span><span class="p">[</span><span class="n">CDE</span><span class="w"> </span><span class="n">Firewall</span><span class="p">]</span><span class="w"> </span><span class="o">---</span><span class="w"> </span><span class="p">[</span><span class="n">CDE</span><span class="o">-</span><span class="n">CORE</span><span class="p">]</span>
+<span class="w">    </span><span class="o">|</span><span class="w">                                          </span><span class="o">|</span>
+<span class="w">    </span><span class="o">|</span><span class="w">                                     </span><span class="p">[</span><span class="n">CDE</span><span class="o">-</span><span class="n">MGMT</span><span class="p">]</span>
+<span class="w">    </span><span class="o">|</span>
+<span class="w">    </span><span class="o">+---</span><span class="w"> </span><span class="p">[</span><span class="n">Corporate</span><span class="w"> </span><span class="n">Network</span><span class="p">]</span>
+<span class="w">    </span><span class="o">|</span>
+<span class="w">    </span><span class="o">+---</span><span class="w"> </span><span class="p">[</span><span class="n">Guest</span><span class="w"> </span><span class="n">Network</span><span class="p">]</span>
+<span class="w">    </span><span class="o">|</span>
+<span class="w">    </span><span class="o">+---</span><span class="w"> </span><span class="p">[</span><span class="n">Development</span><span class="w"> </span><span class="n">Network</span><span class="p">]</span>
+</code></pre></div>
+
+<h2 id="3-firewall-configuration">3. Firewall Configuration</h2>
+<h3 id="31-firewall-overview">3.1 Firewall Overview</h3>
+<table>
+<thead>
+<tr>
+<th>Firewall ID</th>
+<th>Type</th>
+<th>Location</th>
+<th>Function</th>
+<th>Vendor/Model</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: FW-PERIMETER]</td>
+<td>Perimeter</td>
+<td>[TODO: DC1]</td>
+<td>Internet Border</td>
+<td>[TODO: Vendor/Model]</td>
+</tr>
+<tr>
+<td>[TODO: FW-CDE]</td>
+<td>Internal</td>
+<td>[TODO: DC1]</td>
+<td>CDE Segmentation</td>
+<td>[TODO: Vendor/Model]</td>
+</tr>
+<tr>
+<td>[TODO: FW-MGMT]</td>
+<td>Internal</td>
+<td>[TODO: DC1]</td>
+<td>Management Access</td>
+<td>[TODO: Vendor/Model]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-firewall-rules-cde-segmentation">3.2 Firewall Rules (CDE Segmentation)</h3>
+<p><strong>Basic Principle:</strong> Default Deny (all connections blocked by default)</p>
+<h4 id="321-inbound-connections-to-cde">3.2.1 Inbound Connections to CDE</h4>
+<table>
+<thead>
+<tr>
+<th>Rule ID</th>
+<th>Source</th>
+<th>Destination</th>
+<th>Port/Protocol</th>
+<th>Purpose</th>
+<th>Approved By</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: FW-001]</td>
+<td>Internet</td>
+<td>CDE-DMZ</td>
+<td>443/TCP</td>
+<td>HTTPS E-Commerce</td>
+<td>[TODO: CISO]</td>
+</tr>
+<tr>
+<td>[TODO: FW-002]</td>
+<td>Corporate</td>
+<td>CDE-MGMT</td>
+<td>22/TCP</td>
+<td>SSH Admin</td>
+<td>[TODO: CISO]</td>
+</tr>
+<tr>
+<td>[TODO: FW-003]</td>
+<td>Acquiring Bank</td>
+<td>CDE-CORE</td>
+<td>443/TCP</td>
+<td>Payment API</td>
+<td>[TODO: CISO]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="322-outbound-connections-from-cde">3.2.2 Outbound Connections from CDE</h4>
+<table>
+<thead>
+<tr>
+<th>Rule ID</th>
+<th>Source</th>
+<th>Destination</th>
+<th>Port/Protocol</th>
+<th>Purpose</th>
+<th>Approved By</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: FW-101]</td>
+<td>CDE-CORE</td>
+<td>Acquiring Bank</td>
+<td>443/TCP</td>
+<td>Authorization</td>
+<td>[TODO: CISO]</td>
+</tr>
+<tr>
+<td>[TODO: FW-102]</td>
+<td>CDE-CORE</td>
+<td>Update Server</td>
+<td>443/TCP</td>
+<td>Security Updates</td>
+<td>[TODO: CISO]</td>
+</tr>
+<tr>
+<td>[TODO: FW-103]</td>
+<td>CDE-MGMT</td>
+<td>SIEM</td>
+<td>514/TCP</td>
+<td>Log Forwarding</td>
+<td>[TODO: CISO]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="323-blocked-connections">3.2.3 Blocked Connections</h4>
+<p><strong>Explicitly blocked:</strong>
+- CDE → Corporate Network (except Management)
+- Corporate → CDE (except authorized admin access)
+- CDE → Internet (except explicitly allowed services)
+- Guest → CDE (all connections)</p>
+<h3 id="33-firewall-rule-review">3.3 Firewall Rule Review</h3>
+<p><strong>Review Interval:</strong> Quarterly<br />
+<strong>Responsible:</strong> [TODO: Network Security Team]<br />
+<strong>Last Review:</strong> [TODO: Date]<br />
+<strong>Next Review:</strong> [TODO: Date]  </p>
+<p><strong>Review Process:</strong>
+1. Review all firewall rules
+2. Identify unused rules
+3. Validate business justification
+4. Document changes
+5. CISO approval</p>
+<h2 id="4-router-configuration">4. Router Configuration</h2>
+<h3 id="41-router-overview">4.1 Router Overview</h3>
+<table>
+<thead>
+<tr>
+<th>Router ID</th>
+<th>Location</th>
+<th>Function</th>
+<th>Vendor/Model</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: RTR-CORE]</td>
+<td>[TODO: DC1]</td>
+<td>Core Routing</td>
+<td>[TODO: Vendor/Model]</td>
+</tr>
+<tr>
+<td>[TODO: RTR-CDE]</td>
+<td>[TODO: DC1]</td>
+<td>CDE Routing</td>
+<td>[TODO: Vendor/Model]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-access-control-lists-acls">4.2 Access Control Lists (ACLs)</h3>
+<p>[TODO: Document router ACLs similar to firewall rules]</p>
+<h2 id="5-segmentation-validation">5. Segmentation Validation</h2>
+<h3 id="51-validation-methods">5.1 Validation Methods</h3>
+<p><strong>Annual validation required (PCI-DSS Req 11.4.6):</strong></p>
+<ol>
+<li><strong>Penetration Testing:</strong></li>
+<li>Attempt to bypass CDE segmentation</li>
+<li>Test firewall rules</li>
+<li>
+<p>Validate network isolation</p>
+</li>
+<li>
+<p><strong>Network Scans:</strong></p>
+</li>
+<li>Port scans from different segments</li>
+<li>Reachability tests</li>
+<li>
+<p>Routing validation</p>
+</li>
+<li>
+<p><strong>Configuration Review:</strong></p>
+</li>
+<li>Review firewall configurations</li>
+<li>Check router ACLs</li>
+<li>VLAN configuration validation</li>
+</ol>
+<h3 id="52-validation-history">5.2 Validation History</h3>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Method</th>
+<th>Performed By</th>
+<th>Result</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: 2025-12-01]</td>
+<td>Penetration Test</td>
+<td>[TODO: Company]</td>
+<td>Successful</td>
+<td>None</td>
+</tr>
+<tr>
+<td>[TODO: 2025-06-15]</td>
+<td>Network Scan</td>
+<td>[TODO: Team]</td>
+<td>1 Vulnerability</td>
+<td>Rule FW-042 removed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="53-next-validation">5.3 Next Validation</h3>
+<p><strong>Planned Date:</strong> [TODO: Date]<br />
+<strong>Method:</strong> [TODO: Penetration Test/Scan]<br />
+<strong>Performing Company:</strong> [TODO: Name]  </p>
+<h2 id="6-wireless-networks">6. Wireless Networks</h2>
+<h3 id="61-wireless-segmentation">6.1 Wireless Segmentation</h3>
+<p><strong>Wireless Networks:</strong></p>
+<table>
+<thead>
+<tr>
+<th>SSID</th>
+<th>Segment</th>
+<th>Encryption</th>
+<th>CDE Access</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Corp-WiFi]</td>
+<td>Corporate</td>
+<td>WPA3-Enterprise</td>
+<td>No</td>
+<td>Employees</td>
+</tr>
+<tr>
+<td>[TODO: Guest-WiFi]</td>
+<td>Guest</td>
+<td>WPA3-Personal</td>
+<td>No</td>
+<td>Guests</td>
+</tr>
+<tr>
+<td>[TODO: CDE-WiFi]</td>
+<td>CDE-MGMT</td>
+<td>WPA3-Enterprise + MFA</td>
+<td>Yes</td>
+<td>CDE Admin</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Important:</strong> Wireless networks with CDE access require:
+- WPA3 or higher
+- Multi-Factor Authentication
+- Separate VLAN segmentation
+- Encrypted transmission</p>
+<h3 id="62-wireless-access-points">6.2 Wireless Access Points</h3>
+<table>
+<thead>
+<tr>
+<th>AP ID</th>
+<th>Location</th>
+<th>SSID</th>
+<th>Segment</th>
+<th>Firmware Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: AP-001]</td>
+<td>[TODO: Office]</td>
+<td>Corp-WiFi</td>
+<td>Corporate</td>
+<td>[TODO: v2.1]</td>
+</tr>
+<tr>
+<td>[TODO: AP-002]</td>
+<td>[TODO: DC]</td>
+<td>CDE-WiFi</td>
+<td>CDE-MGMT</td>
+<td>[TODO: v2.1]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-remote-access">7. Remote Access</h2>
+<h3 id="71-vpn-configuration">7.1 VPN Configuration</h3>
+<p><strong>VPN Access to CDE:</strong></p>
+<table>
+<thead>
+<tr>
+<th>VPN Type</th>
+<th>Target Group</th>
+<th>Authentication</th>
+<th>Target Segment</th>
+<th>Encryption</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: SSL-VPN]</td>
+<td>Administrators</td>
+<td>MFA (Token)</td>
+<td>CDE-MGMT</td>
+<td>TLS 1.3</td>
+</tr>
+<tr>
+<td>[TODO: IPSec-VPN]</td>
+<td>Service Providers</td>
+<td>MFA (Certificate)</td>
+<td>CDE-MGMT</td>
+<td>AES-256</td>
+</tr>
+</tbody>
+</table>
+<p><strong>VPN Requirements:</strong>
+- Multi-Factor Authentication (MFA) required
+- Encryption: TLS 1.2+ or IPSec with AES-256
+- Session timeout: [TODO: 15 minutes inactivity]
+- Logging of all VPN connections</p>
+<h3 id="72-jump-server-bastion-hosts">7.2 Jump Server / Bastion Hosts</h3>
+<p><strong>Jump Server for CDE Access:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Server ID</th>
+<th>Location</th>
+<th>Function</th>
+<th>Access Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: JUMP-01]</td>
+<td>CDE-MGMT</td>
+<td>Admin Access</td>
+<td>SSH/RDP via VPN</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Jump Server Requirements:</strong>
+- No direct Internet connection
+- Access only via VPN with MFA
+- Complete logging of all sessions
+- No local data storage</p>
+<h2 id="8-monitoring-and-alerting">8. Monitoring and Alerting</h2>
+<h3 id="81-network-monitoring">8.1 Network Monitoring</h3>
+<p><strong>Monitored Metrics:</strong>
+- Firewall rule violations
+- Unexpected connection attempts to CDE
+- Changes to firewall configurations
+- Network traffic anomalies</p>
+<p><strong>Monitoring Tools:</strong>
+- [TODO: SIEM System]
+- [TODO: Network Monitoring Tool]
+- [TODO: IDS/IPS]</p>
+<h3 id="82-alerting-rules">8.2 Alerting Rules</h3>
+<table>
+<thead>
+<tr>
+<th>Alert ID</th>
+<th>Condition</th>
+<th>Severity</th>
+<th>Notification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: ALT-001]</td>
+<td>Connection from Corporate to CDE-CORE</td>
+<td>Critical</td>
+<td>SOC + CISO</td>
+</tr>
+<tr>
+<td>[TODO: ALT-002]</td>
+<td>Firewall rule change</td>
+<td>High</td>
+<td>Network Team</td>
+</tr>
+<tr>
+<td>[TODO: ALT-003]</td>
+<td>Failed VPN login (3x)</td>
+<td>Medium</td>
+<td>Security Team</td>
+</tr>
+</tbody>
+</table>
+<h2 id="9-change-management">9. Change Management</h2>
+<h3 id="91-change-process">9.1 Change Process</h3>
+<p><strong>Process for Network Changes:</strong></p>
+<ol>
+<li><strong>Change Request:</strong> Formal request with justification</li>
+<li><strong>Security Review:</strong> Assessment of PCI-DSS impact</li>
+<li><strong>Testing:</strong> Test in non-production environment</li>
+<li><strong>Approval:</strong> CISO approval for CDE changes</li>
+<li><strong>Implementation:</strong> Execute with rollback plan</li>
+<li><strong>Documentation:</strong> Update this document</li>
+<li><strong>Validation:</strong> Verify segmentation</li>
+</ol>
+<h3 id="92-change-history">9.2 Change History</h3>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Change</th>
+<th>Justification</th>
+<th>Approved By</th>
+<th>Validated</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: 2026-01-15]</td>
+<td>New firewall rule FW-105</td>
+<td>Payment API</td>
+<td>[TODO: CISO]</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Document History:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Initial creation</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0010_Scope_and_CDE_Definition.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0030_Roles_and_Responsibilities.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

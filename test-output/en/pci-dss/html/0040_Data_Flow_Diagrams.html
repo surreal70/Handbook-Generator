@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0040 - Data Flow Diagrams</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0040</div>
+            <h1>Data Flow Diagrams</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0030_Roles_and_Responsibilities.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0050_Compliance_Program.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<h1 id="data-flow-diagrams">Data Flow Diagrams</h1>
+<p><strong>Document ID:</strong> PCI-0040<br />
+<strong>Organization:</strong> AdminSend GmbH<br />
+<strong>Owner:</strong> IT Operations Manager<br />
+<strong>Approved by:</strong> CIO<br />
+<strong>Version:</strong> 1.0.0<br />
+<strong>Status:</strong> Draft / In Review / Approved<br />
+<strong>Classification:</strong> internal<br />
+<strong>Last Updated:</strong> {{ meta.document.last_updated }}  </p>
+<hr />
+<h2 id="1-purpose">1. Purpose</h2>
+<p>This document visualizes all cardholder data (CHD) flows within AdminSend GmbH.</p>
+<h3 id="11-objectives">1.1 Objectives</h3>
+<ul>
+<li><strong>Transparency:</strong> Complete visibility of all CHD flows</li>
+<li><strong>Scope Definition:</strong> Identification of all PCI-DSS-relevant systems</li>
+<li><strong>Risk Assessment:</strong> Detection of potential vulnerabilities</li>
+<li><strong>Compliance:</strong> Meet PCI-DSS Requirement 12.5.2</li>
+</ul>
+<h2 id="2-data-flow-overview">2. Data Flow Overview</h2>
+<h3 id="21-main-data-flows">2.1 Main Data Flows</h3>
+<p>[TODO: Insert high-level data flow diagram - see diagrams/data_flow_overview.png]</p>
+<p><strong>Data Flow Phases:</strong>
+1. <strong>Capture:</strong> Card input at POS/web form
+2. <strong>Transmission:</strong> Transport for authorization
+3. <strong>Processing:</strong> Authorization by acquiring bank
+4. <strong>Storage:</strong> Persistence for reporting (if required)
+5. <strong>Deletion:</strong> Secure disposal after retention period</p>
+<h3 id="22-data-flow-categories">2.2 Data Flow Categories</h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Description</th>
+<th>Systems</th>
+<th>Encryption</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Point of Sale</td>
+<td>Card input in stores</td>
+<td>POS Terminals</td>
+<td>P2PE</td>
+</tr>
+<tr>
+<td>E-Commerce</td>
+<td>Online payments</td>
+<td>Web Server, Payment Gateway</td>
+<td>TLS 1.3</td>
+</tr>
+<tr>
+<td>Call Center</td>
+<td>Phone orders</td>
+<td>CRM, IVR</td>
+<td>Tokenization</td>
+</tr>
+<tr>
+<td>Recurring Billing</td>
+<td>Recurring payments</td>
+<td>Billing System</td>
+<td>Tokenization</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-detailed-data-flows">3. Detailed Data Flows</h2>
+<h3 id="31-point-of-sale-data-flow">3.1 Point-of-Sale Data Flow</h3>
+<p>[TODO: Insert POS data flow diagram]</p>
+<p><strong>Steps:</strong>
+1. Customer presents card at POS terminal
+2. Terminal reads card data (encrypted)
+3. Encrypted data to payment gateway
+4. Gateway sends to acquiring bank
+5. Authorization response back to terminal
+6. Receipt for customer</p>
+<p><strong>Involved Systems:</strong>
+- POS Terminal: [TODO: Model/Vendor]
+- Payment Gateway: [TODO: System ID]
+- Acquiring Bank: [TODO: Bank Name]</p>
+<p><strong>Data Protection:</strong>
+- P2PE (Point-to-Point Encryption)
+- No storage of full track data
+- Only last 4 digits on receipt</p>
+<h3 id="32-e-commerce-data-flow">3.2 E-Commerce Data Flow</h3>
+<p>[TODO: Insert e-commerce data flow diagram]</p>
+<p><strong>Steps:</strong>
+1. Customer enters card data in web form
+2. HTTPS transmission to web server
+3. Forward to payment gateway
+4. Gateway tokenizes PAN
+5. Token back to web server for storage
+6. Authorization with token</p>
+<p><strong>Involved Systems:</strong>
+- Web Server: [TODO: System ID]
+- Payment Gateway: [TODO: System ID]
+- Database: [TODO: System ID] (tokens only)</p>
+<p><strong>Data Protection:</strong>
+- TLS 1.3 for transmission
+- Tokenization before storage
+- No storage of CVV2</p>
+<h3 id="33-call-center-data-flow">3.3 Call Center Data Flow</h3>
+<p>[TODO: Insert call center data flow diagram]</p>
+<p><strong>Steps:</strong>
+1. Customer provides card data by phone
+2. Agent enters data in CRM (masked)
+3. IVR system captures sensitive data
+4. Direct transmission to payment gateway
+5. Token back to CRM</p>
+<p><strong>Involved Systems:</strong>
+- CRM System: [TODO: System ID]
+- IVR System: [TODO: System ID]
+- Payment Gateway: [TODO: System ID]</p>
+<p><strong>Data Protection:</strong>
+- IVR for sensitive data entry
+- No storage of PAN in CRM
+- Only token stored</p>
+<h2 id="4-system-overview">4. System Overview</h2>
+<h3 id="41-systems-with-chd-access">4.1 Systems with CHD Access</h3>
+<table>
+<thead>
+<tr>
+<th>System ID</th>
+<th>System Name</th>
+<th>CHD Type</th>
+<th>Function</th>
+<th>Encryption</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: SYS-001]</td>
+<td>POS Terminal</td>
+<td>PAN (Transit)</td>
+<td>Card Input</td>
+<td>P2PE</td>
+</tr>
+<tr>
+<td>[TODO: SYS-002]</td>
+<td>Payment Gateway</td>
+<td>PAN</td>
+<td>Authorization</td>
+<td>TLS 1.3</td>
+</tr>
+<tr>
+<td>[TODO: SYS-003]</td>
+<td>Database</td>
+<td>Token</td>
+<td>Storage</td>
+<td>AES-256</td>
+</tr>
+<tr>
+<td>[TODO: SYS-004]</td>
+<td>Web Server</td>
+<td>PAN (Transit)</td>
+<td>E-Commerce</td>
+<td>TLS 1.3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-data-transmission-protocols">4.2 Data Transmission Protocols</h3>
+<table>
+<thead>
+<tr>
+<th>Connection</th>
+<th>Protocol</th>
+<th>Encryption</th>
+<th>Port</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POS → Gateway</td>
+<td>HTTPS</td>
+<td>TLS 1.3</td>
+<td>443</td>
+</tr>
+<tr>
+<td>Web → Gateway</td>
+<td>HTTPS</td>
+<td>TLS 1.3</td>
+<td>443</td>
+</tr>
+<tr>
+<td>Gateway → Bank</td>
+<td>HTTPS</td>
+<td>TLS 1.3</td>
+<td>443</td>
+</tr>
+<tr>
+<td>Gateway → DB</td>
+<td>SQL/TLS</td>
+<td>TLS 1.2+</td>
+<td>3306</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-data-storage">5. Data Storage</h2>
+<h3 id="51-stored-cardholder-data">5.1 Stored Cardholder Data</h3>
+<table>
+<thead>
+<tr>
+<th>Data Type</th>
+<th>Storage Location</th>
+<th>Encryption</th>
+<th>Retention Period</th>
+<th>Justification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PAN (Token)</td>
+<td>Database</td>
+<td>AES-256</td>
+<td>[TODO: 13 months]</td>
+<td>Refunds</td>
+</tr>
+<tr>
+<td>Cardholder Name</td>
+<td>Database</td>
+<td>AES-256</td>
+<td>[TODO: 13 months]</td>
+<td>Refunds</td>
+</tr>
+<tr>
+<td>Transaction Data</td>
+<td>Database</td>
+<td>AES-256</td>
+<td>[TODO: 7 years]</td>
+<td>Accounting</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Not Stored:</strong>
+- Full Track Data
+- CVV2/CVC2/CID
+- PIN/PIN Block</p>
+<h3 id="52-data-deletion">5.2 Data Deletion</h3>
+<p><strong>Deletion Process:</strong>
+1. Automatic identification of expired data
+2. Secure deletion (overwrite/crypto-shredding)
+3. Logging of deletion operations
+4. Quarterly verification</p>
+<p><strong>Responsible:</strong> [TODO: Data Retention Manager]</p>
+<h2 id="6-external-data-flows">6. External Data Flows</h2>
+<h3 id="61-acquiring-bank">6.1 Acquiring Bank</h3>
+<p><strong>Bank:</strong> [TODO: Bank Name]<br />
+<strong>Connection:</strong> HTTPS/TLS 1.3<br />
+<strong>Data Type:</strong> PAN, transaction data<br />
+<strong>Purpose:</strong> Authorization and settlement  </p>
+<h3 id="62-payment-processor">6.2 Payment Processor</h3>
+<p><strong>Processor:</strong> [TODO: Processor Name]<br />
+<strong>Connection:</strong> HTTPS/TLS 1.3<br />
+<strong>Data Type:</strong> PAN (encrypted)<br />
+<strong>Purpose:</strong> Payment processing  </p>
+<h3 id="63-tokenization-service">6.3 Tokenization Service</h3>
+<p><strong>Service:</strong> [TODO: Service Name]<br />
+<strong>Connection:</strong> HTTPS/TLS 1.3<br />
+<strong>Data Type:</strong> PAN → Token<br />
+<strong>Purpose:</strong> Scope reduction  </p>
+<h2 id="7-data-flow-change-management">7. Data Flow Change Management</h2>
+<h3 id="71-change-process">7.1 Change Process</h3>
+<p><strong>For changes to data flows:</strong>
+1. Update diagrams
+2. PCI-DSS impact assessment
+3. CISO approval
+4. Document the change
+5. Train affected employees</p>
+<h3 id="72-change-history">7.2 Change History</h3>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Change</th>
+<th>Justification</th>
+<th>Approved By</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: 2026-01-15]</td>
+<td>Tokenization implemented</td>
+<td>Scope reduction</td>
+<td>[TODO: CISO]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Document History:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>{{ meta.document.last_updated }}</td>
+<td>{{ meta.defaults.author }}</td>
+<td>Initial creation</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0030_Roles_and_Responsibilities.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0050_Compliance_Program.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>
