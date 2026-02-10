@@ -1,6 +1,6 @@
 # Version Management
 
-## Current Version: 0.0.8
+## Current Version: 0.0.9
 
 ### Single Source of Truth
 
@@ -32,6 +32,18 @@ To update the version number:
 **Do not** hardcode version numbers elsewhere in the codebase.
 
 ### Version History
+
+- **0.0.9** (2026-02-10): Repository Cleanup & Validation Consolidation + New Frameworks
+  - ✅ Added three new compliance frameworks (IDW PS 951, NIST CSF 2.0, TOGAF)
+  - ✅ 180+ new templates (60 per framework, bilingual)
+  - ✅ Consolidated validation scripts into `helpers/validate_frameworks.py`
+  - ✅ Removed redundant validation scripts (`validate_all_frameworks.py`, `validate_new_frameworks.py`, `validate_new_frameworks_integration.py`)
+  - ✅ Removed obsolete checkpoint script (`verify_template_checkpoint.py`)
+  - ✅ Organized version history into `about_versioning/` directory
+  - ✅ Simplified validation options (all frameworks or individual framework)
+  - ✅ Created comprehensive validation guide (`helpers/VALIDATION_GUIDE.md`)
+  - ✅ Updated helper documentation
+  - ✅ Total: 15 compliance frameworks with 586+ templates per language
 
 - **0.0.8** (2026-02-10): Role Cleanup & Documentation Enhancement
   - ✅ Removed duplicate role 'datenschutzbeauftragter' (use 'data_protection_officer')

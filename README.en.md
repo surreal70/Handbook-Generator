@@ -3,7 +3,7 @@
 <div align="center">
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
-[![Version](https://img.shields.io/badge/version-0.0.8-blue.svg)](VERSION.md)
+[![Version](https://img.shields.io/badge/version-0.0.9-blue.svg)](about_versioning/VERSION.md)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Code Coverage](https://img.shields.io/badge/coverage-84%25-brightgreen.svg)](htmlcov/index.html)
 [![Tests](https://img.shields.io/badge/tests-765%20passed-success.svg)](tests/)
@@ -25,12 +25,12 @@ A Python tool for generating professional handbooks from Markdown templates with
 
 The Handbook Generator creates professional handbooks in various formats (HTML, PDF, Markdown) from structured Markdown templates. The system replaces placeholders in templates with real data from external systems like NetBox and supports multilingual handbooks.
 
-**Version 0.0.8** - Template Metadata Standardization & Role Cleanup
+**Version 0.0.9** - Repository Cleanup & Validation Consolidation
 
 ## Features
 
 - 📝 **Template-based Document Generation** - Structured Markdown templates with intelligent processing
-- 📚 **Five Handbook Types** - BCM, ISMS, BSI Grundschutz, IT-Operations, CIS Controls
+- 📚 **Fifteen Handbook Types** - BCM, ISMS, BSI Grundschutz, IT-Operations, CIS Controls, Common Criteria, GDPR, HIPAA, IDW PS 951, ISO 9001, NIST 800-53, NIST CSF, PCI-DSS, TOGAF, TSC
 - 🔄 **Placeholder Replacement** - Automatic data integration from external sources (NetBox, Metadata)
 - 🌍 **Multilingual Support** - German and English with identical structure
 - 📄 **Multi-Format Output** - HTML, PDF (Pandoc + XeLaTeX), Markdown
@@ -56,10 +56,15 @@ The Handbook Generator creates professional handbooks in various formats (HTML, 
 | **Common Criteria** | ISO/IEC 15408 | 35/35 | Common Criteria Security Evaluation |
 | **GDPR** | EU GDPR 2016/679 | 36/36 | General Data Protection Regulation |
 | **HIPAA** | HIPAA Security Rule | 13/13 | Health Insurance Portability and Accountability Act |
+| **IDW PS 951** | IDW PS 951 | 50/50 | German IT Auditing Standard |
 | **ISO 9001** | ISO 9001:2015 | 29/29 | Quality Management System |
 | **NIST 800-53** | NIST SP 800-53 Rev. 5 | 52/52 | NIST Security and Privacy Controls |
+| **NIST CSF** | NIST CSF 2.0 | 60/60 | NIST Cybersecurity Framework |
 | **PCI-DSS** | PCI-DSS v4.0 | 14/14 | Payment Card Industry Data Security Standard |
+| **TOGAF** | TOGAF 9.2 | 70/70 | The Open Group Architecture Framework |
 | **TSC** | SOC 2 Trust Services | 17/17 | Trust Services Criteria (SOC 2) |
+
+**Total: 586+ Templates (DE) / 586+ Templates (EN)** across 15 Compliance Frameworks
 
 ## New in Version 0.0.7 🎉
 
@@ -193,6 +198,15 @@ The system is fully backward compatible:
 - Old metadata formats are supported
 
 See [MIGRATION_GUIDE.md](docs/MIGRATION_GUIDE.md) for migration information.
+
+## New in Version 0.0.9 🎉
+
+- ✅ **Three New Compliance Frameworks** - IDW PS 951, NIST CSF 2.0, TOGAF (180+ new templates)
+- ✅ **Validation Consolidation** - All framework validation scripts merged into `helpers/validate_frameworks.py`
+- ✅ **Repository Cleanup** - Removed redundant scripts, organized version history in `about_versioning/`
+- ✅ **Improved Documentation** - Updated validation guide and helper documentation
+- ✅ **Simplified Validation** - Simpler options: all frameworks or individual framework
+- ✅ **15 Handbook Types Total** - Complete compliance framework coverage
 
 ## New in Version 0.0.8 🎉
 

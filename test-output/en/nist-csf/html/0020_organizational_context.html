@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0020 - Organizational Context (GV.OC)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0020</div>
+            <h1>Organizational Context (GV.OC)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0010_govern_overview.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0030_risk_management_strategy.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<hr />
+<p>Document-ID: nist-csf-0020
+Owner: {{ meta.owner }}
+Version: {{ meta.version }}
+Status: Draft
+Classification: Internal
+Last Update: {{ meta.date }}</p>
+<hr />
+<h1 id="organizational-context-gvoc">Organizational Context (GV.OC)</h1>
+<h2 id="purpose">Purpose</h2>
+<p>This document defines the organizational context for cybersecurity risk management, including mission, stakeholder expectations, and legal/regulatory requirements.</p>
+<h2 id="scope">Scope</h2>
+<p>{{ meta.scope }}</p>
+<h2 id="organizational-mission-and-objectives">Organizational Mission and Objectives</h2>
+<h3 id="corporate-mission">Corporate Mission</h3>
+<p>{{ meta.organization_mission }}</p>
+<h3 id="business-objectives">Business Objectives</h3>
+<ol>
+<li>{{ meta.business_goal_1 }}</li>
+<li>{{ meta.business_goal_2 }}</li>
+<li>{{ meta.business_goal_3 }}</li>
+</ol>
+<h3 id="cybersecurity-objectives">Cybersecurity Objectives</h3>
+<ul>
+<li>Protect critical business processes and data</li>
+<li>Maintain customer trust</li>
+<li>Comply with regulatory requirements</li>
+<li>Minimize cybersecurity risks</li>
+</ul>
+<h2 id="stakeholder-analysis">Stakeholder Analysis</h2>
+<h3 id="internal-stakeholders">Internal Stakeholders</h3>
+<table>
+<thead>
+<tr>
+<th>Stakeholder</th>
+<th>Expectations</th>
+<th>Communication Channel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Board of Directors</td>
+<td>Risk transparency, Compliance</td>
+<td>Quarterly reports</td>
+</tr>
+<tr>
+<td>Executive Management</td>
+<td>Business continuity</td>
+<td>Monthly reviews</td>
+</tr>
+<tr>
+<td>IT Department</td>
+<td>Clear policies, Resources</td>
+<td>Weekly meetings</td>
+</tr>
+<tr>
+<td>Employees</td>
+<td>Secure work environment</td>
+<td>Training, Intranet</td>
+</tr>
+</tbody>
+</table>
+<h3 id="external-stakeholders">External Stakeholders</h3>
+<table>
+<thead>
+<tr>
+<th>Stakeholder</th>
+<th>Expectations</th>
+<th>Communication Channel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Customers</td>
+<td>Data privacy, Availability</td>
+<td>Privacy policy</td>
+</tr>
+<tr>
+<td>Regulators</td>
+<td>Compliance evidence</td>
+<td>Reports, Audits</td>
+</tr>
+<tr>
+<td>Partners</td>
+<td>Secure collaboration</td>
+<td>Contracts, SLAs</td>
+</tr>
+<tr>
+<td>Suppliers</td>
+<td>Security requirements</td>
+<td>Supplier contracts</td>
+</tr>
+</tbody>
+</table>
+<h2 id="legal-and-regulatory-requirements">Legal and Regulatory Requirements</h2>
+<h3 id="applicable-laws-and-regulations">Applicable Laws and Regulations</h3>
+<ol>
+<li><strong>Data Protection</strong></li>
+<li>GDPR (General Data Protection Regulation)</li>
+<li>Local data protection laws</li>
+<li>
+<p>{{ meta.additional_privacy_laws }}</p>
+</li>
+<li>
+<p><strong>Industry-Specific Regulations</strong></p>
+</li>
+<li>{{ meta.industry_regulation_1 }}</li>
+<li>
+<p>{{ meta.industry_regulation_2 }}</p>
+</li>
+<li>
+<p><strong>Contractual Obligations</strong></p>
+</li>
+<li>Customer contracts with security requirements</li>
+<li>Supplier agreements</li>
+<li>Service Level Agreements (SLAs)</li>
+</ol>
+<h2 id="critical-business-functions">Critical Business Functions</h2>
+<h3 id="high-priority-business-processes">High-Priority Business Processes</h3>
+<table>
+<thead>
+<tr>
+<th>Process</th>
+<th>Criticality</th>
+<th>Cybersecurity Requirements</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{{ meta.critical_process_1 }}</td>
+<td>High</td>
+<td>Availability, Integrity</td>
+</tr>
+<tr>
+<td>{{ meta.critical_process_2 }}</td>
+<td>High</td>
+<td>Confidentiality, Availability</td>
+</tr>
+<tr>
+<td>{{ meta.critical_process_3 }}</td>
+<td>Medium</td>
+<td>Integrity, Traceability</td>
+</tr>
+</tbody>
+</table>
+<h2 id="risk-tolerance-and-appetite">Risk Tolerance and Appetite</h2>
+<h3 id="risk-appetite-statement">Risk Appetite Statement</h3>
+<p>{{ meta.organization }} is willing to accept {{ meta.risk_appetite_level }} cybersecurity risks to achieve business objectives, provided that:
+- Critical systems are adequately protected
+- Regulatory requirements are met
+- Reputational risks are minimized</p>
+<h3 id="risk-tolerance-thresholds">Risk Tolerance Thresholds</h3>
+<table>
+<thead>
+<tr>
+<th>Risk Category</th>
+<th>Tolerance Threshold</th>
+<th>Escalation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data breach</td>
+<td>Zero tolerance</td>
+<td>Immediate escalation to Board</td>
+</tr>
+<tr>
+<td>System outage</td>
+<td>&lt; 4 hours/year</td>
+<td>Escalation to CIO</td>
+</tr>
+<tr>
+<td>Security incidents</td>
+<td>&lt; 10 Minor/year</td>
+<td>Monthly review</td>
+</tr>
+</tbody>
+</table>
+<h2 id="organizational-structure">Organizational Structure</h2>
+<h3 id="cybersecurity-governance-structure">Cybersecurity Governance Structure</h3>
+<div class="codehilite"><pre><span></span><code>Board of Directors
+    ↓
+Executive Management
+    ↓
+CISO (Thomas Weber)
+    ↓
+├── Security Operations
+├── Risk Management
+├── Compliance
+└── Security Architecture
+</code></pre></div>
+
+<h2 id="document-references">Document References</h2>
+<ul>
+<li>0030_risk_management_strategy.md</li>
+<li>0040_roles_responsibilities.md</li>
+<li>0050_policy_framework.md</li>
+</ul>
+<hr />
+<p><strong>Document History:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>{{ meta.date }}</td>
+<td>Andreas Huemmer [andreas.huemmer@adminsend.de]</td>
+<td>Initial creation</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0010_govern_overview.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0030_risk_management_strategy.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

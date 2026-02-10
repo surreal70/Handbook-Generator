@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0060 - Oversight and Monitoring (GV.OV)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0060</div>
+            <h1>Oversight and Monitoring (GV.OV)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0050_policy_framework.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0070_supply_chain_risk_management.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<hr />
+<p>Document-ID: nist-csf-0060
+Owner: {{ meta.owner }}
+Version: {{ meta.version }}
+Status: Draft
+Classification: Internal
+Last Update: {{ meta.date }}</p>
+<hr />
+<h1 id="oversight-and-monitoring-gvov">Oversight and Monitoring (GV.OV)</h1>
+<h2 id="purpose">Purpose</h2>
+<p>This document describes the oversight and monitoring mechanisms for the organization's cybersecurity program.</p>
+<h2 id="scope">Scope</h2>
+<p>{{ meta.scope }}</p>
+<h2 id="governance-oversight">Governance Oversight</h2>
+<h3 id="board-of-directors">Board of Directors</h3>
+<p><strong>Role:</strong> Strategic oversight<br />
+<strong>Frequency:</strong> Quarterly</p>
+<p><strong>Oversight Activities:</strong>
+- Review of cybersecurity risk profile
+- Approval of strategic initiatives
+- Compliance monitoring
+- Assessment of cybersecurity investments</p>
+<p><strong>Reporting:</strong>
+- Risk dashboard
+- Critical incidents
+- Compliance status
+- Budget and resources</p>
+<h3 id="executive-management">Executive Management</h3>
+<p><strong>Role:</strong> Operational oversight<br />
+<strong>Frequency:</strong> Monthly</p>
+<p><strong>Oversight Activities:</strong>
+- Monitoring program implementation
+- Resource allocation
+- Escalation management
+- Performance review</p>
+<h2 id="cybersecurity-committees">Cybersecurity Committees</h2>
+<h3 id="cybersecurity-steering-committee">Cybersecurity Steering Committee</h3>
+<p><strong>Chair:</strong> Thomas Weber<br />
+<strong>Members:</strong>
+- CIO
+- CRO
+- CFO
+- Business Unit Heads
+- Legal Counsel</p>
+<p><strong>Frequency:</strong> Monthly</p>
+<p><strong>Responsibilities:</strong>
+- Strategic direction
+- Initiative prioritization
+- Budget approval
+- Risk assessment and treatment</p>
+<h3 id="security-operations-committee">Security Operations Committee</h3>
+<p><strong>Chair:</strong> {{ meta.security_ops_manager }}<br />
+<strong>Members:</strong>
+- IT Operations
+- Network Team
+- Application Security
+- Incident Response Team</p>
+<p><strong>Frequency:</strong> Weekly</p>
+<p><strong>Responsibilities:</strong>
+- Operational security monitoring
+- Incident coordination
+- Threat intelligence sharing
+- Technical decisions</p>
+<h3 id="risk-management-committee">Risk Management Committee</h3>
+<p><strong>Chair:</strong> {{ meta.cro }}<br />
+<strong>Members:</strong>
+- CISO
+- Business Unit Heads
+- Compliance Manager
+- Internal Audit</p>
+<p><strong>Frequency:</strong> Quarterly</p>
+<p><strong>Responsibilities:</strong>
+- Risk assessment and prioritization
+- Risk treatment strategies
+- Risk tolerance review
+- Integration with ERM</p>
+<h2 id="performance-metrics">Performance Metrics</h2>
+<h3 id="key-performance-indicators-kpis">Key Performance Indicators (KPIs)</h3>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th>Target</th>
+<th>Measurement Frequency</th>
+<th>Responsible</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Patch Compliance</td>
+<td>&gt; 95%</td>
+<td>Weekly</td>
+<td>IT Operations</td>
+</tr>
+<tr>
+<td>Incident Response Time</td>
+<td>&lt; 4 hours</td>
+<td>Daily</td>
+<td>SOC</td>
+</tr>
+<tr>
+<td>Security Training Completion</td>
+<td>100%</td>
+<td>Monthly</td>
+<td>HR</td>
+</tr>
+<tr>
+<td>Vulnerability Remediation</td>
+<td>&lt; 30 days</td>
+<td>Weekly</td>
+<td>Security Team</td>
+</tr>
+<tr>
+<td>Phishing Test Success Rate</td>
+<td>&lt; 5% Click Rate</td>
+<td>Quarterly</td>
+<td>Security Awareness</td>
+</tr>
+</tbody>
+</table>
+<h3 id="key-risk-indicators-kris">Key Risk Indicators (KRIs)</h3>
+<table>
+<thead>
+<tr>
+<th>KRI</th>
+<th>Threshold</th>
+<th>Measurement Frequency</th>
+<th>Escalation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Critical Vulnerabilities</td>
+<td>&gt; 10</td>
+<td>Daily</td>
+<td>CISO</td>
+</tr>
+<tr>
+<td>Failed Login Attempts</td>
+<td>&gt; 1000/day</td>
+<td>Daily</td>
+<td>SOC</td>
+</tr>
+<tr>
+<td>Unpatched Systems</td>
+<td>&gt; 5%</td>
+<td>Weekly</td>
+<td>IT Director</td>
+</tr>
+<tr>
+<td>Data Exfiltration Attempts</td>
+<td>&gt; 0</td>
+<td>Real-time</td>
+<td>CISO, Executive Management</td>
+</tr>
+</tbody>
+</table>
+<h2 id="reporting">Reporting</h2>
+<h3 id="board-reports">Board Reports</h3>
+<p><strong>Frequency:</strong> Quarterly<br />
+<strong>Content:</strong>
+- Executive summary
+- Risk profile and trends
+- Critical incidents
+- Compliance status
+- Strategic initiatives
+- Budget and resources</p>
+<p><strong>Format:</strong> Presentation + written report</p>
+<h3 id="management-reports">Management Reports</h3>
+<p><strong>Frequency:</strong> Monthly<br />
+<strong>Content:</strong>
+- Current risks
+- Incident statistics
+- KPI/KRI dashboard
+- Project progress
+- Resource utilization</p>
+<p><strong>Format:</strong> Dashboard + summary</p>
+<h3 id="operational-reports">Operational Reports</h3>
+<p><strong>Frequency:</strong> Weekly<br />
+<strong>Content:</strong>
+- Security incidents
+- Threat intelligence
+- Vulnerability status
+- Patch compliance
+- Anomalies and trends</p>
+<p><strong>Format:</strong> Technical report</p>
+<h2 id="audit-and-compliance">Audit and Compliance</h2>
+<h3 id="internal-audits">Internal Audits</h3>
+<p><strong>Frequency:</strong> Annually<br />
+<strong>Conducted by:</strong> Internal Audit Department<br />
+<strong>Scope:</strong>
+- Policy compliance
+- Control effectiveness
+- Process adherence
+- Documentation</p>
+<h3 id="external-audits">External Audits</h3>
+<p><strong>Frequency:</strong> Annually or as needed<br />
+<strong>Conducted by:</strong> External auditors<br />
+<strong>Scope:</strong>
+- Regulatory compliance
+- Certifications (ISO 27001, etc.)
+- Penetration testing
+- Security assessments</p>
+<h3 id="compliance-monitoring">Compliance Monitoring</h3>
+<p><strong>Frequency:</strong> Continuous<br />
+<strong>Mechanisms:</strong>
+- Automated compliance checks
+- Policy violation monitoring
+- Access reviews
+- Configuration audits</p>
+<h2 id="continuous-improvement">Continuous Improvement</h2>
+<h3 id="lessons-learned">Lessons Learned</h3>
+<ul>
+<li>Post-incident reviews</li>
+<li>Audit findings analysis</li>
+<li>Best practice sharing</li>
+<li>Process optimization</li>
+</ul>
+<h3 id="program-assessment">Program Assessment</h3>
+<p><strong>Frequency:</strong> Annually<br />
+<strong>Methodology:</strong>
+- Maturity assessment (NIST CSF)
+- Gap analysis
+- Industry benchmarking
+- Stakeholder feedback</p>
+<h3 id="improvement-actions">Improvement Actions</h3>
+<ul>
+<li>Prioritization based on risk</li>
+<li>Resource allocation</li>
+<li>Implementation planning</li>
+<li>Progress monitoring</li>
+</ul>
+<h2 id="escalation-processes">Escalation Processes</h2>
+<h3 id="incident-escalation">Incident Escalation</h3>
+<ol>
+<li><strong>Level 1:</strong> SOC Analyst → SOC Manager</li>
+<li><strong>Level 2:</strong> SOC Manager → CISO</li>
+<li><strong>Level 3:</strong> CISO → Executive Management</li>
+<li><strong>Level 4:</strong> Executive Management → Board</li>
+</ol>
+<h3 id="risk-escalation">Risk Escalation</h3>
+<ol>
+<li><strong>Low/Medium:</strong> Risk Manager</li>
+<li><strong>High:</strong> CISO + CRO</li>
+<li><strong>Critical:</strong> Executive Management</li>
+<li><strong>Existential:</strong> Board of Directors</li>
+</ol>
+<h2 id="document-references">Document References</h2>
+<ul>
+<li>0020_organizational_context.md</li>
+<li>0030_risk_management_strategy.md</li>
+<li>0040_roles_responsibilities.md</li>
+<li>0050_policy_framework.md</li>
+</ul>
+<hr />
+<p><strong>Document History:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>{{ meta.date }}</td>
+<td>Andreas Huemmer [andreas.huemmer@adminsend.de]</td>
+<td>Initial creation</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0050_policy_framework.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0070_supply_chain_risk_management.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

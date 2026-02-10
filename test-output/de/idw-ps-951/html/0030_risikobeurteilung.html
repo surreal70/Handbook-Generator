@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0030 - Risikobeurteilung und Risikoanalyse</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0030</div>
+            <h1>Risikobeurteilung und Risikoanalyse</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0020_pruefungsumfang_definition.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0040_pruefungsteam_ressourcen.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="risikobeurteilung-und-risikoanalyse">Risikobeurteilung und Risikoanalyse</h1>
+<p><strong>Dokument-ID:</strong> idw-ps-951-0030<br />
+<strong>Owner:</strong> {{ meta.audit_lead }}<br />
+<strong>Version:</strong> {{ meta.version }}<br />
+<strong>Status:</strong> {{ meta.status }}<br />
+<strong>Klassifizierung:</strong> {{ meta.classification }}<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.date }}</p>
+<hr />
+<h2 id="1-zweck">1. Zweck</h2>
+<p>Dieses Dokument beschreibt die Risikobeurteilung im Rahmen der IT-Prüfung nach IDW PS 951. Es identifiziert und bewertet IT-Risiken, die die Ordnungsmäßigkeit der Rechnungslegung beeinflussen können.</p>
+<h2 id="2-risikoanalysemethodik">2. Risikoanalysemethodik</h2>
+<h3 id="ansatz">Ansatz</h3>
+<ul>
+<li><strong>Methodik:</strong> {{ source.risk_methodology }}</li>
+<li><strong>Bewertungsskala:</strong> {{ source.risk_scale }}</li>
+<li><strong>Risikokategorien:</strong> Inhärentes Risiko, Kontrollrisiko, Entdeckungsrisiko</li>
+</ul>
+<h3 id="risikobewertungskriterien">Risikobewertungskriterien</h3>
+<h4 id="eintrittswahrscheinlichkeit">Eintrittswahrscheinlichkeit</h4>
+<ul>
+<li><strong>Hoch:</strong> Sehr wahrscheinlich (&gt; 50%)</li>
+<li><strong>Mittel:</strong> Möglich (10-50%)</li>
+<li><strong>Niedrig:</strong> Unwahrscheinlich (&lt; 10%)</li>
+</ul>
+<h4 id="auswirkung">Auswirkung</h4>
+<ul>
+<li><strong>Hoch:</strong> Wesentliche Auswirkung auf Rechnungslegung</li>
+<li><strong>Mittel:</strong> Moderate Auswirkung</li>
+<li><strong>Niedrig:</strong> Geringe Auswirkung</li>
+</ul>
+<h2 id="3-identifizierte-it-risiken">3. Identifizierte IT-Risiken</h2>
+<h3 id="risikoregister">Risikoregister</h3>
+<table>
+<thead>
+<tr>
+<th>Risiko-ID</th>
+<th>Risikobeschreibung</th>
+<th>Kategorie</th>
+<th>Wahrscheinlichkeit</th>
+<th>Auswirkung</th>
+<th>Risikostufe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R-001</td>
+<td>{{ source.risk_1_desc }}</td>
+<td>{{ source.risk_1_category }}</td>
+<td>{{ source.risk_1_likelihood }}</td>
+<td>{{ source.risk_1_impact }}</td>
+<td>{{ source.risk_1_level }}</td>
+</tr>
+<tr>
+<td>R-002</td>
+<td>{{ source.risk_2_desc }}</td>
+<td>{{ source.risk_2_category }}</td>
+<td>{{ source.risk_2_likelihood }}</td>
+<td>{{ source.risk_2_impact }}</td>
+<td>{{ source.risk_2_level }}</td>
+</tr>
+<tr>
+<td>R-003</td>
+<td>{{ source.risk_3_desc }}</td>
+<td>{{ source.risk_3_category }}</td>
+<td>{{ source.risk_3_likelihood }}</td>
+<td>{{ source.risk_3_impact }}</td>
+<td>{{ source.risk_3_level }}</td>
+</tr>
+</tbody>
+</table>
+<h3 id="risikokategorien">Risikokategorien</h3>
+<h4 id="it-governance-risiken">IT-Governance-Risiken</h4>
+<ul>
+<li>Unzureichende IT-Strategie</li>
+<li>Fehlende IT-Governance-Strukturen</li>
+<li>Unklare Verantwortlichkeiten</li>
+</ul>
+<h4 id="it-prozessrisiken">IT-Prozessrisiken</h4>
+<ul>
+<li>Unzureichendes Change Management</li>
+<li>Schwaches Incident Management</li>
+<li>Fehlende Prozessdokumentation</li>
+</ul>
+<h4 id="it-systemrisiken">IT-Systemrisiken</h4>
+<ul>
+<li>Systemausfälle</li>
+<li>Datenintegritätsprobleme</li>
+<li>Schnittstellenfehler</li>
+</ul>
+<h4 id="it-sicherheitsrisiken">IT-Sicherheitsrisiken</h4>
+<ul>
+<li>Unberechtigte Zugriffe</li>
+<li>Datenverlust</li>
+<li>Cyberangriffe</li>
+<li>Schwachstellen</li>
+</ul>
+<h4 id="compliance-risiken">Compliance-Risiken</h4>
+<ul>
+<li>Verstöße gegen Datenschutz</li>
+<li>Nichteinhaltung regulatorischer Anforderungen</li>
+<li>Fehlende Nachweise</li>
+</ul>
+<h2 id="4-risikobewertung-nach-prufungsbereich">4. Risikobewertung nach Prüfungsbereich</h2>
+<h3 id="it-strategie-und-organisation">IT-Strategie und Organisation</h3>
+<ul>
+<li><strong>Inhärentes Risiko:</strong> {{ source.strategy_inherent_risk }}</li>
+<li><strong>Kontrollrisiko:</strong> {{ source.strategy_control_risk }}</li>
+<li><strong>Prüfungsrisiko:</strong> {{ source.strategy_audit_risk }}</li>
+</ul>
+<h3 id="it-prozesse">IT-Prozesse</h3>
+<ul>
+<li><strong>Inhärentes Risiko:</strong> {{ source.process_inherent_risk }}</li>
+<li><strong>Kontrollrisiko:</strong> {{ source.process_control_risk }}</li>
+<li><strong>Prüfungsrisiko:</strong> {{ source.process_audit_risk }}</li>
+</ul>
+<h3 id="it-systeme">IT-Systeme</h3>
+<ul>
+<li><strong>Inhärentes Risiko:</strong> {{ source.systems_inherent_risk }}</li>
+<li><strong>Kontrollrisiko:</strong> {{ source.systems_control_risk }}</li>
+<li><strong>Prüfungsrisiko:</strong> {{ source.systems_audit_risk }}</li>
+</ul>
+<h3 id="it-sicherheit">IT-Sicherheit</h3>
+<ul>
+<li><strong>Inhärentes Risiko:</strong> {{ source.security_inherent_risk }}</li>
+<li><strong>Kontrollrisiko:</strong> {{ source.security_control_risk }}</li>
+<li><strong>Prüfungsrisiko:</strong> {{ source.security_audit_risk }}</li>
+</ul>
+<h2 id="5-risikobasierte-prufungsstrategie">5. Risikobasierte Prüfungsstrategie</h2>
+<h3 id="prufungsschwerpunkte">Prüfungsschwerpunkte</h3>
+<p>Basierend auf der Risikoanalyse werden folgende Bereiche priorisiert:</p>
+<ol>
+<li><strong>Hohe Priorität:</strong></li>
+<li>{{ source.high_priority_area_1 }}</li>
+<li>
+<p>{{ source.high_priority_area_2 }}</p>
+</li>
+<li>
+<p><strong>Mittlere Priorität:</strong></p>
+</li>
+<li>{{ source.medium_priority_area_1 }}</li>
+<li>
+<p>{{ source.medium_priority_area_2 }}</p>
+</li>
+<li>
+<p><strong>Niedrige Priorität:</strong></p>
+</li>
+<li>{{ source.low_priority_area_1 }}</li>
+</ol>
+<h3 id="prufungshandlungen-nach-risiko">Prüfungshandlungen nach Risiko</h3>
+<h4 id="hochrisikobereiche">Hochrisikobereiche</h4>
+<ul>
+<li>Detaillierte Kontrolltests</li>
+<li>Umfangreiche Stichproben</li>
+<li>Intensive Dokumentenprüfung</li>
+<li>Interviews mit Schlüsselpersonen</li>
+</ul>
+<h4 id="mittelrisikobereiche">Mittelrisikobereiche</h4>
+<ul>
+<li>Standardkontrolltests</li>
+<li>Repräsentative Stichproben</li>
+<li>Dokumentenprüfung</li>
+</ul>
+<h4 id="niedrigrisikobereiche">Niedrigrisikobereiche</h4>
+<ul>
+<li>Überblicksprüfung</li>
+<li>Analytische Prüfungshandlungen</li>
+<li>Befragungen</li>
+</ul>
+<h2 id="6-risikomatrix">6. Risikomatrix</h2>
+<h3 id="risikobewertungsmatrix">Risikobewertungsmatrix</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Niedrige Auswirkung</th>
+<th>Mittlere Auswirkung</th>
+<th>Hohe Auswirkung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Hoch</strong></td>
+<td>Mittel</td>
+<td>Hoch</td>
+<td>Kritisch</td>
+</tr>
+<tr>
+<td><strong>Mittel</strong></td>
+<td>Niedrig</td>
+<td>Mittel</td>
+<td>Hoch</td>
+</tr>
+<tr>
+<td><strong>Niedrig</strong></td>
+<td>Niedrig</td>
+<td>Niedrig</td>
+<td>Mittel</td>
+</tr>
+</tbody>
+</table>
+<h3 id="risikobehandlung-nach-stufe">Risikobehandlung nach Stufe</h3>
+<ul>
+<li><strong>Kritisch:</strong> Sofortige Prüfungshandlungen, detaillierte Tests</li>
+<li><strong>Hoch:</strong> Prioritäre Prüfung, umfangreiche Tests</li>
+<li><strong>Mittel:</strong> Standardprüfung</li>
+<li><strong>Niedrig:</strong> Überblicksprüfung</li>
+</ul>
+<h2 id="7-risikokommunikation">7. Risikokommunikation</h2>
+<h3 id="berichterstattung">Berichterstattung</h3>
+<ul>
+<li><strong>An Management:</strong> {{ source.management_reporting }}</li>
+<li><strong>An Prüfungsausschuss:</strong> {{ source.audit_committee_reporting }}</li>
+<li><strong>Frequenz:</strong> {{ source.reporting_frequency }}</li>
+</ul>
+<h3 id="eskalation">Eskalation</h3>
+<p>Kritische Risiken werden sofort eskaliert an:
+- {{ source.escalation_contact_1 }}
+- {{ source.escalation_contact_2 }}</p>
+<h2 id="8-risikouberwachung">8. Risikoüberwachung</h2>
+<h3 id="monitoring">Monitoring</h3>
+<ul>
+<li>Kontinuierliche Überwachung während der Prüfung</li>
+<li>Anpassung der Prüfungsstrategie bei neuen Erkenntnissen</li>
+<li>Dokumentation von Risikoänderungen</li>
+</ul>
+<h3 id="aktualisierung">Aktualisierung</h3>
+<p>Das Risikoregister wird aktualisiert bei:
+- Neuen Erkenntnissen
+- Änderungen im IT-Umfeld
+- Identifikation neuer Risiken</p>
+<h2 id="9-referenzen">9. Referenzen</h2>
+<ul>
+<li>IDW PS 951 - Risikobeurteilung</li>
+<li>IDW PS 340 - Risikofrüherkennungssystem</li>
+<li>Organisationsspezifisches Risikoregister</li>
+<li>Vorjahresprüfungsberichte</li>
+</ul>
+<hr />
+<p><strong>Genehmigt durch:</strong><br />
+{{ meta.audit_lead }}, Prüfungsleiter<br />
+Datum: {{ meta.approval_date }}</p>
+<p><strong>Nächster Review:</strong> {{ meta.next_review }}</p>
+<hr />
+<p><strong>Dokumenthistorie:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Datum</th>
+<th>Autor</th>
+<th>Änderungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>{{ meta.date }}</td>
+<td>Andreas Huemmer [andreas.huemmer@adminsend.de]</td>
+<td>Initiale Erstellung</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0020_pruefungsumfang_definition.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0040_pruefungsteam_ressourcen.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

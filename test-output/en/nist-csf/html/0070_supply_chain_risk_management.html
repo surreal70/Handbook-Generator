@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0070 - Supply Chain Risk Management (GV.SC)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0070</div>
+            <h1>Supply Chain Risk Management (GV.SC)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0060_oversight.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0100_asset_management.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<hr />
+<p>Document-ID: nist-csf-0070
+Owner: {{ meta.owner }}
+Version: {{ meta.version }}
+Status: Draft
+Classification: Internal
+Last Update: {{ meta.date }}</p>
+<hr />
+<h1 id="supply-chain-risk-management-gvsc">Supply Chain Risk Management (GV.SC)</h1>
+<h2 id="purpose">Purpose</h2>
+<p>This document describes the organization's approach to managing cybersecurity risks in the supply chain, including supplier assessment, contract requirements, and ongoing monitoring.</p>
+<h2 id="scope">Scope</h2>
+<p>{{ meta.scope }}</p>
+<h2 id="supply-chain-risk-strategy">Supply Chain Risk Strategy</h2>
+<h3 id="strategic-objectives">Strategic Objectives</h3>
+<ul>
+<li>Identification and assessment of supplier risks</li>
+<li>Minimization of cybersecurity risks through third parties</li>
+<li>Ensuring supplier compliance</li>
+<li>Continuous monitoring of supplier performance</li>
+</ul>
+<h3 id="risk-categories">Risk Categories</h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Description</th>
+<th>Risk Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Critical Suppliers</td>
+<td>Access to critical systems/data</td>
+<td>High</td>
+</tr>
+<tr>
+<td>IT Service Providers</td>
+<td>Managed services, Cloud providers</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Software Suppliers</td>
+<td>Applications, Components</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Hardware Suppliers</td>
+<td>IT equipment, Network devices</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Other Suppliers</td>
+<td>No IT involvement</td>
+<td>Low</td>
+</tr>
+</tbody>
+</table>
+<h2 id="supplier-lifecycle">Supplier Lifecycle</h2>
+<h3 id="1-supplier-selection">1. Supplier Selection</h3>
+<p><strong>Due Diligence:</strong>
+- Security assessment
+- Financial stability
+- Reputation and references
+- Compliance evidence</p>
+<p><strong>Assessment Criteria:</strong>
+- ISO 27001 certification
+- SOC 2 report
+- Data protection compliance (GDPR)
+- Incident response capabilities
+- Business continuity planning</p>
+<h3 id="2-contractual-requirements">2. Contractual Requirements</h3>
+<p><strong>Security Clauses:</strong>
+- Non-disclosure agreements (NDA)
+- Data protection provisions
+- Security requirements
+- Audit rights
+- Incident reporting obligations
+- Liability and insurance</p>
+<p><strong>Service Level Agreements (SLAs):</strong>
+- Availability: {{ meta.sla_availability }}
+- Incident response time: {{ meta.sla_response_time }}
+- Patch management: {{ meta.sla_patch_time }}
+- Backup and recovery: {{ meta.sla_recovery_time }}</p>
+<h3 id="3-onboarding">3. Onboarding</h3>
+<p><strong>Security Requirements:</strong>
+- Access control and authentication
+- Network segmentation
+- Encryption
+- Logging and monitoring
+- Training of supplier employees</p>
+<p><strong>Documentation:</strong>
+- Security policies
+- Access documentation
+- Contact information
+- Escalation processes</p>
+<h3 id="4-ongoing-monitoring">4. Ongoing Monitoring</h3>
+<p><strong>Monitoring Activities:</strong>
+- Quarterly security reviews
+- Annual audits
+- Continuous compliance monitoring
+- Incident tracking
+- Performance metrics</p>
+<p><strong>Key Performance Indicators:</strong>
+| KPI | Target | Measurement Frequency |
+|-----|--------|----------------------|
+| SLA Compliance | &gt; 99% | Monthly |
+| Security Incidents | 0 critical | Monthly |
+| Patch Compliance | &gt; 95% | Monthly |
+| Audit Findings | &lt; 5 High | Annually |</p>
+<h3 id="5-offboarding">5. Offboarding</h3>
+<p><strong>Process:</strong>
+- Access revocation
+- Data return/deletion
+- Archive documentation
+- Lessons learned
+- Post-termination contractual obligations</p>
+<h2 id="supplier-categorization">Supplier Categorization</h2>
+<h3 id="tier-1-critical-suppliers">Tier 1: Critical Suppliers</h3>
+<p><strong>Criteria:</strong>
+- Access to critical systems or data
+- High dependency
+- Difficult to replace</p>
+<p><strong>Requirements:</strong>
+- Comprehensive due diligence
+- ISO 27001 certification required
+- Quarterly reviews
+- Annual audits
+- Incident response plan required</p>
+<p><strong>Examples:</strong>
+- {{ meta.critical_supplier_1 }}
+- {{ meta.critical_supplier_2 }}</p>
+<h3 id="tier-2-important-suppliers">Tier 2: Important Suppliers</h3>
+<p><strong>Criteria:</strong>
+- Access to non-critical systems
+- Moderate dependency
+- Replaceable with effort</p>
+<p><strong>Requirements:</strong>
+- Standard due diligence
+- SOC 2 or equivalent
+- Semi-annual reviews
+- Audits every 2 years</p>
+<p><strong>Examples:</strong>
+- {{ meta.important_supplier_1 }}
+- {{ meta.important_supplier_2 }}</p>
+<h3 id="tier-3-standard-suppliers">Tier 3: Standard Suppliers</h3>
+<p><strong>Criteria:</strong>
+- No direct system access
+- Low dependency
+- Easily replaceable</p>
+<p><strong>Requirements:</strong>
+- Basic security assessment
+- Annual reviews
+- Self-assessment</p>
+<h2 id="risk-assessment">Risk Assessment</h2>
+<h3 id="assessment-matrix">Assessment Matrix</h3>
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Weight</th>
+<th>Rating</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data Access</td>
+<td>30%</td>
+<td>1-5</td>
+</tr>
+<tr>
+<td>System Access</td>
+<td>25%</td>
+<td>1-5</td>
+</tr>
+<tr>
+<td>Business Criticality</td>
+<td>20%</td>
+<td>1-5</td>
+</tr>
+<tr>
+<td>Compliance Status</td>
+<td>15%</td>
+<td>1-5</td>
+</tr>
+<tr>
+<td>Security Maturity</td>
+<td>10%</td>
+<td>1-5</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total Risk = Σ (Factor × Weight)</strong></p>
+<h3 id="risk-treatment">Risk Treatment</h3>
+<table>
+<thead>
+<tr>
+<th>Risk Score</th>
+<th>Category</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4.0 - 5.0</td>
+<td>Critical</td>
+<td>Immediate action, possible contract termination</td>
+</tr>
+<tr>
+<td>3.0 - 3.9</td>
+<td>High</td>
+<td>Improvement plan required</td>
+</tr>
+<tr>
+<td>2.0 - 2.9</td>
+<td>Medium</td>
+<td>Monitoring and regular reviews</td>
+</tr>
+<tr>
+<td>1.0 - 1.9</td>
+<td>Low</td>
+<td>Standard monitoring</td>
+</tr>
+</tbody>
+</table>
+<h2 id="incident-management">Incident Management</h2>
+<h3 id="supplier-incidents">Supplier Incidents</h3>
+<p><strong>Reporting Requirements:</strong>
+- Critical incidents: Immediate (&lt; 1 hour)
+- High incidents: &lt; 4 hours
+- Medium incidents: &lt; 24 hours
+- Low incidents: &lt; 72 hours</p>
+<p><strong>Response Process:</strong>
+1. Incident report by supplier
+2. Assessment by SOC
+3. Response coordination
+4. Stakeholder communication
+5. Post-incident review
+6. Lessons learned</p>
+<h3 id="escalation">Escalation</h3>
+<ul>
+<li>Critical incidents → CISO + Executive Management</li>
+<li>Data breaches → DPO + Legal</li>
+<li>Contract violations → Procurement + Legal</li>
+</ul>
+<h2 id="compliance-and-audits">Compliance and Audits</h2>
+<h3 id="audit-requirements">Audit Requirements</h3>
+<p><strong>Internal Audits:</strong>
+- Tier 1: Annually
+- Tier 2: Every 2 years
+- Tier 3: Risk-based</p>
+<p><strong>External Audits:</strong>
+- ISO 27001 certification (Tier 1)
+- SOC 2 reports (Tier 1-2)
+- Penetration testing (as needed)</p>
+<h3 id="compliance-monitoring">Compliance Monitoring</h3>
+<ul>
+<li>Continuous monitoring of certifications</li>
+<li>Tracking of audit findings</li>
+<li>Review of improvement actions</li>
+</ul>
+<h2 id="software-supply-chain">Software Supply Chain</h2>
+<h3 id="software-components">Software Components</h3>
+<ul>
+<li>Software Bill of Materials (SBOM)</li>
+<li>Vulnerability scanning</li>
+<li>License compliance</li>
+<li>Update management</li>
+</ul>
+<h3 id="open-source-software">Open Source Software</h3>
+<ul>
+<li>Approval process</li>
+<li>Vulnerability monitoring</li>
+<li>License review</li>
+<li>Community support assessment</li>
+</ul>
+<h2 id="document-references">Document References</h2>
+<ul>
+<li>0020_organizational_context.md</li>
+<li>0030_risk_management_strategy.md</li>
+<li>0050_policy_framework.md</li>
+<li>0150_supply_chain_risk_management.md (Identify)</li>
+</ul>
+<hr />
+<p><strong>Document History:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>{{ meta.date }}</td>
+<td>Andreas Huemmer [andreas.huemmer@adminsend.de]</td>
+<td>Initial creation</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0060_oversight.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0100_asset_management.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

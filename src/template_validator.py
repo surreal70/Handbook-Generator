@@ -96,12 +96,43 @@ class TemplateValidator:
         'Grundschutz-Kompendium', 'IT-Grundschutz-Kompendium'
     ]
     
+    # IDW PS 951 Framework keywords
+    IDW_PS_951_KEYWORDS = [
+        'IDW PS 951', 'IDW-PS-951', 'IDW PS951',
+        'Prüfungsstandard 951', 'IT-Prüfung', 'IT-Audit',
+        'Prüfungsplanung', 'Risikobeurteilung', 'Kontrollprüfung',
+        'Prüfungsfeststellungen', 'IT-Strategie', 'IT-Governance',
+        'IT-Organisation', 'IT-Prozesse', 'IT-Systeme'
+    ]
+    
+    # NIST CSF Framework keywords
+    NIST_CSF_KEYWORDS = [
+        'NIST CSF', 'NIST Cybersecurity Framework', 'CSF 2.0',
+        'NIST Framework', 'Govern function', 'Identify function',
+        'Protect function', 'Detect function', 'Respond function',
+        'Recover function', 'CSF Profile', 'Implementation Tier'
+    ]
+    
+    # TOGAF Framework keywords
+    TOGAF_KEYWORDS = [
+        'TOGAF', 'The Open Group Architecture Framework',
+        'Architecture Development Method', 'ADM',
+        'Preliminary Phase', 'Architecture Vision', 'Business Architecture',
+        'Information Systems Architecture', 'Technology Architecture',
+        'Opportunities and Solutions', 'Migration Planning',
+        'Implementation Governance', 'Architecture Change Management',
+        'Requirements Management', 'Architecture Building Block', 'ABB', 'SBB'
+    ]
+    
     # Template type to framework mapping
     TEMPLATE_TYPE_FRAMEWORKS = {
         'it-operation': ['ITIL', 'ISO20000', 'COBIT'],
         'bcm': ['ISO22301', 'BSI_BCM'],
         'isms': ['ISO27001'],
-        'bsi-grundschutz': ['BSI_GRUNDSCHUTZ']
+        'bsi-grundschutz': ['BSI_GRUNDSCHUTZ'],
+        'idw-ps-951': ['IDW_PS_951'],
+        'nist-csf': ['NIST_CSF'],
+        'togaf': ['TOGAF']
     }
     
     def __init__(self):
@@ -277,6 +308,18 @@ class TemplateValidator:
                 if any(keyword in content for keyword in self.BSI_GRUNDSCHUTZ_KEYWORDS):
                     has_framework = True
                     break
+            elif framework == 'IDW_PS_951':
+                if any(keyword in content for keyword in self.IDW_PS_951_KEYWORDS):
+                    has_framework = True
+                    break
+            elif framework == 'NIST_CSF':
+                if any(keyword in content for keyword in self.NIST_CSF_KEYWORDS):
+                    has_framework = True
+                    break
+            elif framework == 'TOGAF':
+                if any(keyword in content for keyword in self.TOGAF_KEYWORDS):
+                    has_framework = True
+                    break
         
         if not has_framework:
             framework_names = ', '.join(expected_frameworks)
@@ -378,6 +421,94 @@ class TemplateValidator:
         
         return warnings
 
+    def validate_new_frameworks(self, templates_base_dir: Path = None) -> Dict[str, ValidationResult]:
+        """
+        Validate all new framework templates (IDW PS 951, NIST CSF, TOGAF).
+        
+        Args:
+            templates_base_dir: Base directory for templates (defaults to ./templates)
+            
+        Returns:
+            Dictionary mapping framework names to ValidationResults
+        """
+        if templates_base_dir is None:
+            templates_base_dir = Path("templates")
+        
+        results = {}
+        new_frameworks = ['idw-ps-951', 'nist-csf', 'togaf']
+        languages = ['de', 'en']
+        
+        for framework in new_frameworks:
+            for language in languages:
+                key = f"{language}/{framework}"
+                results[key] = self.validate_framework(language, framework, templates_base_dir)
+        
+        return results
+    
+    def generate_validation_report(self, results: Dict[str, ValidationResult], output_path: Path = None) -> str:
+        """
+        Generate a comprehensive validation report.
+        
+        Args:
+            results: Dictionary of validation results
+            output_path: Optional path to write report to file
+            
+        Returns:
+            Report as string
+        """
+        report_lines = []
+        report_lines.append("=" * 80)
+        report_lines.append("TEMPLATE VALIDATION REPORT")
+        report_lines.append("=" * 80)
+        report_lines.append("")
+        
+        # Summary statistics
+        total_frameworks = len(results)
+        valid_frameworks = sum(1 for r in results.values() if r.is_valid)
+        total_errors = sum(len(r.errors) for r in results.values())
+        total_warnings = sum(len(r.warnings) for r in results.values())
+        
+        report_lines.append("SUMMARY")
+        report_lines.append("-" * 80)
+        report_lines.append(f"Total frameworks validated: {total_frameworks}")
+        report_lines.append(f"Valid frameworks: {valid_frameworks}")
+        report_lines.append(f"Frameworks with issues: {total_frameworks - valid_frameworks}")
+        report_lines.append(f"Total errors: {total_errors}")
+        report_lines.append(f"Total warnings: {total_warnings}")
+        report_lines.append("")
+        
+        # Detailed results per framework
+        for framework_key, result in sorted(results.items()):
+            report_lines.append("=" * 80)
+            report_lines.append(f"FRAMEWORK: {framework_key}")
+            report_lines.append("=" * 80)
+            report_lines.append(f"Status: {'VALID' if result.is_valid else 'INVALID'}")
+            report_lines.append(f"Errors: {len(result.errors)}")
+            report_lines.append(f"Warnings: {len(result.warnings)}")
+            report_lines.append("")
+            
+            if result.errors:
+                report_lines.append("ERRORS:")
+                report_lines.append("-" * 80)
+                for error in result.errors:
+                    report_lines.append(f"  ✗ {error}")
+                report_lines.append("")
+            
+            if result.warnings:
+                report_lines.append("WARNINGS:")
+                report_lines.append("-" * 80)
+                for warning in result.warnings:
+                    report_lines.append(f"  ⚠ {warning}")
+                report_lines.append("")
+        
+        report = "\n".join(report_lines)
+        
+        # Write to file if path provided
+        if output_path:
+            output_path.write_text(report, encoding='utf-8')
+        
+        return report
+
     def validate_framework(self, language: str, framework: str, templates_base_dir: Path = None) -> ValidationResult:
         """
         Validate all templates in a framework.
@@ -414,6 +545,11 @@ class TemplateValidator:
         readme_path = template_dir / "README.md"
         if not readme_path.exists():
             result.add_warning(f"README.md not found in {template_dir}")
+
+        # Check FRAMEWORK_MAPPING exists
+        mapping_path = template_dir / "FRAMEWORK_MAPPING.md"
+        if not mapping_path.exists():
+            result.add_warning(f"FRAMEWORK_MAPPING.md not found in {template_dir}")
 
         # Check metadata template exists
         metadata_pattern = f"0000_metadata_{language}_{framework}.md"

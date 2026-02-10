@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0100 - Asset Management (ID.AM)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0100</div>
+            <h1>Asset Management (ID.AM)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0070_supply_chain_risk_management.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0110_business_environment.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<hr />
+<p>Document-ID: nist-csf-0100
+Owner: {{ meta.owner }}
+Version: {{ meta.version }}
+Status: Draft
+Classification: Internal
+Last Update: {{ meta.date }}</p>
+<hr />
+<h1 id="asset-management-idam">Asset Management (ID.AM)</h1>
+<h2 id="purpose">Purpose</h2>
+<p>This document describes the asset management program for identifying and managing data, personnel, devices, systems, and facilities that enable the organization to achieve business objectives.</p>
+<h2 id="scope">Scope</h2>
+<p>{{ meta.scope }}</p>
+<h2 id="asset-categories">Asset Categories</h2>
+<h3 id="1-hardware-assets">1. Hardware Assets</h3>
+<ul>
+<li>Servers and workstations</li>
+<li>Network devices</li>
+<li>Mobile devices</li>
+<li>IoT devices</li>
+<li>Storage systems</li>
+</ul>
+<h3 id="2-software-assets">2. Software Assets</h3>
+<ul>
+<li>Operating systems</li>
+<li>Applications</li>
+<li>Databases</li>
+<li>Middleware</li>
+<li>Development tools</li>
+</ul>
+<h3 id="3-data-assets">3. Data Assets</h3>
+<ul>
+<li>Customer data</li>
+<li>Financial data</li>
+<li>Intellectual property</li>
+<li>Personnel data</li>
+<li>Trade secrets</li>
+</ul>
+<h3 id="4-services-and-systems">4. Services and Systems</h3>
+<ul>
+<li>Cloud services</li>
+<li>SaaS applications</li>
+<li>Managed services</li>
+<li>Critical business processes</li>
+</ul>
+<h3 id="5-personnel">5. Personnel</h3>
+<ul>
+<li>IT personnel</li>
+<li>Privileged users</li>
+<li>External service providers</li>
+<li>Administrators</li>
+</ul>
+<h2 id="asset-inventory">Asset Inventory</h2>
+<h3 id="inventory-process">Inventory Process</h3>
+<ol>
+<li>Asset discovery (automated and manual)</li>
+<li>Asset classification</li>
+<li>Asset valuation</li>
+<li>Documentation in CMDB</li>
+<li>Regular updates</li>
+</ol>
+<h3 id="asset-attributes">Asset Attributes</h3>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Asset-ID</td>
+<td>Unique identifier</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Asset-Name</td>
+<td>Descriptive name</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Asset-Type</td>
+<td>Category</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Owner</td>
+<td>Responsible party</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Location</td>
+<td>Physical/logical location</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Criticality</td>
+<td>Business importance</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Value</td>
+<td>Business value</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>Active/Inactive/Decommissioned</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h2 id="asset-classification">Asset Classification</h2>
+<h3 id="criticality-levels">Criticality Levels</h3>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Description</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Critical</td>
+<td>Business essential</td>
+<td>Production systems, Customer databases</td>
+</tr>
+<tr>
+<td>High</td>
+<td>Important for operations</td>
+<td>ERP systems, Email servers</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>Supporting systems</td>
+<td>Intranet, Collaboration tools</td>
+</tr>
+<tr>
+<td>Low</td>
+<td>Non-critical systems</td>
+<td>Test environments</td>
+</tr>
+</tbody>
+</table>
+<h3 id="data-classification">Data Classification</h3>
+<table>
+<thead>
+<tr>
+<th>Classification</th>
+<th>Description</th>
+<th>Protection Requirements</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Highly Confidential</td>
+<td>Highest sensitivity</td>
+<td>Encryption, MFA, Audit logging</td>
+</tr>
+<tr>
+<td>Confidential</td>
+<td>Business sensitive</td>
+<td>Access control, Encryption</td>
+</tr>
+<tr>
+<td>Internal</td>
+<td>Employees only</td>
+<td>Access control</td>
+</tr>
+<tr>
+<td>Public</td>
+<td>No restrictions</td>
+<td>Basic protection</td>
+</tr>
+</tbody>
+</table>
+<h2 id="asset-lifecycle">Asset Lifecycle</h2>
+<h3 id="1-acquisition">1. Acquisition</h3>
+<ul>
+<li>Approval process</li>
+<li>Security requirements</li>
+<li>Supplier assessment</li>
+<li>Contract management</li>
+</ul>
+<h3 id="2-deployment">2. Deployment</h3>
+<ul>
+<li>Configuration per standards</li>
+<li>Security hardening</li>
+<li>Inventory registration</li>
+<li>Documentation</li>
+</ul>
+<h3 id="3-operation">3. Operation</h3>
+<ul>
+<li>Patch management</li>
+<li>Monitoring</li>
+<li>Maintenance</li>
+<li>Change management</li>
+</ul>
+<h3 id="4-decommissioning">4. Decommissioning</h3>
+<ul>
+<li>Data deletion</li>
+<li>Asset return</li>
+<li>Documentation</li>
+<li>Disposal</li>
+</ul>
+<h2 id="asset-ownership">Asset Ownership</h2>
+<h3 id="responsibilities">Responsibilities</h3>
+<p><strong>Asset Owner:</strong>
+- Business responsibility
+- Classification
+- Access approval
+- Compliance</p>
+<p><strong>Asset Custodian (IT):</strong>
+- Technical management
+- Security controls
+- Backup and recovery
+- Patch management</p>
+<p><strong>Asset User:</strong>
+- Proper use
+- Problem reporting
+- Policy compliance</p>
+<h2 id="document-references">Document References</h2>
+<ul>
+<li>0110_business_environment.md</li>
+<li>0130_risk_assessment.md</li>
+<li>0220_data_security.md (Protect)</li>
+</ul>
+<hr />
+<p><strong>Document History:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>{{ meta.date }}</td>
+<td>Andreas Huemmer [andreas.huemmer@adminsend.de]</td>
+<td>Initial creation</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0070_supply_chain_risk_management.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0110_business_environment.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

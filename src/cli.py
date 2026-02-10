@@ -38,8 +38,8 @@ Examples:
   # Interactive mode (test mode required)
   python -m src.cli --test
   
-  # Generate German backup handbook in both formats (markdown + PDF)
-  python -m src.cli --language de --template backup --test
+  # Generate German BCM handbook in both formats (markdown + PDF)
+  python -m src.cli --language de --template bcm --test
   
   # Generate English ISMS handbook in PDF only
   python -m src.cli -l en -t isms -o pdf --test
@@ -49,6 +49,15 @@ Examples:
   
   # Generate English BSI Grundschutz handbook in all formats
   python -m src.cli -l en -t bsi-grundschutz -o all --test
+  
+  # Generate German IDW PS 951 IT Auditing handbook
+  python -m src.cli -l de -t idw-ps-951 --test
+  
+  # Generate English NIST CSF 2.0 handbook
+  python -m src.cli -l en -t nist-csf -o pdf --test
+  
+  # Generate German TOGAF Enterprise Architecture handbook
+  python -m src.cli -l de -t togaf -o html --test
   
   # Generate separate markdown files for each template
   python -m src.cli -l de -t bcm --test --separate-files
@@ -74,8 +83,8 @@ Examples:
     parser.add_argument(
         '--template', '-t',
         type=str,
-        choices=['backup', 'bcm', 'bsi-grundschutz', 'cis-controls', 'common-criteria', 'email-service', 'gdpr', 'hipaa', 'isms', 'iso-9001', 'it-operation', 'nist-800-53', 'pci-dss', 'service-templates', 'tsc'],
-        help='Template type/category for handbook (backup=Backup procedures, bcm=Business Continuity Management, bsi-grundschutz=BSI IT-Grundschutz, cis-controls=CIS Controls v8 Hardening, common-criteria=Common Criteria EAL, email-service=Email Service Management, gdpr=GDPR Compliance, hipaa=HIPAA Compliance, isms=Information Security Management System, iso-9001=ISO 9001 Quality Management, it-operation=IT Operations, nist-800-53=NIST 800-53 Security Controls, pci-dss=PCI-DSS Payment Card Security, service-templates=Service Management Templates, tsc=Trust Services Criteria SOC2)'
+        choices=['bcm', 'bsi-grundschutz', 'cis-controls', 'common-criteria', 'email-service', 'gdpr', 'hipaa', 'idw-ps-951', 'isms', 'iso-9001', 'it-operation', 'nist-800-53', 'nist-csf', 'pci-dss', 'service-templates', 'togaf', 'tsc'],
+        help='Template type/category for handbook (bcm=Business Continuity Management, bsi-grundschutz=BSI IT-Grundschutz, cis-controls=CIS Controls v8 Hardening, common-criteria=Common Criteria EAL, email-service=Email Service Management, gdpr=GDPR Compliance, hipaa=HIPAA Compliance, idw-ps-951=IDW PS 951 IT Auditing, isms=Information Security Management System, iso-9001=ISO 9001 Quality Management, it-operation=IT Operations, nist-800-53=NIST 800-53 Security Controls, nist-csf=NIST Cybersecurity Framework 2.0, pci-dss=PCI-DSS Payment Card Security, service-templates=Service Management Templates, togaf=TOGAF Enterprise Architecture, tsc=Trust Services Criteria SOC2)'
     )
     
     parser.add_argument(

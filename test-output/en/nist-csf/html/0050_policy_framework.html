@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0050 - Policy Framework (GV.PO)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0050</div>
+            <h1>Policy Framework (GV.PO)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0040_roles_responsibilities.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0060_oversight.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<hr />
+<p>Document-ID: nist-csf-0050
+Owner: {{ meta.owner }}
+Version: {{ meta.version }}
+Status: Draft
+Classification: Internal
+Last Update: {{ meta.date }}</p>
+<hr />
+<h1 id="policy-framework-gvpo">Policy Framework (GV.PO)</h1>
+<h2 id="purpose">Purpose</h2>
+<p>This document describes the organization's cybersecurity policy framework, including policy hierarchy, development process, and enforcement mechanisms.</p>
+<h2 id="scope">Scope</h2>
+<p>{{ meta.scope }}</p>
+<h2 id="policy-hierarchy">Policy Hierarchy</h2>
+<h3 id="level-1-cybersecurity-policy-overarching-policy">Level 1: Cybersecurity Policy (Overarching Policy)</h3>
+<p><strong>Purpose:</strong> Defines overarching cybersecurity objectives and principles<br />
+<strong>Approval:</strong> Board of Directors<br />
+<strong>Review:</strong> Annually</p>
+<h3 id="level-2-standards">Level 2: Standards</h3>
+<p><strong>Purpose:</strong> Specific technical and organizational requirements<br />
+<strong>Approval:</strong> CISO<br />
+<strong>Review:</strong> Annually</p>
+<h3 id="level-3-procedures-and-guidelines">Level 3: Procedures and Guidelines</h3>
+<p><strong>Purpose:</strong> Detailed instructions for implementing standards<br />
+<strong>Approval:</strong> Department Head<br />
+<strong>Review:</strong> Semi-annually</p>
+<h3 id="level-4-work-instructions">Level 4: Work Instructions</h3>
+<p><strong>Purpose:</strong> Step-by-step guidance for specific tasks<br />
+<strong>Approval:</strong> Team Lead<br />
+<strong>Review:</strong> Quarterly</p>
+<h2 id="core-policies">Core Policies</h2>
+<h3 id="1-information-security-policy">1. Information Security Policy</h3>
+<p><strong>Description:</strong> Overarching security policy<br />
+<strong>Scope:</strong> Entire organization<br />
+<strong>Responsible:</strong> Thomas Weber<br />
+<strong>Status:</strong> {{ meta.policy_status }}</p>
+<p><strong>Core Principles:</strong>
+- Confidentiality, Integrity, Availability (CIA)
+- Defense-in-Depth
+- Least Privilege
+- Separation of Duties</p>
+<h3 id="2-access-control-policy">2. Access Control Policy</h3>
+<p><strong>Description:</strong> Regulation of access to information and systems<br />
+<strong>Scope:</strong> All users and systems<br />
+<strong>Responsible:</strong> {{ meta.security_architect }}</p>
+<p><strong>Core Elements:</strong>
+- User identification and authentication
+- Authorization and access rights
+- Privileged Access Management
+- Access logs and monitoring</p>
+<h3 id="3-data-protection-policy">3. Data Protection Policy</h3>
+<p><strong>Description:</strong> Protection of personal and sensitive data<br />
+<strong>Scope:</strong> All data processing activities<br />
+<strong>Responsible:</strong> {{ meta.dpo }}</p>
+<p><strong>Core Elements:</strong>
+- Data classification
+- Data protection principles (GDPR)
+- Data minimization
+- Data subject rights</p>
+<h3 id="4-incident-response-policy">4. Incident Response Policy</h3>
+<p><strong>Description:</strong> Handling of security incidents<br />
+<strong>Scope:</strong> All employees<br />
+<strong>Responsible:</strong> {{ meta.security_ops_manager }}</p>
+<p><strong>Core Elements:</strong>
+- Incident classification
+- Reporting obligations
+- Response process
+- Post-incident review</p>
+<h3 id="5-acceptable-use-policy">5. Acceptable Use Policy</h3>
+<p><strong>Description:</strong> Acceptable use of IT resources<br />
+<strong>Scope:</strong> All users<br />
+<strong>Responsible:</strong> {{ meta.it_director }}</p>
+<p><strong>Core Elements:</strong>
+- Permitted and prohibited activities
+- Personal use
+- Monitoring and surveillance
+- Consequences of violations</p>
+<h3 id="6-third-party-risk-management-policy">6. Third-Party Risk Management Policy</h3>
+<p><strong>Description:</strong> Management of third-party risks<br />
+<strong>Scope:</strong> All suppliers and partners<br />
+<strong>Responsible:</strong> {{ meta.procurement_director }}</p>
+<p><strong>Core Elements:</strong>
+- Supplier assessment
+- Contractual security requirements
+- Ongoing monitoring
+- Incident management</p>
+<h2 id="policy-development-process">Policy Development Process</h2>
+<h3 id="1-initiation">1. Initiation</h3>
+<ul>
+<li>Identification of need</li>
+<li>Stakeholder analysis</li>
+<li>Resource allocation</li>
+</ul>
+<h3 id="2-development">2. Development</h3>
+<ul>
+<li>Policy draft</li>
+<li>Stakeholder consultation</li>
+<li>Legal compliance review</li>
+</ul>
+<h3 id="3-approval">3. Approval</h3>
+<ul>
+<li>Review by CISO</li>
+<li>Approval by responsible authority</li>
+<li>Documentation of approval</li>
+</ul>
+<h3 id="4-communication">4. Communication</h3>
+<ul>
+<li>Publication on intranet</li>
+<li>Training and awareness</li>
+<li>Employee acknowledgment</li>
+</ul>
+<h3 id="5-implementation">5. Implementation</h3>
+<ul>
+<li>Implementation of requirements</li>
+<li>Provision of resources</li>
+<li>Compliance monitoring</li>
+</ul>
+<h3 id="6-review-and-update">6. Review and Update</h3>
+<ul>
+<li>Regular reviews</li>
+<li>Adaptation to changes</li>
+<li>Version control</li>
+</ul>
+<h2 id="policy-enforcement">Policy Enforcement</h2>
+<h3 id="compliance-monitoring">Compliance Monitoring</h3>
+<ul>
+<li>Regular audits</li>
+<li>Automated compliance checks</li>
+<li>Self-assessments</li>
+</ul>
+<h3 id="violations-and-consequences">Violations and Consequences</h3>
+<table>
+<thead>
+<tr>
+<th>Severity</th>
+<th>Examples</th>
+<th>Consequences</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Critical</td>
+<td>Intentional data leaks</td>
+<td>Termination, legal action</td>
+</tr>
+<tr>
+<td>High</td>
+<td>Repeated violations</td>
+<td>Warning, training</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>Negligence</td>
+<td>Caution, training</td>
+</tr>
+<tr>
+<td>Low</td>
+<td>Unintentional errors</td>
+<td>Training, awareness</td>
+</tr>
+</tbody>
+</table>
+<h2 id="exceptions-and-deviations">Exceptions and Deviations</h2>
+<h3 id="exception-process">Exception Process</h3>
+<ol>
+<li>Request with justification</li>
+<li>Risk assessment</li>
+<li>Approval by CISO</li>
+<li>Time limitation</li>
+<li>Compensating controls</li>
+</ol>
+<h3 id="documentation">Documentation</h3>
+<ul>
+<li>Exception register</li>
+<li>Justification and risk assessment</li>
+<li>Approval date and duration</li>
+<li>Compensating controls</li>
+</ul>
+<h2 id="policy-repository">Policy Repository</h2>
+<p><strong>Location:</strong> {{ meta.policy_repository }}<br />
+<strong>Access:</strong> All employees (read access)<br />
+<strong>Management:</strong> Compliance team</p>
+<h2 id="training-and-awareness">Training and Awareness</h2>
+<h3 id="mandatory-training">Mandatory Training</h3>
+<ul>
+<li>New employees: Within 30 days</li>
+<li>All employees: Annually</li>
+<li>Privileged users: Semi-annually</li>
+</ul>
+<h3 id="awareness-campaigns">Awareness Campaigns</h3>
+<ul>
+<li>Monthly security tips</li>
+<li>Phishing simulations</li>
+<li>Security newsletter</li>
+</ul>
+<h2 id="document-references">Document References</h2>
+<ul>
+<li>0020_organizational_context.md</li>
+<li>0040_roles_responsibilities.md</li>
+<li>0060_oversight.md</li>
+<li>0210_awareness_training.md (Protect)</li>
+</ul>
+<hr />
+<p><strong>Document History:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>{{ meta.date }}</td>
+<td>Andreas Huemmer [andreas.huemmer@adminsend.de]</td>
+<td>Initial creation</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0040_roles_responsibilities.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0060_oversight.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

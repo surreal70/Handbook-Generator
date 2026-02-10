@@ -112,6 +112,46 @@ Utility for inserting framework-specific sections into templates.
 python helpers/insert_framework_sections.py
 ```
 
+### validate_frameworks.py
+**NEW** - Consolidated framework validation script.
+
+Validates compliance framework templates for naming conventions, structure, placeholders, and bilingual consistency.
+
+**Usage:**
+```bash
+# Validate all frameworks
+python helpers/validate_frameworks.py
+
+# Validate specific framework
+python helpers/validate_frameworks.py --framework idw-ps-951
+
+# Validate specific language
+python helpers/validate_frameworks.py --language de
+python helpers/validate_frameworks.py --framework idw-ps-951 --language en
+
+# Generate detailed report
+python helpers/validate_frameworks.py --output report.txt
+
+# Quiet mode (summary only)
+python helpers/validate_frameworks.py --quiet
+
+# Verbose mode (detailed output)
+python helpers/validate_frameworks.py --framework idw-ps-951 --verbose
+```
+
+**Supported Frameworks:**
+- bcm, bsi-grundschutz, cis-controls, common-criteria
+- gdpr, hipaa, idw-ps-951, isms, iso-9001
+- it-operation, nist-800-53, nist-csf, pci-dss
+- service-directory, togaf, tsc
+
+**Features:**
+- Validates template structure and naming conventions
+- Checks placeholder consistency
+- Verifies bilingual consistency (DE/EN)
+- Generates detailed validation reports
+- Validates all frameworks or individual framework
+
 ## Notes
 
 - These scripts are optional utilities and not required for core functionality

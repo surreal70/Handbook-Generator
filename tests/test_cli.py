@@ -21,7 +21,7 @@ class TestCLIParameterValidation:
     @settings(max_examples=100)
     @given(
         language=st.sampled_from(['de', 'en']),
-        template=st.sampled_from(['backup', 'bcm', 'bsi-grundschutz', 'cis-controls', 'isms', 'it-operation'])
+        template=st.sampled_from(['bcm', 'bsi-grundschutz', 'cis-controls', 'isms', 'it-operation'])
     )
     def test_property_2_valid_parameter_combinations(self, language, template):
         """
@@ -51,7 +51,7 @@ class TestCLIParameterValidation:
     @settings(max_examples=100)
     @given(
         language=st.sampled_from(['de', 'en', None]),
-        template=st.sampled_from(['backup', 'bcm', 'bsi-grundschutz', 'cis-controls', 'isms', 'it-operation', None])
+        template=st.sampled_from(['bcm', 'bsi-grundschutz', 'cis-controls', 'isms', 'it-operation', None])
     )
     def test_property_2_parameter_consistency(self, language, template):
         """
@@ -99,7 +99,7 @@ class TestCLIParameterValidation:
         """
         args = argparse.Namespace(
             language='de',
-            template='backup',
+            template='bcm',
             output=output_format,
             verbose=False,
             config='config.yaml',
@@ -146,20 +146,20 @@ class TestInteractiveSelection:
         mock_manager = Mock()
         mock_manager.discover_templates.return_value = {
             'de': {
-                'backup': [Path('templates/de/backup/0100_intro.md')],
-                'bcm': [Path('templates/de/bcm/0100_intro.md')]
+                'bcm': [Path('templates/de/bcm/0100_intro.md')],
+                'isms': [Path('templates/de/isms/0100_intro.md')]
             },
             'en': {
-                'backup': [Path('templates/en/backup/0100_intro.md')]
+                'bcm': [Path('templates/en/bcm/0100_intro.md')]
             }
         }
         
         # Mock user input
-        with patch('builtins.input', side_effect=['de', 'backup']):
+        with patch('builtins.input', side_effect=['de', 'bcm']):
             language, template_type = interactive_selection(mock_manager)
         
         assert language == 'de'
-        assert template_type == 'backup'
+        assert template_type == 'bcm'
     
     def test_interactive_selection_no_templates(self):
         """
@@ -187,16 +187,16 @@ class TestInteractiveSelection:
         mock_manager = Mock()
         mock_manager.discover_templates.return_value = {
             'de': {
-                'backup': [Path('templates/de/backup/0100_intro.md')]
+                'bcm': [Path('templates/de/bcm/0100_intro.md')]
             }
         }
         
         # Mock user input: invalid language, then valid, invalid template, then valid
-        with patch('builtins.input', side_effect=['fr', 'de', 'invalid', 'backup']):
+        with patch('builtins.input', side_effect=['fr', 'de', 'invalid', 'bcm']):
             language, template_type = interactive_selection(mock_manager)
         
         assert language == 'de'
-        assert template_type == 'backup'
+        assert template_type == 'bcm'
     
     def test_interactive_selection_keyboard_interrupt(self):
         """
@@ -206,7 +206,7 @@ class TestInteractiveSelection:
         """
         mock_manager = Mock()
         mock_manager.discover_templates.return_value = {
-            'de': {'backup': [Path('templates/de/backup/0100_intro.md')]}
+            'de': {'bcm': [Path('templates/de/bcm/0100_intro.md')]}
         }
         
         # Mock user pressing Ctrl+C
@@ -267,7 +267,7 @@ class TestMainFunction:
         test_args = [
             'cli.py',
             '--language', 'de',
-            '--template', 'backup',
+            '--template', 'bcm',
             '--config', 'nonexistent_config.yaml'
         ]
         
@@ -301,7 +301,7 @@ metadata:
         template_dir = tmp_path / "templates"
         template_dir.mkdir()
         (template_dir / "de").mkdir()
-        (template_dir / "de" / "backup").mkdir()
+        (template_dir / "de" / "isms").mkdir()
         # Don't create bcm directory
         
         test_args = [
@@ -371,7 +371,7 @@ metadata:
         test_args = [
             'cli.py',
             '--language', 'de',
-            '--template', 'backup',
+            '--template', 'bcm',
             '--output', 'markdown'
         ]
         
@@ -393,7 +393,7 @@ class TestArgumentParsing:
         test_args = [
             'cli.py',
             '--language', 'de',
-            '--template', 'backup',
+            '--template', 'bcm',
             '--output', 'pdf',
             '--verbose',
             '--config', 'custom.yaml',
@@ -405,7 +405,7 @@ class TestArgumentParsing:
             args = parse_arguments()
         
         assert args.language == 'de'
-        assert args.template == 'backup'
+        assert args.template == 'bcm'
         assert args.output == 'pdf'
         assert args.verbose is True
         assert args.config == 'custom.yaml'
@@ -457,23 +457,6 @@ class TestArgumentParsing:
 
 class TestTemplateTypeValidation:
     """Tests for template type validation in CLI."""
-    
-    def test_valid_template_type_backup(self):
-        """
-        Test that 'backup' template type is accepted.
-        
-        Validates: Requirements 21.1, 21.5
-        """
-        test_args = [
-            'cli.py',
-            '--language', 'de',
-            '--template', 'backup'
-        ]
-        
-        with patch.object(sys, 'argv', test_args):
-            args = parse_arguments()
-        
-        assert args.template == 'backup'
     
     def test_valid_template_type_bcm(self):
         """
@@ -696,13 +679,64 @@ class TestTemplateTypeValidation:
         
         assert args.template == 'gdpr'
     
+    def test_valid_template_type_idw_ps_951(self):
+        """
+        Test that 'idw-ps-951' template type is accepted.
+        
+        Validates: Requirements 6.7
+        """
+        test_args = [
+            'cli.py',
+            '--language', 'de',
+            '--template', 'idw-ps-951'
+        ]
+        
+        with patch.object(sys, 'argv', test_args):
+            args = parse_arguments()
+        
+        assert args.template == 'idw-ps-951'
+    
+    def test_valid_template_type_nist_csf(self):
+        """
+        Test that 'nist-csf' template type is accepted.
+        
+        Validates: Requirements 6.7
+        """
+        test_args = [
+            'cli.py',
+            '--language', 'en',
+            '--template', 'nist-csf'
+        ]
+        
+        with patch.object(sys, 'argv', test_args):
+            args = parse_arguments()
+        
+        assert args.template == 'nist-csf'
+    
+    def test_valid_template_type_togaf(self):
+        """
+        Test that 'togaf' template type is accepted.
+        
+        Validates: Requirements 6.7
+        """
+        test_args = [
+            'cli.py',
+            '--language', 'de',
+            '--template', 'togaf'
+        ]
+        
+        with patch.object(sys, 'argv', test_args):
+            args = parse_arguments()
+        
+        assert args.template == 'togaf'
+    
     def test_new_frameworks_with_short_flags(self):
         """
         Test that new framework names work with short flags.
         
-        Validates: Requirements 10.7, 15.1
+        Validates: Requirements 10.7, 15.1, 6.7
         """
-        new_frameworks = ['pci-dss', 'hipaa', 'nist-800-53', 'tsc', 'common-criteria', 'iso-9001', 'gdpr']
+        new_frameworks = ['pci-dss', 'hipaa', 'nist-800-53', 'tsc', 'common-criteria', 'iso-9001', 'gdpr', 'idw-ps-951', 'nist-csf', 'togaf']
         
         for framework in new_frameworks:
             test_args = [
@@ -719,9 +753,9 @@ class TestTemplateTypeValidation:
     
     def test_cis_controls_appears_in_help_text(self, capsys):
         """
-        Test that 'cis-controls' appears in help text.
+        Test that 'cis-controls' and new frameworks appear in help text.
         
-        Validates: Requirements 3.1, 3.2
+        Validates: Requirements 3.1, 3.2, 6.7
         """
         test_args = [
             'cli.py',
@@ -740,6 +774,11 @@ class TestTemplateTypeValidation:
         
         # Verify cis-controls appears in help text
         assert 'cis-controls' in help_output.lower()
+        
+        # Verify new frameworks appear in help text
+        assert 'idw-ps-951' in help_output.lower()
+        assert 'nist-csf' in help_output.lower()
+        assert 'togaf' in help_output.lower()
     
     def test_invalid_template_type_rejected(self):
         """
@@ -764,7 +803,7 @@ class TestTemplateTypeValidation:
         """
         Test that invalid template type shows available choices in error message.
         
-        Validates: Requirements 21.5, 15.1
+        Validates: Requirements 21.5, 15.1, 6.7
         """
         test_args = [
             'cli.py',
@@ -781,13 +820,12 @@ class TestTemplateTypeValidation:
         
         # Verify error message contains valid choices
         assert 'invalid choice' in error_output.lower()
-        assert 'backup' in error_output
         assert 'bcm' in error_output
         assert 'bsi-grundschutz' in error_output
         assert 'cis-controls' in error_output
         assert 'isms' in error_output
         assert 'it-operation' in error_output
-        # Verify new frameworks appear in error message
+        # Verify existing new frameworks appear in error message
         assert 'pci-dss' in error_output
         assert 'hipaa' in error_output
         assert 'nist-800-53' in error_output
@@ -795,16 +833,21 @@ class TestTemplateTypeValidation:
         assert 'common-criteria' in error_output
         assert 'iso-9001' in error_output
         assert 'gdpr' in error_output
+        # Verify additional new frameworks appear in error message
+        assert 'idw-ps-951' in error_output
+        assert 'nist-csf' in error_output
+        assert 'togaf' in error_output
     
     def test_all_valid_template_types_accepted(self):
         """
         Test that all valid template types are accepted.
         
-        Validates: Requirements 21.1, 21.2, 21.3, 21.5, 3.1, 10.7
+        Validates: Requirements 21.1, 21.2, 21.3, 21.5, 3.1, 10.7, 6.7
         """
-        valid_types = ['backup', 'bcm', 'bsi-grundschutz', 'cis-controls', 'common-criteria', 
-                       'email-service', 'gdpr', 'hipaa', 'isms', 'iso-9001', 'it-operation', 
-                       'nist-800-53', 'pci-dss', 'service-templates', 'tsc']
+        valid_types = ['bcm', 'bsi-grundschutz', 'cis-controls', 'common-criteria', 
+                       'email-service', 'gdpr', 'hipaa', 'idw-ps-951', 'isms', 'iso-9001', 
+                       'it-operation', 'nist-800-53', 'nist-csf', 'pci-dss', 'service-templates', 
+                       'togaf', 'tsc']
         
         for template_type in valid_types:
             test_args = [
@@ -821,21 +864,22 @@ class TestTemplateTypeValidation:
     
     @settings(max_examples=100)
     @given(
-        template_type=st.sampled_from(['backup', 'bcm', 'bsi-grundschutz', 'cis-controls', 'common-criteria', 
-                                       'email-service', 'gdpr', 'hipaa', 'isms', 'iso-9001', 'it-operation', 
-                                       'nist-800-53', 'pci-dss', 'service-templates', 'tsc']),
+        template_type=st.sampled_from(['bcm', 'bsi-grundschutz', 'cis-controls', 'common-criteria', 
+                                       'email-service', 'gdpr', 'hipaa', 'idw-ps-951', 'isms', 'iso-9001', 
+                                       'it-operation', 'nist-800-53', 'nist-csf', 'pci-dss', 'service-templates', 
+                                       'togaf', 'tsc']),
         language=st.sampled_from(['de', 'en'])
     )
     def test_property_14_cli_template_type_validation(self, template_type, language):
         """
-        Feature: template-system-extension, compliance-framework-templates
+        Feature: template-system-extension, compliance-framework-templates, additional-compliance-frameworks
         Property 14: CLI Template Type Validation
         
         For any CLI invocation with --template parameter, if the template type
         is in the valid set (all supported frameworks), the system SHALL accept 
         the input without error.
         
-        Validates: Requirements 21.5, 3.1, 10.7
+        Validates: Requirements 21.5, 3.1, 10.7, 6.7
         """
         test_args = [
             'cli.py',
@@ -858,20 +902,21 @@ class TestTemplateTypeValidation:
             alphabet=st.characters(blacklist_categories=('Cs',)),
             min_size=1,
             max_size=50
-        ).filter(lambda x: x not in ['backup', 'bcm', 'bsi-grundschutz', 'cis-controls', 'common-criteria', 
-                                      'email-service', 'gdpr', 'hipaa', 'isms', 'iso-9001', 'it-operation', 
-                                      'nist-800-53', 'pci-dss', 'service-templates', 'tsc'])
+        ).filter(lambda x: x not in ['bcm', 'bsi-grundschutz', 'cis-controls', 'common-criteria', 
+                                      'email-service', 'gdpr', 'hipaa', 'idw-ps-951', 'isms', 'iso-9001', 
+                                      'it-operation', 'nist-800-53', 'nist-csf', 'pci-dss', 'service-templates', 
+                                      'togaf', 'tsc'])
     )
     def test_property_14_cli_invalid_template_rejection(self, invalid_template):
         """
-        Feature: template-system-extension, compliance-framework-templates
+        Feature: template-system-extension, compliance-framework-templates, additional-compliance-frameworks
         Property 14: CLI Template Type Validation
         
         For any CLI invocation with --template parameter, if the template type
         is NOT in the valid set, the system SHALL reject the input with an
         error message listing valid options.
         
-        Validates: Requirements 21.5, 10.7, 15.1
+        Validates: Requirements 21.5, 10.7, 15.1, 6.7
         """
         test_args = [
             'cli.py',

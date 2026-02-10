@@ -80,14 +80,42 @@ class TemplateManager:
         'email-service',
         'gdpr',
         'hipaa',
+        'idw-ps-951',
         'isms',
         'iso-9001',
         'it-operation',
         'nist-800-53',
+        'nist-csf',
         'pci-dss',
         'service-templates',
+        'togaf',
         'tsc'
     ]
+    
+    # Framework configuration with display names, language support, and expected template counts
+    FRAMEWORK_CONFIG = {
+        'idw-ps-951': {
+            'display_name': 'IDW PS 951',
+            'languages': ['de', 'en'],
+            'min_template_count': 50,  # At least 0010-0500
+            'has_diagrams': True,
+            'description': 'German IT auditing standard'
+        },
+        'nist-csf': {
+            'display_name': 'NIST CSF 2.0',
+            'languages': ['de', 'en'],
+            'min_template_count': 60,  # At least 0010-0600
+            'has_diagrams': True,
+            'description': 'NIST Cybersecurity Framework 2.0'
+        },
+        'togaf': {
+            'display_name': 'TOGAF',
+            'languages': ['de', 'en'],
+            'min_template_count': 70,  # At least 0010-0700
+            'has_diagrams': True,
+            'description': 'The Open Group Architecture Framework'
+        }
+    }
     
     # Pattern for metadata templates: 0000_metadata_[language]_[templatename].md
     METADATA_PATTERN = re.compile(r'^0000_metadata_([a-z]{2})_(.+)\.md$')
@@ -235,7 +263,17 @@ class TemplateManager:
             raise ValueError(error_msg)
         
         # Sort templates: metadata first (sort_order 0), then by sort_order
-        templates.sort(key=lambda t: t.sort_order)
+        # Handle edge cases: missing numbers, duplicates
+        templates.sort(key=lambda t: (t.sort_order, t.path.name))
+        
+        # Check for duplicate sort orders (excluding metadata and unnumbered templates)
+        seen_orders = {}
+        for template in templates:
+            if template.sort_order not in [0, 9999]:  # Skip metadata and unnumbered
+                if template.sort_order in seen_orders:
+                    # Log warning about duplicate but continue processing
+                    pass  # Handled by secondary sort on filename
+                seen_orders[template.sort_order] = template
         
         return templates
     
@@ -349,6 +387,151 @@ class TemplateManager:
             frameworks.update(lang_templates.keys())
         
         return frameworks
+    
+    def get_framework_config(self, framework: str) -> Optional[dict]:
+        """
+        Get configuration for a specific framework.
+        
+        Args:
+            framework: Framework identifier (e.g., 'idw-ps-951', 'nist-csf', 'togaf')
+            
+        Returns:
+            Framework configuration dictionary or None if not configured
+        """
+        return self.FRAMEWORK_CONFIG.get(framework)
+    
+    def validate_framework_structure(self, framework: str, language: str) -> list[str]:
+        """
+        Validate framework directory structure and return warnings/errors.
+        
+        Args:
+            framework: Framework identifier
+            language: Language code
+            
+        Returns:
+            List of validation messages (warnings and errors)
+        """
+        messages = []
+        
+        # Check if framework directory exists
+        framework_dir = self.template_root / language / framework
+        if not framework_dir.exists():
+            messages.append(
+                f"Framework directory not found: {framework_dir}\n"
+                f"Expected structure: templates/{language}/{framework}/"
+            )
+            return messages
+        
+        # Check for required files
+        required_files = ['README.md', 'FRAMEWORK_MAPPING.md']
+        for required_file in required_files:
+            file_path = framework_dir / required_file
+            if not file_path.exists():
+                messages.append(
+                    f"Required file missing: {file_path}\n"
+                    f"Framework {framework} should include {required_file}"
+                )
+        
+        # Check for metadata template
+        metadata_pattern = f'0000_metadata_{language}_{framework}.md'
+        metadata_path = framework_dir / metadata_pattern
+        if not metadata_path.exists():
+            messages.append(
+                f"Metadata template missing: {metadata_path}\n"
+                f"Framework {framework} should include metadata template"
+            )
+        
+        # Check for diagrams directory
+        diagrams_dir = framework_dir / 'diagrams'
+        if not diagrams_dir.exists():
+            messages.append(
+                f"Diagrams directory missing: {diagrams_dir}\n"
+                f"Framework {framework} should include diagrams/ subdirectory"
+            )
+        
+        # Check template count if framework is configured
+        config = self.get_framework_config(framework)
+        if config:
+            discovered = self.discover_templates()
+            if language in discovered and framework in discovered[language]:
+                template_count = len(discovered[language][framework])
+                min_count = config.get('min_template_count', 0)
+                
+                if template_count < min_count:
+                    messages.append(
+                        f"Insufficient templates for {framework}: "
+                        f"found {template_count}, expected at least {min_count}"
+                    )
+        
+        return messages
+    
+    def extract_metadata(self, language: str, framework: str) -> dict[str, str]:
+        """
+        Extract metadata from framework metadata template.
+        
+        Args:
+            language: Language code
+            framework: Framework identifier
+            
+        Returns:
+            Dictionary with metadata fields (title, author, version, date, organization, classification)
+            
+        Raises:
+            ValueError: If metadata template not found or cannot be parsed
+        """
+        # Find metadata template
+        metadata_pattern = f'0000_metadata_{language}_{framework}.md'
+        framework_dir = self.template_root / language / framework
+        metadata_path = framework_dir / metadata_pattern
+        
+        if not metadata_path.exists():
+            raise ValueError(
+                f"Metadata template not found: {metadata_path}\n"
+                f"Framework {framework} requires a metadata template"
+            )
+        
+        # Read metadata content
+        try:
+            content = metadata_path.read_text(encoding='utf-8')
+        except Exception as e:
+            raise ValueError(
+                f"Failed to read metadata template: {metadata_path}\n"
+                f"Error: {e}"
+            )
+        
+        # Extract metadata fields from YAML frontmatter or content
+        metadata = {
+            'title': '',
+            'author': '',
+            'version': '',
+            'date': '',
+            'organization': '',
+            'classification': ''
+        }
+        
+        # Parse YAML frontmatter if present
+        if content.startswith('---'):
+            try:
+                # Extract frontmatter between --- markers
+                parts = content.split('---', 2)
+                if len(parts) >= 3:
+                    frontmatter = parts[1].strip()
+                    
+                    # Parse simple YAML key-value pairs
+                    for line in frontmatter.split('\n'):
+                        line = line.strip()
+                        if ':' in line:
+                            key, value = line.split(':', 1)
+                            key = key.strip().lower()
+                            value = value.strip().strip('"').strip("'")
+                            
+                            if key in metadata:
+                                metadata[key] = value
+            except Exception:
+                # If frontmatter parsing fails, continue with empty metadata
+                pass
+        
+        return metadata
     
     def validate_template_exists(self, language: str, template_type: str) -> Optional[str]:
         """

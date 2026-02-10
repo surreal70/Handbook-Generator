@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0040 - Roles and Responsibilities (GV.RR)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0040</div>
+            <h1>Roles and Responsibilities (GV.RR)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0030_risk_management_strategy.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0050_policy_framework.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<hr />
+<p>Document-ID: nist-csf-0040
+Owner: {{ meta.owner }}
+Version: {{ meta.version }}
+Status: Draft
+Classification: Internal
+Last Update: {{ meta.date }}</p>
+<hr />
+<h1 id="roles-and-responsibilities-gvrr">Roles and Responsibilities (GV.RR)</h1>
+<h2 id="purpose">Purpose</h2>
+<p>This document defines the roles, responsibilities, and authorities for cybersecurity risk management within the organization.</p>
+<h2 id="scope">Scope</h2>
+<p>{{ meta.scope }}</p>
+<h2 id="governance-structure">Governance Structure</h2>
+<h3 id="board-of-directors">Board of Directors</h3>
+<p><strong>Responsibilities:</strong>
+- Strategic oversight of cybersecurity risks
+- Approval of cybersecurity strategy and policies
+- Monitoring cybersecurity performance
+- Resource allocation for cybersecurity initiatives</p>
+<h3 id="executive-management">Executive Management</h3>
+<p><strong>Responsibilities:</strong>
+- Implementation of cybersecurity strategy
+- Provision of resources and support
+- Promotion of security culture
+- Escalation of critical risks to the Board</p>
+<h2 id="cybersecurity-roles">Cybersecurity Roles</h2>
+<h3 id="chief-information-security-officer-ciso">Chief Information Security Officer (CISO)</h3>
+<p><strong>Name:</strong> Thomas Weber<br />
+<strong>Responsibilities:</strong>
+- Overall responsibility for cybersecurity program
+- Development and maintenance of cybersecurity strategy
+- Risk management and compliance oversight
+- Reporting to Executive Management and Board
+- Leadership of cybersecurity team</p>
+<p><strong>Authorities:</strong>
+- Approval of security policies
+- Budget responsibility for cybersecurity
+- Escalation of security incidents
+- Enforcement of security requirements</p>
+<h3 id="chief-risk-officer-cro">Chief Risk Officer (CRO)</h3>
+<p><strong>Name:</strong> {{ meta.cro }}<br />
+<strong>Responsibilities:</strong>
+- Integration of cybersecurity risks into ERM
+- Risk assessment and reporting
+- Coordination with CISO on risk treatment</p>
+<h3 id="security-operations-manager">Security Operations Manager</h3>
+<p><strong>Name:</strong> {{ meta.security_ops_manager }}<br />
+<strong>Responsibilities:</strong>
+- Daily operation of Security Operations Center (SOC)
+- Incident response and management
+- Security monitoring and threat detection
+- Coordination with IT operations</p>
+<h3 id="security-architect">Security Architect</h3>
+<p><strong>Name:</strong> {{ meta.security_architect }}<br />
+<strong>Responsibilities:</strong>
+- Design of secure system architectures
+- Security requirements for new projects
+- Technology evaluation and selection
+- Security-by-design principles</p>
+<h3 id="compliance-manager">Compliance Manager</h3>
+<p><strong>Name:</strong> {{ meta.compliance_manager }}<br />
+<strong>Responsibilities:</strong>
+- Monitoring regulatory compliance
+- Conducting compliance assessments
+- Coordination of audits
+- Maintenance of compliance documentation</p>
+<h2 id="business-unit-responsibilities">Business Unit Responsibilities</h2>
+<h3 id="it-department">IT Department</h3>
+<p><strong>Head:</strong> {{ meta.it_director }}<br />
+<strong>Responsibilities:</strong>
+- Implementation of security controls
+- Patch management and system hardening
+- Access management
+- Backup and recovery</p>
+<h3 id="human-resources">Human Resources</h3>
+<p><strong>Head:</strong> {{ meta.hr_director }}<br />
+<strong>Responsibilities:</strong>
+- Security training for employees
+- Background checks
+- Onboarding/offboarding processes
+- Enforcement of security policies</p>
+<h3 id="legalcompliance">Legal/Compliance</h3>
+<p><strong>Head:</strong> {{ meta.legal_director }}<br />
+<strong>Responsibilities:</strong>
+- Legal advice on cybersecurity
+- Contract review (security clauses)
+- Data protection compliance
+- Incident response (legal aspects)</p>
+<h3 id="procurement">Procurement</h3>
+<p><strong>Head:</strong> {{ meta.procurement_director }}<br />
+<strong>Responsibilities:</strong>
+- Supplier security assessments
+- Security requirements in contracts
+- Third-party risk management</p>
+<h2 id="employee-responsibilities">Employee Responsibilities</h2>
+<h3 id="all-employees">All Employees</h3>
+<p><strong>Responsibilities:</strong>
+- Compliance with security policies
+- Reporting security incidents
+- Participation in security training
+- Protection of credentials and data</p>
+<h2 id="raci-matrix">RACI Matrix</h2>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>CISO</th>
+<th>CRO</th>
+<th>Sec Ops</th>
+<th>IT</th>
+<th>HR</th>
+<th>Legal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Strategy Development</td>
+<td>A</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+<td>I</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Risk Assessment</td>
+<td>R</td>
+<td>A</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Incident Response</td>
+<td>A</td>
+<td>I</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Policy Development</td>
+<td>A</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Training</td>
+<td>C</td>
+<td>I</td>
+<td>I</td>
+<td>I</td>
+<td>A</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Compliance Audits</td>
+<td>C</td>
+<td>C</td>
+<td>I</td>
+<td>C</td>
+<td>I</td>
+<td>A</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Legend:</strong> R = Responsible, A = Accountable, C = Consulted, I = Informed</p>
+<h2 id="escalation-paths">Escalation Paths</h2>
+<h3 id="security-incidents">Security Incidents</h3>
+<ol>
+<li>Detection → Security Operations</li>
+<li>Assessment → CISO</li>
+<li>Critical Incidents → Executive Management</li>
+<li>Existential Incidents → Board of Directors</li>
+</ol>
+<h3 id="risks">Risks</h3>
+<ol>
+<li>Identification → Risk Manager</li>
+<li>Assessment → CRO</li>
+<li>High Risks → CISO</li>
+<li>Critical Risks → Executive Management/Board</li>
+</ol>
+<h2 id="document-references">Document References</h2>
+<ul>
+<li>0020_organizational_context.md</li>
+<li>0030_risk_management_strategy.md</li>
+<li>0050_policy_framework.md</li>
+<li>0060_oversight.md</li>
+</ul>
+<hr />
+<p><strong>Document History:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>{{ meta.date }}</td>
+<td>Andreas Huemmer [andreas.huemmer@adminsend.de]</td>
+<td>Initial creation</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0030_risk_management_strategy.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0050_policy_framework.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

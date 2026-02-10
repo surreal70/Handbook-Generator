@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0010 - Prüfungsplanung Übersicht</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0010</div>
+            <h1>Prüfungsplanung Übersicht</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0000_metadata_de_idw-ps-951.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0020_pruefungsumfang_definition.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<h1 id="prufungsplanung-ubersicht">Prüfungsplanung Übersicht</h1>
+<p><strong>Dokument-ID:</strong> idw-ps-951-0010<br />
+<strong>Owner:</strong> {{ meta.audit_lead }}<br />
+<strong>Version:</strong> {{ meta.version }}<br />
+<strong>Status:</strong> {{ meta.status }}<br />
+<strong>Klassifizierung:</strong> {{ meta.classification }}<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta.date }}</p>
+<hr />
+<h2 id="1-zweck">1. Zweck</h2>
+<p>Dieses Dokument beschreibt die Planung der IT-Prüfung gemäß IDW Prüfungsstandard 951. Es definiert den Prüfungsansatz, die Prüfungsziele und die erforderlichen Ressourcen für die systematische Prüfung von IT-Systemen und IT-Kontrollen.</p>
+<h2 id="2-geltungsbereich">2. Geltungsbereich</h2>
+<h3 id="prufungsgegenstand">Prüfungsgegenstand</h3>
+<ul>
+<li><strong>Organisation:</strong> {{ source.organization_name }}</li>
+<li><strong>Prüfungszeitraum:</strong> {{ source.audit_period }}</li>
+<li><strong>Prüfungsart:</strong> {{ source.audit_type }}</li>
+<li><strong>Prüfungsstandard:</strong> IDW PS 951</li>
+</ul>
+<h3 id="abgrenzung">Abgrenzung</h3>
+<ul>
+<li>IT-Systeme im Scope: {{ source.systems_in_scope }}</li>
+<li>Ausgeschlossene Bereiche: {{ source.excluded_areas }}</li>
+</ul>
+<h2 id="3-prufungsziele">3. Prüfungsziele</h2>
+<h3 id="hauptziele">Hauptziele</h3>
+<ol>
+<li>Beurteilung der Ordnungsmäßigkeit und Sicherheit der IT-Systeme</li>
+<li>Prüfung der Wirksamkeit von IT-Kontrollen</li>
+<li>Bewertung der IT-Governance und IT-Organisation</li>
+<li>Identifikation von Risiken und Schwachstellen</li>
+<li>Beurteilung der Compliance mit relevanten Vorschriften</li>
+</ol>
+<h3 id="spezifische-prufungsziele">Spezifische Prüfungsziele</h3>
+<ul>
+<li>{{ source.specific_audit_objective_1 }}</li>
+<li>{{ source.specific_audit_objective_2 }}</li>
+<li>{{ source.specific_audit_objective_3 }}</li>
+</ul>
+<h2 id="4-prufungsansatz">4. Prüfungsansatz</h2>
+<h3 id="prufungsstrategie">Prüfungsstrategie</h3>
+<ul>
+<li><strong>Prüfungsansatz:</strong> {{ source.audit_approach }}</li>
+<li><strong>Prüfungstiefe:</strong> {{ source.audit_depth }}</li>
+<li><strong>Stichprobenumfang:</strong> {{ source.sample_size }}</li>
+</ul>
+<h3 id="prufungsphasen">Prüfungsphasen</h3>
+<ol>
+<li><strong>Planungsphase:</strong> Vorbereitung und Risikoanalyse</li>
+<li><strong>Durchführungsphase:</strong> Prüfungshandlungen und Kontrolltests</li>
+<li><strong>Berichtsphase:</strong> Dokumentation und Berichterstattung</li>
+<li><strong>Nachverfolgung:</strong> Follow-up von Prüfungsfeststellungen</li>
+</ol>
+<h2 id="5-prufungsteam">5. Prüfungsteam</h2>
+<h3 id="teamzusammensetzung">Teamzusammensetzung</h3>
+<ul>
+<li><strong>Prüfungsleiter:</strong> {{ source.audit_lead }}</li>
+<li><strong>IT-Prüfer:</strong> {{ source.it_auditors }}</li>
+<li><strong>Fachexperten:</strong> {{ source.subject_matter_experts }}</li>
+</ul>
+<h3 id="qualifikationen">Qualifikationen</h3>
+<ul>
+<li>Zertifizierungen: {{ source.team_certifications }}</li>
+<li>Erfahrung: {{ source.team_experience }}</li>
+</ul>
+<h2 id="6-zeitplan">6. Zeitplan</h2>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Start</th>
+<th>Ende</th>
+<th>Dauer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Planung</td>
+<td>{{ source.planning_start }}</td>
+<td>{{ source.planning_end }}</td>
+<td>{{ source.planning_duration }}</td>
+</tr>
+<tr>
+<td>Durchführung</td>
+<td>{{ source.execution_start }}</td>
+<td>{{ source.execution_end }}</td>
+<td>{{ source.execution_duration }}</td>
+</tr>
+<tr>
+<td>Berichterstattung</td>
+<td>{{ source.reporting_start }}</td>
+<td>{{ source.reporting_end }}</td>
+<td>{{ source.reporting_duration }}</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-prufungsrisiken">7. Prüfungsrisiken</h2>
+<h3 id="identifizierte-risiken">Identifizierte Risiken</h3>
+<ol>
+<li>{{ source.audit_risk_1 }}</li>
+<li>{{ source.audit_risk_2 }}</li>
+<li>{{ source.audit_risk_3 }}</li>
+</ol>
+<h3 id="risikominderung">Risikominderung</h3>
+<ul>
+<li>{{ source.risk_mitigation_1 }}</li>
+<li>{{ source.risk_mitigation_2 }}</li>
+</ul>
+<h2 id="8-kommunikation-und-berichterstattung">8. Kommunikation und Berichterstattung</h2>
+<h3 id="kommunikationsplan">Kommunikationsplan</h3>
+<ul>
+<li><strong>Auftaktgespräch:</strong> {{ source.kickoff_date }}</li>
+<li><strong>Zwischenberichte:</strong> {{ source.interim_reporting }}</li>
+<li><strong>Abschlussgespräch:</strong> {{ source.closing_meeting }}</li>
+</ul>
+<h3 id="berichterstattung">Berichterstattung</h3>
+<ul>
+<li><strong>Berichtsempfänger:</strong> {{ source.report_recipients }}</li>
+<li><strong>Berichtsformat:</strong> {{ source.report_format }}</li>
+<li><strong>Berichtstermin:</strong> {{ source.report_deadline }}</li>
+</ul>
+<h2 id="9-referenzen">9. Referenzen</h2>
+<h3 id="interne-dokumente">Interne Dokumente</h3>
+<ul>
+<li>Prüfungsauftrag</li>
+<li>Vorjahresprüfungsberichte</li>
+<li>IT-Dokumentation der Organisation</li>
+</ul>
+<h3 id="externe-standards">Externe Standards</h3>
+<ul>
+<li>IDW Prüfungsstandard 951</li>
+<li>IDW PS 340 (Risikofrüherkennungssystem)</li>
+<li>BSI IT-Grundschutz</li>
+<li>ISO/IEC 27001</li>
+</ul>
+<hr />
+<p><strong>Genehmigt durch:</strong><br />
+{{ meta.audit_lead }}, Prüfungsleiter<br />
+Datum: {{ meta.approval_date }}</p>
+<p><strong>Nächster Review:</strong> {{ meta.next_review }}</p>
+<hr />
+<p><strong>Dokumenthistorie:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Datum</th>
+<th>Autor</th>
+<th>Änderungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>{{ meta.date }}</td>
+<td>Andreas Huemmer [andreas.huemmer@adminsend.de]</td>
+<td>Initiale Erstellung</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0000_metadata_de_idw-ps-951.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0020_pruefungsumfang_definition.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

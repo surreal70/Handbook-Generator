@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0030 - Risk Management Strategy (GV.RM)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0030</div>
+            <h1>Risk Management Strategy (GV.RM)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0020_organizational_context.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0040_roles_responsibilities.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<hr />
+<p>Document-ID: nist-csf-0030
+Owner: {{ meta.owner }}
+Version: {{ meta.version }}
+Status: Draft
+Classification: Internal
+Last Update: {{ meta.date }}</p>
+<hr />
+<h1 id="risk-management-strategy-gvrm">Risk Management Strategy (GV.RM)</h1>
+<h2 id="purpose">Purpose</h2>
+<p>This document defines the organization's cybersecurity risk management strategy, including risk appetite, risk assessment methodology, and risk treatment approaches.</p>
+<h2 id="scope">Scope</h2>
+<p>{{ meta.scope }}</p>
+<h2 id="risk-management-framework">Risk Management Framework</h2>
+<h3 id="risk-management-approach">Risk Management Approach</h3>
+<p>{{ meta.organization }} follows a risk-based approach to cybersecurity that:
+- Aligns business objectives with security requirements
+- Enables continuous risk assessment and monitoring
+- Supports informed decision-making
+- Focuses resources on critical risks</p>
+<h3 id="risk-management-process">Risk Management Process</h3>
+<ol>
+<li><strong>Risk Identification</strong>: Detecting potential cybersecurity threats</li>
+<li><strong>Risk Assessment</strong>: Analyzing likelihood and impact</li>
+<li><strong>Risk Treatment</strong>: Selecting appropriate measures</li>
+<li><strong>Risk Monitoring</strong>: Continuous review and adjustment</li>
+</ol>
+<h2 id="risk-appetite-and-tolerance">Risk Appetite and Tolerance</h2>
+<h3 id="risk-appetite-statement">Risk Appetite Statement</h3>
+<p>{{ meta.risk_appetite_statement }}</p>
+<h3 id="risk-tolerance-levels">Risk Tolerance Levels</h3>
+<table>
+<thead>
+<tr>
+<th>Risk Level</th>
+<th>Description</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Critical</td>
+<td>Existential threat</td>
+<td>Immediate treatment required</td>
+</tr>
+<tr>
+<td>High</td>
+<td>Significant impact</td>
+<td>Treatment within 30 days</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>Moderate impact</td>
+<td>Treatment within 90 days</td>
+</tr>
+<tr>
+<td>Low</td>
+<td>Minor impact</td>
+<td>Acceptable with monitoring</td>
+</tr>
+</tbody>
+</table>
+<h2 id="risk-assessment-methodology">Risk Assessment Methodology</h2>
+<h3 id="assessment-criteria">Assessment Criteria</h3>
+<p><strong>Likelihood:</strong>
+- Very high (5): &gt; 80% probability
+- High (4): 60-80% probability
+- Medium (3): 40-60% probability
+- Low (2): 20-40% probability
+- Very low (1): &lt; 20% probability</p>
+<p><strong>Impact:</strong>
+- Very high (5): &gt; {{ meta.impact_threshold_critical }}
+- High (4): {{ meta.impact_threshold_high }}
+- Medium (3): {{ meta.impact_threshold_medium }}
+- Low (2): {{ meta.impact_threshold_low }}
+- Very low (1): &lt; {{ meta.impact_threshold_minimal }}</p>
+<h3 id="risk-matrix">Risk Matrix</h3>
+<table>
+<thead>
+<tr>
+<th>Likelihood</th>
+<th>Very low</th>
+<th>Low</th>
+<th>Medium</th>
+<th>High</th>
+<th>Very high</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Very high (5)</td>
+<td>Medium</td>
+<td>High</td>
+<td>High</td>
+<td>Critical</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td>High (4)</td>
+<td>Low</td>
+<td>Medium</td>
+<td>High</td>
+<td>High</td>
+<td>Critical</td>
+</tr>
+<tr>
+<td>Medium (3)</td>
+<td>Low</td>
+<td>Medium</td>
+<td>Medium</td>
+<td>High</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Low (2)</td>
+<td>Very low</td>
+<td>Low</td>
+<td>Medium</td>
+<td>Medium</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Very low (1)</td>
+<td>Very low</td>
+<td>Low</td>
+<td>Low</td>
+<td>Medium</td>
+<td>Medium</td>
+</tr>
+</tbody>
+</table>
+<h2 id="risk-treatment-options">Risk Treatment Options</h2>
+<h3 id="treatment-strategies">Treatment Strategies</h3>
+<ol>
+<li><strong>Avoid</strong>: Discontinue activity causing the risk</li>
+<li><strong>Reduce</strong>: Implement controls to mitigate risk</li>
+<li><strong>Transfer</strong>: Transfer risk to third parties (e.g., insurance)</li>
+<li><strong>Accept</strong>: Consciously accept risk with justification</li>
+</ol>
+<h3 id="decision-criteria">Decision Criteria</h3>
+<table>
+<thead>
+<tr>
+<th>Risk Level</th>
+<th>Preferred Strategy</th>
+<th>Approval Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Critical</td>
+<td>Avoid or Reduce</td>
+<td>Board of Directors</td>
+</tr>
+<tr>
+<td>High</td>
+<td>Reduce</td>
+<td>CISO</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>Reduce or Transfer</td>
+<td>Risk Manager</td>
+</tr>
+<tr>
+<td>Low</td>
+<td>Accept with monitoring</td>
+<td>Department Head</td>
+</tr>
+</tbody>
+</table>
+<h2 id="risk-communication">Risk Communication</h2>
+<h3 id="reporting">Reporting</h3>
+<table>
+<thead>
+<tr>
+<th>Audience</th>
+<th>Frequency</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Board of Directors</td>
+<td>Quarterly</td>
+<td>Risk profile, critical risks, trends</td>
+</tr>
+<tr>
+<td>Executive Management</td>
+<td>Monthly</td>
+<td>Current risks, treatment progress</td>
+</tr>
+<tr>
+<td>CISO</td>
+<td>Weekly</td>
+<td>Detailed risk analysis, incidents</td>
+</tr>
+<tr>
+<td>Risk Manager</td>
+<td>Daily</td>
+<td>New risks, status changes</td>
+</tr>
+</tbody>
+</table>
+<h2 id="integration-with-business-risk-management">Integration with Business Risk Management</h2>
+<h3 id="alignment-with-enterprise-risk-management-erm">Alignment with Enterprise Risk Management (ERM)</h3>
+<ul>
+<li>Cybersecurity risks are integrated into the ERM framework</li>
+<li>Consistent risk assessment methodology across all risk categories</li>
+<li>Joint reporting to Board and Executive Management</li>
+</ul>
+<h2 id="continuous-improvement">Continuous Improvement</h2>
+<h3 id="review-cycles">Review Cycles</h3>
+<ul>
+<li>Annual review of risk management strategy</li>
+<li>Quarterly update of risk assessments</li>
+<li>Monthly review of critical risks</li>
+</ul>
+<h2 id="document-references">Document References</h2>
+<ul>
+<li>0020_organizational_context.md</li>
+<li>0040_roles_responsibilities.md</li>
+<li>0100_asset_management.md (Identify)</li>
+<li>0130_risk_assessment.md (Identify)</li>
+</ul>
+<hr />
+<p><strong>Document History:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>{{ meta.date }}</td>
+<td>Andreas Huemmer [andreas.huemmer@adminsend.de]</td>
+<td>Initial creation</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0020_organizational_context.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0040_roles_responsibilities.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>
