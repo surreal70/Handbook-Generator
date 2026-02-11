@@ -2,7 +2,23 @@
 
 ## Overview
 
-This implementation plan covers the addition of three new compliance framework template sets to the handbook generator system: IDW PS 951 (German IT auditing standard), NIST Cybersecurity Framework (CSF) 2.0, and TOGAF (The Open Group Architecture Framework). The implementation will follow the established template architecture pattern and integrate seamlessly with existing system components.
+This implementation plan covers the addition of ten new compliance framework template sets to the handbook generator system:
+
+**Phase 1 (Completed - Tasks 1-12)**:
+- IDW PS 951 (German IT auditing standard)
+- NIST Cybersecurity Framework (CSF) 2.0
+- TOGAF (The Open Group Architecture Framework)
+
+**Phase 2 (New - Tasks 13-25)**:
+- ISO/IEC 38500 (IT Governance)
+- ISO 31000 (Risk Management)
+- Cloud Security Alliance CCM (Cloud Controls Matrix)
+- TISAX (Automotive Information Security)
+- SOC 1 / SSAE 18 (Financial Reporting Controls)
+- COSO Internal Control Framework
+- DORA (DevOps Research & Assessment)
+
+The implementation will follow the established template architecture pattern and integrate seamlessly with existing system components.
 
 ## Tasks
 
@@ -371,8 +387,435 @@ This implementation plan covers the addition of three new compliance framework t
   - Generate sample handbooks for all frameworks in all formats
   - Ensure all tests pass, ask the user if questions arise
 
+- [x] 13. Create ISO/IEC 38500 template structure and core templates
+  - [x] 13.1 Create directory structure for ISO/IEC 38500 templates
+    - Create templates/de/iso-38500/ and templates/en/iso-38500/ directories
+    - Create diagrams/ subdirectory in each language directory
+    - _Requirements: 15.1, 4.6, 5.1, 5.2_
+
+  - [x] 13.2 Create metadata templates for ISO/IEC 38500
+    - Write 0000_metadata_de_iso-38500.md with German metadata structure
+    - Write 0000_metadata_en_iso-38500.md with English metadata structure
+    - Ensure both have identical structure with language-specific content
+    - _Requirements: 15.3, 5.6_
+
+  - [x] 13.3 Create governance framework and principles templates (0010-0099)
+    - Write templates for IT governance framework, governance model, six principles (Responsibility, Strategy, Acquisition, Performance, Conformance, Human Behavior)
+    - Create both German and English versions with identical structure
+    - _Requirements: 15.1, 15.5, 15.6_
+
+  - [x] 13.4 Create Evaluate-Direct-Monitor model templates (0100-0199)
+    - Write templates for EDM model, evaluation processes, direction processes, monitoring processes, performance measurement
+    - Create both German and English versions with identical structure
+    - _Requirements: 15.1, 15.5, 15.6_
+
+  - [x] 13.5 Create board and management responsibilities templates (0200-0299)
+    - Write templates for governance roles, board responsibilities, executive management, IT management, stakeholder engagement
+    - Create both German and English versions with identical structure
+    - _Requirements: 15.1, 15.5, 15.6_
+
+  - [x] 13.6 Create implementation and improvement templates (0300-0399)
+    - Write templates for governance implementation, policy framework, decision-making, communication, continuous improvement
+    - Create both German and English versions with identical structure
+    - _Requirements: 15.1, 15.2, 15.5, 15.6_
+
+  - [x] 13.7 Create ISO/IEC 38500 documentation files
+    - Write README.md (German and English) explaining template organization and usage
+    - Write FRAMEWORK_MAPPING.md mapping templates to ISO/IEC 38500 principles
+    - _Requirements: 15.4, 15.8, 10.1, 10.2, 10.3_
+
+  - [x] 13.8 Write property tests for ISO/IEC 38500 templates
+    - **Property 3: Template Numbering Range Coverage**
+    - **Property 7: Bilingual Template Consistency**
+    - **Validates: Requirements 15.2, 15.6**
+
+- [x] 14. Create ISO 31000 template structure and core templates
+  - [x] 14.1 Create directory structure for ISO 31000 templates
+    - Create templates/de/iso-31000/ and templates/en/iso-31000/ directories
+    - Create diagrams/ subdirectory in each language directory
+    - _Requirements: 16.1, 4.6, 5.1, 5.2_
+
+  - [x] 14.2 Create metadata templates for ISO 31000
+    - Write 0000_metadata_de_iso-31000.md with German metadata structure
+    - Write 0000_metadata_en_iso-31000.md with English metadata structure
+    - Ensure both have identical structure with language-specific content
+    - _Requirements: 16.3, 5.6_
+
+  - [x] 14.3 Create risk management principles templates (0010-0099)
+    - Write templates for risk management overview and eight principles
+    - Create both German and English versions with identical structure
+    - _Requirements: 16.1, 16.5, 16.6_
+
+  - [x] 14.4 Create risk management framework templates (0100-0199)
+    - Write templates for framework overview, leadership, integration, design, implementation, evaluation, improvement
+    - Create both German and English versions with identical structure
+    - _Requirements: 16.1, 16.5, 16.6_
+
+  - [x] 14.5 Create risk assessment process templates (0200-0299)
+    - Write templates for risk assessment, scope and context, risk identification, analysis, evaluation
+    - Create both German and English versions with identical structure
+    - _Requirements: 16.1, 16.5, 16.6_
+
+  - [x] 14.6 Create risk treatment and communication templates (0300-0399)
+    - Write templates for risk treatment, treatment options, plans, implementation, communication, recording
+    - Create both German and English versions with identical structure
+    - _Requirements: 16.1, 16.5, 16.6_
+
+  - [x] 14.7 Create monitoring and review templates (0400-0499)
+    - Write templates for monitoring overview, performance monitoring, risk register, review processes, lessons learned
+    - Create both German and English versions with identical structure
+    - _Requirements: 16.1, 16.2, 16.5, 16.6_
+
+  - [x] 14.8 Create ISO 31000 documentation files
+    - Write README.md (German and English) explaining template organization and usage
+    - Write FRAMEWORK_MAPPING.md mapping templates to ISO 31000 components
+    - _Requirements: 16.4, 16.8, 10.1, 10.2, 10.3_
+
+  - [x] 14.9 Write property tests for ISO 31000 templates
+    - **Property 3: Template Numbering Range Coverage**
+    - **Property 7: Bilingual Template Consistency**
+    - **Validates: Requirements 16.2, 16.6**
+
+- [x] 15. Create CSA CCM template structure and core templates
+  - [x] 15.1 Create directory structure for CSA CCM templates
+    - Create templates/de/csa-ccm/ and templates/en/csa-ccm/ directories
+    - Create diagrams/ subdirectory in each language directory
+    - _Requirements: 17.1, 4.6, 5.1, 5.2_
+
+  - [x] 15.2 Create metadata templates for CSA CCM
+    - Write 0000_metadata_de_csa-ccm.md with German metadata structure
+    - Write 0000_metadata_en_csa-ccm.md with English metadata structure
+    - Ensure both have identical structure with language-specific content
+    - _Requirements: 17.3, 5.6_
+
+  - [x] 15.3 Create governance and risk management templates (0010-0099)
+    - Write templates for CCM framework, governance, risk management, policy, risk assessment
+    - Create both German and English versions with identical structure
+    - _Requirements: 17.1, 17.5, 17.6_
+
+  - [x] 15.4 Create application and interface security templates (0100-0199)
+    - Write templates for application security, secure development, testing, API security, web security
+    - Create both German and English versions with identical structure
+    - _Requirements: 17.1, 17.5, 17.6_
+
+  - [x] 15.5 Create data security and privacy templates (0200-0299)
+    - Write templates for data security, classification, encryption, retention, privacy, DLP
+    - Create both German and English versions with identical structure
+    - _Requirements: 17.1, 17.5, 17.6_
+
+  - [x] 15.6 Create identity and access management templates (0300-0399)
+    - Write templates for IAM, user provisioning, authentication, privileged access, access reviews
+    - Create both German and English versions with identical structure
+    - _Requirements: 17.1, 17.5, 17.6_
+
+  - [x] 15.7 Create infrastructure and virtualization security templates (0400-0499)
+    - Write templates for infrastructure security, network security, virtualization, containers, datacenter
+    - Create both German and English versions with identical structure
+    - _Requirements: 17.1, 17.5, 17.6_
+
+  - [x] 15.8 Create security operations templates (0500-0599)
+    - Write templates for security operations, monitoring, vulnerability management, threat intelligence, incident management, BCM
+    - Create both German and English versions with identical structure
+    - _Requirements: 17.1, 17.5, 17.6_
+
+  - [x] 15.9 Create compliance and audit templates (0600-0699)
+    - Write templates for compliance, audit assurance, regulatory compliance, third-party management, supply chain
+    - Create both German and English versions with identical structure
+    - _Requirements: 17.1, 17.5, 17.6_
+
+  - [x] 15.10 Create human resources and change management templates (0700-0799)
+    - Write templates for HR security, awareness training, change control, mobile security, interoperability
+    - Create both German and English versions with identical structure
+    - _Requirements: 17.1, 17.2, 17.5, 17.6_
+
+  - [x] 15.11 Create CSA CCM documentation files
+    - Write README.md (German and English) explaining template organization and usage
+    - Write FRAMEWORK_MAPPING.md mapping templates to CCM control domains and IDs
+    - _Requirements: 17.4, 17.8, 10.1, 10.2, 10.3_
+
+  - [x] 15.12 Write property tests for CSA CCM templates
+    - **Property 3: Template Numbering Range Coverage**
+    - **Property 7: Bilingual Template Consistency**
+    - **Validates: Requirements 17.2, 17.6**
+
+- [x] 16. Create TISAX template structure and core templates
+  - [x] 16.1 Create directory structure for TISAX templates
+    - Create templates/de/tisax/ and templates/en/tisax/ directories
+    - Create diagrams/ subdirectory in each language directory
+    - _Requirements: 18.1, 4.6, 5.1, 5.2_
+
+  - [x] 16.2 Create metadata templates for TISAX
+    - Write 0000_metadata_de_tisax.md with German metadata structure
+    - Write 0000_metadata_en_tisax.md with English metadata structure
+    - Ensure both have identical structure with language-specific content
+    - _Requirements: 18.3, 5.6_
+
+  - [x] 16.3 Create information security management templates (0010-0099)
+    - Write templates for TISAX framework, security policy, organization, risk management, security objectives
+    - Create both German and English versions with identical structure
+    - _Requirements: 18.1, 18.5, 18.6_
+
+  - [x] 16.4 Create asset management and access control templates (0100-0199)
+    - Write templates for asset management, inventory, classification, media handling, access control, user access
+    - Create both German and English versions with identical structure
+    - _Requirements: 18.1, 18.5, 18.6_
+
+  - [x] 16.5 Create cryptography and physical security templates (0200-0299)
+    - Write templates for cryptographic controls, key management, physical perimeter, entry controls, facilities, equipment
+    - Create both German and English versions with identical structure
+    - _Requirements: 18.1, 18.5, 18.6_
+
+  - [x] 16.6 Create operations and communications security templates (0300-0399)
+    - Write templates for operations security, change management, capacity, malware, backup, logging, network, information transfer
+    - Create both German and English versions with identical structure
+    - _Requirements: 18.1, 18.5, 18.6_
+
+  - [x] 16.7 Create supplier relationships and incident management templates (0400-0499)
+    - Write templates for supplier security, agreements, monitoring, incident procedures, response, evidence collection
+    - Create both German and English versions with identical structure
+    - _Requirements: 18.1, 18.5, 18.6_
+
+  - [x] 16.8 Create business continuity and compliance templates (0500-0599)
+    - Write templates for BCM, ICT continuity, legal compliance, IP rights, records protection, privacy, data protection
+    - Create both German and English versions with identical structure
+    - _Requirements: 18.1, 18.2, 18.5, 18.6_
+
+  - [x] 16.9 Create TISAX documentation files
+    - Write README.md (German and English) explaining template organization and usage
+    - Write FRAMEWORK_MAPPING.md mapping templates to TISAX assessment objectives and maturity levels
+    - _Requirements: 18.4, 18.8, 10.1, 10.2, 10.3_
+
+  - [x] 16.10 Write property tests for TISAX templates
+    - **Property 3: Template Numbering Range Coverage**
+    - **Property 7: Bilingual Template Consistency**
+    - **Validates: Requirements 18.2, 18.6**
+
+- [x] 17. Create SOC 1 / SSAE 18 template structure and core templates
+  - [x] 17.1 Create directory structure for SOC 1 templates
+    - Create templates/de/soc1/ and templates/en/soc1/ directories
+    - Create diagrams/ subdirectory in each language directory
+    - _Requirements: 19.1, 4.6, 5.1, 5.2_
+
+  - [x] 17.2 Create metadata templates for SOC 1
+    - Write 0000_metadata_de_soc1.md with German metadata structure
+    - Write 0000_metadata_en_soc1.md with English metadata structure
+    - Ensure both have identical structure with language-specific content
+    - _Requirements: 19.3, 5.6_
+
+  - [x] 17.3 Create service organization overview templates (0010-0099)
+    - Write templates for SOC 1 framework, service description, system description, control objectives, complementary controls
+    - Create both German and English versions with identical structure
+    - _Requirements: 19.1, 19.5, 19.6_
+
+  - [x] 17.4 Create control environment templates (0100-0199)
+    - Write templates for control environment, integrity, board oversight, organizational structure, competence, HR policies
+    - Create both German and English versions with identical structure
+    - _Requirements: 19.1, 19.5, 19.6_
+
+  - [x] 17.5 Create risk assessment templates (0200-0299)
+    - Write templates for risk assessment, risk identification, analysis, fraud risk, change management
+    - Create both German and English versions with identical structure
+    - _Requirements: 19.1, 19.5, 19.6_
+
+  - [x] 17.6 Create control activities templates (0300-0399)
+    - Write templates for control activities, transaction processing, IT general controls, segregation of duties, authorization, reconciliation
+    - Create both German and English versions with identical structure
+    - _Requirements: 19.1, 19.5, 19.6_
+
+  - [x] 17.7 Create information, communication, and monitoring templates (0400-0499)
+    - Write templates for information and communication, information quality, internal/external communication, monitoring, deficiencies
+    - Create both German and English versions with identical structure
+    - _Requirements: 19.1, 19.2, 19.5, 19.6_
+
+  - [x] 17.8 Create SOC 1 documentation files
+    - Write README.md (German and English) explaining template organization and usage
+    - Write FRAMEWORK_MAPPING.md mapping templates to COSO components and SOC 1 criteria
+    - _Requirements: 19.4, 19.8, 10.1, 10.2, 10.3_
+
+  - [x] 17.9 Write property tests for SOC 1 templates
+    - **Property 3: Template Numbering Range Coverage**
+    - **Property 7: Bilingual Template Consistency**
+    - **Validates: Requirements 19.2, 19.6**
+
+- [x] 18. Create COSO Internal Control Framework template structure and core templates
+  - [x] 18.1 Create directory structure for COSO templates
+    - Create templates/de/coso/ and templates/en/coso/ directories
+    - Create diagrams/ subdirectory in each language directory
+    - _Requirements: 20.1, 4.6, 5.1, 5.2_
+
+  - [x] 18.2 Create metadata templates for COSO
+    - Write 0000_metadata_de_coso.md with German metadata structure
+    - Write 0000_metadata_en_coso.md with English metadata structure
+    - Ensure both have identical structure with language-specific content
+    - _Requirements: 20.3, 5.6_
+
+  - [x] 18.3 Create framework overview and control environment templates (0010-0099)
+    - Write templates for COSO framework, internal control objectives, control environment, integrity, board oversight, management philosophy, organizational structure, competence
+    - Create both German and English versions with identical structure
+    - _Requirements: 20.1, 20.5, 20.6_
+
+  - [x] 18.4 Create risk assessment component templates (0100-0199)
+    - Write templates for risk assessment, objectives specification, risk identification, analysis, fraud risk, change assessment
+    - Create both German and English versions with identical structure
+    - _Requirements: 20.1, 20.5, 20.6_
+
+  - [x] 18.5 Create control activities component templates (0200-0299)
+    - Write templates for control activities, control selection, technology controls, policies deployment, preventive/detective controls, segregation
+    - Create both German and English versions with identical structure
+    - _Requirements: 20.1, 20.5, 20.6_
+
+  - [x] 18.6 Create information and communication component templates (0300-0399)
+    - Write templates for information and communication, information quality, internal/external communication, information systems
+    - Create both German and English versions with identical structure
+    - _Requirements: 20.1, 20.5, 20.6_
+
+  - [x] 18.7 Create monitoring activities component templates (0400-0499)
+    - Write templates for monitoring, ongoing evaluations, separate evaluations, deficiency evaluation, continuous improvement
+    - Create both German and English versions with identical structure
+    - _Requirements: 20.1, 20.5, 20.6_
+
+  - [x] 18.8 Create integration and implementation templates (0500-0599)
+    - Write templates for integration across components, entity-level controls, process-level controls, documentation, testing
+    - Create both German and English versions with identical structure
+    - _Requirements: 20.1, 20.2, 20.5, 20.6_
+
+  - [x] 18.9 Create COSO documentation files
+    - Write README.md (German and English) explaining template organization and usage
+    - Write FRAMEWORK_MAPPING.md mapping templates to COSO components, principles, and points of focus
+    - _Requirements: 20.4, 20.8, 10.1, 10.2, 10.3_
+
+  - [x] 18.10 Write property tests for COSO templates
+    - **Property 3: Template Numbering Range Coverage**
+    - **Property 7: Bilingual Template Consistency**
+    - **Validates: Requirements 20.2, 20.6**
+
+- [x] 19. Create DORA Metrics template structure and core templates
+  - [x] 19.1 Create directory structure for DORA templates
+    - Create templates/de/dora/ and templates/en/dora/ directories
+    - Create diagrams/ subdirectory in each language directory
+    - _Requirements: 21.1, 4.6, 5.1, 5.2_
+
+  - [x] 19.2 Create metadata templates for DORA
+    - Write 0000_metadata_de_dora.md with German metadata structure
+    - Write 0000_metadata_en_dora.md with English metadata structure
+    - Ensure both have identical structure with language-specific content
+    - _Requirements: 21.3, 5.6_
+
+  - [x] 19.3 Create DORA framework overview templates (0010-0099)
+    - Write templates for DORA framework, software delivery performance, organizational performance, benchmarking, maturity assessment
+    - Create both German and English versions with identical structure
+    - _Requirements: 21.1, 21.5, 21.6_
+
+  - [x] 19.4 Create deployment frequency templates (0100-0199)
+    - Write templates for deployment frequency, measurement, automation, pipeline, improvement strategies
+    - Create both German and English versions with identical structure
+    - _Requirements: 21.1, 21.5, 21.6_
+
+  - [x] 19.5 Create lead time for changes templates (0200-0299)
+    - Write templates for lead time, measurement, value stream mapping, bottleneck identification, reduction strategies
+    - Create both German and English versions with identical structure
+    - _Requirements: 21.1, 21.5, 21.6_
+
+  - [x] 19.6 Create mean time to restore templates (0300-0399)
+    - Write templates for MTTR, measurement, incident detection, response procedures, recovery automation, improvement
+    - Create both German and English versions with identical structure
+    - _Requirements: 21.1, 21.5, 21.6_
+
+  - [x] 19.7 Create change failure rate and technical practices templates (0400-0499)
+    - Write templates for change failure rate, measurement, quality assurance, testing, CI/CD, monitoring, technical debt
+    - Create both German and English versions with identical structure
+    - _Requirements: 21.1, 21.2, 21.5, 21.6_
+
+  - [x] 19.8 Create DORA documentation files
+    - Write README.md (German and English) explaining template organization and usage
+    - Write FRAMEWORK_MAPPING.md mapping templates to DORA metrics and capabilities
+    - _Requirements: 21.4, 21.8, 10.1, 10.2, 10.3_
+
+  - [x] 19.9 Write property tests for DORA templates
+    - **Property 3: Template Numbering Range Coverage**
+    - **Property 7: Bilingual Template Consistency**
+    - **Validates: Requirements 21.2, 21.6**
+
+- [x] 20. Checkpoint - Verify Phase 2 template structure and content
+  - Ensure all Phase 2 templates follow naming conventions (NNNN_descriptive_name.md)
+  - Verify all templates have proper header sections
+  - Verify bilingual consistency across all seven new frameworks
+  - Ensure all tests pass, ask the user if questions arise
+
+- [x] 21. Update Template_Manager for Phase 2 frameworks
+  - [x] 21.1 Add framework configuration for Phase 2 frameworks
+    - Add ISO/IEC 38500, ISO 31000, CSA CCM, TISAX, SOC 1, COSO, DORA to framework registry
+    - Configure display names, language support, and expected template counts
+    - _Requirements: 6.1, 6.7_
+
+  - [x] 21.2 Verify automatic framework discovery for Phase 2
+    - Test Template_Manager discovers all seven new framework directories
+    - Verify validation for framework directory structure
+    - _Requirements: 6.1, 6.2_
+
+  - [x] 21.3 Write property tests for Phase 2 Template_Manager integration
+    - **Property 8: Template Discovery**
+    - **Property 9: Template Sorting by Numeric Prefix**
+    - **Property 10: Metadata Extraction**
+    - **Validates: Requirements 6.1, 6.3, 6.4**
+
+- [x] 22. Update CLI to support Phase 2 frameworks
+  - [x] 22.1 Add Phase 2 framework options to CLI
+    - Add iso-38500, iso-31000, csa-ccm, tisax, soc1, coso, dora as valid --template options
+    - Update CLI help text to include Phase 2 frameworks
+    - _Requirements: 6.7_
+
+  - [x] 22.2 Write unit tests for Phase 2 CLI integration
+    - Test CLI accepts all Phase 2 framework names
+    - Test CLI rejects invalid framework names
+    - Test CLI help text includes Phase 2 frameworks
+    - _Requirements: 6.7_
+
+- [x] 23. Checkpoint - Phase 2 integration testing
+  - Run end-to-end tests for all seven Phase 2 frameworks
+  - Verify template loading, validation, and output generation
+  - Ensure all tests pass, ask the user if questions arise
+
+- [x] 24. Write comprehensive test suite for Phase 2
+  - [x] 24.1 Write unit tests for Phase 2 template structure
+    - Test template header parsing for all Phase 2 frameworks
+    - Test markdown structure validation
+    - Test placeholder extraction
+    - _Requirements: 14.1, 14.2, 14.3_
+
+  - [x] 24.2 Write unit tests for Phase 2 bilingual consistency
+    - Test filename matching across languages for all Phase 2 frameworks
+    - Test section structure matching
+    - Test placeholder location matching
+    - _Requirements: 14.6_
+
+  - [x] 24.3 Write integration tests for Phase 2 end-to-end handbook generation
+    - Test complete handbook generation for all Phase 2 frameworks
+    - Test all output formats (HTML, PDF, Markdown)
+    - _Requirements: 14.4, 14.5_
+
+  - [x] 24.4 Write property tests for Phase 2 framework-specific requirements
+    - **Property 2: Template Numbering Increments**
+    - **Property 16: Framework Requirement Mapping Completeness**
+    - **Validates: Requirements 4.2, 10.3**
+
+  - [x] 24.5 Verify code coverage meets threshold for Phase 2
+    - Run test suite with coverage measurement
+    - Verify coverage is at least 80%
+    - **Property 17: Code Coverage Threshold**
+    - **Validates: Requirements 14.7**
+
+- [x] 25. Final checkpoint - Complete Phase 2 system validation
+  - Run full test suite including all property tests (100 iterations minimum)
+  - Verify all ten frameworks (Phase 1 + Phase 2) integrate correctly
+  - Verify bilingual support works for all frameworks
+  - Generate sample handbooks for all frameworks in all formats
+  - Ensure all tests pass, ask the user if questions arise
+
 ## Notes
 
+- Phase 1 tasks (1-12) are completed: IDW PS 951, NIST CSF 2.0, TOGAF
+- Phase 2 tasks (13-25) add seven new frameworks: ISO/IEC 38500, ISO 31000, CSA CCM, TISAX, SOC 1, COSO, DORA
 - All tasks are required for comprehensive implementation
 - Each task references specific requirements for traceability
 - Checkpoints ensure incremental validation

@@ -77,17 +77,24 @@ class TemplateManager:
         'bsi-grundschutz',
         'cis-controls',
         'common-criteria',
+        'coso',
+        'csa-ccm',
+        'dora',
         'email-service',
         'gdpr',
         'hipaa',
         'idw-ps-951',
         'isms',
+        'iso-31000',
+        'iso-38500',
         'iso-9001',
         'it-operation',
         'nist-800-53',
         'nist-csf',
         'pci-dss',
         'service-templates',
+        'soc1',
+        'tisax',
         'togaf',
         'tsc'
     ]
@@ -114,6 +121,55 @@ class TemplateManager:
             'min_template_count': 70,  # At least 0010-0700
             'has_diagrams': True,
             'description': 'The Open Group Architecture Framework'
+        },
+        'iso-38500': {
+            'display_name': 'ISO/IEC 38500',
+            'languages': ['de', 'en'],
+            'min_template_count': 40,  # At least 0010-0400
+            'has_diagrams': True,
+            'description': 'IT Governance standard'
+        },
+        'iso-31000': {
+            'display_name': 'ISO 31000',
+            'languages': ['de', 'en'],
+            'min_template_count': 50,  # At least 0010-0500
+            'has_diagrams': True,
+            'description': 'Risk Management standard'
+        },
+        'csa-ccm': {
+            'display_name': 'CSA CCM',
+            'languages': ['de', 'en'],
+            'min_template_count': 80,  # At least 0010-0800
+            'has_diagrams': True,
+            'description': 'Cloud Security Alliance Cloud Controls Matrix'
+        },
+        'tisax': {
+            'display_name': 'TISAX',
+            'languages': ['de', 'en'],
+            'min_template_count': 60,  # At least 0010-0600
+            'has_diagrams': True,
+            'description': 'Automotive Information Security Assessment'
+        },
+        'soc1': {
+            'display_name': 'SOC 1 / SSAE 18',
+            'languages': ['de', 'en'],
+            'min_template_count': 50,  # At least 0010-0500
+            'has_diagrams': True,
+            'description': 'Service Organization Control Type 1'
+        },
+        'coso': {
+            'display_name': 'COSO',
+            'languages': ['de', 'en'],
+            'min_template_count': 60,  # At least 0010-0600
+            'has_diagrams': True,
+            'description': 'Committee of Sponsoring Organizations Internal Control Framework'
+        },
+        'dora': {
+            'display_name': 'DORA',
+            'languages': ['de', 'en'],
+            'min_template_count': 40,  # At least 0010-0400
+            'has_diagrams': True,
+            'description': 'DevOps Research and Assessment metrics'
         }
     }
     

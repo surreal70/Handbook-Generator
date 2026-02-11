@@ -2,7 +2,11 @@
 
 ## Introduction
 
-This document specifies the requirements for expanding the handbook generator system with three additional compliance framework template sets. The system currently supports thirteen handbook types (BCM, ISMS, BSI Grundschutz, IT-Operations, CIS Controls, PCI-DSS, HIPAA, NIST 800-53, TSC (SOC 2), Common Criteria, ISO 9001, and GDPR) with comprehensive templates across German and English languages. This expansion will add template sets for IDW PS 951 (German IT auditing standard), NIST Cybersecurity Framework (CSF) 2.0, and TOGAF (The Open Group Architecture Framework).
+This document specifies the requirements for expanding the handbook generator system with ten additional compliance framework template sets. The system currently supports thirteen handbook types (BCM, ISMS, BSI Grundschutz, IT-Operations, CIS Controls, PCI-DSS, HIPAA, NIST 800-53, TSC (SOC 2), Common Criteria, ISO 9001, and GDPR) with comprehensive templates across German and English languages. 
+
+This expansion adds template sets for:
+- **Phase 1 (Completed)**: IDW PS 951, NIST CSF 2.0, TOGAF
+- **Phase 2 (New)**: ISO/IEC 38500, ISO 31000, Cloud Security Alliance CCM, TISAX, SOC 1/SSAE 18, COSO Internal Control Framework, DORA
 
 The new templates will follow the established architecture: numbered markdown files (0010_, 0020_, etc.) with structured sections, bilingual support where applicable, placeholder substitution capabilities, and integration with the existing template management and validation systems.
 
@@ -27,6 +31,21 @@ The new templates will follow the established architecture: numbered markdown fi
 - **Cybersecurity_Function**: Core categories in NIST CSF (Identify, Protect, Detect, Respond, Recover, Govern)
 - **Architecture_Domain**: TOGAF domains (Business, Data, Application, Technology)
 - **ADM**: Architecture Development Method - TOGAF's core methodology
+- **ISO_IEC_38500**: International standard for corporate governance of IT
+- **ISO_31000**: International standard for risk management principles and guidelines
+- **CCM**: Cloud Controls Matrix - CSA's cybersecurity control framework for cloud computing
+- **TISAX**: Trusted Information Security Assessment Exchange - automotive sector information security standard
+- **SOC_1**: Service Organization Control report focusing on controls relevant to financial reporting
+- **SSAE_18**: Statement on Standards for Attestation Engagements No. 18
+- **COSO**: Committee of Sponsoring Organizations - internal control framework
+- **DORA**: DevOps Research and Assessment - metrics for software delivery performance
+- **IT_Governance**: System by which IT use is directed and controlled
+- **Risk_Management**: Coordinated activities to direct and control organization with regard to risk
+- **Cloud_Control**: Security control specific to cloud computing environments
+- **Automotive_Security**: Information security requirements specific to automotive industry
+- **Financial_Controls**: Controls over financial reporting and accounting systems
+- **Internal_Control**: Process for assuring achievement of objectives in operational effectiveness
+- **DevOps_Metrics**: Quantitative measures of software delivery and operational performance
 
 ## Requirements
 
@@ -224,3 +243,108 @@ The new templates will follow the established architecture: numbered markdown fi
 5. WHEN new templates are added, THE Test_Suite SHALL include integration tests for end-to-end handbook generation
 6. WHEN new templates are added, THE Test_Suite SHALL verify bilingual template consistency
 7. WHEN tests are run, THE Test_Suite SHALL achieve at least 80% code coverage for new functionality
+
+### Requirement 15: ISO/IEC 38500 Template Set
+
+**User Story:** As an IT governance professional, I want a comprehensive ISO/IEC 38500 template set, so that I can document IT governance practices and demonstrate compliance with international IT governance standards.
+
+#### Acceptance Criteria
+
+1. THE Template_Set SHALL include templates covering all six ISO/IEC 38500 principles (Responsibility, Strategy, Acquisition, Performance, Conformance, Human Behavior)
+2. THE Template_Set SHALL include numbered templates from 0010 to at least 0400 following the existing numbering pattern
+3. THE Template_Set SHALL include a metadata template (0000_metadata_de_iso-38500.md and 0000_metadata_en_iso-38500.md)
+4. THE Template_Set SHALL include a README.md file documenting the template structure and usage
+5. THE Template_Set SHALL include templates for governance framework, board responsibilities, management responsibilities, evaluation mechanisms, direction setting, and monitoring processes
+6. THE Template_Set SHALL support both German and English versions with identical structure
+7. THE Template_Set SHALL include placeholder support for organization-specific data
+8. THE Template_Set SHALL include framework mapping documentation linking templates to specific ISO/IEC 38500 principles and practices
+
+### Requirement 16: ISO 31000 Template Set
+
+**User Story:** As a risk management professional, I want a comprehensive ISO 31000 template set, so that I can document risk management practices and demonstrate compliance with international risk management standards.
+
+#### Acceptance Criteria
+
+1. THE Template_Set SHALL include templates covering the ISO 31000 risk management framework (Principles, Framework, Process)
+2. THE Template_Set SHALL include numbered templates from 0010 to at least 0500 following the existing numbering pattern
+3. THE Template_Set SHALL include a metadata template (0000_metadata_de_iso-31000.md and 0000_metadata_en_iso-31000.md)
+4. THE Template_Set SHALL include a README.md file documenting the template structure and usage
+5. THE Template_Set SHALL include templates for risk management principles, framework design, implementation, evaluation, improvement, risk assessment process, risk identification, risk analysis, risk evaluation, and risk treatment
+6. THE Template_Set SHALL support both German and English versions with identical structure
+7. THE Template_Set SHALL include placeholder support for organization-specific data
+8. THE Template_Set SHALL include framework mapping documentation linking templates to specific ISO 31000 components and clauses
+
+### Requirement 17: Cloud Security Alliance CCM Template Set
+
+**User Story:** As a cloud security professional, I want a comprehensive CSA CCM template set, so that I can document cloud security controls and demonstrate compliance with cloud security best practices.
+
+#### Acceptance Criteria
+
+1. THE Template_Set SHALL include templates covering all CCM control domains (Application & Interface Security, Audit Assurance, Business Continuity Management, Change Control, Data Security, Datacenter Security, Encryption, Governance, Human Resources, Identity & Access Management, Infrastructure Security, Interoperability, Mobile Security, Security Incident Management, Supply Chain Management, Threat & Vulnerability Management)
+2. THE Template_Set SHALL include numbered templates from 0010 to at least 0800 following the existing numbering pattern
+3. THE Template_Set SHALL include a metadata template (0000_metadata_de_csa-ccm.md and 0000_metadata_en_csa-ccm.md)
+4. THE Template_Set SHALL include a README.md file documenting the template structure and usage
+5. THE Template_Set SHALL include templates for each control domain with specific control objectives and implementation guidance
+6. THE Template_Set SHALL support both German and English versions with identical structure
+7. THE Template_Set SHALL include placeholder support for organization-specific data
+8. THE Template_Set SHALL include framework mapping documentation linking templates to specific CCM control IDs and domains
+
+### Requirement 18: TISAX Template Set
+
+**User Story:** As an automotive industry security professional, I want a comprehensive TISAX template set, so that I can document information security practices and demonstrate compliance with automotive sector requirements.
+
+#### Acceptance Criteria
+
+1. THE Template_Set SHALL include templates covering all TISAX assessment objectives based on VDA ISA catalog (Information Security, Prototype Protection, Data Protection)
+2. THE Template_Set SHALL include numbered templates from 0010 to at least 0600 following the existing numbering pattern
+3. THE Template_Set SHALL include a metadata template (0000_metadata_de_tisax.md and 0000_metadata_en_tisax.md)
+4. THE Template_Set SHALL include a README.md file documenting the template structure and usage
+5. THE Template_Set SHALL include templates for information security management, asset management, access control, cryptography, physical security, operations security, communications security, supplier relationships, incident management, business continuity, compliance, prototype protection controls, and data protection requirements
+6. THE Template_Set SHALL support both German and English versions with identical structure
+7. THE Template_Set SHALL include placeholder support for organization-specific data
+8. THE Template_Set SHALL include framework mapping documentation linking templates to specific TISAX assessment objectives and maturity levels
+
+### Requirement 19: SOC 1 / SSAE 18 Template Set
+
+**User Story:** As an auditor or service organization, I want a comprehensive SOC 1/SSAE 18 template set, so that I can document controls relevant to financial reporting and demonstrate compliance with attestation standards.
+
+#### Acceptance Criteria
+
+1. THE Template_Set SHALL include templates covering SOC 1 Type II report requirements (Control Environment, Risk Assessment, Control Activities, Information & Communication, Monitoring)
+2. THE Template_Set SHALL include numbered templates from 0010 to at least 0500 following the existing numbering pattern
+3. THE Template_Set SHALL include a metadata template (0000_metadata_de_soc1.md and 0000_metadata_en_soc1.md)
+4. THE Template_Set SHALL include a README.md file documenting the template structure and usage
+5. THE Template_Set SHALL include templates for service organization description, control objectives, control activities, complementary user entity controls, testing procedures, and control deficiencies
+6. THE Template_Set SHALL support both German and English versions with identical structure
+7. THE Template_Set SHALL include placeholder support for organization-specific data
+8. THE Template_Set SHALL include framework mapping documentation linking templates to specific COSO internal control components and SOC 1 criteria
+
+### Requirement 20: COSO Internal Control Framework Template Set
+
+**User Story:** As an internal control professional, I want a comprehensive COSO template set, so that I can document internal control systems and demonstrate compliance with COSO framework principles.
+
+#### Acceptance Criteria
+
+1. THE Template_Set SHALL include templates covering all five COSO components (Control Environment, Risk Assessment, Control Activities, Information & Communication, Monitoring Activities) and 17 principles
+2. THE Template_Set SHALL include numbered templates from 0010 to at least 0600 following the existing numbering pattern
+3. THE Template_Set SHALL include a metadata template (0000_metadata_de_coso.md and 0000_metadata_en_coso.md)
+4. THE Template_Set SHALL include a README.md file documenting the template structure and usage
+5. THE Template_Set SHALL include templates for each component with specific principles, points of focus, and implementation guidance
+6. THE Template_Set SHALL support both German and English versions with identical structure
+7. THE Template_Set SHALL include placeholder support for organization-specific data
+8. THE Template_Set SHALL include framework mapping documentation linking templates to specific COSO components, principles, and points of focus
+
+### Requirement 21: DORA Metrics Template Set
+
+**User Story:** As a DevOps leader, I want a comprehensive DORA template set, so that I can document software delivery performance and demonstrate alignment with DevOps best practices.
+
+#### Acceptance Criteria
+
+1. THE Template_Set SHALL include templates covering all four DORA metrics (Deployment Frequency, Lead Time for Changes, Mean Time to Restore, Change Failure Rate) and operational practices
+2. THE Template_Set SHALL include numbered templates from 0010 to at least 0400 following the existing numbering pattern
+3. THE Template_Set SHALL include a metadata template (0000_metadata_de_dora.md and 0000_metadata_en_dora.md)
+4. THE Template_Set SHALL include a README.md file documenting the template structure and usage
+5. THE Template_Set SHALL include templates for metric definitions, measurement procedures, performance benchmarking, improvement strategies, technical practices (CI/CD, monitoring, incident response), and cultural practices
+6. THE Template_Set SHALL support both German and English versions with identical structure
+7. THE Template_Set SHALL include placeholder support for organization-specific data
+8. THE Template_Set SHALL include framework mapping documentation linking templates to specific DORA metrics and capabilities

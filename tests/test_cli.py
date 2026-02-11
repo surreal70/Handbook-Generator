@@ -833,10 +833,18 @@ class TestTemplateTypeValidation:
         assert 'common-criteria' in error_output
         assert 'iso-9001' in error_output
         assert 'gdpr' in error_output
-        # Verify additional new frameworks appear in error message
+        # Verify Phase 1 frameworks appear in error message
         assert 'idw-ps-951' in error_output
         assert 'nist-csf' in error_output
         assert 'togaf' in error_output
+        # Verify Phase 2 frameworks appear in error message
+        assert 'iso-38500' in error_output
+        assert 'iso-31000' in error_output
+        assert 'csa-ccm' in error_output
+        assert 'tisax' in error_output
+        assert 'soc1' in error_output
+        assert 'coso' in error_output
+        assert 'dora' in error_output
     
     def test_all_valid_template_types_accepted(self):
         """
@@ -845,9 +853,10 @@ class TestTemplateTypeValidation:
         Validates: Requirements 21.1, 21.2, 21.3, 21.5, 3.1, 10.7, 6.7
         """
         valid_types = ['bcm', 'bsi-grundschutz', 'cis-controls', 'common-criteria', 
-                       'email-service', 'gdpr', 'hipaa', 'idw-ps-951', 'isms', 'iso-9001', 
-                       'it-operation', 'nist-800-53', 'nist-csf', 'pci-dss', 'service-templates', 
-                       'togaf', 'tsc']
+                       'coso', 'csa-ccm', 'dora', 'email-service', 'gdpr', 'hipaa', 
+                       'idw-ps-951', 'isms', 'iso-31000', 'iso-38500', 'iso-9001', 
+                       'it-operation', 'nist-800-53', 'nist-csf', 'pci-dss', 
+                       'service-templates', 'soc1', 'tisax', 'togaf', 'tsc']
         
         for template_type in valid_types:
             test_args = [
@@ -865,9 +874,10 @@ class TestTemplateTypeValidation:
     @settings(max_examples=100)
     @given(
         template_type=st.sampled_from(['bcm', 'bsi-grundschutz', 'cis-controls', 'common-criteria', 
-                                       'email-service', 'gdpr', 'hipaa', 'idw-ps-951', 'isms', 'iso-9001', 
-                                       'it-operation', 'nist-800-53', 'nist-csf', 'pci-dss', 'service-templates', 
-                                       'togaf', 'tsc']),
+                                       'coso', 'csa-ccm', 'dora', 'email-service', 'gdpr', 'hipaa', 
+                                       'idw-ps-951', 'isms', 'iso-31000', 'iso-38500', 'iso-9001', 
+                                       'it-operation', 'nist-800-53', 'nist-csf', 'pci-dss', 
+                                       'service-templates', 'soc1', 'tisax', 'togaf', 'tsc']),
         language=st.sampled_from(['de', 'en'])
     )
     def test_property_14_cli_template_type_validation(self, template_type, language):
@@ -903,9 +913,10 @@ class TestTemplateTypeValidation:
             min_size=1,
             max_size=50
         ).filter(lambda x: x not in ['bcm', 'bsi-grundschutz', 'cis-controls', 'common-criteria', 
-                                      'email-service', 'gdpr', 'hipaa', 'idw-ps-951', 'isms', 'iso-9001', 
-                                      'it-operation', 'nist-800-53', 'nist-csf', 'pci-dss', 'service-templates', 
-                                      'togaf', 'tsc'])
+                                      'coso', 'csa-ccm', 'dora', 'email-service', 'gdpr', 'hipaa', 
+                                      'idw-ps-951', 'isms', 'iso-31000', 'iso-38500', 'iso-9001', 
+                                      'it-operation', 'nist-800-53', 'nist-csf', 'pci-dss', 
+                                      'service-templates', 'soc1', 'tisax', 'togaf', 'tsc'])
     )
     def test_property_14_cli_invalid_template_rejection(self, invalid_template):
         """
@@ -931,3 +942,369 @@ class TestTemplateTypeValidation:
         # argparse exits with code 2 for invalid arguments
         assert exc_info.value.code == 2, \
             f"Invalid template type '{invalid_template}' should be rejected with exit code 2"
+
+
+class TestPhase2FrameworkCLIIntegration:
+    """Tests for Phase 2 framework CLI integration."""
+    
+    def test_valid_template_type_iso_38500(self):
+        """
+        Test that 'iso-38500' template type is accepted.
+        
+        Validates: Requirements 6.7
+        """
+        test_args = [
+            'cli.py',
+            '--language', 'en',
+            '--template', 'iso-38500'
+        ]
+        
+        with patch.object(sys, 'argv', test_args):
+            args = parse_arguments()
+        
+        assert args.template == 'iso-38500'
+    
+    def test_valid_template_type_iso_31000(self):
+        """
+        Test that 'iso-31000' template type is accepted.
+        
+        Validates: Requirements 6.7
+        """
+        test_args = [
+            'cli.py',
+            '--language', 'de',
+            '--template', 'iso-31000'
+        ]
+        
+        with patch.object(sys, 'argv', test_args):
+            args = parse_arguments()
+        
+        assert args.template == 'iso-31000'
+    
+    def test_valid_template_type_csa_ccm(self):
+        """
+        Test that 'csa-ccm' template type is accepted.
+        
+        Validates: Requirements 6.7
+        """
+        test_args = [
+            'cli.py',
+            '--language', 'en',
+            '--template', 'csa-ccm'
+        ]
+        
+        with patch.object(sys, 'argv', test_args):
+            args = parse_arguments()
+        
+        assert args.template == 'csa-ccm'
+    
+    def test_valid_template_type_tisax(self):
+        """
+        Test that 'tisax' template type is accepted.
+        
+        Validates: Requirements 6.7
+        """
+        test_args = [
+            'cli.py',
+            '--language', 'de',
+            '--template', 'tisax'
+        ]
+        
+        with patch.object(sys, 'argv', test_args):
+            args = parse_arguments()
+        
+        assert args.template == 'tisax'
+    
+    def test_valid_template_type_soc1(self):
+        """
+        Test that 'soc1' template type is accepted.
+        
+        Validates: Requirements 6.7
+        """
+        test_args = [
+            'cli.py',
+            '--language', 'en',
+            '--template', 'soc1'
+        ]
+        
+        with patch.object(sys, 'argv', test_args):
+            args = parse_arguments()
+        
+        assert args.template == 'soc1'
+    
+    def test_valid_template_type_coso(self):
+        """
+        Test that 'coso' template type is accepted.
+        
+        Validates: Requirements 6.7
+        """
+        test_args = [
+            'cli.py',
+            '--language', 'de',
+            '--template', 'coso'
+        ]
+        
+        with patch.object(sys, 'argv', test_args):
+            args = parse_arguments()
+        
+        assert args.template == 'coso'
+    
+    def test_valid_template_type_dora(self):
+        """
+        Test that 'dora' template type is accepted.
+        
+        Validates: Requirements 6.7
+        """
+        test_args = [
+            'cli.py',
+            '--language', 'en',
+            '--template', 'dora'
+        ]
+        
+        with patch.object(sys, 'argv', test_args):
+            args = parse_arguments()
+        
+        assert args.template == 'dora'
+    
+    def test_phase2_frameworks_with_short_flags(self):
+        """
+        Test that Phase 2 framework names work with short flags.
+        
+        Validates: Requirements 6.7
+        """
+        phase2_frameworks = ['iso-38500', 'iso-31000', 'csa-ccm', 'tisax', 'soc1', 'coso', 'dora']
+        
+        for framework in phase2_frameworks:
+            test_args = [
+                'cli.py',
+                '-l', 'en',
+                '-t', framework
+            ]
+            
+            with patch.object(sys, 'argv', test_args):
+                args = parse_arguments()
+            
+            assert args.template == framework, \
+                f"Phase 2 framework '{framework}' should be accepted with short flags"
+    
+    def test_phase2_frameworks_appear_in_help_text(self, capsys):
+        """
+        Test that Phase 2 frameworks appear in help text.
+        
+        Validates: Requirements 6.7
+        """
+        test_args = [
+            'cli.py',
+            '--help'
+        ]
+        
+        with patch.object(sys, 'argv', test_args):
+            with pytest.raises(SystemExit) as exc_info:
+                parse_arguments()
+        
+        # Help exits with code 0
+        assert exc_info.value.code == 0
+        
+        captured = capsys.readouterr()
+        help_output = captured.out.lower()
+        
+        # Verify Phase 2 frameworks appear in help text
+        assert 'iso-38500' in help_output
+        assert 'iso-31000' in help_output
+        assert 'csa-ccm' in help_output
+        assert 'tisax' in help_output
+        assert 'soc1' in help_output
+        assert 'coso' in help_output
+        assert 'dora' in help_output
+    
+    def test_invalid_framework_shows_phase2_in_choices(self, capsys):
+        """
+        Test that invalid template type shows Phase 2 frameworks in error message.
+        
+        Validates: Requirements 6.7
+        """
+        test_args = [
+            'cli.py',
+            '--language', 'de',
+            '--template', 'nonexistent-framework'
+        ]
+        
+        with patch.object(sys, 'argv', test_args):
+            with pytest.raises(SystemExit):
+                parse_arguments()
+        
+        captured = capsys.readouterr()
+        error_output = captured.err
+        
+        # Verify error message contains Phase 2 frameworks
+        assert 'invalid choice' in error_output.lower()
+        assert 'iso-38500' in error_output
+        assert 'iso-31000' in error_output
+        assert 'csa-ccm' in error_output
+        assert 'tisax' in error_output
+        assert 'soc1' in error_output
+        assert 'coso' in error_output
+        assert 'dora' in error_output
+    
+    def test_all_phase2_frameworks_accepted(self):
+        """
+        Test that all Phase 2 framework types are accepted.
+        
+        Validates: Requirements 6.7
+        """
+        phase2_frameworks = ['iso-38500', 'iso-31000', 'csa-ccm', 'tisax', 'soc1', 'coso', 'dora']
+        
+        for framework in phase2_frameworks:
+            test_args = [
+                'cli.py',
+                '--language', 'de',
+                '--template', framework
+            ]
+            
+            with patch.object(sys, 'argv', test_args):
+                args = parse_arguments()
+            
+            assert args.template == framework, \
+                f"Phase 2 framework '{framework}' should be accepted"
+    
+    @settings(max_examples=100)
+    @given(
+        framework=st.sampled_from(['iso-38500', 'iso-31000', 'csa-ccm', 'tisax', 'soc1', 'coso', 'dora']),
+        language=st.sampled_from(['de', 'en'])
+    )
+    def test_property_phase2_cli_framework_validation(self, framework, language):
+        """
+        Feature: additional-compliance-frameworks
+        Property: Phase 2 CLI Framework Validation
+        
+        For any CLI invocation with --template parameter set to a Phase 2 framework,
+        the system SHALL accept the input without error.
+        
+        Validates: Requirements 6.7
+        """
+        test_args = [
+            'cli.py',
+            '--language', language,
+            '--template', framework
+        ]
+        
+        with patch.object(sys, 'argv', test_args):
+            args = parse_arguments()
+        
+        # Verify the framework was accepted
+        assert args.template == framework, \
+            f"Phase 2 framework '{framework}' should be accepted"
+        assert args.language == language, \
+            f"Language '{language}' should be accepted"
+    
+    def test_phase2_frameworks_with_all_output_formats(self):
+        """
+        Test that Phase 2 frameworks work with all output formats.
+        
+        Validates: Requirements 6.7
+        """
+        phase2_frameworks = ['iso-38500', 'iso-31000', 'csa-ccm', 'tisax', 'soc1', 'coso', 'dora']
+        output_formats = ['markdown', 'pdf', 'html', 'both', 'all']
+        
+        for framework in phase2_frameworks:
+            for output_format in output_formats:
+                test_args = [
+                    'cli.py',
+                    '--language', 'en',
+                    '--template', framework,
+                    '--output', output_format
+                ]
+                
+                with patch.object(sys, 'argv', test_args):
+                    args = parse_arguments()
+                
+                assert args.template == framework
+                assert args.output == output_format
+    
+    def test_phase2_frameworks_with_verbose_flag(self):
+        """
+        Test that Phase 2 frameworks work with verbose flag.
+        
+        Validates: Requirements 6.7
+        """
+        phase2_frameworks = ['iso-38500', 'iso-31000', 'csa-ccm', 'tisax', 'soc1', 'coso', 'dora']
+        
+        for framework in phase2_frameworks:
+            test_args = [
+                'cli.py',
+                '--language', 'de',
+                '--template', framework,
+                '--verbose'
+            ]
+            
+            with patch.object(sys, 'argv', test_args):
+                args = parse_arguments()
+            
+            assert args.template == framework
+            assert args.verbose is True
+    
+    def test_phase2_frameworks_with_custom_config(self):
+        """
+        Test that Phase 2 frameworks work with custom config file.
+        
+        Validates: Requirements 6.7
+        """
+        phase2_frameworks = ['iso-38500', 'iso-31000', 'csa-ccm', 'tisax', 'soc1', 'coso', 'dora']
+        
+        for framework in phase2_frameworks:
+            test_args = [
+                'cli.py',
+                '--language', 'en',
+                '--template', framework,
+                '--config', 'custom_config.yaml'
+            ]
+            
+            with patch.object(sys, 'argv', test_args):
+                args = parse_arguments()
+            
+            assert args.template == framework
+            assert args.config == 'custom_config.yaml'
+    
+    def test_phase2_frameworks_with_separate_files_flag(self):
+        """
+        Test that Phase 2 frameworks work with --separate-files flag.
+        
+        Validates: Requirements 6.7
+        """
+        phase2_frameworks = ['iso-38500', 'iso-31000', 'csa-ccm', 'tisax', 'soc1', 'coso', 'dora']
+        
+        for framework in phase2_frameworks:
+            test_args = [
+                'cli.py',
+                '--language', 'de',
+                '--template', framework,
+                '--separate-files'
+            ]
+            
+            with patch.object(sys, 'argv', test_args):
+                args = parse_arguments()
+            
+            assert args.template == framework
+            assert args.separate_files is True
+    
+    def test_phase2_frameworks_with_pdf_toc_flag(self):
+        """
+        Test that Phase 2 frameworks work with --pdf-toc flag.
+        
+        Validates: Requirements 6.7
+        """
+        phase2_frameworks = ['iso-38500', 'iso-31000', 'csa-ccm', 'tisax', 'soc1', 'coso', 'dora']
+        
+        for framework in phase2_frameworks:
+            test_args = [
+                'cli.py',
+                '--language', 'en',
+                '--template', framework,
+                '--pdf-toc'
+            ]
+            
+            with patch.object(sys, 'argv', test_args):
+                args = parse_arguments()
+            
+            assert args.template == framework
+            assert args.pdf_toc is True

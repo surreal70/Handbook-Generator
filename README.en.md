@@ -3,7 +3,7 @@
 <div align="center">
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
-[![Version](https://img.shields.io/badge/version-0.0.9-blue.svg)](about_versioning/VERSION.md)
+[![Version](https://img.shields.io/badge/version-0.0.10-blue.svg)](about_versioning/VERSION.md)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Code Coverage](https://img.shields.io/badge/coverage-84%25-brightgreen.svg)](htmlcov/index.html)
 [![Tests](https://img.shields.io/badge/tests-765%20passed-success.svg)](tests/)
@@ -25,12 +25,12 @@ A Python tool for generating professional handbooks from Markdown templates with
 
 The Handbook Generator creates professional handbooks in various formats (HTML, PDF, Markdown) from structured Markdown templates. The system replaces placeholders in templates with real data from external systems like NetBox and supports multilingual handbooks.
 
-**Version 0.0.9** - Repository Cleanup & Validation Consolidation
+**Version 0.0.10** - Phase 2 Completion - Seven New Frameworks + Quality Improvements
 
 ## Features
 
 - 📝 **Template-based Document Generation** - Structured Markdown templates with intelligent processing
-- 📚 **Fifteen Handbook Types** - BCM, ISMS, BSI Grundschutz, IT-Operations, CIS Controls, Common Criteria, GDPR, HIPAA, IDW PS 951, ISO 9001, NIST 800-53, NIST CSF, PCI-DSS, TOGAF, TSC
+- 📚 **22 Handbook Types** - BCM, ISMS, BSI Grundschutz, IT-Operations, CIS Controls, Common Criteria, COSO, CSA CCM, DORA, GDPR, HIPAA, IDW PS 951, ISO 9001, ISO 31000, ISO 38500, NIST 800-53, NIST CSF, PCI-DSS, SOC 1, TISAX, TOGAF, TSC
 - 🔄 **Placeholder Replacement** - Automatic data integration from external sources (NetBox, Metadata)
 - 🌍 **Multilingual Support** - German and English with identical structure
 - 📄 **Multi-Format Output** - HTML, PDF (Pandoc + XeLaTeX), Markdown
@@ -41,7 +41,7 @@ The Handbook Generator creates professional handbooks in various formats (HTML, 
 - 🔍 **Verbose Logging** - Detailed debugging and error analysis
 - ✅ **Comprehensively Tested** - 86% Code Coverage, 450+ Tests (Unit & Property-Based)
 - 📋 **Framework Compliance** - ISO 22301, ISO 27001:2022, BSI Standards, ITIL v4, CIS Controls v8
-- 📦 **240 Templates** - Professional, standards-compliant templates
+- 📦 **1,732+ Templates** - Professional, standards-compliant templates (866 DE + 866 EN)
 - 🚀 **Batch Generation** - Automatic generation of all handbooks
 
 ## Handbook Types
@@ -54,212 +54,38 @@ The Handbook Generator creates professional handbooks in various formats (HTML, 
 | **IT-Operation** | ITIL v4, ISO 20000-1 | 30/30 | IT Operations Handbook |
 | **CIS Controls** | CIS Controls v8 | 27/27 | CIS Controls v8 Hardening |
 | **Common Criteria** | ISO/IEC 15408 | 35/35 | Common Criteria Security Evaluation |
+| **COSO** | COSO Framework | 40/40 | Internal Control Framework |
+| **CSA CCM** | CSA CCM v4 | 40/40 | Cloud Controls Matrix |
+| **DORA** | EU DORA Regulation | 40/40 | Digital Operational Resilience Act |
 | **GDPR** | EU GDPR 2016/679 | 36/36 | General Data Protection Regulation |
 | **HIPAA** | HIPAA Security Rule | 13/13 | Health Insurance Portability and Accountability Act |
 | **IDW PS 951** | IDW PS 951 | 50/50 | German IT Auditing Standard |
 | **ISO 9001** | ISO 9001:2015 | 29/29 | Quality Management System |
+| **ISO 31000** | ISO 31000:2018 | 40/40 | Risk Management |
+| **ISO 38500** | ISO/IEC 38500:2015 | 40/40 | IT Governance |
 | **NIST 800-53** | NIST SP 800-53 Rev. 5 | 52/52 | NIST Security and Privacy Controls |
 | **NIST CSF** | NIST CSF 2.0 | 60/60 | NIST Cybersecurity Framework |
 | **PCI-DSS** | PCI-DSS v4.0 | 14/14 | Payment Card Industry Data Security Standard |
+| **SOC 1** | SSAE 18 / ISAE 3402 | 40/40 | Service Organization Controls Type 1 |
+| **TISAX** | TISAX Assessment | 40/40 | Trusted Information Security Assessment Exchange |
 | **TOGAF** | TOGAF 9.2 | 70/70 | The Open Group Architecture Framework |
 | **TSC** | SOC 2 Trust Services | 17/17 | Trust Services Criteria (SOC 2) |
 
-**Total: 586+ Templates (DE) / 586+ Templates (EN)** across 15 Compliance Frameworks
+**Total: 866+ Templates (DE) / 866+ Templates (EN)** across 22 Compliance Frameworks
 
-## New in Version 0.0.7 🎉
+## What's New?
 
-### Template Metadata Standardization
+See the complete release information for version 0.0.10:
 
-- ✅ **Unified Metadata Structure** - All 12 frameworks standardized with 13 required fields
-- ✅ **Template Version Tracking** - Added template_version field (1.0) for format tracking
-- ✅ **Revision Number Support** - Added revision field (0) for customization tracking
-- ✅ **Service Directory Reorganization** - Improved structure (templates/*/service-directory/)
-- ✅ **Comprehensive Validation** - 100% validation success rate (24/24 files)
-- ✅ **100 Tests Passing** - All metadata standardization tests passing
-- ✅ **Property-Based Testing** - 100+ iterations per test for correctness validation
-- ✅ **Full Backward Compatibility** - Existing handbooks continue to work
-- ✅ **Migration Guide** - Complete documentation for existing users
-- ✅ **Validation Tools** - New metadata validation and enhancement scripts
+- 📋 **[Release Notes](about_versioning/VERSION_0.0.10_RELEASE_NOTES.md)** - Detailed technical changes and implementation details
+- 📊 **[Version Summary](about_versioning/VERSION_0.0.10_SUMMARY.md)** - Executive summary with overview of all changes
+- 📜 **[Version History](about_versioning/VERSION.md)** - Complete version history of all releases
 
-### Template Metadata Structure
-
-Each framework now includes a metadata file (`0000_metadata_{lang}_{framework}.md`) with standardized fields:
-
-**Required Fields:**
-- `document_id` - Document identifier (e.g., "0000")
-- `owner` - Document owner (placeholder: `{{ meta.owner }}`)
-- `version` - Document version (placeholder: `{{ meta.version }}`)
-- `status` - Document status (placeholder: `{{ meta.status }}`)
-- `classification` - Security classification (placeholder: `{{ meta.classification }}`)
-- `date` - Last update (placeholder: `{{ meta.date }}`)
-- `template_version` - Template format version (e.g., "1.0")
-- `revision` - Customization revision number (e.g., "0")
-- `organization` - Organization name (placeholder: `{{ meta.organization }}`)
-- `author` - Document author (placeholder: `{{ meta.author }}`)
-- `scope` - Scope of applicability (placeholder: `{{ meta.scope }}`)
-- `valid_from` - Valid from date (placeholder: `{{ meta.valid_from }}`)
-- `next_review` - Next review date (placeholder: `{{ meta.next_review }}`)
-
-### Template Version Tracking
-
-**Template Version** (`template_version`):
-- Tracks changes to the template format itself
-- Format: `MAJOR.MINOR` (e.g., "1.0", "1.1", "2.0")
-- Follows semantic versioning principles
-- Managed with `--test` flag
-- Enables compatibility checking for migrations
-
-**Example:**
-- `1.0` - Initial template version
-- `1.1` - Minor template improvements (backward compatible)
-- `2.0` - Major template structure changes (breaking changes)
-
-**Revision Number** (`revision`):
-- Tracks individual handbook customizations
-- Format: Non-negative integer (e.g., 0, 1, 2, 3)
-- Incremented when handbook is customized
-- Foundation for future customization tracking
-
-### Validation and Tools
-
-**New Validation Script:**
-```bash
-# Validate all frameworks
-python3 helpers/validate_metadata.py --all
-
-# Validate specific framework
-python3 helpers/validate_metadata.py --framework gdpr
-
-# Validate specific language
-python3 helpers/validate_metadata.py --language de
-```
-
-**Metadata Management:**
-```bash
-# Scan metadata status
-python3 examples/scan_metadata.py
-
-# Enhance existing metadata
-python3 examples/enhance_metadata.py
-```
-
-**Validation Checks:**
-- All 13 required fields present
-- Template version format (MAJOR.MINOR)
-- Revision number validity (non-negative integer)
-- Placeholder syntax ({{ source.field }})
-- Bilingual consistency (DE/EN matching)
-
-### Metadata Role Cleanup
-
-As part of the Template Metadata Standardization, roles in `metadata.example.yaml` have been cleaned up and reorganized:
-
-**Removed Duplicates:**
-- `datenschutzbeauftragter` removed (duplicate of `data_protection_officer`)
-- Use `data_protection_officer` as the canonical role for Data Protection Officer / Datenschutzbeauftragter
-
-**Reorganized IT Operations Roles:**
-- `it_manager` and `sysop` moved from "Add Custom Roles Here" to "IT Operations Roles"
-- Better organization: C-Level → IT Operations → BCM/Security → Custom Roles
-
-**Migration:**
-```bash
-# Check if you're using datenschutzbeauftragter
-grep -i "datenschutzbeauftragter:" metadata.yaml
-
-# If found, rename to data_protection_officer
-# See docs/ROLE_CLEANUP_MIGRATION.md for detailed instructions
-```
-
-**New Role Structure:**
-```yaml
-roles:
-  # C-Level Executives
-  ceo, cio, ciso, cfo, coo
-  
-  # IT Operations Roles (reorganized)
-  it_operations_manager, service_desk_lead, it_manager, sysop
-  
-  # BCM and Security Roles
-  bcm_manager, information_security_officer, data_protection_officer, ...
-  
-  # Add Custom Roles Here
-  # (Your custom roles)
-```
-
-See [ROLE_CLEANUP_MIGRATION.md](docs/ROLE_CLEANUP_MIGRATION.md) for complete migration information.
-
-### Backward Compatibility
-
-The system is fully backward compatible:
-- Existing handbooks work without changes
-- Missing new fields generate warnings (not errors)
-- Placeholders without data are preserved
-- Old metadata formats are supported
-
-See [MIGRATION_GUIDE.md](docs/MIGRATION_GUIDE.md) for migration information.
-
-## New in Version 0.0.9 🎉
-
-- ✅ **Three New Compliance Frameworks** - IDW PS 951, NIST CSF 2.0, TOGAF (180+ new templates)
-- ✅ **Validation Consolidation** - All framework validation scripts merged into `helpers/validate_frameworks.py`
-- ✅ **Repository Cleanup** - Removed redundant scripts, organized version history in `about_versioning/`
-- ✅ **Improved Documentation** - Updated validation guide and helper documentation
-- ✅ **Simplified Validation** - Simpler options: all frameworks or individual framework
-- ✅ **15 Handbook Types Total** - Complete compliance framework coverage
-
-## New in Version 0.0.8 🎉
-
-- ✅ **Role Cleanup** - Removed duplicate role 'datenschutzbeauftragter' (use 'data_protection_officer')
-- ✅ **IT Operations Roles Reorganized** - it_manager and sysop moved to IT Operations Roles section
-- ✅ **Enhanced Inline Comments** - metadata.example.yaml with detailed migration guidance
-- ✅ **Comprehensive Migration Guide** - ROLE_CLEANUP_MIGRATION.md with step-by-step instructions
-- ✅ **Updated Documentation** - README.md and README.en.md with role cleanup sections
-- ✅ **Better Role Organization** - C-Level → IT Operations → BCM/Security → Custom
-- ✅ **Full Backward Compatibility** - Existing handbooks continue to work
-- ✅ **Migration Examples** - Commands and examples for easy migration
-
-## New in Version 0.0.6
-
-- ✅ **Seven New Compliance Frameworks** - Common Criteria, GDPR, HIPAA, ISO 9001, NIST 800-53, PCI-DSS, TSC
-- ✅ **300+ New Templates** - Professional templates for all new frameworks (815+ total)
-- ✅ **Framework Mapping Standardization** - All FRAMEWORK_MAPPING.md renamed to 9999_Framework_Mapping.md
-- ✅ **Missing English Documentation** - Created 5 new English framework mapping files
-- ✅ **Output Directory Structure Fixed** - Restored backward compatibility
-- ✅ **PDF Generation Documented** - System requirements and alternatives documented
-- ✅ **82% Test Coverage** - 941 of 1,149 tests passing
-- ✅ **Production Ready** - All core functionality fully operational
-- ✅ **12 Handbook Types Total** - Complete compliance framework coverage
-
-## New in Version 0.0.5
-
-- ✅ **Placeholder System Validation** - Comprehensive testing and validation
-- ✅ **Metadata Configuration Validation** - Automated validation of metadata.yaml
-- ✅ **Placeholder Consistency Reports** - Cross-handbook placeholder analysis
-- ✅ **Test Suite Enhancement** - 93% pass rate with 144 placeholder tests
-- ✅ **Documentation Updates** - Complete validation and test reports
-- ✅ **27 New Templates** - Hardening baselines for OS and applications (54 with DE/EN)
-- ✅ **Foundation Templates** - Overview, scope, lifecycle, exceptions, testing
-- ✅ **OS Hardening** - Windows Server/Client, Linux, macOS, Containers
-- ✅ **App Hardening** - Web servers, databases, Kubernetes, Docker, SSH, Identity
-- ✅ **Fully Bilingual** - German and English with identical structure
-- ✅ **90+ New Tests** - Property-based and integration tests
-- ✅ **Backward Compatible** - All existing handbook types work unchanged
-- ✅ **240 Templates Total** - Across 5 handbook types
-
-## New in Version 0.0.3
-
-- ✅ **Complete PDF Generation** - All 8 handbooks available as PDF (3.4 MB)
-- ✅ **Pandoc + XeLaTeX Integration** - Professional PDF generation with TOC
-- ✅ **Batch Generation** - Automatic generation of all handbooks
-- ✅ **784 Files Generated** - 388 HTML + 8 PDF + 388 Markdown
-- ✅ **Helper Scripts** - Automated generation scripts in `helpers/`
-- ✅ **Separate Directories** - Each handbook in its own directory
-- ✅ **Production Ready** - All formats ready for use
-
-**Generated Handbooks:**
-- 🇩🇪 German: BCM, ISMS, BSI Grundschutz, IT-Operation (HTML + PDF)
-- 🇬🇧 English: BCM, ISMS, BSI Grundschutz, IT-Operation (HTML + PDF)
+**Version 0.0.10 Highlights:**
+- 7 new compliance frameworks (ISO 38500, ISO 31000, CSA CCM, TISAX, SOC 1, COSO, DORA)
+- 280+ new templates (140 DE + 140 EN)
+- Comprehensive quality improvements (1,751 files affected)
+- 22 compliance frameworks total with 1,732+ templates
 
 ## Installation
 
@@ -415,6 +241,57 @@ python -m src.cli --language en --template cis-controls --test
 # Generate CIS Controls handbook with all formats
 python -m src.cli --language en --template cis-controls --output all --test --separate-files --pdf-toc
 
+# Generate Common Criteria handbook
+python -m src.cli --language en --template common-criteria --test
+
+# Generate COSO handbook (Internal Control)
+python -m src.cli --language en --template coso --test
+
+# Generate CSA CCM handbook (Cloud Security)
+python -m src.cli --language en --template csa-ccm --test
+
+# Generate DORA handbook (Digital Resilience)
+python -m src.cli --language en --template dora --test
+
+# Generate GDPR handbook
+python -m src.cli --language en --template gdpr --test
+
+# Generate HIPAA handbook
+python -m src.cli --language en --template hipaa --test
+
+# Generate IDW PS 951 handbook
+python -m src.cli --language en --template idw-ps-951 --test
+
+# Generate ISO 9001 handbook
+python -m src.cli --language en --template iso-9001 --test
+
+# Generate ISO 31000 handbook (Risk Management)
+python -m src.cli --language en --template iso-31000 --test
+
+# Generate ISO 38500 handbook (IT Governance)
+python -m src.cli --language en --template iso-38500 --test
+
+# Generate NIST 800-53 handbook
+python -m src.cli --language en --template nist-800-53 --test
+
+# Generate NIST CSF handbook
+python -m src.cli --language en --template nist-csf --test
+
+# Generate PCI-DSS handbook
+python -m src.cli --language en --template pci-dss --test
+
+# Generate SOC 1 handbook (Service Organization Controls)
+python -m src.cli --language en --template soc1 --test
+
+# Generate TISAX handbook (Automotive Security)
+python -m src.cli --language en --template tisax --test
+
+# Generate TOGAF handbook
+python -m src.cli --language en --template togaf --test
+
+# Generate TSC (SOC 2) handbook
+python -m src.cli --language en --template tsc --test
+
 # Generate BCM handbook with verbose logging
 python -m src.cli --language en --template bcm --verbose --test
 
@@ -425,7 +302,7 @@ python -m src.cli --config /path/to/config.yaml --language en --template it-oper
 #### Available Parameters
 
 - `--language, -l`: Select language (`de`, `en`)
-- `--template, -t`: Select handbook type (`bcm`, `isms`, `bsi-grundschutz`, `it-operation`, `cis-controls`)
+- `--template, -t`: Select handbook type (`bcm`, `isms`, `bsi-grundschutz`, `it-operation`, `cis-controls`, `common-criteria`, `coso`, `csa-ccm`, `dora`, `gdpr`, `hipaa`, `idw-ps-951`, `iso-9001`, `iso-31000`, `iso-38500`, `nist-800-53`, `nist-csf`, `pci-dss`, `soc1`, `tisax`, `togaf`, `tsc`)
 - `--output, -o`: Output format (`markdown`, `pdf`, `both`) [Default: `both`]
 - `--test`: Enable test mode (required for output generation)
 - `--verbose, -v`: Enable verbose logging
@@ -501,6 +378,23 @@ ERROR: Output generation requires --test flag. Use --test to enable test mode ou
 - **bsi-grundschutz**: BSI IT-Grundschutz (BSI Standards 200-1, 200-2, 200-3)
 - **it-operation**: IT Operations Handbook (ITIL v4, ISO 20000-1, COBIT 2019)
 - **cis-controls**: CIS Controls v8 Hardening Templates (CIS Controls v8 Framework)
+- **common-criteria**: Common Criteria Security Evaluation (ISO/IEC 15408)
+- **coso**: Internal Control Framework (COSO Framework)
+- **csa-ccm**: Cloud Controls Matrix (CSA CCM v4)
+- **dora**: Digital Operational Resilience Act (EU DORA Regulation)
+- **gdpr**: General Data Protection Regulation (EU GDPR 2016/679)
+- **hipaa**: Health Insurance Portability and Accountability Act (HIPAA Security Rule)
+- **idw-ps-951**: German IT Auditing Standard (IDW PS 951)
+- **iso-9001**: Quality Management System (ISO 9001:2015)
+- **iso-31000**: Risk Management (ISO 31000:2018)
+- **iso-38500**: IT Governance (ISO/IEC 38500:2015)
+- **nist-800-53**: NIST Security and Privacy Controls (NIST SP 800-53 Rev. 5)
+- **nist-csf**: NIST Cybersecurity Framework (NIST CSF 2.0)
+- **pci-dss**: Payment Card Industry Data Security Standard (PCI-DSS v4.0)
+- **soc1**: Service Organization Controls Type 1 (SSAE 18 / ISAE 3402)
+- **tisax**: Trusted Information Security Assessment Exchange (TISAX Assessment)
+- **togaf**: The Open Group Architecture Framework (TOGAF 9.2)
+- **tsc**: Trust Services Criteria for SOC 2 (SOC 2 Trust Services)
 
 #### CIS Controls Template Structure
 

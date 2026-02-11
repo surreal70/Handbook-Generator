@@ -2,9 +2,23 @@
 
 ## Overview
 
-This design document specifies the implementation approach for adding three new compliance framework template sets to the handbook generator system: IDW PS 951 (German IT auditing standard), NIST Cybersecurity Framework (CSF) 2.0, and TOGAF (The Open Group Architecture Framework).
+This design document specifies the implementation approach for adding ten new compliance framework template sets to the handbook generator system:
 
-The implementation will follow the established template architecture pattern used by the existing 13 frameworks, ensuring seamless integration with the Template_Manager, Placeholder_System, Validation_System, and Output_Generator components. Each framework will provide bilingual templates (German and English) with structured markdown content, placeholder support, and comprehensive framework mapping documentation.
+**Phase 1 (Completed)**:
+- IDW PS 951 (German IT auditing standard)
+- NIST Cybersecurity Framework (CSF) 2.0
+- TOGAF (The Open Group Architecture Framework)
+
+**Phase 2 (New)**:
+- ISO/IEC 38500 (IT Governance)
+- ISO 31000 (Risk Management)
+- Cloud Security Alliance CCM (Cloud Controls Matrix)
+- TISAX (Automotive Information Security)
+- SOC 1 / SSAE 18 (Financial Reporting Controls)
+- COSO Internal Control Framework
+- DORA (DevOps Research & Assessment)
+
+The implementation will follow the established template architecture pattern used by the existing frameworks, ensuring seamless integration with the Template_Manager, Placeholder_System, Validation_System, and Output_Generator components. Each framework will provide bilingual templates (German and English) with structured markdown content, placeholder support, and comprehensive framework mapping documentation.
 
 ## Architecture
 
@@ -62,10 +76,59 @@ templates/
 │   │   ├── diagrams/
 │   │   ├── FRAMEWORK_MAPPING.md
 │   │   └── README.md
-│   └── togaf/
-│       ├── 0000_metadata_de_togaf.md
-│       ├── 0010_preliminary_phase.md
-│       ├── 0020_architecture_vision.md
+│   ├── togaf/
+│   │   ├── 0000_metadata_de_togaf.md
+│   │   ├── 0010_preliminary_phase.md
+│   │   ├── 0020_architecture_vision.md
+│   │   ├── ...
+│   │   ├── diagrams/
+│   │   ├── FRAMEWORK_MAPPING.md
+│   │   └── README.md
+│   ├── iso-38500/
+│   │   ├── 0000_metadata_de_iso-38500.md
+│   │   ├── 0010_governance_framework.md
+│   │   ├── ...
+│   │   ├── diagrams/
+│   │   ├── FRAMEWORK_MAPPING.md
+│   │   └── README.md
+│   ├── iso-31000/
+│   │   ├── 0000_metadata_de_iso-31000.md
+│   │   ├── 0010_risk_management_overview.md
+│   │   ├── ...
+│   │   ├── diagrams/
+│   │   ├── FRAMEWORK_MAPPING.md
+│   │   └── README.md
+│   ├── csa-ccm/
+│   │   ├── 0000_metadata_de_csa-ccm.md
+│   │   ├── 0010_ccm_framework.md
+│   │   ├── ...
+│   │   ├── diagrams/
+│   │   ├── FRAMEWORK_MAPPING.md
+│   │   └── README.md
+│   ├── tisax/
+│   │   ├── 0000_metadata_de_tisax.md
+│   │   ├── 0010_tisax_framework.md
+│   │   ├── ...
+│   │   ├── diagrams/
+│   │   ├── FRAMEWORK_MAPPING.md
+│   │   └── README.md
+│   ├── soc1/
+│   │   ├── 0000_metadata_de_soc1.md
+│   │   ├── 0010_soc1_framework.md
+│   │   ├── ...
+│   │   ├── diagrams/
+│   │   ├── FRAMEWORK_MAPPING.md
+│   │   └── README.md
+│   ├── coso/
+│   │   ├── 0000_metadata_de_coso.md
+│   │   ├── 0010_coso_framework.md
+│   │   ├── ...
+│   │   ├── diagrams/
+│   │   ├── FRAMEWORK_MAPPING.md
+│   │   └── README.md
+│   └── dora/
+│       ├── 0000_metadata_de_dora.md
+│       ├── 0010_dora_framework.md
 │       ├── ...
 │       ├── diagrams/
 │       ├── FRAMEWORK_MAPPING.md
@@ -73,7 +136,14 @@ templates/
 └── en/
     ├── idw-ps-951/
     ├── nist-csf/
-    └── togaf/
+    ├── togaf/
+    ├── iso-38500/
+    ├── iso-31000/
+    ├── csa-ccm/
+    ├── tisax/
+    ├── soc1/
+    ├── coso/
+    └── dora/
 ```
 
 ## Components and Interfaces
@@ -305,6 +375,338 @@ Number ranges for TOGAF templates:
   - 0720: Requirements traceability
   - 0730: Requirements prioritization
 
+#### ISO/IEC 38500 Template Organization
+
+Number ranges for ISO/IEC 38500 templates:
+
+- **0010-0099**: Governance Framework and Principles
+  - 0010: IT governance framework overview
+  - 0020: Governance model
+  - 0030: Governance principles overview
+  - 0040: Responsibility principle
+  - 0050: Strategy principle
+  - 0060: Acquisition principle
+  - 0070: Performance principle
+  - 0080: Conformance principle
+  - 0090: Human behavior principle
+
+- **0100-0199**: Evaluate-Direct-Monitor Model
+  - 0100: EDM model overview
+  - 0110: Evaluation processes
+  - 0120: Direction processes
+  - 0130: Monitoring processes
+  - 0140: Performance measurement
+
+- **0200-0299**: Board and Management Responsibilities
+  - 0200: Governance roles and responsibilities
+  - 0210: Board responsibilities
+  - 0220: Executive management responsibilities
+  - 0230: IT management responsibilities
+  - 0240: Stakeholder engagement
+
+- **0300-0399**: Implementation and Improvement
+  - 0300: Governance implementation
+  - 0310: Policy framework
+  - 0320: Decision-making processes
+  - 0330: Communication mechanisms
+  - 0340: Continuous improvement
+
+#### ISO 31000 Template Organization
+
+Number ranges for ISO 31000 templates:
+
+- **0010-0099**: Risk Management Principles
+  - 0010: Risk management overview
+  - 0020: Integrated approach
+  - 0030: Structured and comprehensive
+  - 0040: Customized approach
+  - 0050: Inclusive and dynamic
+  - 0060: Best available information
+  - 0070: Human and cultural factors
+  - 0080: Continual improvement
+
+- **0100-0199**: Risk Management Framework
+  - 0100: Framework overview
+  - 0110: Leadership and commitment
+  - 0120: Integration into organization
+  - 0130: Framework design
+  - 0140: Framework implementation
+  - 0150: Framework evaluation
+  - 0160: Framework improvement
+
+- **0200-0299**: Risk Assessment Process
+  - 0200: Risk assessment overview
+  - 0210: Scope, context, and criteria
+  - 0220: Risk identification
+  - 0230: Risk analysis
+  - 0240: Risk evaluation
+
+- **0300-0399**: Risk Treatment and Communication
+  - 0300: Risk treatment overview
+  - 0310: Risk treatment options
+  - 0320: Risk treatment plans
+  - 0330: Risk treatment implementation
+  - 0340: Communication and consultation
+  - 0350: Recording and reporting
+
+- **0400-0499**: Monitoring and Review
+  - 0400: Monitoring and review overview
+  - 0410: Performance monitoring
+  - 0420: Risk register maintenance
+  - 0430: Review processes
+  - 0440: Lessons learned
+
+#### Cloud Security Alliance CCM Template Organization
+
+Number ranges for CSA CCM templates:
+
+- **0010-0099**: Governance and Risk Management
+  - 0010: CCM framework overview
+  - 0020: Governance and enterprise risk management
+  - 0030: Risk management program
+  - 0040: Policy and procedures
+  - 0050: Risk assessment methodology
+
+- **0100-0199**: Application and Interface Security
+  - 0100: Application security overview
+  - 0110: Secure software development
+  - 0120: Application security testing
+  - 0130: API security
+  - 0140: Web application security
+
+- **0200-0299**: Data Security and Privacy
+  - 0200: Data security overview
+  - 0210: Data classification
+  - 0220: Data encryption
+  - 0230: Data retention and disposal
+  - 0240: Privacy and data protection
+  - 0250: Data loss prevention
+
+- **0300-0399**: Identity and Access Management
+  - 0300: IAM overview
+  - 0310: User access provisioning
+  - 0320: Authentication and authorization
+  - 0330: Privileged access management
+  - 0340: Access reviews
+
+- **0400-0499**: Infrastructure and Virtualization Security
+  - 0400: Infrastructure security overview
+  - 0410: Network security
+  - 0420: Virtualization security
+  - 0430: Container security
+  - 0440: Datacenter security
+
+- **0500-0599**: Security Operations
+  - 0500: Security operations overview
+  - 0510: Security monitoring
+  - 0520: Vulnerability management
+  - 0530: Threat intelligence
+  - 0540: Security incident management
+  - 0550: Business continuity and disaster recovery
+
+- **0600-0699**: Compliance and Audit
+  - 0600: Compliance overview
+  - 0610: Audit assurance and compliance
+  - 0620: Regulatory compliance
+  - 0630: Third-party management
+  - 0640: Supply chain management
+
+- **0700-0799**: Human Resources and Change Management
+  - 0700: Human resources security
+  - 0710: Security awareness and training
+  - 0720: Change control and configuration management
+  - 0730: Mobile security
+  - 0740: Interoperability and portability
+
+#### TISAX Template Organization
+
+Number ranges for TISAX templates:
+
+- **0010-0099**: Information Security Management
+  - 0010: TISAX framework overview
+  - 0020: Information security policy
+  - 0030: Organization of information security
+  - 0040: Risk management
+  - 0050: Security objectives and planning
+
+- **0100-0199**: Asset Management and Access Control
+  - 0100: Asset management overview
+  - 0110: Asset inventory
+  - 0120: Information classification
+  - 0130: Media handling
+  - 0140: Access control policy
+  - 0150: User access management
+  - 0160: System and application access control
+
+- **0200-0299**: Cryptography and Physical Security
+  - 0200: Cryptographic controls
+  - 0210: Key management
+  - 0220: Physical security perimeter
+  - 0230: Physical entry controls
+  - 0240: Securing offices and facilities
+  - 0250: Equipment security
+
+- **0300-0399**: Operations and Communications Security
+  - 0300: Operations security overview
+  - 0310: Change management
+  - 0320: Capacity management
+  - 0330: Malware protection
+  - 0340: Backup and recovery
+  - 0350: Logging and monitoring
+  - 0360: Network security management
+  - 0370: Information transfer
+
+- **0400-0499**: Supplier Relationships and Incident Management
+  - 0400: Supplier security
+  - 0410: Supplier agreements
+  - 0420: Supplier monitoring
+  - 0430: Incident management procedures
+  - 0440: Incident response
+  - 0450: Evidence collection
+
+- **0500-0599**: Business Continuity and Compliance
+  - 0500: Business continuity planning
+  - 0510: ICT continuity
+  - 0520: Compliance with legal requirements
+  - 0530: Intellectual property rights
+  - 0540: Protection of records
+  - 0550: Privacy and personal data protection
+
+#### SOC 1 / SSAE 18 Template Organization
+
+Number ranges for SOC 1 templates:
+
+- **0010-0099**: Service Organization Overview
+  - 0010: SOC 1 framework overview
+  - 0020: Service organization description
+  - 0030: System description
+  - 0040: Control objectives
+  - 0050: Complementary user entity controls
+
+- **0100-0199**: Control Environment
+  - 0100: Control environment overview
+  - 0110: Integrity and ethical values
+  - 0120: Board oversight
+  - 0130: Organizational structure
+  - 0140: Competence and accountability
+  - 0150: Human resources policies
+
+- **0200-0299**: Risk Assessment
+  - 0200: Risk assessment overview
+  - 0210: Risk identification
+  - 0220: Risk analysis
+  - 0230: Fraud risk assessment
+  - 0240: Change management
+
+- **0300-0399**: Control Activities
+  - 0300: Control activities overview
+  - 0310: Transaction processing controls
+  - 0320: IT general controls
+  - 0330: Segregation of duties
+  - 0340: Authorization controls
+  - 0350: Reconciliation controls
+
+- **0400-0499**: Information, Communication, and Monitoring
+  - 0400: Information and communication overview
+  - 0410: Information quality
+  - 0420: Internal communication
+  - 0430: External communication
+  - 0440: Monitoring activities
+  - 0450: Control deficiencies and remediation
+
+#### COSO Internal Control Framework Template Organization
+
+Number ranges for COSO templates:
+
+- **0010-0099**: Framework Overview and Control Environment
+  - 0010: COSO framework overview
+  - 0020: Internal control objectives
+  - 0030: Control environment overview
+  - 0040: Integrity and ethical values
+  - 0050: Board independence and oversight
+  - 0060: Management philosophy and operating style
+  - 0070: Organizational structure
+  - 0080: Competence and accountability
+
+- **0100-0199**: Risk Assessment Component
+  - 0100: Risk assessment overview
+  - 0110: Objectives specification
+  - 0120: Risk identification
+  - 0130: Risk analysis
+  - 0140: Fraud risk assessment
+  - 0150: Change identification and assessment
+
+- **0200-0299**: Control Activities Component
+  - 0200: Control activities overview
+  - 0210: Control selection and development
+  - 0220: Technology controls
+  - 0230: Policies and procedures deployment
+  - 0240: Preventive and detective controls
+  - 0250: Segregation of duties
+
+- **0300-0399**: Information and Communication Component
+  - 0300: Information and communication overview
+  - 0310: Information quality
+  - 0320: Internal communication
+  - 0330: External communication
+  - 0340: Information systems and technology
+
+- **0400-0499**: Monitoring Activities Component
+  - 0400: Monitoring overview
+  - 0410: Ongoing evaluations
+  - 0420: Separate evaluations
+  - 0430: Deficiency evaluation and communication
+  - 0440: Continuous improvement
+
+- **0500-0599**: Integration and Implementation
+  - 0500: Integration across components
+  - 0510: Entity-level controls
+  - 0520: Process-level controls
+  - 0530: Documentation requirements
+  - 0540: Testing and validation
+
+#### DORA Metrics Template Organization
+
+Number ranges for DORA templates:
+
+- **0010-0099**: DORA Framework Overview
+  - 0010: DORA framework overview
+  - 0020: Software delivery performance
+  - 0030: Organizational performance
+  - 0040: Performance benchmarking
+  - 0050: Maturity assessment
+
+- **0100-0199**: Deployment Frequency
+  - 0100: Deployment frequency overview
+  - 0110: Deployment frequency measurement
+  - 0120: Deployment automation
+  - 0130: Deployment pipeline
+  - 0140: Deployment frequency improvement
+
+- **0200-0299**: Lead Time for Changes
+  - 0200: Lead time overview
+  - 0210: Lead time measurement
+  - 0220: Value stream mapping
+  - 0230: Bottleneck identification
+  - 0240: Lead time reduction strategies
+
+- **0300-0399**: Mean Time to Restore (MTTR)
+  - 0300: MTTR overview
+  - 0310: MTTR measurement
+  - 0320: Incident detection
+  - 0330: Incident response procedures
+  - 0340: Recovery automation
+  - 0350: MTTR improvement
+
+- **0400-0499**: Change Failure Rate and Technical Practices
+  - 0400: Change failure rate overview
+  - 0410: Failure rate measurement
+  - 0420: Quality assurance practices
+  - 0430: Testing strategies
+  - 0440: Continuous integration and delivery
+  - 0450: Monitoring and observability
+  - 0460: Technical debt management
+
 ## Data Models
 
 ### Template Metadata Model
@@ -376,8 +778,8 @@ class ValidationResult:
 **Validates: Requirements 4.2**
 
 ### Property 3: Template Numbering Range Coverage
-*For any* framework template set, the templates must span from 0010 to at least the minimum required number (IDW PS 951: 0500, NIST CSF 2.0: 0600, TOGAF: 0700).
-**Validates: Requirements 1.2, 2.2, 3.2**
+*For any* framework template set, the templates must span from 0010 to at least the minimum required number (IDW PS 951: 0500, NIST CSF 2.0: 0600, TOGAF: 0700, ISO/IEC 38500: 0400, ISO 31000: 0500, CSA CCM: 0800, TISAX: 0600, SOC 1: 0500, COSO: 0600, DORA: 0400).
+**Validates: Requirements 1.2, 2.2, 3.2, 15.2, 16.2, 17.2, 18.2, 19.2, 20.2, 21.2**
 
 ### Property 4: Template Header Structure
 *For any* template file, it must include a header section containing Document-ID, Owner, Version, Status, Classification, and Last Update fields.

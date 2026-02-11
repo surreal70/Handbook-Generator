@@ -10,11 +10,19 @@ This directory contains all version-related documentation for the Handbook Gener
 
 ## Current Version
 
-**Version 0.0.9** - Repository Cleanup & Validation Consolidation + New Frameworks
+**Version 0.0.10** - Phase 2 Completion - Seven New Frameworks + Quality Improvements
 
 See [VERSION.md](VERSION.md) for the complete version history.
 
 ## Release Notes
+
+### Version 0.0.10
+- Seven new compliance frameworks (ISO 38500, ISO 31000, CSA CCM, TISAX, SOC 1, COSO, DORA)
+- 280+ new templates (40 per framework, bilingual)
+- Quality improvements (1,751 files affected)
+- Template numbering fixes and duplicate removal
+- Document history standardization
+- 17 total compliance frameworks
 
 ### Version 0.0.9
 - Three new compliance frameworks (IDW PS 951, NIST CSF 2.0, TOGAF)

@@ -22,11 +22,15 @@ def new_framework_structure(draw):
     Generate a valid template directory structure for new frameworks.
     
     Returns a dictionary with:
-    - framework: framework identifier (idw-ps-951, nist-csf, togaf)
+    - framework: framework identifier (Phase 1 + Phase 2)
     - languages: list of language codes
     - templates: dict mapping language to list of template filenames
     """
-    framework = draw(st.sampled_from(['idw-ps-951', 'nist-csf', 'togaf']))
+    # Include both Phase 1 and Phase 2 frameworks
+    framework = draw(st.sampled_from([
+        'idw-ps-951', 'nist-csf', 'togaf',  # Phase 1
+        'iso-38500', 'iso-31000', 'csa-ccm', 'tisax', 'soc1', 'coso', 'dora'  # Phase 2
+    ]))
     
     languages = draw(st.lists(
         st.sampled_from(['de', 'en']),
@@ -39,7 +43,14 @@ def new_framework_structure(draw):
     min_counts = {
         'idw-ps-951': 50,  # 0010-0500
         'nist-csf': 60,    # 0010-0600
-        'togaf': 70        # 0010-0700
+        'togaf': 70,       # 0010-0700
+        'iso-38500': 40,   # 0010-0400
+        'iso-31000': 50,   # 0010-0500
+        'csa-ccm': 80,     # 0010-0800
+        'tisax': 60,       # 0010-0600
+        'soc1': 50,        # 0010-0500
+        'coso': 60,        # 0010-0600
+        'dora': 40         # 0010-0400
     }
     min_count = min_counts[framework]
     
@@ -191,7 +202,10 @@ class TestProperty9TemplateSortingByNumericPrefix:
     
     @settings(max_examples=100)
     @given(
-        framework=st.sampled_from(['idw-ps-951', 'nist-csf', 'togaf']),
+        framework=st.sampled_from([
+            'idw-ps-951', 'nist-csf', 'togaf',  # Phase 1
+            'iso-38500', 'iso-31000', 'csa-ccm', 'tisax', 'soc1', 'coso', 'dora'  # Phase 2
+        ]),
         language=st.sampled_from(['de', 'en']),
         num_templates=st.integers(min_value=3, max_value=15)
     )
@@ -250,7 +264,10 @@ class TestProperty9TemplateSortingByNumericPrefix:
     
     @settings(max_examples=100)
     @given(
-        framework=st.sampled_from(['idw-ps-951', 'nist-csf', 'togaf']),
+        framework=st.sampled_from([
+            'idw-ps-951', 'nist-csf', 'togaf',  # Phase 1
+            'iso-38500', 'iso-31000', 'csa-ccm', 'tisax', 'soc1', 'coso', 'dora'  # Phase 2
+        ]),
         language=st.sampled_from(['de', 'en']),
         num_duplicates=st.integers(min_value=1, max_value=3)
     )
@@ -304,7 +321,10 @@ class TestProperty10MetadataExtraction:
     
     @settings(max_examples=100)
     @given(
-        framework=st.sampled_from(['idw-ps-951', 'nist-csf', 'togaf']),
+        framework=st.sampled_from([
+            'idw-ps-951', 'nist-csf', 'togaf',  # Phase 1
+            'iso-38500', 'iso-31000', 'csa-ccm', 'tisax', 'soc1', 'coso', 'dora'  # Phase 2
+        ]),
         language=st.sampled_from(['de', 'en']),
         title=st.text(
             alphabet=st.characters(blacklist_characters='\r\n"\'\\'),
@@ -380,7 +400,10 @@ This file contains metadata for the {framework} handbook.
     
     @settings(max_examples=100)
     @given(
-        framework=st.sampled_from(['idw-ps-951', 'nist-csf', 'togaf']),
+        framework=st.sampled_from([
+            'idw-ps-951', 'nist-csf', 'togaf',  # Phase 1
+            'iso-38500', 'iso-31000', 'csa-ccm', 'tisax', 'soc1', 'coso', 'dora'  # Phase 2
+        ]),
         language=st.sampled_from(['de', 'en'])
     )
     def test_property_10_metadata_extraction_missing_template(self, framework, language):
@@ -408,7 +431,10 @@ This file contains metadata for the {framework} handbook.
     
     @settings(max_examples=100)
     @given(
-        framework=st.sampled_from(['idw-ps-951', 'nist-csf', 'togaf']),
+        framework=st.sampled_from([
+            'idw-ps-951', 'nist-csf', 'togaf',  # Phase 1
+            'iso-38500', 'iso-31000', 'csa-ccm', 'tisax', 'soc1', 'coso', 'dora'  # Phase 2
+        ]),
         language=st.sampled_from(['de', 'en'])
     )
     def test_property_10_metadata_extraction_empty_frontmatter(self, framework, language):
@@ -480,6 +506,90 @@ class TestFrameworkConfiguration:
         assert 'de' in config['languages']
         assert 'en' in config['languages']
         assert config['min_template_count'] == 70
+        assert config['has_diagrams'] is True
+    
+    def test_get_framework_config_iso_38500(self):
+        """Test getting configuration for ISO/IEC 38500 framework."""
+        manager = TemplateManager(Path('templates'))
+        config = manager.get_framework_config('iso-38500')
+        
+        assert config is not None
+        assert config['display_name'] == 'ISO/IEC 38500'
+        assert 'de' in config['languages']
+        assert 'en' in config['languages']
+        assert config['min_template_count'] == 40
+        assert config['has_diagrams'] is True
+    
+    def test_get_framework_config_iso_31000(self):
+        """Test getting configuration for ISO 31000 framework."""
+        manager = TemplateManager(Path('templates'))
+        config = manager.get_framework_config('iso-31000')
+        
+        assert config is not None
+        assert config['display_name'] == 'ISO 31000'
+        assert 'de' in config['languages']
+        assert 'en' in config['languages']
+        assert config['min_template_count'] == 50
+        assert config['has_diagrams'] is True
+    
+    def test_get_framework_config_csa_ccm(self):
+        """Test getting configuration for CSA CCM framework."""
+        manager = TemplateManager(Path('templates'))
+        config = manager.get_framework_config('csa-ccm')
+        
+        assert config is not None
+        assert config['display_name'] == 'CSA CCM'
+        assert 'de' in config['languages']
+        assert 'en' in config['languages']
+        assert config['min_template_count'] == 80
+        assert config['has_diagrams'] is True
+    
+    def test_get_framework_config_tisax(self):
+        """Test getting configuration for TISAX framework."""
+        manager = TemplateManager(Path('templates'))
+        config = manager.get_framework_config('tisax')
+        
+        assert config is not None
+        assert config['display_name'] == 'TISAX'
+        assert 'de' in config['languages']
+        assert 'en' in config['languages']
+        assert config['min_template_count'] == 60
+        assert config['has_diagrams'] is True
+    
+    def test_get_framework_config_soc1(self):
+        """Test getting configuration for SOC 1 framework."""
+        manager = TemplateManager(Path('templates'))
+        config = manager.get_framework_config('soc1')
+        
+        assert config is not None
+        assert config['display_name'] == 'SOC 1 / SSAE 18'
+        assert 'de' in config['languages']
+        assert 'en' in config['languages']
+        assert config['min_template_count'] == 50
+        assert config['has_diagrams'] is True
+    
+    def test_get_framework_config_coso(self):
+        """Test getting configuration for COSO framework."""
+        manager = TemplateManager(Path('templates'))
+        config = manager.get_framework_config('coso')
+        
+        assert config is not None
+        assert config['display_name'] == 'COSO'
+        assert 'de' in config['languages']
+        assert 'en' in config['languages']
+        assert config['min_template_count'] == 60
+        assert config['has_diagrams'] is True
+    
+    def test_get_framework_config_dora(self):
+        """Test getting configuration for DORA framework."""
+        manager = TemplateManager(Path('templates'))
+        config = manager.get_framework_config('dora')
+        
+        assert config is not None
+        assert config['display_name'] == 'DORA'
+        assert 'de' in config['languages']
+        assert 'en' in config['languages']
+        assert config['min_template_count'] == 40
         assert config['has_diagrams'] is True
     
     def test_get_framework_config_unknown(self):
