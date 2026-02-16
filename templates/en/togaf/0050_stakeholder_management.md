@@ -176,6 +176,6 @@ Stakeholder management is improved through:
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
+| 0.1 | {{meta.document.last_updated}} | {{ meta.defaults.author }} | Initial creation |
 
 <-  ( marked all subtasks complete End of template -->

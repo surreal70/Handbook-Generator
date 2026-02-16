@@ -218,8 +218,8 @@ class TestCOSOBilingualTemplateConsistency:
         """
         de_readme = template_base_path / "de" / "coso" / "README.md"
         en_readme = template_base_path / "en" / "coso" / "README.md"
-        de_mapping = template_base_path / "de" / "coso" / "FRAMEWORK_MAPPING.md"
-        en_mapping = template_base_path / "en" / "coso" / "FRAMEWORK_MAPPING.md"
+        de_mapping = template_base_path / "de" / "coso" / "9999_Framework_Mapping.md"
+        en_mapping = template_base_path / "en" / "coso" / "9999_Framework_Mapping.md"
         
         assert de_readme.exists(), "German README should exist"
         assert en_readme.exists(), "English README should exist"

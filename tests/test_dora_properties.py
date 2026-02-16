@@ -210,8 +210,8 @@ class TestDORABilingualTemplateConsistency:
         """
         de_readme = template_base_path / "de" / "dora" / "README.md"
         en_readme = template_base_path / "en" / "dora" / "README.md"
-        de_mapping = template_base_path / "de" / "dora" / "FRAMEWORK_MAPPING.md"
-        en_mapping = template_base_path / "en" / "dora" / "FRAMEWORK_MAPPING.md"
+        de_mapping = template_base_path / "de" / "dora" / "9999_Framework_Mapping.md"
+        en_mapping = template_base_path / "en" / "dora" / "9999_Framework_Mapping.md"
         
         assert de_readme.exists(), "German README should exist"
         assert en_readme.exists(), "English README should exist"

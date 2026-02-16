@@ -760,10 +760,10 @@ class TestTemplateDocumentation:
     
     def test_framework_mapping_document_exists(self):
         """Test that framework mapping documentation exists."""
-        framework_doc = Path('docs/FRAMEWORK_MAPPING.md')
+        framework_doc = Path('docs/9999_Framework_Mapping.md')
         
         assert framework_doc.exists(), \
-            "Framework mapping documentation should exist at docs/FRAMEWORK_MAPPING.md"
+            "Framework mapping documentation should exist at docs/9999_Framework_Mapping.md"
         
         # Should have substantial content
         content = framework_doc.read_text()
@@ -772,7 +772,7 @@ class TestTemplateDocumentation:
     
     def test_framework_mapping_documents_itil(self):
         """Test that framework mapping documents ITIL v4 alignment."""
-        framework_doc = Path('docs/FRAMEWORK_MAPPING.md')
+        framework_doc = Path('docs/9999_Framework_Mapping.md')
         content = framework_doc.read_text()
         
         # Should document ITIL
@@ -787,7 +787,7 @@ class TestTemplateDocumentation:
     
     def test_framework_mapping_documents_iso20000(self):
         """Test that framework mapping documents ISO 20000 compliance."""
-        framework_doc = Path('docs/FRAMEWORK_MAPPING.md')
+        framework_doc = Path('docs/9999_Framework_Mapping.md')
         content = framework_doc.read_text()
         
         # Should document ISO 20000
@@ -800,7 +800,7 @@ class TestTemplateDocumentation:
     
     def test_framework_mapping_documents_cobit(self):
         """Test that framework mapping documents COBIT 2019 alignment."""
-        framework_doc = Path('docs/FRAMEWORK_MAPPING.md')
+        framework_doc = Path('docs/9999_Framework_Mapping.md')
         content = framework_doc.read_text()
         
         # Should document COBIT

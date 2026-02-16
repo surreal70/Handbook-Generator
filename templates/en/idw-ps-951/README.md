@@ -220,3 +220,9 @@ These templates serve as guidance and must be adapted to the specific requiremen
 **Template Version:** 1.0  
 **Last Update:** 2026-02-10  
 **Language:** English
+
+## Version History
+
+| Version | Date | Changes |
+|---------|------|---------|
+| 0.1 | {{meta.document.last_updated}} | Initial creation |

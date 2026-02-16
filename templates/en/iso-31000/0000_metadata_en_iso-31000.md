@@ -1,7 +1,12 @@
+---
+date: "{{ metadata.date }}"
+---
+
 # ISO 31000 Risk Management Handbook
 
 **Document Metadata**
 
+- **Last Updated:** {{ metadata.date }}
 - **Created on:** {{ metadata.date }}
 - **Author:** {{ metadata.author }}
 - **Version:** {{ metadata.version }}

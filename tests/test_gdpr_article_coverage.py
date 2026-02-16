@@ -25,12 +25,12 @@ class TestGDPRArticleCoverage:
         assert en_dir.exists(), "English GDPR template directory should exist"
     
     def test_gdpr_framework_mapping_exists(self):
-        """Test that FRAMEWORK_MAPPING.md exists for GDPR."""
-        de_mapping = Path('templates/de/gdpr/FRAMEWORK_MAPPING.md')
-        en_mapping = Path('templates/en/gdpr/FRAMEWORK_MAPPING.md')
+        """Test that 9999_Framework_Mapping.md exists for GDPR."""
+        de_mapping = Path('templates/de/gdpr/9999_Framework_Mapping.md')
+        en_mapping = Path('templates/en/gdpr/9999_Framework_Mapping.md')
         
-        assert de_mapping.exists(), "German GDPR FRAMEWORK_MAPPING.md should exist"
-        assert en_mapping.exists(), "English GDPR FRAMEWORK_MAPPING.md should exist"
+        assert de_mapping.exists(), "German GDPR 9999_Framework_Mapping.md should exist"
+        assert en_mapping.exists(), "English GDPR 9999_Framework_Mapping.md should exist"
     
     def test_gdpr_all_chapters_covered(self):
         """
@@ -49,8 +49,8 @@ class TestGDPRArticleCoverage:
         - Chapter X: Delegated Acts and Implementing Acts (Art. 92-93)
         - Chapter XI: Final Provisions (Art. 94-99)
         """
-        # Read FRAMEWORK_MAPPING.md to check coverage
-        mapping_file = Path('templates/en/gdpr/FRAMEWORK_MAPPING.md')
+        # Read 9999_Framework_Mapping.md to check coverage
+        mapping_file = Path('templates/en/gdpr/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         # Define main GDPR chapters that should be covered
@@ -66,7 +66,7 @@ class TestGDPRArticleCoverage:
         for chapter_num, chapter_name in chapters.items():
             pattern = rf'###\s+Chapter\s+{chapter_num}[:\s]'
             assert re.search(pattern, mapping_content), \
-                f"Chapter {chapter_num} ({chapter_name}) should be documented in FRAMEWORK_MAPPING.md"
+                f"Chapter {chapter_num} ({chapter_name}) should be documented in 9999_Framework_Mapping.md"
     
     def test_gdpr_chapter_i_articles(self):
         """
@@ -78,14 +78,14 @@ class TestGDPRArticleCoverage:
         - Art. 3: Territorial scope
         - Art. 4: Definitions
         """
-        mapping_file = Path('templates/en/gdpr/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/gdpr/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         chapter_i_articles = ['Art. 1', 'Art. 2', 'Art. 3', 'Art. 4']
         
         for article in chapter_i_articles:
             assert article in mapping_content, \
-                f"{article} should be documented in FRAMEWORK_MAPPING.md"
+                f"{article} should be documented in 9999_Framework_Mapping.md"
     
     def test_gdpr_chapter_ii_articles(self):
         """
@@ -100,7 +100,7 @@ class TestGDPRArticleCoverage:
         - Art. 10: Processing of personal data relating to criminal convictions
         - Art. 11: Processing which does not require identification
         """
-        mapping_file = Path('templates/en/gdpr/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/gdpr/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         chapter_ii_articles = [
@@ -110,7 +110,7 @@ class TestGDPRArticleCoverage:
         
         for article in chapter_ii_articles:
             assert article in mapping_content, \
-                f"{article} should be documented in FRAMEWORK_MAPPING.md"
+                f"{article} should be documented in 9999_Framework_Mapping.md"
     
     def test_gdpr_chapter_iii_articles(self):
         """
@@ -130,7 +130,7 @@ class TestGDPRArticleCoverage:
         - Art. 22: Automated individual decision-making, including profiling
         - Art. 23: Restrictions
         """
-        mapping_file = Path('templates/en/gdpr/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/gdpr/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         chapter_iii_articles = [
@@ -141,7 +141,7 @@ class TestGDPRArticleCoverage:
         
         for article in chapter_iii_articles:
             assert article in mapping_content, \
-                f"{article} should be documented in FRAMEWORK_MAPPING.md"
+                f"{article} should be documented in 9999_Framework_Mapping.md"
     
     def test_gdpr_chapter_iv_articles(self):
         """
@@ -160,7 +160,7 @@ class TestGDPRArticleCoverage:
         - Art. 40: Codes of conduct
         - Art. 42: Certification
         """
-        mapping_file = Path('templates/en/gdpr/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/gdpr/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         chapter_iv_articles = [
@@ -171,7 +171,7 @@ class TestGDPRArticleCoverage:
         
         for article in chapter_iv_articles:
             assert article in mapping_content, \
-                f"{article} should be documented in FRAMEWORK_MAPPING.md"
+                f"{article} should be documented in 9999_Framework_Mapping.md"
     
     def test_gdpr_chapter_v_articles(self):
         """
@@ -184,7 +184,7 @@ class TestGDPRArticleCoverage:
         - Art. 47: Binding corporate rules
         - Art. 49: Derogations for specific situations
         """
-        mapping_file = Path('templates/en/gdpr/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/gdpr/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         chapter_v_articles = [
@@ -193,7 +193,7 @@ class TestGDPRArticleCoverage:
         
         for article in chapter_v_articles:
             assert article in mapping_content, \
-                f"{article} should be documented in FRAMEWORK_MAPPING.md"
+                f"{article} should be documented in 9999_Framework_Mapping.md"
     
     @settings(max_examples=100)
     @given(
@@ -208,7 +208,7 @@ class TestGDPRArticleCoverage:
         (I-V) which contain the core compliance requirements.
         
         This property verifies that:
-        1. The FRAMEWORK_MAPPING.md file exists
+        1. The 9999_Framework_Mapping.md file exists
         2. Each of the main chapters (I-V) is documented in the mapping
         3. The mapping indicates which templates cover each chapter's articles
         
@@ -219,10 +219,10 @@ class TestGDPRArticleCoverage:
         assert template_dir.exists(), \
             f"GDPR template directory should exist for language '{language}'"
         
-        # Check that FRAMEWORK_MAPPING.md exists
-        mapping_file = template_dir / 'FRAMEWORK_MAPPING.md'
+        # Check that 9999_Framework_Mapping.md exists
+        mapping_file = template_dir / '9999_Framework_Mapping.md'
         assert mapping_file.exists(), \
-            f"FRAMEWORK_MAPPING.md should exist in {template_dir}"
+            f"9999_Framework_Mapping.md should exist in {template_dir}"
         
         # Read mapping content
         mapping_content = mapping_file.read_text(encoding='utf-8')
@@ -234,7 +234,7 @@ class TestGDPRArticleCoverage:
         else:
             pattern = rf'###\s+Chapter\s+{chapter}[:\s]'
         assert re.search(pattern, mapping_content), \
-            f"Chapter {chapter} should be documented in FRAMEWORK_MAPPING.md for language '{language}'"
+            f"Chapter {chapter} should be documented in 9999_Framework_Mapping.md for language '{language}'"
         
         # Additionally verify that the chapter section has some content
         # Look for the chapter section and check it has at least some text after it
@@ -255,10 +255,10 @@ class TestGDPRArticleCoverage:
         """
         Test that key GDPR articles are mapped to specific templates.
         
-        This test verifies that the FRAMEWORK_MAPPING.md not only lists articles
+        This test verifies that the 9999_Framework_Mapping.md not only lists articles
         but also maps them to specific template files.
         """
-        mapping_file = Path('templates/en/gdpr/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/gdpr/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         # Define expected mappings based on current implementation
@@ -286,17 +286,17 @@ class TestGDPRArticleCoverage:
     
     def test_gdpr_coverage_analysis_documented(self):
         """
-        Test that coverage analysis is documented in FRAMEWORK_MAPPING.md.
+        Test that coverage analysis is documented in 9999_Framework_Mapping.md.
         
         The mapping should include a coverage analysis section showing coverage
         for all chapters.
         """
-        mapping_file = Path('templates/en/gdpr/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/gdpr/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         # Check for coverage analysis section
         assert '## Coverage Analysis' in mapping_content, \
-            "FRAMEWORK_MAPPING.md should include a coverage analysis section"
+            "9999_Framework_Mapping.md should include a coverage analysis section"
         
         # Check that complete coverage is documented for main chapters
         assert 'Complete Coverage' in mapping_content or 'comprehensively covered' in mapping_content, \
@@ -306,7 +306,7 @@ class TestGDPRArticleCoverage:
         """
         Test that template files actually exist for articles marked as covered.
         
-        This verifies that the FRAMEWORK_MAPPING.md accurately reflects the actual
+        This verifies that the 9999_Framework_Mapping.md accurately reflects the actual
         template files present in the directory.
         """
         template_dir = Path('templates/en/gdpr')
@@ -356,10 +356,10 @@ class TestGDPRArticleCoverage:
         
         Validates: Requirements 7.1, 9.1, 9.2
         """
-        mapping_file = Path(f'templates/{language}/gdpr/FRAMEWORK_MAPPING.md')
+        mapping_file = Path(f'templates/{language}/gdpr/9999_Framework_Mapping.md')
         
         assert mapping_file.exists(), \
-            f"FRAMEWORK_MAPPING.md should exist for language '{language}'"
+            f"9999_Framework_Mapping.md should exist for language '{language}'"
         
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
@@ -373,7 +373,7 @@ class TestGDPRArticleCoverage:
             else:
                 pattern = rf'###\s+Chapter\s+{chapter}[:\s]'
             assert re.search(pattern, mapping_content), \
-                f"Chapter {chapter} should be documented in {language} FRAMEWORK_MAPPING.md"
+                f"Chapter {chapter} should be documented in {language} 9999_Framework_Mapping.md"
     
     def test_gdpr_data_subject_rights_comprehensive(self):
         """
@@ -382,7 +382,7 @@ class TestGDPRArticleCoverage:
         GDPR provides extensive rights to data subjects (Chapter III).
         All rights should be mapped to templates.
         """
-        mapping_file = Path('templates/en/gdpr/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/gdpr/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         # Key data subject rights
@@ -397,7 +397,7 @@ class TestGDPRArticleCoverage:
         
         for right in rights:
             assert right.lower() in mapping_content.lower(), \
-                f"{right} should be documented in FRAMEWORK_MAPPING.md"
+                f"{right} should be documented in 9999_Framework_Mapping.md"
     
     def test_gdpr_accountability_principle_covered(self):
         """
@@ -406,7 +406,7 @@ class TestGDPRArticleCoverage:
         Art. 5(2) and Art. 24 establish the accountability principle,
         which is fundamental to GDPR compliance.
         """
-        mapping_file = Path('templates/en/gdpr/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/gdpr/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         # Check for accountability references
@@ -421,7 +421,7 @@ class TestGDPRArticleCoverage:
         
         Art. 32 requires appropriate technical and organizational measures.
         """
-        mapping_file = Path('templates/en/gdpr/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/gdpr/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         assert 'Art. 32' in mapping_content, \
@@ -435,7 +435,7 @@ class TestGDPRArticleCoverage:
         
         Art. 33 and 34 establish breach notification obligations.
         """
-        mapping_file = Path('templates/en/gdpr/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/gdpr/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         assert 'Art. 33' in mapping_content, \
@@ -449,7 +449,7 @@ class TestGDPRArticleCoverage:
         
         Art. 35 requires data protection impact assessments for high-risk processing.
         """
-        mapping_file = Path('templates/en/gdpr/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/gdpr/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         assert 'Art. 35' in mapping_content, \
@@ -463,7 +463,7 @@ class TestGDPRArticleCoverage:
         
         Art. 37-39 establish requirements for data protection officers.
         """
-        mapping_file = Path('templates/en/gdpr/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/gdpr/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         dpo_articles = ['Art. 37', 'Art. 38', 'Art. 39']
@@ -478,7 +478,7 @@ class TestGDPRArticleCoverage:
         
         Art. 28 establishes requirements for processor contracts and obligations.
         """
-        mapping_file = Path('templates/en/gdpr/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/gdpr/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         assert 'Art. 28' in mapping_content, \
@@ -492,7 +492,7 @@ class TestGDPRArticleCoverage:
         
         Art. 30 requires maintaining records of processing activities.
         """
-        mapping_file = Path('templates/en/gdpr/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/gdpr/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         assert 'Art. 30' in mapping_content, \
@@ -504,7 +504,7 @@ class TestGDPRArticleCoverage:
         
         Chapter V (Art. 44-50) establishes requirements for data transfers to third countries.
         """
-        mapping_file = Path('templates/en/gdpr/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/gdpr/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         transfer_articles = ['Art. 44', 'Art. 45', 'Art. 46']
@@ -580,11 +580,11 @@ class TestGDPRArticleCoverage:
     
     def test_gdpr_key_article_groups_documented(self):
         """
-        Test that key article groups are documented in FRAMEWORK_MAPPING.md.
+        Test that key article groups are documented in 9999_Framework_Mapping.md.
         
         The mapping should organize articles into logical groups for easier reference.
         """
-        mapping_file = Path('templates/en/gdpr/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/gdpr/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         # Check for key article group sections
@@ -599,17 +599,17 @@ class TestGDPRArticleCoverage:
         found_groups = sum(1 for group in key_groups if group in mapping_content)
         
         assert found_groups >= 3, \
-            "FRAMEWORK_MAPPING.md should document key article groups"
+            "9999_Framework_Mapping.md should document key article groups"
     
     def test_gdpr_usage_recommendations_documented(self):
         """
-        Test that usage recommendations are documented in FRAMEWORK_MAPPING.md.
+        Test that usage recommendations are documented in 9999_Framework_Mapping.md.
         
         The mapping should provide guidance on how to use the templates effectively.
         """
-        mapping_file = Path('templates/en/gdpr/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/gdpr/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         # Check for usage recommendations section
         assert '## Usage Recommendations' in mapping_content or 'How to Use' in mapping_content, \
-            "FRAMEWORK_MAPPING.md should include usage recommendations"
+            "9999_Framework_Mapping.md should include usage recommendations"

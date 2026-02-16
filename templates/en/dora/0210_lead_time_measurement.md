@@ -1,0 +1,107 @@
+---
+Document-ID: dora-0210
+Owner: {{ meta.author }}
+Version: {{ meta.version }}
+Status: Draft
+Classification: Internal
+Last Update: {{ meta.date }}
+---
+
+# Lead Time Measurement
+
+## Purpose
+
+This document describes the practical implementation of Lead Time measurement, including data collection, calculation, and reporting.
+
+## Scope
+
+- Measurement methodology and data sources
+- Automated collection
+- Calculation logic
+- Reporting and visualization
+
+## Organization Information
+
+- **Organization**: {{ source.organization_name }}
+- **Measurement Owner**: {{ source.lead_time_measurement_owner }}
+- **Measurement System**: {{ source.lead_time_measurement_system }}
+
+## Data Collection
+
+### Start Time: Code Commit
+
+**Git Integration**:
+```bash
+# Capture commit timestamp
+git log --format="%H|%at|%an|%s" -1
+```
+
+**Metadata**:
+- Commit SHA
+- Commit timestamp
+- Author
+- Branch
+- Commit message
+
+### End Time: Production Deployment
+
+**Deployment Event**:
+```json
+{
+  "deployment_id": "12345",
+  "timestamp": "2024-02-13T14:30:00Z",
+  "commit_sha": "abc123",
+  "environment": "production",
+  "status": "success"
+}
+```
+
+## Calculation Logic
+
+### Basic Calculation
+
+```
+Lead Time = Deployment Timestamp - Commit Timestamp
+```
+
+### Advanced Metrics
+
+**Average Lead Time**:
+```
+Avg Lead Time = Σ(Lead Times) / Number of Deployments
+```
+
+**Median Lead Time**:
+- Sort all lead times
+- Select middle value
+
+**Percentiles**:
+- P50: Median
+- P90: 90% of deployments are faster
+- P95: 95% of deployments are faster
+
+## Reporting
+
+### Dashboard Components
+
+- Current lead time
+- 30-day trend
+- Performance level tracking
+- Bottleneck analysis
+
+### Visualizations
+
+- Time series charts
+- Histograms
+- Heatmaps
+- Trend lines
+
+<!-- Note: Accurate measurement enables targeted optimization -->
+
+---
+
+**Document History:**
+
+| Version | Date | Author | Changes |
+|---------|------|--------|---------|
+| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |

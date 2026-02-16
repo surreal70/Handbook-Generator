@@ -64,9 +64,27 @@ IT acquisitions are made for valid reasons, based on appropriate analysis, with 
 | {{ meta.threshold_2 }} - {{ meta.threshold_3 }} EUR | Executive Management |
 | > {{ meta.threshold_3 }} EUR | Board |
 
+### Acquisition Criteria
+
+- **Functionality**: Meets requirements
+- **Cost**: Total Cost of Ownership
+- **Quality**: Reliability and performance
+- **Risk**: Technical and business risks
+- **Compliance**: Regulatory requirements
+- **Sustainability**: Long-term viability
+
 ## Monitor
 
-### Monitoring Measures
+#### Acquisition Criteria
+
+- **Functionality**: Meets requirements
+- **Cost**: Total Cost of Ownership
+- **Quality**: Reliability and performance
+- **Risk**: Technical and business risks
+- **Compliance**: Regulatory requirements
+- **Sustainability**: Long-term viability
+
+## Monitoring Measures
 
 1. **Acquisition Reviews**: Quarterly
 2. **Benefit Realization**: Post-implementation

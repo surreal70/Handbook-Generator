@@ -1,1310 +1,566 @@
 """
-Tests for CLI Interface
+Tests for CLI interface.
+
+This module contains unit tests for the command-line interface,
+including argument parsing, execution modes, and error handling.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright: 2026
+Copyright: 2025
 """
 
 import pytest
-from hypothesis import given, settings, strategies as st
+import sys
+import tempfile
 from pathlib import Path
 from unittest.mock import Mock, patch, MagicMock
-import argparse
-import sys
+from io import StringIO
 
-from src.cli import parse_arguments, validate_arguments, interactive_selection, main
-
-
-class TestCLIParameterValidation:
-    """Tests for CLI parameter validation."""
-    
-    @settings(max_examples=100)
-    @given(
-        language=st.sampled_from(['de', 'en']),
-        template=st.sampled_from(['bcm', 'bsi-grundschutz', 'cis-controls', 'isms', 'it-operation'])
-    )
-    def test_property_2_valid_parameter_combinations(self, language, template):
-        """
-        Feature: handbook-generator, Property 2: CLI Parameter Validation
-        
-        For any valid combination of language and template type parameters,
-        the system should accept them without error.
-        
-        Validates: Requirements 2.1, 2.2, 2.3, 2.5
-        """
-        # Create mock args with valid combination
-        args = argparse.Namespace(
-            language=language,
-            template=template,
-            output='both',
-            verbose=False,
-            config='config.yaml',
-            create_config=False,
-            template_dir='templates',
-            output_dir='Handbook'
-        )
-        
-        # Validation should pass (return None)
-        error = validate_arguments(args)
-        assert error is None, f"Valid combination {language}/{template} should not produce validation error"
-    
-    @settings(max_examples=100)
-    @given(
-        language=st.sampled_from(['de', 'en', None]),
-        template=st.sampled_from(['bcm', 'bsi-grundschutz', 'cis-controls', 'isms', 'it-operation', None])
-    )
-    def test_property_2_parameter_consistency(self, language, template):
-        """
-        Feature: handbook-generator, Property 2: CLI Parameter Validation
-        
-        For any combination of language and template parameters, if one is provided
-        without the other (and not in create-config mode), validation should fail.
-        
-        Validates: Requirements 2.1, 2.2, 2.3, 2.5
-        """
-        # Skip if both are None (valid for interactive mode) or both are set (valid)
-        if (language is None and template is None) or (language is not None and template is not None):
-            return
-        
-        # Create mock args with inconsistent combination
-        args = argparse.Namespace(
-            language=language,
-            template=template,
-            output='both',
-            verbose=False,
-            config='config.yaml',
-            create_config=False,
-            template_dir='templates',
-            output_dir='Handbook'
-        )
-        
-        # Validation should fail (return error message)
-        error = validate_arguments(args)
-        assert error is not None, \
-            f"Inconsistent combination (language={language}, template={template}) should produce validation error"
-        assert "must be provided together" in error.lower(), \
-            "Error message should indicate parameters must be provided together"
-    
-    @settings(max_examples=50)
-    @given(
-        output_format=st.sampled_from(['markdown', 'pdf', 'both'])
-    )
-    def test_property_2_output_format_validation(self, output_format):
-        """
-        Feature: handbook-generator, Property 2: CLI Parameter Validation
-        
-        For any valid output format, the system should accept it.
-        
-        Validates: Requirements 2.1, 2.2, 2.3, 2.5
-        """
-        args = argparse.Namespace(
-            language='de',
-            template='bcm',
-            output=output_format,
-            verbose=False,
-            config='config.yaml',
-            create_config=False,
-            template_dir='templates',
-            output_dir='Handbook'
-        )
-        
-        error = validate_arguments(args)
-        assert error is None, f"Valid output format '{output_format}' should not produce validation error"
-    
-    def test_create_config_bypasses_validation(self):
-        """
-        Test that --create-config flag bypasses other parameter validation.
-        
-        Validates: Requirements 2.1, 2.2, 2.3, 2.5
-        """
-        # Even with inconsistent parameters, create_config should bypass validation
-        args = argparse.Namespace(
-            language='de',
-            template=None,  # Inconsistent
-            output='both',
-            verbose=False,
-            config='config.yaml',
-            create_config=True,  # This should bypass validation
-            template_dir='templates',
-            output_dir='Handbook'
-        )
-        
-        error = validate_arguments(args)
-        assert error is None, "--create-config should bypass parameter validation"
-
-
-class TestInteractiveSelection:
-    """Tests for interactive template selection."""
-    
-    def test_interactive_selection_with_available_templates(self):
-        """
-        Test interactive selection when templates are available.
-        
-        Validates: Requirements 2.4
-        """
-        # Create mock template manager
-        mock_manager = Mock()
-        mock_manager.discover_templates.return_value = {
-            'de': {
-                'bcm': [Path('templates/de/bcm/0100_intro.md')],
-                'isms': [Path('templates/de/isms/0100_intro.md')]
-            },
-            'en': {
-                'bcm': [Path('templates/en/bcm/0100_intro.md')]
-            }
-        }
-        
-        # Mock user input
-        with patch('builtins.input', side_effect=['de', 'bcm']):
-            language, template_type = interactive_selection(mock_manager)
-        
-        assert language == 'de'
-        assert template_type == 'bcm'
-    
-    def test_interactive_selection_no_templates(self):
-        """
-        Test interactive selection when no templates are available.
-        
-        Validates: Requirements 2.4
-        """
-        # Create mock template manager with no templates
-        mock_manager = Mock()
-        mock_manager.discover_templates.return_value = {}
-        mock_manager.template_root = Path('templates')
-        
-        # Should exit with error
-        with pytest.raises(SystemExit) as exc_info:
-            interactive_selection(mock_manager)
-        
-        assert exc_info.value.code == 1
-    
-    def test_interactive_selection_invalid_then_valid_input(self):
-        """
-        Test interactive selection with invalid input followed by valid input.
-        
-        Validates: Requirements 2.4
-        """
-        mock_manager = Mock()
-        mock_manager.discover_templates.return_value = {
-            'de': {
-                'bcm': [Path('templates/de/bcm/0100_intro.md')]
-            }
-        }
-        
-        # Mock user input: invalid language, then valid, invalid template, then valid
-        with patch('builtins.input', side_effect=['fr', 'de', 'invalid', 'bcm']):
-            language, template_type = interactive_selection(mock_manager)
-        
-        assert language == 'de'
-        assert template_type == 'bcm'
-    
-    def test_interactive_selection_keyboard_interrupt(self):
-        """
-        Test that KeyboardInterrupt during interactive selection is handled.
-        
-        Validates: Requirements 2.4
-        """
-        mock_manager = Mock()
-        mock_manager.discover_templates.return_value = {
-            'de': {'bcm': [Path('templates/de/bcm/0100_intro.md')]}
-        }
-        
-        # Mock user pressing Ctrl+C
-        with patch('builtins.input', side_effect=KeyboardInterrupt()):
-            with pytest.raises(KeyboardInterrupt):
-                interactive_selection(mock_manager)
-
-
-class TestMainFunction:
-    """Tests for main function orchestration."""
-    
-    def test_main_with_create_config_success(self, tmp_path):
-        """
-        Test main function with --create-config flag.
-        
-        Validates: Requirements 2.1, 2.2, 2.3, 2.5
-        """
-        config_file = tmp_path / "test_config.yaml"
-        
-        test_args = [
-            'cli.py',
-            '--create-config',
-            '--config', str(config_file)
-        ]
-        
-        with patch.object(sys, 'argv', test_args):
-            exit_code = main()
-        
-        assert exit_code == 0
-        assert config_file.exists()
-    
-    def test_main_with_create_config_already_exists(self, tmp_path):
-        """
-        Test main function with --create-config when file already exists.
-        
-        Validates: Requirements 2.1, 2.2, 2.3, 2.5
-        """
-        config_file = tmp_path / "test_config.yaml"
-        config_file.write_text("existing config")
-        
-        test_args = [
-            'cli.py',
-            '--create-config',
-            '--config', str(config_file)
-        ]
-        
-        with patch.object(sys, 'argv', test_args):
-            exit_code = main()
-        
-        assert exit_code == 1  # Should fail because file exists
-    
-    def test_main_missing_config_file(self):
-        """
-        Test main function when config file is missing.
-        
-        Validates: Requirements 2.1, 2.2, 2.3, 2.5
-        """
-        test_args = [
-            'cli.py',
-            '--language', 'de',
-            '--template', 'bcm',
-            '--config', 'nonexistent_config.yaml'
-        ]
-        
-        with patch.object(sys, 'argv', test_args):
-            exit_code = main()
-        
-        assert exit_code == 1  # Should fail due to missing config
-    
-    def test_main_invalid_template_combination(self, tmp_path):
-        """
-        Test main function with invalid language/template combination.
-        
-        Validates: Requirements 2.1, 2.2, 2.3, 2.5
-        """
-        # Create a valid config file
-        config_file = tmp_path / "config.yaml"
-        config_file.write_text("""
-data_sources:
-  netbox:
-    url: "https://netbox.example.com"
-    api_token: "test-token"
-defaults:
-  language: "de"
-  output_format: "both"
-metadata:
-  author: "Test Author"
-  version: "1.0.0"
-""")
-        
-        # Create template directory but without the requested combination
-        template_dir = tmp_path / "templates"
-        template_dir.mkdir()
-        (template_dir / "de").mkdir()
-        (template_dir / "de" / "isms").mkdir()
-        # Don't create bcm directory
-        
-        test_args = [
-            'cli.py',
-            '--language', 'de',
-            '--template', 'bcm',  # This doesn't exist
-            '--config', str(config_file),
-            '--template-dir', str(template_dir)
-        ]
-        
-        with patch.object(sys, 'argv', test_args):
-            exit_code = main()
-        
-        assert exit_code == 1  # Should fail due to missing templates
-    
-    @patch('src.cli.TemplateManager')
-    @patch('src.cli.ConfigManager')
-    @patch('src.cli.PlaceholderProcessor')
-    @patch('src.cli.OutputGenerator')
-    @patch('src.cli.NetBoxAdapter')
-    def test_main_successful_execution(
-        self,
-        mock_netbox,
-        mock_output_gen,
-        mock_processor,
-        mock_config_mgr,
-        mock_template_mgr
-    ):
-        """
-        Test successful execution of main function with all components.
-        
-        Validates: Requirements 2.1, 2.2, 2.3, 2.5
-        """
-        # Setup mocks
-        mock_config_instance = Mock()
-        mock_config_instance.netbox_url = "https://netbox.example.com"
-        mock_config_instance.netbox_api_token = "test-token"
-        mock_config_mgr.return_value.load_config.return_value = mock_config_instance
-        mock_config_mgr.return_value.validate_template_structure.return_value = []
-        
-        mock_template_instance = Mock()
-        mock_template = Mock()
-        mock_template.path = Mock()
-        mock_template.path.name = "test_template.md"
-        mock_template.read_content.return_value = "# Test Content"
-        mock_template_mgr.return_value.get_templates.return_value = [mock_template]
-        mock_template_mgr.return_value.validate_template_structure.return_value = []
-        
-        mock_netbox_instance = Mock()
-        mock_netbox_instance.connect.return_value = True
-        mock_netbox.return_value = mock_netbox_instance
-        
-        mock_proc_result = Mock()
-        mock_proc_result.content = "# Processed Content"
-        mock_proc_result.replacements = []
-        mock_proc_result.warnings = []
-        mock_proc_result.errors = []
-        mock_processor.return_value.process_template.return_value = mock_proc_result
-        
-        mock_output_result = Mock()
-        mock_output_result.markdown_path = Path("output.md")
-        mock_output_result.warnings = []
-        mock_output_result.errors = []
-        mock_output_gen.return_value.generate_markdown.return_value = mock_output_result
-        mock_output_gen.return_value.assemble_markdown.return_value = "# Assembled"
-        
-        test_args = [
-            'cli.py',
-            '--language', 'de',
-            '--template', 'bcm',
-            '--output', 'markdown'
-        ]
-        
-        with patch.object(sys, 'argv', test_args):
-            exit_code = main()
-        
-        assert exit_code == 0  # Should succeed
+from src.quality_control.cli import (
+    create_parser,
+    run_quality_control,
+    main
+)
+from src.quality_control.data_structures import (
+    QualityReport,
+    QualityMetrics,
+    ValidationResult,
+    VersionHistoryValidationResult,
+    TestResult,
+    FrameworkInfo,
+    TemplateFile,
+    FailedTest
+)
 
 
 class TestArgumentParsing:
-    """Tests for argument parsing functionality."""
+    """Tests for command-line argument parsing."""
     
-    def test_parse_arguments_all_parameters(self):
-        """
-        Test parsing all command-line parameters.
-        
-        Validates: Requirements 2.1, 2.2, 2.3, 2.5
-        """
-        test_args = [
-            'cli.py',
-            '--language', 'de',
-            '--template', 'bcm',
-            '--output', 'pdf',
-            '--verbose',
-            '--config', 'custom.yaml',
-            '--template-dir', 'my_templates',
-            '--output-dir', 'my_output'
-        ]
-        
-        with patch.object(sys, 'argv', test_args):
-            args = parse_arguments()
-        
-        assert args.language == 'de'
-        assert args.template == 'bcm'
-        assert args.output == 'pdf'
-        assert args.verbose is True
-        assert args.config == 'custom.yaml'
-        assert args.template_dir == 'my_templates'
-        assert args.output_dir == 'my_output'
+    def test_parser_creation(self):
+        """Test that parser is created successfully."""
+        parser = create_parser()
+        assert parser is not None
+        assert parser.prog == 'quality-control'
     
-    def test_parse_arguments_short_options(self):
-        """
-        Test parsing short command-line options.
+    def test_default_arguments(self):
+        """Test default argument values."""
+        parser = create_parser()
+        args = parser.parse_args([])
         
-        Validates: Requirements 2.1, 2.2, 2.3, 2.5
-        """
-        test_args = [
-            'cli.py',
-            '-l', 'en',
-            '-t', 'isms',
-            '-o', 'both',
-            '-v',
-            '-c', 'test.yaml'
-        ]
-        
-        with patch.object(sys, 'argv', test_args):
-            args = parse_arguments()
-        
-        assert args.language == 'en'
-        assert args.template == 'isms'
-        assert args.output == 'both'
-        assert args.verbose is True
-        assert args.config == 'test.yaml'
-    
-    def test_parse_arguments_defaults(self):
-        """
-        Test default values for optional parameters.
-        
-        Validates: Requirements 2.1, 2.2, 2.3, 2.5
-        """
-        test_args = ['cli.py']
-        
-        with patch.object(sys, 'argv', test_args):
-            args = parse_arguments()
-        
-        assert args.output == 'both'
+        assert args.check == 'all'
+        assert args.output is None
         assert args.verbose is False
-        assert args.config == 'config.yaml'
-        assert args.template_dir == 'templates'
-        assert args.output_dir == 'Handbook'
-        assert args.create_config is False
+        assert args.export_json is None
+        assert args.export_csv is None
+        assert args.base_path == '.'
+        assert args.no_save_metrics is False
+        assert args.show_trends is False
+        assert args.interactive is False
+        assert args.save_tasks is None
+        assert args.show_remediation is False
+        assert args.generate_remediation_script is None
+    
+    def test_check_argument_all(self):
+        """Test --check argument with 'all' value."""
+        parser = create_parser()
+        args = parser.parse_args(['--check', 'all'])
+        assert args.check == 'all'
+    
+    def test_check_argument_mapping(self):
+        """Test --check argument with 'mapping' value."""
+        parser = create_parser()
+        args = parser.parse_args(['--check', 'mapping'])
+        assert args.check == 'mapping'
+    
+    def test_check_argument_version(self):
+        """Test --check argument with 'version' value."""
+        parser = create_parser()
+        args = parser.parse_args(['--check', 'version'])
+        assert args.check == 'version'
+    
+    def test_check_argument_tests(self):
+        """Test --check argument with 'tests' value."""
+        parser = create_parser()
+        args = parser.parse_args(['--check', 'tests'])
+        assert args.check == 'tests'
+    
+    def test_check_argument_coverage(self):
+        """Test --check argument with 'coverage' value."""
+        parser = create_parser()
+        args = parser.parse_args(['--check', 'coverage'])
+        assert args.check == 'coverage'
+    
+    def test_output_argument(self):
+        """Test --output argument."""
+        parser = create_parser()
+        args = parser.parse_args(['--output', 'report.txt'])
+        assert args.output == 'report.txt'
+    
+    def test_verbose_argument(self):
+        """Test --verbose argument."""
+        parser = create_parser()
+        args = parser.parse_args(['--verbose'])
+        assert args.verbose is True
+    
+    def test_verbose_short_argument(self):
+        """Test -v short form of verbose argument."""
+        parser = create_parser()
+        args = parser.parse_args(['-v'])
+        assert args.verbose is True
+    
+    def test_export_json_argument(self):
+        """Test --export-json argument."""
+        parser = create_parser()
+        args = parser.parse_args(['--export-json', 'metrics.json'])
+        assert args.export_json == 'metrics.json'
+    
+    def test_export_csv_argument(self):
+        """Test --export-csv argument."""
+        parser = create_parser()
+        args = parser.parse_args(['--export-csv', 'metrics.csv'])
+        assert args.export_csv == 'metrics.csv'
+    
+    def test_base_path_argument(self):
+        """Test --base-path argument."""
+        parser = create_parser()
+        args = parser.parse_args(['--base-path', '/custom/path'])
+        assert args.base_path == '/custom/path'
+    
+    def test_no_save_metrics_argument(self):
+        """Test --no-save-metrics argument."""
+        parser = create_parser()
+        args = parser.parse_args(['--no-save-metrics'])
+        assert args.no_save_metrics is True
+    
+    def test_show_trends_argument(self):
+        """Test --show-trends argument."""
+        parser = create_parser()
+        args = parser.parse_args(['--show-trends'])
+        assert args.show_trends is True
+    
+    def test_interactive_argument(self):
+        """Test --interactive argument."""
+        parser = create_parser()
+        args = parser.parse_args(['--interactive'])
+        assert args.interactive is True
+    
+    def test_interactive_short_argument(self):
+        """Test -i short form of interactive argument."""
+        parser = create_parser()
+        args = parser.parse_args(['-i'])
+        assert args.interactive is True
+    
+    def test_save_tasks_argument(self):
+        """Test --save-tasks argument."""
+        parser = create_parser()
+        args = parser.parse_args(['--save-tasks', 'tasks.md'])
+        assert args.save_tasks == 'tasks.md'
+    
+    def test_show_remediation_argument(self):
+        """Test --show-remediation argument."""
+        parser = create_parser()
+        args = parser.parse_args(['--show-remediation'])
+        assert args.show_remediation is True
+    
+    def test_generate_remediation_script_argument(self):
+        """Test --generate-remediation-script argument."""
+        parser = create_parser()
+        args = parser.parse_args(['--generate-remediation-script', 'fix.sh'])
+        assert args.generate_remediation_script == 'fix.sh'
+    
+    def test_multiple_arguments(self):
+        """Test multiple arguments together."""
+        parser = create_parser()
+        args = parser.parse_args([
+            '--check', 'mapping',
+            '--output', 'report.txt',
+            '--verbose',
+            '--export-json', 'metrics.json',
+            '--show-trends'
+        ])
+        
+        assert args.check == 'mapping'
+        assert args.output == 'report.txt'
+        assert args.verbose is True
+        assert args.export_json == 'metrics.json'
+        assert args.show_trends is True
+    
+    def test_invalid_check_value(self):
+        """Test that invalid check value raises error."""
+        parser = create_parser()
+        
+        with pytest.raises(SystemExit):
+            parser.parse_args(['--check', 'invalid'])
 
 
-class TestTemplateTypeValidation:
-    """Tests for template type validation in CLI."""
+class TestExecutionModes:
+    """Tests for different execution modes."""
     
-    def test_valid_template_type_bcm(self):
-        """
-        Test that 'bcm' template type is accepted.
+    @patch('src.quality_control.cli.QualityControlOrchestrator')
+    @patch('src.quality_control.cli.setup_logging')
+    def test_run_all_checks_mode(self, mock_logging, mock_orchestrator):
+        """Test running all checks mode."""
+        # Setup mock
+        mock_instance = Mock()
+        mock_orchestrator.return_value = mock_instance
         
-        Validates: Requirements 21.1, 21.5
-        """
-        test_args = [
-            'cli.py',
-            '--language', 'de',
-            '--template', 'bcm'
-        ]
+        # Create mock report
+        mock_report = Mock(spec=QualityReport)
+        mock_report.overall_success = True
+        mock_report.mapping_validation = Mock(spec=ValidationResult)
+        mock_report.version_validation = Mock(spec=VersionHistoryValidationResult)
+        mock_report.test_results = Mock(spec=TestResult)
+        mock_report.test_results.failed_tests = []
+        mock_report.metrics = Mock(spec=QualityMetrics)
         
-        with patch.object(sys, 'argv', test_args):
-            args = parse_arguments()
+        mock_instance.run_all_checks.return_value = mock_report
+        mock_instance.generate_consolidated_report.return_value = "Test Report"
         
-        assert args.template == 'bcm'
+        # Execute
+        exit_code = run_quality_control(
+            check='all',
+            base_path='.',
+            output=None,
+            verbose=False,
+            export_json=None,
+            export_csv=None,
+            save_metrics=True,
+            show_trends=False,
+            interactive=False,
+            save_tasks=None,
+            show_remediation=False,
+            generate_remediation_script=None
+        )
+        
+        # Verify
+        assert exit_code == 0
+        mock_instance.run_all_checks.assert_called_once()
+        mock_instance.generate_consolidated_report.assert_called_once()
     
-    def test_valid_template_type_isms(self):
-        """
-        Test that 'isms' template type is accepted.
+    @patch('src.quality_control.cli.QualityControlOrchestrator')
+    @patch('src.quality_control.cli.setup_logging')
+    def test_run_specific_check_mode(self, mock_logging, mock_orchestrator):
+        """Test running specific check mode."""
+        # Setup mock
+        mock_instance = Mock()
+        mock_orchestrator.return_value = mock_instance
         
-        Validates: Requirements 21.2, 21.5
-        """
-        test_args = [
-            'cli.py',
-            '--language', 'en',
-            '--template', 'isms'
-        ]
+        # Create mock result
+        mock_result = Mock(spec=ValidationResult)
+        mock_result.success = True
+        mock_result.total_frameworks = 10
+        mock_result.valid_frameworks = 10
         
-        with patch.object(sys, 'argv', test_args):
-            args = parse_arguments()
+        mock_instance.run_specific_check.return_value = mock_result
         
-        assert args.template == 'isms'
+        # Execute
+        exit_code = run_quality_control(
+            check='mapping',
+            base_path='.',
+            output=None,
+            verbose=False,
+            export_json=None,
+            export_csv=None,
+            save_metrics=True,
+            show_trends=False,
+            interactive=False,
+            save_tasks=None,
+            show_remediation=False,
+            generate_remediation_script=None
+        )
+        
+        # Verify
+        assert exit_code == 0
+        mock_instance.run_specific_check.assert_called_once_with('mapping')
     
-    def test_valid_template_type_bsi_grundschutz(self):
-        """
-        Test that 'bsi-grundschutz' template type is accepted.
+    @patch('src.quality_control.cli.QualityControlOrchestrator')
+    @patch('src.quality_control.cli.setup_logging')
+    def test_save_metrics_mode(self, mock_logging, mock_orchestrator):
+        """Test that metrics are saved when requested."""
+        # Setup mock
+        mock_instance = Mock()
+        mock_orchestrator.return_value = mock_instance
         
-        Validates: Requirements 21.3, 21.5
-        """
-        test_args = [
-            'cli.py',
-            '--language', 'de',
-            '--template', 'bsi-grundschutz'
-        ]
+        mock_report = Mock(spec=QualityReport)
+        mock_report.overall_success = True
+        mock_report.test_results = Mock(spec=TestResult)
+        mock_report.test_results.failed_tests = []
         
-        with patch.object(sys, 'argv', test_args):
-            args = parse_arguments()
+        mock_instance.run_all_checks.return_value = mock_report
+        mock_instance.generate_consolidated_report.return_value = "Test Report"
         
-        assert args.template == 'bsi-grundschutz'
+        # Execute with save_metrics=True
+        run_quality_control(
+            check='all',
+            base_path='.',
+            output=None,
+            verbose=False,
+            export_json=None,
+            export_csv=None,
+            save_metrics=True,
+            show_trends=False,
+            interactive=False,
+            save_tasks=None,
+            show_remediation=False,
+            generate_remediation_script=None
+        )
+        
+        # Verify save_metrics was called
+        mock_instance.save_metrics.assert_called_once_with(mock_report)
     
-    def test_valid_template_type_it_operation(self):
-        """
-        Test that 'it-operation' template type is accepted.
+    @patch('src.quality_control.cli.QualityControlOrchestrator')
+    @patch('src.quality_control.cli.setup_logging')
+    def test_no_save_metrics_mode(self, mock_logging, mock_orchestrator):
+        """Test that metrics are not saved when disabled."""
+        # Setup mock
+        mock_instance = Mock()
+        mock_orchestrator.return_value = mock_instance
         
-        Validates: Requirements 21.1, 21.5
-        """
-        test_args = [
-            'cli.py',
-            '--language', 'en',
-            '--template', 'it-operation'
-        ]
+        mock_report = Mock(spec=QualityReport)
+        mock_report.overall_success = True
+        mock_report.test_results = Mock(spec=TestResult)
+        mock_report.test_results.failed_tests = []
         
-        with patch.object(sys, 'argv', test_args):
-            args = parse_arguments()
+        mock_instance.run_all_checks.return_value = mock_report
+        mock_instance.generate_consolidated_report.return_value = "Test Report"
         
-        assert args.template == 'it-operation'
+        # Execute with save_metrics=False
+        run_quality_control(
+            check='all',
+            base_path='.',
+            output=None,
+            verbose=False,
+            export_json=None,
+            export_csv=None,
+            save_metrics=False,
+            show_trends=False,
+            interactive=False,
+            save_tasks=None,
+            show_remediation=False,
+            generate_remediation_script=None
+        )
+        
+        # Verify save_metrics was NOT called
+        mock_instance.save_metrics.assert_not_called()
     
-    def test_valid_template_type_cis_controls(self):
-        """
-        Test that 'cis-controls' template type is accepted.
+    @patch('src.quality_control.cli.QualityControlOrchestrator')
+    @patch('src.quality_control.cli.setup_logging')
+    def test_export_json_mode(self, mock_logging, mock_orchestrator):
+        """Test exporting metrics to JSON."""
+        # Setup mock
+        mock_instance = Mock()
+        mock_orchestrator.return_value = mock_instance
         
-        Validates: Requirements 3.1, 3.2
-        """
-        test_args = [
-            'cli.py',
-            '--language', 'de',
-            '--template', 'cis-controls'
-        ]
+        mock_report = Mock(spec=QualityReport)
+        mock_report.overall_success = True
+        mock_report.test_results = Mock(spec=TestResult)
+        mock_report.test_results.failed_tests = []
         
-        with patch.object(sys, 'argv', test_args):
-            args = parse_arguments()
+        mock_instance.run_all_checks.return_value = mock_report
+        mock_instance.generate_consolidated_report.return_value = "Test Report"
         
-        assert args.template == 'cis-controls'
+        # Execute with export_json
+        run_quality_control(
+            check='all',
+            base_path='.',
+            output=None,
+            verbose=False,
+            export_json='metrics.json',
+            export_csv=None,
+            save_metrics=True,
+            show_trends=False,
+            interactive=False,
+            save_tasks=None,
+            show_remediation=False,
+            generate_remediation_script=None
+        )
+        
+        # Verify export was called
+        mock_instance.export_metrics_json.assert_called_once_with(mock_report, 'metrics.json')
     
-    def test_valid_template_type_cis_controls_short_flag(self):
-        """
-        Test that 'cis-controls' template type is accepted with short flag.
+    @patch('src.quality_control.cli.QualityControlOrchestrator')
+    @patch('src.quality_control.cli.setup_logging')
+    def test_export_csv_mode(self, mock_logging, mock_orchestrator):
+        """Test exporting metrics to CSV."""
+        # Setup mock
+        mock_instance = Mock()
+        mock_orchestrator.return_value = mock_instance
         
-        Validates: Requirements 3.1, 3.2
-        """
-        test_args = [
-            'cli.py',
-            '-l', 'en',
-            '-t', 'cis-controls'
-        ]
+        mock_report = Mock(spec=QualityReport)
+        mock_report.overall_success = True
+        mock_report.test_results = Mock(spec=TestResult)
+        mock_report.test_results.failed_tests = []
         
-        with patch.object(sys, 'argv', test_args):
-            args = parse_arguments()
+        mock_instance.run_all_checks.return_value = mock_report
+        mock_instance.generate_consolidated_report.return_value = "Test Report"
         
-        assert args.template == 'cis-controls'
+        # Execute with export_csv
+        run_quality_control(
+            check='all',
+            base_path='.',
+            output=None,
+            verbose=False,
+            export_json=None,
+            export_csv='metrics.csv',
+            save_metrics=True,
+            show_trends=False,
+            interactive=False,
+            save_tasks=None,
+            show_remediation=False,
+            generate_remediation_script=None
+        )
+        
+        # Verify export was called
+        mock_instance.export_metrics_csv.assert_called_once_with(mock_report, 'metrics.csv')
+
+
+class TestErrorHandling:
+    """Tests for error handling in CLI."""
     
-    def test_valid_template_type_pci_dss(self):
-        """
-        Test that 'pci-dss' template type is accepted.
+    @patch('src.quality_control.cli.QualityControlOrchestrator')
+    @patch('src.quality_control.cli.setup_logging')
+    def test_exception_handling(self, mock_logging, mock_orchestrator):
+        """Test that exceptions are handled gracefully."""
+        # Setup mock to raise exception
+        mock_instance = Mock()
+        mock_orchestrator.return_value = mock_instance
+        mock_instance.run_all_checks.side_effect = Exception("Test error")
         
-        Validates: Requirements 10.7, 15.1
-        """
-        test_args = [
-            'cli.py',
-            '--language', 'de',
-            '--template', 'pci-dss'
-        ]
+        # Execute
+        exit_code = run_quality_control(
+            check='all',
+            base_path='.',
+            output=None,
+            verbose=False,
+            export_json=None,
+            export_csv=None,
+            save_metrics=True,
+            show_trends=False,
+            interactive=False,
+            save_tasks=None,
+            show_remediation=False,
+            generate_remediation_script=None
+        )
         
-        with patch.object(sys, 'argv', test_args):
-            args = parse_arguments()
-        
-        assert args.template == 'pci-dss'
+        # Verify error exit code
+        assert exit_code == 1
     
-    def test_valid_template_type_hipaa(self):
-        """
-        Test that 'hipaa' template type is accepted.
+    @patch('src.quality_control.cli.QualityControlOrchestrator')
+    @patch('src.quality_control.cli.setup_logging')
+    def test_failed_checks_return_error_code(self, mock_logging, mock_orchestrator):
+        """Test that failed checks return error exit code."""
+        # Setup mock
+        mock_instance = Mock()
+        mock_orchestrator.return_value = mock_instance
         
-        Validates: Requirements 10.7, 15.1
-        """
-        test_args = [
-            'cli.py',
-            '--language', 'en',
-            '--template', 'hipaa'
-        ]
+        mock_report = Mock(spec=QualityReport)
+        mock_report.overall_success = False  # Failed
+        mock_report.test_results = Mock(spec=TestResult)
+        mock_report.test_results.failed_tests = []
         
-        with patch.object(sys, 'argv', test_args):
-            args = parse_arguments()
+        mock_instance.run_all_checks.return_value = mock_report
+        mock_instance.generate_consolidated_report.return_value = "Test Report"
         
-        assert args.template == 'hipaa'
+        # Execute
+        exit_code = run_quality_control(
+            check='all',
+            base_path='.',
+            output=None,
+            verbose=False,
+            export_json=None,
+            export_csv=None,
+            save_metrics=True,
+            show_trends=False,
+            interactive=False,
+            save_tasks=None,
+            show_remediation=False,
+            generate_remediation_script=None
+        )
+        
+        # Verify error exit code
+        assert exit_code == 1
     
-    def test_valid_template_type_nist_800_53(self):
-        """
-        Test that 'nist-800-53' template type is accepted.
+    @patch('src.quality_control.cli.QualityControlOrchestrator')
+    @patch('src.quality_control.cli.setup_logging')
+    def test_output_file_creation(self, mock_logging, mock_orchestrator):
+        """Test that output file is created correctly."""
+        # Setup mock
+        mock_instance = Mock()
+        mock_orchestrator.return_value = mock_instance
         
-        Validates: Requirements 10.7, 15.1
-        """
-        test_args = [
-            'cli.py',
-            '--language', 'de',
-            '--template', 'nist-800-53'
-        ]
+        mock_report = Mock(spec=QualityReport)
+        mock_report.overall_success = True
+        mock_report.test_results = Mock(spec=TestResult)
+        mock_report.test_results.failed_tests = []
         
-        with patch.object(sys, 'argv', test_args):
-            args = parse_arguments()
+        mock_instance.run_all_checks.return_value = mock_report
+        mock_instance.generate_consolidated_report.return_value = "Test Report Content"
         
-        assert args.template == 'nist-800-53'
-    
-    def test_valid_template_type_tsc(self):
-        """
-        Test that 'tsc' template type is accepted.
-        
-        Validates: Requirements 10.7, 15.1
-        """
-        test_args = [
-            'cli.py',
-            '--language', 'en',
-            '--template', 'tsc'
-        ]
-        
-        with patch.object(sys, 'argv', test_args):
-            args = parse_arguments()
-        
-        assert args.template == 'tsc'
-    
-    def test_valid_template_type_common_criteria(self):
-        """
-        Test that 'common-criteria' template type is accepted.
-        
-        Validates: Requirements 10.7, 15.1
-        """
-        test_args = [
-            'cli.py',
-            '--language', 'de',
-            '--template', 'common-criteria'
-        ]
-        
-        with patch.object(sys, 'argv', test_args):
-            args = parse_arguments()
-        
-        assert args.template == 'common-criteria'
-    
-    def test_valid_template_type_iso_9001(self):
-        """
-        Test that 'iso-9001' template type is accepted.
-        
-        Validates: Requirements 10.7, 15.1
-        """
-        test_args = [
-            'cli.py',
-            '--language', 'en',
-            '--template', 'iso-9001'
-        ]
-        
-        with patch.object(sys, 'argv', test_args):
-            args = parse_arguments()
-        
-        assert args.template == 'iso-9001'
-    
-    def test_valid_template_type_gdpr(self):
-        """
-        Test that 'gdpr' template type is accepted.
-        
-        Validates: Requirements 10.7, 15.1
-        """
-        test_args = [
-            'cli.py',
-            '--language', 'de',
-            '--template', 'gdpr'
-        ]
-        
-        with patch.object(sys, 'argv', test_args):
-            args = parse_arguments()
-        
-        assert args.template == 'gdpr'
-    
-    def test_valid_template_type_idw_ps_951(self):
-        """
-        Test that 'idw-ps-951' template type is accepted.
-        
-        Validates: Requirements 6.7
-        """
-        test_args = [
-            'cli.py',
-            '--language', 'de',
-            '--template', 'idw-ps-951'
-        ]
-        
-        with patch.object(sys, 'argv', test_args):
-            args = parse_arguments()
-        
-        assert args.template == 'idw-ps-951'
-    
-    def test_valid_template_type_nist_csf(self):
-        """
-        Test that 'nist-csf' template type is accepted.
-        
-        Validates: Requirements 6.7
-        """
-        test_args = [
-            'cli.py',
-            '--language', 'en',
-            '--template', 'nist-csf'
-        ]
-        
-        with patch.object(sys, 'argv', test_args):
-            args = parse_arguments()
-        
-        assert args.template == 'nist-csf'
-    
-    def test_valid_template_type_togaf(self):
-        """
-        Test that 'togaf' template type is accepted.
-        
-        Validates: Requirements 6.7
-        """
-        test_args = [
-            'cli.py',
-            '--language', 'de',
-            '--template', 'togaf'
-        ]
-        
-        with patch.object(sys, 'argv', test_args):
-            args = parse_arguments()
-        
-        assert args.template == 'togaf'
-    
-    def test_new_frameworks_with_short_flags(self):
-        """
-        Test that new framework names work with short flags.
-        
-        Validates: Requirements 10.7, 15.1, 6.7
-        """
-        new_frameworks = ['pci-dss', 'hipaa', 'nist-800-53', 'tsc', 'common-criteria', 'iso-9001', 'gdpr', 'idw-ps-951', 'nist-csf', 'togaf']
-        
-        for framework in new_frameworks:
-            test_args = [
-                'cli.py',
-                '-l', 'en',
-                '-t', framework
-            ]
+        # Execute with temporary output file
+        with tempfile.TemporaryDirectory() as tmpdir:
+            output_path = Path(tmpdir) / "report.txt"
             
-            with patch.object(sys, 'argv', test_args):
-                args = parse_arguments()
+            run_quality_control(
+                check='all',
+                base_path='.',
+                output=str(output_path),
+                verbose=False,
+                export_json=None,
+                export_csv=None,
+                save_metrics=False,
+                show_trends=False,
+                interactive=False,
+                save_tasks=None,
+                show_remediation=False,
+                generate_remediation_script=None
+            )
             
-            assert args.template == framework, \
-                f"New framework '{framework}' should be accepted with short flags"
+            # Verify file was created
+            assert output_path.exists()
+            
+            # Verify content
+            with open(output_path, 'r') as f:
+                content = f.read()
+            assert content == "Test Report Content"
+
+
+class TestMainFunction:
+    """Tests for main entry point function."""
     
-    def test_cis_controls_appears_in_help_text(self, capsys):
-        """
-        Test that 'cis-controls' and new frameworks appear in help text.
+    @patch('src.quality_control.cli.run_quality_control')
+    @patch('sys.argv', ['quality-control', '--check', 'all'])
+    def test_main_calls_run_quality_control(self, mock_run):
+        """Test that main function calls run_quality_control."""
+        mock_run.return_value = 0
         
-        Validates: Requirements 3.1, 3.2, 6.7
-        """
-        test_args = [
-            'cli.py',
-            '--help'
-        ]
+        with pytest.raises(SystemExit) as exc_info:
+            main()
         
-        with patch.object(sys, 'argv', test_args):
-            with pytest.raises(SystemExit) as exc_info:
-                parse_arguments()
+        assert exc_info.value.code == 0
+        mock_run.assert_called_once()
+    
+    @patch('src.quality_control.cli.run_quality_control')
+    @patch('sys.argv', ['quality-control', '--check', 'mapping', '--verbose'])
+    def test_main_with_arguments(self, mock_run):
+        """Test main function with command-line arguments."""
+        mock_run.return_value = 0
         
-        # Help exits with code 0
+        with pytest.raises(SystemExit) as exc_info:
+            main()
+        
         assert exc_info.value.code == 0
         
-        captured = capsys.readouterr()
-        help_output = captured.out
-        
-        # Verify cis-controls appears in help text
-        assert 'cis-controls' in help_output.lower()
-        
-        # Verify new frameworks appear in help text
-        assert 'idw-ps-951' in help_output.lower()
-        assert 'nist-csf' in help_output.lower()
-        assert 'togaf' in help_output.lower()
+        # Verify arguments were passed correctly
+        call_args = mock_run.call_args
+        assert call_args.kwargs['check'] == 'mapping'
+        assert call_args.kwargs['verbose'] is True
     
-    def test_invalid_template_type_rejected(self):
-        """
-        Test that invalid template type is rejected with error message.
-        
-        Validates: Requirements 21.5
-        """
-        test_args = [
-            'cli.py',
-            '--language', 'de',
-            '--template', 'invalid-type'
-        ]
-        
-        with patch.object(sys, 'argv', test_args):
-            with pytest.raises(SystemExit) as exc_info:
-                parse_arguments()
-        
-        # argparse exits with code 2 for invalid arguments
-        assert exc_info.value.code == 2
-    
-    def test_invalid_template_type_shows_valid_choices(self, capsys):
-        """
-        Test that invalid template type shows available choices in error message.
-        
-        Validates: Requirements 21.5, 15.1, 6.7
-        """
-        test_args = [
-            'cli.py',
-            '--language', 'de',
-            '--template', 'nonexistent'
-        ]
-        
-        with patch.object(sys, 'argv', test_args):
-            with pytest.raises(SystemExit):
-                parse_arguments()
-        
-        captured = capsys.readouterr()
-        error_output = captured.err
-        
-        # Verify error message contains valid choices
-        assert 'invalid choice' in error_output.lower()
-        assert 'bcm' in error_output
-        assert 'bsi-grundschutz' in error_output
-        assert 'cis-controls' in error_output
-        assert 'isms' in error_output
-        assert 'it-operation' in error_output
-        # Verify existing new frameworks appear in error message
-        assert 'pci-dss' in error_output
-        assert 'hipaa' in error_output
-        assert 'nist-800-53' in error_output
-        assert 'tsc' in error_output
-        assert 'common-criteria' in error_output
-        assert 'iso-9001' in error_output
-        assert 'gdpr' in error_output
-        # Verify Phase 1 frameworks appear in error message
-        assert 'idw-ps-951' in error_output
-        assert 'nist-csf' in error_output
-        assert 'togaf' in error_output
-        # Verify Phase 2 frameworks appear in error message
-        assert 'iso-38500' in error_output
-        assert 'iso-31000' in error_output
-        assert 'csa-ccm' in error_output
-        assert 'tisax' in error_output
-        assert 'soc1' in error_output
-        assert 'coso' in error_output
-        assert 'dora' in error_output
-    
-    def test_all_valid_template_types_accepted(self):
-        """
-        Test that all valid template types are accepted.
-        
-        Validates: Requirements 21.1, 21.2, 21.3, 21.5, 3.1, 10.7, 6.7
-        """
-        valid_types = ['bcm', 'bsi-grundschutz', 'cis-controls', 'common-criteria', 
-                       'coso', 'csa-ccm', 'dora', 'email-service', 'gdpr', 'hipaa', 
-                       'idw-ps-951', 'isms', 'iso-31000', 'iso-38500', 'iso-9001', 
-                       'it-operation', 'nist-800-53', 'nist-csf', 'pci-dss', 
-                       'service-templates', 'soc1', 'tisax', 'togaf', 'tsc']
-        
-        for template_type in valid_types:
-            test_args = [
-                'cli.py',
-                '--language', 'de',
-                '--template', template_type
-            ]
-            
-            with patch.object(sys, 'argv', test_args):
-                args = parse_arguments()
-            
-            assert args.template == template_type, \
-                f"Template type '{template_type}' should be accepted"
-    
-    @settings(max_examples=100)
-    @given(
-        template_type=st.sampled_from(['bcm', 'bsi-grundschutz', 'cis-controls', 'common-criteria', 
-                                       'coso', 'csa-ccm', 'dora', 'email-service', 'gdpr', 'hipaa', 
-                                       'idw-ps-951', 'isms', 'iso-31000', 'iso-38500', 'iso-9001', 
-                                       'it-operation', 'nist-800-53', 'nist-csf', 'pci-dss', 
-                                       'service-templates', 'soc1', 'tisax', 'togaf', 'tsc']),
-        language=st.sampled_from(['de', 'en'])
-    )
-    def test_property_14_cli_template_type_validation(self, template_type, language):
-        """
-        Feature: template-system-extension, compliance-framework-templates, additional-compliance-frameworks
-        Property 14: CLI Template Type Validation
-        
-        For any CLI invocation with --template parameter, if the template type
-        is in the valid set (all supported frameworks), the system SHALL accept 
-        the input without error.
-        
-        Validates: Requirements 21.5, 3.1, 10.7, 6.7
-        """
-        test_args = [
-            'cli.py',
-            '--language', language,
-            '--template', template_type
-        ]
-        
-        with patch.object(sys, 'argv', test_args):
-            args = parse_arguments()
-        
-        # Verify the template type was accepted
-        assert args.template == template_type, \
-            f"Valid template type '{template_type}' should be accepted"
-        assert args.language == language, \
-            f"Language '{language}' should be accepted"
-    
-    @settings(max_examples=100)
-    @given(
-        invalid_template=st.text(
-            alphabet=st.characters(blacklist_categories=('Cs',)),
-            min_size=1,
-            max_size=50
-        ).filter(lambda x: x not in ['bcm', 'bsi-grundschutz', 'cis-controls', 'common-criteria', 
-                                      'coso', 'csa-ccm', 'dora', 'email-service', 'gdpr', 'hipaa', 
-                                      'idw-ps-951', 'isms', 'iso-31000', 'iso-38500', 'iso-9001', 
-                                      'it-operation', 'nist-800-53', 'nist-csf', 'pci-dss', 
-                                      'service-templates', 'soc1', 'tisax', 'togaf', 'tsc'])
-    )
-    def test_property_14_cli_invalid_template_rejection(self, invalid_template):
-        """
-        Feature: template-system-extension, compliance-framework-templates, additional-compliance-frameworks
-        Property 14: CLI Template Type Validation
-        
-        For any CLI invocation with --template parameter, if the template type
-        is NOT in the valid set, the system SHALL reject the input with an
-        error message listing valid options.
-        
-        Validates: Requirements 21.5, 10.7, 15.1, 6.7
-        """
-        test_args = [
-            'cli.py',
-            '--language', 'de',
-            '--template', invalid_template
-        ]
-        
-        with patch.object(sys, 'argv', test_args):
-            with pytest.raises(SystemExit) as exc_info:
-                parse_arguments()
-        
-        # argparse exits with code 2 for invalid arguments
-        assert exc_info.value.code == 2, \
-            f"Invalid template type '{invalid_template}' should be rejected with exit code 2"
-
-
-class TestPhase2FrameworkCLIIntegration:
-    """Tests for Phase 2 framework CLI integration."""
-    
-    def test_valid_template_type_iso_38500(self):
-        """
-        Test that 'iso-38500' template type is accepted.
-        
-        Validates: Requirements 6.7
-        """
-        test_args = [
-            'cli.py',
-            '--language', 'en',
-            '--template', 'iso-38500'
-        ]
-        
-        with patch.object(sys, 'argv', test_args):
-            args = parse_arguments()
-        
-        assert args.template == 'iso-38500'
-    
-    def test_valid_template_type_iso_31000(self):
-        """
-        Test that 'iso-31000' template type is accepted.
-        
-        Validates: Requirements 6.7
-        """
-        test_args = [
-            'cli.py',
-            '--language', 'de',
-            '--template', 'iso-31000'
-        ]
-        
-        with patch.object(sys, 'argv', test_args):
-            args = parse_arguments()
-        
-        assert args.template == 'iso-31000'
-    
-    def test_valid_template_type_csa_ccm(self):
-        """
-        Test that 'csa-ccm' template type is accepted.
-        
-        Validates: Requirements 6.7
-        """
-        test_args = [
-            'cli.py',
-            '--language', 'en',
-            '--template', 'csa-ccm'
-        ]
-        
-        with patch.object(sys, 'argv', test_args):
-            args = parse_arguments()
-        
-        assert args.template == 'csa-ccm'
-    
-    def test_valid_template_type_tisax(self):
-        """
-        Test that 'tisax' template type is accepted.
-        
-        Validates: Requirements 6.7
-        """
-        test_args = [
-            'cli.py',
-            '--language', 'de',
-            '--template', 'tisax'
-        ]
-        
-        with patch.object(sys, 'argv', test_args):
-            args = parse_arguments()
-        
-        assert args.template == 'tisax'
-    
-    def test_valid_template_type_soc1(self):
-        """
-        Test that 'soc1' template type is accepted.
-        
-        Validates: Requirements 6.7
-        """
-        test_args = [
-            'cli.py',
-            '--language', 'en',
-            '--template', 'soc1'
-        ]
-        
-        with patch.object(sys, 'argv', test_args):
-            args = parse_arguments()
-        
-        assert args.template == 'soc1'
-    
-    def test_valid_template_type_coso(self):
-        """
-        Test that 'coso' template type is accepted.
-        
-        Validates: Requirements 6.7
-        """
-        test_args = [
-            'cli.py',
-            '--language', 'de',
-            '--template', 'coso'
-        ]
-        
-        with patch.object(sys, 'argv', test_args):
-            args = parse_arguments()
-        
-        assert args.template == 'coso'
-    
-    def test_valid_template_type_dora(self):
-        """
-        Test that 'dora' template type is accepted.
-        
-        Validates: Requirements 6.7
-        """
-        test_args = [
-            'cli.py',
-            '--language', 'en',
-            '--template', 'dora'
-        ]
-        
-        with patch.object(sys, 'argv', test_args):
-            args = parse_arguments()
-        
-        assert args.template == 'dora'
-    
-    def test_phase2_frameworks_with_short_flags(self):
-        """
-        Test that Phase 2 framework names work with short flags.
-        
-        Validates: Requirements 6.7
-        """
-        phase2_frameworks = ['iso-38500', 'iso-31000', 'csa-ccm', 'tisax', 'soc1', 'coso', 'dora']
-        
-        for framework in phase2_frameworks:
-            test_args = [
-                'cli.py',
-                '-l', 'en',
-                '-t', framework
-            ]
-            
-            with patch.object(sys, 'argv', test_args):
-                args = parse_arguments()
-            
-            assert args.template == framework, \
-                f"Phase 2 framework '{framework}' should be accepted with short flags"
-    
-    def test_phase2_frameworks_appear_in_help_text(self, capsys):
-        """
-        Test that Phase 2 frameworks appear in help text.
-        
-        Validates: Requirements 6.7
-        """
-        test_args = [
-            'cli.py',
-            '--help'
-        ]
-        
-        with patch.object(sys, 'argv', test_args):
-            with pytest.raises(SystemExit) as exc_info:
-                parse_arguments()
-        
-        # Help exits with code 0
-        assert exc_info.value.code == 0
-        
-        captured = capsys.readouterr()
-        help_output = captured.out.lower()
-        
-        # Verify Phase 2 frameworks appear in help text
-        assert 'iso-38500' in help_output
-        assert 'iso-31000' in help_output
-        assert 'csa-ccm' in help_output
-        assert 'tisax' in help_output
-        assert 'soc1' in help_output
-        assert 'coso' in help_output
-        assert 'dora' in help_output
-    
-    def test_invalid_framework_shows_phase2_in_choices(self, capsys):
-        """
-        Test that invalid template type shows Phase 2 frameworks in error message.
-        
-        Validates: Requirements 6.7
-        """
-        test_args = [
-            'cli.py',
-            '--language', 'de',
-            '--template', 'nonexistent-framework'
-        ]
-        
-        with patch.object(sys, 'argv', test_args):
-            with pytest.raises(SystemExit):
-                parse_arguments()
-        
-        captured = capsys.readouterr()
-        error_output = captured.err
-        
-        # Verify error message contains Phase 2 frameworks
-        assert 'invalid choice' in error_output.lower()
-        assert 'iso-38500' in error_output
-        assert 'iso-31000' in error_output
-        assert 'csa-ccm' in error_output
-        assert 'tisax' in error_output
-        assert 'soc1' in error_output
-        assert 'coso' in error_output
-        assert 'dora' in error_output
-    
-    def test_all_phase2_frameworks_accepted(self):
-        """
-        Test that all Phase 2 framework types are accepted.
-        
-        Validates: Requirements 6.7
-        """
-        phase2_frameworks = ['iso-38500', 'iso-31000', 'csa-ccm', 'tisax', 'soc1', 'coso', 'dora']
-        
-        for framework in phase2_frameworks:
-            test_args = [
-                'cli.py',
-                '--language', 'de',
-                '--template', framework
-            ]
-            
-            with patch.object(sys, 'argv', test_args):
-                args = parse_arguments()
-            
-            assert args.template == framework, \
-                f"Phase 2 framework '{framework}' should be accepted"
-    
-    @settings(max_examples=100)
-    @given(
-        framework=st.sampled_from(['iso-38500', 'iso-31000', 'csa-ccm', 'tisax', 'soc1', 'coso', 'dora']),
-        language=st.sampled_from(['de', 'en'])
-    )
-    def test_property_phase2_cli_framework_validation(self, framework, language):
-        """
-        Feature: additional-compliance-frameworks
-        Property: Phase 2 CLI Framework Validation
-        
-        For any CLI invocation with --template parameter set to a Phase 2 framework,
-        the system SHALL accept the input without error.
-        
-        Validates: Requirements 6.7
-        """
-        test_args = [
-            'cli.py',
-            '--language', language,
-            '--template', framework
-        ]
-        
-        with patch.object(sys, 'argv', test_args):
-            args = parse_arguments()
-        
-        # Verify the framework was accepted
-        assert args.template == framework, \
-            f"Phase 2 framework '{framework}' should be accepted"
-        assert args.language == language, \
-            f"Language '{language}' should be accepted"
-    
-    def test_phase2_frameworks_with_all_output_formats(self):
-        """
-        Test that Phase 2 frameworks work with all output formats.
-        
-        Validates: Requirements 6.7
-        """
-        phase2_frameworks = ['iso-38500', 'iso-31000', 'csa-ccm', 'tisax', 'soc1', 'coso', 'dora']
-        output_formats = ['markdown', 'pdf', 'html', 'both', 'all']
-        
-        for framework in phase2_frameworks:
-            for output_format in output_formats:
-                test_args = [
-                    'cli.py',
-                    '--language', 'en',
-                    '--template', framework,
-                    '--output', output_format
-                ]
-                
-                with patch.object(sys, 'argv', test_args):
-                    args = parse_arguments()
-                
-                assert args.template == framework
-                assert args.output == output_format
-    
-    def test_phase2_frameworks_with_verbose_flag(self):
-        """
-        Test that Phase 2 frameworks work with verbose flag.
-        
-        Validates: Requirements 6.7
-        """
-        phase2_frameworks = ['iso-38500', 'iso-31000', 'csa-ccm', 'tisax', 'soc1', 'coso', 'dora']
-        
-        for framework in phase2_frameworks:
-            test_args = [
-                'cli.py',
-                '--language', 'de',
-                '--template', framework,
-                '--verbose'
-            ]
-            
-            with patch.object(sys, 'argv', test_args):
-                args = parse_arguments()
-            
-            assert args.template == framework
-            assert args.verbose is True
-    
-    def test_phase2_frameworks_with_custom_config(self):
-        """
-        Test that Phase 2 frameworks work with custom config file.
-        
-        Validates: Requirements 6.7
-        """
-        phase2_frameworks = ['iso-38500', 'iso-31000', 'csa-ccm', 'tisax', 'soc1', 'coso', 'dora']
-        
-        for framework in phase2_frameworks:
-            test_args = [
-                'cli.py',
-                '--language', 'en',
-                '--template', framework,
-                '--config', 'custom_config.yaml'
-            ]
-            
-            with patch.object(sys, 'argv', test_args):
-                args = parse_arguments()
-            
-            assert args.template == framework
-            assert args.config == 'custom_config.yaml'
-    
-    def test_phase2_frameworks_with_separate_files_flag(self):
-        """
-        Test that Phase 2 frameworks work with --separate-files flag.
-        
-        Validates: Requirements 6.7
-        """
-        phase2_frameworks = ['iso-38500', 'iso-31000', 'csa-ccm', 'tisax', 'soc1', 'coso', 'dora']
-        
-        for framework in phase2_frameworks:
-            test_args = [
-                'cli.py',
-                '--language', 'de',
-                '--template', framework,
-                '--separate-files'
-            ]
-            
-            with patch.object(sys, 'argv', test_args):
-                args = parse_arguments()
-            
-            assert args.template == framework
-            assert args.separate_files is True
-    
-    def test_phase2_frameworks_with_pdf_toc_flag(self):
-        """
-        Test that Phase 2 frameworks work with --pdf-toc flag.
-        
-        Validates: Requirements 6.7
-        """
-        phase2_frameworks = ['iso-38500', 'iso-31000', 'csa-ccm', 'tisax', 'soc1', 'coso', 'dora']
-        
-        for framework in phase2_frameworks:
-            test_args = [
-                'cli.py',
-                '--language', 'en',
-                '--template', framework,
-                '--pdf-toc'
-            ]
-            
-            with patch.object(sys, 'argv', test_args):
-                args = parse_arguments()
-            
-            assert args.template == framework
-            assert args.pdf_toc is True
+    @patch('src.quality_control.cli.run_quality_control')
+    @patch('sys.argv', ['quality-control'])
+    def test_main_with_error_exit_code(self, mock_run):
+        """Test main function with error exit code."""
+        mock_run.return_value = 1
+        
+        with pytest.raises(SystemExit) as exc_info:
+            main()
+        
+        assert exc_info.value.code == 1

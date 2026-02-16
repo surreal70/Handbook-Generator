@@ -64,3 +64,9 @@ Die Templates decken alle 93 Annex A Controls der ISO/IEC 27001:2022 ab:
 | Version | Datum | Autor | Änderungen |
 |---------|-------|-------|------------|
 | 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
+
+## Versionshistorie
+
+| Version | Datum | Änderungen |
+|---------|-------|------------|
+| 0.1 | {{meta.document.last_updated}} | Initiale Erstellung |

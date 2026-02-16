@@ -24,10 +24,10 @@ Dokumentation der spezifischen Anliegen und Anforderungen der Stakeholder.
 
 ---
 
-**Document History:**
+**Dokumenthistorie:**
 
-| Version | Date | Author | Changes |
+| Version | Datum | Autor | Änderungen |
 |---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
+| 0.1 | {{meta.document.last_updated}} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 <-   End of template -->

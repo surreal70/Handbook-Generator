@@ -112,3 +112,9 @@ Siehe FRAMEWORK_MAPPING.md für eine detaillierte Zuordnung der Vorlagen zu spez
 - Konsultieren Sie bei Bedarf Experten für Informationssicherheit und Datenschutz
 - Halten Sie die Dokumentation aktuell und überprüfen Sie sie regelmäßig
 - Bereiten Sie sich gründlich auf TISAX-Assessments vor
+
+## Versionshistorie
+
+| Version | Datum | Änderungen |
+|---------|-------|------------|
+| 0.1 | {{meta.document.last_updated}} | Initiale Erstellung |

@@ -142,7 +142,11 @@ class PlaceholderProcessor:
     # Matches: {{ source.field }} where field can have dots for nested paths
     # Supports any source name (netbox, meta, metadata, meta-netbox, etc.)
     # Source names can contain alphanumeric characters and hyphens
+    # Must have at least one character for source and field
     PLACEHOLDER_PATTERN = re.compile(r'\{\{\s*([\w-]+)\.(\w+(?:\.\w+)*)\s*\}\}')
+    
+    # Pattern to detect incomplete/malformed placeholders
+    INCOMPLETE_PLACEHOLDER_PATTERN = re.compile(r'\{\{(?!\s*[\w-]+\.[\w.]+\s*\}\})')
     
     def __init__(self, data_sources: Optional[dict] = None, metadata: Optional[dict] = None):
         """
@@ -158,6 +162,9 @@ class PlaceholderProcessor:
     def find_placeholders(self, content: str) -> list[Placeholder]:
         """
         Find all placeholders in template content.
+        
+        Only finds valid placeholders matching the pattern {{ source.field }}.
+        Incomplete or malformed placeholders (e.g., just '{{') are ignored.
         
         Args:
             content: Template content to scan
@@ -176,6 +183,39 @@ class PlaceholderProcessor:
         
         return placeholders
     
+    def find_incomplete_placeholders(self, content: str) -> list[tuple[int, str]]:
+        """
+        Find incomplete or malformed placeholders in content.
+        
+        These are strings that start with '{{' but don't match the valid
+        placeholder pattern (e.g., '{{', '{{ invalid', '{{ no.dot.field').
+        
+        Args:
+            content: Template content to scan
+            
+        Returns:
+            List of tuples (line_number, line_content) containing incomplete placeholders
+        """
+        incomplete = []
+        lines = content.split('\n')
+        
+        for line_idx, line in enumerate(lines, start=1):
+            # Check if line contains '{{' 
+            if '{{' in line:
+                # Find all valid placeholders in this line
+                valid_matches = list(self.PLACEHOLDER_PATTERN.finditer(line))
+                
+                # Create a copy of the line and remove all valid placeholders
+                line_copy = line
+                for match in valid_matches:
+                    line_copy = line_copy.replace(match.group(0), '', 1)
+                
+                # If there's still '{{' remaining, it's incomplete
+                if '{{' in line_copy:
+                    incomplete.append((line_idx, line))
+        
+        return incomplete
+    
     def validate_placeholder_line(self, line: str, placeholder: Placeholder) -> Optional[str]:
         """
         Validate that placeholder is the only statement in its line.
@@ -187,19 +227,24 @@ class PlaceholderProcessor:
         Returns:
             Warning message if validation fails, None otherwise
         """
-        # Remove the placeholder from the line
-        line_without_placeholder = line.replace(placeholder.raw, '').strip()
+        # Remove the placeholder from the line (don't strip yet)
+        line_without_placeholder = line.replace(placeholder.raw, '')
         
-        # If there's any non-whitespace content left, the placeholder is not alone
-        if line_without_placeholder:
-            context = ErrorContext(
-                line_number=placeholder.line_number,
-                placeholder=placeholder.raw
-            )
-            return ErrorHandler.placeholder_error(
-                context,
-                "not_alone_in_line"
-            )
+        # Check if there are any characters that aren't standard whitespace (space, tab) or comma
+        # We need to check before stripping because .strip() removes all whitespace including
+        # non-standard whitespace like \x85 (NEL - Next Line)
+        for c in line_without_placeholder:
+            # Allow only space, tab, and comma
+            if c not in ' \t,':
+                # Any other character (including non-standard whitespace) is content
+                context = ErrorContext(
+                    line_number=placeholder.line_number,
+                    placeholder=placeholder.raw
+                )
+                return ErrorHandler.placeholder_error(
+                    context,
+                    "not_alone_in_line"
+                )
         
         return None
     
@@ -412,10 +457,28 @@ class PlaceholderProcessor:
         # Update result content with comments removed
         result.content = template_content
         
+        # Edge case: After comment removal, check if content is empty or only whitespace
+        if not template_content.strip():
+            # Content was only comments, return early
+            return result
+        
         # Step 2: Find all placeholders
         placeholders = self.find_placeholders(template_content)
         
-        # If no placeholders, return content with comments removed
+        # Check for incomplete/malformed placeholders
+        incomplete = self.find_incomplete_placeholders(template_content)
+        if incomplete:
+            for line_num, line in incomplete:
+                warning = (
+                    f"Line {line_num}: Found incomplete or malformed placeholder. "
+                    f"Valid format is: {{{{ source.field }}}}. "
+                    f"Line content: {line.strip()[:50]}"
+                )
+                if template_name:
+                    warning = f"{template_name}: {warning}"
+                result.warnings.append(warning)
+        
+        # If no valid placeholders, return content with comments removed
         if not placeholders:
             return result
         

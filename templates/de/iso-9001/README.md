@@ -142,3 +142,9 @@ Bei Fragen zur Vorlagennutzung oder -anpassung beziehen Sie sich auf:
 | Version | Datum | Autor | Änderungen |
 |---------|-------|-------|------------|
 | 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
+
+## Versionshistorie
+
+| Version | Datum | Änderungen |
+|---------|-------|------------|
+| 0.1 | {{meta.document.last_updated}} | Initiale Erstellung |

@@ -479,7 +479,7 @@ class TemplateManager:
             return messages
         
         # Check for required files
-        required_files = ['README.md', 'FRAMEWORK_MAPPING.md']
+        required_files = ['README.md', '9999_Framework_Mapping.md']
         for required_file in required_files:
             file_path = framework_dir / required_file
             if not file_path.exists():

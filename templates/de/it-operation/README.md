@@ -449,3 +449,9 @@ Diese Templates sind für den internen Gebrauch in Ihrer Organisation bestimmt. 
 | Version | Datum | Autor | Änderungen |
 |---------|-------|-------|------------|
 | 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
+
+## Versionshistorie
+
+| Version | Datum | Änderungen |
+|---------|-------|------------|
+| 0.1 | {{meta.document.last_updated}} | Initiale Erstellung |

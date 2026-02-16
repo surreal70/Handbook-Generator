@@ -134,3 +134,9 @@ These templates should be versioned and updated when changes occur:
 ---
 
 **Note**: These templates serve as a starting point. Customize them for your specific service organization, services, and control environment.
+
+## Version History
+
+| Version | Date | Changes |
+|---------|------|---------|
+| 0.1 | {{meta.document.last_updated}} | Initial creation |

@@ -210,8 +210,8 @@ class TestISO31000BilingualTemplateConsistency:
         """
         de_readme = template_base_path / "de" / "iso-31000" / "README.md"
         en_readme = template_base_path / "en" / "iso-31000" / "README.md"
-        de_mapping = template_base_path / "de" / "iso-31000" / "FRAMEWORK_MAPPING.md"
-        en_mapping = template_base_path / "en" / "iso-31000" / "FRAMEWORK_MAPPING.md"
+        de_mapping = template_base_path / "de" / "iso-31000" / "9999_Framework_Mapping.md"
+        en_mapping = template_base_path / "en" / "iso-31000" / "9999_Framework_Mapping.md"
         
         assert de_readme.exists(), "German README should exist"
         assert en_readme.exists(), "English README should exist"

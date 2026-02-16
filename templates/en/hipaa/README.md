@@ -106,3 +106,9 @@ For questions about these templates or HIPAA compliance:
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
+
+## Version History
+
+| Version | Date | Changes |
+|---------|------|---------|
+| 0.1 | {{meta.document.last_updated}} | Initial creation |

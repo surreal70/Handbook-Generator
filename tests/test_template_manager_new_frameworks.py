@@ -100,7 +100,7 @@ def create_framework_structure(base_dir: Path, structure: dict):
         
         # Create required documentation files (but not as .md to avoid discovery)
         (framework_dir / 'README.md').write_text(f'# {framework} Templates\n\nDocumentation here.')
-        (framework_dir / 'FRAMEWORK_MAPPING.md').write_text(f'# Framework Mapping\n\nMapping here.')
+        (framework_dir / '9999_Framework_Mapping.md').write_text(f'# Framework Mapping\n\nMapping here.')
         
         # Create template files
         for template_file in template_files:
@@ -611,7 +611,7 @@ class TestFrameworkValidation:
         
         # Create all required files
         (framework_dir / 'README.md').write_text('# README')
-        (framework_dir / 'FRAMEWORK_MAPPING.md').write_text('# Mapping')
+        (framework_dir / '9999_Framework_Mapping.md').write_text('# Mapping')
         (framework_dir / '0000_metadata_de_idw-ps-951.md').write_text('# Metadata')
         (framework_dir / 'diagrams').mkdir()
         
@@ -640,7 +640,7 @@ class TestFrameworkValidation:
         # Should have validation errors for missing files
         assert len(messages) > 0
         assert any('README.md' in msg for msg in messages)
-        assert any('FRAMEWORK_MAPPING.md' in msg for msg in messages)
+        assert any('9999_Framework_Mapping.md' in msg for msg in messages)
         assert any('diagrams' in msg for msg in messages)
     
     def test_validate_framework_structure_insufficient_templates(self, tmp_path):
@@ -651,7 +651,7 @@ class TestFrameworkValidation:
         
         # Create required files
         (framework_dir / 'README.md').write_text('# README')
-        (framework_dir / 'FRAMEWORK_MAPPING.md').write_text('# Mapping')
+        (framework_dir / '9999_Framework_Mapping.md').write_text('# Mapping')
         (framework_dir / '0000_metadata_de_togaf.md').write_text('# Metadata')
         (framework_dir / 'diagrams').mkdir()
         

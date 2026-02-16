@@ -138,3 +138,8 @@ Für Fragen zur Verwendung dieser Templates oder zum COSO Framework:
 - **Version 1.0** - Initiale Template-Sammlung
 - Aktualisierungen werden im Dokument-Header jedes Templates vermerkt
 
+## Versionshistorie
+
+| Version | Datum | Änderungen |
+|---------|-------|------------|
+| 0.1 | {{meta.document.last_updated}} | Initiale Erstellung |

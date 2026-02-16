@@ -118,7 +118,7 @@ Das ST ist wie folgt strukturiert:
 
 ## 6. Revision History
 
-| Version | Date | Author | Changes |
+| Version | Datum | Autor | Änderungen |
 |---------|------|--------|---------|
 | {{ meta.version }} | {{ meta.date }} | {{ meta.author }} | Initial version |
 | [TODO] | [TODO] | [TODO] | [TODO: Beschreibung der Änderungen] |

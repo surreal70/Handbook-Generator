@@ -47,12 +47,12 @@ class TestPhase2FilenameMatching:
         # Get all template files (excluding language-specific metadata)
         de_templates = {
             f.name for f in de_dir.glob("*.md")
-            if not f.name.startswith("0000_metadata_de_") and f.name != "README.md" and f.name != "FRAMEWORK_MAPPING.md"
+            if not f.name.startswith("0000_metadata_de_") and f.name != "README.md" and f.name != "9999_Framework_Mapping.md"
         }
         
         en_templates = {
             f.name for f in en_dir.glob("*.md")
-            if not f.name.startswith("0000_metadata_en_") and f.name != "README.md" and f.name != "FRAMEWORK_MAPPING.md"
+            if not f.name.startswith("0000_metadata_en_") and f.name != "README.md" and f.name != "9999_Framework_Mapping.md"
         }
         
         # Check for missing templates
@@ -84,8 +84,8 @@ class TestPhase2FilenameMatching:
         """Test that documentation files exist in both languages."""
         de_readme = template_base_path / "de" / framework / "README.md"
         en_readme = template_base_path / "en" / framework / "README.md"
-        de_mapping = template_base_path / "de" / framework / "FRAMEWORK_MAPPING.md"
-        en_mapping = template_base_path / "en" / framework / "FRAMEWORK_MAPPING.md"
+        de_mapping = template_base_path / "de" / framework / "9999_Framework_Mapping.md"
+        en_mapping = template_base_path / "en" / framework / "9999_Framework_Mapping.md"
         
         if not (template_base_path / "de" / framework).exists():
             pytest.skip(f"{display_name} German templates not found")
@@ -95,8 +95,8 @@ class TestPhase2FilenameMatching:
         
         assert de_readme.exists(), f"{display_name}: German README should exist"
         assert en_readme.exists(), f"{display_name}: English README should exist"
-        assert de_mapping.exists(), f"{display_name}: German FRAMEWORK_MAPPING should exist"
-        assert en_mapping.exists(), f"{display_name}: English FRAMEWORK_MAPPING should exist"
+        assert de_mapping.exists(), f"{display_name}: German 9999_Framework_Mapping should exist"
+        assert en_mapping.exists(), f"{display_name}: English 9999_Framework_Mapping should exist"
 
 
 class TestPhase2SectionStructureMatching:
@@ -125,12 +125,12 @@ class TestPhase2SectionStructureMatching:
         # Get matching template pairs
         de_templates = {
             f.name: f for f in de_dir.glob("*.md")
-            if not f.name.startswith("0000_") and f.name != "README.md" and f.name != "FRAMEWORK_MAPPING.md"
+            if not f.name.startswith("0000_") and f.name != "README.md" and f.name != "9999_Framework_Mapping.md"
         }
         
         en_templates = {
             f.name: f for f in en_dir.glob("*.md")
-            if not f.name.startswith("0000_") and f.name != "README.md" and f.name != "FRAMEWORK_MAPPING.md"
+            if not f.name.startswith("0000_") and f.name != "README.md" and f.name != "9999_Framework_Mapping.md"
         }
         
         # Check first few matching templates
@@ -219,12 +219,12 @@ class TestPhase2PlaceholderLocationMatching:
         # Get matching template pairs
         de_templates = {
             f.name: f for f in de_dir.glob("*.md")
-            if not f.name.startswith("0000_") and f.name != "README.md" and f.name != "FRAMEWORK_MAPPING.md"
+            if not f.name.startswith("0000_") and f.name != "README.md" and f.name != "9999_Framework_Mapping.md"
         }
         
         en_templates = {
             f.name: f for f in en_dir.glob("*.md")
-            if not f.name.startswith("0000_") and f.name != "README.md" and f.name != "FRAMEWORK_MAPPING.md"
+            if not f.name.startswith("0000_") and f.name != "README.md" and f.name != "9999_Framework_Mapping.md"
         }
         
         # Check first few matching templates
@@ -332,15 +332,15 @@ class TestPhase2ComprehensiveBilingualConsistency:
             if not de_dir.exists() or not en_dir.exists():
                 continue
             
-            # Count content templates (excluding metadata, README, FRAMEWORK_MAPPING)
+            # Count content templates (excluding metadata, README, 9999_Framework_Mapping)
             de_count = len([
                 f for f in de_dir.glob("*.md")
-                if not f.name.startswith("0000_") and f.name != "README.md" and f.name != "FRAMEWORK_MAPPING.md"
+                if not f.name.startswith("0000_") and f.name != "README.md" and f.name != "9999_Framework_Mapping.md"
             ])
             
             en_count = len([
                 f for f in en_dir.glob("*.md")
-                if not f.name.startswith("0000_") and f.name != "README.md" and f.name != "FRAMEWORK_MAPPING.md"
+                if not f.name.startswith("0000_") and f.name != "README.md" and f.name != "9999_Framework_Mapping.md"
             ])
             
             assert de_count == en_count, \

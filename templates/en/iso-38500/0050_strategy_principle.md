@@ -59,6 +59,13 @@ The organization's IT strategy takes into account the current and future capabil
 | {{ meta.it_goal_2 }} | {{ meta.it_goal_2_desc }} | {{ meta.it_goal_2_timeline }} | {{ meta.cio }} |
 | {{ meta.it_goal_3 }} | {{ meta.it_goal_3_desc }} | {{ meta.it_goal_3_timeline }} | {{ meta.cio }} |
 
+### Strategy Implementation
+
+- Annual strategy planning
+- Quarterly strategy reviews
+- Adjustments as needed
+- Communication to all stakeholders
+
 ## Monitor
 
 ### Monitoring Measures

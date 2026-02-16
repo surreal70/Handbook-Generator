@@ -69,10 +69,10 @@ Dieses Dokument beschreibt den Implementierungsansatz zur Realisierung der Ziel-
 
 ---
 
-**Document History:**
+**Dokumenthistorie:**
 
-| Version | Date | Author | Changes |
+| Version | Datum | Autor | Änderungen |
 |---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
+| 0.1 | {{meta.document.last_updated}} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 <-  ( marked all subtasks complete End of template -->

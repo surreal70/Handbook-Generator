@@ -69,3 +69,9 @@ Dieses Dokument bildet die BCM Templates auf die ISO 22301:2019 und BSI-Standard
 | Version | Datum | Autor | Änderungen |
 |---------|-------|-------|------------|
 | 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
+
+## Versionshistorie
+
+| Version | Datum | Änderungen |
+|---------|-------|------------|
+| 0.1 | {{meta.document.last_updated}} | Initiale Erstellung |

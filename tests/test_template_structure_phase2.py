@@ -46,7 +46,7 @@ class TestPhase2TemplateHeaderParsing:
         # Get all content templates (excluding metadata and README)
         templates = sorted([
             f for f in framework_dir.glob("*.md")
-            if not f.name.startswith("0000_") and f.name != "README.md" and f.name != "FRAMEWORK_MAPPING.md"
+            if not f.name.startswith("0000_") and f.name != "README.md" and f.name != "9999_Framework_Mapping.md"
         ])
         
         assert len(templates) > 0, f"Should have {display_name} German templates"
@@ -78,7 +78,7 @@ class TestPhase2TemplateHeaderParsing:
         # Get all content templates (excluding metadata and README)
         templates = sorted([
             f for f in framework_dir.glob("*.md")
-            if not f.name.startswith("0000_") and f.name != "README.md" and f.name != "FRAMEWORK_MAPPING.md"
+            if not f.name.startswith("0000_") and f.name != "README.md" and f.name != "9999_Framework_Mapping.md"
         ])
         
         assert len(templates) > 0, f"Should have {display_name} English templates"
@@ -149,7 +149,7 @@ class TestPhase2MarkdownStructureValidation:
         
         templates = sorted([
             f for f in framework_dir.glob("*.md")
-            if not f.name.startswith("0000_") and f.name != "README.md" and f.name != "FRAMEWORK_MAPPING.md"
+            if not f.name.startswith("0000_") and f.name != "README.md" and f.name != "9999_Framework_Mapping.md"
         ])
         
         assert len(templates) > 0, f"Should have {display_name} German templates"
@@ -175,7 +175,7 @@ class TestPhase2MarkdownStructureValidation:
         
         templates = sorted([
             f for f in framework_dir.glob("*.md")
-            if not f.name.startswith("0000_") and f.name != "README.md" and f.name != "FRAMEWORK_MAPPING.md"
+            if not f.name.startswith("0000_") and f.name != "README.md" and f.name != "9999_Framework_Mapping.md"
         ])
         
         assert len(templates) > 0, f"Should have {display_name} English templates"

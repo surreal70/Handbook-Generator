@@ -483,9 +483,9 @@ class TestPhase2TemplateValidation:
                     f"README.md missing for {framework} ({language})"
                 
                 # Check for FRAMEWORK_MAPPING
-                mapping_file = base_dir / "FRAMEWORK_MAPPING.md"
+                mapping_file = base_dir / "9999_Framework_Mapping.md"
                 assert mapping_file.exists(), \
-                    f"FRAMEWORK_MAPPING.md missing for {framework} ({language})"
+                    f"9999_Framework_Mapping.md missing for {framework} ({language})"
                 
                 # Check for diagrams directory
                 diagrams_dir = base_dir / "diagrams"

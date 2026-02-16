@@ -96,3 +96,9 @@ Die Templates sind aligned mit folgenden CIS Benchmarks:
 | Version | Datum | Autor | Änderungen |
 |---------|-------|-------|------------|
 | 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
+
+## Versionshistorie
+
+| Version | Datum | Änderungen |
+|---------|-------|------------|
+| 0.1 | {{meta.document.last_updated}} | Initiale Erstellung |

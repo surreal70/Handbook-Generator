@@ -122,3 +122,9 @@ Use the CCM mappings to these standards to identify compliance overlaps.
 ## License
 
 These templates are intended for internal use within {{ source.organization_name }}.
+
+## Version History
+
+| Version | Date | Changes |
+|---------|------|---------|
+| 0.1 | {{meta.document.last_updated}} | Initial creation |

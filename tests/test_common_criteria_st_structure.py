@@ -26,12 +26,12 @@ class TestCommonCriteriaSTStructure:
         assert en_dir.exists(), "English Common Criteria template directory should exist"
     
     def test_common_criteria_framework_mapping_exists(self):
-        """Test that FRAMEWORK_MAPPING.md exists for Common Criteria."""
-        de_mapping = Path('templates/de/common-criteria/FRAMEWORK_MAPPING.md')
-        en_mapping = Path('templates/en/common-criteria/FRAMEWORK_MAPPING.md')
+        """Test that 9999_Framework_Mapping.md exists for Common Criteria."""
+        de_mapping = Path('templates/de/common-criteria/9999_Framework_Mapping.md')
+        en_mapping = Path('templates/en/common-criteria/9999_Framework_Mapping.md')
         
-        assert de_mapping.exists(), "German Common Criteria FRAMEWORK_MAPPING.md should exist"
-        assert en_mapping.exists(), "English Common Criteria FRAMEWORK_MAPPING.md should exist"
+        assert de_mapping.exists(), "German Common Criteria 9999_Framework_Mapping.md should exist"
+        assert en_mapping.exists(), "English Common Criteria 9999_Framework_Mapping.md should exist"
     
     def test_common_criteria_all_st_sections_covered(self):
         """
@@ -45,8 +45,8 @@ class TestCommonCriteriaSTStructure:
         5. Security Requirements (Section 8.5)
         6. TOE Summary Specification (Section 8.6)
         """
-        # Read FRAMEWORK_MAPPING.md to check coverage
-        mapping_file = Path('templates/en/common-criteria/FRAMEWORK_MAPPING.md')
+        # Read 9999_Framework_Mapping.md to check coverage
+        mapping_file = Path('templates/en/common-criteria/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         # Define all required ST sections from ISO/IEC 15408-1
@@ -62,11 +62,11 @@ class TestCommonCriteriaSTStructure:
         # Check that each ST section is mentioned in the mapping
         for section_name, section_ref in st_sections.items():
             assert section_name in mapping_content, \
-                f"{section_name} should be documented in FRAMEWORK_MAPPING.md"
+                f"{section_name} should be documented in 9999_Framework_Mapping.md"
             # Check for section reference (e.g., "8.1" or "Abschnitt 8.1")
             assert re.search(rf'(Section|Abschnitt)\s+{re.escape(section_ref.split()[-1])}', 
                            mapping_content, re.IGNORECASE), \
-                f"Section reference {section_ref} for {section_name} should be documented in FRAMEWORK_MAPPING.md"
+                f"Section reference {section_ref} for {section_name} should be documented in 9999_Framework_Mapping.md"
     
     def test_common_criteria_st_introduction_components(self):
         """
@@ -78,7 +78,7 @@ class TestCommonCriteriaSTStructure:
         - Conformance Claims (Section 8.1.3)
         - Document Conventions (Section 8.1.4)
         """
-        mapping_file = Path('templates/en/common-criteria/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/common-criteria/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         st_intro_components = [
@@ -90,9 +90,9 @@ class TestCommonCriteriaSTStructure:
         
         for component_name, section_ref in st_intro_components:
             assert component_name in mapping_content, \
-                f"ST Introduction component '{component_name}' should be documented in FRAMEWORK_MAPPING.md"
+                f"ST Introduction component '{component_name}' should be documented in 9999_Framework_Mapping.md"
             assert section_ref in mapping_content, \
-                f"Section reference {section_ref} for '{component_name}' should be documented in FRAMEWORK_MAPPING.md"
+                f"Section reference {section_ref} for '{component_name}' should be documented in 9999_Framework_Mapping.md"
     
     def test_common_criteria_toe_description_components(self):
         """
@@ -105,7 +105,7 @@ class TestCommonCriteriaSTStructure:
         - TOE Architecture (Section 8.2.4)
         - TOE Lifecycle (Section 8.2.5)
         """
-        mapping_file = Path('templates/en/common-criteria/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/common-criteria/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         toe_components = [
@@ -118,9 +118,9 @@ class TestCommonCriteriaSTStructure:
         
         for component_name, section_ref in toe_components:
             assert component_name in mapping_content, \
-                f"TOE Description component '{component_name}' should be documented in FRAMEWORK_MAPPING.md"
+                f"TOE Description component '{component_name}' should be documented in 9999_Framework_Mapping.md"
             assert section_ref in mapping_content, \
-                f"Section reference {section_ref} for '{component_name}' should be documented in FRAMEWORK_MAPPING.md"
+                f"Section reference {section_ref} for '{component_name}' should be documented in 9999_Framework_Mapping.md"
     
     def test_common_criteria_security_problem_definition_components(self):
         """
@@ -131,7 +131,7 @@ class TestCommonCriteriaSTStructure:
         - Organizational Security Policies (Section 8.3.2)
         - Assumptions (Section 8.3.3)
         """
-        mapping_file = Path('templates/en/common-criteria/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/common-criteria/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         security_problem_components = [
@@ -142,9 +142,9 @@ class TestCommonCriteriaSTStructure:
         
         for component_name, section_ref in security_problem_components:
             assert component_name in mapping_content, \
-                f"Security Problem Definition component '{component_name}' should be documented in FRAMEWORK_MAPPING.md"
+                f"Security Problem Definition component '{component_name}' should be documented in 9999_Framework_Mapping.md"
             assert section_ref in mapping_content, \
-                f"Section reference {section_ref} for '{component_name}' should be documented in FRAMEWORK_MAPPING.md"
+                f"Section reference {section_ref} for '{component_name}' should be documented in 9999_Framework_Mapping.md"
     
     def test_common_criteria_security_objectives_components(self):
         """
@@ -155,7 +155,7 @@ class TestCommonCriteriaSTStructure:
         - Security Objectives for Environment (Section 8.4.2)
         - Security Objectives Rationale (Section 8.4.3)
         """
-        mapping_file = Path('templates/en/common-criteria/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/common-criteria/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         objectives_components = [
@@ -165,9 +165,9 @@ class TestCommonCriteriaSTStructure:
         
         for component_name, section_ref in objectives_components:
             assert component_name in mapping_content, \
-                f"Security Objectives component '{component_name}' should be documented in FRAMEWORK_MAPPING.md"
+                f"Security Objectives component '{component_name}' should be documented in 9999_Framework_Mapping.md"
             assert section_ref in mapping_content, \
-                f"Section reference {section_ref} for '{component_name}' should be documented in FRAMEWORK_MAPPING.md"
+                f"Section reference {section_ref} for '{component_name}' should be documented in 9999_Framework_Mapping.md"
     
     def test_common_criteria_security_requirements_components(self):
         """
@@ -178,7 +178,7 @@ class TestCommonCriteriaSTStructure:
         - Security Assurance Requirements (SARs) (Section 8.5.2)
         - Security Requirements Rationale (Section 8.5.3)
         """
-        mapping_file = Path('templates/en/common-criteria/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/common-criteria/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         requirements_components = [
@@ -190,9 +190,9 @@ class TestCommonCriteriaSTStructure:
         
         for component_name, section_ref in requirements_components:
             assert component_name in mapping_content, \
-                f"Security Requirements component '{component_name}' should be documented in FRAMEWORK_MAPPING.md"
+                f"Security Requirements component '{component_name}' should be documented in 9999_Framework_Mapping.md"
             assert section_ref in mapping_content, \
-                f"Section reference {section_ref} for '{component_name}' should be documented in FRAMEWORK_MAPPING.md"
+                f"Section reference {section_ref} for '{component_name}' should be documented in 9999_Framework_Mapping.md"
     
     def test_common_criteria_toe_summary_specification_components(self):
         """
@@ -203,7 +203,7 @@ class TestCommonCriteriaSTStructure:
         - Assurance Measures (Section 8.6.2)
         - TSF Rationale (Section 8.6.3)
         """
-        mapping_file = Path('templates/en/common-criteria/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/common-criteria/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         tss_components = [
@@ -215,9 +215,9 @@ class TestCommonCriteriaSTStructure:
         
         for component_name, section_ref in tss_components:
             assert component_name in mapping_content, \
-                f"TOE Summary Specification component '{component_name}' should be documented in FRAMEWORK_MAPPING.md"
+                f"TOE Summary Specification component '{component_name}' should be documented in 9999_Framework_Mapping.md"
             assert section_ref in mapping_content, \
-                f"Section reference {section_ref} for '{component_name}' should be documented in FRAMEWORK_MAPPING.md"
+                f"Section reference {section_ref} for '{component_name}' should be documented in 9999_Framework_Mapping.md"
     
     @settings(max_examples=100)
     @given(
@@ -245,7 +245,7 @@ class TestCommonCriteriaSTStructure:
         6. TOE Summary Specification
         
         This property verifies that:
-        1. The FRAMEWORK_MAPPING.md file exists
+        1. The 9999_Framework_Mapping.md file exists
         2. Each ST section is documented in the mapping
         3. The mapping indicates which templates cover each section
         
@@ -256,10 +256,10 @@ class TestCommonCriteriaSTStructure:
         assert template_dir.exists(), \
             f"Common Criteria template directory should exist for language '{language}'"
         
-        # Check that FRAMEWORK_MAPPING.md exists
-        mapping_file = template_dir / 'FRAMEWORK_MAPPING.md'
+        # Check that 9999_Framework_Mapping.md exists
+        mapping_file = template_dir / '9999_Framework_Mapping.md'
         assert mapping_file.exists(), \
-            f"FRAMEWORK_MAPPING.md should exist in {template_dir}"
+            f"9999_Framework_Mapping.md should exist in {template_dir}"
         
         # Read mapping content
         mapping_content = mapping_file.read_text(encoding='utf-8')
@@ -277,7 +277,7 @@ class TestCommonCriteriaSTStructure:
         
         pattern = section_patterns[st_section]
         assert re.search(pattern, mapping_content, re.IGNORECASE), \
-            f"{st_section} should be documented in FRAMEWORK_MAPPING.md for language '{language}'"
+            f"{st_section} should be documented in 9999_Framework_Mapping.md for language '{language}'"
         
         # Additionally verify that the section has some content
         # Look for the section and check it has at least some text after it
@@ -295,10 +295,10 @@ class TestCommonCriteriaSTStructure:
         """
         Test that each ST section is mapped to specific templates.
         
-        This test verifies that the FRAMEWORK_MAPPING.md not only lists ST sections
+        This test verifies that the 9999_Framework_Mapping.md not only lists ST sections
         but also maps them to specific template files.
         """
-        mapping_file = Path('templates/en/common-criteria/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/common-criteria/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         # Define expected mappings based on current implementation
@@ -327,7 +327,7 @@ class TestCommonCriteriaSTStructure:
         """
         Test that template files actually exist for ST sections marked as covered.
         
-        This verifies that the FRAMEWORK_MAPPING.md accurately reflects the actual
+        This verifies that the 9999_Framework_Mapping.md accurately reflects the actual
         template files present in the directory.
         """
         template_dir = Path('templates/en/common-criteria')
@@ -385,10 +385,10 @@ class TestCommonCriteriaSTStructure:
         
         Validates: Requirements 5.1, 9.1, 9.2
         """
-        mapping_file = Path(f'templates/{language}/common-criteria/FRAMEWORK_MAPPING.md')
+        mapping_file = Path(f'templates/{language}/common-criteria/9999_Framework_Mapping.md')
         
         assert mapping_file.exists(), \
-            f"FRAMEWORK_MAPPING.md should exist for language '{language}'"
+            f"9999_Framework_Mapping.md should exist for language '{language}'"
         
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
@@ -406,7 +406,7 @@ class TestCommonCriteriaSTStructure:
             # Use flexible pattern to match both English and German
             pattern = rf'{st_section}|{st_section.replace(" ", "[\s-]?")}'
             assert re.search(pattern, mapping_content, re.IGNORECASE), \
-                f"{st_section} should be documented in {language} FRAMEWORK_MAPPING.md"
+                f"{st_section} should be documented in {language} 9999_Framework_Mapping.md"
     
     def test_common_criteria_iso_15408_references(self):
         """
@@ -417,7 +417,7 @@ class TestCommonCriteriaSTStructure:
         - ISO/IEC 15408-2: Security functional components
         - ISO/IEC 15408-3: Security assurance components
         """
-        mapping_file = Path('templates/en/common-criteria/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/common-criteria/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         iso_references = [
@@ -428,7 +428,7 @@ class TestCommonCriteriaSTStructure:
         
         for iso_ref in iso_references:
             assert iso_ref in mapping_content, \
-                f"ISO standard reference {iso_ref} should be documented in FRAMEWORK_MAPPING.md"
+                f"ISO standard reference {iso_ref} should be documented in 9999_Framework_Mapping.md"
     
     def test_common_criteria_eal_support(self):
         """
@@ -437,12 +437,12 @@ class TestCommonCriteriaSTStructure:
         Common Criteria defines seven EAL levels (EAL1-EAL7).
         The mapping should document support for all EAL levels.
         """
-        mapping_file = Path('templates/en/common-criteria/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/common-criteria/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         # Check for EAL references
         assert 'EAL' in mapping_content or 'Evaluation Assurance Level' in mapping_content, \
-            "Evaluation Assurance Levels should be documented in FRAMEWORK_MAPPING.md"
+            "Evaluation Assurance Levels should be documented in 9999_Framework_Mapping.md"
         
         # Check for at least some EAL levels
         eal_levels = ['EAL1', 'EAL2', 'EAL3', 'EAL4', 'EAL5', 'EAL6', 'EAL7']
@@ -458,14 +458,14 @@ class TestCommonCriteriaSTStructure:
         Security Functional Requirements (SFRs) and Security Assurance Requirements (SARs)
         are organized into classes. The mapping should reference these.
         """
-        mapping_file = Path('templates/en/common-criteria/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/common-criteria/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         # Check for SFR and SAR references
         assert 'SFR' in mapping_content or 'Security Functional Requirements' in mapping_content, \
-            "Security Functional Requirements should be documented in FRAMEWORK_MAPPING.md"
+            "Security Functional Requirements should be documented in 9999_Framework_Mapping.md"
         assert 'SAR' in mapping_content or 'Security Assurance Requirements' in mapping_content, \
-            "Security Assurance Requirements should be documented in FRAMEWORK_MAPPING.md"
+            "Security Assurance Requirements should be documented in 9999_Framework_Mapping.md"
     
     def test_common_criteria_coverage_matrices(self):
         """
@@ -476,7 +476,7 @@ class TestCommonCriteriaSTStructure:
         - Objectives/SFRs matrix
         - SFRs/TSFs matrix
         """
-        mapping_file = Path('templates/en/common-criteria/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/common-criteria/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         matrix_types = [
@@ -487,21 +487,21 @@ class TestCommonCriteriaSTStructure:
         
         for matrix_type in matrix_types:
             assert matrix_type in mapping_content, \
-                f"{matrix_type} should be documented in FRAMEWORK_MAPPING.md"
+                f"{matrix_type} should be documented in 9999_Framework_Mapping.md"
     
     def test_common_criteria_no_coverage_gaps(self):
         """
-        Test that no coverage gaps are identified in FRAMEWORK_MAPPING.md.
+        Test that no coverage gaps are identified in 9999_Framework_Mapping.md.
         
         According to the design, Common Criteria template set should provide
         comprehensive coverage with no identified gaps.
         """
-        mapping_file = Path('templates/en/common-criteria/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/common-criteria/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         # Look for coverage analysis section
         assert 'Coverage' in mapping_content or 'Abdeckung' in mapping_content, \
-            "FRAMEWORK_MAPPING.md should include coverage analysis"
+            "9999_Framework_Mapping.md should include coverage analysis"
         
         # Should indicate comprehensive coverage
         # Check for positive indicators rather than gaps
@@ -517,7 +517,7 @@ class TestCommonCriteriaSTStructure:
                               if indicator.lower() in mapping_content.lower())
         
         assert found_indicators >= 2, \
-            "FRAMEWORK_MAPPING.md should indicate comprehensive coverage"
+            "9999_Framework_Mapping.md should indicate comprehensive coverage"
     
     @settings(max_examples=50)
     @given(
@@ -555,7 +555,7 @@ class TestCommonCriteriaSTStructure:
         Common Criteria allows Security Targets to claim conformance to Protection Profiles.
         The template set should support PP conformance documentation.
         """
-        mapping_file = Path('templates/en/common-criteria/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/common-criteria/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         # Check for PP conformance references
@@ -567,5 +567,5 @@ class TestCommonCriteriaSTStructure:
         
         found_pp = any(indicator in mapping_content for indicator in pp_indicators)
         assert found_pp, \
-            "Protection Profile conformance should be documented in FRAMEWORK_MAPPING.md"
+            "Protection Profile conformance should be documented in 9999_Framework_Mapping.md"
 

@@ -25,12 +25,12 @@ class TestNIST80053ControlFamilyCoverage:
         assert en_dir.exists(), "English NIST 800-53 template directory should exist"
     
     def test_nist_800_53_framework_mapping_exists(self):
-        """Test that FRAMEWORK_MAPPING.md exists for NIST 800-53."""
-        de_mapping = Path('templates/de/nist-800-53/FRAMEWORK_MAPPING.md')
-        en_mapping = Path('templates/en/nist-800-53/FRAMEWORK_MAPPING.md')
+        """Test that 9999_Framework_Mapping.md exists for NIST 800-53."""
+        de_mapping = Path('templates/de/nist-800-53/9999_Framework_Mapping.md')
+        en_mapping = Path('templates/en/nist-800-53/9999_Framework_Mapping.md')
         
-        assert de_mapping.exists(), "German NIST 800-53 FRAMEWORK_MAPPING.md should exist"
-        assert en_mapping.exists(), "English NIST 800-53 FRAMEWORK_MAPPING.md should exist"
+        assert de_mapping.exists(), "German NIST 800-53 9999_Framework_Mapping.md should exist"
+        assert en_mapping.exists(), "English NIST 800-53 9999_Framework_Mapping.md should exist"
     
     def test_nist_800_53_all_20_control_families_covered(self):
         """
@@ -58,8 +58,8 @@ class TestNIST80053ControlFamilyCoverage:
         SR - Supply Chain Risk Management
         Privacy Controls (PT, AP, AR, DI, DM, IP, SE, TR, UL)
         """
-        # Read FRAMEWORK_MAPPING.md to check coverage
-        mapping_file = Path('templates/de/nist-800-53/FRAMEWORK_MAPPING.md')
+        # Read 9999_Framework_Mapping.md to check coverage
+        mapping_file = Path('templates/de/nist-800-53/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         # Define all 20 NIST 800-53 control families
@@ -95,7 +95,7 @@ class TestNIST80053ControlFamilyCoverage:
             else:
                 pattern = rf'###\s+\d+\.\s+{re.escape(family_name)}\s+\({family_id}\)'
             assert re.search(pattern, mapping_content), \
-                f"Control family {family_id} ({family_name}) should be documented in FRAMEWORK_MAPPING.md"
+                f"Control family {family_id} ({family_name}) should be documented in 9999_Framework_Mapping.md"
     
     @settings(max_examples=100)
     @given(
@@ -112,7 +112,7 @@ class TestNIST80053ControlFamilyCoverage:
         For any NIST 800-53 template set, templates must exist covering all 20 control families.
         
         This property verifies that:
-        1. The FRAMEWORK_MAPPING.md file exists
+        1. The 9999_Framework_Mapping.md file exists
         2. Each of the 20 control families is documented in the mapping
         3. The mapping indicates which templates cover each control family
         
@@ -123,10 +123,10 @@ class TestNIST80053ControlFamilyCoverage:
         assert template_dir.exists(), \
             f"NIST 800-53 template directory should exist for language '{language}'"
         
-        # Check that FRAMEWORK_MAPPING.md exists
-        mapping_file = template_dir / 'FRAMEWORK_MAPPING.md'
+        # Check that 9999_Framework_Mapping.md exists
+        mapping_file = template_dir / '9999_Framework_Mapping.md'
         assert mapping_file.exists(), \
-            f"FRAMEWORK_MAPPING.md should exist in {template_dir}"
+            f"9999_Framework_Mapping.md should exist in {template_dir}"
         
         # Read mapping content
         mapping_content = mapping_file.read_text(encoding='utf-8')
@@ -165,7 +165,7 @@ class TestNIST80053ControlFamilyCoverage:
         else:
             pattern = rf'###\s+\d+\.\s+{re.escape(family_name)}\s+\({control_family}\)'
         assert re.search(pattern, mapping_content), \
-            f"Control family {control_family} ({family_name}) should be documented in FRAMEWORK_MAPPING.md for language '{language}'"
+            f"Control family {control_family} ({family_name}) should be documented in 9999_Framework_Mapping.md for language '{language}'"
         
         # Additionally verify that the control family section has some content
         # (not just a header with no details)
@@ -186,10 +186,10 @@ class TestNIST80053ControlFamilyCoverage:
         """
         Test that each NIST 800-53 control family is mapped to specific templates.
         
-        This test verifies that the FRAMEWORK_MAPPING.md not only lists control families
+        This test verifies that the 9999_Framework_Mapping.md not only lists control families
         but also maps them to specific template files.
         """
-        mapping_file = Path('templates/de/nist-800-53/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/de/nist-800-53/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         # Define expected mappings based on current implementation
@@ -228,12 +228,12 @@ class TestNIST80053ControlFamilyCoverage:
     
     def test_nist_800_53_coverage_complete(self):
         """
-        Test that all control families show complete coverage in FRAMEWORK_MAPPING.md.
+        Test that all control families show complete coverage in 9999_Framework_Mapping.md.
         
         According to the implementation, all 20 control families have been fully covered
         with templates, so the mapping should show complete coverage with checkmarks.
         """
-        mapping_file = Path('templates/de/nist-800-53/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/de/nist-800-53/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         # All main control families (19 families + Privacy Controls section)
@@ -245,17 +245,17 @@ class TestNIST80053ControlFamilyCoverage:
         for family_id in main_families:
             family_section_pattern = rf'###\s+\d+\.\s+.*?\({family_id}\)'
             assert re.search(family_section_pattern, mapping_content), \
-                f"Control family {family_id} should be documented in FRAMEWORK_MAPPING.md"
+                f"Control family {family_id} should be documented in 9999_Framework_Mapping.md"
         
         # Check that Privacy Controls section exists (contains PT, AP, AR, DI, DM, IP, SE, TR, UL)
         assert re.search(r'###\s+\d+\.\s+Privacy Controls', mapping_content), \
-            "Privacy Controls section should be documented in FRAMEWORK_MAPPING.md"
+            "Privacy Controls section should be documented in 9999_Framework_Mapping.md"
     
     def test_nist_800_53_template_files_exist_for_covered_families(self):
         """
         Test that template files actually exist for control families marked as covered.
         
-        This verifies that the FRAMEWORK_MAPPING.md accurately reflects the actual
+        This verifies that the 9999_Framework_Mapping.md accurately reflects the actual
         template files present in the directory.
         """
         template_dir = Path('templates/de/nist-800-53')
@@ -293,10 +293,10 @@ class TestNIST80053ControlFamilyCoverage:
         
         Validates: Requirements 3.1, 9.1, 9.2
         """
-        mapping_file = Path(f'templates/{language}/nist-800-53/FRAMEWORK_MAPPING.md')
+        mapping_file = Path(f'templates/{language}/nist-800-53/9999_Framework_Mapping.md')
         
         assert mapping_file.exists(), \
-            f"FRAMEWORK_MAPPING.md should exist for language '{language}'"
+            f"9999_Framework_Mapping.md should exist for language '{language}'"
         
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
@@ -313,7 +313,7 @@ class TestNIST80053ControlFamilyCoverage:
             else:
                 pattern = rf'###\s+\d+\.\s+.*?\({family_id}\)'
             assert re.search(pattern, mapping_content), \
-                f"Control family {family_id} should be documented in {language} FRAMEWORK_MAPPING.md"
+                f"Control family {family_id} should be documented in {language} 9999_Framework_Mapping.md"
     
     def test_nist_800_53_foundation_templates_exist(self):
         """

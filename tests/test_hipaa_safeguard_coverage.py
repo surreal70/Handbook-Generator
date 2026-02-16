@@ -25,12 +25,12 @@ class TestHIPAASafeguardCoverage:
         assert en_dir.exists(), "English HIPAA template directory should exist"
     
     def test_hipaa_framework_mapping_exists(self):
-        """Test that FRAMEWORK_MAPPING.md exists for HIPAA."""
-        de_mapping = Path('templates/de/hipaa/FRAMEWORK_MAPPING.md')
-        en_mapping = Path('templates/en/hipaa/FRAMEWORK_MAPPING.md')
+        """Test that 9999_Framework_Mapping.md exists for HIPAA."""
+        de_mapping = Path('templates/de/hipaa/9999_Framework_Mapping.md')
+        en_mapping = Path('templates/en/hipaa/9999_Framework_Mapping.md')
         
-        assert de_mapping.exists(), "German HIPAA FRAMEWORK_MAPPING.md should exist"
-        assert en_mapping.exists(), "English HIPAA FRAMEWORK_MAPPING.md should exist"
+        assert de_mapping.exists(), "German HIPAA 9999_Framework_Mapping.md should exist"
+        assert en_mapping.exists(), "English HIPAA 9999_Framework_Mapping.md should exist"
     
     def test_hipaa_all_safeguards_covered(self):
         """
@@ -45,8 +45,8 @@ class TestHIPAASafeguardCoverage:
         4. Privacy Rule requirements (§164.500-534)
         5. Breach Notification Rule (§164.400-414)
         """
-        # Read FRAMEWORK_MAPPING.md to check coverage
-        mapping_file = Path('templates/en/hipaa/FRAMEWORK_MAPPING.md')
+        # Read 9999_Framework_Mapping.md to check coverage
+        mapping_file = Path('templates/en/hipaa/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         # Define all HIPAA safeguard categories
@@ -61,9 +61,9 @@ class TestHIPAASafeguardCoverage:
         # Check that each safeguard category is mentioned in the mapping
         for safeguard_name, section in safeguards.items():
             assert safeguard_name in mapping_content, \
-                f"{safeguard_name} should be documented in FRAMEWORK_MAPPING.md"
+                f"{safeguard_name} should be documented in 9999_Framework_Mapping.md"
             assert section in mapping_content, \
-                f"Section {section} for {safeguard_name} should be documented in FRAMEWORK_MAPPING.md"
+                f"Section {section} for {safeguard_name} should be documented in 9999_Framework_Mapping.md"
     
     def test_hipaa_administrative_safeguards_standards(self):
         """
@@ -80,7 +80,7 @@ class TestHIPAASafeguardCoverage:
         - Evaluation (§164.308(a)(8))
         - Business Associate Contracts (§164.308(b))
         """
-        mapping_file = Path('templates/en/hipaa/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/hipaa/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         admin_standards = [
@@ -97,7 +97,7 @@ class TestHIPAASafeguardCoverage:
         
         for standard in admin_standards:
             assert standard in mapping_content, \
-                f"Administrative Safeguard {standard} should be documented in FRAMEWORK_MAPPING.md"
+                f"Administrative Safeguard {standard} should be documented in 9999_Framework_Mapping.md"
     
     def test_hipaa_physical_safeguards_standards(self):
         """
@@ -109,7 +109,7 @@ class TestHIPAASafeguardCoverage:
         - Workstation Security (§164.310(c))
         - Device and Media Controls (§164.310(d)(1))
         """
-        mapping_file = Path('templates/en/hipaa/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/hipaa/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         physical_standards = [
@@ -121,7 +121,7 @@ class TestHIPAASafeguardCoverage:
         
         for standard in physical_standards:
             assert standard in mapping_content, \
-                f"Physical Safeguard {standard} should be documented in FRAMEWORK_MAPPING.md"
+                f"Physical Safeguard {standard} should be documented in 9999_Framework_Mapping.md"
     
     def test_hipaa_technical_safeguards_standards(self):
         """
@@ -134,7 +134,7 @@ class TestHIPAASafeguardCoverage:
         - Person or Entity Authentication (§164.312(d))
         - Transmission Security (§164.312(e)(1))
         """
-        mapping_file = Path('templates/en/hipaa/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/hipaa/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         technical_standards = [
@@ -147,7 +147,7 @@ class TestHIPAASafeguardCoverage:
         
         for standard in technical_standards:
             assert standard in mapping_content, \
-                f"Technical Safeguard {standard} should be documented in FRAMEWORK_MAPPING.md"
+                f"Technical Safeguard {standard} should be documented in 9999_Framework_Mapping.md"
     
     @settings(max_examples=100)
     @given(
@@ -162,7 +162,7 @@ class TestHIPAASafeguardCoverage:
         safeguards (Administrative, Physical, Technical) as required by HIPAA Security Rule.
         
         This property verifies that:
-        1. The FRAMEWORK_MAPPING.md file exists
+        1. The 9999_Framework_Mapping.md file exists
         2. Each safeguard type is documented in the mapping
         3. The mapping indicates which templates cover each safeguard
         
@@ -173,10 +173,10 @@ class TestHIPAASafeguardCoverage:
         assert template_dir.exists(), \
             f"HIPAA template directory should exist for language '{language}'"
         
-        # Check that FRAMEWORK_MAPPING.md exists
-        mapping_file = template_dir / 'FRAMEWORK_MAPPING.md'
+        # Check that 9999_Framework_Mapping.md exists
+        mapping_file = template_dir / '9999_Framework_Mapping.md'
         assert mapping_file.exists(), \
-            f"FRAMEWORK_MAPPING.md should exist in {template_dir}"
+            f"9999_Framework_Mapping.md should exist in {template_dir}"
         
         # Read mapping content
         mapping_content = mapping_file.read_text(encoding='utf-8')
@@ -190,7 +190,7 @@ class TestHIPAASafeguardCoverage:
         
         pattern = safeguard_patterns[safeguard_type]
         assert re.search(pattern, mapping_content, re.IGNORECASE), \
-            f"{safeguard_type} Safeguards should be documented in FRAMEWORK_MAPPING.md for language '{language}'"
+            f"{safeguard_type} Safeguards should be documented in 9999_Framework_Mapping.md for language '{language}'"
         
         # Additionally verify that the safeguard section has some content
         # Look for the safeguard section and check it has at least some text after it
@@ -208,10 +208,10 @@ class TestHIPAASafeguardCoverage:
         """
         Test that each HIPAA safeguard is mapped to specific templates.
         
-        This test verifies that the FRAMEWORK_MAPPING.md not only lists safeguards
+        This test verifies that the 9999_Framework_Mapping.md not only lists safeguards
         but also maps them to specific template files.
         """
-        mapping_file = Path('templates/en/hipaa/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/hipaa/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         # Define expected mappings based on current implementation
@@ -239,7 +239,7 @@ class TestHIPAASafeguardCoverage:
         """
         Test that template files actually exist for safeguards marked as covered.
         
-        This verifies that the FRAMEWORK_MAPPING.md accurately reflects the actual
+        This verifies that the 9999_Framework_Mapping.md accurately reflects the actual
         template files present in the directory.
         """
         template_dir = Path('templates/en/hipaa')
@@ -284,10 +284,10 @@ class TestHIPAASafeguardCoverage:
         
         Validates: Requirements 2.1, 9.1, 9.2
         """
-        mapping_file = Path(f'templates/{language}/hipaa/FRAMEWORK_MAPPING.md')
+        mapping_file = Path(f'templates/{language}/hipaa/9999_Framework_Mapping.md')
         
         assert mapping_file.exists(), \
-            f"FRAMEWORK_MAPPING.md should exist for language '{language}'"
+            f"9999_Framework_Mapping.md should exist for language '{language}'"
         
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
@@ -297,7 +297,7 @@ class TestHIPAASafeguardCoverage:
         for safeguard_type in safeguard_types:
             pattern = rf'{safeguard_type}\s+Safeguards'
             assert re.search(pattern, mapping_content, re.IGNORECASE), \
-                f"{safeguard_type} Safeguards should be documented in {language} FRAMEWORK_MAPPING.md"
+                f"{safeguard_type} Safeguards should be documented in {language} 9999_Framework_Mapping.md"
     
     def test_hipaa_privacy_rule_requirements(self):
         """
@@ -310,7 +310,7 @@ class TestHIPAASafeguardCoverage:
         - Accounting of Disclosures (§164.528)
         - Privacy Officer designation (§164.530(a)(1))
         """
-        mapping_file = Path('templates/en/hipaa/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/hipaa/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         privacy_requirements = [
@@ -323,7 +323,7 @@ class TestHIPAASafeguardCoverage:
         
         for requirement in privacy_requirements:
             assert requirement in mapping_content, \
-                f"Privacy Rule requirement {requirement} should be documented in FRAMEWORK_MAPPING.md"
+                f"Privacy Rule requirement {requirement} should be documented in 9999_Framework_Mapping.md"
     
     def test_hipaa_breach_notification_requirements(self):
         """
@@ -336,7 +336,7 @@ class TestHIPAASafeguardCoverage:
         - Notification to media (§164.406)
         - Business associate notification (§164.410)
         """
-        mapping_file = Path('templates/en/hipaa/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/hipaa/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         breach_requirements = [
@@ -349,7 +349,7 @@ class TestHIPAASafeguardCoverage:
         
         for requirement in breach_requirements:
             assert requirement in mapping_content, \
-                f"Breach Notification requirement {requirement} should be documented in FRAMEWORK_MAPPING.md"
+                f"Breach Notification requirement {requirement} should be documented in 9999_Framework_Mapping.md"
     
     def test_hipaa_required_vs_addressable_specifications(self):
         """
@@ -358,32 +358,32 @@ class TestHIPAASafeguardCoverage:
         HIPAA Security Rule has both Required and Addressable implementation specifications.
         The mapping should clearly indicate which is which.
         """
-        mapping_file = Path('templates/en/hipaa/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/hipaa/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         # Should contain indicators of Required vs Addressable
         assert 'Required' in mapping_content, \
-            "FRAMEWORK_MAPPING.md should indicate Required specifications"
+            "9999_Framework_Mapping.md should indicate Required specifications"
         assert 'Addressable' in mapping_content, \
-            "FRAMEWORK_MAPPING.md should indicate Addressable specifications"
+            "9999_Framework_Mapping.md should indicate Addressable specifications"
     
     def test_hipaa_no_coverage_gaps(self):
         """
-        Test that no coverage gaps are identified in FRAMEWORK_MAPPING.md.
+        Test that no coverage gaps are identified in 9999_Framework_Mapping.md.
         
         According to the design, HIPAA template set should provide comprehensive coverage
         with no identified gaps.
         """
-        mapping_file = Path('templates/en/hipaa/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/hipaa/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         # Look for coverage analysis section
         assert 'Coverage Analysis' in mapping_content or 'Comprehensive Coverage' in mapping_content, \
-            "FRAMEWORK_MAPPING.md should include coverage analysis"
+            "9999_Framework_Mapping.md should include coverage analysis"
         
         # Should indicate no gaps
         assert 'No Identified Gaps' in mapping_content or 'No gaps' in mapping_content, \
-            "FRAMEWORK_MAPPING.md should indicate no coverage gaps"
+            "9999_Framework_Mapping.md should indicate no coverage gaps"
     
     @settings(max_examples=50)
     @given(

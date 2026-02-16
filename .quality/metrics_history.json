@@ -1,0 +1,76 @@
+{
+  "runs": [
+    {
+      "timestamp": "2026-02-13T13:27:40.696939",
+      "framework_mapping_compliance": 100.0,
+      "version_history_compliance": 0.0,
+      "test_pass_rate": 89.47368421052632,
+      "bilingual_consistency_rate": 100.0,
+      "total_frameworks": 44,
+      "total_templates": 0,
+      "total_tests": 95,
+      "execution_duration": 3.412731170654297,
+      "overall_success": false
+    },
+    {
+      "timestamp": "2026-02-13T13:42:25.502974",
+      "framework_mapping_compliance": 100.0,
+      "version_history_compliance": 0.0,
+      "test_pass_rate": 89.83050847457628,
+      "bilingual_consistency_rate": 100.0,
+      "total_frameworks": 44,
+      "total_templates": 0,
+      "total_tests": 118,
+      "execution_duration": 23.98261570930481,
+      "overall_success": false
+    },
+    {
+      "timestamp": "2026-02-13T14:48:29.784808",
+      "framework_mapping_compliance": 100.0,
+      "version_history_compliance": 0.0,
+      "test_pass_rate": 91.25,
+      "bilingual_consistency_rate": 100.0,
+      "total_frameworks": 44,
+      "total_templates": 0,
+      "total_tests": 160,
+      "execution_duration": 24.001634120941162,
+      "overall_success": false
+    },
+    {
+      "timestamp": "2026-02-16T11:40:28.511288",
+      "framework_mapping_compliance": 100.0,
+      "version_history_compliance": 0.0,
+      "test_pass_rate": 91.25,
+      "bilingual_consistency_rate": 100.0,
+      "total_frameworks": 44,
+      "total_templates": 0,
+      "total_tests": 160,
+      "execution_duration": 27.799285650253296,
+      "overall_success": false
+    },
+    {
+      "timestamp": "2026-02-16T11:47:02.026398",
+      "framework_mapping_compliance": 100.0,
+      "version_history_compliance": 0.0,
+      "test_pass_rate": 91.25,
+      "bilingual_consistency_rate": 100.0,
+      "total_frameworks": 44,
+      "total_templates": 0,
+      "total_tests": 160,
+      "execution_duration": 29.338696002960205,
+      "overall_success": false
+    },
+    {
+      "timestamp": "2026-02-16T12:40:38.049356",
+      "framework_mapping_compliance": 100.0,
+      "version_history_compliance": 0.0,
+      "test_pass_rate": 95.15570934256056,
+      "bilingual_consistency_rate": 100.0,
+      "total_frameworks": 44,
+      "total_templates": 0,
+      "total_tests": 289,
+      "execution_duration": 29.894027709960938,
+      "overall_success": false
+    }
+  ]
+}

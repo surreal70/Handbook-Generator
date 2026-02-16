@@ -3,7 +3,7 @@
 <div align="center">
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
-[![Version](https://img.shields.io/badge/version-0.0.10-blue.svg)](about_versioning/VERSION.md)
+[![Version](https://img.shields.io/badge/version-0.0.11-orange.svg)](about_versioning/VERSION.md)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Code Coverage](https://img.shields.io/badge/coverage-84%25-brightgreen.svg)](htmlcov/index.html)
 [![Tests](https://img.shields.io/badge/tests-765%20passed-success.svg)](tests/)
@@ -21,11 +21,25 @@
 
 Ein Python-Tool zur Generierung professioneller Handbücher aus Markdown-Vorlagen mit Platzhalter-Ersetzung aus externen Datenquellen.
 
+## ⚠️ Wichtiger Hinweis
+
+**Dies ist eine Zwischen-Entwicklungsversion (0.0.11) und NICHT für den Produktiveinsatz bestimmt.**
+
+Diese Version enthält:
+- Experimentelles Quality Control System
+- Unvollständige Testabdeckung (95.2% Pass-Rate)
+- 10 bekannte Testfehler
+- Nur für Entwicklungszwecke
+
+**Bitte verwenden Sie Version 0.0.10 für den Produktiveinsatz.**
+
+Siehe [Release Notes](about_versioning/VERSION_0.0.11_RELEASE_NOTES.md) für Details.
+
 ## Überblick
 
 Der Handbuch-Generator erstellt aus strukturierten Markdown-Vorlagen professionelle Handbücher in verschiedenen Formaten (HTML, PDF, Markdown). Das System ersetzt Platzhalter in den Vorlagen durch echte Daten aus externen Systemen wie NetBox und unterstützt mehrsprachige Handbücher.
 
-**Version 0.0.10** - Phase 2 Completion - Seven New Frameworks + Quality Improvements
+**Version 0.0.11** - ⚠️ Intermediate Quality Control Release - NOT FOR PRODUCTION
 
 ## Features
 
@@ -1005,6 +1019,191 @@ black src/ tests/
 
 # Type-Checking
 mypy src/
+```
+
+## Quality Control System
+
+Das Projekt enthält ein umfassendes Quality Control System zur automatischen Validierung von Framework-Struktur, Template-Metadaten, Test-Ausführung und Code-Qualität. Das System stellt sicher, dass alle 22 Compliance-Frameworks konsistent strukturiert sind und alle 1.732+ Templates den Qualitätsstandards entsprechen.
+
+### Überblick
+
+Das Quality Control System führt vier Hauptprüfungen durch:
+
+1. **Framework Mapping Validation** - Stellt sicher, dass alle Framework-Verzeichnisse korrekt benannte Mapping-Dateien (`9999_Framework_Mapping.md`) enthalten
+2. **Version History Validation** - Verifiziert, dass alle Templates standardisierte Version History Sektionen enthalten
+3. **Test Suite Execution** - Führt die komplette Test-Suite (765+ Tests) aus und analysiert Fehler systematisch
+4. **Coverage Documentation** - Generiert automatisch umfassende Dokumentation aller unterstützten Frameworks mit Template-Zählungen und Bilingual-Konsistenz-Prüfung
+
+### Schnellstart
+
+```bash
+# Alle Qualitätsprüfungen ausführen
+./quality_control.py
+
+# Spezifische Prüfung ausführen
+./quality_control.py --check mapping      # Framework Mapping Validation
+./quality_control.py --check version      # Version History Validation
+./quality_control.py --check tests        # Test Suite Execution
+./quality_control.py --check coverage     # Coverage Documentation
+
+# Test-Kategorien ausführen
+./quality_control.py --check tests --test-category unit          # Unit Tests (Standard, ~23s)
+./quality_control.py --check tests --test-category integration   # Integration Tests (~3s)
+./quality_control.py --check tests --test-category property      # Property-Based Tests (~7s)
+./quality_control.py --check tests --test-category all           # Alle Tests (~5+ min)
+
+# Mit ausführlichem Logging
+./quality_control.py --verbose
+
+# Bericht in Datei speichern
+./quality_control.py --output quality_report.txt
+```
+
+**Test-Kategorien:**
+- `unit` - Schnelle, isolierte Unit Tests (Standard)
+- `integration` - Tests für Komponenten-Interaktion
+- `property` - Property-Based Tests mit Hypothesis
+- `slow` - Langlaufende Tests
+- `all` - Alle Tests (Unit, Integration, Property, Slow)
+
+Siehe [TEST_CATEGORIES.md](TEST_CATEGORIES.md) für Details zu Test-Kategorien.
+
+### Qualitätsmetriken und Trend-Tracking
+
+Das System verfolgt automatisch Qualitätsmetriken über Zeit und identifiziert Verbesserungen oder Regressionen:
+
+```bash
+# Qualitätsmetriken über Zeit verfolgen
+./quality_control.py --show-trends
+
+# Metriken exportieren (JSON/CSV)
+./quality_control.py --export-json metrics.json
+./quality_control.py --export-csv metrics.csv
+```
+
+**Verfolgte Metriken:**
+- **Framework Mapping Compliance Rate** - Prozentsatz der Frameworks mit korrekten Mapping-Dateien
+- **Version History Compliance Rate** - Prozentsatz der Templates mit gültiger Version History
+- **Test Pass Rate** - Prozentsatz der bestandenen Tests
+- **Bilingual Consistency Rate** - Prozentsatz der Frameworks mit identischen DE/EN Template-Zählungen
+
+**Metriken-Speicherung:**
+- Metriken werden in `.quality/metrics_history.json` gespeichert
+- Jeder Lauf wird mit Timestamp versehen
+- Trend-Analyse vergleicht aktuelle mit vorherigen Läufen
+- Verbesserungen und Regressionen werden automatisch identifiziert
+
+### Interaktiver Modus
+
+Der interaktive Modus ermöglicht die direkte Behandlung fehlgeschlagener Tests:
+
+```bash
+# Interaktive Behandlung fehlgeschlagener Tests
+./quality_control.py --interactive
+
+# Tasks für spätere Bearbeitung speichern
+./quality_control.py --interactive --save-tasks failed_tests.md
+```
+
+**Interaktive Optionen für jeden fehlgeschlagenen Test:**
+- **Fix now** - Sofortige Behebung mit Anleitung
+- **Create task for later** - Task-Eintrag für spätere Bearbeitung erstellen
+- **Skip** - Zum nächsten Test weitergehen
+- **View full error** - Vollständigen Error-Traceback anzeigen
+
+### Automatische Remediation-Vorschläge
+
+Das System generiert automatisch Vorschläge zur Behebung identifizierter Probleme:
+
+```bash
+# Automatische Vorschläge zur Fehlerbehebung anzeigen
+./quality_control.py --show-remediation
+
+# Remediation-Skript generieren
+./quality_control.py --generate-remediation-script fix_issues.sh
+```
+
+**Remediation-Kategorien:**
+- Fehlende Framework Mapping Dateien
+- Fehlende Version History Sektionen
+- Fehlende Template-Übersetzungen (DE/EN Inkonsistenzen)
+- Test-Fehler mit Lösungsvorschlägen
+
+### Detaillierte Dokumentation
+
+Vollständige Dokumentation des Quality Control Systems mit allen Features, Beispielen und Best Practices:
+
+📖 **[QUALITY_CONTROL_GUIDE.md](docs/QUALITY_CONTROL_GUIDE.md)** - Umfassender Leitfaden
+
+**Dokumentations-Inhalte:**
+- Detaillierte Beschreibung aller Validatoren
+- Verwendungsbeispiele für alle CLI-Optionen
+- Metriken-Interpretation und Trend-Analyse
+- Interaktiver Modus Workflow
+- Remediation-Strategien
+- CI/CD Integration-Beispiele
+- Troubleshooting und Best Practices
+
+### CI/CD Integration
+
+Das Quality Control System kann einfach in CI/CD-Pipelines integriert werden:
+
+```yaml
+# GitHub Actions Beispiel
+name: Quality Control
+on: [push, pull_request]
+
+jobs:
+  quality-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Run Quality Control
+        run: ./quality_control.py --verbose --output quality_report.txt
+      - name: Upload Quality Report
+        uses: actions/upload-artifact@v2
+        with:
+          name: quality-report
+          path: quality_report.txt
+```
+
+**CI/CD Best Practices:**
+- Führen Sie Quality Control bei jedem Push/PR aus
+- Speichern Sie Qualitätsberichte als Artifacts
+- Verwenden Sie `--verbose` für detailliertes Logging
+- Tracken Sie Metriken über Zeit mit `--export-json`
+- Blockieren Sie Merges bei kritischen Qualitätsproblemen
+
+### Verwendung im Entwicklungs-Workflow
+
+**Vor dem Commit:**
+```bash
+# Schnelle Validierung
+./quality_control.py --check mapping --check version
+```
+
+**Vor dem Release:**
+```bash
+# Vollständige Qualitätsprüfung
+./quality_control.py --verbose --output release_quality_report.txt
+```
+
+**Nach Template-Änderungen:**
+```bash
+# Version History und Bilingual Consistency prüfen
+./quality_control.py --check version --check coverage
+```
+
+**Bei Test-Fehlern:**
+```bash
+# Interaktive Fehlerbehandlung
+./quality_control.py --check tests --interactive
 ```
 
 ## Lizenz

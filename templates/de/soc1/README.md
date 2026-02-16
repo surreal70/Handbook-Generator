@@ -134,3 +134,9 @@ Diese Vorlagen sollten versioniert und bei Änderungen aktualisiert werden:
 ---
 
 **Hinweis**: Diese Vorlagen dienen als Ausgangspunkt. Passen Sie sie an Ihre spezifische Serviceorganisation, Services und Kontrollumgebung an.
+
+## Versionshistorie
+
+| Version | Datum | Änderungen |
+|---------|-------|------------|
+| 0.1 | {{meta.document.last_updated}} | Initiale Erstellung |

@@ -1,7 +1,12 @@
+---
+date: "{{ metadata.date }}"
+---
+
 # IDW PS 951 IT Audit Handbook
 
 **Document Metadata**
 
+- **Last Updated:** {{ metadata.date }}
 - **Created on:** {{ metadata.date }}
 - **Author:** {{ metadata.author }}
 - **Version:** {{ metadata.version }}

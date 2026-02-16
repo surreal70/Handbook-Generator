@@ -208,13 +208,13 @@ class TestNISTCSFBilingualTemplateConsistency:
         de_templates = set([
             f[:4] for f in os.listdir(de_dir)
             if f.endswith('.md') and f.startswith('0') and not f.startswith('0000')
-            and f not in ['README.md', 'FRAMEWORK_MAPPING.md']
+            and f not in ['README.md', '9999_Framework_Mapping.md']
         ])
         
         en_templates = set([
             f[:4] for f in os.listdir(en_dir)
             if f.endswith('.md') and f.startswith('0') and not f.startswith('0000')
-            and f not in ['README.md', 'FRAMEWORK_MAPPING.md']
+            and f not in ['README.md', '9999_Framework_Mapping.md']
         ])
         
         # Both languages should have the same template numbers
@@ -244,8 +244,8 @@ class TestNISTCSFBilingualTemplateConsistency:
         """
         de_readme = template_base_path / "de" / "nist-csf" / "README.md"
         en_readme = template_base_path / "en" / "nist-csf" / "README.md"
-        de_mapping = template_base_path / "de" / "nist-csf" / "FRAMEWORK_MAPPING.md"
-        en_mapping = template_base_path / "en" / "nist-csf" / "FRAMEWORK_MAPPING.md"
+        de_mapping = template_base_path / "de" / "nist-csf" / "9999_Framework_Mapping.md"
+        en_mapping = template_base_path / "en" / "nist-csf" / "9999_Framework_Mapping.md"
         
         assert de_readme.exists(), "German README should exist"
         assert en_readme.exists(), "English README should exist"
@@ -269,7 +269,7 @@ class TestNISTCSFBilingualTemplateConsistency:
             templates = [
                 f for f in os.listdir(nist_dir)
                 if f.endswith('.md') and f.startswith('0') and not f.startswith('0000')
-                and f not in ['README.md', 'FRAMEWORK_MAPPING.md']
+                and f not in ['README.md', '9999_Framework_Mapping.md']
             ]
             
             for template_file in templates:

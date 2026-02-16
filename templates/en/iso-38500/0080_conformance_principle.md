@@ -92,6 +92,14 @@ IT complies with all mandatory legislation and regulations. Policies and practic
 - Audit Findings: {{ meta.audit_findings }}
 - Policy Currency: {{ meta.policy_currency }}%
 
+### Compliance Dashboard
+
+| Requirement | Status | Last Audit | Next Audit |
+|-------------|--------|------------|------------|
+| GDPR | {{ meta.gdpr_status }} | {{ meta.gdpr_last_audit }} | {{ meta.gdpr_next_audit }} |
+| ISO 27001 | {{ meta.iso27001_status }} | {{ meta.iso27001_last_audit }} | {{ meta.iso27001_next_audit }} |
+| BSI Grundschutz | {{ meta.bsi_status }} | {{ meta.bsi_last_audit }} | {{ meta.bsi_next_audit }} |
+
 ## Document References
 
 - 0010_governance_framework.md

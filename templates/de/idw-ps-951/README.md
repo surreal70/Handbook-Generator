@@ -220,3 +220,9 @@ Diese Templates dienen als Orientierungshilfe und müssen an die spezifischen An
 **Template-Version:** 1.0  
 **Letzte Aktualisierung:** 2026-02-10  
 **Sprache:** Deutsch
+
+## Versionshistorie
+
+| Version | Datum | Änderungen |
+|---------|-------|------------|
+| 0.1 | {{meta.document.last_updated}} | Initiale Erstellung |

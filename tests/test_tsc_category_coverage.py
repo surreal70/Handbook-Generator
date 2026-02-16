@@ -25,12 +25,12 @@ class TestTSCCategoryCoverage:
         assert en_dir.exists(), "English TSC template directory should exist"
     
     def test_tsc_framework_mapping_exists(self):
-        """Test that FRAMEWORK_MAPPING.md exists for TSC."""
-        de_mapping = Path('templates/de/tsc/FRAMEWORK_MAPPING.md')
-        en_mapping = Path('templates/en/tsc/FRAMEWORK_MAPPING.md')
+        """Test that 9999_Framework_Mapping.md exists for TSC."""
+        de_mapping = Path('templates/de/tsc/9999_Framework_Mapping.md')
+        en_mapping = Path('templates/en/tsc/9999_Framework_Mapping.md')
         
-        assert de_mapping.exists(), "German TSC FRAMEWORK_MAPPING.md should exist"
-        assert en_mapping.exists(), "English TSC FRAMEWORK_MAPPING.md should exist"
+        assert de_mapping.exists(), "German TSC 9999_Framework_Mapping.md should exist"
+        assert en_mapping.exists(), "English TSC 9999_Framework_Mapping.md should exist"
     
     def test_tsc_all_categories_covered(self):
         """
@@ -43,8 +43,8 @@ class TestTSCCategoryCoverage:
         - Confidentiality (C) - Optional
         - Privacy (P) - Optional
         """
-        # Read FRAMEWORK_MAPPING.md to check coverage
-        mapping_file = Path('templates/de/tsc/FRAMEWORK_MAPPING.md')
+        # Read 9999_Framework_Mapping.md to check coverage
+        mapping_file = Path('templates/de/tsc/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         # Define all TSC categories
@@ -61,7 +61,7 @@ class TestTSCCategoryCoverage:
             # Look for "### Category Name (ID)" pattern
             pattern = rf'###\s+{re.escape(category_name)}\s+\({category_id}\)'
             assert re.search(pattern, mapping_content), \
-                f"TSC category {category_id} ({category_name}) should be documented in FRAMEWORK_MAPPING.md"
+                f"TSC category {category_id} ({category_name}) should be documented in 9999_Framework_Mapping.md"
     
     def test_tsc_common_criteria_coverage(self):
         """
@@ -78,7 +78,7 @@ class TestTSCCategoryCoverage:
         CC8 - Change Management
         CC9 - Risk Mitigation
         """
-        mapping_file = Path('templates/de/tsc/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/de/tsc/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         common_criteria = {
@@ -97,7 +97,7 @@ class TestTSCCategoryCoverage:
             # Look for "**CCN: Name**" pattern
             pattern = rf'\*\*{cc_id}:.*?\*\*'
             assert re.search(pattern, mapping_content), \
-                f"Common Criterion {cc_id} ({cc_name}) should be documented in FRAMEWORK_MAPPING.md"
+                f"Common Criterion {cc_id} ({cc_name}) should be documented in 9999_Framework_Mapping.md"
     
     @settings(max_examples=100)
     @given(
@@ -111,7 +111,7 @@ class TestTSCCategoryCoverage:
         For any TSC template set, templates must exist covering all 5 Trust Services Categories.
         
         This property verifies that:
-        1. The FRAMEWORK_MAPPING.md file exists
+        1. The 9999_Framework_Mapping.md file exists
         2. Each of the 5 TSC categories is documented in the mapping
         3. The mapping indicates which templates cover each category
         
@@ -122,10 +122,10 @@ class TestTSCCategoryCoverage:
         assert template_dir.exists(), \
             f"TSC template directory should exist for language '{language}'"
         
-        # Check that FRAMEWORK_MAPPING.md exists
-        mapping_file = template_dir / 'FRAMEWORK_MAPPING.md'
+        # Check that 9999_Framework_Mapping.md exists
+        mapping_file = template_dir / '9999_Framework_Mapping.md'
         assert mapping_file.exists(), \
-            f"FRAMEWORK_MAPPING.md should exist in {template_dir}"
+            f"9999_Framework_Mapping.md should exist in {template_dir}"
         
         # Read mapping content
         mapping_content = mapping_file.read_text(encoding='utf-8')
@@ -145,7 +145,7 @@ class TestTSCCategoryCoverage:
         # Look for "### Category Name (ID)" pattern
         pattern = rf'###\s+{re.escape(category_name)}\s+\({category}\)'
         assert re.search(pattern, mapping_content), \
-            f"TSC category {category} ({category_name}) should be documented in FRAMEWORK_MAPPING.md for language '{language}'"
+            f"TSC category {category} ({category_name}) should be documented in 9999_Framework_Mapping.md for language '{language}'"
         
         # Additionally verify that the category section has some content
         # (not just a header with no details)
@@ -163,10 +163,10 @@ class TestTSCCategoryCoverage:
         """
         Test that each TSC category is mapped to specific templates.
         
-        This test verifies that the FRAMEWORK_MAPPING.md not only lists categories
+        This test verifies that the 9999_Framework_Mapping.md not only lists categories
         but also maps them to specific template files.
         """
-        mapping_file = Path('templates/de/tsc/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/de/tsc/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         # Define expected mappings based on current implementation
@@ -199,17 +199,17 @@ class TestTSCCategoryCoverage:
     
     def test_tsc_coverage_analysis_documented(self):
         """
-        Test that coverage analysis is documented in FRAMEWORK_MAPPING.md.
+        Test that coverage analysis is documented in 9999_Framework_Mapping.md.
         
         The mapping should include a coverage analysis section showing 100% coverage
         for all categories.
         """
-        mapping_file = Path('templates/de/tsc/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/de/tsc/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         # Check for coverage analysis section
         assert '## Coverage Analysis' in mapping_content or '## Abdeckungsanalyse' in mapping_content, \
-            "FRAMEWORK_MAPPING.md should include a coverage analysis section"
+            "9999_Framework_Mapping.md should include a coverage analysis section"
         
         # Check that 100% coverage is documented
         assert '100% Coverage' in mapping_content or '100% Abdeckung' in mapping_content, \
@@ -219,7 +219,7 @@ class TestTSCCategoryCoverage:
         """
         Test that template files actually exist for all TSC categories.
         
-        This verifies that the FRAMEWORK_MAPPING.md accurately reflects the actual
+        This verifies that the 9999_Framework_Mapping.md accurately reflects the actual
         template files present in the directory.
         """
         template_dir = Path('templates/de/tsc')
@@ -259,10 +259,10 @@ class TestTSCCategoryCoverage:
         
         Validates: Requirements 4.1, 9.1, 9.2
         """
-        mapping_file = Path(f'templates/{language}/tsc/FRAMEWORK_MAPPING.md')
+        mapping_file = Path(f'templates/{language}/tsc/9999_Framework_Mapping.md')
         
         assert mapping_file.exists(), \
-            f"FRAMEWORK_MAPPING.md should exist for language '{language}'"
+            f"9999_Framework_Mapping.md should exist for language '{language}'"
         
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
@@ -273,7 +273,7 @@ class TestTSCCategoryCoverage:
             # Look for category documentation
             pattern = rf'###\s+.*?\({category_id}\)'
             assert re.search(pattern, mapping_content), \
-                f"TSC category {category_id} should be documented in {language} FRAMEWORK_MAPPING.md"
+                f"TSC category {category_id} should be documented in {language} 9999_Framework_Mapping.md"
     
     def test_tsc_foundation_templates_exist(self):
         """

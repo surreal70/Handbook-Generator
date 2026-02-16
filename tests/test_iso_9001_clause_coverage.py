@@ -25,12 +25,12 @@ class TestISO9001ClauseCoverage:
         assert en_dir.exists(), "English ISO 9001 template directory should exist"
     
     def test_iso_9001_framework_mapping_exists(self):
-        """Test that FRAMEWORK_MAPPING.md exists for ISO 9001."""
-        de_mapping = Path('templates/de/iso-9001/FRAMEWORK_MAPPING.md')
-        en_mapping = Path('templates/en/iso-9001/FRAMEWORK_MAPPING.md')
+        """Test that 9999_Framework_Mapping.md exists for ISO 9001."""
+        de_mapping = Path('templates/de/iso-9001/9999_Framework_Mapping.md')
+        en_mapping = Path('templates/en/iso-9001/9999_Framework_Mapping.md')
         
-        assert de_mapping.exists(), "German ISO 9001 FRAMEWORK_MAPPING.md should exist"
-        assert en_mapping.exists(), "English ISO 9001 FRAMEWORK_MAPPING.md should exist"
+        assert de_mapping.exists(), "German ISO 9001 9999_Framework_Mapping.md should exist"
+        assert en_mapping.exists(), "English ISO 9001 9999_Framework_Mapping.md should exist"
     
     def test_iso_9001_all_clauses_covered(self):
         """
@@ -45,8 +45,8 @@ class TestISO9001ClauseCoverage:
         - Clause 9: Performance Evaluation
         - Clause 10: Improvement
         """
-        # Read FRAMEWORK_MAPPING.md to check coverage
-        mapping_file = Path('templates/en/iso-9001/FRAMEWORK_MAPPING.md')
+        # Read 9999_Framework_Mapping.md to check coverage
+        mapping_file = Path('templates/en/iso-9001/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         # Define all ISO 9001 clauses (4-10)
@@ -65,7 +65,7 @@ class TestISO9001ClauseCoverage:
             # Look for "### Clause N:" or "Clause N:" pattern
             pattern = rf'###\s+Clause\s+{clause_num}[:\s]'
             assert re.search(pattern, mapping_content), \
-                f"Clause {clause_num} ({clause_name}) should be documented in FRAMEWORK_MAPPING.md"
+                f"Clause {clause_num} ({clause_name}) should be documented in 9999_Framework_Mapping.md"
     
     def test_iso_9001_clause_4_components(self):
         """
@@ -77,7 +77,7 @@ class TestISO9001ClauseCoverage:
         - 4.3 Determining the scope of the QMS
         - 4.4 Quality management system and its processes
         """
-        mapping_file = Path('templates/en/iso-9001/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/iso-9001/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         clause_4_components = [
@@ -89,7 +89,7 @@ class TestISO9001ClauseCoverage:
         
         for component in clause_4_components:
             assert component in mapping_content, \
-                f"Clause 4 component {component} should be documented in FRAMEWORK_MAPPING.md"
+                f"Clause 4 component {component} should be documented in 9999_Framework_Mapping.md"
     
     def test_iso_9001_clause_5_components(self):
         """
@@ -100,7 +100,7 @@ class TestISO9001ClauseCoverage:
         - 5.2 Policy
         - 5.3 Organizational roles, responsibilities and authorities
         """
-        mapping_file = Path('templates/en/iso-9001/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/iso-9001/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         clause_5_components = [
@@ -111,7 +111,7 @@ class TestISO9001ClauseCoverage:
         
         for component in clause_5_components:
             assert component in mapping_content, \
-                f"Clause 5 component {component} should be documented in FRAMEWORK_MAPPING.md"
+                f"Clause 5 component {component} should be documented in 9999_Framework_Mapping.md"
     
     def test_iso_9001_clause_6_components(self):
         """
@@ -122,7 +122,7 @@ class TestISO9001ClauseCoverage:
         - 6.2 Quality objectives and planning to achieve them
         - 6.3 Planning of changes
         """
-        mapping_file = Path('templates/en/iso-9001/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/iso-9001/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         clause_6_components = [
@@ -133,7 +133,7 @@ class TestISO9001ClauseCoverage:
         
         for component in clause_6_components:
             assert component in mapping_content, \
-                f"Clause 6 component {component} should be documented in FRAMEWORK_MAPPING.md"
+                f"Clause 6 component {component} should be documented in 9999_Framework_Mapping.md"
     
     def test_iso_9001_clause_7_components(self):
         """
@@ -146,7 +146,7 @@ class TestISO9001ClauseCoverage:
         - 7.4 Communication
         - 7.5 Documented information
         """
-        mapping_file = Path('templates/en/iso-9001/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/iso-9001/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         clause_7_components = [
@@ -159,7 +159,7 @@ class TestISO9001ClauseCoverage:
         
         for component in clause_7_components:
             assert component in mapping_content, \
-                f"Clause 7 component {component} should be documented in FRAMEWORK_MAPPING.md"
+                f"Clause 7 component {component} should be documented in 9999_Framework_Mapping.md"
     
     def test_iso_9001_clause_8_components(self):
         """
@@ -174,7 +174,7 @@ class TestISO9001ClauseCoverage:
         - 8.6 Release of products and services
         - 8.7 Control of nonconforming outputs
         """
-        mapping_file = Path('templates/en/iso-9001/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/iso-9001/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         clause_8_components = [
@@ -189,7 +189,7 @@ class TestISO9001ClauseCoverage:
         
         for component in clause_8_components:
             assert component in mapping_content, \
-                f"Clause 8 component {component} should be documented in FRAMEWORK_MAPPING.md"
+                f"Clause 8 component {component} should be documented in 9999_Framework_Mapping.md"
     
     def test_iso_9001_clause_9_components(self):
         """
@@ -200,7 +200,7 @@ class TestISO9001ClauseCoverage:
         - 9.2 Internal audit
         - 9.3 Management review
         """
-        mapping_file = Path('templates/en/iso-9001/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/iso-9001/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         clause_9_components = [
@@ -211,7 +211,7 @@ class TestISO9001ClauseCoverage:
         
         for component in clause_9_components:
             assert component in mapping_content, \
-                f"Clause 9 component {component} should be documented in FRAMEWORK_MAPPING.md"
+                f"Clause 9 component {component} should be documented in 9999_Framework_Mapping.md"
     
     def test_iso_9001_clause_10_components(self):
         """
@@ -222,7 +222,7 @@ class TestISO9001ClauseCoverage:
         - 10.2 Nonconformity and corrective action
         - 10.3 Continual improvement
         """
-        mapping_file = Path('templates/en/iso-9001/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/iso-9001/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         clause_10_components = [
@@ -233,7 +233,7 @@ class TestISO9001ClauseCoverage:
         
         for component in clause_10_components:
             assert component in mapping_content, \
-                f"Clause 10 component {component} should be documented in FRAMEWORK_MAPPING.md"
+                f"Clause 10 component {component} should be documented in 9999_Framework_Mapping.md"
     
     @settings(max_examples=100)
     @given(
@@ -248,7 +248,7 @@ class TestISO9001ClauseCoverage:
         (Context, Leadership, Planning, Support, Operation, Performance Evaluation, Improvement).
         
         This property verifies that:
-        1. The FRAMEWORK_MAPPING.md file exists
+        1. The 9999_Framework_Mapping.md file exists
         2. Each of the 7 main clauses (4-10) is documented in the mapping
         3. The mapping indicates which templates cover each clause
         
@@ -259,10 +259,10 @@ class TestISO9001ClauseCoverage:
         assert template_dir.exists(), \
             f"ISO 9001 template directory should exist for language '{language}'"
         
-        # Check that FRAMEWORK_MAPPING.md exists
-        mapping_file = template_dir / 'FRAMEWORK_MAPPING.md'
+        # Check that 9999_Framework_Mapping.md exists
+        mapping_file = template_dir / '9999_Framework_Mapping.md'
         assert mapping_file.exists(), \
-            f"FRAMEWORK_MAPPING.md should exist in {template_dir}"
+            f"9999_Framework_Mapping.md should exist in {template_dir}"
         
         # Read mapping content
         mapping_content = mapping_file.read_text(encoding='utf-8')
@@ -275,7 +275,7 @@ class TestISO9001ClauseCoverage:
             pattern = rf'###\s+Clause\s+{clause_number}[:\s]'
         
         assert re.search(pattern, mapping_content), \
-            f"Clause {clause_number} should be documented in FRAMEWORK_MAPPING.md for language '{language}'"
+            f"Clause {clause_number} should be documented in 9999_Framework_Mapping.md for language '{language}'"
         
         # Additionally verify that the clause section has some content
         # (not just a header with no details)
@@ -297,10 +297,10 @@ class TestISO9001ClauseCoverage:
         """
         Test that each ISO 9001 clause is mapped to specific templates.
         
-        This test verifies that the FRAMEWORK_MAPPING.md not only lists clauses
+        This test verifies that the 9999_Framework_Mapping.md not only lists clauses
         but also maps them to specific template files.
         """
-        mapping_file = Path('templates/en/iso-9001/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/iso-9001/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         # Define expected mappings based on current implementation
@@ -335,17 +335,17 @@ class TestISO9001ClauseCoverage:
     
     def test_iso_9001_coverage_analysis_documented(self):
         """
-        Test that coverage analysis is documented in FRAMEWORK_MAPPING.md.
+        Test that coverage analysis is documented in 9999_Framework_Mapping.md.
         
         The mapping should include a coverage analysis section showing complete coverage
         for all clauses.
         """
-        mapping_file = Path('templates/en/iso-9001/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/iso-9001/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         # Check for coverage analysis section
         assert '## Coverage Analysis' in mapping_content or '## Abdeckungsanalyse' in mapping_content, \
-            "FRAMEWORK_MAPPING.md should include a coverage analysis section"
+            "9999_Framework_Mapping.md should include a coverage analysis section"
         
         # Check that complete coverage is documented
         assert 'Complete Coverage' in mapping_content or 'Fully covered' in mapping_content or 'Vollständig' in mapping_content, \
@@ -355,7 +355,7 @@ class TestISO9001ClauseCoverage:
         """
         Test that template files actually exist for clauses marked as covered.
         
-        This verifies that the FRAMEWORK_MAPPING.md accurately reflects the actual
+        This verifies that the 9999_Framework_Mapping.md accurately reflects the actual
         template files present in the directory.
         """
         template_dir = Path('templates/en/iso-9001')
@@ -422,10 +422,10 @@ class TestISO9001ClauseCoverage:
         
         Validates: Requirements 6.1, 9.1, 9.2
         """
-        mapping_file = Path(f'templates/{language}/iso-9001/FRAMEWORK_MAPPING.md')
+        mapping_file = Path(f'templates/{language}/iso-9001/9999_Framework_Mapping.md')
         
         assert mapping_file.exists(), \
-            f"FRAMEWORK_MAPPING.md should exist for language '{language}'"
+            f"9999_Framework_Mapping.md should exist for language '{language}'"
         
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
@@ -438,25 +438,25 @@ class TestISO9001ClauseCoverage:
                 pattern = rf'###\s+Clause\s+{clause_num}[:\s]'
             
             assert re.search(pattern, mapping_content), \
-                f"Clause {clause_num} should be documented in {language} FRAMEWORK_MAPPING.md"
+                f"Clause {clause_num} should be documented in {language} 9999_Framework_Mapping.md"
     
     def test_iso_9001_no_coverage_gaps(self):
         """
-        Test that no coverage gaps are identified in FRAMEWORK_MAPPING.md.
+        Test that no coverage gaps are identified in 9999_Framework_Mapping.md.
         
         According to the design, ISO 9001 template set should provide comprehensive
         coverage with no identified gaps.
         """
-        mapping_file = Path('templates/en/iso-9001/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/iso-9001/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         # Look for coverage gaps section
         assert 'Coverage Gaps' in mapping_content or 'Lücken' in mapping_content, \
-            "FRAMEWORK_MAPPING.md should include coverage gaps section"
+            "9999_Framework_Mapping.md should include coverage gaps section"
         
         # Should indicate no gaps
         assert 'No gaps identified' in mapping_content or 'Keine Lücken' in mapping_content, \
-            "FRAMEWORK_MAPPING.md should indicate no coverage gaps"
+            "9999_Framework_Mapping.md should indicate no coverage gaps"
     
     def test_iso_9001_foundation_templates_exist(self):
         """
@@ -521,12 +521,12 @@ class TestISO9001ClauseCoverage:
         ISO 9001:2015 follows the HLS common to all ISO management system standards.
         The mapping should reference this structure.
         """
-        mapping_file = Path('templates/en/iso-9001/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/iso-9001/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         # Check for HLS references
         assert 'High-Level Structure' in mapping_content or 'HLS' in mapping_content, \
-            "High-Level Structure should be documented in FRAMEWORK_MAPPING.md"
+            "High-Level Structure should be documented in 9999_Framework_Mapping.md"
     
     def test_iso_9001_pdca_cycle_support(self):
         """
@@ -534,7 +534,7 @@ class TestISO9001ClauseCoverage:
         
         ISO 9001 is based on the PDCA cycle. The template structure should support this.
         """
-        mapping_file = Path('templates/en/iso-9001/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/iso-9001/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         # Check for PDCA references or the cycle components
@@ -556,7 +556,7 @@ class TestISO9001ClauseCoverage:
         ISO 9001 requires a process approach to quality management.
         The templates should support process documentation.
         """
-        mapping_file = Path('templates/en/iso-9001/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/iso-9001/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         # Check for process-related references
@@ -570,7 +570,7 @@ class TestISO9001ClauseCoverage:
                               if indicator in mapping_content)
         
         assert found_indicators >= 2, \
-            "Process approach should be documented in FRAMEWORK_MAPPING.md"
+            "Process approach should be documented in 9999_Framework_Mapping.md"
     
     def test_iso_9001_risk_based_thinking_support(self):
         """
@@ -579,7 +579,7 @@ class TestISO9001ClauseCoverage:
         ISO 9001:2015 emphasizes risk-based thinking throughout the QMS.
         The templates should support risk assessment and management.
         """
-        mapping_file = Path('templates/en/iso-9001/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/iso-9001/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         # Check for risk-related references
@@ -594,7 +594,7 @@ class TestISO9001ClauseCoverage:
                               if indicator in mapping_content)
         
         assert found_indicators >= 2, \
-            "Risk-based thinking should be documented in FRAMEWORK_MAPPING.md"
+            "Risk-based thinking should be documented in 9999_Framework_Mapping.md"
     
     @settings(max_examples=50)
     @given(
@@ -632,7 +632,7 @@ class TestISO9001ClauseCoverage:
         Customer focus is a key principle of ISO 9001. The templates should
         support customer requirements and satisfaction measurement.
         """
-        mapping_file = Path('templates/en/iso-9001/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/iso-9001/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         # Check for customer-related references
@@ -646,7 +646,7 @@ class TestISO9001ClauseCoverage:
                               if indicator in mapping_content)
         
         assert found_indicators >= 2, \
-            "Customer focus should be documented in FRAMEWORK_MAPPING.md"
+            "Customer focus should be documented in 9999_Framework_Mapping.md"
     
     def test_iso_9001_continual_improvement_documented(self):
         """
@@ -655,7 +655,7 @@ class TestISO9001ClauseCoverage:
         Continual improvement is a fundamental principle of ISO 9001.
         Clause 10 specifically addresses improvement.
         """
-        mapping_file = Path('templates/en/iso-9001/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/en/iso-9001/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         # Check for improvement-related references
@@ -670,4 +670,4 @@ class TestISO9001ClauseCoverage:
                               if indicator in mapping_content)
         
         assert found_indicators >= 2, \
-            "Continual improvement should be documented in FRAMEWORK_MAPPING.md"
+            "Continual improvement should be documented in 9999_Framework_Mapping.md"

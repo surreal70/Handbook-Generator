@@ -25,12 +25,12 @@ class TestPCIDSSRequirementCoverage:
         assert en_dir.exists(), "English PCI-DSS template directory should exist"
     
     def test_pci_dss_framework_mapping_exists(self):
-        """Test that FRAMEWORK_MAPPING.md exists for PCI-DSS."""
-        de_mapping = Path('templates/de/pci-dss/FRAMEWORK_MAPPING.md')
-        en_mapping = Path('templates/en/pci-dss/FRAMEWORK_MAPPING.md')
+        """Test that 9999_Framework_Mapping.md exists for PCI-DSS."""
+        de_mapping = Path('templates/de/pci-dss/9999_Framework_Mapping.md')
+        en_mapping = Path('templates/en/pci-dss/9999_Framework_Mapping.md')
         
-        assert de_mapping.exists(), "German PCI-DSS FRAMEWORK_MAPPING.md should exist"
-        assert en_mapping.exists(), "English PCI-DSS FRAMEWORK_MAPPING.md should exist"
+        assert de_mapping.exists(), "German PCI-DSS 9999_Framework_Mapping.md should exist"
+        assert en_mapping.exists(), "English PCI-DSS 9999_Framework_Mapping.md should exist"
     
     def test_pci_dss_all_12_requirements_covered(self):
         """
@@ -50,8 +50,8 @@ class TestPCIDSSRequirementCoverage:
         11. Test Security of Systems and Networks Regularly
         12. Support Information Security with Organizational Policies and Programs
         """
-        # Read FRAMEWORK_MAPPING.md to check coverage
-        mapping_file = Path('templates/de/pci-dss/FRAMEWORK_MAPPING.md')
+        # Read 9999_Framework_Mapping.md to check coverage
+        mapping_file = Path('templates/de/pci-dss/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         # Define all 12 PCI-DSS requirements
@@ -75,7 +75,7 @@ class TestPCIDSSRequirementCoverage:
             # Look for "Requirement N:" or "### Requirement N:"
             pattern = rf'(?:###\s+)?Requirement\s+{req_num}[:\s]'
             assert re.search(pattern, mapping_content), \
-                f"Requirement {req_num} ({req_name}) should be documented in FRAMEWORK_MAPPING.md"
+                f"Requirement {req_num} ({req_name}) should be documented in 9999_Framework_Mapping.md"
     
     @settings(max_examples=100)
     @given(
@@ -90,7 +90,7 @@ class TestPCIDSSRequirementCoverage:
         requirements (Requirements 1-12).
         
         This property verifies that:
-        1. The FRAMEWORK_MAPPING.md file exists
+        1. The 9999_Framework_Mapping.md file exists
         2. Each of the 12 PCI-DSS requirements is documented in the mapping
         3. The mapping indicates which templates cover each requirement
         
@@ -101,10 +101,10 @@ class TestPCIDSSRequirementCoverage:
         assert template_dir.exists(), \
             f"PCI-DSS template directory should exist for language '{language}'"
         
-        # Check that FRAMEWORK_MAPPING.md exists
-        mapping_file = template_dir / 'FRAMEWORK_MAPPING.md'
+        # Check that 9999_Framework_Mapping.md exists
+        mapping_file = template_dir / '9999_Framework_Mapping.md'
         assert mapping_file.exists(), \
-            f"FRAMEWORK_MAPPING.md should exist in {template_dir}"
+            f"9999_Framework_Mapping.md should exist in {template_dir}"
         
         # Read mapping content
         mapping_content = mapping_file.read_text(encoding='utf-8')
@@ -113,7 +113,7 @@ class TestPCIDSSRequirementCoverage:
         # Look for "Requirement N:" or "### Requirement N:"
         pattern = rf'(?:###\s+)?Requirement\s+{requirement_number}[:\s]'
         assert re.search(pattern, mapping_content), \
-            f"Requirement {requirement_number} should be documented in FRAMEWORK_MAPPING.md for language '{language}'"
+            f"Requirement {requirement_number} should be documented in 9999_Framework_Mapping.md for language '{language}'"
         
         # Additionally verify that the requirement section has some content
         # (not just a header with no details)
@@ -132,10 +132,10 @@ class TestPCIDSSRequirementCoverage:
         """
         Test that each PCI-DSS requirement is mapped to specific templates.
         
-        This test verifies that the FRAMEWORK_MAPPING.md not only lists requirements
+        This test verifies that the 9999_Framework_Mapping.md not only lists requirements
         but also maps them to specific template files.
         """
-        mapping_file = Path('templates/de/pci-dss/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/de/pci-dss/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         # Define expected mappings based on current implementation
@@ -171,12 +171,12 @@ class TestPCIDSSRequirementCoverage:
     
     def test_pci_dss_coverage_gaps_documented(self):
         """
-        Test that coverage gaps are documented in FRAMEWORK_MAPPING.md.
+        Test that coverage gaps are documented in 9999_Framework_Mapping.md.
         
         According to the design, Requirements 2, 3, 4, 5, and 6 have identified gaps.
         These should be documented in the mapping file.
         """
-        mapping_file = Path('templates/de/pci-dss/FRAMEWORK_MAPPING.md')
+        mapping_file = Path('templates/de/pci-dss/9999_Framework_Mapping.md')
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
         # Requirements with known gaps
@@ -198,7 +198,7 @@ class TestPCIDSSRequirementCoverage:
         """
         Test that template files actually exist for requirements marked as covered.
         
-        This verifies that the FRAMEWORK_MAPPING.md accurately reflects the actual
+        This verifies that the 9999_Framework_Mapping.md accurately reflects the actual
         template files present in the directory.
         """
         template_dir = Path('templates/de/pci-dss')
@@ -233,10 +233,10 @@ class TestPCIDSSRequirementCoverage:
         
         Validates: Requirements 1.1, 9.1, 9.2
         """
-        mapping_file = Path(f'templates/{language}/pci-dss/FRAMEWORK_MAPPING.md')
+        mapping_file = Path(f'templates/{language}/pci-dss/9999_Framework_Mapping.md')
         
         assert mapping_file.exists(), \
-            f"FRAMEWORK_MAPPING.md should exist for language '{language}'"
+            f"9999_Framework_Mapping.md should exist for language '{language}'"
         
         mapping_content = mapping_file.read_text(encoding='utf-8')
         
@@ -244,4 +244,4 @@ class TestPCIDSSRequirementCoverage:
         for req_num in range(1, 13):
             pattern = rf'(?:###\s+)?Requirement\s+{req_num}[:\s]'
             assert re.search(pattern, mapping_content), \
-                f"Requirement {req_num} should be documented in {language} FRAMEWORK_MAPPING.md"
+                f"Requirement {req_num} should be documented in {language} 9999_Framework_Mapping.md"

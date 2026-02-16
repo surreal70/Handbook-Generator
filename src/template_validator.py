@@ -547,9 +547,9 @@ class TemplateValidator:
             result.add_warning(f"README.md not found in {template_dir}")
 
         # Check FRAMEWORK_MAPPING exists
-        mapping_path = template_dir / "FRAMEWORK_MAPPING.md"
+        mapping_path = template_dir / "9999_Framework_Mapping.md"
         if not mapping_path.exists():
-            result.add_warning(f"FRAMEWORK_MAPPING.md not found in {template_dir}")
+            result.add_warning(f"9999_Framework_Mapping.md not found in {template_dir}")
 
         # Check metadata template exists
         metadata_pattern = f"0000_metadata_{language}_{framework}.md"
@@ -561,7 +561,7 @@ class TemplateValidator:
         template_numbers = set()
         for file_path in template_dir.glob("*.md"):
             # Skip special files
-            if file_path.name in ["README.md", "FRAMEWORK_MAPPING.md"]:
+            if file_path.name in ["README.md", "9999_Framework_Mapping.md"]:
                 continue
 
             # Validate filename format (NNNN_name.md)
@@ -628,8 +628,8 @@ class TemplateValidator:
             result.add_warning(f"English templates not found for framework '{framework}'")
             return
 
-        de_files = {f.name for f in de_dir.glob("*.md") if f.name not in ["README.md", "FRAMEWORK_MAPPING.md"]}
-        en_files = {f.name for f in en_dir.glob("*.md") if f.name not in ["README.md", "FRAMEWORK_MAPPING.md"]}
+        de_files = {f.name for f in de_dir.glob("*.md") if f.name not in ["README.md", "9999_Framework_Mapping.md"]}
+        en_files = {f.name for f in en_dir.glob("*.md") if f.name not in ["README.md", "9999_Framework_Mapping.md"]}
 
         # Extract template numbers for comparison
         de_numbers = {int(f[:4]) for f in de_files if re.match(r'^\d{4}_', f)}

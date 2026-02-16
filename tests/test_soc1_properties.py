@@ -210,8 +210,8 @@ class TestSOC1BilingualTemplateConsistency:
         """
         de_readme = template_base_path / "de" / "soc1" / "README.md"
         en_readme = template_base_path / "en" / "soc1" / "README.md"
-        de_mapping = template_base_path / "de" / "soc1" / "FRAMEWORK_MAPPING.md"
-        en_mapping = template_base_path / "en" / "soc1" / "FRAMEWORK_MAPPING.md"
+        de_mapping = template_base_path / "de" / "soc1" / "9999_Framework_Mapping.md"
+        en_mapping = template_base_path / "en" / "soc1" / "9999_Framework_Mapping.md"
         
         assert de_readme.exists(), "German README should exist"
         assert en_readme.exists(), "English README should exist"

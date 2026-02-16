@@ -19,6 +19,8 @@ Diese Datei enthält Metadaten für das COSO Internal Control Framework Handbuch
 - **Autor**: {{ source.author }}
 - **Version**: 1.0
 - **Datum**: {{ source.date }}
+- **Template-Version**: 1.0
+- **Revision**: 1
 - **Organisation**: {{ source.organization_name }}
 - **Klassifizierung**: Internal
 

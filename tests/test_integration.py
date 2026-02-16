@@ -198,7 +198,7 @@ def test_end_to_end_handbook_generation(temp_workspace, complete_template_set, m
         assert "Datacenter Munich" in all_content
         assert "192.168.1.100" in all_content
         assert "Andreas Huemmer" in all_content
-        assert "0.0.6" in all_content  # Version from src/__init__.py
+        assert "0.0.10" in all_content  # Version from src/__init__.py
         # Date will be current date (check for year 2026 or 2025)
         assert "2026-" in all_content or "2025-" in all_content
         
@@ -213,7 +213,7 @@ def test_end_to_end_handbook_generation(temp_workspace, complete_template_set, m
         
         # 5. Verify output file exists and structure
         assert output_path.exists(), "Output file should be created"
-        assert output_path.parent == output_dir / "de" / "backup" / "markdown"
+        assert output_path.parent == output_dir / "de" / "backup"
         assert output_path.name == "backup_handbook.md"
         
         # 6. Verify output content
@@ -1514,7 +1514,7 @@ def test_end_to_end_it_operations_handbook_generation(temp_workspace, it_operati
         
         # Verify output structure
         assert de_output.exists(), "German output should exist"
-        assert de_output.parent == output_dir / "de" / "it-operation" / "markdown"
+        assert de_output.parent == output_dir / "de" / "it-operation" 
         assert de_output.name == "it-operation_handbook.md"
         
         # Verify output content
@@ -1618,7 +1618,7 @@ def test_end_to_end_bilingual_handbook_generation(temp_workspace, it_operations_
         assert en_output.exists(), "English output should exist"
         
         # Verify correct directory structure
-        assert de_output.parent == output_dir / "de" / "it-operation" / "markdown"
+        assert de_output.parent == output_dir / "de" / "it-operation" 
         assert en_output.parent == output_dir / "en" / "it-operation"
         
         # Verify language-specific content
@@ -1875,7 +1875,7 @@ def test_service_template_workflow(temp_workspace, service_template,
         
         # Verify output was created
         assert output_path.exists(), "Service template output should exist"
-        assert output_path.parent == output_dir / "de" / "service-templates" / "markdown"
+        assert output_path.parent == output_dir / "de" / "service-templates" 
         
         # Verify output content
         output_content = output_path.read_text()
@@ -2197,7 +2197,7 @@ def test_end_to_end_bcm_handbook_generation_german(temp_workspace, bcm_templates
         
         # Verify output structure
         assert de_output.exists(), "German BCM output should exist"
-        assert de_output.parent == output_dir / "de" / "bcm" / "markdown"
+        assert de_output.parent == output_dir / "de" / "bcm" 
         assert de_output.name == "bcm_handbook.md"
         
         # Verify output content
@@ -2307,7 +2307,7 @@ def test_end_to_end_bcm_handbook_generation_english(temp_workspace, bcm_template
         
         # Verify output structure
         assert en_output.exists(), "English BCM output should exist"
-        assert en_output.parent == output_dir / "en" / "bcm" / "markdown"
+        assert en_output.parent == output_dir / "en" / "bcm" 
         assert en_output.name == "bcm_handbook.md"
         
         # Verify output content
@@ -2920,7 +2920,7 @@ def test_end_to_end_isms_handbook_generation_german(temp_workspace, isms_templat
         
         # Verify output structure
         assert de_output.exists(), "German ISMS output should exist"
-        assert de_output.parent == output_dir / "de" / "isms" / "markdown"
+        assert de_output.parent == output_dir / "de" / "isms" 
         assert de_output.name == "isms_handbook.md"
         
         # Verify output content
@@ -3034,7 +3034,7 @@ def test_end_to_end_isms_handbook_generation_english(temp_workspace, isms_templa
         
         # Verify output structure
         assert en_output.exists(), "English ISMS output should exist"
-        assert en_output.parent == output_dir / "en" / "isms" / "markdown"
+        assert en_output.parent == output_dir / "en" / "isms" 
         assert en_output.name == "isms_handbook.md"
         
         # Verify output content
@@ -3748,7 +3748,7 @@ def test_end_to_end_bsi_grundschutz_handbook_generation_german(temp_workspace, b
         
         # Verify output structure
         assert de_output.exists(), "German BSI Grundschutz output should exist"
-        assert de_output.parent == output_dir / "de" / "bsi-grundschutz" / "markdown"
+        assert de_output.parent == output_dir / "de" / "bsi-grundschutz" 
         assert de_output.name == "bsi-grundschutz_handbook.md"
         
         # Verify output content
@@ -3852,7 +3852,7 @@ def test_end_to_end_bsi_grundschutz_handbook_generation_english(temp_workspace, 
         
         # Verify output structure
         assert en_output.exists(), "English BSI Grundschutz output should exist"
-        assert en_output.parent == output_dir / "en" / "bsi-grundschutz" / "markdown"
+        assert en_output.parent == output_dir / "en" / "bsi-grundschutz" 
         assert en_output.name == "bsi-grundschutz_handbook.md"
         
         # Verify output content
@@ -4087,7 +4087,7 @@ def test_backward_compatibility_it_operation_templates(temp_workspace, it_operat
         
         # Verify output structure (backward compatibility)
         assert de_output.exists(), "IT-Operation output should exist"
-        assert de_output.parent == output_dir / "de" / "it-operation" / "markdown"
+        assert de_output.parent == output_dir / "de" / "it-operation" 
         assert de_output.name == "it-operation_handbook.md"
         
         # Verify output content
@@ -4372,7 +4372,7 @@ def test_backward_compatibility_bcm_handbook_generation(temp_workspace, sample_m
         
         # Verify output structure (backward compatibility)
         assert bcm_output.exists(), "BCM output should exist"
-        assert bcm_output.parent == output_dir / "de" / "bcm" / "markdown"
+        assert bcm_output.parent == output_dir / "de" / "bcm" 
         assert bcm_output.name == "bcm_handbook.md"
         
         # Verify output content
@@ -4454,7 +4454,7 @@ def test_backward_compatibility_isms_handbook_generation(temp_workspace, sample_
         
         # Verify output structure (backward compatibility)
         assert isms_output.exists(), "ISMS output should exist"
-        assert isms_output.parent == output_dir / "de" / "isms" / "markdown"
+        assert isms_output.parent == output_dir / "de" / "isms" 
         assert isms_output.name == "isms_handbook.md"
         
         # Verify output content
@@ -4536,7 +4536,7 @@ def test_backward_compatibility_bsi_grundschutz_handbook_generation(temp_workspa
         
         # Verify output structure (backward compatibility)
         assert bsi_output.exists(), "BSI Grundschutz output should exist"
-        assert bsi_output.parent == output_dir / "de" / "bsi-grundschutz" / "markdown"
+        assert bsi_output.parent == output_dir / "de" / "bsi-grundschutz" 
         assert bsi_output.name == "bsi-grundschutz_handbook.md"
         
         # Verify output content
@@ -4618,7 +4618,7 @@ def test_backward_compatibility_it_operation_handbook_generation(temp_workspace,
         
         # Verify output structure (backward compatibility)
         assert it_op_output.exists(), "IT-Operation output should exist"
-        assert it_op_output.parent == output_dir / "de" / "it-operation" / "markdown"
+        assert it_op_output.parent == output_dir / "de" / "it-operation" 
         assert it_op_output.name == "it-operation_handbook.md"
         
         # Verify output content
@@ -6183,7 +6183,7 @@ def test_end_to_end_cis_controls_german_generation(temp_workspace, cis_controls_
     
     # 5. Verify output file exists and structure
     assert output_path.exists(), "Output file should be created"
-    assert output_path.parent == output_dir / "de" / "cis-controls" / "markdown"
+    assert output_path.parent == output_dir / "de" / "cis-controls" 
     assert output_path.name == "cis-controls_handbook.md"
     
     # 6. Verify output content
@@ -6269,7 +6269,7 @@ def test_end_to_end_cis_controls_english_generation(temp_workspace, cis_controls
     
     # 5. Verify output file exists and structure
     assert output_path.exists(), "Output file should be created"
-    assert output_path.parent == output_dir / "en" / "cis-controls" / "markdown"
+    assert output_path.parent == output_dir / "en" / "cis-controls" 
     assert output_path.name == "cis-controls_handbook.md"
     
     # 6. Verify English-specific content
@@ -6564,7 +6564,7 @@ def test_cis_controls_separate_files_english(temp_workspace, cis_controls_templa
     
     # Verify result
     output_dir_path = md_result.markdown_path.parent
-    assert output_dir_path == output_dir / "en" / "cis-controls" / "markdown"
+    assert output_dir_path == output_dir / "en" / "cis-controls" / "markdown" 
     
     # Verify separate files were created
     markdown_files = list(output_dir_path.glob("*.md"))
