@@ -3,16 +3,16 @@
 # This file contains metadata specific to this handbook
 
 # Author of the handbook
-author: "[TODO]"
+author: "Handbook-Generator"
 
 # Classification level (e.g., Internal, Confidential, Public)
-classification: "[TODO]"
+classification: "Internal"
 
 # Status (e.g., Draft, Review, Approved, Active)
-status: "[TODO]"
+status: "Draft"
 
-# Type of handbook
-type: "[TODO]"
+# Type of handbook (e.g., Gelenktes Dokument, Betriebshandbuch, Dokumentation)
+type: "Gelenktes Dokument"
 
 # Template set version
 templateset_version: "0.2"
@@ -24,7 +24,7 @@ revision: 0
 shortname: "common-criteria"
 
 # Long descriptive name
-longname: "[TODO]"
+longname: "Common Criteria Sicherheitszertifizierung Handbuch"
 
 # Maintainer (defaults to author if not specified)
 maintainer: "[TODO]"

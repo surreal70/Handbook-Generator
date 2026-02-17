@@ -303,25 +303,30 @@ class MetadataStandardizer:
                 if not self._field_exists(content, 'template_version', ['Template-Version', 'Template Version']):
                     missing_fields.append('template_version')
                 else:
-                    # Validate format
+                    # Validate format or accept placeholder
                     version_value = self._extract_field_value(content, ['Template-Version', 'Template Version'])
-                    if version_value and not self.VERSION_PATTERN.match(version_value):
-                        invalid_fields.append(f'template_version (invalid format: {version_value})')
+                    if version_value:
+                        # Accept placeholders as valid
+                        if not (version_value.startswith('{{') and version_value.endswith('}}')):
+                            if not self.VERSION_PATTERN.match(version_value):
+                                invalid_fields.append(f'template_version (invalid format: {version_value})')
             
             elif field == 'revision':
                 # Check for Revision
                 if not self._field_exists(content, 'revision', ['Revision']):
                     missing_fields.append('revision')
                 else:
-                    # Validate it's an integer
+                    # Validate it's an integer or placeholder
                     revision_value = self._extract_field_value(content, ['Revision'])
                     if revision_value:
-                        try:
-                            rev_int = int(revision_value)
-                            if rev_int < 0:
-                                invalid_fields.append(f'revision (must be non-negative: {revision_value})')
-                        except ValueError:
-                            invalid_fields.append(f'revision (not an integer: {revision_value})')
+                        # Accept placeholders as valid
+                        if not (revision_value.startswith('{{') and revision_value.endswith('}}')):
+                            try:
+                                rev_int = int(revision_value)
+                                if rev_int < 0:
+                                    invalid_fields.append(f'revision (must be non-negative: {revision_value})')
+                            except ValueError:
+                                invalid_fields.append(f'revision (not an integer or placeholder: {revision_value})')
             
             else:
                 # Check for other required fields
@@ -362,6 +367,7 @@ class MetadataStandardizer:
     def _extract_field_value(self, content: str, labels: List[str]) -> Optional[str]:
         """
         Extract field value from metadata content.
+        Handles both literal values and placeholder syntax ({{ meta-handbook.field }}).
         
         Args:
             content: Metadata file content
@@ -375,13 +381,23 @@ class MetadataStandardizer:
             pattern = rf'\*\*{re.escape(label)}:\*\*\s*(.+?)(?:\n|$)'
             match = re.search(pattern, content)
             if match:
-                return match.group(1).strip()
+                value = match.group(1).strip()
+                # Check if it's a placeholder
+                if value.startswith('{{') and value.endswith('}}'):
+                    # Return the placeholder as-is for validation
+                    return value
+                return value
             
             # Try plain format: Label: value
             pattern = rf'{re.escape(label)}:\s*(.+?)(?:\n|$)'
             match = re.search(pattern, content)
             if match:
-                return match.group(1).strip()
+                value = match.group(1).strip()
+                # Check if it's a placeholder
+                if value.startswith('{{') and value.endswith('}}'):
+                    # Return the placeholder as-is for validation
+                    return value
+                return value
         
         return None
     
@@ -405,7 +421,7 @@ class MetadataStandardizer:
             'organization': ['Organisation', 'Organization'],
             'author': ['Autor', 'Author'],
             'scope': ['Geltungsbereich', 'Scope'],
-            'valid_from': ['Gültig ab', 'Valid from', 'Erstellungsdatum'],
+            'valid_from': ['Gültig ab', 'Valid From', 'Valid from', 'Erstellungsdatum'],
             'next_review': ['Nächste Überprüfung', 'Next Review', 'Next review']
         }
         
@@ -1348,10 +1364,13 @@ class DocumentHistoryStandardizer:
             return False
         
         # Check for German or English document history headers (both old and new format)
+        # Also check for "Änderungshistorie" (Change History) which is used in metadata files
         return ('**Dokumenthistorie:**' in content or 
                 '**Document History:**' in content or
                 '## Dokumenthistorie' in content or 
-                '## Document History' in content)
+                '## Document History' in content or
+                '## Änderungshistorie' in content or
+                '## Change History' in content)
     
     def generate_history_section(self, language: str) -> str:
         """

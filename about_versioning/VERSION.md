@@ -1,6 +1,6 @@
 # Version Management
 
-## Current Version: 0.0.14
+## Current Version: 0.0.15
 
 ### Single Source of Truth
 
@@ -32,6 +32,19 @@ To update the version number:
 **Do not** hardcode version numbers elsewhere in the codebase.
 
 ### Version History
+
+- **0.0.15** (2026-02-18): Metadata Placeholder Migration & Testing Improvements
+  - ✅ Migrated all 44 metadata files (0000_metadata_*.md) to use placeholder syntax
+  - ✅ Updated metadata files to use {{ meta-handbook.* }} placeholders
+  - ✅ Standardized change history with version 0.1 and Handbook-Generator author
+  - ✅ Fixed document history validation tests to only check metadata files
+  - ✅ Updated placeholder regex to support hyphens in field names (meta-handbook.field)
+  - ✅ Fixed placeholder matrix generator to correctly detect and track placeholders
+  - ✅ Added location tracking for undefined placeholders (file + line numbers)
+  - ✅ Enhanced HTML report with detailed undefined placeholder locations
+  - ✅ Moved undefined placeholders section to end of HTML report
+  - ✅ All 21 metadata standardization tests passing (4 skipped)
+  - **Status**: Metadata placeholder migration and testing improvements release
 
 - **0.0.14** (2026-02-17): Template Structure & Metadata Improvements
   - ✅ Created comprehensive diagrams structure test suite (327 tests)

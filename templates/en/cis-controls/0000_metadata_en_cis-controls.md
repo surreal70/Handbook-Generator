@@ -1,25 +1,26 @@
 # CIS-CONTROLS Handbook - Metadata
 
 **Document-ID:** 0000  
-**Date:** 2026-02-17  
-**Owner:** [TODO]  
-**Revision:** 0  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Updated:** 2026-02-17  
-**Template-Version:** 1.0  
+**Date:** {{ meta-handbook.creationdate }}  
+**Owner:** {{ meta-handbook.owner }}  
+**Revision:** {{ meta-handbook.revision }}  
+**Status:** {{ meta-handbook.status }}  
+**Classification:** {{ meta-handbook.classification }}  
+**Last Updated:** {{ meta-handbook.modifydate }}  
+**Template-Version:** {{ meta-handbook.templateset_version }}  
 
 ---
 
 ## Handbook Information
 
-**Handbook Title:** CIS-CONTROLS Handbook  
-**Handbook Short:** CIS-CONTROLS  
-**Organisation:** [TODO]  
-**Author:** [TODO]  
-**Scope:** [TODO]  
-**Valid from:** [TODO]  
-**Next Review:** [TODO]  
+**Handbook Title:** {{ meta-handbook.longname }}
+**Handbook Short:** {{ meta-handbook.shortname }}
+**Organisation:** {{ meta-organisation.name }}  
+**Author:** {{ meta-handbook.author }}  
+**Scope:** {{ meta-handbook.scope }}  
+**Valid From:** {{ meta-handbook.valid_from }}  
+**Next Review:** {{ meta-handbook.next_review }}  
+**Approved By:** {{ meta-handbook.approver }}  
 
 ---
 
@@ -31,4 +32,6 @@ This document contains the metadata for the CIS-CONTROLS handbook.
 
 | Version | Date | Author | Change |
 |---------|------|--------|--------|
-| 0 | 2026-02-17 | [TODO] | Initial version |
+| 0.1 | {{ meta-handbook.creationdate }} | Handbook-Generator | Initial version |
+| [TODO] | [TODO] | [TODO] | [TODO] |
+

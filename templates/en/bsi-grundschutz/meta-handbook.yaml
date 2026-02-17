@@ -3,16 +3,16 @@
 # This file contains metadata specific to this handbook
 
 # Author of the handbook
-author: "[TODO]"
+author: "Handbook-Generator"
 
 # Classification level (e.g., Internal, Confidential, Public)
-classification: "[TODO]"
+classification: "Internal"
 
 # Status (e.g., Draft, Review, Approved, Active)
-status: "[TODO]"
+status: "Draft"
 
-# Type of handbook
-type: "[TODO]"
+# Type of handbook (e.g., Controlled Document, Operations Manual, Documentation)
+type: "Controlled Document"
 
 # Template set version
 templateset_version: "0.2"
@@ -24,7 +24,7 @@ revision: 0
 shortname: "bsi-grundschutz"
 
 # Long descriptive name
-longname: "[TODO]"
+longname: "BSI IT-Grundschutz Handbook"
 
 # Maintainer (defaults to author if not specified)
 maintainer: "[TODO]"

@@ -19,22 +19,32 @@
 # Chief Executive Officer - Overall organizational leadership
 # Used in: Strategic documents, governance handbooks, approval workflows
 role_CEO: "Jane Smith"
+role_CEO_email: "role.ceo@example.com"
+role_CEO_phone: "+1-555-0100"
 
 # Chief Financial Officer - Financial management and oversight
 # Used in: Financial policies, budget approvals, audit documents
 role_CFO: "John Doe"
+role_CFO_email: "role.cfo@example.com"
+role_CFO_phone: "+1-555-0100"
 
 # Chief Technology Officer - Technology strategy and innovation
 # Used in: Technology roadmaps, architecture decisions, R&D documents
 role_CTO: "Alice Johnson"
+role_CTO_email: "role.cto@example.com"
+role_CTO_phone: "+1-555-0100"
 
 # Chief Information Officer - IT operations and information management
 # Used in: IT policies, system documentation, technology governance
 role_CIO: "Bob Williams"
+role_CIO_email: "role.cio@example.com"
+role_CIO_phone: "+1-555-0100"
 
 # Chief Information Security Officer - Information security leadership
 # Used in: Security policies, ISMS documentation, incident response plans
 role_CISO: "Carol Martinez"
+role_CISO_email: "role.ciso@example.com"
+role_CISO_phone: "+1-555-0100"
 
 # ============================================================================
 # MANAGEMENT ROLES
@@ -44,26 +54,38 @@ role_CISO: "Carol Martinez"
 # Human Resources Manager - Personnel management and HR policies
 # Used in: HR policies, employee handbooks, training documentation
 role_HR_Manager: "David Brown"
+role_HR_Manager_email: "role.hr.manager@example.com"
+role_HR_Manager_phone: "+1-555-0100"
 
 # Risk Manager - Enterprise risk management and mitigation
 # Used in: Risk assessments, BCM documentation, compliance reports
 role_Risk_Manager: "Emma Davis"
+role_Risk_Manager_email: "role.risk.manager@example.com"
+role_Risk_Manager_phone: "+1-555-0100"
 
 # Data Protection Officer / GDPR Manager - Privacy and data protection
 # Used in: GDPR documentation, privacy policies, data processing records
 role_GDPR_Manager: "Frank Wilson"
+role_GDPR_Manager_email: "role.gdpr.manager@example.com"
+role_GDPR_Manager_phone: "+1-555-0100"
 
 # IT Manager - Day-to-day IT operations management
 # Used in: IT procedures, service management, operational documentation
 role_IT_Manager: "Grace Taylor"
+role_IT_Manager_email: "role.it.manager@example.com"
+role_IT_Manager_phone: "+1-555-0100"
 
 # Compliance Manager - Regulatory compliance and audit coordination
 # Used in: Compliance frameworks, audit reports, regulatory documentation
 role_Compliance_Manager: "Henry Anderson"
+role_Compliance_Manager_email: "role.compliance.manager@example.com"
+role_Compliance_Manager_phone: "+1-555-0100"
 
 # Internal Auditor - Internal audit and quality assurance
 # Used in: Audit plans, quality management, internal reviews
 role_Internal_Auditor: "Isabel Thomas"
+role_Internal_Auditor_email: "role.internal.auditor@example.com"
+role_Internal_Auditor_phone: "+1-555-0100"
 
 # ============================================================================
 # OPERATIONAL ROLES
@@ -98,14 +120,20 @@ role_Internal_Auditor: "Isabel Thomas"
 # IT Services Group - General IT services team
 # Used in: Service documentation, responsibility matrices, escalation paths
 group_IT_Services: "IT Services Team"
+group_IT_Services_email: "group.it.services@example.com"
+group_IT_Services_phone: "+1-555-0100"
 
 # DevOps Group - Development and operations team
 # Used in: CI/CD documentation, deployment procedures, automation guides
 group_DEVOPS: "DevOps Team"
+group_DEVOPS_email: "group.devops@example.com"
+group_DEVOPS_phone: "+1-555-0100"
 
 # Helpdesk Group - User support and helpdesk team
 # Used in: Support procedures, ticket handling, user guides
 group_Helpdesk: "Helpdesk Team"
+group_Helpdesk_email: "group.helpdesk@example.com"
+group_Helpdesk_phone: "+1-555-0100"
 
 # ============================================================================
 # OPTIONAL ADDITIONAL ROLES
