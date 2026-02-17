@@ -1,6 +1,6 @@
 # Version Management
 
-## Current Version: 0.0.11
+## Current Version: 0.0.12
 
 ### Single Source of Truth
 
@@ -32,6 +32,14 @@ To update the version number:
 **Do not** hardcode version numbers elsewhere in the codebase.
 
 ### Version History
+
+- **0.0.12** (2026-02-17): ⚠️ Intermediate Development Release - NOT FOR PRODUCTION
+  - ⚠️ **Development release only** - not intended for production use
+  - ✅ Config separation and metadata unification work in progress
+  - ✅ Bilingual placeholder analysis completed
+  - ✅ Framework mapping documentation updates
+  - ⚠️ Experimental features under development
+  - **Status**: Intermediate development release
 
 - **0.0.11** (2026-02-16): ⚠️ Intermediate Quality Control Release - NOT FOR PRODUCTION
   - ⚠️ **Development release only** - not intended for production use

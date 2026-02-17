@@ -10,7 +10,7 @@ This directory contains all version-related documentation for the Handbook Gener
 
 ## Current Version
 
-**Version 0.0.10** - Phase 2 Completion - Seven New Frameworks + Quality Improvements
+**Version 0.0.12** - Intermediate Development Release - Config Separation & Metadata Unification
 
 See [VERSION.md](VERSION.md) for the complete version history.
 

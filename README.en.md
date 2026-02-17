@@ -3,7 +3,7 @@
 <div align="center">
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
-[![Version](https://img.shields.io/badge/version-0.0.11-orange.svg)](about_versioning/VERSION.md)
+[![Version](https://img.shields.io/badge/version-0.0.12-orange.svg)](about_versioning/VERSION.md)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Code Coverage](https://img.shields.io/badge/coverage-84%25-brightgreen.svg)](htmlcov/index.html)
 [![Tests](https://img.shields.io/badge/tests-765%20passed-success.svg)](tests/)
@@ -33,13 +33,13 @@ This version contains:
 
 **Please use version 0.0.10 for production use.**
 
-See [Release Notes](about_versioning/VERSION_0.0.11_RELEASE_NOTES.md) for details.
+See [Release Notes](about_versioning/VERSION_0.0.12_RELEASE_NOTES.md) for details.
 
 ## Overview
 
 The Handbook Generator creates professional handbooks in various formats (HTML, PDF, Markdown) from structured Markdown templates. The system replaces placeholders in templates with real data from external systems like NetBox and supports multilingual handbooks.
 
-**Version 0.0.11** - ⚠️ Intermediate Quality Control Release - NOT FOR PRODUCTION
+**Version 0.0.12** - ⚠️ Intermediate Development Release - NOT FOR PRODUCTION
 
 ## Features
 
