@@ -3,7 +3,7 @@
 <div align="center">
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
-[![Version](https://img.shields.io/badge/version-0.0.12-orange.svg)](about_versioning/VERSION.md)
+[![Version](https://img.shields.io/badge/version-0.0.13-orange.svg)](about_versioning/VERSION.md)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Code Coverage](https://img.shields.io/badge/coverage-84%25-brightgreen.svg)](htmlcov/index.html)
 [![Tests](https://img.shields.io/badge/tests-765%20passed-success.svg)](tests/)
@@ -23,7 +23,7 @@ Ein Python-Tool zur Generierung professioneller Handbücher aus Markdown-Vorlage
 
 ## ⚠️ Wichtiger Hinweis
 
-**Dies ist eine Zwischen-Entwicklungsversion (0.0.12) und NICHT für den Produktiveinsatz bestimmt.**
+**Dies ist eine Zwischen-Entwicklungsversion (0.0.13) und NICHT für den Produktiveinsatz bestimmt.**
 
 Diese Version enthält:
 - Experimentelles Quality Control System
@@ -33,13 +33,13 @@ Diese Version enthält:
 
 **Bitte verwenden Sie Version 0.0.10 für den Produktiveinsatz.**
 
-Siehe [Release Notes](about_versioning/VERSION_0.0.12_RELEASE_NOTES.md) für Details.
+Siehe [Release Notes](about_versioning/VERSION_0.0.13_RELEASE_NOTES.md) für Details.
 
 ## Überblick
 
 Der Handbuch-Generator erstellt aus strukturierten Markdown-Vorlagen professionelle Handbücher in verschiedenen Formaten (HTML, PDF, Markdown). Das System ersetzt Platzhalter in den Vorlagen durch echte Daten aus externen Systemen wie NetBox und unterstützt mehrsprachige Handbücher.
 
-**Version 0.0.12** - ⚠️ Intermediate Development Release - NOT FOR PRODUCTION
+**Version 0.0.13** - ⚠️ Intermediate Development Release - NOT FOR PRODUCTION
 
 ## Features
 

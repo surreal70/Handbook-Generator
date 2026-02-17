@@ -1,6 +1,6 @@
 # Version Management
 
-## Current Version: 0.0.12
+## Current Version: 0.0.13
 
 ### Single Source of Truth
 
@@ -32,6 +32,17 @@ To update the version number:
 **Do not** hardcode version numbers elsewhere in the codebase.
 
 ### Version History
+
+- **0.0.13** (2026-02-17): Documentation Enhancement - Framework Mapping Summary
+  - ✅ Created comprehensive framework mapping summary document
+  - ✅ Documented all 23 available frameworks with statistics
+  - ✅ Added direct links to framework-specific mapping files
+  - ✅ Framework categorization by domain (IT Ops, Security, Compliance, etc.)
+  - ✅ Template count statistics (~1,520 files across both languages)
+  - ✅ Framework maturity status tracking
+  - ✅ Bilingual support documentation (English/German)
+  - ✅ Updated maintenance dates to 2026
+  - **Status**: Documentation improvement release
 
 - **0.0.12** (2026-02-17): ⚠️ Intermediate Development Release - NOT FOR PRODUCTION
   - ⚠️ **Development release only** - not intended for production use
