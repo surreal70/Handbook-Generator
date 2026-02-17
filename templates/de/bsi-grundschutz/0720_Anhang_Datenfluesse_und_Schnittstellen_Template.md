@@ -1,14 +1,16 @@
 # Anhang: Datenflüsse und Schnittstellen (Template)
 
-**Dokument-ID:** 0720  
-**Dokumenttyp:** Anhang/Template  
-**Referenzrahmen:** BSI IT-Grundschutz (BSI Standards 200-1/200-2)  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** {{ meta.document.status }}  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0720
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -20,7 +22,7 @@ Reference: BSI Standard 200-2 (Structure Analysis), BSI IT-Grundschutz-Kompendiu
 
 ## 1. Zweck und Zielsetzung
 
-Die Dokumentation der Datenflüsse und Schnittstellen von **{{ meta.organization.name }}** unterstützt:
+Die Dokumentation der Datenflüsse und Schnittstellen von **{{ meta-organisation.name }}** unterstützt:
 - Schutzbedarfsfeststellung (Dokument 0060)
 - Risikoanalyse (Dokument 0090)
 - Kryptokonzept (Dokument 0340/0350)
@@ -146,11 +148,9 @@ Die Dokumentation der Datenflüsse und Schnittstellen von **{{ meta.organization
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| ISB | {{ meta.ciso.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| IT-Leitung | {{ meta.cio.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| Datenschutzbeauftragter | [TODO] | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| IT-Leitung | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| Datenschutzbeauftragter | [TODO] | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **Referenzen:**
 - BSI Standard 200-2: IT-Grundschutz-Methodik (Strukturanalyse)
@@ -160,13 +160,5 @@ Die Dokumentation der Datenflüsse und Schnittstellen von **{{ meta.organization
 - Dokument 0090: Risikoanalyse
 - Dokument 0340/0350: Kryptografie und Key Management
 - Dokument 0420/0430: Datenschutz
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 <!-- End of template -->

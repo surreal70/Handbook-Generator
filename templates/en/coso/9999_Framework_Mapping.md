@@ -1,5 +1,19 @@
 # COSO Framework Mapping
 
+**Document-ID:** [FRAMEWORK]-9999
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Overview
 
 This document maps the templates to the COSO Internal Control Framework components, principles, and points of focus.
@@ -310,8 +324,3 @@ All planned templates have been created. The COSO Framework has now achieved 100
 - COSO Internal Control - Integrated Framework (2013)
 - COSO Illustrative Tools for Assessing Effectiveness of a System of Internal Control
 
-## Version History
-
-| Version | Date | Changes |
-|---------|------|---------|
-| 0.1 | {{meta.document.last_updated}} | Initial creation |

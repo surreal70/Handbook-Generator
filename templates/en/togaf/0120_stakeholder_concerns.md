@@ -1,13 +1,24 @@
----
+
 Document-ID: togaf-0120
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Stakeholder Concerns
+
+**Document-ID:** [FRAMEWORK]-0120
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -17,17 +28,8 @@ Documentation of specific stakeholder concerns and requirements.
 
 | Stakeholder | Concern | Priority | How Addressed |
 |-------------|---------|----------|---------------|
-| {{ source.stakeholder_1 }} | {{ source.concern_1 }} | {{ source.priority_1 }} | {{ source.address_1 }} |
-| {{ source.stakeholder_2 }} | {{ source.concern_2 }} | {{ source.priority_2 }} | {{ source.address_2 }} |
+| [TODO] | [TODO] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [TODO] | [TODO] |
 
 <!-- Author notes: Document all relevant stakeholder concerns -->
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{meta.document.last_updated}} | {{ meta.defaults.author }} | Initial creation |
-
-<-  ( marked all subtasks complete End of template -->

@@ -1,14 +1,16 @@
 # Anhang: Checklisten und Evidence
 
-**Dokument-ID:** 0410  
-**Dokumenttyp:** Anhang  
-**Referenzrahmen:** CIS Controls v8 (Hardening-Programm; keine Benchmarks-Texte)  
-**Owner:** [TODO]  
-**Version:** 0.1 (Entwurf)  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** Intern / Vertraulich / Streng vertraulich  
-**Letzte Aktualisierung:** 2026-01-31  
-**Nächster Review:** [TODO]
+**Dokument-ID:** 0410
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -36,10 +38,3 @@
 - Anzahl aktiver Ausnahmen & Alter
 - Patch Compliance (kritische Systeme)
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

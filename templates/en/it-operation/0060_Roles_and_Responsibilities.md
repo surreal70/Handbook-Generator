@@ -1,15 +1,29 @@
 # Roles and Responsibilities
 
+**Document-ID:** [FRAMEWORK]-0060
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Organizational Structure
 
 ### Company Information
 
-- **Organization:** {{ meta.organization.name }}
-- **Address:** {{ meta.organization.address }}, {{ meta.organization.postal_code }} {{ meta.organization.city }}
-- **Country:** {{ meta.organization.country }}
-- **Website:** {{ meta.organization.website }}
-- **Phone:** {{ meta.organization.phone }}
-- **Email:** {{ meta.organization.email }}
+- **Organization:** {{ meta-organisation.name }}
+- **Address:** {{ meta-organisation.address }}, {{ meta-organisation.postal_code }} {{ meta-organisation.city }}
+- **Country:** {{ meta-organisation.country }}
+- **Website:** {{ meta-organisation.website }}
+- **Phone:** {{ meta-organisation.phone }}
+- **Email:** {{ meta-organisation.email }}
 
 ### Organizational Overview
 
@@ -19,11 +33,11 @@
 
 ### Chief Executive Officer (CEO)
 
-- **Name:** {{ meta.ceo.name }}
-- **Title:** {{ meta.ceo.title }}
-- **Email:** {{ meta.ceo.email }}
-- **Phone:** {{ meta.ceo.phone }}
-- **Department:** {{ meta.ceo.department }}
+- **Name:** {{ meta-organisation-roles.role_ceo.name }}
+- **Title:** {{ meta-organisation-roles.role_ceo.title }}
+- **Email:** {{ meta-organisation-roles.role_ceo.email }}
+- **Phone:** {{ meta-organisation-roles.role_ceo.phone }}
+- **Department:** {{ meta-organisation-roles.role_ceo.department }}
 
 **Responsibilities:**
 - Overall responsibility for the company
@@ -33,11 +47,11 @@
 
 ### Chief Information Officer (CIO)
 
-- **Name:** {{ meta.cio.name }}
-- **Title:** {{ meta.cio.title }}
-- **Email:** {{ meta.cio.email }}
-- **Phone:** {{ meta.cio.phone }}
-- **Department:** {{ meta.cio.department }}
+- **Name:** {{ meta-organisation-roles.role_cio.name }}
+- **Title:** {{ meta-organisation-roles.role_cio.title }}
+- **Email:** {{ meta-organisation-roles.role_cio.email }}
+- **Phone:** {{ meta-organisation-roles.role_cio.phone }}
+- **Department:** {{ meta-organisation-roles.role_cio.department }}
 
 **Responsibilities:**
 - Overall responsibility for IT strategy and operations
@@ -48,11 +62,11 @@
 
 ### Chief Information Security Officer (CISO)
 
-- **Name:** {{ meta.ciso.name }}
-- **Title:** {{ meta.ciso.title }}
-- **Email:** {{ meta.ciso.email }}
-- **Phone:** {{ meta.ciso.phone }}
-- **Department:** {{ meta.ciso.department }}
+- **Name:** {{ meta-organisation-roles.role_ciso.name }}
+- **Title:** {{ meta-organisation-roles.role_ciso.title }}
+- **Email:** {{ meta-organisation-roles.role_ciso.email }}
+- **Phone:** {{ meta-organisation-roles.role_ciso.phone }}
+- **Department:** {{ meta-organisation-roles.role_ciso.department }}
 
 **Responsibilities:**
 - IT security strategy and policies
@@ -64,11 +78,11 @@
 
 ### Chief Financial Officer (CFO)
 
-- **Name:** {{ meta.cfo.name }}
-- **Title:** {{ meta.cfo.title }}
-- **Email:** {{ meta.cfo.email }}
-- **Phone:** {{ meta.cfo.phone }}
-- **Department:** {{ meta.cfo.department }}
+- **Name:** {{ meta-organisation-roles.role_cfo.name }}
+- **Title:** {{ meta-organisation-roles.role_cfo.title }}
+- **Email:** {{ meta-organisation-roles.role_cfo.email }}
+- **Phone:** {{ meta-organisation-roles.role_cfo.phone }}
+- **Department:** {{ meta-organisation-roles.role_cfo.department }}
 
 **Responsibilities:**
 - Financial approval of IT projects
@@ -78,11 +92,11 @@
 
 ### Chief Operating Officer (COO)
 
-- **Name:** {{ meta.coo.name }}
-- **Title:** {{ meta.coo.title }}
-- **Email:** {{ meta.coo.email }}
-- **Phone:** {{ meta.coo.phone }}
-- **Department:** {{ meta.coo.department }}
+- **Name:** {{ meta-organisation-roles.role_coo.name }}
+- **Title:** {{ meta-organisation-roles.role_coo.title }}
+- **Email:** {{ meta-organisation-roles.role_coo.email }}
+- **Phone:** {{ meta-organisation-roles.role_coo.phone }}
+- **Department:** {{ meta-organisation-roles.role_coo.department }}
 
 **Responsibilities:**
 - Operational business processes
@@ -94,11 +108,11 @@
 
 ### IT Operations Manager
 
-- **Name:** {{ meta.it_operations_manager.name }}
-- **Title:** {{ meta.it_operations_manager.title }}
-- **Email:** {{ meta.it_operations_manager.email }}
-- **Phone:** {{ meta.it_operations_manager.phone }}
-- **Department:** {{ meta.it_operations_manager.department }}
+- **Name:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+- **Title:** {{ meta-organisation-roles.role_it_operations_manager.title }}
+- **Email:** {{ meta-organisation-roles.role_it_operations_manager.email }}
+- **Phone:** {{ meta-organisation-roles.role_it_operations_manager.phone }}
+- **Department:** {{ meta-organisation-roles.role_it_operations_manager.department }}
 
 **Responsibilities:**
 - Daily IT operations and service delivery
@@ -113,11 +127,11 @@
 
 ### Service Desk Lead
 
-- **Name:** {{ meta.service_desk_lead.name }}
-- **Title:** {{ meta.service_desk_lead.title }}
-- **Email:** {{ meta.service_desk_lead.email }}
-- **Phone:** {{ meta.service_desk_lead.phone }}
-- **Department:** {{ meta.service_desk_lead.department }}
+- **Name:** {{ meta-organisation-roles.role_service_desk_lead.name }}
+- **Title:** {{ meta-organisation-roles.role_service_desk_lead.title }}
+- **Email:** {{ meta-organisation-roles.role_service_desk_lead.email }}
+- **Phone:** {{ meta-organisation-roles.role_service_desk_lead.phone }}
+- **Department:** {{ meta-organisation-roles.role_service_desk_lead.department }}
 
 **Responsibilities:**
 - First-level support and incident management
@@ -298,18 +312,18 @@ The RACI matrix defines responsibilities for IT operations activities:
 
 | Role | Name | Email | Phone | Mobile | Availability |
 |---|---|---|---|---|---|
-| **CEO** | {{ meta.ceo.name }} | {{ meta.ceo.email }} | {{ meta.ceo.phone }} | [TODO] | Mon-Fri 09:00-17:00 |
-| **CIO** | {{ meta.cio.name }} | {{ meta.cio.email }} | {{ meta.cio.phone }} | [TODO] | Mon-Fri 08:00-18:00 |
-| **CISO** | {{ meta.ciso.name }} | {{ meta.ciso.email }} | {{ meta.ciso.phone }} | [TODO] | Mon-Fri 08:00-18:00 |
-| **CFO** | {{ meta.cfo.name }} | {{ meta.cfo.email }} | {{ meta.cfo.phone }} | [TODO] | Mon-Fri 09:00-17:00 |
-| **COO** | {{ meta.coo.name }} | {{ meta.coo.email }} | {{ meta.coo.phone }} | [TODO] | Mon-Fri 08:00-18:00 |
+| **CEO** | {{ meta-organisation-roles.role_ceo.name }} | {{ meta-organisation-roles.role_ceo.email }} | {{ meta-organisation-roles.role_ceo.phone }} | [TODO] | Mon-Fri 09:00-17:00 |
+| **CIO** | {{ meta-organisation-roles.role_cio.name }} | {{ meta-organisation-roles.role_cio.email }} | {{ meta-organisation-roles.role_cio.phone }} | [TODO] | Mon-Fri 08:00-18:00 |
+| **CISO** | {{ meta-organisation-roles.role_ciso.name }} | {{ meta-organisation-roles.role_ciso.email }} | {{ meta-organisation-roles.role_ciso.phone }} | [TODO] | Mon-Fri 08:00-18:00 |
+| **CFO** | {{ meta-organisation-roles.role_cfo.name }} | {{ meta-organisation-roles.role_cfo.email }} | {{ meta-organisation-roles.role_cfo.phone }} | [TODO] | Mon-Fri 09:00-17:00 |
+| **COO** | {{ meta-organisation-roles.role_coo.name }} | {{ meta-organisation-roles.role_coo.email }} | {{ meta-organisation-roles.role_coo.phone }} | [TODO] | Mon-Fri 08:00-18:00 |
 
 ### IT Operations - Contacts
 
 | Role | Name | Email | Phone | Mobile | Availability |
 |---|---|---|---|---|---|
-| **IT Ops Manager** | {{ meta.it_operations_manager.name }} | {{ meta.it_operations_manager.email }} | {{ meta.it_operations_manager.phone }} | [TODO] | Mon-Fri 07:00-19:00 |
-| **Service Desk Lead** | {{ meta.service_desk_lead.name }} | {{ meta.service_desk_lead.email }} | {{ meta.service_desk_lead.phone }} | [TODO] | Mon-Fri 08:00-17:00 |
+| **IT Ops Manager** | {{ meta-organisation-roles.role_it_operations_manager.name }} | {{ meta-organisation-roles.role_it_operations_manager.email }} | {{ meta-organisation-roles.role_it_operations_manager.phone }} | [TODO] | Mon-Fri 07:00-19:00 |
+| **Service Desk Lead** | {{ meta-organisation-roles.role_service_desk_lead.name }} | {{ meta-organisation-roles.role_service_desk_lead.email }} | {{ meta-organisation-roles.role_service_desk_lead.phone }} | [TODO] | Mon-Fri 08:00-17:00 |
 | **System Admin** | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 | **Network Admin** | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 | **DBA** | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
@@ -342,10 +356,10 @@ The RACI matrix defines responsibilities for IT operations activities:
 
 | Week | Primary | Secondary | Escalation |
 |---|---|---|---|
-| **Week [TODO]** | [TODO: Name] | [TODO: Name] | {{ meta.it_operations_manager.name }} |
-| **Week [TODO]** | [TODO: Name] | [TODO: Name] | {{ meta.it_operations_manager.name }} |
-| **Week [TODO]** | [TODO: Name] | [TODO: Name] | {{ meta.it_operations_manager.name }} |
-| **Week [TODO]** | [TODO: Name] | [TODO: Name] | {{ meta.it_operations_manager.name }} |
+| **Week [TODO]** | [TODO: Name] | [TODO: Name] | {{ meta-organisation-roles.role_it_operations_manager.name }} |
+| **Week [TODO]** | [TODO: Name] | [TODO: Name] | {{ meta-organisation-roles.role_it_operations_manager.name }} |
+| **Week [TODO]** | [TODO: Name] | [TODO: Name] | {{ meta-organisation-roles.role_it_operations_manager.name }} |
+| **Week [TODO]** | [TODO: Name] | [TODO: Name] | {{ meta-organisation-roles.role_it_operations_manager.name }} |
 
 **Rotation Schedule:** [TODO: Link to current on-call schedule]
 
@@ -362,8 +376,8 @@ The RACI matrix defines responsibilities for IT operations activities:
 - **Availability:** [TODO: Response time]
 
 **Escalation:**
-- **IT Operations Manager:** {{ meta.it_operations_manager.name }} ({{ meta.it_operations_manager.phone }})
-- **CIO:** {{ meta.cio.name }} ({{ meta.cio.phone }})
+- **IT Operations Manager:** {{ meta-organisation-roles.role_it_operations_manager.name }} ({{ meta-organisation-roles.role_it_operations_manager.phone }})
+- **CIO:** {{ meta-organisation-roles.role_cio.name }} ({{ meta-organisation-roles.role_cio.phone }})
 
 ### On-Call Process
 
@@ -471,18 +485,18 @@ External Service Providers + Vendors
 
 | Role | Primary | Deputy 1 | Deputy 2 |
 |---|---|---|---|
-| **CEO** | {{ meta.ceo.name }} | [TODO: Name] | [TODO: Name] |
-| **CIO** | {{ meta.cio.name }} | {{ meta.it_operations_manager.name }} | [TODO: Name] |
-| **CISO** | {{ meta.ciso.name }} | [TODO: Name] | {{ meta.cio.name }} |
-| **CFO** | {{ meta.cfo.name }} | [TODO: Name] | [TODO: Name] |
-| **COO** | {{ meta.coo.name }} | [TODO: Name] | [TODO: Name] |
+| **CEO** | {{ meta-organisation-roles.role_ceo.name }} | [TODO: Name] | [TODO: Name] |
+| **CIO** | {{ meta-organisation-roles.role_cio.name }} | {{ meta-organisation-roles.role_it_operations_manager.name }} | [TODO: Name] |
+| **CISO** | {{ meta-organisation-roles.role_ciso.name }} | [TODO: Name] | {{ meta-organisation-roles.role_cio.name }} |
+| **CFO** | {{ meta-organisation-roles.role_cfo.name }} | [TODO: Name] | [TODO: Name] |
+| **COO** | {{ meta-organisation-roles.role_coo.name }} | [TODO: Name] | [TODO: Name] |
 
 ### IT Operations - Deputies
 
 | Role | Primary | Deputy 1 | Deputy 2 |
 |---|---|---|---|
-| **IT Ops Manager** | {{ meta.it_operations_manager.name }} | [TODO: Name] | {{ meta.cio.name }} |
-| **Service Desk Lead** | {{ meta.service_desk_lead.name }} | [TODO: Name] | {{ meta.it_operations_manager.name }} |
+| **IT Ops Manager** | {{ meta-organisation-roles.role_it_operations_manager.name }} | [TODO: Name] | {{ meta-organisation-roles.role_cio.name }} |
+| **Service Desk Lead** | {{ meta-organisation-roles.role_service_desk_lead.name }} | [TODO: Name] | {{ meta-organisation-roles.role_it_operations_manager.name }} |
 | **System Admin** | [TODO: Name] | [TODO: Name] | [TODO: Name] |
 | **Network Admin** | [TODO: Name] | [TODO: Name] | [TODO: Name] |
 | **DBA** | [TODO: Name] | [TODO: Name] | [TODO: Name] |
@@ -532,20 +546,11 @@ External Service Providers + Vendors
 
 | Version | Date | Author | Changes | Approved by |
 |---|---|---|---|---|
-| 1.0.0 | [TODO] | {{ meta.document.owner }} | Initial version | {{ meta.document.approver }} |
+| 1.0.0 | [TODO] | {{ meta-handbook.owner }} | Initial version | {{ meta-handbook.approver }} |
 
----
+**Document Owner:** {{ meta-handbook.owner }}  
+**Approved by:** {{ meta-handbook.approver }}  
+**Version:** {{ meta-handbook.revision }}  
+**Classification:** {{ meta-handbook.classification }}  
+**Organization:** {{ meta-organisation.name }}
 
-**Document Owner:** {{ meta.document.owner }}  
-**Approved by:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Classification:** {{ meta.document.classification }}  
-**Organization:** {{ meta.organization.name }}
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

@@ -1,11 +1,16 @@
 # Strength of Function
 
-**Document-ID:** 0540  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** Internal / Confidential / Strictly Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0540
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -354,11 +359,3 @@ For further information see:
 - **0510_Assurance_Measures.md**: AVA_SOF.1 Assurance Measure
 - **Chapter 4 of the Security Target**: Definition of SFRs
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | [TODO] | [TODO] | Initial version |
-| 1.0 | [TODO] | [TODO] | [TODO] |

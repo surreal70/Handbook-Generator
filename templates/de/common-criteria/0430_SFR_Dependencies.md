@@ -1,11 +1,16 @@
 # SFR-Abhängigkeiten (SFR Dependencies)
 
-**Dokument-ID:** 0430  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** Intern / Vertraulich / Streng vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0430
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -327,8 +332,6 @@ die Abhängigkeit zu FDP_ACC.1 (Subset access control).
 - ISO/IEC 15408-2:2022 - Security functional requirements (Anhang B: Dependencies)
 - [TODO: Weitere relevante Dokumente]
 
----
-
 **Nächste Schritte:**
 1. Vervollständige alle [TODO]-Platzhalter
 2. Erstelle vollständige Abhängigkeitstabelle
@@ -337,10 +340,3 @@ die Abhängigkeit zu FDP_ACC.1 (Subset access control).
 5. Führe Peer-Review durch
 6. Aktualisiere bei Änderungen an SFRs
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

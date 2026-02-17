@@ -1,11 +1,16 @@
 # IT-Infrastruktur und Betrieb
 
-**Dokument-ID:** idw-ps-951-0400  
-**Owner:** {{ meta.audit_lead }}  
-**Version:** {{ meta.version }}  
-**Status:** {{ meta.status }}  
-**Klassifizierung:** {{ meta.classification }}  
-**Letzte Aktualisierung:** {{ meta.date }}
+**Dokument-ID:** idw-ps-951-0400
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -16,10 +21,10 @@ Dieses Dokument beschreibt die Prüfung der IT-Infrastruktur und des IT-Betriebs
 ## 2. Prüfungsgegenstand
 
 ### IT-Infrastruktur
-- **Server und Storage:** {{ source.server_storage }}
-- **Netzwerkinfrastruktur:** {{ source.network_infrastructure }}
-- **Datenbanksysteme:** {{ source.database_systems }}
-- **Backup-Systeme:** {{ source.backup_systems }}
+- **Server und Storage:** [TODO]
+- **Netzwerkinfrastruktur:** [TODO]
+- **Datenbanksysteme:** [TODO]
+- **Backup-Systeme:** [TODO]
 
 ### Prüfungsziele
 - Bewertung der IT-Infrastruktur
@@ -44,21 +49,21 @@ Dieses Dokument beschreibt die Prüfung der IT-Infrastruktur und des IT-Betriebs
 
 | Komponente | Dokumentiert | Überwacht | Getestet | Bewertung |
 |------------|--------------|-----------|----------|-----------|
-| Server | {{ source.server_doc }} | {{ source.server_mon }} | {{ source.server_test }} | {{ source.server_assess }} |
-| Netzwerk | {{ source.network_doc }} | {{ source.network_mon }} | {{ source.network_test }} | {{ source.network_assess }} |
-| Backup | {{ source.backup_doc }} | {{ source.backup_mon }} | {{ source.backup_test }} | {{ source.backup_assess }} |
+| Server | [TODO] | [TODO] | [TODO] | [TODO] |
+| Netzwerk | [TODO] | [TODO] | [TODO] | [TODO] |
+| Backup | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## 5. Feststellungen
 
 ### Positive Feststellungen
-1. {{ source.positive_finding_1 }}
+1. [TODO]
 
 ### Verbesserungspotenziale
-1. {{ source.improvement_1 }}
+1. [TODO]
 
 ## 6. Empfehlungen
 
-1. {{ source.recommendation_1 }}
+1. [TODO]
 
 ## 7. Referenzen
 
@@ -66,18 +71,9 @@ Dieses Dokument beschreibt die Prüfung der IT-Infrastruktur und des IT-Betriebs
 - ITIL 4
 - ISO/IEC 27001
 
----
-
 **Genehmigt durch:**  
-{{ meta.audit_lead }}, Prüfungsleiter  
-Datum: {{ meta.approval_date }}
+{{ meta-organisation-roles.role_Internal_Auditor }}, Prüfungsleiter  
+Datum: {{ meta-handbook.valid_from }}
 
-**Nächster Review:** {{ meta.next_review }}
+**Nächster Review:** {{ meta-handbook.next_review }}
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |

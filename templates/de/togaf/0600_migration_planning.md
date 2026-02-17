@@ -1,17 +1,28 @@
----
+
 Document-ID: togaf-0600
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Migrationsplanung
 
+**Dokument-ID:** [FRAMEWORK]-0600
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt den Migrationsplan zur Umsetzung der Ziel-Architecture bei {{ source.organization_name }}, einschließlich Implementierungs- und Migrationsplan, Architecture Roadmap und Governance.
+Dieses Dokument beschreibt den Migrationsplan zur Umsetzung der Ziel-Architecture bei [TODO], einschließlich Implementierungs- und Migrationsplan, Architecture Roadmap und Governance.
 
 ## Geltungsbereich
 
@@ -23,64 +34,55 @@ Dieses Dokument beschreibt den Migrationsplan zur Umsetzung der Ziel-Architectur
 
 ## Migrationsstrategie
 
-**Gesamtstrategie**: {{ source.migration_strategy }}
+**Gesamtstrategie**: [TODO]
 
 **Migrationsprinzipien**:
-- {{ source.migration_principle_1 }}
-- {{ source.migration_principle_2 }}
-- {{ source.migration_principle_3 }}
+- [TODO]
+- [TODO]
+- [TODO]
 
 ## Implementierungs- und Migrationsplan
 
 | Phase | Zeitrahmen | Wichtige Ergebnisse | Abhängigkeiten | Risiken |
 |-------|------------|---------------------|----------------|---------|
-| {{ source.phase_1 }} | {{ source.phase_1_timeline }} | {{ source.phase_1_deliverables }} | {{ source.phase_1_dependencies }} | {{ source.phase_1_risks }} |
-| {{ source.phase_2 }} | {{ source.phase_2_timeline }} | {{ source.phase_2_deliverables }} | {{ source.phase_2_dependencies }} | {{ source.phase_2_risks }} |
-| {{ source.phase_3 }} | {{ source.phase_3_timeline }} | {{ source.phase_3_deliverables }} | {{ source.phase_3_dependencies }} | {{ source.phase_3_risks }} |
+| [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## Architecture Roadmap
 
-{{ source.architecture_roadmap }}
+[TODO]
 
 ## Implementierungs-Governance
 
-**Governance-Struktur**: {{ source.impl_governance_structure }}
+**Governance-Struktur**: [TODO]
 
 **Entscheidungsgremien**:
-- {{ source.governance_body_1 }}
-- {{ source.governance_body_2 }}
+- [TODO]
+- [TODO]
 
 **Review-Punkte**:
-- {{ source.review_point_1 }}
-- {{ source.review_point_2 }}
-- {{ source.review_point_3 }}
+- [TODO]
+- [TODO]
+- [TODO]
 
 ## Architecture Change Management
 
-**Change Management-Prozess**: {{ source.change_management_process }}
+**Change Management-Prozess**: [TODO]
 
 **Change-Kategorien**:
-- Simplification Change: {{ source.simplification_change }}
-- Incremental Change: {{ source.incremental_change }}
-- Re-architecting Change: {{ source.rearchitecting_change }}
+- Simplification Change: [TODO]
+- Incremental Change: [TODO]
+- Re-architecting Change: [TODO]
 
 ## Architecture Compliance
 
-**Compliance-Bewertung**: {{ source.compliance_assessment }}
+**Compliance-Bewertung**: [TODO]
 
 **Compliance-Kriterien**:
-- {{ source.compliance_criterion_1 }}
-- {{ source.compliance_criterion_2 }}
-- {{ source.compliance_criterion_3 }}
+- [TODO]
+- [TODO]
+- [TODO]
 
 <!-- Autorenhinweise: Migrationsplanung sollte realistisch und erreichbar sein -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|------|--------|---------|
-| 0.1 | {{meta.document.last_updated}} | {{ meta.defaults.author }} | Initiale Erstellung |
-
-<-  ( marked all subtasks complete End of template -->

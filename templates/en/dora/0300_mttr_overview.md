@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0300
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # MTTR Overview
+
+**Document-ID:** [FRAMEWORK]-0300
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -30,9 +41,9 @@ MTTR measures the average time to restore service after an incident or outage in
 
 ### Organization Information
 
-- **Organization**: {{ source.organization_name }}
-- **Responsible**: {{ source.mttr_owner }}
-- **Current MTTR**: {{ source.current_mttr }}
+- **Organization**: [TODO]
+- **Responsible**: [TODO]
+- **Current MTTR**: [TODO]
 
 ## Performance Levels
 
@@ -179,10 +190,3 @@ MTTR = Σ(Recovery Times) / Number of Incidents
 
 <!-- Note: Fast recovery is a sign of maturity -->
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |

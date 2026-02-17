@@ -1,5 +1,19 @@
 # NIST 800-53 Framework Mapping
 
+**Document-ID:** [FRAMEWORK]-9999
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Overview
 
 This document maps NIST 800-53 Rev. 5 control families to corresponding template documents.
@@ -351,22 +365,7 @@ This document maps NIST 800-53 Rev. 5 control families to corresponding template
 - **NIST SP 800-53B:** Control Baselines for Information Systems and Organizations
 - **NIST SP 800-37 Rev. 2:** Risk Management Framework for Information Systems and Organizations
 
----
-
 **Version:** 1.0.0  
 **Last Updated:** 2026-02-07  
 **Maintainer:** NIST-800-53-Template-Team
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
-
-## Version History
-
-| Version | Date | Changes |
-|---------|------|---------|
-| 0.1 | {{meta.document.last_updated}} | Initial creation |

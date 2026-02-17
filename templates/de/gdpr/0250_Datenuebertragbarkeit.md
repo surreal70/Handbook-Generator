@@ -1,11 +1,16 @@
 # Datenübertragbarkeit
 
-**Dokument-ID:** 0250  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0250
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -23,7 +28,7 @@ Referenz: DSGVO Art. 20 (Recht auf Datenübertragbarkeit)
 
 ## Zweck
 
-Dieses Dokument beschreibt die Umsetzung des Rechts auf Datenübertragbarkeit in der {{ meta.organization }}. Betroffene Personen haben das Recht, ihre Daten in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten.
+Dieses Dokument beschreibt die Umsetzung des Rechts auf Datenübertragbarkeit in der {{ meta-organisation.name }}. Betroffene Personen haben das Recht, ihre Daten in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten.
 
 ## Recht auf Datenübertragbarkeit (Art. 20)
 
@@ -240,8 +245,6 @@ Dieses Dokument beschreibt die Umsetzung des Rechts auf Datenübertragbarkeit in
 | Fehlende Schnittstelle | Keine direkte Übertragung | API bereitstellen |
 | Verzögerte Bereitstellung | Bereitstellung nach 3 Monaten | Fristenkontrolle |
 
----
-
 **Nächste Schritte:**
 1. Etablieren Sie Prozess für Datenübertragbarkeitsanfragen
 2. Implementieren Sie Export in strukturierten Formaten
@@ -249,10 +252,3 @@ Dieses Dokument beschreibt die Umsetzung des Rechts auf Datenübertragbarkeit in
 4. Schulen Sie Mitarbeiter zu Datenübertragbarkeit
 5. Dokumentieren Sie alle Anfragen im Register
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

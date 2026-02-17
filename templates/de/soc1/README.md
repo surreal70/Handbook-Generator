@@ -49,9 +49,9 @@ Die Vorlagen sind nach COSO-Komponenten und Berichtselementen organisiert:
 ### 1. Anpassung an Ihre Organisation
 
 Ersetzen Sie die Platzhalter durch Ihre organisationsspezifischen Informationen:
-- `{{ source.organization_name }}` - Name Ihrer Organisation
-- `{{ source.services_description }}` - Beschreibung Ihrer Services
-- `{{ source.control_objective_X }}` - Ihre spezifischen Kontrollziele
+- `[TODO]` - Name Ihrer Organisation
+- `[TODO]` - Beschreibung Ihrer Services
+- `[TODO]` - Ihre spezifischen Kontrollziele
 - Weitere Platzhalter gemäß Ihrer Umgebung
 
 ### 2. Kontrollziele definieren

@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-38500-0060
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Principle 3: Acquisition
+
+**Document-ID:** [FRAMEWORK]-0060
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -16,7 +28,7 @@ This document describes the application of the Acquisition principle in the orga
 ## Scope
 
 This document applies to:
-- {{ meta.organization }}
+- {{ meta-organisation.name }}
 - All IT acquisitions (hardware, software, services)
 - Acquisition processes and decisions
 
@@ -37,7 +49,7 @@ IT acquisitions are made for valid reasons, based on appropriate analysis, with 
 
 | Criterion | Requirement |
 |-----------|-------------|
-| Business Case | Required for acquisitions >{{ meta.business_case_threshold }} EUR |
+| Business Case | Required for acquisitions >{{ meta-handbook.business_case_threshold }} EUR |
 | Cost-Benefit Analysis | Required |
 | Risk Analysis | Required |
 | Alternative Assessment | Minimum 3 options |
@@ -93,21 +105,13 @@ IT acquisitions are made for valid reasons, based on appropriate analysis, with 
 
 ### KPIs
 
-- Acquisitions with business case: {{ meta.acquisitions_with_bc }}%
-- Average acquisition time: {{ meta.avg_acquisition_time }} days
-- Benefit realization: {{ meta.benefit_realization }}%
-- Supplier satisfaction: {{ meta.supplier_satisfaction }}/10
+- Acquisitions with business case: {{ meta-handbook.acquisitions_with_bc }}%
+- Average acquisition time: {{ meta-handbook.avg_acquisition_time }} days
+- Benefit realization: {{ meta-handbook.benefit_realization }}%
+- Supplier satisfaction: {{ meta-handbook.supplier_satisfaction }}/10
 
 ## Document References
 
 - 0010_governance_framework.md
 - 0020_governance_model.md
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 

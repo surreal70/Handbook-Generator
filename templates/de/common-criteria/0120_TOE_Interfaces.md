@@ -1,11 +1,16 @@
 # TOE Interfaces
 
-**Dokument-ID:** 0120  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0120
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -390,8 +395,6 @@ Der TOE bietet folgende Schnittstellenkategorien:
 - [TODO: Integrationshandbuch]: [TODO: Speicherort]
 - [TODO: Protokolldokumentation]: [TODO: Speicherort]
 
----
-
 **Nächste Schritte:**
 1. Vervollständige alle [TODO]-Platzhalter mit TOE-spezifischen Informationen
 2. Erstelle detaillierte Schnittstellendiagramme
@@ -399,10 +402,3 @@ Der TOE bietet folgende Schnittstellenkategorien:
 4. Überprüfe die Konsistenz mit der TOE-Architektur (Template 0130)
 5. Stelle sicher, dass alle Schnittstellen vollständig dokumentiert sind
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

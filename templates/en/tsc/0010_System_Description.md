@@ -1,13 +1,16 @@
 # System Description
 
-**Document ID:** TSC-0010  
-**Organization:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Approved by:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0010
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,7 +28,7 @@ Customization required:
 
 ## 1. Purpose
 
-This document describes the service system of {{ meta.organization.name }} that is subject to the SOC 2 audit.
+This document describes the service system of {{ meta-organisation.name }} that is subject to the SOC 2 audit.
 
 ### 1.1 Objectives
 
@@ -44,10 +47,10 @@ This document describes the service system of {{ meta.organization.name }} that 
 
 ### 2.1 Service Organization
 
-**Organization:** {{ meta.organization.name }}  
-**Address:** {{ meta.organization.address }}, {{ meta.organization.postal_code }} {{ meta.organization.city }}  
-**Country:** {{ meta.organization.country }}  
-**Website:** {{ meta.organization.website }}  
+**Organization:** {{ meta-organisation.name }}  
+**Address:** {{ meta-organisation.address }}, [TODO] [TODO]  
+**Country:** [TODO]  
+**Website:** [TODO]  
 
 **Business Area:** [TODO: e.g., Cloud Hosting, SaaS, Managed Services]  
 **Founded:** [TODO: Year]  
@@ -174,7 +177,7 @@ This document describes the service system of {{ meta.organization.name }} that 
 **Management:**
 - **CEO:** [TODO: Name]
 - **CTO:** [TODO: Name]
-- **CISO:** {{ meta.roles.ciso.name }}
+- **CISO:** {{ meta-organisation-roles.role_CISO }}
 - **COO:** [TODO: Name]
 
 **Teams:**
@@ -370,13 +373,5 @@ This document describes the service system of {{ meta.organization.name }} that 
 
 **Upcoming Changes:**
 - [TODO: Description of planned changes]
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 <!-- End of template -->

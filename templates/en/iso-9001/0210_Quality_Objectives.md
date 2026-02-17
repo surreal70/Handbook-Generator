@@ -1,11 +1,16 @@
 # Quality Objectives and Planning to Achieve Them
 
-**Document-ID:** 0210  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0210
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -28,7 +33,7 @@ Reference: ISO 9001:2015, Clause 6.2
 
 ## Purpose
 
-This document establishes quality objectives for {{ meta.organization }} and defines planning to achieve them, in accordance with ISO 9001:2015 Clause 6.2.
+This document establishes quality objectives for {{ meta-organisation.name }} and defines planning to achieve them, in accordance with ISO 9001:2015 Clause 6.2.
 
 ## Quality Objectives Framework
 
@@ -303,8 +308,6 @@ Quality objectives link to:
 - **Version control:** Maintained according to Clause 7.5
 - **Retention:** [TODO: Define retention period]
 
----
-
 **Next Steps:**
 1. Establish quality objectives at organizational and functional levels
 2. Ensure objectives are SMART and aligned with policy
@@ -313,10 +316,3 @@ Quality objectives link to:
 5. Implement monitoring and reporting systems
 6. Review progress regularly and adjust as needed
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

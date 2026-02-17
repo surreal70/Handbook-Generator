@@ -1,5 +1,19 @@
 # Policy: Zugriffssteuerung und Identitätsmanagement
 
+**Dokument-ID:** 0220
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This policy establishes the principles for access control and identity management.
@@ -10,27 +24,15 @@ access control requirements and IAM maturity.
 ISO 27001:2022 Annex A Reference: A.5.15, A.5.16, A.5.17, A.5.18
 -->
 
-**Dokument-ID:** 0220  
-**Dokumenttyp:** Policy (abstrakt)  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.5.15-A.5.18 (inkl. Amendment 1:2024)  
-**Owner:** {{ meta.ciso.name }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
-
----
-
 ## 1. Zweck
 
-Diese Policy definiert die Grundsätze für Zugriffssteuerung und Identitätsmanagement (IAM) der **{{ meta.organization.name }}**. Sie stellt sicher, dass der Zugriff auf Informationen und IT-Systeme ausschließlich autorisierten Personen gewährt wird und auf Basis des Need-to-Know-Prinzips und der geringsten Privilegien (Least Privilege) erfolgt.
+Diese Policy definiert die Grundsätze für Zugriffssteuerung und Identitätsmanagement (IAM) der **{{ meta-organisation.name }}**. Sie stellt sicher, dass der Zugriff auf Informationen und IT-Systeme ausschließlich autorisierten Personen gewährt wird und auf Basis des Need-to-Know-Prinzips und der geringsten Privilegien (Least Privilege) erfolgt.
 
 ## 2. Geltungsbereich
 
 Diese Policy gilt für:
 
-- **Organisationseinheiten:** Alle Abteilungen und Standorte der {{ meta.organization.name }}
+- **Organisationseinheiten:** Alle Abteilungen und Standorte der {{ meta-organisation.name }}
 - **Systeme:** Alle IT-Systeme, Anwendungen, Datenbanken, Netzwerke, Cloud-Services
 - **Personen:** Alle Mitarbeiter, Auftragnehmer, Lieferanten und Dritte mit Zugang zu IT-Ressourcen
 - **Zugriffsmethoden:** Lokaler Zugriff, Remote-Zugriff, privilegierter Zugriff, API-Zugriff
@@ -167,18 +169,9 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **ISO/IEC 27002:2022** - Information security controls
 - **NIST SP 800-63** - Digital Identity Guidelines
 
----
-
 **Genehmigt durch:**  
 {{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+Datum: {{ meta-handbook.modifydate }}
 
-**Nächster Review:** {{ meta.document.next_review }} (jährlich oder anlassbezogen)
+**Nächster Review:** {{ meta-handbook.next_review }} (jährlich oder anlassbezogen)
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

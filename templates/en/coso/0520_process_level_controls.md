@@ -1,17 +1,28 @@
----
+
 Document-ID: coso-0520
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Processebenen-Kontrollen
 
+**Document-ID:** [FRAMEWORK]-0520
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document describes die Processebenen-Kontrollen (Process-Level Controls) at {{ source.organization_name }}.
+This document describes die Processebenen-Kontrollen (Process-Level Controls) at [TODO].
 
 ## Scope
 
@@ -24,22 +35,22 @@ This document describes die Processebenen-Kontrollen (Process-Level Controls) at
 
 ### Process-Level Controls
 
-{{ source.process_level_controls_definition }}
+[TODO]
 
 ### Characteristics
 
-**Processspezifisch**: {{ source.process_specific }}
-**Direkte Kontrollen**: {{ source.direct_controls }}
-**Detektive und präventive Natur**: {{ source.detective_preventive }}
-**Messbare Wirksamkeit**: {{ source.measurable_effectiveness }}
+**Processspezifisch**: [TODO]
+**Direkte Kontrollen**: [TODO]
+**Detektive und präventive Natur**: [TODO]
+**Messbare Wirksamkeit**: [TODO]
 
 ## Kategorien von Process-Level Controls
 
 ### Transaktionskontrollen
 
-**Eingabekontrollen**: {{ source.input_controls }}
-**Verarattungskontrollen**: {{ source.processing_controls }}
-**Ausgabekontrollen**: {{ source.output_controls }}
+**Eingabekontrollen**: [TODO]
+**Verarattungskontrollen**: [TODO]
+**Ausgabekontrollen**: [TODO]
 
 **Beispiele**:
 - Datenvalidierung
@@ -49,9 +60,9 @@ This document describes die Processebenen-Kontrollen (Process-Level Controls) at
 
 ### Operative Kontrollen
 
-**Processkontrollen**: {{ source.process_controls }}
-**Qualitätskontrollen**: {{ source.quality_controls }}
-**Leistungskontrollen**: {{ source.performance_controls }}
+**Processkontrollen**: [TODO]
+**Qualitätskontrollen**: [TODO]
+**Leistungskontrollen**: [TODO]
 
 **Beispiele**:
 - Processchecklisten
@@ -61,9 +72,9 @@ This document describes die Processebenen-Kontrollen (Process-Level Controls) at
 
 ### IT-Anwendungskontrollen
 
-**Automatisierte Kontrollen**: {{ source.automated_controls }}
-**Manuelle Kontrollen**: {{ source.manual_controls }}
-**IT-abhängige manuelle Kontrollen**: {{ source.it_dependent_manual_controls }}
+**Automatisierte Kontrollen**: [TODO]
+**Manuelle Kontrollen**: [TODO]
+**IT-abhängige manuelle Kontrollen**: [TODO]
 
 **Beispiele**:
 - Systemvalidierungen
@@ -75,27 +86,27 @@ This document describes die Processebenen-Kontrollen (Process-Level Controls) at
 
 ### Finanzprozesse
 
-**Order-to-Cash**: {{ source.order_to_cash_controls }}
-**Purchase-to-Pay**: {{ source.purchase_to_pay_controls }}
-**Record-to-Report**: {{ source.record_to_report_controls }}
+**Order-to-Cash**: [TODO]
+**Purchase-to-Pay**: [TODO]
+**Record-to-Report**: [TODO]
 
 ### Operative Processe
 
-**Produktion**: {{ source.production_controls }}
-**Logistik**: {{ source.logistics_controls }}
-**Kundenservice**: {{ source.customer_service_controls }}
+**Produktion**: [TODO]
+**Logistik**: [TODO]
+**Kundenservice**: [TODO]
 
 ### Unterstützungsprozesse
 
-**Personalwesen**: {{ source.hr_controls }}
-**IT**: {{ source.it_controls }}
-**Beschaffung**: {{ source.procurement_controls }}
+**Personalwesen**: [TODO]
+**IT**: [TODO]
+**Beschaffung**: [TODO]
 
 ## Kontrolltypen
 
 ### Präventive Kontrollen
 
-**Definition**: {{ source.preventive_controls_definition }}
+**Definition**: [TODO]
 
 **Beispiele**:
 - Funktionstrennung
@@ -105,7 +116,7 @@ This document describes die Processebenen-Kontrollen (Process-Level Controls) at
 
 ### Detektive Kontrollen
 
-**Definition**: {{ source.detective_controls_definition }}
+**Definition**: [TODO]
 
 **Beispiele**:
 - Abstimmungen
@@ -115,7 +126,7 @@ This document describes die Processebenen-Kontrollen (Process-Level Controls) at
 
 ### Korrektive Kontrollen
 
-**Definition**: {{ source.corrective_controls_definition }}
+**Definition**: [TODO]
 
 **Beispiele**:
 - Fehlerkorrekturverfahren
@@ -126,169 +137,169 @@ This document describes die Processebenen-Kontrollen (Process-Level Controls) at
 
 ### Kontrollziele
 
-**Vollständigkeit**: {{ source.completeness_objective }}
-**Genauigkeit**: {{ source.accuracy_objective }}
-**Gültigkeit**: {{ source.validity_objective }}
-**Authorisierung**: {{ source.authorization_objective }}
-**Zeitnähe**: {{ source.timeliness_objective }}
+**Vollständigkeit**: [TODO]
+**Genauigkeit**: [TODO]
+**Gültigkeit**: [TODO]
+**Authorisierung**: [TODO]
+**Zeitnähe**: [TODO]
 
 ### Kontrollaktivitäten
 
-**Genehmigungen**: {{ source.approvals }}
-**Abstimmungen**: {{ source.reconciliations }}
-**Überprüfungen**: {{ source.reviews }}
-**Funktionstrennung**: {{ source.segregation_of_duties }}
-**Physische Kontrollen**: {{ source.physical_controls }}
+**Genehmigungen**: [TODO]
+**Abstimmungen**: [TODO]
+**Überprüfungen**: [TODO]
+**Funktionstrennung**: [TODO]
+**Physische Kontrollen**: [TODO]
 
 ### Kontrollfrequenz
 
-**Kontinuierlich**: {{ source.continuous_controls }}
-**Täglich**: {{ source.daily_controls }}
-**Wöchentlich**: {{ source.weekly_controls }}
-**Monatlich**: {{ source.monthly_controls }}
-**Quartalsweise**: {{ source.quarterly_controls }}
+**Kontinuierlich**: [TODO]
+**Täglich**: [TODO]
+**Wöchentlich**: [TODO]
+**Monatlich**: [TODO]
+**Quartalsweise**: [TODO]
 
 ## Kontrollimplementierung
 
 ### Kontrollbeschreibung
 
-**Kontrollziel**: {{ source.control_objective }}
-**Kontrollaktivität**: {{ source.control_activity }}
-**Kontrolleigentümer**: {{ source.control_owner }}
-**Kontrollfrequenz**: {{ source.control_frequency }}
-**Kontrollevidence**: {{ source.control_evidence }}
+**Kontrollziel**: [TODO]
+**Kontrollaktivität**: [TODO]
+**Kontrolleigentümer**: [TODO]
+**Kontrollfrequenz**: [TODO]
+**Kontrollevidence**: [TODO]
 
 ### Kontrollmatrix
 
-{{ source.control_matrix }}
+[TODO]
 
 ### Kontrollnachweis
 
-**Dokumentation**: {{ source.control_documentation }}
-**Evidence**: {{ source.control_evidence_types }}
-**Aufbewahrung**: {{ source.evidence_retention }}
+**Dokumentation**: [TODO]
+**Evidence**: [TODO]
+**Aufbewahrung**: [TODO]
 
 ## Funktionstrennung
 
 ### Prinzip
 
-{{ source.segregation_principle }}
+[TODO]
 
 ### Kritische Trennungen
 
-**Authorisierung und Ausführung**: {{ source.authorization_execution_separation }}
-**Ausführung und Aufzeichnung**: {{ source.execution_recording_separation }}
-**Verwahrung und Aufzeichnung**: {{ source.custody_recording_separation }}
+**Authorisierung und Ausführung**: [TODO]
+**Ausführung und Aufzeichnung**: [TODO]
+**Verwahrung und Aufzeichnung**: [TODO]
 
 ### Kompensationskontrollen
 
-{{ source.compensating_controls }}
+[TODO]
 
 ## Automatisierung von Kontrollen
 
 ### Automatisierungsvorteile
 
-**Konsistenz**: {{ source.automation_consistency }}
-**Effizienz**: {{ source.automation_efficiency }}
-**Vollständigkeit**: {{ source.automation_completeness }}
-**Zeitnähe**: {{ source.automation_timeliness }}
+**Konsistenz**: [TODO]
+**Effizienz**: [TODO]
+**Vollständigkeit**: [TODO]
+**Zeitnähe**: [TODO]
 
 ### Automatisierungsmöglichkeiten
 
-**Robotic Process Automation (RPA)**: {{ source.rpa_controls }}
-**Workflow-Automatisierung**: {{ source.workflow_automation }}
-**Datenvalidierung**: {{ source.automated_validation }}
+**Robotic Process Automation (RPA)**: [TODO]
+**Workflow-Automatisierung**: [TODO]
+**Datenvalidierung**: [TODO]
 
 ### IT-Abhängigkeiten
 
-{{ source.it_dependencies }}
+[TODO]
 
 ## Kontrolltests
 
 ### Testarten
 
-**Design-Tests**: {{ source.design_testing }}
-**Wirksamkeitstests**: {{ source.effectiveness_testing }}
+**Design-Tests**: [TODO]
+**Wirksamkeitstests**: [TODO]
 
 ### Testmethoden
 
-**Inquiry**: {{ source.inquiry }}
-**Observation**: {{ source.observation }}
-**Inspection**: {{ source.inspection }}
-**Re-performance**: {{ source.reperformance }}
+**Inquiry**: [TODO]
+**Observation**: [TODO]
+**Inspection**: [TODO]
+**Re-performance**: [TODO]
 
 ### Teststichproben
 
-**Stichprobenauswahl**: {{ source.sample_selection }}
-**Stichprobengröße**: {{ source.sample_size }}
-**Stichprobenbewertung**: {{ source.sample_evaluation }}
+**Stichprobenauswahl**: [TODO]
+**Stichprobengröße**: [TODO]
+**Stichprobenbewertung**: [TODO]
 
 ## Kontrollmängel
 
 ### Mängelarten
 
-**Design-Mängel**: {{ source.design_deficiencies }}
-**Operative Mängel**: {{ source.operating_deficiencies }}
+**Design-Mängel**: [TODO]
+**Operative Mängel**: [TODO]
 
 ### Mängelbewertung
 
-**Schweregrad**: {{ source.deficiency_severity }}
-**Auswirkung**: {{ source.deficiency_impact }}
-**Wahrscheinlichkeit**: {{ source.deficiency_likelihood }}
+**Schweregrad**: [TODO]
+**Auswirkung**: [TODO]
+**Wahrscheinlichkeit**: [TODO]
 
 ### Mängelbehebung
 
-**Abhilfemaßnahmen**: {{ source.remediation_actions }}
-**Zeitplan**: {{ source.remediation_timeline }}
-**Verantwortlichkeiten**: {{ source.remediation_responsibilities }}
+**Abhilfemaßnahmen**: [TODO]
+**Zeitplan**: [TODO]
+**Verantwortlichkeiten**: [TODO]
 
 ## Überwachung von Process-Level Controls
 
 ### Laufende Überwachung
 
-**Kontrollselbstbewertungen**: {{ source.control_self_assessments }}
-**Key Control Indicators**: {{ source.key_control_indicators }}
-**Automatisierte Überwachung**: {{ source.automated_monitoring }}
+**Kontrollselbstbewertungen**: [TODO]
+**Key Control Indicators**: [TODO]
+**Automatisierte Überwachung**: [TODO]
 
 ### Periodische Bewertungen
 
-**Interne Revision**: {{ source.internal_audit_testing }}
-**Management-Reviews**: {{ source.management_reviews }}
+**Interne Revision**: [TODO]
+**Management-Reviews**: [TODO]
 
 ## Beziehung zu Entity-Level Controls
 
 ### Hierarchie
 
-{{ source.control_hierarchy }}
+[TODO]
 
 ### Abhängigkeiten
 
-{{ source.control_dependencies }}
+[TODO]
 
 ### Integration
 
-{{ source.elc_plc_integration }}
+[TODO]
 
 ## Dokumentation
 
 ### Processdokumentation
 
-**Processflussdiagramme**: {{ source.process_flow_diagrams }}
-**Processbeschreibungen**: {{ source.process_descriptions }}
-**RACI-Matrizen**: {{ source.raci_matrices }}
+**Processflussdiagramme**: [TODO]
+**Processbeschreibungen**: [TODO]
+**RACI-Matrizen**: [TODO]
 
 ### Kontrolldokumentation
 
-**Kontrollbeschreibungen**: {{ source.control_descriptions }}
-**Kontrollmatrizen**: {{ source.control_matrices }}
-**Testdokumentation**: {{ source.test_documentation }}
+**Kontrollbeschreibungen**: [TODO]
+**Kontrollmatrizen**: [TODO]
+**Testdokumentation**: [TODO]
 
 ## Roles and Responsibilities
 
-**Processeigentümer**: {{ source.process_owner_responsibilities }}
-**Kontrolleigentümer**: {{ source.control_owner_responsibilities }}
-**Kontrollausführende**: {{ source.control_performer_responsibilities }}
-**Kontrollprüfer**: {{ source.control_reviewer_responsibilities }}
+**Processeigentümer**: [TODO]
+**Kontrolleigentümer**: [TODO]
+**Kontrollausführende**: [TODO]
+**Kontrollprüfer**: [TODO]
 
 ## References
 
@@ -297,13 +308,5 @@ This document describes die Processebenen-Kontrollen (Process-Level Controls) at
 - Kontrollmatrizen
 - Funktionstrennung-Matrix
 - COSO Internal Control Framework
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

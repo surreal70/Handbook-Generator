@@ -1,41 +1,43 @@
----
+
 Document-ID: coso-0080
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Rechenschaftspflicht
 
-## Zweck
-
-Dieses Dokument beschreibt, wie {{ source.organization_name }} Rechenschaftspflicht durchsetzt (COSO Prinzip 5).
-
-## Verantwortlichkeitsmatrix
-
-{{ source.raci_matrix }}
-
-## Leistungsmessung
-
-{{ source.kpi_framework }}
-
-## Konsequenzen
-
-**Bei Zielerreichung**: {{ source.rewards }}
-**Bei Nichterreichung**: {{ source.consequences }}
-
-## Referenzen
-
-- Performance Management System {{ source.organization_name }}
+**Dokument-ID:** [FRAMEWORK]-0080
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
 
 ---
 
-**Dokumenthistorie:**
+---
 
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
+## Zweck
 
-<!-- Ende des Templates -->
+Dieses Dokument beschreibt, wie [TODO] Rechenschaftspflicht durchsetzt (COSO Prinzip 5).
+
+## Verantwortlichkeitsmatrix
+
+[TODO]
+
+## Leistungsmessung
+
+[TODO]
+
+## Konsequenzen
+
+**Bei Zielerreichung**: [TODO]
+**Bei Nichterreichung**: [TODO]
+
+## Referenzen
+
+- Performance Management System [TODO]
+

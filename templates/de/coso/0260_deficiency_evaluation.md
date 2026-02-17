@@ -1,40 +1,42 @@
----
+
 Document-ID: coso-0430
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Bewertung und Kommunikation von Mängeln
 
+**Dokument-ID:** [FRAMEWORK]-0260
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt die Bewertung und Kommunikation von Mängeln bei {{ source.organization_name }} (COSO Prinzip 17).
+Dieses Dokument beschreibt die Bewertung und Kommunikation von Mängeln bei [TODO] (COSO Prinzip 17).
 
 ## Mängelbewertung
 
-{{ source.deficiency_assessment_criteria }}
+[TODO]
 
 ## Eskalation
 
-{{ source.escalation_procedures }}
+[TODO]
 
 ## Berichterstattung
 
-{{ source.deficiency_reporting }}
+[TODO]
 
 ## Referenzen
 
 - Mängelmanagement-Prozess
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

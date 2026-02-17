@@ -1,17 +1,28 @@
----
+
 Document-ID: coso-0540
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Test- und Validierungsverfahren
 
+**Document-ID:** [FRAMEWORK]-0540
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document describes die Test- und Validierungsverfahren für das interne Kontrollsystem at {{ source.organization_name }}.
+This document describes die Test- und Validierungsverfahren für das interne Kontrollsystem at [TODO].
 
 ## Scope
 
@@ -24,25 +35,25 @@ This document describes die Test- und Validierungsverfahren für das interne Kon
 
 ### Purpose
 
-**Wirksamkeitsnachweis**: {{ source.effectiveness_verification }}
-**Compliance-Nachweis**: {{ source.compliance_verification }}
-**Verbesserungsidentifikation**: {{ source.improvement_identification }}
-**Risikominderung**: {{ source.risk_mitigation }}
+**Wirksamkeitsnachweis**: [TODO]
+**Compliance-Nachweis**: [TODO]
+**Verbesserungsidentifikation**: [TODO]
+**Risikominderung**: [TODO]
 
 ### Testprinzipien
 
-**Unabhängigkeit**: {{ source.independence_principle }}
-**Objektivität**: {{ source.objectivity_principle }}
-**Professionalität**: {{ source.professionalism_principle }}
-**Dokumentation**: {{ source.documentation_principle }}
+**Unabhängigkeit**: [TODO]
+**Objektivität**: [TODO]
+**Professionalität**: [TODO]
+**Dokumentation**: [TODO]
 
 ## Testarten
 
 ### Design-Tests
 
-**Purpose**: {{ source.design_testing_purpose }}
-**Fokus**: {{ source.design_testing_focus }}
-**Methods**: {{ source.design_testing_methods }}
+**Purpose**: [TODO]
+**Fokus**: [TODO]
+**Methods**: [TODO]
 
 **Bewertungskriterien**:
 - Ist die Kontrolle angemessen gestaltet?
@@ -51,9 +62,9 @@ This document describes die Test- und Validierungsverfahren für das interne Kon
 
 ### Wirksamkeitstests
 
-**Purpose**: {{ source.effectiveness_testing_purpose }}
-**Fokus**: {{ source.effectiveness_testing_focus }}
-**Methods**: {{ source.effectiveness_testing_methods }}
+**Purpose**: [TODO]
+**Fokus**: [TODO]
+**Methods**: [TODO]
 
 **Bewertungskriterien**:
 - Wird die Kontrolle wie vorgesehen durchgeführt?
@@ -64,213 +75,213 @@ This document describes die Test- und Validierungsverfahren für das interne Kon
 
 ### Inquiry (Befragung)
 
-**Beschreibung**: {{ source.inquiry_description }}
-**Anwendung**: {{ source.inquiry_application }}
-**Stärken**: {{ source.inquiry_strengths }}
-**Schwächen**: {{ source.inquiry_weaknesses }}
+**Beschreibung**: [TODO]
+**Anwendung**: [TODO]
+**Stärken**: [TODO]
+**Schwächen**: [TODO]
 
 ### Observation (Beobachtung)
 
-**Beschreibung**: {{ source.observation_description }}
-**Anwendung**: {{ source.observation_application }}
-**Stärken**: {{ source.observation_strengths }}
-**Schwächen**: {{ source.observation_weaknesses }}
+**Beschreibung**: [TODO]
+**Anwendung**: [TODO]
+**Stärken**: [TODO]
+**Schwächen**: [TODO]
 
 ### Inspection (Prüfung)
 
-**Beschreibung**: {{ source.inspection_description }}
-**Anwendung**: {{ source.inspection_application }}
-**Stärken**: {{ source.inspection_strengths }}
-**Schwächen**: {{ source.inspection_weaknesses }}
+**Beschreibung**: [TODO]
+**Anwendung**: [TODO]
+**Stärken**: [TODO]
+**Schwächen**: [TODO]
 
 ### Re-performance (Nachvollzug)
 
-**Beschreibung**: {{ source.reperformance_description }}
-**Anwendung**: {{ source.reperformance_application }}
-**Stärken**: {{ source.reperformance_strengths }}
-**Schwächen**: {{ source.reperformance_weaknesses }}
+**Beschreibung**: [TODO]
+**Anwendung**: [TODO]
+**Stärken**: [TODO]
+**Schwächen**: [TODO]
 
 ## Testplanung
 
 ### Risikobasierte Testplanung
 
-**Risikobasierter Ansatz**: {{ source.risk_based_approach }}
-**Priorisierung**: {{ source.test_prioritization }}
-**Ressourcenallokation**: {{ source.resource_allocation }}
+**Risikobasierter Ansatz**: [TODO]
+**Priorisierung**: [TODO]
+**Ressourcenallokation**: [TODO]
 
 ### Testumfang
 
-**Abdeckung**: {{ source.test_coverage }}
-**Testtiefe**: {{ source.test_depth }}
-**Testfrequenz**: {{ source.test_frequency }}
+**Abdeckung**: [TODO]
+**Testtiefe**: [TODO]
+**Testfrequenz**: [TODO]
 
 ### Testplan
 
-**Testziele**: {{ source.test_objectives }}
-**Testumfang**: {{ source.test_scope }}
-**Testmethoden**: {{ source.test_methods }}
-**Zeitplan**: {{ source.test_timeline }}
-**Ressourcen**: {{ source.test_resources }}
+**Testziele**: [TODO]
+**Testumfang**: [TODO]
+**Testmethoden**: [TODO]
+**Zeitplan**: [TODO]
+**Ressourcen**: [TODO]
 
 ## Stichprobenverfahren
 
 ### Stichprobenauswahl
 
-**Zufallsstichprobe**: {{ source.random_sampling }}
-**Systematische Stichprobe**: {{ source.systematic_sampling }}
-**Urteilsstichprobe**: {{ source.judgmental_sampling }}
-**Geschichtete Stichprobe**: {{ source.stratified_sampling }}
+**Zufallsstichprobe**: [TODO]
+**Systematische Stichprobe**: [TODO]
+**Urteilsstichprobe**: [TODO]
+**Geschichtete Stichprobe**: [TODO]
 
 ### Stichprobengröße
 
-**Bestimmungsfaktoren**: {{ source.sample_size_factors }}
-**Statistische Methods**: {{ source.statistical_methods }}
-**Nicht-statistische Methods**: {{ source.non_statistical_methods }}
+**Bestimmungsfaktoren**: [TODO]
+**Statistische Methods**: [TODO]
+**Nicht-statistische Methods**: [TODO]
 
 ### Stichprobenbewertung
 
-**Fehlerrate**: {{ source.error_rate }}
-**Hochrechnung**: {{ source.projection }}
-**Schlussfolgerungen**: {{ source.conclusions }}
+**Fehlerrate**: [TODO]
+**Hochrechnung**: [TODO]
+**Schlussfolgerungen**: [TODO]
 
 ## Testdurchführung
 
 ### Testvorbereitung
 
-**Testplanung**: {{ source.test_preparation }}
-**Dokumentenbeschaffung**: {{ source.document_gathering }}
-**Systemzugang**: {{ source.system_access }}
+**Testplanung**: [TODO]
+**Dokumentenbeschaffung**: [TODO]
+**Systemzugang**: [TODO]
 
 ### Testausführung
 
-**Testschritte**: {{ source.test_steps }}
-**Datenerfassung**: {{ source.data_collection }}
-**Beobachtungen**: {{ source.observations }}
+**Testschritte**: [TODO]
+**Datenerfassung**: [TODO]
+**Beobachtungen**: [TODO]
 
 ### Testdokumentation
 
-**Testarattsblätter**: {{ source.test_worksheets }}
-**Evidence**: {{ source.test_evidence }}
-**Feststellungen**: {{ source.test_findings }}
+**Testarattsblätter**: [TODO]
+**Evidence**: [TODO]
+**Feststellungen**: [TODO]
 
 ## Validierungsmethoden
 
 ### Datenvalidierung
 
-**Datenqualitätsprüfungen**: {{ source.data_quality_checks }}
-**Abstimmungen**: {{ source.reconciliations }}
-**Plausibilitätsprüfungen**: {{ source.plausibility_checks }}
+**Datenqualitätsprüfungen**: [TODO]
+**Abstimmungen**: [TODO]
+**Plausibilitätsprüfungen**: [TODO]
 
 ### Processvalidierung
 
-**Processkonformität**: {{ source.process_conformity }}
-**Processleistung**: {{ source.process_performance }}
-**Processverbesserung**: {{ source.process_improvement }}
+**Processkonformität**: [TODO]
+**Processleistung**: [TODO]
+**Processverbesserung**: [TODO]
 
 ### Systemvalidierung
 
-**Systemfunktionalität**: {{ source.system_functionality }}
-**Systemintegrität**: {{ source.system_integrity }}
-**Systemsicherheit**: {{ source.system_security }}
+**Systemfunktionalität**: [TODO]
+**Systemintegrität**: [TODO]
+**Systemsicherheit**: [TODO]
 
 ## Automatisierte Tests
 
 ### Continuous Auditing
 
-**Continuous Auditing Ansatz**: {{ source.continuous_auditing }}
-**Automatisierte Testskripte**: {{ source.automated_test_scripts }}
-**Datenanalyse-Tools**: {{ source.data_analytics_tools }}
+**Continuous Auditing Ansatz**: [TODO]
+**Automatisierte Testskripte**: [TODO]
+**Datenanalyse-Tools**: [TODO]
 
 ### Vorteile der Automatisierung
 
-**Effizienz**: {{ source.automation_efficiency }}
-**Vollständigkeit**: {{ source.automation_completeness }}
-**Konsistenz**: {{ source.automation_consistency }}
-**Zeitnähe**: {{ source.automation_timeliness }}
+**Effizienz**: [TODO]
+**Vollständigkeit**: [TODO]
+**Konsistenz**: [TODO]
+**Zeitnähe**: [TODO]
 
 ## Testergebnisse und Bewertung
 
 ### Ergebnisdokumentation
 
-**Testresultate**: {{ source.test_results }}
-**Abweichungen**: {{ source.deviations }}
-**Ausnahmen**: {{ source.exceptions }}
+**Testresultate**: [TODO]
+**Abweichungen**: [TODO]
+**Ausnahmen**: [TODO]
 
 ### Mängelbewertung
 
-**Mängelklassifizierung**: {{ source.deficiency_classification }}
-**Schweregradbeurteilung**: {{ source.severity_assessment }}
-**Ursachenanalyse**: {{ source.root_cause_analysis }}
+**Mängelklassifizierung**: [TODO]
+**Schweregradbeurteilung**: [TODO]
+**Ursachenanalyse**: [TODO]
 
 ### Schlussfolgerungen
 
-**Kontrollwirksamkeit**: {{ source.control_effectiveness_conclusion }}
-**Empfehlungen**: {{ source.recommendations }}
-**Managementantworten**: {{ source.management_responses }}
+**Kontrollwirksamkeit**: [TODO]
+**Empfehlungen**: [TODO]
+**Managementantworten**: [TODO]
 
 ## Berichterstattung
 
 ### Testberichte
 
-**Berichtsstruktur**: {{ source.report_structure }}
-**Berichtsinhalte**: {{ source.report_contents }}
-**Berichtsempfänger**: {{ source.report_recipients }}
+**Berichtsstruktur**: [TODO]
+**Berichtsinhalte**: [TODO]
+**Berichtsempfänger**: [TODO]
 
 ### Kommunikation von Feststellungen
 
-**Formelle Berichterstattung**: {{ source.formal_reporting }}
-**Informelle Kommunikation**: {{ source.informal_communication }}
-**Eskalation**: {{ source.escalation }}
+**Formelle Berichterstattung**: [TODO]
+**Informelle Kommunikation**: [TODO]
+**Eskalation**: [TODO]
 
 ## Follow-up und Nachverfolgung
 
 ### Maßnahmenverfolgung
 
-**Abhilfemaßnahmen**: {{ source.remediation_tracking }}
-**Zeitpläne**: {{ source.timelines }}
-**Verantwortlichkeiten**: {{ source.responsibilities }}
+**Abhilfemaßnahmen**: [TODO]
+**Zeitpläne**: [TODO]
+**Verantwortlichkeiten**: [TODO]
 
 ### Follow-up-Tests
 
-**Follow-up-Planung**: {{ source.follow_up_planning }}
-**Follow-up-Durchführung**: {{ source.follow_up_execution }}
-**Wirksamkeitsprüfung**: {{ source.effectiveness_verification }}
+**Follow-up-Planung**: [TODO]
+**Follow-up-Durchführung**: [TODO]
+**Wirksamkeitsprüfung**: [TODO]
 
 ## Qualitätssicherung der Tests
 
 ### Testqualität
 
-**Qualitätskriterien**: {{ source.test_quality_criteria }}
-**Qualitätsprüfung**: {{ source.quality_review }}
-**Supervision**: {{ source.supervision }}
+**Qualitätskriterien**: [TODO]
+**Qualitätsprüfung**: [TODO]
+**Supervision**: [TODO]
 
 ### Teststandards
 
-**Interne Standards**: {{ source.internal_standards }}
-**Externe Standards**: {{ source.external_standards }}
-**Best Practices**: {{ source.testing_best_practices }}
+**Interne Standards**: [TODO]
+**Externe Standards**: [TODO]
+**Best Practices**: [TODO]
 
 ## Schulung und Kompetenz
 
 ### Tester-Qualifikationen
 
-**Fachliche Kompetenz**: {{ source.technical_competence }}
-**Testkompetenz**: {{ source.testing_competence }}
-**Zertifizierungen**: {{ source.certifications }}
+**Fachliche Kompetenz**: [TODO]
+**Testkompetenz**: [TODO]
+**Zertifizierungen**: [TODO]
 
 ### Schulungsprogramme
 
-**Testmethoden-Schulung**: {{ source.test_methods_training }}
-**Tool-Schulung**: {{ source.tool_training }}
-**Fortbildung**: {{ source.continuing_education }}
+**Testmethoden-Schulung**: [TODO]
+**Tool-Schulung**: [TODO]
+**Fortbildung**: [TODO]
 
 ## Roles and Responsibilities
 
-**Testleiter**: {{ source.test_leader_responsibilities }}
-**Tester**: {{ source.tester_responsibilities }}
-**Kontrolleigentümer**: {{ source.control_owner_test_responsibilities }}
-**Management**: {{ source.management_test_responsibilities }}
-**Interne Revision**: {{ source.internal_audit_test_responsibilities }}
+**Testleiter**: [TODO]
+**Tester**: [TODO]
+**Kontrolleigentümer**: [TODO]
+**Management**: [TODO]
+**Interne Revision**: [TODO]
 
 ## References
 
@@ -279,13 +290,5 @@ This document describes die Test- und Validierungsverfahren für das interne Kon
 - International Standards for the Professional Practice of Internal Auditing (IIA Standards)
 - ISA 330 (The Auditor's Responses to Assessed Risks)
 - COSO Internal Control Framework
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

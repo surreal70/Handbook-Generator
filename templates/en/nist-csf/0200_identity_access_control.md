@@ -1,13 +1,25 @@
----
+
 Document-ID: nist-csf-0200
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Identity Management and Access Control (PR.AA)
+
+**Document-ID:** [FRAMEWORK]-0200
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -15,7 +27,7 @@ This document describes identity management and access control processes.
 
 ## Scope
 
-{{ meta.scope }}
+{{ meta-handbook.scope }}
 
 ## Access Control Principles
 
@@ -35,12 +47,3 @@ This document describes identity management and access control processes.
 
 - 0050_policy_framework.md (Govern)
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |
-
-<!-- Author Notes: Review access rights regularly -->

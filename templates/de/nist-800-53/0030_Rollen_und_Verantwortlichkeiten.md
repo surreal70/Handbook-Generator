@@ -1,11 +1,16 @@
 # Rollen und Verantwortlichkeiten
 
-**Dokument-ID:** NIST-0030  
-**Organisation:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** NIST-0030
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -17,8 +22,8 @@ Dieses Dokument definiert die Rollen und Verantwortlichkeiten für das Risk Mana
 
 ### 2.1 Authorizing Official (AO)
 
-**Name:** {{ meta.roles.ao.name }}  
-**E-Mail:** {{ meta.roles.ao.email }}  
+**Name:** [TODO]  
+**E-Mail:** [TODO]  
 
 **Verantwortlichkeiten:**
 - Autorisierungsentscheidung für das System
@@ -28,8 +33,8 @@ Dieses Dokument definiert die Rollen und Verantwortlichkeiten für das Risk Mana
 
 ### 2.2 Information System Security Officer (ISSO)
 
-**Name:** {{ meta.roles.isso.name }}  
-**E-Mail:** {{ meta.roles.isso.email }}  
+**Name:** [TODO]  
+**E-Mail:** [TODO]  
 
 **Verantwortlichkeiten:**
 - Tägliche Sicherheitsoperationen
@@ -39,8 +44,8 @@ Dieses Dokument definiert die Rollen und Verantwortlichkeiten für das Risk Mana
 
 ### 2.3 Information System Security Manager (ISSM)
 
-**Name:** {{ meta.roles.issm.name }}  
-**E-Mail:** {{ meta.roles.issm.email }}  
+**Name:** [TODO]  
+**E-Mail:** [TODO]  
 
 **Verantwortlichkeiten:**
 - Sicherheitsprogramm-Management
@@ -82,13 +87,5 @@ Dieses Dokument definiert die Rollen und Verantwortlichkeiten für das Risk Mana
 | Continuous Monitoring | A | R | C | C | I |
 
 **Legende:** R = Responsible, A = Accountable, C = Consulted, I = Informed
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 <!-- End of template -->

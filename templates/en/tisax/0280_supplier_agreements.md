@@ -1,17 +1,28 @@
----
+
 Document-ID: tisax-0410
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Supplier Agreements
 
+**Document-ID:** [FRAMEWORK]-0280
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document describes the security agreements with suppliers at {{ source.organization_name }}.
+This document describes the security agreements with suppliers at [TODO].
 
 ## Contract Components
 
@@ -28,9 +39,9 @@ This document describes the security agreements with suppliers at {{ source.orga
 
 ## Standard Contracts
 
-**NDA Template**: {{ source.nda_template }}
-**DPA Template**: {{ source.dpa_template }}
-**SLA Template**: {{ source.sla_template }}
+**NDA Template**: [TODO]
+**DPA Template**: [TODO]
+**SLA Template**: [TODO]
 
 ## Contract Management
 
@@ -39,13 +50,5 @@ This document describes the security agreements with suppliers at {{ source.orga
 - Renewal management
 
 <!-- Note: Use standard contracts -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

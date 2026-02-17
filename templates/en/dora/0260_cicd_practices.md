@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0440
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # CI/CD Practices
+
+**Document-ID:** [FRAMEWORK]-0260
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -23,9 +34,9 @@ Description of CI/CD practices for quality assurance.
 
 ### CI Practices
 
-- **Commit Frequency**: {{ source.commit_frequency }}
-- **Build Frequency**: {{ source.build_frequency }}
-- **Integration Frequency**: {{ source.integration_frequency }}
+- **Commit Frequency**: [TODO]
+- **Build Frequency**: [TODO]
+- **Integration Frequency**: [TODO]
 
 ### CI Pipeline
 
@@ -38,9 +49,9 @@ Description of CI/CD practices for quality assurance.
 
 ### CD Practices
 
-- **Deployment Automation**: {{ source.deployment_automation_level }}
-- **Release Strategy**: {{ source.release_strategy }}
-- **Feature Flags**: {{ source.feature_flags_usage }}
+- **Deployment Automation**: [TODO]
+- **Release Strategy**: [TODO]
+- **Feature Flags**: [TODO]
 
 ### CD Pipeline
 
@@ -56,13 +67,5 @@ Description of CI/CD practices for quality assurance.
 - Automated quality gates
 
 <!-- Note: Mature CI/CD practices reduce CFR -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

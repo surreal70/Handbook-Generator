@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-31000-0020
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Principle 1: Integrated
+
+**Document-ID:** [FRAMEWORK]-0020
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -24,7 +36,7 @@ Risk management is not a stand-alone process but part of the purposes, governanc
 - Risk management is part of decision-making
 - Risk management considers external and internal contexts
 
-## Implementation in {{ meta.organization }}
+## Implementation in {{ meta-organisation.name }}
 
 ### Integration into Business Processes
 
@@ -60,17 +72,8 @@ Risk management is not a stand-alone process but part of the purposes, governanc
 - Quality of risk identification in processes
 - Effectiveness of risk mitigation measures
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |
-
 <!-- 
 Author Notes: 
 - Document concrete examples of integration in your organization
 - Describe training measures to promote the integrated approach
 -->
-

@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-38500-0400
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # IT Governance Maturity Assessment
+
+**Document-ID:** [FRAMEWORK]-0250
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -16,7 +28,7 @@ This document describes the assessment of the organization's IT governance matur
 ## Scope
 
 This document applies to:
-- {{ meta.organization }}
+- {{ meta-organisation.name }}
 - Complete IT governance assessment
 
 ## Maturity Model
@@ -67,20 +79,20 @@ This document applies to:
 
 | Principle | Current Maturity | Target Maturity |
 |-----------|------------------|-----------------|
-| Responsibility | {{ meta.responsibility_maturity }} | {{ meta.responsibility_target }} |
-| Strategy | {{ meta.strategy_maturity }} | {{ meta.strategy_target }} |
-| Acquisition | {{ meta.acquisition_maturity }} | {{ meta.acquisition_target }} |
-| Performance | {{ meta.performance_maturity }} | {{ meta.performance_target }} |
-| Conformance | {{ meta.conformance_maturity }} | {{ meta.conformance_target }} |
-| Human Behavior | {{ meta.human_behavior_maturity }} | {{ meta.human_behavior_target }} |
+| Responsibility | {{ meta-handbook.responsibility_maturity }} | {{ meta-handbook.responsibility_target }} |
+| Strategy | {{ meta-handbook.strategy_maturity }} | {{ meta-handbook.strategy_target }} |
+| Acquisition | {{ meta-handbook.acquisition_maturity }} | {{ meta-handbook.acquisition_target }} |
+| Performance | {{ meta-handbook.performance_maturity }} | {{ meta-handbook.performance_target }} |
+| Conformance | {{ meta-handbook.conformance_maturity }} | {{ meta-handbook.conformance_target }} |
+| Human Behavior | {{ meta-handbook.human_behavior_maturity }} | {{ meta-handbook.human_behavior_target }} |
 
 ### EDM Activities
 
 | Activity | Current Maturity | Target Maturity |
 |----------|------------------|-----------------|
-| Evaluate | {{ meta.evaluate_maturity }} | {{ meta.evaluate_target }} |
-| Direct | {{ meta.direct_maturity }} | {{ meta.direct_target }} |
-| Monitor | {{ meta.monitor_maturity }} | {{ meta.monitor_target }} |
+| Evaluate | {{ meta-handbook.evaluate_maturity }} | {{ meta-handbook.evaluate_target }} |
+| Direct | {{ meta-handbook.direct_maturity }} | {{ meta-handbook.direct_target }} |
+| Monitor | {{ meta-handbook.monitor_maturity }} | {{ meta-handbook.monitor_target }} |
 
 ## Assessment Methodology
 
@@ -133,18 +145,9 @@ This document applies to:
 - 0010_governance_framework.md
 - 0340_continuous_improvement.md
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |
-
 <!-- 
 Author Notes: 
 - Conduct regular maturity assessments (annually)
 - Use results for continuous improvement
 - Benchmark with other organizations
 -->
-

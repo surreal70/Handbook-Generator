@@ -1,5 +1,19 @@
 # Policy: Configuration and Hardening
 
+**Document-ID:** [FRAMEWORK]-0540
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This policy establishes the principles for secure configuration and system hardening.
@@ -16,20 +30,18 @@ ISO 27001:2022 Annex A Reference: A.8.9, A.8.10
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** {{ meta-handbook.modifydate }}  
+**Next Review:** {{ meta-handbook.next_review }}
 
 ## 1. Purpose
 
-This policy defines the principles for secure configuration and system hardening at **{{ meta.organization.name }}**. It ensures that IT systems are securely configured and hardened against attacks.
+This policy defines the principles for secure configuration and system hardening at **{{ meta-organisation.name }}**. It ensures that IT systems are securely configured and hardened against attacks.
 
 ## 2. Scope
 
 This policy applies to:
 
-- **Organizational Units:** All departments and locations of {{ meta.organization.name }}
+- **Organizational Units:** All departments and locations of {{ meta-organisation.name }}
 - **Systems:** All servers, workstations, network devices, applications, cloud resources
 - **Environments:** Production, test, development
 - **Locations:** {{ netbox.site.name }} and all other operational sites
@@ -164,18 +176,9 @@ Exceptions to this policy are only permitted in justified exceptional cases:
 - **NIST SP 800-123** - Guide to General Server Security
 - **BSI IT-Grundschutz** - Security requirements
 
----
-
 **Approved by:**  
 {{ meta.management.ceo }}, Management  
-Date: {{ meta.document.approval_date }}
+Date: {{ meta-handbook.modifydate }}
 
-**Next Review:** {{ meta.document.next_review }} (annually or as needed)
+**Next Review:** {{ meta-handbook.next_review }} (annually or as needed)
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

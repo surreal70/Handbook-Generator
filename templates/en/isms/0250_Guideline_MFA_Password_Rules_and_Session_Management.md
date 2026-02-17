@@ -1,5 +1,19 @@
 # Guideline: MFA, Password Rules and Session Management
 
+**Document-ID:** [FRAMEWORK]-0250
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This guideline provides detailed implementation guidance for authentication controls,
@@ -15,10 +29,8 @@ Customize based on your organization's risk tolerance and technical capabilities
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** {{ meta-handbook.modifydate }}  
+**Next Review:** {{ meta-handbook.next_review }}
 
 ## 1. Purpose and Scope
 
@@ -28,7 +40,7 @@ This guideline implements the `0240_Policy_Authentication_and_Passwords.md` and 
 - Session management and timeouts
 - Authentication methods and technologies
 
-**Scope:** All systems, applications, and users at **{{ meta.organization.name }}**
+**Scope:** All systems, applications, and users at **{{ meta-organisation.name }}**
 
 ## 2. Multi-Factor Authentication (MFA)
 
@@ -367,18 +379,9 @@ This guideline implements the `0240_Policy_Authentication_and_Passwords.md` and 
 - **NIST SP 800-63B** - Digital Identity Guidelines (Authentication)
 - **OWASP Authentication Cheat Sheet**
 
----
-
 **Approved by:**  
 {{ meta.ciso.name }}, CISO  
-Date: {{ meta.document.approval_date }}
+Date: {{ meta-handbook.modifydate }}
 
-**Next Review:** {{ meta.document.next_review }}
+**Next Review:** {{ meta-handbook.next_review }}
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

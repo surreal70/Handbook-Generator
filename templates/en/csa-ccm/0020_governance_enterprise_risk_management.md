@@ -1,17 +1,28 @@
----
+
 Document-ID: csa-ccm-0020
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Governance and Enterprise Risk Management (GRC)
 
+**Document-ID:** [FRAMEWORK]-0020
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document describes the governance structure and enterprise risk management for cloud services within {{ source.organization_name }}.
+This document describes the governance structure and enterprise risk management for cloud services within [TODO].
 
 ## Scope
 
@@ -119,13 +130,5 @@ This document applies to all cloud governance activities and risk management pro
 **GRC-07**: Policy Reviews
 
 <!-- Note: Customize governance structure and risk management processes -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

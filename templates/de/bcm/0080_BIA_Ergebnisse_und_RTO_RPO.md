@@ -1,13 +1,16 @@
 # BIA – Ergebnisse und Zielwerte (RTO/RPO)
 
-**Dokument-ID:** BCM-0080  
-**Organisation:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** BCM-0080
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -152,10 +155,10 @@ Die folgenden Prozesse wurden als geschäftskritisch identifiziert (RTO < 24 Stu
 
 | Maßnahme | Beschreibung | Owner | Priorität | Fällig | Status | Kosten (geschätzt) |
 |----------|--------------|-------|-----------|--------|--------|-------------------|
-| ERP-Redundanz | Implementierung Hochverfügbarkeits-Cluster | {{ meta.roles.cio.name }} | Hoch | Q2 2026 | In Arbeit | 150.000 € |
+| ERP-Redundanz | Implementierung Hochverfügbarkeits-Cluster | {{ meta-organisation-roles.role_CIO }} | Hoch | Q2 2026 | In Arbeit | 150.000 € |
 | Backup-Personal | Schulung von Vertretungen für Schlüsselpersonen | HR | Hoch | Q1 2026 | Offen | 20.000 € |
 | Lieferanten-BCM | Anforderung BCM-Nachweise von kritischen Lieferanten | Einkauf | Mittel | Q2 2026 | Offen | 5.000 € |
-| Netzwerk-Redundanz | Zweite Internet-Anbindung | {{ meta.roles.it_operations_manager.name }} | Hoch | Q1 2026 | In Arbeit | 30.000 € |
+| Netzwerk-Redundanz | Zweite Internet-Anbindung | {{ meta-organisation-roles.role_IT_Manager }} | Hoch | Q1 2026 | In Arbeit | 30.000 € |
 
 ### 5.2 Priorisierung der Maßnahmen
 
@@ -230,16 +233,8 @@ Bei einem umfassenden Ausfall erfolgt die Wiederherstellung in folgender Reihenf
 
 | Rolle | Name | Datum | Unterschrift |
 |-------|------|-------|--------------|
-| CEO | {{ meta.roles.ceo.name }} | [TODO: Datum] | [TODO] |
-| CIO | {{ meta.roles.cio.name }} | [TODO: Datum] | [TODO] |
+| CEO | {{ meta-organisation-roles.role_CEO }} | [TODO: Datum] | [TODO] |
+| CIO | {{ meta-organisation-roles.role_CIO }} | [TODO: Datum] | [TODO] |
 | BCM-Manager | [TODO: Name] | [TODO: Datum] | [TODO] |
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 <!-- End of template -->

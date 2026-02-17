@@ -1,17 +1,28 @@
----
+
 Document-ID: togaf-0040
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Architecture Repository Structure
 
+**Document-ID:** [FRAMEWORK]-0040
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document defines the structure and organization of the architecture repository for {{ source.organization_name }}. The repository serves as the central storage for all architecture artifacts and deliverables.
+This document defines the structure and organization of the architecture repository for [TODO]. The repository serves as the central storage for all architecture artifacts and deliverables.
 
 ## Scope
 
@@ -82,12 +93,12 @@ Architecture Repository/
 
 | Artifact Type | Description | Storage Location |
 |--------------|-------------|------------------|
-| Architecture Vision | Strategic direction | {{ source.vision_location }} |
-| Architecture Principles | Guiding rules | {{ source.principles_location }} |
-| Architecture Models | Visual representations | {{ source.models_location }} |
-| Architecture Specifications | Detailed requirements | {{ source.specs_location }} |
-| Architecture Decisions | ADRs | {{ source.decisions_location }} |
-| Standards | Technology standards | {{ source.standards_location }} |
+| Architecture Vision | Strategic direction | [TODO] |
+| Architecture Principles | Guiding rules | [TODO] |
+| Architecture Models | Visual representations | [TODO] |
+| Architecture Specifications | Detailed requirements | [TODO] |
+| Architecture Decisions | ADRs | [TODO] |
+| Standards | Technology standards | [TODO] |
 
 ### Artifact Lifecycle States
 
@@ -143,7 +154,7 @@ Artifacts are classified as:
 
 ### Primary Repository Tool
 
-**Tool**: {{ source.repository_tool_name }}
+**Tool**: [TODO]
 
 **Capabilities**:
 - Version control
@@ -155,10 +166,10 @@ Artifacts are classified as:
 ### Integration Points
 
 The repository integrates with:
-- **Modeling Tools**: {{ source.modeling_tool_integration }}
-- **Documentation Tools**: {{ source.documentation_tool_integration }}
-- **Project Management**: {{ source.pm_tool_integration }}
-- **CMDB**: {{ source.cmdb_integration }}
+- **Modeling Tools**: [TODO]
+- **Documentation Tools**: [TODO]
+- **Project Management**: [TODO]
+- **CMDB**: [TODO]
 
 ## Repository Maintenance
 
@@ -166,10 +177,10 @@ The repository integrates with:
 
 | Activity | Frequency | Responsible |
 |----------|-----------|-------------|
-| Artifact review | {{ source.artifact_review_frequency }} | Domain Architects |
-| Cleanup of obsolete artifacts | {{ source.cleanup_frequency }} | Repository Administrator |
-| Access rights review | {{ source.access_review_frequency }} | Security Team |
-| Backup verification | {{ source.backup_frequency }} | IT Operations |
+| Artifact review | [TODO] | Domain Architects |
+| Cleanup of obsolete artifacts | [TODO] | Repository Administrator |
+| Access rights review | [TODO] | Security Team |
+| Backup verification | [TODO] | IT Operations |
 
 ### Quality Assurance
 
@@ -211,19 +222,10 @@ Users can search by:
 
 | Report | Purpose | Frequency |
 |--------|---------|-----------|
-| Artifact Inventory | Complete list of artifacts | {{ source.inventory_report_frequency }} |
-| Artifact Status | Lifecycle state distribution | {{ source.status_report_frequency }} |
-| Usage Analytics | Most accessed artifacts | {{ source.usage_report_frequency }} |
-| Compliance Status | Architecture compliance metrics | {{ source.compliance_report_frequency }} |
+| Artifact Inventory | Complete list of artifacts | [TODO] |
+| Artifact Status | Lifecycle state distribution | [TODO] |
+| Usage Analytics | Most accessed artifacts | [TODO] |
+| Compliance Status | Architecture compliance metrics | [TODO] |
 
 <!-- Author notes: Customize the repository structure to match your organization's needs and tools -->
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{meta.document.last_updated}} | {{ meta.defaults.author }} | Initial creation |
-
-<-  ( marked all subtasks complete End of template -->

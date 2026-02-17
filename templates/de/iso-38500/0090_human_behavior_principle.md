@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-38500-0090
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Prinzip 6: Menschliches Verhalten (Human Behavior)
+
+**Dokument-ID:** [FRAMEWORK]-0090
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -16,7 +28,7 @@ Dieses Dokument beschreibt die Anwendung des Prinzips "Menschliches Verhalten" i
 ## Geltungsbereich
 
 Dieses Dokument gilt für:
-- {{ meta.organization }}
+- {{ meta-organisation.name }}
 - Alle IT-Nutzer und -Stakeholder
 - IT-Richtlinien und -Praktiken
 
@@ -37,10 +49,10 @@ IT-Richtlinien, -Praktiken und -Entscheidungen zeigen Respekt für menschliches 
 
 | Kriterium | Ziel | Aktuell |
 |-----------|------|---------|
-| User Experience Score | >8/10 | {{ meta.ux_score }}/10 |
-| Schulungsteilnahme | >90% | {{ meta.training_participation }}% |
-| Mitarbeiterzufriedenheit IT | >80% | {{ meta.employee_satisfaction }}% |
-| Barrierefreiheit | 100% | {{ meta.accessibility }}% |
+| User Experience Score | >8/10 | {{ meta-handbook.ux_score }}/10 |
+| Schulungsteilnahme | >90% | {{ meta-handbook.training_participation }}% |
+| Mitarbeiterzufriedenheit IT | >80% | {{ meta-handbook.employee_satisfaction }}% |
+| Barrierefreiheit | 100% | {{ meta-handbook.accessibility }}% |
 
 ## Direct (Steuern)
 
@@ -98,12 +110,12 @@ IT-Richtlinien, -Praktiken und -Entscheidungen zeigen Respekt für menschliches 
 
 ### KPIs
 
-- Net Promoter Score (NPS): {{ meta.nps }}
-- User Satisfaction Score: {{ meta.user_satisfaction }}/10
-- Training Completion Rate: {{ meta.training_completion }}%
-- Helpdesk Satisfaction: {{ meta.helpdesk_satisfaction }}/10
-- Accessibility Compliance: {{ meta.accessibility_compliance }}%
-- System Usability Scale (SUS): {{ meta.sus_score }}/100
+- Net Promoter Score (NPS): {{ meta-handbook.nps }}
+- User Satisfaction Score: {{ meta-handbook.user_satisfaction }}/10
+- Training Completion Rate: {{ meta-handbook.training_completion }}%
+- Helpdesk Satisfaction: {{ meta-handbook.helpdesk_satisfaction }}/10
+- Accessibility Compliance: {{ meta-handbook.accessibility_compliance }}%
+- System Usability Scale (SUS): {{ meta-handbook.sus_score }}/100
 
 ### Feedback-Mechanismen
 
@@ -125,19 +137,4 @@ IT-Richtlinien, -Praktiken und -Entscheidungen zeigen Respekt für menschliches 
 
 - 0010_governance_framework.md
 - 0020_governance_model.md
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |
-
-<!-- 
-Autor-Hinweise: 
-- Menschliches Verhalten ist oft der kritischste Faktor für IT-Erfolg
-- Berücksichtigen Sie Diversität und Inklusion
-- Fördern Sie eine positive IT-Kultur
--->
 

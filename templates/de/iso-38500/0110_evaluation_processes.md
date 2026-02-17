@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-38500-0110
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Bewertungsprozesse (Evaluation)
+
+**Dokument-ID:** [FRAMEWORK]-0110
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -16,7 +28,7 @@ Dieses Dokument beschreibt die Bewertungsprozesse (Evaluate) im Rahmen des EDM-M
 ## Geltungsbereich
 
 Dieses Dokument gilt für:
-- {{ meta.organization }}
+- {{ meta-organisation.name }}
 - Alle IT-Bewertungsaktivitäten
 
 ## Bewertungsprozesse
@@ -94,12 +106,4 @@ Dieses Dokument gilt für:
 
 - 0100_edm_model.md
 - 0120_direction_processes.md
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |
 

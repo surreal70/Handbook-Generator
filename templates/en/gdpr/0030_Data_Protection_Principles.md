@@ -1,11 +1,16 @@
 # Data Protection Principles
 
-**Document-ID:** 0030  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0030
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -24,7 +29,7 @@ Reference: GDPR Art. 5 (Principles relating to processing of personal data)
 
 ## Purpose
 
-This document describes the data protection principles according to Art. 5 GDPR and their implementation in {{ meta.organization }}. These principles must be observed in every processing of personal data.
+This document describes the data protection principles according to Art. 5 GDPR and their implementation in {{ meta-organisation.name }}. These principles must be observed in every processing of personal data.
 
 ## Principles according to Art. 5(1) GDPR
 
@@ -133,8 +138,6 @@ The controller shall be responsible for, and be able to demonstrate compliance w
 | TOM Effectiveness | Annually | DPO | Audit report |
 | Training Status | Quarterly | HR | Training matrix |
 
----
-
 **Next Steps:**
 1. Review all processing for compliance with principles
 2. Implement controls for each principle
@@ -142,10 +145,3 @@ The controller shall be responsible for, and be able to demonstrate compliance w
 4. Train employees on principles
 5. Establish regular review processes
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

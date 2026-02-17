@@ -1,49 +1,34 @@
+# COSO Handbuch - Metadaten
+
+**Dokument-ID:** 0000  
+**Datum:** 2026-02-17  
+**Owner:** [TODO]  
+**Revision:** 0  
+**Status:** Draft  
+**Klassifizierung:** Internal  
+**Letzte Aktualisierung:** 2026-02-17  
+**Template-Version:** 1.0  
+
 ---
-title: "COSO Internal Control Framework Handbuch"
-author: "{{ source.author }}"
-version: "1.0"
-template_version: "1.0"
-revision: 1
-date: "{{ source.date }}"
-organization: "{{ source.organization_name }}"
-classification: "Internal"
+
+## Handbuch-Informationen
+
+**Handbuch-Titel:** COSO Handbook  
+**Handbuch-Short:** COSO  
+**Organisation:** [TODO]  
+**Autor:** [TODO]  
+**Geltungsbereich:** [TODO]  
+**Gültig ab:** [TODO]  
+**Nächste Überprüfung:** [TODO]  
+
 ---
 
-# Metadaten
+## Dokumentenzweck
 
-Diese Datei enthält Metadaten für das COSO Internal Control Framework Handbuch.
+Dieses Dokument enthält die Metadaten für das COSO Handbuch.
 
-## Dokumentinformationen
+## Änderungshistorie
 
-- **Titel**: COSO Internal Control Framework Handbuch
-- **Autor**: {{ source.author }}
-- **Version**: 1.0
-- **Datum**: {{ source.date }}
-- **Template-Version**: 1.0
-- **Revision**: 1
-- **Organisation**: {{ source.organization_name }}
-- **Klassifizierung**: Internal
-
-## Zweck
-
-Dieses Handbuch dokumentiert das interne Kontrollsystem der Organisation basierend auf dem COSO Internal Control - Integrated Framework. Es beschreibt die fünf Komponenten der internen Kontrolle und deren Implementierung.
-
-## Geltungsbereich
-
-Das Handbuch deckt alle Aspekte des COSO Internal Control Frameworks ab, einschließlich:
-
-- Kontrollumgebung (Control Environment)
-- Risikobewertung (Risk Assessment)
-- Kontrollaktivitäten (Control Activities)
-- Information und Kommunikation (Information and Communication)
-- Überwachungsaktivitäten (Monitoring Activities)
-
-## Zielgruppe
-
-- Geschäftsführung und Vorstand
-- Interne Revision
-- Compliance-Beauftragte
-- Risikomanagement
-- Prozessverantwortliche
-- Externe Prüfer
-
+| Version | Datum | Autor | Änderung |
+|---------|-------|-------|----------|
+| 0 | 2026-02-17 | [TODO] | Initiale Version |

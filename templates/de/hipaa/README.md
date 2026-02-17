@@ -42,7 +42,7 @@ Diese Vorlagen behandeln:
 
 ### Erforderliche Anpassungen
 
-Jede Vorlage enthält `[TODO]`-Markierungen und Platzhaltersyntax `{{ source.field }}`, die angepasst werden müssen:
+Jede Vorlage enthält `[TODO]`-Markierungen und Platzhaltersyntax `[TODO]`, die angepasst werden müssen:
 
 1. **Organisationsinformationen**: Ersetzen Sie durch Ihre Covered Entity- oder Business Associate-Details
 2. **Rollen und Verantwortlichkeiten**: Weisen Sie spezifische Personen HIPAA-Rollen zu
@@ -53,8 +53,8 @@ Jede Vorlage enthält `[TODO]`-Markierungen und Platzhaltersyntax `{{ source.fie
 ### Platzhaltersyntax
 
 Vorlagen verwenden folgende Platzhalterformate:
-- `{{ meta.organization.name }}`: Organisationsname aus Metadaten
-- `{{ meta.roles.privacy_officer.name }}`: Rollenzuweisungen
+- `[TODO]`: Organisationsname aus Metadaten
+- `[TODO]`: Rollenzuweisungen
 - `[TODO: Beschreibung]`: Manuelle Anpassung erforderlich
 
 ## Verwendung
@@ -105,7 +105,7 @@ Für Fragen zu diesen Vorlagen oder HIPAA-Compliance:
 
 | Version | Datum | Autor | Änderungen |
 |---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
+| 0.1 | [TODO] | {{ meta.defaults.author }} | Initiale Erstellung |
 
 ## Versionshistorie
 

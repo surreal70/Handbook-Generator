@@ -1,14 +1,16 @@
 # Internal Audit Program (Template)
 
-**Document ID:** 0610  
-**Document Type:** Program/Template  
-**Reference Framework:** BSI IT-Grundschutz (BSI Standards 200-1/200-2)  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** {{ meta.document.status }}  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.document.last_updated }}  
-**Next Review:** {{ meta.document.next_review }}
+**Document-ID:** [FRAMEWORK]-0610
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -20,7 +22,7 @@ Reference: BSI Standard 200-1 (Internal Audits), DER.3.1
 
 ## 1. Purpose and Objectives
 
-The internal audit program of **{{ meta.organization.name }}** ensures the effectiveness of the ISMS.
+The internal audit program of **{{ meta-organisation.name }}** ensures the effectiveness of the ISMS.
 
 **Responsible:** [TODO: Internal Audit]
 
@@ -36,10 +38,10 @@ The internal audit program of **{{ meta.organization.name }}** ensures the effec
 
 | Period | Audit Topic | Criteria | Auditor | Auditee | Status | Result | Actions |
 |---|---|---|---|---|---|---|---|
-| Q1 {{ meta.document.year }} | Basic Security Check Sample | Policies, Guidelines, Evidence | [TODO] | {{ meta.cio.name }} | Planned | - | - |
-| Q2 {{ meta.document.year }} | Risk Management Process | Document 0090, Risk Register | [TODO] | {{ meta.ciso.name }} | Planned | - | - |
-| Q3 {{ meta.document.year }} | Incident Management | Document 0320/0330, Incident Logs | [TODO] | {{ meta.cio.name }} | Planned | - | - |
-| Q4 {{ meta.document.year }} | Document Control | Document 0030, Document Register | [TODO] | {{ meta.ciso.name }} | Planned | - | - |
+| Q1 [TODO] | Basic Security Check Sample | Policies, Guidelines, Evidence | [TODO] | {{ meta.cio.name }} | Planned | - | - |
+| Q2 [TODO] | Risk Management Process | Document 0090, Risk Register | [TODO] | {{ meta.ciso.name }} | Planned | - | - |
+| Q3 [TODO] | Incident Management | Document 0320/0330, Incident Logs | [TODO] | {{ meta.cio.name }} | Planned | - | - |
+| Q4 [TODO] | Document Control | Document 0030, Document Register | [TODO] | {{ meta.ciso.name }} | Planned | - | - |
 
 ## 4. Audit Checkpoints
 
@@ -82,21 +84,11 @@ The internal audit program of **{{ meta.organization.name }}** ensures the effec
 
 | Role | Name | Date | Approval |
 |---|---|---|---|
-| Internal Audit | [TODO] | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| CISO | {{ meta.ciso.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| Internal Audit | [TODO] | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| CISO | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **References:**
 - BSI Standard 200-1: ISMS
 - BSI IT-Grundschutz-Kompendium: DER.3.1 Audits and Reviews
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
 
 <!-- End of template -->

@@ -63,14 +63,14 @@ python handbook-generator --template dora --language en --output test-output/en/
 
 ### Placeholders
 
-Templates use placeholders in the format `{{ source.field }}` for organization-specific data:
+Templates use placeholders in the format `[TODO]` for organization-specific data:
 
-- `{{ source.organization_name }}` - Organization name
-- `{{ source.dora_owner }}` - Responsible for DORA implementation
-- `{{ source.current_deployment_frequency }}` - Current Deployment Frequency
-- `{{ source.current_lead_time }}` - Current Lead Time
-- `{{ source.current_mttr }}` - Current MTTR
-- `{{ source.current_cfr }}` - Current Change Failure Rate
+- `[TODO]` - Organization name
+- `[TODO]` - Responsible for DORA implementation
+- `[TODO]` - Current Deployment Frequency
+- `[TODO]` - Current Lead Time
+- `[TODO]` - Current MTTR
+- `[TODO]` - Current Change Failure Rate
 
 ### Customization
 

@@ -1,5 +1,19 @@
 # Context of the Organization and Interested Parties
 
+**Document-ID:** [FRAMEWORK]-0030
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This document establishes the context in which the ISMS operates, including 
@@ -19,23 +33,21 @@ ISO 27001:2022 References:
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** {{ meta-handbook.modifydate }}  
+**Next Review:** {{ meta-handbook.next_review }}
 
 ## 1. Context of the Organization
 
 ### 1.1 Internal Issues
 
 **Organizational Structure:**
-- Organizational Form: {{ meta.organization.legal_form }}
-- Number of Employees: {{ meta.organization.employee_count }}
+- Organizational Form: [TODO]
+- Number of Employees: [TODO]
 - Organizational Structure: [TODO: Hierarchy, departments]
 - Locations: {{ netbox.site.name }} and others
 
 **Business Processes:**
-- Core Business: {{ meta.organization.industry }}
+- Core Business: [TODO]
 - Critical Business Processes: [TODO: List of critical processes]
 - IT Dependency: High / Medium / Low
 
@@ -65,7 +77,7 @@ situation. Consider factors that could impact information security.
 ### 1.2 External Issues
 
 **Market and Competition:**
-- Industry: {{ meta.organization.industry }}
+- Industry: [TODO]
 - Market Position: [TODO: Market leader, challenger, niche]
 - Competitive Pressure: High / Medium / Low
 - Customer Expectations: [TODO: Security requirements]
@@ -252,19 +264,10 @@ Changes to context or stakeholder requirements are documented and assessed:
 - **ISO/IEC 27001:2022** - Clause 4.2: Understanding the needs and expectations of interested parties
 - **GDPR (EU 2016/679)** - General Data Protection Regulation
 
----
-
 **Approved by:**  
 {{ meta.ciso.name }}, CISO  
 {{ meta.management.ceo }}, Management  
-Date: {{ meta.document.approval_date }}
+Date: {{ meta-handbook.modifydate }}
 
-**Next Review:** {{ meta.document.next_review }}
+**Next Review:** {{ meta-handbook.next_review }}
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

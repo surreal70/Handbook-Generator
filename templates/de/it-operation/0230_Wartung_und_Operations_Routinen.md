@@ -1,15 +1,27 @@
 # Wartung und Operations-Routinen
 
+**Dokument-ID:** [FRAMEWORK]-0230
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Übersicht
 
 Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Checklisten und Housekeeping-Prozeduren für den IT-Service. Ziel ist es, die Systemstabilität, Performance und Sicherheit durch proaktive Wartung zu gewährleisten.
 
-**Dokumentverantwortlicher:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Organisation:** {{ meta.organization.name }}
-
----
+**Dokumentverantwortlicher:** {{ meta-handbook.owner }}  
+**Genehmigt durch:** {{ meta-handbook.approver }}  
+**Version:** {{ meta-handbook.revision }}  
+**Organisation:** {{ meta-organisation.name }}
 
 ## Wartungsübersicht
 
@@ -17,10 +29,10 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 
 | Kategorie | Beschreibung | Frequenz | Verantwortlich |
 |---|---|---|---|
-| **Präventiv** | Vorbeugende Maßnahmen zur Fehlervermeidung | Regelmäßig | {{ meta.it_operations_manager.name }} |
-| **Korrektiv** | Behebung bekannter Probleme | Bei Bedarf | {{ meta.it_operations_manager.name }} |
-| **Adaptiv** | Anpassung an neue Anforderungen | Bei Bedarf | {{ meta.it_operations_manager.name }} |
-| **Perfektiv** | Verbesserung und Optimierung | Geplant | {{ meta.it_operations_manager.name }} |
+| **Präventiv** | Vorbeugende Maßnahmen zur Fehlervermeidung | Regelmäßig | {{ meta-organisation-roles.role_it_operations_manager.name }} |
+| **Korrektiv** | Behebung bekannter Probleme | Bei Bedarf | {{ meta-organisation-roles.role_it_operations_manager.name }} |
+| **Adaptiv** | Anpassung an neue Anforderungen | Bei Bedarf | {{ meta-organisation-roles.role_it_operations_manager.name }} |
+| **Perfektiv** | Verbesserung und Optimierung | Geplant | {{ meta-organisation-roles.role_it_operations_manager.name }} |
 
 ### Wartungsfenster
 
@@ -35,10 +47,8 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 #### Notfall-Wartung
 - **Zeitfenster:** Jederzeit nach Genehmigung
 - **Ankündigung:** Minimum 4 Stunden (wenn möglich)
-- **Genehmigung:** {{ meta.cio.name }}
+- **Genehmigung:** {{ meta-organisation-roles.role_cio.name }}
 - **Kommunikation:** Alle Stakeholder informieren
-
----
 
 ## Tägliche Routinen
 
@@ -103,8 +113,6 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 **Dauer:** 15-20 Minuten  
 **Dokumentation:** Shift Handover Log
 
----
-
 ## Wöchentliche Routinen
 
 ### Montag: Wochenplanung
@@ -116,7 +124,7 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 - [ ] Ressourcen zuweisen
 - [ ] Risiken identifizieren
 
-**Teilnehmer:** {{ meta.it_operations_manager.name }}, Operations Team  
+**Teilnehmer:** {{ meta-organisation-roles.role_it_operations_manager.name }}, Operations Team  
 **Dauer:** 30 Minuten  
 **Dokumentation:** Weekly Planning Notes
 
@@ -163,7 +171,7 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 - [ ] Security-Incidents reviewen
 - [ ] Compliance-Status prüfen
 
-**Verantwortlich:** Operations Team, {{ meta.ciso.name }}  
+**Verantwortlich:** Operations Team, {{ meta-organisation-roles.role_ciso.name }}  
 **Dauer:** 1-2 Stunden  
 **Dokumentation:** Weekly Security Report
 
@@ -176,7 +184,7 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 - [ ] Nächste Woche vorbereiten
 - [ ] Wochenend-On-Call briefen
 
-**Teilnehmer:** {{ meta.it_operations_manager.name }}, Operations Team  
+**Teilnehmer:** {{ meta-organisation-roles.role_it_operations_manager.name }}, Operations Team  
 **Dauer:** 30 Minuten  
 **Dokumentation:** Weekly Summary Report
 
@@ -202,8 +210,6 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 **Dauer:** 2 Stunden  
 **Dokumentation:** Maintenance Log
 
----
-
 ## Monatliche Routinen
 
 ### Erste Woche: Monatsplanung
@@ -215,7 +221,7 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 - [ ] Budget-Status prüfen
 - [ ] Kapazitätsplanung aktualisieren
 
-**Teilnehmer:** {{ meta.cio.name }}, {{ meta.it_operations_manager.name }}, Team Leads  
+**Teilnehmer:** {{ meta-organisation-roles.role_cio.name }}, {{ meta-organisation-roles.role_it_operations_manager.name }}, Team Leads  
 **Dauer:** 1 Stunde  
 **Dokumentation:** Monthly Planning Document
 
@@ -242,7 +248,7 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 - [ ] Skalierungsbedarf bewerten
 - [ ] Budget-Implikationen prüfen
 
-**Verantwortlich:** {{ meta.it_operations_manager.name }}  
+**Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}  
 **Dauer:** 2-3 Stunden  
 **Dokumentation:** Monthly Capacity Report
 
@@ -256,7 +262,7 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 - [ ] Vulnerability-Scan durchführen
 - [ ] Compliance-Status prüfen
 
-**Verantwortlich:** {{ meta.ciso.name }}, Operations Team  
+**Verantwortlich:** {{ meta-organisation-roles.role_ciso.name }}, Operations Team  
 **Dauer:** 3-4 Stunden  
 **Dokumentation:** Monthly Security Audit Report
 
@@ -270,7 +276,7 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 - [ ] Verbesserungen identifizieren
 - [ ] DR-Plan aktualisieren
 
-**Verantwortlich:** {{ meta.it_operations_manager.name }}  
+**Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}  
 **Dauer:** 2-4 Stunden  
 **Dokumentation:** DR Test Report
 
@@ -284,11 +290,9 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 - [ ] Security-Report
 - [ ] SLA-Compliance-Report
 
-**Verantwortlich:** {{ meta.it_operations_manager.name }}  
+**Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}  
 **Dauer:** 2-3 Stunden  
-**Empfänger:** {{ meta.cio.name }}, Stakeholder
-
----
+**Empfänger:** {{ meta-organisation-roles.role_cio.name }}, Stakeholder
 
 ## Quartalsweise Routinen
 
@@ -301,7 +305,7 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 - [ ] Budget-Review durchführen
 - [ ] Ressourcenplanung aktualisieren
 
-**Teilnehmer:** {{ meta.ceo.name }}, {{ meta.cio.name }}, {{ meta.it_operations_manager.name }}  
+**Teilnehmer:** {{ meta-organisation-roles.role_ceo.name }}, {{ meta-organisation-roles.role_cio.name }}, {{ meta-organisation-roles.role_it_operations_manager.name }}  
 **Dauer:** 2 Stunden  
 **Dokumentation:** Quarterly Planning Document
 
@@ -314,7 +318,7 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 - [ ] Konsolidierungspotenziale identifizieren
 - [ ] Investitionsplanung durchführen
 
-**Verantwortlich:** {{ meta.it_operations_manager.name }}  
+**Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}  
 **Dauer:** 1 Tag  
 **Dokumentation:** Quarterly Infrastructure Report
 
@@ -327,7 +331,7 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 - [ ] Verbesserungsmaßnahmen definieren
 - [ ] Implementierungsplan erstellen
 
-**Verantwortlich:** {{ meta.it_operations_manager.name }}, Team Leads  
+**Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}, Team Leads  
 **Dauer:** 1 Tag  
 **Dokumentation:** Process Improvement Plan
 
@@ -341,11 +345,9 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 - [ ] Kommunikationsprozesse validieren
 - [ ] Lessons Learned dokumentieren
 
-**Verantwortlich:** {{ meta.cio.name }}, {{ meta.it_operations_manager.name }}  
+**Verantwortlich:** {{ meta-organisation-roles.role_cio.name }}, {{ meta-organisation-roles.role_it_operations_manager.name }}  
 **Dauer:** 1 Tag  
 **Dokumentation:** Quarterly DR Test Report
-
----
 
 ## Jährliche Routinen
 
@@ -358,7 +360,7 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 - [ ] Jahresbudget finalisieren
 - [ ] Ressourcenplanung für das Jahr
 
-**Teilnehmer:** {{ meta.ceo.name }}, {{ meta.cio.name }}, {{ meta.cfo.name }}, {{ meta.it_operations_manager.name }}  
+**Teilnehmer:** {{ meta-organisation-roles.role_ceo.name }}, {{ meta-organisation-roles.role_cio.name }}, {{ meta-organisation-roles.role_cfo.name }}, {{ meta-organisation-roles.role_it_operations_manager.name }}  
 **Dauer:** 1 Tag  
 **Dokumentation:** Annual Planning Document
 
@@ -372,7 +374,7 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 - [ ] Architektur-Review
 - [ ] Modernisierungsbedarf identifizieren
 
-**Verantwortlich:** {{ meta.cio.name }}, {{ meta.it_operations_manager.name }}  
+**Verantwortlich:** {{ meta-organisation-roles.role_cio.name }}, {{ meta-organisation-roles.role_it_operations_manager.name }}  
 **Dauer:** 1 Woche  
 **Dokumentation:** Annual Infrastructure Audit Report
 
@@ -386,7 +388,7 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 - [ ] Kommunikationsprozesse testen
 - [ ] Umfassende Dokumentation
 
-**Verantwortlich:** {{ meta.cio.name }}, {{ meta.it_operations_manager.name }}  
+**Verantwortlich:** {{ meta-organisation-roles.role_cio.name }}, {{ meta-organisation-roles.role_it_operations_manager.name }}  
 **Dauer:** 2-3 Tage  
 **Dokumentation:** Annual DR Test Report
 
@@ -400,11 +402,9 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 - [ ] Nächstes Jahr vorbereiten
 - [ ] Management-Präsentation erstellen
 
-**Teilnehmer:** {{ meta.ceo.name }}, {{ meta.cio.name }}, {{ meta.cfo.name }}, {{ meta.it_operations_manager.name }}  
+**Teilnehmer:** {{ meta-organisation-roles.role_ceo.name }}, {{ meta-organisation-roles.role_cio.name }}, {{ meta-organisation-roles.role_cfo.name }}, {{ meta-organisation-roles.role_it_operations_manager.name }}  
 **Dauer:** 1 Tag  
 **Dokumentation:** Annual Review Report
-
----
 
 ## Housekeeping-Prozeduren
 
@@ -491,15 +491,13 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 **Frequenz:** Wöchentlich (Sonntag)  
 **Dauer:** 30 Minuten
 
----
-
 ## Automatisierung
 
 ### Automatisierte Routinen
 
 | Routine | Frequenz | Tool/Script | Verantwortlich |
 |---|---|---|---|
-| Backup-Jobs | Täglich | [TODO: Backup-Tool] | {{ meta.it_operations_manager.name }} |
+| Backup-Jobs | Täglich | [TODO: Backup-Tool] | {{ meta-organisation-roles.role_it_operations_manager.name }} |
 | Log-Rotation | Täglich | logrotate | Automatisiert |
 | Health-Checks | Stündlich | [TODO: Monitoring-Tool] | Automatisiert |
 | Disk-Cleanup | Wöchentlich | [TODO: Script] | Automatisiert |
@@ -514,8 +512,6 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 | Q2 2026 | [TODO] | [TODO] Stunden/Monat | Geplant |
 | Q3 2026 | [TODO] | [TODO] Stunden/Monat | Geplant |
 | Q4 2026 | [TODO] | [TODO] Stunden/Monat | Geplant |
-
----
 
 ## Checklisten-Vorlagen
 
@@ -581,8 +577,6 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 **Besonderheiten:** [NOTIZEN]
 ```
 
----
-
 ## Prozesse und Verantwortlichkeiten
 
 ### RACI-Matrix
@@ -599,8 +593,6 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 
 > **Legende:** R = Responsible, A = Accountable, C = Consulted, I = Informed
 
----
-
 ## Compliance und Standards
 
 ### Relevante Standards
@@ -613,8 +605,6 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 - Checklisten-Dokumentation
 - Automatisierungs-Scripts
 - Compliance-Nachweise
-
----
 
 ## Anhang
 
@@ -632,16 +622,7 @@ Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Check
 - ISO/IEC 20000-1:2018
 - COBIT 2019 Framework
 
----
-
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Letzte Aktualisierung:** {{ meta-handbook.date }}  
 **Nächste Review:** [TODO: Datum]  
-**Kontakt:** {{ meta.it_operations_manager.email }}
+**Kontakt:** {{ meta-organisation-roles.role_it_operations_manager.email }}
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

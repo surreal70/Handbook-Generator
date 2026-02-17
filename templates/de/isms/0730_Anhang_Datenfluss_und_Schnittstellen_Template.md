@@ -1,9 +1,16 @@
 # Anhang C: Datenfluss und Schnittstellen
 
-**Dokumenttyp:** Anhang  
-**Version:** {{ meta.document.version }}  
-**Datum:** {{ meta.document.date }}  
-**Klassifizierung:** {{ meta.document.classification }}
+**Dokument-ID:** [FRAMEWORK]-0730
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -24,11 +31,9 @@ Die Dokumentation dient als Grundlage für:
 
 ## Geltungsbereich
 
-**Organisation:** {{ meta.organization.name }}  
+**Organisation:** {{ meta-organisation.name }}  
 **ISMS Scope:** {{ meta.isms.scope }}  
 **Verantwortlich:** {{ meta.ciso.name }}, Data Protection Officer
-
----
 
 ## Datenfluss-Kategorien
 
@@ -44,8 +49,6 @@ Datenübertragungen zwischen der Organisation und externen Partnern, Kunden, Lie
 
 Datenübertragungen über Ländergrenzen hinweg, die besondere Datenschutzanforderungen (DSGVO Art. 44-50) erfüllen müssen.
 
----
-
 ## Datenklassifizierung
 
 Alle Datenflüsse werden nach folgenden Klassifizierungen bewertet:
@@ -56,8 +59,6 @@ Alle Datenflüsse werden nach folgenden Klassifizierungen bewertet:
 | **Intern** | Nur für interne Nutzung | Interne Dokumente, Betriebshandbücher | Zugriffskontrolle |
 | **Vertraulich** | Sensible Geschäftsinformationen | Verträge, Finanzberichte | Verschlüsselung, strenge Zugriffskontrolle |
 | **Streng Vertraulich** | Höchst sensible Daten | Personenbezogene Daten, Geschäftsgeheimnisse | Ende-zu-Ende-Verschlüsselung, MFA, Audit Logging |
-
----
 
 ## Interne Datenflüsse
 
@@ -76,8 +77,6 @@ Alle Datenflüsse werden nach folgenden Klassifizierungen bewertet:
 - Verschlüsselte Verbindungen (TLS 1.2+)
 - Authentifizierung über Zertifikate oder Service Accounts
 
----
-
 ### Site-to-Site Verbindungen
 
 | Datenfluss-ID | Quelle-Standort | Ziel-Standort | Verbindungstyp | Bandbreite | Datentyp | Verschlüsselung | Redundanz |
@@ -92,8 +91,6 @@ Alle Datenflüsse werden nach folgenden Klassifizierungen bewertet:
 - Monitoring und Alerting bei Verbindungsausfällen
 - Regelmäßige Sicherheitsaudits
 
----
-
 ### Datenbank-Replikation
 
 | Datenfluss-ID | Primäre DB | Sekundäre DB | Replikationstyp | Datentyp | Klassifizierung | Verschlüsselung | RPO |
@@ -101,8 +98,6 @@ Alle Datenflüsse werden nach folgenden Klassifizierungen bewertet:
 | DF-REP-001 | [TODO: Prod DB] | [TODO: DR DB] | Asynchron | Alle Produktionsdaten | Streng Vertraulich | TLS 1.3 | < 1h |
 | DF-REP-002 | [TODO: Prod DB] | [TODO: Reporting DB] | Synchron | Reporting-Daten | Vertraulich | TLS 1.2 | < 5min |
 | [TODO] | [TODO: Primär] | [TODO: Sekundär] | [TODO: Typ] | [TODO: Datentyp] | [TODO: Klassifizierung] | [TODO: Verschlüsselung] | [TODO: RPO] |
-
----
 
 ## Externe Datenflüsse
 
@@ -122,8 +117,6 @@ Alle Datenflüsse werden nach folgenden Klassifizierungen bewertet:
 - Regelmäßige Security Assessments der Cloud Provider
 - Data Residency Compliance (DSGVO)
 
----
-
 ### Partner-Schnittstellen
 
 | Datenfluss-ID | Internes System | Partner | Schnittstellentyp | Datentyp | Klassifizierung | Verschlüsselung | Vertrag |
@@ -138,8 +131,6 @@ Alle Datenflüsse werden nach folgenden Klassifizierungen bewertet:
 - Mutual TLS (mTLS) für API-Kommunikation
 - API Rate Limiting und Monitoring
 - Regelmäßige Sicherheitsaudits
-
----
 
 ### Kunden-Schnittstellen
 
@@ -156,8 +147,6 @@ Alle Datenflüsse werden nach folgenden Klassifizierungen bewertet:
 - Input Validation und Output Encoding
 - Security Headers (HSTS, CSP, etc.)
 
----
-
 ## Grenzüberschreitende Datenflüsse
 
 ### EU-Drittland-Transfers
@@ -172,8 +161,6 @@ Alle Datenflüsse werden nach folgenden Klassifizierungen bewertet:
 - Standard Contractual Clauses (SCC) gemäß Art. 46 Abs. 2 lit. c DSGVO
 - Transfer Impact Assessment (TIA) durchgeführt
 - Zusätzliche Schutzmaßnahmen implementiert
-
----
 
 ## Schnittstellen-Dokumentation
 
@@ -193,8 +180,6 @@ Alle Datenflüsse werden nach folgenden Klassifizierungen bewertet:
 - Logging und Monitoring aller API-Zugriffe
 - Versionierung und Deprecation Policy
 
----
-
 ### Datei-Transfer-Schnittstellen
 
 | Schnittstellen-ID | Typ | Protokoll | Quelle | Ziel | Datentyp | Verschlüsselung | Authentifizierung |
@@ -204,8 +189,6 @@ Alle Datenflüsse werden nach folgenden Klassifizierungen bewertet:
 | FT-003 | MFT | Managed File Transfer | [TODO: System] | [TODO: Partner] | Geschäftsdaten | AES-256 | OAuth 2.0 |
 | [TODO] | [TODO: Typ] | [TODO: Protokoll] | [TODO: Quelle] | [TODO: Ziel] | [TODO: Datentyp] | [TODO: Verschlüsselung] | [TODO: Auth] |
 
----
-
 ### Messaging-Schnittstellen
 
 | Schnittstellen-ID | Typ | Protokoll | Quelle | Ziel | Nachrichtentyp | Verschlüsselung | Persistenz |
@@ -214,15 +197,13 @@ Alle Datenflüsse werden nach folgenden Klassifizierungen bewertet:
 | MSG-002 | Event Stream | Kafka | [TODO: Producer] | [TODO: Consumer] | Logs | TLS 1.3 | 30 Tage |
 | [TODO] | [TODO: Typ] | [TODO: Protokoll] | [TODO: Quelle] | [TODO: Ziel] | [TODO: Nachrichtentyp] | [TODO: Verschlüsselung] | [TODO: Persistenz] |
 
----
-
 ### E-Mail-Kommunikation
 
 | Kommunikationstyp | Absender | Empfänger | Datentyp | Klassifizierung | Verschlüsselung | Archivierung |
 |-------------------|----------|-----------|----------|-----------------|-----------------|--------------|
-| Geschäfts-E-Mail | {{ meta.organization.domain }} | Extern | Geschäftskorrespondenz | Vertraulich | TLS (Opportunistic) | 7 Jahre |
-| Vertrauliche E-Mail | {{ meta.organization.domain }} | Extern | Vertragsdokumente | Streng Vertraulich | S/MIME oder PGP | 10 Jahre |
-| Interne E-Mail | {{ meta.organization.domain }} | {{ meta.organization.domain }} | Interne Kommunikation | Intern | TLS (Enforced) | 3 Jahre |
+| Geschäfts-E-Mail | [TODO] | Extern | Geschäftskorrespondenz | Vertraulich | TLS (Opportunistic) | 7 Jahre |
+| Vertrauliche E-Mail | [TODO] | Extern | Vertragsdokumente | Streng Vertraulich | S/MIME oder PGP | 10 Jahre |
+| Interne E-Mail | [TODO] | [TODO] | Interne Kommunikation | Intern | TLS (Enforced) | 3 Jahre |
 
 **Sicherheitsmaßnahmen:**
 - SPF, DKIM, DMARC für E-Mail-Authentifizierung
@@ -230,8 +211,6 @@ Alle Datenflüsse werden nach folgenden Klassifizierungen bewertet:
 - Data Loss Prevention (DLP) für ausgehende E-Mails
 - E-Mail-Verschlüsselung für vertrauliche Inhalte
 - E-Mail-Archivierung gemäß gesetzlichen Anforderungen
-
----
 
 ## Netzwerk-Architektur
 
@@ -245,8 +224,6 @@ Alle Datenflüsse werden nach folgenden Klassifizierungen bewertet:
 | **Production** | Produktionsnetzwerk für kritische Systeme | Sehr Hoch | Firewall, Segmentierung | Database Server, Core Systems |
 | **Development** | Entwicklungs- und Testnetzwerk | Niedrig | Firewall | Dev/Test Systems |
 
----
-
 ### Firewall-Regeln (Beispiel)
 
 | Regel-ID | Quelle-Zone | Ziel-Zone | Protokoll | Port | Aktion | Logging | Beschreibung |
@@ -258,8 +235,6 @@ Alle Datenflüsse werden nach folgenden Klassifizierungen bewertet:
 | FW-999 | Any | Any | Any | Any | Deny | Ja | Default Deny |
 
 **Hinweis:** Vollständige Firewall-Regeln in separater Dokumentation.
-
----
 
 ## Datenfluss-Diagramme
 
@@ -287,8 +262,6 @@ Alle Datenflüsse werden nach folgenden Klassifizierungen bewertet:
 
 **Hinweis:** Detaillierte Netzwerkdiagramme in separaten Dateien (z.B. Visio, Draw.io).
 
----
-
 ### Datenfluss für kritische Geschäftsprozesse
 
 #### Beispiel: Kundenbestellung
@@ -309,8 +282,6 @@ Alle Datenflüsse werden nach folgenden Klassifizierungen bewertet:
 - Input Validation
 - Audit Logging aller Transaktionen
 
----
-
 ## Risikobewertung Datenflüsse
 
 ### Risikomatrix
@@ -321,8 +292,6 @@ Alle Datenflüsse werden nach folgenden Klassifizierungen bewertet:
 | DF-PART-001 | Unbefugter Zugriff durch Partner | Mittel | Hoch | Hoch | mTLS, API Gateway, Monitoring | Mittel |
 | DF-CROSS-001 | Drittland-Zugriff auf EU-Daten | Mittel | Sehr Hoch | Hoch | SCC, Verschlüsselung, Access Controls | Mittel |
 | [TODO] | [TODO: Bedrohung] | [TODO: W'keit] | [TODO: Auswirkung] | [TODO: Risiko] | [TODO: Maßnahmen] | [TODO: Restrisiko] |
-
----
 
 ## Monitoring und Logging
 
@@ -335,8 +304,6 @@ Alle Datenflüsse werden nach folgenden Klassifizierungen bewertet:
 | Firewall Logs | [TODO: SIEM] | Blocked Connections, Rule Hits | Ja | 1 Jahr |
 | Application Logs | [TODO: Log Management] | Transactions, Errors, Security Events | Ja | 1 Jahr |
 
----
-
 ### Security Events
 
 Folgende Security Events werden für Datenflüsse überwacht:
@@ -347,8 +314,6 @@ Folgende Security Events werden für Datenflüsse überwacht:
 - Protokollverletzungen
 - Verschlüsselungsfehler
 - DLP-Verstöße
-
----
 
 ## Compliance und Datenschutz
 
@@ -361,15 +326,11 @@ Folgende Security Events werden für Datenflüsse überwacht:
 | Integrität und Vertraulichkeit | Art. 5 Abs. 1 lit. f | Verschlüsselung, Zugriffskontrolle | Sicherheitsmaßnahmen |
 | Drittland-Transfer | Art. 44-50 | SCC, TIA | Transfer-Dokumentation |
 
----
-
 ### Verarbeitungsverzeichnis-Referenz
 
 Alle Datenflüsse sind im Verarbeitungsverzeichnis gemäß Art. 30 DSGVO dokumentiert.
 
 **Referenz:** [TODO: Link zum Verarbeitungsverzeichnis]
-
----
 
 ## Änderungsmanagement
 
@@ -386,8 +347,6 @@ Alle Änderungen an Datenflüssen und Schnittstellen unterliegen dem Change Mana
 
 **Referenz:** 0360_Policy_Change_und_Release_Management.md
 
----
-
 ## Referenzen
 
 - Policy: 0660_Policy_Informationsuebertragung_und_Kommunikation.md
@@ -397,8 +356,6 @@ Alle Änderungen an Datenflüssen und Schnittstellen unterliegen dem Change Mana
 - Policy: 0600_Policy_Netzwerksicherheit.md
 - Richtlinie: 0610_Richtlinie_Segmentierung_Firewalling_und_Network_Access_Control.md
 - Anhang: 0720_Anhang_Asset_und_Systeminventar_Template.md
-
----
 
 **Dokumentverantwortlicher:** {{ meta.ciso.name }}  
 **Genehmigt durch:** {{ meta.management.name }}  
@@ -412,10 +369,3 @@ Führen Sie regelmäßige Reviews durch, um veraltete oder nicht mehr genutzte S
 Integrieren Sie dieses Dokument in Ihre Datenschutz-Folgenabschätzungen (DPIA).
 -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

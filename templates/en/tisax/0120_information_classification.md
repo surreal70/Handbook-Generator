@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0120
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Information Classification
+
+**Document-ID:** [FRAMEWORK]-0120
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -15,13 +26,13 @@ This document defines the classification schema for information and assets and a
 
 ## Scope
 
-This document applies to all information and assets of {{ source.organization_name }} that must be classified.
+This document applies to all information and assets of [TODO] that must be classified.
 
 ## Classification Schema
 
 ### Confidentiality Levels
 
-{{ source.organization_name }} uses the following confidentiality levels:
+[TODO] uses the following confidentiality levels:
 
 #### Level 1: Public
 
@@ -337,7 +348,7 @@ Classifications are reviewed:
 
 ### Quality Assurance
 
-{{ source.organization_name }} ensures:
+[TODO] ensures:
 - Consistent application of schema
 - Appropriate protection measures
 - Currency of classifications
@@ -383,7 +394,7 @@ All employees are trained on:
 
 ## Metrics
 
-{{ source.organization_name }} measures:
+[TODO] measures:
 
 - Percentage of classified information (Target: 100%)
 - Correctness of classification (sampling)
@@ -392,13 +403,5 @@ All employees are trained on:
 - Training participation (Target: 100%)
 
 <!-- Note: Adapt classification schema to your organization -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

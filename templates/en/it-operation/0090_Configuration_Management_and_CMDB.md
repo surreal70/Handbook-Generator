@@ -1,15 +1,27 @@
 # Configuration Management and CMDB
 
+**Document-ID:** [FRAMEWORK]-0090
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Overview
 
 This document describes configuration management and the Configuration Management Database (CMDB) for the IT service. It defines CI categories, attributes, relationships, and change processes for Configuration Items.
 
-**Service:** {{ meta.service_name }}  
-**Responsible:** {{ meta.it_operations_manager.name }}  
+**Service:** {{ meta-handbook.service_name }}  
+**Responsible:** {{ meta-organisation-roles.role_it_operations_manager.name }}  
 **CMDB System:** NetBox  
-**Version:** {{ meta.document.version }}
-
----
+**Version:** {{ meta-handbook.revision }}
 
 ## Configuration Management Process
 
@@ -29,16 +41,14 @@ This document describes configuration management and the Configuration Managemen
 4. **Status Accounting:** Recording and reporting of CI status
 5. **Verification and Audit:** Verification of CMDB data quality
 
----
-
 ## Configuration Management Database (CMDB)
 
 ### CMDB System: NetBox
 
 **NetBox Instance:**
 - **URL:** {{ netbox.url }}
-- **Version:** {{ netbox.version }}
-- **Responsible:** {{ meta.it_operations_manager.name }}
+- **Version:** [TODO]
+- **Responsible:** {{ meta-organisation-roles.role_it_operations_manager.name }}
 
 **NetBox Functions:**
 - IP Address Management (IPAM)
@@ -69,8 +79,6 @@ This document describes configuration management and the Configuration Managemen
 │                                                              │
 └─────────────────────────────────────────────────────────────┘
 ```
-
----
 
 ## CI Categories and Attributes
 
@@ -195,8 +203,6 @@ This document describes configuration management and the Configuration Managemen
 - **Status:** Active, Planned, Retired
 - **Contact:** {{ netbox.site.contact_name }}
 
----
-
 ## CI Relationships
 
 ### Relationship Types
@@ -257,8 +263,6 @@ This document describes configuration management and the Configuration Managemen
 | Virtual Machine | Hypervisor Cluster | hosted on |
 | Hypervisor Cluster | Physical Servers | consists of |
 | Physical Servers | Network Switch | connected to |
-
----
 
 ## Change Processes for CIs
 
@@ -350,8 +354,6 @@ This document describes configuration management and the Configuration Managemen
 | **IP Addresses** | Network Administrator | Standard Change |
 | **Virtual Machines** | Virtualization Admin | Standard Change |
 
----
-
 ## CMDB Data Quality
 
 ### Data Quality Metrics
@@ -370,7 +372,7 @@ This document describes configuration management and the Configuration Managemen
 - **Frequency:** Quarterly
 - **Scope:** Sample of 10% of all CIs
 - **Method:** Compare CMDB data with actual state
-- **Responsible:** {{ meta.it_operations_manager.name }}
+- **Responsible:** {{ meta-organisation-roles.role_it_operations_manager.name }}
 
 #### Automatic Validation
 - **Discovery Tools:** Automatic detection of devices and software
@@ -383,8 +385,6 @@ This document describes configuration management and the Configuration Managemen
 - **Process:** Manual verification of affected CIs
 - **Documentation:** Document changes
 - **Approval:** By IT Operations Manager
-
----
 
 ## CMDB Access and Permissions
 
@@ -401,12 +401,10 @@ This document describes configuration management and the Configuration Managemen
 
 ### Access Control
 
-**CMDB Administrator:** {{ meta.it_operations_manager.name }}  
+**CMDB Administrator:** {{ meta-organisation-roles.role_it_operations_manager.name }}  
 **Access via:** {{ netbox.url }}  
 **Authentication:** SSO/LDAP  
 **Audit Logging:** All changes are logged
-
----
 
 ## CMDB Integration
 
@@ -428,8 +426,6 @@ This document describes configuration management and the Configuration Managemen
 - **Authentication:** API Token
 - **Documentation:** {{ netbox.url }}/api/docs/
 - **Rate Limiting:** [TODO: e.g., 1000 requests/hour]
-
----
 
 ## CMDB Reporting
 
@@ -467,8 +463,6 @@ This document describes configuration management and the Configuration Managemen
 - Risk assessment
 - Rollback plan
 
----
-
 ## CMDB Maintenance
 
 ### Maintenance Activities
@@ -496,8 +490,6 @@ This document describes configuration management and the Configuration Managemen
 - [ ] Data quality review
 - [ ] Process review
 - [ ] Training for CMDB users
-
----
 
 ## Best Practices
 
@@ -528,32 +520,21 @@ This document describes configuration management and the Configuration Managemen
 - Format: `[Site]-[Type]-[Function]-[Number]`
 - Example: `MUC-SW-CORE-001`
 
----
-
 ## Contacts
 
 **CMDB Responsible:**
-- **CMDB Administrator:** {{ meta.it_operations_manager.name }} - {{ meta.it_operations_manager.email }}
+- **CMDB Administrator:** {{ meta-organisation-roles.role_it_operations_manager.name }} - {{ meta-organisation-roles.role_it_operations_manager.email }}
 - **Network Administrator:** [TODO: Name] - [TODO: Email]
 - **Server Administrator:** [TODO: Name] - [TODO: Email]
-- **CIO:** {{ meta.cio.name }} - {{ meta.cio.email }}
+- **CIO:** {{ meta-organisation-roles.role_cio.name }} - {{ meta-organisation-roles.role_cio.email }}
 
 **NetBox Support:**
 - **URL:** {{ netbox.url }}
 - **Documentation:** {{ netbox.url }}/docs/
 - **Support:** [TODO: Support contact]
 
----
+**Document Owner:** {{ meta-handbook.owner }}  
+**Approved by:** {{ meta-handbook.approver }}  
+**Version:** {{ meta-handbook.revision }}  
+**Organization:** {{ meta-organisation.name }}
 
-**Document Owner:** {{ meta.document.owner }}  
-**Approved by:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Organization:** {{ meta.organization.name }}
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

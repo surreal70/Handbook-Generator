@@ -1,11 +1,16 @@
 # Roles and Responsibilities
 
-**Document-ID:** NIST-0030  
-**Organization:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Draft / In Review / Approved  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** NIST-0030
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -17,8 +22,8 @@ This document defines roles and responsibilities for the Risk Management Framewo
 
 ### 2.1 Authorizing Official (AO)
 
-**Name:** {{ meta.roles.ao.name }}  
-**Email:** {{ meta.roles.ao.email }}  
+**Name:** [TODO]  
+**Email:** [TODO]  
 
 **Responsibilities:**
 - Authorization decision for the system
@@ -28,8 +33,8 @@ This document defines roles and responsibilities for the Risk Management Framewo
 
 ### 2.2 Information System Security Officer (ISSO)
 
-**Name:** {{ meta.roles.isso.name }}  
-**Email:** {{ meta.roles.isso.email }}  
+**Name:** [TODO]  
+**Email:** [TODO]  
 
 **Responsibilities:**
 - Daily security operations
@@ -39,8 +44,8 @@ This document defines roles and responsibilities for the Risk Management Framewo
 
 ### 2.3 Information System Security Manager (ISSM)
 
-**Name:** {{ meta.roles.issm.name }}  
-**Email:** {{ meta.roles.issm.email }}  
+**Name:** [TODO]  
+**Email:** [TODO]  
 
 **Responsibilities:**
 - Security program management
@@ -82,13 +87,5 @@ This document defines roles and responsibilities for the Risk Management Framewo
 | Continuous Monitoring | A | R | C | C | I |
 
 **Legend:** R = Responsible, A = Accountable, C = Consulted, I = Informed
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 <!-- End of template -->

@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-31000-0310
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Risikobehandlungsoptionen
+
+**Dokument-ID:** [FRAMEWORK]-0180
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -51,12 +63,4 @@ Dieses Dokument beschreibt die verfügbaren Optionen zur Risikobehandlung.
 - Risiko liegt innerhalb des Risikoappetits
 - Behandlungskosten übersteigen Nutzen
 - Keine praktikablen Behandlungsoptionen
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |
 

@@ -1,17 +1,28 @@
----
+
 Document-ID: togaf-0020
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Architecture-Prinzipien
 
+**Dokument-ID:** [FRAMEWORK]-0020
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument definiert die Architecture-Prinzipien für {{ source.organization_name }}. Architecture-Prinzipien sind allgemeine Regeln und Richtlinien, die als Grundlage für Entscheidungen über die Architecture dienen.
+Dieses Dokument definiert die Architecture-Prinzipien für [TODO]. Architecture-Prinzipien sind allgemeine Regeln und Richtlinien, die als Grundlage für Entscheidungen über die Architecture dienen.
 
 ## Geltungsbereich
 
@@ -45,16 +56,16 @@ Jedes Prinzip wird dokumentiert mit:
 - ROI muss für alle größeren IT-Investitionen nachgewiesen werden
 - Architecture-Artefakte müssen in geschäftlicher Sprache kommuniziert werden
 
-### Prinzip 2: {{ source.business_principle_2_name }}
+### Prinzip 2: [TODO]
 
-**Aussage**: {{ source.business_principle_2_statement }}
+**Aussage**: [TODO]
 
-**Begründung**: {{ source.business_principle_2_rationale }}
+**Begründung**: [TODO]
 
 **Implikationen**:
-- {{ source.business_principle_2_implication_1 }}
-- {{ source.business_principle_2_implication_2 }}
-- {{ source.business_principle_2_implication_3 }}
+- [TODO]
+- [TODO]
+- [TODO]
 
 ## Daten-Prinzipien
 
@@ -70,16 +81,16 @@ Jedes Prinzip wird dokumentiert mit:
 - Dateneigentümerschaft muss klar definiert sein
 - Datensicherheit und Datenschutz haben höchste Priorität
 
-### Prinzip 4: {{ source.data_principle_2_name }}
+### Prinzip 4: [TODO]
 
-**Aussage**: {{ source.data_principle_2_statement }}
+**Aussage**: [TODO]
 
-**Begründung**: {{ source.data_principle_2_rationale }}
+**Begründung**: [TODO]
 
 **Implikationen**:
-- {{ source.data_principle_2_implication_1 }}
-- {{ source.data_principle_2_implication_2 }}
-- {{ source.data_principle_2_implication_3 }}
+- [TODO]
+- [TODO]
+- [TODO]
 
 ## Anwendungs-Prinzipien
 
@@ -94,16 +105,16 @@ Jedes Prinzip wird dokumentiert mit:
 - Anwendungen müssen modular und wiederverwendbar designed werden
 - Kaufentscheidungen müssen Wiederverwendbarkeit berücksichtigen
 
-### Prinzip 6: {{ source.application_principle_2_name }}
+### Prinzip 6: [TODO]
 
-**Aussage**: {{ source.application_principle_2_statement }}
+**Aussage**: [TODO]
 
-**Begründung**: {{ source.application_principle_2_rationale }}
+**Begründung**: [TODO]
 
 **Implikationen**:
-- {{ source.application_principle_2_implication_1 }}
-- {{ source.application_principle_2_implication_2 }}
-- {{ source.application_principle_2_implication_3 }}
+- [TODO]
+- [TODO]
+- [TODO]
 
 ## Technologie-Prinzipien
 
@@ -118,41 +129,32 @@ Jedes Prinzip wird dokumentiert mit:
 - Ausnahmen von Standards erfordern formelle Genehmigung
 - Veraltete Technologien müssen systematisch abgelöst werden
 
-### Prinzip 8: {{ source.technology_principle_2_name }}
+### Prinzip 8: [TODO]
 
-**Aussage**: {{ source.technology_principle_2_statement }}
+**Aussage**: [TODO]
 
-**Begründung**: {{ source.technology_principle_2_rationale }}
+**Begründung**: [TODO]
 
 **Implikationen**:
-- {{ source.technology_principle_2_implication_1 }}
-- {{ source.technology_principle_2_implication_2 }}
-- {{ source.technology_principle_2_implication_3 }}
+- [TODO]
+- [TODO]
+- [TODO]
 
 ## Prinzipien-Governance
 
 ### Prinzipien-Management
 
-- **Eigentümer**: {{ source.principles_owner }}
-- **Review-Zyklus**: {{ source.principles_review_cycle }}
-- **Genehmigungsprozess**: {{ source.principles_approval_process }}
+- **Eigentümer**: [TODO]
+- **Review-Zyklus**: [TODO]
+- **Genehmigungsprozess**: [TODO]
 
 ### Compliance und Ausnahmen
 
 Ausnahmen von Architecture-Prinzipien:
 - Müssen formal dokumentiert werden
-- Erfordern Genehmigung durch {{ source.exception_approval_authority }}
+- Erfordern Genehmigung durch [TODO]
 - Werden regelmäßig überprüft
 - Haben ein definiertes Ablaufdatum
 
 <!-- Autorenhinweise: Passen Sie die Prinzipien an die spezifischen Bedürfnisse und Kultur Ihrer Organisation an -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|------|--------|---------|
-| 0.1 | {{meta.document.last_updated}} | {{ meta.defaults.author }} | Initiale Erstellung |
-
-<-  ( marked all subtasks complete End of template -->

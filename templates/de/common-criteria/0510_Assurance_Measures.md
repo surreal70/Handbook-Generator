@@ -1,11 +1,16 @@
 # Assurance Measures (Sicherungsmaßnahmen)
 
-**Dokument-ID:** 0510  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** Intern / Vertraulich / Streng vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0510
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -544,8 +549,6 @@ Alle erforderlichen Nachweise werden dem Evaluator bereitgestellt:
 **Zugriff auf Systeme:**
 - [TODO: Beschreibe, wie der Evaluator Zugriff auf Entwicklungssysteme, Test-Umgebungen, etc. erhält]
 
----
-
 **Dokumentenhistorie:**
 
 | Version | Datum | Autor | Änderungen |
@@ -553,10 +556,3 @@ Alle erforderlichen Nachweise werden dem Evaluator bereitgestellt:
 | 0.1 | [TODO] | [TODO] | Initiale Version |
 | 1.0 | [TODO] | [TODO] | [TODO] |
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

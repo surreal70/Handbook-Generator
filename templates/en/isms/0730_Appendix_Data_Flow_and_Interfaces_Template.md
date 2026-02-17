@@ -1,9 +1,16 @@
 # Appendix C: Data Flow and Interfaces
 
-**Document Type:** Appendix  
-**Version:** {{ meta.document.version }}  
-**Date:** {{ meta.document.date }}  
-**Classification:** {{ meta.document.classification }}
+**Document-ID:** [FRAMEWORK]-0730
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -24,11 +31,9 @@ The documentation serves as the foundation for:
 
 ## Scope
 
-**Organization:** {{ meta.organization.name }}  
+**Organization:** {{ meta-organisation.name }}  
 **ISMS Scope:** {{ meta.isms.scope }}  
 **Responsible:** {{ meta.ciso.name }}, Data Protection Officer
-
----
 
 ## Data Flow Categories
 
@@ -44,8 +49,6 @@ Data transfers between the organization and external partners, customers, suppli
 
 Data transfers across country borders that must meet special data protection requirements (GDPR Art. 44-50).
 
----
-
 ## Data Classification
 
 All data flows are assessed according to the following classifications:
@@ -56,8 +59,6 @@ All data flows are assessed according to the following classifications:
 | **Internal** | For internal use only | Internal documents, operations manuals | Access control |
 | **Confidential** | Sensitive business information | Contracts, financial reports | Encryption, strict access control |
 | **Strictly Confidential** | Highly sensitive data | Personal data, trade secrets | End-to-end encryption, MFA, audit logging |
-
----
 
 ## Internal Data Flows
 
@@ -76,8 +77,6 @@ All data flows are assessed according to the following classifications:
 - Encrypted connections (TLS 1.2+)
 - Authentication via certificates or service accounts
 
----
-
 ### Site-to-Site Connections
 
 | Data Flow-ID | Source Site | Destination Site | Connection Type | Bandwidth | Data Type | Encryption | Redundancy |
@@ -92,8 +91,6 @@ All data flows are assessed according to the following classifications:
 - Monitoring and alerting for connection failures
 - Regular security audits
 
----
-
 ### Database Replication
 
 | Data Flow-ID | Primary DB | Secondary DB | Replication Type | Data Type | Classification | Encryption | RPO |
@@ -101,8 +98,6 @@ All data flows are assessed according to the following classifications:
 | DF-REP-001 | [TODO: Prod DB] | [TODO: DR DB] | Asynchronous | All Production Data | Strictly Confidential | TLS 1.3 | < 1h |
 | DF-REP-002 | [TODO: Prod DB] | [TODO: Reporting DB] | Synchronous | Reporting Data | Confidential | TLS 1.2 | < 5min |
 | [TODO] | [TODO: Primary] | [TODO: Secondary] | [TODO: Type] | [TODO: Data Type] | [TODO: Classification] | [TODO: Encryption] | [TODO: RPO] |
-
----
 
 ## External Data Flows
 
@@ -122,8 +117,6 @@ All data flows are assessed according to the following classifications:
 - Regular security assessments of cloud providers
 - Data residency compliance (GDPR)
 
----
-
 ### Partner Interfaces
 
 | Data Flow-ID | Internal System | Partner | Interface Type | Data Type | Classification | Encryption | Contract |
@@ -138,8 +131,6 @@ All data flows are assessed according to the following classifications:
 - Mutual TLS (mTLS) for API communication
 - API rate limiting and monitoring
 - Regular security audits
-
----
 
 ### Customer Interfaces
 
@@ -156,8 +147,6 @@ All data flows are assessed according to the following classifications:
 - Input validation and output encoding
 - Security headers (HSTS, CSP, etc.)
 
----
-
 ## Cross-Border Data Flows
 
 ### EU-Third Country Transfers
@@ -172,8 +161,6 @@ All data flows are assessed according to the following classifications:
 - Standard Contractual Clauses (SCC) according to Art. 46 para. 2 lit. c GDPR
 - Transfer Impact Assessment (TIA) conducted
 - Additional protection measures implemented
-
----
 
 ## Interface Documentation
 
@@ -193,8 +180,6 @@ All data flows are assessed according to the following classifications:
 - Logging and monitoring of all API access
 - Versioning and deprecation policy
 
----
-
 ### File Transfer Interfaces
 
 | Interface-ID | Type | Protocol | Source | Destination | Data Type | Encryption | Authentication |
@@ -204,8 +189,6 @@ All data flows are assessed according to the following classifications:
 | FT-003 | MFT | Managed File Transfer | [TODO: System] | [TODO: Partner] | Business Data | AES-256 | OAuth 2.0 |
 | [TODO] | [TODO: Type] | [TODO: Protocol] | [TODO: Source] | [TODO: Destination] | [TODO: Data Type] | [TODO: Encryption] | [TODO: Auth] |
 
----
-
 ### Messaging Interfaces
 
 | Interface-ID | Type | Protocol | Source | Destination | Message Type | Encryption | Persistence |
@@ -214,15 +197,13 @@ All data flows are assessed according to the following classifications:
 | MSG-002 | Event Stream | Kafka | [TODO: Producer] | [TODO: Consumer] | Logs | TLS 1.3 | 30 Days |
 | [TODO] | [TODO: Type] | [TODO: Protocol] | [TODO: Source] | [TODO: Destination] | [TODO: Message Type] | [TODO: Encryption] | [TODO: Persistence] |
 
----
-
 ### Email Communication
 
 | Communication Type | Sender | Recipient | Data Type | Classification | Encryption | Archiving |
 |-------------------|--------|-----------|-----------|----------------|------------|-----------|
-| Business Email | {{ meta.organization.domain }} | External | Business Correspondence | Confidential | TLS (Opportunistic) | 7 Years |
-| Confidential Email | {{ meta.organization.domain }} | External | Contract Documents | Strictly Confidential | S/MIME or PGP | 10 Years |
-| Internal Email | {{ meta.organization.domain }} | {{ meta.organization.domain }} | Internal Communication | Internal | TLS (Enforced) | 3 Years |
+| Business Email | [TODO] | External | Business Correspondence | Confidential | TLS (Opportunistic) | 7 Years |
+| Confidential Email | [TODO] | External | Contract Documents | Strictly Confidential | S/MIME or PGP | 10 Years |
+| Internal Email | [TODO] | [TODO] | Internal Communication | Internal | TLS (Enforced) | 3 Years |
 
 **Security Measures:**
 - SPF, DKIM, DMARC for email authentication
@@ -230,8 +211,6 @@ All data flows are assessed according to the following classifications:
 - Data Loss Prevention (DLP) for outgoing emails
 - Email encryption for confidential content
 - Email archiving according to legal requirements
-
----
 
 ## Network Architecture
 
@@ -245,8 +224,6 @@ All data flows are assessed according to the following classifications:
 | **Production** | Production network for critical systems | Very High | Firewall, Segmentation | Database Servers, Core Systems |
 | **Development** | Development and test network | Low | Firewall | Dev/Test Systems |
 
----
-
 ### Firewall Rules (Example)
 
 | Rule-ID | Source Zone | Destination Zone | Protocol | Port | Action | Logging | Description |
@@ -258,8 +235,6 @@ All data flows are assessed according to the following classifications:
 | FW-999 | Any | Any | Any | Any | Deny | Yes | Default Deny |
 
 **Note:** Complete firewall rules in separate documentation.
-
----
 
 ## Data Flow Diagrams
 
@@ -287,8 +262,6 @@ All data flows are assessed according to the following classifications:
 
 **Note:** Detailed network diagrams in separate files (e.g., Visio, Draw.io).
 
----
-
 ### Data Flow for Critical Business Processes
 
 #### Example: Customer Order
@@ -309,8 +282,6 @@ All data flows are assessed according to the following classifications:
 - Input validation
 - Audit logging of all transactions
 
----
-
 ## Risk Assessment Data Flows
 
 ### Risk Matrix
@@ -321,8 +292,6 @@ All data flows are assessed according to the following classifications:
 | DF-PART-001 | Unauthorized access by partner | Medium | High | High | mTLS, API Gateway, Monitoring | Medium |
 | DF-CROSS-001 | Third country access to EU data | Medium | Very High | High | SCC, Encryption, Access Controls | Medium |
 | [TODO] | [TODO: Threat] | [TODO: Likelihood] | [TODO: Impact] | [TODO: Risk] | [TODO: Measures] | [TODO: Residual Risk] |
-
----
 
 ## Monitoring and Logging
 
@@ -335,8 +304,6 @@ All data flows are assessed according to the following classifications:
 | Firewall Logs | [TODO: SIEM] | Blocked Connections, Rule Hits | Yes | 1 Year |
 | Application Logs | [TODO: Log Management] | Transactions, Errors, Security Events | Yes | 1 Year |
 
----
-
 ### Security Events
 
 The following security events are monitored for data flows:
@@ -347,8 +314,6 @@ The following security events are monitored for data flows:
 - Protocol violations
 - Encryption errors
 - DLP violations
-
----
 
 ## Compliance and Data Protection
 
@@ -361,15 +326,11 @@ The following security events are monitored for data flows:
 | Integrity and confidentiality | Art. 5 para. 1 lit. f | Encryption, access control | Security measures |
 | Third country transfer | Art. 44-50 | SCC, TIA | Transfer documentation |
 
----
-
 ### Processing Register Reference
 
 All data flows are documented in the processing register according to Art. 30 GDPR.
 
 **Reference:** [TODO: Link to processing register]
-
----
 
 ## Change Management
 
@@ -386,8 +347,6 @@ All changes to data flows and interfaces are subject to the change management pr
 
 **Reference:** 0360_Policy_Change_and_Release_Management.md
 
----
-
 ## References
 
 - Policy: 0660_Policy_Information_Transfer_and_Communication.md
@@ -397,8 +356,6 @@ All changes to data flows and interfaces are subject to the change management pr
 - Policy: 0600_Policy_Network_Security.md
 - Guideline: 0610_Guideline_Segmentation_Firewalling_and_Network_Access_Control.md
 - Appendix: 0720_Appendix_Asset_and_System_Inventory_Template.md
-
----
 
 **Document Owner:** {{ meta.ciso.name }}  
 **Approved By:** {{ meta.management.name }}  
@@ -412,10 +369,3 @@ Conduct regular reviews to identify obsolete or unused interfaces.
 Integrate this document into your Data Protection Impact Assessments (DPIA).
 -->
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

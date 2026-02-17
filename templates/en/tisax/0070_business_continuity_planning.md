@@ -1,17 +1,28 @@
----
+
 Document-ID: tisax-0500
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Business Continuity Planning
 
+**Document-ID:** [FRAMEWORK]-0070
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document describes business continuity planning at {{ source.organization_name }}.
+This document describes business continuity planning at [TODO].
 
 ## Business Impact Analysis
 
@@ -19,8 +30,8 @@ This document describes business continuity planning at {{ source.organization_n
 
 | Process | RTO | RPO | Impact |
 |---------|-----|-----|--------|
-| {{ source.process_1 }} | {{ source.process_1_rto }} | {{ source.process_1_rpo }} | {{ source.process_1_impact }} |
-| {{ source.process_2 }} | {{ source.process_2_rto }} | {{ source.process_2_rpo }} | {{ source.process_2_impact }} |
+| [TODO] | [TODO] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## BC Strategies
 
@@ -36,23 +47,15 @@ This document describes business continuity planning at {{ source.organization_n
 
 ## BC Organization
 
-**BC Coordinator**: {{ source.bc_coordinator }}
-**Emergency Team**: {{ source.emergency_team }}
+**BC Coordinator**: [TODO]
+**Emergency Team**: [TODO]
 
 ## Tests and Exercises
 
-- BC tests: {{ source.bc_test_frequency }}
+- BC tests: [TODO]
 - Tabletop exercises
 - Full exercises
 
 <!-- Note: Test BC plans regularly -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

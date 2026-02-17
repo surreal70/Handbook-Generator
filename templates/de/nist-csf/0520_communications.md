@@ -1,13 +1,25 @@
----
+
 Document-ID: nist-csf-0520
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Kommunikation (RC.CO)
+
+**Dokument-ID:** [FRAMEWORK]-0520
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -15,7 +27,7 @@ This document describes recovery communication processes.
 
 ## Geltungsbereich
 
-{{ meta.scope }}
+{{ meta-handbook.scope }}
 
 ## Communication During Recovery
 
@@ -40,12 +52,3 @@ This document describes recovery communication processes.
 - 0500_recovery_planning.md
 - 0410_communications.md (Respond)
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |
-
-<!-- Author Notes: Prepare recovery communication templates -->

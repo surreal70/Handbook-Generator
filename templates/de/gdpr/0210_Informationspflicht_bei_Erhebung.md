@@ -1,11 +1,16 @@
 # Informationspflicht bei Erhebung
 
-**Dokument-ID:** 0210  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0210
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -23,7 +28,7 @@ Referenz: DSGVO Art. 13 (Informationspflicht bei Erhebung), Art. 14 (Information
 
 ## Zweck
 
-Dieses Dokument beschreibt die Umsetzung der Informationspflichten in der {{ meta.organization }}. Betroffene Personen müssen bei Erhebung ihrer Daten umfassend informiert werden.
+Dieses Dokument beschreibt die Umsetzung der Informationspflichten in der {{ meta-organisation.name }}. Betroffene Personen müssen bei Erhebung ihrer Daten umfassend informiert werden.
 
 ## Informationspflicht bei direkter Erhebung (Art. 13)
 
@@ -186,8 +191,6 @@ Dieses Dokument beschreibt die Umsetzung der Informationspflichten in der {{ met
 | Unverständliche Sprache | Juristische Fachsprache | Klare Sprache verwenden |
 | Versteckte Information | Datenschutzerklärung nicht auffindbar | Prominente Platzierung |
 
----
-
 **Nächste Schritte:**
 1. Erstellen Sie vollständige Datenschutzerklärungen für alle Kontexte
 2. Implementieren Sie Prozesse zur rechtzeitigen Information
@@ -195,10 +198,3 @@ Dieses Dokument beschreibt die Umsetzung der Informationspflichten in der {{ met
 4. Schulen Sie Mitarbeiter zu Informationspflichten
 5. Überprüfen Sie regelmäßig Vollständigkeit und Aktualität
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

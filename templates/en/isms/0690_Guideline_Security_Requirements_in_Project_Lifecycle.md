@@ -1,14 +1,16 @@
 # Guideline: Security Requirements in Project Lifecycle
 
-**Document ID:** 0690  
-**Document Type:** Guideline (detailed)  
-**Related Policy:** 0680_Policy_Security_in_Projects.md  
-**Standard Reference:** ISO/IEC 27001:2022 Annex A.5.8  
-**Owner:** {{ meta.pmo.manager }}  
-**Version:** 1.0  
-**Status:** Approved  
-**Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}
+**Document-ID:** [FRAMEWORK]-0690
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -19,7 +21,7 @@ This guideline implements `0680_Policy_Security_in_Projects.md` and defines:
 - Security reviews and gateways
 - Security-by-design principles
 
-**Scope:** All IT projects at **{{ meta.organization.name }}**
+**Scope:** All IT projects at **{{ meta-organisation.name }}**
 
 ## 2. Project Classification
 
@@ -363,15 +365,6 @@ This guideline implements `0680_Policy_Security_in_Projects.md` and defines:
 - **NIST SP 800-64** - Security Considerations in the System Development Life Cycle
 - **OWASP SAMM** - Software Assurance Maturity Model
 
----
-
 **Approved by:** {{ meta.ciso.name }}, CISO  
-**Next Review:** {{ meta.document.next_review }}
+**Next Review:** {{ meta-handbook.next_review }}
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

@@ -1,11 +1,16 @@
 # Auskunftsrecht
 
-**Dokument-ID:** 0220  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0220
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -23,7 +28,7 @@ Referenz: DSGVO Art. 15 (Auskunftsrecht der betroffenen Person)
 
 ## Zweck
 
-Dieses Dokument beschreibt die Umsetzung des Auskunftsrechts in der {{ meta.organization }}. Betroffene Personen haben das Recht, Auskunft über die Verarbeitung ihrer personenbezogenen Daten zu erhalten.
+Dieses Dokument beschreibt die Umsetzung des Auskunftsrechts in der {{ meta-organisation.name }}. Betroffene Personen haben das Recht, Auskunft über die Verarbeitung ihrer personenbezogenen Daten zu erhalten.
 
 ## Auskunftsrecht gemäß Art. 15 DSGVO
 
@@ -195,8 +200,6 @@ Dieses Dokument beschreibt die Umsetzung des Auskunftsrechts in der {{ meta.orga
 | Unverständliche Auskunft | Technische Rohdaten | Strukturierte Aufbereitung |
 | Fehlende Identifikation | Keine Prüfung | Identifikationsprozess |
 
----
-
 **Nächste Schritte:**
 1. Etablieren Sie Prozess für Auskunftsanfragen
 2. Definieren Sie Format und Struktur der Auskunft
@@ -204,10 +207,3 @@ Dieses Dokument beschreibt die Umsetzung des Auskunftsrechts in der {{ meta.orga
 4. Schulen Sie Mitarbeiter zur Auskunftserteilung
 5. Dokumentieren Sie alle Anfragen im Auskunftsregister
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

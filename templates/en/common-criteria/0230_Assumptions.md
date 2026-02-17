@@ -1,11 +1,16 @@
 # Assumptions
 
-**Document-ID:** 0230  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0230
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -86,8 +91,6 @@ Assumptions define expectations about the TOE's operational environment:
 - Frequency: [TODO: e.g., Annually, Quarterly]
 - Documentation: [TODO: e.g., Audit report, checklist]
 
----
-
 ### A.ENVIRONMENTAL_PROTECTION
 **Assumption ID:** A.ENVIRONMENTAL_PROTECTION  
 **Category:** Physical  
@@ -146,8 +149,6 @@ Assumptions define expectations about the TOE's operational environment:
 - Method: [TODO: e.g., Background checks, audit log review]
 - Frequency: [TODO: e.g., At hiring, annually]
 - Documentation: [TODO: e.g., HR file, training records]
-
----
 
 ### A.USER_TRAINING
 **Assumption ID:** A.USER_TRAINING  
@@ -209,8 +210,6 @@ Assumptions define expectations about the TOE's operational environment:
 - Frequency: [TODO: e.g., Quarterly]
 - Documentation: [TODO: e.g., Network diagram, firewall rules]
 
----
-
 ### A.SECURE_COMMUNICATION
 **Assumption ID:** A.SECURE_COMMUNICATION  
 **Category:** Connectivity  
@@ -269,8 +268,6 @@ Assumptions define expectations about the TOE's operational environment:
 - Frequency: [TODO: e.g., Monthly]
 - Documentation: [TODO: e.g., Scan reports, configuration documentation]
 
----
-
 ### A.PLATFORM_AVAILABILITY
 **Assumption ID:** A.PLATFORM_AVAILABILITY  
 **Category:** Platform  
@@ -328,8 +325,6 @@ Assumptions define expectations about the TOE's operational environment:
 - Method: [TODO: e.g., SOC audit, incident response test]
 - Frequency: [TODO: e.g., Quarterly]
 - Documentation: [TODO: e.g., SOC reports, incident logs]
-
----
 
 ### A.BACKUP_RECOVERY
 **Assumption ID:** A.BACKUP_RECOVERY  
@@ -438,8 +433,6 @@ Assumptions define expectations about the TOE's operational environment:
 | [TODO: A.001] | [TODO: P.001, P.003] | [TODO: Enables enforcement] |
 | [TODO: A.002] | [TODO: P.002] | [TODO: Prerequisite] |
 
----
-
 **Next Steps:**
 1. Complete all [TODO] placeholders with environment-specific assumptions
 2. Document all relevant assumptions
@@ -448,10 +441,3 @@ Assumptions define expectations about the TOE's operational environment:
 5. Create validation schedule
 6. Verify consistency with Threats (Template 0210), OSPs (Template 0220), and Security Objectives (Template 0300)
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

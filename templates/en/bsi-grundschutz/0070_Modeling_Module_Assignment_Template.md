@@ -1,14 +1,16 @@
 # Modeling: Module Assignment (Template)
 
-**Document ID:** 0070  
-**Document Type:** Methodology Artifact  
-**Reference Framework:** BSI IT-Grundschutz (BSI Standard 200-2, IT-Grundschutz Compendium)  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** {{ meta.document.status }}  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.document.last_updated }}  
-**Next Review:** {{ meta.document.next_review }}
+**Document-ID:** [FRAMEWORK]-0070
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -21,7 +23,7 @@ Reference: BSI Standard 200-2 (Chapter 7: Modeling) and IT-Grundschutz-Kompendiu
 
 ## 1. Objective and Purpose
 
-The modeling assigns appropriate IT-Grundschutz modules to the objects of the information domain of **{{ meta.organization.name }}**. It forms the basis for:
+The modeling assigns appropriate IT-Grundschutz modules to the objects of the information domain of **{{ meta-organisation.name }}**. It forms the basis for:
 - Basic security check (Document 0080)
 - Identification of requirements to be implemented
 - Systematic security measure planning
@@ -73,12 +75,12 @@ Assign ISMS and organizational modules to the organization as a whole.
 
 | Object ID | Object | Object Class | Assigned Modules | Justification | Owner |
 |---|---|---|---|---|---|
-| ORG-001 | {{ meta.organization.name }} | Organization | ISMS.1 Security Management | Overall organization | {{ meta.ciso.name }} |
-| ORG-001 | {{ meta.organization.name }} | Organization | ORP.1 Organization | Organizational structure | {{ meta.ciso.name }} |
-| ORG-001 | {{ meta.organization.name }} | Organization | ORP.2 Personnel | Personnel management | [TODO: HR] |
-| ORG-001 | {{ meta.organization.name }} | Organization | ORP.3 Awareness and Training | Awareness program | {{ meta.ciso.name }} |
-| ORG-001 | {{ meta.organization.name }} | Organization | ORP.4 Identity and Access Management | IAM processes | {{ meta.cio.name }} |
-| ORG-001 | {{ meta.organization.name }} | Organization | ORP.5 Compliance Management (Requirements Management) | Compliance | [TODO] |
+| ORG-001 | {{ meta-organisation.name }} | Organization | ISMS.1 Security Management | Overall organization | {{ meta.ciso.name }} |
+| ORG-001 | {{ meta-organisation.name }} | Organization | ORP.1 Organization | Organizational structure | {{ meta.ciso.name }} |
+| ORG-001 | {{ meta-organisation.name }} | Organization | ORP.2 Personnel | Personnel management | [TODO: HR] |
+| ORG-001 | {{ meta-organisation.name }} | Organization | ORP.3 Awareness and Training | Awareness program | {{ meta.ciso.name }} |
+| ORG-001 | {{ meta-organisation.name }} | Organization | ORP.4 Identity and Access Management | IAM processes | {{ meta.cio.name }} |
+| ORG-001 | {{ meta-organisation.name }} | Organization | ORP.5 Compliance Management (Requirements Management) | Compliance | [TODO] |
 
 ### 3.2 Conception and Approaches (CON)
 
@@ -185,7 +187,7 @@ Only if OT/ICS systems are in scope.
 | Object ID | Object | Object Class | Assigned Modules | Justification | Owner |
 |---|---|---|---|---|---|
 | R-001 | Data Center | Room | INF.2 Data Center and Server Room | Critical server room | [TODO: Facility] |
-| R-002 | {{ meta.organization.primary_location }} | Building | INF.1 General Building | Main location | [TODO: Facility] |
+| R-002 | [TODO] | Building | INF.1 General Building | Main location | [TODO: Facility] |
 | R-003 | [TODO: Office Room] | Room | INF.8 Home Office | [TODO: if home office] | [TODO] |
 
 ## 4. Summary and Statistics
@@ -259,28 +261,18 @@ The module assignment is updated when:
 - At least annually as part of the ISMS review
 
 **Responsible:** {{ meta.ciso.name }} (ISB)  
-**Next Review:** {{ meta.document.next_review }}
+**Next Review:** {{ meta-handbook.next_review }}
 
 ## 8. Approval
 
 | Role | Name | Date | Approval |
 |---|---|---|---|
-| ISB | {{ meta.ciso.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| IT Management | {{ meta.cio.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| IT Management | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **References:**
 - BSI Standard 200-2: IT-Grundschutz Methodology (Chapter 7: Modeling)
 - BSI IT-Grundschutz Compendium (current edition)
 - BSI IT-Grundschutz Compendium: https://www.bsi.bund.de/grundschutz-kompendium
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
 
 <!-- End of template -->

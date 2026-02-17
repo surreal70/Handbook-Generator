@@ -1,5 +1,19 @@
 # 2. Operational Processes
 
+**Document-ID:** [FRAMEWORK]-0011
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## 2.1 Monitoring
 
 - 24/7 monitoring of all critical systems
@@ -18,10 +32,3 @@
 - Critical changes require Change Advisory Board approval
 - Rollback plan is mandatory for all changes
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

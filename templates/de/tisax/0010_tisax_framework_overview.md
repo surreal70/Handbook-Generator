@@ -1,17 +1,28 @@
----
+
 Document-ID: tisax-0010
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # TISAX Framework Übersicht
 
+**Dokument-ID:** [FRAMEWORK]-0010
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument bietet einen Überblick über das TISAX (Trusted Information Security Assessment Exchange) Framework und seine Anwendung in {{ source.organization_name }}.
+Dieses Dokument bietet einen Überblick über das TISAX (Trusted Information Security Assessment Exchange) Framework und seine Anwendung in [TODO].
 
 ## Geltungsbereich
 
@@ -42,25 +53,25 @@ TISAX ist ein Informationssicherheits-Assessment-Standard, der speziell für die
 - **AL2**: Detailliertes Assessment mit Vor-Ort-Prüfung
 - **AL3**: Sehr detailliertes Assessment mit umfassender Vor-Ort-Prüfung
 
-## Anwendung in {{ source.organization_name }}
+## Anwendung in [TODO]
 
 ### Geltungsbereich
 
-{{ source.organization_name }} wendet TISAX auf folgende Bereiche an:
+[TODO] wendet TISAX auf folgende Bereiche an:
 
-- {{ source.scope_area_1 }}
-- {{ source.scope_area_2 }}
-- {{ source.scope_area_3 }}
+- [TODO]
+- [TODO]
+- [TODO]
 
 ### Assessment-Level
 
-{{ source.organization_name }} strebt folgendes Assessment-Level an: {{ source.tisax_assessment_level }}
+[TODO] strebt folgendes Assessment-Level an: [TODO]
 
 ### Verantwortlichkeiten
 
-- **TISAX-Koordinator**: {{ source.tisax_coordinator }}
-- **Informationssicherheitsbeauftragter**: {{ source.information_security_officer }}
-- **Datenschutzbeauftragter**: {{ source.data_protection_officer }}
+- **TISAX-Koordinator**: [TODO]
+- **Informationssicherheitsbeauftragter**: [TODO]
+- **Datenschutzbeauftragter**: [TODO]
 
 ## Dokumentstruktur
 
@@ -75,12 +86,3 @@ Dieses Handbuch ist nach den TISAX-Kontrollbereichen strukturiert:
 
 <!-- Hinweis: Passen Sie die Geltungsbereiche und Verantwortlichkeiten an Ihre Organisation an -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

@@ -1,13 +1,25 @@
----
+
 Document-ID: nist-csf-0060
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Aufsicht und Überwachung (GV.OV)
+
+**Dokument-ID:** [FRAMEWORK]-0060
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -15,7 +27,7 @@ Dieses Dokument beschreibt die Aufsichts- und Überwachungsmechanismen für das 
 
 ## Geltungsbereich
 
-{{ meta.scope }}
+{{ meta-handbook.scope }}
 
 ## Governance-Aufsicht
 
@@ -48,7 +60,7 @@ Dieses Dokument beschreibt die Aufsichts- und Überwachungsmechanismen für das 
 ## Cybersecurity-Komitees
 
 ### Cybersecurity Steering Committee
-**Vorsitz:** {{ meta.ciso }}  
+**Vorsitz:** {{ meta-organisation-roles.role_CISO }}  
 **Mitglieder:**
 - CIO
 - CRO
@@ -65,7 +77,7 @@ Dieses Dokument beschreibt die Aufsichts- und Überwachungsmechanismen für das 
 - Risikobewertung und -behandlung
 
 ### Security Operations Committee
-**Vorsitz:** {{ meta.security_ops_manager }}  
+**Vorsitz:** {{ meta-handbook.security_ops_manager }}  
 **Mitglieder:**
 - IT Operations
 - Network Team
@@ -81,7 +93,7 @@ Dieses Dokument beschreibt die Aufsichts- und Überwachungsmechanismen für das 
 - Technische Entscheidungen
 
 ### Risk Management Committee
-**Vorsitz:** {{ meta.cro }}  
+**Vorsitz:** {{ meta-organisation-roles.role_Risk_Manager }}  
 **Mitglieder:**
 - CISO
 - Business Unit Heads
@@ -224,17 +236,3 @@ Dieses Dokument beschreibt die Aufsichts- und Überwachungsmechanismen für das 
 - 0040_roles_responsibilities.md
 - 0050_policy_framework.md
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |
-
-<!-- 
-Autor-Hinweise:
-- Passen Sie Berichtsformate an Zielgruppen an
-- Stellen Sie sicher, dass Metriken aussagekräftig sind
-- Überprüfen Sie Eskalationsprozesse regelmäßig
--->

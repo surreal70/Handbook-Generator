@@ -1,17 +1,28 @@
----
+
 Document-ID: csa-ccm-0030
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Risk Management Program
 
+**Document-ID:** [FRAMEWORK]-0030
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document describes the risk management program for cloud services within {{ source.organization_name }}.
+This document describes the risk management program for cloud services within [TODO].
 
 ## Scope
 
@@ -21,7 +32,7 @@ This document applies to all cloud risk management activities.
 
 ### Program Structure
 
-**Program Owner**: {{ source.risk_manager }}
+**Program Owner**: [TODO]
 
 **Risk Management Team**:
 - Risk Manager
@@ -133,13 +144,5 @@ This document applies to all cloud risk management activities.
 **GRC-06**: Policy Impact on Risk Assessments
 
 <!-- Note: Customize risk assessment criteria and processes -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

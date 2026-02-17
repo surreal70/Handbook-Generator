@@ -1,11 +1,16 @@
 # Appendix: Terms and Abbreviations
 
-**Document-ID:** 0770  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0770
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -16,7 +21,7 @@ This appendix defines terms and abbreviations used in the QMS.
 
 ## Purpose
 
-This appendix defines important terms and abbreviations used in the quality management system of {{ meta.organization }}.
+This appendix defines important terms and abbreviations used in the quality management system of {{ meta-organisation.name }}.
 
 ## Term Definitions
 
@@ -284,14 +289,5 @@ Guidelines for auditing management systems
 **ISO 31000**
 Risk management - Guidelines
 
----
-
 **Note:** Terms and definitions from ISO 9000:2015 are authoritative. This appendix serves as a reference for frequently used terms in the QMS.
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

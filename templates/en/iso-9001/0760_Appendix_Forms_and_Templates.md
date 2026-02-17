@@ -1,11 +1,16 @@
 # Appendix: Forms and Templates
 
-**Document-ID:** 0760  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0760
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -16,7 +21,7 @@ This appendix lists all forms and templates used in the QMS.
 
 ## Purpose
 
-This appendix contains an overview of all forms and templates used in the QMS of {{ meta.organization }}.
+This appendix contains an overview of all forms and templates used in the QMS of {{ meta-organisation.name }}.
 
 ## Form Directory
 
@@ -319,14 +324,5 @@ This appendix contains an overview of all forms and templates used in the QMS of
 6. Withdraw old version
 7. Inform users
 
----
-
 **Note:** All forms are available in the document management system.
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

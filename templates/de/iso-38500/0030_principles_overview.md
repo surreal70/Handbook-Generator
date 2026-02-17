@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-38500-0030
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # IT-Governance Prinzipien - Übersicht
+
+**Dokument-ID:** [FRAMEWORK]-0030
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -16,7 +28,7 @@ Dieses Dokument bietet einen Überblick über die sechs IT-Governance-Prinzipien
 ## Geltungsbereich
 
 Dieses Dokument gilt für:
-- {{ meta.organization }}
+- {{ meta-organisation.name }}
 - Alle IT-Governance-Aktivitäten
 - Vorstand, Geschäftsführung und IT-Management
 
@@ -85,18 +97,4 @@ Die Prinzipien sollten:
 - 0070_performance_principle.md
 - 0080_conformance_principle.md
 - 0090_human_behavior_principle.md
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |
-
-<!-- 
-Autor-Hinweise: 
-- Alle sechs Prinzipien sind gleichwertig und sollten ausgewogen angewendet werden
-- Prinzipien können in Konflikt geraten - dokumentieren Sie Abwägungen
--->
 

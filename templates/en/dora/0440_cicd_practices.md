@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0440
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # CI/CD Best Practices
+
+**Document-ID:** [FRAMEWORK]-0440
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -22,9 +33,9 @@ Best practices for CI/CD to reduce Change Failure Rate.
 
 ## Organization Information
 
-- **Organization**: {{ source.organization_name }}
-- **CI/CD Owner**: {{ source.cicd_owner }}
-- **CI/CD Platform**: {{ source.cicd_platform }}
+- **Organization**: [TODO]
+- **CI/CD Owner**: [TODO]
+- **CI/CD Platform**: [TODO]
 
 ## CI/CD Principles
 
@@ -237,10 +248,3 @@ deploy:production:
 
 <!-- Note: Robust CI/CD reduces CFR -->
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |

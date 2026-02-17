@@ -1,5 +1,19 @@
 # ISMS Governance: Roles and Responsibilities
 
+**Document-ID:** [FRAMEWORK]-0040
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This document defines the ISMS governance structure, roles, and responsibilities.
@@ -16,16 +30,14 @@ ISO 27001:2022 Reference: Clause 5.3 - Organizational roles, responsibilities an
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** {{ meta-handbook.modifydate }}  
+**Next Review:** {{ meta-handbook.next_review }}
 
 ## 1. ISMS Governance Structure
 
 ### 1.1 Governance Overview
 
-The ISMS governance of **{{ meta.organization.name }}** is integrated into the overall organization and ensures that information security is anchored at all levels.
+The ISMS governance of **{{ meta-organisation.name }}** is integrated into the overall organization and ensures that information security is anchored at all levels.
 
 ```
 ┌─────────────────────────────────────────────────────────┐
@@ -335,18 +347,9 @@ See `0070_ISMS_Risk_Acceptance_Criteria.md` for details.
 - **ISO/IEC 27001:2022** - Clause 5.3: Organizational roles, responsibilities and authorities
 - **ISO/IEC 27002:2022** - Control 5.2: Information security roles and responsibilities
 
----
-
 **Approved by:**  
 {{ meta.management.ceo }}, Management  
-Date: {{ meta.document.approval_date }}
+Date: {{ meta-handbook.modifydate }}
 
-**Next Review:** {{ meta.document.next_review }}
+**Next Review:** {{ meta-handbook.next_review }}
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

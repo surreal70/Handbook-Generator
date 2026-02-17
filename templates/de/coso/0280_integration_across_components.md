@@ -1,17 +1,28 @@
----
+
 Document-ID: coso-0500
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Integration über Komponenten hinweg
 
+**Dokument-ID:** [FRAMEWORK]-0280
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt die Integration der fünf COSO-Komponenten bei {{ source.organization_name }}.
+Dieses Dokument beschreibt die Integration der fünf COSO-Komponenten bei [TODO].
 
 ## Integrationsansatz
 
@@ -27,17 +38,17 @@ Die fünf Komponenten der internen Kontrolle funktionieren zusammen als integrie
 
 ### Integrationsmechanismen
 
-{{ source.integration_mechanisms }}
+[TODO]
 
 ## Prinzipienintegration
 
 ### Alle 17 Prinzipien vorhanden
 
-{{ source.principles_presence }}
+[TODO]
 
 ### Prinzipien funktionieren zusammen
 
-{{ source.principles_integration }}
+[TODO]
 
 ## Wirksamkeitsbewertung
 
@@ -51,25 +62,16 @@ Eine interne Kontrolle gilt als wirksam, wenn:
 
 ### Bewertungsmethodik
 
-{{ source.effectiveness_assessment_methodology }}
+[TODO]
 
 ## Dokumentation der Integration
 
-{{ source.integration_documentation }}
+[TODO]
 
 ## Referenzen
 
 - COSO Internal Control Framework
-- Integriertes Kontrollsystem {{ source.organization_name }}
+- Integriertes Kontrollsystem [TODO]
 
 <!-- Hinweise für Autoren: Integration ist der Schlüssel zur Wirksamkeit -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

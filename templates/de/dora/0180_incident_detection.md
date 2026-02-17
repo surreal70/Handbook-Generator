@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0320
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Incident-Erkennung
+
+**Dokument-ID:** [FRAMEWORK]-0180
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -23,9 +34,9 @@ Beschreibung der Incident-Erkennungsmechanismen.
 
 ### Automatische Erkennung
 
-- **Monitoring-System**: {{ source.monitoring_system }}
-- **Alerting-Tool**: {{ source.alerting_tool }}
-- **Anomalie-Erkennung**: {{ source.anomaly_detection }}
+- **Monitoring-System**: [TODO]
+- **Alerting-Tool**: [TODO]
+- **Anomalie-Erkennung**: [TODO]
 
 ### Manuelle Erkennung
 
@@ -37,32 +48,23 @@ Beschreibung der Incident-Erkennungsmechanismen.
 
 ### Monitoring-Coverage
 
-- **Application Monitoring**: {{ source.app_monitoring_coverage }}
-- **Infrastructure Monitoring**: {{ source.infra_monitoring_coverage }}
-- **Business Metrics**: {{ source.business_metrics_monitoring }}
+- **Application Monitoring**: [TODO]
+- **Infrastructure Monitoring**: [TODO]
+- **Business Metrics**: [TODO]
 
 ### Alert-Konfiguration
 
-- **Alert-Schwellwerte**: {{ source.alert_thresholds }}
-- **Alert-Routing**: {{ source.alert_routing }}
-- **On-Call-Rotation**: {{ source.oncall_rotation }}
+- **Alert-Schwellwerte**: [TODO]
+- **Alert-Routing**: [TODO]
+- **On-Call-Rotation**: [TODO]
 
 ## Eskalation
 
 ### Eskalationspfade
 
-1. **Level 1**: {{ source.escalation_level_1 }}
-2. **Level 2**: {{ source.escalation_level_2 }}
-3. **Level 3**: {{ source.escalation_level_3 }}
+1. **Level 1**: [TODO]
+2. **Level 2**: [TODO]
+3. **Level 3**: [TODO]
 
 <!-- Hinweis: Schnelle Erkennung ist Voraussetzung für niedrige MTTR -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

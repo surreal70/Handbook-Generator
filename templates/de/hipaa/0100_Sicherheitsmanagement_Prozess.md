@@ -1,19 +1,22 @@
 # Sicherheitsmanagement-Prozess
 
-**Dokument-ID:** HIPAA-0100  
-**Organisation:** {{ meta.organization.name }}  
-**Verantwortlich:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Entwurf / In Prüfung / Genehmigt  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** HIPAA-0100
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
 ## 1. Zweck
 
-Dieses Dokument beschreibt den Sicherheitsmanagement-Prozess für {{ meta.organization.name }}, einschließlich Risikoanalyse, Risikomanagement, Sanktionsrichtlinie und Überprüfung der Informationssystemaktivitäten gemäß HIPAA Security Rule §164.308(a)(1).
+Dieses Dokument beschreibt den Sicherheitsmanagement-Prozess für {{ meta-organisation.name }}, einschließlich Risikoanalyse, Risikomanagement, Sanktionsrichtlinie und Überprüfung der Informationssystemaktivitäten gemäß HIPAA Security Rule §164.308(a)(1).
 
 ### 1.1 HIPAA-Anforderung
 
@@ -65,7 +68,7 @@ Dieses Dokument beschreibt den Sicherheitsmanagement-Prozess für {{ meta.organi
 
 **Häufigkeit:** Jährlich (Minimum) oder bei wesentlichen Änderungen
 
-**Verantwortlich:** {{ meta.roles.security_officer.name }} (Security Officer)
+**Verantwortlich:** [TODO] (Security Officer)
 
 ### 2.2 Risikoanalysemethodik
 
@@ -137,7 +140,7 @@ Nach Implementierung von Kontrollen Risikolevel neu bewerten, um Restrisiko zu b
 
 **Anforderung:** Angemessene Sanktionen gegen Belegschaftsmitglieder anwenden, die Sicherheitsrichtlinien und -verfahren nicht einhalten.
 
-**Richtlinie:** {{ meta.organization.name }} wird angemessene Sanktionen gegen Belegschaftsmitglieder anwenden, die HIPAA-Sicherheitsrichtlinien und -verfahren verletzen. Sanktionen werden konsistent und fair angewendet, entsprechend der Schwere des Verstoßes.
+**Richtlinie:** {{ meta-organisation.name }} wird angemessene Sanktionen gegen Belegschaftsmitglieder anwenden, die HIPAA-Sicherheitsrichtlinien und -verfahren verletzen. Sanktionen werden konsistent und fair angewendet, entsprechend der Schwere des Verstoßes.
 
 ### 4.2 Verstöße und Sanktionen
 
@@ -304,20 +307,11 @@ Nach Implementierung von Kontrollen Risikolevel neu bewerten, um Restrisiko zu b
 
 **Speicherort:** [TODO: Dokumentenmanagementsystem-Standort]
 
----
-
 **Dokumentenhistorie:**
 
 | Version | Datum | Autor | Änderungen |
 |---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Ersterstellung |
+| 0.1 | {{ meta-handbook.modifydate }} | {{ meta-handbook.author }} | Ersterstellung |
 
 <!-- Ende der Vorlage -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

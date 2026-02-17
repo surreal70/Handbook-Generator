@@ -1,5 +1,19 @@
 # Policy: Authentisierung und Passwörter
 
+**Dokument-ID:** 0240
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This policy establishes the principles for authentication and password management.
@@ -10,27 +24,15 @@ and security maturity (MFA adoption, passwordless strategies, etc.).
 ISO 27001:2022 Annex A Reference: A.5.17, A.5.18
 -->
 
-**Dokument-ID:** 0240  
-**Dokumenttyp:** Policy (abstrakt)  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.5.17, A.5.18 (inkl. Amendment 1:2024)  
-**Owner:** {{ meta.ciso.name }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
-
----
-
 ## 1. Zweck
 
-Diese Policy definiert die Grundsätze für Authentisierung und Passwortmanagement der **{{ meta.organization.name }}**. Sie stellt sicher, dass die Identität von Nutzern sicher verifiziert wird und Authentisierungsinformationen angemessen geschützt werden.
+Diese Policy definiert die Grundsätze für Authentisierung und Passwortmanagement der **{{ meta-organisation.name }}**. Sie stellt sicher, dass die Identität von Nutzern sicher verifiziert wird und Authentisierungsinformationen angemessen geschützt werden.
 
 ## 2. Geltungsbereich
 
 Diese Policy gilt für:
 
-- **Organisationseinheiten:** Alle Abteilungen und Standorte der {{ meta.organization.name }}
+- **Organisationseinheiten:** Alle Abteilungen und Standorte der {{ meta-organisation.name }}
 - **Systeme:** Alle IT-Systeme, Anwendungen, Datenbanken, Netzwerke, Cloud-Services
 - **Personen:** Alle Mitarbeiter, Auftragnehmer, Lieferanten und Dritte mit Zugang zu IT-Ressourcen
 - **Authentisierungsmethoden:** Passwörter, Multi-Faktor-Authentisierung (MFA), biometrische Verfahren, Token
@@ -177,18 +179,9 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **NIST SP 800-63-3** - Digital Identity Guidelines
 - **BSI TR-02102** - Kryptographische Verfahren: Empfehlungen und Schlüssellängen
 
----
-
 **Genehmigt durch:**  
 {{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+Datum: {{ meta-handbook.modifydate }}
 
-**Nächster Review:** {{ meta.document.next_review }} (jährlich oder anlassbezogen)
+**Nächster Review:** {{ meta-handbook.next_review }} (jährlich oder anlassbezogen)
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

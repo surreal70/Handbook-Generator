@@ -1,13 +1,16 @@
 # Business Associates and Subcontractors
 
-**Document ID:** HIPAA-0030  
-**Organization:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Approved by:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0030
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,7 +28,7 @@ Customization required:
 
 ## 1. Purpose
 
-This document identifies and manages all Business Associate relationships for {{ meta.organization.name }} and ensures compliance with HIPAA Business Associate requirements.
+This document identifies and manages all Business Associate relationships for {{ meta-organisation.name }} and ensures compliance with HIPAA Business Associate requirements.
 
 ### 1.1 Objectives
 
@@ -351,13 +354,5 @@ A Business Associate is a person or entity that:
 - Correspondence regarding PHI
 
 **Retention Period:** [TODO: 6 years from creation or last effective date]
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 <!-- End of template -->

@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0500
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Business Continuity Planning
+
+**Document-ID:** [FRAMEWORK]-0500
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -15,7 +26,7 @@ This document describes business continuity planning according to TISAX requirem
 
 ## Scope
 
-This document applies to all business-critical processes of {{ source.organization_name }}.
+This document applies to all business-critical processes of [TODO].
 
 ## Business Impact Analysis
 
@@ -34,14 +45,14 @@ This document applies to all business-critical processes of {{ source.organizati
 
 ### Recovery Objectives
 **RTO (Recovery Time Objective):**
-- Critical processes: {{ source.critical_rto }} hours
-- Important processes: {{ source.important_rto }} hours
-- Standard processes: {{ source.standard_rto }} days
+- Critical processes: [TODO] hours
+- Important processes: [TODO] hours
+- Standard processes: [TODO] days
 
 **RPO (Recovery Point Objective):**
-- Critical data: {{ source.critical_rpo }} hours
-- Important data: {{ source.important_rpo }} hours
-- Standard data: {{ source.standard_rpo }} days
+- Critical data: [TODO] hours
+- Important data: [TODO] hours
+- Standard data: [TODO] days
 
 ## Business Continuity Strategy
 
@@ -164,18 +175,10 @@ This document applies to all business-critical processes of {{ source.organizati
 
 ## Metrics
 
-{{ source.organization_name }} measures:
+[TODO] measures:
 - Number of tests conducted
 - Success rate of tests
 - Currency of plans
 - Training participation
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

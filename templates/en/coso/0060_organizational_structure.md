@@ -1,51 +1,54 @@
----
+
 Document-ID: coso-0060
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Organizational Structure and Responsibilities
 
+**Document-ID:** [FRAMEWORK]-0060
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document describes the organizational structure and responsibilities of {{ source.organization_name }} (COSO Principle 3).
+This document describes the organizational structure and responsibilities of [TODO] (COSO Principle 3).
 
 ## Organizational Structure
 
-{{ source.org_structure_diagram }}
+[TODO]
 
 ## Reporting Lines
 
-{{ source.reporting_structure }}
+[TODO]
 
 ## Responsibilities
 
 ### Executive Management
-{{ source.executive_responsibilities }}
+[TODO]
 
 ### Function Heads
-{{ source.function_responsibilities }}
+[TODO]
 
 ### Employees
-{{ source.employee_responsibilities }}
+[TODO]
 
 ## Delegation of Authority
 
-{{ source.authority_delegation_matrix }}
+[TODO]
 
 ## References
 
-- Organizational Handbook {{ source.organization_name }}
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
+- Organizational Handbook [TODO]
 
 <!-- End of template -->

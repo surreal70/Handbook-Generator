@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-38500-0310
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Policy Framework
+
+**Document-ID:** [FRAMEWORK]-0160
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -16,7 +28,7 @@ This document describes the policy framework for IT governance.
 ## Scope
 
 This document applies to:
-- {{ meta.organization }}
+- {{ meta-organisation.name }}
 - All IT policies
 
 ## Policy Hierarchy
@@ -78,19 +90,11 @@ This document applies to:
 
 | Policy | Owner | Last Update | Next Review |
 |--------|-------|-------------|-------------|
-| IT Governance | {{ meta.cio }} | {{ meta.governance_policy_date }} | {{ meta.governance_policy_review }} |
-| IT Security | {{ meta.ciso }} | {{ meta.security_policy_date }} | {{ meta.security_policy_review }} |
-| Data Protection | {{ meta.dpo }} | {{ meta.privacy_policy_date }} | {{ meta.privacy_policy_review }} |
+| IT Governance | {{ meta-organisation-roles.role_CIO }} | {{ meta-handbook.governance_policy_date }} | {{ meta-handbook.governance_policy_review }} |
+| IT Security | {{ meta-organisation-roles.role_CISO }} | {{ meta-handbook.security_policy_date }} | {{ meta-handbook.security_policy_review }} |
+| Data Protection | {{ meta-organisation-roles.role_GDPR_Manager }} | {{ meta-handbook.privacy_policy_date }} | {{ meta-handbook.privacy_policy_review }} |
 
 ## Document References
 
 - 0300_governance_implementation.md
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 

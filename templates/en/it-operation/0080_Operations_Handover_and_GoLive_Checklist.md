@@ -1,14 +1,26 @@
 # Operations Handover and Go-Live Checklist
 
+**Document-ID:** [FRAMEWORK]-0080
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Overview
 
 This document describes the operations handover process and contains a comprehensive go-live checklist for transitioning new or changed IT services into production.
 
-**Service:** {{ meta.service_name }}  
-**Responsible:** {{ meta.it_operations_manager.name }}  
-**Version:** {{ meta.document.version }}
-
----
+**Service:** {{ meta-handbook.service_name }}  
+**Responsible:** {{ meta-organisation-roles.role_it_operations_manager.name }}  
+**Version:** {{ meta-handbook.revision }}
 
 ## Operations Handover Process
 
@@ -50,13 +62,11 @@ This document describes the operations handover process and contains a comprehen
 | Role | Responsibility | Contact Person |
 |---|---|---|
 | **Service Owner** | Overall service responsibility | [TODO: Name] |
-| **IT Operations Manager** | Coordinate operations takeover | {{ meta.it_operations_manager.name }} |
+| **IT Operations Manager** | Coordinate operations takeover | {{ meta-organisation-roles.role_it_operations_manager.name }} |
 | **Technical Lead** | Technical implementation | [TODO: Name] |
-| **Service Desk Lead** | Support readiness | {{ meta.service_desk_lead.name }} |
+| **Service Desk Lead** | Support readiness | {{ meta-organisation-roles.role_service_desk_lead.name }} |
 | **Change Manager** | Change approval | [TODO: Name] |
-| **CIO** | Final approval | {{ meta.cio.name }} |
-
----
+| **CIO** | Final approval | {{ meta-organisation-roles.role_cio.name }} |
 
 ## Go-Live Checklist
 
@@ -203,8 +213,6 @@ This document describes the operations handover process and contains a comprehen
 - [ ] Lessons learned documented
 - [ ] Post-implementation review conducted
 
----
-
 ## Handover Documentation
 
 ### Handover Package
@@ -282,12 +290,10 @@ The handover package must contain the following documents:
 
 **Participants:**
 - Service Owner
-- IT Operations Manager: {{ meta.it_operations_manager.name }}
+- IT Operations Manager: {{ meta-organisation-roles.role_it_operations_manager.name }}
 - Technical Lead
-- Service Desk Lead: {{ meta.service_desk_lead.name }}
-- CIO: {{ meta.cio.name }}
-
----
+- Service Desk Lead: {{ meta-organisation-roles.role_service_desk_lead.name }}
+- CIO: {{ meta-organisation-roles.role_cio.name }}
 
 ## Acceptance Criteria
 
@@ -324,10 +330,8 @@ The handover package must contain the following documents:
 | **Business Requirements** | All business requirements met | ☐ | Service Owner |
 | **User Acceptance** | UAT successfully completed | ☐ | Business Users |
 | **Compliance** | Compliance requirements met | ☐ | Compliance Officer |
-| **Budget** | Within budget | ☐ | {{ meta.cfo.name }} |
+| **Budget** | Within budget | ☐ | {{ meta-organisation-roles.role_cfo.name }} |
 | **Timeline** | Schedule maintained | ☐ | Project Manager |
-
----
 
 ## Go/No-Go Decision
 
@@ -336,10 +340,10 @@ The handover package must contain the following documents:
 **Timing:** 24 hours before planned go-live  
 **Participants:**
 - Service Owner
-- IT Operations Manager: {{ meta.it_operations_manager.name }}
+- IT Operations Manager: {{ meta-organisation-roles.role_it_operations_manager.name }}
 - Technical Lead
 - Change Manager
-- CIO: {{ meta.cio.name }}
+- CIO: {{ meta-organisation-roles.role_cio.name }}
 
 ### Decision Criteria
 
@@ -362,8 +366,6 @@ The handover package must contain the following documents:
 - Service Owner: _________________ Date: _______
 - IT Operations Manager: _________________ Date: _______
 - CIO: _________________ Date: _______
-
----
 
 ## Rollback Plan
 
@@ -392,8 +394,6 @@ Rollback is triggered by:
 - **Within 4 hours after go-live:** Quick rollback possible
 - **4-24 hours after go-live:** Rollback with increased effort
 - **After 24 hours:** Rollback only after careful analysis
-
----
 
 ## Post-Implementation Review
 
@@ -432,29 +432,18 @@ Rollback is triggered by:
 | **User Satisfaction** | ≥ 80% | [TODO]% | ☐ |
 | **Performance** | < [TODO] ms | [TODO] ms | ☐ |
 
----
-
 ## Contacts
 
 **Go-Live Team:**
 - **Service Owner:** [TODO: Name] - [TODO: Email]
-- **IT Operations Manager:** {{ meta.it_operations_manager.name }} - {{ meta.it_operations_manager.email }}
+- **IT Operations Manager:** {{ meta-organisation-roles.role_it_operations_manager.name }} - {{ meta-organisation-roles.role_it_operations_manager.email }}
 - **Technical Lead:** [TODO: Name] - [TODO: Email]
-- **Service Desk Lead:** {{ meta.service_desk_lead.name }} - {{ meta.service_desk_lead.email }}
+- **Service Desk Lead:** {{ meta-organisation-roles.role_service_desk_lead.name }} - {{ meta-organisation-roles.role_service_desk_lead.email }}
 - **Change Manager:** [TODO: Name] - [TODO: Email]
-- **CIO:** {{ meta.cio.name }} - {{ meta.cio.email }}
+- **CIO:** {{ meta-organisation-roles.role_cio.name }} - {{ meta-organisation-roles.role_cio.email }}
 
----
+**Document Owner:** {{ meta-handbook.owner }}  
+**Approved by:** {{ meta-handbook.approver }}  
+**Version:** {{ meta-handbook.revision }}  
+**Organization:** {{ meta-organisation.name }}
 
-**Document Owner:** {{ meta.document.owner }}  
-**Approved by:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Organization:** {{ meta.organization.name }}
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

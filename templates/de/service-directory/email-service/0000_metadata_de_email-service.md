@@ -1,6 +1,6 @@
 ---
 title: "E-Mail-Service Betriebshandbuch"
-subtitle: "{{ meta.organization.name }}"
+subtitle: "[TODO]"
 date: "{{ metadata.date }}"
 author: "{{ metadata.author }}"
 version: "{{ metadata.version }}"

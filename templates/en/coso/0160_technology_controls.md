@@ -1,40 +1,43 @@
----
+
 Document-ID: coso-0220
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Technology Controls
 
+**Document-ID:** [FRAMEWORK]-0160
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document describes the technology controls of {{ source.organization_name }} (COSO Principle 11).
+This document describes the technology controls of [TODO] (COSO Principle 11).
 
 ## IT General Controls
 
-{{ source.itgc_overview }}
+[TODO]
 
 ## Application Controls
 
-{{ source.application_controls_detail }}
+[TODO]
 
 ## Cybersecurity Controls
 
-{{ source.cybersecurity_framework }}
+[TODO]
 
 ## References
 
 - IT Control Policy
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

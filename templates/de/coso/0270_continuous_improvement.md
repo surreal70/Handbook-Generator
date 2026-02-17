@@ -1,36 +1,38 @@
----
+
 Document-ID: coso-0440
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Kontinuierliche Verbesserung
 
+**Dokument-ID:** [FRAMEWORK]-0270
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt den kontinuierlichen Verbesserungsprozess bei {{ source.organization_name }}.
+Dieses Dokument beschreibt den kontinuierlichen Verbesserungsprozess bei [TODO].
 
 ## Verbesserungszyklus
 
-{{ source.improvement_cycle }}
+[TODO]
 
 ## Lessons Learned
 
-{{ source.lessons_learned_documentation }}
+[TODO]
 
 ## Referenzen
 
 - Qualitätsmanagement-System
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

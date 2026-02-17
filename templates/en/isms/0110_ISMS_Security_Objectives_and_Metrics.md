@@ -1,5 +1,19 @@
 # Information Security Objectives and Metrics
 
+**Document-ID:** [FRAMEWORK]-0110
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This document defines measurable information security objectives and KPIs.
@@ -16,16 +30,14 @@ ISO 27001:2022 Reference: Clause 6.2 - Information security objectives
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** {{ meta-handbook.modifydate }}  
+**Next Review:** {{ meta-handbook.next_review }}
 
 ## 1. Information Security Objectives
 
 ### 1.1 Strategic Objectives
 
-**{{ meta.organization.name }}** defines the following strategic information security objectives:
+**{{ meta-organisation.name }}** defines the following strategic information security objectives:
 
 | Objective ID | Objective | Description | KPI/Metric | Target Value | Measurement Method | Owner | Frequency | Status |
 |--------------|-----------|-------------|------------|--------------|-------------------|-------|-----------|--------|
@@ -181,19 +193,10 @@ Each objective is linked to measures in the risk treatment plan:
 - **ISO/IEC 27001:2022** - Clause 6.2: Information security objectives
 - **ISO/IEC 27001:2022** - Clause 9.1: Monitoring, measurement, analysis and evaluation
 
----
-
 **Approved by:**  
 {{ meta.ciso.name }}, CISO  
 {{ meta.management.ceo }}, Management  
-Date: {{ meta.document.approval_date }}
+Date: {{ meta-handbook.modifydate }}
 
-**Next Review:** {{ meta.document.next_review }}
+**Next Review:** {{ meta-handbook.next_review }}
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

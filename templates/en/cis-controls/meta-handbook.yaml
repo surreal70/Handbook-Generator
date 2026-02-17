@@ -1,0 +1,51 @@
+# Handbook-specific metadata
+# Handbook: cis-controls
+# This file contains metadata specific to this handbook
+
+# Author of the handbook
+author: "[TODO]"
+
+# Classification level (e.g., Internal, Confidential, Public)
+classification: "[TODO]"
+
+# Status (e.g., Draft, Review, Approved, Active)
+status: "[TODO]"
+
+# Type of handbook
+type: "[TODO]"
+
+# Template set version
+templateset_version: "0.2"
+
+# Revision number (increment manually)
+revision: 0
+
+# Short name (matches directory name)
+shortname: "cis-controls"
+
+# Long descriptive name
+longname: "[TODO]"
+
+# Maintainer (defaults to author if not specified)
+maintainer: "[TODO]"
+
+# Owner responsible for the handbook
+owner: "[TODO]"
+
+# Approver of the handbook
+approver: "[TODO]"
+
+# Creation date (YYYY-MM-DD)
+creationdate: "[TODO]"
+
+# Last modification date (YYYY-MM-DD)
+modifydate: "[TODO]"
+
+# Valid from date (YYYY-MM-DD)
+valid_from: "[TODO]"
+
+# Next review date (YYYY-MM-DD)
+next_review: "[TODO]"
+
+# Scope of the handbook
+scope: "[TODO]"

@@ -1,11 +1,16 @@
 # Operational Planning and Control
 
-**Document-ID:** 0400  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0400
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -24,20 +29,20 @@ Reference: ISO 9001:2015, Clause 8.1
 
 ## Purpose
 
-This document defines how {{ meta.organization }} conducts operational planning and control to meet requirements for the provision of products and services and to implement actions determined in Clause 6.
+This document defines how {{ meta-organisation.name }} conducts operational planning and control to meet requirements for the provision of products and services and to implement actions determined in Clause 6.
 
 ## Operational Planning (8.1)
 
 ### Planning Requirements
 
-**{{ meta.organization }} plans, implements, and controls the processes needed to:**
+**{{ meta-organisation.name }} plans, implements, and controls the processes needed to:**
 - Meet requirements for the provision of products and services
 - Implement actions determined in Clause 6
 - Achieve intended outcomes
 
 ### Planning Criteria
 
-**When planning, {{ meta.organization }} considers:**
+**When planning, {{ meta-organisation.name }} considers:**
 - Requirements for products and services
 - Criteria for processes and product acceptance
 - Required resources
@@ -48,7 +53,7 @@ This document defines how {{ meta.organization }} conducts operational planning 
 
 ### Control Measures
 
-**{{ meta.organization }} controls planned changes and reviews consequences of unintended changes by:**
+**{{ meta-organisation.name }} controls planned changes and reviews consequences of unintended changes by:**
 - Establishing process criteria
 - Implementing process control
 - Retaining documented information
@@ -56,7 +61,7 @@ This document defines how {{ meta.organization }} conducts operational planning 
 
 ### Outsourced Processes
 
-**For outsourced processes, {{ meta.organization }} ensures:**
+**For outsourced processes, {{ meta-organisation.name }} ensures:**
 - Control or influence over outsourced processes
 - Type and extent of control are defined in QMS
 - Organization's responsibility remains
@@ -82,7 +87,7 @@ This document defines how {{ meta.organization }} conducts operational planning 
 
 ### Monitoring and Measurement
 
-**{{ meta.organization }} monitors and measures:**
+**{{ meta-organisation.name }} monitors and measures:**
 - Process performance
 - Product conformity
 - Service quality
@@ -117,8 +122,6 @@ This document defines how {{ meta.organization }} conducts operational planning 
 - Monitoring process performance
 - Reporting deviations
 
----
-
 **Next Steps:**
 1. Define all operational processes
 2. Establish process criteria
@@ -126,10 +129,3 @@ This document defines how {{ meta.organization }} conducts operational planning 
 4. Establish performance indicators
 5. Monitor and measure regularly
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

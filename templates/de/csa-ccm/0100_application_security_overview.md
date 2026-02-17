@@ -1,17 +1,28 @@
----
+
 Document-ID: csa-ccm-0100
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Anwendungs- und Schnittstellensicherheit (AIS)
 
+**Dokument-ID:** [FRAMEWORK]-0100
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt die Sicherheitsmaßnahmen für Anwendungen und Schnittstellen in Cloud-Umgebungen von {{ source.organization_name }}.
+Dieses Dokument beschreibt die Sicherheitsmaßnahmen für Anwendungen und Schnittstellen in Cloud-Umgebungen von [TODO].
 
 ## Geltungsbereich
 
@@ -158,12 +169,3 @@ Dieses Dokument gilt für alle Cloud-Anwendungen, APIs und Schnittstellen.
 
 <!-- Hinweis: Passen Sie Anwendungsinventar und Sicherheitskontrollen an -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

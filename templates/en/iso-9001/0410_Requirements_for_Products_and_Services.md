@@ -1,11 +1,16 @@
 # Requirements for Products and Services
 
-**Document-ID:** 0410  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0410
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -18,13 +23,13 @@ Reference: ISO 9001:2015, Clause 8.2
 
 ## Purpose
 
-This document defines how {{ meta.organization }} determines, reviews, and communicates requirements for products and services.
+This document defines how {{ meta-organisation.name }} determines, reviews, and communicates requirements for products and services.
 
 ## Customer Communication (8.2.1)
 
 ### Communication Channels
 
-**{{ meta.organization }} communicates with customers regarding:**
+**{{ meta-organisation.name }} communicates with customers regarding:**
 - Information relating to products and services
 - Inquiries, contracts or order handling, including changes
 - Customer feedback, including customer complaints
@@ -45,7 +50,7 @@ This document defines how {{ meta.organization }} determines, reviews, and commu
 
 ### Requirement Types
 
-**{{ meta.organization }} determines:**
+**{{ meta-organisation.name }} determines:**
 
 **Customer Requirements:**
 - Specified requirements (including delivery and post-delivery activities)
@@ -75,7 +80,7 @@ This document defines how {{ meta.organization }} determines, reviews, and commu
 
 ### Review Process
 
-**Before committing to supply, {{ meta.organization }} reviews:**
+**Before committing to supply, {{ meta-organisation.name }} reviews:**
 - Requirements are defined
 - Contract or order requirements differing from previously expressed are resolved
 - Organization has ability to meet requirements
@@ -177,8 +182,6 @@ This document defines how {{ meta.organization }} determines, reviews, and commu
 - Ensuring conformity
 - Documentation
 
----
-
 **Next Steps:**
 1. Establish customer communication process
 2. Define requirement capture methods
@@ -186,10 +189,3 @@ This document defines how {{ meta.organization }} determines, reviews, and commu
 4. Train staff in requirement management
 5. Monitor process effectiveness
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

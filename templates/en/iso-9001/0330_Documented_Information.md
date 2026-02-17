@@ -1,11 +1,16 @@
 # Control of Documented Information
 
-**Document-ID:** 0330  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0330
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -29,7 +34,7 @@ Reference: ISO 9001:2015, Clause 7.5
 
 ## Purpose
 
-This document defines how {{ meta.organization }} controls documented information in accordance with ISO 9001:2015 Clause 7.5.
+This document defines how {{ meta-organisation.name }} controls documented information in accordance with ISO 9001:2015 Clause 7.5.
 
 ## Documented Information in QMS
 
@@ -386,8 +391,6 @@ This document defines how {{ meta.organization }} controls documented informatio
 - Record keeping requirements
 - Document management system use
 
----
-
 **Next Steps:**
 1. Establish document control procedures
 2. Implement document management system
@@ -396,10 +399,3 @@ This document defines how {{ meta.organization }} controls documented informatio
 5. Conduct regular document reviews
 6. Monitor document control effectiveness
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

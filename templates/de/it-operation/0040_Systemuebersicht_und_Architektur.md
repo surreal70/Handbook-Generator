@@ -1,5 +1,19 @@
 # Systemübersicht und Architektur
 
+**Dokument-ID:** [FRAMEWORK]-0040
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Überblick
 
 ### Systemlandschaft
@@ -161,7 +175,7 @@ Dieses Kapitel beschreibt die Systemlandschaft und Architektur auf hoher Ebene.
 **Genehmigungen:**
 - **DEV → TEST:** Automatisch
 - **TEST → STAGE:** QA-Team
-- **STAGE → PROD:** {{ meta.document.approver }} + Change Advisory Board
+- **STAGE → PROD:** {{ meta-handbook.approver }} + Change Advisory Board
 
 ## Schnittstellen
 
@@ -277,27 +291,18 @@ Dieses Kapitel beschreibt die Systemlandschaft und Architektur auf hoher Ebene.
 |---|---|---|---|
 | **System-Architekt** | Architektur-Design | [TODO: Name] | [TODO: E-Mail] |
 | **Technical Lead** | Technische Umsetzung | [TODO: Name] | [TODO: E-Mail] |
-| **Operations Manager** | Betrieb und Wartung | {{ meta.it_operations_manager.name }} | {{ meta.it_operations_manager.email }} |
-| **Security Officer** | Sicherheitsarchitektur | {{ meta.ciso.name }} | {{ meta.ciso.email }} |
+| **Operations Manager** | Betrieb und Wartung | {{ meta-organisation-roles.role_it_operations_manager.name }} | {{ meta-organisation-roles.role_it_operations_manager.email }} |
+| **Security Officer** | Sicherheitsarchitektur | {{ meta-organisation-roles.role_ciso.name }} | {{ meta-organisation-roles.role_ciso.email }} |
 
 ## Kontakte
 
 **Bei Fragen zur Systemarchitektur:**
 - **System-Architekt:** [TODO: Name und Kontakt]
-- **IT Operations Manager:** {{ meta.it_operations_manager.name }} ({{ meta.it_operations_manager.email }})
-- **CISO:** {{ meta.ciso.name }} ({{ meta.ciso.email }})
+- **IT Operations Manager:** {{ meta-organisation-roles.role_it_operations_manager.name }} ({{ meta-organisation-roles.role_it_operations_manager.email }})
+- **CISO:** {{ meta-organisation-roles.role_ciso.name }} ({{ meta-organisation-roles.role_ciso.email }})
 
----
+**Dokumentverantwortlicher:** {{ meta-handbook.owner }}  
+**Genehmigt durch:** {{ meta-handbook.approver }}  
+**Version:** {{ meta-handbook.revision }}  
+**Organisation:** {{ meta-organisation.name }}
 
-**Dokumentverantwortlicher:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Organisation:** {{ meta.organization.name }}
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

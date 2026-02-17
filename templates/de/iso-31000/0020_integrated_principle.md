@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-31000-0020
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Prinzip 1: Integriert
+
+**Dokument-ID:** [FRAMEWORK]-0020
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -24,7 +36,7 @@ Risikomanagement ist kein eigenständiger Prozess, sondern Teil der Zwecke, Gove
 - Risikomanagement ist Teil der Entscheidungsfindung
 - Risikomanagement berücksichtigt externe und interne Kontexte
 
-## Umsetzung in {{ meta.organization }}
+## Umsetzung in {{ meta-organisation.name }}
 
 ### Integration in Geschäftsprozesse
 
@@ -59,18 +71,4 @@ Risikomanagement ist kein eigenständiger Prozess, sondern Teil der Zwecke, Gove
 - Mitarbeiter-Awareness für Risikomanagement
 - Qualität der Risikoidentifikation in Prozessen
 - Effektivität der Risikominderungsmaßnahmen
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |
-
-<!-- 
-Autor-Hinweise: 
-- Dokumentieren Sie konkrete Beispiele der Integration in Ihrer Organisation
-- Beschreiben Sie Schulungsmaßnahmen zur Förderung des integrierten Ansatzes
--->
 

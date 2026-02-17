@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0100
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Deployment Frequency Overview
+
+**Document-ID:** [FRAMEWORK]-0100
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -31,10 +42,10 @@ Deployment Frequency measures how often an organization successfully deploys cod
 
 ### Organization Information
 
-- **Organization**: {{ source.organization_name }}
-- **Responsible**: {{ source.deployment_frequency_owner }}
-- **Measurement Period**: {{ source.deployment_frequency_measurement_period }}
-- **Current Frequency**: {{ source.current_deployment_frequency }}
+- **Organization**: [TODO]
+- **Responsible**: [TODO]
+- **Measurement Period**: [TODO]
+- **Current Frequency**: [TODO]
 
 ## Performance Levels
 
@@ -109,10 +120,10 @@ Characteristics:
 
 ### Data Sources
 
-1. **CI/CD Systems**: {{ source.cicd_system }}
-2. **Deployment Tools**: {{ source.deployment_tools }}
-3. **Monitoring Systems**: {{ source.monitoring_systems }}
-4. **Version Control**: {{ source.version_control_system }}
+1. **CI/CD Systems**: [TODO]
+2. **Deployment Tools**: [TODO]
+3. **Monitoring Systems**: [TODO]
+4. **Version Control**: [TODO]
 
 ### Measurement Approach
 
@@ -203,13 +214,5 @@ Deployment Frequency = Number of successful deployments / Time period
 6. **Share successes**: Celebrate wins
 
 <!-- Note: Deployment Frequency is a means, not an end in itself -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

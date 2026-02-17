@@ -1,11 +1,16 @@
 # Threats (Bedrohungen)
 
-**Dokument-ID:** 0210  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0210
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -92,8 +97,6 @@ Referenz: ISO/IEC 15408-1:2022, Abschnitt 8.3.1 (Threats)
 - [TODO: T1078 - Valid Accounts]
 - [TODO: T1552 - Unsecured Credentials]
 
----
-
 ### T.EAVESDROPPING
 **Bedrohungs-ID:** T.EAVESDROPPING  
 **Kategorie:** Confidentiality  
@@ -124,8 +127,6 @@ Referenz: ISO/IEC 15408-1:2022, Abschnitt 8.3.1 (Threats)
 
 **Wahrscheinlichkeit:** [TODO: High/Medium/Low]  
 **Risikobewertung:** [TODO: High/Medium/Low]
-
----
 
 ### T.DATA_LEAKAGE
 **Bedrohungs-ID:** T.DATA_LEAKAGE  
@@ -173,8 +174,6 @@ Referenz: ISO/IEC 15408-1:2022, Abschnitt 8.3.1 (Threats)
 **Wahrscheinlichkeit:** [TODO: High/Medium/Low]  
 **Risikobewertung:** [TODO: High/Medium/Low]
 
----
-
 ### T.CODE_INJECTION
 **Bedrohungs-ID:** T.CODE_INJECTION  
 **Kategorie:** Integrity  
@@ -217,8 +216,6 @@ Referenz: ISO/IEC 15408-1:2022, Abschnitt 8.3.1 (Threats)
 
 **Wahrscheinlichkeit:** [TODO: High/Medium/Low]  
 **Risikobewertung:** [TODO: High/Medium/Low]
-
----
 
 ### T.RESOURCE_EXHAUSTION
 **Bedrohungs-ID:** T.RESOURCE_EXHAUSTION  
@@ -263,8 +260,6 @@ Referenz: ISO/IEC 15408-1:2022, Abschnitt 8.3.1 (Threats)
 **Wahrscheinlichkeit:** [TODO: High/Medium/Low]  
 **Risikobewertung:** [TODO: High/Medium/Low]
 
----
-
 ### T.CREDENTIAL_THEFT
 **Bedrohungs-ID:** T.CREDENTIAL_THEFT  
 **Kategorie:** Authentication  
@@ -308,8 +303,6 @@ Referenz: ISO/IEC 15408-1:2022, Abschnitt 8.3.1 (Threats)
 **Wahrscheinlichkeit:** [TODO: High/Medium/Low]  
 **Risikobewertung:** [TODO: High/Medium/Low]
 
----
-
 ### T.UNAUTHORIZED_FUNCTION_ACCESS
 **Bedrohungs-ID:** T.UNAUTHORIZED_FUNCTION_ACCESS  
 **Kategorie:** Authorization  
@@ -352,8 +345,6 @@ Referenz: ISO/IEC 15408-1:2022, Abschnitt 8.3.1 (Threats)
 
 **Wahrscheinlichkeit:** [TODO: High/Medium/Low]  
 **Risikobewertung:** [TODO: High/Medium/Low]
-
----
 
 ### T.LOG_TAMPERING
 **Bedrohungs-ID:** T.LOG_TAMPERING  
@@ -441,8 +432,6 @@ Referenz: ISO/IEC 15408-1:2022, Abschnitt 8.3.1 (Threats)
 | [TODO: T.001] | [TODO: TA.001, TA.002] | [TODO: High] |
 | [TODO: T.002] | [TODO: TA.003] | [TODO: Medium] |
 
----
-
 **Nächste Schritte:**
 1. Vervollständige alle [TODO]-Platzhalter mit TOE-spezifischen Bedrohungen
 2. Führe vollständige Bedrohungsanalyse durch
@@ -451,10 +440,3 @@ Referenz: ISO/IEC 15408-1:2022, Abschnitt 8.3.1 (Threats)
 5. Dokumentiere Angriffsketten
 6. Überprüfe Konsistenz mit Assets (Template 0200) und Security Objectives (Template 0300)
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

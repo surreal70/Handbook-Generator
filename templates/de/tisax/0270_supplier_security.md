@@ -1,17 +1,28 @@
----
+
 Document-ID: tisax-0400
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Lieferantensicherheit
 
+**Dokument-ID:** [FRAMEWORK]-0270
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt die Sicherheitsanforderungen für Lieferanten bei {{ source.organization_name }}.
+Dieses Dokument beschreibt die Sicherheitsanforderungen für Lieferanten bei [TODO].
 
 ## Lieferantenbewertung
 
@@ -37,23 +48,14 @@ Dieses Dokument beschreibt die Sicherheitsanforderungen für Lieferanten bei {{ 
 
 ### TISAX-Anforderungen
 Lieferanten mit Zugriff auf vertrauliche Informationen müssen TISAX-zertifiziert sein:
-- Assessment Level: {{ source.supplier_tisax_level }}
+- Assessment Level: [TODO]
 
 ## Lieferantenregister
 
 | Lieferant | Dienstleistung | Risikostufe | TISAX-Status |
 |-----------|----------------|-------------|--------------|
-| {{ source.supplier_1 }} | {{ source.supplier_1_service }} | {{ source.supplier_1_risk }} | {{ source.supplier_1_tisax }} |
-| {{ source.supplier_2 }} | {{ source.supplier_2_service }} | {{ source.supplier_2_risk }} | {{ source.supplier_2_tisax }} |
+| [TODO] | [TODO] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [TODO] | [TODO] |
 
 <!-- Hinweis: Pflegen Sie das Lieferantenregister -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

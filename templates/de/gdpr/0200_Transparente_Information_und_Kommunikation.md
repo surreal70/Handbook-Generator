@@ -1,11 +1,16 @@
 # Transparente Information und Kommunikation
 
-**Dokument-ID:** 0200  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0200
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -23,7 +28,7 @@ Referenz: DSGVO Art. 12 (Transparente Information, Kommunikation und Modalitäte
 
 ## Zweck
 
-Dieses Dokument beschreibt die Umsetzung der Anforderungen an transparente Information und Kommunikation in der {{ meta.organization }}. Betroffene Personen müssen ihre Rechte einfach und verständlich ausüben können.
+Dieses Dokument beschreibt die Umsetzung der Anforderungen an transparente Information und Kommunikation in der {{ meta-organisation.name }}. Betroffene Personen müssen ihre Rechte einfach und verständlich ausüben können.
 
 ## Grundsatz gemäß Art. 12 DSGVO
 
@@ -242,8 +247,6 @@ Der Verantwortliche muss:
 | Fehlende Identifikation | Keine Prüfung der Identität | Identifikationsprozess etablieren |
 | Kostenpflichtige Auskunft | Gebühr ohne Begründung | Grundsatz der Unentgeltlichkeit beachten |
 
----
-
 **Nächste Schritte:**
 1. Etablieren Sie Kommunikationskanäle für Betroffenenanfragen
 2. Implementieren Sie Bearbeitungsprozesse mit Fristenkontrolle
@@ -251,10 +254,3 @@ Der Verantwortliche muss:
 4. Schulen Sie Mitarbeiter zu Betroffenenrechten
 5. Dokumentieren Sie alle Anfragen im Anfragenregister
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

@@ -1,13 +1,16 @@
 # Einrichtungszugangskontrollen
 
-**Dokument-ID:** HIPAA-0300  
-**Organisation:** {{ meta.organization.name }}  
-**Verantwortlich:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Entwurf / In Prüfung / Genehmigt  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** HIPAA-0300
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,7 +28,7 @@ Erforderlicher (R) Standard mit adressierbaren (A) Implementierungsspezifikation
 
 ## 1. Zweck
 
-Dieses Dokument beschreibt die Einrichtungszugangskontrollen für {{ meta.organization.name }}, um den physischen Zugang zu elektronischen Informationssystemen und den Einrichtungen, in denen sie untergebracht sind, zu begrenzen und gleichzeitig ordnungsgemäß autorisierten Zugang zu ermöglichen.
+Dieses Dokument beschreibt die Einrichtungszugangskontrollen für {{ meta-organisation.name }}, um den physischen Zugang zu elektronischen Informationssystemen und den Einrichtungen, in denen sie untergebracht sind, zu begrenzen und gleichzeitig ordnungsgemäß autorisierten Zugang zu ermöglichen.
 
 ### 1.1 HIPAA-Anforderung
 
@@ -88,7 +91,7 @@ Dieses Dokument beschreibt die Einrichtungszugangskontrollen für {{ meta.organi
 **Notfallkontakte:**
 | Rolle | Name | Telefon (24/7) | Backup |
 |-------|------|----------------|--------|
-| Security Officer | {{ meta.roles.security_officer.name }} | [TODO: Telefon] | [TODO: Backup-Name/Telefon] |
+| Security Officer | [TODO] | [TODO: Telefon] | [TODO: Backup-Name/Telefon] |
 | Facility Manager | [TODO: Name] | [TODO: Telefon] | [TODO: Backup] |
 | IT Manager | [TODO: Name] | [TODO: Telefon] | [TODO: Backup] |
 
@@ -172,7 +175,6 @@ Dieses Dokument beschreibt die Einrichtungszugangskontrollen für {{ meta.organi
 | [TODO: Haupteingang] | [TODO: 2] | Kontinuierlich | [TODO: 90 Tage] | Zugangsüberwachung |
 | [TODO: Serverraum] | [TODO: 1] | Kontinuierlich | [TODO: 90 Tage] | Sicherheitsüberwachung |
 | [TODO: Parkplatz] | [TODO: 4] | Bewegung | [TODO: 30 Tage] | Perimetersicherheit |
-
 
 ## 5. Zugriffskontroll- und Validierungsverfahren
 
@@ -334,20 +336,11 @@ Dieses Dokument beschreibt die Einrichtungszugangskontrollen für {{ meta.organi
 
 **Speicherort:** [TODO: Dokumentenmanagementsystem-Standort]
 
----
-
 **Dokumentenhistorie:**
 
 | Version | Datum | Autor | Änderungen |
 |---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Ersterstellung |
+| 0.1 | {{ meta-handbook.modifydate }} | {{ meta-handbook.author }} | Ersterstellung |
 
 <!-- Ende des Templates -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

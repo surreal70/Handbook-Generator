@@ -1,11 +1,16 @@
 # Security Problem Definition
 
-**Dokument-ID:** 0200  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0200
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -145,8 +150,6 @@ Dieses Dokument definiert das Sicherheitsproblem, das der TOE lösen soll. Es be
 
 **Risikobewertung:** [TODO: High/Medium/Low]
 
----
-
 #### T.002: [TODO: Bedrohungsname]
 [TODO: Wiederhole die Struktur für jede Bedrohung]
 
@@ -187,8 +190,6 @@ Dieses Dokument definiert das Sicherheitsproblem, das der TOE lösen soll. Es be
 **Compliance-Anforderungen:**
 [TODO: Externe Standards oder Vorschriften, die diese Richtlinie erfüllt]
 
----
-
 #### P.002: [TODO: Richtlinienname]
 [TODO: Wiederhole die Struktur für jede OSP]
 
@@ -227,8 +228,6 @@ Dieses Dokument definiert das Sicherheitsproblem, das der TOE lösen soll. Es be
 
 **Verifikation:**
 [TODO: Wie kann überprüft werden, dass diese Annahme erfüllt ist?]
-
----
 
 #### A.002: [TODO: Annahmename]
 [TODO: Wiederhole die Struktur für jede Annahme]
@@ -298,8 +297,6 @@ Dieses Dokument definiert das Sicherheitsproblem, das der TOE lösen soll. Es be
 | [TODO: A.001] | [TODO: T.001] | [TODO: P.001] | [TODO: A.001] | [TODO: TA.001] |
 | [TODO: A.002] | [TODO: T.002] | [TODO: P.002] | [TODO: A.002] | [TODO: TA.002] |
 
----
-
 **Nächste Schritte:**
 1. Vervollständige alle [TODO]-Platzhalter mit TOE-spezifischen Informationen
 2. Führe eine vollständige Bedrohungsanalyse durch
@@ -308,10 +305,3 @@ Dieses Dokument definiert das Sicherheitsproblem, das der TOE lösen soll. Es be
 5. Erstelle Bedrohungsmodell und Angriffsszenarien
 6. Überprüfe die Konsistenz mit Security Objectives (Template 0300)
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

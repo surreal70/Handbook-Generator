@@ -1,17 +1,28 @@
----
+
 Document-ID: coso-0440
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Kontinuierliche Verbesserung
 
+**Dokument-ID:** [FRAMEWORK]-0440
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt den kontinuierlichen Verbesserungsprozess für das interne Kontrollsystem bei {{ source.organization_name }}.
+Dieses Dokument beschreibt den kontinuierlichen Verbesserungsprozess für das interne Kontrollsystem bei [TODO].
 
 ## Geltungsbereich
 
@@ -24,219 +35,219 @@ Dieses Dokument beschreibt den kontinuierlichen Verbesserungsprozess für das in
 
 ### Grundprinzipien
 
-**Kontinuität**: {{ source.continuity_principle }}
-**Proaktivität**: {{ source.proactivity_principle }}
-**Datenbasierte Entscheidungen**: {{ source.data_driven_decisions }}
-**Mitarbeitereinbindung**: {{ source.employee_involvement }}
+**Kontinuität**: [TODO]
+**Proaktivität**: [TODO]
+**Datenbasierte Entscheidungen**: [TODO]
+**Mitarbeitereinbindung**: [TODO]
 
 ### Verbesserungsziele
 
-{{ source.improvement_objectives }}
+[TODO]
 
 ## Verbesserungsprozess
 
 ### PDCA-Zyklus
 
-**Plan (Planen)**: {{ source.plan_phase }}
-**Do (Umsetzen)**: {{ source.do_phase }}
-**Check (Überprüfen)**: {{ source.check_phase }}
-**Act (Handeln)**: {{ source.act_phase }}
+**Plan (Planen)**: [TODO]
+**Do (Umsetzen)**: [TODO]
+**Check (Überprüfen)**: [TODO]
+**Act (Handeln)**: [TODO]
 
 ### Verbesserungsschritte
 
-1. **Identifikation von Verbesserungsmöglichkeiten**: {{ source.opportunity_identification }}
-2. **Priorisierung**: {{ source.prioritization }}
-3. **Planung**: {{ source.improvement_planning }}
-4. **Implementierung**: {{ source.implementation }}
-5. **Überwachung**: {{ source.monitoring }}
-6. **Bewertung**: {{ source.evaluation }}
-7. **Standardisierung**: {{ source.standardization }}
+1. **Identifikation von Verbesserungsmöglichkeiten**: [TODO]
+2. **Priorisierung**: [TODO]
+3. **Planung**: [TODO]
+4. **Implementierung**: [TODO]
+5. **Überwachung**: [TODO]
+6. **Bewertung**: [TODO]
+7. **Standardisierung**: [TODO]
 
 ## Quellen für Verbesserungen
 
 ### Interne Quellen
 
-**Überwachungsergebnisse**: {{ source.monitoring_results }}
-**Revisionsfeststellungen**: {{ source.audit_findings }}
-**Mängelmeldungen**: {{ source.deficiency_reports }}
-**Mitarbeitervorschläge**: {{ source.employee_suggestions }}
-**Prozessanalysen**: {{ source.process_analyses }}
+**Überwachungsergebnisse**: [TODO]
+**Revisionsfeststellungen**: [TODO]
+**Mängelmeldungen**: [TODO]
+**Mitarbeitervorschläge**: [TODO]
+**Prozessanalysen**: [TODO]
 
 ### Externe Quellen
 
-**Externe Prüfungen**: {{ source.external_audits }}
-**Regulatorische Anforderungen**: {{ source.regulatory_requirements }}
-**Branchenstandards**: {{ source.industry_standards }}
-**Benchmarking**: {{ source.benchmarking }}
-**Best Practices**: {{ source.external_best_practices }}
+**Externe Prüfungen**: [TODO]
+**Regulatorische Anforderungen**: [TODO]
+**Branchenstandards**: [TODO]
+**Benchmarking**: [TODO]
+**Best Practices**: [TODO]
 
 ## Verbesserungsinitiativen
 
 ### Prozessverbesserungen
 
-**Prozessoptimierung**: {{ source.process_optimization }}
-**Automatisierung**: {{ source.automation }}
-**Standardisierung**: {{ source.process_standardization }}
-**Vereinfachung**: {{ source.simplification }}
+**Prozessoptimierung**: [TODO]
+**Automatisierung**: [TODO]
+**Standardisierung**: [TODO]
+**Vereinfachung**: [TODO]
 
 ### Kontrollverbesserungen
 
-**Kontrolldesign**: {{ source.control_design_improvement }}
-**Kontrollwirksamkeit**: {{ source.control_effectiveness_improvement }}
-**Kontrolleffizienz**: {{ source.control_efficiency_improvement }}
+**Kontrolldesign**: [TODO]
+**Kontrollwirksamkeit**: [TODO]
+**Kontrolleffizienz**: [TODO]
 
 ### Technologieverbesserungen
 
-**Systemupgrades**: {{ source.system_upgrades }}
-**Neue Technologien**: {{ source.new_technologies }}
-**Datenanalyse**: {{ source.data_analytics_improvement }}
+**Systemupgrades**: [TODO]
+**Neue Technologien**: [TODO]
+**Datenanalyse**: [TODO]
 
 ## Lessons Learned
 
 ### Lessons Learned Prozess
 
-**Erfassung**: {{ source.lessons_capture }}
-**Dokumentation**: {{ source.lessons_documentation }}
-**Analyse**: {{ source.lessons_analysis }}
-**Verbreitung**: {{ source.lessons_dissemination }}
-**Anwendung**: {{ source.lessons_application }}
+**Erfassung**: [TODO]
+**Dokumentation**: [TODO]
+**Analyse**: [TODO]
+**Verbreitung**: [TODO]
+**Anwendung**: [TODO]
 
 ### Lessons Learned Datenbank
 
-{{ source.lessons_learned_database }}
+[TODO]
 
 ### Beispiele
 
-{{ source.lessons_learned_examples }}
+[TODO]
 
 ## Best Practices
 
 ### Identifikation von Best Practices
 
-**Interne Best Practices**: {{ source.internal_best_practices }}
-**Externe Best Practices**: {{ source.external_best_practices_identification }}
+**Interne Best Practices**: [TODO]
+**Externe Best Practices**: [TODO]
 
 ### Best Practice Sharing
 
-**Wissensaustausch**: {{ source.knowledge_sharing }}
-**Communities of Practice**: {{ source.communities_of_practice }}
-**Schulungen**: {{ source.training_programs }}
+**Wissensaustausch**: [TODO]
+**Communities of Practice**: [TODO]
+**Schulungen**: [TODO]
 
 ### Best Practice Implementierung
 
-{{ source.best_practice_implementation }}
+[TODO]
 
 ## Innovationen
 
 ### Innovationskultur
 
-{{ source.innovation_culture }}
+[TODO]
 
 ### Innovationsprozess
 
-**Ideengenerierung**: {{ source.idea_generation }}
-**Bewertung**: {{ source.idea_evaluation }}
-**Pilotierung**: {{ source.piloting }}
-**Skalierung**: {{ source.scaling }}
+**Ideengenerierung**: [TODO]
+**Bewertung**: [TODO]
+**Pilotierung**: [TODO]
+**Skalierung**: [TODO]
 
 ### Technologische Innovationen
 
-**Künstliche Intelligenz**: {{ source.ai_innovations }}
-**Robotic Process Automation (RPA)**: {{ source.rpa }}
-**Blockchain**: {{ source.blockchain }}
-**Advanced Analytics**: {{ source.advanced_analytics }}
+**Künstliche Intelligenz**: [TODO]
+**Robotic Process Automation (RPA)**: [TODO]
+**Blockchain**: [TODO]
+**Advanced Analytics**: [TODO]
 
 ## Verbesserungsmetriken
 
 ### Key Performance Indicators (KPIs)
 
-{{ source.improvement_kpis }}
+[TODO]
 
 ### Erfolgsmessung
 
-**Quantitative Metriken**: {{ source.quantitative_metrics }}
-**Qualitative Metriken**: {{ source.qualitative_metrics }}
+**Quantitative Metriken**: [TODO]
+**Qualitative Metriken**: [TODO]
 
 ### Benchmarking
 
-**Internes Benchmarking**: {{ source.internal_benchmarking }}
-**Externes Benchmarking**: {{ source.external_benchmarking }}
+**Internes Benchmarking**: [TODO]
+**Externes Benchmarking**: [TODO]
 
 ## Verbesserungsprojekte
 
 ### Projektmanagement
 
-**Projektplanung**: {{ source.project_planning }}
-**Projektdurchführung**: {{ source.project_execution }}
-**Projektüberwachung**: {{ source.project_monitoring }}
-**Projektabschluss**: {{ source.project_closure }}
+**Projektplanung**: [TODO]
+**Projektdurchführung**: [TODO]
+**Projektüberwachung**: [TODO]
+**Projektabschluss**: [TODO]
 
 ### Priorisierung von Projekten
 
-**Priorisierungskriterien**: {{ source.prioritization_criteria }}
-**Ressourcenallokation**: {{ source.resource_allocation }}
+**Priorisierungskriterien**: [TODO]
+**Ressourcenallokation**: [TODO]
 
 ## Change Management
 
 ### Change Management Prozess
 
-**Änderungsantrag**: {{ source.change_request }}
-**Bewertung**: {{ source.change_assessment }}
-**Genehmigung**: {{ source.change_approval }}
-**Implementierung**: {{ source.change_implementation }}
-**Kommunikation**: {{ source.change_communication }}
+**Änderungsantrag**: [TODO]
+**Bewertung**: [TODO]
+**Genehmigung**: [TODO]
+**Implementierung**: [TODO]
+**Kommunikation**: [TODO]
 
 ### Widerstandsmanagement
 
-{{ source.resistance_management }}
+[TODO]
 
 ## Mitarbeitereinbindung
 
 ### Vorschlagswesen
 
-**Vorschlagseinreichung**: {{ source.suggestion_submission }}
-**Bewertung**: {{ source.suggestion_evaluation }}
-**Belohnung**: {{ source.rewards }}
+**Vorschlagseinreichung**: [TODO]
+**Bewertung**: [TODO]
+**Belohnung**: [TODO]
 
 ### Kaizen-Ansatz
 
-{{ source.kaizen_approach }}
+[TODO]
 
 ### Verbesserungsteams
 
-{{ source.improvement_teams }}
+[TODO]
 
 ## Dokumentation und Wissensmanagement
 
 ### Verbesserungsdokumentation
 
-**Verbesserungsregister**: {{ source.improvement_register }}
-**Projektdokumentation**: {{ source.project_documentation }}
-**Ergebnisdokumentation**: {{ source.results_documentation }}
+**Verbesserungsregister**: [TODO]
+**Projektdokumentation**: [TODO]
+**Ergebnisdokumentation**: [TODO]
 
 ### Wissensmanagement
 
-**Wissensdatenbank**: {{ source.knowledge_base }}
-**Dokumentenmanagement**: {{ source.document_management }}
+**Wissensdatenbank**: [TODO]
+**Dokumentenmanagement**: [TODO]
 
 ## Berichterstattung
 
 ### Verbesserungsberichte
 
-**An Management**: {{ source.management_reporting }}
-**An Board**: {{ source.board_reporting }}
-**An Mitarbeiter**: {{ source.employee_reporting }}
+**An Management**: [TODO]
+**An Board**: [TODO]
+**An Mitarbeiter**: [TODO]
 
 ### Erfolgsgeschichten
 
-{{ source.success_stories }}
+[TODO]
 
 ## Rollen und Verantwortlichkeiten
 
-**Geschäftsführung**: {{ source.management_improvement_responsibilities }}
-**Verbesserungsbeauftragter**: {{ source.improvement_officer_responsibilities }}
-**Prozesseigentümer**: {{ source.process_owner_improvement_responsibilities }}
-**Alle Mitarbeiter**: {{ source.employee_improvement_responsibilities }}
+**Geschäftsführung**: [TODO]
+**Verbesserungsbeauftragter**: [TODO]
+**Prozesseigentümer**: [TODO]
+**Alle Mitarbeiter**: [TODO]
 
 ## Referenzen
 
@@ -248,12 +259,3 @@ Dieses Dokument beschreibt den kontinuierlichen Verbesserungsprozess für das in
 - Lean Management Prinzipien
 - Six Sigma Methodik
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

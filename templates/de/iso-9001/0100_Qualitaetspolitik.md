@@ -1,11 +1,16 @@
 # Qualitätspolitik
 
-**Dokument-ID:** 0100  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0100
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -29,7 +34,7 @@ Referenz: ISO 9001:2015, Kapitel 5.2
 
 ## Zweck
 
-Dieses Dokument legt die Qualitätspolitik für {{ meta.organization }} gemäß ISO 9001:2015 Kapitel 5.2 fest. Die Qualitätspolitik drückt die Verpflichtung der obersten Leitung zur Qualität aus und bietet den Rahmen für die Festlegung und Überprüfung von Qualitätszielen.
+Dieses Dokument legt die Qualitätspolitik für {{ meta-organisation.name }} gemäß ISO 9001:2015 Kapitel 5.2 fest. Die Qualitätspolitik drückt die Verpflichtung der obersten Leitung zur Qualität aus und bietet den Rahmen für die Festlegung und Überprüfung von Qualitätszielen.
 
 ## Qualitätspolitik-Erklärung
 
@@ -37,7 +42,7 @@ Dieses Dokument legt die Qualitätspolitik für {{ meta.organization }} gemäß 
 
 **Beispiel:**
 
-"Bei {{ meta.organization }} verpflichten wir uns zu:
+"Bei {{ meta-organisation.name }} verpflichten wir uns zu:
 - Lieferung von Produkten und Dienstleistungen, die durchgängig Kundenanforderungen und anwendbare regulatorische Anforderungen erfüllen
 - Steigerung der Kundenzufriedenheit durch wirksame Anwendung unseres Qualitätsmanagementsystems
 - Kontinuierliche Verbesserung der Wirksamkeit unseres Qualitätsmanagementsystems
@@ -150,8 +155,6 @@ Die Qualitätspolitik unterstützt:
 - **Versionskontrolle:** Gepflegt gemäß Lenkung dokumentierter Information (Kapitel 7.5)
 - **Verteilung:** [TODO: Verteilungsmethode beschreiben]
 
----
-
 **Nächste Schritte:**
 1. Entwickle Qualitätspolitik-Erklärung mit oberster Leitung
 2. Stelle Ausrichtung an organisatorischem Kontext und Strategie sicher
@@ -160,10 +163,3 @@ Die Qualitätspolitik unterstützt:
 5. Lege Qualitätsziele basierend auf Politikrahmen fest
 6. Plane regelmäßige Politiküberprüfungen
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

@@ -1,17 +1,28 @@
----
+
 Document-ID: tisax-0130
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Medienhandhabung
 
+**Dokument-ID:** [FRAMEWORK]-0090
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt die sichere Handhabung von Speichermedien bei {{ source.organization_name }}.
+Dieses Dokument beschreibt die sichere Handhabung von Speichermedien bei [TODO].
 
 ## Geltungsbereich
 
@@ -45,17 +56,8 @@ Dieses Dokument gilt für alle physischen und elektronischen Speichermedien.
 
 ## Verantwortlichkeiten
 
-**Media Manager**: {{ source.media_manager }}
-**Entsorgungsbeauftragter**: {{ source.disposal_officer }}
+**Media Manager**: [TODO]
+**Entsorgungsbeauftragter**: [TODO]
 
 <!-- Hinweis: Passen Sie die Richtlinien an Ihre Medientypen an -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

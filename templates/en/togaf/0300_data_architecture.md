@@ -1,17 +1,28 @@
----
+
 Document-ID: togaf-0300
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Data Architecture
 
+**Document-ID:** [FRAMEWORK]-0300
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document describes the data architecture for {{ source.organization_name }}, including data entities, relationships, lifecycle management, and governance.
+This document describes the data architecture for [TODO], including data entities, relationships, lifecycle management, and governance.
 
 ## Scope
 
@@ -25,46 +36,37 @@ This document describes the data architecture for {{ source.organization_name }}
 
 | Entity | Description | Owner | Classification |
 |--------|-------------|-------|----------------|
-| {{ source.entity_1 }} | {{ source.entity_1_desc }} | {{ source.entity_1_owner }} | {{ source.entity_1_class }} |
-| {{ source.entity_2 }} | {{ source.entity_2_desc }} | {{ source.entity_2_owner }} | {{ source.entity_2_class }} |
-| {{ source.entity_3 }} | {{ source.entity_3_desc }} | {{ source.entity_3_owner }} | {{ source.entity_3_class }} |
+| [TODO] | [TODO] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## Data Relationships
 
-{{ source.data_relationships }}
+[TODO]
 
 ## Data Lifecycle
 
 | Phase | Activities | Responsible |
 |-------|------------|-------------|
-| Creation | {{ source.creation_activities }} | {{ source.creation_responsible }} |
-| Storage | {{ source.storage_activities }} | {{ source.storage_responsible }} |
-| Usage | {{ source.usage_activities }} | {{ source.usage_responsible }} |
-| Archival | {{ source.archival_activities }} | {{ source.archival_responsible }} |
-| Deletion | {{ source.deletion_activities }} | {{ source.deletion_responsible }} |
+| Creation | [TODO] | [TODO] |
+| Storage | [TODO] | [TODO] |
+| Usage | [TODO] | [TODO] |
+| Archival | [TODO] | [TODO] |
+| Deletion | [TODO] | [TODO] |
 
 ## Data Governance
 
-**Data Governance Framework**: {{ source.data_governance_framework }}
+**Data Governance Framework**: [TODO]
 
-**Data Stewards**: {{ source.data_stewards }}
+**Data Stewards**: [TODO]
 
 ## Data Quality
 
 | Dimension | Target | Current | Improvement Plan |
 |-----------|--------|---------|------------------|
-| Accuracy | {{ source.accuracy_target }} | {{ source.accuracy_current }} | {{ source.accuracy_plan }} |
-| Completeness | {{ source.completeness_target }} | {{ source.completeness_current }} | {{ source.completeness_plan }} |
-| Timeliness | {{ source.timeliness_target }} | {{ source.timeliness_current }} | {{ source.timeliness_plan }} |
+| Accuracy | [TODO] | [TODO] | [TODO] |
+| Completeness | [TODO] | [TODO] | [TODO] |
+| Timeliness | [TODO] | [TODO] | [TODO] |
 
 <!-- Author notes: Data architecture should balance flexibility and control -->
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{meta.document.last_updated}} | {{ meta.defaults.author }} | Initial creation |
-
-<-  ( marked all subtasks complete End of template -->

@@ -1,5 +1,19 @@
 # CIS Controls v8 Framework Mapping
 
+**Document-ID:** [FRAMEWORK]-9999
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Overview
 
 This document maps the CIS Controls v8 Hardening Templates to the CIS Controls v8 framework components.
@@ -84,21 +98,6 @@ The templates are aligned with the following CIS Benchmarks:
 - CIS Controls v8: https://www.cisecurity.org/controls/v8
 - CIS Benchmarks: https://www.cisecurity.org/cis-benchmarks/
 
----
-
 **Version:** 1.0.0  
 **Date:** 2026-02-10
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
-
-## Version History
-
-| Version | Date | Changes |
-|---------|------|---------|
-| 0.1 | {{meta.document.last_updated}} | Initial creation |

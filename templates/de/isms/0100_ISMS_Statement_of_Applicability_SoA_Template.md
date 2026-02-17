@@ -1,5 +1,19 @@
 # Statement of Applicability (SoA) – Template
 
+**Dokument-ID:** 0100
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 The Statement of Applicability (SoA) is a mandatory ISO 27001 document that
@@ -10,23 +24,11 @@ the organization has considered all controls and made informed decisions.
 ISO 27001:2022 Reference: Clause 6.1.3 d) - Statement of Applicability
 -->
 
-**Dokument-ID:** 0100  
-**Dokumenttyp:** ISMS-Nachweis/Template  
-**Standard-Referenz:** ISO/IEC 27001:2022 Clause 6.1.3 d), Annex A  
-**Owner:** {{ meta.ciso.name }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
-
----
-
 ## 1. Zweck und Geltungsbereich
 
 ### 1.1 Zweck
 
-Das Statement of Applicability (SoA) der **{{ meta.organization.name }}** dokumentiert:
+Das Statement of Applicability (SoA) der **{{ meta-organisation.name }}** dokumentiert:
 - Welche Annex A Controls auf das ISMS anwendbar sind
 - Begründung für die Auswahl oder Ausschluss von Controls
 - Implementierungsstatus jedes Controls
@@ -272,27 +274,16 @@ Für eine vollständige Übersicht aller 93 Annex A Controls siehe:
 - **ISO/IEC 27001:2022/Amd 1:2024** - Amendment 1 (Annex A updates)
 - **ISO/IEC 27002:2022** - Information security controls (detailed guidance)
 
----
-
 ## Änderungshistorie
 
 | Version | Datum | Autor | Beschreibung | Genehmigt durch |
 |---------|-------|-------|--------------|-----------------|
-| 1.0 | {{ meta.document.date }} | {{ meta.ciso.name }} | Initiale Version | {{ meta.management.ceo }} |
-
----
+| 1.0 | {{ meta-handbook.modifydate }} | {{ meta.ciso.name }} | Initiale Version | {{ meta.management.ceo }} |
 
 **Genehmigt durch:**  
 {{ meta.ciso.name }}, CISO  
 {{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+Datum: {{ meta-handbook.modifydate }}
 
-**Nächster Review:** {{ meta.document.next_review }} (Jährlich)
+**Nächster Review:** {{ meta-handbook.next_review }} (Jährlich)
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

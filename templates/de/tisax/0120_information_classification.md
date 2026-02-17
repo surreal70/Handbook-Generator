@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0120
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Informationsklassifizierung
+
+**Dokument-ID:** [FRAMEWORK]-0120
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -15,13 +26,13 @@ Dieses Dokument definiert das Klassifizierungsschema für Informationen und Asse
 
 ## Geltungsbereich
 
-Dieses Dokument gilt für alle Informationen und Assets von {{ source.organization_name }}, die klassifiziert werden müssen.
+Dieses Dokument gilt für alle Informationen und Assets von [TODO], die klassifiziert werden müssen.
 
 ## Klassifizierungsschema
 
 ### Vertraulichkeitsstufen
 
-{{ source.organization_name }} verwendet folgende Vertraulichkeitsstufen:
+[TODO] verwendet folgende Vertraulichkeitsstufen:
 
 #### Stufe 1: Öffentlich
 
@@ -337,7 +348,7 @@ Klassifizierungen werden überprüft:
 
 ### Qualitätssicherung
 
-{{ source.organization_name }} stellt sicher:
+[TODO] stellt sicher:
 - Konsistente Anwendung des Schemas
 - Angemessene Schutzmaßnahmen
 - Aktualität der Klassifizierungen
@@ -383,7 +394,7 @@ Alle Mitarbeiter werden geschult zu:
 
 ## Kennzahlen
 
-{{ source.organization_name }} misst:
+[TODO] misst:
 
 - Anteil klassifizierter Informationen (Ziel: 100%)
 - Korrektheit der Klassifizierung (Stichproben)
@@ -393,12 +404,3 @@ Alle Mitarbeiter werden geschult zu:
 
 <!-- Hinweis: Passen Sie das Klassifizierungsschema an Ihre Organisation an -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

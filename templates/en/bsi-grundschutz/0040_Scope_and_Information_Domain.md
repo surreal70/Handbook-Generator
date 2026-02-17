@@ -1,14 +1,16 @@
 # Scope and Information Domain (Boundaries)
 
-**Document ID:** 0040  
-**Document Type:** Foundation Document  
-**Reference Framework:** BSI IT-Grundschutz (BSI Standards 200-1/200-2/200-3)  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** {{ meta.document.status }}  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.document.last_updated }}  
-**Next Review:** {{ meta.document.next_review }}
+**Document-ID:** [FRAMEWORK]-0040
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -21,19 +23,19 @@ Reference: BSI Standard 200-2 (Scope Definition and Information Domain)
 
 ## 1. Purpose and Objectives
 
-This document defines the scope of the Information Security Management System (ISMS) of **{{ meta.organization.name }}** and delineates the information domain. The clear definition of scope is the foundation for all further IT-Grundschutz activities (structure analysis, protection needs assessment, modeling).
+This document defines the scope of the Information Security Management System (ISMS) of **{{ meta-organisation.name }}** and delineates the information domain. The clear definition of scope is the foundation for all further IT-Grundschutz activities (structure analysis, protection needs assessment, modeling).
 
 ## 2. Scope Definition
 
 ### 2.1 Organizational Units and Locations
 
-**Organization:** {{ meta.organization.name }}
+**Organization:** {{ meta-organisation.name }}
 
 **Locations in Scope:**
 
 | Location | Address | Type | Employees | In Scope |
 |---|---|---|---|---|
-| {{ meta.organization.primary_location }} | [TODO] | Main location | [TODO] | ✓ |
+| [TODO] | [TODO] | Main location | [TODO] | ✓ |
 | [TODO: Additional locations] | [TODO] | [TODO] | [TODO] | ✓/✗ |
 
 **Organizational Units in Scope:**
@@ -107,7 +109,7 @@ This document defines the scope of the Information Security Management System (I
 **The following elements are in scope of the ISMS:**
 
 1. **Infrastructure:**
-   - All servers and network components at location {{ meta.organization.primary_location }}
+   - All servers and network components at location [TODO]
    - [TODO: Additional infrastructure]
 
 2. **Applications:**
@@ -120,7 +122,7 @@ This document defines the scope of the Information Security Management System (I
    - [TODO: Additional data]
 
 4. **People:**
-   - All employees of {{ meta.organization.name }}
+   - All employees of {{ meta-organisation.name }}
    - External service providers with access to scope systems
    - [TODO: Additional groups]
 
@@ -223,7 +225,7 @@ The scope is regularly reviewed:
 - **Triggers:** New business processes, IT systems, locations, regulatory requirements
 - **Responsible:** ISO
 
-**Next Review:** {{ meta.document.next_review }}
+**Next Review:** {{ meta-handbook.next_review }}
 
 ## 7. Documentation and Evidence
 
@@ -239,22 +241,12 @@ The following documents and evidence are maintained for the scope:
 
 | Role | Name | Date | Approval |
 |---|---|---|---|
-| Executive Management | {{ meta.ceo.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| ISO | {{ meta.ciso.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| Executive Management | {{ meta.ceo.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| ISO | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **References:**
 - BSI Standard 200-1: Management Systems for Information Security (ISMS)
 - BSI Standard 200-2: IT-Grundschutz Methodology (Chapter 4: Scope Definition)
 - BSI IT-Grundschutz Compendium
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
 
 <!-- End of template -->

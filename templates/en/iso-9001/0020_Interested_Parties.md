@@ -1,11 +1,16 @@
 # Understanding the Needs and Expectations of Interested Parties
 
-**Document-ID:** 0020  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0020
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -32,7 +37,7 @@ This document identifies the interested parties relevant to the quality manageme
 ## Scope
 
 This analysis applies to:
-- **Organization:** {{ meta.organization }}
+- **Organization:** {{ meta-organisation.name }}
 - **QMS Scope:** [TODO: QMS scope]
 
 ## Identification of Interested Parties
@@ -221,8 +226,6 @@ This analysis forms the basis for:
 - **Appendix B:** Requirements Matrix
 - **Appendix C:** Communication Plan
 
----
-
 **Next Steps:**
 1. Identify all relevant interested parties
 2. Analyze their requirements and expectations
@@ -230,10 +233,3 @@ This analysis forms the basis for:
 4. Define monitoring and communication methods
 5. Review and update the analysis regularly
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

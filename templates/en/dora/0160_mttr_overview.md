@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0300
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Mean Time to Restore (MTTR) Overview
+
+**Document-ID:** [FRAMEWORK]-0160
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -26,9 +37,9 @@ MTTR measures the average time to restore service after an incident or outage.
 
 ### Organization Context
 
-- **Organization**: {{ source.organization_name }}
-- **Current MTTR**: {{ source.current_mttr }}
-- **Performance Level**: {{ source.mttr_level }}
+- **Organization**: [TODO]
+- **Current MTTR**: [TODO]
+- **Performance Level**: [TODO]
 
 ## Measurement Methodology
 
@@ -46,46 +57,38 @@ An incident is:
 
 ### Data Sources
 
-- **Incident Management**: {{ source.incident_management_system }}
-- **Monitoring**: {{ source.monitoring_system }}
-- **Alerting**: {{ source.alerting_system }}
+- **Incident Management**: [TODO]
+- **Monitoring**: [TODO]
+- **Alerting**: [TODO]
 
 ## Current Performance
 
 ### Overall Organization
 
-- **Median MTTR**: {{ source.median_mttr }}
-- **95th Percentile**: {{ source.p95_mttr }}
-- **Performance Level**: {{ source.mttr_performance_level }}
+- **Median MTTR**: [TODO]
+- **95th Percentile**: [TODO]
+- **Performance Level**: [TODO]
 
 ### By Service
 
 | Service | Median MTTR | Performance Level |
 |---------|-------------|-------------------|
-| {{ source.service_1_name }} | {{ source.service_1_mttr }} | {{ source.service_1_mttr_level }} |
-| {{ source.service_2_name }} | {{ source.service_2_mttr }} | {{ source.service_2_mttr_level }} |
-| {{ source.service_3_name }} | {{ source.service_3_mttr }} | {{ source.service_3_mttr_level }} |
+| [TODO] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [TODO] |
 
 ## Improvement Approaches
 
 ### Short-term
 
-1. {{ source.mttr_short_term_1 }}
-2. {{ source.mttr_short_term_2 }}
+1. [TODO]
+2. [TODO]
 
 ### Long-term
 
-1. {{ source.mttr_long_term_1 }}
-2. {{ source.mttr_long_term_2 }}
+1. [TODO]
+2. [TODO]
 
 <!-- Note: MTTR is indicator of resilience and recovery capability -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

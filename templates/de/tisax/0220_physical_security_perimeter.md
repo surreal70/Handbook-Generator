@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0220
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Physische Sicherheitsperimeter
+
+**Dokument-ID:** [FRAMEWORK]-0220
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -15,7 +26,7 @@ Dieses Dokument definiert die Anforderungen für physische Sicherheitsperimeter 
 
 ## Geltungsbereich
 
-Dieses Dokument gilt für alle Standorte und Einrichtungen von {{ source.organization_name }}.
+Dieses Dokument gilt für alle Standorte und Einrichtungen von [TODO].
 
 ## Sicherheitszonen
 
@@ -53,7 +64,7 @@ Dieses Dokument gilt für alle Standorte und Einrichtungen von {{ source.organiz
 - Regelmäßige Patrouillen
 
 **Maßnahmen:**
-- Zäune mit mindestens {{ source.fence_height }} Meter Höhe
+- Zäune mit mindestens [TODO] Meter Höhe
 - Automatische Tore mit Zutrittskontrolle
 - Bewegungsmelder
 - Alarmanlage
@@ -126,7 +137,7 @@ Dieses Dokument gilt für alle Standorte und Einrichtungen von {{ source.organiz
 
 **Anforderungen:**
 - Überwachung aller Zugangspunkte
-- Aufzeichnung für mindestens {{ source.video_retention_days }} Tage
+- Aufzeichnung für mindestens [TODO] Tage
 - Datenschutzkonforme Umsetzung
 - Regelmäßige Überprüfung
 
@@ -157,7 +168,7 @@ Dieses Dokument gilt für alle Standorte und Einrichtungen von {{ source.organiz
 - Besucherverwaltung
 
 **Verfügbarkeit:**
-- {{ source.security_service_hours }}
+- [TODO]
 - Notfallkontakt 24/7
 
 ### Protokollierung
@@ -193,18 +204,9 @@ Dieses Dokument adressiert:
 
 ## Kennzahlen
 
-{{ source.organization_name }} misst:
+[TODO] misst:
 - Anzahl Sicherheitsvorfälle
 - Anzahl unbefugter Zutrittsversuche
 - Durchschnittliche Reaktionszeit auf Alarme
 - Compliance-Rate bei Audits
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

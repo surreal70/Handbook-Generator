@@ -72,19 +72,19 @@ Die Templates sind nach Komponenten organisiert und verwenden ein numerisches Pr
 
 ### Anpassung
 
-1. **Platzhalter ersetzen**: Ersetzen Sie alle `{{ source.* }}` Platzhalter mit organisationsspezifischen Informationen
+1. **Platzhalter ersetzen**: Ersetzen Sie alle `[TODO]` Platzhalter mit organisationsspezifischen Informationen
 2. **Inhalte erweitern**: Fügen Sie zusätzliche Details hinzu, die für Ihre Organisation relevant sind
 3. **Abschnitte anpassen**: Passen Sie Abschnitte an Ihre spezifischen Anforderungen an
 4. **Diagramme hinzufügen**: Fügen Sie Diagramme im `diagrams/` Verzeichnis hinzu
 
 ### Platzhalter-Syntax
 
-Templates verwenden die Syntax `{{ source.field }}` für Platzhalter:
+Templates verwenden die Syntax `[TODO]` für Platzhalter:
 
-- `{{ source.organization_name }}` - Name der Organisation
-- `{{ source.author }}` - Autor des Dokuments
-- `{{ meta.version }}` - Versionsnummer
-- `{{ meta.date }}` - Datum
+- `[TODO]` - Name der Organisation
+- `[TODO]` - Autor des Dokuments
+- `{{ meta-handbook.revision }}` - Versionsnummer
+- `{{ meta-handbook.modifydate }}` - Datum
 - Weitere organisationsspezifische Felder nach Bedarf
 
 ### Dokumenten-Header
@@ -94,11 +94,11 @@ Jedes Template enthält einen YAML-Header mit Metadaten:
 ```yaml
 ---
 Document-ID: coso-NNNN
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.author }}
+Version: {{ meta-handbook.revision }}
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
+Last Update: {{ meta-handbook.modifydate }}
 ---
 ```
 

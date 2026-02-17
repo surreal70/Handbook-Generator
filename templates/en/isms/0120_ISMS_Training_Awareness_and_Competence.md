@@ -1,5 +1,19 @@
 # Training, Awareness and Competence
 
+**Document-ID:** [FRAMEWORK]-0120
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This document defines the security awareness and training program. It ensures
@@ -16,16 +30,14 @@ ISO 27001:2022 Reference: Clause 7.2 - Competence, Clause 7.3 - Awareness
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** {{ meta-handbook.modifydate }}  
+**Next Review:** {{ meta-handbook.next_review }}
 
 ## 1. Purpose and Objectives
 
 ### 1.1 Purpose
 
-The training and awareness program of **{{ meta.organization.name }}** ensures that:
+The training and awareness program of **{{ meta-organisation.name }}** ensures that:
 - All employees know their security responsibilities
 - Employees have the necessary competencies for their roles
 - Security awareness is continuously promoted
@@ -44,7 +56,7 @@ The training and awareness program of **{{ meta.organization.name }}** ensures t
 
 | Target Group | Number | Training Need | Frequency | Responsible |
 |--------------|--------|---------------|-----------|-------------|
-| **All Employees** | {{ meta.organization.employee_count }} | Security Awareness Basics | Annually | {{ meta.ciso.name }} |
+| **All Employees** | [TODO] | Security Awareness Basics | Annually | {{ meta.ciso.name }} |
 | **Admins/Privileged Users** | [TODO] | Advanced Security, Privileged Access | Semi-annually | {{ meta.ciso.name }} |
 | **Developers/DevOps** | [TODO] | Secure Coding, DevSecOps | Semi-annually | {{ meta.ciso.name }} |
 | **Management** | [TODO] | Security Governance, Risk Management | Annually | {{ meta.ciso.name }} |
@@ -319,18 +331,9 @@ For audits, the following evidence is provided:
 - **ISO/IEC 27001:2022** - Clause 7.3: Awareness
 - **ISO/IEC 27002:2022** - Control 6.3: Information security awareness, education and training
 
----
-
 **Approved by:**  
 {{ meta.ciso.name }}, CISO  
-Date: {{ meta.document.approval_date }}
+Date: {{ meta-handbook.modifydate }}
 
-**Next Review:** {{ meta.document.next_review }}
+**Next Review:** {{ meta-handbook.next_review }}
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

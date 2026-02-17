@@ -1,17 +1,28 @@
----
+
 Document-ID: tisax-0010
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # TISAX Framework Overview
 
+**Document-ID:** [FRAMEWORK]-0010
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document provides an overview of the TISAX (Trusted Information Security Assessment Exchange) framework and its application at {{ source.organization_name }}.
+This document provides an overview of the TISAX (Trusted Information Security Assessment Exchange) framework and its application at [TODO].
 
 ## Scope
 
@@ -42,25 +53,25 @@ TISAX is an information security assessment standard specifically developed for 
 - **AL2**: Detailed assessment with on-site audit
 - **AL3**: Very detailed assessment with comprehensive on-site audit
 
-## Application at {{ source.organization_name }}
+## Application at [TODO]
 
 ### Scope
 
-{{ source.organization_name }} applies TISAX to the following areas:
+[TODO] applies TISAX to the following areas:
 
-- {{ source.scope_area_1 }}
-- {{ source.scope_area_2 }}
-- {{ source.scope_area_3 }}
+- [TODO]
+- [TODO]
+- [TODO]
 
 ### Assessment Level
 
-{{ source.organization_name }} aims for the following assessment level: {{ source.tisax_assessment_level }}
+[TODO] aims for the following assessment level: [TODO]
 
 ### Responsibilities
 
-- **TISAX Coordinator**: {{ source.tisax_coordinator }}
-- **Information Security Officer**: {{ source.information_security_officer }}
-- **Data Protection Officer**: {{ source.data_protection_officer }}
+- **TISAX Coordinator**: [TODO]
+- **Information Security Officer**: [TODO]
+- **Data Protection Officer**: [TODO]
 
 ## Document Structure
 
@@ -74,13 +85,5 @@ This handbook is structured according to TISAX control areas:
 6. Business Continuity and Compliance (0500-0599)
 
 <!-- Note: Adapt the scope areas and responsibilities to your organization -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

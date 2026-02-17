@@ -1,13 +1,25 @@
----
+
 Document-ID: nist-csf-0040
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Rollen und Verantwortlichkeiten (GV.RR)
+
+**Dokument-ID:** [FRAMEWORK]-0040
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -15,7 +27,7 @@ Dieses Dokument definiert die Rollen, Verantwortlichkeiten und Befugnisse für C
 
 ## Geltungsbereich
 
-{{ meta.scope }}
+{{ meta-handbook.scope }}
 
 ## Governance-Struktur
 
@@ -36,7 +48,7 @@ Dieses Dokument definiert die Rollen, Verantwortlichkeiten und Befugnisse für C
 ## Cybersecurity-Rollen
 
 ### Chief Information Security Officer (CISO)
-**Name:** {{ meta.ciso }}  
+**Name:** {{ meta-organisation-roles.role_CISO }}  
 **Verantwortlichkeiten:**
 - Gesamtverantwortung für Cybersecurity-Programm
 - Entwicklung und Pflege der Cybersecurity-Strategie
@@ -51,14 +63,14 @@ Dieses Dokument definiert die Rollen, Verantwortlichkeiten und Befugnisse für C
 - Durchsetzung von Sicherheitsanforderungen
 
 ### Chief Risk Officer (CRO)
-**Name:** {{ meta.cro }}  
+**Name:** {{ meta-organisation-roles.role_Risk_Manager }}  
 **Verantwortlichkeiten:**
 - Integration von Cybersecurity-Risiken in ERM
 - Risikobewertung und -berichterstattung
 - Koordination mit CISO bei Risikobehandlung
 
 ### Security Operations Manager
-**Name:** {{ meta.security_ops_manager }}  
+**Name:** {{ meta-handbook.security_ops_manager }}  
 **Verantwortlichkeiten:**
 - Täglicher Betrieb des Security Operations Center (SOC)
 - Incident Response und Management
@@ -66,7 +78,7 @@ Dieses Dokument definiert die Rollen, Verantwortlichkeiten und Befugnisse für C
 - Koordination mit IT-Operations
 
 ### Security Architect
-**Name:** {{ meta.security_architect }}  
+**Name:** {{ meta-handbook.security_architect }}  
 **Verantwortlichkeiten:**
 - Design sicherer Systemarchitekturen
 - Sicherheitsanforderungen für neue Projekte
@@ -74,7 +86,7 @@ Dieses Dokument definiert die Rollen, Verantwortlichkeiten und Befugnisse für C
 - Security-by-Design-Prinzipien
 
 ### Compliance Manager
-**Name:** {{ meta.compliance_manager }}  
+**Name:** {{ meta-organisation-roles.role_Compliance_Manager }}  
 **Verantwortlichkeiten:**
 - Überwachung regulatorischer Compliance
 - Durchführung von Compliance-Assessments
@@ -84,7 +96,7 @@ Dieses Dokument definiert die Rollen, Verantwortlichkeiten und Befugnisse für C
 ## Geschäftsbereichs-Verantwortlichkeiten
 
 ### IT-Abteilung
-**Leiter:** {{ meta.it_director }}  
+**Leiter:** {{ meta-organisation-roles.role_IT_Manager }}  
 **Verantwortlichkeiten:**
 - Implementierung von Sicherheitskontrollen
 - Patch-Management und Systemhärtung
@@ -92,7 +104,7 @@ Dieses Dokument definiert die Rollen, Verantwortlichkeiten und Befugnisse für C
 - Backup und Recovery
 
 ### Human Resources
-**Leiter:** {{ meta.hr_director }}  
+**Leiter:** {{ meta-organisation-roles.role_HR_Manager }}  
 **Verantwortlichkeiten:**
 - Sicherheitsschulungen für Mitarbeiter
 - Hintergrundüberprüfungen
@@ -100,7 +112,7 @@ Dieses Dokument definiert die Rollen, Verantwortlichkeiten und Befugnisse für C
 - Durchsetzung von Sicherheitsrichtlinien
 
 ### Legal/Compliance
-**Leiter:** {{ meta.legal_director }}  
+**Leiter:** {{ meta-handbook.legal_director }}  
 **Verantwortlichkeiten:**
 - Rechtliche Beratung zu Cybersecurity
 - Vertragsüberprüfung (Sicherheitsklauseln)
@@ -108,7 +120,7 @@ Dieses Dokument definiert die Rollen, Verantwortlichkeiten und Befugnisse für C
 - Incident Response (rechtliche Aspekte)
 
 ### Procurement
-**Leiter:** {{ meta.procurement_director }}  
+**Leiter:** {{ meta-handbook.procurement_director }}  
 **Verantwortlichkeiten:**
 - Lieferanten-Sicherheitsbewertungen
 - Sicherheitsanforderungen in Verträgen
@@ -157,17 +169,3 @@ Dieses Dokument definiert die Rollen, Verantwortlichkeiten und Befugnisse für C
 - 0050_policy_framework.md
 - 0060_oversight.md
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |
-
-<!-- 
-Autor-Hinweise:
-- Aktualisieren Sie Rollenzuweisungen bei Personaländerungen
-- Überprüfen Sie RACI-Matrix regelmäßig auf Aktualität
-- Stellen Sie sicher, dass alle Rollen klar definiert sind
--->

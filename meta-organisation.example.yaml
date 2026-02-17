@@ -1,0 +1,79 @@
+# Organization Metadata Configuration - Example File
+# ====================================================
+# This file contains organization-specific information used across all handbooks.
+# Copy this file to 'meta-organisation.yaml' and customize with your organization's details.
+#
+# This file can be committed to version control as it contains no sensitive data.
+#
+# Documentation: See docs/CONFIGURATION_REFERENCE.md for detailed field descriptions
+
+# Organization name
+# This is the legal or common name of your organization
+# Used in: Document headers, footers, and throughout handbook content
+# Example: "Acme Corporation", "TechStart GmbH", "Global Services Ltd."
+name: "AdminsEnd Ltd."
+
+# Organization address
+# Full postal address including street, city, postal code, and country
+# Used in: Document headers, contact information sections
+# Format: Free text, but recommend: "Street Number, Postal Code City, Country"
+# Example: "123 Main Street, 12345 New York, USA"
+address: "Endless Lane 42, DE-35813 LandsEnd"
+
+# Organization website
+# Primary website URL for the organization
+# Used in: Contact information, document footers
+# Format: Full URL including protocol (https://)
+# Example: "https://www.example.com"
+web: "https://www.adminsend.de"
+
+# Organization phone number
+# Primary contact phone number
+# Used in: Contact information sections
+# Format: International format recommended (e.g., +49 123 456789)
+# Example: "+1 555 123 4567", "+44 20 1234 5678"
+phone: "+49 2323 555 4242"
+
+# Organization metadata revision number
+# Manual revision counter for tracking changes to organization metadata
+# Increment this number when you make significant changes to organization information
+# Default: 0
+# Note: This is NOT automatically incremented - you must update it manually
+revision: 0
+
+# Optional: Additional organization metadata
+# Uncomment and customize these fields if needed
+
+# Legal entity information
+# legal_name: "AdminsEnd Limited Liability Company"
+# registration_number: "HRB 12345"
+# tax_id: "DE123456789"
+# jurisdiction: "Germany"
+
+# Additional contact information
+# email: "info@adminsend.de"
+# fax: "+49 2323 555 4243"
+# emergency_phone: "+49 2323 555 9999"
+
+# Physical location details
+# headquarters_address: "Endless Lane 42, DE-35813 LandsEnd"
+# mailing_address: "P.O. Box 123, DE-35813 LandsEnd"
+# country: "Germany"
+# timezone: "Europe/Berlin"
+
+# Organization size and structure
+# employee_count: 250
+# department_count: 8
+# location_count: 3
+
+# Industry and classification
+# industry: "Information Technology"
+# sector: "Software Development"
+# naics_code: "541511"
+
+# Certifications and compliance
+# iso_27001_certified: true
+# iso_9001_certified: true
+# gdpr_compliant: true
+# certification_date: "2023-06-15"
+# next_audit_date: "2024-06-15"

@@ -1,14 +1,16 @@
 # ISMS-Organisation, Rollen und Verantwortlichkeiten
 
-**Dokument-ID:** 0020  
-**Dokumenttyp:** Grundlagendokument  
-**Referenzrahmen:** BSI IT-Grundschutz (BSI Standards 200-1/200-2/200-3)  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** {{ meta.document.status }}  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0020
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -249,21 +251,11 @@ I = Informed (Informiert)
 
 Diese Organisationsstruktur wird mindestens jährlich oder bei wesentlichen Änderungen überprüft und aktualisiert.
 
-**Nächster Review:** {{ meta.document.next_review }}
-
----
+**Nächster Review:** {{ meta-handbook.next_review }}
 
 **Referenzen:**
 - BSI Standard 200-1: Managementsysteme für Informationssicherheit (ISMS)
 - BSI Standard 200-2: IT-Grundschutz-Methodik
 - BSI IT-Grundschutz-Kompendium
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 <!-- End of template -->

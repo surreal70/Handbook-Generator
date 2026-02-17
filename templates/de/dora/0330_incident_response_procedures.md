@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0330
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Incident Response Procedures
+
+**Dokument-ID:** [FRAMEWORK]-0330
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -22,9 +33,9 @@ Standardisierte Prozeduren für effektive Incident-Response.
 
 ## Organisationsinformationen
 
-- **Organisation**: {{ source.organization_name }}
-- **Incident Commander**: {{ source.incident_commander }}
-- **On-Call Rotation**: {{ source.oncall_rotation_url }}
+- **Organisation**: [TODO]
+- **Incident Commander**: [TODO]
+- **On-Call Rotation**: [TODO]
 
 ## Incident Response Workflow
 
@@ -210,10 +221,3 @@ Level 4: CTO
 
 <!-- Hinweis: Strukturierte Response reduziert MTTR -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |

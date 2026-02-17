@@ -1,14 +1,16 @@
 # OS Hardening Baseline: Windows Server
 
-**Dokument-ID:** 0110  
-**Dokumenttyp:** Baseline  
-**Referenzrahmen:** CIS Controls v8 (Hardening-Programm; keine Benchmarks-Texte)  
-**Owner:** [TODO]  
-**Version:** 0.1 (Entwurf)  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** Intern / Vertraulich / Streng vertraulich  
-**Letzte Aktualisierung:** 2026-01-31  
-**Nächster Review:** [TODO]
+**Dokument-ID:** 0110
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -80,7 +82,6 @@
 - Parameterliste/Beispielwerte: [TODO]
 - Checkliste: siehe `0410_Anhang_Checklisten_und_Evidence.md`
 
-
 ## 12. Windows-spezifische Bereiche (Beispiele)
 ### 12.1 Identity & Admin Tiering
 - Tier-Model (z. B. Tier0/Tier1/Tier2): [TODO]
@@ -95,10 +96,3 @@
 - Standardmäßig deaktiviert: [TODO]
 - Remote Management (WinRM/RDP) abgesichert: [TODO]
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

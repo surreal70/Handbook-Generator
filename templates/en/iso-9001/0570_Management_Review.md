@@ -1,11 +1,16 @@
 # Management Review
 
-**Document-ID:** 0570  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0570
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -17,13 +22,13 @@ Reference: ISO 9001:2015, Clause 9.3
 
 ## Purpose
 
-This document defines how {{ meta.organization }} conducts regular management reviews to ensure continuing suitability, adequacy and effectiveness of the QMS.
+This document defines how {{ meta-organisation.name }} conducts regular management reviews to ensure continuing suitability, adequacy and effectiveness of the QMS.
 
 ## General Requirements (9.3)
 
 ### Review Frequency
 
-**{{ meta.organization }} conducts management reviews:**
+**{{ meta-organisation.name }} conducts management reviews:**
 - **Regularly:** [TODO: e.g., At least annually, quarterly]
 - **As needed:** For significant changes or events
 
@@ -216,7 +221,7 @@ This document defines how {{ meta.organization }} conducts regular management re
 
 ### Monitoring
 
-**{{ meta.organization }} monitors:**
+**{{ meta-organisation.name }} monitors:**
 - Progress of action implementation
 - Compliance with deadlines
 - Effectiveness of implemented actions
@@ -288,8 +293,6 @@ This document defines how {{ meta.organization }} conducts regular management re
 - Implementing actions
 - Reporting progress
 
----
-
 **Next Steps:**
 1. Plan next management review
 2. Collect and prepare input data
@@ -299,10 +302,3 @@ This document defines how {{ meta.organization }} conducts regular management re
 6. Communicate decisions
 7. Follow up action implementation
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

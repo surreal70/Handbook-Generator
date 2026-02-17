@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0540
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Protection of Records
+
+**Document-ID:** [FRAMEWORK]-0540
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -15,7 +26,7 @@ This document describes measures for protecting records according to TISAX requi
 
 ## Scope
 
-This document applies to all records of {{ source.organization_name }}.
+This document applies to all records of [TODO].
 
 ## Record Types
 
@@ -113,18 +124,10 @@ This document applies to all records of {{ source.organization_name }}.
 
 ## Metrics
 
-{{ source.organization_name }} measures:
+[TODO] measures:
 - Number of archived records
 - Retention period compliance rate
 - Number of recoveries
 - Number of proper destructions
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

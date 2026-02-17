@@ -1,11 +1,16 @@
 # Improvement
 
-**Document-ID:** 0650  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0650
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -17,13 +22,13 @@ Reference: ISO 9001:2015, Clause 10.1
 
 ## Purpose
 
-This document defines how {{ meta.organization }} implements continual improvement to enhance customer satisfaction and improve QMS performance.
+This document defines how {{ meta-organisation.name }} implements continual improvement to enhance customer satisfaction and improve QMS performance.
 
 ## General Requirements (10.1)
 
 ### Improvement Commitment
 
-**{{ meta.organization }} continually improves:**
+**{{ meta-organisation.name }} continually improves:**
 - Suitability, adequacy and effectiveness of QMS
 - Products and services
 - Processes
@@ -68,7 +73,7 @@ This document defines how {{ meta.organization }} implements continual improveme
 
 ### Improvement Tools
 
-**{{ meta.organization }} uses:**
+**{{ meta-organisation.name }} uses:**
 - PDCA cycle (Plan-Do-Check-Act)
 - Six Sigma / DMAIC
 - Lean Management
@@ -179,7 +184,7 @@ This document defines how {{ meta.organization }} implements continual improveme
 
 ### Culture Development
 
-**{{ meta.organization }} promotes improvement culture through:**
+**{{ meta-organisation.name }} promotes improvement culture through:**
 - Leadership role modeling
 - Open communication
 - Error tolerance and learning culture
@@ -275,8 +280,6 @@ This document defines how {{ meta.organization }} implements continual improveme
 - Participating in improvement projects
 - Implementing improvements
 
----
-
 **Next Steps:**
 1. Establish improvement culture
 2. Implement suggestion system
@@ -285,10 +288,3 @@ This document defines how {{ meta.organization }} implements continual improveme
 5. Train employees in improvement methods
 6. Measure and communicate successes
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

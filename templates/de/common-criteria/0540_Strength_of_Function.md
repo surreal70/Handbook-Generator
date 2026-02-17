@@ -1,11 +1,16 @@
 # Strength of Function (Stärke der Sicherheitsfunktionen)
 
-**Dokument-ID:** 0540  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** Intern / Vertraulich / Streng vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0540
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -354,8 +359,6 @@ Für weitere Informationen siehe:
 - **0510_Assurance_Measures.md**: AVA_SOF.1 Assurance Measure
 - **Kapitel 4 des Security Target**: Definition der SFRs
 
----
-
 **Dokumentenhistorie:**
 
 | Version | Datum | Autor | Änderungen |
@@ -363,10 +366,3 @@ Für weitere Informationen siehe:
 | 0.1 | [TODO] | [TODO] | Initiale Version |
 | 1.0 | [TODO] | [TODO] | [TODO] |
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

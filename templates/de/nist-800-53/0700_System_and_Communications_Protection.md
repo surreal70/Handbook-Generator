@@ -1,13 +1,16 @@
 # System and Communications Protection
 
-**Dokument-ID:** NIST-0700  
-**Control Family:** System and Communications Protection (SC)  
-**Control:** SC-1, SC-7, SC-8, SC-13  
-**Organisation:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** NIST-0700
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -47,13 +50,5 @@ The organization protects system and communications.
 ## 3. Implementation Status
 
 **Status:** [TODO: Implemented / Partially Implemented / Planned]  
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 <!-- End of template -->

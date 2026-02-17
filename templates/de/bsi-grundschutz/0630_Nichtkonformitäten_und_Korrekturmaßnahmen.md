@@ -1,14 +1,16 @@
 # Nichtkonformitäten und Korrekturmaßnahmen
 
-**Dokument-ID:** 0630  
-**Dokumenttyp:** Prozess/Template  
-**Referenzrahmen:** BSI IT-Grundschutz (BSI Standards 200-1/200-2)  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** {{ meta.document.status }}  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0630
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -152,21 +154,11 @@ Nach Abschluss kritischer oder wiederkehrender Findings:
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| ISB | {{ meta.ciso.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| IT-Leitung | {{ meta.cio.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| IT-Leitung | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **Referenzen:**
 - BSI Standard 200-1: ISMS (Non-conformities and Corrective Actions)
 - Dokument 0610: Internes Auditprogramm
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 <!-- End of template -->

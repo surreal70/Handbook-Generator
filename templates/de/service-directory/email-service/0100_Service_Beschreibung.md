@@ -9,11 +9,11 @@
 - **Service-ID:** SVC-EMAIL-001
 - **Service-Owner:** {{ meta.it_operations_manager.name }}
 - **Technischer Ansprechpartner:** {{ meta.it_operations_manager.name }} ({{ meta.it_operations_manager.email }})
-- **Version:** {{ meta.document.version }}
+- **Version:** [TODO]
 - **Letzte Aktualisierung:** 2026-01-31
 
 ### Kurzbeschreibung
-Der E-Mail-Service stellt allen Mitarbeitern von {{ meta.organization.name }} eine professionelle E-Mail-Kommunikationsplattform basierend auf Microsoft Exchange Online zur Verfügung. Der Service umfasst E-Mail, Kalender, Kontakte und Aufgabenverwaltung.
+Der E-Mail-Service stellt allen Mitarbeitern von [TODO] eine professionelle E-Mail-Kommunikationsplattform basierend auf Microsoft Exchange Online zur Verfügung. Der Service umfasst E-Mail, Kalender, Kontakte und Aufgabenverwaltung.
 
 ### Geschäftszweck
 Der E-Mail-Service ermöglicht die interne und externe geschäftliche Kommunikation, unterstützt die Zusammenarbeit zwischen Teams und ist essentiell für die tägliche Geschäftstätigkeit. Der Service gewährleistet sichere, zuverlässige und compliance-konforme E-Mail-Kommunikation.
@@ -29,8 +29,8 @@ Der E-Mail-Service ermöglicht die interne und externe geschäftliche Kommunikat
 | Komponente | Typ | Standort | Verantwortlich |
 |---|---|---|---|
 | Exchange Online | Cloud Service | Microsoft Azure (EU West) | {{ meta.it_operations_manager.name }} |
-| Exchange Hybrid Connector | On-Premise Gateway | {{ meta.organization.city }} Datacenter | {{ meta.it_operations_manager.name }} |
-| Mail Gateway (Barracuda) | Security Appliance | {{ meta.organization.city }} Datacenter | {{ meta.ciso.name }} |
+| Exchange Hybrid Connector | On-Premise Gateway | [TODO] Datacenter | {{ meta.it_operations_manager.name }} |
+| Mail Gateway (Barracuda) | Security Appliance | [TODO] Datacenter | {{ meta.ciso.name }} |
 | Backup Solution (Veeam) | Backup Service | Cloud Storage | {{ meta.it_operations_manager.name }} |
 
 ### Abhängigkeiten
@@ -103,8 +103,8 @@ Der E-Mail-Service ermöglicht die interne und externe geschäftliche Kommunikat
 ### Dashboards
 - Microsoft 365 Admin Center: https://admin.microsoft.com
 - Exchange Admin Center: https://admin.exchange.microsoft.com
-- Barracuda Mail Gateway Dashboard: https://mail-gateway.{{ meta.organization.name }}
-- Monitoring Dashboard (Grafana): https://monitoring.{{ meta.organization.name }}/email-service
+- Barracuda Mail Gateway Dashboard: https://mail-gateway.[TODO]
+- Monitoring Dashboard (Grafana): https://monitoring.[TODO]/email-service
 
 ## Backup und Recovery
 
@@ -182,21 +182,12 @@ Der E-Mail-Service ermöglicht die interne und externe geschäftliche Kommunikat
 
 | Version | Datum | Autor | Änderungen |
 |---|---|---|---|
-| 1.0.0 | 2026-01-31 | {{ meta.author }} | Initiale Version - Service-Beschreibung erstellt |
-| 1.0.1 | 2026-02-15 | {{ meta.author }} | Backup-Strategie aktualisiert |
-| 1.1.0 | 2026-03-01 | {{ meta.author }} | DLP-Policies hinzugefügt |
+| 1.0.0 | 2026-01-31 | [Author] | Initiale Version - Service-Beschreibung erstellt |
+| 1.0.1 | 2026-02-15 | [Author] | Backup-Strategie aktualisiert |
+| 1.1.0 | 2026-03-01 | [Author] | DLP-Policies hinzugefügt |
 
----
+**Dokumentverantwortlicher:** [TODO]  
+**Genehmigt durch:** [TODO]  
+**Organisation:** [TODO]  
+**Klassifizierung:** [TODO]
 
-**Dokumentverantwortlicher:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Organisation:** {{ meta.organization.name }}  
-**Klassifizierung:** {{ meta.document.classification }}
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

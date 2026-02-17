@@ -1,25 +1,39 @@
 # Dokumentenlenkung und Versionierung
 
+**Dokument-ID:** [FRAMEWORK]-0020
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Dokumentmetadaten
 
 | Feld | Wert |
 |---|---|
-| Dokumenttitel | IT-Betriebshandbuch – {{ meta.organization.name }} |
+| Dokumenttitel | IT-Betriebshandbuch – {{ meta-organisation.name }} |
 | Dokument-ID | [TODO: Eindeutige Dokument-ID] |
 | System/Service | [TODO: System-/Service-Name] |
-| Eigentümer (Owner) | {{ meta.document.owner }} |
-| Verantwortlicher Redakteur | {{ meta.author }} |
-| Freigabeinstanz | {{ meta.document.approver }} |
-| Klassifizierung | {{ meta.document.classification }} |
+| Eigentümer (Owner) | {{ meta-handbook.owner }} |
+| Verantwortlicher Redakteur | [Author] |
+| Freigabeinstanz | {{ meta-handbook.approver }} |
+| Klassifizierung | {{ meta-handbook.classification }} |
 | Ablageort | [TODO: Zentrales Repository/Ablageort] |
-| Organisation | {{ meta.organization.name }} |
-| Standort | {{ meta.organization.city }}, {{ meta.organization.country }} |
+| Organisation | {{ meta-organisation.name }} |
+| Standort | {{ meta-organisation.city }}, {{ meta-organisation.country }} |
 
 ## Versionshistorie
 
 | Version | Datum | Autor | Änderungen | Genehmigung |
 |---|---|---|---|---|
-| {{ meta.document.version }} | [TODO: Datum] | {{ meta.author }} | Initiale Version | {{ meta.document.approver }} |
+| {{ meta-handbook.revision }} | [TODO: Datum] | [Author] | Initiale Version | {{ meta-handbook.approver }} |
 | | | | | |
 | | | | | |
 
@@ -62,14 +76,14 @@
 - Auswirkungsanalyse
 - Betroffene Abschnitte
 
-**Genehmigung:** {{ meta.document.owner }}
+**Genehmigung:** {{ meta-handbook.owner }}
 
 ### 2. Fachreview
 
 **Reviewer:**
-- **Operations:** {{ meta.it_operations_manager.name }} ({{ meta.it_operations_manager.email }})
+- **Operations:** {{ meta-organisation-roles.role_it_operations_manager.name }} ({{ meta-organisation-roles.role_it_operations_manager.email }})
 - **Architektur:** [TODO: Architektur-Verantwortlicher]
-- **Security:** {{ meta.ciso.name }} ({{ meta.ciso.email }})
+- **Security:** {{ meta-organisation-roles.role_ciso.name }} ({{ meta-organisation-roles.role_ciso.email }})
 - **Compliance:** [TODO: Compliance-Verantwortlicher]
 
 **Prüfkriterien:**
@@ -80,7 +94,7 @@
 
 ### 3. Freigabe
 
-**Freigabeinstanz:** {{ meta.document.approver }}
+**Freigabeinstanz:** {{ meta-handbook.approver }}
 
 **Freigabekriterien:**
 - Alle Reviews abgeschlossen
@@ -91,13 +105,13 @@
 **Freigabeprozess:**
 1. Review-Kommentare einarbeiten
 2. Finale Version erstellen
-3. Freigabe durch {{ meta.document.approver }}
+3. Freigabe durch {{ meta-handbook.approver }}
 4. Version inkrementieren
 5. Publikation im Repository
 
 ### 4. Publikation
 
-**Verantwortlich:** {{ meta.document.owner }}
+**Verantwortlich:** {{ meta-handbook.owner }}
 
 **Schritte:**
 1. Dokument im zentralen Repository ablegen
@@ -115,13 +129,13 @@
 
 ### Normale Änderungen (Minor)
 
-- **Genehmigung:** {{ meta.document.approver }}
+- **Genehmigung:** {{ meta-handbook.approver }}
 - **Review:** Fachbereich (Operations/Security)
 - **Beispiele:** Neue Abschnitte, Prozessänderungen
 
 ### Wesentliche Änderungen (Major)
 
-- **Genehmigung:** {{ meta.cio.name }} ({{ meta.cio.email }})
+- **Genehmigung:** {{ meta-organisation-roles.role_cio.name }} ({{ meta-organisation-roles.role_cio.email }})
 - **Review:** Alle Fachbereiche + Management
 - **CAB-Sitzung:** Erforderlich
 - **Beispiele:** Grundlegende Überarbeitungen, Architekturänderungen
@@ -130,7 +144,7 @@
 
 ### Sprache und Format
 
-- **Sprache:** {{ meta.language }}
+- **Sprache:** {{ meta-handbook.language }}
 - **Format:** Markdown (.md)
 - **Zeichensatz:** UTF-8
 - **Zeilenumbruch:** Unix (LF)
@@ -165,10 +179,10 @@ Jedes Dokument MUSS folgende Informationen enthalten:
 
 Verwenden Sie folgende Platzhalter für organisationsweite Informationen:
 
-- **Organisation:** `{{ meta.organization.name }}`
-- **Rollen:** `{{ meta.ceo.name }}`, `{{ meta.cio.name }}`, `{{ meta.ciso.name }}`
-- **Dokument:** `{{ meta.document.owner }}`, `{{ meta.document.approver }}`
-- **Autor:** `{{ meta.author }}`
+- **Organisation:** `{{ meta-organisation.name }}`
+- **Rollen:** `{{ meta-organisation-roles.role_ceo.name }}`, `{{ meta-organisation-roles.role_cio.name }}`, `{{ meta-organisation-roles.role_ciso.name }}`
+- **Dokument:** `{{ meta-handbook.owner }}`, `{{ meta-handbook.approver }}`
+- **Autor:** `{{ meta-handbook.author }}`
 
 ## Dokumentenklassifizierung
 
@@ -179,7 +193,7 @@ Verwenden Sie folgende Platzhalter für organisationsweite Informationen:
 | **Vertraulich** | Eingeschränkter Zugriff | Autorisierte Personen | Sicherheitskonzepte, Passwörter |
 | **Streng vertraulich** | Höchste Vertraulichkeit | Management + Autorisierte | Geschäftsgeheimnisse, Compliance |
 
-**Aktuelle Klassifizierung:** {{ meta.document.classification }}
+**Aktuelle Klassifizierung:** {{ meta-handbook.classification }}
 
 ## Archivierung und Aufbewahrung
 
@@ -201,30 +215,21 @@ Verwenden Sie folgende Platzhalter für organisationsweite Informationen:
 
 | Rolle | Verantwortung | Person |
 |---|---|---|
-| **Dokumentverantwortlicher** | Gesamtverantwortung, Aktualität | {{ meta.document.owner }} |
-| **Redakteur** | Inhaltliche Pflege, Änderungen | {{ meta.author }} |
-| **Freigabeinstanz** | Genehmigung von Änderungen | {{ meta.document.approver }} |
-| **CIO** | Strategische Ausrichtung | {{ meta.cio.name }} |
-| **CISO** | Security-Review | {{ meta.ciso.name }} |
+| **Dokumentverantwortlicher** | Gesamtverantwortung, Aktualität | {{ meta-handbook.owner }} |
+| **Redakteur** | Inhaltliche Pflege, Änderungen | [Author] |
+| **Freigabeinstanz** | Genehmigung von Änderungen | {{ meta-handbook.approver }} |
+| **CIO** | Strategische Ausrichtung | {{ meta-organisation-roles.role_cio.name }} |
+| **CISO** | Security-Review | {{ meta-organisation-roles.role_ciso.name }} |
 
 ## Kontakte
 
 **Bei Fragen zur Dokumentenlenkung:**
-- **Dokumentverantwortlicher:** {{ meta.document.owner }}
-- **IT Operations Manager:** {{ meta.it_operations_manager.name }} ({{ meta.it_operations_manager.email }})
-- **CIO:** {{ meta.cio.name }} ({{ meta.cio.email }})
+- **Dokumentverantwortlicher:** {{ meta-handbook.owner }}
+- **IT Operations Manager:** {{ meta-organisation-roles.role_it_operations_manager.name }} ({{ meta-organisation-roles.role_it_operations_manager.email }})
+- **CIO:** {{ meta-organisation-roles.role_cio.name }} ({{ meta-organisation-roles.role_cio.email }})
 
----
+**Dokumentverantwortlicher:** {{ meta-handbook.owner }}  
+**Genehmigt durch:** {{ meta-handbook.approver }}  
+**Version:** {{ meta-handbook.revision }}  
+**Organisation:** {{ meta-organisation.name }}
 
-**Dokumentverantwortlicher:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Organisation:** {{ meta.organization.name }}
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

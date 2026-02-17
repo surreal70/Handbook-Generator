@@ -1,15 +1,27 @@
 # Access und Berechtigungsmanagement
 
+**Dokument-ID:** [FRAMEWORK]-0100
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Übersicht
 
 Dieses Dokument beschreibt das Access- und Berechtigungsmanagement für den IT-Service. Es definiert Zugriffskontrollmodelle, Berechtigungskonzepte und rollenbasierte Zugriffskontrolle (RBAC).
 
-**Service:** {{ meta.service_name }}  
-**Verantwortlich:** {{ meta.it_operations_manager.name }}  
-**Security Officer:** {{ meta.ciso.name }}  
-**Stand:** {{ meta.document.version }}
-
----
+**Service:** {{ meta-handbook.service_name }}  
+**Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}  
+**Security Officer:** {{ meta-organisation-roles.role_ciso.name }}  
+**Stand:** {{ meta-handbook.revision }}
 
 ## Access Management Strategie
 
@@ -28,8 +40,6 @@ Dieses Dokument beschreibt das Access- und Berechtigungsmanagement für den IT-S
 3. **Regular Review:** Regelmäßige Überprüfung von Berechtigungen
 4. **Audit Trail:** Vollständige Protokollierung aller Zugriffe
 5. **Multi-Factor Authentication:** MFA für privilegierte Zugriffe
-
----
 
 ## Zugriffskontrollmodell
 
@@ -51,12 +61,12 @@ Dieses Dokument beschreibt das Access- und Berechtigungsmanagement für den IT-S
 **Identity Provider:**
 - **System:** [TODO: z.B. Active Directory, Azure AD, Okta]
 - **URL:** [TODO: SSO-URL]
-- **Verantwortlich:** {{ meta.it_operations_manager.name }}
+- **Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
 
 **MFA-System:**
 - **System:** [TODO: z.B. Duo, Microsoft Authenticator]
 - **Pflicht für:** Administratoren, privilegierte Accounts
-- **Verantwortlich:** {{ meta.ciso.name }}
+- **Verantwortlich:** {{ meta-organisation-roles.role_ciso.name }}
 
 ### Autorisierung
 
@@ -73,8 +83,6 @@ Dieses Dokument beschreibt das Access- und Berechtigungsmanagement für den IT-S
 - Komplexere Implementierung
 
 **Aktuelles Modell:** [TODO: RBAC/ABAC/Hybrid auswählen]
-
----
 
 ## Rollenbasierte Zugriffskontrolle (RBAC)
 
@@ -114,7 +122,7 @@ Dieses Dokument beschreibt das Access- und Berechtigungsmanagement für den IT-S
 - Backup/Restore
 
 **Zugewiesen an:**
-- {{ meta.it_operations_manager.name }}
+- {{ meta-organisation-roles.role_it_operations_manager.name }}
 - [TODO: Weitere Administratoren]
 
 **MFA:** Pflicht
@@ -141,7 +149,7 @@ Dieses Dokument beschreibt das Access- und Berechtigungsmanagement für den IT-S
 - Log-Zugriff (Read-only)
 
 **Zugewiesen an:**
-- {{ meta.service_desk_lead.name }}
+- {{ meta-organisation-roles.role_service_desk_lead.name }}
 - [TODO: Weitere Operators]
 
 **MFA:** Optional
@@ -174,8 +182,6 @@ Dieses Dokument beschreibt das Access- und Berechtigungsmanagement für den IT-S
 
 **MFA:** Optional
 
----
-
 ## Berechtigungsmatrix
 
 ### System-Berechtigungen
@@ -199,8 +205,6 @@ Dieses Dokument beschreibt das Access- und Berechtigungsmanagement für den IT-S
 | **Internal** | Vollzugriff | Lesen/Schreiben | Lesen | Lesen | Lesen |
 | **Confidential** | Vollzugriff | Nach Bedarf | - | - | Nach Bedarf |
 | **Restricted** | Nach Bedarf | - | - | - | - |
-
----
 
 ## Access Request Prozess
 
@@ -257,7 +261,7 @@ Dieses Dokument beschreibt das Access- und Berechtigungsmanagement für den IT-S
 **Entscheidung:** Genehmigen / Ablehnen / Rückfragen
 
 #### 3. Security Review
-**Wer:** {{ meta.ciso.name }} oder Security Team  
+**Wer:** {{ meta-organisation-roles.role_ciso.name }} oder Security Team  
 **Prüfung:**
 - Compliance-Anforderungen
 - Risikobewertung
@@ -266,7 +270,7 @@ Dieses Dokument beschreibt das Access- und Berechtigungsmanagement für den IT-S
 **Entscheidung:** Genehmigen / Ablehnen / Anpassen
 
 #### 4. Provisionierung
-**Wer:** {{ meta.it_operations_manager.name }} oder IT Operations  
+**Wer:** {{ meta-organisation-roles.role_it_operations_manager.name }} oder IT Operations  
 **Aktivitäten:**
 - Account erstellen/ändern
 - Berechtigungen zuweisen
@@ -282,8 +286,6 @@ Dieses Dokument beschreibt das Access- und Berechtigungsmanagement für den IT-S
 - Zugangsdaten bereitstellen
 - Dokumentation abschließen
 - Ticket schließen
-
----
 
 ## Privileged Access Management (PAM)
 
@@ -314,10 +316,8 @@ Privilegierte Accounts haben erweiterte Berechtigungen und Zugriff auf kritische
 ### PAM-System
 
 **System:** [TODO: z.B. CyberArk, BeyondTrust, Thycotic]  
-**Verantwortlich:** {{ meta.ciso.name }}  
+**Verantwortlich:** {{ meta-organisation-roles.role_ciso.name }}  
 **Zugriff:** [TODO: PAM-System-URL]
-
----
 
 ## Service Accounts
 
@@ -342,8 +342,6 @@ Privilegierte Accounts haben erweiterte Berechtigungen und Zugriff auf kritische
 | `svc_integration` | System-Integration | Integration-Platform | API-Zugriff | Integration Team |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
----
-
 ## Access Review Prozess
 
 ### Regelmäßige Reviews
@@ -361,7 +359,7 @@ Privilegierte Accounts haben erweiterte Berechtigungen und Zugriff auf kritische
 #### Jährliche Reviews
 **Frequenz:** Jährlich  
 **Umfang:** Vollständiger Access Review  
-**Verantwortlich:** {{ meta.ciso.name }}  
+**Verantwortlich:** {{ meta-organisation-roles.role_ciso.name }}  
 **Prozess:**
 1. Umfassender Audit aller Accounts
 2. Privilegierte Accounts prüfen
@@ -382,8 +380,6 @@ Privilegierte Accounts haben erweiterte Berechtigungen und Zugriff auf kritische
 - Deaktivierung nach Frist
 - Dokumentation
 
----
-
 ## Onboarding und Offboarding
 
 ### Onboarding-Prozess
@@ -402,7 +398,7 @@ Privilegierte Accounts haben erweiterte Berechtigungen und Zugriff auf kritische
 7. [ ] Dokumentation in CMDB
 8. [ ] Willkommens-E-Mail senden
 
-**Verantwortlich:** {{ meta.service_desk_lead.name }}
+**Verantwortlich:** {{ meta-organisation-roles.role_service_desk_lead.name }}
 
 ### Offboarding-Prozess
 
@@ -420,7 +416,7 @@ Privilegierte Accounts haben erweiterte Berechtigungen und Zugriff auf kritische
 7. [ ] Dokumentation aktualisieren
 8. [ ] Manager informieren
 
-**Verantwortlich:** {{ meta.service_desk_lead.name }}
+**Verantwortlich:** {{ meta-organisation-roles.role_service_desk_lead.name }}
 
 #### Rollenwechsel
 **Trigger:** HR-Benachrichtigung oder Manager-Anfrage  
@@ -432,8 +428,6 @@ Privilegierte Accounts haben erweiterte Berechtigungen und Zugriff auf kritische
 3. [ ] Access Review durchführen
 4. [ ] Dokumentation aktualisieren
 5. [ ] Benutzer informieren
-
----
 
 ## Compliance und Auditing
 
@@ -458,7 +452,7 @@ Privilegierte Accounts haben erweiterte Berechtigungen und Zugriff auf kritische
 
 **Log-Retention:** [TODO: z.B. 1 Jahr]  
 **Log-System:** [TODO: z.B. Splunk, ELK]  
-**Verantwortlich:** {{ meta.ciso.name }}
+**Verantwortlich:** {{ meta-organisation-roles.role_ciso.name }}
 
 ### Audit-Reports
 
@@ -475,8 +469,6 @@ Privilegierte Accounts haben erweiterte Berechtigungen und Zugriff auf kritische
 - Risiko-Assessment
 - Verbesserungsvorschläge
 
----
-
 ## Notfall-Zugriff
 
 ### Break-Glass-Accounts
@@ -486,7 +478,7 @@ Privilegierte Accounts haben erweiterte Berechtigungen und Zugriff auf kritische
 **Verwendung:**
 - Nur bei kritischen Ausfällen
 - Wenn normale Zugriffswege nicht verfügbar
-- Nach Genehmigung durch {{ meta.cio.name }}
+- Nach Genehmigung durch {{ meta-organisation-roles.role_cio.name }}
 
 **Anforderungen:**
 - Physisch gesicherte Passwörter
@@ -500,33 +492,22 @@ Privilegierte Accounts haben erweiterte Berechtigungen und Zugriff auf kritische
 
 **Passwort-Verwaltung:**
 - Versiegelte Umschläge im Safe
-- Zugriff nur durch {{ meta.cio.name }} oder {{ meta.ciso.name }}
-
----
+- Zugriff nur durch {{ meta-organisation-roles.role_cio.name }} oder {{ meta-organisation-roles.role_ciso.name }}
 
 ## Kontakte
 
 **Access Management Team:**
-- **IT Operations Manager:** {{ meta.it_operations_manager.name }} - {{ meta.it_operations_manager.email }}
-- **CISO:** {{ meta.ciso.name }} - {{ meta.ciso.email }}
-- **Service Desk Lead:** {{ meta.service_desk_lead.name }} - {{ meta.service_desk_lead.email }}
-- **CIO:** {{ meta.cio.name }} - {{ meta.cio.email }}
+- **IT Operations Manager:** {{ meta-organisation-roles.role_it_operations_manager.name }} - {{ meta-organisation-roles.role_it_operations_manager.email }}
+- **CISO:** {{ meta-organisation-roles.role_ciso.name }} - {{ meta-organisation-roles.role_ciso.email }}
+- **Service Desk Lead:** {{ meta-organisation-roles.role_service_desk_lead.name }} - {{ meta-organisation-roles.role_service_desk_lead.email }}
+- **CIO:** {{ meta-organisation-roles.role_cio.name }} - {{ meta-organisation-roles.role_cio.email }}
 
 **Notfall-Kontakte:**
-- **Break-Glass-Freigabe:** {{ meta.cio.name }} - {{ meta.cio.phone }}
-- **Security-Incident:** {{ meta.ciso.name }} - {{ meta.ciso.phone }}
+- **Break-Glass-Freigabe:** {{ meta-organisation-roles.role_cio.name }} - {{ meta-organisation-roles.role_cio.phone }}
+- **Security-Incident:** {{ meta-organisation-roles.role_ciso.name }} - {{ meta-organisation-roles.role_ciso.phone }}
 
----
+**Dokumentverantwortlicher:** {{ meta-handbook.owner }}  
+**Genehmigt durch:** {{ meta-handbook.approver }}  
+**Version:** {{ meta-handbook.revision }}  
+**Organisation:** {{ meta-organisation.name }}
 
-**Dokumentverantwortlicher:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Organisation:** {{ meta.organization.name }}
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

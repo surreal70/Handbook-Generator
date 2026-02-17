@@ -1,13 +1,25 @@
----
+
 Document-ID: nist-csf-0010
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Govern - Overview
+
+**Document-ID:** [FRAMEWORK]-0010
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -16,7 +28,7 @@ This document provides an overview of the Govern function of the NIST Cybersecur
 ## Scope
 
 This document applies to:
-- {{ meta.organization }}
+- {{ meta-organisation.name }}
 - All business units and IT systems
 - Cybersecurity governance structures
 
@@ -65,8 +77,8 @@ The Govern function provides the foundation for:
 
 | Role | Responsibility |
 |------|----------------|
-| {{ meta.ciso }} | Overall responsibility for cybersecurity governance |
-| {{ meta.cro }} | Risk management strategy and oversight |
+| {{ meta-organisation-roles.role_CISO }} | Overall responsibility for cybersecurity governance |
+| {{ meta-organisation-roles.role_Risk_Manager }} | Risk management strategy and oversight |
 | Board of Directors | Oversight and strategic direction |
 | Executive Management | Resource allocation and support |
 
@@ -78,14 +90,6 @@ The Govern function provides the foundation for:
 - 0050_policy_framework.md
 - 0060_oversight.md
 - 0070_supply_chain_risk_management.md
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- 
 Author Notes: 

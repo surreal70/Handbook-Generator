@@ -1,0 +1,215 @@
+# Handbook-Specific Metadata Configuration - Example File
+# ==========================================================
+# This file contains metadata specific to an individual handbook.
+# Copy this file to 'meta-handbook.yaml' in each handbook's root directory.
+#
+# Location: Place this file in the handbook directory (e.g., templates/de/bcm/meta-handbook.yaml)
+#
+# This file can be committed to version control as it contains no sensitive data.
+#
+# Documentation: See docs/CONFIGURATION_REFERENCE.md for detailed field descriptions
+
+# ============================================================================
+# AUTHORSHIP AND RESPONSIBILITY
+# ============================================================================
+
+# Primary author of the handbook
+# The person who created or is primarily responsible for the handbook content
+# Used in: Document headers, approval workflows, contact information
+# Example: "Jane Smith", "IT Department", "Security Team"
+author: "Jane Smith"
+
+# Handbook maintainer
+# The person responsible for keeping the handbook up-to-date
+# Default: If not specified, defaults to the author value
+# Used in: Maintenance schedules, update notifications, contact information
+# Example: "John Doe", "Documentation Team"
+# Note: Uncomment the line below to set a different maintainer than the author
+# maintainer: "John Doe"
+
+# Handbook owner
+# The person or role with ultimate responsibility for the handbook
+# Used in: Governance documentation, approval chains, accountability matrices
+# Example: "Chief Information Security Officer", "IT Manager", "Risk Manager"
+owner: "Chief Information Security Officer"
+
+# Approver
+# The person or role who approves handbook changes and releases
+# Used in: Approval workflows, change management, version control
+# Example: "Chief Information Officer", "Management Board", "Quality Manager"
+approver: "Chief Information Officer"
+
+# ============================================================================
+# DOCUMENT CLASSIFICATION AND STATUS
+# ============================================================================
+
+# Classification level
+# Security classification of the handbook content
+# Used in: Document headers, access control, distribution lists
+# Common values: "Public", "Internal", "Confidential", "Restricted"
+classification: "Internal"
+
+# Document status
+# Current lifecycle status of the handbook
+# Used in: Document headers, workflow management, publication control
+# Common values: "Draft", "In Review", "Approved", "Published", "Archived"
+status: "Draft"
+
+# Document type
+# Category or type of handbook
+# Used in: Document organization, template selection, reporting
+# Common values: "Policy", "Procedure", "Guideline", "Standard", "Handbook"
+type: "Handbook"
+
+# ============================================================================
+# VERSION AND IDENTIFICATION
+# ============================================================================
+
+# Template set version
+# Version of the template set used to generate this handbook
+# Used in: Template compatibility, migration tracking, version control
+# Format: Semantic versioning (MAJOR.MINOR.PATCH)
+# Default: "0.1"
+templateset_version: "0.1"
+
+# Revision number
+# Manual revision counter for tracking handbook changes
+# Increment this number when you make significant changes to the handbook
+# Used in: Document headers, change tracking, version history
+# Default: 0
+# Note: This is NOT automatically incremented - you must update it manually
+revision: 0
+
+# Short name
+# Brief identifier for the handbook (acronym or short code)
+# Used in: File names, cross-references, navigation menus
+# Example: "BCM", "ISMS", "IT-SEC", "GDPR"
+shortname: "BCM"
+
+# Long name
+# Full descriptive name of the handbook
+# Used in: Document titles, cover pages, table of contents
+# Example: "Business Continuity Management Handbook"
+# Example: "Information Security Management System Documentation"
+longname: "Business Continuity Management Handbook"
+
+# ============================================================================
+# DATES AND VALIDITY
+# ============================================================================
+
+# Creation date
+# Date when the handbook was first created
+# Used in: Document history, audit trails, compliance reporting
+# Format: ISO 8601 date (YYYY-MM-DD) recommended
+# Example: "2024-01-15"
+creationdate: "2024-01-15"
+
+# Last modification date
+# Date when the handbook was last updated
+# Used in: Document headers, change tracking, freshness indicators
+# Format: ISO 8601 date (YYYY-MM-DD) recommended
+# Example: "2024-03-20"
+# Note: Update this date whenever you make changes to the handbook
+modifydate: "2024-03-20"
+
+# Valid from date
+# Date when the handbook becomes effective
+# Used in: Compliance tracking, policy enforcement, transition planning
+# Format: ISO 8601 date (YYYY-MM-DD) recommended
+# Example: "2024-04-01"
+valid_from: "2024-04-01"
+
+# Next review date
+# Scheduled date for the next handbook review
+# Used in: Review schedules, compliance tracking, maintenance planning
+# Format: ISO 8601 date (YYYY-MM-DD) recommended
+# Example: "2025-04-01"
+# Note: Set this to ensure regular handbook reviews (typically annually)
+next_review: "2025-04-01"
+
+# ============================================================================
+# SCOPE AND APPLICABILITY
+# ============================================================================
+
+# Scope
+# Description of what the handbook covers and to whom it applies
+# Used in: Document introduction, applicability statements, scope definitions
+# Example: "This handbook applies to all IT operations staff and contractors"
+# Example: "Covers all business continuity processes for critical services"
+scope: "This handbook applies to all employees and contractors involved in business continuity management activities."
+
+# ============================================================================
+# OPTIONAL ADDITIONAL METADATA
+# ============================================================================
+# Uncomment and customize these fields if needed
+
+# Document identifier or reference number
+# document_id: "BCM-001"
+
+# Version string (alternative to revision number)
+# version: "1.0.0"
+
+# Language of the handbook content
+# language: "de"  # "de" for German, "en" for English
+
+# Target audience
+# audience: "IT Staff, Management, Auditors"
+
+# Related documents or dependencies
+# related_documents:
+#   - "ISMS Handbook"
+#   - "IT Security Policy"
+#   - "Risk Management Framework"
+
+# Keywords or tags for searchability
+# keywords:
+#   - "business continuity"
+#   - "disaster recovery"
+#   - "resilience"
+
+# Compliance frameworks addressed
+# frameworks:
+#   - "ISO 22301"
+#   - "BSI IT-Grundschutz"
+#   - "ISO 27001"
+
+# Distribution list
+# distribution:
+#   - "All Staff"
+#   - "Management Board"
+#   - "External Auditors"
+
+# Confidentiality notice
+# confidentiality_notice: "This document contains confidential information..."
+
+# Copyright notice
+# copyright: "© 2024 AdminsEnd Ltd. All rights reserved."
+
+# ============================================================================
+# NOTES
+# ============================================================================
+#
+# 1. Maintainer Default:
+#    - If 'maintainer' is not specified, it automatically defaults to the 'author' value
+#    - Only specify 'maintainer' if it differs from the author
+#
+# 2. Revision Management:
+#    - The 'revision' field is NOT automatically incremented
+#    - You must manually update it when making significant changes
+#    - Consider using a change log to track revision history
+#
+# 3. Date Formats:
+#    - Use ISO 8601 format (YYYY-MM-DD) for consistency and sorting
+#    - Update 'modifydate' whenever you change the handbook
+#    - Set 'next_review' to ensure regular reviews (typically annually)
+#
+# 4. Default Values:
+#    - Use "[TODO]" for fields not yet determined
+#    - The system will warn about [TODO] values but continue processing
+#    - Replace [TODO] values before publishing the handbook
+#
+# 5. File Location:
+#    - This file must be named 'meta-handbook.yaml'
+#    - Place it in the root directory of each handbook
+#    - Example: templates/de/bcm/meta-handbook.yaml
+#    - Example: templates/en/isms/meta-handbook.yaml

@@ -1,13 +1,24 @@
----
+
 Document-ID: soc1-0040
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Control Objectives
+
+**Document-ID:** [FRAMEWORK]-0040
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -23,112 +34,112 @@ This document covers:
 
 ## Control Objectives Overview
 
-### Control Objective 1: {{ source.control_objective_1_title }}
+### Control Objective 1: [TODO]
 
-**Description**: {{ source.control_objective_1_description }}
+**Description**: [TODO]
 
-**COSO Component**: {{ source.control_objective_1_coso }}
-
-**Relevance to Financial Reporting**:
-{{ source.control_objective_1_relevance }}
-
-**Control Activities**:
-1. {{ source.control_objective_1_activity_1 }}
-2. {{ source.control_objective_1_activity_2 }}
-3. {{ source.control_objective_1_activity_3 }}
-
-### Control Objective 2: {{ source.control_objective_2_title }}
-
-**Description**: {{ source.control_objective_2_description }}
-
-**COSO Component**: {{ source.control_objective_2_coso }}
+**COSO Component**: [TODO]
 
 **Relevance to Financial Reporting**:
-{{ source.control_objective_2_relevance }}
+[TODO]
 
 **Control Activities**:
-1. {{ source.control_objective_2_activity_1 }}
-2. {{ source.control_objective_2_activity_2 }}
-3. {{ source.control_objective_2_activity_3 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
 
-### Control Objective 3: {{ source.control_objective_3_title }}
+### Control Objective 2: [TODO]
 
-**Description**: {{ source.control_objective_3_description }}
+**Description**: [TODO]
 
-**COSO Component**: {{ source.control_objective_3_coso }}
+**COSO Component**: [TODO]
 
 **Relevance to Financial Reporting**:
-{{ source.control_objective_3_relevance }}
+[TODO]
 
 **Control Activities**:
-1. {{ source.control_objective_3_activity_1 }}
-2. {{ source.control_objective_3_activity_2 }}
-3. {{ source.control_objective_3_activity_3 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
 
-### Control Objective 4: {{ source.control_objective_4_title }}
+### Control Objective 3: [TODO]
 
-**Description**: {{ source.control_objective_4_description }}
+**Description**: [TODO]
 
-**COSO Component**: {{ source.control_objective_4_coso }}
+**COSO Component**: [TODO]
 
 **Relevance to Financial Reporting**:
-{{ source.control_objective_4_relevance }}
+[TODO]
 
 **Control Activities**:
-1. {{ source.control_objective_4_activity_1 }}
-2. {{ source.control_objective_4_activity_2 }}
-3. {{ source.control_objective_4_activity_3 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
 
-### Control Objective 5: {{ source.control_objective_5_title }}
+### Control Objective 4: [TODO]
 
-**Description**: {{ source.control_objective_5_description }}
+**Description**: [TODO]
 
-**COSO Component**: {{ source.control_objective_5_coso }}
+**COSO Component**: [TODO]
 
 **Relevance to Financial Reporting**:
-{{ source.control_objective_5_relevance }}
+[TODO]
 
 **Control Activities**:
-1. {{ source.control_objective_5_activity_1 }}
-2. {{ source.control_objective_5_activity_2 }}
-3. {{ source.control_objective_5_activity_3 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
+
+### Control Objective 5: [TODO]
+
+**Description**: [TODO]
+
+**COSO Component**: [TODO]
+
+**Relevance to Financial Reporting**:
+[TODO]
+
+**Control Activities**:
+1. [TODO]
+2. [TODO]
+3. [TODO]
 
 ## Mapping to COSO Components
 
 ### Control Environment
 
 Control objectives related to control environment:
-{{ source.control_environment_objectives }}
+[TODO]
 
 ### Risk Assessment
 
 Control objectives related to risk assessment:
-{{ source.risk_assessment_objectives }}
+[TODO]
 
 ### Control Activities
 
 Control objectives related to control activities:
-{{ source.control_activities_objectives }}
+[TODO]
 
 ### Information and Communication
 
 Control objectives related to information and communication:
-{{ source.information_communication_objectives }}
+[TODO]
 
 ### Monitoring Activities
 
 Control objectives related to monitoring activities:
-{{ source.monitoring_objectives }}
+[TODO]
 
 ## Control Matrix
 
 | Control Objective | COSO Component | Control Activities | Test Procedures |
 |-------------------|----------------|-------------------|-----------------|
-| {{ source.control_matrix_row_1 }} |
-| {{ source.control_matrix_row_2 }} |
-| {{ source.control_matrix_row_3 }} |
-| {{ source.control_matrix_row_4 }} |
-| {{ source.control_matrix_row_5 }} |
+| [TODO] |
+| [TODO] |
+| [TODO] |
+| [TODO] |
+| [TODO] |
 
 ## References
 
@@ -136,13 +147,5 @@ Control objectives related to monitoring activities:
 - SOC 1 Control Objectives Template (AICPA)
 
 <!-- Author notes: Ensure all control objectives are measurable and testable -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

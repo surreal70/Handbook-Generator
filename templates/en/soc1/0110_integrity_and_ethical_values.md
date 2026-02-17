@@ -1,13 +1,24 @@
----
+
 Document-ID: soc1-0110
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Integrity and Ethical Values
+
+**Document-ID:** [FRAMEWORK]-0110
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -30,19 +41,19 @@ Integrity and ethical values are essential elements of the control environment a
 
 ### Code Document
 
-**Document**: {{ source.code_of_conduct }}
+**Document**: [TODO]
 
 **Scope**: All employees, executives, board members, and contractors
 
-**Last Review**: {{ source.code_review_date }}
+**Last Review**: [TODO]
 
 ### Core Principles
 
-1. **Integrity**: {{ source.integrity_principle }}
-2. **Honesty**: {{ source.honesty_principle }}
-3. **Fairness**: {{ source.fairness_principle }}
-4. **Respect**: {{ source.respect_principle }}
-5. **Accountability**: {{ source.accountability_principle }}
+1. **Integrity**: [TODO]
+2. **Honesty**: [TODO]
+3. **Fairness**: [TODO]
+4. **Respect**: [TODO]
+5. **Accountability**: [TODO]
 
 ### Specific Standards
 
@@ -52,7 +63,7 @@ Integrity and ethical values are essential elements of the control environment a
 - Anti-corruption and bribery
 - Gifts and entertainment
 
-{{ source.business_ethics_standards }}
+[TODO]
 
 **Financial Integrity**:
 - Accurate records
@@ -60,20 +71,20 @@ Integrity and ethical values are essential elements of the control environment a
 - Fraud prevention
 - Financial reporting
 
-{{ source.financial_integrity_standards }}
+[TODO]
 
 **Privacy and Confidentiality**:
 - Protection of sensitive information
 - Privacy regulations
 - Confidentiality agreements
 
-{{ source.privacy_confidentiality_standards }}
+[TODO]
 
 ## Communication of Ethical Standards
 
 ### Communication Channels
 
-**Onboarding**: {{ source.ethics_onboarding }}
+**Onboarding**: [TODO]
 
 **Ongoing Communication**:
 - Regular training
@@ -81,9 +92,9 @@ Integrity and ethical values are essential elements of the control environment a
 - Intranet resources
 - Management communication
 
-{{ source.ongoing_ethics_communication }}
+[TODO]
 
-**Annual Certification**: {{ source.annual_ethics_certification }}
+**Annual Certification**: [TODO]
 
 ### Training Programs
 
@@ -92,21 +103,21 @@ Integrity and ethical values are essential elements of the control environment a
 - Ethical decision-making
 - Reporting procedures
 
-{{ source.initial_ethics_training }}
+[TODO]
 
 **Annual Refresher**:
 - Policy updates
 - Case studies
 - New risks and scenarios
 
-{{ source.annual_ethics_training }}
+[TODO]
 
 **Specialized Training**:
-{{ source.specialized_ethics_training }}
+[TODO]
 
 ### Training Records
 
-{{ source.training_records }}
+[TODO]
 
 ## Enforcement of Ethical Standards
 
@@ -117,14 +128,14 @@ Integrity and ethical values are essential elements of the control environment a
 - Internal audits
 - Compliance reviews
 
-{{ source.ethics_monitoring }}
+[TODO]
 
 **Indicators of Ethical Violations**:
-{{ source.ethics_violation_indicators }}
+[TODO]
 
 ### Investigation Procedures
 
-**Reporting Violations**: {{ source.violation_reporting }}
+**Reporting Violations**: [TODO]
 
 **Investigation Process**:
 1. Receipt of report
@@ -133,9 +144,9 @@ Integrity and ethical values are essential elements of the control environment a
 4. Findings and recommendations
 5. Actions and follow-up
 
-{{ source.investigation_process }}
+[TODO]
 
-**Confidentiality**: {{ source.investigation_confidentiality }}
+**Confidentiality**: [TODO]
 
 ### Disciplinary Actions
 
@@ -146,92 +157,92 @@ Integrity and ethical values are essential elements of the control environment a
 - Termination
 - Legal action
 
-{{ source.disciplinary_actions }}
+[TODO]
 
-**Escalation Process**: {{ source.disciplinary_escalation }}
+**Escalation Process**: [TODO]
 
-**Documentation**: {{ source.disciplinary_documentation }}
+**Documentation**: [TODO]
 
 ## Conflicts of Interest
 
 ### Conflict of Interest Policy
 
-**Document**: {{ source.conflict_of_interest_policy }}
+**Document**: [TODO]
 
-**Definition**: {{ source.conflict_definition }}
+**Definition**: [TODO]
 
 ### Disclosure Requirements
 
-**Disclosure Procedure**: {{ source.disclosure_procedure }}
+**Disclosure Procedure**: [TODO]
 
-**Disclosure Form**: {{ source.disclosure_form }}
+**Disclosure Form**: [TODO]
 
-**Review Process**: {{ source.disclosure_review }}
+**Review Process**: [TODO]
 
 ### Examples of Conflicts of Interest
 
-1. **Financial Interests**: {{ source.financial_conflicts }}
-2. **Business Relationships**: {{ source.business_conflicts }}
-3. **Family Relationships**: {{ source.family_conflicts }}
-4. **Outside Activities**: {{ source.outside_activities }}
+1. **Financial Interests**: [TODO]
+2. **Business Relationships**: [TODO]
+3. **Family Relationships**: [TODO]
+4. **Outside Activities**: [TODO]
 
 ### Management of Conflicts
 
-**Avoidance**: {{ source.conflict_avoidance }}
+**Avoidance**: [TODO]
 
-**Disclosure**: {{ source.conflict_disclosure }}
+**Disclosure**: [TODO]
 
-**Recusal**: {{ source.conflict_recusal }}
+**Recusal**: [TODO]
 
 ## Whistleblower Mechanisms
 
 ### Reporting Procedures
 
 **Reporting Channels**:
-- Hotline: {{ source.ethics_hotline }}
-- Email: {{ source.ethics_email }}
-- Online Portal: {{ source.ethics_portal }}
+- Hotline: [TODO]
+- Email: [TODO]
+- Online Portal: [TODO]
 - Direct report to Compliance
 
-{{ source.reporting_channels }}
+[TODO]
 
-**Anonymity**: {{ source.anonymous_reporting }}
+**Anonymity**: [TODO]
 
-**Protection from Retaliation**: {{ source.retaliation_protection }}
+**Protection from Retaliation**: [TODO]
 
 ### Processing Reports
 
-**Acknowledgment**: {{ source.report_acknowledgment }}
+**Acknowledgment**: [TODO]
 
-**Investigation Timeline**: {{ source.investigation_timeline }}
+**Investigation Timeline**: [TODO]
 
-**Feedback**: {{ source.reporter_feedback }}
+**Feedback**: [TODO]
 
 ### Whistleblower Protection
 
-**Protection Policy**: {{ source.whistleblower_protection_policy }}
+**Protection Policy**: [TODO]
 
-**Non-Retaliation Policy**: {{ source.non_retaliation_policy }}
+**Non-Retaliation Policy**: [TODO]
 
-**Legal Basis**: {{ source.legal_protections }}
+**Legal Basis**: [TODO]
 
 ## Tone at the Top
 
 ### Leadership Behavior
 
-**Management Commitment**: {{ source.management_commitment }}
+**Management Commitment**: [TODO]
 
-**Leading by Example**: {{ source.leadership_example }}
+**Leading by Example**: [TODO]
 
-**Ethical Decision-Making**: {{ source.ethical_decision_making }}
+**Ethical Decision-Making**: [TODO]
 
 ### Cultural Integration
 
-**Organizational Culture**: {{ source.ethical_culture }}
+**Organizational Culture**: [TODO]
 
-**Values Integration**: {{ source.values_integration }}
+**Values Integration**: [TODO]
 
-**Recognition of Ethical Behavior**: {{ source.ethics_recognition }}
+**Recognition of Ethical Behavior**: [TODO]
 
 ## Monitoring and Reporting
 
@@ -243,15 +254,15 @@ Integrity and ethical values are essential elements of the control environment a
 - Violation reports
 - Investigation outcomes
 
-{{ source.compliance_metrics }}
+[TODO]
 
 ### Reporting
 
-**Board Reporting**: {{ source.board_reporting }}
+**Board Reporting**: [TODO]
 
-**Management Reporting**: {{ source.management_reporting }}
+**Management Reporting**: [TODO]
 
-**External Reporting**: {{ source.external_reporting }}
+**External Reporting**: [TODO]
 
 ## References
 
@@ -261,13 +272,5 @@ Integrity and ethical values are essential elements of the control environment a
 - Dodd-Frank Whistleblower Provisions
 
 <!-- Author notes: Review code of conduct annually -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

@@ -1,11 +1,16 @@
 # Datenschutz-Folgenabschätzung (DSFA)
 
-**Dokument-ID:** 0400  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0400
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,7 +30,7 @@ Referenz: DSGVO Art. 35 (Datenschutz-Folgenabschätzung), Art. 36 (Vorherige Kon
 
 ## Zweck
 
-Dieses Dokument beschreibt den Prozess der Datenschutz-Folgenabschätzung (DSFA) bei {{ meta.organization }} gemäß Art. 35 DSGVO. Eine DSFA ist erforderlich, wenn eine Verarbeitung voraussichtlich ein hohes Risiko für die Rechte und Freiheiten natürlicher Personen zur Folge hat.
+Dieses Dokument beschreibt den Prozess der Datenschutz-Folgenabschätzung (DSFA) bei {{ meta-organisation.name }} gemäß Art. 35 DSGVO. Eine DSFA ist erforderlich, wenn eine Verarbeitung voraussichtlich ein hohes Risiko für die Rechte und Freiheiten natürlicher Personen zur Folge hat.
 
 ## Erforderlichkeit einer DSFA (Art. 35 Abs. 1)
 
@@ -304,8 +309,6 @@ Die DSFA wird überprüft, wenn:
 - **Verzeichnis der Verarbeitungstätigkeiten (Art. 30):** Dokumentation
 - **Datenschutzbeauftragter (Art. 39):** Beratungsrolle
 
----
-
 **Nächste Schritte:**
 1. Identifizieren Sie alle Verarbeitungen, die eine DSFA erfordern
 2. Führen Sie systematische DSFAs durch
@@ -313,10 +316,3 @@ Die DSFA wird überprüft, wenn:
 4. Konsultieren Sie den Datenschutzbeauftragten
 5. Überprüfen Sie DSFAs regelmäßig
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

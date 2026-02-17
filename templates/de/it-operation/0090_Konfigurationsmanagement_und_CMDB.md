@@ -1,15 +1,27 @@
 # Konfigurationsmanagement und CMDB
 
+**Dokument-ID:** [FRAMEWORK]-0090
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Übersicht
 
 Dieses Dokument beschreibt das Konfigurationsmanagement und die Configuration Management Database (CMDB) für den IT-Service. Es definiert CI-Kategorien, Attribute, Beziehungen und Change-Prozesse für Configuration Items.
 
-**Service:** {{ meta.service_name }}  
-**Verantwortlich:** {{ meta.it_operations_manager.name }}  
+**Service:** {{ meta-handbook.service_name }}  
+**Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}  
 **CMDB-System:** NetBox  
-**Stand:** {{ meta.document.version }}
-
----
+**Stand:** {{ meta-handbook.revision }}
 
 ## Konfigurationsmanagement-Prozess
 
@@ -29,16 +41,14 @@ Dieses Dokument beschreibt das Konfigurationsmanagement und die Configuration Ma
 4. **Status Accounting:** Erfassung und Reporting des CI-Status
 5. **Verification and Audit:** Überprüfung der CMDB-Datenqualität
 
----
-
 ## Configuration Management Database (CMDB)
 
 ### CMDB-System: NetBox
 
 **NetBox-Instanz:**
 - **URL:** {{ netbox.url }}
-- **Version:** {{ netbox.version }}
-- **Verantwortlich:** {{ meta.it_operations_manager.name }}
+- **Version:** [TODO]
+- **Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
 
 **NetBox-Funktionen:**
 - IP Address Management (IPAM)
@@ -69,8 +79,6 @@ Dieses Dokument beschreibt das Konfigurationsmanagement und die Configuration Ma
 │                                                              │
 └─────────────────────────────────────────────────────────────┘
 ```
-
----
 
 ## CI-Kategorien und Attribute
 
@@ -195,8 +203,6 @@ Dieses Dokument beschreibt das Konfigurationsmanagement und die Configuration Ma
 - **Status:** Active, Planned, Retired
 - **Kontakt:** {{ netbox.site.contact_name }}
 
----
-
 ## CI-Beziehungen
 
 ### Beziehungstypen
@@ -257,8 +263,6 @@ Dieses Dokument beschreibt das Konfigurationsmanagement und die Configuration Ma
 | Virtual Machine | Hypervisor Cluster | hosted on |
 | Hypervisor Cluster | Physical Servers | consists of |
 | Physical Servers | Network Switch | connected to |
-
----
 
 ## Change-Prozesse für CIs
 
@@ -350,8 +354,6 @@ Dieses Dokument beschreibt das Konfigurationsmanagement und die Configuration Ma
 | **IP-Adressen** | Network Administrator | Standard Change |
 | **Virtuelle Maschinen** | Virtualization Admin | Standard Change |
 
----
-
 ## CMDB-Datenqualität
 
 ### Datenqualitäts-Metriken
@@ -370,7 +372,7 @@ Dieses Dokument beschreibt das Konfigurationsmanagement und die Configuration Ma
 - **Frequenz:** Quartalsweise
 - **Umfang:** Stichprobe von 10% aller CIs
 - **Methode:** Vergleich CMDB-Daten mit tatsächlichem Zustand
-- **Verantwortlich:** {{ meta.it_operations_manager.name }}
+- **Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
 
 #### Automatische Validierung
 - **Discovery-Tools:** Automatische Erkennung von Geräten und Software
@@ -383,8 +385,6 @@ Dieses Dokument beschreibt das Konfigurationsmanagement und die Configuration Ma
 - **Prozess:** Manuelle Überprüfung betroffener CIs
 - **Dokumentation:** Änderungen dokumentieren
 - **Genehmigung:** Durch IT Operations Manager
-
----
 
 ## CMDB-Zugriff und Berechtigungen
 
@@ -401,12 +401,10 @@ Dieses Dokument beschreibt das Konfigurationsmanagement und die Configuration Ma
 
 ### Zugriffskontrolle
 
-**CMDB-Administrator:** {{ meta.it_operations_manager.name }}  
+**CMDB-Administrator:** {{ meta-organisation-roles.role_it_operations_manager.name }}  
 **Zugriff über:** {{ netbox.url }}  
 **Authentifizierung:** SSO/LDAP  
 **Audit-Logging:** Alle Änderungen werden protokolliert
-
----
 
 ## CMDB-Integration
 
@@ -428,8 +426,6 @@ Dieses Dokument beschreibt das Konfigurationsmanagement und die Configuration Ma
 - **Authentifizierung:** API Token
 - **Dokumentation:** {{ netbox.url }}/api/docs/
 - **Rate Limiting:** [TODO: z.B. 1000 Requests/Stunde]
-
----
 
 ## CMDB-Reporting
 
@@ -467,8 +463,6 @@ Dieses Dokument beschreibt das Konfigurationsmanagement und die Configuration Ma
 - Risikobewertung
 - Rollback-Plan
 
----
-
 ## CMDB-Wartung
 
 ### Wartungsaktivitäten
@@ -496,8 +490,6 @@ Dieses Dokument beschreibt das Konfigurationsmanagement und die Configuration Ma
 - [ ] Datenqualitäts-Review
 - [ ] Prozess-Review
 - [ ] Training für CMDB-Nutzer
-
----
 
 ## Best Practices
 
@@ -528,32 +520,21 @@ Dieses Dokument beschreibt das Konfigurationsmanagement und die Configuration Ma
 - Format: `[Standort]-[Typ]-[Funktion]-[Nummer]`
 - Beispiel: `MUC-SW-CORE-001`
 
----
-
 ## Kontakte
 
 **CMDB-Verantwortliche:**
-- **CMDB Administrator:** {{ meta.it_operations_manager.name }} - {{ meta.it_operations_manager.email }}
+- **CMDB Administrator:** {{ meta-organisation-roles.role_it_operations_manager.name }} - {{ meta-organisation-roles.role_it_operations_manager.email }}
 - **Network Administrator:** [TODO: Name] - [TODO: E-Mail]
 - **Server Administrator:** [TODO: Name] - [TODO: E-Mail]
-- **CIO:** {{ meta.cio.name }} - {{ meta.cio.email }}
+- **CIO:** {{ meta-organisation-roles.role_cio.name }} - {{ meta-organisation-roles.role_cio.email }}
 
 **NetBox-Support:**
 - **URL:** {{ netbox.url }}
 - **Dokumentation:** {{ netbox.url }}/docs/
 - **Support:** [TODO: Support-Kontakt]
 
----
+**Dokumentverantwortlicher:** {{ meta-handbook.owner }}  
+**Genehmigt durch:** {{ meta-handbook.approver }}  
+**Version:** {{ meta-handbook.revision }}  
+**Organisation:** {{ meta-organisation.name }}
 
-**Dokumentverantwortlicher:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Organisation:** {{ meta.organization.name }}
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

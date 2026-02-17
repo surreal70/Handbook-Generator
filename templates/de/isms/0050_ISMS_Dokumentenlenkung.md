@@ -1,5 +1,19 @@
 # Dokumentenlenkung / Dokumentierte Information
 
+**Dokument-ID:** 0050
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This document defines how ISMS documentation is controlled, including creation,
@@ -9,21 +23,9 @@ ensures that the right people have access to the right information at the right 
 ISO 27001:2022 Reference: Clause 7.5 - Documented information
 -->
 
-**Dokument-ID:** 0050  
-**Dokumenttyp:** ISMS-Grundlagendokument  
-**Standard-Referenz:** ISO/IEC 27001:2022 Clause 7.5  
-**Owner:** {{ meta.ciso.name }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
-
----
-
 ## 1. Zweck und Geltungsbereich
 
-Dieses Dokument definiert die Anforderungen an die Lenkung dokumentierter Informationen im Rahmen des ISMS der **{{ meta.organization.name }}**. Es stellt sicher, dass:
+Dieses Dokument definiert die Anforderungen an die Lenkung dokumentierter Informationen im Rahmen des ISMS der **{{ meta-organisation.name }}**. Es stellt sicher, dass:
 - Dokumente verfügbar und geeignet für die Verwendung sind
 - Dokumente angemessen geschützt werden
 - Dokumente kontrolliert erstellt, geprüft, genehmigt und aktualisiert werden
@@ -257,11 +259,11 @@ Das Dokumentenregister ist die zentrale Übersicht aller ISMS-Dokumente.
 
 | Dokument-ID | Dokumenttitel | Owner | Status | Version | Letzte Änderung | Nächster Review |
 |-------------|---------------|-------|--------|---------|-----------------|-----------------|
-| 0010 | ISMS-Leitlinie | {{ meta.ciso.name }} | Freigegeben | 1.0 | {{ meta.document.date }} | {{ meta.document.next_review }} |
-| 0020 | ISMS-Geltungsbereich | {{ meta.ciso.name }} | Freigegeben | 1.0 | {{ meta.document.date }} | {{ meta.document.next_review }} |
-| 0030 | Kontext und Stakeholder | {{ meta.ciso.name }} | Freigegeben | 1.0 | {{ meta.document.date }} | {{ meta.document.next_review }} |
-| 0040 | ISMS-Governance | {{ meta.ciso.name }} | Freigegeben | 1.0 | {{ meta.document.date }} | {{ meta.document.next_review }} |
-| 0050 | Dokumentenlenkung | {{ meta.ciso.name }} | Freigegeben | 1.0 | {{ meta.document.date }} | {{ meta.document.next_review }} |
+| 0010 | ISMS-Leitlinie | {{ meta.ciso.name }} | Freigegeben | 1.0 | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
+| 0020 | ISMS-Geltungsbereich | {{ meta.ciso.name }} | Freigegeben | 1.0 | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
+| 0030 | Kontext und Stakeholder | {{ meta.ciso.name }} | Freigegeben | 1.0 | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
+| 0040 | ISMS-Governance | {{ meta.ciso.name }} | Freigegeben | 1.0 | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
+| 0050 | Dokumentenlenkung | {{ meta.ciso.name }} | Freigegeben | 1.0 | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
 | ... | ... | ... | ... | ... | ... | ... |
 
 [TODO: Vollständiges Dokumentenregister erstellen und pflegen]
@@ -334,18 +336,9 @@ Siehe `0580_Policy_Aufbewahrung_und_Loeschung.md` für Details.
 - **ISO/IEC 27001:2022** - Clause 7.5: Documented information
 - **ISO/IEC 27002:2022** - Control 5.1: Policies for information security
 
----
-
 **Genehmigt durch:**  
 {{ meta.ciso.name }}, CISO  
-Datum: {{ meta.document.approval_date }}
+Datum: {{ meta-handbook.modifydate }}
 
-**Nächster Review:** {{ meta.document.next_review }}
+**Nächster Review:** {{ meta-handbook.next_review }}
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

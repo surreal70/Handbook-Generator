@@ -1,17 +1,28 @@
----
+
 Document-ID: coso-0010
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # COSO Framework Übersicht
 
+**Dokument-ID:** [FRAMEWORK]-0010
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument bietet einen Überblick über das COSO Internal Control - Integrated Framework und dessen Anwendung in der Organisation {{ source.organization_name }}.
+Dieses Dokument bietet einen Überblick über das COSO Internal Control - Integrated Framework und dessen Anwendung in der Organisation [TODO].
 
 ## Geltungsbereich
 
@@ -88,11 +99,11 @@ Laufende und separate Bewertungen ermöglichen es, festzustellen, ob die Kompone
 - Prinzip 16: Laufende und separate Bewertungen
 - Prinzip 17: Bewertung und Kommunikation von Mängeln
 
-## Anwendung in {{ source.organization_name }}
+## Anwendung in [TODO]
 
 ### Implementierungsansatz
 
-{{ source.implementation_approach }}
+[TODO]
 
 ### Organisatorische Verantwortlichkeiten
 
@@ -168,11 +179,11 @@ Eine interne Kontrolle gilt als wirksam, wenn:
 
 ### Bewertungsprozess
 
-{{ source.assessment_process }}
+[TODO]
 
 ### Dokumentation
 
-{{ source.documentation_requirements }}
+[TODO]
 
 ## Kontinuierliche Verbesserung
 
@@ -186,7 +197,7 @@ Eine interne Kontrolle gilt als wirksam, wenn:
 
 ### Lessons Learned
 
-{{ source.lessons_learned }}
+[TODO]
 
 ## Referenzen
 
@@ -196,12 +207,3 @@ Eine interne Kontrolle gilt als wirksam, wenn:
 
 <!-- Hinweise für Autoren: Passen Sie die organisationsspezifischen Abschnitte an Ihre Implementierung an -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

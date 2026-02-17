@@ -1,11 +1,16 @@
 # Breach Register (Verzeichnis der Datenschutzverletzungen)
 
-**Dokument-ID:** 0630  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Template  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0630
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -24,7 +29,7 @@ Referenz: DSGVO Art. 33 Abs. 5 (Dokumentationspflicht)
 
 ## Zweck
 
-Dieses Register dokumentiert alle Datenschutzverletzungen bei {{ meta.organization }} gemäß Art. 33 Abs. 5 DSGVO. Es dient der Rechenschaftspflicht und ermöglicht der Aufsichtsbehörde die Überprüfung der Einhaltung der Meldepflichten.
+Dieses Register dokumentiert alle Datenschutzverletzungen bei {{ meta-organisation.name }} gemäß Art. 33 Abs. 5 DSGVO. Es dient der Rechenschaftspflicht und ermöglicht der Aufsichtsbehörde die Überprüfung der Einhaltung der Meldepflichten.
 
 ## Verantwortlichkeiten
 
@@ -35,8 +40,6 @@ Dieses Register dokumentiert alle Datenschutzverletzungen bei {{ meta.organizati
 ## Aufbewahrungsfrist
 
 **Mindestens 3 Jahre** nach Abschluss des Vorfalls
-
----
 
 ## Breach Register
 
@@ -177,8 +180,6 @@ Dieses Register dokumentiert alle Datenschutzverletzungen bei {{ meta.organizati
 | **Freigabe Datenschutzbeauftragter** | [ ] Ja - Datum: [TODO] |
 | **Freigabe Geschäftsführung** | [ ] Ja - Datum: [TODO] |
 
----
-
 ## Statistik und Übersicht
 
 ### Jahresübersicht [YYYY]
@@ -221,8 +222,6 @@ Dieses Register dokumentiert alle Datenschutzverletzungen bei {{ meta.organizati
 
 [TODO: Analyse von Trends, häufigen Ursachen, Verbesserungspotenzial]
 
----
-
 ## Zugriffskontrolle
 
 ### Zugriffsprotokoll
@@ -230,8 +229,6 @@ Dieses Register dokumentiert alle Datenschutzverletzungen bei {{ meta.organizati
 | Datum | Benutzer | Aktion | Breach-ID |
 |-------|----------|--------|-----------|
 | [TODO] | [TODO] | [TODO: Ansicht/Bearbeitung/Export] | [TODO] |
-
----
 
 ## Audit-Trail
 
@@ -241,18 +238,9 @@ Dieses Register dokumentiert alle Datenschutzverletzungen bei {{ meta.organizati
 |-------|----------|-----------|----------|------------|
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
----
-
 **Hinweise:**
 - Dieses Register ist vertraulich und darf nur autorisierten Personen zugänglich gemacht werden
 - Alle Einträge müssen vollständig und wahrheitsgemäß sein
 - Das Register muss bei Audits und auf Anfrage der Aufsichtsbehörde vorgelegt werden können
 - Regelmäßige Überprüfung und Aktualisierung erforderlich
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

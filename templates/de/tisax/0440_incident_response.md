@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0440
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Incident Response
+
+**Dokument-ID:** [FRAMEWORK]-0440
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -15,7 +26,7 @@ Dieses Dokument beschreibt die Incident Response Maßnahmen gemäß TISAX-Anford
 
 ## Geltungsbereich
 
-Dieses Dokument gilt für alle Sicherheitsvorfälle in {{ source.organization_name }}.
+Dieses Dokument gilt für alle Sicherheitsvorfälle in [TODO].
 
 ## Incident Response Team
 
@@ -153,17 +164,8 @@ Dieses Dokument adressiert:
 
 ## Kennzahlen
 
-{{ source.organization_name }} misst:
+[TODO] misst:
 - Durchschnittliche Response-Zeit
 - Erfolgsrate der Wiederherstellung
 - Anzahl eskalierter Incidents
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

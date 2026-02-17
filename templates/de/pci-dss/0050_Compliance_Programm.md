@@ -1,13 +1,16 @@
 # Compliance-Programm
 
-**Dokument-ID:** PCI-0050  
-**Organisation:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** PCI-0050
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,7 +28,7 @@ Customization required:
 
 ## 1. Zweck
 
-Dieses Dokument beschreibt das PCI-DSS-Compliance-Programm der {{ meta.organization.name }}.
+Dieses Dokument beschreibt das PCI-DSS-Compliance-Programm der {{ meta-organisation.name }}.
 
 ### 1.1 Ziele
 
@@ -39,7 +42,7 @@ Dieses Dokument beschreibt das PCI-DSS-Compliance-Programm der {{ meta.organizat
 ### 2.1 Governance-Struktur
 
 **PCI-DSS Steering Committee:**
-- **Vorsitz:** {{ meta.roles.ciso.name }}
+- **Vorsitz:** {{ meta-organisation-roles.role_CISO }}
 - **Mitglieder:** CEO, CIO, PCI Program Manager, Legal, Operations Manager
 - **Frequenz:** Quartalsweise
 - **Zweck:** Strategische Entscheidungen, Budget, Risikobewertung
@@ -53,12 +56,12 @@ Dieses Dokument beschreibt das PCI-DSS-Compliance-Programm der {{ meta.organizat
 ### 2.2 Management-Commitment
 
 **Informationssicherheitsrichtlinie:**
-- Genehmigt durch: {{ meta.roles.ceo.name }}
+- Genehmigt durch: {{ meta-organisation-roles.role_CEO }}
 - Datum: [TODO: Datum]
 - Jährliche Überprüfung: [TODO: Monat]
 
 **PCI-DSS-Verpflichtung:**
-{{ meta.organization.name }} verpflichtet sich zur Einhaltung aller PCI-DSS-Anforderungen zum Schutz von Karteninhaberdaten.
+{{ meta-organisation.name }} verpflichtet sich zur Einhaltung aller PCI-DSS-Anforderungen zum Schutz von Karteninhaberdaten.
 
 ## 3. Compliance-Aktivitäten
 
@@ -96,7 +99,6 @@ Dieses Dokument beschreibt das PCI-DSS-Compliance-Programm der {{ meta.organizat
 | Log-Überprüfung | IT Security | Täglich |
 | Incident Monitoring | SOC | 24/7 |
 | Backup-Überprüfung | System Admin | Täglich |
-
 
 ## 4. Compliance-Metriken und KPIs
 
@@ -274,13 +276,5 @@ Dieses Dokument beschreibt das PCI-DSS-Compliance-Programm der {{ meta.organizat
 |----------|-----------|----------------|-----------|--------|
 | [TODO: Tokenisierung] | Hoch | IT Security | [TODO] | In Arbeit |
 | [TODO: SIEM-Upgrade] | Mittel | IT Security | [TODO] | Geplant |
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 <!-- End of template -->

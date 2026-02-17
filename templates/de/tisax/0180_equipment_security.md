@@ -1,17 +1,28 @@
----
+
 Document-ID: tisax-0250
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Gerätesicherheit
 
+**Dokument-ID:** [FRAMEWORK]-0180
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt die Sicherheitsmaßnahmen für Geräte bei {{ source.organization_name }}.
+Dieses Dokument beschreibt die Sicherheitsmaßnahmen für Geräte bei [TODO].
 
 ## Geräteschutz
 
@@ -55,12 +66,3 @@ Dieses Dokument beschreibt die Sicherheitsmaßnahmen für Geräte bei {{ source.
 
 <!-- Hinweis: Stellen Sie sichere Entsorgungsprozesse sicher -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

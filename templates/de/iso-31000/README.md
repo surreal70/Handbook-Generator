@@ -93,16 +93,16 @@ Die Vorlagen sind thematisch organisiert und verwenden ein numerisches Präfix-S
 Die Vorlagen verwenden Platzhalter für organisationsspezifische Daten:
 
 ### Metadaten-Platzhalter
-- `{{ meta.owner }}` - Dokumentenverantwortlicher
-- `{{ meta.version }}` - Versionsnummer
-- `{{ meta.date }}` - Datum
-- `{{ meta.organization }}` - Organisationsname
-- `{{ meta.ceo }}` - Name des CEO
-- `{{ meta.cro }}` - Name des Chief Risk Officer
+- `{{ meta-handbook.owner }}` - Dokumentenverantwortlicher
+- `{{ meta-handbook.revision }}` - Versionsnummer
+- `{{ meta-handbook.modifydate }}` - Datum
+- `{{ meta-organisation.name }}` - Organisationsname
+- `{{ meta-organisation-roles.role_CEO }}` - Name des CEO
+- `{{ meta-organisation-roles.role_Risk_Manager }}` - Name des Chief Risk Officer
 
 ### Datenquellen-Platzhalter
-- `{{ source.organization_name }}` - Organisationsname aus Datenquelle
-- `{{ source.author }}` - Autor aus Datenquelle
+- `[TODO]` - Organisationsname aus Datenquelle
+- `[TODO]` - Autor aus Datenquelle
 - Weitere organisationsspezifische Felder
 
 ## Anpassung der Vorlagen

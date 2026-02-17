@@ -1,14 +1,16 @@
 # Protection Needs Assessment (Template)
 
-**Document ID:** 0060  
-**Document Type:** Methodology Artifact  
-**Reference Framework:** BSI IT-Grundschutz (BSI Standard 200-2)  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** {{ meta.document.status }}  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.document.last_updated }}  
-**Next Review:** {{ meta.document.next_review }}
+**Document-ID:** [FRAMEWORK]-0060
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -21,7 +23,7 @@ Reference: BSI Standard 200-2 (Chapter 6: Protection Requirements Determination)
 
 ## 1. Objective and Purpose
 
-The protection needs assessment systematically determines the protection requirements for business processes, information, applications, and IT systems of **{{ meta.organization.name }}**. It forms the basis for:
+The protection needs assessment systematically determines the protection requirements for business processes, information, applications, and IT systems of **{{ meta-organisation.name }}**. It forms the basis for:
 - Selection of appropriate security measures
 - Prioritization of security investments
 - Risk analysis (Document 0090)
@@ -164,7 +166,7 @@ Start with business processes, then derive requirements for applications and sys
 | Room ID | Room/Location | Systems | C | I | A | Justification | Overall Protection Need |
 |---|---|---|---|---|---|---|---|
 | R-001 | Data Center | All critical servers | Very High | Very High | Very High | Hosting critical systems | Very High |
-| R-002 | {{ meta.organization.primary_location }} | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
+| R-002 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 **Total Number of Rooms:** [TODO]
 
@@ -279,28 +281,18 @@ The protection needs assessment is updated when:
 - At least annually as part of the ISMS review
 
 **Responsible:** {{ meta.ciso.name }} (ISB)  
-**Next Review:** {{ meta.document.next_review }}
+**Next Review:** {{ meta-handbook.next_review }}
 
 ## 9. Approval
 
 | Role | Name | Date | Approval |
 |---|---|---|---|
-| ISB | {{ meta.ciso.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| IT Management | {{ meta.cio.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| Executive Management | {{ meta.ceo.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| IT Management | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| Executive Management | {{ meta.ceo.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **References:**
 - BSI Standard 200-2: IT-Grundschutz Methodology (Chapter 6: Protection Needs Assessment)
 - BSI IT-Grundschutz Compendium
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
 
 <!-- End of template -->

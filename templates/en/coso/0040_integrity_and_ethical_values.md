@@ -1,17 +1,28 @@
----
+
 Document-ID: coso-0040
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Integrity and Ethical Values
 
+**Document-ID:** [FRAMEWORK]-0040
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document describes how {{ source.organization_name }} promotes and maintains integrity and ethical values (COSO Principle 1).
+This document describes how [TODO] promotes and maintains integrity and ethical values (COSO Principle 1).
 
 ## Scope
 
@@ -24,84 +35,76 @@ This document describes how {{ source.organization_name }} promotes and maintain
 
 ### Core Principles
 
-{{ source.code_principles }}
+[TODO]
 
 ### Applicability
 
-**Applies to**: {{ source.code_applicability }}
+**Applies to**: [TODO]
 
 ### Core Themes
 
-1. **Integrity**: {{ source.integrity_definition }}
-2. **Honesty**: {{ source.honesty_definition }}
-3. **Fairness**: {{ source.fairness_definition }}
-4. **Respect**: {{ source.respect_definition }}
+1. **Integrity**: [TODO]
+2. **Honesty**: [TODO]
+3. **Fairness**: [TODO]
+4. **Respect**: [TODO]
 
 ## Ethical Standards
 
 ### Business Ethics
 
-{{ source.business_ethics }}
+[TODO]
 
 ### Stakeholder Relations
 
-**Customers**: {{ source.customer_ethics }}
-**Suppliers**: {{ source.supplier_ethics }}
-**Employees**: {{ source.employee_ethics }}
-**Society**: {{ source.society_ethics }}
+**Customers**: [TODO]
+**Suppliers**: [TODO]
+**Employees**: [TODO]
+**Society**: [TODO]
 
 ## Conflicts of Interest
 
 ### Definition
 
-{{ source.conflict_of_interest_definition }}
+[TODO]
 
 ### Disclosure Requirements
 
-{{ source.disclosure_requirements }}
+[TODO]
 
 ### Approval Process
 
-{{ source.approval_process }}
+[TODO]
 
 ## Communication
 
 ### Communication Channels
 
-{{ source.communication_channels }}
+[TODO]
 
 ### Training Program
 
-**New Employees**: {{ source.onboarding_training }}
-**Annual Refresher**: {{ source.annual_training }}
-**Leadership**: {{ source.leadership_training }}
+**New Employees**: [TODO]
+**Annual Refresher**: [TODO]
+**Leadership**: [TODO]
 
 ## Enforcement
 
 ### Reporting Channels
 
-{{ source.reporting_channels }}
+[TODO]
 
 ### Whistleblower Protection
 
-{{ source.whistleblower_protection }}
+[TODO]
 
 ### Disciplinary Actions
 
-{{ source.disciplinary_actions }}
+[TODO]
 
 ## References
 
-- Code of Conduct {{ source.organization_name }}
+- Code of Conduct [TODO]
 - Compliance Policy
 - Whistleblower Policy
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

@@ -1,5 +1,19 @@
 # Kontinuierliche Verbesserung (KVP) im ISMS
 
+**Dokument-ID:** 0160
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This document defines the continuous improvement process for the ISMS. It ensures
@@ -9,23 +23,11 @@ requirements, and new opportunities.
 ISO 27001:2022 Reference: Clause 10.2 - Continual improvement
 -->
 
-**Dokument-ID:** 0160  
-**Dokumenttyp:** ISMS-Grundlagendokument  
-**Standard-Referenz:** ISO/IEC 27001:2022 Clause 10.2  
-**Owner:** {{ meta.ciso.name }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
-
----
-
 ## 1. Zweck und Ziele
 
 ### 1.1 Zweck
 
-Das Programm zur kontinuierlichen Verbesserung (KVP) der **{{ meta.organization.name }}** stellt sicher, dass:
+Das Programm zur kontinuierlichen Verbesserung (KVP) der **{{ meta-organisation.name }}** stellt sicher, dass:
 - Das ISMS kontinuierlich verbessert wird
 - Verbesserungspotenziale systematisch identifiziert werden
 - Verbesserungsmaßnahmen priorisiert und umgesetzt werden
@@ -457,19 +459,10 @@ Priorität = (Risikoreduktion × 0,4) + (Compliance × 0,2) +
 - **ISO 9001:2015** - Clause 10.3: Continual improvement
 - **NIST Cybersecurity Framework** - Continuous improvement practices
 
----
-
 **Genehmigt durch:**  
 {{ meta.ciso.name }}, CISO  
 {{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+Datum: {{ meta-handbook.modifydate }}
 
-**Nächster Review:** {{ meta.document.next_review }}
+**Nächster Review:** {{ meta-handbook.next_review }}
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

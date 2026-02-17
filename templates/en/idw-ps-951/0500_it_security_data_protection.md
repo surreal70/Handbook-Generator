@@ -1,11 +1,16 @@
 # IT Security and Data Protection
 
-**Document-ID:** idw-ps-951-0500  
-**Owner:** {{ meta.audit_lead }}  
-**Version:** {{ meta.version }}  
-**Status:** {{ meta.status }}  
-**Classification:** {{ meta.classification }}  
-**Last Update:** {{ meta.date }}
+**Document-ID:** idw-ps-951-0500
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -16,15 +21,15 @@ This document describes the audit of IT security and data protection as part of 
 ## 2. Audit Subject
 
 ### IT Security
-- **Security Strategy:** {{ source.security_strategy }}
-- **Access Control:** {{ source.access_control }}
-- **Encryption:** {{ source.encryption }}
-- **Security Monitoring:** {{ source.security_monitoring }}
+- **Security Strategy:** [TODO]
+- **Access Control:** [TODO]
+- **Encryption:** [TODO]
+- **Security Monitoring:** [TODO]
 
 ### Data Protection
-- **GDPR Compliance:** {{ source.gdpr_compliance }}
-- **Privacy Controls:** {{ source.privacy_controls }}
-- **Privacy by Design:** {{ source.privacy_by_design }}
+- **GDPR Compliance:** [TODO]
+- **Privacy Controls:** [TODO]
+- **Privacy by Design:** [TODO]
 
 ### Audit Objectives
 - Assessment of IT security strategy
@@ -52,53 +57,53 @@ This document describes the audit of IT security and data protection as part of 
 ### IT Security
 | Criterion | Requirement | Current State | Assessment |
 |-----------|-------------|---------------|------------|
-| Access Control | Implemented | {{ source.access_status }} | {{ source.access_assessment }} |
-| Encryption | For sensitive data | {{ source.encryption_status }} | {{ source.encryption_assessment }} |
-| Security Monitoring | 24/7 | {{ source.monitoring_status }} | {{ source.monitoring_assessment }} |
-| Vulnerability Management | Established | {{ source.vuln_mgmt_status }} | {{ source.vuln_mgmt_assessment }} |
+| Access Control | Implemented | [TODO] | [TODO] |
+| Encryption | For sensitive data | [TODO] | [TODO] |
+| Security Monitoring | 24/7 | [TODO] | [TODO] |
+| Vulnerability Management | Established | [TODO] | [TODO] |
 
 ### Data Protection
 | Criterion | Requirement | Current State | Assessment |
 |-----------|-------------|---------------|------------|
-| GDPR Compliance | Complete | {{ source.gdpr_status }} | {{ source.gdpr_assessment }} |
-| Privacy Controls | Implemented | {{ source.privacy_ctrl_status }} | {{ source.privacy_ctrl_assessment }} |
-| Privacy by Design | Considered | {{ source.privacy_design_status }} | {{ source.privacy_design_assessment }} |
+| GDPR Compliance | Complete | [TODO] | [TODO] |
+| Privacy Controls | Implemented | [TODO] | [TODO] |
+| Privacy by Design | Considered | [TODO] | [TODO] |
 
 ## 5. Risk Analysis
 
 ### Security Risks
 | Risk | Description | Impact | Likelihood | Risk Level |
 |------|-------------|--------|------------|------------|
-| {{ source.sec_risk_1_id }} | {{ source.sec_risk_1_desc }} | {{ source.sec_risk_1_impact }} | {{ source.sec_risk_1_likelihood }} | {{ source.sec_risk_1_level }} |
-| {{ source.sec_risk_2_id }} | {{ source.sec_risk_2_desc }} | {{ source.sec_risk_2_impact }} | {{ source.sec_risk_2_likelihood }} | {{ source.sec_risk_2_level }} |
+| [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ### Privacy Risks
 | Risk | Description | Impact | Likelihood | Risk Level |
 |------|-------------|--------|------------|------------|
-| {{ source.priv_risk_1_id }} | {{ source.priv_risk_1_desc }} | {{ source.priv_risk_1_impact }} | {{ source.priv_risk_1_likelihood }} | {{ source.priv_risk_1_level }} |
+| [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## 6. Findings
 
 ### Positive Findings
-1. {{ source.positive_finding_1 }}
-2. {{ source.positive_finding_2 }}
+1. [TODO]
+2. [TODO]
 
 ### Improvement Opportunities
-1. {{ source.improvement_1 }}
-2. {{ source.improvement_2 }}
+1. [TODO]
+2. [TODO]
 
 ### Critical Findings
-1. {{ source.critical_finding_1 }}
+1. [TODO]
 
 ## 7. Recommendations
 
 ### IT Security
-1. {{ source.security_recommendation_1 }}
-2. {{ source.security_recommendation_2 }}
+1. [TODO]
+2. [TODO]
 
 ### Data Protection
-1. {{ source.privacy_recommendation_1 }}
-2. {{ source.privacy_recommendation_2 }}
+1. [TODO]
+2. [TODO]
 
 ## 8. Evidence
 
@@ -117,18 +122,9 @@ This document describes the audit of IT security and data protection as part of 
 - GDPR (EU 2016/679)
 - BSI IT-Grundschutz
 
----
-
 **Approved by:**  
-{{ meta.audit_lead }}, Audit Lead  
-Date: {{ meta.approval_date }}
+{{ meta-organisation-roles.role_Internal_Auditor }}, Audit Lead  
+Date: {{ meta-handbook.valid_from }}
 
-**Next Review:** {{ meta.next_review }}
+**Next Review:** {{ meta-handbook.next_review }}
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |

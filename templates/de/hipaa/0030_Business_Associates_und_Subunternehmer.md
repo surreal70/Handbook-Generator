@@ -1,13 +1,16 @@
 # Business Associates und Subunternehmer
 
-**Dokument-ID:** HIPAA-0030  
-**Organisation:** {{ meta.organization.name }}  
-**Verantwortlich:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Entwurf / In Prüfung / Genehmigt  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** HIPAA-0030
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,7 +28,7 @@ Erforderliche Anpassungen:
 
 ## 1. Zweck
 
-Dieses Dokument identifiziert und verwaltet alle Business Associate-Beziehungen für {{ meta.organization.name }} und stellt die Einhaltung der HIPAA Business Associate-Anforderungen sicher.
+Dieses Dokument identifiziert und verwaltet alle Business Associate-Beziehungen für {{ meta-organisation.name }} und stellt die Einhaltung der HIPAA Business Associate-Anforderungen sicher.
 
 ### 1.1 Zielsetzungen
 
@@ -334,20 +337,11 @@ Ein Business Associate ist eine Person oder Entität, die:
 
 **Aufbewahrungsfrist:** [TODO: 6 Jahre ab Erstellung oder letztem Gültigkeitsdatum]
 
----
-
 **Dokumentenhistorie:**
 
 | Version | Datum | Autor | Änderungen |
 |---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Ersterstellung |
+| 0.1 | {{ meta-handbook.modifydate }} | {{ meta-handbook.author }} | Ersterstellung |
 
 <!-- Ende der Vorlage -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

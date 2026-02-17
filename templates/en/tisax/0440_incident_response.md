@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0440
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Incident Response
+
+**Document-ID:** [FRAMEWORK]-0440
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -15,7 +26,7 @@ This document describes incident response measures according to TISAX requiremen
 
 ## Scope
 
-This document applies to all security incidents at {{ source.organization_name }}.
+This document applies to all security incidents at [TODO].
 
 ## Incident Response Team
 
@@ -135,17 +146,9 @@ This document applies to all security incidents at {{ source.organization_name }
 
 ## Metrics
 
-{{ source.organization_name }} measures:
+[TODO] measures:
 - Average response time
 - Recovery success rate
 - Number of escalated incidents
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

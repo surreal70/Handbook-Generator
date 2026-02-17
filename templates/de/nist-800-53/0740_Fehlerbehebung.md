@@ -1,13 +1,16 @@
 # Fehlerbehebung
 
-**Dokument-ID:** NIST-0740  
-**Kontrollfamilie:** System- und Informationsintegrität (SI)  
-**Kontrollen:** SI-2, SI-5  
-**Organisation:** {{ meta.organization.name }}  
-**Verantwortlich:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Entwurf / In Prüfung / Genehmigt  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** NIST-0740
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -66,20 +69,11 @@ Die Organisation empfängt Sicherheitswarnungen, -hinweise und -anweisungen und 
 **Bewertungsstatus:** [TODO: Erfüllt / Nicht erfüllt / Nicht zutreffend]  
 **Feststellungen:** [TODO: Beschreibung]  
 
----
-
 **Dokumentenhistorie:**
 
 | Version | Datum | Autor | Änderungen |
 |---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Ersterstellung |
+| 0.1 | {{ meta-handbook.modifydate }} | {{ meta-handbook.author }} | Ersterstellung |
 
 <!-- Ende des Templates -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

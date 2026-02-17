@@ -135,12 +135,6 @@ Test categories (for --check tests):
     )
     
     parser.add_argument(
-        '--show-trends',
-        action='store_true',
-        help='Show trend analysis comparing with previous run'
-    )
-    
-    parser.add_argument(
         '--interactive', '-i',
         action='store_true',
         help='Enable interactive mode for handling failed tests'
@@ -179,7 +173,6 @@ def run_quality_control(
     export_json: Optional[str],
     export_csv: Optional[str],
     save_metrics: bool,
-    show_trends: bool,
     interactive: bool,
     save_tasks: Optional[str],
     show_remediation: bool,
@@ -197,7 +190,6 @@ def run_quality_control(
         export_json: Path to export metrics as JSON (None to skip)
         export_csv: Path to export metrics as CSV (None to skip)
         save_metrics: Whether to save metrics to history file
-        show_trends: Whether to show trend analysis
         interactive: Enable interactive mode for failed tests
         save_tasks: Path to save created tasks (None to skip)
         show_remediation: Show remediation suggestions
@@ -348,13 +340,6 @@ def run_quality_control(
             logger.info("Saving metrics to history...")
             orchestrator.save_metrics(report)
         
-        # Show trend analysis
-        if show_trends:
-            logger.info("Analyzing trends...")
-            trends = orchestrator.analyze_trends(report)
-            trend_report = orchestrator.generate_trend_report(trends)
-            print("\n" + trend_report)
-        
         # Export metrics if requested
         if export_json:
             logger.info(f"Exporting metrics to JSON: {export_json}")
@@ -415,7 +400,6 @@ def main():
         export_json=args.export_json,
         export_csv=args.export_csv,
         save_metrics=not args.no_save_metrics,
-        show_trends=args.show_trends,
         interactive=args.interactive,
         save_tasks=args.save_tasks,
         show_remediation=args.show_remediation,

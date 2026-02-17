@@ -4,7 +4,7 @@
 
 These templates form the foundation for a complete Information Security Management System (ISMS) handbook according to **ISO/IEC 27001:2022** (including **Amendment 1:2024**).
 
-The ISMS handbook of {{ meta.organization.name }} comprises approximately 50 structured documents covering all essential aspects of information security management. The templates follow a **three-tier architecture** that clearly separates strategic, abstract, and operational documentation.
+The ISMS handbook of [TODO] comprises approximately 50 structured documents covering all essential aspects of information security management. The templates follow a **three-tier architecture** that clearly separates strategic, abstract, and operational documentation.
 
 ## Three-Tier Architecture
 
@@ -128,13 +128,13 @@ Detailed implementation guidelines for each policy:
 The templates use placeholders from the `metadata.yaml` file:
 
 ```markdown
-**Organization:** {{ meta.organization.name }}
+**Organization:** [TODO]
 **CEO:** {{ meta.management.ceo }}
 **CIO:** {{ meta.cio.name }} ({{ meta.cio.email }})
 **CISO:** {{ meta.ciso.name }} ({{ meta.ciso.email }})
-**Document Owner:** {{ meta.document.owner }}
-**Date:** {{ meta.document.date }}
-**Next Review:** {{ meta.document.next_review }}
+**Document Owner:** [TODO]
+**Date:** {{ meta-handbook.modifydate }}
+**Next Review:** [TODO]
 ```
 
 ### NetBox Placeholders (Infrastructure Data)
@@ -478,7 +478,7 @@ For questions or issues:
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
+| 0.1 | [TODO] | {{ meta.defaults.author }} | Initial Creation |
 
 ## Version History
 

@@ -1,5 +1,19 @@
 # Document Control / Documented Information
 
+**Document-ID:** [FRAMEWORK]-0050
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This document defines how ISMS documentation is controlled, including creation,
@@ -16,14 +30,12 @@ ISO 27001:2022 Reference: Clause 7.5 - Documented information
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** {{ meta-handbook.modifydate }}  
+**Next Review:** {{ meta-handbook.next_review }}
 
 ## 1. Purpose and Scope
 
-This document defines the requirements for controlling documented information within the ISMS of **{{ meta.organization.name }}**. It ensures that:
+This document defines the requirements for controlling documented information within the ISMS of **{{ meta-organisation.name }}**. It ensures that:
 - Documents are available and suitable for use
 - Documents are adequately protected
 - Documents are controlled in their creation, review, approval, and update
@@ -257,11 +269,11 @@ The document register is the central overview of all ISMS documents.
 
 | Document ID | Document Title | Owner | Status | Version | Last Change | Next Review |
 |-------------|----------------|-------|--------|---------|-------------|-------------|
-| 0010 | ISMS Policy | {{ meta.ciso.name }} | Approved | 1.0 | {{ meta.document.date }} | {{ meta.document.next_review }} |
-| 0020 | ISMS Scope | {{ meta.ciso.name }} | Approved | 1.0 | {{ meta.document.date }} | {{ meta.document.next_review }} |
-| 0030 | Context and Stakeholders | {{ meta.ciso.name }} | Approved | 1.0 | {{ meta.document.date }} | {{ meta.document.next_review }} |
-| 0040 | ISMS Governance | {{ meta.ciso.name }} | Approved | 1.0 | {{ meta.document.date }} | {{ meta.document.next_review }} |
-| 0050 | Document Control | {{ meta.ciso.name }} | Approved | 1.0 | {{ meta.document.date }} | {{ meta.document.next_review }} |
+| 0010 | ISMS Policy | {{ meta.ciso.name }} | Approved | 1.0 | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
+| 0020 | ISMS Scope | {{ meta.ciso.name }} | Approved | 1.0 | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
+| 0030 | Context and Stakeholders | {{ meta.ciso.name }} | Approved | 1.0 | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
+| 0040 | ISMS Governance | {{ meta.ciso.name }} | Approved | 1.0 | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
+| 0050 | Document Control | {{ meta.ciso.name }} | Approved | 1.0 | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
 | ... | ... | ... | ... | ... | ... | ... |
 
 [TODO: Create and maintain complete document register]
@@ -334,18 +346,8 @@ See `0580_Policy_Retention_and_Deletion.md` for details.
 - **ISO/IEC 27001:2022** - Clause 7.5: Documented information
 - **ISO/IEC 27002:2022** - Control 5.1: Policies for information security
 
----
-
 **Approved by:**  
 {{ meta.ciso.name }}, CISO  
-Date: {{ meta.document.approval_date }}
+Date: {{ meta-handbook.modifydate }}
 
-**Next Review:** {{ meta.document.next_review }}
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
+**Next Review:** {{ meta-handbook.next_review }}

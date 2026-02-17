@@ -1,11 +1,16 @@
 # Breach Register (Record of Data Breaches)
 
-**Document-ID:** 0630  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Template  
-**Classification:** Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0630
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -24,7 +29,7 @@ Reference: GDPR Art. 33(5) (Documentation obligation)
 
 ## Purpose
 
-This register documents all data breaches at {{ meta.organization }} according to Art. 33(5) GDPR. It serves accountability and enables the supervisory authority to verify compliance with notification obligations.
+This register documents all data breaches at {{ meta-organisation.name }} according to Art. 33(5) GDPR. It serves accountability and enables the supervisory authority to verify compliance with notification obligations.
 
 ## Responsibilities
 
@@ -35,8 +40,6 @@ This register documents all data breaches at {{ meta.organization }} according t
 ## Retention Period
 
 **At least 3 years** after incident closure
-
----
 
 ## Breach Register
 
@@ -177,8 +180,6 @@ This register documents all data breaches at {{ meta.organization }} according t
 | **DPO Approval** | [ ] Yes - Date: [TODO] |
 | **Management Approval** | [ ] Yes - Date: [TODO] |
 
----
-
 ## Statistics and Overview
 
 ### Annual Overview [YYYY]
@@ -221,8 +222,6 @@ This register documents all data breaches at {{ meta.organization }} according t
 
 [TODO: Analysis of trends, common causes, improvement potential]
 
----
-
 ## Access Control
 
 ### Access Log
@@ -230,8 +229,6 @@ This register documents all data breaches at {{ meta.organization }} according t
 | Date | User | Action | Breach-ID |
 |------|------|--------|-----------|
 | [TODO] | [TODO] | [TODO: View/Edit/Export] | [TODO] |
-
----
 
 ## Audit Trail
 
@@ -241,18 +238,9 @@ This register documents all data breaches at {{ meta.organization }} according t
 |------|------|-----------|--------|---------------|
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
----
-
 **Notes:**
 - This register is confidential and may only be accessible to authorized persons
 - All entries must be complete and truthful
 - The register must be available for audits and upon request by the supervisory authority
 - Regular review and update required
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

@@ -1,13 +1,16 @@
 # Appendix: Evidence Register
 
-**Document ID:** PCI-0700  
-**Organization:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Approved by:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0700
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,7 +28,7 @@ Customization required:
 
 ## 1. Purpose
 
-This document serves as a central register of all evidence for PCI-DSS compliance of {{ meta.organization.name }}.
+This document serves as a central register of all evidence for PCI-DSS compliance of {{ meta-organisation.name }}.
 
 ### 1.1 Usage
 
@@ -221,13 +224,5 @@ This document serves as a central register of all evidence for PCI-DSS complianc
 | Document | Archive Date | Retention Until | Location |
 |----------|--------------|-----------------|----------|
 | [TODO] | [TODO: Date] | [TODO: Date] | [TODO: Path] |
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 <!-- End of template -->

@@ -1,17 +1,28 @@
----
+
 Document-ID: coso-0120
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Risk Identification
 
+**Document-ID:** [FRAMEWORK]-0120
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document describes how {{ source.organization_name }} identifies and analyzes risks that could affect the achievement of objectives (COSO Principle 7).
+This document describes how [TODO] identifies and analyzes risks that could affect the achievement of objectives (COSO Principle 7).
 
 ## Scope
 
@@ -24,127 +35,119 @@ This document describes how {{ source.organization_name }} identifies and analyz
 
 ### Workshops and Interviews
 
-{{ source.risk_workshops }}
+[TODO]
 
 ### Checklists and Questionnaires
 
-{{ source.risk_checklists }}
+[TODO]
 
 ### Scenario Analysis
 
-{{ source.scenario_analysis }}
+[TODO]
 
 ### Historical Data Analysis
 
-{{ source.historical_analysis }}
+[TODO]
 
 ### Benchmarking
 
-{{ source.benchmarking }}
+[TODO]
 
 ## Risk Factors
 
 ### Internal Factors
 
-**Organizational Factors**: {{ source.organizational_factors }}
-**Process Factors**: {{ source.process_factors }}
-**Technology Factors**: {{ source.technology_factors }}
-**People Factors**: {{ source.people_factors }}
+**Organizational Factors**: [TODO]
+**Process Factors**: [TODO]
+**Technology Factors**: [TODO]
+**People Factors**: [TODO]
 
 ### External Factors
 
-**Economic Factors**: {{ source.economic_factors }}
-**Regulatory Factors**: {{ source.regulatory_factors }}
-**Market Factors**: {{ source.market_factors }}
-**Technology Trends**: {{ source.technology_trends }}
+**Economic Factors**: [TODO]
+**Regulatory Factors**: [TODO]
+**Market Factors**: [TODO]
+**Technology Trends**: [TODO]
 
 ## Risk Analysis
 
 ### Qualitative Analysis
 
-**Methodology**: {{ source.qualitative_analysis }}
+**Methodology**: [TODO]
 
-**Rating Scale**: {{ source.qualitative_scale }}
+**Rating Scale**: [TODO]
 
 ### Quantitative Analysis
 
-**Methodology**: {{ source.quantitative_analysis }}
+**Methodology**: [TODO]
 
-**Metrics**: {{ source.quantitative_metrics }}
+**Metrics**: [TODO]
 
 ### Combined Approach
 
-{{ source.combined_approach }}
+[TODO]
 
 ## Risk Assessment
 
 ### Inherent Risk
 
-**Definition**: {{ source.inherent_risk_definition }}
+**Definition**: [TODO]
 
-**Assessment**: {{ source.inherent_risk_assessment }}
+**Assessment**: [TODO]
 
 ### Residual Risk
 
-**Definition**: {{ source.residual_risk_definition }}
+**Definition**: [TODO]
 
-**Assessment**: {{ source.residual_risk_assessment }}
+**Assessment**: [TODO]
 
 ## Risk Prioritization
 
 ### Prioritization Criteria
 
-{{ source.prioritization_criteria }}
+[TODO]
 
 ### Risk Categorization
 
-**Critical**: {{ source.critical_risks }}
-**High**: {{ source.high_risks }}
-**Medium**: {{ source.medium_risks }}
-**Low**: {{ source.low_risks }}
+**Critical**: [TODO]
+**High**: [TODO]
+**Medium**: [TODO]
+**Low**: [TODO]
 
 ## Risk Relationships
 
 ### Risk Dependencies
 
-{{ source.risk_dependencies }}
+[TODO]
 
 ### Cascading Risks
 
-{{ source.cascading_risks }}
+[TODO]
 
 ### Aggregated Risks
 
-{{ source.aggregated_risks }}
+[TODO]
 
 ## Roles and Responsibilities
 
-**Risk Manager**: {{ source.risk_manager_role }}
-**Business Owners**: {{ source.business_owner_role }}
-**Subject Matter Experts**: {{ source.subject_matter_experts }}
+**Risk Manager**: [TODO]
+**Business Owners**: [TODO]
+**Subject Matter Experts**: [TODO]
 
 ## Documentation
 
 ### Risk Register
 
-{{ source.risk_register_content }}
+[TODO]
 
 ### Risk Reports
 
-{{ source.risk_reports_content }}
+[TODO]
 
 ## References
 
 - Risk Management Policy
 - Risk Assessment Matrix
 - Enterprise Risk Management Framework
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

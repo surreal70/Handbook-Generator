@@ -1,5 +1,19 @@
 # Policy: Incident Management
 
+**Document-ID:** [FRAMEWORK]-0400
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This policy establishes the principles for security incident management and response.
@@ -17,20 +31,18 @@ ISO 27001:2022 Annex A Reference: A.5.24, A.5.25, A.5.26, A.5.27, A.5.28
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** {{ meta-handbook.modifydate }}  
+**Next Review:** {{ meta-handbook.next_review }}
 
 ## 1. Purpose
 
-This policy defines the principles for incident management and security incident response at **{{ meta.organization.name }}**. It ensures that security incidents are detected, assessed, handled, and documented in a timely manner to minimize damage and learn from incidents.
+This policy defines the principles for incident management and security incident response at **{{ meta-organisation.name }}**. It ensures that security incidents are detected, assessed, handled, and documented in a timely manner to minimize damage and learn from incidents.
 
 ## 2. Scope
 
 This policy applies to:
 
-- **Organizational Units:** All departments and locations of {{ meta.organization.name }}
+- **Organizational Units:** All departments and locations of {{ meta-organisation.name }}
 - **Incident Types:** Security incidents, data breaches, malware, phishing, DDoS, insider threats
 - **Systems:** All IT systems, applications, networks, cloud services
 - **Personnel:** All employees, contractors, suppliers
@@ -174,18 +186,9 @@ Exceptions to this policy are only permitted in justified cases:
 - **GDPR (EU 2016/679)** - Art. 33, 34 - Data Breach Notification
 - **NIS2 Directive** - Network and Information Security Directive
 
----
-
 **Approved by:**  
 {{ meta.management.ceo }}, Management  
-Date: {{ meta.document.approval_date }}
+Date: {{ meta-handbook.modifydate }}
 
-**Next Review:** {{ meta.document.next_review }} (annually or as needed)
+**Next Review:** {{ meta-handbook.next_review }} (annually or as needed)
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

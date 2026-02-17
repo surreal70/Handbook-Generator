@@ -1,5 +1,19 @@
 # Policy: Secure Development
 
+**Dokument-ID:** 0380
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This policy establishes the principles for secure software development lifecycle (SDLC).
@@ -9,27 +23,15 @@ Customize based on your organization's development practices (Agile, DevSecOps, 
 ISO 27001:2022 Annex A Reference: A.8.25, A.8.26, A.8.27, A.8.28
 -->
 
-**Dokument-ID:** 0380  
-**Dokumenttyp:** Policy (abstrakt)  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.8.25-A.8.28 (inkl. Amendment 1:2024)  
-**Owner:** {{ meta.ciso.name }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
-
----
-
 ## 1. Zweck
 
-Diese Policy definiert die Grundsätze für sichere Softwareentwicklung (Secure SDLC) der **{{ meta.organization.name }}**. Sie stellt sicher, dass Sicherheit in alle Phasen des Software Development Lifecycle integriert wird und Anwendungen sicher entwickelt, getestet und betrieben werden.
+Diese Policy definiert die Grundsätze für sichere Softwareentwicklung (Secure SDLC) der **{{ meta-organisation.name }}**. Sie stellt sicher, dass Sicherheit in alle Phasen des Software Development Lifecycle integriert wird und Anwendungen sicher entwickelt, getestet und betrieben werden.
 
 ## 2. Geltungsbereich
 
 Diese Policy gilt für:
 
-- **Organisationseinheiten:** Alle Entwicklungsteams und Standorte der {{ meta.organization.name }}
+- **Organisationseinheiten:** Alle Entwicklungsteams und Standorte der {{ meta-organisation.name }}
 - **Anwendungen:** Alle intern entwickelten Anwendungen, APIs, Microservices, Mobile Apps
 - **Entwicklungsphasen:** Requirements, Design, Implementation, Testing, Deployment, Maintenance
 - **Entwicklungsmodelle:** Agile, Waterfall, DevOps, DevSecOps
@@ -170,18 +172,9 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **NIST SP 800-218** - Secure Software Development Framework (SSDF)
 - **CWE Top 25** - Most Dangerous Software Weaknesses
 
----
-
 **Genehmigt durch:**  
 {{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+Datum: {{ meta-handbook.modifydate }}
 
-**Nächster Review:** {{ meta.document.next_review }} (jährlich oder anlassbezogen)
+**Nächster Review:** {{ meta-handbook.next_review }} (jährlich oder anlassbezogen)
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

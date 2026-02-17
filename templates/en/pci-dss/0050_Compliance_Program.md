@@ -1,13 +1,16 @@
 # Compliance Program
 
-**Document ID:** PCI-0050  
-**Organization:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Approved by:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0050
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,7 +28,7 @@ Customization required:
 
 ## 1. Purpose
 
-This document describes the PCI-DSS compliance program of {{ meta.organization.name }}.
+This document describes the PCI-DSS compliance program of {{ meta-organisation.name }}.
 
 ### 1.1 Objectives
 
@@ -39,7 +42,7 @@ This document describes the PCI-DSS compliance program of {{ meta.organization.n
 ### 2.1 Governance Structure
 
 **PCI-DSS Steering Committee:**
-- **Chair:** {{ meta.roles.ciso.name }}
+- **Chair:** {{ meta-organisation-roles.role_CISO }}
 - **Members:** CEO, CIO, PCI Program Manager, Legal, Operations Manager
 - **Frequency:** Quarterly
 - **Purpose:** Strategic decisions, budget, risk assessment
@@ -53,12 +56,12 @@ This document describes the PCI-DSS compliance program of {{ meta.organization.n
 ### 2.2 Management Commitment
 
 **Information Security Policy:**
-- Approved by: {{ meta.roles.ceo.name }}
+- Approved by: {{ meta-organisation-roles.role_CEO }}
 - Date: [TODO: Date]
 - Annual review: [TODO: Month]
 
 **PCI-DSS Commitment:**
-{{ meta.organization.name }} commits to compliance with all PCI-DSS requirements to protect cardholder data.
+{{ meta-organisation.name }} commits to compliance with all PCI-DSS requirements to protect cardholder data.
 
 ## 3. Compliance Activities
 
@@ -273,13 +276,5 @@ This document describes the PCI-DSS compliance program of {{ meta.organization.n
 |---------|----------|-------------|-------------|--------|
 | [TODO: Tokenization] | High | IT Security | [TODO] | In Progress |
 | [TODO: SIEM Upgrade] | Medium | IT Security | [TODO] | Planned |
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 <!-- End of template -->

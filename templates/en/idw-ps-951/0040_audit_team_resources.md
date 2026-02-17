@@ -1,11 +1,16 @@
 # Audit Team and Resources
 
-**Document-ID:** idw-ps-951-0040  
-**Owner:** {{ meta.audit_lead }}  
-**Version:** {{ meta.version }}  
-**Status:** {{ meta.status }}  
-**Classification:** {{ meta.classification }}  
-**Last Update:** {{ meta.date }}
+**Document-ID:** idw-ps-951-0040
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -18,24 +23,24 @@ This document describes the composition of the audit team, required qualificatio
 ### Team Structure
 
 #### Audit Leadership
-- **Name:** {{ source.audit_lead_name }}
+- **Name:** [TODO]
 - **Role:** Audit Lead
-- **Qualification:** {{ source.audit_lead_qualification }}
-- **Experience:** {{ source.audit_lead_experience }}
-- **Contact:** {{ source.audit_lead_contact }}
+- **Qualification:** [TODO]
+- **Experience:** [TODO]
+- **Contact:** [TODO]
 
 #### IT Auditors
 
 | Name | Role | Qualification | Specialization | Availability |
 |------|------|---------------|----------------|--------------|
-| {{ source.auditor_1_name }} | Senior IT Auditor | {{ source.auditor_1_qual }} | {{ source.auditor_1_spec }} | {{ source.auditor_1_avail }} |
-| {{ source.auditor_2_name }} | IT Auditor | {{ source.auditor_2_qual }} | {{ source.auditor_2_spec }} | {{ source.auditor_2_avail }} |
-| {{ source.auditor_3_name }} | IT Auditor | {{ source.auditor_3_qual }} | {{ source.auditor_3_spec }} | {{ source.auditor_3_avail }} |
+| [TODO] | Senior IT Auditor | [TODO] | [TODO] | [TODO] |
+| [TODO] | IT Auditor | [TODO] | [TODO] | [TODO] |
+| [TODO] | IT Auditor | [TODO] | [TODO] | [TODO] |
 
 #### Subject Matter Experts
-- **Data Protection:** {{ source.privacy_expert }}
-- **IT Security:** {{ source.security_expert }}
-- **Application Systems:** {{ source.application_expert }}
+- **Data Protection:** [TODO]
+- **IT Security:** [TODO]
+- **Application Systems:** [TODO]
 
 ## 3. Qualification Requirements
 
@@ -44,7 +49,7 @@ This document describes the composition of the audit team, required qualificatio
 - CISM (Certified Information Security Manager)
 - CISSP (Certified Information Systems Security Professional)
 - ISO 27001 Lead Auditor
-- {{ source.additional_certifications }}
+- [TODO]
 
 ### Technical Knowledge
 - IT auditing according to IDW PS 951
@@ -54,7 +59,7 @@ This document describes the composition of the audit team, required qualificatio
 - IT processes (ITIL, COBIT)
 
 ### Industry Knowledge
-- {{ source.industry_knowledge }}
+- [TODO]
 
 ## 4. Resource Planning
 
@@ -62,20 +67,20 @@ This document describes the composition of the audit team, required qualificatio
 
 | Audit Phase | Audit Lead | Senior Auditor | Auditor | Experts | Total |
 |-------------|------------|----------------|---------|---------|-------|
-| Planning | {{ source.planning_lead_hours }} | {{ source.planning_senior_hours }} | {{ source.planning_auditor_hours }} | {{ source.planning_expert_hours }} | {{ source.planning_total_hours }} |
-| Execution | {{ source.execution_lead_hours }} | {{ source.execution_senior_hours }} | {{ source.execution_auditor_hours }} | {{ source.execution_expert_hours }} | {{ source.execution_total_hours }} |
-| Reporting | {{ source.reporting_lead_hours }} | {{ source.reporting_senior_hours }} | {{ source.reporting_auditor_hours }} | {{ source.reporting_expert_hours }} | {{ source.reporting_total_hours }} |
-| **Total** | {{ source.total_lead_hours }} | {{ source.total_senior_hours }} | {{ source.total_auditor_hours }} | {{ source.total_expert_hours }} | {{ source.total_hours }} |
+| Planning | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
+| Execution | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
+| Reporting | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
+| **Total** | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ### Resource Allocation by Audit Area
 
 | Audit Area | Hours | Auditors | Priority |
 |------------|-------|----------|----------|
-| IT Strategy and Organization | {{ source.strategy_hours }} | {{ source.strategy_auditors }} | {{ source.strategy_priority }} |
-| IT Processes | {{ source.process_hours }} | {{ source.process_auditors }} | {{ source.process_priority }} |
-| IT Systems | {{ source.systems_hours }} | {{ source.systems_auditors }} | {{ source.systems_priority }} |
-| IT Security | {{ source.security_hours }} | {{ source.security_auditors }} | {{ source.security_priority }} |
-| Data Protection | {{ source.privacy_hours }} | {{ source.privacy_auditors }} | {{ source.privacy_priority }} |
+| IT Strategy and Organization | [TODO] | [TODO] | [TODO] |
+| IT Processes | [TODO] | [TODO] | [TODO] |
+| IT Systems | [TODO] | [TODO] | [TODO] |
+| IT Security | [TODO] | [TODO] | [TODO] |
+| Data Protection | [TODO] | [TODO] | [TODO] |
 
 ## 5. Roles and Responsibilities
 
@@ -127,7 +132,7 @@ All team members have submitted independence declarations:
 - No conflicts of interest
 
 ### Rotation
-- {{ source.rotation_policy }}
+- [TODO]
 
 ## 7. Training and Development
 
@@ -135,34 +140,34 @@ All team members have submitted independence declarations:
 - IDW PS 951 updates
 - New IT technologies
 - Industry-specific topics
-- {{ source.required_training }}
+- [TODO]
 
 ### Training Plan
 | Team Member | Training | Date | Status |
 |-------------|----------|------|--------|
-| {{ source.training_1_member }} | {{ source.training_1_topic }} | {{ source.training_1_date }} | {{ source.training_1_status }} |
+| [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## 8. External Resources
 
 ### External Experts
 External experts will be engaged as needed:
-- {{ source.external_expert_1 }}
-- {{ source.external_expert_2 }}
+- [TODO]
+- [TODO]
 
 ### Rationale
-{{ source.external_expert_rationale }}
+[TODO]
 
 ## 9. Communication and Coordination
 
 ### Team Meetings
-- **Frequency:** {{ source.meeting_frequency }}
-- **Format:** {{ source.meeting_format }}
+- **Frequency:** [TODO]
+- **Format:** [TODO]
 - **Participants:** Entire audit team
 
 ### Status Reports
 - **To:** Audit Lead
-- **Frequency:** {{ source.status_report_frequency }}
-- **Format:** {{ source.status_report_format }}
+- **Frequency:** [TODO]
+- **Format:** [TODO]
 
 ## 10. References
 
@@ -171,18 +176,9 @@ External experts will be engaged as needed:
 - Resource Plan
 - Independence Declarations
 
----
-
 **Approved by:**  
-{{ meta.audit_lead }}, Audit Lead  
-Date: {{ meta.approval_date }}
+{{ meta-organisation-roles.role_Internal_Auditor }}, Audit Lead  
+Date: {{ meta-handbook.valid_from }}
 
-**Next Review:** {{ meta.next_review }}
+**Next Review:** {{ meta-handbook.next_review }}
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |

@@ -1,0 +1,8 @@
+# Organization Metadata Configuration
+# This file contains organization-specific information used across all handbooks
+
+name: "AdminSend GmbH"
+address: "Musterstraße 123, 80331 München, Deutschland"
+web: "https://www.adminsend.de"
+phone: "+49 89 12345678"
+revision: 0

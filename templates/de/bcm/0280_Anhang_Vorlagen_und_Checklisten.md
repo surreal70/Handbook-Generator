@@ -1,13 +1,16 @@
 # Anhang Vorlagen und Checklisten
 
-**Dokument-ID:** BCM-0280  
-**Organisation:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** BCM-0280
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,7 +28,7 @@ Customization required:
 
 [TODO: Beschreiben Sie den Zweck dieses Dokuments]
 
-Dieses Dokument ist Teil des Business Continuity Management Systems (BCMS) der {{ meta.organization.name }}.
+Dieses Dokument ist Teil des Business Continuity Management Systems (BCMS) der {{ meta-organisation.name }}.
 
 ## 2. Geltungsbereich
 
@@ -60,13 +63,5 @@ Dieses Dokument gilt für:
 ## 6. Anhänge
 
 [TODO: Fügen Sie relevante Anhänge hinzu]
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 <!-- End of template -->

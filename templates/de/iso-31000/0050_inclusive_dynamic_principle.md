@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-31000-0050
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Prinzip 4 & 5: Inklusiv und Dynamisch
+
+**Dokument-ID:** [FRAMEWORK]-0050
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -26,7 +38,7 @@ Die angemessene und zeitgerechte Einbeziehung von Stakeholdern ermöglicht es, d
 - Wissen und Erfahrung werden genutzt
 - Transparenz und Vertrauen werden gefördert
 
-### Stakeholder-Einbindung in {{ meta.organization }}
+### Stakeholder-Einbindung in {{ meta-organisation.name }}
 
 | Stakeholder-Gruppe | Einbindungsmethode |
 |--------------------|-------------------|
@@ -50,7 +62,7 @@ Risiken können entstehen, sich verändern oder verschwinden, wenn sich externe 
 - Frühwarnsysteme für neue Risiken
 - Flexible Anpassung von Maßnahmen
 
-### Dynamisches Risikomanagement in {{ meta.organization }}
+### Dynamisches Risikomanagement in {{ meta-organisation.name }}
 
 **Überwachungsmechanismen:**
 1. Kontinuierliche Umfeldbeobachtung
@@ -72,12 +84,4 @@ Die Kombination von inklusivem und dynamischem Risikomanagement ermöglicht:
 - Schnelle Reaktion durch breite Wissensbasis
 - Akzeptanz von Maßnahmen durch Einbindung
 - Kontinuierliche Verbesserung durch Feedback
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |
 

@@ -1,11 +1,16 @@
 # Restriction and Objection
 
-**Document-ID:** 0240  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0240
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -23,7 +28,7 @@ Reference: GDPR Art. 18 (Right to restriction of processing), Art. 21 (Right to 
 
 ## Purpose
 
-This document describes the implementation of the right to restriction of processing and the right to object in {{ meta.organization }}.
+This document describes the implementation of the right to restriction of processing and the right to object in {{ meta-organisation.name }}.
 
 ## Right to Restriction (Art. 18)
 
@@ -215,8 +220,6 @@ This document describes the implementation of the right to restriction of proces
 | Delayed Implementation | Advertising after objection | Immediate stop |
 | No Notification | Recipients not informed | Notification process |
 
----
-
 **Next Steps:**
 1. Establish processes for restriction and objection requests
 2. Implement technical restriction mechanisms
@@ -224,10 +227,3 @@ This document describes the implementation of the right to restriction of proces
 4. Train employees on restriction and objection rights
 5. Document all requests in register
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

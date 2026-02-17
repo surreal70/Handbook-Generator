@@ -1,5 +1,19 @@
 # IDW PS 951 Framework Mapping
 
+**Dokument-ID:** [FRAMEWORK]-9999
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Überblick
 
 Dieses Dokument mappt die Templates zu den spezifischen Anforderungen des IDW Prüfungsstandards 951. Es stellt sicher, dass alle relevanten Prüfungsbereiche abgedeckt sind und ermöglicht die Nachverfolgbarkeit der Prüfungshandlungen.
@@ -214,14 +228,7 @@ Die Templates decken zusätzlich ab:
 - IT-Service-Management (ITIL)
 - Informationssicherheit (ISO 27001)
 
----
-
 **Mapping-Version:** 1.0  
 **Letzte Aktualisierung:** 2026-02-10  
 **IDW PS 951 Referenz:** Institut der Wirtschaftsprüfer in Deutschland e.V.
 
-## Versionshistorie
-
-| Version | Datum | Änderungen |
-|---------|-------|------------|
-| 0.1 | {{meta.document.last_updated}} | Initiale Erstellung |

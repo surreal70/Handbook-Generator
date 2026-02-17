@@ -1,11 +1,16 @@
 # Besondere Kategorien personenbezogener Daten
 
-**Dokument-ID:** 0050  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0050
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -24,7 +29,7 @@ Referenz: DSGVO Art. 9 (Verarbeitung besonderer Kategorien personenbezogener Dat
 
 ## Zweck
 
-Dieses Dokument beschreibt den Umgang mit besonderen Kategorien personenbezogener Daten in der {{ meta.organization }} gemäß Art. 9 DSGVO. Diese sensiblen Daten unterliegen erhöhten Schutzanforderungen.
+Dieses Dokument beschreibt den Umgang mit besonderen Kategorien personenbezogener Daten in der {{ meta-organisation.name }} gemäß Art. 9 DSGVO. Diese sensiblen Daten unterliegen erhöhten Schutzanforderungen.
 
 ## Besondere Kategorien (Art. 9 Abs. 1)
 
@@ -245,8 +250,6 @@ Für jede Verarbeitung besonderer Kategorien muss dokumentiert werden:
 - **DSFA (Art. 35):** In der Regel erforderlich
 - **Verzeichnis (Art. 30):** Dokumentation aller Verarbeitungen
 
----
-
 **Nächste Schritte:**
 1. Identifizieren Sie alle Verarbeitungen besonderer Kategorien
 2. Prüfen Sie die Rechtsgrundlage gemäß Art. 9 Abs. 2
@@ -254,10 +257,3 @@ Für jede Verarbeitung besonderer Kategorien muss dokumentiert werden:
 4. Führen Sie DSFA durch
 5. Schulen Sie betroffene Mitarbeiter
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

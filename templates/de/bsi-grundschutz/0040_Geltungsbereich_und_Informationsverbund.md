@@ -1,14 +1,16 @@
 # Geltungsbereich und Informationsverbund (Abgrenzung)
 
-**Dokument-ID:** 0040  
-**Dokumenttyp:** Grundlagendokument  
-**Referenzrahmen:** BSI IT-Grundschutz (BSI Standards 200-1/200-2/200-3)  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** {{ meta.document.status }}  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0040
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -21,19 +23,19 @@ Reference: BSI Standard 200-2 (Scope Definition and Information Domain)
 
 ## 1. Zweck und Zielsetzung
 
-Dieses Dokument definiert den Geltungsbereich des Informationssicherheits-Managementsystems (ISMS) von **{{ meta.organization.name }}** und grenzt den Informationsverbund ab. Die klare Definition des Scopes ist Grundlage für alle weiteren IT-Grundschutz-Aktivitäten (Strukturanalyse, Schutzbedarfsfeststellung, Modellierung).
+Dieses Dokument definiert den Geltungsbereich des Informationssicherheits-Managementsystems (ISMS) von **{{ meta-organisation.name }}** und grenzt den Informationsverbund ab. Die klare Definition des Scopes ist Grundlage für alle weiteren IT-Grundschutz-Aktivitäten (Strukturanalyse, Schutzbedarfsfeststellung, Modellierung).
 
 ## 2. Scope-Definition
 
 ### 2.1 Organisationseinheiten und Standorte
 
-**Organisation:** {{ meta.organization.name }}
+**Organisation:** {{ meta-organisation.name }}
 
 **Standorte im Scope:**
 
 | Standort | Adresse | Typ | Mitarbeitende | Im Scope |
 |---|---|---|---|---|
-| {{ meta.organization.primary_location }} | [TODO] | Hauptstandort | [TODO] | ✓ |
+| [TODO] | [TODO] | Hauptstandort | [TODO] | ✓ |
 | [TODO: Weitere Standorte] | [TODO] | [TODO] | [TODO] | ✓/✗ |
 
 **Organisationseinheiten im Scope:**
@@ -107,7 +109,7 @@ Dieses Dokument definiert den Geltungsbereich des Informationssicherheits-Manage
 **Folgende Elemente sind im Scope des ISMS:**
 
 1. **Infrastruktur:**
-   - Alle Server und Netzwerkkomponenten an Standort {{ meta.organization.primary_location }}
+   - Alle Server und Netzwerkkomponenten an Standort [TODO]
    - [TODO: Weitere Infrastruktur]
 
 2. **Anwendungen:**
@@ -120,7 +122,7 @@ Dieses Dokument definiert den Geltungsbereich des Informationssicherheits-Manage
    - [TODO: Weitere Daten]
 
 4. **Personen:**
-   - Alle Mitarbeitenden von {{ meta.organization.name }}
+   - Alle Mitarbeitenden von {{ meta-organisation.name }}
    - Externe Dienstleister mit Zugriff auf Scope-Systeme
    - [TODO: Weitere Personengruppen]
 
@@ -223,7 +225,7 @@ Der Scope wird regelmäßig überprüft:
 - **Trigger:** Neue Geschäftsprozesse, IT-Systeme, Standorte, regulatorische Anforderungen
 - **Verantwortlich:** ISB
 
-**Nächster Review:** {{ meta.document.next_review }}
+**Nächster Review:** {{ meta-handbook.next_review }}
 
 ## 7. Dokumentation und Nachweise
 
@@ -239,22 +241,12 @@ Folgende Dokumente und Nachweise werden für den Scope geführt:
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| Geschäftsführung | {{ meta.ceo.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| ISB | {{ meta.ciso.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| Geschäftsführung | {{ meta.ceo.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **Referenzen:**
 - BSI Standard 200-1: Managementsysteme für Informationssicherheit (ISMS)
 - BSI Standard 200-2: IT-Grundschutz-Methodik (Kapitel 4: Festlegung des Geltungsbereichs)
 - BSI IT-Grundschutz-Kompendium
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 <!-- End of template -->

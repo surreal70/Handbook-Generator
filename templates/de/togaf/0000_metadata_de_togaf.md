@@ -1,44 +1,34 @@
+# TOGAF Handbuch - Metadaten
+
+**Dokument-ID:** 0000  
+**Datum:** 2026-02-17  
+**Owner:** [TODO]  
+**Revision:** 0  
+**Status:** Draft  
+**Klassifizierung:** Internal  
+**Letzte Aktualisierung:** 2026-02-17  
+**Template-Version:** 1.0  
+
 ---
-title: "TOGAF Enterprise Architecture Handbuch"
-author: "{{ source.author }}"
-version: "1.0"
-date: "{{ source.date }}"
-organization: "{{ source.organization_name }}"
-classification: "Internal"
+
+## Handbuch-Informationen
+
+**Handbuch-Titel:** TOGAF Handbook  
+**Handbuch-Short:** TOGAF  
+**Organisation:** [TODO]  
+**Autor:** [TODO]  
+**Geltungsbereich:** [TODO]  
+**Gültig ab:** [TODO]  
+**Nächste Überprüfung:** [TODO]  
+
 ---
 
-# Metadaten
+## Dokumentenzweck
 
-Diese Datei enthält Metadaten für das TOGAF Enterprise Architecture Handbuch.
-
-## Dokumentinformationen
-
-- **Titel**: TOGAF Enterprise Architecture Handbuch
-- **Autor**: {{ source.author }}
-- **Version**: 1.0
-- **Datum**: {{ source.date }}
-- **Organisation**: {{ source.organization_name }}
-- **Klassifizierung**: Internal
-
-## Framework-Informationen
-
-- **Framework**: The Open Group Architecture Framework (TOGAF)
-- **Framework-Version**: TOGAF 9.2
-- **Sprache**: Deutsch
-- **Zweck**: Dokumentation der Enterprise Architecture nach TOGAF-Methodik
+Dieses Dokument enthält die Metadaten für das TOGAF Handbuch.
 
 ## Änderungshistorie
 
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ source.date }} | {{ source.author }} | Initiale Version |
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|------|--------|---------|
-| 0.1 | {{meta.document.last_updated}} | {{ meta.defaults.author }} | Initiale Erstellung |
-
-<-  ( marked all subtasks complete End of template -->
+| Version | Datum | Autor | Änderung |
+|---------|-------|-------|----------|
+| 0 | 2026-02-17 | [TODO] | Initiale Version |

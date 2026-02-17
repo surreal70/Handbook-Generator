@@ -61,10 +61,10 @@ Die Vorlagen sind nach einem numerischen Schema organisiert:
 
 Jede Vorlage enthält Platzhalter für organisationsspezifische Informationen:
 
-- `{{ source.organization_name }}` - Name Ihrer Organisation
-- `{{ source.author }}` - Autor des Dokuments
-- `{{ meta.version }}` - Versionsnummer
-- `{{ meta.date }}` - Datum
+- `[TODO]` - Name Ihrer Organisation
+- `[TODO]` - Autor des Dokuments
+- `{{ meta-handbook.revision }}` - Versionsnummer
+- `{{ meta-handbook.modifydate }}` - Datum
 
 Ersetzen Sie diese Platzhalter durch Ihre tatsächlichen Werte.
 
@@ -117,11 +117,11 @@ Nutzen Sie die CCM-Zuordnungen zu diesen Standards, um Compliance-Überschneidun
 
 - **Version**: 1.0
 - **Basierend auf**: CSA CCM v4.0
-- **Letzte Aktualisierung**: {{ meta.date }}
+- **Letzte Aktualisierung**: {{ meta-handbook.modifydate }}
 
 ## Lizenz
 
-Diese Vorlagen sind für den internen Gebrauch in {{ source.organization_name }} bestimmt.
+Diese Vorlagen sind für den internen Gebrauch in [TODO] bestimmt.
 
 ## Versionshistorie
 

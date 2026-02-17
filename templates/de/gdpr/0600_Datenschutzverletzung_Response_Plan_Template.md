@@ -1,11 +1,16 @@
 # Datenschutzverletzung Response Plan (Template)
 
-**Dokument-ID:** 0600  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0600
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,11 +30,11 @@ Referenz: DSGVO Art. 33-34 (Meldung und Benachrichtigung bei Datenschutzverletzu
 
 ## Zweck
 
-Dieser Response Plan definiert die Schritte zur Bewältigung von Datenschutzverletzungen bei {{ meta.organization }}. Er stellt sicher, dass Datenschutzverletzungen schnell erkannt, bewertet und gemäß DSGVO Art. 33-34 behandelt werden.
+Dieser Response Plan definiert die Schritte zur Bewältigung von Datenschutzverletzungen bei {{ meta-organisation.name }}. Er stellt sicher, dass Datenschutzverletzungen schnell erkannt, bewertet und gemäß DSGVO Art. 33-34 behandelt werden.
 
 ## Geltungsbereich
 
-Dieser Plan gilt für alle Datenschutzverletzungen, die personenbezogene Daten betreffen, die von {{ meta.organization }} verarbeitet werden.
+Dieser Plan gilt für alle Datenschutzverletzungen, die personenbezogene Daten betreffen, die von {{ meta-organisation.name }} verarbeitet werden.
 
 ## Breach Response Team
 
@@ -396,8 +401,6 @@ Datenschutzverletzung bestätigt?
 - **Template 0630:** Breach Register Template
 - **Template 0640:** Post-Breach Review Template
 
----
-
 **Nächste Schritte:**
 1. Passe diesen Plan an deine Organisation an
 2. Definiere alle Rollen und Kontakte
@@ -405,10 +408,3 @@ Datenschutzverletzung bestätigt?
 4. Halte den Plan aktuell
 5. Stelle sicher, dass alle Teammitglieder den Plan kennen
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

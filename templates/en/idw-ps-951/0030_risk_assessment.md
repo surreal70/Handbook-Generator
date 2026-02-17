@@ -1,11 +1,16 @@
 # Risk Assessment and Risk Analysis
 
-**Document-ID:** idw-ps-951-0030  
-**Owner:** {{ meta.audit_lead }}  
-**Version:** {{ meta.version }}  
-**Status:** {{ meta.status }}  
-**Classification:** {{ meta.classification }}  
-**Last Update:** {{ meta.date }}
+**Document-ID:** idw-ps-951-0030
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -16,8 +21,8 @@ This document describes the risk assessment as part of the IT audit according to
 ## 2. Risk Analysis Methodology
 
 ### Approach
-- **Methodology:** {{ source.risk_methodology }}
-- **Assessment Scale:** {{ source.risk_scale }}
+- **Methodology:** [TODO]
+- **Assessment Scale:** [TODO]
 - **Risk Categories:** Inherent risk, control risk, detection risk
 
 ### Risk Assessment Criteria
@@ -38,9 +43,9 @@ This document describes the risk assessment as part of the IT audit according to
 
 | Risk ID | Risk Description | Category | Likelihood | Impact | Risk Level |
 |---------|-----------------|----------|------------|--------|------------|
-| R-001 | {{ source.risk_1_desc }} | {{ source.risk_1_category }} | {{ source.risk_1_likelihood }} | {{ source.risk_1_impact }} | {{ source.risk_1_level }} |
-| R-002 | {{ source.risk_2_desc }} | {{ source.risk_2_category }} | {{ source.risk_2_likelihood }} | {{ source.risk_2_impact }} | {{ source.risk_2_level }} |
-| R-003 | {{ source.risk_3_desc }} | {{ source.risk_3_category }} | {{ source.risk_3_likelihood }} | {{ source.risk_3_impact }} | {{ source.risk_3_level }} |
+| R-001 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
+| R-002 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
+| R-003 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ### Risk Categories
 
@@ -73,24 +78,24 @@ This document describes the risk assessment as part of the IT audit according to
 ## 4. Risk Assessment by Audit Area
 
 ### IT Strategy and Organization
-- **Inherent Risk:** {{ source.strategy_inherent_risk }}
-- **Control Risk:** {{ source.strategy_control_risk }}
-- **Audit Risk:** {{ source.strategy_audit_risk }}
+- **Inherent Risk:** [TODO]
+- **Control Risk:** [TODO]
+- **Audit Risk:** [TODO]
 
 ### IT Processes
-- **Inherent Risk:** {{ source.process_inherent_risk }}
-- **Control Risk:** {{ source.process_control_risk }}
-- **Audit Risk:** {{ source.process_audit_risk }}
+- **Inherent Risk:** [TODO]
+- **Control Risk:** [TODO]
+- **Audit Risk:** [TODO]
 
 ### IT Systems
-- **Inherent Risk:** {{ source.systems_inherent_risk }}
-- **Control Risk:** {{ source.systems_control_risk }}
-- **Audit Risk:** {{ source.systems_audit_risk }}
+- **Inherent Risk:** [TODO]
+- **Control Risk:** [TODO]
+- **Audit Risk:** [TODO]
 
 ### IT Security
-- **Inherent Risk:** {{ source.security_inherent_risk }}
-- **Control Risk:** {{ source.security_control_risk }}
-- **Audit Risk:** {{ source.security_audit_risk }}
+- **Inherent Risk:** [TODO]
+- **Control Risk:** [TODO]
+- **Audit Risk:** [TODO]
 
 ## 5. Risk-Based Audit Strategy
 
@@ -98,15 +103,15 @@ This document describes the risk assessment as part of the IT audit according to
 Based on the risk analysis, the following areas are prioritized:
 
 1. **High Priority:**
-   - {{ source.high_priority_area_1 }}
-   - {{ source.high_priority_area_2 }}
+   - [TODO]
+   - [TODO]
 
 2. **Medium Priority:**
-   - {{ source.medium_priority_area_1 }}
-   - {{ source.medium_priority_area_2 }}
+   - [TODO]
+   - [TODO]
 
 3. **Low Priority:**
-   - {{ source.low_priority_area_1 }}
+   - [TODO]
 
 ### Audit Procedures by Risk
 
@@ -145,14 +150,14 @@ Based on the risk analysis, the following areas are prioritized:
 ## 7. Risk Communication
 
 ### Reporting
-- **To Management:** {{ source.management_reporting }}
-- **To Audit Committee:** {{ source.audit_committee_reporting }}
-- **Frequency:** {{ source.reporting_frequency }}
+- **To Management:** [TODO]
+- **To Audit Committee:** [TODO]
+- **Frequency:** [TODO]
 
 ### Escalation
 Critical risks are immediately escalated to:
-- {{ source.escalation_contact_1 }}
-- {{ source.escalation_contact_2 }}
+- [TODO]
+- [TODO]
 
 ## 8. Risk Monitoring
 
@@ -174,18 +179,9 @@ The risk register is updated when:
 - Organization-specific Risk Register
 - Prior Year Audit Reports
 
----
-
 **Approved by:**  
-{{ meta.audit_lead }}, Audit Lead  
-Date: {{ meta.approval_date }}
+{{ meta-organisation-roles.role_Internal_Auditor }}, Audit Lead  
+Date: {{ meta-handbook.valid_from }}
 
-**Next Review:** {{ meta.next_review }}
+**Next Review:** {{ meta-handbook.next_review }}
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |

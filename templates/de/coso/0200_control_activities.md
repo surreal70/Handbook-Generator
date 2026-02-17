@@ -1,17 +1,28 @@
----
+
 Document-ID: coso-0200
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Kontrollaktivitäten
 
+**Dokument-ID:** [FRAMEWORK]-0200
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt die Kontrollaktivitäten, die {{ source.organization_name }} implementiert, um Risiken für die Zielerreichung zu mindern (COSO Komponente 3).
+Dieses Dokument beschreibt die Kontrollaktivitäten, die [TODO] implementiert, um Risiken für die Zielerreichung zu mindern (COSO Komponente 3).
 
 ## Geltungsbereich
 
@@ -24,7 +35,7 @@ Dieses Dokument beschreibt die Kontrollaktivitäten, die {{ source.organization_
 
 ### Überblick
 
-{{ source.control_activities_overview }}
+[TODO]
 
 ### COSO Prinzipien
 
@@ -37,124 +48,124 @@ Diese Komponente behandelt die folgenden COSO Prinzipien:
 
 ### Präventive Kontrollen
 
-**Definition**: {{ source.preventive_controls_definition }}
+**Definition**: [TODO]
 
-**Beispiele**: {{ source.preventive_controls_examples }}
+**Beispiele**: [TODO]
 
 ### Aufdeckende Kontrollen
 
-**Definition**: {{ source.detective_controls_definition }}
+**Definition**: [TODO]
 
-**Beispiele**: {{ source.detective_controls_examples }}
+**Beispiele**: [TODO]
 
 ### Korrigierende Kontrollen
 
-**Definition**: {{ source.corrective_controls_definition }}
+**Definition**: [TODO]
 
-**Beispiele**: {{ source.corrective_controls_examples }}
+**Beispiele**: [TODO]
 
 ## Kontrollkategorien
 
 ### Genehmigung und Freigabe
 
-{{ source.authorization_controls }}
+[TODO]
 
 ### Verifizierung und Abstimmung
 
-{{ source.verification_controls }}
+[TODO]
 
 ### Physische Kontrollen
 
-{{ source.physical_controls }}
+[TODO]
 
 ### Funktionstrennung
 
-{{ source.segregation_of_duties }}
+[TODO]
 
 ### Leistungsüberprüfungen
 
-{{ source.performance_reviews }}
+[TODO]
 
 ## Kontrolldesign
 
 ### Risikobasierter Ansatz
 
-{{ source.risk_based_control_design }}
+[TODO]
 
 ### Kontrollziele
 
-{{ source.control_objectives }}
+[TODO]
 
 ### Auswahl von Kontrollaktivitäten
 
-{{ source.control_selection_process }}
+[TODO]
 
 ## Kontrollimplementierung
 
 ### Implementierungsprozess
 
-1. **Design**: {{ source.control_design_step }}
-2. **Dokumentation**: {{ source.control_documentation_step }}
-3. **Kommunikation**: {{ source.control_communication_step }}
-4. **Schulung**: {{ source.control_training_step }}
-5. **Überwachung**: {{ source.control_monitoring_step }}
+1. **Design**: [TODO]
+2. **Dokumentation**: [TODO]
+3. **Kommunikation**: [TODO]
+4. **Schulung**: [TODO]
+5. **Überwachung**: [TODO]
 
 ### Kontrolldokumentation
 
-{{ source.control_documentation }}
+[TODO]
 
 ## Technologiekontrollen
 
 ### Allgemeine IT-Kontrollen
 
-{{ source.general_it_controls }}
+[TODO]
 
 ### Anwendungskontrollen
 
-{{ source.application_controls }}
+[TODO]
 
 ### Infrastrukturkontrollen
 
-{{ source.infrastructure_controls }}
+[TODO]
 
 ## Richtlinien und Verfahren
 
 ### Richtlinien-Framework
 
-{{ source.policy_framework }}
+[TODO]
 
 ### Verfahrensdokumentation
 
-{{ source.procedure_documentation }}
+[TODO]
 
 ### Richtlinienkommunikation
 
-{{ source.policy_communication }}
+[TODO]
 
 ### Richtlinienüberprüfung
 
-{{ source.policy_review }}
+[TODO]
 
 ## Kontrollwirksamkeit
 
 ### Wirksamkeitskriterien
 
-{{ source.effectiveness_criteria }}
+[TODO]
 
 ### Prüfung und Validierung
 
-{{ source.control_testing }}
+[TODO]
 
 ### Kontinuierliche Verbesserung
 
-{{ source.control_improvement }}
+[TODO]
 
 ## Rollen und Verantwortlichkeiten
 
-**Geschäftsführung**: {{ source.management_control_role }}
-**Prozessverantwortliche**: {{ source.process_owner_control_role }}
-**Kontrollverantwortliche**: {{ source.control_owner_role }}
-**Interne Revision**: {{ source.internal_audit_control_role }}
+**Geschäftsführung**: [TODO]
+**Prozessverantwortliche**: [TODO]
+**Kontrollverantwortliche**: [TODO]
+**Interne Revision**: [TODO]
 
 ## Referenzen
 
@@ -162,12 +173,3 @@ Diese Komponente behandelt die folgenden COSO Prinzipien:
 - Risikomanagement-Framework
 - IT-General-Controls-Richtlinie
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

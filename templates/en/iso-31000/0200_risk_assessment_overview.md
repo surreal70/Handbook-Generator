@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-31000-0200
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Risk Assessment - Overview
+
+**Document-ID:** [FRAMEWORK]-0200
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -16,7 +28,7 @@ This document describes Risk Assessment - Overview in risk management according 
 ## Scope
 
 This document applies to:
-- {{ meta.organization }}
+- {{ meta-organisation.name }}
 - All organizational levels
 - Risk management processes
 - Risk management officers
@@ -75,14 +87,6 @@ The organization must:
 - 0010_risk_management_overview.md
 - 0100_framework_overview.md
 - 9999_Framework_Mapping.md
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- 
 Author Notes: 

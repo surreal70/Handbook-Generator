@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0430
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Incident Management Verfahren
+
+**Dokument-ID:** [FRAMEWORK]-0430
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -15,7 +26,7 @@ Dieses Dokument beschreibt die Verfahren für Incident Management gemäß TISAX-
 
 ## Geltungsbereich
 
-Dieses Dokument gilt für alle Sicherheitsvorfälle in {{ source.organization_name }}.
+Dieses Dokument gilt für alle Sicherheitsvorfälle in [TODO].
 
 ## Incident-Definitionen
 
@@ -46,8 +57,8 @@ Dieses Dokument gilt für alle Sicherheitsvorfälle in {{ source.organization_na
 - Externe Meldungen
 
 **Meldewege:**
-- Incident Response Hotline: {{ source.incident_hotline }}
-- E-Mail: {{ source.incident_email }}
+- Incident Response Hotline: [TODO]
+- E-Mail: [TODO]
 - Ticket-System
 - Eskalation an Vorgesetzten
 
@@ -61,9 +72,9 @@ Dieses Dokument gilt für alle Sicherheitsvorfälle in {{ source.organization_na
 
 **Priorisierung:**
 - Kritisch: Sofortige Bearbeitung
-- Hoch: Innerhalb {{ source.high_priority_response_time }} Stunden
-- Mittel: Innerhalb {{ source.medium_priority_response_time }} Stunden
-- Niedrig: Innerhalb {{ source.low_priority_response_time }} Tagen
+- Hoch: Innerhalb [TODO] Stunden
+- Mittel: Innerhalb [TODO] Stunden
+- Niedrig: Innerhalb [TODO] Tagen
 
 ### 3. Eindämmung
 
@@ -216,18 +227,9 @@ Dieses Dokument adressiert:
 
 ## Kennzahlen
 
-{{ source.organization_name }} misst:
+[TODO] misst:
 - Anzahl Incidents nach Kategorie
 - Durchschnittliche Reaktionszeit
 - Durchschnittliche Lösungszeit
 - Anzahl wiederkehrender Incidents
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

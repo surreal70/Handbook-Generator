@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0040
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Performance Benchmarking
+
+**Dokument-ID:** [FRAMEWORK]-0040
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -31,9 +42,9 @@ Dieses Dokument beschreibt den Benchmarking-Prozess für DORA Metrics und den Ve
 
 ### Vergleichsgruppen
 
-- **Industrie**: {{ source.industry_sector }}
-- **Organisationsgröße**: {{ source.organization_size }}
-- **Technologie-Stack**: {{ source.technology_stack }}
+- **Industrie**: [TODO]
+- **Organisationsgröße**: [TODO]
+- **Technologie-Stack**: [TODO]
 
 ## Industrie-Benchmarks
 
@@ -46,7 +57,7 @@ Dieses Dokument beschreibt den Benchmarking-Prozess für DORA Metrics und den Ve
 | Medium | Wöchentlich bis monatlich | 30% |
 | Low | Monatlich bis halbjährlich | 20% |
 
-**Aktuelle Position**: {{ source.deployment_freq_position }}
+**Aktuelle Position**: [TODO]
 
 ### Lead Time for Changes
 
@@ -57,7 +68,7 @@ Dieses Dokument beschreibt den Benchmarking-Prozess für DORA Metrics und den Ve
 | Medium | 1 Monat bis 6 Monate | 35% |
 | Low | > 6 Monate | 15% |
 
-**Aktuelle Position**: {{ source.lead_time_position }}
+**Aktuelle Position**: [TODO]
 
 ### Mean Time to Restore
 
@@ -68,7 +79,7 @@ Dieses Dokument beschreibt den Benchmarking-Prozess für DORA Metrics und den Ve
 | Medium | 1 Tag bis 1 Woche | 25% |
 | Low | > 1 Woche | 15% |
 
-**Aktuelle Position**: {{ source.mttr_position }}
+**Aktuelle Position**: [TODO]
 
 ### Change Failure Rate
 
@@ -79,63 +90,54 @@ Dieses Dokument beschreibt den Benchmarking-Prozess für DORA Metrics und den Ve
 | Medium | 31-45% | 20% |
 | Low | 46-60% | 15% |
 
-**Aktuelle Position**: {{ source.cfr_position }}
+**Aktuelle Position**: [TODO]
 
 ## Peer-Vergleich
 
 ### Vergleichsorganisationen
 
-1. **Peer 1**: {{ source.peer_1_name }}
-   - Deployment Frequency: {{ source.peer_1_deployment_freq }}
-   - Lead Time: {{ source.peer_1_lead_time }}
-   - MTTR: {{ source.peer_1_mttr }}
-   - Change Failure Rate: {{ source.peer_1_cfr }}
+1. **Peer 1**: [TODO]
+   - Deployment Frequency: [TODO]
+   - Lead Time: [TODO]
+   - MTTR: [TODO]
+   - Change Failure Rate: [TODO]
 
-2. **Peer 2**: {{ source.peer_2_name }}
-   - Deployment Frequency: {{ source.peer_2_deployment_freq }}
-   - Lead Time: {{ source.peer_2_lead_time }}
-   - MTTR: {{ source.peer_2_mttr }}
-   - Change Failure Rate: {{ source.peer_2_cfr }}
+2. **Peer 2**: [TODO]
+   - Deployment Frequency: [TODO]
+   - Lead Time: [TODO]
+   - MTTR: [TODO]
+   - Change Failure Rate: [TODO]
 
 ## Trend-Analyse
 
 ### Historische Entwicklung
 
-**Jahr 1**: {{ source.year_1_performance }}
-**Jahr 2**: {{ source.year_2_performance }}
-**Jahr 3**: {{ source.year_3_performance }}
+**Jahr 1**: [TODO]
+**Jahr 2**: [TODO]
+**Jahr 3**: [TODO]
 
 ### Verbesserungsrate
 
-- **Deployment Frequency**: {{ source.deployment_freq_improvement }}
-- **Lead Time**: {{ source.lead_time_improvement }}
-- **MTTR**: {{ source.mttr_improvement }}
-- **Change Failure Rate**: {{ source.cfr_improvement }}
+- **Deployment Frequency**: [TODO]
+- **Lead Time**: [TODO]
+- **MTTR**: [TODO]
+- **Change Failure Rate**: [TODO]
 
 ## Gap-Analyse
 
 ### Zu Elite-Performance
 
 Gaps zur Elite-Performance-Kategorie:
-1. {{ source.elite_gap_1 }}
-2. {{ source.elite_gap_2 }}
-3. {{ source.elite_gap_3 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
 
 ### Verbesserungspotenzial
 
 Geschätztes Verbesserungspotenzial:
-- **Kurzfristig (3 Monate)**: {{ source.short_term_potential }}
-- **Mittelfristig (6-12 Monate)**: {{ source.medium_term_potential }}
-- **Langfristig (12+ Monate)**: {{ source.long_term_potential }}
+- **Kurzfristig (3 Monate)**: [TODO]
+- **Mittelfristig (6-12 Monate)**: [TODO]
+- **Langfristig (12+ Monate)**: [TODO]
 
 <!-- Hinweis: Benchmarking sollte regelmäßig aktualisiert werden -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

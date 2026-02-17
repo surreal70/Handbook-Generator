@@ -1,13 +1,25 @@
----
+
 Document-ID: nist-csf-0030
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Risikomanagement-Strategie (GV.RM)
+
+**Dokument-ID:** [FRAMEWORK]-0030
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -15,12 +27,12 @@ Dieses Dokument definiert die Cybersecurity-Risikomanagement-Strategie der Organ
 
 ## Geltungsbereich
 
-{{ meta.scope }}
+{{ meta-handbook.scope }}
 
 ## Risikomanagement-Rahmenwerk
 
 ### Risikomanagement-Ansatz
-{{ meta.organization }} verfolgt einen risikobasierten Ansatz für Cybersecurity, der:
+{{ meta-organisation.name }} verfolgt einen risikobasierten Ansatz für Cybersecurity, der:
 - Geschäftsziele mit Sicherheitsanforderungen in Einklang bringt
 - Kontinuierliche Risikobewertung und -überwachung ermöglicht
 - Informierte Entscheidungsfindung unterstützt
@@ -36,7 +48,7 @@ Dieses Dokument definiert die Cybersecurity-Risikomanagement-Strategie der Organ
 ## Risikoappetit und -toleranz
 
 ### Risikoappetit-Erklärung
-{{ meta.risk_appetite_statement }}
+{{ meta-handbook.risk_appetite_statement }}
 
 ### Risikotoleranz-Niveaus
 
@@ -59,11 +71,11 @@ Dieses Dokument definiert die Cybersecurity-Risikomanagement-Strategie der Organ
 - Sehr niedrig (1): < 20% Wahrscheinlichkeit
 
 **Auswirkung:**
-- Sehr hoch (5): > {{ meta.impact_threshold_critical }}
-- Hoch (4): {{ meta.impact_threshold_high }}
-- Mittel (3): {{ meta.impact_threshold_medium }}
-- Niedrig (2): {{ meta.impact_threshold_low }}
-- Sehr niedrig (1): < {{ meta.impact_threshold_minimal }}
+- Sehr hoch (5): > {{ meta-handbook.impact_threshold_critical }}
+- Hoch (4): {{ meta-handbook.impact_threshold_high }}
+- Mittel (3): {{ meta-handbook.impact_threshold_medium }}
+- Niedrig (2): {{ meta-handbook.impact_threshold_low }}
+- Sehr niedrig (1): < {{ meta-handbook.impact_threshold_minimal }}
 
 ### Risikomatrix
 
@@ -125,17 +137,3 @@ Dieses Dokument definiert die Cybersecurity-Risikomanagement-Strategie der Organ
 - 0100_asset_management.md (Identify)
 - 0130_risk_assessment.md (Identify)
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |
-
-<!-- 
-Autor-Hinweise:
-- Passen Sie Risikoschwellenwerte an Ihre Organisation an
-- Stellen Sie sicher, dass Risikomanagement mit Geschäftszielen abgestimmt ist
-- Überprüfen Sie regelmäßig die Wirksamkeit der Risikostrategie
--->

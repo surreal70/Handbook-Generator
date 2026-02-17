@@ -1,13 +1,24 @@
----
+
 Document-ID: soc1-0050
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Complementary User Entity Controls
+
+**Document-ID:** [FRAMEWORK]-0050
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -41,99 +52,99 @@ Complementary User Entity Controls (CUECs) are controls that must be implemented
 
 ## Complementary Controls
 
-### CUEC 1: {{ source.cuec_1_title }}
+### CUEC 1: [TODO]
 
-**Description**: {{ source.cuec_1_description }}
+**Description**: [TODO]
 
-**Related Control Objective**: {{ source.cuec_1_control_objective }}
-
-**Required User Organization Actions**:
-1. {{ source.cuec_1_action_1 }}
-2. {{ source.cuec_1_action_2 }}
-3. {{ source.cuec_1_action_3 }}
-
-**Impact of Non-Implementation**:
-{{ source.cuec_1_impact }}
-
-### CUEC 2: {{ source.cuec_2_title }}
-
-**Description**: {{ source.cuec_2_description }}
-
-**Related Control Objective**: {{ source.cuec_2_control_objective }}
+**Related Control Objective**: [TODO]
 
 **Required User Organization Actions**:
-1. {{ source.cuec_2_action_1 }}
-2. {{ source.cuec_2_action_2 }}
-3. {{ source.cuec_2_action_3 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
 
 **Impact of Non-Implementation**:
-{{ source.cuec_2_impact }}
+[TODO]
 
-### CUEC 3: {{ source.cuec_3_title }}
+### CUEC 2: [TODO]
 
-**Description**: {{ source.cuec_3_description }}
+**Description**: [TODO]
 
-**Related Control Objective**: {{ source.cuec_3_control_objective }}
+**Related Control Objective**: [TODO]
 
 **Required User Organization Actions**:
-1. {{ source.cuec_3_action_1 }}
-2. {{ source.cuec_3_action_2 }}
-3. {{ source.cuec_3_action_3 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
 
 **Impact of Non-Implementation**:
-{{ source.cuec_3_impact }}
+[TODO]
 
-### CUEC 4: {{ source.cuec_4_title }}
+### CUEC 3: [TODO]
 
-**Description**: {{ source.cuec_4_description }}
+**Description**: [TODO]
 
-**Related Control Objective**: {{ source.cuec_4_control_objective }}
+**Related Control Objective**: [TODO]
 
 **Required User Organization Actions**:
-1. {{ source.cuec_4_action_1 }}
-2. {{ source.cuec_4_action_2 }}
-3. {{ source.cuec_4_action_3 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
 
 **Impact of Non-Implementation**:
-{{ source.cuec_4_impact }}
+[TODO]
 
-### CUEC 5: {{ source.cuec_5_title }}
+### CUEC 4: [TODO]
 
-**Description**: {{ source.cuec_5_description }}
+**Description**: [TODO]
 
-**Related Control Objective**: {{ source.cuec_5_control_objective }}
+**Related Control Objective**: [TODO]
 
 **Required User Organization Actions**:
-1. {{ source.cuec_5_action_1 }}
-2. {{ source.cuec_5_action_2 }}
-3. {{ source.cuec_5_action_3 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
 
 **Impact of Non-Implementation**:
-{{ source.cuec_5_impact }}
+[TODO]
+
+### CUEC 5: [TODO]
+
+**Description**: [TODO]
+
+**Related Control Objective**: [TODO]
+
+**Required User Organization Actions**:
+1. [TODO]
+2. [TODO]
+3. [TODO]
+
+**Impact of Non-Implementation**:
+[TODO]
 
 ## Mapping Matrix
 
 | CUEC | Control Objective | User Responsibility | Criticality |
 |------|-------------------|---------------------|-------------|
-| {{ source.cuec_matrix_row_1 }} |
-| {{ source.cuec_matrix_row_2 }} |
-| {{ source.cuec_matrix_row_3 }} |
-| {{ source.cuec_matrix_row_4 }} |
-| {{ source.cuec_matrix_row_5 }} |
+| [TODO] |
+| [TODO] |
+| [TODO] |
+| [TODO] |
+| [TODO] |
 
 ## Communication to User Organizations
 
 ### Communication Methods
 
-{{ source.cuec_communication_methods }}
+[TODO]
 
 ### Documentation
 
-{{ source.cuec_documentation }}
+[TODO]
 
 ### Training and Support
 
-{{ source.cuec_training_support }}
+[TODO]
 
 ## Monitoring and Assessment
 
@@ -146,7 +157,7 @@ User organizations should regularly assess:
 
 ### Feedback Mechanism
 
-{{ source.cuec_feedback_mechanism }}
+[TODO]
 
 ## References
 
@@ -154,13 +165,5 @@ User organizations should regularly assess:
 - Complementary User Entity Controls Guidance
 
 <!-- Author notes: Ensure CUECs are clearly and actionably stated -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

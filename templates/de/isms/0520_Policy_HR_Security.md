@@ -1,5 +1,19 @@
 # Policy: HR Security
 
+**Dokument-ID:** 0520
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This policy establishes the principles for human resources security throughout
@@ -10,27 +24,15 @@ HR processes and employment regulations.
 ISO 27001:2022 Annex A Reference: A.6.1, A.6.2, A.6.3, A.6.4
 -->
 
-**Dokument-ID:** 0520  
-**Dokumenttyp:** Policy (abstrakt)  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.6.1-A.6.4 (inkl. Amendment 1:2024)  
-**Owner:** {{ meta.ciso.name }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
-
----
-
 ## 1. Zweck
 
-Diese Policy definiert die Grundsätze für HR Security der **{{ meta.organization.name }}**. Sie stellt sicher, dass Sicherheitsverantwortlichkeiten über den gesamten Beschäftigungslebenszyklus verstanden und erfüllt werden - von der Einstellung bis zur Beendigung des Arbeitsverhältnisses.
+Diese Policy definiert die Grundsätze für HR Security der **{{ meta-organisation.name }}**. Sie stellt sicher, dass Sicherheitsverantwortlichkeiten über den gesamten Beschäftigungslebenszyklus verstanden und erfüllt werden - von der Einstellung bis zur Beendigung des Arbeitsverhältnisses.
 
 ## 2. Geltungsbereich
 
 Diese Policy gilt für:
 
-- **Organisationseinheiten:** Alle Abteilungen und Standorte der {{ meta.organization.name }}
+- **Organisationseinheiten:** Alle Abteilungen und Standorte der {{ meta-organisation.name }}
 - **Personen:** Alle Mitarbeiter, Auftragnehmer, Zeitarbeiter, Praktikanten
 - **Lebenszyklus:** Pre-Employment, Onboarding, Employment, Offboarding
 - **Standorte:** {{ netbox.site.name }} und alle weiteren Betriebsstandorte
@@ -182,18 +184,9 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - Arbeitsrechtliche Vorgaben (Deutschland)
 - DSGVO (EU 2016/679) - Datenschutz bei Background Checks
 
----
-
 **Genehmigt durch:**  
 {{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+Datum: {{ meta-handbook.modifydate }}
 
-**Nächster Review:** {{ meta.document.next_review }} (jährlich oder anlassbezogen)
+**Nächster Review:** {{ meta-handbook.next_review }} (jährlich oder anlassbezogen)
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

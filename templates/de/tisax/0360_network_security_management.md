@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0360
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Netzwerksicherheitsmanagement
+
+**Dokument-ID:** [FRAMEWORK]-0360
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -15,7 +26,7 @@ Dieses Dokument beschreibt die Maßnahmen für Netzwerksicherheit gemäß TISAX-
 
 ## Geltungsbereich
 
-Dieses Dokument gilt für alle Netzwerke von {{ source.organization_name }}.
+Dieses Dokument gilt für alle Netzwerke von [TODO].
 
 ## Netzwerksegmentierung
 
@@ -158,17 +169,8 @@ Dieses Dokument adressiert:
 
 ## Kennzahlen
 
-{{ source.organization_name }} misst:
+[TODO] misst:
 - Anzahl blockierter Angriffe
 - Netzwerkverfügbarkeit
 - Anzahl Firewall-Regeländerungen
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

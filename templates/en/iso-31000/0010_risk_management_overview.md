@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-31000-0010
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Risk Management - Overview
+
+**Document-ID:** [FRAMEWORK]-0010
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -16,7 +28,7 @@ This document describes the risk management framework according to ISO 31000. It
 ## Scope
 
 This document applies to:
-- {{ meta.organization }}
+- {{ meta-organisation.name }}
 - All business areas and processes
 - Board, management, and risk management
 - Risk management structures and processes
@@ -86,18 +98,9 @@ ISO 31000 is based on three integrated components:
 - 0070_human_cultural_factors_principle.md
 - 0080_continual_improvement_principle.md
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |
-
 <!-- 
 Author Notes: 
 - Adapt the risk management framework to the size and complexity of your organization
 - Ensure the framework is integrated with other management systems
 - Regularly review the effectiveness of risk management
 -->
-

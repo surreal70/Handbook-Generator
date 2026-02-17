@@ -1,13 +1,16 @@
 # Maßnahmenplan und Meilensteine
 
-**Dokument-ID:** NIST-0820  
-**Kontrollfamilie:** Bewertung, Autorisierung und Überwachung (CA)  
-**Kontrollen:** CA-5, PM-4  
-**Organisation:** {{ meta.organization.name }}  
-**Verantwortlich:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Entwurf / In Prüfung / Genehmigt  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** NIST-0820
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -69,20 +72,11 @@ Die Organisation implementiert einen Prozess für Plan of Action and Milestones.
 **Bewertungsstatus:** [TODO: Erfüllt / Nicht erfüllt / Nicht zutreffend]  
 **Feststellungen:** [TODO: Beschreibung]  
 
----
-
 **Dokumentenhistorie:**
 
 | Version | Datum | Autor | Änderungen |
 |---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Ersterstellung |
+| 0.1 | {{ meta-handbook.modifydate }} | {{ meta-handbook.author }} | Ersterstellung |
 
 <!-- Ende des Templates -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

@@ -1,11 +1,16 @@
 # Lenkung dokumentierter Information
 
-**Dokument-ID:** 0330  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0330
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -18,7 +23,7 @@ Referenz: ISO 9001:2015, Kapitel 7.5
 
 ## Zweck
 
-Dieses Dokument definiert, wie {{ meta.organization }} dokumentierte Information lenkt, gemäß ISO 9001:2015 Kapitel 7.5.
+Dieses Dokument definiert, wie {{ meta-organisation.name }} dokumentierte Information lenkt, gemäß ISO 9001:2015 Kapitel 7.5.
 
 ## Dokumentierte Information im QMS
 
@@ -57,13 +62,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} dokumentierte Information
 
 **Jedes Dokument enthält:**
 - **Dokumententitel:** Klarer, beschreibender Titel
-- **Dokument-ID:** Eindeutige Kennung
-- **Versionsnummer:** Aktuelle Version
-- **Datum:** Ausgabedatum oder Revisionsdatum
-- **Autor/Verantwortlicher:** Verantwortliche Person
-- **Genehmigung:** Name und Unterschrift/Datum des Genehmigers
-- **Status:** Entwurf, In Überprüfung, Genehmigt, Veraltet
-- **Klassifizierung:** Intern, Vertraulich, Öffentlich
+- 
 
 ### Dokumentennummerierungssystem
 
@@ -266,8 +265,6 @@ Dieses Dokument definiert, wie {{ meta.organization }} dokumentierte Information
 - Initiierung von Dokumentenüberprüfungen
 - Genehmigung von Änderungen (innerhalb Befugnis)
 
----
-
 **Nächste Schritte:**
 1. Etabliere Dokumentenlenkungsverfahren
 2. Implementiere Dokumentenmanagementsystem
@@ -276,10 +273,3 @@ Dieses Dokument definiert, wie {{ meta.organization }} dokumentierte Information
 5. Führe regelmäßige Dokumentenüberprüfungen durch
 6. Überwache Dokumentenlenkungswirksamkeit
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

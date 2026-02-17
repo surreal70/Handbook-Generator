@@ -1,14 +1,16 @@
 # Richtlinie: E-Mail, Sharing und Zusammenarbeitstools
 
-**Dokument-ID:** 0670  
-**Dokumenttyp:** Richtlinie (detailliert)  
-**Zugehörige Policy:** 0660_Policy_Informationsuebertragung_und_Kommunikation.md  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.5.14  
-**Owner:** {{ meta.it_operations.manager }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}
+**Dokument-ID:** 0670
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -19,7 +21,7 @@ Diese Richtlinie konkretisiert die `0660_Policy_Informationsuebertragung_und_Kom
 - File-Sharing und Collaboration-Tools
 - Sichere Kommunikationskanäle
 
-**Geltungsbereich:** Alle Kommunikationstools bei **{{ meta.organization.name }}**
+**Geltungsbereich:** Alle Kommunikationstools bei **{{ meta-organisation.name }}**
 
 ## 2. E-Mail-Sicherheit
 
@@ -297,15 +299,6 @@ Diese Richtlinie konkretisiert die `0660_Policy_Informationsuebertragung_und_Kom
 - **ISO/IEC 27001:2022 Annex A.5.14** - Information transfer
 - **NIST SP 800-177** - Trustworthy Email
 
----
-
 **Genehmigt durch:** {{ meta.ciso.name }}, CISO  
-**Nächster Review:** {{ meta.document.next_review }}
+**Nächster Review:** {{ meta-handbook.next_review }}
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

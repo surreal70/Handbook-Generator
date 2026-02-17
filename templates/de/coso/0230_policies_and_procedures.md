@@ -1,17 +1,28 @@
----
+
 Document-ID: coso-0230
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Richtlinien und Verfahren
 
+**Dokument-ID:** [FRAMEWORK]-0230
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt den Rahmen für Richtlinien und Verfahren bei {{ source.organization_name }} gemäß COSO Prinzip 12.
+Dieses Dokument beschreibt den Rahmen für Richtlinien und Verfahren bei [TODO] gemäß COSO Prinzip 12.
 
 ## Geltungsbereich
 
@@ -24,159 +35,159 @@ Dieses Dokument beschreibt den Rahmen für Richtlinien und Verfahren bei {{ sour
 
 ### Richtlinienhierarchie
 
-**Unternehmensrichtlinien**: {{ source.corporate_policies }}
-**Funktionsbereichsrichtlinien**: {{ source.functional_policies }}
-**Verfahrensanweisungen**: {{ source.procedures }}
-**Arbeitsanweisungen**: {{ source.work_instructions }}
+**Unternehmensrichtlinien**: [TODO]
+**Funktionsbereichsrichtlinien**: [TODO]
+**Verfahrensanweisungen**: [TODO]
+**Arbeitsanweisungen**: [TODO]
 
 ### Richtlinienstruktur
 
-**Zweck und Geltungsbereich**: {{ source.policy_purpose_scope }}
-**Verantwortlichkeiten**: {{ source.policy_responsibilities }}
-**Anforderungen**: {{ source.policy_requirements }}
-**Ausnahmen**: {{ source.policy_exceptions }}
-**Referenzen**: {{ source.policy_references }}
+**Zweck und Geltungsbereich**: [TODO]
+**Verantwortlichkeiten**: [TODO]
+**Anforderungen**: [TODO]
+**Ausnahmen**: [TODO]
+**Referenzen**: [TODO]
 
 ## Richtlinienentwicklung
 
 ### Entwicklungsprozess
 
-**Bedarfsidentifikation**: {{ source.policy_needs_identification }}
-**Entwurfserstellung**: {{ source.policy_drafting }}
-**Stakeholder-Konsultation**: {{ source.stakeholder_consultation }}
-**Genehmigung**: {{ source.policy_approval }}
-**Veröffentlichung**: {{ source.policy_publication }}
+**Bedarfsidentifikation**: [TODO]
+**Entwurfserstellung**: [TODO]
+**Stakeholder-Konsultation**: [TODO]
+**Genehmigung**: [TODO]
+**Veröffentlichung**: [TODO]
 
 ### Richtliniengenehmigung
 
-**Genehmigungsmatrix**: {{ source.approval_matrix }}
-**Genehmigungsworkflow**: {{ source.approval_workflow }}
+**Genehmigungsmatrix**: [TODO]
+**Genehmigungsworkflow**: [TODO]
 
 ## Verfahrensdokumentation
 
 ### Verfahrensstandards
 
-**Dokumentationsstandards**: {{ source.documentation_standards }}
-**Vorlagen**: {{ source.procedure_templates }}
-**Versionskontrolle**: {{ source.version_control }}
+**Dokumentationsstandards**: [TODO]
+**Vorlagen**: [TODO]
+**Versionskontrolle**: [TODO]
 
 ### Verfahrensinhalte
 
-**Prozessschritte**: {{ source.process_steps }}
-**Verantwortlichkeiten**: {{ source.procedure_responsibilities }}
-**Kontrollen**: {{ source.procedure_controls }}
-**Formulare und Checklisten**: {{ source.forms_checklists }}
+**Prozessschritte**: [TODO]
+**Verantwortlichkeiten**: [TODO]
+**Kontrollen**: [TODO]
+**Formulare und Checklisten**: [TODO]
 
 ### Prozessflussdiagramme
 
-{{ source.process_flow_diagrams }}
+[TODO]
 
 ## Richtlinienbereiche
 
 ### Finanzrichtlinien
 
-**Finanzberichterstattung**: {{ source.financial_reporting_policy }}
-**Budgetierung**: {{ source.budgeting_policy }}
-**Ausgabengenehmigung**: {{ source.expenditure_approval_policy }}
-**Vermögensverwaltung**: {{ source.asset_management_policy }}
+**Finanzberichterstattung**: [TODO]
+**Budgetierung**: [TODO]
+**Ausgabengenehmigung**: [TODO]
+**Vermögensverwaltung**: [TODO]
 
 ### Betriebsrichtlinien
 
-**Beschaffung**: {{ source.procurement_policy }}
-**Personalwesen**: {{ source.hr_policy }}
-**IT-Nutzung**: {{ source.it_usage_policy }}
-**Datenschutz**: {{ source.data_privacy_policy }}
+**Beschaffung**: [TODO]
+**Personalwesen**: [TODO]
+**IT-Nutzung**: [TODO]
+**Datenschutz**: [TODO]
 
 ### Compliance-Richtlinien
 
-**Verhaltenskodex**: {{ source.code_of_conduct }}
-**Anti-Korruption**: {{ source.anti_corruption_policy }}
-**Interessenkonflikte**: {{ source.conflict_of_interest_policy }}
-**Whistleblowing**: {{ source.whistleblowing_policy }}
+**Verhaltenskodex**: [TODO]
+**Anti-Korruption**: [TODO]
+**Interessenkonflikte**: [TODO]
+**Whistleblowing**: [TODO]
 
 ### Risikomanagement-Richtlinien
 
-**Risikomanagement-Rahmen**: {{ source.risk_management_framework }}
-**Versicherung**: {{ source.insurance_policy }}
-**Business Continuity**: {{ source.business_continuity_policy }}
+**Risikomanagement-Rahmen**: [TODO]
+**Versicherung**: [TODO]
+**Business Continuity**: [TODO]
 
 ## Kommunikation und Schulung
 
 ### Richtlinienkommunikation
 
-**Kommunikationskanäle**: {{ source.communication_channels }}
-**Richtlinienportal**: {{ source.policy_portal }}
-**Benachrichtigungen**: {{ source.policy_notifications }}
+**Kommunikationskanäle**: [TODO]
+**Richtlinienportal**: [TODO]
+**Benachrichtigungen**: [TODO]
 
 ### Schulungsprogramm
 
-**Einführungsschulung**: {{ source.onboarding_training }}
-**Regelmäßige Schulungen**: {{ source.periodic_training }}
-**Spezialschulungen**: {{ source.specialized_training }}
+**Einführungsschulung**: [TODO]
+**Regelmäßige Schulungen**: [TODO]
+**Spezialschulungen**: [TODO]
 
 ### Bestätigung und Compliance
 
-**Richtlinienbestätigung**: {{ source.policy_acknowledgment }}
-**Compliance-Überwachung**: {{ source.compliance_monitoring }}
+**Richtlinienbestätigung**: [TODO]
+**Compliance-Überwachung**: [TODO]
 
 ## Richtlinienüberwachung
 
 ### Compliance-Überwachung
 
-**Überwachungsmethoden**: {{ source.monitoring_methods }}
-**Compliance-Berichte**: {{ source.compliance_reports }}
-**Verstöße**: {{ source.policy_violations }}
+**Überwachungsmethoden**: [TODO]
+**Compliance-Berichte**: [TODO]
+**Verstöße**: [TODO]
 
 ### Wirksamkeitsbewertung
 
-**Bewertungskriterien**: {{ source.effectiveness_criteria }}
-**Bewertungsmethoden**: {{ source.assessment_methods }}
+**Bewertungskriterien**: [TODO]
+**Bewertungsmethoden**: [TODO]
 
 ## Richtlinienaktualisierung
 
 ### Überprüfungszyklus
 
-**Jährliche Überprüfung**: {{ source.annual_review }}
-**Anlassbezogene Überprüfung**: {{ source.triggered_review }}
+**Jährliche Überprüfung**: [TODO]
+**Anlassbezogene Überprüfung**: [TODO]
 
 ### Aktualisierungsprozess
 
-**Änderungsantrag**: {{ source.change_request }}
-**Überprüfung und Genehmigung**: {{ source.review_approval }}
-**Kommunikation von Änderungen**: {{ source.change_communication }}
-**Versionsverwaltung**: {{ source.version_management }}
+**Änderungsantrag**: [TODO]
+**Überprüfung und Genehmigung**: [TODO]
+**Kommunikation von Änderungen**: [TODO]
+**Versionsverwaltung**: [TODO]
 
 ## Ausnahmenmanagement
 
 ### Ausnahmeanträge
 
-**Antragsverfahren**: {{ source.exception_request_process }}
-**Genehmigungskriterien**: {{ source.exception_approval_criteria }}
-**Kompensationskontrollen**: {{ source.compensating_controls }}
+**Antragsverfahren**: [TODO]
+**Genehmigungskriterien**: [TODO]
+**Kompensationskontrollen**: [TODO]
 
 ### Ausnahmenüberwachung
 
-**Ausnahmenregister**: {{ source.exception_register }}
-**Überprüfung**: {{ source.exception_review }}
-**Ablauf**: {{ source.exception_expiry }}
+**Ausnahmenregister**: [TODO]
+**Überprüfung**: [TODO]
+**Ablauf**: [TODO]
 
 ## Rollen und Verantwortlichkeiten
 
-**Richtlinieneigentümer**: {{ source.policy_owner_responsibilities }}
-**Compliance-Funktion**: {{ source.compliance_function_responsibilities }}
-**Geschäftsbereiche**: {{ source.business_unit_responsibilities }}
-**Mitarbeiter**: {{ source.employee_responsibilities }}
+**Richtlinieneigentümer**: [TODO]
+**Compliance-Funktion**: [TODO]
+**Geschäftsbereiche**: [TODO]
+**Mitarbeiter**: [TODO]
 
 ## Dokumentation und Aufbewahrung
 
 ### Richtliniendokumentation
 
-**Richtlinienregister**: {{ source.policy_register }}
-**Dokumentenmanagement**: {{ source.document_management }}
+**Richtlinienregister**: [TODO]
+**Dokumentenmanagement**: [TODO]
 
 ### Aufbewahrungsfristen
 
-{{ source.retention_requirements }}
+[TODO]
 
 ## Referenzen
 
@@ -185,12 +196,3 @@ Dieses Dokument beschreibt den Rahmen für Richtlinien und Verfahren bei {{ sour
 - Compliance-Management-System
 - Schulungsmanagement-System
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

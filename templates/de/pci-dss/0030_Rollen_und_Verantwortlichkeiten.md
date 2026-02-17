@@ -1,13 +1,16 @@
 # Rollen und Verantwortlichkeiten
 
-**Dokument-ID:** PCI-0030  
-**Organisation:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** PCI-0030
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,7 +28,7 @@ Customization required:
 
 ## 1. Zweck
 
-Dieses Dokument definiert die Rollen, Verantwortlichkeiten und Zuständigkeiten für die PCI-DSS-Compliance bei {{ meta.organization.name }}.
+Dieses Dokument definiert die Rollen, Verantwortlichkeiten und Zuständigkeiten für die PCI-DSS-Compliance bei {{ meta-organisation.name }}.
 
 ### 1.1 Ziele
 
@@ -39,9 +42,9 @@ Dieses Dokument definiert die Rollen, Verantwortlichkeiten und Zuständigkeiten 
 ### 2.1 Executive Management
 
 **Chief Executive Officer (CEO):**
-- **Name:** {{ meta.roles.ceo.name }}
-- **E-Mail:** {{ meta.roles.ceo.email }}
-- **Telefon:** {{ meta.roles.ceo.phone }}
+- **Name:** {{ meta-organisation-roles.role_CEO }}
+- **E-Mail:** {{ meta-organisation-roles.role_CEO }}
+- **Telefon:** [TODO]
 
 **Verantwortlichkeiten:**
 - Gesamtverantwortung für PCI-DSS-Compliance
@@ -50,9 +53,9 @@ Dieses Dokument definiert die Rollen, Verantwortlichkeiten und Zuständigkeiten 
 - Eskalationspunkt für kritische Compliance-Themen
 
 **Chief Information Security Officer (CISO):**
-- **Name:** {{ meta.roles.ciso.name }}
-- **E-Mail:** {{ meta.roles.ciso.email }}
-- **Telefon:** {{ meta.roles.ciso.phone }}
+- **Name:** {{ meta-organisation-roles.role_CISO }}
+- **E-Mail:** {{ meta-organisation-roles.role_CISO }}
+- **Telefon:** [TODO]
 
 **Verantwortlichkeiten:**
 - Leitung des PCI-DSS-Compliance-Programms
@@ -88,9 +91,9 @@ Dieses Dokument definiert die Rollen, Verantwortlichkeiten und Zuständigkeiten 
 ### 2.3 IT und Operations
 
 **Chief Information Officer (CIO):**
-- **Name:** {{ meta.roles.cio.name }}
-- **E-Mail:** {{ meta.roles.cio.email }}
-- **Telefon:** {{ meta.roles.cio.phone }}
+- **Name:** {{ meta-organisation-roles.role_CIO }}
+- **E-Mail:** {{ meta-organisation-roles.role_CIO }}
+- **Telefon:** [TODO]
 
 **Verantwortlichkeiten:**
 - Verantwortung für IT-Infrastruktur und -Systeme
@@ -378,13 +381,5 @@ Dieses Dokument definiert die Rollen, Verantwortlichkeiten und Zuständigkeiten 
 - Testergebnisse (falls zutreffend)
 
 **Aufbewahrungsfrist:** [TODO: 3 Jahre]
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 <!-- End of template -->

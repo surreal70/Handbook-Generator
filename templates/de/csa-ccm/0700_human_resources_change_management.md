@@ -1,17 +1,28 @@
----
+
 Document-ID: csa-ccm-0700
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Personalwesen und Änderungsmanagement
 
+**Dokument-ID:** [FRAMEWORK]-0700
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt die Personalwesen-Sicherheit, Schulungen, Änderungssteuerung und mobile Sicherheit für Cloud-Umgebungen in {{ source.organization_name }}.
+Dieses Dokument beschreibt die Personalwesen-Sicherheit, Schulungen, Änderungssteuerung und mobile Sicherheit für Cloud-Umgebungen in [TODO].
 
 ## Geltungsbereich
 
@@ -284,12 +295,3 @@ Dieses Dokument gilt für alle Mitarbeiter, Auftragnehmer, Änderungsprozesse un
 
 <!-- Hinweis: Passen Sie HR-Prozesse und Änderungsmanagement an -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

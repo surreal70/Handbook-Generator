@@ -1,11 +1,16 @@
 # Conformance Claims
 
-**Document-ID:** 0040  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0040
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -144,8 +149,8 @@ Reference: ISO/IEC 15408-1:2022, Section 8.3 (Conformance Claims)
 ## 6. Conformance Maintenance
 
 ### 6.1 Version Control
-**ST Version:** {{ meta.version }}  
-**Last Conformance Review:** {{ meta.date }}  
+**ST Version:** {{ meta-handbook.revision }}  
+**Last Conformance Review:** {{ meta-handbook.date }}  
 **Next Review:** [TODO: Date]  
 
 ### 6.2 Change Management
@@ -154,18 +159,9 @@ Reference: ISO/IEC 15408-1:2022, Section 8.3 (Conformance Claims)
 - Impact assessment: [TODO]
 - Re-evaluation triggers: [TODO]
 
----
-
 **Next Steps:**
 1. Complete all [TODO] placeholders
 2. Verify conformance with selected standards
 3. Document all deviations completely
 4. Ensure consistency with other ST sections
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

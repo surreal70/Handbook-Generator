@@ -81,13 +81,13 @@ The templates are organized according to the structure of ISO/IEC 15408-1:2022:
 Templates support two types of placeholders:
 
 - **Manual Placeholders**: `[TODO: Description]` - must be replaced manually
-- **Automatic Placeholders**: `{{ source.field }}` - populated from data sources
+- **Automatic Placeholders**: `[TODO]` - populated from data sources
 
 Examples of automatic placeholders:
-- `{{ meta.organization }}` - Organization name
-- `{{ meta.author }}` - Author
-- `{{ meta.version }}` - Version number
-- `{{ meta.date }}` - Date
+- `{{ meta-organisation.name }}` - Organization name
+- `{{ meta-handbook.author }}` - Author
+- `{{ meta-handbook.revision }}` - Version number
+- `{{ meta-handbook.modifydate }}` - Date
 
 ## Common Criteria Versions
 
@@ -140,7 +140,7 @@ For questions about using these templates or Common Criteria evaluation, contact
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
+| 0.1 | [TODO] | {{ meta.defaults.author }} | Initial Creation |
 
 ## Version History
 

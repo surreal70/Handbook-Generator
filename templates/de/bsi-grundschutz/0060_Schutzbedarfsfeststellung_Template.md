@@ -1,14 +1,16 @@
 # Schutzbedarfsfeststellung (Template)
 
-**Dokument-ID:** 0060  
-**Dokumenttyp:** Methodik-Artefakt  
-**Referenzrahmen:** BSI IT-Grundschutz (BSI Standard 200-2)  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** {{ meta.document.status }}  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0060
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -21,7 +23,7 @@ Reference: BSI Standard 200-2 (Chapter 6: Protection Requirements Determination)
 
 ## 1. Ziel und Zweck
 
-Die Schutzbedarfsfeststellung bestimmt systematisch den Schutzbedarf für Geschäftsprozesse, Informationen, Anwendungen und IT-Systeme von **{{ meta.organization.name }}**. Sie bildet die Grundlage für:
+Die Schutzbedarfsfeststellung bestimmt systematisch den Schutzbedarf für Geschäftsprozesse, Informationen, Anwendungen und IT-Systeme von **{{ meta-organisation.name }}**. Sie bildet die Grundlage für:
 - Auswahl angemessener Sicherheitsmaßnahmen
 - Priorisierung von Sicherheitsinvestitionen
 - Risikoanalyse (Dokument 0090)
@@ -164,7 +166,7 @@ Start with business processes, then derive requirements for applications and sys
 | Raum-ID | Raum/Standort | Systeme | C | I | A | Begründung | Schutzbedarf gesamt |
 |---|---|---|---|---|---|---|---|
 | R-001 | Rechenzentrum | Alle kritischen Server | Sehr hoch | Sehr hoch | Sehr hoch | Hosting kritischer Systeme | Sehr hoch |
-| R-002 | {{ meta.organization.primary_location }} | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
+| R-002 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 **Anzahl Räume gesamt:** [TODO]
 
@@ -279,28 +281,18 @@ Die Schutzbedarfsfeststellung wird aktualisiert bei:
 - Mindestens jährlich im Rahmen des ISMS-Reviews
 
 **Verantwortlich:** {{ meta.ciso.name }} (ISB)  
-**Nächster Review:** {{ meta.document.next_review }}
+**Nächster Review:** {{ meta-handbook.next_review }}
 
 ## 9. Freigabe
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| ISB | {{ meta.ciso.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| IT-Leitung | {{ meta.cio.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| Geschäftsführung | {{ meta.ceo.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| IT-Leitung | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| Geschäftsführung | {{ meta.ceo.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **Referenzen:**
 - BSI Standard 200-2: IT-Grundschutz-Methodik (Kapitel 6: Schutzbedarfsfeststellung)
 - BSI IT-Grundschutz-Kompendium
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 <!-- End of template -->

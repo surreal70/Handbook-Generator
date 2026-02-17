@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0530
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Intellectual Property Rights
+
+**Document-ID:** [FRAMEWORK]-0530
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -15,7 +26,7 @@ This document describes measures for protecting intellectual property according 
 
 ## Scope
 
-This document applies to all intellectual property rights of {{ source.organization_name }}.
+This document applies to all intellectual property rights of [TODO].
 
 ## Intellectual Property
 
@@ -139,18 +150,10 @@ This document applies to all intellectual property rights of {{ source.organizat
 
 ## Metrics
 
-{{ source.organization_name }} measures:
+[TODO] measures:
 - Number of protected IP assets
 - License compliance rate
 - Number of IP violations
 - Number of enforced rights
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

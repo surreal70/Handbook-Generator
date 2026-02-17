@@ -1,17 +1,28 @@
----
+
 Document-ID: csa-ccm-0100
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Application and Interface Security (AIS)
 
+**Document-ID:** [FRAMEWORK]-0100
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document describes security measures for applications and interfaces in cloud environments of {{ source.organization_name }}.
+This document describes security measures for applications and interfaces in cloud environments of [TODO].
 
 ## Scope
 
@@ -157,13 +168,5 @@ This document applies to all cloud applications, APIs, and interfaces.
 **AIS-04**: Application Security - Application Security Monitoring
 
 <!-- Note: Customize application inventory and security controls -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

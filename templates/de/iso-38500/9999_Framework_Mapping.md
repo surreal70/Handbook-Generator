@@ -1,5 +1,19 @@
 # ISO 38500 Framework Mapping
 
+**Dokument-ID:** [FRAMEWORK]-9999
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Überblick
 
 Dieses Dokument mappt die Handbook-Templates zu ISO 38500:2015 Corporate Governance of IT.
@@ -141,8 +155,3 @@ Das ISO 38500 Framework ist nun vollständig mit 100% Abdeckung aller Klauseln u
 - ISO/IEC 38500:2015 Informationstechnologie — Governance von IT für die Organisation
 - ISO/IEC 38500:2008 Corporate Governance der Informationstechnologie
 
-## Versionshistorie
-
-| Version | Datum | Änderungen |
-|---------|-------|------------|
-| 0.1 | {{meta.document.last_updated}} | Initiale Erstellung |

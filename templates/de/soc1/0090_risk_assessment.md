@@ -1,13 +1,24 @@
----
+
 Document-ID: soc1-0200
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Risikobewertung
+
+**Dokument-ID:** [FRAMEWORK]-0090
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -25,92 +36,92 @@ Dieses Dokument beschreibt den Risikobewertungsprozess der Serviceorganisation g
 
 ### Überblick
 
-{{ source.risk_assessment_overview }}
+[TODO]
 
 ### Risikobewertungszyklus
 
-**Frequenz**: {{ source.risk_assessment_frequency }}
-**Verantwortlichkeiten**: {{ source.risk_assessment_responsibilities }}
-**Dokumentation**: {{ source.risk_assessment_documentation }}
+**Frequenz**: [TODO]
+**Verantwortlichkeiten**: [TODO]
+**Dokumentation**: [TODO]
 
 ## Risikoidentifikation
 
 ### Risikokategorien
 
-1. **Strategische Risiken**: {{ source.strategic_risks }}
-2. **Operative Risiken**: {{ source.operational_risks }}
-3. **Finanzielle Risiken**: {{ source.financial_risks }}
-4. **Compliance-Risiken**: {{ source.compliance_risks }}
-5. **Technologische Risiken**: {{ source.technology_risks }}
+1. **Strategische Risiken**: [TODO]
+2. **Operative Risiken**: [TODO]
+3. **Finanzielle Risiken**: [TODO]
+4. **Compliance-Risiken**: [TODO]
+5. **Technologische Risiken**: [TODO]
 
 ### Identifikationsmethoden
 
-{{ source.risk_identification_methods }}
+[TODO]
 
 ### Risikoregister
 
-{{ source.risk_register }}
+[TODO]
 
 ## Risikoanalyse
 
 ### Bewertungskriterien
 
 **Eintrittswahrscheinlichkeit**:
-- Hoch: {{ source.likelihood_high }}
-- Mittel: {{ source.likelihood_medium }}
-- Niedrig: {{ source.likelihood_low }}
+- Hoch: [TODO]
+- Mittel: [TODO]
+- Niedrig: [TODO]
 
 **Auswirkung**:
-- Hoch: {{ source.impact_high }}
-- Mittel: {{ source.impact_medium }}
-- Niedrig: {{ source.impact_low }}
+- Hoch: [TODO]
+- Mittel: [TODO]
+- Niedrig: [TODO]
 
 ### Risikomatrix
 
 | Risiko | Wahrscheinlichkeit | Auswirkung | Risikostufe | Priorität |
 |--------|-------------------|------------|-------------|-----------|
-| {{ source.risk_matrix_rows }}|
+| [TODO]|
 
 ## Risikobewertung
 
 ### Risikotoleranz
 
-{{ source.risk_tolerance }}
+[TODO]
 
 ### Risikoappetit
 
-{{ source.risk_appetite_statement }}
+[TODO]
 
 ### Priorisierung
 
-{{ source.risk_prioritization }}
+[TODO]
 
 ## Risikoreaktionen
 
 ### Reaktionsstrategien
 
-1. **Vermeiden**: {{ source.risk_avoidance }}
-2. **Reduzieren**: {{ source.risk_reduction }}
-3. **Teilen**: {{ source.risk_sharing }}
-4. **Akzeptieren**: {{ source.risk_acceptance }}
+1. **Vermeiden**: [TODO]
+2. **Reduzieren**: [TODO]
+3. **Teilen**: [TODO]
+4. **Akzeptieren**: [TODO]
 
 ### Kontrollmaßnahmen
 
-{{ source.control_measures }}
+[TODO]
 
 ## Überwachung und Berichterstattung
 
 ### Risikoüberwachung
 
-{{ source.risk_monitoring }}
+[TODO]
 
 ### Berichterstattung
 
-{{ source.risk_reporting }}
+[TODO]
 
 ### Eskalation
 
-{{ source.risk_escalation }}
+[TODO]
 
 ## Referenzen
 
@@ -119,12 +130,3 @@ Dieses Dokument beschreibt den Risikobewertungsprozess der Serviceorganisation g
 
 <!-- Hinweise für Autoren: Aktualisieren Sie das Risikoregister regelmäßig -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

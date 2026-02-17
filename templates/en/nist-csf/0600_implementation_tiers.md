@@ -1,13 +1,25 @@
----
+
 Document-ID: nist-csf-0600
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Implementation Tiers
+
+**Document-ID:** [FRAMEWORK]-0600
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -15,7 +27,7 @@ This document describes the NIST CSF implementation tiers and the organization's
 
 ## Scope
 
-{{ meta.scope }}
+{{ meta-handbook.scope }}
 
 ## Implementation Tiers
 
@@ -41,21 +53,12 @@ This document describes the NIST CSF implementation tiers and the organization's
 
 ## Current Tier Assessment
 
-**Current Tier:** {{ meta.current_tier }}
+**Current Tier:** {{ meta-handbook.current_tier }}
 
-**Target Tier:** {{ meta.target_tier }}
+**Target Tier:** {{ meta-handbook.target_tier }}
 
 ## Document References
 
 - 0030_risk_management_strategy.md (Govern)
 - 0630_gap_analysis.md
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |
-
-<!-- Author Notes: Assess tier annually -->

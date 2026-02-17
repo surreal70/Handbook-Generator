@@ -1,17 +1,28 @@
----
+
 Document-ID: csa-ccm-0400
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Infrastruktur- und Virtualisierungssicherheit (IVS)
 
+**Dokument-ID:** [FRAMEWORK]-0400
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt die Sicherheitsmaßnahmen für Cloud-Infrastruktur und Virtualisierung in {{ source.organization_name }}.
+Dieses Dokument beschreibt die Sicherheitsmaßnahmen für Cloud-Infrastruktur und Virtualisierung in [TODO].
 
 ## Geltungsbereich
 
@@ -231,12 +242,3 @@ Dieses Dokument gilt für alle Cloud-Infrastrukturkomponenten, Virtualisierungsp
 
 <!-- Hinweis: Passen Sie Infrastruktur- und Virtualisierungssicherheit an -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

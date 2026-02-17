@@ -1,13 +1,24 @@
----
+
 Document-ID: soc1-0410
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Überwachungsaktivitäten - Detailliert
+
+**Dokument-ID:** [FRAMEWORK]-0410
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -36,7 +47,7 @@ Die Organisation wählt, entwickelt und führt laufende und/oder separate Bewert
 - Leistungsmetriken
 - Systemwarnungen
 
-{{ source.daily_monitoring }}
+[TODO]
 
 **Wöchentliche Überwachung**:
 - Wöchentliche Berichte
@@ -44,7 +55,7 @@ Die Organisation wählt, entwickelt und führt laufende und/oder separate Bewert
 - Statusaktualisierungen
 - Trendanalysen
 
-{{ source.weekly_monitoring }}
+[TODO]
 
 **Monatliche Überwachung**:
 - Finanzabstimmungen
@@ -52,7 +63,7 @@ Die Organisation wählt, entwickelt und führt laufende und/oder separate Bewert
 - Compliance-Überprüfungen
 - Risikobewertungen
 
-{{ source.monthly_monitoring }}
+[TODO]
 
 ### Automatisierte Überwachung
 
@@ -62,7 +73,7 @@ Die Organisation wählt, entwickelt und führt laufende und/oder separate Bewert
 - Sicherheitsüberwachung
 - Kapazitätsüberwachung
 
-{{ source.system_monitoring }}
+[TODO]
 
 **Transaktionsüberwachung**:
 - Echtzeit-Validierung
@@ -70,7 +81,7 @@ Die Organisation wählt, entwickelt und führt laufende und/oder separate Bewert
 - Duplikatserkennung
 - Schwellenwertüberwachung
 
-{{ source.transaction_monitoring }}
+[TODO]
 
 **Compliance-Überwachung**:
 - Richtlinienkonformität
@@ -78,23 +89,23 @@ Die Organisation wählt, entwickelt und führt laufende und/oder separate Bewert
 - Kontrollausführung
 - Zugangsüberwachung
 
-{{ source.compliance_monitoring }}
+[TODO]
 
 ### Selbstbewertungen
 
 **Kontroll-Selbstbewertungen (CSA)**:
-- Frequenz: {{ source.csa_frequency }}
-- Geltungsbereich: {{ source.csa_scope }}
-- Methodik: {{ source.csa_methodology }}
-- Dokumentation: {{ source.csa_documentation }}
+- Frequenz: [TODO]
+- Geltungsbereich: [TODO]
+- Methodik: [TODO]
+- Dokumentation: [TODO]
 
-{{ source.control_self_assessments }}
+[TODO]
 
 **Prozess-Selbstbewertungen**:
-{{ source.process_self_assessments }}
+[TODO]
 
 **Risiko-Selbstbewertungen**:
-{{ source.risk_self_assessments }}
+[TODO]
 
 ### Operative Überwachung
 
@@ -104,7 +115,7 @@ Die Organisation wählt, entwickelt und führt laufende und/oder separate Bewert
 - Prozessqualität
 - Prozesskonformität
 
-{{ source.process_monitoring }}
+[TODO]
 
 **Qualitätsüberwachung**:
 - Qualitätsmetriken
@@ -112,7 +123,7 @@ Die Organisation wählt, entwickelt und führt laufende und/oder separate Bewert
 - Nacharbeitsraten
 - Kundenzufriedenheit
 
-{{ source.quality_monitoring }}
+[TODO]
 
 **Leistungsüberwachung**:
 - KPI-Tracking
@@ -120,7 +131,7 @@ Die Organisation wählt, entwickelt und führt laufende und/oder separate Bewert
 - Benchmark-Vergleiche
 - Trendanalysen
 
-{{ source.performance_monitoring }}
+[TODO]
 
 ## Separate Bewertungen
 
@@ -132,7 +143,7 @@ Die Organisation wählt, entwickelt und führt laufende und/oder separate Bewert
 - Ressourcenzuweisung
 - Zeitplanung
 
-{{ source.audit_planning }}
+[TODO]
 
 **Audit-Durchführung**:
 1. Audit-Vorbereitung
@@ -141,7 +152,7 @@ Die Organisation wählt, entwickelt und führt laufende und/oder separate Bewert
 4. Feststellungen
 5. Berichterstattung
 
-{{ source.audit_execution }}
+[TODO]
 
 **Audit-Bereiche**:
 - Finanzkontrollen
@@ -149,9 +160,9 @@ Die Organisation wählt, entwickelt und führt laufende und/oder separate Bewert
 - Betriebskontrollen
 - Compliance-Kontrollen
 
-{{ source.audit_areas }}
+[TODO]
 
-**Audit-Frequenz**: {{ source.audit_frequency }}
+**Audit-Frequenz**: [TODO]
 
 ### Externe Audits
 
@@ -161,13 +172,13 @@ Die Organisation wählt, entwickelt und führt laufende und/oder separate Bewert
 - Kontrolltesting
 - Berichterstattung
 
-{{ source.soc1_audits }}
+[TODO]
 
 **Regulatorische Prüfungen**:
-{{ source.regulatory_audits }}
+[TODO]
 
 **Zertifizierungsaudits**:
-{{ source.certification_audits }}
+[TODO]
 
 ### Management-Bewertungen
 
@@ -177,7 +188,7 @@ Die Organisation wählt, entwickelt und führt laufende und/oder separate Bewert
 - Compliance-Status
 - Leistungsmetriken
 
-{{ source.quarterly_reviews }}
+[TODO]
 
 **Jährliche Bewertungen**:
 - Umfassende Kontrollbewertung
@@ -185,17 +196,17 @@ Die Organisation wählt, entwickelt und führt laufende und/oder separate Bewert
 - Strategische Überprüfung
 - Governance-Bewertung
 
-{{ source.annual_reviews }}
+[TODO]
 
 ### Spezialisierte Bewertungen
 
-**Penetrationstests**: {{ source.penetration_testing }}
+**Penetrationstests**: [TODO]
 
-**Vulnerability Assessments**: {{ source.vulnerability_assessments }}
+**Vulnerability Assessments**: [TODO]
 
-**Business Continuity Tests**: {{ source.bc_testing }}
+**Business Continuity Tests**: [TODO]
 
-**Disaster Recovery Tests**: {{ source.dr_testing }}
+**Disaster Recovery Tests**: [TODO]
 
 ## Kontrollmängel und Behebung
 
@@ -208,7 +219,7 @@ Die Organisation wählt, entwickelt und führt laufende und/oder separate Bewert
 - Management-Bewertungen
 - Incident-Berichte
 
-{{ source.deficiency_sources }}
+[TODO]
 
 **Mangelarten**:
 - Design-Mängel
@@ -216,7 +227,7 @@ Die Organisation wählt, entwickelt und führt laufende und/oder separate Bewert
 - Betriebsmängel
 - Dokumentationsmängel
 
-{{ source.deficiency_types }}
+[TODO]
 
 ### Bewertung von Mängeln
 
@@ -226,7 +237,7 @@ Die Organisation wählt, entwickelt und führt laufende und/oder separate Bewert
 - Mittel
 - Niedrig
 
-{{ source.severity_assessment }}
+[TODO]
 
 **Bewertungskriterien**:
 - Auswirkung auf Kontrollziele
@@ -234,11 +245,11 @@ Die Organisation wählt, entwickelt und führt laufende und/oder separate Bewert
 - Kompensatorische Kontrollen
 - Regulatorische Bedeutung
 
-{{ source.assessment_criteria }}
+[TODO]
 
-**Wesentliche Schwächen**: {{ source.material_weaknesses }}
+**Wesentliche Schwächen**: [TODO]
 
-**Signifikante Mängel**: {{ source.significant_deficiencies }}
+**Signifikante Mängel**: [TODO]
 
 ### Behebungsplanung
 
@@ -250,11 +261,11 @@ Die Organisation wählt, entwickelt und führt laufende und/oder separate Bewert
 - Zeitplan
 - Ressourcen
 
-{{ source.remediation_plan }}
+[TODO]
 
-**Priorisierung**: {{ source.remediation_prioritization }}
+**Priorisierung**: [TODO]
 
-**Ressourcenzuweisung**: {{ source.resource_allocation }}
+**Ressourcenzuweisung**: [TODO]
 
 ### Behebungsimplementierung
 
@@ -266,11 +277,11 @@ Die Organisation wählt, entwickelt und führt laufende und/oder separate Bewert
 5. Implementierung
 6. Validierung
 
-{{ source.remediation_implementation }}
+[TODO]
 
-**Fortschrittsverfolgung**: {{ source.progress_tracking }}
+**Fortschrittsverfolgung**: [TODO]
 
-**Statusberichterstattung**: {{ source.status_reporting }}
+**Statusberichterstattung**: [TODO]
 
 ### Validierung der Behebung
 
@@ -280,11 +291,11 @@ Die Organisation wählt, entwickelt und führt laufende und/oder separate Bewert
 - Dokumentenprüfung
 - Interviews
 
-{{ source.validation_methods }}
+[TODO]
 
-**Validierungskriterien**: {{ source.validation_criteria }}
+**Validierungskriterien**: [TODO]
 
-**Abschlussbestätigung**: {{ source.closure_confirmation }}
+**Abschlussbestätigung**: [TODO]
 
 ## Überwachungsberichterstattung
 
@@ -297,7 +308,7 @@ Die Organisation wählt, entwickelt und führt laufende und/oder separate Bewert
 - Quartalsberichte
 - Jahresberichte
 
-{{ source.monitoring_reports }}
+[TODO]
 
 **Audit-Berichte**:
 - Interne Auditberichte
@@ -305,7 +316,7 @@ Die Organisation wählt, entwickelt und führt laufende und/oder separate Bewert
 - SOC 1 Berichte
 - Compliance-Berichte
 
-{{ source.audit_reports }}
+[TODO]
 
 **Mangelberichte**:
 - Mangelidentifikation
@@ -313,7 +324,7 @@ Die Organisation wählt, entwickelt und führt laufende und/oder separate Bewert
 - Alterungsberichte
 - Trendanalysen
 
-{{ source.deficiency_reports }}
+[TODO]
 
 ### Berichtsempfänger
 
@@ -322,21 +333,21 @@ Die Organisation wählt, entwickelt und führt laufende und/oder separate Bewert
 - Funktionale Führung
 - Geschäftsführung
 
-{{ source.management_reporting }}
+[TODO]
 
 **Vorstand/Ausschüsse**:
 - Prüfungsausschuss
 - Risikoausschuss
 - Gesamtvorstand
 
-{{ source.board_reporting }}
+[TODO]
 
 **Externe Stakeholder**:
 - Externe Prüfer
 - Regulierungsbehörden
 - Kunden (SOC 1 Berichte)
 
-{{ source.external_reporting }}
+[TODO]
 
 ### Berichtsinhalte
 
@@ -346,7 +357,7 @@ Die Organisation wählt, entwickelt und führt laufende und/oder separate Bewert
 - Mängel
 - Behebungsstatus
 
-{{ source.report_summary }}
+[TODO]
 
 **Detaillierte Feststellungen**:
 - Mangelbeschreibungen
@@ -354,7 +365,7 @@ Die Organisation wählt, entwickelt und führt laufende und/oder separate Bewert
 - Empfehlungen
 - Management-Antworten
 
-{{ source.detailed_findings }}
+[TODO]
 
 **Metriken und Trends**:
 - Kontrolleffektivität
@@ -362,7 +373,7 @@ Die Organisation wählt, entwickelt und führt laufende und/oder separate Bewert
 - Behebungsraten
 - Compliance-Raten
 
-{{ source.metrics_trends }}
+[TODO]
 
 ## Key Performance Indicators (KPIs)
 
@@ -373,7 +384,7 @@ Die Organisation wählt, entwickelt und führt laufende und/oder separate Bewert
 - Kontrollausfallrate
 - Kontrollabweichungen
 
-{{ source.control_effectiveness_kpis }}
+[TODO]
 
 **Mangelmanagement**:
 - Anzahl offener Mängel
@@ -381,7 +392,7 @@ Die Organisation wählt, entwickelt und führt laufende und/oder separate Bewert
 - Überfällige Mängel
 - Wiederholungsmängel
 
-{{ source.deficiency_management_kpis }}
+[TODO]
 
 **Audit-Leistung**:
 - Audit-Abschlussrate
@@ -389,23 +400,23 @@ Die Organisation wählt, entwickelt und führt laufende und/oder separate Bewert
 - Empfehlungsumsetzung
 - Audit-Zykluszeit
 
-{{ source.audit_performance_kpis }}
+[TODO]
 
 ### Compliance-KPIs
 
-**Richtlinienkonformität**: {{ source.policy_compliance_kpis }}
+**Richtlinienkonformität**: [TODO]
 
-**Regulatorische Compliance**: {{ source.regulatory_compliance_kpis }}
+**Regulatorische Compliance**: [TODO]
 
-**Schulungskonformität**: {{ source.training_compliance_kpis }}
+**Schulungskonformität**: [TODO]
 
 ### Risiko-KPIs
 
-**Risikoindikatoren**: {{ source.risk_indicators }}
+**Risikoindikatoren**: [TODO]
 
-**Incident-Metriken**: {{ source.incident_metrics }}
+**Incident-Metriken**: [TODO]
 
-**Kontrollmängel-Trends**: {{ source.deficiency_trends }}
+**Kontrollmängel-Trends**: [TODO]
 
 ## Kontinuierliche Verbesserung
 
@@ -418,30 +429,30 @@ Die Organisation wählt, entwickelt und führt laufende und/oder separate Bewert
 - Best Practices
 - Lessons Learned
 
-{{ source.improvement_identification }}
+[TODO]
 
 **Verbesserungsinitiativen**:
-{{ source.improvement_initiatives }}
+[TODO]
 
-**Priorisierung**: {{ source.improvement_prioritization }}
+**Priorisierung**: [TODO]
 
 ### Implementierung von Verbesserungen
 
-**Verbesserungsprojekte**: {{ source.improvement_projects }}
+**Verbesserungsprojekte**: [TODO]
 
-**Change Management**: {{ source.improvement_change_management }}
+**Change Management**: [TODO]
 
-**Erfolgsmessung**: {{ source.improvement_measurement }}
+**Erfolgsmessung**: [TODO]
 
 ### Lessons Learned
 
-**Nachbesprechungen**: {{ source.post_implementation_reviews }}
+**Nachbesprechungen**: [TODO]
 
-**Wissensmanagement**: {{ source.knowledge_management }}
+**Wissensmanagement**: [TODO]
 
-**Best Practices**: {{ source.best_practices }}
+**Best Practices**: [TODO]
 
-**Wissenstransfer**: {{ source.knowledge_transfer }}
+**Wissenstransfer**: [TODO]
 
 ## Dokumentation und Nachweise
 
@@ -465,29 +476,29 @@ Die Organisation wählt, entwickelt und führt laufende und/oder separate Bewert
    - Fortschrittsberichte
    - Validierungsnachweise
 
-{{ source.required_documentation }}
+[TODO]
 
 ### Aufbewahrungsfristen
 
-{{ source.retention_requirements }}
+[TODO]
 
 ## Überwachung der Überwachung
 
 ### Meta-Überwachung
 
-**Überwachungseffektivität**: {{ source.monitoring_effectiveness }}
+**Überwachungseffektivität**: [TODO]
 
-**Überwachungsabdeckung**: {{ source.monitoring_coverage }}
+**Überwachungsabdeckung**: [TODO]
 
-**Überwachungsqualität**: {{ source.monitoring_quality }}
+**Überwachungsqualität**: [TODO]
 
 ### Bewertung und Verbesserung
 
-**Bewertungsprozess**: {{ source.monitoring_assessment }}
+**Bewertungsprozess**: [TODO]
 
-**Verbesserungsmaßnahmen**: {{ source.monitoring_improvements }}
+**Verbesserungsmaßnahmen**: [TODO]
 
-**Qualitätssicherung**: {{ source.monitoring_quality_assurance }}
+**Qualitätssicherung**: [TODO]
 
 ## Referenzen
 
@@ -499,12 +510,3 @@ Die Organisation wählt, entwickelt und führt laufende und/oder separate Bewert
 
 <!-- Hinweise für Autoren: Aktualisieren Sie Überwachungsaktivitäten bei Prozessänderungen -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

@@ -1,17 +1,28 @@
----
+
 Document-ID: coso-0130
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Betrugrisikobewertung
 
+**Dokument-ID:** [FRAMEWORK]-0130
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt, wie {{ source.organization_name }} Betrugsrisiken bewertet und Kontrollen zur Betrugsprävention implementiert (COSO Prinzip 8).
+Dieses Dokument beschreibt, wie [TODO] Betrugsrisiken bewertet und Kontrollen zur Betrugsprävention implementiert (COSO Prinzip 8).
 
 ## Geltungsbereich
 
@@ -24,122 +35,122 @@ Dieses Dokument beschreibt, wie {{ source.organization_name }} Betrugsrisiken be
 
 ### Überblick
 
-{{ source.fraud_risk_overview }}
+[TODO]
 
 ### Betrugsdreieck
 
-**Druck/Anreiz**: {{ source.fraud_pressure }}
-**Gelegenheit**: {{ source.fraud_opportunity }}
-**Rationalisierung**: {{ source.fraud_rationalization }}
+**Druck/Anreiz**: [TODO]
+**Gelegenheit**: [TODO]
+**Rationalisierung**: [TODO]
 
 ## Betrugsarten
 
 ### Bilanzfälschung
 
-{{ source.financial_statement_fraud }}
+[TODO]
 
 ### Vermögensschädigung
 
-{{ source.asset_misappropriation }}
+[TODO]
 
 ### Korruption
 
-{{ source.corruption }}
+[TODO]
 
 ### Cyber-Betrug
 
-{{ source.cyber_fraud }}
+[TODO]
 
 ## Betrugrisiko-Bewertungsprozess
 
 ### Risikoidentifikation
 
-**Brainstorming-Sitzungen**: {{ source.fraud_brainstorming }}
-**Betrugsszenarien**: {{ source.fraud_scenarios }}
-**Branchenanalyse**: {{ source.industry_fraud_analysis }}
+**Brainstorming-Sitzungen**: [TODO]
+**Betrugsszenarien**: [TODO]
+**Branchenanalyse**: [TODO]
 
 ### Risikoanalyse
 
-**Wahrscheinlichkeitsbewertung**: {{ source.fraud_likelihood }}
-**Auswirkungsbewertung**: {{ source.fraud_impact }}
-**Kontrollwirksamkeit**: {{ source.fraud_control_effectiveness }}
+**Wahrscheinlichkeitsbewertung**: [TODO]
+**Auswirkungsbewertung**: [TODO]
+**Kontrollwirksamkeit**: [TODO]
 
 ### Risikopriorisierung
 
-{{ source.fraud_risk_prioritization }}
+[TODO]
 
 ## Anti-Betrugs-Kontrollen
 
 ### Präventive Kontrollen
 
-**Funktionstrennung**: {{ source.fraud_segregation }}
-**Genehmigungskontrollen**: {{ source.fraud_authorization }}
-**Physische Kontrollen**: {{ source.fraud_physical_controls }}
-**Zugriffskontrollen**: {{ source.fraud_access_controls }}
+**Funktionstrennung**: [TODO]
+**Genehmigungskontrollen**: [TODO]
+**Physische Kontrollen**: [TODO]
+**Zugriffskontrollen**: [TODO]
 
 ### Aufdeckende Kontrollen
 
-**Abstimmungen**: {{ source.fraud_reconciliations }}
-**Überwachung**: {{ source.fraud_monitoring }}
-**Datenanalyse**: {{ source.fraud_analytics }}
-**Whistleblower-Hotline**: {{ source.fraud_hotline }}
+**Abstimmungen**: [TODO]
+**Überwachung**: [TODO]
+**Datenanalyse**: [TODO]
+**Whistleblower-Hotline**: [TODO]
 
 ## Betrugsprävention
 
 ### Tone at the Top
 
-{{ source.fraud_tone_at_top }}
+[TODO]
 
 ### Verhaltenskodex
 
-{{ source.fraud_code_of_conduct }}
+[TODO]
 
 ### Schulung und Sensibilisierung
 
-{{ source.fraud_training }}
+[TODO]
 
 ### Hintergrundprüfungen
 
-{{ source.fraud_background_checks }}
+[TODO]
 
 ## Betrugserkennung
 
 ### Warnsignale
 
-{{ source.fraud_red_flags }}
+[TODO]
 
 ### Überwachungsverfahren
 
-{{ source.fraud_monitoring_procedures }}
+[TODO]
 
 ### Untersuchungsprozess
 
-{{ source.fraud_investigation }}
+[TODO]
 
 ## Reaktion auf Betrug
 
 ### Untersuchungsprotokoll
 
-{{ source.fraud_investigation_protocol }}
+[TODO]
 
 ### Disziplinarmaßnahmen
 
-{{ source.fraud_disciplinary_actions }}
+[TODO]
 
 ### Rechtliche Schritte
 
-{{ source.fraud_legal_actions }}
+[TODO]
 
 ### Abhilfemaßnahmen
 
-{{ source.fraud_remediation }}
+[TODO]
 
 ## Rollen und Verantwortlichkeiten
 
-**Vorstand**: {{ source.board_fraud_role }}
-**Prüfungsausschuss**: {{ source.audit_committee_fraud_role }}
-**Geschäftsführung**: {{ source.management_fraud_role }}
-**Interne Revision**: {{ source.internal_audit_fraud_role }}
+**Vorstand**: [TODO]
+**Prüfungsausschuss**: [TODO]
+**Geschäftsführung**: [TODO]
+**Interne Revision**: [TODO]
 
 ## Referenzen
 
@@ -148,12 +159,3 @@ Dieses Dokument beschreibt, wie {{ source.organization_name }} Betrugsrisiken be
 - Whistleblower-Richtlinie
 - Untersuchungsverfahren
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

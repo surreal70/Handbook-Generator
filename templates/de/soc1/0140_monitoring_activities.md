@@ -1,13 +1,24 @@
----
+
 Document-ID: soc1-0410
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Überwachungsaktivitäten
+
+**Dokument-ID:** [FRAMEWORK]-0140
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -24,90 +35,90 @@ Dieses Dokument beschreibt die Überwachungsaktivitäten zur Bewertung der Wirks
 
 ### Überwachungsmechanismen
 
-**Management-Reviews**: {{ source.management_reviews }}
-**Automatisierte Überwachung**: {{ source.automated_monitoring }}
-**Reconciliations**: {{ source.ongoing_reconciliations }}
-**Performance Indicators**: {{ source.performance_indicators }}
+**Management-Reviews**: [TODO]
+**Automatisierte Überwachung**: [TODO]
+**Reconciliations**: [TODO]
+**Performance Indicators**: [TODO]
 
 ### Überwachungsfrequenz
 
-{{ source.monitoring_frequency }}
+[TODO]
 
 ### Verantwortlichkeiten
 
-{{ source.monitoring_responsibilities }}
+[TODO]
 
 ## Separate Bewertungen
 
 ### Interne Audits
 
-**Audit-Plan**: {{ source.internal_audit_plan }}
-**Audit-Frequenz**: {{ source.internal_audit_frequency }}
-**Audit-Umfang**: {{ source.internal_audit_scope }}
-**Audit-Berichte**: {{ source.internal_audit_reports }}
+**Audit-Plan**: [TODO]
+**Audit-Frequenz**: [TODO]
+**Audit-Umfang**: [TODO]
+**Audit-Berichte**: [TODO]
 
 ### Selbstbewertungen
 
-{{ source.self_assessments }}
+[TODO]
 
 ### Externe Audits
 
-**SOC 1 Audit**: {{ source.soc1_audit }}
-**Andere externe Audits**: {{ source.other_external_audits }}
+**SOC 1 Audit**: [TODO]
+**Andere externe Audits**: [TODO]
 
 ## Mängelbehebung
 
 ### Identifikation von Mängeln
 
-**Kontrollmängel**: {{ source.control_deficiency_identification }}
-**Wesentliche Schwächen**: {{ source.material_weakness_identification }}
-**Signifikante Mängel**: {{ source.significant_deficiency_identification }}
+**Kontrollmängel**: [TODO]
+**Wesentliche Schwächen**: [TODO]
+**Signifikante Mängel**: [TODO]
 
 ### Bewertung von Mängeln
 
-**Schweregrad-Bewertung**: {{ source.deficiency_severity_assessment }}
-**Auswirkungsanalyse**: {{ source.deficiency_impact_analysis }}
+**Schweregrad-Bewertung**: [TODO]
+**Auswirkungsanalyse**: [TODO]
 
 ### Korrekturmaßnahmen
 
-**Maßnahmenplan**: {{ source.corrective_action_plan }}
-**Verantwortlichkeiten**: {{ source.corrective_action_responsibilities }}
-**Zeitrahmen**: {{ source.corrective_action_timeline }}
-**Nachverfolgung**: {{ source.corrective_action_tracking }}
+**Maßnahmenplan**: [TODO]
+**Verantwortlichkeiten**: [TODO]
+**Zeitrahmen**: [TODO]
+**Nachverfolgung**: [TODO]
 
 ### Eskalation
 
-{{ source.deficiency_escalation }}
+[TODO]
 
 ## Berichterstattung
 
 ### Management-Berichterstattung
 
-**Berichte**: {{ source.management_monitoring_reports }}
-**Frequenz**: {{ source.management_reporting_frequency }}
-**Empfänger**: {{ source.management_report_recipients }}
+**Berichte**: [TODO]
+**Frequenz**: [TODO]
+**Empfänger**: [TODO]
 
 ### Vorstandsberichterstattung
 
-{{ source.board_monitoring_reports }}
+[TODO]
 
 ### Externe Berichterstattung
 
-{{ source.external_monitoring_reports }}
+[TODO]
 
 ## Kontinuierliche Verbesserung
 
 ### Verbesserungsprozess
 
-{{ source.continuous_improvement_process }}
+[TODO]
 
 ### Lessons Learned
 
-{{ source.lessons_learned }}
+[TODO]
 
 ### Best Practices
 
-{{ source.best_practices }}
+[TODO]
 
 ## Referenzen
 
@@ -117,12 +128,3 @@ Dieses Dokument beschreibt die Überwachungsaktivitäten zur Bewertung der Wirks
 
 <!-- Hinweise für Autoren: Dokumentieren Sie alle Überwachungsaktivitäten und Mängel -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

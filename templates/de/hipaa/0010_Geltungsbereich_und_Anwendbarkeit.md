@@ -1,13 +1,16 @@
 # Geltungsbereich und Anwendbarkeit
 
-**Dokument-ID:** HIPAA-0010  
-**Organisation:** {{ meta.organization.name }}  
-**Verantwortlich:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Entwurf / In Prüfung / Genehmigt  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** HIPAA-0010
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,7 +28,7 @@ Erforderliche Anpassungen:
 
 ## 1. Zweck
 
-Dieses Dokument definiert den Geltungsbereich der HIPAA-Compliance für {{ meta.organization.name }} und legt die Anwendbarkeit der Anforderungen der HIPAA Security Rule, Privacy Rule und Breach Notification Rule fest.
+Dieses Dokument definiert den Geltungsbereich der HIPAA-Compliance für {{ meta-organisation.name }} und legt die Anwendbarkeit der Anforderungen der HIPAA Security Rule, Privacy Rule und Breach Notification Rule fest.
 
 ### 1.1 Zielsetzungen
 
@@ -46,12 +49,12 @@ Dieses Dokument definiert den Geltungsbereich der HIPAA-Compliance für {{ meta.
 
 ### 2.1 Organisationsdetails
 
-**Organisationsname:** {{ meta.organization.name }}  
-**Adresse:** {{ meta.organization.address }}, {{ meta.organization.postal_code }} {{ meta.organization.city }}  
-**Bundesstaat:** {{ meta.organization.state }}  
-**Land:** {{ meta.organization.country }}  
-**Website:** {{ meta.organization.website }}  
-**Steuer-ID (EIN):** {{ meta.organization.tax_id }}  
+**Organisationsname:** {{ meta-organisation.name }}  
+**Adresse:** {{ meta-organisation.address }}, [TODO] [TODO]  
+**Bundesstaat:** [TODO]  
+**Land:** [TODO]  
+**Website:** [TODO]  
+**Steuer-ID (EIN):** [TODO]  
 
 ### 2.2 Organisationstyp
 
@@ -288,14 +291,14 @@ Falls ja:
 ### 9.1 Schlüsselrollen
 
 **Privacy Officer:**
-- **Name:** {{ meta.roles.privacy_officer.name }}
-- **E-Mail:** {{ meta.roles.privacy_officer.email }}
-- **Telefon:** {{ meta.roles.privacy_officer.phone }}
+- **Name:** [TODO]
+- **E-Mail:** [TODO]
+- **Telefon:** [TODO]
 
 **Security Officer:**
-- **Name:** {{ meta.roles.security_officer.name }}
-- **E-Mail:** {{ meta.roles.security_officer.email }}
-- **Telefon:** {{ meta.roles.security_officer.phone }}
+- **Name:** [TODO]
+- **E-Mail:** [TODO]
+- **Telefon:** [TODO]
 
 **HIPAA Compliance Officer:**
 - **Name:** [TODO: Name]
@@ -351,20 +354,11 @@ Falls ja:
 | [TODO: Datum] | Initiale Geltungsbereichsdefinition | N/A | [TODO: Name] |
 | [TODO: Datum] | Neues EHR-System hinzugefügt | Erweiterter ePHI-Geltungsbereich | [TODO: Name] |
 
----
-
 **Dokumentenhistorie:**
 
 | Version | Datum | Autor | Änderungen |
 |---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Ersterstellung |
+| 0.1 | {{ meta-handbook.modifydate }} | {{ meta-handbook.author }} | Ersterstellung |
 
 <!-- Ende der Vorlage -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

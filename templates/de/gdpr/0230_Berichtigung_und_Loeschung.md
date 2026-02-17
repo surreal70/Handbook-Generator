@@ -1,11 +1,16 @@
 # Berichtigung und Löschung
 
-**Dokument-ID:** 0230  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0230
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -23,7 +28,7 @@ Referenz: DSGVO Art. 16 (Recht auf Berichtigung), Art. 17 (Recht auf Löschung)
 
 ## Zweck
 
-Dieses Dokument beschreibt die Umsetzung des Rechts auf Berichtigung und Löschung in der {{ meta.organization }}. Betroffene Personen haben das Recht auf Berichtigung unrichtiger und Löschung nicht mehr erforderlicher Daten.
+Dieses Dokument beschreibt die Umsetzung des Rechts auf Berichtigung und Löschung in der {{ meta-organisation.name }}. Betroffene Personen haben das Recht auf Berichtigung unrichtiger und Löschung nicht mehr erforderlicher Daten.
 
 ## Recht auf Berichtigung (Art. 16)
 
@@ -200,8 +205,6 @@ Dieses Dokument beschreibt die Umsetzung des Rechts auf Berichtigung und Löschu
 | Fehlende Benachrichtigung | Empfänger nicht informiert | Benachrichtigungsprozess |
 | Unbegründete Ablehnung | Ablehnung ohne Prüfung | Sorgfältige Prüfung |
 
----
-
 **Nächste Schritte:**
 1. Etablieren Sie Prozesse für Berichtigungs- und Löschanträge
 2. Implementieren Sie Löschverfahren für alle Systeme
@@ -209,10 +212,3 @@ Dieses Dokument beschreibt die Umsetzung des Rechts auf Berichtigung und Löschu
 4. Schulen Sie Mitarbeiter zu Berichtigungs- und Löschrecht
 5. Dokumentieren Sie alle Anträge im Register
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

@@ -42,7 +42,7 @@ These templates address:
 
 ### Required Customizations
 
-Each template contains `[TODO]` markers and placeholder syntax `{{ source.field }}` that must be customized:
+Each template contains `[TODO]` markers and placeholder syntax `[TODO]` that must be customized:
 
 1. **Organization Information**: Replace with your covered entity or business associate details
 2. **Roles and Responsibilities**: Assign specific individuals to HIPAA roles
@@ -53,8 +53,8 @@ Each template contains `[TODO]` markers and placeholder syntax `{{ source.field 
 ### Placeholder Syntax
 
 Templates use the following placeholder formats:
-- `{{ meta.organization.name }}`: Organization name from metadata
-- `{{ meta.roles.privacy_officer.name }}`: Role assignments
+- `[TODO]`: Organization name from metadata
+- `[TODO]`: Role assignments
 - `[TODO: Description]`: Manual customization required
 
 ## Usage
@@ -105,7 +105,7 @@ For questions about these templates or HIPAA compliance:
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
+| 0.1 | [TODO] | {{ meta.defaults.author }} | Initial Creation |
 
 ## Version History
 

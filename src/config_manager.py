@@ -11,6 +11,8 @@ from typing import Optional, Dict
 import yaml
 from src.error_handler import ErrorHandler
 from src.metadata_config_manager import MetadataConfig, MetadataConfigManager
+from src.metadata_loader import MetadataLoader
+from src.unified_metadata import UnifiedMetadata
 
 
 @dataclass
@@ -32,14 +34,14 @@ class Config:
         default_output_format: Default output format (default: 'both')
         author: Author information for metadata
         version: Version number for generated handbooks
-        metadata: Optional metadata configuration for organization-wide information
+        unified_metadata: Unified metadata from all configuration sources
     """
     data_sources: Dict[str, DataSourceConfig] = field(default_factory=dict)
     default_language: str = "de"
     default_output_format: str = "both"
     author: str = "Andreas Huemmer [andreas.huemmer@adminsend.de]"
     version: str = "0.0.1"
-    metadata: Optional[MetadataConfig] = None
+    unified_metadata: Optional[UnifiedMetadata] = None
     
     @property
     def netbox_url(self) -> Optional[str]:
@@ -117,15 +119,151 @@ metadata:
         # Fallback to config file's parent directory
         return self.config_path.parent.absolute()
     
+    def _resolve_metadata_paths(self, data_source_config: Dict) -> Dict:
+        """
+        Resolve meta-* file paths relative to config.yaml location.
+        
+        Validates paths to prevent directory traversal attacks.
+        
+        Args:
+            data_source_config: Data source configuration from config.yaml
+            
+        Returns:
+            Dictionary with resolved absolute paths for meta-* files
+            
+        Raises:
+            ValueError: If path validation fails (directory traversal attempt)
+        """
+        config_dir = self.config_path.parent.absolute()
+        resolved = {}
+        
+        # Meta file keys that should be resolved
+        meta_keys = ['meta-global', 'meta-organisation', 'meta-organisation-roles']
+        
+        for key in meta_keys:
+            if key in data_source_config:
+                relative_path = data_source_config[key]
+                
+                # Resolve path relative to config.yaml location
+                resolved_path = (config_dir / relative_path).resolve()
+                
+                # Validate: ensure resolved path is within or at config directory
+                # This prevents directory traversal attacks
+                try:
+                    resolved_path.relative_to(config_dir)
+                except ValueError:
+                    # Path is outside config directory - potential directory traversal
+                    raise ValueError(
+                        f"ERROR ConfigManager: Invalid path for '{key}': {relative_path}\n"
+                        f"  Context: Path resolves outside configuration directory\n"
+                        f"  Resolved to: {resolved_path}\n"
+                        f"  Config directory: {config_dir}\n"
+                        f"  Suggestion: Use relative paths within the configuration directory. "
+                        f"Absolute paths and paths with '..' that escape the config directory are not allowed."
+                    )
+                
+                # Store as string for MetadataLoader
+                resolved[key] = str(resolved_path)
+        
+        # Copy other data sources (like netbox) without modification
+        for key, value in data_source_config.items():
+            if key not in meta_keys:
+                resolved[key] = value
+        
+        return resolved
+    
+    def _detect_old_format(self) -> Optional[str]:
+        """
+        Detect if old configuration format is being used.
+        
+        Checks for:
+        1. Old metadata.yaml file in project root
+        2. Old placeholder format in templates ({{ meta.organisation.name }})
+        
+        Returns:
+            Error message if old format detected, None otherwise
+        """
+        errors = []
+        
+        # Check for old metadata.yaml file
+        old_metadata_path = self.project_root / "metadata.yaml"
+        if old_metadata_path.exists():
+            errors.append(
+                f"  - Old metadata.yaml file found at: {old_metadata_path}"
+            )
+        
+        # Check for old placeholder format in templates
+        templates_dir = self.project_root / "templates"
+        if templates_dir.exists():
+            old_placeholders_found = self._scan_for_old_placeholders(templates_dir)
+            if old_placeholders_found:
+                errors.append(
+                    f"  - Old placeholder format detected in templates:"
+                )
+                for template_path, placeholders in old_placeholders_found[:5]:  # Show first 5
+                    relative_path = template_path.relative_to(self.project_root)
+                    errors.append(f"    * {relative_path}: {', '.join(placeholders[:3])}")
+                
+                if len(old_placeholders_found) > 5:
+                    errors.append(f"    * ... and {len(old_placeholders_found) - 5} more files")
+        
+        if errors:
+            return "\n".join(errors)
+        
+        return None
+    
+    def _scan_for_old_placeholders(self, templates_dir: Path) -> list[tuple[Path, list[str]]]:
+        """
+        Scan templates directory for old placeholder format.
+        
+        Old formats include:
+        - {{ meta.organisation.name }}
+        - {{ meta.document.owner }}
+        - {{ meta.ceo.name }}
+        
+        Args:
+            templates_dir: Path to templates directory
+            
+        Returns:
+            List of tuples (template_path, list_of_old_placeholders)
+        """
+        import re
+        
+        # Pattern to match old placeholder formats
+        # Matches: {{ meta.* }} or {{ metadata.* }} (but not meta-global, meta-organisation, etc.)
+        old_placeholder_pattern = re.compile(r'\{\{\s*meta\.[\w.]+\s*\}\}')
+        
+        files_with_old_placeholders = []
+        
+        # Scan all .md files in templates directory
+        for template_file in templates_dir.rglob("*.md"):
+            try:
+                content = template_file.read_text(encoding='utf-8')
+                matches = old_placeholder_pattern.findall(content)
+                
+                if matches:
+                    # Remove duplicates and keep unique placeholders
+                    unique_placeholders = list(set(matches))
+                    files_with_old_placeholders.append((template_file, unique_placeholders))
+            except Exception:
+                # Skip files that can't be read
+                continue
+        
+        return files_with_old_placeholders
+    
     def load_config(self) -> Config:
         """
         Load configuration from file.
         
-        Also attempts to load metadata.yaml from the same directory.
-        If metadata.yaml doesn't exist, creates a default one.
+        Loads config.yaml and all metadata files using the new metadata structure:
+        - meta-global.yaml: Handbook Generator version and source
+        - meta-organisation.yaml: Organization information
+        - meta-organisation-roles.yaml: Personnel roles
+        
+        All meta-* file paths are resolved relative to config.yaml location.
         
         Returns:
-            Config object with loaded configuration
+            Config object with loaded configuration and unified metadata
             
         Raises:
             FileNotFoundError: If configuration file doesn't exist
@@ -136,6 +274,38 @@ metadata:
             raise FileNotFoundError(
                 f"Configuration file not found: {self.config_path}\n"
                 f"Run with --create-config to generate a default configuration file."
+            )
+        
+        # Detect old configuration format
+        old_format_error = self._detect_old_format()
+        if old_format_error:
+            raise ValueError(
+                f"\n{'='*80}\n"
+                f"ERROR: Old configuration format detected\n"
+                f"{'='*80}\n\n"
+                f"The configuration format has changed. The following issues were found:\n\n"
+                f"{old_format_error}\n\n"
+                f"{'='*80}\n"
+                f"REQUIRED ACTIONS:\n"
+                f"{'='*80}\n\n"
+                f"1. Create new configuration files:\n"
+                f"   - config.yaml (with data_sources section)\n"
+                f"   - meta-global.yaml (Handbook Generator version and source)\n"
+                f"   - meta-organisation.yaml (organization information)\n"
+                f"   - meta-organisation-roles.yaml (personnel roles)\n"
+                f"   - meta-handbook.yaml (in each handbook directory)\n\n"
+                f"2. Update all template placeholders to new format:\n"
+                f"   Old: {{{{ meta.organisation.name }}}}\n"
+                f"   New: {{{{ meta-organisation.name }}}}\n\n"
+                f"3. Remove old metadata.yaml file after migration\n\n"
+                f"{'='*80}\n"
+                f"DOCUMENTATION:\n"
+                f"{'='*80}\n\n"
+                f"  Migration Guide:     docs/MIGRATION_GUIDE.md (if available)\n"
+                f"  Configuration Ref:   docs/CONFIGURATION_REFERENCE.md\n"
+                f"  Placeholder Ref:     docs/PLACEHOLDER_REFERENCE.md\n"
+                f"  Example Files:       *.example.yaml\n\n"
+                f"{'='*80}\n"
             )
         
         try:
@@ -154,30 +324,22 @@ metadata:
         
         config = self._parse_config(config_data)
         
-        # Load metadata.yaml from the same directory
-        metadata_path = self.config_path.parent / "metadata.yaml"
-        metadata_manager = MetadataConfigManager(metadata_path)
+        # Load unified metadata using MetadataLoader
+        # Extract data source configuration and resolve paths relative to config.yaml
+        data_source_config = config_data.get('data_sources', {})
+        resolved_data_sources = self._resolve_metadata_paths(data_source_config)
+        
+        # Create MetadataLoader with resolved paths
+        metadata_loader = MetadataLoader(resolved_data_sources)
         
         try:
-            config.metadata = metadata_manager.load_metadata()
-        except FileNotFoundError:
-            # metadata.yaml doesn't exist - create default
-            print(f"INFO: metadata.yaml not found at {metadata_path}")
-            print(f"INFO: Creating default metadata.yaml...")
-            try:
-                metadata_manager.create_default_metadata()
-                print(f"INFO: Default metadata.yaml created at {metadata_path}")
-                print(f"INFO: Please review and update with your organization's information.")
-                # Load the newly created default metadata
-                config.metadata = metadata_manager.load_metadata()
-            except Exception as e:
-                print(f"WARNING: Could not create default metadata.yaml: {e}")
-                print(f"WARNING: Continuing without metadata configuration.")
-                config.metadata = None
+            # Load all global metadata
+            config.unified_metadata = metadata_loader.load_all_metadata()
         except (ValueError, yaml.YAMLError) as e:
-            print(f"WARNING: Error loading metadata.yaml: {e}")
-            print(f"WARNING: Continuing without metadata configuration.")
-            config.metadata = None
+            print(f"WARNING: Error loading metadata: {e}")
+            print(f"WARNING: Continuing with default metadata values.")
+            # Create default unified metadata
+            config.unified_metadata = UnifiedMetadata()
         
         return config
     
@@ -244,11 +406,18 @@ metadata:
         Raises:
             ValueError: If required fields are missing
         """
-        # Parse data sources
+        # Parse data sources (skip meta-* entries as they're handled separately)
         data_sources = {}
         data_sources_raw = config_data.get('data_sources', {})
         
+        # Meta file keys that should be skipped (not actual data sources)
+        meta_keys = {'meta-global', 'meta-organisation', 'meta-organisation-roles'}
+        
         for source_name, source_config in data_sources_raw.items():
+            # Skip meta-* entries - they're metadata file paths, not data sources
+            if source_name in meta_keys:
+                continue
+            
             if not isinstance(source_config, dict):
                 raise ValueError(
                     f"Invalid configuration for data source '{source_name}': "

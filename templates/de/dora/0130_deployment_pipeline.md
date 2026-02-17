@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0130
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Deployment Pipeline
+
+**Dokument-ID:** [FRAMEWORK]-0130
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -25,10 +36,10 @@ Dieses Dokument umfasst:
 
 ### Organisationsinformationen
 
-- **Organisation**: {{ source.organization_name }}
-- **Pipeline-Verantwortlicher**: {{ source.pipeline_owner }}
-- **CI/CD-Plattform**: {{ source.cicd_platform }}
-- **Pipeline-Repository**: {{ source.pipeline_repository }}
+- **Organisation**: [TODO]
+- **Pipeline-Verantwortlicher**: [TODO]
+- **CI/CD-Plattform**: [TODO]
+- **Pipeline-Repository**: [TODO]
 
 ## Pipeline-Stages
 
@@ -219,7 +230,7 @@ deploy:dev:
     - kubectl rollout status deployment/${APP_NAME}
   environment:
     name: development
-    url: https://dev.{{ source.domain }}
+    url: https://dev.[TODO]
   only:
     - develop
 ```
@@ -232,7 +243,7 @@ deploy:staging:
     - ./deploy.sh staging ${CI_COMMIT_SHA}
   environment:
     name: staging
-    url: https://staging.{{ source.domain }}
+    url: https://staging.[TODO]
   only:
     - main
   when: manual
@@ -246,7 +257,7 @@ deploy:production:
     - ./deploy.sh production ${CI_COMMIT_SHA}
   environment:
     name: production
-    url: https://{{ source.domain }}
+    url: https://[TODO]
   only:
     - tags
   when: manual
@@ -472,12 +483,3 @@ notify:failure:
 
 <!-- Hinweis: Eine gut designte Pipeline ist Grundlage für schnelle Delivery -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

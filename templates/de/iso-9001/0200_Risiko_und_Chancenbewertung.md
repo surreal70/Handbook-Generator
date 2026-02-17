@@ -1,11 +1,16 @@
 # Maßnahmen zum Umgang mit Risiken und Chancen
 
-**Dokument-ID:** 0200  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0200
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -36,7 +41,7 @@ Dieses Dokument definiert den Prozess zur Bestimmung und Behandlung von Risiken 
 
 ### Risikomanagement-Ansatz
 
-{{ meta.organization }} verwendet einen systematischen Ansatz zur Identifikation, Bewertung und Behandlung von Risiken und Chancen im Zusammenhang mit dem QMS.
+{{ meta-organisation.name }} verwendet einen systematischen Ansatz zur Identifikation, Bewertung und Behandlung von Risiken und Chancen im Zusammenhang mit dem QMS.
 
 **Risikomanagement-Methodik:** [TODO: z.B. ISO 31000, FMEA, Risikomatrix]
 
@@ -169,8 +174,6 @@ Risiken werden überwacht durch:
 - **Jährlich:** Umfassende Risikobewertung
 - **Bei Bedarf:** Bei wesentlichen Änderungen
 
----
-
 **Nächste Schritte:**
 1. Führe initiale Risiko- und Chancenbewertung durch
 2. Etabliere Risiko- und Chancenregister
@@ -179,10 +182,3 @@ Risiken werden überwacht durch:
 5. Implementiere Risikoüberwachungs- und Überprüfungsprozess
 6. Schule Mitarbeiter in risikobasiertem Denken
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

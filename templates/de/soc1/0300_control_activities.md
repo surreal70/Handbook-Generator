@@ -1,13 +1,24 @@
----
+
 Document-ID: soc1-0300
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Kontrollaktivitäten - Übersicht
+
+**Dokument-ID:** [FRAMEWORK]-0300
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -39,7 +50,7 @@ Kontrollaktivitäten sind die Maßnahmen, die durch Richtlinien und Verfahren fe
 - Systemzugangskontrollen
 - Schulung und Kompetenzentwicklung
 
-{{ source.preventive_controls }}
+[TODO]
 
 ### Detektive Kontrollen
 
@@ -52,7 +63,7 @@ Kontrollaktivitäten sind die Maßnahmen, die durch Richtlinien und Verfahren fe
 - Ausnahmeberichte
 - Überwachungsaktivitäten
 
-{{ source.detective_controls }}
+[TODO]
 
 ### Korrektive Kontrollen
 
@@ -65,7 +76,7 @@ Kontrollaktivitäten sind die Maßnahmen, die durch Richtlinien und Verfahren fe
 - Korrekturmaßnahmen
 - Prozessverbesserungen
 
-{{ source.corrective_controls }}
+[TODO]
 
 ## Kontrollkategorien
 
@@ -77,7 +88,7 @@ Kontrollaktivitäten sind die Maßnahmen, die durch Richtlinien und Verfahren fe
 - Dual-Autorisierung
 - Systemische Autorisierung
 
-{{ source.authorization_controls }}
+[TODO]
 
 **Vollständigkeit**:
 - Sequenznummernprüfungen
@@ -85,7 +96,7 @@ Kontrollaktivitäten sind die Maßnahmen, die durch Richtlinien und Verfahren fe
 - Abstimmungen
 - Vollständigkeitsprüfungen
 
-{{ source.completeness_controls }}
+[TODO]
 
 **Genauigkeit**:
 - Eingabevalidierung
@@ -93,7 +104,7 @@ Kontrollaktivitäten sind die Maßnahmen, die durch Richtlinien und Verfahren fe
 - Formatprüfungen
 - Plausibilitätsprüfungen
 
-{{ source.accuracy_controls }}
+[TODO]
 
 **Gültigkeit**:
 - Stammdatenvalidierung
@@ -101,7 +112,7 @@ Kontrollaktivitäten sind die Maßnahmen, die durch Richtlinien und Verfahren fe
 - Geschäftsregelvalidierung
 - Duplikatsprüfungen
 
-{{ source.validity_controls }}
+[TODO]
 
 ### Funktionentrennung
 
@@ -113,9 +124,9 @@ Kontrollaktivitäten sind die Maßnahmen, die durch Richtlinien und Verfahren fe
 - Aufzeichnung vs. Abstimmung
 - Verwahrung vs. Aufzeichnung
 
-{{ source.segregation_of_duties }}
+[TODO]
 
-**Kompensatorische Kontrollen**: {{ source.compensating_controls }}
+**Kompensatorische Kontrollen**: [TODO]
 
 ### Physische Kontrollen
 
@@ -125,7 +136,7 @@ Kontrollaktivitäten sind die Maßnahmen, die durch Richtlinien und Verfahren fe
 - Schlüsselverwaltung
 - Besucherverwaltung
 
-{{ source.physical_access_controls }}
+[TODO]
 
 **Vermögensschutz**:
 - Inventarkontrollen
@@ -133,7 +144,7 @@ Kontrollaktivitäten sind die Maßnahmen, die durch Richtlinien und Verfahren fe
 - Physische Sicherheit
 - Umweltkontrollen
 
-{{ source.asset_protection }}
+[TODO]
 
 ### Überprüfungen und Genehmigungen
 
@@ -143,7 +154,7 @@ Kontrollaktivitäten sind die Maßnahmen, die durch Richtlinien und Verfahren fe
 - Ausnahmeberichte
 - Trendanalysen
 
-{{ source.management_reviews }}
+[TODO]
 
 **Transaktionsüberprüfungen**:
 - Genehmigungsworkflows
@@ -151,7 +162,7 @@ Kontrollaktivitäten sind die Maßnahmen, die durch Richtlinien und Verfahren fe
 - Qualitätsprüfungen
 - Stichprobenprüfungen
 
-{{ source.transaction_reviews }}
+[TODO]
 
 ## Technologiekontrollen
 
@@ -163,7 +174,7 @@ Kontrollaktivitäten sind die Maßnahmen, die durch Richtlinien und Verfahren fe
 - Passwortrichtlinien
 - Privilegierte Zugriffsverwaltung
 
-{{ source.access_controls }}
+[TODO]
 
 **Änderungsmanagement**:
 - Änderungsanträge
@@ -172,7 +183,7 @@ Kontrollaktivitäten sind die Maßnahmen, die durch Richtlinien und Verfahren fe
 - Implementierung
 - Dokumentation
 
-{{ source.change_management }}
+[TODO]
 
 **Backup und Wiederherstellung**:
 - Backup-Verfahren
@@ -180,7 +191,7 @@ Kontrollaktivitäten sind die Maßnahmen, die durch Richtlinien und Verfahren fe
 - Wiederherstellungstests
 - Disaster Recovery
 
-{{ source.backup_recovery }}
+[TODO]
 
 **Betriebskontrollen**:
 - Job-Scheduling
@@ -188,7 +199,7 @@ Kontrollaktivitäten sind die Maßnahmen, die durch Richtlinien und Verfahren fe
 - Incident Management
 - Problem Management
 
-{{ source.operations_controls }}
+[TODO]
 
 ### Anwendungskontrollen
 
@@ -198,7 +209,7 @@ Kontrollaktivitäten sind die Maßnahmen, die durch Richtlinien und Verfahren fe
 - Bereichsprüfungen
 - Pflichtfeldprüfungen
 
-{{ source.input_controls }}
+[TODO]
 
 **Verarbeitungskontrollen**:
 - Berechnungslogik
@@ -206,7 +217,7 @@ Kontrollaktivitäten sind die Maßnahmen, die durch Richtlinien und Verfahren fe
 - Fehlerbehandlung
 - Transaktionsprotokollierung
 
-{{ source.processing_controls }}
+[TODO]
 
 **Ausgabekontrollen**:
 - Berichtsvalidierung
@@ -214,7 +225,7 @@ Kontrollaktivitäten sind die Maßnahmen, die durch Richtlinien und Verfahren fe
 - Ausgabeabstimmungen
 - Archivierung
 
-{{ source.output_controls }}
+[TODO]
 
 ### Cybersecurity-Kontrollen
 
@@ -224,7 +235,7 @@ Kontrollaktivitäten sind die Maßnahmen, die durch Richtlinien und Verfahren fe
 - Netzwerksegmentierung
 - VPN
 
-{{ source.network_security }}
+[TODO]
 
 **Datensicherheit**:
 - Verschlüsselung
@@ -232,7 +243,7 @@ Kontrollaktivitäten sind die Maßnahmen, die durch Richtlinien und Verfahren fe
 - Datenklassifizierung
 - Data Loss Prevention
 
-{{ source.data_security }}
+[TODO]
 
 **Endpoint-Sicherheit**:
 - Antivirus/Antimalware
@@ -240,7 +251,7 @@ Kontrollaktivitäten sind die Maßnahmen, die durch Richtlinien und Verfahren fe
 - Patch Management
 - Device Management
 
-{{ source.endpoint_security }}
+[TODO]
 
 ## Richtlinien und Verfahren
 
@@ -252,17 +263,17 @@ Kontrollaktivitäten sind die Maßnahmen, die durch Richtlinien und Verfahren fe
 3. Verfahren
 4. Arbeitsanweisungen
 
-{{ source.policy_hierarchy }}
+[TODO]
 
-**Richtlinienentwicklung**: {{ source.policy_development }}
+**Richtlinienentwicklung**: [TODO]
 
-**Richtliniengenehmigung**: {{ source.policy_approval }}
+**Richtliniengenehmigung**: [TODO]
 
-**Richtlinienkommunikation**: {{ source.policy_communication }}
+**Richtlinienkommunikation**: [TODO]
 
 ### Verfahrensdokumentation
 
-**Verfahrensstandards**: {{ source.procedure_standards }}
+**Verfahrensstandards**: [TODO]
 
 **Verfahrensinhalte**:
 - Zweck und Geltungsbereich
@@ -271,45 +282,45 @@ Kontrollaktivitäten sind die Maßnahmen, die durch Richtlinien und Verfahren fe
 - Kontrollen
 - Ausnahmebehandlung
 
-{{ source.procedure_contents }}
+[TODO]
 
-**Verfahrensaktualisierung**: {{ source.procedure_updates }}
+**Verfahrensaktualisierung**: [TODO]
 
 ### Compliance-Überwachung
 
-**Compliance-Bewertungen**: {{ source.compliance_assessments }}
+**Compliance-Bewertungen**: [TODO]
 
-**Ausnahmen und Abweichungen**: {{ source.exceptions_deviations }}
+**Ausnahmen und Abweichungen**: [TODO]
 
-**Korrekturmaßnahmen**: {{ source.corrective_actions }}
+**Korrekturmaßnahmen**: [TODO]
 
 ## Kontrolldesign und -implementierung
 
 ### Kontrolldesign-Prinzipien
 
-**Effektivität**: {{ source.control_effectiveness }}
+**Effektivität**: [TODO]
 
-**Effizienz**: {{ source.control_efficiency }}
+**Effizienz**: [TODO]
 
-**Angemessenheit**: {{ source.control_appropriateness }}
+**Angemessenheit**: [TODO]
 
-**Nachhaltigkeit**: {{ source.control_sustainability }}
+**Nachhaltigkeit**: [TODO]
 
 ### Kontrollimplementierung
 
-**Implementierungsplanung**: {{ source.implementation_planning }}
+**Implementierungsplanung**: [TODO]
 
-**Schulung und Kommunikation**: {{ source.training_communication }}
+**Schulung und Kommunikation**: [TODO]
 
-**Testing und Validierung**: {{ source.testing_validation }}
+**Testing und Validierung**: [TODO]
 
-**Go-Live und Überwachung**: {{ source.golive_monitoring }}
+**Go-Live und Überwachung**: [TODO]
 
 ### Kontrollbewertung
 
-**Design-Effektivität**: {{ source.design_effectiveness }}
+**Design-Effektivität**: [TODO]
 
-**Betriebseffektivität**: {{ source.operating_effectiveness }}
+**Betriebseffektivität**: [TODO]
 
 **Testmethoden**:
 - Befragungen
@@ -317,35 +328,35 @@ Kontrollaktivitäten sind die Maßnahmen, die durch Richtlinien und Verfahren fe
 - Inspektion von Dokumenten
 - Wiederholung der Kontrolle
 
-{{ source.testing_methods }}
+[TODO]
 
 ## Kontrollüberwachung
 
 ### Laufende Überwachung
 
-**Management-Überwachung**: {{ source.management_monitoring }}
+**Management-Überwachung**: [TODO]
 
-**Automatisierte Überwachung**: {{ source.automated_monitoring }}
+**Automatisierte Überwachung**: [TODO]
 
-**Selbstbewertungen**: {{ source.self_assessments }}
+**Selbstbewertungen**: [TODO]
 
 ### Separate Bewertungen
 
-**Interne Audits**: {{ source.internal_audits }}
+**Interne Audits**: [TODO]
 
-**Externe Audits**: {{ source.external_audits }}
+**Externe Audits**: [TODO]
 
-**Compliance-Prüfungen**: {{ source.compliance_reviews }}
+**Compliance-Prüfungen**: [TODO]
 
 ### Kontrollmängel
 
-**Identifikation**: {{ source.deficiency_identification }}
+**Identifikation**: [TODO]
 
-**Bewertung**: {{ source.deficiency_assessment }}
+**Bewertung**: [TODO]
 
-**Berichterstattung**: {{ source.deficiency_reporting }}
+**Berichterstattung**: [TODO]
 
-**Behebung**: {{ source.deficiency_remediation }}
+**Behebung**: [TODO]
 
 ## Dokumentation und Nachweise
 
@@ -368,29 +379,29 @@ Kontrollaktivitäten sind die Maßnahmen, die durch Richtlinien und Verfahren fe
    - Ausnahmen
    - Korrekturmaßnahmen
 
-{{ source.required_documentation }}
+[TODO]
 
 ### Aufbewahrungsfristen
 
-{{ source.retention_requirements }}
+[TODO]
 
 ## Kontinuierliche Verbesserung
 
 ### Kontrolloptimierung
 
-**Effizienzverbesserungen**: {{ source.efficiency_improvements }}
+**Effizienzverbesserungen**: [TODO]
 
-**Automatisierung**: {{ source.control_automation }}
+**Automatisierung**: [TODO]
 
-**Standardisierung**: {{ source.control_standardization }}
+**Standardisierung**: [TODO]
 
 ### Lessons Learned
 
-**Nachbesprechungen**: {{ source.post_implementation_reviews }}
+**Nachbesprechungen**: [TODO]
 
-**Best Practices**: {{ source.best_practices }}
+**Best Practices**: [TODO]
 
-**Wissensmanagement**: {{ source.knowledge_management }}
+**Wissensmanagement**: [TODO]
 
 ## Referenzen
 
@@ -402,12 +413,3 @@ Kontrollaktivitäten sind die Maßnahmen, die durch Richtlinien und Verfahren fe
 
 <!-- Hinweise für Autoren: Aktualisieren Sie Kontrollbeschreibungen bei Prozessänderungen -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

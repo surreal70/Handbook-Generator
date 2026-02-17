@@ -1,13 +1,16 @@
 # BCM Policy
 
-**Document ID:** BCM-0020  
-**Organization:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Approved by:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0020
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,11 +28,11 @@ Customization required:
 
 ## 1. Policy Statement
 
-The management of {{ meta.organization.name }} commits to the implementation and continuous improvement of a Business Continuity Management System (BCMS) in accordance with **ISO 22301:2019**.
+The management of {{ meta-organisation.name }} commits to the implementation and continuous improvement of a Business Continuity Management System (BCMS) in accordance with **ISO 22301:2019**.
 
 ### 1.1 Management Commitment
 
-The management, represented by **{{ meta.roles.ceo.name }}** (CEO), hereby declares:
+The management, represented by **{{ meta-organisation-roles.role_CEO }}** (CEO), hereby declares:
 
 - **Highest priority:** Business continuity has strategic importance for protecting our organization, employees, customers, and stakeholders
 - **Resource provision:** Adequate financial, personnel, and technical resources are provided for the BCMS
@@ -38,7 +41,7 @@ The management, represented by **{{ meta.roles.ceo.name }}** (CEO), hereby decla
 
 ### 1.2 BCMS Principles
 
-The BCMS of {{ meta.organization.name }} is based on the following principles:
+The BCMS of {{ meta-organisation.name }} is based on the following principles:
 
 1. **Risk-based approach:** Identification, assessment, and treatment of risks to business continuity
 2. **Continuous improvement:** Systematic development of BCM capabilities through exercises, tests, and lessons learned
@@ -49,7 +52,7 @@ The BCMS of {{ meta.organization.name }} is based on the following principles:
 
 ### 1.3 Commitments
 
-{{ meta.organization.name }} commits to:
+{{ meta-organisation.name }} commits to:
 
 - **Protection of human life:** Safety and well-being of employees, customers, and visitors have top priority
 - **Business continuity:** Maintaining critical business processes even during severe disruptions
@@ -61,7 +64,7 @@ The BCMS of {{ meta.organization.name }} is based on the following principles:
 
 ### 2.1 Strategic BCM Objectives
 
-{{ meta.organization.name }} pursues the following strategic BCM objectives:
+{{ meta-organisation.name }} pursues the following strategic BCM objectives:
 
 **Objective 1: Minimization of Downtime**
 - Recovery of critical business processes within defined Recovery Time Objectives (RTO)
@@ -112,7 +115,7 @@ The scope of the BCMS is defined in:
 
 → **See document:** `0010_Purpose_and_Scope.md`
 
-The BCMS covers all critical business processes, IT systems, and locations of {{ meta.organization.name }} according to the scope defined in the scope document.
+The BCMS covers all critical business processes, IT systems, and locations of {{ meta-organisation.name }} according to the scope defined in the scope document.
 
 ## 4. Governance and Responsibilities
 
@@ -138,15 +141,15 @@ The BCMS covers all critical business processes, IT systems, and locations of {{
 ### 4.2 Roles and Responsibilities
 
 **Executive Management (CEO)**
-- **Responsible:** {{ meta.roles.ceo.name }} ({{ meta.roles.ceo.email }})
+- **Responsible:** {{ meta-organisation-roles.role_CEO }} ({{ meta-organisation-roles.role_CEO }})
 - **Tasks:** Overall responsibility for BCMS, approval of BCM policy, release of resources, crisis activation
 
 **Chief Information Officer (CIO)**
-- **Responsible:** {{ meta.roles.cio.name }} ({{ meta.roles.cio.email }})
+- **Responsible:** {{ meta-organisation-roles.role_CIO }} ({{ meta-organisation-roles.role_CIO }})
 - **Tasks:** Responsibility for IT continuity, IT disaster recovery, technical BCM measures
 
 **Chief Information Security Officer (CISO)**
-- **Responsible:** {{ meta.roles.ciso.name }} ({{ meta.roles.ciso.email }})
+- **Responsible:** {{ meta-organisation-roles.role_CISO }} ({{ meta-organisation-roles.role_CISO }})
 - **Tasks:** ISMS-BCMS interface, security incident response, cyber resilience
 
 **BCM Manager**
@@ -158,7 +161,7 @@ The BCMS covers all critical business processes, IT systems, and locations of {{
 - **Tasks:** Identification of critical processes, participation in BIA, creation of functional BCM plans, participation in exercises
 
 **IT Operations**
-- **Responsible:** {{ meta.roles.it_operations_manager.name }} ({{ meta.roles.it_operations_manager.email }})
+- **Responsible:** {{ meta-organisation-roles.role_IT_Manager }} ({{ meta-organisation-roles.role_IT_Manager }})
 - **Tasks:** Implementation of technical BCM measures, IT disaster recovery, backup and restore
 
 ## 5. Approvals and Authorizations
@@ -167,10 +170,10 @@ This BCM policy has been reviewed and approved by:
 
 | Role | Name | Function | Date | Signature/Approval |
 |------|------|----------|------|-------------------|
-| **Executive Management** | {{ meta.roles.ceo.name }} | CEO | [TODO: Date] | [TODO: Signature] |
+| **Executive Management** | {{ meta-organisation-roles.role_CEO }} | CEO | [TODO: Date] | [TODO: Signature] |
 | **BCM Owner** | [TODO: BCM Manager] | BCM Manager | [TODO: Date] | [TODO: Signature] |
-| **IT Management** | {{ meta.roles.cio.name }} | CIO | [TODO: Date] | [TODO: Signature] |
-| **Information Security** | {{ meta.roles.ciso.name }} | CISO | [TODO: Date] | [TODO: Signature] |
+| **IT Management** | {{ meta-organisation-roles.role_CIO }} | CIO | [TODO: Date] | [TODO: Signature] |
+| **Information Security** | {{ meta-organisation-roles.role_CISO }} | CISO | [TODO: Date] | [TODO: Signature] |
 | **Compliance** | [TODO: Compliance Officer] | Compliance Officer | [TODO: Date] | [TODO: Signature] |
 
 ## 6. Review and Update
@@ -182,13 +185,5 @@ This BCM policy is:
 - Reviewed for adaptation needs after **severe incidents** or exercises
 
 **Next planned review:** [TODO: Date]
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 <!-- End of template -->

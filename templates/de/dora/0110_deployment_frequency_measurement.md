@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0110
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Deployment Frequency Messung
+
+**Dokument-ID:** [FRAMEWORK]-0110
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -25,28 +36,28 @@ Dieses Dokument umfasst:
 
 ### Organisationsinformationen
 
-- **Organisation**: {{ source.organization_name }}
-- **Messverantwortlicher**: {{ source.deployment_measurement_owner }}
-- **Messsystem**: {{ source.deployment_measurement_system }}
-- **Messfrequenz**: {{ source.deployment_measurement_frequency }}
+- **Organisation**: [TODO]
+- **Messverantwortlicher**: [TODO]
+- **Messsystem**: [TODO]
+- **Messfrequenz**: [TODO]
 
 ## Datenerfassung
 
 ### Primäre Datenquellen
 
-**CI/CD-System**: {{ source.cicd_system }}
+**CI/CD-System**: [TODO]
 - Pipeline-Execution-Logs
 - Deployment-Status
 - Timestamp-Informationen
 - Environment-Informationen
 
-**Deployment-Tools**: {{ source.deployment_tools }}
+**Deployment-Tools**: [TODO]
 - Deployment-Events
 - Success/Failure-Status
 - Deployment-Duration
 - Target-Environment
 
-**Version Control**: {{ source.version_control_system }}
+**Version Control**: [TODO]
 - Commit-Informationen
 - Branch-Informationen
 - Tag-Informationen
@@ -54,12 +65,12 @@ Dieses Dokument umfasst:
 
 ### Sekundäre Datenquellen
 
-**Monitoring-Systeme**: {{ source.monitoring_systems }}
+**Monitoring-Systeme**: [TODO]
 - Application-Health-Checks
 - Deployment-Verification
 - Performance-Metrics
 
-**Ticketing-Systeme**: {{ source.ticketing_system }}
+**Ticketing-Systeme**: [TODO]
 - Release-Tickets
 - Deployment-Requests
 - Change-Records
@@ -94,7 +105,7 @@ ENVIRONMENT="production"
 STATUS="${CI_JOB_STATUS}"
 
 # Send to metrics system
-curl -X POST {{ source.metrics_endpoint }} \
+curl -X POST [TODO] \
   -H "Content-Type: application/json" \
   -d "{
     \"metric\": \"deployment_frequency\",
@@ -107,9 +118,9 @@ curl -X POST {{ source.metrics_endpoint }} \
 
 ### API-Integration
 
-**Metrics-API**: {{ source.metrics_api_endpoint }}
+**Metrics-API**: [TODO]
 
-**Authentifizierung**: {{ source.metrics_api_auth_method }}
+**Authentifizierung**: [TODO]
 
 **Payload-Format**:
 ```json
@@ -117,7 +128,7 @@ curl -X POST {{ source.metrics_endpoint }} \
   "metric_type": "deployment_frequency",
   "timestamp": "2024-02-13T14:30:00Z",
   "deployment_id": "12345",
-  "application": "{{ source.application_name }}",
+  "application": "[TODO]",
   "environment": "production",
   "status": "success",
   "commit_sha": "abc123def456",
@@ -213,22 +224,22 @@ Team Deployment Frequency = Deployments des Teams / Zeitperiode
 
 ### Reporting-Frequenz
 
-**Echtzeit-Dashboards**: {{ source.realtime_dashboard_url }}
+**Echtzeit-Dashboards**: [TODO]
 - Aktuelle Deployment-Aktivität
 - Live-Status
 - Sofortige Alerts
 
-**Tägliche Reports**: {{ source.daily_report_recipients }}
+**Tägliche Reports**: [TODO]
 - Deployment-Summary
 - Anomalien
 - Quick Insights
 
-**Wöchentliche Reports**: {{ source.weekly_report_recipients }}
+**Wöchentliche Reports**: [TODO]
 - Wochenübersicht
 - Trend-Analysen
 - Team-Performance
 
-**Monatliche Reports**: {{ source.monthly_report_recipients }}
+**Monatliche Reports**: [TODO]
 - Monatsübersicht
 - Performance-Level-Assessment
 - Verbesserungsempfehlungen
@@ -275,12 +286,3 @@ Team Deployment Frequency = Deployments des Teams / Zeitperiode
 
 <!-- Hinweis: Genaue Messung ist Grundlage für Verbesserung -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

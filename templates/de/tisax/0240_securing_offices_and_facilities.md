@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0240
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Sicherung von Büros und Einrichtungen
+
+**Dokument-ID:** [FRAMEWORK]-0240
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -15,7 +26,7 @@ Dieses Dokument definiert Maßnahmen zur Sicherung von Büros und Einrichtungen 
 
 ## Geltungsbereich
 
-Dieses Dokument gilt für alle Büros und Einrichtungen von {{ source.organization_name }}.
+Dieses Dokument gilt für alle Büros und Einrichtungen von [TODO].
 
 ## Bürosicherheit
 
@@ -36,7 +47,7 @@ Dieses Dokument gilt für alle Büros und Einrichtungen von {{ source.organizati
 
 **Anforderungen:**
 - Bildschirmsperre bei Abwesenheit
-- Automatische Bildschirmsperre nach {{ source.screen_lock_timeout }} Minuten
+- Automatische Bildschirmsperre nach [TODO] Minuten
 - Keine Einsicht von außen möglich
 - Sichtschutzfolien bei Bedarf
 
@@ -115,17 +126,8 @@ Dieses Dokument adressiert:
 
 ## Kennzahlen
 
-{{ source.organization_name }} misst:
+[TODO] misst:
 - Compliance-Rate Clean Desk Policy
 - Anzahl Sicherheitsvorfälle
 - Durchführungsrate Brandschutzübungen
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

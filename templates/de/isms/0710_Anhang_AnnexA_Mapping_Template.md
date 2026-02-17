@@ -1,9 +1,16 @@
 # Anhang A: Annex A Control Mapping
 
-**Dokumenttyp:** Anhang  
-**Version:** {{ meta.document.version }}  
-**Datum:** {{ meta.document.date }}  
-**Klassifizierung:** {{ meta.document.classification }}
+**Dokument-ID:** [FRAMEWORK]-0710
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -15,11 +22,9 @@ Das Mapping berücksichtigt die Änderungen aus Amendment 1:2024 und stellt sich
 
 ## Geltungsbereich
 
-**Organisation:** {{ meta.organization.name }}  
+**Organisation:** {{ meta-organisation.name }}  
 **ISMS Scope:** {{ meta.isms.scope }}  
 **Verantwortlich:** {{ meta.ciso.name }} ({{ meta.ciso.email }})
-
----
 
 ## ISO/IEC 27001:2022 Annex A Struktur
 
@@ -31,8 +36,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - **Technological Controls (8.1-8.34):** 34 Kontrollen
 
 **Gesamt:** 93 Kontrollen
-
----
 
 ## Annex A Control Mapping
 
@@ -51,8 +54,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** {{ meta.ciso.name }}  
 **Nachweis:** Genehmigte und veröffentlichte Policies, Schulungsnachweise
 
----
-
 #### 5.2 Information Security Roles and Responsibilities
 
 **Control Statement:** Information security roles and responsibilities shall be defined and allocated according to the organization needs.
@@ -64,8 +65,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** {{ meta.ciso.name }}  
 **Nachweis:** RACI-Matrizen, Stellenbeschreibungen, Organigramm
-
----
 
 #### 5.3 Segregation of Duties
 
@@ -79,8 +78,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** {{ meta.ciso.name }}  
 **Nachweis:** Berechtigungskonzept, Zugriffsreviews
 
----
-
 #### 5.4 Management Responsibilities
 
 **Control Statement:** Management shall require all personnel to apply information security in accordance with the established information security policy, topic-specific policies and procedures of the organization.
@@ -92,8 +89,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** Management, {{ meta.ciso.name }}  
 **Nachweis:** Management-Commitment, Schulungsnachweise
-
----
 
 #### 5.5 Contact with Authorities
 
@@ -107,8 +102,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** {{ meta.ciso.name }}  
 **Nachweis:** Kontaktlisten, Kommunikationsprotokolle
 
----
-
 #### 5.6 Contact with Special Interest Groups
 
 **Control Statement:** The organization shall establish and maintain contact with special interest groups or other specialist security forums and professional associations.
@@ -119,8 +112,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** {{ meta.ciso.name }}  
 **Nachweis:** Mitgliedschaften, Teilnahmebestätigungen
-
----
 
 #### 5.7 Threat Intelligence
 
@@ -134,8 +125,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Security Operations Team  
 **Nachweis:** Threat Intelligence Reports, Vulnerability Scans
 
----
-
 #### 5.8 Information Security in Project Management
 
 **Control Statement:** Information security shall be integrated into project management.
@@ -147,8 +136,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** Project Management Office, {{ meta.ciso.name }}  
 **Nachweis:** Projektdokumentation, Security Reviews
-
----
 
 #### 5.9 Inventory of Information and Other Associated Assets
 
@@ -163,8 +150,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Asset Management Team  
 **Nachweis:** Asset Inventory, CMDB
 
----
-
 #### 5.10 Acceptable Use of Information and Other Associated Assets
 
 **Control Statement:** Rules for the acceptable use of information and of assets associated with information and information processing facilities shall be identified, documented and implemented.
@@ -176,8 +161,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** {{ meta.ciso.name }}  
 **Nachweis:** Acceptable Use Policy, Mitarbeiterbestätigungen
-
----
 
 #### 5.11 Return of Assets
 
@@ -191,8 +174,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** HR, IT Operations  
 **Nachweis:** Offboarding-Checklisten, Asset-Rückgabeprotokolle
 
----
-
 #### 5.12 Classification of Information
 
 **Control Statement:** Information shall be classified according to the information security needs of the organization based on confidentiality, integrity, availability and relevant interested party requirements.
@@ -205,8 +186,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Data Owners, {{ meta.ciso.name }}  
 **Nachweis:** Klassifizierungsschema, gelabelte Dokumente
 
----
-
 #### 5.13 Labelling of Information
 
 **Control Statement:** An appropriate set of procedures for information labelling shall be developed and implemented in accordance with the information classification scheme adopted by the organization.
@@ -217,8 +196,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** Data Owners  
 **Nachweis:** Labelling-Richtlinien, gelabelte Assets
-
----
 
 #### 5.14 Information Transfer
 
@@ -232,8 +209,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** {{ meta.ciso.name }}  
 **Nachweis:** Transfer-Richtlinien, Verschlüsselungsnachweise
 
----
-
 #### 5.15 Access Control
 
 **Control Statement:** Rules to control physical and logical access to information and other associated assets shall be established and implemented based on business and information security requirements.
@@ -245,8 +220,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** IAM Team, {{ meta.ciso.name }}  
 **Nachweis:** Berechtigungskonzept, Access Reviews
-
----
 
 #### 5.16 Identity Management
 
@@ -260,8 +233,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** IAM Team  
 **Nachweis:** Identity Lifecycle Prozesse, Joiner/Mover/Leaver Dokumentation
 
----
-
 #### 5.17 Authentication Information
 
 **Control Statement:** Allocation and management of authentication information shall be controlled by a management process, including advising personnel on appropriate handling of authentication information.
@@ -274,8 +245,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** IAM Team  
 **Nachweis:** Passwort-Richtlinien, MFA-Implementierung
 
----
-
 #### 5.18 Access Rights
 
 **Control Statement:** Access rights to information and other associated assets shall be provisioned, reviewed, modified and removed in accordance with the organization's topic-specific policy on and rules for access control.
@@ -286,8 +255,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** IAM Team, Resource Owners  
 **Nachweis:** Access Request Workflows, Rezertifizierungsprotokolle
-
----
 
 #### 5.19 Information Security in Supplier Relationships
 
@@ -301,8 +268,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Procurement, {{ meta.ciso.name }}  
 **Nachweis:** Supplier Security Assessments, Verträge
 
----
-
 #### 5.20 Addressing Information Security within Supplier Agreements
 
 **Control Statement:** Relevant information security requirements shall be established and agreed with each supplier based on the type of supplier relationship.
@@ -313,8 +278,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** Procurement, Legal, {{ meta.ciso.name }}  
 **Nachweis:** Vertragsklauseln, SLAs
-
----
 
 #### 5.21 Managing Information Security in the ICT Supply Chain
 
@@ -327,8 +290,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** {{ meta.ciso.name }}, IT Operations  
 **Nachweis:** Supply Chain Risk Assessments
 
----
-
 #### 5.22 Monitoring, Review and Change Management of Supplier Services
 
 **Control Statement:** The organization shall regularly monitor, review, evaluate and manage change in supplier information security practices and service delivery.
@@ -339,8 +300,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** Supplier Management, {{ meta.ciso.name }}  
 **Nachweis:** Supplier Reviews, Performance Reports
-
----
 
 #### 5.23 Information Security for Use of Cloud Services
 
@@ -354,8 +313,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Cloud Governance Team, {{ meta.ciso.name }}  
 **Nachweis:** Cloud Security Assessments, Cloud Contracts
 
----
-
 #### 5.24 Information Security Incident Management Planning and Preparation
 
 **Control Statement:** The organization shall plan and prepare for managing information security incidents by defining, establishing and communicating information security incident management processes, roles and responsibilities.
@@ -368,8 +325,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Incident Response Team, {{ meta.ciso.name }}  
 **Nachweis:** Incident Response Plan, Runbooks
 
----
-
 #### 5.25 Assessment and Decision on Information Security Events
 
 **Control Statement:** The organization shall assess information security events and decide if they are to be categorized as information security incidents.
@@ -381,8 +336,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Incident Response Team  
 **Nachweis:** Event Classification Criteria, Incident Tickets
 
----
-
 #### 5.26 Response to Information Security Incidents
 
 **Control Statement:** Information security incidents shall be responded to in accordance with the documented procedures.
@@ -393,8 +346,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** Incident Response Team  
 **Nachweis:** Incident Response Dokumentation, Post-Mortems
-
----
 
 #### 5.27 Learning from Information Security Incidents
 
@@ -408,8 +359,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Incident Response Team, {{ meta.ciso.name }}  
 **Nachweis:** Lessons Learned Dokumentation, Verbesserungsmaßnahmen
 
----
-
 #### 5.28 Collection of Evidence
 
 **Control Statement:** The organization shall establish and implement procedures for the identification, collection, acquisition and preservation of evidence related to information security events.
@@ -420,8 +369,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** Incident Response Team, Forensics Team  
 **Nachweis:** Forensics Procedures, Chain of Custody Dokumentation
-
----
 
 #### 5.29 Information Security During Disruption
 
@@ -435,8 +382,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** BCM Team, {{ meta.ciso.name }}  
 **Nachweis:** Business Continuity Plans, DR Tests
 
----
-
 #### 5.30 ICT Readiness for Business Continuity
 
 **Control Statement:** ICT readiness shall be planned, implemented, maintained and tested based on business continuity objectives and ICT continuity requirements.
@@ -448,8 +393,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** IT Operations, BCM Team  
 **Nachweis:** DR Plans, BC Tests, RTO/RPO Dokumentation
-
----
 
 #### 5.31 Legal, Statutory, Regulatory and Contractual Requirements
 
@@ -463,8 +406,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Legal, Compliance, {{ meta.ciso.name }}  
 **Nachweis:** Compliance Register, Legal Reviews
 
----
-
 #### 5.32 Intellectual Property Rights
 
 **Control Statement:** The organization shall implement appropriate procedures to protect intellectual property rights.
@@ -476,8 +417,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** Legal, {{ meta.ciso.name }}  
 **Nachweis:** IP Protection Procedures, Lizenzmanagement
-
----
 
 #### 5.33 Protection of Records
 
@@ -491,8 +430,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Records Management, {{ meta.ciso.name }}  
 **Nachweis:** Records Retention Policy, Archivierungssysteme
 
----
-
 #### 5.34 Privacy and Protection of PII
 
 **Control Statement:** The organization shall identify and meet the requirements regarding the preservation of privacy and protection of PII according to applicable laws and regulations and contractual requirements.
@@ -505,8 +442,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Data Protection Officer, {{ meta.ciso.name }}  
 **Nachweis:** DSGVO Compliance, Privacy Impact Assessments
 
----
-
 #### 5.35 Independent Review of Information Security
 
 **Control Statement:** The organization's approach to managing information security and its implementation including people, processes and technologies shall be reviewed independently at planned intervals, or when significant changes occur.
@@ -517,8 +452,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** Internal Audit, {{ meta.ciso.name }}  
 **Nachweis:** Audit Reports, Audit Plans
-
----
 
 #### 5.36 Compliance with Policies, Rules and Standards for Information Security
 
@@ -532,8 +465,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Compliance Team, {{ meta.ciso.name }}  
 **Nachweis:** Compliance Reviews, Audit Findings
 
----
-
 #### 5.37 Documented Operating Procedures
 
 **Control Statement:** Operating procedures for information processing facilities shall be documented and made available to personnel who need them.
@@ -545,8 +476,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** IT Operations, Process Owners  
 **Nachweis:** Betriebsdokumentation, SOPs, Runbooks
-
----
 
 ### 6. People Controls
 
@@ -562,8 +491,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** HR, {{ meta.ciso.name }}  
 **Nachweis:** Background Check Procedures, Screening Records
 
----
-
 #### 6.2 Terms and Conditions of Employment
 
 **Control Statement:** The employment contractual agreements shall state the personnel's and the organization's responsibilities for information security.
@@ -576,8 +503,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** HR, Legal  
 **Nachweis:** Arbeitsverträge, NDA Templates
 
----
-
 #### 6.3 Information Security Awareness, Education and Training
 
 **Control Statement:** Personnel of the organization and relevant interested parties shall receive appropriate information security awareness, education and training and regular updates of the organization's information security policy, topic-specific policies and procedures, as relevant for their job function.
@@ -588,8 +513,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** {{ meta.ciso.name }}, HR  
 **Nachweis:** Schulungspläne, Teilnahmebestätigungen, Awareness Kampagnen
-
----
 
 #### 6.4 Disciplinary Process
 
@@ -603,8 +526,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** HR, Management  
 **Nachweis:** Disziplinarverfahren, Dokumentierte Verstöße
 
----
-
 #### 6.5 Responsibilities After Termination or Change of Employment
 
 **Control Statement:** Information security responsibilities and duties that remain valid after termination or change of employment shall be defined, enforced and communicated to relevant personnel and other interested parties.
@@ -617,8 +538,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** HR, IT Operations  
 **Nachweis:** Offboarding Checklisten, Exit Interviews
 
----
-
 #### 6.6 Confidentiality or Non-Disclosure Agreements
 
 **Control Statement:** Confidentiality or non-disclosure agreements reflecting the organization's needs for the protection of information shall be identified, documented, regularly reviewed and signed by personnel and other relevant interested parties.
@@ -629,8 +548,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** Legal, HR  
 **Nachweis:** Unterzeichnete NDAs, Vertraulichkeitsvereinbarungen
-
----
 
 #### 6.7 Remote Working
 
@@ -644,8 +561,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** IT Operations, {{ meta.ciso.name }}  
 **Nachweis:** Remote Work Policy, VPN Logs, Endpoint Security
 
----
-
 #### 6.8 Information Security Event Reporting
 
 **Control Statement:** The organization shall provide a mechanism for personnel to report observed or suspected information security events through appropriate channels in a timely manner.
@@ -657,8 +572,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** All Personnel, Incident Response Team  
 **Nachweis:** Incident Reporting Channels, Event Reports
-
----
 
 ### 7. Physical Controls
 
@@ -674,8 +587,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Facility Management, {{ meta.ciso.name }}  
 **Nachweis:** Sicherheitszonen, Zutrittskontrollsysteme
 
----
-
 #### 7.2 Physical Entry
 
 **Control Statement:** Secure areas shall be protected by appropriate entry controls and access points.
@@ -686,8 +597,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** Facility Management  
 **Nachweis:** Zutrittskontrollsystem, Access Logs
-
----
 
 #### 7.3 Securing Offices, Rooms and Facilities
 
@@ -701,8 +610,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Facility Management  
 **Nachweis:** Sicherheitskonzept Gebäude, Raumschutzmaßnahmen
 
----
-
 #### 7.4 Physical Security Monitoring
 
 **Control Statement:** Premises shall be continuously monitored for unauthorized physical access.
@@ -713,8 +620,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** Security Operations, Facility Management  
 **Nachweis:** Videoüberwachung, Alarmsysteme, Security Logs
-
----
 
 #### 7.5 Protecting Against Physical and Environmental Threats
 
@@ -728,8 +633,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Facility Management, BCM Team  
 **Nachweis:** Umweltschutzmaßnahmen, Brandschutz, Klimatisierung
 
----
-
 #### 7.6 Working in Secure Areas
 
 **Control Statement:** Security measures for working in secure areas shall be designed and implemented.
@@ -740,8 +643,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** Facility Management, {{ meta.ciso.name }}  
 **Nachweis:** Clean Desk Policy, Secure Area Procedures
-
----
 
 #### 7.7 Clear Desk and Clear Screen
 
@@ -755,8 +656,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** All Personnel, Management  
 **Nachweis:** Clear Desk Policy, Awareness Training
 
----
-
 #### 7.8 Equipment Siting and Protection
 
 **Control Statement:** Equipment shall be sited securely and protected.
@@ -767,8 +666,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** IT Operations, Facility Management  
 **Nachweis:** Serverraum-Sicherheit, Equipment Protection Measures
-
----
 
 #### 7.9 Security of Assets Off-Premises
 
@@ -782,8 +679,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** IT Operations, {{ meta.ciso.name }}  
 **Nachweis:** Mobile Device Management, Encryption Policies
 
----
-
 #### 7.10 Storage Media
 
 **Control Statement:** Storage media shall be managed through their life cycle of acquisition, use, transportation and disposal in accordance with the organization's classification scheme and handling requirements.
@@ -795,8 +690,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** IT Operations  
 **Nachweis:** Media Handling Procedures, Disposal Records
-
----
 
 #### 7.11 Supporting Utilities
 
@@ -810,8 +703,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** IT Operations, Facility Management  
 **Nachweis:** USV-Systeme, Redundante Stromversorgung
 
----
-
 #### 7.12 Cabling Security
 
 **Control Statement:** Cables carrying power, data or supporting information services shall be protected from interception, interference or damage.
@@ -823,8 +714,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** IT Operations, Facility Management  
 **Nachweis:** Kabelschutzmaßnahmen, Netzwerkdokumentation
-
----
 
 #### 7.13 Equipment Maintenance
 
@@ -838,8 +727,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** IT Operations  
 **Nachweis:** Wartungspläne, Maintenance Records
 
----
-
 #### 7.14 Secure Disposal or Re-use of Equipment
 
 **Control Statement:** Items of equipment containing storage media shall be verified to ensure that any sensitive data and licensed software has been removed or securely overwritten prior to disposal or re-use.
@@ -851,8 +738,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** IT Operations  
 **Nachweis:** Secure Disposal Procedures, Wiping Certificates
-
----
 
 ### 8. Technological Controls
 
@@ -868,8 +753,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** IT Operations, {{ meta.ciso.name }}  
 **Nachweis:** Endpoint Protection, Device Compliance Policies
 
----
-
 #### 8.2 Privileged Access Rights
 
 **Control Statement:** The allocation and use of privileged access rights shall be restricted and managed.
@@ -881,8 +764,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** IAM Team, {{ meta.ciso.name }}  
 **Nachweis:** Privileged Access Management, PAM Logs
-
----
 
 #### 8.3 Information Access Restriction
 
@@ -896,8 +777,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** IAM Team, Data Owners  
 **Nachweis:** Access Control Lists, Authorization Policies
 
----
-
 #### 8.4 Access to Source Code
 
 **Control Statement:** Read and write access to source code, development tools and software libraries shall be appropriately managed.
@@ -909,8 +788,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** Development Team, {{ meta.ciso.name }}  
 **Nachweis:** Source Code Access Controls, Git Permissions
-
----
 
 #### 8.5 Secure Authentication
 
@@ -924,8 +801,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** IAM Team  
 **Nachweis:** MFA Implementation, Authentication Logs
 
----
-
 #### 8.6 Capacity Management
 
 **Control Statement:** The use of resources shall be monitored and adjusted in line with current and expected capacity requirements.
@@ -937,8 +812,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** IT Operations  
 **Nachweis:** Capacity Monitoring, Performance Reports
-
----
 
 #### 8.7 Protection Against Malware
 
@@ -952,8 +825,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** IT Operations, {{ meta.ciso.name }}  
 **Nachweis:** Antivirus/EDR Deployment, Malware Detection Logs
 
----
-
 #### 8.8 Management of Technical Vulnerabilities
 
 **Control Statement:** Information about technical vulnerabilities of information systems in use shall be obtained, the organization's exposure to such vulnerabilities shall be evaluated and appropriate measures shall be taken.
@@ -965,8 +836,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** Security Operations, IT Operations  
 **Nachweis:** Vulnerability Scans, Patch Management Reports
-
----
 
 #### 8.9 Configuration Management
 
@@ -980,8 +849,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** IT Operations, {{ meta.ciso.name }}  
 **Nachweis:** Configuration Management Database, Baseline Configurations
 
----
-
 #### 8.10 Information Deletion
 
 **Control Statement:** Information stored in information systems, devices or in any other storage media shall be deleted when no longer required.
@@ -993,8 +860,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** Data Owners, IT Operations  
 **Nachweis:** Data Retention Policy, Deletion Logs
-
----
 
 #### 8.11 Data Masking
 
@@ -1008,8 +873,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Development Team, Data Protection Officer  
 **Nachweis:** Data Masking Procedures, Test Data Management
 
----
-
 #### 8.12 Data Leakage Prevention
 
 **Control Statement:** Data leakage prevention measures shall be applied to systems, networks and any other devices that process, store or transmit sensitive information.
@@ -1021,8 +884,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** Security Operations, {{ meta.ciso.name }}  
 **Nachweis:** DLP Implementation, DLP Alerts
-
----
 
 #### 8.13 Information Backup
 
@@ -1036,8 +897,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** IT Operations  
 **Nachweis:** Backup Policies, Restore Tests, Backup Logs
 
----
-
 #### 8.14 Redundancy of Information Processing Facilities
 
 **Control Statement:** Information processing facilities shall be implemented with redundancy sufficient to meet availability requirements.
@@ -1049,8 +908,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** IT Operations, IT Architecture  
 **Nachweis:** High Availability Designs, Redundancy Documentation
-
----
 
 #### 8.15 Logging
 
@@ -1064,8 +921,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** IT Operations, Security Operations  
 **Nachweis:** Logging Standards, SIEM Implementation, Log Retention
 
----
-
 #### 8.16 Monitoring Activities
 
 **Control Statement:** Networks, systems and applications shall be monitored for anomalous behaviour and appropriate actions taken to evaluate potential information security incidents.
@@ -1077,8 +932,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** Security Operations  
 **Nachweis:** SIEM Use Cases, Monitoring Dashboards, Alerts
-
----
 
 #### 8.17 Clock Synchronization
 
@@ -1092,8 +945,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** IT Operations  
 **Nachweis:** NTP Configuration, Time Synchronization Logs
 
----
-
 #### 8.18 Use of Privileged Utility Programs
 
 **Control Statement:** The use of utility programs that can be capable of overriding system and application controls shall be restricted and tightly controlled.
@@ -1105,8 +956,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** IT Operations, {{ meta.ciso.name }}  
 **Nachweis:** Privileged Access Controls, Utility Program Restrictions
-
----
 
 #### 8.19 Installation of Software on Operational Systems
 
@@ -1120,8 +969,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** IT Operations, Change Management  
 **Nachweis:** Software Installation Procedures, Change Records
 
----
-
 #### 8.20 Networks Security
 
 **Control Statement:** Networks and network devices shall be secured, managed and controlled to protect information in systems and applications.
@@ -1133,8 +980,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** Network Team, {{ meta.ciso.name }}  
 **Nachweis:** Network Security Architecture, Firewall Rules
-
----
 
 #### 8.21 Security of Network Services
 
@@ -1148,8 +993,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Network Team  
 **Nachweis:** Network Service SLAs, Security Monitoring
 
----
-
 #### 8.22 Segregation of Networks
 
 **Control Statement:** Groups of information services, users and information systems shall be segregated in the organization's networks.
@@ -1160,8 +1003,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** Network Team, {{ meta.ciso.name }}  
 **Nachweis:** Network Segmentation Design, VLAN Configuration
-
----
 
 #### 8.23 Web Filtering
 
@@ -1175,8 +1016,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Security Operations, IT Operations  
 **Nachweis:** Web Filtering Solution, Blocked Content Logs
 
----
-
 #### 8.24 Use of Cryptography
 
 **Control Statement:** Rules for the effective use of cryptography, including cryptographic key management, shall be defined and implemented.
@@ -1188,8 +1027,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** {{ meta.ciso.name }}, IT Operations  
 **Nachweis:** Cryptography Policy, Key Management Procedures
-
----
 
 #### 8.25 Secure Development Life Cycle
 
@@ -1203,8 +1040,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Development Team, {{ meta.ciso.name }}  
 **Nachweis:** Secure SDLC Procedures, Code Review Records
 
----
-
 #### 8.26 Application Security Requirements
 
 **Control Statement:** Information security requirements shall be identified, specified and approved when developing or acquiring applications.
@@ -1216,8 +1051,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** Development Team, Security Architecture  
 **Nachweis:** Security Requirements Specifications, Threat Models
-
----
 
 #### 8.27 Secure System Architecture and Engineering Principles
 
@@ -1231,8 +1064,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Security Architecture, Development Team  
 **Nachweis:** Secure Architecture Principles, Design Reviews
 
----
-
 #### 8.28 Secure Coding
 
 **Control Statement:** Secure coding principles shall be applied to software development.
@@ -1244,8 +1075,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Development Team  
 **Nachweis:** Secure Coding Guidelines, SAST/DAST Results
 
----
-
 #### 8.29 Security Testing in Development and Acceptance
 
 **Control Statement:** Security testing processes shall be defined and implemented in the development life cycle.
@@ -1256,8 +1085,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** Development Team, Security Team  
 **Nachweis:** Security Test Plans, Penetration Test Reports
-
----
 
 #### 8.30 Outsourced Development
 
@@ -1271,8 +1098,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Development Team, {{ meta.ciso.name }}  
 **Nachweis:** Supplier Contracts, Development Oversight Records
 
----
-
 #### 8.31 Separation of Development, Test and Production Environments
 
 **Control Statement:** Development, testing and production environments shall be separated and secured.
@@ -1284,8 +1109,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 
 **Verantwortlich:** Development Team, IT Operations  
 **Nachweis:** Environment Separation, Access Controls per Environment
-
----
 
 #### 8.32 Change Management
 
@@ -1299,8 +1122,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Change Management, IT Operations  
 **Nachweis:** Change Management Process, Change Records
 
----
-
 #### 8.33 Test Information
 
 **Control Statement:** Test information shall be appropriately selected, protected and managed.
@@ -1313,8 +1134,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Development Team, Data Protection Officer  
 **Nachweis:** Test Data Management, Data Masking Procedures
 
----
-
 #### 8.34 Protection of Information Systems During Audit Testing
 
 **Control Statement:** Audit tests and other assurance activities involving assessment of operational systems shall be planned and agreed between the tester and appropriate management.
@@ -1326,8 +1145,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Verantwortlich:** Internal Audit, IT Operations  
 **Nachweis:** Audit Plans, Test Approvals, Audit Protocols
 
----
-
 ## Amendment 1:2024 Änderungen
 
 **Hinweis:** ISO/IEC 27001:2022 Amendment 1:2024 führt keine neuen Kontrollen ein, sondern präzisiert bestehende Kontrollen und aktualisiert Referenzen. Die wichtigsten Änderungen betreffen:
@@ -1338,8 +1155,6 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - **8.12 Data Leakage Prevention:** Neue Kontrolle für DLP (bereits in 2022 enthalten)
 
 Alle Änderungen sind in diesem Mapping bereits berücksichtigt.
-
----
 
 ## Zusammenfassung
 
@@ -1355,8 +1170,6 @@ Alle Änderungen sind in diesem Mapping bereits berücksichtigt.
 
 **Implementierungsgrad:** 100%
 
----
-
 ## Verwendung dieses Mappings
 
 Dieses Mapping dient als:
@@ -1368,8 +1181,6 @@ Dieses Mapping dient als:
 
 **Aktualisierung:** Dieses Dokument sollte bei jeder Änderung an Policies, Richtlinien oder Kontrollen aktualisiert werden.
 
----
-
 ## Referenzen
 
 - ISO/IEC 27001:2022 Information Security Management Systems - Requirements
@@ -1377,11 +1188,9 @@ Dieses Mapping dient als:
 - ISO/IEC 27002:2022 Information Security Controls
 - Statement of Applicability (SoA): 0100_ISMS_Statement_of_Applicability_SoA_Template.md
 
----
-
 **Dokumentverantwortlicher:** {{ meta.ciso.name }}  
 **Genehmigt durch:** {{ meta.management.name }}  
-**Nächste Überprüfung:** {{ meta.document.next_review }}
+**Nächste Überprüfung:** {{ meta-handbook.next_review }}
 
 <!-- 
 TEMPLATE AUTHOR NOTE:
@@ -1390,10 +1199,3 @@ Stellen Sie sicher, dass alle Verweise auf andere ISMS-Dokumente korrekt sind.
 Passen Sie den Implementierungsstatus an die tatsächliche Situation Ihrer Organisation an.
 -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

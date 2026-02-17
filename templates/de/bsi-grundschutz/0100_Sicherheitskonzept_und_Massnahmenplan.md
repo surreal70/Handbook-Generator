@@ -1,14 +1,16 @@
 # Sicherheitskonzept und Maßnahmenplan
 
-**Dokument-ID:** 0100  
-**Dokumenttyp:** Plan/Steuerungsdokument  
-**Referenzrahmen:** BSI IT-Grundschutz (BSI Standards 200-1/200-2/200-3)  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** {{ meta.document.status }}  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0100
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -23,7 +25,7 @@ Reference: BSI Standard 200-2 (Security Concept and Measure Planning)
 
 ### 1.1 Sicherheitsziele
 
-**{{ meta.organization.name }}** verfolgt folgende strategische Sicherheitsziele:
+**{{ meta-organisation.name }}** verfolgt folgende strategische Sicherheitsziele:
 
 1. **[TODO: Ziel 1]:** [TODO: Beschreibung]
 2. **[TODO: Ziel 2]:** [TODO: Beschreibung]
@@ -134,7 +136,7 @@ Import all measures from document 0090 (Risk Analysis).
 
 ## 4. Roadmap
 
-### 4.1 Quartal 1 (Q1 {{ meta.document.year }})
+### 4.1 Quartal 1 (Q1 [TODO])
 
 **Fokus:** Kritische Sicherheitslücken schließen
 
@@ -143,7 +145,7 @@ Import all measures from document 0090 (Risk Analysis).
 | M-001 | [TODO] | [TODO] | Geplant |
 | M-101 | [TODO] | [TODO] | Geplant |
 
-### 4.2 Quartal 2 (Q2 {{ meta.document.year }})
+### 4.2 Quartal 2 (Q2 [TODO])
 
 **Fokus:** Quick Wins und Basis-Sicherheit
 
@@ -152,7 +154,7 @@ Import all measures from document 0090 (Risk Analysis).
 | M-002 | [TODO] | [TODO] | Geplant |
 | M-201 | [TODO] | [TODO] | Geplant |
 
-### 4.3 Quartal 3 (Q3 {{ meta.document.year }})
+### 4.3 Quartal 3 (Q3 [TODO])
 
 **Fokus:** Strategische Maßnahmen
 
@@ -161,7 +163,7 @@ Import all measures from document 0090 (Risk Analysis).
 | M-202 | [TODO] | [TODO] | Geplant |
 | M-203 | [TODO] | [TODO] | Geplant |
 
-### 4.4 Quartal 4 (Q4 {{ meta.document.year }})
+### 4.4 Quartal 4 (Q4 [TODO])
 
 **Fokus:** Konsolidierung und Optimierung
 
@@ -252,23 +254,13 @@ Import all measures from document 0090 (Risk Analysis).
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| ISB | {{ meta.ciso.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| IT-Leitung | {{ meta.cio.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| Geschäftsführung | {{ meta.ceo.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| IT-Leitung | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| Geschäftsführung | {{ meta.ceo.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **Referenzen:**
 - BSI Standard 200-2: IT-Grundschutz-Methodik
 - Dokument 0080: Basis-Sicherheitscheck
 - Dokument 0090: Risikoanalyse
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 <!-- End of template -->

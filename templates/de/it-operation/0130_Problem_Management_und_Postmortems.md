@@ -1,12 +1,26 @@
 # Problem Management und Postmortems
 
+**Dokument-ID:** [FRAMEWORK]-0130
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck und Geltungsbereich
 
-Dieses Dokument beschreibt den Problem-Management-Prozess für {{ meta.organization.name }} gemäß ITIL v4 Best Practices. Es definiert die systematische Analyse wiederkehrender Incidents, Root-Cause-Analysis-Methoden, Postmortem-Prozesse und die Verwaltung der Known Error Database.
+Dieses Dokument beschreibt den Problem-Management-Prozess für {{ meta-organisation.name }} gemäß ITIL v4 Best Practices. Es definiert die systematische Analyse wiederkehrender Incidents, Root-Cause-Analysis-Methoden, Postmortem-Prozesse und die Verwaltung der Known Error Database.
 
-**Geltungsbereich:** Alle IT-Services und -Systeme von {{ meta.organization.name }}
+**Geltungsbereich:** Alle IT-Services und -Systeme von {{ meta-organisation.name }}
 
-**Verantwortlich:** {{ meta.it_operations_manager.name }} ({{ meta.it_operations_manager.email }})
+**Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }} ({{ meta-organisation-roles.role_it_operations_manager.email }})
 
 ## Problem-Definition
 
@@ -101,7 +115,7 @@ Ein **Problem** ist die unbekannte Ursache eines oder mehrerer Incidents. Das Zi
 - Betroffene Configuration Items (CIs)
 - Erste Hypothesen zur Ursache
 
-**Tool:** {{ meta.ticketing_system }}
+**Tool:** {{ meta-handbook.ticketing_system }}
 
 **Verantwortlich:** Problem Manager
 
@@ -625,7 +639,7 @@ Ein **Postmortem** ist eine strukturierte Analyse eines Major Incidents oder kri
 - Postmortem-Moderation
 - Reporting
 
-**Person:** {{ meta.it_operations_manager.name }}
+**Person:** {{ meta-organisation-roles.role_it_operations_manager.name }}
 
 ### Technical Specialists
 
@@ -648,19 +662,19 @@ Ein **Postmortem** ist eine strukturierte Analyse eines Major Incidents oder kri
 ## Tools und Systeme
 
 ### Problem-Management-Tool
-- **System:** {{ meta.ticketing_system }}
-- **URL:** {{ meta.ticketing_system_url }}
+- **System:** {{ meta-handbook.ticketing_system }}
+- **URL:** {{ meta-handbook.ticketing_system_url }}
 - **Zugriff:** IT Operations Team
 
 ### Known Error Database
-- **System:** {{ meta.ticketing_system }} (KEDB-Modul)
-- **URL:** {{ meta.kedb_url }}
+- **System:** {{ meta-handbook.ticketing_system }} (KEDB-Modul)
+- **URL:** {{ meta-handbook.kedb_url }}
 - **Zugriff:** Alle IT-Mitarbeiter (Read)
 
 ### RCA-Tools
-- **Collaboration:** {{ meta.collaboration_tool }}
-- **Diagramming:** {{ meta.diagramming_tool }}
-- **Log-Analysis:** {{ meta.log_analysis_tool }}
+- **Collaboration:** {{ meta-handbook.collaboration_tool }}
+- **Diagramming:** {{ meta-handbook.diagramming_tool }}
+- **Log-Analysis:** {{ meta-handbook.log_analysis_tool }}
 
 ## Referenzen
 
@@ -670,18 +684,9 @@ Ein **Postmortem** ist eine strukturierte Analyse eines Major Incidents oder kri
 - Interne Incident-Management-Prozesse
 - Change-Management-Prozesse
 
----
+**Dokumentverantwortlicher:** {{ meta-handbook.owner }}  
+**Genehmigt durch:** {{ meta-handbook.approver }}  
+**Version:** {{ meta-handbook.revision }}  
+**Klassifizierung:** {{ meta-handbook.classification }}  
+**Letzte Aktualisierung:** {{ meta-handbook.date }}
 
-**Dokumentverantwortlicher:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.date }}
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

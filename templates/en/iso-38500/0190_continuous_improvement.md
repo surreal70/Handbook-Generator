@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-38500-0340
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Continuous Improvement
+
+**Document-ID:** [FRAMEWORK]-0190
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -16,7 +28,7 @@ This document describes the continuous improvement process for IT governance.
 ## Scope
 
 This document applies to:
-- {{ meta.organization }}
+- {{ meta-organisation.name }}
 - All IT governance processes
 
 ## Improvement Cycle
@@ -60,20 +72,12 @@ This document applies to:
 
 ## KPIs for Improvement
 
-- Process efficiency: {{ meta.process_efficiency }}%
-- Employee satisfaction: {{ meta.employee_satisfaction }}/10
-- Innovation rate: {{ meta.innovation_rate }}%
-- Improvement suggestions implemented: {{ meta.improvements_implemented }}%
+- Process efficiency: {{ meta-handbook.process_efficiency }}%
+- Employee satisfaction: {{ meta-handbook.employee_satisfaction }}/10
+- Innovation rate: {{ meta-handbook.innovation_rate }}%
+- Improvement suggestions implemented: {{ meta-handbook.improvements_implemented }}%
 
 ## Document References
 
 - 0300_governance_implementation.md
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 

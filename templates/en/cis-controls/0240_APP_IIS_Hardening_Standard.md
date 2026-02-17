@@ -1,14 +1,16 @@
 # APP Hardening Standard: Microsoft IIS
 
-**Document ID:** 0240  
-**Document Type:** Standard/Baseline  
-**Reference Framework:** CIS Controls v8 (Hardening Program; no benchmark texts)  
-**Owner:** [TODO]  
-**Version:** 0.1 (Draft)  
-**Status:** Draft / In Review / Approved  
-**Classification:** Internal / Confidential / Strictly Confidential  
-**Last Updated:** 2026-01-31  
-**Next Review:** [TODO]
+**Document-ID:** [FRAMEWORK]-0240
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -80,17 +82,9 @@
 - Parameter list/example values: [TODO]
 - Checklist: see `0410_Appendix_Checklists_and_Evidence.md`
 
-
 ## 12. IIS-Specific Requirements (Examples)
 - TLS via OS baseline + Schannel policies: [TODO]
 - App pool identity least privilege: [TODO]
 - Remove unnecessary features/roles: [TODO]
 - Request filtering & logging: [TODO]
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

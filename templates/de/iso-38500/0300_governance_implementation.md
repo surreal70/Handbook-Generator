@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-38500-0300
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # IT-Governance-Implementierung
+
+**Dokument-ID:** [FRAMEWORK]-0300
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -16,7 +28,7 @@ Dieses Dokument bietet Leitlinien für die Implementierung der IT-Governance gem
 ## Geltungsbereich
 
 Dieses Dokument gilt für:
-- {{ meta.organization }}
+- {{ meta-organisation.name }}
 - IT-Governance-Implementierung
 - Alle Governance-Stakeholder
 
@@ -377,10 +389,3 @@ Dieses Dokument gilt für:
 - 0330_communication.md
 - 0340_continuous_improvement.md
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |

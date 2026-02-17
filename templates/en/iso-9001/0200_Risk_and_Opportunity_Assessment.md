@@ -1,11 +1,16 @@
 # Actions to Address Risks and Opportunities
 
-**Document-ID:** 0200  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0200
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -36,7 +41,7 @@ This document defines the process for determining and addressing risks and oppor
 
 ### Risk Management Approach
 
-{{ meta.organization }} uses a systematic approach to identify, assess, and treat risks and opportunities related to the QMS.
+{{ meta-organisation.name }} uses a systematic approach to identify, assess, and treat risks and opportunities related to the QMS.
 
 **Risk Management Methodology:** [TODO: e.g., ISO 31000, FMEA, risk matrix]
 
@@ -320,8 +325,6 @@ Personnel receive training on:
 - **Process owners:** Process-specific risk management
 - **Quality team:** Detailed risk management methodology
 
----
-
 **Next Steps:**
 1. Conduct initial risk and opportunity assessment
 2. Establish risk and opportunity registers
@@ -330,10 +333,3 @@ Personnel receive training on:
 5. Implement risk monitoring and review process
 6. Train personnel on risk-based thinking
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

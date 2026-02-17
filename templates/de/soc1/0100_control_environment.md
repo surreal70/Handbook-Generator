@@ -1,13 +1,24 @@
----
+
 Document-ID: soc1-0100
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Kontrollumgebung - Übersicht
+
+**Dokument-ID:** [FRAMEWORK]-0100
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -39,7 +50,7 @@ Die Kontrollumgebung bildet die Grundlage für das gesamte interne Kontrollsyste
 - Umgang mit Interessenkonflikten
 - Whistleblower-Mechanismen
 
-**Dokumentation**: {{ source.integrity_ethics_documentation }}
+**Dokumentation**: [TODO]
 
 ### 2. Aufsicht durch den Vorstand
 
@@ -51,7 +62,7 @@ Die Kontrollumgebung bildet die Grundlage für das gesamte interne Kontrollsyste
 - Aufsichtsfunktionen
 - Ausschüsse (Prüfung, Risiko, Compliance)
 
-**Dokumentation**: {{ source.board_oversight_documentation }}
+**Dokumentation**: [TODO]
 
 ### 3. Organisationsstruktur und Befugnisse
 
@@ -63,7 +74,7 @@ Die Kontrollumgebung bildet die Grundlage für das gesamte interne Kontrollsyste
 - Delegation von Befugnissen
 - Funktionentrennung
 
-**Dokumentation**: {{ source.organizational_structure_documentation }}
+**Dokumentation**: [TODO]
 
 ### 4. Kompetenz und Verantwortlichkeit
 
@@ -76,7 +87,7 @@ Die Kontrollumgebung bildet die Grundlage für das gesamte interne Kontrollsyste
 - Leistungsmanagement
 - Nachfolgeplanung
 
-**Dokumentation**: {{ source.competence_accountability_documentation }}
+**Dokumentation**: [TODO]
 
 ### 5. Personalrichtlinien
 
@@ -89,7 +100,7 @@ Die Kontrollumgebung bildet die Grundlage für das gesamte interne Kontrollsyste
 - Leistungsbewertung
 - Disziplinarmaßnahmen
 
-**Dokumentation**: {{ source.hr_policies_documentation }}
+**Dokumentation**: [TODO]
 
 ## Trust Services Kriterien CC1
 
@@ -98,56 +109,56 @@ Die Kontrollumgebung bildet die Grundlage für das gesamte interne Kontrollsyste
 **Kriterium**: Die Organisation demonstriert ein Engagement für Integrität und ethische Werte.
 
 **Kontrollaktivitäten**:
-{{ source.cc1_1_controls }}
+[TODO]
 
 **Nachweise**:
-{{ source.cc1_1_evidence }}
+[TODO]
 
 ### CC1.2 - COSO-Prinzip 2: Aufsicht durch den Vorstand
 
 **Kriterium**: Der Vorstand demonstriert Unabhängigkeit vom Management und übt Aufsicht über die Entwicklung und Leistung der internen Kontrolle aus.
 
 **Kontrollaktivitäten**:
-{{ source.cc1_2_controls }}
+[TODO]
 
 **Nachweise**:
-{{ source.cc1_2_evidence }}
+[TODO]
 
 ### CC1.3 - COSO-Prinzip 3: Organisationsstruktur
 
 **Kriterium**: Das Management etabliert mit Aufsicht des Vorstands Strukturen, Berichtslinien und angemessene Befugnisse und Verantwortlichkeiten.
 
 **Kontrollaktivitäten**:
-{{ source.cc1_3_controls }}
+[TODO]
 
 **Nachweise**:
-{{ source.cc1_3_evidence }}
+[TODO]
 
 ### CC1.4 - COSO-Prinzip 4: Kompetenz
 
 **Kriterium**: Die Organisation demonstriert ein Engagement für die Gewinnung, Entwicklung und Bindung kompetenter Personen.
 
 **Kontrollaktivitäten**:
-{{ source.cc1_4_controls }}
+[TODO]
 
 **Nachweise**:
-{{ source.cc1_4_evidence }}
+[TODO]
 
 ### CC1.5 - COSO-Prinzip 5: Verantwortlichkeit
 
 **Kriterium**: Die Organisation hält Personen im Hinblick auf ihre internen Kontrollverantwortlichkeiten verantwortlich.
 
 **Kontrollaktivitäten**:
-{{ source.cc1_5_controls }}
+[TODO]
 
 **Nachweise**:
-{{ source.cc1_5_evidence }}
+[TODO]
 
 ## Bewertung der Kontrollumgebung
 
 ### Bewertungsmethodik
 
-**Ansatz**: {{ source.assessment_approach }}
+**Ansatz**: [TODO]
 
 **Bewertungskriterien**:
 1. Design-Effektivität
@@ -156,11 +167,11 @@ Die Kontrollumgebung bildet die Grundlage für das gesamte interne Kontrollsyste
 
 ### Bewertungsergebnisse
 
-**Stärken**: {{ source.control_environment_strengths }}
+**Stärken**: [TODO]
 
-**Verbesserungsbereiche**: {{ source.control_environment_improvements }}
+**Verbesserungsbereiche**: [TODO]
 
-**Maßnahmenplan**: {{ source.control_environment_action_plan }}
+**Maßnahmenplan**: [TODO]
 
 ## Dokumentationsanforderungen
 
@@ -187,21 +198,21 @@ Die Kontrollumgebung bildet die Grundlage für das gesamte interne Kontrollsyste
 
 ### Aufbewahrungsfristen
 
-{{ source.retention_requirements }}
+[TODO]
 
 ## Überwachung und Berichterstattung
 
 ### Überwachungsaktivitäten
 
-**Laufende Überwachung**: {{ source.ongoing_monitoring }}
+**Laufende Überwachung**: [TODO]
 
-**Separate Bewertungen**: {{ source.separate_evaluations }}
+**Separate Bewertungen**: [TODO]
 
-**Berichterstattung**: {{ source.control_environment_reporting }}
+**Berichterstattung**: [TODO]
 
 ### Eskalationsprozess
 
-{{ source.escalation_process }}
+[TODO]
 
 ## Referenzen
 
@@ -212,12 +223,3 @@ Die Kontrollumgebung bildet die Grundlage für das gesamte interne Kontrollsyste
 
 <!-- Hinweise für Autoren: Aktualisieren Sie die Kontrollumgebungsbewertung jährlich -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

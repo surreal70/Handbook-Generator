@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0540
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Schutz von Aufzeichnungen
+
+**Dokument-ID:** [FRAMEWORK]-0540
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -15,7 +26,7 @@ Dieses Dokument beschreibt Maßnahmen zum Schutz von Aufzeichnungen gemäß TISA
 
 ## Geltungsbereich
 
-Dieses Dokument gilt für alle Aufzeichnungen von {{ source.organization_name }}.
+Dieses Dokument gilt für alle Aufzeichnungen von [TODO].
 
 ## Aufzeichnungsarten
 
@@ -131,18 +142,9 @@ Dieses Dokument adressiert:
 
 ## Kennzahlen
 
-{{ source.organization_name }} misst:
+[TODO] misst:
 - Anzahl archivierter Aufzeichnungen
 - Compliance-Rate Aufbewahrungsfristen
 - Anzahl Wiederherstellungen
 - Anzahl ordnungsgemäßer Vernichtungen
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

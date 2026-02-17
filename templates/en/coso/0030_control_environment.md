@@ -1,17 +1,28 @@
----
+
 Document-ID: coso-0030
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Control Environment
 
+**Document-ID:** [FRAMEWORK]-0030
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document describes the control environment of {{ source.organization_name }} as the foundation for all other components of internal control.
+This document describes the control environment of [TODO] as the foundation for all other components of internal control.
 
 ## Scope
 
@@ -26,125 +37,117 @@ The control environment includes:
 
 ### Code of Conduct
 
-**Document**: {{ source.code_of_conduct }}
+**Document**: [TODO]
 
 **Core Values**:
-1. {{ source.core_value_1 }}
-2. {{ source.core_value_2 }}
-3. {{ source.core_value_3 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
 
 ### Ethics Policies
 
-{{ source.ethics_policies }}
+[TODO]
 
 ### Communication and Training
 
-**Training Program**: {{ source.ethics_training }}
-**Frequency**: {{ source.training_frequency }}
+**Training Program**: [TODO]
+**Frequency**: [TODO]
 
 ### Enforcement
 
-{{ source.enforcement_mechanisms }}
+[TODO]
 
 ## Principle 2: Board Independence and Oversight
 
 ### Board Structure
 
-**Composition**: {{ source.board_composition }}
-**Independent Members**: {{ source.independent_members }}
+**Composition**: [TODO]
+**Independent Members**: [TODO]
 
 ### Oversight Functions
 
-**Audit Committee**: {{ source.audit_committee }}
-**Risk Committee**: {{ source.risk_committee }}
-**Compliance Committee**: {{ source.compliance_committee }}
+**Audit Committee**: [TODO]
+**Risk Committee**: [TODO]
+**Compliance Committee**: [TODO]
 
 ### Board Activities
 
-{{ source.board_activities }}
+[TODO]
 
 ## Principle 3: Organizational Structure and Responsibilities
 
 ### Organizational Structure
 
-{{ source.organizational_structure }}
+[TODO]
 
 ### Reporting Lines
 
-{{ source.reporting_lines }}
+[TODO]
 
 ### Responsibilities
 
-**Executive Management**: {{ source.management_responsibilities }}
-**Function Heads**: {{ source.function_head_responsibilities }}
-**Employees**: {{ source.employee_responsibilities }}
+**Executive Management**: [TODO]
+**Function Heads**: [TODO]
+**Employees**: [TODO]
 
 ### Delegation of Authority
 
-{{ source.authority_delegation }}
+[TODO]
 
 ## Principle 4: Competence
 
 ### Competency Requirements
 
-{{ source.competency_requirements }}
+[TODO]
 
 ### Recruitment and Selection
 
-{{ source.recruitment_process }}
+[TODO]
 
 ### Training and Development
 
-**Training Programs**: {{ source.training_programs }}
-**Development Plans**: {{ source.development_plans }}
+**Training Programs**: [TODO]
+**Development Plans**: [TODO]
 
 ### Performance Evaluation
 
-{{ source.performance_evaluation }}
+[TODO]
 
 ## Principle 5: Accountability
 
 ### Accountability Matrix
 
-{{ source.accountability_matrix }}
+[TODO]
 
 ### Performance Measurement
 
-{{ source.performance_measurement }}
+[TODO]
 
 ### Consequences
 
-**For Achievement**: {{ source.achievement_consequences }}
-**For Non-Achievement**: {{ source.non_achievement_consequences }}
+**For Achievement**: [TODO]
+**For Non-Achievement**: [TODO]
 
 ## Tone at the Top
 
 ### Management Philosophy
 
-{{ source.management_philosophy }}
+[TODO]
 
 ### Leadership Style
 
-{{ source.leadership_style }}
+[TODO]
 
 ### Role Modeling
 
-{{ source.role_modeling }}
+[TODO]
 
 ## References
 
 - COSO Internal Control Framework - Control Environment
-- Code of Conduct {{ source.organization_name }}
+- Code of Conduct [TODO]
 - Organizational Handbook
 
 <!-- Author notes: The control environment is the foundation - invest time in its documentation -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

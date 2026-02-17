@@ -1,17 +1,28 @@
----
+
 Document-ID: coso-0100
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Risikobewertung
 
+**Dokument-ID:** [FRAMEWORK]-0100
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt, wie {{ source.organization_name }} Risikobewertungen durchführt, um Risiken für die Zielerreichung zu identifizieren und zu analysieren (COSO Komponente 2).
+Dieses Dokument beschreibt, wie [TODO] Risikobewertungen durchführt, um Risiken für die Zielerreichung zu identifizieren und zu analysieren (COSO Komponente 2).
 
 ## Geltungsbereich
 
@@ -24,7 +35,7 @@ Dieses Dokument beschreibt, wie {{ source.organization_name }} Risikobewertungen
 
 ### Überblick
 
-{{ source.risk_assessment_overview }}
+[TODO]
 
 ### COSO Prinzipien
 
@@ -38,84 +49,84 @@ Diese Komponente behandelt die folgenden COSO Prinzipien:
 
 ### Prozessschritte
 
-1. **Zielsetzung**: {{ source.objective_setting }}
-2. **Risikoidentifikation**: {{ source.risk_identification_process }}
-3. **Risikoanalyse**: {{ source.risk_analysis_process }}
-4. **Risikobewertung**: {{ source.risk_evaluation_process }}
-5. **Risikobehandlung**: {{ source.risk_response_process }}
+1. **Zielsetzung**: [TODO]
+2. **Risikoidentifikation**: [TODO]
+3. **Risikoanalyse**: [TODO]
+4. **Risikobewertung**: [TODO]
+5. **Risikobehandlung**: [TODO]
 
 ### Häufigkeit
 
-**Jährliche Bewertung**: {{ source.annual_assessment }}
-**Kontinuierliche Überwachung**: {{ source.continuous_monitoring }}
-**Anlassbezogene Bewertungen**: {{ source.triggered_assessments }}
+**Jährliche Bewertung**: [TODO]
+**Kontinuierliche Überwachung**: [TODO]
+**Anlassbezogene Bewertungen**: [TODO]
 
 ## Risikokategorien
 
 ### Strategische Risiken
 
-{{ source.strategic_risks }}
+[TODO]
 
 ### Operative Risiken
 
-{{ source.operational_risks }}
+[TODO]
 
 ### Finanzielle Risiken
 
-{{ source.financial_risks }}
+[TODO]
 
 ### Compliance-Risiken
 
-{{ source.compliance_risks }}
+[TODO]
 
 ## Risikoanalysemethodik
 
 ### Wahrscheinlichkeitsbewertung
 
-{{ source.likelihood_criteria }}
+[TODO]
 
 ### Auswirkungsbewertung
 
-{{ source.impact_criteria }}
+[TODO]
 
 ### Risikobewertungsmatrix
 
-{{ source.risk_matrix }}
+[TODO]
 
 ## Risikobehandlungsstrategien
 
 ### Akzeptieren
 
-{{ source.risk_accept }}
+[TODO]
 
 ### Vermeiden
 
-{{ source.risk_avoid }}
+[TODO]
 
 ### Reduzieren
 
-{{ source.risk_reduce }}
+[TODO]
 
 ### Teilen
 
-{{ source.risk_share }}
+[TODO]
 
 ## Rollen und Verantwortlichkeiten
 
-**Vorstand**: {{ source.board_risk_role }}
-**Geschäftsführung**: {{ source.management_risk_role }}
-**Risikoausschuss**: {{ source.risk_committee_role }}
-**Geschäftsbereiche**: {{ source.business_unit_risk_role }}
+**Vorstand**: [TODO]
+**Geschäftsführung**: [TODO]
+**Risikoausschuss**: [TODO]
+**Geschäftsbereiche**: [TODO]
 
 ## Dokumentation
 
 ### Risikoregister
 
-{{ source.risk_register }}
+[TODO]
 
 ### Risikoberichte
 
-{{ source.risk_reports }}
+[TODO]
 
 ## Referenzen
 
@@ -123,12 +134,3 @@ Diese Komponente behandelt die folgenden COSO Prinzipien:
 - Enterprise Risk Management Framework
 - Internes Kontrollsystem
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

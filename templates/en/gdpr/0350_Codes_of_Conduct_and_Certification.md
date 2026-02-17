@@ -1,11 +1,16 @@
 # Codes of Conduct and Certification
 
-**Document-ID:** 0350  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0350
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,7 +30,7 @@ Reference: GDPR Art. 40-41 (Codes of conduct), Art. 42-43 (Certification)
 
 ## Purpose
 
-This document describes {{ meta.organization }}'s participation in codes of conduct and data protection certifications according to Art. 40-43 GDPR. These serve as evidence of compliance and can support accountability.
+This document describes {{ meta-organisation.name }}'s participation in codes of conduct and data protection certifications according to Art. 40-43 GDPR. These serve as evidence of compliance and can support accountability.
 
 ## Codes of Conduct (Art. 40-41)
 
@@ -261,8 +266,6 @@ Data subjects are informed about certification:
 - **Data Protection Impact Assessment (Art. 35):** Certification as measure
 - **Data Transfers (Art. 46):** Certification as safeguard
 
----
-
 **Next Steps:**
 1. Evaluate relevant codes of conduct for your industry
 2. Check available data protection certifications
@@ -270,10 +273,3 @@ Data subjects are informed about certification:
 4. Create a certification plan
 5. Communicate obtained certifications transparently
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

@@ -1,11 +1,16 @@
 # Planning of Changes
 
-**Document-ID:** 0220  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0220
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -253,8 +258,6 @@ This document defines the process for planning changes to the quality management
 |-----------|-------------|-----------|--------------|--------|------------|-----------|
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
----
-
 **Next Steps:**
 1. Establish change management process
 2. Create change request form and approval workflow
@@ -263,10 +266,3 @@ This document defines the process for planning changes to the quality management
 5. Conduct post-implementation reviews
 6. Continuously improve change process
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

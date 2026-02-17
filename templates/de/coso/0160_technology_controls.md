@@ -1,40 +1,42 @@
----
+
 Document-ID: coso-0220
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Technologiekontrollen
 
+**Dokument-ID:** [FRAMEWORK]-0160
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt die Technologiekontrollen von {{ source.organization_name }} (COSO Prinzip 11).
+Dieses Dokument beschreibt die Technologiekontrollen von [TODO] (COSO Prinzip 11).
 
 ## IT-Allgemeinkontrollen
 
-{{ source.itgc_overview }}
+[TODO]
 
 ## Anwendungskontrollen
 
-{{ source.application_controls_detail }}
+[TODO]
 
 ## Cybersecurity-Kontrollen
 
-{{ source.cybersecurity_framework }}
+[TODO]
 
 ## Referenzen
 
 - IT-Kontrollrichtlinie
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

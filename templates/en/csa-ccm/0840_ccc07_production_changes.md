@@ -1,13 +1,24 @@
----
+
 Document-ID: csa-ccm-0840
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # CCC-07: Production Changes
+
+**Document-ID:** [FRAMEWORK]-0840
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## CCM Control
 
@@ -26,7 +37,7 @@ The organization must:
 - [Requirement 2]
 - [Requirement 3]
 
-## Implementation in {{ source.organization_name }}
+## Implementation in [TODO]
 
 ### Current Implementation
 
@@ -113,16 +124,8 @@ The organization must:
 
 | Version | Date | Author | Change |
 |---------|------|--------|--------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial version |
+| 1.0 | [Date] | [Author] | Initial version |
 
 <!-- Note: Customize this control for your organization -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

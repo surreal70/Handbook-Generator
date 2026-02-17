@@ -1,13 +1,24 @@
----
+
 Document-ID: soc1-0450
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Testverfahren
+
+**Dokument-ID:** [FRAMEWORK]-0160
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -25,14 +36,14 @@ Dieses Dokument beschreibt die Testverfahren für die Bewertung der Betriebswirk
 
 ### Testumfang
 
-**Kontrollziele**: {{ source.test_scope_objectives }}
-**Testzeitraum**: {{ source.test_period }}
-**Testfrequenz**: {{ source.test_frequency }}
+**Kontrollziele**: [TODO]
+**Testzeitraum**: [TODO]
+**Testfrequenz**: [TODO]
 
 ### Testverantwortlichkeiten
 
-**Service Auditor**: {{ source.auditor_test_responsibilities }}
-**Serviceorganisation**: {{ source.service_org_test_responsibilities }}
+**Service Auditor**: [TODO]
+**Serviceorganisation**: [TODO]
 
 ## Testmethoden
 
@@ -40,7 +51,7 @@ Dieses Dokument beschreibt die Testverfahren für die Bewertung der Betriebswirk
 
 **Beschreibung**: Prüfung von Aufzeichnungen, Dokumenten oder physischen Vermögenswerten.
 
-**Anwendung**: {{ source.inspection_application }}
+**Anwendung**: [TODO]
 
 **Beispiele**:
 - Prüfung von Genehmigungsdokumenten
@@ -51,7 +62,7 @@ Dieses Dokument beschreibt die Testverfahren für die Bewertung der Betriebswirk
 
 **Beschreibung**: Beobachtung der Ausführung einer Kontrolle durch Mitarbeiter.
 
-**Anwendung**: {{ source.observation_application }}
+**Anwendung**: [TODO]
 
 **Beispiele**:
 - Beobachtung von Zugangskontrollen
@@ -62,7 +73,7 @@ Dieses Dokument beschreibt die Testverfahren für die Bewertung der Betriebswirk
 
 **Beschreibung**: Befragung von Mitarbeitern über die Ausführung von Kontrollen.
 
-**Anwendung**: {{ source.inquiry_application }}
+**Anwendung**: [TODO]
 
 **Beispiele**:
 - Befragung zu Kontrollverfahren
@@ -73,7 +84,7 @@ Dieses Dokument beschreibt die Testverfahren für die Bewertung der Betriebswirk
 
 **Beschreibung**: Unabhängige Ausführung der Kontrolle durch den Prüfer.
 
-**Anwendung**: {{ source.reperformance_application }}
+**Anwendung**: [TODO]
 
 **Beispiele**:
 - Wiederholung von Berechnungen
@@ -84,8 +95,8 @@ Dieses Dokument beschreibt die Testverfahren für die Bewertung der Betriebswirk
 
 ### Stichprobenmethoden
 
-**Statistische Stichproben**: {{ source.statistical_sampling }}
-**Nicht-statistische Stichproben**: {{ source.non_statistical_sampling }}
+**Statistische Stichproben**: [TODO]
+**Nicht-statistische Stichproben**: [TODO]
 
 ### Stichprobenumfang
 
@@ -96,11 +107,11 @@ Dieses Dokument beschreibt die Testverfahren für die Bewertung der Betriebswirk
 - Automatisierungsgrad
 
 **Stichprobengrößen**:
-{{ source.sample_sizes }}
+[TODO]
 
 ### Stichprobenauswahl
 
-{{ source.sample_selection }}
+[TODO]
 
 ## Testdokumentation
 
@@ -114,48 +125,48 @@ Dieses Dokument beschreibt die Testverfahren für die Bewertung der Betriebswirk
 - Abweichungen
 - Schlussfolgerungen
 
-**Vorlage**: {{ source.test_worksheet_template }}
+**Vorlage**: [TODO]
 
 ### Nachweisdokumentation
 
-{{ source.evidence_documentation }}
+[TODO]
 
 ### Aufbewahrung
 
-{{ source.test_documentation_retention }}
+[TODO]
 
 ## Testergebnisse
 
 ### Bewertung der Ergebnisse
 
-**Erfolgskriterien**: {{ source.test_success_criteria }}
-**Abweichungsbewertung**: {{ source.deviation_assessment }}
+**Erfolgskriterien**: [TODO]
+**Abweichungsbewertung**: [TODO]
 
 ### Klassifizierung von Abweichungen
 
 **Keine Abweichung**: Kontrolle funktioniert wie entworfen
-**Geringfügige Abweichung**: {{ source.minor_deviation }}
-**Wesentliche Abweichung**: {{ source.material_deviation }}
+**Geringfügige Abweichung**: [TODO]
+**Wesentliche Abweichung**: [TODO]
 
 ### Testergebnismatrix
 
 | Kontrolle | Testverfahren | Stichprobe | Ergebnis | Abweichungen | Bewertung |
 |-----------|---------------|------------|----------|--------------|-----------|
-| {{ source.test_results_matrix_rows }} |
+| [TODO] |
 
 ## Ausnahmebehandlung
 
 ### Identifikation von Ausnahmen
 
-{{ source.exception_identification }}
+[TODO]
 
 ### Untersuchung von Ausnahmen
 
-{{ source.exception_investigation }}
+[TODO]
 
 ### Dokumentation von Ausnahmen
 
-{{ source.exception_documentation }}
+[TODO]
 
 ## Berichterstattung
 
@@ -170,21 +181,21 @@ Dieses Dokument beschreibt die Testverfahren für die Bewertung der Betriebswirk
 
 ### Kommunikation mit Management
 
-{{ source.test_results_communication }}
+[TODO]
 
 ### Kommunikation mit Service Auditor
 
-{{ source.auditor_test_communication }}
+[TODO]
 
 ## Qualitätssicherung
 
 ### Review-Prozess
 
-{{ source.test_quality_review }}
+[TODO]
 
 ### Unabhängige Überprüfung
 
-{{ source.independent_test_review }}
+[TODO]
 
 ## Referenzen
 
@@ -194,12 +205,3 @@ Dieses Dokument beschreibt die Testverfahren für die Bewertung der Betriebswirk
 
 <!-- Hinweise für Autoren: Dokumentieren Sie alle Testverfahren detailliert und nachvollziehbar -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

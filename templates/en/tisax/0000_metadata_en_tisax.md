@@ -1,25 +1,34 @@
+# TISAX Handbook - Metadata
+
+**Document-ID:** 0000  
+**Date:** 2026-02-17  
+**Owner:** [TODO]  
+**Revision:** 0  
+**Status:** Draft  
+**Classification:** Internal  
+**Last Updated:** 2026-02-17  
+**Template-Version:** 1.0  
+
 ---
-title: "TISAX Handbook"
-author: "{{ source.author }}"
-version: "1.0"
-date: "{{ source.date }}"
-organization: "{{ source.organization_name }}"
-classification: "Internal"
+
+## Handbook Information
+
+**Handbook Title:** TISAX Handbook  
+**Handbook Short:** TISAX  
+**Organisation:** [TODO]  
+**Author:** [TODO]  
+**Scope:** [TODO]  
+**Valid from:** [TODO]  
+**Next Review:** [TODO]  
+
 ---
 
-# Metadata
+## Document Purpose
 
-This file contains metadata for the TISAX handbook.
+This document contains the metadata for the TISAX handbook.
 
-## Document Information
+## Change History
 
-- **Title**: TISAX Handbook
-- **Author**: {{ source.author }}
-- **Version**: 1.0
-- **Date**: {{ source.date }}
-- **Organization**: {{ source.organization_name }}
-- **Classification**: Internal
-
-## About TISAX
-
-TISAX (Trusted Information Security Assessment Exchange) is an information security assessment standard for the automotive industry based on the VDA ISA catalog. This handbook documents the organization's information security practices according to TISAX requirements.
+| Version | Date | Author | Change |
+|---------|------|--------|--------|
+| 0 | 2026-02-17 | [TODO] | Initial version |

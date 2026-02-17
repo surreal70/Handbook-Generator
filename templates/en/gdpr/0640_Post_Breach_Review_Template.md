@@ -1,11 +1,16 @@
 # Post-Breach Review Template
 
-**Document-ID:** 0640  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Template  
-**Classification:** Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0640
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -37,8 +42,6 @@ Reference: Best practice for incident management
 | [TODO] | [TODO] | [TODO] |
 | [TODO] | [TODO] | [TODO] |
 
----
-
 ## 1. Incident Summary
 
 **Brief Description:**  
@@ -55,8 +58,6 @@ Reference: Best practice for incident management
 - Data Categories: [TODO]
 - Risk Level: [TODO: Low/Medium/High]
 
----
-
 ## 2. Timeline Analysis
 
 | Time | Event | Responsible | Duration to Next Step |
@@ -72,8 +73,6 @@ Reference: Best practice for incident management
 
 **Analysis:**  
 [TODO: Were response times appropriate? Where were delays?]
-
----
 
 ## 3. What Went Well? (Positives)
 
@@ -100,8 +99,6 @@ Reference: Best practice for incident management
 **Positive Aspects:**
 - [TODO: e.g., Complete documentation]
 - [TODO: e.g., Breach register up to date]
-
----
 
 ## 4. What Went Poorly? (Areas for Improvement)
 
@@ -141,8 +138,6 @@ Reference: Best practice for incident management
 **Causes:**
 - [TODO: Why did these problems occur?]
 
----
-
 ## 5. Root Cause Analysis
 
 **Primary Cause:**  
@@ -170,8 +165,6 @@ Reference: Best practice for incident management
 5. Why [Answer from 4]?  
    [TODO: Root Cause]
 
----
-
 ## 6. Lessons Learned
 
 ### 6.1 Technical Insights
@@ -193,8 +186,6 @@ Reference: Best practice for incident management
 
 - [TODO: e.g., Templates need improvement]
 - [TODO: e.g., Optimize communication channels]
-
----
 
 ## 7. Improvement Measures
 
@@ -218,8 +209,6 @@ Reference: Best practice for incident management
 |---------|-------------|----------|----------|--------|
 | [TODO: e.g., Implement new tools] | [TODO] | [TODO: YYYY-MM-DD] | Low | [ ] Open |
 | [TODO: e.g., Adjust organizational structure] | [TODO] | [TODO: YYYY-MM-DD] | Low | [ ] Open |
-
----
 
 ## 8. Cost-Benefit Analysis
 
@@ -245,8 +234,6 @@ Reference: Best practice for incident management
 
 [TODO: Describe expected benefits of measures, e.g., risk reduction, faster response times]
 
----
-
 ## 9. Response Plan Adjustments
 
 **Required Changes to Response Plan:**
@@ -256,8 +243,6 @@ Reference: Best practice for incident management
 | [TODO: e.g., Contacts] | [TODO: e.g., Add new contacts] | [TODO] |
 | [TODO: e.g., Escalation] | [TODO: e.g., Adjust thresholds] | [TODO] |
 
----
-
 ## 10. Training and Awareness Needs
 
 **Identified Training Needs:**
@@ -266,8 +251,6 @@ Reference: Best practice for incident management
 |--------------|-------|--------|-----------|
 | [TODO: e.g., IT Team] | [TODO: e.g., Incident Response] | [TODO: Workshop] | [TODO: Q2 2024] |
 | [TODO: e.g., All Staff] | [TODO: e.g., Data Breach Awareness] | [TODO: E-Learning] | [TODO: Q2 2024] |
-
----
 
 ## 11. Follow-up and Monitoring
 
@@ -279,8 +262,6 @@ Reference: Best practice for incident management
 | Monthly review meeting | [TODO] | [TODO: Every 1st Monday] |
 | Progress report to management | [TODO] | [TODO: YYYY-MM-DD] |
 | Follow-up review (3 months) | [TODO] | [TODO: YYYY-MM-DD] |
-
----
 
 ## 12. Closure and Approval
 
@@ -295,18 +276,9 @@ Reference: Best practice for incident management
 | Data Protection Officer | [TODO] | [TODO] | _____________ |
 | Management | [TODO] | [TODO] | _____________ |
 
----
-
 **Appendices:**
 - [ ] Detailed timeline
 - [ ] Technical report
 - [ ] Communication materials
 - [ ] Action plan (detailed)
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

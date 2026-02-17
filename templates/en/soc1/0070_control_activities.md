@@ -1,13 +1,24 @@
----
+
 Document-ID: soc1-0300
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Control Activities
+
+**Document-ID:** [FRAMEWORK]-0070
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -29,61 +40,61 @@ Control activities are the policies and procedures that help ensure management d
 
 ### Input Controls
 
-**Completeness**: {{ source.input_completeness_controls }}
-**Accuracy**: {{ source.input_accuracy_controls }}
-**Validity**: {{ source.input_validity_controls }}
+**Completeness**: [TODO]
+**Accuracy**: [TODO]
+**Validity**: [TODO]
 
 ### Processing Controls
 
-**Calculation Controls**: {{ source.processing_calculation_controls }}
-**Logic Controls**: {{ source.processing_logic_controls }}
-**Error Handling**: {{ source.processing_error_handling }}
+**Calculation Controls**: [TODO]
+**Logic Controls**: [TODO]
+**Error Handling**: [TODO]
 
 ### Output Controls
 
-**Completeness**: {{ source.output_completeness_controls }}
-**Accuracy**: {{ source.output_accuracy_controls }}
-**Distribution**: {{ source.output_distribution_controls }}
+**Completeness**: [TODO]
+**Accuracy**: [TODO]
+**Distribution**: [TODO]
 
 ## IT General Controls
 
 ### Access Controls
 
-**User Authentication**: {{ source.user_authentication }}
-**User Authorization**: {{ source.user_authorization }}
-**Privileged Access Management**: {{ source.privileged_access_management }}
+**User Authentication**: [TODO]
+**User Authorization**: [TODO]
+**Privileged Access Management**: [TODO]
 
 ### Change Management
 
-**Change Control Process**: {{ source.change_control_process }}
-**Testing Requirements**: {{ source.change_testing }}
-**Approval Process**: {{ source.change_approval }}
+**Change Control Process**: [TODO]
+**Testing Requirements**: [TODO]
+**Approval Process**: [TODO]
 
 ### Backup and Recovery
 
-**Backup Procedures**: {{ source.backup_procedures }}
-**Recovery Testing**: {{ source.recovery_testing }}
-**Retention**: {{ source.backup_retention }}
+**Backup Procedures**: [TODO]
+**Recovery Testing**: [TODO]
+**Retention**: [TODO]
 
 ### System Monitoring
 
-**Performance Monitoring**: {{ source.performance_monitoring }}
-**Security Monitoring**: {{ source.security_monitoring }}
-**Incident Management**: {{ source.incident_management }}
+**Performance Monitoring**: [TODO]
+**Security Monitoring**: [TODO]
+**Incident Management**: [TODO]
 
 ## Segregation of Duties
 
 ### Critical Segregations
 
-{{ source.critical_segregations }}
+[TODO]
 
 ### Compensating Controls
 
-{{ source.compensating_controls }}
+[TODO]
 
 ### Conflict Monitoring
 
-{{ source.conflict_monitoring }}
+[TODO]
 
 ## Authorization Controls
 
@@ -91,41 +102,41 @@ Control activities are the policies and procedures that help ensure management d
 
 | Transaction | Initiator | Approver | Limit |
 |-------------|-----------|----------|-------|
-| {{ source.authorization_matrix_rows }} |
+| [TODO] |
 
 ### Approval Procedures
 
-{{ source.approval_procedures }}
+[TODO]
 
 ### Escalation
 
-{{ source.authorization_escalation }}
+[TODO]
 
 ## Reconciliation Controls
 
 ### Account Reconciliations
 
-**Frequency**: {{ source.reconciliation_frequency }}
-**Responsibilities**: {{ source.reconciliation_responsibilities }}
-**Review**: {{ source.reconciliation_review }}
+**Frequency**: [TODO]
+**Responsibilities**: [TODO]
+**Review**: [TODO]
 
 ### Reconciliation Procedures
 
-{{ source.reconciliation_procedures }}
+[TODO]
 
 ### Variance Handling
 
-{{ source.reconciliation_variance_handling }}
+[TODO]
 
 ## Physical Controls
 
 ### Access Controls
 
-{{ source.physical_access_controls }}
+[TODO]
 
 ### Asset Protection
 
-{{ source.asset_protection }}
+[TODO]
 
 ## References
 
@@ -133,13 +144,5 @@ Control activities are the policies and procedures that help ensure management d
 - Control Activities Manual
 
 <!-- Author notes: Document all control activities in detail -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

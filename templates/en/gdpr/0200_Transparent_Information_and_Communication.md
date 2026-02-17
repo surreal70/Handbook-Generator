@@ -1,11 +1,16 @@
 # Transparent Information and Communication
 
-**Document-ID:** 0200  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0200
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -23,7 +28,7 @@ Reference: GDPR Art. 12 (Transparent information, communication and modalities f
 
 ## Purpose
 
-This document describes the implementation of requirements for transparent information and communication in {{ meta.organization }}. Data subjects must be able to exercise their rights easily and comprehensibly.
+This document describes the implementation of requirements for transparent information and communication in {{ meta-organisation.name }}. Data subjects must be able to exercise their rights easily and comprehensibly.
 
 ## Principle according to Art. 12 GDPR
 
@@ -242,8 +247,6 @@ The controller must:
 | Missing Identification | No identity verification | Establish identification process |
 | Charged Access | Fee without justification | Observe principle of no cost |
 
----
-
 **Next Steps:**
 1. Establish communication channels for data subject requests
 2. Implement processing procedures with deadline control
@@ -251,10 +254,3 @@ The controller must:
 4. Train employees on data subject rights
 5. Document all requests in request register
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

@@ -1,21 +1,32 @@
----
+
 Document-ID: tisax-0040
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Risikomanagement
 
+**Dokument-ID:** [FRAMEWORK]-0040
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt den Risikomanagementprozess für Informationssicherheit bei {{ source.organization_name }}.
+Dieses Dokument beschreibt den Risikomanagementprozess für Informationssicherheit bei [TODO].
 
 ## Geltungsbereich
 
-Dieser Prozess gilt für alle Informationssicherheitsrisiken innerhalb von {{ source.organization_name }}.
+Dieser Prozess gilt für alle Informationssicherheitsrisiken innerhalb von [TODO].
 
 ## Risikomanagementprozess
 
@@ -27,7 +38,7 @@ Dieser Prozess gilt für alle Informationssicherheitsrisiken innerhalb von {{ so
 - Schwachstellenanalyse
 - Szenarioanalyse
 
-**Häufigkeit**: {{ source.risk_assessment_frequency }}
+**Häufigkeit**: [TODO]
 
 ### Risikobewertung
 
@@ -64,13 +75,13 @@ Auswirkung
 ### Risikoakzeptanz
 
 **Akzeptanzkriterien**:
-- Restrisiko unter {{ source.risk_acceptance_threshold }}
-- Genehmigung durch {{ source.risk_acceptance_authority }}
+- Restrisiko unter [TODO]
+- Genehmigung durch [TODO]
 - Dokumentation der Begründung
 
 ## Risikoregister
 
-{{ source.organization_name }} führt ein Risikoregister mit folgenden Informationen:
+[TODO] führt ein Risikoregister mit folgenden Informationen:
 
 - Risiko-ID
 - Beschreibung
@@ -88,18 +99,9 @@ Auswirkung
 
 **Aktivitäten**:
 - Kontinuierliche Risikoüberwachung
-- Regelmäßige Risikoüberprüfung: {{ source.risk_review_frequency }}
+- Regelmäßige Risikoüberprüfung: [TODO]
 - Aktualisierung bei wesentlichen Änderungen
 - Berichterstattung an das Management
 
 <!-- Hinweis: Passen Sie die Risikobewertungskriterien an Ihre Organisation an -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

@@ -1,17 +1,28 @@
----
+
 Document-ID: togaf-0030
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Architecture Governance Framework
 
+**Dokument-ID:** [FRAMEWORK]-0030
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument definiert das Architecture Governance Framework für {{ source.organization_name }}. Es etabliert die Prozesse, Rollen und Mechanismen zur Sicherstellung der Architecture-Compliance und zum Management von Architecture-Entscheidungen.
+Dieses Dokument definiert das Architecture Governance Framework für [TODO]. Es etabliert die Prozesse, Rollen und Mechanismen zur Sicherstellung der Architecture-Compliance und zum Management von Architecture-Entscheidungen.
 
 ## Geltungsbereich
 
@@ -27,16 +38,16 @@ Dieses Dokument umfasst:
 ### Architecture Governance Organisation
 
 ```
-{{ source.governance_org_chart }}
+[TODO]
 ```
 
 ### Wichtige Governance-Gremien
 
 | Gremium | Zweck | Mitglieder | Sitzungsfrequenz |
 |---------|-------|------------|------------------|
-| Architecture Board | Strategische Architecture-Entscheidungen | {{ source.arch_board_members }} | {{ source.arch_board_frequency }} |
-| Architecture Review Board | Technische Architecture-Reviews | {{ source.review_board_members }} | {{ source.review_board_frequency }} |
-| Change Advisory Board | Genehmigung von Architecture-Änderungen | {{ source.cab_members }} | {{ source.cab_frequency }} |
+| Architecture Board | Strategische Architecture-Entscheidungen | [TODO] | [TODO] |
+| Architecture Review Board | Technische Architecture-Reviews | [TODO] | [TODO] |
+| Change Advisory Board | Genehmigung von Architecture-Änderungen | [TODO] | [TODO] |
 
 ## Rollen und Verantwortlichkeiten
 
@@ -62,10 +73,10 @@ Dieses Dokument umfasst:
 - Erstellung von Architecture-Artefakten
 
 **Domänen**:
-- Business Architecture: {{ source.business_architect }}
-- Data Architecture: {{ source.data_architect }}
-- Application Architecture: {{ source.application_architect }}
-- Technology Architecture: {{ source.technology_architect }}
+- Business Architecture: [TODO]
+- Data Architecture: [TODO]
+- Application Architecture: [TODO]
+- Technology Architecture: [TODO]
 
 ### Architecture Review Board
 
@@ -90,10 +101,10 @@ Alle wesentlichen Architecture-Entscheidungen werden mit ADRs dokumentiert:
 
 | Entscheidungstyp | Befugnis | Eskalationspfad |
 |-----------------|----------|-----------------|
-| Architecture-Prinzipien | Architecture Board | {{ source.principles_escalation }} |
+| Architecture-Prinzipien | Architecture Board | [TODO] |
 | Technologie-Standards | Chief Architect | Architecture Board |
 | Projekt-Architecture | Domain Architect | Chief Architect |
-| Architecture-Ausnahmen | Architecture Board | {{ source.exception_escalation }} |
+| Architecture-Ausnahmen | Architecture Board | [TODO] |
 
 ## Compliance-Management
 
@@ -166,9 +177,9 @@ Jede Ausnahme muss dokumentieren:
 
 | Metrik | Ziel | Aktuell | Trend |
 |--------|------|---------|-------|
-| Architecture Compliance Rate | {{ source.compliance_target }} | {{ source.compliance_current }} | {{ source.compliance_trend }} |
-| Ausnahmenrate | {{ source.exception_target }} | {{ source.exception_current }} | {{ source.exception_trend }} |
-| Review-Zykluszeit | {{ source.review_time_target }} | {{ source.review_time_current }} | {{ source.review_time_trend }} |
+| Architecture Compliance Rate | [TODO] | [TODO] | [TODO] |
+| Ausnahmenrate | [TODO] | [TODO] | [TODO] |
+| Review-Zykluszeit | [TODO] | [TODO] | [TODO] |
 
 ## Kontinuierliche Verbesserung
 
@@ -180,12 +191,3 @@ Das Governance Framework wird überprüft und aktualisiert:
 
 <!-- Autorenhinweise: Passen Sie das Governance Framework an die Kultur und den Entscheidungsstil Ihrer Organisation an -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|------|--------|---------|
-| 0.1 | {{meta.document.last_updated}} | {{ meta.defaults.author }} | Initiale Erstellung |
-
-<-  ( marked all subtasks complete End of template -->

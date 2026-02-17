@@ -1,5 +1,19 @@
 # Policy: Mobile Device und Remote Work
 
+**Dokument-ID:** 0500
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This policy establishes the principles for mobile device management and remote work security.
@@ -9,27 +23,15 @@ security requirements. Customize based on your organization's BYOD policy and re
 ISO 27001:2022 Annex A Reference: A.6.7, A.6.8, A.8.9
 -->
 
-**Dokument-ID:** 0500  
-**Dokumenttyp:** Policy (abstrakt)  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.6.7, A.6.8, A.8.9 (inkl. Amendment 1:2024)  
-**Owner:** {{ meta.ciso.name }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
-
----
-
 ## 1. Zweck
 
-Diese Policy definiert die Grundsätze für Mobile Device Management und Remote Work der **{{ meta.organization.name }}**. Sie stellt sicher, dass mobile Geräte und Remote-Zugriffe sicher verwaltet werden und den Sicherheitsanforderungen der Organisation entsprechen.
+Diese Policy definiert die Grundsätze für Mobile Device Management und Remote Work der **{{ meta-organisation.name }}**. Sie stellt sicher, dass mobile Geräte und Remote-Zugriffe sicher verwaltet werden und den Sicherheitsanforderungen der Organisation entsprechen.
 
 ## 2. Geltungsbereich
 
 Diese Policy gilt für:
 
-- **Organisationseinheiten:** Alle Abteilungen und Standorte der {{ meta.organization.name }}
+- **Organisationseinheiten:** Alle Abteilungen und Standorte der {{ meta-organisation.name }}
 - **Geräte:** Laptops, Smartphones, Tablets, Wearables (unternehmenseigen und BYOD)
 - **Zugriffsmethoden:** VPN, Remote Desktop, Cloud-Services, Mobile Apps
 - **Personen:** Alle Mitarbeiter, Auftragnehmer mit Remote-Zugriff
@@ -171,18 +173,9 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **NIST SP 800-46** - Guide to Enterprise Telework, Remote Access, and BYOD Security
 - **DSGVO (EU 2016/679)** - Datenschutz bei BYOD und Remote Work
 
----
-
 **Genehmigt durch:**  
 {{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+Datum: {{ meta-handbook.modifydate }}
 
-**Nächster Review:** {{ meta.document.next_review }} (jährlich oder anlassbezogen)
+**Nächster Review:** {{ meta-handbook.next_review }} (jährlich oder anlassbezogen)
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

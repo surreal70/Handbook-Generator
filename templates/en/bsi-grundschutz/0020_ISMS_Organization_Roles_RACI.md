@@ -1,14 +1,16 @@
 # ISMS Organization, Roles and Responsibilities
 
-**Document ID:** 0020  
-**Document Type:** Foundation Document  
-**Reference Framework:** BSI IT-Grundschutz (BSI Standards 200-1/200-2/200-3)  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** {{ meta.document.status }}  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.document.last_updated }}  
-**Next Review:** {{ meta.document.next_review }}
+**Document-ID:** [FRAMEWORK]-0020
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -249,21 +251,11 @@ I = Informed (Informed)
 
 This organizational structure is reviewed and updated at least annually or in case of significant changes.
 
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Next Review:** {{ meta-handbook.next_review }}
 
 **References:**
 - BSI Standard 200-1: Management Systems for Information Security (ISMS)
 - BSI Standard 200-2: IT-Grundschutz Methodology
 - BSI IT-Grundschutz Compendium
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
 
 <!-- End of template -->

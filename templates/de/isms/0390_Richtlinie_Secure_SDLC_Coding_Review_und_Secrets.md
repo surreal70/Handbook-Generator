@@ -1,14 +1,16 @@
 # Richtlinie: Secure SDLC, Code Reviews und Secrets Management
 
-**Dokument-ID:** 0390  
-**Dokumenttyp:** Richtlinie (detailliert)  
-**Zugehörige Policy:** 0380_Policy_Secure_Development.md  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.8.25, A.8.26  
-**Owner:** {{ meta.development.manager }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}
+**Dokument-ID:** 0390
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -19,7 +21,7 @@ Diese Richtlinie konkretisiert die `0380_Policy_Secure_Development.md` und defin
 - Code-Review-Prozesse und Security-Checks
 - Secrets Management und sichere Konfiguration
 
-**Geltungsbereich:** Alle Softwareentwicklung bei **{{ meta.organization.name }}**
+**Geltungsbereich:** Alle Softwareentwicklung bei **{{ meta-organisation.name }}**
 
 ## 2. Secure SDLC Phasen
 
@@ -280,15 +282,6 @@ Diese Richtlinie konkretisiert die `0380_Policy_Secure_Development.md` und defin
 - **OWASP ASVS** - Application Security Verification Standard
 - **NIST SP 800-218** - Secure Software Development Framework
 
----
-
 **Genehmigt durch:** {{ meta.ciso.name }}, CISO  
-**Nächster Review:** {{ meta.document.next_review }}
+**Nächster Review:** {{ meta-handbook.next_review }}
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

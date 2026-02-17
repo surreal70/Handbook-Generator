@@ -1,11 +1,16 @@
 # Datenminimierung
 
-**Dokument-ID:** 0120  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0120
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -23,7 +28,7 @@ Referenz: DSGVO Art. 5 Abs. 1 lit. c (Datenminimierung)
 
 ## Zweck
 
-Dieses Dokument beschreibt die Umsetzung des Grundsatzes der Datenminimierung in der {{ meta.organization }}. Es dürfen nur die personenbezogenen Daten erhoben werden, die für den jeweiligen Zweck tatsächlich erforderlich sind.
+Dieses Dokument beschreibt die Umsetzung des Grundsatzes der Datenminimierung in der {{ meta-organisation.name }}. Es dürfen nur die personenbezogenen Daten erhoben werden, die für den jeweiligen Zweck tatsächlich erforderlich sind.
 
 ## Grundsatz gemäß Art. 5 Abs. 1 lit. c DSGVO
 
@@ -209,8 +214,6 @@ Personenbezogene Daten müssen dem Zweck angemessen und erheblich sowie auf das 
 | Vorratsdatenspeicherung | Daten ohne konkreten Zweck | Zweckbindung beachten |
 | Keine Anonymisierung | Klardaten wo nicht nötig | Anonymisierung prüfen |
 
----
-
 **Nächste Schritte:**
 1. Führen Sie Erforderlichkeitsprüfung für alle Datenerhebungen durch
 2. Optimieren Sie Formulare und reduzieren Sie Datenfelder
@@ -218,10 +221,3 @@ Personenbezogene Daten müssen dem Zweck angemessen und erheblich sowie auf das 
 4. Schulen Sie Mitarbeiter zu Datenminimierung
 5. Etablieren Sie regelmäßige Datenbestandsprüfungen
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

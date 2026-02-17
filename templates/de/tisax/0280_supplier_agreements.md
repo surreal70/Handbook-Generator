@@ -1,17 +1,28 @@
----
+
 Document-ID: tisax-0410
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Lieferantenvereinbarungen
 
+**Dokument-ID:** [FRAMEWORK]-0280
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt die Sicherheitsvereinbarungen mit Lieferanten bei {{ source.organization_name }}.
+Dieses Dokument beschreibt die Sicherheitsvereinbarungen mit Lieferanten bei [TODO].
 
 ## Vertragsbestandteile
 
@@ -28,9 +39,9 @@ Dieses Dokument beschreibt die Sicherheitsvereinbarungen mit Lieferanten bei {{ 
 
 ## Standardverträge
 
-**NDA-Vorlage**: {{ source.nda_template }}
-**DPA-Vorlage**: {{ source.dpa_template }}
-**SLA-Vorlage**: {{ source.sla_template }}
+**NDA-Vorlage**: [TODO]
+**DPA-Vorlage**: [TODO]
+**SLA-Vorlage**: [TODO]
 
 ## Vertragsmanagement
 
@@ -40,12 +51,3 @@ Dieses Dokument beschreibt die Sicherheitsvereinbarungen mit Lieferanten bei {{ 
 
 <!-- Hinweis: Verwenden Sie Standardverträge -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

@@ -1,13 +1,24 @@
----
+
 Document-ID: soc1-0030
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Systembeschreibung
+
+**Dokument-ID:** [FRAMEWORK]-0030
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -25,26 +36,26 @@ Dieses Dokument umfasst:
 
 ### Überblick
 
-{{ source.system_architecture_overview }}
+[TODO]
 
 ### Systemkomponenten
 
 **Frontend-Systeme**:
-{{ source.frontend_systems }}
+[TODO]
 
 **Backend-Systeme**:
-{{ source.backend_systems }}
+[TODO]
 
 **Datenbanksysteme**:
-{{ source.database_systems_detail }}
+[TODO]
 
 **Integrationssysteme**:
-{{ source.integration_systems }}
+[TODO]
 
 ### Systemdiagramm
 
 ```
-{{ source.system_diagram }}
+[TODO]
 ```
 
 ## Datenflüsse
@@ -52,111 +63,111 @@ Dieses Dokument umfasst:
 ### Eingangsdaten
 
 **Datenquellen**:
-{{ source.data_sources }}
+[TODO]
 
 **Eingabemethoden**:
-{{ source.input_methods }}
+[TODO]
 
 **Datenvalidierung**:
-{{ source.data_validation }}
+[TODO]
 
 ### Datenverarbeitung
 
 **Verarbeitungsschritte**:
-1. {{ source.processing_step_1 }}
-2. {{ source.processing_step_2 }}
-3. {{ source.processing_step_3 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
 
 **Geschäftsregeln**:
-{{ source.business_rules }}
+[TODO]
 
 ### Ausgangsdaten
 
 **Berichte und Outputs**:
-{{ source.reports_outputs }}
+[TODO]
 
 **Datenübertragung**:
-{{ source.data_transmission }}
+[TODO]
 
 ## Schnittstellen
 
 ### Externe Schnittstellen
 
 **Nutzerorganisationen**:
-{{ source.user_org_interfaces }}
+[TODO]
 
 **Drittanbieter**:
-{{ source.third_party_interfaces }}
+[TODO]
 
 **Regulierungsbehörden**:
-{{ source.regulatory_interfaces }}
+[TODO]
 
 ### Interne Schnittstellen
 
-{{ source.internal_interfaces }}
+[TODO]
 
 ### Schnittstellenkontrollen
 
-{{ source.interface_controls }}
+[TODO]
 
 ## Sicherheitsarchitektur
 
 ### Netzwerksicherheit
 
-**Firewalls**: {{ source.firewall_config }}
-**Segmentierung**: {{ source.network_segmentation }}
-**Intrusion Detection**: {{ source.ids_ips }}
+**Firewalls**: [TODO]
+**Segmentierung**: [TODO]
+**Intrusion Detection**: [TODO]
 
 ### Zugriffskontrolle
 
-**Authentifizierung**: {{ source.authentication_methods }}
-**Autorisierung**: {{ source.authorization_model }}
-**Privileged Access**: {{ source.privileged_access }}
+**Authentifizierung**: [TODO]
+**Autorisierung**: [TODO]
+**Privileged Access**: [TODO]
 
 ### Datensicherheit
 
-**Verschlüsselung in Transit**: {{ source.encryption_transit }}
-**Verschlüsselung at Rest**: {{ source.encryption_rest }}
-**Datenmaskierung**: {{ source.data_masking }}
+**Verschlüsselung in Transit**: [TODO]
+**Verschlüsselung at Rest**: [TODO]
+**Datenmaskierung**: [TODO]
 
 ## Systemgrenzen
 
 ### Im Geltungsbereich
 
-{{ source.in_scope_components }}
+[TODO]
 
 ### Außerhalb des Geltungsbereichs
 
-{{ source.out_of_scope_components }}
+[TODO]
 
 ### Schnittstellen zu Subservice-Organisationen
 
-{{ source.subservice_interfaces }}
+[TODO]
 
 ## Systemverfügbarkeit
 
 ### Verfügbarkeitsanforderungen
 
-**SLA-Ziele**: {{ source.availability_sla }}
-**Betriebszeiten**: {{ source.system_uptime }}
+**SLA-Ziele**: [TODO]
+**Betriebszeiten**: [TODO]
 
 ### Redundanz und Failover
 
-{{ source.redundancy_failover }}
+[TODO]
 
 ### Wartungsfenster
 
-{{ source.maintenance_windows }}
+[TODO]
 
 ## Systemänderungen
 
 ### Änderungen im Berichtszeitraum
 
-{{ source.system_changes }}
+[TODO]
 
 ### Auswirkungen auf Kontrollen
 
-{{ source.change_control_impact }}
+[TODO]
 
 ## Referenzen
 
@@ -165,12 +176,3 @@ Dieses Dokument umfasst:
 
 <!-- Hinweise für Autoren: Aktualisieren Sie Systemdiagramme und Datenflüsse regelmäßig -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

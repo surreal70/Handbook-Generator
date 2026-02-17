@@ -1,11 +1,16 @@
 # Führung und Verpflichtung
 
-**Dokument-ID:** 0110  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0110
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -301,8 +306,6 @@ Die oberste Leitung demonstriert Führung und Verpflichtung in Bezug auf Kundenf
 - Verbesserte Kommunikations- oder Unterstützungsmechanismen
 - [TODO: Dokumentiere spezifische Verbesserungsmaßnahmen]
 
----
-
 **Nächste Schritte:**
 1. Definiere Zusammensetzung der obersten Leitung
 2. Dokumentiere spezifische Führungsaktivitäten und Nachweise
@@ -311,10 +314,3 @@ Die oberste Leitung demonstriert Führung und Verpflichtung in Bezug auf Kundenf
 5. Implementiere Einbindungs- und Unterstützungsmechanismen
 6. Überprüfe Führungswirksamkeit regelmäßig
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

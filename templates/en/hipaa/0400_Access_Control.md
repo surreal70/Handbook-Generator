@@ -1,13 +1,16 @@
 # Access Control
 
-**Document ID:** HIPAA-0400  
-**Organization:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Approved by:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0400
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,7 +28,7 @@ Required (R) Standard with Implementation Specifications:
 
 ## 1. Purpose
 
-This document describes the Access Control technical safeguards for {{ meta.organization.name }} to implement technical policies and procedures for electronic information systems that maintain ePHI to allow access only to authorized persons or software programs.
+This document describes the Access Control technical safeguards for {{ meta-organisation.name }} to implement technical policies and procedures for electronic information systems that maintain ePHI to allow access only to authorized persons or software programs.
 
 ### 1.1 HIPAA Requirement
 
@@ -378,13 +381,5 @@ This document describes the Access Control technical safeguards for {{ meta.orga
 **Retention Period:** [TODO: 6 years from creation or last effective date]
 
 **Storage Location:** [TODO: Identity management system, document repository]
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 <!-- End of template -->

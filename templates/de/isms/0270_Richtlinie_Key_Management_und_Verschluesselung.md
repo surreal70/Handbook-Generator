@@ -1,23 +1,24 @@
 # Richtlinie: Key Management und Verschlüsselung
 
+**Dokument-ID:** 0270
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This guideline provides detailed implementation guidance for cryptographic key management
 and encryption controls. Customize based on your organization's cryptographic requirements.
 -->
-
-**Dokument-ID:** 0270  
-**Dokumenttyp:** Richtlinie (detailliert)  
-**Zugehörige Policy:** 0260_Policy_Kryptografie_und_Schluesselmanagement.md  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.8.24  
-**Owner:** {{ meta.it_operations.manager }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
-
----
 
 ## 1. Zweck und Geltungsbereich
 
@@ -27,7 +28,7 @@ Diese Richtlinie konkretisiert die `0260_Policy_Kryptografie_und_Schluesselmanag
 - Zertifikatsmanagement
 - Verschlüsselung von Daten in Ruhe und in Bewegung
 
-**Geltungsbereich:** Alle kryptographischen Systeme bei **{{ meta.organization.name }}**
+**Geltungsbereich:** Alle kryptographischen Systeme bei **{{ meta-organisation.name }}**
 
 ## 2. Kryptographische Standards
 
@@ -350,18 +351,9 @@ ECDHE-RSA-AES128-GCM-SHA256
 - **NIST SP 800-52** - TLS Guidelines
 - **BSI TR-02102** - Kryptographische Verfahren
 
----
-
 **Genehmigt durch:**  
 {{ meta.ciso.name }}, CISO  
-Datum: {{ meta.document.approval_date }}
+Datum: {{ meta-handbook.modifydate }}
 
-**Nächster Review:** {{ meta.document.next_review }}
+**Nächster Review:** {{ meta-handbook.next_review }}
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

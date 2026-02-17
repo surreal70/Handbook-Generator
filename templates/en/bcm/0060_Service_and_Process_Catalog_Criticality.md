@@ -1,13 +1,16 @@
 # Service and Process Catalog with Criticality
 
-**Document ID:** BCM-0060  
-**Organization:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Approved by:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0060
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,7 +28,7 @@ Customization required:
 
 ## 1. Objective
 
-This document documents all services and business processes of {{ meta.organization.name }} considered in BCM including:
+This document documents all services and business processes of {{ meta-organisation.name }} considered in BCM including:
 
 - **Criticality assessment:** Classification by business criticality (High/Medium/Low)
 - **Ownership:** Clear assignment of responsibilities
@@ -153,17 +156,17 @@ L │              [Service F]  [Service G]
 
 | IT Service | Supported Business Processes | Criticality | IT Owner | Technology |
 |------------|----------------------------|--------------|----------|------------|
-| [TODO: ERP System] | Order processing, finance, production | HIGH | {{ meta.roles.it_operations_manager.name }} | [TODO: SAP/Oracle/etc.] |
-| [TODO: Email] | All business processes | HIGH | {{ meta.roles.it_operations_manager.name }} | [TODO: Exchange/M365/etc.] |
+| [TODO: ERP System] | Order processing, finance, production | HIGH | {{ meta-organisation-roles.role_IT_Manager }} | [TODO: SAP/Oracle/etc.] |
+| [TODO: Email] | All business processes | HIGH | {{ meta-organisation-roles.role_IT_Manager }} | [TODO: Exchange/M365/etc.] |
 | [TODO: CRM] | Sales, customer service | MEDIUM | [TODO] | [TODO: Salesforce/etc.] |
 
 ### 4.2 IT Infrastructure
 
 | Infrastructure Component | Dependent Services | Criticality | Location | Redundancy |
 |-------------------------|-------------------|--------------|----------|------------|
-| [TODO: Core Switch] | All IT services | HIGH | {{ meta.organization.city }} | Yes/No |
-| [TODO: Firewall] | Internet access | HIGH | {{ meta.organization.city }} | Yes/No |
-| [TODO: Storage] | All data | HIGH | {{ meta.organization.city }} | Yes/No |
+| [TODO: Core Switch] | All IT services | HIGH | [TODO] | Yes/No |
+| [TODO: Firewall] | Internet access | HIGH | [TODO] | Yes/No |
+| [TODO: Storage] | All data | HIGH | [TODO] | Yes/No |
 
 ## 5. Dependency Analysis
 
@@ -214,8 +217,8 @@ L │              [Service F]  [Service G]
 
 | Stakeholder Group | Affected Services | Communication Need | Contact Person |
 |-------------------|-------------------|-------------------|----------------|
-| Executive Management | All critical services | Strategic decisions | {{ meta.roles.ceo.name }} |
-| IT Department | All IT-dependent services | Technical coordination | {{ meta.roles.cio.name }} |
+| Executive Management | All critical services | Strategic decisions | {{ meta-organisation-roles.role_CEO }} |
+| IT Department | All IT-dependent services | Technical coordination | {{ meta-organisation-roles.role_CIO }} |
 | Departments | Respective services | Operational implementation | [TODO: Department heads] |
 | Employees | All services | Information and instructions | [TODO: HR/Communication] |
 
@@ -243,13 +246,5 @@ L │              [Service F]  [Service G]
 2. Service owners review and update their services
 3. Criticality assessment is validated
 4. Changes are documented and communicated
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 <!-- End of template -->

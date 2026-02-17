@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0230
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Physische Zutrittskontrolle
+
+**Dokument-ID:** [FRAMEWORK]-0230
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -15,7 +26,7 @@ Dieses Dokument beschreibt die Maßnahmen zur physischen Zutrittskontrolle gemä
 
 ## Geltungsbereich
 
-Dieses Dokument gilt für alle kontrollierten Bereiche von {{ source.organization_name }}.
+Dieses Dokument gilt für alle kontrollierten Bereiche von [TODO].
 
 ## Zutrittskontrollsysteme
 
@@ -109,7 +120,7 @@ Dieses Dokument gilt für alle kontrollierten Bereiche von {{ source.organizatio
 - Alarmauslösungen
 
 **Aufbewahrung:**
-- Mindestens {{ source.access_log_retention_days }} Tage
+- Mindestens [TODO] Tage
 - Regelmäßige Überprüfung
 - Datenschutzkonforme Speicherung
 
@@ -117,7 +128,7 @@ Dieses Dokument gilt für alle kontrollierten Bereiche von {{ source.organizatio
 
 **Echtzeit-Überwachung:**
 - Unberechtigte Zutrittsversuche
-- Türen länger als {{ source.door_open_timeout }} Sekunden offen
+- Türen länger als [TODO] Sekunden offen
 - Zutritte außerhalb der Geschäftszeiten
 - Mehrfache Kartennutzung (Tailgating-Erkennung)
 
@@ -137,18 +148,9 @@ Dieses Dokument adressiert:
 
 ## Kennzahlen
 
-{{ source.organization_name }} misst:
+[TODO] misst:
 - Anzahl aktiver Zutrittsberechtigungen
 - Anzahl fehlgeschlagener Zutrittsversuche
 - Anzahl Besucher pro Monat
 - Compliance-Rate bei Audits
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

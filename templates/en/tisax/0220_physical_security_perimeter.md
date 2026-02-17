@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0220
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Physical Security Perimeter
+
+**Document-ID:** [FRAMEWORK]-0220
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -15,7 +26,7 @@ This document defines requirements for physical security perimeters according to
 
 ## Scope
 
-This document applies to all locations and facilities of {{ source.organization_name }}.
+This document applies to all locations and facilities of [TODO].
 
 ## Security Zones
 
@@ -71,7 +82,7 @@ This document applies to all locations and facilities of {{ source.organization_
 
 ### Video Surveillance
 - Monitoring of all access points
-- Recording for at least {{ source.video_retention_days }} days
+- Recording for at least [TODO] days
 - Data protection compliant implementation
 - Regular review
 
@@ -95,7 +106,7 @@ This document applies to all locations and facilities of {{ source.organization_
 - Response to alarms
 - Visitor management
 
-**Availability:** {{ source.security_service_hours }}
+**Availability:** [TODO]
 
 ### Logging
 - All access
@@ -123,18 +134,10 @@ This document applies to all locations and facilities of {{ source.organization_
 
 ## Metrics
 
-{{ source.organization_name }} measures:
+[TODO] measures:
 - Number of security incidents
 - Number of unauthorized access attempts
 - Average response time to alarms
 - Compliance rate in audits
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-38500-0080
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Principle 5: Conformance
+
+**Document-ID:** [FRAMEWORK]-0080
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -16,7 +28,7 @@ This document describes the application of the Conformance principle in the orga
 ## Scope
 
 This document applies to:
-- {{ meta.organization }}
+- {{ meta-organisation.name }}
 - All IT compliance requirements
 - Legal, regulatory, and internal obligations
 
@@ -37,10 +49,10 @@ IT complies with all mandatory legislation and regulations. Policies and practic
 
 | Area | Requirements | Status |
 |------|--------------|--------|
-| Data Protection | GDPR, local laws | {{ meta.data_protection_status }} |
-| IT Security | ISO 27001, standards | {{ meta.security_status }} |
-| Financial Reporting | SOX, local laws | {{ meta.financial_status }} |
-| Industry-Specific | {{ meta.industry_regulations }} | {{ meta.industry_status }} |
+| Data Protection | GDPR, local laws | {{ meta-handbook.data_protection_status }} |
+| IT Security | ISO 27001, standards | {{ meta-handbook.security_status }} |
+| Financial Reporting | SOX, local laws | {{ meta-handbook.financial_status }} |
+| Industry-Specific | {{ meta-handbook.industry_regulations }} | {{ meta-handbook.industry_status }} |
 
 ## Direct
 
@@ -68,9 +80,9 @@ IT complies with all mandatory legislation and regulations. Policies and practic
 
 | Role | Responsibility |
 |------|----------------|
-| {{ meta.ciso }} | IT Security Compliance |
-| {{ meta.dpo }} | Data Protection Compliance |
-| {{ meta.cio }} | Overall IT Compliance |
+| {{ meta-organisation-roles.role_CISO }} | IT Security Compliance |
+| {{ meta-organisation-roles.role_GDPR_Manager }} | Data Protection Compliance |
+| {{ meta-organisation-roles.role_CIO }} | Overall IT Compliance |
 | Compliance Officer | Compliance Monitoring |
 | Internal Audit | Compliance Audits |
 
@@ -86,30 +98,22 @@ IT complies with all mandatory legislation and regulations. Policies and practic
 
 ### KPIs
 
-- Compliance Rate: {{ meta.compliance_rate }}%
-- Number of Compliance Violations: {{ meta.compliance_violations }}
-- Average Remediation Time: {{ meta.remediation_time }} days
-- Audit Findings: {{ meta.audit_findings }}
-- Policy Currency: {{ meta.policy_currency }}%
+- Compliance Rate: {{ meta-handbook.compliance_rate }}%
+- Number of Compliance Violations: {{ meta-handbook.compliance_violations }}
+- Average Remediation Time: {{ meta-handbook.remediation_time }} days
+- Audit Findings: {{ meta-handbook.audit_findings }}
+- Policy Currency: {{ meta-handbook.policy_currency }}%
 
 ### Compliance Dashboard
 
 | Requirement | Status | Last Audit | Next Audit |
 |-------------|--------|------------|------------|
-| GDPR | {{ meta.gdpr_status }} | {{ meta.gdpr_last_audit }} | {{ meta.gdpr_next_audit }} |
+| GDPR | {{ meta-handbook.gdpr_status }} | {{ meta-handbook.gdpr_last_audit }} | {{ meta-handbook.gdpr_next_audit }} |
 | ISO 27001 | {{ meta.iso27001_status }} | {{ meta.iso27001_last_audit }} | {{ meta.iso27001_next_audit }} |
-| BSI Grundschutz | {{ meta.bsi_status }} | {{ meta.bsi_last_audit }} | {{ meta.bsi_next_audit }} |
+| BSI Grundschutz | {{ meta-handbook.bsi_status }} | {{ meta-handbook.bsi_last_audit }} | {{ meta-handbook.bsi_next_audit }} |
 
 ## Document References
 
 - 0010_governance_framework.md
 - 0020_governance_model.md
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 

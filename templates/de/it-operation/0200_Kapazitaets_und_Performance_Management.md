@@ -1,15 +1,27 @@
 # Kapazitäts- und Performance Management
 
+**Dokument-ID:** [FRAMEWORK]-0200
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Übersicht
 
 Dieses Dokument beschreibt die Prozesse und Methoden für das Kapazitäts- und Performance Management des IT-Service. Ziel ist es, sicherzustellen, dass ausreichende IT-Ressourcen zur Verfügung stehen, um die aktuellen und zukünftigen Geschäftsanforderungen zu erfüllen.
 
-**Dokumentverantwortlicher:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Organisation:** {{ meta.organization.name }}
-
----
+**Dokumentverantwortlicher:** {{ meta-handbook.owner }}  
+**Genehmigt durch:** {{ meta-handbook.approver }}  
+**Version:** {{ meta-handbook.revision }}  
+**Organisation:** {{ meta-organisation.name }}
 
 ## Kapazitätsplanung
 
@@ -17,9 +29,9 @@ Dieses Dokument beschreibt die Prozesse und Methoden für das Kapazitäts- und P
 
 | Phase | Zeitraum | Verantwortlich | Aktivitäten |
 |---|---|---|---|
-| Kurzfristig | 1-3 Monate | {{ meta.it_operations_manager.name }} | Monitoring, Anpassungen |
-| Mittelfristig | 3-12 Monate | {{ meta.cio.name }} | Kapazitätsprognosen, Budgetplanung |
-| Langfristig | 1-3 Jahre | {{ meta.ceo.name }} | Strategische Planung, Investitionen |
+| Kurzfristig | 1-3 Monate | {{ meta-organisation-roles.role_it_operations_manager.name }} | Monitoring, Anpassungen |
+| Mittelfristig | 3-12 Monate | {{ meta-organisation-roles.role_cio.name }} | Kapazitätsprognosen, Budgetplanung |
+| Langfristig | 1-3 Jahre | {{ meta-organisation-roles.role_ceo.name }} | Strategische Planung, Investitionen |
 
 ### Kapazitätsdimensionen
 
@@ -60,8 +72,6 @@ Dieses Dokument beschreibt die Prozesse und Methoden für das Kapazitäts- und P
 - Regulatorische Anforderungen
 - Merger & Acquisitions
 
----
-
 ## Performance-Monitoring
 
 ### Performance-Metriken
@@ -101,10 +111,10 @@ Dieses Dokument beschreibt die Prozesse und Methoden für das Kapazitäts- und P
 
 | Tool | Zweck | Zugriff | Verantwortlich |
 |---|---|---|---|
-| [TODO: Monitoring-Tool] | System-Monitoring | [TODO: URL] | {{ meta.it_operations_manager.name }} |
-| [TODO: APM-Tool] | Application Performance | [TODO: URL] | {{ meta.it_operations_manager.name }} |
-| [TODO: DB-Monitoring] | Datenbank-Performance | [TODO: URL] | {{ meta.it_operations_manager.name }} |
-| [TODO: Network-Tool] | Netzwerk-Monitoring | [TODO: URL] | {{ meta.it_operations_manager.name }} |
+| [TODO: Monitoring-Tool] | System-Monitoring | [TODO: URL] | {{ meta-organisation-roles.role_it_operations_manager.name }} |
+| [TODO: APM-Tool] | Application Performance | [TODO: URL] | {{ meta-organisation-roles.role_it_operations_manager.name }} |
+| [TODO: DB-Monitoring] | Datenbank-Performance | [TODO: URL] | {{ meta-organisation-roles.role_it_operations_manager.name }} |
+| [TODO: Network-Tool] | Netzwerk-Monitoring | [TODO: URL] | {{ meta-organisation-roles.role_it_operations_manager.name }} |
 
 ### Performance-Dashboards
 
@@ -121,8 +131,6 @@ Dieses Dokument beschreibt die Prozesse und Methoden für das Kapazitäts- und P
 - **Anwendung:** Response Times, Throughput, Errors
 - **Datenbank:** Query-Performance, Connections, Locks
 
----
-
 ## Trend-Analysen
 
 ### Analyse-Prozess
@@ -135,13 +143,13 @@ Dieses Dokument beschreibt die Prozesse und Methoden für das Kapazitäts- und P
 
 #### Monatliche Analyse
 - **Durchführung:** Erster Arbeitstag des Monats
-- **Verantwortlich:** {{ meta.it_operations_manager.name }}
+- **Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
 - **Fokus:** Mittelfristige Trends und Kapazitätsprognosen
 - **Output:** Monatsbericht mit Kapazitätsempfehlungen
 
 #### Quartalsweise Analyse
 - **Durchführung:** Quartalsende
-- **Verantwortlich:** {{ meta.cio.name }}
+- **Verantwortlich:** {{ meta-organisation-roles.role_cio.name }}
 - **Fokus:** Strategische Trends und Investitionsplanung
 - **Output:** Quartalsbericht mit Budget-Empfehlungen
 
@@ -181,8 +189,6 @@ Dieses Dokument beschreibt die Prozesse und Methoden für das Kapazitäts- und P
 3. **Bewertung:** Impact-Assessment und Priorisierung
 4. **Maßnahmen:** Korrekturmaßnahmen oder Eskalation
 5. **Dokumentation:** Lessons Learned und Prozessverbesserung
-
----
 
 ## Skalierungsstrategien
 
@@ -254,8 +260,8 @@ Dieses Dokument beschreibt die Prozesse und Methoden für das Kapazitäts- und P
 ### Cloud-Skalierung
 
 #### Cloud-Provider
-- **Provider:** {{ meta.organization.cloud_provider }}
-- **Region:** {{ meta.organization.cloud_region }}
+- **Provider:** {{ meta-organisation.cloud_provider }}
+- **Region:** {{ meta-organisation.cloud_region }}
 - **Verfügbarkeitszonen:** [TODO]
 
 #### Skalierungsoptionen
@@ -263,8 +269,6 @@ Dieses Dokument beschreibt die Prozesse und Methoden für das Kapazitäts- und P
 - **Container:** ECS/EKS / AKS / GKE
 - **Serverless:** Lambda / Azure Functions
 - **Datenbank:** RDS Read Replicas / Cosmos DB Auto-Scale
-
----
 
 ## Kapazitätsoptimierung
 
@@ -301,8 +305,6 @@ Dieses Dokument beschreibt die Prozesse und Methoden für das Kapazitäts- und P
 └─────────────────────────────────────────────────────────┘
 ```
 
----
-
 ## Reporting
 
 ### Performance-Reports
@@ -316,7 +318,7 @@ Dieses Dokument beschreibt die Prozesse und Methoden für das Kapazitäts- und P
   - Handlungsempfehlungen
 
 #### Monatlicher Kapazitäts-Report
-- **Empfänger:** {{ meta.cio.name }}, {{ meta.it_operations_manager.name }}
+- **Empfänger:** {{ meta-organisation-roles.role_cio.name }}, {{ meta-organisation-roles.role_it_operations_manager.name }}
 - **Inhalt:**
   - Kapazitätsauslastung
   - Wachstumstrends
@@ -324,7 +326,7 @@ Dieses Dokument beschreibt die Prozesse und Methoden für das Kapazitäts- und P
   - Budget-Implikationen
 
 #### Quartalsweiser Management-Report
-- **Empfänger:** {{ meta.ceo.name }}, {{ meta.cio.name }}, {{ meta.cfo.name }}
+- **Empfänger:** {{ meta-organisation-roles.role_ceo.name }}, {{ meta-organisation-roles.role_cio.name }}, {{ meta-organisation-roles.role_cfo.name }}
 - **Inhalt:**
   - Strategische Kapazitätsplanung
   - Investitionsempfehlungen
@@ -341,8 +343,6 @@ Dieses Dokument beschreibt die Prozesse und Methoden für das Kapazitäts- und P
 | Avg. Response Time | < 200ms | [TODO]ms | [TODO] | ✓ / ⚠ / ✗ |
 | CPU-Auslastung | < 70% | [TODO]% | [TODO] | ✓ / ⚠ / ✗ |
 | Storage-Auslastung | < 75% | [TODO]% | [TODO] | ✓ / ⚠ / ✗ |
-
----
 
 ## Prozesse und Verantwortlichkeiten
 
@@ -363,11 +363,9 @@ Dieses Dokument beschreibt die Prozesse und Methoden für das Kapazitäts- und P
 ### Eskalationspfad
 
 1. **Level 1:** Operations Team - Tägliches Monitoring und Optimierung
-2. **Level 2:** {{ meta.it_operations_manager.name }} - Kapazitätsentscheidungen
-3. **Level 3:** {{ meta.cio.name }} - Strategische Planung und Budget
-4. **Level 4:** {{ meta.ceo.name }} - Investitionsentscheidungen
-
----
+2. **Level 2:** {{ meta-organisation-roles.role_it_operations_manager.name }} - Kapazitätsentscheidungen
+3. **Level 3:** {{ meta-organisation-roles.role_cio.name }} - Strategische Planung und Budget
+4. **Level 4:** {{ meta-organisation-roles.role_ceo.name }} - Investitionsentscheidungen
 
 ## Tools und Systeme
 
@@ -387,8 +385,6 @@ Dieses Dokument beschreibt die Prozesse und Methoden für das Kapazitäts- und P
 - **Alerting:** [TODO: Tool-Name]
 - **Orchestration:** [TODO: Tool-Name]
 
----
-
 ## Compliance und Standards
 
 ### Relevante Standards
@@ -401,8 +397,6 @@ Dieses Dokument beschreibt die Prozesse und Methoden für das Kapazitäts- und P
 - Performance-Metriken und Trends
 - Skalierungsentscheidungen und Begründungen
 - Budget-Nachweise
-
----
 
 ## Anhang
 
@@ -423,16 +417,7 @@ Dieses Dokument beschreibt die Prozesse und Methoden für das Kapazitäts- und P
 - COBIT 2019 Framework
 - Cloud Provider Best Practices
 
----
-
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Letzte Aktualisierung:** {{ meta-handbook.date }}  
 **Nächste Review:** [TODO: Datum]  
-**Kontakt:** {{ meta.it_operations_manager.email }}
+**Kontakt:** {{ meta-organisation-roles.role_it_operations_manager.email }}
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

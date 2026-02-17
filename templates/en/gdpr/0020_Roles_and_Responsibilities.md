@@ -1,11 +1,16 @@
 # Roles and Responsibilities
 
-**Document-ID:** 0020  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0020
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,7 +30,7 @@ Reference: GDPR Art. 4 (Definitions), Art. 24-39 (Controller and Processor)
 
 ## Purpose
 
-This document defines the roles and responsibilities in data protection management of {{ meta.organization }} according to GDPR. It establishes who is responsible for which data protection tasks and how collaboration is organized.
+This document defines the roles and responsibilities in data protection management of {{ meta-organisation.name }} according to GDPR. It establishes who is responsible for which data protection tasks and how collaboration is organized.
 
 ## Key Roles under GDPR
 
@@ -171,8 +176,6 @@ This document defines the roles and responsibilities in data protection manageme
 **Contact:** [TODO: Email, Phone, Website]  
 **Organization Contact:** [TODO: Data Protection Officer]
 
----
-
 **Next Steps:**
 1. Designate all relevant roles and responsibilities
 2. Create complete RACI matrix
@@ -180,10 +183,3 @@ This document defines the roles and responsibilities in data protection manageme
 4. Document all processor relationships
 5. Implement training program
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

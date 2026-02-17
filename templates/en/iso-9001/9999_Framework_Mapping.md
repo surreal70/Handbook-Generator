@@ -1,5 +1,19 @@
 # ISO 9001:2015 Framework Mapping
 
+**Document-ID:** [FRAMEWORK]-9999
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Overview
 
 This document maps the relationship between the ISO 9001:2015 Quality Management System templates and the specific clauses and requirements of the ISO 9001:2015 standard. It serves as a reference for auditors, quality managers, and implementation teams to ensure that all standard requirements are covered by appropriate documentation.
@@ -259,22 +273,7 @@ The templates provide additional support beyond minimum requirements:
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation of framework mapping |
-
----
+| 1.0 | [Date] | [Author] | Initial creation of framework mapping |
 
 **Note:** This mapping is based on ISO 9001:2015. When the standard is updated, this document should be revised accordingly.
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
-
-## Version History
-
-| Version | Date | Changes |
-|---------|------|---------|
-| 0.1 | {{meta.document.last_updated}} | Initial creation |

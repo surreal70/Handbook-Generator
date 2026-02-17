@@ -1,8 +1,16 @@
 # GDPR Framework Mapping
 
-**Document Version:** 1.0  
-**Last Update:** 2026-02-09  
-**Framework:** General Data Protection Regulation (EU 2016/679)
+**Document-ID:** [FRAMEWORK]-9999
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -297,12 +305,7 @@ This mapping should be reviewed and updated:
 - **Upon template changes:** When templates are added, modified, or removed
 - **Upon guidance updates:** When supervisory authorities issue new guidance
 
-### Version History
-
-| Version | Date | Changes | Author |
-|---------|------|---------|--------|
-| 1.0 | 2026-02-09 | Initial framework mapping | System |
-
+#
 ## Related Documents
 
 - **GDPR Regulation Text:** EU 2016/679
@@ -310,14 +313,5 @@ This mapping should be reviewed and updated:
 - **EDPB Guidelines:** European Data Protection Board guidance documents
 - **National Data Protection Laws:** Member state specific implementations
 
----
-
 **Note:** This mapping is based on the GDPR as of the document date. Always consult the current regulation text and relevant supervisory authority guidance for authoritative information.
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

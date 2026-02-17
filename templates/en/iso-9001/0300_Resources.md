@@ -1,11 +1,16 @@
 # Resources
 
-**Document-ID:** 0300  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0300
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -28,7 +33,7 @@ Reference: ISO 9001:2015, Clause 7.1
 
 ## Purpose
 
-This document defines how {{ meta.organization }} determines and provides resources needed for the quality management system in accordance with ISO 9001:2015 Clause 7.1.
+This document defines how {{ meta-organisation.name }} determines and provides resources needed for the quality management system in accordance with ISO 9001:2015 Clause 7.1.
 
 ## Resource Planning Process
 
@@ -334,8 +339,6 @@ This document defines how {{ meta.organization }} determines and provides resour
 - **Budget documents:** Resource budget and expenditure tracking
 - **Adequacy assessments:** Resource adequacy review records
 
----
-
 **Next Steps:**
 1. Conduct comprehensive resource assessment
 2. Identify resource gaps and needs
@@ -344,10 +347,3 @@ This document defines how {{ meta.organization }} determines and provides resour
 5. Implement resource monitoring process
 6. Review resource adequacy regularly
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

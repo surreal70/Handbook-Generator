@@ -1,11 +1,16 @@
 # Determining the Scope of the QMS
 
-**Document-ID:** 0030  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0030
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -34,7 +39,7 @@ This document defines the scope of the quality management system according to IS
 ### Organizational Scope
 
 **Organization:**
-- **Name:** {{ meta.organization }}
+- **Name:** {{ meta-organisation.name }}
 - **Legal Form:** [TODO: e.g., LLC, Corporation]
 - **Headquarters:** [TODO: Address]
 
@@ -208,8 +213,6 @@ The scope forms the basis for:
 - **Appendix B:** Location overview
 - **Appendix C:** Product/service catalog
 
----
-
 **Next Steps:**
 1. Clearly define the organizational scope
 2. List all included products and services
@@ -218,10 +221,3 @@ The scope forms the basis for:
 5. Communicate the scope to all relevant parties
 6. Review the scope regularly
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

@@ -1,13 +1,25 @@
----
+
 Document-ID: nist-csf-0220
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Data Security (PR.DS)
+
+**Document-ID:** [FRAMEWORK]-0220
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -15,7 +27,7 @@ This document describes data security controls and processes.
 
 ## Scope
 
-{{ meta.scope }}
+{{ meta-handbook.scope }}
 
 ## Data Protection
 
@@ -35,12 +47,3 @@ This document describes data security controls and processes.
 
 - 0100_asset_management.md (Identify)
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |
-
-<!-- Author Notes: Classify all data assets -->

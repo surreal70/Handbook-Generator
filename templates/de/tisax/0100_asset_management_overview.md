@@ -1,17 +1,28 @@
----
+
 Document-ID: tisax-0100
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Asset Management Übersicht
 
+**Dokument-ID:** [FRAMEWORK]-0100
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument definiert die Anforderungen und Prozesse für das Asset Management gemäß TISAX-Anforderungen in {{ source.organization_name }}.
+Dieses Dokument definiert die Anforderungen und Prozesse für das Asset Management gemäß TISAX-Anforderungen in [TODO].
 
 ## Geltungsbereich
 
@@ -41,7 +52,7 @@ Ein Asset ist jede Ressource mit Wert für die Organisation, einschließlich:
 
 ### 1. Asset-Identifikation
 
-{{ source.organization_name }} identifiziert Assets durch:
+[TODO] identifiziert Assets durch:
 
 - Systematische Bestandsaufnahme
 - Kontinuierliche Erfassung neuer Assets
@@ -78,9 +89,9 @@ Der Asset-Lebenszyklus umfasst:
 
 ### Asset Management Team
 
-- **Asset Management Koordinator**: {{ source.asset_management_coordinator }}
-- **IT-Asset-Manager**: {{ source.it_asset_manager }}
-- **Informationssicherheitsbeauftragter**: {{ source.information_security_officer }}
+- **Asset Management Koordinator**: [TODO]
+- **IT-Asset-Manager**: [TODO]
+- **Informationssicherheitsbeauftragter**: [TODO]
 
 ### Asset Owner
 
@@ -145,7 +156,7 @@ Schutzmaßnahmen werden implementiert basierend auf:
 
 ### Kontinuierliche Überwachung
 
-{{ source.organization_name }} überwacht:
+[TODO] überwacht:
 
 - Vollständigkeit des Asset-Inventars
 - Aktualität der Asset-Informationen
@@ -202,7 +213,7 @@ Für TISAX-Assessments werden bereitgestellt:
 
 ## Kennzahlen
 
-{{ source.organization_name }} misst:
+[TODO] misst:
 
 - Vollständigkeit des Asset-Inventars (Ziel: >95%)
 - Aktualität der Asset-Informationen (Ziel: <30 Tage)
@@ -211,12 +222,3 @@ Für TISAX-Assessments werden bereitgestellt:
 
 <!-- Hinweis: Passen Sie die Verantwortlichkeiten und Kennzahlen an Ihre Organisation an -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

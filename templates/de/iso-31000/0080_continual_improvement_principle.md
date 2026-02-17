@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-31000-0080
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Prinzip 8: Kontinuierliche Verbesserung
+
+**Dokument-ID:** [FRAMEWORK]-0080
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -25,7 +37,7 @@ Risikomanagement wird kontinuierlich durch Lernen und Erfahrung verbessert. Orga
 - Anpassung an neue Erkenntnisse
 - Systematische Verbesserung
 
-## Umsetzung in {{ meta.organization }}
+## Umsetzung in {{ meta-organisation.name }}
 
 ### Kontinuierlicher Verbesserungszyklus
 
@@ -90,8 +102,8 @@ Risikomanagement wird kontinuierlich durch Lernen und Erfahrung verbessert. Orga
 - Innovation und Verbesserung
 - Vorausschauendes Management
 
-**Aktueller Reifegrad:** {{ meta.risk_maturity_level }}  
-**Ziel-Reifegrad:** {{ meta.target_risk_maturity_level }}
+**Aktueller Reifegrad:** {{ meta-handbook.risk_maturity_level }}  
+**Ziel-Reifegrad:** {{ meta-handbook.target_risk_maturity_level }}
 
 ## Verbesserungsmaßnahmen
 
@@ -134,12 +146,4 @@ Risikomanagement wird kontinuierlich durch Lernen und Erfahrung verbessert. Orga
 - Bewertung der Prozesseffizienz
 - Identifikation von Verbesserungspotenzialen
 - Planung für das nächste Jahr
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |
 

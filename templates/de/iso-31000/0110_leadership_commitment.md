@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-31000-0110
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Führung und Verpflichtung
+
+**Dokument-ID:** [FRAMEWORK]-0110
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -16,7 +28,7 @@ Dieses Dokument beschreibt die Anforderungen an Führung und Verpflichtung im Ri
 ## Geltungsbereich
 
 Dieses Dokument gilt für:
-- {{ meta.organization }}
+- {{ meta-organisation.name }}
 - Vorstand und Geschäftsführung
 - Führungskräfte aller Ebenen
 - Risikomanagement-Verantwortliche
@@ -184,17 +196,3 @@ Die Organisation definiert:
 - 0120_integration.md
 - 0130_framework_design.md
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |
-
-<!-- 
-Autor-Hinweise: 
-- Stellen Sie sicher, dass das Top-Management aktiv in Risikomanagement eingebunden ist
-- Dokumentieren Sie Führungsentscheidungen zu Risiken
-- Überprüfen Sie regelmäßig die Wirksamkeit der Führungsaktivitäten
--->

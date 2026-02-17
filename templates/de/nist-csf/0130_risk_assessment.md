@@ -1,13 +1,25 @@
----
+
 Document-ID: nist-csf-0130
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Risikobewertung (ID.RA)
+
+**Dokument-ID:** [FRAMEWORK]-0130
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -15,7 +27,7 @@ This document describes the risk assessment process for identifying and evaluati
 
 ## Geltungsbereich
 
-{{ meta.scope }}
+{{ meta-handbook.scope }}
 
 ## Risk Assessment Process
 
@@ -31,12 +43,3 @@ This document describes the risk assessment process for identifying and evaluati
 - 0030_risk_management_strategy.md (Govern)
 - 0100_asset_management.md
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |
-
-<!-- Author Notes: Conduct risk assessments regularly -->

@@ -1,11 +1,16 @@
 # Organisatorische Rollen, Verantwortlichkeiten und Befugnisse
 
-**Dokument-ID:** 0120  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0120
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -204,8 +209,6 @@ Rollen, Verantwortlichkeiten und Befugnisse werden überprüft:
 - **Nach Audits:** Basierend auf Auditfeststellungen
 - **Bei Bedarf:** Wenn Probleme identifiziert werden
 
----
-
 **Nächste Schritte:**
 1. Definiere alle QMS-relevanten Rollen in der Organisation
 2. Weise spezifische Verantwortlichkeiten und Befugnisse jeder Rolle zu
@@ -214,10 +217,3 @@ Rollen, Verantwortlichkeiten und Befugnisse werden überprüft:
 5. Stelle Verständnis durch Schulung und Bestätigung sicher
 6. Überprüfe und aktualisiere Rollen regelmäßig
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

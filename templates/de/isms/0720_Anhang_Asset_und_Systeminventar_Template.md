@@ -1,9 +1,16 @@
 # Anhang B: Asset- und Systeminventar
 
-**Dokumenttyp:** Anhang  
-**Version:** {{ meta.document.version }}  
-**Datum:** {{ meta.document.date }}  
-**Klassifizierung:** {{ meta.document.classification }}
+**Dokument-ID:** [FRAMEWORK]-0720
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -20,11 +27,9 @@ Das Inventar wird kontinuierlich gepflegt und mindestens quartalsweise überprü
 
 ## Geltungsbereich
 
-**Organisation:** {{ meta.organization.name }}  
+**Organisation:** {{ meta-organisation.name }}  
 **ISMS Scope:** {{ meta.isms.scope }}  
 **Verantwortlich:** Asset Management Team, {{ meta.ciso.name }}
-
----
 
 ## Asset-Kategorien
 
@@ -36,8 +41,6 @@ Das Inventar umfasst folgende Asset-Kategorien:
 4. **Netzwerk Assets:** VLANs, Subnetze, Verbindungen
 5. **Cloud Assets:** Cloud Services, SaaS-Anwendungen
 6. **Physische Assets:** Räume, Infrastruktur, Dokumentation
-
----
 
 ## Asset-Klassifizierung
 
@@ -60,8 +63,6 @@ Jedes Asset wird nach folgenden Kriterien klassifiziert:
 | **Tier 3** | < 72h | < 24h | Standard, Wiederherstellung innerhalb von 3 Tagen |
 | **Tier 4** | > 72h | > 24h | Unkritisch, keine zeitkritische Wiederherstellung |
 
----
-
 ## Hardware Assets
 
 ### Server
@@ -74,8 +75,6 @@ Jedes Asset wird nach folgenden Kriterien klassifiziert:
 
 **Hinweis:** Vollständige Server-Liste aus NetBox/CMDB importieren.
 
----
-
 ### Netzwerkgeräte
 
 | Asset-ID | Hostname | Typ | Standort | Owner | Schutzbedarf (C/I/A) | Kritikalität | Status |
@@ -86,8 +85,6 @@ Jedes Asset wird nach folgenden Kriterien klassifiziert:
 
 **Hinweis:** Vollständige Netzwerkgeräte-Liste aus NetBox importieren.
 
----
-
 ### Endpoints
 
 | Asset-ID | Hostname | Typ | Benutzer | Owner | Schutzbedarf (C/I/A) | Status |
@@ -97,16 +94,12 @@ Jedes Asset wird nach folgenden Kriterien klassifiziert:
 
 **Hinweis:** Endpoint-Inventar aus MDM/Endpoint Management System importieren.
 
----
-
 ### Storage-Systeme
 
 | Asset-ID | Name | Typ | Kapazität | Standort | Owner | Schutzbedarf (C/I/A) | Kritikalität |
 |----------|------|-----|-----------|----------|-------|----------------------|--------------|
 | STO-001 | {{ netbox.device.storage.name }} | SAN | [TODO: Kapazität] | {{ netbox.site.name }} | IT Operations | Hoch/Hoch/Hoch | Tier 1 |
 | [TODO] | [TODO: Name] | [TODO: Typ] | [TODO: Kapazität] | [TODO: Standort] | [TODO: Owner] | [TODO: C/I/A] | [TODO: Tier] |
-
----
 
 ## Software Assets
 
@@ -119,8 +112,6 @@ Jedes Asset wird nach folgenden Kriterien klassifiziert:
 | OS-003 | Ubuntu Server | 22.04 LTS | Open Source | Unbegrenzt | IT Operations | Tier 2 |
 | [TODO] | [TODO: Name] | [TODO: Version] | [TODO: Lizenztyp] | [TODO: Anzahl] | [TODO: Owner] | [TODO: Tier] |
 
----
-
 ### Geschäftsanwendungen
 
 | Asset-ID | Name | Version | Vendor | Lizenztyp | Owner | Schutzbedarf (C/I/A) | Kritikalität |
@@ -128,8 +119,6 @@ Jedes Asset wird nach folgenden Kriterien klassifiziert:
 | APP-001 | [TODO: ERP System] | [TODO: Version] | [TODO: Vendor] | [TODO: Lizenztyp] | Business Owner | Hoch/Hoch/Hoch | Tier 1 |
 | APP-002 | [TODO: CRM System] | [TODO: Version] | [TODO: Vendor] | [TODO: Lizenztyp] | Sales | Hoch/Mittel/Mittel | Tier 2 |
 | [TODO] | [TODO: Name] | [TODO: Version] | [TODO: Vendor] | [TODO: Lizenztyp] | [TODO: Owner] | [TODO: C/I/A] | [TODO: Tier] |
-
----
 
 ### Sicherheitssoftware
 
@@ -139,8 +128,6 @@ Jedes Asset wird nach folgenden Kriterien klassifiziert:
 | SEC-002 | [TODO: SIEM] | [TODO: Version] | Security Information & Event Management | Alle Systeme | Security Team | Tier 1 |
 | SEC-003 | [TODO: Firewall] | [TODO: Version] | Next-Gen Firewall | Perimeter | Security Team | Tier 1 |
 | [TODO] | [TODO: Name] | [TODO: Version] | [TODO: Typ] | [TODO: Abdeckung] | [TODO: Owner] | [TODO: Tier] |
-
----
 
 ## Daten Assets
 
@@ -152,8 +139,6 @@ Jedes Asset wird nach folgenden Kriterien klassifiziert:
 | DB-002 | [TODO: Test-DB] | [TODO: Typ] | [TODO: Version] | [TODO: Server] | DBA Team | Niedrig/Mittel/Niedrig | Tier 3 | Wöchentlich |
 | [TODO] | [TODO: Name] | [TODO: Typ] | [TODO: Version] | [TODO: Server] | [TODO: Owner] | [TODO: C/I/A] | [TODO: Tier] | [TODO: Backup] |
 
----
-
 ### Dateisysteme und Shares
 
 | Asset-ID | Name | Typ | Pfad | Server | Owner | Schutzbedarf (C/I/A) | Backup |
@@ -162,16 +147,12 @@ Jedes Asset wird nach folgenden Kriterien klassifiziert:
 | FS-002 | [TODO: Projekt-Share] | SMB Share | [TODO: Pfad] | [TODO: Server] | Project Management | Hoch/Mittel/Mittel | Täglich |
 | [TODO] | [TODO: Name] | [TODO: Typ] | [TODO: Pfad] | [TODO: Server] | [TODO: Owner] | [TODO: C/I/A] | [TODO: Backup] |
 
----
-
 ### Code Repositories
 
 | Asset-ID | Name | Typ | URL | Owner | Schutzbedarf (C/I/A) | Backup |
 |----------|------|-----|-----|-------|----------------------|--------|
 | REPO-001 | [TODO: Main Repository] | Git | [TODO: URL] | Development Team | Hoch/Hoch/Mittel | Täglich |
 | [TODO] | [TODO: Name] | [TODO: Typ] | [TODO: URL] | [TODO: Owner] | [TODO: C/I/A] | [TODO: Backup] |
-
----
 
 ## Netzwerk Assets
 
@@ -185,8 +166,6 @@ Jedes Asset wird nach folgenden Kriterien klassifiziert:
 
 **Hinweis:** Vollständige VLAN-Liste aus NetBox importieren.
 
----
-
 ### Externe Verbindungen
 
 | Verbindungs-ID | Typ | Provider | Bandbreite | Zweck | Owner | Kritikalität |
@@ -194,8 +173,6 @@ Jedes Asset wird nach folgenden Kriterien klassifiziert:
 | WAN-001 | Internet | [TODO: Provider] | [TODO: Bandbreite] | Internet Access | Network Team | Tier 1 |
 | WAN-002 | MPLS | [TODO: Provider] | [TODO: Bandbreite] | Site-to-Site | Network Team | Tier 1 |
 | [TODO] | [TODO: Typ] | [TODO: Provider] | [TODO: Bandbreite] | [TODO: Zweck] | [TODO: Owner] | [TODO: Tier] |
-
----
 
 ## Cloud Assets
 
@@ -207,8 +184,6 @@ Jedes Asset wird nach folgenden Kriterien klassifiziert:
 | CLOUD-002 | [TODO: Database Service] | [TODO: Provider] | PaaS | [TODO: Region] | DBA Team | Hoch/Hoch/Hoch | Tier 1 |
 | [TODO] | [TODO: Service] | [TODO: Provider] | [TODO: Typ] | [TODO: Region] | [TODO: Owner] | [TODO: C/I/A] | [TODO: Tier] |
 
----
-
 ### SaaS-Anwendungen
 
 | Asset-ID | Service Name | Provider | Zweck | Benutzeranzahl | Owner | Schutzbedarf (C/I/A) |
@@ -216,8 +191,6 @@ Jedes Asset wird nach folgenden Kriterien klassifiziert:
 | SAAS-001 | Microsoft 365 | Microsoft | Productivity | [TODO: Anzahl] | IT Operations | Hoch/Mittel/Hoch |
 | SAAS-002 | [TODO: CRM SaaS] | [TODO: Provider] | Customer Management | [TODO: Anzahl] | Sales | Hoch/Mittel/Mittel |
 | [TODO] | [TODO: Service] | [TODO: Provider] | [TODO: Zweck] | [TODO: Anzahl] | [TODO: Owner] | [TODO: C/I/A] |
-
----
 
 ## Physische Assets
 
@@ -229,16 +202,12 @@ Jedes Asset wird nach folgenden Kriterien klassifiziert:
 | SITE-002 | [TODO: Zweigstelle] | [TODO: Adresse] | Zweigstelle | Mittel | Facility Management |
 | [TODO] | [TODO: Name] | [TODO: Adresse] | [TODO: Typ] | [TODO: Sicherheit] | [TODO: Owner] |
 
----
-
 ### Serverräume und Rechenzentren
 
 | Raum-ID | Name | Standort | Typ | Größe | Klimatisierung | Brandschutz | Zutrittskontrolle |
 |---------|------|----------|-----|-------|----------------|-------------|-------------------|
 | ROOM-001 | Serverraum 1 | SITE-001 | Serverraum | [TODO: m²] | Redundant | FM-200 | Biometrisch |
 | [TODO] | [TODO: Name] | [TODO: Standort] | [TODO: Typ] | [TODO: Größe] | [TODO: Klima] | [TODO: Brand] | [TODO: Zutritt] |
-
----
 
 ### Kritische Infrastruktur
 
@@ -248,8 +217,6 @@ Jedes Asset wird nach folgenden Kriterien klassifiziert:
 | INFRA-002 | Klimaanlage 1 | Klimatisierung | SITE-001 | [TODO: kW] | N+1 | Facility Management | Tier 1 |
 | INFRA-003 | Notstromgenerator | Generator | SITE-001 | [TODO: kW] | N | Facility Management | Tier 1 |
 | [TODO] | [TODO: Name] | [TODO: Typ] | [TODO: Standort] | [TODO: Kapazität] | [TODO: Redundanz] | [TODO: Owner] | [TODO: Tier] |
-
----
 
 ## Asset Lifecycle Management
 
@@ -265,8 +232,6 @@ Jedes Asset wird nach folgenden Kriterien klassifiziert:
 | **Außerbetriebnahme** | Dekommissionierung, Datenlöschung | IT Operations | Decommissioning Process |
 | **Entsorgung** | Sichere Entsorgung oder Wiederverwendung | IT Operations | Disposal Process |
 
----
-
 ### Asset Owner und Verantwortlichkeiten
 
 | Rolle | Verantwortlichkeiten | Kontakt |
@@ -275,8 +240,6 @@ Jedes Asset wird nach folgenden Kriterien klassifiziert:
 | **Technical Owner** | Technische Verantwortung, Betrieb, Wartung | IT Operations |
 | **Security Owner** | Sicherheitsanforderungen, Risikobewertung | {{ meta.ciso.name }} |
 | **Data Owner** | Datenklassifizierung, Zugriffskontrolle | [TODO: Name/Abteilung] |
-
----
 
 ## Asset-Tagging und Kennzeichnung
 
@@ -295,8 +258,6 @@ Alle Assets werden mit folgenden Tags versehen:
 
 **Hinweis:** Tagging wird in CMDB/Asset Management System gepflegt.
 
----
-
 ## Inventarisierungsprozess
 
 ### Regelmäßige Überprüfung
@@ -308,8 +269,6 @@ Alle Assets werden mit folgenden Tags versehen:
 | **Automatische Discovery** | Täglich | IT Operations | Discovery Logs |
 | **Änderungsverfolgung** | Kontinuierlich | Change Management | Change Records |
 
----
-
 ### Discovery-Tools
 
 | Tool | Zweck | Abdeckung | Owner |
@@ -319,8 +278,6 @@ Alle Assets werden mit folgenden Tags versehen:
 | MDM | Mobile Device Management | Endpoints, Mobile Devices | IT Operations |
 | Cloud Asset Inventory | Cloud Resources | Cloud Services | Cloud Team |
 | [TODO: Tool] | [TODO: Zweck] | [TODO: Abdeckung] | [TODO: Owner] |
-
----
 
 ## Compliance und Audit
 
@@ -333,16 +290,12 @@ Dieses Inventar erfüllt folgende Compliance-Anforderungen:
 - **ISO/IEC 27001:2022 Annex A 8.9:** Configuration Management
 - **[TODO: Weitere Compliance-Anforderungen]**
 
----
-
 ### Audit Trail
 
 | Datum | Änderung | Durchgeführt von | Genehmigt von | Grund |
 |-------|----------|------------------|---------------|-------|
-| {{ meta.document.date }} | Initiale Erstellung | {{ meta.document.author }} | {{ meta.ciso.name }} | ISMS-Implementierung |
+| {{ meta-handbook.modifydate }} | Initiale Erstellung | {{ meta-handbook.author }} | {{ meta.ciso.name }} | ISMS-Implementierung |
 | [TODO: Datum] | [TODO: Änderung] | [TODO: Name] | [TODO: Name] | [TODO: Grund] |
-
----
 
 ## Referenzen
 
@@ -350,8 +303,6 @@ Dieses Inventar erfüllt folgende Compliance-Anforderungen:
 - Richtlinie: 0310_Richtlinie_Asset_Inventory_Tagging_und_Entsorgung.md
 - Dokument: 0100_ISMS_Statement_of_Applicability_SoA_Template.md
 - Anhang: 0730_Anhang_Datenfluss_und_Schnittstellen_Template.md
-
----
 
 **Dokumentverantwortlicher:** Asset Management Team  
 **Genehmigt durch:** {{ meta.ciso.name }}  
@@ -365,10 +316,3 @@ Stellen Sie sicher, dass alle Assets mit korrekten Schutzbedarfen und Kritikalit
 Integrieren Sie dieses Inventar in Ihre Risikobewertungs- und BIA-Prozesse.
 -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

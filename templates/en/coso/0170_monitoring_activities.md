@@ -1,17 +1,28 @@
----
+
 Document-ID: coso-0400
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Monitoring Activities
 
+**Document-ID:** [FRAMEWORK]-0170
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document describes the monitoring activities at {{ source.organization_name }} according to the COSO Framework.
+This document describes the monitoring activities at [TODO] according to the COSO Framework.
 
 ## Scope
 
@@ -22,101 +33,93 @@ This document describes the monitoring activities at {{ source.organization_name
 
 ### Ongoing Monitoring
 
-**Management Monitoring**: {{ source.management_monitoring }}
-**Operational Monitoring**: {{ source.operational_monitoring }}
-**Automated Controls**: {{ source.automated_monitoring }}
+**Management Monitoring**: [TODO]
+**Operational Monitoring**: [TODO]
+**Automated Controls**: [TODO]
 
 ### Separate Evaluations
 
-**Internal Audit**: {{ source.internal_audit }}
-**External Audit**: {{ source.external_audit }}
-**Self-Assessments**: {{ source.self_assessments }}
+**Internal Audit**: [TODO]
+**External Audit**: [TODO]
+**Self-Assessments**: [TODO]
 
 ### Monitoring Plan
 
-{{ source.monitoring_plan }}
+[TODO]
 
 ## Principle 17: Evaluation and Communication of Deficiencies
 
 ### Deficiency Identification
 
-{{ source.deficiency_identification }}
+[TODO]
 
 ### Deficiency Assessment
 
 **Severity Classification**:
-- Critical: {{ source.critical_deficiency }}
-- Significant: {{ source.significant_deficiency }}
-- Minor: {{ source.minor_deficiency }}
+- Critical: [TODO]
+- Significant: [TODO]
+- Minor: [TODO]
 
 ### Escalation Process
 
-{{ source.escalation_process }}
+[TODO]
 
 ### Reporting
 
-**To Management**: {{ source.management_reporting }}
-**To Board**: {{ source.board_reporting }}
-**To Regulators**: {{ source.regulatory_reporting }}
+**To Management**: [TODO]
+**To Board**: [TODO]
+**To Regulators**: [TODO]
 
 ## Monitoring Methods
 
 ### Key Control Indicators (KCI)
 
-{{ source.key_control_indicators }}
+[TODO]
 
 ### Control Testing
 
-{{ source.control_testing }}
+[TODO]
 
 ### Trend Analysis
 
-{{ source.trend_analysis }}
+[TODO]
 
 ## Remediation
 
 ### Remediation Plan
 
-{{ source.remediation_plan }}
+[TODO]
 
 ### Tracking
 
-{{ source.remediation_tracking }}
+[TODO]
 
 ### Effectiveness Testing
 
-{{ source.effectiveness_testing }}
+[TODO]
 
 ## Continuous Improvement
 
 ### Improvement Process
 
-{{ source.improvement_process }}
+[TODO]
 
 ### Lessons Learned
 
-{{ source.lessons_learned_process }}
+[TODO]
 
 ## Responsibilities
 
-**First Line of Defense**: {{ source.first_line_responsibilities }}
-**Second Line of Defense**: {{ source.second_line_responsibilities }}
-**Third Line of Defense**: {{ source.third_line_responsibilities }}
+**First Line of Defense**: [TODO]
+**Second Line of Defense**: [TODO]
+**Third Line of Defense**: [TODO]
 
 ## References
 
-- Monitoring Policy {{ source.organization_name }}
+- Monitoring Policy [TODO]
 - Internal Audit Plan
 - Deficiency Management Process
 
 <!-- Author notes: Monitoring is a continuous process -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

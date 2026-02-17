@@ -1,13 +1,16 @@
 # HIPAA Compliance Program
 
-**Document ID:** HIPAA-0050  
-**Organization:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Approved by:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0050
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,7 +28,7 @@ Customization required:
 
 ## 1. Purpose
 
-This document describes the HIPAA compliance program for {{ meta.organization.name }}, including program structure, activities, monitoring, and continuous improvement processes.
+This document describes the HIPAA compliance program for {{ meta-organisation.name }}, including program structure, activities, monitoring, and continuous improvement processes.
 
 ### 1.1 Objectives
 
@@ -548,13 +551,5 @@ CEO
 - Decisions made
 - Action items assigned
 - Resource commitments
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 <!-- End of template -->

@@ -695,3 +695,224 @@ class TestExampleTemplates:
         assert 'BSI Grundschutz' in examples
         assert len(examples['ISO 27001']) == 1
         assert len(examples['BSI Grundschutz']) == 1
+
+
+
+class TestHandbookMetadataLoading:
+    """
+    Property tests for handbook metadata loading.
+    
+    Feature: config-separation-and-metadata-unification
+    Task: 6.3
+    """
+    
+    @given(
+        language=st.sampled_from(['de', 'en']),
+        template_type=st.sampled_from(['bcm', 'isms', 'bsi-grundschutz', 'it-operation']),
+        author=st.text(min_size=1, max_size=30, alphabet=st.characters(whitelist_categories=('L', 'N'))),
+        classification=st.sampled_from(['Public', 'Internal', 'Confidential', 'Secret']),
+        status=st.sampled_from(['Draft', 'Review', 'Approved', 'Published']),
+        revision=st.integers(min_value=0, max_value=100)
+    )
+    @settings(max_examples=20, deadline=None)
+    def test_property_2_handbook_metadata_loading(
+        self, language, template_type, author, classification, status, revision
+    ):
+        """
+        Property 2: Handbook Metadata Loading
+        
+        For any handbook directory containing a meta-handbook.yaml file, when that
+        handbook is processed, the handbook-specific metadata should be loaded and
+        merged into the unified metadata context.
+        
+        Validates: Requirements 1.2
+        
+        Feature: config-separation-and-metadata-unification
+        Property 2: Handbook Metadata Loading
+        """
+        from src.unified_metadata import UnifiedMetadata, HandbookMetadata
+        import yaml
+        
+        with tempfile.TemporaryDirectory() as tmpdir:
+            tmpdir_path = Path(tmpdir)
+            
+            # Create template directory structure
+            handbook_dir = tmpdir_path / language / template_type
+            handbook_dir.mkdir(parents=True)
+            
+            # Create meta-handbook.yaml with test data using proper YAML serialization
+            meta_handbook_path = handbook_dir / 'meta-handbook.yaml'
+            meta_handbook_data = {
+                'author': author,
+                'classification': classification,
+                'status': status,
+                'type': 'Handbook',
+                'templateset_version': '0.2',
+                'revision': revision,
+                'shortname': template_type.upper(),
+                'longname': f"{template_type.replace('-', ' ').title()} Handbook",
+                'owner': 'Test Owner',
+                'approver': 'Test Approver',
+                'creationdate': '2025-01-01',
+                'modifydate': '2025-02-01',
+                'valid_from': '2025-01-01',
+                'next_review': '2026-01-01',
+                'scope': 'Test Scope'
+            }
+            
+            # Use yaml.dump to properly escape special characters
+            with open(meta_handbook_path, 'w') as f:
+                yaml.dump(meta_handbook_data, f, default_flow_style=False, allow_unicode=True)
+            
+            # Create a dummy template file so the handbook directory is valid
+            template_file = handbook_dir / '0100_test.md'
+            template_file.write_text('# Test Template')
+            
+            # Initialize TemplateManager
+            manager = TemplateManager(tmpdir_path)
+            
+            # Create initial unified metadata
+            unified_metadata = UnifiedMetadata()
+            
+            # Process handbook to load handbook-specific metadata
+            updated_metadata = manager.process_handbook(language, template_type, unified_metadata)
+            
+            # Verify handbook metadata was loaded
+            assert updated_metadata.handbook is not None, \
+                "Handbook metadata should be loaded"
+            
+            # Verify handbook metadata fields match input
+            assert updated_metadata.handbook.author == author, \
+                f"Author should be '{author}'"
+            assert updated_metadata.handbook.classification == classification, \
+                f"Classification should be '{classification}'"
+            assert updated_metadata.handbook.status == status, \
+                f"Status should be '{status}'"
+            assert updated_metadata.handbook.revision == revision, \
+                f"Revision should be {revision}"
+            
+            # Verify handbook metadata is accessible through get_field
+            assert updated_metadata.get_field('meta-handbook.author') == author, \
+                "Handbook author should be accessible via get_field"
+            assert updated_metadata.get_field('meta-handbook.classification') == classification, \
+                "Handbook classification should be accessible via get_field"
+            assert updated_metadata.get_field('meta-handbook.status') == status, \
+                "Handbook status should be accessible via get_field"
+            assert updated_metadata.get_field('meta-handbook.revision') == revision, \
+                "Handbook revision should be accessible via get_field"
+            
+            # Verify maintainer defaults to author
+            assert updated_metadata.handbook.maintainer == author, \
+                "Maintainer should default to author"
+    
+    def test_handbook_metadata_loading_with_missing_file(self):
+        """
+        Test that handbook metadata loading handles missing meta-handbook.yaml gracefully.
+        
+        When meta-handbook.yaml is missing, the system should use default values
+        and emit a warning.
+        
+        Feature: config-separation-and-metadata-unification
+        Task: 6.3
+        """
+        with tempfile.TemporaryDirectory() as tmpdir:
+            tmpdir_path = Path(tmpdir)
+            
+            # Create template directory structure without meta-handbook.yaml
+            handbook_dir = tmpdir_path / 'de' / 'bcm'
+            handbook_dir.mkdir(parents=True)
+            
+            # Create a dummy template file
+            template_file = handbook_dir / '0100_test.md'
+            template_file.write_text('# Test Template')
+            
+            # Initialize TemplateManager
+            manager = TemplateManager(tmpdir_path)
+            
+            # Create initial unified metadata
+            from src.unified_metadata import UnifiedMetadata
+            unified_metadata = UnifiedMetadata()
+            
+            # Process handbook - should use defaults
+            updated_metadata = manager.process_handbook('de', 'bcm', unified_metadata)
+            
+            # Verify handbook metadata was loaded with defaults
+            assert updated_metadata.handbook is not None, \
+                "Handbook metadata should be loaded with defaults"
+            assert updated_metadata.handbook.author == '[TODO]', \
+                "Author should default to '[TODO]'"
+            assert updated_metadata.handbook.classification == '[TODO]', \
+                "Classification should default to '[TODO]'"
+            assert updated_metadata.handbook.status == '[TODO]', \
+                "Status should default to '[TODO]'"
+            assert updated_metadata.handbook.revision == 0, \
+                "Revision should default to 0"
+    
+    def test_handbook_path_detection_standard_templates(self):
+        """
+        Test handbook path detection for standard templates.
+        
+        Feature: config-separation-and-metadata-unification
+        Task: 6.2
+        """
+        with tempfile.TemporaryDirectory() as tmpdir:
+            tmpdir_path = Path(tmpdir)
+            
+            # Create standard template directory
+            handbook_dir = tmpdir_path / 'de' / 'bcm'
+            handbook_dir.mkdir(parents=True)
+            
+            # Initialize TemplateManager
+            manager = TemplateManager(tmpdir_path)
+            
+            # Detect handbook directory
+            detected_dir = manager.detect_handbook_directory('de', 'bcm')
+            
+            assert detected_dir is not None, \
+                "Handbook directory should be detected"
+            assert detected_dir == handbook_dir, \
+                f"Detected directory should be {handbook_dir}"
+    
+    def test_handbook_path_detection_service_templates(self):
+        """
+        Test handbook path detection for service templates.
+        
+        Feature: config-separation-and-metadata-unification
+        Task: 6.2
+        """
+        with tempfile.TemporaryDirectory() as tmpdir:
+            tmpdir_path = Path(tmpdir)
+            
+            # Create service template directory
+            handbook_dir = tmpdir_path / 'de' / 'service-directory' / 'email-service'
+            handbook_dir.mkdir(parents=True)
+            
+            # Initialize TemplateManager
+            manager = TemplateManager(tmpdir_path)
+            
+            # Detect handbook directory
+            detected_dir = manager.detect_handbook_directory('de', 'email-service')
+            
+            assert detected_dir is not None, \
+                "Service handbook directory should be detected"
+            assert detected_dir == handbook_dir, \
+                f"Detected directory should be {handbook_dir}"
+    
+    def test_handbook_path_detection_nonexistent(self):
+        """
+        Test handbook path detection for nonexistent directory.
+        
+        Feature: config-separation-and-metadata-unification
+        Task: 6.2
+        """
+        with tempfile.TemporaryDirectory() as tmpdir:
+            tmpdir_path = Path(tmpdir)
+            
+            # Initialize TemplateManager (no directories created)
+            manager = TemplateManager(tmpdir_path)
+            
+            # Detect handbook directory for nonexistent handbook
+            detected_dir = manager.detect_handbook_directory('de', 'nonexistent')
+            
+            assert detected_dir is None, \
+                "Nonexistent handbook directory should return None"

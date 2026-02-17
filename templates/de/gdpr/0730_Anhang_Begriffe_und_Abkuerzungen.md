@@ -1,11 +1,16 @@
 # Anhang: Begriffe und Abkürzungen
 
-**Dokument-ID:** 0730  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Referenz  
-**Klassifizierung:** Öffentlich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0730
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -36,8 +41,6 @@ Referenz: DSGVO Art. 4 (Begriffsbestimmungen)
 | **EuGH** | Europäischer Gerichtshof | CJEU (Court of Justice of the European Union) |
 | **EDSA** | Europäischer Datenschutzausschuss | EDPB (European Data Protection Board) |
 | **EDPB** | European Data Protection Board | Europäischer Datenschutzausschuss |
-
----
 
 ## Begriffsdefinitionen (Art. 4 DSGVO)
 
@@ -215,8 +218,6 @@ Eine Dienstleistung im Sinne des Artikels 1 Nummer 1 Buchstabe b der Richtlinie 
 
 Eine völkerrechtliche Organisation und ihre nachgeordneten Stellen oder jede sonstige Einrichtung, die durch eine zwischen zwei oder mehr Ländern geschlossene Übereinkunft geschaffen wurde.
 
----
-
 ## Weitere wichtige Begriffe
 
 ### Besondere Kategorien personenbezogener Daten (Art. 9)
@@ -282,8 +283,6 @@ Rechte natürlicher Personen gegenüber dem Verantwortlichen:
 - Widerspruchsrecht (Art. 21)
 - Recht auf Widerruf der Einwilligung (Art. 7)
 
----
-
 ## Rechtsgrundlagen (Art. 6 Abs. 1)
 
 | Buchstabe | Rechtsgrundlage | Beschreibung |
@@ -294,8 +293,6 @@ Rechte natürlicher Personen gegenüber dem Verantwortlichen:
 | **d** | Schutz lebenswichtiger Interessen | Erforderlich zum Schutz lebenswichtiger Interessen |
 | **e** | Öffentliches Interesse | Erforderlich für Aufgabe im öffentlichen Interesse |
 | **f** | Berechtigtes Interesse | Erforderlich zur Wahrung berechtigter Interessen |
-
----
 
 ## Sanktionen und Bußgelder
 
@@ -311,14 +308,5 @@ Rechte natürlicher Personen gegenüber dem Verantwortlichen:
 - Verstöße gegen Betroffenenrechte (Art. 12-22)
 - Verstöße gegen Datenübermittlung (Art. 44-49)
 
----
-
 **Hinweis:** Diese Definitionen basieren auf der DSGVO und dienen als Referenz. Bei rechtlichen Fragen sollte ein Datenschutzexperte oder Rechtsanwalt konsultiert werden.
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

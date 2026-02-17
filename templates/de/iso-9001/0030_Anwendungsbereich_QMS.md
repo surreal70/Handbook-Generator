@@ -1,11 +1,16 @@
 # Festlegen des Anwendungsbereichs des QMS
 
-**Dokument-ID:** 0030  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0030
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -35,7 +40,7 @@ Dieses Dokument definiert den Anwendungsbereich des Qualitätsmanagementsystems 
 ### Organisatorischer Geltungsbereich
 
 **Organisation:**
-- **Name:** {{ meta.organization }}
+- **Name:** {{ meta-organisation.name }}
 - **Rechtsform:** [TODO: z.B. GmbH, AG]
 - **Hauptsitz:** [TODO: Adresse]
 
@@ -209,8 +214,6 @@ Der Anwendungsbereich bildet die Grundlage für:
 - **Anhang B:** Standortübersicht
 - **Anhang C:** Produkt-/Dienstleistungskatalog
 
----
-
 **Nächste Schritte:**
 1. Definieren Sie den organisatorischen Geltungsbereich klar
 2. Listen Sie alle eingeschlossenen Produkte und Dienstleistungen auf
@@ -219,10 +222,3 @@ Der Anwendungsbereich bildet die Grundlage für:
 5. Kommunizieren Sie den Anwendungsbereich an alle relevanten Parteien
 6. Überprüfen Sie den Anwendungsbereich regelmäßig
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

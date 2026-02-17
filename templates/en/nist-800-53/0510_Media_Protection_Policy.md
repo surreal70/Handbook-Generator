@@ -1,13 +1,16 @@
 # Media Protection Policy
 
-**Document ID:** NIST-0510  
-**Control Family:** Media Protection (MP)  
-**Control:** MP-1  
-**Organization:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Draft / In Review / Approved  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0510
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -64,13 +67,5 @@ The organization develops, documents, and disseminates media protection policy a
 **Assessment Method:** Examine, Interview  
 **Assessment Status:** [TODO: Satisfied / Other than Satisfied / Not Applicable]  
 **Findings:** [TODO: Description]  
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 <!-- End of template -->

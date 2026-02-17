@@ -1,5 +1,19 @@
 # Policy: Asset Management
 
+**Dokument-ID:** 0300
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This policy establishes the principles for asset management and inventory control.
@@ -10,27 +24,15 @@ types and management maturity.
 ISO 27001:2022 Annex A Reference: A.5.9, A.5.10, A.5.11
 -->
 
-**Dokument-ID:** 0300  
-**Dokumenttyp:** Policy (abstrakt)  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.5.9-A.5.11 (inkl. Amendment 1:2024)  
-**Owner:** {{ meta.ciso.name }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
-
----
-
 ## 1. Zweck
 
-Diese Policy definiert die Grundsätze für Asset Management und Inventarverwaltung der **{{ meta.organization.name }}**. Sie stellt sicher, dass alle Informationswerte (Assets) identifiziert, dokumentiert, klassifiziert und über ihren gesamten Lebenszyklus angemessen geschützt werden.
+Diese Policy definiert die Grundsätze für Asset Management und Inventarverwaltung der **{{ meta-organisation.name }}**. Sie stellt sicher, dass alle Informationswerte (Assets) identifiziert, dokumentiert, klassifiziert und über ihren gesamten Lebenszyklus angemessen geschützt werden.
 
 ## 2. Geltungsbereich
 
 Diese Policy gilt für:
 
-- **Organisationseinheiten:** Alle Abteilungen und Standorte der {{ meta.organization.name }}
+- **Organisationseinheiten:** Alle Abteilungen und Standorte der {{ meta-organisation.name }}
 - **Asset-Typen:** Hardware, Software, Daten, Informationen, Dienste, Personen, immaterielle Werte
 - **Systeme:** Alle IT-Systeme, Netzwerkkomponenten, Endgeräte, Server, Cloud-Ressourcen
 - **Lebenszyklus:** Beschaffung, Inbetriebnahme, Betrieb, Wartung, Außerbetriebnahme, Entsorgung
@@ -180,18 +182,9 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **ITIL 4** - IT Asset Management
 - **ISO/IEC 19770** - IT Asset Management
 
----
-
 **Genehmigt durch:**  
 {{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+Datum: {{ meta-handbook.modifydate }}
 
-**Nächster Review:** {{ meta.document.next_review }} (jährlich oder anlassbezogen)
+**Nächster Review:** {{ meta-handbook.next_review }} (jährlich oder anlassbezogen)
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

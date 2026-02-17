@@ -1,11 +1,16 @@
 # Anhang: Prozesslandkarte
 
-**Dokument-ID:** 0750  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0750
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -18,7 +23,7 @@ Referenz: ISO 9001:2015, Kapitel 4.4
 
 ## Zweck
 
-Dieser Anhang stellt die Prozesslandkarte von {{ meta.organization }} dar und beschreibt die Hauptprozesse des QMS.
+Dieser Anhang stellt die Prozesslandkarte von {{ meta-organisation.name }} dar und beschreibt die Hauptprozesse des QMS.
 
 ## Prozesslandkarte
 
@@ -245,14 +250,5 @@ Dieser Anhang stellt die Prozesslandkarte von {{ meta.organization }} dar und be
 - [TODO: Liste relevanter Verfahrensanweisungen]
 - [TODO: Liste relevanter Arbeitsanweisungen]
 
----
-
 **Hinweis:** Diese Prozesslandkarte ist ein lebendes Dokument und wird bei Bedarf aktualisiert.
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

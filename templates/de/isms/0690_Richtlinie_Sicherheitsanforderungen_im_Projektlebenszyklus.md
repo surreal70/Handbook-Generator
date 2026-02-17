@@ -1,14 +1,16 @@
 # Richtlinie: Sicherheitsanforderungen im Projektlebenszyklus
 
-**Dokument-ID:** 0690  
-**Dokumenttyp:** Richtlinie (detailliert)  
-**Zugehörige Policy:** 0680_Policy_Security_in_Projects.md  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.5.8  
-**Owner:** {{ meta.pmo.manager }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}
+**Dokument-ID:** 0690
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -19,7 +21,7 @@ Diese Richtlinie konkretisiert die `0680_Policy_Security_in_Projects.md` und def
 - Security-Reviews und -Gateways
 - Security-by-Design-Prinzipien
 
-**Geltungsbereich:** Alle IT-Projekte bei **{{ meta.organization.name }}**
+**Geltungsbereich:** Alle IT-Projekte bei **{{ meta-organisation.name }}**
 
 ## 2. Projektklassifizierung
 
@@ -363,15 +365,6 @@ Diese Richtlinie konkretisiert die `0680_Policy_Security_in_Projects.md` und def
 - **NIST SP 800-64** - Security Considerations in the System Development Life Cycle
 - **OWASP SAMM** - Software Assurance Maturity Model
 
----
-
 **Genehmigt durch:** {{ meta.ciso.name }}, CISO  
-**Nächster Review:** {{ meta.document.next_review }}
+**Nächster Review:** {{ meta-handbook.next_review }}
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

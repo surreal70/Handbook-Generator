@@ -1,11 +1,16 @@
 # Process Interaction and Process Map
 
-**Document-ID:** 0050  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0050
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -314,8 +319,6 @@ The process map is updated when:
 - **Appendix C:** SIPOC diagrams (Supplier-Input-Process-Output-Customer)
 - **Appendix D:** Process flow diagrams
 
----
-
 **Next Steps:**
 1. Create a visual process map
 2. Document all process interactions
@@ -324,10 +327,3 @@ The process map is updated when:
 5. Monitor effectiveness of process interactions
 6. Update the process map regularly
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

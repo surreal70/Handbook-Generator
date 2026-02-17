@@ -1,15 +1,27 @@
 # Datenmanagement und Datenschutz
 
+**Dokument-ID:** [FRAMEWORK]-0220
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Übersicht
 
 Dieses Dokument beschreibt die Prozesse und Richtlinien für das Datenmanagement und den Datenschutz im IT-Service. Es definiert Datenklassifizierung, Datenschutzanforderungen gemäß DSGVO, Datenaufbewahrung und -löschung sowie Data-Governance-Strukturen.
 
-**Dokumentverantwortlicher:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Organisation:** {{ meta.organization.name }}
-
----
+**Dokumentverantwortlicher:** {{ meta-handbook.owner }}  
+**Genehmigt durch:** {{ meta-handbook.approver }}  
+**Version:** {{ meta-handbook.revision }}  
+**Organisation:** {{ meta-organisation.name }}
 
 ## Datenklassifizierung
 
@@ -59,8 +71,6 @@ Dieses Dokument beschreibt die Prozesse und Richtlinien für das Datenmanagement
 | [TODO] | [TODO] | {{ netbox.storage.location }} | [TODO] | [TODO] |
 | [TODO] | [TODO] | {{ netbox.storage.location }} | [TODO] | [TODO] |
 | [TODO] | [TODO] | {{ netbox.storage.location }} | [TODO] | [TODO] |
-
----
 
 ## Datenschutz-Anforderungen (DSGVO)
 
@@ -132,12 +142,12 @@ Alle Informationen, die sich auf eine identifizierte oder identifizierbare natü
 
 | Recht | Beschreibung | Reaktionszeit | Verantwortlich |
 |---|---|---|---|
-| **Auskunftsrecht** | Information über gespeicherte Daten | 1 Monat | {{ meta.ciso.name }} |
-| **Berichtigungsrecht** | Korrektur unrichtiger Daten | Unverzüglich | {{ meta.ciso.name }} |
-| **Löschungsrecht** | Löschung personenbezogener Daten | Unverzüglich | {{ meta.ciso.name }} |
-| **Einschränkung** | Einschränkung der Verarbeitung | Unverzüglich | {{ meta.ciso.name }} |
-| **Datenübertragbarkeit** | Übertragung an anderen Verantwortlichen | 1 Monat | {{ meta.ciso.name }} |
-| **Widerspruchsrecht** | Widerspruch gegen Verarbeitung | Unverzüglich | {{ meta.ciso.name }} |
+| **Auskunftsrecht** | Information über gespeicherte Daten | 1 Monat | {{ meta-organisation-roles.role_ciso.name }} |
+| **Berichtigungsrecht** | Korrektur unrichtiger Daten | Unverzüglich | {{ meta-organisation-roles.role_ciso.name }} |
+| **Löschungsrecht** | Löschung personenbezogener Daten | Unverzüglich | {{ meta-organisation-roles.role_ciso.name }} |
+| **Einschränkung** | Einschränkung der Verarbeitung | Unverzüglich | {{ meta-organisation-roles.role_ciso.name }} |
+| **Datenübertragbarkeit** | Übertragung an anderen Verantwortlichen | 1 Monat | {{ meta-organisation-roles.role_ciso.name }} |
+| **Widerspruchsrecht** | Widerspruch gegen Verarbeitung | Unverzüglich | {{ meta-organisation-roles.role_ciso.name }} |
 
 ### Datenschutz-Folgenabschätzung (DSFA)
 
@@ -166,8 +176,6 @@ Alle Informationen, die sich auf eine identifizierte oder identifizierbare natü
   - Zusammenarbeit mit Aufsichtsbehörden
   - Anlaufstelle für Betroffene
 
----
-
 ## Datenaufbewahrung und -löschung
 
 ### Aufbewahrungsfristen
@@ -176,12 +184,12 @@ Alle Informationen, die sich auf eine identifizierte oder identifizierbare natü
 
 | Datenart | Aufbewahrungsfrist | Rechtsgrundlage | Verantwortlich |
 |---|---|---|---|
-| Geschäftsbriefe | 6 Jahre | HGB § 257 | {{ meta.cfo.name }} |
-| Buchungsbelege | 10 Jahre | HGB § 257, AO § 147 | {{ meta.cfo.name }} |
-| Jahresabschlüsse | 10 Jahre | HGB § 257 | {{ meta.cfo.name }} |
-| Lohnunterlagen | 6 Jahre | AO § 147 | {{ meta.cfo.name }} |
-| Steuerunterlagen | 10 Jahre | AO § 147 | {{ meta.cfo.name }} |
-| Personalakten | 3-10 Jahre | Verschiedene | {{ meta.coo.name }} |
+| Geschäftsbriefe | 6 Jahre | HGB § 257 | {{ meta-organisation-roles.role_cfo.name }} |
+| Buchungsbelege | 10 Jahre | HGB § 257, AO § 147 | {{ meta-organisation-roles.role_cfo.name }} |
+| Jahresabschlüsse | 10 Jahre | HGB § 257 | {{ meta-organisation-roles.role_cfo.name }} |
+| Lohnunterlagen | 6 Jahre | AO § 147 | {{ meta-organisation-roles.role_cfo.name }} |
+| Steuerunterlagen | 10 Jahre | AO § 147 | {{ meta-organisation-roles.role_cfo.name }} |
+| Personalakten | 3-10 Jahre | Verschiedene | {{ meta-organisation-roles.role_coo.name }} |
 
 #### Betriebliche Aufbewahrungsfristen
 
@@ -189,8 +197,8 @@ Alle Informationen, die sich auf eine identifizierte oder identifizierbare natü
 |---|---|---|---|
 | Verträge | Vertragslaufzeit + 3 Jahre | Gewährleistung | [TODO] |
 | Projektdokumentation | 5 Jahre | Nachvollziehbarkeit | [TODO] |
-| Audit-Logs | 1 Jahr | Sicherheit | {{ meta.ciso.name }} |
-| Backup-Daten | 30-90 Tage | Wiederherstellung | {{ meta.it_operations_manager.name }} |
+| Audit-Logs | 1 Jahr | Sicherheit | {{ meta-organisation-roles.role_ciso.name }} |
+| Backup-Daten | 30-90 Tage | Wiederherstellung | {{ meta-organisation-roles.role_it_operations_manager.name }} |
 | E-Mails | 1-3 Jahre | Geschäftskommunikation | [TODO] |
 
 ### Löschkonzept
@@ -212,18 +220,18 @@ Alle Informationen, die sich auf eine identifizierte oder identifizierbare natü
 
 | Datenträger | Methode | Standard | Verantwortlich |
 |---|---|---|---|
-| Festplatten | Secure Erase / Degaussing | NIST SP 800-88 | {{ meta.it_operations_manager.name }} |
-| SSDs | Crypto Erase / Zerstörung | NIST SP 800-88 | {{ meta.it_operations_manager.name }} |
-| Backup-Medien | Überschreiben / Zerstörung | NIST SP 800-88 | {{ meta.it_operations_manager.name }} |
-| Cloud-Daten | API-basierte Löschung | Provider-Standard | {{ meta.it_operations_manager.name }} |
-| Datenbanken | SQL DELETE / TRUNCATE | Datenbankstandard | {{ meta.it_operations_manager.name }} |
-| Papier | Aktenvernichtung (P-4) | DIN 66399 | {{ meta.coo.name }} |
+| Festplatten | Secure Erase / Degaussing | NIST SP 800-88 | {{ meta-organisation-roles.role_it_operations_manager.name }} |
+| SSDs | Crypto Erase / Zerstörung | NIST SP 800-88 | {{ meta-organisation-roles.role_it_operations_manager.name }} |
+| Backup-Medien | Überschreiben / Zerstörung | NIST SP 800-88 | {{ meta-organisation-roles.role_it_operations_manager.name }} |
+| Cloud-Daten | API-basierte Löschung | Provider-Standard | {{ meta-organisation-roles.role_it_operations_manager.name }} |
+| Datenbanken | SQL DELETE / TRUNCATE | Datenbankstandard | {{ meta-organisation-roles.role_it_operations_manager.name }} |
+| Papier | Aktenvernichtung (P-4) | DIN 66399 | {{ meta-organisation-roles.role_coo.name }} |
 
 #### Löschnachweis
 - Dokumentation aller Löschvorgänge
 - Protokollierung von Datum, Datenart, Methode
 - Aufbewahrung der Löschnachweise für 3 Jahre
-- Verantwortlich: {{ meta.ciso.name }}
+- Verantwortlich: {{ meta-organisation-roles.role_ciso.name }}
 
 ### Archivierung
 
@@ -241,15 +249,13 @@ Alle Informationen, die sich auf eine identifizierte oder identifizierbare natü
 |---|---|---|---|---|
 | [TODO: Archivsystem] | [TODO] | [TODO] Jahre | [TODO] | [TODO] |
 
----
-
 ## Data-Governance
 
 ### Governance-Struktur
 
 #### Data Governance Board
-- **Vorsitz:** {{ meta.cio.name }}
-- **Mitglieder:** {{ meta.ciso.name }}, {{ meta.cfo.name }}, Fachbereichsleiter
+- **Vorsitz:** {{ meta-organisation-roles.role_cio.name }}
+- **Mitglieder:** {{ meta-organisation-roles.role_ciso.name }}, {{ meta-organisation-roles.role_cfo.name }}, Fachbereichsleiter
 - **Frequenz:** Quartalsweise
 - **Aufgaben:**
   - Strategische Daten-Governance
@@ -314,8 +320,6 @@ Alle Informationen, die sich auf eine identifizierte oder identifizierbare natü
 4. **Prävention:** Maßnahmen zur Vermeidung zukünftiger Probleme
 5. **Monitoring:** Kontinuierliche Überwachung
 
----
-
 ## Datensicherheit
 
 ### Verschlüsselung
@@ -324,20 +328,20 @@ Alle Informationen, die sich auf eine identifizierte oder identifizierbare natü
 
 | Datenart | Verschlüsselung | Algorithmus | Schlüssellänge | Verantwortlich |
 |---|---|---|---|---|
-| Streng vertraulich | Pflicht | AES | 256 Bit | {{ meta.ciso.name }} |
-| Vertraulich | Pflicht | AES | 256 Bit | {{ meta.ciso.name }} |
-| Intern | Empfohlen | AES | 128/256 Bit | {{ meta.it_operations_manager.name }} |
+| Streng vertraulich | Pflicht | AES | 256 Bit | {{ meta-organisation-roles.role_ciso.name }} |
+| Vertraulich | Pflicht | AES | 256 Bit | {{ meta-organisation-roles.role_ciso.name }} |
+| Intern | Empfohlen | AES | 128/256 Bit | {{ meta-organisation-roles.role_it_operations_manager.name }} |
 | Öffentlich | Nicht erforderlich | - | - | - |
 
 #### Verschlüsselung in Übertragung (Data in Transit)
 
 | Verbindungstyp | Protokoll | Mindestversion | Verantwortlich |
 |---|---|---|---|
-| Web-Traffic | HTTPS/TLS | TLS 1.2 | {{ meta.it_operations_manager.name }} |
-| E-Mail | TLS/S/MIME | TLS 1.2 | {{ meta.it_operations_manager.name }} |
-| Dateiübertragung | SFTP/FTPS | TLS 1.2 | {{ meta.it_operations_manager.name }} |
-| VPN | IPsec/OpenVPN | - | {{ meta.it_operations_manager.name }} |
-| Datenbank | TLS | TLS 1.2 | {{ meta.it_operations_manager.name }} |
+| Web-Traffic | HTTPS/TLS | TLS 1.2 | {{ meta-organisation-roles.role_it_operations_manager.name }} |
+| E-Mail | TLS/S/MIME | TLS 1.2 | {{ meta-organisation-roles.role_it_operations_manager.name }} |
+| Dateiübertragung | SFTP/FTPS | TLS 1.2 | {{ meta-organisation-roles.role_it_operations_manager.name }} |
+| VPN | IPsec/OpenVPN | - | {{ meta-organisation-roles.role_it_operations_manager.name }} |
+| Datenbank | TLS | TLS 1.2 | {{ meta-organisation-roles.role_it_operations_manager.name }} |
 
 ### Zugriffskontrolle
 
@@ -362,11 +366,11 @@ Alle Informationen, die sich auf eine identifizierte oder identifizierbare natü
 
 | Ereignistyp | Logging | Aufbewahrung | Verantwortlich |
 |---|---|---|---|
-| Datenzugriff (vertraulich) | Pflicht | 1 Jahr | {{ meta.ciso.name }} |
-| Datenänderung | Pflicht | 1 Jahr | {{ meta.ciso.name }} |
-| Datenlöschung | Pflicht | 3 Jahre | {{ meta.ciso.name }} |
-| Zugriffsverweigerung | Pflicht | 1 Jahr | {{ meta.ciso.name }} |
-| Admin-Aktivitäten | Pflicht | 1 Jahr | {{ meta.ciso.name }} |
+| Datenzugriff (vertraulich) | Pflicht | 1 Jahr | {{ meta-organisation-roles.role_ciso.name }} |
+| Datenänderung | Pflicht | 1 Jahr | {{ meta-organisation-roles.role_ciso.name }} |
+| Datenlöschung | Pflicht | 3 Jahre | {{ meta-organisation-roles.role_ciso.name }} |
+| Zugriffsverweigerung | Pflicht | 1 Jahr | {{ meta-organisation-roles.role_ciso.name }} |
+| Admin-Aktivitäten | Pflicht | 1 Jahr | {{ meta-organisation-roles.role_ciso.name }} |
 
 #### Log-Inhalte
 - Zeitstempel
@@ -375,8 +379,6 @@ Alle Informationen, die sich auf eine identifizierte oder identifizierbare natü
 - Betroffene Daten/Objekte
 - Quell-IP-Adresse
 - Ergebnis (Erfolg/Fehler)
-
----
 
 ## Datenschutzvorfälle
 
@@ -412,8 +414,6 @@ Alle Informationen, die sich auf eine identifizierte oder identifizierbare natü
 8. **Dokumentation:** Erfassung im Incident-Register
 9. **Lessons Learned:** Prozessverbesserungen
 
----
-
 ## Prozesse und Verantwortlichkeiten
 
 ### RACI-Matrix
@@ -431,8 +431,6 @@ Alle Informationen, die sich auf eine identifizierte oder identifizierbare natü
 
 > **Legende:** R = Responsible, A = Accountable, C = Consulted, I = Informed
 
----
-
 ## Compliance und Standards
 
 ### Relevante Standards
@@ -448,8 +446,6 @@ Alle Informationen, die sich auf eine identifizierte oder identifizierbare natü
 - Auftragsverarbeitungsverträge
 - Löschnachweise
 - Audit-Logs
-
----
 
 ## Anhang
 
@@ -472,16 +468,7 @@ Alle Informationen, die sich auf eine identifizierte oder identifizierbare natü
 - ISO/IEC 27701:2019
 - NIST SP 800-88 Rev. 1
 
----
-
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Letzte Aktualisierung:** {{ meta-handbook.date }}  
 **Nächste Review:** [TODO: Datum]  
-**Kontakt:** {{ meta.ciso.email }}
+**Kontakt:** {{ meta-organisation-roles.role_ciso.email }}
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

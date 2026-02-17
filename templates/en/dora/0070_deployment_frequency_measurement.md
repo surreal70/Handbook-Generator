@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0110
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Deployment Frequency Measurement
+
+**Document-ID:** [FRAMEWORK]-0070
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -30,9 +41,9 @@ This document describes the detailed measurement methodology for Deployment Freq
 - Document timestamps
 
 **Data Sources**:
-- **CI/CD**: {{ source.cicd_system }}
-- **Deployment Log**: {{ source.deployment_log_location }}
-- **Monitoring**: {{ source.monitoring_dashboard }}
+- **CI/CD**: [TODO]
+- **Deployment Log**: [TODO]
+- **Monitoring**: [TODO]
 
 ### Deployment Definition
 
@@ -60,9 +71,9 @@ For each deployment:
 
 ### Data Quality
 
-- **Completeness**: {{ source.data_completeness }}
-- **Accuracy**: {{ source.data_accuracy }}
-- **Timeliness**: {{ source.data_timeliness }}
+- **Completeness**: [TODO]
+- **Accuracy**: [TODO]
+- **Timeliness**: [TODO]
 
 ## Calculation
 
@@ -81,16 +92,16 @@ Deployment Frequency = Number of successful deployments / Time period
 ### Example Calculation
 
 **Service A**:
-- Deployments in 30 days: {{ source.service_a_deployments }}
-- Deployment Frequency: {{ source.service_a_frequency }}
+- Deployments in 30 days: [TODO]
+- Deployment Frequency: [TODO]
 
 ## Reporting
 
 ### Dashboards
 
-- **Real-time Dashboard**: {{ source.realtime_dashboard_url }}
-- **Weekly Report**: {{ source.weekly_report_location }}
-- **Monthly Report**: {{ source.monthly_report_location }}
+- **Real-time Dashboard**: [TODO]
+- **Weekly Report**: [TODO]
+- **Monthly Report**: [TODO]
 
 ### Visualizations
 
@@ -99,13 +110,5 @@ Deployment Frequency = Number of successful deployments / Time period
 - Service heatmaps
 
 <!-- Note: Automation of data collection is critical -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0140
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Access Control Policy
+
+**Document-ID:** [FRAMEWORK]-0140
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -15,7 +26,7 @@ This document defines the policies and requirements for access control to inform
 
 ## Scope
 
-This policy applies to all users, systems, and resources of {{ source.organization_name }}.
+This policy applies to all users, systems, and resources of [TODO].
 
 ## Fundamental Principles
 
@@ -105,15 +116,15 @@ Critical functions are separated:
 ### Password Requirements
 
 **Complexity:**
-- Minimum length: {{ source.password_min_length }} characters
+- Minimum length: [TODO] characters
 - Uppercase, lowercase, numbers, special characters
 - No dictionary words
 - No personal information
 
 **Management:**
-- Change every {{ source.password_change_interval }} days
-- No reuse of last {{ source.password_history }} passwords
-- Automatic lockout after {{ source.password_lockout_attempts }} failed attempts
+- Change every [TODO] days
+- No reuse of last [TODO] passwords
+- Automatic lockout after [TODO] failed attempts
 - Password manager recommended
 
 ### Multi-Factor Authentication (MFA)
@@ -131,7 +142,7 @@ MFA is required for:
 
 ### Single Sign-On (SSO)
 
-{{ source.organization_name }} uses SSO for:
+[TODO] uses SSO for:
 - Central authentication
 - Reduction of passwords
 - Simplified access management
@@ -327,7 +338,7 @@ All users are trained on:
 
 ## Metrics
 
-{{ source.organization_name }} measures:
+[TODO] measures:
 - Number of active user accounts
 - Percentage of MFA-enabled accounts (Target: 100%)
 - Average time to grant access
@@ -336,13 +347,5 @@ All users are trained on:
 - Number of access violations
 
 <!-- Note: Adapt requirements to your organization -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

@@ -1,13 +1,16 @@
 # Roles and Responsibilities
 
-**Document ID:** HIPAA-0040  
-**Organization:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Approved by:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0040
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -26,7 +29,7 @@ Customization required:
 
 ## 1. Purpose
 
-This document defines the roles, responsibilities, and accountabilities for HIPAA compliance at {{ meta.organization.name }}.
+This document defines the roles, responsibilities, and accountabilities for HIPAA compliance at {{ meta-organisation.name }}.
 
 ### 1.1 Objectives
 
@@ -46,9 +49,9 @@ This document defines the roles, responsibilities, and accountabilities for HIPA
 
 ### 2.1 Chief Executive Officer (CEO)
 
-**Name:** {{ meta.roles.ceo.name }}  
-**Email:** {{ meta.roles.ceo.email }}  
-**Phone:** {{ meta.roles.ceo.phone }}  
+**Name:** {{ meta-organisation-roles.role_CEO }}  
+**Email:** {{ meta-organisation-roles.role_CEO }}  
+**Phone:** [TODO]  
 
 **Responsibilities:**
 - Ultimate accountability for HIPAA compliance
@@ -60,9 +63,9 @@ This document defines the roles, responsibilities, and accountabilities for HIPA
 
 ### 2.2 Chief Information Officer (CIO)
 
-**Name:** {{ meta.roles.cio.name }}  
-**Email:** {{ meta.roles.cio.email }}  
-**Phone:** {{ meta.roles.cio.phone }}  
+**Name:** {{ meta-organisation-roles.role_CIO }}  
+**Email:** {{ meta-organisation-roles.role_CIO }}  
+**Phone:** [TODO]  
 
 **Responsibilities:**
 - IT infrastructure supporting HIPAA compliance
@@ -88,9 +91,9 @@ This document defines the roles, responsibilities, and accountabilities for HIPA
 
 ### 3.1 Privacy Officer
 
-**Name:** {{ meta.roles.privacy_officer.name }}  
-**Email:** {{ meta.roles.privacy_officer.email }}  
-**Phone:** {{ meta.roles.privacy_officer.phone }}  
+**Name:** [TODO]  
+**Email:** [TODO]  
+**Phone:** [TODO]  
 **Office Location:** [TODO: Location]  
 
 **HIPAA Requirement:** 45 CFR §164.530(a)(1)(i)
@@ -121,9 +124,9 @@ This document defines the roles, responsibilities, and accountabilities for HIPA
 
 ### 3.2 Security Officer
 
-**Name:** {{ meta.roles.security_officer.name }}  
-**Email:** {{ meta.roles.security_officer.email }}  
-**Phone:** {{ meta.roles.security_officer.phone }}  
+**Name:** [TODO]  
+**Email:** [TODO]  
+**Phone:** [TODO]  
 **Office Location:** [TODO: Location]  
 
 **HIPAA Requirement:** 45 CFR §164.308(a)(2)
@@ -327,7 +330,7 @@ This document defines the roles, responsibilities, and accountabilities for HIPA
 
 **Committee Name:** HIPAA Compliance Committee
 
-**Chair:** {{ meta.roles.privacy_officer.name }} (Privacy Officer)
+**Chair:** [TODO] (Privacy Officer)
 
 **Members:**
 - CEO or designee
@@ -416,9 +419,9 @@ This document defines the roles, responsibilities, and accountabilities for HIPA
 **Emergency Contacts:**
 | Role | Name | Mobile | Email |
 |------|------|--------|-------|
-| Privacy Officer | {{ meta.roles.privacy_officer.name }} | [TODO: Mobile] | {{ meta.roles.privacy_officer.email }} |
-| Security Officer | {{ meta.roles.security_officer.name }} | [TODO: Mobile] | {{ meta.roles.security_officer.email }} |
-| CEO | {{ meta.roles.ceo.name }} | [TODO: Mobile] | {{ meta.roles.ceo.email }} |
+| Privacy Officer | [TODO] | [TODO: Mobile] | [TODO] |
+| Security Officer | [TODO] | [TODO: Mobile] | [TODO] |
+| CEO | {{ meta-organisation-roles.role_CEO }} | [TODO: Mobile] | {{ meta-organisation-roles.role_CEO }} |
 
 ## 8. Training and Competency
 
@@ -480,13 +483,5 @@ This document defines the roles, responsibilities, and accountabilities for HIPA
 - Risk analysis results
 - Training effectiveness
 - Budget and resource needs
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 <!-- End of template -->

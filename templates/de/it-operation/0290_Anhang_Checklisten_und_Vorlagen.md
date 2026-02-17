@@ -1,15 +1,27 @@
 # Anhang: Checklisten und Vorlagen
 
+**Dokument-ID:** [FRAMEWORK]-0290
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Übersicht
 
 Dieses Dokument enthält eine Sammlung von Checklisten, Vorlagen für Standarddokumente und Formularen für den IT-Betrieb. Ziel ist es, konsistente und effiziente Durchführung von Standardprozessen zu gewährleisten.
 
-**Dokumentverantwortlicher:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Organisation:** {{ meta.organization.name }}
-
----
+**Dokumentverantwortlicher:** {{ meta-handbook.owner }}  
+**Genehmigt durch:** {{ meta-handbook.approver }}  
+**Version:** {{ meta-handbook.revision }}  
+**Organisation:** {{ meta-organisation.name }}
 
 ## Checklisten
 
@@ -71,8 +83,6 @@ Dieses Dokument enthält eine Sammlung von Checklisten, Vorlagen für Standarddo
 **Dauer:** [HH:MM]
 ```
 
----
-
 #### Major-Incident-Checkliste
 
 ```markdown
@@ -131,8 +141,6 @@ Dieses Dokument enthält eine Sammlung von Checklisten, Vorlagen für Standarddo
 **Technischer Lead:** [Name]
 **Kommunikations-Lead:** [Name]
 ```
-
----
 
 ### Change-Management-Checklisten
 
@@ -203,8 +211,6 @@ Dieses Dokument enthält eine Sammlung von Checklisten, Vorlagen für Standarddo
 **Status:** Erfolgreich / Rollback / Abgebrochen
 ```
 
----
-
 ### Backup und Recovery Checklisten
 
 #### Backup-Verifikations-Checkliste
@@ -252,8 +258,6 @@ Dieses Dokument enthält eine Sammlung von Checklisten, Vorlagen für Standarddo
 **Ergebnis:** Erfolgreich / Mit Problemen / Fehlgeschlagen
 **Nächster Test:** [YYYY-MM-DD]
 ```
-
----
 
 #### Disaster-Recovery-Test-Checkliste
 
@@ -319,8 +323,6 @@ Dieses Dokument enthält eine Sammlung von Checklisten, Vorlagen für Standarddo
 **Test-Ergebnis:** Erfolgreich / Teilweise erfolgreich / Fehlgeschlagen
 **Nächster Test:** [YYYY-MM-DD]
 ```
-
----
 
 ### Security-Checklisten
 
@@ -389,8 +391,6 @@ Dieses Dokument enthält eine Sammlung von Checklisten, Vorlagen für Standarddo
 **Status:** Offen / Eingedämmt / Gelöst
 ```
 
----
-
 ## Vorlagen
 
 ### Incident-Report-Vorlage
@@ -448,11 +448,9 @@ Dieses Dokument enthält eine Sammlung von Checklisten, Vorlagen für Standarddo
 - [Monitoring-Daten]
 
 **Erstellt von:** [Name]
-**Genehmigt von:** {{ meta.it_operations_manager.name }}
+**Genehmigt von:** {{ meta-organisation-roles.role_it_operations_manager.name }}
 **Datum:** [YYYY-MM-DD]
 ```
-
----
 
 ### Change-Request-Vorlage
 
@@ -522,11 +520,9 @@ Dieses Dokument enthält eine Sammlung von Checklisten, Vorlagen für Standarddo
 - [ ] CAB-Genehmigung: [Name] - [Datum]
 
 **Antragsteller:** [Name]
-**Change-Manager:** {{ meta.it_operations_manager.name }}
+**Change-Manager:** {{ meta-organisation-roles.role_it_operations_manager.name }}
 **Status:** Beantragt / Genehmigt / Abgelehnt / Implementiert
 ```
-
----
 
 ### Postmortem-Vorlage
 
@@ -598,8 +594,6 @@ Dieses Dokument enthält eine Sammlung von Checklisten, Vorlagen für Standarddo
 **Follow-Up:** [Datum für Review der Action Items]
 ```
 
----
-
 ## Formulare
 
 ### Zugriffs-Anforderungs-Formular
@@ -643,8 +637,6 @@ Dieses Dokument enthält eine Sammlung von Checklisten, Vorlagen für Standarddo
 
 **Status:** Beantragt / Genehmigt / Abgelehnt / Implementiert
 ```
-
----
 
 ### Hardware-Anforderungs-Formular
 
@@ -695,8 +687,6 @@ Dieses Dokument enthält eine Sammlung von Checklisten, Vorlagen für Standarddo
 **Status:** Beantragt / Genehmigt / Bestellt / Geliefert / Installiert
 ```
 
----
-
 ## Prozesse und Verantwortlichkeiten
 
 ### RACI-Matrix
@@ -711,16 +701,12 @@ Dieses Dokument enthält eine Sammlung von Checklisten, Vorlagen für Standarddo
 
 > **Legende:** R = Responsible, A = Accountable, C = Consulted, I = Informed
 
----
-
 ## Compliance und Standards
 
 ### Relevante Standards
 - **ITIL v4:** Service Operation Practice
 - **ISO 20000:** Clause 8.1 - Operational Planning and Control
 - **COBIT 2019:** DSS01 - Managed Operations
-
----
 
 ## Anhang
 
@@ -738,16 +724,7 @@ Dieses Dokument enthält eine Sammlung von Checklisten, Vorlagen für Standarddo
 - ISO/IEC 20000-1:2018
 - COBIT 2019 Framework
 
----
-
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Letzte Aktualisierung:** {{ meta-handbook.date }}  
 **Nächste Review:** [TODO: Datum]  
-**Kontakt:** {{ meta.it_operations_manager.email }}
+**Kontakt:** {{ meta-organisation-roles.role_it_operations_manager.email }}
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

@@ -1,17 +1,28 @@
----
+
 Document-ID: togaf-0400
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Technologie-Architecture Übersicht
 
+**Dokument-ID:** [FRAMEWORK]-0400
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt die Technologie-Architecture für {{ source.organization_name }}, einschließlich Technologie-Plattformen, Infrastruktur, Netzwerk und Sicherheits-Architecture.
+Dieses Dokument beschreibt die Technologie-Architecture für [TODO], einschließlich Technologie-Plattformen, Infrastruktur, Netzwerk und Sicherheits-Architecture.
 
 ## Geltungsbereich
 
@@ -25,52 +36,43 @@ Dieses Dokument beschreibt die Technologie-Architecture für {{ source.organizat
 
 | Plattform | Zweck | Technologie | Status |
 |-----------|-------|-------------|--------|
-| {{ source.platform_1 }} | {{ source.platform_1_purpose }} | {{ source.platform_1_tech }} | {{ source.platform_1_status }} |
-| {{ source.platform_2 }} | {{ source.platform_2_purpose }} | {{ source.platform_2_tech }} | {{ source.platform_2_status }} |
-| {{ source.platform_3 }} | {{ source.platform_3_purpose }} | {{ source.platform_3_tech }} | {{ source.platform_3_status }} |
+| [TODO] | [TODO] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## Infrastruktur-Architecture
 
-**Hosting-Modell**: {{ source.hosting_model }}
+**Hosting-Modell**: [TODO]
 
 **Infrastruktur-Komponenten**:
-- Compute: {{ source.compute_infrastructure }}
-- Storage: {{ source.storage_infrastructure }}
-- Network: {{ source.network_infrastructure }}
+- Compute: [TODO]
+- Storage: [TODO]
+- Network: [TODO]
 
 ## Netzwerk-Architecture
 
-**Netzwerk-Topologie**: {{ source.network_topology }}
+**Netzwerk-Topologie**: [TODO]
 
 **Netzwerk-Zonen**:
-- {{ source.network_zone_1 }}
-- {{ source.network_zone_2 }}
-- {{ source.network_zone_3 }}
+- [TODO]
+- [TODO]
+- [TODO]
 
 ## Sicherheits-Architecture
 
-**Sicherheits-Framework**: {{ source.security_framework }}
+**Sicherheits-Framework**: [TODO]
 
 **Sicherheitskontrollen**:
-- Identity and Access Management: {{ source.iam_controls }}
-- Netzwerksicherheit: {{ source.network_security }}
-- Datenschutz: {{ source.data_protection }}
+- Identity and Access Management: [TODO]
+- Netzwerksicherheit: [TODO]
+- Datenschutz: [TODO]
 
 ## Technologie-Standards
 
 | Kategorie | Standard | Version | Adoptionsstatus |
 |-----------|----------|---------|-----------------|
-| {{ source.std_cat_1 }} | {{ source.std_1 }} | {{ source.std_1_version }} | {{ source.std_1_status }} |
-| {{ source.std_cat_2 }} | {{ source.std_2 }} | {{ source.std_2_version }} | {{ source.std_2_status }} |
+| [TODO] | [TODO] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [TODO] | [TODO] |
 
 <!-- Autorenhinweise: Technologie-Architecture sollte Geschäftsfähigkeiten ermöglichen -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|------|--------|---------|
-| 0.1 | {{meta.document.last_updated}} | {{ meta.defaults.author }} | Initiale Erstellung |
-
-<-  ( marked all subtasks complete End of template -->

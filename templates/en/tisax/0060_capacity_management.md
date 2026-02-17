@@ -1,17 +1,28 @@
----
+
 Document-ID: tisax-0320
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Capacity Management
 
+**Document-ID:** [FRAMEWORK]-0060
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document describes capacity management at {{ source.organization_name }}.
+This document describes capacity management at [TODO].
 
 ## Monitoring
 
@@ -22,25 +33,17 @@ This document describes capacity management at {{ source.organization_name }}.
 
 ## Capacity Planning
 
-**Planning Horizon**: {{ source.capacity_planning_horizon }}
-**Review**: {{ source.capacity_review_frequency }}
+**Planning Horizon**: [TODO]
+**Review**: [TODO]
 
 ## Thresholds
 
 | Resource | Warning | Critical |
 |----------|---------|----------|
-| CPU | {{ source.cpu_warning_threshold }}% | {{ source.cpu_critical_threshold }}% |
-| Memory | {{ source.memory_warning_threshold }}% | {{ source.memory_critical_threshold }}% |
-| Disk | {{ source.disk_warning_threshold }}% | {{ source.disk_critical_threshold }}% |
+| CPU | [TODO]% | [TODO]% |
+| Memory | [TODO]% | [TODO]% |
+| Disk | [TODO]% | [TODO]% |
 
 <!-- Note: Adapt the thresholds -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

@@ -1,11 +1,16 @@
 # Appendix: Process Map
 
-**Document-ID:** 0750  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0750
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -17,7 +22,7 @@ Reference: ISO 9001:2015, Clause 4.4
 
 ## Purpose
 
-This appendix presents the process map of {{ meta.organization }} and describes the main processes of the QMS.
+This appendix presents the process map of {{ meta-organisation.name }} and describes the main processes of the QMS.
 
 ## Process Map
 
@@ -244,14 +249,5 @@ This appendix presents the process map of {{ meta.organization }} and describes 
 - [TODO: List relevant procedures]
 - [TODO: List relevant work instructions]
 
----
-
 **Note:** This process map is a living document and will be updated as needed.
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

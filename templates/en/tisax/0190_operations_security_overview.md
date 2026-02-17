@@ -1,17 +1,28 @@
----
+
 Document-ID: tisax-0300
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Operations Security Overview
 
+**Document-ID:** [FRAMEWORK]-0190
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document provides an overview of operations security at {{ source.organization_name }}.
+This document provides an overview of operations security at [TODO].
 
 ## Operational Processes
 
@@ -30,9 +41,9 @@ This document provides an overview of operations security at {{ source.organizat
 
 ## Responsibilities
 
-**IT Operations Manager**: {{ source.it_operations_manager }}
-**Network Administrator**: {{ source.network_administrator }}
-**Security Administrator**: {{ source.security_administrator }}
+**IT Operations Manager**: [TODO]
+**Network Administrator**: [TODO]
+**Security Administrator**: [TODO]
 
 ## Operational Policies
 
@@ -42,13 +53,5 @@ This document provides an overview of operations security at {{ source.organizat
 - Continuous improvement
 
 <!-- Note: Document all operational processes -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

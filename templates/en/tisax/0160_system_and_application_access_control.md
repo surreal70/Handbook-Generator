@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0160
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # System and Application Access Control
+
+**Document-ID:** [FRAMEWORK]-0160
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -15,7 +26,7 @@ This document defines requirements for access control to systems and application
 
 ## Scope
 
-This document applies to all IT systems and applications of {{ source.organization_name }}.
+This document applies to all IT systems and applications of [TODO].
 
 ## Access Control Mechanisms
 
@@ -180,18 +191,10 @@ This document applies to all IT systems and applications of {{ source.organizati
 
 ## Metrics
 
-{{ source.organization_name }} measures:
+[TODO] measures:
 - Number of failed login attempts
 - Number of privileged access
 - Average session duration
 - Number of access violations
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

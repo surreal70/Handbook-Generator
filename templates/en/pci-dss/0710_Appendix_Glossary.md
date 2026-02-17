@@ -1,13 +1,16 @@
 # Appendix: Glossary and Abbreviations
 
-**Document ID:** PCI-0710  
-**Organization:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Approved by:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0710
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -24,7 +27,7 @@ Customization required:
 
 ## 1. Purpose
 
-This document defines all terms and abbreviations used in the PCI-DSS documentation of {{ meta.organization.name }}.
+This document defines all terms and abbreviations used in the PCI-DSS documentation of {{ meta-organisation.name }}.
 
 ## 2. PCI-DSS Terms
 
@@ -363,13 +366,5 @@ This document defines all terms and abbreviations used in the PCI-DSS documentat
 | Term/Abbreviation | Meaning |
 |-------------------|---------|
 | [TODO] | [TODO] |
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 <!-- End of template -->

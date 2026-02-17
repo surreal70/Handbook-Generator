@@ -1,11 +1,16 @@
 # Controller: Obligations and Accountability
 
-**Document-ID:** 0300  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0300
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,7 +30,7 @@ Reference: GDPR Art. 24 (Responsibility of the controller)
 
 ## Purpose
 
-This document describes the controller's obligations according to Art. 24 GDPR and the implementation of accountability at {{ meta.organization }}. It documents how we ensure that processing of personal data complies with GDPR.
+This document describes the controller's obligations according to Art. 24 GDPR and the implementation of accountability at {{ meta-organisation.name }}. It documents how we ensure that processing of personal data complies with GDPR.
 
 ## Accountability (Art. 24(1))
 
@@ -180,8 +185,6 @@ Measures consider:
 - **Data Protection Impact Assessment (Art. 35):** Risk assessment
 - **Processing by Processor (Art. 28):** Responsibilities with processors
 
----
-
 **Next Steps:**
 1. Document all implemented technical and organizational measures
 2. Create a review plan for regular TOM audits
@@ -189,10 +192,3 @@ Measures consider:
 4. Ensure all evidence documents are current and available
 5. Define clear responsibilities for accountability
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

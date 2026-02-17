@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-38500-0010
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # IT Governance Framework - Overview
+
+**Document-ID:** [FRAMEWORK]-0010
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -16,7 +28,7 @@ This document describes the IT Governance Framework according to ISO/IEC 38500. 
 ## Scope
 
 This document applies to:
-- {{ meta.organization }}
+- {{ meta-organisation.name }}
 - All IT systems and services
 - Board, Executive Management, and IT Management
 - IT governance structures and processes
@@ -59,7 +71,7 @@ The EDM model forms the core of IT governance:
 | Role | Responsibility |
 |------|----------------|
 | Board | Overall responsibility for IT governance |
-| {{ meta.cio }} | Implementation of IT governance strategy |
+| {{ meta-organisation-roles.role_CIO }} | Implementation of IT governance strategy |
 | Executive Management | IT strategy and resource allocation |
 | IT Management | Operational IT governance processes |
 | Governance Committee | Oversight and advisory |
@@ -83,18 +95,9 @@ The EDM model forms the core of IT governance:
 - 0080_conformance_principle.md
 - 0090_human_behavior_principle.md
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |
-
 <!-- 
 Author Notes: 
 - Adapt the governance framework to your organization's size and complexity
 - Ensure the framework is integrated with other governance frameworks (e.g., COBIT)
 - Regularly review the effectiveness of the governance framework
 -->
-

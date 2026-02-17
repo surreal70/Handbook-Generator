@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-31000-0030
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Prinzip 2: Strukturiert und umfassend
+
+**Dokument-ID:** [FRAMEWORK]-0030
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -24,7 +36,7 @@ Ein systematischer, zeitgerechter und strukturierter Ansatz zum Risikomanagement
 - Methoden und Werkzeuge sind standardisiert
 - Ergebnisse sind vergleichbar und nachvollziehbar
 
-## Umsetzung in {{ meta.organization }}
+## Umsetzung in {{ meta-organisation.name }}
 
 ### Risikomanagement-Prozess
 
@@ -55,12 +67,4 @@ Ein systematischer, zeitgerechter und strukturierter Ansatz zum Risikomanagement
 - Risikobewertungsmatrix
 - Risikobehandlungspläne
 - Überwachungsberichte
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |
 

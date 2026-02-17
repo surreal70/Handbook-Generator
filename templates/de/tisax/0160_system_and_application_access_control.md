@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0160
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # System- und Anwendungszugriffskontrolle
+
+**Dokument-ID:** [FRAMEWORK]-0160
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -15,7 +26,7 @@ Dieses Dokument definiert die Anforderungen für die Zugriffskontrolle auf Syste
 
 ## Geltungsbereich
 
-Dieses Dokument gilt für alle IT-Systeme und Anwendungen von {{ source.organization_name }}.
+Dieses Dokument gilt für alle IT-Systeme und Anwendungen von [TODO].
 
 ## Zugriffskontroll-Mechanismen
 
@@ -239,18 +250,9 @@ Dieses Dokument adressiert:
 
 ## Kennzahlen
 
-{{ source.organization_name }} misst:
+[TODO] misst:
 - Anzahl fehlgeschlagener Anmeldeversuche
 - Anzahl privilegierter Zugriffe
 - Durchschnittliche Session-Dauer
 - Anzahl Zugriffsverletzungen
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

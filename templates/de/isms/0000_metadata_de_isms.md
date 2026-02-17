@@ -1,49 +1,34 @@
-# Informationssicherheits-Managementsystem Handbuch
-
-**Dokument-Metadaten**
-
-- **Erstellt am:** {{ metadata.date }}
-- **Autor:** {{ metadata.author }}
-- **Version:** {{ metadata.version }}
-- **Typ:** ISMS-Handbuch
+# ISMS Handbuch - Metadaten
 
 **Dokument-ID:** 0000  
-**Owner:** {{ meta.owner }}  
-**Status:** {{ meta.status }}  
-**Klassifizierung:** {{ meta.classification }}  
-**Template-Version:** 1.0  
+**Datum:** 2026-02-17  
+**Owner:** [TODO]  
 **Revision:** 0  
----
+**Status:** Draft  
+**Klassifizierung:** Internal  
+**Letzte Aktualisierung:** 2026-02-17  
+**Template-Version:** 1.0  
 
+---
 
 ## Handbuch-Informationen
 
-**Organisation:** {{ meta.organization }}  
-**Geltungsbereich:** {{ meta.scope }}  
-**Gültig ab:** {{ meta.valid_from }}  
-**Nächste Überprüfung:** {{ meta.next_review }}  
+**Handbuch-Titel:** ISMS Handbook  
+**Handbuch-Short:** ISMS  
+**Organisation:** [TODO]  
+**Autor:** [TODO]  
+**Geltungsbereich:** [TODO]  
+**Gültig ab:** [TODO]  
+**Nächste Überprüfung:** [TODO]  
 
 ---
 
 ## Dokumentenzweck
 
-[TODO: Add document purpose description]
-
-## Geltungsbereich
-
-{{ meta.scope }}
-
-## Normative Verweise
-
-[TODO: Add normative references]
+Dieses Dokument enthält die Metadaten für das ISMS Handbuch.
 
 ## Änderungshistorie
 
 | Version | Datum | Autor | Änderung |
 |---------|-------|-------|----------|
-| {{ meta.version }} | {{ meta.date }} | {{ meta.author }} | Initiale Version |
-
-<!-- 
-Dieses Dokument unterliegt der Dokumentenlenkung.
-Template-Version: 1.0 - Revision: 0
--->
+| 0 | 2026-02-17 | [TODO] | Initiale Version |

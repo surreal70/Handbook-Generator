@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-38500-0070
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Principle 4: Performance
+
+**Document-ID:** [FRAMEWORK]-0070
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -16,7 +28,7 @@ This document describes the application of the Performance principle in the orga
 ## Scope
 
 This document applies to:
-- {{ meta.organization }}
+- {{ meta-organisation.name }}
 - All IT services and systems
 - IT performance management
 
@@ -37,20 +49,26 @@ IT is fit for purpose to support the organization by providing the required serv
 
 | Criterion | Target | Current |
 |-----------|--------|---------|
-| Service Availability | >99.5% | {{ meta.service_availability }}% |
-| Response Time | <2s | {{ meta.response_time }}s |
-| User Satisfaction | >85% | {{ meta.user_satisfaction }}% |
-| Incident Resolution | <4h | {{ meta.incident_resolution }}h |
+| Service Availability | >99.5% | {{ meta-handbook.service_availability }}% |
+| Response Time | <2s | {{ meta-handbook.response_time }}s |
+| User Satisfaction | >85% | {{ meta-handbook.user_satisfaction }}% |
+| Incident Resolution | <4h | {{ meta-handbook.incident_resolution }}h |
 
 ## Direct
 
 ### Performance Goals
 
 **Service Delivery:**
-- Availability: {{ meta.availability_target }}%
-- Performance: {{ meta.performance_target }}
-- Capacity: {{ meta.capacity_target }}%
-- Reliability: {{ meta.reliability_target }}%
+- Availability: {{ meta-handbook.availability_target }}%
+- Performance: {{ meta-handbook.performance_target }}
+- Capacity: {{ meta-handbook.capacity_target }}%
+- Reliability: {{ meta-handbook.reliability_target }}%
+
+**Service Support:**
+- Incident Response: {{ meta-handbook.incident_response_target }}
+- Problem Resolution: {{ meta-handbook.problem_resolution_target }}
+- Change Success Rate: {{ meta-handbook.change_success_target }}%
+- User Support: {{ meta-handbook.user_support_target }}
 
 ### Service Level Agreements (SLAs)
 
@@ -85,22 +103,14 @@ IT is fit for purpose to support the organization by providing the required serv
 
 ### KPIs
 
-- System Availability: {{ meta.system_availability }}%
-- Mean Time To Repair (MTTR): {{ meta.mttr }} hours
-- Mean Time Between Failures (MTBF): {{ meta.mtbf }} hours
-- Service Desk First Call Resolution: {{ meta.fcr }}%
-- Customer Satisfaction Score (CSAT): {{ meta.csat }}/10
+- System Availability: {{ meta-handbook.system_availability }}%
+- Mean Time To Repair (MTTR): {{ meta-handbook.mttr }} hours
+- Mean Time Between Failures (MTBF): {{ meta-handbook.mtbf }} hours
+- Service Desk First Call Resolution: {{ meta-handbook.fcr }}%
+- Customer Satisfaction Score (CSAT): {{ meta-handbook.csat }}/10
 
 ## Document References
 
 - 0010_governance_framework.md
 - 0020_governance_model.md
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 

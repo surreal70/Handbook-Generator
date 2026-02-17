@@ -1,5 +1,19 @@
 # Policy: Endpoint Security
 
+**Document-ID:** [FRAMEWORK]-0620
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This policy establishes requirements for endpoint security and device protection.
@@ -16,20 +30,18 @@ ISO 27001:2022 Annex A Reference: A.8.1, A.8.2, A.8.3, A.6.7
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** {{ meta-handbook.modifydate }}  
+**Next Review:** {{ meta-handbook.next_review }}
 
 ## 1. Purpose
 
-This policy defines the endpoint security requirements of **{{ meta.organization.name }}**. It ensures that all endpoint devices (workstations, laptops, mobile devices) are appropriately secured and protected against threats.
+This policy defines the endpoint security requirements of **{{ meta-organisation.name }}**. It ensures that all endpoint devices (workstations, laptops, mobile devices) are appropriately secured and protected against threats.
 
 ## 2. Scope
 
 This policy applies to:
 
-- **Organizational Units:** All departments and locations of {{ meta.organization.name }}
+- **Organizational Units:** All departments and locations of {{ meta-organisation.name }}
 - **Devices:** All endpoint devices (workstations, laptops, tablets, smartphones)
 - **Operating Systems:** Windows, macOS, Linux, iOS, Android
 - **Ownership:** Company-owned and BYOD devices (with corporate access)
@@ -174,18 +186,9 @@ Exceptions to this policy are only permitted in justified exceptional cases:
 - **NIST SP 800-171** - Protecting Controlled Unclassified Information
 - **CIS Controls v8** - Control 4 (Secure Configuration of Enterprise Assets)
 
----
-
 **Approved by:**  
 {{ meta.management.ceo }}, Executive Management  
-Date: {{ meta.document.approval_date }}
+Date: {{ meta-handbook.modifydate }}
 
-**Next Review:** {{ meta.document.next_review }} (annually or as needed)
+**Next Review:** {{ meta-handbook.next_review }} (annually or as needed)
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

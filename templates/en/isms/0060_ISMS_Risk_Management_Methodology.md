@@ -1,5 +1,19 @@
 # Risk Management – Methodology
 
+**Document-ID:** [FRAMEWORK]-0060
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This document defines the risk management methodology for the ISMS. It establishes
@@ -17,16 +31,14 @@ ISO 27001:2022 Reference: Clause 6.1.2 - Information security risk assessment
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** {{ meta-handbook.modifydate }}  
+**Next Review:** {{ meta-handbook.next_review }}
 
 ## 1. Objective and Scope
 
 ### 1.1 Objective
 
-This methodology defines how **{{ meta.organization.name }}** systematically identifies, assesses, treats, and monitors information security risks. It ensures that:
+This methodology defines how **{{ meta-organisation.name }}** systematically identifies, assesses, treats, and monitors information security risks. It ensures that:
 - Risks are assessed consistently and transparently
 - Risk treatment measures are prioritized
 - Risks are reduced to an acceptable level
@@ -394,19 +406,10 @@ Risk Score = 4 × 3 = 12 (High)
 - **ISO/IEC 27005:2022** - Information security risk management
 - **NIST SP 800-30** - Guide for Conducting Risk Assessments
 
----
-
 **Approved by:**  
 {{ meta.ciso.name }}, CISO  
 {{ meta.management.ceo }}, Management  
-Date: {{ meta.document.approval_date }}
+Date: {{ meta-handbook.modifydate }}
 
-**Next Review:** {{ meta.document.next_review }}
+**Next Review:** {{ meta-handbook.next_review }}
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

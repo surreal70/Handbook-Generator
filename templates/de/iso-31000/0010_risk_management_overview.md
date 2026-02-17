@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-31000-0010
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Risikomanagement - Übersicht
+
+**Dokument-ID:** [FRAMEWORK]-0010
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -16,7 +28,7 @@ Dieses Dokument beschreibt das Risikomanagement-Framework gemäß ISO 31000. Es 
 ## Geltungsbereich
 
 Dieses Dokument gilt für:
-- {{ meta.organization }}
+- {{ meta-organisation.name }}
 - Alle Geschäftsbereiche und Prozesse
 - Vorstand, Geschäftsführung und Risikomanagement
 - Risikomanagement-Strukturen und -Prozesse
@@ -85,19 +97,4 @@ ISO 31000 basiert auf drei integrierten Komponenten:
 - 0060_best_information_principle.md
 - 0070_human_cultural_factors_principle.md
 - 0080_continual_improvement_principle.md
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |
-
-<!-- 
-Autor-Hinweise: 
-- Passen Sie das Risikomanagement-Framework an die Größe und Komplexität Ihrer Organisation an
-- Stellen Sie sicher, dass das Framework mit anderen Management-Systemen integriert ist
-- Überprüfen Sie regelmäßig die Wirksamkeit des Risikomanagements
--->
 

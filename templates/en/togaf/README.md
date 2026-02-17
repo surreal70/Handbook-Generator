@@ -54,11 +54,11 @@ Each template follows a consistent structure:
 ```markdown
 ---
 Document-ID: togaf-NNNN
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.author }}
+Version: {{ meta-handbook.revision }}
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
+Last Update: {{ meta-handbook.modifydate }}
 ---
 
 # Template Title
@@ -79,11 +79,11 @@ Last Update: {{ meta.date }}
 
 Templates use placeholders for organization-specific data:
 
-- `{{ meta.author }}` - Document author
-- `{{ meta.version }}` - Document version
-- `{{ meta.date }}` - Document date
-- `{{ source.organization_name }}` - Organization name
-- `{{ source.field_name }}` - Other organization-specific fields
+- `{{ meta-handbook.author }}` - Document author
+- `{{ meta-handbook.revision }}` - Document version
+- `{{ meta-handbook.modifydate }}` - Document date
+- `[TODO]` - Organization name
+- `[TODO]` - Other organization-specific fields
 
 ## Customization Guide
 
@@ -161,7 +161,7 @@ For questions or suggestions about these templates:
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial template set |
+| 1.0 | [Date] | [Author] | Initial template set |
 
 ---
 

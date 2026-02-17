@@ -1,5 +1,19 @@
 # NIST 800-53 Framework-Zuordnung
 
+**Dokument-ID:** [FRAMEWORK]-9999
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Übersicht
 
 Dieses Dokument bildet die Zuordnung zwischen den NIST 800-53 Rev. 5 Kontrollfamilien und den entsprechenden Template-Dokumenten ab.
@@ -351,22 +365,7 @@ Dieses Dokument bildet die Zuordnung zwischen den NIST 800-53 Rev. 5 Kontrollfam
 - **NIST SP 800-53B:** Control Baselines for Information Systems and Organizations
 - **NIST SP 800-37 Rev. 2:** Risk Management Framework for Information Systems and Organizations
 
----
-
 **Version:** 1.0.0  
 **Letzte Aktualisierung:** 2026-02-07  
 **Maintainer:** NIST-800-53-Template-Team
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
-
-## Versionshistorie
-
-| Version | Datum | Änderungen |
-|---------|-------|------------|
-| 0.1 | {{meta.document.last_updated}} | Initiale Erstellung |

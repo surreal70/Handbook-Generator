@@ -1,13 +1,16 @@
 # Rollen und Verantwortlichkeiten
 
-**Dokument-ID:** TSC-0040  
-**Organisation:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** TSC-0040
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -34,8 +37,8 @@ Dieses Dokument definiert die Rollen und Verantwortlichkeiten für TSC-Complianc
   - Change Approval
 
 **CISO:**
-- **Name:** {{ meta.roles.ciso.name }}
-- **Email:** {{ meta.roles.ciso.email }}
+- **Name:** {{ meta-organisation-roles.role_CISO }}
+- **Email:** {{ meta-organisation-roles.role_CISO }}
 - **Verantwortlichkeiten:**
   - Sicherheitsstrategie
   - Risikomanagement
@@ -84,8 +87,8 @@ Dieses Dokument definiert die Rollen und Verantwortlichkeiten für TSC-Complianc
 
 ### 4.2 Service Auditor
 
-**Firma:** {{ meta.roles.auditor.name }}  
-**Kontakt:** {{ meta.roles.auditor.email }}  
+**Firma:** [TODO]  
+**Kontakt:** [TODO]  
 **Verantwortlichkeiten:**
 - SOC 2-Audit durchführen
 - Kontrollwirksamkeit prüfen
@@ -129,10 +132,3 @@ Dieses Dokument definiert die Rollen und Verantwortlichkeiten für TSC-Complianc
 **Operations Team:**
 - [TODO: AWS Certified, Azure Certified]
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

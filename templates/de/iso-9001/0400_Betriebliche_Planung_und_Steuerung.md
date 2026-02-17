@@ -1,11 +1,16 @@
 # Betriebliche Planung und Steuerung
 
-**Dokument-ID:** 0400  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0400
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -18,20 +23,20 @@ Referenz: ISO 9001:2015, Kapitel 8.1
 
 ## Zweck
 
-Dieses Dokument definiert, wie {{ meta.organization }} die betriebliche Planung und Steuerung durchführt, um die Anforderungen für die Bereitstellung von Produkten und Dienstleistungen zu erfüllen und die in Kapitel 6 festgelegten Maßnahmen umzusetzen.
+Dieses Dokument definiert, wie {{ meta-organisation.name }} die betriebliche Planung und Steuerung durchführt, um die Anforderungen für die Bereitstellung von Produkten und Dienstleistungen zu erfüllen und die in Kapitel 6 festgelegten Maßnahmen umzusetzen.
 
 ## Betriebliche Planung (8.1)
 
 ### Planungsanforderungen
 
-**{{ meta.organization }} plant, implementiert und steuert die Prozesse, die erforderlich sind, um:**
+**{{ meta-organisation.name }} plant, implementiert und steuert die Prozesse, die erforderlich sind, um:**
 - Anforderungen für die Bereitstellung von Produkten und Dienstleistungen zu erfüllen
 - Die in Kapitel 6 festgelegten Maßnahmen umzusetzen
 - Die beabsichtigten Ergebnisse zu erreichen
 
 ### Planungskriterien
 
-**Bei der Planung berücksichtigt {{ meta.organization }}:**
+**Bei der Planung berücksichtigt {{ meta-organisation.name }}:**
 - Anforderungen an Produkte und Dienstleistungen
 - Kriterien für Prozesse und Produktannahme
 - Erforderliche Ressourcen
@@ -42,7 +47,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} die betriebliche Planung 
 
 ### Steuerungsmaßnahmen
 
-**{{ meta.organization }} steuert geplante Änderungen und überprüft die Folgen unbeabsichtigter Änderungen durch:**
+**{{ meta-organisation.name }} steuert geplante Änderungen und überprüft die Folgen unbeabsichtigter Änderungen durch:**
 - Festlegung von Prozesskriterien
 - Implementierung von Prozesssteuerung
 - Aufbewahrung dokumentierter Information
@@ -50,7 +55,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} die betriebliche Planung 
 
 ### Ausgelagerte Prozesse
 
-**Für ausgelagerte Prozesse stellt {{ meta.organization }} sicher:**
+**Für ausgelagerte Prozesse stellt {{ meta-organisation.name }} sicher:**
 - Steuerung oder Beeinflussung ausgelagerter Prozesse
 - Art und Umfang der Steuerung sind im QMS definiert
 - Verantwortung der Organisation bleibt bestehen
@@ -76,7 +81,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} die betriebliche Planung 
 
 ### Überwachung und Messung
 
-**{{ meta.organization }} überwacht und misst:**
+**{{ meta-organisation.name }} überwacht und misst:**
 - Prozessleistung
 - Produktkonformität
 - Dienstleistungsqualität
@@ -111,8 +116,6 @@ Dieses Dokument definiert, wie {{ meta.organization }} die betriebliche Planung 
 - Überwachung der Prozessleistung
 - Berichterstattung über Abweichungen
 
----
-
 **Nächste Schritte:**
 1. Definiere alle betrieblichen Prozesse
 2. Lege Prozesskriterien fest
@@ -120,10 +123,3 @@ Dieses Dokument definiert, wie {{ meta.organization }} die betriebliche Planung 
 4. Etabliere Leistungsindikatoren
 5. Überwache und messe regelmäßig
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

@@ -1,17 +1,28 @@
----
+
 Document-ID: csa-ccm-0010
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # CSA Cloud Controls Matrix (CCM) Framework Overview
 
+**Document-ID:** [FRAMEWORK]-0010
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document provides an overview of the Cloud Security Alliance Cloud Controls Matrix (CCM) framework and its application within {{ source.organization_name }}.
+This document provides an overview of the Cloud Security Alliance Cloud Controls Matrix (CCM) framework and its application within [TODO].
 
 ## Scope
 
@@ -42,7 +53,7 @@ CCM v4.0 comprises 16 control domains:
 
 ### Framework Application
 
-**Organization**: {{ source.organization_name }}
+**Organization**: [TODO]
 
 **Cloud Services in Scope**:
 - [List of cloud services]
@@ -82,13 +93,5 @@ CCM v4.0 comprises 16 control domains:
 - ISO/IEC 27018 (Cloud Privacy)
 
 <!-- Note: Customize cloud services and responsibilities for your organization -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

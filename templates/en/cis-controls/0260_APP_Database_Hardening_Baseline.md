@@ -1,14 +1,16 @@
 # APP Hardening Baseline: Databases (generic)
 
-**Document ID:** 0260  
-**Document Type:** Standard/Baseline  
-**Reference Framework:** CIS Controls v8 (Hardening Program; no benchmark texts)  
-**Owner:** [TODO]  
-**Version:** 0.1 (Draft)  
-**Status:** Draft / In Review / Approved  
-**Classification:** Internal / Confidential / Strictly Confidential  
-**Last Updated:** 2026-01-31  
-**Next Review:** [TODO]
+**Document-ID:** [FRAMEWORK]-0260
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -80,7 +82,6 @@
 - Parameter list/example values: [TODO]
 - Checklist: see `0410_Appendix_Checklists_and_Evidence.md`
 
-
 ## 12. DB-Specific Areas (Examples)
 - AuthN/AuthZ (roles, least privilege): [TODO]
 - Network exposure (app subnets only): [TODO]
@@ -89,10 +90,3 @@
 - Auditing/DB logs: [TODO]
 - Backup/restore + test: [TODO]
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

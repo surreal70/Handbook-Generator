@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-38500-0030
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # IT Governance Principles - Overview
+
+**Document-ID:** [FRAMEWORK]-0030
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -16,7 +28,7 @@ This document provides an overview of the six IT governance principles according
 ## Scope
 
 This document applies to:
-- {{ meta.organization }}
+- {{ meta-organisation.name }}
 - All IT governance activities
 - Board, Executive Management, and IT Management
 
@@ -86,17 +98,8 @@ The principles should be:
 - 0080_conformance_principle.md
 - 0090_human_behavior_principle.md
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |
-
 <!-- 
 Author Notes: 
 - All six principles are equally important and should be applied in balance
 - Principles may conflict - document trade-offs
 -->
-

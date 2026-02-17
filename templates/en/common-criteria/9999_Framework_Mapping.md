@@ -1,5 +1,19 @@
 # Common Criteria Framework Mapping
 
+**Document-ID:** [FRAMEWORK]-9999
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Overview
 
 This document maps the Common Criteria Security Target templates to the ISO/IEC 15408 standard components and Evaluation Assurance Levels (EAL). It provides traceability between template files and specific Common Criteria requirements, ensuring comprehensive coverage of the Security Target structure.
@@ -363,12 +377,6 @@ The following optional elements could be added in future versions:
 - Common Criteria Portal: https://www.commoncriteriaportal.org/
 - Common Methodology for Information Technology Security Evaluation (CEM)
 
-## Version History
-
-| Version | Date | Changes |
-|---------|------|---------|
-| 1.0 | 2026-02-08 | Initial framework mapping document |
-
 ## Contact
 
 For questions about this framework mapping or Common Criteria evaluation:
@@ -376,10 +384,3 @@ For questions about this framework mapping or Common Criteria evaluation:
 - National certification schemes (e.g., BSI, ANSSI, NIAP)
 - Accredited evaluation laboratories
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

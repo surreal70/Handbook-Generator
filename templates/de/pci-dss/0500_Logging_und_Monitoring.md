@@ -1,13 +1,16 @@
 # Logging und Monitoring
 
-**Dokument-ID:** PCI-0500  
-**Organisation:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** PCI-0500
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,7 +28,7 @@ Customization required:
 
 ## 1. Zweck
 
-Dieses Dokument definiert die Logging- und Monitoring-Anforderungen für {{ meta.organization.name }} gemäß PCI-DSS Requirement 10.
+Dieses Dokument definiert die Logging- und Monitoring-Anforderungen für {{ meta-organisation.name }} gemäß PCI-DSS Requirement 10.
 
 ### 1.1 Ziele
 
@@ -449,13 +452,5 @@ THEN
 - Log-Review-Protokolle
 - Alert-Response-Protokolle
 - Forensische Untersuchungsberichte
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 <!-- End of template -->

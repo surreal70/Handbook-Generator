@@ -1,11 +1,16 @@
 # Datenübermittlung in Drittländer
 
-**Dokument-ID:** 0500  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0500
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,7 +30,7 @@ Referenz: DSGVO Art. 44-50 (Datenübermittlung in Drittländer)
 
 ## Zweck
 
-Dieses Dokument regelt die Übermittlung personenbezogener Daten in Drittländer (außerhalb EU/EWR) bei {{ meta.organization }} gemäß Art. 44-50 DSGVO. Es stellt sicher, dass auch bei internationalen Datentransfers ein angemessenes Schutzniveau gewährleistet ist.
+Dieses Dokument regelt die Übermittlung personenbezogener Daten in Drittländer (außerhalb EU/EWR) bei {{ meta-organisation.name }} gemäß Art. 44-50 DSGVO. Es stellt sicher, dass auch bei internationalen Datentransfers ein angemessenes Schutzniveau gewährleistet ist.
 
 ## Grundsatz (Art. 44)
 
@@ -322,8 +327,6 @@ Betroffene Personen müssen über Drittlandübermittlungen informiert werden:
 - **Auftragsverarbeitung (Art. 28):** SCCs bei Auftragsverarbeitern in Drittländern
 - **Informationspflichten (Art. 13-14):** Transparenz gegenüber Betroffenen
 
----
-
 **Nächste Schritte:**
 1. Identifizieren Sie alle Drittlandübermittlungen
 2. Prüfen Sie Angemessenheitsbeschlüsse
@@ -331,10 +334,3 @@ Betroffene Personen müssen über Drittlandübermittlungen informiert werden:
 4. Führen Sie Transfer Impact Assessments durch
 5. Informieren Sie betroffene Personen transparent
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

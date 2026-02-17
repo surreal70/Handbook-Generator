@@ -1,13 +1,16 @@
 # Purpose and Scope
 
-**Document ID:** BCM-0010  
-**Organization:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Approved by:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0010
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,7 +28,7 @@ Customization required:
 
 ## 1. Purpose
 
-The Business Continuity Management System (BCMS) of {{ meta.organization.name }} serves the following purposes:
+The Business Continuity Management System (BCMS) of {{ meta-organisation.name }} serves the following purposes:
 
 - **Protection of critical business processes:** Ensuring the continuation of business-critical activities even during severe disruptions
 - **Reduction of downtime:** Minimizing the impact of interruptions on business operations, customers, and stakeholders
@@ -56,7 +59,7 @@ This BCMS is based on the following standards and best practices:
 
 ### 2.1 Organizational Units
 
-The BCMS applies to the following organizational units of {{ meta.organization.name }}:
+The BCMS applies to the following organizational units of {{ meta-organisation.name }}:
 
 [TODO: Define the included organizational units]
 
@@ -75,7 +78,7 @@ The BCMS covers the following locations:
 [TODO: List all locations within scope]
 
 **Example:**
-- Headquarters: {{ meta.organization.address }}, {{ meta.organization.postal_code }} {{ meta.organization.city }}
+- Headquarters: {{ meta-organisation.address }}, [TODO] [TODO]
 - Production site: [Address]
 - Data center: [Address]
 - Alternate site: [Address]
@@ -114,8 +117,8 @@ The following areas are explicitly excluded from scope:
 [TODO: Document exceptions with justification and approving authority]
 
 **Example:**
-- **Subsidiary XY:** Operates its own BCMS (Approved by: {{ meta.roles.ceo.name }})
-- **Development environments:** Not business-critical (Approved by: {{ meta.roles.cio.name }})
+- **Subsidiary XY:** Operates its own BCMS (Approved by: {{ meta-organisation-roles.role_CEO }})
+- **Development environments:** Not business-critical (Approved by: {{ meta-organisation-roles.role_CIO }})
 
 ## 3. Assumptions and Constraints
 
@@ -149,7 +152,7 @@ The following dependencies are outside the organization's direct control:
 
 ### 4.1 Information Security Management System (ISMS)
 
-**Responsible:** {{ meta.roles.ciso.name }} ({{ meta.roles.ciso.email }})
+**Responsible:** {{ meta-organisation-roles.role_CISO }} ({{ meta-organisation-roles.role_CISO }})
 
 Interfaces:
 - Incident management and security incident response
@@ -161,7 +164,7 @@ Interfaces:
 
 ### 4.2 IT Service Management (ITSM)
 
-**Responsible:** {{ meta.roles.it_operations_manager.name }} ({{ meta.roles.it_operations_manager.email }})
+**Responsible:** {{ meta-organisation-roles.role_IT_Manager }} ({{ meta-organisation-roles.role_IT_Manager }})
 
 Interfaces:
 - Incident management (major incidents → BCM activation)
@@ -206,13 +209,5 @@ Interfaces:
 - Reputation protection
 
 [TODO: Describe the specific interfaces to crisis communication]
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 <!-- End of template -->

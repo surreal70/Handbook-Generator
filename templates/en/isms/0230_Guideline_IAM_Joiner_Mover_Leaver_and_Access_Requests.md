@@ -1,5 +1,19 @@
 # Guideline: IAM - Joiner, Mover, Leaver and Access Requests
 
+**Document-ID:** [FRAMEWORK]-0230
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This guideline provides detailed implementation guidance for Identity and Access Management,
@@ -15,10 +29,8 @@ Customize based on your organization's HR systems, IAM tools, and approval workf
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** {{ meta-handbook.modifydate }}  
+**Next Review:** {{ meta-handbook.next_review }}
 
 ## 1. Purpose and Scope
 
@@ -28,7 +40,7 @@ This guideline implements the `0220_Policy_Access_Control_and_Identity_Managemen
 - **Leaver:** Offboarding and access revocation
 - **Access Requests:** Process for ad-hoc access requests
 
-**Scope:** All employees, contractors, and third parties at **{{ meta.organization.name }}**
+**Scope:** All employees, contractors, and third parties at **{{ meta-organisation.name }}**
 
 ## 2. Joiner Process (Onboarding)
 
@@ -395,18 +407,9 @@ This guideline implements the `0220_Policy_Access_Control_and_Identity_Managemen
 - **ISO/IEC 27001:2022 Annex A.5.18** - Access rights
 - **NIST SP 800-63** - Digital Identity Guidelines
 
----
-
 **Approved by:**  
 {{ meta.ciso.name }}, CISO  
-Date: {{ meta.document.approval_date }}
+Date: {{ meta-handbook.modifydate }}
 
-**Next Review:** {{ meta.document.next_review }}
+**Next Review:** {{ meta-handbook.next_review }}
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

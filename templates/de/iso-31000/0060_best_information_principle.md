@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-31000-0060
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Prinzip 6: Beste verfügbare Informationen
+
+**Dokument-ID:** [FRAMEWORK]-0060
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -25,7 +37,7 @@ Die Inputs zum Risikomanagement basieren auf historischen und aktuellen Informat
 - Zukünftige Entwicklungen werden antizipiert
 - Unsicherheiten werden explizit behandelt
 
-## Umsetzung in {{ meta.organization }}
+## Umsetzung in {{ meta-organisation.name }}
 
 ### Informationsquellen
 
@@ -82,12 +94,4 @@ Entscheidungen im Risikomanagement berücksichtigen:
 - Expertenmeinungen und Erfahrungen
 - Kosten-Nutzen-Verhältnis von Informationsbeschaffung
 - Zeitliche Dringlichkeit der Entscheidung
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |
 

@@ -1,17 +1,28 @@
----
+
 Document-ID: coso-0120
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Risikoidentifikation
 
+**Dokument-ID:** [FRAMEWORK]-0120
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt, wie {{ source.organization_name }} Risiken identifiziert und analysiert, die die Zielerreichung beeinträchtigen könnten (COSO Prinzip 7).
+Dieses Dokument beschreibt, wie [TODO] Risiken identifiziert und analysiert, die die Zielerreichung beeinträchtigen könnten (COSO Prinzip 7).
 
 ## Geltungsbereich
 
@@ -24,114 +35,114 @@ Dieses Dokument beschreibt, wie {{ source.organization_name }} Risiken identifiz
 
 ### Workshops und Interviews
 
-{{ source.risk_workshops }}
+[TODO]
 
 ### Checklisten und Fragebögen
 
-{{ source.risk_checklists }}
+[TODO]
 
 ### Szenarioanalyse
 
-{{ source.scenario_analysis }}
+[TODO]
 
 ### Historische Datenanalyse
 
-{{ source.historical_analysis }}
+[TODO]
 
 ### Benchmarking
 
-{{ source.benchmarking }}
+[TODO]
 
 ## Risikofaktoren
 
 ### Interne Faktoren
 
-**Organisatorische Faktoren**: {{ source.organizational_factors }}
-**Prozessfaktoren**: {{ source.process_factors }}
-**Technologiefaktoren**: {{ source.technology_factors }}
-**Personalfaktoren**: {{ source.people_factors }}
+**Organisatorische Faktoren**: [TODO]
+**Prozessfaktoren**: [TODO]
+**Technologiefaktoren**: [TODO]
+**Personalfaktoren**: [TODO]
 
 ### Externe Faktoren
 
-**Wirtschaftliche Faktoren**: {{ source.economic_factors }}
-**Regulatorische Faktoren**: {{ source.regulatory_factors }}
-**Marktfaktoren**: {{ source.market_factors }}
-**Technologische Trends**: {{ source.technology_trends }}
+**Wirtschaftliche Faktoren**: [TODO]
+**Regulatorische Faktoren**: [TODO]
+**Marktfaktoren**: [TODO]
+**Technologische Trends**: [TODO]
 
 ## Risikoanalyse
 
 ### Qualitative Analyse
 
-**Methodik**: {{ source.qualitative_analysis }}
+**Methodik**: [TODO]
 
-**Bewertungsskala**: {{ source.qualitative_scale }}
+**Bewertungsskala**: [TODO]
 
 ### Quantitative Analyse
 
-**Methodik**: {{ source.quantitative_analysis }}
+**Methodik**: [TODO]
 
-**Metriken**: {{ source.quantitative_metrics }}
+**Metriken**: [TODO]
 
 ### Kombinierter Ansatz
 
-{{ source.combined_approach }}
+[TODO]
 
 ## Risikobewertung
 
 ### Inhärentes Risiko
 
-**Definition**: {{ source.inherent_risk_definition }}
+**Definition**: [TODO]
 
-**Bewertung**: {{ source.inherent_risk_assessment }}
+**Bewertung**: [TODO]
 
 ### Restrisiko
 
-**Definition**: {{ source.residual_risk_definition }}
+**Definition**: [TODO]
 
-**Bewertung**: {{ source.residual_risk_assessment }}
+**Bewertung**: [TODO]
 
 ## Risikopriorisierung
 
 ### Priorisierungskriterien
 
-{{ source.prioritization_criteria }}
+[TODO]
 
 ### Risikokategorisierung
 
-**Kritisch**: {{ source.critical_risks }}
-**Hoch**: {{ source.high_risks }}
-**Mittel**: {{ source.medium_risks }}
-**Niedrig**: {{ source.low_risks }}
+**Kritisch**: [TODO]
+**Hoch**: [TODO]
+**Mittel**: [TODO]
+**Niedrig**: [TODO]
 
 ## Risikobeziehungen
 
 ### Risikoabhängigkeiten
 
-{{ source.risk_dependencies }}
+[TODO]
 
 ### Kaskadierende Risiken
 
-{{ source.cascading_risks }}
+[TODO]
 
 ### Aggregierte Risiken
 
-{{ source.aggregated_risks }}
+[TODO]
 
 ## Rollen und Verantwortlichkeiten
 
-**Risikomanager**: {{ source.risk_manager_role }}
-**Geschäftsbereichsleiter**: {{ source.business_owner_role }}
-**Fachexperten**: {{ source.subject_matter_experts }}
+**Risikomanager**: [TODO]
+**Geschäftsbereichsleiter**: [TODO]
+**Fachexperten**: [TODO]
 
 ## Dokumentation
 
 ### Risikoregister
 
-{{ source.risk_register_content }}
+[TODO]
 
 ### Risikoberichte
 
-{{ source.risk_reports_content }}
+[TODO]
 
 ## Referenzen
 
@@ -139,12 +150,3 @@ Dieses Dokument beschreibt, wie {{ source.organization_name }} Risiken identifiz
 - Risikobewertungsmatrix
 - Enterprise Risk Management Framework
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

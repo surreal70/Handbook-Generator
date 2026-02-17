@@ -1,11 +1,16 @@
 # Verhaltensregeln und Zertifizierung
 
-**Dokument-ID:** 0350  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0350
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,7 +30,7 @@ Referenz: DSGVO Art. 40-41 (Verhaltensregeln), Art. 42-43 (Zertifizierung)
 
 ## Zweck
 
-Dieses Dokument beschreibt die Teilnahme von {{ meta.organization }} an Verhaltensregeln und Datenschutz-Zertifizierungen gemäß Art. 40-43 DSGVO. Diese dienen als Nachweis der Compliance und können die Rechenschaftspflicht unterstützen.
+Dieses Dokument beschreibt die Teilnahme von {{ meta-organisation.name }} an Verhaltensregeln und Datenschutz-Zertifizierungen gemäß Art. 40-43 DSGVO. Diese dienen als Nachweis der Compliance und können die Rechenschaftspflicht unterstützen.
 
 ## Verhaltensregeln (Art. 40-41)
 
@@ -261,8 +266,6 @@ Betroffene Personen werden über die Zertifizierung informiert:
 - **Datenschutz-Folgenabschätzung (Art. 35):** Zertifizierung als Maßnahme
 - **Datenübermittlung (Art. 46):** Zertifizierung als Garantie
 
----
-
 **Nächste Schritte:**
 1. Evaluieren Sie relevante Verhaltensregeln für Ihre Branche
 2. Prüfen Sie verfügbare Datenschutz-Zertifizierungen
@@ -270,10 +273,3 @@ Betroffene Personen werden über die Zertifizierung informiert:
 4. Erstellen Sie einen Zertifizierungsplan
 5. Kommunizieren Sie erhaltene Zertifizierungen transparent
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

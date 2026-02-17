@@ -1,13 +1,25 @@
----
+
 Document-ID: nist-csf-0400
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Response Planning (RS.RP)
+
+**Document-ID:** [FRAMEWORK]-0400
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -15,12 +27,12 @@ This document describes incident response planning processes.
 
 ## Scope
 
-{{ meta.scope }}
+{{ meta-handbook.scope }}
 
 ## Response Planning
 
 ### Incident Response Team
-- Incident Response Manager: {{ meta.ir_manager }}
+- Incident Response Manager: {{ meta-handbook.ir_manager }}
 - Security Analysts
 - IT Operations
 - Legal/Compliance
@@ -37,12 +49,3 @@ This document describes incident response planning processes.
 - 0050_policy_framework.md (Govern)
 - 0310_security_monitoring.md (Detect)
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |
-
-<!-- Author Notes: Test response plans regularly -->

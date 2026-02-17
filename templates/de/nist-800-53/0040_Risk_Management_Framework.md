@@ -1,11 +1,16 @@
 # Risk Management Framework (RMF)
 
-**Dokument-ID:** NIST-0040  
-**Organisation:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** NIST-0040
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -46,7 +51,7 @@ Das RMF besteht aus sieben Schritten:
 
 **Dokument:** Siehe NIST-0010 Systemkategorisierung
 
-**Genehmigt durch:** {{ meta.roles.ao.name }}  
+**Genehmigt durch:** [TODO]  
 **Datum:** [TODO: Datum]
 
 ## 5. RMF-Schritt 3: Select
@@ -100,7 +105,7 @@ Das RMF besteht aus sieben Schritten:
 - ATO-Gültigkeit: [TODO: 3 Jahre]
 - Nächste Reauthorization: [TODO: Datum]
 
-**Authorizing Official:** {{ meta.roles.ao.name }}
+**Authorizing Official:** [TODO]
 
 **Risikobewertung:**
 - Gesamtrisiko: [TODO: Low / Moderate / High]
@@ -134,13 +139,5 @@ Das RMF besteht aus sieben Schritten:
 | Assess | [TODO: Datum] | [TODO: Datum] | [TODO: Datum] | [TODO: Status] |
 | Authorize | [TODO: Datum] | [TODO: Datum] | [TODO: Datum] | [TODO: Status] |
 | Monitor | [TODO: Datum] | Kontinuierlich | N/A | [TODO: Status] |
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 <!-- End of template -->

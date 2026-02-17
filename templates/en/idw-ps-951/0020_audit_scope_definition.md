@@ -1,11 +1,16 @@
 # Audit Scope and Scope Definition
 
-**Document-ID:** idw-ps-951-0020  
-**Owner:** {{ meta.audit_lead }}  
-**Version:** {{ meta.version }}  
-**Status:** {{ meta.status }}  
-**Classification:** {{ meta.classification }}  
-**Last Update:** {{ meta.date }}
+**Document-ID:** idw-ps-951-0020
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -16,25 +21,25 @@ This document defines the scope of the IT audit and specifies which IT systems, 
 ## 2. Scope Definition
 
 ### Organizational Scope
-- **Audited Organizational Units:** {{ source.audited_units }}
-- **Locations:** {{ source.audited_locations }}
-- **Business Areas:** {{ source.business_areas }}
+- **Audited Organizational Units:** [TODO]
+- **Locations:** [TODO]
+- **Business Areas:** [TODO]
 
 ### Technical Scope
 
 #### IT Systems in Scope
 | System | Description | Criticality | Audit Depth |
 |--------|-------------|-------------|-------------|
-| {{ source.system_1_name }} | {{ source.system_1_desc }} | {{ source.system_1_criticality }} | {{ source.system_1_depth }} |
-| {{ source.system_2_name }} | {{ source.system_2_desc }} | {{ source.system_2_criticality }} | {{ source.system_2_depth }} |
-| {{ source.system_3_name }} | {{ source.system_3_desc }} | {{ source.system_3_criticality }} | {{ source.system_3_depth }} |
+| [TODO] | [TODO] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [TODO] | [TODO] |
 
 #### IT Processes in Scope
 - Change Management
 - Incident Management
 - Access Management
 - Backup and Recovery
-- {{ source.additional_processes }}
+- [TODO]
 
 ## 3. Audit Focus Areas
 
@@ -78,19 +83,19 @@ This document defines the scope of the IT audit and specifies which IT systems, 
 ## 4. Exclusions and Boundaries
 
 ### Out of Scope
-- {{ source.out_of_scope_1 }}
-- {{ source.out_of_scope_2 }}
-- {{ source.out_of_scope_3 }}
+- [TODO]
+- [TODO]
+- [TODO]
 
 ### Rationale for Exclusions
-{{ source.exclusion_rationale }}
+[TODO]
 
 ## 5. Materiality and Audit Depth
 
 ### Materiality Criteria
-- **Financial:** {{ source.materiality_financial }}
-- **Operational:** {{ source.materiality_operational }}
-- **Compliance:** {{ source.materiality_compliance }}
+- **Financial:** [TODO]
+- **Operational:** [TODO]
+- **Compliance:** [TODO]
 
 ### Audit Depth by Risk
 - **High:** Detailed audit with extensive testing
@@ -106,20 +111,20 @@ This document defines the scope of the IT audit and specifies which IT systems, 
 - Compliance audits
 
 ### Coordination Approach
-{{ source.coordination_approach }}
+[TODO]
 
 ## 7. Scope Changes
 
 ### Change Process
 Changes to the audit scope must be documented and approved:
-- **Requestor:** {{ source.change_requestor }}
-- **Approver:** {{ source.change_approver }}
+- **Requestor:** [TODO]
+- **Approver:** [TODO]
 - **Documentation:** Change log
 
 ### Change History
 | Date | Change | Rationale | Approved by |
 |------|--------|-----------|-------------|
-| {{ source.change_date }} | {{ source.change_description }} | {{ source.change_reason }} | {{ source.change_approver }} |
+| [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## 8. References
 
@@ -128,18 +133,9 @@ Changes to the audit scope must be documented and approved:
 - IT System Documentation
 - Risk Analysis
 
----
-
 **Approved by:**  
-{{ meta.audit_lead }}, Audit Lead  
-Date: {{ meta.approval_date }}
+{{ meta-organisation-roles.role_Internal_Auditor }}, Audit Lead  
+Date: {{ meta-handbook.valid_from }}
 
-**Next Review:** {{ meta.next_review }}
+**Next Review:** {{ meta-handbook.next_review }}
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |

@@ -72,39 +72,39 @@ Die Templates unterstützen zwei Arten von Platzhaltern für dynamische Inhalte:
 Meta-Platzhalter werden aus der `metadata.yaml` Konfigurationsdatei befüllt:
 
 ```markdown
-**Organisation:** {{ meta.organization.name }}
-**Standort:** {{ meta.organization.city }}, {{ meta.organization.country }}
-**Website:** {{ meta.organization.website }}
+**Organisation:** {{ meta-organisation.name }}
+**Standort:** {{ meta-organisation.city }}, {{ meta-organisation.country }}
+**Website:** {{ meta-organisation.website }}
 
-**CIO:** {{ meta.cio.name }} ({{ meta.cio.email }})
-**CISO:** {{ meta.ciso.name }} ({{ meta.ciso.email }})
-**IT Operations Manager:** {{ meta.it_operations_manager.name }}
+**CIO:** {{ meta-organisation-roles.role_cio.name }} ({{ meta-organisation-roles.role_cio.email }})
+**CISO:** {{ meta-organisation-roles.role_ciso.name }} ({{ meta-organisation-roles.role_ciso.email }})
+**IT Operations Manager:** {{ meta-organisation-roles.role_it_operations_manager.name }}
 ```
 
 **Verfügbare Meta-Felder:**
 
 **Organisation:**
-- `{{ meta.organization.name }}` - Organisationsname
-- `{{ meta.organization.address }}` - Adresse
-- `{{ meta.organization.city }}` - Stadt
-- `{{ meta.organization.postal_code }}` - Postleitzahl
-- `{{ meta.organization.country }}` - Land
-- `{{ meta.organization.website }}` - Website
-- `{{ meta.organization.phone }}` - Telefon
-- `{{ meta.organization.email }}` - E-Mail
+- `{{ meta-organisation.name }}` - Organisationsname
+- `{{ meta-organisation.address }}` - Adresse
+- `{{ meta-organisation.city }}` - Stadt
+- `{{ meta-organisation.postal_code }}` - Postleitzahl
+- `{{ meta-organisation.country }}` - Land
+- `{{ meta-organisation.website }}` - Website
+- `{{ meta-organisation.phone }}` - Telefon
+- `{{ meta-organisation.email }}` - E-Mail
 
 **Rollen (ceo, cio, ciso, cfo, coo, it_operations_manager, service_desk_lead):**
-- `{{ meta.ROLLE.name }}` - Name der Person
-- `{{ meta.ROLLE.title }}` - Titel/Position
-- `{{ meta.ROLLE.email }}` - E-Mail-Adresse
-- `{{ meta.ROLLE.phone }}` - Telefonnummer
-- `{{ meta.ROLLE.department }}` - Abteilung (optional)
+- `{{ meta-organisation-roles.role_ROLLE.name }}` - Name der Person
+- `{{ meta-organisation-roles.role_ROLLE.title }}` - Titel/Position
+- `{{ meta-organisation-roles.role_ROLLE.email }}` - E-Mail-Adresse
+- `{{ meta-organisation-roles.role_ROLLE.phone }}` - Telefonnummer
+- `{{ meta-organisation-roles.role_ROLLE.department }}` - Abteilung (optional)
 
 **Dokument:**
-- `{{ meta.document.owner }}` - Dokumentverantwortlicher
-- `{{ meta.document.approver }}` - Genehmiger
-- `{{ meta.document.version }}` - Version
-- `{{ meta.document.classification }}` - Klassifizierung
+- `{{ meta-handbook.owner }}` - Dokumentverantwortlicher
+- `{{ meta-handbook.approver }}` - Genehmiger
+- `{{ meta-handbook.revision }}` - Version
+- `{{ meta-handbook.classification }}` - Klassifizierung
 
 ### NetBox-Platzhalter (Infrastruktur-Daten)
 
@@ -175,8 +175,8 @@ Berücksichtigen Sie:
 
 **Platzhalter-Dokumentation:**
 ```markdown
-<!-- Der Platzhalter {{ meta.cio.name }} wird durch den CIO-Namen ersetzt -->
-**Verantwortlich:** {{ meta.cio.name }}
+<!-- Der Platzhalter {{ meta-organisation-roles.role_cio.name }} wird durch den CIO-Namen ersetzt -->
+**Verantwortlich:** {{ meta-organisation-roles.role_cio.name }}
 ```
 
 **Best Practices:**
@@ -224,7 +224,7 @@ Dieser Prozess erfüllt folgende Standards:
 **Verwenden Sie Platzhalter für wiederkehrende Informationen:**
 ```markdown
 <!-- Gut: Platzhalter für Organisationsnamen -->
-**Organisation:** {{ meta.organization.name }}
+**Organisation:** {{ meta-organisation.name }}
 
 <!-- Schlecht: Hardcodierter Wert -->
 **Organisation:** AdminSend GmbH
@@ -243,8 +243,8 @@ Dieser Prozess erfüllt folgende Standards:
 
 | Version | Datum | Autor | Änderungen | Genehmigt durch |
 |---|---|---|---|---|
-| 1.0.0 | 2024-01-15 | {{ meta.author }} | Initiale Version | {{ meta.document.approver }} |
-| 1.1.0 | 2024-02-20 | {{ meta.author }} | Monitoring-Abschnitt erweitert | {{ meta.document.approver }} |
+| 1.0.0 | 2024-01-15 | [Author] | Initiale Version | {{ meta-handbook.approver }} |
+| 1.1.0 | 2024-02-20 | [Author] | Monitoring-Abschnitt erweitert | {{ meta-handbook.approver }} |
 ```
 
 ### 6. Service-Level-Definitionen
@@ -253,9 +253,9 @@ Dieser Prozess erfüllt folgende Standards:
 ```markdown
 | Kennzahl | Zielwert | Messmethode | Verantwortlich |
 |---|---:|---|---|
-| Verfügbarkeit | 99.9% | Uptime-Monitoring | {{ meta.it_operations_manager.name }} |
-| Antwortzeit | < 200ms | APM-Tool | {{ meta.it_operations_manager.name }} |
-| MTTR | < 4h | Incident-Tracking | {{ meta.service_desk_lead.name }} |
+| Verfügbarkeit | 99.9% | Uptime-Monitoring | {{ meta-organisation-roles.role_it_operations_manager.name }} |
+| Antwortzeit | < 200ms | APM-Tool | {{ meta-organisation-roles.role_it_operations_manager.name }} |
+| MTTR | < 4h | Incident-Tracking | {{ meta-organisation-roles.role_service_desk_lead.name }} |
 ```
 
 ## Generierung von Handbüchern
@@ -448,10 +448,10 @@ Diese Templates sind für den internen Gebrauch in Ihrer Organisation bestimmt. 
 
 | Version | Datum | Autor | Änderungen |
 |---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
+| 0.1 | {{ meta-handbook.last_updated }} | {{ meta-handbook.author }} | Initiale Erstellung |
 
 ## Versionshistorie
 
 | Version | Datum | Änderungen |
 |---------|-------|------------|
-| 0.1 | {{meta.document.last_updated}} | Initiale Erstellung |
+| 0.1 | {{meta-handbook.last_updated}} | Initiale Erstellung |

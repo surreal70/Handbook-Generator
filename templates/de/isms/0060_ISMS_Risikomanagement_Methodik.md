@@ -1,5 +1,19 @@
 # Risikomanagement – Methodik
 
+**Dokument-ID:** 0060
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This document defines the risk management methodology for the ISMS. It establishes
@@ -10,23 +24,11 @@ of ISO 27001:2022.
 ISO 27001:2022 Reference: Clause 6.1.2 - Information security risk assessment
 -->
 
-**Dokument-ID:** 0060  
-**Dokumenttyp:** ISMS-Grundlagendokument  
-**Standard-Referenz:** ISO/IEC 27001:2022 Clause 6.1.2  
-**Owner:** {{ meta.ciso.name }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
-
----
-
 ## 1. Ziel und Geltungsbereich
 
 ### 1.1 Ziel
 
-Diese Methodik definiert, wie die **{{ meta.organization.name }}** Informationssicherheitsrisiken systematisch identifiziert, bewertet, behandelt und überwacht. Sie stellt sicher, dass:
+Diese Methodik definiert, wie die **{{ meta-organisation.name }}** Informationssicherheitsrisiken systematisch identifiziert, bewertet, behandelt und überwacht. Sie stellt sicher, dass:
 - Risiken konsistent und nachvollziehbar bewertet werden
 - Risikobehandlungsmaßnahmen priorisiert werden
 - Risiken auf ein akzeptables Niveau reduziert werden
@@ -394,19 +396,10 @@ Risikoscore = 4 × 3 = 12 (Hoch)
 - **ISO/IEC 27005:2022** - Information security risk management
 - **NIST SP 800-30** - Guide for Conducting Risk Assessments
 
----
-
 **Genehmigt durch:**  
 {{ meta.ciso.name }}, CISO  
 {{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+Datum: {{ meta-handbook.modifydate }}
 
-**Nächster Review:** {{ meta.document.next_review }}
+**Nächster Review:** {{ meta-handbook.next_review }}
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

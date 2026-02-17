@@ -53,7 +53,6 @@ class TestArgumentParsing:
         assert args.export_csv is None
         assert args.base_path == '.'
         assert args.no_save_metrics is False
-        assert args.show_trends is False
         assert args.interactive is False
         assert args.save_tasks is None
         assert args.show_remediation is False
@@ -131,12 +130,6 @@ class TestArgumentParsing:
         args = parser.parse_args(['--no-save-metrics'])
         assert args.no_save_metrics is True
     
-    def test_show_trends_argument(self):
-        """Test --show-trends argument."""
-        parser = create_parser()
-        args = parser.parse_args(['--show-trends'])
-        assert args.show_trends is True
-    
     def test_interactive_argument(self):
         """Test --interactive argument."""
         parser = create_parser()
@@ -174,15 +167,13 @@ class TestArgumentParsing:
             '--check', 'mapping',
             '--output', 'report.txt',
             '--verbose',
-            '--export-json', 'metrics.json',
-            '--show-trends'
+            '--export-json', 'metrics.json'
         ])
         
         assert args.check == 'mapping'
         assert args.output == 'report.txt'
         assert args.verbose is True
         assert args.export_json == 'metrics.json'
-        assert args.show_trends is True
     
     def test_invalid_check_value(self):
         """Test that invalid check value raises error."""
@@ -224,7 +215,6 @@ class TestExecutionModes:
             export_json=None,
             export_csv=None,
             save_metrics=True,
-            show_trends=False,
             interactive=False,
             save_tasks=None,
             show_remediation=False,
@@ -261,7 +251,6 @@ class TestExecutionModes:
             export_json=None,
             export_csv=None,
             save_metrics=True,
-            show_trends=False,
             interactive=False,
             save_tasks=None,
             show_remediation=False,
@@ -297,7 +286,6 @@ class TestExecutionModes:
             export_json=None,
             export_csv=None,
             save_metrics=True,
-            show_trends=False,
             interactive=False,
             save_tasks=None,
             show_remediation=False,
@@ -332,7 +320,6 @@ class TestExecutionModes:
             export_json=None,
             export_csv=None,
             save_metrics=False,
-            show_trends=False,
             interactive=False,
             save_tasks=None,
             show_remediation=False,
@@ -367,7 +354,6 @@ class TestExecutionModes:
             export_json='metrics.json',
             export_csv=None,
             save_metrics=True,
-            show_trends=False,
             interactive=False,
             save_tasks=None,
             show_remediation=False,
@@ -402,7 +388,6 @@ class TestExecutionModes:
             export_json=None,
             export_csv='metrics.csv',
             save_metrics=True,
-            show_trends=False,
             interactive=False,
             save_tasks=None,
             show_remediation=False,
@@ -434,7 +419,6 @@ class TestErrorHandling:
             export_json=None,
             export_csv=None,
             save_metrics=True,
-            show_trends=False,
             interactive=False,
             save_tasks=None,
             show_remediation=False,
@@ -469,7 +453,6 @@ class TestErrorHandling:
             export_json=None,
             export_csv=None,
             save_metrics=True,
-            show_trends=False,
             interactive=False,
             save_tasks=None,
             show_remediation=False,
@@ -507,7 +490,6 @@ class TestErrorHandling:
                 export_json=None,
                 export_csv=None,
                 save_metrics=False,
-                show_trends=False,
                 interactive=False,
                 save_tasks=None,
                 show_remediation=False,

@@ -1,17 +1,28 @@
----
+
 Document-ID: tisax-0350
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Logging und Monitoring
 
+**Dokument-ID:** [FRAMEWORK]-0170
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt Logging und Monitoring bei {{ source.organization_name }}.
+Dieses Dokument beschreibt Logging und Monitoring bei [TODO].
 
 ## Logging
 
@@ -22,8 +33,8 @@ Dieses Dokument beschreibt Logging und Monitoring bei {{ source.organization_nam
 - Sicherheitsereignisse
 
 ### Log-Management
-**System**: {{ source.log_management_system }}
-**Aufbewahrung**: {{ source.log_retention_period }}
+**System**: [TODO]
+**Aufbewahrung**: [TODO]
 
 ## Monitoring
 
@@ -46,12 +57,3 @@ Dieses Dokument beschreibt Logging und Monitoring bei {{ source.organization_nam
 
 <!-- Hinweis: Implementieren Sie umfassendes Logging -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

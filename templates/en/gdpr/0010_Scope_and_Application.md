@@ -1,11 +1,16 @@
 # Scope and Application
 
-**Document-ID:** 0010  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0010
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,7 +30,7 @@ Reference: GDPR Art. 2 (Material Scope), Art. 3 (Territorial Scope)
 
 ## Purpose
 
-This document defines the scope and application of the General Data Protection Regulation (GDPR) for {{ meta.organization }}. It establishes which processing activities of personal data fall under GDPR and which exceptions apply.
+This document defines the scope and application of the General Data Protection Regulation (GDPR) for {{ meta-organisation.name }}. It establishes which processing activities of personal data fall under GDPR and which exceptions apply.
 
 ## Material Scope (Art. 2 GDPR)
 
@@ -166,8 +171,6 @@ The scope is reviewed:
 - **Legal Bases (Art. 6):** Lawfulness of processing
 - **Data Transfers (Art. 44-50):** Rules for third country transfers
 
----
-
 **Next Steps:**
 1. Identify all processing activities in your organization
 2. Check territorial scope (establishments, targeting principle)
@@ -175,10 +178,3 @@ The scope is reviewed:
 4. Create records of processing activities (Art. 30)
 5. Review regularly upon changes
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

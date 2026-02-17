@@ -1,5 +1,19 @@
 # Informationssicherheitsziele und Metriken
 
+**Dokument-ID:** 0110
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This document defines measurable information security objectives and KPIs.
@@ -9,23 +23,11 @@ continuous improvement.
 ISO 27001:2022 Reference: Clause 6.2 - Information security objectives
 -->
 
-**Dokument-ID:** 0110  
-**Dokumenttyp:** ISMS-Grundlagendokument  
-**Standard-Referenz:** ISO/IEC 27001:2022 Clause 6.2  
-**Owner:** {{ meta.ciso.name }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
-
----
-
 ## 1. Informationssicherheitsziele
 
 ### 1.1 Strategische Ziele
 
-Die **{{ meta.organization.name }}** definiert folgende strategische Informationssicherheitsziele:
+Die **{{ meta-organisation.name }}** definiert folgende strategische Informationssicherheitsziele:
 
 | Ziel-ID | Ziel | Beschreibung | KPI/Metrik | Zielwert | Messmethode | Owner | Frequenz | Status |
 |---------|------|--------------|------------|----------|-------------|-------|----------|--------|
@@ -181,19 +183,10 @@ Jedes Ziel ist mit Maßnahmen im Risikobehandlungsplan verknüpft:
 - **ISO/IEC 27001:2022** - Clause 6.2: Information security objectives
 - **ISO/IEC 27001:2022** - Clause 9.1: Monitoring, measurement, analysis and evaluation
 
----
-
 **Genehmigt durch:**  
 {{ meta.ciso.name }}, CISO  
 {{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+Datum: {{ meta-handbook.modifydate }}
 
-**Nächster Review:** {{ meta.document.next_review }}
+**Nächster Review:** {{ meta-handbook.next_review }}
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

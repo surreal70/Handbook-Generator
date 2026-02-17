@@ -1,17 +1,28 @@
----
+
 Document-ID: coso-0230
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Policies and Procedures
 
+**Document-ID:** [FRAMEWORK]-0230
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document describes the framework for policies and procedures at {{ source.organization_name }} in accordance with COSO Principle 12.
+This document describes the framework for policies and procedures at [TODO] in accordance with COSO Principle 12.
 
 ## Scope
 
@@ -24,159 +35,159 @@ This document describes the framework for policies and procedures at {{ source.o
 
 ### Policy Hierarchy
 
-**Corporate Policies**: {{ source.corporate_policies }}
-**Functional Policies**: {{ source.functional_policies }}
-**Procedures**: {{ source.procedures }}
-**Work Instructions**: {{ source.work_instructions }}
+**Corporate Policies**: [TODO]
+**Functional Policies**: [TODO]
+**Procedures**: [TODO]
+**Work Instructions**: [TODO]
 
 ### Policy Structure
 
-**Purpose and Scope**: {{ source.policy_purpose_scope }}
-**Responsibilities**: {{ source.policy_responsibilities }}
-**Requirements**: {{ source.policy_requirements }}
-**Exceptions**: {{ source.policy_exceptions }}
-**References**: {{ source.policy_references }}
+**Purpose and Scope**: [TODO]
+**Responsibilities**: [TODO]
+**Requirements**: [TODO]
+**Exceptions**: [TODO]
+**References**: [TODO]
 
 ## Policy Development
 
 ### Development Process
 
-**Needs Identification**: {{ source.policy_needs_identification }}
-**Drafting**: {{ source.policy_drafting }}
-**Stakeholder Consultation**: {{ source.stakeholder_consultation }}
-**Approval**: {{ source.policy_approval }}
-**Publication**: {{ source.policy_publication }}
+**Needs Identification**: [TODO]
+**Drafting**: [TODO]
+**Stakeholder Consultation**: [TODO]
+**Approval**: [TODO]
+**Publication**: [TODO]
 
 ### Policy Approval
 
-**Approval Matrix**: {{ source.approval_matrix }}
-**Approval Workflow**: {{ source.approval_workflow }}
+**Approval Matrix**: [TODO]
+**Approval Workflow**: [TODO]
 
 ## Procedure Documentation
 
 ### Procedure Standards
 
-**Documentation Standards**: {{ source.documentation_standards }}
-**Templates**: {{ source.procedure_templates }}
-**Version Control**: {{ source.version_control }}
+**Documentation Standards**: [TODO]
+**Templates**: [TODO]
+**Version Control**: [TODO]
 
 ### Procedure Content
 
-**Process Steps**: {{ source.process_steps }}
-**Responsibilities**: {{ source.procedure_responsibilities }}
-**Controls**: {{ source.procedure_controls }}
-**Forms and Checklists**: {{ source.forms_checklists }}
+**Process Steps**: [TODO]
+**Responsibilities**: [TODO]
+**Controls**: [TODO]
+**Forms and Checklists**: [TODO]
 
 ### Process Flow Diagrams
 
-{{ source.process_flow_diagrams }}
+[TODO]
 
 ## Policy Areas
 
 ### Financial Policies
 
-**Financial Reporting**: {{ source.financial_reporting_policy }}
-**Budgeting**: {{ source.budgeting_policy }}
-**Expenditure Approval**: {{ source.expenditure_approval_policy }}
-**Asset Management**: {{ source.asset_management_policy }}
+**Financial Reporting**: [TODO]
+**Budgeting**: [TODO]
+**Expenditure Approval**: [TODO]
+**Asset Management**: [TODO]
 
 ### Operational Policies
 
-**Procurement**: {{ source.procurement_policy }}
-**Human Resources**: {{ source.hr_policy }}
-**IT Usage**: {{ source.it_usage_policy }}
-**Data Privacy**: {{ source.data_privacy_policy }}
+**Procurement**: [TODO]
+**Human Resources**: [TODO]
+**IT Usage**: [TODO]
+**Data Privacy**: [TODO]
 
 ### Compliance Policies
 
-**Code of Conduct**: {{ source.code_of_conduct }}
-**Anti-Corruption**: {{ source.anti_corruption_policy }}
-**Conflict of Interest**: {{ source.conflict_of_interest_policy }}
-**Whistleblowing**: {{ source.whistleblowing_policy }}
+**Code of Conduct**: [TODO]
+**Anti-Corruption**: [TODO]
+**Conflict of Interest**: [TODO]
+**Whistleblowing**: [TODO]
 
 ### Risk Management Policies
 
-**Risk Management Framework**: {{ source.risk_management_framework }}
-**Insurance**: {{ source.insurance_policy }}
-**Business Continuity**: {{ source.business_continuity_policy }}
+**Risk Management Framework**: [TODO]
+**Insurance**: [TODO]
+**Business Continuity**: [TODO]
 
 ## Communication and Training
 
 ### Policy Communication
 
-**Communication Channels**: {{ source.communication_channels }}
-**Policy Portal**: {{ source.policy_portal }}
-**Notifications**: {{ source.policy_notifications }}
+**Communication Channels**: [TODO]
+**Policy Portal**: [TODO]
+**Notifications**: [TODO]
 
 ### Training Program
 
-**Onboarding Training**: {{ source.onboarding_training }}
-**Periodic Training**: {{ source.periodic_training }}
-**Specialized Training**: {{ source.specialized_training }}
+**Onboarding Training**: [TODO]
+**Periodic Training**: [TODO]
+**Specialized Training**: [TODO]
 
 ### Acknowledgment and Compliance
 
-**Policy Acknowledgment**: {{ source.policy_acknowledgment }}
-**Compliance Monitoring**: {{ source.compliance_monitoring }}
+**Policy Acknowledgment**: [TODO]
+**Compliance Monitoring**: [TODO]
 
 ## Policy Monitoring
 
 ### Compliance Monitoring
 
-**Monitoring Methods**: {{ source.monitoring_methods }}
-**Compliance Reports**: {{ source.compliance_reports }}
-**Violations**: {{ source.policy_violations }}
+**Monitoring Methods**: [TODO]
+**Compliance Reports**: [TODO]
+**Violations**: [TODO]
 
 ### Effectiveness Assessment
 
-**Assessment Criteria**: {{ source.effectiveness_criteria }}
-**Assessment Methods**: {{ source.assessment_methods }}
+**Assessment Criteria**: [TODO]
+**Assessment Methods**: [TODO]
 
 ## Policy Updates
 
 ### Review Cycle
 
-**Annual Review**: {{ source.annual_review }}
-**Triggered Review**: {{ source.triggered_review }}
+**Annual Review**: [TODO]
+**Triggered Review**: [TODO]
 
 ### Update Process
 
-**Change Request**: {{ source.change_request }}
-**Review and Approval**: {{ source.review_approval }}
-**Change Communication**: {{ source.change_communication }}
-**Version Management**: {{ source.version_management }}
+**Change Request**: [TODO]
+**Review and Approval**: [TODO]
+**Change Communication**: [TODO]
+**Version Management**: [TODO]
 
 ## Exception Management
 
 ### Exception Requests
 
-**Request Process**: {{ source.exception_request_process }}
-**Approval Criteria**: {{ source.exception_approval_criteria }}
-**Compensating Controls**: {{ source.compensating_controls }}
+**Request Process**: [TODO]
+**Approval Criteria**: [TODO]
+**Compensating Controls**: [TODO]
 
 ### Exception Monitoring
 
-**Exception Register**: {{ source.exception_register }}
-**Review**: {{ source.exception_review }}
-**Expiry**: {{ source.exception_expiry }}
+**Exception Register**: [TODO]
+**Review**: [TODO]
+**Expiry**: [TODO]
 
 ## Roles and Responsibilities
 
-**Policy Owner**: {{ source.policy_owner_responsibilities }}
-**Compliance Function**: {{ source.compliance_function_responsibilities }}
-**Business Units**: {{ source.business_unit_responsibilities }}
-**Employees**: {{ source.employee_responsibilities }}
+**Policy Owner**: [TODO]
+**Compliance Function**: [TODO]
+**Business Units**: [TODO]
+**Employees**: [TODO]
 
 ## Documentation and Retention
 
 ### Policy Documentation
 
-**Policy Register**: {{ source.policy_register }}
-**Document Management**: {{ source.document_management }}
+**Policy Register**: [TODO]
+**Document Management**: [TODO]
 
 ### Retention Periods
 
-{{ source.retention_requirements }}
+[TODO]
 
 ## References
 
@@ -184,13 +195,5 @@ This document describes the framework for policies and procedures at {{ source.o
 - Document Management System
 - Compliance Management System
 - Training Management System
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

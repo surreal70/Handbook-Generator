@@ -1,5 +1,19 @@
 # HIPAA Framework Mapping
 
+**Document-ID:** [FRAMEWORK]-9999
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Overview
 
 This document maps the HIPAA compliance handbook templates to specific HIPAA Security Rule, Privacy Rule, and Breach Notification Rule requirements. This mapping ensures comprehensive coverage of all HIPAA requirements and provides traceability for compliance audits.
@@ -16,8 +30,6 @@ This document maps the HIPAA compliance handbook templates to specific HIPAA Sec
 1. **Security Rule** (45 CFR Part 164, Subpart C)
 2. **Privacy Rule** (45 CFR Part 164, Subpart E)
 3. **Breach Notification Rule** (45 CFR Part 164, Subpart D)
-
----
 
 ## Security Rule Mapping
 
@@ -109,8 +121,6 @@ This document maps the HIPAA compliance handbook templates to specific HIPAA Sec
 | §164.316(b)(2)(ii) | Availability | Required | All templates | Make available to workforce |
 | §164.316(b)(2)(iii) | Updates | Required | All templates | Review and update periodically |
 
----
-
 ## Privacy Rule Mapping
 
 ### General Requirements (§164.502-§164.504)
@@ -149,8 +159,6 @@ This document maps the HIPAA compliance handbook templates to specific HIPAA Sec
 | §164.530(i) | Policies and Procedures | All templates | Written policies required |
 | §164.530(j) | Documentation | All templates | Retain 6 years |
 
----
-
 ## Breach Notification Rule Mapping
 
 | HIPAA Requirement | Standard | Template(s) | Notes |
@@ -163,8 +171,6 @@ This document maps the HIPAA compliance handbook templates to specific HIPAA Sec
 | §164.410 | Notification by Business Associate | HIPAA-0030, HIPAA-0600 | BA notification to covered entity |
 | §164.412 | Law Enforcement Delay | HIPAA-0600 | Delay for law enforcement |
 | §164.414 | Administrative Requirements | HIPAA-0600 | Documentation requirements |
-
----
 
 ## Coverage Analysis
 
@@ -190,8 +196,6 @@ All HIPAA Security Rule, Privacy Rule, and Breach Notification Rule requirements
 ### No Identified Gaps
 
 This template set provides comprehensive coverage of all HIPAA requirements. No gaps have been identified.
-
----
 
 ## Template Cross-Reference
 
@@ -222,8 +226,6 @@ This template set provides comprehensive coverage of all HIPAA requirements. No 
 ### Appendices (0700-0750)
 - **HIPAA-0700**: Appendix - Risk Analysis Template
 
----
-
 ## Audit Support
 
 This mapping document supports HIPAA compliance audits by:
@@ -233,22 +235,7 @@ This mapping document supports HIPAA compliance audits by:
 3. **Gap Analysis**: Verification that all requirements are addressed
 4. **Audit Preparation**: Organized structure for audit readiness
 
----
-
 **Version**: 1.0  
 **Last Updated**: 2026-02-07  
 **Maintained by**: Handbook Generator Project
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
-
-## Version History
-
-| Version | Date | Changes |
-|---------|------|---------|
-| 0.1 | {{meta.document.last_updated}} | Initial creation |

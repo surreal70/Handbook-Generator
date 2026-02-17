@@ -4,7 +4,7 @@
 
 Diese Templates bilden die Grundlage für ein vollständiges TSC (Trust Services Criteria) Compliance-Handbuch für **SOC 2-Audits**.
 
-Das TSC-Handbuch der {{ meta.organization.name }} umfasst strukturierte Dokumente, die alle fünf Trust Services-Kategorien abdecken: Security (Common Criteria), Availability, Processing Integrity, Confidentiality und Privacy.
+Das TSC-Handbuch der [TODO] umfasst strukturierte Dokumente, die alle fünf Trust Services-Kategorien abdecken: Security (Common Criteria), Availability, Processing Integrity, Confidentiality und Privacy.
 
 ## Template-Struktur
 
@@ -82,9 +82,9 @@ Das TSC-Handbuch der {{ meta.organization.name }} umfasst strukturierte Dokument
 Die Templates verwenden Platzhalter aus der `metadata.yaml` Datei:
 
 ```markdown
-**Organisation:** {{ meta.organization.name }}
-**Service Auditor:** {{ meta.roles.auditor.name }} ({{ meta.roles.auditor.email }})
-**CISO:** {{ meta.roles.ciso.name }} ({{ meta.roles.ciso.email }})
+**Organisation:** [TODO]
+**Service Auditor:** [TODO] ([TODO])
+**CISO:** [TODO] ([TODO])
 **System Name:** {{ meta.tsc.system_name }}
 **Report Period:** {{ meta.tsc.report_period }}
 ```
@@ -263,7 +263,7 @@ Bei Fragen oder Problemen:
 
 | Version | Datum | Autor | Änderungen |
 |---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
+| 0.1 | [TODO] | {{ meta.defaults.author }} | Initiale Erstellung |
 
 ## Versionshistorie
 

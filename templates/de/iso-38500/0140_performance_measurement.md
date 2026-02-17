@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-38500-0140
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Leistungsmessung
+
+**Dokument-ID:** [FRAMEWORK]-0140
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -16,7 +28,7 @@ Dieses Dokument beschreibt die Leistungsmessung im Rahmen der IT-Governance.
 ## Geltungsbereich
 
 Dieses Dokument gilt für:
-- {{ meta.organization }}
+- {{ meta-organisation.name }}
 - Alle IT-Leistungsmessungen
 
 ## Leistungskennzahlen (KPIs)
@@ -25,27 +37,27 @@ Dieses Dokument gilt für:
 
 | KPI | Ziel | Aktuell | Trend |
 |-----|------|---------|-------|
-| IT-Strategieumsetzung | >90% | {{ meta.strategy_implementation }}% | {{ meta.strategy_trend }} |
-| Business-IT-Alignment | >8/10 | {{ meta.alignment_score }}/10 | {{ meta.alignment_trend }} |
-| IT-ROI | >15% | {{ meta.it_roi }}% | {{ meta.roi_trend }} |
-| Innovationsrate | >10% | {{ meta.innovation_rate }}% | {{ meta.innovation_trend }} |
+| IT-Strategieumsetzung | >90% | {{ meta-handbook.strategy_implementation }}% | {{ meta-handbook.strategy_trend }} |
+| Business-IT-Alignment | >8/10 | {{ meta-handbook.alignment_score }}/10 | {{ meta-handbook.alignment_trend }} |
+| IT-ROI | >15% | {{ meta-handbook.it_roi }}% | {{ meta-handbook.roi_trend }} |
+| Innovationsrate | >10% | {{ meta-handbook.innovation_rate }}% | {{ meta-handbook.innovation_trend }} |
 
 ### Operative KPIs
 
 | KPI | Ziel | Aktuell | Trend |
 |-----|------|---------|-------|
-| System-Verfügbarkeit | >99.5% | {{ meta.system_availability }}% | {{ meta.availability_trend }} |
-| Incident-Resolution-Time | <4h | {{ meta.incident_resolution }}h | {{ meta.incident_trend }} |
-| User-Satisfaction | >85% | {{ meta.user_satisfaction }}% | {{ meta.satisfaction_trend }} |
-| Change-Success-Rate | >95% | {{ meta.change_success }}% | {{ meta.change_trend }} |
+| System-Verfügbarkeit | >99.5% | {{ meta-handbook.system_availability }}% | {{ meta-handbook.availability_trend }} |
+| Incident-Resolution-Time | <4h | {{ meta-handbook.incident_resolution }}h | {{ meta-handbook.incident_trend }} |
+| User-Satisfaction | >85% | {{ meta-handbook.user_satisfaction }}% | {{ meta-handbook.satisfaction_trend }} |
+| Change-Success-Rate | >95% | {{ meta-handbook.change_success }}% | {{ meta-handbook.change_trend }} |
 
 ### Finanz-KPIs
 
 | KPI | Ziel | Aktuell | Trend |
 |-----|------|---------|-------|
-| IT-Kosten/Umsatz | <5% | {{ meta.it_cost_ratio }}% | {{ meta.cost_trend }} |
-| Projekt-Budget-Einhaltung | >90% | {{ meta.budget_compliance }}% | {{ meta.budget_trend }} |
-| TCO-Optimierung | -5% p.a. | {{ meta.tco_optimization }}% | {{ meta.tco_trend }} |
+| IT-Kosten/Umsatz | <5% | {{ meta-handbook.it_cost_ratio }}% | {{ meta-handbook.cost_trend }} |
+| Projekt-Budget-Einhaltung | >90% | {{ meta-handbook.budget_compliance }}% | {{ meta-handbook.budget_trend }} |
+| TCO-Optimierung | -5% p.a. | {{ meta-handbook.tco_optimization }}% | {{ meta-handbook.tco_trend }} |
 
 ## Messmethoden
 
@@ -82,12 +94,4 @@ Dieses Dokument gilt für:
 
 - 0100_edm_model.md
 - 0130_monitoring_processes.md
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |
 

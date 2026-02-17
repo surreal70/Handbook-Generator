@@ -1,11 +1,16 @@
 # Coverage Matrix
 
-**Dokument-ID:** 0440  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** Intern / Vertraulich / Streng vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0440
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -321,8 +326,6 @@ Die Coverage Matrices demonstrieren vollständige und konsistente Rückverfolgba
 - ISO/IEC 15408-2:2022 - Security functional requirements
 - ISO/IEC 15408-3:2022 - Security assurance requirements
 
----
-
 **Nächste Schritte:**
 1. Vervollständige alle [TODO]-Platzhalter
 2. Erstelle vollständige Coverage Matrices
@@ -331,10 +334,3 @@ Die Coverage Matrices demonstrieren vollständige und konsistente Rückverfolgba
 5. Führe Peer-Review durch
 6. Halte Matrices bei Änderungen aktuell
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

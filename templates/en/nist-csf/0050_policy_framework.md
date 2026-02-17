@@ -1,13 +1,25 @@
----
+
 Document-ID: nist-csf-0050
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Policy Framework (GV.PO)
+
+**Document-ID:** [FRAMEWORK]-0050
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -15,7 +27,7 @@ This document describes the organization's cybersecurity policy framework, inclu
 
 ## Scope
 
-{{ meta.scope }}
+{{ meta-handbook.scope }}
 
 ## Policy Hierarchy
 
@@ -44,8 +56,8 @@ This document describes the organization's cybersecurity policy framework, inclu
 ### 1. Information Security Policy
 **Description:** Overarching security policy  
 **Scope:** Entire organization  
-**Responsible:** {{ meta.ciso }}  
-**Status:** {{ meta.policy_status }}
+**Responsible:** {{ meta-organisation-roles.role_CISO }}  
+**Status:** {{ meta-handbook.policy_status }}
 
 **Core Principles:**
 - Confidentiality, Integrity, Availability (CIA)
@@ -56,7 +68,7 @@ This document describes the organization's cybersecurity policy framework, inclu
 ### 2. Access Control Policy
 **Description:** Regulation of access to information and systems  
 **Scope:** All users and systems  
-**Responsible:** {{ meta.security_architect }}
+**Responsible:** {{ meta-handbook.security_architect }}
 
 **Core Elements:**
 - User identification and authentication
@@ -67,7 +79,7 @@ This document describes the organization's cybersecurity policy framework, inclu
 ### 3. Data Protection Policy
 **Description:** Protection of personal and sensitive data  
 **Scope:** All data processing activities  
-**Responsible:** {{ meta.dpo }}
+**Responsible:** {{ meta-organisation-roles.role_GDPR_Manager }}
 
 **Core Elements:**
 - Data classification
@@ -78,7 +90,7 @@ This document describes the organization's cybersecurity policy framework, inclu
 ### 4. Incident Response Policy
 **Description:** Handling of security incidents  
 **Scope:** All employees  
-**Responsible:** {{ meta.security_ops_manager }}
+**Responsible:** {{ meta-handbook.security_ops_manager }}
 
 **Core Elements:**
 - Incident classification
@@ -89,7 +101,7 @@ This document describes the organization's cybersecurity policy framework, inclu
 ### 5. Acceptable Use Policy
 **Description:** Acceptable use of IT resources  
 **Scope:** All users  
-**Responsible:** {{ meta.it_director }}
+**Responsible:** {{ meta-organisation-roles.role_IT_Manager }}
 
 **Core Elements:**
 - Permitted and prohibited activities
@@ -100,7 +112,7 @@ This document describes the organization's cybersecurity policy framework, inclu
 ### 6. Third-Party Risk Management Policy
 **Description:** Management of third-party risks  
 **Scope:** All suppliers and partners  
-**Responsible:** {{ meta.procurement_director }}
+**Responsible:** {{ meta-handbook.procurement_director }}
 
 **Core Elements:**
 - Supplier assessment
@@ -173,7 +185,7 @@ This document describes the organization's cybersecurity policy framework, inclu
 
 ## Policy Repository
 
-**Location:** {{ meta.policy_repository }}  
+**Location:** {{ meta-handbook.policy_repository }}  
 **Access:** All employees (read access)  
 **Management:** Compliance team
 
@@ -196,17 +208,3 @@ This document describes the organization's cybersecurity policy framework, inclu
 - 0060_oversight.md
 - 0210_awareness_training.md (Protect)
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |
-
-<!-- 
-Author Notes:
-- Keep policies current and relevant
-- Ensure policies are understandable
-- Communicate changes effectively
--->

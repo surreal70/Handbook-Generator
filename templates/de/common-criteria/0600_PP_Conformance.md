@@ -1,11 +1,16 @@
 # Protection Profile Konformität
 
-**Dokument-ID:** 0600  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** Intern / Vertraulich / Streng vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0600
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -217,8 +222,6 @@ Dieses Kapitel dokumentiert die Konformität des Security Target (ST) mit releva
 2. [TODO: PP-Referenz 2]
 3. [TODO: Weitere relevante Dokumente]
 
----
-
 **Nächste Schritte:**
 1. Identifizieren Sie alle relevanten Protection Profiles
 2. Dokumentieren Sie den Konformitätsanspruch
@@ -227,10 +230,3 @@ Dieses Kapitel dokumentiert die Konformität des Security Target (ST) mit releva
 5. Erstellen Sie Mapping-Tabellen zwischen PP und ST
 6. Lassen Sie die PP-Konformität durch Evaluatoren prüfen
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0120
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Deployment Automation
+
+**Document-ID:** [FRAMEWORK]-0120
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -25,10 +36,10 @@ This document covers:
 
 ### Organization Information
 
-- **Organization**: {{ source.organization_name }}
-- **Automation Owner**: {{ source.automation_owner }}
-- **Current Automation Level**: {{ source.current_automation_level }}
-- **Target Automation Level**: {{ source.target_automation_level }}
+- **Organization**: [TODO]
+- **Automation Owner**: [TODO]
+- **Current Automation Level**: [TODO]
+- **Target Automation Level**: [TODO]
 
 ## Automation Maturity Levels
 
@@ -133,7 +144,7 @@ deploy_production:
     - ./deploy.sh production
   environment:
     name: production
-    url: https://{{ source.production_url }}
+    url: https://[TODO]
   only:
     - main
   when: manual  # or automatic for CD
@@ -169,7 +180,7 @@ deploy_production:
 
 ### CI/CD Platforms
 
-**Current Platform**: {{ source.cicd_platform }}
+**Current Platform**: [TODO]
 
 **Alternatives**:
 - GitLab CI/CD
@@ -181,14 +192,14 @@ deploy_production:
 
 ### Container Orchestration
 
-**Current Solution**: {{ source.container_orchestration }}
+**Current Solution**: [TODO]
 
 **Kubernetes Deployment**:
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ source.application_name }}
+  name: [TODO]
 spec:
   replicas: 3
   strategy:
@@ -200,19 +211,19 @@ spec:
     spec:
       containers:
       - name: app
-        image: {{ source.container_registry }}/{{ source.application_name }}:{{ source.version }}
+        image: [TODO]/[TODO]:[TODO]
         ports:
         - containerPort: 8080
 ```
 
 ### Infrastructure as Code
 
-**Current IaC Tool**: {{ source.iac_tool }}
+**Current IaC Tool**: [TODO]
 
 **Terraform Example**:
 ```hcl
 resource "aws_ecs_service" "app" {
-  name            = "{{ source.application_name }}"
+  name            = "[TODO]"
   cluster         = aws_ecs_cluster.main.id
   task_definition = aws_ecs_task_definition.app.arn
   desired_count   = 3
@@ -226,7 +237,7 @@ resource "aws_ecs_service" "app" {
 
 ### Configuration Management
 
-**Current Solution**: {{ source.config_management }}
+**Current Solution**: [TODO]
 
 **Ansible Example**:
 ```yaml
@@ -235,14 +246,14 @@ resource "aws_ecs_service" "app" {
   tasks:
     - name: Pull latest image
       docker_image:
-        name: {{ source.application_name }}
+        name: [TODO]
         tag: latest
         source: pull
     
     - name: Start container
       docker_container:
-        name: {{ source.application_name }}
-        image: {{ source.application_name }}:latest
+        name: [TODO]
+        image: [TODO]:latest
         state: started
         restart_policy: always
 ```
@@ -273,7 +284,7 @@ deploy() {
 
 rollback() {
   echo "Deployment failed, rolling back..."
-  kubectl rollout undo deployment/{{ source.application_name }}
+  kubectl rollout undo deployment/[TODO]
 }
 
 trap rollback ERR
@@ -332,8 +343,8 @@ metadata:
   name: app-secrets
 type: Opaque
 data:
-  database-password: {{ source.db_password_base64 }}
-  api-key: {{ source.api_key_base64 }}
+  database-password: [TODO]
+  api-key: [TODO]
 ```
 
 ## Implementation Plan
@@ -384,13 +395,5 @@ data:
 - Cost tracking
 
 <!-- Note: Automation is an investment in speed and quality -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

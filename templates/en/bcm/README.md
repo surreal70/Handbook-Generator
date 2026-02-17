@@ -4,7 +4,7 @@
 
 These templates form the foundation for a complete Business Continuity Management (BCM) handbook according to **ISO 22301:2019** and **BSI Standard 100-4**.
 
-The BCM handbook of {{ meta.organization.name }} comprises 30 structured documents covering all essential aspects of Business Continuity Management.
+The BCM handbook of [TODO] comprises 30 structured documents covering all essential aspects of Business Continuity Management.
 
 ## Template Structure
 
@@ -59,11 +59,11 @@ The BCM handbook of {{ meta.organization.name }} comprises 30 structured documen
 Templates use placeholders from the `metadata.yaml` file:
 
 ```markdown
-**Organization:** {{ meta.organization.name }}
-**CEO:** {{ meta.roles.ceo.name }} ({{ meta.roles.ceo.email }})
-**CIO:** {{ meta.roles.cio.name }} ({{ meta.roles.cio.email }})
-**CISO:** {{ meta.roles.ciso.name }} ({{ meta.roles.ciso.email }})
-**Document Owner:** {{ meta.document.owner }}
+**Organization:** [TODO]
+**CEO:** [TODO] ([TODO])
+**CIO:** [TODO] ([TODO])
+**CISO:** [TODO] ([TODO])
+**Document Owner:** [TODO]
 ```
 
 ### NetBox Placeholders (Infrastructure Data)
@@ -234,7 +234,7 @@ For questions or issues:
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
+| 0.1 | [TODO] | {{ meta.defaults.author }} | Initial Creation |
 
 ## Version History
 

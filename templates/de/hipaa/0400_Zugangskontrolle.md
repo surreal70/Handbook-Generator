@@ -1,13 +1,16 @@
 # Zugangskontrolle
 
-**Dokument-ID:** HIPAA-0400  
-**Organisation:** {{ meta.organization.name }}  
-**Verantwortlich:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Entwurf / In Prüfung / Genehmigt  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** HIPAA-0400
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,7 +28,7 @@ Erforderlicher (R) Standard mit Implementierungsspezifikationen:
 
 ## 1. Zweck
 
-Dieses Dokument beschreibt die technischen Schutzmaßnahmen zur Zugangskontrolle für {{ meta.organization.name }}, um technische Richtlinien und Verfahren für elektronische Informationssysteme zu implementieren, die ePHI verwalten, um nur autorisierten Personen oder Softwareprogrammen Zugang zu gewähren.
+Dieses Dokument beschreibt die technischen Schutzmaßnahmen zur Zugangskontrolle für {{ meta-organisation.name }}, um technische Richtlinien und Verfahren für elektronische Informationssysteme zu implementieren, die ePHI verwalten, um nur autorisierten Personen oder Softwareprogrammen Zugang zu gewähren.
 
 ### 1.1 HIPAA-Anforderung
 
@@ -177,7 +180,6 @@ Dieses Dokument beschreibt die technischen Schutzmaßnahmen zur Zugangskontrolle
 - Warnung vor Timeout (z.B. 2 Minuten)
 - Klare Anzeige des gesperrten Zustands
 - Anweisungen zum Entsperren
-
 
 ## 5. Verschlüsselung und Entschlüsselung
 
@@ -380,20 +382,11 @@ Dieses Dokument beschreibt die technischen Schutzmaßnahmen zur Zugangskontrolle
 
 **Speicherort:** [TODO: Identitätsverwaltungssystem, Dokumenten-Repository]
 
----
-
 **Dokumentenhistorie:**
 
 | Version | Datum | Autor | Änderungen |
 |---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Ersterstellung |
+| 0.1 | {{ meta-handbook.modifydate }} | {{ meta-handbook.author }} | Ersterstellung |
 
 <!-- Ende des Templates -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

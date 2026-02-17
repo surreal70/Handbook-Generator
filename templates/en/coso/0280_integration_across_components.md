@@ -1,17 +1,28 @@
----
+
 Document-ID: coso-0500
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Integration Across Components
 
+**Document-ID:** [FRAMEWORK]-0280
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document describes the integration of the five COSO components at {{ source.organization_name }}.
+This document describes the integration of the five COSO components at [TODO].
 
 ## Integration Approach
 
@@ -27,17 +38,17 @@ The five components of internal control function together as an integrated syste
 
 ### Integration Mechanisms
 
-{{ source.integration_mechanisms }}
+[TODO]
 
 ## Principle Integration
 
 ### All 17 Principles Present
 
-{{ source.principles_presence }}
+[TODO]
 
 ### Principles Function Together
 
-{{ source.principles_integration }}
+[TODO]
 
 ## Effectiveness Assessment
 
@@ -51,25 +62,17 @@ Internal control is considered effective when:
 
 ### Assessment Methodology
 
-{{ source.effectiveness_assessment_methodology }}
+[TODO]
 
 ## Integration Documentation
 
-{{ source.integration_documentation }}
+[TODO]
 
 ## References
 
 - COSO Internal Control Framework
-- Integrated Control System {{ source.organization_name }}
+- Integrated Control System [TODO]
 
 <!-- Author notes: Integration is key to effectiveness -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

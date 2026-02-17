@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0230
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Physical Entry Controls
+
+**Document-ID:** [FRAMEWORK]-0230
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -15,7 +26,7 @@ This document describes measures for physical entry control according to TISAX r
 
 ## Scope
 
-This document applies to all controlled areas of {{ source.organization_name }}.
+This document applies to all controlled areas of [TODO].
 
 ## Access Control Systems
 
@@ -69,11 +80,11 @@ This document applies to all controlled areas of {{ source.organization_name }}.
 - Door openings outside business hours
 - Alarm triggers
 
-**Retention:** At least {{ source.access_log_retention_days }} days
+**Retention:** At least [TODO] days
 
 ### Monitoring
 - Unauthorized access attempts
-- Doors open longer than {{ source.door_open_timeout }} seconds
+- Doors open longer than [TODO] seconds
 - Access outside business hours
 - Multiple card usage (tailgating detection)
 
@@ -90,18 +101,10 @@ This document applies to all controlled areas of {{ source.organization_name }}.
 
 ## Metrics
 
-{{ source.organization_name }} measures:
+[TODO] measures:
 - Number of active access permissions
 - Number of failed access attempts
 - Number of visitors per month
 - Compliance rate in audits
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

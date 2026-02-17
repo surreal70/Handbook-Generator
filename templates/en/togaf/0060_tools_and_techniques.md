@@ -1,17 +1,28 @@
----
+
 Document-ID: togaf-0060
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Architecture Tools and Techniques
 
+**Document-ID:** [FRAMEWORK]-0060
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document describes the tools and techniques used in the architecture process at {{ source.organization_name }}. It defines the tool stack, usage guidelines, and best practices.
+This document describes the tools and techniques used in the architecture process at [TODO]. It defines the tool stack, usage guidelines, and best practices.
 
 ## Scope
 
@@ -28,11 +39,11 @@ This document covers:
 
 | Tool | Purpose | License Model | Users |
 |------|---------|---------------|-------|
-| {{ source.modeling_tool_name }} | Enterprise architecture modeling | {{ source.modeling_license }} | Architecture Team |
-| {{ source.diagram_tool_name }} | Diagram creation | {{ source.diagram_license }} | All project teams |
-| {{ source.data_modeling_tool }} | Data modeling | {{ source.data_modeling_license }} | Data Architects |
+| [TODO] | Enterprise architecture modeling | [TODO] | Architecture Team |
+| [TODO] | Diagram creation | [TODO] | All project teams |
+| [TODO] | Data modeling | [TODO] | Data Architects |
 
-**Primary Modeling Tool**: {{ source.primary_modeling_tool }}
+**Primary Modeling Tool**: [TODO]
 
 **Capabilities**:
 - TOGAF Content Framework support
@@ -45,15 +56,15 @@ This document covers:
 
 | Tool | Purpose | Format | Integration |
 |------|---------|--------|-------------|
-| {{ source.wiki_tool }} | Collaborative documentation | Wiki/Markdown | {{ source.wiki_integration }} |
-| {{ source.doc_tool }} | Formal documents | Word/PDF | {{ source.doc_integration }} |
-| {{ source.presentation_tool }} | Presentations | PowerPoint/PDF | {{ source.presentation_integration }} |
+| [TODO] | Collaborative documentation | Wiki/Markdown | [TODO] |
+| [TODO] | Formal documents | Word/PDF | [TODO] |
+| [TODO] | Presentations | PowerPoint/PDF | [TODO] |
 
 ### Repository and Version Control
 
-**Repository Tool**: {{ source.repository_tool }}
+**Repository Tool**: [TODO]
 
-**Version Control**: {{ source.version_control_tool }}
+**Version Control**: [TODO]
 
 **Capabilities**:
 - Artifact versioning
@@ -66,15 +77,15 @@ This document covers:
 
 | Tool | Purpose | Usage |
 |------|---------|-------|
-| {{ source.collaboration_platform }} | Team communication | Daily collaboration |
-| {{ source.meeting_tool }} | Virtual meetings | Reviews and workshops |
-| {{ source.whiteboard_tool }} | Visual brainstorming | Design sessions |
+| [TODO] | Team communication | Daily collaboration |
+| [TODO] | Virtual meetings | Reviews and workshops |
+| [TODO] | Visual brainstorming | Design sessions |
 
 ## Modeling Techniques
 
 ### Viewpoint Approach
 
-{{ source.organization_name }} uses TOGAF viewpoints for:
+[TODO] uses TOGAF viewpoints for:
 - **Stakeholder Viewpoints**: Tailored to specific stakeholder concerns
 - **Architecture Viewpoints**: Standardized views of architecture domains
 - **Technical Viewpoints**: Detailed technical perspectives
@@ -94,7 +105,7 @@ This document covers:
 - **ArchiMate**: For enterprise architecture modeling
 - **UML**: For detailed application and data modeling
 - **BPMN**: For business process modeling
-- **Custom Notations**: {{ source.custom_notations }}
+- **Custom Notations**: [TODO]
 
 ## Analysis Techniques
 
@@ -133,7 +144,7 @@ This document covers:
 
 ### Maturity Assessment
 
-**Framework**: {{ source.maturity_framework }}
+**Framework**: [TODO]
 
 **Dimensions**:
 - Architecture process maturity
@@ -148,12 +159,12 @@ This document covers:
 
 | Diagram Type | Purpose | Notation | Tool |
 |--------------|---------|----------|------|
-| Capability Map | Business capabilities | Custom | {{ source.capability_tool }} |
-| Value Stream | Value chains | Custom | {{ source.value_stream_tool }} |
-| Application Landscape | Application overview | ArchiMate | {{ source.app_landscape_tool }} |
-| Data Flow | Data flows | UML/Custom | {{ source.data_flow_tool }} |
-| Infrastructure | Infrastructure | Network Diagram | {{ source.infrastructure_tool }} |
-| Roadmap | Timeline planning | Gantt/Timeline | {{ source.roadmap_tool }} |
+| Capability Map | Business capabilities | Custom | [TODO] |
+| Value Stream | Value chains | Custom | [TODO] |
+| Application Landscape | Application overview | ArchiMate | [TODO] |
+| Data Flow | Data flows | UML/Custom | [TODO] |
+| Infrastructure | Infrastructure | Network Diagram | [TODO] |
+| Roadmap | Timeline planning | Gantt/Timeline | [TODO] |
 
 ### Visualization Best Practices
 
@@ -251,12 +262,3 @@ The tool stack and techniques are improved through:
 
 <!-- Author notes: Customize tools and techniques to match your organization's needs and budget -->
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{meta.document.last_updated}} | {{ meta.defaults.author }} | Initial creation |
-
-<-  ( marked all subtasks complete End of template -->

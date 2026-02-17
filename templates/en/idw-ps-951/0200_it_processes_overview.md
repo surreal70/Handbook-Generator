@@ -1,11 +1,16 @@
 # IT Processes Overview
 
-**Document-ID:** idw-ps-951-0200  
-**Owner:** {{ meta.audit_lead }}  
-**Version:** {{ meta.version }}  
-**Status:** {{ meta.status }}  
-**Classification:** {{ meta.classification }}  
-**Last Update:** {{ meta.date }}
+**Document-ID:** idw-ps-951-0200
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -16,9 +21,9 @@ This document describes the audit of IT processes as part of the IT audit accord
 ## 2. Audit Subject
 
 ### IT Process Landscape
-- **Process Framework:** {{ source.process_framework }}
-- **Process Documentation:** {{ source.process_documentation }}
-- **Process Owners:** {{ source.process_owners }}
+- **Process Framework:** [TODO]
+- **Process Documentation:** [TODO]
+- **Process Owners:** [TODO]
 
 ### Audit Objectives
 - Assessment of IT process landscape
@@ -43,21 +48,21 @@ This document describes the audit of IT processes as part of the IT audit accord
 
 | Process | Documented | Controlled | Measured | Assessment |
 |---------|------------|------------|----------|------------|
-| Change Management | {{ source.change_documented }} | {{ source.change_controlled }} | {{ source.change_measured }} | {{ source.change_assessment }} |
-| Incident Management | {{ source.incident_documented }} | {{ source.incident_controlled }} | {{ source.incident_measured }} | {{ source.incident_assessment }} |
-| Problem Management | {{ source.problem_documented }} | {{ source.problem_controlled }} | {{ source.problem_measured }} | {{ source.problem_assessment }} |
+| Change Management | [TODO] | [TODO] | [TODO] | [TODO] |
+| Incident Management | [TODO] | [TODO] | [TODO] | [TODO] |
+| Problem Management | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## 5. Findings
 
 ### Positive Findings
-1. {{ source.positive_finding_1 }}
+1. [TODO]
 
 ### Improvement Opportunities
-1. {{ source.improvement_1 }}
+1. [TODO]
 
 ## 6. Recommendations
 
-1. {{ source.recommendation_1 }}
+1. [TODO]
 
 ## 7. References
 
@@ -65,18 +70,9 @@ This document describes the audit of IT processes as part of the IT audit accord
 - ITIL 4
 - COBIT 2019
 
----
-
 **Approved by:**  
-{{ meta.audit_lead }}, Audit Lead  
-Date: {{ meta.approval_date }}
+{{ meta-organisation-roles.role_Internal_Auditor }}, Audit Lead  
+Date: {{ meta-handbook.valid_from }}
 
-**Next Review:** {{ meta.next_review }}
+**Next Review:** {{ meta-handbook.next_review }}
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |

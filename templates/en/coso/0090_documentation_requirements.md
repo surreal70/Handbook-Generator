@@ -1,53 +1,56 @@
----
+
 Document-ID: coso-0530
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Documentation Requirements
 
+**Document-ID:** [FRAMEWORK]-0090
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document describes the documentation requirements for the internal control system at {{ source.organization_name }}.
+This document describes the documentation requirements for the internal control system at [TODO].
 
 ## Documentation Standards
 
-{{ source.documentation_standards }}
+[TODO]
 
 ## Required Documentation
 
 ### Control Environment
-{{ source.control_environment_documentation }}
+[TODO]
 
 ### Risk Assessment
-{{ source.risk_assessment_documentation }}
+[TODO]
 
 ### Control Activities
-{{ source.control_activities_documentation }}
+[TODO]
 
 ### Information and Communication
-{{ source.information_communication_documentation }}
+[TODO]
 
 ### Monitoring Activities
-{{ source.monitoring_documentation }}
+[TODO]
 
 ## Document Management
 
-{{ source.document_management }}
+[TODO]
 
 ## References
 
 - Documentation Policy
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

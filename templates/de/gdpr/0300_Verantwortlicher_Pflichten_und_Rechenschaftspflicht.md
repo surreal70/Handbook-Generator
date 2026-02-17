@@ -1,11 +1,16 @@
 # Verantwortlicher: Pflichten und Rechenschaftspflicht
 
-**Dokument-ID:** 0300  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0300
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,7 +30,7 @@ Referenz: DSGVO Art. 24 (Verantwortung des für die Verarbeitung Verantwortliche
 
 ## Zweck
 
-Dieses Dokument beschreibt die Pflichten des Verantwortlichen gemäß Art. 24 DSGVO und die Umsetzung der Rechenschaftspflicht bei {{ meta.organization }}. Es dokumentiert, wie wir sicherstellen, dass die Verarbeitung personenbezogener Daten im Einklang mit der DSGVO erfolgt.
+Dieses Dokument beschreibt die Pflichten des Verantwortlichen gemäß Art. 24 DSGVO und die Umsetzung der Rechenschaftspflicht bei {{ meta-organisation.name }}. Es dokumentiert, wie wir sicherstellen, dass die Verarbeitung personenbezogener Daten im Einklang mit der DSGVO erfolgt.
 
 ## Rechenschaftspflicht (Art. 24 Abs. 1)
 
@@ -180,8 +185,6 @@ Die Maßnahmen berücksichtigen:
 - **Datenschutz-Folgenabschätzung (Art. 35):** Risikobewertung
 - **Auftragsverarbeitung (Art. 28):** Verantwortlichkeiten bei Auftragsverarbeitern
 
----
-
 **Nächste Schritte:**
 1. Dokumentieren Sie alle implementierten technischen und organisatorischen Maßnahmen
 2. Erstellen Sie einen Überprüfungsplan für regelmäßige TOM-Audits
@@ -189,10 +192,3 @@ Die Maßnahmen berücksichtigen:
 4. Stellen Sie sicher, dass alle Nachweisdokumente aktuell und verfügbar sind
 5. Definieren Sie klare Verantwortlichkeiten für die Rechenschaftspflicht
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

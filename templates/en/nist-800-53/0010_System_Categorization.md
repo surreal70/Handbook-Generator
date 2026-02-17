@@ -1,13 +1,16 @@
 # System Categorization
 
-**Document-ID:** NIST-0010  
-**Organization:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Approved by:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** NIST-0010
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -36,8 +39,8 @@ This document describes the categorization of the information system {{ meta.nis
 **System Name:** {{ meta.nist.system_name }}  
 **System ID:** {{ meta.nist.system_id }}  
 **System Owner:** [TODO: Name] ([TODO: Email])  
-**Authorizing Official (AO):** {{ meta.roles.ao.name }} ({{ meta.roles.ao.email }})  
-**Information System Security Officer (ISSO):** {{ meta.roles.isso.name }} ({{ meta.roles.isso.email }})  
+**Authorizing Official (AO):** [TODO] ([TODO])  
+**Information System Security Officer (ISSO):** [TODO] ([TODO])  
 
 ### 2.2 System Description
 
@@ -209,9 +212,9 @@ Based on overall categorization, the following baseline is selected:
 |------|------|----------------|
 | System Owner | [TODO: Name] | System responsibility |
 | Information Owner | [TODO: Name] | Information responsibility |
-| ISSO | {{ meta.roles.isso.name }} | Security assessment |
-| ISSM | {{ meta.roles.issm.name }} | Security management |
-| Authorizing Official (AO) | {{ meta.roles.ao.name }} | Approval |
+| ISSO | [TODO] | Security assessment |
+| ISSM | [TODO] | Security management |
+| Authorizing Official (AO) | [TODO] | Approval |
 
 ### 6.3 Categorization Date
 
@@ -260,7 +263,7 @@ Based on overall categorization, the following baseline is selected:
 
 **Categorization approved by:**
 
-**Name:** {{ meta.roles.ao.name }}  
+**Name:** [TODO]  
 **Title:** Authorizing Official (AO)  
 **Date:** [TODO: Date]  
 **Signature:** [TODO: Signature or electronic approval]  
@@ -297,13 +300,5 @@ Based on overall categorization, the following baseline is selected:
 | [TODO: Type 2] | [TODO: L/M/H] | [TODO: L/M/H] | [TODO: L/M/H] | [TODO: L/M/H] |
 | [TODO: Type 3] | [TODO: L/M/H] | [TODO: L/M/H] | [TODO: L/M/H] | [TODO: L/M/H] |
 | **System Overall** | **[TODO: L/M/H]** | **[TODO: L/M/H]** | **[TODO: L/M/H]** | **[TODO: L/M/H]** |
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 <!-- End of template -->

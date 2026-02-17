@@ -1,14 +1,16 @@
 # Basic Security Check / Gap Analysis (Template)
 
-**Document ID:** 0080  
-**Document Type:** Methodology Artifact  
-**Reference Framework:** BSI IT-Grundschutz (BSI Standard 200-2)  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** {{ meta.document.status }}  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.document.last_updated }}  
-**Next Review:** {{ meta.document.next_review }}
+**Document-ID:** [FRAMEWORK]-0080
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -21,7 +23,7 @@ Reference: BSI Standard 200-2 (Chapter 8: Basis Security Check)
 
 ## 1. Objective and Purpose
 
-The basic security check systematically assesses the extent to which the IT-Grundschutz requirements modeled for the information domain of **{{ meta.organization.name }}** have been implemented. It forms the basis for:
+The basic security check systematically assesses the extent to which the IT-Grundschutz requirements modeled for the information domain of **{{ meta-organisation.name }}** have been implemented. It forms the basis for:
 - Identification of security gaps
 - Prioritization of measures
 - Measure planning (Document 0100)
@@ -96,13 +98,13 @@ Reference the specific module requirements from IT-Grundschutz-Kompendium.
 
 | Module | Requirement (Short) | Object | Status | Evidence | Finding | Measure | Owner | Target Date |
 |---|---|---|---|---|---|---|---|---|
-| ISMS.1 | Security policy created | {{ meta.organization.name }} | F | Document 0010 | - | - | {{ meta.ciso.name }} | - |
-| ISMS.1 | ISMS organization defined | {{ meta.organization.name }} | F | Document 0020 | - | - | {{ meta.ciso.name }} | - |
-| ISMS.1 | Resources provided | {{ meta.organization.name }} | P | Budget evidence | Budget insufficient | Increase budget | {{ meta.ceo.name }} | [TODO] |
-| ORP.1 | Roles and responsibilities defined | {{ meta.organization.name }} | F | Document 0020 | - | - | {{ meta.ciso.name }} | - |
-| ORP.2 | Onboarding of new employees | {{ meta.organization.name }} | P | HR process | No security training in onboarding | Integrate security training | [TODO: HR] | [TODO] |
-| ORP.3 | Awareness program | {{ meta.organization.name }} | N | - | No awareness program exists | Establish awareness program | {{ meta.ciso.name }} | [TODO] |
-| ORP.4 | IAM process | {{ meta.organization.name }} | P | IAM guideline | Recertification missing | Implement recertification process | {{ meta.cio.name }} | [TODO] |
+| ISMS.1 | Security policy created | {{ meta-organisation.name }} | F | Document 0010 | - | - | {{ meta.ciso.name }} | - |
+| ISMS.1 | ISMS organization defined | {{ meta-organisation.name }} | F | Document 0020 | - | - | {{ meta.ciso.name }} | - |
+| ISMS.1 | Resources provided | {{ meta-organisation.name }} | P | Budget evidence | Budget insufficient | Increase budget | {{ meta.ceo.name }} | [TODO] |
+| ORP.1 | Roles and responsibilities defined | {{ meta-organisation.name }} | F | Document 0020 | - | - | {{ meta.ciso.name }} | - |
+| ORP.2 | Onboarding of new employees | {{ meta-organisation.name }} | P | HR process | No security training in onboarding | Integrate security training | [TODO: HR] | [TODO] |
+| ORP.3 | Awareness program | {{ meta-organisation.name }} | N | - | No awareness program exists | Establish awareness program | {{ meta.ciso.name }} | [TODO] |
+| ORP.4 | IAM process | {{ meta-organisation.name }} | P | IAM guideline | Recertification missing | Implement recertification process | {{ meta.cio.name }} | [TODO] |
 
 ### 3.2 Conception and Approaches (CON)
 
@@ -165,7 +167,7 @@ Reference the specific module requirements from IT-Grundschutz-Kompendium.
 
 | Module | Requirement (Short) | Object | Status | Evidence | Finding | Measure | Owner | Target Date |
 |---|---|---|---|---|---|---|---|---|
-| INF.1 | Building security | {{ meta.organization.primary_location }} | P | Security concept | Visitor management insufficient | Visitor management system | [TODO: Facility] | [TODO] |
+| INF.1 | Building security | [TODO] | P | Security concept | Visitor management insufficient | Visitor management system | [TODO: Facility] | [TODO] |
 | INF.2 | Data center security | Data center | F | DC documentation | - | - | [TODO: Facility] | - |
 
 ## 4. Summary and Statistics
@@ -257,28 +259,18 @@ The basic security check is repeated:
 - At least annually as part of the ISMS review
 
 **Responsible:** {{ meta.ciso.name }} (ISB)  
-**Next Check:** {{ meta.document.next_review }}
+**Next Check:** {{ meta-handbook.next_review }}
 
 ## 8. Approval
 
 | Role | Name | Date | Approval |
 |---|---|---|---|
-| ISB | {{ meta.ciso.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| IT Management | {{ meta.cio.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| Executive Management | {{ meta.ceo.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| IT Management | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| Executive Management | {{ meta.ceo.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **References:**
 - BSI Standard 200-2: IT-Grundschutz Methodology (Chapter 8: Basic Security Check)
 - BSI IT-Grundschutz Compendium
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
 
 <!-- End of template -->

@@ -1,11 +1,16 @@
 # Referenzen und Quellenangaben
 
-**Dokument-ID:** 0640  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** Intern / Vertraulich / Streng vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0640
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -397,8 +402,6 @@ Version [TODO: Version], [TODO: Datum]
 **E-Mail:** [TODO: E-Mail]  
 **Website:** [TODO: Website]
 
----
-
 **Nächste Schritte:**
 1. Identifizieren Sie alle im ST verwendeten Referenzen
 2. Sammeln Sie vollständige bibliographische Informationen
@@ -409,10 +412,3 @@ Version [TODO: Version], [TODO: Datum]
 7. Stellen Sie sicher, dass alle Referenzen verfügbar sind
 8. Aktualisieren Sie die Referenzliste bei Änderungen am ST
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

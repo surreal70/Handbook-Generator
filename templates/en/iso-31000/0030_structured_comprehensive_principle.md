@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-31000-0030
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Principle 2: Structured and comprehensive
+
+**Document-ID:** [FRAMEWORK]-0030
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -24,7 +36,7 @@ A systematic, timely, and structured approach to risk management contributes to 
 - Methods and tools are standardized
 - Results are comparable and traceable
 
-## Implementation in {{ meta.organization }}
+## Implementation in {{ meta-organisation.name }}
 
 ### Risk Management Process
 
@@ -55,12 +67,4 @@ A systematic, timely, and structured approach to risk management contributes to 
 - Risk assessment matrix
 - Risk treatment plans
 - Monitoring reports
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 

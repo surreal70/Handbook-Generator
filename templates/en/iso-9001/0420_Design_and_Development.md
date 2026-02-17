@@ -1,11 +1,16 @@
 # Design and Development of Products and Services
 
-**Document-ID:** 0420  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0420
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -17,13 +22,13 @@ Reference: ISO 9001:2015, Clause 8.3
 
 ## Purpose
 
-This document defines how {{ meta.organization }} designs and develops products and services to ensure they meet requirements.
+This document defines how {{ meta-organisation.name }} designs and develops products and services to ensure they meet requirements.
 
 ## Design Planning (8.3.2)
 
 ### Development Process
 
-**{{ meta.organization }} plans and controls design and development by:**
+**{{ meta-organisation.name }} plans and controls design and development by:**
 - Determining design and development stages
 - Determining required reviews and validations
 - Defining responsibilities and authorities
@@ -51,7 +56,7 @@ This document defines how {{ meta.organization }} designs and develops products 
 
 ### Input Requirements
 
-**{{ meta.organization }} determines requirements essential for specific types of products and services:**
+**{{ meta-organisation.name }} determines requirements essential for specific types of products and services:**
 - Functional and performance requirements
 - Information from previous similar developments
 - Statutory and regulatory requirements
@@ -77,7 +82,7 @@ This document defines how {{ meta.organization }} designs and develops products 
 
 ### Control Measures
 
-**{{ meta.organization }} applies controls to ensure:**
+**{{ meta-organisation.name }} applies controls to ensure:**
 - Results to be achieved are defined
 - Reviews are conducted
 - Validations are conducted
@@ -107,7 +112,7 @@ This document defines how {{ meta.organization }} designs and develops products 
 
 ### Output Requirements
 
-**{{ meta.organization }} ensures design outputs:**
+**{{ meta-organisation.name }} ensures design outputs:**
 - Meet input requirements
 - Are adequate for subsequent processes
 - Include monitoring and measurement requirements
@@ -128,7 +133,7 @@ This document defines how {{ meta.organization }} designs and develops products 
 
 ### Change Management
 
-**{{ meta.organization }} identifies, reviews, and controls changes during or after design and development:**
+**{{ meta-organisation.name }} identifies, reviews, and controls changes during or after design and development:**
 - Changes are documented
 - Impacts are assessed
 - Changes are reviewed and approved
@@ -220,8 +225,6 @@ This document defines how {{ meta.organization }} designs and develops products 
 - Conducting audits
 - Reviewing documentation
 
----
-
 **Next Steps:**
 1. Establish development process
 2. Define development phases and gates
@@ -230,10 +233,3 @@ This document defines how {{ meta.organization }} designs and develops products 
 5. Train development team
 6. Monitor development projects
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

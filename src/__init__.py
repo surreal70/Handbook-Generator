@@ -8,6 +8,6 @@ Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
 Copyright: 2025
 """
 
-__version__ = "0.0.13"
+__version__ = "0.0.14"
 __author__ = "Andreas Huemmer"
 __email__ = "andreas.huemmer@adminsend.de"

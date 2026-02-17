@@ -1,13 +1,25 @@
----
+
 Document-ID: nist-csf-0620
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Target Profile
+
+**Document-ID:** [FRAMEWORK]-0620
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -15,45 +27,36 @@ This document describes the organization's target cybersecurity profile based on
 
 ## Scope
 
-{{ meta.scope }}
+{{ meta-handbook.scope }}
 
 ## Target Profile
 
 ### Govern Function
-- Target maturity: {{ meta.govern_target }}
-- Priority improvements: {{ meta.govern_priorities }}
+- Target maturity: {{ meta-handbook.govern_target }}
+- Priority improvements: {{ meta-handbook.govern_priorities }}
 
 ### Identify Function
-- Target maturity: {{ meta.identify_target }}
-- Priority improvements: {{ meta.identify_priorities }}
+- Target maturity: {{ meta-handbook.identify_target }}
+- Priority improvements: {{ meta-handbook.identify_priorities }}
 
 ### Protect Function
-- Target maturity: {{ meta.protect_target }}
-- Priority improvements: {{ meta.protect_priorities }}
+- Target maturity: {{ meta-handbook.protect_target }}
+- Priority improvements: {{ meta-handbook.protect_priorities }}
 
 ### Detect Function
-- Target maturity: {{ meta.detect_target }}
-- Priority improvements: {{ meta.detect_priorities }}
+- Target maturity: {{ meta-handbook.detect_target }}
+- Priority improvements: {{ meta-handbook.detect_priorities }}
 
 ### Respond Function
-- Target maturity: {{ meta.respond_target }}
-- Priority improvements: {{ meta.respond_priorities }}
+- Target maturity: {{ meta-handbook.respond_target }}
+- Priority improvements: {{ meta-handbook.respond_priorities }}
 
 ### Recover Function
-- Target maturity: {{ meta.recover_target }}
-- Priority improvements: {{ meta.recover_priorities }}
+- Target maturity: {{ meta-handbook.recover_target }}
+- Priority improvements: {{ meta-handbook.recover_priorities }}
 
 ## Document References
 
 - 0610_current_profile.md
 - 0630_gap_analysis.md
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |
-
-<!-- Author Notes: Align target profile with business objectives -->

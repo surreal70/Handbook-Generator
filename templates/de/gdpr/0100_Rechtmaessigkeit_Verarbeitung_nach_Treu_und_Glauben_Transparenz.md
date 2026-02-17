@@ -1,11 +1,16 @@
 # Rechtmäßigkeit, Verarbeitung nach Treu und Glauben, Transparenz
 
-**Dokument-ID:** 0100  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0100
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -23,7 +28,7 @@ Referenz: DSGVO Art. 5 Abs. 1 lit. a (Rechtmäßigkeit, Verarbeitung nach Treu u
 
 ## Zweck
 
-Dieses Dokument beschreibt die Umsetzung des Grundsatzes der Rechtmäßigkeit, Verarbeitung nach Treu und Glauben und Transparenz in der {{ meta.organization }}. Dieser Grundsatz bildet die Basis für alle Datenverarbeitungen.
+Dieses Dokument beschreibt die Umsetzung des Grundsatzes der Rechtmäßigkeit, Verarbeitung nach Treu und Glauben und Transparenz in der {{ meta-organisation.name }}. Dieser Grundsatz bildet die Basis für alle Datenverarbeitungen.
 
 ## Grundsatz gemäß Art. 5 Abs. 1 lit. a DSGVO
 
@@ -199,8 +204,6 @@ Personenbezogene Daten müssen auf rechtmäßige Weise, nach Treu und Glauben un
 | Unfaire Praktiken | Cookie-Wall ohne Alternative | Echte Wahlmöglichkeiten bieten |
 | Unverständliche Sprache | Juristische Fachsprache | Verständliche Formulierungen |
 
----
-
 **Nächste Schritte:**
 1. Implementieren Sie Rechtsgrundlagen-Prüfung für alle Verarbeitungen
 2. Überarbeiten Sie Datenschutzerklärungen auf Verständlichkeit
@@ -208,10 +211,3 @@ Personenbezogene Daten müssen auf rechtmäßige Weise, nach Treu und Glauben un
 4. Schulen Sie Mitarbeiter zu Transparenzanforderungen
 5. Dokumentieren Sie alle Maßnahmen für Accountability
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

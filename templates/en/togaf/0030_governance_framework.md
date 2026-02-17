@@ -1,17 +1,28 @@
----
+
 Document-ID: togaf-0030
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Architecture Governance Framework
 
+**Document-ID:** [FRAMEWORK]-0030
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document defines the architecture governance framework for {{ source.organization_name }}. It establishes the processes, roles, and mechanisms for ensuring architecture compliance and managing architecture decisions.
+This document defines the architecture governance framework for [TODO]. It establishes the processes, roles, and mechanisms for ensuring architecture compliance and managing architecture decisions.
 
 ## Scope
 
@@ -27,16 +38,16 @@ This document covers:
 ### Architecture Governance Organization
 
 ```
-{{ source.governance_org_chart }}
+[TODO]
 ```
 
 ### Key Governance Bodies
 
 | Body | Purpose | Membership | Meeting Frequency |
 |------|---------|------------|-------------------|
-| Architecture Board | Strategic architecture decisions | {{ source.arch_board_members }} | {{ source.arch_board_frequency }} |
-| Architecture Review Board | Technical architecture reviews | {{ source.review_board_members }} | {{ source.review_board_frequency }} |
-| Change Advisory Board | Architecture change approval | {{ source.cab_members }} | {{ source.cab_frequency }} |
+| Architecture Board | Strategic architecture decisions | [TODO] | [TODO] |
+| Architecture Review Board | Technical architecture reviews | [TODO] | [TODO] |
+| Change Advisory Board | Architecture change approval | [TODO] | [TODO] |
 
 ## Roles and Responsibilities
 
@@ -62,10 +73,10 @@ This document covers:
 - Architecture artifact creation
 
 **Domains**:
-- Business Architecture: {{ source.business_architect }}
-- Data Architecture: {{ source.data_architect }}
-- Application Architecture: {{ source.application_architect }}
-- Technology Architecture: {{ source.technology_architect }}
+- Business Architecture: [TODO]
+- Data Architecture: [TODO]
+- Application Architecture: [TODO]
+- Technology Architecture: [TODO]
 
 ### Architecture Review Board
 
@@ -90,10 +101,10 @@ All significant architecture decisions are documented using ADRs with:
 
 | Decision Type | Authority | Escalation Path |
 |--------------|-----------|-----------------|
-| Architecture Principles | Architecture Board | {{ source.principles_escalation }} |
+| Architecture Principles | Architecture Board | [TODO] |
 | Technology Standards | Chief Architect | Architecture Board |
 | Project Architecture | Domain Architect | Chief Architect |
-| Architecture Exceptions | Architecture Board | {{ source.exception_escalation }} |
+| Architecture Exceptions | Architecture Board | [TODO] |
 
 ## Compliance Management
 
@@ -166,9 +177,9 @@ Each exception must document:
 
 | Metric | Target | Current | Trend |
 |--------|--------|---------|-------|
-| Architecture compliance rate | {{ source.compliance_target }} | {{ source.compliance_current }} | {{ source.compliance_trend }} |
-| Exception rate | {{ source.exception_target }} | {{ source.exception_current }} | {{ source.exception_trend }} |
-| Review cycle time | {{ source.review_time_target }} | {{ source.review_time_current }} | {{ source.review_time_trend }} |
+| Architecture compliance rate | [TODO] | [TODO] | [TODO] |
+| Exception rate | [TODO] | [TODO] | [TODO] |
+| Review cycle time | [TODO] | [TODO] | [TODO] |
 
 ## Continuous Improvement
 
@@ -180,12 +191,3 @@ The governance framework is reviewed and updated:
 
 <!-- Author notes: Adapt the governance framework to match your organization's culture and decision-making style -->
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{meta.document.last_updated}} | {{ meta.defaults.author }} | Initial creation |
-
-<-  ( marked all subtasks complete End of template -->

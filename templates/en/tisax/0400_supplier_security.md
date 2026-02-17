@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0400
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Supplier Security
+
+**Document-ID:** [FRAMEWORK]-0400
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -15,7 +26,7 @@ This document defines requirements for security in supplier relationships accord
 
 ## Scope
 
-This document applies to all suppliers and service providers of {{ source.organization_name }}.
+This document applies to all suppliers and service providers of [TODO].
 
 ## Supplier Management
 
@@ -95,17 +106,9 @@ This document applies to all suppliers and service providers of {{ source.organi
 
 ## Metrics
 
-{{ source.organization_name }} measures:
+[TODO] measures:
 - Number of critical suppliers
 - Compliance rate
 - Number of security incidents at suppliers
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

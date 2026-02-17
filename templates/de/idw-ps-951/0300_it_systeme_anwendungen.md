@@ -1,11 +1,16 @@
 # IT-Systeme und Anwendungen
 
-**Dokument-ID:** idw-ps-951-0300  
-**Owner:** {{ meta.audit_lead }}  
-**Version:** {{ meta.version }}  
-**Status:** {{ meta.status }}  
-**Klassifizierung:** {{ meta.classification }}  
-**Letzte Aktualisierung:** {{ meta.date }}
+**Dokument-ID:** idw-ps-951-0300
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -16,9 +21,9 @@ Dieses Dokument beschreibt die Prüfung der IT-Systeme und Anwendungen im Rahmen
 ## 2. Prüfungsgegenstand
 
 ### Anwendungslandschaft
-- **Kernsysteme:** {{ source.core_systems }}
-- **Geschäftsanwendungen:** {{ source.business_applications }}
-- **Schnittstellen:** {{ source.interfaces }}
+- **Kernsysteme:** [TODO]
+- **Geschäftsanwendungen:** [TODO]
+- **Schnittstellen:** [TODO]
 
 ### Prüfungsziele
 - Bewertung der Anwendungslandschaft
@@ -43,38 +48,29 @@ Dieses Dokument beschreibt die Prüfung der IT-Systeme und Anwendungen im Rahmen
 
 | System | Dokumentiert | Kontrolliert | Getestet | Bewertung |
 |--------|--------------|--------------|----------|-----------|
-| {{ source.system_1 }} | {{ source.system_1_doc }} | {{ source.system_1_ctrl }} | {{ source.system_1_test }} | {{ source.system_1_assess }} |
-| {{ source.system_2 }} | {{ source.system_2_doc }} | {{ source.system_2_ctrl }} | {{ source.system_2_test }} | {{ source.system_2_assess }} |
+| [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## 5. Feststellungen
 
 ### Positive Feststellungen
-1. {{ source.positive_finding_1 }}
+1. [TODO]
 
 ### Verbesserungspotenziale
-1. {{ source.improvement_1 }}
+1. [TODO]
 
 ## 6. Empfehlungen
 
-1. {{ source.recommendation_1 }}
+1. [TODO]
 
 ## 7. Referenzen
 
 - IDW PS 951 - IT-Systeme
 - ISO/IEC 27001
 
----
-
 **Genehmigt durch:**  
-{{ meta.audit_lead }}, Prüfungsleiter  
-Datum: {{ meta.approval_date }}
+{{ meta-organisation-roles.role_Internal_Auditor }}, Prüfungsleiter  
+Datum: {{ meta-handbook.valid_from }}
 
-**Nächster Review:** {{ meta.next_review }}
+**Nächster Review:** {{ meta-handbook.next_review }}
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |

@@ -1,11 +1,16 @@
 # Qualitätsziele und Planung zu deren Erreichung
 
-**Dokument-ID:** 0210  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0210
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -20,7 +25,7 @@ Referenz: ISO 9001:2015, Kapitel 6.2
 
 ## Zweck
 
-Dieses Dokument legt Qualitätsziele für {{ meta.organization }} fest und definiert die Planung zu deren Erreichung gemäß ISO 9001:2015 Kapitel 6.2.
+Dieses Dokument legt Qualitätsziele für {{ meta-organisation.name }} fest und definiert die Planung zu deren Erreichung gemäß ISO 9001:2015 Kapitel 6.2.
 
 ## Qualitätsziele-Rahmen
 
@@ -168,8 +173,6 @@ Qualitätsziele werden kommuniziert durch:
 - **Leistungs-Dashboards:** Visuelle Darstellungen
 - **Individuelle Ziele:** Kaskadiert zu persönlichen Zielen
 
----
-
 **Nächste Schritte:**
 1. Lege Qualitätsziele auf Organisations- und Funktionsebene fest
 2. Stelle sicher, dass Ziele SMART und mit Politik ausgerichtet sind
@@ -178,10 +181,3 @@ Qualitätsziele werden kommuniziert durch:
 5. Implementiere Überwachungs- und Berichtssysteme
 6. Überprüfe Fortschritt regelmäßig und passe bei Bedarf an
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0430
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Incident Management Procedures
+
+**Document-ID:** [FRAMEWORK]-0430
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -15,7 +26,7 @@ This document describes procedures for incident management according to TISAX re
 
 ## Scope
 
-This document applies to all security incidents at {{ source.organization_name }}.
+This document applies to all security incidents at [TODO].
 
 ## Incident Definitions
 
@@ -44,8 +55,8 @@ This document applies to all security incidents at {{ source.organization_name }
 - External reports
 
 **Reporting Channels:**
-- Incident Response Hotline: {{ source.incident_hotline }}
-- Email: {{ source.incident_email }}
+- Incident Response Hotline: [TODO]
+- Email: [TODO]
 - Ticket system
 - Escalation to supervisor
 
@@ -58,9 +69,9 @@ This document applies to all security incidents at {{ source.organization_name }
 
 **Prioritization:**
 - Critical: Immediate processing
-- High: Within {{ source.high_priority_response_time }} hours
-- Medium: Within {{ source.medium_priority_response_time }} hours
-- Low: Within {{ source.low_priority_response_time }} days
+- High: Within [TODO] hours
+- Medium: Within [TODO] hours
+- Low: Within [TODO] days
 
 ### 3. Containment
 **Immediate Actions:**
@@ -183,18 +194,10 @@ This document applies to all security incidents at {{ source.organization_name }
 
 ## Metrics
 
-{{ source.organization_name }} measures:
+[TODO] measures:
 - Number of incidents by category
 - Average response time
 - Average resolution time
 - Number of recurring incidents
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

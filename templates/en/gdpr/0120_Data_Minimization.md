@@ -1,11 +1,16 @@
 # Data Minimization
 
-**Document-ID:** 0120  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0120
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -23,7 +28,7 @@ Reference: GDPR Art. 5(1)(c) (Data minimization)
 
 ## Purpose
 
-This document describes the implementation of the principle of data minimization in {{ meta.organization }}. Only personal data that is actually necessary for the respective purpose may be collected.
+This document describes the implementation of the principle of data minimization in {{ meta-organisation.name }}. Only personal data that is actually necessary for the respective purpose may be collected.
 
 ## Principle according to Art. 5(1)(c) GDPR
 
@@ -209,8 +214,6 @@ Personal data must be adequate, relevant and limited to what is necessary in rel
 | Data retention | Data without specific purpose | Observe purpose limitation |
 | No anonymization | Clear data where not needed | Assess anonymization |
 
----
-
 **Next Steps:**
 1. Conduct necessity assessment for all data collections
 2. Optimize forms and reduce data fields
@@ -218,10 +221,3 @@ Personal data must be adequate, relevant and limited to what is necessary in rel
 4. Train employees on data minimization
 5. Establish regular data inventory reviews
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

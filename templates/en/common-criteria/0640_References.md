@@ -1,11 +1,16 @@
 # References and Citations
 
-**Document-ID:** 0640  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** Internal / Confidential / Strictly Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0640
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -397,8 +402,6 @@ Version [TODO: Version], [TODO: Date]
 **Email:** [TODO: Email]  
 **Website:** [TODO: Website]
 
----
-
 **Next Steps:**
 1. Identify all references used in the ST
 2. Collect complete bibliographic information
@@ -409,10 +412,3 @@ Version [TODO: Version], [TODO: Date]
 7. Ensure all references are available
 8. Update the reference list when changes are made to the ST
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

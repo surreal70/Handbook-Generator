@@ -4,7 +4,7 @@
 
 These templates form the foundation for a complete IT security handbook according to **BSI IT-Grundschutz** (BSI Standards 200-1, 200-2, 200-3) and the **BSI IT-Grundschutz Compendium**.
 
-The IT security handbook of {{ meta.organization.name }} comprises approximately 40 structured documents covering all essential aspects of an Information Security Management System (ISMS) according to BSI IT-Grundschutz.
+The IT security handbook of [TODO] comprises approximately 40 structured documents covering all essential aspects of an Information Security Management System (ISMS) according to BSI IT-Grundschutz.
 
 ## Template Structure
 
@@ -76,12 +76,12 @@ Security policies are organized in policy-guideline pairs:
 The templates use placeholders from the `metadata.yaml` file:
 
 ```markdown
-**Organization:** {{ meta.organization.name }}
+**Organization:** [TODO]
 **CEO:** {{ meta.ceo.name }} ({{ meta.ceo.email }})
 **CIO:** {{ meta.cio.name }} ({{ meta.cio.email }})
 **CISO/ISB:** {{ meta.ciso.name }} ({{ meta.ciso.email }})
-**Document Owner:** {{ meta.document.owner }}
-**Locations:** {{ meta.organization.locations }}
+**Document Owner:** [TODO]
+**Locations:** [TODO]
 ```
 
 ### NetBox Placeholders (Infrastructure Data)
@@ -361,7 +361,7 @@ For questions or issues:
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
+| 0.1 | [TODO] | {{ meta.defaults.author }} | Initial Creation |
 
 ## Version History
 

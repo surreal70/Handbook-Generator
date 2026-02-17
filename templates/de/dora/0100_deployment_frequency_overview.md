@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0100
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Deployment Frequency Übersicht
+
+**Dokument-ID:** [FRAMEWORK]-0100
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -31,10 +42,10 @@ Die Deployment Frequency misst, wie oft eine Organisation erfolgreich Code in di
 
 ### Organisationsinformationen
 
-- **Organisation**: {{ source.organization_name }}
-- **Verantwortlicher**: {{ source.deployment_frequency_owner }}
-- **Messperiode**: {{ source.deployment_frequency_measurement_period }}
-- **Aktuelle Frequency**: {{ source.current_deployment_frequency }}
+- **Organisation**: [TODO]
+- **Verantwortlicher**: [TODO]
+- **Messperiode**: [TODO]
+- **Aktuelle Frequency**: [TODO]
 
 ## Performance-Level
 
@@ -109,10 +120,10 @@ Charakteristiken:
 
 ### Datenquellen
 
-1. **CI/CD-Systeme**: {{ source.cicd_system }}
-2. **Deployment-Tools**: {{ source.deployment_tools }}
-3. **Monitoring-Systeme**: {{ source.monitoring_systems }}
-4. **Version Control**: {{ source.version_control_system }}
+1. **CI/CD-Systeme**: [TODO]
+2. **Deployment-Tools**: [TODO]
+3. **Monitoring-Systeme**: [TODO]
+4. **Version Control**: [TODO]
 
 ### Messansatz
 
@@ -204,12 +215,3 @@ Deployment Frequency = Anzahl erfolgreicher Deployments / Zeitperiode
 
 <!-- Hinweis: Deployment Frequency ist ein Mittel, kein Selbstzweck -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

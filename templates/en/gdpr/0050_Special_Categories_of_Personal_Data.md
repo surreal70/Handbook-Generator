@@ -1,11 +1,16 @@
 # Special Categories of Personal Data
 
-**Document-ID:** 0050  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0050
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -24,7 +29,7 @@ Reference: GDPR Art. 9 (Processing of special categories of personal data)
 
 ## Purpose
 
-This document describes the handling of special categories of personal data in {{ meta.organization }} according to Art. 9 GDPR. These sensitive data are subject to enhanced protection requirements.
+This document describes the handling of special categories of personal data in {{ meta-organisation.name }} according to Art. 9 GDPR. These sensitive data are subject to enhanced protection requirements.
 
 ## Special Categories (Art. 9(1))
 
@@ -238,8 +243,6 @@ For each processing of special categories, document:
 
 **Target Group:** All employees with access to special categories
 
----
-
 **Next Steps:**
 1. Identify all processing of special categories
 2. Check legal basis according to Art. 9(2)
@@ -247,10 +250,3 @@ For each processing of special categories, document:
 4. Conduct DPIA
 5. Train affected employees
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

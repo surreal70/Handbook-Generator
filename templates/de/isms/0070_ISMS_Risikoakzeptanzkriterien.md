@@ -1,5 +1,19 @@
 # Risikokriterien und Risikoakzeptanz
 
+**Dokument-ID:** 0070
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This document defines risk acceptance criteria and the process for accepting risks.
@@ -7,23 +21,11 @@ It establishes thresholds for acceptable risk levels and defines who can accept
 risks at different levels.
 -->
 
-**Dokument-ID:** 0070  
-**Dokumenttyp:** ISMS-Grundlagendokument  
-**Standard-Referenz:** ISO/IEC 27001:2022 Clause 6.1.2  
-**Owner:** {{ meta.ciso.name }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
-
----
-
 ## 1. Risikoappetit und Toleranz
 
 ### 1.1 Risikoappetit
 
-Die **{{ meta.organization.name }}** definiert ihren Risikoappetit wie folgt:
+Die **{{ meta-organisation.name }}** definiert ihren Risikoappetit wie folgt:
 
 **Allgemeiner Risikoappetit:** [TODO: Konservativ / Moderat / Progressiv]
 
@@ -140,18 +142,9 @@ Die **{{ meta.organization.name }}** definiert ihren Risikoappetit wie folgt:
 - **ISO/IEC 27001:2022** - Clause 6.1.2: Information security risk assessment
 - **ISO/IEC 27005:2022** - Information security risk management
 
----
-
 **Genehmigt durch:**  
 {{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+Datum: {{ meta-handbook.modifydate }}
 
-**Nächster Review:** {{ meta.document.next_review }}
+**Nächster Review:** {{ meta-handbook.next_review }}
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

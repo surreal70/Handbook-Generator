@@ -1,11 +1,16 @@
 # Monitoring, Measurement, Analysis and Evaluation
 
-**Document-ID:** 0550  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0550
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -17,13 +22,13 @@ Reference: ISO 9001:2015, Clause 9.1
 
 ## Purpose
 
-This document defines how {{ meta.organization }} monitors, measures, analyzes and evaluates the performance and effectiveness of the QMS.
+This document defines how {{ meta-organisation.name }} monitors, measures, analyzes and evaluates the performance and effectiveness of the QMS.
 
 ## General Requirements (9.1.1)
 
 ### Monitoring and Measurement Requirements
 
-**{{ meta.organization }} determines:**
+**{{ meta-organisation.name }} determines:**
 - **What** needs to be monitored and measured
 - **Methods** for monitoring, measurement, analysis and evaluation
 - **When** monitoring and measurement are performed
@@ -31,7 +36,7 @@ This document defines how {{ meta.organization }} monitors, measures, analyzes a
 
 ### Performance Evaluation
 
-**{{ meta.organization }} evaluates:**
+**{{ meta-organisation.name }} evaluates:**
 - Performance and effectiveness of QMS
 - Conformity of products and services
 - Customer satisfaction
@@ -50,7 +55,7 @@ This document defines how {{ meta.organization }} monitors, measures, analyzes a
 
 ### Monitoring Methods
 
-**{{ meta.organization }} monitors customer perceptions through:**
+**{{ meta-organisation.name }} monitors customer perceptions through:**
 - Customer surveys
 - Customer feedback and complaints
 - Customer meetings
@@ -96,7 +101,7 @@ This document defines how {{ meta.organization }} monitors, measures, analyzes a
 
 ### Data Analysis
 
-**{{ meta.organization }} analyzes and evaluates data on:**
+**{{ meta-organisation.name }} analyzes and evaluates data on:**
 - Conformity of products and services
 - Degree of customer satisfaction
 - Performance and effectiveness of QMS
@@ -145,7 +150,7 @@ This document defines how {{ meta.organization }} monitors, measures, analyzes a
 
 ### Process Monitoring
 
-**For each process, {{ meta.organization }} monitors:**
+**For each process, {{ meta-organisation.name }} monitors:**
 - Process inputs and outputs
 - Process performance (efficiency, effectiveness)
 - Compliance with process criteria
@@ -171,7 +176,7 @@ This document defines how {{ meta.organization }} monitors, measures, analyzes a
 
 ### Product Monitoring
 
-**{{ meta.organization }} monitors:**
+**{{ meta-organisation.name }} monitors:**
 - Product conformity with specifications
 - Product quality
 - Product reliability
@@ -233,8 +238,6 @@ This document defines how {{ meta.organization }} monitors, measures, analyzes a
 - Reporting problems
 - Participating in improvements
 
----
-
 **Next Steps:**
 1. Define all parameters to be monitored
 2. Establish measurement methods and frequencies
@@ -243,10 +246,3 @@ This document defines how {{ meta.organization }} monitors, measures, analyzes a
 5. Report results to relevant parties
 6. Identify and prioritize improvements
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

@@ -1,13 +1,25 @@
----
+
 Document-ID: nist-csf-0110
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Geschäftsumfeld (ID.BE)
+
+**Dokument-ID:** [FRAMEWORK]-0110
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -15,12 +27,12 @@ Dieses Dokument beschreibt das Geschäftsumfeld der Organisation, einschließlic
 
 ## Geltungsbereich
 
-{{ meta.scope }}
+{{ meta-handbook.scope }}
 
 ## Geschäftsmission und -ziele
 
 ### Mission
-{{ meta.organization_mission }}
+{{ meta-handbook.organization_mission }}
 
 ### Strategische Ziele
 1. {{ meta.strategic_goal_1 }}
@@ -52,14 +64,14 @@ Dieses Dokument beschreibt das Geschäftsumfeld der Organisation, einschließlic
 ## Geschäftsabhängigkeiten
 
 ### IT-Systeme
-- ERP-System: {{ meta.erp_system }}
-- CRM-System: {{ meta.crm_system }}
-- Produktionssysteme: {{ meta.production_systems }}
+- ERP-System: {{ meta-handbook.erp_system }}
+- CRM-System: {{ meta-handbook.crm_system }}
+- Produktionssysteme: {{ meta-handbook.production_systems }}
 
 ### Externe Dienste
-- Cloud-Provider: {{ meta.cloud_provider }}
-- Managed Services: {{ meta.managed_services }}
-- Zahlungsdienstleister: {{ meta.payment_provider }}
+- Cloud-Provider: {{ meta-handbook.cloud_provider }}
+- Managed Services: {{ meta-handbook.managed_services }}
+- Zahlungsdienstleister: {{ meta-handbook.payment_provider }}
 
 ## Dokumentenverweise
 
@@ -67,12 +79,3 @@ Dieses Dokument beschreibt das Geschäftsumfeld der Organisation, einschließlic
 - 0100_asset_management.md
 - 0130_risk_assessment.md
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |
-
-<!-- Autor-Hinweise: Aktualisieren Sie bei Geschäftsänderungen -->

@@ -1,5 +1,19 @@
 # Policy: Acceptable Use of IT
 
+**Document-ID:** [FRAMEWORK]-0200
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This policy defines acceptable use of IT resources and systems. It establishes
@@ -17,14 +31,12 @@ ISO 27001:2022 Annex A Reference: A.5.10 (Acceptable use of information and othe
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** {{ meta-handbook.modifydate }}  
+**Next Review:** {{ meta-handbook.next_review }}
 
 ## 1. Purpose
 
-This policy defines the principles for acceptable use of IT resources at **{{ meta.organization.name }}**. It ensures that IT systems, applications, and information are used exclusively for business purposes and in compliance with legal and regulatory requirements.
+This policy defines the principles for acceptable use of IT resources at **{{ meta-organisation.name }}**. It ensures that IT systems, applications, and information are used exclusively for business purposes and in compliance with legal and regulatory requirements.
 
 <!-- 
 Customize the purpose to reflect your organization's specific acceptable use
@@ -35,7 +47,7 @@ requirements and business context.
 
 This policy applies to:
 
-- **Organizational Units:** All departments and locations of {{ meta.organization.name }}
+- **Organizational Units:** All departments and locations of {{ meta-organisation.name }}
 - **Systems:** All IT systems, networks, applications, email, internet, cloud services
 - **Persons:** All employees, contractors, temporary workers, interns, and third parties with access to IT resources
 - **Devices:** Company-owned and private devices (BYOD) accessing company resources
@@ -165,18 +177,9 @@ Exceptions to this policy are only permitted in justified cases:
 - **GDPR (EU 2016/679)** - General Data Protection Regulation
 - Employment law requirements for IT use
 
----
-
 **Approved by:**  
 {{ meta.management.ceo }}, Management  
-Date: {{ meta.document.approval_date }}
+Date: {{ meta-handbook.modifydate }}
 
-**Next Review:** {{ meta.document.next_review }} (annually or as needed)
+**Next Review:** {{ meta-handbook.next_review }} (annually or as needed)
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

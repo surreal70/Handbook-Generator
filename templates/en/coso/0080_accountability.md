@@ -1,41 +1,44 @@
----
+
 Document-ID: coso-0080
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Accountability
 
-## Purpose
-
-This document describes how {{ source.organization_name }} enforces accountability (COSO Principle 5).
-
-## Accountability Matrix
-
-{{ source.raci_matrix }}
-
-## Performance Measurement
-
-{{ source.kpi_framework }}
-
-## Consequences
-
-**For Achievement**: {{ source.rewards }}
-**For Non-Achievement**: {{ source.consequences }}
-
-## References
-
-- Performance Management System {{ source.organization_name }}
+**Document-ID:** [FRAMEWORK]-0080
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
 
 ---
 
-**Document History:**
+---
 
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
+## Purpose
+
+This document describes how [TODO] enforces accountability (COSO Principle 5).
+
+## Accountability Matrix
+
+[TODO]
+
+## Performance Measurement
+
+[TODO]
+
+## Consequences
+
+**For Achievement**: [TODO]
+**For Non-Achievement**: [TODO]
+
+## References
+
+- Performance Management System [TODO]
 
 <!-- End of template -->

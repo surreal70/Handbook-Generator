@@ -1,12 +1,26 @@
 # Disaster Recovery und Business Continuity
 
+**Dokument-ID:** [FRAMEWORK]-0160
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck und Geltungsbereich
 
-Dieses Dokument beschreibt die Disaster-Recovery- und Business-Continuity-Strategien für {{ meta.organization.name }}. Es definiert Disaster-Szenarien, Impact-Analysen, DR-Strategien, Failover-/Failback-Prozeduren und Business-Continuity-Pläne zur Sicherstellung der Geschäftskontinuität bei Katastrophen.
+Dieses Dokument beschreibt die Disaster-Recovery- und Business-Continuity-Strategien für {{ meta-organisation.name }}. Es definiert Disaster-Szenarien, Impact-Analysen, DR-Strategien, Failover-/Failback-Prozeduren und Business-Continuity-Pläne zur Sicherstellung der Geschäftskontinuität bei Katastrophen.
 
-**Geltungsbereich:** Alle kritischen IT-Services und Geschäftsprozesse von {{ meta.organization.name }}
+**Geltungsbereich:** Alle kritischen IT-Services und Geschäftsprozesse von {{ meta-organisation.name }}
 
-**Verantwortlich:** {{ meta.cio.name }} ({{ meta.cio.email }})
+**Verantwortlich:** {{ meta-organisation-roles.role_cio.name }} ({{ meta-organisation-roles.role_cio.email }})
 
 ## Grundlagen
 
@@ -300,9 +314,9 @@ Fähigkeit einer Organisation, kritische Geschäftsprozesse während und nach ei
 **Redundanz:** Dual-Path
 
 **Replikations-Technologien:**
-- Storage-Replikation: {{ meta.storage_replication_tech }}
-- Datenbank-Replikation: {{ meta.database_replication_tech }}
-- VM-Replikation: {{ meta.vm_replication_tech }}
+- Storage-Replikation: {{ meta-handbook.storage_replication_tech }}
+- Datenbank-Replikation: {{ meta-handbook.database_replication_tech }}
+- VM-Replikation: {{ meta-handbook.vm_replication_tech }}
 
 ## Failover-Prozeduren
 
@@ -374,8 +388,8 @@ Fähigkeit einer Organisation, kritische Geschäftsprozesse während und nach ei
 #### 2. DR-Team Activation
 
 **DR-Team-Mitglieder:**
-- **DR-Coordinator:** {{ meta.cio.name }}
-- **Technical Lead:** {{ meta.it_operations_manager.name }}
+- **DR-Coordinator:** {{ meta-organisation-roles.role_cio.name }}
+- **Technical Lead:** {{ meta-organisation-roles.role_it_operations_manager.name }}
 - **Network Lead:** [Name]
 - **Storage Lead:** [Name]
 - **Application Lead:** [Name]
@@ -564,8 +578,8 @@ Fähigkeit einer Organisation, kritische Geschäftsprozesse während und nach ei
 #### Notfall-Kommunikation
 
 **Kommunikations-Kanäle:**
-- **Primär:** E-Mail ({{ meta.organization.email }})
-- **Sekundär:** Telefon ({{ meta.organization.phone }})
+- **Primär:** E-Mail ({{ meta-organisation.email }})
+- **Sekundär:** Telefon ({{ meta-organisation.phone }})
 - **Notfall:** Mobile Apps, SMS
 
 **Kontakt-Listen:**
@@ -591,9 +605,9 @@ Fähigkeit einer Organisation, kritische Geschäftsprozesse während und nach ei
 
 | Lieferant | Service | Kontakt | Backup-Lieferant |
 |---|---|---|---|
-| {{ meta.isp_provider }} | Internet | {{ meta.isp_contact }} | {{ meta.isp_backup }} |
-| {{ meta.cloud_provider }} | Cloud-Services | {{ meta.cloud_contact }} | {{ meta.cloud_backup }} |
-| {{ meta.hardware_vendor }} | Hardware | {{ meta.hardware_contact }} | - |
+| {{ meta-handbook.isp_provider }} | Internet | {{ meta-handbook.isp_contact }} | {{ meta-handbook.isp_backup }} |
+| {{ meta-handbook.cloud_provider }} | Cloud-Services | {{ meta-handbook.cloud_contact }} | {{ meta-handbook.cloud_backup }} |
+| {{ meta-handbook.hardware_vendor }} | Hardware | {{ meta-handbook.hardware_contact }} | - |
 
 ## DR-Testing
 
@@ -681,7 +695,7 @@ Fähigkeit einer Organisation, kritische Geschäftsprozesse während und nach ei
 - DR-Tests koordinieren
 - Disaster-Declaration
 
-**Person:** {{ meta.cio.name }}
+**Person:** {{ meta-organisation-roles.role_cio.name }}
 
 ### BC-Manager
 
@@ -691,7 +705,7 @@ Fähigkeit einer Organisation, kritische Geschäftsprozesse während und nach ei
 - BC-Pläne erstellen
 - BC-Training
 
-**Person:** {{ meta.coo.name }}
+**Person:** {{ meta-organisation-roles.role_coo.name }}
 
 ### DR-Team
 
@@ -705,18 +719,9 @@ Fähigkeit einer Organisation, kritische Geschäftsprozesse während und nach ei
 - NIST SP 800-34 - Contingency Planning Guide
 - Business Impact Analysis (BIA) Dokument
 
----
+**Dokumentverantwortlicher:** {{ meta-handbook.owner }}  
+**Genehmigt durch:** {{ meta-handbook.approver }}  
+**Version:** {{ meta-handbook.revision }}  
+**Klassifizierung:** {{ meta-handbook.classification }}  
+**Letzte Aktualisierung:** {{ meta-handbook.date }}
 
-**Dokumentverantwortlicher:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.date }}
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

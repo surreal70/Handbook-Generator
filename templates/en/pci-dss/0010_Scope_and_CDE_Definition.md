@@ -1,13 +1,16 @@
 # Scope and CDE Definition
 
-**Document ID:** PCI-0010  
-**Organization:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Approved by:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0010
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,7 +28,7 @@ Customization required:
 
 ## 1. Purpose
 
-This document defines the scope of PCI-DSS compliance for {{ meta.organization.name }} and describes the Cardholder Data Environment (CDE).
+This document defines the scope of PCI-DSS compliance for {{ meta-organisation.name }} and describes the Cardholder Data Environment (CDE).
 
 ### 1.1 Objectives
 
@@ -44,10 +47,10 @@ This document defines the scope of PCI-DSS compliance for {{ meta.organization.n
 
 ### 2.1 Organization Information
 
-**Organization:** {{ meta.organization.name }}  
-**Address:** {{ meta.organization.address }}, {{ meta.organization.postal_code }} {{ meta.organization.city }}  
-**Country:** {{ meta.organization.country }}  
-**Website:** {{ meta.organization.website }}  
+**Organization:** {{ meta-organisation.name }}  
+**Address:** {{ meta-organisation.address }}, [TODO] [TODO]  
+**Country:** [TODO]  
+**Website:** [TODO]  
 
 ### 2.2 PCI-DSS Classification
 
@@ -108,7 +111,7 @@ The Cardholder Data Environment (CDE) includes:
 - **CAV2/CVC2/CVV2/CID:** Card verification value (3-4 digits)
 - **PIN/PIN Block:** PIN data
 
-**Confirmation:** {{ meta.organization.name }} does NOT store Sensitive Authentication Data after authorization. [TODO: Confirm]
+**Confirmation:** {{ meta-organisation.name }} does NOT store Sensitive Authentication Data after authorization. [TODO: Confirm]
 
 ## 4. CDE Systems and Components
 
@@ -272,7 +275,7 @@ The following systems are NOT part of the CDE:
 ### 11.1 Responsible Persons
 
 **PCI-DSS Program Manager:** [TODO: Name] ([TODO: Email])  
-**CISO:** {{ meta.roles.ciso.name }} ({{ meta.roles.ciso.email }})  
+**CISO:** {{ meta-organisation-roles.role_CISO }} ({{ meta-organisation-roles.role_CISO }})  
 **IT Manager:** [TODO: Name] ([TODO: Email])  
 **QSA (Qualified Security Assessor):** [TODO: Company/Name]  
 **ASV (Approved Scanning Vendor):** [TODO: Company]  
@@ -287,13 +290,5 @@ The following systems are NOT part of the CDE:
 | Annual assessment | C | A | I | R |
 
 **Legend:** R = Responsible, A = Accountable, C = Consulted, I = Informed
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 <!-- End of template -->

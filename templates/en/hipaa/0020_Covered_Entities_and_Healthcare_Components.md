@@ -1,13 +1,16 @@
 # Covered Entities and Healthcare Components
 
-**Document ID:** HIPAA-0020  
-**Organization:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Approved by:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0020
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,7 +28,7 @@ Customization required:
 
 ## 1. Purpose
 
-This document defines {{ meta.organization.name }}'s status as a HIPAA Covered Entity and documents all healthcare components and covered functions.
+This document defines {{ meta-organisation.name }}'s status as a HIPAA Covered Entity and documents all healthcare components and covered functions.
 
 ### 1.1 Objectives
 
@@ -45,7 +48,7 @@ Under HIPAA, a Covered Entity is:
 
 ### 2.2 Organization Classification
 
-**{{ meta.organization.name }} is a:** [TODO: Select one]
+**{{ meta-organisation.name }} is a:** [TODO: Select one]
 
 - [ ] **Healthcare Provider** (45 CFR §160.103)
 - [ ] **Health Plan** (45 CFR §160.103)
@@ -194,7 +197,7 @@ A Hybrid Entity is an organization that:
 2. Has formally designated its healthcare components
 3. Applies HIPAA only to designated healthcare components
 
-**Is {{ meta.organization.name }} a Hybrid Entity?** [TODO: Yes/No]
+**Is {{ meta-organisation.name }} a Hybrid Entity?** [TODO: Yes/No]
 
 ### 6.2 Healthcare Components
 
@@ -336,13 +339,5 @@ A Hybrid Entity is an organization that:
 - [ ] Training records
 
 **Documentation Retention:** [TODO: 6 years from creation or last effective date]
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 <!-- End of template -->

@@ -1,5 +1,19 @@
 # ISMS-Governance: Rollen und Verantwortlichkeiten
 
+**Dokument-ID:** 0040
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This document defines the ISMS governance structure, roles, and responsibilities.
@@ -9,23 +23,11 @@ ensures that security is integrated into the organization's management structure
 ISO 27001:2022 Reference: Clause 5.3 - Organizational roles, responsibilities and authorities
 -->
 
-**Dokument-ID:** 0040  
-**Dokumenttyp:** ISMS-Grundlagendokument  
-**Standard-Referenz:** ISO/IEC 27001:2022 Clause 5.3  
-**Owner:** {{ meta.ciso.name }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
-
----
-
 ## 1. ISMS-Governance-Struktur
 
 ### 1.1 Governance-Übersicht
 
-Die ISMS-Governance der **{{ meta.organization.name }}** ist in die Gesamtorganisation integriert und stellt sicher, dass Informationssicherheit auf allen Ebenen verankert ist.
+Die ISMS-Governance der **{{ meta-organisation.name }}** ist in die Gesamtorganisation integriert und stellt sicher, dass Informationssicherheit auf allen Ebenen verankert ist.
 
 ```
 ┌─────────────────────────────────────────────────────────┐
@@ -335,18 +337,9 @@ Siehe `0070_ISMS_Risikoakzeptanzkriterien.md` für Details.
 - **ISO/IEC 27001:2022** - Clause 5.3: Organizational roles, responsibilities and authorities
 - **ISO/IEC 27002:2022** - Control 5.2: Information security roles and responsibilities
 
----
-
 **Genehmigt durch:**  
 {{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+Datum: {{ meta-handbook.modifydate }}
 
-**Nächster Review:** {{ meta.document.next_review }}
+**Nächster Review:** {{ meta-handbook.next_review }}
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

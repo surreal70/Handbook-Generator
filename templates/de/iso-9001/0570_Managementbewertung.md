@@ -1,11 +1,16 @@
 # Managementbewertung
 
-**Dokument-ID:** 0570  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0570
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -18,13 +23,13 @@ Referenz: ISO 9001:2015, Kapitel 9.3
 
 ## Zweck
 
-Dieses Dokument definiert, wie {{ meta.organization }} regelmäßige Managementbewertungen durchführt, um die fortdauernde Eignung, Angemessenheit und Wirksamkeit des QMS sicherzustellen.
+Dieses Dokument definiert, wie {{ meta-organisation.name }} regelmäßige Managementbewertungen durchführt, um die fortdauernde Eignung, Angemessenheit und Wirksamkeit des QMS sicherzustellen.
 
 ## Allgemeine Anforderungen (9.3)
 
 ### Bewertungsfrequenz
 
-**{{ meta.organization }} führt Managementbewertungen durch:**
+**{{ meta-organisation.name }} führt Managementbewertungen durch:**
 - **Regelmäßig:** [TODO: z.B. Mindestens jährlich, quartalsweise]
 - **Bei Bedarf:** Bei wesentlichen Änderungen oder Ereignissen
 
@@ -217,7 +222,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} regelmäßige Managementb
 
 ### Überwachung
 
-**{{ meta.organization }} überwacht:**
+**{{ meta-organisation.name }} überwacht:**
 - Fortschritt der Maßnahmenumsetzung
 - Einhaltung von Terminen
 - Wirksamkeit umgesetzter Maßnahmen
@@ -289,8 +294,6 @@ Dieses Dokument definiert, wie {{ meta.organization }} regelmäßige Managementb
 - Umsetzung von Maßnahmen
 - Berichterstattung über Fortschritt
 
----
-
 **Nächste Schritte:**
 1. Plane nächste Managementbewertung
 2. Sammle und bereite Eingabedaten auf
@@ -300,10 +303,3 @@ Dieses Dokument definiert, wie {{ meta.organization }} regelmäßige Managementb
 6. Kommuniziere Entscheidungen
 7. Verfolge Maßnahmenumsetzung
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

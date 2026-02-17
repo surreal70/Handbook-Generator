@@ -1,0 +1,72 @@
+# Handbook-specific metadata
+# Handbook: iso-31000
+# This file contains metadata specific to this handbook
+
+# Author of the handbook
+author: "[TODO]"
+
+# Classification level (e.g., Internal, Confidential, Public)
+classification: "[TODO]"
+
+# Status (e.g., Draft, Review, Approved, Active)
+status: "[TODO]"
+
+# Type of handbook
+type: "[TODO]"
+
+# Template set version
+templateset_version: "0.2"
+
+# Revision number (increment manually)
+revision: 0
+
+# Short name (matches directory name)
+shortname: "iso-31000"
+
+# Long descriptive name
+longname: "[TODO]"
+
+# Maintainer (defaults to author if not specified)
+maintainer: "[TODO]"
+
+# Owner responsible for the handbook
+owner: "[TODO]"
+
+# Approver of the handbook
+approver: "[TODO]"
+
+# Creation date (YYYY-MM-DD)
+creationdate: "[TODO]"
+
+# Last modification date (YYYY-MM-DD)
+modifydate: "[TODO]"
+
+# Valid from date (YYYY-MM-DD)
+valid_from: "[TODO]"
+
+# Next review date (YYYY-MM-DD)
+next_review: "[TODO]"
+
+# Scope of the handbook
+scope: "[TODO]"
+
+# Framework-specific auxiliary placeholders
+auxiliary:
+  compliance_risk_appetite: '[TODO]'
+  financial_risk_appetite: '[TODO]'
+  market_conditions: '[TODO]'
+  operational_risk_appetite: '[TODO]'
+  org_structure: '[TODO]'
+  pilot_owner: '[TODO]'
+  pilot_timeline: '[TODO]'
+  prep_owner: '[TODO]'
+  prep_timeline: '[TODO]'
+  regulatory_environment: '[TODO]'
+  risk_maturity_level: '[TODO]'
+  rollout_owner: '[TODO]'
+  rollout_timeline: '[TODO]'
+  stabilization_owner: '[TODO]'
+  stabilization_timeline: '[TODO]'
+  strategic_goals: '[TODO]'
+  strategic_risk_appetite: '[TODO]'
+  target_risk_maturity_level: '[TODO]'

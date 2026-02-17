@@ -1,11 +1,16 @@
 # IT-Strategie Bewertung
 
-**Dokument-ID:** idw-ps-951-0100  
-**Owner:** {{ meta.audit_lead }}  
-**Version:** {{ meta.version }}  
-**Status:** {{ meta.status }}  
-**Klassifizierung:** {{ meta.classification }}  
-**Letzte Aktualisierung:** {{ meta.date }}
+**Dokument-ID:** idw-ps-951-0100
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -16,10 +21,10 @@ Dieses Dokument beschreibt die Prüfung der IT-Strategie im Rahmen der IT-Prüfu
 ## 2. Prüfungsgegenstand
 
 ### IT-Strategie
-- **Strategiedokument:** {{ source.strategy_document }}
-- **Gültigkeitszeitraum:** {{ source.strategy_period }}
-- **Verantwortlich:** {{ source.strategy_owner }}
-- **Letzte Aktualisierung:** {{ source.strategy_last_update }}
+- **Strategiedokument:** [TODO]
+- **Gültigkeitszeitraum:** [TODO]
+- **Verantwortlich:** [TODO]
+- **Letzte Aktualisierung:** [TODO]
 
 ### Prüfungsziele
 - Bewertung der Ausrichtung der IT-Strategie an Unternehmenszielen
@@ -37,9 +42,9 @@ Dieses Dokument beschreibt die Prüfung der IT-Strategie im Rahmen der IT-Prüfu
 - [ ] Ressourcenplanung vorhanden
 
 ### Interviews
-- **CIO/IT-Leitung:** {{ source.cio_interview }}
-- **Geschäftsführung:** {{ source.management_interview }}
-- **IT-Strategie-Verantwortliche:** {{ source.strategy_responsible_interview }}
+- **CIO/IT-Leitung:** [TODO]
+- **Geschäftsführung:** [TODO]
+- **IT-Strategie-Verantwortliche:** [TODO]
 
 ### Analytische Prüfungshandlungen
 - Vergleich IT-Strategie mit Branchenstandards
@@ -51,53 +56,53 @@ Dieses Dokument beschreibt die Prüfung der IT-Strategie im Rahmen der IT-Prüfu
 ### Strategische Ausrichtung
 | Kriterium | Anforderung | Ist-Zustand | Bewertung |
 |-----------|-------------|-------------|-----------|
-| Abstimmung mit Unternehmensstrategie | Dokumentiert | {{ source.alignment_status }} | {{ source.alignment_assessment }} |
-| IT-Ziele definiert | Messbar und terminiert | {{ source.objectives_status }} | {{ source.objectives_assessment }} |
-| Stakeholder-Einbindung | Regelmäßig | {{ source.stakeholder_status }} | {{ source.stakeholder_assessment }} |
-| Strategieüberprüfung | Jährlich | {{ source.review_status }} | {{ source.review_assessment }} |
+| Abstimmung mit Unternehmensstrategie | Dokumentiert | [TODO] | [TODO] |
+| IT-Ziele definiert | Messbar und terminiert | [TODO] | [TODO] |
+| Stakeholder-Einbindung | Regelmäßig | [TODO] | [TODO] |
+| Strategieüberprüfung | Jährlich | [TODO] | [TODO] |
 
 ### IT-Governance
-- **Governance-Struktur:** {{ source.governance_structure }}
-- **Entscheidungsgremien:** {{ source.decision_bodies }}
-- **Eskalationsprozesse:** {{ source.escalation_processes }}
+- **Governance-Struktur:** [TODO]
+- **Entscheidungsgremien:** [TODO]
+- **Eskalationsprozesse:** [TODO]
 
 ## 5. Feststellungen
 
 ### Positive Feststellungen
-1. {{ source.positive_finding_1 }}
-2. {{ source.positive_finding_2 }}
+1. [TODO]
+2. [TODO]
 
 ### Verbesserungspotenziale
-1. {{ source.improvement_1 }}
-2. {{ source.improvement_2 }}
+1. [TODO]
+2. [TODO]
 
 ### Kritische Feststellungen
-1. {{ source.critical_finding_1 }}
-2. {{ source.critical_finding_2 }}
+1. [TODO]
+2. [TODO]
 
 ## 6. Risikobewertung
 
 ### Identifizierte Risiken
 | Risiko | Beschreibung | Auswirkung | Wahrscheinlichkeit | Risikostufe |
 |--------|--------------|------------|-------------------|-------------|
-| {{ source.risk_1_id }} | {{ source.risk_1_desc }} | {{ source.risk_1_impact }} | {{ source.risk_1_likelihood }} | {{ source.risk_1_level }} |
+| [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ### Kontrollbewertung
-- **Kontrolldesign:** {{ source.control_design }}
-- **Kontrollwirksamkeit:** {{ source.control_effectiveness }}
+- **Kontrolldesign:** [TODO]
+- **Kontrollwirksamkeit:** [TODO]
 
 ## 7. Empfehlungen
 
 ### Kurzfristige Maßnahmen (0-3 Monate)
-1. {{ source.short_term_recommendation_1 }}
-2. {{ source.short_term_recommendation_2 }}
+1. [TODO]
+2. [TODO]
 
 ### Mittelfristige Maßnahmen (3-12 Monate)
-1. {{ source.medium_term_recommendation_1 }}
-2. {{ source.medium_term_recommendation_2 }}
+1. [TODO]
+2. [TODO]
 
 ### Langfristige Maßnahmen (> 12 Monate)
-1. {{ source.long_term_recommendation_1 }}
+1. [TODO]
 
 ## 8. Nachweise
 
@@ -109,7 +114,7 @@ Dieses Dokument beschreibt die Prüfung der IT-Strategie im Rahmen der IT-Prüfu
 - IT-Investitionsplanung
 
 ### Interviews
-- {{ source.interview_list }}
+- [TODO]
 
 ## 9. Referenzen
 
@@ -117,18 +122,9 @@ Dieses Dokument beschreibt die Prüfung der IT-Strategie im Rahmen der IT-Prüfu
 - COBIT 2019 - Governance Framework
 - ISO/IEC 38500 - IT Governance
 
----
-
 **Genehmigt durch:**  
-{{ meta.audit_lead }}, Prüfungsleiter  
-Datum: {{ meta.approval_date }}
+{{ meta-organisation-roles.role_Internal_Auditor }}, Prüfungsleiter  
+Datum: {{ meta-handbook.valid_from }}
 
-**Nächster Review:** {{ meta.next_review }}
+**Nächster Review:** {{ meta-handbook.next_review }}
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |

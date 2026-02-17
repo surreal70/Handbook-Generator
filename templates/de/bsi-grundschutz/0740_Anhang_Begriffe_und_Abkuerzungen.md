@@ -1,14 +1,16 @@
 # Anhang: Begriffe und Abkürzungen
 
-**Dokument-ID:** 0740  
-**Dokumenttyp:** Anhang  
-**Referenzrahmen:** BSI IT-Grundschutz (BSI Standards 200-1/200-2/200-3)  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** {{ meta.document.status }}  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0740
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -19,7 +21,7 @@ This template provides a glossary of terms and abbreviations used in the ISMS do
 
 ## 1. Zweck
 
-Dieses Dokument definiert zentrale Begriffe und Abkürzungen, die in der ISMS-Dokumentation von **{{ meta.organization.name }}** verwendet werden.
+Dieses Dokument definiert zentrale Begriffe und Abkürzungen, die in der ISMS-Dokumentation von **{{ meta-organisation.name }}** verwendet werden.
 
 ## 2. Begriffe
 
@@ -324,21 +326,11 @@ Zusätzliche Anforderungen für Assets mit hohem oder sehr hohem Schutzbedarf
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| ISB | {{ meta.ciso.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **Referenzen:**
 - BSI IT-Grundschutz-Kompendium: Glossar
 - ISO 27000: Information security management systems – Overview and vocabulary
 - Alle ISMS-Dokumente (0010-0630)
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 <!-- End of template -->

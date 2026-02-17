@@ -1,17 +1,28 @@
----
+
 Document-ID: tisax-0250
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Equipment Security
 
+**Document-ID:** [FRAMEWORK]-0180
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document describes the security measures for equipment at {{ source.organization_name }}.
+This document describes the security measures for equipment at [TODO].
 
 ## Equipment Protection
 
@@ -54,13 +65,5 @@ This document describes the security measures for equipment at {{ source.organiz
 4. Disposal or reuse
 
 <!-- Note: Ensure secure disposal processes -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

@@ -1,13 +1,24 @@
----
+
 Document-ID: soc1-0030
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # System Description
+
+**Document-ID:** [FRAMEWORK]-0030
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -25,26 +36,26 @@ This document covers:
 
 ### Overview
 
-{{ source.system_architecture_overview }}
+[TODO]
 
 ### System Components
 
 **Frontend Systems**:
-{{ source.frontend_systems }}
+[TODO]
 
 **Backend Systems**:
-{{ source.backend_systems }}
+[TODO]
 
 **Database Systems**:
-{{ source.database_systems_detail }}
+[TODO]
 
 **Integration Systems**:
-{{ source.integration_systems }}
+[TODO]
 
 ### System Diagram
 
 ```
-{{ source.system_diagram }}
+[TODO]
 ```
 
 ## Data Flows
@@ -52,111 +63,111 @@ This document covers:
 ### Input Data
 
 **Data Sources**:
-{{ source.data_sources }}
+[TODO]
 
 **Input Methods**:
-{{ source.input_methods }}
+[TODO]
 
 **Data Validation**:
-{{ source.data_validation }}
+[TODO]
 
 ### Data Processing
 
 **Processing Steps**:
-1. {{ source.processing_step_1 }}
-2. {{ source.processing_step_2 }}
-3. {{ source.processing_step_3 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
 
 **Business Rules**:
-{{ source.business_rules }}
+[TODO]
 
 ### Output Data
 
 **Reports and Outputs**:
-{{ source.reports_outputs }}
+[TODO]
 
 **Data Transmission**:
-{{ source.data_transmission }}
+[TODO]
 
 ## Interfaces
 
 ### External Interfaces
 
 **User Organizations**:
-{{ source.user_org_interfaces }}
+[TODO]
 
 **Third Parties**:
-{{ source.third_party_interfaces }}
+[TODO]
 
 **Regulatory Authorities**:
-{{ source.regulatory_interfaces }}
+[TODO]
 
 ### Internal Interfaces
 
-{{ source.internal_interfaces }}
+[TODO]
 
 ### Interface Controls
 
-{{ source.interface_controls }}
+[TODO]
 
 ## Security Architecture
 
 ### Network Security
 
-**Firewalls**: {{ source.firewall_config }}
-**Segmentation**: {{ source.network_segmentation }}
-**Intrusion Detection**: {{ source.ids_ips }}
+**Firewalls**: [TODO]
+**Segmentation**: [TODO]
+**Intrusion Detection**: [TODO]
 
 ### Access Control
 
-**Authentication**: {{ source.authentication_methods }}
-**Authorization**: {{ source.authorization_model }}
-**Privileged Access**: {{ source.privileged_access }}
+**Authentication**: [TODO]
+**Authorization**: [TODO]
+**Privileged Access**: [TODO]
 
 ### Data Security
 
-**Encryption in Transit**: {{ source.encryption_transit }}
-**Encryption at Rest**: {{ source.encryption_rest }}
-**Data Masking**: {{ source.data_masking }}
+**Encryption in Transit**: [TODO]
+**Encryption at Rest**: [TODO]
+**Data Masking**: [TODO]
 
 ## System Boundaries
 
 ### In Scope
 
-{{ source.in_scope_components }}
+[TODO]
 
 ### Out of Scope
 
-{{ source.out_of_scope_components }}
+[TODO]
 
 ### Interfaces to Subservice Organizations
 
-{{ source.subservice_interfaces }}
+[TODO]
 
 ## System Availability
 
 ### Availability Requirements
 
-**SLA Targets**: {{ source.availability_sla }}
-**Uptime**: {{ source.system_uptime }}
+**SLA Targets**: [TODO]
+**Uptime**: [TODO]
 
 ### Redundancy and Failover
 
-{{ source.redundancy_failover }}
+[TODO]
 
 ### Maintenance Windows
 
-{{ source.maintenance_windows }}
+[TODO]
 
 ## System Changes
 
 ### Changes During Reporting Period
 
-{{ source.system_changes }}
+[TODO]
 
 ### Impact on Controls
 
-{{ source.change_control_impact }}
+[TODO]
 
 ## References
 
@@ -164,13 +175,5 @@ This document covers:
 - SOC 1 Reporting Requirements
 
 <!-- Author notes: Update system diagrams and data flows regularly -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

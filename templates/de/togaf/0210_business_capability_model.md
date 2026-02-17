@@ -1,17 +1,28 @@
----
+
 Document-ID: togaf-0210
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Business Capability Model
 
+**Dokument-ID:** [FRAMEWORK]-0210
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument definiert das Business Capability Model für {{ source.organization_name }}, das die Fähigkeiten beschreibt, die die Organisation benötigt, um ihre Geschäftsziele zu erreichen.
+Dieses Dokument definiert das Business Capability Model für [TODO], das die Fähigkeiten beschreibt, die die Organisation benötigt, um ihre Geschäftsziele zu erreichen.
 
 ## Geltungsbereich
 
@@ -26,36 +37,27 @@ Dieses Dokument definiert das Business Capability Model für {{ source.organizat
 
 | Capability | Beschreibung | Strategische Bedeutung |
 |------------|--------------|------------------------|
-| {{ source.l1_cap_1 }} | {{ source.l1_cap_1_desc }} | {{ source.l1_cap_1_importance }} |
-| {{ source.l1_cap_2 }} | {{ source.l1_cap_2_desc }} | {{ source.l1_cap_2_importance }} |
-| {{ source.l1_cap_3 }} | {{ source.l1_cap_3_desc }} | {{ source.l1_cap_3_importance }} |
+| [TODO] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [TODO] |
 
 ### Level 2 Capabilities
 
-**{{ source.l1_cap_1 }}**:
-- {{ source.l2_cap_1_1 }}
-- {{ source.l2_cap_1_2 }}
-- {{ source.l2_cap_1_3 }}
+**[TODO]**:
+- [TODO]
+- [TODO]
+- [TODO]
 
 ## Reifegrad-Bewertung
 
 | Capability | Aktueller Reifegrad | Ziel-Reifegrad | Gap |
 |------------|---------------------|----------------|-----|
-| {{ source.cap_1 }} | {{ source.cap_1_current }} | {{ source.cap_1_target }} | {{ source.cap_1_gap }} |
-| {{ source.cap_2 }} | {{ source.cap_2_current }} | {{ source.cap_2_target }} | {{ source.cap_2_gap }} |
+| [TODO] | [TODO] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## Capability-Roadmap
 
-{{ source.capability_roadmap }}
+[TODO]
 
 <!-- Autorenhinweise: Capability Model sollte stabil aber anpassbar sein -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|------|--------|---------|
-| 0.1 | {{meta.document.last_updated}} | {{ meta.defaults.author }} | Initiale Erstellung |
-
-<-  ( marked all subtasks complete End of template -->

@@ -1,5 +1,19 @@
 # IT-Operation Framework-Mapping
 
+**Dokument-ID:** [FRAMEWORK]-9999
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Überblick
 
 Dieses Dokument bildet die IT-Operation Templates auf ITIL v4, ISO/IEC 20000-1 und COBIT 2019 Komponenten ab.
@@ -84,21 +98,6 @@ Die Templates unterstützen die ITIL v4 Service Value Chain:
 - ISO/IEC 20000-1:2018 - IT Service Management
 - COBIT 2019 Framework
 
----
-
 **Version:** 1.0.0  
 **Datum:** 2026-02-10
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
-
-## Versionshistorie
-
-| Version | Datum | Änderungen |
-|---------|-------|------------|
-| 0.1 | {{meta.document.last_updated}} | Initiale Erstellung |

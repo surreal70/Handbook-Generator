@@ -1,11 +1,16 @@
 # Steuerung extern bereitgestellter Prozesse, Produkte und Dienstleistungen
 
-**Dokument-ID:** 0430  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0430
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -18,7 +23,7 @@ Referenz: ISO 9001:2015, Kapitel 8.4
 
 ## Zweck
 
-Dieses Dokument definiert, wie {{ meta.organization }} extern bereitgestellte Prozesse, Produkte und Dienstleistungen steuert, um sicherzustellen, dass sie die Anforderungen erfüllen.
+Dieses Dokument definiert, wie {{ meta-organisation.name }} extern bereitgestellte Prozesse, Produkte und Dienstleistungen steuert, um sicherzustellen, dass sie die Anforderungen erfüllen.
 
 ## Allgemeine Anforderungen (8.4.1)
 
@@ -32,7 +37,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} extern bereitgestellte Pr
 
 ### Steuerungsanforderungen
 
-**{{ meta.organization }} stellt sicher:**
+**{{ meta-organisation.name }} stellt sicher:**
 - Extern bereitgestellte Prozesse, Produkte und Dienstleistungen bleiben unter Steuerung des QMS
 - Steuerung auf externe Anbieter und deren Ergebnisse wird definiert
 - Potenzielle Auswirkungen auf Fähigkeit zur Erfüllung von Kundenanforderungen werden berücksichtigt
@@ -49,7 +54,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} extern bereitgestellte Pr
 
 ### Anbietertypen
 
-**{{ meta.organization }} kategorisiert externe Anbieter:**
+**{{ meta-organisation.name }} kategorisiert externe Anbieter:**
 
 | Kategorie | Beschreibung | Steuerungsniveau | Beispiele |
 |-----------|--------------|------------------|-----------|
@@ -80,7 +85,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} extern bereitgestellte Pr
 
 ### Qualifizierungsmethoden
 
-**{{ meta.organization }} qualifiziert Anbieter durch:**
+**{{ meta-organisation.name }} qualifiziert Anbieter durch:**
 - Bewertung der Qualitätsfähigkeit
 - Audits bei Anbietern
 - Bewertung von Mustern oder Prototypen
@@ -111,7 +116,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} extern bereitgestellte Pr
 
 ### Leistungsbewertung
 
-**{{ meta.organization }} bewertet Anbieterleistung basierend auf:**
+**{{ meta-organisation.name }} bewertet Anbieterleistung basierend auf:**
 - Qualität der gelieferten Produkte/Dienstleistungen
 - Liefertreue (Termin und Menge)
 - Reaktionsfähigkeit
@@ -168,7 +173,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} extern bereitgestellte Pr
 
 ### Kommunikationsanforderungen
 
-**{{ meta.organization }} kommuniziert an externe Anbieter:**
+**{{ meta-organisation.name }} kommuniziert an externe Anbieter:**
 - Bereitzustellende Prozesse, Produkte und Dienstleistungen
 - Genehmigung von Produkten, Verfahren, Prozessen und Ausrüstung
 - Freigabe von Produkten und Dienstleistungen
@@ -192,7 +197,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} extern bereitgestellte Pr
 
 ### Verifizierungsaktivitäten
 
-**{{ meta.organization }} verifiziert durch:**
+**{{ meta-organisation.name }} verifiziert durch:**
 - Wareneingangsprüfung
 - Prüfung von Begleitdokumenten
 - Stichprobenprüfungen
@@ -224,7 +229,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} extern bereitgestellte Pr
 
 ### Zugelassene Anbieter
 
-**{{ meta.organization }} führt ein Register zugelassener Anbieter:**
+**{{ meta-organisation.name }} führt ein Register zugelassener Anbieter:**
 
 | Anbieter | Kategorie | Produkte/DL | Qualifiziert seit | Letzte Bewertung | Status |
 |----------|-----------|-------------|-------------------|------------------|--------|
@@ -260,8 +265,6 @@ Dieses Dokument definiert, wie {{ meta.organization }} extern bereitgestellte Pr
 - Technische Bewertung
 - Unterstützung bei Anbieterentwicklung
 
----
-
 **Nächste Schritte:**
 1. Identifiziere alle externen Anbieter
 2. Kategorisiere Anbieter nach Kritikalität
@@ -270,10 +273,3 @@ Dieses Dokument definiert, wie {{ meta.organization }} extern bereitgestellte Pr
 5. Führe regelmäßige Anbieteraudits durch
 6. Pflege Anbieterregister
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

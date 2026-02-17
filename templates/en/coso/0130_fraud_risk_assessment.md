@@ -1,17 +1,28 @@
----
+
 Document-ID: coso-0130
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Fraud Risk Assessment
 
+**Document-ID:** [FRAMEWORK]-0130
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document describes how {{ source.organization_name }} assesses fraud risk and implements controls to mitigate fraud (COSO Principle 8).
+This document describes how [TODO] assesses fraud risk and implements controls to mitigate fraud (COSO Principle 8).
 
 ## Scope
 
@@ -24,122 +35,122 @@ This document describes how {{ source.organization_name }} assesses fraud risk a
 
 ### Overview
 
-{{ source.fraud_risk_overview }}
+[TODO]
 
 ### Fraud Triangle
 
-**Pressure/Incentive**: {{ source.fraud_pressure }}
-**Opportunity**: {{ source.fraud_opportunity }}
-**Rationalization**: {{ source.fraud_rationalization }}
+**Pressure/Incentive**: [TODO]
+**Opportunity**: [TODO]
+**Rationalization**: [TODO]
 
 ## Types of Fraud
 
 ### Financial Statement Fraud
 
-{{ source.financial_statement_fraud }}
+[TODO]
 
 ### Asset Misappropriation
 
-{{ source.asset_misappropriation }}
+[TODO]
 
 ### Corruption
 
-{{ source.corruption }}
+[TODO]
 
 ### Cyber Fraud
 
-{{ source.cyber_fraud }}
+[TODO]
 
 ## Fraud Risk Assessment Process
 
 ### Risk Identification
 
-**Brainstorming Sessions**: {{ source.fraud_brainstorming }}
-**Fraud Scenarios**: {{ source.fraud_scenarios }}
-**Industry Analysis**: {{ source.industry_fraud_analysis }}
+**Brainstorming Sessions**: [TODO]
+**Fraud Scenarios**: [TODO]
+**Industry Analysis**: [TODO]
 
 ### Risk Analysis
 
-**Likelihood Assessment**: {{ source.fraud_likelihood }}
-**Impact Assessment**: {{ source.fraud_impact }}
-**Control Effectiveness**: {{ source.fraud_control_effectiveness }}
+**Likelihood Assessment**: [TODO]
+**Impact Assessment**: [TODO]
+**Control Effectiveness**: [TODO]
 
 ### Risk Prioritization
 
-{{ source.fraud_risk_prioritization }}
+[TODO]
 
 ## Anti-Fraud Controls
 
 ### Preventive Controls
 
-**Segregation of Duties**: {{ source.fraud_segregation }}
-**Authorization Controls**: {{ source.fraud_authorization }}
-**Physical Controls**: {{ source.fraud_physical_controls }}
-**Access Controls**: {{ source.fraud_access_controls }}
+**Segregation of Duties**: [TODO]
+**Authorization Controls**: [TODO]
+**Physical Controls**: [TODO]
+**Access Controls**: [TODO]
 
 ### Detective Controls
 
-**Reconciliations**: {{ source.fraud_reconciliations }}
-**Monitoring**: {{ source.fraud_monitoring }}
-**Data Analytics**: {{ source.fraud_analytics }}
-**Whistleblower Hotline**: {{ source.fraud_hotline }}
+**Reconciliations**: [TODO]
+**Monitoring**: [TODO]
+**Data Analytics**: [TODO]
+**Whistleblower Hotline**: [TODO]
 
 ## Fraud Prevention
 
 ### Tone at the Top
 
-{{ source.fraud_tone_at_top }}
+[TODO]
 
 ### Code of Conduct
 
-{{ source.fraud_code_of_conduct }}
+[TODO]
 
 ### Training and Awareness
 
-{{ source.fraud_training }}
+[TODO]
 
 ### Background Checks
 
-{{ source.fraud_background_checks }}
+[TODO]
 
 ## Fraud Detection
 
 ### Red Flags
 
-{{ source.fraud_red_flags }}
+[TODO]
 
 ### Monitoring Procedures
 
-{{ source.fraud_monitoring_procedures }}
+[TODO]
 
 ### Investigation Process
 
-{{ source.fraud_investigation }}
+[TODO]
 
 ## Response to Fraud
 
 ### Investigation Protocol
 
-{{ source.fraud_investigation_protocol }}
+[TODO]
 
 ### Disciplinary Actions
 
-{{ source.fraud_disciplinary_actions }}
+[TODO]
 
 ### Legal Actions
 
-{{ source.fraud_legal_actions }}
+[TODO]
 
 ### Remediation
 
-{{ source.fraud_remediation }}
+[TODO]
 
 ## Roles and Responsibilities
 
-**Board of Directors**: {{ source.board_fraud_role }}
-**Audit Committee**: {{ source.audit_committee_fraud_role }}
-**Management**: {{ source.management_fraud_role }}
-**Internal Audit**: {{ source.internal_audit_fraud_role }}
+**Board of Directors**: [TODO]
+**Audit Committee**: [TODO]
+**Management**: [TODO]
+**Internal Audit**: [TODO]
 
 ## References
 
@@ -147,13 +158,5 @@ This document describes how {{ source.organization_name }} assesses fraud risk a
 - Code of Conduct
 - Whistleblower Policy
 - Investigation Procedures
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

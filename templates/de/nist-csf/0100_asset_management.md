@@ -1,13 +1,25 @@
----
+
 Document-ID: nist-csf-0100
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Asset Management (ID.AM)
+
+**Dokument-ID:** [FRAMEWORK]-0100
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -15,7 +27,7 @@ Dieses Dokument beschreibt das Asset-Management-Programm zur Identifikation und 
 
 ## Geltungsbereich
 
-{{ meta.scope }}
+{{ meta-handbook.scope }}
 
 ## Asset-Kategorien
 
@@ -144,17 +156,3 @@ Dieses Dokument beschreibt das Asset-Management-Programm zur Identifikation und 
 - 0130_risk_assessment.md
 - 0220_data_security.md (Protect)
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |
-
-<!-- 
-Autor-Hinweise:
-- Halten Sie Asset-Inventar aktuell
-- Überprüfen Sie Klassifizierungen regelmäßig
-- Stellen Sie sicher, dass alle Assets einen Owner haben
--->

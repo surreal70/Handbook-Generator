@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0360
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Network Security Management
+
+**Document-ID:** [FRAMEWORK]-0360
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -15,7 +26,7 @@ This document describes measures for network security according to TISAX require
 
 ## Scope
 
-This document applies to all networks of {{ source.organization_name }}.
+This document applies to all networks of [TODO].
 
 ## Network Segmentation
 
@@ -103,17 +114,9 @@ This document applies to all networks of {{ source.organization_name }}.
 
 ## Metrics
 
-{{ source.organization_name }} measures:
+[TODO] measures:
 - Number of blocked attacks
 - Network availability
 - Number of firewall rule changes
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

@@ -1,13 +1,16 @@
 # Geltungsbereich und Systemgrenzen
 
-**Dokument-ID:** NIST-0020  
-**Organisation:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** NIST-0020
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -36,7 +39,7 @@ Dieses Dokument definiert den Geltungsbereich und die Autorisierungsgrenzen des 
 **System-ID:** {{ meta.nist.system_id }}  
 **FIPS 199 Kategorisierung:** [TODO: Low / Moderate / High]  
 **System Owner:** [TODO: Name]  
-**Authorizing Official (AO):** {{ meta.roles.ao.name }}  
+**Authorizing Official (AO):** [TODO]  
 
 ### 2.2 Systembeschreibung
 
@@ -135,15 +138,7 @@ Die Autorisierungsgrenze umfasst alle Komponenten, die unter einer einzigen Auto
 
 ## 8. Genehmigung
 
-**Genehmigt durch:** {{ meta.roles.ao.name }}  
+**Genehmigt durch:** [TODO]  
 **Datum:** [TODO: Datum]  
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 <!-- End of template -->

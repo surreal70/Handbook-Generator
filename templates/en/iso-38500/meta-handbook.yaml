@@ -1,0 +1,157 @@
+# Handbook-specific metadata
+# Handbook: iso-38500
+# This file contains metadata specific to this handbook
+
+# Author of the handbook
+author: "[TODO]"
+
+# Classification level (e.g., Internal, Confidential, Public)
+classification: "[TODO]"
+
+# Status (e.g., Draft, Review, Approved, Active)
+status: "[TODO]"
+
+# Type of handbook
+type: "[TODO]"
+
+# Template set version
+templateset_version: "0.2"
+
+# Revision number (increment manually)
+revision: 0
+
+# Short name (matches directory name)
+shortname: "iso-38500"
+
+# Long descriptive name
+longname: "[TODO]"
+
+# Maintainer (defaults to author if not specified)
+maintainer: "[TODO]"
+
+# Owner responsible for the handbook
+owner: "[TODO]"
+
+# Approver of the handbook
+approver: "[TODO]"
+
+# Creation date (YYYY-MM-DD)
+creationdate: "[TODO]"
+
+# Last modification date (YYYY-MM-DD)
+modifydate: "[TODO]"
+
+# Valid from date (YYYY-MM-DD)
+valid_from: "[TODO]"
+
+# Next review date (YYYY-MM-DD)
+next_review: "[TODO]"
+
+# Scope of the handbook
+scope: "[TODO]"
+
+# Framework-specific auxiliary placeholders
+auxiliary:
+  accessibility: '[TODO]'
+  accessibility_compliance: '[TODO]'
+  acquisition_maturity: '[TODO]'
+  acquisition_target: '[TODO]'
+  acquisitions_with_bc: '[TODO]'
+  alignment_score: '[TODO]'
+  alignment_trend: '[TODO]'
+  audit_findings: '[TODO]'
+  authority_alignment: '[TODO]'
+  availability_target: '[TODO]'
+  availability_trend: '[TODO]'
+  avg_acquisition_time: '[TODO]'
+  benefit_realization: '[TODO]'
+  bsi_last_audit: '[TODO]'
+  bsi_next_audit: '[TODO]'
+  bsi_status: '[TODO]'
+  budget_compliance: '[TODO]'
+  budget_trend: '[TODO]'
+  business_case_threshold: '[TODO]'
+  capacity_target: '[TODO]'
+  change_success: '[TODO]'
+  change_trend: '[TODO]'
+  communication_date: '[TODO]'
+  compliance_rate: '[TODO]'
+  compliance_violations: '[TODO]'
+  conflict_resolution_time: '[TODO]'
+  conformance_maturity: '[TODO]'
+  conformance_target: '[TODO]'
+  cost_trend: '[TODO]'
+  csat: '[TODO]'
+  data_protection_status: '[TODO]'
+  defined_responsibilities: '[TODO]'
+  direct_maturity: '[TODO]'
+  direct_target: '[TODO]'
+  employee_satisfaction: '[TODO]'
+  evaluate_maturity: '[TODO]'
+  evaluate_target: '[TODO]'
+  fcr: '[TODO]'
+  financial_status: '[TODO]'
+  first_review_date: '[TODO]'
+  gdpr_last_audit: '[TODO]'
+  gdpr_next_audit: '[TODO]'
+  gdpr_status: '[TODO]'
+  governance_policy_date: '[TODO]'
+  governance_policy_review: '[TODO]'
+  helpdesk_satisfaction: '[TODO]'
+  human_behavior_maturity: '[TODO]'
+  human_behavior_target: '[TODO]'
+  improvements_implemented: '[TODO]'
+  incident_resolution: '[TODO]'
+  incident_trend: '[TODO]'
+  industry_regulations: '[TODO]'
+  industry_status: '[TODO]'
+  innovation_rate: '[TODO]'
+  innovation_trend: '[TODO]'
+  investment_threshold: '[TODO]'
+  it_cost_ratio: '[TODO]'
+  it_roi: '[TODO]'
+  monitor_maturity: '[TODO]'
+  monitor_target: '[TODO]'
+  mtbf: '[TODO]'
+  mttr: '[TODO]'
+  nps: '[TODO]'
+  performance_maturity: '[TODO]'
+  performance_target: '[TODO]'
+  policy_currency: '[TODO]'
+  privacy_policy_date: '[TODO]'
+  privacy_policy_review: '[TODO]'
+  process_efficiency: '[TODO]'
+  reliability_target: '[TODO]'
+  remediation_time: '[TODO]'
+  response_time: '[TODO]'
+  responsibility_awareness: '[TODO]'
+  responsibility_clarity: '[TODO]'
+  responsibility_conflicts: '[TODO]'
+  responsibility_matrix_date: '[TODO]'
+  responsibility_maturity: '[TODO]'
+  responsibility_score: '[TODO]'
+  responsibility_target: '[TODO]'
+  roi_trend: '[TODO]'
+  satisfaction_trend: '[TODO]'
+  security_policy_date: '[TODO]'
+  security_policy_review: '[TODO]'
+  security_status: '[TODO]'
+  service_availability: '[TODO]'
+  stakeholder_satisfaction: '[TODO]'
+  strategic_alignment: '[TODO]'
+  strategic_roi: '[TODO]'
+  strategy_implementation: '[TODO]'
+  strategy_maturity: '[TODO]'
+  strategy_target: '[TODO]'
+  strategy_trend: '[TODO]'
+  supplier_satisfaction: '[TODO]'
+  sus_score: '[TODO]'
+  system_availability: '[TODO]'
+  tco_optimization: '[TODO]'
+  tco_trend: '[TODO]'
+  technology_currency: '[TODO]'
+  training_completion: '[TODO]'
+  training_date: '[TODO]'
+  training_participation: '[TODO]'
+  user_satisfaction: '[TODO]'
+  ux_score: '[TODO]'

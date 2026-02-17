@@ -1,14 +1,16 @@
 # Risikoanalyse (BSI Standard 200-3) – Template
 
-**Dokument-ID:** 0090  
-**Dokumenttyp:** Methodik-Artefakt  
-**Referenzrahmen:** BSI IT-Grundschutz (BSI Standard 200-3)  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** {{ meta.document.status }}  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0090
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -21,7 +23,7 @@ Reference: BSI Standard 200-3 (Risk Analysis based on IT-Grundschutz)
 
 ## 1. Ziel und Auslöser
 
-Die Risikoanalyse nach BSI Standard 200-3 identifiziert und bewertet Risiken für **{{ meta.organization.name }}**, die nicht durch IT-Grundschutz-Bausteine abgedeckt sind.
+Die Risikoanalyse nach BSI Standard 200-3 identifiziert und bewertet Risiken für **{{ meta-organisation.name }}**, die nicht durch IT-Grundschutz-Bausteine abgedeckt sind.
 
 **Verantwortlich:** {{ meta.ciso.name }} (ISB)
 
@@ -169,9 +171,9 @@ Die Risikoanalyse nach BSI Standard 200-3 identifiziert und bewertet Risiken fü
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| ISB | {{ meta.ciso.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| IT-Leitung | {{ meta.cio.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| Geschäftsführung | {{ meta.ceo.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
+| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| IT-Leitung | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| Geschäftsführung | {{ meta.ceo.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 ## 8. Aktualisierung und Pflege
 
@@ -182,20 +184,10 @@ Die Risikoanalyse wird aktualisiert bei:
 - Mindestens jährlich im Rahmen des ISMS-Reviews
 
 **Verantwortlich:** {{ meta.ciso.name }} (ISB)  
-**Nächster Review:** {{ meta.document.next_review }}
-
----
+**Nächster Review:** {{ meta-handbook.next_review }}
 
 **Referenzen:**
 - BSI Standard 200-3: Risikoanalyse auf der Basis von IT-Grundschutz
 - BSI IT-Grundschutz-Kompendium
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 <!-- End of template -->

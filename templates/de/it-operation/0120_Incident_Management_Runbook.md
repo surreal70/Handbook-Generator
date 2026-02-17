@@ -1,12 +1,26 @@
 # Incident Management Runbook
 
+**Dokument-ID:** [FRAMEWORK]-0120
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck und Geltungsbereich
 
-Dieses Dokument beschreibt den Incident-Management-Prozess für {{ meta.organization.name }} gemäß ITIL v4 Best Practices. Es definiert Kategorien, Prioritäten, Eskalationsprozesse und Standard-Runbooks für die Behandlung von Service-Störungen.
+Dieses Dokument beschreibt den Incident-Management-Prozess für {{ meta-organisation.name }} gemäß ITIL v4 Best Practices. Es definiert Kategorien, Prioritäten, Eskalationsprozesse und Standard-Runbooks für die Behandlung von Service-Störungen.
 
-**Geltungsbereich:** Alle IT-Services und -Systeme von {{ meta.organization.name }}
+**Geltungsbereich:** Alle IT-Services und -Systeme von {{ meta-organisation.name }}
 
-**Verantwortlich:** {{ meta.it_operations_manager.name }} ({{ meta.it_operations_manager.email }})
+**Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }} ({{ meta-organisation-roles.role_it_operations_manager.email }})
 
 ## Incident-Definition
 
@@ -151,7 +165,7 @@ Die Priorität eines Incidents ergibt sich aus **Impact** (Auswirkung) und **Urg
 - Betroffene Nutzer/Standorte
 - Melder (Name, Kontakt)
 
-**Tool:** {{ meta.ticketing_system }}
+**Tool:** {{ meta-handbook.ticketing_system }}
 
 **Verantwortlich:** Service Desk
 
@@ -213,10 +227,10 @@ Die Priorität eines Incidents ergibt sich aus **Impact** (Auswirkung) und **Urg
 
 | Level | Rolle | Kontakt | Eskalation bei |
 |---|---|---|---|
-| **Level 1** | Service Desk | {{ meta.service_desk_lead.email }} | Standard-Incidents |
-| **Level 2** | IT Operations Team | {{ meta.it_operations_manager.email }} | Komplexe technische Probleme |
+| **Level 1** | Service Desk | {{ meta-organisation-roles.role_service_desk_lead.email }} | Standard-Incidents |
+| **Level 2** | IT Operations Team | {{ meta-organisation-roles.role_it_operations_manager.email }} | Komplexe technische Probleme |
 | **Level 3** | Spezialisten / Vendor | [Vendor-Kontakte] | Spezialwissen erforderlich |
-| **Management** | CIO | {{ meta.cio.email }} | P1-Incidents > 2h |
+| **Management** | CIO | {{ meta-organisation-roles.role_cio.email }} | P1-Incidents > 2h |
 
 ### Funktionale Eskalation
 
@@ -225,7 +239,7 @@ Die Priorität eines Incidents ergibt sich aus **Impact** (Auswirkung) und **Urg
 | **Netzwerk** | Network Team | [E-Mail] | Netzwerk-Infrastruktur |
 | **Server** | Server Team | [E-Mail] | Server und Virtualisierung |
 | **Datenbank** | DBA Team | [E-Mail] | Datenbank-Systeme |
-| **Security** | Security Team | {{ meta.ciso.email }} | Sicherheitsvorfälle |
+| **Security** | Security Team | {{ meta-organisation-roles.role_ciso.email }} | Sicherheitsvorfälle |
 | **Applikationen** | Application Team | [E-Mail] | Business-Applikationen |
 
 ### Eskalations-Trigger
@@ -354,7 +368,7 @@ Die Priorität eines Incidents ergibt sich aus **Impact** (Auswirkung) und **Urg
 5. Forensische Analyse durchführen
 6. Systeme neu aufsetzen (falls erforderlich)
 
-**Eskalation:** Sofort an CISO ({{ meta.ciso.email }})
+**Eskalation:** Sofort an CISO ({{ meta-organisation-roles.role_ciso.email }})
 
 ### Runbook 6: Netzwerk-Ausfall
 
@@ -390,7 +404,7 @@ Die Priorität eines Incidents ergibt sich aus **Impact** (Auswirkung) und **Urg
 **Während der Bearbeitung:**
 - Regelmäßige Status-Updates (P1: alle 30 Min, P2: alle 2h)
 - Eskalations-Benachrichtigungen
-- Team-Kommunikation über {{ meta.collaboration_tool }}
+- Team-Kommunikation über {{ meta-handbook.collaboration_tool }}
 
 **Bei Incident-Lösung:**
 - Nutzer-Benachrichtigung über Lösung
@@ -405,9 +419,9 @@ Die Priorität eines Incidents ergibt sich aus **Impact** (Auswirkung) und **Urg
 - Externe Partner bei Abhängigkeiten
 
 **Kommunikationskanäle:**
-- E-Mail: {{ meta.organization.email }}
-- Status-Page: {{ meta.status_page_url }}
-- Telefon: {{ meta.organization.phone }}
+- E-Mail: {{ meta-organisation.email }}
+- Status-Page: {{ meta-handbook.status_page_url }}
+- Telefon: {{ meta-organisation.phone }}
 
 **Kommunikations-Template:**
 
@@ -429,7 +443,7 @@ Wir arbeiten mit Hochdruck an der Lösung und halten Sie auf dem Laufenden.
 Nächstes Update: [Zeitpunkt]
 
 Mit freundlichen Grüßen
-{{ meta.organization.name }}
+{{ meta-organisation.name }}
 IT Operations Team
 ```
 
@@ -447,10 +461,10 @@ Ein **Major Incident** ist ein Incident mit:
 
 | Rolle | Person | Verantwortung |
 |---|---|---|
-| **Incident Manager** | {{ meta.it_operations_manager.name }} | Koordination und Kommunikation |
+| **Incident Manager** | {{ meta-organisation-roles.role_it_operations_manager.name }} | Koordination und Kommunikation |
 | **Technical Lead** | [Name] | Technische Lösungsfindung |
 | **Communication Lead** | [Name] | Stakeholder-Kommunikation |
-| **Management Rep** | {{ meta.cio.name }} | Entscheidungen und Eskalation |
+| **Management Rep** | {{ meta-organisation-roles.role_cio.name }} | Entscheidungen und Eskalation |
 
 ### Major Incident Prozess
 
@@ -493,19 +507,19 @@ Ein **Major Incident** ist ein Incident mit:
 ## Tools und Systeme
 
 ### Incident-Management-Tool
-- **System:** {{ meta.ticketing_system }}
-- **URL:** {{ meta.ticketing_system_url }}
+- **System:** {{ meta-handbook.ticketing_system }}
+- **URL:** {{ meta-handbook.ticketing_system_url }}
 - **Zugriff:** Alle IT-Mitarbeiter
 
 ### Monitoring-System
 - **System:** {{ netbox.monitoring_system }}
-- **URL:** {{ meta.monitoring_url }}
+- **URL:** {{ meta-handbook.monitoring_url }}
 - **Zugriff:** IT Operations Team
 
 ### Kommunikations-Tools
-- **Chat:** {{ meta.collaboration_tool }}
-- **Conference:** {{ meta.conference_system }}
-- **Status-Page:** {{ meta.status_page_url }}
+- **Chat:** {{ meta-handbook.collaboration_tool }}
+- **Conference:** {{ meta-handbook.conference_system }}
+- **Status-Page:** {{ meta-handbook.status_page_url }}
 
 ## Anhang
 
@@ -533,10 +547,10 @@ Ein **Major Incident** ist ein Incident mit:
 
 | Team | Primär | Sekundär | Rufbereitschaft |
 |---|---|---|---|
-| **Service Desk** | {{ meta.service_desk_lead.email }} | [Backup] | 24/7 |
-| **IT Operations** | {{ meta.it_operations_manager.email }} | [Backup] | 24/7 |
+| **Service Desk** | {{ meta-organisation-roles.role_service_desk_lead.email }} | [Backup] | 24/7 |
+| **IT Operations** | {{ meta-organisation-roles.role_it_operations_manager.email }} | [Backup] | 24/7 |
 | **Network Team** | [E-Mail] | [Backup] | On-Call |
-| **Security Team** | {{ meta.ciso.email }} | [Backup] | 24/7 |
+| **Security Team** | {{ meta-organisation-roles.role_ciso.email }} | [Backup] | 24/7 |
 
 ### Referenzen
 
@@ -545,18 +559,9 @@ Ein **Major Incident** ist ein Incident mit:
 - Interne Service-Level-Agreements
 - Eskalations-Matrix
 
----
+**Dokumentverantwortlicher:** {{ meta-handbook.owner }}  
+**Genehmigt durch:** {{ meta-handbook.approver }}  
+**Version:** {{ meta-handbook.revision }}  
+**Klassifizierung:** {{ meta-handbook.classification }}  
+**Letzte Aktualisierung:** {{ meta-handbook.date }}
 
-**Dokumentverantwortlicher:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.date }}
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

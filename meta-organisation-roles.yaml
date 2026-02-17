@@ -1,0 +1,31 @@
+# Organization Roles Metadata Configuration
+# This file contains personnel roles and contact information
+# Note: All role identifiers use English names for language-agnostic templates
+
+# Executive Roles
+role_CEO: "Max Mustermann"
+role_CFO: "Maria Müller"
+role_CTO: "[TODO]"
+role_CIO: "Anna Schmidt"
+role_COO: "Peter Fischer"
+
+# IT and Security Roles
+role_CISO: "Thomas Weber"
+role_IT_Manager: "Martin Bauer"
+role_IT_Operations_Manager: "Andreas Huemmer"
+role_System_Administrator: "Michael Schneider"
+
+# Compliance and Risk Roles
+role_GDPR_Manager: "Dr. Sarah Klein"
+role_Risk_Manager: "Frank Wagner"
+role_Compliance_Manager: "[TODO]"
+role_Internal_Auditor: "Dr. Klaus Hoffmann"
+
+# HR and Support Roles
+role_HR_Manager: "Sabine Richter"
+role_Service_Desk_Lead: "Julia Becker"
+
+# Groups
+group_IT_Services: "[TODO]"
+group_DEVOPS: "[TODO]"
+group_Helpdesk: "Service Desk Team"

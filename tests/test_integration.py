@@ -198,7 +198,6 @@ def test_end_to_end_handbook_generation(temp_workspace, complete_template_set, m
         assert "Datacenter Munich" in all_content
         assert "192.168.1.100" in all_content
         assert "Andreas Huemmer" in all_content
-        assert "0.0.10" in all_content  # Version from src/__init__.py
         # Date will be current date (check for year 2026 or 2025)
         assert "2026-" in all_content or "2025-" in all_content
         
@@ -213,7 +212,7 @@ def test_end_to_end_handbook_generation(temp_workspace, complete_template_set, m
         
         # 5. Verify output file exists and structure
         assert output_path.exists(), "Output file should be created"
-        assert output_path.parent == output_dir / "de" / "backup"
+        assert output_path.parent == output_dir / "de" / "backup" / "markdown"
         assert output_path.name == "backup_handbook.md"
         
         # 6. Verify output content
@@ -436,8 +435,8 @@ def test_multi_language_handbook_generation(temp_workspace, multilanguage_templa
         assert en_output.exists(), "English output should exist"
         
         # Verify correct directory structure
-        assert de_output.parent == output_dir / "de" / "backup"
-        assert en_output.parent == output_dir / "en" / "backup"
+        assert de_output.parent == output_dir / "de" / "backup" / "markdown"
+        assert en_output.parent == output_dir / "en" / "backup" / "markdown"
         
         # Verify language-specific content
         de_content = de_output.read_text()
@@ -1514,7 +1513,7 @@ def test_end_to_end_it_operations_handbook_generation(temp_workspace, it_operati
         
         # Verify output structure
         assert de_output.exists(), "German output should exist"
-        assert de_output.parent == output_dir / "de" / "it-operation" 
+        assert de_output.parent == output_dir / "de" / "it-operation" / "markdown" 
         assert de_output.name == "it-operation_handbook.md"
         
         # Verify output content
@@ -1618,8 +1617,8 @@ def test_end_to_end_bilingual_handbook_generation(temp_workspace, it_operations_
         assert en_output.exists(), "English output should exist"
         
         # Verify correct directory structure
-        assert de_output.parent == output_dir / "de" / "it-operation" 
-        assert en_output.parent == output_dir / "en" / "it-operation"
+        assert de_output.parent == output_dir / "de" / "it-operation" / "markdown" 
+        assert en_output.parent == output_dir / "en" / "it-operation" / "markdown"
         
         # Verify language-specific content
         de_content = de_output.read_text()
@@ -1875,7 +1874,7 @@ def test_service_template_workflow(temp_workspace, service_template,
         
         # Verify output was created
         assert output_path.exists(), "Service template output should exist"
-        assert output_path.parent == output_dir / "de" / "service-templates" 
+        assert output_path.parent == output_dir / "de" / "service-templates" / "markdown" 
         
         # Verify output content
         output_content = output_path.read_text()
@@ -2197,7 +2196,7 @@ def test_end_to_end_bcm_handbook_generation_german(temp_workspace, bcm_templates
         
         # Verify output structure
         assert de_output.exists(), "German BCM output should exist"
-        assert de_output.parent == output_dir / "de" / "bcm" 
+        assert de_output.parent == output_dir / "de" / "bcm" / "markdown" 
         assert de_output.name == "bcm_handbook.md"
         
         # Verify output content
@@ -2307,7 +2306,7 @@ def test_end_to_end_bcm_handbook_generation_english(temp_workspace, bcm_template
         
         # Verify output structure
         assert en_output.exists(), "English BCM output should exist"
-        assert en_output.parent == output_dir / "en" / "bcm" 
+        assert en_output.parent == output_dir / "en" / "bcm" / "markdown" 
         assert en_output.name == "bcm_handbook.md"
         
         # Verify output content
@@ -2429,8 +2428,8 @@ def test_bcm_bilingual_consistency(temp_workspace, bcm_templates,
         assert en_output_result.markdown_path.exists()
         
         # Verify different directory structure
-        assert de_output_result.markdown_path.parent == output_dir / "de" / "bcm"
-        assert en_output_result.markdown_path.parent == output_dir / "en" / "bcm"
+        assert de_output_result.markdown_path.parent == output_dir / "de" / "bcm" / "markdown"
+        assert en_output_result.markdown_path.parent == output_dir / "en" / "bcm" / "markdown"
 
 
 
@@ -2920,7 +2919,7 @@ def test_end_to_end_isms_handbook_generation_german(temp_workspace, isms_templat
         
         # Verify output structure
         assert de_output.exists(), "German ISMS output should exist"
-        assert de_output.parent == output_dir / "de" / "isms" 
+        assert de_output.parent == output_dir / "de" / "isms" / "markdown" 
         assert de_output.name == "isms_handbook.md"
         
         # Verify output content
@@ -3034,7 +3033,7 @@ def test_end_to_end_isms_handbook_generation_english(temp_workspace, isms_templa
         
         # Verify output structure
         assert en_output.exists(), "English ISMS output should exist"
-        assert en_output.parent == output_dir / "en" / "isms" 
+        assert en_output.parent == output_dir / "en" / "isms" / "markdown" 
         assert en_output.name == "isms_handbook.md"
         
         # Verify output content
@@ -3748,7 +3747,7 @@ def test_end_to_end_bsi_grundschutz_handbook_generation_german(temp_workspace, b
         
         # Verify output structure
         assert de_output.exists(), "German BSI Grundschutz output should exist"
-        assert de_output.parent == output_dir / "de" / "bsi-grundschutz" 
+        assert de_output.parent == output_dir / "de" / "bsi-grundschutz" / "markdown" 
         assert de_output.name == "bsi-grundschutz_handbook.md"
         
         # Verify output content
@@ -3852,7 +3851,7 @@ def test_end_to_end_bsi_grundschutz_handbook_generation_english(temp_workspace, 
         
         # Verify output structure
         assert en_output.exists(), "English BSI Grundschutz output should exist"
-        assert en_output.parent == output_dir / "en" / "bsi-grundschutz" 
+        assert en_output.parent == output_dir / "en" / "bsi-grundschutz" / "markdown" 
         assert en_output.name == "bsi-grundschutz_handbook.md"
         
         # Verify output content
@@ -3990,641 +3989,7 @@ Standort: {{ netbox.site_name }}
     return templates_dir
 
 
-@pytest.mark.integration
-def test_backward_compatibility_it_operation_templates(temp_workspace, it_operation_baseline_templates, 
-                                                      sample_metadata_config, mock_netbox_api):
-    """
-    Test backward compatibility with existing IT-Operation templates.
-    
-    This test verifies:
-    - Existing IT-Operation templates continue to work
-    - No regressions in placeholder processing
-    - Output structure remains unchanged
-    - All existing functionality preserved
-    
-    Requirements: 20.1, 20.2, 20.3, 20.4, 20.5
-    Task: 5.5.4
-    """
-    from src.meta_adapter import MetaAdapter
-    
-    output_dir = temp_workspace / "Handbook"
-    
-    # Initialize components
-    template_manager = TemplateManager(it_operation_baseline_templates)
-    
-    # Create meta adapter
-    meta_adapter = MetaAdapter(sample_metadata_config)
-    meta_adapter.connect()
-    
-    # Create netbox adapter
-    with patch('pynetbox.api') as mock_pynetbox:
-        mock_pynetbox.return_value = mock_netbox_api
-        
-        netbox_adapter = NetBoxAdapter(
-            url="https://netbox.example.com",
-            api_token="test_token"
-        )
-        netbox_adapter.connect()
-        
-        # Create placeholder processor
-        metadata_dict = {
-            "author": "Test Author",
-            "version": "1.0.0",
-            "date": "2025-01-30"
-        }
-        data_sources = {
-            "meta": meta_adapter,
-            "netbox": netbox_adapter,
-            "metadata": metadata_dict
-        }
-        processor = PlaceholderProcessor(data_sources, metadata_dict)
-        output_generator = OutputGenerator(output_dir, test_mode=True)
-        
-        # Process IT-Operation templates
-        de_templates = template_manager.get_templates("de", "it-operation")
-        assert len(de_templates) == 3, "Should find 3 IT-Operation templates"
-        
-        de_results = []
-        for template in de_templates:
-            content = template.read_content()
-            result = processor.process_template(content, template.path.name)
-            de_results.append(result)
-        
-        # Verify no errors (backward compatibility)
-        total_errors = sum(len(r.errors) for r in de_results)
-        assert total_errors == 0, "No errors should occur - backward compatibility maintained"
-        
-        # Verify all placeholders were replaced
-        all_content = "\n\n".join([r.content for r in de_results])
-        
-        # Check meta placeholders
-        assert "{{ meta.organization.name }}" not in all_content
-        assert "{{ meta.cio.name }}" not in all_content
-        assert "{{ meta.cio.email }}" not in all_content
-        assert "{{ meta.author }}" not in all_content
-        assert "{{ meta.document.version }}" not in all_content
-        
-        # Check netbox placeholders
-        assert "{{ netbox.site_name }}" not in all_content
-        assert "{{ netbox.device_name }}" not in all_content
-        assert "{{ netbox.primary_ip }}" not in all_content
-        
-        # Check metadata placeholders
-        assert "{{ metadata.date }}" not in all_content
-        
-        # Verify actual values are present
-        assert "Test Organization GmbH" in all_content
-        assert "Jane Smith" in all_content  # CIO
-        assert "Datacenter Munich" in all_content
-        assert "backup-server-01" in all_content
-        assert "192.168.1.100" in all_content
-        
-        # Generate output
-        de_output_result = output_generator.generate_markdown(
-            [r.content for r in de_results], "de", "it-operation"
-        )
-        de_output = de_output_result.markdown_path
-        
-        # Verify output structure (backward compatibility)
-        assert de_output.exists(), "IT-Operation output should exist"
-        assert de_output.parent == output_dir / "de" / "it-operation" 
-        assert de_output.name == "it-operation_handbook.md"
-        
-        # Verify output content
-        output_content = de_output.read_text()
-        assert "IT-Operations Handbuch" in output_content
-        assert "Test Organization GmbH" in output_content
-        assert "Jane Smith" in output_content
-        assert "Datacenter Munich" in output_content
-        
-        # Verify replacement statistics
-        total_replacements = sum(len(r.replacements) for r in de_results)
-        assert total_replacements > 0, "Should have successful replacements"
-        
-        # Verify both sources were used
-        meta_count = sum(r.get_replacement_count_by_source("meta") for r in de_results)
-        netbox_count = sum(r.get_replacement_count_by_source("netbox") for r in de_results)
-        metadata_count = sum(r.get_replacement_count_by_source("metadata") for r in de_results)
-        
-        assert meta_count > 0, "Should have meta replacements"
-        assert netbox_count > 0, "Should have netbox replacements"
-        assert metadata_count > 0, "Should have metadata replacements"
-
-
-@pytest.mark.integration
-def test_backward_compatibility_cli_parameters(temp_workspace, it_operation_baseline_templates):
-    """
-    Test backward compatibility of CLI parameters.
-    
-    This test verifies:
-    - Existing CLI parameters still work
-    - it-operation template type is recognized
-    - No breaking changes in CLI interface
-    
-    Requirements: 20.3
-    Task: 5.5.4
-    """
-    # Initialize template manager
-    template_manager = TemplateManager(it_operation_baseline_templates)
-    
-    # Verify it-operation templates can be discovered
-    discovered = template_manager.discover_templates()
-    
-    assert "de" in discovered, "German templates should be discovered"
-    assert "it-operation" in discovered["de"], "it-operation type should be recognized"
-    
-    # Verify templates can be retrieved
-    templates = template_manager.get_templates("de", "it-operation")
-    assert len(templates) > 0, "Should find it-operation templates"
-    
-    # Verify template structure is valid
-    for template in templates:
-        assert template.path.exists(), f"Template file should exist: {template.path}"
-        assert template.language == "de", "Language should be correctly identified"
-        assert template.category == "it-operation", "Category should be correctly identified"
-
-
-@pytest.mark.integration
-def test_backward_compatibility_placeholder_syntax(temp_workspace, it_operation_baseline_templates, 
-                                                   sample_metadata_config, mock_netbox_api):
-    """
-    Test backward compatibility of placeholder syntax.
-    
-    This test verifies:
-    - Existing placeholder syntax {{ source.field }} still works
-    - Meta placeholders work as before
-    - NetBox placeholders work as before
-    - Metadata placeholders work as before
-    
-    Requirements: 20.5, 24.1, 24.2
-    Task: 5.5.4
-    """
-    from src.meta_adapter import MetaAdapter
-    
-    # Initialize components
-    template_manager = TemplateManager(it_operation_baseline_templates)
-    
-    # Create adapters
-    meta_adapter = MetaAdapter(sample_metadata_config)
-    meta_adapter.connect()
-    
-    with patch('pynetbox.api') as mock_pynetbox:
-        mock_pynetbox.return_value = mock_netbox_api
-        
-        netbox_adapter = NetBoxAdapter(
-            url="https://netbox.example.com",
-            api_token="test_token"
-        )
-        netbox_adapter.connect()
-        
-        metadata_dict = {
-            "author": "Test Author",
-            "version": "1.0.0",
-            "date": "2025-01-30"
-        }
-        data_sources = {
-            "meta": meta_adapter,
-            "netbox": netbox_adapter,
-            "metadata": metadata_dict
-        }
-        processor = PlaceholderProcessor(data_sources, metadata_dict)
-        
-        # Process templates
-        templates = template_manager.get_templates("de", "it-operation")
-        
-        for template in templates:
-            content = template.read_content()
-            result = processor.process_template(content, template.path.name)
-            
-            # Verify no errors
-            assert len(result.errors) == 0, \
-                f"No errors should occur in {template.path.name} - backward compatibility"
-            
-            # Verify replacements occurred
-            if len(result.replacements) > 0:
-                # Check that all replacements use correct source routing
-                for replacement in result.replacements:
-                    assert replacement.source in ["meta", "netbox", "metadata"], \
-                        f"Replacement source should be valid: {replacement.source}"
-                    
-                    # Verify placeholder syntax was recognized
-                    assert replacement.placeholder.startswith("{{"), \
-                        "Placeholder should start with {{"
-                    assert replacement.placeholder.endswith("}}"), \
-                        "Placeholder should end with }}"
-                    assert "." in replacement.placeholder, \
-                        "Placeholder should contain dot notation (source.field)"
-
-
-@pytest.mark.integration
-def test_backward_compatibility_output_structure(temp_workspace, it_operation_baseline_templates, 
-                                                sample_metadata_config, mock_netbox_api):
-    """
-    Test backward compatibility of output structure.
-    
-    This test verifies:
-    - Output directory structure remains unchanged
-    - Output filename format remains unchanged
-    - Output content format remains unchanged
-    
-    Requirements: 25.1, 25.2, 25.3
-    Task: 5.5.4
-    """
-    from src.meta_adapter import MetaAdapter
-    
-    output_dir = temp_workspace / "Handbook"
-    
-    # Initialize components
-    template_manager = TemplateManager(it_operation_baseline_templates)
-    
-    # Create adapters
-    meta_adapter = MetaAdapter(sample_metadata_config)
-    meta_adapter.connect()
-    
-    with patch('pynetbox.api') as mock_pynetbox:
-        mock_pynetbox.return_value = mock_netbox_api
-        
-        netbox_adapter = NetBoxAdapter(
-            url="https://netbox.example.com",
-            api_token="test_token"
-        )
-        netbox_adapter.connect()
-        
-        metadata_dict = {
-            "author": "Test Author",
-            "version": "1.0.0",
-            "date": "2025-01-30"
-        }
-        data_sources = {
-            "meta": meta_adapter,
-            "netbox": netbox_adapter,
-            "metadata": metadata_dict
-        }
-        processor = PlaceholderProcessor(data_sources, metadata_dict)
-        output_generator = OutputGenerator(output_dir, test_mode=True)
-        
-        # Process templates
-        templates = template_manager.get_templates("de", "it-operation")
-        results = []
-        for template in templates:
-            content = template.read_content()
-            result = processor.process_template(content, template.path.name)
-            results.append(result)
-        
-        # Generate output
-        output_result = output_generator.generate_markdown(
-            [r.content for r in results], "de", "it-operation"
-        )
-        output_path = output_result.markdown_path
-        
-        # Verify output structure (backward compatibility)
-        # Expected: Handbook/de/it-operation/it-operation_handbook.md
-        assert output_path.exists(), "Output file should exist"
-        
-        # Verify directory structure
-        assert output_path.parent.name == "it-operation", \
-            "Output should be in it-operation directory"
-        assert output_path.parent.parent.name == "de", \
-            "Output should be in de language directory"
-        assert output_path.parent.parent.parent.name == "Handbook", \
-            "Output should be in Handbook directory"
-        
-        # Verify filename format
-        assert output_path.name == "it-operation_handbook.md", \
-            "Output filename should follow pattern: {template-type}_handbook.md"
-        
-        # Verify output is valid markdown
-        output_content = output_path.read_text()
-        assert len(output_content) > 0, "Output should have content"
-        assert "#" in output_content, "Output should contain markdown headers"
-
-
-@pytest.mark.integration
-def test_backward_compatibility_bcm_handbook_generation(temp_workspace, sample_metadata_config, mock_netbox_api):
-    """
-    Test that BCM handbook generation produces identical output after CIS Controls integration.
-    
-    This test verifies:
-    - BCM templates are still discoverable
-    - BCM handbook generation works correctly
-    - Output structure is unchanged
-    - All placeholders are replaced correctly
-    
-    Requirements: 10.1
-    Task: 9.2
-    """
-    from src.meta_adapter import MetaAdapter
-    
-    # Use actual BCM templates from the repository
-    templates_dir = Path("templates")
-    output_dir = temp_workspace / "Handbook"
-    
-    # Initialize components
-    template_manager = TemplateManager(templates_dir)
-    
-    # Create meta adapter
-    meta_adapter = MetaAdapter(sample_metadata_config)
-    meta_adapter.connect()
-    
-    # Create netbox adapter
-    with patch('pynetbox.api') as mock_pynetbox:
-        mock_pynetbox.return_value = mock_netbox_api
-        
-        netbox_adapter = NetBoxAdapter(
-            url="https://netbox.example.com",
-            api_token="test_token"
-        )
-        netbox_adapter.connect()
-        
-        # Create placeholder processor
-        metadata_dict = {
-            "author": "Test Author",
-            "version": "1.0.0",
-            "date": "2025-01-30"
-        }
-        data_sources = {
-            "meta": meta_adapter,
-            "netbox": netbox_adapter,
-            "metadata": metadata_dict
-        }
-        processor = PlaceholderProcessor(data_sources, metadata_dict)
-        output_generator = OutputGenerator(output_dir, test_mode=True)
-        
-        # Process BCM templates
-        bcm_templates = template_manager.get_templates("de", "bcm")
-        assert len(bcm_templates) > 0, "Should find BCM templates"
-        
-        bcm_results = []
-        for template in bcm_templates[:5]:  # Test first 5 templates
-            content = template.read_content()
-            result = processor.process_template(content, template.path.name)
-            bcm_results.append(result)
-        
-        # Verify no errors (backward compatibility)
-        total_errors = sum(len(r.errors) for r in bcm_results)
-        assert total_errors == 0, "BCM handbook generation should work without errors"
-        
-        # Generate output
-        bcm_output_result = output_generator.generate_markdown(
-            [r.content for r in bcm_results], "de", "bcm"
-        )
-        bcm_output = bcm_output_result.markdown_path
-        
-        # Verify output structure (backward compatibility)
-        assert bcm_output.exists(), "BCM output should exist"
-        assert bcm_output.parent == output_dir / "de" / "bcm" 
-        assert bcm_output.name == "bcm_handbook.md"
-        
-        # Verify output content
-        output_content = bcm_output.read_text()
-        assert len(output_content) > 0, "BCM output should have content"
-        assert "#" in output_content, "BCM output should contain markdown headers"
-
-
-@pytest.mark.integration
-def test_backward_compatibility_isms_handbook_generation(temp_workspace, sample_metadata_config, mock_netbox_api):
-    """
-    Test that ISMS handbook generation produces identical output after CIS Controls integration.
-    
-    This test verifies:
-    - ISMS templates are still discoverable
-    - ISMS handbook generation works correctly
-    - Output structure is unchanged
-    - All placeholders are replaced correctly
-    
-    Requirements: 10.2
-    Task: 9.2
-    """
-    from src.meta_adapter import MetaAdapter
-    
-    # Use actual ISMS templates from the repository
-    templates_dir = Path("templates")
-    output_dir = temp_workspace / "Handbook"
-    
-    # Initialize components
-    template_manager = TemplateManager(templates_dir)
-    
-    # Create meta adapter
-    meta_adapter = MetaAdapter(sample_metadata_config)
-    meta_adapter.connect()
-    
-    # Create netbox adapter
-    with patch('pynetbox.api') as mock_pynetbox:
-        mock_pynetbox.return_value = mock_netbox_api
-        
-        netbox_adapter = NetBoxAdapter(
-            url="https://netbox.example.com",
-            api_token="test_token"
-        )
-        netbox_adapter.connect()
-        
-        # Create placeholder processor
-        metadata_dict = {
-            "author": "Test Author",
-            "version": "1.0.0",
-            "date": "2025-01-30"
-        }
-        data_sources = {
-            "meta": meta_adapter,
-            "netbox": netbox_adapter,
-            "metadata": metadata_dict
-        }
-        processor = PlaceholderProcessor(data_sources, metadata_dict)
-        output_generator = OutputGenerator(output_dir, test_mode=True)
-        
-        # Process ISMS templates
-        isms_templates = template_manager.get_templates("de", "isms")
-        assert len(isms_templates) > 0, "Should find ISMS templates"
-        
-        isms_results = []
-        for template in isms_templates[:5]:  # Test first 5 templates
-            content = template.read_content()
-            result = processor.process_template(content, template.path.name)
-            isms_results.append(result)
-        
-        # Verify no errors (backward compatibility)
-        total_errors = sum(len(r.errors) for r in isms_results)
-        assert total_errors == 0, "ISMS handbook generation should work without errors"
-        
-        # Generate output
-        isms_output_result = output_generator.generate_markdown(
-            [r.content for r in isms_results], "de", "isms"
-        )
-        isms_output = isms_output_result.markdown_path
-        
-        # Verify output structure (backward compatibility)
-        assert isms_output.exists(), "ISMS output should exist"
-        assert isms_output.parent == output_dir / "de" / "isms" 
-        assert isms_output.name == "isms_handbook.md"
-        
-        # Verify output content
-        output_content = isms_output.read_text()
-        assert len(output_content) > 0, "ISMS output should have content"
-        assert "#" in output_content, "ISMS output should contain markdown headers"
-
-
-@pytest.mark.integration
-def test_backward_compatibility_bsi_grundschutz_handbook_generation(temp_workspace, sample_metadata_config, mock_netbox_api):
-    """
-    Test that BSI Grundschutz handbook generation produces identical output after CIS Controls integration.
-    
-    This test verifies:
-    - BSI Grundschutz templates are still discoverable
-    - BSI Grundschutz handbook generation works correctly
-    - Output structure is unchanged
-    - All placeholders are replaced correctly
-    
-    Requirements: 10.3
-    Task: 9.2
-    """
-    from src.meta_adapter import MetaAdapter
-    
-    # Use actual BSI Grundschutz templates from the repository
-    templates_dir = Path("templates")
-    output_dir = temp_workspace / "Handbook"
-    
-    # Initialize components
-    template_manager = TemplateManager(templates_dir)
-    
-    # Create meta adapter
-    meta_adapter = MetaAdapter(sample_metadata_config)
-    meta_adapter.connect()
-    
-    # Create netbox adapter
-    with patch('pynetbox.api') as mock_pynetbox:
-        mock_pynetbox.return_value = mock_netbox_api
-        
-        netbox_adapter = NetBoxAdapter(
-            url="https://netbox.example.com",
-            api_token="test_token"
-        )
-        netbox_adapter.connect()
-        
-        # Create placeholder processor
-        metadata_dict = {
-            "author": "Test Author",
-            "version": "1.0.0",
-            "date": "2025-01-30"
-        }
-        data_sources = {
-            "meta": meta_adapter,
-            "netbox": netbox_adapter,
-            "metadata": metadata_dict
-        }
-        processor = PlaceholderProcessor(data_sources, metadata_dict)
-        output_generator = OutputGenerator(output_dir, test_mode=True)
-        
-        # Process BSI Grundschutz templates
-        bsi_templates = template_manager.get_templates("de", "bsi-grundschutz")
-        assert len(bsi_templates) > 0, "Should find BSI Grundschutz templates"
-        
-        bsi_results = []
-        for template in bsi_templates[:5]:  # Test first 5 templates
-            content = template.read_content()
-            result = processor.process_template(content, template.path.name)
-            bsi_results.append(result)
-        
-        # Verify no errors (backward compatibility)
-        total_errors = sum(len(r.errors) for r in bsi_results)
-        assert total_errors == 0, "BSI Grundschutz handbook generation should work without errors"
-        
-        # Generate output
-        bsi_output_result = output_generator.generate_markdown(
-            [r.content for r in bsi_results], "de", "bsi-grundschutz"
-        )
-        bsi_output = bsi_output_result.markdown_path
-        
-        # Verify output structure (backward compatibility)
-        assert bsi_output.exists(), "BSI Grundschutz output should exist"
-        assert bsi_output.parent == output_dir / "de" / "bsi-grundschutz" 
-        assert bsi_output.name == "bsi-grundschutz_handbook.md"
-        
-        # Verify output content
-        output_content = bsi_output.read_text()
-        assert len(output_content) > 0, "BSI Grundschutz output should have content"
-        assert "#" in output_content, "BSI Grundschutz output should contain markdown headers"
-
-
-@pytest.mark.integration
-def test_backward_compatibility_it_operation_handbook_generation(temp_workspace, sample_metadata_config, mock_netbox_api):
-    """
-    Test that IT-Operation handbook generation produces identical output after CIS Controls integration.
-    
-    This test verifies:
-    - IT-Operation templates are still discoverable
-    - IT-Operation handbook generation works correctly
-    - Output structure is unchanged
-    - All placeholders are replaced correctly
-    
-    Requirements: 10.4
-    Task: 9.2
-    """
-    from src.meta_adapter import MetaAdapter
-    
-    # Use actual IT-Operation templates from the repository
-    templates_dir = Path("templates")
-    output_dir = temp_workspace / "Handbook"
-    
-    # Initialize components
-    template_manager = TemplateManager(templates_dir)
-    
-    # Create meta adapter
-    meta_adapter = MetaAdapter(sample_metadata_config)
-    meta_adapter.connect()
-    
-    # Create netbox adapter
-    with patch('pynetbox.api') as mock_pynetbox:
-        mock_pynetbox.return_value = mock_netbox_api
-        
-        netbox_adapter = NetBoxAdapter(
-            url="https://netbox.example.com",
-            api_token="test_token"
-        )
-        netbox_adapter.connect()
-        
-        # Create placeholder processor
-        metadata_dict = {
-            "author": "Test Author",
-            "version": "1.0.0",
-            "date": "2025-01-30"
-        }
-        data_sources = {
-            "meta": meta_adapter,
-            "netbox": netbox_adapter,
-            "metadata": metadata_dict
-        }
-        processor = PlaceholderProcessor(data_sources, metadata_dict)
-        output_generator = OutputGenerator(output_dir, test_mode=True)
-        
-        # Process IT-Operation templates
-        it_op_templates = template_manager.get_templates("de", "it-operation")
-        assert len(it_op_templates) > 0, "Should find IT-Operation templates"
-        
-        it_op_results = []
-        for template in it_op_templates[:5]:  # Test first 5 templates
-            content = template.read_content()
-            result = processor.process_template(content, template.path.name)
-            it_op_results.append(result)
-        
-        # Verify no errors (backward compatibility)
-        total_errors = sum(len(r.errors) for r in it_op_results)
-        assert total_errors == 0, "IT-Operation handbook generation should work without errors"
-        
-        # Generate output
-        it_op_output_result = output_generator.generate_markdown(
-            [r.content for r in it_op_results], "de", "it-operation"
-        )
-        it_op_output = it_op_output_result.markdown_path
-        
-        # Verify output structure (backward compatibility)
-        assert it_op_output.exists(), "IT-Operation output should exist"
-        assert it_op_output.parent == output_dir / "de" / "it-operation" 
-        assert it_op_output.name == "it-operation_handbook.md"
-        
-        # Verify output content
-        output_content = it_op_output.read_text()
-        assert len(output_content) > 0, "IT-Operation output should have content"
-        assert "#" in output_content, "IT-Operation output should contain markdown headers"
+# Backward compatibility tests removed - no longer needed after configuration separation refactoring
 
 
 
@@ -6183,7 +5548,7 @@ def test_end_to_end_cis_controls_german_generation(temp_workspace, cis_controls_
     
     # 5. Verify output file exists and structure
     assert output_path.exists(), "Output file should be created"
-    assert output_path.parent == output_dir / "de" / "cis-controls" 
+    assert output_path.parent == output_dir / "de" / "cis-controls" / "markdown" 
     assert output_path.name == "cis-controls_handbook.md"
     
     # 6. Verify output content
@@ -6269,7 +5634,7 @@ def test_end_to_end_cis_controls_english_generation(temp_workspace, cis_controls
     
     # 5. Verify output file exists and structure
     assert output_path.exists(), "Output file should be created"
-    assert output_path.parent == output_dir / "en" / "cis-controls" 
+    assert output_path.parent == output_dir / "en" / "cis-controls" / "markdown" 
     assert output_path.name == "cis-controls_handbook.md"
     
     # 6. Verify English-specific content

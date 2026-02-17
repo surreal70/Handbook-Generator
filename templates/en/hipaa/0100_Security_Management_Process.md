@@ -1,13 +1,16 @@
 # Security Management Process
 
-**Document ID:** HIPAA-0100  
-**Organization:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Approved by:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0100
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,7 +28,7 @@ Required (R) Standard with Required Implementation Specifications:
 
 ## 1. Purpose
 
-This document describes the Security Management Process for {{ meta.organization.name }}, including risk analysis, risk management, sanction policy, and information system activity review as required by HIPAA Security Rule §164.308(a)(1).
+This document describes the Security Management Process for {{ meta-organisation.name }}, including risk analysis, risk management, sanction policy, and information system activity review as required by HIPAA Security Rule §164.308(a)(1).
 
 ### 1.1 HIPAA Requirement
 
@@ -77,7 +80,7 @@ This document describes the Security Management Process for {{ meta.organization
 
 **Frequency:** Annual (minimum) or when significant changes occur
 
-**Responsible:** {{ meta.roles.security_officer.name }} (Security Officer)
+**Responsible:** [TODO] (Security Officer)
 
 ### 2.2 Risk Analysis Methodology
 
@@ -149,7 +152,7 @@ After implementing controls, reassess risk levels to determine residual risk.
 
 **Requirement:** Apply appropriate sanctions against workforce members who fail to comply with security policies and procedures.
 
-**Policy:** {{ meta.organization.name }} will apply appropriate sanctions against workforce members who violate HIPAA security policies and procedures. Sanctions will be applied consistently and fairly, commensurate with the severity of the violation.
+**Policy:** {{ meta-organisation.name }} will apply appropriate sanctions against workforce members who violate HIPAA security policies and procedures. Sanctions will be applied consistently and fairly, commensurate with the severity of the violation.
 
 ### 4.2 Violations and Sanctions
 
@@ -315,13 +318,5 @@ After implementing controls, reassess risk levels to determine residual risk.
 **Retention Period:** [TODO: 6 years from creation or last effective date]
 
 **Storage Location:** [TODO: Document management system location]
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 <!-- End of template -->

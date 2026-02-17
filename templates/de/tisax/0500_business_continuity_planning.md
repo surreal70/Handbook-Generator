@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0500
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Business Continuity Planning
+
+**Dokument-ID:** [FRAMEWORK]-0500
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -15,7 +26,7 @@ Dieses Dokument beschreibt die Business Continuity Planung gemäß TISAX-Anforde
 
 ## Geltungsbereich
 
-Dieses Dokument gilt für alle geschäftskritischen Prozesse von {{ source.organization_name }}.
+Dieses Dokument gilt für alle geschäftskritischen Prozesse von [TODO].
 
 ## Business Impact Analysis
 
@@ -36,14 +47,14 @@ Dieses Dokument gilt für alle geschäftskritischen Prozesse von {{ source.organ
 ### Recovery-Ziele
 
 **RTO (Recovery Time Objective):**
-- Kritische Prozesse: {{ source.critical_rto }} Stunden
-- Wichtige Prozesse: {{ source.important_rto }} Stunden
-- Standard-Prozesse: {{ source.standard_rto }} Tage
+- Kritische Prozesse: [TODO] Stunden
+- Wichtige Prozesse: [TODO] Stunden
+- Standard-Prozesse: [TODO] Tage
 
 **RPO (Recovery Point Objective):**
-- Kritische Daten: {{ source.critical_rpo }} Stunden
-- Wichtige Daten: {{ source.important_rpo }} Stunden
-- Standard-Daten: {{ source.standard_rpo }} Tage
+- Kritische Daten: [TODO] Stunden
+- Wichtige Daten: [TODO] Stunden
+- Standard-Daten: [TODO] Tage
 
 ## Business Continuity Strategie
 
@@ -179,18 +190,9 @@ Dieses Dokument adressiert:
 
 ## Kennzahlen
 
-{{ source.organization_name }} misst:
+[TODO] misst:
 - Anzahl durchgeführter Tests
 - Erfolgsrate der Tests
 - Aktualität der Pläne
 - Schulungsteilnahme
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

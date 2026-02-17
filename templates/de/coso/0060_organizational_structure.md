@@ -1,51 +1,53 @@
----
+
 Document-ID: coso-0060
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Organisationsstruktur und Verantwortlichkeiten
 
+**Dokument-ID:** [FRAMEWORK]-0060
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt die Organisationsstruktur und Verantwortlichkeiten von {{ source.organization_name }} (COSO Prinzip 3).
+Dieses Dokument beschreibt die Organisationsstruktur und Verantwortlichkeiten von [TODO] (COSO Prinzip 3).
 
 ## Organisationsstruktur
 
-{{ source.org_structure_diagram }}
+[TODO]
 
 ## Berichtslinien
 
-{{ source.reporting_structure }}
+[TODO]
 
 ## Verantwortlichkeiten
 
 ### Geschäftsführung
-{{ source.executive_responsibilities }}
+[TODO]
 
 ### Funktionsleiter
-{{ source.function_responsibilities }}
+[TODO]
 
 ### Mitarbeiter
-{{ source.employee_responsibilities }}
+[TODO]
 
 ## Delegation von Befugnissen
 
-{{ source.authority_delegation_matrix }}
+[TODO]
 
 ## Referenzen
 
-- Organisationshandbuch {{ source.organization_name }}
+- Organisationshandbuch [TODO]
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

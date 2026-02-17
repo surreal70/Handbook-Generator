@@ -1,11 +1,16 @@
 # Managementbewertung
 
-**Dokument-ID:** 0130  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0130
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -28,7 +33,7 @@ Reference: ISO 9001:2015, Clause 9.3
 
 ## Zweck
 
-Dieses Dokument definiert den Managementbewertungsprozess für {{ meta.organization }} gemäß ISO 9001:2015 Abschnitt 9.3. Die Managementbewertung stellt sicher, dass das QMS geeignet, angemessen, wirksam und mit der strategischen Ausrichtung der Organisation abgestimmt bleibt.
+Dieses Dokument definiert den Managementbewertungsprozess für {{ meta-organisation.name }} gemäß ISO 9001:2015 Abschnitt 9.3. Die Managementbewertung stellt sicher, dass das QMS geeignet, angemessen, wirksam und mit der strategischen Ausrichtung der Organisation abgestimmt bleibt.
 
 ## Planung der Managementbewertung
 
@@ -401,8 +406,6 @@ Managementbewertung integriert mit:
 | [TODO: Jahr] | [TODO: Anzahl] | [TODO: Zusammenfassung] |
 | [TODO: Jahr] | [TODO: Anzahl] | [TODO: Zusammenfassung] |
 
----
-
 **Nächste Schritte:**
 1. Managementbewertungsplan für das laufende Jahr definieren
 2. Alle Eingabedatenquellen und verantwortliche Personen identifizieren
@@ -411,10 +414,3 @@ Managementbewertung integriert mit:
 5. Maßnahmenverfolgungssystem implementieren
 6. Managementbewertungsprozess überprüfen und verbessern
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

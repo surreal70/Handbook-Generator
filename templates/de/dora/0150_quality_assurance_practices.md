@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0150
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Quality Assurance Praktiken
+
+**Dokument-ID:** [FRAMEWORK]-0150
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -23,15 +34,15 @@ Beschreibung der QA-Praktiken zur Reduzierung der Change Failure Rate.
 
 ### Testing-Pyramide
 
-- **Unit Tests**: {{ source.unit_test_coverage }}
-- **Integration Tests**: {{ source.integration_test_coverage }}
-- **End-to-End Tests**: {{ source.e2e_test_coverage }}
+- **Unit Tests**: [TODO]
+- **Integration Tests**: [TODO]
+- **End-to-End Tests**: [TODO]
 
 ### Code-Review
 
-- **Review-Prozess**: {{ source.code_review_process }}
-- **Review-Coverage**: {{ source.code_review_coverage }}
-- **Review-Turnaround**: {{ source.review_turnaround_time }}
+- **Review-Prozess**: [TODO]
+- **Review-Coverage**: [TODO]
+- **Review-Turnaround**: [TODO]
 
 ## Testing-Strategien
 
@@ -49,12 +60,3 @@ Beschreibung der QA-Praktiken zur Reduzierung der Change Failure Rate.
 
 <!-- Hinweis: Umfassende QA reduziert CFR signifikant -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

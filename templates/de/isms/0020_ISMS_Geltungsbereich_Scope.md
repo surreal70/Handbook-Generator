@@ -1,5 +1,19 @@
 # ISMS-Geltungsbereich (Scope)
 
+**Dokument-ID:** 0020
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 The ISMS scope defines the boundaries of your information security management 
@@ -10,28 +24,16 @@ scale, and complexity of your organization.
 ISO 27001:2022 Reference: Clause 4.3 - Determining the scope of the ISMS
 -->
 
-**Dokument-ID:** 0020  
-**Dokumenttyp:** ISMS-Grundlagendokument  
-**Standard-Referenz:** ISO/IEC 27001:2022 Clause 4.3  
-**Owner:** {{ meta.ciso.name }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
-
----
-
 ## 1. Scope-Definition
 
-Der Geltungsbereich des Information Security Management Systems (ISMS) der **{{ meta.organization.name }}** umfasst:
+Der Geltungsbereich des Information Security Management Systems (ISMS) der **{{ meta-organisation.name }}** umfasst:
 
 ### 1.1 Organisation
-- **Organisationsname:** {{ meta.organization.name }}
-- **Rechtsform:** {{ meta.organization.legal_form }}
-- **Hauptsitz:** {{ meta.organization.address }}
-- **Anzahl Mitarbeiter:** {{ meta.organization.employee_count }}
-- **Branche:** {{ meta.organization.industry }}
+- **Organisationsname:** {{ meta-organisation.name }}
+- **Rechtsform:** [TODO]
+- **Hauptsitz:** {{ meta-organisation.address }}
+- **Anzahl Mitarbeiter:** [TODO]
+- **Branche:** [TODO]
 
 ### 1.2 Standorte
 Das ISMS gilt für folgende Standorte:
@@ -176,7 +178,7 @@ Das folgende Diagramm visualisiert den ISMS-Geltungsbereich:
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                    ISMS Scope - {{ meta.organization.name }}     │
+│                    ISMS Scope - {{ meta-organisation.name }}     │
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                  │
 │  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐         │
@@ -255,19 +257,10 @@ Der ISMS-Scope wird regelmäßig überprüft:
 - **ISO/IEC 27001:2022** - Clause 4.3: Determining the scope of the ISMS
 - **ISO/IEC 27002:2022** - Information security controls
 
----
-
 **Genehmigt durch:**  
 {{ meta.ciso.name }}, CISO  
 {{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+Datum: {{ meta-handbook.modifydate }}
 
-**Nächster Review:** {{ meta.document.next_review }}
+**Nächster Review:** {{ meta-handbook.next_review }}
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

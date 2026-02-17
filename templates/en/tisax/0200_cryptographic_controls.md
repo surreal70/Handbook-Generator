@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0200
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Cryptographic Controls
+
+**Document-ID:** [FRAMEWORK]-0200
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -15,7 +26,7 @@ This document defines requirements for the use of cryptographic controls accordi
 
 ## Scope
 
-This document applies to all cryptographic measures at {{ source.organization_name }}.
+This document applies to all cryptographic measures at [TODO].
 
 ## Cryptography Policy
 
@@ -193,18 +204,10 @@ Encryption required for:
 
 ## Metrics
 
-{{ source.organization_name }} measures:
+[TODO] measures:
 - Percentage of encrypted data (Target: 100% for confidential data)
 - Number of active keys
 - Number of key rotations
 - Number of security incidents related to cryptography
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

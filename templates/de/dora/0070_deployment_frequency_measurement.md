@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0110
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Deployment Frequency Messung
+
+**Dokument-ID:** [FRAMEWORK]-0070
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -30,9 +41,9 @@ Dieses Dokument beschreibt die detaillierte Messmethodik für Deployment Frequen
 - Zeitstempel dokumentieren
 
 **Datenquellen**:
-- **CI/CD**: {{ source.cicd_system }}
-- **Deployment-Log**: {{ source.deployment_log_location }}
-- **Monitoring**: {{ source.monitoring_dashboard }}
+- **CI/CD**: [TODO]
+- **Deployment-Log**: [TODO]
+- **Monitoring**: [TODO]
 
 ### Deployment-Definition
 
@@ -60,9 +71,9 @@ Für jedes Deployment:
 
 ### Datenqualität
 
-- **Vollständigkeit**: {{ source.data_completeness }}
-- **Genauigkeit**: {{ source.data_accuracy }}
-- **Aktualität**: {{ source.data_timeliness }}
+- **Vollständigkeit**: [TODO]
+- **Genauigkeit**: [TODO]
+- **Aktualität**: [TODO]
 
 ## Berechnung
 
@@ -81,16 +92,16 @@ Deployment Frequency = Anzahl erfolgreicher Deployments / Zeitperiode
 ### Beispielberechnung
 
 **Service A**:
-- Deployments in 30 Tagen: {{ source.service_a_deployments }}
-- Deployment Frequency: {{ source.service_a_frequency }}
+- Deployments in 30 Tagen: [TODO]
+- Deployment Frequency: [TODO]
 
 ## Reporting
 
 ### Dashboards
 
-- **Real-time Dashboard**: {{ source.realtime_dashboard_url }}
-- **Wöchentlicher Report**: {{ source.weekly_report_location }}
-- **Monatlicher Report**: {{ source.monthly_report_location }}
+- **Real-time Dashboard**: [TODO]
+- **Wöchentlicher Report**: [TODO]
+- **Monatlicher Report**: [TODO]
 
 ### Visualisierungen
 
@@ -100,12 +111,3 @@ Deployment Frequency = Anzahl erfolgreicher Deployments / Zeitperiode
 
 <!-- Hinweis: Automatisierung der Datenerfassung ist kritisch -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

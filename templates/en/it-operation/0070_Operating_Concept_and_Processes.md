@@ -1,14 +1,26 @@
 # Operating Concept and Processes
 
+**Document-ID:** [FRAMEWORK]-0070
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Overview
 
 This document describes the operating concept and operational processes for the IT service. It defines operating models, process flows according to ITIL standards, interfaces to other processes, and escalation paths.
 
-**Service:** {{ meta.service_name }}  
-**Responsible:** {{ meta.it_operations_manager.name }}  
-**Version:** {{ meta.document.version }}
-
----
+**Service:** {{ meta-handbook.service_name }}  
+**Responsible:** {{ meta-organisation-roles.role_it_operations_manager.name }}  
+**Version:** {{ meta-handbook.revision }}
 
 ## Operating Model
 
@@ -34,16 +46,14 @@ This document describes the operating concept and operational processes for the 
 ### Support Model
 
 **Support Tiers:**
-- **Level 1 (Service Desk):** {{ meta.service_desk_lead.name }} - {{ meta.service_desk_lead.email }}
-- **Level 2 (IT Operations):** {{ meta.it_operations_manager.name }} - {{ meta.it_operations_manager.email }}
+- **Level 1 (Service Desk):** {{ meta-organisation-roles.role_service_desk_lead.name }} - {{ meta-organisation-roles.role_service_desk_lead.email }}
+- **Level 2 (IT Operations):** {{ meta-organisation-roles.role_it_operations_manager.name }} - {{ meta-organisation-roles.role_it_operations_manager.email }}
 - **Level 3 (Specialist/Vendor):** [TODO: Specialist contact]
 
 **On-Call:**
 - **On-Call Rotation:** [TODO: Describe rotation schedule]
 - **Availability:** [TODO: Phone/Pager number]
 - **Response Time:** [TODO: e.g., 15 minutes]
-
----
 
 ## ITIL Processes
 
@@ -57,7 +67,7 @@ This document describes the operating concept and operational processes for the 
 - Demand Management
 - Business Relationship Management
 
-**Responsible:** {{ meta.cio.name }}
+**Responsible:** {{ meta-organisation-roles.role_cio.name }}
 
 ### Service Design
 
@@ -72,7 +82,7 @@ This document describes the operating concept and operational processes for the 
 - Information Security Management
 - Supplier Management
 
-**Responsible:** {{ meta.it_operations_manager.name }}
+**Responsible:** {{ meta-organisation-roles.role_it_operations_manager.name }}
 
 ### Service Transition
 
@@ -85,7 +95,7 @@ This document describes the operating concept and operational processes for the 
 - Knowledge Management
 - Configuration Management (see Chapter 0090)
 
-**Responsible:** {{ meta.it_operations_manager.name }}
+**Responsible:** {{ meta-organisation-roles.role_it_operations_manager.name }}
 
 ### Service Operation
 
@@ -98,7 +108,7 @@ This document describes the operating concept and operational processes for the 
 - Request Fulfillment
 - Access Management (see Chapter 0100)
 
-**Responsible:** {{ meta.service_desk_lead.name }} (Level 1), {{ meta.it_operations_manager.name }} (Level 2)
+**Responsible:** {{ meta-organisation-roles.role_service_desk_lead.name }} (Level 1), {{ meta-organisation-roles.role_it_operations_manager.name }} (Level 2)
 
 ### Continual Service Improvement (CSI)
 
@@ -110,9 +120,7 @@ This document describes the operating concept and operational processes for the 
 - Process Improvement
 - Root Cause Analysis
 
-**Responsible:** {{ meta.cio.name }}
-
----
+**Responsible:** {{ meta-organisation-roles.role_cio.name }}
 
 ## Process Interfaces
 
@@ -126,7 +134,7 @@ This document describes the operating concept and operational processes for the 
 | **Configuration Management** | CI Updates → CMDB | Configuration Items | CMDB Manager |
 | **Capacity Management** | Capacity data → Planning | Performance Metrics | Capacity Manager |
 | **Availability Management** | Availability data → Reporting | Availability Reports | Availability Manager |
-| **Security Management** | Security Events → Operations | Security Incidents, Patches | {{ meta.ciso.name }} |
+| **Security Management** | Security Events → Operations | Security Incidents, Patches | {{ meta-organisation-roles.role_ciso.name }} |
 | **Backup Management** | Backup Status → Operations | Backup Reports, Restore Requests | Backup Administrator |
 
 ### Interfaces to Business Processes
@@ -134,11 +142,9 @@ This document describes the operating concept and operational processes for the 
 | Business Process | Interface | Information Flow | Contact Person |
 |---|---|---|---|
 | **Procurement** | Hardware/Software Requirements | Orders, Deliveries | Procurement |
-| **Finance** | Budget and Costs | Cost Reports, Budget Requests | {{ meta.cfo.name }} |
+| **Finance** | Budget and Costs | Cost Reports, Budget Requests | {{ meta-organisation-roles.role_cfo.name }} |
 | **Compliance** | Audit Requirements | Audit Reports, Evidence | Compliance Officer |
 | **HR** | Employee Onboarding/Offboarding | Access Management | HR Department |
-
----
 
 ## Escalation Paths
 
@@ -147,18 +153,18 @@ This document describes the operating concept and operational processes for the 
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │ Level 1: Service Desk                                        │
-│ Contact: {{ meta.service_desk_lead.name }}                   │
-│ Email: {{ meta.service_desk_lead.email }}                    │
-│ Phone: {{ meta.service_desk_lead.phone }}                    │
+│ Contact: {{ meta-organisation-roles.role_service_desk_lead.name }}                   │
+│ Email: {{ meta-organisation-roles.role_service_desk_lead.email }}                    │
+│ Phone: {{ meta-organisation-roles.role_service_desk_lead.phone }}                    │
 │ Escalate after: 30 minutes (P1), 2 hours (P2)               │
 └────────────────────┬────────────────────────────────────────┘
                      │
                      ▼
 ┌─────────────────────────────────────────────────────────────┐
 │ Level 2: IT Operations                                       │
-│ Contact: {{ meta.it_operations_manager.name }}               │
-│ Email: {{ meta.it_operations_manager.email }}                │
-│ Phone: {{ meta.it_operations_manager.phone }}                │
+│ Contact: {{ meta-organisation-roles.role_it_operations_manager.name }}               │
+│ Email: {{ meta-organisation-roles.role_it_operations_manager.email }}                │
+│ Phone: {{ meta-organisation-roles.role_it_operations_manager.phone }}                │
 │ Escalate after: 1 hour (P1), 4 hours (P2)                   │
 └────────────────────┬────────────────────────────────────────┘
                      │
@@ -177,24 +183,24 @@ This document describes the operating concept and operational processes for the 
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │ Level 1: IT Operations Manager                               │
-│ Contact: {{ meta.it_operations_manager.name }}               │
-│ Email: {{ meta.it_operations_manager.email }}                │
+│ Contact: {{ meta-organisation-roles.role_it_operations_manager.name }}               │
+│ Email: {{ meta-organisation-roles.role_it_operations_manager.email }}                │
 │ Escalate for: Critical Incidents (P1), SLA Violation        │
 └────────────────────┬────────────────────────────────────────┘
                      │
                      ▼
 ┌─────────────────────────────────────────────────────────────┐
 │ Level 2: Chief Information Officer (CIO)                     │
-│ Contact: {{ meta.cio.name }}                                 │
-│ Email: {{ meta.cio.email }}                                  │
+│ Contact: {{ meta-organisation-roles.role_cio.name }}                                 │
+│ Email: {{ meta-organisation-roles.role_cio.email }}                                  │
 │ Escalate for: Major Incidents, Business Impact              │
 └────────────────────┬────────────────────────────────────────┘
                      │
                      ▼
 ┌─────────────────────────────────────────────────────────────┐
 │ Level 3: Chief Executive Officer (CEO)                       │
-│ Contact: {{ meta.ceo.name }}                                 │
-│ Email: {{ meta.ceo.email }}                                  │
+│ Contact: {{ meta-organisation-roles.role_ceo.name }}                                 │
+│ Email: {{ meta-organisation-roles.role_ceo.email }}                                  │
 │ Escalate for: Business-critical outages                     │
 └─────────────────────────────────────────────────────────────┘
 ```
@@ -207,8 +213,6 @@ This document describes the operating concept and operational processes for the 
 | **P2 (High)** | After 2h (L1→L2), 4h (L2→L3) | After 4 hours to IT Ops Manager | 4 hours |
 | **P3 (Medium)** | After 8h (L1→L2), 1 day (L2→L3) | After 1 day to IT Ops Manager | 1 day |
 | **P4 (Low)** | After 2 days (L1→L2) | No automatic escalation | 2 days |
-
----
 
 ## Operational Process Overview
 
@@ -252,8 +256,6 @@ This document describes the operating concept and operational processes for the 
 - [ ] Compliance check
 - [ ] Vendor review
 
----
-
 ## Process Metrics and KPIs
 
 ### Operating Metrics
@@ -276,8 +278,6 @@ This document describes the operating concept and operational processes for the 
 | **Change Lead Time** | ≤ 5 days | Per Change | Change Manager |
 | **Problem Resolution Time** | ≤ 30 days | Per Problem | Problem Manager |
 | **SLA Compliance** | ≥ 98% | Monthly | Service Manager |
-
----
 
 ## Continuous Improvement
 
@@ -306,8 +306,6 @@ This document describes the operating concept and operational processes for the 
 | CSI-001 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 | CSI-002 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
----
-
 ## Documentation and Knowledge Management
 
 ### Documentation Repository
@@ -326,8 +324,6 @@ This document describes the operating concept and operational processes for the 
 - **Knowledge Sharing:** Team meetings and workshops
 - **Lessons Learned:** Post-incident reviews
 
----
-
 ## Compliance and Governance
 
 ### Relevant Standards
@@ -345,28 +341,17 @@ This document describes the operating concept and operational processes for the 
 - Incident management reports
 - Compliance evidence
 
----
-
 ## Contacts
 
 **Operations Responsible:**
-- **IT Operations Manager:** {{ meta.it_operations_manager.name }} - {{ meta.it_operations_manager.email }}
-- **Service Desk Lead:** {{ meta.service_desk_lead.name }} - {{ meta.service_desk_lead.email }}
-- **CIO:** {{ meta.cio.name }} - {{ meta.cio.email }}
+- **IT Operations Manager:** {{ meta-organisation-roles.role_it_operations_manager.name }} - {{ meta-organisation-roles.role_it_operations_manager.email }}
+- **Service Desk Lead:** {{ meta-organisation-roles.role_service_desk_lead.name }} - {{ meta-organisation-roles.role_service_desk_lead.email }}
+- **CIO:** {{ meta-organisation-roles.role_cio.name }} - {{ meta-organisation-roles.role_cio.email }}
 
 **Additional Contacts:** See Chapter 0270 (Contacts, Escalation and Vendors)
 
----
+**Document Owner:** {{ meta-handbook.owner }}  
+**Approved by:** {{ meta-handbook.approver }}  
+**Version:** {{ meta-handbook.revision }}  
+**Organization:** {{ meta-organisation.name }}
 
-**Document Owner:** {{ meta.document.owner }}  
-**Approved by:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Organization:** {{ meta.organization.name }}
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

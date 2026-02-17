@@ -1,5 +1,19 @@
 # Policy: Ausnahmen und Risk Waivers
 
+**Dokument-ID:** 0640
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This policy establishes the exception and risk waiver process for security policies.
@@ -9,27 +23,15 @@ Customize based on your organization's risk appetite and governance structure.
 ISO 27001:2022 Annex A Reference: A.5.1, A.6.1.2
 -->
 
-**Dokument-ID:** 0640  
-**Dokumenttyp:** Policy (abstrakt)  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.5.1, A.6.1.2 (inkl. Amendment 1:2024)  
-**Owner:** {{ meta.ciso.name }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
-
----
-
 ## 1. Zweck
 
-Diese Policy definiert den Prozess für Ausnahmen (Exceptions) und Risk Waivers von Sicherheitsrichtlinien der **{{ meta.organization.name }}**. Sie stellt sicher, dass Ausnahmen angemessen begründet, genehmigt, dokumentiert und überwacht werden.
+Diese Policy definiert den Prozess für Ausnahmen (Exceptions) und Risk Waivers von Sicherheitsrichtlinien der **{{ meta-organisation.name }}**. Sie stellt sicher, dass Ausnahmen angemessen begründet, genehmigt, dokumentiert und überwacht werden.
 
 ## 2. Geltungsbereich
 
 Diese Policy gilt für:
 
-- **Organisationseinheiten:** Alle Abteilungen und Standorte der {{ meta.organization.name }}
+- **Organisationseinheiten:** Alle Abteilungen und Standorte der {{ meta-organisation.name }}
 - **Policies:** Alle Sicherheitsrichtlinien und -standards
 - **Systeme:** Alle IT-Systeme und Anwendungen
 - **Prozesse:** Alle sicherheitsrelevanten Prozesse
@@ -173,18 +175,9 @@ Diese Policy selbst unterliegt keinem Ausnahmenprozess. Änderungen an dieser Po
 - **NIST SP 800-37** - Risk Management Framework
 - **COBIT 2019** - APO12 (Managed Risk)
 
----
-
 **Genehmigt durch:**  
 {{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+Datum: {{ meta-handbook.modifydate }}
 
-**Nächster Review:** {{ meta.document.next_review }} (jährlich oder anlassbezogen)
+**Nächster Review:** {{ meta-handbook.next_review }} (jährlich oder anlassbezogen)
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

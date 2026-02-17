@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0400
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Change Failure Rate Overview
+
+**Document-ID:** [FRAMEWORK]-0090
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -25,9 +36,9 @@ Change Failure Rate measures the percentage of deployments that result in servic
 
 ### Organization Context
 
-- **Organization**: {{ source.organization_name }}
-- **Current CFR**: {{ source.current_cfr }}
-- **Performance Level**: {{ source.cfr_level }}
+- **Organization**: [TODO]
+- **Current CFR**: [TODO]
+- **Performance Level**: [TODO]
 
 ## Measurement Methodology
 
@@ -48,24 +59,16 @@ CFR = (Number of failed deployments / Total deployments) * 100%
 
 ### Overall Organization
 
-- **CFR**: {{ source.org_cfr }}
-- **Performance Level**: {{ source.cfr_performance_level }}
+- **CFR**: [TODO]
+- **Performance Level**: [TODO]
 
 ### By Team
 
 | Team | CFR | Performance Level |
 |------|-----|-------------------|
-| {{ source.team_1_name }} | {{ source.team_1_cfr }} | {{ source.team_1_cfr_level }} |
-| {{ source.team_2_name }} | {{ source.team_2_cfr }} | {{ source.team_2_cfr_level }} |
+| [TODO] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [TODO] |
 
 <!-- Note: CFR is indicator of code quality and testing -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

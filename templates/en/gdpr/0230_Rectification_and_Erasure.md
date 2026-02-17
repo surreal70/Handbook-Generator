@@ -1,11 +1,16 @@
 # Rectification and Erasure
 
-**Document-ID:** 0230  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0230
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -23,7 +28,7 @@ Reference: GDPR Art. 16 (Right to rectification), Art. 17 (Right to erasure)
 
 ## Purpose
 
-This document describes the implementation of the right to rectification and erasure in {{ meta.organization }}. Data subjects have the right to rectification of inaccurate data and erasure of data no longer necessary.
+This document describes the implementation of the right to rectification and erasure in {{ meta-organisation.name }}. Data subjects have the right to rectification of inaccurate data and erasure of data no longer necessary.
 
 ## Right to Rectification (Art. 16)
 
@@ -200,8 +205,6 @@ This document describes the implementation of the right to rectification and era
 | Missing Notification | Recipients not informed | Notification process |
 | Unjustified Refusal | Refusal without review | Careful review |
 
----
-
 **Next Steps:**
 1. Establish processes for rectification and erasure requests
 2. Implement erasure procedures for all systems
@@ -209,10 +212,3 @@ This document describes the implementation of the right to rectification and era
 4. Train employees on rectification and erasure rights
 5. Document all requests in register
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

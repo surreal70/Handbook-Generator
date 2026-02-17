@@ -1,17 +1,28 @@
----
+
 Document-ID: coso-0220
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Zusätzliche Technologiekontrollen
 
+**Dokument-ID:** [FRAMEWORK]-0220
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt zusätzliche Technologiekontrollen und IT-Sicherheitsmaßnahmen bei {{ source.organization_name }} gemäß COSO Prinzip 11.
+Dieses Dokument beschreibt zusätzliche Technologiekontrollen und IT-Sicherheitsmaßnahmen bei [TODO] gemäß COSO Prinzip 11.
 
 ## Geltungsbereich
 
@@ -24,131 +35,131 @@ Dieses Dokument beschreibt zusätzliche Technologiekontrollen und IT-Sicherheits
 
 ### Zugriffsverwaltung
 
-**Benutzeridentifikation und Authentifizierung**: {{ source.user_authentication }}
-**Berechtigungsverwaltung**: {{ source.authorization_management }}
-**Privilegierte Zugriffe**: {{ source.privileged_access_management }}
+**Benutzeridentifikation und Authentifizierung**: [TODO]
+**Berechtigungsverwaltung**: [TODO]
+**Privilegierte Zugriffe**: [TODO]
 
 ### Änderungsmanagement
 
-**Änderungsanträge**: {{ source.change_requests }}
-**Änderungsgenehmigung**: {{ source.change_approval }}
-**Änderungstests**: {{ source.change_testing }}
-**Implementierung**: {{ source.change_implementation }}
+**Änderungsanträge**: [TODO]
+**Änderungsgenehmigung**: [TODO]
+**Änderungstests**: [TODO]
+**Implementierung**: [TODO]
 
 ### Systemverfügbarkeit
 
-**Backup und Recovery**: {{ source.backup_recovery }}
-**Disaster Recovery**: {{ source.disaster_recovery }}
-**Business Continuity**: {{ source.business_continuity }}
+**Backup und Recovery**: [TODO]
+**Disaster Recovery**: [TODO]
+**Business Continuity**: [TODO]
 
 ## Anwendungskontrollen
 
 ### Eingabekontrollen
 
-**Datenvalidierung**: {{ source.input_validation }}
-**Vollständigkeitsprüfungen**: {{ source.completeness_checks }}
-**Berechtigungsprüfungen**: {{ source.authorization_checks }}
+**Datenvalidierung**: [TODO]
+**Vollständigkeitsprüfungen**: [TODO]
+**Berechtigungsprüfungen**: [TODO]
 
 ### Verarbeitungskontrollen
 
-**Berechnungskontrollen**: {{ source.calculation_controls }}
-**Abstimmungskontrollen**: {{ source.reconciliation_controls }}
-**Fehlerbehandlung**: {{ source.error_handling }}
+**Berechnungskontrollen**: [TODO]
+**Abstimmungskontrollen**: [TODO]
+**Fehlerbehandlung**: [TODO]
 
 ### Ausgabekontrollen
 
-**Berichtsvalidierung**: {{ source.report_validation }}
-**Verteilungskontrollen**: {{ source.distribution_controls }}
-**Archivierung**: {{ source.archiving_controls }}
+**Berichtsvalidierung**: [TODO]
+**Verteilungskontrollen**: [TODO]
+**Archivierung**: [TODO]
 
 ## Cloud-Sicherheitskontrollen
 
 ### Cloud-Governance
 
-**Cloud-Strategie**: {{ source.cloud_strategy }}
-**Cloud-Richtlinien**: {{ source.cloud_policies }}
-**Anbieterauswahl**: {{ source.vendor_selection }}
+**Cloud-Strategie**: [TODO]
+**Cloud-Richtlinien**: [TODO]
+**Anbieterauswahl**: [TODO]
 
 ### Cloud-Sicherheit
 
-**Datenverschlüsselung**: {{ source.cloud_encryption }}
-**Identitäts- und Zugriffsverwaltung**: {{ source.cloud_iam }}
-**Netzwerksicherheit**: {{ source.cloud_network_security }}
+**Datenverschlüsselung**: [TODO]
+**Identitäts- und Zugriffsverwaltung**: [TODO]
+**Netzwerksicherheit**: [TODO]
 
 ### Cloud-Compliance
 
-**Compliance-Anforderungen**: {{ source.cloud_compliance }}
-**Audit-Rechte**: {{ source.cloud_audit_rights }}
-**Datenresidenz**: {{ source.data_residency }}
+**Compliance-Anforderungen**: [TODO]
+**Audit-Rechte**: [TODO]
+**Datenresidenz**: [TODO]
 
 ## Datensicherheitskontrollen
 
 ### Datenschutz
 
-**Datenschutzrichtlinie**: {{ source.data_protection_policy }}
-**Personenbezogene Daten**: {{ source.personal_data_handling }}
-**Datenschutz-Folgenabschätzung**: {{ source.privacy_impact_assessment }}
+**Datenschutzrichtlinie**: [TODO]
+**Personenbezogene Daten**: [TODO]
+**Datenschutz-Folgenabschätzung**: [TODO]
 
 ### Datenverschlüsselung
 
-**Verschlüsselung im Ruhezustand**: {{ source.encryption_at_rest }}
-**Verschlüsselung bei Übertragung**: {{ source.encryption_in_transit }}
-**Schlüsselverwaltung**: {{ source.key_management }}
+**Verschlüsselung im Ruhezustand**: [TODO]
+**Verschlüsselung bei Übertragung**: [TODO]
+**Schlüsselverwaltung**: [TODO]
 
 ### Datenklassifizierung
 
-**Klassifizierungsschema**: {{ source.data_classification_scheme }}
-**Handhabungsanforderungen**: {{ source.handling_requirements }}
-**Aufbewahrungsfristen**: {{ source.retention_periods }}
+**Klassifizierungsschema**: [TODO]
+**Handhabungsanforderungen**: [TODO]
+**Aufbewahrungsfristen**: [TODO]
 
 ## Cybersecurity-Kontrollen
 
 ### Bedrohungserkennung
 
-**Security Information and Event Management (SIEM)**: {{ source.siem_system }}
-**Intrusion Detection/Prevention**: {{ source.ids_ips }}
-**Anomalieerkennung**: {{ source.anomaly_detection }}
+**Security Information and Event Management (SIEM)**: [TODO]
+**Intrusion Detection/Prevention**: [TODO]
+**Anomalieerkennung**: [TODO]
 
 ### Schwachstellenmanagement
 
-**Vulnerability Scanning**: {{ source.vulnerability_scanning }}
-**Patch Management**: {{ source.patch_management }}
-**Penetrationstests**: {{ source.penetration_testing }}
+**Vulnerability Scanning**: [TODO]
+**Patch Management**: [TODO]
+**Penetrationstests**: [TODO]
 
 ### Incident Response
 
-**Incident Response Plan**: {{ source.incident_response_plan }}
-**Security Operations Center (SOC)**: {{ source.soc_operations }}
-**Forensik**: {{ source.digital_forensics }}
+**Incident Response Plan**: [TODO]
+**Security Operations Center (SOC)**: [TODO]
+**Forensik**: [TODO]
 
 ## Technologie-Risikobewertung
 
 ### Risikobewertungsprozess
 
-{{ source.technology_risk_assessment }}
+[TODO]
 
 ### Risikominderung
 
-{{ source.technology_risk_mitigation }}
+[TODO]
 
 ## Überwachung und Berichterstattung
 
 ### Technologie-KPIs
 
-{{ source.technology_kpis }}
+[TODO]
 
 ### Berichterstattung
 
-**An IT-Management**: {{ source.it_management_reporting }}
-**An Geschäftsführung**: {{ source.executive_reporting }}
-**An Board**: {{ source.board_reporting }}
+**An IT-Management**: [TODO]
+**An Geschäftsführung**: [TODO]
+**An Board**: [TODO]
 
 ## Rollen und Verantwortlichkeiten
 
-**Chief Information Officer (CIO)**: {{ source.cio_responsibilities }}
-**Chief Information Security Officer (CISO)**: {{ source.ciso_responsibilities }}
-**IT-Betrieb**: {{ source.it_operations_responsibilities }}
-**Anwendungseigentümer**: {{ source.application_owner_responsibilities }}
+**Chief Information Officer (CIO)**: [TODO]
+**Chief Information Security Officer (CISO)**: [TODO]
+**IT-Betrieb**: [TODO]
+**Anwendungseigentümer**: [TODO]
 
 ## Referenzen
 
@@ -159,12 +170,3 @@ Dieses Dokument beschreibt zusätzliche Technologiekontrollen und IT-Sicherheits
 - COBIT Framework
 - NIST Cybersecurity Framework
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

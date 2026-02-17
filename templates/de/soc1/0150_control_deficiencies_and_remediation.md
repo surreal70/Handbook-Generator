@@ -1,13 +1,24 @@
----
+
 Document-ID: soc1-0420
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Kontrollmängel und Behebung
+
+**Dokument-ID:** [FRAMEWORK]-0150
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -27,120 +38,120 @@ Dieses Dokument beschreibt den Prozess zur Identifikation, Bewertung und Behebun
 **Definition**: Eine Schwäche im Design oder Betrieb einer Kontrolle, die die Fähigkeit des Managements oder der Mitarbeiter beeinträchtigt, Fehler oder Unregelmäßigkeiten rechtzeitig zu verhindern oder zu erkennen.
 
 **Beispiele**:
-{{ source.control_deficiency_examples }}
+[TODO]
 
 ### Signifikanter Mangel (Significant Deficiency)
 
 **Definition**: Ein Kontrollmangel oder eine Kombination von Kontrollmängeln, die weniger schwerwiegend als eine wesentliche Schwäche sind, aber wichtig genug, um die Aufmerksamkeit der Verantwortlichen für die Überwachung der Finanzberichterstattung zu verdienen.
 
 **Kriterien**:
-{{ source.significant_deficiency_criteria }}
+[TODO]
 
 ### Wesentliche Schwäche (Material Weakness)
 
 **Definition**: Ein Kontrollmangel oder eine Kombination von Kontrollmängeln, die dazu führen, dass eine mehr als entfernte Wahrscheinlichkeit besteht, dass ein wesentlicher Fehler in den Finanzberichten nicht rechtzeitig verhindert oder erkannt wird.
 
 **Kriterien**:
-{{ source.material_weakness_criteria }}
+[TODO]
 
 ## Identifikation von Kontrollmängeln
 
 ### Identifikationsquellen
 
-**Interne Audits**: {{ source.internal_audit_findings }}
-**Management-Reviews**: {{ source.management_review_findings }}
-**Externe Audits**: {{ source.external_audit_findings }}
-**Incident-Berichte**: {{ source.incident_findings }}
-**Selbstbewertungen**: {{ source.self_assessment_findings }}
+**Interne Audits**: [TODO]
+**Management-Reviews**: [TODO]
+**Externe Audits**: [TODO]
+**Incident-Berichte**: [TODO]
+**Selbstbewertungen**: [TODO]
 
 ### Dokumentation
 
-{{ source.deficiency_documentation }}
+[TODO]
 
 ## Bewertung des Schweregrads
 
 ### Bewertungskriterien
 
-**Wahrscheinlichkeit**: {{ source.deficiency_likelihood }}
-**Auswirkung**: {{ source.deficiency_impact }}
-**Kompensatorische Kontrollen**: {{ source.compensating_controls_assessment }}
+**Wahrscheinlichkeit**: [TODO]
+**Auswirkung**: [TODO]
+**Kompensatorische Kontrollen**: [TODO]
 
 ### Bewertungsmatrix
 
 | Mangel | Wahrscheinlichkeit | Auswirkung | Schweregrad | Klassifizierung |
 |--------|-------------------|------------|-------------|-----------------|
-| {{ source.deficiency_matrix_rows }} |
+| [TODO] |
 
 ### Eskalationskriterien
 
-{{ source.deficiency_escalation_criteria }}
+[TODO]
 
 ## Korrekturmaßnahmen
 
 ### Maßnahmenplanung
 
-**Verantwortlichkeiten**: {{ source.remediation_responsibilities }}
-**Zeitrahmen**: {{ source.remediation_timeline }}
-**Ressourcen**: {{ source.remediation_resources }}
+**Verantwortlichkeiten**: [TODO]
+**Zeitrahmen**: [TODO]
+**Ressourcen**: [TODO]
 
 ### Maßnahmenplan
 
 | Mangel-ID | Beschreibung | Korrekturmaßnahme | Verantwortlich | Fälligkeitsdatum | Status |
 |-----------|--------------|-------------------|----------------|------------------|--------|
-| {{ source.remediation_plan_rows }} |
+| [TODO] |
 
 ### Implementierung
 
-{{ source.remediation_implementation }}
+[TODO]
 
 ### Validierung
 
-{{ source.remediation_validation }}
+[TODO]
 
 ## Nachverfolgung
 
 ### Tracking-Mechanismus
 
-{{ source.deficiency_tracking }}
+[TODO]
 
 ### Status-Updates
 
-**Frequenz**: {{ source.status_update_frequency }}
-**Berichterstattung**: {{ source.status_reporting }}
+**Frequenz**: [TODO]
+**Berichterstattung**: [TODO]
 
 ### Abschluss
 
-{{ source.deficiency_closure }}
+[TODO]
 
 ## Berichterstattung
 
 ### Management-Berichterstattung
 
-**Berichte**: {{ source.management_deficiency_reports }}
-**Frequenz**: {{ source.management_reporting_frequency_deficiencies }}
+**Berichte**: [TODO]
+**Frequenz**: [TODO]
 
 ### Vorstandsberichterstattung
 
-{{ source.board_deficiency_reports }}
+[TODO]
 
 ### Externe Berichterstattung
 
-**Service Auditor**: {{ source.auditor_deficiency_reporting }}
-**Nutzerorganisationen**: {{ source.user_org_deficiency_communication }}
+**Service Auditor**: [TODO]
+**Nutzerorganisationen**: [TODO]
 
 ## Prävention
 
 ### Lessons Learned
 
-{{ source.deficiency_lessons_learned }}
+[TODO]
 
 ### Prozessverbesserungen
 
-{{ source.deficiency_process_improvements }}
+[TODO]
 
 ### Schulung
 
-{{ source.deficiency_prevention_training }}
+[TODO]
 
 ## Referenzen
 
@@ -150,12 +161,3 @@ Dieses Dokument beschreibt den Prozess zur Identifikation, Bewertung und Behebun
 
 <!-- Hinweise für Autoren: Dokumentieren Sie alle Kontrollmängel vollständig und zeitnah -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

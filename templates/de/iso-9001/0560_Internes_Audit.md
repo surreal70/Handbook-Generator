@@ -1,11 +1,16 @@
 # Internes Audit
 
-**Dokument-ID:** 0560  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0560
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -18,7 +23,7 @@ Referenz: ISO 9001:2015, Kapitel 9.2
 
 ## Zweck
 
-Dieses Dokument definiert das interne Auditprogramm von {{ meta.organization }}, um sicherzustellen, dass das QMS konform, wirksam implementiert und aufrechterhalten ist.
+Dieses Dokument definiert das interne Auditprogramm von {{ meta-organisation.name }}, um sicherzustellen, dass das QMS konform, wirksam implementiert und aufrechterhalten ist.
 
 ## Auditprogramm (9.2)
 
@@ -31,7 +36,7 @@ Dieses Dokument definiert das interne Auditprogramm von {{ meta.organization }},
 
 ### Programmplanung
 
-**{{ meta.organization }} plant Audits unter Berücksichtigung:**
+**{{ meta-organisation.name }} plant Audits unter Berücksichtigung:**
 - Bedeutung der zu auditierenden Prozesse
 - Änderungen, die die Organisation betreffen
 - Ergebnisse früherer Audits
@@ -217,7 +222,7 @@ Dieses Dokument definiert das interne Auditprogramm von {{ meta.organization }},
 
 ### Maßnahmenverfolgung
 
-**{{ meta.organization }} stellt sicher:**
+**{{ meta-organisation.name }} stellt sicher:**
 - Maßnahmen werden rechtzeitig umgesetzt
 - Wirksamkeit wird überprüft
 - Dokumentation wird aufbewahrt
@@ -249,7 +254,7 @@ Dieses Dokument definiert das interne Auditprogramm von {{ meta.organization }},
 
 ### Wirksamkeitsbewertung
 
-**{{ meta.organization }} bewertet Wirksamkeit des Auditprogramms durch:**
+**{{ meta-organisation.name }} bewertet Wirksamkeit des Auditprogramms durch:**
 - Erreichung der Programmziele
 - Qualität der Audits
 - Kompetenz der Auditoren
@@ -295,8 +300,6 @@ Dieses Dokument definiert das interne Auditprogramm von {{ meta.organization }},
 - Überprüfung von Auditergebnissen
 - Genehmigung von Maßnahmen
 
----
-
 **Nächste Schritte:**
 1. Erstelle Jahresauditplan
 2. Qualifiziere Auditoren
@@ -305,10 +308,3 @@ Dieses Dokument definiert das interne Auditprogramm von {{ meta.organization }},
 5. Verfolge Korrekturmaßnahmen
 6. Bewerte Programmwirksamkeit
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

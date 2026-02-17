@@ -1,11 +1,16 @@
 # Purpose Limitation
 
-**Document-ID:** 0110  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0110
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -23,7 +28,7 @@ Reference: GDPR Art. 5(1)(b) (Purpose limitation)
 
 ## Purpose
 
-This document describes the implementation of the principle of purpose limitation in {{ meta.organization }}. Personal data may only be collected and processed for specified, explicit and legitimate purposes.
+This document describes the implementation of the principle of purpose limitation in {{ meta-organisation.name }}. Personal data may only be collected and processed for specified, explicit and legitimate purposes.
 
 ## Principle according to Art. 5(1)(b) GDPR
 
@@ -208,8 +213,6 @@ Personal data must be collected for specified, explicit and legitimate purposes 
 | Missing documentation | Purpose not in records | Maintain Art. 30 records |
 | Retrospective purpose change | Purpose changed after collection | Define purpose before collection |
 
----
-
 **Next Steps:**
 1. Define clear purposes for all processing activities
 2. Document purposes in records of processing activities
@@ -217,10 +220,3 @@ Personal data must be collected for specified, explicit and legitimate purposes 
 4. Train employees on purpose limitation
 5. Regularly review compliance with purpose limitation
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

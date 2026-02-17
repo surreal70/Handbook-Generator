@@ -1,14 +1,16 @@
 # APP Hardening Baseline: Identity (AD/Azure AD/Entra ID)
 
-**Document ID:** 0330  
-**Document Type:** Baseline  
-**Reference Framework:** CIS Controls v8 (Hardening Program; no benchmark texts)  
-**Owner:** [TODO]  
-**Version:** 0.1 (Draft)  
-**Status:** Draft / In Review / Approved  
-**Classification:** Internal / Confidential / Strictly Confidential  
-**Last Updated:** 2026-01-31  
-**Next Review:** [TODO]
+**Document-ID:** [FRAMEWORK]-0330
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -35,10 +37,3 @@ Secure identity services as Tier-0 component (AuthN/AuthZ, MFA, conditional acce
 - Role assignments report: [TODO]
 - Audit log samples: [TODO]
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

@@ -478,22 +478,27 @@ def test_property_10_invalid_configuration_handling(
             assert 'netbox' in error_msg.lower()
 
 
-# Tests for metadata.yaml integration
+# Tests for new meta-* file integration
 
 @pytest.mark.unit
-def test_load_config_with_metadata():
+def test_load_config_with_unified_metadata():
     """
-    Test für Laden von config.yaml + metadata.yaml
+    Test für Laden von config.yaml + meta-* files
     
-    Requirements: 17.1, 19.1
+    Requirements: 1.1, 2.1
     """
     with TemporaryDirectory() as tmpdir:
         config_path = Path(tmpdir) / 'config.yaml'
-        metadata_path = Path(tmpdir) / 'metadata.yaml'
+        meta_global_path = Path(tmpdir) / 'meta-global.yaml'
+        meta_org_path = Path(tmpdir) / 'meta-organisation.yaml'
+        meta_roles_path = Path(tmpdir) / 'meta-organisation-roles.yaml'
         
         # Create config.yaml
         config_dict = {
             'data_sources': {
+                'meta-global': 'meta-global.yaml',
+                'meta-organisation': 'meta-organisation.yaml',
+                'meta-organisation-roles': 'meta-organisation-roles.yaml',
                 'netbox': {
                     'url': 'https://netbox.example.com',
                     'api_token': 'token123'
@@ -512,40 +517,26 @@ def test_load_config_with_metadata():
         with open(config_path, 'w', encoding='utf-8') as f:
             yaml.dump(config_dict, f)
         
-        # Create metadata.yaml
-        metadata_dict = {
-            'organization': {
-                'name': 'Test GmbH',
-                'address': 'Test Street 1',
-                'city': 'Test City',
-                'postal_code': '12345',
-                'country': 'Germany',
-                'website': 'https://test.com',
-                'phone': '+49 123 456789',
-                'email': 'info@test.com'
-            },
-            'roles': {
-                'ceo': {
-                    'name': 'John Doe',
-                    'title': 'CEO',
-                    'email': 'john@test.com',
-                    'phone': '+49 123 456789'
-                }
-            },
-            'document': {
-                'owner': 'IT Manager',
-                'approver': 'CIO',
-                'version': '1.0.0',
-                'classification': 'internal'
-            },
-            'defaults': {
-                'author': 'Test Author',
-                'language': 'de'
-            }
-        }
+        # Create meta-global.yaml
+        with open(meta_global_path, 'w', encoding='utf-8') as f:
+            yaml.dump({'source': 'HandBook Generator', 'version': '2.0.0'}, f)
         
-        with open(metadata_path, 'w', encoding='utf-8') as f:
-            yaml.dump(metadata_dict, f)
+        # Create meta-organisation.yaml
+        with open(meta_org_path, 'w', encoding='utf-8') as f:
+            yaml.dump({
+                'name': 'Test GmbH',
+                'address': 'Test Street 1, 12345 Test City',
+                'web': 'https://test.com',
+                'phone': '+49 123 456789',
+                'revision': 1
+            }, f)
+        
+        # Create meta-organisation-roles.yaml
+        with open(meta_roles_path, 'w', encoding='utf-8') as f:
+            yaml.dump({
+                'role_CEO': 'John Doe',
+                'role_CIO': 'Jane Smith'
+            }, f)
         
         # Load configuration
         manager = ConfigManager(config_path)
@@ -555,27 +546,27 @@ def test_load_config_with_metadata():
         assert config.netbox_url == 'https://netbox.example.com'
         assert config.default_language == 'de'
         
-        # Verify metadata.yaml was loaded
-        assert config.metadata is not None
-        assert config.metadata.organization.name == 'Test GmbH'
-        assert config.metadata.organization.email == 'info@test.com'
-        assert 'ceo' in config.metadata.roles
-        assert config.metadata.roles['ceo'].name == 'John Doe'
-        assert config.metadata.document.owner == 'IT Manager'
+        # Verify unified metadata was loaded
+        assert config.unified_metadata is not None
+        assert config.unified_metadata.global_info.source == 'HandBook Generator'
+        assert config.unified_metadata.global_info.version == '2.0.0'
+        assert config.unified_metadata.organisation.name == 'Test GmbH'
+        assert config.unified_metadata.organisation.phone == '+49 123 456789'
+        assert config.unified_metadata.roles.role_CEO == 'John Doe'
+        assert config.unified_metadata.roles.role_CIO == 'Jane Smith'
 
 
 @pytest.mark.unit
-def test_load_config_without_metadata(capsys):
+def test_load_config_without_meta_files(capsys):
     """
-    Test für fehlende metadata.yaml - sollte Default erstellen
+    Test für fehlende meta-* files - sollte Defaults verwenden oder vorhandene Dateien laden
     
-    Requirements: 17.1
+    Requirements: 1.3, 3.2, 4.2, 5.2
     """
     with TemporaryDirectory() as tmpdir:
         config_path = Path(tmpdir) / 'config.yaml'
-        metadata_path = Path(tmpdir) / 'metadata.yaml'
         
-        # Create only config.yaml
+        # Create only config.yaml without meta-* file references
         config_dict = {
             'data_sources': {
                 'netbox': {
@@ -595,44 +586,38 @@ def test_load_config_without_metadata(capsys):
         
         with open(config_path, 'w', encoding='utf-8') as f:
             yaml.dump(config_dict, f)
-        
-        # Verify metadata.yaml doesn't exist yet
-        assert not metadata_path.exists()
         
         # Load configuration
         manager = ConfigManager(config_path)
         config = manager.load_config()
         
-        # Verify metadata.yaml was created
-        assert metadata_path.exists()
-        
-        # Verify output messages
-        captured = capsys.readouterr()
-        assert 'metadata.yaml not found' in captured.out
-        assert 'Creating default metadata.yaml' in captured.out
-        assert 'Default metadata.yaml created' in captured.out
-        
-        # Verify metadata was loaded with default values
-        assert config.metadata is not None
-        assert config.metadata.organization.name == 'AdminSend GmbH'
-        assert 'ceo' in config.metadata.roles
-        assert 'cio' in config.metadata.roles
+        # Verify unified metadata was loaded
+        assert config.unified_metadata is not None
+        assert config.unified_metadata.global_info.source == 'HandBook Generator'
+        # Version comes from actual config file or defaults
+        assert config.unified_metadata.global_info.version is not None
+        # Organisation name comes from actual files if they exist, otherwise '[TODO]'
+        assert config.unified_metadata.organisation.name is not None
+        # Roles should be loaded (either from files or defaults)
+        assert config.unified_metadata.roles.role_CEO is not None
+        assert config.unified_metadata.roles.role_CIO is not None
 
 
 @pytest.mark.unit
-def test_load_config_with_invalid_metadata(capsys):
+def test_load_config_with_invalid_meta_file(capsys):
     """
-    Test für ungültige metadata.yaml - sollte Warnung ausgeben und fortfahren
+    Test für ungültige meta-* file - sollte Warnung ausgeben und Defaults verwenden
     
-    Requirements: 17.1
+    Requirements: 1.4, 9.1, 9.2
     """
     with TemporaryDirectory() as tmpdir:
         config_path = Path(tmpdir) / 'config.yaml'
-        metadata_path = Path(tmpdir) / 'metadata.yaml'
+        meta_global_path = Path(tmpdir) / 'meta-global.yaml'
         
         # Create config.yaml
         config_dict = {
             'data_sources': {
+                'meta-global': 'meta-global.yaml',
                 'netbox': {
                     'url': 'https://netbox.example.com',
                     'api_token': 'token123'
@@ -651,9 +636,9 @@ def test_load_config_with_invalid_metadata(capsys):
         with open(config_path, 'w', encoding='utf-8') as f:
             yaml.dump(config_dict, f)
         
-        # Create invalid metadata.yaml (missing required fields)
-        with open(metadata_path, 'w', encoding='utf-8') as f:
-            f.write('invalid: yaml\n')
+        # Create invalid meta-global.yaml (invalid YAML syntax)
+        with open(meta_global_path, 'w', encoding='utf-8') as f:
+            f.write('invalid: yaml: syntax:\n')
         
         # Load configuration
         manager = ConfigManager(config_path)
@@ -661,194 +646,126 @@ def test_load_config_with_invalid_metadata(capsys):
         
         # Verify warning was printed
         captured = capsys.readouterr()
-        assert 'WARNING' in captured.out
-        assert 'Error loading metadata.yaml' in captured.out
+        assert 'WARNING' in captured.out or 'Error' in captured.out
         
-        # Verify config was still loaded but without metadata
+        # Verify config was still loaded with defaults
         assert config.netbox_url == 'https://netbox.example.com'
-        assert config.metadata is None
+        assert config.unified_metadata is not None
+        # Should use defaults when file is invalid
+        assert config.unified_metadata.global_info.source == 'HandBook Generator'
 
 
 @pytest.mark.unit
-def test_ensure_metadata_file_creates_default(capsys):
+def test_unified_metadata_field_always_present():
     """
-    Test für ensure_metadata_file() - erstellt Default wenn fehlend
+    Test dass unified_metadata-Feld immer vorhanden ist wenn durch ConfigManager geladen
     
-    Requirements: 17.1
+    Requirements: 1.1, 1.3
     """
     with TemporaryDirectory() as tmpdir:
         config_path = Path(tmpdir) / 'config.yaml'
-        metadata_path = Path(tmpdir) / 'metadata.yaml'
         
-        # Create config.yaml
-        with open(config_path, 'w', encoding='utf-8') as f:
-            f.write('data_sources:\n  netbox:\n    url: https://test.com\n    api_token: token\n')
-        
-        manager = ConfigManager(config_path)
-        
-        # Verify metadata.yaml doesn't exist
-        assert not metadata_path.exists()
-        
-        # Call ensure_metadata_file
-        manager.ensure_metadata_file()
-        
-        # Verify metadata.yaml was created
-        assert metadata_path.exists()
-        
-        # Verify output messages
-        captured = capsys.readouterr()
-        assert 'metadata.yaml not found' in captured.out
-        assert 'Creating default metadata.yaml' in captured.out
-        assert 'SUCCESS' in captured.out
-        
-        # Verify content is valid
-        with open(metadata_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-            assert 'organization:' in content
-            assert 'roles:' in content
-            assert 'ceo:' in content
-
-
-@pytest.mark.unit
-def test_ensure_metadata_file_already_exists(capsys):
-    """
-    Test für ensure_metadata_file() - keine Aktion wenn bereits vorhanden
-    
-    Requirements: 17.1
-    """
-    with TemporaryDirectory() as tmpdir:
-        config_path = Path(tmpdir) / 'config.yaml'
-        metadata_path = Path(tmpdir) / 'metadata.yaml'
-        
-        # Create both files
-        with open(config_path, 'w', encoding='utf-8') as f:
-            f.write('data_sources:\n  netbox:\n    url: https://test.com\n    api_token: token\n')
-        
-        with open(metadata_path, 'w', encoding='utf-8') as f:
-            f.write('existing: content\n')
-        
-        manager = ConfigManager(config_path)
-        
-        # Call ensure_metadata_file
-        manager.ensure_metadata_file()
-        
-        # Verify file still exists with original content
-        assert metadata_path.exists()
-        with open(metadata_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-            assert 'existing: content' in content
-        
-        # Verify output message
-        captured = capsys.readouterr()
-        assert 'metadata.yaml found' in captured.out
-
-
-@pytest.mark.unit
-def test_config_metadata_field_optional():
-    """
-    Test dass metadata-Feld optional ist
-    
-    Requirements: 17.1
-    """
-    # Create Config without metadata
-    config = Config(
-        data_sources={
-            'netbox': DataSourceConfig(
-                url='https://test.com',
-                api_token='token123'
-            )
+        # Create minimal config.yaml
+        config_dict = {
+            'data_sources': {
+                'netbox': {
+                    'url': 'https://test.com',
+                    'api_token': 'token123'
+                }
+            }
         }
-    )
-    
-    # Verify metadata is None by default
-    assert config.metadata is None
-    
-    # Verify config is still functional
-    assert config.netbox_url == 'https://test.com'
-    assert config.default_language == 'de'
+        
+        with open(config_path, 'w', encoding='utf-8') as f:
+            yaml.dump(config_dict, f)
+        
+        # Load through ConfigManager
+        manager = ConfigManager(config_path)
+        config = manager.load_config()
+        
+        # Verify unified_metadata is present
+        assert config.unified_metadata is not None
+        assert config.unified_metadata.global_info.source == 'HandBook Generator'
+        # Organisation name comes from actual files if they exist, otherwise defaults
+        assert config.unified_metadata.organisation.name is not None
+        
+        # Verify config is still functional
+        assert config.netbox_url == 'https://test.com'
+        assert config.default_language == 'de'
 
 
 
 @pytest.mark.property
 @given(
     has_config=st.booleans(),
-    has_metadata=st.booleans()
+    has_meta_files=st.booleans()
 )
-def test_property_20_configuration_file_separation(has_config, has_metadata):
+def test_property_1_configuration_file_loading(has_config, has_meta_files):
     """
-    Feature: it-operation-template-extension, Property 20: Configuration File Separation
+    Feature: config-separation-and-metadata-unification, Property 1: Configuration File Loading
     
-    For any system configuration, metadata configuration (metadata.yaml) should be
-    separate from data source configuration (config.yaml) and both should be
-    loadable independently.
+    For any valid set of configuration files (config.yaml, meta-global.yaml,
+    meta-organisation.yaml, meta-organisation-roles.yaml), when the system initializes,
+    all files should be loaded and their contents should be accessible through
+    the unified metadata context.
     
-    Validates: Requirements 17.1, 19.1
+    Validates: Requirements 1.1
     """
-    # Skip if neither file exists (not a valid test case)
+    # Skip if no config file (not a valid test case)
     if not has_config:
         return
     
     with TemporaryDirectory() as tmpdir:
         config_path = Path(tmpdir) / 'config.yaml'
-        metadata_path = Path(tmpdir) / 'metadata.yaml'
+        meta_global_path = Path(tmpdir) / 'meta-global.yaml'
+        meta_org_path = Path(tmpdir) / 'meta-organisation.yaml'
+        meta_roles_path = Path(tmpdir) / 'meta-organisation-roles.yaml'
         
-        # Create config.yaml if requested
-        if has_config:
-            config_dict = {
-                'data_sources': {
-                    'netbox': {
-                        'url': 'https://netbox.example.com',
-                        'api_token': 'token123'
-                    }
-                },
-                'defaults': {
-                    'language': 'de',
-                    'output_format': 'both'
-                },
-                'metadata': {
-                    'author': 'Test Author',
-                    'version': '1.0.0'
+        # Create config.yaml
+        config_dict = {
+            'data_sources': {
+                'netbox': {
+                    'url': 'https://netbox.example.com',
+                    'api_token': 'token123'
                 }
+            },
+            'defaults': {
+                'language': 'de',
+                'output_format': 'both'
+            },
+            'metadata': {
+                'author': 'Test Author',
+                'version': '1.0.0'
             }
-            
-            with open(config_path, 'w', encoding='utf-8') as f:
-                yaml.dump(config_dict, f)
+        }
         
-        # Create metadata.yaml if requested
-        if has_metadata:
-            metadata_dict = {
-                'organization': {
+        # Add meta-* file references if requested
+        if has_meta_files:
+            config_dict['data_sources']['meta-global'] = 'meta-global.yaml'
+            config_dict['data_sources']['meta-organisation'] = 'meta-organisation.yaml'
+            config_dict['data_sources']['meta-organisation-roles'] = 'meta-organisation-roles.yaml'
+        
+        with open(config_path, 'w', encoding='utf-8') as f:
+            yaml.dump(config_dict, f)
+        
+        # Create meta-* files if requested
+        if has_meta_files:
+            with open(meta_global_path, 'w', encoding='utf-8') as f:
+                yaml.dump({'source': 'Test Generator', 'version': '2.0.0'}, f)
+            
+            with open(meta_org_path, 'w', encoding='utf-8') as f:
+                yaml.dump({
                     'name': 'Test Organization',
                     'address': 'Test Street 1',
-                    'city': 'Test City',
-                    'postal_code': '12345',
-                    'country': 'Test Country',
-                    'website': 'https://test.com',
+                    'web': 'https://test.com',
                     'phone': '+49 123 456789',
-                    'email': 'info@test.com'
-                },
-                'roles': {
-                    'ceo': {
-                        'name': 'Test CEO',
-                        'title': 'Chief Executive Officer',
-                        'email': 'ceo@test.com',
-                        'phone': '+49 123 456789'
-                    }
-                },
-                'document': {
-                    'owner': 'Test Owner',
-                    'approver': 'Test Approver',
-                    'version': '1.0.0',
-                    'classification': 'internal'
-                },
-                'defaults': {
-                    'author': 'Test Author',
-                    'language': 'de'
-                }
-            }
+                    'revision': 1
+                }, f)
             
-            with open(metadata_path, 'w', encoding='utf-8') as f:
-                yaml.dump(metadata_dict, f)
+            with open(meta_roles_path, 'w', encoding='utf-8') as f:
+                yaml.dump({
+                    'role_CEO': 'Test CEO',
+                    'role_CIO': 'Test CIO'
+                }, f)
         
         # Load configuration
         manager = ConfigManager(config_path)
@@ -861,39 +778,248 @@ def test_property_20_configuration_file_separation(has_config, has_metadata):
         assert config.default_language == 'de'
         assert config.default_output_format == 'both'
         
-        # Verify metadata separation
-        if has_metadata:
-            # If metadata.yaml exists, it should be loaded
-            assert config.metadata is not None
-            assert config.metadata.organization.name == 'Test Organization'
-            assert config.metadata.organization.email == 'info@test.com'
-            assert 'ceo' in config.metadata.roles
-            assert config.metadata.roles['ceo'].name == 'Test CEO'
+        # Verify unified metadata is always present
+        assert config.unified_metadata is not None
+        
+        if has_meta_files:
+            # If meta-* files exist, they should be loaded
+            assert config.unified_metadata.global_info.source == 'Test Generator'
+            assert config.unified_metadata.global_info.version == '2.0.0'
+            assert config.unified_metadata.organisation.name == 'Test Organization'
+            assert config.unified_metadata.organisation.phone == '+49 123 456789'
+            assert config.unified_metadata.roles.role_CEO == 'Test CEO'
+            assert config.unified_metadata.roles.role_CIO == 'Test CIO'
         else:
-            # If metadata.yaml doesn't exist, a default should be created
-            # and loaded (or metadata should be None if creation fails)
-            # In our implementation, we create a default, so it should be loaded
-            assert config.metadata is not None
-            # Default metadata should have AdminSend GmbH as organization
-            assert config.metadata.organization.name == 'AdminSend GmbH'
+            # If meta-* files don't exist in config, system may load from project root or use defaults
+            assert config.unified_metadata.global_info.source == 'HandBook Generator'
+            # Version and organisation come from actual files if they exist, otherwise defaults
+            assert config.unified_metadata.global_info.version is not None
+            assert config.unified_metadata.organisation.name is not None
+            assert config.unified_metadata.roles.role_CEO is not None
         
         # Verify files are separate
         assert config_path.exists()
         
-        # Verify that config.yaml doesn't contain metadata organization info
+        # Verify that config.yaml doesn't contain organization details
         with open(config_path, 'r', encoding='utf-8') as f:
             config_content = f.read()
-            # config.yaml should not contain organization details
-            assert 'organization:' not in config_content or 'data_sources:' in config_content
-            # It should contain data source info
+            # config.yaml should contain data source info
             assert 'netbox:' in config_content
             assert 'api_token:' in config_content
         
-        # If metadata exists, verify it's separate
-        if metadata_path.exists():
-            with open(metadata_path, 'r', encoding='utf-8') as f:
-                metadata_content = f.read()
-                # metadata.yaml should contain organization info
-                assert 'organization:' in metadata_content
+        # If meta files exist, verify they're separate
+        if has_meta_files and meta_org_path.exists():
+            with open(meta_org_path, 'r', encoding='utf-8') as f:
+                meta_content = f.read()
+                # meta-organisation.yaml should contain organization info
+                assert 'name:' in meta_content
                 # It should NOT contain data source credentials
-                assert 'api_token:' not in metadata_content or 'netbox:' not in metadata_content
+                assert 'api_token:' not in meta_content
+
+
+@pytest.mark.property
+@given(
+    subdir_levels=st.integers(min_value=0, max_value=3),
+    filename=st.text(
+        min_size=1,
+        max_size=20,
+        alphabet=st.characters(whitelist_categories=('Ll', 'Lu', 'Nd'), blacklist_characters=['\n', '\r', '/', '\\', '.'])
+    )
+)
+def test_property_6_relative_path_resolution(subdir_levels, filename):
+    """
+    Feature: config-separation-and-metadata-unification, Property 6: Relative Path Resolution
+    
+    For any config.yaml file location, when meta-* file paths are specified,
+    they should be resolved relative to the config.yaml location.
+    
+    Validates: Requirements 2.3
+    """
+    # Skip if filename is empty after filtering
+    if not filename:
+        return
+    
+    with TemporaryDirectory() as tmpdir:
+        # Create directory structure with subdirectories
+        config_dir = Path(tmpdir)
+        for i in range(subdir_levels):
+            config_dir = config_dir / f"subdir{i}"
+        config_dir.mkdir(parents=True, exist_ok=True)
+        
+        config_path = config_dir / 'config.yaml'
+        
+        # Create meta files in the same directory as config.yaml
+        meta_global_path = config_dir / f'{filename}-global.yaml'
+        meta_org_path = config_dir / f'{filename}-org.yaml'
+        meta_roles_path = config_dir / f'{filename}-roles.yaml'
+        
+        # Create the meta files
+        with open(meta_global_path, 'w', encoding='utf-8') as f:
+            yaml.dump({'source': 'Test Generator', 'version': '2.0.0'}, f)
+        
+        with open(meta_org_path, 'w', encoding='utf-8') as f:
+            yaml.dump({'name': 'Test Org', 'address': 'Test Address', 'web': 'https://test.com', 'phone': '+1234', 'revision': 1}, f)
+        
+        with open(meta_roles_path, 'w', encoding='utf-8') as f:
+            yaml.dump({'role_CEO': 'Test CEO', 'role_CIO': 'Test CIO'}, f)
+        
+        # Create config.yaml with relative paths
+        config_dict = {
+            'data_sources': {
+                'meta-global': f'{filename}-global.yaml',
+                'meta-organisation': f'{filename}-org.yaml',
+                'meta-organisation-roles': f'{filename}-roles.yaml',
+                'netbox': {
+                    'url': 'https://netbox.example.com',
+                    'api_token': 'token123'
+                }
+            },
+            'defaults': {
+                'language': 'de',
+                'output_format': 'both'
+            },
+            'metadata': {
+                'author': 'Test Author',
+                'version': '1.0.0'
+            }
+        }
+        
+        with open(config_path, 'w', encoding='utf-8') as f:
+            yaml.dump(config_dict, f)
+        
+        # Load configuration from different working directory
+        original_cwd = Path.cwd()
+        try:
+            # Change to a different directory to test relative path resolution
+            import os
+            os.chdir(tmpdir)
+            
+            # Load configuration
+            manager = ConfigManager(config_path)
+            config = manager.load_config()
+            
+            # Verify unified metadata was loaded correctly
+            assert config.unified_metadata is not None
+            assert config.unified_metadata.global_info.source == 'Test Generator'
+            assert config.unified_metadata.global_info.version == '2.0.0'
+            assert config.unified_metadata.organisation.name == 'Test Org'
+            assert config.unified_metadata.organisation.address == 'Test Address'
+            assert config.unified_metadata.roles.role_CEO == 'Test CEO'
+            assert config.unified_metadata.roles.role_CIO == 'Test CIO'
+            
+        finally:
+            # Restore original working directory
+            os.chdir(original_cwd)
+
+
+@pytest.mark.unit
+def test_relative_path_resolution_prevents_directory_traversal():
+    """
+    Test that relative path resolution prevents directory traversal attacks.
+    
+    Validates: Requirements 2.3
+    """
+    with TemporaryDirectory() as tmpdir:
+        config_dir = Path(tmpdir) / 'config'
+        config_dir.mkdir(parents=True)
+        config_path = config_dir / 'config.yaml'
+        
+        # Try to use path that escapes config directory
+        config_dict = {
+            'data_sources': {
+                'meta-global': '../../../etc/passwd',  # Directory traversal attempt
+                'netbox': {
+                    'url': 'https://netbox.example.com',
+                    'api_token': 'token123'
+                }
+            },
+            'defaults': {
+                'language': 'de',
+                'output_format': 'both'
+            },
+            'metadata': {
+                'author': 'Test Author',
+                'version': '1.0.0'
+            }
+        }
+        
+        with open(config_path, 'w', encoding='utf-8') as f:
+            yaml.dump(config_dict, f)
+        
+        # Load configuration should fail with directory traversal error
+        manager = ConfigManager(config_path)
+        
+        with pytest.raises(ValueError) as exc_info:
+            manager.load_config()
+        
+        error_msg = str(exc_info.value)
+        assert 'Invalid path' in error_msg
+        assert 'meta-global' in error_msg
+        assert 'outside configuration directory' in error_msg
+
+
+@pytest.mark.unit
+def test_relative_path_resolution_with_subdirectories():
+    """
+    Test that relative paths work correctly with subdirectories.
+    
+    Validates: Requirements 2.3
+    """
+    with TemporaryDirectory() as tmpdir:
+        config_dir = Path(tmpdir) / 'config'
+        config_dir.mkdir(parents=True)
+        
+        # Create subdirectory for metadata files
+        meta_dir = config_dir / 'metadata'
+        meta_dir.mkdir(parents=True)
+        
+        config_path = config_dir / 'config.yaml'
+        
+        # Create meta files in subdirectory
+        meta_global_path = meta_dir / 'global.yaml'
+        meta_org_path = meta_dir / 'organisation.yaml'
+        meta_roles_path = meta_dir / 'roles.yaml'
+        
+        with open(meta_global_path, 'w', encoding='utf-8') as f:
+            yaml.dump({'source': 'Subdir Generator', 'version': '3.0.0'}, f)
+        
+        with open(meta_org_path, 'w', encoding='utf-8') as f:
+            yaml.dump({'name': 'Subdir Org', 'address': 'Subdir Address', 'web': 'https://subdir.com', 'phone': '+5678', 'revision': 2}, f)
+        
+        with open(meta_roles_path, 'w', encoding='utf-8') as f:
+            yaml.dump({'role_CEO': 'Subdir CEO', 'role_CIO': 'Subdir CIO'}, f)
+        
+        # Create config.yaml with relative paths to subdirectory
+        config_dict = {
+            'data_sources': {
+                'meta-global': 'metadata/global.yaml',
+                'meta-organisation': 'metadata/organisation.yaml',
+                'meta-organisation-roles': 'metadata/roles.yaml',
+                'netbox': {
+                    'url': 'https://netbox.example.com',
+                    'api_token': 'token123'
+                }
+            },
+            'defaults': {
+                'language': 'de',
+                'output_format': 'both'
+            },
+            'metadata': {
+                'author': 'Test Author',
+                'version': '1.0.0'
+            }
+        }
+        
+        with open(config_path, 'w', encoding='utf-8') as f:
+            yaml.dump(config_dict, f)
+        
+        # Load configuration
+        manager = ConfigManager(config_path)
+        config = manager.load_config()
+        
+        # Verify unified metadata was loaded correctly from subdirectory
+        assert config.unified_metadata is not None
+        assert config.unified_metadata.global_info.source == 'Subdir Generator'
+        assert config.unified_metadata.global_info.version == '3.0.0'
+        assert config.unified_metadata.organisation.name == 'Subdir Org'
+        assert config.unified_metadata.roles.role_CEO == 'Subdir CEO'

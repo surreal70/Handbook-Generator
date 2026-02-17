@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0310
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # MTTR Messung
+
+**Dokument-ID:** [FRAMEWORK]-0170
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -23,8 +34,8 @@ Detaillierte Messmethodik für Mean Time to Restore.
 
 ### Zeitstempel-Erfassung
 
-- **Incident-Start**: {{ source.incident_start_definition }}
-- **Incident-Ende**: {{ source.incident_end_definition }}
+- **Incident-Start**: [TODO]
+- **Incident-Ende**: [TODO]
 
 ### Berechnung
 
@@ -48,17 +59,8 @@ MTTR = Summe aller Wiederherstellungszeiten / Anzahl Incidents
 
 ### Datenqualität
 
-- **Vollständigkeit**: {{ source.mttr_data_completeness }}
-- **Genauigkeit**: {{ source.mttr_data_accuracy }}
+- **Vollständigkeit**: [TODO]
+- **Genauigkeit**: [TODO]
 
 <!-- Hinweis: Präzise Zeiterfassung ist kritisch für MTTR-Messung -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

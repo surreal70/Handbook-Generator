@@ -1,19 +1,22 @@
 # Datenschutzverletzungsmeldung und Incident Response
 
-**Dokument-ID:** HIPAA-0600  
-**Organisation:** {{ meta.organization.name }}  
-**Verantwortlich:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Entwurf / In Prüfung / Genehmigt  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** HIPAA-0600
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
 ## 1. Zweck
 
-Dieses Dokument beschreibt die Verfahren zur Datenschutzverletzungsmeldung und Incident Response für {{ meta.organization.name }} gemäß der HIPAA Breach Notification Rule.
+Dieses Dokument beschreibt die Verfahren zur Datenschutzverletzungsmeldung und Incident Response für {{ meta-organisation.name }} gemäß der HIPAA Breach Notification Rule.
 
 ### 1.1 HIPAA-Anforderungen
 
@@ -529,20 +532,11 @@ Mit freundlichen Grüßen,
 - Best Practices
 - Technologieänderungen
 
----
-
 **Dokumentenhistorie:**
 
 | Version | Datum | Autor | Änderungen |
 |---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Ersterstellung |
+| 0.1 | {{ meta-handbook.modifydate }} | {{ meta-handbook.author }} | Ersterstellung |
 
 <!-- Ende des Templates -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

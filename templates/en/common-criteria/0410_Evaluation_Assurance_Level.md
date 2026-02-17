@@ -1,11 +1,16 @@
 # Evaluation Assurance Level (EAL)
 
-**Document-ID:** 0410  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** Internal / Confidential / Strictly Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0410
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -216,8 +221,6 @@ The selected EAL and certification scheme enables recognition in the following c
 - [TODO: National certification guidelines]
 - [TODO: Other relevant documents]
 
----
-
 **Next Steps:**
 1. Complete all [TODO] placeholders
 2. Validate EAL selection with stakeholders
@@ -225,10 +228,3 @@ The selected EAL and certification scheme enables recognition in the following c
 4. Contact potential evaluation laboratories
 5. Create detailed project plan for evaluation
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

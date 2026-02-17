@@ -1,14 +1,16 @@
 # Anhang: Netzplan und Zonenmodell (Template)
 
-**Dokument-ID:** 0730  
-**Dokumenttyp:** Anhang  
-**Referenzrahmen:** BSI IT-Grundschutz (BSI Standards 200-1/200-2)  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** {{ meta.document.status }}  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0730
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -20,7 +22,7 @@ Reference: BSI IT-Grundschutz-Kompendium: NET.1.1 Netzarchitektur und -design
 
 ## 1. Zweck und Zielsetzung
 
-Die Dokumentation der Netzarchitektur und des Zonenmodells von **{{ meta.organization.name }}** dient:
+Die Dokumentation der Netzarchitektur und des Zonenmodells von **{{ meta-organisation.name }}** dient:
 - Strukturanalyse (Dokument 0050)
 - Risikoanalyse (Dokument 0090)
 - Netzwerksicherheit (Dokument 0460/0470)
@@ -207,10 +209,8 @@ Die Dokumentation der Netzarchitektur und des Zonenmodells von **{{ meta.organiz
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| IT-Leitung | {{ meta.cio.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| ISB | {{ meta.ciso.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| IT-Leitung | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **Referenzen:**
 - BSI IT-Grundschutz-Kompendium: NET.1.1 Netzarchitektur und -design
@@ -219,13 +219,5 @@ Die Dokumentation der Netzarchitektur und des Zonenmodells von **{{ meta.organiz
 - Dokument 0050: Strukturanalyse
 - Dokument 0090: Risikoanalyse
 - Dokument 0460/0470: Netzwerksicherheit
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 <!-- End of template -->

@@ -1,13 +1,16 @@
 # System Maintenance
 
-**Document-ID:** NIST-0500  
-**Control Family:** Maintenance (MA)  
-**Control:** MA-1, MA-2, MA-4, MA-5  
-**Organization:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Draft / In Review / Approved  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** NIST-0500
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -59,13 +62,5 @@ The organization performs system maintenance in a controlled manner.
 ## 3. Implementation Status
 
 **Status:** [TODO: Implemented / Partially Implemented / Planned]  
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 <!-- End of template -->

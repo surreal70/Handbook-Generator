@@ -1,13 +1,25 @@
----
+
 Document-ID: nist-csf-0010
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Govern - Übersicht
+
+**Dokument-ID:** [FRAMEWORK]-0010
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -16,7 +28,7 @@ Dieses Dokument bietet einen Überblick über die Govern-Funktion des NIST Cyber
 ## Geltungsbereich
 
 Dieses Dokument gilt für:
-- {{ meta.organization }}
+- {{ meta-organisation.name }}
 - Alle Geschäftsbereiche und IT-Systeme
 - Cybersecurity-Governance-Strukturen
 
@@ -65,8 +77,8 @@ Die Govern-Funktion bildet die Grundlage für:
 
 | Rolle | Verantwortung |
 |-------|---------------|
-| {{ meta.ciso }} | Gesamtverantwortung für Cybersecurity-Governance |
-| {{ meta.cro }} | Risikomanagement-Strategie und -Überwachung |
+| {{ meta-organisation-roles.role_CISO }} | Gesamtverantwortung für Cybersecurity-Governance |
+| {{ meta-organisation-roles.role_Risk_Manager }} | Risikomanagement-Strategie und -Überwachung |
 | Vorstand | Aufsicht und strategische Ausrichtung |
 | Geschäftsführung | Ressourcenzuweisung und Unterstützung |
 
@@ -79,17 +91,3 @@ Die Govern-Funktion bildet die Grundlage für:
 - 0060_oversight.md
 - 0070_supply_chain_risk_management.md
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |
-
-<!-- 
-Autor-Hinweise: 
-- Passen Sie die Governance-Struktur an Ihre Organisation an
-- Stellen Sie sicher, dass die Govern-Funktion mit der Unternehmensstrategie abgestimmt ist
-- Überprüfen Sie regelmäßig die Wirksamkeit der Governance-Mechanismen
--->

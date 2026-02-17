@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0010
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # DORA Framework Overview
+
+**Document-ID:** [FRAMEWORK]-0010
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -29,9 +40,9 @@ The DORA program was developed by Dr. Nicole Forsgren, Jez Humble, and Gene Kim,
 
 ### Organization Information
 
-- **Organization**: {{ source.organization_name }}
-- **Responsible**: {{ source.dora_owner }}
-- **Implementation Date**: {{ source.dora_implementation_date }}
+- **Organization**: [TODO]
+- **Responsible**: [TODO]
+- **Implementation Date**: [TODO]
 
 ## The Four Key Metrics
 
@@ -140,13 +151,5 @@ Continuous monitoring and adjustment.
 - **Continuity**: Long-term commitment to improvement
 
 <!-- Note: This template should be adapted to the specific needs of the organization -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

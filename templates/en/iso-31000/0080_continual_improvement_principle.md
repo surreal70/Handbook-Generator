@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-31000-0080
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Principle 8: Continual improvement
+
+**Document-ID:** [FRAMEWORK]-0080
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -25,7 +37,7 @@ Risk management is continually improved through learning and experience. Organiz
 - Adaptation to new insights
 - Systematic improvement
 
-## Implementation in {{ meta.organization }}
+## Implementation in {{ meta-organisation.name }}
 
 ### Continuous Improvement Cycle
 
@@ -90,8 +102,8 @@ Risk management is continually improved through learning and experience. Organiz
 - Innovation and improvement
 - Anticipatory management
 
-**Current Maturity Level:** {{ meta.risk_maturity_level }}  
-**Target Maturity Level:** {{ meta.target_risk_maturity_level }}
+**Current Maturity Level:** {{ meta-handbook.risk_maturity_level }}  
+**Target Maturity Level:** {{ meta-handbook.target_risk_maturity_level }}
 
 ## Improvement Measures
 
@@ -134,12 +146,4 @@ Risk management is continually improved through learning and experience. Organiz
 - Assessment of process efficiency
 - Identification of improvement potentials
 - Planning for next year
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 

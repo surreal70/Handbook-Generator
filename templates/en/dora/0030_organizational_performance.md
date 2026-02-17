@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0030
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Organizational Performance
+
+**Document-ID:** [FRAMEWORK]-0030
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -32,9 +43,9 @@ Research shows strong correlation between DORA Metrics and:
 
 ### Organization Metrics
 
-- **Organization**: {{ source.organization_name }}
-- **Business Goals**: {{ source.business_goals }}
-- **Performance Indicators**: {{ source.performance_indicators }}
+- **Organization**: [TODO]
+- **Business Goals**: [TODO]
+- **Performance Indicators**: [TODO]
 
 ## Success Factors
 
@@ -63,7 +74,7 @@ Research shows strong correlation between DORA Metrics and:
 
 ### Westrum Organizational Culture
 
-**Current Culture**: {{ source.organizational_culture_type }}
+**Current Culture**: [TODO]
 
 - **Pathological**: Power-oriented, fear and threat
 - **Bureaucratic**: Rule-oriented, departmental thinking
@@ -72,17 +83,17 @@ Research shows strong correlation between DORA Metrics and:
 ### Cultural Transformation
 
 Steps to develop a generative culture:
-1. {{ source.culture_step_1 }}
-2. {{ source.culture_step_2 }}
-3. {{ source.culture_step_3 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
 
 ## Employee Engagement
 
 ### Satisfaction
 
-- **Employee Satisfaction**: {{ source.employee_satisfaction }}
-- **Engagement Level**: {{ source.engagement_level }}
-- **Retention Rate**: {{ source.retention_rate }}
+- **Employee Satisfaction**: [TODO]
+- **Engagement Level**: [TODO]
+- **Retention Rate**: [TODO]
 
 ### Development
 
@@ -103,18 +114,10 @@ Leadership practices that promote performance:
 
 ### Leadership Commitment
 
-- **Sponsor**: {{ source.leadership_sponsor }}
-- **Commitment Level**: {{ source.leadership_commitment }}
-- **Resources**: {{ source.allocated_resources }}
+- **Sponsor**: [TODO]
+- **Commitment Level**: [TODO]
+- **Resources**: [TODO]
 
 <!-- Note: Cultural change requires long-term commitment -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0410
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # CFR Messung
+
+**Dokument-ID:** [FRAMEWORK]-0410
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -22,8 +33,8 @@ Praktische Implementierung der Change Failure Rate Messung.
 
 ## Organisationsinformationen
 
-- **Organisation**: {{ source.organization_name }}
-- **Messverantwortlicher**: {{ source.cfr_measurement_owner }}
+- **Organisation**: [TODO]
+- **Messverantwortlicher**: [TODO]
 
 ## Deployment-Tracking
 
@@ -36,7 +47,7 @@ Praktische Implementierung der Change Failure Rate Messung.
   "commit_sha": "abc123",
   "environment": "production",
   "status": "success",
-  "application": "{{ source.application_name }}"
+  "application": "[TODO]"
 }
 ```
 
@@ -106,10 +117,3 @@ CFR = (Failed Deployments / Total Deployments) × 100%
 
 <!-- Hinweis: Genaue Messung ermöglicht Qualitätsverbesserung -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |

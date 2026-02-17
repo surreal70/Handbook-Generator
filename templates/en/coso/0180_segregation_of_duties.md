@@ -1,40 +1,43 @@
----
+
 Document-ID: coso-0240
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Segregation of Duties
 
+**Document-ID:** [FRAMEWORK]-0180
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document describes the segregation of duties at {{ source.organization_name }}.
+This document describes the segregation of duties at [TODO].
 
 ## Segregation Principles
 
-{{ source.sod_principles }}
+[TODO]
 
 ## Segregation Matrix
 
-{{ source.sod_matrix }}
+[TODO]
 
 ## Compensating Controls
 
-{{ source.compensating_controls_detail }}
+[TODO]
 
 ## References
 
 - Segregation of Duties Policy
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

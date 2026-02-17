@@ -1,14 +1,16 @@
 # Guideline: Asset Lifecycle Tagging and Disposal
 
-**Document ID:** 0250  
-**Document Type:** Guideline/Standard (concrete)  
-**Reference Framework:** BSI IT-Grundschutz (BSI Standards 200-1/200-2/200-3)  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** {{ meta.document.status }}  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.document.last_updated }}  
-**Next Review:** {{ meta.document.next_review }}
+**Document-ID:** [FRAMEWORK]-0250
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -107,27 +109,17 @@ Exceptions to this guideline are only possible through the **Exception Process (
 This guideline is reviewed regularly:
 - **Frequency:** Annually or when significant changes occur
 - **Responsible:** {{ meta.cio.name }}
-- **Next Review:** {{ meta.document.next_review }}
+- **Next Review:** {{ meta-handbook.next_review }}
 
 ## 10. Approval
 
 | Role | Name | Date | Approval |
 |---|---|---|---|
-| IT Management | {{ meta.cio.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| ISB | {{ meta.ciso.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| IT Management | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **References:**
 - BSI IT-Grundschutz Compendium
 - Document 0240: Policy: Asset and Inventory Management
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
 
 <!-- End of template -->

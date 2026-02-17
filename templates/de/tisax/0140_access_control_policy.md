@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0140
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Zugriffskontroll-Richtlinie
+
+**Dokument-ID:** [FRAMEWORK]-0140
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -15,7 +26,7 @@ Dieses Dokument definiert die Richtlinien und Anforderungen für die Zugriffskon
 
 ## Geltungsbereich
 
-Diese Richtlinie gilt für alle Benutzer, Systeme und Ressourcen von {{ source.organization_name }}.
+Diese Richtlinie gilt für alle Benutzer, Systeme und Ressourcen von [TODO].
 
 ## Grundprinzipien
 
@@ -104,15 +115,15 @@ Kritische Funktionen werden getrennt:
 ### Passwort-Anforderungen
 
 **Komplexität:**
-- Mindestlänge: {{ source.password_min_length }} Zeichen
+- Mindestlänge: [TODO] Zeichen
 - Großbuchstaben, Kleinbuchstaben, Zahlen, Sonderzeichen
 - Keine Wörterbuchwörter
 - Keine persönlichen Informationen
 
 **Verwaltung:**
-- Änderung alle {{ source.password_change_interval }} Tage
-- Keine Wiederverwendung der letzten {{ source.password_history }} Passwörter
-- Automatische Sperrung nach {{ source.password_lockout_attempts }} Fehlversuchen
+- Änderung alle [TODO] Tage
+- Keine Wiederverwendung der letzten [TODO] Passwörter
+- Automatische Sperrung nach [TODO] Fehlversuchen
 - Passwort-Manager empfohlen
 
 ### Multi-Faktor-Authentifizierung (MFA)
@@ -130,7 +141,7 @@ MFA ist erforderlich für:
 
 ### Single Sign-On (SSO)
 
-{{ source.organization_name }} nutzt SSO für:
+[TODO] nutzt SSO für:
 - Zentrale Authentifizierung
 - Reduzierung von Passwörtern
 - Vereinfachte Zugriffsverwaltung
@@ -326,7 +337,7 @@ Alle Benutzer werden geschult zu:
 
 ## Kennzahlen
 
-{{ source.organization_name }} misst:
+[TODO] misst:
 - Anzahl aktiver Benutzerkonten
 - Anteil MFA-aktivierter Konten (Ziel: 100%)
 - Durchschnittliche Zeit bis zur Berechtigungsvergabe
@@ -336,12 +347,3 @@ Alle Benutzer werden geschult zu:
 
 <!-- Hinweis: Passen Sie die Anforderungen an Ihre Organisation an -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

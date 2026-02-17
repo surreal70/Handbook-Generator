@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-31000-0070
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Principle 7: Human and cultural factors
+
+**Document-ID:** [FRAMEWORK]-0070
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -25,12 +37,12 @@ Human behavior and culture significantly influence all aspects of risk managemen
 - Communication is crucial
 - Psychological factors are considered
 
-## Implementation in {{ meta.organization }}
+## Implementation in {{ meta-organisation.name }}
 
 ### Risk Culture
 
 **Risk Culture Definition:**
-The risk culture of {{ meta.organization }} encompasses the values, beliefs, knowledge, attitudes, and understanding about risks shared by employees.
+The risk culture of {{ meta-organisation.name }} encompasses the values, beliefs, knowledge, attitudes, and understanding about risks shared by employees.
 
 **Elements of Risk Culture:**
 - Open communication about risks
@@ -101,12 +113,4 @@ The risk culture of {{ meta.organization }} encompasses the values, beliefs, kno
 - Consideration of different perspectives
 - Building trust
 - Develop shared risk understanding
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 

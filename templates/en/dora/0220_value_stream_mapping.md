@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0220
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Value Stream Mapping
+
+**Document-ID:** [FRAMEWORK]-0220
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -22,9 +33,9 @@ This document describes the application of Value Stream Mapping to visualize and
 
 ## Organization Information
 
-- **Organization**: {{ source.organization_name }}
-- **VSM Owner**: {{ source.vsm_owner }}
-- **Mapping Frequency**: {{ source.vsm_frequency }}
+- **Organization**: [TODO]
+- **VSM Owner**: [TODO]
+- **Mapping Frequency**: [TODO]
 
 ## Value Stream Mapping Fundamentals
 
@@ -220,7 +231,7 @@ Low Impact, High Effort → Avoid
 
 ### Regular VSM Sessions
 
-**Frequency**: {{ source.vsm_session_frequency }}
+**Frequency**: [TODO]
 
 **Participants**:
 - Developers
@@ -245,10 +256,3 @@ Low Impact, High Effort → Avoid
 
 <!-- Note: VSM makes waste visible and enables targeted optimization -->
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |

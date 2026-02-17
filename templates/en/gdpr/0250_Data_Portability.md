@@ -1,11 +1,16 @@
 # Data Portability
 
-**Document-ID:** 0250  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0250
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -23,7 +28,7 @@ Reference: GDPR Art. 20 (Right to data portability)
 
 ## Purpose
 
-This document describes the implementation of the right to data portability in {{ meta.organization }}. Data subjects have the right to receive their data in a structured, commonly used and machine-readable format.
+This document describes the implementation of the right to data portability in {{ meta-organisation.name }}. Data subjects have the right to receive their data in a structured, commonly used and machine-readable format.
 
 ## Right to Data Portability (Art. 20)
 
@@ -240,8 +245,6 @@ This document describes the implementation of the right to data portability in {
 | Missing Interface | No direct transfer | Provide API |
 | Delayed Provision | Provision after 3 months | Deadline control |
 
----
-
 **Next Steps:**
 1. Establish process for data portability requests
 2. Implement export in structured formats
@@ -249,10 +252,3 @@ This document describes the implementation of the right to data portability in {
 4. Train employees on data portability
 5. Document all requests in register
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

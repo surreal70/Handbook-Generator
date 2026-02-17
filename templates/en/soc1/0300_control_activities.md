@@ -1,13 +1,24 @@
----
+
 Document-ID: soc1-0300
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Control Activities - Overview
+
+**Document-ID:** [FRAMEWORK]-0300
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -39,7 +50,7 @@ Control activities are the actions established through policies and procedures t
 - System access controls
 - Training and competency development
 
-{{ source.preventive_controls }}
+[TODO]
 
 ### Detective Controls
 
@@ -52,7 +63,7 @@ Control activities are the actions established through policies and procedures t
 - Exception reports
 - Monitoring activities
 
-{{ source.detective_controls }}
+[TODO]
 
 ### Corrective Controls
 
@@ -65,7 +76,7 @@ Control activities are the actions established through policies and procedures t
 - Corrective actions
 - Process improvements
 
-{{ source.corrective_controls }}
+[TODO]
 
 ## Control Categories
 
@@ -77,7 +88,7 @@ Control activities are the actions established through policies and procedures t
 - Dual authorization
 - Systemic authorization
 
-{{ source.authorization_controls }}
+[TODO]
 
 **Completeness**:
 - Sequence number checks
@@ -85,7 +96,7 @@ Control activities are the actions established through policies and procedures t
 - Reconciliations
 - Completeness checks
 
-{{ source.completeness_controls }}
+[TODO]
 
 **Accuracy**:
 - Input validation
@@ -93,7 +104,7 @@ Control activities are the actions established through policies and procedures t
 - Format checks
 - Reasonableness checks
 
-{{ source.accuracy_controls }}
+[TODO]
 
 **Validity**:
 - Master data validation
@@ -101,7 +112,7 @@ Control activities are the actions established through policies and procedures t
 - Business rule validation
 - Duplicate checks
 
-{{ source.validity_controls }}
+[TODO]
 
 ### Segregation of Duties
 
@@ -113,9 +124,9 @@ Control activities are the actions established through policies and procedures t
 - Recording vs. reconciliation
 - Custody vs. recording
 
-{{ source.segregation_of_duties }}
+[TODO]
 
-**Compensating Controls**: {{ source.compensating_controls }}
+**Compensating Controls**: [TODO]
 
 ### Physical Controls
 
@@ -125,7 +136,7 @@ Control activities are the actions established through policies and procedures t
 - Key management
 - Visitor management
 
-{{ source.physical_access_controls }}
+[TODO]
 
 **Asset Protection**:
 - Inventory controls
@@ -133,7 +144,7 @@ Control activities are the actions established through policies and procedures t
 - Physical security
 - Environmental controls
 
-{{ source.asset_protection }}
+[TODO]
 
 ### Reviews and Approvals
 
@@ -143,7 +154,7 @@ Control activities are the actions established through policies and procedures t
 - Exception reports
 - Trend analyses
 
-{{ source.management_reviews }}
+[TODO]
 
 **Transaction Reviews**:
 - Approval workflows
@@ -151,7 +162,7 @@ Control activities are the actions established through policies and procedures t
 - Quality checks
 - Sample reviews
 
-{{ source.transaction_reviews }}
+[TODO]
 
 ## Technology Controls
 
@@ -163,7 +174,7 @@ Control activities are the actions established through policies and procedures t
 - Password policies
 - Privileged access management
 
-{{ source.access_controls }}
+[TODO]
 
 **Change Management**:
 - Change requests
@@ -172,7 +183,7 @@ Control activities are the actions established through policies and procedures t
 - Implementation
 - Documentation
 
-{{ source.change_management }}
+[TODO]
 
 **Backup and Recovery**:
 - Backup procedures
@@ -180,7 +191,7 @@ Control activities are the actions established through policies and procedures t
 - Recovery tests
 - Disaster recovery
 
-{{ source.backup_recovery }}
+[TODO]
 
 **Operations Controls**:
 - Job scheduling
@@ -188,7 +199,7 @@ Control activities are the actions established through policies and procedures t
 - Incident management
 - Problem management
 
-{{ source.operations_controls }}
+[TODO]
 
 ### Application Controls
 
@@ -198,7 +209,7 @@ Control activities are the actions established through policies and procedures t
 - Range checks
 - Required field checks
 
-{{ source.input_controls }}
+[TODO]
 
 **Processing Controls**:
 - Calculation logic
@@ -206,7 +217,7 @@ Control activities are the actions established through policies and procedures t
 - Error handling
 - Transaction logging
 
-{{ source.processing_controls }}
+[TODO]
 
 **Output Controls**:
 - Report validation
@@ -214,7 +225,7 @@ Control activities are the actions established through policies and procedures t
 - Output reconciliations
 - Archiving
 
-{{ source.output_controls }}
+[TODO]
 
 ### Cybersecurity Controls
 
@@ -224,7 +235,7 @@ Control activities are the actions established through policies and procedures t
 - Network segmentation
 - VPN
 
-{{ source.network_security }}
+[TODO]
 
 **Data Security**:
 - Encryption
@@ -232,7 +243,7 @@ Control activities are the actions established through policies and procedures t
 - Data classification
 - Data Loss Prevention
 
-{{ source.data_security }}
+[TODO]
 
 **Endpoint Security**:
 - Antivirus/Antimalware
@@ -240,7 +251,7 @@ Control activities are the actions established through policies and procedures t
 - Patch Management
 - Device Management
 
-{{ source.endpoint_security }}
+[TODO]
 
 ## Policies and Procedures
 
@@ -252,17 +263,17 @@ Control activities are the actions established through policies and procedures t
 3. Procedures
 4. Work instructions
 
-{{ source.policy_hierarchy }}
+[TODO]
 
-**Policy Development**: {{ source.policy_development }}
+**Policy Development**: [TODO]
 
-**Policy Approval**: {{ source.policy_approval }}
+**Policy Approval**: [TODO]
 
-**Policy Communication**: {{ source.policy_communication }}
+**Policy Communication**: [TODO]
 
 ### Procedure Documentation
 
-**Procedure Standards**: {{ source.procedure_standards }}
+**Procedure Standards**: [TODO]
 
 **Procedure Contents**:
 - Purpose and scope
@@ -271,45 +282,45 @@ Control activities are the actions established through policies and procedures t
 - Controls
 - Exception handling
 
-{{ source.procedure_contents }}
+[TODO]
 
-**Procedure Updates**: {{ source.procedure_updates }}
+**Procedure Updates**: [TODO]
 
 ### Compliance Monitoring
 
-**Compliance Assessments**: {{ source.compliance_assessments }}
+**Compliance Assessments**: [TODO]
 
-**Exceptions and Deviations**: {{ source.exceptions_deviations }}
+**Exceptions and Deviations**: [TODO]
 
-**Corrective Actions**: {{ source.corrective_actions }}
+**Corrective Actions**: [TODO]
 
 ## Control Design and Implementation
 
 ### Control Design Principles
 
-**Effectiveness**: {{ source.control_effectiveness }}
+**Effectiveness**: [TODO]
 
-**Efficiency**: {{ source.control_efficiency }}
+**Efficiency**: [TODO]
 
-**Appropriateness**: {{ source.control_appropriateness }}
+**Appropriateness**: [TODO]
 
-**Sustainability**: {{ source.control_sustainability }}
+**Sustainability**: [TODO]
 
 ### Control Implementation
 
-**Implementation Planning**: {{ source.implementation_planning }}
+**Implementation Planning**: [TODO]
 
-**Training and Communication**: {{ source.training_communication }}
+**Training and Communication**: [TODO]
 
-**Testing and Validation**: {{ source.testing_validation }}
+**Testing and Validation**: [TODO]
 
-**Go-Live and Monitoring**: {{ source.golive_monitoring }}
+**Go-Live and Monitoring**: [TODO]
 
 ### Control Assessment
 
-**Design Effectiveness**: {{ source.design_effectiveness }}
+**Design Effectiveness**: [TODO]
 
-**Operating Effectiveness**: {{ source.operating_effectiveness }}
+**Operating Effectiveness**: [TODO]
 
 **Testing Methods**:
 - Inquiries
@@ -317,35 +328,35 @@ Control activities are the actions established through policies and procedures t
 - Inspection of documents
 - Re-performance of control
 
-{{ source.testing_methods }}
+[TODO]
 
 ## Control Monitoring
 
 ### Ongoing Monitoring
 
-**Management Monitoring**: {{ source.management_monitoring }}
+**Management Monitoring**: [TODO]
 
-**Automated Monitoring**: {{ source.automated_monitoring }}
+**Automated Monitoring**: [TODO]
 
-**Self-Assessments**: {{ source.self_assessments }}
+**Self-Assessments**: [TODO]
 
 ### Separate Evaluations
 
-**Internal Audits**: {{ source.internal_audits }}
+**Internal Audits**: [TODO]
 
-**External Audits**: {{ source.external_audits }}
+**External Audits**: [TODO]
 
-**Compliance Reviews**: {{ source.compliance_reviews }}
+**Compliance Reviews**: [TODO]
 
 ### Control Deficiencies
 
-**Identification**: {{ source.deficiency_identification }}
+**Identification**: [TODO]
 
-**Assessment**: {{ source.deficiency_assessment }}
+**Assessment**: [TODO]
 
-**Reporting**: {{ source.deficiency_reporting }}
+**Reporting**: [TODO]
 
-**Remediation**: {{ source.deficiency_remediation }}
+**Remediation**: [TODO]
 
 ## Documentation and Evidence
 
@@ -368,29 +379,29 @@ Control activities are the actions established through policies and procedures t
    - Exceptions
    - Corrective actions
 
-{{ source.required_documentation }}
+[TODO]
 
 ### Retention Requirements
 
-{{ source.retention_requirements }}
+[TODO]
 
 ## Continuous Improvement
 
 ### Control Optimization
 
-**Efficiency Improvements**: {{ source.efficiency_improvements }}
+**Efficiency Improvements**: [TODO]
 
-**Automation**: {{ source.control_automation }}
+**Automation**: [TODO]
 
-**Standardization**: {{ source.control_standardization }}
+**Standardization**: [TODO]
 
 ### Lessons Learned
 
-**Post-implementation Reviews**: {{ source.post_implementation_reviews }}
+**Post-implementation Reviews**: [TODO]
 
-**Best Practices**: {{ source.best_practices }}
+**Best Practices**: [TODO]
 
-**Knowledge Management**: {{ source.knowledge_management }}
+**Knowledge Management**: [TODO]
 
 ## References
 
@@ -401,13 +412,5 @@ Control activities are the actions established through policies and procedures t
 - NIST Cybersecurity Framework
 
 <!-- Author notes: Update control descriptions when processes change -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

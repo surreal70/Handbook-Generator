@@ -1,13 +1,24 @@
----
+
 Document-ID: soc1-0100
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Control Environment - Overview
+
+**Document-ID:** [FRAMEWORK]-0100
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -39,7 +50,7 @@ The control environment forms the foundation for the entire internal control sys
 - Management of conflicts of interest
 - Whistleblower mechanisms
 
-**Documentation**: {{ source.integrity_ethics_documentation }}
+**Documentation**: [TODO]
 
 ### 2. Board Oversight
 
@@ -51,7 +62,7 @@ The control environment forms the foundation for the entire internal control sys
 - Oversight functions
 - Committees (Audit, Risk, Compliance)
 
-**Documentation**: {{ source.board_oversight_documentation }}
+**Documentation**: [TODO]
 
 ### 3. Organizational Structure and Authority
 
@@ -63,7 +74,7 @@ The control environment forms the foundation for the entire internal control sys
 - Delegation of authority
 - Segregation of duties
 
-**Documentation**: {{ source.organizational_structure_documentation }}
+**Documentation**: [TODO]
 
 ### 4. Competence and Accountability
 
@@ -76,7 +87,7 @@ The control environment forms the foundation for the entire internal control sys
 - Performance management
 - Succession planning
 
-**Documentation**: {{ source.competence_accountability_documentation }}
+**Documentation**: [TODO]
 
 ### 5. Human Resources Policies
 
@@ -89,7 +100,7 @@ The control environment forms the foundation for the entire internal control sys
 - Performance evaluation
 - Disciplinary actions
 
-**Documentation**: {{ source.hr_policies_documentation }}
+**Documentation**: [TODO]
 
 ## Trust Services Criteria CC1
 
@@ -98,56 +109,56 @@ The control environment forms the foundation for the entire internal control sys
 **Criterion**: The organization demonstrates a commitment to integrity and ethical values.
 
 **Control Activities**:
-{{ source.cc1_1_controls }}
+[TODO]
 
 **Evidence**:
-{{ source.cc1_1_evidence }}
+[TODO]
 
 ### CC1.2 - COSO Principle 2: Board Oversight
 
 **Criterion**: The board of directors demonstrates independence from management and exercises oversight over the development and performance of internal control.
 
 **Control Activities**:
-{{ source.cc1_2_controls }}
+[TODO]
 
 **Evidence**:
-{{ source.cc1_2_evidence }}
+[TODO]
 
 ### CC1.3 - COSO Principle 3: Organizational Structure
 
 **Criterion**: Management establishes, with board oversight, structures, reporting lines, and appropriate authorities and responsibilities.
 
 **Control Activities**:
-{{ source.cc1_3_controls }}
+[TODO]
 
 **Evidence**:
-{{ source.cc1_3_evidence }}
+[TODO]
 
 ### CC1.4 - COSO Principle 4: Competence
 
 **Criterion**: The organization demonstrates a commitment to attract, develop, and retain competent individuals.
 
 **Control Activities**:
-{{ source.cc1_4_controls }}
+[TODO]
 
 **Evidence**:
-{{ source.cc1_4_evidence }}
+[TODO]
 
 ### CC1.5 - COSO Principle 5: Accountability
 
 **Criterion**: The organization holds individuals accountable for their internal control responsibilities.
 
 **Control Activities**:
-{{ source.cc1_5_controls }}
+[TODO]
 
 **Evidence**:
-{{ source.cc1_5_evidence }}
+[TODO]
 
 ## Control Environment Assessment
 
 ### Assessment Methodology
 
-**Approach**: {{ source.assessment_approach }}
+**Approach**: [TODO]
 
 **Assessment Criteria**:
 1. Design effectiveness
@@ -156,11 +167,11 @@ The control environment forms the foundation for the entire internal control sys
 
 ### Assessment Results
 
-**Strengths**: {{ source.control_environment_strengths }}
+**Strengths**: [TODO]
 
-**Areas for Improvement**: {{ source.control_environment_improvements }}
+**Areas for Improvement**: [TODO]
 
-**Action Plan**: {{ source.control_environment_action_plan }}
+**Action Plan**: [TODO]
 
 ## Documentation Requirements
 
@@ -187,21 +198,21 @@ The control environment forms the foundation for the entire internal control sys
 
 ### Retention Requirements
 
-{{ source.retention_requirements }}
+[TODO]
 
 ## Monitoring and Reporting
 
 ### Monitoring Activities
 
-**Ongoing Monitoring**: {{ source.ongoing_monitoring }}
+**Ongoing Monitoring**: [TODO]
 
-**Separate Evaluations**: {{ source.separate_evaluations }}
+**Separate Evaluations**: [TODO]
 
-**Reporting**: {{ source.control_environment_reporting }}
+**Reporting**: [TODO]
 
 ### Escalation Process
 
-{{ source.escalation_process }}
+[TODO]
 
 ## References
 
@@ -211,13 +222,5 @@ The control environment forms the foundation for the entire internal control sys
 - SOC 1 Control Environment Guidance
 
 <!-- Author notes: Update control environment assessment annually -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

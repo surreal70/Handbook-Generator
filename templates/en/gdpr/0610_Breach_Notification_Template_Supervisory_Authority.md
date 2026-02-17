@@ -1,11 +1,16 @@
 # Breach Notification Template (Supervisory Authority)
 
-**Document-ID:** 0610  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Template  
-**Classification:** Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0610
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -28,11 +33,9 @@ Reference: GDPR Art. 33 (Notification to supervisory authority)
 **Date:** [TODO: YYYY-MM-DD]  
 **Breach-ID:** [TODO: BREACH-YYYY-NNN]  
 
----
-
 ### 1. Controller
 
-**Organization:** {{ meta.organization }}  
+**Organization:** {{ meta-organisation.name }}  
 **Address:** [TODO: Full address]  
 **Contact Person:** [TODO: Name, Function]  
 **Phone:** [TODO: Phone number]  
@@ -43,8 +46,6 @@ Reference: GDPR Art. 33 (Notification to supervisory authority)
 **Name:** [TODO: Name of Data Protection Officer]  
 **Phone:** [TODO: Phone number]  
 **Email:** [TODO: Email address]  
-
----
 
 ## A. Nature of the Breach (Art. 33(3)(a))
 
@@ -113,8 +114,6 @@ If Yes, which: [TODO: e.g., Children, Patients, Disabled persons]
 
 **Approximate number:** [TODO: e.g., 5,000 records]
 
----
-
 ## B. Contact Point (Art. 33(3)(b))
 
 **Name and contact details of the Data Protection Officer:**
@@ -129,8 +128,6 @@ Availability: [TODO: e.g., Mon-Fri 9am-5pm, Emergency 24/7]
 Name: [TODO: Name, Function]  
 Phone: [TODO: Phone number]  
 Email: [TODO: Email address]  
-
----
 
 ## C. Likely Consequences (Art. 33(3)(c))
 
@@ -156,8 +153,6 @@ Email: [TODO: Email address]
 
 **Justification of Risk Assessment:**  
 [TODO: Explain why the risk was assessed this way, considering type of data, number of data subjects, protective measures, etc.]
-
----
 
 ## D. Measures Taken (Art. 33(3)(d))
 
@@ -199,8 +194,6 @@ Email: [TODO: Email address]
    - Planned time: [TODO: YYYY-MM-DD]
    - Responsible: [TODO: Name/Role]
 
----
-
 ## E. Communication to Data Subjects (Art. 34)
 
 **Were data subjects notified?**  
@@ -220,8 +213,6 @@ Email: [TODO: Email address]
 **Explanation:**  
 [TODO: Justify why no communication occurred or why the chosen method is appropriate]
 
----
-
 ## F. Cross-Border Processing
 
 **Is there cross-border processing?**  
@@ -231,8 +222,6 @@ Email: [TODO: Email address]
 - Main establishment: [TODO: Country]
 - Other affected Member States: [TODO: Countries]
 - Lead supervisory authority: [TODO: Name]
-
----
 
 ## G. Processor Involved
 
@@ -244,8 +233,6 @@ Email: [TODO: Email address]
 | Processor | Role | Notified | Time |
 |-----------|------|----------|------|
 | [TODO: Name] | [TODO: e.g., Cloud provider] | [ ] Yes [ ] No | [TODO: YYYY-MM-DD] |
-
----
 
 ## H. Additional Information
 
@@ -274,8 +261,6 @@ If Yes:
 - Case number: [TODO]
 - Date: [TODO: YYYY-MM-DD]
 
----
-
 ## I. Attachments
 
 [ ] Timeline of events  
@@ -283,8 +268,6 @@ If Yes:
 [ ] Forensic analysis  
 [ ] Communication to data subjects (sample)  
 [ ] Other: [TODO]
-
----
 
 ## J. Declaration
 
@@ -297,8 +280,6 @@ I hereby confirm that the above information is complete and truthful to the best
 **Function:** [TODO: Function]
 
 **Signature:** _______________________
-
----
 
 ## K. Submission Notes
 
@@ -316,8 +297,6 @@ Include justification for delay (Art. 33(1))
 **Subsequent submission of information:**  
 If not all information is immediately available, it can be submitted in phases (Art. 33(4))
 
----
-
 **Internal Notes:**
 
 Created by: [TODO: Name]  
@@ -326,10 +305,3 @@ Approved by: [TODO: Management]
 Submitted on: [TODO: YYYY-MM-DD HH:MM]  
 Authority case number: [TODO: Enter after receipt]
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

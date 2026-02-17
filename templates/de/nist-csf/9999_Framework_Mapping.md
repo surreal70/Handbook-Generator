@@ -1,5 +1,19 @@
 # NIST CSF 2.0 Framework-Mapping
 
+**Dokument-ID:** [FRAMEWORK]-9999
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Überblick
 
 Dieses Dokument ordnet die Handbuch-Vorlagen den NIST Cybersecurity Framework 2.0 Kategorien und Unterkategorien zu.
@@ -357,8 +371,3 @@ Profile ermöglichen die Bewertung des aktuellen Cybersecurity-Zustands und die 
 
 Diese Vorlagen decken alle Kernfunktionen und Kategorien des NIST CSF 2.0 ab. Organisationen sollten die Vorlagen an ihre spezifischen Anforderungen und Risikoprofile anpassen.
 
-## Versionshistorie
-
-| Version | Datum | Änderungen |
-|---------|-------|------------|
-| 0.1 | {{meta.document.last_updated}} | Initiale Erstellung |

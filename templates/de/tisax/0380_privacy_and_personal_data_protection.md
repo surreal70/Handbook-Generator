@@ -1,17 +1,28 @@
----
+
 Document-ID: tisax-0550
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Datenschutz und Schutz personenbezogener Daten
 
+**Dokument-ID:** [FRAMEWORK]-0380
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt den Datenschutz bei {{ source.organization_name }}.
+Dieses Dokument beschreibt den Datenschutz bei [TODO].
 
 ## Datenschutzgrundsätze
 
@@ -52,17 +63,8 @@ Dieses Dokument beschreibt den Datenschutz bei {{ source.organization_name }}.
 
 ## Datenschutzbeauftragter
 
-**Name**: {{ source.data_protection_officer }}
-**Kontakt**: {{ source.dpo_contact }}
+**Name**: [TODO]
+**Kontakt**: [TODO]
 
 <!-- Hinweis: Halten Sie DSGVO-Compliance ein -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

@@ -1,13 +1,16 @@
 # Network Security Testing
 
-**Document ID:** PCI-0510  
-**Organization:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Approved by:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0510
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,7 +28,7 @@ Customization required:
 
 ## 1. Purpose
 
-This document defines the network security testing requirements for {{ meta.organization.name }} in accordance with PCI-DSS Requirement 11.
+This document defines the network security testing requirements for {{ meta-organisation.name }} in accordance with PCI-DSS Requirement 11.
 
 ### 1.1 Objectives
 
@@ -405,13 +408,5 @@ This document defines the network security testing requirements for {{ meta.orga
 - Segmentation test reports
 - FIM configuration and logs
 - IDS/IPS configuration and logs
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 <!-- End of template -->

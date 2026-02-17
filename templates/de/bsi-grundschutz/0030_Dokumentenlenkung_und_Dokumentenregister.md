@@ -1,14 +1,16 @@
 # Dokumentenlenkung und Dokumentenregister
 
-**Dokument-ID:** 0030  
-**Dokumenttyp:** Prozess/Grundlage  
-**Referenzrahmen:** BSI IT-Grundschutz (BSI Standards 200-1/200-2/200-3)  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** {{ meta.document.status }}  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0030
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -21,7 +23,7 @@ Reference: BSI Standard 200-1 (Documentation Requirements)
 
 ## 1. Zweck und Geltungsbereich
 
-Dieses Dokument beschreibt die Dokumentenlenkung für das Informationssicherheits-Managementsystem (ISMS) von **{{ meta.organization.name }}**. Es definiert Prozesse für Erstellung, Review, Freigabe, Verteilung, Änderung und Archivierung von ISMS-Dokumenten.
+Dieses Dokument beschreibt die Dokumentenlenkung für das Informationssicherheits-Managementsystem (ISMS) von **{{ meta-organisation.name }}**. Es definiert Prozesse für Erstellung, Review, Freigabe, Verteilung, Änderung und Archivierung von ISMS-Dokumenten.
 
 ### 1.1 Geltungsbereich
 
@@ -38,7 +40,7 @@ Diese Dokumentenlenkung gilt für alle ISMS-relevanten Dokumente:
 
 **Primärer Ablageort:** [TODO: z.B. SharePoint, Confluence, DMS]
 
-**Verantwortlich:** {{ meta.document.owner }}
+**Verantwortlich:** {{ meta-handbook.owner }}
 
 Alle ISMS-Dokumente werden zentral abgelegt in:
 - **Pfad:** [TODO: z.B. /ISMS/Dokumentation/]
@@ -170,16 +172,16 @@ Maintain this register with all ISMS documents. Update regularly.
 
 | Dokument | ID | Owner | Status | Version | Letzte Aktualisierung | Nächster Review |
 |---|---|---|---|---|---|---|
-| Informationssicherheitsleitlinie | 0010 | {{ meta.ciso.name }} | {{ meta.document.status }} | {{ meta.document.version }} | {{ meta.document.last_updated }} | {{ meta.document.next_review }} |
-| ISMS-Organisation, Rollen und RACI | 0020 | {{ meta.ciso.name }} | {{ meta.document.status }} | {{ meta.document.version }} | {{ meta.document.last_updated }} | {{ meta.document.next_review }} |
-| Dokumentenlenkung | 0030 | {{ meta.ciso.name }} | {{ meta.document.status }} | {{ meta.document.version }} | {{ meta.document.last_updated }} | {{ meta.document.next_review }} |
+| Informationssicherheitsleitlinie | 0010 | {{ meta.ciso.name }} | {{ meta-handbook.status }} | {{ meta-handbook.revision }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
+| ISMS-Organisation, Rollen und RACI | 0020 | {{ meta.ciso.name }} | {{ meta-handbook.status }} | {{ meta-handbook.revision }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
+| Dokumentenlenkung | 0030 | {{ meta.ciso.name }} | {{ meta-handbook.status }} | {{ meta-handbook.revision }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
 | [TODO: Weitere Dokumente ergänzen] | | | | | | |
 
 ## 5. Änderungsprotokoll
 
 | Version | Datum | Änderung | Autor | Genehmiger | Status |
 |---|---|---|---|---|---|
-| 0.1 | {{ meta.document.last_updated }} | Erster Entwurf | {{ meta.document.owner }} | - | Entwurf |
+| 0.1 | {{ meta-handbook.modifydate }} | Erster Entwurf | {{ meta-handbook.owner }} | - | Entwurf |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## 6. Qualitätssicherung
@@ -220,20 +222,10 @@ Der Dokumentenlenkungsprozess wird regelmäßig überwacht:
 - **Review:** Jährliche Überprüfung des Prozesses
 - **Verbesserung:** Kontinuierliche Optimierung basierend auf Feedback
 
-**Nächster Review:** {{ meta.document.next_review }}
-
----
+**Nächster Review:** {{ meta-handbook.next_review }}
 
 **Referenzen:**
 - BSI Standard 200-1: Managementsysteme für Informationssicherheit (ISMS)
 - BSI Standard 200-2: IT-Grundschutz-Methodik
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 <!-- End of template -->

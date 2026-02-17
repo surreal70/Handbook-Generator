@@ -1,14 +1,16 @@
 # Richtlinie: Backup Restore und Regelmaessige Tests
 
-**Dokument-ID:** 0450  
-**Dokumenttyp:** Richtlinie/Standard (konkret)  
-**Referenzrahmen:** BSI IT-Grundschutz (BSI Standards 200-1/200-2/200-3)  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** {{ meta.document.status }}  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0450
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -107,27 +109,17 @@ Ausnahmen von dieser Richtlinie sind nur über den **Ausnahmenprozess (Dokument 
 Diese Richtlinie wird regelmäßig überprüft:
 - **Frequenz:** Jährlich oder bei wesentlichen Änderungen
 - **Verantwortlich:** {{ meta.cio.name }}
-- **Nächster Review:** {{ meta.document.next_review }}
+- **Nächster Review:** {{ meta-handbook.next_review }}
 
 ## 10. Freigabe
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| IT-Leitung | {{ meta.cio.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| ISB | {{ meta.ciso.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| IT-Leitung | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **Referenzen:**
 - BSI IT-Grundschutz-Kompendium
 - Dokument 0440: Policy: Backup und Wiederherstellung
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 <!-- End of template -->

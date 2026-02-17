@@ -1,11 +1,16 @@
 # Integrity and Confidentiality
 
-**Document-ID:** 0150  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0150
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -23,7 +28,7 @@ Reference: GDPR Art. 5(1)(f) (Integrity and confidentiality), Art. 32 (Security 
 
 ## Purpose
 
-This document describes the implementation of the principle of integrity and confidentiality in {{ meta.organization }}. Personal data must be processed securely and protected from unauthorized access.
+This document describes the implementation of the principle of integrity and confidentiality in {{ meta-organisation.name }}. Personal data must be processed securely and protected from unauthorized access.
 
 ## Principle according to Art. 5(1)(f) GDPR
 
@@ -276,8 +281,6 @@ Personal data must be processed in a manner that ensures appropriate security of
 | Excessive permissions | Everyone has admin rights | Implement permission concept |
 | No backups | Data loss without recovery | Implement backup strategy |
 
----
-
 **Next Steps:**
 1. Implement comprehensive TOM according to Art. 32
 2. Establish access control and permission concept
@@ -285,10 +288,3 @@ Personal data must be processed in a manner that ensures appropriate security of
 4. Set up backup and recovery processes
 5. Establish incident response process
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0110
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Asset-Inventar
+
+**Dokument-ID:** [FRAMEWORK]-0110
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -15,7 +26,7 @@ Dieses Dokument beschreibt die Anforderungen und Prozesse für die Führung eine
 
 ## Geltungsbereich
 
-Dieses Dokument gilt für alle Assets von {{ source.organization_name }}, die im Rahmen von TISAX-relevanten Prozessen erfasst werden müssen.
+Dieses Dokument gilt für alle Assets von [TODO], die im Rahmen von TISAX-relevanten Prozessen erfasst werden müssen.
 
 ## Inventar-Anforderungen
 
@@ -34,7 +45,7 @@ Das Asset-Inventar muss alle relevanten Assets erfassen:
 
 Das Inventar muss aktuell gehalten werden:
 
-- Neue Assets werden innerhalb von {{ source.asset_registration_timeframe }} erfasst
+- Neue Assets werden innerhalb von [TODO] erfasst
 - Änderungen werden zeitnah dokumentiert
 - Außerbetriebnahmen werden umgehend vermerkt
 - Regelmäßige Validierung der Inventardaten
@@ -51,7 +62,7 @@ Für jedes Asset werden folgende Informationen erfasst:
 | Asset-Name | Bezeichnung | Produktionsserver 01 |
 | Asset-Typ | Kategorie | Server |
 | Beschreibung | Detaillierte Beschreibung | Hauptproduktionsserver für ERP-System |
-| Asset Owner | Verantwortlicher | {{ source.default_asset_owner }} |
+| Asset Owner | Verantwortlicher | [TODO] |
 | Standort | Physischer/logischer Ort | Rechenzentrum A, Rack 12 |
 | Status | Betriebsstatus | In Betrieb |
 | Klassifizierung | Schutzbedarf | Vertraulich |
@@ -76,12 +87,12 @@ Zusätzliche Informationen je nach Asset-Typ:
 
 #### Automatisierte Erfassung
 
-{{ source.organization_name }} nutzt folgende Tools:
+[TODO] nutzt folgende Tools:
 
-- **Network Discovery**: {{ source.network_discovery_tool }}
-- **Endpoint Management**: {{ source.endpoint_management_tool }}
-- **Cloud Asset Management**: {{ source.cloud_asset_tool }}
-- **CMDB Integration**: {{ source.cmdb_system }}
+- **Network Discovery**: [TODO]
+- **Endpoint Management**: [TODO]
+- **Cloud Asset Management**: [TODO]
+- **CMDB Integration**: [TODO]
 
 #### Manuelle Erfassung
 
@@ -198,12 +209,12 @@ Bei Außerbetriebnahme:
 
 ### Inventar-System
 
-{{ source.organization_name }} nutzt folgendes System für das Asset-Inventar:
+[TODO] nutzt folgendes System für das Asset-Inventar:
 
-- **System**: {{ source.asset_inventory_system }}
-- **Zugriff**: {{ source.asset_inventory_access }}
-- **Backup**: {{ source.asset_inventory_backup }}
-- **Integration**: {{ source.asset_inventory_integration }}
+- **System**: [TODO]
+- **Zugriff**: [TODO]
+- **Backup**: [TODO]
+- **Integration**: [TODO]
 
 ## Inventar-Validierung
 
@@ -309,7 +320,7 @@ Für TISAX-Assessments:
 
 ## Kennzahlen
 
-{{ source.organization_name }} misst:
+[TODO] misst:
 
 - Anzahl erfasster Assets nach Kategorie
 - Inventar-Vollständigkeit (Ziel: >95%)
@@ -320,12 +331,3 @@ Für TISAX-Assessments:
 
 <!-- Hinweis: Passen Sie die Tools und Kennzahlen an Ihre Organisation an -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

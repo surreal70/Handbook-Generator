@@ -1,11 +1,16 @@
 # Communication
 
-**Document-ID:** 0320  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0320
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -344,8 +349,6 @@ This document defines internal and external communications relevant to the quali
 - Increase communication frequency
 - Provide communication training
 
----
-
 **Next Steps:**
 1. Complete communication planning for all relevant communications
 2. Establish communication methods and channels
@@ -354,10 +357,3 @@ This document defines internal and external communications relevant to the quali
 5. Monitor communication effectiveness
 6. Continuously improve communication processes
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

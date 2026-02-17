@@ -1,12 +1,26 @@
 # Log Management und Audit
 
+**Dokument-ID:** [FRAMEWORK]-0190
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck und Geltungsbereich
 
-Dieses Dokument beschreibt die Log-Management- und Audit-Prozesse für {{ meta.organization.name }}. Es definiert Log-Sammlung, -Aggregation, -Retention, Audit-Trail-Anforderungen und SIEM-Integration zur Sicherstellung von Nachvollziehbarkeit, Compliance und Security-Monitoring.
+Dieses Dokument beschreibt die Log-Management- und Audit-Prozesse für {{ meta-organisation.name }}. Es definiert Log-Sammlung, -Aggregation, -Retention, Audit-Trail-Anforderungen und SIEM-Integration zur Sicherstellung von Nachvollziehbarkeit, Compliance und Security-Monitoring.
 
-**Geltungsbereich:** Alle IT-Systeme, Netzwerke, Applikationen und Security-Komponenten von {{ meta.organization.name }}
+**Geltungsbereich:** Alle IT-Systeme, Netzwerke, Applikationen und Security-Komponenten von {{ meta-organisation.name }}
 
-**Verantwortlich:** {{ meta.ciso.name }} ({{ meta.ciso.email }})
+**Verantwortlich:** {{ meta-organisation-roles.role_ciso.name }} ({{ meta-organisation-roles.role_ciso.email }})
 
 ## Log-Management-Grundlagen
 
@@ -225,21 +239,21 @@ Dieses Dokument beschreibt die Log-Management- und Audit-Prozesse für {{ meta.o
 
 ### Log-Aggregation-Platform
 
-**SIEM-System:** {{ meta.siem_system }}  
-**Version:** {{ meta.siem_version }}  
-**Management-URL:** {{ meta.siem_url }}
+**SIEM-System:** {{ meta-handbook.siem_system }}  
+**Version:** [TODO]  
+**Management-URL:** {{ meta-handbook.siem_url }}
 
 **Komponenten:**
-- **Log-Collectors:** {{ meta.log_collectors }}
-- **Indexer:** {{ meta.log_indexers }}
-- **Search-Heads:** {{ meta.log_search_heads }}
-- **Storage:** {{ meta.log_storage }}
+- **Log-Collectors:** {{ meta-handbook.log_collectors }}
+- **Indexer:** {{ meta-handbook.log_indexers }}
+- **Search-Heads:** {{ meta-handbook.log_search_heads }}
+- **Storage:** {{ meta-handbook.log_storage }}
 
 **Kapazität:**
-- **Ingestion-Rate:** {{ meta.log_ingestion_rate }} GB/Tag
-- **Storage-Kapazität:** {{ meta.log_storage_capacity }} TB
-- **Retention (Hot):** {{ meta.log_retention_hot }} Tage
-- **Retention (Cold):** {{ meta.log_retention_cold }} Tage
+- **Ingestion-Rate:** {{ meta-handbook.log_ingestion_rate }} GB/Tag
+- **Storage-Kapazität:** {{ meta-handbook.log_storage_capacity }} TB
+- **Retention (Hot):** {{ meta-handbook.log_retention_hot }} Tage
+- **Retention (Cold):** {{ meta-handbook.log_retention_cold }} Tage
 
 ### Log-Quellen-Konfiguration
 
@@ -250,16 +264,16 @@ Dieses Dokument beschreibt die Log-Management- und Audit-Prozesse für {{ meta.o
 # /etc/rsyslog.d/50-remote.conf
 
 # Alle Logs an zentralen Syslog-Server senden
-*.* @@syslog.{{ meta.organization.domain }}:514
+*.* @@syslog.{{ meta-organisation.domain }}:514
 
 # Nur Security-Logs senden
-authpriv.* @@syslog.{{ meta.organization.domain }}:514
+authpriv.* @@syslog.{{ meta-organisation.domain }}:514
 
 # TLS-verschlüsselt
 $DefaultNetstreamDriver gtls
 $ActionSendStreamDriverMode 1
 $ActionSendStreamDriverAuthMode x509/name
-*.* @@syslog.{{ meta.organization.domain }}:6514
+*.* @@syslog.{{ meta-organisation.domain }}:6514
 ```
 
 #### Windows-Server
@@ -275,7 +289,7 @@ wecutil cs subscription.xml
 # Subscription-XML
 <Subscription>
   <SubscriptionId>Security-Events</SubscriptionId>
-  <DestinationUrl>http://wec-server.{{ meta.organization.domain }}:5985/wsman</DestinationUrl>
+  <DestinationUrl>http://wec-server.{{ meta-organisation.domain }}:5985/wsman</DestinationUrl>
   <Query>
     <QueryList>
       <Query Id="0">
@@ -426,7 +440,7 @@ audit_log_format = JSON
 - Integrität: SHA-256 Checksums
 - Metadaten: JSON-Index
 
-**Archiv-Speicherort:** {{ meta.log_archive_location }}
+**Archiv-Speicherort:** {{ meta-handbook.log_archive_location }}
 
 ### Log-Löschung
 
@@ -449,7 +463,7 @@ audit_log_format = JSON
 
 ### SIEM-Integration
 
-**SIEM-System:** {{ meta.siem_system }}
+**SIEM-System:** {{ meta-handbook.siem_system }}
 
 **Funktionen:**
 - **Real-time Monitoring:** Echtzeit-Überwachung
@@ -574,9 +588,9 @@ THEN alert "Unauthorized Configuration Change"
 ### Alerting
 
 **Alert-Kanäle:**
-- **E-Mail:** {{ meta.alert_email }}
+- **E-Mail:** {{ meta-handbook.alert_email }}
 - **SMS:** Für kritische Alerts
-- **Ticketing:** {{ meta.ticketing_system }}
+- **Ticketing:** {{ meta-handbook.ticketing_system }}
 - **SIEM-Console:** Real-time Alerts
 - **Slack/Teams:** Team-Benachrichtigungen
 
@@ -724,7 +738,7 @@ THEN alert "Unauthorized Configuration Change"
 
 ### SIEM-Platform
 
-**System:** {{ meta.siem_system }}  
+**System:** {{ meta-handbook.siem_system }}  
 **Komponenten:**
 - Indexer
 - Search-Heads
@@ -771,7 +785,7 @@ THEN alert "Unauthorized Configuration Change"
 - Retention-Policy-Umsetzung
 - Tool-Administration
 
-**Team-Lead:** {{ meta.it_operations_manager.name }}
+**Team-Lead:** {{ meta-organisation-roles.role_it_operations_manager.name }}
 
 ### Security-Operations-Team
 
@@ -781,7 +795,7 @@ THEN alert "Unauthorized Configuration Change"
 - Use-Case-Entwicklung
 - Threat-Hunting
 
-**Team-Lead:** {{ meta.ciso.name }}
+**Team-Lead:** {{ meta-organisation-roles.role_ciso.name }}
 
 ### Compliance-Officer
 
@@ -791,7 +805,7 @@ THEN alert "Unauthorized Configuration Change"
 - Retention-Policy-Review
 - Regulierungs-Überwachung
 
-**Person:** {{ meta.compliance_officer }}
+**Person:** {{ meta-organisation-roles.role_Compliance_Manager }}
 
 ## Metriken und Reporting
 
@@ -840,18 +854,9 @@ THEN alert "Unauthorized Configuration Change"
 - CIS Controls v8 - Control 8 (Audit Log Management)
 - ITIL v4 - Monitoring and Event Management
 
----
+**Dokumentverantwortlicher:** {{ meta-handbook.owner }}  
+**Genehmigt durch:** {{ meta-handbook.approver }}  
+**Version:** {{ meta-handbook.revision }}  
+**Klassifizierung:** {{ meta-handbook.classification }}  
+**Letzte Aktualisierung:** {{ meta-handbook.date }}
 
-**Dokumentverantwortlicher:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.date }}
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

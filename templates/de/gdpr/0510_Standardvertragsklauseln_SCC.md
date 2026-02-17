@@ -1,11 +1,16 @@
 # Standardvertragsklauseln (SCC)
 
-**Dokument-ID:** 0510  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0510
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,7 +30,7 @@ Referenz: DSGVO Art. 46 Abs. 2 lit. c, Durchführungsbeschluss (EU) 2021/914
 
 ## Zweck
 
-Dieses Dokument beschreibt die Verwendung von Standardvertragsklauseln (Standard Contractual Clauses, SCC) bei {{ meta.organization }} für die Übermittlung personenbezogener Daten in Drittländer gemäß Art. 46 Abs. 2 lit. c DSGVO.
+Dieses Dokument beschreibt die Verwendung von Standardvertragsklauseln (Standard Contractual Clauses, SCC) bei {{ meta-organisation.name }} für die Übermittlung personenbezogener Daten in Drittländer gemäß Art. 46 Abs. 2 lit. c DSGVO.
 
 ## Neue Standardvertragsklauseln (2021)
 
@@ -52,7 +57,7 @@ Dieses Dokument beschreibt die Verwendung von Standardvertragsklauseln (Standard
 - Datenaustausch zwischen Konzerngesellschaften (beide als Verantwortliche)
 - Übermittlung an ausländische Behörden (soweit zulässig)
 
-**Verwendung bei {{ meta.organization }}:**
+**Verwendung bei {{ meta-organisation.name }}:**
 
 | Übermittlung | Empfänger | Land | Datum Abschluss | Dokumentation |
 |--------------|-----------|------|-----------------|---------------|
@@ -68,7 +73,7 @@ Dieses Dokument beschreibt die Verwendung von Standardvertragsklauseln (Standard
 - Call-Center in Drittländern
 - Lohnabrechnung durch ausländischen Dienstleister
 
-**Verwendung bei {{ meta.organization }}:**
+**Verwendung bei {{ meta-organisation.name }}:**
 
 | Auftragsverarbeiter | Dienstleistung | Land | Datum Abschluss | Dokumentation |
 |---------------------|----------------|------|-----------------|---------------|
@@ -82,7 +87,7 @@ Dieses Dokument beschreibt die Verwendung von Standardvertragsklauseln (Standard
 - Cloud-Provider nutzt Sub-Hosting-Provider
 - IT-Dienstleister lagert Teile an Sub-Dienstleister aus
 
-**Verwendung bei {{ meta.organization }}:**
+**Verwendung bei {{ meta-organisation.name }}:**
 
 | Hauptauftragsverarbeiter | Sub-Auftragsverarbeiter | Land | Datum Abschluss | Dokumentation |
 |-------------------------|------------------------|------|-----------------|---------------|
@@ -96,7 +101,7 @@ Dieses Dokument beschreibt die Verwendung von Standardvertragsklauseln (Standard
 - Auftragsverarbeiter übermittelt Daten an Konzernmutter im Drittland
 - Rückübermittlung von Daten nach Vertragsende
 
-**Verwendung bei {{ meta.organization }}:**
+**Verwendung bei {{ meta-organisation.name }}:**
 
 | Auftragsverarbeiter | Empfänger | Land | Datum Abschluss | Dokumentation |
 |---------------------|-----------|------|-----------------|---------------|
@@ -109,7 +114,7 @@ Dieses Dokument beschreibt die Verwendung von Standardvertragsklauseln (Standard
 #### Teil A: Liste der Parteien
 
 **Datenexporteur (EU):**
-- Name: [TODO: {{ meta.organization }}]
+- Name: [TODO: {{ meta-organisation.name }}]
 - Adresse: [TODO: Adresse]
 - Kontakt: [TODO: Name, E-Mail, Telefon]
 - Rolle: Verantwortlicher / Auftragsverarbeiter
@@ -368,8 +373,6 @@ Gemäß Schrems-II-Urteil muss zusätzlich zu den SCCs ein TIA durchgeführt wer
 - **TOM-Dokumentation (Art. 32):** Detaillierte Sicherheitsmaßnahmen
 - **Transfer Impact Assessment:** Risikobewertung
 
----
-
 **Nächste Schritte:**
 1. Identifizieren Sie alle Drittlandübermittlungen, die SCCs erfordern
 2. Wählen Sie das passende SCC-Modul
@@ -377,10 +380,3 @@ Gemäß Schrems-II-Urteil muss zusätzlich zu den SCCs ein TIA durchgeführt wer
 4. Führen Sie ein Transfer Impact Assessment durch
 5. Schließen Sie die SCCs mit allen Datenimporteuren ab
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

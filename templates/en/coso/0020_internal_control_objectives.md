@@ -1,17 +1,28 @@
----
+
 Document-ID: coso-0020
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Internal Control Objectives
 
+**Document-ID:** [FRAMEWORK]-0020
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document defines the internal control objectives of {{ source.organization_name }} based on the COSO Framework.
+This document defines the internal control objectives of [TODO] based on the COSO Framework.
 
 ## Scope
 
@@ -30,31 +41,31 @@ This document describes:
 **Objective**: Ensure effectiveness and efficiency of business processes
 
 **Specific Objectives**:
-1. {{ source.operations_objective_1 }}
-2. {{ source.operations_objective_2 }}
-3. {{ source.operations_objective_3 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
 
 **Metrics**:
-- {{ source.operations_metrics }}
+- [TODO]
 
 #### Asset Protection
 
 **Objective**: Protect organizational assets from loss, misuse, or damage
 
 **Specific Objectives**:
-1. {{ source.asset_protection_objective_1 }}
-2. {{ source.asset_protection_objective_2 }}
+1. [TODO]
+2. [TODO]
 
 **Control Measures**:
-- {{ source.asset_protection_controls }}
+- [TODO]
 
 #### Resource Optimization
 
 **Objective**: Optimal utilization of available resources
 
 **Specific Objectives**:
-1. {{ source.resource_optimization_objective_1 }}
-2. {{ source.resource_optimization_objective_2 }}
+1. [TODO]
+2. [TODO]
 
 ### 2. Reporting Objectives
 
@@ -69,26 +80,26 @@ This document describes:
 4. Compliance with accounting standards
 
 **Control Activities**:
-- {{ source.financial_reporting_controls }}
+- [TODO]
 
 #### Non-Financial Reporting
 
 **Objective**: Reliable non-financial reporting
 
 **Specific Objectives**:
-1. {{ source.nonfinancial_reporting_objective_1 }}
-2. {{ source.nonfinancial_reporting_objective_2 }}
+1. [TODO]
+2. [TODO]
 
 **Report Types**:
-- {{ source.nonfinancial_report_types }}
+- [TODO]
 
 #### Internal Reporting
 
 **Objective**: Provide relevant information for management decisions
 
 **Specific Objectives**:
-1. {{ source.internal_reporting_objective_1 }}
-2. {{ source.internal_reporting_objective_2 }}
+1. [TODO]
+2. [TODO]
 
 ### 3. Compliance Objectives
 
@@ -97,85 +108,85 @@ This document describes:
 **Objective**: Compliance with all applicable laws and regulations
 
 **Specific Objectives**:
-1. {{ source.legal_compliance_objective_1 }}
-2. {{ source.legal_compliance_objective_2 }}
-3. {{ source.legal_compliance_objective_3 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
 
 **Applicable Laws**:
-- {{ source.applicable_laws }}
+- [TODO]
 
 #### Regulatory Compliance
 
 **Objective**: Compliance with industry-specific regulations
 
 **Specific Objectives**:
-1. {{ source.regulatory_compliance_objective_1 }}
-2. {{ source.regulatory_compliance_objective_2 }}
+1. [TODO]
+2. [TODO]
 
 **Regulatory Authorities**:
-- {{ source.regulatory_authorities }}
+- [TODO]
 
 #### Internal Policies
 
 **Objective**: Compliance with internal policies and standards
 
 **Specific Objectives**:
-1. {{ source.policy_compliance_objective_1 }}
-2. {{ source.policy_compliance_objective_2 }}
+1. [TODO]
+2. [TODO]
 
 ## Objective Hierarchy
 
 ### Strategic Objectives
 
-{{ source.strategic_objectives }}
+[TODO]
 
 ### Operational Objectives
 
-{{ source.operational_objectives }}
+[TODO]
 
 ### Functional Objectives
 
-{{ source.functional_objectives }}
+[TODO]
 
 ## Objective Linkages
 
 ### Linkage to Corporate Strategy
 
-{{ source.strategy_linkage }}
+[TODO]
 
 ### Linkage to Risk Management
 
-{{ source.risk_management_linkage }}
+[TODO]
 
 ### Linkage to Performance Management
 
-{{ source.performance_management_linkage }}
+[TODO]
 
 ## Objective Measurement and Monitoring
 
 ### Key Performance Indicators (KPIs)
 
-{{ source.kpis }}
+[TODO]
 
 ### Reporting
 
-**Frequency**: {{ source.reporting_frequency }}
-**Recipients**: {{ source.reporting_recipients }}
-**Format**: {{ source.reporting_format }}
+**Frequency**: [TODO]
+**Recipients**: [TODO]
+**Format**: [TODO]
 
 ### Variance Analysis
 
-{{ source.variance_analysis }}
+[TODO]
 
 ## Objective Review and Adjustment
 
 ### Review Process
 
-{{ source.review_process }}
+[TODO]
 
 ### Adjustment Criteria
 
-{{ source.adjustment_criteria }}
+[TODO]
 
 ## Responsibilities
 
@@ -200,17 +211,9 @@ This document describes:
 ## References
 
 - COSO Internal Control Framework - Objective Setting
-- Corporate Strategy {{ source.organization_name }}
+- Corporate Strategy [TODO]
 - Risk Management Policy
 
 <!-- Author notes: Define specific, measurable objectives for your organization -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

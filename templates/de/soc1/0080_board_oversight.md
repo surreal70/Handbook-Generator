@@ -1,13 +1,24 @@
----
+
 Document-ID: soc1-0120
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Aufsicht durch den Vorstand
+
+**Dokument-ID:** [FRAMEWORK]-0080
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -24,68 +35,68 @@ Dieses Dokument beschreibt die Aufsichtsfunktionen des Vorstands und dessen Roll
 
 ### Zusammensetzung
 
-**Mitglieder**: {{ source.board_members }}
-**Unabhängige Mitglieder**: {{ source.independent_board_members }}
-**Vorsitzender**: {{ source.board_chairman }}
+**Mitglieder**: [TODO]
+**Unabhängige Mitglieder**: [TODO]
+**Vorsitzender**: [TODO]
 
 ### Qualifikationen
 
-{{ source.board_qualifications }}
+[TODO]
 
 ### Unabhängigkeit
 
-{{ source.board_independence_criteria }}
+[TODO]
 
 ## Aufsichtsfunktionen
 
 ### Strategische Aufsicht
 
-{{ source.strategic_oversight_activities }}
+[TODO]
 
 ### Finanzielle Aufsicht
 
-{{ source.financial_oversight_activities }}
+[TODO]
 
 ### Risiko-Aufsicht
 
-{{ source.risk_oversight_activities }}
+[TODO]
 
 ### Compliance-Aufsicht
 
-{{ source.compliance_oversight_activities }}
+[TODO]
 
 ## Ausschüsse
 
 ### Prüfungsausschuss
 
-**Mitglieder**: {{ source.audit_committee_members }}
-**Vorsitzender**: {{ source.audit_committee_chair }}
-**Verantwortlichkeiten**: {{ source.audit_committee_responsibilities }}
-**Sitzungsfrequenz**: {{ source.audit_committee_frequency }}
+**Mitglieder**: [TODO]
+**Vorsitzender**: [TODO]
+**Verantwortlichkeiten**: [TODO]
+**Sitzungsfrequenz**: [TODO]
 
 ### Risikoausschuss
 
-**Mitglieder**: {{ source.risk_committee_members }}
-**Verantwortlichkeiten**: {{ source.risk_committee_responsibilities }}
+**Mitglieder**: [TODO]
+**Verantwortlichkeiten**: [TODO]
 
 ### Vergütungsausschuss
 
-**Mitglieder**: {{ source.compensation_committee_members }}
-**Verantwortlichkeiten**: {{ source.compensation_committee_responsibilities }}
+**Mitglieder**: [TODO]
+**Verantwortlichkeiten**: [TODO]
 
 ## Sitzungen und Berichterstattung
 
 ### Sitzungsplan
 
-{{ source.board_meeting_schedule }}
+[TODO]
 
 ### Berichterstattung an den Vorstand
 
-{{ source.board_reporting }}
+[TODO]
 
 ### Dokumentation
 
-{{ source.board_documentation }}
+[TODO]
 
 ## Referenzen
 
@@ -94,12 +105,3 @@ Dieses Dokument beschreibt die Aufsichtsfunktionen des Vorstands und dessen Roll
 
 <!-- Hinweise für Autoren: Aktualisieren Sie Vorstandsinformationen bei Änderungen -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0200
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Lead Time Overview
+
+**Document-ID:** [FRAMEWORK]-0200
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -31,10 +42,10 @@ Lead Time for Changes measures the time from code commit to successful execution
 
 ### Organization Information
 
-- **Organization**: {{ source.organization_name }}
-- **Responsible**: {{ source.lead_time_owner }}
-- **Measurement Period**: {{ source.lead_time_measurement_period }}
-- **Current Lead Time**: {{ source.current_lead_time }}
+- **Organization**: [TODO]
+- **Responsible**: [TODO]
+- **Measurement Period**: [TODO]
+- **Current Lead Time**: [TODO]
 
 ## Performance Levels
 
@@ -311,13 +322,5 @@ Avg Lead Time = Sum of all Lead Times / Number of Deployments
 6. **Encourage experiments**: Create safe environments
 
 <!-- Note: Lead Time is an indicator of process efficiency -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

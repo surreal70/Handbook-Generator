@@ -1,17 +1,28 @@
----
+
 Document-ID: coso-0100
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Risk Assessment
 
+**Document-ID:** [FRAMEWORK]-0100
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document describes how {{ source.organization_name }} conducts risk assessment to identify and analyze risks to achieving objectives (COSO Component 2).
+This document describes how [TODO] conducts risk assessment to identify and analyze risks to achieving objectives (COSO Component 2).
 
 ## Scope
 
@@ -24,7 +35,7 @@ This document describes how {{ source.organization_name }} conducts risk assessm
 
 ### Overview
 
-{{ source.risk_assessment_overview }}
+[TODO]
 
 ### COSO Principles
 
@@ -38,97 +49,89 @@ This component addresses the following COSO principles:
 
 ### Process Steps
 
-1. **Objective Setting**: {{ source.objective_setting }}
-2. **Risk Identification**: {{ source.risk_identification_process }}
-3. **Risk Analysis**: {{ source.risk_analysis_process }}
-4. **Risk Evaluation**: {{ source.risk_evaluation_process }}
-5. **Risk Response**: {{ source.risk_response_process }}
+1. **Objective Setting**: [TODO]
+2. **Risk Identification**: [TODO]
+3. **Risk Analysis**: [TODO]
+4. **Risk Evaluation**: [TODO]
+5. **Risk Response**: [TODO]
 
 ### Frequency
 
-**Annual Assessment**: {{ source.annual_assessment }}
-**Continuous Monitoring**: {{ source.continuous_monitoring }}
-**Triggered Assessments**: {{ source.triggered_assessments }}
+**Annual Assessment**: [TODO]
+**Continuous Monitoring**: [TODO]
+**Triggered Assessments**: [TODO]
 
 ## Risk Categories
 
 ### Strategic Risks
 
-{{ source.strategic_risks }}
+[TODO]
 
 ### Operational Risks
 
-{{ source.operational_risks }}
+[TODO]
 
 ### Financial Risks
 
-{{ source.financial_risks }}
+[TODO]
 
 ### Compliance Risks
 
-{{ source.compliance_risks }}
+[TODO]
 
 ## Risk Analysis Methodology
 
 ### Likelihood Assessment
 
-{{ source.likelihood_criteria }}
+[TODO]
 
 ### Impact Assessment
 
-{{ source.impact_criteria }}
+[TODO]
 
 ### Risk Rating Matrix
 
-{{ source.risk_matrix }}
+[TODO]
 
 ## Risk Response Strategies
 
 ### Accept
 
-{{ source.risk_accept }}
+[TODO]
 
 ### Avoid
 
-{{ source.risk_avoid }}
+[TODO]
 
 ### Reduce
 
-{{ source.risk_reduce }}
+[TODO]
 
 ### Share
 
-{{ source.risk_share }}
+[TODO]
 
 ## Roles and Responsibilities
 
-**Board of Directors**: {{ source.board_risk_role }}
-**Management**: {{ source.management_risk_role }}
-**Risk Committee**: {{ source.risk_committee_role }}
-**Business Units**: {{ source.business_unit_risk_role }}
+**Board of Directors**: [TODO]
+**Management**: [TODO]
+**Risk Committee**: [TODO]
+**Business Units**: [TODO]
 
 ## Documentation
 
 ### Risk Register
 
-{{ source.risk_register }}
+[TODO]
 
 ### Risk Reports
 
-{{ source.risk_reports }}
+[TODO]
 
 ## References
 
 - Risk Management Policy
 - Enterprise Risk Management Framework
 - Internal Control Framework
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

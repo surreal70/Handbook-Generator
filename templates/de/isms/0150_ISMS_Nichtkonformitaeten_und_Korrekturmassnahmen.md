@@ -1,5 +1,19 @@
 # Nichtkonformitäten und Korrekturmaßnahmen
 
+**Dokument-ID:** 0150
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This document defines the process for handling non-conformities and implementing
@@ -9,23 +23,11 @@ and drives continuous improvement.
 ISO 27001:2022 Reference: Clause 10.1 - Nonconformity and corrective action
 -->
 
-**Dokument-ID:** 0150  
-**Dokumenttyp:** ISMS-Prozess/Template  
-**Standard-Referenz:** ISO/IEC 27001:2022 Clause 10.1  
-**Owner:** {{ meta.ciso.name }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
-
----
-
 ## 1. Zweck und Ziel
 
 ### 1.1 Zweck
 
-Dieses Dokument definiert den Prozess zur systematischen Behandlung von Nichtkonformitäten (Non-Conformities) im ISMS der **{{ meta.organization.name }}**. Es stellt sicher, dass:
+Dieses Dokument definiert den Prozess zur systematischen Behandlung von Nichtkonformitäten (Non-Conformities) im ISMS der **{{ meta-organisation.name }}**. Es stellt sicher, dass:
 - Abweichungen von Anforderungen erkannt und dokumentiert werden
 - Ursachen analysiert und behoben werden
 - Korrekturmaßnahmen wirksam umgesetzt werden
@@ -392,18 +394,9 @@ Dieses Dokument definiert den Prozess zur systematischen Behandlung von Nichtkon
 - **ISO 9001:2015** - Clause 10.2: Nonconformity and corrective action
 - **ISO 19011:2018** - Guidelines for auditing management systems
 
----
-
 **Genehmigt durch:**  
 {{ meta.ciso.name }}, CISO  
-Datum: {{ meta.document.approval_date }}
+Datum: {{ meta-handbook.modifydate }}
 
-**Nächster Review:** {{ meta.document.next_review }}
+**Nächster Review:** {{ meta-handbook.next_review }}
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

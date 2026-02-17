@@ -1,11 +1,16 @@
 # ST Introduction
 
-**Dokument-ID:** 0010  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0010
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -28,12 +33,12 @@ Referenz: ISO/IEC 15408-1:2022, Abschnitt 8.1 (ST Introduction)
 
 ### 1.1 ST Title
 **ST Title:** [TODO: Vollständiger Titel des Security Target]  
-**ST Version:** {{ meta.version }}  
-**ST Date:** {{ meta.date }}  
+**ST Version:** {{ meta-handbook.revision }}  
+**ST Date:** {{ meta-handbook.modifydate }}  
 
 ### 1.2 ST Author
-**Author:** {{ meta.author }}  
-**Organization:** {{ meta.organization }}  
+**Author:** {{ meta-handbook.author }}  
+**Organization:** {{ meta-organisation.name }}  
 **Contact:** [TODO: Kontaktinformationen]  
 
 ### 1.3 TOE Identification
@@ -120,10 +125,8 @@ Das ST ist wie folgt strukturiert:
 
 | Version | Datum | Autor | Änderungen |
 |---------|------|--------|---------|
-| {{ meta.version }} | {{ meta.date }} | {{ meta.author }} | Initial version |
+| [Version] | [Date] | [Author] | Initial version |
 | [TODO] | [TODO] | [TODO] | [TODO: Beschreibung der Änderungen] |
-
----
 
 **Nächste Schritte:**
 1. Vervollständigen Sie alle [TODO]-Platzhalter
@@ -131,10 +134,3 @@ Das ST ist wie folgt strukturiert:
 3. Stellen Sie sicher, dass alle Referenzen korrekt sind
 4. Lassen Sie das Dokument von relevanten Stakeholdern reviewen
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

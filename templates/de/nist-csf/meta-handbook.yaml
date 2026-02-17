@@ -1,0 +1,117 @@
+# Handbook-specific metadata
+# Handbook: nist-csf
+# This file contains metadata specific to this handbook
+
+# Author of the handbook
+author: "[TODO]"
+
+# Classification level (e.g., Internal, Confidential, Public)
+classification: "[TODO]"
+
+# Status (e.g., Draft, Review, Approved, Active)
+status: "[TODO]"
+
+# Type of handbook
+type: "[TODO]"
+
+# Template set version
+templateset_version: "0.2"
+
+# Revision number (increment manually)
+revision: 0
+
+# Short name (matches directory name)
+shortname: "nist-csf"
+
+# Long descriptive name
+longname: "[TODO]"
+
+# Maintainer (defaults to author if not specified)
+maintainer: "[TODO]"
+
+# Owner responsible for the handbook
+owner: "[TODO]"
+
+# Approver of the handbook
+approver: "[TODO]"
+
+# Creation date (YYYY-MM-DD)
+creationdate: "[TODO]"
+
+# Last modification date (YYYY-MM-DD)
+modifydate: "[TODO]"
+
+# Valid from date (YYYY-MM-DD)
+valid_from: "[TODO]"
+
+# Next review date (YYYY-MM-DD)
+next_review: "[TODO]"
+
+# Scope of the handbook
+scope: "[TODO]"
+
+# Framework-specific auxiliary placeholders
+auxiliary:
+  additional_privacy_laws: '[TODO]'
+  cloud_provider: '[TODO]'
+  crm_system: '[TODO]'
+  current_tier: '[TODO]'
+  detect_gaps: '[TODO]'
+  detect_maturity: '[TODO]'
+  detect_priorities: '[TODO]'
+  detect_strengths: '[TODO]'
+  detect_target: '[TODO]'
+  erp_system: '[TODO]'
+  govern_gaps: '[TODO]'
+  govern_maturity: '[TODO]'
+  govern_priorities: '[TODO]'
+  govern_strengths: '[TODO]'
+  govern_target: '[TODO]'
+  identify_gaps: '[TODO]'
+  identify_maturity: '[TODO]'
+  identify_priorities: '[TODO]'
+  identify_strengths: '[TODO]'
+  identify_target: '[TODO]'
+  ids_tool: '[TODO]'
+  impact_threshold_critical: '[TODO]'
+  impact_threshold_high: '[TODO]'
+  impact_threshold_low: '[TODO]'
+  impact_threshold_medium: '[TODO]'
+  impact_threshold_minimal: '[TODO]'
+  ir_manager: '[TODO]'
+  legal_director: '[TODO]'
+  log_tool: '[TODO]'
+  managed_services: '[TODO]'
+  organization_mission: '[TODO]'
+  payment_provider: '[TODO]'
+  policy_repository: '[TODO]'
+  policy_status: '[TODO]'
+  procurement_director: '[TODO]'
+  production_systems: '[TODO]'
+  protect_gaps: '[TODO]'
+  protect_maturity: '[TODO]'
+  protect_priorities: '[TODO]'
+  protect_strengths: '[TODO]'
+  protect_target: '[TODO]'
+  recover_gaps: '[TODO]'
+  recover_maturity: '[TODO]'
+  recover_priorities: '[TODO]'
+  recover_strengths: '[TODO]'
+  recover_target: '[TODO]'
+  respond_gaps: '[TODO]'
+  respond_maturity: '[TODO]'
+  respond_priorities: '[TODO]'
+  respond_strengths: '[TODO]'
+  respond_target: '[TODO]'
+  risk_appetite_level: '[TODO]'
+  risk_appetite_statement: '[TODO]'
+  rpo: '[TODO]'
+  rto: '[TODO]'
+  security_architect: '[TODO]'
+  security_ops_manager: '[TODO]'
+  siem_tool: '[TODO]'
+  sla_availability: '[TODO]'
+  sla_patch_time: '[TODO]'
+  sla_recovery_time: '[TODO]'
+  sla_response_time: '[TODO]'
+  target_tier: '[TODO]'

@@ -1,17 +1,28 @@
----
+
 Document-ID: coso-0410
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Laufende Evaluierungen
 
+**Dokument-ID:** [FRAMEWORK]-0410
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt die laufenden Evaluierungsprozesse bei {{ source.organization_name }} gemäß COSO Prinzip 16.
+Dieses Dokument beschreibt die laufenden Evaluierungsprozesse bei [TODO] gemäß COSO Prinzip 16.
 
 ## Geltungsbereich
 
@@ -24,22 +35,22 @@ Dieses Dokument beschreibt die laufenden Evaluierungsprozesse bei {{ source.orga
 
 ### Definition
 
-{{ source.ongoing_evaluations_definition }}
+[TODO]
 
 ### Merkmale laufender Evaluierungen
 
-**Integration in Geschäftsprozesse**: {{ source.business_process_integration }}
-**Kontinuität**: {{ source.continuity }}
-**Echtzeitinformationen**: {{ source.real_time_information }}
-**Kosteneffizienz**: {{ source.cost_efficiency }}
+**Integration in Geschäftsprozesse**: [TODO]
+**Kontinuität**: [TODO]
+**Echtzeitinformationen**: [TODO]
+**Kosteneffizienz**: [TODO]
 
 ## Laufende Überwachungsmethoden
 
 ### Management-Überwachung
 
-**Operative Überwachung**: {{ source.operational_oversight }}
-**Finanzielle Überwachung**: {{ source.financial_oversight }}
-**Leistungsüberwachung**: {{ source.performance_monitoring }}
+**Operative Überwachung**: [TODO]
+**Finanzielle Überwachung**: [TODO]
+**Leistungsüberwachung**: [TODO]
 
 **Überwachungsaktivitäten**:
 - Tägliche Managementberichte
@@ -49,10 +60,10 @@ Dieses Dokument beschreibt die laufenden Evaluierungsprozesse bei {{ source.orga
 
 ### Automatisierte Kontrollen
 
-**Systemkontrollen**: {{ source.automated_system_controls }}
-**Datenvalidierung**: {{ source.automated_data_validation }}
-**Ausnahmeberichte**: {{ source.exception_reports }}
-**Automatische Abstimmungen**: {{ source.automated_reconciliations }}
+**Systemkontrollen**: [TODO]
+**Datenvalidierung**: [TODO]
+**Ausnahmeberichte**: [TODO]
+**Automatische Abstimmungen**: [TODO]
 
 **Beispiele**:
 - Automatische Kreditlimitprüfungen
@@ -62,156 +73,156 @@ Dieses Dokument beschreibt die laufenden Evaluierungsprozesse bei {{ source.orga
 
 ### Vergleiche und Abstimmungen
 
-**Finanzielle Abstimmungen**: {{ source.financial_reconciliations }}
-**Operative Abstimmungen**: {{ source.operational_reconciliations }}
-**Trendanalysen**: {{ source.trend_analyses }}
-**Abweichungsanalysen**: {{ source.variance_analyses }}
+**Finanzielle Abstimmungen**: [TODO]
+**Operative Abstimmungen**: [TODO]
+**Trendanalysen**: [TODO]
+**Abweichungsanalysen**: [TODO]
 
 ## In Prozesse integrierte Überwachung
 
 ### Transaktionsebene
 
-**Eingabekontrollen**: {{ source.input_controls }}
-**Verarbeitungskontrollen**: {{ source.processing_controls }}
-**Ausgabekontrollen**: {{ source.output_controls }}
+**Eingabekontrollen**: [TODO]
+**Verarbeitungskontrollen**: [TODO]
+**Ausgabekontrollen**: [TODO]
 
 ### Prozessebene
 
-**Prozesskontrollen**: {{ source.process_controls }}
-**Qualitätskontrollen**: {{ source.quality_controls }}
-**Leistungsindikatoren**: {{ source.performance_indicators }}
+**Prozesskontrollen**: [TODO]
+**Qualitätskontrollen**: [TODO]
+**Leistungsindikatoren**: [TODO]
 
 ### Unternehmensebene
 
-**Unternehmensweite Kontrollen**: {{ source.entity_level_controls }}
-**Strategische Überwachung**: {{ source.strategic_monitoring }}
+**Unternehmensweite Kontrollen**: [TODO]
+**Strategische Überwachung**: [TODO]
 
 ## Kontinuierliche Überwachungstechnologien
 
 ### Continuous Monitoring Tools
 
-**Monitoring-Software**: {{ source.monitoring_software }}
-**Data Analytics Tools**: {{ source.data_analytics_tools }}
-**Business Intelligence**: {{ source.business_intelligence }}
+**Monitoring-Software**: [TODO]
+**Data Analytics Tools**: [TODO]
+**Business Intelligence**: [TODO]
 
 ### Continuous Auditing
 
-**Continuous Auditing Ansatz**: {{ source.continuous_auditing_approach }}
-**Audit-Automatisierung**: {{ source.audit_automation }}
+**Continuous Auditing Ansatz**: [TODO]
+**Audit-Automatisierung**: [TODO]
 
 ### Künstliche Intelligenz und Machine Learning
 
-**KI-gestützte Überwachung**: {{ source.ai_monitoring }}
-**Anomalieerkennung**: {{ source.anomaly_detection }}
-**Predictive Analytics**: {{ source.predictive_analytics }}
+**KI-gestützte Überwachung**: [TODO]
+**Anomalieerkennung**: [TODO]
+**Predictive Analytics**: [TODO]
 
 ## Key Control Indicators (KCI)
 
 ### KCI-Definition
 
-{{ source.kci_definition }}
+[TODO]
 
 ### KCI-Entwicklung
 
-**Identifikation kritischer Kontrollen**: {{ source.critical_control_identification }}
-**Festlegung von Indikatoren**: {{ source.indicator_definition }}
-**Schwellenwerte**: {{ source.threshold_setting }}
+**Identifikation kritischer Kontrollen**: [TODO]
+**Festlegung von Indikatoren**: [TODO]
+**Schwellenwerte**: [TODO]
 
 ### KCI-Überwachung
 
-**Datenerfassung**: {{ source.kci_data_collection }}
-**Analyse**: {{ source.kci_analysis }}
-**Berichterstattung**: {{ source.kci_reporting }}
+**Datenerfassung**: [TODO]
+**Analyse**: [TODO]
+**Berichterstattung**: [TODO]
 
 ### Beispiel-KCIs
 
-{{ source.example_kcis }}
+[TODO]
 
 ## Management-Informationssysteme
 
 ### Dashboards
 
-**Operative Dashboards**: {{ source.operational_dashboards }}
-**Management-Dashboards**: {{ source.management_dashboards }}
-**Executive Dashboards**: {{ source.executive_dashboards }}
+**Operative Dashboards**: [TODO]
+**Management-Dashboards**: [TODO]
+**Executive Dashboards**: [TODO]
 
 ### Berichtssysteme
 
-**Standardberichte**: {{ source.standard_reports }}
-**Ad-hoc-Berichte**: {{ source.ad_hoc_reports }}
-**Ausnahmeberichte**: {{ source.exception_reports }}
+**Standardberichte**: [TODO]
+**Ad-hoc-Berichte**: [TODO]
+**Ausnahmeberichte**: [TODO]
 
 ## Überwachung durch Mitarbeiter
 
 ### Mitarbeiterverantwortung
 
-{{ source.employee_monitoring_responsibility }}
+[TODO]
 
 ### Schulung und Sensibilisierung
 
-**Kontrollbewusstsein**: {{ source.control_awareness }}
-**Schulungsprogramme**: {{ source.training_programs }}
+**Kontrollbewusstsein**: [TODO]
+**Schulungsprogramme**: [TODO]
 
 ### Meldung von Problemen
 
-**Meldekanäle**: {{ source.reporting_channels }}
-**Whistleblowing**: {{ source.whistleblowing }}
+**Meldekanäle**: [TODO]
+**Whistleblowing**: [TODO]
 
 ## Überwachung durch Externe
 
 ### Kunden-Feedback
 
-{{ source.customer_feedback }}
+[TODO]
 
 ### Lieferanten-Feedback
 
-{{ source.supplier_feedback }}
+[TODO]
 
 ### Externe Berater
 
-{{ source.external_consultant_input }}
+[TODO]
 
 ## Wirksamkeitsbewertung
 
 ### Bewertungskriterien
 
-**Rechtzeitigkeit**: {{ source.timeliness_assessment }}
-**Genauigkeit**: {{ source.accuracy_assessment }}
-**Vollständigkeit**: {{ source.completeness_assessment }}
+**Rechtzeitigkeit**: [TODO]
+**Genauigkeit**: [TODO]
+**Vollständigkeit**: [TODO]
 
 ### Verbesserungsmöglichkeiten
 
-{{ source.improvement_opportunities }}
+[TODO]
 
 ## Integration mit separaten Evaluierungen
 
 ### Komplementäre Ansätze
 
-{{ source.complementary_approaches }}
+[TODO]
 
 ### Informationsaustausch
 
-{{ source.information_sharing }}
+[TODO]
 
 ## Dokumentation
 
 ### Überwachungsdokumentation
 
-**Überwachungsaktivitäten**: {{ source.monitoring_documentation }}
-**Feststellungen**: {{ source.findings_documentation }}
-**Maßnahmen**: {{ source.actions_documentation }}
+**Überwachungsaktivitäten**: [TODO]
+**Feststellungen**: [TODO]
+**Maßnahmen**: [TODO]
 
 ### Aufbewahrung
 
-{{ source.retention_requirements }}
+[TODO]
 
 ## Rollen und Verantwortlichkeiten
 
-**Prozesseigentümer**: {{ source.process_owner_responsibilities }}
-**Operative Führungskräfte**: {{ source.operational_management_responsibilities }}
-**Kontrolleigentümer**: {{ source.control_owner_responsibilities }}
-**IT-Abteilung**: {{ source.it_responsibilities }}
-**Alle Mitarbeiter**: {{ source.employee_responsibilities }}
+**Prozesseigentümer**: [TODO]
+**Operative Führungskräfte**: [TODO]
+**Kontrolleigentümer**: [TODO]
+**IT-Abteilung**: [TODO]
+**Alle Mitarbeiter**: [TODO]
 
 ## Referenzen
 
@@ -220,12 +231,3 @@ Dieses Dokument beschreibt die laufenden Evaluierungsprozesse bei {{ source.orga
 - Key Control Indicators Katalog
 - Continuous Monitoring Strategie
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

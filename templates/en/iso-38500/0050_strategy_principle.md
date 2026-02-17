@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-38500-0050
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Principle 2: Strategy
+
+**Document-ID:** [FRAMEWORK]-0050
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -16,7 +28,7 @@ This document describes the application of the Strategy principle in the organiz
 ## Scope
 
 This document applies to:
-- {{ meta.organization }}
+- {{ meta-organisation.name }}
 - IT strategy and business strategy
 - Strategic planning and alignment
 
@@ -37,9 +49,9 @@ The organization's IT strategy takes into account the current and future capabil
 
 | Criterion | Target | Status |
 |-----------|--------|--------|
-| Strategic alignment | >90% | {{ meta.strategic_alignment }}% |
-| Stakeholder satisfaction | >85% | {{ meta.stakeholder_satisfaction }}% |
-| Technology currency | Current | {{ meta.technology_currency }} |
+| Strategic alignment | >90% | {{ meta-handbook.strategic_alignment }}% |
+| Stakeholder satisfaction | >85% | {{ meta-handbook.stakeholder_satisfaction }}% |
+| Technology currency | Current | {{ meta-handbook.technology_currency }} |
 
 ## Direct
 
@@ -55,9 +67,9 @@ The organization's IT strategy takes into account the current and future capabil
 
 | Goal | Description | Timeframe | Responsible |
 |------|-------------|-----------|-------------|
-| {{ meta.it_goal_1 }} | {{ meta.it_goal_1_desc }} | {{ meta.it_goal_1_timeline }} | {{ meta.cio }} |
-| {{ meta.it_goal_2 }} | {{ meta.it_goal_2_desc }} | {{ meta.it_goal_2_timeline }} | {{ meta.cio }} |
-| {{ meta.it_goal_3 }} | {{ meta.it_goal_3_desc }} | {{ meta.it_goal_3_timeline }} | {{ meta.cio }} |
+| {{ meta.it_goal_1 }} | {{ meta.it_goal_1_desc }} | {{ meta.it_goal_1_timeline }} | {{ meta-organisation-roles.role_CIO }} |
+| {{ meta.it_goal_2 }} | {{ meta.it_goal_2_desc }} | {{ meta.it_goal_2_timeline }} | {{ meta-organisation-roles.role_CIO }} |
+| {{ meta.it_goal_3 }} | {{ meta.it_goal_3_desc }} | {{ meta.it_goal_3_timeline }} | {{ meta-organisation-roles.role_CIO }} |
 
 ### Strategy Implementation
 
@@ -77,21 +89,13 @@ The organization's IT strategy takes into account the current and future capabil
 
 ### KPIs
 
-- IT strategy implementation: {{ meta.strategy_implementation }}%
-- ROI of strategic IT investments: {{ meta.strategic_roi }}%
-- Business-IT alignment score: {{ meta.alignment_score }}/10
-- Innovation rate: {{ meta.innovation_rate }}%
+- IT strategy implementation: {{ meta-handbook.strategy_implementation }}%
+- ROI of strategic IT investments: {{ meta-handbook.strategic_roi }}%
+- Business-IT alignment score: {{ meta-handbook.alignment_score }}/10
+- Innovation rate: {{ meta-handbook.innovation_rate }}%
 
 ## Document References
 
 - 0010_governance_framework.md
 - 0020_governance_model.md
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 

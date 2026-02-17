@@ -1,12 +1,26 @@
 # Disaster Recovery and Business Continuity
 
+**Document-ID:** [FRAMEWORK]-0160
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose and Scope
 
-This document describes the disaster recovery and business continuity strategies for {{ meta.organization.name }}. It defines disaster scenarios, impact analyses, DR strategies, failover/failback procedures, and business continuity plans to ensure business continuity during disasters.
+This document describes the disaster recovery and business continuity strategies for {{ meta-organisation.name }}. It defines disaster scenarios, impact analyses, DR strategies, failover/failback procedures, and business continuity plans to ensure business continuity during disasters.
 
-**Scope:** All critical IT services and business processes of {{ meta.organization.name }}
+**Scope:** All critical IT services and business processes of {{ meta-organisation.name }}
 
-**Responsible:** {{ meta.cio.name }} ({{ meta.cio.email }})
+**Responsible:** {{ meta-organisation-roles.role_cio.name }} ({{ meta-organisation-roles.role_cio.email }})
 
 ## Fundamentals
 
@@ -300,9 +314,9 @@ An organization's ability to maintain critical business processes during and aft
 **Redundancy:** Dual-path
 
 **Replication Technologies:**
-- Storage replication: {{ meta.storage_replication_tech }}
-- Database replication: {{ meta.database_replication_tech }}
-- VM replication: {{ meta.vm_replication_tech }}
+- Storage replication: {{ meta-handbook.storage_replication_tech }}
+- Database replication: {{ meta-handbook.database_replication_tech }}
+- VM replication: {{ meta-handbook.vm_replication_tech }}
 
 ## Failover Procedures
 
@@ -374,8 +388,8 @@ An organization's ability to maintain critical business processes during and aft
 #### 2. DR Team Activation
 
 **DR Team Members:**
-- **DR Coordinator:** {{ meta.cio.name }}
-- **Technical Lead:** {{ meta.it_operations_manager.name }}
+- **DR Coordinator:** {{ meta-organisation-roles.role_cio.name }}
+- **Technical Lead:** {{ meta-organisation-roles.role_it_operations_manager.name }}
 - **Network Lead:** [Name]
 - **Storage Lead:** [Name]
 - **Application Lead:** [Name]
@@ -564,8 +578,8 @@ An organization's ability to maintain critical business processes during and aft
 #### Emergency Communication
 
 **Communication Channels:**
-- **Primary:** Email ({{ meta.organization.email }})
-- **Secondary:** Phone ({{ meta.organization.phone }})
+- **Primary:** Email ({{ meta-organisation.email }})
+- **Secondary:** Phone ({{ meta-organisation.phone }})
 - **Emergency:** Mobile apps, SMS
 
 **Contact Lists:**
@@ -591,9 +605,9 @@ An organization's ability to maintain critical business processes during and aft
 
 | Supplier | Service | Contact | Backup Supplier |
 |---|---|---|---|
-| {{ meta.isp_provider }} | Internet | {{ meta.isp_contact }} | {{ meta.isp_backup }} |
-| {{ meta.cloud_provider }} | Cloud services | {{ meta.cloud_contact }} | {{ meta.cloud_backup }} |
-| {{ meta.hardware_vendor }} | Hardware | {{ meta.hardware_contact }} | - |
+| {{ meta-handbook.isp_provider }} | Internet | {{ meta-handbook.isp_contact }} | {{ meta-handbook.isp_backup }} |
+| {{ meta-handbook.cloud_provider }} | Cloud services | {{ meta-handbook.cloud_contact }} | {{ meta-handbook.cloud_backup }} |
+| {{ meta-handbook.hardware_vendor }} | Hardware | {{ meta-handbook.hardware_contact }} | - |
 
 ## DR Testing
 
@@ -681,7 +695,7 @@ An organization's ability to maintain critical business processes during and aft
 - Coordinate DR tests
 - Disaster declaration
 
-**Person:** {{ meta.cio.name }}
+**Person:** {{ meta-organisation-roles.role_cio.name }}
 
 ### BC Manager
 
@@ -691,7 +705,7 @@ An organization's ability to maintain critical business processes during and aft
 - Create BC plans
 - BC training
 
-**Person:** {{ meta.coo.name }}
+**Person:** {{ meta-organisation-roles.role_coo.name }}
 
 ### DR Team
 
@@ -705,18 +719,9 @@ An organization's ability to maintain critical business processes during and aft
 - NIST SP 800-34 - Contingency Planning Guide
 - Business Impact Analysis (BIA) Document
 
----
+**Document Owner:** {{ meta-handbook.owner }}  
+**Approved by:** {{ meta-handbook.approver }}  
+**Version:** {{ meta-handbook.revision }}  
+**Classification:** {{ meta-handbook.classification }}  
+**Last Updated:** {{ meta-handbook.date }}
 
-**Document Owner:** {{ meta.document.owner }}  
-**Approved by:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.date }}
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

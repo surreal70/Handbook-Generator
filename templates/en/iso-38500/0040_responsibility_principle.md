@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-38500-0040
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Principle 1: Responsibility
+
+**Document-ID:** [FRAMEWORK]-0040
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -16,7 +28,7 @@ This document describes the application of the Responsibility principle in the o
 ## Scope
 
 This document applies to:
-- {{ meta.organization }}
+- {{ meta-organisation.name }}
 - All IT-related responsibilities
 - Board, Executive Management, IT Management, and employees
 
@@ -37,9 +49,9 @@ Individuals and groups within the organization understand and accept their respo
 
 | Criterion | Target | Current Status |
 |-----------|--------|----------------|
-| Clarity of responsibilities | 100% documented | {{ meta.responsibility_clarity }}% |
-| Authority alignment | 100% | {{ meta.authority_alignment }}% |
-| Responsibility awareness | >90% | {{ meta.responsibility_awareness }}% |
+| Clarity of responsibilities | 100% documented | {{ meta-handbook.responsibility_clarity }}% |
+| Authority alignment | 100% | {{ meta-handbook.authority_alignment }}% |
+| Responsibility awareness | >90% | {{ meta-handbook.responsibility_awareness }}% |
 
 ## Direct
 
@@ -57,7 +69,7 @@ Individuals and groups within the organization understand and accept their respo
 - IT investment decisions
 - Escalation management
 
-**{{ meta.cio }}:**
+**{{ meta-organisation-roles.role_CIO }}:**
 - IT operations and services
 - IT security and compliance
 - IT project portfolio
@@ -98,10 +110,10 @@ Individuals and groups within the organization understand and accept their respo
 
 ### KPIs
 
-- Percentage of clearly defined responsibilities: {{ meta.defined_responsibilities }}%
-- Responsibility awareness (survey): {{ meta.responsibility_score }}/10
-- Number of responsibility conflicts: {{ meta.responsibility_conflicts }}
-- Time to conflict resolution: {{ meta.conflict_resolution_time }} days
+- Percentage of clearly defined responsibilities: {{ meta-handbook.defined_responsibilities }}%
+- Responsibility awareness (survey): {{ meta-handbook.responsibility_score }}/10
+- Number of responsibility conflicts: {{ meta-handbook.responsibility_conflicts }}
+- Time to conflict resolution: {{ meta-handbook.conflict_resolution_time }} days
 
 ## Implementation
 
@@ -116,28 +128,14 @@ Individuals and groups within the organization understand and accept their respo
 
 | Measure | Responsible | Deadline |
 |---------|-------------|----------|
-| Create responsibility matrix | {{ meta.cio }} | {{ meta.responsibility_matrix_date }} |
-| Communication | HR & IT | {{ meta.communication_date }} |
-| Training | IT Training | {{ meta.training_date }} |
-| First review | Governance Committee | {{ meta.first_review_date }} |
+| Create responsibility matrix | {{ meta-organisation-roles.role_CIO }} | {{ meta-handbook.responsibility_matrix_date }} |
+| Communication | HR & IT | {{ meta-handbook.communication_date }} |
+| Training | IT Training | {{ meta-handbook.training_date }} |
+| First review | Governance Committee | {{ meta-handbook.first_review_date }} |
 
 ## Document References
 
 - 0010_governance_framework.md
 - 0020_governance_model.md
 - 0200_governance_roles.md
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |
-
-<!-- 
-Author Notes: 
-- Responsibilities must be accompanied by authority
-- Document escalation paths for responsibility conflicts
--->
 

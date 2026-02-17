@@ -62,12 +62,12 @@ Die Vorlagen sind nach TISAX-Kontrollbereichen organisiert und verwenden ein num
 
 ### Platzhalter
 
-Die Vorlagen verwenden Platzhalter im Format `{{ source.field }}` für organisationsspezifische Daten:
+Die Vorlagen verwenden Platzhalter im Format `[TODO]` für organisationsspezifische Daten:
 
-- `{{ source.organization_name }}` - Name Ihrer Organisation
-- `{{ source.author }}` - Autor des Dokuments
-- `{{ meta.version }}` - Versionsnummer
-- `{{ meta.date }}` - Datum
+- `[TODO]` - Name Ihrer Organisation
+- `[TODO]` - Autor des Dokuments
+- `{{ meta-handbook.revision }}` - Versionsnummer
+- `{{ meta-handbook.modifydate }}` - Datum
 
 ### Anpassung
 

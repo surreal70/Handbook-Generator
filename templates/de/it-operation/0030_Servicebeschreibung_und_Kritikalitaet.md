@@ -1,14 +1,28 @@
 # Servicebeschreibung und Kritikalität
 
+**Dokument-ID:** [FRAMEWORK]-0030
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Servicebeschreibung
 
 ### Basis-Informationen
 
 - **Service-Name:** [TODO: Eindeutiger Service-Name]
 - **Service-ID:** [TODO: Eindeutige Service-Identifikation]
-- **Service-Owner:** {{ meta.document.owner }}
+- **Service-Owner:** {{ meta-handbook.owner }}
 - **Technischer Ansprechpartner:** [TODO: Name und Kontakt]
-- **Organisation:** {{ meta.organization.name }}
+- **Organisation:** {{ meta-organisation.name }}
 
 ### Kurzbeschreibung
 
@@ -126,7 +140,7 @@ Die Kritikalität wird nach den Dimensionen Verfügbarkeit, Integrität, Vertrau
 3. **Empfänger:** [TODO: Alle Nutzer, Key-Stakeholder]
 4. **Inhalt:** Zeitfenster, Grund, Auswirkungen, Ansprechpartner
 
-**Verantwortlich:** {{ meta.it_operations_manager.name }} ({{ meta.it_operations_manager.email }})
+**Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }} ({{ meta-organisation-roles.role_it_operations_manager.email }})
 
 ## Service Level Agreements (SLA)
 
@@ -168,9 +182,9 @@ Die Kritikalität wird nach den Dimensionen Verfügbarkeit, Integrität, Vertrau
 **Reporting-Frequenz:** [TODO: Monatlich/Quartalsweise]
 
 **Empfänger:**
-- Service Owner: {{ meta.document.owner }}
-- IT Operations Manager: {{ meta.it_operations_manager.name }}
-- CIO: {{ meta.cio.name }}
+- Service Owner: {{ meta-handbook.owner }}
+- IT Operations Manager: {{ meta-organisation-roles.role_it_operations_manager.name }}
+- CIO: {{ meta-organisation-roles.role_cio.name }}
 - [TODO: Weitere Stakeholder]
 
 **Inhalt:**
@@ -218,34 +232,25 @@ Die Kritikalität wird nach den Dimensionen Verfügbarkeit, Integrität, Vertrau
 
 | Rolle | Verantwortung | Person | Kontakt |
 |---|---|---|---|
-| **Service Owner** | Gesamtverantwortung | {{ meta.document.owner }} | [TODO: E-Mail] |
+| **Service Owner** | Gesamtverantwortung | {{ meta-handbook.owner }} | [TODO: E-Mail] |
 | **Technical Lead** | Technische Umsetzung | [TODO: Name] | [TODO: E-Mail] |
-| **Operations Manager** | Täglicher Betrieb | {{ meta.it_operations_manager.name }} | {{ meta.it_operations_manager.email }} |
-| **Service Desk Lead** | First-Level-Support | {{ meta.service_desk_lead.name }} | {{ meta.service_desk_lead.email }} |
+| **Operations Manager** | Täglicher Betrieb | {{ meta-organisation-roles.role_it_operations_manager.name }} | {{ meta-organisation-roles.role_it_operations_manager.email }} |
+| **Service Desk Lead** | First-Level-Support | {{ meta-organisation-roles.role_service_desk_lead.name }} | {{ meta-organisation-roles.role_service_desk_lead.email }} |
 
 ## Kontakte und Eskalation
 
 **Bei Fragen zum Service:**
-- **Service Owner:** {{ meta.document.owner }}
-- **IT Operations Manager:** {{ meta.it_operations_manager.name }} ({{ meta.it_operations_manager.email }})
-- **Service Desk:** {{ meta.service_desk_lead.name }} ({{ meta.service_desk_lead.email }})
+- **Service Owner:** {{ meta-handbook.owner }}
+- **IT Operations Manager:** {{ meta-organisation-roles.role_it_operations_manager.name }} ({{ meta-organisation-roles.role_it_operations_manager.email }})
+- **Service Desk:** {{ meta-organisation-roles.role_service_desk_lead.name }} ({{ meta-organisation-roles.role_service_desk_lead.email }})
 
 **Eskalationspfad:**
-1. **Level 1:** Service Desk - {{ meta.service_desk_lead.email }}
-2. **Level 2:** IT Operations - {{ meta.it_operations_manager.email }}
-3. **Level 3:** CIO - {{ meta.cio.email }}
+1. **Level 1:** Service Desk - {{ meta-organisation-roles.role_service_desk_lead.email }}
+2. **Level 2:** IT Operations - {{ meta-organisation-roles.role_it_operations_manager.email }}
+3. **Level 3:** CIO - {{ meta-organisation-roles.role_cio.email }}
 
----
+**Service Owner:** {{ meta-handbook.owner }}  
+**Genehmigt durch:** {{ meta-handbook.approver }}  
+**Version:** {{ meta-handbook.revision }}  
+**Organisation:** {{ meta-organisation.name }}
 
-**Service Owner:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Organisation:** {{ meta.organization.name }}
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

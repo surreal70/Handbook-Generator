@@ -1,11 +1,16 @@
 # Anhang: Verzeichnis der Verarbeitungstätigkeiten (Template)
 
-**Dokument-ID:** 0700  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Template  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0700
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -23,19 +28,17 @@ Referenz: DSGVO Art. 30 (Verzeichnis von Verarbeitungstätigkeiten)
 
 ## Verzeichnis der Verarbeitungstätigkeiten
 
-**Organisation:** {{ meta.organization }}  
+**Organisation:** {{ meta-organisation.name }}  
 **Verantwortlicher:** [TODO: Name, Funktion]  
 **Datenschutzbeauftragter:** [TODO: Name, Kontakt]  
-**Stand:** {{ meta.date }}
-
----
+**Stand:** {{ meta-handbook.date }}
 
 ## Verarbeitungstätigkeit [Nr. 1]
 
 ### 1. Name und Kontaktdaten des Verantwortlichen
 
 **Verantwortlicher:**  
-{{ meta.organization }}  
+{{ meta-organisation.name }}  
 [TODO: Adresse]  
 [TODO: Telefon]  
 [TODO: E-Mail]
@@ -193,13 +196,9 @@ Falls Ja:
 Falls Ja:  
 [TODO: Beschreibung]
 
----
-
 ## Verarbeitungstätigkeit [Nr. 2]
 
 [TODO: Wiederhole Struktur für weitere Verarbeitungstätigkeiten]
-
----
 
 ## Übersicht aller Verarbeitungstätigkeiten
 
@@ -209,8 +208,6 @@ Falls Ja:
 | 2 | [TODO] | [TODO] | [TODO] | [TODO] | Ja/Nein |
 | 3 | [TODO] | [TODO] | [TODO] | [TODO] | Ja/Nein |
 
----
-
 ## Änderungshistorie
 
 | Version | Datum | Änderung | Geändert von |
@@ -218,17 +215,8 @@ Falls Ja:
 | 1.0 | [TODO] | Erstversion | [TODO] |
 | 1.1 | [TODO] | [TODO: Beschreibung] | [TODO] |
 
----
-
 **Hinweise:**
 - Dieses Verzeichnis muss bei Änderungen aktualisiert werden
 - Das Verzeichnis muss der Aufsichtsbehörde auf Anfrage vorgelegt werden
 - Regelmäßige Überprüfung (mindestens jährlich) erforderlich
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

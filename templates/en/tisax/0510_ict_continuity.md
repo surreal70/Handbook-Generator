@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0510
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # ICT Continuity
+
+**Document-ID:** [FRAMEWORK]-0510
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -15,7 +26,7 @@ This document describes measures to ensure ICT continuity according to TISAX req
 
 ## Scope
 
-This document applies to all IT and communication systems of {{ source.organization_name }}.
+This document applies to all IT and communication systems of [TODO].
 
 ## ICT Continuity Planning
 
@@ -106,18 +117,10 @@ This document applies to all IT and communication systems of {{ source.organizat
 
 ## Metrics
 
-{{ source.organization_name }} measures:
+[TODO] measures:
 - System availability
 - DR test success rate
 - Average recovery time
 - Number of unplanned outages
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

@@ -1,14 +1,26 @@
 # Monitoring, Alerting und Observability
 
+**Dokument-ID:** [FRAMEWORK]-0110
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Übersicht
 
 Dieses Dokument beschreibt die Monitoring-, Alerting- und Observability-Strategie für den IT-Service. Es definiert Monitoring-Tools, Alerting-Regeln, Schwellwerte und Observability-Konzepte.
 
-**Service:** {{ meta.service_name }}  
-**Verantwortlich:** {{ meta.it_operations_manager.name }}  
-**Stand:** {{ meta.document.version }}
-
----
+**Service:** {{ meta-handbook.service_name }}  
+**Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}  
+**Stand:** {{ meta-handbook.revision }}
 
 ## Monitoring-Strategie
 
@@ -59,8 +71,6 @@ Dieses Dokument beschreibt die Monitoring-, Alerting- und Observability-Strategi
 └─────────────────────────────────────────────────────────────┘
 ```
 
----
-
 ## Monitoring-Tools
 
 ### Tool-Stack
@@ -104,8 +114,6 @@ Dieses Dokument beschreibt die Monitoring-, Alerting- und Observability-Strategi
 │  (Grafana)  │  │(Alertmanager)│
 └─────────────┘  └─────────────┘
 ```
-
----
 
 ## Infrastructure Monitoring
 
@@ -174,8 +182,6 @@ Dieses Dokument beschreibt die Monitoring-, Alerting- und Observability-Strategi
 | **Datastore Usage** | Datastore-Auslastung | > 80% | > 90% | 5 Min |
 | **VM Performance** | VM-Performance | Degraded | Critical | 1 Min |
 
----
-
 ## Application Monitoring
 
 ### Application Performance Monitoring (APM)
@@ -207,8 +213,6 @@ Dieses Dokument beschreibt die Monitoring-, Alerting- und Observability-Strategi
 - Content-Validierung
 - SSL-Zertifikat-Gültigkeit
 - DNS-Auflösung
-
----
 
 ## Observability
 
@@ -273,8 +277,6 @@ Dieses Dokument beschreibt die Monitoring-, Alerting- und Observability-Strategi
          └───────────────────────┘
 ```
 
----
-
 ## Alerting
 
 ### Alerting-Strategie
@@ -302,7 +304,7 @@ Dieses Dokument beschreibt die Monitoring-, Alerting- und Observability-Strategi
 
 | Alert | Bedingung | Severity | Aktion | Verantwortlich |
 |---|---|---|---|---|
-| **Server Down** | Ping failed > 5 Min | Critical | Sofort prüfen | {{ meta.service_desk_lead.name }} |
+| **Server Down** | Ping failed > 5 Min | Critical | Sofort prüfen | {{ meta-organisation-roles.role_service_desk_lead.name }} |
 | **High CPU** | CPU > 95% für 5 Min | High | Performance prüfen | IT Operations |
 | **High Memory** | Memory > 95% für 5 Min | High | Memory-Leak prüfen | IT Operations |
 | **Disk Full** | Disk > 90% | High | Speicher freigeben | IT Operations |
@@ -312,7 +314,7 @@ Dieses Dokument beschreibt die Monitoring-, Alerting- und Observability-Strategi
 
 | Alert | Bedingung | Severity | Aktion | Verantwortlich |
 |---|---|---|---|---|
-| **Service Down** | Health Check failed | Critical | Service restart | {{ meta.service_desk_lead.name }} |
+| **Service Down** | Health Check failed | Critical | Service restart | {{ meta-organisation-roles.role_service_desk_lead.name }} |
 | **High Error Rate** | Errors > 5% für 5 Min | High | Logs prüfen | Development Team |
 | **Slow Response** | Response Time > 2s | High | Performance prüfen | Development Team |
 | **API Failure** | External API down | High | Vendor kontaktieren | IT Operations |
@@ -360,8 +362,6 @@ Dieses Dokument beschreibt die Monitoring-, Alerting- und Observability-Strategi
 - **Woche 2:** [TODO: Name]
 - **Woche 3:** [TODO: Name]
 - **Woche 4:** [TODO: Name]
-
----
 
 ## Dashboards
 
@@ -420,8 +420,6 @@ Dieses Dokument beschreibt die Monitoring-, Alerting- und Observability-Strategi
 5. **Historical:** Trends über Zeit zeigen
 6. **Annotations:** Wichtige Events markieren
 
----
-
 ## Monitoring-Prozesse
 
 ### Tägliche Monitoring-Routinen
@@ -461,8 +459,6 @@ Dieses Dokument beschreibt die Monitoring-, Alerting- und Observability-Strategi
 - [ ] Monitoring-Tools aktualisieren
 - [ ] Alert-Regeln optimieren
 
----
-
 ## Service Level Indicators (SLIs)
 
 ### Definierte SLIs
@@ -487,8 +483,6 @@ Dieses Dokument beschreibt die Monitoring-, Alerting- und Observability-Strategi
 - Echtzeit-Dashboards
 - Tägliche Reports
 - Monatliche SLA-Reports
-
----
 
 ## Incident Response
 
@@ -532,8 +526,6 @@ Dieses Dokument beschreibt die Monitoring-, Alerting- und Observability-Strategi
 
 **Details:** Siehe Kapitel 0120 (Incident Management)
 
----
-
 ## Monitoring-Dokumentation
 
 ### Runbooks
@@ -556,8 +548,6 @@ Bekannte Monitoring-Probleme und Workarounds:
 
 **Known Issues:** Siehe Kapitel 0260 (Bekannte Probleme und FAQ)
 
----
-
 ## Monitoring-Tools-Zugriff
 
 ### Tool-Zugänge
@@ -571,34 +561,23 @@ Bekannte Monitoring-Probleme und Workarounds:
 
 ### Berechtigungen
 
-- **Administrator:** {{ meta.it_operations_manager.name }}
+- **Administrator:** {{ meta-organisation-roles.role_it_operations_manager.name }}
 - **Operator:** IT Operations Team
 - **Read-Only:** Management, Auditors
-
----
 
 ## Kontakte
 
 **Monitoring-Team:**
-- **IT Operations Manager:** {{ meta.it_operations_manager.name }} - {{ meta.it_operations_manager.email }}
-- **Service Desk Lead:** {{ meta.service_desk_lead.name }} - {{ meta.service_desk_lead.email }}
+- **IT Operations Manager:** {{ meta-organisation-roles.role_it_operations_manager.name }} - {{ meta-organisation-roles.role_it_operations_manager.email }}
+- **Service Desk Lead:** {{ meta-organisation-roles.role_service_desk_lead.name }} - {{ meta-organisation-roles.role_service_desk_lead.email }}
 - **On-Call Engineer:** [TODO: Rotation] - [TODO: On-Call-Nummer]
 
 **Eskalation:**
-- **Level 2:** {{ meta.it_operations_manager.name }} - {{ meta.it_operations_manager.phone }}
-- **Level 3:** {{ meta.cio.name }} - {{ meta.cio.phone }}
+- **Level 2:** {{ meta-organisation-roles.role_it_operations_manager.name }} - {{ meta-organisation-roles.role_it_operations_manager.phone }}
+- **Level 3:** {{ meta-organisation-roles.role_cio.name }} - {{ meta-organisation-roles.role_cio.phone }}
 
----
+**Dokumentverantwortlicher:** {{ meta-handbook.owner }}  
+**Genehmigt durch:** {{ meta-handbook.approver }}  
+**Version:** {{ meta-handbook.revision }}  
+**Organisation:** {{ meta-organisation.name }}
 
-**Dokumentverantwortlicher:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Organisation:** {{ meta.organization.name }}
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

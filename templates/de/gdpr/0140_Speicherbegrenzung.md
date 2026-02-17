@@ -1,11 +1,16 @@
 # Speicherbegrenzung
 
-**Dokument-ID:** 0140  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0140
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -23,7 +28,7 @@ Referenz: DSGVO Art. 5 Abs. 1 lit. e (Speicherbegrenzung)
 
 ## Zweck
 
-Dieses Dokument beschreibt die Umsetzung des Grundsatzes der Speicherbegrenzung in der {{ meta.organization }}. Personenbezogene Daten dürfen nur so lange gespeichert werden, wie es für den Verarbeitungszweck erforderlich ist.
+Dieses Dokument beschreibt die Umsetzung des Grundsatzes der Speicherbegrenzung in der {{ meta-organisation.name }}. Personenbezogene Daten dürfen nur so lange gespeichert werden, wie es für den Verarbeitungszweck erforderlich ist.
 
 ## Grundsatz gemäß Art. 5 Abs. 1 lit. e DSGVO
 
@@ -251,8 +256,6 @@ Nach Ablauf der Speicherdauer müssen Daten:
 | Ignorieren von Löschanträgen | Verzögerte Bearbeitung | Prozess etablieren |
 | Unvollständige Löschung | Nur in einem System gelöscht | Alle Systeme prüfen |
 
----
-
 **Nächste Schritte:**
 1. Definieren Sie Löschfristen für alle Verarbeitungstätigkeiten
 2. Implementieren Sie automatisierte Löschprozesse
@@ -260,10 +263,3 @@ Nach Ablauf der Speicherdauer müssen Daten:
 4. Dokumentieren Sie Löschkonzept und -protokolle
 5. Schulen Sie Mitarbeiter zu Löschpflichten
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

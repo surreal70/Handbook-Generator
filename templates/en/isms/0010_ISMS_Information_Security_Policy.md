@@ -1,5 +1,19 @@
 # ISMS Policy / Information Security Policy
 
+**Document-ID:** [FRAMEWORK]-0010
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This is the top-level information security policy document. It establishes the 
@@ -17,14 +31,12 @@ ISO 27001:2022 Reference: Clause 5.2 - Policy
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** {{ meta-handbook.modifydate }}  
+**Next Review:** {{ meta-handbook.next_review }}
 
 ## 1. Purpose
 
-This Information Security Policy defines the strategic principles and commitments of **{{ meta.organization.name }}** for protecting information assets. It forms the foundation for the Information Security Management System (ISMS) according to ISO/IEC 27001:2022 and ensures that information security is understood and implemented as an integral part of all business processes.
+This Information Security Policy defines the strategic principles and commitments of **{{ meta-organisation.name }}** for protecting information assets. It forms the foundation for the Information Security Management System (ISMS) according to ISO/IEC 27001:2022 and ensures that information security is understood and implemented as an integral part of all business processes.
 
 <!-- 
 Customize the purpose statement to reflect your organization's specific 
@@ -35,7 +47,7 @@ security mission and strategic objectives.
 
 This policy applies to:
 
-- **Organizational Units:** All departments and locations of {{ meta.organization.name }}
+- **Organizational Units:** All departments and locations of {{ meta-organisation.name }}
 - **Systems and Information:** All IT systems, applications, data, and information processing processes
 - **Personnel:** All employees, contractors, suppliers, and third parties with access to information assets
 - **Locations:** {{ netbox.site.name }} and all other operational sites
@@ -46,7 +58,7 @@ This policy applies to:
 
 ## 3. Principles (Policy Statements)
 
-{{ meta.organization.name }} commits to the following information security principles:
+{{ meta-organisation.name }} commits to the following information security principles:
 
 ### 3.1 Confidentiality
 Information is only made accessible to authorized persons, systems, and processes. Access follows the need-to-know principle and is protected by appropriate access controls.
@@ -183,18 +195,9 @@ Exceptions to this policy are only permitted in justified exceptional cases and 
 - **GDPR (EU 2016/679)** - General Data Protection Regulation
 - **BSI IT-Grundschutz** - German Federal Office for Information Security
 
----
-
 **Approved by:**  
 {{ meta.management.ceo }}, Management  
-Date: {{ meta.document.approval_date }}
+Date: {{ meta-handbook.modifydate }}
 
-**Next Review:** {{ meta.document.next_review }} (annually or as needed)
+**Next Review:** {{ meta-handbook.next_review }} (annually or as needed)
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

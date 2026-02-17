@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-31000-0400
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Überwachung und Überprüfung - Übersicht
+
+**Dokument-ID:** [FRAMEWORK]-0270
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -39,8 +51,8 @@ Dieses Dokument beschreibt die Überwachung und Überprüfung des Risikomanageme
 
 | Review-Typ | Frequenz | Verantwortlich |
 |------------|----------|----------------|
-| Risikoprofil-Review | Quartalsweise | {{ meta.cro }} |
-| Framework-Review | Jährlich | {{ meta.ceo }} |
+| Risikoprofil-Review | Quartalsweise | {{ meta-organisation-roles.role_Risk_Manager }} |
+| Framework-Review | Jährlich | {{ meta-organisation-roles.role_CEO }} |
 | Einzelrisiko-Review | Monatlich | Risikoverantwortliche |
 | Behandlungsmaßnahmen-Review | Laufend | Maßnahmenverantwortliche |
 
@@ -50,12 +62,4 @@ Dieses Dokument beschreibt die Überwachung und Überprüfung des Risikomanageme
 - 0420_risk_register_maintenance.md
 - 0430_review_processes.md
 - 0440_lessons_learned.md
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |
 

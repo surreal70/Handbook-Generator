@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0410
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Supplier Agreements
+
+**Document-ID:** [FRAMEWORK]-0410
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -15,7 +26,7 @@ This document describes requirements for agreements with suppliers according to 
 
 ## Scope
 
-This document applies to all contracts with suppliers of {{ source.organization_name }}.
+This document applies to all contracts with suppliers of [TODO].
 
 ## Contract Components
 
@@ -29,9 +40,9 @@ This document applies to all contracts with suppliers of {{ source.organization_
 - Subcontractor regulations
 
 ### Service Level Agreements
-- Availability: {{ source.sla_availability }}%
-- Response Time: {{ source.sla_response_time }}
-- Resolution Time: {{ source.sla_resolution_time }}
+- Availability: [TODO]%
+- Response Time: [TODO]
+- Resolution Time: [TODO]
 - Reporting requirements
 
 ### Liability and Insurance
@@ -106,17 +117,9 @@ This document applies to all contracts with suppliers of {{ source.organization_
 
 ## Metrics
 
-{{ source.organization_name }} measures:
+[TODO] measures:
 - Number of active supplier contracts
 - Compliance rate
 - Number of contract violations
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

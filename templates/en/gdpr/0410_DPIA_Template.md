@@ -1,11 +1,16 @@
 # DPIA Template
 
-**Document-ID:** 0410  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0410
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -31,8 +36,6 @@ Reference: GDPR Art. 35 (Data protection impact assessment)
 **Created on:** [TODO: Date]  
 **Created by:** [TODO: Name, Role]  
 **Status:** Draft / Under Review / Approved
-
----
 
 ## 1. Description of Processing
 
@@ -102,8 +105,6 @@ Reference: GDPR Art. 35 (Data protection impact assessment)
 [Data Source] → [Processing System] → [Storage] → [Recipient]
 ```
 
----
-
 ## 2. Necessity and Proportionality
 
 ### 2.1 Legal Basis
@@ -151,8 +152,6 @@ Reference: GDPR Art. 35 (Data protection impact assessment)
 **Balancing:**
 [TODO: Do controller's interests or data subjects' interests prevail?]
 
----
-
 ## 3. Risk Assessment
 
 ### 3.1 Risk Identification
@@ -187,13 +186,9 @@ Reference: GDPR Art. 35 (Data protection impact assessment)
 
 **Risk Level:** [TODO: Calculate from Likelihood × Severity]
 
----
-
 #### Risk 2: [TODO: Name of Risk]
 
 [TODO: Repeat structure for additional risks]
-
----
 
 ### 3.2 Risk Assessment Matrix
 
@@ -203,8 +198,6 @@ Reference: GDPR Art. 35 (Data protection impact assessment)
 | Risk 2 | [TODO] | [TODO] | [TODO] |
 
 **Overall Risk:** [TODO: Low / Medium / High / Very High]
-
----
 
 ## 4. Measures for Risk Mitigation
 
@@ -224,13 +217,9 @@ Reference: GDPR Art. 35 (Data protection impact assessment)
 
 **Deadline:** [TODO: Date]
 
----
-
 #### Measure 2: [TODO: Name of Measure]
 
 [TODO: Repeat structure for additional measures]
-
----
 
 ### 4.2 Organizational Measures
 
@@ -247,8 +236,6 @@ Reference: GDPR Art. 35 (Data protection impact assessment)
 **Responsible:** [TODO: Role/Name]
 
 **Deadline:** [TODO: Date]
-
----
 
 ### 4.3 Data Protection by Design
 
@@ -273,8 +260,6 @@ Reference: GDPR Art. 35 (Data protection impact assessment)
 **Description:**
 [TODO: How were Privacy by Default principles implemented?]
 
----
-
 ## 5. Residual Risk Assessment
 
 ### 5.1 Risks After Measures
@@ -293,8 +278,6 @@ Reference: GDPR Art. 35 (Data protection impact assessment)
 **Justification:**
 [TODO: Why is residual risk acceptable or not acceptable?]
 
----
-
 ## 6. Consultation of Data Protection Officer
 
 **Data Protection Officer:** [TODO: Name]
@@ -308,8 +291,6 @@ Reference: GDPR Art. 35 (Data protection impact assessment)
 [TODO: How were recommendations implemented?]
 
 **Signature Data Protection Officer:** ___________________
-
----
 
 ## 7. Seeking Views of Data Subjects
 
@@ -326,8 +307,6 @@ Reference: GDPR Art. 35 (Data protection impact assessment)
 
 **Consideration:**
 [TODO: How were views considered?]
-
----
 
 ## 8. Prior Consultation with Supervisory Authority
 
@@ -346,8 +325,6 @@ Reference: GDPR Art. 35 (Data protection impact assessment)
 **Implementation of Recommendations:**
 [TODO: How were recommendations implemented?]
 
----
-
 ## 9. Approval
 
 **Controller:** [TODO: Name, Role]
@@ -360,8 +337,6 @@ Reference: GDPR Art. 35 (Data protection impact assessment)
 [TODO: List of conditions]
 
 **Signature:** ___________________
-
----
 
 ## 10. Review and Update
 
@@ -381,8 +356,6 @@ Reference: GDPR Art. 35 (Data protection impact assessment)
 | 1.0 | [TODO] | Initial version | [TODO] |
 | 1.1 | [TODO] | [TODO: Description] | [TODO] |
 
----
-
 ## Appendices
 
 - [ ] Data flow diagrams
@@ -391,14 +364,5 @@ Reference: GDPR Art. 35 (Data protection impact assessment)
 - [ ] Consent forms
 - [ ] Other relevant documents
 
----
-
 **Note:** This DPIA is a living document and must be updated upon changes in processing or new insights about risks.
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

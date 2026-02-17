@@ -1,11 +1,16 @@
 # IT-Organisation und Rollen
 
-**Dokument-ID:** idw-ps-951-0120  
-**Owner:** {{ meta.audit_lead }}  
-**Version:** {{ meta.version }}  
-**Status:** {{ meta.status }}  
-**Klassifizierung:** {{ meta.classification }}  
-**Letzte Aktualisierung:** {{ meta.date }}
+**Dokument-ID:** idw-ps-951-0120
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -16,9 +21,9 @@ Dieses Dokument beschreibt die Prüfung der IT-Organisation und der Rollenvertei
 ## 2. Prüfungsgegenstand
 
 ### IT-Organisationsstruktur
-- **Organisationsmodell:** {{ source.org_model }}
-- **Aufbauorganisation:** {{ source.org_structure }}
-- **Rollen und Verantwortlichkeiten:** {{ source.roles_responsibilities }}
+- **Organisationsmodell:** [TODO]
+- **Aufbauorganisation:** [TODO]
+- **Rollen und Verantwortlichkeiten:** [TODO]
 
 ### Prüfungsziele
 - Bewertung der IT-Organisationsstruktur
@@ -43,21 +48,21 @@ Dieses Dokument beschreibt die Prüfung der IT-Organisation und der Rollenvertei
 
 | Kriterium | Anforderung | Ist-Zustand | Bewertung |
 |-----------|-------------|-------------|-----------|
-| Organigramm | Aktuell | {{ source.org_chart_status }} | {{ source.org_chart_assessment }} |
-| Stellenbeschreibungen | Vollständig | {{ source.job_desc_status }} | {{ source.job_desc_assessment }} |
-| Vertretungsregelungen | Definiert | {{ source.deputy_status }} | {{ source.deputy_assessment }} |
+| Organigramm | Aktuell | [TODO] | [TODO] |
+| Stellenbeschreibungen | Vollständig | [TODO] | [TODO] |
+| Vertretungsregelungen | Definiert | [TODO] | [TODO] |
 
 ## 5. Feststellungen
 
 ### Positive Feststellungen
-1. {{ source.positive_finding_1 }}
+1. [TODO]
 
 ### Verbesserungspotenziale
-1. {{ source.improvement_1 }}
+1. [TODO]
 
 ## 6. Empfehlungen
 
-1. {{ source.recommendation_1 }}
+1. [TODO]
 
 ## 7. Referenzen
 
@@ -65,18 +70,9 @@ Dieses Dokument beschreibt die Prüfung der IT-Organisation und der Rollenvertei
 - Organigramm
 - Stellenbeschreibungen
 
----
-
 **Genehmigt durch:**  
-{{ meta.audit_lead }}, Prüfungsleiter  
-Datum: {{ meta.approval_date }}
+{{ meta-organisation-roles.role_Internal_Auditor }}, Prüfungsleiter  
+Datum: {{ meta-handbook.valid_from }}
 
-**Nächster Review:** {{ meta.next_review }}
+**Nächster Review:** {{ meta-handbook.next_review }}
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |

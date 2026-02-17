@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-38500-0090
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Principle 6: Human Behavior
+
+**Document-ID:** [FRAMEWORK]-0090
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -16,7 +28,7 @@ This document describes the application of the Human Behavior principle in the o
 ## Scope
 
 This document applies to:
-- {{ meta.organization }}
+- {{ meta-organisation.name }}
 - All IT users and stakeholders
 - IT policies and practices
 
@@ -37,10 +49,10 @@ IT policies, practices, and decisions demonstrate respect for human behavior, in
 
 | Criterion | Target | Current |
 |-----------|--------|---------|
-| User Experience Score | >8/10 | {{ meta.ux_score }}/10 |
-| Training Participation | >90% | {{ meta.training_participation }}% |
-| Employee IT Satisfaction | >80% | {{ meta.employee_satisfaction }}% |
-| Accessibility | 100% | {{ meta.accessibility }}% |
+| User Experience Score | >8/10 | {{ meta-handbook.ux_score }}/10 |
+| Training Participation | >90% | {{ meta-handbook.training_participation }}% |
+| Employee IT Satisfaction | >80% | {{ meta-handbook.employee_satisfaction }}% |
+| Accessibility | 100% | {{ meta-handbook.accessibility }}% |
 
 ## Direct
 
@@ -91,23 +103,15 @@ IT policies, practices, and decisions demonstrate respect for human behavior, in
 
 ### KPIs
 
-- Net Promoter Score (NPS): {{ meta.nps }}
-- User Satisfaction Score: {{ meta.user_satisfaction }}/10
-- Training Completion Rate: {{ meta.training_completion }}%
-- Helpdesk Satisfaction: {{ meta.helpdesk_satisfaction }}/10
-- Accessibility Compliance: {{ meta.accessibility_compliance }}%
-- System Usability Scale (SUS): {{ meta.sus_score }}/100
+- Net Promoter Score (NPS): {{ meta-handbook.nps }}
+- User Satisfaction Score: {{ meta-handbook.user_satisfaction }}/10
+- Training Completion Rate: {{ meta-handbook.training_completion }}%
+- Helpdesk Satisfaction: {{ meta-handbook.helpdesk_satisfaction }}/10
+- Accessibility Compliance: {{ meta-handbook.accessibility_compliance }}%
+- System Usability Scale (SUS): {{ meta-handbook.sus_score }}/100
 
 ## Document References
 
 - 0010_governance_framework.md
 - 0020_governance_model.md
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 

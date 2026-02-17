@@ -1,11 +1,16 @@
 # Überwachung, Messung, Analyse und Bewertung
 
-**Dokument-ID:** 0550  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0550
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -18,13 +23,13 @@ Referenz: ISO 9001:2015, Kapitel 9.1
 
 ## Zweck
 
-Dieses Dokument definiert, wie {{ meta.organization }} die Leistung und Wirksamkeit des QMS überwacht, misst, analysiert und bewertet.
+Dieses Dokument definiert, wie {{ meta-organisation.name }} die Leistung und Wirksamkeit des QMS überwacht, misst, analysiert und bewertet.
 
 ## Allgemeine Anforderungen (9.1.1)
 
 ### Überwachungs- und Messanforderungen
 
-**{{ meta.organization }} bestimmt:**
+**{{ meta-organisation.name }} bestimmt:**
 - **Was** überwacht und gemessen werden muss
 - **Methoden** für Überwachung, Messung, Analyse und Bewertung
 - **Wann** Überwachung und Messung durchgeführt werden
@@ -32,7 +37,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} die Leistung und Wirksamk
 
 ### Leistungsbewertung
 
-**{{ meta.organization }} bewertet:**
+**{{ meta-organisation.name }} bewertet:**
 - Leistung und Wirksamkeit des QMS
 - Konformität von Produkten und Dienstleistungen
 - Kundenzufriedenheit
@@ -51,7 +56,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} die Leistung und Wirksamk
 
 ### Überwachungsmethoden
 
-**{{ meta.organization }} überwacht Kundenwahrnehmungen durch:**
+**{{ meta-organisation.name }} überwacht Kundenwahrnehmungen durch:**
 - Kundenbefragungen
 - Kundenfeedback und Beschwerden
 - Kundengespräche
@@ -97,7 +102,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} die Leistung und Wirksamk
 
 ### Datenanalyse
 
-**{{ meta.organization }} analysiert und bewertet Daten zu:**
+**{{ meta-organisation.name }} analysiert und bewertet Daten zu:**
 - Konformität von Produkten und Dienstleistungen
 - Grad der Kundenzufriedenheit
 - Leistung und Wirksamkeit des QMS
@@ -146,7 +151,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} die Leistung und Wirksamk
 
 ### Prozessüberwachung
 
-**Für jeden Prozess überwacht {{ meta.organization }}:**
+**Für jeden Prozess überwacht {{ meta-organisation.name }}:**
 - Prozesseingaben und -ausgaben
 - Prozessleistung (Effizienz, Effektivität)
 - Einhaltung von Prozesskriterien
@@ -172,7 +177,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} die Leistung und Wirksamk
 
 ### Produktüberwachung
 
-**{{ meta.organization }} überwacht:**
+**{{ meta-organisation.name }} überwacht:**
 - Produktkonformität mit Spezifikationen
 - Produktqualität
 - Produktzuverlässigkeit
@@ -234,8 +239,6 @@ Dieses Dokument definiert, wie {{ meta.organization }} die Leistung und Wirksamk
 - Meldung von Problemen
 - Teilnahme an Verbesserungen
 
----
-
 **Nächste Schritte:**
 1. Definiere alle zu überwachenden Parameter
 2. Etabliere Messmethoden und -frequenzen
@@ -244,10 +247,3 @@ Dieses Dokument definiert, wie {{ meta.organization }} die Leistung und Wirksamk
 5. Berichte Ergebnisse an relevante Parteien
 6. Identifiziere und priorisiere Verbesserungen
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

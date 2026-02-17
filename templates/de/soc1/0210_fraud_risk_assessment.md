@@ -1,13 +1,24 @@
----
+
 Document-ID: soc1-0210
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Betrugsrisikobewertung
+
+**Dokument-ID:** [FRAMEWORK]-0210
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -30,11 +41,11 @@ Die Organisation bewertet das Potenzial für Betrug bei der Erreichung ihrer Zie
 
 ### Betrugs-Dreieck
 
-**Gelegenheit**: {{ source.fraud_opportunity }}
+**Gelegenheit**: [TODO]
 
-**Anreiz/Druck**: {{ source.fraud_incentive }}
+**Anreiz/Druck**: [TODO]
 
-**Rationalisierung**: {{ source.fraud_rationalization }}
+**Rationalisierung**: [TODO]
 
 ### Betrugsarten
 
@@ -44,7 +55,7 @@ Die Organisation bewertet das Potenzial für Betrug bei der Erreichung ihrer Zie
 - Verbindlichkeitenunterbewertung
 - Offenlegungsbetrug
 
-{{ source.financial_reporting_fraud }}
+[TODO]
 
 **Vermögensmissbrauch**:
 - Diebstahl von Bargeld
@@ -52,7 +63,7 @@ Die Organisation bewertet das Potenzial für Betrug bei der Erreichung ihrer Zie
 - Missbrauch von Vermögenswerten
 - Spesenbetrug
 
-{{ source.asset_misappropriation }}
+[TODO]
 
 **Korruption**:
 - Bestechung
@@ -60,21 +71,21 @@ Die Organisation bewertet das Potenzial für Betrug bei der Erreichung ihrer Zie
 - Wirtschaftliche Erpressung
 - Illegale Zuwendungen
 
-{{ source.corruption_fraud }}
+[TODO]
 
 ## Betrugsrisiko-Identifikation
 
 ### Identifikationsmethoden
 
-**Brainstorming-Sitzungen**: {{ source.fraud_brainstorming }}
+**Brainstorming-Sitzungen**: [TODO]
 
-**Interviews**: {{ source.fraud_interviews }}
+**Interviews**: [TODO]
 
-**Prozessanalyse**: {{ source.process_analysis }}
+**Prozessanalyse**: [TODO]
 
-**Historische Datenanalyse**: {{ source.historical_analysis }}
+**Historische Datenanalyse**: [TODO]
 
-**Externe Informationen**: {{ source.external_information }}
+**Externe Informationen**: [TODO]
 
 ### Risikofaktoren
 
@@ -84,7 +95,7 @@ Die Organisation bewertet das Potenzial für Betrug bei der Erreichung ihrer Zie
 - Profitabilitätsdruck
 - Externe Erwartungen
 
-{{ source.financial_risk_factors }}
+[TODO]
 
 **Operative Risikofaktoren**:
 - Komplexe Transaktionen
@@ -92,7 +103,7 @@ Die Organisation bewertet das Potenzial für Betrug bei der Erreichung ihrer Zie
 - Hohe Mitarbeiterfluktuation
 - Unzureichende Überwachung
 
-{{ source.operational_risk_factors }}
+[TODO]
 
 **Verhaltensrisikofaktoren**:
 - Lebensstil über Verhältnisse
@@ -100,12 +111,12 @@ Die Organisation bewertet das Potenzial für Betrug bei der Erreichung ihrer Zie
 - Unzufriedenheit
 - Ethische Kompromisse
 
-{{ source.behavioral_risk_factors }}
+[TODO]
 
 ### Identifizierte Betrugsrisiken
 
 **Risikoinventar**:
-{{ source.fraud_risk_inventory }}
+[TODO]
 
 ## Betrugsrisiko-Bewertung
 
@@ -118,7 +129,7 @@ Die Organisation bewertet das Potenzial für Betrug bei der Erreichung ihrer Zie
 - Wahrscheinlich (4)
 - Sehr wahrscheinlich (5)
 
-{{ source.likelihood_criteria }}
+[TODO]
 
 **Auswirkung**:
 - Unbedeutend (1)
@@ -127,70 +138,70 @@ Die Organisation bewertet das Potenzial für Betrug bei der Erreichung ihrer Zie
 - Hoch (4)
 - Kritisch (5)
 
-{{ source.impact_criteria }}
+[TODO]
 
 ### Risikobewertungsmatrix
 
-**Bewertungsmethodik**: {{ source.assessment_methodology }}
+**Bewertungsmethodik**: [TODO]
 
 **Risikobewertung**:
-{{ source.fraud_risk_assessment }}
+[TODO]
 
 ### Priorisierung
 
-**Hohe Priorität**: {{ source.high_priority_risks }}
+**Hohe Priorität**: [TODO]
 
-**Mittlere Priorität**: {{ source.medium_priority_risks }}
+**Mittlere Priorität**: [TODO]
 
-**Niedrige Priorität**: {{ source.low_priority_risks }}
+**Niedrige Priorität**: [TODO]
 
 ## Betrugsrisiko-Reaktion
 
 ### Präventive Kontrollen
 
-**Funktionentrennung**: {{ source.segregation_of_duties }}
+**Funktionentrennung**: [TODO]
 
-**Autorisierungskontrollen**: {{ source.authorization_controls }}
+**Autorisierungskontrollen**: [TODO]
 
-**Physische Kontrollen**: {{ source.physical_controls }}
+**Physische Kontrollen**: [TODO]
 
-**IT-Kontrollen**: {{ source.it_controls }}
+**IT-Kontrollen**: [TODO]
 
-**Personalkontrollen**: {{ source.personnel_controls }}
+**Personalkontrollen**: [TODO]
 
 ### Detektive Kontrollen
 
-**Überwachungskontrollen**: {{ source.monitoring_controls }}
+**Überwachungskontrollen**: [TODO]
 
-**Abstimmungen**: {{ source.reconciliation_controls }}
+**Abstimmungen**: [TODO]
 
-**Analytische Verfahren**: {{ source.analytical_procedures }}
+**Analytische Verfahren**: [TODO]
 
-**Ausnahmeberichte**: {{ source.exception_reporting }}
+**Ausnahmeberichte**: [TODO]
 
-**Datenanalyse**: {{ source.data_analytics }}
+**Datenanalyse**: [TODO]
 
 ### Reaktive Kontrollen
 
-**Untersuchungsverfahren**: {{ source.investigation_procedures }}
+**Untersuchungsverfahren**: [TODO]
 
-**Korrekturmaßnahmen**: {{ source.corrective_actions }}
+**Korrekturmaßnahmen**: [TODO]
 
-**Disziplinarmaßnahmen**: {{ source.disciplinary_actions }}
+**Disziplinarmaßnahmen**: [TODO]
 
-**Rechtliche Schritte**: {{ source.legal_actions }}
+**Rechtliche Schritte**: [TODO]
 
 ## Betrugsüberwachung und -erkennung
 
 ### Überwachungsprogramm
 
-**Laufende Überwachung**: {{ source.ongoing_monitoring }}
+**Laufende Überwachung**: [TODO]
 
-**Periodische Bewertungen**: {{ source.periodic_assessments }}
+**Periodische Bewertungen**: [TODO]
 
-**Interne Audits**: {{ source.internal_audits }}
+**Interne Audits**: [TODO]
 
-**Externe Audits**: {{ source.external_audits }}
+**Externe Audits**: [TODO]
 
 ### Erkennungsmechanismen
 
@@ -201,18 +212,18 @@ Die Organisation bewertet das Potenzial für Betrug bei der Erreichung ihrer Zie
 - Umgehung von Kontrollen
 - Verhaltensänderungen
 
-{{ source.red_flags }}
+[TODO]
 
-**Datenanalyse-Tools**: {{ source.data_analytics_tools }}
+**Datenanalyse-Tools**: [TODO]
 
-**Whistleblower-Hotline**: {{ source.whistleblower_hotline }}
+**Whistleblower-Hotline**: [TODO]
 
-**Externe Hinweise**: {{ source.external_tips }}
+**Externe Hinweise**: [TODO]
 
 ### Überwachungsmetriken
 
 **Key Risk Indicators (KRIs)**:
-{{ source.fraud_kris }}
+[TODO]
 
 **Metriken**:
 - Anzahl der Betrugsvorwürfe
@@ -220,7 +231,7 @@ Die Organisation bewertet das Potenzial für Betrug bei der Erreichung ihrer Zie
 - Finanzieller Verlust durch Betrug
 - Kontrollwirksamkeit
 
-{{ source.fraud_metrics }}
+[TODO]
 
 ## Berichterstattung und Untersuchung
 
@@ -233,15 +244,15 @@ Die Organisation bewertet das Potenzial für Betrug bei der Erreichung ihrer Zie
 - Whistleblower-Hotline
 - Externe Hotline
 
-{{ source.reporting_channels }}
+[TODO]
 
-**Anonymität und Schutz**: {{ source.reporter_protection }}
+**Anonymität und Schutz**: [TODO]
 
 ### Untersuchungsprozess
 
-**Einleitung der Untersuchung**: {{ source.investigation_initiation }}
+**Einleitung der Untersuchung**: [TODO]
 
-**Untersuchungsteam**: {{ source.investigation_team }}
+**Untersuchungsteam**: [TODO]
 
 **Untersuchungsschritte**:
 1. Erste Bewertung
@@ -251,9 +262,9 @@ Die Organisation bewertet das Potenzial für Betrug bei der Erreichung ihrer Zie
 5. Feststellungen
 6. Empfehlungen
 
-{{ source.investigation_steps }}
+[TODO]
 
-**Dokumentation**: {{ source.investigation_documentation }}
+**Dokumentation**: [TODO]
 
 ### Berichterstattung
 
@@ -262,16 +273,16 @@ Die Organisation bewertet das Potenzial für Betrug bei der Erreichung ihrer Zie
 - Vorstand/Prüfungsausschuss
 - Interne Revision
 
-{{ source.internal_reporting }}
+[TODO]
 
 **Externe Berichterstattung**:
 - Regulierungsbehörden
 - Strafverfolgungsbehörden
 - Externe Prüfer
 
-{{ source.external_reporting }}
+[TODO]
 
-**Berichtsinhalte**: {{ source.report_contents }}
+**Berichtsinhalte**: [TODO]
 
 ## Schulung und Bewusstsein
 
@@ -283,7 +294,7 @@ Die Organisation bewertet das Potenzial für Betrug bei der Erreichung ihrer Zie
 - Vorstand
 - Hochrisikobereiche
 
-{{ source.training_audiences }}
+[TODO]
 
 **Schulungsinhalte**:
 - Betrugsarten
@@ -292,17 +303,17 @@ Die Organisation bewertet das Potenzial für Betrug bei der Erreichung ihrer Zie
 - Konsequenzen
 - Fallstudien
 
-{{ source.training_content }}
+[TODO]
 
-**Schulungsfrequenz**: {{ source.training_frequency }}
+**Schulungsfrequenz**: [TODO]
 
 ### Bewusstseinskampagnen
 
-**Kommunikationskanäle**: {{ source.awareness_channels }}
+**Kommunikationskanäle**: [TODO]
 
-**Kampagnenthemen**: {{ source.awareness_themes }}
+**Kampagnenthemen**: [TODO]
 
-**Materialien**: {{ source.awareness_materials }}
+**Materialien**: [TODO]
 
 ## Dokumentation und Nachweise
 
@@ -323,21 +334,21 @@ Die Organisation bewertet das Potenzial für Betrug bei der Erreichung ihrer Zie
    - Beweise
    - Maßnahmenpläne
 
-{{ source.required_documentation }}
+[TODO]
 
 ### Aufbewahrungsfristen
 
-{{ source.retention_requirements }}
+[TODO]
 
 ## Kontinuierliche Verbesserung
 
 ### Lessons Learned
 
-**Nachbesprechungen**: {{ source.post_incident_reviews }}
+**Nachbesprechungen**: [TODO]
 
-**Verbesserungsmaßnahmen**: {{ source.improvement_actions }}
+**Verbesserungsmaßnahmen**: [TODO]
 
-**Best Practices**: {{ source.best_practices }}
+**Best Practices**: [TODO]
 
 ### Aktualisierung der Bewertung
 
@@ -347,9 +358,9 @@ Die Organisation bewertet das Potenzial für Betrug bei der Erreichung ihrer Zie
 - Neue Risiken
 - Betrugsvorkommnisse
 
-{{ source.assessment_updates }}
+[TODO]
 
-**Aktualisierungsprozess**: {{ source.update_process }}
+**Aktualisierungsprozess**: [TODO]
 
 ## Referenzen
 
@@ -361,12 +372,3 @@ Die Organisation bewertet das Potenzial für Betrug bei der Erreichung ihrer Zie
 
 <!-- Hinweise für Autoren: Aktualisieren Sie die Betrugsrisikobewertung jährlich -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

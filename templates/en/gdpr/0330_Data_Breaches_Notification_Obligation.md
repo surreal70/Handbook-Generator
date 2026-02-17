@@ -1,11 +1,16 @@
 # Data Breaches and Notification Obligation
 
-**Document-ID:** 0330  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0330
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,7 +30,7 @@ Reference: GDPR Art. 33 (Notification to supervisory authority), Art. 34 (Commun
 
 ## Purpose
 
-This document regulates handling of data breaches at {{ meta.organization }} according to Art. 33-34 GDPR. It defines notification obligations, deadlines, and processes for managing data protection incidents.
+This document regulates handling of data breaches at {{ meta-organisation.name }} according to Art. 33-34 GDPR. It defines notification obligations, deadlines, and processes for managing data protection incidents.
 
 ## Definition of Data Breach (Art. 4(12))
 
@@ -258,8 +263,6 @@ The controller documents all data breaches, including all facts, effects, and re
 - **Data Protection Impact Assessment (Art. 35):** Risk assessment
 - **Incident Response Plan:** Detailed technical processes
 
----
-
 **Next Steps:**
 1. Implement an incident response process
 2. Define escalation paths and responsibilities
@@ -267,10 +270,3 @@ The controller documents all data breaches, including all facts, effects, and re
 4. Conduct regular incident response exercises
 5. Establish a breach register
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

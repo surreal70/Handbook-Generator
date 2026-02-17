@@ -1,14 +1,26 @@
 # Betriebsübergabe und Go-Live-Checkliste
 
+**Dokument-ID:** [FRAMEWORK]-0080
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Übersicht
 
 Dieses Dokument beschreibt den Prozess der Betriebsübergabe und enthält eine umfassende Go-Live-Checkliste für die Überführung neuer oder geänderter IT-Services in den Produktivbetrieb.
 
-**Service:** {{ meta.service_name }}  
-**Verantwortlich:** {{ meta.it_operations_manager.name }}  
-**Stand:** {{ meta.document.version }}
-
----
+**Service:** {{ meta-handbook.service_name }}  
+**Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}  
+**Stand:** {{ meta-handbook.revision }}
 
 ## Betriebsübergabe-Prozess
 
@@ -50,13 +62,11 @@ Dieses Dokument beschreibt den Prozess der Betriebsübergabe und enthält eine u
 | Rolle | Verantwortung | Ansprechpartner |
 |---|---|---|
 | **Service Owner** | Gesamtverantwortung für Service | [TODO: Name] |
-| **IT Operations Manager** | Betriebsübernahme koordinieren | {{ meta.it_operations_manager.name }} |
+| **IT Operations Manager** | Betriebsübernahme koordinieren | {{ meta-organisation-roles.role_it_operations_manager.name }} |
 | **Technical Lead** | Technische Implementierung | [TODO: Name] |
-| **Service Desk Lead** | Support-Bereitschaft | {{ meta.service_desk_lead.name }} |
+| **Service Desk Lead** | Support-Bereitschaft | {{ meta-organisation-roles.role_service_desk_lead.name }} |
 | **Change Manager** | Change-Genehmigung | [TODO: Name] |
-| **CIO** | Finale Freigabe | {{ meta.cio.name }} |
-
----
+| **CIO** | Finale Freigabe | {{ meta-organisation-roles.role_cio.name }} |
 
 ## Go-Live-Checkliste
 
@@ -203,8 +213,6 @@ Dieses Dokument beschreibt den Prozess der Betriebsübergabe und enthält eine u
 - [ ] Lessons Learned dokumentiert
 - [ ] Post-Implementation-Review durchgeführt
 
----
-
 ## Übergabedokumentation
 
 ### Übergabe-Paket
@@ -282,12 +290,10 @@ Das Übergabe-Paket muss folgende Dokumente enthalten:
 
 **Teilnehmer:**
 - Service Owner
-- IT Operations Manager: {{ meta.it_operations_manager.name }}
+- IT Operations Manager: {{ meta-organisation-roles.role_it_operations_manager.name }}
 - Technical Lead
-- Service Desk Lead: {{ meta.service_desk_lead.name }}
-- CIO: {{ meta.cio.name }}
-
----
+- Service Desk Lead: {{ meta-organisation-roles.role_service_desk_lead.name }}
+- CIO: {{ meta-organisation-roles.role_cio.name }}
 
 ## Acceptance-Kriterien
 
@@ -324,10 +330,8 @@ Das Übergabe-Paket muss folgende Dokumente enthalten:
 | **Business Requirements** | Alle Geschäftsanforderungen erfüllt | ☐ | Service Owner |
 | **User Acceptance** | UAT erfolgreich abgeschlossen | ☐ | Business Users |
 | **Compliance** | Compliance-Anforderungen erfüllt | ☐ | Compliance Officer |
-| **Budget** | Innerhalb des Budgets | ☐ | {{ meta.cfo.name }} |
+| **Budget** | Innerhalb des Budgets | ☐ | {{ meta-organisation-roles.role_cfo.name }} |
 | **Timeline** | Zeitplan eingehalten | ☐ | Project Manager |
-
----
 
 ## Go/No-Go-Entscheidung
 
@@ -336,10 +340,10 @@ Das Übergabe-Paket muss folgende Dokumente enthalten:
 **Zeitpunkt:** 24 Stunden vor geplantem Go-Live  
 **Teilnehmer:**
 - Service Owner
-- IT Operations Manager: {{ meta.it_operations_manager.name }}
+- IT Operations Manager: {{ meta-organisation-roles.role_it_operations_manager.name }}
 - Technical Lead
 - Change Manager
-- CIO: {{ meta.cio.name }}
+- CIO: {{ meta-organisation-roles.role_cio.name }}
 
 ### Entscheidungskriterien
 
@@ -362,8 +366,6 @@ Das Übergabe-Paket muss folgende Dokumente enthalten:
 - Service Owner: _________________ Datum: _______
 - IT Operations Manager: _________________ Datum: _______
 - CIO: _________________ Datum: _______
-
----
 
 ## Rollback-Plan
 
@@ -392,8 +394,6 @@ Rollback wird ausgelöst bei:
 - **Innerhalb 4 Stunden nach Go-Live:** Schneller Rollback möglich
 - **4-24 Stunden nach Go-Live:** Rollback mit erhöhtem Aufwand
 - **Nach 24 Stunden:** Rollback nur nach sorgfältiger Analyse
-
----
 
 ## Post-Implementation-Review
 
@@ -432,29 +432,18 @@ Rollback wird ausgelöst bei:
 | **User Satisfaction** | ≥ 80% | [TODO]% | ☐ |
 | **Performance** | < [TODO] ms | [TODO] ms | ☐ |
 
----
-
 ## Kontakte
 
 **Go-Live-Team:**
 - **Service Owner:** [TODO: Name] - [TODO: E-Mail]
-- **IT Operations Manager:** {{ meta.it_operations_manager.name }} - {{ meta.it_operations_manager.email }}
+- **IT Operations Manager:** {{ meta-organisation-roles.role_it_operations_manager.name }} - {{ meta-organisation-roles.role_it_operations_manager.email }}
 - **Technical Lead:** [TODO: Name] - [TODO: E-Mail]
-- **Service Desk Lead:** {{ meta.service_desk_lead.name }} - {{ meta.service_desk_lead.email }}
+- **Service Desk Lead:** {{ meta-organisation-roles.role_service_desk_lead.name }} - {{ meta-organisation-roles.role_service_desk_lead.email }}
 - **Change Manager:** [TODO: Name] - [TODO: E-Mail]
-- **CIO:** {{ meta.cio.name }} - {{ meta.cio.email }}
+- **CIO:** {{ meta-organisation-roles.role_cio.name }} - {{ meta-organisation-roles.role_cio.email }}
 
----
+**Dokumentverantwortlicher:** {{ meta-handbook.owner }}  
+**Genehmigt durch:** {{ meta-handbook.approver }}  
+**Version:** {{ meta-handbook.revision }}  
+**Organisation:** {{ meta-organisation.name }}
 
-**Dokumentverantwortlicher:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Organisation:** {{ meta.organization.name }}
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

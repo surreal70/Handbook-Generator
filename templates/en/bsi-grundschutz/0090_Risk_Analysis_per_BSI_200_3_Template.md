@@ -1,14 +1,16 @@
 # Risk Analysis (BSI Standard 200-3) – Template
 
-**Document ID:** 0090  
-**Document Type:** Methodology Artifact  
-**Reference Framework:** BSI IT-Grundschutz (BSI Standard 200-3)  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** {{ meta.document.status }}  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.document.last_updated }}  
-**Next Review:** {{ meta.document.next_review }}
+**Document-ID:** [FRAMEWORK]-0090
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -21,7 +23,7 @@ Reference: BSI Standard 200-3 (Risk Analysis based on IT-Grundschutz)
 
 ## 1. Objective and Trigger
 
-The risk analysis according to BSI Standard 200-3 identifies and assesses risks for **{{ meta.organization.name }}** that are not covered by IT-Grundschutz modules.
+The risk analysis according to BSI Standard 200-3 identifies and assesses risks for **{{ meta-organisation.name }}** that are not covered by IT-Grundschutz modules.
 
 **Responsible:** {{ meta.ciso.name }} (ISB)
 
@@ -169,9 +171,9 @@ The risk analysis according to BSI Standard 200-3 identifies and assesses risks 
 
 | Role | Name | Date | Approval |
 |---|---|---|---|
-| ISB | {{ meta.ciso.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| IT Management | {{ meta.cio.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| Executive Management | {{ meta.ceo.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
+| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| IT Management | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| Executive Management | {{ meta.ceo.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 ## 8. Update and Maintenance
 
@@ -182,20 +184,10 @@ The risk analysis is updated when:
 - At least annually as part of the ISMS review
 
 **Responsible:** {{ meta.ciso.name }} (ISB)  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Next Review:** {{ meta-handbook.next_review }}
 
 **References:**
 - BSI Standard 200-3: Risk Analysis based on IT-Grundschutz
 - BSI IT-Grundschutz Compendium
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
 
 <!-- End of template -->

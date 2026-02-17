@@ -1,5 +1,19 @@
 # ISMS Framework-Mapping
 
+**Dokument-ID:** [FRAMEWORK]-9999
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Überblick
 
 Dieses Dokument bildet die ISMS Templates auf die ISO/IEC 27001:2022 und Annex A Kontrollen ab.
@@ -52,21 +66,6 @@ Die Templates decken alle 93 Annex A Controls der ISO/IEC 27001:2022 ab:
 - ISO/IEC 27001:2022 - Information security management systems — Requirements
 - ISO/IEC 27002:2022 - Information security controls
 
----
-
 **Version:** 1.0.0  
 **Datum:** 2026-02-10
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
-
-## Versionshistorie
-
-| Version | Datum | Änderungen |
-|---------|-------|------------|
-| 0.1 | {{meta.document.last_updated}} | Initiale Erstellung |

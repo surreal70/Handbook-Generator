@@ -1,13 +1,25 @@
----
+
 Document-ID: nist-csf-0040
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Roles and Responsibilities (GV.RR)
+
+**Document-ID:** [FRAMEWORK]-0040
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -15,7 +27,7 @@ This document defines the roles, responsibilities, and authorities for cybersecu
 
 ## Scope
 
-{{ meta.scope }}
+{{ meta-handbook.scope }}
 
 ## Governance Structure
 
@@ -36,7 +48,7 @@ This document defines the roles, responsibilities, and authorities for cybersecu
 ## Cybersecurity Roles
 
 ### Chief Information Security Officer (CISO)
-**Name:** {{ meta.ciso }}  
+**Name:** {{ meta-organisation-roles.role_CISO }}  
 **Responsibilities:**
 - Overall responsibility for cybersecurity program
 - Development and maintenance of cybersecurity strategy
@@ -51,14 +63,14 @@ This document defines the roles, responsibilities, and authorities for cybersecu
 - Enforcement of security requirements
 
 ### Chief Risk Officer (CRO)
-**Name:** {{ meta.cro }}  
+**Name:** {{ meta-organisation-roles.role_Risk_Manager }}  
 **Responsibilities:**
 - Integration of cybersecurity risks into ERM
 - Risk assessment and reporting
 - Coordination with CISO on risk treatment
 
 ### Security Operations Manager
-**Name:** {{ meta.security_ops_manager }}  
+**Name:** {{ meta-handbook.security_ops_manager }}  
 **Responsibilities:**
 - Daily operation of Security Operations Center (SOC)
 - Incident response and management
@@ -66,7 +78,7 @@ This document defines the roles, responsibilities, and authorities for cybersecu
 - Coordination with IT operations
 
 ### Security Architect
-**Name:** {{ meta.security_architect }}  
+**Name:** {{ meta-handbook.security_architect }}  
 **Responsibilities:**
 - Design of secure system architectures
 - Security requirements for new projects
@@ -74,7 +86,7 @@ This document defines the roles, responsibilities, and authorities for cybersecu
 - Security-by-design principles
 
 ### Compliance Manager
-**Name:** {{ meta.compliance_manager }}  
+**Name:** {{ meta-organisation-roles.role_Compliance_Manager }}  
 **Responsibilities:**
 - Monitoring regulatory compliance
 - Conducting compliance assessments
@@ -84,7 +96,7 @@ This document defines the roles, responsibilities, and authorities for cybersecu
 ## Business Unit Responsibilities
 
 ### IT Department
-**Head:** {{ meta.it_director }}  
+**Head:** {{ meta-organisation-roles.role_IT_Manager }}  
 **Responsibilities:**
 - Implementation of security controls
 - Patch management and system hardening
@@ -92,7 +104,7 @@ This document defines the roles, responsibilities, and authorities for cybersecu
 - Backup and recovery
 
 ### Human Resources
-**Head:** {{ meta.hr_director }}  
+**Head:** {{ meta-organisation-roles.role_HR_Manager }}  
 **Responsibilities:**
 - Security training for employees
 - Background checks
@@ -100,7 +112,7 @@ This document defines the roles, responsibilities, and authorities for cybersecu
 - Enforcement of security policies
 
 ### Legal/Compliance
-**Head:** {{ meta.legal_director }}  
+**Head:** {{ meta-handbook.legal_director }}  
 **Responsibilities:**
 - Legal advice on cybersecurity
 - Contract review (security clauses)
@@ -108,7 +120,7 @@ This document defines the roles, responsibilities, and authorities for cybersecu
 - Incident response (legal aspects)
 
 ### Procurement
-**Head:** {{ meta.procurement_director }}  
+**Head:** {{ meta-handbook.procurement_director }}  
 **Responsibilities:**
 - Supplier security assessments
 - Security requirements in contracts
@@ -156,14 +168,6 @@ This document defines the roles, responsibilities, and authorities for cybersecu
 - 0030_risk_management_strategy.md
 - 0050_policy_framework.md
 - 0060_oversight.md
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- 
 Author Notes:

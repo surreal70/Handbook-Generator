@@ -1,5 +1,19 @@
 # Policy: Incident Management
 
+**Dokument-ID:** 0400
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This policy establishes the principles for security incident management and response.
@@ -10,27 +24,15 @@ response capabilities and SOC maturity.
 ISO 27001:2022 Annex A Reference: A.5.24, A.5.25, A.5.26, A.5.27, A.5.28
 -->
 
-**Dokument-ID:** 0400  
-**Dokumenttyp:** Policy (abstrakt)  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.5.24-A.5.28 (inkl. Amendment 1:2024)  
-**Owner:** {{ meta.ciso.name }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
-
----
-
 ## 1. Zweck
 
-Diese Policy definiert die Grundsätze für Incident Management und Security Incident Response der **{{ meta.organization.name }}**. Sie stellt sicher, dass Sicherheitsvorfälle zeitnah erkannt, bewertet, behandelt und dokumentiert werden, um Schäden zu minimieren und aus Vorfällen zu lernen.
+Diese Policy definiert die Grundsätze für Incident Management und Security Incident Response der **{{ meta-organisation.name }}**. Sie stellt sicher, dass Sicherheitsvorfälle zeitnah erkannt, bewertet, behandelt und dokumentiert werden, um Schäden zu minimieren und aus Vorfällen zu lernen.
 
 ## 2. Geltungsbereich
 
 Diese Policy gilt für:
 
-- **Organisationseinheiten:** Alle Abteilungen und Standorte der {{ meta.organization.name }}
+- **Organisationseinheiten:** Alle Abteilungen und Standorte der {{ meta-organisation.name }}
 - **Incident-Typen:** Security Incidents, Data Breaches, Malware, Phishing, DDoS, Insider Threats
 - **Systeme:** Alle IT-Systeme, Anwendungen, Netzwerke, Cloud-Services
 - **Personen:** Alle Mitarbeiter, Auftragnehmer, Lieferanten
@@ -174,18 +176,9 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **DSGVO (EU 2016/679)** - Art. 33, 34 - Data Breach Notification
 - **NIS2-Richtlinie** - Network and Information Security Directive
 
----
-
 **Genehmigt durch:**  
 {{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+Datum: {{ meta-handbook.modifydate }}
 
-**Nächster Review:** {{ meta.document.next_review }} (jährlich oder anlassbezogen)
+**Nächster Review:** {{ meta-handbook.next_review }} (jährlich oder anlassbezogen)
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

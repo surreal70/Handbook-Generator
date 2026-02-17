@@ -1,5 +1,19 @@
 # NIST CSF 2.0 Framework Mapping
 
+**Document-ID:** [FRAMEWORK]-9999
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Overview
 
 This document maps the handbook templates to NIST Cybersecurity Framework 2.0 categories and subcategories.
@@ -357,8 +371,3 @@ Profiles enable assessment of current cybersecurity posture and planning for imp
 
 These templates cover all core functions and categories of NIST CSF 2.0. Organizations should adapt the templates to their specific requirements and risk profiles.
 
-## Version History
-
-| Version | Date | Changes |
-|---------|------|---------|
-| 0.1 | {{meta.document.last_updated}} | Initial creation |

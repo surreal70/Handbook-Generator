@@ -1,13 +1,16 @@
 # Business Impact Analysis (BIA) – Methodik
 
-**Dokument-ID:** BCM-0070  
-**Organisation:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** BCM-0070
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -27,7 +30,7 @@ Customization required:
 
 ### 1.1 Ziele der BIA
 
-Die Business Impact Analysis (BIA) der {{ meta.organization.name }} verfolgt folgende Ziele:
+Die Business Impact Analysis (BIA) der {{ meta-organisation.name }} verfolgt folgende Ziele:
 
 - **Identifikation kritischer Geschäftsprozesse:** Ermittlung der geschäftskritischen Prozesse und Services
 - **Quantifizierung von Auswirkungen:** Bewertung der finanziellen, operativen und reputationsbezogenen Auswirkungen von Ausfällen
@@ -127,7 +130,7 @@ Die BIA liefert folgende Ergebnisse:
 |-------|-----------|------------|----------------|
 | 1 | Kick-off Workshop | Alle Bereichsleiter | BCM-Manager |
 | 2-3 | Einzelinterviews Fachbereiche | Prozessverantwortliche | BCM-Manager |
-| 4 | IT-Workshop | IT-Team | BCM-Manager + {{ meta.roles.cio.name }} |
+| 4 | IT-Workshop | IT-Team | BCM-Manager + {{ meta-organisation-roles.role_CIO }} |
 | 5 | Konsolidierung und Analyse | BCM-Team | BCM-Manager |
 | 6 | Ergebnispräsentation | Management | BCM-Manager |
 
@@ -158,7 +161,7 @@ Die BIA liefert folgende Ergebnisse:
 3. Priorisierung wird festgelegt
 
 **Formale Freigabe:**
-- Genehmigung durch {{ meta.roles.ceo.name }} (CEO)
+- Genehmigung durch {{ meta-organisation-roles.role_CEO }} (CEO)
 - Bestätigung durch Fachbereichsleiter
 - Dokumentation der Freigabe
 
@@ -322,8 +325,8 @@ Der MTPD ist der Zeitpunkt, ab dem die Auswirkungen eines Ausfalls inakzeptabel 
 - Validierung der RTO/RPO-Werte
 
 **Management-Ebene:**
-- {{ meta.roles.ceo.name }} (CEO) genehmigt Gesamt-BIA
-- {{ meta.roles.cio.name }} (CIO) genehmigt IT-bezogene RTO/RPO
+- {{ meta-organisation-roles.role_CEO }} (CEO) genehmigt Gesamt-BIA
+- {{ meta-organisation-roles.role_CIO }} (CIO) genehmigt IT-bezogene RTO/RPO
 - Fachbereichsleiter genehmigen ihre Bereiche
 
 ### 6.2 Freigabeprozess
@@ -334,13 +337,5 @@ Der MTPD ist der Zeitpunkt, ab dem die Auswirkungen eines Ausfalls inakzeptabel 
 4. **Management-Präsentation:** Vorstellung der Ergebnisse
 5. **Formale Freigabe:** Unterschriften der Verantwortlichen
 6. **Veröffentlichung:** BIA-Ergebnisse werden kommuniziert
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 <!-- End of template -->

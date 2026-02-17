@@ -72,39 +72,39 @@ The templates support two types of placeholders for dynamic content:
 Meta placeholders are populated from the `metadata.yaml` configuration file:
 
 ```markdown
-**Organization:** {{ meta.organization.name }}
-**Location:** {{ meta.organization.city }}, {{ meta.organization.country }}
-**Website:** {{ meta.organization.website }}
+**Organization:** {{ meta-organisation.name }}
+**Location:** {{ meta-organisation.city }}, {{ meta-organisation.country }}
+**Website:** {{ meta-organisation.website }}
 
-**CIO:** {{ meta.cio.name }} ({{ meta.cio.email }})
-**CISO:** {{ meta.ciso.name }} ({{ meta.ciso.email }})
-**IT Operations Manager:** {{ meta.it_operations_manager.name }}
+**CIO:** {{ meta-organisation-roles.role_cio.name }} ({{ meta-organisation-roles.role_cio.email }})
+**CISO:** {{ meta-organisation-roles.role_ciso.name }} ({{ meta-organisation-roles.role_ciso.email }})
+**IT Operations Manager:** {{ meta-organisation-roles.role_it_operations_manager.name }}
 ```
 
 **Available Meta Fields:**
 
 **Organization:**
-- `{{ meta.organization.name }}` - Organization name
-- `{{ meta.organization.address }}` - Address
-- `{{ meta.organization.city }}` - City
-- `{{ meta.organization.postal_code }}` - Postal code
-- `{{ meta.organization.country }}` - Country
-- `{{ meta.organization.website }}` - Website
-- `{{ meta.organization.phone }}` - Phone
-- `{{ meta.organization.email }}` - Email
+- `{{ meta-organisation.name }}` - Organization name
+- `{{ meta-organisation.address }}` - Address
+- `{{ meta-organisation.city }}` - City
+- `{{ meta-organisation.postal_code }}` - Postal code
+- `{{ meta-organisation.country }}` - Country
+- `{{ meta-organisation.website }}` - Website
+- `{{ meta-organisation.phone }}` - Phone
+- `{{ meta-organisation.email }}` - Email
 
 **Roles (ceo, cio, ciso, cfo, coo, it_operations_manager, service_desk_lead):**
-- `{{ meta.ROLE.name }}` - Person's name
-- `{{ meta.ROLE.title }}` - Title/position
-- `{{ meta.ROLE.email }}` - Email address
-- `{{ meta.ROLE.phone }}` - Phone number
-- `{{ meta.ROLE.department }}` - Department (optional)
+- `{{ meta-organisation-roles.role_ROLE.name }}` - Person's name
+- `{{ meta-organisation-roles.role_ROLE.title }}` - Title/position
+- `{{ meta-organisation-roles.role_ROLE.email }}` - Email address
+- `{{ meta-organisation-roles.role_ROLE.phone }}` - Phone number
+- `{{ meta-organisation-roles.role_ROLE.department }}` - Department (optional)
 
 **Document:**
-- `{{ meta.document.owner }}` - Document owner
-- `{{ meta.document.approver }}` - Approver
-- `{{ meta.document.version }}` - Version
-- `{{ meta.document.classification }}` - Classification
+- `{{ meta-handbook.owner }}` - Document owner
+- `{{ meta-handbook.approver }}` - Approver
+- `{{ meta-handbook.revision }}` - Version
+- `{{ meta-handbook.classification }}` - Classification
 
 ### NetBox Placeholders (Infrastructure Data)
 
@@ -175,7 +175,7 @@ This process meets the following standards:
 **Use placeholders for recurring information:**
 ```markdown
 <!-- Good: Placeholder for organization name -->
-**Organization:** {{ meta.organization.name }}
+**Organization:** {{ meta-organisation.name }}
 
 <!-- Bad: Hardcoded value -->
 **Organization:** AdminSend GmbH
@@ -194,8 +194,8 @@ This process meets the following standards:
 
 | Version | Date | Author | Changes | Approved by |
 |---|---|---|---|---|
-| 1.0.0 | 2024-01-15 | {{ meta.author }} | Initial version | {{ meta.document.approver }} |
-| 1.1.0 | 2024-02-20 | {{ meta.author }} | Extended monitoring section | {{ meta.document.approver }} |
+| 1.0.0 | 2024-01-15 | [Author] | Initial version | {{ meta-handbook.approver }} |
+| 1.1.0 | 2024-02-20 | [Author] | Extended monitoring section | {{ meta-handbook.approver }} |
 ```
 
 ### 6. Service Level Definitions
@@ -204,9 +204,9 @@ This process meets the following standards:
 ```markdown
 | Metric | Target | Measurement Method | Responsible |
 |---|---:|---|---|
-| Availability | 99.9% | Uptime monitoring | {{ meta.it_operations_manager.name }} |
-| Response time | < 200ms | APM tool | {{ meta.it_operations_manager.name }} |
-| MTTR | < 4h | Incident tracking | {{ meta.service_desk_lead.name }} |
+| Availability | 99.9% | Uptime monitoring | {{ meta-organisation-roles.role_it_operations_manager.name }} |
+| Response time | < 200ms | APM tool | {{ meta-organisation-roles.role_it_operations_manager.name }} |
+| MTTR | < 4h | Incident tracking | {{ meta-organisation-roles.role_service_desk_lead.name }} |
 ```
 
 ## Generating Handbooks
@@ -380,10 +380,10 @@ These templates are intended for internal use within your organization. You are 
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
+| 0.1 | {{ meta-handbook.last_updated }} | {{ meta-handbook.author }} | Initial Creation |
 
 ## Version History
 
 | Version | Date | Changes |
 |---------|------|---------|
-| 0.1 | {{meta.document.last_updated}} | Initial creation |
+| 0.1 | {{meta-handbook.last_updated}} | Initial creation |

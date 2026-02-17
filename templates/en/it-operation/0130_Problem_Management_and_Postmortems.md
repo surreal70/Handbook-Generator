@@ -1,12 +1,26 @@
 # Problem Management and Postmortems
 
+**Document-ID:** [FRAMEWORK]-0130
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose and Scope
 
-This document describes the problem management process for {{ meta.organization.name }} according to ITIL v4 best practices. It defines the systematic analysis of recurring incidents, root cause analysis methods, postmortem processes, and the management of the Known Error Database.
+This document describes the problem management process for {{ meta-organisation.name }} according to ITIL v4 best practices. It defines the systematic analysis of recurring incidents, root cause analysis methods, postmortem processes, and the management of the Known Error Database.
 
-**Scope:** All IT services and systems of {{ meta.organization.name }}
+**Scope:** All IT services and systems of {{ meta-organisation.name }}
 
-**Responsible:** {{ meta.it_operations_manager.name }} ({{ meta.it_operations_manager.email }})
+**Responsible:** {{ meta-organisation-roles.role_it_operations_manager.name }} ({{ meta-organisation-roles.role_it_operations_manager.email }})
 
 ## Problem Definition
 
@@ -101,7 +115,7 @@ A **problem** is the unknown cause of one or more incidents. The goal of problem
 - Affected configuration items (CIs)
 - Initial hypotheses about cause
 
-**Tool:** {{ meta.ticketing_system }}
+**Tool:** {{ meta-handbook.ticketing_system }}
 
 **Responsible:** Problem Manager
 
@@ -625,7 +639,7 @@ A **postmortem** is a structured analysis of a major incident or critical proble
 - Postmortem moderation
 - Reporting
 
-**Person:** {{ meta.it_operations_manager.name }}
+**Person:** {{ meta-organisation-roles.role_it_operations_manager.name }}
 
 ### Technical Specialists
 
@@ -648,19 +662,19 @@ A **postmortem** is a structured analysis of a major incident or critical proble
 ## Tools and Systems
 
 ### Problem Management Tool
-- **System:** {{ meta.ticketing_system }}
-- **URL:** {{ meta.ticketing_system_url }}
+- **System:** {{ meta-handbook.ticketing_system }}
+- **URL:** {{ meta-handbook.ticketing_system_url }}
 - **Access:** IT Operations Team
 
 ### Known Error Database
-- **System:** {{ meta.ticketing_system }} (KEDB module)
-- **URL:** {{ meta.kedb_url }}
+- **System:** {{ meta-handbook.ticketing_system }} (KEDB module)
+- **URL:** {{ meta-handbook.kedb_url }}
 - **Access:** All IT staff (Read)
 
 ### RCA Tools
-- **Collaboration:** {{ meta.collaboration_tool }}
-- **Diagramming:** {{ meta.diagramming_tool }}
-- **Log Analysis:** {{ meta.log_analysis_tool }}
+- **Collaboration:** {{ meta-handbook.collaboration_tool }}
+- **Diagramming:** {{ meta-handbook.diagramming_tool }}
+- **Log Analysis:** {{ meta-handbook.log_analysis_tool }}
 
 ## References
 
@@ -670,18 +684,9 @@ A **postmortem** is a structured analysis of a major incident or critical proble
 - Internal Incident Management Processes
 - Change Management Processes
 
----
+**Document Owner:** {{ meta-handbook.owner }}  
+**Approved by:** {{ meta-handbook.approver }}  
+**Version:** {{ meta-handbook.revision }}  
+**Classification:** {{ meta-handbook.classification }}  
+**Last Updated:** {{ meta-handbook.date }}
 
-**Document Owner:** {{ meta.document.owner }}  
-**Approved by:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.date }}
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

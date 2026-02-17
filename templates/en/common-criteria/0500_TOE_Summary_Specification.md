@@ -1,11 +1,16 @@
 # TOE Summary Specification
 
-**Document-ID:** 0500  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** Internal / Confidential / Strictly Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0500
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -308,11 +313,3 @@ For detailed information see:
 - **0530_Coverage_Matrix.md**: Complete Coverage Matrix
 - **0540_Strength_of_Function.md**: Detailed SOF analysis
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | [TODO] | [TODO] | Initial version |
-| 1.0 | [TODO] | [TODO] | [TODO] |

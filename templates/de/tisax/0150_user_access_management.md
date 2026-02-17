@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0150
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Benutzerzugriffsverwaltung
+
+**Dokument-ID:** [FRAMEWORK]-0150
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -15,7 +26,7 @@ Dieses Dokument beschreibt die Prozesse und Verfahren für die Verwaltung von Be
 
 ## Geltungsbereich
 
-Dieses Dokument gilt für alle Benutzerkonten und Zugriffe in {{ source.organization_name }}.
+Dieses Dokument gilt für alle Benutzerkonten und Zugriffe in [TODO].
 
 ## Benutzer-Lebenszyklus
 
@@ -89,7 +100,7 @@ Dieses Dokument gilt für alle Benutzerkonten und Zugriffe in {{ source.organiza
 ### Konto-Richtlinien
 
 **Namenskonventionen:**
-- Format: {{ source.username_format }}
+- Format: [TODO]
 - Eindeutige Identifikation
 - Keine persönlichen Informationen in Service-Konten
 
@@ -99,8 +110,8 @@ Dieses Dokument gilt für alle Benutzerkonten und Zugriffe in {{ source.organiza
 - Keine Weitergabe
 
 **Konto-Sperrung:**
-- Nach {{ source.password_lockout_attempts }} Fehlversuchen
-- Automatische Entsperrung nach {{ source.lockout_duration }} Minuten
+- Nach [TODO] Fehlversuchen
+- Automatische Entsperrung nach [TODO] Minuten
 - Manuelle Entsperrung durch IT-Support
 
 ## Berechtigungsverwaltung
@@ -137,7 +148,7 @@ Dieses Dokument gilt für alle Benutzerkonten und Zugriffe in {{ source.organiza
 **Automatisch:**
 - Bei Austritt
 - Bei Ablauf zeitlich begrenzter Rechte
-- Bei Inaktivität ({{ source.inactive_account_days }} Tage)
+- Bei Inaktivität ([TODO] Tage)
 
 **Manuell:**
 - Bei Rollenwechsel
@@ -247,7 +258,7 @@ Dieses Dokument gilt für alle Benutzerkonten und Zugriffe in {{ source.organiza
 ### Erkennung
 
 Konten gelten als inaktiv nach:
-- {{ source.inactive_account_days }} Tagen ohne Anmeldung
+- [TODO] Tagen ohne Anmeldung
 - Keine Aktivität in Systemen
 - Keine geplante Nutzung
 
@@ -255,7 +266,7 @@ Konten gelten als inaktiv nach:
 
 **Warnung:**
 - Benachrichtigung an Benutzer und Vorgesetzten
-- {{ source.inactive_warning_days }} Tage vor Deaktivierung
+- [TODO] Tage vor Deaktivierung
 
 **Deaktivierung:**
 - Automatische Deaktivierung
@@ -263,7 +274,7 @@ Konten gelten als inaktiv nach:
 - Möglichkeit zur Reaktivierung
 
 **Löschung:**
-- Nach {{ source.inactive_deletion_days }} Tagen Inaktivität
+- Nach [TODO] Tagen Inaktivität
 - Archivierung relevanter Daten
 - Endgültige Entfernung
 
@@ -345,7 +356,7 @@ Dieses Dokument adressiert:
 
 ## Kennzahlen
 
-{{ source.organization_name }} misst:
+[TODO] misst:
 - Anzahl aktiver Benutzerkonten
 - Durchschnittliche Zeit bis zur Zugriffsvergabe (Ziel: <4 Stunden)
 - Anzahl überfälliger Access Reviews (Ziel: 0)
@@ -354,12 +365,3 @@ Dieses Dokument adressiert:
 
 <!-- Hinweis: Passen Sie die Prozesse an Ihre Organisation an -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0310
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # MTTR Messung
+
+**Dokument-ID:** [FRAMEWORK]-0310
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -22,9 +33,9 @@ Praktische Implementierung der MTTR-Messung.
 
 ## Organisationsinformationen
 
-- **Organisation**: {{ source.organization_name }}
-- **Messverantwortlicher**: {{ source.mttr_measurement_owner }}
-- **Incident-Management-System**: {{ source.incident_management_system }}
+- **Organisation**: [TODO]
+- **Messverantwortlicher**: [TODO]
+- **Incident-Management-System**: [TODO]
 
 ## Incident-Tracking
 
@@ -88,10 +99,3 @@ MTTR_Sev1 = Σ(MTTR Sev1 Incidents) / Anzahl Sev1 Incidents
 
 <!-- Hinweis: Genaue Messung ermöglicht Verbesserung -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |

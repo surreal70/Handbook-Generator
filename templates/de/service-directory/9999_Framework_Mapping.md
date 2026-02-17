@@ -1,13 +1,25 @@
----
+
 Document-ID: 9999_Framework_Mapping
 Title: Service Directory Framework Mapping
 Version: 0.1
 Last Updated: 2026-02-16
 Author: Quality Control System
 Classification: Internal
+# Service Directory Framework Mapping
+
+**Dokument-ID:** [FRAMEWORK]-9999
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
 ---
 
-# Service Directory Framework Mapping
+---
 
 ## Overview
 
@@ -49,8 +61,3 @@ The Service Directory integrates with:
 - **BCM**: Services are part of business continuity planning
 - **IT Operations**: Services define operational requirements
 
-## Versionshistorie
-
-| Version | Datum | Autor | Änderungen |
-|---------|------|--------|---------|
-| 0.1 | 2026-02-16 | Quality Control System | Initial framework mapping |

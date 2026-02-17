@@ -1,17 +1,28 @@
----
+
 Document-ID: tisax-0100
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Asset Management Overview
 
+**Document-ID:** [FRAMEWORK]-0100
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document defines the requirements and processes for asset management according to TISAX requirements at {{ source.organization_name }}.
+This document defines the requirements and processes for asset management according to TISAX requirements at [TODO].
 
 ## Scope
 
@@ -41,7 +52,7 @@ An asset is any resource of value to the organization, including:
 
 ### 1. Asset Identification
 
-{{ source.organization_name }} identifies assets through:
+[TODO] identifies assets through:
 
 - Systematic inventory
 - Continuous capture of new assets
@@ -78,9 +89,9 @@ The asset lifecycle includes:
 
 ### Asset Management Team
 
-- **Asset Management Coordinator**: {{ source.asset_management_coordinator }}
-- **IT Asset Manager**: {{ source.it_asset_manager }}
-- **Information Security Officer**: {{ source.information_security_officer }}
+- **Asset Management Coordinator**: [TODO]
+- **IT Asset Manager**: [TODO]
+- **Information Security Officer**: [TODO]
 
 ### Asset Owner
 
@@ -145,7 +156,7 @@ Protection measures are implemented based on:
 
 ### Continuous Monitoring
 
-{{ source.organization_name }} monitors:
+[TODO] monitors:
 
 - Completeness of asset inventory
 - Currency of asset information
@@ -202,7 +213,7 @@ For TISAX assessments, the following will be provided:
 
 ## Metrics
 
-{{ source.organization_name }} measures:
+[TODO] measures:
 
 - Completeness of asset inventory (Target: >95%)
 - Currency of asset information (Target: <30 days)
@@ -210,13 +221,5 @@ For TISAX assessments, the following will be provided:
 - Number of unassigned assets (Target: 0)
 
 <!-- Note: Adapt responsibilities and metrics to your organization -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

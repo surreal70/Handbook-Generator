@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0020
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Software Delivery Performance
+
+**Document-ID:** [FRAMEWORK]-0020
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -28,9 +39,9 @@ Software Delivery Performance measures an organization's ability to develop, tes
 
 ### Organization Context
 
-- **Organization**: {{ source.organization_name }}
-- **Delivery Teams**: {{ source.delivery_teams }}
-- **Technology Stack**: {{ source.technology_stack }}
+- **Organization**: [TODO]
+- **Delivery Teams**: [TODO]
+- **Technology Stack**: [TODO]
 
 ## Measurement Dimensions
 
@@ -41,8 +52,8 @@ Measured by:
 - Lead Time for Changes
 
 **Current Performance**:
-- Deployment Frequency: {{ source.current_deployment_frequency }}
-- Lead Time: {{ source.current_lead_time }}
+- Deployment Frequency: [TODO]
+- Lead Time: [TODO]
 
 ### Stability
 
@@ -51,8 +62,8 @@ Measured by:
 - Change Failure Rate
 
 **Current Performance**:
-- MTTR: {{ source.current_mttr }}
-- Change Failure Rate: {{ source.current_change_failure_rate }}
+- MTTR: [TODO]
+- Change Failure Rate: [TODO]
 
 ## Measurement Methods
 
@@ -65,28 +76,28 @@ Measured by:
 
 ### Data Sources
 
-- **CI/CD System**: {{ source.cicd_system }}
-- **Monitoring**: {{ source.monitoring_system }}
-- **Incident Management**: {{ source.incident_system }}
-- **Version Control**: {{ source.version_control_system }}
+- **CI/CD System**: [TODO]
+- **Monitoring**: [TODO]
+- **Incident Management**: [TODO]
+- **Version Control**: [TODO]
 
 ## Performance Assessment
 
 ### Current Category
 
-**Overall Assessment**: {{ source.dora_performance_category }}
+**Overall Assessment**: [TODO]
 
 ### Strengths
 
-- {{ source.dora_strength_1 }}
-- {{ source.dora_strength_2 }}
-- {{ source.dora_strength_3 }}
+- [TODO]
+- [TODO]
+- [TODO]
 
 ### Improvement Areas
 
-- {{ source.dora_improvement_area_1 }}
-- {{ source.dora_improvement_area_2 }}
-- {{ source.dora_improvement_area_3 }}
+- [TODO]
+- [TODO]
+- [TODO]
 
 ## Benchmarking
 
@@ -96,47 +107,39 @@ Comparison of own performance with industry benchmarks:
 
 | Metric | Organization | Industry Average | Elite Performers |
 |--------|--------------|------------------|------------------|
-| Deployment Frequency | {{ source.org_deployment_freq }} | {{ source.industry_deployment_freq }} | On-demand |
-| Lead Time | {{ source.org_lead_time }} | {{ source.industry_lead_time }} | < 1 hour |
-| MTTR | {{ source.org_mttr }} | {{ source.industry_mttr }} | < 1 hour |
-| Change Failure Rate | {{ source.org_cfr }} | {{ source.industry_cfr }} | 0-15% |
+| Deployment Frequency | [TODO] | [TODO] | On-demand |
+| Lead Time | [TODO] | [TODO] | < 1 hour |
+| MTTR | [TODO] | [TODO] | < 1 hour |
+| Change Failure Rate | [TODO] | [TODO] | 0-15% |
 
 ### Trend Analysis
 
 Development of metrics over time:
-- Quarter 1: {{ source.q1_performance }}
-- Quarter 2: {{ source.q2_performance }}
-- Quarter 3: {{ source.q3_performance }}
-- Quarter 4: {{ source.q4_performance }}
+- Quarter 1: [TODO]
+- Quarter 2: [TODO]
+- Quarter 3: [TODO]
+- Quarter 4: [TODO]
 
 ## Improvement Goals
 
 ### Short-term Goals (3 months)
 
-1. {{ source.short_term_goal_1 }}
-2. {{ source.short_term_goal_2 }}
-3. {{ source.short_term_goal_3 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
 
 ### Medium-term Goals (6-12 months)
 
-1. {{ source.medium_term_goal_1 }}
-2. {{ source.medium_term_goal_2 }}
-3. {{ source.medium_term_goal_3 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
 
 ### Long-term Goals (12+ months)
 
-1. {{ source.long_term_goal_1 }}
-2. {{ source.long_term_goal_2 }}
-3. {{ source.long_term_goal_3 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
 
 <!-- Note: Regular updates of performance data recommended -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

@@ -1,8 +1,16 @@
 # DSGVO Framework Mapping
 
-**Dokumentversion:** 1.0  
-**Letzte Aktualisierung:** 2026-02-09  
-**Framework:** Datenschutz-Grundverordnung (EU 2016/679)
+**Dokument-ID:** [FRAMEWORK]-9999
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -297,12 +305,7 @@ Diese Zuordnung sollte überprüft und aktualisiert werden:
 - **Bei Vorlagenänderungen:** Wenn Vorlagen hinzugefügt, geändert oder entfernt werden
 - **Bei Leitlinien-Updates:** Wenn Aufsichtsbehörden neue Leitlinien herausgeben
 
-### Versionshistorie
-
-| Version | Datum | Änderungen | Autor |
-|---------|------|---------|--------|
-| 1.0 | 2026-02-09 | Initiales Framework Mapping | System |
-
+#
 ## Verwandte Dokumente
 
 - **DSGVO-Verordnungstext:** EU 2016/679
@@ -310,14 +313,5 @@ Diese Zuordnung sollte überprüft und aktualisiert werden:
 - **EDSA-Leitlinien:** Leitliniendokumente des Europäischen Datenschutzausschusses
 - **Nationale Datenschutzgesetze:** Mitgliedstaatspezifische Umsetzungen
 
----
-
 **Hinweis:** Diese Zuordnung basiert auf der DSGVO zum Dokumentdatum. Konsultieren Sie immer den aktuellen Verordnungstext und relevante Leitlinien der Aufsichtsbehörden für autoritative Informationen.
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

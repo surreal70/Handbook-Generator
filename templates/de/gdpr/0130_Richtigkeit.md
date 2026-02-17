@@ -1,11 +1,16 @@
 # Richtigkeit
 
-**Dokument-ID:** 0130  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0130
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -23,7 +28,7 @@ Referenz: DSGVO Art. 5 Abs. 1 lit. d (Richtigkeit)
 
 ## Zweck
 
-Dieses Dokument beschreibt die Umsetzung des Grundsatzes der Richtigkeit in der {{ meta.organization }}. Personenbezogene Daten müssen sachlich richtig und aktuell sein.
+Dieses Dokument beschreibt die Umsetzung des Grundsatzes der Richtigkeit in der {{ meta-organisation.name }}. Personenbezogene Daten müssen sachlich richtig und aktuell sein.
 
 ## Grundsatz gemäß Art. 5 Abs. 1 lit. d DSGVO
 
@@ -220,8 +225,6 @@ Personenbezogene Daten müssen sachlich richtig und erforderlichenfalls auf dem 
 | Verzögerte Berichtigung | Lange Bearbeitungszeit | Prozessoptimierung |
 | Fehlende Benachrichtigung | Empfänger nicht informiert | Benachrichtigungsprozess |
 
----
-
 **Nächste Schritte:**
 1. Implementieren Sie Eingabevalidierung und Plausibilitätsprüfung
 2. Etablieren Sie Prozesse zur regelmäßigen Datenaktualisierung
@@ -229,10 +232,3 @@ Personenbezogene Daten müssen sachlich richtig und erforderlichenfalls auf dem 
 4. Implementieren Sie Benachrichtigungsprozess für Empfänger
 5. Führen Sie regelmäßige Datenqualitätskontrollen durch
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

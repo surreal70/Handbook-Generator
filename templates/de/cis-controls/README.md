@@ -61,13 +61,13 @@ Diese Templates bilden die Grundlage für ein vollständiges CIS Controls v8 Har
 Templates unterstützen zwei Arten von Platzhaltern:
 
 - **Manuelle Platzhalter**: `[TODO: Beschreibung]` - müssen manuell ersetzt werden
-- **Automatische Platzhalter**: `{{ source.field }}` - werden aus Datenquellen befüllt
+- **Automatische Platzhalter**: `[TODO]` - werden aus Datenquellen befüllt
 
 Beispiele für automatische Platzhalter:
-- `{{ meta.organization }}` - Organisationsname
-- `{{ meta.author }}` - Autor
-- `{{ meta.version }}` - Versionsnummer
-- `{{ meta.date }}` - Datum
+- `{{ meta-organisation.name }}` - Organisationsname
+- `{{ meta-handbook.author }}` - Autor
+- `{{ meta-handbook.revision }}` - Versionsnummer
+- `{{ meta-handbook.modifydate }}` - Datum
 
 ## CIS Controls v8 Framework
 
@@ -143,7 +143,7 @@ Bei Fragen zur Verwendung dieser Templates oder zu CIS Controls:
 
 | Version | Datum | Autor | Änderungen |
 |---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
+| 0.1 | [TODO] | {{ meta.defaults.author }} | Initiale Erstellung |
 
 ## Versionshistorie
 

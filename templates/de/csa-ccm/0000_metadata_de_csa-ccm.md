@@ -1,24 +1,34 @@
+# CSA-CCM Handbuch - Metadaten
+
+**Dokument-ID:** 0000  
+**Datum:** 2026-02-17  
+**Owner:** [TODO]  
+**Revision:** 0  
+**Status:** Draft  
+**Klassifizierung:** Internal  
+**Letzte Aktualisierung:** 2026-02-17  
+**Template-Version:** 1.0  
+
 ---
-title: "CSA Cloud Controls Matrix (CCM) Handbuch"
-author: "{{ source.author }}"
-version: "1.0"
-date: "{{ source.date }}"
-organization: "{{ source.organization_name }}"
-classification: "Internal"
----
-
-# Metadaten
-
-Diese Datei enthält Metadaten für das CSA Cloud Controls Matrix (CCM) Handbuch.
-
-## Über CSA CCM
-
-Die Cloud Security Alliance Cloud Controls Matrix (CCM) ist ein Cybersecurity-Kontrollrahmen für Cloud Computing. Sie bietet eine detaillierte Übersicht über Sicherheitskonzepte und -prinzipien, die auf 16 Kontrolldomänen abgestimmt sind und Cloud-Anbietern und Cloud-Kunden helfen, Sicherheitsrisiken zu bewerten und zu verwalten.
 
 ## Handbuch-Informationen
 
-- **Framework**: Cloud Security Alliance Cloud Controls Matrix (CCM)
-- **Version**: CCM v4.0
-- **Sprache**: Deutsch
-- **Zielgruppe**: Cloud-Sicherheitsprofis, Cloud-Anbieter, Cloud-Kunden, Compliance-Beauftragte
-- **Zweck**: Dokumentation von Cloud-Sicherheitskontrollen und Nachweis der Compliance mit Cloud-Sicherheits-Best-Practices
+**Handbuch-Titel:** CSA-CCM Handbook  
+**Handbuch-Short:** CSA-CCM  
+**Organisation:** [TODO]  
+**Autor:** [TODO]  
+**Geltungsbereich:** [TODO]  
+**Gültig ab:** [TODO]  
+**Nächste Überprüfung:** [TODO]  
+
+---
+
+## Dokumentenzweck
+
+Dieses Dokument enthält die Metadaten für das CSA-CCM Handbuch.
+
+## Änderungshistorie
+
+| Version | Datum | Autor | Änderung |
+|---------|-------|-------|----------|
+| 0 | 2026-02-17 | [TODO] | Initiale Version |

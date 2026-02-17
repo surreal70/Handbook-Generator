@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0450
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Monitoring und Observability
+
+**Dokument-ID:** [FRAMEWORK]-0270
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -23,9 +34,9 @@ Beschreibung von Monitoring und Observability-Praktiken.
 
 ### Monitoring-Ebenen
 
-- **Infrastructure Monitoring**: {{ source.infra_monitoring }}
-- **Application Monitoring**: {{ source.app_monitoring }}
-- **Business Monitoring**: {{ source.business_monitoring }}
+- **Infrastructure Monitoring**: [TODO]
+- **Application Monitoring**: [TODO]
+- **Business Monitoring**: [TODO]
 
 ### Metriken
 
@@ -37,32 +48,23 @@ Beschreibung von Monitoring und Observability-Praktiken.
 
 ### Three Pillars
 
-1. **Logs**: {{ source.logging_solution }}
-2. **Metrics**: {{ source.metrics_solution }}
-3. **Traces**: {{ source.tracing_solution }}
+1. **Logs**: [TODO]
+2. **Metrics**: [TODO]
+3. **Traces**: [TODO]
 
 ### Observability-Tooling
 
-- **APM**: {{ source.apm_tool }}
-- **Log-Aggregation**: {{ source.log_aggregation_tool }}
-- **Distributed Tracing**: {{ source.distributed_tracing_tool }}
+- **APM**: [TODO]
+- **Log-Aggregation**: [TODO]
+- **Distributed Tracing**: [TODO]
 
 ## Alerting
 
 ### Alert-Strategie
 
-- **Alert-Schwellwerte**: {{ source.alert_thresholds }}
-- **Alert-Routing**: {{ source.alert_routing }}
-- **On-Call**: {{ source.oncall_schedule }}
+- **Alert-Schwellwerte**: [TODO]
+- **Alert-Routing**: [TODO]
+- **On-Call**: [TODO]
 
 <!-- Hinweis: Gute Observability ermöglicht schnelle Problem-Erkennung -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

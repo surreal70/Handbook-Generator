@@ -1,5 +1,19 @@
 # PCI-DSS Framework Mapping
 
+**Document-ID:** [FRAMEWORK]-9999
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Overview
 
 This document maps PCI-DSS v4.0 requirements to the corresponding template files in this template set. It serves as a reference for compliance audits and to identify coverage gaps.
@@ -50,7 +64,6 @@ These templates form the foundation for the entire PCI-DSS compliance program:
 | 0030 | Roles_and_Responsibilities.md | Req 12 |
 | 0040 | Data_Flow_Diagrams.md | Req 1, Req 3, Req 4 |
 | 0050 | Compliance_Program.md | Req 12 |
-
 
 ### Requirement 1: Install and Maintain Network Security Controls
 
@@ -137,7 +150,6 @@ These templates form the foundation for the entire PCI-DSS compliance program:
 
 **Coverage:** None  
 **Notes:** **IDENTIFIED GAP** - Templates for secure development, vulnerability management, and change management are missing.
-
 
 ### Requirement 7: Restrict Access to System Components and Cardholder Data
 
@@ -252,7 +264,6 @@ These templates form the foundation for the entire PCI-DSS compliance program:
 
 **Coverage Rate:** 7 out of 12 requirements (58%)
 
-
 ### Identified Coverage Gaps
 
 The following PCI-DSS requirements are **not fully** covered by templates:
@@ -355,20 +366,5 @@ The following appendix templates are available:
 |---------|------|--------|---------|
 | 1.0 | 2026-02-06 | Compliance Team | Initial creation of framework mapping |
 
----
-
 **Note:** This mapping document should be updated whenever templates change or when new PCI-DSS versions are released.
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
-
-## Version History
-
-| Version | Date | Changes |
-|---------|------|---------|
-| 0.1 | {{meta.document.last_updated}} | Initial creation |

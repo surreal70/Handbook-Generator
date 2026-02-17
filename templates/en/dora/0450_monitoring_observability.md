@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0450
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Monitoring and Observability
+
+**Document-ID:** [FRAMEWORK]-0450
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -22,9 +33,9 @@ Monitoring and observability for early detection and prevention of change failur
 
 ## Organization Information
 
-- **Organization**: {{ source.organization_name }}
-- **Monitoring Owner**: {{ source.monitoring_owner }}
-- **Monitoring Systems**: {{ source.monitoring_systems }}
+- **Organization**: [TODO]
+- **Monitoring Owner**: [TODO]
+- **Monitoring Systems**: [TODO]
 
 ## Observability Principles
 
@@ -231,10 +242,3 @@ Latency SLI = Requests < 200ms / Total Requests
 
 <!-- Note: Good observability enables fast response -->
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |

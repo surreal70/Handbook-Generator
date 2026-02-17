@@ -1,17 +1,28 @@
----
+
 Document-ID: togaf-0020
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Architecture Principles
 
+**Document-ID:** [FRAMEWORK]-0020
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document defines the architecture principles for {{ source.organization_name }}. Architecture principles are general rules and guidelines that serve as the foundation for architecture decisions.
+This document defines the architecture principles for [TODO]. Architecture principles are general rules and guidelines that serve as the foundation for architecture decisions.
 
 ## Scope
 
@@ -45,16 +56,16 @@ Each principle is documented with:
 - ROI must be demonstrated for all major IT investments
 - Architecture artifacts must be communicated in business language
 
-### Principle 2: {{ source.business_principle_2_name }}
+### Principle 2: [TODO]
 
-**Statement**: {{ source.business_principle_2_statement }}
+**Statement**: [TODO]
 
-**Rationale**: {{ source.business_principle_2_rationale }}
+**Rationale**: [TODO]
 
 **Implications**:
-- {{ source.business_principle_2_implication_1 }}
-- {{ source.business_principle_2_implication_2 }}
-- {{ source.business_principle_2_implication_3 }}
+- [TODO]
+- [TODO]
+- [TODO]
 
 ## Data Principles
 
@@ -70,16 +81,16 @@ Each principle is documented with:
 - Data ownership must be clearly defined
 - Data security and privacy are top priorities
 
-### Principle 4: {{ source.data_principle_2_name }}
+### Principle 4: [TODO]
 
-**Statement**: {{ source.data_principle_2_statement }}
+**Statement**: [TODO]
 
-**Rationale**: {{ source.data_principle_2_rationale }}
+**Rationale**: [TODO]
 
 **Implications**:
-- {{ source.data_principle_2_implication_1 }}
-- {{ source.data_principle_2_implication_2 }}
-- {{ source.data_principle_2_implication_3 }}
+- [TODO]
+- [TODO]
+- [TODO]
 
 ## Application Principles
 
@@ -94,16 +105,16 @@ Each principle is documented with:
 - Applications must be designed for modularity and reuse
 - Buy decisions must consider reusability
 
-### Principle 6: {{ source.application_principle_2_name }}
+### Principle 6: [TODO]
 
-**Statement**: {{ source.application_principle_2_statement }}
+**Statement**: [TODO]
 
-**Rationale**: {{ source.application_principle_2_rationale }}
+**Rationale**: [TODO]
 
 **Implications**:
-- {{ source.application_principle_2_implication_1 }}
-- {{ source.application_principle_2_implication_2 }}
-- {{ source.application_principle_2_implication_3 }}
+- [TODO]
+- [TODO]
+- [TODO]
 
 ## Technology Principles
 
@@ -118,41 +129,32 @@ Each principle is documented with:
 - Exceptions to standards require formal approval
 - Legacy technologies must be systematically retired
 
-### Principle 8: {{ source.technology_principle_2_name }}
+### Principle 8: [TODO]
 
-**Statement**: {{ source.technology_principle_2_statement }}
+**Statement**: [TODO]
 
-**Rationale**: {{ source.technology_principle_2_rationale }}
+**Rationale**: [TODO]
 
 **Implications**:
-- {{ source.technology_principle_2_implication_1 }}
-- {{ source.technology_principle_2_implication_2 }}
-- {{ source.technology_principle_2_implication_3 }}
+- [TODO]
+- [TODO]
+- [TODO]
 
 ## Principles Governance
 
 ### Principles Management
 
-- **Owner**: {{ source.principles_owner }}
-- **Review Cycle**: {{ source.principles_review_cycle }}
-- **Approval Process**: {{ source.principles_approval_process }}
+- **Owner**: [TODO]
+- **Review Cycle**: [TODO]
+- **Approval Process**: [TODO]
 
 ### Compliance and Exceptions
 
 Exceptions to architecture principles:
 - Must be formally documented
-- Require approval by {{ source.exception_approval_authority }}
+- Require approval by [TODO]
 - Are reviewed regularly
 - Have a defined expiration date
 
 <!-- Author notes: Customize the principles to match your organization's specific needs and culture -->
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{meta.document.last_updated}} | {{ meta.defaults.author }} | Initial creation |
-
-<-  ( marked all subtasks complete End of template -->

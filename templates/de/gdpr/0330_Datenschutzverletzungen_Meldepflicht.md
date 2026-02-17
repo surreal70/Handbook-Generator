@@ -1,11 +1,16 @@
 # Datenschutzverletzungen und Meldepflicht
 
-**Dokument-ID:** 0330  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0330
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,7 +30,7 @@ Referenz: DSGVO Art. 33 (Meldung an Aufsichtsbehörde), Art. 34 (Benachrichtigun
 
 ## Zweck
 
-Dieses Dokument regelt den Umgang mit Datenschutzverletzungen bei {{ meta.organization }} gemäß Art. 33-34 DSGVO. Es definiert Meldepflichten, Fristen und Prozesse zur Bewältigung von Datenschutzvorfällen.
+Dieses Dokument regelt den Umgang mit Datenschutzverletzungen bei {{ meta-organisation.name }} gemäß Art. 33-34 DSGVO. Es definiert Meldepflichten, Fristen und Prozesse zur Bewältigung von Datenschutzvorfällen.
 
 ## Definition Datenschutzverletzung (Art. 4 Nr. 12)
 
@@ -258,8 +263,6 @@ Der Verantwortliche dokumentiert alle Datenschutzverletzungen, einschließlich a
 - **Datenschutz-Folgenabschätzung (Art. 35):** Risikobewertung
 - **Incident-Response-Plan:** Detaillierte technische Prozesse
 
----
-
 **Nächste Schritte:**
 1. Implementieren Sie einen Incident-Response-Prozess
 2. Definieren Sie Eskalationswege und Verantwortlichkeiten
@@ -267,10 +270,3 @@ Der Verantwortliche dokumentiert alle Datenschutzverletzungen, einschließlich a
 4. Führen Sie regelmäßige Incident-Response-Übungen durch
 5. Etablieren Sie ein Breach-Register
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

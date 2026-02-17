@@ -1,17 +1,28 @@
----
+
 Document-ID: coso-0150
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Selection and Development of Control Activities
 
+**Document-ID:** [FRAMEWORK]-0150
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document describes how {{ source.organization_name }} selects and develops control activities to mitigate risks to achieving objectives (COSO Principle 10).
+This document describes how [TODO] selects and develops control activities to mitigate risks to achieving objectives (COSO Principle 10).
 
 ## Scope
 
@@ -24,135 +35,127 @@ This document describes how {{ source.organization_name }} selects and develops 
 
 ### Risk-Based Selection
 
-{{ source.risk_based_selection }}
+[TODO]
 
 ### Control Objectives
 
-{{ source.control_objectives_framework }}
+[TODO]
 
 ### Selection Criteria
 
-**Relevance**: {{ source.relevance_criteria }}
-**Effectiveness**: {{ source.effectiveness_criteria }}
-**Efficiency**: {{ source.efficiency_criteria }}
-**Cost-Benefit**: {{ source.cost_benefit_criteria }}
+**Relevance**: [TODO]
+**Effectiveness**: [TODO]
+**Efficiency**: [TODO]
+**Cost-Benefit**: [TODO]
 
 ## Control Types
 
 ### Transaction-Level Controls
 
-{{ source.transaction_controls }}
+[TODO]
 
 ### Process-Level Controls
 
-{{ source.process_controls }}
+[TODO]
 
 ### Entity-Level Controls
 
-{{ source.entity_controls }}
+[TODO]
 
 ## Control Design Principles
 
 ### Design Considerations
 
-**Control Objective**: {{ source.control_objective_design }}
-**Risk Assessment**: {{ source.risk_assessment_design }}
-**Control Activities**: {{ source.control_activities_design }}
-**Information and Communication**: {{ source.information_communication_design }}
+**Control Objective**: [TODO]
+**Risk Assessment**: [TODO]
+**Control Activities**: [TODO]
+**Information and Communication**: [TODO]
 
 ### Design Process
 
-1. **Identify Risks**: {{ source.identify_risks_step }}
-2. **Define Control Objectives**: {{ source.define_objectives_step }}
-3. **Select Control Activities**: {{ source.select_activities_step }}
-4. **Design Control Procedures**: {{ source.design_procedures_step }}
-5. **Document Controls**: {{ source.document_controls_step }}
+1. **Identify Risks**: [TODO]
+2. **Define Control Objectives**: [TODO]
+3. **Select Control Activities**: [TODO]
+4. **Design Control Procedures**: [TODO]
+5. **Document Controls**: [TODO]
 
 ## Control Categories
 
 ### Manual Controls
 
-**Definition**: {{ source.manual_controls_definition }}
-**Examples**: {{ source.manual_controls_examples }}
-**Considerations**: {{ source.manual_controls_considerations }}
+**Definition**: [TODO]
+**Examples**: [TODO]
+**Considerations**: [TODO]
 
 ### Automated Controls
 
-**Definition**: {{ source.automated_controls_definition }}
-**Examples**: {{ source.automated_controls_examples }}
-**Considerations**: {{ source.automated_controls_considerations }}
+**Definition**: [TODO]
+**Examples**: [TODO]
+**Considerations**: [TODO]
 
 ### IT-Dependent Manual Controls
 
-**Definition**: {{ source.itdm_controls_definition }}
-**Examples**: {{ source.itdm_controls_examples }}
-**Considerations**: {{ source.itdm_controls_considerations }}
+**Definition**: [TODO]
+**Examples**: [TODO]
+**Considerations**: [TODO]
 
 ## Control Implementation
 
 ### Implementation Planning
 
-{{ source.implementation_planning }}
+[TODO]
 
 ### Rollout Strategy
 
-{{ source.rollout_strategy }}
+[TODO]
 
 ### Training and Communication
 
-{{ source.training_communication }}
+[TODO]
 
 ### Monitoring and Testing
 
-{{ source.monitoring_testing }}
+[TODO]
 
 ## Control Effectiveness
 
 ### Effectiveness Assessment
 
-{{ source.effectiveness_assessment }}
+[TODO]
 
 ### Key Performance Indicators
 
-{{ source.control_kpis }}
+[TODO]
 
 ### Continuous Improvement
 
-{{ source.continuous_improvement }}
+[TODO]
 
 ## Control Documentation
 
 ### Control Matrix
 
-{{ source.control_matrix }}
+[TODO]
 
 ### Control Procedures
 
-{{ source.control_procedures }}
+[TODO]
 
 ### Control Testing Documentation
 
-{{ source.testing_documentation }}
+[TODO]
 
 ## Roles and Responsibilities
 
-**Control Owners**: {{ source.control_owners_role }}
-**Process Owners**: {{ source.process_owners_role }}
-**Risk Management**: {{ source.risk_management_role }}
-**Internal Audit**: {{ source.internal_audit_role }}
+**Control Owners**: [TODO]
+**Process Owners**: [TODO]
+**Risk Management**: [TODO]
+**Internal Audit**: [TODO]
 
 ## References
 
 - Control Catalog
 - Risk Management Framework
 - Internal Control Policy
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

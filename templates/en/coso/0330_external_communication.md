@@ -1,17 +1,28 @@
----
+
 Document-ID: coso-0330
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Externe Kommunikation
 
+**Document-ID:** [FRAMEWORK]-0330
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document describes die externe Kommunikation von {{ source.organization_name }} in accordance with COSO Prinzip 15.
+This document describes die externe Kommunikation von [TODO] in accordance with COSO Prinzip 15.
 
 ## Scope
 
@@ -24,30 +35,30 @@ This document describes die externe Kommunikation von {{ source.organization_nam
 
 ### Grundprinzipien
 
-**Transparenz**: {{ source.external_transparency }}
-**Konsistenz**: {{ source.consistency_principle }}
-**Compliance**: {{ source.compliance_principle }}
-**Vertraulichkeit**: {{ source.confidentiality_principle }}
+**Transparenz**: [TODO]
+**Konsistenz**: [TODO]
+**Compliance**: [TODO]
+**Vertraulichkeit**: [TODO]
 
 ### Kommunikationsziele
 
-{{ source.external_communication_objectives }}
+[TODO]
 
 ## Stakeholder-Kommunikation
 
 ### Stakeholder-Identifikation
 
-**Primäre Stakeholder**: {{ source.primary_stakeholders }}
-**Sekundäre Stakeholder**: {{ source.secondary_stakeholders }}
+**Primäre Stakeholder**: [TODO]
+**Sekundäre Stakeholder**: [TODO]
 
-**Stakeholder-Mapping**: {{ source.stakeholder_mapping }}
+**Stakeholder-Mapping**: [TODO]
 
 ### Investoren und Aktionäre
 
-**Investor Relations**: {{ source.investor_relations }}
-**Hauptversammlungen**: {{ source.annual_general_meetings }}
-**Investorenpräsentationen**: {{ source.investor_presentations }}
-**Quartalsberichte**: {{ source.quarterly_earnings }}
+**Investor Relations**: [TODO]
+**Hauptversammlungen**: [TODO]
+**Investorenpräsentationen**: [TODO]
+**Quartalsberichte**: [TODO]
 
 **Kommunikationskanäle**:
 - Investor Relations Website
@@ -57,10 +68,10 @@ This document describes die externe Kommunikation von {{ source.organization_nam
 
 ### Kunden
 
-**Kundenkommunikation**: {{ source.customer_communication }}
-**Produktinformationen**: {{ source.product_information }}
-**Servicekommunikation**: {{ source.service_communication }}
-**Beschwerdemanagement**: {{ source.customer_complaints }}
+**Kundenkommunikation**: [TODO]
+**Produktinformationen**: [TODO]
+**Servicekommunikation**: [TODO]
+**Beschwerdemanagement**: [TODO]
 
 **Kommunikationskanäle**:
 - Website
@@ -71,9 +82,9 @@ This document describes die externe Kommunikation von {{ source.organization_nam
 
 ### Lieferanten und Geschäftspartner
 
-**Lieferantenkommunikation**: {{ source.supplier_communication }}
-**Vertragsmanagement**: {{ source.contract_management }}
-**Leistungsfeedback**: {{ source.performance_feedback }}
+**Lieferantenkommunikation**: [TODO]
+**Vertragsmanagement**: [TODO]
+**Leistungsfeedback**: [TODO]
 
 **Kommunikationskanäle**:
 - Lieferantenportal
@@ -82,9 +93,9 @@ This document describes die externe Kommunikation von {{ source.organization_nam
 
 ### Regulierungsbehörden
 
-**Regulatorische Kommunikation**: {{ source.regulatory_communication }}
-**Meldepflichten**: {{ source.reporting_obligations }}
-**Anfragen und Prüfungen**: {{ source.regulatory_inquiries }}
+**Regulatorische Kommunikation**: [TODO]
+**Meldepflichten**: [TODO]
+**Anfragen und Prüfungen**: [TODO]
 
 **Kommunikationskanäle**:
 - Offizielle Meldungen
@@ -95,139 +106,139 @@ This document describes die externe Kommunikation von {{ source.organization_nam
 
 ### Finanzberichterstattung
 
-**Jahresabschluss**: {{ source.annual_financial_statements }}
-**Zwischenberichte**: {{ source.interim_reports }}
-**Konzernabschluss**: {{ source.consolidated_statements }}
+**Jahresabschluss**: [TODO]
+**Zwischenberichte**: [TODO]
+**Konzernabschluss**: [TODO]
 
-**Berichtsstandards**: {{ source.financial_reporting_standards }}
+**Berichtsstandards**: [TODO]
 
 ### Nachhaltigkeitsberichterstattung
 
-**Nachhaltigkeitsbericht**: {{ source.sustainability_report }}
-**ESG-Berichterstattung**: {{ source.esg_reporting }}
-**Umweltberichterstattung**: {{ source.environmental_reporting }}
+**Nachhaltigkeitsbericht**: [TODO]
+**ESG-Berichterstattung**: [TODO]
+**Umweltberichterstattung**: [TODO]
 
-**Berichtsrahmen**: {{ source.sustainability_frameworks }}
+**Berichtsrahmen**: [TODO]
 
 ### Compliance-Berichterstattung
 
-**Regulatorische Berichte**: {{ source.regulatory_reports }}
-**Branchenspezifische Berichte**: {{ source.industry_specific_reports }}
-**Transparenzberichte**: {{ source.transparency_reports }}
+**Regulatorische Berichte**: [TODO]
+**Branchenspezifische Berichte**: [TODO]
+**Transparenzberichte**: [TODO]
 
 ### Corporate Governance Berichterstattung
 
-**Corporate Governance Bericht**: {{ source.corporate_governance_report }}
-**Vergütungsbericht**: {{ source.remuneration_report }}
-**Risikobericht**: {{ source.risk_report }}
+**Corporate Governance Bericht**: [TODO]
+**Vergütungsbericht**: [TODO]
+**Risikobericht**: [TODO]
 
 ## Öffentlichkeitsaratt
 
 ### Medienbeziehungen
 
-**Pressemitteilungen**: {{ source.press_releases }}
-**Medienanfragen**: {{ source.media_inquiries }}
-**Pressekonferenzen**: {{ source.press_conferences }}
-**Medientraining**: {{ source.media_training }}
+**Pressemitteilungen**: [TODO]
+**Medienanfragen**: [TODO]
+**Pressekonferenzen**: [TODO]
+**Medientraining**: [TODO]
 
-**Medienkontakte**: {{ source.media_contacts }}
+**Medienkontakte**: [TODO]
 
 ### Krisenkommunikation
 
-**Krisenkommunikationsplan**: {{ source.crisis_communication_plan }}
-**Krisenstab**: {{ source.crisis_team }}
-**Krisensprecher**: {{ source.crisis_spokesperson }}
+**Krisenkommunikationsplan**: [TODO]
+**Krisenstab**: [TODO]
+**Krisensprecher**: [TODO]
 
-**Kommunikationsprotokoll**: {{ source.crisis_protocol }}
+**Kommunikationsprotokoll**: [TODO]
 
 ### Soziale Medien
 
-**Social Media Strategie**: {{ source.social_media_strategy }}
-**Social Media Richtlinien**: {{ source.social_media_guidelines }}
-**Plattformen**: {{ source.social_media_platforms }}
-**Monitoring**: {{ source.social_media_monitoring }}
+**Social Media Strategie**: [TODO]
+**Social Media Richtlinien**: [TODO]
+**Plattformen**: [TODO]
+**Monitoring**: [TODO]
 
 ### Unternehmenswebsite
 
-**Website-Inhalte**: {{ source.website_content }}
-**Investor Relations Bereich**: {{ source.ir_section }}
-**Newsroom**: {{ source.newsroom }}
-**Kontaktinformationen**: {{ source.contact_information }}
+**Website-Inhalte**: [TODO]
+**Investor Relations Bereich**: [TODO]
+**Newsroom**: [TODO]
+**Kontaktinformationen**: [TODO]
 
 ## Kommunikationsfreigabe
 
 ### Freigabeprozess
 
-**Entwurfserstellung**: {{ source.draft_creation }}
-**Interne Überprüfung**: {{ source.internal_review }}
-**Rechtliche Prüfung**: {{ source.legal_review }}
-**Geschäftsführungsfreigabe**: {{ source.management_approval }}
+**Entwurfserstellung**: [TODO]
+**Interne Überprüfung**: [TODO]
+**Rechtliche Prüfung**: [TODO]
+**Geschäftsführungsfreigabe**: [TODO]
 
-**Freigabematrix**: {{ source.approval_matrix }}
+**Freigabematrix**: [TODO]
 
 ### Vertraulichkeitsstufen
 
-**Öffentlich**: {{ source.public_information }}
-**Vertraulich**: {{ source.confidential_information }}
-**Streng vertraulich**: {{ source.strictly_confidential }}
+**Öffentlich**: [TODO]
+**Vertraulich**: [TODO]
+**Streng vertraulich**: [TODO]
 
 ## Insider-Informationen
 
 ### Umgang mit Insider-Informationen
 
-**Definition**: {{ source.insider_information_definition }}
-**Identifikation**: {{ source.insider_information_identification }}
-**Handhabung**: {{ source.insider_information_handling }}
+**Definition**: [TODO]
+**Identifikation**: [TODO]
+**Handhabung**: [TODO]
 
 ### Ad-hoc-Publizität
 
-**Veröffentlichungspflicht**: {{ source.ad_hoc_disclosure }}
-**Veröffentlichungskanäle**: {{ source.disclosure_channels }}
-**Timing**: {{ source.disclosure_timing }}
+**Veröffentlichungspflicht**: [TODO]
+**Veröffentlichungskanäle**: [TODO]
+**Timing**: [TODO]
 
 ### Insiderverzeichnis
 
-{{ source.insider_register }}
+[TODO]
 
 ## Kommunikationsrichtlinien
 
 ### Externe Kommunikationsrichtlinie
 
-{{ source.external_communication_policy }}
+[TODO]
 
 ### Social Media Richtlinie
 
-{{ source.social_media_policy }}
+[TODO]
 
 ### Medienrichtlinie
 
-{{ source.media_policy }}
+[TODO]
 
 ## Überwachung und Bewertung
 
 ### Medienmonitoring
 
-**Medienbeobachtung**: {{ source.media_monitoring }}
-**Sentiment-Analyse**: {{ source.sentiment_analysis }}
-**Reputationsmanagement**: {{ source.reputation_management }}
+**Medienbeobachtung**: [TODO]
+**Sentiment-Analyse**: [TODO]
+**Reputationsmanagement**: [TODO]
 
 ### Stakeholder-Feedback
 
-**Feedback-Mechanismen**: {{ source.stakeholder_feedback_mechanisms }}
-**Stakeholder-Befragungen**: {{ source.stakeholder_surveys }}
+**Feedback-Mechanismen**: [TODO]
+**Stakeholder-Befragungen**: [TODO]
 
 ### Kommunikationswirksamkeit
 
-**Bewertungskriterien**: {{ source.effectiveness_criteria }}
-**KPIs**: {{ source.communication_kpis }}
+**Bewertungskriterien**: [TODO]
+**KPIs**: [TODO]
 
 ## Roles and Responsibilities
 
-**Vorstand**: {{ source.board_external_communication_role }}
-**Geschäftsführung**: {{ source.management_external_communication_role }}
-**Kommunikationsabteilung**: {{ source.communications_department_role }}
-**Investor Relations**: {{ source.investor_relations_role }}
-**Rechtsabteilung**: {{ source.legal_department_role }}
+**Vorstand**: [TODO]
+**Geschäftsführung**: [TODO]
+**Kommunikationsabteilung**: [TODO]
+**Investor Relations**: [TODO]
+**Rechtsabteilung**: [TODO]
 
 ## References
 
@@ -236,13 +247,5 @@ This document describes die externe Kommunikation von {{ source.organization_nam
 - Social Media Richtlinie
 - Krisenkommunikationsplan
 - Insider-Richtlinie
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

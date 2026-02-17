@@ -1,25 +1,39 @@
 # Document Control and Versioning
 
+**Document-ID:** [FRAMEWORK]-0020
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Document Metadata
 
 | Field | Value |
 |---|---|
-| Document Title | IT Operations Handbook – {{ meta.organization.name }} |
+| Document Title | IT Operations Handbook – {{ meta-organisation.name }} |
 | Document ID | [TODO: Unique Document ID] |
 | System/Service | [TODO: System/Service Name] |
-| Owner | {{ meta.document.owner }} |
-| Responsible Editor | {{ meta.author }} |
-| Approval Authority | {{ meta.document.approver }} |
-| Classification | {{ meta.document.classification }} |
+| Owner | {{ meta-handbook.owner }} |
+| Responsible Editor | [Author] |
+| Approval Authority | {{ meta-handbook.approver }} |
+| Classification | {{ meta-handbook.classification }} |
 | Storage Location | [TODO: Central Repository/Storage Location] |
-| Organization | {{ meta.organization.name }} |
-| Location | {{ meta.organization.city }}, {{ meta.organization.country }} |
+| Organization | {{ meta-organisation.name }} |
+| Location | {{ meta-organisation.city }}, {{ meta-organisation.country }} |
 
 ## Version History
 
 | Version | Date | Author | Changes | Approval |
 |---|---|---|---|---|
-| {{ meta.document.version }} | [TODO: Date] | {{ meta.author }} | Initial Version | {{ meta.document.approver }} |
+| {{ meta-handbook.revision }} | [TODO: Date] | [Author] | Initial Version | {{ meta-handbook.approver }} |
 | | | | | |
 | | | | | |
 
@@ -62,14 +76,14 @@
 - Impact analysis
 - Affected sections
 
-**Approval:** {{ meta.document.owner }}
+**Approval:** {{ meta-handbook.owner }}
 
 ### 2. Technical Review
 
 **Reviewers:**
-- **Operations:** {{ meta.it_operations_manager.name }} ({{ meta.it_operations_manager.email }})
+- **Operations:** {{ meta-organisation-roles.role_it_operations_manager.name }} ({{ meta-organisation-roles.role_it_operations_manager.email }})
 - **Architecture:** [TODO: Architecture Lead]
-- **Security:** {{ meta.ciso.name }} ({{ meta.ciso.email }})
+- **Security:** {{ meta-organisation-roles.role_ciso.name }} ({{ meta-organisation-roles.role_ciso.email }})
 - **Compliance:** [TODO: Compliance Lead]
 
 **Review Criteria:**
@@ -80,7 +94,7 @@
 
 ### 3. Approval
 
-**Approval Authority:** {{ meta.document.approver }}
+**Approval Authority:** {{ meta-handbook.approver }}
 
 **Approval Criteria:**
 - All reviews completed
@@ -91,13 +105,13 @@
 **Approval Process:**
 1. Incorporate review comments
 2. Create final version
-3. Approval by {{ meta.document.approver }}
+3. Approval by {{ meta-handbook.approver }}
 4. Increment version
 5. Publication in repository
 
 ### 4. Publication
 
-**Responsible:** {{ meta.document.owner }}
+**Responsible:** {{ meta-handbook.owner }}
 
 **Steps:**
 1. Store document in central repository
@@ -115,13 +129,13 @@
 
 ### Normal Changes (Minor)
 
-- **Approval:** {{ meta.document.approver }}
+- **Approval:** {{ meta-handbook.approver }}
 - **Review:** Department (Operations/Security)
 - **Examples:** New sections, process changes
 
 ### Major Changes (Major)
 
-- **Approval:** {{ meta.cio.name }} ({{ meta.cio.email }})
+- **Approval:** {{ meta-organisation-roles.role_cio.name }} ({{ meta-organisation-roles.role_cio.email }})
 - **Review:** All departments + management
 - **CAB Meeting:** Required
 - **Examples:** Fundamental revisions, architecture changes
@@ -130,7 +144,7 @@
 
 ### Language and Format
 
-- **Language:** {{ meta.language }}
+- **Language:** {{ meta-handbook.language }}
 - **Format:** Markdown (.md)
 - **Character Set:** UTF-8
 - **Line Breaks:** Unix (LF)
@@ -165,10 +179,10 @@ Every document MUST contain the following information:
 
 Use the following placeholders for organization-wide information:
 
-- **Organization:** `{{ meta.organization.name }}`
-- **Roles:** `{{ meta.ceo.name }}`, `{{ meta.cio.name }}`, `{{ meta.ciso.name }}`
-- **Document:** `{{ meta.document.owner }}`, `{{ meta.document.approver }}`
-- **Author:** `{{ meta.author }}`
+- **Organization:** `{{ meta-organisation.name }}`
+- **Roles:** `{{ meta-organisation-roles.role_ceo.name }}`, `{{ meta-organisation-roles.role_cio.name }}`, `{{ meta-organisation-roles.role_ciso.name }}`
+- **Document:** `{{ meta-handbook.owner }}`, `{{ meta-handbook.approver }}`
+- **Author:** `{{ meta-handbook.author }}`
 
 ## Document Classification
 
@@ -179,7 +193,7 @@ Use the following placeholders for organization-wide information:
 | **Confidential** | Restricted access | Authorized persons | Security concepts, passwords |
 | **Strictly Confidential** | Highest confidentiality | Management + Authorized | Trade secrets, compliance |
 
-**Current Classification:** {{ meta.document.classification }}
+**Current Classification:** {{ meta-handbook.classification }}
 
 ## Archiving and Retention
 
@@ -201,30 +215,20 @@ Use the following placeholders for organization-wide information:
 
 | Role | Responsibility | Person |
 |---|---|---|
-| **Document Owner** | Overall responsibility, currency | {{ meta.document.owner }} |
-| **Editor** | Content maintenance, changes | {{ meta.author }} |
-| **Approval Authority** | Approval of changes | {{ meta.document.approver }} |
-| **CIO** | Strategic alignment | {{ meta.cio.name }} |
-| **CISO** | Security review | {{ meta.ciso.name }} |
+| **Document Owner** | Overall responsibility, currency | {{ meta-handbook.owner }} |
+| **Editor** | Content maintenance, changes | [Author] |
+| **Approval Authority** | Approval of changes | {{ meta-handbook.approver }} |
+| **CIO** | Strategic alignment | {{ meta-organisation-roles.role_cio.name }} |
+| **CISO** | Security review | {{ meta-organisation-roles.role_ciso.name }} |
 
 ## Contacts
 
 **For questions about document control:**
-- **Document Owner:** {{ meta.document.owner }}
-- **IT Operations Manager:** {{ meta.it_operations_manager.name }} ({{ meta.it_operations_manager.email }})
-- **CIO:** {{ meta.cio.name }} ({{ meta.cio.email }})
+- **Document Owner:** {{ meta-handbook.owner }}
+- **IT Operations Manager:** {{ meta-organisation-roles.role_it_operations_manager.name }} ({{ meta-organisation-roles.role_it_operations_manager.email }})
+- **CIO:** {{ meta-organisation-roles.role_cio.name }} ({{ meta-organisation-roles.role_cio.email }})
 
----
-
-**Document Owner:** {{ meta.document.owner }}  
-**Approved by:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Organization:** {{ meta.organization.name }}
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
+**Document Owner:** {{ meta-handbook.owner }}  
+**Approved by:** {{ meta-handbook.approver }}  
+**Version:** {{ meta-handbook.revision }}  
+**Organization:** {{ meta-organisation.name }}

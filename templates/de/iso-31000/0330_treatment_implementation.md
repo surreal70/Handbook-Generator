@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-31000-0330
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Behandlungsimplementierung
+
+**Dokument-ID:** [FRAMEWORK]-0330
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -16,7 +28,7 @@ Dieses Dokument beschreibt Behandlungsimplementierung im Risikomanagement gemä�
 ## Geltungsbereich
 
 Dieses Dokument gilt für:
-- {{ meta.organization }}
+- {{ meta-organisation.name }}
 - Alle Organisationsebenen
 - Risikomanagement-Prozesse
 - Risikomanagement-Verantwortliche
@@ -76,17 +88,3 @@ Die Organisation muss:
 - 0100_framework_overview.md
 - 9999_Framework_Mapping.md
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |
-
-<!-- 
-Autor-Hinweise: 
-- Passen Sie den Prozess an Ihre Organisationsbedürfnisse an
-- Stellen Sie sicher, dass alle Anforderungen erfüllt werden
-- Dokumentieren Sie Abweichungen und Begründungen
--->

@@ -1,14 +1,16 @@
 # Document Control and Document Register
 
-**Document ID:** 0030  
-**Document Type:** Process/Foundation  
-**Reference Framework:** BSI IT-Grundschutz (BSI Standards 200-1/200-2/200-3)  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** {{ meta.document.status }}  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.document.last_updated }}  
-**Next Review:** {{ meta.document.next_review }}
+**Document-ID:** [FRAMEWORK]-0030
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -21,7 +23,7 @@ Reference: BSI Standard 200-1 (Documentation Requirements)
 
 ## 1. Purpose and Scope
 
-This document describes document control for the Information Security Management System (ISMS) of **{{ meta.organization.name }}**. It defines processes for creation, review, approval, distribution, modification, and archiving of ISMS documents.
+This document describes document control for the Information Security Management System (ISMS) of **{{ meta-organisation.name }}**. It defines processes for creation, review, approval, distribution, modification, and archiving of ISMS documents.
 
 ### 1.1 Scope
 
@@ -38,7 +40,7 @@ This document control applies to all ISMS-relevant documents:
 
 **Primary Storage Location:** [TODO: e.g. SharePoint, Confluence, DMS]
 
-**Responsible:** {{ meta.document.owner }}
+**Responsible:** {{ meta-handbook.owner }}
 
 All ISMS documents are stored centrally in:
 - **Path:** [TODO: e.g. /ISMS/Documentation/]
@@ -170,16 +172,16 @@ Maintain this register with all ISMS documents. Update regularly.
 
 | Document | ID | Owner | Status | Version | Last Updated | Next Review |
 |---|---|---|---|---|---|---|
-| Information Security Policy | 0010 | {{ meta.ciso.name }} | {{ meta.document.status }} | {{ meta.document.version }} | {{ meta.document.last_updated }} | {{ meta.document.next_review }} |
-| ISMS Organization, Roles and RACI | 0020 | {{ meta.ciso.name }} | {{ meta.document.status }} | {{ meta.document.version }} | {{ meta.document.last_updated }} | {{ meta.document.next_review }} |
-| Document Control | 0030 | {{ meta.ciso.name }} | {{ meta.document.status }} | {{ meta.document.version }} | {{ meta.document.last_updated }} | {{ meta.document.next_review }} |
+| Information Security Policy | 0010 | {{ meta.ciso.name }} | {{ meta-handbook.status }} | {{ meta-handbook.revision }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
+| ISMS Organization, Roles and RACI | 0020 | {{ meta.ciso.name }} | {{ meta-handbook.status }} | {{ meta-handbook.revision }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
+| Document Control | 0030 | {{ meta.ciso.name }} | {{ meta-handbook.status }} | {{ meta-handbook.revision }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
 | [TODO: Add additional documents] | | | | | | |
 
 ## 5. Change Log
 
 | Version | Date | Change | Author | Approver | Status |
 |---|---|---|---|---|---|
-| 0.1 | {{ meta.document.last_updated }} | First draft | {{ meta.document.owner }} | - | Draft |
+| 0.1 | {{ meta-handbook.modifydate }} | First draft | {{ meta-handbook.owner }} | - | Draft |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## 6. Quality Assurance
@@ -220,20 +222,10 @@ The document control process is regularly monitored:
 - **Review:** Annual review of the process
 - **Improvement:** Continuous optimization based on feedback
 
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Next Review:** {{ meta-handbook.next_review }}
 
 **References:**
 - BSI Standard 200-1: Management Systems for Information Security (ISMS)
 - BSI Standard 200-2: IT-Grundschutz Methodology
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
 
 <!-- End of template -->

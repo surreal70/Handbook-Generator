@@ -1,14 +1,16 @@
 # Hardening-Lifecycle: Baselines, Change und Compliance
 
-**Dokument-ID:** 0030  
-**Dokumenttyp:** Prozessbeschreibung  
-**Referenzrahmen:** CIS Controls v8 (Hardening-Programm; keine Benchmarks-Texte)  
-**Owner:** [TODO]  
-**Version:** 0.1 (Entwurf)  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** Intern / Vertraulich / Streng vertraulich  
-**Letzte Aktualisierung:** 2026-01-31  
-**Nächster Review:** [TODO]
+**Dokument-ID:** 0030
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -32,10 +34,3 @@
 - Auto-Remediation vs. Ticket: [TODO]
 - Ausnahmehandling: [TODO]
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

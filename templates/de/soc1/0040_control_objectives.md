@@ -1,13 +1,24 @@
----
+
 Document-ID: soc1-0040
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Kontrollziele
+
+**Dokument-ID:** [FRAMEWORK]-0040
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -23,112 +34,112 @@ Dieses Dokument umfasst:
 
 ## Kontrollziele Übersicht
 
-### Kontrollziel 1: {{ source.control_objective_1_title }}
+### Kontrollziel 1: [TODO]
 
-**Beschreibung**: {{ source.control_objective_1_description }}
+**Beschreibung**: [TODO]
 
-**COSO-Komponente**: {{ source.control_objective_1_coso }}
-
-**Relevanz für Finanzberichterstattung**:
-{{ source.control_objective_1_relevance }}
-
-**Kontrollaktivitäten**:
-1. {{ source.control_objective_1_activity_1 }}
-2. {{ source.control_objective_1_activity_2 }}
-3. {{ source.control_objective_1_activity_3 }}
-
-### Kontrollziel 2: {{ source.control_objective_2_title }}
-
-**Beschreibung**: {{ source.control_objective_2_description }}
-
-**COSO-Komponente**: {{ source.control_objective_2_coso }}
+**COSO-Komponente**: [TODO]
 
 **Relevanz für Finanzberichterstattung**:
-{{ source.control_objective_2_relevance }}
+[TODO]
 
 **Kontrollaktivitäten**:
-1. {{ source.control_objective_2_activity_1 }}
-2. {{ source.control_objective_2_activity_2 }}
-3. {{ source.control_objective_2_activity_3 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
 
-### Kontrollziel 3: {{ source.control_objective_3_title }}
+### Kontrollziel 2: [TODO]
 
-**Beschreibung**: {{ source.control_objective_3_description }}
+**Beschreibung**: [TODO]
 
-**COSO-Komponente**: {{ source.control_objective_3_coso }}
+**COSO-Komponente**: [TODO]
 
 **Relevanz für Finanzberichterstattung**:
-{{ source.control_objective_3_relevance }}
+[TODO]
 
 **Kontrollaktivitäten**:
-1. {{ source.control_objective_3_activity_1 }}
-2. {{ source.control_objective_3_activity_2 }}
-3. {{ source.control_objective_3_activity_3 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
 
-### Kontrollziel 4: {{ source.control_objective_4_title }}
+### Kontrollziel 3: [TODO]
 
-**Beschreibung**: {{ source.control_objective_4_description }}
+**Beschreibung**: [TODO]
 
-**COSO-Komponente**: {{ source.control_objective_4_coso }}
+**COSO-Komponente**: [TODO]
 
 **Relevanz für Finanzberichterstattung**:
-{{ source.control_objective_4_relevance }}
+[TODO]
 
 **Kontrollaktivitäten**:
-1. {{ source.control_objective_4_activity_1 }}
-2. {{ source.control_objective_4_activity_2 }}
-3. {{ source.control_objective_4_activity_3 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
 
-### Kontrollziel 5: {{ source.control_objective_5_title }}
+### Kontrollziel 4: [TODO]
 
-**Beschreibung**: {{ source.control_objective_5_description }}
+**Beschreibung**: [TODO]
 
-**COSO-Komponente**: {{ source.control_objective_5_coso }}
+**COSO-Komponente**: [TODO]
 
 **Relevanz für Finanzberichterstattung**:
-{{ source.control_objective_5_relevance }}
+[TODO]
 
 **Kontrollaktivitäten**:
-1. {{ source.control_objective_5_activity_1 }}
-2. {{ source.control_objective_5_activity_2 }}
-3. {{ source.control_objective_5_activity_3 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
+
+### Kontrollziel 5: [TODO]
+
+**Beschreibung**: [TODO]
+
+**COSO-Komponente**: [TODO]
+
+**Relevanz für Finanzberichterstattung**:
+[TODO]
+
+**Kontrollaktivitäten**:
+1. [TODO]
+2. [TODO]
+3. [TODO]
 
 ## Zuordnung zu COSO-Komponenten
 
 ### Kontrollumgebung
 
 Kontrollziele, die sich auf die Kontrollumgebung beziehen:
-{{ source.control_environment_objectives }}
+[TODO]
 
 ### Risikobewertung
 
 Kontrollziele, die sich auf die Risikobewertung beziehen:
-{{ source.risk_assessment_objectives }}
+[TODO]
 
 ### Kontrollaktivitäten
 
 Kontrollziele, die sich auf Kontrollaktivitäten beziehen:
-{{ source.control_activities_objectives }}
+[TODO]
 
 ### Information und Kommunikation
 
 Kontrollziele, die sich auf Information und Kommunikation beziehen:
-{{ source.information_communication_objectives }}
+[TODO]
 
 ### Überwachungsaktivitäten
 
 Kontrollziele, die sich auf Überwachungsaktivitäten beziehen:
-{{ source.monitoring_objectives }}
+[TODO]
 
 ## Kontrollmatrix
 
 | Kontrollziel | COSO-Komponente | Kontrollaktivitäten | Testverfahren |
 |--------------|-----------------|---------------------|---------------|
-| {{ source.control_matrix_row_1 }} |
-| {{ source.control_matrix_row_2 }} |
-| {{ source.control_matrix_row_3 }} |
-| {{ source.control_matrix_row_4 }} |
-| {{ source.control_matrix_row_5 }} |
+| [TODO] |
+| [TODO] |
+| [TODO] |
+| [TODO] |
+| [TODO] |
 
 ## Referenzen
 
@@ -137,12 +148,3 @@ Kontrollziele, die sich auf Überwachungsaktivitäten beziehen:
 
 <!-- Hinweise für Autoren: Stellen Sie sicher, dass alle Kontrollziele messbar und testbar sind -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

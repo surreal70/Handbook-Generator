@@ -1,5 +1,19 @@
 # Audit Planning Overview
 
+**Document-ID:** idw-ps-951-0010
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This template documents the overall audit planning process according to IDW PS 951.
@@ -9,15 +23,6 @@ Customize based on your organization's specific audit requirements.
 IDW PS 951 Reference: Section on Audit Planning
 -->
 
-**Document-ID:** idw-ps-951-0010  
-**Owner:** {{ meta.audit_lead }}  
-**Version:** {{ meta.version }}  
-**Status:** {{ meta.status }}  
-**Classification:** {{ meta.classification }}  
-**Last Update:** {{ meta.date }}
-
----
-
 ## 1. Purpose
 
 This document describes the planning of the IT audit according to IDW Auditing Standard 951. It defines the audit approach, audit objectives, and required resources for the systematic audit of IT systems and IT controls.
@@ -25,14 +30,14 @@ This document describes the planning of the IT audit according to IDW Auditing S
 ## 2. Scope
 
 ### Audit Subject
-- **Organization:** {{ source.organization_name }}
-- **Audit Period:** {{ source.audit_period }}
-- **Audit Type:** {{ source.audit_type }}
+- **Organization:** [TODO]
+- **Audit Period:** [TODO]
+- **Audit Type:** [TODO]
 - **Audit Standard:** IDW PS 951
 
 ### Boundaries
-- IT systems in scope: {{ source.systems_in_scope }}
-- Excluded areas: {{ source.excluded_areas }}
+- IT systems in scope: [TODO]
+- Excluded areas: [TODO]
 
 ## 3. Audit Objectives
 
@@ -44,16 +49,16 @@ This document describes the planning of the IT audit according to IDW Auditing S
 5. Assessment of compliance with relevant regulations
 
 ### Specific Audit Objectives
-- {{ source.specific_audit_objective_1 }}
-- {{ source.specific_audit_objective_2 }}
-- {{ source.specific_audit_objective_3 }}
+- [TODO]
+- [TODO]
+- [TODO]
 
 ## 4. Audit Approach
 
 ### Audit Strategy
-- **Audit Approach:** {{ source.audit_approach }}
-- **Audit Depth:** {{ source.audit_depth }}
-- **Sample Size:** {{ source.sample_size }}
+- **Audit Approach:** [TODO]
+- **Audit Depth:** [TODO]
+- **Sample Size:** [TODO]
 
 ### Audit Phases
 1. **Planning Phase:** Preparation and risk analysis
@@ -64,44 +69,44 @@ This document describes the planning of the IT audit according to IDW Auditing S
 ## 5. Audit Team
 
 ### Team Composition
-- **Audit Lead:** {{ source.audit_lead }}
-- **IT Auditors:** {{ source.it_auditors }}
-- **Subject Matter Experts:** {{ source.subject_matter_experts }}
+- **Audit Lead:** [TODO]
+- **IT Auditors:** [TODO]
+- **Subject Matter Experts:** [TODO]
 
 ### Qualifications
-- Certifications: {{ source.team_certifications }}
-- Experience: {{ source.team_experience }}
+- Certifications: [TODO]
+- Experience: [TODO]
 
 ## 6. Timeline
 
 | Phase | Start | End | Duration |
 |-------|-------|-----|----------|
-| Planning | {{ source.planning_start }} | {{ source.planning_end }} | {{ source.planning_duration }} |
-| Execution | {{ source.execution_start }} | {{ source.execution_end }} | {{ source.execution_duration }} |
-| Reporting | {{ source.reporting_start }} | {{ source.reporting_end }} | {{ source.reporting_duration }} |
+| Planning | [TODO] | [TODO] | [TODO] |
+| Execution | [TODO] | [TODO] | [TODO] |
+| Reporting | [TODO] | [TODO] | [TODO] |
 
 ## 7. Audit Risks
 
 ### Identified Risks
-1. {{ source.audit_risk_1 }}
-2. {{ source.audit_risk_2 }}
-3. {{ source.audit_risk_3 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
 
 ### Risk Mitigation
-- {{ source.risk_mitigation_1 }}
-- {{ source.risk_mitigation_2 }}
+- [TODO]
+- [TODO]
 
 ## 8. Communication and Reporting
 
 ### Communication Plan
-- **Kickoff Meeting:** {{ source.kickoff_date }}
-- **Interim Reports:** {{ source.interim_reporting }}
-- **Closing Meeting:** {{ source.closing_meeting }}
+- **Kickoff Meeting:** [TODO]
+- **Interim Reports:** [TODO]
+- **Closing Meeting:** [TODO]
 
 ### Reporting
-- **Report Recipients:** {{ source.report_recipients }}
-- **Report Format:** {{ source.report_format }}
-- **Report Deadline:** {{ source.report_deadline }}
+- **Report Recipients:** [TODO]
+- **Report Format:** [TODO]
+- **Report Deadline:** [TODO]
 
 ## 9. References
 
@@ -116,24 +121,14 @@ This document describes the planning of the IT audit according to IDW Auditing S
 - BSI IT-Grundschutz
 - ISO/IEC 27001
 
-
 <!-- 
 This document is subject to audit documentation.
 IDW PS 951 - Audit Planning
 -->
 
----
-
 **Approved by:**  
-{{ meta.audit_lead }}, Audit Lead  
-Date: {{ meta.approval_date }}
+{{ meta-organisation-roles.role_Internal_Auditor }}, Audit Lead  
+Date: {{ meta-handbook.valid_from }}
 
-**Next Review:** {{ meta.next_review }}
+**Next Review:** {{ meta-handbook.next_review }}
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |

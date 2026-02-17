@@ -1,13 +1,24 @@
----
+
 Document-ID: soc1-0050
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Komplementäre Nutzerorganisationskontrollen
+
+**Dokument-ID:** [FRAMEWORK]-0050
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -41,99 +52,99 @@ Komplementäre Nutzerorganisationskontrollen (Complementary User Entity Controls
 
 ## Komplementäre Kontrollen
 
-### CUEC 1: {{ source.cuec_1_title }}
+### CUEC 1: [TODO]
 
-**Beschreibung**: {{ source.cuec_1_description }}
+**Beschreibung**: [TODO]
 
-**Zugehöriges Kontrollziel**: {{ source.cuec_1_control_objective }}
-
-**Erforderliche Maßnahmen der Nutzerorganisation**:
-1. {{ source.cuec_1_action_1 }}
-2. {{ source.cuec_1_action_2 }}
-3. {{ source.cuec_1_action_3 }}
-
-**Auswirkungen bei Nichtimplementierung**:
-{{ source.cuec_1_impact }}
-
-### CUEC 2: {{ source.cuec_2_title }}
-
-**Beschreibung**: {{ source.cuec_2_description }}
-
-**Zugehöriges Kontrollziel**: {{ source.cuec_2_control_objective }}
+**Zugehöriges Kontrollziel**: [TODO]
 
 **Erforderliche Maßnahmen der Nutzerorganisation**:
-1. {{ source.cuec_2_action_1 }}
-2. {{ source.cuec_2_action_2 }}
-3. {{ source.cuec_2_action_3 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
 
 **Auswirkungen bei Nichtimplementierung**:
-{{ source.cuec_2_impact }}
+[TODO]
 
-### CUEC 3: {{ source.cuec_3_title }}
+### CUEC 2: [TODO]
 
-**Beschreibung**: {{ source.cuec_3_description }}
+**Beschreibung**: [TODO]
 
-**Zugehöriges Kontrollziel**: {{ source.cuec_3_control_objective }}
+**Zugehöriges Kontrollziel**: [TODO]
 
 **Erforderliche Maßnahmen der Nutzerorganisation**:
-1. {{ source.cuec_3_action_1 }}
-2. {{ source.cuec_3_action_2 }}
-3. {{ source.cuec_3_action_3 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
 
 **Auswirkungen bei Nichtimplementierung**:
-{{ source.cuec_3_impact }}
+[TODO]
 
-### CUEC 4: {{ source.cuec_4_title }}
+### CUEC 3: [TODO]
 
-**Beschreibung**: {{ source.cuec_4_description }}
+**Beschreibung**: [TODO]
 
-**Zugehöriges Kontrollziel**: {{ source.cuec_4_control_objective }}
+**Zugehöriges Kontrollziel**: [TODO]
 
 **Erforderliche Maßnahmen der Nutzerorganisation**:
-1. {{ source.cuec_4_action_1 }}
-2. {{ source.cuec_4_action_2 }}
-3. {{ source.cuec_4_action_3 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
 
 **Auswirkungen bei Nichtimplementierung**:
-{{ source.cuec_4_impact }}
+[TODO]
 
-### CUEC 5: {{ source.cuec_5_title }}
+### CUEC 4: [TODO]
 
-**Beschreibung**: {{ source.cuec_5_description }}
+**Beschreibung**: [TODO]
 
-**Zugehöriges Kontrollziel**: {{ source.cuec_5_control_objective }}
+**Zugehöriges Kontrollziel**: [TODO]
 
 **Erforderliche Maßnahmen der Nutzerorganisation**:
-1. {{ source.cuec_5_action_1 }}
-2. {{ source.cuec_5_action_2 }}
-3. {{ source.cuec_5_action_3 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
 
 **Auswirkungen bei Nichtimplementierung**:
-{{ source.cuec_5_impact }}
+[TODO]
+
+### CUEC 5: [TODO]
+
+**Beschreibung**: [TODO]
+
+**Zugehöriges Kontrollziel**: [TODO]
+
+**Erforderliche Maßnahmen der Nutzerorganisation**:
+1. [TODO]
+2. [TODO]
+3. [TODO]
+
+**Auswirkungen bei Nichtimplementierung**:
+[TODO]
 
 ## Zuordnungsmatrix
 
 | CUEC | Kontrollziel | Nutzerverantwortung | Kritikalität |
 |------|--------------|---------------------|--------------|
-| {{ source.cuec_matrix_row_1 }} |
-| {{ source.cuec_matrix_row_2 }} |
-| {{ source.cuec_matrix_row_3 }} |
-| {{ source.cuec_matrix_row_4 }} |
-| {{ source.cuec_matrix_row_5 }} |
+| [TODO] |
+| [TODO] |
+| [TODO] |
+| [TODO] |
+| [TODO] |
 
 ## Kommunikation an Nutzerorganisationen
 
 ### Kommunikationsmethoden
 
-{{ source.cuec_communication_methods }}
+[TODO]
 
 ### Dokumentation
 
-{{ source.cuec_documentation }}
+[TODO]
 
 ### Schulung und Support
 
-{{ source.cuec_training_support }}
+[TODO]
 
 ## Überwachung und Bewertung
 
@@ -146,7 +157,7 @@ Nutzerorganisationen sollten regelmäßig bewerten:
 
 ### Feedback-Mechanismus
 
-{{ source.cuec_feedback_mechanism }}
+[TODO]
 
 ## Referenzen
 
@@ -155,12 +166,3 @@ Nutzerorganisationen sollten regelmäßig bewerten:
 
 <!-- Hinweise für Autoren: Stellen Sie sicher, dass CUECs klar und umsetzbar formuliert sind -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

@@ -1,6 +1,6 @@
 # Version Management
 
-## Current Version: 0.0.13
+## Current Version: 0.0.14
 
 ### Single Source of Truth
 
@@ -32,6 +32,18 @@ To update the version number:
 **Do not** hardcode version numbers elsewhere in the codebase.
 
 ### Version History
+
+- **0.0.14** (2026-02-17): Template Structure & Metadata Improvements
+  - ✅ Created comprehensive diagrams structure test suite (327 tests)
+  - ✅ Added diagrams subdirectories with README.md to all 23 frameworks (46 total)
+  - ✅ Consolidated auxiliary metadata from 0000_metadata subdirectories
+  - ✅ Merged framework-specific placeholders into root meta-handbook.yaml files
+  - ✅ Removed 12 redundant 0000_metadata subdirectories
+  - ✅ Updated templateset_version from 0.1 to 0.2 across all 46 handbooks
+  - ✅ Updated tests to validate version >= 0.2
+  - ✅ Fixed escaped backticks in all diagrams README files
+  - ✅ All 327 diagrams structure tests passing
+  - **Status**: Template structure standardization release
 
 - **0.0.13** (2026-02-17): Documentation Enhancement - Framework Mapping Summary
   - ✅ Created comprehensive framework mapping summary document

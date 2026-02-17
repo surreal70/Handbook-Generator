@@ -1,17 +1,28 @@
----
+
 Document-ID: coso-0420
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Separate Evaluierungen
 
+**Dokument-ID:** [FRAMEWORK]-0420
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt die separaten Evaluierungsprozesse bei {{ source.organization_name }} gemäß COSO Prinzip 16.
+Dieses Dokument beschreibt die separaten Evaluierungsprozesse bei [TODO] gemäß COSO Prinzip 16.
 
 ## Geltungsbereich
 
@@ -24,22 +35,22 @@ Dieses Dokument beschreibt die separaten Evaluierungsprozesse bei {{ source.orga
 
 ### Definition
 
-{{ source.separate_evaluations_definition }}
+[TODO]
 
 ### Merkmale separater Evaluierungen
 
-**Periodizität**: {{ source.periodicity }}
-**Unabhängigkeit**: {{ source.independence }}
-**Objektivität**: {{ source.objectivity }}
-**Umfassende Prüfung**: {{ source.comprehensive_review }}
+**Periodizität**: [TODO]
+**Unabhängigkeit**: [TODO]
+**Objektivität**: [TODO]
+**Umfassende Prüfung**: [TODO]
 
 ## Arten separater Evaluierungen
 
 ### Interne Revision
 
-**Revisionszweck**: {{ source.internal_audit_purpose }}
-**Revisionsansatz**: {{ source.internal_audit_approach }}
-**Revisionsumfang**: {{ source.internal_audit_scope }}
+**Revisionszweck**: [TODO]
+**Revisionsansatz**: [TODO]
+**Revisionsumfang**: [TODO]
 
 **Revisionsaktivitäten**:
 - Risikobasierte Prüfungsplanung
@@ -50,108 +61,108 @@ Dieses Dokument beschreibt die separaten Evaluierungsprozesse bei {{ source.orga
 
 ### Externe Prüfung
 
-**Abschlussprüfung**: {{ source.financial_audit }}
-**Prüfung des internen Kontrollsystems**: {{ source.internal_control_audit }}
-**Sonderprüfungen**: {{ source.special_audits }}
+**Abschlussprüfung**: [TODO]
+**Prüfung des internen Kontrollsystems**: [TODO]
+**Sonderprüfungen**: [TODO]
 
 ### Kontrollselbstbewertungen (CSA)
 
-**CSA-Ansatz**: {{ source.csa_approach }}
-**CSA-Prozess**: {{ source.csa_process }}
-**CSA-Workshops**: {{ source.csa_workshops }}
+**CSA-Ansatz**: [TODO]
+**CSA-Prozess**: [TODO]
+**CSA-Workshops**: [TODO]
 
 ### Management-Reviews
 
-**Periodische Reviews**: {{ source.periodic_reviews }}
-**Thematische Reviews**: {{ source.thematic_reviews }}
+**Periodische Reviews**: [TODO]
+**Thematische Reviews**: [TODO]
 
 ## Interne Revision
 
 ### Revisionsplanung
 
-**Risikobasierte Planung**: {{ source.risk_based_planning }}
-**Jährlicher Revisionsplan**: {{ source.annual_audit_plan }}
-**Ressourcenplanung**: {{ source.resource_planning }}
+**Risikobasierte Planung**: [TODO]
+**Jährlicher Revisionsplan**: [TODO]
+**Ressourcenplanung**: [TODO]
 
 ### Revisionsdurchführung
 
-**Vorbereitung**: {{ source.audit_preparation }}
-**Feldarbeit**: {{ source.fieldwork }}
-**Prüfungshandlungen**: {{ source.audit_procedures }}
-**Dokumentation**: {{ source.audit_documentation }}
+**Vorbereitung**: [TODO]
+**Feldarbeit**: [TODO]
+**Prüfungshandlungen**: [TODO]
+**Dokumentation**: [TODO]
 
 ### Prüfungsmethoden
 
-**Interviews**: {{ source.interviews }}
-**Dokumentenprüfung**: {{ source.document_review }}
-**Beobachtungen**: {{ source.observations }}
-**Stichprobenprüfungen**: {{ source.sample_testing }}
-**Datenanalyse**: {{ source.data_analysis }}
+**Interviews**: [TODO]
+**Dokumentenprüfung**: [TODO]
+**Beobachtungen**: [TODO]
+**Stichprobenprüfungen**: [TODO]
+**Datenanalyse**: [TODO]
 
 ### Revisionsberichterstattung
 
-**Revisionsbericht**: {{ source.audit_report }}
-**Feststellungen**: {{ source.audit_findings }}
-**Empfehlungen**: {{ source.audit_recommendations }}
-**Managementantworten**: {{ source.management_responses }}
+**Revisionsbericht**: [TODO]
+**Feststellungen**: [TODO]
+**Empfehlungen**: [TODO]
+**Managementantworten**: [TODO]
 
 ### Follow-up
 
-**Maßnahmenverfolgung**: {{ source.action_tracking }}
-**Follow-up-Audits**: {{ source.follow_up_audits }}
+**Maßnahmenverfolgung**: [TODO]
+**Follow-up-Audits**: [TODO]
 
 ## Externe Prüfung
 
 ### Abschlussprüfung
 
-**Prüfungsumfang**: {{ source.financial_audit_scope }}
-**Prüfungsansatz**: {{ source.financial_audit_approach }}
-**Wesentlichkeit**: {{ source.materiality }}
+**Prüfungsumfang**: [TODO]
+**Prüfungsansatz**: [TODO]
+**Wesentlichkeit**: [TODO]
 
 ### Prüfung des IKS
 
-**IKS-Prüfung**: {{ source.ics_audit }}
-**Kontrollprüfungen**: {{ source.control_testing }}
-**Mängelberichterstattung**: {{ source.deficiency_reporting }}
+**IKS-Prüfung**: [TODO]
+**Kontrollprüfungen**: [TODO]
+**Mängelberichterstattung**: [TODO]
 
 ### Zusammenarbeit mit externen Prüfern
 
-**Informationsbereitstellung**: {{ source.information_provision }}
-**Zugang zu Dokumenten**: {{ source.document_access }}
-**Koordination**: {{ source.coordination }}
+**Informationsbereitstellung**: [TODO]
+**Zugang zu Dokumenten**: [TODO]
+**Koordination**: [TODO]
 
 ## Kontrollselbstbewertungen (CSA)
 
 ### CSA-Methodik
 
-**Fragebogen-basiert**: {{ source.questionnaire_based_csa }}
-**Workshop-basiert**: {{ source.workshop_based_csa }}
-**Management-basiert**: {{ source.management_based_csa }}
+**Fragebogen-basiert**: [TODO]
+**Workshop-basiert**: [TODO]
+**Management-basiert**: [TODO]
 
 ### CSA-Durchführung
 
-**Vorbereitung**: {{ source.csa_preparation }}
-**Durchführung**: {{ source.csa_execution }}
-**Dokumentation**: {{ source.csa_documentation }}
-**Follow-up**: {{ source.csa_follow_up }}
+**Vorbereitung**: [TODO]
+**Durchführung**: [TODO]
+**Dokumentation**: [TODO]
+**Follow-up**: [TODO]
 
 ### CSA-Vorteile
 
-{{ source.csa_benefits }}
+[TODO]
 
 ## Bewertungsumfang und -häufigkeit
 
 ### Umfangsbestimmung
 
-**Risikobasierter Ansatz**: {{ source.risk_based_scope }}
-**Abdeckung**: {{ source.coverage }}
-**Rotationsprinzip**: {{ source.rotation_principle }}
+**Risikobasierter Ansatz**: [TODO]
+**Abdeckung**: [TODO]
+**Rotationsprinzip**: [TODO]
 
 ### Bewertungshäufigkeit
 
-**Jährliche Bewertungen**: {{ source.annual_evaluations }}
-**Mehrjährige Zyklen**: {{ source.multi_year_cycles }}
-**Anlassbezogene Bewertungen**: {{ source.triggered_evaluations }}
+**Jährliche Bewertungen**: [TODO]
+**Mehrjährige Zyklen**: [TODO]
+**Anlassbezogene Bewertungen**: [TODO]
 
 **Faktoren für Häufigkeit**:
 - Risikobewertung
@@ -164,79 +175,79 @@ Dieses Dokument beschreibt die separaten Evaluierungsprozesse bei {{ source.orga
 
 ### Kontrolldesign
 
-**Designwirksamkeit**: {{ source.design_effectiveness }}
-**Angemessenheit**: {{ source.adequacy }}
+**Designwirksamkeit**: [TODO]
+**Angemessenheit**: [TODO]
 
 ### Kontrollimplementierung
 
-**Implementierungsstatus**: {{ source.implementation_status }}
-**Konsistenz**: {{ source.consistency }}
+**Implementierungsstatus**: [TODO]
+**Konsistenz**: [TODO]
 
 ### Kontrollwirksamkeit
 
-**Operative Wirksamkeit**: {{ source.operating_effectiveness }}
-**Zuverlässigkeit**: {{ source.reliability }}
+**Operative Wirksamkeit**: [TODO]
+**Zuverlässigkeit**: [TODO]
 
 ## Qualifikation der Prüfer
 
 ### Interne Revisoren
 
-**Qualifikationsanforderungen**: {{ source.internal_auditor_qualifications }}
-**Zertifizierungen**: {{ source.certifications }}
-**Fortbildung**: {{ source.continuing_education }}
+**Qualifikationsanforderungen**: [TODO]
+**Zertifizierungen**: [TODO]
+**Fortbildung**: [TODO]
 
 ### Unabhängigkeit und Objektivität
 
-**Organisatorische Unabhängigkeit**: {{ source.organizational_independence }}
-**Individuelle Objektivität**: {{ source.individual_objectivity }}
-**Interessenkonflikte**: {{ source.conflicts_of_interest }}
+**Organisatorische Unabhängigkeit**: [TODO]
+**Individuelle Objektivität**: [TODO]
+**Interessenkonflikte**: [TODO]
 
 ## Berichterstattung
 
 ### Berichtsempfänger
 
-**Prüfungsausschuss**: {{ source.audit_committee_reporting }}
-**Geschäftsführung**: {{ source.management_reporting }}
-**Prozesseigentümer**: {{ source.process_owner_reporting }}
+**Prüfungsausschuss**: [TODO]
+**Geschäftsführung**: [TODO]
+**Prozesseigentümer**: [TODO]
 
 ### Berichtsinhalte
 
-**Executive Summary**: {{ source.executive_summary }}
-**Detaillierte Feststellungen**: {{ source.detailed_findings }}
-**Risikobewertung**: {{ source.risk_assessment }}
-**Empfehlungen**: {{ source.recommendations }}
-**Managementantworten**: {{ source.management_responses }}
+**Executive Summary**: [TODO]
+**Detaillierte Feststellungen**: [TODO]
+**Risikobewertung**: [TODO]
+**Empfehlungen**: [TODO]
+**Managementantworten**: [TODO]
 
 ## Integration mit laufenden Evaluierungen
 
 ### Komplementäre Ansätze
 
-{{ source.complementary_approaches }}
+[TODO]
 
 ### Informationsnutzung
 
-**Nutzung laufender Überwachungsdaten**: {{ source.ongoing_monitoring_data_use }}
-**Fokussierung auf Lücken**: {{ source.gap_focus }}
+**Nutzung laufender Überwachungsdaten**: [TODO]
+**Fokussierung auf Lücken**: [TODO]
 
 ## Qualitätssicherung
 
 ### Qualitätssicherung der Revision
 
-**Interne Qualitätssicherung**: {{ source.internal_qa }}
-**Externe Qualitätssicherung**: {{ source.external_qa }}
-**Peer Reviews**: {{ source.peer_reviews }}
+**Interne Qualitätssicherung**: [TODO]
+**Externe Qualitätssicherung**: [TODO]
+**Peer Reviews**: [TODO]
 
 ### Revisionsstandards
 
-{{ source.audit_standards }}
+[TODO]
 
 ## Rollen und Verantwortlichkeiten
 
-**Prüfungsausschuss**: {{ source.audit_committee_responsibilities }}
-**Leiter Interne Revision**: {{ source.chief_audit_executive_responsibilities }}
-**Interne Revisoren**: {{ source.internal_auditor_responsibilities }}
-**Externe Prüfer**: {{ source.external_auditor_responsibilities }}
-**Management**: {{ source.management_responsibilities }}
+**Prüfungsausschuss**: [TODO]
+**Leiter Interne Revision**: [TODO]
+**Interne Revisoren**: [TODO]
+**Externe Prüfer**: [TODO]
+**Management**: [TODO]
 
 ## Referenzen
 
@@ -245,12 +256,3 @@ Dieses Dokument beschreibt die separaten Evaluierungsprozesse bei {{ source.orga
 - International Standards for the Professional Practice of Internal Auditing (IIA Standards)
 - ISA 315 (Identifying and Assessing the Risks of Material Misstatement)
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

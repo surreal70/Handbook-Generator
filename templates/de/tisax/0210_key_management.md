@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0210
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Schlüsselverwaltung
+
+**Dokument-ID:** [FRAMEWORK]-0210
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -15,7 +26,7 @@ Dieses Dokument beschreibt die Prozesse und Verfahren für die Verwaltung krypto
 
 ## Geltungsbereich
 
-Dieses Dokument gilt für alle kryptographischen Schlüssel in {{ source.organization_name }}.
+Dieses Dokument gilt für alle kryptographischen Schlüssel in [TODO].
 
 ## Schlüssel-Lebenszyklus
 
@@ -381,19 +392,10 @@ Schulungsinhalte:
 
 ## Kennzahlen
 
-{{ source.organization_name }} misst:
+[TODO] misst:
 - Anzahl aktiver Schlüssel
 - Anzahl Schlüsselrotationen (Ziel: 100% fristgerecht)
 - Anzahl Schlüsselkompromittierungen (Ziel: 0)
 - Durchschnittliche Zeit bis zur Schlüsselbereitstellung
 - Compliance-Rate (Ziel: 100%)
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

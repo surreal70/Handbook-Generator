@@ -1,13 +1,16 @@
 # Document Control and Versioning
 
-**Document ID:** BCM-0030  
-**Organization:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Approved by:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0030
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -27,7 +30,7 @@ Customization required:
 
 ### 1.1 BCM Document Structure
 
-The BCM documentation of {{ meta.organization.name }} includes the following document types:
+The BCM documentation of {{ meta-organisation.name }} includes the following document types:
 
 **Strategic Documents:**
 - BCM policy and guidelines
@@ -74,9 +77,9 @@ Critical BCM documents must be available even when IT systems fail:
 
 | Document ID | Document Name | Version | Owner | Classification | Location |
 |-------------|---------------|---------|-------|----------------|----------|
-| BCM-0010 | Purpose and Scope | {{ meta.document.version }} | {{ meta.document.owner }} | {{ meta.document.classification }} | [TODO: Path] |
-| BCM-0020 | BCM Policy | {{ meta.document.version }} | {{ meta.document.owner }} | {{ meta.document.classification }} | [TODO: Path] |
-| BCM-0030 | Document Control | {{ meta.document.version }} | {{ meta.document.owner }} | {{ meta.document.classification }} | [TODO: Path] |
+| BCM-0010 | Purpose and Scope | {{ meta-handbook.revision }} | {{ meta-handbook.owner }} | {{ meta-handbook.classification }} | [TODO: Path] |
+| BCM-0020 | BCM Policy | {{ meta-handbook.revision }} | {{ meta-handbook.owner }} | {{ meta-handbook.classification }} | [TODO: Path] |
+| BCM-0030 | Document Control | {{ meta-handbook.revision }} | {{ meta-handbook.owner }} | {{ meta-handbook.classification }} | [TODO: Path] |
 | ... | ... | ... | ... | ... | ... |
 
 [TODO: Complete the document register]
@@ -85,7 +88,7 @@ Critical BCM documents must be available even when IT systems fail:
 
 ### 2.1 Versioning Scheme
 
-{{ meta.organization.name }} uses the following versioning scheme for BCM documents:
+{{ meta-organisation.name }} uses the following versioning scheme for BCM documents:
 
 **Format:** `MAJOR.MINOR.PATCH`
 
@@ -137,7 +140,7 @@ Critical BCM documents must be available even when IT systems fail:
 - **Tasks:** Content review, feedback, approval recommendation
 
 **Approver:**
-- **Responsible:** {{ meta.document.approver }} or delegated manager
+- **Responsible:** {{ meta-handbook.approver }} or delegated manager
 - **Tasks:** Formal approval, assumption of responsibility
 
 ### 3.2 Approval Process
@@ -153,7 +156,7 @@ Critical BCM documents must be available even when IT systems fail:
 
 | Document Type | Review Interval | Responsible |
 |---------------|-----------------|-------------|
-| BCM Policy | Annually | {{ meta.roles.ceo.name }} |
+| BCM Policy | Annually | {{ meta-organisation-roles.role_CEO }} |
 | BIA Results | Annually | BCM Manager |
 | BCM Plans (BCP/DRP) | Semi-annually | Subject matter experts |
 | Contact Lists | Quarterly | BCM Manager |
@@ -214,14 +217,6 @@ Critical BCM documents must be available even when IT systems fail:
 
 ## 5. Change Log (Changelog)
 
-### 5.1 Document History
-
-| Version | Date | Change | Author | Reviewer | Approved by |
-|---------|------|--------|--------|----------|-------------|
-| 0.1 | {{ meta.document.last_updated }} | Initial creation | {{ meta.defaults.author }} | [TODO] | [TODO] |
-
-[TODO: Update the change log with each document change]
-
 ### 5.2 Change Requests
 
 Change requests for BCM documents can be submitted through:
@@ -231,13 +226,5 @@ Change requests for BCM documents can be submitted through:
 - **Form:** [TODO: Link to change request form]
 
 Each change request is reviewed and prioritized. Processing follows defined SLAs.
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 <!-- End of template -->

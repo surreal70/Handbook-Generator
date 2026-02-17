@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0430
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Testing-Strategien
+
+**Dokument-ID:** [FRAMEWORK]-0250
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -23,26 +34,26 @@ Umfassende Testing-Strategien zur Qualitätssicherung.
 
 ### Unit Tests
 
-- **Coverage**: {{ source.unit_test_coverage }}
-- **Framework**: {{ source.unit_test_framework }}
-- **Ausführungszeit**: {{ source.unit_test_execution_time }}
+- **Coverage**: [TODO]
+- **Framework**: [TODO]
+- **Ausführungszeit**: [TODO]
 
 ### Integration Tests
 
-- **Coverage**: {{ source.integration_test_coverage }}
-- **Framework**: {{ source.integration_test_framework }}
+- **Coverage**: [TODO]
+- **Framework**: [TODO]
 
 ### End-to-End Tests
 
-- **Coverage**: {{ source.e2e_test_coverage }}
-- **Tool**: {{ source.e2e_test_tool }}
+- **Coverage**: [TODO]
+- **Tool**: [TODO]
 
 ## Test-Automatisierung
 
 ### Automatisierungsgrad
 
-- **Automatisierte Tests**: {{ source.automated_test_percentage }}
-- **Manuelle Tests**: {{ source.manual_test_percentage }}
+- **Automatisierte Tests**: [TODO]
+- **Manuelle Tests**: [TODO]
 
 ### CI/CD-Integration
 
@@ -61,12 +72,3 @@ Umfassende Testing-Strategien zur Qualitätssicherung.
 
 <!-- Hinweis: Umfassende Test-Automatisierung ist Schlüssel zu niedriger CFR -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

@@ -1,14 +1,16 @@
 # Schulung und Awareness – Programm
 
-**Dokument-ID:** 0600  
-**Dokumenttyp:** Programm  
-**Referenzrahmen:** BSI IT-Grundschutz (BSI Standards 200-1/200-2)  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** {{ meta.document.status }}  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0600
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -20,7 +22,7 @@ Reference: BSI Standard 200-1 (Awareness and Training), ORP.3
 
 ## 1. Zweck und Zielsetzung
 
-Das Schulungs- und Awareness-Programm von **{{ meta.organization.name }}** stellt sicher, dass alle Mitarbeitenden über erforderliche Sicherheitskenntnisse verfügen.
+Das Schulungs- und Awareness-Programm von **{{ meta-organisation.name }}** stellt sicher, dass alle Mitarbeitenden über erforderliche Sicherheitskenntnisse verfügen.
 
 **Verantwortlich:** {{ meta.ciso.name }} (ISB)
 
@@ -84,21 +86,11 @@ Das Schulungs- und Awareness-Programm von **{{ meta.organization.name }}** stell
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| ISB | {{ meta.ciso.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| HR | [TODO] | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| HR | [TODO] | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **Referenzen:**
 - BSI Standard 200-1: ISMS
 - BSI IT-Grundschutz-Kompendium: ORP.3 Sensibilisierung und Schulung
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 <!-- End of template -->

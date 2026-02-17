@@ -1,11 +1,16 @@
 # Anhang: Formulare und Vorlagen
 
-**Dokument-ID:** 0760  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0760
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -16,7 +21,7 @@ Dieser Anhang listet alle Formulare und Vorlagen des QMS auf.
 
 ## Zweck
 
-Dieser Anhang enthält eine Übersicht aller Formulare und Vorlagen, die im QMS von {{ meta.organization }} verwendet werden.
+Dieser Anhang enthält eine Übersicht aller Formulare und Vorlagen, die im QMS von {{ meta-organisation.name }} verwendet werden.
 
 ## Formularverzeichnis
 
@@ -319,14 +324,5 @@ Dieser Anhang enthält eine Übersicht aller Formulare und Vorlagen, die im QMS 
 6. Alte Version zurückziehen
 7. Benutzer informieren
 
----
-
 **Hinweis:** Alle Formulare sind im Dokumentenmanagementsystem verfügbar.
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

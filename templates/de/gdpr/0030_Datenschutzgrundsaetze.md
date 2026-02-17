@@ -1,11 +1,16 @@
 # Datenschutzgrundsätze
 
-**Dokument-ID:** 0030  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0030
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -24,7 +29,7 @@ Referenz: DSGVO Art. 5 (Grundsätze für die Verarbeitung personenbezogener Date
 
 ## Zweck
 
-Dieses Dokument beschreibt die Datenschutzgrundsätze gemäß Art. 5 DSGVO und deren Umsetzung in der {{ meta.organization }}. Diese Grundsätze sind bei jeder Verarbeitung personenbezogener Daten zu beachten.
+Dieses Dokument beschreibt die Datenschutzgrundsätze gemäß Art. 5 DSGVO und deren Umsetzung in der {{ meta-organisation.name }}. Diese Grundsätze sind bei jeder Verarbeitung personenbezogener Daten zu beachten.
 
 ## Grundsätze gemäß Art. 5 Abs. 1 DSGVO
 
@@ -178,8 +183,6 @@ Der Verantwortliche ist für die Einhaltung der Grundsätze verantwortlich und m
 - **DSFA (Art. 35):** Risikobewertung
 - **Betroffenenrechte (Art. 12-23):** Transparenz und Kontrolle
 
----
-
 **Nächste Schritte:**
 1. Überprüfen Sie alle Verarbeitungen auf Einhaltung der Grundsätze
 2. Implementieren Sie Kontrollen für jeden Grundsatz
@@ -187,10 +190,3 @@ Der Verantwortliche ist für die Einhaltung der Grundsätze verantwortlich und m
 4. Schulen Sie Mitarbeiter zu den Grundsätzen
 5. Etablieren Sie regelmäßige Überprüfungsprozesse
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

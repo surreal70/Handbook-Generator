@@ -1,13 +1,24 @@
----
+
 Document-ID: csa-ccm-0210
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # DSP-05: Data Encryption at Rest
+
+**Dokument-ID:** [FRAMEWORK]-0210
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## CCM-Kontrolle
 
@@ -28,7 +39,7 @@ Die Organisation muss:
 - Verschlüsselung für alle Speicherorte implementieren (Datenbanken, File Storage, Backups)
 - Regelmäßige Überprüfung der Verschlüsselungsimplementierung
 
-## Implementierung in {{ source.organization_name }}
+## Implementierung in [TODO]
 
 ### Verschlüsselungsstandards
 
@@ -259,16 +270,7 @@ Master Key (Root Key)
 
 | Version | Datum | Autor | Änderung |
 |---------|-------|-------|----------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Version |
+| 1.0 | [Date] | [Author] | Initiale Version |
 
 <!-- Hinweis: Passen Sie Verschlüsselungsimplementierung an Ihre Infrastruktur an -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

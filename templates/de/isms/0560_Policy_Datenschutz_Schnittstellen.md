@@ -1,5 +1,19 @@
 # Policy: Datenschutz Schnittstellen
 
+**Dokument-ID:** 0560
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This policy establishes the interface between information security and data protection.
@@ -9,27 +23,15 @@ Customize based on your organization's data protection framework and GDPR requir
 ISO 27001:2022 Annex A Reference: A.5.31, A.5.32, A.5.33, A.5.34
 -->
 
-**Dokument-ID:** 0560  
-**Dokumenttyp:** Policy (abstrakt)  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.5.31-A.5.34 (inkl. Amendment 1:2024)  
-**Owner:** {{ meta.ciso.name }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
-
----
-
 ## 1. Zweck
 
-Diese Policy definiert die Schnittstellen zwischen Informationssicherheit und Datenschutz der **{{ meta.organization.name }}**. Sie stellt sicher, dass ISMS und Datenschutzanforderungen aufeinander abgestimmt und koordiniert werden.
+Diese Policy definiert die Schnittstellen zwischen Informationssicherheit und Datenschutz der **{{ meta-organisation.name }}**. Sie stellt sicher, dass ISMS und Datenschutzanforderungen aufeinander abgestimmt und koordiniert werden.
 
 ## 2. Geltungsbereich
 
 Diese Policy gilt für:
 
-- **Organisationseinheiten:** Alle Abteilungen und Standorte der {{ meta.organization.name }}
+- **Organisationseinheiten:** Alle Abteilungen und Standorte der {{ meta-organisation.name }}
 - **Daten:** Alle personenbezogenen Daten gemäß DSGVO
 - **Prozesse:** Alle Verarbeitungstätigkeiten personenbezogener Daten
 - **Schnittstellen:** ISMS ↔ Datenschutz-Management-System
@@ -165,18 +167,9 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **ISO/IEC 27701** - Privacy Information Management System
 - **BDSG** - Bundesdatenschutzgesetz
 
----
-
 **Genehmigt durch:**  
 {{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+Datum: {{ meta-handbook.modifydate }}
 
-**Nächster Review:** {{ meta.document.next_review }} (jährlich oder anlassbezogen)
+**Nächster Review:** {{ meta-handbook.next_review }} (jährlich oder anlassbezogen)
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

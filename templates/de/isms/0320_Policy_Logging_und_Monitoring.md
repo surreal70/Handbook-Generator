@@ -1,5 +1,19 @@
 # Policy: Logging und Monitoring
 
+**Dokument-ID:** 0320
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This policy establishes the principles for logging, monitoring, and security event management.
@@ -10,27 +24,15 @@ capabilities and compliance requirements.
 ISO 27001:2022 Annex A Reference: A.8.15, A.8.16
 -->
 
-**Dokument-ID:** 0320  
-**Dokumenttyp:** Policy (abstrakt)  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.8.15, A.8.16 (inkl. Amendment 1:2024)  
-**Owner:** {{ meta.ciso.name }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
-
----
-
 ## 1. Zweck
 
-Diese Policy definiert die Grundsätze für Logging, Monitoring und Security Event Management der **{{ meta.organization.name }}**. Sie stellt sicher, dass sicherheitsrelevante Ereignisse erfasst, überwacht und analysiert werden, um Sicherheitsvorfälle zu erkennen, zu untersuchen und darauf zu reagieren.
+Diese Policy definiert die Grundsätze für Logging, Monitoring und Security Event Management der **{{ meta-organisation.name }}**. Sie stellt sicher, dass sicherheitsrelevante Ereignisse erfasst, überwacht und analysiert werden, um Sicherheitsvorfälle zu erkennen, zu untersuchen und darauf zu reagieren.
 
 ## 2. Geltungsbereich
 
 Diese Policy gilt für:
 
-- **Organisationseinheiten:** Alle Abteilungen und Standorte der {{ meta.organization.name }}
+- **Organisationseinheiten:** Alle Abteilungen und Standorte der {{ meta-organisation.name }}
 - **Systeme:** Alle IT-Systeme, Anwendungen, Netzwerkkomponenten, Sicherheitssysteme
 - **Log-Quellen:** Server, Workstations, Netzwerkgeräte, Firewalls, IDS/IPS, Anwendungen, Datenbanken
 - **Monitoring-Bereiche:** Sicherheit, Performance, Verfügbarkeit, Compliance
@@ -190,18 +192,9 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **DSGVO (EU 2016/679)** - Datenschutz-Grundverordnung
 - **BSI IT-Grundschutz** - Baustein OPS.1.1.5 Protokollierung
 
----
-
 **Genehmigt durch:**  
 {{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+Datum: {{ meta-handbook.modifydate }}
 
-**Nächster Review:** {{ meta.document.next_review }} (jährlich oder anlassbezogen)
+**Nächster Review:** {{ meta-handbook.next_review }} (jährlich oder anlassbezogen)
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

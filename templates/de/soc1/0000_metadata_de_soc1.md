@@ -1,43 +1,34 @@
+# SOC1 Handbuch - Metadaten
+
+**Dokument-ID:** 0000  
+**Datum:** 2026-02-17  
+**Owner:** [TODO]  
+**Revision:** 0  
+**Status:** Draft  
+**Klassifizierung:** Internal  
+**Letzte Aktualisierung:** 2026-02-17  
+**Template-Version:** 1.0  
+
 ---
-title: "SOC 1 / SSAE 18 Handbuch"
-author: "{{ source.author }}"
-version: "1.0"
-date: "{{ source.date }}"
-organization: "{{ source.organization_name }}"
-classification: "Internal"
+
+## Handbuch-Informationen
+
+**Handbuch-Titel:** SOC1 Handbook  
+**Handbuch-Short:** SOC1  
+**Organisation:** [TODO]  
+**Autor:** [TODO]  
+**Geltungsbereich:** [TODO]  
+**Gültig ab:** [TODO]  
+**Nächste Überprüfung:** [TODO]  
+
 ---
 
-# Metadaten
+## Dokumentenzweck
 
-Diese Datei enthält Metadaten für das SOC 1 / SSAE 18 Handbuch.
+Dieses Dokument enthält die Metadaten für das SOC1 Handbuch.
 
-## Dokumentinformationen
+## Änderungshistorie
 
-- **Titel**: SOC 1 / SSAE 18 Handbuch
-- **Autor**: {{ source.author }}
-- **Version**: 1.0
-- **Datum**: {{ source.date }}
-- **Organisation**: {{ source.organization_name }}
-- **Klassifizierung**: Internal
-
-## Zweck
-
-Dieses Handbuch dokumentiert die Kontrollen und Prozesse der Serviceorganisation, die für die Finanzberichterstattung der Nutzerorganisationen relevant sind, gemäß SSAE 18 (Statement on Standards for Attestation Engagements No. 18) und SOC 1 Type II Anforderungen.
-
-## Geltungsbereich
-
-Das Handbuch deckt alle Aspekte der internen Kontrollen ab, die für SOC 1 Berichte relevant sind, einschließlich:
-
-- Kontrollumgebung
-- Risikobewertung
-- Kontrollaktivitäten
-- Information und Kommunikation
-- Überwachungsaktivitäten
-
-## Zielgruppe
-
-- Wirtschaftsprüfer
-- Compliance-Beauftragte
-- IT-Auditoren
-- Management der Serviceorganisation
-- Nutzerorganisationen
+| Version | Datum | Autor | Änderung |
+|---------|-------|-------|----------|
+| 0 | 2026-02-17 | [TODO] | Initiale Version |

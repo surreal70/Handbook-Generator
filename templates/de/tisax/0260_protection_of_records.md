@@ -1,17 +1,28 @@
----
+
 Document-ID: tisax-0540
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Schutz von Aufzeichnungen
 
+**Dokument-ID:** [FRAMEWORK]-0260
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt den Schutz von Aufzeichnungen bei {{ source.organization_name }}.
+Dieses Dokument beschreibt den Schutz von Aufzeichnungen bei [TODO].
 
 ## Aufzeichnungsarten
 
@@ -26,8 +37,8 @@ Dieses Dokument beschreibt den Schutz von Aufzeichnungen bei {{ source.organizat
 
 | Dokumenttyp | Aufbewahrungsfrist | Rechtsgrundlage |
 |-------------|-------------------|-----------------|
-| {{ source.doc_type_1 }} | {{ source.doc_retention_1 }} | {{ source.doc_legal_1 }} |
-| {{ source.doc_type_2 }} | {{ source.doc_retention_2 }} | {{ source.doc_legal_2 }} |
+| [TODO] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [TODO] |
 
 ## Schutzmaßnahmen
 
@@ -49,12 +60,3 @@ Dieses Dokument beschreibt den Schutz von Aufzeichnungen bei {{ source.organizat
 
 <!-- Hinweis: Beachten Sie gesetzliche Aufbewahrungsfristen -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

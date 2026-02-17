@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-31000-0120
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Integration des Risikomanagements
+
+**Dokument-ID:** [FRAMEWORK]-0120
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -16,7 +28,7 @@ Dieses Dokument beschreibt die Integration des Risikomanagements in die Organisa
 ## Geltungsbereich
 
 Dieses Dokument gilt für:
-- {{ meta.organization }}
+- {{ meta-organisation.name }}
 - Alle Organisationsebenen und Funktionen
 - Geschäftsprozesse und Projekte
 - Entscheidungsfindungsprozesse
@@ -181,17 +193,3 @@ Risikomanagement ist am effektivsten, wenn es integraler Bestandteil aller Organ
 - 0110_leadership_commitment.md
 - 0130_framework_design.md
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |
-
-<!-- 
-Autor-Hinweise: 
-- Passen Sie die Integration an Ihre Organisationsstruktur an
-- Stellen Sie sicher, dass Risikomanagement nicht als separate Aktivität gesehen wird
-- Fördern Sie Risikobewusstsein auf allen Ebenen
--->

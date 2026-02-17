@@ -1,11 +1,16 @@
 # Nonconformity and Corrective Action
 
-**Document-ID:** 0660  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0660
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -17,7 +22,7 @@ Reference: ISO 9001:2015, Clause 10.2
 
 ## Purpose
 
-This document defines how {{ meta.organization }} deals with nonconformities and implements corrective actions to prevent recurrence.
+This document defines how {{ meta-organisation.name }} deals with nonconformities and implements corrective actions to prevent recurrence.
 
 ## Reaction to Nonconformity (10.2.1)
 
@@ -64,7 +69,7 @@ This document defines how {{ meta.organization }} deals with nonconformities and
 
 ### Analysis Methods
 
-**{{ meta.organization }} uses:**
+**{{ meta-organisation.name }} uses:**
 - 5-Why Method
 - Ishikawa Diagram (Fishbone Diagram)
 - Failure-Cause Analysis
@@ -146,7 +151,7 @@ This document defines how {{ meta.organization }} deals with nonconformities and
 
 ### Monitoring
 
-**{{ meta.organization }} monitors:**
+**{{ meta-organisation.name }} monitors:**
 - Progress of implementation
 - Compliance with deadlines
 - Availability of resources
@@ -205,7 +210,7 @@ This document defines how {{ meta.organization }} deals with nonconformities and
 
 ### System Changes
 
-**If necessary, {{ meta.organization }} changes:**
+**If necessary, {{ meta-organisation.name }} changes:**
 - Processes
 - Procedures
 - Work instructions
@@ -226,7 +231,7 @@ This document defines how {{ meta.organization }} deals with nonconformities and
 
 ### Required Records
 
-**{{ meta.organization }} retains documented information on:**
+**{{ meta-organisation.name }} retains documented information on:**
 - Nature of nonconformities
 - Actions taken
 - Results of corrective actions
@@ -325,8 +330,6 @@ This document defines how {{ meta.organization }} deals with nonconformities and
 - Implementing actions
 - Complying with changed processes
 
----
-
 **Next Steps:**
 1. Establish NC reporting process
 2. Train employees in root cause analysis
@@ -335,10 +338,3 @@ This document defines how {{ meta.organization }} deals with nonconformities and
 5. Monitor effectiveness of actions
 6. Evaluate NCs regularly
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

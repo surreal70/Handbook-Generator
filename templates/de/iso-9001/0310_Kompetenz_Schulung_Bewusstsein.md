@@ -1,11 +1,16 @@
 # Kompetenz, Schulung und Bewusstsein
 
-**Dokument-ID:** 0310  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0310
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -19,7 +24,7 @@ Referenz: ISO 9001:2015, Kapitel 7.2 und 7.3
 
 ## Zweck
 
-Dieses Dokument definiert, wie {{ meta.organization }} Kompetenz von Mitarbeitern sicherstellt und Bewusstsein für das Qualitätsmanagementsystem fördert, gemäß ISO 9001:2015 Kapitel 7.2 und 7.3.
+Dieses Dokument definiert, wie {{ meta-organisation.name }} Kompetenz von Mitarbeitern sicherstellt und Bewusstsein für das Qualitätsmanagementsystem fördert, gemäß ISO 9001:2015 Kapitel 7.2 und 7.3.
 
 ## Kompetenzmanagement (7.2)
 
@@ -217,8 +222,6 @@ Dieses Dokument definiert, wie {{ meta.organization }} Kompetenz von Mitarbeiter
 - Durchführung von QMS-Schulungen
 - Überwachung der Gesamtschulungswirksamkeit
 
----
-
 **Nächste Schritte:**
 1. Definiere Kompetenzanforderungen für alle Rollen
 2. Bewerte aktuelle Kompetenzniveaus
@@ -228,10 +231,3 @@ Dieses Dokument definiert, wie {{ meta.organization }} Kompetenz von Mitarbeiter
 6. Pflege Kompetenz- und Schulungsunterlagen
 7. Fördere laufendes QMS-Bewusstsein
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

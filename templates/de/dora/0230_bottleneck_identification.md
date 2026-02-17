@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0230
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Bottleneck-Identifikation
+
+**Dokument-ID:** [FRAMEWORK]-0230
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -22,8 +33,8 @@ Dieses Dokument beschreibt Methoden zur Identifikation und Analyse von Bottlenec
 
 ## Organisationsinformationen
 
-- **Organisation**: {{ source.organization_name }}
-- **Analyse-Verantwortlicher**: {{ source.bottleneck_analysis_owner }}
+- **Organisation**: [TODO]
+- **Analyse-Verantwortlicher**: [TODO]
 
 ## Bottleneck-Analyse-Methoden
 
@@ -204,10 +215,3 @@ Low Impact, High Effort → P4 (Vermeiden)
 
 <!-- Hinweis: Bottleneck-Elimination ist kontinuierlicher Prozess -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |

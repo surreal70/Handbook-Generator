@@ -1,11 +1,16 @@
 # DSFA Template - Vorlage
 
-**Dokument-ID:** 0410  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0410
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -31,8 +36,6 @@ Referenz: DSGVO Art. 35 (Datenschutz-Folgenabschätzung)
 **Erstellt am:** [TODO: Datum]  
 **Erstellt von:** [TODO: Name, Rolle]  
 **Status:** Entwurf / In Prüfung / Genehmigt
-
----
 
 ## 1. Beschreibung der Verarbeitung
 
@@ -102,8 +105,6 @@ Referenz: DSGVO Art. 35 (Datenschutz-Folgenabschätzung)
 [Datenquelle] → [Verarbeitungssystem] → [Speicherung] → [Empfänger]
 ```
 
----
-
 ## 2. Notwendigkeit und Verhältnismäßigkeit
 
 ### 2.1 Rechtsgrundlage
@@ -151,8 +152,6 @@ Referenz: DSGVO Art. 35 (Datenschutz-Folgenabschätzung)
 **Abwägung:**
 [TODO: Überwiegen die Interessen des Verantwortlichen oder der Betroffenen?]
 
----
-
 ## 3. Risikobewertung
 
 ### 3.1 Risikoidentifikation
@@ -187,13 +186,9 @@ Referenz: DSGVO Art. 35 (Datenschutz-Folgenabschätzung)
 
 **Risikostufe:** [TODO: Berechne aus Wahrscheinlichkeit × Schwere]
 
----
-
 #### Risiko 2: [TODO: Name des Risikos]
 
 [TODO: Wiederhole Struktur für weitere Risiken]
-
----
 
 ### 3.2 Risikobewertungsmatrix
 
@@ -203,8 +198,6 @@ Referenz: DSGVO Art. 35 (Datenschutz-Folgenabschätzung)
 | Risiko 2 | [TODO] | [TODO] | [TODO] |
 
 **Gesamtrisiko:** [TODO: Niedrig / Mittel / Hoch / Sehr hoch]
-
----
 
 ## 4. Maßnahmen zur Risikominimierung
 
@@ -224,13 +217,9 @@ Referenz: DSGVO Art. 35 (Datenschutz-Folgenabschätzung)
 
 **Frist:** [TODO: Datum]
 
----
-
 #### Maßnahme 2: [TODO: Name der Maßnahme]
 
 [TODO: Wiederhole Struktur für weitere Maßnahmen]
-
----
 
 ### 4.2 Organisatorische Maßnahmen
 
@@ -247,8 +236,6 @@ Referenz: DSGVO Art. 35 (Datenschutz-Folgenabschätzung)
 **Verantwortlich:** [TODO: Rolle/Name]
 
 **Frist:** [TODO: Datum]
-
----
 
 ### 4.3 Datenschutz durch Technikgestaltung (Privacy by Design)
 
@@ -273,8 +260,6 @@ Referenz: DSGVO Art. 35 (Datenschutz-Folgenabschätzung)
 **Beschreibung:**
 [TODO: Wie wurden Privacy by Default Prinzipien umgesetzt?]
 
----
-
 ## 5. Restrisikobewertung
 
 ### 5.1 Risiken nach Maßnahmen
@@ -293,8 +278,6 @@ Referenz: DSGVO Art. 35 (Datenschutz-Folgenabschätzung)
 **Begründung:**
 [TODO: Warum ist das Restrisiko akzeptabel oder nicht akzeptabel?]
 
----
-
 ## 6. Konsultation des Datenschutzbeauftragten
 
 **Datenschutzbeauftragter:** [TODO: Name]
@@ -308,8 +291,6 @@ Referenz: DSGVO Art. 35 (Datenschutz-Folgenabschätzung)
 [TODO: Wie wurden die Empfehlungen umgesetzt?]
 
 **Unterschrift Datenschutzbeauftragter:** ___________________
-
----
 
 ## 7. Einholung der Ansichten Betroffener
 
@@ -326,8 +307,6 @@ Referenz: DSGVO Art. 35 (Datenschutz-Folgenabschätzung)
 
 **Berücksichtigung:**
 [TODO: Wie wurden die Ansichten berücksichtigt?]
-
----
 
 ## 8. Vorherige Konsultation der Aufsichtsbehörde
 
@@ -346,8 +325,6 @@ Referenz: DSGVO Art. 35 (Datenschutz-Folgenabschätzung)
 **Umsetzung der Empfehlungen:**
 [TODO: Wie wurden die Empfehlungen umgesetzt?]
 
----
-
 ## 9. Genehmigung
 
 **Verantwortlicher:** [TODO: Name, Rolle]
@@ -360,8 +337,6 @@ Referenz: DSGVO Art. 35 (Datenschutz-Folgenabschätzung)
 [TODO: Liste der Auflagen]
 
 **Unterschrift:** ___________________
-
----
 
 ## 10. Überprüfung und Aktualisierung
 
@@ -381,8 +356,6 @@ Referenz: DSGVO Art. 35 (Datenschutz-Folgenabschätzung)
 | 1.0 | [TODO] | Erstversion | [TODO] |
 | 1.1 | [TODO] | [TODO: Beschreibung] | [TODO] |
 
----
-
 ## Anhänge
 
 - [ ] Datenfluss-Diagramme
@@ -391,14 +364,5 @@ Referenz: DSGVO Art. 35 (Datenschutz-Folgenabschätzung)
 - [ ] Einwilligungserklärungen
 - [ ] Weitere relevante Dokumente
 
----
-
 **Hinweis:** Diese DSFA ist ein lebendes Dokument und muss bei Änderungen der Verarbeitung oder neuen Erkenntnissen über Risiken aktualisiert werden.
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

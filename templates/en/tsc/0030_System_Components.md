@@ -1,13 +1,16 @@
 # System Components
 
-**Document ID:** TSC-0030  
-**Organization:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Approved by:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0030
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -67,7 +70,7 @@ This document describes the five main components of the service system: Infrastr
 **Management:**
 - CEO: [TODO: Name]
 - CTO: [TODO: Name]
-- CISO: {{ meta.roles.ciso.name }}
+- CISO: {{ meta-organisation-roles.role_CISO }}
 
 **Teams:**
 - Engineering: [TODO: #] employees
@@ -118,10 +121,3 @@ This document describes the five main components of the service system: Infrastr
 | Confidential | Sensitive data |
 | Restricted | Highly sensitive |
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |

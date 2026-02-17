@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0150
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # User Access Management
+
+**Document-ID:** [FRAMEWORK]-0150
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -15,7 +26,7 @@ This document describes the processes and procedures for managing user access ac
 
 ## Scope
 
-This document applies to all user accounts and access at {{ source.organization_name }}.
+This document applies to all user accounts and access at [TODO].
 
 ## User Lifecycle
 
@@ -47,9 +58,9 @@ This document applies to all user accounts and access at {{ source.organization_
 - Guest accounts
 
 ### Account Policies
-- Naming conventions: {{ source.username_format }}
+- Naming conventions: [TODO]
 - Password policies (see Access Control Policy)
-- Account lockout after {{ source.password_lockout_attempts }} failed attempts
+- Account lockout after [TODO] failed attempts
 
 ## Permission Management
 
@@ -123,12 +134,12 @@ This document applies to all user accounts and access at {{ source.organization_
 
 ### Detection
 Accounts are considered inactive after:
-- {{ source.inactive_account_days }} days without login
+- [TODO] days without login
 
 ### Actions
-- Warning: {{ source.inactive_warning_days }} days before deactivation
+- Warning: [TODO] days before deactivation
 - Deactivation: Automatic
-- Deletion: After {{ source.inactive_deletion_days }} days
+- Deletion: After [TODO] days
 
 ## Emergency Access
 
@@ -167,19 +178,11 @@ Accounts are considered inactive after:
 
 ## Metrics
 
-{{ source.organization_name }} measures:
+[TODO] measures:
 - Number of active user accounts
 - Average time to grant access (Target: <4 hours)
 - Number of overdue access reviews (Target: 0)
 - Number of inactive accounts (Target: <5%)
 - Number of access violations (Target: 0)
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

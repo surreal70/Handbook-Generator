@@ -1,11 +1,16 @@
 # Requirements Rationale
 
-**Document-ID:** 0420  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** Internal / Confidential / Strictly Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0420
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -274,8 +279,6 @@ The security requirements are appropriate:
 - ISO/IEC 15408-2:2022 - Security functional requirements
 - ISO/IEC 15408-3:2022 - Security assurance requirements
 
----
-
 **Next Steps:**
 1. Complete all [TODO] placeholders
 2. Create complete mapping tables
@@ -283,10 +286,3 @@ The security requirements are appropriate:
 4. Conduct peer review of rationale
 5. Update when objectives or requirements change
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

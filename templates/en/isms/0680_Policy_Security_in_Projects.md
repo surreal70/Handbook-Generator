@@ -1,5 +1,19 @@
 # Policy: Security in Projects
 
+**Document-ID:** [FRAMEWORK]-0680
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This policy establishes requirements for integrating security into project management.
@@ -16,20 +30,18 @@ ISO 27001:2022 Annex A Reference: A.5.8, A.8.25, A.8.32
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** {{ meta-handbook.modifydate }}  
+**Next Review:** {{ meta-handbook.next_review }}
 
 ## 1. Purpose
 
-This policy defines the requirements for integrating information security into projects of **{{ meta.organization.name }}**. It ensures that security requirements are considered throughout the entire project lifecycle.
+This policy defines the requirements for integrating information security into projects of **{{ meta-organisation.name }}**. It ensures that security requirements are considered throughout the entire project lifecycle.
 
 ## 2. Scope
 
 This policy applies to:
 
-- **Organizational Units:** All departments and locations of {{ meta.organization.name }}
+- **Organizational Units:** All departments and locations of {{ meta-organisation.name }}
 - **Projects:** All IT projects, infrastructure projects, software development projects
 - **Project Phases:** Initiation, planning, implementation, closure
 - **Project Types:** Internal projects, external projects, partner projects
@@ -180,18 +192,9 @@ Exceptions to this policy are only permitted in justified exceptional cases:
 - **BSIMM** - Building Security In Maturity Model
 - **ISO/IEC 27034** - Application Security
 
----
-
 **Approved by:**  
 {{ meta.management.ceo }}, Executive Management  
-Date: {{ meta.document.approval_date }}
+Date: {{ meta-handbook.modifydate }}
 
-**Next Review:** {{ meta.document.next_review }} (annually or as needed)
+**Next Review:** {{ meta-handbook.next_review }} (annually or as needed)
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

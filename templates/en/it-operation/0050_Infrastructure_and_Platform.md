@@ -1,13 +1,27 @@
 # Infrastructure and Platform
 
+**Document-ID:** [FRAMEWORK]-0050
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Overview
 
 ### Infrastructure Landscape
 
 This chapter describes the physical and virtual infrastructure on which IT services are operated.
 
-**Organization:** {{ meta.organization.name }}  
-**Location:** {{ meta.organization.city }}, {{ meta.organization.country }}
+**Organization:** {{ meta-organisation.name }}  
+**Location:** {{ meta-organisation.city }}, {{ meta-organisation.country }}
 
 **Brief Description:**
 [TODO: Describe the infrastructure landscape in 2-3 sentences. What are the main components? Where is the infrastructure operated?]
@@ -135,7 +149,7 @@ This chapter describes the physical and virtual infrastructure on which IT servi
 
 **IPAM (IP Address Management):**
 - **Tool:** [TODO: e.g., NetBox, phpIPAM]
-- **Responsible:** {{ meta.it_operations_manager.name }}
+- **Responsible:** {{ meta-organisation-roles.role_it_operations_manager.name }}
 
 ### Firewall and Security
 
@@ -147,7 +161,7 @@ This chapter describes the physical and virtual infrastructure on which IT servi
 **Firewall Rules:**
 - **Number of Rules:** [TODO: e.g., 500]
 - **Review Cycle:** [TODO: e.g., Quarterly]
-- **Responsible:** {{ meta.ciso.name }}
+- **Responsible:** {{ meta-organisation-roles.role_ciso.name }}
 
 ### Load Balancer
 
@@ -444,7 +458,7 @@ This chapter describes the physical and virtual infrastructure on which IT servi
 
 | Phase | Duration | Activities | Responsible |
 |---|---|---|---|
-| **Procurement** | [TODO: 4-8 Weeks] | [TODO: Requirements, Ordering, Delivery] | {{ meta.it_operations_manager.name }} |
+| **Procurement** | [TODO: 4-8 Weeks] | [TODO: Requirements, Ordering, Delivery] | {{ meta-organisation-roles.role_it_operations_manager.name }} |
 | **Commissioning** | [TODO: 1-2 Weeks] | [TODO: Installation, Configuration, Testing] | [TODO: Team] |
 | **Operation** | [TODO: 5 Years] | [TODO: Monitoring, Maintenance, Support] | [TODO: Team] |
 | **Refresh** | [TODO: 1-2 Weeks] | [TODO: Migration, Replacement] | [TODO: Team] |
@@ -491,7 +505,7 @@ This chapter describes the physical and virtual infrastructure on which IT servi
 
 | Role | Responsibility | Person | Contact |
 |---|---|---|---|
-| **Infrastructure Manager** | Overall Infrastructure Responsibility | {{ meta.it_operations_manager.name }} | {{ meta.it_operations_manager.email }} |
+| **Infrastructure Manager** | Overall Infrastructure Responsibility | {{ meta-organisation-roles.role_it_operations_manager.name }} | {{ meta-organisation-roles.role_it_operations_manager.email }} |
 | **Network Administrator** | Network Infrastructure | [TODO: Name] | [TODO: Email] |
 | **Storage Administrator** | Storage Systems | [TODO: Name] | [TODO: Email] |
 | **Virtualization Admin** | Virtualization | [TODO: Name] | [TODO: Email] |
@@ -501,25 +515,16 @@ This chapter describes the physical and virtual infrastructure on which IT servi
 ## Contacts
 
 **For Infrastructure Questions:**
-- **IT Operations Manager:** {{ meta.it_operations_manager.name }} ({{ meta.it_operations_manager.email }})
-- **CIO:** {{ meta.cio.name }} ({{ meta.cio.email }})
+- **IT Operations Manager:** {{ meta-organisation-roles.role_it_operations_manager.name }} ({{ meta-organisation-roles.role_it_operations_manager.email }})
+- **CIO:** {{ meta-organisation-roles.role_cio.name }} ({{ meta-organisation-roles.role_cio.email }})
 
 **Emergency Contacts:**
 - **Data Center:** [TODO: Phone 24/7]
 - **Power Provider:** [TODO: Phone]
 - **Facility Management:** [TODO: Phone]
 
----
+**Document Owner:** {{ meta-handbook.owner }}  
+**Approved by:** {{ meta-handbook.approver }}  
+**Version:** {{ meta-handbook.revision }}  
+**Organization:** {{ meta-organisation.name }}
 
-**Document Owner:** {{ meta.document.owner }}  
-**Approved by:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Organization:** {{ meta.organization.name }}
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

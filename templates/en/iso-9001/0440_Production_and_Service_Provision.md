@@ -1,11 +1,16 @@
 # Production and Service Provision
 
-**Document-ID:** 0440  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0440
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -17,13 +22,13 @@ Reference: ISO 9001:2015, Clause 8.5
 
 ## Purpose
 
-This document defines how {{ meta.organization }} implements production and service provision under controlled conditions.
+This document defines how {{ meta-organisation.name }} implements production and service provision under controlled conditions.
 
 ## Controlled Conditions (8.5.1)
 
 ### Control Requirements
 
-**{{ meta.organization }} implements production and service provision under controlled conditions through:**
+**{{ meta-organisation.name }} implements production and service provision under controlled conditions through:**
 - Availability of documented information on product characteristics
 - Availability of work instructions
 - Use of suitable equipment
@@ -54,7 +59,7 @@ This document defines how {{ meta.organization }} implements production and serv
 
 ### Identification
 
-**{{ meta.organization }} identifies outputs by:**
+**{{ meta-organisation.name }} identifies outputs by:**
 - Unique marking
 - Batch numbers
 - Serial numbers
@@ -93,7 +98,7 @@ This document defines how {{ meta.organization }} implements production and serv
 
 ### Handling Customer Property
 
-**{{ meta.organization }} ensures:**
+**{{ meta-organisation.name }} ensures:**
 - Identification upon receipt
 - Verification and protection
 - Secure storage
@@ -116,7 +121,7 @@ This document defines how {{ meta.organization }} implements production and serv
 
 ### Preservation Requirements
 
-**{{ meta.organization }} preserves outputs during production and service provision:**
+**{{ meta-organisation.name }} preserves outputs during production and service provision:**
 - Identification
 - Handling
 - Contamination control
@@ -163,7 +168,7 @@ This document defines how {{ meta.organization }} implements production and serv
 
 ### Post-Delivery Activities
 
-**{{ meta.organization }} meets requirements for post-delivery activities:**
+**{{ meta-organisation.name }} meets requirements for post-delivery activities:**
 - Statutory and regulatory requirements
 - Potential undesired consequences of products/services
 - Nature, use and intended lifetime
@@ -210,7 +215,7 @@ This document defines how {{ meta.organization }} implements production and serv
 
 ### Change Management
 
-**{{ meta.organization }} reviews and controls changes for production or service provision:**
+**{{ meta-organisation.name }} reviews and controls changes for production or service provision:**
 - Changes are documented
 - Impacts are assessed
 - Changes are approved
@@ -233,7 +238,7 @@ This document defines how {{ meta.organization }} implements production and serv
 
 ### Release Process
 
-**{{ meta.organization }} implements planned arrangements to verify requirements are met:**
+**{{ meta-organisation.name }} implements planned arrangements to verify requirements are met:**
 - Release only after satisfactory completion
 - Documented information on release is retained
 - Traceability to persons authorizing release
@@ -264,7 +269,7 @@ This document defines how {{ meta.organization }} implements production and serv
 
 ### Identification and Control
 
-**{{ meta.organization }} ensures nonconforming outputs:**
+**{{ meta-organisation.name }} ensures nonconforming outputs:**
 - Are identified and controlled
 - Are not used or delivered unintentionally
 - Are marked
@@ -311,8 +316,6 @@ This document defines how {{ meta.organization }} implements production and serv
 - Handling customer property
 - Shipping and delivery
 
----
-
 **Next Steps:**
 1. Establish controlled conditions
 2. Implement identification and traceability system
@@ -320,10 +323,3 @@ This document defines how {{ meta.organization }} implements production and serv
 4. Establish release process
 5. Implement non-conformity management
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

@@ -1,11 +1,16 @@
 # Accuracy
 
-**Document-ID:** 0130  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0130
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -23,7 +28,7 @@ Reference: GDPR Art. 5(1)(d) (Accuracy)
 
 ## Purpose
 
-This document describes the implementation of the principle of accuracy in {{ meta.organization }}. Personal data must be accurate and up to date.
+This document describes the implementation of the principle of accuracy in {{ meta-organisation.name }}. Personal data must be accurate and up to date.
 
 ## Principle according to Art. 5(1)(d) GDPR
 
@@ -220,8 +225,6 @@ Personal data must be accurate and, where necessary, kept up to date; every reas
 | Delayed rectification | Long processing time | Process optimization |
 | Missing notification | Recipients not informed | Notification process |
 
----
-
 **Next Steps:**
 1. Implement input validation and plausibility checks
 2. Establish processes for regular data updates
@@ -229,10 +232,3 @@ Personal data must be accurate and, where necessary, kept up to date; every reas
 4. Implement notification process for recipients
 5. Conduct regular data quality controls
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

@@ -1,17 +1,28 @@
----
+
 Document-ID: coso-0030
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Kontrollumgebung
 
+**Dokument-ID:** [FRAMEWORK]-0030
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt die Kontrollumgebung von {{ source.organization_name }} als Grundlage für alle anderen Komponenten der internen Kontrolle.
+Dieses Dokument beschreibt die Kontrollumgebung von [TODO] als Grundlage für alle anderen Komponenten der internen Kontrolle.
 
 ## Geltungsbereich
 
@@ -26,125 +37,116 @@ Die Kontrollumgebung umfasst:
 
 ### Verhaltenskodex
 
-**Dokument**: {{ source.code_of_conduct }}
+**Dokument**: [TODO]
 
 **Kernwerte**:
-1. {{ source.core_value_1 }}
-2. {{ source.core_value_2 }}
-3. {{ source.core_value_3 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
 
 ### Ethikrichtlinien
 
-{{ source.ethics_policies }}
+[TODO]
 
 ### Kommunikation und Training
 
-**Schulungsprogramm**: {{ source.ethics_training }}
-**Frequenz**: {{ source.training_frequency }}
+**Schulungsprogramm**: [TODO]
+**Frequenz**: [TODO]
 
 ### Durchsetzung
 
-{{ source.enforcement_mechanisms }}
+[TODO]
 
 ## Prinzip 2: Unabhängigkeit und Aufsicht des Boards
 
 ### Board-Struktur
 
-**Zusammensetzung**: {{ source.board_composition }}
-**Unabhängige Mitglieder**: {{ source.independent_members }}
+**Zusammensetzung**: [TODO]
+**Unabhängige Mitglieder**: [TODO]
 
 ### Aufsichtsfunktionen
 
-**Audit Committee**: {{ source.audit_committee }}
-**Risk Committee**: {{ source.risk_committee }}
-**Compliance Committee**: {{ source.compliance_committee }}
+**Audit Committee**: [TODO]
+**Risk Committee**: [TODO]
+**Compliance Committee**: [TODO]
 
 ### Board-Aktivitäten
 
-{{ source.board_activities }}
+[TODO]
 
 ## Prinzip 3: Organisationsstruktur und Verantwortlichkeiten
 
 ### Organisationsstruktur
 
-{{ source.organizational_structure }}
+[TODO]
 
 ### Berichtslinien
 
-{{ source.reporting_lines }}
+[TODO]
 
 ### Verantwortlichkeiten
 
-**Geschäftsführung**: {{ source.management_responsibilities }}
-**Funktionsleiter**: {{ source.function_head_responsibilities }}
-**Mitarbeiter**: {{ source.employee_responsibilities }}
+**Geschäftsführung**: [TODO]
+**Funktionsleiter**: [TODO]
+**Mitarbeiter**: [TODO]
 
 ### Delegation von Befugnissen
 
-{{ source.authority_delegation }}
+[TODO]
 
 ## Prinzip 4: Kompetenz
 
 ### Kompetenzanforderungen
 
-{{ source.competency_requirements }}
+[TODO]
 
 ### Rekrutierung und Auswahl
 
-{{ source.recruitment_process }}
+[TODO]
 
 ### Schulung und Entwicklung
 
-**Schulungsprogramme**: {{ source.training_programs }}
-**Entwicklungspläne**: {{ source.development_plans }}
+**Schulungsprogramme**: [TODO]
+**Entwicklungspläne**: [TODO]
 
 ### Leistungsbeurteilung
 
-{{ source.performance_evaluation }}
+[TODO]
 
 ## Prinzip 5: Rechenschaftspflicht
 
 ### Verantwortlichkeitsmatrix
 
-{{ source.accountability_matrix }}
+[TODO]
 
 ### Leistungsmessung
 
-{{ source.performance_measurement }}
+[TODO]
 
 ### Konsequenzen
 
-**Bei Zielerreichung**: {{ source.achievement_consequences }}
-**Bei Nichterreichung**: {{ source.non_achievement_consequences }}
+**Bei Zielerreichung**: [TODO]
+**Bei Nichterreichung**: [TODO]
 
 ## Tone at the Top
 
 ### Management-Philosophie
 
-{{ source.management_philosophy }}
+[TODO]
 
 ### Führungsstil
 
-{{ source.leadership_style }}
+[TODO]
 
 ### Vorbildfunktion
 
-{{ source.role_modeling }}
+[TODO]
 
 ## Referenzen
 
 - COSO Internal Control Framework - Control Environment
-- Verhaltenskodex {{ source.organization_name }}
+- Verhaltenskodex [TODO]
 - Organisationshandbuch
 
 <!-- Hinweise für Autoren: Die Kontrollumgebung ist die Grundlage - investieren Sie Zeit in deren Dokumentation -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

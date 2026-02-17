@@ -1,14 +1,16 @@
 # Guideline: ICT Disaster Recovery - Interfaces to BCM
 
-**Document ID:** 0450  
-**Document Type:** Guideline (detailed)  
-**Related Policy:** 0440_Policy_Business_Continuity_ICT_Readiness.md  
-**Standard Reference:** ISO/IEC 27001:2022 Annex A.5.29, A.5.30  
-**Owner:** {{ meta.it_operations.manager }}  
-**Version:** 1.0  
-**Status:** Approved  
-**Classification:** Confidential  
-**Last Updated:** {{ meta.document.date }}
+**Document-ID:** [FRAMEWORK]-0450
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -19,7 +21,7 @@ This guideline implements the `0440_Policy_Business_Continuity_ICT_Readiness.md`
 - Interfaces to Business Continuity Management (BCM)
 - ICT readiness for emergency situations
 
-**Scope:** All IT systems and services at **{{ meta.organization.name }}**
+**Scope:** All IT systems and services at **{{ meta-organisation.name }}**
 
 ## 2. ICT Disaster Recovery Strategy
 
@@ -213,15 +215,6 @@ This guideline implements the `0440_Policy_Business_Continuity_ICT_Readiness.md`
 - **ISO/IEC 27001:2022 Annex A.5.30** - ICT readiness for business continuity
 - **ISO 22301** - Business Continuity Management
 
----
-
 **Approved by:** {{ meta.ciso.name }}, CISO  
-**Next Review:** {{ meta.document.next_review }}
+**Next Review:** {{ meta-handbook.next_review }}
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

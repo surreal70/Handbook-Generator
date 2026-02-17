@@ -1,5 +1,19 @@
 # Guideline: Key Management and Encryption
 
+**Document-ID:** [FRAMEWORK]-0270
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This guideline provides detailed implementation guidance for cryptographic key management
@@ -14,10 +28,8 @@ and encryption controls. Customize based on your organization's cryptographic re
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Confidential  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** {{ meta-handbook.modifydate }}  
+**Next Review:** {{ meta-handbook.next_review }}
 
 ## 1. Purpose and Scope
 
@@ -27,7 +39,7 @@ This guideline implements the `0260_Policy_Cryptography_and_Key_Management.md` a
 - Certificate management
 - Encryption of data at rest and in transit
 
-**Scope:** All cryptographic systems at **{{ meta.organization.name }}**
+**Scope:** All cryptographic systems at **{{ meta-organisation.name }}**
 
 ## 2. Cryptographic Standards
 
@@ -350,18 +362,9 @@ ECDHE-RSA-AES128-GCM-SHA256
 - **NIST SP 800-52** - TLS Guidelines
 - **BSI TR-02102** - Cryptographic Procedures
 
----
-
 **Approved by:**  
 {{ meta.ciso.name }}, CISO  
-Date: {{ meta.document.approval_date }}
+Date: {{ meta-handbook.modifydate }}
 
-**Next Review:** {{ meta.document.next_review }}
+**Next Review:** {{ meta-handbook.next_review }}
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

@@ -1,0 +1,135 @@
+# Handbook-specific metadata
+# Handbook: it-operation
+# This file contains metadata specific to this handbook
+
+# Author of the handbook
+author: "[TODO]"
+
+# Classification level (e.g., Internal, Confidential, Public)
+classification: "[TODO]"
+
+# Status (e.g., Draft, Review, Approved, Active)
+status: "[TODO]"
+
+# Type of handbook
+type: "[TODO]"
+
+# Template set version
+templateset_version: "0.2"
+
+# Revision number (increment manually)
+revision: 0
+
+# Short name (matches directory name)
+shortname: "it-operation"
+
+# Long descriptive name
+longname: "[TODO]"
+
+# Maintainer (defaults to author if not specified)
+maintainer: "[TODO]"
+
+# Owner responsible for the handbook
+owner: "[TODO]"
+
+# Approver of the handbook
+approver: "[TODO]"
+
+# Creation date (YYYY-MM-DD)
+creationdate: "[TODO]"
+
+# Last modification date (YYYY-MM-DD)
+modifydate: "[TODO]"
+
+# Valid from date (YYYY-MM-DD)
+valid_from: "[TODO]"
+
+# Next review date (YYYY-MM-DD)
+next_review: "[TODO]"
+
+# Scope of the handbook
+scope: "[TODO]"
+
+# Framework-specific auxiliary placeholders
+auxiliary:
+  alert_email: '[TODO]'
+  artifact_repository: '[TODO]'
+  backup_cloud_provider: '[TODO]'
+  backup_cloud_region: '[TODO]'
+  backup_system: '[TODO]'
+  backup_system_docs: '[TODO]'
+  backup_system_license: '[TODO]'
+  backup_system_version: '[TODO]'
+  bsi_grundschutz_status: '[TODO]'
+  cicd_system: '[TODO]'
+  cicd_url: '[TODO]'
+  cloud_backup: '[TODO]'
+  cloud_contact: '[TODO]'
+  cloud_provider: '[TODO]'
+  cobit_status: '[TODO]'
+  collaboration_tool: '[TODO]'
+  compliance_dashboard: '[TODO]'
+  compliance_officer_email: '[TODO]'
+  compliance_scanner: '[TODO]'
+  conference_system: '[TODO]'
+  config_scanner: '[TODO]'
+  container_registry: '[TODO]'
+  container_scanner: '[TODO]'
+  data_protection_officer: '[TODO]'
+  database_replication_tech: '[TODO]'
+  date: '[TODO]'
+  diagramming_tool: '[TODO]'
+  document_management_system: '[TODO]'
+  edr_system: '[TODO]'
+  eol_register: '[TODO]'
+  exception_register: '[TODO]'
+  grc_system: '[TODO]'
+  grc_url: '[TODO]'
+  grc_version: '[TODO]'
+  hardware_contact: '[TODO]'
+  hardware_vendor: '[TODO]'
+  internal_audit_lead: '[TODO]'
+  isp_backup: '[TODO]'
+  isp_contact: '[TODO]'
+  isp_provider: '[TODO]'
+  kedb_url: '[TODO]'
+  key_management_system: '[TODO]'
+  language: '[TODO]'
+  log_analysis_tool: '[TODO]'
+  log_archive_location: '[TODO]'
+  log_collectors: '[TODO]'
+  log_indexers: '[TODO]'
+  log_ingestion_rate: '[TODO]'
+  log_retention_cold: '[TODO]'
+  log_retention_hot: '[TODO]'
+  log_search_heads: '[TODO]'
+  log_storage: '[TODO]'
+  log_storage_capacity: '[TODO]'
+  monitoring_system: '[TODO]'
+  monitoring_url: '[TODO]'
+  next_iso_audit: '[TODO]'
+  patch_dashboard: '[TODO]'
+  patch_repository: '[TODO]'
+  pci_dss_level: '[TODO]'
+  pci_dss_qsa: '[TODO]'
+  pci_dss_status: '[TODO]'
+  pentest_provider: '[TODO]'
+  processing_activities_register: '[TODO]'
+  risk_register: '[TODO]'
+  service_name: '[TODO]'
+  siem_system: '[TODO]'
+  siem_url: '[TODO]'
+  siem_version: '[TODO]'
+  sox_status: '[TODO]'
+  status_page_url: '[TODO]'
+  storage_replication_tech: '[TODO]'
+  threat_intelligence_source: '[TODO]'
+  ticketing_system: '[TODO]'
+  ticketing_system_url: '[TODO]'
+  training_system: '[TODO]'
+  version_control: '[TODO]'
+  version_control_url: '[TODO]'
+  vm_replication_tech: '[TODO]'
+  vpn_type: '[TODO]'
+  vulnerability_scanner: '[TODO]'
+  web_scanner: '[TODO]'

@@ -1,13 +1,24 @@
----
+
 Document-ID: soc1-0100
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Kontrollumgebung
+
+**Dokument-ID:** [FRAMEWORK]-0060
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -30,120 +41,120 @@ Die Kontrollumgebung bildet die Grundlage für alle anderen Komponenten der inte
 
 ### Verhaltenskodex
 
-**Dokument**: {{ source.code_of_conduct }}
+**Dokument**: [TODO]
 
 **Kernprinzipien**:
-1. {{ source.ethics_principle_1 }}
-2. {{ source.ethics_principle_2 }}
-3. {{ source.ethics_principle_3 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
 
 ### Kommunikation ethischer Standards
 
-{{ source.ethics_communication }}
+[TODO]
 
 ### Durchsetzung
 
-{{ source.ethics_enforcement }}
+[TODO]
 
 ### Interessenkonflikte
 
-{{ source.conflict_of_interest_policy }}
+[TODO]
 
 ## Aufsicht durch den Vorstand
 
 ### Vorstandsstruktur
 
-**Zusammensetzung**: {{ source.board_composition }}
-**Unabhängigkeit**: {{ source.board_independence }}
-**Expertise**: {{ source.board_expertise }}
+**Zusammensetzung**: [TODO]
+**Unabhängigkeit**: [TODO]
+**Expertise**: [TODO]
 
 ### Aufsichtsfunktionen
 
-**Strategische Aufsicht**: {{ source.board_strategic_oversight }}
-**Risiko-Aufsicht**: {{ source.board_risk_oversight }}
-**Compliance-Aufsicht**: {{ source.board_compliance_oversight }}
+**Strategische Aufsicht**: [TODO]
+**Risiko-Aufsicht**: [TODO]
+**Compliance-Aufsicht**: [TODO]
 
 ### Ausschüsse
 
-**Prüfungsausschuss**: {{ source.audit_committee }}
-**Risikoausschuss**: {{ source.risk_committee }}
-**Vergütungsausschuss**: {{ source.compensation_committee }}
+**Prüfungsausschuss**: [TODO]
+**Risikoausschuss**: [TODO]
+**Vergütungsausschuss**: [TODO]
 
 ## Organisationsstruktur
 
 ### Aufbauorganisation
 
 ```
-{{ source.organizational_chart }}
+[TODO]
 ```
 
 ### Berichtslinien
 
-{{ source.reporting_lines }}
+[TODO]
 
 ### Verantwortlichkeiten
 
-**CEO**: {{ source.ceo_responsibilities }}
-**CFO**: {{ source.cfo_responsibilities }}
-**CIO**: {{ source.cio_responsibilities }}
-**COO**: {{ source.coo_responsibilities }}
+**CEO**: [TODO]
+**CFO**: [TODO]
+**CIO**: [TODO]
+**COO**: [TODO]
 
 ### Delegation von Befugnissen
 
-{{ source.authority_delegation }}
+[TODO]
 
 ## Kompetenz und Verantwortlichkeit
 
 ### Kompetenzanforderungen
 
-**Stellenbeschreibungen**: {{ source.job_descriptions }}
-**Qualifikationsanforderungen**: {{ source.qualification_requirements }}
+**Stellenbeschreibungen**: [TODO]
+**Qualifikationsanforderungen**: [TODO]
 
 ### Leistungsmanagement
 
-**Leistungsbewertung**: {{ source.performance_evaluation }}
-**Zielvereinbarungen**: {{ source.goal_setting }}
-**Feedback-Prozesse**: {{ source.feedback_processes }}
+**Leistungsbewertung**: [TODO]
+**Zielvereinbarungen**: [TODO]
+**Feedback-Prozesse**: [TODO]
 
 ### Verantwortlichkeitsmechanismen
 
-{{ source.accountability_mechanisms }}
+[TODO]
 
 ## Personalrichtlinien
 
 ### Rekrutierung und Einstellung
 
-**Auswahlverfahren**: {{ source.recruitment_process }}
-**Hintergrundüberprüfungen**: {{ source.background_checks }}
-**Onboarding**: {{ source.onboarding_process }}
+**Auswahlverfahren**: [TODO]
+**Hintergrundüberprüfungen**: [TODO]
+**Onboarding**: [TODO]
 
 ### Schulung und Entwicklung
 
-**Einführungsschulung**: {{ source.initial_training }}
-**Fortlaufende Schulung**: {{ source.ongoing_training }}
-**Karriereentwicklung**: {{ source.career_development }}
+**Einführungsschulung**: [TODO]
+**Fortlaufende Schulung**: [TODO]
+**Karriereentwicklung**: [TODO]
 
 ### Disziplinarmaßnahmen
 
-{{ source.disciplinary_procedures }}
+[TODO]
 
 ### Beendigung des Arbeitsverhältnisses
 
-{{ source.termination_procedures }}
+[TODO]
 
 ## Management-Philosophie und Betriebsstil
 
 ### Führungskultur
 
-{{ source.leadership_culture }}
+[TODO]
 
 ### Risikobereitschaft
 
-{{ source.risk_appetite }}
+[TODO]
 
 ### Entscheidungsfindung
 
-{{ source.decision_making_process }}
+[TODO]
 
 ## Referenzen
 
@@ -152,12 +163,3 @@ Die Kontrollumgebung bildet die Grundlage für alle anderen Komponenten der inte
 
 <!-- Hinweise für Autoren: Aktualisieren Sie Organisationsstrukturen bei Änderungen -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

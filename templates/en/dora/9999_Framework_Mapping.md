@@ -1,5 +1,19 @@
 # DORA Metrics Framework Mapping
 
+**Document-ID:** [FRAMEWORK]-9999
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Overview
 
 This document maps the handbook templates to DORA Metrics and associated capabilities.
@@ -201,8 +215,3 @@ All planned templates have been successfully implemented. The DORA Framework has
 - Accelerate Book: https://itrevolution.com/product/accelerate/
 - DORA Quick Check: https://dora.dev/quickcheck/
 
-## Version History
-
-| Version | Date | Changes |
-|---------|------|---------|
-| 0.1 | {{meta.document.last_updated}} | Initial creation |

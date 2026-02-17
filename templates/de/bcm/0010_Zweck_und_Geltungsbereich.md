@@ -1,13 +1,16 @@
 # Zweck und Geltungsbereich
 
-**Dokument-ID:** BCM-0010  
-**Organisation:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** BCM-0010
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,7 +28,7 @@ Customization required:
 
 ## 1. Zweck
 
-Das Business Continuity Management System (BCMS) der {{ meta.organization.name }} dient folgenden Zwecken:
+Das Business Continuity Management System (BCMS) der {{ meta-organisation.name }} dient folgenden Zwecken:
 
 - **Schutz kritischer Geschäftsprozesse:** Sicherstellung der Fortführung geschäftskritischer Aktivitäten auch bei schwerwiegenden Störungen
 - **Reduktion von Ausfallzeiten:** Minimierung der Auswirkungen von Unterbrechungen auf Geschäftsbetrieb, Kunden und Stakeholder
@@ -56,7 +59,7 @@ Dieses BCMS orientiert sich an folgenden Standards und Best Practices:
 
 ### 2.1 Organisationseinheiten
 
-Das BCMS gilt für folgende Organisationseinheiten der {{ meta.organization.name }}:
+Das BCMS gilt für folgende Organisationseinheiten der {{ meta-organisation.name }}:
 
 [TODO: Definieren Sie die eingeschlossenen Organisationseinheiten]
 
@@ -75,7 +78,7 @@ Das BCMS umfasst folgende Standorte:
 [TODO: Listen Sie alle Standorte auf, die im Geltungsbereich liegen]
 
 **Beispiel:**
-- Hauptsitz: {{ meta.organization.address }}, {{ meta.organization.postal_code }} {{ meta.organization.city }}
+- Hauptsitz: {{ meta-organisation.address }}, [TODO] [TODO]
 - Produktionsstandort: [Adresse]
 - Rechenzentrum: [Adresse]
 - Ausweichstandort: [Adresse]
@@ -114,8 +117,8 @@ Folgende Bereiche sind explizit vom Geltungsbereich ausgeschlossen:
 [TODO: Dokumentieren Sie Ausnahmen mit Begründung und genehmigender Instanz]
 
 **Beispiel:**
-- **Tochtergesellschaft XY:** Betreibt eigenes BCMS (Genehmigt durch: {{ meta.roles.ceo.name }})
-- **Entwicklungsumgebungen:** Nicht geschäftskritisch (Genehmigt durch: {{ meta.roles.cio.name }})
+- **Tochtergesellschaft XY:** Betreibt eigenes BCMS (Genehmigt durch: {{ meta-organisation-roles.role_CEO }})
+- **Entwicklungsumgebungen:** Nicht geschäftskritisch (Genehmigt durch: {{ meta-organisation-roles.role_CIO }})
 
 ## 3. Annahmen und Einschränkungen
 
@@ -149,7 +152,7 @@ Folgende Abhängigkeiten liegen außerhalb der direkten Kontrolle der Organisati
 
 ### 4.1 Informationssicherheits-Managementsystem (ISMS)
 
-**Verantwortlich:** {{ meta.roles.ciso.name }} ({{ meta.roles.ciso.email }})
+**Verantwortlich:** {{ meta-organisation-roles.role_CISO }} ({{ meta-organisation-roles.role_CISO }})
 
 Schnittstellen:
 - Incident Management und Security Incident Response
@@ -161,7 +164,7 @@ Schnittstellen:
 
 ### 4.2 IT-Service-Management (ITSM)
 
-**Verantwortlich:** {{ meta.roles.it_operations_manager.name }} ({{ meta.roles.it_operations_manager.email }})
+**Verantwortlich:** {{ meta-organisation-roles.role_IT_Manager }} ({{ meta-organisation-roles.role_IT_Manager }})
 
 Schnittstellen:
 - Incident Management (Major Incidents → BCM-Aktivierung)
@@ -206,13 +209,5 @@ Schnittstellen:
 - Reputationsschutz
 
 [TODO: Beschreiben Sie die konkreten Schnittstellen zur Krisenkommunikation]
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 <!-- End of template -->

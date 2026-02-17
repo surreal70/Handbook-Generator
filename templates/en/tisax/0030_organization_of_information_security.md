@@ -1,17 +1,28 @@
----
+
 Document-ID: tisax-0030
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Organization of Information Security
 
+**Document-ID:** [FRAMEWORK]-0030
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document describes the organizational structure for information security at {{ source.organization_name }}.
+This document describes the organizational structure for information security at [TODO].
 
 ## Scope
 
@@ -21,11 +32,11 @@ This document applies to all organizational units and roles related to informati
 
 ### Information Security Committee
 
-**Chair**: {{ source.security_committee_chair }}
+**Chair**: [TODO]
 **Members**:
-- {{ source.committee_member_1 }}
-- {{ source.committee_member_2 }}
-- {{ source.committee_member_3 }}
+- [TODO]
+- [TODO]
+- [TODO]
 
 **Responsibilities**:
 - Strategic direction of information security
@@ -34,7 +45,7 @@ This document applies to all organizational units and roles related to informati
 
 ### Information Security Officer (ISO)
 
-**Name**: {{ source.information_security_officer }}
+**Name**: [TODO]
 **Responsibilities**:
 - Development and maintenance of ISMS
 - Coordination of security measures
@@ -44,7 +55,7 @@ This document applies to all organizational units and roles related to informati
 
 ### Data Protection Officer (DPO)
 
-**Name**: {{ source.data_protection_officer }}
+**Name**: [TODO]
 **Responsibilities**:
 - Monitoring GDPR compliance
 - Advising on data protection matters
@@ -56,17 +67,17 @@ Each department appoints a security representative:
 
 | Department | Representative |
 |------------|----------------|
-| {{ source.department_1 }} | {{ source.dept_1_security_contact }} |
-| {{ source.department_2 }} | {{ source.dept_2_security_contact }} |
-| {{ source.department_3 }} | {{ source.dept_3_security_contact }} |
+| [TODO] | [TODO] |
+| [TODO] | [TODO] |
+| [TODO] | [TODO] |
 
 ## Communication Channels
 
 ### Internal Communication
 
-- Regular security meetings: {{ source.security_meeting_frequency }}
-- Security reports: {{ source.security_report_frequency }}
-- Incident reporting: {{ source.incident_reporting_channel }}
+- Regular security meetings: [TODO]
+- Security reports: [TODO]
+- Incident reporting: [TODO]
 
 ### External Communication
 
@@ -83,13 +94,5 @@ Critical tasks are separated to avoid conflicts of interest:
 - Monitoring and implementation
 
 <!-- Note: Adapt the organizational structure to your circumstances -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

@@ -1,12 +1,26 @@
 # Change and Release Management
 
+**Document-ID:** [FRAMEWORK]-0140
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose and Scope
 
-This document describes the change and release management processes for {{ meta.organization.name }} according to ITIL v4 best practices. It defines change categories, approval processes, release strategies, and rollback procedures for controlled implementation of changes to IT services and systems.
+This document describes the change and release management processes for {{ meta-organisation.name }} according to ITIL v4 best practices. It defines change categories, approval processes, release strategies, and rollback procedures for controlled implementation of changes to IT services and systems.
 
-**Scope:** All IT services, systems, and infrastructure components of {{ meta.organization.name }}
+**Scope:** All IT services, systems, and infrastructure components of {{ meta-organisation.name }}
 
-**Responsible:** {{ meta.it_operations_manager.name }} ({{ meta.it_operations_manager.email }})
+**Responsible:** {{ meta-organisation-roles.role_it_operations_manager.name }} ({{ meta-organisation-roles.role_it_operations_manager.email }})
 
 ## Change Management
 
@@ -153,7 +167,7 @@ A **change** is the addition, modification, or removal of anything that could ha
 - **Requester:** Requestor
 - **Implementer:** Executor
 
-**Tool:** {{ meta.ticketing_system }}
+**Tool:** {{ meta-handbook.ticketing_system }}
 
 **Responsible:** Change Requester
 
@@ -181,9 +195,9 @@ A **change** is the addition, modification, or removal of anything that could ha
 **Change Advisory Board (CAB):**
 
 **Members:**
-- **Chair:** {{ meta.it_operations_manager.name }} (Change Manager)
-- **CIO:** {{ meta.cio.name }}
-- **CISO:** {{ meta.ciso.name }}
+- **Chair:** {{ meta-organisation-roles.role_it_operations_manager.name }} (Change Manager)
+- **CIO:** {{ meta-organisation-roles.role_cio.name }}
+- **CISO:** {{ meta-organisation-roles.role_ciso.name }}
 - **Service Owner:** [Service-dependent]
 - **Technical Leads:** [Change-dependent]
 - **Business Representatives:** [For business impact]
@@ -578,10 +592,10 @@ A **release** is a collection of hardware, software, documentation, processes, o
 - Deployment monitoring
 
 **Pipeline Tools:**
-- **CI/CD System:** {{ meta.cicd_system }}
-- **Version Control:** {{ meta.version_control }}
-- **Artifact Repository:** {{ meta.artifact_repository }}
-- **Container Registry:** {{ meta.container_registry }}
+- **CI/CD System:** {{ meta-handbook.cicd_system }}
+- **Version Control:** [TODO]
+- **Artifact Repository:** {{ meta-handbook.artifact_repository }}
+- **Container Registry:** {{ meta-handbook.container_registry }}
 
 ## Metrics and Reporting
 
@@ -630,7 +644,7 @@ A **release** is a collection of hardware, software, documentation, processes, o
 - Change calendar management
 - Reporting
 
-**Person:** {{ meta.it_operations_manager.name }}
+**Person:** {{ meta-organisation-roles.role_it_operations_manager.name }}
 
 ### Release Manager
 
@@ -655,18 +669,18 @@ A **release** is a collection of hardware, software, documentation, processes, o
 ## Tools and Systems
 
 ### Change Management Tool
-- **System:** {{ meta.ticketing_system }}
-- **URL:** {{ meta.ticketing_system_url }}
+- **System:** {{ meta-handbook.ticketing_system }}
+- **URL:** {{ meta-handbook.ticketing_system_url }}
 - **Access:** All IT staff
 
 ### CI/CD Pipeline
-- **System:** {{ meta.cicd_system }}
-- **URL:** {{ meta.cicd_url }}
+- **System:** {{ meta-handbook.cicd_system }}
+- **URL:** {{ meta-handbook.cicd_url }}
 - **Access:** DevOps Team
 
 ### Version Control
-- **System:** {{ meta.version_control }}
-- **URL:** {{ meta.version_control_url }}
+- **System:** [TODO]
+- **URL:** [TODO]
 - **Access:** Development Team
 
 ## References
@@ -677,18 +691,9 @@ A **release** is a collection of hardware, software, documentation, processes, o
 - DevOps Handbook - Deployment Strategies
 - Site Reliability Engineering (SRE) - Release Engineering
 
----
+**Document Owner:** {{ meta-handbook.owner }}  
+**Approved by:** {{ meta-handbook.approver }}  
+**Version:** {{ meta-handbook.revision }}  
+**Classification:** {{ meta-handbook.classification }}  
+**Last Updated:** {{ meta-handbook.date }}
 
-**Document Owner:** {{ meta.document.owner }}  
-**Approved by:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.date }}
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

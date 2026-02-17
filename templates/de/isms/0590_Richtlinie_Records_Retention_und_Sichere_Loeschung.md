@@ -1,14 +1,16 @@
 # Richtlinie: Records Retention und Sichere Löschung
 
-**Dokument-ID:** 0590  
-**Dokumenttyp:** Richtlinie (detailliert)  
-**Zugehörige Policy:** 0580_Policy_Aufbewahrung_und_Loeschung.md  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.5.33  
-**Owner:** {{ meta.compliance.manager }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}
+**Dokument-ID:** 0590
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -19,7 +21,7 @@ Diese Richtlinie konkretisiert die `0580_Policy_Aufbewahrung_und_Loeschung.md` u
 - Sichere Löschverfahren
 - Records Management Prozesse
 
-**Geltungsbereich:** Alle Daten und Dokumente bei **{{ meta.organization.name }}**
+**Geltungsbereich:** Alle Daten und Dokumente bei **{{ meta-organisation.name }}**
 
 ## 2. Aufbewahrungsfristen
 
@@ -232,15 +234,6 @@ Diese Richtlinie konkretisiert die `0580_Policy_Aufbewahrung_und_Loeschung.md` u
 - **HGB §257** - Aufbewahrung von Unterlagen
 - **AO §147** - Ordnungsvorschriften für die Aufbewahrung von Unterlagen
 
----
-
 **Genehmigt durch:** {{ meta.ciso.name }}, CISO  
-**Nächster Review:** {{ meta.document.next_review }}
+**Nächster Review:** {{ meta-handbook.next_review }}
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

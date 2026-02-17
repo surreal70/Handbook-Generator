@@ -1,17 +1,28 @@
----
+
 Document-ID: tisax-0050
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Security Objectives and Planning
 
+**Document-ID:** [FRAMEWORK]-0050
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document defines the security objectives and planning to achieve these objectives at {{ source.organization_name }}.
+This document defines the security objectives and planning to achieve these objectives at [TODO].
 
 ## Scope
 
@@ -23,50 +34,50 @@ This document applies to all information security activities and projects.
 
 1. **Protection of Customer Information**
    - Goal: 100% compliance with customer requirements
-   - Timeframe: {{ source.goal_timeframe_1 }}
+   - Timeframe: [TODO]
 
 2. **TISAX Certification**
-   - Goal: Achieve Assessment Level {{ source.tisax_target_level }}
-   - Timeframe: {{ source.goal_timeframe_2 }}
+   - Goal: Achieve Assessment Level [TODO]
+   - Timeframe: [TODO]
 
 3. **Reduction of Security Incidents**
-   - Goal: {{ source.incident_reduction_target }}% reduction
-   - Timeframe: {{ source.goal_timeframe_3 }}
+   - Goal: [TODO]% reduction
+   - Timeframe: [TODO]
 
 ### Operational Objectives
 
 1. **Awareness Training**
    - Goal: 100% employees trained
-   - Frequency: {{ source.training_frequency }}
+   - Frequency: [TODO]
 
 2. **Vulnerability Management**
-   - Goal: Critical vulnerabilities within {{ source.critical_vuln_remediation_time }}
-   - Goal: High vulnerabilities within {{ source.high_vuln_remediation_time }}
+   - Goal: Critical vulnerabilities within [TODO]
+   - Goal: High vulnerabilities within [TODO]
 
 3. **Incident Response**
-   - Goal: Response time < {{ source.incident_response_time }}
-   - Goal: Recovery time < {{ source.recovery_time_objective }}
+   - Goal: Response time < [TODO]
+   - Goal: Recovery time < [TODO]
 
 ## Security Planning
 
 ### Annual Planning
 
-**Planning Period**: {{ source.planning_year }}
+**Planning Period**: [TODO]
 
 **Main Activities**:
 
 | Quarter | Activity | Owner | Status |
 |---------|----------|-------|--------|
-| Q1 | {{ source.q1_activity }} | {{ source.q1_owner }} | {{ source.q1_status }} |
-| Q2 | {{ source.q2_activity }} | {{ source.q2_owner }} | {{ source.q2_status }} |
-| Q3 | {{ source.q3_activity }} | {{ source.q3_owner }} | {{ source.q3_status }} |
-| Q4 | {{ source.q4_activity }} | {{ source.q4_owner }} | {{ source.q4_status }} |
+| Q1 | [TODO] | [TODO] | [TODO] |
+| Q2 | [TODO] | [TODO] | [TODO] |
+| Q3 | [TODO] | [TODO] | [TODO] |
+| Q4 | [TODO] | [TODO] | [TODO] |
 
 ### Resource Planning
 
-**Budget**: {{ source.security_budget }}
-**Staff**: {{ source.security_staff_count }} FTE
-**External Support**: {{ source.external_support_budget }}
+**Budget**: [TODO]
+**Staff**: [TODO] FTE
+**External Support**: [TODO]
 
 ## Measurement and Monitoring
 
@@ -79,21 +90,13 @@ This document applies to all information security activities and projects.
 
 ### Reporting
 
-**Frequency**: {{ source.reporting_frequency }}
-**Recipients**: {{ source.report_recipients }}
+**Frequency**: [TODO]
+**Recipients**: [TODO]
 
 ## Review and Adjustment
 
-Security objectives and planning are reviewed {{ source.goal_review_frequency }} and adjusted as needed.
+Security objectives and planning are reviewed [TODO] and adjusted as needed.
 
 <!-- Note: Adapt the objectives and planning to your organization -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

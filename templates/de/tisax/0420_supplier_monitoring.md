@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0420
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Lieferantenüberwachung
+
+**Dokument-ID:** [FRAMEWORK]-0420
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -15,7 +26,7 @@ Dieses Dokument beschreibt die Überwachung von Lieferanten gemäß TISAX-Anford
 
 ## Geltungsbereich
 
-Dieses Dokument gilt für alle Lieferanten von {{ source.organization_name }}.
+Dieses Dokument gilt für alle Lieferanten von [TODO].
 
 ## Überwachungsaktivitäten
 
@@ -97,8 +108,8 @@ Dieses Dokument gilt für alle Lieferanten von {{ source.organization_name }}.
 
 **Meldefristen:**
 - Kritische Vorfälle: Sofort
-- Schwerwiegende Vorfälle: Innerhalb {{ source.incident_reporting_hours }} Stunden
-- Sonstige Vorfälle: Innerhalb {{ source.incident_reporting_days }} Tagen
+- Schwerwiegende Vorfälle: Innerhalb [TODO] Stunden
+- Sonstige Vorfälle: Innerhalb [TODO] Tagen
 
 ### Incident Response
 
@@ -167,18 +178,9 @@ Dieses Dokument adressiert:
 
 ## Kennzahlen
 
-{{ source.organization_name }} misst:
+[TODO] misst:
 - SLA-Einhaltungsrate
 - Anzahl Sicherheitsvorfälle bei Lieferanten
 - Anzahl durchgeführter Audits
 - Durchschnittliche Audit-Bewertung
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

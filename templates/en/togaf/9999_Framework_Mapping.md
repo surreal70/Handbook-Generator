@@ -1,5 +1,19 @@
 # TOGAF Framework Mapping
 
+**Document-ID:** [FRAMEWORK]-9999
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Overview
 
 This document maps the TOGAF handbook templates to specific TOGAF ADM phases, deliverables, and artifacts. It ensures comprehensive coverage of TOGAF requirements and provides traceability between templates and framework elements.
@@ -289,12 +303,5 @@ Organizations may add additional templates for:
 - TOGAF Series Guide: Architecture Content Framework
 - TOGAF Series Guide: Architecture Governance
 
----
-
 *This mapping ensures that the template set provides comprehensive coverage of TOGAF ADM phases and deliverables.*
 
-## Version History
-
-| Version | Date | Changes |
-|---------|------|---------|
-| 0.1 | {{meta.document.last_updated}} | Initial creation |

@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0350
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Protokollierung und Überwachung
+
+**Dokument-ID:** [FRAMEWORK]-0350
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -15,7 +26,7 @@ Dieses Dokument beschreibt die Anforderungen für Protokollierung und Überwachu
 
 ## Geltungsbereich
 
-Dieses Dokument gilt für alle IT-Systeme von {{ source.organization_name }}.
+Dieses Dokument gilt für alle IT-Systeme von [TODO].
 
 ## Protokollierung
 
@@ -40,10 +51,10 @@ Dieses Dokument gilt für alle IT-Systeme von {{ source.organization_name }}.
 - Zentrale Log-Sammlung
 - Sichere Speicherung
 - Schutz vor Manipulation
-- Aufbewahrung: {{ source.log_retention_days }} Tage
+- Aufbewahrung: [TODO] Tage
 
 **SIEM-System:**
-- {{ source.siem_solution }}
+- [TODO]
 - Korrelation von Ereignissen
 - Automatische Alarmierung
 - Reporting
@@ -109,17 +120,8 @@ Dieses Dokument adressiert:
 
 ## Kennzahlen
 
-{{ source.organization_name }} misst:
+[TODO] misst:
 - Anzahl protokollierter Ereignisse
 - Anzahl Sicherheitsvorfälle
 - Durchschnittliche Reaktionszeit auf Alarme
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

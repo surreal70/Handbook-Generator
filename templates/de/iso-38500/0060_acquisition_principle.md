@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-38500-0060
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Prinzip 3: Beschaffung (Acquisition)
+
+**Dokument-ID:** [FRAMEWORK]-0060
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -16,7 +28,7 @@ Dieses Dokument beschreibt die Anwendung des Beschaffungs-Prinzips in der IT-Gov
 ## Geltungsbereich
 
 Dieses Dokument gilt für:
-- {{ meta.organization }}
+- {{ meta-organisation.name }}
 - Alle IT-Beschaffungen (Hardware, Software, Services)
 - Beschaffungsprozesse und -entscheidungen
 
@@ -37,7 +49,7 @@ IT-Beschaffungen werden aus gültigen Gründen getätigt, auf der Grundlage ange
 
 | Kriterium | Anforderung |
 |-----------|-------------|
-| Business Case | Erforderlich für Beschaffungen >{{ meta.business_case_threshold }} EUR |
+| Business Case | Erforderlich für Beschaffungen >{{ meta-handbook.business_case_threshold }} EUR |
 | Kosten-Nutzen-Analyse | Erforderlich |
 | Risikoanalyse | Erforderlich |
 | Alternativenprüfung | Mindestens 3 Optionen |
@@ -84,21 +96,13 @@ IT-Beschaffungen werden aus gültigen Gründen getätigt, auf der Grundlage ange
 
 ### KPIs
 
-- Beschaffungen mit Business Case: {{ meta.acquisitions_with_bc }}%
-- Durchschnittliche Beschaffungszeit: {{ meta.avg_acquisition_time }} Tage
-- Nutzenrealisierung: {{ meta.benefit_realization }}%
-- Lieferantenzufriedenheit: {{ meta.supplier_satisfaction }}/10
+- Beschaffungen mit Business Case: {{ meta-handbook.acquisitions_with_bc }}%
+- Durchschnittliche Beschaffungszeit: {{ meta-handbook.avg_acquisition_time }} Tage
+- Nutzenrealisierung: {{ meta-handbook.benefit_realization }}%
+- Lieferantenzufriedenheit: {{ meta-handbook.supplier_satisfaction }}/10
 
 ## Dokumentenverweise
 
 - 0010_governance_framework.md
 - 0020_governance_model.md
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |
 

@@ -1,13 +1,24 @@
----
+
 Document-ID: soc1-0310
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # IT General Controls (ITGC)
+
+**Dokument-ID:** [FRAMEWORK]-0310
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -36,16 +47,16 @@ IT General Controls sind Kontrollen, die sich auf die IT-Umgebung als Ganzes bez
 - Multi-Faktor-Authentifizierung (MFA)
 - Single Sign-On (SSO)
 
-{{ source.authentication_controls }}
+[TODO]
 
 **Passwortrichtlinien**:
-- Mindestlänge: {{ source.password_min_length }}
-- Komplexitätsanforderungen: {{ source.password_complexity }}
-- Ablaufzeitraum: {{ source.password_expiry }}
-- Wiederverwendungseinschränkungen: {{ source.password_reuse }}
-- Kontosperrung: {{ source.account_lockout }}
+- Mindestlänge: [TODO]
+- Komplexitätsanforderungen: [TODO]
+- Ablaufzeitraum: [TODO]
+- Wiederverwendungseinschränkungen: [TODO]
+- Kontosperrung: [TODO]
 
-{{ source.password_policy }}
+[TODO]
 
 **Autorisierung**:
 - Rollenbasierte Zugriffskontrolle (RBAC)
@@ -53,7 +64,7 @@ IT General Controls sind Kontrollen, die sich auf die IT-Umgebung als Ganzes bez
 - Funktionentrennung
 - Zugriffsgenehmigungsprozess
 
-{{ source.authorization_controls }}
+[TODO]
 
 ### Privilegierte Zugriffsverwaltung
 
@@ -63,7 +74,7 @@ IT General Controls sind Kontrollen, die sich auf die IT-Umgebung als Ganzes bez
 - Servicekonten
 - Notfallzugangskonten
 
-{{ source.privileged_accounts }}
+[TODO]
 
 **Verwaltung privilegierter Zugriffe**:
 - Privileged Access Management (PAM) System
@@ -71,10 +82,10 @@ IT General Controls sind Kontrollen, die sich auf die IT-Umgebung als Ganzes bez
 - Sitzungsaufzeichnung
 - Aktivitätsüberwachung
 
-{{ source.pam_controls }}
+[TODO]
 
 **Überwachung privilegierter Aktivitäten**:
-{{ source.privileged_activity_monitoring }}
+[TODO]
 
 ### Benutzerzugangsverwaltung
 
@@ -84,7 +95,7 @@ IT General Controls sind Kontrollen, die sich auf die IT-Umgebung als Ganzes bez
 - Provisionierungsverfahren
 - Dokumentation
 
-{{ source.access_provisioning }}
+[TODO]
 
 **Zugangsänderungen**:
 - Änderungsanforderungen
@@ -92,7 +103,7 @@ IT General Controls sind Kontrollen, die sich auf die IT-Umgebung als Ganzes bez
 - Implementierung
 - Überprüfung
 
-{{ source.access_changes }}
+[TODO]
 
 **Zugangsentfernung**:
 - Kündigungsprozess
@@ -100,17 +111,17 @@ IT General Controls sind Kontrollen, die sich auf die IT-Umgebung als Ganzes bez
 - Zugangsüberprüfung
 - Dokumentation
 
-{{ source.access_removal }}
+[TODO]
 
 ### Zugangsüberprüfungen
 
 **Periodische Überprüfungen**:
-- Frequenz: {{ source.access_review_frequency }}
-- Geltungsbereich: {{ source.access_review_scope }}
-- Verantwortlichkeiten: {{ source.access_review_responsibilities }}
-- Dokumentation: {{ source.access_review_documentation }}
+- Frequenz: [TODO]
+- Geltungsbereich: [TODO]
+- Verantwortlichkeiten: [TODO]
+- Dokumentation: [TODO]
 
-{{ source.access_reviews }}
+[TODO]
 
 **Überprüfungsprozess**:
 1. Zugangsberichte generieren
@@ -119,7 +130,7 @@ IT General Controls sind Kontrollen, die sich auf die IT-Umgebung als Ganzes bez
 4. Behebung
 5. Dokumentation
 
-{{ source.review_process }}
+[TODO]
 
 ## Änderungsmanagement
 
@@ -130,7 +141,7 @@ IT General Controls sind Kontrollen, die sich auf die IT-Umgebung als Ganzes bez
 - Normale Änderungen
 - Notfall-Änderungen
 
-{{ source.change_types }}
+[TODO]
 
 **Änderungsworkflow**:
 1. Änderungsantrag
@@ -139,11 +150,11 @@ IT General Controls sind Kontrollen, die sich auf die IT-Umgebung als Ganzes bez
 4. Implementierung
 5. Überprüfung und Abschluss
 
-{{ source.change_workflow }}
+[TODO]
 
 ### Änderungsanträge
 
-**Antragsformular**: {{ source.change_request_form }}
+**Antragsformular**: [TODO]
 
 **Erforderliche Informationen**:
 - Änderungsbeschreibung
@@ -153,16 +164,16 @@ IT General Controls sind Kontrollen, die sich auf die IT-Umgebung als Ganzes bez
 - Rollback-Plan
 - Testplan
 
-{{ source.change_request_info }}
+[TODO]
 
 ### Änderungsbewertung und -genehmigung
 
 **Change Advisory Board (CAB)**:
-- Zusammensetzung: {{ source.cab_composition }}
-- Sitzungsfrequenz: {{ source.cab_frequency }}
-- Verantwortlichkeiten: {{ source.cab_responsibilities }}
+- Zusammensetzung: [TODO]
+- Sitzungsfrequenz: [TODO]
+- Verantwortlichkeiten: [TODO]
 
-{{ source.cab_details }}
+[TODO]
 
 **Genehmigungskriterien**:
 - Geschäftswert
@@ -171,9 +182,9 @@ IT General Controls sind Kontrollen, die sich auf die IT-Umgebung als Ganzes bez
 - Zeitplanung
 - Abhängigkeiten
 
-{{ source.approval_criteria }}
+[TODO]
 
-**Notfall-Änderungen**: {{ source.emergency_changes }}
+**Notfall-Änderungen**: [TODO]
 
 ### Testing und Implementierung
 
@@ -183,7 +194,7 @@ IT General Controls sind Kontrollen, die sich auf die IT-Umgebung als Ganzes bez
 - Staging
 - Produktion
 
-{{ source.test_environments }}
+[TODO]
 
 **Testanforderungen**:
 - Unit-Tests
@@ -191,13 +202,13 @@ IT General Controls sind Kontrollen, die sich auf die IT-Umgebung als Ganzes bez
 - Regressionstests
 - User Acceptance Testing (UAT)
 
-{{ source.testing_requirements }}
+[TODO]
 
 **Implementierungsverfahren**:
-{{ source.implementation_procedures }}
+[TODO]
 
 **Rollback-Verfahren**:
-{{ source.rollback_procedures }}
+[TODO]
 
 ### Änderungsdokumentation
 
@@ -208,9 +219,9 @@ IT General Controls sind Kontrollen, die sich auf die IT-Umgebung als Ganzes bez
 - Implementierungsprotokolle
 - Post-Implementation Reviews
 
-{{ source.change_documentation }}
+[TODO]
 
-**Aufbewahrung**: {{ source.change_retention }}
+**Aufbewahrung**: [TODO]
 
 ## Backup und Wiederherstellung
 
@@ -221,13 +232,13 @@ IT General Controls sind Kontrollen, die sich auf die IT-Umgebung als Ganzes bez
 - Inkrementelle Backups
 - Differentielle Backups
 
-{{ source.backup_types }}
+[TODO]
 
 **Backup-Zeitplan**:
-{{ source.backup_schedule }}
+[TODO]
 
 **Backup-Aufbewahrung**:
-{{ source.backup_retention }}
+[TODO]
 
 ### Backup-Verfahren
 
@@ -238,26 +249,26 @@ IT General Controls sind Kontrollen, die sich auf die IT-Umgebung als Ganzes bez
 4. Offsite-Speicherung
 5. Überwachung und Berichterstattung
 
-{{ source.backup_procedures }}
+[TODO]
 
 **Backup-Überwachung**:
-{{ source.backup_monitoring }}
+[TODO]
 
 **Backup-Fehlerbehandlung**:
-{{ source.backup_error_handling }}
+[TODO]
 
 ### Wiederherstellungsverfahren
 
 **Wiederherstellungsprozess**:
-{{ source.recovery_procedures }}
+[TODO]
 
-**Recovery Time Objective (RTO)**: {{ source.rto }}
+**Recovery Time Objective (RTO)**: [TODO]
 
-**Recovery Point Objective (RPO)**: {{ source.rpo }}
+**Recovery Point Objective (RPO)**: [TODO]
 
 ### Wiederherstellungstests
 
-**Testfrequenz**: {{ source.recovery_test_frequency }}
+**Testfrequenz**: [TODO]
 
 **Testszenarien**:
 - Dateiwiederherstellung
@@ -265,9 +276,9 @@ IT General Controls sind Kontrollen, die sich auf die IT-Umgebung als Ganzes bez
 - Systemwiederherstellung
 - Disaster Recovery
 
-{{ source.recovery_test_scenarios }}
+[TODO]
 
-**Testdokumentation**: {{ source.recovery_test_documentation }}
+**Testdokumentation**: [TODO]
 
 ## IT-Betriebskontrollen
 
@@ -279,11 +290,11 @@ IT General Controls sind Kontrollen, die sich auf die IT-Umgebung als Ganzes bez
 - Job-Überwachung
 - Fehlerbehandlung
 
-{{ source.batch_job_management }}
+[TODO]
 
-**Überwachungstools**: {{ source.monitoring_tools }}
+**Überwachungstools**: [TODO]
 
-**Alarmierung**: {{ source.alerting }}
+**Alarmierung**: [TODO]
 
 ### Incident Management
 
@@ -293,7 +304,7 @@ IT General Controls sind Kontrollen, die sich auf die IT-Umgebung als Ganzes bez
 - Mittel
 - Niedrig
 
-{{ source.incident_categories }}
+[TODO]
 
 **Incident-Prozess**:
 1. Erkennung und Aufzeichnung
@@ -302,27 +313,27 @@ IT General Controls sind Kontrollen, die sich auf die IT-Umgebung als Ganzes bez
 4. Lösung und Wiederherstellung
 5. Abschluss und Dokumentation
 
-{{ source.incident_process }}
+[TODO]
 
-**Eskalationsverfahren**: {{ source.escalation_procedures }}
+**Eskalationsverfahren**: [TODO]
 
 ### Problem Management
 
-**Problem-Identifikation**: {{ source.problem_identification }}
+**Problem-Identifikation**: [TODO]
 
-**Root Cause Analysis**: {{ source.root_cause_analysis }}
+**Root Cause Analysis**: [TODO]
 
-**Problem-Lösung**: {{ source.problem_resolution }}
+**Problem-Lösung**: [TODO]
 
-**Known Error Database**: {{ source.known_error_database }}
+**Known Error Database**: [TODO]
 
 ### Kapazitätsmanagement
 
-**Kapazitätsplanung**: {{ source.capacity_planning }}
+**Kapazitätsplanung**: [TODO]
 
-**Leistungsüberwachung**: {{ source.performance_monitoring }}
+**Leistungsüberwachung**: [TODO]
 
-**Kapazitätsprognosen**: {{ source.capacity_forecasting }}
+**Kapazitätsprognosen**: [TODO]
 
 ## Systemakquisition und -entwicklung
 
@@ -336,31 +347,31 @@ IT General Controls sind Kontrollen, die sich auf die IT-Umgebung als Ganzes bez
 5. Implementierung
 6. Wartung
 
-{{ source.sdlc_phases }}
+[TODO]
 
-**SDLC-Methodik**: {{ source.sdlc_methodology }}
+**SDLC-Methodik**: [TODO]
 
 ### Anforderungsmanagement
 
-**Anforderungsdefinition**: {{ source.requirements_definition }}
+**Anforderungsdefinition**: [TODO]
 
-**Anforderungsverfolgung**: {{ source.requirements_traceability }}
+**Anforderungsverfolgung**: [TODO]
 
-**Änderungsmanagement**: {{ source.requirements_change_management }}
+**Änderungsmanagement**: [TODO]
 
 ### Entwicklungskontrollen
 
-**Code-Entwicklungsstandards**: {{ source.coding_standards }}
+**Code-Entwicklungsstandards**: [TODO]
 
-**Code-Reviews**: {{ source.code_reviews }}
+**Code-Reviews**: [TODO]
 
-**Versionskontrolle**: {{ source.version_control }}
+**Versionskontrolle**: [TODO]
 
-**Funktionentrennung**: {{ source.development_segregation }}
+**Funktionentrennung**: [TODO]
 
 ### Testing
 
-**Teststrategie**: {{ source.test_strategy }}
+**Teststrategie**: [TODO]
 
 **Testarten**:
 - Unit-Tests
@@ -369,9 +380,9 @@ IT General Controls sind Kontrollen, die sich auf die IT-Umgebung als Ganzes bez
 - Akzeptanztests
 - Sicherheitstests
 
-{{ source.test_types }}
+[TODO]
 
-**Testdokumentation**: {{ source.test_documentation }}
+**Testdokumentation**: [TODO]
 
 ## Physische und Umgebungskontrollen
 
@@ -383,7 +394,7 @@ IT General Controls sind Kontrollen, die sich auf die IT-Umgebung als Ganzes bez
 - Besucherverwaltung
 - Überwachungskameras
 
-{{ source.physical_access }}
+[TODO]
 
 **Umgebungskontrollen**:
 - Klimatisierung
@@ -391,15 +402,15 @@ IT General Controls sind Kontrollen, die sich auf die IT-Umgebung als Ganzes bez
 - Stromversorgung (USV)
 - Überwachung
 
-{{ source.environmental_controls }}
+[TODO]
 
 ### Geräte- und Mediensicherheit
 
-**Geräteverwaltung**: {{ source.equipment_management }}
+**Geräteverwaltung**: [TODO]
 
-**Medienverwaltung**: {{ source.media_management }}
+**Medienverwaltung**: [TODO]
 
-**Sichere Entsorgung**: {{ source.secure_disposal }}
+**Sichere Entsorgung**: [TODO]
 
 ## Überwachung und Berichterstattung
 
@@ -411,18 +422,18 @@ IT General Controls sind Kontrollen, die sich auf die IT-Umgebung als Ganzes bez
 - Interne Audits
 - Externe Audits
 
-{{ source.itgc_monitoring }}
+[TODO]
 
 **Key Performance Indicators (KPIs)**:
-{{ source.itgc_kpis }}
+[TODO]
 
 ### Berichterstattung
 
-**Interne Berichte**: {{ source.internal_reporting }}
+**Interne Berichte**: [TODO]
 
-**Management-Berichte**: {{ source.management_reporting }}
+**Management-Berichte**: [TODO]
 
-**Audit-Berichte**: {{ source.audit_reporting }}
+**Audit-Berichte**: [TODO]
 
 ## Dokumentation und Nachweise
 
@@ -441,11 +452,11 @@ IT General Controls sind Kontrollen, die sich auf die IT-Umgebung als Ganzes bez
    - Wiederherstellungstests
    - Incident-Tickets
 
-{{ source.required_documentation }}
+[TODO]
 
 ### Aufbewahrungsfristen
 
-{{ source.retention_requirements }}
+[TODO]
 
 ## Referenzen
 
@@ -458,12 +469,3 @@ IT General Controls sind Kontrollen, die sich auf die IT-Umgebung als Ganzes bez
 
 <!-- Hinweise für Autoren: Aktualisieren Sie ITGC-Dokumentation bei Systemänderungen -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

@@ -1,24 +1,25 @@
 # Richtlinie: IAM - Joiner, Mover, Leaver und Zugriffsanträge
 
+**Dokument-ID:** 0230
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This guideline provides detailed implementation guidance for Identity and Access Management,
 specifically covering the Joiner-Mover-Leaver lifecycle and access request processes.
 Customize based on your organization's HR systems, IAM tools, and approval workflows.
 -->
-
-**Dokument-ID:** 0230  
-**Dokumenttyp:** Richtlinie (detailliert)  
-**Zugehörige Policy:** 0220_Policy_Zugriffssteuerung_und_Identitaetsmanagement.md  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.5.15, A.5.16, A.5.18  
-**Owner:** {{ meta.it_operations.manager }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
-
----
 
 ## 1. Zweck und Geltungsbereich
 
@@ -28,7 +29,7 @@ Diese Richtlinie konkretisiert die `0220_Policy_Zugriffssteuerung_und_Identitaet
 - **Leaver:** Offboarding und Zugriffsentzug
 - **Zugriffsanträge:** Prozess für Ad-hoc-Zugriffsanforderungen
 
-**Geltungsbereich:** Alle Mitarbeiter, Auftragnehmer und Dritte bei **{{ meta.organization.name }}**
+**Geltungsbereich:** Alle Mitarbeiter, Auftragnehmer und Dritte bei **{{ meta-organisation.name }}**
 
 ## 2. Joiner-Prozess (Onboarding)
 
@@ -395,18 +396,9 @@ Diese Richtlinie konkretisiert die `0220_Policy_Zugriffssteuerung_und_Identitaet
 - **ISO/IEC 27001:2022 Annex A.5.18** - Access rights
 - **NIST SP 800-63** - Digital Identity Guidelines
 
----
-
 **Genehmigt durch:**  
 {{ meta.ciso.name }}, CISO  
-Datum: {{ meta.document.approval_date }}
+Datum: {{ meta-handbook.modifydate }}
 
-**Nächster Review:** {{ meta.document.next_review }}
+**Nächster Review:** {{ meta-handbook.next_review }}
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

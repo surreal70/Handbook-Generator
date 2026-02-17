@@ -1,11 +1,16 @@
 # Rationale für Sicherheitsanforderungen
 
-**Dokument-ID:** 0620  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** Intern / Vertraulich / Streng vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0620
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -395,8 +400,6 @@ Dieses Kapitel liefert die Rationale, die nachweist, dass die definierten Sicher
 - **Abschnitt 0430:** SFR Dependencies
 - **Abschnitt 0440:** Coverage Matrix
 
----
-
 **Nächste Schritte:**
 1. Dokumentieren Sie die Rationale für jedes Sicherheitsziel
 2. Begründen Sie alle SFR-Operationen
@@ -407,10 +410,3 @@ Dieses Kapitel liefert die Rationale, die nachweist, dass die definierten Sicher
 7. Identifizieren und beheben Sie Lücken und Inkonsistenzen
 8. Lassen Sie die Rationale durch Evaluatoren prüfen
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

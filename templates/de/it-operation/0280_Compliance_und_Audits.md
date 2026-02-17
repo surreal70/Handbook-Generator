@@ -1,12 +1,26 @@
 # Compliance und Audits
 
+**Dokument-ID:** [FRAMEWORK]-0280
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck und Geltungsbereich
 
-Dieses Dokument beschreibt die Compliance- und Audit-Prozesse für {{ meta.organization.name }}. Es definiert relevante Standards, Audit-Prozesse, Compliance-Kontrollen, Nachweise und Non-Compliance-Risiken zur Sicherstellung der Einhaltung regulatorischer und vertraglicher Anforderungen.
+Dieses Dokument beschreibt die Compliance- und Audit-Prozesse für {{ meta-organisation.name }}. Es definiert relevante Standards, Audit-Prozesse, Compliance-Kontrollen, Nachweise und Non-Compliance-Risiken zur Sicherstellung der Einhaltung regulatorischer und vertraglicher Anforderungen.
 
-**Geltungsbereich:** Alle IT-Systeme, Prozesse und Aktivitäten von {{ meta.organization.name }}
+**Geltungsbereich:** Alle IT-Systeme, Prozesse und Aktivitäten von {{ meta-organisation.name }}
 
-**Verantwortlich:** {{ meta.compliance_officer }} ({{ meta.compliance_officer_email }})
+**Verantwortlich:** {{ meta-organisation-roles.role_Compliance_Manager }} ({{ meta-handbook.compliance_officer_email }})
 
 ## Compliance-Grundlagen
 
@@ -51,10 +65,10 @@ Dieses Dokument beschreibt die Compliance- und Audit-Prozesse für {{ meta.organ
 
 **Geltungsbereich:** Alle IT-Systeme und Informationsverarbeitung
 
-**Status:** {{ meta.iso27001_status }}  
-**Zertifizierung:** {{ meta.iso27001_certification }}  
-**Zertifizierungs-Stelle:** {{ meta.iso27001_certifier }}  
-**Gültig bis:** {{ meta.iso27001_valid_until }}
+**Status:** {{ meta-handbook.iso27001_status }}  
+**Zertifizierung:** {{ meta-handbook.iso27001_certification }}  
+**Zertifizierungs-Stelle:** {{ meta-handbook.iso27001_certifier }}  
+**Gültig bis:** {{ meta-handbook.iso27001_valid_until }}
 
 **Kern-Anforderungen:**
 - ISMS etablieren, implementieren, betreiben, überwachen, reviewen, warten und verbessern
@@ -67,7 +81,7 @@ Dieses Dokument beschreibt die Compliance- und Audit-Prozesse für {{ meta.organ
 - **Überwachungs-Audit:** Jährlich
 - **Internes Audit:** Quartalsweise
 
-**Verantwortlich:** {{ meta.ciso.name }}
+**Verantwortlich:** {{ meta-organisation-roles.role_ciso.name }}
 
 ### ISO/IEC 20000-1:2018 - IT-Service-Management
 
@@ -75,7 +89,7 @@ Dieses Dokument beschreibt die Compliance- und Audit-Prozesse für {{ meta.organ
 
 **Geltungsbereich:** IT-Service-Management-Prozesse
 
-**Status:** {{ meta.iso20000_status }}
+**Status:** {{ meta-handbook.iso20000_status }}
 
 **Kern-Anforderungen:**
 - Service-Management-System (SMS)
@@ -86,7 +100,7 @@ Dieses Dokument beschreibt die Compliance- und Audit-Prozesse für {{ meta.organ
 
 **Alignment:** ITIL v4 Framework
 
-**Verantwortlich:** {{ meta.it_operations_manager.name }}
+**Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
 
 ### DSGVO (GDPR) - Datenschutz-Grundverordnung
 
@@ -106,9 +120,9 @@ Dieses Dokument beschreibt die Compliance- und Audit-Prozesse für {{ meta.organ
 
 **Bußgelder:** Bis zu 20 Mio. € oder 4% des weltweiten Jahresumsatzes
 
-**Datenschutzbeauftragter:** {{ meta.data_protection_officer }}
+**Datenschutzbeauftragter:** {{ meta-handbook.data_protection_officer }}
 
-**Verzeichnis von Verarbeitungstätigkeiten:** {{ meta.processing_activities_register }}
+**Verzeichnis von Verarbeitungstätigkeiten:** {{ meta-handbook.processing_activities_register }}
 
 ### BSI IT-Grundschutz
 
@@ -116,7 +130,7 @@ Dieses Dokument beschreibt die Compliance- und Audit-Prozesse für {{ meta.organ
 
 **Geltungsbereich:** IT-Sicherheit
 
-**Status:** {{ meta.bsi_grundschutz_status }}
+**Status:** {{ meta-handbook.bsi_grundschutz_status }}
 
 **Absicherungs-Level:**
 - **Basis-Absicherung:** Standard-Sicherheitsmaßnahmen
@@ -125,7 +139,7 @@ Dieses Dokument beschreibt die Compliance- und Audit-Prozesse für {{ meta.organ
 
 **Bausteine:** IT-Grundschutz-Kompendium
 
-**Verantwortlich:** {{ meta.ciso.name }}
+**Verantwortlich:** {{ meta-organisation-roles.role_ciso.name }}
 
 ### PCI-DSS (Payment Card Industry Data Security Standard)
 
@@ -133,7 +147,7 @@ Dieses Dokument beschreibt die Compliance- und Audit-Prozesse für {{ meta.organ
 
 **Geltungsbereich:** Systeme, die Kreditkarten-Daten verarbeiten, speichern oder übertragen
 
-**Status:** {{ meta.pci_dss_status }}
+**Status:** {{ meta-handbook.pci_dss_status }}
 
 **12 Anforderungen:**
 1. Firewall-Konfiguration
@@ -149,8 +163,8 @@ Dieses Dokument beschreibt die Compliance- und Audit-Prozesse für {{ meta.organ
 11. Regelmäßige Security-Tests
 12. Informationssicherheits-Policy
 
-**Compliance-Level:** {{ meta.pci_dss_level }}  
-**QSA (Qualified Security Assessor):** {{ meta.pci_dss_qsa }}
+**Compliance-Level:** {{ meta-handbook.pci_dss_level }}  
+**QSA (Qualified Security Assessor):** {{ meta-handbook.pci_dss_qsa }}
 
 ### SOX (Sarbanes-Oxley Act)
 
@@ -158,7 +172,7 @@ Dieses Dokument beschreibt die Compliance- und Audit-Prozesse für {{ meta.organ
 
 **Geltungsbereich:** Finanzrelevante IT-Systeme (falls börsennotiert)
 
-**Status:** {{ meta.sox_status }}
+**Status:** {{ meta-handbook.sox_status }}
 
 **IT-relevante Anforderungen:**
 - Section 302: Management-Verantwortung für interne Kontrollen
@@ -167,7 +181,7 @@ Dieses Dokument beschreibt die Compliance- und Audit-Prozesse für {{ meta.organ
 - IT-General-Controls (ITGC)
 - Application-Controls
 
-**Verantwortlich:** {{ meta.cfo.name }}
+**Verantwortlich:** {{ meta-organisation-roles.role_cfo.name }}
 
 ### COBIT 2019
 
@@ -175,7 +189,7 @@ Dieses Dokument beschreibt die Compliance- und Audit-Prozesse für {{ meta.organ
 
 **Geltungsbereich:** IT-Governance
 
-**Status:** {{ meta.cobit_status }}
+**Status:** {{ meta-handbook.cobit_status }}
 
 **Governance-Objectives:**
 - EDM01: Ensured Governance Framework Setting and Maintenance
@@ -396,8 +410,8 @@ Dieses Dokument beschreibt die Compliance- und Audit-Prozesse für {{ meta.organ
 - **Surveillance:** Jährliche Überwachung
 
 **Zertifizierungs-Stellen:**
-- ISO 27001: {{ meta.iso27001_certifier }}
-- ISO 20000: {{ meta.iso20000_certifier }}
+- ISO 27001: {{ meta-handbook.iso27001_certifier }}
+- ISO 20000: {{ meta-handbook.iso20000_certifier }}
 
 #### Kunden-Audits
 
@@ -849,7 +863,7 @@ Frist: 30 Tage
 - **Transfer:** Risiko übertragen (Versicherung, Outsourcing)
 - **Accept:** Risiko akzeptieren (mit Management-Genehmigung)
 
-**Risiko-Register:** {{ meta.risk_register }}
+**Risiko-Register:** {{ meta-handbook.risk_register }}
 
 ### Incident-Response bei Non-Compliance
 
@@ -908,7 +922,7 @@ Frist: 30 Tage
 - Policy-Review-Status
 - Incident-Trends
 
-**Tool:** {{ meta.compliance_dashboard }}
+**Tool:** {{ meta-handbook.compliance_dashboard }}
 
 **Zugriff:** Management, Compliance-Team, Auditoren
 
@@ -953,9 +967,9 @@ Frist: 30 Tage
 
 ### Governance, Risk, and Compliance (GRC) Platform
 
-**System:** {{ meta.grc_system }}  
-**Version:** {{ meta.grc_version }}  
-**Management-URL:** {{ meta.grc_url }}
+**System:** {{ meta-handbook.grc_system }}  
+**Version:** [TODO]  
+**Management-URL:** {{ meta-handbook.grc_url }}
 
 **Funktionen:**
 - Compliance-Management
@@ -967,7 +981,7 @@ Frist: 30 Tage
 
 ### Dokumenten-Management
 
-**System:** {{ meta.document_management_system }}
+**System:** {{ meta-handbook.document_management_system }}
 
 **Funktionen:**
 - Zentrale Dokumenten-Ablage
@@ -985,9 +999,9 @@ Frist: 30 Tage
 
 ### Compliance-Scanning-Tools
 
-**Vulnerability-Scanner:** {{ meta.vulnerability_scanner }}  
-**Configuration-Scanner:** {{ meta.config_scanner }}  
-**Compliance-Scanner:** {{ meta.compliance_scanner }}
+**Vulnerability-Scanner:** {{ meta-handbook.vulnerability_scanner }}  
+**Configuration-Scanner:** {{ meta-handbook.config_scanner }}  
+**Compliance-Scanner:** {{ meta-handbook.compliance_scanner }}
 
 **Funktionen:**
 - Automatische Compliance-Checks
@@ -997,7 +1011,7 @@ Frist: 30 Tage
 
 ### Training-Management
 
-**System:** {{ meta.training_system }}
+**System:** {{ meta-handbook.training_system }}
 
 **Funktionen:**
 - Training-Katalog
@@ -1017,7 +1031,7 @@ Frist: 30 Tage
 - Risiko-Management
 - Reporting an Management
 
-**Person:** {{ meta.compliance_officer }}
+**Person:** {{ meta-organisation-roles.role_Compliance_Manager }}
 
 ### Data Protection Officer (DPO)
 
@@ -1028,7 +1042,7 @@ Frist: 30 Tage
 - Zusammenarbeit mit Aufsichtsbehörden
 - Schulungen
 
-**Person:** {{ meta.data_protection_officer }}
+**Person:** {{ meta-handbook.data_protection_officer }}
 
 ### Internal Audit Team
 
@@ -1038,7 +1052,7 @@ Frist: 30 Tage
 - Findings dokumentieren
 - Follow-up auf Corrective Actions
 
-**Team-Lead:** {{ meta.internal_audit_lead }}
+**Team-Lead:** {{ meta-handbook.internal_audit_lead }}
 
 ### CISO (Chief Information Security Officer)
 
@@ -1048,7 +1062,7 @@ Frist: 30 Tage
 - Security-Audits
 - Risiko-Management
 
-**Person:** {{ meta.ciso.name }}
+**Person:** {{ meta-organisation-roles.role_ciso.name }}
 
 ### IT Operations Manager
 
@@ -1058,7 +1072,7 @@ Frist: 30 Tage
 - Prozess-Compliance
 - Tool-Implementation
 
-**Person:** {{ meta.it_operations_manager.name }}
+**Person:** {{ meta-organisation-roles.role_it_operations_manager.name }}
 
 ### Fachbereichs-Leiter
 
@@ -1145,18 +1159,9 @@ Frist: 30 Tage
 - NIST SP 800-53 - Security and Privacy Controls
 - CIS Controls v8 - Center for Internet Security Controls
 
----
+**Dokumentverantwortlicher:** {{ meta-handbook.owner }}  
+**Genehmigt durch:** {{ meta-handbook.approver }}  
+**Version:** {{ meta-handbook.revision }}  
+**Klassifizierung:** {{ meta-handbook.classification }}  
+**Letzte Aktualisierung:** {{ meta-handbook.date }}
 
-**Dokumentverantwortlicher:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.date }}
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

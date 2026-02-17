@@ -1,13 +1,24 @@
----
+
 Document-ID: soc1-0410
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Monitoring Activities - Detailed
+
+**Document-ID:** [FRAMEWORK]-0410
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -36,7 +47,7 @@ The organization selects, develops, and performs ongoing and/or separate evaluat
 - Performance metrics
 - System alerts
 
-{{ source.daily_monitoring }}
+[TODO]
 
 **Weekly Monitoring**:
 - Weekly reports
@@ -44,7 +55,7 @@ The organization selects, develops, and performs ongoing and/or separate evaluat
 - Status updates
 - Trend analyses
 
-{{ source.weekly_monitoring }}
+[TODO]
 
 **Monthly Monitoring**:
 - Financial reconciliations
@@ -52,7 +63,7 @@ The organization selects, develops, and performs ongoing and/or separate evaluat
 - Compliance reviews
 - Risk assessments
 
-{{ source.monthly_monitoring }}
+[TODO]
 
 ### Automated Monitoring
 
@@ -62,7 +73,7 @@ The organization selects, develops, and performs ongoing and/or separate evaluat
 - Security monitoring
 - Capacity monitoring
 
-{{ source.system_monitoring }}
+[TODO]
 
 **Transaction Monitoring**:
 - Real-time validation
@@ -70,7 +81,7 @@ The organization selects, develops, and performs ongoing and/or separate evaluat
 - Duplicate detection
 - Threshold monitoring
 
-{{ source.transaction_monitoring }}
+[TODO]
 
 **Compliance Monitoring**:
 - Policy compliance
@@ -78,23 +89,23 @@ The organization selects, develops, and performs ongoing and/or separate evaluat
 - Control execution
 - Access monitoring
 
-{{ source.compliance_monitoring }}
+[TODO]
 
 ### Self-Assessments
 
 **Control Self-Assessments (CSA)**:
-- Frequency: {{ source.csa_frequency }}
-- Scope: {{ source.csa_scope }}
-- Methodology: {{ source.csa_methodology }}
-- Documentation: {{ source.csa_documentation }}
+- Frequency: [TODO]
+- Scope: [TODO]
+- Methodology: [TODO]
+- Documentation: [TODO]
 
-{{ source.control_self_assessments }}
+[TODO]
 
 **Process Self-Assessments**:
-{{ source.process_self_assessments }}
+[TODO]
 
 **Risk Self-Assessments**:
-{{ source.risk_self_assessments }}
+[TODO]
 
 ### Operational Monitoring
 
@@ -104,7 +115,7 @@ The organization selects, develops, and performs ongoing and/or separate evaluat
 - Process quality
 - Process compliance
 
-{{ source.process_monitoring }}
+[TODO]
 
 **Quality Monitoring**:
 - Quality metrics
@@ -112,7 +123,7 @@ The organization selects, develops, and performs ongoing and/or separate evaluat
 - Rework rates
 - Customer satisfaction
 
-{{ source.quality_monitoring }}
+[TODO]
 
 **Performance Monitoring**:
 - KPI tracking
@@ -120,7 +131,7 @@ The organization selects, develops, and performs ongoing and/or separate evaluat
 - Benchmark comparisons
 - Trend analyses
 
-{{ source.performance_monitoring }}
+[TODO]
 
 ## Separate Evaluations
 
@@ -132,7 +143,7 @@ The organization selects, develops, and performs ongoing and/or separate evaluat
 - Resource allocation
 - Scheduling
 
-{{ source.audit_planning }}
+[TODO]
 
 **Audit Execution**:
 1. Audit preparation
@@ -141,7 +152,7 @@ The organization selects, develops, and performs ongoing and/or separate evaluat
 4. Findings
 5. Reporting
 
-{{ source.audit_execution }}
+[TODO]
 
 **Audit Areas**:
 - Financial controls
@@ -149,9 +160,9 @@ The organization selects, develops, and performs ongoing and/or separate evaluat
 - Operational controls
 - Compliance controls
 
-{{ source.audit_areas }}
+[TODO]
 
-**Audit Frequency**: {{ source.audit_frequency }}
+**Audit Frequency**: [TODO]
 
 ### External Audits
 
@@ -161,13 +172,13 @@ The organization selects, develops, and performs ongoing and/or separate evaluat
 - Control testing
 - Reporting
 
-{{ source.soc1_audits }}
+[TODO]
 
 **Regulatory Audits**:
-{{ source.regulatory_audits }}
+[TODO]
 
 **Certification Audits**:
-{{ source.certification_audits }}
+[TODO]
 
 ### Management Reviews
 
@@ -177,7 +188,7 @@ The organization selects, develops, and performs ongoing and/or separate evaluat
 - Compliance status
 - Performance metrics
 
-{{ source.quarterly_reviews }}
+[TODO]
 
 **Annual Reviews**:
 - Comprehensive control assessment
@@ -185,17 +196,17 @@ The organization selects, develops, and performs ongoing and/or separate evaluat
 - Strategic review
 - Governance assessment
 
-{{ source.annual_reviews }}
+[TODO]
 
 ### Specialized Assessments
 
-**Penetration Testing**: {{ source.penetration_testing }}
+**Penetration Testing**: [TODO]
 
-**Vulnerability Assessments**: {{ source.vulnerability_assessments }}
+**Vulnerability Assessments**: [TODO]
 
-**Business Continuity Tests**: {{ source.bc_testing }}
+**Business Continuity Tests**: [TODO]
 
-**Disaster Recovery Tests**: {{ source.dr_testing }}
+**Disaster Recovery Tests**: [TODO]
 
 ## Control Deficiencies and Remediation
 
@@ -208,7 +219,7 @@ The organization selects, develops, and performs ongoing and/or separate evaluat
 - Management reviews
 - Incident reports
 
-{{ source.deficiency_sources }}
+[TODO]
 
 **Deficiency Types**:
 - Design deficiencies
@@ -216,7 +227,7 @@ The organization selects, develops, and performs ongoing and/or separate evaluat
 - Operating deficiencies
 - Documentation deficiencies
 
-{{ source.deficiency_types }}
+[TODO]
 
 ### Deficiency Assessment
 
@@ -226,7 +237,7 @@ The organization selects, develops, and performs ongoing and/or separate evaluat
 - Medium
 - Low
 
-{{ source.severity_assessment }}
+[TODO]
 
 **Assessment Criteria**:
 - Impact on control objectives
@@ -234,11 +245,11 @@ The organization selects, develops, and performs ongoing and/or separate evaluat
 - Compensating controls
 - Regulatory significance
 
-{{ source.assessment_criteria }}
+[TODO]
 
-**Material Weaknesses**: {{ source.material_weaknesses }}
+**Material Weaknesses**: [TODO]
 
-**Significant Deficiencies**: {{ source.significant_deficiencies }}
+**Significant Deficiencies**: [TODO]
 
 ### Remediation Planning
 
@@ -250,11 +261,11 @@ The organization selects, develops, and performs ongoing and/or separate evaluat
 - Timeline
 - Resources
 
-{{ source.remediation_plan }}
+[TODO]
 
-**Prioritization**: {{ source.remediation_prioritization }}
+**Prioritization**: [TODO]
 
-**Resource Allocation**: {{ source.resource_allocation }}
+**Resource Allocation**: [TODO]
 
 ### Remediation Implementation
 
@@ -266,11 +277,11 @@ The organization selects, develops, and performs ongoing and/or separate evaluat
 5. Implementation
 6. Validation
 
-{{ source.remediation_implementation }}
+[TODO]
 
-**Progress Tracking**: {{ source.progress_tracking }}
+**Progress Tracking**: [TODO]
 
-**Status Reporting**: {{ source.status_reporting }}
+**Status Reporting**: [TODO]
 
 ### Remediation Validation
 
@@ -280,11 +291,11 @@ The organization selects, develops, and performs ongoing and/or separate evaluat
 - Document review
 - Interviews
 
-{{ source.validation_methods }}
+[TODO]
 
-**Validation Criteria**: {{ source.validation_criteria }}
+**Validation Criteria**: [TODO]
 
-**Closure Confirmation**: {{ source.closure_confirmation }}
+**Closure Confirmation**: [TODO]
 
 ## Monitoring Reporting
 
@@ -297,7 +308,7 @@ The organization selects, develops, and performs ongoing and/or separate evaluat
 - Quarterly reports
 - Annual reports
 
-{{ source.monitoring_reports }}
+[TODO]
 
 **Audit Reports**:
 - Internal audit reports
@@ -305,7 +316,7 @@ The organization selects, develops, and performs ongoing and/or separate evaluat
 - SOC 1 reports
 - Compliance reports
 
-{{ source.audit_reports }}
+[TODO]
 
 **Deficiency Reports**:
 - Deficiency identification
@@ -313,7 +324,7 @@ The organization selects, develops, and performs ongoing and/or separate evaluat
 - Aging reports
 - Trend analyses
 
-{{ source.deficiency_reports }}
+[TODO]
 
 ### Report Recipients
 
@@ -322,21 +333,21 @@ The organization selects, develops, and performs ongoing and/or separate evaluat
 - Functional management
 - Executive management
 
-{{ source.management_reporting }}
+[TODO]
 
 **Board/Committees**:
 - Audit committee
 - Risk committee
 - Full board
 
-{{ source.board_reporting }}
+[TODO]
 
 **External Stakeholders**:
 - External auditors
 - Regulatory authorities
 - Customers (SOC 1 reports)
 
-{{ source.external_reporting }}
+[TODO]
 
 ### Report Contents
 
@@ -346,7 +357,7 @@ The organization selects, develops, and performs ongoing and/or separate evaluat
 - Deficiencies
 - Remediation status
 
-{{ source.report_summary }}
+[TODO]
 
 **Detailed Findings**:
 - Deficiency descriptions
@@ -354,7 +365,7 @@ The organization selects, develops, and performs ongoing and/or separate evaluat
 - Recommendations
 - Management responses
 
-{{ source.detailed_findings }}
+[TODO]
 
 **Metrics and Trends**:
 - Control effectiveness
@@ -362,7 +373,7 @@ The organization selects, develops, and performs ongoing and/or separate evaluat
 - Remediation rates
 - Compliance rates
 
-{{ source.metrics_trends }}
+[TODO]
 
 ## Key Performance Indicators (KPIs)
 
@@ -373,7 +384,7 @@ The organization selects, develops, and performs ongoing and/or separate evaluat
 - Control failure rate
 - Control deviations
 
-{{ source.control_effectiveness_kpis }}
+[TODO]
 
 **Deficiency Management**:
 - Number of open deficiencies
@@ -381,7 +392,7 @@ The organization selects, develops, and performs ongoing and/or separate evaluat
 - Overdue deficiencies
 - Repeat deficiencies
 
-{{ source.deficiency_management_kpis }}
+[TODO]
 
 **Audit Performance**:
 - Audit completion rate
@@ -389,23 +400,23 @@ The organization selects, develops, and performs ongoing and/or separate evaluat
 - Recommendation implementation
 - Audit cycle time
 
-{{ source.audit_performance_kpis }}
+[TODO]
 
 ### Compliance KPIs
 
-**Policy Compliance**: {{ source.policy_compliance_kpis }}
+**Policy Compliance**: [TODO]
 
-**Regulatory Compliance**: {{ source.regulatory_compliance_kpis }}
+**Regulatory Compliance**: [TODO]
 
-**Training Compliance**: {{ source.training_compliance_kpis }}
+**Training Compliance**: [TODO]
 
 ### Risk KPIs
 
-**Risk Indicators**: {{ source.risk_indicators }}
+**Risk Indicators**: [TODO]
 
-**Incident Metrics**: {{ source.incident_metrics }}
+**Incident Metrics**: [TODO]
 
-**Deficiency Trends**: {{ source.deficiency_trends }}
+**Deficiency Trends**: [TODO]
 
 ## Continuous Improvement
 
@@ -418,30 +429,30 @@ The organization selects, develops, and performs ongoing and/or separate evaluat
 - Best practices
 - Lessons learned
 
-{{ source.improvement_identification }}
+[TODO]
 
 **Improvement Initiatives**:
-{{ source.improvement_initiatives }}
+[TODO]
 
-**Prioritization**: {{ source.improvement_prioritization }}
+**Prioritization**: [TODO]
 
 ### Implementing Improvements
 
-**Improvement Projects**: {{ source.improvement_projects }}
+**Improvement Projects**: [TODO]
 
-**Change Management**: {{ source.improvement_change_management }}
+**Change Management**: [TODO]
 
-**Success Measurement**: {{ source.improvement_measurement }}
+**Success Measurement**: [TODO]
 
 ### Lessons Learned
 
-**Post-implementation Reviews**: {{ source.post_implementation_reviews }}
+**Post-implementation Reviews**: [TODO]
 
-**Knowledge Management**: {{ source.knowledge_management }}
+**Knowledge Management**: [TODO]
 
-**Best Practices**: {{ source.best_practices }}
+**Best Practices**: [TODO]
 
-**Knowledge Transfer**: {{ source.knowledge_transfer }}
+**Knowledge Transfer**: [TODO]
 
 ## Documentation and Evidence
 
@@ -465,29 +476,29 @@ The organization selects, develops, and performs ongoing and/or separate evaluat
    - Progress reports
    - Validation evidence
 
-{{ source.required_documentation }}
+[TODO]
 
 ### Retention Requirements
 
-{{ source.retention_requirements }}
+[TODO]
 
 ## Monitoring the Monitoring
 
 ### Meta-Monitoring
 
-**Monitoring Effectiveness**: {{ source.monitoring_effectiveness }}
+**Monitoring Effectiveness**: [TODO]
 
-**Monitoring Coverage**: {{ source.monitoring_coverage }}
+**Monitoring Coverage**: [TODO]
 
-**Monitoring Quality**: {{ source.monitoring_quality }}
+**Monitoring Quality**: [TODO]
 
 ### Assessment and Improvement
 
-**Assessment Process**: {{ source.monitoring_assessment }}
+**Assessment Process**: [TODO]
 
-**Improvement Actions**: {{ source.monitoring_improvements }}
+**Improvement Actions**: [TODO]
 
-**Quality Assurance**: {{ source.monitoring_quality_assurance }}
+**Quality Assurance**: [TODO]
 
 ## References
 
@@ -498,13 +509,5 @@ The organization selects, develops, and performs ongoing and/or separate evaluat
 - COBIT 2019 - Monitor, Evaluate, and Assess
 
 <!-- Author notes: Update monitoring activities when processes change -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

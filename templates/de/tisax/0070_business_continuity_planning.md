@@ -1,17 +1,28 @@
----
+
 Document-ID: tisax-0500
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Business Continuity Planning
 
+**Dokument-ID:** [FRAMEWORK]-0070
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt die Business-Continuity-Planung bei {{ source.organization_name }}.
+Dieses Dokument beschreibt die Business-Continuity-Planung bei [TODO].
 
 ## Business Impact Analysis
 
@@ -19,8 +30,8 @@ Dieses Dokument beschreibt die Business-Continuity-Planung bei {{ source.organiz
 
 | Prozess | RTO | RPO | Auswirkung |
 |---------|-----|-----|------------|
-| {{ source.process_1 }} | {{ source.process_1_rto }} | {{ source.process_1_rpo }} | {{ source.process_1_impact }} |
-| {{ source.process_2 }} | {{ source.process_2_rto }} | {{ source.process_2_rpo }} | {{ source.process_2_impact }} |
+| [TODO] | [TODO] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## BC-Strategien
 
@@ -36,23 +47,14 @@ Dieses Dokument beschreibt die Business-Continuity-Planung bei {{ source.organiz
 
 ## BC-Organisation
 
-**BC-Koordinator**: {{ source.bc_coordinator }}
-**Notfallteam**: {{ source.emergency_team }}
+**BC-Koordinator**: [TODO]
+**Notfallteam**: [TODO]
 
 ## Tests und Übungen
 
-- BC-Tests: {{ source.bc_test_frequency }}
+- BC-Tests: [TODO]
 - Tischübungen
 - Vollständige Übungen
 
 <!-- Hinweis: Testen Sie BC-Pläne regelmäßig -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

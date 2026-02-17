@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0320
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Incident Detection
+
+**Document-ID:** [FRAMEWORK]-0180
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -23,9 +34,9 @@ Description of incident detection mechanisms.
 
 ### Automatic Detection
 
-- **Monitoring System**: {{ source.monitoring_system }}
-- **Alerting Tool**: {{ source.alerting_tool }}
-- **Anomaly Detection**: {{ source.anomaly_detection }}
+- **Monitoring System**: [TODO]
+- **Alerting Tool**: [TODO]
+- **Anomaly Detection**: [TODO]
 
 ### Manual Detection
 
@@ -37,32 +48,24 @@ Description of incident detection mechanisms.
 
 ### Monitoring Coverage
 
-- **Application Monitoring**: {{ source.app_monitoring_coverage }}
-- **Infrastructure Monitoring**: {{ source.infra_monitoring_coverage }}
-- **Business Metrics**: {{ source.business_metrics_monitoring }}
+- **Application Monitoring**: [TODO]
+- **Infrastructure Monitoring**: [TODO]
+- **Business Metrics**: [TODO]
 
 ### Alert Configuration
 
-- **Alert Thresholds**: {{ source.alert_thresholds }}
-- **Alert Routing**: {{ source.alert_routing }}
-- **On-Call Rotation**: {{ source.oncall_rotation }}
+- **Alert Thresholds**: [TODO]
+- **Alert Routing**: [TODO]
+- **On-Call Rotation**: [TODO]
 
 ## Escalation
 
 ### Escalation Paths
 
-1. **Level 1**: {{ source.escalation_level_1 }}
-2. **Level 2**: {{ source.escalation_level_2 }}
-3. **Level 3**: {{ source.escalation_level_3 }}
+1. **Level 1**: [TODO]
+2. **Level 2**: [TODO]
+3. **Level 3**: [TODO]
 
 <!-- Note: Fast detection is prerequisite for low MTTR -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

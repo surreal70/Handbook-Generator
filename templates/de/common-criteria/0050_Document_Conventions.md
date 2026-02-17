@@ -1,11 +1,16 @@
 # Document Conventions
 
-**Dokument-ID:** 0050  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0050
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -186,18 +191,9 @@ Folgende Dokumente werden normativ in diesem ST referenziert:
 - Alle Tabellen und Abbildungen müssen sequenziell nummeriert sein
 - Alle Anforderungen müssen eindeutig identifiziert sein
 
----
-
 **Nächste Schritte:**
 1. Vervollständige alle [TODO]-Platzhalter
 2. Verifiziere Konsistenz der Terminologieverwendung
 3. Stelle sicher, dass alle Abkürzungen definiert sind
 4. Prüfe, dass alle Referenzen vollständig sind
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

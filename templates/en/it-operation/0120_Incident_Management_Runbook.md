@@ -1,12 +1,26 @@
 # Incident Management Runbook
 
+**Document-ID:** [FRAMEWORK]-0120
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose and Scope
 
-This document describes the incident management process for {{ meta.organization.name }} according to ITIL v4 best practices. It defines categories, priorities, escalation processes, and standard runbooks for handling service disruptions.
+This document describes the incident management process for {{ meta-organisation.name }} according to ITIL v4 best practices. It defines categories, priorities, escalation processes, and standard runbooks for handling service disruptions.
 
-**Scope:** All IT services and systems of {{ meta.organization.name }}
+**Scope:** All IT services and systems of {{ meta-organisation.name }}
 
-**Responsible:** {{ meta.it_operations_manager.name }} ({{ meta.it_operations_manager.email }})
+**Responsible:** {{ meta-organisation-roles.role_it_operations_manager.name }} ({{ meta-organisation-roles.role_it_operations_manager.email }})
 
 ## Incident Definition
 
@@ -151,7 +165,7 @@ The priority of an incident is determined by **impact** and **urgency**.
 - Affected users/locations
 - Reporter (name, contact)
 
-**Tool:** {{ meta.ticketing_system }}
+**Tool:** {{ meta-handbook.ticketing_system }}
 
 **Responsible:** Service desk
 
@@ -213,10 +227,10 @@ The priority of an incident is determined by **impact** and **urgency**.
 
 | Level | Role | Contact | Escalate For |
 |---|---|---|---|
-| **Level 1** | Service desk | {{ meta.service_desk_lead.email }} | Standard incidents |
-| **Level 2** | IT operations team | {{ meta.it_operations_manager.email }} | Complex technical problems |
+| **Level 1** | Service desk | {{ meta-organisation-roles.role_service_desk_lead.email }} | Standard incidents |
+| **Level 2** | IT operations team | {{ meta-organisation-roles.role_it_operations_manager.email }} | Complex technical problems |
 | **Level 3** | Specialists / vendor | [Vendor contacts] | Specialist knowledge required |
-| **Management** | CIO | {{ meta.cio.email }} | P1 incidents > 2h |
+| **Management** | CIO | {{ meta-organisation-roles.role_cio.email }} | P1 incidents > 2h |
 
 ### Functional Escalation
 
@@ -225,7 +239,7 @@ The priority of an incident is determined by **impact** and **urgency**.
 | **Network** | Network team | [Email] | Network infrastructure |
 | **Server** | Server team | [Email] | Servers and virtualization |
 | **Database** | DBA team | [Email] | Database systems |
-| **Security** | Security team | {{ meta.ciso.email }} | Security incidents |
+| **Security** | Security team | {{ meta-organisation-roles.role_ciso.email }} | Security incidents |
 | **Applications** | Application team | [Email] | Business applications |
 
 ### Escalation Triggers
@@ -354,7 +368,7 @@ The priority of an incident is determined by **impact** and **urgency**.
 5. Perform forensic analysis
 6. Rebuild systems (if required)
 
-**Escalation:** Immediately to CISO ({{ meta.ciso.email }})
+**Escalation:** Immediately to CISO ({{ meta-organisation-roles.role_ciso.email }})
 
 ### Runbook 6: Network Outage
 
@@ -390,7 +404,7 @@ The priority of an incident is determined by **impact** and **urgency**.
 **During Processing:**
 - Regular status updates (P1: every 30 min, P2: every 2h)
 - Escalation notifications
-- Team communication via {{ meta.collaboration_tool }}
+- Team communication via {{ meta-handbook.collaboration_tool }}
 
 **At Incident Resolution:**
 - User notification of resolution
@@ -405,9 +419,9 @@ The priority of an incident is determined by **impact** and **urgency**.
 - External partners for dependencies
 
 **Communication Channels:**
-- Email: {{ meta.organization.email }}
-- Status page: {{ meta.status_page_url }}
-- Phone: {{ meta.organization.phone }}
+- Email: {{ meta-organisation.email }}
+- Status page: {{ meta-handbook.status_page_url }}
+- Phone: {{ meta-organisation.phone }}
 
 **Communication Template:**
 
@@ -429,7 +443,7 @@ We are working intensively on the solution and will keep you informed.
 Next update: [Time]
 
 Best regards
-{{ meta.organization.name }}
+{{ meta-organisation.name }}
 IT Operations Team
 ```
 
@@ -447,10 +461,10 @@ A **major incident** is an incident with:
 
 | Role | Person | Responsibility |
 |---|---|---|
-| **Incident Manager** | {{ meta.it_operations_manager.name }} | Coordination and communication |
+| **Incident Manager** | {{ meta-organisation-roles.role_it_operations_manager.name }} | Coordination and communication |
 | **Technical Lead** | [Name] | Technical solution finding |
 | **Communication Lead** | [Name] | Stakeholder communication |
-| **Management Rep** | {{ meta.cio.name }} | Decisions and escalation |
+| **Management Rep** | {{ meta-organisation-roles.role_cio.name }} | Decisions and escalation |
 
 ### Major Incident Process
 
@@ -493,19 +507,19 @@ A **major incident** is an incident with:
 ## Tools and Systems
 
 ### Incident Management Tool
-- **System:** {{ meta.ticketing_system }}
-- **URL:** {{ meta.ticketing_system_url }}
+- **System:** {{ meta-handbook.ticketing_system }}
+- **URL:** {{ meta-handbook.ticketing_system_url }}
 - **Access:** All IT staff
 
 ### Monitoring System
 - **System:** {{ netbox.monitoring_system }}
-- **URL:** {{ meta.monitoring_url }}
+- **URL:** {{ meta-handbook.monitoring_url }}
 - **Access:** IT operations team
 
 ### Communication Tools
-- **Chat:** {{ meta.collaboration_tool }}
-- **Conference:** {{ meta.conference_system }}
-- **Status Page:** {{ meta.status_page_url }}
+- **Chat:** {{ meta-handbook.collaboration_tool }}
+- **Conference:** {{ meta-handbook.conference_system }}
+- **Status Page:** {{ meta-handbook.status_page_url }}
 
 ## Appendix
 
@@ -533,10 +547,10 @@ A **major incident** is an incident with:
 
 | Team | Primary | Secondary | On-Call |
 |---|---|---|---|
-| **Service Desk** | {{ meta.service_desk_lead.email }} | [Backup] | 24/7 |
-| **IT Operations** | {{ meta.it_operations_manager.email }} | [Backup] | 24/7 |
+| **Service Desk** | {{ meta-organisation-roles.role_service_desk_lead.email }} | [Backup] | 24/7 |
+| **IT Operations** | {{ meta-organisation-roles.role_it_operations_manager.email }} | [Backup] | 24/7 |
 | **Network Team** | [Email] | [Backup] | On-call |
-| **Security Team** | {{ meta.ciso.email }} | [Backup] | 24/7 |
+| **Security Team** | {{ meta-organisation-roles.role_ciso.email }} | [Backup] | 24/7 |
 
 ### References
 
@@ -545,18 +559,9 @@ A **major incident** is an incident with:
 - Internal Service Level Agreements
 - Escalation Matrix
 
----
+**Document Owner:** {{ meta-handbook.owner }}  
+**Approved by:** {{ meta-handbook.approver }}  
+**Version:** {{ meta-handbook.revision }}  
+**Classification:** {{ meta-handbook.classification }}  
+**Last Update:** {{ meta-handbook.date }}
 
-**Document Owner:** {{ meta.document.owner }}  
-**Approved by:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Classification:** {{ meta.document.classification }}  
-**Last Update:** {{ meta.date }}
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

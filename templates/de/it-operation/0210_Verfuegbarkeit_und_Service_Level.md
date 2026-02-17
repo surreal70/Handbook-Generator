@@ -1,15 +1,27 @@
 # Verfügbarkeit und Service Level
 
+**Dokument-ID:** [FRAMEWORK]-0210
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Übersicht
 
 Dieses Dokument definiert die Verfügbarkeitsanforderungen, Service Level Agreements (SLAs) und Service Level Objectives (SLOs) für den IT-Service. Es beschreibt die Messmethoden, Reporting-Prozesse und Maßnahmen zur kontinuierlichen Verbesserung der Serviceverfügbarkeit.
 
-**Dokumentverantwortlicher:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Organisation:** {{ meta.organization.name }}
-
----
+**Dokumentverantwortlicher:** {{ meta-handbook.owner }}  
+**Genehmigt durch:** {{ meta-handbook.approver }}  
+**Version:** {{ meta-handbook.revision }}  
+**Organisation:** {{ meta-organisation.name }}
 
 ## Verfügbarkeitsanforderungen
 
@@ -28,13 +40,13 @@ Dieses Dokument definiert die Verfügbarkeitsanforderungen, Service Level Agreem
 - **Verfügbarkeit:** 24/7/365
 - **Support-Zeiten:** 24/7 mit On-Call-Bereitschaft
 - **Wartungsfenster:** Sonntag 02:00-06:00 Uhr (nach Ankündigung)
-- **Notfall-Wartung:** Nach Genehmigung durch {{ meta.cio.name }}
+- **Notfall-Wartung:** Nach Genehmigung durch {{ meta-organisation-roles.role_cio.name }}
 
 #### Business-Services
 - **Verfügbarkeit:** Mo-Fr 06:00-22:00 Uhr
 - **Support-Zeiten:** Mo-Fr 08:00-18:00 Uhr
 - **Wartungsfenster:** Samstag 20:00-24:00 Uhr
-- **Notfall-Wartung:** Nach Genehmigung durch {{ meta.it_operations_manager.name }}
+- **Notfall-Wartung:** Nach Genehmigung durch {{ meta-organisation-roles.role_it_operations_manager.name }}
 
 #### Entwicklungs-/Test-Services
 - **Verfügbarkeit:** Mo-Fr 08:00-18:00 Uhr
@@ -50,8 +62,6 @@ Dieses Dokument definiert die Verfügbarkeitsanforderungen, Service Level Agreem
 | Patch-Deployment | Monatlich | 1-2 Stunden | 5 Tage | Ops Manager |
 | Major-Upgrade | Quartalsweise | 4-8 Stunden | 14 Tage | CIO |
 | Notfall-Wartung | Ad-hoc | Variable | 4 Stunden | CIO |
-
----
 
 ## Service Level Agreements (SLA)
 
@@ -93,13 +103,13 @@ Dieses Dokument definiert die Verfügbarkeitsanforderungen, Service Level Agreem
 ### SLA-Vertragspartner
 
 #### Interne SLAs
-- **Service Provider:** IT Operations ({{ meta.it_operations_manager.name }})
+- **Service Provider:** IT Operations ({{ meta-organisation-roles.role_it_operations_manager.name }})
 - **Service Consumer:** Fachabteilungen
-- **Verantwortlich:** {{ meta.cio.name }}
+- **Verantwortlich:** {{ meta-organisation-roles.role_cio.name }}
 - **Review-Zyklus:** Quartalsweise
 
 #### Externe SLAs
-- **Service Provider:** {{ meta.organization.name }}
+- **Service Provider:** {{ meta-organisation.name }}
 - **Service Consumer:** [TODO: Kunde/Partner]
 - **Vertragslaufzeit:** [TODO: Laufzeit]
 - **Vertragsstrafen:** [TODO: Penalties bei SLA-Verletzung]
@@ -119,8 +129,6 @@ Dieses Dokument definiert die Verfügbarkeitsanforderungen, Service Level Agreem
 - Vom Kunden verursachte Ausfälle
 - Drittanbieter-Ausfälle außerhalb der Kontrolle
 
----
-
 ## Service Level Objectives (SLO)
 
 ### Interne SLOs
@@ -129,11 +137,11 @@ Dieses Dokument definiert die Verfügbarkeitsanforderungen, Service Level Agreem
 
 | Komponente | SLO | Messmethode | Verantwortlich |
 |---|---:|---|---|
-| Compute-Cluster | 99.9% | Hypervisor-Monitoring | {{ meta.it_operations_manager.name }} |
-| Storage-System | 99.95% | Storage-Monitoring | {{ meta.it_operations_manager.name }} |
-| Netzwerk-Core | 99.99% | Network-Monitoring | {{ meta.it_operations_manager.name }} |
-| Firewall | 99.95% | Security-Monitoring | {{ meta.ciso.name }} |
-| Load Balancer | 99.9% | LB-Monitoring | {{ meta.it_operations_manager.name }} |
+| Compute-Cluster | 99.9% | Hypervisor-Monitoring | {{ meta-organisation-roles.role_it_operations_manager.name }} |
+| Storage-System | 99.95% | Storage-Monitoring | {{ meta-organisation-roles.role_it_operations_manager.name }} |
+| Netzwerk-Core | 99.99% | Network-Monitoring | {{ meta-organisation-roles.role_it_operations_manager.name }} |
+| Firewall | 99.95% | Security-Monitoring | {{ meta-organisation-roles.role_ciso.name }} |
+| Load Balancer | 99.9% | LB-Monitoring | {{ meta-organisation-roles.role_it_operations_manager.name }} |
 
 #### Anwendungs-SLOs
 
@@ -189,8 +197,6 @@ Dieses Dokument definiert die Verfügbarkeitsanforderungen, Service Level Agreem
 - Root-Cause-Analyse aller Ausfälle
 - Verbesserungsplan vor Wiederaufnahme
 
----
-
 ## Verfügbarkeitsmessung
 
 ### Messmethoden
@@ -244,8 +250,6 @@ Tatsächliche Verfügbarkeit: (718 - 1.5) / 718 × 100 = 99.79%
 | [TODO: RUM-Tool] | Real User Monitoring | Kontinuierlich | [TODO: URL] |
 | [TODO: Log-Tool] | Log-Aggregation | Echtzeit | [TODO: URL] |
 
----
-
 ## Service-Level-Reporting
 
 ### Report-Typen
@@ -260,7 +264,7 @@ Tatsächliche Verfügbarkeit: (718 - 1.5) / 718 × 100 = 99.79%
 - **Versand:** Automatisch um 08:00 Uhr
 
 #### Wöchentlicher SLA-Report
-- **Empfänger:** {{ meta.it_operations_manager.name }}
+- **Empfänger:** {{ meta-organisation-roles.role_it_operations_manager.name }}
 - **Inhalt:**
   - Wochenverfügbarkeit
   - SLA-Compliance-Status
@@ -269,7 +273,7 @@ Tatsächliche Verfügbarkeit: (718 - 1.5) / 718 × 100 = 99.79%
 - **Versand:** Jeden Montag
 
 #### Monatlicher SLA-Report
-- **Empfänger:** {{ meta.cio.name }}, Stakeholder
+- **Empfänger:** {{ meta-organisation-roles.role_cio.name }}, Stakeholder
 - **Inhalt:**
   - Monatsverfügbarkeit
   - SLA-Erfüllung vs. Ziele
@@ -279,7 +283,7 @@ Tatsächliche Verfügbarkeit: (718 - 1.5) / 718 × 100 = 99.79%
 - **Versand:** Erster Arbeitstag des Folgemonats
 
 #### Quartalsweiser Management-Report
-- **Empfänger:** {{ meta.ceo.name }}, {{ meta.cio.name }}, {{ meta.cfo.name }}
+- **Empfänger:** {{ meta-organisation-roles.role_ceo.name }}, {{ meta-organisation-roles.role_cio.name }}, {{ meta-organisation-roles.role_cfo.name }}
 - **Inhalt:**
   - Quartalsverfügbarkeit
   - SLA-Trends
@@ -307,8 +311,6 @@ Tatsächliche Verfügbarkeit: (718 - 1.5) / 718 × 100 = 99.79%
 | P2 - Hoch | [TODO] | [TODO]h | [TODO]% | [TODO] |
 | P3 - Mittel | [TODO] | [TODO]h | [TODO]% | [TODO] |
 | P4 - Niedrig | [TODO] | [TODO]h | [TODO]% | [TODO] |
-
----
 
 ## Verfügbarkeitsverbesserungen
 
@@ -371,14 +373,12 @@ Tatsächliche Verfügbarkeit: (718 - 1.5) / 718 × 100 = 99.79%
 - **Verantwortlich:** [TODO]
 - **Status:** [TODO]
 
----
-
 ## SLA-Review und Anpassung
 
 ### Review-Prozess
 
 #### Quartalsweiser SLA-Review
-- **Teilnehmer:** {{ meta.cio.name }}, {{ meta.it_operations_manager.name }}, Stakeholder
+- **Teilnehmer:** {{ meta-organisation-roles.role_cio.name }}, {{ meta-organisation-roles.role_it_operations_manager.name }}, Stakeholder
 - **Agenda:**
   - SLA-Erfüllung der letzten 3 Monate
   - Trend-Analyse
@@ -387,7 +387,7 @@ Tatsächliche Verfügbarkeit: (718 - 1.5) / 718 × 100 = 99.79%
 - **Output:** Review-Protokoll mit Handlungsempfehlungen
 
 #### Jährlicher SLA-Review
-- **Teilnehmer:** {{ meta.ceo.name }}, {{ meta.cio.name }}, {{ meta.cfo.name }}, Stakeholder
+- **Teilnehmer:** {{ meta-organisation-roles.role_ceo.name }}, {{ meta-organisation-roles.role_cio.name }}, {{ meta-organisation-roles.role_cfo.name }}, Stakeholder
 - **Agenda:**
   - Jahresverfügbarkeit
   - SLA-Angemessenheit
@@ -409,8 +409,6 @@ Tatsächliche Verfügbarkeit: (718 - 1.5) / 718 × 100 = 99.79%
 - Geschäftspriorität gesunken
 - Realistische Zielsetzung
 
----
-
 ## Prozesse und Verantwortlichkeiten
 
 ### RACI-Matrix
@@ -430,11 +428,9 @@ Tatsächliche Verfügbarkeit: (718 - 1.5) / 718 × 100 = 99.79%
 ### Eskalationspfad
 
 1. **Level 1:** Operations Team - Incident-Response und Monitoring
-2. **Level 2:** {{ meta.it_operations_manager.name }} - SLA-Verletzungen
-3. **Level 3:** {{ meta.cio.name }} - Kritische SLA-Verletzungen
-4. **Level 4:** {{ meta.ceo.name }} - Vertragliche Konsequenzen
-
----
+2. **Level 2:** {{ meta-organisation-roles.role_it_operations_manager.name }} - SLA-Verletzungen
+3. **Level 3:** {{ meta-organisation-roles.role_cio.name }} - Kritische SLA-Verletzungen
+4. **Level 4:** {{ meta-organisation-roles.role_ceo.name }} - Vertragliche Konsequenzen
 
 ## Compliance und Standards
 
@@ -448,8 +444,6 @@ Tatsächliche Verfügbarkeit: (718 - 1.5) / 718 × 100 = 99.79%
 - Verfügbarkeits-Reports und Metriken
 - Incident-Dokumentation
 - Verbesserungsmaßnahmen-Nachweise
-
----
 
 ## Anhang
 
@@ -472,16 +466,7 @@ Tatsächliche Verfügbarkeit: (718 - 1.5) / 718 × 100 = 99.79%
 - COBIT 2019 Framework
 - Site Reliability Engineering (Google)
 
----
-
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Letzte Aktualisierung:** {{ meta-handbook.date }}  
 **Nächste Review:** [TODO: Datum]  
-**Kontakt:** {{ meta.it_operations_manager.email }}
+**Kontakt:** {{ meta-organisation-roles.role_it_operations_manager.email }}
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

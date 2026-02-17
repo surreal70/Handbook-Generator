@@ -1,13 +1,25 @@
----
+
 Document-ID: nist-csf-0610
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Current Profile
+
+**Document-ID:** [FRAMEWORK]-0610
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -15,51 +27,42 @@ This document describes the organization's current cybersecurity profile based o
 
 ## Scope
 
-{{ meta.scope }}
+{{ meta-handbook.scope }}
 
 ## Current Profile Assessment
 
 ### Govern Function
-- Current maturity: {{ meta.govern_maturity }}
-- Key strengths: {{ meta.govern_strengths }}
-- Key gaps: {{ meta.govern_gaps }}
+- Current maturity: {{ meta-handbook.govern_maturity }}
+- Key strengths: {{ meta-handbook.govern_strengths }}
+- Key gaps: {{ meta-handbook.govern_gaps }}
 
 ### Identify Function
-- Current maturity: {{ meta.identify_maturity }}
-- Key strengths: {{ meta.identify_strengths }}
-- Key gaps: {{ meta.identify_gaps }}
+- Current maturity: {{ meta-handbook.identify_maturity }}
+- Key strengths: {{ meta-handbook.identify_strengths }}
+- Key gaps: {{ meta-handbook.identify_gaps }}
 
 ### Protect Function
-- Current maturity: {{ meta.protect_maturity }}
-- Key strengths: {{ meta.protect_strengths }}
-- Key gaps: {{ meta.protect_gaps }}
+- Current maturity: {{ meta-handbook.protect_maturity }}
+- Key strengths: {{ meta-handbook.protect_strengths }}
+- Key gaps: {{ meta-handbook.protect_gaps }}
 
 ### Detect Function
-- Current maturity: {{ meta.detect_maturity }}
-- Key strengths: {{ meta.detect_strengths }}
-- Key gaps: {{ meta.detect_gaps }}
+- Current maturity: {{ meta-handbook.detect_maturity }}
+- Key strengths: {{ meta-handbook.detect_strengths }}
+- Key gaps: {{ meta-handbook.detect_gaps }}
 
 ### Respond Function
-- Current maturity: {{ meta.respond_maturity }}
-- Key strengths: {{ meta.respond_strengths }}
-- Key gaps: {{ meta.respond_gaps }}
+- Current maturity: {{ meta-handbook.respond_maturity }}
+- Key strengths: {{ meta-handbook.respond_strengths }}
+- Key gaps: {{ meta-handbook.respond_gaps }}
 
 ### Recover Function
-- Current maturity: {{ meta.recover_maturity }}
-- Key strengths: {{ meta.recover_strengths }}
-- Key gaps: {{ meta.recover_gaps }}
+- Current maturity: {{ meta-handbook.recover_maturity }}
+- Key strengths: {{ meta-handbook.recover_strengths }}
+- Key gaps: {{ meta-handbook.recover_gaps }}
 
 ## Document References
 
 - 0620_target_profile.md
 - 0630_gap_analysis.md
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |
-
-<!-- Author Notes: Update profile annually or after major changes -->

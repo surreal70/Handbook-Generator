@@ -1,13 +1,24 @@
----
+
 Document-ID: csa-ccm-0210
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # DSP-05: Data Encryption at Rest
+
+**Document-ID:** [FRAMEWORK]-0210
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## CCM Control
 
@@ -28,7 +39,7 @@ The organization must:
 - Implement encryption for all storage locations (databases, file storage, backups)
 - Regularly review encryption implementation
 
-## Implementation at {{ source.organization_name }}
+## Implementation at [TODO]
 
 ### Encryption Standards
 
@@ -259,16 +270,8 @@ Master Key (Root Key)
 
 | Version | Date | Author | Change |
 |---------|------|--------|--------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial version |
+| 1.0 | [Date] | [Author] | Initial version |
 
 <!-- Note: Adapt encryption implementation to your infrastructure -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

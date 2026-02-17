@@ -1,13 +1,24 @@
----
+
 Document-ID: soc1-0100
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Control Environment
+
+**Document-ID:** [FRAMEWORK]-0060
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -30,120 +41,120 @@ The control environment forms the foundation for all other components of interna
 
 ### Code of Conduct
 
-**Document**: {{ source.code_of_conduct }}
+**Document**: [TODO]
 
 **Core Principles**:
-1. {{ source.ethics_principle_1 }}
-2. {{ source.ethics_principle_2 }}
-3. {{ source.ethics_principle_3 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
 
 ### Communication of Ethical Standards
 
-{{ source.ethics_communication }}
+[TODO]
 
 ### Enforcement
 
-{{ source.ethics_enforcement }}
+[TODO]
 
 ### Conflicts of Interest
 
-{{ source.conflict_of_interest_policy }}
+[TODO]
 
 ## Board Oversight
 
 ### Board Structure
 
-**Composition**: {{ source.board_composition }}
-**Independence**: {{ source.board_independence }}
-**Expertise**: {{ source.board_expertise }}
+**Composition**: [TODO]
+**Independence**: [TODO]
+**Expertise**: [TODO]
 
 ### Oversight Functions
 
-**Strategic Oversight**: {{ source.board_strategic_oversight }}
-**Risk Oversight**: {{ source.board_risk_oversight }}
-**Compliance Oversight**: {{ source.board_compliance_oversight }}
+**Strategic Oversight**: [TODO]
+**Risk Oversight**: [TODO]
+**Compliance Oversight**: [TODO]
 
 ### Committees
 
-**Audit Committee**: {{ source.audit_committee }}
-**Risk Committee**: {{ source.risk_committee }}
-**Compensation Committee**: {{ source.compensation_committee }}
+**Audit Committee**: [TODO]
+**Risk Committee**: [TODO]
+**Compensation Committee**: [TODO]
 
 ## Organizational Structure
 
 ### Organization Chart
 
 ```
-{{ source.organizational_chart }}
+[TODO]
 ```
 
 ### Reporting Lines
 
-{{ source.reporting_lines }}
+[TODO]
 
 ### Responsibilities
 
-**CEO**: {{ source.ceo_responsibilities }}
-**CFO**: {{ source.cfo_responsibilities }}
-**CIO**: {{ source.cio_responsibilities }}
-**COO**: {{ source.coo_responsibilities }}
+**CEO**: [TODO]
+**CFO**: [TODO]
+**CIO**: [TODO]
+**COO**: [TODO]
 
 ### Delegation of Authority
 
-{{ source.authority_delegation }}
+[TODO]
 
 ## Competence and Accountability
 
 ### Competency Requirements
 
-**Job Descriptions**: {{ source.job_descriptions }}
-**Qualification Requirements**: {{ source.qualification_requirements }}
+**Job Descriptions**: [TODO]
+**Qualification Requirements**: [TODO]
 
 ### Performance Management
 
-**Performance Evaluation**: {{ source.performance_evaluation }}
-**Goal Setting**: {{ source.goal_setting }}
-**Feedback Processes**: {{ source.feedback_processes }}
+**Performance Evaluation**: [TODO]
+**Goal Setting**: [TODO]
+**Feedback Processes**: [TODO]
 
 ### Accountability Mechanisms
 
-{{ source.accountability_mechanisms }}
+[TODO]
 
 ## Human Resources Policies
 
 ### Recruitment and Hiring
 
-**Selection Process**: {{ source.recruitment_process }}
-**Background Checks**: {{ source.background_checks }}
-**Onboarding**: {{ source.onboarding_process }}
+**Selection Process**: [TODO]
+**Background Checks**: [TODO]
+**Onboarding**: [TODO]
 
 ### Training and Development
 
-**Initial Training**: {{ source.initial_training }}
-**Ongoing Training**: {{ source.ongoing_training }}
-**Career Development**: {{ source.career_development }}
+**Initial Training**: [TODO]
+**Ongoing Training**: [TODO]
+**Career Development**: [TODO]
 
 ### Disciplinary Actions
 
-{{ source.disciplinary_procedures }}
+[TODO]
 
 ### Termination Procedures
 
-{{ source.termination_procedures }}
+[TODO]
 
 ## Management Philosophy and Operating Style
 
 ### Leadership Culture
 
-{{ source.leadership_culture }}
+[TODO]
 
 ### Risk Appetite
 
-{{ source.risk_appetite }}
+[TODO]
 
 ### Decision Making
 
-{{ source.decision_making_process }}
+[TODO]
 
 ## References
 
@@ -151,13 +162,5 @@ The control environment forms the foundation for all other components of interna
 - SOC 1 Control Environment Guidance
 
 <!-- Author notes: Update organizational structures when changes occur -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

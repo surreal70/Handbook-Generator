@@ -1,13 +1,25 @@
----
+
 Document-ID: nist-csf-0110
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Business Environment (ID.BE)
+
+**Document-ID:** [FRAMEWORK]-0110
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -15,12 +27,12 @@ This document describes the organization's business environment, including missi
 
 ## Scope
 
-{{ meta.scope }}
+{{ meta-handbook.scope }}
 
 ## Business Mission and Objectives
 
 ### Mission
-{{ meta.organization_mission }}
+{{ meta-handbook.organization_mission }}
 
 ### Strategic Objectives
 1. {{ meta.strategic_goal_1 }}
@@ -52,14 +64,14 @@ This document describes the organization's business environment, including missi
 ## Business Dependencies
 
 ### IT Systems
-- ERP System: {{ meta.erp_system }}
-- CRM System: {{ meta.crm_system }}
-- Production Systems: {{ meta.production_systems }}
+- ERP System: {{ meta-handbook.erp_system }}
+- CRM System: {{ meta-handbook.crm_system }}
+- Production Systems: {{ meta-handbook.production_systems }}
 
 ### External Services
-- Cloud Provider: {{ meta.cloud_provider }}
-- Managed Services: {{ meta.managed_services }}
-- Payment Provider: {{ meta.payment_provider }}
+- Cloud Provider: {{ meta-handbook.cloud_provider }}
+- Managed Services: {{ meta-handbook.managed_services }}
+- Payment Provider: {{ meta-handbook.payment_provider }}
 
 ## Document References
 
@@ -67,12 +79,3 @@ This document describes the organization's business environment, including missi
 - 0100_asset_management.md
 - 0130_risk_assessment.md
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |
-
-<!-- Author Notes: Update when business changes occur -->

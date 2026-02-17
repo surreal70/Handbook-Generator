@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-31000-0050
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Principle 4 & 5: Inclusive and Dynamic
+
+**Document-ID:** [FRAMEWORK]-0050
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -26,7 +38,7 @@ Appropriate and timely involvement of stakeholders enables their knowledge, view
 - Knowledge and experience are utilized
 - Transparency and trust are promoted
 
-### Stakeholder Engagement in {{ meta.organization }}
+### Stakeholder Engagement in {{ meta-organisation.name }}
 
 | Stakeholder Group | Engagement Method |
 |-------------------|-------------------|
@@ -50,7 +62,7 @@ Risks can emerge, change, or disappear as external and internal contexts change.
 - Early warning systems for new risks
 - Flexible adaptation of measures
 
-### Dynamic Risk Management in {{ meta.organization }}
+### Dynamic Risk Management in {{ meta-organisation.name }}
 
 **Monitoring Mechanisms:**
 1. Continuous environment observation
@@ -72,12 +84,4 @@ The combination of inclusive and dynamic risk management enables:
 - Quick response through broad knowledge base
 - Acceptance of measures through involvement
 - Continuous improvement through feedback
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 

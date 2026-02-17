@@ -49,9 +49,9 @@ The templates are organized by COSO components and reporting elements:
 ### 1. Customize for Your Organization
 
 Replace placeholders with your organization-specific information:
-- `{{ source.organization_name }}` - Your organization name
-- `{{ source.services_description }}` - Description of your services
-- `{{ source.control_objective_X }}` - Your specific control objectives
+- `[TODO]` - Your organization name
+- `[TODO]` - Description of your services
+- `[TODO]` - Your specific control objectives
 - Additional placeholders according to your environment
 
 ### 2. Define Control Objectives

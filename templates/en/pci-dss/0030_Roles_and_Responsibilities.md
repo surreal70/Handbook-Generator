@@ -1,13 +1,16 @@
 # Roles and Responsibilities
 
-**Document ID:** PCI-0030  
-**Organization:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Approved by:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0030
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,7 +28,7 @@ Customization required:
 
 ## 1. Purpose
 
-This document defines the roles, responsibilities, and accountabilities for PCI-DSS compliance at {{ meta.organization.name }}.
+This document defines the roles, responsibilities, and accountabilities for PCI-DSS compliance at {{ meta-organisation.name }}.
 
 ### 1.1 Objectives
 
@@ -39,9 +42,9 @@ This document defines the roles, responsibilities, and accountabilities for PCI-
 ### 2.1 Executive Management
 
 **Chief Executive Officer (CEO):**
-- **Name:** {{ meta.roles.ceo.name }}
-- **Email:** {{ meta.roles.ceo.email }}
-- **Phone:** {{ meta.roles.ceo.phone }}
+- **Name:** {{ meta-organisation-roles.role_CEO }}
+- **Email:** {{ meta-organisation-roles.role_CEO }}
+- **Phone:** [TODO]
 
 **Responsibilities:**
 - Overall responsibility for PCI-DSS compliance
@@ -50,9 +53,9 @@ This document defines the roles, responsibilities, and accountabilities for PCI-
 - Escalation point for critical compliance issues
 
 **Chief Information Security Officer (CISO):**
-- **Name:** {{ meta.roles.ciso.name }}
-- **Email:** {{ meta.roles.ciso.email }}
-- **Phone:** {{ meta.roles.ciso.phone }}
+- **Name:** {{ meta-organisation-roles.role_CISO }}
+- **Email:** {{ meta-organisation-roles.role_CISO }}
+- **Phone:** [TODO]
 
 **Responsibilities:**
 - Leadership of PCI-DSS compliance program
@@ -88,9 +91,9 @@ This document defines the roles, responsibilities, and accountabilities for PCI-
 ### 2.3 IT and Operations
 
 **Chief Information Officer (CIO):**
-- **Name:** {{ meta.roles.cio.name }}
-- **Email:** {{ meta.roles.cio.email }}
-- **Phone:** {{ meta.roles.cio.phone }}
+- **Name:** {{ meta-organisation-roles.role_CIO }}
+- **Email:** {{ meta-organisation-roles.role_CIO }}
+- **Phone:** [TODO]
 
 **Responsibilities:**
 - Responsibility for IT infrastructure and systems
@@ -378,13 +381,5 @@ This document defines the roles, responsibilities, and accountabilities for PCI-
 - Test results (if applicable)
 
 **Retention Period:** [TODO: 3 years]
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 <!-- End of template -->

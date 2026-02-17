@@ -1,17 +1,28 @@
----
+
 Document-ID: csa-ccm-0200
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Datensicherheit und Datenschutz (DSP)
 
+**Dokument-ID:** [FRAMEWORK]-0200
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt die Datensicherheits- und Datenschutzmaßnahmen für Cloud-Daten in {{ source.organization_name }}.
+Dieses Dokument beschreibt die Datensicherheits- und Datenschutzmaßnahmen für Cloud-Daten in [TODO].
 
 ## Geltungsbereich
 
@@ -208,12 +219,3 @@ Dieses Dokument gilt für alle in Cloud-Umgebungen gespeicherten, verarbeiteten 
 
 <!-- Hinweis: Passen Sie Datenklassifizierung und Verschlüsselungsstandards an -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

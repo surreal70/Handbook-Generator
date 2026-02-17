@@ -1,14 +1,16 @@
 # Richtlinie: Backup, Restore und Regelmäßige Tests
 
-**Dokument-ID:** 0430  
-**Dokumenttyp:** Richtlinie (detailliert)  
-**Zugehörige Policy:** 0420_Policy_Backup_und_Wiederherstellung.md  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.8.13  
-**Owner:** {{ meta.it_operations.manager }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.document.date }}
+**Dokument-ID:** 0430
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -19,7 +21,7 @@ Diese Richtlinie konkretisiert die `0420_Policy_Backup_und_Wiederherstellung.md`
 - Restore-Prozesse und -Tests
 - Backup-Monitoring und -Verifizierung
 
-**Geltungsbereich:** Alle Daten und Systeme bei **{{ meta.organization.name }}**
+**Geltungsbereich:** Alle Daten und Systeme bei **{{ meta-organisation.name }}**
 
 ## 2. Backup-Strategie
 
@@ -326,15 +328,6 @@ Diese Richtlinie konkretisiert die `0420_Policy_Backup_und_Wiederherstellung.md`
 - **ISO/IEC 27001:2022 Annex A.8.13** - Information backup
 - **NIST SP 800-34** - Contingency Planning Guide
 
----
-
 **Genehmigt durch:** {{ meta.ciso.name }}, CISO  
-**Nächster Review:** {{ meta.document.next_review }}
+**Nächster Review:** {{ meta-handbook.next_review }}
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

@@ -1,15 +1,27 @@
 # Bekannte Probleme und FAQ
 
+**Dokument-ID:** [FRAMEWORK]-0260
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Übersicht
 
 Dieses Dokument enthält bekannte Probleme und Workarounds, häufig gestellte Fragen (FAQ) sowie Troubleshooting-Tipps für den IT-Service. Ziel ist es, schnelle Lösungen für wiederkehrende Probleme bereitzustellen und die Effizienz des Supports zu erhöhen.
 
-**Dokumentverantwortlicher:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Organisation:** {{ meta.organization.name }}
-
----
+**Dokumentverantwortlicher:** {{ meta-handbook.owner }}  
+**Genehmigt durch:** {{ meta-handbook.approver }}  
+**Version:** {{ meta-handbook.revision }}  
+**Organisation:** {{ meta-organisation.name }}
 
 ## Bekannte Probleme
 
@@ -17,10 +29,8 @@ Dieses Dokument enthält bekannte Probleme und Workarounds, häufig gestellte Fr
 
 Alle bekannten Probleme werden im Ticketing-System mit dem Label "Known Issue" erfasst und hier dokumentiert.
 
-**Verantwortlich:** {{ meta.it_operations_manager.name }}  
+**Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}  
 **Review-Zyklus:** Monatlich
-
----
 
 ### KI-001: [TODO: Problem-Titel]
 
@@ -65,8 +75,6 @@ Alle bekannten Probleme werden im Ticketing-System mit dem Label "Known Issue" e
 - [TODO: Datum] - Update kommuniziert
 - [TODO: Datum] - Lösung kommuniziert
 
----
-
 ### KI-002: Intermittierende Netzwerk-Timeouts
 
 **Status:** In Bearbeitung  
@@ -102,12 +110,10 @@ Benutzer erleben sporadische Netzwerk-Timeouts beim Zugriff auf interne Anwendun
 - **Status:** Geplant
 - **ETA:** Q2 2026
 - **Maßnahme:** Upgrade des Core-Switches auf höhere Bandbreite
-- **Verantwortlich:** {{ meta.it_operations_manager.name }}
+- **Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
 
 #### Betroffene Benutzer
 Alle internen Benutzer während Backup-Zeiten
-
----
 
 ### KI-003: Langsame Datenbank-Queries
 
@@ -150,8 +156,6 @@ ANALYZE TABLE products;
 - CPU-Last auf DB-Server normalisiert
 - Keine Timeouts mehr
 
----
-
 ## Häufig gestellte Fragen (FAQ)
 
 ### Allgemeine Fragen
@@ -159,16 +163,14 @@ ANALYZE TABLE products;
 #### F: Wie erreiche ich den IT-Support?
 
 **A:** Der IT-Support ist über folgende Kanäle erreichbar:
-- **E-Mail:** {{ meta.service_desk_lead.email }}
-- **Telefon:** {{ meta.service_desk_lead.phone }}
+- **E-Mail:** {{ meta-organisation-roles.role_service_desk_lead.email }}
+- **Telefon:** {{ meta-organisation-roles.role_service_desk_lead.phone }}
 - **Ticketing-System:** [TODO: URL]
 - **Chat:** [TODO: Chat-Kanal]
 
 **Support-Zeiten:**
 - Mo-Fr: 08:00-18:00 Uhr
 - 24/7 für kritische Incidents (P1)
-
----
 
 #### F: Wie erstelle ich ein Support-Ticket?
 
@@ -181,16 +183,14 @@ ANALYZE TABLE products;
    - Formular ausfüllen und absenden
 
 2. **E-Mail:**
-   - E-Mail an {{ meta.service_desk_lead.email }}
+   - E-Mail an {{ meta-organisation-roles.role_service_desk_lead.email }}
    - Betreff: Kurze Problembeschreibung
    - Inhalt: Detaillierte Beschreibung, Screenshots
 
 3. **Telefon:**
-   - {{ meta.service_desk_lead.phone }} anrufen
+   - {{ meta-organisation-roles.role_service_desk_lead.phone }} anrufen
    - Problem schildern
    - Ticket-Nummer notieren
-
----
 
 #### F: Wie priorisiert der Support Tickets?
 
@@ -202,8 +202,6 @@ ANALYZE TABLE products;
 | P2 - Hoch | Teilausfall, viele Benutzer betroffen | 1 Stunde | 8 Stunden |
 | P3 - Mittel | Einzelne Benutzer betroffen | 4 Stunden | 24 Stunden |
 | P4 - Niedrig | Fragen, Feature-Requests | 8 Stunden | 72 Stunden |
-
----
 
 ### Zugriff und Authentifizierung
 
@@ -219,8 +217,6 @@ ANALYZE TABLE products;
 
 **Alternativ:** IT-Support kontaktieren
 
----
-
 #### F: Wie richte ich MFA (Multi-Faktor-Authentifizierung) ein?
 
 **A:** MFA-Einrichtung:
@@ -235,8 +231,6 @@ ANALYZE TABLE products;
 5. MFA testen
 
 **Wichtig:** Backup-Codes an sicherem Ort aufbewahren!
-
----
 
 #### F: Ich kann mich nicht per VPN verbinden. Was kann ich tun?
 
@@ -263,8 +257,6 @@ ANALYZE TABLE products;
 - VPN-Client-Version
 - Fehlermeldung (Screenshot)
 - Zeitpunkt des Problems
-
----
 
 ### Anwendungen
 
@@ -299,8 +291,6 @@ ANALYZE TABLE products;
 - Zeitpunkt des Problems
 - Screenshot
 
----
-
 #### F: Ich erhalte einen "500 Internal Server Error". Was bedeutet das?
 
 **A:** Ein 500-Fehler bedeutet, dass ein Problem auf dem Server aufgetreten ist.
@@ -321,8 +311,6 @@ ANALYZE TABLE products;
 - Server-Logs prüfen
 - Anwendungs-Logs prüfen
 - Monitoring-Alerts prüfen
-
----
 
 ### E-Mail
 
@@ -351,8 +339,6 @@ ANALYZE TABLE products;
 
 **Wenn Problem weiterhin besteht:** IT-Support kontaktieren
 
----
-
 #### F: Ich erhalte viele Spam-E-Mails. Was kann ich tun?
 
 **A:** Spam-Reduzierung:
@@ -374,10 +360,8 @@ ANALYZE TABLE products;
 **Bei verdächtigen E-Mails:**
 - **NICHT** auf Links klicken
 - **NICHT** Anhänge öffnen
-- An {{ meta.ciso.email }} weiterleiten
+- An {{ meta-organisation-roles.role_ciso.email }} weiterleiten
 - E-Mail löschen
-
----
 
 ### Dateien und Storage
 
@@ -406,8 +390,6 @@ ANALYZE TABLE products;
 - Wöchentliche Backups: 90 Tage
 - Monatliche Backups: 1 Jahr
 
----
-
 #### F: Mein Netzwerk-Laufwerk ist voll. Was soll ich tun?
 
 **A:** Storage-Management:
@@ -434,8 +416,6 @@ ANALYZE TABLE products;
 - Standard-Benutzer: [TODO: Größe]
 - Power-User: [TODO: Größe]
 - Projekt-Shares: [TODO: Größe]
-
----
 
 ### Hardware
 
@@ -467,8 +447,6 @@ ANALYZE TABLE products;
 - Hardware-Upgrade prüfen
 - Neuinstallation erwägen
 
----
-
 #### F: Wie beantrage ich neue Hardware?
 
 **A:** Hardware-Anforderung:
@@ -480,7 +458,7 @@ ANALYZE TABLE products;
 
 2. **Genehmigung:**
    - Manager-Genehmigung erforderlich
-   - Budget-Prüfung durch {{ meta.cfo.name }}
+   - Budget-Prüfung durch {{ meta-organisation-roles.role_cfo.name }}
 
 3. **Beschaffung:**
    - IT-Team bestellt Hardware
@@ -495,8 +473,6 @@ ANALYZE TABLE products;
 - Desktop: [TODO: Modell]
 - Monitor: [TODO: Modell]
 - Peripherie: Maus, Tastatur, Headset
-
----
 
 ## Troubleshooting-Tipps
 
@@ -529,8 +505,6 @@ ANALYZE TABLE products;
    - Ticket erstellen
    - IT-Support kontaktieren
 
----
-
 ### Browser-Probleme
 
 **Symptome:**
@@ -545,8 +519,6 @@ ANALYZE TABLE products;
 4. Inkognito-Modus testen
 5. Anderen Browser testen
 6. Browser neu installieren
-
----
 
 ### Netzwerk-Probleme
 
@@ -563,8 +535,6 @@ ANALYZE TABLE products;
 5. DNS-Cache leeren (ipconfig /flushdns)
 6. VPN-Verbindung prüfen
 
----
-
 ### Anwendungs-Probleme
 
 **Symptome:**
@@ -579,8 +549,6 @@ ANALYZE TABLE products;
 4. Updates installieren
 5. Kompatibilitätsmodus testen (Windows)
 6. Logs prüfen
-
----
 
 ## Self-Service-Ressourcen
 
@@ -599,8 +567,6 @@ ANALYZE TABLE products;
 - **Webinare:** [TODO: Webinar-Kalender]
 - **Präsenz-Schulungen:** Anfrage über IT-Support
 
----
-
 ## Feedback und Verbesserungen
 
 ### Feedback geben
@@ -608,7 +574,7 @@ ANALYZE TABLE products;
 Haben Sie Vorschläge zur Verbesserung dieses Dokuments oder der IT-Services?
 
 **Kontakt:**
-- **E-Mail:** {{ meta.it_operations_manager.email }}
+- **E-Mail:** {{ meta-organisation-roles.role_it_operations_manager.email }}
 - **Feedback-Formular:** [TODO: Formular-URL]
 
 ### Dokument-Updates
@@ -620,9 +586,7 @@ Dieses Dokument wird regelmäßig aktualisiert basierend auf:
 - Prozessverbesserungen
 
 **Review-Zyklus:** Monatlich  
-**Verantwortlich:** {{ meta.it_operations_manager.name }}
-
----
+**Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
 
 ## Prozesse und Verantwortlichkeiten
 
@@ -638,16 +602,12 @@ Dieses Dokument wird regelmäßig aktualisiert basierend auf:
 
 > **Legende:** R = Responsible, A = Accountable, C = Consulted, I = Informed
 
----
-
 ## Compliance und Standards
 
 ### Relevante Standards
 - **ITIL v4:** Service Desk Practice, Knowledge Management
 - **ISO 20000:** Clause 8.2 - Service Desk
 - **COBIT 2019:** DSS02 - Managed Service Requests and Incidents
-
----
 
 ## Anhang
 
@@ -666,16 +626,7 @@ Dieses Dokument wird regelmäßig aktualisiert basierend auf:
 - ISO/IEC 20000-1:2018
 - COBIT 2019 Framework
 
----
-
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Letzte Aktualisierung:** {{ meta-handbook.date }}  
 **Nächste Review:** [TODO: Datum]  
-**Kontakt:** {{ meta.it_operations_manager.email }}
+**Kontakt:** {{ meta-organisation-roles.role_it_operations_manager.email }}
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

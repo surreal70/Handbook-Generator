@@ -1,17 +1,28 @@
----
+
 Document-ID: coso-0510
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Unternehmensebenen-Kontrollen
 
+**Document-ID:** [FRAMEWORK]-0510
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document describes die Unternehmensebenen-Kontrollen (Entity-Level Controls) at {{ source.organization_name }}.
+This document describes die Unternehmensebenen-Kontrollen (Entity-Level Controls) at [TODO].
 
 ## Scope
 
@@ -24,22 +35,22 @@ This document describes die Unternehmensebenen-Kontrollen (Entity-Level Controls
 
 ### Entity-Level Controls
 
-{{ source.entity_level_controls_definition }}
+[TODO]
 
 ### Characteristics
 
-**Unternehmensweite Wirkung**: {{ source.enterprise_wide_impact }}
-**Indirekte Kontrollen**: {{ source.indirect_controls }}
-**Präventive Natur**: {{ source.preventive_nature }}
-**Kulturelle Komponente**: {{ source.cultural_component }}
+**Unternehmensweite Wirkung**: [TODO]
+**Indirekte Kontrollen**: [TODO]
+**Präventive Natur**: [TODO]
+**Kulturelle Komponente**: [TODO]
 
 ## Kategorien von Entity-Level Controls
 
 ### Governance-Kontrollen
 
-**Board-Übersicht**: {{ source.board_oversight }}
-**Ausschussstruktur**: {{ source.committee_structure }}
-**Unabhängigkeit**: {{ source.independence }}
+**Board-Übersicht**: [TODO]
+**Ausschussstruktur**: [TODO]
+**Unabhängigkeit**: [TODO]
 
 **Beispiele**:
 - Board-Zusammensetzung und Qualifikation
@@ -49,9 +60,9 @@ This document describes die Unternehmensebenen-Kontrollen (Entity-Level Controls
 
 ### Management-Kontrollen
 
-**Managementphilosophie**: {{ source.management_philosophy }}
-**Organisationsstruktur**: {{ source.organizational_structure }}
-**Verantwortlichkeitszuweisung**: {{ source.responsibility_assignment }}
+**Managementphilosophie**: [TODO]
+**Organisationsstruktur**: [TODO]
+**Verantwortlichkeitszuweisung**: [TODO]
 
 **Beispiele**:
 - Geschäftsordnung
@@ -61,9 +72,9 @@ This document describes die Unternehmensebenen-Kontrollen (Entity-Level Controls
 
 ### Ethik und Integrität
 
-**Verhaltenskodex**: {{ source.code_of_conduct }}
-**Ethische Werte**: {{ source.ethical_values }}
-**Tone at the Top**: {{ source.tone_at_the_top }}
+**Verhaltenskodex**: [TODO]
+**Ethische Werte**: [TODO]
+**Tone at the Top**: [TODO]
 
 **Beispiele**:
 - Verhaltenskodex
@@ -73,10 +84,10 @@ This document describes die Unternehmensebenen-Kontrollen (Entity-Level Controls
 
 ### Personalwesen-Kontrollen
 
-**Rekrutierung**: {{ source.recruitment }}
-**Entwicklung**: {{ source.development }}
-**Leistungsmanagement**: {{ source.performance_management }}
-**Vergütung**: {{ source.compensation }}
+**Rekrutierung**: [TODO]
+**Entwicklung**: [TODO]
+**Leistungsmanagement**: [TODO]
+**Vergütung**: [TODO]
 
 **Beispiele**:
 - Einstellungsverfahren
@@ -89,153 +100,153 @@ This document describes die Unternehmensebenen-Kontrollen (Entity-Level Controls
 
 ### Strategische Planung
 
-**Strategieentwicklung**: {{ source.strategy_development }}
-**Strategische Ziele**: {{ source.strategic_objectives }}
-**Strategieumsetzung**: {{ source.strategy_implementation }}
-**Strategieüberwachung**: {{ source.strategy_monitoring }}
+**Strategieentwicklung**: [TODO]
+**Strategische Ziele**: [TODO]
+**Strategieumsetzung**: [TODO]
+**Strategieüberwachung**: [TODO]
 
 ### Risikomanagement
 
-**Enterprise Risk Management**: {{ source.enterprise_risk_management }}
-**Risikoappetit**: {{ source.risk_appetite }}
-**Risikotoleranz**: {{ source.risk_tolerance }}
-**Risikokultur**: {{ source.risk_culture }}
+**Enterprise Risk Management**: [TODO]
+**Risikoappetit**: [TODO]
+**Risikotoleranz**: [TODO]
+**Risikokultur**: [TODO]
 
 ### Richtlinien und Verfahren
 
-**Richtlinienrahmen**: {{ source.policy_framework }}
-**Richtlinienhierarchie**: {{ source.policy_hierarchy }}
-**Richtlinienkommunikation**: {{ source.policy_communication }}
-**Richtlinienüberwachung**: {{ source.policy_monitoring }}
+**Richtlinienrahmen**: [TODO]
+**Richtlinienhierarchie**: [TODO]
+**Richtlinienkommunikation**: [TODO]
+**Richtlinienüberwachung**: [TODO]
 
 ### Budgetierung und Planung
 
-**Budgetprozess**: {{ source.budgeting_process }}
-**Finanzplanung**: {{ source.financial_planning }}
-**Ressourcenallokation**: {{ source.resource_allocation }}
-**Budgetüberwachung**: {{ source.budget_monitoring }}
+**Budgetprozess**: [TODO]
+**Finanzplanung**: [TODO]
+**Ressourcenallokation**: [TODO]
+**Budgetüberwachung**: [TODO]
 
 ### Compliance-Programm
 
-**Compliance-Funktion**: {{ source.compliance_function }}
-**Compliance-Überwachung**: {{ source.compliance_monitoring }}
-**Compliance-Schulung**: {{ source.compliance_training }}
-**Compliance-Berichterstattung**: {{ source.compliance_reporting }}
+**Compliance-Funktion**: [TODO]
+**Compliance-Überwachung**: [TODO]
+**Compliance-Schulung**: [TODO]
+**Compliance-Berichterstattung**: [TODO]
 
 ### Interne Revision
 
-**Revisionsauftrag**: {{ source.audit_charter }}
-**Revisionsunabhängigkeit**: {{ source.audit_independence }}
-**Risikobasierte Prüfung**: {{ source.risk_based_auditing }}
-**Revisionsberichterstattung**: {{ source.audit_reporting }}
+**Revisionsauftrag**: [TODO]
+**Revisionsunabhängigkeit**: [TODO]
+**Risikobasierte Prüfung**: [TODO]
+**Revisionsberichterstattung**: [TODO]
 
 ## Tone at the Top
 
 ### Definition und Bedeutung
 
-{{ source.tone_at_the_top_definition }}
+[TODO]
 
 ### Elemente
 
-**Führungsverhalten**: {{ source.leadership_behavior }}
-**Kommunikation**: {{ source.tone_communication }}
-**Vorbildfunktion**: {{ source.role_modeling }}
-**Konsequenzen**: {{ source.consequences }}
+**Führungsverhalten**: [TODO]
+**Kommunikation**: [TODO]
+**Vorbildfunktion**: [TODO]
+**Konsequenzen**: [TODO]
 
 ### Messung
 
-{{ source.tone_measurement }}
+[TODO]
 
 ## Kontrollumgebung
 
 ### Integrität und ethische Werte
 
-**Verhaltensstandards**: {{ source.behavioral_standards }}
-**Ethische Dilemmata**: {{ source.ethical_dilemmas }}
-**Durchsetzung**: {{ source.enforcement }}
+**Verhaltensstandards**: [TODO]
+**Ethische Dilemmata**: [TODO]
+**Durchsetzung**: [TODO]
 
 ### Kompetenz
 
-**Kompetenzanforderungen**: {{ source.competency_requirements }}
-**Kompetenzentwicklung**: {{ source.competency_development }}
-**Kompetenzbeurteilung**: {{ source.competency_assessment }}
+**Kompetenzanforderungen**: [TODO]
+**Kompetenzentwicklung**: [TODO]
+**Kompetenzbeurteilung**: [TODO]
 
 ### Verantwortlichkeit
 
-**Verantwortlichkeitskultur**: {{ source.accountability_culture }}
-**Leistungsmessung**: {{ source.performance_measurement }}
-**Konsequenzen**: {{ source.accountability_consequences }}
+**Verantwortlichkeitskultur**: [TODO]
+**Leistungsmessung**: [TODO]
+**Konsequenzen**: [TODO]
 
 ## Überwachung von Entity-Level Controls
 
 ### Überwachungsmethoden
 
-**Board-Überwachung**: {{ source.board_monitoring }}
-**Management-Überwachung**: {{ source.management_monitoring }}
-**Interne Revision**: {{ source.internal_audit_monitoring }}
-**Externe Prüfung**: {{ source.external_audit_monitoring }}
+**Board-Überwachung**: [TODO]
+**Management-Überwachung**: [TODO]
+**Interne Revision**: [TODO]
+**Externe Prüfung**: [TODO]
 
 ### Indikatoren
 
-**Kulturindikatoren**: {{ source.culture_indicators }}
-**Governance-Indikatoren**: {{ source.governance_indicators }}
-**Compliance-Indikatoren**: {{ source.compliance_indicators }}
+**Kulturindikatoren**: [TODO]
+**Governance-Indikatoren**: [TODO]
+**Compliance-Indikatoren**: [TODO]
 
 ## Wirksamkeitsbewertung
 
 ### Bewertungskriterien
 
-**Design-Wirksamkeit**: {{ source.design_effectiveness }}
-**Operative Wirksamkeit**: {{ source.operating_effectiveness }}
+**Design-Wirksamkeit**: [TODO]
+**Operative Wirksamkeit**: [TODO]
 
 ### Bewertungsmethoden
 
-**Interviews**: {{ source.interviews }}
-**Beobachtungen**: {{ source.observations }}
-**Dokumentenprüfung**: {{ source.document_review }}
-**Umfragen**: {{ source.surveys }}
+**Interviews**: [TODO]
+**Beobachtungen**: [TODO]
+**Dokumentenprüfung**: [TODO]
+**Umfragen**: [TODO]
 
 ### Mängel in Entity-Level Controls
 
-**Auswirkungen**: {{ source.elc_deficiency_impact }}
-**Behebung**: {{ source.elc_deficiency_remediation }}
+**Auswirkungen**: [TODO]
+**Behebung**: [TODO]
 
 ## Beziehung zu Process-Level Controls
 
 ### Komplementäre Kontrollen
 
-{{ source.complementary_controls }}
+[TODO]
 
 ### Hierarchie
 
-{{ source.control_hierarchy }}
+[TODO]
 
 ### Integration
 
-{{ source.elc_plc_integration }}
+[TODO]
 
 ## Best Practices
 
 ### Governance Best Practices
 
-{{ source.governance_best_practices }}
+[TODO]
 
 ### Kulturelle Best Practices
 
-{{ source.cultural_best_practices }}
+[TODO]
 
 ### Überwachungs-Best Practices
 
-{{ source.monitoring_best_practices }}
+[TODO]
 
 ## Roles and Responsibilities
 
-**Vorstand**: {{ source.board_elc_responsibilities }}
-**Prüfungsausschuss**: {{ source.audit_committee_elc_responsibilities }}
-**Geschäftsführung**: {{ source.management_elc_responsibilities }}
-**Chief Compliance Officer**: {{ source.cco_responsibilities }}
-**Chief Risk Officer**: {{ source.cro_responsibilities }}
-**Chief Audit Executive**: {{ source.cae_responsibilities }}
+**Vorstand**: [TODO]
+**Prüfungsausschuss**: [TODO]
+**Geschäftsführung**: [TODO]
+**Chief Compliance Officer**: [TODO]
+**Chief Risk Officer**: [TODO]
+**Chief Audit Executive**: [TODO]
 
 ## References
 
@@ -244,13 +255,5 @@ This document describes die Unternehmensebenen-Kontrollen (Entity-Level Controls
 - Verhaltenskodex
 - Organisationshandbuch
 - Delegationsregelungen
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

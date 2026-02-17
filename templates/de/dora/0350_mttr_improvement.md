@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0350
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # MTTR Verbesserung
+
+**Dokument-ID:** [FRAMEWORK]-0350
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -22,10 +33,10 @@ Strategien zur kontinuierlichen Verbesserung der MTTR.
 
 ## Organisationsinformationen
 
-- **Organisation**: {{ source.organization_name }}
-- **Verbesserungs-Verantwortlicher**: {{ source.mttr_improvement_owner }}
-- **Aktuell**: {{ source.current_mttr }}
-- **Ziel**: {{ source.target_mttr }}
+- **Organisation**: [TODO]
+- **Verbesserungs-Verantwortlicher**: [TODO]
+- **Aktuell**: [TODO]
+- **Ziel**: [TODO]
 
 ## Verbesserungsstrategien
 
@@ -191,10 +202,3 @@ Strategien zur kontinuierlichen Verbesserung der MTTR.
 
 <!-- Hinweis: MTTR-Verbesserung ist kontinuierlicher Prozess -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |

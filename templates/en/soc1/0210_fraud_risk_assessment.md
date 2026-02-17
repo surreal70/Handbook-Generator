@@ -1,13 +1,24 @@
----
+
 Document-ID: soc1-0210
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Fraud Risk Assessment
+
+**Document-ID:** [FRAMEWORK]-0210
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -30,11 +41,11 @@ The organization assesses the potential for fraud in achieving its objectives. A
 
 ### Fraud Triangle
 
-**Opportunity**: {{ source.fraud_opportunity }}
+**Opportunity**: [TODO]
 
-**Incentive/Pressure**: {{ source.fraud_incentive }}
+**Incentive/Pressure**: [TODO]
 
-**Rationalization**: {{ source.fraud_rationalization }}
+**Rationalization**: [TODO]
 
 ### Types of Fraud
 
@@ -44,7 +55,7 @@ The organization assesses the potential for fraud in achieving its objectives. A
 - Liability understatement
 - Disclosure fraud
 
-{{ source.financial_reporting_fraud }}
+[TODO]
 
 **Asset Misappropriation**:
 - Cash theft
@@ -52,7 +63,7 @@ The organization assesses the potential for fraud in achieving its objectives. A
 - Asset misuse
 - Expense fraud
 
-{{ source.asset_misappropriation }}
+[TODO]
 
 **Corruption**:
 - Bribery
@@ -60,21 +71,21 @@ The organization assesses the potential for fraud in achieving its objectives. A
 - Economic extortion
 - Illegal gratuities
 
-{{ source.corruption_fraud }}
+[TODO]
 
 ## Fraud Risk Identification
 
 ### Identification Methods
 
-**Brainstorming Sessions**: {{ source.fraud_brainstorming }}
+**Brainstorming Sessions**: [TODO]
 
-**Interviews**: {{ source.fraud_interviews }}
+**Interviews**: [TODO]
 
-**Process Analysis**: {{ source.process_analysis }}
+**Process Analysis**: [TODO]
 
-**Historical Data Analysis**: {{ source.historical_analysis }}
+**Historical Data Analysis**: [TODO]
 
-**External Information**: {{ source.external_information }}
+**External Information**: [TODO]
 
 ### Risk Factors
 
@@ -84,7 +95,7 @@ The organization assesses the potential for fraud in achieving its objectives. A
 - Profitability pressure
 - External expectations
 
-{{ source.financial_risk_factors }}
+[TODO]
 
 **Operational Risk Factors**:
 - Complex transactions
@@ -92,7 +103,7 @@ The organization assesses the potential for fraud in achieving its objectives. A
 - High employee turnover
 - Inadequate oversight
 
-{{ source.operational_risk_factors }}
+[TODO]
 
 **Behavioral Risk Factors**:
 - Lifestyle beyond means
@@ -100,12 +111,12 @@ The organization assesses the potential for fraud in achieving its objectives. A
 - Dissatisfaction
 - Ethical compromises
 
-{{ source.behavioral_risk_factors }}
+[TODO]
 
 ### Identified Fraud Risks
 
 **Risk Inventory**:
-{{ source.fraud_risk_inventory }}
+[TODO]
 
 ## Fraud Risk Assessment
 
@@ -118,7 +129,7 @@ The organization assesses the potential for fraud in achieving its objectives. A
 - Likely (4)
 - Very likely (5)
 
-{{ source.likelihood_criteria }}
+[TODO]
 
 **Impact**:
 - Insignificant (1)
@@ -127,70 +138,70 @@ The organization assesses the potential for fraud in achieving its objectives. A
 - High (4)
 - Critical (5)
 
-{{ source.impact_criteria }}
+[TODO]
 
 ### Risk Assessment Matrix
 
-**Assessment Methodology**: {{ source.assessment_methodology }}
+**Assessment Methodology**: [TODO]
 
 **Risk Assessment**:
-{{ source.fraud_risk_assessment }}
+[TODO]
 
 ### Prioritization
 
-**High Priority**: {{ source.high_priority_risks }}
+**High Priority**: [TODO]
 
-**Medium Priority**: {{ source.medium_priority_risks }}
+**Medium Priority**: [TODO]
 
-**Low Priority**: {{ source.low_priority_risks }}
+**Low Priority**: [TODO]
 
 ## Fraud Risk Response
 
 ### Preventive Controls
 
-**Segregation of Duties**: {{ source.segregation_of_duties }}
+**Segregation of Duties**: [TODO]
 
-**Authorization Controls**: {{ source.authorization_controls }}
+**Authorization Controls**: [TODO]
 
-**Physical Controls**: {{ source.physical_controls }}
+**Physical Controls**: [TODO]
 
-**IT Controls**: {{ source.it_controls }}
+**IT Controls**: [TODO]
 
-**Personnel Controls**: {{ source.personnel_controls }}
+**Personnel Controls**: [TODO]
 
 ### Detective Controls
 
-**Monitoring Controls**: {{ source.monitoring_controls }}
+**Monitoring Controls**: [TODO]
 
-**Reconciliations**: {{ source.reconciliation_controls }}
+**Reconciliations**: [TODO]
 
-**Analytical Procedures**: {{ source.analytical_procedures }}
+**Analytical Procedures**: [TODO]
 
-**Exception Reporting**: {{ source.exception_reporting }}
+**Exception Reporting**: [TODO]
 
-**Data Analytics**: {{ source.data_analytics }}
+**Data Analytics**: [TODO]
 
 ### Responsive Controls
 
-**Investigation Procedures**: {{ source.investigation_procedures }}
+**Investigation Procedures**: [TODO]
 
-**Corrective Actions**: {{ source.corrective_actions }}
+**Corrective Actions**: [TODO]
 
-**Disciplinary Actions**: {{ source.disciplinary_actions }}
+**Disciplinary Actions**: [TODO]
 
-**Legal Actions**: {{ source.legal_actions }}
+**Legal Actions**: [TODO]
 
 ## Fraud Monitoring and Detection
 
 ### Monitoring Program
 
-**Ongoing Monitoring**: {{ source.ongoing_monitoring }}
+**Ongoing Monitoring**: [TODO]
 
-**Periodic Assessments**: {{ source.periodic_assessments }}
+**Periodic Assessments**: [TODO]
 
-**Internal Audits**: {{ source.internal_audits }}
+**Internal Audits**: [TODO]
 
-**External Audits**: {{ source.external_audits }}
+**External Audits**: [TODO]
 
 ### Detection Mechanisms
 
@@ -201,18 +212,18 @@ The organization assesses the potential for fraud in achieving its objectives. A
 - Control overrides
 - Behavioral changes
 
-{{ source.red_flags }}
+[TODO]
 
-**Data Analytics Tools**: {{ source.data_analytics_tools }}
+**Data Analytics Tools**: [TODO]
 
-**Whistleblower Hotline**: {{ source.whistleblower_hotline }}
+**Whistleblower Hotline**: [TODO]
 
-**External Tips**: {{ source.external_tips }}
+**External Tips**: [TODO]
 
 ### Monitoring Metrics
 
 **Key Risk Indicators (KRIs)**:
-{{ source.fraud_kris }}
+[TODO]
 
 **Metrics**:
 - Number of fraud allegations
@@ -220,7 +231,7 @@ The organization assesses the potential for fraud in achieving its objectives. A
 - Financial loss from fraud
 - Control effectiveness
 
-{{ source.fraud_metrics }}
+[TODO]
 
 ## Reporting and Investigation
 
@@ -233,15 +244,15 @@ The organization assesses the potential for fraud in achieving its objectives. A
 - Whistleblower hotline
 - External hotline
 
-{{ source.reporting_channels }}
+[TODO]
 
-**Anonymity and Protection**: {{ source.reporter_protection }}
+**Anonymity and Protection**: [TODO]
 
 ### Investigation Process
 
-**Investigation Initiation**: {{ source.investigation_initiation }}
+**Investigation Initiation**: [TODO]
 
-**Investigation Team**: {{ source.investigation_team }}
+**Investigation Team**: [TODO]
 
 **Investigation Steps**:
 1. Initial assessment
@@ -251,9 +262,9 @@ The organization assesses the potential for fraud in achieving its objectives. A
 5. Findings
 6. Recommendations
 
-{{ source.investigation_steps }}
+[TODO]
 
-**Documentation**: {{ source.investigation_documentation }}
+**Documentation**: [TODO]
 
 ### Reporting
 
@@ -262,16 +273,16 @@ The organization assesses the potential for fraud in achieving its objectives. A
 - Board/Audit Committee
 - Internal Audit
 
-{{ source.internal_reporting }}
+[TODO]
 
 **External Reporting**:
 - Regulatory authorities
 - Law enforcement
 - External auditors
 
-{{ source.external_reporting }}
+[TODO]
 
-**Report Contents**: {{ source.report_contents }}
+**Report Contents**: [TODO]
 
 ## Training and Awareness
 
@@ -283,7 +294,7 @@ The organization assesses the potential for fraud in achieving its objectives. A
 - Board
 - High-risk areas
 
-{{ source.training_audiences }}
+[TODO]
 
 **Training Content**:
 - Types of fraud
@@ -292,17 +303,17 @@ The organization assesses the potential for fraud in achieving its objectives. A
 - Consequences
 - Case studies
 
-{{ source.training_content }}
+[TODO]
 
-**Training Frequency**: {{ source.training_frequency }}
+**Training Frequency**: [TODO]
 
 ### Awareness Campaigns
 
-**Communication Channels**: {{ source.awareness_channels }}
+**Communication Channels**: [TODO]
 
-**Campaign Themes**: {{ source.awareness_themes }}
+**Campaign Themes**: [TODO]
 
-**Materials**: {{ source.awareness_materials }}
+**Materials**: [TODO]
 
 ## Documentation and Evidence
 
@@ -323,21 +334,21 @@ The organization assesses the potential for fraud in achieving its objectives. A
    - Evidence
    - Action plans
 
-{{ source.required_documentation }}
+[TODO]
 
 ### Retention Requirements
 
-{{ source.retention_requirements }}
+[TODO]
 
 ## Continuous Improvement
 
 ### Lessons Learned
 
-**Post-incident Reviews**: {{ source.post_incident_reviews }}
+**Post-incident Reviews**: [TODO]
 
-**Improvement Actions**: {{ source.improvement_actions }}
+**Improvement Actions**: [TODO]
 
-**Best Practices**: {{ source.best_practices }}
+**Best Practices**: [TODO]
 
 ### Assessment Updates
 
@@ -347,9 +358,9 @@ The organization assesses the potential for fraud in achieving its objectives. A
 - New risks
 - Fraud incidents
 
-{{ source.assessment_updates }}
+[TODO]
 
-**Update Process**: {{ source.update_process }}
+**Update Process**: [TODO]
 
 ## References
 
@@ -360,13 +371,5 @@ The organization assesses the potential for fraud in achieving its objectives. A
 - SAS 99: Consideration of Fraud in a Financial Statement Audit
 
 <!-- Author notes: Update fraud risk assessment annually -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

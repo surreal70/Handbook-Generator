@@ -1,17 +1,28 @@
----
+
 Document-ID: coso-0020
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Interne Kontrollziele
 
+**Dokument-ID:** [FRAMEWORK]-0020
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument definiert die internen Kontrollziele der Organisation {{ source.organization_name }} basierend auf dem COSO Framework.
+Dieses Dokument definiert die internen Kontrollziele der Organisation [TODO] basierend auf dem COSO Framework.
 
 ## Geltungsbereich
 
@@ -30,31 +41,31 @@ Dieses Dokument beschreibt:
 **Ziel**: Sicherstellung der Effektivität und Effizienz der Geschäftsprozesse
 
 **Spezifische Ziele**:
-1. {{ source.operations_objective_1 }}
-2. {{ source.operations_objective_2 }}
-3. {{ source.operations_objective_3 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
 
 **Messgrößen**:
-- {{ source.operations_metrics }}
+- [TODO]
 
 #### Vermögensschutz
 
 **Ziel**: Schutz der Vermögenswerte der Organisation vor Verlust, Missbrauch oder Beschädigung
 
 **Spezifische Ziele**:
-1. {{ source.asset_protection_objective_1 }}
-2. {{ source.asset_protection_objective_2 }}
+1. [TODO]
+2. [TODO]
 
 **Kontrollmaßnahmen**:
-- {{ source.asset_protection_controls }}
+- [TODO]
 
 #### Ressourcenoptimierung
 
 **Ziel**: Optimale Nutzung der verfügbaren Ressourcen
 
 **Spezifische Ziele**:
-1. {{ source.resource_optimization_objective_1 }}
-2. {{ source.resource_optimization_objective_2 }}
+1. [TODO]
+2. [TODO]
 
 ### 2. Berichterstattungsziele (Reporting Objectives)
 
@@ -69,26 +80,26 @@ Dieses Dokument beschreibt:
 4. Einhaltung von Rechnungslegungsstandards
 
 **Kontrollaktivitäten**:
-- {{ source.financial_reporting_controls }}
+- [TODO]
 
 #### Nicht-finanzielle Berichterstattung
 
 **Ziel**: Zuverlässige nicht-finanzielle Berichterstattung
 
 **Spezifische Ziele**:
-1. {{ source.nonfinancial_reporting_objective_1 }}
-2. {{ source.nonfinancial_reporting_objective_2 }}
+1. [TODO]
+2. [TODO]
 
 **Berichtsarten**:
-- {{ source.nonfinancial_report_types }}
+- [TODO]
 
 #### Interne Berichterstattung
 
 **Ziel**: Bereitstellung relevanter Informationen für Managemententscheidungen
 
 **Spezifische Ziele**:
-1. {{ source.internal_reporting_objective_1 }}
-2. {{ source.internal_reporting_objective_2 }}
+1. [TODO]
+2. [TODO]
 
 ### 3. Compliance-Ziele (Compliance Objectives)
 
@@ -97,85 +108,85 @@ Dieses Dokument beschreibt:
 **Ziel**: Einhaltung aller anwendbaren Gesetze und Vorschriften
 
 **Spezifische Ziele**:
-1. {{ source.legal_compliance_objective_1 }}
-2. {{ source.legal_compliance_objective_2 }}
-3. {{ source.legal_compliance_objective_3 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
 
 **Anwendbare Gesetze**:
-- {{ source.applicable_laws }}
+- [TODO]
 
 #### Regulatorische Compliance
 
 **Ziel**: Einhaltung branchenspezifischer Vorschriften
 
 **Spezifische Ziele**:
-1. {{ source.regulatory_compliance_objective_1 }}
-2. {{ source.regulatory_compliance_objective_2 }}
+1. [TODO]
+2. [TODO]
 
 **Regulierungsbehörden**:
-- {{ source.regulatory_authorities }}
+- [TODO]
 
 #### Interne Richtlinien
 
 **Ziel**: Einhaltung interner Richtlinien und Standards
 
 **Spezifische Ziele**:
-1. {{ source.policy_compliance_objective_1 }}
-2. {{ source.policy_compliance_objective_2 }}
+1. [TODO]
+2. [TODO]
 
 ## Zielhierarchie
 
 ### Strategische Ziele
 
-{{ source.strategic_objectives }}
+[TODO]
 
 ### Operative Ziele
 
-{{ source.operational_objectives }}
+[TODO]
 
 ### Funktionale Ziele
 
-{{ source.functional_objectives }}
+[TODO]
 
 ## Zielverknüpfungen
 
 ### Verknüpfung mit Unternehmensstrategie
 
-{{ source.strategy_linkage }}
+[TODO]
 
 ### Verknüpfung mit Risikomanagement
 
-{{ source.risk_management_linkage }}
+[TODO]
 
 ### Verknüpfung mit Performance Management
 
-{{ source.performance_management_linkage }}
+[TODO]
 
 ## Zielmessung und -überwachung
 
 ### Key Performance Indicators (KPIs)
 
-{{ source.kpis }}
+[TODO]
 
 ### Berichterstattung
 
-**Frequenz**: {{ source.reporting_frequency }}
-**Empfänger**: {{ source.reporting_recipients }}
-**Format**: {{ source.reporting_format }}
+**Frequenz**: [TODO]
+**Empfänger**: [TODO]
+**Format**: [TODO]
 
 ### Abweichungsanalyse
 
-{{ source.variance_analysis }}
+[TODO]
 
 ## Zielüberprüfung und -anpassung
 
 ### Überprüfungsprozess
 
-{{ source.review_process }}
+[TODO]
 
 ### Anpassungskriterien
 
-{{ source.adjustment_criteria }}
+[TODO]
 
 ## Verantwortlichkeiten
 
@@ -200,17 +211,8 @@ Dieses Dokument beschreibt:
 ## Referenzen
 
 - COSO Internal Control Framework - Objective Setting
-- Unternehmensstrategie {{ source.organization_name }}
+- Unternehmensstrategie [TODO]
 - Risikomanagement-Richtlinie
 
 <!-- Hinweise für Autoren: Definieren Sie spezifische, messbare Ziele für Ihre Organisation -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

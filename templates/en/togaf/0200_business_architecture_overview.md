@@ -1,17 +1,28 @@
----
+
 Document-ID: togaf-0200
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Business Architecture Overview
 
+**Document-ID:** [FRAMEWORK]-0200
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document provides an overview of the business architecture for {{ source.organization_name }}, including business capabilities, value streams, organizational structure, and business processes.
+This document provides an overview of the business architecture for [TODO], including business capabilities, value streams, organizational structure, and business processes.
 
 ## Scope
 
@@ -27,42 +38,33 @@ This document provides an overview of the business architecture for {{ source.or
 
 | Category | Description | Maturity | Strategic Importance |
 |----------|-------------|----------|---------------------|
-| {{ source.capability_cat_1 }} | {{ source.capability_cat_1_desc }} | {{ source.capability_cat_1_maturity }} | {{ source.capability_cat_1_importance }} |
-| {{ source.capability_cat_2 }} | {{ source.capability_cat_2_desc }} | {{ source.capability_cat_2_maturity }} | {{ source.capability_cat_2_importance }} |
-| {{ source.capability_cat_3 }} | {{ source.capability_cat_3_desc }} | {{ source.capability_cat_3_maturity }} | {{ source.capability_cat_3_importance }} |
+| [TODO] | [TODO] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## Value Streams
 
-### Value Stream 1: {{ source.value_stream_1_name }}
+### Value Stream 1: [TODO]
 
-**Description**: {{ source.value_stream_1_description }}
+**Description**: [TODO]
 
 **Stages**:
-1. {{ source.value_stream_1_stage_1 }}
-2. {{ source.value_stream_1_stage_2 }}
-3. {{ source.value_stream_1_stage_3 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
 
-**Involved Capabilities**: {{ source.value_stream_1_capabilities }}
+**Involved Capabilities**: [TODO]
 
 ## Organizational Structure
 
-{{ source.organization_structure }}
+[TODO]
 
 ## Business Processes
 
 | Process | Owner | Maturity | Automation Level |
 |---------|-------|----------|------------------|
-| {{ source.process_1 }} | {{ source.process_1_owner }} | {{ source.process_1_maturity }} | {{ source.process_1_automation }} |
-| {{ source.process_2 }} | {{ source.process_2_owner }} | {{ source.process_2_maturity }} | {{ source.process_2_automation }} |
+| [TODO] | [TODO] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [TODO] | [TODO] |
 
 <!-- Author notes: Update regularly based on business changes -->
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{meta.document.last_updated}} | {{ meta.defaults.author }} | Initial creation |
-
-<-  ( marked all subtasks complete End of template -->

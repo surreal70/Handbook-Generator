@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0430
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Testing Strategies
+
+**Document-ID:** [FRAMEWORK]-0430
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -22,9 +33,9 @@ Comprehensive testing strategies to reduce Change Failure Rate.
 
 ## Organization Information
 
-- **Organization**: {{ source.organization_name }}
-- **Testing Owner**: {{ source.testing_owner }}
-- **Current Test Coverage**: {{ source.current_test_coverage }}
+- **Organization**: [TODO]
+- **Testing Owner**: [TODO]
+- **Current Test Coverage**: [TODO]
 
 ## Test Pyramid
 
@@ -235,10 +246,3 @@ def test_addition_commutative(a, b):
 
 <!-- Note: Comprehensive tests are the foundation for low CFR -->
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |

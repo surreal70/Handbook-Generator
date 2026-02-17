@@ -1,11 +1,16 @@
 # Rationale for Security Objectives
 
-**Document-ID:** 0610  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** Internal / Confidential / Strictly Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0610
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -316,8 +321,6 @@ This chapter provides the rationale demonstrating that the defined security obje
 - **Section 0300:** Security Objectives
 - **Section 0320:** Security Objectives Coverage Matrix
 
----
-
 **Next Steps:**
 1. Document the rationale for each threat
 2. Document the rationale for each OSP
@@ -327,10 +330,3 @@ This chapter provides the rationale demonstrating that the defined security obje
 6. Identify and address gaps
 7. Have the rationale reviewed by evaluators
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

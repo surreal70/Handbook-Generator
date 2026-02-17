@@ -1,5 +1,19 @@
 # Risk Register (Template)
 
+**Document-ID:** [FRAMEWORK]-0080
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 The risk register is the central repository for all identified information security
@@ -16,16 +30,14 @@ ISO 27001:2022 Reference: Clause 6.1.2 - Information security risk assessment
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Confidential  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** {{ meta-handbook.modifydate }}  
+**Next Review:** {{ meta-handbook.next_review }}
 
 ## 1. Purpose and Instructions
 
 ### 1.1 Purpose
 
-The risk register documents all identified information security risks within the ISMS scope of **{{ meta.organization.name }}**. It serves as:
+The risk register documents all identified information security risks within the ISMS scope of **{{ meta-organisation.name }}**. It serves as:
 - Central overview of all risks
 - Basis for risk treatment decisions
 - Evidence for audits and compliance
@@ -299,26 +311,15 @@ uniquely identified and linked to treatment measures.
 - **ISO/IEC 27005:2022** - Information security risk management
 - **NIST SP 800-30** - Guide for Conducting Risk Assessments
 
----
-
 ## Change History
 
 | Version | Date | Author | Description | Approved By |
 |---------|------|--------|-------------|-------------|
-| 1.0 | {{ meta.document.date }} | {{ meta.ciso.name }} | Initial version | {{ meta.management.ceo }} |
-
----
+| 1.0 | {{ meta-handbook.modifydate }} | {{ meta.ciso.name }} | Initial version | {{ meta.management.ceo }} |
 
 **Approved by:**  
 {{ meta.ciso.name }}, CISO  
-Date: {{ meta.document.approval_date }}
+Date: {{ meta-handbook.modifydate }}
 
-**Next Review:** {{ meta.document.next_review }} (Quarterly)
+**Next Review:** {{ meta-handbook.next_review }} (Quarterly)
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

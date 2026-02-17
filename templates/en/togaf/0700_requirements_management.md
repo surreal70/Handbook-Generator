@@ -1,17 +1,28 @@
----
+
 Document-ID: togaf-0700
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Requirements Management
 
+**Document-ID:** [FRAMEWORK]-0700
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document describes the requirements management process for {{ source.organization_name }}, including requirements repository, traceability, and prioritization.
+This document describes the requirements management process for [TODO], including requirements repository, traceability, and prioritization.
 
 ## Scope
 
@@ -22,7 +33,7 @@ This document describes the requirements management process for {{ source.organi
 
 ## Requirements Management Process
 
-**Process Overview**: {{ source.requirements_process }}
+**Process Overview**: [TODO]
 
 **Process Steps**:
 1. Requirements identification
@@ -42,9 +53,9 @@ This document describes the requirements management process for {{ source.organi
 
 | Requirement ID | Type | Description | Priority | Status |
 |----------------|------|-------------|----------|--------|
-| {{ source.req_1_id }} | {{ source.req_1_type }} | {{ source.req_1_desc }} | {{ source.req_1_priority }} | {{ source.req_1_status }} |
-| {{ source.req_2_id }} | {{ source.req_2_type }} | {{ source.req_2_desc }} | {{ source.req_2_priority }} | {{ source.req_2_status }} |
-| {{ source.req_3_id }} | {{ source.req_3_type }} | {{ source.req_3_desc }} | {{ source.req_3_priority }} | {{ source.req_3_status }} |
+| [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## Requirements Traceability
 
@@ -52,8 +63,8 @@ This document describes the requirements management process for {{ source.organi
 
 | Requirement | Business Goal | Architecture Component | Implementation |
 |-------------|---------------|------------------------|----------------|
-| {{ source.trace_req_1 }} | {{ source.trace_goal_1 }} | {{ source.trace_component_1 }} | {{ source.trace_impl_1 }} |
-| {{ source.trace_req_2 }} | {{ source.trace_goal_2 }} | {{ source.trace_component_2 }} | {{ source.trace_impl_2 }} |
+| [TODO] | [TODO] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## Requirements Prioritization
 
@@ -64,16 +75,7 @@ This document describes the requirements management process for {{ source.organi
 - Dependencies
 - Cost
 
-**Prioritization Method**: {{ source.prioritization_method }}
+**Prioritization Method**: [TODO]
 
 <!-- Author notes: Requirements management is continuous throughout the ADM cycle -->
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{meta.document.last_updated}} | {{ meta.defaults.author }} | Initial creation |
-
-<-  ( marked all subtasks complete End of template -->

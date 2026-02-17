@@ -1,11 +1,16 @@
 # Glossar und Begriffsdefinitionen
 
-**Dokument-ID:** 0630  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** Intern / Vertraulich / Streng vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0630
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -374,8 +379,6 @@ Das Auswählen einer oder mehrerer Optionen aus einer vorgegebenen Liste in eine
 | [TODO: 1.0] | [TODO: Datum] | Initiale Version | [TODO: Name] |
 | [TODO] | [TODO] | [TODO] | [TODO] |
 
----
-
 **Nächste Schritte:**
 1. Identifizieren Sie alle Begriffe, die im ST verwendet werden
 2. Definieren Sie alle TOE-spezifischen Begriffe
@@ -385,10 +388,3 @@ Das Auswählen einer oder mehrerer Optionen aus einer vorgegebenen Liste in eine
 6. Aktualisieren Sie das Glossar bei Änderungen am ST
 7. Lassen Sie das Glossar durch Fachexperten prüfen
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

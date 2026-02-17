@@ -1,17 +1,28 @@
----
+
 Document-ID: coso-0140
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Änderungsidentifikation und -analyse
 
+**Dokument-ID:** [FRAMEWORK]-0140
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt, wie {{ source.organization_name }} wesentliche Änderungen identifiziert und analysiert, die das interne Kontrollsystem beeinflussen könnten (COSO Prinzip 9).
+Dieses Dokument beschreibt, wie [TODO] wesentliche Änderungen identifiziert und analysiert, die das interne Kontrollsystem beeinflussen könnten (COSO Prinzip 9).
 
 ## Geltungsbereich
 
@@ -24,123 +35,123 @@ Dieses Dokument beschreibt, wie {{ source.organization_name }} wesentliche Ände
 
 ### Externe Änderungen
 
-**Wirtschaftliche Änderungen**: {{ source.economic_changes }}
-**Regulatorische Änderungen**: {{ source.regulatory_changes }}
-**Marktänderungen**: {{ source.market_changes }}
-**Technologische Änderungen**: {{ source.technology_changes }}
+**Wirtschaftliche Änderungen**: [TODO]
+**Regulatorische Änderungen**: [TODO]
+**Marktänderungen**: [TODO]
+**Technologische Änderungen**: [TODO]
 
 ### Interne Änderungen
 
-**Organisatorische Änderungen**: {{ source.organizational_changes }}
-**Prozessänderungen**: {{ source.process_changes }}
-**Systemänderungen**: {{ source.system_changes }}
-**Personaländerungen**: {{ source.personnel_changes }}
+**Organisatorische Änderungen**: [TODO]
+**Prozessänderungen**: [TODO]
+**Systemänderungen**: [TODO]
+**Personaländerungen**: [TODO]
 
 ## Änderungsidentifikationsprozess
 
 ### Überwachungsmechanismen
 
-**Umfeldbeobachtung**: {{ source.environmental_scanning }}
-**Stakeholder-Feedback**: {{ source.stakeholder_feedback }}
-**Leistungsindikatoren**: {{ source.performance_indicators }}
-**Risikobewertungen**: {{ source.risk_assessments }}
+**Umfeldbeobachtung**: [TODO]
+**Stakeholder-Feedback**: [TODO]
+**Leistungsindikatoren**: [TODO]
+**Risikobewertungen**: [TODO]
 
 ### Änderungsauslöser
 
-{{ source.change_triggers }}
+[TODO]
 
 ## Änderungsauswirkungsbewertung
 
 ### Bewertungskriterien
 
-**Kontrollauswirkung**: {{ source.control_impact }}
-**Risikoauswirkung**: {{ source.risk_impact }}
-**Operative Auswirkung**: {{ source.operational_impact }}
-**Compliance-Auswirkung**: {{ source.compliance_impact }}
+**Kontrollauswirkung**: [TODO]
+**Risikoauswirkung**: [TODO]
+**Operative Auswirkung**: [TODO]
+**Compliance-Auswirkung**: [TODO]
 
 ### Bewertungsprozess
 
-1. **Identifikation**: {{ source.change_identification_step }}
-2. **Analyse**: {{ source.change_analysis_step }}
-3. **Bewertung**: {{ source.change_evaluation_step }}
-4. **Reaktion**: {{ source.change_response_step }}
+1. **Identifikation**: [TODO]
+2. **Analyse**: [TODO]
+3. **Bewertung**: [TODO]
+4. **Reaktion**: [TODO]
 
 ## Change Management
 
 ### Change-Control-Prozess
 
-**Änderungsantrag**: {{ source.change_request }}
-**Auswirkungsanalyse**: {{ source.impact_analysis }}
-**Genehmigung**: {{ source.change_approval }}
-**Implementierung**: {{ source.change_implementation }}
-**Verifizierung**: {{ source.change_verification }}
+**Änderungsantrag**: [TODO]
+**Auswirkungsanalyse**: [TODO]
+**Genehmigung**: [TODO]
+**Implementierung**: [TODO]
+**Verifizierung**: [TODO]
 
 ### Änderungsdokumentation
 
-{{ source.change_documentation }}
+[TODO]
 
 ## Kontrollanpassung
 
 ### Kontrollüberprüfung
 
-{{ source.control_review }}
+[TODO]
 
 ### Kontrollmodifikation
 
-{{ source.control_modification }}
+[TODO]
 
 ### Neue Kontrollen
 
-{{ source.new_controls }}
+[TODO]
 
 ## Wesentliche Änderungen
 
 ### Definition
 
-{{ source.significant_change_definition }}
+[TODO]
 
 ### Beispiele
 
-**Geschäftsmodelländerungen**: {{ source.business_model_changes }}
-**Führungswechsel**: {{ source.leadership_changes }}
-**Schnelles Wachstum**: {{ source.rapid_growth }}
-**Neue Technologie**: {{ source.new_technology }}
-**Umstrukturierung**: {{ source.restructuring }}
+**Geschäftsmodelländerungen**: [TODO]
+**Führungswechsel**: [TODO]
+**Schnelles Wachstum**: [TODO]
+**Neue Technologie**: [TODO]
+**Umstrukturierung**: [TODO]
 
 ### Eskalationsprozess
 
-{{ source.escalation_process }}
+[TODO]
 
 ## Kommunikation
 
 ### Änderungskommunikationsplan
 
-{{ source.change_communication_plan }}
+[TODO]
 
 ### Stakeholder-Einbindung
 
-{{ source.stakeholder_engagement }}
+[TODO]
 
 ## Überwachung und Überprüfung
 
 ### Laufende Überwachung
 
-{{ source.ongoing_monitoring }}
+[TODO]
 
 ### Periodische Überprüfung
 
-{{ source.periodic_review }}
+[TODO]
 
 ### Lessons Learned
 
-{{ source.lessons_learned }}
+[TODO]
 
 ## Rollen und Verantwortlichkeiten
 
-**Change Manager**: {{ source.change_manager_role }}
-**Geschäftsbereichsleiter**: {{ source.business_owner_change_role }}
-**Risikomanagement**: {{ source.risk_management_change_role }}
-**Interne Revision**: {{ source.internal_audit_change_role }}
+**Change Manager**: [TODO]
+**Geschäftsbereichsleiter**: [TODO]
+**Risikomanagement**: [TODO]
+**Interne Revision**: [TODO]
 
 ## Referenzen
 
@@ -148,12 +159,3 @@ Dieses Dokument beschreibt, wie {{ source.organization_name }} wesentliche Ände
 - Risikomanagement-Framework
 - Internes Kontrollsystem
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

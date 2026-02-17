@@ -1,11 +1,16 @@
 # Leadership and Commitment
 
-**Document-ID:** 0110  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0110
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -301,8 +306,6 @@ Top management demonstrates leadership and commitment with respect to customer f
 - Enhanced communication or support mechanisms
 - [TODO: Document specific improvement actions]
 
----
-
 **Next Steps:**
 1. Define top management composition
 2. Document specific leadership activities and evidence
@@ -311,10 +314,3 @@ Top management demonstrates leadership and commitment with respect to customer f
 5. Implement engagement and support mechanisms
 6. Review leadership effectiveness regularly
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

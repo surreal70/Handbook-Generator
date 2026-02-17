@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0010
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # DORA Framework Übersicht
+
+**Dokument-ID:** [FRAMEWORK]-0010
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -29,9 +40,9 @@ Das DORA-Programm wurde von Dr. Nicole Forsgren, Jez Humble und Gene Kim entwick
 
 ### Organisationsinformationen
 
-- **Organisation**: {{ source.organization_name }}
-- **Verantwortlicher**: {{ source.dora_owner }}
-- **Implementierungsdatum**: {{ source.dora_implementation_date }}
+- **Organisation**: [TODO]
+- **Verantwortlicher**: [TODO]
+- **Implementierungsdatum**: [TODO]
 
 ## Die Vier Kernmetriken
 
@@ -141,12 +152,3 @@ Kontinuierliche Überwachung und Anpassung.
 
 <!-- Hinweis: Dieses Template sollte an die spezifischen Bedürfnisse der Organisation angepasst werden -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

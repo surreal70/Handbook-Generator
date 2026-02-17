@@ -1,19 +1,22 @@
 # Breach Notification and Incident Response
 
-**Document ID:** HIPAA-0600  
-**Organization:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Approved by:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0600
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
 ## 1. Purpose
 
-This document describes the breach notification and incident response procedures for {{ meta.organization.name }} as required by the HIPAA Breach Notification Rule.
+This document describes the breach notification and incident response procedures for {{ meta-organisation.name }} as required by the HIPAA Breach Notification Rule.
 
 ### 1.1 HIPAA Requirements
 
@@ -42,13 +45,5 @@ This document describes the breach notification and incident response procedures
 4. Extent to which risk has been mitigated
 
 [TODO: Additional sections for notification procedures...]
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 <!-- End of template -->

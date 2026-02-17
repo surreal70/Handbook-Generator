@@ -1,11 +1,16 @@
 # Einschränkung und Widerspruch
 
-**Dokument-ID:** 0240  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0240
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -23,7 +28,7 @@ Referenz: DSGVO Art. 18 (Recht auf Einschränkung der Verarbeitung), Art. 21 (Wi
 
 ## Zweck
 
-Dieses Dokument beschreibt die Umsetzung des Rechts auf Einschränkung der Verarbeitung und des Widerspruchsrechts in der {{ meta.organization }}.
+Dieses Dokument beschreibt die Umsetzung des Rechts auf Einschränkung der Verarbeitung und des Widerspruchsrechts in der {{ meta-organisation.name }}.
 
 ## Recht auf Einschränkung (Art. 18)
 
@@ -215,8 +220,6 @@ Dieses Dokument beschreibt die Umsetzung des Rechts auf Einschränkung der Verar
 | Verzögerte Umsetzung | Werbung nach Widerspruch | Sofortige Einstellung |
 | Keine Benachrichtigung | Empfänger nicht informiert | Benachrichtigungsprozess |
 
----
-
 **Nächste Schritte:**
 1. Etablieren Sie Prozesse für Einschränkungs- und Widerspruchsanträge
 2. Implementieren Sie technische Einschränkungsmechanismen
@@ -224,10 +227,3 @@ Dieses Dokument beschreibt die Umsetzung des Rechts auf Einschränkung der Verar
 4. Schulen Sie Mitarbeiter zu Einschränkungs- und Widerspruchsrecht
 5. Dokumentieren Sie alle Anträge im Register
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

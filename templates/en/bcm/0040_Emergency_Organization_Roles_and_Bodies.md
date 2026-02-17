@@ -1,13 +1,16 @@
 # Emergency Organization: Roles and Bodies
 
-**Document ID:** BCM-0040  
-**Organization:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Approved by:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0040
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -27,12 +30,12 @@ Customization required:
 
 ### 1.1 Emergency Organization Structure
 
-The emergency organization of {{ meta.organization.name }} consists of the following levels:
+The emergency organization of {{ meta-organisation.name }} consists of the following levels:
 
 ```
 ┌─────────────────────────────────────┐
 │      Crisis Team (Strategic)        │
-│   Lead: {{ meta.roles.ceo.name }}   │
+│   Lead: {{ meta-organisation-roles.role_CEO }}   │
 └──────────────┬──────────────────────┘
                │
     ┌──────────┴──────────┬────────────────┐
@@ -70,9 +73,9 @@ The emergency organization of {{ meta.organization.name }} consists of the follo
 
 **Role:** Crisis Team Lead / Crisis Management Team Lead
 
-**Responsible:** {{ meta.roles.ceo.name }}  
-**Deputy:** {{ meta.roles.coo.name }}  
-**Contact:** {{ meta.roles.ceo.email }} / {{ meta.roles.ceo.phone }}
+**Responsible:** {{ meta-organisation-roles.role_CEO }}  
+**Deputy:** [TODO]  
+**Contact:** {{ meta-organisation-roles.role_CEO }} / [TODO]
 
 **Tasks:**
 - Overall responsibility for crisis management and BCM activation
@@ -108,13 +111,13 @@ The emergency organization of {{ meta.organization.name }} consists of the follo
 - Reporting to management and crisis team
 
 **Reporting:**
-- Quarterly BCM status reports to {{ meta.roles.ceo.name }}
+- Quarterly BCM status reports to {{ meta-organisation-roles.role_CEO }}
 - Ad-hoc reporting for critical events
 - Annual BCM report
 
 **Interfaces:**
-- ISMS / CISO: {{ meta.roles.ciso.name }}
-- IT Operations: {{ meta.roles.it_operations_manager.name }}
+- ISMS / CISO: {{ meta-organisation-roles.role_CISO }}
+- IT Operations: {{ meta-organisation-roles.role_IT_Manager }}
 - Departments: Respective department heads
 
 ### 2.3 Incident Commander / Operational Lead
@@ -159,7 +162,7 @@ The emergency organization of {{ meta.organization.name }} consists of the follo
 
 **Approval Processes:**
 - Internal communication: Approval by crisis team lead
-- External communication: Approval by {{ meta.roles.ceo.name }}
+- External communication: Approval by {{ meta-organisation-roles.role_CEO }}
 - Press releases: Approval by management and legal department if applicable
 
 **Communication Channels:**
@@ -170,9 +173,9 @@ The emergency organization of {{ meta.organization.name }} consists of the follo
 
 **Role:** IT Disaster Recovery Lead
 
-**Responsible:** {{ meta.roles.it_operations_manager.name }}  
+**Responsible:** {{ meta-organisation-roles.role_IT_Manager }}  
 **Deputy:** [TODO: Deputy]  
-**Contact:** {{ meta.roles.it_operations_manager.email }} / {{ meta.roles.it_operations_manager.phone }}
+**Contact:** {{ meta-organisation-roles.role_IT_Manager }} / [TODO]
 
 **Tasks:**
 - Leadership of IT-DR team
@@ -268,10 +271,10 @@ Deputies are defined for all critical roles:
 
 | Role | Primary | Deputy 1 | Deputy 2 |
 |------|---------|----------|----------|
-| Crisis Team Lead | {{ meta.roles.ceo.name }} | {{ meta.roles.coo.name }} | [TODO] |
+| Crisis Team Lead | {{ meta-organisation-roles.role_CEO }} | [TODO] | [TODO] |
 | BCM Manager | [TODO] | [TODO] | [TODO] |
 | Incident Commander | [TODO] | [TODO] | [TODO] |
-| IT-DR Lead | {{ meta.roles.it_operations_manager.name }} | [TODO] | [TODO] |
+| IT-DR Lead | {{ meta-organisation-roles.role_IT_Manager }} | [TODO] | [TODO] |
 | Communication | [TODO] | [TODO] | [TODO] |
 
 ### 5.2 Handover Process
@@ -288,13 +291,5 @@ During substitution or shift change, a structured handover occurs:
 - Handover protocol (Template: [TODO: Link])
 - Logbook entry
 - Briefing of successor
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 <!-- End of template -->

@@ -1,5 +1,19 @@
 # Policy: Security in Projects
 
+**Dokument-ID:** 0680
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This policy establishes requirements for integrating security into project management.
@@ -9,27 +23,15 @@ Customize based on your organization's project management methodology and securi
 ISO 27001:2022 Annex A Reference: A.5.8, A.8.25, A.8.32
 -->
 
-**Dokument-ID:** 0680  
-**Dokumenttyp:** Policy (abstrakt)  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.5.8, A.8.25, A.8.32 (inkl. Amendment 1:2024)  
-**Owner:** {{ meta.ciso.name }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
-
----
-
 ## 1. Zweck
 
-Diese Policy definiert die Anforderungen an die Integration von Informationssicherheit in Projekte der **{{ meta.organization.name }}**. Sie stellt sicher, dass Sicherheitsanforderungen im gesamten Projektlebenszyklus berücksichtigt werden.
+Diese Policy definiert die Anforderungen an die Integration von Informationssicherheit in Projekte der **{{ meta-organisation.name }}**. Sie stellt sicher, dass Sicherheitsanforderungen im gesamten Projektlebenszyklus berücksichtigt werden.
 
 ## 2. Geltungsbereich
 
 Diese Policy gilt für:
 
-- **Organisationseinheiten:** Alle Abteilungen und Standorte der {{ meta.organization.name }}
+- **Organisationseinheiten:** Alle Abteilungen und Standorte der {{ meta-organisation.name }}
 - **Projekte:** Alle IT-Projekte, Infrastrukturprojekte, Softwareentwicklungsprojekte
 - **Projektphasen:** Initiierung, Planung, Umsetzung, Abschluss
 - **Projektarten:** Interne Projekte, externe Projekte, Partnerprojekte
@@ -180,18 +182,9 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **BSIMM** - Building Security In Maturity Model
 - **ISO/IEC 27034** - Application Security
 
----
-
 **Genehmigt durch:**  
 {{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+Datum: {{ meta-handbook.modifydate }}
 
-**Nächster Review:** {{ meta.document.next_review }} (jährlich oder anlassbezogen)
+**Nächster Review:** {{ meta-handbook.next_review }} (jährlich oder anlassbezogen)
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

@@ -1,14 +1,16 @@
 # Policy: Endpoint und Mobile Security
 
-**Dokument-ID:** 0480  
-**Dokumenttyp:** Policy (abstrakt)  
-**Referenzrahmen:** BSI IT-Grundschutz (BSI Standards 200-1/200-2/200-3)  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** {{ meta.document.status }}  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0480
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -21,7 +23,7 @@ Reference: BSI IT-Grundschutz-Kompendium, BSI Standards 200-1/200-2/200-3
 
 ## 1. Zweck und Zielsetzung
 
-Diese Policy definiert die Grundsätze für Endpoint-Sicherheit bei **{{ meta.organization.name }}**.
+Diese Policy definiert die Grundsätze für Endpoint-Sicherheit bei **{{ meta-organisation.name }}**.
 
 **Verantwortlich:** {{ meta.ciso.name }} (ISB)
 
@@ -30,9 +32,9 @@ Diese Policy definiert die Grundsätze für Endpoint-Sicherheit bei **{{ meta.or
 ## 2. Geltungsbereich
 
 **Diese Policy gilt für:**
-- Alle Mitarbeitenden von {{ meta.organization.name }}
+- Alle Mitarbeitenden von {{ meta-organisation.name }}
 - Alle IT-Systeme und Anwendungen
-- Alle Standorte: {{ meta.organization.locations }}
+- Alle Standorte: [TODO]
 - Externe Dienstleister mit Zugriff auf Systeme
 
 **Ausnahmen:**
@@ -71,7 +73,7 @@ Diese Policy wird konkretisiert durch:
 
 **Review-Intervall:**
 - Diese Policy wird jährlich oder bei wesentlichen Änderungen überprüft
-- **Nächster Review:** {{ meta.document.next_review }}
+- **Nächster Review:** {{ meta-handbook.next_review }}
 
 ## 7. Konsequenzen bei Verstößen
 
@@ -85,23 +87,13 @@ Verstöße gegen diese Policy können zu folgenden Maßnahmen führen:
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| ISB | {{ meta.ciso.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| IT-Leitung | {{ meta.cio.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| Geschäftsführung | {{ meta.ceo.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| IT-Leitung | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| Geschäftsführung | {{ meta.ceo.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **Referenzen:**
 - BSI IT-Grundschutz-Kompendium
 - BSI Standards 200-1, 200-2, 200-3
 - Dokument 0490: Richtlinie: MDM EDR Device Compliance und Remote Work
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 <!-- End of template -->

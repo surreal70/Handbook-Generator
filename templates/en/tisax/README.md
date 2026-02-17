@@ -62,12 +62,12 @@ The templates are organized by TISAX control areas and use a numeric prefix syst
 
 ### Placeholders
 
-The templates use placeholders in the format `{{ source.field }}` for organization-specific data:
+The templates use placeholders in the format `[TODO]` for organization-specific data:
 
-- `{{ source.organization_name }}` - Your organization name
-- `{{ source.author }}` - Document author
-- `{{ meta.version }}` - Version number
-- `{{ meta.date }}` - Date
+- `[TODO]` - Your organization name
+- `[TODO]` - Document author
+- `{{ meta-handbook.revision }}` - Version number
+- `{{ meta-handbook.modifydate }}` - Date
 
 ### Customization
 

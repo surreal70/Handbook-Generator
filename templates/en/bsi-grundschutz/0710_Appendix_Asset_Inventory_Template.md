@@ -1,14 +1,16 @@
 # Appendix: Asset Inventory (Template)
 
-**Document ID:** 0710  
-**Document Type:** Appendix/Template  
-**Reference Framework:** BSI IT-Grundschutz (BSI Standards 200-1/200-2)  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** {{ meta.document.status }}  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.document.last_updated }}  
-**Next Review:** {{ meta.document.next_review }}
+**Document-ID:** [FRAMEWORK]-0710
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -20,7 +22,7 @@ Reference: BSI IT-Grundschutz-Kompendium: OPS.1.1.1 General IT Operations
 
 ## 1. Purpose and Objectives
 
-The asset inventory of **{{ meta.organization.name }}** documents all IT assets within the ISMS scope.
+The asset inventory of **{{ meta-organisation.name }}** documents all IT assets within the ISMS scope.
 
 **Responsible:** {{ meta.cio.name }}
 
@@ -162,10 +164,8 @@ DR: Yes
 
 | Role | Name | Date | Approval |
 |---|---|---|---|
-| IT Management | {{ meta.cio.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| CISO | {{ meta.ciso.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| IT Management | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| CISO | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **References:**
 - BSI IT-Grundschutz-Kompendium: OPS.1.1.1 General IT Operations
@@ -173,13 +173,5 @@ DR: Yes
 - Document 0050: Structure Analysis
 - Document 0060: Protection Needs Assessment
 - Document 0250: Asset Lifecycle
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
 
 <!-- End of template -->

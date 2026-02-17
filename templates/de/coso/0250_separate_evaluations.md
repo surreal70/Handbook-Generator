@@ -1,40 +1,42 @@
----
+
 Document-ID: coso-0420
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Separate Bewertungen
 
+**Dokument-ID:** [FRAMEWORK]-0250
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt separate Bewertungen bei {{ source.organization_name }} (COSO Prinzip 16).
+Dieses Dokument beschreibt separate Bewertungen bei [TODO] (COSO Prinzip 16).
 
 ## Interne Revision
 
-{{ source.internal_audit_approach }}
+[TODO]
 
 ## Externe Prüfung
 
-{{ source.external_audit_approach }}
+[TODO]
 
 ## Selbstbewertungen
 
-{{ source.self_assessment_approach }}
+[TODO]
 
 ## Referenzen
 
 - Interne Revisionsplan
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

@@ -1,5 +1,19 @@
 # System Overview and Architecture
 
+**Document-ID:** [FRAMEWORK]-0040
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Overview
 
 ### System Landscape
@@ -161,7 +175,7 @@ This chapter describes the system landscape and architecture at a high level.
 **Approvals:**
 - **DEV → TEST:** Automatic
 - **TEST → STAGE:** QA Team
-- **STAGE → PROD:** {{ meta.document.approver }} + Change Advisory Board
+- **STAGE → PROD:** {{ meta-handbook.approver }} + Change Advisory Board
 
 ## Interfaces
 
@@ -277,27 +291,18 @@ This chapter describes the system landscape and architecture at a high level.
 |---|---|---|---|
 | **System Architect** | Architecture Design | [TODO: Name] | [TODO: Email] |
 | **Technical Lead** | Technical Implementation | [TODO: Name] | [TODO: Email] |
-| **Operations Manager** | Operation and Maintenance | {{ meta.it_operations_manager.name }} | {{ meta.it_operations_manager.email }} |
-| **Security Officer** | Security Architecture | {{ meta.ciso.name }} | {{ meta.ciso.email }} |
+| **Operations Manager** | Operation and Maintenance | {{ meta-organisation-roles.role_it_operations_manager.name }} | {{ meta-organisation-roles.role_it_operations_manager.email }} |
+| **Security Officer** | Security Architecture | {{ meta-organisation-roles.role_ciso.name }} | {{ meta-organisation-roles.role_ciso.email }} |
 
 ## Contacts
 
 **For System Architecture Questions:**
 - **System Architect:** [TODO: Name and Contact]
-- **IT Operations Manager:** {{ meta.it_operations_manager.name }} ({{ meta.it_operations_manager.email }})
-- **CISO:** {{ meta.ciso.name }} ({{ meta.ciso.email }})
+- **IT Operations Manager:** {{ meta-organisation-roles.role_it_operations_manager.name }} ({{ meta-organisation-roles.role_it_operations_manager.email }})
+- **CISO:** {{ meta-organisation-roles.role_ciso.name }} ({{ meta-organisation-roles.role_ciso.email }})
 
----
+**Document Owner:** {{ meta-handbook.owner }}  
+**Approved by:** {{ meta-handbook.approver }}  
+**Version:** {{ meta-handbook.revision }}  
+**Organization:** {{ meta-organisation.name }}
 
-**Document Owner:** {{ meta.document.owner }}  
-**Approved by:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Organization:** {{ meta.organization.name }}
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

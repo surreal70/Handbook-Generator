@@ -1,15 +1,27 @@
 # Availability and Service Level
 
+**Document-ID:** [FRAMEWORK]-0210
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Overview
 
 This document defines availability requirements, Service Level Agreements (SLAs), and Service Level Objectives (SLOs) for the IT service. It describes measurement methods, reporting processes, and measures for continuous improvement of service availability.
 
-**Document Owner:** {{ meta.document.owner }}  
-**Approved by:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Organization:** {{ meta.organization.name }}
-
----
+**Document Owner:** {{ meta-handbook.owner }}  
+**Approved by:** {{ meta-handbook.approver }}  
+**Version:** {{ meta-handbook.revision }}  
+**Organization:** {{ meta-organisation.name }}
 
 ## Availability Requirements
 
@@ -28,15 +40,28 @@ This document defines availability requirements, Service Level Agreements (SLAs)
 - **Availability:** 24/7/365
 - **Support Hours:** 24/7 with on-call availability
 - **Maintenance Window:** Sunday 02:00-06:00 (after announcement)
-- **Emergency Maintenance:** After approval by {{ meta.cio.name }}
+- **Emergency Maintenance:** After approval by {{ meta-organisation-roles.role_cio.name }}
 
 #### Business Services
 - **Availability:** Mon-Fri 06:00-22:00
 - **Support Hours:** Mon-Fri 08:00-18:00
 - **Maintenance Window:** Saturday 20:00-24:00
-- **Emergency Maintenance:** After approval by {{ meta.it_operations_manager.name }}
+- **Emergency Maintenance:** After approval by {{ meta-organisation-roles.role_it_operations_manager.name }}
 
----
+#### Development/Test Services
+- **Availability:** Mon-Fri 08:00-18:00
+- **Support Hours:** Best Effort
+- **Maintenance Window:** Anytime after announcement
+- **Emergency Maintenance:** Not required
+
+### Planned Maintenance Windows
+
+| Maintenance Type | Frequency | Duration | Announcement Period | Approval |
+|---|---|---|---|---|
+| Routine Maintenance | Monthly | 2-4 hours | 7 days | Ops Manager |
+| Patch Deployment | Monthly | 1-2 hours | 5 days | Ops Manager |
+| Major Upgrade | Quarterly | 4-8 hours | 14 days | CIO |
+| Emergency Maintenance | Ad-hoc | Variable | 4 hours | CIO |
 
 ## Service Level Agreements (SLA)
 
@@ -75,7 +100,34 @@ This document defines availability requirements, Service Level Agreements (SLAs)
 | P3 - Medium | 4 hours | 24 hours | Mon-Fri 08-18 | After 24h to Ops Manager |
 | P4 - Low | 8 hours | 72 hours | Mon-Fri 08-18 | After 72h to Ops Manager |
 
----
+### SLA Contract Partners
+
+#### Internal SLAs
+- **Service Provider:** IT Operations ({{ meta-organisation-roles.role_it_operations_manager.name }})
+- **Service Consumer:** Business Departments
+- **Responsible:** {{ meta-organisation-roles.role_cio.name }}
+- **Review Cycle:** Quarterly
+
+#### External SLAs
+- **Service Provider:** {{ meta-organisation.name }}
+- **Service Consumer:** [TODO: Customer/Partner]
+- **Contract Duration:** [TODO: Duration]
+- **Penalties:** [TODO: Penalties for SLA violations]
+
+### SLA Exceptions
+
+#### Exclusion Criteria (Force Majeure)
+- Natural disasters
+- Terrorist attacks
+- Wars and civil unrest
+- Pandemics
+- Power outages beyond control
+
+#### Planned Exceptions
+- Announced maintenance windows
+- Approved emergency maintenance
+- Customer-caused outages
+- Third-party outages beyond control
 
 ## Service Level Objectives (SLO)
 
@@ -85,11 +137,26 @@ This document defines availability requirements, Service Level Agreements (SLAs)
 
 | Component | SLO | Measurement Method | Responsible |
 |---|---:|---|---|
-| Compute Cluster | 99.9% | Hypervisor Monitoring | {{ meta.it_operations_manager.name }} |
-| Storage System | 99.95% | Storage Monitoring | {{ meta.it_operations_manager.name }} |
-| Network Core | 99.99% | Network Monitoring | {{ meta.it_operations_manager.name }} |
-| Firewall | 99.95% | Security Monitoring | {{ meta.ciso.name }} |
-| Load Balancer | 99.9% | LB Monitoring | {{ meta.it_operations_manager.name }} |
+| Compute Cluster | 99.9% | Hypervisor Monitoring | {{ meta-organisation-roles.role_it_operations_manager.name }} |
+| Storage System | 99.95% | Storage Monitoring | {{ meta-organisation-roles.role_it_operations_manager.name }} |
+| Network Core | 99.99% | Network Monitoring | {{ meta-organisation-roles.role_it_operations_manager.name }} |
+| Firewall | 99.95% | Security Monitoring | {{ meta-organisation-roles.role_ciso.name }} |
+| Load Balancer | 99.9% | LB Monitoring | {{ meta-organisation-roles.role_it_operations_manager.name }} |
+
+#### Application SLOs
+
+| Application | Availability | Response Time | Error Rate | Responsible |
+|---|---:|---:|---:|---|
+| [TODO: App 1] | 99.5% | < 200ms | < 0.1% | [TODO] |
+| [TODO: App 2] | 99.0% | < 500ms | < 0.5% | [TODO] |
+| [TODO: App 3] | 99.9% | < 100ms | < 0.05% | [TODO] |
+
+#### Database SLOs
+
+| Database | Availability | Query Time | Connection Time | Responsible |
+|---|---:|---:|---:|---|
+| [TODO: DB 1] | 99.95% | < 50ms | < 10ms | [TODO] |
+| [TODO: DB 2] | 99.5% | < 100ms | < 20ms | [TODO] |
 
 ### Error Budget
 
@@ -106,7 +173,29 @@ This document defines availability requirements, Service Level Agreements (SLAs)
 | Quarter | 99.5% | 0.5% | 10.8 hours |
 | Year | 99.5% | 0.5% | 43.8 hours |
 
----
+#### Error Budget Policy
+
+**When Error Budget > 50% remaining:**
+- Normal development velocity
+- New features and experiments allowed
+- Routine maintenance as planned
+
+**When Error Budget 25-50% remaining:**
+- Increased caution with changes
+- Focus on stability
+- Additional testing requirements
+
+**When Error Budget < 25% remaining:**
+- Feature freeze
+- Only critical bugfixes
+- Focus on reliability improvements
+- Postmortem for all incidents
+
+**When Error Budget exhausted:**
+- Complete change freeze
+- Only emergency fixes
+- Root cause analysis of all outages
+- Improvement plan before resumption
 
 ## Availability Measurement
 
@@ -124,7 +213,42 @@ This document defines availability requirements, Service Level Agreements (SLAs)
 - **Metrics:** Page Load Time, User Experience, Error Rate
 - **Privacy:** GDPR compliant, anonymized
 
----
+#### Server-Side Monitoring
+- **Method:** Monitoring of server metrics
+- **Collection:** Logs, Metrics, Traces
+- **Metrics:** Uptime, Resource Usage, Error Logs
+- **Aggregation:** Central monitoring system
+
+### Availability Calculation
+
+#### Formula
+```
+Availability (%) = (Total Time - Downtime) / Total Time × 100
+```
+
+#### Example Calculation (Month with 720 hours)
+```
+Total Time: 720 hours
+Planned Maintenance: 2 hours (excluded)
+Unplanned Outages: 1.5 hours
+Available Time: 720 - 2 = 718 hours
+Actual Availability: (718 - 1.5) / 718 × 100 = 99.79%
+```
+
+#### Exclusions
+- Planned and announced maintenance windows
+- Customer-caused outages
+- Force Majeure events
+- Third-party outages (as agreed)
+
+### Monitoring Tools
+
+| Tool | Purpose | Measurement Interval | Access |
+|---|---|---|---|
+| [TODO: Uptime Tool] | Availability Monitoring | 1 minute | [TODO: URL] |
+| [TODO: APM Tool] | Performance Monitoring | Continuous | [TODO: URL] |
+| [TODO: RUM Tool] | Real User Monitoring | Continuous | [TODO: URL] |
+| [TODO: Log Tool] | Log Aggregation | Real-time | [TODO: URL] |
 
 ## Service Level Reporting
 
@@ -140,7 +264,7 @@ This document defines availability requirements, Service Level Agreements (SLAs)
 - **Delivery:** Automatically at 08:00
 
 #### Weekly SLA Report
-- **Recipients:** {{ meta.it_operations_manager.name }}
+- **Recipients:** {{ meta-organisation-roles.role_it_operations_manager.name }}
 - **Content:**
   - Weekly availability
   - SLA compliance status
@@ -149,7 +273,7 @@ This document defines availability requirements, Service Level Agreements (SLAs)
 - **Delivery:** Every Monday
 
 #### Monthly SLA Report
-- **Recipients:** {{ meta.cio.name }}, Stakeholders
+- **Recipients:** {{ meta-organisation-roles.role_cio.name }}, Stakeholders
 - **Content:**
   - Monthly availability
   - SLA fulfillment vs. targets
@@ -158,7 +282,132 @@ This document defines availability requirements, Service Level Agreements (SLAs)
   - Improvement measures
 - **Delivery:** First business day of following month
 
----
+#### Quarterly Management Report
+- **Recipients:** {{ meta-organisation-roles.role_ceo.name }}, {{ meta-organisation-roles.role_cio.name }}, {{ meta-organisation-roles.role_cfo.name }}
+- **Content:**
+  - Quarterly availability
+  - SLA trends
+  - Cost-benefit analysis
+  - Strategic recommendations
+- **Delivery:** Quarter end + 5 business days
+
+### Report Metrics
+
+#### Availability Dashboard
+
+| Metric | Target | Current (Month) | Trend | Status |
+|---|---:|---:|---|---|
+| Overall Availability | 99.5% | [TODO]% | [TODO] | ✓ / ⚠ / ✗ |
+| Unplanned Outages | < 2h | [TODO]h | [TODO] | ✓ / ⚠ / ✗ |
+| MTBF | > 720h | [TODO]h | [TODO] | ✓ / ⚠ / ✗ |
+| MTTR | < 2h | [TODO]h | [TODO] | ✓ / ⚠ / ✗ |
+| Error Budget Remaining | > 0% | [TODO]% | [TODO] | ✓ / ⚠ / ✗ |
+
+#### Incident Statistics
+
+| Priority | Count | Avg. MTTR | SLA Fulfillment | Trend |
+|---|---:|---:|---:|---|
+| P1 - Critical | [TODO] | [TODO]h | [TODO]% | [TODO] |
+| P2 - High | [TODO] | [TODO]h | [TODO]% | [TODO] |
+| P3 - Medium | [TODO] | [TODO]h | [TODO]% | [TODO] |
+| P4 - Low | [TODO] | [TODO]h | [TODO]% | [TODO] |
+
+## Availability Improvements
+
+### Improvement Measures
+
+#### Redundancy and High Availability
+- **Active-Active Cluster:** Load distribution across multiple nodes
+- **Active-Passive Cluster:** Failover configuration
+- **Geographic Redundancy:** Multi-region deployment
+- **Database Replication:** Synchronous/Asynchronous replication
+- **Load Balancing:** Distribution of load across multiple instances
+
+#### Automation
+- **Auto-Healing:** Automatic recovery from failures
+- **Auto-Scaling:** Automatic capacity adjustment
+- **Automated Failover:** Automatic failover on failure
+- **Health Checks:** Continuous health monitoring
+- **Self-Service:** Automated provisioning
+
+#### Monitoring and Alerting
+- **Proactive Monitoring:** Early detection of problems
+- **Predictive Analytics:** Prediction of failures
+- **Intelligent Alerting:** Reduction of false positives
+- **Anomaly Detection:** ML-based anomaly detection
+- **Distributed Tracing:** End-to-end tracing
+
+#### Process Improvements
+- **Incident Management:** Optimization of incident processes
+- **Change Management:** Reduction of change-related outages
+- **Capacity Management:** Proactive capacity planning
+- **Disaster Recovery:** Improvement of DR processes
+- **Continuous Improvement:** Regular retrospectives
+
+### Improvement Roadmap
+
+| Quarter | Measure | Expected Impact | Responsible | Status |
+|---|---|---|---|---|
+| Q1 2026 | [TODO] | +0.1% Availability | [TODO] | Planned |
+| Q2 2026 | [TODO] | -30min MTTR | [TODO] | Planned |
+| Q3 2026 | [TODO] | +0.2% Availability | [TODO] | Planned |
+| Q4 2026 | [TODO] | -50% Incidents | [TODO] | Planned |
+
+### Lessons Learned
+
+#### Postmortem Process
+1. **Incident Documentation:** Detailed description of the incident
+2. **Timeline Creation:** Chronological sequence
+3. **Root Cause Analysis:** 5-Why method
+4. **Impact Assessment:** Affected systems and users
+5. **Corrective Actions:** Immediate measures and long-term improvements
+6. **Follow-Up:** Review of implementation
+
+#### Postmortem Template
+- **Incident ID:** [TODO]
+- **Date/Time:** [TODO]
+- **Duration:** [TODO]
+- **Affected Services:** [TODO]
+- **Root Cause:** [TODO]
+- **Actions:** [TODO]
+- **Responsible:** [TODO]
+- **Status:** [TODO]
+
+## SLA Review and Adjustment
+
+### Review Process
+
+#### Quarterly SLA Review
+- **Participants:** {{ meta-organisation-roles.role_cio.name }}, {{ meta-organisation-roles.role_it_operations_manager.name }}, Stakeholders
+- **Agenda:**
+  - SLA fulfillment of last 3 months
+  - Trend analysis
+  - Improvement potential
+  - Adjustment needs
+- **Output:** Review protocol with recommendations
+
+#### Annual SLA Review
+- **Participants:** {{ meta-organisation-roles.role_ceo.name }}, {{ meta-organisation-roles.role_cio.name }}, {{ meta-organisation-roles.role_cfo.name }}, Stakeholders
+- **Agenda:**
+  - Annual availability
+  - SLA appropriateness
+  - Cost-benefit analysis
+  - Strategic alignment
+- **Output:** SLA adjustments for following year
+
+### Adjustment Criteria
+
+#### SLA Tightening (higher requirements)
+- Business criticality increased
+- Competitive pressure
+- Regulatory requirements
+- Customer feedback
+
+#### SLA Relaxation (lower requirements)
+- Cost-benefit ratio
+- Technical feasibility
+- Business priority decreased
+- Realistic goal setting
 
 ## Processes and Responsibilities
 
@@ -176,7 +425,12 @@ This document defines availability requirements, Service Level Agreements (SLAs)
 
 > **Legend:** R = Responsible, A = Accountable, C = Consulted, I = Informed
 
----
+### Escalation Path
+
+1. **Level 1:** Operations Team - Incident response and monitoring
+2. **Level 2:** {{ meta-organisation-roles.role_it_operations_manager.name }} - SLA violations
+3. **Level 3:** {{ meta-organisation-roles.role_cio.name }} - Critical SLA violations
+4. **Level 4:** {{ meta-organisation-roles.role_ceo.name }} - Contractual consequences
 
 ## Compliance and Standards
 
@@ -185,16 +439,34 @@ This document defines availability requirements, Service Level Agreements (SLAs)
 - **ISO 20000:** Clause 8.9 - Availability Management
 - **COBIT 2019:** DSS01 - Managed Operations
 
----
+### Audit Requirements
+- SLA documentation and contracts
+- Availability reports and metrics
+- Incident documentation
+- Evidence of improvement measures
 
-**Last Update:** {{ meta.date }}  
+## Appendix
+
+### Glossary
+
+| Term | Definition |
+|---|---|
+| SLA | Service Level Agreement - Agreement on service levels |
+| SLO | Service Level Objective - Internal service target |
+| SLI | Service Level Indicator - Measurable metric |
+| MTBF | Mean Time Between Failures - Average time between failures |
+| MTTR | Mean Time To Repair - Average repair time |
+| Error Budget | Tolerable downtime within the SLO period |
+| Uptime | Available time of a system |
+| Downtime | Outage time of a system |
+
+### References
+- ITIL v4 Foundation Handbook
+- ISO/IEC 20000-1:2018
+- COBIT 2019 Framework
+- Site Reliability Engineering (Google)
+
+**Last Update:** {{ meta-handbook.date }}  
 **Next Review:** [TODO: Date]  
-**Contact:** {{ meta.it_operations_manager.email }}
+**Contact:** {{ meta-organisation-roles.role_it_operations_manager.email }}
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

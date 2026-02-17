@@ -1,15 +1,27 @@
 # Runbooks und Standardoperationen
 
+**Dokument-ID:** [FRAMEWORK]-0240
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Übersicht
 
 Dieses Dokument enthält Standard-Runbooks, Schritt-für-Schritt-Anleitungen und Troubleshooting-Guides für häufige Betriebsaufgaben. Ziel ist es, konsistente und effiziente Durchführung von Standardoperationen zu gewährleisten.
 
-**Dokumentverantwortlicher:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Organisation:** {{ meta.organization.name }}
-
----
+**Dokumentverantwortlicher:** {{ meta-handbook.owner }}  
+**Genehmigt durch:** {{ meta-handbook.approver }}  
+**Version:** {{ meta-handbook.revision }}  
+**Organisation:** {{ meta-organisation.name }}
 
 ## Runbook-Struktur
 
@@ -61,15 +73,13 @@ Jedes Runbook folgt dieser standardisierten Struktur:
 - [Tickets]
 ```
 
----
-
 ## System-Management Runbooks
 
 ### RB-001: Server-Neustart
 
 **Runbook-ID:** RB-001  
 **Version:** 1.0  
-**Verantwortlich:** {{ meta.it_operations_manager.name }}
+**Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
 
 #### Zweck
 Kontrollierter Neustart eines Servers zur Behebung von Problemen oder nach Updates.
@@ -145,13 +155,11 @@ Kontrollierter Neustart eines Servers zur Behebung von Problemen oder nach Updat
 - **Problem:** Services starten nicht
   - **Lösung:** Manuell starten, Logs prüfen, Dependencies prüfen
 
----
-
 ### RB-002: Service-Neustart
 
 **Runbook-ID:** RB-002  
 **Version:** 1.0  
-**Verantwortlich:** {{ meta.it_operations_manager.name }}
+**Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
 
 #### Zweck
 Neustart eines einzelnen Services ohne System-Neustart.
@@ -216,13 +224,11 @@ Neustart eines einzelnen Services ohne System-Neustart.
 - [ ] Port ist gebunden
 - [ ] Anwendung antwortet
 
----
-
 ### RB-003: Disk-Space-Cleanup
 
 **Runbook-ID:** RB-003  
 **Version:** 1.0  
-**Verantwortlich:** {{ meta.it_operations_manager.name }}
+**Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
 
 #### Zweck
 Freigabe von Speicherplatz bei kritischer Disk-Auslastung.
@@ -298,8 +304,6 @@ Freigabe von Speicherplatz bei kritischer Disk-Auslastung.
 - [ ] Keine wichtigen Daten gelöscht
 - [ ] Monitoring-Alerts gelöst
 
----
-
 ## Datenbank-Management Runbooks
 
 ### RB-010: Datenbank-Backup
@@ -353,8 +357,6 @@ mongodump --db [database_name] --out /backup/mongodb_$(date +%Y%m%d_%H%M%S)
 - [ ] Backup-Größe plausibel
 - [ ] Backup-Integrität geprüft
 - [ ] Backup-Speicherort dokumentiert
-
----
 
 ### RB-011: Datenbank-Restore
 
@@ -427,15 +429,13 @@ Wiederherstellung einer Datenbank aus Backup.
 - [ ] Anwendung funktioniert
 - [ ] Keine Fehler in Logs
 
----
-
 ## Netzwerk-Management Runbooks
 
 ### RB-020: Firewall-Regel hinzufügen
 
 **Runbook-ID:** RB-020  
 **Version:** 1.0  
-**Verantwortlich:** {{ meta.ciso.name }}
+**Verantwortlich:** {{ meta-organisation-roles.role_ciso.name }}
 
 #### Zweck
 Hinzufügen einer neuen Firewall-Regel.
@@ -499,15 +499,13 @@ Hinzufügen einer neuen Firewall-Regel.
 - [ ] Keine unerwünschten Nebeneffekte
 - [ ] Regel dokumentiert
 
----
-
 ## Benutzer-Management Runbooks
 
 ### RB-030: Benutzer-Account erstellen
 
 **Runbook-ID:** RB-030  
 **Version:** 1.0  
-**Verantwortlich:** {{ meta.it_operations_manager.name }}
+**Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
 
 #### Zweck
 Erstellung eines neuen Benutzer-Accounts.
@@ -573,13 +571,11 @@ Erstellung eines neuen Benutzer-Accounts.
 - [ ] Benutzer informiert
 - [ ] Dokumentiert in CMDB
 
----
-
 ### RB-031: Benutzer-Account deaktivieren
 
 **Runbook-ID:** RB-031  
 **Version:** 1.0  
-**Verantwortlich:** {{ meta.it_operations_manager.name }}
+**Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
 
 #### Zweck
 Deaktivierung eines Benutzer-Accounts (z.B. bei Austritt).
@@ -639,15 +635,13 @@ Deaktivierung eines Benutzer-Accounts (z.B. bei Austritt).
 - [ ] Daten gesichert
 - [ ] Dokumentiert
 
----
-
 ## Monitoring und Alerting Runbooks
 
 ### RB-040: Alert-Untersuchung
 
 **Runbook-ID:** RB-040  
 **Version:** 1.0  
-**Verantwortlich:** {{ meta.it_operations_manager.name }}
+**Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
 
 #### Zweck
 Systematische Untersuchung eines Monitoring-Alerts.
@@ -710,15 +704,13 @@ Systematische Untersuchung eines Monitoring-Alerts.
 | Service Down | systemctl status | Crash, Config-Fehler | Service-Neustart |
 | High Latency | ping, traceroute | Netzwerk, Last | Load-Balancing prüfen |
 
----
-
 ## Backup und Recovery Runbooks
 
 ### RB-050: Backup-Verifikation
 
 **Runbook-ID:** RB-050  
 **Version:** 1.0  
-**Verantwortlich:** {{ meta.it_operations_manager.name }}
+**Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
 
 #### Zweck
 Regelmäßige Überprüfung der Backup-Integrität.
@@ -766,8 +758,6 @@ Regelmäßige Überprüfung der Backup-Integrität.
 - [ ] Integrität bestätigt
 - [ ] Restore-Test erfolgreich
 - [ ] Dokumentiert
-
----
 
 ## Troubleshooting-Guides
 
@@ -829,8 +819,6 @@ journalctl -u [service] -n 50
 3. Berechtigungen prüfen
 4. Ports prüfen (bereits belegt?)
 
----
-
 #### Problem: Hohe CPU-Last
 
 **Symptome:**
@@ -852,8 +840,6 @@ ps aux | sort -nrk 3,3 | head -n 5
 2. Ressourcen-Limits setzen
 3. Skalierung prüfen
 4. Code-Optimierung
-
----
 
 #### Problem: Disk voll
 
@@ -877,8 +863,6 @@ find / -type f -size +100M
 3. Alte Backups archivieren
 4. Storage erweitern
 
----
-
 ## Prozesse und Verantwortlichkeiten
 
 ### RACI-Matrix
@@ -892,16 +876,12 @@ find / -type f -size +100M
 
 > **Legende:** R = Responsible, A = Accountable, C = Consulted, I = Informed
 
----
-
 ## Compliance und Standards
 
 ### Relevante Standards
 - **ITIL v4:** Service Operation Practice
 - **ISO 20000:** Clause 8.1 - Operational Planning and Control
 - **COBIT 2019:** DSS01 - Managed Operations
-
----
 
 ## Anhang
 
@@ -918,16 +898,7 @@ find / -type f -size +100M
 - ISO/IEC 20000-1:2018
 - COBIT 2019 Framework
 
----
-
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Letzte Aktualisierung:** {{ meta-handbook.date }}  
 **Nächste Review:** [TODO: Datum]  
-**Kontakt:** {{ meta.it_operations_manager.email }}
+**Kontakt:** {{ meta-organisation-roles.role_it_operations_manager.email }}
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

@@ -1,19 +1,22 @@
 # Privacy Practices and Individual Rights
 
-**Document ID:** HIPAA-0500  
-**Organization:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Approved by:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0500
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
 ## 1. Purpose
 
-This document describes the privacy practices and procedures for managing individual rights under the HIPAA Privacy Rule for {{ meta.organization.name }}.
+This document describes the privacy practices and procedures for managing individual rights under the HIPAA Privacy Rule for {{ meta-organisation.name }}.
 
 ### 1.1 HIPAA Requirements
 
@@ -45,13 +48,5 @@ This document describes the privacy practices and procedures for managing indivi
 - Material changes require new notice
 
 [TODO: Additional sections for each individual right...]
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 <!-- End of template -->

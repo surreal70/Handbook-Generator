@@ -1,17 +1,28 @@
----
+
 Document-ID: coso-0310
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Informationsqualität
 
+**Dokument-ID:** [FRAMEWORK]-0310
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt die Anforderungen an die Informationsqualität bei {{ source.organization_name }} gemäß COSO Prinzip 13.
+Dieses Dokument beschreibt die Anforderungen an die Informationsqualität bei [TODO] gemäß COSO Prinzip 13.
 
 ## Geltungsbereich
 
@@ -24,197 +35,197 @@ Dieses Dokument beschreibt die Anforderungen an die Informationsqualität bei {{
 
 ### Relevanz
 
-**Definition**: {{ source.relevance_definition }}
+**Definition**: [TODO]
 
 **Kriterien**:
 - Zweckdienlichkeit für Entscheidungen
 - Bezug zu Geschäftszielen
 - Unterstützung von Kontrollfunktionen
 
-**Bewertung**: {{ source.relevance_assessment }}
+**Bewertung**: [TODO]
 
 ### Genauigkeit
 
-**Definition**: {{ source.accuracy_definition }}
+**Definition**: [TODO]
 
 **Kriterien**:
 - Fehlerfreiheit
 - Präzision
 - Korrektheit
 
-**Validierung**: {{ source.accuracy_validation }}
+**Validierung**: [TODO]
 
 ### Vollständigkeit
 
-**Definition**: {{ source.completeness_definition }}
+**Definition**: [TODO]
 
 **Kriterien**:
 - Alle erforderlichen Daten vorhanden
 - Keine wesentlichen Lücken
 - Umfassende Abdeckung
 
-**Prüfung**: {{ source.completeness_checks }}
+**Prüfung**: [TODO]
 
 ### Aktualität
 
-**Definition**: {{ source.timeliness_definition }}
+**Definition**: [TODO]
 
 **Kriterien**:
 - Rechtzeitige Verfügbarkeit
 - Aktuelle Daten
 - Zeitnahe Aktualisierung
 
-**Überwachung**: {{ source.timeliness_monitoring }}
+**Überwachung**: [TODO]
 
 ### Zugänglichkeit
 
-**Definition**: {{ source.accessibility_definition }}
+**Definition**: [TODO]
 
 **Kriterien**:
 - Verfügbarkeit für berechtigte Nutzer
 - Benutzerfreundlichkeit
 - Angemessene Zugriffsrechte
 
-**Verwaltung**: {{ source.accessibility_management }}
+**Verwaltung**: [TODO]
 
 ## Datenqualitätsmanagement
 
 ### Datenqualitätsstrategie
 
-{{ source.data_quality_strategy }}
+[TODO]
 
 ### Datenqualitätsziele
 
-**Strategische Ziele**: {{ source.strategic_dq_goals }}
-**Operative Ziele**: {{ source.operational_dq_goals }}
-**Messbare KPIs**: {{ source.dq_kpis }}
+**Strategische Ziele**: [TODO]
+**Operative Ziele**: [TODO]
+**Messbare KPIs**: [TODO]
 
 ### Datenqualitätsprozess
 
-**Datenerfassung**: {{ source.data_capture }}
-**Datenvalidierung**: {{ source.data_validation }}
-**Datenbereinigung**: {{ source.data_cleansing }}
-**Datenüberwachung**: {{ source.data_monitoring }}
+**Datenerfassung**: [TODO]
+**Datenvalidierung**: [TODO]
+**Datenbereinigung**: [TODO]
+**Datenüberwachung**: [TODO]
 
 ## Datenvalidierung
 
 ### Eingabevalidierung
 
-**Formatprüfungen**: {{ source.format_checks }}
-**Bereichsprüfungen**: {{ source.range_checks }}
-**Plausibilitätsprüfungen**: {{ source.plausibility_checks }}
-**Referenzprüfungen**: {{ source.reference_checks }}
+**Formatprüfungen**: [TODO]
+**Bereichsprüfungen**: [TODO]
+**Plausibilitätsprüfungen**: [TODO]
+**Referenzprüfungen**: [TODO]
 
 ### Verarbeitungsvalidierung
 
-**Berechnungsvalidierung**: {{ source.calculation_validation }}
-**Abstimmungen**: {{ source.reconciliations }}
-**Konsistenzprüfungen**: {{ source.consistency_checks }}
+**Berechnungsvalidierung**: [TODO]
+**Abstimmungen**: [TODO]
+**Konsistenzprüfungen**: [TODO]
 
 ### Ausgabevalidierung
 
-**Berichtsvalidierung**: {{ source.report_validation }}
-**Qualitätsprüfungen**: {{ source.quality_checks }}
+**Berichtsvalidierung**: [TODO]
+**Qualitätsprüfungen**: [TODO]
 
 ## Datenquellen
 
 ### Interne Datenquellen
 
-**Transaktionssysteme**: {{ source.transaction_systems }}
-**Operative Systeme**: {{ source.operational_systems }}
-**Managementsysteme**: {{ source.management_systems }}
+**Transaktionssysteme**: [TODO]
+**Operative Systeme**: [TODO]
+**Managementsysteme**: [TODO]
 
 ### Externe Datenquellen
 
-**Marktdaten**: {{ source.market_data }}
-**Regulatorische Daten**: {{ source.regulatory_data }}
-**Drittanbieter-Daten**: {{ source.third_party_data }}
+**Marktdaten**: [TODO]
+**Regulatorische Daten**: [TODO]
+**Drittanbieter-Daten**: [TODO]
 
 ### Datenintegration
 
-{{ source.data_integration }}
+[TODO]
 
 ## Informationssysteme
 
 ### Systemanforderungen
 
-**Funktionale Anforderungen**: {{ source.functional_requirements }}
-**Nicht-funktionale Anforderungen**: {{ source.non_functional_requirements }}
-**Sicherheitsanforderungen**: {{ source.security_requirements }}
+**Funktionale Anforderungen**: [TODO]
+**Nicht-funktionale Anforderungen**: [TODO]
+**Sicherheitsanforderungen**: [TODO]
 
 ### Systemkontrollen
 
-**Zugriffskontrollen**: {{ source.access_controls }}
-**Verarbeitungskontrollen**: {{ source.processing_controls }}
-**Ausgabekontrollen**: {{ source.output_controls }}
+**Zugriffskontrollen**: [TODO]
+**Verarbeitungskontrollen**: [TODO]
+**Ausgabekontrollen**: [TODO]
 
 ## Datengovernance
 
 ### Governance-Rahmen
 
-{{ source.data_governance_framework }}
+[TODO]
 
 ### Datenverantwortlichkeiten
 
-**Data Owner**: {{ source.data_owner_responsibilities }}
-**Data Steward**: {{ source.data_steward_responsibilities }}
-**Data Custodian**: {{ source.data_custodian_responsibilities }}
+**Data Owner**: [TODO]
+**Data Steward**: [TODO]
+**Data Custodian**: [TODO]
 
 ### Datenrichtlinien
 
-**Datenqualitätsrichtlinie**: {{ source.data_quality_policy }}
-**Datenmanagement-Richtlinie**: {{ source.data_management_policy }}
-**Datenaufbewahrungsrichtlinie**: {{ source.data_retention_policy }}
+**Datenqualitätsrichtlinie**: [TODO]
+**Datenmanagement-Richtlinie**: [TODO]
+**Datenaufbewahrungsrichtlinie**: [TODO]
 
 ## Qualitätssicherung
 
 ### Qualitätskontrollen
 
-**Präventive Kontrollen**: {{ source.preventive_controls }}
-**Detektive Kontrollen**: {{ source.detective_controls }}
-**Korrektive Kontrollen**: {{ source.corrective_controls }}
+**Präventive Kontrollen**: [TODO]
+**Detektive Kontrollen**: [TODO]
+**Korrektive Kontrollen**: [TODO]
 
 ### Qualitätsmessung
 
-**Qualitätsmetriken**: {{ source.quality_metrics }}
-**Qualitätsberichte**: {{ source.quality_reports }}
-**Trendanalyse**: {{ source.trend_analysis }}
+**Qualitätsmetriken**: [TODO]
+**Qualitätsberichte**: [TODO]
+**Trendanalyse**: [TODO]
 
 ### Qualitätsverbesserung
 
-**Verbesserungsinitiativen**: {{ source.improvement_initiatives }}
-**Root Cause Analysis**: {{ source.root_cause_analysis }}
-**Lessons Learned**: {{ source.lessons_learned }}
+**Verbesserungsinitiativen**: [TODO]
+**Root Cause Analysis**: [TODO]
+**Lessons Learned**: [TODO]
 
 ## Datenqualitätsprobleme
 
 ### Problemidentifikation
 
-{{ source.problem_identification }}
+[TODO]
 
 ### Problembehandlung
 
-**Eskalation**: {{ source.escalation_process }}
-**Behebung**: {{ source.remediation_process }}
-**Prävention**: {{ source.prevention_measures }}
+**Eskalation**: [TODO]
+**Behebung**: [TODO]
+**Prävention**: [TODO]
 
 ## Überwachung und Berichterstattung
 
 ### Überwachungsaktivitäten
 
-{{ source.monitoring_activities }}
+[TODO]
 
 ### Berichterstattung
 
-**An Management**: {{ source.management_reporting }}
-**An Data Governance Committee**: {{ source.governance_reporting }}
+**An Management**: [TODO]
+**An Data Governance Committee**: [TODO]
 
 ## Rollen und Verantwortlichkeiten
 
-**Chief Data Officer (CDO)**: {{ source.cdo_responsibilities }}
-**Data Quality Manager**: {{ source.dq_manager_responsibilities }}
-**Data Stewards**: {{ source.data_steward_role }}
-**IT-Abteilung**: {{ source.it_responsibilities }}
+**Chief Data Officer (CDO)**: [TODO]
+**Data Quality Manager**: [TODO]
+**Data Stewards**: [TODO]
+**IT-Abteilung**: [TODO]
 
 ## Referenzen
 
@@ -223,12 +234,3 @@ Dieses Dokument beschreibt die Anforderungen an die Informationsqualität bei {{
 - Informationssicherheitsrichtlinie
 - DAMA-DMBOK (Data Management Body of Knowledge)
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

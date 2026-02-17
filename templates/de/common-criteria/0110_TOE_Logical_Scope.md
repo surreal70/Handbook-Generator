@@ -1,11 +1,16 @@
 # TOE Logical Scope
 
-**Dokument-ID:** 0110  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0110
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -345,8 +350,6 @@ Die logischen Grenzen wurden wie folgt definiert:
 - Aufrechterhaltung: [TODO: Wie wird der sichere Zustand aufrechterhalten]
 - Wiederherstellung: [TODO: Wiederherstellung nach Fehler]
 
----
-
 **Nächste Schritte:**
 1. Vervollständige alle [TODO]-Platzhalter mit TOE-spezifischen Informationen
 2. Erstelle detaillierte funktionale Architekturdiagramme
@@ -354,10 +357,3 @@ Die logischen Grenzen wurden wie folgt definiert:
 4. Überprüfe die Konsistenz mit dem physischen Umfang (Template 0100)
 5. Stelle sicher, dass alle Sicherheitsfunktionen dokumentiert sind
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

@@ -1,17 +1,28 @@
----
+
 Document-ID: coso-0110
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Objectives Specification
 
+**Document-ID:** [FRAMEWORK]-0110
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document describes how {{ source.organization_name }} specifies suitable objectives to identify and assess risks (COSO Principle 6).
+This document describes how [TODO] specifies suitable objectives to identify and assess risks (COSO Principle 6).
 
 ## Scope
 
@@ -24,126 +35,118 @@ This document describes how {{ source.organization_name }} specifies suitable ob
 
 ### Entity-Level Objectives
 
-{{ source.entity_level_objectives }}
+[TODO]
 
 ### Business Unit Objectives
 
-{{ source.business_unit_objectives }}
+[TODO]
 
 ### Process Objectives
 
-{{ source.process_objectives }}
+[TODO]
 
 ## Objective Categories
 
 ### Strategic Objectives
 
-**Definition**: {{ source.strategic_objectives_definition }}
+**Definition**: [TODO]
 
-**Examples**: {{ source.strategic_objectives_examples }}
+**Examples**: [TODO]
 
-**Ownership**: {{ source.strategic_objectives_ownership }}
+**Ownership**: [TODO]
 
 ### Operations Objectives
 
-**Definition**: {{ source.operational_objectives_definition }}
+**Definition**: [TODO]
 
-**Examples**: {{ source.operational_objectives_examples }}
+**Examples**: [TODO]
 
-**Ownership**: {{ source.operational_objectives_ownership }}
+**Ownership**: [TODO]
 
 ### Reporting Objectives
 
-**Definition**: {{ source.reporting_objectives_definition }}
+**Definition**: [TODO]
 
-**Examples**: {{ source.reporting_objectives_examples }}
+**Examples**: [TODO]
 
-**Ownership**: {{ source.reporting_objectives_ownership }}
+**Ownership**: [TODO]
 
 ### Compliance Objectives
 
-**Definition**: {{ source.compliance_objectives_definition }}
+**Definition**: [TODO]
 
-**Examples**: {{ source.compliance_objectives_examples }}
+**Examples**: [TODO]
 
-**Ownership**: {{ source.compliance_objectives_ownership }}
+**Ownership**: [TODO]
 
 ## Objective Setting Process
 
 ### Strategy Development
 
-{{ source.strategy_development }}
+[TODO]
 
 ### Objective Cascading
 
-{{ source.objective_cascading }}
+[TODO]
 
 ### Objective Alignment
 
-{{ source.objective_alignment }}
+[TODO]
 
 ## SMART Criteria
 
 ### Specific
 
-{{ source.specific_criteria }}
+[TODO]
 
 ### Measurable
 
-{{ source.measurable_criteria }}
+[TODO]
 
 ### Achievable
 
-{{ source.achievable_criteria }}
+[TODO]
 
 ### Relevant
 
-{{ source.relevant_criteria }}
+[TODO]
 
 ### Time-bound
 
-{{ source.time_bound_criteria }}
+[TODO]
 
 ## Risk Tolerance
 
 ### Definition
 
-{{ source.risk_tolerance_definition }}
+[TODO]
 
 ### Setting
 
-{{ source.risk_tolerance_setting }}
+[TODO]
 
 ### Monitoring
 
-{{ source.risk_tolerance_monitoring }}
+[TODO]
 
 ## Documentation and Communication
 
 ### Objective Documentation
 
-{{ source.objective_documentation }}
+[TODO]
 
 ### Communication Plan
 
-{{ source.communication_plan }}
+[TODO]
 
 ### Review and Update
 
-{{ source.review_update_process }}
+[TODO]
 
 ## References
 
-- Strategic Plan {{ source.organization_name }}
+- Strategic Plan [TODO]
 - Balanced Scorecard
 - Risk Management Policy
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

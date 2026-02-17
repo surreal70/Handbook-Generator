@@ -1,11 +1,16 @@
 # Planung von Änderungen
 
-**Dokument-ID:** 0220  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0220
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -170,8 +175,6 @@ Dieses Dokument definiert den Prozess für die Planung von Änderungen am Qualit
 |--------------|--------------|-----------|--------------|--------|-----------|---------|
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
----
-
 **Nächste Schritte:**
 1. Etabliere Änderungsmanagement-Prozess
 2. Erstelle Änderungsantragsformular und Genehmigungsworkflow
@@ -180,10 +183,3 @@ Dieses Dokument definiert den Prozess für die Planung von Änderungen am Qualit
 5. Führe Nachimplementierungsüberprüfungen durch
 6. Verbessere Änderungsprozess kontinuierlich
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

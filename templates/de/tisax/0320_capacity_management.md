@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0320
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Kapazitätsmanagement
+
+**Dokument-ID:** [FRAMEWORK]-0320
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -15,7 +26,7 @@ Dieses Dokument beschreibt das Kapazitätsmanagement gemäß TISAX-Anforderungen
 
 ## Geltungsbereich
 
-Dieses Dokument gilt für alle IT-Ressourcen von {{ source.organization_name }}.
+Dieses Dokument gilt für alle IT-Ressourcen von [TODO].
 
 ## Kapazitätsplanung
 
@@ -28,8 +39,8 @@ Dieses Dokument gilt für alle IT-Ressourcen von {{ source.organization_name }}.
 - Speicherplatz
 
 **Schwellwerte:**
-- Warnung bei {{ source.capacity_warning_threshold }}%
-- Kritisch bei {{ source.capacity_critical_threshold }}%
+- Warnung bei [TODO]%
+- Kritisch bei [TODO]%
 
 ### Prognose
 
@@ -62,17 +73,8 @@ Dieses Dokument adressiert:
 
 ## Kennzahlen
 
-{{ source.organization_name }} misst:
+[TODO] misst:
 - Durchschnittliche Ressourcenauslastung
 - Anzahl Kapazitätsengpässe
 - Reaktionszeit auf Engpässe
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

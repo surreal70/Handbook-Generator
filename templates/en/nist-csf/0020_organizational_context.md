@@ -1,13 +1,25 @@
----
+
 Document-ID: nist-csf-0020
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Organizational Context (GV.OC)
+
+**Document-ID:** [FRAMEWORK]-0020
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -15,12 +27,12 @@ This document defines the organizational context for cybersecurity risk manageme
 
 ## Scope
 
-{{ meta.scope }}
+{{ meta-handbook.scope }}
 
 ## Organizational Mission and Objectives
 
 ### Corporate Mission
-{{ meta.organization_mission }}
+{{ meta-handbook.organization_mission }}
 
 ### Business Objectives
 1. {{ meta.business_goal_1 }}
@@ -60,7 +72,7 @@ This document defines the organizational context for cybersecurity risk manageme
 1. **Data Protection**
    - GDPR (General Data Protection Regulation)
    - Local data protection laws
-   - {{ meta.additional_privacy_laws }}
+   - {{ meta-handbook.additional_privacy_laws }}
 
 2. **Industry-Specific Regulations**
    - {{ meta.industry_regulation_1 }}
@@ -84,7 +96,7 @@ This document defines the organizational context for cybersecurity risk manageme
 ## Risk Tolerance and Appetite
 
 ### Risk Appetite Statement
-{{ meta.organization }} is willing to accept {{ meta.risk_appetite_level }} cybersecurity risks to achieve business objectives, provided that:
+{{ meta-organisation.name }} is willing to accept {{ meta-handbook.risk_appetite_level }} cybersecurity risks to achieve business objectives, provided that:
 - Critical systems are adequately protected
 - Regulatory requirements are met
 - Reputational risks are minimized
@@ -105,7 +117,7 @@ Board of Directors
     ↓
 Executive Management
     ↓
-CISO ({{ meta.ciso }})
+CISO ({{ meta-organisation-roles.role_CISO }})
     ↓
 ├── Security Operations
 ├── Risk Management
@@ -118,14 +130,6 @@ CISO ({{ meta.ciso }})
 - 0030_risk_management_strategy.md
 - 0040_roles_responsibilities.md
 - 0050_policy_framework.md
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- 
 Author Notes:

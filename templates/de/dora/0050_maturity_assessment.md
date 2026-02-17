@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0050
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Reifegrad-Assessment
+
+**Dokument-ID:** [FRAMEWORK]-0050
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -59,101 +70,92 @@ Für jede Dimension:
 
 ### Technische Praktiken
 
-**Reifegrad**: {{ source.technical_practices_maturity }}
+**Reifegrad**: [TODO]
 
-- Version Control: {{ source.version_control_maturity }}
-- Continuous Integration: {{ source.ci_maturity }}
-- Continuous Delivery: {{ source.cd_maturity }}
-- Test Automation: {{ source.test_automation_maturity }}
-- Trunk-based Development: {{ source.trunk_based_maturity }}
+- Version Control: [TODO]
+- Continuous Integration: [TODO]
+- Continuous Delivery: [TODO]
+- Test Automation: [TODO]
+- Trunk-based Development: [TODO]
 
 ### Prozesse und Workflows
 
-**Reifegrad**: {{ source.process_maturity }}
+**Reifegrad**: [TODO]
 
-- Change Management: {{ source.change_mgmt_maturity }}
-- Incident Management: {{ source.incident_mgmt_maturity }}
-- Release Management: {{ source.release_mgmt_maturity }}
-- Configuration Management: {{ source.config_mgmt_maturity }}
+- Change Management: [TODO]
+- Incident Management: [TODO]
+- Release Management: [TODO]
+- Configuration Management: [TODO]
 
 ### Kultur und Organisation
 
-**Reifegrad**: {{ source.culture_maturity }}
+**Reifegrad**: [TODO]
 
-- Collaboration: {{ source.collaboration_maturity }}
-- Learning Culture: {{ source.learning_culture_maturity }}
-- Psychological Safety: {{ source.psychological_safety_maturity }}
-- Team Autonomy: {{ source.team_autonomy_maturity }}
+- Collaboration: [TODO]
+- Learning Culture: [TODO]
+- Psychological Safety: [TODO]
+- Team Autonomy: [TODO]
 
 ### Messung und Monitoring
 
-**Reifegrad**: {{ source.measurement_maturity }}
+**Reifegrad**: [TODO]
 
-- Metrics Collection: {{ source.metrics_collection_maturity }}
-- Monitoring: {{ source.monitoring_maturity }}
-- Observability: {{ source.observability_maturity }}
-- Alerting: {{ source.alerting_maturity }}
+- Metrics Collection: [TODO]
+- Monitoring: [TODO]
+- Observability: [TODO]
+- Alerting: [TODO]
 
 ### Automatisierung
 
-**Reifegrad**: {{ source.automation_maturity }}
+**Reifegrad**: [TODO]
 
-- Build Automation: {{ source.build_automation_maturity }}
-- Test Automation: {{ source.test_automation_level }}
-- Deployment Automation: {{ source.deployment_automation_maturity }}
-- Infrastructure as Code: {{ source.iac_maturity }}
+- Build Automation: [TODO]
+- Test Automation: [TODO]
+- Deployment Automation: [TODO]
+- Infrastructure as Code: [TODO]
 
 ## Stärken und Schwächen
 
 ### Stärken
 
-1. {{ source.maturity_strength_1 }}
-2. {{ source.maturity_strength_2 }}
-3. {{ source.maturity_strength_3 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
 
 ### Schwächen
 
-1. {{ source.maturity_weakness_1 }}
-2. {{ source.maturity_weakness_2 }}
-3. {{ source.maturity_weakness_3 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
 
 ## Entwicklungsplan
 
 ### Prioritäten
 
 **Hohe Priorität**:
-1. {{ source.high_priority_1 }}
-2. {{ source.high_priority_2 }}
+1. [TODO]
+2. [TODO]
 
 **Mittlere Priorität**:
-1. {{ source.medium_priority_1 }}
-2. {{ source.medium_priority_2 }}
+1. [TODO]
+2. [TODO]
 
 **Niedrige Priorität**:
-1. {{ source.low_priority_1 }}
-2. {{ source.low_priority_2 }}
+1. [TODO]
+2. [TODO]
 
 ### Roadmap
 
-**Q1**: {{ source.q1_roadmap }}
-**Q2**: {{ source.q2_roadmap }}
-**Q3**: {{ source.q3_roadmap }}
-**Q4**: {{ source.q4_roadmap }}
+**Q1**: [TODO]
+**Q2**: [TODO]
+**Q3**: [TODO]
+**Q4**: [TODO]
 
 ### Erfolgskriterien
 
-- {{ source.success_criterion_1 }}
-- {{ source.success_criterion_2 }}
-- {{ source.success_criterion_3 }}
+- [TODO]
+- [TODO]
+- [TODO]
 
 <!-- Hinweis: Reifegrad-Assessment sollte jährlich wiederholt werden -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

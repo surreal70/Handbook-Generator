@@ -1,11 +1,16 @@
 # Appendix: Terms and Abbreviations
 
-**Document-ID:** 0730  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Reference  
-**Classification:** Public  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0730
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -36,8 +41,6 @@ Reference: GDPR Art. 4 (Definitions)
 | **CJEU** | Court of Justice of the European Union | EuGH (Europäischer Gerichtshof) |
 | **EDPB** | European Data Protection Board | EDSA (Europäischer Datenschutzausschuss) |
 | **EDSA** | Europäischer Datenschutzausschuss | EDPB (European Data Protection Board) |
-
----
 
 ## Term Definitions (Art. 4 GDPR)
 
@@ -215,8 +218,6 @@ A service as defined in Article 1(1)(b) of Directive (EU) 2015/1535.
 
 An organization and its subordinate bodies governed by public international law, or any other body set up by an agreement between two or more countries.
 
----
-
 ## Additional Important Terms
 
 ### Special Categories of Personal Data (Art. 9)
@@ -282,8 +283,6 @@ Rights of natural persons vis-à-vis the controller:
 - Right to object (Art. 21)
 - Right to withdraw consent (Art. 7)
 
----
-
 ## Legal Bases (Art. 6(1))
 
 | Letter | Legal Basis | Description |
@@ -294,8 +293,6 @@ Rights of natural persons vis-à-vis the controller:
 | **d** | Vital interests | Necessary to protect vital interests |
 | **e** | Public interest | Necessary for task in public interest |
 | **f** | Legitimate interests | Necessary for legitimate interests |
-
----
 
 ## Sanctions and Fines
 
@@ -311,14 +308,5 @@ Rights of natural persons vis-à-vis the controller:
 - Violations of data subject rights (Art. 12-22)
 - Violations of data transfers (Art. 44-49)
 
----
-
 **Note:** These definitions are based on GDPR and serve as a reference. For legal questions, a data protection expert or lawyer should be consulted.
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

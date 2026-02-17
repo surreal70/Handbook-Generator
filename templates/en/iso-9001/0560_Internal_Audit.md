@@ -1,11 +1,16 @@
 # Internal Audit
 
-**Document-ID:** 0560  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0560
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -17,7 +22,7 @@ Reference: ISO 9001:2015, Clause 9.2
 
 ## Purpose
 
-This document defines the internal audit program of {{ meta.organization }} to ensure the QMS is conforming, effectively implemented and maintained.
+This document defines the internal audit program of {{ meta-organisation.name }} to ensure the QMS is conforming, effectively implemented and maintained.
 
 ## Audit Program (9.2)
 
@@ -30,7 +35,7 @@ This document defines the internal audit program of {{ meta.organization }} to e
 
 ### Program Planning
 
-**{{ meta.organization }} plans audits considering:**
+**{{ meta-organisation.name }} plans audits considering:**
 - Importance of processes to be audited
 - Changes affecting the organization
 - Results of previous audits
@@ -216,7 +221,7 @@ This document defines the internal audit program of {{ meta.organization }} to e
 
 ### Action Follow-up
 
-**{{ meta.organization }} ensures:**
+**{{ meta-organisation.name }} ensures:**
 - Actions are implemented timely
 - Effectiveness is verified
 - Documentation is retained
@@ -248,7 +253,7 @@ This document defines the internal audit program of {{ meta.organization }} to e
 
 ### Effectiveness Evaluation
 
-**{{ meta.organization }} evaluates effectiveness of audit program through:**
+**{{ meta-organisation.name }} evaluates effectiveness of audit program through:**
 - Achievement of program objectives
 - Quality of audits
 - Competence of auditors
@@ -294,8 +299,6 @@ This document defines the internal audit program of {{ meta.organization }} to e
 - Reviewing audit results
 - Approving actions
 
----
-
 **Next Steps:**
 1. Create annual audit plan
 2. Qualify auditors
@@ -304,10 +307,3 @@ This document defines the internal audit program of {{ meta.organization }} to e
 5. Follow up corrective actions
 6. Evaluate program effectiveness
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

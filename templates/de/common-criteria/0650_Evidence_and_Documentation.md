@@ -1,11 +1,16 @@
 # Nachweise und Dokumentation
 
-**Dokument-ID:** 0650  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** Intern / Vertraulich / Streng vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0650
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -430,8 +435,6 @@ Dieses Kapitel dokumentiert alle Nachweise und Dokumentationen, die für die Com
 **E-Mail:** [TODO: E-Mail]  
 **Telefon:** [TODO: Telefon]
 
----
-
 **Nächste Schritte:**
 1. Identifizieren Sie alle erforderlichen Nachweise basierend auf dem gewählten EAL
 2. Erstellen Sie einen Zeitplan für die Nachweiserstellung
@@ -442,10 +445,3 @@ Dieses Kapitel dokumentiert alle Nachweise und Dokumentationen, die für die Com
 7. Archivieren Sie alle Nachweise gemäß den Anforderungen
 8. Aktualisieren Sie die Nachweisdokumentation bei Änderungen
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

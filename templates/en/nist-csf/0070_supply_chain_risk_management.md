@@ -1,13 +1,25 @@
----
+
 Document-ID: nist-csf-0070
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Supply Chain Risk Management (GV.SC)
+
+**Document-ID:** [FRAMEWORK]-0070
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -15,7 +27,7 @@ This document describes the organization's approach to managing cybersecurity ri
 
 ## Scope
 
-{{ meta.scope }}
+{{ meta-handbook.scope }}
 
 ## Supply Chain Risk Strategy
 
@@ -63,10 +75,10 @@ This document describes the organization's approach to managing cybersecurity ri
 - Liability and insurance
 
 **Service Level Agreements (SLAs):**
-- Availability: {{ meta.sla_availability }}
-- Incident response time: {{ meta.sla_response_time }}
-- Patch management: {{ meta.sla_patch_time }}
-- Backup and recovery: {{ meta.sla_recovery_time }}
+- Availability: {{ meta-handbook.sla_availability }}
+- Incident response time: {{ meta-handbook.sla_response_time }}
+- Patch management: {{ meta-handbook.sla_patch_time }}
+- Backup and recovery: {{ meta-handbook.sla_recovery_time }}
 
 ### 3. Onboarding
 
@@ -241,17 +253,3 @@ This document describes the organization's approach to managing cybersecurity ri
 - 0050_policy_framework.md
 - 0150_supply_chain_risk_management.md (Identify)
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |
-
-<!-- 
-Author Notes:
-- Update supplier list regularly
-- Review contract terms during renewals
-- Document all supplier incidents
--->

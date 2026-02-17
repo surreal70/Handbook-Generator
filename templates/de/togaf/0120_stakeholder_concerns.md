@@ -1,13 +1,24 @@
----
+
 Document-ID: togaf-0120
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Stakeholder-Anliegen
+
+**Dokument-ID:** [FRAMEWORK]-0120
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -17,17 +28,8 @@ Dokumentation der spezifischen Anliegen und Anforderungen der Stakeholder.
 
 | Stakeholder | Anliegen | Priorität | Adressierung |
 |-------------|----------|-----------|--------------|
-| {{ source.stakeholder_1 }} | {{ source.concern_1 }} | {{ source.priority_1 }} | {{ source.address_1 }} |
-| {{ source.stakeholder_2 }} | {{ source.concern_2 }} | {{ source.priority_2 }} | {{ source.address_2 }} |
+| [TODO] | [TODO] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [TODO] | [TODO] |
 
 <!-- Autorenhinweise: Dokumentieren Sie alle relevanten Stakeholder-Anliegen -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|------|--------|---------|
-| 0.1 | {{meta.document.last_updated}} | {{ meta.defaults.author }} | Initiale Erstellung |
-
-<-   End of template -->

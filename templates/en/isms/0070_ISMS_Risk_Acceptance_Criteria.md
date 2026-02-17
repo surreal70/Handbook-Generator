@@ -1,5 +1,19 @@
 # Risk Criteria and Risk Acceptance
 
+**Document-ID:** [FRAMEWORK]-0070
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This document defines risk acceptance criteria and the process for accepting risks.
@@ -14,16 +28,14 @@ risks at different levels.
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** {{ meta-handbook.modifydate }}  
+**Next Review:** {{ meta-handbook.next_review }}
 
 ## 1. Risk Appetite and Tolerance
 
 ### 1.1 Risk Appetite
 
-**{{ meta.organization.name }}** defines its risk appetite as follows:
+**{{ meta-organisation.name }}** defines its risk appetite as follows:
 
 **General Risk Appetite:** [TODO: Conservative / Moderate / Progressive]
 
@@ -140,18 +152,9 @@ risks at different levels.
 - **ISO/IEC 27001:2022** - Clause 6.1.2: Information security risk assessment
 - **ISO/IEC 27005:2022** - Information security risk management
 
----
-
 **Approved by:**  
 {{ meta.management.ceo }}, Management  
-Date: {{ meta.document.approval_date }}
+Date: {{ meta-handbook.modifydate }}
 
-**Next Review:** {{ meta.document.next_review }}
+**Next Review:** {{ meta-handbook.next_review }}
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

@@ -70,16 +70,16 @@ Templates are organized thematically using a numeric prefix system:
 Templates use placeholders for organization-specific data:
 
 ### Metadata Placeholders
-- `{{ meta.owner }}` - Document owner
-- `{{ meta.version }}` - Version number
-- `{{ meta.date }}` - Date
-- `{{ meta.organization }}` - Organization name
-- `{{ meta.cio }}` - CIO name
-- `{{ meta.ciso }}` - CISO name
+- `{{ meta-handbook.owner }}` - Document owner
+- `{{ meta-handbook.revision }}` - Version number
+- `{{ meta-handbook.modifydate }}` - Date
+- `{{ meta-organisation.name }}` - Organization name
+- `{{ meta-organisation-roles.role_CIO }}` - CIO name
+- `{{ meta-organisation-roles.role_CISO }}` - CISO name
 
 ### Data Source Placeholders
-- `{{ source.organization_name }}` - Organization name from data source
-- `{{ source.author }}` - Author from data source
+- `[TODO]` - Organization name from data source
+- `[TODO]` - Author from data source
 - Additional organization-specific fields
 
 ## Customizing Templates

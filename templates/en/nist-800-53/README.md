@@ -4,7 +4,7 @@
 
 These templates form the foundation for a complete NIST 800-53 Security and Privacy Controls Handbook based on **NIST SP 800-53 Revision 5**.
 
-The NIST 800-53 Handbook for {{ meta.organization.name }} includes structured documents covering all 20 control families to ensure the security and privacy of information systems.
+The NIST 800-53 Handbook for [TODO] includes structured documents covering all 20 control families to ensure the security and privacy of information systems.
 
 ## Template Structure
 
@@ -114,10 +114,10 @@ The NIST 800-53 Handbook for {{ meta.organization.name }} includes structured do
 Templates use placeholders from the `metadata.yaml` file:
 
 ```markdown
-**Organization:** {{ meta.organization.name }}
-**Authorizing Official (AO):** {{ meta.roles.ao.name }} ({{ meta.roles.ao.email }})
-**ISSO:** {{ meta.roles.isso.name }} ({{ meta.roles.isso.email }})
-**ISSM:** {{ meta.roles.issm.name }} ({{ meta.roles.issm.email }})
+**Organization:** [TODO]
+**Authorizing Official (AO):** [TODO] ([TODO])
+**ISSO:** [TODO] ([TODO])
+**ISSM:** [TODO] ([TODO])
 **System Name:** {{ meta.nist.system_name }}
 **System ID:** {{ meta.nist.system_id }}
 ```
@@ -269,7 +269,7 @@ For questions or issues:
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
+| 0.1 | [TODO] | {{ meta.defaults.author }} | Initial Creation |
 
 ## Version History
 

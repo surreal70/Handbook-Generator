@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-38500-0310
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Richtlinien-Framework
+
+**Dokument-ID:** [FRAMEWORK]-0160
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -16,7 +28,7 @@ Dieses Dokument beschreibt das Richtlinien-Framework für IT-Governance.
 ## Geltungsbereich
 
 Dieses Dokument gilt für:
-- {{ meta.organization }}
+- {{ meta-organisation.name }}
 - Alle IT-Richtlinien
 
 ## Richtlinien-Hierarchie
@@ -78,19 +90,11 @@ Dieses Dokument gilt für:
 
 | Richtlinie | Owner | Letzte Aktualisierung | Nächster Review |
 |------------|-------|----------------------|-----------------|
-| IT-Governance | {{ meta.cio }} | {{ meta.governance_policy_date }} | {{ meta.governance_policy_review }} |
-| IT-Sicherheit | {{ meta.ciso }} | {{ meta.security_policy_date }} | {{ meta.security_policy_review }} |
-| Datenschutz | {{ meta.dpo }} | {{ meta.privacy_policy_date }} | {{ meta.privacy_policy_review }} |
+| IT-Governance | {{ meta-organisation-roles.role_CIO }} | {{ meta-handbook.governance_policy_date }} | {{ meta-handbook.governance_policy_review }} |
+| IT-Sicherheit | {{ meta-organisation-roles.role_CISO }} | {{ meta-handbook.security_policy_date }} | {{ meta-handbook.security_policy_review }} |
+| Datenschutz | {{ meta-organisation-roles.role_GDPR_Manager }} | {{ meta-handbook.privacy_policy_date }} | {{ meta-handbook.privacy_policy_review }} |
 
 ## Dokumentenverweise
 
 - 0300_governance_implementation.md
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |
 

@@ -1,13 +1,16 @@
 # Covered Entities und Healthcare-Komponenten
 
-**Dokument-ID:** HIPAA-0020  
-**Organisation:** {{ meta.organization.name }}  
-**Verantwortlich:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Entwurf / In Prüfung / Genehmigt  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** HIPAA-0020
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,7 +28,7 @@ Erforderliche Anpassungen:
 
 ## 1. Zweck
 
-Dieses Dokument definiert den Status von {{ meta.organization.name }} als HIPAA Covered Entity und dokumentiert alle Healthcare-Komponenten und abgedeckten Funktionen.
+Dieses Dokument definiert den Status von {{ meta-organisation.name }} als HIPAA Covered Entity und dokumentiert alle Healthcare-Komponenten und abgedeckten Funktionen.
 
 ### 1.1 Zielsetzungen
 
@@ -45,7 +48,7 @@ Unter HIPAA ist eine Covered Entity:
 
 ### 2.2 Organisationsklassifizierung
 
-**{{ meta.organization.name }} ist ein:** [TODO: Eine auswählen]
+**{{ meta-organisation.name }} ist ein:** [TODO: Eine auswählen]
 
 - [ ] **Healthcare Provider** (45 CFR §160.103)
 - [ ] **Health Plan** (45 CFR §160.103)
@@ -194,7 +197,7 @@ Eine Hybrid Entity ist eine Organisation, die:
 2. Ihre Healthcare-Komponenten formal bezeichnet hat
 3. HIPAA nur auf bezeichnete Healthcare-Komponenten anwendet
 
-**Ist {{ meta.organization.name }} eine Hybrid Entity?** [TODO: Ja/Nein]
+**Ist {{ meta-organisation.name }} eine Hybrid Entity?** [TODO: Ja/Nein]
 
 ### 6.2 Healthcare-Komponenten
 
@@ -337,20 +340,11 @@ Eine Hybrid Entity ist eine Organisation, die:
 
 **Dokumentationsaufbewahrung:** [TODO: 6 Jahre ab Erstellung oder letztem Gültigkeitsdatum]
 
----
-
 **Dokumentenhistorie:**
 
 | Version | Datum | Autor | Änderungen |
 |---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Ersterstellung |
+| 0.1 | {{ meta-handbook.modifydate }} | {{ meta-handbook.author }} | Ersterstellung |
 
 <!-- Ende der Vorlage -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

@@ -1,14 +1,16 @@
 # Basis-Sicherheitscheck / Gap-Analyse (Template)
 
-**Dokument-ID:** 0080  
-**Dokumenttyp:** Methodik-Artefakt  
-**Referenzrahmen:** BSI IT-Grundschutz (BSI Standard 200-2)  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** {{ meta.document.status }}  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0080
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -21,7 +23,7 @@ Reference: BSI Standard 200-2 (Chapter 8: Basis Security Check)
 
 ## 1. Ziel und Zweck
 
-Der Basis-Sicherheitscheck bewertet systematisch, inwieweit die für den Informationsverbund von **{{ meta.organization.name }}** modellierten IT-Grundschutz-Anforderungen umgesetzt sind. Er bildet die Grundlage für:
+Der Basis-Sicherheitscheck bewertet systematisch, inwieweit die für den Informationsverbund von **{{ meta-organisation.name }}** modellierten IT-Grundschutz-Anforderungen umgesetzt sind. Er bildet die Grundlage für:
 - Identifikation von Sicherheitslücken (Gaps)
 - Priorisierung von Maßnahmen
 - Maßnahmenplanung (Dokument 0100)
@@ -96,13 +98,13 @@ Reference the specific module requirements from IT-Grundschutz-Kompendium.
 
 | Baustein | Anforderung (Kurz) | Objekt | Status | Nachweis/Evidence | Finding | Maßnahme | Owner | Zieltermin |
 |---|---|---|---|---|---|---|---|---|
-| ISMS.1 | Sicherheitsleitlinie erstellt | {{ meta.organization.name }} | E | Dokument 0010 | - | - | {{ meta.ciso.name }} | - |
-| ISMS.1 | ISMS-Organisation definiert | {{ meta.organization.name }} | E | Dokument 0020 | - | - | {{ meta.ciso.name }} | - |
-| ISMS.1 | Ressourcen bereitgestellt | {{ meta.organization.name }} | T | Budget-Nachweis | Budget unzureichend | Budget erhöhen | {{ meta.ceo.name }} | [TODO] |
-| ORP.1 | Rollen und Verantwortlichkeiten definiert | {{ meta.organization.name }} | E | Dokument 0020 | - | - | {{ meta.ciso.name }} | - |
-| ORP.2 | Einarbeitung neuer Mitarbeitender | {{ meta.organization.name }} | T | HR-Prozess | Keine Security-Schulung im Onboarding | Security-Schulung integrieren | [TODO: HR] | [TODO] |
-| ORP.3 | Awareness-Programm | {{ meta.organization.name }} | N | - | Kein Awareness-Programm vorhanden | Awareness-Programm aufbauen | {{ meta.ciso.name }} | [TODO] |
-| ORP.4 | IAM-Prozess | {{ meta.organization.name }} | T | IAM-Richtlinie | Rezertifizierung fehlt | Rezertifizierungsprozess implementieren | {{ meta.cio.name }} | [TODO] |
+| ISMS.1 | Sicherheitsleitlinie erstellt | {{ meta-organisation.name }} | E | Dokument 0010 | - | - | {{ meta.ciso.name }} | - |
+| ISMS.1 | ISMS-Organisation definiert | {{ meta-organisation.name }} | E | Dokument 0020 | - | - | {{ meta.ciso.name }} | - |
+| ISMS.1 | Ressourcen bereitgestellt | {{ meta-organisation.name }} | T | Budget-Nachweis | Budget unzureichend | Budget erhöhen | {{ meta.ceo.name }} | [TODO] |
+| ORP.1 | Rollen und Verantwortlichkeiten definiert | {{ meta-organisation.name }} | E | Dokument 0020 | - | - | {{ meta.ciso.name }} | - |
+| ORP.2 | Einarbeitung neuer Mitarbeitender | {{ meta-organisation.name }} | T | HR-Prozess | Keine Security-Schulung im Onboarding | Security-Schulung integrieren | [TODO: HR] | [TODO] |
+| ORP.3 | Awareness-Programm | {{ meta-organisation.name }} | N | - | Kein Awareness-Programm vorhanden | Awareness-Programm aufbauen | {{ meta.ciso.name }} | [TODO] |
+| ORP.4 | IAM-Prozess | {{ meta-organisation.name }} | T | IAM-Richtlinie | Rezertifizierung fehlt | Rezertifizierungsprozess implementieren | {{ meta.cio.name }} | [TODO] |
 
 ### 3.2 Konzeption und Vorgehensweisen (CON)
 
@@ -165,7 +167,7 @@ Reference the specific module requirements from IT-Grundschutz-Kompendium.
 
 | Baustein | Anforderung (Kurz) | Objekt | Status | Nachweis/Evidence | Finding | Maßnahme | Owner | Zieltermin |
 |---|---|---|---|---|---|---|---|---|
-| INF.1 | Gebäudesicherheit | {{ meta.organization.primary_location }} | T | Sicherheitskonzept | Besuchermanagement unzureichend | Besuchermanagement-System | [TODO: Facility] | [TODO] |
+| INF.1 | Gebäudesicherheit | [TODO] | T | Sicherheitskonzept | Besuchermanagement unzureichend | Besuchermanagement-System | [TODO: Facility] | [TODO] |
 | INF.2 | Rechenzentrum-Sicherheit | Rechenzentrum | E | RZ-Dokumentation | - | - | [TODO: Facility] | - |
 
 ## 4. Zusammenfassung und Statistik
@@ -257,28 +259,18 @@ Der Basis-Sicherheitscheck wird wiederholt:
 - Mindestens jährlich im Rahmen des ISMS-Reviews
 
 **Verantwortlich:** {{ meta.ciso.name }} (ISB)  
-**Nächster Check:** {{ meta.document.next_review }}
+**Nächster Check:** {{ meta-handbook.next_review }}
 
 ## 8. Freigabe
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| ISB | {{ meta.ciso.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| IT-Leitung | {{ meta.cio.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| Geschäftsführung | {{ meta.ceo.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| IT-Leitung | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| Geschäftsführung | {{ meta.ceo.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **Referenzen:**
 - BSI Standard 200-2: IT-Grundschutz-Methodik (Kapitel 8: Basis-Sicherheitscheck)
 - BSI IT-Grundschutz-Kompendium
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 <!-- End of template -->

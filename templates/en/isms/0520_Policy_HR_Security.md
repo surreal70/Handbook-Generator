@@ -1,5 +1,19 @@
 # Policy: HR Security
 
+**Document-ID:** [FRAMEWORK]-0520
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This policy establishes the principles for human resources security throughout
@@ -17,20 +31,18 @@ ISO 27001:2022 Annex A Reference: A.6.1, A.6.2, A.6.3, A.6.4
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** {{ meta-handbook.modifydate }}  
+**Next Review:** {{ meta-handbook.next_review }}
 
 ## 1. Purpose
 
-This policy defines the principles for HR Security at **{{ meta.organization.name }}**. It ensures that security responsibilities are understood and fulfilled throughout the employment lifecycle - from hiring through termination.
+This policy defines the principles for HR Security at **{{ meta-organisation.name }}**. It ensures that security responsibilities are understood and fulfilled throughout the employment lifecycle - from hiring through termination.
 
 ## 2. Scope
 
 This policy applies to:
 
-- **Organizational Units:** All departments and locations of {{ meta.organization.name }}
+- **Organizational Units:** All departments and locations of {{ meta-organisation.name }}
 - **Persons:** All employees, contractors, temporary workers, interns
 - **Lifecycle:** Pre-employment, onboarding, employment, offboarding
 - **Locations:** {{ netbox.site.name }} and all other operational sites
@@ -182,18 +194,9 @@ Exceptions to this policy are only permitted in justified exceptional cases:
 - Employment law requirements (Germany)
 - **GDPR (EU 2016/679)** - Data protection for background checks
 
----
-
 **Approved by:**  
 {{ meta.management.ceo }}, Management  
-Date: {{ meta.document.approval_date }}
+Date: {{ meta-handbook.modifydate }}
 
-**Next Review:** {{ meta.document.next_review }} (annually or as needed)
+**Next Review:** {{ meta-handbook.next_review }} (annually or as needed)
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

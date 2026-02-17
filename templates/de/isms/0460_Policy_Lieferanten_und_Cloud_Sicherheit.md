@@ -1,5 +1,19 @@
 # Policy: Lieferanten und Cloud Sicherheit
 
+**Dokument-ID:** 0460
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This policy establishes the principles for third-party and cloud security management.
@@ -10,27 +24,15 @@ supply chain and cloud adoption.
 ISO 27001:2022 Annex A Reference: A.5.19, A.5.20, A.5.21, A.5.22, A.5.23
 -->
 
-**Dokument-ID:** 0460  
-**Dokumenttyp:** Policy (abstrakt)  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.5.19-A.5.23 (inkl. Amendment 1:2024)  
-**Owner:** {{ meta.ciso.name }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
-
----
-
 ## 1. Zweck
 
-Diese Policy definiert die Grundsätze für Lieferanten- und Cloud-Sicherheitsmanagement der **{{ meta.organization.name }}**. Sie stellt sicher, dass Lieferanten, Dienstleister und Cloud-Provider Sicherheitsanforderungen erfüllen und über ihren gesamten Lebenszyklus sicher verwaltet werden.
+Diese Policy definiert die Grundsätze für Lieferanten- und Cloud-Sicherheitsmanagement der **{{ meta-organisation.name }}**. Sie stellt sicher, dass Lieferanten, Dienstleister und Cloud-Provider Sicherheitsanforderungen erfüllen und über ihren gesamten Lebenszyklus sicher verwaltet werden.
 
 ## 2. Geltungsbereich
 
 Diese Policy gilt für:
 
-- **Organisationseinheiten:** Alle Abteilungen und Standorte der {{ meta.organization.name }}
+- **Organisationseinheiten:** Alle Abteilungen und Standorte der {{ meta-organisation.name }}
 - **Lieferanten-Typen:** IT-Dienstleister, Cloud-Provider, SaaS-Anbieter, Outsourcing-Partner, Subunternehmer
 - **Services:** IaaS, PaaS, SaaS, Managed Services, Outsourcing
 - **Lebenszyklus:** Auswahl, Onboarding, Betrieb, Monitoring, Offboarding
@@ -177,18 +179,9 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **CSA STAR** - Cloud Security Alliance Security, Trust & Assurance Registry
 - **DSGVO (EU 2016/679)** - Art. 28 - Auftragsverarbeitung
 
----
-
 **Genehmigt durch:**  
 {{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+Datum: {{ meta-handbook.modifydate }}
 
-**Nächster Review:** {{ meta.document.next_review }} (jährlich oder anlassbezogen)
+**Nächster Review:** {{ meta-handbook.next_review }} (jährlich oder anlassbezogen)
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

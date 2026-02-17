@@ -81,13 +81,13 @@ Die Templates sind nach der Struktur von ISO/IEC 15408-1:2022 organisiert:
 Templates unterstützen zwei Arten von Platzhaltern:
 
 - **Manuelle Platzhalter**: `[TODO: Beschreibung]` - müssen manuell ersetzt werden
-- **Automatische Platzhalter**: `{{ source.field }}` - werden aus Datenquellen befüllt
+- **Automatische Platzhalter**: `[TODO]` - werden aus Datenquellen befüllt
 
 Beispiele für automatische Platzhalter:
-- `{{ meta.organization }}` - Organisationsname
-- `{{ meta.author }}` - Autor
-- `{{ meta.version }}` - Versionsnummer
-- `{{ meta.date }}` - Datum
+- `{{ meta-organisation.name }}` - Organisationsname
+- `{{ meta-handbook.author }}` - Autor
+- `{{ meta-handbook.revision }}` - Versionsnummer
+- `{{ meta-handbook.modifydate }}` - Datum
 
 ## Common Criteria Versionen
 
@@ -140,7 +140,7 @@ Bei Fragen zur Verwendung dieser Templates oder zur Common Criteria Evaluierung 
 
 | Version | Datum | Autor | Änderungen |
 |---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
+| 0.1 | [TODO] | {{ meta.defaults.author }} | Initiale Erstellung |
 
 ## Versionshistorie
 

@@ -1,56 +1,58 @@
----
+
 Document-ID: coso-0050
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Board-Aufsicht und Unabhängigkeit
 
+**Dokument-ID:** [FRAMEWORK]-0050
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt die Aufsichtsfunktion und Unabhängigkeit des Boards von {{ source.organization_name }} (COSO Prinzip 2).
+Dieses Dokument beschreibt die Aufsichtsfunktion und Unabhängigkeit des Boards von [TODO] (COSO Prinzip 2).
 
 ## Board-Zusammensetzung
 
-**Mitglieder**: {{ source.board_members }}
-**Unabhängige Mitglieder**: {{ source.independent_board_members }}
-**Vorsitzender**: {{ source.board_chair }}
+**Mitglieder**: [TODO]
+**Unabhängige Mitglieder**: [TODO]
+**Vorsitzender**: [TODO]
 
 ## Aufsichtsausschüsse
 
 ### Audit Committee
 
-**Mitglieder**: {{ source.audit_committee_members }}
-**Verantwortlichkeiten**: {{ source.audit_committee_responsibilities }}
+**Mitglieder**: [TODO]
+**Verantwortlichkeiten**: [TODO]
 
 ### Risk Committee
 
-**Mitglieder**: {{ source.risk_committee_members }}
-**Verantwortlichkeiten**: {{ source.risk_committee_responsibilities }}
+**Mitglieder**: [TODO]
+**Verantwortlichkeiten**: [TODO]
 
 ### Compliance Committee
 
-**Mitglieder**: {{ source.compliance_committee_members }}
-**Verantwortlichkeiten**: {{ source.compliance_committee_responsibilities }}
+**Mitglieder**: [TODO]
+**Verantwortlichkeiten**: [TODO]
 
 ## Aufsichtsaktivitäten
 
-{{ source.oversight_activities }}
+[TODO]
 
 ## Referenzen
 
-- Board Charter {{ source.organization_name }}
+- Board Charter [TODO]
 - Committee Charters
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

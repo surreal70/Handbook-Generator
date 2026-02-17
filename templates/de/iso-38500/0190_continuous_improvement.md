@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-38500-0340
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Kontinuierliche Verbesserung
+
+**Dokument-ID:** [FRAMEWORK]-0190
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -16,7 +28,7 @@ Dieses Dokument beschreibt den kontinuierlichen Verbesserungsprozess für IT-Gov
 ## Geltungsbereich
 
 Dieses Dokument gilt für:
-- {{ meta.organization }}
+- {{ meta-organisation.name }}
 - Alle IT-Governance-Prozesse
 
 ## Verbesserungszyklus
@@ -60,20 +72,12 @@ Dieses Dokument gilt für:
 
 ## KPIs für Verbesserung
 
-- Prozesseffizienz: {{ meta.process_efficiency }}%
-- Mitarbeiterzufriedenheit: {{ meta.employee_satisfaction }}/10
-- Innovationsrate: {{ meta.innovation_rate }}%
-- Verbesserungsvorschläge umgesetzt: {{ meta.improvements_implemented }}%
+- Prozesseffizienz: {{ meta-handbook.process_efficiency }}%
+- Mitarbeiterzufriedenheit: {{ meta-handbook.employee_satisfaction }}/10
+- Innovationsrate: {{ meta-handbook.innovation_rate }}%
+- Verbesserungsvorschläge umgesetzt: {{ meta-handbook.improvements_implemented }}%
 
 ## Dokumentenverweise
 
 - 0300_governance_implementation.md
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |
 

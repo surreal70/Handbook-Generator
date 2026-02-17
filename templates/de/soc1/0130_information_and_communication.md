@@ -1,13 +1,24 @@
----
+
 Document-ID: soc1-0400
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Information und Kommunikation
+
+**Dokument-ID:** [FRAMEWORK]-0130
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -24,107 +35,107 @@ Dieses Dokument beschreibt die Informations- und Kommunikationssysteme der Servi
 
 ### Informationsanforderungen
 
-**Relevanz**: {{ source.information_relevance }}
-**Genauigkeit**: {{ source.information_accuracy }}
-**Vollständigkeit**: {{ source.information_completeness }}
-**Aktualität**: {{ source.information_timeliness }}
-**Zugänglichkeit**: {{ source.information_accessibility }}
+**Relevanz**: [TODO]
+**Genauigkeit**: [TODO]
+**Vollständigkeit**: [TODO]
+**Aktualität**: [TODO]
+**Zugänglichkeit**: [TODO]
 
 ### Informationsquellen
 
-{{ source.information_sources }}
+[TODO]
 
 ### Datenqualitätskontrollen
 
-{{ source.data_quality_controls }}
+[TODO]
 
 ## Interne Kommunikation
 
 ### Kommunikationskanäle
 
-**Management-Meetings**: {{ source.management_meetings }}
-**Team-Meetings**: {{ source.team_meetings }}
-**Intranet**: {{ source.intranet }}
-**E-Mail**: {{ source.email_communication }}
-**Collaboration Tools**: {{ source.collaboration_tools }}
+**Management-Meetings**: [TODO]
+**Team-Meetings**: [TODO]
+**Intranet**: [TODO]
+**E-Mail**: [TODO]
+**Collaboration Tools**: [TODO]
 
 ### Richtlinien und Verfahren
 
-**Kommunikation von Richtlinien**: {{ source.policy_communication }}
-**Verfahrensdokumentation**: {{ source.procedure_documentation }}
-**Zugriff auf Dokumentation**: {{ source.documentation_access }}
+**Kommunikation von Richtlinien**: [TODO]
+**Verfahrensdokumentation**: [TODO]
+**Zugriff auf Dokumentation**: [TODO]
 
 ### Berichterstattung
 
-**Management-Berichte**: {{ source.management_reports }}
-**Operative Berichte**: {{ source.operational_reports }}
-**Ausnahmeberichte**: {{ source.exception_reports }}
+**Management-Berichte**: [TODO]
+**Operative Berichte**: [TODO]
+**Ausnahmeberichte**: [TODO]
 
 ## Externe Kommunikation
 
 ### Kommunikation mit Nutzerorganisationen
 
-**Service-Updates**: {{ source.service_updates }}
-**Incident-Benachrichtigungen**: {{ source.incident_notifications }}
-**Change-Benachrichtigungen**: {{ source.change_notifications }}
+**Service-Updates**: [TODO]
+**Incident-Benachrichtigungen**: [TODO]
+**Change-Benachrichtigungen**: [TODO]
 
 ### Kommunikation mit Regulierungsbehörden
 
-{{ source.regulatory_communication }}
+[TODO]
 
 ### Kommunikation mit Auditoren
 
-{{ source.auditor_communication }}
+[TODO]
 
 ### Kommunikation mit Drittanbietern
 
-{{ source.vendor_communication }}
+[TODO]
 
 ## Informationssysteme
 
 ### Kernsysteme
 
-{{ source.core_information_systems }}
+[TODO]
 
 ### Unterstützende Systeme
 
-{{ source.supporting_information_systems }}
+[TODO]
 
 ### Systemintegration
 
-{{ source.system_integration }}
+[TODO]
 
 ### Systemverfügbarkeit
 
-{{ source.system_availability }}
+[TODO]
 
 ## Dokumentation
 
 ### Dokumentationsstandards
 
-{{ source.documentation_standards }}
+[TODO]
 
 ### Dokumentenverwaltung
 
-{{ source.document_management }}
+[TODO]
 
 ### Versionskontrolle
 
-{{ source.version_control }}
+[TODO]
 
 ## Whistleblower-Mechanismus
 
 ### Meldekanäle
 
-{{ source.whistleblower_channels_detail }}
+[TODO]
 
 ### Vertraulichkeit
 
-{{ source.whistleblower_confidentiality }}
+[TODO]
 
 ### Untersuchungsverfahren
 
-{{ source.whistleblower_investigation_detail }}
+[TODO]
 
 ## Referenzen
 
@@ -133,12 +144,3 @@ Dieses Dokument beschreibt die Informations- und Kommunikationssysteme der Servi
 
 <!-- Hinweise für Autoren: Stellen Sie sicher, dass Kommunikationskanäle effektiv sind -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

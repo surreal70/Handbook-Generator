@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-31000-0130
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Rahmenwerk-Design
+
+**Dokument-ID:** [FRAMEWORK]-0130
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -16,7 +28,7 @@ Dieses Dokument beschreibt das Design des Risikomanagement-Rahmenwerks gemäß I
 ## Geltungsbereich
 
 Dieses Dokument gilt für:
-- {{ meta.organization }}
+- {{ meta-organisation.name }}
 - Risikomanagement-Framework-Design
 - Alle Organisationsebenen
 - Interne und externe Stakeholder
@@ -183,17 +195,3 @@ Das Risikomanagement-Framework muss auf die Organisation zugeschnitten sein und 
 - 0120_integration.md
 - 0090_framework_implementation.md
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |
-
-<!-- 
-Autor-Hinweise: 
-- Passen Sie das Framework-Design an Ihre spezifischen Bedürfnisse an
-- Beziehen Sie Stakeholder in den Design-Prozess ein
-- Stellen Sie sicher, dass das Design praktikabel und umsetzbar ist
--->

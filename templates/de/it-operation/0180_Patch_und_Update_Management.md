@@ -1,12 +1,26 @@
 # Patch und Update Management
 
+**Dokument-ID:** [FRAMEWORK]-0180
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck und Geltungsbereich
 
-Dieses Dokument beschreibt die Patch- und Update-Management-Prozesse für {{ meta.organization.name }}. Es definiert Patch-Kategorien, Zeitpläne, Test- und Rollout-Prozesse sowie Vulnerability-Scanning und Priorisierung zur Sicherstellung der System-Sicherheit und -Stabilität.
+Dieses Dokument beschreibt die Patch- und Update-Management-Prozesse für {{ meta-organisation.name }}. Es definiert Patch-Kategorien, Zeitpläne, Test- und Rollout-Prozesse sowie Vulnerability-Scanning und Priorisierung zur Sicherstellung der System-Sicherheit und -Stabilität.
 
-**Geltungsbereich:** Alle IT-Systeme, Betriebssysteme, Applikationen und Firmware von {{ meta.organization.name }}
+**Geltungsbereich:** Alle IT-Systeme, Betriebssysteme, Applikationen und Firmware von {{ meta-organisation.name }}
 
-**Verantwortlich:** {{ meta.it_operations_manager.name }} ({{ meta.it_operations_manager.email }})
+**Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }} ({{ meta-organisation-roles.role_it_operations_manager.email }})
 
 ## Patch-Management-Grundlagen
 
@@ -128,11 +142,11 @@ Dieses Dokument beschreibt die Patch- und Update-Management-Prozesse für {{ met
 ### 1. Vulnerability Identification
 
 **Identifikations-Quellen:**
-- **Vulnerability-Scanner:** {{ meta.vulnerability_scanner }}
+- **Vulnerability-Scanner:** {{ meta-handbook.vulnerability_scanner }}
 - **Vendor-Advisories:** Microsoft, Red Hat, VMware, etc.
 - **Security-Mailinglists:** CERT, US-CERT, vendor-specific
-- **Threat-Intelligence:** {{ meta.threat_intelligence_source }}
-- **SIEM-Alerts:** {{ meta.siem_system }}
+- **Threat-Intelligence:** {{ meta-handbook.threat_intelligence_source }}
+- **SIEM-Alerts:** {{ meta-handbook.siem_system }}
 
 **Aktivitäten:**
 - Vulnerability-Scans durchführen (wöchentlich)
@@ -187,7 +201,7 @@ Dieses Dokument beschreibt die Patch- und Update-Management-Prozesse für {{ met
 - Patch in Patch-Repository speichern
 - Patch-Metadaten dokumentieren
 
-**Patch-Repository:** {{ meta.patch_repository }}
+**Patch-Repository:** {{ meta-handbook.patch_repository }}
 
 **Dokumentation:**
 - Patch-ID
@@ -440,7 +454,7 @@ Dieses Dokument beschreibt die Patch- und Update-Management-Prozesse für {{ met
 
 **Beispiel-Playbook:**
 ```yaml
----
+
 - name: Patch Linux Servers
   hosts: linux_servers
   become: yes
@@ -486,7 +500,7 @@ Dieses Dokument beschreibt die Patch- und Update-Management-Prozesse für {{ met
 
 ### Vulnerability-Scanner
 
-**Tool:** {{ meta.vulnerability_scanner }}  
+**Tool:** {{ meta-handbook.vulnerability_scanner }}  
 **Scan-Frequenz:** Wöchentlich
 
 **Scan-Profile:**
@@ -594,7 +608,7 @@ yum downgrade <package>
 - Patch-Trends (monatlich)
 - Top-10-Vulnerabilities
 
-**Tool:** {{ meta.patch_dashboard }}
+**Tool:** {{ meta-handbook.patch_dashboard }}
 
 **Zugriff:** IT-Management, Security-Team
 
@@ -642,7 +656,7 @@ yum downgrade <package>
 5. Ausnahme dokumentieren
 6. Regelmäßig reviewen (quartalsweise)
 
-**Ausnahme-Register:** {{ meta.exception_register }}
+**Ausnahme-Register:** {{ meta-handbook.exception_register }}
 
 ### End-of-Life-Systeme
 
@@ -653,7 +667,7 @@ yum downgrade <package>
 - Kompensations-Kontrollen
 - Risiko-Akzeptanz dokumentieren
 
-**EOL-Register:** {{ meta.eol_register }}
+**EOL-Register:** {{ meta-handbook.eol_register }}
 
 ### Legacy-Applikationen
 
@@ -680,7 +694,7 @@ yum downgrade <package>
 - Deployment-Planung
 - Reporting
 
-**Team-Lead:** {{ meta.it_operations_manager.name }}
+**Team-Lead:** {{ meta-organisation-roles.role_it_operations_manager.name }}
 
 ### System-Administratoren
 
@@ -698,7 +712,7 @@ yum downgrade <package>
 - Security-Patch-Priorisierung
 - Compliance-Überwachung
 
-**Lead:** {{ meta.ciso.name }}
+**Lead:** {{ meta-organisation-roles.role_ciso.name }}
 
 ### Applikations-Owner
 
@@ -770,18 +784,9 @@ yum downgrade <package>
 - CVE Database: https://cve.mitre.org
 - NVD Database: https://nvd.nist.gov
 
----
+**Dokumentverantwortlicher:** {{ meta-handbook.owner }}  
+**Genehmigt durch:** {{ meta-handbook.approver }}  
+**Version:** {{ meta-handbook.revision }}  
+**Klassifizierung:** {{ meta-handbook.classification }}  
+**Letzte Aktualisierung:** {{ meta-handbook.date }}
 
-**Dokumentverantwortlicher:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.date }}
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

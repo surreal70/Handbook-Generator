@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0550
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Datenschutz und Schutz personenbezogener Daten
+
+**Dokument-ID:** [FRAMEWORK]-0550
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -15,7 +26,7 @@ Dieses Dokument beschreibt Maßnahmen zum Datenschutz gemäß TISAX-Anforderunge
 
 ## Geltungsbereich
 
-Dieses Dokument gilt für alle Verarbeitungen personenbezogener Daten in {{ source.organization_name }}.
+Dieses Dokument gilt für alle Verarbeitungen personenbezogener Daten in [TODO].
 
 ## Datenschutzgrundsätze
 
@@ -170,8 +181,8 @@ Dieses Dokument gilt für alle Verarbeitungen personenbezogener Daten in {{ sour
 - Ansprechpartner für Betroffene und Behörden
 
 **Kontakt:**
-- {{ source.data_protection_officer }}
-- {{ source.dpo_email }}
+- [TODO]
+- [TODO]
 
 ### Verzeichnis von Verarbeitungstätigkeiten
 
@@ -239,19 +250,10 @@ Dieses Dokument adressiert:
 
 ## Kennzahlen
 
-{{ source.organization_name }} misst:
+[TODO] misst:
 - Anzahl Betroffenenanfragen
 - Durchschnittliche Bearbeitungszeit
 - Anzahl Datenschutzverletzungen
 - Schulungsteilnahme
 - Compliance-Rate
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

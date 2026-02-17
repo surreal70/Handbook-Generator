@@ -1,11 +1,16 @@
 # Anforderungen an Produkte und Dienstleistungen
 
-**Dokument-ID:** 0410  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0410
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -18,13 +23,13 @@ Referenz: ISO 9001:2015, Kapitel 8.2
 
 ## Zweck
 
-Dieses Dokument definiert, wie {{ meta.organization }} Anforderungen an Produkte und Dienstleistungen bestimmt, überprüft und kommuniziert.
+Dieses Dokument definiert, wie {{ meta-organisation.name }} Anforderungen an Produkte und Dienstleistungen bestimmt, überprüft und kommuniziert.
 
 ## Kundenkommunikation (8.2.1)
 
 ### Kommunikationskanäle
 
-**{{ meta.organization }} kommuniziert mit Kunden über:**
+**{{ meta-organisation.name }} kommuniziert mit Kunden über:**
 - Informationen zu Produkten und Dienstleistungen
 - Anfragen, Verträge oder Auftragsabwicklung, einschließlich Änderungen
 - Kundenfeedback, einschließlich Kundenbeschwerden
@@ -45,7 +50,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} Anforderungen an Produkte
 
 ### Anforderungstypen
 
-**{{ meta.organization }} bestimmt:**
+**{{ meta-organisation.name }} bestimmt:**
 
 **Kundenanforderungen:**
 - Spezifizierte Anforderungen (einschließlich Lieferung und Aktivitäten nach Lieferung)
@@ -75,7 +80,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} Anforderungen an Produkte
 
 ### Überprüfungsprozess
 
-**Vor Verpflichtung zur Lieferung überprüft {{ meta.organization }}:**
+**Vor Verpflichtung zur Lieferung überprüft {{ meta-organisation.name }}:**
 - Anforderungen sind definiert
 - Vertrags- oder Auftragsanforderungen unterscheiden sich von zuvor geäußerten und sind geklärt
 - Organisation hat die Fähigkeit, Anforderungen zu erfüllen
@@ -177,8 +182,6 @@ Dieses Dokument definiert, wie {{ meta.organization }} Anforderungen an Produkte
 - Sicherstellung der Konformität
 - Dokumentation
 
----
-
 **Nächste Schritte:**
 1. Etabliere Kundenkommunikationsprozess
 2. Definiere Anforderungserfassungsmethoden
@@ -186,10 +189,3 @@ Dieses Dokument definiert, wie {{ meta.organization }} Anforderungen an Produkte
 4. Schule Mitarbeiter in Anforderungsmanagement
 5. Überwache Wirksamkeit des Prozesses
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

@@ -1,11 +1,16 @@
 # Geltungsbereich und Anwendungsbereich
 
-**Dokument-ID:** 0010  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0010
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,7 +30,7 @@ Referenz: DSGVO Art. 2 (Sachlicher Anwendungsbereich), Art. 3 (Räumlicher Anwen
 
 ## Zweck
 
-Dieses Dokument definiert den Geltungsbereich und Anwendungsbereich der Datenschutz-Grundverordnung (DSGVO) für {{ meta.organization }}. Es legt fest, welche Verarbeitungstätigkeiten personenbezogener Daten unter die DSGVO fallen und welche Ausnahmen gelten.
+Dieses Dokument definiert den Geltungsbereich und Anwendungsbereich der Datenschutz-Grundverordnung (DSGVO) für {{ meta-organisation.name }}. Es legt fest, welche Verarbeitungstätigkeiten personenbezogener Daten unter die DSGVO fallen und welche Ausnahmen gelten.
 
 ## Sachlicher Anwendungsbereich (Art. 2 DSGVO)
 
@@ -166,8 +171,6 @@ Der Geltungsbereich wird überprüft:
 - **Rechtsgrundlagen (Art. 6):** Rechtmäßigkeit der Verarbeitung
 - **Datenübermittlung (Art. 44-50):** Regelungen für Drittlandübermittlung
 
----
-
 **Nächste Schritte:**
 1. Identifizieren Sie alle Verarbeitungstätigkeiten in Ihrer Organisation
 2. Prüfen Sie den räumlichen Anwendungsbereich (Niederlassungen, Marktortprinzip)
@@ -175,10 +178,3 @@ Der Geltungsbereich wird überprüft:
 4. Erstellen Sie das Verzeichnis von Verarbeitungstätigkeiten (Art. 30)
 5. Überprüfen Sie regelmäßig bei Änderungen
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

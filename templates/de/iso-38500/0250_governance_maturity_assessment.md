@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-38500-0400
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # IT-Governance Reifegradbewertung
+
+**Dokument-ID:** [FRAMEWORK]-0250
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -16,7 +28,7 @@ Dieses Dokument beschreibt die Bewertung des IT-Governance-Reifegrads der Organi
 ## Geltungsbereich
 
 Dieses Dokument gilt für:
-- {{ meta.organization }}
+- {{ meta-organisation.name }}
 - Gesamte IT-Governance-Bewertung
 
 ## Reifegradmodell
@@ -67,20 +79,20 @@ Dieses Dokument gilt für:
 
 | Prinzip | Aktueller Reifegrad | Ziel-Reifegrad |
 |---------|---------------------|----------------|
-| Verantwortung | {{ meta.responsibility_maturity }} | {{ meta.responsibility_target }} |
-| Strategie | {{ meta.strategy_maturity }} | {{ meta.strategy_target }} |
-| Beschaffung | {{ meta.acquisition_maturity }} | {{ meta.acquisition_target }} |
-| Leistung | {{ meta.performance_maturity }} | {{ meta.performance_target }} |
-| Konformität | {{ meta.conformance_maturity }} | {{ meta.conformance_target }} |
-| Menschliches Verhalten | {{ meta.human_behavior_maturity }} | {{ meta.human_behavior_target }} |
+| Verantwortung | {{ meta-handbook.responsibility_maturity }} | {{ meta-handbook.responsibility_target }} |
+| Strategie | {{ meta-handbook.strategy_maturity }} | {{ meta-handbook.strategy_target }} |
+| Beschaffung | {{ meta-handbook.acquisition_maturity }} | {{ meta-handbook.acquisition_target }} |
+| Leistung | {{ meta-handbook.performance_maturity }} | {{ meta-handbook.performance_target }} |
+| Konformität | {{ meta-handbook.conformance_maturity }} | {{ meta-handbook.conformance_target }} |
+| Menschliches Verhalten | {{ meta-handbook.human_behavior_maturity }} | {{ meta-handbook.human_behavior_target }} |
 
 ### EDM-Aktivitäten
 
 | Aktivität | Aktueller Reifegrad | Ziel-Reifegrad |
 |-----------|---------------------|----------------|
-| Evaluate | {{ meta.evaluate_maturity }} | {{ meta.evaluate_target }} |
-| Direct | {{ meta.direct_maturity }} | {{ meta.direct_target }} |
-| Monitor | {{ meta.monitor_maturity }} | {{ meta.monitor_target }} |
+| Evaluate | {{ meta-handbook.evaluate_maturity }} | {{ meta-handbook.evaluate_target }} |
+| Direct | {{ meta-handbook.direct_maturity }} | {{ meta-handbook.direct_target }} |
+| Monitor | {{ meta-handbook.monitor_maturity }} | {{ meta-handbook.monitor_target }} |
 
 ## Bewertungsmethodik
 
@@ -132,19 +144,4 @@ Dieses Dokument gilt für:
 
 - 0010_governance_framework.md
 - 0340_continuous_improvement.md
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |
-
-<!-- 
-Autor-Hinweise: 
-- Führen Sie regelmäßige Reifegradbewerungen durch (jährlich)
-- Nutzen Sie die Ergebnisse für kontinuierliche Verbesserung
-- Benchmarken Sie mit anderen Organisationen
--->
 

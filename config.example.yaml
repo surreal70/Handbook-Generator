@@ -1,43 +1,90 @@
-# Handbuch-Generator Configuration Example
-# 
-# Copy this file to config.yaml and fill in your actual credentials
-# WARNING: config.yaml contains sensitive credentials - do not commit to git!
+# Handbook Generator Configuration - Example File
+# ================================================
+# This is an example configuration file for the Handbook Generator.
+# Copy this file to 'config.yaml' and customize it for your organization.
+#
+# IMPORTANT: config.yaml should NOT be committed to version control as it may
+# contain sensitive credentials (API tokens, etc.). Add it to .gitignore.
+#
+# Documentation: See docs/CONFIGURATION_REFERENCE.md for detailed field descriptions
+
+# Data Sources Configuration
+# ---------------------------
+# Specify the location of metadata files and optional external data sources.
+# All file paths are relative to this config.yaml location.
 
 data_sources:
-  netbox:
-    url: "https://netbox.example.com"
-    api_token: "your_netbox_api_token_here"
-    
-    # NetBox role distinction configuration
-    # Determines how to map NetBox contacts to roles
-    role_distinction:
-      method: "field"  # "field" or "name"
-      field: "role"    # Field name to use if method is "field" (e.g., "role", "title")
-      
-      # Role mappings: maps role keys to NetBox values
-      # For field-based: maps to field values
-      # For name-based: maps to substrings in contact names
-      mappings:
-        ciso: "Chief Information Security Officer"
-        cio: "Chief Information Officer"
-        ceo: "Chief Executive Officer"
-        cto: "Chief Technology Officer"
-        sysop: "System Administrator"
-        datenschutzbeauftragter: "Data Protection Officer"
-        risikomanager: "Risk Manager"
-        interner_auditor: "Internal Auditor"
-        personalleitung: "HR Manager"
-        it_manager: "IT Manager"
+  # Required: Metadata file references
+  # These files contain the core configuration for handbook generation
   
-  # Future data sources can be added here
-  # example:
-  #   url: "https://api.example.com"
-  #   api_key: "your_api_key_here"
+  # Global metadata (Handbook Generator version and source information)
+  meta-global: "meta-global.yaml"
+  
+  # Organization metadata (company name, address, contact details)
+  meta-organisation: "meta-organisation.yaml"
+  
+  # Organization roles metadata (personnel roles and responsibilities)
+  meta-organisation-roles: "meta-organisation-roles.yaml"
+  
+  # Optional: External data sources
+  # Uncomment and configure if you want to pull data from external systems
+  
+  # NetBox integration (network documentation and DCIM)
+  # netbox:
+  #   url: "https://netbox.example.com"
+  #   api_token: "your-netbox-api-token-here"
+  #   # Optional: Verify SSL certificates (default: true)
+  #   verify_ssl: true
+  
+  # Verinice integration (GRC and compliance management)
+  # verinice:
+  #   url: "https://verinice.example.com"
+  #   api_token: "your-verinice-api-token-here"
+  #   # Optional: Verify SSL certificates (default: true)
+  #   verify_ssl: true
+
+# Default Settings
+# ----------------
+# These settings control the default behavior of handbook generation
 
 defaults:
-  language: "de"  # de or en
-  output_format: "both"  # markdown, pdf, or both
+  # Default language for handbook generation
+  # Options: "de" (German), "en" (English)
+  language: "de"
+  
+  # Default output format
+  # Options: "markdown", "pdf", "both"
+  output_format: "both"
+  
+  # Optional: Default output directory (relative to project root)
+  # output_dir: "output"
+  
+  # Optional: Enable verbose logging
+  # verbose: false
 
-metadata:
-  author: "Andreas Huemmer [andreas.huemmer@adminsend.de]"
-  version: "1.0.0"
+# Advanced Configuration (Optional)
+# ----------------------------------
+# Uncomment and customize these settings if needed
+
+# Template directories (if different from default)
+# template_dirs:
+#   de: "templates/de"
+#   en: "templates/en"
+
+# PDF generation settings (requires pandoc or weasyprint)
+# pdf:
+#   engine: "pandoc"  # Options: "pandoc", "weasyprint"
+#   # Pandoc-specific options
+#   pandoc:
+#     template: "eisvogel"
+#     options: "--toc --number-sections"
+#   # WeasyPrint-specific options
+#   weasyprint:
+#     base_url: "."
+
+# Validation settings
+# validation:
+#   # Fail on missing placeholders
+#   strict_placeholders: false
+#   # Warn on [TODO] values
+#   warn_on_todo: true

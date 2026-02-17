@@ -1,53 +1,55 @@
----
+
 Document-ID: coso-0530
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Dokumentationsanforderungen
 
+**Dokument-ID:** [FRAMEWORK]-0090
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt die Dokumentationsanforderungen für das interne Kontrollsystem bei {{ source.organization_name }}.
+Dieses Dokument beschreibt die Dokumentationsanforderungen für das interne Kontrollsystem bei [TODO].
 
 ## Dokumentationsstandards
 
-{{ source.documentation_standards }}
+[TODO]
 
 ## Erforderliche Dokumentation
 
 ### Kontrollumgebung
-{{ source.control_environment_documentation }}
+[TODO]
 
 ### Risikobewertung
-{{ source.risk_assessment_documentation }}
+[TODO]
 
 ### Kontrollaktivitäten
-{{ source.control_activities_documentation }}
+[TODO]
 
 ### Information und Kommunikation
-{{ source.information_communication_documentation }}
+[TODO]
 
 ### Überwachungsaktivitäten
-{{ source.monitoring_documentation }}
+[TODO]
 
 ## Dokumentenverwaltung
 
-{{ source.document_management }}
+[TODO]
 
 ## Referenzen
 
 - Dokumentationsrichtlinie
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

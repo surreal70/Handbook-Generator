@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0440
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # CI/CD Praktiken
+
+**Dokument-ID:** [FRAMEWORK]-0260
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -23,9 +34,9 @@ Beschreibung der CI/CD-Praktiken zur Qualitätssicherung.
 
 ### CI-Praktiken
 
-- **Commit-Frequenz**: {{ source.commit_frequency }}
-- **Build-Frequenz**: {{ source.build_frequency }}
-- **Integration-Frequenz**: {{ source.integration_frequency }}
+- **Commit-Frequenz**: [TODO]
+- **Build-Frequenz**: [TODO]
+- **Integration-Frequenz**: [TODO]
 
 ### CI-Pipeline
 
@@ -38,9 +49,9 @@ Beschreibung der CI/CD-Praktiken zur Qualitätssicherung.
 
 ### CD-Praktiken
 
-- **Deployment-Automatisierung**: {{ source.deployment_automation_level }}
-- **Release-Strategie**: {{ source.release_strategy }}
-- **Feature-Flags**: {{ source.feature_flags_usage }}
+- **Deployment-Automatisierung**: [TODO]
+- **Release-Strategie**: [TODO]
+- **Feature-Flags**: [TODO]
 
 ### CD-Pipeline
 
@@ -57,12 +68,3 @@ Beschreibung der CI/CD-Praktiken zur Qualitätssicherung.
 
 <!-- Hinweis: Reife CI/CD-Praktiken reduzieren CFR -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

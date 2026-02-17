@@ -1,5 +1,19 @@
 # TISAX Framework Mapping
 
+**Document-ID:** [FRAMEWORK]-9999
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Overview
 
 This document maps the handbook templates to TISAX (Trusted Information Security Assessment Exchange) requirements based on VDA ISA Catalogue.
@@ -190,8 +204,3 @@ The following templates are planned for future development to achieve 100% cover
 - ISO/IEC 27001:2013 (basis for VDA ISA)
 - ENX Association TISAX Requirements
 
-## Version History
-
-| Version | Date | Changes |
-|---------|------|---------|
-| 0.1 | {{meta.document.last_updated}} | Initial creation |

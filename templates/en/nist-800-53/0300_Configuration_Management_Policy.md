@@ -1,13 +1,16 @@
 # Configuration Management Policy
 
-**Document-ID:** NIST-0300  
-**Control Family:** Configuration Management (CM)  
-**Control:** CM-1, CM-2, CM-3  
-**Organization:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Draft / In Review / Approved  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** NIST-0300
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -66,13 +69,5 @@ The organization establishes and maintains baseline configurations and controls 
 **Status:** [TODO: Implemented / Partially Implemented / Planned]  
 **Configuration Management Tool:** [TODO: Tool name]  
 **Baseline Compliance:** [TODO: Percentage]  
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 <!-- End of template -->

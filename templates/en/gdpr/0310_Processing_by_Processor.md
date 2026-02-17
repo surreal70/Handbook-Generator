@@ -1,11 +1,16 @@
 # Processing by Processor
 
-**Document-ID:** 0310  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0310
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,7 +30,7 @@ Reference: GDPR Art. 28 (Processor), Art. 29 (Processing under the authority of 
 
 ## Purpose
 
-This document regulates processing by processor at {{ meta.organization }} according to Art. 28 GDPR. It defines requirements for processors, contract design, and control mechanisms.
+This document regulates processing by processor at {{ meta-organisation.name }} according to Art. 28 GDPR. It defines requirements for processors, contract design, and control mechanisms.
 
 ## Processor Register
 
@@ -238,8 +243,6 @@ The processor must inform the controller without undue delay about data breaches
 - **Data Breaches (Art. 33):** Notification obligations
 - **Records of Processing Activities (Art. 30):** Documentation
 
----
-
 **Next Steps:**
 1. Create a complete register of all processors
 2. Review all existing contracts for GDPR compliance
@@ -247,10 +250,3 @@ The processor must inform the controller without undue delay about data breaches
 4. Define instruction processes and authorizations
 5. Establish an instruction register
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

@@ -1,13 +1,24 @@
----
+
 Document-ID: soc1-0110
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Integrität und ethische Werte
+
+**Dokument-ID:** [FRAMEWORK]-0110
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -30,19 +41,19 @@ Integrität und ethische Werte sind wesentliche Elemente der Kontrollumgebung un
 
 ### Kodex-Dokument
 
-**Dokument**: {{ source.code_of_conduct }}
+**Dokument**: [TODO]
 
 **Geltungsbereich**: Alle Mitarbeiter, Führungskräfte, Vorstandsmitglieder und Auftragnehmer
 
-**Letzte Überprüfung**: {{ source.code_review_date }}
+**Letzte Überprüfung**: [TODO]
 
 ### Kernprinzipien
 
-1. **Integrität**: {{ source.integrity_principle }}
-2. **Ehrlichkeit**: {{ source.honesty_principle }}
-3. **Fairness**: {{ source.fairness_principle }}
-4. **Respekt**: {{ source.respect_principle }}
-5. **Verantwortlichkeit**: {{ source.accountability_principle }}
+1. **Integrität**: [TODO]
+2. **Ehrlichkeit**: [TODO]
+3. **Fairness**: [TODO]
+4. **Respekt**: [TODO]
+5. **Verantwortlichkeit**: [TODO]
 
 ### Spezifische Standards
 
@@ -52,7 +63,7 @@ Integrität und ethische Werte sind wesentliche Elemente der Kontrollumgebung un
 - Antikorruption und Bestechung
 - Geschenke und Bewirtung
 
-{{ source.business_ethics_standards }}
+[TODO]
 
 **Finanzielle Integrität**:
 - Genaue Aufzeichnungen
@@ -60,20 +71,20 @@ Integrität und ethische Werte sind wesentliche Elemente der Kontrollumgebung un
 - Verhinderung von Betrug
 - Finanzberichterstattung
 
-{{ source.financial_integrity_standards }}
+[TODO]
 
 **Datenschutz und Vertraulichkeit**:
 - Schutz sensibler Informationen
 - Datenschutzbestimmungen
 - Vertraulichkeitsvereinbarungen
 
-{{ source.privacy_confidentiality_standards }}
+[TODO]
 
 ## Kommunikation ethischer Standards
 
 ### Kommunikationskanäle
 
-**Onboarding**: {{ source.ethics_onboarding }}
+**Onboarding**: [TODO]
 
 **Laufende Kommunikation**:
 - Regelmäßige Schulungen
@@ -81,9 +92,9 @@ Integrität und ethische Werte sind wesentliche Elemente der Kontrollumgebung un
 - Intranet-Ressourcen
 - Management-Kommunikation
 
-{{ source.ongoing_ethics_communication }}
+[TODO]
 
-**Jährliche Bestätigung**: {{ source.annual_ethics_certification }}
+**Jährliche Bestätigung**: [TODO]
 
 ### Schulungsprogramme
 
@@ -92,21 +103,21 @@ Integrität und ethische Werte sind wesentliche Elemente der Kontrollumgebung un
 - Ethische Entscheidungsfindung
 - Meldeverfahren
 
-{{ source.initial_ethics_training }}
+[TODO]
 
 **Jährliche Auffrischung**:
 - Aktualisierungen zu Richtlinien
 - Fallstudien
 - Neue Risiken und Szenarien
 
-{{ source.annual_ethics_training }}
+[TODO]
 
 **Spezialisierte Schulungen**:
-{{ source.specialized_ethics_training }}
+[TODO]
 
 ### Schulungsnachweise
 
-{{ source.training_records }}
+[TODO]
 
 ## Durchsetzung ethischer Standards
 
@@ -117,14 +128,14 @@ Integrität und ethische Werte sind wesentliche Elemente der Kontrollumgebung un
 - Interne Audits
 - Compliance-Überprüfungen
 
-{{ source.ethics_monitoring }}
+[TODO]
 
 **Indikatoren für ethische Verstöße**:
-{{ source.ethics_violation_indicators }}
+[TODO]
 
 ### Untersuchungsverfahren
 
-**Meldung von Verstößen**: {{ source.violation_reporting }}
+**Meldung von Verstößen**: [TODO]
 
 **Untersuchungsprozess**:
 1. Eingang der Meldung
@@ -133,9 +144,9 @@ Integrität und ethische Werte sind wesentliche Elemente der Kontrollumgebung un
 4. Feststellungen und Empfehlungen
 5. Maßnahmen und Nachverfolgung
 
-{{ source.investigation_process }}
+[TODO]
 
-**Vertraulichkeit**: {{ source.investigation_confidentiality }}
+**Vertraulichkeit**: [TODO]
 
 ### Disziplinarmaßnahmen
 
@@ -146,92 +157,92 @@ Integrität und ethische Werte sind wesentliche Elemente der Kontrollumgebung un
 - Kündigung
 - Rechtliche Schritte
 
-{{ source.disciplinary_actions }}
+[TODO]
 
-**Eskalationsprozess**: {{ source.disciplinary_escalation }}
+**Eskalationsprozess**: [TODO]
 
-**Dokumentation**: {{ source.disciplinary_documentation }}
+**Dokumentation**: [TODO]
 
 ## Interessenkonflikte
 
 ### Richtlinie zu Interessenkonflikten
 
-**Dokument**: {{ source.conflict_of_interest_policy }}
+**Dokument**: [TODO]
 
-**Definition**: {{ source.conflict_definition }}
+**Definition**: [TODO]
 
 ### Offenlegungspflichten
 
-**Offenlegungsverfahren**: {{ source.disclosure_procedure }}
+**Offenlegungsverfahren**: [TODO]
 
-**Offenlegungsformular**: {{ source.disclosure_form }}
+**Offenlegungsformular**: [TODO]
 
-**Überprüfungsprozess**: {{ source.disclosure_review }}
+**Überprüfungsprozess**: [TODO]
 
 ### Beispiele für Interessenkonflikte
 
-1. **Finanzielle Interessen**: {{ source.financial_conflicts }}
-2. **Geschäftsbeziehungen**: {{ source.business_conflicts }}
-3. **Familiäre Beziehungen**: {{ source.family_conflicts }}
-4. **Nebentätigkeiten**: {{ source.outside_activities }}
+1. **Finanzielle Interessen**: [TODO]
+2. **Geschäftsbeziehungen**: [TODO]
+3. **Familiäre Beziehungen**: [TODO]
+4. **Nebentätigkeiten**: [TODO]
 
 ### Management von Konflikten
 
-**Vermeidung**: {{ source.conflict_avoidance }}
+**Vermeidung**: [TODO]
 
-**Offenlegung**: {{ source.conflict_disclosure }}
+**Offenlegung**: [TODO]
 
-**Recusal**: {{ source.conflict_recusal }}
+**Recusal**: [TODO]
 
 ## Whistleblower-Mechanismen
 
 ### Meldeverfahren
 
 **Meldekanäle**:
-- Hotline: {{ source.ethics_hotline }}
-- E-Mail: {{ source.ethics_email }}
-- Online-Portal: {{ source.ethics_portal }}
+- Hotline: [TODO]
+- E-Mail: [TODO]
+- Online-Portal: [TODO]
 - Direkte Meldung an Compliance
 
-{{ source.reporting_channels }}
+[TODO]
 
-**Anonymität**: {{ source.anonymous_reporting }}
+**Anonymität**: [TODO]
 
-**Schutz vor Vergeltung**: {{ source.retaliation_protection }}
+**Schutz vor Vergeltung**: [TODO]
 
 ### Bearbeitung von Meldungen
 
-**Eingangsbestätigung**: {{ source.report_acknowledgment }}
+**Eingangsbestätigung**: [TODO]
 
-**Untersuchungszeitrahmen**: {{ source.investigation_timeline }}
+**Untersuchungszeitrahmen**: [TODO]
 
-**Rückmeldung**: {{ source.reporter_feedback }}
+**Rückmeldung**: [TODO]
 
 ### Whistleblower-Schutz
 
-**Schutzrichtlinie**: {{ source.whistleblower_protection_policy }}
+**Schutzrichtlinie**: [TODO]
 
-**Vergeltungsverbot**: {{ source.non_retaliation_policy }}
+**Vergeltungsverbot**: [TODO]
 
-**Rechtliche Grundlagen**: {{ source.legal_protections }}
+**Rechtliche Grundlagen**: [TODO]
 
 ## Tone at the Top
 
 ### Führungsverhalten
 
-**Management-Engagement**: {{ source.management_commitment }}
+**Management-Engagement**: [TODO]
 
-**Vorbildfunktion**: {{ source.leadership_example }}
+**Vorbildfunktion**: [TODO]
 
-**Ethische Entscheidungsfindung**: {{ source.ethical_decision_making }}
+**Ethische Entscheidungsfindung**: [TODO]
 
 ### Kulturelle Verankerung
 
-**Organisationskultur**: {{ source.ethical_culture }}
+**Organisationskultur**: [TODO]
 
-**Werte-Integration**: {{ source.values_integration }}
+**Werte-Integration**: [TODO]
 
-**Anerkennung ethischen Verhaltens**: {{ source.ethics_recognition }}
+**Anerkennung ethischen Verhaltens**: [TODO]
 
 ## Überwachung und Berichterstattung
 
@@ -243,15 +254,15 @@ Integrität und ethische Werte sind wesentliche Elemente der Kontrollumgebung un
 - Meldungen von Verstößen
 - Untersuchungsergebnisse
 
-{{ source.compliance_metrics }}
+[TODO]
 
 ### Berichterstattung
 
-**Vorstandsberichterstattung**: {{ source.board_reporting }}
+**Vorstandsberichterstattung**: [TODO]
 
-**Management-Berichterstattung**: {{ source.management_reporting }}
+**Management-Berichterstattung**: [TODO]
 
-**Externe Berichterstattung**: {{ source.external_reporting }}
+**Externe Berichterstattung**: [TODO]
 
 ## Referenzen
 
@@ -262,12 +273,3 @@ Integrität und ethische Werte sind wesentliche Elemente der Kontrollumgebung un
 
 <!-- Hinweise für Autoren: Überprüfen Sie den Verhaltenskodex jährlich -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

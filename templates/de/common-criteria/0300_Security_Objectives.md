@@ -1,11 +1,16 @@
 # Sicherheitsziele (Security Objectives)
 
-**Dokument-ID:** 0300  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** Intern / Vertraulich / Streng vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0300
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -37,7 +42,7 @@ Best Practices:
 
 ## 1. Einleitung
 
-Dieses Dokument definiert die Sicherheitsziele für das TOE **{{ meta.toe_name }}** und dessen Betriebsumgebung. Die Sicherheitsziele leiten sich aus der Sicherheitsproblem-Definition ab und beschreiben die beabsichtigten Sicherheitseigenschaften, die zur Bewältigung der identifizierten Bedrohungen, zur Einhaltung der organisatorischen Sicherheitsrichtlinien und zur Erfüllung der Annahmen erforderlich sind.
+Dieses Dokument definiert die Sicherheitsziele für das TOE **{{ meta-handbook.toe_name }}** und dessen Betriebsumgebung. Die Sicherheitsziele leiten sich aus der Sicherheitsproblem-Definition ab und beschreiben die beabsichtigten Sicherheitseigenschaften, die zur Bewältigung der identifizierten Bedrohungen, zur Einhaltung der organisatorischen Sicherheitsrichtlinien und zur Erfüllung der Annahmen erforderlich sind.
 
 ### 1.1 Zweck
 
@@ -275,12 +280,4 @@ Nach der Definition der Sicherheitsziele:
 - Template 0200-0240: Sicherheitsproblem-Definition
 - Template 0310: Rationale für Sicherheitsziele
 - Template 0320: Security Objectives Coverage Matrix
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 

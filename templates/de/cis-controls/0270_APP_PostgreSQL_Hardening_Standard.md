@@ -1,14 +1,16 @@
 # APP Hardening Standard: PostgreSQL
 
-**Dokument-ID:** 0270  
-**Dokumenttyp:** Standard/Baseline  
-**Referenzrahmen:** CIS Controls v8 (Hardening-Programm; keine Benchmarks-Texte)  
-**Owner:** [TODO]  
-**Version:** 0.1 (Entwurf)  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** Intern / Vertraulich / Streng vertraulich  
-**Letzte Aktualisierung:** 2026-01-31  
-**Nächster Review:** [TODO]
+**Dokument-ID:** 0270
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -80,7 +82,6 @@
 - Parameterliste/Beispielwerte: [TODO]
 - Checkliste: siehe `0410_Anhang_Checklisten_und_Evidence.md`
 
-
 ## 12. PostgreSQL-spezifische Anforderungen (Beispiele)
 - `pg_hba.conf` restriktiv: [TODO]
 - `log_statement`/`log_line_prefix`: [TODO]
@@ -88,10 +89,3 @@
 - Extensions Whitelist: [TODO]
 - Backup & PITR: [TODO]
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

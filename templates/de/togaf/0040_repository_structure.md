@@ -1,17 +1,28 @@
----
+
 Document-ID: togaf-0040
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Architecture Repository-Struktur
 
+**Dokument-ID:** [FRAMEWORK]-0040
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument definiert die Struktur und Organisation des Architecture Repositorys für {{ source.organization_name }}. Das Repository dient als zentrale Speicherstelle für alle Architecture-Artefakte und Ergebnisse.
+Dieses Dokument definiert die Struktur und Organisation des Architecture Repositorys für [TODO]. Das Repository dient als zentrale Speicherstelle für alle Architecture-Artefakte und Ergebnisse.
 
 ## Geltungsbereich
 
@@ -82,12 +93,12 @@ Architecture Repository/
 
 | Artefakt-Typ | Beschreibung | Speicherort |
 |--------------|--------------|-------------|
-| Architecture Vision | Strategische Ausrichtung | {{ source.vision_location }} |
-| Architecture-Prinzipien | Leitende Regeln | {{ source.principles_location }} |
-| Architecture-Modelle | Visuelle Darstellungen | {{ source.models_location }} |
-| Architecture-Spezifikationen | Detaillierte Anforderungen | {{ source.specs_location }} |
-| Architecture-Entscheidungen | ADRs | {{ source.decisions_location }} |
-| Standards | Technologie-Standards | {{ source.standards_location }} |
+| Architecture Vision | Strategische Ausrichtung | [TODO] |
+| Architecture-Prinzipien | Leitende Regeln | [TODO] |
+| Architecture-Modelle | Visuelle Darstellungen | [TODO] |
+| Architecture-Spezifikationen | Detaillierte Anforderungen | [TODO] |
+| Architecture-Entscheidungen | ADRs | [TODO] |
+| Standards | Technologie-Standards | [TODO] |
 
 ### Artefakt-Lifecycle-Zustände
 
@@ -143,7 +154,7 @@ Artefakte werden klassifiziert als:
 
 ### Primäres Repository-Werkzeug
 
-**Werkzeug**: {{ source.repository_tool_name }}
+**Werkzeug**: [TODO]
 
 **Fähigkeiten**:
 - Versionskontrolle
@@ -155,10 +166,10 @@ Artefakte werden klassifiziert als:
 ### Integrationspunkte
 
 Das Repository integriert mit:
-- **Modellierungswerkzeuge**: {{ source.modeling_tool_integration }}
-- **Dokumentationswerkzeuge**: {{ source.documentation_tool_integration }}
-- **Projektmanagement**: {{ source.pm_tool_integration }}
-- **CMDB**: {{ source.cmdb_integration }}
+- **Modellierungswerkzeuge**: [TODO]
+- **Dokumentationswerkzeuge**: [TODO]
+- **Projektmanagement**: [TODO]
+- **CMDB**: [TODO]
 
 ## Repository-Wartung
 
@@ -166,10 +177,10 @@ Das Repository integriert mit:
 
 | Aktivität | Häufigkeit | Verantwortlich |
 |-----------|------------|----------------|
-| Artefakt-Review | {{ source.artifact_review_frequency }} | Domain Architects |
-| Bereinigung veralteter Artefakte | {{ source.cleanup_frequency }} | Repository-Administrator |
-| Zugriffsrechte-Review | {{ source.access_review_frequency }} | Security Team |
-| Backup-Verifikation | {{ source.backup_frequency }} | IT Operations |
+| Artefakt-Review | [TODO] | Domain Architects |
+| Bereinigung veralteter Artefakte | [TODO] | Repository-Administrator |
+| Zugriffsrechte-Review | [TODO] | Security Team |
+| Backup-Verifikation | [TODO] | IT Operations |
 
 ### Qualitätssicherung
 
@@ -211,19 +222,10 @@ Benutzer können suchen nach:
 
 | Report | Zweck | Häufigkeit |
 |--------|-------|------------|
-| Artefakt-Inventar | Vollständige Liste der Artefakte | {{ source.inventory_report_frequency }} |
-| Artefakt-Status | Verteilung der Lifecycle-Zustände | {{ source.status_report_frequency }} |
-| Nutzungsanalyse | Meist aufgerufene Artefakte | {{ source.usage_report_frequency }} |
-| Compliance-Status | Architecture-Compliance-Metriken | {{ source.compliance_report_frequency }} |
+| Artefakt-Inventar | Vollständige Liste der Artefakte | [TODO] |
+| Artefakt-Status | Verteilung der Lifecycle-Zustände | [TODO] |
+| Nutzungsanalyse | Meist aufgerufene Artefakte | [TODO] |
+| Compliance-Status | Architecture-Compliance-Metriken | [TODO] |
 
 <!-- Autorenhinweise: Passen Sie die Repository-Struktur an die Bedürfnisse und Werkzeuge Ihrer Organisation an -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|------|--------|---------|
-| 0.1 | {{meta.document.last_updated}} | {{ meta.defaults.author }} | Initiale Erstellung |
-
-<-  ( marked all subtasks complete End of template -->

@@ -1,5 +1,19 @@
 # TOGAF Framework-Mapping
 
+**Dokument-ID:** [FRAMEWORK]-9999
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Übersicht
 
 Dieses Dokument ordnet die TOGAF-Handbuchvorlagen spezifischen TOGAF ADM-Phasen, Ergebnissen und Artefakten zu. Es gewährleistet umfassende Abdeckung der TOGAF-Anforderungen und bietet Traceability zwischen Vorlagen und Framework-Elementen.
@@ -289,12 +303,5 @@ Organisationen können zusätzliche Vorlagen hinzufügen für:
 - TOGAF Series Guide: Architecture Content Framework
 - TOGAF Series Guide: Architecture Governance
 
----
-
 *Dieses Mapping gewährleistet, dass das Vorlagenset umfassende Abdeckung der TOGAF ADM-Phasen und -Ergebnisse bietet.*
 
-## Versionshistorie
-
-| Version | Datum | Änderungen |
-|---------|-------|------------|
-| 0.1 | {{meta.document.last_updated}} | Initiale Erstellung |

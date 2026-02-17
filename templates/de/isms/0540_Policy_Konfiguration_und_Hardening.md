@@ -1,5 +1,19 @@
 # Policy: Konfiguration und Hardening
 
+**Dokument-ID:** 0540
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This policy establishes the principles for secure configuration and system hardening.
@@ -9,27 +23,15 @@ Customize based on your organization's infrastructure and security baselines.
 ISO 27001:2022 Annex A Reference: A.8.9, A.8.10
 -->
 
-**Dokument-ID:** 0540  
-**Dokumenttyp:** Policy (abstrakt)  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.8.9, A.8.10 (inkl. Amendment 1:2024)  
-**Owner:** {{ meta.ciso.name }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
-
----
-
 ## 1. Zweck
 
-Diese Policy definiert die Grundsätze für sichere Konfiguration und System-Hardening der **{{ meta.organization.name }}**. Sie stellt sicher, dass IT-Systeme sicher konfiguriert und gegen Angriffe gehärtet werden.
+Diese Policy definiert die Grundsätze für sichere Konfiguration und System-Hardening der **{{ meta-organisation.name }}**. Sie stellt sicher, dass IT-Systeme sicher konfiguriert und gegen Angriffe gehärtet werden.
 
 ## 2. Geltungsbereich
 
 Diese Policy gilt für:
 
-- **Organisationseinheiten:** Alle Abteilungen und Standorte der {{ meta.organization.name }}
+- **Organisationseinheiten:** Alle Abteilungen und Standorte der {{ meta-organisation.name }}
 - **Systeme:** Alle Server, Workstations, Netzwerkgeräte, Anwendungen, Cloud-Ressourcen
 - **Umgebungen:** Produktion, Test, Entwicklung
 - **Standorte:** {{ netbox.site.name }} und alle weiteren Betriebsstandorte
@@ -164,18 +166,9 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **NIST SP 800-123** - Guide to General Server Security
 - **BSI IT-Grundschutz** - Sicherheitsanforderungen
 
----
-
 **Genehmigt durch:**  
 {{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+Datum: {{ meta-handbook.modifydate }}
 
-**Nächster Review:** {{ meta.document.next_review }} (jährlich oder anlassbezogen)
+**Nächster Review:** {{ meta-handbook.next_review }} (jährlich oder anlassbezogen)
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

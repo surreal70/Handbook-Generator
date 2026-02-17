@@ -1,5 +1,19 @@
 # Risk Treatment Plan (RTP) – Template
 
+**Document-ID:** [FRAMEWORK]-0090
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 The Risk Treatment Plan (RTP) documents all planned measures to treat identified
@@ -16,16 +30,14 @@ ISO 27001:2022 Reference: Clause 6.1.3 - Information security risk treatment
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Confidential  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** {{ meta-handbook.modifydate }}  
+**Next Review:** {{ meta-handbook.next_review }}
 
 ## 1. Purpose and Scope
 
 ### 1.1 Purpose
 
-The Risk Treatment Plan (RTP) of **{{ meta.organization.name }}** documents all planned measures for treating identified information security risks. It serves as:
+The Risk Treatment Plan (RTP) of **{{ meta-organisation.name }}** documents all planned measures for treating identified information security risks. It serves as:
 - Action plan for risk treatment
 - Tracking tool for measure implementation
 - Evidence for audits and compliance
@@ -353,26 +365,15 @@ Effectiveness must be demonstrated for each implemented measure:
 - **ISO/IEC 27002:2022** - Information security controls
 - **ISO/IEC 27005:2022** - Information security risk management
 
----
-
 ## Change History
 
 | Version | Date | Author | Description | Approved By |
 |---------|------|--------|-------------|-------------|
-| 1.0 | {{ meta.document.date }} | {{ meta.ciso.name }} | Initial version | {{ meta.management.ceo }} |
-
----
+| 1.0 | {{ meta-handbook.modifydate }} | {{ meta.ciso.name }} | Initial version | {{ meta.management.ceo }} |
 
 **Approved by:**  
 {{ meta.ciso.name }}, CISO  
-Date: {{ meta.document.approval_date }}
+Date: {{ meta-handbook.modifydate }}
 
-**Next Review:** {{ meta.document.next_review }} (Monthly)
+**Next Review:** {{ meta-handbook.next_review }} (Monthly)
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

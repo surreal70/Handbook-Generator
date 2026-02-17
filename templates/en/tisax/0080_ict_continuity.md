@@ -1,24 +1,35 @@
----
+
 Document-ID: tisax-0510
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # ICT Continuity
 
+**Document-ID:** [FRAMEWORK]-0080
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document describes ICT continuity measures at {{ source.organization_name }}.
+This document describes ICT continuity measures at [TODO].
 
 ## Critical IT Systems
 
 | System | Criticality | RTO | RPO | Recovery Strategy |
 |--------|-------------|-----|-----|-------------------|
-| {{ source.system_1 }} | {{ source.system_1_criticality }} | {{ source.system_1_rto }} | {{ source.system_1_rpo }} | {{ source.system_1_recovery }} |
-| {{ source.system_2 }} | {{ source.system_2_criticality }} | {{ source.system_2_rto }} | {{ source.system_2_rpo }} | {{ source.system_2_recovery }} |
+| [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## Redundancy
 
@@ -29,8 +40,8 @@ This document describes ICT continuity measures at {{ source.organization_name }
 
 ## Disaster Recovery
 
-**DR Site**: {{ source.dr_site }}
-**Failover Time**: {{ source.failover_time }}
+**DR Site**: [TODO]
+**Failover Time**: [TODO]
 
 ## Recovery Process
 
@@ -42,13 +53,5 @@ This document describes ICT continuity measures at {{ source.organization_name }
 6. Return to normal operations
 
 <!-- Note: Test DR processes -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

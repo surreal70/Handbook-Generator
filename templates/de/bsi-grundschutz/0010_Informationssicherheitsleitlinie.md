@@ -1,14 +1,16 @@
 # Informationssicherheitsleitlinie (Top-Management)
 
-**Dokument-ID:** 0010  
-**Dokumenttyp:** Leitlinie/Policy  
-**Referenzrahmen:** BSI IT-Grundschutz (BSI Standards 200-1/200-2/200-3)  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** {{ meta.document.status }}  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0010
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -21,17 +23,17 @@ Reference: BSI Standard 200-1 (ISMS Requirements)
 
 ## 1. Zweck und Zielsetzung
 
-Die Informationssicherheitsleitlinie von **{{ meta.organization.name }}** definiert die strategischen Ziele und Grundsätze für den Schutz von Informationen und IT-Systemen.
+Die Informationssicherheitsleitlinie von **{{ meta-organisation.name }}** definiert die strategischen Ziele und Grundsätze für den Schutz von Informationen und IT-Systemen.
 
 ### 1.1 Ziel der Informationssicherheit
 
-**{{ meta.organization.name }}** verpflichtet sich, die Informationssicherheit als integralen Bestandteil der Unternehmensführung zu etablieren. Ziel ist der angemessene Schutz aller Informationswerte vor Bedrohungen und Risiken.
+**{{ meta-organisation.name }}** verpflichtet sich, die Informationssicherheit als integralen Bestandteil der Unternehmensführung zu etablieren. Ziel ist der angemessene Schutz aller Informationswerte vor Bedrohungen und Risiken.
 
 [TODO: Spezifische Sicherheitsziele der Organisation ergänzen]
 
 ### 1.2 Schutzwerte
 
-Die Informationssicherheit von **{{ meta.organization.name }}** basiert auf folgenden Schutzzielen:
+Die Informationssicherheit von **{{ meta-organisation.name }}** basiert auf folgenden Schutzzielen:
 
 - **Vertraulichkeit:** Schutz vor unbefugter Offenlegung von Informationen
 - **Integrität:** Schutz vor unbefugter Veränderung von Informationen
@@ -45,10 +47,10 @@ Die Informationssicherheit von **{{ meta.organization.name }}** basiert auf folg
 
 Diese Leitlinie gilt für:
 
-- **Organisation:** {{ meta.organization.name }}
-- **Standorte:** {{ meta.organization.locations }}
-- **Geschäftsführung:** {{ meta.ceo.name }}
-- **Informationssicherheitsbeauftragter (ISB):** {{ meta.ciso.name }}
+- **Organisation:** {{ meta-organisation.name }}
+- **Standorte:** [TODO]
+- **Geschäftsführung:** {{ meta-organisation-roles.role_CEO }}
+- **Informationssicherheitsbeauftragter (ISB):** {{ meta-organisation-roles.role_CISO }}
 
 ### 2.2 Informationsverbünde im Scope
 
@@ -68,7 +70,7 @@ Beispiele:
 
 ### 3.1 Risikobasierter Ansatz
 
-**{{ meta.organization.name }}** verfolgt einen risikobasierten Ansatz zur Informationssicherheit gemäß BSI Standard 200-3. Sicherheitsmaßnahmen werden auf Basis einer systematischen Risikoanalyse und -bewertung implementiert.
+**{{ meta-organisation.name }}** verfolgt einen risikobasierten Ansatz zur Informationssicherheit gemäß BSI Standard 200-3. Sicherheitsmaßnahmen werden auf Basis einer systematischen Risikoanalyse und -bewertung implementiert.
 
 ### 3.2 Verantwortlichkeiten und Ressourcen
 
@@ -83,7 +85,7 @@ Das Informationssicherheits-Managementsystem (ISMS) wird kontinuierlich überwac
 
 ### 3.4 Verpflichtung zur Einhaltung
 
-**{{ meta.organization.name }}** verpflichtet sich zur Einhaltung:
+**{{ meta-organisation.name }}** verpflichtet sich zur Einhaltung:
 - Gesetzlicher und regulatorischer Anforderungen (DSGVO, IT-Sicherheitsgesetz, etc.)
 - Vertraglicher Verpflichtungen gegenüber Kunden und Partnern
 - Interner Richtlinien und Standards
@@ -93,7 +95,7 @@ Das Informationssicherheits-Managementsystem (ISMS) wird kontinuierlich überwac
 
 ### 4.1 Top-Management / Geschäftsführung
 
-**Verantwortlich:** {{ meta.ceo.name }} ({{ meta.ceo.email }})
+**Verantwortlich:** {{ meta-organisation-roles.role_CEO }} ([TODO])
 
 Die Geschäftsführung trägt die Gesamtverantwortung für Informationssicherheit und:
 - Genehmigt die Informationssicherheitsleitlinie
@@ -103,7 +105,7 @@ Die Geschäftsführung trägt die Gesamtverantwortung für Informationssicherhei
 
 ### 4.2 Informationssicherheitsbeauftragter (ISB)
 
-**Verantwortlich:** {{ meta.ciso.name }} ({{ meta.ciso.email }})
+**Verantwortlich:** {{ meta-organisation-roles.role_CISO }} ([TODO])
 
 Der ISB ist verantwortlich für:
 - Koordination des ISMS
@@ -114,7 +116,7 @@ Der ISB ist verantwortlich für:
 
 ### 4.3 IT-Leitung
 
-**Verantwortlich:** {{ meta.cio.name }} ({{ meta.cio.email }})
+**Verantwortlich:** {{ meta-organisation-roles.role_CIO }} ([TODO])
 
 Die IT-Leitung ist verantwortlich für:
 - Umsetzung technischer Sicherheitsmaßnahmen
@@ -156,29 +158,19 @@ Verstöße gegen diese Leitlinie können zu folgenden Maßnahmen führen:
 
 Diese Leitlinie wird mindestens jährlich oder bei wesentlichen Änderungen überprüft und aktualisiert.
 
-**Nächster Review:** {{ meta.document.next_review }}
+**Nächster Review:** {{ meta-handbook.next_review }}
 
 ## 7. Freigabe
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| Geschäftsführung | {{ meta.ceo.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| ISB | {{ meta.ciso.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| Geschäftsführung | {{ meta-organisation-roles.role_CEO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| ISB | {{ meta-organisation-roles.role_CISO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **Referenzen:**
 - BSI Standard 200-1: Managementsysteme für Informationssicherheit (ISMS)
 - BSI Standard 200-2: IT-Grundschutz-Methodik
 - BSI Standard 200-3: Risikoanalyse auf der Basis von IT-Grundschutz
 - BSI IT-Grundschutz-Kompendium
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 <!-- End of template -->

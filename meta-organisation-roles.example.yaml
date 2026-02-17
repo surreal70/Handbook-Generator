@@ -1,0 +1,162 @@
+# Organization Roles Metadata Configuration - Example File
+# ===========================================================
+# This file contains personnel roles and contact information.
+# Copy this file to 'meta-organisation-roles.yaml' and customize with your personnel.
+#
+# IMPORTANT: All role identifiers use English names for language-agnostic templates.
+# This ensures templates work identically in German (de) and English (en) versions.
+#
+# This file can be committed to version control, but consider privacy implications
+# when including personal names and contact information.
+#
+# Documentation: See docs/CONFIGURATION_REFERENCE.md for detailed field descriptions
+
+# ============================================================================
+# EXECUTIVE ROLES
+# ============================================================================
+# C-level executives and senior leadership positions
+
+# Chief Executive Officer - Overall organizational leadership
+# Used in: Strategic documents, governance handbooks, approval workflows
+role_CEO: "Jane Smith"
+
+# Chief Financial Officer - Financial management and oversight
+# Used in: Financial policies, budget approvals, audit documents
+role_CFO: "John Doe"
+
+# Chief Technology Officer - Technology strategy and innovation
+# Used in: Technology roadmaps, architecture decisions, R&D documents
+role_CTO: "Alice Johnson"
+
+# Chief Information Officer - IT operations and information management
+# Used in: IT policies, system documentation, technology governance
+role_CIO: "Bob Williams"
+
+# Chief Information Security Officer - Information security leadership
+# Used in: Security policies, ISMS documentation, incident response plans
+role_CISO: "Carol Martinez"
+
+# ============================================================================
+# MANAGEMENT ROLES
+# ============================================================================
+# Department heads and functional managers
+
+# Human Resources Manager - Personnel management and HR policies
+# Used in: HR policies, employee handbooks, training documentation
+role_HR_Manager: "David Brown"
+
+# Risk Manager - Enterprise risk management and mitigation
+# Used in: Risk assessments, BCM documentation, compliance reports
+role_Risk_Manager: "Emma Davis"
+
+# Data Protection Officer / GDPR Manager - Privacy and data protection
+# Used in: GDPR documentation, privacy policies, data processing records
+role_GDPR_Manager: "Frank Wilson"
+
+# IT Manager - Day-to-day IT operations management
+# Used in: IT procedures, service management, operational documentation
+role_IT_Manager: "Grace Taylor"
+
+# Compliance Manager - Regulatory compliance and audit coordination
+# Used in: Compliance frameworks, audit reports, regulatory documentation
+role_Compliance_Manager: "Henry Anderson"
+
+# Internal Auditor - Internal audit and quality assurance
+# Used in: Audit plans, quality management, internal reviews
+role_Internal_Auditor: "Isabel Thomas"
+
+# ============================================================================
+# OPERATIONAL ROLES
+# ============================================================================
+# Specialized operational and technical positions
+
+# IT Operations Manager - Infrastructure and operations oversight
+# Used in: Operations procedures, SLA management, capacity planning
+# role_IT_Operations_Manager: "Jack Moore"
+
+# System Administrator - Server and system management
+# Used in: System documentation, maintenance procedures, technical guides
+# role_System_Administrator: "Karen Jackson"
+
+# Network Administrator - Network infrastructure management
+# Used in: Network documentation, configuration guides, security policies
+# role_Network_Administrator: "Larry White"
+
+# Security Analyst - Security monitoring and incident response
+# Used in: Security procedures, incident reports, threat analysis
+# role_Security_Analyst: "Mary Harris"
+
+# Service Desk Lead - User support and service desk management
+# Used in: Support procedures, service catalogs, user documentation
+# role_Service_Desk_Lead: "Nathan Martin"
+
+# ============================================================================
+# GROUPS AND TEAMS
+# ============================================================================
+# Functional groups and team identifiers
+
+# IT Services Group - General IT services team
+# Used in: Service documentation, responsibility matrices, escalation paths
+group_IT_Services: "IT Services Team"
+
+# DevOps Group - Development and operations team
+# Used in: CI/CD documentation, deployment procedures, automation guides
+group_DEVOPS: "DevOps Team"
+
+# Helpdesk Group - User support and helpdesk team
+# Used in: Support procedures, ticket handling, user guides
+group_Helpdesk: "Helpdesk Team"
+
+# ============================================================================
+# OPTIONAL ADDITIONAL ROLES
+# ============================================================================
+# Uncomment and customize these roles if needed for your organization
+
+# Business Continuity Manager
+# role_BCM_Manager: "[TODO]"
+
+# Quality Manager
+# role_Quality_Manager: "[TODO]"
+
+# Project Manager
+# role_Project_Manager: "[TODO]"
+
+# Change Manager
+# role_Change_Manager: "[TODO]"
+
+# Asset Manager
+# role_Asset_Manager: "[TODO]"
+
+# Vendor Manager
+# role_Vendor_Manager: "[TODO]"
+
+# Training Manager
+# role_Training_Manager: "[TODO]"
+
+# Communications Manager
+# role_Communications_Manager: "[TODO]"
+
+# Legal Counsel
+# role_Legal_Counsel: "[TODO]"
+
+# ============================================================================
+# NOTES
+# ============================================================================
+# 
+# 1. Role Naming Convention:
+#    - Individual roles: role_[Position]
+#    - Groups/Teams: group_[Name]
+#    - Always use English identifiers (role_CEO, not rolle_CEO)
+#
+# 2. Default Values:
+#    - Use "[TODO]" for roles not yet assigned
+#    - The system will warn about [TODO] values but continue processing
+#
+# 3. Privacy Considerations:
+#    - Consider using role titles instead of personal names for public documents
+#    - Review data protection requirements before committing personal information
+#
+# 4. Maintenance:
+#    - Update this file when personnel changes occur
+#    - Keep role definitions consistent across all handbooks
+#    - Document role changes in your change management system

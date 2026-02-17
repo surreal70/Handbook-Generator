@@ -1,11 +1,16 @@
 # Scope and System Boundaries
 
-**Document-ID:** NIST-0020  
-**Organization:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Draft / In Review / Approved  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** NIST-0020
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -19,7 +24,7 @@ This document defines the scope and authorization boundaries of the information 
 **System ID:** {{ meta.nist.system_id }}  
 **FIPS 199 Categorization:** [TODO: Low / Moderate / High]  
 **System Owner:** [TODO: Name]  
-**Authorizing Official (AO):** {{ meta.roles.ao.name }}  
+**Authorizing Official (AO):** [TODO]  
 
 ## 3. Authorization Boundary
 
@@ -83,13 +88,5 @@ The authorization boundary includes all components under a single authorization 
 | Role | Count | Access Level | Rationale |
 |------|-------|--------------|-----------|
 | [TODO: Admin] | [TODO: Count] | Privileged | Administration |
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 <!-- End of template -->

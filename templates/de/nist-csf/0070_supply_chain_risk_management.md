@@ -1,13 +1,25 @@
----
+
 Document-ID: nist-csf-0070
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Lieferketten-Risikomanagement (GV.SC)
+
+**Dokument-ID:** [FRAMEWORK]-0070
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -15,7 +27,7 @@ Dieses Dokument beschreibt den Ansatz der Organisation zum Management von Cybers
 
 ## Geltungsbereich
 
-{{ meta.scope }}
+{{ meta-handbook.scope }}
 
 ## Lieferketten-Risikostrategie
 
@@ -63,10 +75,10 @@ Dieses Dokument beschreibt den Ansatz der Organisation zum Management von Cybers
 - Haftung und Versicherung
 
 **Service Level Agreements (SLAs):**
-- Verfügbarkeit: {{ meta.sla_availability }}
-- Incident Response Zeit: {{ meta.sla_response_time }}
-- Patch-Management: {{ meta.sla_patch_time }}
-- Backup und Recovery: {{ meta.sla_recovery_time }}
+- Verfügbarkeit: {{ meta-handbook.sla_availability }}
+- Incident Response Zeit: {{ meta-handbook.sla_response_time }}
+- Patch-Management: {{ meta-handbook.sla_patch_time }}
+- Backup und Recovery: {{ meta-handbook.sla_recovery_time }}
 
 ### 3. Onboarding
 
@@ -241,17 +253,3 @@ Dieses Dokument beschreibt den Ansatz der Organisation zum Management von Cybers
 - 0050_policy_framework.md
 - 0150_supply_chain_risk_management.md (Identify)
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |
-
-<!-- 
-Autor-Hinweise:
-- Aktualisieren Sie Lieferantenliste regelmäßig
-- Überprüfen Sie Vertragsbedingungen bei Verlängerungen
-- Dokumentieren Sie alle Lieferanten-Incidents
--->

@@ -1,43 +1,46 @@
----
+
 Document-ID: coso-0510
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Entity-Level Controls
 
+**Document-ID:** [FRAMEWORK]-0290
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document describes the entity-level controls at {{ source.organization_name }}.
+This document describes the entity-level controls at [TODO].
 
 ## Entity-Level Controls
 
-{{ source.entity_level_controls_overview }}
+[TODO]
 
 ## Control Categories
 
 ### Governance Controls
-{{ source.governance_controls }}
+[TODO]
 
 ### Risk Management Controls
-{{ source.risk_management_controls }}
+[TODO]
 
 ### Compliance Controls
-{{ source.compliance_controls }}
+[TODO]
 
 ## References
 
 - Control Catalog
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

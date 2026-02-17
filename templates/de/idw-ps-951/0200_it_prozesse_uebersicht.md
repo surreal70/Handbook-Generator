@@ -1,11 +1,16 @@
 # IT-Prozesse Übersicht
 
-**Dokument-ID:** idw-ps-951-0200  
-**Owner:** {{ meta.audit_lead }}  
-**Version:** {{ meta.version }}  
-**Status:** {{ meta.status }}  
-**Klassifizierung:** {{ meta.classification }}  
-**Letzte Aktualisierung:** {{ meta.date }}
+**Dokument-ID:** idw-ps-951-0200
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -16,9 +21,9 @@ Dieses Dokument beschreibt die Prüfung der IT-Prozesse im Rahmen der IT-Prüfun
 ## 2. Prüfungsgegenstand
 
 ### IT-Prozesslandschaft
-- **Prozessrahmenwerk:** {{ source.process_framework }}
-- **Prozessdokumentation:** {{ source.process_documentation }}
-- **Prozessverantwortliche:** {{ source.process_owners }}
+- **Prozessrahmenwerk:** [TODO]
+- **Prozessdokumentation:** [TODO]
+- **Prozessverantwortliche:** [TODO]
 
 ### Prüfungsziele
 - Bewertung der IT-Prozesslandschaft
@@ -43,21 +48,21 @@ Dieses Dokument beschreibt die Prüfung der IT-Prozesse im Rahmen der IT-Prüfun
 
 | Prozess | Dokumentiert | Kontrolliert | Gemessen | Bewertung |
 |---------|--------------|--------------|----------|-----------|
-| Change Management | {{ source.change_documented }} | {{ source.change_controlled }} | {{ source.change_measured }} | {{ source.change_assessment }} |
-| Incident Management | {{ source.incident_documented }} | {{ source.incident_controlled }} | {{ source.incident_measured }} | {{ source.incident_assessment }} |
-| Problem Management | {{ source.problem_documented }} | {{ source.problem_controlled }} | {{ source.problem_measured }} | {{ source.problem_assessment }} |
+| Change Management | [TODO] | [TODO] | [TODO] | [TODO] |
+| Incident Management | [TODO] | [TODO] | [TODO] | [TODO] |
+| Problem Management | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## 5. Feststellungen
 
 ### Positive Feststellungen
-1. {{ source.positive_finding_1 }}
+1. [TODO]
 
 ### Verbesserungspotenziale
-1. {{ source.improvement_1 }}
+1. [TODO]
 
 ## 6. Empfehlungen
 
-1. {{ source.recommendation_1 }}
+1. [TODO]
 
 ## 7. Referenzen
 
@@ -65,18 +70,9 @@ Dieses Dokument beschreibt die Prüfung der IT-Prozesse im Rahmen der IT-Prüfun
 - ITIL 4
 - COBIT 2019
 
----
-
 **Genehmigt durch:**  
-{{ meta.audit_lead }}, Prüfungsleiter  
-Datum: {{ meta.approval_date }}
+{{ meta-organisation-roles.role_Internal_Auditor }}, Prüfungsleiter  
+Datum: {{ meta-handbook.valid_from }}
 
-**Nächster Review:** {{ meta.next_review }}
+**Nächster Review:** {{ meta-handbook.next_review }}
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |

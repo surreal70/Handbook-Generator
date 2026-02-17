@@ -1,17 +1,28 @@
----
+
 Document-ID: coso-0010
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # COSO Framework Overview
 
+**Document-ID:** [FRAMEWORK]-0010
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document provides an overview of the COSO Internal Control - Integrated Framework and its application in {{ source.organization_name }}.
+This document provides an overview of the COSO Internal Control - Integrated Framework and its application in [TODO].
 
 ## Scope
 
@@ -88,11 +99,11 @@ Ongoing and separate evaluations enable determination of whether components of i
 - Principle 16: Ongoing and separate evaluations
 - Principle 17: Evaluation and communication of deficiencies
 
-## Application in {{ source.organization_name }}
+## Application in [TODO]
 
 ### Implementation Approach
 
-{{ source.implementation_approach }}
+[TODO]
 
 ### Organizational Responsibilities
 
@@ -168,11 +179,11 @@ Internal control is considered effective when:
 
 ### Assessment Process
 
-{{ source.assessment_process }}
+[TODO]
 
 ### Documentation
 
-{{ source.documentation_requirements }}
+[TODO]
 
 ## Continuous Improvement
 
@@ -186,7 +197,7 @@ Internal control is considered effective when:
 
 ### Lessons Learned
 
-{{ source.lessons_learned }}
+[TODO]
 
 ## References
 
@@ -195,13 +206,5 @@ Internal control is considered effective when:
 - COSO Guidance on Monitoring Internal Control Systems
 
 <!-- Author notes: Customize organization-specific sections to your implementation -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

@@ -1,13 +1,16 @@
 # System-Komponenten
 
-**Dokument-ID:** TSC-0030  
-**Organisation:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** TSC-0030
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -67,7 +70,7 @@ Dieses Dokument beschreibt die fünf Hauptkomponenten des Service-Systems: Infra
 **Management:**
 - CEO: [TODO: Name]
 - CTO: [TODO: Name]
-- CISO: {{ meta.roles.ciso.name }}
+- CISO: {{ meta-organisation-roles.role_CISO }}
 
 **Teams:**
 - Engineering: [TODO: #] Mitarbeiter
@@ -118,10 +121,3 @@ Dieses Dokument beschreibt die fünf Hauptkomponenten des Service-Systems: Infra
 | Confidential | Sensitive data |
 | Restricted | Highly sensitive |
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

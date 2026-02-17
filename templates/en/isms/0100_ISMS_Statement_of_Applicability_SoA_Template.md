@@ -1,5 +1,19 @@
 # Statement of Applicability (SoA) – Template
 
+**Document-ID:** [FRAMEWORK]-0100
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 The Statement of Applicability (SoA) is a mandatory ISO 27001 document that
@@ -17,16 +31,14 @@ ISO 27001:2022 Reference: Clause 6.1.3 d) - Statement of Applicability
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Confidential  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** {{ meta-handbook.modifydate }}  
+**Next Review:** {{ meta-handbook.next_review }}
 
 ## 1. Purpose and Scope
 
 ### 1.1 Purpose
 
-The Statement of Applicability (SoA) of **{{ meta.organization.name }}** documents:
+The Statement of Applicability (SoA) of **{{ meta-organisation.name }}** documents:
 - Which Annex A controls are applicable to the ISMS
 - Justification for selection or exclusion of controls
 - Implementation status of each control
@@ -272,27 +284,16 @@ For a complete overview of all 93 Annex A controls see:
 - **ISO/IEC 27001:2022/Amd 1:2024** - Amendment 1 (Annex A updates)
 - **ISO/IEC 27002:2022** - Information security controls (detailed guidance)
 
----
-
 ## Change History
 
 | Version | Date | Author | Description | Approved By |
 |---------|------|--------|-------------|-------------|
-| 1.0 | {{ meta.document.date }} | {{ meta.ciso.name }} | Initial version | {{ meta.management.ceo }} |
-
----
+| 1.0 | {{ meta-handbook.modifydate }} | {{ meta.ciso.name }} | Initial version | {{ meta.management.ceo }} |
 
 **Approved by:**  
 {{ meta.ciso.name }}, CISO  
 {{ meta.management.ceo }}, Management  
-Date: {{ meta.document.approval_date }}
+Date: {{ meta-handbook.modifydate }}
 
-**Next Review:** {{ meta.document.next_review }} (Annually)
+**Next Review:** {{ meta-handbook.next_review }} (Annually)
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

@@ -1,11 +1,16 @@
 # Anhang: DSFA Quick Reference
 
-**Dokument-ID:** 0710  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Referenz  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0710
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -67,8 +72,6 @@ Zusätzlich erforderlich bei (Beispiele):
 
 **Faustregel:** Bei 2 oder mehr Risikofaktoren → DSFA durchführen
 
----
-
 ## DSFA-Prozess (Kurzübersicht)
 
 ### Phase 1: Vorbereitung
@@ -96,8 +99,6 @@ Zusätzlich erforderlich bei (Beispiele):
 12. **DSFA dokumentieren:** Template 0410 verwenden
 13. **Genehmigung:** Verantwortlicher genehmigt
 14. **Archivierung:** DSFA aufbewahren
-
----
 
 ## Risikobewertungsmatrix
 
@@ -131,8 +132,6 @@ Zusätzlich erforderlich bei (Beispiele):
 - **Hohes Risiko:** Umfassende Maßnahmen, ggf. Konsultation Aufsichtsbehörde
 - **Sehr hohes Risiko:** Konsultation Aufsichtsbehörde erforderlich
 
----
-
 ## Typische Maßnahmen
 
 ### Technische Maßnahmen
@@ -162,8 +161,6 @@ Zusätzlich erforderlich bei (Beispiele):
 - **Transparenz:** Klare Informationen für Betroffene
 - **Benutzerfreundlichkeit:** Einfache Ausübung von Rechten
 
----
-
 ## Checkliste: DSFA erforderlich?
 
 - [ ] Systematische und umfassende Bewertung persönlicher Aspekte?
@@ -181,8 +178,6 @@ Zusätzlich erforderlich bei (Beispiele):
 
 **Wenn 1 oder mehr Fragen mit Ja beantwortet:** DSFA durchführen!
 
----
-
 ## Vorherige Konsultation der Aufsichtsbehörde
 
 **Erforderlich wenn:**
@@ -197,8 +192,6 @@ Zusätzlich erforderlich bei (Beispiele):
 4. Aufsichtsbehörde hat 8 Wochen Zeit (verlängerbar auf 14 Wochen)
 5. Stellungnahme der Behörde umsetzen
 
----
-
 ## Häufige Fehler vermeiden
 
 ❌ **DSFA zu spät durchführen** → Vor Beginn der Verarbeitung!  
@@ -207,8 +200,6 @@ Zusätzlich erforderlich bei (Beispiele):
 ❌ **Keine konkreten Maßnahmen** → Spezifisch und umsetzbar!  
 ❌ **DSFA nicht aktualisieren** → Bei Änderungen überprüfen!  
 ❌ **Keine Dokumentation** → Vollständig dokumentieren!
-
----
 
 ## Nützliche Ressourcen
 
@@ -225,10 +216,3 @@ Zusätzlich erforderlich bei (Beispiele):
 - Datenschutzbeauftragter: [TODO: Kontakt]
 - Aufsichtsbehörde: [TODO: Kontakt]
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-38500-0010
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # IT-Governance Framework - Übersicht
+
+**Dokument-ID:** [FRAMEWORK]-0010
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -16,7 +28,7 @@ Dieses Dokument beschreibt das IT-Governance Framework gemäß ISO/IEC 38500. Es
 ## Geltungsbereich
 
 Dieses Dokument gilt für:
-- {{ meta.organization }}
+- {{ meta-organisation.name }}
 - Alle IT-Systeme und -Dienste
 - Vorstand, Geschäftsführung und IT-Management
 - IT-Governance-Strukturen und -Prozesse
@@ -59,7 +71,7 @@ Das EDM-Modell bildet den Kern der IT-Governance:
 | Rolle | Verantwortung |
 |-------|---------------|
 | Vorstand | Gesamtverantwortung für IT-Governance |
-| {{ meta.cio }} | Umsetzung der IT-Governance-Strategie |
+| {{ meta-organisation-roles.role_CIO }} | Umsetzung der IT-Governance-Strategie |
 | Geschäftsführung | IT-Strategie und Ressourcenzuweisung |
 | IT-Management | Operative IT-Governance-Prozesse |
 | Governance-Komitee | Überwachung und Beratung |
@@ -82,19 +94,4 @@ Das EDM-Modell bildet den Kern der IT-Governance:
 - 0070_performance_principle.md
 - 0080_conformance_principle.md
 - 0090_human_behavior_principle.md
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |
-
-<!-- 
-Autor-Hinweise: 
-- Passen Sie das Governance-Framework an die Größe und Komplexität Ihrer Organisation an
-- Stellen Sie sicher, dass das Framework mit anderen Governance-Rahmenwerken (z.B. COBIT) integriert ist
-- Überprüfen Sie regelmäßig die Wirksamkeit des Governance-Frameworks
--->
 

@@ -1,17 +1,28 @@
----
+
 Document-ID: tisax-0300
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Betriebssicherheit Übersicht
 
+**Dokument-ID:** [FRAMEWORK]-0190
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument bietet einen Überblick über die Betriebssicherheit bei {{ source.organization_name }}.
+Dieses Dokument bietet einen Überblick über die Betriebssicherheit bei [TODO].
 
 ## Betriebsprozesse
 
@@ -30,9 +41,9 @@ Dieses Dokument bietet einen Überblick über die Betriebssicherheit bei {{ sour
 
 ## Verantwortlichkeiten
 
-**IT-Betriebsleiter**: {{ source.it_operations_manager }}
-**Netzwerkadministrator**: {{ source.network_administrator }}
-**Sicherheitsadministrator**: {{ source.security_administrator }}
+**IT-Betriebsleiter**: [TODO]
+**Netzwerkadministrator**: [TODO]
+**Sicherheitsadministrator**: [TODO]
 
 ## Betriebsrichtlinien
 
@@ -43,12 +54,3 @@ Dieses Dokument bietet einen Überblick über die Betriebssicherheit bei {{ sour
 
 <!-- Hinweis: Dokumentieren Sie alle Betriebsprozesse -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

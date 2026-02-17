@@ -1,13 +1,25 @@
----
+
 Document-ID: nist-csf-0030
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Risk Management Strategy (GV.RM)
+
+**Document-ID:** [FRAMEWORK]-0030
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -15,12 +27,12 @@ This document defines the organization's cybersecurity risk management strategy,
 
 ## Scope
 
-{{ meta.scope }}
+{{ meta-handbook.scope }}
 
 ## Risk Management Framework
 
 ### Risk Management Approach
-{{ meta.organization }} follows a risk-based approach to cybersecurity that:
+{{ meta-organisation.name }} follows a risk-based approach to cybersecurity that:
 - Aligns business objectives with security requirements
 - Enables continuous risk assessment and monitoring
 - Supports informed decision-making
@@ -36,7 +48,7 @@ This document defines the organization's cybersecurity risk management strategy,
 ## Risk Appetite and Tolerance
 
 ### Risk Appetite Statement
-{{ meta.risk_appetite_statement }}
+{{ meta-handbook.risk_appetite_statement }}
 
 ### Risk Tolerance Levels
 
@@ -59,11 +71,11 @@ This document defines the organization's cybersecurity risk management strategy,
 - Very low (1): < 20% probability
 
 **Impact:**
-- Very high (5): > {{ meta.impact_threshold_critical }}
-- High (4): {{ meta.impact_threshold_high }}
-- Medium (3): {{ meta.impact_threshold_medium }}
-- Low (2): {{ meta.impact_threshold_low }}
-- Very low (1): < {{ meta.impact_threshold_minimal }}
+- Very high (5): > {{ meta-handbook.impact_threshold_critical }}
+- High (4): {{ meta-handbook.impact_threshold_high }}
+- Medium (3): {{ meta-handbook.impact_threshold_medium }}
+- Low (2): {{ meta-handbook.impact_threshold_low }}
+- Very low (1): < {{ meta-handbook.impact_threshold_minimal }}
 
 ### Risk Matrix
 
@@ -124,14 +136,6 @@ This document defines the organization's cybersecurity risk management strategy,
 - 0040_roles_responsibilities.md
 - 0100_asset_management.md (Identify)
 - 0130_risk_assessment.md (Identify)
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- 
 Author Notes:

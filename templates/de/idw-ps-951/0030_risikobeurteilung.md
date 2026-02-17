@@ -1,11 +1,16 @@
 # Risikobeurteilung und Risikoanalyse
 
-**Dokument-ID:** idw-ps-951-0030  
-**Owner:** {{ meta.audit_lead }}  
-**Version:** {{ meta.version }}  
-**Status:** {{ meta.status }}  
-**Klassifizierung:** {{ meta.classification }}  
-**Letzte Aktualisierung:** {{ meta.date }}
+**Dokument-ID:** idw-ps-951-0030
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -16,8 +21,8 @@ Dieses Dokument beschreibt die Risikobeurteilung im Rahmen der IT-Prüfung nach 
 ## 2. Risikoanalysemethodik
 
 ### Ansatz
-- **Methodik:** {{ source.risk_methodology }}
-- **Bewertungsskala:** {{ source.risk_scale }}
+- **Methodik:** [TODO]
+- **Bewertungsskala:** [TODO]
 - **Risikokategorien:** Inhärentes Risiko, Kontrollrisiko, Entdeckungsrisiko
 
 ### Risikobewertungskriterien
@@ -38,9 +43,9 @@ Dieses Dokument beschreibt die Risikobeurteilung im Rahmen der IT-Prüfung nach 
 
 | Risiko-ID | Risikobeschreibung | Kategorie | Wahrscheinlichkeit | Auswirkung | Risikostufe |
 |-----------|-------------------|-----------|-------------------|------------|-------------|
-| R-001 | {{ source.risk_1_desc }} | {{ source.risk_1_category }} | {{ source.risk_1_likelihood }} | {{ source.risk_1_impact }} | {{ source.risk_1_level }} |
-| R-002 | {{ source.risk_2_desc }} | {{ source.risk_2_category }} | {{ source.risk_2_likelihood }} | {{ source.risk_2_impact }} | {{ source.risk_2_level }} |
-| R-003 | {{ source.risk_3_desc }} | {{ source.risk_3_category }} | {{ source.risk_3_likelihood }} | {{ source.risk_3_impact }} | {{ source.risk_3_level }} |
+| R-001 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
+| R-002 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
+| R-003 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ### Risikokategorien
 
@@ -73,24 +78,24 @@ Dieses Dokument beschreibt die Risikobeurteilung im Rahmen der IT-Prüfung nach 
 ## 4. Risikobewertung nach Prüfungsbereich
 
 ### IT-Strategie und Organisation
-- **Inhärentes Risiko:** {{ source.strategy_inherent_risk }}
-- **Kontrollrisiko:** {{ source.strategy_control_risk }}
-- **Prüfungsrisiko:** {{ source.strategy_audit_risk }}
+- **Inhärentes Risiko:** [TODO]
+- **Kontrollrisiko:** [TODO]
+- **Prüfungsrisiko:** [TODO]
 
 ### IT-Prozesse
-- **Inhärentes Risiko:** {{ source.process_inherent_risk }}
-- **Kontrollrisiko:** {{ source.process_control_risk }}
-- **Prüfungsrisiko:** {{ source.process_audit_risk }}
+- **Inhärentes Risiko:** [TODO]
+- **Kontrollrisiko:** [TODO]
+- **Prüfungsrisiko:** [TODO]
 
 ### IT-Systeme
-- **Inhärentes Risiko:** {{ source.systems_inherent_risk }}
-- **Kontrollrisiko:** {{ source.systems_control_risk }}
-- **Prüfungsrisiko:** {{ source.systems_audit_risk }}
+- **Inhärentes Risiko:** [TODO]
+- **Kontrollrisiko:** [TODO]
+- **Prüfungsrisiko:** [TODO]
 
 ### IT-Sicherheit
-- **Inhärentes Risiko:** {{ source.security_inherent_risk }}
-- **Kontrollrisiko:** {{ source.security_control_risk }}
-- **Prüfungsrisiko:** {{ source.security_audit_risk }}
+- **Inhärentes Risiko:** [TODO]
+- **Kontrollrisiko:** [TODO]
+- **Prüfungsrisiko:** [TODO]
 
 ## 5. Risikobasierte Prüfungsstrategie
 
@@ -98,15 +103,15 @@ Dieses Dokument beschreibt die Risikobeurteilung im Rahmen der IT-Prüfung nach 
 Basierend auf der Risikoanalyse werden folgende Bereiche priorisiert:
 
 1. **Hohe Priorität:**
-   - {{ source.high_priority_area_1 }}
-   - {{ source.high_priority_area_2 }}
+   - [TODO]
+   - [TODO]
 
 2. **Mittlere Priorität:**
-   - {{ source.medium_priority_area_1 }}
-   - {{ source.medium_priority_area_2 }}
+   - [TODO]
+   - [TODO]
 
 3. **Niedrige Priorität:**
-   - {{ source.low_priority_area_1 }}
+   - [TODO]
 
 ### Prüfungshandlungen nach Risiko
 
@@ -145,14 +150,14 @@ Basierend auf der Risikoanalyse werden folgende Bereiche priorisiert:
 ## 7. Risikokommunikation
 
 ### Berichterstattung
-- **An Management:** {{ source.management_reporting }}
-- **An Prüfungsausschuss:** {{ source.audit_committee_reporting }}
-- **Frequenz:** {{ source.reporting_frequency }}
+- **An Management:** [TODO]
+- **An Prüfungsausschuss:** [TODO]
+- **Frequenz:** [TODO]
 
 ### Eskalation
 Kritische Risiken werden sofort eskaliert an:
-- {{ source.escalation_contact_1 }}
-- {{ source.escalation_contact_2 }}
+- [TODO]
+- [TODO]
 
 ## 8. Risikoüberwachung
 
@@ -174,18 +179,9 @@ Das Risikoregister wird aktualisiert bei:
 - Organisationsspezifisches Risikoregister
 - Vorjahresprüfungsberichte
 
----
-
 **Genehmigt durch:**  
-{{ meta.audit_lead }}, Prüfungsleiter  
-Datum: {{ meta.approval_date }}
+{{ meta-organisation-roles.role_Internal_Auditor }}, Prüfungsleiter  
+Datum: {{ meta-handbook.valid_from }}
 
-**Nächster Review:** {{ meta.next_review }}
+**Nächster Review:** {{ meta-handbook.next_review }}
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |

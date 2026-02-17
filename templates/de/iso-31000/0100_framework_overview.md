@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-31000-0100
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Risikomanagement-Rahmenwerk - Übersicht
+
+**Dokument-ID:** [FRAMEWORK]-0100
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -16,7 +28,7 @@ Dieses Dokument beschreibt das Risikomanagement-Rahmenwerk gemäß ISO 31000 Kla
 ## Geltungsbereich
 
 Dieses Dokument gilt für:
-- {{ meta.organization }}
+- {{ meta-organisation.name }}
 - Alle Organisationsebenen und Funktionen
 - Vorstand, Geschäftsführung und Risikomanagement
 - Risikomanagement-Framework-Implementierung
@@ -129,17 +141,3 @@ Führung & Verpflichtung
 - 0150_framework_evaluation.md
 - 0160_framework_improvement.md
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |
-
-<!-- 
-Autor-Hinweise: 
-- Passen Sie das Framework an die Größe und Komplexität Ihrer Organisation an
-- Stellen Sie sicher, dass alle Framework-Komponenten implementiert sind
-- Überprüfen Sie regelmäßig die Framework-Wirksamkeit
--->

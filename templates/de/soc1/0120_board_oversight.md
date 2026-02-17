@@ -1,13 +1,24 @@
----
+
 Document-ID: soc1-0120
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Aufsicht durch den Vorstand
+
+**Dokument-ID:** [FRAMEWORK]-0120
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -30,16 +41,16 @@ Der Vorstand demonstriert Unabhängigkeit vom Management und übt Aufsicht über
 
 ### Zusammensetzung
 
-**Anzahl der Mitglieder**: {{ source.board_size }}
+**Anzahl der Mitglieder**: [TODO]
 
 **Mitglieder**:
-{{ source.board_members }}
+[TODO]
 
-**Amtszeiten**: {{ source.board_terms }}
+**Amtszeiten**: [TODO]
 
 ### Unabhängigkeit
 
-**Unabhängige Mitglieder**: {{ source.independent_directors }}
+**Unabhängige Mitglieder**: [TODO]
 
 **Unabhängigkeitskriterien**:
 - Keine wesentlichen Geschäftsbeziehungen
@@ -47,9 +58,9 @@ Der Vorstand demonstriert Unabhängigkeit vom Management und übt Aufsicht über
 - Keine frühere Beschäftigung bei der Organisation
 - Keine Beratungsverträge
 
-{{ source.independence_criteria }}
+[TODO]
 
-**Unabhängigkeitsbewertung**: {{ source.independence_assessment }}
+**Unabhängigkeitsbewertung**: [TODO]
 
 ### Expertise und Qualifikationen
 
@@ -60,66 +71,66 @@ Der Vorstand demonstriert Unabhängigkeit vom Management und übt Aufsicht über
 - Compliance und Governance
 - Technologie und Cybersecurity
 
-{{ source.board_competencies }}
+[TODO]
 
 **Qualifikationsmatrix**:
-{{ source.qualifications_matrix }}
+[TODO]
 
 ### Diversität
 
-**Diversitätsrichtlinie**: {{ source.diversity_policy }}
+**Diversitätsrichtlinie**: [TODO]
 
-**Diversitätsmetriken**: {{ source.diversity_metrics }}
+**Diversitätsmetriken**: [TODO]
 
 ## Aufsichtsfunktionen
 
 ### Strategische Aufsicht
 
-**Strategieentwicklung**: {{ source.strategy_development }}
+**Strategieentwicklung**: [TODO]
 
-**Strategieüberprüfung**: {{ source.strategy_review }}
+**Strategieüberprüfung**: [TODO]
 
-**Leistungsüberwachung**: {{ source.performance_monitoring }}
+**Leistungsüberwachung**: [TODO]
 
-**Langfristige Planung**: {{ source.long_term_planning }}
+**Langfristige Planung**: [TODO]
 
 ### Risiko-Aufsicht
 
-**Risikobereitschaft**: {{ source.risk_appetite_oversight }}
+**Risikobereitschaft**: [TODO]
 
-**Risikostrategie**: {{ source.risk_strategy_oversight }}
+**Risikostrategie**: [TODO]
 
-**Risikobewertung**: {{ source.risk_assessment_oversight }}
+**Risikobewertung**: [TODO]
 
-**Risikominderung**: {{ source.risk_mitigation_oversight }}
+**Risikominderung**: [TODO]
 
 ### Compliance-Aufsicht
 
-**Compliance-Programm**: {{ source.compliance_program_oversight }}
+**Compliance-Programm**: [TODO]
 
-**Regulatorische Anforderungen**: {{ source.regulatory_oversight }}
+**Regulatorische Anforderungen**: [TODO]
 
-**Ethik und Integrität**: {{ source.ethics_oversight }}
+**Ethik und Integrität**: [TODO]
 
-**Rechtliche Angelegenheiten**: {{ source.legal_oversight }}
+**Rechtliche Angelegenheiten**: [TODO]
 
 ### Finanzaufsicht
 
-**Finanzberichterstattung**: {{ source.financial_reporting_oversight }}
+**Finanzberichterstattung**: [TODO]
 
-**Interne Kontrollen**: {{ source.internal_controls_oversight }}
+**Interne Kontrollen**: [TODO]
 
-**Externe Prüfung**: {{ source.external_audit_oversight }}
+**Externe Prüfung**: [TODO]
 
-**Interne Revision**: {{ source.internal_audit_oversight }}
+**Interne Revision**: [TODO]
 
 ## Vorstandsausschüsse
 
 ### Prüfungsausschuss (Audit Committee)
 
-**Charta**: {{ source.audit_committee_charter }}
+**Charta**: [TODO]
 
-**Zusammensetzung**: {{ source.audit_committee_composition }}
+**Zusammensetzung**: [TODO]
 
 **Verantwortlichkeiten**:
 - Aufsicht über Finanzberichterstattung
@@ -128,17 +139,17 @@ Der Vorstand demonstriert Unabhängigkeit vom Management und übt Aufsicht über
 - Compliance-Überwachung
 - Risikomanagement-Aufsicht
 
-{{ source.audit_committee_responsibilities }}
+[TODO]
 
-**Sitzungsfrequenz**: {{ source.audit_committee_meetings }}
+**Sitzungsfrequenz**: [TODO]
 
-**Berichterstattung**: {{ source.audit_committee_reporting }}
+**Berichterstattung**: [TODO]
 
 ### Risikoausschuss (Risk Committee)
 
-**Charta**: {{ source.risk_committee_charter }}
+**Charta**: [TODO]
 
-**Zusammensetzung**: {{ source.risk_committee_composition }}
+**Zusammensetzung**: [TODO]
 
 **Verantwortlichkeiten**:
 - Risikobereitschaft und -toleranz
@@ -146,15 +157,15 @@ Der Vorstand demonstriert Unabhängigkeit vom Management und übt Aufsicht über
 - Risikobewertung und -überwachung
 - Risikominderungsstrategien
 
-{{ source.risk_committee_responsibilities }}
+[TODO]
 
-**Sitzungsfrequenz**: {{ source.risk_committee_meetings }}
+**Sitzungsfrequenz**: [TODO]
 
 ### Vergütungsausschuss (Compensation Committee)
 
-**Charta**: {{ source.compensation_committee_charter }}
+**Charta**: [TODO]
 
-**Zusammensetzung**: {{ source.compensation_committee_composition }}
+**Zusammensetzung**: [TODO]
 
 **Verantwortlichkeiten**:
 - Vergütungsstrategie
@@ -162,15 +173,15 @@ Der Vorstand demonstriert Unabhängigkeit vom Management und übt Aufsicht über
 - Anreizprogramme
 - Nachfolgeplanung
 
-{{ source.compensation_committee_responsibilities }}
+[TODO]
 
-**Sitzungsfrequenz**: {{ source.compensation_committee_meetings }}
+**Sitzungsfrequenz**: [TODO]
 
 ### Governance-Ausschuss (Governance Committee)
 
-**Charta**: {{ source.governance_committee_charter }}
+**Charta**: [TODO]
 
-**Zusammensetzung**: {{ source.governance_committee_composition }}
+**Zusammensetzung**: [TODO]
 
 **Verantwortlichkeiten**:
 - Corporate Governance
@@ -178,37 +189,37 @@ Der Vorstand demonstriert Unabhängigkeit vom Management und übt Aufsicht über
 - Vorstandsbewertung
 - Governance-Richtlinien
 
-{{ source.governance_committee_responsibilities }}
+[TODO]
 
-**Sitzungsfrequenz**: {{ source.governance_committee_meetings }}
+**Sitzungsfrequenz**: [TODO]
 
 ## Vorstandsaktivitäten
 
 ### Sitzungen
 
-**Reguläre Sitzungen**: {{ source.regular_meetings }}
+**Reguläre Sitzungen**: [TODO]
 
-**Sondersitzungen**: {{ source.special_meetings }}
+**Sondersitzungen**: [TODO]
 
-**Ausschusssitzungen**: {{ source.committee_meetings }}
+**Ausschusssitzungen**: [TODO]
 
-**Executive Sessions**: {{ source.executive_sessions }}
+**Executive Sessions**: [TODO]
 
 ### Tagesordnung und Materialien
 
-**Tagesordnungsentwicklung**: {{ source.agenda_development }}
+**Tagesordnungsentwicklung**: [TODO]
 
-**Vorab-Materialien**: {{ source.pre_meeting_materials }}
+**Vorab-Materialien**: [TODO]
 
-**Präsentationen**: {{ source.board_presentations }}
+**Präsentationen**: [TODO]
 
 ### Protokollierung
 
-**Sitzungsprotokolle**: {{ source.meeting_minutes }}
+**Sitzungsprotokolle**: [TODO]
 
-**Beschlussfassung**: {{ source.board_resolutions }}
+**Beschlussfassung**: [TODO]
 
-**Aufbewahrung**: {{ source.records_retention }}
+**Aufbewahrung**: [TODO]
 
 ## Management-Interaktion
 
@@ -221,29 +232,29 @@ Der Vorstand demonstriert Unabhängigkeit vom Management und übt Aufsicht über
 - Compliance-Berichte
 - Audit-Berichte
 
-{{ source.management_reporting }}
+[TODO]
 
-**Ad-hoc-Berichterstattung**: {{ source.adhoc_reporting }}
+**Ad-hoc-Berichterstattung**: [TODO]
 
 ### Management-Präsentationen
 
-**Präsentationsanforderungen**: {{ source.presentation_requirements }}
+**Präsentationsanforderungen**: [TODO]
 
-**Frage-und-Antwort-Sitzungen**: {{ source.qa_sessions }}
+**Frage-und-Antwort-Sitzungen**: [TODO]
 
 ### Executive Sessions
 
-**Zweck**: {{ source.executive_session_purpose }}
+**Zweck**: [TODO]
 
-**Frequenz**: {{ source.executive_session_frequency }}
+**Frequenz**: [TODO]
 
-**Teilnehmer**: {{ source.executive_session_participants }}
+**Teilnehmer**: [TODO]
 
 ## Vorstandsbewertung
 
 ### Selbstbewertung
 
-**Bewertungsprozess**: {{ source.board_self_assessment }}
+**Bewertungsprozess**: [TODO]
 
 **Bewertungskriterien**:
 - Effektivität der Aufsicht
@@ -251,31 +262,31 @@ Der Vorstand demonstriert Unabhängigkeit vom Management und übt Aufsicht über
 - Ausschussleistung
 - Vorstandsdynamik
 
-{{ source.assessment_criteria }}
+[TODO]
 
-**Bewertungsfrequenz**: {{ source.assessment_frequency }}
+**Bewertungsfrequenz**: [TODO]
 
 ### Individuelle Bewertungen
 
-**Mitgliederbewertung**: {{ source.individual_assessments }}
+**Mitgliederbewertung**: [TODO]
 
-**Feedback-Prozess**: {{ source.feedback_process }}
+**Feedback-Prozess**: [TODO]
 
 ### Verbesserungsmaßnahmen
 
-**Aktionspläne**: {{ source.improvement_actions }}
+**Aktionspläne**: [TODO]
 
-**Nachverfolgung**: {{ source.action_followup }}
+**Nachverfolgung**: [TODO]
 
 ## Schulung und Entwicklung
 
 ### Onboarding neuer Mitglieder
 
-**Orientierungsprogramm**: {{ source.director_onboarding }}
+**Orientierungsprogramm**: [TODO]
 
-**Einführungsmaterialien**: {{ source.onboarding_materials }}
+**Einführungsmaterialien**: [TODO]
 
-**Mentoring**: {{ source.director_mentoring }}
+**Mentoring**: [TODO]
 
 ### Laufende Schulung
 
@@ -286,9 +297,9 @@ Der Vorstand demonstriert Unabhängigkeit vom Management und übt Aufsicht über
 - Cybersecurity
 - Finanzberichterstattung
 
-{{ source.ongoing_training }}
+[TODO]
 
-**Externe Schulungen**: {{ source.external_training }}
+**Externe Schulungen**: [TODO]
 
 ## Dokumentation und Nachweise
 
@@ -310,11 +321,11 @@ Der Vorstand demonstriert Unabhängigkeit vom Management und übt Aufsicht über
    - Ausschussbewertungen
    - Individuelle Bewertungen
 
-{{ source.required_documentation }}
+[TODO]
 
 ### Aufbewahrungsfristen
 
-{{ source.retention_requirements }}
+[TODO]
 
 ## Überwachung und Berichterstattung
 
@@ -326,15 +337,15 @@ Der Vorstand demonstriert Unabhängigkeit vom Management und übt Aufsicht über
 - Schulungsabschluss
 - Bewertungsergebnisse
 
-{{ source.oversight_metrics }}
+[TODO]
 
 ### Berichterstattung
 
-**Interne Berichterstattung**: {{ source.internal_reporting }}
+**Interne Berichterstattung**: [TODO]
 
-**Externe Berichterstattung**: {{ source.external_reporting }}
+**Externe Berichterstattung**: [TODO]
 
-**Stakeholder-Kommunikation**: {{ source.stakeholder_communication }}
+**Stakeholder-Kommunikation**: [TODO]
 
 ## Referenzen
 
@@ -346,12 +357,3 @@ Der Vorstand demonstriert Unabhängigkeit vom Management und übt Aufsicht über
 
 <!-- Hinweise für Autoren: Aktualisieren Sie Vorstandsinformationen bei Änderungen -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

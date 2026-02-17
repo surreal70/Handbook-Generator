@@ -1,5 +1,19 @@
 # CSA CCM Framework Mapping
 
+**Document-ID:** [FRAMEWORK]-9999
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Overview
 
 This document maps the handbook templates to specific CSA Cloud Controls Matrix (CCM) v4.0 controls.
@@ -216,8 +230,3 @@ Security Operations controls are implemented in individual templates (0540-0590)
 - CSA Security Guidance for Critical Areas of Focus in Cloud Computing
 - CSA STAR Certification and Attestation
 
-## Version History
-
-| Version | Date | Changes |
-|---------|------|---------|
-| 0.1 | {{meta.document.last_updated}} | Initial creation |

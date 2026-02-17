@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0320
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Incident Detection
+
+**Dokument-ID:** [FRAMEWORK]-0320
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -22,9 +33,9 @@ Methoden und Best Practices für schnelle und zuverlässige Incident-Erkennung.
 
 ## Organisationsinformationen
 
-- **Organisation**: {{ source.organization_name }}
-- **Monitoring-Verantwortlicher**: {{ source.monitoring_owner }}
-- **Monitoring-Systeme**: {{ source.monitoring_systems }}
+- **Organisation**: [TODO]
+- **Monitoring-Verantwortlicher**: [TODO]
+- **Monitoring-Systeme**: [TODO]
 
 ## Monitoring-Strategien
 
@@ -128,10 +139,3 @@ alert_routing:
 
 <!-- Hinweis: Schnelle Detection ist Grundlage für niedrige MTTR -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |

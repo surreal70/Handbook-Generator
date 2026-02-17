@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-38500-0020
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # IT Governance Model
+
+**Document-ID:** [FRAMEWORK]-0020
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -16,7 +28,7 @@ This document describes the organization's IT Governance Model based on ISO/IEC 
 ## Scope
 
 This document applies to:
-- {{ meta.organization }}
+- {{ meta-organisation.name }}
 - All IT governance activities
 - Board, Executive Management, and IT Management
 
@@ -58,9 +70,9 @@ IT Management
 ### IT Governance Committee
 
 **Composition:**
-- {{ meta.ceo }} (Chair)
-- {{ meta.cfo }}
-- {{ meta.cio }}
+- {{ meta-organisation-roles.role_CEO }} (Chair)
+- {{ meta-organisation-roles.role_CFO }}
+- {{ meta-organisation-roles.role_CIO }}
 - Business Unit Leaders
 - External advisors (as needed)
 
@@ -75,7 +87,7 @@ IT Management
 ### IT Steering Committee
 
 **Composition:**
-- {{ meta.cio }} (Chair)
+- {{ meta-organisation-roles.role_CIO }} (Chair)
 - IT Department Heads
 - Project Managers
 - Business Representatives
@@ -141,18 +153,9 @@ IT Management
 - 0100_edm_model.md
 - 0200_governance_roles.md
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |
-
 <!-- 
 Author Notes: 
 - Adapt governance structure to your organization size
 - Define clear escalation paths
 - Document decision authorities
 -->
-

@@ -1,21 +1,32 @@
----
+
 Document-ID: tisax-0040
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Risk Management
 
+**Document-ID:** [FRAMEWORK]-0040
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document describes the risk management process for information security at {{ source.organization_name }}.
+This document describes the risk management process for information security at [TODO].
 
 ## Scope
 
-This process applies to all information security risks within {{ source.organization_name }}.
+This process applies to all information security risks within [TODO].
 
 ## Risk Management Process
 
@@ -27,7 +38,7 @@ This process applies to all information security risks within {{ source.organiza
 - Vulnerability analysis
 - Scenario analysis
 
-**Frequency**: {{ source.risk_assessment_frequency }}
+**Frequency**: [TODO]
 
 ### Risk Assessment
 
@@ -64,13 +75,13 @@ Impact
 ### Risk Acceptance
 
 **Acceptance Criteria**:
-- Residual risk below {{ source.risk_acceptance_threshold }}
-- Approval by {{ source.risk_acceptance_authority }}
+- Residual risk below [TODO]
+- Approval by [TODO]
 - Documentation of justification
 
 ## Risk Register
 
-{{ source.organization_name }} maintains a risk register with the following information:
+[TODO] maintains a risk register with the following information:
 
 - Risk ID
 - Description
@@ -88,18 +99,10 @@ Impact
 
 **Activities**:
 - Continuous risk monitoring
-- Regular risk review: {{ source.risk_review_frequency }}
+- Regular risk review: [TODO]
 - Update on significant changes
 - Reporting to management
 
 <!-- Note: Adapt the risk assessment criteria to your organization -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

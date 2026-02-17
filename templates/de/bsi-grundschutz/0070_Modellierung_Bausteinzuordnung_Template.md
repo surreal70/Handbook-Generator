@@ -1,14 +1,16 @@
 # Modellierung: Bausteinzuordnung (Template)
 
-**Dokument-ID:** 0070  
-**Dokumenttyp:** Methodik-Artefakt  
-**Referenzrahmen:** BSI IT-Grundschutz (BSI Standard 200-2, IT-Grundschutz-Kompendium)  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** {{ meta.document.status }}  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0070
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -21,7 +23,7 @@ Reference: BSI Standard 200-2 (Chapter 7: Modeling) and IT-Grundschutz-Kompendiu
 
 ## 1. Ziel und Zweck
 
-Die Modellierung ordnet den Objekten des Informationsverbunds von **{{ meta.organization.name }}** geeignete IT-Grundschutz-Bausteine zu. Sie bildet die Grundlage für:
+Die Modellierung ordnet den Objekten des Informationsverbunds von **{{ meta-organisation.name }}** geeignete IT-Grundschutz-Bausteine zu. Sie bildet die Grundlage für:
 - Basis-Sicherheitscheck (Dokument 0080)
 - Identifikation umzusetzender Anforderungen
 - Systematische Sicherheitsmaßnahmen-Planung
@@ -73,12 +75,12 @@ Assign ISMS and organizational modules to the organization as a whole.
 
 | Objekt-ID | Objekt | Objektklasse | Zugeordnete Bausteine | Begründung | Owner |
 |---|---|---|---|---|---|
-| ORG-001 | {{ meta.organization.name }} | Organisation | ISMS.1 Sicherheitsmanagement | Gesamtorganisation | {{ meta.ciso.name }} |
-| ORG-001 | {{ meta.organization.name }} | Organisation | ORP.1 Organisation | Organisationsstruktur | {{ meta.ciso.name }} |
-| ORG-001 | {{ meta.organization.name }} | Organisation | ORP.2 Personal | Personalmanagement | [TODO: HR] |
-| ORG-001 | {{ meta.organization.name }} | Organisation | ORP.3 Sensibilisierung und Schulung | Awareness-Programm | {{ meta.ciso.name }} |
-| ORG-001 | {{ meta.organization.name }} | Organisation | ORP.4 Identitäts- und Berechtigungsmanagement | IAM-Prozesse | {{ meta.cio.name }} |
-| ORG-001 | {{ meta.organization.name }} | Organisation | ORP.5 Compliance Management (Anforderungsmanagement) | Compliance | [TODO] |
+| ORG-001 | {{ meta-organisation.name }} | Organisation | ISMS.1 Sicherheitsmanagement | Gesamtorganisation | {{ meta.ciso.name }} |
+| ORG-001 | {{ meta-organisation.name }} | Organisation | ORP.1 Organisation | Organisationsstruktur | {{ meta.ciso.name }} |
+| ORG-001 | {{ meta-organisation.name }} | Organisation | ORP.2 Personal | Personalmanagement | [TODO: HR] |
+| ORG-001 | {{ meta-organisation.name }} | Organisation | ORP.3 Sensibilisierung und Schulung | Awareness-Programm | {{ meta.ciso.name }} |
+| ORG-001 | {{ meta-organisation.name }} | Organisation | ORP.4 Identitäts- und Berechtigungsmanagement | IAM-Prozesse | {{ meta.cio.name }} |
+| ORG-001 | {{ meta-organisation.name }} | Organisation | ORP.5 Compliance Management (Anforderungsmanagement) | Compliance | [TODO] |
 
 ### 3.2 Konzeption und Vorgehensweisen (CON)
 
@@ -185,7 +187,7 @@ Only if OT/ICS systems are in scope.
 | Objekt-ID | Objekt | Objektklasse | Zugeordnete Bausteine | Begründung | Owner |
 |---|---|---|---|---|---|
 | R-001 | Rechenzentrum | Raum | INF.2 Rechenzentrum sowie Serverraum | Kritischer Serverraum | [TODO: Facility] |
-| R-002 | {{ meta.organization.primary_location }} | Gebäude | INF.1 Allgemeines Gebäude | Hauptstandort | [TODO: Facility] |
+| R-002 | [TODO] | Gebäude | INF.1 Allgemeines Gebäude | Hauptstandort | [TODO: Facility] |
 | R-003 | [TODO: Büroraum] | Raum | INF.8 Häuslicher Arbeitsplatz | [TODO: falls Home Office] | [TODO] |
 
 ## 4. Zusammenfassung und Statistik
@@ -259,28 +261,18 @@ Die Bausteinzuordnung wird aktualisiert bei:
 - Mindestens jährlich im Rahmen des ISMS-Reviews
 
 **Verantwortlich:** {{ meta.ciso.name }} (ISB)  
-**Nächster Review:** {{ meta.document.next_review }}
+**Nächster Review:** {{ meta-handbook.next_review }}
 
 ## 8. Freigabe
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| ISB | {{ meta.ciso.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| IT-Leitung | {{ meta.cio.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| IT-Leitung | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **Referenzen:**
 - BSI Standard 200-2: IT-Grundschutz-Methodik (Kapitel 7: Modellierung)
 - BSI IT-Grundschutz-Kompendium (aktuelle Edition)
 - BSI IT-Grundschutz-Kompendium: https://www.bsi.bund.de/grundschutz-kompendium
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 <!-- End of template -->

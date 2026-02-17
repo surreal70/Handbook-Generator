@@ -1,5 +1,19 @@
 # Policy: Change und Release Management
 
+**Dokument-ID:** 0360
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This policy establishes the principles for change and release management.
@@ -10,27 +24,15 @@ ITIL/DevOps maturity and change management processes.
 ISO 27001:2022 Annex A Reference: A.8.32
 -->
 
-**Dokument-ID:** 0360  
-**Dokumenttyp:** Policy (abstrakt)  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.8.32 (inkl. Amendment 1:2024)  
-**Owner:** {{ meta.ciso.name }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
-
----
-
 ## 1. Zweck
 
-Diese Policy definiert die Grundsätze für Change und Release Management der **{{ meta.organization.name }}**. Sie stellt sicher, dass Änderungen an IT-Systemen kontrolliert, getestet und dokumentiert werden, um Betriebsunterbrechungen und Sicherheitsrisiken zu minimieren.
+Diese Policy definiert die Grundsätze für Change und Release Management der **{{ meta-organisation.name }}**. Sie stellt sicher, dass Änderungen an IT-Systemen kontrolliert, getestet und dokumentiert werden, um Betriebsunterbrechungen und Sicherheitsrisiken zu minimieren.
 
 ## 2. Geltungsbereich
 
 Diese Policy gilt für:
 
-- **Organisationseinheiten:** Alle Abteilungen und Standorte der {{ meta.organization.name }}
+- **Organisationseinheiten:** Alle Abteilungen und Standorte der {{ meta-organisation.name }}
 - **Systeme:** Alle IT-Systeme, Anwendungen, Infrastruktur, Netzwerke, Cloud-Services
 - **Change-Typen:** Standard Changes, Normal Changes, Emergency Changes
 - **Umgebungen:** Produktion, Test, Entwicklung
@@ -162,18 +164,9 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **ITIL 4** - Change Enablement
 - **ISO/IEC 20000** - IT Service Management
 
----
-
 **Genehmigt durch:**  
 {{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+Datum: {{ meta-handbook.modifydate }}
 
-**Nächster Review:** {{ meta.document.next_review }} (jährlich oder anlassbezogen)
+**Nächster Review:** {{ meta-handbook.next_review }} (jährlich oder anlassbezogen)
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

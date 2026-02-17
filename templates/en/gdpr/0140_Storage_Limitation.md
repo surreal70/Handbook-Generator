@@ -1,11 +1,16 @@
 # Storage Limitation
 
-**Document-ID:** 0140  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0140
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -23,7 +28,7 @@ Reference: GDPR Art. 5(1)(e) (Storage limitation)
 
 ## Purpose
 
-This document describes the implementation of the principle of storage limitation in {{ meta.organization }}. Personal data may only be stored for as long as necessary for the processing purpose.
+This document describes the implementation of the principle of storage limitation in {{ meta-organisation.name }}. Personal data may only be stored for as long as necessary for the processing purpose.
 
 ## Principle according to Art. 5(1)(e) GDPR
 
@@ -251,8 +256,6 @@ After expiration of storage period, data must be:
 | Ignoring erasure requests | Delayed processing | Establish process |
 | Incomplete deletion | Only deleted in one system | Check all systems |
 
----
-
 **Next Steps:**
 1. Define deletion periods for all processing activities
 2. Implement automated deletion processes
@@ -260,10 +263,3 @@ After expiration of storage period, data must be:
 4. Document deletion concept and logs
 5. Train employees on deletion obligations
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

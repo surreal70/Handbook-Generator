@@ -94,7 +94,7 @@ Vorlagen sind mit einem 4-stelligen Präfix und 10er-Schritten nummeriert (0010,
 
 ### Anpassung
 
-1. **Platzhalter ersetzen:** Alle Vorlagen enthalten Platzhalter im Format `{{ source.field }}` oder `[TODO]`, die durch organisationsspezifische Informationen ersetzt werden sollten.
+1. **Platzhalter ersetzen:** Alle Vorlagen enthalten Platzhalter im Format `[TODO]` oder `[TODO]`, die durch organisationsspezifische Informationen ersetzt werden sollten.
 
 2. **An Kontext anpassen:** Passen Sie die Vorlagen an die Größe, Komplexität und Branche Ihrer Organisation an.
 
@@ -141,7 +141,7 @@ Bei Fragen zur Vorlagennutzung oder -anpassung beziehen Sie sich auf:
 
 | Version | Datum | Autor | Änderungen |
 |---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
+| 0.1 | [TODO] | {{ meta.defaults.author }} | Initiale Erstellung |
 
 ## Versionshistorie
 

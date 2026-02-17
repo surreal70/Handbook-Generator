@@ -1,17 +1,28 @@
----
+
 Document-ID: togaf-0010
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Architecture Framework Setup
 
+**Document-ID:** [FRAMEWORK]-0010
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document describes the setup and customization of the TOGAF Architecture Framework for {{ source.organization_name }}. It defines how TOGAF will be tailored to meet organizational needs and integrated with existing processes.
+This document describes the setup and customization of the TOGAF Architecture Framework for [TODO]. It defines how TOGAF will be tailored to meet organizational needs and integrated with existing processes.
 
 ## Scope
 
@@ -26,7 +37,7 @@ This document covers:
 
 ### Tailoring Approach
 
-{{ source.organization_name }} will tailor TOGAF to align with:
+[TODO] will tailor TOGAF to align with:
 - Organizational culture and structure
 - Existing processes and methodologies
 - Industry-specific requirements
@@ -38,20 +49,20 @@ The following TOGAF components will be implemented:
 
 | Component | Implementation Status | Customization Notes |
 |-----------|----------------------|---------------------|
-| Architecture Development Method (ADM) | {{ source.adm_status }} | {{ source.adm_notes }} |
-| Architecture Content Framework | {{ source.content_framework_status }} | {{ source.content_notes }} |
-| Enterprise Continuum | {{ source.continuum_status }} | {{ source.continuum_notes }} |
-| Architecture Repository | {{ source.repository_status }} | {{ source.repository_notes }} |
-| Architecture Capability Framework | {{ source.capability_status }} | {{ source.capability_notes }} |
+| Architecture Development Method (ADM) | [TODO] | [TODO] |
+| Architecture Content Framework | [TODO] | [TODO] |
+| Enterprise Continuum | [TODO] | [TODO] |
+| Architecture Repository | [TODO] | [TODO] |
+| Architecture Capability Framework | [TODO] | [TODO] |
 
 ## Integration with Existing Methodologies
 
 ### Current Methodologies
 
-{{ source.organization_name }} currently uses:
-- {{ source.existing_methodology_1 }}
-- {{ source.existing_methodology_2 }}
-- {{ source.existing_methodology_3 }}
+[TODO] currently uses:
+- [TODO]
+- [TODO]
+- [TODO]
 
 ### Integration Strategy
 
@@ -65,13 +76,13 @@ The TOGAF framework will be integrated with existing methodologies through:
 
 ### Organizational Structure
 
-The architecture function is positioned within: {{ source.architecture_org_position }}
+The architecture function is positioned within: [TODO]
 
 ### Maturity Assessment
 
-Current architecture maturity level: {{ source.architecture_maturity_level }}
+Current architecture maturity level: [TODO]
 
-Target architecture maturity level: {{ source.target_maturity_level }}
+Target architecture maturity level: [TODO]
 
 ## Tools and Technology
 
@@ -79,10 +90,10 @@ Target architecture maturity level: {{ source.target_maturity_level }}
 
 | Tool Category | Tool Name | Purpose |
 |--------------|-----------|---------|
-| Modeling Tool | {{ source.modeling_tool }} | Architecture modeling and visualization |
-| Repository | {{ source.repository_tool }} | Architecture artifact storage |
-| Collaboration | {{ source.collaboration_tool }} | Team collaboration and review |
-| Documentation | {{ source.documentation_tool }} | Document generation and publishing |
+| Modeling Tool | [TODO] | Architecture modeling and visualization |
+| Repository | [TODO] | Architecture artifact storage |
+| Collaboration | [TODO] | Team collaboration and review |
+| Documentation | [TODO] | Document generation and publishing |
 
 ## Success Criteria
 
@@ -95,12 +106,3 @@ The framework setup will be considered successful when:
 
 <!-- Author notes: Customize this template based on your organization's specific needs and existing processes -->
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{meta.document.last_updated}} | {{ meta.defaults.author }} | Initial creation |
-
-<-  ( marked all subtasks complete End of template -->

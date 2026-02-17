@@ -1,17 +1,28 @@
----
+
 Document-ID: togaf-0050
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Stakeholder-Management
 
+**Dokument-ID:** [FRAMEWORK]-0050
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument definiert den Ansatz für Stakeholder-Management im Architecture-Prozess von {{ source.organization_name }}. Es identifiziert wichtige Stakeholder, ihre Anliegen und Strategien für effektives Engagement.
+Dieses Dokument definiert den Ansatz für Stakeholder-Management im Architecture-Prozess von [TODO]. Es identifiziert wichtige Stakeholder, ihre Anliegen und Strategien für effektives Engagement.
 
 ## Geltungsbereich
 
@@ -28,19 +39,19 @@ Dieses Dokument umfasst:
 
 | Kategorie | Beschreibung | Beispiele |
 |-----------|--------------|-----------|
-| Executive Leadership | C-Level und Senior Management | {{ source.executive_stakeholders }} |
-| Business Units | Geschäftsbereiche und Abteilungen | {{ source.business_stakeholders }} |
-| IT Organization | IT-Führung und -Teams | {{ source.it_stakeholders }} |
-| External Partners | Lieferanten und Partner | {{ source.external_stakeholders }} |
-| Regulators | Aufsichtsbehörden | {{ source.regulatory_stakeholders }} |
+| Executive Leadership | C-Level und Senior Management | [TODO] |
+| Business Units | Geschäftsbereiche und Abteilungen | [TODO] |
+| IT Organization | IT-Führung und -Teams | [TODO] |
+| External Partners | Lieferanten und Partner | [TODO] |
+| Regulators | Aufsichtsbehörden | [TODO] |
 
 ### Stakeholder-Register
 
 | Stakeholder | Rolle | Organisation | Einfluss | Interesse | Kontakt |
 |-------------|-------|--------------|----------|-----------|---------|
-| {{ source.stakeholder_1_name }} | {{ source.stakeholder_1_role }} | {{ source.stakeholder_1_org }} | {{ source.stakeholder_1_influence }} | {{ source.stakeholder_1_interest }} | {{ source.stakeholder_1_contact }} |
-| {{ source.stakeholder_2_name }} | {{ source.stakeholder_2_role }} | {{ source.stakeholder_2_org }} | {{ source.stakeholder_2_influence }} | {{ source.stakeholder_2_interest }} | {{ source.stakeholder_2_contact }} |
-| {{ source.stakeholder_3_name }} | {{ source.stakeholder_3_role }} | {{ source.stakeholder_3_org }} | {{ source.stakeholder_3_influence }} | {{ source.stakeholder_3_interest }} | {{ source.stakeholder_3_contact }} |
+| [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## Stakeholder-Analyse
 
@@ -68,10 +79,10 @@ Niedrig │                    │
 
 | Stakeholder | Primäre Anliegen | Erwartungen | Risiken |
 |-------------|------------------|-------------|---------|
-| CEO | {{ source.ceo_concerns }} | {{ source.ceo_expectations }} | {{ source.ceo_risks }} |
-| CIO | {{ source.cio_concerns }} | {{ source.cio_expectations }} | {{ source.cio_risks }} |
-| Business Leaders | {{ source.business_concerns }} | {{ source.business_expectations }} | {{ source.business_risks }} |
-| IT Teams | {{ source.it_concerns }} | {{ source.it_expectations }} | {{ source.it_risks }} |
+| CEO | [TODO] | [TODO] | [TODO] |
+| CIO | [TODO] | [TODO] | [TODO] |
+| Business Leaders | [TODO] | [TODO] | [TODO] |
+| IT Teams | [TODO] | [TODO] | [TODO] |
 
 ## Kommunikationsstrategie
 
@@ -79,20 +90,20 @@ Niedrig │                    │
 
 | Kanal | Zweck | Zielgruppe | Häufigkeit |
 |-------|-------|------------|------------|
-| Architecture Board Meetings | Strategische Entscheidungen | Executive Leadership | {{ source.board_frequency }} |
-| Architecture Reviews | Technische Reviews | Projektteams, Architects | {{ source.review_frequency }} |
-| Town Halls | Breite Kommunikation | Alle Mitarbeiter | {{ source.townhall_frequency }} |
-| Newsletter | Updates und Highlights | IT Organisation | {{ source.newsletter_frequency }} |
-| Workshops | Kollaborative Planung | Stakeholder-Gruppen | {{ source.workshop_frequency }} |
+| Architecture Board Meetings | Strategische Entscheidungen | Executive Leadership | [TODO] |
+| Architecture Reviews | Technische Reviews | Projektteams, Architects | [TODO] |
+| Town Halls | Breite Kommunikation | Alle Mitarbeiter | [TODO] |
+| Newsletter | Updates und Highlights | IT Organisation | [TODO] |
+| Workshops | Kollaborative Planung | Stakeholder-Gruppen | [TODO] |
 
 ### Kommunikationsplan
 
 | Stakeholder-Gruppe | Botschaft | Medium | Häufigkeit | Verantwortlich |
 |-------------------|-----------|--------|------------|----------------|
-| Executive Leadership | Strategische Ausrichtung, ROI | {{ source.exec_medium }} | {{ source.exec_frequency }} | Chief Architect |
-| Business Units | Business Value, Roadmap | {{ source.business_medium }} | {{ source.business_frequency }} | Domain Architects |
-| IT Teams | Technische Standards, Guidance | {{ source.it_medium }} | {{ source.it_frequency }} | Technical Leads |
-| Project Teams | Architecture-Anforderungen | {{ source.project_medium }} | {{ source.project_frequency }} | Domain Architects |
+| Executive Leadership | Strategische Ausrichtung, ROI | [TODO] | [TODO] | Chief Architect |
+| Business Units | Business Value, Roadmap | [TODO] | [TODO] | Domain Architects |
+| IT Teams | Technische Standards, Guidance | [TODO] | [TODO] | Technical Leads |
+| Project Teams | Architecture-Anforderungen | [TODO] | [TODO] | Domain Architects |
 
 ## Engagement-Strategien
 
@@ -155,10 +166,10 @@ Bei Stakeholder-Konflikten:
 
 | Metrik | Ziel | Aktuell | Trend |
 |--------|------|---------|-------|
-| Stakeholder-Zufriedenheit | {{ source.satisfaction_target }} | {{ source.satisfaction_current }} | {{ source.satisfaction_trend }} |
-| Meeting-Teilnahme | {{ source.attendance_target }} | {{ source.attendance_current }} | {{ source.attendance_trend }} |
-| Feedback-Response-Rate | {{ source.feedback_target }} | {{ source.feedback_current }} | {{ source.feedback_trend }} |
-| Architecture-Awareness | {{ source.awareness_target }} | {{ source.awareness_current }} | {{ source.awareness_trend }} |
+| Stakeholder-Zufriedenheit | [TODO] | [TODO] | [TODO] |
+| Meeting-Teilnahme | [TODO] | [TODO] | [TODO] |
+| Feedback-Response-Rate | [TODO] | [TODO] | [TODO] |
+| Architecture-Awareness | [TODO] | [TODO] | [TODO] |
 
 ## Kontinuierliche Verbesserung
 
@@ -170,12 +181,3 @@ Das Stakeholder-Management wird verbessert durch:
 
 <!-- Autorenhinweise: Passen Sie Stakeholder-Management-Ansätze an die Kultur Ihrer Organisation an -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|------|--------|---------|
-| 0.1 | {{meta.document.last_updated}} | {{ meta.defaults.author }} | Initiale Erstellung |
-
-<-  ( marked all subtasks complete End of template -->

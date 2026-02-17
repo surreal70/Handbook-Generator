@@ -37,11 +37,11 @@ Each template follows a standardized structure:
 # Template Title
 
 **Document-ID:** idw-ps-951-NNNN
-**Owner:** {{ meta.audit_lead }}
-**Version:** {{ meta.version }}
-**Status:** {{ meta.status }}
-**Classification:** {{ meta.classification }}
-**Last Update:** {{ meta.date }}
+**Owner:** {{ meta-organisation-roles.role_Internal_Auditor }}
+**Version:** {{ meta-handbook.revision }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
 
 ---
 
@@ -112,15 +112,15 @@ Each template follows a standardized structure:
 The templates use a placeholder system for organization-specific data:
 
 ### Metadata Placeholders
-- `{{ meta.audit_lead }}` - Audit Lead
-- `{{ meta.version }}` - Document Version
-- `{{ meta.status }}` - Document Status
-- `{{ meta.date }}` - Date
+- `{{ meta-organisation-roles.role_Internal_Auditor }}` - Audit Lead
+- `{{ meta-handbook.revision }}` - Document Version
+- `{{ meta-handbook.status }}` - Document Status
+- `{{ meta-handbook.modifydate }}` - Date
 
 ### Source Placeholders
-- `{{ source.organization_name }}` - Organization Name
-- `{{ source.audit_period }}` - Audit Period
-- `{{ source.systems_in_scope }}` - Systems in Scope
+- `[TODO]` - Organization Name
+- `[TODO]` - Audit Period
+- `[TODO]` - Systems in Scope
 - Additional context-specific placeholders
 
 ## Customizing Templates

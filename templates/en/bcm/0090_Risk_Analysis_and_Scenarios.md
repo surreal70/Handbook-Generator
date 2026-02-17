@@ -1,13 +1,16 @@
 # Risk Analysis and Scenarios
 
-**Document ID:** BCM-0090  
-**Organization:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Approved by:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** Confidential  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0090
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,7 +28,7 @@ Customization required:
 
 ## 1. Objective
 
-The risk analysis of {{ meta.organization.name }} serves to:
+The risk analysis of {{ meta-organisation.name }} serves to:
 
 - **Identify** risks that can impair business continuity
 - **Assess** probability of occurrence and impacts
@@ -158,7 +161,7 @@ The risk analysis complements the Business Impact Analysis (BIA) and forms the b
 
 | Risk Score | Risk Level | Treatment | Escalation |
 |------------|------------|-----------|------------|
-| 15-25 | Critical (Red) | Immediate measures required | {{ meta.roles.ceo.name }} |
+| 15-25 | Critical (Red) | Immediate measures required | {{ meta-organisation-roles.role_CEO }} |
 | 10-14 | High (Orange) | Measures within 3 months | BCM Manager |
 | 5-9 | Medium (Yellow) | Measures within 12 months | Department |
 | 1-4 | Low (Green) | Monitoring, no measures | Department |
@@ -195,11 +198,11 @@ Impact
 
 | Risk/Scenario | Affected Services | Prob. | Impact | Score | Risk Level | Controls (existing) | Measures (planned) | Owner |
 |---------------|-------------------|-------|--------|-------|------------|---------------------|-------------------|-------|
-| Ransomware Attack | All IT services | 4 | 5 | 20 | Red | Firewall, AV, Backup | EDR, Segmentation, Offline Backup | {{ meta.roles.ciso.name }} |
+| Ransomware Attack | All IT services | 4 | 5 | 20 | Red | Firewall, AV, Backup | EDR, Segmentation, Offline Backup | {{ meta-organisation-roles.role_CISO }} |
 | Power Outage | Production, IT | 3 | 4 | 12 | Orange | UPS (15min) | Emergency generator | Facility Manager |
 | Personnel Loss (Pandemic) | All processes | 2 | 4 | 8 | Yellow | Home office possible | Pandemic plan | HR |
 | Supplier Failure | Production | 3 | 3 | 9 | Yellow | Inventory (2 weeks) | Second supplier | Procurement |
-| Data Center Failure | All IT services | 2 | 5 | 10 | Orange | Backup available | DR site | {{ meta.roles.cio.name }} |
+| Data Center Failure | All IT services | 2 | 5 | 10 | Orange | Backup available | DR site | {{ meta-organisation-roles.role_CIO }} |
 
 ### 4.2 Top Risks (Score ≥ 15)
 
@@ -207,7 +210,7 @@ Impact
 
 1. **Ransomware Attack** (Score: 20)
    - Measures: EDR implementation, network segmentation, offline backups
-   - Responsible: {{ meta.roles.ciso.name }}
+   - Responsible: {{ meta-organisation-roles.role_CISO }}
    - Due: Q1 2026
 
 2. [TODO: Additional top risk]
@@ -242,7 +245,7 @@ Impact
 
 | Measure | Risk | Strategy | Description | Owner | Priority | Cost | Due | Status |
 |---------|------|----------|-------------|-------|----------|------|-----|--------|
-| EDR Implementation | Ransomware | Reduction | Endpoint Detection & Response on all clients | {{ meta.roles.ciso.name }} | High | 50,000 € | Q1 2026 | In Progress |
+| EDR Implementation | Ransomware | Reduction | Endpoint Detection & Response on all clients | {{ meta-organisation-roles.role_CISO }} | High | 50,000 € | Q1 2026 | In Progress |
 | Emergency Generator | Power Outage | Reduction | Diesel generator for 48h operation | Facility | Medium | 80,000 € | Q2 2026 | Planned |
 | Cyber Insurance | Ransomware | Transfer | Insurance for cyber incidents | CFO | High | 20,000 €/year | Q1 2026 | Open |
 
@@ -271,16 +274,8 @@ Impact
 - Risk occurs (incident)
 
 **Escalation Paths:**
-- Score ≥ 15: Immediate report to {{ meta.roles.ceo.name }}
+- Score ≥ 15: Immediate report to {{ meta-organisation-roles.role_CEO }}
 - Score 10-14: Report to BCM manager
 - Score < 10: Documentation in risk register
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 <!-- End of template -->

@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0460
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Technical Debt Management
+
+**Dokument-ID:** [FRAMEWORK]-0280
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -30,15 +41,15 @@ Beschreibung des Technical Debt Managements.
 
 ### Aktueller Stand
 
-- **Geschätzter Technical Debt**: {{ source.estimated_technical_debt }}
-- **Debt Ratio**: {{ source.debt_ratio }}
+- **Geschätzter Technical Debt**: [TODO]
+- **Debt Ratio**: [TODO]
 
 ## Tracking und Priorisierung
 
 ### Tracking-Methoden
 
-- **Debt-Backlog**: {{ source.debt_backlog_location }}
-- **Debt-Metriken**: {{ source.debt_metrics }}
+- **Debt-Backlog**: [TODO]
+- **Debt-Metriken**: [TODO]
 
 ### Priorisierung
 
@@ -51,22 +62,13 @@ Kriterien:
 
 ### Kontinuierlicher Abbau
 
-- **Debt-Budget**: {{ source.debt_budget }}
-- **Refactoring-Time**: {{ source.refactoring_time_allocation }}
+- **Debt-Budget**: [TODO]
+- **Refactoring-Time**: [TODO]
 
 ### Debt-Reduktionsziele
 
-- **Kurzfristig**: {{ source.debt_reduction_short_term }}
-- **Langfristig**: {{ source.debt_reduction_long_term }}
+- **Kurzfristig**: [TODO]
+- **Langfristig**: [TODO]
 
 <!-- Hinweis: Unkontrollierter Technical Debt erhöht CFR -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

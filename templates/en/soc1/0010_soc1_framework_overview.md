@@ -1,17 +1,28 @@
----
+
 Document-ID: soc1-0010
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # SOC 1 Framework Overview
 
+**Document-ID:** [FRAMEWORK]-0010
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document provides an overview of the SOC 1 / SSAE 18 framework and its application at {{ source.organization_name }}.
+This document provides an overview of the SOC 1 / SSAE 18 framework and its application at [TODO].
 
 ## Scope
 
@@ -65,18 +76,18 @@ SOC 1 reports are based on the COSO Internal Control Framework with five compone
 
 ### Organization Description
 
-**Name**: {{ source.organization_name }}
-**Address**: {{ source.organization_address }}
-**Contact**: {{ source.contact_email }}
+**Name**: [TODO]
+**Address**: [TODO]
+**Contact**: [TODO]
 
 ### Services Provided
 
-{{ source.services_description }}
+[TODO]
 
 ### Reporting Period
 
-**Type II Reporting Period**: {{ source.reporting_period }}
-**Report Date**: {{ source.report_date }}
+**Type II Reporting Period**: [TODO]
+**Report Date**: [TODO]
 
 ## System Boundaries
 
@@ -84,27 +95,27 @@ SOC 1 reports are based on the COSO Internal Control Framework with five compone
 
 The following systems and processes are included in the scope of the SOC 1 report:
 
-{{ source.in_scope_systems }}
+[TODO]
 
 ### Out of Scope
 
 The following systems and processes are not in scope:
 
-{{ source.out_of_scope_systems }}
+[TODO]
 
 ### Subservice Organizations
 
-{{ source.subservice_organizations }}
+[TODO]
 
 ## Control Objectives
 
 The control objectives for this SOC 1 report are:
 
-1. {{ source.control_objective_1 }}
-2. {{ source.control_objective_2 }}
-3. {{ source.control_objective_3 }}
-4. {{ source.control_objective_4 }}
-5. {{ source.control_objective_5 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
+4. [TODO]
+5. [TODO]
 
 ## Complementary User Entity Controls
 
@@ -112,17 +123,17 @@ Certain control objectives can only be achieved if complementary controls at use
 
 ### Required User Controls
 
-{{ source.complementary_user_controls }}
+[TODO]
 
 ## Changes During Reporting Period
 
 ### Significant Changes
 
-{{ source.significant_changes }}
+[TODO]
 
 ### Impact on Controls
 
-{{ source.control_impacts }}
+[TODO]
 
 ## Responsibilities
 
@@ -156,13 +167,5 @@ User organizations are responsible for:
 - SOC 1 Reporting Guide (AICPA)
 
 <!-- Author notes: Customize control objectives and system boundaries for your specific service organization -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

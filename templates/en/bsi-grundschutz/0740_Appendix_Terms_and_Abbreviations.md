@@ -1,14 +1,16 @@
 # Appendix: Terms and Abbreviations
 
-**Document ID:** 0740  
-**Document Type:** Appendix  
-**Reference Framework:** BSI IT-Grundschutz (BSI Standards 200-1/200-2/200-3)  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** {{ meta.document.status }}  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.document.last_updated }}  
-**Next Review:** {{ meta.document.next_review }}
+**Document-ID:** [FRAMEWORK]-0740
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -19,7 +21,7 @@ This template provides a glossary of terms and abbreviations used in the ISMS do
 
 ## 1. Purpose
 
-This document defines central terms and abbreviations used in the ISMS documentation of **{{ meta.organization.name }}**.
+This document defines central terms and abbreviations used in the ISMS documentation of **{{ meta-organisation.name }}**.
 
 ## 2. Terms
 
@@ -324,21 +326,11 @@ Additional requirements for assets with high or very high protection needs
 
 | Role | Name | Date | Approval |
 |---|---|---|---|
-| CISO | {{ meta.ciso.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| CISO | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **References:**
 - BSI IT-Grundschutz-Kompendium: Glossary
 - ISO 27000: Information security management systems – Overview and vocabulary
 - All ISMS Documents (0010-0630)
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
 
 <!-- End of template -->

@@ -1,11 +1,16 @@
 # Right of Access
 
-**Document-ID:** 0220  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0220
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -23,7 +28,7 @@ Reference: GDPR Art. 15 (Right of access by the data subject)
 
 ## Purpose
 
-This document describes the implementation of the right of access in {{ meta.organization }}. Data subjects have the right to obtain information about the processing of their personal data.
+This document describes the implementation of the right of access in {{ meta-organisation.name }}. Data subjects have the right to obtain information about the processing of their personal data.
 
 ## Right of Access according to Art. 15 GDPR
 
@@ -195,8 +200,6 @@ This document describes the implementation of the right of access in {{ meta.org
 | Incomprehensible Access | Technical raw data | Structured preparation |
 | Missing Identification | No verification | Identification process |
 
----
-
 **Next Steps:**
 1. Establish process for access requests
 2. Define format and structure of access
@@ -204,10 +207,3 @@ This document describes the implementation of the right of access in {{ meta.org
 4. Train employees on providing access
 5. Document all requests in access register
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

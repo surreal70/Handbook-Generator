@@ -1,17 +1,28 @@
----
+
 Document-ID: tisax-0540
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Protection of Records
 
+**Document-ID:** [FRAMEWORK]-0260
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document describes the protection of records at {{ source.organization_name }}.
+This document describes the protection of records at [TODO].
 
 ## Record Types
 
@@ -26,8 +37,8 @@ This document describes the protection of records at {{ source.organization_name
 
 | Document Type | Retention Period | Legal Basis |
 |---------------|------------------|-------------|
-| {{ source.doc_type_1 }} | {{ source.doc_retention_1 }} | {{ source.doc_legal_1 }} |
-| {{ source.doc_type_2 }} | {{ source.doc_retention_2 }} | {{ source.doc_legal_2 }} |
+| [TODO] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [TODO] |
 
 ## Protection Measures
 
@@ -48,13 +59,5 @@ This document describes the protection of records at {{ source.organization_name
 - Documentation of disposal
 
 <!-- Note: Observe legal retention periods -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

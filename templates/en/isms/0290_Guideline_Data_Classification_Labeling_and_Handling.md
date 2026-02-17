@@ -1,14 +1,16 @@
 # Guideline: Data Classification, Labeling and Handling
 
-**Document ID:** 0290  
-**Document Type:** Guideline (detailed)  
-**Related Policy:** 0280_Policy_Data_Classification_and_Information_Handling.md  
-**Standard Reference:** ISO/IEC 27001:2022 Annex A.5.12, A.5.13  
-**Owner:** {{ meta.it_operations.manager }}  
-**Version:** 1.0  
-**Status:** Approved  
-**Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}
+**Document-ID:** [FRAMEWORK]-0290
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -19,7 +21,7 @@ This guideline implements the `0280_Policy_Data_Classification_and_Information_H
 - Labeling procedures for documents and emails
 - Handling requirements per classification level
 
-**Scope:** All information at **{{ meta.organization.name }}**
+**Scope:** All information at **{{ meta-organisation.name }}**
 
 ## 2. Classification Levels
 
@@ -253,15 +255,6 @@ This guideline implements the `0280_Policy_Data_Classification_and_Information_H
 - **ISO/IEC 27001:2022 Annex A.5.13** - Labelling of information
 - **DIN 66399** - Destruction of data carriers
 
----
-
 **Approved by:** {{ meta.ciso.name }}, CISO  
-**Next Review:** {{ meta.document.next_review }}
+**Next Review:** {{ meta-handbook.next_review }}
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

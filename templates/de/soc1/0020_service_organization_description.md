@@ -1,13 +1,24 @@
----
+
 Document-ID: soc1-0020
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Beschreibung der Serviceorganisation
+
+**Dokument-ID:** [FRAMEWORK]-0020
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -25,165 +36,165 @@ Dieses Dokument umfasst:
 
 ### Unternehmensinformationen
 
-**Organisationsname**: {{ source.organization_name }}
-**Rechtsform**: {{ source.legal_form }}
-**Gründungsjahr**: {{ source.founding_year }}
-**Hauptsitz**: {{ source.headquarters_location }}
+**Organisationsname**: [TODO]
+**Rechtsform**: [TODO]
+**Gründungsjahr**: [TODO]
+**Hauptsitz**: [TODO]
 
 ### Geschäftsmodell
 
-{{ source.business_model_description }}
+[TODO]
 
 ### Organisationsstruktur
 
 ```
-{{ source.org_chart }}
+[TODO]
 ```
 
 **Schlüsselpositionen**:
-- CEO: {{ source.ceo_name }}
-- CFO: {{ source.cfo_name }}
-- CIO: {{ source.cio_name }}
-- COO: {{ source.coo_name }}
+- CEO: [TODO]
+- CFO: [TODO]
+- CIO: [TODO]
+- COO: [TODO]
 
 ## Bereitgestellte Services
 
 ### Service-Beschreibung
 
-{{ source.detailed_services_description }}
+[TODO]
 
 ### Service-Delivery-Modell
 
-**Delivery-Methode**: {{ source.delivery_method }}
-**Service-Standorte**: {{ source.service_locations }}
-**Betriebszeiten**: {{ source.operating_hours }}
+**Delivery-Methode**: [TODO]
+**Service-Standorte**: [TODO]
+**Betriebszeiten**: [TODO]
 
 ### Service-Level-Agreements
 
-{{ source.sla_summary }}
+[TODO]
 
 ## Infrastruktur und Technologie
 
 ### IT-Infrastruktur
 
 **Rechenzentren**:
-- Primäres Rechenzentrum: {{ source.primary_datacenter }}
-- Sekundäres Rechenzentrum: {{ source.secondary_datacenter }}
+- Primäres Rechenzentrum: [TODO]
+- Sekundäres Rechenzentrum: [TODO]
 
 **Netzwerkarchitektur**:
-{{ source.network_architecture }}
+[TODO]
 
 ### Anwendungssysteme
 
 **Kernsysteme**:
-1. {{ source.core_system_1 }}
-2. {{ source.core_system_2 }}
-3. {{ source.core_system_3 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
 
 **Unterstützende Systeme**:
-{{ source.supporting_systems }}
+[TODO]
 
 ### Datenbanken
 
-{{ source.database_systems }}
+[TODO]
 
 ### Cloud-Services
 
-{{ source.cloud_services }}
+[TODO]
 
 ## Personal und Ressourcen
 
 ### Personalstruktur
 
-**Gesamtmitarbeiter**: {{ source.total_employees }}
-**IT-Personal**: {{ source.it_staff_count }}
-**Operations-Personal**: {{ source.operations_staff_count }}
+**Gesamtmitarbeiter**: [TODO]
+**IT-Personal**: [TODO]
+**Operations-Personal**: [TODO]
 
 ### Qualifikationen und Training
 
-{{ source.staff_qualifications }}
+[TODO]
 
 ### Hintergrundüberprüfungen
 
-{{ source.background_check_policy }}
+[TODO]
 
 ## Governance und Management
 
 ### Governance-Struktur
 
-{{ source.governance_structure }}
+[TODO]
 
 ### Management-Komitees
 
-**Steering Committee**: {{ source.steering_committee }}
-**Risk Committee**: {{ source.risk_committee }}
-**Change Advisory Board**: {{ source.change_advisory_board }}
+**Steering Committee**: [TODO]
+**Risk Committee**: [TODO]
+**Change Advisory Board**: [TODO]
 
 ### Richtlinien und Verfahren
 
-{{ source.policies_overview }}
+[TODO]
 
 ## Drittanbieter und Subservice-Organisationen
 
 ### Subservice-Organisationen
 
-{{ source.subservice_org_details }}
+[TODO]
 
 ### Outsourcing-Vereinbarungen
 
-{{ source.outsourcing_arrangements }}
+[TODO]
 
 ### Vendor Management
 
-{{ source.vendor_management_process }}
+[TODO]
 
 ## Physische Sicherheit
 
 ### Zugangskontrollen
 
-{{ source.physical_access_controls }}
+[TODO]
 
 ### Überwachung
 
-{{ source.physical_monitoring }}
+[TODO]
 
 ### Umgebungskontrollen
 
-{{ source.environmental_controls }}
+[TODO]
 
 ## Geschäftskontinuität
 
 ### Business Continuity Plan
 
-{{ source.bcp_summary }}
+[TODO]
 
 ### Disaster Recovery
 
-{{ source.dr_summary }}
+[TODO]
 
 ### Backup-Strategien
 
-{{ source.backup_strategy }}
+[TODO]
 
 ## Änderungsmanagement
 
 ### Change Management Prozess
 
-{{ source.change_management_process }}
+[TODO]
 
 ### Release Management
 
-{{ source.release_management }}
+[TODO]
 
 ## Incident Management
 
 ### Incident Response
 
-{{ source.incident_response_process }}
+[TODO]
 
 ### Problem Management
 
-{{ source.problem_management }}
+[TODO]
 
 ## Referenzen
 
@@ -192,12 +203,3 @@ Dieses Dokument umfasst:
 
 <!-- Hinweise für Autoren: Stellen Sie sicher, dass alle Systembeschreibungen aktuell und vollständig sind -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

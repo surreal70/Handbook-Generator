@@ -1,11 +1,16 @@
 # Organizational Roles, Responsibilities, and Authorities
 
-**Document-ID:** 0120  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0120
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -461,8 +466,6 @@ Updates to roles are:
 - **Version control:** Maintained according to Clause 7.5
 - **Distribution:** Available to all personnel
 
----
-
 **Next Steps:**
 1. Define all QMS-relevant roles in organization
 2. Assign specific responsibilities and authorities to each role
@@ -471,10 +474,3 @@ Updates to roles are:
 5. Ensure understanding through training and acknowledgment
 6. Review and update roles regularly
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

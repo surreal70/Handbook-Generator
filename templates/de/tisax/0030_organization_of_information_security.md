@@ -1,17 +1,28 @@
----
+
 Document-ID: tisax-0030
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Organisation der Informationssicherheit
 
+**Dokument-ID:** [FRAMEWORK]-0030
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt die organisatorische Struktur für Informationssicherheit bei {{ source.organization_name }}.
+Dieses Dokument beschreibt die organisatorische Struktur für Informationssicherheit bei [TODO].
 
 ## Geltungsbereich
 
@@ -21,11 +32,11 @@ Dieses Dokument gilt für alle Organisationseinheiten und Rollen im Zusammenhang
 
 ### Informationssicherheitskomitee
 
-**Vorsitz**: {{ source.security_committee_chair }}
+**Vorsitz**: [TODO]
 **Mitglieder**:
-- {{ source.committee_member_1 }}
-- {{ source.committee_member_2 }}
-- {{ source.committee_member_3 }}
+- [TODO]
+- [TODO]
+- [TODO]
 
 **Aufgaben**:
 - Strategische Ausrichtung der Informationssicherheit
@@ -34,7 +45,7 @@ Dieses Dokument gilt für alle Organisationseinheiten und Rollen im Zusammenhang
 
 ### Informationssicherheitsbeauftragter (ISB)
 
-**Name**: {{ source.information_security_officer }}
+**Name**: [TODO]
 **Verantwortlichkeiten**:
 - Entwicklung und Pflege des ISMS
 - Koordination von Sicherheitsmaßnahmen
@@ -44,7 +55,7 @@ Dieses Dokument gilt für alle Organisationseinheiten und Rollen im Zusammenhang
 
 ### Datenschutzbeauftragter (DSB)
 
-**Name**: {{ source.data_protection_officer }}
+**Name**: [TODO]
 **Verantwortlichkeiten**:
 - Überwachung der DSGVO-Compliance
 - Beratung zu Datenschutzfragen
@@ -56,17 +67,17 @@ Jede Abteilung benennt einen Sicherheitsverantwortlichen:
 
 | Abteilung | Verantwortlicher |
 |-----------|------------------|
-| {{ source.department_1 }} | {{ source.dept_1_security_contact }} |
-| {{ source.department_2 }} | {{ source.dept_2_security_contact }} |
-| {{ source.department_3 }} | {{ source.dept_3_security_contact }} |
+| [TODO] | [TODO] |
+| [TODO] | [TODO] |
+| [TODO] | [TODO] |
 
 ## Kommunikationswege
 
 ### Interne Kommunikation
 
-- Regelmäßige Sicherheitsmeetings: {{ source.security_meeting_frequency }}
-- Sicherheitsberichte: {{ source.security_report_frequency }}
-- Incident-Meldungen: {{ source.incident_reporting_channel }}
+- Regelmäßige Sicherheitsmeetings: [TODO]
+- Sicherheitsberichte: [TODO]
+- Incident-Meldungen: [TODO]
 
 ### Externe Kommunikation
 
@@ -84,12 +95,3 @@ Kritische Aufgaben werden getrennt, um Interessenkonflikte zu vermeiden:
 
 <!-- Hinweis: Passen Sie die Organisationsstruktur an Ihre Gegebenheiten an -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

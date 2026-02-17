@@ -1,11 +1,16 @@
 # Management Review
 
-**Document-ID:** 0130  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0130
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -28,7 +33,7 @@ Reference: ISO 9001:2015, Clause 9.3
 
 ## Purpose
 
-This document defines the Management Review process for {{ meta.organization }} in accordance with ISO 9001:2015 Clause 9.3. Management review ensures the QMS remains suitable, adequate, effective, and aligned with the strategic direction of the organization.
+This document defines the Management Review process for {{ meta-organisation.name }} in accordance with ISO 9001:2015 Clause 9.3. Management review ensures the QMS remains suitable, adequate, effective, and aligned with the strategic direction of the organization.
 
 ## Management Review Planning
 
@@ -401,8 +406,6 @@ Management review integrates with:
 | [TODO: Year] | [TODO: Number] | [TODO: Summary] |
 | [TODO: Year] | [TODO: Number] | [TODO: Summary] |
 
----
-
 **Next Steps:**
 1. Define management review schedule for current year
 2. Identify all input data sources and responsible persons
@@ -411,10 +414,3 @@ Management review integrates with:
 5. Implement action tracking system
 6. Review and improve management review process
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

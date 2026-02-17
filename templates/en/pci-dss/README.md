@@ -4,7 +4,7 @@
 
 These templates form the foundation for a complete PCI-DSS (Payment Card Industry Data Security Standard) compliance handbook according to **PCI-DSS v4.0**.
 
-The PCI-DSS handbook of {{ meta.organization.name }} comprises structured documents covering all 12 PCI-DSS requirements to ensure the security of cardholder data.
+The PCI-DSS handbook of [TODO] comprises structured documents covering all 12 PCI-DSS requirements to ensure the security of cardholder data.
 
 ## Template Structure
 
@@ -95,9 +95,9 @@ The PCI-DSS handbook of {{ meta.organization.name }} comprises structured docume
 Templates use placeholders from the `metadata.yaml` file:
 
 ```markdown
-**Organization:** {{ meta.organization.name }}
-**QSA:** {{ meta.roles.qsa.name }} ({{ meta.roles.qsa.email }})
-**CISO:** {{ meta.roles.ciso.name }} ({{ meta.roles.ciso.email }})
+**Organization:** [TODO]
+**QSA:** [TODO] ([TODO])
+**CISO:** [TODO] ([TODO])
 **Merchant ID:** {{ meta.pci.merchant_id }}
 **Service Provider ID:** {{ meta.pci.service_provider_id }}
 ```
@@ -240,7 +240,7 @@ For questions or issues:
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
+| 0.1 | [TODO] | {{ meta.defaults.author }} | Initial Creation |
 
 ## Version History
 

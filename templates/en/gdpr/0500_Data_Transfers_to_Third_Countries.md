@@ -1,11 +1,16 @@
 # Data Transfers to Third Countries
 
-**Document-ID:** 0500  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0500
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,7 +30,7 @@ Reference: GDPR Art. 44-50 (Transfers of personal data to third countries)
 
 ## Purpose
 
-This document regulates the transfer of personal data to third countries (outside EU/EEA) at {{ meta.organization }} according to Art. 44-50 GDPR. It ensures that an adequate level of protection is guaranteed even for international data transfers.
+This document regulates the transfer of personal data to third countries (outside EU/EEA) at {{ meta-organisation.name }} according to Art. 44-50 GDPR. It ensures that an adequate level of protection is guaranteed even for international data transfers.
 
 ## Principle (Art. 44)
 
@@ -322,8 +327,6 @@ Data subjects must be informed about third country transfers:
 - **Processing by Processor (Art. 28):** SCCs with processors in third countries
 - **Information Obligations (Art. 13-14):** Transparency towards data subjects
 
----
-
 **Next Steps:**
 1. Identify all third country transfers
 2. Check adequacy decisions
@@ -331,10 +334,3 @@ Data subjects must be informed about third country transfers:
 4. Conduct Transfer Impact Assessments
 5. Inform data subjects transparently
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

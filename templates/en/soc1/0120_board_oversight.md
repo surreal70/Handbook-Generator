@@ -1,13 +1,24 @@
----
+
 Document-ID: soc1-0120
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Board Oversight
+
+**Document-ID:** [FRAMEWORK]-0120
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -30,16 +41,16 @@ The board of directors demonstrates independence from management and exercises o
 
 ### Composition
 
-**Number of Members**: {{ source.board_size }}
+**Number of Members**: [TODO]
 
 **Members**:
-{{ source.board_members }}
+[TODO]
 
-**Terms**: {{ source.board_terms }}
+**Terms**: [TODO]
 
 ### Independence
 
-**Independent Directors**: {{ source.independent_directors }}
+**Independent Directors**: [TODO]
 
 **Independence Criteria**:
 - No material business relationships
@@ -47,9 +58,9 @@ The board of directors demonstrates independence from management and exercises o
 - No prior employment with the organization
 - No consulting contracts
 
-{{ source.independence_criteria }}
+[TODO]
 
-**Independence Assessment**: {{ source.independence_assessment }}
+**Independence Assessment**: [TODO]
 
 ### Expertise and Qualifications
 
@@ -60,66 +71,66 @@ The board of directors demonstrates independence from management and exercises o
 - Compliance and governance
 - Technology and cybersecurity
 
-{{ source.board_competencies }}
+[TODO]
 
 **Qualifications Matrix**:
-{{ source.qualifications_matrix }}
+[TODO]
 
 ### Diversity
 
-**Diversity Policy**: {{ source.diversity_policy }}
+**Diversity Policy**: [TODO]
 
-**Diversity Metrics**: {{ source.diversity_metrics }}
+**Diversity Metrics**: [TODO]
 
 ## Oversight Functions
 
 ### Strategic Oversight
 
-**Strategy Development**: {{ source.strategy_development }}
+**Strategy Development**: [TODO]
 
-**Strategy Review**: {{ source.strategy_review }}
+**Strategy Review**: [TODO]
 
-**Performance Monitoring**: {{ source.performance_monitoring }}
+**Performance Monitoring**: [TODO]
 
-**Long-term Planning**: {{ source.long_term_planning }}
+**Long-term Planning**: [TODO]
 
 ### Risk Oversight
 
-**Risk Appetite**: {{ source.risk_appetite_oversight }}
+**Risk Appetite**: [TODO]
 
-**Risk Strategy**: {{ source.risk_strategy_oversight }}
+**Risk Strategy**: [TODO]
 
-**Risk Assessment**: {{ source.risk_assessment_oversight }}
+**Risk Assessment**: [TODO]
 
-**Risk Mitigation**: {{ source.risk_mitigation_oversight }}
+**Risk Mitigation**: [TODO]
 
 ### Compliance Oversight
 
-**Compliance Program**: {{ source.compliance_program_oversight }}
+**Compliance Program**: [TODO]
 
-**Regulatory Requirements**: {{ source.regulatory_oversight }}
+**Regulatory Requirements**: [TODO]
 
-**Ethics and Integrity**: {{ source.ethics_oversight }}
+**Ethics and Integrity**: [TODO]
 
-**Legal Matters**: {{ source.legal_oversight }}
+**Legal Matters**: [TODO]
 
 ### Financial Oversight
 
-**Financial Reporting**: {{ source.financial_reporting_oversight }}
+**Financial Reporting**: [TODO]
 
-**Internal Controls**: {{ source.internal_controls_oversight }}
+**Internal Controls**: [TODO]
 
-**External Audit**: {{ source.external_audit_oversight }}
+**External Audit**: [TODO]
 
-**Internal Audit**: {{ source.internal_audit_oversight }}
+**Internal Audit**: [TODO]
 
 ## Board Committees
 
 ### Audit Committee
 
-**Charter**: {{ source.audit_committee_charter }}
+**Charter**: [TODO]
 
-**Composition**: {{ source.audit_committee_composition }}
+**Composition**: [TODO]
 
 **Responsibilities**:
 - Oversight of financial reporting
@@ -128,17 +139,17 @@ The board of directors demonstrates independence from management and exercises o
 - Compliance monitoring
 - Risk management oversight
 
-{{ source.audit_committee_responsibilities }}
+[TODO]
 
-**Meeting Frequency**: {{ source.audit_committee_meetings }}
+**Meeting Frequency**: [TODO]
 
-**Reporting**: {{ source.audit_committee_reporting }}
+**Reporting**: [TODO]
 
 ### Risk Committee
 
-**Charter**: {{ source.risk_committee_charter }}
+**Charter**: [TODO]
 
-**Composition**: {{ source.risk_committee_composition }}
+**Composition**: [TODO]
 
 **Responsibilities**:
 - Risk appetite and tolerance
@@ -146,15 +157,15 @@ The board of directors demonstrates independence from management and exercises o
 - Risk assessment and monitoring
 - Risk mitigation strategies
 
-{{ source.risk_committee_responsibilities }}
+[TODO]
 
-**Meeting Frequency**: {{ source.risk_committee_meetings }}
+**Meeting Frequency**: [TODO]
 
 ### Compensation Committee
 
-**Charter**: {{ source.compensation_committee_charter }}
+**Charter**: [TODO]
 
-**Composition**: {{ source.compensation_committee_composition }}
+**Composition**: [TODO]
 
 **Responsibilities**:
 - Compensation strategy
@@ -162,15 +173,15 @@ The board of directors demonstrates independence from management and exercises o
 - Incentive programs
 - Succession planning
 
-{{ source.compensation_committee_responsibilities }}
+[TODO]
 
-**Meeting Frequency**: {{ source.compensation_committee_meetings }}
+**Meeting Frequency**: [TODO]
 
 ### Governance Committee
 
-**Charter**: {{ source.governance_committee_charter }}
+**Charter**: [TODO]
 
-**Composition**: {{ source.governance_committee_composition }}
+**Composition**: [TODO]
 
 **Responsibilities**:
 - Corporate governance
@@ -178,37 +189,37 @@ The board of directors demonstrates independence from management and exercises o
 - Board evaluation
 - Governance policies
 
-{{ source.governance_committee_responsibilities }}
+[TODO]
 
-**Meeting Frequency**: {{ source.governance_committee_meetings }}
+**Meeting Frequency**: [TODO]
 
 ## Board Activities
 
 ### Meetings
 
-**Regular Meetings**: {{ source.regular_meetings }}
+**Regular Meetings**: [TODO]
 
-**Special Meetings**: {{ source.special_meetings }}
+**Special Meetings**: [TODO]
 
-**Committee Meetings**: {{ source.committee_meetings }}
+**Committee Meetings**: [TODO]
 
-**Executive Sessions**: {{ source.executive_sessions }}
+**Executive Sessions**: [TODO]
 
 ### Agenda and Materials
 
-**Agenda Development**: {{ source.agenda_development }}
+**Agenda Development**: [TODO]
 
-**Pre-meeting Materials**: {{ source.pre_meeting_materials }}
+**Pre-meeting Materials**: [TODO]
 
-**Presentations**: {{ source.board_presentations }}
+**Presentations**: [TODO]
 
 ### Minutes
 
-**Meeting Minutes**: {{ source.meeting_minutes }}
+**Meeting Minutes**: [TODO]
 
-**Resolutions**: {{ source.board_resolutions }}
+**Resolutions**: [TODO]
 
-**Retention**: {{ source.records_retention }}
+**Retention**: [TODO]
 
 ## Management Interaction
 
@@ -221,29 +232,29 @@ The board of directors demonstrates independence from management and exercises o
 - Compliance reports
 - Audit reports
 
-{{ source.management_reporting }}
+[TODO]
 
-**Ad-hoc Reporting**: {{ source.adhoc_reporting }}
+**Ad-hoc Reporting**: [TODO]
 
 ### Management Presentations
 
-**Presentation Requirements**: {{ source.presentation_requirements }}
+**Presentation Requirements**: [TODO]
 
-**Q&A Sessions**: {{ source.qa_sessions }}
+**Q&A Sessions**: [TODO]
 
 ### Executive Sessions
 
-**Purpose**: {{ source.executive_session_purpose }}
+**Purpose**: [TODO]
 
-**Frequency**: {{ source.executive_session_frequency }}
+**Frequency**: [TODO]
 
-**Participants**: {{ source.executive_session_participants }}
+**Participants**: [TODO]
 
 ## Board Evaluation
 
 ### Self-Assessment
 
-**Assessment Process**: {{ source.board_self_assessment }}
+**Assessment Process**: [TODO]
 
 **Assessment Criteria**:
 - Oversight effectiveness
@@ -251,31 +262,31 @@ The board of directors demonstrates independence from management and exercises o
 - Committee performance
 - Board dynamics
 
-{{ source.assessment_criteria }}
+[TODO]
 
-**Assessment Frequency**: {{ source.assessment_frequency }}
+**Assessment Frequency**: [TODO]
 
 ### Individual Assessments
 
-**Member Evaluation**: {{ source.individual_assessments }}
+**Member Evaluation**: [TODO]
 
-**Feedback Process**: {{ source.feedback_process }}
+**Feedback Process**: [TODO]
 
 ### Improvement Actions
 
-**Action Plans**: {{ source.improvement_actions }}
+**Action Plans**: [TODO]
 
-**Follow-up**: {{ source.action_followup }}
+**Follow-up**: [TODO]
 
 ## Training and Development
 
 ### Onboarding New Members
 
-**Orientation Program**: {{ source.director_onboarding }}
+**Orientation Program**: [TODO]
 
-**Onboarding Materials**: {{ source.onboarding_materials }}
+**Onboarding Materials**: [TODO]
 
-**Mentoring**: {{ source.director_mentoring }}
+**Mentoring**: [TODO]
 
 ### Ongoing Training
 
@@ -286,9 +297,9 @@ The board of directors demonstrates independence from management and exercises o
 - Cybersecurity
 - Financial reporting
 
-{{ source.ongoing_training }}
+[TODO]
 
-**External Training**: {{ source.external_training }}
+**External Training**: [TODO]
 
 ## Documentation and Evidence
 
@@ -310,11 +321,11 @@ The board of directors demonstrates independence from management and exercises o
    - Committee assessments
    - Individual assessments
 
-{{ source.required_documentation }}
+[TODO]
 
 ### Retention Requirements
 
-{{ source.retention_requirements }}
+[TODO]
 
 ## Monitoring and Reporting
 
@@ -326,15 +337,15 @@ The board of directors demonstrates independence from management and exercises o
 - Training completion
 - Assessment results
 
-{{ source.oversight_metrics }}
+[TODO]
 
 ### Reporting
 
-**Internal Reporting**: {{ source.internal_reporting }}
+**Internal Reporting**: [TODO]
 
-**External Reporting**: {{ source.external_reporting }}
+**External Reporting**: [TODO]
 
-**Stakeholder Communication**: {{ source.stakeholder_communication }}
+**Stakeholder Communication**: [TODO]
 
 ## References
 
@@ -345,13 +356,5 @@ The board of directors demonstrates independence from management and exercises o
 - Dodd-Frank Act Corporate Governance Provisions
 
 <!-- Author notes: Update board information when changes occur -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

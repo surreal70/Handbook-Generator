@@ -1,14 +1,16 @@
 # Anhang: Assetinventar (Template)
 
-**Dokument-ID:** 0710  
-**Dokumenttyp:** Anhang/Template  
-**Referenzrahmen:** BSI IT-Grundschutz (BSI Standards 200-1/200-2)  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** {{ meta.document.status }}  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0710
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -20,7 +22,7 @@ Reference: BSI IT-Grundschutz-Kompendium: OPS.1.1.1 Allgemeiner IT-Betrieb
 
 ## 1. Zweck und Zielsetzung
 
-Das Assetinventar von **{{ meta.organization.name }}** dokumentiert alle IT-Assets im Geltungsbereich des ISMS.
+Das Assetinventar von **{{ meta-organisation.name }}** dokumentiert alle IT-Assets im Geltungsbereich des ISMS.
 
 **Verantwortlich:** {{ meta.cio.name }}
 
@@ -162,10 +164,8 @@ DR: Yes
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| IT-Leitung | {{ meta.cio.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| ISB | {{ meta.ciso.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| IT-Leitung | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **Referenzen:**
 - BSI IT-Grundschutz-Kompendium: OPS.1.1.1 Allgemeiner IT-Betrieb
@@ -173,13 +173,5 @@ DR: Yes
 - Dokument 0050: Strukturanalyse
 - Dokument 0060: Schutzbedarfsfeststellung
 - Dokument 0250: Asset Lifecycle
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 <!-- End of template -->

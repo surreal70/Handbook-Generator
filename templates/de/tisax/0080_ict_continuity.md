@@ -1,24 +1,35 @@
----
+
 Document-ID: tisax-0510
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # IKT-Kontinuität
 
+**Dokument-ID:** [FRAMEWORK]-0080
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt die IKT-Kontinuitätsmaßnahmen bei {{ source.organization_name }}.
+Dieses Dokument beschreibt die IKT-Kontinuitätsmaßnahmen bei [TODO].
 
 ## Kritische IT-Systeme
 
 | System | Kritikalität | RTO | RPO | Wiederherstellungsstrategie |
 |--------|--------------|-----|-----|----------------------------|
-| {{ source.system_1 }} | {{ source.system_1_criticality }} | {{ source.system_1_rto }} | {{ source.system_1_rpo }} | {{ source.system_1_recovery }} |
-| {{ source.system_2 }} | {{ source.system_2_criticality }} | {{ source.system_2_rto }} | {{ source.system_2_rpo }} | {{ source.system_2_recovery }} |
+| [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## Redundanz
 
@@ -29,8 +40,8 @@ Dieses Dokument beschreibt die IKT-Kontinuitätsmaßnahmen bei {{ source.organiz
 
 ## Disaster Recovery
 
-**DR-Standort**: {{ source.dr_site }}
-**Failover-Zeit**: {{ source.failover_time }}
+**DR-Standort**: [TODO]
+**Failover-Zeit**: [TODO]
 
 ## Wiederherstellungsprozess
 
@@ -43,12 +54,3 @@ Dieses Dokument beschreibt die IKT-Kontinuitätsmaßnahmen bei {{ source.organiz
 
 <!-- Hinweis: Testen Sie DR-Prozesse -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

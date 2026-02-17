@@ -1,11 +1,16 @@
 # Understanding the Organization and its Context
 
-**Document-ID:** 0010  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0010
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -32,7 +37,7 @@ This document describes the analysis of the organizational context according to 
 ## Scope
 
 This context analysis applies to:
-- **Organization:** {{ meta.organization }}
+- **Organization:** {{ meta-organisation.name }}
 - **Locations:** [TODO: List locations]
 - **Business units:** [TODO: List business units]
 
@@ -154,8 +159,6 @@ This context analysis forms the basis for:
 - **Appendix B:** SWOT Analysis (Strengths, Weaknesses, Opportunities, Threats)
 - **Appendix C:** Stakeholder Mapping
 
----
-
 **Next Steps:**
 1. Identify all relevant external and internal issues
 2. Assess the impact of each issue on the QMS
@@ -163,10 +166,3 @@ This context analysis forms the basis for:
 4. Link context analysis to risk and opportunity assessment
 5. Review and update the analysis regularly
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

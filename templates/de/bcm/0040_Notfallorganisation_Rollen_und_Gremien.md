@@ -1,13 +1,16 @@
 # Notfallorganisation: Rollen und Gremien
 
-**Dokument-ID:** BCM-0040  
-**Organisation:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** BCM-0040
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -27,12 +30,12 @@ Customization required:
 
 ### 1.1 Notfallorganisationsstruktur
 
-Die Notfallorganisation der {{ meta.organization.name }} besteht aus folgenden Ebenen:
+Die Notfallorganisation der {{ meta-organisation.name }} besteht aus folgenden Ebenen:
 
 ```
 ┌─────────────────────────────────────┐
 │      Krisenstab (Strategic)         │
-│   Leitung: {{ meta.roles.ceo.name }}│
+│   Leitung: {{ meta-organisation-roles.role_CEO }}│
 └──────────────┬──────────────────────┘
                │
     ┌──────────┴──────────┬────────────────┐
@@ -70,9 +73,9 @@ Die Notfallorganisation der {{ meta.organization.name }} besteht aus folgenden E
 
 **Rolle:** Krisenstabsleitung / Crisis Management Team Lead
 
-**Verantwortlich:** {{ meta.roles.ceo.name }}  
-**Stellvertretung:** {{ meta.roles.coo.name }}  
-**Kontakt:** {{ meta.roles.ceo.email }} / {{ meta.roles.ceo.phone }}
+**Verantwortlich:** {{ meta-organisation-roles.role_CEO }}  
+**Stellvertretung:** [TODO]  
+**Kontakt:** {{ meta-organisation-roles.role_CEO }} / [TODO]
 
 **Aufgaben:**
 - Gesamtverantwortung für Krisenmanagement und BCM-Aktivierung
@@ -108,13 +111,13 @@ Die Notfallorganisation der {{ meta.organization.name }} besteht aus folgenden E
 - Reporting an Geschäftsführung und Krisenstab
 
 **Reporting:**
-- Quartalsweise BCM-Status-Reports an {{ meta.roles.ceo.name }}
+- Quartalsweise BCM-Status-Reports an {{ meta-organisation-roles.role_CEO }}
 - Ad-hoc-Reporting bei kritischen Ereignissen
 - Jährlicher BCM-Jahresbericht
 
 **Schnittstellen:**
-- ISMS / CISO: {{ meta.roles.ciso.name }}
-- IT-Operations: {{ meta.roles.it_operations_manager.name }}
+- ISMS / CISO: {{ meta-organisation-roles.role_CISO }}
+- IT-Operations: {{ meta-organisation-roles.role_IT_Manager }}
 - Fachbereiche: Jeweilige Bereichsleiter
 
 ### 2.3 Incident Commander / Einsatzleitung (operativ)
@@ -159,7 +162,7 @@ Die Notfallorganisation der {{ meta.organization.name }} besteht aus folgenden E
 
 **Freigabeprozesse:**
 - Interne Kommunikation: Freigabe durch Krisenstabsleitung
-- Externe Kommunikation: Freigabe durch {{ meta.roles.ceo.name }}
+- Externe Kommunikation: Freigabe durch {{ meta-organisation-roles.role_CEO }}
 - Pressemitteilungen: Freigabe durch Geschäftsführung und ggf. Rechtsabteilung
 
 **Kommunikationskanäle:**
@@ -170,9 +173,9 @@ Die Notfallorganisation der {{ meta.organization.name }} besteht aus folgenden E
 
 **Rolle:** IT Disaster Recovery Lead
 
-**Verantwortlich:** {{ meta.roles.it_operations_manager.name }}  
+**Verantwortlich:** {{ meta-organisation-roles.role_IT_Manager }}  
 **Stellvertretung:** [TODO: Stellvertreter]  
-**Kontakt:** {{ meta.roles.it_operations_manager.email }} / {{ meta.roles.it_operations_manager.phone }}
+**Kontakt:** {{ meta-organisation-roles.role_IT_Manager }} / [TODO]
 
 **Aufgaben:**
 - Leitung des IT-DR-Teams
@@ -268,10 +271,10 @@ Für alle kritischen Rollen sind Stellvertreter definiert:
 
 | Rolle | Primär | Stellvertreter 1 | Stellvertreter 2 |
 |-------|--------|------------------|------------------|
-| Krisenstabsleitung | {{ meta.roles.ceo.name }} | {{ meta.roles.coo.name }} | [TODO] |
+| Krisenstabsleitung | {{ meta-organisation-roles.role_CEO }} | [TODO] | [TODO] |
 | BCM-Manager | [TODO] | [TODO] | [TODO] |
 | Incident Commander | [TODO] | [TODO] | [TODO] |
-| IT-DR-Lead | {{ meta.roles.it_operations_manager.name }} | [TODO] | [TODO] |
+| IT-DR-Lead | {{ meta-organisation-roles.role_IT_Manager }} | [TODO] | [TODO] |
 | Kommunikation | [TODO] | [TODO] | [TODO] |
 
 ### 5.2 Übergabeprozess
@@ -288,13 +291,5 @@ Bei Vertretung oder Schichtwechsel erfolgt eine strukturierte Übergabe:
 - Übergabeprotokoll (Template: [TODO: Link])
 - Logbuch-Eintrag
 - Briefing des Nachfolgers
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 <!-- End of template -->

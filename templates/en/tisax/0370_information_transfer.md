@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0370
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Information Transfer
+
+**Document-ID:** [FRAMEWORK]-0370
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -15,7 +26,7 @@ This document defines requirements for secure transfer of information according 
 
 ## Scope
 
-This document applies to all information transfers of {{ source.organization_name }}.
+This document applies to all information transfers of [TODO].
 
 ## Transfer Channels
 
@@ -106,17 +117,9 @@ This document applies to all information transfers of {{ source.organization_nam
 
 ## Metrics
 
-{{ source.organization_name }} measures:
+[TODO] measures:
 - Number of encrypted transfers
 - Number of DLP incidents
 - Compliance rate
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

@@ -63,14 +63,14 @@ python handbook-generator --template dora --language de --output test-output/de/
 
 ### Platzhalter
 
-Die Templates verwenden Platzhalter im Format `{{ source.field }}` für organisationsspezifische Daten:
+Die Templates verwenden Platzhalter im Format `[TODO]` für organisationsspezifische Daten:
 
-- `{{ source.organization_name }}` - Name der Organisation
-- `{{ source.dora_owner }}` - Verantwortlicher für DORA-Implementierung
-- `{{ source.current_deployment_frequency }}` - Aktuelle Deployment Frequency
-- `{{ source.current_lead_time }}` - Aktuelle Lead Time
-- `{{ source.current_mttr }}` - Aktuelle MTTR
-- `{{ source.current_cfr }}` - Aktuelle Change Failure Rate
+- `[TODO]` - Name der Organisation
+- `[TODO]` - Verantwortlicher für DORA-Implementierung
+- `[TODO]` - Aktuelle Deployment Frequency
+- `[TODO]` - Aktuelle Lead Time
+- `[TODO]` - Aktuelle MTTR
+- `[TODO]` - Aktuelle Change Failure Rate
 
 ### Anpassung
 

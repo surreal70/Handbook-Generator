@@ -1,5 +1,19 @@
 # Kontext der Organisation und interessierte Parteien
 
+**Dokument-ID:** 0030
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This document establishes the context in which the ISMS operates, including 
@@ -12,30 +26,18 @@ ISO 27001:2022 References:
 - Clause 4.2: Understanding the needs and expectations of interested parties
 -->
 
-**Dokument-ID:** 0030  
-**Dokumenttyp:** ISMS-Grundlagendokument  
-**Standard-Referenz:** ISO/IEC 27001:2022 Clauses 4.1, 4.2  
-**Owner:** {{ meta.ciso.name }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
-
----
-
 ## 1. Kontext der Organisation
 
 ### 1.1 Interne Themen
 
 **Organisationsstruktur:**
-- Organisationsform: {{ meta.organization.legal_form }}
-- Anzahl Mitarbeiter: {{ meta.organization.employee_count }}
+- Organisationsform: [TODO]
+- Anzahl Mitarbeiter: [TODO]
 - Organisationsstruktur: [TODO: Hierarchie, Abteilungen]
 - Standorte: {{ netbox.site.name }} und weitere
 
 **Geschäftsprozesse:**
-- Kerngeschäft: {{ meta.organization.industry }}
+- Kerngeschäft: [TODO]
 - Kritische Geschäftsprozesse: [TODO: Liste der kritischen Prozesse]
 - IT-Abhängigkeit: Hoch / Mittel / Niedrig
 
@@ -65,7 +67,7 @@ situation. Consider factors that could impact information security.
 ### 1.2 Externe Themen
 
 **Markt und Wettbewerb:**
-- Branche: {{ meta.organization.industry }}
+- Branche: [TODO]
 - Marktposition: [TODO: Marktführer, Challenger, Nische]
 - Wettbewerbsdruck: Hoch / Mittel / Niedrig
 - Kundenerwartungen: [TODO: Sicherheitsanforderungen]
@@ -252,19 +254,10 @@ Der Kontext und die Stakeholder-Anforderungen werden regelmäßig überprüft:
 - **ISO/IEC 27001:2022** - Clause 4.2: Understanding the needs and expectations of interested parties
 - **DSGVO (EU 2016/679)** - Datenschutz-Grundverordnung
 
----
-
 **Genehmigt durch:**  
 {{ meta.ciso.name }}, CISO  
 {{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+Datum: {{ meta-handbook.modifydate }}
 
-**Nächster Review:** {{ meta.document.next_review }}
+**Nächster Review:** {{ meta-handbook.next_review }}
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

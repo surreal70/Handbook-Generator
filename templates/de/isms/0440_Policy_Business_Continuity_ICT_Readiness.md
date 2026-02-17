@@ -1,5 +1,19 @@
 # Policy: Business Continuity ICT Readiness
 
+**Dokument-ID:** 0440
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This policy establishes the principles for ICT continuity and disaster recovery.
@@ -10,27 +24,15 @@ Customize based on your organization's business continuity requirements.
 ISO 27001:2022 Annex A Reference: A.5.29, A.5.30
 -->
 
-**Dokument-ID:** 0440  
-**Dokumenttyp:** Policy (abstrakt)  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.5.29, A.5.30 (inkl. Amendment 1:2024)  
-**Owner:** {{ meta.ciso.name }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
-
----
-
 ## 1. Zweck
 
-Diese Policy definiert die Grundsätze für ICT Continuity und Disaster Recovery der **{{ meta.organization.name }}**. Sie stellt sicher, dass IT-Systeme und -Services während Störungen weiterbetrieben oder schnell wiederhergestellt werden können, um die Geschäftskontinuität zu gewährleisten.
+Diese Policy definiert die Grundsätze für ICT Continuity und Disaster Recovery der **{{ meta-organisation.name }}**. Sie stellt sicher, dass IT-Systeme und -Services während Störungen weiterbetrieben oder schnell wiederhergestellt werden können, um die Geschäftskontinuität zu gewährleisten.
 
 ## 2. Geltungsbereich
 
 Diese Policy gilt für:
 
-- **Organisationseinheiten:** Alle Abteilungen und Standorte der {{ meta.organization.name }}
+- **Organisationseinheiten:** Alle Abteilungen und Standorte der {{ meta-organisation.name }}
 - **Systeme:** Alle geschäftskritischen IT-Systeme, Anwendungen, Infrastruktur, Cloud-Services
 - **Szenarien:** Naturkatastrophen, Cyberangriffe, Systemausfälle, Pandemien, Lieferantenausfälle
 - **Schnittstellen:** Integration mit BCM (Business Continuity Management)
@@ -168,18 +170,9 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **ISO/IEC 27031** - ICT readiness for business continuity
 - **BSI Standard 100-4** - Business Continuity Management
 
----
-
 **Genehmigt durch:**  
 {{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+Datum: {{ meta-handbook.modifydate }}
 
-**Nächster Review:** {{ meta.document.next_review }} (jährlich oder anlassbezogen)
+**Nächster Review:** {{ meta-handbook.next_review }} (jährlich oder anlassbezogen)
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

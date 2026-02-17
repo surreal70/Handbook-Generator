@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0510
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # IKT-Kontinuität
+
+**Dokument-ID:** [FRAMEWORK]-0510
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -15,7 +26,7 @@ Dieses Dokument beschreibt die Maßnahmen zur Sicherstellung der IKT-Kontinuitä
 
 ## Geltungsbereich
 
-Dieses Dokument gilt für alle IT- und Kommunikationssysteme von {{ source.organization_name }}.
+Dieses Dokument gilt für alle IT- und Kommunikationssysteme von [TODO].
 
 ## IKT-Kontinuitätsplanung
 
@@ -136,18 +147,9 @@ Dieses Dokument adressiert:
 
 ## Kennzahlen
 
-{{ source.organization_name }} misst:
+[TODO] misst:
 - Systemverfügbarkeit
 - Erfolgsrate DR-Tests
 - Durchschnittliche Recovery-Zeit
 - Anzahl ungeplanter Ausfälle
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

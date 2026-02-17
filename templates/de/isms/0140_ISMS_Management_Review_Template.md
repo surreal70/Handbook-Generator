@@ -1,5 +1,20 @@
 # Management Review (Template)
 
+**Dokument-ID:** 0140
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+**Nächster Review:** {{ meta-handbook.next_review }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 The Management Review is a mandatory ISO 27001 requirement where top management
@@ -8,18 +23,6 @@ This is a critical governance activity that demonstrates management commitment.
 
 ISO 27001:2022 Reference: Clause 9.3 - Management review
 -->
-
-**Dokument-ID:** 0140  
-**Dokumenttyp:** ISMS-Nachweis/Template  
-**Standard-Referenz:** ISO/IEC 27001:2022 Clause 9.3  
-**Owner:** {{ meta.ciso.name }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
-
----
 
 ## 1. Management Review-Übersicht
 
@@ -359,15 +362,11 @@ Dieser Management Review umfasst:
 - **ISO/IEC 27001:2022** - Clause 9.3: Management review
 - **ISO/IEC 27002:2022** - Information security controls
 
----
-
 ## Änderungshistorie
 
 | Version | Datum | Autor | Beschreibung | Genehmigt durch |
 |---------|-------|-------|--------------|-----------------|
-| 1.0 | {{ meta.document.date }} | {{ meta.ciso.name }} | Initiale Version | {{ meta.management.ceo }} |
-
----
+| 1.0 | {{ meta-handbook.modifydate }} | {{ meta.ciso.name }} | Initiale Version | {{ meta.management.ceo }} |
 
 **Protokolliert durch:**  
 {{ meta.ciso.name }}, CISO  
@@ -379,10 +378,3 @@ Datum: [TODO]
 
 **Nächster Review:** [TODO: Datum] (Jährlich)
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

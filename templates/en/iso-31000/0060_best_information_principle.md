@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-31000-0060
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Principle 6: Best available information
+
+**Document-ID:** [FRAMEWORK]-0060
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -25,7 +37,7 @@ Inputs to risk management are based on historical and current information as wel
 - Future developments are anticipated
 - Uncertainties are explicitly addressed
 
-## Implementation in {{ meta.organization }}
+## Implementation in {{ meta-organisation.name }}
 
 ### Information Sources
 
@@ -82,12 +94,4 @@ Decisions in risk management consider:
 - Expert opinions and experiences
 - Cost-benefit ratio of information gathering
 - Time urgency of decision
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 

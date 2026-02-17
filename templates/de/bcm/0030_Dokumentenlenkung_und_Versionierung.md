@@ -1,13 +1,16 @@
 # Dokumentenlenkung und Versionierung
 
-**Dokument-ID:** BCM-0030  
-**Organisation:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** BCM-0030
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -27,7 +30,7 @@ Customization required:
 
 ### 1.1 BCM-Dokumentenstruktur
 
-Die BCM-Dokumentation der {{ meta.organization.name }} umfasst folgende Dokumententypen:
+Die BCM-Dokumentation der {{ meta-organisation.name }} umfasst folgende Dokumententypen:
 
 **Strategische Dokumente:**
 - BCM-Policy und Leitlinie
@@ -74,9 +77,9 @@ Kritische BCM-Dokumente müssen auch bei Ausfall der IT-Systeme verfügbar sein:
 
 | Dokument-ID | Dokumentname | Version | Owner | Klassifizierung | Ablageort |
 |-------------|--------------|---------|-------|-----------------|-----------|
-| BCM-0010 | Zweck und Geltungsbereich | {{ meta.document.version }} | {{ meta.document.owner }} | {{ meta.document.classification }} | [TODO: Pfad] |
-| BCM-0020 | BCM-Leitlinie / Policy | {{ meta.document.version }} | {{ meta.document.owner }} | {{ meta.document.classification }} | [TODO: Pfad] |
-| BCM-0030 | Dokumentenlenkung | {{ meta.document.version }} | {{ meta.document.owner }} | {{ meta.document.classification }} | [TODO: Pfad] |
+| BCM-0010 | Zweck und Geltungsbereich | {{ meta-handbook.revision }} | {{ meta-handbook.owner }} | {{ meta-handbook.classification }} | [TODO: Pfad] |
+| BCM-0020 | BCM-Leitlinie / Policy | {{ meta-handbook.revision }} | {{ meta-handbook.owner }} | {{ meta-handbook.classification }} | [TODO: Pfad] |
+| BCM-0030 | Dokumentenlenkung | {{ meta-handbook.revision }} | {{ meta-handbook.owner }} | {{ meta-handbook.classification }} | [TODO: Pfad] |
 | ... | ... | ... | ... | ... | ... |
 
 [TODO: Vervollständigen Sie das Dokumentenregister]
@@ -85,7 +88,7 @@ Kritische BCM-Dokumente müssen auch bei Ausfall der IT-Systeme verfügbar sein:
 
 ### 2.1 Versionierungsschema
 
-Die {{ meta.organization.name }} verwendet folgendes Versionierungsschema für BCM-Dokumente:
+Die {{ meta-organisation.name }} verwendet folgendes Versionierungsschema für BCM-Dokumente:
 
 **Format:** `MAJOR.MINOR.PATCH`
 
@@ -137,7 +140,7 @@ Die {{ meta.organization.name }} verwendet folgendes Versionierungsschema für B
 - **Aufgaben:** Inhaltliche Prüfung, Feedback, Freigabeempfehlung
 
 **Approver (Genehmiger):**
-- **Verantwortlich:** {{ meta.document.approver }} oder delegierte Führungskraft
+- **Verantwortlich:** {{ meta-handbook.approver }} oder delegierte Führungskraft
 - **Aufgaben:** Formale Freigabe, Verantwortungsübernahme
 
 ### 3.2 Freigabeprozess
@@ -153,7 +156,7 @@ Die {{ meta.organization.name }} verwendet folgendes Versionierungsschema für B
 
 | Dokumenttyp | Review-Intervall | Verantwortlich |
 |-------------|------------------|----------------|
-| BCM-Policy | Jährlich | {{ meta.roles.ceo.name }} |
+| BCM-Policy | Jährlich | {{ meta-organisation-roles.role_CEO }} |
 | BIA-Ergebnisse | Jährlich | BCM-Manager |
 | BCM-Pläne (BCP/DRP) | Halbjährlich | Fachverantwortliche |
 | Kontaktlisten | Quartalsweise | BCM-Manager |
@@ -214,14 +217,6 @@ Die {{ meta.organization.name }} verwendet folgendes Versionierungsschema für B
 
 ## 5. Änderungsprotokoll (Changelog)
 
-### 5.1 Dokumenthistorie
-
-| Version | Datum | Änderung | Autor | Reviewer | Genehmigt durch |
-|---------|-------|----------|-------|----------|-----------------|
-| 0.1 | {{ meta.document.last_updated }} | Initiale Erstellung | {{ meta.defaults.author }} | [TODO] | [TODO] |
-
-[TODO: Aktualisieren Sie das Änderungsprotokoll bei jeder Dokumentenänderung]
-
 ### 5.2 Änderungsanforderungen
 
 Änderungsanforderungen an BCM-Dokumente können eingereicht werden durch:
@@ -231,13 +226,5 @@ Die {{ meta.organization.name }} verwendet folgendes Versionierungsschema für B
 - **Formular:** [TODO: Link zu Änderungsanforderungsformular]
 
 Jede Änderungsanforderung wird geprüft und priorisiert. Die Bearbeitung erfolgt gemäß definierter SLAs.
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 <!-- End of template -->

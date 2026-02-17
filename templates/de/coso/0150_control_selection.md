@@ -1,40 +1,42 @@
----
+
 Document-ID: coso-0150
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Auswahl und Entwicklung von Kontrollaktivitäten
 
+**Dokument-ID:** [FRAMEWORK]-0150
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt die Auswahl und Entwicklung von Kontrollaktivitäten bei {{ source.organization_name }} (COSO Prinzip 10).
+Dieses Dokument beschreibt die Auswahl und Entwicklung von Kontrollaktivitäten bei [TODO] (COSO Prinzip 10).
 
 ## Kontrollauswahlkriterien
 
-{{ source.selection_criteria }}
+[TODO]
 
 ## Kontrolldesign
 
-{{ source.control_design_process }}
+[TODO]
 
 ## Kontrollimplementierung
 
-{{ source.control_implementation }}
+[TODO]
 
 ## Referenzen
 
 - Kontrollkatalog
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

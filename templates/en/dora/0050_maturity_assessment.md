@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0050
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Maturity Assessment
+
+**Document-ID:** [FRAMEWORK]-0050
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -59,101 +70,93 @@ For each dimension:
 
 ### Technical Practices
 
-**Maturity Level**: {{ source.technical_practices_maturity }}
+**Maturity Level**: [TODO]
 
-- Version Control: {{ source.version_control_maturity }}
-- Continuous Integration: {{ source.ci_maturity }}
-- Continuous Delivery: {{ source.cd_maturity }}
-- Test Automation: {{ source.test_automation_maturity }}
-- Trunk-based Development: {{ source.trunk_based_maturity }}
+- Version Control: [TODO]
+- Continuous Integration: [TODO]
+- Continuous Delivery: [TODO]
+- Test Automation: [TODO]
+- Trunk-based Development: [TODO]
 
 ### Processes and Workflows
 
-**Maturity Level**: {{ source.process_maturity }}
+**Maturity Level**: [TODO]
 
-- Change Management: {{ source.change_mgmt_maturity }}
-- Incident Management: {{ source.incident_mgmt_maturity }}
-- Release Management: {{ source.release_mgmt_maturity }}
-- Configuration Management: {{ source.config_mgmt_maturity }}
+- Change Management: [TODO]
+- Incident Management: [TODO]
+- Release Management: [TODO]
+- Configuration Management: [TODO]
 
 ### Culture and Organization
 
-**Maturity Level**: {{ source.culture_maturity }}
+**Maturity Level**: [TODO]
 
-- Collaboration: {{ source.collaboration_maturity }}
-- Learning Culture: {{ source.learning_culture_maturity }}
-- Psychological Safety: {{ source.psychological_safety_maturity }}
-- Team Autonomy: {{ source.team_autonomy_maturity }}
+- Collaboration: [TODO]
+- Learning Culture: [TODO]
+- Psychological Safety: [TODO]
+- Team Autonomy: [TODO]
 
 ### Measurement and Monitoring
 
-**Maturity Level**: {{ source.measurement_maturity }}
+**Maturity Level**: [TODO]
 
-- Metrics Collection: {{ source.metrics_collection_maturity }}
-- Monitoring: {{ source.monitoring_maturity }}
-- Observability: {{ source.observability_maturity }}
-- Alerting: {{ source.alerting_maturity }}
+- Metrics Collection: [TODO]
+- Monitoring: [TODO]
+- Observability: [TODO]
+- Alerting: [TODO]
 
 ### Automation
 
-**Maturity Level**: {{ source.automation_maturity }}
+**Maturity Level**: [TODO]
 
-- Build Automation: {{ source.build_automation_maturity }}
-- Test Automation: {{ source.test_automation_level }}
-- Deployment Automation: {{ source.deployment_automation_maturity }}
-- Infrastructure as Code: {{ source.iac_maturity }}
+- Build Automation: [TODO]
+- Test Automation: [TODO]
+- Deployment Automation: [TODO]
+- Infrastructure as Code: [TODO]
 
 ## Strengths and Weaknesses
 
 ### Strengths
 
-1. {{ source.maturity_strength_1 }}
-2. {{ source.maturity_strength_2 }}
-3. {{ source.maturity_strength_3 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
 
 ### Weaknesses
 
-1. {{ source.maturity_weakness_1 }}
-2. {{ source.maturity_weakness_2 }}
-3. {{ source.maturity_weakness_3 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
 
 ## Development Plan
 
 ### Priorities
 
 **High Priority**:
-1. {{ source.high_priority_1 }}
-2. {{ source.high_priority_2 }}
+1. [TODO]
+2. [TODO]
 
 **Medium Priority**:
-1. {{ source.medium_priority_1 }}
-2. {{ source.medium_priority_2 }}
+1. [TODO]
+2. [TODO]
 
 **Low Priority**:
-1. {{ source.low_priority_1 }}
-2. {{ source.low_priority_2 }}
+1. [TODO]
+2. [TODO]
 
 ### Roadmap
 
-**Q1**: {{ source.q1_roadmap }}
-**Q2**: {{ source.q2_roadmap }}
-**Q3**: {{ source.q3_roadmap }}
-**Q4**: {{ source.q4_roadmap }}
+**Q1**: [TODO]
+**Q2**: [TODO]
+**Q3**: [TODO]
+**Q4**: [TODO]
 
 ### Success Criteria
 
-- {{ source.success_criterion_1 }}
-- {{ source.success_criterion_2 }}
-- {{ source.success_criterion_3 }}
+- [TODO]
+- [TODO]
+- [TODO]
 
 <!-- Note: Maturity assessment should be repeated annually -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

@@ -1,17 +1,28 @@
----
+
 Document-ID: soc1-0010
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # SOC 1 Framework Übersicht
 
+**Dokument-ID:** [FRAMEWORK]-0010
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument bietet einen Überblick über das SOC 1 / SSAE 18 Framework und dessen Anwendung in der Serviceorganisation {{ source.organization_name }}.
+Dieses Dokument bietet einen Überblick über das SOC 1 / SSAE 18 Framework und dessen Anwendung in der Serviceorganisation [TODO].
 
 ## Geltungsbereich
 
@@ -65,18 +76,18 @@ SOC 1 Berichte basieren auf dem COSO Internal Control Framework mit fünf Kompon
 
 ### Organisationsbeschreibung
 
-**Name**: {{ source.organization_name }}
-**Adresse**: {{ source.organization_address }}
-**Kontakt**: {{ source.contact_email }}
+**Name**: [TODO]
+**Adresse**: [TODO]
+**Kontakt**: [TODO]
 
 ### Bereitgestellte Services
 
-{{ source.services_description }}
+[TODO]
 
 ### Berichtszeitraum
 
-**Type II Berichtszeitraum**: {{ source.reporting_period }}
-**Stichtag**: {{ source.report_date }}
+**Type II Berichtszeitraum**: [TODO]
+**Stichtag**: [TODO]
 
 ## Systemgrenzen
 
@@ -84,27 +95,27 @@ SOC 1 Berichte basieren auf dem COSO Internal Control Framework mit fünf Kompon
 
 Die folgenden Systeme und Prozesse sind im Geltungsbereich des SOC 1 Berichts enthalten:
 
-{{ source.in_scope_systems }}
+[TODO]
 
 ### Außerhalb des Geltungsbereichs
 
 Die folgenden Systeme und Prozesse sind nicht im Geltungsbereich:
 
-{{ source.out_of_scope_systems }}
+[TODO]
 
 ### Subservice-Organisationen
 
-{{ source.subservice_organizations }}
+[TODO]
 
 ## Kontrollziele
 
 Die Kontrollziele für diesen SOC 1 Bericht sind:
 
-1. {{ source.control_objective_1 }}
-2. {{ source.control_objective_2 }}
-3. {{ source.control_objective_3 }}
-4. {{ source.control_objective_4 }}
-5. {{ source.control_objective_5 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
+4. [TODO]
+5. [TODO]
 
 ## Komplementäre Nutzerorganisationskontrollen
 
@@ -112,17 +123,17 @@ Bestimmte Kontrollziele können nur erreicht werden, wenn komplementäre Kontrol
 
 ### Erforderliche Nutzerkontrollen
 
-{{ source.complementary_user_controls }}
+[TODO]
 
 ## Änderungen im Berichtszeitraum
 
 ### Wesentliche Änderungen
 
-{{ source.significant_changes }}
+[TODO]
 
 ### Auswirkungen auf Kontrollen
 
-{{ source.control_impacts }}
+[TODO]
 
 ## Verantwortlichkeiten
 
@@ -157,12 +168,3 @@ Nutzerorganisationen sind verantwortlich für:
 
 <!-- Hinweise für Autoren: Passen Sie die Kontrollziele und Systemgrenzen an Ihre spezifische Serviceorganisation an -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

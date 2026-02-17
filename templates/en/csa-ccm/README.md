@@ -61,10 +61,10 @@ The templates are organized using a numerical scheme:
 
 Each template contains placeholders for organization-specific information:
 
-- `{{ source.organization_name }}` - Your organization name
-- `{{ source.author }}` - Document author
-- `{{ meta.version }}` - Version number
-- `{{ meta.date }}` - Date
+- `[TODO]` - Your organization name
+- `[TODO]` - Document author
+- `{{ meta-handbook.revision }}` - Version number
+- `{{ meta-handbook.modifydate }}` - Date
 
 Replace these placeholders with your actual values.
 
@@ -117,11 +117,11 @@ Use the CCM mappings to these standards to identify compliance overlaps.
 
 - **Version**: 1.0
 - **Based on**: CSA CCM v4.0
-- **Last Updated**: {{ meta.date }}
+- **Last Updated**: {{ meta-handbook.modifydate }}
 
 ## License
 
-These templates are intended for internal use within {{ source.organization_name }}.
+These templates are intended for internal use within [TODO].
 
 ## Version History
 

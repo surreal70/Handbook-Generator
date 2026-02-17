@@ -4,7 +4,7 @@
 
 Diese Templates bilden die Grundlage für ein vollständiges IT-Sicherheitshandbuch nach **BSI IT-Grundschutz** (BSI Standards 200-1, 200-2, 200-3) und dem **BSI IT-Grundschutz-Kompendium**.
 
-Das IT-Sicherheitshandbuch der {{ meta.organization.name }} umfasst ca. 40 strukturierte Dokumente, die alle wesentlichen Aspekte eines Informationssicherheits-Managementsystems (ISMS) nach BSI IT-Grundschutz abdecken.
+Das IT-Sicherheitshandbuch der [TODO] umfasst ca. 40 strukturierte Dokumente, die alle wesentlichen Aspekte eines Informationssicherheits-Managementsystems (ISMS) nach BSI IT-Grundschutz abdecken.
 
 ## Template-Struktur
 
@@ -76,12 +76,12 @@ Die Sicherheitsrichtlinien sind in Policy-Richtlinien-Paare organisiert:
 Die Templates verwenden Platzhalter aus der `metadata.yaml` Datei:
 
 ```markdown
-**Organisation:** {{ meta.organization.name }}
+**Organisation:** [TODO]
 **CEO:** {{ meta.ceo.name }} ({{ meta.ceo.email }})
 **CIO:** {{ meta.cio.name }} ({{ meta.cio.email }})
 **CISO/ISB:** {{ meta.ciso.name }} ({{ meta.ciso.email }})
-**Dokumentverantwortlicher:** {{ meta.document.owner }}
-**Standorte:** {{ meta.organization.locations }}
+**Dokumentverantwortlicher:** [TODO]
+**Standorte:** [TODO]
 ```
 
 ### NetBox-Platzhalter (Infrastrukturdaten)
@@ -377,7 +377,7 @@ Bei Fragen oder Problemen:
 
 | Version | Datum | Autor | Änderungen |
 |---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
+| 0.1 | [TODO] | {{ meta.defaults.author }} | Initiale Erstellung |
 
 ## Versionshistorie
 

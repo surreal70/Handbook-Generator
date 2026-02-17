@@ -1,5 +1,19 @@
 # PCI-DSS Framework Mapping
 
+**Dokument-ID:** [FRAMEWORK]-9999
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Übersicht
 
 Dieses Dokument bildet die Zuordnung zwischen den PCI-DSS v4.0 Anforderungen und den entsprechenden Template-Dateien in diesem Template-Set ab. Es dient als Referenz für Compliance-Audits und zur Identifikation von Abdeckungslücken.
@@ -50,7 +64,6 @@ Diese Templates bilden die Grundlage für das gesamte PCI-DSS Compliance-Program
 | 0030 | Rollen_und_Verantwortlichkeiten.md | Req 12 |
 | 0040 | Datenfluss_Diagramme.md | Req 1, Req 3, Req 4 |
 | 0050 | Compliance_Programm.md | Req 12 |
-
 
 ### Requirement 1: Install and Maintain Network Security Controls
 
@@ -108,7 +121,6 @@ Diese Templates bilden die Grundlage für das gesamte PCI-DSS Compliance-Program
 
 **Abdeckung:** Keine  
 **Hinweise:** **IDENTIFIZIERTE LÜCKE** - Templates für Verschlüsselung bei Übertragung fehlen.
-
 
 ### Requirement 5: Protect All Systems and Networks from Malicious Software
 
@@ -183,7 +195,6 @@ Diese Templates bilden die Grundlage für das gesamte PCI-DSS Compliance-Program
 **Abdeckung:** Vollständig  
 **Hinweise:** Template 0420 deckt physische Zugangskontrollen, Besuchermanagement und Mediensicherheit ab.
 
-
 ### Requirement 10: Log and Monitor All Access to System Components and Cardholder Data
 
 **Ziel:** Alle Zugriffe auf Systemkomponenten und Karteninhaberdaten loggen und überwachen.
@@ -252,7 +263,6 @@ Diese Templates bilden die Grundlage für das gesamte PCI-DSS Compliance-Program
 | 12 | Information Security Policy | 0600, 0050 |
 
 **Abdeckungsrate:** 7 von 12 Anforderungen (58%)
-
 
 ### Identifizierte Abdeckungslücken
 
@@ -356,20 +366,5 @@ Die folgenden Appendix-Templates sind vorhanden:
 |---------|-------|-------|------------|
 | 1.0 | 2026-02-06 | Compliance Team | Initiale Erstellung des Framework-Mappings |
 
----
-
 **Hinweis:** Dieses Mapping-Dokument sollte bei jeder Änderung der Templates oder bei Veröffentlichung neuer PCI-DSS-Versionen aktualisiert werden.
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
-
-## Versionshistorie
-
-| Version | Datum | Änderungen |
-|---------|-------|------------|
-| 0.1 | {{meta.document.last_updated}} | Initiale Erstellung |

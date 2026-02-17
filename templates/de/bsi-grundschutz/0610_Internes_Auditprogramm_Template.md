@@ -1,14 +1,16 @@
 # Internes Auditprogramm (Template)
 
-**Dokument-ID:** 0610  
-**Dokumenttyp:** Programm/Template  
-**Referenzrahmen:** BSI IT-Grundschutz (BSI Standards 200-1/200-2)  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** {{ meta.document.status }}  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0610
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -20,7 +22,7 @@ Reference: BSI Standard 200-1 (Internal Audits), DER.3.1
 
 ## 1. Zweck und Zielsetzung
 
-Das interne Auditprogramm von **{{ meta.organization.name }}** stellt die Wirksamkeit des ISMS sicher.
+Das interne Auditprogramm von **{{ meta-organisation.name }}** stellt die Wirksamkeit des ISMS sicher.
 
 **Verantwortlich:** [TODO: Internal Audit]
 
@@ -36,10 +38,10 @@ Das interne Auditprogramm von **{{ meta.organization.name }}** stellt die Wirksa
 
 | Zeitraum | Audit-Thema | Kriterien | Auditor | Auditee | Status | Ergebnis | Maßnahmen |
 |---|---|---|---|---|---|---|---|
-| Q1 {{ meta.document.year }} | Basis-Sicherheitscheck Stichprobe | Policies, Richtlinien, Evidence | [TODO] | {{ meta.cio.name }} | Geplant | - | - |
-| Q2 {{ meta.document.year }} | Risikomanagement-Prozess | Dokument 0090, Risikoregister | [TODO] | {{ meta.ciso.name }} | Geplant | - | - |
-| Q3 {{ meta.document.year }} | Incident Management | Dokument 0320/0330, Incident-Logs | [TODO] | {{ meta.cio.name }} | Geplant | - | - |
-| Q4 {{ meta.document.year }} | Dokumentenlenkung | Dokument 0030, Dokumentenregister | [TODO] | {{ meta.ciso.name }} | Geplant | - | - |
+| Q1 [TODO] | Basis-Sicherheitscheck Stichprobe | Policies, Richtlinien, Evidence | [TODO] | {{ meta.cio.name }} | Geplant | - | - |
+| Q2 [TODO] | Risikomanagement-Prozess | Dokument 0090, Risikoregister | [TODO] | {{ meta.ciso.name }} | Geplant | - | - |
+| Q3 [TODO] | Incident Management | Dokument 0320/0330, Incident-Logs | [TODO] | {{ meta.cio.name }} | Geplant | - | - |
+| Q4 [TODO] | Dokumentenlenkung | Dokument 0030, Dokumentenregister | [TODO] | {{ meta.ciso.name }} | Geplant | - | - |
 
 ## 4. Audit-Checkpunkte
 
@@ -82,21 +84,11 @@ Das interne Auditprogramm von **{{ meta.organization.name }}** stellt die Wirksa
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| Internal Audit | [TODO] | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| ISB | {{ meta.ciso.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| Internal Audit | [TODO] | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **Referenzen:**
 - BSI Standard 200-1: ISMS
 - BSI IT-Grundschutz-Kompendium: DER.3.1 Audits und Revisionen
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 <!-- End of template -->

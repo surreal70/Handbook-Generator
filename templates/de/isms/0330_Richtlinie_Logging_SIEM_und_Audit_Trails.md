@@ -1,14 +1,16 @@
 # Richtlinie: Logging, SIEM und Audit Trails
 
-**Dokument-ID:** 0330  
-**Dokumenttyp:** Richtlinie (detailliert)  
-**Zugehörige Policy:** 0320_Policy_Logging_und_Monitoring.md  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.8.15, A.8.16  
-**Owner:** {{ meta.it_operations.manager }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.document.date }}
+**Dokument-ID:** 0330
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -19,7 +21,7 @@ Diese Richtlinie konkretisiert die `0320_Policy_Logging_und_Monitoring.md` und d
 - SIEM-Integration und Use Cases
 - Audit-Trail-Anforderungen und Retention
 
-**Geltungsbereich:** Alle IT-Systeme bei **{{ meta.organization.name }}**
+**Geltungsbereich:** Alle IT-Systeme bei **{{ meta-organisation.name }}**
 
 ## 2. Logging-Anforderungen
 
@@ -331,15 +333,6 @@ Diese Richtlinie konkretisiert die `0320_Policy_Logging_und_Monitoring.md` und d
 - **ISO/IEC 27001:2022 Annex A.8.16** - Monitoring activities
 - **NIST SP 800-92** - Guide to Computer Security Log Management
 
----
-
 **Genehmigt durch:** {{ meta.ciso.name }}, CISO  
-**Nächster Review:** {{ meta.document.next_review }}
+**Nächster Review:** {{ meta-handbook.next_review }}
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

@@ -1,11 +1,16 @@
 # Entwicklung von Produkten und Dienstleistungen
 
-**Dokument-ID:** 0420  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0420
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -18,13 +23,13 @@ Referenz: ISO 9001:2015, Kapitel 8.3
 
 ## Zweck
 
-Dieses Dokument definiert, wie {{ meta.organization }} Produkte und Dienstleistungen entwickelt, um sicherzustellen, dass sie die Anforderungen erfüllen.
+Dieses Dokument definiert, wie {{ meta-organisation.name }} Produkte und Dienstleistungen entwickelt, um sicherzustellen, dass sie die Anforderungen erfüllen.
 
 ## Entwicklungsplanung (8.3.2)
 
 ### Entwicklungsprozess
 
-**{{ meta.organization }} plant und steuert die Entwicklung durch:**
+**{{ meta-organisation.name }} plant und steuert die Entwicklung durch:**
 - Festlegung von Entwicklungsstufen
 - Bestimmung erforderlicher Überprüfungen und Validierungen
 - Definition von Verantwortlichkeiten und Befugnissen
@@ -52,7 +57,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} Produkte und Dienstleistu
 
 ### Eingabeanforderungen
 
-**{{ meta.organization }} bestimmt Anforderungen, die für spezifische Arten von Produkten und Dienstleistungen wesentlich sind:**
+**{{ meta-organisation.name }} bestimmt Anforderungen, die für spezifische Arten von Produkten und Dienstleistungen wesentlich sind:**
 - Funktionale und Leistungsanforderungen
 - Informationen aus früheren ähnlichen Entwicklungen
 - Gesetzliche und behördliche Anforderungen
@@ -78,7 +83,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} Produkte und Dienstleistu
 
 ### Steuerungsmaßnahmen
 
-**{{ meta.organization }} wendet Steuerungsmaßnahmen an, um sicherzustellen:**
+**{{ meta-organisation.name }} wendet Steuerungsmaßnahmen an, um sicherzustellen:**
 - Zu erreichende Ergebnisse sind definiert
 - Überprüfungen werden durchgeführt
 - Validierungen werden durchgeführt
@@ -108,7 +113,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} Produkte und Dienstleistu
 
 ### Ergebnisanforderungen
 
-**{{ meta.organization }} stellt sicher, dass Entwicklungsergebnisse:**
+**{{ meta-organisation.name }} stellt sicher, dass Entwicklungsergebnisse:**
 - Eingabeanforderungen erfüllen
 - Für nachfolgende Prozesse angemessen sind
 - Überwachungs- und Messanforderungen enthalten
@@ -129,7 +134,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} Produkte und Dienstleistu
 
 ### Änderungsmanagement
 
-**{{ meta.organization }} identifiziert, überprüft und steuert Änderungen während oder nach der Entwicklung:**
+**{{ meta-organisation.name }} identifiziert, überprüft und steuert Änderungen während oder nach der Entwicklung:**
 - Änderungen werden dokumentiert
 - Auswirkungen werden bewertet
 - Änderungen werden überprüft und genehmigt
@@ -221,8 +226,6 @@ Dieses Dokument definiert, wie {{ meta.organization }} Produkte und Dienstleistu
 - Durchführung von Audits
 - Überprüfung der Dokumentation
 
----
-
 **Nächste Schritte:**
 1. Etabliere Entwicklungsprozess
 2. Definiere Entwicklungsphasen und Gates
@@ -231,10 +234,3 @@ Dieses Dokument definiert, wie {{ meta.organization }} Produkte und Dienstleistu
 5. Schule Entwicklungsteam
 6. Überwache Entwicklungsprojekte
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

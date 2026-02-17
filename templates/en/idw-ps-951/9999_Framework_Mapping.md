@@ -1,5 +1,19 @@
 # IDW PS 951 Framework Mapping
 
+**Document-ID:** [FRAMEWORK]-9999
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Overview
 
 This document maps the templates to the specific requirements of IDW Auditing Standard 951. It ensures that all relevant audit areas are covered and enables traceability of audit procedures.
@@ -214,14 +228,7 @@ The templates additionally cover:
 - IT Service Management (ITIL)
 - Information Security (ISO 27001)
 
----
-
 **Mapping Version:** 1.0  
 **Last Update:** 2026-02-10  
 **IDW PS 951 Reference:** Institut der Wirtschaftsprüfer in Deutschland e.V.
 
-## Version History
-
-| Version | Date | Changes |
-|---------|------|---------|
-| 0.1 | {{meta.document.last_updated}} | Initial creation |

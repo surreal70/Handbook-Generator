@@ -1,13 +1,16 @@
 # BIA – Results and Target Values (RTO/RPO)
 
-**Document ID:** BCM-0080  
-**Organization:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Approved by:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** Confidential  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0080
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -152,10 +155,10 @@ The following processes have been identified as business-critical (RTO < 24 hour
 
 | Measure | Description | Owner | Priority | Due | Status | Cost (estimated) |
 |---------|-------------|-------|----------|-----|--------|------------------|
-| ERP Redundancy | Implementation of high-availability cluster | {{ meta.roles.cio.name }} | High | Q2 2026 | In Progress | 150,000 € |
+| ERP Redundancy | Implementation of high-availability cluster | {{ meta-organisation-roles.role_CIO }} | High | Q2 2026 | In Progress | 150,000 € |
 | Backup Personnel | Training of backups for key persons | HR | High | Q1 2026 | Open | 20,000 € |
 | Supplier BCM | Request BCM evidence from critical suppliers | Procurement | Medium | Q2 2026 | Open | 5,000 € |
-| Network Redundancy | Second internet connection | {{ meta.roles.it_operations_manager.name }} | High | Q1 2026 | In Progress | 30,000 € |
+| Network Redundancy | Second internet connection | {{ meta-organisation-roles.role_IT_Manager }} | High | Q1 2026 | In Progress | 30,000 € |
 
 ### 5.2 Prioritization of Measures
 
@@ -230,16 +233,8 @@ In case of comprehensive failure, recovery occurs in the following order:
 
 | Role | Name | Date | Signature |
 |------|------|------|-----------|
-| CEO | {{ meta.roles.ceo.name }} | [TODO: Date] | [TODO] |
-| CIO | {{ meta.roles.cio.name }} | [TODO: Date] | [TODO] |
+| CEO | {{ meta-organisation-roles.role_CEO }} | [TODO: Date] | [TODO] |
+| CIO | {{ meta-organisation-roles.role_CIO }} | [TODO: Date] | [TODO] |
 | BCM Manager | [TODO: Name] | [TODO: Date] | [TODO] |
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 <!-- End of template -->

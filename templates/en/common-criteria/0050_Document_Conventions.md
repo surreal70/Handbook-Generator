@@ -1,11 +1,16 @@
 # Document Conventions
 
-**Document-ID:** 0050  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0050
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -186,18 +191,9 @@ The following documents are referenced normatively in this ST:
 - All tables and figures must be numbered sequentially
 - All requirements must be uniquely identified
 
----
-
 **Next Steps:**
 1. Complete all [TODO] placeholders
 2. Verify consistency of terminology usage
 3. Ensure all abbreviations are defined
 4. Check that all references are complete
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

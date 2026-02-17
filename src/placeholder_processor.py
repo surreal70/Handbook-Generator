@@ -82,12 +82,14 @@ class ProcessingResult:
         warnings: List of warning messages
         errors: List of error messages
         comments_removed: Number of HTML comments removed
+        todo_warnings: List of TODO value warnings (tracked separately)
     """
     content: str
     replacements: list[Replacement] = field(default_factory=list)
     warnings: list[str] = field(default_factory=list)
     errors: list[str] = field(default_factory=list)
     comments_removed: int = 0
+    todo_warnings: list[str] = field(default_factory=list)
     
     def get_replacement_count_by_source(self, source: str) -> int:
         """
@@ -128,36 +130,42 @@ class PlaceholderProcessor:
     Processes templates to detect and replace placeholders.
     
     Placeholders follow the format: {{ source.field }}
-    where source is the data source name (e.g., "netbox", "meta", "meta-netbox")
+    where source is the data source name (e.g., "netbox", "meta-global", "meta-organisation")
     and field is the field path (e.g., "device_name" or "device.name")
     
     Supported sources:
     - netbox: NetBox data source for infrastructure data
-    - meta: Meta data source for organization-wide metadata
+    - meta: Meta data source for organization-wide metadata (legacy)
+    - meta-global: Global metadata (Handbook Generator version and source)
+    - meta-organisation: Organization-specific metadata
+    - meta-organisation-roles: Personnel roles and contact information
+    - meta-handbook: Individual handbook metadata
     - meta-netbox: NetBox metadata loaded from metadata-netbox.yaml
     - metadata: Legacy metadata source (date, author, version)
     """
     
     # Regex pattern for placeholder detection
     # Matches: {{ source.field }} where field can have dots for nested paths
-    # Supports any source name (netbox, meta, metadata, meta-netbox, etc.)
-    # Source names can contain alphanumeric characters and hyphens
+    # Supports any source name (netbox, meta, metadata, meta-global, meta-organisation, etc.)
+    # Source names can contain alphanumeric characters, hyphens, and underscores
     # Must have at least one character for source and field
     PLACEHOLDER_PATTERN = re.compile(r'\{\{\s*([\w-]+)\.(\w+(?:\.\w+)*)\s*\}\}')
     
     # Pattern to detect incomplete/malformed placeholders
     INCOMPLETE_PLACEHOLDER_PATTERN = re.compile(r'\{\{(?!\s*[\w-]+\.[\w.]+\s*\}\})')
     
-    def __init__(self, data_sources: Optional[dict] = None, metadata: Optional[dict] = None):
+    def __init__(self, data_sources: Optional[dict] = None, metadata: Optional[dict] = None, unified_metadata: Optional['UnifiedMetadata'] = None):
         """
         Initialize placeholder processor.
         
         Args:
-            data_sources: Dictionary of data source adapters (source_name -> adapter)
-            metadata: Dictionary of metadata values (author, version, date)
+            data_sources: Dictionary of data source adapters (source_name -> adapter) - legacy support
+            metadata: Dictionary of metadata values (author, version, date) - legacy support
+            unified_metadata: UnifiedMetadata object for new configuration structure
         """
         self.data_sources = data_sources or {}
         self.metadata = metadata or {}
+        self.unified_metadata = unified_metadata
     
     def find_placeholders(self, content: str) -> list[Placeholder]:
         """
@@ -248,13 +256,17 @@ class PlaceholderProcessor:
         
         return None
     
-    def replace_placeholder(self, placeholder: Placeholder) -> tuple[Optional[str], Optional[str]]:
+    def replace_placeholder(self, placeholder: Placeholder) -> tuple[Optional[str], Optional[str], Optional[str]]:
         """
         Replace a single placeholder with data from its source.
         
         Routes placeholders to appropriate data source adapters:
         - "metadata" source: Legacy metadata (date, author, version)
-        - "meta" source: Organization-wide metadata from metadata.yaml
+        - "meta" source: Organization-wide metadata from metadata.yaml (legacy)
+        - "meta-global" source: Global metadata (Handbook Generator version and source)
+        - "meta-organisation" source: Organization-specific metadata
+        - "meta-organisation-roles" source: Personnel roles and contact information
+        - "meta-handbook" source: Individual handbook metadata
         - "netbox" source: NetBox infrastructure data
         - Other sources: Custom data source adapters
         
@@ -262,10 +274,66 @@ class PlaceholderProcessor:
             placeholder: The placeholder to replace
             
         Returns:
-            Tuple of (replacement_value, warning_message)
+            Tuple of (replacement_value, warning_message, todo_warning)
             - replacement_value: The value to replace the placeholder with, or None if not found
             - warning_message: Warning message if replacement failed, or None if successful
+            - todo_warning: Warning message if value is "[TODO]", or None otherwise
         """
+        # Handle new unified metadata placeholders (meta-global, meta-organisation, meta-organisation-roles, meta-handbook)
+        if placeholder.source in ('meta-global', 'meta-organisation', 'meta-organisation-roles', 'meta-handbook'):
+            if self.unified_metadata is None:
+                context = ErrorContext(
+                    line_number=placeholder.line_number,
+                    placeholder=placeholder.raw,
+                    additional_info=f"Unified metadata placeholders require UnifiedMetadata configuration"
+                )
+                warning = ErrorHandler.placeholder_error(
+                    context,
+                    "unknown_data_source",
+                    f"Configure unified metadata to use {placeholder.source} placeholders"
+                )
+                return None, warning, None
+            
+            # Build full field path for UnifiedMetadata.get_field()
+            full_field_path = f"{placeholder.source}.{placeholder.field}"
+            
+            try:
+                value = self.unified_metadata.get_field(full_field_path)
+                
+                if value is None:
+                    context = ErrorContext(
+                        line_number=placeholder.line_number,
+                        placeholder=placeholder.raw,
+                        additional_info=f"Field: {full_field_path}"
+                    )
+                    warning = ErrorHandler.placeholder_error(
+                        context,
+                        "field_not_found"
+                    )
+                    return None, warning, None
+                
+                # Check if value is [TODO]
+                value_str = str(value)
+                todo_warning = None
+                if value_str == "[TODO]":
+                    todo_warning = (
+                        f"Line {placeholder.line_number}: Placeholder '{placeholder.raw}' "
+                        f"has TODO value. Field '{full_field_path}' needs to be configured."
+                    )
+                
+                return value_str, None, todo_warning
+            except Exception as e:
+                context = ErrorContext(
+                    line_number=placeholder.line_number,
+                    placeholder=placeholder.raw,
+                    additional_info=str(e)
+                )
+                warning = ErrorHandler.placeholder_error(
+                    context,
+                    "adapter_error"
+                )
+                return None, warning, None
+        
         # Handle legacy metadata placeholders (date, author, version)
         if placeholder.source == 'metadata':
             return self._replace_metadata_placeholder(placeholder)
@@ -284,7 +352,7 @@ class PlaceholderProcessor:
                     "unknown_data_source",
                     "Configure 'meta' data source to use handbook placeholders"
                 )
-                return None, warning
+                return None, warning, None
             
             # Route to meta adapter with full field path
             adapter = self.data_sources['meta']
@@ -302,9 +370,9 @@ class PlaceholderProcessor:
                         context,
                         "field_not_found"
                     )
-                    return None, warning
+                    return None, warning, None
                 
-                return str(value), None
+                return str(value), None, None
             except Exception as e:
                 context = ErrorContext(
                     line_number=placeholder.line_number,
@@ -315,7 +383,7 @@ class PlaceholderProcessor:
                     context,
                     "adapter_error"
                 )
-                return None, warning
+                return None, warning, None
         
         # Check if data source is available (handles both "meta" and "netbox" sources)
         if placeholder.source not in self.data_sources:
@@ -330,7 +398,7 @@ class PlaceholderProcessor:
                 "unknown_data_source",
                 f"Check your configuration file and ensure '{placeholder.source}' is configured"
             )
-            return None, warning
+            return None, warning, None
         
         # Get data from source adapter (unified handling for all sources)
         adapter = self.data_sources[placeholder.source]
@@ -347,9 +415,9 @@ class PlaceholderProcessor:
                     context,
                     "field_not_found"
                 )
-                return None, warning
+                return None, warning, None
             
-            return str(value), None
+            return str(value), None, None
             
         except Exception as e:
             context = ErrorContext(
@@ -362,9 +430,9 @@ class PlaceholderProcessor:
                 "data_retrieval_error",
                 "Check the field name and data source connection"
             )
-            return None, warning
+            return None, warning, None
     
-    def _replace_metadata_placeholder(self, placeholder: Placeholder) -> tuple[Optional[str], Optional[str]]:
+    def _replace_metadata_placeholder(self, placeholder: Placeholder) -> tuple[Optional[str], Optional[str], Optional[str]]:
         """
         Replace a metadata placeholder with appropriate value.
         
@@ -377,26 +445,26 @@ class PlaceholderProcessor:
             placeholder: The metadata placeholder to replace
             
         Returns:
-            Tuple of (replacement_value, warning_message)
+            Tuple of (replacement_value, warning_message, todo_warning)
         """
         field = placeholder.field
         
         # Handle date field - always use current date in ISO format
         if field == 'date':
             current_date = datetime.now().strftime('%Y-%m-%d')
-            return current_date, None
+            return current_date, None, None
         
         # Handle author field
         if field == 'author':
             author = self.metadata.get('author', 'Andreas Huemmer [andreas.huemmer@adminsend.de]')
-            return author, None
+            return author, None, None
         
         # Handle version field with fallback
         if field == 'version':
             # Import version from package
             from . import __version__
             version = self.metadata.get('version', __version__)
-            return version, None
+            return version, None, None
         
         # Unknown metadata field
         warning = (
@@ -404,7 +472,7 @@ class PlaceholderProcessor:
             f"in placeholder '{placeholder.raw}'. Available metadata fields: "
             f"date, author, version"
         )
-        return None, warning
+        return None, warning, None
     
     def process_template(self, template_content: str, template_name: str = "") -> ProcessingResult:
         """
@@ -506,7 +574,7 @@ class PlaceholderProcessor:
                 result.warnings.append(validation_warning)
             
             # Attempt replacement
-            replacement_value, warning = self.replace_placeholder(placeholder)
+            replacement_value, warning, todo_warning = self.replace_placeholder(placeholder)
             
             if replacement_value is not None:
                 # Replace placeholder in the line
@@ -519,6 +587,12 @@ class PlaceholderProcessor:
                     source=placeholder.source,
                     line_number=placeholder.line_number
                 ))
+                
+                # Add TODO warning to separate list if present
+                if todo_warning:
+                    if template_name:
+                        todo_warning = f"{template_name}: {todo_warning}"
+                    result.todo_warnings.append(todo_warning)
             elif warning:
                 if template_name:
                     warning = f"{template_name}: {warning}"

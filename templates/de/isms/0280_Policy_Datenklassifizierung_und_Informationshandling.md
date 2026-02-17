@@ -1,5 +1,19 @@
 # Policy: Datenklassifizierung und Informationshandling
 
+**Dokument-ID:** 0280
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This policy establishes the principles for data classification and information handling.
@@ -10,27 +24,15 @@ data classification scheme and regulatory requirements (GDPR, industry-specific)
 ISO 27001:2022 Annex A Reference: A.5.12, A.5.13, A.5.14
 -->
 
-**Dokument-ID:** 0280  
-**Dokumenttyp:** Policy (abstrakt)  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.5.12-A.5.14 (inkl. Amendment 1:2024)  
-**Owner:** {{ meta.ciso.name }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
-
----
-
 ## 1. Zweck
 
-Diese Policy definiert die Grundsätze für Datenklassifizierung und Informationshandling der **{{ meta.organization.name }}**. Sie stellt sicher, dass Informationen entsprechend ihrer Sensitivität und ihres Schutzbedarfs klassifiziert, gekennzeichnet und über ihren gesamten Lebenszyklus angemessen geschützt werden.
+Diese Policy definiert die Grundsätze für Datenklassifizierung und Informationshandling der **{{ meta-organisation.name }}**. Sie stellt sicher, dass Informationen entsprechend ihrer Sensitivität und ihres Schutzbedarfs klassifiziert, gekennzeichnet und über ihren gesamten Lebenszyklus angemessen geschützt werden.
 
 ## 2. Geltungsbereich
 
 Diese Policy gilt für:
 
-- **Organisationseinheiten:** Alle Abteilungen und Standorte der {{ meta.organization.name }}
+- **Organisationseinheiten:** Alle Abteilungen und Standorte der {{ meta-organisation.name }}
 - **Informationen:** Alle Informationen in jeglicher Form (digital, physisch, mündlich)
 - **Systeme:** Alle IT-Systeme, Anwendungen, Datenbanken, Speichermedien
 - **Personen:** Alle Mitarbeiter, Auftragnehmer, Lieferanten und Dritte mit Zugang zu Informationen
@@ -187,18 +189,9 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **DSGVO (EU 2016/679)** - Datenschutz-Grundverordnung
 - **BSI IT-Grundschutz** - Baustein CON.6 Löschen und Vernichten
 
----
-
 **Genehmigt durch:**  
 {{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+Datum: {{ meta-handbook.modifydate }}
 
-**Nächster Review:** {{ meta.document.next_review }} (jährlich oder anlassbezogen)
+**Nächster Review:** {{ meta-handbook.next_review }} (jährlich oder anlassbezogen)
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

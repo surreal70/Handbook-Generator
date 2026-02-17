@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0020
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Software Delivery Performance
+
+**Dokument-ID:** [FRAMEWORK]-0020
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -28,9 +39,9 @@ Software Delivery Performance misst die Fähigkeit einer Organisation, Software 
 
 ### Organisationskontext
 
-- **Organisation**: {{ source.organization_name }}
-- **Delivery-Teams**: {{ source.delivery_teams }}
-- **Technologie-Stack**: {{ source.technology_stack }}
+- **Organisation**: [TODO]
+- **Delivery-Teams**: [TODO]
+- **Technologie-Stack**: [TODO]
 
 ## Messdimensionen
 
@@ -41,8 +52,8 @@ Gemessen durch:
 - Lead Time for Changes
 
 **Aktuelle Performance**:
-- Deployment Frequency: {{ source.current_deployment_frequency }}
-- Lead Time: {{ source.current_lead_time }}
+- Deployment Frequency: [TODO]
+- Lead Time: [TODO]
 
 ### Stabilität (Stability)
 
@@ -51,8 +62,8 @@ Gemessen durch:
 - Change Failure Rate
 
 **Aktuelle Performance**:
-- MTTR: {{ source.current_mttr }}
-- Change Failure Rate: {{ source.current_change_failure_rate }}
+- MTTR: [TODO]
+- Change Failure Rate: [TODO]
 
 ## Messmethoden
 
@@ -65,28 +76,28 @@ Gemessen durch:
 
 ### Datenquellen
 
-- **CI/CD-System**: {{ source.cicd_system }}
-- **Monitoring**: {{ source.monitoring_system }}
-- **Incident-Management**: {{ source.incident_system }}
-- **Version Control**: {{ source.version_control_system }}
+- **CI/CD-System**: [TODO]
+- **Monitoring**: [TODO]
+- **Incident-Management**: [TODO]
+- **Version Control**: [TODO]
 
 ## Performance-Bewertung
 
 ### Aktuelle Kategorie
 
-**Gesamtbewertung**: {{ source.dora_performance_category }}
+**Gesamtbewertung**: [TODO]
 
 ### Stärken
 
-- {{ source.dora_strength_1 }}
-- {{ source.dora_strength_2 }}
-- {{ source.dora_strength_3 }}
+- [TODO]
+- [TODO]
+- [TODO]
 
 ### Verbesserungsbereiche
 
-- {{ source.dora_improvement_area_1 }}
-- {{ source.dora_improvement_area_2 }}
-- {{ source.dora_improvement_area_3 }}
+- [TODO]
+- [TODO]
+- [TODO]
 
 ## Benchmarking
 
@@ -96,47 +107,38 @@ Vergleich der eigenen Performance mit Industrie-Benchmarks:
 
 | Metrik | Organisation | Industrie-Durchschnitt | Elite-Performer |
 |--------|--------------|------------------------|-----------------|
-| Deployment Frequency | {{ source.org_deployment_freq }} | {{ source.industry_deployment_freq }} | On-demand |
-| Lead Time | {{ source.org_lead_time }} | {{ source.industry_lead_time }} | < 1 Stunde |
-| MTTR | {{ source.org_mttr }} | {{ source.industry_mttr }} | < 1 Stunde |
-| Change Failure Rate | {{ source.org_cfr }} | {{ source.industry_cfr }} | 0-15% |
+| Deployment Frequency | [TODO] | [TODO] | On-demand |
+| Lead Time | [TODO] | [TODO] | < 1 Stunde |
+| MTTR | [TODO] | [TODO] | < 1 Stunde |
+| Change Failure Rate | [TODO] | [TODO] | 0-15% |
 
 ### Trend-Analyse
 
 Entwicklung der Metriken über Zeit:
-- Quartal 1: {{ source.q1_performance }}
-- Quartal 2: {{ source.q2_performance }}
-- Quartal 3: {{ source.q3_performance }}
-- Quartal 4: {{ source.q4_performance }}
+- Quartal 1: [TODO]
+- Quartal 2: [TODO]
+- Quartal 3: [TODO]
+- Quartal 4: [TODO]
 
 ## Verbesserungsziele
 
 ### Kurzfristige Ziele (3 Monate)
 
-1. {{ source.short_term_goal_1 }}
-2. {{ source.short_term_goal_2 }}
-3. {{ source.short_term_goal_3 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
 
 ### Mittelfristige Ziele (6-12 Monate)
 
-1. {{ source.medium_term_goal_1 }}
-2. {{ source.medium_term_goal_2 }}
-3. {{ source.medium_term_goal_3 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
 
 ### Langfristige Ziele (12+ Monate)
 
-1. {{ source.long_term_goal_1 }}
-2. {{ source.long_term_goal_2 }}
-3. {{ source.long_term_goal_3 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
 
 <!-- Hinweis: Regelmäßige Aktualisierung der Performance-Daten empfohlen -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

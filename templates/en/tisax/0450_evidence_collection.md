@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0450
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Evidence Collection
+
+**Document-ID:** [FRAMEWORK]-0450
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -15,7 +26,7 @@ This document describes procedures for evidence collection during security incid
 
 ## Scope
 
-This document applies to all security incidents at {{ source.organization_name }}.
+This document applies to all security incidents at [TODO].
 
 ## Evidence Collection Process
 
@@ -53,8 +64,8 @@ This document applies to all security incidents at {{ source.organization_name }
 
 ### Approved Tools
 **Software:**
-- {{ source.forensic_tool_1 }}
-- {{ source.forensic_tool_2 }}
+- [TODO]
+- [TODO]
 - Open-source tools (validated)
 
 **Hardware:**
@@ -88,17 +99,9 @@ This document applies to all security incidents at {{ source.organization_name }
 
 ## Metrics
 
-{{ source.organization_name }} measures:
+[TODO] measures:
 - Number of evidence collections
 - Completeness of documentation
 - Success rate in legal proceedings
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

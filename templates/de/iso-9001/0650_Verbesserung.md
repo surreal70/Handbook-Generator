@@ -1,11 +1,16 @@
 # Verbesserung
 
-**Dokument-ID:** 0650  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0650
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -18,13 +23,13 @@ Referenz: ISO 9001:2015, Kapitel 10.1
 
 ## Zweck
 
-Dieses Dokument definiert, wie {{ meta.organization }} kontinuierliche Verbesserung implementiert, um Kundenzufriedenheit zu erhöhen und die Leistung des QMS zu verbessern.
+Dieses Dokument definiert, wie {{ meta-organisation.name }} kontinuierliche Verbesserung implementiert, um Kundenzufriedenheit zu erhöhen und die Leistung des QMS zu verbessern.
 
 ## Allgemeine Anforderungen (10.1)
 
 ### Verbesserungsverpflichtung
 
-**{{ meta.organization }} verbessert kontinuierlich:**
+**{{ meta-organisation.name }} verbessert kontinuierlich:**
 - Eignung, Angemessenheit und Wirksamkeit des QMS
 - Produkte und Dienstleistungen
 - Prozesse
@@ -69,7 +74,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} kontinuierliche Verbesser
 
 ### Verbesserungswerkzeuge
 
-**{{ meta.organization }} verwendet:**
+**{{ meta-organisation.name }} verwendet:**
 - PDCA-Zyklus (Plan-Do-Check-Act)
 - Six Sigma / DMAIC
 - Lean Management
@@ -180,7 +185,7 @@ Dieses Dokument definiert, wie {{ meta.organization }} kontinuierliche Verbesser
 
 ### Kulturentwicklung
 
-**{{ meta.organization }} fördert Verbesserungskultur durch:**
+**{{ meta-organisation.name }} fördert Verbesserungskultur durch:**
 - Vorbildfunktion der Führung
 - Offene Kommunikation
 - Fehlertoleranz und Lernkultur
@@ -276,8 +281,6 @@ Dieses Dokument definiert, wie {{ meta.organization }} kontinuierliche Verbesser
 - Teilnahme an Verbesserungsprojekten
 - Umsetzung von Verbesserungen
 
----
-
 **Nächste Schritte:**
 1. Etabliere Verbesserungskultur
 2. Implementiere Vorschlagswesen
@@ -286,10 +289,3 @@ Dieses Dokument definiert, wie {{ meta.organization }} kontinuierliche Verbesser
 5. Schule Mitarbeiter in Verbesserungsmethoden
 6. Messe und kommuniziere Erfolge
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

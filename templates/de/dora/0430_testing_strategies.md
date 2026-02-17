@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0430
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Testing-Strategien
+
+**Dokument-ID:** [FRAMEWORK]-0430
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -22,9 +33,9 @@ Umfassende Testing-Strategien zur Reduzierung der Change Failure Rate.
 
 ## Organisationsinformationen
 
-- **Organisation**: {{ source.organization_name }}
-- **Test-Verantwortlicher**: {{ source.testing_owner }}
-- **Aktuelle Test-Coverage**: {{ source.current_test_coverage }}
+- **Organisation**: [TODO]
+- **Test-Verantwortlicher**: [TODO]
+- **Aktuelle Test-Coverage**: [TODO]
 
 ## Test-Pyramide
 
@@ -235,10 +246,3 @@ def test_addition_commutative(a, b):
 
 <!-- Hinweis: Umfassende Tests sind Grundlage für niedrige CFR -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |

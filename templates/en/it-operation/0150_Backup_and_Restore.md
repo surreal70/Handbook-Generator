@@ -1,12 +1,26 @@
 # Backup and Restore
 
+**Document-ID:** [FRAMEWORK]-0150
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose and Scope
 
-This document describes the backup and restore strategies for {{ meta.organization.name }}. It defines backup methods, schedules, retention periods, RPO/RTO objectives, and restore procedures to ensure data integrity and availability.
+This document describes the backup and restore strategies for {{ meta-organisation.name }}. It defines backup methods, schedules, retention periods, RPO/RTO objectives, and restore procedures to ensure data integrity and availability.
 
-**Scope:** All IT systems, databases, applications, and data of {{ meta.organization.name }}
+**Scope:** All IT systems, databases, applications, and data of {{ meta-organisation.name }}
 
-**Responsible:** {{ meta.it_operations_manager.name }} ({{ meta.it_operations_manager.email }})
+**Responsible:** {{ meta-organisation-roles.role_it_operations_manager.name }} ({{ meta-organisation-roles.role_it_operations_manager.email }})
 
 ## Backup Fundamentals
 
@@ -126,7 +140,7 @@ This document describes the backup and restore strategies for {{ meta.organizati
 **Example:**
 1. Production data on {{ netbox.storage.primary }}
 2. Backup on {{ netbox.storage.backup_disk }}
-3. Offsite backup in {{ meta.backup_cloud_provider }}
+3. Offsite backup in {{ meta-handbook.backup_cloud_provider }}
 
 #### Backup Tiers
 
@@ -244,7 +258,7 @@ This document describes the backup and restore strategies for {{ meta.organizati
 ### 1. Backup Scheduling
 
 **Automation:**
-- Backup jobs configured in {{ meta.backup_system }}
+- Backup jobs configured in {{ meta-handbook.backup_system }}
 - Time-controlled execution
 - Dependencies between jobs
 - Retry mechanisms on errors
@@ -271,7 +285,7 @@ This document describes the backup and restore strategies for {{ meta.organizati
 - Transfer data to backup target
 - Store metadata
 
-**Monitoring:** Real-time monitoring in {{ meta.monitoring_system }}
+**Monitoring:** Real-time monitoring in {{ meta-handbook.monitoring_system }}
 
 ### 4. Backup Verification
 
@@ -292,12 +306,12 @@ This document describes the backup and restore strategies for {{ meta.organizati
 - Failed backups
 - Trend analyses
 
-**Recipients:** {{ meta.it_operations_manager.email }}
+**Recipients:** {{ meta-organisation-roles.role_it_operations_manager.email }}
 
 ### 6. Offsite Replication
 
 **Replication Methods:**
-- **Cloud Sync:** Automatic replication to {{ meta.backup_cloud_provider }}
+- **Cloud Sync:** Automatic replication to {{ meta-handbook.backup_cloud_provider }}
 - **Tape Rotation:** Weekly tape offsite storage
 - **Remote Site:** Replication to {{ netbox.site.dr_location }}
 
@@ -356,7 +370,7 @@ This document describes the backup and restore strategies for {{ meta.organizati
 - Urgency (RTO)
 - Approval
 
-**Tool:** {{ meta.ticketing_system }}
+**Tool:** {{ meta-handbook.ticketing_system }}
 
 ### 2. Restore Planning
 
@@ -460,9 +474,9 @@ This document describes the backup and restore strategies for {{ meta.organizati
 ### Backup Software
 
 **Primary Backup System:**
-- **System:** {{ meta.backup_system }}
-- **Version:** {{ meta.backup_system_version }}
-- **License:** {{ meta.backup_system_license }}
+- **System:** {{ meta-handbook.backup_system }}
+- **Version:** [TODO]
+- **License:** {{ meta-handbook.backup_system_license }}
 
 **Features:**
 - Application-consistent backups
@@ -489,8 +503,8 @@ This document describes the backup and restore strategies for {{ meta.organizati
 ### Cloud Backup
 
 **Cloud Provider:**
-- **Provider:** {{ meta.backup_cloud_provider }}
-- **Region:** {{ meta.backup_cloud_region }}
+- **Provider:** {{ meta-handbook.backup_cloud_provider }}
+- **Region:** {{ meta-handbook.backup_cloud_region }}
 - **Storage Tier:** Standard / Glacier
 
 **Advantages:**
@@ -518,7 +532,7 @@ This document describes the backup and restore strategies for {{ meta.organizati
 - Key rotation every 90 days
 
 **Key Management:**
-- Keys in {{ meta.key_management_system }}
+- Keys in {{ meta-handbook.key_management_system }}
 - Access only for authorized administrators
 - Backup of keys (escrow)
 
@@ -542,7 +556,7 @@ This document describes the backup and restore strategies for {{ meta.organizati
 
 **Audit Logging:**
 - All backup/restore activities logged
-- Logs in SIEM system {{ meta.siem_system }}
+- Logs in SIEM system {{ meta-handbook.siem_system }}
 - Monthly audit reviews
 
 ## Backup Testing
@@ -656,7 +670,7 @@ This document describes the backup and restore strategies for {{ meta.organizati
 - Compliance assurance
 - Escalation management
 
-**Person:** {{ meta.it_operations_manager.name }}
+**Person:** {{ meta-organisation-roles.role_it_operations_manager.name }}
 
 ## Compliance and Regulation
 
@@ -694,20 +708,11 @@ This document describes the backup and restore strategies for {{ meta.organizati
 - ISO/IEC 27001:2013 - Backup Controls
 - GDPR - Article 32 (Data Security)
 - 3-2-1 Backup Rule
-- Backup System Documentation: {{ meta.backup_system_docs }}
+- Backup System Documentation: {{ meta-handbook.backup_system_docs }}
 
----
+**Document Owner:** {{ meta-handbook.owner }}  
+**Approved by:** {{ meta-handbook.approver }}  
+**Version:** {{ meta-handbook.revision }}  
+**Classification:** {{ meta-handbook.classification }}  
+**Last Updated:** {{ meta-handbook.date }}
 
-**Document Owner:** {{ meta.document.owner }}  
-**Approved by:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.date }}
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

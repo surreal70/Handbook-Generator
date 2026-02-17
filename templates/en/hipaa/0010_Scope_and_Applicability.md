@@ -1,13 +1,16 @@
 # Scope and Applicability
 
-**Document ID:** HIPAA-0010  
-**Organization:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Approved by:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0010
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,7 +28,7 @@ Customization required:
 
 ## 1. Purpose
 
-This document defines the scope of HIPAA compliance for {{ meta.organization.name }} and establishes the applicability of HIPAA Security Rule, Privacy Rule, and Breach Notification Rule requirements.
+This document defines the scope of HIPAA compliance for {{ meta-organisation.name }} and establishes the applicability of HIPAA Security Rule, Privacy Rule, and Breach Notification Rule requirements.
 
 ### 1.1 Objectives
 
@@ -46,12 +49,12 @@ This document defines the scope of HIPAA compliance for {{ meta.organization.nam
 
 ### 2.1 Organization Details
 
-**Organization Name:** {{ meta.organization.name }}  
-**Address:** {{ meta.organization.address }}, {{ meta.organization.postal_code }} {{ meta.organization.city }}  
-**State:** {{ meta.organization.state }}  
-**Country:** {{ meta.organization.country }}  
-**Website:** {{ meta.organization.website }}  
-**Tax ID (EIN):** {{ meta.organization.tax_id }}  
+**Organization Name:** {{ meta-organisation.name }}  
+**Address:** {{ meta-organisation.address }}, [TODO] [TODO]  
+**State:** [TODO]  
+**Country:** [TODO]  
+**Website:** [TODO]  
+**Tax ID (EIN):** [TODO]  
 
 ### 2.2 Organization Type
 
@@ -288,14 +291,14 @@ If yes:
 ### 9.1 Key Roles
 
 **Privacy Officer:**
-- **Name:** {{ meta.roles.privacy_officer.name }}
-- **Email:** {{ meta.roles.privacy_officer.email }}
-- **Phone:** {{ meta.roles.privacy_officer.phone }}
+- **Name:** [TODO]
+- **Email:** [TODO]
+- **Phone:** [TODO]
 
 **Security Officer:**
-- **Name:** {{ meta.roles.security_officer.name }}
-- **Email:** {{ meta.roles.security_officer.email }}
-- **Phone:** {{ meta.roles.security_officer.phone }}
+- **Name:** [TODO]
+- **Email:** [TODO]
+- **Phone:** [TODO]
 
 **HIPAA Compliance Officer:**
 - **Name:** [TODO: Name]
@@ -350,13 +353,5 @@ If yes:
 |------|-------------------|--------|-------------|
 | [TODO: Date] | Initial scope definition | N/A | [TODO: Name] |
 | [TODO: Date] | Added new EHR system | Expanded ePHI scope | [TODO: Name] |
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 <!-- End of template -->

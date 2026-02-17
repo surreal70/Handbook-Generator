@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0520
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Einhaltung gesetzlicher Anforderungen
+
+**Dokument-ID:** [FRAMEWORK]-0520
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -15,7 +26,7 @@ Dieses Dokument beschreibt die Maßnahmen zur Einhaltung gesetzlicher Anforderun
 
 ## Geltungsbereich
 
-Dieses Dokument gilt für alle Aktivitäten von {{ source.organization_name }}.
+Dieses Dokument gilt für alle Aktivitäten von [TODO].
 
 ## Relevante Gesetze und Vorschriften
 
@@ -54,9 +65,9 @@ Dieses Dokument gilt für alle Aktivitäten von {{ source.organization_name }}.
 ### Compliance-Organisation
 
 **Verantwortlichkeiten:**
-- Compliance Officer: {{ source.compliance_officer }}
-- Datenschutzbeauftragter: {{ source.data_protection_officer }}
-- Informationssicherheitsbeauftragter: {{ source.information_security_officer }}
+- Compliance Officer: [TODO]
+- Datenschutzbeauftragter: [TODO]
+- Informationssicherheitsbeauftragter: [TODO]
 
 **Aufgaben:**
 - Überwachung der Compliance
@@ -196,18 +207,9 @@ Dieses Dokument adressiert:
 
 ## Kennzahlen
 
-{{ source.organization_name }} misst:
+[TODO] misst:
 - Anzahl Compliance-Verstöße
 - Schulungsteilnahme
 - Anzahl durchgeführter Audits
 - Anzahl offener Findings
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

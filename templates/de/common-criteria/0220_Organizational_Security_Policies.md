@@ -1,11 +1,16 @@
 # Organizational Security Policies (OSPs)
 
-**Dokument-ID:** 0220  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0220
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -86,8 +91,6 @@ Organisatorische Sicherheitsrichtlinien (OSPs) definieren Sicherheitsregeln und 
 **Verifikation:**
 [TODO: Wie wird die Einhaltung dieser Richtlinie überprüft?]
 
----
-
 ### P.NEED_TO_KNOW
 **Richtlinien-ID:** P.NEED_TO_KNOW  
 **Kategorie:** Access Control  
@@ -135,8 +138,6 @@ Organisatorische Sicherheitsrichtlinien (OSPs) definieren Sicherheitsregeln und 
 
 **Verifikation:**
 [TODO: Wie wird die Einhaltung dieser Richtlinie überprüft?]
-
----
 
 ### P.AUDIT_REVIEW
 **Richtlinien-ID:** P.AUDIT_REVIEW  
@@ -187,8 +188,6 @@ Organisatorische Sicherheitsrichtlinien (OSPs) definieren Sicherheitsregeln und 
 **Verifikation:**
 [TODO: Wie wird die Einhaltung dieser Richtlinie überprüft?]
 
----
-
 ### P.KEY_MANAGEMENT
 **Richtlinien-ID:** P.KEY_MANAGEMENT  
 **Kategorie:** Cryptographic  
@@ -234,8 +233,6 @@ Organisatorische Sicherheitsrichtlinien (OSPs) definieren Sicherheitsregeln und 
 
 **Verifikation:**
 [TODO: Wie wird die Einhaltung dieser Richtlinie überprüft?]
-
----
 
 ### P.DATA_RETENTION
 **Richtlinien-ID:** P.DATA_RETENTION  
@@ -283,8 +280,6 @@ Organisatorische Sicherheitsrichtlinien (OSPs) definieren Sicherheitsregeln und 
 
 **Verifikation:**
 [TODO: Wie wird die Einhaltung dieser Richtlinie überprüft?]
-
----
 
 ### P.PASSWORD_POLICY
 **Richtlinien-ID:** P.PASSWORD_POLICY  
@@ -334,8 +329,6 @@ Organisatorische Sicherheitsrichtlinien (OSPs) definieren Sicherheitsregeln und 
 **Verifikation:**
 [TODO: Wie wird die Einhaltung dieser Richtlinie überprüft?]
 
----
-
 ### P.CONFIGURATION_MANAGEMENT
 **Richtlinien-ID:** P.CONFIGURATION_MANAGEMENT  
 **Kategorie:** Configuration  
@@ -382,8 +375,6 @@ Organisatorische Sicherheitsrichtlinien (OSPs) definieren Sicherheitsregeln und 
 
 **Verifikation:**
 [TODO: Wie wird die Einhaltung dieser Richtlinie überprüft?]
-
----
 
 ### P.BACKUP_RECOVERY
 **Richtlinien-ID:** P.BACKUP_RECOVERY  
@@ -472,8 +463,6 @@ Organisatorische Sicherheitsrichtlinien (OSPs) definieren Sicherheitsregeln und 
 | [TODO: P.001] | [TODO: A.001, A.002] | [TODO: Confidentiality/Integrity/Availability] |
 | [TODO: P.002] | [TODO: A.003] | [TODO: Integrity] |
 
----
-
 **Nächste Schritte:**
 1. Vervollständige alle [TODO]-Platzhalter mit organisationsspezifischen Richtlinien
 2. Dokumentiere alle relevanten OSPs
@@ -482,10 +471,3 @@ Organisatorische Sicherheitsrichtlinien (OSPs) definieren Sicherheitsregeln und 
 5. Erstelle Compliance-Matrix
 6. Überprüfe Konsistenz mit Threats (Template 0210) und Security Objectives (Template 0300)
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

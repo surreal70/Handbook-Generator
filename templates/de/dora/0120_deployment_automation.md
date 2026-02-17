@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0120
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Deployment Automatisierung
+
+**Dokument-ID:** [FRAMEWORK]-0120
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -25,10 +36,10 @@ Dieses Dokument umfasst:
 
 ### Organisationsinformationen
 
-- **Organisation**: {{ source.organization_name }}
-- **Automatisierungsverantwortlicher**: {{ source.automation_owner }}
-- **Aktueller Automatisierungsgrad**: {{ source.current_automation_level }}
-- **Ziel-Automatisierungsgrad**: {{ source.target_automation_level }}
+- **Organisation**: [TODO]
+- **Automatisierungsverantwortlicher**: [TODO]
+- **Aktueller Automatisierungsgrad**: [TODO]
+- **Ziel-Automatisierungsgrad**: [TODO]
 
 ## Automatisierungs-Reifegrade
 
@@ -133,7 +144,7 @@ deploy_production:
     - ./deploy.sh production
   environment:
     name: production
-    url: https://{{ source.production_url }}
+    url: https://[TODO]
   only:
     - main
   when: manual  # oder automatic für CD
@@ -169,7 +180,7 @@ deploy_production:
 
 ### CI/CD-Plattformen
 
-**Aktuelle Plattform**: {{ source.cicd_platform }}
+**Aktuelle Plattform**: [TODO]
 
 **Alternativen**:
 - GitLab CI/CD
@@ -181,14 +192,14 @@ deploy_production:
 
 ### Container-Orchestrierung
 
-**Aktuelle Lösung**: {{ source.container_orchestration }}
+**Aktuelle Lösung**: [TODO]
 
 **Kubernetes-Deployment**:
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ source.application_name }}
+  name: [TODO]
 spec:
   replicas: 3
   strategy:
@@ -200,19 +211,19 @@ spec:
     spec:
       containers:
       - name: app
-        image: {{ source.container_registry }}/{{ source.application_name }}:{{ source.version }}
+        image: [TODO]/[TODO]:[TODO]
         ports:
         - containerPort: 8080
 ```
 
 ### Infrastructure as Code
 
-**Aktuelle IaC-Tool**: {{ source.iac_tool }}
+**Aktuelle IaC-Tool**: [TODO]
 
 **Terraform-Beispiel**:
 ```hcl
 resource "aws_ecs_service" "app" {
-  name            = "{{ source.application_name }}"
+  name            = "[TODO]"
   cluster         = aws_ecs_cluster.main.id
   task_definition = aws_ecs_task_definition.app.arn
   desired_count   = 3
@@ -226,7 +237,7 @@ resource "aws_ecs_service" "app" {
 
 ### Configuration Management
 
-**Aktuelle Lösung**: {{ source.config_management }}
+**Aktuelle Lösung**: [TODO]
 
 **Ansible-Beispiel**:
 ```yaml
@@ -235,14 +246,14 @@ resource "aws_ecs_service" "app" {
   tasks:
     - name: Pull latest image
       docker_image:
-        name: {{ source.application_name }}
+        name: [TODO]
         tag: latest
         source: pull
     
     - name: Start container
       docker_container:
-        name: {{ source.application_name }}
-        image: {{ source.application_name }}:latest
+        name: [TODO]
+        image: [TODO]:latest
         state: started
         restart_policy: always
 ```
@@ -273,7 +284,7 @@ deploy() {
 
 rollback() {
   echo "Deployment failed, rolling back..."
-  kubectl rollout undo deployment/{{ source.application_name }}
+  kubectl rollout undo deployment/[TODO]
 }
 
 trap rollback ERR
@@ -332,8 +343,8 @@ metadata:
   name: app-secrets
 type: Opaque
 data:
-  database-password: {{ source.db_password_base64 }}
-  api-key: {{ source.api_key_base64 }}
+  database-password: [TODO]
+  api-key: [TODO]
 ```
 
 ## Implementierungsplan
@@ -385,12 +396,3 @@ data:
 
 <!-- Hinweis: Automatisierung ist Investition in Geschwindigkeit und Qualität -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

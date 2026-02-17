@@ -1,5 +1,19 @@
 # Policy: Kryptografie und Schlüsselmanagement
 
+**Dokument-ID:** 0260
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This policy establishes the principles for cryptographic controls and key management.
@@ -10,27 +24,15 @@ requirements and compliance obligations.
 ISO 27001:2022 Annex A Reference: A.8.24
 -->
 
-**Dokument-ID:** 0260  
-**Dokumenttyp:** Policy (abstrakt)  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.8.24 (inkl. Amendment 1:2024)  
-**Owner:** {{ meta.ciso.name }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
-
----
-
 ## 1. Zweck
 
-Diese Policy definiert die Grundsätze für den Einsatz kryptografischer Verfahren und das Management kryptografischer Schlüssel der **{{ meta.organization.name }}**. Sie stellt sicher, dass Informationen durch angemessene kryptografische Kontrollen geschützt werden und Schlüssel sicher verwaltet werden.
+Diese Policy definiert die Grundsätze für den Einsatz kryptografischer Verfahren und das Management kryptografischer Schlüssel der **{{ meta-organisation.name }}**. Sie stellt sicher, dass Informationen durch angemessene kryptografische Kontrollen geschützt werden und Schlüssel sicher verwaltet werden.
 
 ## 2. Geltungsbereich
 
 Diese Policy gilt für:
 
-- **Organisationseinheiten:** Alle Abteilungen und Standorte der {{ meta.organization.name }}
+- **Organisationseinheiten:** Alle Abteilungen und Standorte der {{ meta-organisation.name }}
 - **Systeme:** Alle IT-Systeme, Anwendungen, Datenbanken, Netzwerke, Cloud-Services
 - **Daten:** Alle Daten in Ruhe (Data at Rest), in Bewegung (Data in Transit) und in Verarbeitung (Data in Use)
 - **Kryptografische Verfahren:** Verschlüsselung, Hashing, digitale Signaturen, Zertifikate
@@ -183,18 +185,9 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **FIPS 140-2/140-3** - Security Requirements for Cryptographic Modules
 - **eIDAS-Verordnung (EU 910/2014)** - Elektronische Identifizierung und Vertrauensdienste
 
----
-
 **Genehmigt durch:**  
 {{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+Datum: {{ meta-handbook.modifydate }}
 
-**Nächster Review:** {{ meta.document.next_review }} (jährlich oder anlassbezogen)
+**Nächster Review:** {{ meta-handbook.next_review }} (jährlich oder anlassbezogen)
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

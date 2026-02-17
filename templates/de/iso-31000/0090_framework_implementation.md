@@ -1,17 +1,29 @@
----
+
 Document-ID: iso-31000-0140
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Framework-Implementierung
 
+**Dokument-ID:** [FRAMEWORK]-0090
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt die Implementierung des Risikomanagement-Frameworks in {{ meta.organization }}.
+Dieses Dokument beschreibt die Implementierung des Risikomanagement-Frameworks in {{ meta-organisation.name }}.
 
 ## Implementierungsplan
 
@@ -26,10 +38,10 @@ Dieses Dokument beschreibt die Implementierung des Risikomanagement-Frameworks i
 
 | Phase | Zeitraum | Verantwortlich |
 |-------|----------|----------------|
-| Vorbereitung | {{ meta.prep_timeline }} | {{ meta.prep_owner }} |
-| Pilotierung | {{ meta.pilot_timeline }} | {{ meta.pilot_owner }} |
-| Ausrollung | {{ meta.rollout_timeline }} | {{ meta.rollout_owner }} |
-| Stabilisierung | {{ meta.stabilization_timeline }} | {{ meta.stabilization_owner }} |
+| Vorbereitung | {{ meta-handbook.prep_timeline }} | {{ meta-handbook.prep_owner }} |
+| Pilotierung | {{ meta-handbook.pilot_timeline }} | {{ meta-handbook.pilot_owner }} |
+| Ausrollung | {{ meta-handbook.rollout_timeline }} | {{ meta-handbook.rollout_owner }} |
+| Stabilisierung | {{ meta-handbook.stabilization_timeline }} | {{ meta-handbook.stabilization_owner }} |
 
 ## Implementierungsaktivitäten
 
@@ -50,12 +62,4 @@ Dieses Dokument beschreibt die Implementierung des Risikomanagement-Frameworks i
 - Bewertungstools
 - Reporting-Dashboards
 - Dokumentenmanagement
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |
 

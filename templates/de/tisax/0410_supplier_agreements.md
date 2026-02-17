@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0410
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Lieferantenvereinbarungen
+
+**Dokument-ID:** [FRAMEWORK]-0410
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -15,7 +26,7 @@ Dieses Dokument beschreibt die Anforderungen für Vereinbarungen mit Lieferanten
 
 ## Geltungsbereich
 
-Dieses Dokument gilt für alle Verträge mit Lieferanten von {{ source.organization_name }}.
+Dieses Dokument gilt für alle Verträge mit Lieferanten von [TODO].
 
 ## Vertragsbestandteile
 
@@ -32,9 +43,9 @@ Dieses Dokument gilt für alle Verträge mit Lieferanten von {{ source.organizat
 ### Service Level Agreements
 
 **Inhalte:**
-- Verfügbarkeit: {{ source.sla_availability }}%
-- Response Time: {{ source.sla_response_time }}
-- Resolution Time: {{ source.sla_resolution_time }}
+- Verfügbarkeit: [TODO]%
+- Response Time: [TODO]
+- Resolution Time: [TODO]
 - Reporting-Anforderungen
 
 ### Haftung und Versicherung
@@ -131,17 +142,8 @@ Dieses Dokument adressiert:
 
 ## Kennzahlen
 
-{{ source.organization_name }} misst:
+[TODO] misst:
 - Anzahl aktiver Lieferantenverträge
 - Compliance-Rate
 - Anzahl Vertragsverletzungen
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

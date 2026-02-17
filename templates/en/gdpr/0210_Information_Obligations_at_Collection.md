@@ -1,11 +1,16 @@
 # Information Obligations at Collection
 
-**Document-ID:** 0210  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0210
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -23,7 +28,7 @@ Reference: GDPR Art. 13 (Information to be provided where personal data are coll
 
 ## Purpose
 
-This document describes the implementation of information obligations in {{ meta.organization }}. Data subjects must be comprehensively informed when their data is collected.
+This document describes the implementation of information obligations in {{ meta-organisation.name }}. Data subjects must be comprehensively informed when their data is collected.
 
 ## Information Obligation for Direct Collection (Art. 13)
 
@@ -186,8 +191,6 @@ This document describes the implementation of information obligations in {{ meta
 | Incomprehensible Language | Legal jargon | Use plain language |
 | Hidden Information | Privacy notice not findable | Prominent placement |
 
----
-
 **Next Steps:**
 1. Create complete privacy notices for all contexts
 2. Implement processes for timely information
@@ -195,10 +198,3 @@ This document describes the implementation of information obligations in {{ meta
 4. Train employees on information obligations
 5. Regularly review completeness and currency
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

@@ -37,11 +37,11 @@ Jedes Template folgt einer standardisierten Struktur:
 # Template-Titel
 
 **Dokument-ID:** idw-ps-951-NNNN
-**Owner:** {{ meta.audit_lead }}
-**Version:** {{ meta.version }}
-**Status:** {{ meta.status }}
-**Klassifizierung:** {{ meta.classification }}
-**Letzte Aktualisierung:** {{ meta.date }}
+**Owner:** {{ meta-organisation-roles.role_Internal_Auditor }}
+**Version:** {{ meta-handbook.revision }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
 
 ---
 
@@ -112,15 +112,15 @@ Jedes Template folgt einer standardisierten Struktur:
 Die Templates verwenden ein Placeholder-System für organisationsspezifische Daten:
 
 ### Metadata-Placeholders
-- `{{ meta.audit_lead }}` - Prüfungsleiter
-- `{{ meta.version }}` - Dokumentversion
-- `{{ meta.status }}` - Dokumentstatus
-- `{{ meta.date }}` - Datum
+- `{{ meta-organisation-roles.role_Internal_Auditor }}` - Prüfungsleiter
+- `{{ meta-handbook.revision }}` - Dokumentversion
+- `{{ meta-handbook.status }}` - Dokumentstatus
+- `{{ meta-handbook.modifydate }}` - Datum
 
 ### Source-Placeholders
-- `{{ source.organization_name }}` - Organisationsname
-- `{{ source.audit_period }}` - Prüfungszeitraum
-- `{{ source.systems_in_scope }}` - Systeme im Scope
+- `[TODO]` - Organisationsname
+- `[TODO]` - Prüfungszeitraum
+- `[TODO]` - Systeme im Scope
 - Weitere kontextspezifische Placeholders
 
 ## Anpassung der Templates

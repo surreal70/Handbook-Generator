@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-38500-0040
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Prinzip 1: Verantwortung (Responsibility)
+
+**Dokument-ID:** [FRAMEWORK]-0040
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -16,7 +28,7 @@ Dieses Dokument beschreibt die Anwendung des Verantwortungs-Prinzips in der IT-G
 ## Geltungsbereich
 
 Dieses Dokument gilt für:
-- {{ meta.organization }}
+- {{ meta-organisation.name }}
 - Alle IT-bezogenen Verantwortlichkeiten
 - Vorstand, Geschäftsführung, IT-Management und Mitarbeiter
 
@@ -37,9 +49,9 @@ Einzelpersonen und Gruppen innerhalb der Organisation verstehen und akzeptieren 
 
 | Kriterium | Ziel | Aktueller Status |
 |-----------|------|------------------|
-| Klarheit der Verantwortlichkeiten | 100% dokumentiert | {{ meta.responsibility_clarity }}% |
-| Autoritätsübereinstimmung | 100% | {{ meta.authority_alignment }}% |
-| Verantwortungsbewusstsein | >90% | {{ meta.responsibility_awareness }}% |
+| Klarheit der Verantwortlichkeiten | 100% dokumentiert | {{ meta-handbook.responsibility_clarity }}% |
+| Autoritätsübereinstimmung | 100% | {{ meta-handbook.authority_alignment }}% |
+| Verantwortungsbewusstsein | >90% | {{ meta-handbook.responsibility_awareness }}% |
 
 ## Direct (Steuern)
 
@@ -57,7 +69,7 @@ Einzelpersonen und Gruppen innerhalb der Organisation verstehen und akzeptieren 
 - IT-Investitionsentscheidungen
 - Eskalationsmanagement
 
-**{{ meta.cio }}:**
+**{{ meta-organisation-roles.role_CIO }}:**
 - IT-Betrieb und -Services
 - IT-Sicherheit und Compliance
 - IT-Projektportfolio
@@ -98,10 +110,10 @@ Einzelpersonen und Gruppen innerhalb der Organisation verstehen und akzeptieren 
 
 ### KPIs
 
-- Anteil klar definierter Verantwortlichkeiten: {{ meta.defined_responsibilities }}%
-- Verantwortungsbewusstsein (Umfrage): {{ meta.responsibility_score }}/10
-- Anzahl Verantwortlichkeitskonflikte: {{ meta.responsibility_conflicts }}
-- Zeit zur Konfliktlösung: {{ meta.conflict_resolution_time }} Tage
+- Anteil klar definierter Verantwortlichkeiten: {{ meta-handbook.defined_responsibilities }}%
+- Verantwortungsbewusstsein (Umfrage): {{ meta-handbook.responsibility_score }}/10
+- Anzahl Verantwortlichkeitskonflikte: {{ meta-handbook.responsibility_conflicts }}
+- Zeit zur Konfliktlösung: {{ meta-handbook.conflict_resolution_time }} Tage
 
 ## Umsetzung
 
@@ -116,28 +128,14 @@ Einzelpersonen und Gruppen innerhalb der Organisation verstehen und akzeptieren 
 
 | Maßnahme | Verantwortlich | Frist |
 |----------|----------------|-------|
-| Verantwortlichkeitsmatrix erstellen | {{ meta.cio }} | {{ meta.responsibility_matrix_date }} |
-| Kommunikation | HR & IT | {{ meta.communication_date }} |
-| Schulungen | IT-Training | {{ meta.training_date }} |
-| Erste Überprüfung | Governance-Komitee | {{ meta.first_review_date }} |
+| Verantwortlichkeitsmatrix erstellen | {{ meta-organisation-roles.role_CIO }} | {{ meta-handbook.responsibility_matrix_date }} |
+| Kommunikation | HR & IT | {{ meta-handbook.communication_date }} |
+| Schulungen | IT-Training | {{ meta-handbook.training_date }} |
+| Erste Überprüfung | Governance-Komitee | {{ meta-handbook.first_review_date }} |
 
 ## Dokumentenverweise
 
 - 0010_governance_framework.md
 - 0020_governance_model.md
 - 0200_governance_roles.md
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |
-
-<!-- 
-Autor-Hinweise: 
-- Verantwortlichkeiten müssen mit Autorität einhergehen
-- Dokumentieren Sie Eskalationswege bei Verantwortlichkeitskonflikten
--->
 

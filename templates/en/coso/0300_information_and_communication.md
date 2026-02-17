@@ -1,17 +1,28 @@
----
+
 Document-ID: coso-0300
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Information und Kommunikation
 
+**Document-ID:** [FRAMEWORK]-0300
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document describes die Information und Kommunikation at {{ source.organization_name }} in accordance with COSO Komponente 4.
+This document describes die Information und Kommunikation at [TODO] in accordance with COSO Komponente 4.
 
 ## Scope
 
@@ -23,7 +34,7 @@ This document describes die Information und Kommunikation at {{ source.organizat
 
 ### COSO Komponente 4
 
-{{ source.information_communication_overview }}
+[TODO]
 
 ### Bedeutung
 
@@ -37,117 +48,117 @@ Information und Kommunikation sind entscheidend für:
 
 ### Qualitätsmerkmale
 
-**Relevanz**: {{ source.information_relevance }}
-**Genauigkeit**: {{ source.information_accuracy }}
-**Vollständigkeit**: {{ source.information_completeness }}
-**Aktualität**: {{ source.information_timeliness }}
-**Zugänglichkeit**: {{ source.information_accessibility }}
+**Relevanz**: [TODO]
+**Genauigkeit**: [TODO]
+**Vollständigkeit**: [TODO]
+**Aktualität**: [TODO]
+**Zugänglichkeit**: [TODO]
 
 ### Informationsquellen
 
-**Interne Quellen**: {{ source.internal_information_sources }}
-**Externe Quellen**: {{ source.external_information_sources }}
+**Interne Quellen**: [TODO]
+**Externe Quellen**: [TODO]
 
 ### Informationsverarattung
 
-**Datenerfassung**: {{ source.data_collection }}
-**Datenverarattung**: {{ source.data_processing }}
-**Datenanalyse**: {{ source.data_analysis }}
-**Berichterstattung**: {{ source.reporting }}
+**Datenerfassung**: [TODO]
+**Datenverarattung**: [TODO]
+**Datenanalyse**: [TODO]
+**Berichterstattung**: [TODO]
 
 ## Prinzip 14: Interne Kommunikation
 
 ### Kommunikationskanäle
 
-**Formelle Kanäle**: {{ source.formal_communication_channels }}
-**Informelle Kanäle**: {{ source.informal_communication_channels }}
-**Digitale Plattformen**: {{ source.digital_platforms }}
+**Formelle Kanäle**: [TODO]
+**Informelle Kanäle**: [TODO]
+**Digitale Plattformen**: [TODO]
 
 ### Kommunikationsrichtungen
 
-**Top-Down-Kommunikation**: {{ source.top_down_communication }}
-**Bottom-Up-Kommunikation**: {{ source.bottom_up_communication }}
-**Horizontale Kommunikation**: {{ source.horizontal_communication }}
+**Top-Down-Kommunikation**: [TODO]
+**Bottom-Up-Kommunikation**: [TODO]
+**Horizontale Kommunikation**: [TODO]
 
 ### Berichterstattung
 
-**Management-Berichte**: {{ source.management_reports }}
-**Board-Berichte**: {{ source.board_reports }}
-**Operative Berichte**: {{ source.operational_reports }}
+**Management-Berichte**: [TODO]
+**Board-Berichte**: [TODO]
+**Operative Berichte**: [TODO]
 
 ### Feedback-Mechanismen
 
-**Mitaratterfeedback**: {{ source.employee_feedback }}
-**Beschwerdemechanismen**: {{ source.complaint_mechanisms }}
-**Whistleblowing**: {{ source.whistleblowing_mechanism }}
+**Mitaratterfeedback**: [TODO]
+**Beschwerdemechanismen**: [TODO]
+**Whistleblowing**: [TODO]
 
 ## Prinzip 15: Externe Kommunikation
 
 ### Stakeholder-Kommunikation
 
-**Investoren**: {{ source.investor_communication }}
-**Kunden**: {{ source.customer_communication }}
-**Lieferanten**: {{ source.supplier_communication }}
-**Regulierungsbehörden**: {{ source.regulatory_communication }}
+**Investoren**: [TODO]
+**Kunden**: [TODO]
+**Lieferanten**: [TODO]
+**Regulierungsbehörden**: [TODO]
 
 ### Externe Berichterstattung
 
-**Finanzberichterstattung**: {{ source.financial_reporting }}
-**Nachhaltigkeitsberichterstattung**: {{ source.sustainability_reporting }}
-**Compliance-Berichterstattung**: {{ source.compliance_reporting }}
+**Finanzberichterstattung**: [TODO]
+**Nachhaltigkeitsberichterstattung**: [TODO]
+**Compliance-Berichterstattung**: [TODO]
 
 ### Öffentlichkeitsaratt
 
-**Medienbeziehungen**: {{ source.media_relations }}
-**Krisenkommunikation**: {{ source.crisis_communication }}
-**Soziale Medien**: {{ source.social_media }}
+**Medienbeziehungen**: [TODO]
+**Krisenkommunikation**: [TODO]
+**Soziale Medien**: [TODO]
 
 ## Informationssysteme
 
 ### IT-Systeme
 
-**Enterprise Resource Planning (ERP)**: {{ source.erp_system }}
-**Business Intelligence (BI)**: {{ source.bi_system }}
-**Dokumentenmanagement**: {{ source.document_management_system }}
+**Enterprise Resource Planning (ERP)**: [TODO]
+**Business Intelligence (BI)**: [TODO]
+**Dokumentenmanagement**: [TODO]
 
 ### Systemintegration
 
-{{ source.system_integration }}
+[TODO]
 
 ### Datensicherheit
 
-{{ source.data_security }}
+[TODO]
 
 ## Kommunikationsrichtlinien
 
 ### Kommunikationsstandards
 
-{{ source.communication_standards }}
+[TODO]
 
 ### Vertraulichkeit
 
-{{ source.confidentiality_requirements }}
+[TODO]
 
 ### Dokumentation
 
-{{ source.communication_documentation }}
+[TODO]
 
 ## Roles and Responsibilities
 
-**Vorstand**: {{ source.board_communication_role }}
-**Geschäftsführung**: {{ source.management_communication_role }}
-**Kommunikationsabteilung**: {{ source.communications_department_role }}
-**Alle Mitaratter**: {{ source.employee_communication_role }}
+**Vorstand**: [TODO]
+**Geschäftsführung**: [TODO]
+**Kommunikationsabteilung**: [TODO]
+**Alle Mitaratter**: [TODO]
 
 ## Überwachung und Verbesserung
 
 ### Wirksamkeitsbewertung
 
-{{ source.communication_effectiveness }}
+[TODO]
 
 ### Kontinuierliche Verbesserung
 
-{{ source.communication_improvement }}
+[TODO]
 
 ## References
 
@@ -155,13 +166,5 @@ Information und Kommunikation sind entscheidend für:
 - Informationssicherheitsrichtlinie
 - Berichterstattungsstandards
 - Whistleblowing-Richtlinie
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

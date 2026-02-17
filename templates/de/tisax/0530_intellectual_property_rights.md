@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0530
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Schutz geistigen Eigentums
+
+**Dokument-ID:** [FRAMEWORK]-0530
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -15,7 +26,7 @@ Dieses Dokument beschreibt Maßnahmen zum Schutz geistigen Eigentums gemäß TIS
 
 ## Geltungsbereich
 
-Dieses Dokument gilt für alle geistigen Eigentumsrechte von {{ source.organization_name }}.
+Dieses Dokument gilt für alle geistigen Eigentumsrechte von [TODO].
 
 ## Geistiges Eigentum
 
@@ -157,18 +168,9 @@ Dieses Dokument adressiert:
 
 ## Kennzahlen
 
-{{ source.organization_name }} misst:
+[TODO] misst:
 - Anzahl geschützter IP-Assets
 - Lizenz-Compliance-Rate
 - Anzahl IP-Verletzungen
 - Anzahl durchgesetzter Rechte
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

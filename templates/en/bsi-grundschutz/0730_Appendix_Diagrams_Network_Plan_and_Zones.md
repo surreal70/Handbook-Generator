@@ -1,14 +1,16 @@
 # Appendix: Network Plan and Zone Model (Template)
 
-**Document ID:** 0730  
-**Document Type:** Appendix  
-**Reference Framework:** BSI IT-Grundschutz (BSI Standards 200-1/200-2)  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** {{ meta.document.status }}  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.document.last_updated }}  
-**Next Review:** {{ meta.document.next_review }}
+**Document-ID:** [FRAMEWORK]-0730
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -20,7 +22,7 @@ Reference: BSI IT-Grundschutz-Kompendium: NET.1.1 Network Architecture and Desig
 
 ## 1. Purpose and Objectives
 
-The documentation of network architecture and zone model of **{{ meta.organization.name }}** serves:
+The documentation of network architecture and zone model of **{{ meta-organisation.name }}** serves:
 - Structure Analysis (Document 0050)
 - Risk Analysis (Document 0090)
 - Network Security (Document 0460/0470)
@@ -207,10 +209,8 @@ The documentation of network architecture and zone model of **{{ meta.organizati
 
 | Role | Name | Date | Approval |
 |---|---|---|---|
-| IT Management | {{ meta.cio.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| CISO | {{ meta.ciso.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| IT Management | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| CISO | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **References:**
 - BSI IT-Grundschutz-Kompendium: NET.1.1 Network Architecture and Design
@@ -219,13 +219,5 @@ The documentation of network architecture and zone model of **{{ meta.organizati
 - Document 0050: Structure Analysis
 - Document 0090: Risk Analysis
 - Document 0460/0470: Network Security
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
 
 <!-- End of template -->

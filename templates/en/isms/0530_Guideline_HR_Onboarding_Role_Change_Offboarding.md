@@ -1,14 +1,16 @@
 # Guideline: HR Security - Onboarding, Role Change, Offboarding
 
-**Document ID:** 0530  
-**Document Type:** Guideline (detailed)  
-**Associated Policy:** 0520_Policy_HR_Security.md  
-**Standard Reference:** ISO/IEC 27001:2022 Annex A.6.1, A.6.2, A.6.3, A.6.4  
-**Owner:** {{ meta.hr.manager }}  
-**Version:** 1.0  
-**Status:** Approved  
-**Classification:** Confidential  
-**Last Updated:** {{ meta.document.date }}
+**Document-ID:** [FRAMEWORK]-0530
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -19,7 +21,7 @@ This guideline specifies the `0520_Policy_HR_Security.md` and defines:
 - Onboarding, role change, and offboarding processes
 - Background checks and confidentiality obligations
 
-**Scope:** All employees, contractors, and third parties at **{{ meta.organization.name }}**
+**Scope:** All employees, contractors, and third parties at **{{ meta-organisation.name }}**
 
 ## 2. Pre-Employment
 
@@ -268,15 +270,6 @@ This guideline specifies the `0520_Policy_HR_Security.md` and defines:
 - **ISO/IEC 27001:2022 Annex A.6.3** - Information security awareness, education and training
 - **ISO/IEC 27001:2022 Annex A.6.4** - Disciplinary process
 
----
-
 **Approved by:** {{ meta.ciso.name }}, CISO  
-**Next Review:** {{ meta.document.next_review }}
+**Next Review:** {{ meta-handbook.next_review }}
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

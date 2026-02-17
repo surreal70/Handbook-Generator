@@ -1,14 +1,16 @@
 # Anhang: CIS-Control Mapping Template
 
-**Dokument-ID:** 0400  
-**Dokumenttyp:** Anhang/Template  
-**Referenzrahmen:** CIS Controls v8 (Hardening-Programm; keine Benchmarks-Texte)  
-**Owner:** [TODO]  
-**Version:** 0.1 (Entwurf)  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** Intern / Vertraulich / Streng vertraulich  
-**Letzte Aktualisierung:** 2026-01-31  
-**Nächster Review:** [TODO]
+**Dokument-ID:** 0400
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -23,10 +25,3 @@ Einheitliches Mapping von Baseline-Anforderungen zu CIS Controls/Safeguards sowi
 |---|---|---|---|---|---|---|---|
 | 0110 | WS-001 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

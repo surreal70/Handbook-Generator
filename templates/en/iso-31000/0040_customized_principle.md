@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-31000-0040
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Principle 3: Customized
+
+**Document-ID:** [FRAMEWORK]-0040
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -24,21 +36,21 @@ The risk management framework and risk management process are customized and pro
 - Methods are aligned with organization size
 - Flexibility for different situations
 
-## Implementation in {{ meta.organization }}
+## Implementation in {{ meta-organisation.name }}
 
 ### Context Factors
 
 **External Context:**
-- Regulatory environment: {{ meta.regulatory_environment }}
-- Market conditions: {{ meta.market_conditions }}
+- Regulatory environment: {{ meta-handbook.regulatory_environment }}
+- Market conditions: {{ meta-handbook.market_conditions }}
 - Technological developments
 - Competitive situation
 
 **Internal Context:**
-- Organizational structure: {{ meta.org_structure }}
+- Organizational structure: {{ meta-handbook.org_structure }}
 - Corporate culture
 - Resources and capabilities
-- Strategic objectives: {{ meta.strategic_goals }}
+- Strategic objectives: {{ meta-handbook.strategic_goals }}
 
 ### Risk Management Customization
 
@@ -53,18 +65,10 @@ The risk management framework and risk management process are customized and pro
 
 ### Risk Appetite Statement
 
-{{ meta.organization }} defines its risk appetite as follows:
+{{ meta-organisation.name }} defines its risk appetite as follows:
 
-- **Strategic risks**: {{ meta.strategic_risk_appetite }}
-- **Operational risks**: {{ meta.operational_risk_appetite }}
-- **Financial risks**: {{ meta.financial_risk_appetite }}
-- **Compliance risks**: {{ meta.compliance_risk_appetite }}
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |
+- **Strategic risks**: {{ meta-handbook.strategic_risk_appetite }}
+- **Operational risks**: {{ meta-handbook.operational_risk_appetite }}
+- **Financial risks**: {{ meta-handbook.financial_risk_appetite }}
+- **Compliance risks**: {{ meta-handbook.compliance_risk_appetite }}
 

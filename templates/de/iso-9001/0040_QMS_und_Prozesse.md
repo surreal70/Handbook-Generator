@@ -1,11 +1,16 @@
 # Qualitätsmanagementsystem und seine Prozesse
 
-**Dokument-ID:** 0040  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0040
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -270,8 +275,6 @@ Prozessänderungen werden gesteuert durch:
 - **Anhang C:** Schnittstellenmatrix
 - **Anhang D:** KPI-Dashboard
 
----
-
 **Nächste Schritte:**
 1. Identifizieren Sie alle QMS-Prozesse
 2. Erstellen Sie Prozessbeschreibungen für jeden Prozess
@@ -280,10 +283,3 @@ Prozessänderungen werden gesteuert durch:
 5. Stellen Sie Ressourcen und Informationen bereit
 6. Implementieren Sie kontinuierliche Verbesserung
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

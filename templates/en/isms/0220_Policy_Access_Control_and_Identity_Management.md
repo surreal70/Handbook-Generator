@@ -1,5 +1,19 @@
 # Policy: Access Control and Identity Management
 
+**Document-ID:** [FRAMEWORK]-0220
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This policy establishes the principles for access control and identity management.
@@ -17,20 +31,18 @@ ISO 27001:2022 Annex A Reference: A.5.15, A.5.16, A.5.17, A.5.18
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** {{ meta-handbook.modifydate }}  
+**Next Review:** {{ meta-handbook.next_review }}
 
 ## 1. Purpose
 
-This policy defines the principles for access control and identity management (IAM) at **{{ meta.organization.name }}**. It ensures that access to information and IT systems is granted exclusively to authorized persons based on the need-to-know principle and least privilege.
+This policy defines the principles for access control and identity management (IAM) at **{{ meta-organisation.name }}**. It ensures that access to information and IT systems is granted exclusively to authorized persons based on the need-to-know principle and least privilege.
 
 ## 2. Scope
 
 This policy applies to:
 
-- **Organizational Units:** All departments and locations of {{ meta.organization.name }}
+- **Organizational Units:** All departments and locations of {{ meta-organisation.name }}
 - **Systems:** All IT systems, applications, databases, networks, cloud services
 - **Persons:** All employees, contractors, suppliers, and third parties with access to IT resources
 - **Access Methods:** Local access, remote access, privileged access, API access
@@ -167,18 +179,9 @@ Exceptions to this policy are only permitted in justified exceptional cases:
 - **ISO/IEC 27002:2022** - Information security controls
 - **NIST SP 800-63** - Digital Identity Guidelines
 
----
-
 **Approved by:**  
 {{ meta.management.ceo }}, Management  
-Date: {{ meta.document.approval_date }}
+Date: {{ meta-handbook.modifydate }}
 
-**Next Review:** {{ meta.document.next_review }} (annually or as needed)
+**Next Review:** {{ meta-handbook.next_review }} (annually or as needed)
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

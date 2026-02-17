@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0110
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Asset Inventory
+
+**Document-ID:** [FRAMEWORK]-0110
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -15,7 +26,7 @@ This document describes the requirements and processes for maintaining a complet
 
 ## Scope
 
-This document applies to all assets of {{ source.organization_name }} that must be captured within TISAX-relevant processes.
+This document applies to all assets of [TODO] that must be captured within TISAX-relevant processes.
 
 ## Inventory Requirements
 
@@ -34,7 +45,7 @@ The asset inventory must capture all relevant assets:
 
 The inventory must be kept current:
 
-- New assets are captured within {{ source.asset_registration_timeframe }}
+- New assets are captured within [TODO]
 - Changes are documented promptly
 - Decommissioning is noted immediately
 - Regular validation of inventory data
@@ -51,7 +62,7 @@ The following information is captured for each asset:
 | Asset Name | Designation | Production Server 01 |
 | Asset Type | Category | Server |
 | Description | Detailed description | Main production server for ERP system |
-| Asset Owner | Responsible person | {{ source.default_asset_owner }} |
+| Asset Owner | Responsible person | [TODO] |
 | Location | Physical/logical location | Data Center A, Rack 12 |
 | Status | Operational status | In Operation |
 | Classification | Protection level | Confidential |
@@ -76,12 +87,12 @@ Additional information depending on asset type:
 
 #### Automated Capture
 
-{{ source.organization_name }} uses the following tools:
+[TODO] uses the following tools:
 
-- **Network Discovery**: {{ source.network_discovery_tool }}
-- **Endpoint Management**: {{ source.endpoint_management_tool }}
-- **Cloud Asset Management**: {{ source.cloud_asset_tool }}
-- **CMDB Integration**: {{ source.cmdb_system }}
+- **Network Discovery**: [TODO]
+- **Endpoint Management**: [TODO]
+- **Cloud Asset Management**: [TODO]
+- **CMDB Integration**: [TODO]
 
 #### Manual Capture
 
@@ -198,12 +209,12 @@ Upon decommissioning:
 
 ### Inventory System
 
-{{ source.organization_name }} uses the following system for asset inventory:
+[TODO] uses the following system for asset inventory:
 
-- **System**: {{ source.asset_inventory_system }}
-- **Access**: {{ source.asset_inventory_access }}
-- **Backup**: {{ source.asset_inventory_backup }}
-- **Integration**: {{ source.asset_inventory_integration }}
+- **System**: [TODO]
+- **Access**: [TODO]
+- **Backup**: [TODO]
+- **Integration**: [TODO]
 
 ## Inventory Validation
 
@@ -309,7 +320,7 @@ For TISAX assessments:
 
 ## Metrics
 
-{{ source.organization_name }} measures:
+[TODO] measures:
 
 - Number of captured assets by category
 - Inventory completeness (Target: >95%)
@@ -319,13 +330,5 @@ For TISAX assessments:
 - Time to capture new assets (Target: <5 days)
 
 <!-- Note: Adapt tools and metrics to your organization -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

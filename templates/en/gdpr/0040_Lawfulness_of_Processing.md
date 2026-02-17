@@ -1,11 +1,16 @@
 # Lawfulness of Processing
 
-**Document-ID:** 0040  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0040
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -24,7 +29,7 @@ Reference: GDPR Art. 6 (Lawfulness of processing)
 
 ## Purpose
 
-This document describes the legal bases for processing personal data in {{ meta.organization }} according to Art. 6 GDPR. Every processing must be based on at least one of these legal bases.
+This document describes the legal bases for processing personal data in {{ meta-organisation.name }} according to Art. 6 GDPR. Every processing must be based on at least one of these legal bases.
 
 ## Legal Bases according to Art. 6(1) GDPR
 
@@ -139,8 +144,6 @@ For each processing activity, the legal basis must be documented:
    - Balancing test performed? Yes/No
 6. **Documentation in records?** Yes/No
 
----
-
 **Next Steps:**
 1. Identify legal basis for each processing activity
 2. Document consents and their management
@@ -148,10 +151,3 @@ For each processing activity, the legal basis must be documented:
 4. Update records of processing activities
 5. Train employees on identifying legal bases
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

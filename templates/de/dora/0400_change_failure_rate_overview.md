@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0400
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Change Failure Rate Übersicht
+
+**Dokument-ID:** [FRAMEWORK]-0400
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -30,9 +41,9 @@ Die Change Failure Rate misst den Prozentsatz der Deployments, die zu degradiert
 
 ### Organisationsinformationen
 
-- **Organisation**: {{ source.organization_name }}
-- **Verantwortlicher**: {{ source.cfr_owner }}
-- **Aktuelle CFR**: {{ source.current_cfr }}
+- **Organisation**: [TODO]
+- **Verantwortlicher**: [TODO]
+- **Aktuelle CFR**: [TODO]
 
 ## Performance-Level
 
@@ -188,10 +199,3 @@ CFR = (Failed Deployments / Total Deployments) × 100%
 
 <!-- Hinweis: Niedrige CFR ist Zeichen von Qualität -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |

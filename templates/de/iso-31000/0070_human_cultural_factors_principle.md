@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-31000-0070
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Prinzip 7: Menschliche und kulturelle Faktoren
+
+**Dokument-ID:** [FRAMEWORK]-0070
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -25,12 +37,12 @@ Menschliches Verhalten und Kultur beeinflussen alle Aspekte des Risikomanagement
 - Kommunikation ist entscheidend
 - Psychologische Faktoren werden berücksichtigt
 
-## Umsetzung in {{ meta.organization }}
+## Umsetzung in {{ meta-organisation.name }}
 
 ### Risikokultur
 
 **Definition der Risikokultur:**
-Die Risikokultur von {{ meta.organization }} umfasst die Werte, Überzeugungen, Kenntnisse, Einstellungen und das Verständnis über Risiken, die von Mitarbeitern geteilt werden.
+Die Risikokultur von {{ meta-organisation.name }} umfasst die Werte, Überzeugungen, Kenntnisse, Einstellungen und das Verständnis über Risiken, die von Mitarbeitern geteilt werden.
 
 **Elemente der Risikokultur:**
 - Offene Kommunikation über Risiken
@@ -101,12 +113,4 @@ Die Risikokultur von {{ meta.organization }} umfasst die Werte, Überzeugungen, 
 - Berücksichtigung verschiedener Perspektiven
 - Aufbau von Vertrauen
 - Gemeinsames Risikoverständnis entwickeln
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |
 

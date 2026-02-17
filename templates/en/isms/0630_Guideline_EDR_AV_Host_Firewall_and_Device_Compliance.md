@@ -1,14 +1,16 @@
 # Guideline: EDR, Antivirus, Host Firewall and Device Compliance
 
-**Document ID:** 0630  
-**Document Type:** Guideline (detailed)  
-**Related Policy:** 0620_Policy_Endpoint_Security.md  
-**Standard Reference:** ISO/IEC 27001:2022 Annex A.8.7  
-**Owner:** {{ meta.it_operations.manager }}  
-**Version:** 1.0  
-**Status:** Approved  
-**Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}
+**Document-ID:** [FRAMEWORK]-0630
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -20,7 +22,7 @@ This guideline implements `0620_Policy_Endpoint_Security.md` and defines:
 - Host firewall policies
 - Device compliance requirements
 
-**Scope:** All endpoints at **{{ meta.organization.name }}**
+**Scope:** All endpoints at **{{ meta-organisation.name }}**
 
 ## 2. Endpoint Detection and Response (EDR)
 
@@ -314,15 +316,6 @@ This guideline implements `0620_Policy_Endpoint_Security.md` and defines:
 - **NIST SP 800-83** - Guide to Malware Incident Prevention and Handling
 - **CIS Controls** - Malware Defenses
 
----
-
 **Approved by:** {{ meta.ciso.name }}, CISO  
-**Next Review:** {{ meta.document.next_review }}
+**Next Review:** {{ meta-handbook.next_review }}
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

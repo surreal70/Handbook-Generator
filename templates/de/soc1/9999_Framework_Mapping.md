@@ -1,5 +1,19 @@
 # SOC 1 Framework Mapping
 
+**Dokument-ID:** [FRAMEWORK]-9999
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Überblick
 
 Dieses Dokument mappt die Handbook-Templates zu SOC 1 (Service Organization Control) Type II Berichtsanforderungen basierend auf SSAE 18 / ISAE 3402.
@@ -156,8 +170,3 @@ Alle geplanten Templates wurden erfolgreich implementiert. Das SOC1-Framework ha
 - AICPA Trust Services Criteria
 - COSO Internal Control - Integrated Framework
 
-## Versionshistorie
-
-| Version | Datum | Änderungen |
-|---------|-------|------------|
-| 0.1 | {{meta.document.last_updated}} | Initiale Erstellung |

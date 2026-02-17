@@ -1,11 +1,16 @@
 # IT Systems and Applications
 
-**Document-ID:** idw-ps-951-0300  
-**Owner:** {{ meta.audit_lead }}  
-**Version:** {{ meta.version }}  
-**Status:** {{ meta.status }}  
-**Classification:** {{ meta.classification }}  
-**Last Update:** {{ meta.date }}
+**Document-ID:** idw-ps-951-0300
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -16,9 +21,9 @@ This document describes the audit of IT systems and applications as part of the 
 ## 2. Audit Subject
 
 ### Application Landscape
-- **Core Systems:** {{ source.core_systems }}
-- **Business Applications:** {{ source.business_applications }}
-- **Interfaces:** {{ source.interfaces }}
+- **Core Systems:** [TODO]
+- **Business Applications:** [TODO]
+- **Interfaces:** [TODO]
 
 ### Audit Objectives
 - Assessment of application landscape
@@ -43,38 +48,29 @@ This document describes the audit of IT systems and applications as part of the 
 
 | System | Documented | Controlled | Tested | Assessment |
 |--------|------------|------------|--------|------------|
-| {{ source.system_1 }} | {{ source.system_1_doc }} | {{ source.system_1_ctrl }} | {{ source.system_1_test }} | {{ source.system_1_assess }} |
-| {{ source.system_2 }} | {{ source.system_2_doc }} | {{ source.system_2_ctrl }} | {{ source.system_2_test }} | {{ source.system_2_assess }} |
+| [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## 5. Findings
 
 ### Positive Findings
-1. {{ source.positive_finding_1 }}
+1. [TODO]
 
 ### Improvement Opportunities
-1. {{ source.improvement_1 }}
+1. [TODO]
 
 ## 6. Recommendations
 
-1. {{ source.recommendation_1 }}
+1. [TODO]
 
 ## 7. References
 
 - IDW PS 951 - IT Systems
 - ISO/IEC 27001
 
----
-
 **Approved by:**  
-{{ meta.audit_lead }}, Audit Lead  
-Date: {{ meta.approval_date }}
+{{ meta-organisation-roles.role_Internal_Auditor }}, Audit Lead  
+Date: {{ meta-handbook.valid_from }}
 
-**Next Review:** {{ meta.next_review }}
+**Next Review:** {{ meta-handbook.next_review }}
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |

@@ -1,14 +1,16 @@
 # Guideline: Data Protection Requirements and Data Processing
 
-**Document ID:** 0570  
-**Document Type:** Guideline (detailed)  
-**Associated Policy:** 0560_Policy_Data_Protection_Interfaces.md  
-**Standard Reference:** ISO/IEC 27001:2022 Annex A.5.34  
-**Owner:** {{ meta.dpo.name }}  
-**Version:** 1.0  
-**Status:** Approved  
-**Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}
+**Document-ID:** [FRAMEWORK]-0570
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -19,7 +21,7 @@ This guideline specifies the `0560_Policy_Data_Protection_Interfaces.md` and def
 - Data processing processes
 - Data subject rights and their implementation
 
-**Scope:** All personal data at **{{ meta.organization.name }}**
+**Scope:** All personal data at **{{ meta-organisation.name }}**
 
 ## 2. GDPR Principles
 
@@ -302,15 +304,6 @@ This guideline specifies the `0560_Policy_Data_Protection_Interfaces.md` and def
 - **GDPR (EU 2016/679)** - General Data Protection Regulation
 - **BDSG** - German Federal Data Protection Act
 
----
-
 **Approved by:** {{ meta.dpo.name }}, Data Protection Officer  
-**Next Review:** {{ meta.document.next_review }}
+**Next Review:** {{ meta-handbook.next_review }}
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

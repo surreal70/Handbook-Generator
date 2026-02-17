@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0250
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Equipment Security
+
+**Document-ID:** [FRAMEWORK]-0250
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -15,7 +26,7 @@ This document defines measures for securing equipment according to TISAX require
 
 ## Scope
 
-This document applies to all IT equipment and assets of {{ source.organization_name }}.
+This document applies to all IT equipment and assets of [TODO].
 
 ## Equipment Protection
 
@@ -65,17 +76,9 @@ This document applies to all IT equipment and assets of {{ source.organization_n
 
 ## Metrics
 
-{{ source.organization_name }} measures:
+[TODO] measures:
 - Number of stolen/lost devices
 - Encryption compliance rate
 - Number of proper disposals
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

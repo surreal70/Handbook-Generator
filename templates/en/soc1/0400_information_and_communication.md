@@ -1,13 +1,24 @@
----
+
 Document-ID: soc1-0400
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Information and Communication - Overview
+
+**Document-ID:** [FRAMEWORK]-0400
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -30,15 +41,15 @@ Information and communication are essential to carrying out all components of in
 
 ### Information Requirements
 
-**Relevance**: {{ source.information_relevance }}
+**Relevance**: [TODO]
 
-**Quality**: {{ source.information_quality }}
+**Quality**: [TODO]
 
-**Timeliness**: {{ source.information_timeliness }}
+**Timeliness**: [TODO]
 
-**Accuracy**: {{ source.information_accuracy }}
+**Accuracy**: [TODO]
 
-**Accessibility**: {{ source.information_accessibility }}
+**Accessibility**: [TODO]
 
 ### Information Sources
 
@@ -49,7 +60,7 @@ Information and communication are essential to carrying out all components of in
 - Employee feedback
 - Internal reports
 
-{{ source.internal_sources }}
+[TODO]
 
 **External Sources**:
 - Customer feedback
@@ -58,19 +69,19 @@ Information and communication are essential to carrying out all components of in
 - Market information
 - Industry trends
 
-{{ source.external_sources }}
+[TODO]
 
 ### Information Processing
 
-**Data Collection**: {{ source.data_collection }}
+**Data Collection**: [TODO]
 
-**Data Processing**: {{ source.data_processing }}
+**Data Processing**: [TODO]
 
-**Data Validation**: {{ source.data_validation }}
+**Data Validation**: [TODO]
 
-**Data Storage**: {{ source.data_storage }}
+**Data Storage**: [TODO]
 
-**Data Archiving**: {{ source.data_archiving }}
+**Data Archiving**: [TODO]
 
 ## Internal Communication
 
@@ -84,7 +95,7 @@ Information and communication are essential to carrying out all components of in
 - Email communication
 - Newsletters
 
-{{ source.formal_channels }}
+[TODO]
 
 **Informal Channels**:
 - Team discussions
@@ -92,18 +103,18 @@ Information and communication are essential to carrying out all components of in
 - Instant messaging
 - Social interactions
 
-{{ source.informal_channels }}
+[TODO]
 
 ### Communication of Control Responsibilities
 
 **Roles and Responsibilities**:
-{{ source.roles_responsibilities_communication }}
+[TODO]
 
-**Control Objectives**: {{ source.control_objectives_communication }}
+**Control Objectives**: [TODO]
 
-**Control Procedures**: {{ source.control_procedures_communication }}
+**Control Procedures**: [TODO]
 
-**Expectations**: {{ source.expectations_communication }}
+**Expectations**: [TODO]
 
 ### Management Communication
 
@@ -113,7 +124,7 @@ Information and communication are essential to carrying out all components of in
 - Performance expectations
 - Policy changes
 
-{{ source.top_down_communication }}
+[TODO]
 
 **Bottom-Up Communication**:
 - Performance reports
@@ -121,17 +132,17 @@ Information and communication are essential to carrying out all components of in
 - Improvement suggestions
 - Feedback
 
-{{ source.bottom_up_communication }}
+[TODO]
 
 ### Employee Communication
 
-**Onboarding Communication**: {{ source.onboarding_communication }}
+**Onboarding Communication**: [TODO]
 
-**Ongoing Communication**: {{ source.ongoing_communication }}
+**Ongoing Communication**: [TODO]
 
-**Training Communication**: {{ source.training_communication }}
+**Training Communication**: [TODO]
 
-**Performance Feedback**: {{ source.performance_feedback }}
+**Performance Feedback**: [TODO]
 
 ## External Communication
 
@@ -143,7 +154,7 @@ Information and communication are essential to carrying out all components of in
 - Incident notifications
 - Change notifications
 
-{{ source.customer_communication }}
+[TODO]
 
 **Suppliers**:
 - Requirements
@@ -151,7 +162,7 @@ Information and communication are essential to carrying out all components of in
 - Feedback
 - Contract changes
 
-{{ source.supplier_communication }}
+[TODO]
 
 **Regulatory Authorities**:
 - Compliance reports
@@ -159,7 +170,7 @@ Information and communication are essential to carrying out all components of in
 - Inquiries and responses
 - Audit cooperation
 
-{{ source.regulatory_communication }}
+[TODO]
 
 **External Auditors**:
 - Audit planning
@@ -167,63 +178,63 @@ Information and communication are essential to carrying out all components of in
 - Findings and recommendations
 - Management responses
 
-{{ source.auditor_communication }}
+[TODO]
 
 ### External Reporting
 
-**SOC 1 Reports**: {{ source.soc1_reporting }}
+**SOC 1 Reports**: [TODO]
 
-**Compliance Reports**: {{ source.compliance_reporting }}
+**Compliance Reports**: [TODO]
 
-**Incident Reporting**: {{ source.incident_reporting }}
+**Incident Reporting**: [TODO]
 
-**Transparency Reports**: {{ source.transparency_reporting }}
+**Transparency Reports**: [TODO]
 
 ### Communication Policies
 
-**External Communication Policy**: {{ source.external_communication_policy }}
+**External Communication Policy**: [TODO]
 
-**Media Policy**: {{ source.media_policy }}
+**Media Policy**: [TODO]
 
-**Social Media Policy**: {{ source.social_media_policy }}
+**Social Media Policy**: [TODO]
 
-**Confidentiality Agreements**: {{ source.confidentiality_agreements }}
+**Confidentiality Agreements**: [TODO]
 
 ## Information Systems
 
 ### System Architecture
 
 **Application Systems**:
-{{ source.application_systems }}
+[TODO]
 
 **Infrastructure Systems**:
-{{ source.infrastructure_systems }}
+[TODO]
 
 **Database Systems**:
-{{ source.database_systems }}
+[TODO]
 
 **Integrations**:
-{{ source.system_integrations }}
+[TODO]
 
 ### System Controls
 
-**Access Controls**: {{ source.system_access_controls }}
+**Access Controls**: [TODO]
 
-**Data Integrity**: {{ source.data_integrity_controls }}
+**Data Integrity**: [TODO]
 
-**Availability**: {{ source.availability_controls }}
+**Availability**: [TODO]
 
-**Confidentiality**: {{ source.confidentiality_controls }}
+**Confidentiality**: [TODO]
 
 ### System Monitoring
 
-**Performance Monitoring**: {{ source.system_performance_monitoring }}
+**Performance Monitoring**: [TODO]
 
-**Availability Monitoring**: {{ source.system_availability_monitoring }}
+**Availability Monitoring**: [TODO]
 
-**Security Monitoring**: {{ source.system_security_monitoring }}
+**Security Monitoring**: [TODO]
 
-**Capacity Monitoring**: {{ source.system_capacity_monitoring }}
+**Capacity Monitoring**: [TODO]
 
 ## Reporting
 
@@ -235,7 +246,7 @@ Information and communication are essential to carrying out all components of in
 - Cash flow statement
 - Budget variances
 
-{{ source.financial_reports }}
+[TODO]
 
 **Operational Reports**:
 - KPI dashboards
@@ -243,7 +254,7 @@ Information and communication are essential to carrying out all components of in
 - Operating statistics
 - Trend analyses
 
-{{ source.operational_reports }}
+[TODO]
 
 **Risk Reports**:
 - Risk inventory
@@ -251,11 +262,11 @@ Information and communication are essential to carrying out all components of in
 - Incident reports
 - Control deficiencies
 
-{{ source.risk_reports }}
+[TODO]
 
 ### Board Reporting
 
-**Reporting Frequency**: {{ source.board_reporting_frequency }}
+**Reporting Frequency**: [TODO]
 
 **Report Contents**:
 - Strategic performance
@@ -264,61 +275,61 @@ Information and communication are essential to carrying out all components of in
 - Compliance status
 - Significant incidents
 
-{{ source.board_report_contents }}
+[TODO]
 
-**Report Format**: {{ source.board_report_format }}
+**Report Format**: [TODO]
 
 ### Committee Reporting
 
-**Audit Committee**: {{ source.audit_committee_reporting }}
+**Audit Committee**: [TODO]
 
-**Risk Committee**: {{ source.risk_committee_reporting }}
+**Risk Committee**: [TODO]
 
-**Compliance Committee**: {{ source.compliance_committee_reporting }}
+**Compliance Committee**: [TODO]
 
 ### Report Quality
 
-**Accuracy**: {{ source.report_accuracy }}
+**Accuracy**: [TODO]
 
-**Completeness**: {{ source.report_completeness }}
+**Completeness**: [TODO]
 
-**Timeliness**: {{ source.report_timeliness }}
+**Timeliness**: [TODO]
 
-**Clarity**: {{ source.report_clarity }}
+**Clarity**: [TODO]
 
 ## Whistleblower Mechanisms
 
 ### Reporting Procedures
 
 **Reporting Channels**:
-- Hotline: {{ source.whistleblower_hotline }}
-- Email: {{ source.whistleblower_email }}
-- Online Portal: {{ source.whistleblower_portal }}
-- Mailbox: {{ source.whistleblower_mailbox }}
+- Hotline: [TODO]
+- Email: [TODO]
+- Online Portal: [TODO]
+- Mailbox: [TODO]
 
-{{ source.reporting_channels }}
+[TODO]
 
-**Anonymity**: {{ source.anonymous_reporting }}
+**Anonymity**: [TODO]
 
-**Confidentiality**: {{ source.confidential_reporting }}
+**Confidentiality**: [TODO]
 
 ### Protection from Retaliation
 
-**Protection Policy**: {{ source.retaliation_protection_policy }}
+**Protection Policy**: [TODO]
 
-**Non-Retaliation Policy**: {{ source.non_retaliation_policy }}
+**Non-Retaliation Policy**: [TODO]
 
-**Enforcement**: {{ source.protection_enforcement }}
+**Enforcement**: [TODO]
 
 ### Processing Reports
 
-**Acknowledgment**: {{ source.report_acknowledgment }}
+**Acknowledgment**: [TODO]
 
-**Investigation Process**: {{ source.investigation_process }}
+**Investigation Process**: [TODO]
 
-**Feedback**: {{ source.reporter_feedback }}
+**Feedback**: [TODO]
 
-**Documentation**: {{ source.reporting_documentation }}
+**Documentation**: [TODO]
 
 ## Communication Effectiveness
 
@@ -330,7 +341,7 @@ Information and communication are essential to carrying out all components of in
 - Communication audits
 - Effectiveness metrics
 
-{{ source.communication_assessment }}
+[TODO]
 
 **Assessment Criteria**:
 - Clarity
@@ -339,17 +350,17 @@ Information and communication are essential to carrying out all components of in
 - Accessibility
 - Understandability
 
-{{ source.assessment_criteria }}
+[TODO]
 
 ### Improvement Actions
 
-**Identified Gaps**: {{ source.communication_gaps }}
+**Identified Gaps**: [TODO]
 
-**Improvement Initiatives**: {{ source.improvement_initiatives }}
+**Improvement Initiatives**: [TODO]
 
-**Implementation**: {{ source.improvement_implementation }}
+**Implementation**: [TODO]
 
-**Follow-up**: {{ source.improvement_followup }}
+**Follow-up**: [TODO]
 
 ## Documentation and Evidence
 
@@ -373,21 +384,21 @@ Information and communication are essential to carrying out all components of in
    - Integration documentation
    - System manuals
 
-{{ source.required_documentation }}
+[TODO]
 
 ### Retention Requirements
 
-{{ source.retention_requirements }}
+[TODO]
 
 ## Monitoring and Reporting
 
 ### Monitoring Activities
 
-**Communication Monitoring**: {{ source.communication_monitoring }}
+**Communication Monitoring**: [TODO]
 
-**System Monitoring**: {{ source.system_monitoring }}
+**System Monitoring**: [TODO]
 
-**Report Quality Monitoring**: {{ source.report_quality_monitoring }}
+**Report Quality Monitoring**: [TODO]
 
 ### Metrics
 
@@ -397,15 +408,15 @@ Information and communication are essential to carrying out all components of in
 - Report timeliness
 - Information quality
 
-{{ source.communication_kpis }}
+[TODO]
 
 ### Reporting
 
-**Internal Reporting**: {{ source.internal_reporting }}
+**Internal Reporting**: [TODO]
 
-**Management Reporting**: {{ source.management_reporting }}
+**Management Reporting**: [TODO]
 
-**Board Reporting**: {{ source.board_reporting }}
+**Board Reporting**: [TODO]
 
 ## References
 
@@ -415,13 +426,5 @@ Information and communication are essential to carrying out all components of in
 - COBIT 2019 - Information and Communication
 
 <!-- Author notes: Update communication channels when changes occur -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

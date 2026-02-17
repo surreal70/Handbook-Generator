@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0210
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Lead Time Messung
+
+**Dokument-ID:** [FRAMEWORK]-0210
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -22,9 +33,9 @@ Dieses Dokument beschreibt die praktische Implementierung der Lead Time Messung,
 
 ## Organisationsinformationen
 
-- **Organisation**: {{ source.organization_name }}
-- **Messverantwortlicher**: {{ source.lead_time_measurement_owner }}
-- **Messsystem**: {{ source.lead_time_measurement_system }}
+- **Organisation**: [TODO]
+- **Messverantwortlicher**: [TODO]
+- **Messsystem**: [TODO]
 
 ## Datenerfassung
 
@@ -98,10 +109,3 @@ Avg Lead Time = Σ(Lead Times) / Anzahl Deployments
 
 <!-- Hinweis: Genaue Messung ermöglicht gezielte Optimierung -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |

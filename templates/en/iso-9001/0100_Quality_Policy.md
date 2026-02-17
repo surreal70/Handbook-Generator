@@ -1,11 +1,16 @@
 # Quality Policy
 
-**Document-ID:** 0100  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0100
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -29,7 +34,7 @@ Reference: ISO 9001:2015, Clause 5.2
 
 ## Purpose
 
-This document establishes the Quality Policy for {{ meta.organization }} in accordance with ISO 9001:2015 Clause 5.2. The quality policy expresses top management's commitment to quality and provides the framework for establishing and reviewing quality objectives.
+This document establishes the Quality Policy for {{ meta-organisation.name }} in accordance with ISO 9001:2015 Clause 5.2. The quality policy expresses top management's commitment to quality and provides the framework for establishing and reviewing quality objectives.
 
 ## Quality Policy Statement
 
@@ -37,7 +42,7 @@ This document establishes the Quality Policy for {{ meta.organization }} in acco
 
 **Example:**
 
-"At {{ meta.organization }}, we are committed to:
+"At {{ meta-organisation.name }}, we are committed to:
 - Delivering products and services that consistently meet customer requirements and applicable regulatory requirements
 - Enhancing customer satisfaction through effective application of our quality management system
 - Continually improving the effectiveness of our quality management system
@@ -150,8 +155,6 @@ The quality policy supports:
 - **Version control:** Maintained according to documented information control (Clause 7.5)
 - **Distribution:** [TODO: Describe distribution method]
 
----
-
 **Next Steps:**
 1. Develop quality policy statement with top management
 2. Ensure alignment with organizational context and strategy
@@ -160,10 +163,3 @@ The quality policy supports:
 5. Establish quality objectives based on policy framework
 6. Schedule regular policy reviews
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

@@ -1,13 +1,24 @@
----
+
 Document-ID: soc1-0300
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Kontrollaktivitäten
+
+**Dokument-ID:** [FRAMEWORK]-0070
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -29,61 +40,61 @@ Kontrollaktivitäten sind die Richtlinien und Verfahren, die sicherstellen, dass
 
 ### Eingabekontrollen
 
-**Vollständigkeit**: {{ source.input_completeness_controls }}
-**Genauigkeit**: {{ source.input_accuracy_controls }}
-**Gültigkeit**: {{ source.input_validity_controls }}
+**Vollständigkeit**: [TODO]
+**Genauigkeit**: [TODO]
+**Gültigkeit**: [TODO]
 
 ### Verarbeitungskontrollen
 
-**Berechnungskontrollen**: {{ source.processing_calculation_controls }}
-**Logikkontrollen**: {{ source.processing_logic_controls }}
-**Fehlerbehandlung**: {{ source.processing_error_handling }}
+**Berechnungskontrollen**: [TODO]
+**Logikkontrollen**: [TODO]
+**Fehlerbehandlung**: [TODO]
 
 ### Ausgabekontrollen
 
-**Vollständigkeit**: {{ source.output_completeness_controls }}
-**Genauigkeit**: {{ source.output_accuracy_controls }}
-**Verteilung**: {{ source.output_distribution_controls }}
+**Vollständigkeit**: [TODO]
+**Genauigkeit**: [TODO]
+**Verteilung**: [TODO]
 
 ## IT-Generalkontrollen
 
 ### Zugriffskontrollen
 
-**Benutzerauthentifizierung**: {{ source.user_authentication }}
-**Benutzerautorisierung**: {{ source.user_authorization }}
-**Privileged Access Management**: {{ source.privileged_access_management }}
+**Benutzerauthentifizierung**: [TODO]
+**Benutzerautorisierung**: [TODO]
+**Privileged Access Management**: [TODO]
 
 ### Änderungsmanagement
 
-**Change Control Process**: {{ source.change_control_process }}
-**Testing Requirements**: {{ source.change_testing }}
-**Approval Process**: {{ source.change_approval }}
+**Change Control Process**: [TODO]
+**Testing Requirements**: [TODO]
+**Approval Process**: [TODO]
 
 ### Backup und Recovery
 
-**Backup-Verfahren**: {{ source.backup_procedures }}
-**Recovery-Tests**: {{ source.recovery_testing }}
-**Retention**: {{ source.backup_retention }}
+**Backup-Verfahren**: [TODO]
+**Recovery-Tests**: [TODO]
+**Retention**: [TODO]
 
 ### Systemüberwachung
 
-**Performance Monitoring**: {{ source.performance_monitoring }}
-**Security Monitoring**: {{ source.security_monitoring }}
-**Incident Management**: {{ source.incident_management }}
+**Performance Monitoring**: [TODO]
+**Security Monitoring**: [TODO]
+**Incident Management**: [TODO]
 
 ## Funktionstrennung
 
 ### Kritische Trennungen
 
-{{ source.critical_segregations }}
+[TODO]
 
 ### Kompensatorische Kontrollen
 
-{{ source.compensating_controls }}
+[TODO]
 
 ### Überwachung von Konflikten
 
-{{ source.conflict_monitoring }}
+[TODO]
 
 ## Autorisierungskontrollen
 
@@ -91,41 +102,41 @@ Kontrollaktivitäten sind die Richtlinien und Verfahren, die sicherstellen, dass
 
 | Transaktion | Initiator | Genehmiger | Limit |
 |-------------|-----------|------------|-------|
-| {{ source.authorization_matrix_rows }} |
+| [TODO] |
 
 ### Genehmigungsverfahren
 
-{{ source.approval_procedures }}
+[TODO]
 
 ### Eskalation
 
-{{ source.authorization_escalation }}
+[TODO]
 
 ## Abstimmungskontrollen
 
 ### Kontenabstimmungen
 
-**Frequenz**: {{ source.reconciliation_frequency }}
-**Verantwortlichkeiten**: {{ source.reconciliation_responsibilities }}
-**Review**: {{ source.reconciliation_review }}
+**Frequenz**: [TODO]
+**Verantwortlichkeiten**: [TODO]
+**Review**: [TODO]
 
 ### Abstimmungsverfahren
 
-{{ source.reconciliation_procedures }}
+[TODO]
 
 ### Abweichungsbehandlung
 
-{{ source.reconciliation_variance_handling }}
+[TODO]
 
 ## Physische Kontrollen
 
 ### Zugangskontrollen
 
-{{ source.physical_access_controls }}
+[TODO]
 
 ### Vermögensschutz
 
-{{ source.asset_protection }}
+[TODO]
 
 ## Referenzen
 
@@ -134,12 +145,3 @@ Kontrollaktivitäten sind die Richtlinien und Verfahren, die sicherstellen, dass
 
 <!-- Hinweise für Autoren: Dokumentieren Sie alle Kontrollaktivitäten detailliert -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

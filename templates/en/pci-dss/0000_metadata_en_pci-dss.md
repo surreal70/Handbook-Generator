@@ -1,54 +1,34 @@
-# PCI-DSS Compliance Handbook
-
-**Document Metadata**
-
-- **Created on:** {{ metadata.date }}
-- **Author:** {{ metadata.author }}
-- **Version:** {{ metadata.version }}
-- **Type:** PCI-DSS Handbook
+# PCI-DSS Handbook - Metadata
 
 **Document-ID:** 0000  
-**Owner:** {{ meta.owner }}  
-**Status:** {{ meta.status }}  
-**Classification:** {{ meta.classification }}  
-**Last Updated:** {{ meta.date }}  
-**Template Version:** 1.0  
+**Date:** 2026-02-17  
+**Owner:** [TODO]  
 **Revision:** 0  
----
+**Status:** Draft  
+**Classification:** Internal  
+**Last Updated:** 2026-02-17  
+**Template-Version:** 1.0  
 
+---
 
 ## Handbook Information
 
-**Organization:** {{ meta.organization }}  
-**Scope:** {{ meta.scope }}  
-**Valid from:** {{ meta.valid_from }}  
-**Next Review:** {{ meta.next_review }}  
+**Handbook Title:** PCI-DSS Handbook  
+**Handbook Short:** PCI-DSS  
+**Organisation:** [TODO]  
+**Author:** [TODO]  
+**Scope:** [TODO]  
+**Valid from:** [TODO]  
+**Next Review:** [TODO]  
 
 ---
 
 ## Document Purpose
 
-[TODO: Add document purpose description]
-
-## Scope
-
-{{ meta.scope }}
-
-## Normative References
-
-[TODO: Add normative references]
+This document contains the metadata for the PCI-DSS handbook.
 
 ## Change History
 
 | Version | Date | Author | Change |
 |---------|------|--------|--------|
-| {{ meta.version }} | {{ meta.date }} | {{ meta.author }} | Initial Version |
-
-<!-- 
-This document is subject to document control.
-
-<!-- 
-This document is subject to document control.
-Template-Version: 1.0
-Revision: 0
--->
+| 0 | 2026-02-17 | [TODO] | Initial version |

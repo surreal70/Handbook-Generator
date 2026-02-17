@@ -1,11 +1,16 @@
 # Assumptions (Annahmen)
 
-**Dokument-ID:** 0230  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0230
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -86,8 +91,6 @@ Annahmen definieren Erwartungen an die Betriebsumgebung des TOE:
 - Frequenz: [TODO: z.B. Jährlich, Quartalsweise]
 - Dokumentation: [TODO: z.B. Audit-Bericht, Checkliste]
 
----
-
 ### A.ENVIRONMENTAL_PROTECTION
 **Annahme-ID:** A.ENVIRONMENTAL_PROTECTION  
 **Kategorie:** Physical  
@@ -146,8 +149,6 @@ Annahmen definieren Erwartungen an die Betriebsumgebung des TOE:
 - Methode: [TODO: z.B. Background Checks, Audit-Log-Review]
 - Frequenz: [TODO: z.B. Bei Einstellung, Jährlich]
 - Dokumentation: [TODO: z.B. HR-Akte, Schulungsnachweise]
-
----
 
 ### A.USER_TRAINING
 **Annahme-ID:** A.USER_TRAINING  
@@ -209,8 +210,6 @@ Annahmen definieren Erwartungen an die Betriebsumgebung des TOE:
 - Frequenz: [TODO: z.B. Quartalsweise]
 - Dokumentation: [TODO: z.B. Netzwerkdiagramm, Firewall-Regeln]
 
----
-
 ### A.SECURE_COMMUNICATION
 **Annahme-ID:** A.SECURE_COMMUNICATION  
 **Kategorie:** Connectivity  
@@ -269,8 +268,6 @@ Annahmen definieren Erwartungen an die Betriebsumgebung des TOE:
 - Frequenz: [TODO: z.B. Monatlich]
 - Dokumentation: [TODO: z.B. Scan-Berichte, Konfigurationsdokumentation]
 
----
-
 ### A.PLATFORM_AVAILABILITY
 **Annahme-ID:** A.PLATFORM_AVAILABILITY  
 **Kategorie:** Platform  
@@ -328,8 +325,6 @@ Annahmen definieren Erwartungen an die Betriebsumgebung des TOE:
 - Methode: [TODO: z.B. SOC-Audit, Incident-Response-Test]
 - Frequenz: [TODO: z.B. Quartalsweise]
 - Dokumentation: [TODO: z.B. SOC-Berichte, Incident-Logs]
-
----
 
 ### A.BACKUP_RECOVERY
 **Annahme-ID:** A.BACKUP_RECOVERY  
@@ -438,8 +433,6 @@ Annahmen definieren Erwartungen an die Betriebsumgebung des TOE:
 | [TODO: A.001] | [TODO: P.001, P.003] | [TODO: Enables enforcement] |
 | [TODO: A.002] | [TODO: P.002] | [TODO: Prerequisite] |
 
----
-
 **Nächste Schritte:**
 1. Vervollständige alle [TODO]-Platzhalter mit umgebungsspezifischen Annahmen
 2. Dokumentiere alle relevanten Annahmen
@@ -448,10 +441,3 @@ Annahmen definieren Erwartungen an die Betriebsumgebung des TOE:
 5. Erstelle Validierungsplan
 6. Überprüfe Konsistenz mit Threats (Template 0210), OSPs (Template 0220) und Security Objectives (Template 0300)
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

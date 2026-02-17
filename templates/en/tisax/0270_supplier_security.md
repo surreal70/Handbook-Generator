@@ -1,17 +1,28 @@
----
+
 Document-ID: tisax-0400
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Supplier Security
 
+**Document-ID:** [FRAMEWORK]-0270
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document describes the security requirements for suppliers at {{ source.organization_name }}.
+This document describes the security requirements for suppliers at [TODO].
 
 ## Supplier Assessment
 
@@ -37,23 +48,15 @@ This document describes the security requirements for suppliers at {{ source.org
 
 ### TISAX Requirements
 Suppliers with access to confidential information must be TISAX certified:
-- Assessment Level: {{ source.supplier_tisax_level }}
+- Assessment Level: [TODO]
 
 ## Supplier Register
 
 | Supplier | Service | Risk Level | TISAX Status |
 |----------|---------|------------|--------------|
-| {{ source.supplier_1 }} | {{ source.supplier_1_service }} | {{ source.supplier_1_risk }} | {{ source.supplier_1_tisax }} |
-| {{ source.supplier_2 }} | {{ source.supplier_2_service }} | {{ source.supplier_2_risk }} | {{ source.supplier_2_tisax }} |
+| [TODO] | [TODO] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [TODO] | [TODO] |
 
 <!-- Note: Maintain the supplier register -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

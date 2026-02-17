@@ -1,5 +1,19 @@
 # TSC Framework Mapping
 
+**Document-ID:** [FRAMEWORK]-9999
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Overview
 
 This document maps the TSC templates to the Trust Services Criteria (TSC) for SOC 2 audits.
@@ -190,22 +204,7 @@ All TSC criteria are covered by templates.
 4. **Evidence Collection:** Collect evidence for each control
 5. **Audit Preparation:** Prepare documentation for audit
 
----
-
 **Version:** 1.0.0  
 **Last Updated:** 2026-02-07  
 **Maintainer:** TSC-Template-Team
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
-
-## Version History
-
-| Version | Date | Changes |
-|---------|------|---------|
-| 0.1 | {{meta.document.last_updated}} | Initial creation |

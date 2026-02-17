@@ -1,13 +1,24 @@
----
+
 Document-ID: soc1-0420
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Control Deficiencies and Remediation
+
+**Document-ID:** [FRAMEWORK]-0150
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -27,120 +38,120 @@ This document describes the process for identifying, assessing, and remediating 
 **Definition**: A weakness in the design or operation of a control that impairs the ability of management or employees to prevent or detect errors or irregularities on a timely basis.
 
 **Examples**:
-{{ source.control_deficiency_examples }}
+[TODO]
 
 ### Significant Deficiency
 
 **Definition**: A control deficiency or combination of control deficiencies that is less severe than a material weakness, yet important enough to merit attention by those responsible for oversight of financial reporting.
 
 **Criteria**:
-{{ source.significant_deficiency_criteria }}
+[TODO]
 
 ### Material Weakness
 
 **Definition**: A control deficiency or combination of control deficiencies that results in a more than remote likelihood that a material misstatement in the financial statements will not be prevented or detected on a timely basis.
 
 **Criteria**:
-{{ source.material_weakness_criteria }}
+[TODO]
 
 ## Identification of Control Deficiencies
 
 ### Identification Sources
 
-**Internal Audits**: {{ source.internal_audit_findings }}
-**Management Reviews**: {{ source.management_review_findings }}
-**External Audits**: {{ source.external_audit_findings }}
-**Incident Reports**: {{ source.incident_findings }}
-**Self-Assessments**: {{ source.self_assessment_findings }}
+**Internal Audits**: [TODO]
+**Management Reviews**: [TODO]
+**External Audits**: [TODO]
+**Incident Reports**: [TODO]
+**Self-Assessments**: [TODO]
 
 ### Documentation
 
-{{ source.deficiency_documentation }}
+[TODO]
 
 ## Severity Assessment
 
 ### Assessment Criteria
 
-**Likelihood**: {{ source.deficiency_likelihood }}
-**Impact**: {{ source.deficiency_impact }}
-**Compensating Controls**: {{ source.compensating_controls_assessment }}
+**Likelihood**: [TODO]
+**Impact**: [TODO]
+**Compensating Controls**: [TODO]
 
 ### Assessment Matrix
 
 | Deficiency | Likelihood | Impact | Severity | Classification |
 |------------|-----------|--------|----------|----------------|
-| {{ source.deficiency_matrix_rows }} |
+| [TODO] |
 
 ### Escalation Criteria
 
-{{ source.deficiency_escalation_criteria }}
+[TODO]
 
 ## Corrective Actions
 
 ### Action Planning
 
-**Responsibilities**: {{ source.remediation_responsibilities }}
-**Timeline**: {{ source.remediation_timeline }}
-**Resources**: {{ source.remediation_resources }}
+**Responsibilities**: [TODO]
+**Timeline**: [TODO]
+**Resources**: [TODO]
 
 ### Action Plan
 
 | Deficiency ID | Description | Corrective Action | Responsible | Due Date | Status |
 |---------------|-------------|-------------------|-------------|----------|--------|
-| {{ source.remediation_plan_rows }} |
+| [TODO] |
 
 ### Implementation
 
-{{ source.remediation_implementation }}
+[TODO]
 
 ### Validation
 
-{{ source.remediation_validation }}
+[TODO]
 
 ## Tracking
 
 ### Tracking Mechanism
 
-{{ source.deficiency_tracking }}
+[TODO]
 
 ### Status Updates
 
-**Frequency**: {{ source.status_update_frequency }}
-**Reporting**: {{ source.status_reporting }}
+**Frequency**: [TODO]
+**Reporting**: [TODO]
 
 ### Closure
 
-{{ source.deficiency_closure }}
+[TODO]
 
 ## Reporting
 
 ### Management Reporting
 
-**Reports**: {{ source.management_deficiency_reports }}
-**Frequency**: {{ source.management_reporting_frequency_deficiencies }}
+**Reports**: [TODO]
+**Frequency**: [TODO]
 
 ### Board Reporting
 
-{{ source.board_deficiency_reports }}
+[TODO]
 
 ### External Reporting
 
-**Service Auditor**: {{ source.auditor_deficiency_reporting }}
-**User Organizations**: {{ source.user_org_deficiency_communication }}
+**Service Auditor**: [TODO]
+**User Organizations**: [TODO]
 
 ## Prevention
 
 ### Lessons Learned
 
-{{ source.deficiency_lessons_learned }}
+[TODO]
 
 ### Process Improvements
 
-{{ source.deficiency_process_improvements }}
+[TODO]
 
 ### Training
 
-{{ source.deficiency_prevention_training }}
+[TODO]
 
 ## References
 
@@ -149,13 +160,5 @@ This document describes the process for identifying, assessing, and remediating 
 - Corrective Action Policy
 
 <!-- Author notes: Document all control deficiencies completely and promptly -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

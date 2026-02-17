@@ -1,13 +1,16 @@
 # Systembeschreibung
 
-**Dokument-ID:** TSC-0010  
-**Organisation:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** TSC-0010
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,7 +28,7 @@ Customization required:
 
 ## 1. Zweck
 
-Dieses Dokument beschreibt das Service-System von {{ meta.organization.name }}, das Gegenstand des SOC 2-Audits ist.
+Dieses Dokument beschreibt das Service-System von {{ meta-organisation.name }}, das Gegenstand des SOC 2-Audits ist.
 
 ### 1.1 Ziele
 
@@ -44,10 +47,10 @@ Dieses Dokument beschreibt das Service-System von {{ meta.organization.name }}, 
 
 ### 2.1 Service Organization
 
-**Organisation:** {{ meta.organization.name }}  
-**Adresse:** {{ meta.organization.address }}, {{ meta.organization.postal_code }} {{ meta.organization.city }}  
-**Land:** {{ meta.organization.country }}  
-**Website:** {{ meta.organization.website }}  
+**Organisation:** {{ meta-organisation.name }}  
+**Adresse:** {{ meta-organisation.address }}, [TODO] [TODO]  
+**Land:** [TODO]  
+**Website:** [TODO]  
 
 **Geschäftsbereich:** [TODO: z.B. Cloud-Hosting, SaaS, Managed Services]  
 **Gründungsjahr:** [TODO: Jahr]  
@@ -174,7 +177,7 @@ Dieses Dokument beschreibt das Service-System von {{ meta.organization.name }}, 
 **Management:**
 - **CEO:** [TODO: Name]
 - **CTO:** [TODO: Name]
-- **CISO:** {{ meta.roles.ciso.name }}
+- **CISO:** {{ meta-organisation-roles.role_CISO }}
 - **COO:** [TODO: Name]
 
 **Teams:**
@@ -370,13 +373,5 @@ Dieses Dokument beschreibt das Service-System von {{ meta.organization.name }}, 
 
 **Upcoming Changes:**
 - [TODO: Beschreibung geplanter Änderungen]
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 <!-- End of template -->

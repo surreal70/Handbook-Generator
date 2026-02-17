@@ -1,5 +1,19 @@
 # Non-Conformities and Corrective Actions
 
+**Document-ID:** [FRAMEWORK]-0150
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This document defines the process for handling non-conformities and implementing
@@ -16,16 +30,14 @@ ISO 27001:2022 Reference: Clause 10.1 - Nonconformity and corrective action
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** {{ meta-handbook.modifydate }}  
+**Next Review:** {{ meta-handbook.next_review }}
 
 ## 1. Purpose and Objective
 
 ### 1.1 Purpose
 
-This document defines the process for systematic treatment of non-conformities in the ISMS of **{{ meta.organization.name }}**. It ensures that:
+This document defines the process for systematic treatment of non-conformities in the ISMS of **{{ meta-organisation.name }}**. It ensures that:
 - Deviations from requirements are identified and documented
 - Root causes are analyzed and addressed
 - Corrective actions are effectively implemented
@@ -392,18 +404,9 @@ This document defines the process for systematic treatment of non-conformities i
 - **ISO 9001:2015** - Clause 10.2: Nonconformity and corrective action
 - **ISO 19011:2018** - Guidelines for auditing management systems
 
----
-
 **Approved by:**  
 {{ meta.ciso.name }}, CISO  
-Date: {{ meta.document.approval_date }}
+Date: {{ meta-handbook.modifydate }}
 
-**Next Review:** {{ meta.document.next_review }}
+**Next Review:** {{ meta-handbook.next_review }}
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

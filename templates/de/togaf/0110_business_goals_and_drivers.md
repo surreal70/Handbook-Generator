@@ -1,17 +1,28 @@
----
+
 Document-ID: togaf-0110
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Geschäftsziele und Treiber
 
+**Dokument-ID:** [FRAMEWORK]-0110
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument dokumentiert die Geschäftsziele und Treiber, die die Architecture-Entwicklung bei {{ source.organization_name }} motivieren.
+Dieses Dokument dokumentiert die Geschäftsziele und Treiber, die die Architecture-Entwicklung bei [TODO] motivieren.
 
 ## Geltungsbereich
 
@@ -22,56 +33,47 @@ Dieses Dokument dokumentiert die Geschäftsziele und Treiber, die die Architectu
 
 ## Strategische Geschäftsziele
 
-### Ziel 1: {{ source.strategic_goal_1_name }}
+### Ziel 1: [TODO]
 
-**Beschreibung**: {{ source.strategic_goal_1_description }}
+**Beschreibung**: [TODO]
 
-**Zeitrahmen**: {{ source.strategic_goal_1_timeline }}
-
-**Erfolgskriterien**:
-- {{ source.strategic_goal_1_criterion_1 }}
-- {{ source.strategic_goal_1_criterion_2 }}
-- {{ source.strategic_goal_1_criterion_3 }}
-
-**Architecture-Implikationen**: {{ source.strategic_goal_1_arch_implications }}
-
-### Ziel 2: {{ source.strategic_goal_2_name }}
-
-**Beschreibung**: {{ source.strategic_goal_2_description }}
-
-**Zeitrahmen**: {{ source.strategic_goal_2_timeline }}
+**Zeitrahmen**: [TODO]
 
 **Erfolgskriterien**:
-- {{ source.strategic_goal_2_criterion_1 }}
-- {{ source.strategic_goal_2_criterion_2 }}
-- {{ source.strategic_goal_2_criterion_3 }}
+- [TODO]
+- [TODO]
+- [TODO]
 
-**Architecture-Implikationen**: {{ source.strategic_goal_2_arch_implications }}
+**Architecture-Implikationen**: [TODO]
+
+### Ziel 2: [TODO]
+
+**Beschreibung**: [TODO]
+
+**Zeitrahmen**: [TODO]
+
+**Erfolgskriterien**:
+- [TODO]
+- [TODO]
+- [TODO]
+
+**Architecture-Implikationen**: [TODO]
 
 ## Geschäftstreiber
 
 | Treiber | Kategorie | Dringlichkeit | Auswirkung auf Architecture |
 |---------|-----------|---------------|----------------------------|
-| {{ source.driver_1 }} | {{ source.driver_1_category }} | {{ source.driver_1_urgency }} | {{ source.driver_1_impact }} |
-| {{ source.driver_2 }} | {{ source.driver_2_category }} | {{ source.driver_2_urgency }} | {{ source.driver_2_impact }} |
-| {{ source.driver_3 }} | {{ source.driver_3_category }} | {{ source.driver_3_urgency }} | {{ source.driver_3_impact }} |
+| [TODO] | [TODO] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## Key Performance Indicators
 
 | KPI | Aktueller Wert | Zielwert | Zeitrahmen |
 |-----|----------------|----------|------------|
-| {{ source.kpi_1_name }} | {{ source.kpi_1_current }} | {{ source.kpi_1_target }} | {{ source.kpi_1_timeline }} |
-| {{ source.kpi_2_name }} | {{ source.kpi_2_current }} | {{ source.kpi_2_target }} | {{ source.kpi_2_timeline }} |
-| {{ source.kpi_3_name }} | {{ source.kpi_3_current }} | {{ source.kpi_3_target }} | {{ source.kpi_3_timeline }} |
+| [TODO] | [TODO] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [TODO] | [TODO] |
 
 <!-- Autorenhinweise: Stellen Sie sicher, dass Ziele messbar und erreichbar sind -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|------|--------|---------|
-| 0.1 | {{meta.document.last_updated}} | {{ meta.defaults.author }} | Initiale Erstellung |
-
-<-  ( marked all subtasks complete End of template -->

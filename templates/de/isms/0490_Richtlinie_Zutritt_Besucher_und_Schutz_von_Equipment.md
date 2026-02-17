@@ -1,14 +1,16 @@
 # Richtlinie: Zutritt, Besucher und Schutz von Equipment
 
-**Dokument-ID:** 0490  
-**Dokumenttyp:** Richtlinie (detailliert)  
-**Zugehörige Policy:** 0480_Policy_Physische_Sicherheit.md  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.7.1, A.7.2, A.7.3, A.7.4  
-**Owner:** {{ meta.facilities.manager }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}
+**Dokument-ID:** 0490
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -19,7 +21,7 @@ Diese Richtlinie konkretisiert die `0480_Policy_Physische_Sicherheit.md` und def
 - Besuchermanagement
 - Physischer Schutz von IT-Equipment
 
-**Geltungsbereich:** Alle Standorte von **{{ meta.organization.name }}**
+**Geltungsbereich:** Alle Standorte von **{{ meta-organisation.name }}**
 
 ## 2. Sicherheitszonen
 
@@ -217,15 +219,6 @@ Diese Richtlinie konkretisiert die `0480_Policy_Physische_Sicherheit.md` und def
 - **ISO/IEC 27001:2022 Annex A.7.3** - Securing offices, rooms and facilities
 - **ISO/IEC 27001:2022 Annex A.7.4** - Physical security monitoring
 
----
-
 **Genehmigt durch:** {{ meta.ciso.name }}, CISO  
-**Nächster Review:** {{ meta.document.next_review }}
+**Nächster Review:** {{ meta-handbook.next_review }}
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

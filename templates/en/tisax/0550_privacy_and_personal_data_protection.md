@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0550
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Privacy and Personal Data Protection
+
+**Document-ID:** [FRAMEWORK]-0550
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -15,7 +26,7 @@ This document describes measures for data protection according to TISAX requirem
 
 ## Scope
 
-This document applies to all processing of personal data at {{ source.organization_name }}.
+This document applies to all processing of personal data at [TODO].
 
 ## Data Protection Principles
 
@@ -151,8 +162,8 @@ This document applies to all processing of personal data at {{ source.organizati
 - Contact for data subjects and authorities
 
 **Contact:**
-- {{ source.data_protection_officer }}
-- {{ source.dpo_email }}
+- [TODO]
+- [TODO]
 
 ### Record of Processing Activities
 **Contents:**
@@ -214,19 +225,11 @@ This document applies to all processing of personal data at {{ source.organizati
 
 ## Metrics
 
-{{ source.organization_name }} measures:
+[TODO] measures:
 - Number of data subject requests
 - Average processing time
 - Number of data breaches
 - Training participation
 - Compliance rate
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-38500-0100
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Evaluate-Direct-Monitor (EDM) Modell
+
+**Dokument-ID:** [FRAMEWORK]-0100
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -16,7 +28,7 @@ Dieses Dokument beschreibt das Evaluate-Direct-Monitor (EDM) Modell, das den Ker
 ## Geltungsbereich
 
 Dieses Dokument gilt für:
-- {{ meta.organization }}
+- {{ meta-organisation.name }}
 - Alle IT-Governance-Prozesse
 - Vorstand, Geschäftsführung und IT-Management
 
@@ -136,19 +148,4 @@ Der EDM-Zyklus ist kontinuierlich und iterativ:
 - 0120_direction_processes.md
 - 0130_monitoring_processes.md
 - 0140_performance_measurement.md
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |
-
-<!-- 
-Autor-Hinweise: 
-- Das EDM-Modell ist der Kern der IT-Governance
-- Alle drei Aktivitäten sind gleich wichtig
-- Der Zyklus muss kontinuierlich durchlaufen werden
--->
 

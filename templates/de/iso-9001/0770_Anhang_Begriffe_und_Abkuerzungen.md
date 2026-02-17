@@ -1,11 +1,16 @@
 # Anhang: Begriffe und Abkürzungen
 
-**Dokument-ID:** 0770  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0770
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -16,7 +21,7 @@ Dieser Anhang definiert Begriffe und Abkürzungen, die im QMS verwendet werden.
 
 ## Zweck
 
-Dieser Anhang definiert wichtige Begriffe und Abkürzungen, die im Qualitätsmanagementsystem von {{ meta.organization }} verwendet werden.
+Dieser Anhang definiert wichtige Begriffe und Abkürzungen, die im Qualitätsmanagementsystem von {{ meta-organisation.name }} verwendet werden.
 
 ## Begriffsdefinitionen
 
@@ -309,14 +314,5 @@ Leitfaden zur Auditierung von Managementsystemen
 **ISO 31000**
 Risikomanagement - Leitlinien
 
----
-
 **Hinweis:** Begriffe und Definitionen aus ISO 9000:2015 sind maßgeblich. Dieser Anhang dient als Referenz für häufig verwendete Begriffe im QMS.
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

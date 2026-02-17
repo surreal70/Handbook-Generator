@@ -1,27 +1,38 @@
----
+
 Document-ID: tisax-0020
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Informationssicherheitsrichtlinie
 
+**Dokument-ID:** [FRAMEWORK]-0020
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument definiert die Informationssicherheitsrichtlinie von {{ source.organization_name }} gemäß TISAX-Anforderungen.
+Dieses Dokument definiert die Informationssicherheitsrichtlinie von [TODO] gemäß TISAX-Anforderungen.
 
 ## Geltungsbereich
 
-Diese Richtlinie gilt für alle Mitarbeiter, Auftragnehmer und Dritte, die auf Informationen und IT-Systeme von {{ source.organization_name }} zugreifen.
+Diese Richtlinie gilt für alle Mitarbeiter, Auftragnehmer und Dritte, die auf Informationen und IT-Systeme von [TODO] zugreifen.
 
 ## Richtlinienerklärung
 
 ### Verpflichtung zur Informationssicherheit
 
-{{ source.organization_name }} verpflichtet sich zum Schutz der Vertraulichkeit, Integrität und Verfügbarkeit aller Informationen und IT-Systeme.
+[TODO] verpflichtet sich zum Schutz der Vertraulichkeit, Integrität und Verfügbarkeit aller Informationen und IT-Systeme.
 
 ### Sicherheitsziele
 
@@ -36,7 +47,7 @@ Die Richtlinie gilt für:
 - Alle Informationsressourcen
 - Alle IT-Systeme und Netzwerke
 - Alle Geschäftsprozesse
-- Alle Standorte von {{ source.organization_name }}
+- Alle Standorte von [TODO]
 
 ## Verantwortlichkeiten
 
@@ -62,22 +73,13 @@ Die Richtlinie gilt für:
 
 Diese Richtlinie wird mindestens jährlich überprüft und bei Bedarf aktualisiert.
 
-**Letzte Überprüfung**: {{ source.policy_review_date }}
-**Nächste Überprüfung**: {{ source.policy_next_review_date }}
+**Letzte Überprüfung**: [TODO]
+**Nächste Überprüfung**: [TODO]
 
 ## Genehmigung
 
-**Genehmigt von**: {{ source.policy_approver }}
-**Datum**: {{ source.policy_approval_date }}
+**Genehmigt von**: [TODO]
+**Datum**: [TODO]
 
 <!-- Hinweis: Passen Sie die Richtlinie an Ihre organisatorischen Anforderungen an -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

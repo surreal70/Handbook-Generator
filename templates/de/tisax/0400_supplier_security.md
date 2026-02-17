@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0400
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Lieferantensicherheit
+
+**Dokument-ID:** [FRAMEWORK]-0400
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -15,7 +26,7 @@ Dieses Dokument definiert Anforderungen für die Sicherheit in Lieferantenbezieh
 
 ## Geltungsbereich
 
-Dieses Dokument gilt für alle Lieferanten und Dienstleister von {{ source.organization_name }}.
+Dieses Dokument gilt für alle Lieferanten und Dienstleister von [TODO].
 
 ## Lieferantenmanagement
 
@@ -114,17 +125,8 @@ Dieses Dokument adressiert:
 
 ## Kennzahlen
 
-{{ source.organization_name }} misst:
+[TODO] misst:
 - Anzahl kritischer Lieferanten
 - Compliance-Rate
 - Anzahl Sicherheitsvorfälle bei Lieferanten
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

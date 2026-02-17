@@ -1,13 +1,16 @@
 # Account Management
 
-**Dokument-ID:** NIST-0110  
-**Control Family:** Access Control (AC)  
-**Control:** AC-2  
-**Organisation:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** NIST-0110
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -65,20 +68,12 @@ The organization manages information system accounts including identification, a
 
 **Status:** [TODO: Implemented / Partially Implemented / Planned]  
 **Implementation Date:** [TODO: Datum]  
-**Responsible:** {{ meta.roles.isso.name }}  
+**Responsible:** [TODO]  
 
 ## 5. Assessment
 
 **Assessment Method:** Examine, Interview, Test  
 **Assessment Status:** [TODO: Satisfied / Other than Satisfied]  
 **Findings:** [TODO: Beschreibung]  
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 <!-- End of template -->

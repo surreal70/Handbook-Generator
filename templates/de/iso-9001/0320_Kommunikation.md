@@ -1,11 +1,16 @@
 # Kommunikation
 
-**Dokument-ID:** 0320  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0320
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -216,8 +221,6 @@ Dieses Dokument definiert interne und externe Kommunikationen, die für das Qual
 | Qualitätsziele | [TODO] | Oberste Leitung | Alle Mitarbeiter | [TODO] |
 | Prozessleistung | [TODO] | Prozessverantw. | Relevante Mitarbeiter | [TODO] |
 
----
-
 **Nächste Schritte:**
 1. Vervollständige Kommunikationsplanung für alle relevanten Kommunikationen
 2. Etabliere Kommunikationsmethoden und -kanäle
@@ -226,10 +229,3 @@ Dieses Dokument definiert interne und externe Kommunikationen, die für das Qual
 5. Überwache Kommunikationswirksamkeit
 6. Verbessere Kommunikationsprozesse kontinuierlich
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

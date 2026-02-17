@@ -1,12 +1,26 @@
 # Backup und Restore
 
+**Dokument-ID:** [FRAMEWORK]-0150
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck und Geltungsbereich
 
-Dieses Dokument beschreibt die Backup- und Restore-Strategien für {{ meta.organization.name }}. Es definiert Backup-Methoden, Zeitpläne, Aufbewahrungsfristen, RPO/RTO-Ziele und Restore-Prozeduren zur Sicherstellung der Datenintegrität und -verfügbarkeit.
+Dieses Dokument beschreibt die Backup- und Restore-Strategien für {{ meta-organisation.name }}. Es definiert Backup-Methoden, Zeitpläne, Aufbewahrungsfristen, RPO/RTO-Ziele und Restore-Prozeduren zur Sicherstellung der Datenintegrität und -verfügbarkeit.
 
-**Geltungsbereich:** Alle IT-Systeme, Datenbanken, Applikationen und Daten von {{ meta.organization.name }}
+**Geltungsbereich:** Alle IT-Systeme, Datenbanken, Applikationen und Daten von {{ meta-organisation.name }}
 
-**Verantwortlich:** {{ meta.it_operations_manager.name }} ({{ meta.it_operations_manager.email }})
+**Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }} ({{ meta-organisation-roles.role_it_operations_manager.email }})
 
 ## Backup-Grundlagen
 
@@ -126,7 +140,7 @@ Dieses Dokument beschreibt die Backup- und Restore-Strategien für {{ meta.organ
 **Beispiel:**
 1. Produktiv-Daten auf {{ netbox.storage.primary }}
 2. Backup auf {{ netbox.storage.backup_disk }}
-3. Offsite-Backup in {{ meta.backup_cloud_provider }}
+3. Offsite-Backup in {{ meta-handbook.backup_cloud_provider }}
 
 #### Backup-Tiers
 
@@ -244,7 +258,7 @@ Dieses Dokument beschreibt die Backup- und Restore-Strategien für {{ meta.organ
 ### 1. Backup Scheduling
 
 **Automatisierung:**
-- Backup-Jobs in {{ meta.backup_system }} konfiguriert
+- Backup-Jobs in {{ meta-handbook.backup_system }} konfiguriert
 - Zeitgesteuerte Ausführung
 - Abhängigkeiten zwischen Jobs
 - Retry-Mechanismen bei Fehlern
@@ -271,7 +285,7 @@ Dieses Dokument beschreibt die Backup- und Restore-Strategien für {{ meta.organ
 - Daten auf Backup-Target übertragen
 - Metadaten speichern
 
-**Monitoring:** Echtzeit-Überwachung in {{ meta.monitoring_system }}
+**Monitoring:** Echtzeit-Überwachung in {{ meta-handbook.monitoring_system }}
 
 ### 4. Backup Verification
 
@@ -292,12 +306,12 @@ Dieses Dokument beschreibt die Backup- und Restore-Strategien für {{ meta.organ
 - Fehlgeschlagene Backups
 - Trend-Analysen
 
-**Empfänger:** {{ meta.it_operations_manager.email }}
+**Empfänger:** {{ meta-organisation-roles.role_it_operations_manager.email }}
 
 ### 6. Offsite Replication
 
 **Replikations-Methoden:**
-- **Cloud-Sync:** Automatische Replikation zu {{ meta.backup_cloud_provider }}
+- **Cloud-Sync:** Automatische Replikation zu {{ meta-handbook.backup_cloud_provider }}
 - **Tape-Rotation:** Wöchentliche Tape-Auslagerung
 - **Remote-Site:** Replikation zu {{ netbox.site.dr_location }}
 
@@ -356,7 +370,7 @@ Dieses Dokument beschreibt die Backup- und Restore-Strategien für {{ meta.organ
 - Dringlichkeit (RTO)
 - Genehmigung
 
-**Tool:** {{ meta.ticketing_system }}
+**Tool:** {{ meta-handbook.ticketing_system }}
 
 ### 2. Restore Planning
 
@@ -460,9 +474,9 @@ Dieses Dokument beschreibt die Backup- und Restore-Strategien für {{ meta.organ
 ### Backup-Software
 
 **Primäres Backup-System:**
-- **System:** {{ meta.backup_system }}
-- **Version:** {{ meta.backup_system_version }}
-- **Lizenz:** {{ meta.backup_system_license }}
+- **System:** {{ meta-handbook.backup_system }}
+- **Version:** [TODO]
+- **Lizenz:** {{ meta-handbook.backup_system_license }}
 
 **Funktionen:**
 - Applikations-konsistente Backups
@@ -489,8 +503,8 @@ Dieses Dokument beschreibt die Backup- und Restore-Strategien für {{ meta.organ
 ### Cloud-Backup
 
 **Cloud-Provider:**
-- **Provider:** {{ meta.backup_cloud_provider }}
-- **Region:** {{ meta.backup_cloud_region }}
+- **Provider:** {{ meta-handbook.backup_cloud_provider }}
+- **Region:** {{ meta-handbook.backup_cloud_region }}
 - **Storage-Tier:** Standard / Glacier
 
 **Vorteile:**
@@ -518,7 +532,7 @@ Dieses Dokument beschreibt die Backup- und Restore-Strategien für {{ meta.organ
 - Key-Rotation alle 90 Tage
 
 **Key-Management:**
-- Schlüssel in {{ meta.key_management_system }}
+- Schlüssel in {{ meta-handbook.key_management_system }}
 - Zugriff nur für autorisierte Administratoren
 - Backup der Schlüssel (Escrow)
 
@@ -542,7 +556,7 @@ Dieses Dokument beschreibt die Backup- und Restore-Strategien für {{ meta.organ
 
 **Audit-Logging:**
 - Alle Backup/Restore-Aktivitäten geloggt
-- Logs in SIEM-System {{ meta.siem_system }}
+- Logs in SIEM-System {{ meta-handbook.siem_system }}
 - Monatliche Audit-Reviews
 
 ## Backup-Testing
@@ -656,7 +670,7 @@ Dieses Dokument beschreibt die Backup- und Restore-Strategien für {{ meta.organ
 - Compliance-Sicherstellung
 - Eskalations-Management
 
-**Person:** {{ meta.it_operations_manager.name }}
+**Person:** {{ meta-organisation-roles.role_it_operations_manager.name }}
 
 ## Compliance und Regulierung
 
@@ -694,20 +708,11 @@ Dieses Dokument beschreibt die Backup- und Restore-Strategien für {{ meta.organ
 - ISO/IEC 27001:2013 - Backup Controls
 - DSGVO - Artikel 32 (Datensicherheit)
 - 3-2-1-Backup-Regel
-- Backup-System-Dokumentation: {{ meta.backup_system_docs }}
+- Backup-System-Dokumentation: {{ meta-handbook.backup_system_docs }}
 
----
+**Dokumentverantwortlicher:** {{ meta-handbook.owner }}  
+**Genehmigt durch:** {{ meta-handbook.approver }}  
+**Version:** {{ meta-handbook.revision }}  
+**Klassifizierung:** {{ meta-handbook.classification }}  
+**Letzte Aktualisierung:** {{ meta-handbook.date }}
 
-**Dokumentverantwortlicher:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.date }}
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

@@ -1,13 +1,16 @@
 # Anhang: Nachweisregister
 
-**Dokument-ID:** PCI-0700  
-**Organisation:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** PCI-0700
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,7 +28,7 @@ Customization required:
 
 ## 1. Zweck
 
-Dieses Dokument dient als zentrales Register aller Nachweise für die PCI-DSS-Compliance von {{ meta.organization.name }}.
+Dieses Dokument dient als zentrales Register aller Nachweise für die PCI-DSS-Compliance von {{ meta-organisation.name }}.
 
 ### 1.1 Verwendung
 
@@ -221,13 +224,5 @@ Dieses Dokument dient als zentrales Register aller Nachweise für die PCI-DSS-Co
 | Dokument | Archivierungsdatum | Aufbewahrungsfrist bis | Speicherort |
 |----------|-------------------|------------------------|-------------|
 | [TODO] | [TODO: Datum] | [TODO: Datum] | [TODO: Pfad] |
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 <!-- End of template -->

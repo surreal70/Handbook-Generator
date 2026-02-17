@@ -1,11 +1,16 @@
 # Zweckbindung
 
-**Dokument-ID:** 0110  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0110
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -23,7 +28,7 @@ Referenz: DSGVO Art. 5 Abs. 1 lit. b (Zweckbindung)
 
 ## Zweck
 
-Dieses Dokument beschreibt die Umsetzung des Grundsatzes der Zweckbindung in der {{ meta.organization }}. Personenbezogene Daten dürfen nur für festgelegte, eindeutige und legitime Zwecke erhoben und verarbeitet werden.
+Dieses Dokument beschreibt die Umsetzung des Grundsatzes der Zweckbindung in der {{ meta-organisation.name }}. Personenbezogene Daten dürfen nur für festgelegte, eindeutige und legitime Zwecke erhoben und verarbeitet werden.
 
 ## Grundsatz gemäß Art. 5 Abs. 1 lit. b DSGVO
 
@@ -208,8 +213,6 @@ Personenbezogene Daten müssen für festgelegte, eindeutige und legitime Zwecke 
 | Fehlende Dokumentation | Zweck nicht im Verzeichnis | Verzeichnis Art. 30 pflegen |
 | Nachträgliche Zweckänderung | Zweck nach Erhebung geändert | Zweck vor Erhebung festlegen |
 
----
-
 **Nächste Schritte:**
 1. Definieren Sie klare Zwecke für alle Verarbeitungstätigkeiten
 2. Dokumentieren Sie Zwecke im Verzeichnis von Verarbeitungstätigkeiten
@@ -217,10 +220,3 @@ Personenbezogene Daten müssen für festgelegte, eindeutige und legitime Zwecke 
 4. Schulen Sie Mitarbeiter zur Zweckbindung
 5. Überprüfen Sie regelmäßig die Einhaltung der Zweckbindung
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

@@ -94,7 +94,7 @@ Templates are numbered using a 4-digit prefix with 10-increment spacing (0010, 0
 
 ### Customization
 
-1. **Replace Placeholders:** All templates contain placeholders in the format `{{ source.field }}` or `[TODO]` that should be replaced with organization-specific information.
+1. **Replace Placeholders:** All templates contain placeholders in the format `[TODO]` or `[TODO]` that should be replaced with organization-specific information.
 
 2. **Adapt to Context:** Modify templates to reflect your organization's size, complexity, and industry sector.
 
@@ -141,7 +141,7 @@ For questions about template usage or customization, refer to:
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
+| 0.1 | [TODO] | {{ meta.defaults.author }} | Initial Creation |
 
 ## Version History
 

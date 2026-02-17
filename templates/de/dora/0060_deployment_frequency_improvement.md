@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0140
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Deployment Frequency Verbesserung
+
+**Dokument-ID:** [FRAMEWORK]-0060
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -24,38 +35,38 @@ Strategien und Maßnahmen zur Verbesserung der Deployment Frequency.
 
 ### Zielzustand
 
-**Aktuell**: {{ source.current_deployment_freq }}
-**Ziel (3 Monate)**: {{ source.target_deployment_freq_3m }}
-**Ziel (6 Monate)**: {{ source.target_deployment_freq_6m }}
-**Ziel (12 Monate)**: {{ source.target_deployment_freq_12m }}
+**Aktuell**: [TODO]
+**Ziel (3 Monate)**: [TODO]
+**Ziel (6 Monate)**: [TODO]
+**Ziel (12 Monate)**: [TODO]
 
 ## Technische Maßnahmen
 
 ### Automatisierung
 
-1. **CI/CD-Verbesserung**: {{ source.cicd_improvement }}
-2. **Test-Automatisierung**: {{ source.test_automation_improvement }}
-3. **Infrastructure as Code**: {{ source.iac_improvement }}
+1. **CI/CD-Verbesserung**: [TODO]
+2. **Test-Automatisierung**: [TODO]
+3. **Infrastructure as Code**: [TODO]
 
 ### Architektur
 
-1. **Microservices**: {{ source.microservices_adoption }}
-2. **Feature Flags**: {{ source.feature_flags_implementation }}
-3. **Blue-Green Deployments**: {{ source.blue_green_adoption }}
+1. **Microservices**: [TODO]
+2. **Feature Flags**: [TODO]
+3. **Blue-Green Deployments**: [TODO]
 
 ## Prozess-Verbesserungen
 
 ### Entwicklungsprozess
 
-- **Trunk-based Development**: {{ source.trunk_based_status }}
-- **Small Batch Size**: {{ source.batch_size_reduction }}
-- **Continuous Integration**: {{ source.ci_frequency }}
+- **Trunk-based Development**: [TODO]
+- **Small Batch Size**: [TODO]
+- **Continuous Integration**: [TODO]
 
 ### Release-Prozess
 
-- **Release-Approval**: {{ source.release_approval_streamlining }}
-- **Deployment-Windows**: {{ source.deployment_windows_removal }}
-- **Change Advisory Board**: {{ source.cab_optimization }}
+- **Release-Approval**: [TODO]
+- **Deployment-Windows**: [TODO]
+- **Change Advisory Board**: [TODO]
 
 ## Kulturelle Änderungen
 
@@ -67,9 +78,9 @@ Strategien und Maßnahmen zur Verbesserung der Deployment Frequency.
 
 ### Team-Empowerment
 
-- **Autonomie**: {{ source.team_autonomy_level }}
-- **Ownership**: {{ source.team_ownership }}
-- **Accountability**: {{ source.team_accountability }}
+- **Autonomie**: [TODO]
+- **Ownership**: [TODO]
+- **Accountability**: [TODO]
 
 ## Erfolgsmessung
 
@@ -82,12 +93,3 @@ Strategien und Maßnahmen zur Verbesserung der Deployment Frequency.
 
 <!-- Hinweis: Kontinuierliche Verbesserung erfordert Commitment -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

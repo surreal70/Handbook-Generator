@@ -1,11 +1,16 @@
 # Ressourcen
 
-**Dokument-ID:** 0300  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0300
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -20,7 +25,7 @@ Referenz: ISO 9001:2015, Kapitel 7.1
 
 ## Zweck
 
-Dieses Dokument definiert, wie {{ meta.organization }} Ressourcen bestimmt und bereitstellt, die für das Qualitätsmanagementsystem benötigt werden, gemäß ISO 9001:2015 Kapitel 7.1.
+Dieses Dokument definiert, wie {{ meta-organisation.name }} Ressourcen bestimmt und bereitstellt, die für das Qualitätsmanagementsystem benötigt werden, gemäß ISO 9001:2015 Kapitel 7.1.
 
 ## Ressourcenplanungsprozess
 
@@ -168,8 +173,6 @@ Dieses Dokument definiert, wie {{ meta.organization }} Ressourcen bestimmt und b
 - Welche Ressourcenbeschränkungen bestehen?
 - Wie kann Ressourceneffizienz verbessert werden?
 
----
-
 **Nächste Schritte:**
 1. Führe umfassende Ressourcenbewertung durch
 2. Identifiziere Ressourcenlücken und -bedürfnisse
@@ -178,10 +181,3 @@ Dieses Dokument definiert, wie {{ meta.organization }} Ressourcen bestimmt und b
 5. Implementiere Ressourcenüberwachungsprozess
 6. Überprüfe Ressourcenangemessenheit regelmäßig
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

@@ -1,17 +1,28 @@
----
+
 Document-ID: coso-0110
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Zielsetzung
 
+**Dokument-ID:** [FRAMEWORK]-0110
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt, wie {{ source.organization_name }} geeignete Ziele spezifiziert, um Risiken zu identifizieren und zu bewerten (COSO Prinzip 6).
+Dieses Dokument beschreibt, wie [TODO] geeignete Ziele spezifiziert, um Risiken zu identifizieren und zu bewerten (COSO Prinzip 6).
 
 ## Geltungsbereich
 
@@ -24,126 +35,117 @@ Dieses Dokument beschreibt, wie {{ source.organization_name }} geeignete Ziele s
 
 ### Unternehmensweite Ziele
 
-{{ source.entity_level_objectives }}
+[TODO]
 
 ### Geschäftsbereichsziele
 
-{{ source.business_unit_objectives }}
+[TODO]
 
 ### Prozessziele
 
-{{ source.process_objectives }}
+[TODO]
 
 ## Zielkategorien
 
 ### Strategische Ziele
 
-**Definition**: {{ source.strategic_objectives_definition }}
+**Definition**: [TODO]
 
-**Beispiele**: {{ source.strategic_objectives_examples }}
+**Beispiele**: [TODO]
 
-**Verantwortung**: {{ source.strategic_objectives_ownership }}
+**Verantwortung**: [TODO]
 
 ### Operative Ziele
 
-**Definition**: {{ source.operational_objectives_definition }}
+**Definition**: [TODO]
 
-**Beispiele**: {{ source.operational_objectives_examples }}
+**Beispiele**: [TODO]
 
-**Verantwortung**: {{ source.operational_objectives_ownership }}
+**Verantwortung**: [TODO]
 
 ### Berichterstattungsziele
 
-**Definition**: {{ source.reporting_objectives_definition }}
+**Definition**: [TODO]
 
-**Beispiele**: {{ source.reporting_objectives_examples }}
+**Beispiele**: [TODO]
 
-**Verantwortung**: {{ source.reporting_objectives_ownership }}
+**Verantwortung**: [TODO]
 
 ### Compliance-Ziele
 
-**Definition**: {{ source.compliance_objectives_definition }}
+**Definition**: [TODO]
 
-**Beispiele**: {{ source.compliance_objectives_examples }}
+**Beispiele**: [TODO]
 
-**Verantwortung**: {{ source.compliance_objectives_ownership }}
+**Verantwortung**: [TODO]
 
 ## Zielsetzungsprozess
 
 ### Strategieentwicklung
 
-{{ source.strategy_development }}
+[TODO]
 
 ### Zielkaskadierung
 
-{{ source.objective_cascading }}
+[TODO]
 
 ### Zielabstimmung
 
-{{ source.objective_alignment }}
+[TODO]
 
 ## SMART-Kriterien
 
 ### Spezifisch
 
-{{ source.specific_criteria }}
+[TODO]
 
 ### Messbar
 
-{{ source.measurable_criteria }}
+[TODO]
 
 ### Erreichbar
 
-{{ source.achievable_criteria }}
+[TODO]
 
 ### Relevant
 
-{{ source.relevant_criteria }}
+[TODO]
 
 ### Terminiert
 
-{{ source.time_bound_criteria }}
+[TODO]
 
 ## Risikotoleranz
 
 ### Definition
 
-{{ source.risk_tolerance_definition }}
+[TODO]
 
 ### Festlegung
 
-{{ source.risk_tolerance_setting }}
+[TODO]
 
 ### Überwachung
 
-{{ source.risk_tolerance_monitoring }}
+[TODO]
 
 ## Dokumentation und Kommunikation
 
 ### Zieldokumentation
 
-{{ source.objective_documentation }}
+[TODO]
 
 ### Kommunikationsplan
 
-{{ source.communication_plan }}
+[TODO]
 
 ### Überprüfung und Aktualisierung
 
-{{ source.review_update_process }}
+[TODO]
 
 ## Referenzen
 
-- Strategieplan {{ source.organization_name }}
+- Strategieplan [TODO]
 - Balanced Scorecard
 - Risikomanagement-Richtlinie
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

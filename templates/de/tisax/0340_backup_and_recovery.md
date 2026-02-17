@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0340
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Backup und Recovery
+
+**Dokument-ID:** [FRAMEWORK]-0340
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -15,7 +26,7 @@ Dieses Dokument beschreibt die Backup- und Recovery-Prozesse gemäß TISAX-Anfor
 
 ## Geltungsbereich
 
-Dieses Dokument gilt für alle geschäftskritischen Daten von {{ source.organization_name }}.
+Dieses Dokument gilt für alle geschäftskritischen Daten von [TODO].
 
 ## Backup-Strategie
 
@@ -40,11 +51,11 @@ Dieses Dokument gilt für alle geschäftskritischen Daten von {{ source.organiza
 **Kritische Systeme:**
 - Täglich inkrementell
 - Wöchentlich vollständig
-- Retention: {{ source.backup_retention_days }} Tage
+- Retention: [TODO] Tage
 
 **Standard-Systeme:**
 - Wöchentlich vollständig
-- Retention: {{ source.backup_retention_days }} Tage
+- Retention: [TODO] Tage
 
 ### Backup-Speicherorte
 
@@ -62,20 +73,20 @@ Dieses Dokument gilt für alle geschäftskritischen Daten von {{ source.organiza
 ### Recovery Time Objective (RTO)
 
 **Kritische Systeme:**
-- RTO: {{ source.critical_rto }} Stunden
+- RTO: [TODO] Stunden
 - Priorisierte Wiederherstellung
 
 **Standard-Systeme:**
-- RTO: {{ source.standard_rto }} Stunden
+- RTO: [TODO] Stunden
 
 ### Recovery Point Objective (RPO)
 
 **Kritische Daten:**
-- RPO: {{ source.critical_rpo }} Stunden
+- RPO: [TODO] Stunden
 - Minimaler Datenverlust
 
 **Standard-Daten:**
-- RPO: {{ source.standard_rpo }} Stunden
+- RPO: [TODO] Stunden
 
 ### Recovery-Verfahren
 
@@ -117,17 +128,8 @@ Dieses Dokument adressiert:
 
 ## Kennzahlen
 
-{{ source.organization_name }} misst:
+[TODO] misst:
 - Erfolgsrate Backups
 - Durchschnittliche Recovery-Zeit
 - Anzahl erfolgreicher Recovery-Tests
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

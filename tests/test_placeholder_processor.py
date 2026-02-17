@@ -527,10 +527,11 @@ class TestPlaceholderReplacement:
             line_number=1
         )
         
-        value, warning = processor.replace_placeholder(placeholder)
+        value, warning, todo_warning = processor.replace_placeholder(placeholder)
         
         assert value == 'server-01'
         assert warning is None
+        assert todo_warning is None
     
     def test_process_template_with_replacement(self):
         """Test processing template with successful replacements."""
@@ -643,11 +644,12 @@ class TestMissingFieldHandling:
             line_number=1
         )
         
-        value, warning = processor.replace_placeholder(placeholder)
+        value, warning, todo_warning = processor.replace_placeholder(placeholder)
         
         assert value is None
         assert warning is not None
         assert 'field_not_found' in warning.lower() or 'not found' in warning.lower()
+        assert todo_warning is None
     
     def test_replace_placeholder_unknown_source(self):
         """Test replacement with unknown data source."""
@@ -660,11 +662,12 @@ class TestMissingFieldHandling:
             line_number=1
         )
         
-        value, warning = processor.replace_placeholder(placeholder)
+        value, warning, todo_warning = processor.replace_placeholder(placeholder)
         
         assert value is None
         assert warning is not None
         assert 'unknown_data_source' in warning.lower() or 'unknown data source' in warning.lower()
+        assert todo_warning is None
     
     def test_process_template_with_missing_field(self):
         """Test processing template with missing field."""
@@ -788,10 +791,11 @@ class TestAdapterRouting:
             line_number=1
         )
         
-        value, warning = processor.replace_placeholder(placeholder)
+        value, warning, todo_warning = processor.replace_placeholder(placeholder)
         
         assert value == 'server-01'
         assert warning is None
+        assert todo_warning is None
     
     def test_adapter_routing_unknown_source(self):
         """Test routing to unknown data source."""
@@ -805,13 +809,14 @@ class TestAdapterRouting:
             line_number=1
         )
         
-        value, warning = processor.replace_placeholder(placeholder)
+        value, warning, todo_warning = processor.replace_placeholder(placeholder)
         
         assert value is None
         assert warning is not None
         assert 'unknown_data_source' in warning.lower() or 'unknown data source' in warning.lower()
         assert 'available sources' in warning.lower()
         assert 'netbox' in warning
+        assert todo_warning is None
     
     def test_adapter_routing_multiple_sources(self):
         """Test routing with multiple data sources."""
@@ -853,12 +858,13 @@ class TestAdapterRouting:
             line_number=1
         )
         
-        value, warning = processor.replace_placeholder(placeholder)
+        value, warning, todo_warning = processor.replace_placeholder(placeholder)
         
         assert value is None
         assert warning is not None
         assert 'unknown_data_source' in warning.lower() or 'unknown data source' in warning.lower()
         assert 'none' in warning.lower()
+        assert todo_warning is None
 
 
 
@@ -1041,10 +1047,11 @@ class TestDualSourceRouting:
             line_number=1
         )
         
-        value, warning = processor.replace_placeholder(placeholder)
+        value, warning, todo_warning = processor.replace_placeholder(placeholder)
         
         assert value == 'AdminSend GmbH'
         assert warning is None
+        assert todo_warning is None
     
     def test_route_to_netbox_adapter(self):
         """Test routing netbox placeholder to netbox adapter."""
@@ -1062,10 +1069,11 @@ class TestDualSourceRouting:
             line_number=1
         )
         
-        value, warning = processor.replace_placeholder(placeholder)
+        value, warning, todo_warning = processor.replace_placeholder(placeholder)
         
         assert value == 'server-01'
         assert warning is None
+        assert todo_warning is None
     
     def test_dual_source_processing(self):
         """Test processing template with both netbox and meta placeholders."""
@@ -1166,7 +1174,7 @@ Site: {{ netbox.site_name }}
             line_number=1
         )
         
-        value, warning = processor.replace_placeholder(placeholder)
+        value, warning, todo_warning = processor.replace_placeholder(placeholder)
         
         # Should return None and warning
         assert value is None
@@ -1177,6 +1185,7 @@ Site: {{ netbox.site_name }}
         assert 'meta' in warning
         assert 'available sources' in warning_lower
         assert 'netbox' in warning
+        assert todo_warning is None
 
 
 class TestStatisticsBySource:
@@ -1763,3 +1772,624 @@ class TestHTMLCommentMarkdownPreservationProperty:
         if any('[' in elem and ']' in elem for elem in markdown_elements):
             assert '[' in result.content and ']' in result.content, \
                 "Link markers should be preserved"
+
+
+
+class TestEnglishPlaceholderFormat:
+    """Tests for English placeholder format validation (Property 9)."""
+    
+    @settings(max_examples=100)
+    @given(
+        num_placeholders=st.integers(min_value=1, max_value=10),
+        data=st.data()
+    )
+    def test_property_9_english_placeholder_format(self, num_placeholders, data):
+        """
+        Feature: config-separation-and-metadata-unification, Property 9: English Placeholder Format
+        
+        For any template file, all placeholders should use English identifiers following
+        the pattern {{ meta-source.field }} where source is one of: meta-global,
+        meta-organisation, meta-organisation-roles, meta-handbook.
+        
+        Validates: Requirements 7.1, 7.2
+        """
+        from src.unified_metadata import UnifiedMetadata, GlobalMetadata, OrganisationMetadata, RolesMetadata, HandbookMetadata
+        
+        # Define valid sources for new placeholder format
+        valid_sources = ['meta-global', 'meta-organisation', 'meta-organisation-roles', 'meta-handbook']
+        
+        # Create unified metadata with test data
+        unified_metadata = UnifiedMetadata(
+            global_info=GlobalMetadata(source='Test Generator', version='1.0.0'),
+            organisation=OrganisationMetadata(
+                name='Test Org',
+                address='Test Address',
+                web='https://test.com',
+                phone='+1234567890',
+                revision=1
+            ),
+            roles=RolesMetadata(
+                role_CEO='Test CEO',
+                role_CIO='Test CIO',
+                role_CISO='Test CISO'
+            ),
+            handbook=HandbookMetadata(
+                author='Test Author',
+                classification='Internal',
+                status='Draft',
+                owner='Test Owner',
+                revision=1
+            )
+        )
+        
+        # Generate template with placeholders using new format
+        template_lines = []
+        expected_replacements = 0
+        
+        for i in range(num_placeholders):
+            # Choose a valid source
+            source = data.draw(st.sampled_from(valid_sources))
+            
+            # Choose a field based on the source
+            if source == 'meta-global':
+                field = data.draw(st.sampled_from(['source', 'version']))
+            elif source == 'meta-organisation':
+                field = data.draw(st.sampled_from(['name', 'address', 'web', 'phone', 'revision']))
+            elif source == 'meta-organisation-roles':
+                field = data.draw(st.sampled_from(['role_CEO', 'role_CIO', 'role_CISO']))
+            elif source == 'meta-handbook':
+                field = data.draw(st.sampled_from(['author', 'classification', 'status', 'owner', 'revision']))
+            
+            placeholder_text = f'{{{{ {source}.{field} }}}}'
+            template_lines.append(placeholder_text)
+            expected_replacements += 1
+        
+        template_content = '\n'.join(template_lines)
+        
+        # Create processor with unified metadata
+        processor = PlaceholderProcessor(unified_metadata=unified_metadata)
+        
+        # Find placeholders
+        placeholders = processor.find_placeholders(template_content)
+        
+        # Verify all placeholders were detected
+        assert len(placeholders) == num_placeholders, \
+            f"Expected {num_placeholders} placeholders, found {len(placeholders)}"
+        
+        # Verify all placeholders use valid English sources
+        for placeholder in placeholders:
+            assert placeholder.source in valid_sources, \
+                f"Placeholder source '{placeholder.source}' should be one of {valid_sources}"
+            
+            # Verify source uses English naming (contains hyphens, not underscores for separation)
+            if 'meta-' in placeholder.source:
+                assert '-' in placeholder.source, \
+                    f"Meta source should use hyphens: {placeholder.source}"
+        
+        # Process template
+        result = processor.process_template(template_content)
+        
+        # Verify all placeholders were replaced
+        assert len(result.replacements) == expected_replacements, \
+            f"Expected {expected_replacements} replacements, got {len(result.replacements)}"
+        
+        # Verify no placeholders remain in content
+        assert '{{' not in result.content, \
+            "No placeholders should remain in content"
+        
+        # Verify no warnings (all fields exist in unified metadata)
+        assert len(result.warnings) == 0, \
+            f"No warnings expected, got {len(result.warnings)}: {result.warnings}"
+    
+    def test_meta_global_placeholder_replacement(self):
+        """Test replacement of meta-global placeholders."""
+        from src.unified_metadata import UnifiedMetadata, GlobalMetadata
+        
+        unified_metadata = UnifiedMetadata(
+            global_info=GlobalMetadata(source='HandBook Generator', version='2.0.0')
+        )
+        
+        processor = PlaceholderProcessor(unified_metadata=unified_metadata)
+        
+        content = """# Document
+Source: {{ meta-global.source }}
+Version: {{ meta-global.version }}
+"""
+        
+        result = processor.process_template(content)
+        
+        # Verify replacements
+        assert 'HandBook Generator' in result.content
+        assert '2.0.0' in result.content
+        assert '{{ meta-global.source }}' not in result.content
+        assert '{{ meta-global.version }}' not in result.content
+        
+        # Verify statistics
+        assert len(result.replacements) == 2
+        assert all(r.source == 'meta-global' for r in result.replacements)
+    
+    def test_meta_organisation_placeholder_replacement(self):
+        """Test replacement of meta-organisation placeholders."""
+        from src.unified_metadata import UnifiedMetadata, OrganisationMetadata
+        
+        unified_metadata = UnifiedMetadata(
+            organisation=OrganisationMetadata(
+                name='AdminsEnd Ltd.',
+                address='Endless Lane 42',
+                web='https://www.adminsend.de',
+                phone='+49 2323 555 4242',
+                revision=3
+            )
+        )
+        
+        processor = PlaceholderProcessor(unified_metadata=unified_metadata)
+        
+        content = """# Organization
+{{ meta-organisation.name }}
+{{ meta-organisation.address }}
+{{ meta-organisation.web }}
+{{ meta-organisation.phone }}
+Revision: {{ meta-organisation.revision }}
+"""
+        
+        result = processor.process_template(content)
+        
+        # Verify replacements
+        assert 'AdminsEnd Ltd.' in result.content
+        assert 'Endless Lane 42' in result.content
+        assert 'https://www.adminsend.de' in result.content
+        assert '+49 2323 555 4242' in result.content
+        assert 'Revision: 3' in result.content
+        
+        # Verify no placeholders remain
+        assert '{{' not in result.content
+        
+        # Verify statistics
+        assert len(result.replacements) == 5
+    
+    def test_meta_organisation_roles_placeholder_replacement(self):
+        """Test replacement of meta-organisation-roles placeholders."""
+        from src.unified_metadata import UnifiedMetadata, RolesMetadata
+        
+        unified_metadata = UnifiedMetadata(
+            roles=RolesMetadata(
+                role_CEO='John Doe',
+                role_CIO='Jane Smith',
+                role_CISO='Bob Johnson',
+                role_IT_Manager='Alice Brown'
+            )
+        )
+        
+        processor = PlaceholderProcessor(unified_metadata=unified_metadata)
+        
+        content = """# Roles
+CEO: {{ meta-organisation-roles.role_CEO }}
+CIO: {{ meta-organisation-roles.role_CIO }}
+CISO: {{ meta-organisation-roles.role_CISO }}
+IT Manager: {{ meta-organisation-roles.role_IT_Manager }}
+"""
+        
+        result = processor.process_template(content)
+        
+        # Verify replacements
+        assert 'John Doe' in result.content
+        assert 'Jane Smith' in result.content
+        assert 'Bob Johnson' in result.content
+        assert 'Alice Brown' in result.content
+        
+        # Verify no placeholders remain
+        assert '{{' not in result.content
+        
+        # Verify statistics
+        assert len(result.replacements) == 4
+    
+    def test_meta_handbook_placeholder_replacement(self):
+        """Test replacement of meta-handbook placeholders."""
+        from src.unified_metadata import UnifiedMetadata, HandbookMetadata
+        
+        unified_metadata = UnifiedMetadata(
+            handbook=HandbookMetadata(
+                author='Test Author',
+                classification='Internal',
+                status='Draft',
+                owner='Test Owner',
+                approver='Test Approver',
+                revision=2
+            )
+        )
+        
+        processor = PlaceholderProcessor(unified_metadata=unified_metadata)
+        
+        content = """# Handbook Metadata
+Author: {{ meta-handbook.author }}
+Classification: {{ meta-handbook.classification }}
+Status: {{ meta-handbook.status }}
+Owner: {{ meta-handbook.owner }}
+Approver: {{ meta-handbook.approver }}
+Revision: {{ meta-handbook.revision }}
+"""
+        
+        result = processor.process_template(content)
+        
+        # Verify replacements
+        assert 'Test Author' in result.content
+        assert 'Internal' in result.content
+        assert 'Draft' in result.content
+        assert 'Test Owner' in result.content
+        assert 'Test Approver' in result.content
+        assert 'Revision: 2' in result.content
+        
+        # Verify no placeholders remain
+        assert '{{' not in result.content
+        
+        # Verify statistics
+        assert len(result.replacements) == 6
+    
+    def test_mixed_new_and_legacy_placeholders(self):
+        """Test processing template with both new unified metadata and legacy placeholders."""
+        from src.unified_metadata import UnifiedMetadata, GlobalMetadata, OrganisationMetadata
+        
+        unified_metadata = UnifiedMetadata(
+            global_info=GlobalMetadata(source='HandBook Generator', version='2.0.0'),
+            organisation=OrganisationMetadata(name='Test Org')
+        )
+        
+        # Create mock adapter for legacy netbox placeholders
+        mock_netbox = MockDataSourceAdapter({'device_name': 'server-01'})
+        
+        processor = PlaceholderProcessor(
+            data_sources={'netbox': mock_netbox},
+            metadata={'author': 'Test Author'},
+            unified_metadata=unified_metadata
+        )
+        
+        content = """# Mixed Placeholders
+Generator: {{ meta-global.source }}
+Organization: {{ meta-organisation.name }}
+Device: {{ netbox.device_name }}
+Author: {{ metadata.author }}
+"""
+        
+        result = processor.process_template(content)
+        
+        # Verify all replacements
+        assert 'HandBook Generator' in result.content
+        assert 'Test Org' in result.content
+        assert 'server-01' in result.content
+        assert 'Test Author' in result.content
+        
+        # Verify no placeholders remain
+        assert '{{' not in result.content
+        
+        # Verify statistics
+        assert len(result.replacements) == 4
+        stats = result.get_statistics_summary()
+        assert stats.get('meta-global', 0) == 1
+        assert stats.get('meta-organisation', 0) == 1
+        assert stats.get('netbox', 0) == 1
+        assert stats.get('metadata', 0) == 1
+    
+    def test_missing_unified_metadata_warning(self):
+        """Test that using new placeholders without unified metadata generates warning."""
+        processor = PlaceholderProcessor()  # No unified_metadata
+        
+        content = '{{ meta-global.version }}'
+        
+        result = processor.process_template(content)
+        
+        # Should generate warning
+        assert len(result.warnings) >= 1
+        warning_text = ' '.join(result.warnings).lower()
+        assert 'unified metadata' in warning_text or 'unknown_data_source' in warning_text
+        
+        # Placeholder should remain unchanged
+        assert '{{ meta-global.version }}' in result.content
+    
+    def test_missing_handbook_metadata_returns_none(self):
+        """Test that meta-handbook placeholders return None when handbook metadata is not loaded."""
+        from src.unified_metadata import UnifiedMetadata
+        
+        # Create unified metadata without handbook
+        unified_metadata = UnifiedMetadata()
+        
+        processor = PlaceholderProcessor(unified_metadata=unified_metadata)
+        
+        content = '{{ meta-handbook.author }}'
+        
+        result = processor.process_template(content)
+        
+        # Should generate warning about field not found
+        assert len(result.warnings) >= 1
+        warning_text = ' '.join(result.warnings).lower()
+        assert 'field_not_found' in warning_text or 'not found' in warning_text
+        
+        # Placeholder should remain unchanged
+        assert '{{ meta-handbook.author }}' in result.content
+
+
+
+class TestTODOValueWarnings:
+    """Tests for TODO value warning system."""
+    
+    @settings(max_examples=100)
+    @given(
+        # Use available organisation fields
+        todo_fields=st.lists(
+            st.sampled_from(['name', 'address', 'web', 'phone']),
+            min_size=1,
+            max_size=4,
+            unique=True
+        ),
+        # Use remaining fields for normal values
+        data=st.data()
+    )
+    def test_property_16_todo_value_warnings(self, todo_fields, data):
+        """
+        Feature: config-separation-and-metadata-unification, Property 16: TODO Value Warnings
+        
+        For any configuration containing [TODO] placeholder values, when templates are generated,
+        the system should emit warnings but continue generation.
+        
+        Validates: Requirements 9.4
+        """
+        from src.unified_metadata import (
+            GlobalMetadata,
+            OrganisationMetadata,
+            RolesMetadata,
+            UnifiedMetadata
+        )
+        
+        # Available organisation fields
+        all_org_fields = ['name', 'address', 'web', 'phone']
+        
+        # Determine normal fields (fields not in todo_fields)
+        normal_fields_list = [f for f in all_org_fields if f not in todo_fields]
+        
+        # Generate values for normal fields
+        normal_fields = []
+        for field_name in normal_fields_list:
+            value = data.draw(st.text(min_size=1, max_size=50).filter(
+                lambda x: '{{' not in x and '}}' not in x and x != '[TODO]'
+            ))
+            normal_fields.append((field_name, value))
+        
+        # Build template content
+        template_lines = []
+        for field in todo_fields:
+            template_lines.append(f'{{{{ meta-organisation.{field} }}}}')
+        for field, _ in normal_fields:
+            template_lines.append(f'{{{{ meta-organisation.{field} }}}}')
+        
+        template_content = '\n'.join(template_lines)
+        
+        # Create unified metadata with TODO and normal values
+        org_data = {}
+        for field in todo_fields:
+            org_data[field] = '[TODO]'
+        for field, value in normal_fields:
+            org_data[field] = value
+        
+        # Create metadata objects
+        global_meta = GlobalMetadata()
+        org_meta = OrganisationMetadata(**org_data)
+        roles_meta = RolesMetadata()
+        
+        unified_metadata = UnifiedMetadata(
+            global_info=global_meta,
+            organisation=org_meta,
+            roles=roles_meta
+        )
+        
+        # Process template
+        processor = PlaceholderProcessor(unified_metadata=unified_metadata)
+        result = processor.process_template(template_content)
+        
+        # Verify all placeholders were replaced (including TODO values)
+        expected_total = len(todo_fields) + len(normal_fields)
+        assert len(result.replacements) == expected_total, \
+            f"Expected {expected_total} replacements, got {len(result.replacements)}"
+        
+        # Verify TODO warnings were generated
+        assert len(result.todo_warnings) == len(todo_fields), \
+            f"Expected {len(todo_fields)} TODO warnings, got {len(result.todo_warnings)}"
+        
+        # Verify each TODO warning contains the field path
+        for warning in result.todo_warnings:
+            assert 'TODO' in warning, \
+                "TODO warning should mention TODO"
+            assert 'meta-organisation' in warning, \
+                "TODO warning should include field path with source"
+        
+        # Verify TODO values are in content (placeholders were replaced)
+        assert result.content.count('[TODO]') == len(todo_fields), \
+            f"Expected {len(todo_fields)} [TODO] values in content"
+        
+        # Verify normal values are in content
+        for field, value in normal_fields:
+            assert value in result.content, \
+                f"Normal field value '{value}' should be in content"
+        
+        # Verify no placeholders remain
+        assert '{{' not in result.content, \
+            "No placeholders should remain in content"
+        
+        # Verify no errors (TODO is a warning, not an error)
+        assert len(result.errors) == 0, \
+            f"No errors expected for TODO values, got {len(result.errors)}"
+    
+    def test_todo_warning_basic(self):
+        """Test basic TODO value warning."""
+        from src.unified_metadata import (
+            GlobalMetadata,
+            OrganisationMetadata,
+            RolesMetadata,
+            UnifiedMetadata
+        )
+        
+        # Create metadata with TODO value
+        global_meta = GlobalMetadata()
+        org_meta = OrganisationMetadata(name='[TODO]', address='123 Main St')
+        roles_meta = RolesMetadata()
+        
+        unified_metadata = UnifiedMetadata(
+            global_info=global_meta,
+            organisation=org_meta,
+            roles=roles_meta
+        )
+        
+        processor = PlaceholderProcessor(unified_metadata=unified_metadata)
+        content = '{{ meta-organisation.name }}'
+        
+        result = processor.process_template(content)
+        
+        # Verify placeholder was replaced with [TODO]
+        assert '[TODO]' in result.content
+        assert '{{ meta-organisation.name }}' not in result.content
+        
+        # Verify TODO warning was generated
+        assert len(result.todo_warnings) == 1
+        assert 'TODO' in result.todo_warnings[0]
+        assert 'meta-organisation.name' in result.todo_warnings[0]
+        
+        # Verify no errors
+        assert len(result.errors) == 0
+    
+    def test_todo_warning_mixed_with_normal_values(self):
+        """Test TODO warnings mixed with normal values."""
+        from src.unified_metadata import (
+            GlobalMetadata,
+            OrganisationMetadata,
+            RolesMetadata,
+            UnifiedMetadata
+        )
+        
+        # Create metadata with mixed TODO and normal values
+        global_meta = GlobalMetadata()
+        org_meta = OrganisationMetadata(
+            name='AdminsEnd Ltd.',
+            address='[TODO]',
+            web='https://example.com',
+            phone='[TODO]'
+        )
+        roles_meta = RolesMetadata()
+        
+        unified_metadata = UnifiedMetadata(
+            global_info=global_meta,
+            organisation=org_meta,
+            roles=roles_meta
+        )
+        
+        processor = PlaceholderProcessor(unified_metadata=unified_metadata)
+        content = """# Organization
+{{ meta-organisation.name }}
+{{ meta-organisation.address }}
+{{ meta-organisation.web }}
+{{ meta-organisation.phone }}
+"""
+        
+        result = processor.process_template(content)
+        
+        # Verify all placeholders were replaced
+        assert len(result.replacements) == 4
+        
+        # Verify TODO warnings for address and phone
+        assert len(result.todo_warnings) == 2
+        
+        # Verify content has both normal and TODO values
+        assert 'AdminsEnd Ltd.' in result.content
+        assert 'https://example.com' in result.content
+        assert result.content.count('[TODO]') == 2
+        
+        # Verify no placeholders remain
+        assert '{{' not in result.content
+    
+    def test_todo_warning_separate_from_other_warnings(self):
+        """Test that TODO warnings are tracked separately from other warnings."""
+        from src.unified_metadata import (
+            GlobalMetadata,
+            OrganisationMetadata,
+            RolesMetadata,
+            UnifiedMetadata
+        )
+        
+        # Create metadata with TODO value
+        global_meta = GlobalMetadata()
+        org_meta = OrganisationMetadata(name='[TODO]')
+        roles_meta = RolesMetadata()
+        
+        unified_metadata = UnifiedMetadata(
+            global_info=global_meta,
+            organisation=org_meta,
+            roles=roles_meta
+        )
+        
+        processor = PlaceholderProcessor(unified_metadata=unified_metadata)
+        
+        # Content with TODO placeholder and missing field placeholder
+        content = """{{ meta-organisation.name }}
+{{ meta-organisation.missing_field }}
+"""
+        
+        result = processor.process_template(content)
+        
+        # Verify TODO warning is in todo_warnings list
+        assert len(result.todo_warnings) == 1
+        assert 'TODO' in result.todo_warnings[0]
+        
+        # Verify missing field warning is in warnings list
+        assert len(result.warnings) >= 1
+        missing_field_warning = any('field_not_found' in w.lower() or 'not found' in w.lower() 
+                                   for w in result.warnings)
+        assert missing_field_warning, "Should have warning for missing field"
+        
+        # Verify TODO warning is NOT in regular warnings list
+        todo_in_warnings = any('TODO' in w for w in result.warnings)
+        assert not todo_in_warnings, "TODO warning should be in todo_warnings, not warnings"
+    
+    def test_todo_warning_with_handbook_metadata(self):
+        """Test TODO warnings with handbook-specific metadata."""
+        from src.unified_metadata import (
+            GlobalMetadata,
+            OrganisationMetadata,
+            RolesMetadata,
+            HandbookMetadata,
+            UnifiedMetadata
+        )
+        
+        # Create metadata with TODO values in handbook metadata
+        global_meta = GlobalMetadata()
+        org_meta = OrganisationMetadata()
+        roles_meta = RolesMetadata()
+        handbook_meta = HandbookMetadata(
+            author='[TODO]',
+            owner='[TODO]',
+            status='Draft'
+        )
+        
+        unified_metadata = UnifiedMetadata(
+            global_info=global_meta,
+            organisation=org_meta,
+            roles=roles_meta,
+            handbook=handbook_meta
+        )
+        
+        processor = PlaceholderProcessor(unified_metadata=unified_metadata)
+        content = """{{ meta-handbook.author }}
+{{ meta-handbook.owner }}
+{{ meta-handbook.status }}
+"""
+        
+        result = processor.process_template(content)
+        
+        # Verify all placeholders were replaced
+        assert len(result.replacements) == 3
+        
+        # Verify TODO warnings for author and owner
+        assert len(result.todo_warnings) == 2
+        
+        # Verify content
+        assert result.content.count('[TODO]') == 2
+        assert 'Draft' in result.content
+        
+        # Verify no placeholders remain
+        assert '{{' not in result.content

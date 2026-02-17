@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-38500-0070
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Prinzip 4: Leistung (Performance)
+
+**Dokument-ID:** [FRAMEWORK]-0070
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -16,7 +28,7 @@ Dieses Dokument beschreibt die Anwendung des Leistungs-Prinzips in der IT-Govern
 ## Geltungsbereich
 
 Dieses Dokument gilt für:
-- {{ meta.organization }}
+- {{ meta-organisation.name }}
 - Alle IT-Services und -Systeme
 - IT-Leistungsmanagement
 
@@ -37,26 +49,26 @@ IT ist fit für den Zweck, um die Organisation zu unterstützen, indem sie die e
 
 | Kriterium | Ziel | Aktuell |
 |-----------|------|---------|
-| Service Availability | >99.5% | {{ meta.service_availability }}% |
-| Response Time | <2s | {{ meta.response_time }}s |
-| User Satisfaction | >85% | {{ meta.user_satisfaction }}% |
-| Incident Resolution | <4h | {{ meta.incident_resolution }}h |
+| Service Availability | >99.5% | {{ meta-handbook.service_availability }}% |
+| Response Time | <2s | {{ meta-handbook.response_time }}s |
+| User Satisfaction | >85% | {{ meta-handbook.user_satisfaction }}% |
+| Incident Resolution | <4h | {{ meta-handbook.incident_resolution }}h |
 
 ## Direct (Steuern)
 
 ### Leistungsziele
 
 **Service Delivery:**
-- Verfügbarkeit: {{ meta.availability_target }}%
-- Performance: {{ meta.performance_target }}
-- Kapazität: {{ meta.capacity_target }}%
-- Zuverlässigkeit: {{ meta.reliability_target }}%
+- Verfügbarkeit: {{ meta-handbook.availability_target }}%
+- Performance: {{ meta-handbook.performance_target }}
+- Kapazität: {{ meta-handbook.capacity_target }}%
+- Zuverlässigkeit: {{ meta-handbook.reliability_target }}%
 
 **Service Support:**
-- Incident Response: {{ meta.incident_response_target }}
-- Problem Resolution: {{ meta.problem_resolution_target }}
-- Change Success Rate: {{ meta.change_success_target }}%
-- User Support: {{ meta.user_support_target }}
+- Incident Response: {{ meta-handbook.incident_response_target }}
+- Problem Resolution: {{ meta-handbook.problem_resolution_target }}
+- Change Success Rate: {{ meta-handbook.change_success_target }}%
+- User Support: {{ meta-handbook.user_support_target }}
 
 ### Service Level Agreements (SLAs)
 
@@ -84,22 +96,14 @@ IT ist fit für den Zweck, um die Organisation zu unterstützen, indem sie die e
 
 ### KPIs
 
-- System Availability: {{ meta.system_availability }}%
-- Mean Time To Repair (MTTR): {{ meta.mttr }} Stunden
-- Mean Time Between Failures (MTBF): {{ meta.mtbf }} Stunden
-- Service Desk First Call Resolution: {{ meta.fcr }}%
-- Customer Satisfaction Score (CSAT): {{ meta.csat }}/10
+- System Availability: {{ meta-handbook.system_availability }}%
+- Mean Time To Repair (MTTR): {{ meta-handbook.mttr }} Stunden
+- Mean Time Between Failures (MTBF): {{ meta-handbook.mtbf }} Stunden
+- Service Desk First Call Resolution: {{ meta-handbook.fcr }}%
+- Customer Satisfaction Score (CSAT): {{ meta-handbook.csat }}/10
 
 ## Dokumentenverweise
 
 - 0010_governance_framework.md
 - 0020_governance_model.md
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |
 

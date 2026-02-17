@@ -1,17 +1,28 @@
----
+
 Document-ID: tisax-0420
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Lieferantenüberwachung
 
+**Dokument-ID:** [FRAMEWORK]-0290
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt die Überwachung von Lieferanten bei {{ source.organization_name }}.
+Dieses Dokument beschreibt die Überwachung von Lieferanten bei [TODO].
 
 ## Überwachungsaktivitäten
 
@@ -22,7 +33,7 @@ Dieses Dokument beschreibt die Überwachung von Lieferanten bei {{ source.organi
 - SLA-Compliance
 
 ### Audits
-- Häufigkeit: {{ source.supplier_audit_frequency }}
+- Häufigkeit: [TODO]
 - Vor-Ort-Audits bei kritischen Lieferanten
 - Remote-Audits
 
@@ -30,9 +41,9 @@ Dieses Dokument beschreibt die Überwachung von Lieferanten bei {{ source.organi
 
 | KPI | Ziel | Aktuell |
 |-----|------|---------|
-| SLA-Einhaltung | {{ source.sla_target }}% | {{ source.sla_actual }}% |
-| Incident-Response-Zeit | < {{ source.incident_response_target }} | {{ source.incident_response_actual }} |
-| Verfügbarkeit | {{ source.availability_target }}% | {{ source.availability_actual }}% |
+| SLA-Einhaltung | [TODO]% | [TODO]% |
+| Incident-Response-Zeit | < [TODO] | [TODO] |
+| Verfügbarkeit | [TODO]% | [TODO]% |
 
 ## Eskalation
 
@@ -44,12 +55,3 @@ Bei Nichteinhaltung:
 
 <!-- Hinweis: Überwachen Sie Lieferanten kontinuierlich -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

@@ -4,7 +4,7 @@
 
 Diese Templates bilden die Grundlage für ein vollständiges Information Security Management System (ISMS) Handbuch nach **ISO/IEC 27001:2022** (inkl. **Amendment 1:2024**).
 
-Das ISMS-Handbuch der {{ meta.organization.name }} umfasst ca. 50 strukturierte Dokumente, die alle wesentlichen Aspekte des Informationssicherheitsmanagements abdecken. Die Templates folgen einer **Drei-Ebenen-Architektur**, die strategische, abstrakte und operative Dokumentation klar trennt.
+Das ISMS-Handbuch der [TODO] umfasst ca. 50 strukturierte Dokumente, die alle wesentlichen Aspekte des Informationssicherheitsmanagements abdecken. Die Templates folgen einer **Drei-Ebenen-Architektur**, die strategische, abstrakte und operative Dokumentation klar trennt.
 
 ## Drei-Ebenen-Architektur
 
@@ -128,13 +128,13 @@ Detaillierte Implementierungsrichtlinien für jede Policy:
 Die Templates verwenden Platzhalter aus der `metadata.yaml` Datei:
 
 ```markdown
-**Organisation:** {{ meta.organization.name }}
+**Organisation:** [TODO]
 **CEO:** {{ meta.management.ceo }}
 **CIO:** {{ meta.cio.name }} ({{ meta.cio.email }})
 **CISO:** {{ meta.ciso.name }} ({{ meta.ciso.email }})
-**Dokumentverantwortlicher:** {{ meta.document.owner }}
-**Datum:** {{ meta.document.date }}
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokumentverantwortlicher:** [TODO]
+**Datum:** {{ meta-handbook.modifydate }}
+**Nächster Review:** [TODO]
 ```
 
 ### NetBox-Platzhalter (Infrastrukturdaten)
@@ -494,7 +494,7 @@ Bei Fragen oder Problemen:
 
 | Version | Datum | Autor | Änderungen |
 |---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
+| 0.1 | [TODO] | {{ meta.defaults.author }} | Initiale Erstellung |
 
 ## Versionshistorie
 

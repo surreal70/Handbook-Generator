@@ -1,14 +1,16 @@
 # Training and Awareness – Program
 
-**Document ID:** 0600  
-**Document Type:** Program  
-**Reference Framework:** BSI IT-Grundschutz (BSI Standards 200-1/200-2)  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** {{ meta.document.status }}  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.document.last_updated }}  
-**Next Review:** {{ meta.document.next_review }}
+**Document-ID:** [FRAMEWORK]-0600
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -20,7 +22,7 @@ Reference: BSI Standard 200-1 (Awareness and Training), ORP.3
 
 ## 1. Purpose and Objectives
 
-The training and awareness program of **{{ meta.organization.name }}** ensures that all employees have the required security knowledge.
+The training and awareness program of **{{ meta-organisation.name }}** ensures that all employees have the required security knowledge.
 
 **Responsible:** {{ meta.ciso.name }} (CISO)
 
@@ -84,21 +86,11 @@ The training and awareness program of **{{ meta.organization.name }}** ensures t
 
 | Role | Name | Date | Approval |
 |---|---|---|---|
-| CISO | {{ meta.ciso.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| HR | [TODO] | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| CISO | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| HR | [TODO] | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **References:**
 - BSI Standard 200-1: ISMS
 - BSI IT-Grundschutz-Kompendium: ORP.3 Awareness and Training
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
 
 <!-- End of template -->

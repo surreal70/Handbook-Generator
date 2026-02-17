@@ -1,13 +1,24 @@
----
+
 Document-ID: soc1-0400
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Information and Communication
+
+**Document-ID:** [FRAMEWORK]-0130
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -24,107 +35,107 @@ This document describes the service organization's information and communication
 
 ### Information Requirements
 
-**Relevance**: {{ source.information_relevance }}
-**Accuracy**: {{ source.information_accuracy }}
-**Completeness**: {{ source.information_completeness }}
-**Timeliness**: {{ source.information_timeliness }}
-**Accessibility**: {{ source.information_accessibility }}
+**Relevance**: [TODO]
+**Accuracy**: [TODO]
+**Completeness**: [TODO]
+**Timeliness**: [TODO]
+**Accessibility**: [TODO]
 
 ### Information Sources
 
-{{ source.information_sources }}
+[TODO]
 
 ### Data Quality Controls
 
-{{ source.data_quality_controls }}
+[TODO]
 
 ## Internal Communication
 
 ### Communication Channels
 
-**Management Meetings**: {{ source.management_meetings }}
-**Team Meetings**: {{ source.team_meetings }}
-**Intranet**: {{ source.intranet }}
-**Email**: {{ source.email_communication }}
-**Collaboration Tools**: {{ source.collaboration_tools }}
+**Management Meetings**: [TODO]
+**Team Meetings**: [TODO]
+**Intranet**: [TODO]
+**Email**: [TODO]
+**Collaboration Tools**: [TODO]
 
 ### Policies and Procedures
 
-**Policy Communication**: {{ source.policy_communication }}
-**Procedure Documentation**: {{ source.procedure_documentation }}
-**Documentation Access**: {{ source.documentation_access }}
+**Policy Communication**: [TODO]
+**Procedure Documentation**: [TODO]
+**Documentation Access**: [TODO]
 
 ### Reporting
 
-**Management Reports**: {{ source.management_reports }}
-**Operational Reports**: {{ source.operational_reports }}
-**Exception Reports**: {{ source.exception_reports }}
+**Management Reports**: [TODO]
+**Operational Reports**: [TODO]
+**Exception Reports**: [TODO]
 
 ## External Communication
 
 ### Communication with User Organizations
 
-**Service Updates**: {{ source.service_updates }}
-**Incident Notifications**: {{ source.incident_notifications }}
-**Change Notifications**: {{ source.change_notifications }}
+**Service Updates**: [TODO]
+**Incident Notifications**: [TODO]
+**Change Notifications**: [TODO]
 
 ### Communication with Regulatory Authorities
 
-{{ source.regulatory_communication }}
+[TODO]
 
 ### Communication with Auditors
 
-{{ source.auditor_communication }}
+[TODO]
 
 ### Communication with Third Parties
 
-{{ source.vendor_communication }}
+[TODO]
 
 ## Information Systems
 
 ### Core Systems
 
-{{ source.core_information_systems }}
+[TODO]
 
 ### Supporting Systems
 
-{{ source.supporting_information_systems }}
+[TODO]
 
 ### System Integration
 
-{{ source.system_integration }}
+[TODO]
 
 ### System Availability
 
-{{ source.system_availability }}
+[TODO]
 
 ## Documentation
 
 ### Documentation Standards
 
-{{ source.documentation_standards }}
+[TODO]
 
 ### Document Management
 
-{{ source.document_management }}
+[TODO]
 
 ### Version Control
 
-{{ source.version_control }}
+[TODO]
 
 ## Whistleblower Mechanism
 
 ### Reporting Channels
 
-{{ source.whistleblower_channels_detail }}
+[TODO]
 
 ### Confidentiality
 
-{{ source.whistleblower_confidentiality }}
+[TODO]
 
 ### Investigation Procedures
 
-{{ source.whistleblower_investigation_detail }}
+[TODO]
 
 ## References
 
@@ -132,13 +143,5 @@ This document describes the service organization's information and communication
 - Communication Policy
 
 <!-- Author notes: Ensure communication channels are effective -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

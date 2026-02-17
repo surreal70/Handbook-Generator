@@ -1,14 +1,16 @@
 # Guideline: Access, Visitors and Equipment Protection
 
-**Document ID:** 0490  
-**Document Type:** Guideline (detailed)  
-**Associated Policy:** 0480_Policy_Physical_Security.md  
-**Standard Reference:** ISO/IEC 27001:2022 Annex A.7.1, A.7.2, A.7.3, A.7.4  
-**Owner:** {{ meta.facilities.manager }}  
-**Version:** 1.0  
-**Status:** Approved  
-**Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}
+**Document-ID:** [FRAMEWORK]-0490
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -19,7 +21,7 @@ This guideline specifies the `0480_Policy_Physical_Security.md` and defines:
 - Visitor management
 - Physical protection of IT equipment
 
-**Scope:** All locations of **{{ meta.organization.name }}**
+**Scope:** All locations of **{{ meta-organisation.name }}**
 
 ## 2. Security Zones
 
@@ -217,15 +219,6 @@ This guideline specifies the `0480_Policy_Physical_Security.md` and defines:
 - **ISO/IEC 27001:2022 Annex A.7.3** - Securing offices, rooms and facilities
 - **ISO/IEC 27001:2022 Annex A.7.4** - Physical security monitoring
 
----
-
 **Approved by:** {{ meta.ciso.name }}, CISO  
-**Next Review:** {{ meta.document.next_review }}
+**Next Review:** {{ meta-handbook.next_review }}
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

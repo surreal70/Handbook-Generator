@@ -1,13 +1,16 @@
 # Business Impact Analysis (BIA) – Methodology
 
-**Document ID:** BCM-0070  
-**Organization:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Approved by:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0070
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -27,7 +30,7 @@ Customization required:
 
 ### 1.1 BIA Objectives
 
-The Business Impact Analysis (BIA) of {{ meta.organization.name }} pursues the following objectives:
+The Business Impact Analysis (BIA) of {{ meta-organisation.name }} pursues the following objectives:
 
 - **Identification of critical business processes:** Determination of business-critical processes and services
 - **Quantification of impacts:** Assessment of financial, operational, and reputational impacts of outages
@@ -128,7 +131,7 @@ The BIA delivers the following results:
 |------|----------|--------------|-------------|
 | 1 | Kick-off workshop | All department heads | BCM Manager |
 | 2-3 | Individual department interviews | Process owners | BCM Manager |
-| 4 | IT workshop | IT team | BCM Manager + {{ meta.roles.cio.name }} |
+| 4 | IT workshop | IT team | BCM Manager + {{ meta-organisation-roles.role_CIO }} |
 | 5 | Consolidation and analysis | BCM team | BCM Manager |
 | 6 | Results presentation | Management | BCM Manager |
 
@@ -159,7 +162,7 @@ The BIA delivers the following results:
 3. Prioritization established
 
 **Formal Approval:**
-- Approval by {{ meta.roles.ceo.name }} (CEO)
+- Approval by {{ meta-organisation-roles.role_CEO }} (CEO)
 - Confirmation by department heads
 - Documentation of approval
 
@@ -323,8 +326,8 @@ The MTPD is the point at which the impacts of an outage become unacceptable.
 - Validation of RTO/RPO values
 
 **Management Level:**
-- {{ meta.roles.ceo.name }} (CEO) approves overall BIA
-- {{ meta.roles.cio.name }} (CIO) approves IT-related RTO/RPO
+- {{ meta-organisation-roles.role_CEO }} (CEO) approves overall BIA
+- {{ meta-organisation-roles.role_CIO }} (CIO) approves IT-related RTO/RPO
 - Department heads approve their areas
 
 ### 6.2 Approval Process
@@ -335,13 +338,5 @@ The MTPD is the point at which the impacts of an outage become unacceptable.
 4. **Management Presentation:** Presentation of results
 5. **Formal Approval:** Signatures of responsible parties
 6. **Publication:** BIA results are communicated
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 <!-- End of template -->

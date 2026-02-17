@@ -1,13 +1,16 @@
 # Workstation Use and Security
 
-**Document ID:** HIPAA-0310  
-**Organization:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Approved by:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** [FRAMEWORK]-0310
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -23,7 +26,7 @@ Required (R) Standards:
 
 ## 1. Purpose
 
-This document describes the Workstation Use and Workstation Security policies for {{ meta.organization.name }} to specify proper functions to be performed, the manner in which those functions are to be performed, and physical attributes of the surroundings of workstations that access ePHI.
+This document describes the Workstation Use and Workstation Security policies for {{ meta-organisation.name }} to specify proper functions to be performed, the manner in which those functions are to be performed, and physical attributes of the surroundings of workstations that access ePHI.
 
 ### 1.1 HIPAA Requirements
 
@@ -367,7 +370,7 @@ If BYOD allowed:
 
 **Contact Information:**
 - IT Help Desk: [TODO: Phone/Email]
-- Security Officer: {{ meta.roles.security_officer.email }}
+- Security Officer: [TODO]
 - After Hours: [TODO: Emergency contact]
 
 ## 10. Training and Awareness
@@ -448,13 +451,5 @@ If BYOD allowed:
 **Retention Period:** [TODO: 6 years from retirement/disposal]
 
 **Storage Location:** [TODO: Asset management system, document repository]
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 <!-- End of template -->

@@ -1,19 +1,22 @@
 # HIPAA Compliance-Programm
 
-**Dokument-ID:** HIPAA-0050  
-**Organisation:** {{ meta.organization.name }}  
-**Verantwortlich:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Entwurf / In Prüfung / Genehmigt  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** HIPAA-0050
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
 ## 1. Zweck
 
-Dieses Dokument beschreibt das HIPAA-Compliance-Programm für {{ meta.organization.name }}, einschließlich Programmstruktur, Aktivitäten, Überwachung und kontinuierlicher Verbesserungsprozesse.
+Dieses Dokument beschreibt das HIPAA-Compliance-Programm für {{ meta-organisation.name }}, einschließlich Programmstruktur, Aktivitäten, Überwachung und kontinuierlicher Verbesserungsprozesse.
 
 ### 1.1 Zielsetzungen
 
@@ -458,20 +461,11 @@ Dieses Dokument beschreibt das HIPAA-Compliance-Programm für {{ meta.organizati
 8. Ressourcen zuweisen
 9. Verbesserungen implementieren
 
----
-
 **Dokumentenhistorie:**
 
 | Version | Datum | Autor | Änderungen |
 |---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Ersterstellung |
+| 0.1 | {{ meta-handbook.modifydate }} | {{ meta-handbook.author }} | Ersterstellung |
 
 <!-- Ende der Vorlage -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

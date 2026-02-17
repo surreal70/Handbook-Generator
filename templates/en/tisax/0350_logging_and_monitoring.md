@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0350
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Logging and Monitoring
+
+**Document-ID:** [FRAMEWORK]-0350
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -15,7 +26,7 @@ This document describes requirements for logging and monitoring according to TIS
 
 ## Scope
 
-This document applies to all IT systems of {{ source.organization_name }}.
+This document applies to all IT systems of [TODO].
 
 ## Logging
 
@@ -37,8 +48,8 @@ This document applies to all IT systems of {{ source.organization_name }}.
 - Central log collection
 - Secure storage
 - Protection against manipulation
-- Retention: {{ source.log_retention_days }} days
-- SIEM System: {{ source.siem_solution }}
+- Retention: [TODO] days
+- SIEM System: [TODO]
 
 ## Monitoring
 
@@ -95,17 +106,9 @@ This document applies to all IT systems of {{ source.organization_name }}.
 
 ## Metrics
 
-{{ source.organization_name }} measures:
+[TODO] measures:
 - Number of logged events
 - Number of security incidents
 - Average response time to alarms
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

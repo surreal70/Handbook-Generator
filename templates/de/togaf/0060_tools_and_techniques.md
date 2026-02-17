@@ -1,17 +1,28 @@
----
+
 Document-ID: togaf-0060
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Architecture-Werkzeuge und -Techniken
 
+**Dokument-ID:** [FRAMEWORK]-0060
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt die Werkzeuge und Techniken, die im Architecture-Prozess von {{ source.organization_name }} verwendet werden. Es definiert den Werkzeug-Stack, Nutzungsrichtlinien und Best Practices.
+Dieses Dokument beschreibt die Werkzeuge und Techniken, die im Architecture-Prozess von [TODO] verwendet werden. Es definiert den Werkzeug-Stack, Nutzungsrichtlinien und Best Practices.
 
 ## Geltungsbereich
 
@@ -28,11 +39,11 @@ Dieses Dokument umfasst:
 
 | Werkzeug | Zweck | Lizenzmodell | Benutzer |
 |----------|-------|--------------|----------|
-| {{ source.modeling_tool_name }} | Enterprise Architecture-Modellierung | {{ source.modeling_license }} | Architecture Team |
-| {{ source.diagram_tool_name }} | Diagrammerstellung | {{ source.diagram_license }} | Alle Projektteams |
-| {{ source.data_modeling_tool }} | Datenmodellierung | {{ source.data_modeling_license }} | Data Architects |
+| [TODO] | Enterprise Architecture-Modellierung | [TODO] | Architecture Team |
+| [TODO] | Diagrammerstellung | [TODO] | Alle Projektteams |
+| [TODO] | Datenmodellierung | [TODO] | Data Architects |
 
-**Primäres Modellierungswerkzeug**: {{ source.primary_modeling_tool }}
+**Primäres Modellierungswerkzeug**: [TODO]
 
 **Fähigkeiten**:
 - Unterstützung für TOGAF Content Framework
@@ -45,15 +56,15 @@ Dieses Dokument umfasst:
 
 | Werkzeug | Zweck | Format | Integration |
 |----------|-------|--------|-------------|
-| {{ source.wiki_tool }} | Kollaborative Dokumentation | Wiki/Markdown | {{ source.wiki_integration }} |
-| {{ source.doc_tool }} | Formelle Dokumente | Word/PDF | {{ source.doc_integration }} |
-| {{ source.presentation_tool }} | Präsentationen | PowerPoint/PDF | {{ source.presentation_integration }} |
+| [TODO] | Kollaborative Dokumentation | Wiki/Markdown | [TODO] |
+| [TODO] | Formelle Dokumente | Word/PDF | [TODO] |
+| [TODO] | Präsentationen | PowerPoint/PDF | [TODO] |
 
 ### Repository und Versionskontrolle
 
-**Repository-Werkzeug**: {{ source.repository_tool }}
+**Repository-Werkzeug**: [TODO]
 
-**Versionskontrolle**: {{ source.version_control_tool }}
+**Versionskontrolle**: [TODO]
 
 **Fähigkeiten**:
 - Artefakt-Versionierung
@@ -66,15 +77,15 @@ Dieses Dokument umfasst:
 
 | Werkzeug | Zweck | Nutzung |
 |----------|-------|---------|
-| {{ source.collaboration_platform }} | Team-Kommunikation | Tägliche Zusammenarbeit |
-| {{ source.meeting_tool }} | Virtuelle Meetings | Reviews und Workshops |
-| {{ source.whiteboard_tool }} | Visuelles Brainstorming | Design-Sitzungen |
+| [TODO] | Team-Kommunikation | Tägliche Zusammenarbeit |
+| [TODO] | Virtuelle Meetings | Reviews und Workshops |
+| [TODO] | Visuelles Brainstorming | Design-Sitzungen |
 
 ## Modellierungstechniken
 
 ### Viewpoint-Ansatz
 
-{{ source.organization_name }} verwendet TOGAF-Viewpoints für:
+[TODO] verwendet TOGAF-Viewpoints für:
 - **Stakeholder-Viewpoints**: Angepasst an spezifische Stakeholder-Anliegen
 - **Architecture-Viewpoints**: Standardisierte Sichten auf Architecture-Domänen
 - **Technical-Viewpoints**: Detaillierte technische Perspektiven
@@ -94,7 +105,7 @@ Dieses Dokument umfasst:
 - **ArchiMate**: Für Enterprise Architecture-Modellierung
 - **UML**: Für detaillierte Anwendungs- und Datenmodellierung
 - **BPMN**: Für Geschäftsprozessmodellierung
-- **Custom Notations**: {{ source.custom_notations }}
+- **Custom Notations**: [TODO]
 
 ## Analyse-Techniken
 
@@ -133,7 +144,7 @@ Dieses Dokument umfasst:
 
 ### Reifegrad-Bewertung
 
-**Framework**: {{ source.maturity_framework }}
+**Framework**: [TODO]
 
 **Dimensionen**:
 - Architecture-Prozess-Reife
@@ -148,12 +159,12 @@ Dieses Dokument umfasst:
 
 | Diagrammtyp | Zweck | Notation | Werkzeug |
 |-------------|-------|----------|----------|
-| Capability Map | Geschäftsfähigkeiten | Custom | {{ source.capability_tool }} |
-| Value Stream | Wertschöpfungsketten | Custom | {{ source.value_stream_tool }} |
-| Application Landscape | Anwendungsübersicht | ArchiMate | {{ source.app_landscape_tool }} |
-| Data Flow | Datenflüsse | UML/Custom | {{ source.data_flow_tool }} |
-| Infrastructure | Infrastruktur | Network Diagram | {{ source.infrastructure_tool }} |
-| Roadmap | Zeitliche Planung | Gantt/Timeline | {{ source.roadmap_tool }} |
+| Capability Map | Geschäftsfähigkeiten | Custom | [TODO] |
+| Value Stream | Wertschöpfungsketten | Custom | [TODO] |
+| Application Landscape | Anwendungsübersicht | ArchiMate | [TODO] |
+| Data Flow | Datenflüsse | UML/Custom | [TODO] |
+| Infrastructure | Infrastruktur | Network Diagram | [TODO] |
+| Roadmap | Zeitliche Planung | Gantt/Timeline | [TODO] |
 
 ### Visualisierungs-Best Practices
 
@@ -251,12 +262,3 @@ Der Werkzeug-Stack und die Techniken werden verbessert durch:
 
 <!-- Autorenhinweise: Passen Sie Werkzeuge und Techniken an die Bedürfnisse und das Budget Ihrer Organisation an -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|------|--------|---------|
-| 0.1 | {{meta.document.last_updated}} | {{ meta.defaults.author }} | Initiale Erstellung |
-
-<-  ( marked all subtasks complete End of template -->

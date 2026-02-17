@@ -1,13 +1,16 @@
 # Identification and Authentication Policy
 
-**Document-ID:** NIST-0400  
-**Control Family:** Identification and Authentication (IA)  
-**Control:** IA-1, IA-2, IA-5  
-**Organization:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Draft / In Review / Approved  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** NIST-0400
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -61,13 +64,5 @@ The organization uniquely identifies and authenticates users.
 **Status:** [TODO: Implemented / Partially Implemented / Planned]  
 **MFA Coverage:** [TODO: Percentage]  
 **Password Compliance:** [TODO: Percentage]  
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 <!-- End of template -->

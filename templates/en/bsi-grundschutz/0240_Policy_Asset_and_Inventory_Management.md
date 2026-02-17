@@ -1,14 +1,16 @@
 # Policy: Asset and Inventory Management
 
-**Document ID:** 0240  
-**Document Type:** Policy (abstract)  
-**Reference Framework:** BSI IT-Grundschutz (BSI Standards 200-1/200-2/200-3)  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** {{ meta.document.status }}  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.document.last_updated }}  
-**Next Review:** {{ meta.document.next_review }}
+**Document-ID:** [FRAMEWORK]-0240
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -21,7 +23,7 @@ Reference: BSI IT-Grundschutz-Kompendium, BSI Standards 200-1/200-2/200-3
 
 ## 1. Purpose and Objectives
 
-This policy defines the principles for asset management at **{{ meta.organization.name }}**.
+This policy defines the principles for asset management at **{{ meta-organisation.name }}**.
 
 **Responsible:** {{ meta.ciso.name }} (ISB)
 
@@ -30,9 +32,9 @@ This policy defines the principles for asset management at **{{ meta.organizatio
 ## 2. Scope
 
 **This policy applies to:**
-- All employees of {{ meta.organization.name }}
+- All employees of {{ meta-organisation.name }}
 - All IT systems and applications
-- All locations: {{ meta.organization.locations }}
+- All locations: [TODO]
 - External service providers with system access
 
 **Exceptions:**
@@ -71,7 +73,7 @@ This policy is implemented through:
 
 **Review Interval:**
 - This policy is reviewed annually or when significant changes occur
-- **Next Review:** {{ meta.document.next_review }}
+- **Next Review:** {{ meta-handbook.next_review }}
 
 ## 7. Consequences of Violations
 
@@ -85,23 +87,13 @@ Violations of this policy may result in the following actions:
 
 | Role | Name | Date | Approval |
 |---|---|---|---|
-| ISB | {{ meta.ciso.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| IT Management | {{ meta.cio.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| Executive Management | {{ meta.ceo.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| IT Management | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| Executive Management | {{ meta.ceo.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **References:**
 - BSI IT-Grundschutz Compendium
 - BSI Standards 200-1, 200-2, 200-3
 - Document 0250: Guideline: Asset Lifecycle Tagging and Disposal
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
 
 <!-- End of template -->

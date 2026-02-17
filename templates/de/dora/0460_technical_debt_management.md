@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0460
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Technical Debt Management
+
+**Dokument-ID:** [FRAMEWORK]-0460
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -22,9 +33,9 @@ Management von Technical Debt zur Reduzierung der Change Failure Rate.
 
 ## Organisationsinformationen
 
-- **Organisation**: {{ source.organization_name }}
-- **Tech Debt Owner**: {{ source.tech_debt_owner }}
-- **Aktueller Tech Debt**: {{ source.current_tech_debt }}
+- **Organisation**: [TODO]
+- **Tech Debt Owner**: [TODO]
+- **Aktueller Tech Debt**: [TODO]
 
 ## Technical Debt Definition
 
@@ -215,10 +226,3 @@ quality_gate:
 
 <!-- Hinweis: Tech Debt Management ist kontinuierlicher Prozess -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |

@@ -1,14 +1,16 @@
 # Guideline: MDM, Bring Your Own Device and Remote Access
 
-**Document ID:** 0510  
-**Document Type:** Guideline (detailed)  
-**Associated Policy:** 0500_Policy_Mobile_Device_and_Remote_Work.md  
-**Standard Reference:** ISO/IEC 27001:2022 Annex A.6.7, A.8.9  
-**Owner:** {{ meta.it_operations.manager }}  
-**Version:** 1.0  
-**Status:** Approved  
-**Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}
+**Document-ID:** [FRAMEWORK]-0510
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -19,7 +21,7 @@ This guideline specifies the `0500_Policy_Mobile_Device_and_Remote_Work.md` and 
 - BYOD guidelines and processes
 - Remote access controls
 
-**Scope:** All mobile devices and remote access at **{{ meta.organization.name }}**
+**Scope:** All mobile devices and remote access at **{{ meta-organisation.name }}**
 
 ## 2. Mobile Device Management (MDM)
 
@@ -265,15 +267,6 @@ This guideline specifies the `0500_Policy_Mobile_Device_and_Remote_Work.md` and 
 - **ISO/IEC 27001:2022 Annex A.8.9** - Configuration management
 - **NIST SP 800-124** - Guidelines for Managing the Security of Mobile Devices
 
----
-
 **Approved by:** {{ meta.ciso.name }}, CISO  
-**Next Review:** {{ meta.document.next_review }}
+**Next Review:** {{ meta-handbook.next_review }}
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

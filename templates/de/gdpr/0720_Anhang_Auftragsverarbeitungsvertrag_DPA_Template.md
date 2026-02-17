@@ -1,11 +1,16 @@
 # Anhang: Auftragsverarbeitungsvertrag (DPA) Template
 
-**Dokument-ID:** 0720  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Template  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0720
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -29,7 +34,7 @@ gemäß Art. 28 DSGVO
 zwischen
 
 **Verantwortlicher (Auftraggeber):**  
-{{ meta.organization }}  
+{{ meta-organisation.name }}  
 [TODO: Adresse]  
 [TODO: Vertretungsberechtigte Person]
 
@@ -44,13 +49,9 @@ und
 
 nachfolgend "Auftragnehmer"
 
----
-
 ## Präambel
 
 Der Auftraggeber beauftragt den Auftragnehmer mit Dienstleistungen, bei denen der Auftragnehmer personenbezogene Daten im Auftrag des Auftraggebers verarbeitet. Dieser Vertrag regelt die Rechte und Pflichten der Parteien im Zusammenhang mit dieser Auftragsverarbeitung gemäß Art. 28 DSGVO.
-
----
 
 ## § 1 Gegenstand und Dauer
 
@@ -63,8 +64,6 @@ Der Auftragnehmer verarbeitet personenbezogene Daten im Auftrag des Auftraggeber
 ### 1.2 Dauer
 
 Dieser Vertrag tritt mit Unterzeichnung in Kraft und gilt für die Dauer der Hauptleistung. Er endet automatisch mit Beendigung der Hauptleistung oder kann von beiden Parteien mit einer Frist von [TODO: z.B. 3 Monaten] gekündigt werden.
-
----
 
 ## § 2 Art und Zweck der Verarbeitung
 
@@ -93,8 +92,6 @@ Dieser Vertrag tritt mit Unterzeichnung in Kraft und gilt für die Dauer der Hau
 
 [TODO: z.B. Bereitstellung von Cloud-Speicher für Kundendaten, Verarbeitung von Lohndaten]
 
----
-
 ## § 3 Umfang der Verarbeitung
 
 ### 3.1 Kategorien betroffener Personen
@@ -115,8 +112,6 @@ Falls Ja: [TODO: z.B. Gesundheitsdaten, biometrische Daten]
 
 **Geschätzte Anzahl betroffener Personen:** [TODO: z.B. 10.000]  
 **Geschätztes Datenvolumen:** [TODO: z.B. 100 GB]
-
----
 
 ## § 4 Pflichten des Auftragnehmers
 
@@ -152,8 +147,6 @@ Nach Beendigung der Leistungen löscht oder gibt der Auftragnehmer alle personen
 
 **Frist:** [TODO: z.B. 30 Tage nach Vertragsende]
 
----
-
 ## § 5 Unterauftragsverhältnisse
 
 ### 5.1 Genehmigung
@@ -174,8 +167,6 @@ Der Auftragnehmer informiert den Auftraggeber über geplante Änderungen (Hinzuf
 
 Der Auftragnehmer stellt sicher, dass Unterauftragsverarbeiter dieselben Datenschutzpflichten erfüllen wie in diesem Vertrag festgelegt.
 
----
-
 ## § 6 Rechte und Pflichten des Auftraggebers
 
 ### 6.1 Weisungsrecht
@@ -195,8 +186,6 @@ Der Auftraggeber oder ein beauftragter Prüfer hat das Recht:
 
 Der Auftraggeber bleibt für die Einhaltung der Datenschutzvorschriften verantwortlich.
 
----
-
 ## § 7 Datenschutzverletzungen
 
 ### 7.1 Meldepflicht
@@ -210,8 +199,6 @@ Der Auftragnehmer meldet Datenschutzverletzungen unverzüglich, spätestens inne
 
 Der Auftragnehmer unterstützt den Auftraggeber bei der Erfüllung der Meldepflichten gemäß Art. 33-34 DSGVO.
 
----
-
 ## § 8 Haftung und Schadensersatz
 
 ### 8.1 Haftung
@@ -222,8 +209,6 @@ Beide Parteien haften gemäß Art. 82 DSGVO für Schäden, die durch die Verarbe
 
 Der Auftragnehmer stellt den Auftraggeber von Ansprüchen Dritter frei, die aufgrund von Verstößen des Auftragnehmers gegen diesen Vertrag entstehen.
 
----
-
 ## § 9 Datenschutzbeauftragte
 
 **Datenschutzbeauftragter des Auftraggebers:**  
@@ -231,8 +216,6 @@ Der Auftragnehmer stellt den Auftraggeber von Ansprüchen Dritter frei, die aufg
 
 **Datenschutzbeauftragter des Auftragnehmers:**  
 [TODO: Name, Kontakt]
-
----
 
 ## § 10 Schlussbestimmungen
 
@@ -252,8 +235,6 @@ Es gilt das Recht der [TODO: z.B. Bundesrepublik Deutschland].
 
 Gerichtsstand ist [TODO: z.B. München].
 
----
-
 ## Unterschriften
 
 **Auftraggeber:**
@@ -271,8 +252,6 @@ Ort, Datum: _______________________
 Name: _______________________
 
 Unterschrift: _______________________
-
----
 
 ## Anlage 1: Technische und organisatorische Maßnahmen (TOM)
 
@@ -316,14 +295,5 @@ Unterschrift: _______________________
 
 [TODO: z.B. Incident-Response-Plan, Meldewege, Eskalation]
 
----
-
 **Hinweis:** Dieses Template ist eine Vorlage und muss an die spezifischen Anforderungen angepasst werden. Eine rechtliche Prüfung wird empfohlen.
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

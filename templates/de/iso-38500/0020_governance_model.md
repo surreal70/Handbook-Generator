@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-38500-0020
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # IT-Governance Modell
+
+**Dokument-ID:** [FRAMEWORK]-0020
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -16,7 +28,7 @@ Dieses Dokument beschreibt das IT-Governance Modell der Organisation basierend a
 ## Geltungsbereich
 
 Dieses Dokument gilt für:
-- {{ meta.organization }}
+- {{ meta-organisation.name }}
 - Alle IT-Governance-Aktivitäten
 - Vorstand, Geschäftsführung und IT-Management
 
@@ -58,9 +70,9 @@ IT-Management
 ### IT-Governance-Komitee
 
 **Zusammensetzung:**
-- {{ meta.ceo }} (Vorsitz)
-- {{ meta.cfo }}
-- {{ meta.cio }}
+- {{ meta-organisation-roles.role_CEO }} (Vorsitz)
+- {{ meta-organisation-roles.role_CFO }}
+- {{ meta-organisation-roles.role_CIO }}
 - Geschäftsbereichsleiter
 - Externe Berater (bei Bedarf)
 
@@ -75,7 +87,7 @@ IT-Management
 ### IT-Steuerungsausschuss
 
 **Zusammensetzung:**
-- {{ meta.cio }} (Vorsitz)
+- {{ meta-organisation-roles.role_CIO }} (Vorsitz)
 - IT-Abteilungsleiter
 - Projektleiter
 - Business-Vertreter
@@ -140,19 +152,4 @@ IT-Management
 - 0010_governance_framework.md
 - 0100_edm_model.md
 - 0200_governance_roles.md
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |
-
-<!-- 
-Autor-Hinweise: 
-- Passen Sie die Governance-Struktur an Ihre Organisationsgröße an
-- Definieren Sie klare Eskalationswege
-- Dokumentieren Sie Entscheidungsbefugnisse
--->
 

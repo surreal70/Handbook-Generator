@@ -1,11 +1,16 @@
 # Organizational Security Policies (OSPs)
 
-**Document-ID:** 0220  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0220
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -86,8 +91,6 @@ Organizational Security Policies (OSPs) define security rules and practices that
 **Verification:**
 [TODO: How is compliance with this policy verified?]
 
----
-
 ### P.NEED_TO_KNOW
 **Policy ID:** P.NEED_TO_KNOW  
 **Category:** Access Control  
@@ -135,8 +138,6 @@ Organizational Security Policies (OSPs) define security rules and practices that
 
 **Verification:**
 [TODO: How is compliance with this policy verified?]
-
----
 
 ### P.AUDIT_REVIEW
 **Policy ID:** P.AUDIT_REVIEW  
@@ -187,8 +188,6 @@ Organizational Security Policies (OSPs) define security rules and practices that
 **Verification:**
 [TODO: How is compliance with this policy verified?]
 
----
-
 ### P.KEY_MANAGEMENT
 **Policy ID:** P.KEY_MANAGEMENT  
 **Category:** Cryptographic  
@@ -234,8 +233,6 @@ Organizational Security Policies (OSPs) define security rules and practices that
 
 **Verification:**
 [TODO: How is compliance with this policy verified?]
-
----
 
 ### P.DATA_RETENTION
 **Policy ID:** P.DATA_RETENTION  
@@ -283,8 +280,6 @@ Organizational Security Policies (OSPs) define security rules and practices that
 
 **Verification:**
 [TODO: How is compliance with this policy verified?]
-
----
 
 ### P.PASSWORD_POLICY
 **Policy ID:** P.PASSWORD_POLICY  
@@ -334,8 +329,6 @@ Organizational Security Policies (OSPs) define security rules and practices that
 **Verification:**
 [TODO: How is compliance with this policy verified?]
 
----
-
 ### P.CONFIGURATION_MANAGEMENT
 **Policy ID:** P.CONFIGURATION_MANAGEMENT  
 **Category:** Configuration  
@@ -382,8 +375,6 @@ Organizational Security Policies (OSPs) define security rules and practices that
 
 **Verification:**
 [TODO: How is compliance with this policy verified?]
-
----
 
 ### P.BACKUP_RECOVERY
 **Policy ID:** P.BACKUP_RECOVERY  
@@ -472,8 +463,6 @@ Organizational Security Policies (OSPs) define security rules and practices that
 | [TODO: P.001] | [TODO: A.001, A.002] | [TODO: Confidentiality/Integrity/Availability] |
 | [TODO: P.002] | [TODO: A.003] | [TODO: Integrity] |
 
----
-
 **Next Steps:**
 1. Complete all [TODO] placeholders with organization-specific policies
 2. Document all relevant OSPs
@@ -482,10 +471,3 @@ Organizational Security Policies (OSPs) define security rules and practices that
 5. Create compliance matrix
 6. Verify consistency with Threats (Template 0210) and Security Objectives (Template 0300)
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

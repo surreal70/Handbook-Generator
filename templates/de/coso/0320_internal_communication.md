@@ -1,17 +1,28 @@
----
+
 Document-ID: coso-0320
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Interne Kommunikation
 
+**Dokument-ID:** [FRAMEWORK]-0320
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt die interne Kommunikation bei {{ source.organization_name }} gemäß COSO Prinzip 14.
+Dieses Dokument beschreibt die interne Kommunikation bei [TODO] gemäß COSO Prinzip 14.
 
 ## Geltungsbereich
 
@@ -24,45 +35,45 @@ Dieses Dokument beschreibt die interne Kommunikation bei {{ source.organization_
 
 ### Grundprinzipien
 
-**Transparenz**: {{ source.transparency_principle }}
-**Offenheit**: {{ source.openness_principle }}
-**Zeitnähe**: {{ source.timeliness_principle }}
-**Klarheit**: {{ source.clarity_principle }}
+**Transparenz**: [TODO]
+**Offenheit**: [TODO]
+**Zeitnähe**: [TODO]
+**Klarheit**: [TODO]
 
 ### Kommunikationsziele
 
-{{ source.communication_objectives }}
+[TODO]
 
 ## Kommunikationskanäle
 
 ### Formelle Kanäle
 
-**Meetings und Besprechungen**: {{ source.meetings }}
-**E-Mail-Kommunikation**: {{ source.email_communication }}
-**Intranet**: {{ source.intranet }}
-**Offizielle Mitteilungen**: {{ source.official_announcements }}
+**Meetings und Besprechungen**: [TODO]
+**E-Mail-Kommunikation**: [TODO]
+**Intranet**: [TODO]
+**Offizielle Mitteilungen**: [TODO]
 
 ### Informelle Kanäle
 
-**Teamgespräche**: {{ source.team_discussions }}
-**Informelle Treffen**: {{ source.informal_meetings }}
-**Soziale Interaktionen**: {{ source.social_interactions }}
+**Teamgespräche**: [TODO]
+**Informelle Treffen**: [TODO]
+**Soziale Interaktionen**: [TODO]
 
 ### Digitale Plattformen
 
-**Collaboration Tools**: {{ source.collaboration_tools }}
-**Instant Messaging**: {{ source.instant_messaging }}
-**Videokonferenzen**: {{ source.video_conferencing }}
-**Projektmanagement-Tools**: {{ source.project_management_tools }}
+**Collaboration Tools**: [TODO]
+**Instant Messaging**: [TODO]
+**Videokonferenzen**: [TODO]
+**Projektmanagement-Tools**: [TODO]
 
 ## Kommunikationsrichtungen
 
 ### Top-Down-Kommunikation
 
-**Strategische Kommunikation**: {{ source.strategic_communication }}
-**Richtlinien und Verfahren**: {{ source.policies_procedures_communication }}
-**Unternehmensziele**: {{ source.corporate_goals_communication }}
-**Leistungserwartungen**: {{ source.performance_expectations }}
+**Strategische Kommunikation**: [TODO]
+**Richtlinien und Verfahren**: [TODO]
+**Unternehmensziele**: [TODO]
+**Leistungserwartungen**: [TODO]
 
 **Methoden**:
 - Town Hall Meetings
@@ -72,10 +83,10 @@ Dieses Dokument beschreibt die interne Kommunikation bei {{ source.organization_
 
 ### Bottom-Up-Kommunikation
 
-**Mitarbeiter-Feedback**: {{ source.employee_feedback }}
-**Vorschläge und Ideen**: {{ source.suggestions_ideas }}
-**Problemeskalation**: {{ source.problem_escalation }}
-**Leistungsberichte**: {{ source.performance_reports }}
+**Mitarbeiter-Feedback**: [TODO]
+**Vorschläge und Ideen**: [TODO]
+**Problemeskalation**: [TODO]
+**Leistungsberichte**: [TODO]
 
 **Methoden**:
 - Mitarbeiterbefragungen
@@ -85,9 +96,9 @@ Dieses Dokument beschreibt die interne Kommunikation bei {{ source.organization_
 
 ### Horizontale Kommunikation
 
-**Abteilungsübergreifende Zusammenarbeit**: {{ source.cross_functional_collaboration }}
-**Projektteams**: {{ source.project_teams }}
-**Wissensaustausch**: {{ source.knowledge_sharing }}
+**Abteilungsübergreifende Zusammenarbeit**: [TODO]
+**Projektteams**: [TODO]
+**Wissensaustausch**: [TODO]
 
 **Methoden**:
 - Projektmeetings
@@ -99,123 +110,123 @@ Dieses Dokument beschreibt die interne Kommunikation bei {{ source.organization_
 
 ### Management-Berichterstattung
 
-**Operative Berichte**: {{ source.operational_reports }}
-**Finanzberichte**: {{ source.financial_reports }}
-**Risikoberichte**: {{ source.risk_reports }}
-**Compliance-Berichte**: {{ source.compliance_reports }}
+**Operative Berichte**: [TODO]
+**Finanzberichte**: [TODO]
+**Risikoberichte**: [TODO]
+**Compliance-Berichte**: [TODO]
 
-**Berichtsfrequenz**: {{ source.reporting_frequency }}
+**Berichtsfrequenz**: [TODO]
 
 ### Board-Berichterstattung
 
-**Quartalsberichte**: {{ source.quarterly_reports }}
-**Jahresberichte**: {{ source.annual_reports }}
-**Ad-hoc-Berichte**: {{ source.ad_hoc_reports }}
+**Quartalsberichte**: [TODO]
+**Jahresberichte**: [TODO]
+**Ad-hoc-Berichte**: [TODO]
 
-**Berichtsinhalte**: {{ source.board_report_content }}
+**Berichtsinhalte**: [TODO]
 
 ### Abteilungsberichte
 
-**Leistungsberichte**: {{ source.department_performance_reports }}
-**Projektstatusberichte**: {{ source.project_status_reports }}
-**Ressourcenberichte**: {{ source.resource_reports }}
+**Leistungsberichte**: [TODO]
+**Projektstatusberichte**: [TODO]
+**Ressourcenberichte**: [TODO]
 
 ## Feedback-Mechanismen
 
 ### Mitarbeiter-Feedback
 
-**Mitarbeitergespräche**: {{ source.employee_conversations }}
-**Leistungsbeurteilungen**: {{ source.performance_reviews }}
-**360-Grad-Feedback**: {{ source.360_feedback }}
-**Mitarbeiterbefragungen**: {{ source.employee_surveys }}
+**Mitarbeitergespräche**: [TODO]
+**Leistungsbeurteilungen**: [TODO]
+**360-Grad-Feedback**: [TODO]
+**Mitarbeiterbefragungen**: [TODO]
 
 ### Beschwerdemechanismen
 
-**Beschwerdeverfahren**: {{ source.complaint_procedure }}
-**Ombudsperson**: {{ source.ombudsperson }}
-**Anonyme Meldungen**: {{ source.anonymous_reporting }}
+**Beschwerdeverfahren**: [TODO]
+**Ombudsperson**: [TODO]
+**Anonyme Meldungen**: [TODO]
 
 ### Whistleblowing
 
-**Whistleblowing-Richtlinie**: {{ source.whistleblowing_policy }}
-**Meldewege**: {{ source.reporting_channels }}
-**Schutz von Hinweisgebern**: {{ source.whistleblower_protection }}
-**Untersuchungsverfahren**: {{ source.investigation_procedure }}
+**Whistleblowing-Richtlinie**: [TODO]
+**Meldewege**: [TODO]
+**Schutz von Hinweisgebern**: [TODO]
+**Untersuchungsverfahren**: [TODO]
 
 ## Kommunikation von Kontrollinformationen
 
 ### Kontrollverantwortlichkeiten
 
-{{ source.control_responsibilities_communication }}
+[TODO]
 
 ### Kontrollprobleme
 
-**Meldung von Kontrollmängeln**: {{ source.control_deficiency_reporting }}
-**Eskalationsprozess**: {{ source.escalation_process }}
+**Meldung von Kontrollmängeln**: [TODO]
+**Eskalationsprozess**: [TODO]
 
 ### Kontrollverbesserungen
 
-{{ source.control_improvements_communication }}
+[TODO]
 
 ## Krisenkommunikation
 
 ### Krisenkommunikationsplan
 
-{{ source.crisis_communication_plan }}
+[TODO]
 
 ### Kommunikationsteam
 
-**Krisenstab**: {{ source.crisis_team }}
-**Sprecher**: {{ source.spokesperson }}
+**Krisenstab**: [TODO]
+**Sprecher**: [TODO]
 
 ### Kommunikationskanäle in Krisen
 
-{{ source.crisis_communication_channels }}
+[TODO]
 
 ## Kommunikationskultur
 
 ### Offene Kommunikation
 
-{{ source.open_communication_culture }}
+[TODO]
 
 ### Vertrauensbildung
 
-{{ source.trust_building }}
+[TODO]
 
 ### Konstruktives Feedback
 
-{{ source.constructive_feedback }}
+[TODO]
 
 ## Kommunikationsschulung
 
 ### Schulungsprogramme
 
-**Kommunikationsfähigkeiten**: {{ source.communication_skills_training }}
-**Präsentationsfähigkeiten**: {{ source.presentation_skills }}
-**Konfliktmanagement**: {{ source.conflict_management }}
+**Kommunikationsfähigkeiten**: [TODO]
+**Präsentationsfähigkeiten**: [TODO]
+**Konfliktmanagement**: [TODO]
 
 ### Führungskräfteschulung
 
-{{ source.leadership_communication_training }}
+[TODO]
 
 ## Überwachung und Bewertung
 
 ### Kommunikationswirksamkeit
 
-**Bewertungskriterien**: {{ source.effectiveness_criteria }}
-**Messmethoden**: {{ source.measurement_methods }}
-**Feedback-Auswertung**: {{ source.feedback_analysis }}
+**Bewertungskriterien**: [TODO]
+**Messmethoden**: [TODO]
+**Feedback-Auswertung**: [TODO]
 
 ### Verbesserungsmaßnahmen
 
-{{ source.improvement_measures }}
+[TODO]
 
 ## Rollen und Verantwortlichkeiten
 
-**Geschäftsführung**: {{ source.management_communication_responsibilities }}
-**Kommunikationsabteilung**: {{ source.communications_department_responsibilities }}
-**Führungskräfte**: {{ source.manager_communication_responsibilities }}
-**Alle Mitarbeiter**: {{ source.employee_communication_responsibilities }}
+**Geschäftsführung**: [TODO]
+**Kommunikationsabteilung**: [TODO]
+**Führungskräfte**: [TODO]
+**Alle Mitarbeiter**: [TODO]
 
 ## Referenzen
 
@@ -224,12 +235,3 @@ Dieses Dokument beschreibt die interne Kommunikation bei {{ source.organization_
 - Krisenkommunikationsplan
 - Verhaltenskodex
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

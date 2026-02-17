@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0340
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Recovery Automation
+
+**Dokument-ID:** [FRAMEWORK]-0340
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -22,8 +33,8 @@ Automatisierung von Recovery-Prozessen zur Reduzierung der MTTR.
 
 ## Organisationsinformationen
 
-- **Organisation**: {{ source.organization_name }}
-- **Automation-Verantwortlicher**: {{ source.recovery_automation_owner }}
+- **Organisation**: [TODO]
+- **Automation-Verantwortlicher**: [TODO]
 
 ## Automated Rollback
 
@@ -200,10 +211,3 @@ fi
 
 <!-- Hinweis: Automation ist Schlüssel zu niedriger MTTR -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |

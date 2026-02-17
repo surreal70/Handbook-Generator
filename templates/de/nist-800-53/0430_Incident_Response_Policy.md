@@ -1,13 +1,16 @@
 # Incident Response Policy
 
-**Dokument-ID:** NIST-0430  
-**Control Family:** Incident Response (IR)  
-**Control:** IR-1, IR-4, IR-5, IR-6  
-**Organisation:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** NIST-0430
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -42,7 +45,7 @@ The organization implements incident response capabilities.
 
 **Team Members:**
 - Incident Response Manager: [TODO: Name]
-- ISSO: {{ meta.roles.isso.name }}
+- ISSO: [TODO]
 - System Administrator: [TODO: Name]
 - Legal: [TODO: Name]
 - Public Relations: [TODO: Name]
@@ -74,13 +77,5 @@ The organization implements incident response capabilities.
 **Status:** [TODO: Implemented / Partially Implemented / Planned]  
 **Incident Response Plan:** [TODO: Document reference]  
 **Last Incident:** [TODO: Date or None]  
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 <!-- End of template -->

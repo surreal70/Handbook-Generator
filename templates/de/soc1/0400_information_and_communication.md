@@ -1,13 +1,24 @@
----
+
 Document-ID: soc1-0400
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Information und Kommunikation - Übersicht
+
+**Dokument-ID:** [FRAMEWORK]-0400
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -30,15 +41,15 @@ Information und Kommunikation sind wesentlich für die Durchführung aller Kompo
 
 ### Informationsanforderungen
 
-**Relevanz**: {{ source.information_relevance }}
+**Relevanz**: [TODO]
 
-**Qualität**: {{ source.information_quality }}
+**Qualität**: [TODO]
 
-**Aktualität**: {{ source.information_timeliness }}
+**Aktualität**: [TODO]
 
-**Genauigkeit**: {{ source.information_accuracy }}
+**Genauigkeit**: [TODO]
 
-**Zugänglichkeit**: {{ source.information_accessibility }}
+**Zugänglichkeit**: [TODO]
 
 ### Informationsquellen
 
@@ -49,7 +60,7 @@ Information und Kommunikation sind wesentlich für die Durchführung aller Kompo
 - Mitarbeiter-Feedback
 - Interne Berichte
 
-{{ source.internal_sources }}
+[TODO]
 
 **Externe Quellen**:
 - Kunden-Feedback
@@ -58,19 +69,19 @@ Information und Kommunikation sind wesentlich für die Durchführung aller Kompo
 - Marktinformationen
 - Branchentrends
 
-{{ source.external_sources }}
+[TODO]
 
 ### Informationsverarbeitung
 
-**Datenerfassung**: {{ source.data_collection }}
+**Datenerfassung**: [TODO]
 
-**Datenverarbeitung**: {{ source.data_processing }}
+**Datenverarbeitung**: [TODO]
 
-**Datenvalidierung**: {{ source.data_validation }}
+**Datenvalidierung**: [TODO]
 
-**Datenspeicherung**: {{ source.data_storage }}
+**Datenspeicherung**: [TODO]
 
-**Datenarchivierung**: {{ source.data_archiving }}
+**Datenarchivierung**: [TODO]
 
 ## Interne Kommunikation
 
@@ -84,7 +95,7 @@ Information und Kommunikation sind wesentlich für die Durchführung aller Kompo
 - E-Mail-Kommunikation
 - Newsletter
 
-{{ source.formal_channels }}
+[TODO]
 
 **Informelle Kanäle**:
 - Teamgespräche
@@ -92,18 +103,18 @@ Information und Kommunikation sind wesentlich für die Durchführung aller Kompo
 - Instant Messaging
 - Soziale Interaktionen
 
-{{ source.informal_channels }}
+[TODO]
 
 ### Kommunikation von Kontrollverantwortlichkeiten
 
 **Rollen und Verantwortlichkeiten**:
-{{ source.roles_responsibilities_communication }}
+[TODO]
 
-**Kontrollziele**: {{ source.control_objectives_communication }}
+**Kontrollziele**: [TODO]
 
-**Kontrollverfahren**: {{ source.control_procedures_communication }}
+**Kontrollverfahren**: [TODO]
 
-**Erwartungen**: {{ source.expectations_communication }}
+**Erwartungen**: [TODO]
 
 ### Management-Kommunikation
 
@@ -113,7 +124,7 @@ Information und Kommunikation sind wesentlich für die Durchführung aller Kompo
 - Leistungserwartungen
 - Richtlinienänderungen
 
-{{ source.top_down_communication }}
+[TODO]
 
 **Bottom-Up-Kommunikation**:
 - Leistungsberichte
@@ -121,17 +132,17 @@ Information und Kommunikation sind wesentlich für die Durchführung aller Kompo
 - Verbesserungsvorschläge
 - Feedback
 
-{{ source.bottom_up_communication }}
+[TODO]
 
 ### Mitarbeiterkommunikation
 
-**Onboarding-Kommunikation**: {{ source.onboarding_communication }}
+**Onboarding-Kommunikation**: [TODO]
 
-**Laufende Kommunikation**: {{ source.ongoing_communication }}
+**Laufende Kommunikation**: [TODO]
 
-**Schulungskommunikation**: {{ source.training_communication }}
+**Schulungskommunikation**: [TODO]
 
-**Leistungsfeedback**: {{ source.performance_feedback }}
+**Leistungsfeedback**: [TODO]
 
 ## Externe Kommunikation
 
@@ -143,7 +154,7 @@ Information und Kommunikation sind wesentlich für die Durchführung aller Kompo
 - Incident-Benachrichtigungen
 - Änderungsmitteilungen
 
-{{ source.customer_communication }}
+[TODO]
 
 **Lieferanten**:
 - Anforderungen
@@ -151,7 +162,7 @@ Information und Kommunikation sind wesentlich für die Durchführung aller Kompo
 - Feedback
 - Vertragsänderungen
 
-{{ source.supplier_communication }}
+[TODO]
 
 **Regulierungsbehörden**:
 - Compliance-Berichte
@@ -159,7 +170,7 @@ Information und Kommunikation sind wesentlich für die Durchführung aller Kompo
 - Anfragen und Antworten
 - Prüfungskooperation
 
-{{ source.regulatory_communication }}
+[TODO]
 
 **Externe Prüfer**:
 - Prüfungsplanung
@@ -167,63 +178,63 @@ Information und Kommunikation sind wesentlich für die Durchführung aller Kompo
 - Feststellungen und Empfehlungen
 - Management-Antworten
 
-{{ source.auditor_communication }}
+[TODO]
 
 ### Externe Berichterstattung
 
-**SOC 1 Berichte**: {{ source.soc1_reporting }}
+**SOC 1 Berichte**: [TODO]
 
-**Compliance-Berichte**: {{ source.compliance_reporting }}
+**Compliance-Berichte**: [TODO]
 
-**Incident-Berichterstattung**: {{ source.incident_reporting }}
+**Incident-Berichterstattung**: [TODO]
 
-**Transparenzberichte**: {{ source.transparency_reporting }}
+**Transparenzberichte**: [TODO]
 
 ### Kommunikationsrichtlinien
 
-**Externe Kommunikationsrichtlinie**: {{ source.external_communication_policy }}
+**Externe Kommunikationsrichtlinie**: [TODO]
 
-**Medienrichtlinie**: {{ source.media_policy }}
+**Medienrichtlinie**: [TODO]
 
-**Social Media Richtlinie**: {{ source.social_media_policy }}
+**Social Media Richtlinie**: [TODO]
 
-**Vertraulichkeitsvereinbarungen**: {{ source.confidentiality_agreements }}
+**Vertraulichkeitsvereinbarungen**: [TODO]
 
 ## Informationssysteme
 
 ### Systemarchitektur
 
 **Anwendungssysteme**:
-{{ source.application_systems }}
+[TODO]
 
 **Infrastruktursysteme**:
-{{ source.infrastructure_systems }}
+[TODO]
 
 **Datenbanksysteme**:
-{{ source.database_systems }}
+[TODO]
 
 **Integrationen**:
-{{ source.system_integrations }}
+[TODO]
 
 ### Systemkontrollen
 
-**Zugangskontrollen**: {{ source.system_access_controls }}
+**Zugangskontrollen**: [TODO]
 
-**Datenintegrität**: {{ source.data_integrity_controls }}
+**Datenintegrität**: [TODO]
 
-**Verfügbarkeit**: {{ source.availability_controls }}
+**Verfügbarkeit**: [TODO]
 
-**Vertraulichkeit**: {{ source.confidentiality_controls }}
+**Vertraulichkeit**: [TODO]
 
 ### Systemüberwachung
 
-**Leistungsüberwachung**: {{ source.system_performance_monitoring }}
+**Leistungsüberwachung**: [TODO]
 
-**Verfügbarkeitsüberwachung**: {{ source.system_availability_monitoring }}
+**Verfügbarkeitsüberwachung**: [TODO]
 
-**Sicherheitsüberwachung**: {{ source.system_security_monitoring }}
+**Sicherheitsüberwachung**: [TODO]
 
-**Kapazitätsüberwachung**: {{ source.system_capacity_monitoring }}
+**Kapazitätsüberwachung**: [TODO]
 
 ## Berichterstattung
 
@@ -235,7 +246,7 @@ Information und Kommunikation sind wesentlich für die Durchführung aller Kompo
 - Cashflow-Statement
 - Budget-Abweichungen
 
-{{ source.financial_reports }}
+[TODO]
 
 **Betriebsberichte**:
 - KPI-Dashboards
@@ -243,7 +254,7 @@ Information und Kommunikation sind wesentlich für die Durchführung aller Kompo
 - Betriebsstatistiken
 - Trendanalysen
 
-{{ source.operational_reports }}
+[TODO]
 
 **Risikoberichte**:
 - Risikoinventar
@@ -251,11 +262,11 @@ Information und Kommunikation sind wesentlich für die Durchführung aller Kompo
 - Incident-Berichte
 - Kontrollmängel
 
-{{ source.risk_reports }}
+[TODO]
 
 ### Vorstandsberichterstattung
 
-**Berichtsfrequenz**: {{ source.board_reporting_frequency }}
+**Berichtsfrequenz**: [TODO]
 
 **Berichtsinhalte**:
 - Strategische Leistung
@@ -264,61 +275,61 @@ Information und Kommunikation sind wesentlich für die Durchführung aller Kompo
 - Compliance-Status
 - Wesentliche Vorfälle
 
-{{ source.board_report_contents }}
+[TODO]
 
-**Berichtsformat**: {{ source.board_report_format }}
+**Berichtsformat**: [TODO]
 
 ### Ausschussberichterstattung
 
-**Prüfungsausschuss**: {{ source.audit_committee_reporting }}
+**Prüfungsausschuss**: [TODO]
 
-**Risikoausschuss**: {{ source.risk_committee_reporting }}
+**Risikoausschuss**: [TODO]
 
-**Compliance-Ausschuss**: {{ source.compliance_committee_reporting }}
+**Compliance-Ausschuss**: [TODO]
 
 ### Berichtsqualität
 
-**Genauigkeit**: {{ source.report_accuracy }}
+**Genauigkeit**: [TODO]
 
-**Vollständigkeit**: {{ source.report_completeness }}
+**Vollständigkeit**: [TODO]
 
-**Aktualität**: {{ source.report_timeliness }}
+**Aktualität**: [TODO]
 
-**Klarheit**: {{ source.report_clarity }}
+**Klarheit**: [TODO]
 
 ## Whistleblower-Mechanismen
 
 ### Meldeverfahren
 
 **Meldekanäle**:
-- Hotline: {{ source.whistleblower_hotline }}
-- E-Mail: {{ source.whistleblower_email }}
-- Online-Portal: {{ source.whistleblower_portal }}
-- Briefkasten: {{ source.whistleblower_mailbox }}
+- Hotline: [TODO]
+- E-Mail: [TODO]
+- Online-Portal: [TODO]
+- Briefkasten: [TODO]
 
-{{ source.reporting_channels }}
+[TODO]
 
-**Anonymität**: {{ source.anonymous_reporting }}
+**Anonymität**: [TODO]
 
-**Vertraulichkeit**: {{ source.confidential_reporting }}
+**Vertraulichkeit**: [TODO]
 
 ### Schutz vor Vergeltung
 
-**Schutzrichtlinie**: {{ source.retaliation_protection_policy }}
+**Schutzrichtlinie**: [TODO]
 
-**Vergeltungsverbot**: {{ source.non_retaliation_policy }}
+**Vergeltungsverbot**: [TODO]
 
-**Durchsetzung**: {{ source.protection_enforcement }}
+**Durchsetzung**: [TODO]
 
 ### Bearbeitung von Meldungen
 
-**Eingangsbestätigung**: {{ source.report_acknowledgment }}
+**Eingangsbestätigung**: [TODO]
 
-**Untersuchungsprozess**: {{ source.investigation_process }}
+**Untersuchungsprozess**: [TODO]
 
-**Rückmeldung**: {{ source.reporter_feedback }}
+**Rückmeldung**: [TODO]
 
-**Dokumentation**: {{ source.reporting_documentation }}
+**Dokumentation**: [TODO]
 
 ## Kommunikationseffektivität
 
@@ -330,7 +341,7 @@ Information und Kommunikation sind wesentlich für die Durchführung aller Kompo
 - Kommunikationsaudits
 - Effektivitätsmetriken
 
-{{ source.communication_assessment }}
+[TODO]
 
 **Bewertungskriterien**:
 - Klarheit
@@ -339,17 +350,17 @@ Information und Kommunikation sind wesentlich für die Durchführung aller Kompo
 - Zugänglichkeit
 - Verständlichkeit
 
-{{ source.assessment_criteria }}
+[TODO]
 
 ### Verbesserungsmaßnahmen
 
-**Identifizierte Lücken**: {{ source.communication_gaps }}
+**Identifizierte Lücken**: [TODO]
 
-**Verbesserungsinitiativen**: {{ source.improvement_initiatives }}
+**Verbesserungsinitiativen**: [TODO]
 
-**Implementierung**: {{ source.improvement_implementation }}
+**Implementierung**: [TODO]
 
-**Nachverfolgung**: {{ source.improvement_followup }}
+**Nachverfolgung**: [TODO]
 
 ## Dokumentation und Nachweise
 
@@ -373,21 +384,21 @@ Information und Kommunikation sind wesentlich für die Durchführung aller Kompo
    - Integrationsdokumentation
    - Systemhandbücher
 
-{{ source.required_documentation }}
+[TODO]
 
 ### Aufbewahrungsfristen
 
-{{ source.retention_requirements }}
+[TODO]
 
 ## Überwachung und Berichterstattung
 
 ### Überwachungsaktivitäten
 
-**Kommunikationsüberwachung**: {{ source.communication_monitoring }}
+**Kommunikationsüberwachung**: [TODO]
 
-**Systemüberwachung**: {{ source.system_monitoring }}
+**Systemüberwachung**: [TODO]
 
-**Berichtsqualitätsüberwachung**: {{ source.report_quality_monitoring }}
+**Berichtsqualitätsüberwachung**: [TODO]
 
 ### Metriken
 
@@ -397,15 +408,15 @@ Information und Kommunikation sind wesentlich für die Durchführung aller Kompo
 - Berichtspünktlichkeit
 - Informationsqualität
 
-{{ source.communication_kpis }}
+[TODO]
 
 ### Berichterstattung
 
-**Interne Berichterstattung**: {{ source.internal_reporting }}
+**Interne Berichterstattung**: [TODO]
 
-**Management-Berichterstattung**: {{ source.management_reporting }}
+**Management-Berichterstattung**: [TODO]
 
-**Vorstandsberichterstattung**: {{ source.board_reporting }}
+**Vorstandsberichterstattung**: [TODO]
 
 ## Referenzen
 
@@ -416,12 +427,3 @@ Information und Kommunikation sind wesentlich für die Durchführung aller Kompo
 
 <!-- Hinweise für Autoren: Aktualisieren Sie Kommunikationskanäle bei Änderungen -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

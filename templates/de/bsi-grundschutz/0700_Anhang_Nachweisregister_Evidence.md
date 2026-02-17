@@ -1,14 +1,16 @@
 # Anhang: Nachweisregister (Evidence)
 
-**Dokument-ID:** 0700  
-**Dokumenttyp:** Anhang/Template  
-**Referenzrahmen:** BSI IT-Grundschutz (BSI Standards 200-1/200-2/200-3)  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** {{ meta.document.status }}  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0700
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -20,7 +22,7 @@ Reference: BSI Standard 200-1 (Documentation and Evidence Management)
 
 ## 1. Zweck und Zielsetzung
 
-Das Nachweisregister von **{{ meta.organization.name }}** bietet eine zentrale Übersicht über alle Nachweise (Evidence), die die Umsetzung von Sicherheitsmaßnahmen, Policies und Richtlinien belegen.
+Das Nachweisregister von **{{ meta-organisation.name }}** bietet eine zentrale Übersicht über alle Nachweise (Evidence), die die Umsetzung von Sicherheitsmaßnahmen, Policies und Richtlinien belegen.
 
 **Verantwortlich:** {{ meta.ciso.name }} (ISB)
 
@@ -112,22 +114,12 @@ Das Nachweisregister von **{{ meta.organization.name }}** bietet eine zentrale �
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| ISB | {{ meta.ciso.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| IT-Leitung | {{ meta.cio.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| IT-Leitung | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **Referenzen:**
 - BSI Standard 200-1: ISMS (Dokumentation)
 - BSI Standard 200-2: IT-Grundschutz-Methodik (Nachweisführung)
 - Alle ISMS-Dokumente (0010-0630)
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 <!-- End of template -->

@@ -1,17 +1,28 @@
----
+
 Document-ID: coso-0040
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Integrität und ethische Werte
 
+**Dokument-ID:** [FRAMEWORK]-0040
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt, wie {{ source.organization_name }} Integrität und ethische Werte fördert und aufrechterhält (COSO Prinzip 1).
+Dieses Dokument beschreibt, wie [TODO] Integrität und ethische Werte fördert und aufrechterhält (COSO Prinzip 1).
 
 ## Geltungsbereich
 
@@ -24,84 +35,75 @@ Dieses Dokument beschreibt, wie {{ source.organization_name }} Integrität und e
 
 ### Grundprinzipien
 
-{{ source.code_principles }}
+[TODO]
 
 ### Anwendungsbereich
 
-**Gilt für**: {{ source.code_applicability }}
+**Gilt für**: [TODO]
 
 ### Kernthemen
 
-1. **Integrität**: {{ source.integrity_definition }}
-2. **Ehrlichkeit**: {{ source.honesty_definition }}
-3. **Fairness**: {{ source.fairness_definition }}
-4. **Respekt**: {{ source.respect_definition }}
+1. **Integrität**: [TODO]
+2. **Ehrlichkeit**: [TODO]
+3. **Fairness**: [TODO]
+4. **Respekt**: [TODO]
 
 ## Ethische Standards
 
 ### Geschäftsethik
 
-{{ source.business_ethics }}
+[TODO]
 
 ### Umgang mit Stakeholdern
 
-**Kunden**: {{ source.customer_ethics }}
-**Lieferanten**: {{ source.supplier_ethics }}
-**Mitarbeiter**: {{ source.employee_ethics }}
-**Gesellschaft**: {{ source.society_ethics }}
+**Kunden**: [TODO]
+**Lieferanten**: [TODO]
+**Mitarbeiter**: [TODO]
+**Gesellschaft**: [TODO]
 
 ## Interessenkonflikte
 
 ### Definition
 
-{{ source.conflict_of_interest_definition }}
+[TODO]
 
 ### Offenlegungspflicht
 
-{{ source.disclosure_requirements }}
+[TODO]
 
 ### Genehmigungsprozess
 
-{{ source.approval_process }}
+[TODO]
 
 ## Kommunikation
 
 ### Kommunikationskanäle
 
-{{ source.communication_channels }}
+[TODO]
 
 ### Schulungsprogramm
 
-**Neue Mitarbeiter**: {{ source.onboarding_training }}
-**Jährliche Auffrischung**: {{ source.annual_training }}
-**Führungskräfte**: {{ source.leadership_training }}
+**Neue Mitarbeiter**: [TODO]
+**Jährliche Auffrischung**: [TODO]
+**Führungskräfte**: [TODO]
 
 ## Durchsetzung
 
 ### Meldewege
 
-{{ source.reporting_channels }}
+[TODO]
 
 ### Whistleblower-Schutz
 
-{{ source.whistleblower_protection }}
+[TODO]
 
 ### Disziplinarmaßnahmen
 
-{{ source.disciplinary_actions }}
+[TODO]
 
 ## Referenzen
 
-- Verhaltenskodex {{ source.organization_name }}
+- Verhaltenskodex [TODO]
 - Compliance-Richtlinie
 - Whistleblower-Richtlinie
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

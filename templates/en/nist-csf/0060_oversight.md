@@ -1,13 +1,25 @@
----
+
 Document-ID: nist-csf-0060
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Oversight and Monitoring (GV.OV)
+
+**Document-ID:** [FRAMEWORK]-0060
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -15,7 +27,7 @@ This document describes the oversight and monitoring mechanisms for the organiza
 
 ## Scope
 
-{{ meta.scope }}
+{{ meta-handbook.scope }}
 
 ## Governance Oversight
 
@@ -48,7 +60,7 @@ This document describes the oversight and monitoring mechanisms for the organiza
 ## Cybersecurity Committees
 
 ### Cybersecurity Steering Committee
-**Chair:** {{ meta.ciso }}  
+**Chair:** {{ meta-organisation-roles.role_CISO }}  
 **Members:**
 - CIO
 - CRO
@@ -65,7 +77,7 @@ This document describes the oversight and monitoring mechanisms for the organiza
 - Risk assessment and treatment
 
 ### Security Operations Committee
-**Chair:** {{ meta.security_ops_manager }}  
+**Chair:** {{ meta-handbook.security_ops_manager }}  
 **Members:**
 - IT Operations
 - Network Team
@@ -81,7 +93,7 @@ This document describes the oversight and monitoring mechanisms for the organiza
 - Technical decisions
 
 ### Risk Management Committee
-**Chair:** {{ meta.cro }}  
+**Chair:** {{ meta-organisation-roles.role_Risk_Manager }}  
 **Members:**
 - CISO
 - Business Unit Heads
@@ -224,17 +236,3 @@ This document describes the oversight and monitoring mechanisms for the organiza
 - 0040_roles_responsibilities.md
 - 0050_policy_framework.md
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |
-
-<!-- 
-Author Notes:
-- Adapt reporting formats to audiences
-- Ensure metrics are meaningful
-- Review escalation processes regularly
--->

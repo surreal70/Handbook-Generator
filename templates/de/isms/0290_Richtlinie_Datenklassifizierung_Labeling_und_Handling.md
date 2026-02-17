@@ -1,14 +1,16 @@
 # Richtlinie: Datenklassifizierung, Labeling und Handling
 
-**Dokument-ID:** 0290  
-**Dokumenttyp:** Richtlinie (detailliert)  
-**Zugehörige Policy:** 0280_Policy_Datenklassifizierung_und_Informationshandling.md  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.5.12, A.5.13  
-**Owner:** {{ meta.it_operations.manager }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}
+**Dokument-ID:** 0290
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -19,7 +21,7 @@ Diese Richtlinie konkretisiert die `0280_Policy_Datenklassifizierung_und_Informa
 - Labeling-Verfahren für Dokumente und E-Mails
 - Handling-Anforderungen pro Klassifizierungsstufe
 
-**Geltungsbereich:** Alle Informationen bei **{{ meta.organization.name }}**
+**Geltungsbereich:** Alle Informationen bei **{{ meta-organisation.name }}**
 
 ## 2. Klassifizierungsstufen
 
@@ -253,15 +255,6 @@ Diese Richtlinie konkretisiert die `0280_Policy_Datenklassifizierung_und_Informa
 - **ISO/IEC 27001:2022 Annex A.5.13** - Labelling of information
 - **DIN 66399** - Vernichtung von Datenträgern
 
----
-
 **Genehmigt durch:** {{ meta.ciso.name }}, CISO  
-**Nächster Review:** {{ meta.document.next_review }}
+**Nächster Review:** {{ meta-handbook.next_review }}
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

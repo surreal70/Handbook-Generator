@@ -1,11 +1,16 @@
 # Records of Processing Activities
 
-**Document-ID:** 0320  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Internal  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0320
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,7 +30,7 @@ Reference: GDPR Art. 30 (Records of processing activities)
 
 ## Purpose
 
-This document is the records of processing activities according to Art. 30 GDPR for {{ meta.organization }}. It systematically documents all processing of personal data and serves as evidence of compliance.
+This document is the records of processing activities according to Art. 30 GDPR for {{ meta-organisation.name }}. It systematically documents all processing of personal data and serves as evidence of compliance.
 
 ## Obligation to Maintain Records
 
@@ -97,17 +102,13 @@ The obligation does not apply to enterprises with fewer than 250 employees, unle
 - **Pseudonymization:** [TODO: Description]
 - **Further Measures:** [TODO: Reference to TOM documentation]
 
----
-
 ### Processing Activity 2: [TODO: Name of Processing]
 
 [TODO: Repeat structure for each processing activity]
 
----
-
 ## Records for Processors (Art. 30(2))
 
-If {{ meta.organization }} acts as processor:
+If {{ meta-organisation.name }} acts as processor:
 
 ### Processing Activity 1: [TODO: Name]
 
@@ -131,8 +132,6 @@ If {{ meta.organization }} acts as processor:
 #### d) Technical and Organizational Measures (Art. 32)
 
 - [TODO: Reference to TOM documentation]
-
----
 
 ## Overview of All Processing Activities
 
@@ -182,8 +181,6 @@ The records are made available to the supervisory authority upon request.
 - **TOM Documentation (Art. 32):** Detailed security measures
 - **Erasure Concept:** Detailed erasure deadlines and processes
 
----
-
 **Next Steps:**
 1. Systematically record all processing activities
 2. Document all mandatory information per Art. 30
@@ -191,10 +188,3 @@ The records are made available to the supervisory authority upon request.
 4. Train employees to report new processing
 5. Review records regularly for completeness
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

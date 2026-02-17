@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0340
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Backup and Recovery
+
+**Document-ID:** [FRAMEWORK]-0340
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -15,7 +26,7 @@ This document describes backup and recovery processes according to TISAX require
 
 ## Scope
 
-This document applies to all business-critical data of {{ source.organization_name }}.
+This document applies to all business-critical data of [TODO].
 
 ## Backup Strategy
 
@@ -28,11 +39,11 @@ This document applies to all business-critical data of {{ source.organization_na
 **Critical Systems:**
 - Daily incremental
 - Weekly full
-- Retention: {{ source.backup_retention_days }} days
+- Retention: [TODO] days
 
 **Standard Systems:**
 - Weekly full
-- Retention: {{ source.backup_retention_days }} days
+- Retention: [TODO] days
 
 ### Backup Locations
 **Primary:** Local backup system
@@ -41,12 +52,12 @@ This document applies to all business-critical data of {{ source.organization_na
 ## Recovery Process
 
 ### Recovery Time Objective (RTO)
-**Critical Systems:** RTO: {{ source.critical_rto }} hours
-**Standard Systems:** RTO: {{ source.standard_rto }} hours
+**Critical Systems:** RTO: [TODO] hours
+**Standard Systems:** RTO: [TODO] hours
 
 ### Recovery Point Objective (RPO)
-**Critical Data:** RPO: {{ source.critical_rpo }} hours
-**Standard Data:** RPO: {{ source.standard_rpo }} hours
+**Critical Data:** RPO: [TODO] hours
+**Standard Data:** RPO: [TODO] hours
 
 ### Recovery Procedure
 1. Identification of recovery need
@@ -80,17 +91,9 @@ This document applies to all business-critical data of {{ source.organization_na
 
 ## Metrics
 
-{{ source.organization_name }} measures:
+[TODO] measures:
 - Backup success rate
 - Average recovery time
 - Number of successful recovery tests
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

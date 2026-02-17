@@ -1,14 +1,16 @@
 # Richtlinie: Third-Party Risk Assessment und Cloud Controls
 
-**Dokument-ID:** 0470  
-**Dokumenttyp:** Richtlinie (detailliert)  
-**Zugehörige Policy:** 0460_Policy_Lieferanten_und_Cloud_Sicherheit.md  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.5.19, A.5.20, A.5.21, A.5.22, A.5.23  
-**Owner:** {{ meta.procurement.manager }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}
+**Dokument-ID:** 0470
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -19,7 +21,7 @@ Diese Richtlinie konkretisiert die `0460_Policy_Lieferanten_und_Cloud_Sicherheit
 - Cloud Security Controls und Compliance
 - Lieferantenmanagement und -überwachung
 
-**Geltungsbereich:** Alle Lieferanten und Cloud-Services bei **{{ meta.organization.name }}**
+**Geltungsbereich:** Alle Lieferanten und Cloud-Services bei **{{ meta-organisation.name }}**
 
 ## 2. Third-Party Risk Assessment
 
@@ -214,15 +216,6 @@ Diese Richtlinie konkretisiert die `0460_Policy_Lieferanten_und_Cloud_Sicherheit
 - **ISO/IEC 27001:2022 Annex A.5.22** - Monitoring, review and change management of supplier services
 - **ISO/IEC 27001:2022 Annex A.5.23** - Information security for use of cloud services
 
----
-
 **Genehmigt durch:** {{ meta.ciso.name }}, CISO  
-**Nächster Review:** {{ meta.document.next_review }}
+**Nächster Review:** {{ meta-handbook.next_review }}
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

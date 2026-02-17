@@ -54,11 +54,11 @@ Jede Vorlage folgt einer konsistenten Struktur:
 ```markdown
 ---
 Document-ID: togaf-NNNN
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.author }}
+Version: {{ meta-handbook.revision }}
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
+Last Update: {{ meta-handbook.modifydate }}
 ---
 
 # Vorlagentitel
@@ -79,11 +79,11 @@ Last Update: {{ meta.date }}
 
 Vorlagen verwenden Platzhalter für organisationsspezifische Daten:
 
-- `{{ meta.author }}` - Dokumentautor
-- `{{ meta.version }}` - Dokumentversion
-- `{{ meta.date }}` - Dokumentdatum
-- `{{ source.organization_name }}` - Organisationsname
-- `{{ source.field_name }}` - Andere organisationsspezifische Felder
+- `{{ meta-handbook.author }}` - Dokumentautor
+- `{{ meta-handbook.revision }}` - Dokumentversion
+- `{{ meta-handbook.modifydate }}` - Dokumentdatum
+- `[TODO]` - Organisationsname
+- `[TODO]` - Andere organisationsspezifische Felder
 
 ## Anpassungsleitfaden
 
@@ -161,7 +161,7 @@ Für Fragen oder Vorschläge zu diesen Vorlagen:
 
 | Version | Datum | Autor | Änderungen |
 |---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiales Vorlagenset |
+| 1.0 | [Date] | [Author] | Initiales Vorlagenset |
 
 ---
 

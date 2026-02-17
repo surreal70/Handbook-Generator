@@ -1,5 +1,19 @@
 # HIPAA Framework-Mapping
 
+**Dokument-ID:** [FRAMEWORK]-9999
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Überblick
 
 Dieses Dokument ordnet die HIPAA-Compliance-Handbuch-Vorlagen spezifischen HIPAA Security Rule-, Privacy Rule- und Breach Notification Rule-Anforderungen zu. Dieses Mapping gewährleistet eine umfassende Abdeckung aller HIPAA-Anforderungen und bietet Nachverfolgbarkeit für Compliance-Audits.
@@ -17,8 +31,6 @@ Dieses Dokument ordnet die HIPAA-Compliance-Handbuch-Vorlagen spezifischen HIPAA
 2. **Privacy Rule** (45 CFR Part 164, Subpart E)
 3. **Breach Notification Rule** (45 CFR Part 164, Subpart D)
 
----
-
 ## Security Rule-Mapping
 
 ### Administrative Safeguards (§164.308)
@@ -34,8 +46,6 @@ Dieses Dokument ordnet die HIPAA-Compliance-Handbuch-Vorlagen spezifischen HIPAA
 | §164.308(a)(3) | Mitarbeitersicherheit | Erforderlich | HIPAA-0110 | Autorisierung, Clearance, Kündigung |
 
 [TODO: Weitere Abschnitte analog zur englischen Version...]
-
----
 
 ## Abdeckungsanalyse
 
@@ -62,22 +72,7 @@ Alle HIPAA Security Rule-, Privacy Rule- und Breach Notification Rule-Anforderun
 
 Dieser Vorlagensatz bietet umfassende Abdeckung aller HIPAA-Anforderungen. Es wurden keine Lücken identifiziert.
 
----
-
 **Version**: 1.0  
 **Letzte Aktualisierung**: 2026-02-07  
 **Gepflegt von**: Handbook Generator Project
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
-
-## Versionshistorie
-
-| Version | Datum | Änderungen |
-|---------|-------|------------|
-| 0.1 | {{meta.document.last_updated}} | Initiale Erstellung |

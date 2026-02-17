@@ -1,14 +1,16 @@
 # Richtlinie: Datenschutz-Anforderungen und Datenverarbeitung
 
-**Dokument-ID:** 0570  
-**Dokumenttyp:** Richtlinie (detailliert)  
-**Zugehörige Policy:** 0560_Policy_Datenschutz_Schnittstellen.md  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.5.34  
-**Owner:** {{ meta.dpo.name }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}
+**Dokument-ID:** 0570
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -19,7 +21,7 @@ Diese Richtlinie konkretisiert die `0560_Policy_Datenschutz_Schnittstellen.md` u
 - Datenverarbeitungsprozesse
 - Betroffenenrechte und deren Umsetzung
 
-**Geltungsbereich:** Alle personenbezogenen Daten bei **{{ meta.organization.name }}**
+**Geltungsbereich:** Alle personenbezogenen Daten bei **{{ meta-organisation.name }}**
 
 ## 2. DSGVO-Grundprinzipien
 
@@ -302,15 +304,6 @@ Diese Richtlinie konkretisiert die `0560_Policy_Datenschutz_Schnittstellen.md` u
 - **DSGVO (EU 2016/679)** - Datenschutz-Grundverordnung
 - **BDSG** - Bundesdatenschutzgesetz
 
----
-
 **Genehmigt durch:** {{ meta.dpo.name }}, Datenschutzbeauftragter  
-**Nächster Review:** {{ meta.document.next_review }}
+**Nächster Review:** {{ meta-handbook.next_review }}
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

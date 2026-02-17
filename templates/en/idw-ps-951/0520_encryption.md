@@ -1,11 +1,16 @@
 # Encryption and Key Management
 
-**Document-ID:** idw-ps-951-0520  
-**Owner:** {{ meta.audit_lead }}  
-**Version:** {{ meta.version }}  
-**Status:** {{ meta.status }}  
-**Classification:** {{ meta.classification }}  
-**Last Update:** {{ meta.date }}
+**Document-ID:** idw-ps-951-0520
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -16,8 +21,8 @@ This document describes the audit of Encryption and Key Management as part of th
 ## 2. Audit Subject
 
 ### Audit Area
-- **Area:** {{ source.audit_area }}
-- **Responsible:** {{ source.responsible }}
+- **Area:** [TODO]
+- **Responsible:** [TODO]
 
 ### Audit Objectives
 - Assessment of implementation
@@ -39,38 +44,29 @@ This document describes the audit of Encryption and Key Management as part of th
 
 | Criterion | Requirement | Current State | Assessment |
 |-----------|-------------|---------------|------------|
-| Documentation | Complete | {{ source.doc_status }} | {{ source.doc_assessment }} |
-| Implementation | Effective | {{ source.impl_status }} | {{ source.impl_assessment }} |
+| Documentation | Complete | [TODO] | [TODO] |
+| Implementation | Effective | [TODO] | [TODO] |
 
 ## 5. Findings
 
 ### Positive Findings
-1. {{ source.positive_finding_1 }}
+1. [TODO]
 
 ### Improvement Opportunities
-1. {{ source.improvement_1 }}
+1. [TODO]
 
 ## 6. Recommendations
 
-1. {{ source.recommendation_1 }}
+1. [TODO]
 
 ## 7. References
 
 - IDW PS 951
 - Relevant Documentation
 
----
-
 **Approved by:**  
-{{ meta.audit_lead }}, Audit Lead  
-Date: {{ meta.approval_date }}
+{{ meta-organisation-roles.role_Internal_Auditor }}, Audit Lead  
+Date: {{ meta-handbook.valid_from }}
 
-**Next Review:** {{ meta.next_review }}
+**Next Review:** {{ meta-handbook.next_review }}
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |

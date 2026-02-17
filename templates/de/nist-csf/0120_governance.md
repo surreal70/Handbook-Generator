@@ -1,13 +1,25 @@
----
+
 Document-ID: nist-csf-0120
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Governance (ID.GV)
+
+**Dokument-ID:** [FRAMEWORK]-0120
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -15,7 +27,7 @@ Dokumentation der Cybersecurity-Governance-Anforderungen und deren Integration i
 
 ## Geltungsbereich
 
-{{ meta.scope }}
+{{ meta-handbook.scope }}
 
 ## Governance-Anforderungen
 
@@ -25,9 +37,9 @@ Dokumentation der Cybersecurity-Governance-Anforderungen und deren Integration i
 - {{ meta.regulation_2 }}
 
 ### Cybersecurity-Rollen
-- CISO: {{ meta.ciso }}
-- CRO: {{ meta.cro }}
-- Compliance Manager: {{ meta.compliance_manager }}
+- CISO: {{ meta-organisation-roles.role_CISO }}
+- CRO: {{ meta-organisation-roles.role_Risk_Manager }}
+- Compliance Manager: {{ meta-organisation-roles.role_Compliance_Manager }}
 
 ## Integration mit Risikomanagement
 
@@ -38,12 +50,3 @@ Die Cybersecurity-Governance ist in das Enterprise Risk Management (ERM) integri
 - 0020_organizational_context.md (Govern)
 - 0040_roles_responsibilities.md (Govern)
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |
-
-<!-- Autor-Hinweise: Überprüfen Sie regulatorische Anforderungen regelmäßig -->

@@ -1,14 +1,16 @@
 # OS Hardening Baseline: Container Base Images
 
-**Document ID:** 0150  
-**Document Type:** Baseline  
-**Reference Framework:** CIS Controls v8 (Hardening Program; no benchmark texts)  
-**Owner:** [TODO]  
-**Version:** 0.1 (Draft)  
-**Status:** Draft / In Review / Approved  
-**Classification:** Internal / Confidential / Strictly Confidential  
-**Last Updated:** 2026-01-31  
-**Next Review:** [TODO]
+**Document-ID:** [FRAMEWORK]-0150
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -45,10 +47,3 @@ Secure default configuration for container base images to reduce attack surface 
 ## 6. Exceptions
 - Reference: `0040_Exceptions_Risk_Acceptance.md`
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

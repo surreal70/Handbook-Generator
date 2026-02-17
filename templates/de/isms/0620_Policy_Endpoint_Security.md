@@ -1,5 +1,19 @@
 # Policy: Endpoint Security
 
+**Dokument-ID:** 0620
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This policy establishes requirements for endpoint security and device protection.
@@ -9,27 +23,15 @@ Customize based on your organization's endpoint landscape and security requireme
 ISO 27001:2022 Annex A Reference: A.8.1, A.8.2, A.8.3, A.6.7
 -->
 
-**Dokument-ID:** 0620  
-**Dokumenttyp:** Policy (abstrakt)  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.8.1-A.8.3, A.6.7 (inkl. Amendment 1:2024)  
-**Owner:** {{ meta.ciso.name }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
-
----
-
 ## 1. Zweck
 
-Diese Policy definiert die Anforderungen an die Endpoint Security der **{{ meta.organization.name }}**. Sie stellt sicher, dass alle Endgeräte (Workstations, Laptops, mobile Geräte) angemessen gesichert sind und vor Bedrohungen geschützt werden.
+Diese Policy definiert die Anforderungen an die Endpoint Security der **{{ meta-organisation.name }}**. Sie stellt sicher, dass alle Endgeräte (Workstations, Laptops, mobile Geräte) angemessen gesichert sind und vor Bedrohungen geschützt werden.
 
 ## 2. Geltungsbereich
 
 Diese Policy gilt für:
 
-- **Organisationseinheiten:** Alle Abteilungen und Standorte der {{ meta.organization.name }}
+- **Organisationseinheiten:** Alle Abteilungen und Standorte der {{ meta-organisation.name }}
 - **Geräte:** Alle Endgeräte (Workstations, Laptops, Tablets, Smartphones)
 - **Betriebssysteme:** Windows, macOS, Linux, iOS, Android
 - **Eigentum:** Unternehmenseigene und BYOD-Geräte (mit Unternehmenszugriff)
@@ -174,18 +176,9 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **NIST SP 800-171** - Protecting Controlled Unclassified Information
 - **CIS Controls v8** - Control 4 (Secure Configuration of Enterprise Assets)
 
----
-
 **Genehmigt durch:**  
 {{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+Datum: {{ meta-handbook.modifydate }}
 
-**Nächster Review:** {{ meta.document.next_review }} (jährlich oder anlassbezogen)
+**Nächster Review:** {{ meta-handbook.next_review }} (jährlich oder anlassbezogen)
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

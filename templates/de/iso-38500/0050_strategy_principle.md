@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-38500-0050
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Prinzip 2: Strategie (Strategy)
+
+**Dokument-ID:** [FRAMEWORK]-0050
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -16,7 +28,7 @@ Dieses Dokument beschreibt die Anwendung des Strategie-Prinzips in der IT-Govern
 ## Geltungsbereich
 
 Dieses Dokument gilt für:
-- {{ meta.organization }}
+- {{ meta-organisation.name }}
 - IT-Strategie und Unternehmens strategie
 - Strategische Planung und Ausrichtung
 
@@ -37,9 +49,9 @@ Die IT-Strategie der Organisation berücksichtigt die aktuellen und zukünftigen
 
 | Kriterium | Ziel | Status |
 |-----------|------|--------|
-| Strategische Ausrichtung | >90% | {{ meta.strategic_alignment }}% |
-| Stakeholder-Zufriedenheit | >85% | {{ meta.stakeholder_satisfaction }}% |
-| Technologie-Aktualität | Aktuell | {{ meta.technology_currency }} |
+| Strategische Ausrichtung | >90% | {{ meta-handbook.strategic_alignment }}% |
+| Stakeholder-Zufriedenheit | >85% | {{ meta-handbook.stakeholder_satisfaction }}% |
+| Technologie-Aktualität | Aktuell | {{ meta-handbook.technology_currency }} |
 
 ## Direct (Steuern)
 
@@ -55,9 +67,9 @@ Die IT-Strategie der Organisation berücksichtigt die aktuellen und zukünftigen
 
 | Ziel | Beschreibung | Zeitrahmen | Verantwortlich |
 |------|--------------|------------|----------------|
-| {{ meta.it_goal_1 }} | {{ meta.it_goal_1_desc }} | {{ meta.it_goal_1_timeline }} | {{ meta.cio }} |
-| {{ meta.it_goal_2 }} | {{ meta.it_goal_2_desc }} | {{ meta.it_goal_2_timeline }} | {{ meta.cio }} |
-| {{ meta.it_goal_3 }} | {{ meta.it_goal_3_desc }} | {{ meta.it_goal_3_timeline }} | {{ meta.cio }} |
+| {{ meta.it_goal_1 }} | {{ meta.it_goal_1_desc }} | {{ meta.it_goal_1_timeline }} | {{ meta-organisation-roles.role_CIO }} |
+| {{ meta.it_goal_2 }} | {{ meta.it_goal_2_desc }} | {{ meta.it_goal_2_timeline }} | {{ meta-organisation-roles.role_CIO }} |
+| {{ meta.it_goal_3 }} | {{ meta.it_goal_3_desc }} | {{ meta.it_goal_3_timeline }} | {{ meta-organisation-roles.role_CIO }} |
 
 ### Strategieumsetzung
 
@@ -77,21 +89,13 @@ Die IT-Strategie der Organisation berücksichtigt die aktuellen und zukünftigen
 
 ### KPIs
 
-- IT-Strategieumsetzung: {{ meta.strategy_implementation }}%
-- ROI strategischer IT-Investitionen: {{ meta.strategic_roi }}%
-- Business-IT-Alignment-Score: {{ meta.alignment_score }}/10
-- Innovationsrate: {{ meta.innovation_rate }}%
+- IT-Strategieumsetzung: {{ meta-handbook.strategy_implementation }}%
+- ROI strategischer IT-Investitionen: {{ meta-handbook.strategic_roi }}%
+- Business-IT-Alignment-Score: {{ meta-handbook.alignment_score }}/10
+- Innovationsrate: {{ meta-handbook.innovation_rate }}%
 
 ## Dokumentenverweise
 
 - 0010_governance_framework.md
 - 0020_governance_model.md
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |
 

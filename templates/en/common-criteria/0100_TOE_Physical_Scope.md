@@ -1,11 +1,16 @@
 # TOE Physical Scope
 
-**Document-ID:** 0100  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft  
-**Classification:** Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0100
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -226,8 +231,6 @@ The physical boundaries were defined as follows:
 [TODO: Insert deployment diagram]
 ```
 
----
-
 **Next Steps:**
 1. Complete all [TODO] placeholders with TOE-specific information
 2. Create detailed component diagrams
@@ -235,10 +238,3 @@ The physical boundaries were defined as follows:
 4. Verify consistency with logical scope (Template 0110)
 5. Ensure all delivery components are documented
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

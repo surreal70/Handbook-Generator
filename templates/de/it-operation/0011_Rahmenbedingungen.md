@@ -1,5 +1,19 @@
 # 2. Betriebsprozesse
 
+**Dokument-ID:** [FRAMEWORK]-0011
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## 2.1 Monitoring
 
 - 24/7 Überwachung aller kritischen Systeme
@@ -18,10 +32,3 @@
 - Kritische Änderungen erfordern Change Advisory Board Genehmigung
 - Rollback-Plan ist für alle Änderungen verpflichtend
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

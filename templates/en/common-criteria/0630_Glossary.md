@@ -1,11 +1,16 @@
 # Glossary and Term Definitions
 
-**Document-ID:** 0630  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** Internal / Confidential / Strictly Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0630
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -374,8 +379,6 @@ Selecting one or more options from a predefined list in an SFR.
 | [TODO: 1.0] | [TODO: Date] | Initial version | [TODO: Name] |
 | [TODO] | [TODO] | [TODO] | [TODO] |
 
----
-
 **Next Steps:**
 1. Identify all terms used in the ST
 2. Define all TOE-specific terms
@@ -385,10 +388,3 @@ Selecting one or more options from a predefined list in an SFR.
 6. Update the glossary when changes are made to the ST
 7. Have the glossary reviewed by subject matter experts
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

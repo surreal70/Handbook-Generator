@@ -103,18 +103,18 @@ Dieses Framework verwendet eine standardisierte Metadatenstruktur mit 13 Pflicht
 
 Die Metadaten-Datei enthält:
 - **Dokument-ID:** Eindeutige Identifikation (0000)
-- **Owner:** Dokumentenverantwortlicher (`{{ meta.owner }}`)
-- **Version:** Dokumentversion (`{{ meta.version }}`)
-- **Status:** Dokumentstatus (`{{ meta.status }}`)
-- **Klassifizierung:** Sicherheitsklassifizierung (`{{ meta.classification }}`)
-- **Letzte Aktualisierung:** Datum (`{{ meta.date }}`)
+- **Owner:** Dokumentenverantwortlicher (`{{ meta-handbook.owner }}`)
+- **Version:** Dokumentversion (`{{ meta-handbook.revision }}`)
+- **Status:** Dokumentstatus (`{{ meta-handbook.status }}`)
+- **Klassifizierung:** Sicherheitsklassifizierung (`{{ meta-handbook.classification }}`)
+- **Letzte Aktualisierung:** Datum (`{{ meta-handbook.modifydate }}`)
 - **Template-Version:** Template-Format-Version (z.B. "1.0")
 - **Revision:** Anpassungs-Revisionsnummer (z.B. "0")
-- **Organisation:** Organisationsname (`{{ meta.organization }}`)
-- **Autor:** Dokumentautor (`{{ meta.author }}`)
-- **Geltungsbereich:** Anwendungsbereich (`{{ meta.scope }}`)
-- **Gültig ab:** Gültigkeitsbeginn (`{{ meta.valid_from }}`)
-- **Nächste Überprüfung:** Überprüfungsdatum (`{{ meta.next_review }}`)
+- **Organisation:** Organisationsname (`{{ meta-organisation.name }}`)
+- **Autor:** Dokumentautor (`{{ meta-handbook.author }}`)
+- **Geltungsbereich:** Anwendungsbereich (`{{ meta-handbook.scope }}`)
+- **Gültig ab:** Gültigkeitsbeginn (`{{ meta-handbook.valid_from }}`)
+- **Nächste Überprüfung:** Überprüfungsdatum (`{{ meta-handbook.next_review }}`)
 
 ### Template-Versionierung
 
@@ -148,7 +148,7 @@ Siehe [METADATA_VALIDATION_GUIDE.md](../../../docs/METADATA_VALIDATION_GUIDE.md)
 
 ### Anpassung
 
-1. **Platzhalter ersetzen:** Alle Vorlagen enthalten Platzhalter im Format `{{ source.field }}` oder `[TODO]`, die durch organisationsspezifische Informationen ersetzt werden sollten.
+1. **Platzhalter ersetzen:** Alle Vorlagen enthalten Platzhalter im Format `[TODO]` oder `[TODO]`, die durch organisationsspezifische Informationen ersetzt werden sollten.
 
 2. **An Kontext anpassen:** Passen Sie die Vorlagen an die Größe, Komplexität und Branche Ihrer Organisation an.
 
@@ -197,7 +197,7 @@ Bei Fragen zur Vorlagennutzung oder -anpassung beziehen Sie sich auf:
 
 | Version | Datum | Autor | Änderungen |
 |---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
+| 0.1 | [TODO] | {{ meta.defaults.author }} | Initiale Erstellung |
 
 ## Versionshistorie
 

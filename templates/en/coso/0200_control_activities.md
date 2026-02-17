@@ -1,17 +1,28 @@
----
+
 Document-ID: coso-0200
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Control Activities
 
+**Document-ID:** [FRAMEWORK]-0200
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document describes the control activities implemented by {{ source.organization_name }} to mitigate risks to achieving objectives (COSO Component 3).
+This document describes the control activities implemented by [TODO] to mitigate risks to achieving objectives (COSO Component 3).
 
 ## Scope
 
@@ -24,7 +35,7 @@ This document describes the control activities implemented by {{ source.organiza
 
 ### Overview
 
-{{ source.control_activities_overview }}
+[TODO]
 
 ### COSO Principles
 
@@ -37,137 +48,129 @@ This component addresses the following COSO principles:
 
 ### Preventive Controls
 
-**Definition**: {{ source.preventive_controls_definition }}
+**Definition**: [TODO]
 
-**Examples**: {{ source.preventive_controls_examples }}
+**Examples**: [TODO]
 
 ### Detective Controls
 
-**Definition**: {{ source.detective_controls_definition }}
+**Definition**: [TODO]
 
-**Examples**: {{ source.detective_controls_examples }}
+**Examples**: [TODO]
 
 ### Corrective Controls
 
-**Definition**: {{ source.corrective_controls_definition }}
+**Definition**: [TODO]
 
-**Examples**: {{ source.corrective_controls_examples }}
+**Examples**: [TODO]
 
 ## Control Categories
 
 ### Authorization and Approval
 
-{{ source.authorization_controls }}
+[TODO]
 
 ### Verification and Reconciliation
 
-{{ source.verification_controls }}
+[TODO]
 
 ### Physical Controls
 
-{{ source.physical_controls }}
+[TODO]
 
 ### Segregation of Duties
 
-{{ source.segregation_of_duties }}
+[TODO]
 
 ### Performance Reviews
 
-{{ source.performance_reviews }}
+[TODO]
 
 ## Control Design
 
 ### Risk-Based Approach
 
-{{ source.risk_based_control_design }}
+[TODO]
 
 ### Control Objectives
 
-{{ source.control_objectives }}
+[TODO]
 
 ### Control Activities Selection
 
-{{ source.control_selection_process }}
+[TODO]
 
 ## Control Implementation
 
 ### Implementation Process
 
-1. **Design**: {{ source.control_design_step }}
-2. **Documentation**: {{ source.control_documentation_step }}
-3. **Communication**: {{ source.control_communication_step }}
-4. **Training**: {{ source.control_training_step }}
-5. **Monitoring**: {{ source.control_monitoring_step }}
+1. **Design**: [TODO]
+2. **Documentation**: [TODO]
+3. **Communication**: [TODO]
+4. **Training**: [TODO]
+5. **Monitoring**: [TODO]
 
 ### Control Documentation
 
-{{ source.control_documentation }}
+[TODO]
 
 ## Technology Controls
 
 ### General IT Controls
 
-{{ source.general_it_controls }}
+[TODO]
 
 ### Application Controls
 
-{{ source.application_controls }}
+[TODO]
 
 ### Infrastructure Controls
 
-{{ source.infrastructure_controls }}
+[TODO]
 
 ## Policies and Procedures
 
 ### Policy Framework
 
-{{ source.policy_framework }}
+[TODO]
 
 ### Procedure Documentation
 
-{{ source.procedure_documentation }}
+[TODO]
 
 ### Policy Communication
 
-{{ source.policy_communication }}
+[TODO]
 
 ### Policy Review
 
-{{ source.policy_review }}
+[TODO]
 
 ## Control Effectiveness
 
 ### Effectiveness Criteria
 
-{{ source.effectiveness_criteria }}
+[TODO]
 
 ### Testing and Validation
 
-{{ source.control_testing }}
+[TODO]
 
 ### Continuous Improvement
 
-{{ source.control_improvement }}
+[TODO]
 
 ## Roles and Responsibilities
 
-**Management**: {{ source.management_control_role }}
-**Process Owners**: {{ source.process_owner_control_role }}
-**Control Owners**: {{ source.control_owner_role }}
-**Internal Audit**: {{ source.internal_audit_control_role }}
+**Management**: [TODO]
+**Process Owners**: [TODO]
+**Control Owners**: [TODO]
+**Internal Audit**: [TODO]
 
 ## References
 
 - Internal Control Policy
 - Risk Management Framework
 - IT General Controls Policy
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

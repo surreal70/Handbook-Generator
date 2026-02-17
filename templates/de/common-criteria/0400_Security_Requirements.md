@@ -1,11 +1,16 @@
 # Sicherheitsanforderungen (Security Requirements)
 
-**Dokument-ID:** 0400  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** Intern / Vertraulich / Streng vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0400
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -259,8 +264,6 @@ Eine vollständige Übersicht aller SFRs mit Abhängigkeiten findet sich in Doku
 
 Eine vollständige Übersicht aller SARs entsprechend dem gewählten EAL findet sich in Dokument 0410.
 
----
-
 **Nächste Schritte:**
 1. Vervollständige alle [TODO]-Platzhalter
 2. Spezifiziere alle Assignments und Selections in den SFRs
@@ -268,10 +271,3 @@ Eine vollständige Übersicht aller SARs entsprechend dem gewählten EAL findet 
 4. Stelle sicher, dass alle SFRs aus den Sicherheitszielen abgeleitet sind
 5. Dokumentiere die Rationale in Dokument 0420
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

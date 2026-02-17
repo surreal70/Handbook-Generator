@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0240
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Lead Time Reduktionsstrategien
+
+**Dokument-ID:** [FRAMEWORK]-0240
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -22,10 +33,10 @@ Dieses Dokument beschreibt konkrete Strategien und Maßnahmen zur Reduzierung de
 
 ## Organisationsinformationen
 
-- **Organisation**: {{ source.organization_name }}
-- **Strategie-Verantwortlicher**: {{ source.lead_time_strategy_owner }}
-- **Aktuell**: {{ source.current_lead_time }}
-- **Ziel**: {{ source.target_lead_time }}
+- **Organisation**: [TODO]
+- **Strategie-Verantwortlicher**: [TODO]
+- **Aktuell**: [TODO]
+- **Ziel**: [TODO]
 
 ## Strategische Ansätze
 
@@ -209,10 +220,3 @@ build:
 
 <!-- Hinweis: Lead Time Reduktion erfordert ganzheitlichen Ansatz -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |

@@ -1,13 +1,24 @@
----
+
 Document-ID: soc1-0450
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Testing Procedures
+
+**Document-ID:** [FRAMEWORK]-0160
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -25,14 +36,14 @@ This document describes the testing procedures for assessing the operating effec
 
 ### Test Scope
 
-**Control Objectives**: {{ source.test_scope_objectives }}
-**Test Period**: {{ source.test_period }}
-**Test Frequency**: {{ source.test_frequency }}
+**Control Objectives**: [TODO]
+**Test Period**: [TODO]
+**Test Frequency**: [TODO]
 
 ### Test Responsibilities
 
-**Service Auditor**: {{ source.auditor_test_responsibilities }}
-**Service Organization**: {{ source.service_org_test_responsibilities }}
+**Service Auditor**: [TODO]
+**Service Organization**: [TODO]
 
 ## Test Methods
 
@@ -40,7 +51,7 @@ This document describes the testing procedures for assessing the operating effec
 
 **Description**: Examination of records, documents, or physical assets.
 
-**Application**: {{ source.inspection_application }}
+**Application**: [TODO]
 
 **Examples**:
 - Review of approval documents
@@ -51,7 +62,7 @@ This document describes the testing procedures for assessing the operating effec
 
 **Description**: Observation of the execution of a control by personnel.
 
-**Application**: {{ source.observation_application }}
+**Application**: [TODO]
 
 **Examples**:
 - Observation of access controls
@@ -62,7 +73,7 @@ This document describes the testing procedures for assessing the operating effec
 
 **Description**: Inquiry of personnel about the execution of controls.
 
-**Application**: {{ source.inquiry_application }}
+**Application**: [TODO]
 
 **Examples**:
 - Inquiry about control procedures
@@ -73,7 +84,7 @@ This document describes the testing procedures for assessing the operating effec
 
 **Description**: Independent execution of the control by the auditor.
 
-**Application**: {{ source.reperformance_application }}
+**Application**: [TODO]
 
 **Examples**:
 - Reperformance of calculations
@@ -84,8 +95,8 @@ This document describes the testing procedures for assessing the operating effec
 
 ### Sampling Methods
 
-**Statistical Sampling**: {{ source.statistical_sampling }}
-**Non-Statistical Sampling**: {{ source.non_statistical_sampling }}
+**Statistical Sampling**: [TODO]
+**Non-Statistical Sampling**: [TODO]
 
 ### Sample Size
 
@@ -96,11 +107,11 @@ This document describes the testing procedures for assessing the operating effec
 - Degree of automation
 
 **Sample Sizes**:
-{{ source.sample_sizes }}
+[TODO]
 
 ### Sample Selection
 
-{{ source.sample_selection }}
+[TODO]
 
 ## Test Documentation
 
@@ -114,48 +125,48 @@ This document describes the testing procedures for assessing the operating effec
 - Deviations
 - Conclusions
 
-**Template**: {{ source.test_worksheet_template }}
+**Template**: [TODO]
 
 ### Evidence Documentation
 
-{{ source.evidence_documentation }}
+[TODO]
 
 ### Retention
 
-{{ source.test_documentation_retention }}
+[TODO]
 
 ## Test Results
 
 ### Assessment of Results
 
-**Success Criteria**: {{ source.test_success_criteria }}
-**Deviation Assessment**: {{ source.deviation_assessment }}
+**Success Criteria**: [TODO]
+**Deviation Assessment**: [TODO]
 
 ### Classification of Deviations
 
 **No Deviation**: Control operates as designed
-**Minor Deviation**: {{ source.minor_deviation }}
-**Material Deviation**: {{ source.material_deviation }}
+**Minor Deviation**: [TODO]
+**Material Deviation**: [TODO]
 
 ### Test Results Matrix
 
 | Control | Test Procedure | Sample | Result | Deviations | Assessment |
 |---------|----------------|--------|--------|------------|------------|
-| {{ source.test_results_matrix_rows }} |
+| [TODO] |
 
 ## Exception Handling
 
 ### Identification of Exceptions
 
-{{ source.exception_identification }}
+[TODO]
 
 ### Investigation of Exceptions
 
-{{ source.exception_investigation }}
+[TODO]
 
 ### Documentation of Exceptions
 
-{{ source.exception_documentation }}
+[TODO]
 
 ## Reporting
 
@@ -170,21 +181,21 @@ This document describes the testing procedures for assessing the operating effec
 
 ### Communication with Management
 
-{{ source.test_results_communication }}
+[TODO]
 
 ### Communication with Service Auditor
 
-{{ source.auditor_test_communication }}
+[TODO]
 
 ## Quality Assurance
 
 ### Review Process
 
-{{ source.test_quality_review }}
+[TODO]
 
 ### Independent Review
 
-{{ source.independent_test_review }}
+[TODO]
 
 ## References
 
@@ -193,13 +204,5 @@ This document describes the testing procedures for assessing the operating effec
 - Audit Sampling Guide (AICPA)
 
 <!-- Author notes: Document all testing procedures in detail and with traceability -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

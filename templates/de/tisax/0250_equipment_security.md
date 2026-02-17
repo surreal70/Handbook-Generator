@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0250
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Gerätesicherheit
+
+**Dokument-ID:** [FRAMEWORK]-0250
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -15,7 +26,7 @@ Dieses Dokument definiert Maßnahmen zur Sicherung von Geräten gemäß TISAX-An
 
 ## Geltungsbereich
 
-Dieses Dokument gilt für alle IT-Geräte und Ausrüstung von {{ source.organization_name }}.
+Dieses Dokument gilt für alle IT-Geräte und Ausrüstung von [TODO].
 
 ## Geräteschutz
 
@@ -78,17 +89,8 @@ Dieses Dokument adressiert:
 
 ## Kennzahlen
 
-{{ source.organization_name }} misst:
+[TODO] misst:
 - Anzahl gestohlener/verlorener Geräte
 - Compliance-Rate Verschlüsselung
 - Anzahl ordnungsgemäßer Entsorgungen
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

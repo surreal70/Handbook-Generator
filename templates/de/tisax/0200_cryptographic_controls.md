@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0200
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Kryptographische Kontrollen
+
+**Dokument-ID:** [FRAMEWORK]-0200
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -15,7 +26,7 @@ Dieses Dokument definiert die Anforderungen für den Einsatz kryptographischer K
 
 ## Geltungsbereich
 
-Dieses Dokument gilt für alle kryptographischen Maßnahmen in {{ source.organization_name }}.
+Dieses Dokument gilt für alle kryptographischen Maßnahmen in [TODO].
 
 ## Kryptographie-Richtlinie
 
@@ -320,18 +331,9 @@ Schulung für:
 
 ## Kennzahlen
 
-{{ source.organization_name }} misst:
+[TODO] misst:
 - Anteil verschlüsselter Daten (Ziel: 100% für vertrauliche Daten)
 - Anzahl aktiver Schlüssel
 - Anzahl Schlüsselrotationen
 - Anzahl Sicherheitsvorfälle im Zusammenhang mit Kryptographie
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

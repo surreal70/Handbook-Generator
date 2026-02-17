@@ -1,13 +1,16 @@
 # Arbeitsplatznutzung und -sicherheit
 
-**Dokument-ID:** HIPAA-0310  
-**Organisation:** {{ meta.organization.name }}  
-**Verantwortlich:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Entwurf / In Prüfung / Genehmigt  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** HIPAA-0310
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -23,7 +26,7 @@ Erforderliche (R) Standards:
 
 ## 1. Zweck
 
-Dieses Dokument beschreibt die Richtlinien zur Arbeitsplatznutzung und Arbeitsplatzsicherheit für {{ meta.organization.name }}, um ordnungsgemäße auszuführende Funktionen, die Art und Weise ihrer Ausführung und physische Attribute der Umgebung von Arbeitsplätzen festzulegen, die auf ePHI zugreifen.
+Dieses Dokument beschreibt die Richtlinien zur Arbeitsplatznutzung und Arbeitsplatzsicherheit für {{ meta-organisation.name }}, um ordnungsgemäße auszuführende Funktionen, die Art und Weise ihrer Ausführung und physische Attribute der Umgebung von Arbeitsplätzen festzulegen, die auf ePHI zugreifen.
 
 ### 1.1 HIPAA-Anforderungen
 
@@ -179,7 +182,6 @@ Dieses Dokument beschreibt die Richtlinien zur Arbeitsplatznutzung und Arbeitspl
 - Arbeitsplatzstilllegung
 - Standortänderungen
 - Vierteljährliche Inventarüberprüfung
-
 
 ## 5. Arbeitsplatz-Lebenszyklus
 
@@ -368,7 +370,7 @@ Falls BYOD erlaubt:
 
 **Kontaktinformationen:**
 - IT-Helpdesk: [TODO: Telefon/E-Mail]
-- Security Officer: {{ meta.roles.security_officer.email }}
+- Security Officer: [TODO]
 - Nach Geschäftsschluss: [TODO: Notfallkontakt]
 
 ## 10. Schulung und Sensibilisierung
@@ -450,20 +452,11 @@ Falls BYOD erlaubt:
 
 **Speicherort:** [TODO: Asset-Management-System, Dokumenten-Repository]
 
----
-
 **Dokumentenhistorie:**
 
 | Version | Datum | Autor | Änderungen |
 |---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Ersterstellung |
+| 0.1 | {{ meta-handbook.modifydate }} | {{ meta-handbook.author }} | Ersterstellung |
 
 <!-- Ende des Templates -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

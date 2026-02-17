@@ -1,5 +1,19 @@
 # Internes Auditprogramm (Template)
 
+**Dokument-ID:** 0130
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This document defines the internal audit program for the ISMS. Internal audits
@@ -9,23 +23,11 @@ maintained. This is a mandatory requirement of ISO 27001:2022.
 ISO 27001:2022 Reference: Clause 9.2 - Internal audit
 -->
 
-**Dokument-ID:** 0130  
-**Dokumenttyp:** ISMS-Programm/Template  
-**Standard-Referenz:** ISO/IEC 27001:2022 Clause 9.2  
-**Owner:** {{ meta.audit.manager }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
-
----
-
 ## 1. Zweck und Geltungsbereich
 
 ### 1.1 Zweck
 
-Das interne Auditprogramm der **{{ meta.organization.name }}** stellt sicher, dass:
+Das interne Auditprogramm der **{{ meta-organisation.name }}** stellt sicher, dass:
 - Das ISMS den Anforderungen von ISO 27001:2022 entspricht
 - Das ISMS wirksam implementiert und aufrechterhalten wird
 - Verbesserungspotenziale identifiziert werden
@@ -360,19 +362,10 @@ Das Auditprogramm umfasst:
 - **ISO 19011:2018** - Guidelines for auditing management systems
 - **ISO/IEC 27007:2020** - Guidelines for information security management systems auditing
 
----
-
 **Genehmigt durch:**  
 {{ meta.audit.manager }}, Audit Manager  
 {{ meta.ciso.name }}, CISO  
-Datum: {{ meta.document.approval_date }}
+Datum: {{ meta-handbook.modifydate }}
 
-**Nächster Review:** {{ meta.document.next_review }}
+**Nächster Review:** {{ meta-handbook.next_review }}
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

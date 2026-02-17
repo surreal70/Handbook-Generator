@@ -1,13 +1,16 @@
 # Security Awareness and Training
 
-**Document-ID:** NIST-0200  
-**Control Family:** Awareness and Training (AT)  
-**Control:** AT-1, AT-2, AT-3, AT-4  
-**Organization:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Draft / In Review / Approved  
-**Last Updated:** {{ meta.document.last_updated }}  
+**Document-ID:** NIST-0200
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -62,13 +65,5 @@ The organization provides security awareness training and role-based security tr
 **Status:** [TODO: Implemented / Partially Implemented / Planned]  
 **Training Platform:** [TODO: Platform name]  
 **Completion Rate:** [TODO: Percentage]  
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial creation |
 
 <!-- End of template -->

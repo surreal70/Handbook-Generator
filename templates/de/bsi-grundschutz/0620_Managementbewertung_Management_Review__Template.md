@@ -1,14 +1,16 @@
 # Managementbewertung (Management Review) – Template
 
-**Dokument-ID:** 0620  
-**Dokumenttyp:** Nachweis/Template  
-**Referenzrahmen:** BSI IT-Grundschutz (BSI Standards 200-1/200-2)  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** {{ meta.document.status }}  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
-**Nächster Review:** {{ meta.document.next_review }}
+**Dokument-ID:** 0620
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -142,18 +144,8 @@ Reference: BSI Standard 200-1 (Management Review)
 | Geschäftsführung | {{ meta.ceo.name }} | [TODO] | [TODO] |
 | ISB | {{ meta.ciso.name }} | [TODO] | [TODO] |
 
----
-
 **Referenzen:**
 - BSI Standard 200-1: ISMS (Management Review)
 - Alle ISMS-Dokumente (0010-0630)
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 <!-- End of template -->

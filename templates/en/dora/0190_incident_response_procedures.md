@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0330
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Incident Response Procedures
+
+**Document-ID:** [FRAMEWORK]-0190
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -32,47 +43,39 @@ Description of incident response processes.
 
 ### Time Targets
 
-- **Triage**: {{ source.triage_time_target }}
-- **Initial Response**: {{ source.initial_response_time_target }}
-- **Resolution**: {{ source.resolution_time_target }}
+- **Triage**: [TODO]
+- **Initial Response**: [TODO]
+- **Resolution**: [TODO]
 
 ## Roles and Responsibilities
 
 ### Incident Commander
 
-- **Responsible**: {{ source.incident_commander_role }}
+- **Responsible**: [TODO]
 - **Tasks**: Coordination, decisions, communication
 
 ### Technical Lead
 
-- **Responsible**: {{ source.technical_lead_role }}
+- **Responsible**: [TODO]
 - **Tasks**: Technical analysis, solution finding
 
 ### Communications Lead
 
-- **Responsible**: {{ source.communications_lead_role }}
+- **Responsible**: [TODO]
 - **Tasks**: Stakeholder communication, status updates
 
 ## Communication
 
 ### Internal Communication
 
-- **Incident Channel**: {{ source.incident_channel }}
-- **Status Updates**: {{ source.status_update_frequency }}
+- **Incident Channel**: [TODO]
+- **Status Updates**: [TODO]
 
 ### External Communication
 
-- **Status Page**: {{ source.status_page_url }}
-- **Customer Communication**: {{ source.customer_communication_process }}
+- **Status Page**: [TODO]
+- **Customer Communication**: [TODO]
 
 <!-- Note: Clear processes significantly reduce MTTR -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

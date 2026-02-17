@@ -1,14 +1,16 @@
 # Structure Analysis (Template)
 
-**Document ID:** 0050  
-**Document Type:** Methodology Artifact  
-**Reference Framework:** BSI IT-Grundschutz (BSI Standard 200-2)  
-**Owner:** {{ meta.document.owner }}  
-**Version:** {{ meta.document.version }}  
-**Status:** {{ meta.document.status }}  
-**Classification:** {{ meta.document.classification }}  
-**Last Updated:** {{ meta.document.last_updated }}  
-**Next Review:** {{ meta.document.next_review }}
+**Document-ID:** [FRAMEWORK]-0050
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -21,7 +23,7 @@ Reference: BSI Standard 200-2 (Chapter 5: Structure Analysis)
 
 ## 1. Objective and Purpose
 
-The structure analysis systematically captures the structure of the information domain of **{{ meta.organization.name }}**. It forms the basis for:
+The structure analysis systematically captures the structure of the information domain of **{{ meta-organisation.name }}**. It forms the basis for:
 - Protection needs assessment (Document 0060)
 - Modeling and module assignment (Document 0070)
 - Basic security check (Document 0080)
@@ -114,7 +116,7 @@ Document all IT systems and components. Use NetBox data where available.
 
 | ID | System/Component | Type | Owner | Location/Region | Operation | IP Address | Notes |
 |---|---|---|---|---|---|---|---|
-| S-001 | {{ netbox.device.server_001 }} | Server | {{ meta.cio.name }} | {{ meta.organization.primary_location }} | Internal | {{ netbox.ip.server_001 }} | [TODO] |
+| S-001 | {{ netbox.device.server_001 }} | Server | {{ meta.cio.name }} | [TODO] | Internal | {{ netbox.ip.server_001 }} | [TODO] |
 | S-002 | [TODO: System 2] | Database | {{ meta.cio.name }} | [TODO] | Internal/External | [TODO] | [TODO] |
 | S-003 | [TODO: System 3] | Storage | {{ meta.cio.name }} | [TODO] | Internal/External | [TODO] | [TODO] |
 | S-004 | [TODO: System 4] | Firewall | {{ meta.cio.name }} | [TODO] | Internal | [TODO] | [TODO] |
@@ -160,8 +162,8 @@ Document physical locations and critical rooms.
 
 | ID | Location/Room | Type | Protection Measures | Access | Operator | Criticality |
 |---|---|---|---|---|---|---|
-| R-001 | {{ meta.organization.primary_location }} | Main Location | [TODO] | Access Control | {{ meta.organization.name }} | High |
-| R-002 | Data Center | Server Room | Climate Control, Fire Protection, Access Control | Authorized | {{ meta.organization.name }} | High |
+| R-001 | [TODO] | Main Location | [TODO] | Access Control | {{ meta-organisation.name }} | High |
+| R-002 | Data Center | Server Room | Climate Control, Fire Protection, Access Control | Authorized | {{ meta-organisation.name }} | High |
 | R-003 | [TODO: Room 3] | [TODO] | [TODO] | [TODO] | [TODO] | Medium/Low |
 
 **Total Number of Locations:** [TODO]  
@@ -271,27 +273,17 @@ The structure analysis is updated when:
 - At least annually as part of ISMS review
 
 **Responsible:** {{ meta.ciso.name }} (ISO)  
-**Next Review:** {{ meta.document.next_review }}
+**Next Review:** {{ meta-handbook.next_review }}
 
 ## 8. Approval
 
 | Role | Name | Date | Approval |
 |---|---|---|---|
-| ISO | {{ meta.ciso.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-| IT Management | {{ meta.cio.name }} | {{ meta.document.approval_date }} | {{ meta.document.approval_status }} |
-
----
+| ISO | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| IT Management | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **References:**
 - BSI Standard 200-2: IT-Grundschutz Methodology (Chapter 5: Structure Analysis)
 - BSI IT-Grundschutz Compendium
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
 
 <!-- End of template -->

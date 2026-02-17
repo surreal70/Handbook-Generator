@@ -1,45 +1,34 @@
+# COSO Handbook - Metadata
+
+**Document-ID:** 0000  
+**Date:** 2026-02-17  
+**Owner:** [TODO]  
+**Revision:** 0  
+**Status:** Draft  
+**Classification:** Internal  
+**Last Updated:** 2026-02-17  
+**Template-Version:** 1.0  
+
 ---
-title: "COSO Internal Control Framework Handbook"
-author: "{{ source.author }}"
-version: "1.0"
-date: "{{ source.date }}"
-organization: "{{ source.organization_name }}"
-classification: "Internal"
+
+## Handbook Information
+
+**Handbook Title:** COSO Handbook  
+**Handbook Short:** COSO  
+**Organisation:** [TODO]  
+**Author:** [TODO]  
+**Scope:** [TODO]  
+**Valid from:** [TODO]  
+**Next Review:** [TODO]  
+
 ---
 
-# Metadata
+## Document Purpose
 
-This file contains metadata for the COSO Internal Control Framework Handbook.
+This document contains the metadata for the COSO handbook.
 
-## Document Information
+## Change History
 
-- **Title**: COSO Internal Control Framework Handbook
-- **Author**: {{ source.author }}
-- **Version**: 1.0
-- **Date**: {{ source.date }}
-- **Organization**: {{ source.organization_name }}
-- **Classification**: Internal
-
-## Purpose
-
-This handbook documents the organization's internal control system based on the COSO Internal Control - Integrated Framework. It describes the five components of internal control and their implementation.
-
-## Scope
-
-The handbook covers all aspects of the COSO Internal Control Framework, including:
-
-- Control Environment
-- Risk Assessment
-- Control Activities
-- Information and Communication
-- Monitoring Activities
-
-## Target Audience
-
-- Executive Management and Board of Directors
-- Internal Audit
-- Compliance Officers
-- Risk Management
-- Process Owners
-- External Auditors
-
+| Version | Date | Author | Change |
+|---------|------|--------|--------|
+| 0 | 2026-02-17 | [TODO] | Initial version |

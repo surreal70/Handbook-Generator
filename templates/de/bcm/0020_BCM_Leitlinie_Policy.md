@@ -1,13 +1,16 @@
 # BCM-Leitlinie / BCM-Policy
 
-**Dokument-ID:** BCM-0020  
-**Organisation:** {{ meta.organization.name }}  
-**Owner:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Status:** Entwurf / In Review / Freigegeben  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** BCM-0020
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -25,11 +28,11 @@ Customization required:
 
 ## 1. Leitlinie (Policy Statement)
 
-Die Geschäftsführung der {{ meta.organization.name }} verpflichtet sich zur Implementierung und kontinuierlichen Verbesserung eines Business Continuity Management Systems (BCMS) gemäß **ISO 22301:2019**.
+Die Geschäftsführung der {{ meta-organisation.name }} verpflichtet sich zur Implementierung und kontinuierlichen Verbesserung eines Business Continuity Management Systems (BCMS) gemäß **ISO 22301:2019**.
 
 ### 1.1 Management-Commitment
 
-Die Geschäftsführung, vertreten durch **{{ meta.roles.ceo.name }}** (CEO), erklärt hiermit:
+Die Geschäftsführung, vertreten durch **{{ meta-organisation-roles.role_CEO }}** (CEO), erklärt hiermit:
 
 - **Höchste Priorität:** Business Continuity hat strategische Bedeutung für den Schutz unserer Organisation, unserer Mitarbeiter, Kunden und Stakeholder
 - **Ressourcenbereitstellung:** Angemessene finanzielle, personelle und technische Ressourcen werden für das BCMS bereitgestellt
@@ -38,7 +41,7 @@ Die Geschäftsführung, vertreten durch **{{ meta.roles.ceo.name }}** (CEO), erk
 
 ### 1.2 Grundsätze des BCMS
 
-Das BCMS der {{ meta.organization.name }} basiert auf folgenden Grundsätzen:
+Das BCMS der {{ meta-organisation.name }} basiert auf folgenden Grundsätzen:
 
 1. **Risikobasierter Ansatz:** Identifikation, Bewertung und Behandlung von Risiken für die Geschäftskontinuität
 2. **Kontinuierliche Verbesserung:** Systematische Weiterentwicklung der BCM-Fähigkeiten durch Übungen, Tests und Lessons Learned
@@ -49,7 +52,7 @@ Das BCMS der {{ meta.organization.name }} basiert auf folgenden Grundsätzen:
 
 ### 1.3 Verpflichtungen
 
-Die {{ meta.organization.name }} verpflichtet sich zu:
+Die {{ meta-organisation.name }} verpflichtet sich zu:
 
 - **Schutz von Menschenleben:** Sicherheit und Wohlergehen von Mitarbeitern, Kunden und Besuchern haben oberste Priorität
 - **Geschäftskontinuität:** Aufrechterhaltung kritischer Geschäftsprozesse auch bei schwerwiegenden Störungen
@@ -61,7 +64,7 @@ Die {{ meta.organization.name }} verpflichtet sich zu:
 
 ### 2.1 Strategische BCM-Ziele
 
-Die {{ meta.organization.name }} verfolgt folgende strategische BCM-Ziele:
+Die {{ meta-organisation.name }} verfolgt folgende strategische BCM-Ziele:
 
 **Ziel 1: Minimierung von Ausfallzeiten**
 - Wiederherstellung kritischer Geschäftsprozesse innerhalb definierter Recovery Time Objectives (RTO)
@@ -112,7 +115,7 @@ Der Geltungsbereich des BCMS ist definiert in:
 
 → **Siehe Dokument:** `0010_Zweck_und_Geltungsbereich.md`
 
-Das BCMS umfasst alle kritischen Geschäftsprozesse, IT-Systeme und Standorte der {{ meta.organization.name }} gemäß der im Scope-Dokument definierten Abgrenzung.
+Das BCMS umfasst alle kritischen Geschäftsprozesse, IT-Systeme und Standorte der {{ meta-organisation.name }} gemäß der im Scope-Dokument definierten Abgrenzung.
 
 ## 4. Governance und Verantwortlichkeiten
 
@@ -138,15 +141,15 @@ Das BCMS umfasst alle kritischen Geschäftsprozesse, IT-Systeme und Standorte de
 ### 4.2 Rollen und Verantwortlichkeiten
 
 **Geschäftsführung (CEO)**
-- **Verantwortlich:** {{ meta.roles.ceo.name }} ({{ meta.roles.ceo.email }})
+- **Verantwortlich:** {{ meta-organisation-roles.role_CEO }} ({{ meta-organisation-roles.role_CEO }})
 - **Aufgaben:** Gesamtverantwortung für BCMS, Genehmigung der BCM-Policy, Freigabe von Ressourcen, Krisenaktivierung
 
 **Chief Information Officer (CIO)**
-- **Verantwortlich:** {{ meta.roles.cio.name }} ({{ meta.roles.cio.email }})
+- **Verantwortlich:** {{ meta-organisation-roles.role_CIO }} ({{ meta-organisation-roles.role_CIO }})
 - **Aufgaben:** Verantwortung für IT-Continuity, IT-Disaster-Recovery, technische BCM-Maßnahmen
 
 **Chief Information Security Officer (CISO)**
-- **Verantwortlich:** {{ meta.roles.ciso.name }} ({{ meta.roles.ciso.email }})
+- **Verantwortlich:** {{ meta-organisation-roles.role_CISO }} ({{ meta-organisation-roles.role_CISO }})
 - **Aufgaben:** Schnittstelle ISMS-BCMS, Security-Incident-Response, Cyber-Resilience
 
 **BCM-Manager**
@@ -158,7 +161,7 @@ Das BCMS umfasst alle kritischen Geschäftsprozesse, IT-Systeme und Standorte de
 - **Aufgaben:** Identifikation kritischer Prozesse, Mitwirkung bei BIA, Erstellung fachlicher BCM-Pläne, Teilnahme an Übungen
 
 **IT-Operations**
-- **Verantwortlich:** {{ meta.roles.it_operations_manager.name }} ({{ meta.roles.it_operations_manager.email }})
+- **Verantwortlich:** {{ meta-organisation-roles.role_IT_Manager }} ({{ meta-organisation-roles.role_IT_Manager }})
 - **Aufgaben:** Implementierung technischer BCM-Maßnahmen, IT-Disaster-Recovery, Backup und Restore
 
 ## 5. Freigaben und Genehmigungen
@@ -167,10 +170,10 @@ Diese BCM-Policy wurde geprüft und genehmigt durch:
 
 | Rolle | Name | Funktion | Datum | Unterschrift/Approval |
 |-------|------|----------|-------|----------------------|
-| **Geschäftsführung** | {{ meta.roles.ceo.name }} | CEO | [TODO: Datum] | [TODO: Unterschrift] |
+| **Geschäftsführung** | {{ meta-organisation-roles.role_CEO }} | CEO | [TODO: Datum] | [TODO: Unterschrift] |
 | **BCM-Owner** | [TODO: BCM-Manager] | BCM-Manager | [TODO: Datum] | [TODO: Unterschrift] |
-| **IT-Leitung** | {{ meta.roles.cio.name }} | CIO | [TODO: Datum] | [TODO: Unterschrift] |
-| **Informationssicherheit** | {{ meta.roles.ciso.name }} | CISO | [TODO: Datum] | [TODO: Unterschrift] |
+| **IT-Leitung** | {{ meta-organisation-roles.role_CIO }} | CIO | [TODO: Datum] | [TODO: Unterschrift] |
+| **Informationssicherheit** | {{ meta-organisation-roles.role_CISO }} | CISO | [TODO: Datum] | [TODO: Unterschrift] |
 | **Compliance** | [TODO: Compliance-Verantwortlicher] | Compliance Officer | [TODO: Datum] | [TODO: Unterschrift] |
 
 ## 6. Überprüfung und Aktualisierung
@@ -182,13 +185,5 @@ Diese BCM-Policy wird:
 - Nach **schwerwiegenden Vorfällen** oder Übungen auf Anpassungsbedarf geprüft
 
 **Nächste geplante Überprüfung:** [TODO: Datum]
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 <!-- End of template -->

@@ -1,5 +1,19 @@
 # ISO 31000 Framework Mapping
 
+**Dokument-ID:** [FRAMEWORK]-9999
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Überblick
 
 Dieses Dokument mappt die Handbook-Templates zu ISO 31000 Komponenten und Klauseln.
@@ -315,8 +329,3 @@ Dieses Dokument mappt die Handbook-Templates zu ISO 31000 Komponenten und Klause
 - ISO 31000:2018 Risikomanagement — Leitlinien
 - ISO Guide 73:2009 Risikomanagement — Vokabular
 
-## Versionshistorie
-
-| Version | Datum | Änderungen |
-|---------|-------|------------|
-| 0.1 | {{meta.document.last_updated}} | Initiale Erstellung |

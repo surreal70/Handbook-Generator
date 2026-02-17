@@ -1,40 +1,42 @@
----
+
 Document-ID: coso-0520
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Prozessebene-Kontrollen
 
+**Dokument-ID:** [FRAMEWORK]-0190
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt die Kontrollen auf Prozessebene bei {{ source.organization_name }}.
+Dieses Dokument beschreibt die Kontrollen auf Prozessebene bei [TODO].
 
 ## Process-Level Controls
 
-{{ source.process_level_controls_overview }}
+[TODO]
 
 ## Prozesskontrollen nach Bereich
 
 ### Finanzprozesse
-{{ source.financial_process_controls_detail }}
+[TODO]
 
 ### Betriebsprozesse
-{{ source.operational_process_controls_detail }}
+[TODO]
 
 ## Referenzen
 
 - Prozesshandbuch
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

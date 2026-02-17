@@ -1,11 +1,16 @@
 # TOE Architecture
 
-**Dokument-ID:** 0130  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0130
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -415,8 +420,6 @@ Der TOE ist in folgende Schichten organisiert:
 - [TODO: Standard 2]
 - [TODO: Standard 3]
 
----
-
 **Nächste Schritte:**
 1. Vervollständige alle [TODO]-Platzhalter mit TOE-spezifischen Informationen
 2. Erstelle alle erforderlichen Architekturdiagramme
@@ -424,10 +427,3 @@ Der TOE ist in folgende Schichten organisiert:
 4. Überprüfe die Konsistenz mit anderen TOE-Beschreibungsdokumenten
 5. Stelle sicher, dass die Sicherheitsarchitektur vollständig dokumentiert ist
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

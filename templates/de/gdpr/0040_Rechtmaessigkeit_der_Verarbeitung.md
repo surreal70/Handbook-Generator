@@ -1,11 +1,16 @@
 # Rechtmäßigkeit der Verarbeitung
 
-**Dokument-ID:** 0040  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Entwurf  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.date }}  
+**Dokument-ID:** 0040
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -24,7 +29,7 @@ Referenz: DSGVO Art. 6 (Rechtmäßigkeit der Verarbeitung)
 
 ## Zweck
 
-Dieses Dokument beschreibt die Rechtsgrundlagen für die Verarbeitung personenbezogener Daten in der {{ meta.organization }} gemäß Art. 6 DSGVO. Jede Verarbeitung muss auf mindestens einer dieser Rechtsgrundlagen basieren.
+Dieses Dokument beschreibt die Rechtsgrundlagen für die Verarbeitung personenbezogener Daten in der {{ meta-organisation.name }} gemäß Art. 6 DSGVO. Jede Verarbeitung muss auf mindestens einer dieser Rechtsgrundlagen basieren.
 
 ## Rechtsgrundlagen gemäß Art. 6 Abs. 1 DSGVO
 
@@ -182,8 +187,6 @@ Für jede Verarbeitungstätigkeit muss die Rechtsgrundlage dokumentiert werden:
 - **Informationspflichten (Art. 13-14):** Mitteilung der Rechtsgrundlage
 - **Berechtigtes Interesse:** Interessenabwägungstest
 
----
-
 **Nächste Schritte:**
 1. Identifizieren Sie die Rechtsgrundlage für jede Verarbeitungstätigkeit
 2. Dokumentieren Sie Einwilligungen und deren Verwaltung
@@ -191,10 +194,3 @@ Für jede Verarbeitungstätigkeit muss die Rechtsgrundlage dokumentiert werden:
 4. Aktualisieren Sie das Verzeichnis von Verarbeitungstätigkeiten
 5. Schulen Sie Mitarbeiter zur Identifikation von Rechtsgrundlagen
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

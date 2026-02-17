@@ -1,5 +1,19 @@
 # ISO 9001:2015 Framework Mapping
 
+**Dokument-ID:** [FRAMEWORK]-9999
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Überblick
 
 Dieses Dokument bildet die Beziehung zwischen den ISO 9001:2015 Qualitätsmanagementsystem-Vorlagen und den spezifischen Kapiteln und Anforderungen der ISO 9001:2015 Norm ab. Es dient als Referenz für Auditoren, Qualitätsmanager und Implementierungsteams, um sicherzustellen, dass alle Normenforderungen durch entsprechende Dokumentation abgedeckt sind.
@@ -259,22 +273,7 @@ Die Templates bieten zusätzliche Unterstützung über die Mindestanforderungen 
 
 | Version | Datum | Autor | Änderungen |
 |---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung des Framework-Mappings |
-
----
+| 1.0 | [Date] | [Author] | Initiale Erstellung des Framework-Mappings |
 
 **Hinweis:** Dieses Mapping basiert auf ISO 9001:2015. Bei Aktualisierungen der Norm sollte dieses Dokument entsprechend überarbeitet werden.
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
-
-## Versionshistorie
-
-| Version | Datum | Änderungen |
-|---------|-------|------------|
-| 0.1 | {{meta.document.last_updated}} | Initiale Erstellung |

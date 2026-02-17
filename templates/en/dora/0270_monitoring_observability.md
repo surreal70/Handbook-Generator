@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0450
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Monitoring and Observability
+
+**Document-ID:** [FRAMEWORK]-0270
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -23,9 +34,9 @@ Description of monitoring and observability practices.
 
 ### Monitoring Levels
 
-- **Infrastructure Monitoring**: {{ source.infra_monitoring }}
-- **Application Monitoring**: {{ source.app_monitoring }}
-- **Business Monitoring**: {{ source.business_monitoring }}
+- **Infrastructure Monitoring**: [TODO]
+- **Application Monitoring**: [TODO]
+- **Business Monitoring**: [TODO]
 
 ### Metrics
 
@@ -37,32 +48,24 @@ Description of monitoring and observability practices.
 
 ### Three Pillars
 
-1. **Logs**: {{ source.logging_solution }}
-2. **Metrics**: {{ source.metrics_solution }}
-3. **Traces**: {{ source.tracing_solution }}
+1. **Logs**: [TODO]
+2. **Metrics**: [TODO]
+3. **Traces**: [TODO]
 
 ### Observability Tooling
 
-- **APM**: {{ source.apm_tool }}
-- **Log Aggregation**: {{ source.log_aggregation_tool }}
-- **Distributed Tracing**: {{ source.distributed_tracing_tool }}
+- **APM**: [TODO]
+- **Log Aggregation**: [TODO]
+- **Distributed Tracing**: [TODO]
 
 ## Alerting
 
 ### Alert Strategy
 
-- **Alert Thresholds**: {{ source.alert_thresholds }}
-- **Alert Routing**: {{ source.alert_routing }}
-- **On-Call**: {{ source.oncall_schedule }}
+- **Alert Thresholds**: [TODO]
+- **Alert Routing**: [TODO]
+- **On-Call**: [TODO]
 
 <!-- Note: Good observability enables fast problem detection -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

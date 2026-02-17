@@ -1,13 +1,24 @@
----
+
 Document-ID: soc1-0200
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Risk Assessment
+
+**Document-ID:** [FRAMEWORK]-0090
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -25,92 +36,92 @@ This document describes the service organization's risk assessment process in ac
 
 ### Overview
 
-{{ source.risk_assessment_overview }}
+[TODO]
 
 ### Risk Assessment Cycle
 
-**Frequency**: {{ source.risk_assessment_frequency }}
-**Responsibilities**: {{ source.risk_assessment_responsibilities }}
-**Documentation**: {{ source.risk_assessment_documentation }}
+**Frequency**: [TODO]
+**Responsibilities**: [TODO]
+**Documentation**: [TODO]
 
 ## Risk Identification
 
 ### Risk Categories
 
-1. **Strategic Risks**: {{ source.strategic_risks }}
-2. **Operational Risks**: {{ source.operational_risks }}
-3. **Financial Risks**: {{ source.financial_risks }}
-4. **Compliance Risks**: {{ source.compliance_risks }}
-5. **Technology Risks**: {{ source.technology_risks }}
+1. **Strategic Risks**: [TODO]
+2. **Operational Risks**: [TODO]
+3. **Financial Risks**: [TODO]
+4. **Compliance Risks**: [TODO]
+5. **Technology Risks**: [TODO]
 
 ### Identification Methods
 
-{{ source.risk_identification_methods }}
+[TODO]
 
 ### Risk Register
 
-{{ source.risk_register }}
+[TODO]
 
 ## Risk Analysis
 
 ### Assessment Criteria
 
 **Likelihood**:
-- High: {{ source.likelihood_high }}
-- Medium: {{ source.likelihood_medium }}
-- Low: {{ source.likelihood_low }}
+- High: [TODO]
+- Medium: [TODO]
+- Low: [TODO]
 
 **Impact**:
-- High: {{ source.impact_high }}
-- Medium: {{ source.impact_medium }}
-- Low: {{ source.impact_low }}
+- High: [TODO]
+- Medium: [TODO]
+- Low: [TODO]
 
 ### Risk Matrix
 
 | Risk | Likelihood | Impact | Risk Level | Priority |
 |------|-----------|--------|------------|----------|
-| {{ source.risk_matrix_rows }}|
+| [TODO]|
 
 ## Risk Evaluation
 
 ### Risk Tolerance
 
-{{ source.risk_tolerance }}
+[TODO]
 
 ### Risk Appetite
 
-{{ source.risk_appetite_statement }}
+[TODO]
 
 ### Prioritization
 
-{{ source.risk_prioritization }}
+[TODO]
 
 ## Risk Responses
 
 ### Response Strategies
 
-1. **Avoid**: {{ source.risk_avoidance }}
-2. **Reduce**: {{ source.risk_reduction }}
-3. **Share**: {{ source.risk_sharing }}
-4. **Accept**: {{ source.risk_acceptance }}
+1. **Avoid**: [TODO]
+2. **Reduce**: [TODO]
+3. **Share**: [TODO]
+4. **Accept**: [TODO]
 
 ### Control Measures
 
-{{ source.control_measures }}
+[TODO]
 
 ## Monitoring and Reporting
 
 ### Risk Monitoring
 
-{{ source.risk_monitoring }}
+[TODO]
 
 ### Reporting
 
-{{ source.risk_reporting }}
+[TODO]
 
 ### Escalation
 
-{{ source.risk_escalation }}
+[TODO]
 
 ## References
 
@@ -118,13 +129,5 @@ This document describes the service organization's risk assessment process in ac
 - Risk Management Policy
 
 <!-- Author notes: Update risk register regularly -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

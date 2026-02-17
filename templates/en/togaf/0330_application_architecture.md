@@ -1,17 +1,28 @@
----
+
 Document-ID: togaf-0330
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Application Architecture
 
+**Document-ID:** [FRAMEWORK]-0330
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document describes the application architecture for {{ source.organization_name }}, including application portfolio, interfaces, and integration patterns.
+This document describes the application architecture for [TODO], including application portfolio, interfaces, and integration patterns.
 
 ## Scope
 
@@ -24,34 +35,25 @@ This document describes the application architecture for {{ source.organization_
 
 | Application | Category | Business Capability | Status | Strategic Value |
 |-------------|----------|---------------------|--------|-----------------|
-| {{ source.app_1 }} | {{ source.app_1_category }} | {{ source.app_1_capability }} | {{ source.app_1_status }} | {{ source.app_1_value }} |
-| {{ source.app_2 }} | {{ source.app_2_category }} | {{ source.app_2_capability }} | {{ source.app_2_status }} | {{ source.app_2_value }} |
-| {{ source.app_3 }} | {{ source.app_3_category }} | {{ source.app_3_capability }} | {{ source.app_3_status }} | {{ source.app_3_value }} |
+| [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## Application Interfaces
 
 | Interface | Source | Target | Protocol | Data Format |
 |-----------|--------|--------|----------|-------------|
-| {{ source.interface_1 }} | {{ source.interface_1_source }} | {{ source.interface_1_target }} | {{ source.interface_1_protocol }} | {{ source.interface_1_format }} |
-| {{ source.interface_2 }} | {{ source.interface_2_source }} | {{ source.interface_2_target }} | {{ source.interface_2_protocol }} | {{ source.interface_2_format }} |
+| [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## Integration Patterns
 
-**Primary Integration Pattern**: {{ source.primary_integration_pattern }}
+**Primary Integration Pattern**: [TODO]
 
 **Supported Patterns**:
-- {{ source.pattern_1 }}
-- {{ source.pattern_2 }}
-- {{ source.pattern_3 }}
+- [TODO]
+- [TODO]
+- [TODO]
 
 <!-- Author notes: Application architecture should support business agility -->
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{meta.document.last_updated}} | {{ meta.defaults.author }} | Initial creation |
-
-<-  ( marked all subtasks complete End of template -->

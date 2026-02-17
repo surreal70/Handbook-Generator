@@ -1,14 +1,16 @@
 # Guideline: Segmentation, Firewalling and Network Access Control
 
-**Document ID:** 0610  
-**Document Type:** Guideline (detailed)  
-**Associated Policy:** 0600_Policy_Network_Security.md  
-**Standard Reference:** ISO/IEC 27001:2022 Annex A.8.20, A.8.21, A.8.22  
-**Owner:** {{ meta.network.manager }}  
-**Version:** 1.0  
-**Status:** Approved  
-**Classification:** Confidential  
-**Last Updated:** {{ meta.document.date }}
+**Document-ID:** [FRAMEWORK]-0610
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -19,7 +21,7 @@ This guideline specifies the `0600_Policy_Network_Security.md` and defines:
 - Firewall rules and management
 - Network Access Control (NAC)
 
-**Scope:** All networks at **{{ meta.organization.name }}**
+**Scope:** All networks at **{{ meta-organisation.name }}**
 
 ## 2. Network Segmentation
 
@@ -318,15 +320,6 @@ This guideline specifies the `0600_Policy_Network_Security.md` and defines:
 - **ISO/IEC 27001:2022 Annex A.8.22** - Segregation of networks
 - **NIST SP 800-41** - Guidelines on Firewalls and Firewall Policy
 
----
-
 **Approved by:** {{ meta.ciso.name }}, CISO  
-**Next Review:** {{ meta.document.next_review }}
+**Next Review:** {{ meta-handbook.next_review }}
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

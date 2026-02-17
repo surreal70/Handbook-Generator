@@ -1,13 +1,24 @@
----
+
 Document-ID: soc1-0310
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # IT General Controls (ITGC)
+
+**Document-ID:** [FRAMEWORK]-0310
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -36,16 +47,16 @@ IT General Controls are controls that relate to the IT environment as a whole an
 - Multi-Factor Authentication (MFA)
 - Single Sign-On (SSO)
 
-{{ source.authentication_controls }}
+[TODO]
 
 **Password Policies**:
-- Minimum length: {{ source.password_min_length }}
-- Complexity requirements: {{ source.password_complexity }}
-- Expiration period: {{ source.password_expiry }}
-- Reuse restrictions: {{ source.password_reuse }}
-- Account lockout: {{ source.account_lockout }}
+- Minimum length: [TODO]
+- Complexity requirements: [TODO]
+- Expiration period: [TODO]
+- Reuse restrictions: [TODO]
+- Account lockout: [TODO]
 
-{{ source.password_policy }}
+[TODO]
 
 **Authorization**:
 - Role-Based Access Control (RBAC)
@@ -53,7 +64,7 @@ IT General Controls are controls that relate to the IT environment as a whole an
 - Segregation of duties
 - Access approval process
 
-{{ source.authorization_controls }}
+[TODO]
 
 ### Privileged Access Management
 
@@ -63,7 +74,7 @@ IT General Controls are controls that relate to the IT environment as a whole an
 - Service accounts
 - Emergency access accounts
 
-{{ source.privileged_accounts }}
+[TODO]
 
 **Privileged Access Management**:
 - Privileged Access Management (PAM) system
@@ -71,10 +82,10 @@ IT General Controls are controls that relate to the IT environment as a whole an
 - Session recording
 - Activity monitoring
 
-{{ source.pam_controls }}
+[TODO]
 
 **Privileged Activity Monitoring**:
-{{ source.privileged_activity_monitoring }}
+[TODO]
 
 ### User Access Management
 
@@ -84,7 +95,7 @@ IT General Controls are controls that relate to the IT environment as a whole an
 - Provisioning procedures
 - Documentation
 
-{{ source.access_provisioning }}
+[TODO]
 
 **Access Changes**:
 - Change requests
@@ -92,7 +103,7 @@ IT General Controls are controls that relate to the IT environment as a whole an
 - Implementation
 - Review
 
-{{ source.access_changes }}
+[TODO]
 
 **Access Removal**:
 - Termination process
@@ -100,17 +111,17 @@ IT General Controls are controls that relate to the IT environment as a whole an
 - Access review
 - Documentation
 
-{{ source.access_removal }}
+[TODO]
 
 ### Access Reviews
 
 **Periodic Reviews**:
-- Frequency: {{ source.access_review_frequency }}
-- Scope: {{ source.access_review_scope }}
-- Responsibilities: {{ source.access_review_responsibilities }}
-- Documentation: {{ source.access_review_documentation }}
+- Frequency: [TODO]
+- Scope: [TODO]
+- Responsibilities: [TODO]
+- Documentation: [TODO]
 
-{{ source.access_reviews }}
+[TODO]
 
 **Review Process**:
 1. Generate access reports
@@ -119,7 +130,7 @@ IT General Controls are controls that relate to the IT environment as a whole an
 4. Remediation
 5. Documentation
 
-{{ source.review_process }}
+[TODO]
 
 ## Change Management
 
@@ -130,7 +141,7 @@ IT General Controls are controls that relate to the IT environment as a whole an
 - Normal changes
 - Emergency changes
 
-{{ source.change_types }}
+[TODO]
 
 **Change Workflow**:
 1. Change request
@@ -139,11 +150,11 @@ IT General Controls are controls that relate to the IT environment as a whole an
 4. Implementation
 5. Review and closure
 
-{{ source.change_workflow }}
+[TODO]
 
 ### Change Requests
 
-**Request Form**: {{ source.change_request_form }}
+**Request Form**: [TODO]
 
 **Required Information**:
 - Change description
@@ -153,16 +164,16 @@ IT General Controls are controls that relate to the IT environment as a whole an
 - Rollback plan
 - Test plan
 
-{{ source.change_request_info }}
+[TODO]
 
 ### Change Assessment and Approval
 
 **Change Advisory Board (CAB)**:
-- Composition: {{ source.cab_composition }}
-- Meeting frequency: {{ source.cab_frequency }}
-- Responsibilities: {{ source.cab_responsibilities }}
+- Composition: [TODO]
+- Meeting frequency: [TODO]
+- Responsibilities: [TODO]
 
-{{ source.cab_details }}
+[TODO]
 
 **Approval Criteria**:
 - Business value
@@ -171,9 +182,9 @@ IT General Controls are controls that relate to the IT environment as a whole an
 - Timing
 - Dependencies
 
-{{ source.approval_criteria }}
+[TODO]
 
-**Emergency Changes**: {{ source.emergency_changes }}
+**Emergency Changes**: [TODO]
 
 ### Testing and Implementation
 
@@ -183,7 +194,7 @@ IT General Controls are controls that relate to the IT environment as a whole an
 - Staging
 - Production
 
-{{ source.test_environments }}
+[TODO]
 
 **Testing Requirements**:
 - Unit tests
@@ -191,13 +202,13 @@ IT General Controls are controls that relate to the IT environment as a whole an
 - Regression tests
 - User Acceptance Testing (UAT)
 
-{{ source.testing_requirements }}
+[TODO]
 
 **Implementation Procedures**:
-{{ source.implementation_procedures }}
+[TODO]
 
 **Rollback Procedures**:
-{{ source.rollback_procedures }}
+[TODO]
 
 ### Change Documentation
 
@@ -208,9 +219,9 @@ IT General Controls are controls that relate to the IT environment as a whole an
 - Implementation logs
 - Post-Implementation Reviews
 
-{{ source.change_documentation }}
+[TODO]
 
-**Retention**: {{ source.change_retention }}
+**Retention**: [TODO]
 
 ## Backup and Recovery
 
@@ -221,13 +232,13 @@ IT General Controls are controls that relate to the IT environment as a whole an
 - Incremental backups
 - Differential backups
 
-{{ source.backup_types }}
+[TODO]
 
 **Backup Schedule**:
-{{ source.backup_schedule }}
+[TODO]
 
 **Backup Retention**:
-{{ source.backup_retention }}
+[TODO]
 
 ### Backup Procedures
 
@@ -238,26 +249,26 @@ IT General Controls are controls that relate to the IT environment as a whole an
 4. Offsite storage
 5. Monitoring and reporting
 
-{{ source.backup_procedures }}
+[TODO]
 
 **Backup Monitoring**:
-{{ source.backup_monitoring }}
+[TODO]
 
 **Backup Error Handling**:
-{{ source.backup_error_handling }}
+[TODO]
 
 ### Recovery Procedures
 
 **Recovery Process**:
-{{ source.recovery_procedures }}
+[TODO]
 
-**Recovery Time Objective (RTO)**: {{ source.rto }}
+**Recovery Time Objective (RTO)**: [TODO]
 
-**Recovery Point Objective (RPO)**: {{ source.rpo }}
+**Recovery Point Objective (RPO)**: [TODO]
 
 ### Recovery Tests
 
-**Test Frequency**: {{ source.recovery_test_frequency }}
+**Test Frequency**: [TODO]
 
 **Test Scenarios**:
 - File recovery
@@ -265,9 +276,9 @@ IT General Controls are controls that relate to the IT environment as a whole an
 - System recovery
 - Disaster recovery
 
-{{ source.recovery_test_scenarios }}
+[TODO]
 
-**Test Documentation**: {{ source.recovery_test_documentation }}
+**Test Documentation**: [TODO]
 
 ## IT Operations Controls
 
@@ -279,11 +290,11 @@ IT General Controls are controls that relate to the IT environment as a whole an
 - Job monitoring
 - Error handling
 
-{{ source.batch_job_management }}
+[TODO]
 
-**Monitoring Tools**: {{ source.monitoring_tools }}
+**Monitoring Tools**: [TODO]
 
-**Alerting**: {{ source.alerting }}
+**Alerting**: [TODO]
 
 ### Incident Management
 
@@ -293,7 +304,7 @@ IT General Controls are controls that relate to the IT environment as a whole an
 - Medium
 - Low
 
-{{ source.incident_categories }}
+[TODO]
 
 **Incident Process**:
 1. Detection and recording
@@ -302,27 +313,27 @@ IT General Controls are controls that relate to the IT environment as a whole an
 4. Resolution and recovery
 5. Closure and documentation
 
-{{ source.incident_process }}
+[TODO]
 
-**Escalation Procedures**: {{ source.escalation_procedures }}
+**Escalation Procedures**: [TODO]
 
 ### Problem Management
 
-**Problem Identification**: {{ source.problem_identification }}
+**Problem Identification**: [TODO]
 
-**Root Cause Analysis**: {{ source.root_cause_analysis }}
+**Root Cause Analysis**: [TODO]
 
-**Problem Resolution**: {{ source.problem_resolution }}
+**Problem Resolution**: [TODO]
 
-**Known Error Database**: {{ source.known_error_database }}
+**Known Error Database**: [TODO]
 
 ### Capacity Management
 
-**Capacity Planning**: {{ source.capacity_planning }}
+**Capacity Planning**: [TODO]
 
-**Performance Monitoring**: {{ source.performance_monitoring }}
+**Performance Monitoring**: [TODO]
 
-**Capacity Forecasting**: {{ source.capacity_forecasting }}
+**Capacity Forecasting**: [TODO]
 
 ## System Acquisition and Development
 
@@ -336,31 +347,31 @@ IT General Controls are controls that relate to the IT environment as a whole an
 5. Implementation
 6. Maintenance
 
-{{ source.sdlc_phases }}
+[TODO]
 
-**SDLC Methodology**: {{ source.sdlc_methodology }}
+**SDLC Methodology**: [TODO]
 
 ### Requirements Management
 
-**Requirements Definition**: {{ source.requirements_definition }}
+**Requirements Definition**: [TODO]
 
-**Requirements Traceability**: {{ source.requirements_traceability }}
+**Requirements Traceability**: [TODO]
 
-**Change Management**: {{ source.requirements_change_management }}
+**Change Management**: [TODO]
 
 ### Development Controls
 
-**Code Development Standards**: {{ source.coding_standards }}
+**Code Development Standards**: [TODO]
 
-**Code Reviews**: {{ source.code_reviews }}
+**Code Reviews**: [TODO]
 
-**Version Control**: {{ source.version_control }}
+**Version Control**: [TODO]
 
-**Segregation of Duties**: {{ source.development_segregation }}
+**Segregation of Duties**: [TODO]
 
 ### Testing
 
-**Test Strategy**: {{ source.test_strategy }}
+**Test Strategy**: [TODO]
 
 **Test Types**:
 - Unit tests
@@ -369,9 +380,9 @@ IT General Controls are controls that relate to the IT environment as a whole an
 - Acceptance tests
 - Security tests
 
-{{ source.test_types }}
+[TODO]
 
-**Test Documentation**: {{ source.test_documentation }}
+**Test Documentation**: [TODO]
 
 ## Physical and Environmental Controls
 
@@ -383,7 +394,7 @@ IT General Controls are controls that relate to the IT environment as a whole an
 - Visitor management
 - Surveillance cameras
 
-{{ source.physical_access }}
+[TODO]
 
 **Environmental Controls**:
 - Air conditioning
@@ -391,15 +402,15 @@ IT General Controls are controls that relate to the IT environment as a whole an
 - Power supply (UPS)
 - Monitoring
 
-{{ source.environmental_controls }}
+[TODO]
 
 ### Equipment and Media Security
 
-**Equipment Management**: {{ source.equipment_management }}
+**Equipment Management**: [TODO]
 
-**Media Management**: {{ source.media_management }}
+**Media Management**: [TODO]
 
-**Secure Disposal**: {{ source.secure_disposal }}
+**Secure Disposal**: [TODO]
 
 ## Monitoring and Reporting
 
@@ -411,18 +422,18 @@ IT General Controls are controls that relate to the IT environment as a whole an
 - Internal audits
 - External audits
 
-{{ source.itgc_monitoring }}
+[TODO]
 
 **Key Performance Indicators (KPIs)**:
-{{ source.itgc_kpis }}
+[TODO]
 
 ### Reporting
 
-**Internal Reports**: {{ source.internal_reporting }}
+**Internal Reports**: [TODO]
 
-**Management Reports**: {{ source.management_reporting }}
+**Management Reports**: [TODO]
 
-**Audit Reports**: {{ source.audit_reporting }}
+**Audit Reports**: [TODO]
 
 ## Documentation and Evidence
 
@@ -441,11 +452,11 @@ IT General Controls are controls that relate to the IT environment as a whole an
    - Recovery tests
    - Incident tickets
 
-{{ source.required_documentation }}
+[TODO]
 
 ### Retention Requirements
 
-{{ source.retention_requirements }}
+[TODO]
 
 ## References
 
@@ -457,13 +468,5 @@ IT General Controls are controls that relate to the IT environment as a whole an
 - AICPA Trust Services Criteria
 
 <!-- Author notes: Update ITGC documentation when systems change -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

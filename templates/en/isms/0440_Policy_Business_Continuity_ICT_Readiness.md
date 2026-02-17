@@ -1,5 +1,19 @@
 # Policy: Business Continuity ICT Readiness
 
+**Document-ID:** [FRAMEWORK]-0440
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This policy establishes the principles for ICT continuity and disaster recovery.
@@ -17,20 +31,18 @@ ISO 27001:2022 Annex A Reference: A.5.29, A.5.30
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** {{ meta-handbook.modifydate }}  
+**Next Review:** {{ meta-handbook.next_review }}
 
 ## 1. Purpose
 
-This policy defines the principles for ICT continuity and disaster recovery at **{{ meta.organization.name }}**. It ensures that IT systems and services can continue or be quickly restored during disruptions to ensure business continuity.
+This policy defines the principles for ICT continuity and disaster recovery at **{{ meta-organisation.name }}**. It ensures that IT systems and services can continue or be quickly restored during disruptions to ensure business continuity.
 
 ## 2. Scope
 
 This policy applies to:
 
-- **Organizational Units:** All departments and locations of {{ meta.organization.name }}
+- **Organizational Units:** All departments and locations of {{ meta-organisation.name }}
 - **Systems:** All business-critical IT systems, applications, infrastructure, cloud services
 - **Scenarios:** Natural disasters, cyberattacks, system failures, pandemics, supplier failures
 - **Interfaces:** Integration with BCM (Business Continuity Management)
@@ -168,18 +180,9 @@ Exceptions to this policy are only permitted in justified cases:
 - **ISO/IEC 27031** - ICT readiness for business continuity
 - **BSI Standard 100-4** - Business Continuity Management
 
----
-
 **Approved by:**  
 {{ meta.management.ceo }}, Management  
-Date: {{ meta.document.approval_date }}
+Date: {{ meta-handbook.modifydate }}
 
-**Next Review:** {{ meta.document.next_review }} (annually or as needed)
+**Next Review:** {{ meta-handbook.next_review }} (annually or as needed)
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

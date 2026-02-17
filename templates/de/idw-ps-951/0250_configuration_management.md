@@ -1,11 +1,16 @@
 # Configuration Management
 
-**Dokument-ID:** idw-ps-951-0250  
-**Owner:** {{ meta.audit_lead }}  
-**Version:** {{ meta.version }}  
-**Status:** {{ meta.status }}  
-**Klassifizierung:** {{ meta.classification }}  
-**Letzte Aktualisierung:** {{ meta.date }}
+**Dokument-ID:** idw-ps-951-0250
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -16,8 +21,8 @@ Dieses Dokument beschreibt die Prüfung von Configuration Management im Rahmen d
 ## 2. Prüfungsgegenstand
 
 ### Prüfungsbereich
-- **Bereich:** {{ source.audit_area }}
-- **Verantwortlich:** {{ source.responsible }}
+- **Bereich:** [TODO]
+- **Verantwortlich:** [TODO]
 
 ### Prüfungsziele
 - Bewertung der Implementierung
@@ -39,38 +44,29 @@ Dieses Dokument beschreibt die Prüfung von Configuration Management im Rahmen d
 
 | Kriterium | Anforderung | Ist-Zustand | Bewertung |
 |-----------|-------------|-------------|-----------|
-| Dokumentation | Vollständig | {{ source.doc_status }} | {{ source.doc_assessment }} |
-| Implementierung | Wirksam | {{ source.impl_status }} | {{ source.impl_assessment }} |
+| Dokumentation | Vollständig | [TODO] | [TODO] |
+| Implementierung | Wirksam | [TODO] | [TODO] |
 
 ## 5. Feststellungen
 
 ### Positive Feststellungen
-1. {{ source.positive_finding_1 }}
+1. [TODO]
 
 ### Verbesserungspotenziale
-1. {{ source.improvement_1 }}
+1. [TODO]
 
 ## 6. Empfehlungen
 
-1. {{ source.recommendation_1 }}
+1. [TODO]
 
 ## 7. Referenzen
 
 - IDW PS 951
 - Relevante Dokumentation
 
----
-
 **Genehmigt durch:**  
-{{ meta.audit_lead }}, Prüfungsleiter  
-Datum: {{ meta.approval_date }}
+{{ meta-organisation-roles.role_Internal_Auditor }}, Prüfungsleiter  
+Datum: {{ meta-handbook.valid_from }}
 
-**Nächster Review:** {{ meta.next_review }}
+**Nächster Review:** {{ meta-handbook.next_review }}
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |

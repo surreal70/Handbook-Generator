@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0240
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Securing Offices and Facilities
+
+**Document-ID:** [FRAMEWORK]-0240
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -15,7 +26,7 @@ This document defines measures for securing offices and facilities according to 
 
 ## Scope
 
-This document applies to all offices and facilities of {{ source.organization_name }}.
+This document applies to all offices and facilities of [TODO].
 
 ## Office Security
 
@@ -27,7 +38,7 @@ This document applies to all offices and facilities of {{ source.organization_na
 
 ### Clear Screen Policy
 - Screen lock when absent
-- Automatic screen lock after {{ source.screen_lock_timeout }} minutes
+- Automatic screen lock after [TODO] minutes
 - No viewing from outside possible
 - Privacy screens if needed
 
@@ -89,17 +100,9 @@ This document applies to all offices and facilities of {{ source.organization_na
 
 ## Metrics
 
-{{ source.organization_name }} measures:
+[TODO] measures:
 - Clean desk policy compliance rate
 - Number of security incidents
 - Fire drill completion rate
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

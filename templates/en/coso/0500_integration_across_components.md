@@ -1,17 +1,28 @@
----
+
 Document-ID: coso-0500
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Integration über Komponenten hinweg
 
+**Document-ID:** [FRAMEWORK]-0500
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document describes die Integration der fünf COSO-Komponenten at {{ source.organization_name }}.
+This document describes die Integration der fünf COSO-Komponenten at [TODO].
 
 ## Scope
 
@@ -24,7 +35,7 @@ This document describes die Integration der fünf COSO-Komponenten at {{ source.
 
 ### COSO Integrated Framework
 
-{{ source.coso_integrated_framework_overview }}
+[TODO]
 
 ### Bedeutung der Integration
 
@@ -38,31 +49,31 @@ Integration ist entscheidend für:
 
 ### Komponente 1: Kontrollumgebung
 
-**Purpose**: {{ source.control_environment_purpose }}
+**Purpose**: [TODO]
 **Prinzipien**: 1-5
 **Rolle**: Grundlage für alle anderen Komponenten
 
 ### Komponente 2: Risikobewertung
 
-**Purpose**: {{ source.risk_assessment_purpose }}
+**Purpose**: [TODO]
 **Prinzipien**: 6-9
 **Rolle**: Identifikation und Bewertung von Risiken
 
 ### Komponente 3: Kontrollaktivitäten
 
-**Purpose**: {{ source.control_activities_purpose }}
+**Purpose**: [TODO]
 **Prinzipien**: 10-12
 **Rolle**: Umsetzung von Maßnahmen zur Risikominderung
 
 ### Komponente 4: Information und Kommunikation
 
-**Purpose**: {{ source.information_communication_purpose }}
+**Purpose**: [TODO]
 **Prinzipien**: 13-15
 **Rolle**: Unterstützung aller Komponenten durch Information
 
 ### Komponente 5: Überwachungsaktivitäten
 
-**Purpose**: {{ source.monitoring_purpose }}
+**Purpose**: [TODO]
 **Prinzipien**: 16-17
 **Rolle**: Sicherstellung der Wirksamkeit aller Komponenten
 
@@ -70,7 +81,7 @@ Integration ist entscheidend für:
 
 ### Kontrollumgebung als Grundlage
 
-**Einfluss auf andere Komponenten**: {{ source.control_environment_influence }}
+**Einfluss auf andere Komponenten**: [TODO]
 
 **Verbindungen**:
 - Beeinflusst Risikobewertung durch Risikokultur
@@ -80,7 +91,7 @@ Integration ist entscheidend für:
 
 ### Risikobewertung und Kontrollaktivitäten
 
-**Verbindung**: {{ source.risk_assessment_control_activities_link }}
+**Verbindung**: [TODO]
 
 **Integration**:
 - Risikobewertung identifiziert Risiken
@@ -90,7 +101,7 @@ Integration ist entscheidend für:
 
 ### Information und Kommunikation als Enabler
 
-**Unterstützungsfunktion**: {{ source.information_communication_enabler }}
+**Unterstützungsfunktion**: [TODO]
 
 **Integration**:
 - Unterstützt Risikobewertung durch Informationsbereitstellung
@@ -100,7 +111,7 @@ Integration ist entscheidend für:
 
 ### Überwachung aller Komponenten
 
-**Überwachungsumfang**: {{ source.monitoring_scope }}
+**Überwachungsumfang**: [TODO]
 
 **Integration**:
 - Überwacht Wirksamkeit der Kontrollumgebung
@@ -112,11 +123,11 @@ Integration ist entscheidend für:
 
 ### Prinzipienübersicht
 
-{{ source.principles_overview }}
+[TODO]
 
 ### Prinzipienabhängigkeiten
 
-**Gegenseitige Abhängigkeiten**: {{ source.principle_dependencies }}
+**Gegenseitige Abhängigkeiten**: [TODO]
 
 **Beispiele**:
 - Prinzip 1 (Integrität) unterstützt Prinzip 8 (Betrugsrisiko)
@@ -125,18 +136,18 @@ Integration ist entscheidend für:
 
 ### Prinzipiensynergien
 
-{{ source.principle_synergies }}
+[TODO]
 
 ## Ganzheitlicher Kontrollansatz
 
 ### Systemdenken
 
-{{ source.systems_thinking }}
+[TODO]
 
 ### Integrierte Kontrollen
 
-**Mehrfachnutzen**: {{ source.multiple_benefits }}
-**Effizienz**: {{ source.efficiency }}
+**Mehrfachnutzen**: [TODO]
+**Effizienz**: [TODO]
 
 **Beispiele**:
 - Funktionstrennung (Kontrollumgebung + Kontrollaktivität)
@@ -147,7 +158,7 @@ Integration ist entscheidend für:
 
 ### Unternehmensebene
 
-**Entity-Level Controls**: {{ source.entity_level_integration }}
+**Entity-Level Controls**: [TODO]
 
 **Beispiele**:
 - Verhaltenskodex
@@ -157,11 +168,11 @@ Integration ist entscheidend für:
 
 ### Geschäftsbereichsebene
 
-**Divisional Integration**: {{ source.divisional_integration }}
+**Divisional Integration**: [TODO]
 
 ### Processebene
 
-**Process-Level Integration**: {{ source.process_level_integration }}
+**Process-Level Integration**: [TODO]
 
 **Beispiele**:
 - Integrierte Processkontrollen
@@ -170,95 +181,95 @@ Integration ist entscheidend für:
 
 ### Transaktionsebene
 
-**Transaction-Level Integration**: {{ source.transaction_level_integration }}
+**Transaction-Level Integration**: [TODO]
 
 ## Governance-Struktur
 
 ### Board und Ausschüsse
 
-**Board-Rolle**: {{ source.board_role }}
-**Prüfungsausschuss**: {{ source.audit_committee_role }}
-**Risikoausschuss**: {{ source.risk_committee_role }}
+**Board-Rolle**: [TODO]
+**Prüfungsausschuss**: [TODO]
+**Risikoausschuss**: [TODO]
 
 ### Management-Struktur
 
-**Geschäftsführung**: {{ source.management_structure }}
-**Managementkomitees**: {{ source.management_committees }}
+**Geschäftsführung**: [TODO]
+**Managementkomitees**: [TODO]
 
 ### Three Lines of Defense
 
-**Erste Linie**: {{ source.first_line }}
-**Zweite Linie**: {{ source.second_line }}
-**Dritte Linie**: {{ source.third_line }}
+**Erste Linie**: [TODO]
+**Zweite Linie**: [TODO]
+**Dritte Linie**: [TODO]
 
-**Integration**: {{ source.three_lines_integration }}
+**Integration**: [TODO]
 
 ## Integrierte Berichterstattung
 
 ### Konsolidierte Berichte
 
-{{ source.consolidated_reporting }}
+[TODO]
 
 ### Dashboard-Ansatz
 
-{{ source.dashboard_approach }}
+[TODO]
 
 ### Integrierte Risiko- und Kontrollberichte
 
-{{ source.integrated_risk_control_reporting }}
+[TODO]
 
 ## Herausforderungen der Integration
 
 ### Silodenken
 
-**Problem**: {{ source.silo_mentality }}
-**Lösung**: {{ source.silo_solution }}
+**Problem**: [TODO]
+**Lösung**: [TODO]
 
 ### Komplexität
 
-**Problem**: {{ source.complexity_challenge }}
-**Lösung**: {{ source.complexity_solution }}
+**Problem**: [TODO]
+**Lösung**: [TODO]
 
 ### Ressourcen
 
-**Problem**: {{ source.resource_challenge }}
-**Lösung**: {{ source.resource_solution }}
+**Problem**: [TODO]
+**Lösung**: [TODO]
 
 ## Best Practices für Integration
 
 ### Integrationsstrategien
 
-{{ source.integration_strategies }}
+[TODO]
 
 ### Erfolgsfaktoren
 
-**Führungsunterstützung**: {{ source.leadership_support }}
-**Klare Verantwortlichkeiten**: {{ source.clear_responsibilities }}
-**Kommunikation**: {{ source.integration_communication }}
-**Technologie**: {{ source.technology_enablement }}
+**Führungsunterstützung**: [TODO]
+**Klare Verantwortlichkeiten**: [TODO]
+**Kommunikation**: [TODO]
+**Technologie**: [TODO]
 
 ## Bewertung der Integration
 
 ### Integrationskriterien
 
-{{ source.integration_criteria }}
+[TODO]
 
 ### Bewertungsmethoden
 
-{{ source.assessment_methods }}
+[TODO]
 
 ### Verbesserung der Integration
 
-{{ source.integration_improvement }}
+[TODO]
 
 ## Roles and Responsibilities
 
-**Vorstand**: {{ source.board_integration_responsibilities }}
-**Geschäftsführung**: {{ source.management_integration_responsibilities }}
-**Risikomanagement**: {{ source.risk_management_integration_role }}
-**Compliance**: {{ source.compliance_integration_role }}
-**Interne Revision**: {{ source.internal_audit_integration_role }}
-**Alle Führungskräfte**: {{ source.manager_integration_responsibilities }}
+**Vorstand**: [TODO]
+**Geschäftsführung**: [TODO]
+**Risikomanagement**: [TODO]
+**Compliance**: [TODO]
+**Interne Revision**: [TODO]
+**Alle Führungskräfte**: [TODO]
 
 ## References
 
@@ -266,13 +277,5 @@ Integration ist entscheidend für:
 - COSO Enterprise Risk Management Framework
 - Three Lines of Defense Model (IIA)
 - ISO 31000 Risk Management
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

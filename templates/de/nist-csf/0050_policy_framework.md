@@ -1,13 +1,25 @@
----
+
 Document-ID: nist-csf-0050
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Richtlinien-Rahmenwerk (GV.PO)
+
+**Dokument-ID:** [FRAMEWORK]-0050
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -15,7 +27,7 @@ Dieses Dokument beschreibt das Cybersecurity-Richtlinien-Rahmenwerk der Organisa
 
 ## Geltungsbereich
 
-{{ meta.scope }}
+{{ meta-handbook.scope }}
 
 ## Richtlinienhierarchie
 
@@ -44,8 +56,8 @@ Dieses Dokument beschreibt das Cybersecurity-Richtlinien-Rahmenwerk der Organisa
 ### 1. Information Security Policy
 **Beschreibung:** Übergeordnete Sicherheitsrichtlinie  
 **Geltungsbereich:** Gesamte Organisation  
-**Verantwortlich:** {{ meta.ciso }}  
-**Status:** {{ meta.policy_status }}
+**Verantwortlich:** {{ meta-organisation-roles.role_CISO }}  
+**Status:** {{ meta-handbook.policy_status }}
 
 **Kernprinzipien:**
 - Vertraulichkeit, Integrität, Verfügbarkeit (CIA)
@@ -56,7 +68,7 @@ Dieses Dokument beschreibt das Cybersecurity-Richtlinien-Rahmenwerk der Organisa
 ### 2. Access Control Policy
 **Beschreibung:** Regelung des Zugriffs auf Informationen und Systeme  
 **Geltungsbereich:** Alle Benutzer und Systeme  
-**Verantwortlich:** {{ meta.security_architect }}
+**Verantwortlich:** {{ meta-handbook.security_architect }}
 
 **Kernelemente:**
 - Benutzeridentifikation und Authentifizierung
@@ -67,7 +79,7 @@ Dieses Dokument beschreibt das Cybersecurity-Richtlinien-Rahmenwerk der Organisa
 ### 3. Data Protection Policy
 **Beschreibung:** Schutz personenbezogener und sensibler Daten  
 **Geltungsbereich:** Alle Datenverarbeitungsprozesse  
-**Verantwortlich:** {{ meta.dpo }}
+**Verantwortlich:** {{ meta-organisation-roles.role_GDPR_Manager }}
 
 **Kernelemente:**
 - Datenklassifizierung
@@ -78,7 +90,7 @@ Dieses Dokument beschreibt das Cybersecurity-Richtlinien-Rahmenwerk der Organisa
 ### 4. Incident Response Policy
 **Beschreibung:** Umgang mit Sicherheitsvorfällen  
 **Geltungsbereich:** Alle Mitarbeiter  
-**Verantwortlich:** {{ meta.security_ops_manager }}
+**Verantwortlich:** {{ meta-handbook.security_ops_manager }}
 
 **Kernelemente:**
 - Incident-Klassifizierung
@@ -89,7 +101,7 @@ Dieses Dokument beschreibt das Cybersecurity-Richtlinien-Rahmenwerk der Organisa
 ### 5. Acceptable Use Policy
 **Beschreibung:** Akzeptable Nutzung von IT-Ressourcen  
 **Geltungsbereich:** Alle Benutzer  
-**Verantwortlich:** {{ meta.it_director }}
+**Verantwortlich:** {{ meta-organisation-roles.role_IT_Manager }}
 
 **Kernelemente:**
 - Erlaubte und verbotene Aktivitäten
@@ -100,7 +112,7 @@ Dieses Dokument beschreibt das Cybersecurity-Richtlinien-Rahmenwerk der Organisa
 ### 6. Third-Party Risk Management Policy
 **Beschreibung:** Management von Drittanbieter-Risiken  
 **Geltungsbereich:** Alle Lieferanten und Partner  
-**Verantwortlich:** {{ meta.procurement_director }}
+**Verantwortlich:** {{ meta-handbook.procurement_director }}
 
 **Kernelemente:**
 - Lieferanten-Bewertung
@@ -173,7 +185,7 @@ Dieses Dokument beschreibt das Cybersecurity-Richtlinien-Rahmenwerk der Organisa
 
 ## Richtlinien-Repository
 
-**Speicherort:** {{ meta.policy_repository }}  
+**Speicherort:** {{ meta-handbook.policy_repository }}  
 **Zugriff:** Alle Mitarbeiter (Lesezugriff)  
 **Verwaltung:** Compliance-Team
 
@@ -196,17 +208,3 @@ Dieses Dokument beschreibt das Cybersecurity-Richtlinien-Rahmenwerk der Organisa
 - 0060_oversight.md
 - 0210_awareness_training.md (Protect)
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |
-
-<!-- 
-Autor-Hinweise:
-- Halten Sie Richtlinien aktuell und relevant
-- Stellen Sie sicher, dass Richtlinien verständlich sind
-- Kommunizieren Sie Änderungen effektiv
--->

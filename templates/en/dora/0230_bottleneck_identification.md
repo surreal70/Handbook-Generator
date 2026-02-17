@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0230
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Bottleneck Identification
+
+**Document-ID:** [FRAMEWORK]-0230
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -22,8 +33,8 @@ This document describes methods for identifying and analyzing bottlenecks in the
 
 ## Organization Information
 
-- **Organization**: {{ source.organization_name }}
-- **Analysis Owner**: {{ source.bottleneck_analysis_owner }}
+- **Organization**: [TODO]
+- **Analysis Owner**: [TODO]
 
 ## Bottleneck Analysis Methods
 
@@ -204,10 +215,3 @@ Low Impact, High Effort → P4 (Avoid)
 
 <!-- Note: Bottleneck elimination is a continuous process -->
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |

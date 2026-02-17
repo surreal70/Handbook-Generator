@@ -1,13 +1,24 @@
----
+
 Document-ID: tisax-0310
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Change Management
+
+**Document-ID:** [FRAMEWORK]-0310
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -15,7 +26,7 @@ This document describes the change management process according to TISAX require
 
 ## Scope
 
-This document applies to all changes to IT systems and infrastructure of {{ source.organization_name }}.
+This document applies to all changes to IT systems and infrastructure of [TODO].
 
 ## Change Management Process
 
@@ -88,18 +99,10 @@ This document applies to all changes to IT systems and infrastructure of {{ sour
 
 ## Metrics
 
-{{ source.organization_name }} measures:
+[TODO] measures:
 - Number of changes per month
 - Success rate of changes
 - Number of emergency changes
 - Average lead time
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

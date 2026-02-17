@@ -1,5 +1,19 @@
 # Risikobehandlungsplan (RTP) – Template
 
+**Dokument-ID:** 0090
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 The Risk Treatment Plan (RTP) documents all planned measures to treat identified
@@ -9,23 +23,11 @@ is the action plan that translates risk analysis into concrete security improvem
 ISO 27001:2022 Reference: Clause 6.1.3 - Information security risk treatment
 -->
 
-**Dokument-ID:** 0090  
-**Dokumenttyp:** ISMS-Plan/Template  
-**Standard-Referenz:** ISO/IEC 27001:2022 Clause 6.1.3  
-**Owner:** {{ meta.ciso.name }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
-
----
-
 ## 1. Ziel und Geltungsbereich
 
 ### 1.1 Ziel
 
-Der Risikobehandlungsplan (Risk Treatment Plan, RTP) der **{{ meta.organization.name }}** dokumentiert alle geplanten Maßnahmen zur Behandlung identifizierter Informationssicherheitsrisiken. Er dient als:
+Der Risikobehandlungsplan (Risk Treatment Plan, RTP) der **{{ meta-organisation.name }}** dokumentiert alle geplanten Maßnahmen zur Behandlung identifizierter Informationssicherheitsrisiken. Er dient als:
 - Aktionsplan für Risikobehandlung
 - Tracking-Tool für Maßnahmenumsetzung
 - Nachweis für Audits und Compliance
@@ -353,26 +355,15 @@ Für jede implementierte Maßnahme muss die Wirksamkeit nachgewiesen werden:
 - **ISO/IEC 27002:2022** - Information security controls
 - **ISO/IEC 27005:2022** - Information security risk management
 
----
-
 ## Änderungshistorie
 
 | Version | Datum | Autor | Beschreibung | Genehmigt durch |
 |---------|-------|-------|--------------|-----------------|
-| 1.0 | {{ meta.document.date }} | {{ meta.ciso.name }} | Initiale Version | {{ meta.management.ceo }} |
-
----
+| 1.0 | {{ meta-handbook.modifydate }} | {{ meta.ciso.name }} | Initiale Version | {{ meta.management.ceo }} |
 
 **Genehmigt durch:**  
 {{ meta.ciso.name }}, CISO  
-Datum: {{ meta.document.approval_date }}
+Datum: {{ meta-handbook.modifydate }}
 
-**Nächster Review:** {{ meta.document.next_review }} (Monatlich)
+**Nächster Review:** {{ meta-handbook.next_review }} (Monatlich)
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

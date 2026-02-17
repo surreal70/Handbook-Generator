@@ -633,3 +633,93 @@ class TemplateManager:
             return ErrorHandler.empty_template_directory_error(template_path)
         
         return None
+    
+    def detect_handbook_directory(self, language: str, template_type: str) -> Optional[Path]:
+        """
+        Detect handbook directory from template path.
+        
+        The handbook directory is where meta-handbook.yaml should be located.
+        For standard templates: templates/{language}/{template_type}/
+        For service templates: templates/{language}/service-directory/{template_type}/
+        
+        Args:
+            language: Language code (e.g., 'de', 'en')
+            template_type: Template category (e.g., 'bcm', 'isms', 'email-service')
+            
+        Returns:
+            Path to handbook directory, or None if not found
+        """
+        # Handle service templates (in service-directory subdirectory)
+        if template_type in ['email-service', 'service-templates']:
+            handbook_dir = self.template_root / language / 'service-directory' / template_type
+        else:
+            handbook_dir = self.template_root / language / template_type
+        
+        # Return path if directory exists
+        if handbook_dir.exists() and handbook_dir.is_dir():
+            return handbook_dir
+        
+        return None
+    
+    def load_handbook_metadata(self, language: str, template_type: str):
+        """
+        Load handbook-specific metadata for a given language and template type.
+        
+        This method detects the handbook directory and loads meta-handbook.yaml
+        from that directory using MetadataLoader.
+        
+        Args:
+            language: Language code (e.g., 'de', 'en')
+            template_type: Template category (e.g., 'bcm', 'isms')
+            
+        Returns:
+            HandbookMetadata object with loaded or default values
+            
+        Raises:
+            ValueError: If handbook directory cannot be detected
+        """
+        from src.metadata_loader import MetadataLoader
+        
+        # Detect handbook directory
+        handbook_dir = self.detect_handbook_directory(language, template_type)
+        
+        if handbook_dir is None:
+            raise ValueError(
+                f"Cannot detect handbook directory for language '{language}' "
+                f"and template type '{template_type}'"
+            )
+        
+        # Load handbook metadata using MetadataLoader
+        metadata_loader = MetadataLoader()
+        handbook_metadata = metadata_loader.load_handbook_metadata(handbook_dir)
+        
+        return handbook_metadata
+    
+    def process_handbook(self, language: str, template_type: str, unified_metadata):
+        """
+        Process a handbook by loading handbook-specific metadata and merging it
+        into the unified metadata context.
+        
+        This method:
+        1. Detects the handbook directory from language and template type
+        2. Loads handbook-specific metadata using MetadataLoader
+        3. Merges handbook metadata into the UnifiedMetadata context
+        
+        Args:
+            language: Language code (e.g., 'de', 'en')
+            template_type: Template category (e.g., 'bcm', 'isms')
+            unified_metadata: UnifiedMetadata object to update with handbook metadata
+            
+        Returns:
+            Updated UnifiedMetadata object with handbook metadata merged
+            
+        Raises:
+            ValueError: If handbook directory cannot be detected
+        """
+        # Load handbook-specific metadata
+        handbook_metadata = self.load_handbook_metadata(language, template_type)
+        
+        # Merge handbook metadata into unified context
+        unified_metadata.handbook = handbook_metadata
+        
+        return unified_metadata

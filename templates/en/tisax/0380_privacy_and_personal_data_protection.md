@@ -1,17 +1,28 @@
----
+
 Document-ID: tisax-0550
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Privacy and Personal Data Protection
 
+**Document-ID:** [FRAMEWORK]-0380
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Purpose
 
-This document describes data protection at {{ source.organization_name }}.
+This document describes data protection at [TODO].
 
 ## Data Protection Principles
 
@@ -52,17 +63,9 @@ This document describes data protection at {{ source.organization_name }}.
 
 ## Data Protection Officer
 
-**Name**: {{ source.data_protection_officer }}
-**Contact**: {{ source.dpo_contact }}
+**Name**: [TODO]
+**Contact**: [TODO]
 
 <!-- Note: Maintain GDPR compliance -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

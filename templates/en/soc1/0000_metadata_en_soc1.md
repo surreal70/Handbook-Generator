@@ -1,43 +1,34 @@
+# SOC1 Handbook - Metadata
+
+**Document-ID:** 0000  
+**Date:** 2026-02-17  
+**Owner:** [TODO]  
+**Revision:** 0  
+**Status:** Draft  
+**Classification:** Internal  
+**Last Updated:** 2026-02-17  
+**Template-Version:** 1.0  
+
 ---
-title: "SOC 1 / SSAE 18 Handbook"
-author: "{{ source.author }}"
-version: "1.0"
-date: "{{ source.date }}"
-organization: "{{ source.organization_name }}"
-classification: "Internal"
+
+## Handbook Information
+
+**Handbook Title:** SOC1 Handbook  
+**Handbook Short:** SOC1  
+**Organisation:** [TODO]  
+**Author:** [TODO]  
+**Scope:** [TODO]  
+**Valid from:** [TODO]  
+**Next Review:** [TODO]  
+
 ---
 
-# Metadata
+## Document Purpose
 
-This file contains metadata for the SOC 1 / SSAE 18 Handbook.
+This document contains the metadata for the SOC1 handbook.
 
-## Document Information
+## Change History
 
-- **Title**: SOC 1 / SSAE 18 Handbook
-- **Author**: {{ source.author }}
-- **Version**: 1.0
-- **Date**: {{ source.date }}
-- **Organization**: {{ source.organization_name }}
-- **Classification**: Internal
-
-## Purpose
-
-This handbook documents the service organization's controls and processes that are relevant to user organizations' financial reporting, in accordance with SSAE 18 (Statement on Standards for Attestation Engagements No. 18) and SOC 1 Type II requirements.
-
-## Scope
-
-The handbook covers all aspects of internal controls relevant to SOC 1 reports, including:
-
-- Control Environment
-- Risk Assessment
-- Control Activities
-- Information and Communication
-- Monitoring Activities
-
-## Target Audience
-
-- External Auditors
-- Compliance Officers
-- IT Auditors
-- Service Organization Management
-- User Organizations
+| Version | Date | Author | Change |
+|---------|------|--------|--------|
+| 0 | 2026-02-17 | [TODO] | Initial version |

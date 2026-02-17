@@ -1,17 +1,28 @@
----
+
 Document-ID: tisax-0320
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Kapazitätsmanagement
 
+**Dokument-ID:** [FRAMEWORK]-0060
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt das Kapazitätsmanagement bei {{ source.organization_name }}.
+Dieses Dokument beschreibt das Kapazitätsmanagement bei [TODO].
 
 ## Überwachung
 
@@ -22,25 +33,16 @@ Dieses Dokument beschreibt das Kapazitätsmanagement bei {{ source.organization_
 
 ## Kapazitätsplanung
 
-**Planungshorizont**: {{ source.capacity_planning_horizon }}
-**Überprüfung**: {{ source.capacity_review_frequency }}
+**Planungshorizont**: [TODO]
+**Überprüfung**: [TODO]
 
 ## Schwellenwerte
 
 | Ressource | Warnung | Kritisch |
 |-----------|---------|----------|
-| CPU | {{ source.cpu_warning_threshold }}% | {{ source.cpu_critical_threshold }}% |
-| Speicher | {{ source.memory_warning_threshold }}% | {{ source.memory_critical_threshold }}% |
-| Festplatte | {{ source.disk_warning_threshold }}% | {{ source.disk_critical_threshold }}% |
+| CPU | [TODO]% | [TODO]% |
+| Speicher | [TODO]% | [TODO]% |
+| Festplatte | [TODO]% | [TODO]% |
 
 <!-- Hinweis: Passen Sie die Schwellenwerte an -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

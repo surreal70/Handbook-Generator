@@ -1,5 +1,19 @@
 # Risikoregister (Template)
 
+**Dokument-ID:** 0080
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 The risk register is the central repository for all identified information security
@@ -9,23 +23,11 @@ This is a living document that should be reviewed and updated regularly.
 ISO 27001:2022 Reference: Clause 6.1.2 - Information security risk assessment
 -->
 
-**Dokument-ID:** 0080  
-**Dokumenttyp:** ISMS-Register/Template  
-**Standard-Referenz:** ISO/IEC 27001:2022 Clause 6.1.2  
-**Owner:** {{ meta.ciso.name }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
-
----
-
 ## 1. Zweck und Anleitung
 
 ### 1.1 Zweck
 
-Das Risikoregister dokumentiert alle identifizierten Informationssicherheitsrisiken im ISMS-Scope der **{{ meta.organization.name }}**. Es dient als:
+Das Risikoregister dokumentiert alle identifizierten Informationssicherheitsrisiken im ISMS-Scope der **{{ meta-organisation.name }}**. Es dient als:
 - Zentrale Übersicht aller Risiken
 - Grundlage für Risikobehandlungsentscheidungen
 - Nachweis für Audits und Compliance
@@ -299,26 +301,15 @@ uniquely identified and linked to treatment measures.
 - **ISO/IEC 27005:2022** - Information security risk management
 - **NIST SP 800-30** - Guide for Conducting Risk Assessments
 
----
-
 ## Änderungshistorie
 
 | Version | Datum | Autor | Beschreibung | Genehmigt durch |
 |---------|-------|-------|--------------|-----------------|
-| 1.0 | {{ meta.document.date }} | {{ meta.ciso.name }} | Initiale Version | {{ meta.management.ceo }} |
-
----
+| 1.0 | {{ meta-handbook.modifydate }} | {{ meta.ciso.name }} | Initiale Version | {{ meta.management.ceo }} |
 
 **Genehmigt durch:**  
 {{ meta.ciso.name }}, CISO  
-Datum: {{ meta.document.approval_date }}
+Datum: {{ meta-handbook.modifydate }}
 
-**Nächster Review:** {{ meta.document.next_review }} (Quartalsweise)
+**Nächster Review:** {{ meta-handbook.next_review }} (Quartalsweise)
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

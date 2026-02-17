@@ -1,5 +1,19 @@
 # Guideline: Acceptable Use of IT
 
+**Document-ID:** [FRAMEWORK]-0210
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This guideline provides detailed implementation guidance for the Acceptable Use Policy.
@@ -17,14 +31,12 @@ This is a detailed guideline (Tier 3) that implements the abstract policy (Tier 
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}  
-**Next Review:** {{ meta.document.next_review }}
-
----
+**Last Updated:** {{ meta-handbook.modifydate }}  
+**Next Review:** {{ meta-handbook.next_review }}
 
 ## 1. Purpose and Scope
 
-This guideline implements the `0200_Policy_Acceptable_Use_of_IT.md` and defines detailed rules, procedures, and technical controls for the acceptable use of IT resources at **{{ meta.organization.name }}**.
+This guideline implements the `0200_Policy_Acceptable_Use_of_IT.md` and defines detailed rules, procedures, and technical controls for the acceptable use of IT resources at **{{ meta-organisation.name }}**.
 
 **Scope:**
 - All employees, contractors, and third parties with access to IT resources
@@ -361,18 +373,9 @@ The organization monitors the following activities to ensure security and compli
 - **GDPR (EU 2016/679)** - General Data Protection Regulation
 - **Works Constitution Act (BetrVG)** - Co-determination in monitoring
 
----
-
 **Approved by:**  
 {{ meta.ciso.name }}, CISO  
-Date: {{ meta.document.approval_date }}
+Date: {{ meta-handbook.modifydate }}
 
-**Next Review:** {{ meta.document.next_review }}
+**Next Review:** {{ meta-handbook.next_review }}
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

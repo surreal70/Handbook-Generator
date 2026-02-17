@@ -1,14 +1,16 @@
 # Richtlinie: ICT Disaster Recovery - Schnittstellen zu BCM
 
-**Dokument-ID:** 0450  
-**Dokumenttyp:** Richtlinie (detailliert)  
-**Zugehörige Policy:** 0440_Policy_Business_Continuity_ICT_Readiness.md  
-**Standard-Referenz:** ISO/IEC 27001:2022 Annex A.5.29, A.5.30  
-**Owner:** {{ meta.it_operations.manager }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Vertraulich  
-**Letzte Aktualisierung:** {{ meta.document.date }}
+**Dokument-ID:** 0450
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -19,7 +21,7 @@ Diese Richtlinie konkretisiert die `0440_Policy_Business_Continuity_ICT_Readines
 - Schnittstellen zum Business Continuity Management (BCM)
 - ICT-Readiness für Notfallsituationen
 
-**Geltungsbereich:** Alle IT-Systeme und -Services bei **{{ meta.organization.name }}**
+**Geltungsbereich:** Alle IT-Systeme und -Services bei **{{ meta-organisation.name }}**
 
 ## 2. ICT Disaster Recovery Strategie
 
@@ -213,15 +215,6 @@ Diese Richtlinie konkretisiert die `0440_Policy_Business_Continuity_ICT_Readines
 - **ISO/IEC 27001:2022 Annex A.5.30** - ICT readiness for business continuity
 - **ISO 22301** - Business Continuity Management
 
----
-
 **Genehmigt durch:** {{ meta.ciso.name }}, CISO  
-**Nächster Review:** {{ meta.document.next_review }}
+**Nächster Review:** {{ meta-handbook.next_review }}
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

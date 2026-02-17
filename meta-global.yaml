@@ -1,0 +1,5 @@
+# Global Metadata Configuration
+# This file contains Handbook Generator version and source information
+
+source: "HandBook Generator"
+version: "0.0.12"

@@ -1,9 +1,16 @@
 # Glossar und Abkürzungen
 
-**Dokument-ID:** NIST-0850  
-**Organisation:** {{ meta.organization.name }}  
-**Version:** {{ meta.document.version }}  
-**Letzte Aktualisierung:** {{ meta.document.last_updated }}  
+**Dokument-ID:** NIST-0850
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -82,13 +89,5 @@
 **Security Control:** A safeguard or countermeasure prescribed for an information system.
 
 **System Security Plan (SSP):** A formal document that provides an overview of the security requirements for an information system.
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |
 
 <!-- End of template -->

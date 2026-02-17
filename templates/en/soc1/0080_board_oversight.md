@@ -1,13 +1,24 @@
----
+
 Document-ID: soc1-0120
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Board Oversight
+
+**Document-ID:** [FRAMEWORK]-0080
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -24,68 +35,68 @@ This document describes the board's oversight functions and its role in the cont
 
 ### Composition
 
-**Members**: {{ source.board_members }}
-**Independent Members**: {{ source.independent_board_members }}
-**Chairman**: {{ source.board_chairman }}
+**Members**: [TODO]
+**Independent Members**: [TODO]
+**Chairman**: [TODO]
 
 ### Qualifications
 
-{{ source.board_qualifications }}
+[TODO]
 
 ### Independence
 
-{{ source.board_independence_criteria }}
+[TODO]
 
 ## Oversight Functions
 
 ### Strategic Oversight
 
-{{ source.strategic_oversight_activities }}
+[TODO]
 
 ### Financial Oversight
 
-{{ source.financial_oversight_activities }}
+[TODO]
 
 ### Risk Oversight
 
-{{ source.risk_oversight_activities }}
+[TODO]
 
 ### Compliance Oversight
 
-{{ source.compliance_oversight_activities }}
+[TODO]
 
 ## Committees
 
 ### Audit Committee
 
-**Members**: {{ source.audit_committee_members }}
-**Chairman**: {{ source.audit_committee_chair }}
-**Responsibilities**: {{ source.audit_committee_responsibilities }}
-**Meeting Frequency**: {{ source.audit_committee_frequency }}
+**Members**: [TODO]
+**Chairman**: [TODO]
+**Responsibilities**: [TODO]
+**Meeting Frequency**: [TODO]
 
 ### Risk Committee
 
-**Members**: {{ source.risk_committee_members }}
-**Responsibilities**: {{ source.risk_committee_responsibilities }}
+**Members**: [TODO]
+**Responsibilities**: [TODO]
 
 ### Compensation Committee
 
-**Members**: {{ source.compensation_committee_members }}
-**Responsibilities**: {{ source.compensation_committee_responsibilities }}
+**Members**: [TODO]
+**Responsibilities**: [TODO]
 
 ## Meetings and Reporting
 
 ### Meeting Schedule
 
-{{ source.board_meeting_schedule }}
+[TODO]
 
 ### Reporting to Board
 
-{{ source.board_reporting }}
+[TODO]
 
 ### Documentation
 
-{{ source.board_documentation }}
+[TODO]
 
 ## References
 
@@ -93,13 +104,5 @@ This document describes the board's oversight functions and its role in the cont
 - Committee Charters
 
 <!-- Author notes: Update board information when changes occur -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

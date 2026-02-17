@@ -1,12 +1,26 @@
 # Sicherheitsbetrieb und Hardening
 
+**Dokument-ID:** [FRAMEWORK]-0170
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck und Geltungsbereich
 
-Dieses Dokument beschreibt die Sicherheitsbetriebsprozesse und Hardening-Richtlinien für {{ meta.organization.name }}. Es definiert Security-Monitoring, Incident-Response-Prozesse, Vulnerability-Management und Compliance-Anforderungen zur Sicherstellung der Informationssicherheit.
+Dieses Dokument beschreibt die Sicherheitsbetriebsprozesse und Hardening-Richtlinien für {{ meta-organisation.name }}. Es definiert Security-Monitoring, Incident-Response-Prozesse, Vulnerability-Management und Compliance-Anforderungen zur Sicherstellung der Informationssicherheit.
 
-**Geltungsbereich:** Alle IT-Systeme, Netzwerke, Applikationen und Daten von {{ meta.organization.name }}
+**Geltungsbereich:** Alle IT-Systeme, Netzwerke, Applikationen und Daten von {{ meta-organisation.name }}
 
-**Verantwortlich:** {{ meta.ciso.name }} ({{ meta.ciso.email }})
+**Verantwortlich:** {{ meta-organisation-roles.role_ciso.name }} ({{ meta-organisation-roles.role_ciso.email }})
 
 ## Sicherheits-Grundlagen
 
@@ -179,7 +193,7 @@ Dieses Dokument beschreibt die Sicherheitsbetriebsprozesse und Hardening-Richtli
 
 #### VPN-Härtung
 
-**VPN-Typ:** {{ meta.vpn_type }}  
+**VPN-Typ:** {{ meta-handbook.vpn_type }}  
 **Verschlüsselung:** AES-256  
 **Authentifizierung:** Certificate-based + MFA
 
@@ -292,9 +306,9 @@ Referrer-Policy: no-referrer
 
 ### Security Information and Event Management (SIEM)
 
-**SIEM-System:** {{ meta.siem_system }}  
-**Version:** {{ meta.siem_version }}  
-**Management:** {{ meta.siem_url }}
+**SIEM-System:** {{ meta-handbook.siem_system }}  
+**Version:** [TODO]  
+**Management:** {{ meta-handbook.siem_url }}
 
 **Log-Quellen:**
 - Firewalls und IDS/IPS
@@ -340,7 +354,7 @@ Referrer-Policy: no-referrer
 
 ### Endpoint Detection and Response (EDR)
 
-**EDR-System:** {{ meta.edr_system }}  
+**EDR-System:** {{ meta-handbook.edr_system }}  
 **Abdeckung:** Alle Workstations und Server
 
 **Funktionen:**
@@ -372,9 +386,9 @@ Referrer-Policy: no-referrer
 ### Vulnerability-Scanning
 
 **Scanning-Tools:**
-- **Netzwerk-Scanner:** {{ meta.vulnerability_scanner }}
-- **Web-App-Scanner:** {{ meta.web_scanner }}
-- **Container-Scanner:** {{ meta.container_scanner }}
+- **Netzwerk-Scanner:** {{ meta-handbook.vulnerability_scanner }}
+- **Web-App-Scanner:** {{ meta-handbook.web_scanner }}
+- **Container-Scanner:** {{ meta-handbook.container_scanner }}
 
 **Scan-Frequenz:**
 - **Kritische Systeme:** Wöchentlich
@@ -458,7 +472,7 @@ Referrer-Policy: no-referrer
 - Mobile Apps
 - Social Engineering
 
-**Penetration-Test-Provider:** {{ meta.pentest_provider }}
+**Penetration-Test-Provider:** {{ meta-handbook.pentest_provider }}
 
 ## Security Incident Response
 
@@ -486,8 +500,8 @@ Referrer-Policy: no-referrer
 - Kontakt-Listen pflegen
 
 **IR-Team:**
-- **IR-Manager:** {{ meta.ciso.name }}
-- **Technical Lead:** {{ meta.it_operations_manager.name }}
+- **IR-Manager:** {{ meta-organisation-roles.role_ciso.name }}
+- **Technical Lead:** {{ meta-organisation-roles.role_it_operations_manager.name }}
 - **Forensic Analyst:** [Name]
 - **Communication Lead:** [Name]
 - **Legal Counsel:** [Name]
@@ -508,7 +522,7 @@ Referrer-Policy: no-referrer
 - Incident-Klassifizierung
 - Incident-Priorisierung
 
-**Incident-Ticket:** {{ meta.ticketing_system }}
+**Incident-Ticket:** {{ meta-handbook.ticketing_system }}
 
 #### 3. Containment
 
@@ -602,7 +616,7 @@ Referrer-Policy: no-referrer
 
 | Annex A Control | Titel | Status | Verantwortlich |
 |---|---|---|---|
-| **A.9** | Access Control | Implementiert | {{ meta.ciso.name }} |
+| **A.9** | Access Control | Implementiert | {{ meta-organisation-roles.role_ciso.name }} |
 | **A.10** | Cryptography | Implementiert | IT-Security |
 | **A.12** | Operations Security | Implementiert | IT-Operations |
 | **A.13** | Communications Security | Implementiert | Network-Team |
@@ -613,7 +627,7 @@ Referrer-Policy: no-referrer
 
 **Audit-Frequenz:** Jährlich (extern), Quartalsweise (intern)
 
-**Nächstes Audit:** {{ meta.next_iso_audit }}
+**Nächstes Audit:** {{ meta-handbook.next_iso_audit }}
 
 ### BSI Grundschutz
 
@@ -646,7 +660,7 @@ Referrer-Policy: no-referrer
 - Für Hochrisiko-Verarbeitungen durchgeführt
 - Dokumentiert und genehmigt
 
-**Datenschutzbeauftragter:** {{ meta.data_protection_officer }}
+**Datenschutzbeauftragter:** {{ meta-handbook.data_protection_officer }}
 
 ### Weitere Standards
 
@@ -703,7 +717,7 @@ Referrer-Policy: no-referrer
 - Incident-Response-Koordination
 - Security-Budget
 
-**Person:** {{ meta.ciso.name }}
+**Person:** {{ meta-organisation-roles.role_ciso.name }}
 
 ### Security-Operations-Team
 
@@ -723,7 +737,7 @@ Referrer-Policy: no-referrer
 - Security-Konfiguration
 - Backup-Sicherheit
 
-**Lead:** {{ meta.it_operations_manager.name }}
+**Lead:** {{ meta-organisation-roles.role_it_operations_manager.name }}
 
 ## Metriken und Reporting
 
@@ -771,18 +785,9 @@ Referrer-Policy: no-referrer
 - MITRE ATT&CK Framework
 - DSGVO (GDPR)
 
----
+**Dokumentverantwortlicher:** {{ meta-handbook.owner }}  
+**Genehmigt durch:** {{ meta-handbook.approver }}  
+**Version:** {{ meta-handbook.revision }}  
+**Klassifizierung:** {{ meta-handbook.classification }}  
+**Letzte Aktualisierung:** {{ meta-handbook.date }}
 
-**Dokumentverantwortlicher:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Version:** {{ meta.document.version }}  
-**Klassifizierung:** {{ meta.document.classification }}  
-**Letzte Aktualisierung:** {{ meta.date }}
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

@@ -1,11 +1,16 @@
 # IT Governance Structure
 
-**Document-ID:** idw-ps-951-0110  
-**Owner:** {{ meta.audit_lead }}  
-**Version:** {{ meta.version }}  
-**Status:** {{ meta.status }}  
-**Classification:** {{ meta.classification }}  
-**Last Update:** {{ meta.date }}
+**Document-ID:** idw-ps-951-0110
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -16,9 +21,9 @@ This document describes the audit of the IT governance structure as part of the 
 ## 2. Audit Subject
 
 ### IT Governance Framework
-- **Governance Model:** {{ source.governance_model }}
-- **Responsibilities:** {{ source.responsibilities }}
-- **Decision Processes:** {{ source.decision_processes }}
+- **Governance Model:** [TODO]
+- **Responsibilities:** [TODO]
+- **Decision Processes:** [TODO]
 
 ### Audit Objectives
 - Assessment of IT governance structure
@@ -46,28 +51,28 @@ This document describes the audit of the IT governance structure as part of the 
 ### Governance Structure
 | Criterion | Requirement | Current State | Assessment |
 |-----------|-------------|---------------|------------|
-| IT steering committee | Established | {{ source.steering_committee_status }} | {{ source.steering_assessment }} |
-| Meeting frequency | At least quarterly | {{ source.meeting_frequency }} | {{ source.frequency_assessment }} |
-| Decision documentation | Complete | {{ source.documentation_status }} | {{ source.documentation_assessment }} |
-| Responsibilities | Clearly defined | {{ source.responsibilities_status }} | {{ source.responsibilities_assessment }} |
+| IT steering committee | Established | [TODO] | [TODO] |
+| Meeting frequency | At least quarterly | [TODO] | [TODO] |
+| Decision documentation | Complete | [TODO] | [TODO] |
+| Responsibilities | Clearly defined | [TODO] | [TODO] |
 
 ## 5. Findings
 
 ### Positive Findings
-1. {{ source.positive_finding_1 }}
-2. {{ source.positive_finding_2 }}
+1. [TODO]
+2. [TODO]
 
 ### Improvement Opportunities
-1. {{ source.improvement_1 }}
-2. {{ source.improvement_2 }}
+1. [TODO]
+2. [TODO]
 
 ### Critical Findings
-1. {{ source.critical_finding_1 }}
+1. [TODO]
 
 ## 6. Recommendations
 
-1. {{ source.recommendation_1 }}
-2. {{ source.recommendation_2 }}
+1. [TODO]
+2. [TODO]
 
 ## 7. References
 
@@ -75,18 +80,9 @@ This document describes the audit of the IT governance structure as part of the 
 - COBIT 2019
 - ISO/IEC 38500
 
----
-
 **Approved by:**  
-{{ meta.audit_lead }}, Audit Lead  
-Date: {{ meta.approval_date }}
+{{ meta-organisation-roles.role_Internal_Auditor }}, Audit Lead  
+Date: {{ meta-handbook.valid_from }}
 
-**Next Review:** {{ meta.next_review }}
+**Next Review:** {{ meta-handbook.next_review }}
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |

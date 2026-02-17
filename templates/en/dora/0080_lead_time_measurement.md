@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0210
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Lead Time Measurement
+
+**Document-ID:** [FRAMEWORK]-0080
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -23,8 +34,8 @@ Detailed measurement methodology for Lead Time for Changes.
 
 ### Timestamp Capture
 
-- **Commit Time**: {{ source.commit_timestamp_source }}
-- **Deploy Time**: {{ source.deploy_timestamp_source }}
+- **Commit Time**: [TODO]
+- **Deploy Time**: [TODO]
 
 ### Calculation
 
@@ -48,17 +59,9 @@ Lead Time = Deploy Timestamp - Commit Timestamp
 
 ### Data Quality
 
-- **Completeness**: {{ source.lead_time_data_completeness }}
-- **Accuracy**: {{ source.lead_time_data_accuracy }}
+- **Completeness**: [TODO]
+- **Accuracy**: [TODO]
 
 <!-- Note: Median is more robust against outliers than average -->
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Initial creation |
 
 <!-- End of template -->

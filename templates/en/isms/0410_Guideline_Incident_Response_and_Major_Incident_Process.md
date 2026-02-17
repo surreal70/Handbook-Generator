@@ -1,14 +1,16 @@
 # Guideline: Incident Response and Major Incident Process
 
-**Document ID:** 0410  
-**Document Type:** Guideline (detailed)  
-**Related Policy:** 0400_Policy_Incident_Management.md  
-**Standard Reference:** ISO/IEC 27001:2022 Annex A.5.24, A.5.25, A.5.26  
-**Owner:** {{ meta.it_operations.manager }}  
-**Version:** 1.0  
-**Status:** Approved  
-**Classification:** Confidential  
-**Last Updated:** {{ meta.document.date }}
+**Document-ID:** [FRAMEWORK]-0410
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -19,7 +21,7 @@ This guideline implements the `0400_Policy_Incident_Management.md` and defines:
 - Major incident management
 - Security incident response and forensics
 
-**Scope:** All incidents at **{{ meta.organization.name }}**
+**Scope:** All incidents at **{{ meta-organisation.name }}**
 
 ## 2. Incident Categories
 
@@ -304,15 +306,6 @@ This guideline implements the `0400_Policy_Incident_Management.md` and defines:
 - **ISO/IEC 27001:2022 Annex A.5.26** - Response to information security incidents
 - **NIST SP 800-61** - Computer Security Incident Handling Guide
 
----
-
 **Approved by:** {{ meta.ciso.name }}, CISO  
-**Next Review:** {{ meta.document.next_review }}
+**Next Review:** {{ meta-handbook.next_review }}
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

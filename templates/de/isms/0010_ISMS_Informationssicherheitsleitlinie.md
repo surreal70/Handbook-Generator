@@ -1,5 +1,19 @@
 # ISMS-Leitlinie / Informationssicherheits-Policy
 
+**Dokument-ID:** 0010
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 <!-- 
 TEMPLATE AUTHOR NOTE:
 This is the top-level information security policy document. It establishes the 
@@ -10,21 +24,9 @@ specific security objectives and risk appetite.
 ISO 27001:2022 Reference: Clause 5.2 - Policy
 -->
 
-**Dokument-ID:** 0010  
-**Dokumenttyp:** Policy (abstrakt)  
-**Standard-Referenz:** ISO/IEC 27001:2022 Clause 5.2 (inkl. Amendment 1:2024)  
-**Owner:** {{ meta.ciso.name }}  
-**Version:** 1.0  
-**Status:** Freigegeben  
-**Klassifizierung:** Intern  
-**Letzte Aktualisierung:** {{ meta.document.date }}  
-**Nächster Review:** {{ meta.document.next_review }}
-
----
-
 ## 1. Zweck
 
-Diese Informationssicherheitsleitlinie definiert die strategischen Grundsätze und Verpflichtungen der **{{ meta.organization.name }}** zum Schutz von Informationswerten. Sie bildet die Grundlage für das Information Security Management System (ISMS) nach ISO/IEC 27001:2022 und stellt sicher, dass Informationssicherheit als integraler Bestandteil aller Geschäftsprozesse verstanden und umgesetzt wird.
+Diese Informationssicherheitsleitlinie definiert die strategischen Grundsätze und Verpflichtungen der **{{ meta-organisation.name }}** zum Schutz von Informationswerten. Sie bildet die Grundlage für das Information Security Management System (ISMS) nach ISO/IEC 27001:2022 und stellt sicher, dass Informationssicherheit als integraler Bestandteil aller Geschäftsprozesse verstanden und umgesetzt wird.
 
 <!-- 
 Customize the purpose statement to reflect your organization's specific 
@@ -35,7 +37,7 @@ security mission and strategic objectives.
 
 Diese Policy gilt für:
 
-- **Organisationseinheiten:** Alle Abteilungen und Standorte der {{ meta.organization.name }}
+- **Organisationseinheiten:** Alle Abteilungen und Standorte der {{ meta-organisation.name }}
 - **Systeme und Informationen:** Alle IT-Systeme, Anwendungen, Daten und Informationsverarbeitungsprozesse
 - **Personen:** Alle Mitarbeiter, Auftragnehmer, Lieferanten und Dritte mit Zugang zu Informationswerten
 - **Standorte:** {{ netbox.site.name }} und alle weiteren Betriebsstandorte
@@ -46,7 +48,7 @@ Diese Policy gilt für:
 
 ## 3. Grundsätze (Policy Statements)
 
-Die {{ meta.organization.name }} verpflichtet sich zu folgenden Grundsätzen der Informationssicherheit:
+Die {{ meta-organisation.name }} verpflichtet sich zu folgenden Grundsätzen der Informationssicherheit:
 
 ### 3.1 Vertraulichkeit (Confidentiality)
 Informationen werden nur autorisierten Personen, Systemen und Prozessen zugänglich gemacht. Der Zugriff erfolgt nach dem Need-to-Know-Prinzip und wird durch geeignete Zugangskontrollen geschützt.
@@ -183,18 +185,9 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig u
 - **DSGVO (EU 2016/679)** - Datenschutz-Grundverordnung
 - **BSI IT-Grundschutz** - Bundesamt für Sicherheit in der Informationstechnik
 
----
-
 **Genehmigt durch:**  
 {{ meta.management.ceo }}, Geschäftsführung  
-Datum: {{ meta.document.approval_date }}
+Datum: {{ meta-handbook.modifydate }}
 
-**Nächster Review:** {{ meta.document.next_review }} (jährlich oder anlassbezogen)
+**Nächster Review:** {{ meta-handbook.next_review }} (jährlich oder anlassbezogen)
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

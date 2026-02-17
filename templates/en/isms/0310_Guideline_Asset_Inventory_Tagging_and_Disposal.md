@@ -1,14 +1,16 @@
 # Guideline: Asset Inventory, Tagging and Disposal
 
-**Document ID:** 0310  
-**Document Type:** Guideline (detailed)  
-**Related Policy:** 0300_Policy_Asset_Management.md  
-**Standard Reference:** ISO/IEC 27001:2022 Annex A.5.9, A.5.10  
-**Owner:** {{ meta.it_operations.manager }}  
-**Version:** 1.0  
-**Status:** Approved  
-**Classification:** Internal  
-**Last Updated:** {{ meta.document.date }}
+**Document-ID:** [FRAMEWORK]-0310
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -19,7 +21,7 @@ This guideline implements the `0300_Policy_Asset_Management.md` and defines:
 - Asset tagging and labeling
 - Lifecycle management and disposal
 
-**Scope:** All IT assets at **{{ meta.organization.name }}**
+**Scope:** All IT assets at **{{ meta-organisation.name }}**
 
 ## 2. Asset Categories
 
@@ -302,15 +304,6 @@ Example: `LAP-2024-001234` (Laptop, year, sequential number)
 - **DIN 66399** - Destruction of data carriers
 - **WEEE Directive** - Electrical and electronic equipment disposal
 
----
-
 **Approved by:** {{ meta.ciso.name }}, CISO  
-**Next Review:** {{ meta.document.next_review }}
+**Next Review:** {{ meta-handbook.next_review }}
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

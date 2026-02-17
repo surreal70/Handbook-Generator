@@ -72,19 +72,19 @@ Templates are organized by component and use a numeric prefix system:
 
 ### Customization
 
-1. **Replace Placeholders**: Replace all `{{ source.* }}` placeholders with organization-specific information
+1. **Replace Placeholders**: Replace all `[TODO]` placeholders with organization-specific information
 2. **Expand Content**: Add additional details relevant to your organization
 3. **Adapt Sections**: Customize sections to your specific requirements
 4. **Add Diagrams**: Add diagrams in the `diagrams/` directory
 
 ### Placeholder Syntax
 
-Templates use the syntax `{{ source.field }}` for placeholders:
+Templates use the syntax `[TODO]` for placeholders:
 
-- `{{ source.organization_name }}` - Organization name
-- `{{ source.author }}` - Document author
-- `{{ meta.version }}` - Version number
-- `{{ meta.date }}` - Date
+- `[TODO]` - Organization name
+- `[TODO]` - Document author
+- `{{ meta-handbook.revision }}` - Version number
+- `{{ meta-handbook.modifydate }}` - Date
 - Additional organization-specific fields as needed
 
 ### Document Header
@@ -94,11 +94,11 @@ Each template contains a YAML header with metadata:
 ```yaml
 ---
 Document-ID: coso-NNNN
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.author }}
+Version: {{ meta-handbook.revision }}
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
+Last Update: {{ meta-handbook.modifydate }}
 ---
 ```
 

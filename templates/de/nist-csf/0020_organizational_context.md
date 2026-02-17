@@ -1,13 +1,25 @@
----
+
 Document-ID: nist-csf-0020
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Organisatorischer Kontext (GV.OC)
+
+**Dokument-ID:** [FRAMEWORK]-0020
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -15,12 +27,12 @@ Dieses Dokument definiert den organisatorischen Kontext für das Cybersecurity-R
 
 ## Geltungsbereich
 
-{{ meta.scope }}
+{{ meta-handbook.scope }}
 
 ## Organisationsmission und -ziele
 
 ### Unternehmensmission
-{{ meta.organization_mission }}
+{{ meta-handbook.organization_mission }}
 
 ### Geschäftsziele
 1. {{ meta.business_goal_1 }}
@@ -60,7 +72,7 @@ Dieses Dokument definiert den organisatorischen Kontext für das Cybersecurity-R
 1. **Datenschutz**
    - DSGVO (EU-Datenschutz-Grundverordnung)
    - BDSG (Bundesdatenschutzgesetz)
-   - {{ meta.additional_privacy_laws }}
+   - {{ meta-handbook.additional_privacy_laws }}
 
 2. **Branchenspezifische Vorschriften**
    - {{ meta.industry_regulation_1 }}
@@ -84,7 +96,7 @@ Dieses Dokument definiert den organisatorischen Kontext für das Cybersecurity-R
 ## Risikotoleranz und -appetit
 
 ### Risikoappetit-Erklärung
-{{ meta.organization }} ist bereit, {{ meta.risk_appetite_level }} Cybersecurity-Risiken einzugehen, um Geschäftsziele zu erreichen, unter der Bedingung, dass:
+{{ meta-organisation.name }} ist bereit, {{ meta-handbook.risk_appetite_level }} Cybersecurity-Risiken einzugehen, um Geschäftsziele zu erreichen, unter der Bedingung, dass:
 - Kritische Systeme angemessen geschützt sind
 - Regulatorische Anforderungen erfüllt werden
 - Reputationsrisiken minimiert werden
@@ -105,7 +117,7 @@ Vorstand
     ↓
 Geschäftsführung
     ↓
-CISO ({{ meta.ciso }})
+CISO ({{ meta-organisation-roles.role_CISO }})
     ↓
 ├── Security Operations
 ├── Risk Management
@@ -119,17 +131,3 @@ CISO ({{ meta.ciso }})
 - 0040_roles_responsibilities.md
 - 0050_policy_framework.md
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |
-
-<!-- 
-Autor-Hinweise:
-- Aktualisieren Sie die Stakeholder-Liste regelmäßig
-- Überprüfen Sie rechtliche Anforderungen mindestens jährlich
-- Passen Sie Risikotoleranz an Geschäftsänderungen an
--->

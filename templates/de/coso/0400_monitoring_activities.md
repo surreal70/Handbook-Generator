@@ -1,17 +1,28 @@
----
+
 Document-ID: coso-0400
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Überwachungsaktivitäten - Übersicht
 
+**Dokument-ID:** [FRAMEWORK]-0400
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument bietet eine Übersicht über die Überwachungsaktivitäten bei {{ source.organization_name }} gemäß COSO Komponente 5.
+Dieses Dokument bietet eine Übersicht über die Überwachungsaktivitäten bei [TODO] gemäß COSO Komponente 5.
 
 ## Geltungsbereich
 
@@ -23,7 +34,7 @@ Dieses Dokument bietet eine Übersicht über die Überwachungsaktivitäten bei {
 
 ### COSO Komponente 5
 
-{{ source.monitoring_overview }}
+[TODO]
 
 ### Bedeutung der Überwachung
 
@@ -37,7 +48,7 @@ Dieses Dokument bietet eine Übersicht über die Überwachungsaktivitäten bei {
 
 ### Laufende Evaluierungen
 
-**Definition**: {{ source.ongoing_evaluations_definition }}
+**Definition**: [TODO]
 
 **Merkmale**:
 - In Geschäftsprozesse integriert
@@ -45,11 +56,11 @@ Dieses Dokument bietet eine Übersicht über die Überwachungsaktivitäten bei {
 - Echtzeitinformationen
 - Automatisierte Kontrollen
 
-**Methoden**: {{ source.ongoing_evaluation_methods }}
+**Methoden**: [TODO]
 
 ### Separate Evaluierungen
 
-**Definition**: {{ source.separate_evaluations_definition }}
+**Definition**: [TODO]
 
 **Merkmale**:
 - Periodische Durchführung
@@ -57,164 +68,164 @@ Dieses Dokument bietet eine Übersicht über die Überwachungsaktivitäten bei {
 - Umfassende Prüfung
 - Objektive Beurteilung
 
-**Methoden**: {{ source.separate_evaluation_methods }}
+**Methoden**: [TODO]
 
 ### Kombination von Evaluierungen
 
-{{ source.evaluation_combination }}
+[TODO]
 
 ## Prinzip 17: Bewertung und Kommunikation von Mängeln
 
 ### Mängelidentifikation
 
-**Identifikationsmethoden**: {{ source.deficiency_identification_methods }}
-**Datenquellen**: {{ source.deficiency_data_sources }}
+**Identifikationsmethoden**: [TODO]
+**Datenquellen**: [TODO]
 
 ### Mängelbewertung
 
-**Bewertungskriterien**: {{ source.deficiency_assessment_criteria }}
-**Schweregradklassifizierung**: {{ source.severity_classification }}
+**Bewertungskriterien**: [TODO]
+**Schweregradklassifizierung**: [TODO]
 
 ### Mängelkommunikation
 
-**Berichterstattung**: {{ source.deficiency_reporting }}
-**Eskalation**: {{ source.deficiency_escalation }}
+**Berichterstattung**: [TODO]
+**Eskalation**: [TODO]
 
 ### Mängelbehebung
 
-**Abhilfemaßnahmen**: {{ source.remediation_actions }}
-**Verfolgung**: {{ source.remediation_tracking }}
+**Abhilfemaßnahmen**: [TODO]
+**Verfolgung**: [TODO]
 
 ## Überwachungsrahmen
 
 ### Überwachungsstrategie
 
-{{ source.monitoring_strategy }}
+[TODO]
 
 ### Überwachungsplan
 
-**Jährlicher Plan**: {{ source.annual_monitoring_plan }}
-**Risikobasierte Priorisierung**: {{ source.risk_based_prioritization }}
-**Ressourcenallokation**: {{ source.resource_allocation }}
+**Jährlicher Plan**: [TODO]
+**Risikobasierte Priorisierung**: [TODO]
+**Ressourcenallokation**: [TODO]
 
 ### Überwachungsumfang
 
-**Abgedeckte Bereiche**: {{ source.monitoring_scope }}
-**Ausschlüsse**: {{ source.monitoring_exclusions }}
+**Abgedeckte Bereiche**: [TODO]
+**Ausschlüsse**: [TODO]
 
 ## Überwachungsmethoden
 
 ### Management-Überwachung
 
-**Operative Überwachung**: {{ source.operational_monitoring }}
-**Finanzüberwachung**: {{ source.financial_monitoring }}
-**Compliance-Überwachung**: {{ source.compliance_monitoring }}
+**Operative Überwachung**: [TODO]
+**Finanzüberwachung**: [TODO]
+**Compliance-Überwachung**: [TODO]
 
 ### Automatisierte Überwachung
 
-**Systemkontrollen**: {{ source.automated_system_controls }}
-**Datenanalyse**: {{ source.data_analytics }}
-**Kontinuierliche Überwachung**: {{ source.continuous_monitoring }}
+**Systemkontrollen**: [TODO]
+**Datenanalyse**: [TODO]
+**Kontinuierliche Überwachung**: [TODO]
 
 ### Manuelle Überwachung
 
-**Kontrollselbstbewertungen**: {{ source.control_self_assessments }}
-**Managementreviews**: {{ source.management_reviews }}
-**Stichprobenprüfungen**: {{ source.sample_testing }}
+**Kontrollselbstbewertungen**: [TODO]
+**Managementreviews**: [TODO]
+**Stichprobenprüfungen**: [TODO]
 
 ## Überwachungsakteure
 
 ### Erste Verteidigungslinie
 
-**Operative Führungskräfte**: {{ source.operational_management_role }}
-**Prozesseigentümer**: {{ source.process_owner_role }}
+**Operative Führungskräfte**: [TODO]
+**Prozesseigentümer**: [TODO]
 
 ### Zweite Verteidigungslinie
 
-**Risikomanagement**: {{ source.risk_management_role }}
-**Compliance-Funktion**: {{ source.compliance_function_role }}
-**Controlling**: {{ source.controlling_role }}
+**Risikomanagement**: [TODO]
+**Compliance-Funktion**: [TODO]
+**Controlling**: [TODO]
 
 ### Dritte Verteidigungslinie
 
-**Interne Revision**: {{ source.internal_audit_role }}
+**Interne Revision**: [TODO]
 
 ### Externe Prüfer
 
-**Externe Wirtschaftsprüfer**: {{ source.external_auditor_role }}
-**Regulatorische Prüfer**: {{ source.regulatory_auditor_role }}
+**Externe Wirtschaftsprüfer**: [TODO]
+**Regulatorische Prüfer**: [TODO]
 
 ## Überwachungsinstrumente
 
 ### Key Control Indicators (KCI)
 
-{{ source.key_control_indicators }}
+[TODO]
 
 ### Key Risk Indicators (KRI)
 
-{{ source.key_risk_indicators }}
+[TODO]
 
 ### Key Performance Indicators (KPI)
 
-{{ source.key_performance_indicators }}
+[TODO]
 
 ## Berichterstattung
 
 ### Überwachungsberichte
 
-**Operative Berichte**: {{ source.operational_monitoring_reports }}
-**Management-Berichte**: {{ source.management_monitoring_reports }}
-**Board-Berichte**: {{ source.board_monitoring_reports }}
+**Operative Berichte**: [TODO]
+**Management-Berichte**: [TODO]
+**Board-Berichte**: [TODO]
 
 ### Berichtsfrequenz
 
-{{ source.reporting_frequency }}
+[TODO]
 
 ### Berichtsinhalte
 
-{{ source.report_contents }}
+[TODO]
 
 ## Kontinuierliche Verbesserung
 
 ### Verbesserungsprozess
 
-{{ source.improvement_process }}
+[TODO]
 
 ### Lessons Learned
 
-{{ source.lessons_learned }}
+[TODO]
 
 ### Best Practices
 
-{{ source.best_practices }}
+[TODO]
 
 ## Integration mit anderen Komponenten
 
 ### Kontrollumgebung
 
-{{ source.control_environment_integration }}
+[TODO]
 
 ### Risikobewertung
 
-{{ source.risk_assessment_integration }}
+[TODO]
 
 ### Kontrollaktivitäten
 
-{{ source.control_activities_integration }}
+[TODO]
 
 ### Information und Kommunikation
 
-{{ source.information_communication_integration }}
+[TODO]
 
 ## Rollen und Verantwortlichkeiten
 
-**Vorstand**: {{ source.board_monitoring_responsibilities }}
-**Geschäftsführung**: {{ source.management_monitoring_responsibilities }}
-**Prüfungsausschuss**: {{ source.audit_committee_responsibilities }}
-**Interne Revision**: {{ source.internal_audit_responsibilities }}
-**Risikomanagement**: {{ source.risk_management_responsibilities }}
-**Compliance**: {{ source.compliance_responsibilities }}
-**Operative Führungskräfte**: {{ source.operational_management_responsibilities }}
+**Vorstand**: [TODO]
+**Geschäftsführung**: [TODO]
+**Prüfungsausschuss**: [TODO]
+**Interne Revision**: [TODO]
+**Risikomanagement**: [TODO]
+**Compliance**: [TODO]
+**Operative Führungskräfte**: [TODO]
 
 ## Referenzen
 
@@ -224,12 +235,3 @@ Dieses Dokument bietet eine Übersicht über die Überwachungsaktivitäten bei {
 - Kontrollselbstbewertungs-Leitfaden
 - Three Lines of Defense Model
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

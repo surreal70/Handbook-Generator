@@ -1,9 +1,16 @@
 # Appendix A: Annex A Control Mapping
 
-**Document Type:** Appendix  
-**Version:** {{ meta.document.version }}  
-**Date:** {{ meta.document.date }}  
-**Classification:** {{ meta.document.classification }}
+**Document-ID:** [FRAMEWORK]-0710
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -15,11 +22,9 @@ The mapping considers the changes from Amendment 1:2024 and ensures that all 93 
 
 ## Scope
 
-**Organization:** {{ meta.organization.name }}  
+**Organization:** {{ meta-organisation.name }}  
 **ISMS Scope:** {{ meta.isms.scope }}  
 **Responsible:** {{ meta.ciso.name }} ({{ meta.ciso.email }})
-
----
 
 ## ISO/IEC 27001:2022 Annex A Structure
 
@@ -31,8 +36,6 @@ The Annex A controls are organized into four main categories:
 - **Technological Controls (8.1-8.34):** 34 controls
 
 **Total:** 93 controls
-
----
 
 ## Annex A Control Mapping
 
@@ -51,10 +54,3 @@ The Annex A controls are organized into four main categories:
 **Responsible:** {{ meta.ciso.name }}  
 **Evidence:** Approved and published policies, training records
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |

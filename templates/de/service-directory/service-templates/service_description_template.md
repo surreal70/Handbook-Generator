@@ -9,7 +9,7 @@
 - **Service-ID:** [TODO: Eindeutige Service-ID]
 - **Service-Owner:** {{ meta.it_operations_manager.name }}
 - **Technischer Ansprechpartner:** [TODO: Name und Kontakt]
-- **Version:** {{ meta.document.version }}
+- **Version:** [TODO]
 - **Letzte Aktualisierung:** [TODO: Datum]
 
 ### Kurzbeschreibung
@@ -188,17 +188,8 @@
 | 1.0.0 | [TODO] | [TODO] | Initiale Version |
 | [TODO] | [TODO] | [TODO] | [TODO] |
 
----
+**Dokumentverantwortlicher:** [TODO]  
+**Genehmigt durch:** [TODO]  
+**Organisation:** [TODO]  
+**Klassifizierung:** [TODO]
 
-**Dokumentverantwortlicher:** {{ meta.document.owner }}  
-**Genehmigt durch:** {{ meta.document.approver }}  
-**Organisation:** {{ meta.organization.name }}  
-**Klassifizierung:** {{ meta.document.classification }}
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initiale Erstellung |

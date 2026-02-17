@@ -1,13 +1,25 @@
----
+
 Document-ID: nist-csf-0310
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Sicherheitsüberwachung (DE.CM)
+
+**Dokument-ID:** [FRAMEWORK]-0310
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -15,7 +27,7 @@ This document describes continuous security monitoring processes.
 
 ## Geltungsbereich
 
-{{ meta.scope }}
+{{ meta-handbook.scope }}
 
 ## Monitoring Activities
 
@@ -26,21 +38,12 @@ This document describes continuous security monitoring processes.
 - User activity monitoring
 
 ### Monitoring Tools
-- SIEM: {{ meta.siem_tool }}
-- IDS/IPS: {{ meta.ids_tool }}
-- Log management: {{ meta.log_tool }}
+- SIEM: {{ meta-handbook.siem_tool }}
+- IDS/IPS: {{ meta-handbook.ids_tool }}
+- Log management: {{ meta-handbook.log_tool }}
 
 ## Dokumentenverweise
 
 - 0300_anomalies_events.md
 - 0400_response_planning.md (Respond)
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initiale Erstellung |
-
-<!-- Author Notes: Monitor 24/7 for critical systems -->

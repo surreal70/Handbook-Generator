@@ -1,17 +1,28 @@
----
+
 Document-ID: coso-0400
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Überwachungsaktivitäten
 
+**Dokument-ID:** [FRAMEWORK]-0170
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
+
 ## Zweck
 
-Dieses Dokument beschreibt die Überwachungsaktivitäten bei {{ source.organization_name }} gemäß COSO Framework.
+Dieses Dokument beschreibt die Überwachungsaktivitäten bei [TODO] gemäß COSO Framework.
 
 ## Geltungsbereich
 
@@ -22,101 +33,92 @@ Dieses Dokument beschreibt die Überwachungsaktivitäten bei {{ source.organizat
 
 ### Laufende Überwachung
 
-**Management-Überwachung**: {{ source.management_monitoring }}
-**Operative Überwachung**: {{ source.operational_monitoring }}
-**Automatisierte Kontrollen**: {{ source.automated_monitoring }}
+**Management-Überwachung**: [TODO]
+**Operative Überwachung**: [TODO]
+**Automatisierte Kontrollen**: [TODO]
 
 ### Separate Bewertungen
 
-**Interne Revision**: {{ source.internal_audit }}
-**Externe Prüfung**: {{ source.external_audit }}
-**Selbstbewertungen**: {{ source.self_assessments }}
+**Interne Revision**: [TODO]
+**Externe Prüfung**: [TODO]
+**Selbstbewertungen**: [TODO]
 
 ### Überwachungsplan
 
-{{ source.monitoring_plan }}
+[TODO]
 
 ## Prinzip 17: Bewertung und Kommunikation von Mängeln
 
 ### Mängelidentifikation
 
-{{ source.deficiency_identification }}
+[TODO]
 
 ### Mängelbewertung
 
 **Schweregrad-Klassifizierung**:
-- Kritisch: {{ source.critical_deficiency }}
-- Wesentlich: {{ source.significant_deficiency }}
-- Geringfügig: {{ source.minor_deficiency }}
+- Kritisch: [TODO]
+- Wesentlich: [TODO]
+- Geringfügig: [TODO]
 
 ### Eskalationsprozess
 
-{{ source.escalation_process }}
+[TODO]
 
 ### Berichterstattung
 
-**An Management**: {{ source.management_reporting }}
-**An Board**: {{ source.board_reporting }}
-**An Aufsichtsbehörden**: {{ source.regulatory_reporting }}
+**An Management**: [TODO]
+**An Board**: [TODO]
+**An Aufsichtsbehörden**: [TODO]
 
 ## Überwachungsmethoden
 
 ### Key Control Indicators (KCI)
 
-{{ source.key_control_indicators }}
+[TODO]
 
 ### Kontrolltest
 
-{{ source.control_testing }}
+[TODO]
 
 ### Trendanalyse
 
-{{ source.trend_analysis }}
+[TODO]
 
 ## Abhilfemaßnahmen
 
 ### Maßnahmenplan
 
-{{ source.remediation_plan }}
+[TODO]
 
 ### Verfolgung
 
-{{ source.remediation_tracking }}
+[TODO]
 
 ### Wirksamkeitsprüfung
 
-{{ source.effectiveness_testing }}
+[TODO]
 
 ## Kontinuierliche Verbesserung
 
 ### Verbesserungsprozess
 
-{{ source.improvement_process }}
+[TODO]
 
 ### Lessons Learned
 
-{{ source.lessons_learned_process }}
+[TODO]
 
 ## Verantwortlichkeiten
 
-**Erste Verteidigungslinie**: {{ source.first_line_responsibilities }}
-**Zweite Verteidigungslinie**: {{ source.second_line_responsibilities }}
-**Dritte Verteidigungslinie**: {{ source.third_line_responsibilities }}
+**Erste Verteidigungslinie**: [TODO]
+**Zweite Verteidigungslinie**: [TODO]
+**Dritte Verteidigungslinie**: [TODO]
 
 ## Referenzen
 
-- Überwachungsrichtlinie {{ source.organization_name }}
+- Überwachungsrichtlinie [TODO]
 - Interne Revisionsplan
 - Mängelmanagement-Prozess
 
 <!-- Hinweise für Autoren: Überwachung ist ein kontinuierlicher Prozess -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

@@ -1,13 +1,25 @@
----
+
 Document-ID: iso-38500-0210
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
+Owner: {{ meta-handbook.owner }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Board of Directors IT Governance Responsibilities
+
+**Document-ID:** [FRAMEWORK]-0210
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Purpose
 
@@ -16,7 +28,7 @@ This document defines the specific responsibilities of the Board of Directors in
 ## Scope
 
 This document applies to:
-- {{ meta.organization }}
+- {{ meta-organisation.name }}
 - Board of Directors
 - Board committees with IT oversight
 
@@ -93,7 +105,7 @@ This document applies to:
 
 **Strategic Decisions:**
 - IT strategy and roadmap
-- Major technology investments (>{{ meta.investment_threshold }})
+- Major technology investments (>{{ meta-handbook.investment_threshold }})
 - IT organizational changes
 - Significant vendor contracts
 
@@ -167,10 +179,3 @@ This document applies to:
 - 0220_executive_responsibilities.md
 - 0240_stakeholder_engagement.md
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | {{ meta.date }} | {{ meta.author }} | Initial creation |

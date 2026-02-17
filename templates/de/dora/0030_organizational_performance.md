@@ -1,13 +1,24 @@
----
+
 Document-ID: dora-0030
-Owner: {{ meta.author }}
-Version: {{ meta.version }}
+
 Status: Draft
 Classification: Internal
-Last Update: {{ meta.date }}
----
 
 # Organisatorische Performance
+
+**Dokument-ID:** [FRAMEWORK]-0030
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Genehmigt durch:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Klassifizierung:** {{ meta-handbook.classification }}
+**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+
+---
+
+---
 
 ## Zweck
 
@@ -32,9 +43,9 @@ Forschung zeigt starke Korrelation zwischen DORA Metrics und:
 
 ### Organisationsmetriken
 
-- **Organisation**: {{ source.organization_name }}
-- **Geschäftsziele**: {{ source.business_goals }}
-- **Performance-Indikatoren**: {{ source.performance_indicators }}
+- **Organisation**: [TODO]
+- **Geschäftsziele**: [TODO]
+- **Performance-Indikatoren**: [TODO]
 
 ## Erfolgsfaktoren
 
@@ -63,7 +74,7 @@ Forschung zeigt starke Korrelation zwischen DORA Metrics und:
 
 ### Westrum-Organisationskultur
 
-**Aktuelle Kultur**: {{ source.organizational_culture_type }}
+**Aktuelle Kultur**: [TODO]
 
 - **Pathologisch**: Macht-orientiert, Angst und Bedrohung
 - **Bürokratisch**: Regel-orientiert, Abteilungsdenken
@@ -72,17 +83,17 @@ Forschung zeigt starke Korrelation zwischen DORA Metrics und:
 ### Kulturelle Transformation
 
 Schritte zur Entwicklung einer generativen Kultur:
-1. {{ source.culture_step_1 }}
-2. {{ source.culture_step_2 }}
-3. {{ source.culture_step_3 }}
+1. [TODO]
+2. [TODO]
+3. [TODO]
 
 ## Mitarbeiter-Engagement
 
 ### Zufriedenheit
 
-- **Mitarbeiterzufriedenheit**: {{ source.employee_satisfaction }}
-- **Engagement-Level**: {{ source.engagement_level }}
-- **Retention-Rate**: {{ source.retention_rate }}
+- **Mitarbeiterzufriedenheit**: [TODO]
+- **Engagement-Level**: [TODO]
+- **Retention-Rate**: [TODO]
 
 ### Entwicklung
 
@@ -103,18 +114,9 @@ Führungspraktiken, die Performance fördern:
 
 ### Leadership-Commitment
 
-- **Sponsor**: {{ source.leadership_sponsor }}
-- **Commitment-Level**: {{ source.leadership_commitment }}
-- **Ressourcen**: {{ source.allocated_resources }}
+- **Sponsor**: [TODO]
+- **Commitment-Level**: [TODO]
+- **Ressourcen**: [TODO]
 
 <!-- Hinweis: Kulturwandel erfordert langfristiges Commitment -->
 
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta.date }} | {{ meta.author }} | Erste Erstellung |
-
-<!-- Ende des Templates -->

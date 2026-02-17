@@ -1,11 +1,16 @@
 # Security Requirements
 
-**Document-ID:** 0400  
-**Owner:** {{ meta.owner }}  
-**Version:** {{ meta.version }}  
-**Status:** Draft / In Review / Approved  
-**Classification:** Internal / Confidential / Strictly Confidential  
-**Last Update:** {{ meta.date }}  
+**Document-ID:** 0400
+**Organisation:** {{ meta-organisation.name }}
+**Owner:** {{ meta-handbook.owner }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** {{ meta-handbook.revision }}
+**Author:** {{ meta-handbook.author }}
+**Status:** {{ meta-handbook.status }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+
+---
 
 ---
 
@@ -259,8 +264,6 @@ A complete overview of all SFRs with dependencies can be found in document 0430.
 
 A complete overview of all SARs according to the selected EAL can be found in document 0410.
 
----
-
 **Next Steps:**
 1. Complete all [TODO] placeholders
 2. Specify all assignments and selections in the SFRs
@@ -268,10 +271,3 @@ A complete overview of all SARs according to the selected EAL can be found in do
 4. Ensure all SFRs are derived from security objectives
 5. Document the rationale in document 0420
 
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta.document.last_updated }} | {{ meta.defaults.author }} | Initial Creation |
