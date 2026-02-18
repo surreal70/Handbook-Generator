@@ -2,7 +2,7 @@
 Meta-NetBox Data Source Adapter for Handbook Generator
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright: 2025
+Copyright: 2025, 2026
 """
 
 from typing import Optional

@@ -8,7 +8,7 @@ controls which language's templates are used.
 Feature: cis-controls-integration
 Task: 11.2 Write unit tests for language selection
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright (c) 2026
+Copyright (c) 2025, 2026
 """
 
 import sys

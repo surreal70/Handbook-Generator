@@ -5,9 +5,9 @@ A Python application for generating professional handbooks from Markdown templat
 with placeholder replacement from external data sources like NetBox.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright: 2025
+Copyright: 2025, 2026
 """
 
-__version__ = "0.0.16"
+__version__ = "0.0.17"
 __author__ = "Andreas Huemmer"
 __email__ = "andreas.huemmer@adminsend.de"

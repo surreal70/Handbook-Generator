@@ -5,7 +5,7 @@ This module validates that all template files contain version history metadata
 and reports any templates with missing or invalid version history sections.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright: 2025
+Copyright: 2025, 2026
 """
 
 import re

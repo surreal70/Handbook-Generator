@@ -10,7 +10,7 @@ Tests the 6 new roles added for BCM, ISMS, and BSI Grundschutz templates:
 - it_manager (IT Manager)
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright: 2025
+Copyright: 2025, 2026
 """
 
 import pytest

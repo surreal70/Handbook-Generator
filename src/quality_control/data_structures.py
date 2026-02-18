@@ -5,7 +5,7 @@ This module defines all data classes used throughout the quality control system
 for representing frameworks, validation results, test results, and quality metrics.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright: 2025
+Copyright: 2025, 2026
 """
 
 from dataclasses import dataclass, field

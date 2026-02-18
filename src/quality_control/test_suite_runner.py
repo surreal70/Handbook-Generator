@@ -5,7 +5,7 @@ This module executes pytest test suites, parses output, analyzes failures,
 and generates tasks for fixing failed tests.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright: 2025
+Copyright: 2025, 2026
 """
 
 import subprocess

@@ -4,7 +4,7 @@ Tests for Compliance Framework Templates Placeholder Extension
 Tests placeholder recognition and preservation for new compliance frameworks.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright: 2026
+Copyright: 2025, 2026
 """
 
 import pytest

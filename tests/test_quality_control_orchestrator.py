@@ -5,7 +5,7 @@ This module contains unit tests and property-based tests for the
 QualityControlOrchestrator class.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright: 2025
+Copyright: 2025, 2026
 """
 
 import pytest

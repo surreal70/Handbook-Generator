@@ -31,7 +31,7 @@ Usage:
     python helpers/validate_frameworks.py --verbose
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright (c) 2026
+Copyright (c) 2025, 2026
 """
 
 import argparse

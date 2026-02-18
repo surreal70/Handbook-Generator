@@ -4,7 +4,7 @@ Error Handler for Handbook Generator
 Provides structured error messages with context and resolution suggestions.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright: 2025
+Copyright: 2025, 2026
 """
 
 from dataclasses import dataclass

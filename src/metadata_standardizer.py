@@ -5,7 +5,7 @@ Manages metadata standardization across all compliance framework templates.
 Provides functionality to scan, validate, create, and enhance metadata files.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright: 2025
+Copyright: 2025, 2026
 """
 
 from dataclasses import dataclass, field

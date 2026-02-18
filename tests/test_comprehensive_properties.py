@@ -5,7 +5,7 @@ This module contains property tests for universal correctness properties
 that should hold across all template types and configurations.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright (c) 2026
+Copyright (c) 2025, 2026
 """
 
 import os

@@ -4,7 +4,7 @@ Tests for HIPAA Safeguard Coverage
 Property-based tests to verify that HIPAA template set covers all required safeguards.
 
 Author: Kiro AI Assistant
-Copyright (c) 2026
+Copyright (c) 2025, 2026
 """
 
 import pytest

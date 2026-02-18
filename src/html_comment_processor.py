@@ -4,7 +4,7 @@ HTML Comment Processor for Handbook Generator
 Processes templates to remove HTML-style comments before placeholder processing.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright: 2025
+Copyright: 2025, 2026
 """
 
 import re

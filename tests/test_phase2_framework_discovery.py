@@ -11,7 +11,7 @@ Verifies that Template_Manager discovers all seven new Phase 2 frameworks:
 - DORA
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright (c) 2026
+Copyright (c) 2025, 2026
 """
 
 import pytest

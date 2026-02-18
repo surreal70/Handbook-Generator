@@ -2,7 +2,7 @@
 Tests for HTML Comment Processor
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright: 2025
+Copyright: 2025, 2026
 """
 
 import pytest

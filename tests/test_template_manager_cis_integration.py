@@ -7,7 +7,7 @@ with CIS Controls, validating discovery, sorting, validation, and availability.
 Feature: cis-controls-integration
 Task: 6. Test template manager integration
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright (c) 2026
+Copyright (c) 2025, 2026
 """
 
 import tempfile

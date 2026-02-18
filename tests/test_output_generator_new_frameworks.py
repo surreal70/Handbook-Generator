@@ -4,7 +4,7 @@ Unit tests for Output Generator with new compliance frameworks.
 Tests HTML, PDF, and Markdown output generation for IDW PS 951, NIST CSF 2.0, and TOGAF.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright: 2025
+Copyright: 2025, 2026
 """
 
 import pytest

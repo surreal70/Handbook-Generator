@@ -5,7 +5,7 @@ This module provides interactive functionality for presenting failed test detail
 to users and allowing them to make decisions about how to handle each failure.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright: 2025
+Copyright: 2025, 2026
 """
 
 import logging

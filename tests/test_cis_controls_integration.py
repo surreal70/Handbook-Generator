@@ -6,7 +6,7 @@ validating template discovery, metadata handling, and correctness properties.
 
 Feature: cis-controls-integration
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright (c) 2026
+Copyright (c) 2025, 2026
 """
 
 import os

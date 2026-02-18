@@ -1,6 +1,6 @@
 # Version Management
 
-## Current Version: 0.0.16
+## Current Version: 0.0.17
 
 ### Single Source of Truth
 
@@ -33,6 +33,13 @@ To update the version number:
 
 ### Version History
 
+- **0.0.17** (2026-02-19): Documentation & Metadata Improvements
+  - ✅ Updated all copyright notices to 2025, 2026
+  - ✅ Added Handbook Generator logo to README files
+  - ✅ Created comprehensive METADATA_REFERENCE.md documentation
+  - ✅ Simplified "Was ist neu?" section to be version-agnostic
+  - ✅ Updated Unified Metadata Structure section with documentation references
+  - ✅ Removed production version recommendations from README files
 - **0.0.16** (2026-02-18): Test Suite Improvements & Bug Fixes
   - ✅ Fixed 23 test failures across multiple test suites (99.6% pass rate)
   - ✅ Fixed Common Criteria structure tests (bilingual section headers)

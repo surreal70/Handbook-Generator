@@ -8,7 +8,7 @@ Tests validation of new compliance framework templates including:
 - Bilingual consistency validation
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright (c) 2026
+Copyright (c) 2025, 2026
 """
 
 import re

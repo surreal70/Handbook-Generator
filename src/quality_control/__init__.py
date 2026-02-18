@@ -6,7 +6,7 @@ including framework mapping validation, version history validation, test suite e
 and coverage documentation generation.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright: 2025
+Copyright: 2025, 2026
 """
 
 from .data_structures import (

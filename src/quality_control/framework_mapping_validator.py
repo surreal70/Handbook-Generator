@@ -5,7 +5,7 @@ This module validates that all framework directories contain properly named
 mapping files (9999_Framework_Mapping.md) and reports any violations.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright: 2025
+Copyright: 2025, 2026
 """
 
 import os

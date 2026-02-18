@@ -5,7 +5,7 @@ This module contains both unit tests and property-based tests for the
 VersionHistoryValidator component of the quality control system.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright: 2025
+Copyright: 2025, 2026
 """
 
 import os

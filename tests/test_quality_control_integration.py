@@ -6,7 +6,7 @@ quality control workflow, including all validators, metrics tracking, and
 report generation.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright: 2025
+Copyright: 2025, 2026
 """
 
 import pytest

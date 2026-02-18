@@ -5,7 +5,7 @@ Tests template header parsing, markdown structure validation, and placeholder ex
 for IDW PS 951, NIST CSF 2.0, and TOGAF templates.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright (c) 2026
+Copyright (c) 2025, 2026
 
 Validates: Requirements 14.1, 14.2, 14.3
 """

@@ -4,7 +4,7 @@ Tests for PCI-DSS Requirement Coverage
 Property-based tests to verify that PCI-DSS template set covers all 12 requirements.
 
 Author: Kiro AI Assistant
-Copyright (c) 2026
+Copyright (c) 2025, 2026
 """
 
 import pytest

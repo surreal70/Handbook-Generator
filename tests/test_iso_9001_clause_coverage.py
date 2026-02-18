@@ -4,7 +4,7 @@ Tests for ISO 9001 Clause Coverage
 Property-based tests to verify that ISO 9001 template set covers all required clauses.
 
 Author: Kiro AI Assistant
-Copyright (c) 2026
+Copyright (c) 2025, 2026
 """
 
 import pytest

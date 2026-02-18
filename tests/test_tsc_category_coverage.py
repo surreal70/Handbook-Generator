@@ -4,7 +4,7 @@ Tests for TSC Category Coverage
 Property-based tests to verify that TSC template set covers all Trust Services Categories.
 
 Author: Kiro AI Assistant
-Copyright (c) 2026
+Copyright (c) 2025, 2026
 """
 
 import pytest

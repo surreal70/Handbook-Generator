@@ -5,7 +5,7 @@ Tests universal properties for multi-format output generation and directory stru
 for IDW PS 951, NIST CSF 2.0, and TOGAF.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright: 2025
+Copyright: 2025, 2026
 """
 
 import pytest

@@ -4,7 +4,7 @@ HTML Output Generator for Handbook Generator
 Generates HTML mini-website from processed templates with navigation and styling.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright: 2025
+Copyright: 2025, 2026
 """
 
 from dataclasses import dataclass

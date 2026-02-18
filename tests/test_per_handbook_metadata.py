@@ -5,7 +5,7 @@ Tests for independent metadata per handbook type, handbook placeholder replaceme
 and missing metadata handling.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright: 2025
+Copyright: 2025, 2026
 """
 
 import pytest

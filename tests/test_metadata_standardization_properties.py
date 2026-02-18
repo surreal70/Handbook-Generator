@@ -5,7 +5,7 @@ Tests universal correctness properties that should hold across all frameworks
 and metadata files.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright: 2025
+Copyright: 2025, 2026
 """
 
 import pytest

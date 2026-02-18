@@ -2,7 +2,7 @@
 Tests for Template Manager
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright (c) 2026
+Copyright (c) 2025, 2026
 """
 
 import pytest

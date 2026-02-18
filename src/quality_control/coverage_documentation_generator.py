@@ -5,7 +5,7 @@ This module generates comprehensive documentation of all supported frameworks,
 including template counts, bilingual consistency checks, and metadata extraction.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright: 2025
+Copyright: 2025, 2026
 """
 
 import os

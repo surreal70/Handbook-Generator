@@ -5,7 +5,7 @@ Tests framework scanning, missing metadata detection, metadata file creation,
 metadata enhancement, and validation logic.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright: 2025
+Copyright: 2025, 2026
 """
 
 import pytest

@@ -3,7 +3,7 @@
 <div align="center">
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
-[![Version](https://img.shields.io/badge/version-0.0.16-orange.svg)](about_versioning/VERSION.md)
+[![Version](https://img.shields.io/badge/version-0.0.17-orange.svg)](about_versioning/VERSION.md)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Code Coverage](https://img.shields.io/badge/coverage-84%25-brightgreen.svg)](htmlcov/index.html)
 [![Tests](https://img.shields.io/badge/tests-765%20passed-success.svg)](tests/)
@@ -21,9 +21,13 @@
 
 A Python tool for generating professional handbooks from Markdown templates with placeholder replacement from external data sources.
 
+<div align="center">
+  <img src="logo/HandBook-Generator.png" alt="Handbook Generator Logo" width="400"/>
+</div>
+
 ## ⚠️ Important Notice
 
-**This is an intermediate development release (0.0.16) and NOT intended for production use.**
+**This is an intermediate development release (0.0.17) and NOT intended for production use.**
 
 This version contains:
 - Experimental Quality Control System
@@ -31,15 +35,13 @@ This version contains:
 - 10 known test failures
 - Development-only features
 
-**Please use version 0.0.10 for production use.**
-
-See [Release Notes](about_versioning/VERSION_0.0.12_RELEASE_NOTES.md) for details.
+See [Release Notes](about_versioning/VERSION_0.0.17_RELEASE_NOTES.md) for details.
 
 ## Overview
 
 The Handbook Generator creates professional handbooks in various formats (HTML, PDF, Markdown) from structured Markdown templates. The system replaces placeholders in templates with real data from external systems like NetBox and supports multilingual handbooks.
 
-**Version 0.0.16** - ⚠️ Intermediate Development Release - NOT FOR PRODUCTION
+**Version 0.0.17** - ⚠️ Intermediate Development Release - NOT FOR PRODUCTION
 
 ## Features
 
@@ -89,17 +91,23 @@ The Handbook Generator creates professional handbooks in various formats (HTML, 
 
 ## What's New?
 
-See the complete release information for version 0.0.10:
+For detailed information about all releases, see:
 
-- 📋 **[Release Notes](about_versioning/VERSION_0.0.10_RELEASE_NOTES.md)** - Detailed technical changes and implementation details
-- 📊 **[Version Summary](about_versioning/VERSION_0.0.10_SUMMARY.md)** - Executive summary with overview of all changes
-- 📜 **[Version History](about_versioning/VERSION.md)** - Complete version history of all releases
+📜 **[Version History](about_versioning/VERSION.md)** - Complete overview of all versions with release notes and changes
 
-**Version 0.0.10 Highlights:**
-- 7 new compliance frameworks (ISO 38500, ISO 31000, CSA CCM, TISAX, SOC 1, COSO, DORA)
-- 280+ new templates (140 DE + 140 EN)
-- Comprehensive quality improvements (1,751 files affected)
-- 22 compliance frameworks total with 1,732+ templates
+## Unified Metadata Structure
+
+All template frameworks use a unified metadata structure for consistent documentation information and version tracking.
+
+**Documentation:**
+- 📋 **[METADATA_REFERENCE.md](docs/METADATA_REFERENCE.md)** - Complete metadata reference with all fields and descriptions
+- 📋 **[PLACEHOLDER_REFERENCE.md](docs/PLACEHOLDER_REFERENCE.md)** - Placeholder syntax and usage
+- 📋 **[TEMPLATE_HEADER_SPECIFICATION.md](docs/TEMPLATE_HEADER_SPECIFICATION.md)** - Template header structure and requirements
+- ⚙️ **[CONFIGURATION_REFERENCE.md](docs/CONFIGURATION_REFERENCE.md)** - Configuration file reference and settings
+
+**Tools:**
+- `helpers/validate_metadata.py` - Metadata validation
+- `helpers/generate_placeholder_matrix.py` - Generate placeholder overview
 
 ## Installation
 

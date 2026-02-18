@@ -2,7 +2,7 @@
 Unit tests for ConfigManager NetBox metadata loading
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright: 2025
+Copyright: 2025, 2026
 """
 
 import pytest

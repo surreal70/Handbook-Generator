@@ -5,7 +5,7 @@ Tests filename matching, section structure matching, and placeholder location ma
 for ISO/IEC 38500, ISO 31000, CSA CCM, TISAX, SOC 1, COSO, and DORA templates.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright (c) 2026
+Copyright (c) 2025, 2026
 
 Validates: Requirements 14.6
 """

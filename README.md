@@ -3,7 +3,7 @@
 <div align="center">
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
-[![Version](https://img.shields.io/badge/version-0.0.16-orange.svg)](about_versioning/VERSION.md)
+[![Version](https://img.shields.io/badge/version-0.0.17-orange.svg)](about_versioning/VERSION.md)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Code Coverage](https://img.shields.io/badge/coverage-84%25-brightgreen.svg)](htmlcov/index.html)
 [![Tests](https://img.shields.io/badge/tests-765%20passed-success.svg)](tests/)
@@ -21,9 +21,13 @@
 
 Ein Python-Tool zur Generierung professioneller Handbücher aus Markdown-Vorlagen mit Platzhalter-Ersetzung aus externen Datenquellen.
 
+<div align="center">
+  <img src="logo/HandBook-Generator.png" alt="Handbook Generator Logo" width="400"/>
+</div>
+
 ## ⚠️ Wichtiger Hinweis
 
-**Dies ist eine Zwischen-Entwicklungsversion (0.0.16) und NICHT für den Produktiveinsatz bestimmt.**
+**Dies ist eine Zwischen-Entwicklungsversion (0.0.17) und NICHT für den Produktiveinsatz bestimmt.**
 
 Diese Version enthält:
 - Experimentelles Quality Control System
@@ -31,15 +35,13 @@ Diese Version enthält:
 - 10 bekannte Testfehler
 - Nur für Entwicklungszwecke
 
-**Bitte verwenden Sie Version 0.0.10 für den Produktiveinsatz.**
-
-Siehe [Release Notes](about_versioning/VERSION_0.0.13_RELEASE_NOTES.md) für Details.
+Siehe [Release Notes](about_versioning/VERSION_0.0.17_RELEASE_NOTES.md) für Details.
 
 ## Überblick
 
 Der Handbuch-Generator erstellt aus strukturierten Markdown-Vorlagen professionelle Handbücher in verschiedenen Formaten (HTML, PDF, Markdown). Das System ersetzt Platzhalter in den Vorlagen durch echte Daten aus externen Systemen wie NetBox und unterstützt mehrsprachige Handbücher.
 
-**Version 0.0.16** - ⚠️ Intermediate Development Release - NOT FOR PRODUCTION
+**Version 0.0.17** - ⚠️ Intermediate Development Release - NOT FOR PRODUCTION
 
 ## Features
 
@@ -93,22 +95,17 @@ Alle Template-Frameworks verwenden eine einheitliche Metadatenstruktur für kons
 
 ### Unified Metadata Structure
 
-Jedes Framework enthält eine Metadaten-Datei (`0000_metadata_{lang}_{framework}.md`) mit standardisierten Feldern:
+Alle Template-Frameworks verwenden eine einheitliche Metadatenstruktur für konsistente Dokumenteninformationen und Versionsverwaltung.
 
-**Pflichtfelder:**
-- `document_id` - Dokument-Identifikator (z.B. "0000")
-- `owner` - Dokumentenverantwortlicher (Platzhalter: `{{ meta.owner }}`)
-- `version` - Dokumentversion (Platzhalter: `{{ meta.version }}`)
-- `status` - Dokumentstatus (Platzhalter: `{{ meta.status }}`)
-- `classification` - Sicherheitsklassifizierung (Platzhalter: `{{ meta.classification }}`)
-- `date` - Letzte Aktualisierung (Platzhalter: `{{ meta.date }}`)
-- `template_version` - Template-Format-Version (z.B. "1.0")
-- `revision` - Anpassungs-Revisionsnummer (z.B. "0")
-- `organization` - Organisationsname (Platzhalter: `{{ meta.organization }}`)
-- `author` - Dokumentautor (Platzhalter: `{{ meta.author }}`)
-- `scope` - Geltungsbereich (Platzhalter: `{{ meta.scope }}`)
-- `valid_from` - Gültig ab (Platzhalter: `{{ meta.valid_from }}`)
-- `next_review` - Nächste Überprüfung (Platzhalter: `{{ meta.next_review }}`)
+**Dokumentation:**
+- 📋 **[METADATA_REFERENCE.md](docs/METADATA_REFERENCE.md)** - Vollständige Metadaten-Referenz mit allen Feldern und Beschreibungen
+- 📋 **[PLACEHOLDER_REFERENCE.md](docs/PLACEHOLDER_REFERENCE.md)** - Platzhalter-Syntax und Verwendung
+- 📋 **[TEMPLATE_HEADER_SPECIFICATION.md](docs/TEMPLATE_HEADER_SPECIFICATION.md)** - Template-Header-Struktur und Anforderungen
+- ⚙️ **[CONFIGURATION_REFERENCE.md](docs/CONFIGURATION_REFERENCE.md)** - Konfigurationsdatei-Referenz und Einstellungen
+
+**Tools:**
+- `helpers/validate_metadata.py` - Metadaten-Validierung
+- `helpers/generate_placeholder_matrix.py` - Platzhalter-Übersicht generieren
 
 ### Service Directory Reorganisation
 
@@ -157,17 +154,9 @@ python helpers/validate_metadata.py --all --report metadata_report.json
 
 ## Was ist neu?
 
-Siehe die vollständigen Release-Informationen für Version 0.0.10:
+Für detaillierte Informationen zu allen Releases, siehe:
 
-- 📋 **[Release Notes](about_versioning/VERSION_0.0.10_RELEASE_NOTES.md)** - Detaillierte technische Änderungen und Implementierungsdetails
-- 📊 **[Version Summary](about_versioning/VERSION_0.0.10_SUMMARY.md)** - Executive Summary mit Übersicht aller Änderungen
-- 📜 **[Version History](about_versioning/VERSION.md)** - Vollständige Versionshistorie aller Releases
-
-**Highlights Version 0.0.10:**
-- 7 neue Compliance-Frameworks (ISO 38500, ISO 31000, CSA CCM, TISAX, SOC 1, COSO, DORA)
-- 280+ neue Templates (140 DE + 140 EN)
-- Umfassende Qualitätsverbesserungen (1.751 Dateien betroffen)
-- 22 Compliance-Frameworks gesamt mit 1.732+ Templates
+� **[Versionshistorie](about_versioning/VERSION.md)** - Vollständige Übersicht aller Versionen mit Release Notes und Änderungen
 
 ## Installation
 

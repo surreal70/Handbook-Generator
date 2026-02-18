@@ -5,7 +5,7 @@ This module provides centralized logging configuration with support for
 console and file output, structured logging, and different log levels.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright: 2025
+Copyright: 2025, 2026
 """
 
 import logging

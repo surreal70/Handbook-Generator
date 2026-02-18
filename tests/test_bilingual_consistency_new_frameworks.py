@@ -5,7 +5,7 @@ Tests filename matching, section structure matching, and placeholder location ma
 across German and English versions of IDW PS 951, NIST CSF 2.0, and TOGAF templates.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright (c) 2026
+Copyright (c) 2025, 2026
 
 Validates: Requirements 14.6
 """

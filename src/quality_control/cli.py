@@ -5,7 +5,7 @@ This module provides a CLI for running quality control checks, viewing reports,
 and managing quality metrics.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright: 2025
+Copyright: 2025, 2026
 """
 
 import argparse

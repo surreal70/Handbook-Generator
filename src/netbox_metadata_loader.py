@@ -4,7 +4,7 @@ NetBox Metadata Loader for Handbook Generator
 Fetches metadata from NetBox and populates metadata-netbox.yaml file.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright: 2025
+Copyright: 2025, 2026
 """
 
 from typing import Dict, Optional, Any

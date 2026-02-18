@@ -7,7 +7,7 @@ Tests that the CLI accepts the three new compliance frameworks:
 - TOGAF (The Open Group Architecture Framework)
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright: 2026
+Copyright: 2025, 2026
 """
 
 import pytest

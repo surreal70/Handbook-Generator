@@ -4,7 +4,7 @@ Unit tests for HTML Output Generator
 Tests HTML mini-website generation with navigation and styling.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright: 2025
+Copyright: 2025, 2026
 """
 
 import pytest

@@ -6,7 +6,7 @@ This script shows how to use the extended validation system to validate
 compliance framework templates.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright (c) 2026
+Copyright (c) 2025, 2026
 """
 
 from pathlib import Path

@@ -11,7 +11,7 @@ Tests complete handbook generation for all seven Phase 2 frameworks:
 - DORA
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright (c) 2026
+Copyright (c) 2025, 2026
 
 Validates: Requirements 14.4, 14.5
 """

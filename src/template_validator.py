@@ -4,7 +4,7 @@ Template Validator
 Validates IT-Operations templates for quality and compliance.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright (c) 2026
+Copyright (c) 2025, 2026
 """
 
 import re

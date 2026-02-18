@@ -11,7 +11,7 @@ Usage:
     python examples/validate_document_history.py --language de
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright: 2025
+Copyright: 2025, 2026
 """
 
 import argparse

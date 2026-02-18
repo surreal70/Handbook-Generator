@@ -6,7 +6,7 @@ bilingual consistency, and template numbering range coverage.
 
 Feature: additional-compliance-frameworks
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright (c) 2026
+Copyright (c) 2025, 2026
 """
 
 import os

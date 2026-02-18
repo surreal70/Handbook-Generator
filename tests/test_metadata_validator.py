@@ -5,7 +5,7 @@ Tests required fields check, template_version format validation, revision number
 validation, placeholder syntax validation, and bilingual consistency check.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright: 2025
+Copyright: 2025, 2026
 """
 
 import pytest

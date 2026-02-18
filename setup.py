@@ -2,7 +2,7 @@
 Setup script for Handbuch-Generator
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright: 2025
+Copyright: 2025, 2026
 """
 
 from setuptools import setup, find_packages

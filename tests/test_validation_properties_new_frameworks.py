@@ -4,7 +4,7 @@ Property-based tests for Validation System with new frameworks.
 Tests validation properties for IDW PS 951, NIST CSF 2.0, and TOGAF templates.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright (c) 2026
+Copyright (c) 2025, 2026
 """
 
 import pytest

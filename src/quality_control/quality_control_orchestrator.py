@@ -5,7 +5,7 @@ This module coordinates the execution of all validators, consolidates results,
 tracks quality metrics, and generates comprehensive reports.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright: 2025
+Copyright: 2025, 2026
 """
 
 import json

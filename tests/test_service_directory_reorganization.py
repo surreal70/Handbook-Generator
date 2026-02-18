@@ -4,7 +4,7 @@ Unit tests for Service Directory Reorganization.
 Tests directory creation, file moving, rollback on errors, and cleanup of old directories.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright: 2025
+Copyright: 2025, 2026
 """
 
 import pytest

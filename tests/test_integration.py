@@ -6,7 +6,7 @@ of the handbook generator, including template processing, data integration,
 and output generation.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright: 2025
+Copyright: 2025, 2026
 """
 
 import pytest

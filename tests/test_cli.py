@@ -5,7 +5,7 @@ This module contains unit tests for the command-line interface,
 including argument parsing, execution modes, and error handling.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright: 2025
+Copyright: 2025, 2026
 """
 
 import pytest

@@ -5,7 +5,7 @@ This module defines the abstract base class that all validators must implement,
 ensuring consistent interface across all quality control components.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright: 2025
+Copyright: 2025, 2026
 """
 
 from abc import ABC, abstractmethod

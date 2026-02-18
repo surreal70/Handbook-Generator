@@ -5,7 +5,7 @@ Tests universal properties for placeholder recognition, processing, and logging
 for IDW PS 951, NIST CSF 2.0, and TOGAF templates.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright: 2026
+Copyright: 2025, 2026
 """
 
 import pytest

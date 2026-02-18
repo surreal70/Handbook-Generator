@@ -5,7 +5,7 @@ This module tests the test suite execution, output parsing, failure analysis,
 and task generation functionality of the quality control system.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright: 2025
+Copyright: 2025, 2026
 """
 
 import pytest

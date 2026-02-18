@@ -5,7 +5,7 @@ Tests Property 2 (Template Numbering Increments) and Property 16 (Framework Requ
 Mapping Completeness) for all Phase 2 frameworks.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright (c) 2026
+Copyright (c) 2025, 2026
 
 Validates: Requirements 4.2, 10.3
 """

@@ -4,7 +4,7 @@ Pytest configuration and fixtures for Handbuch-Generator tests
 This module provides shared fixtures and Hypothesis configuration for all tests.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright: 2025
+Copyright: 2025, 2026
 """
 
 import pytest

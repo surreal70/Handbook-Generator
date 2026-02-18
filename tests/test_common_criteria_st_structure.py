@@ -5,7 +5,7 @@ Property-based tests to verify that Common Criteria template set covers all requ
 Security Target components according to ISO/IEC 15408-1.
 
 Author: Kiro AI Assistant
-Copyright (c) 2026
+Copyright (c) 2025, 2026
 """
 
 import pytest

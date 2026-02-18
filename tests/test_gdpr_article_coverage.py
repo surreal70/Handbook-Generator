@@ -4,7 +4,7 @@ Tests for GDPR Article Coverage
 Property-based tests to verify that GDPR template set covers all required articles.
 
 Author: Kiro AI Assistant
-Copyright (c) 2026
+Copyright (c) 2025, 2026
 """
 
 import pytest

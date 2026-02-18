@@ -4,7 +4,7 @@ Tests for Template Structure and Organization
 Tests for IT-Operations template structure, renaming, and organization.
 
 Author: Andreas Huemmer [andreas.huemmer@adminsend.de]
-Copyright (c) 2026
+Copyright (c) 2025, 2026
 """
 
 import pytest
