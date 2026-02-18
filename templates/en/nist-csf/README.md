@@ -136,9 +136,5 @@ See `FRAMEWORK_MAPPING.md` for detailed mapping of templates to NIST CSF 2.0 cat
 ## License
 
 These templates are based on the NIST Cybersecurity Framework 2.0, which is in the public domain.
-
-## Version History
-
-| Version | Date | Changes |
-|---------|------|---------|
+||---|
 | 1.0 | 2024 | Initial version based on NIST CSF 2.0 |

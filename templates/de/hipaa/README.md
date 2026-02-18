@@ -98,17 +98,3 @@ Für Fragen zu diesen Vorlagen oder HIPAA-Compliance:
 **Version**: 1.0  
 **Letzte Aktualisierung**: 2026-02-07  
 **Gepflegt von**: Handbook Generator Project
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | [TODO] | {{ meta.defaults.author }} | Initiale Erstellung |
-
-## Versionshistorie
-
-| Version | Datum | Änderungen |
-|---------|-------|------------|
-| 0.1 | {{meta.document.last_updated}} | Initiale Erstellung |

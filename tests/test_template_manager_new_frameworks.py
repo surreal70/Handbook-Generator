@@ -327,22 +327,34 @@ class TestProperty10MetadataExtraction:
         ]),
         language=st.sampled_from(['de', 'en']),
         title=st.text(
-            alphabet=st.characters(blacklist_characters='\r\n"\'\\'),
+            alphabet=st.characters(
+                blacklist_characters='\r\n"\'\\',
+                blacklist_categories=('Cs',)  # Exclude surrogates
+            ),
             min_size=5,
             max_size=50
         ),
         author=st.text(
-            alphabet=st.characters(blacklist_characters='\r\n"\'\\'),
+            alphabet=st.characters(
+                blacklist_characters='\r\n"\'\\',
+                blacklist_categories=('Cs',)  # Exclude surrogates
+            ),
             min_size=3,
             max_size=30
         ),
         version=st.text(
-            alphabet=st.characters(blacklist_characters='\r\n"\'\\'),
+            alphabet=st.characters(
+                blacklist_characters='\r\n"\'\\',
+                blacklist_categories=('Cs',)  # Exclude surrogates
+            ),
             min_size=3,
             max_size=10
         ),
         organization=st.text(
-            alphabet=st.characters(blacklist_characters='\r\n"\'\\'),
+            alphabet=st.characters(
+                blacklist_characters='\r\n"\'\\',
+                blacklist_categories=('Cs',)  # Exclude surrogates
+            ),
             min_size=3,
             max_size=40
         )

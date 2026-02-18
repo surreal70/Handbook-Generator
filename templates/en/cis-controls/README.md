@@ -84,17 +84,3 @@ For the German version, see: `templates/de/cis-controls/`
 ## Version
 
 Version 1.0 - Initial template set
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | [TODO] | {{ meta.defaults.author }} | Initial Creation |
-
-## Version History
-
-| Version | Date | Changes |
-|---------|------|---------|
-| 0.1 | {{meta.document.last_updated}} | Initial creation |

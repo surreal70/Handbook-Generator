@@ -1,0 +1,90 @@
+# Test Results Summary
+
+## Overview
+- Total Tests: 7518
+- Failed Tests: 56
+- Pass Rate: 99.3%
+
+## Failed Tests by Category
+
+### 1. PDF Generation Issues (28 tests)
+**File:** tests/test_compliance_framework_output.py
+**Issue:** Missing libpango-1.0-0 library
+**Error:** OSError: cannot load library 'libpango-1.0-0'
+**Affected Tests:**
+- test_pdf_generation_for_framework (14 tests - de/en for 7 frameworks)
+- test_pdf_with_toc (7 tests)
+- test_pdf_page_breaks (7 tests)
+**Resolution:** System dependency issue - requires libpango installation
+
+### 2. Common Criteria Structure (4 tests)
+**File:** tests/test_common_criteria_st_structure.py
+**Issue:** Missing documentation in 9999_Framework_Mapping.md
+**Failed Tests:**
+- test_common_criteria_st_introduction_components
+- test_common_criteria_toe_description_components
+- test_common_criteria_toe_summary_specification_components
+- test_property_25_bilingual_consistency
+
+### 3. Framework Mapping Validation (3 tests)
+**File:** tests/test_framework_mapping_validator.py
+**Issues:**
+- test_property_2_universal_file_validation (Hypothesis found 2 distinct failures)
+- test_property_3_complete_error_reporting (Expected invalid: {'0'}, Got: set())
+- test_framework_with_incorrect_mapping_file (assert True is False)
+
+### 4. Placeholder Processing (3 tests)
+**File:** tests/test_placeholder_properties_new_frameworks.py
+**Issues:**
+- test_property_11_placeholder_recognition_and_processing
+- test_property_11_multi_source_processing
+- test_property_12_logging_with_failures
+
+### 5. Template Structure (2 tests)
+**File:** tests/test_template_structure.py
+**Issues:** Template structure validation failures
+
+### 6. Test Suite Runner (2 tests)
+**File:** tests/test_test_suite_runner.py
+**Issues:** Test runner validation failures
+
+### 7. Metadata Config Manager (2 tests)
+**File:** tests/test_metadata_config_manager.py
+**Issues:**
+- test_property_organization_role_validation
+- test_property_metadata_configuration_validation
+
+### 8. Single Test Failures (9 tests)
+- test_template_manager.py: 1 failure
+- test_template_manager_new_frameworks.py: 1 failure
+- test_template_manager_cis_integration.py: 1 failure
+- test_setup.py: Version mismatch (0.0.15 vs 0.0.14)
+- test_quality_control_orchestrator.py: Sequential execution issue
+- test_placeholder_processor.py: Placeholder line validation
+- test_output_generator_properties.py: Directory structure issue
+- test_metadata_loader_properties.py: Default values issue
+- test_logger.py: Verbose logging format issue
+- test_idw_ps_951_properties.py: Template header structure
+- test_coverage_documentation_generator.py: Framework metadata extraction
+- test_cis_controls_integration.py: Metadata template placeholder replacement
+
+## Priority Actions
+
+### High Priority (Blocking)
+1. **PDF Generation (28 tests)** - System dependency issue
+   - Install libpango-1.0-0 library on the system
+   - Command: `sudo apt-get install libpango-1.0-0`
+
+### Medium Priority (Functional Issues)
+2. **Common Criteria Documentation (4 tests)** - Missing framework mapping documentation
+3. **Framework Mapping Validator (3 tests)** - Validation logic issues
+4. **Placeholder Processing (3 tests)** - Processing logic issues
+
+### Low Priority (Minor Issues)
+5. **Version Mismatch (1 test)** - Update version number in setup.py
+6. **Various single test failures (9 tests)** - Individual fixes needed
+
+## Notes
+- Most failures are concentrated in PDF generation (50% of failures)
+- Core functionality tests are passing
+- Property-based tests are revealing edge cases

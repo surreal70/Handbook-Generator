@@ -134,17 +134,3 @@ For questions about template usage or customization, refer to:
 ---
 
 **Note:** These templates provide a starting point for ISO 9001:2015 documentation. They must be customized to reflect your organization's specific context, processes, and requirements.
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | [TODO] | {{ meta.defaults.author }} | Initial Creation |
-
-## Version History
-
-| Version | Date | Changes |
-|---------|------|---------|
-| 0.1 | {{meta.document.last_updated}} | Initial creation |

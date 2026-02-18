@@ -11,7 +11,7 @@ Das NIST 800-53 Handbuch der [TODO] umfasst strukturierte Dokumente, die alle 20
 ### Foundation (Grundlagen, 0010-0050)
 
 | Dokument-ID | Titel | Beschreibung |
-|-------------|-------|--------------|
+|------|||
 | NIST-0010 | Systemkategorisierung | FIPS 199 Kategorisierung nach Vertraulichkeit, Integrität, Verfügbarkeit |
 | NIST-0020 | Geltungsbereich und Systemgrenzen | Definition des Informationssystems und Autorisierungsgrenzen |
 | NIST-0021 | System Security Plan (SSP) | Umfassendes Sicherheitskonzept gemäß NIST 800-18 |
@@ -22,7 +22,7 @@ Das NIST 800-53 Handbuch der [TODO] umfasst strukturierte Dokumente, die alle 20
 ### Access Control (AC, 0100-0150)
 
 | Dokument-ID | Titel | Beschreibung |
-|-------------|-------|--------------|
+|------|||
 | NIST-0100 | Access Control Policy | Zugriffssteuerungsrichtlinie (AC-1) |
 | NIST-0110 | Account Management | Kontenverwaltung (AC-2) |
 | NIST-0120 | Access Enforcement | Durchsetzung der Zugriffskontrolle (AC-3) |
@@ -33,7 +33,7 @@ Das NIST 800-53 Handbuch der [TODO] umfasst strukturierte Dokumente, die alle 20
 ### Awareness and Training (AT), Audit and Accountability (AU) (0200-0250)
 
 | Dokument-ID | Titel | Beschreibung |
-|-------------|-------|--------------|
+|------|||
 | NIST-0200 | Security Awareness and Training | Sicherheitsbewusstsein und Schulung (AT-1 bis AT-4) |
 | NIST-0210 | Role-Based Training | Rollenbasierte Schulungen (AT-3) |
 | NIST-0220 | Audit and Accountability Policy | Audit- und Rechenschaftsrichtlinie (AU-1) |
@@ -44,7 +44,7 @@ Das NIST 800-53 Handbuch der [TODO] umfasst strukturierte Dokumente, die alle 20
 ### Configuration Management (CM), Contingency Planning (CP) (0300-0350)
 
 | Dokument-ID | Titel | Beschreibung |
-|-------------|-------|--------------|
+|------|||
 | NIST-0300 | Configuration Management Policy | Konfigurationsmanagement-Richtlinie (CM-1) |
 | NIST-0310 | Baseline Configuration | Basis-Konfiguration (CM-2) |
 | NIST-0320 | Configuration Change Control | Änderungssteuerung (CM-3, CM-4) |
@@ -55,7 +55,7 @@ Das NIST 800-53 Handbuch der [TODO] umfasst strukturierte Dokumente, die alle 20
 ### Identification and Authentication (IA), Incident Response (IR) (0400-0450)
 
 | Dokument-ID | Titel | Beschreibung |
-|-------------|-------|--------------|
+|------|||
 | NIST-0400 | Identification and Authentication Policy | Identifikations- und Authentifizierungsrichtlinie (IA-1) |
 | NIST-0410 | User Identification | Benutzeridentifikation (IA-2) |
 | NIST-0420 | Authenticator Management | Authentifizierungsverwaltung (IA-5) |
@@ -66,7 +66,7 @@ Das NIST 800-53 Handbuch der [TODO] umfasst strukturierte Dokumente, die alle 20
 ### Maintenance (MA), Media Protection (MP), Physical Protection (PE) (0500-0550)
 
 | Dokument-ID | Titel | Beschreibung |
-|-------------|-------|--------------|
+|------|||
 | NIST-0500 | System Maintenance | Systemwartung (MA-1 bis MA-6) |
 | NIST-0510 | Media Protection Policy | Medienschutzrichtlinie (MP-1) |
 | NIST-0520 | Media Access and Disposal | Medienzugriff und -entsorgung (MP-2, MP-6) |
@@ -77,7 +77,7 @@ Das NIST 800-53 Handbuch der [TODO] umfasst strukturierte Dokumente, die alle 20
 ### Planning (PL), Risk Assessment (RA), System Acquisition (SA) (0600-0650)
 
 | Dokument-ID | Titel | Beschreibung |
-|-------------|-------|--------------|
+|------|||
 | NIST-0600 | Security Planning Policy | Sicherheitsplanungsrichtlinie (PL-1, PL-2) |
 | NIST-0610 | Risk Assessment Policy | Risikobewertungsrichtlinie (RA-1) |
 | NIST-0620 | Risk Assessment Process | Risikobewertungsprozess (RA-3, RA-5) |
@@ -88,7 +88,7 @@ Das NIST 800-53 Handbuch der [TODO] umfasst strukturierte Dokumente, die alle 20
 ### System Protection (SC), System Integrity (SI), Supply Chain (SR) (0700-0750)
 
 | Dokument-ID | Titel | Beschreibung |
-|-------------|-------|--------------|
+|------|||
 | NIST-0700 | System and Communications Protection | System- und Kommunikationsschutz (SC-1) |
 | NIST-0710 | Boundary Protection | Grenzschutz (SC-7) |
 | NIST-0720 | Cryptographic Protection | Kryptografischer Schutz (SC-8, SC-12, SC-13) |
@@ -99,7 +99,7 @@ Das NIST 800-53 Handbuch der [TODO] umfasst strukturierte Dokumente, die alle 20
 ### Appendices (Anhänge, 0800-0850)
 
 | Dokument-ID | Titel | Beschreibung |
-|-------------|-------|--------------|
+|------|||
 | NIST-0800 | Control Traceability Matrix | Kontrollen-Rückverfolgbarkeitsmatrix |
 | NIST-0810 | Security Assessment Report (SAR) | Sicherheitsbewertungsbericht |
 | NIST-0820 | Plan of Action and Milestones (POA&M) | Aktionsplan und Meilensteine |
@@ -135,7 +135,7 @@ Alle Templates enthalten `[TODO]`-Markierungen für organisationsspezifische Anp
 ## NIST 800-53 Rev 5 Control Families
 
 | Control Family | Identifier | NIST-Dokumente | Beschreibung |
-|----------------|------------|----------------|--------------|
+|--|-----|--||
 | Access Control | AC | NIST-0100 bis NIST-0150 | Zugriffskontrolle |
 | Awareness and Training | AT | NIST-0200, NIST-0210 | Schulung und Bewusstsein |
 | Audit and Accountability | AU | NIST-0220 bis NIST-0250 | Audit und Rechenschaft |
@@ -262,17 +262,3 @@ Bei Fragen oder Problemen:
 **Version:** 1.0.0  
 **Letzte Aktualisierung:** 2026-02-07  
 **Maintainer:** NIST-800-53-Template-Team
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | [TODO] | {{ meta.defaults.author }} | Initiale Erstellung |
-
-## Versionshistorie
-
-| Version | Datum | Änderungen |
-|---------|-------|------------|
-| 0.1 | {{meta.document.last_updated}} | Initiale Erstellung |

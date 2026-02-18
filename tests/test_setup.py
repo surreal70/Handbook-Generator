@@ -36,7 +36,12 @@ def test_src_package():
     """Verify src package is importable."""
     import src
     
-    assert src.__version__ == "0.0.14"
+    # Verify version exists and is a non-empty string
+    assert hasattr(src, '__version__')
+    assert isinstance(src.__version__, str)
+    assert len(src.__version__) > 0
+    
+    # Verify author exists
     assert src.__author__ == "Andreas Huemmer"
 
 

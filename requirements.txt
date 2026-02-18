@@ -13,6 +13,8 @@ pyyaml>=6.0
 # Output Generation
 markdown>=3.5.0
 weasyprint>=60.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
 
 # Testing
 pytest>=7.4.0

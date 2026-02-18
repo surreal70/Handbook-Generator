@@ -7,6 +7,9 @@ This script analyzes:
 - All placeholders defined in config files
 - Coverage status for each handbook
 
+Exclusions:
+- README files are excluded from analysis (they contain placeholder examples for documentation)
+
 Output Matrix:
 - X-axis: All unique placeholders
 - Y-axis: All handbooks
@@ -47,15 +50,6 @@ def extract_placeholders_from_file(filepath: Path) -> Set[str]:
         matches = re.findall(r'\{\{\s*([a-zA-Z0-9_\.\-]+)\s*\}\}', content)
         placeholders.update(matches)
         
-        # Match [PLACEHOLDER] pattern (uppercase placeholders in square brackets)
-        matches = re.findall(r'\[([A-Z][A-Z0-9_]+)\]', content)
-        # Filter out common markdown patterns like [TODO], [FRAMEWORK], etc.
-        # Only include if it looks like a config placeholder
-        for match in matches:
-            # Skip common non-placeholder patterns
-            if match not in ['TODO', 'FRAMEWORK', 'X']:
-                placeholders.add(match)
-        
     except Exception as e:
         print(f"Warning: Could not read {filepath}: {e}")
     
@@ -75,12 +69,6 @@ def extract_placeholders_with_locations(filepath: Path) -> Dict[str, List[int]]:
             matches = re.findall(r'\{\{\s*([a-zA-Z0-9_\.\-]+)\s*\}\}', line)
             for match in matches:
                 placeholder_locations[match].append(line_num)
-            
-            # Match [PLACEHOLDER] pattern
-            matches = re.findall(r'\[([A-Z][A-Z0-9_]+)\]', line)
-            for match in matches:
-                if match not in ['TODO', 'FRAMEWORK', 'X']:
-                    placeholder_locations[match].append(line_num)
         
     except Exception as e:
         print(f"Warning: Could not read {filepath}: {e}")
@@ -193,8 +181,12 @@ def analyze_handbooks() -> Tuple[Dict[str, Set[str]], Set[str], Dict[str, List[T
             handbook_key = f"{lang_dir}/{handbook_dir.name}"
             used_placeholders = set()
             
-            # Scan all markdown files in the handbook
+            # Scan all markdown files in the handbook (excluding README files)
             for md_file in handbook_dir.glob('*.md'):
+                # Skip README files - they contain placeholder examples for documentation
+                if md_file.name.upper().startswith('README'):
+                    continue
+                
                 placeholders = extract_placeholders_from_file(md_file)
                 used_placeholders.update(placeholders)
                 
@@ -722,6 +714,7 @@ def generate_html_report(handbook_usage: Dict[str, Set[str]],
 def main():
     """Main execution function."""
     print(f"{Colors.BOLD}Analyzing Handbook Placeholders...{Colors.RESET}")
+    print(f"{Colors.YELLOW}Note: README files are excluded from analysis (they contain documentation examples){Colors.RESET}\n")
     
     # Analyze all handbooks
     handbook_usage, all_defined, undefined_locations = analyze_handbooks()

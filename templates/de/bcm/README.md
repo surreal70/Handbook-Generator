@@ -11,7 +11,7 @@ Das BCM-Handbuch der [TODO] umfasst 30 strukturierte Dokumente, die alle wesentl
 ### Foundation (Grundlagen, 0010-0090)
 
 | Dokument-ID | Titel | Beschreibung |
-|-------------|-------|--------------|
+|------|||
 | BCM-0010 | Zweck und Geltungsbereich | Definition von Zweck, Scope und Zielen des BCMS |
 | BCM-0020 | BCM-Leitlinie / Policy | Management-Commitment und BCM-Policy |
 | BCM-0030 | Dokumentenlenkung | Versionierung, Freigabe und Pflege der BCM-Dokumentation |
@@ -25,7 +25,7 @@ Das BCM-Handbuch der [TODO] umfasst 30 strukturierte Dokumente, die alle wesentl
 ### Strategy & Plans (Strategie & Pläne, 0100-0180)
 
 | Dokument-ID | Titel | Beschreibung |
-|-------------|-------|--------------|
+|------|||
 | BCM-0100 | Strategie und Kontinuitätsoptionen | BCM-Strategie und Wiederherstellungsoptionen |
 | BCM-0110 | Aktivierungskriterien | Kriterien für BCM-Aktivierung |
 | BCM-0120 | Krisenmanagementplan | Prozesse für Krisenmanagement |
@@ -39,7 +39,7 @@ Das BCM-Handbuch der [TODO] umfasst 30 strukturierte Dokumente, die alle wesentl
 ### Operations & Compliance (Betrieb & Compliance, 0190-0290)
 
 | Dokument-ID | Titel | Beschreibung |
-|-------------|-------|--------------|
+|------|||
 | BCM-0190 | Ressourcenplanung | Mindestbesetzung und Ressourcenbedarf |
 | BCM-0200 | Notfallzugang (Break-Glass) | Notfallzugänge und Privileged Access |
 | BCM-0210 | Cyber-Incident-Playbook | Ransomware und Cyber-Vorfälle |
@@ -89,7 +89,7 @@ Alle Templates enthalten `[TODO]`-Markierungen für organisationsspezifische Anp
 ## ISO 22301:2019 Compliance-Mapping
 
 | ISO 22301 Klausel | BCM-Dokument | Beschreibung |
-|-------------------|--------------|--------------|
+|-----|||
 | 4.1 Understanding the organization | BCM-0010 | Kontext der Organisation |
 | 4.3 Determining the scope | BCM-0010 | Geltungsbereich |
 | 5.2 Policy | BCM-0020 | BCM-Policy |
@@ -108,7 +108,7 @@ Alle Templates enthalten `[TODO]`-Markierungen für organisationsspezifische Anp
 ## BSI-Standard 100-4 Mapping
 
 | BSI 100-4 Kapitel | BCM-Dokument | Beschreibung |
-|-------------------|--------------|--------------|
+|-----|||
 | 3.1 Initiierung | BCM-0020 | BCM-Policy und Initiierung |
 | 3.2 Konzeption | BCM-0070, BCM-0080, BCM-0090 | BIA und Risikoanalyse |
 | 3.3 Umsetzung | BCM-0100, BCM-0140, BCM-0150 | Strategie und Pläne |
@@ -285,17 +285,3 @@ Bei Fragen oder Problemen:
 **Version:** 1.0.0  
 **Letzte Aktualisierung:** 2026-01-31  
 **Maintainer:** BCM-Template-Team
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | [TODO] | {{ meta.defaults.author }} | Initiale Erstellung |
-
-## Versionshistorie
-
-| Version | Datum | Änderungen |
-|---------|-------|------------|
-| 0.1 | {{meta.document.last_updated}} | Initiale Erstellung |

@@ -30,7 +30,7 @@ This structure enables:
 ### Tier 1: Basis ISMS (0010-0160)
 
 | Document ID | Title | Description |
-|-------------|-------|-------------|
+|-|-|-|
 | ISMS-0010 | Information Security Policy | Top-Level ISMS Policy, Management Commitment |
 | ISMS-0020 | Scope | ISMS Scope Definition, Boundaries |
 | ISMS-0030 | Context and Interested Parties | Context of Organization, Stakeholders |
@@ -53,7 +53,7 @@ This structure enables:
 High-level security policies for 25 topic areas:
 
 | Document ID | Title | Annex A Mapping |
-|-------------|-------|-----------------|
+|-|-|-----|
 | ISMS-0200 | Policy: Acceptable Use of IT | A.5.10 |
 | ISMS-0220 | Policy: Access Control and Identity Management | A.5.15, A.5.16, A.5.18 |
 | ISMS-0240 | Policy: Authentication and Passwords | A.5.17, A.8.5 |
@@ -85,7 +85,7 @@ High-level security policies for 25 topic areas:
 Detailed implementation guidelines for each policy:
 
 | Document ID | Title | Associated Policy |
-|-------------|-------|-------------------|
+|-|-|-|
 | ISMS-0210 | Guideline: Acceptable Use of IT | 0200 |
 | ISMS-0230 | Guideline: IAM, Joiner-Mover-Leaver, Access Requests | 0220 |
 | ISMS-0250 | Guideline: MFA, Password Rules, Session Management | 0240 |
@@ -115,7 +115,7 @@ Detailed implementation guidelines for each policy:
 ### Appendices (0710-0740)
 
 | Document ID | Title | Description |
-|-------------|-------|-------------|
+|-|-|-|
 | ISMS-0710 | Appendix: Annex A Mapping | Complete mapping of all 93 Annex A Controls |
 | ISMS-0720 | Appendix: Asset and System Inventory | Asset Inventory Template |
 | ISMS-0730 | Appendix: Data Flows and Interfaces | Data Flow Diagrams |
@@ -163,7 +163,7 @@ All templates contain `[TODO]` markers for organization-specific customizations:
 ### Main Clauses
 
 | ISO 27001 Clause | ISMS Document | Description |
-|------------------|---------------|-------------|
+||---|-|
 | 4.1 Understanding the organization | ISMS-0030 | Context of Organization |
 | 4.2 Understanding needs of interested parties | ISMS-0030 | Interested Parties |
 | 4.3 Determining the scope | ISMS-0020 | ISMS Scope |
@@ -471,17 +471,3 @@ For questions or issues:
 **Version:** 1.0.0  
 **Last Updated:** 2026-02-02  
 **Maintainer:** ISMS Template Team
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | [TODO] | {{ meta.defaults.author }} | Initial Creation |
-
-## Version History
-
-| Version | Date | Changes |
-|---------|------|---------|
-| 0.1 | {{meta.document.last_updated}} | Initial creation |

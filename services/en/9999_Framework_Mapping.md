@@ -7,15 +7,16 @@ Author: Quality Control System
 Classification: Internal
 # Service Directory Framework Mapping
 
-**Dokument-ID:** [FRAMEWORK]-9999
+**Document-ID:** [FRAMEWORK]-9999
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
-**Genehmigt durch:** {{ meta-handbook.approver }}
-**Revision:** {{ meta-handbook.revision }}
+**Approved by:** {{ meta-handbook.approver }}
+**Revision:** [TODO]
 **Author:** {{ meta-handbook.author }}
 **Status:** {{ meta-handbook.status }}
-**Klassifizierung:** {{ meta-handbook.classification }}
-**Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+**Classification:** {{ meta-handbook.classification }}
+**Last Update:** {{ meta-handbook.modifydate }}
+**Template Version:** [TODO]
 
 ---
 

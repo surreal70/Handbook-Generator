@@ -288,7 +288,9 @@ class TestProperty11PlaceholderRecognitionAndProcessing:
             f"Expected {expected_substitutions} substitutions, got {len(result.replacements)}"
         
         # Verify preserved placeholders
-        preserved_count = result.content.count('{{')
+        # Count actual placeholder patterns, not just '{{' which could be in substituted values
+        preserved_placeholders = processor.find_placeholders(result.content)
+        preserved_count = len(preserved_placeholders)
         assert preserved_count == expected_preserved, \
             f"Expected {expected_preserved} preserved placeholders, got {preserved_count}"
         
@@ -381,8 +383,10 @@ class TestProperty11PlaceholderRecognitionAndProcessing:
                 f"Source value '{value}' should be in content"
         
         # Verify no placeholders remain
-        assert '{{' not in result.content, \
-            "No placeholders should remain in content"
+        # Check for actual placeholder patterns, not just '{{' which could be in substituted values
+        remaining_placeholders = processor.find_placeholders(result.content)
+        assert len(remaining_placeholders) == 0, \
+            f"No placeholders should remain in content, found {len(remaining_placeholders)}"
 
 
 class TestProperty12PlaceholderSubstitutionLogging:
@@ -532,7 +536,8 @@ class TestProperty12PlaceholderSubstitutionLogging:
                 f"Successful value '{value}' should be in content"
         
         # Verify failed placeholders are preserved
-        preserved_count = result.content.count('{{')
+        preserved_placeholders = processor.find_placeholders(result.content)
+        preserved_count = len(preserved_placeholders)
         assert preserved_count == num_failed, \
             f"Expected {num_failed} preserved placeholders"
     

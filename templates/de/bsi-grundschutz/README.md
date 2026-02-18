@@ -11,7 +11,7 @@ Das IT-Sicherheitshandbuch der [TODO] umfasst ca. 40 strukturierte Dokumente, di
 ### ISMS Foundation (Grundlagen, 0010-0110)
 
 | Dokument-ID | Titel | Beschreibung | BSI Standard |
-|-------------|-------|--------------|--------------|
+|------||||
 | BSI-0010 | Informationssicherheitsleitlinie | Top-Management-Policy für Informationssicherheit | BSI 200-1 |
 | BSI-0020 | ISMS-Organisation, Rollen, RACI | Organisationsstruktur und Verantwortlichkeiten | BSI 200-1 |
 | BSI-0030 | Dokumentenlenkung und Dokumentenregister | Versionierung, Freigabe und Pflege der ISMS-Dokumentation | BSI 200-1 |
@@ -31,7 +31,7 @@ Die Sicherheitsrichtlinien sind in Policy-Richtlinien-Paare organisiert:
 - **Richtlinien (ungerade Nummern, 0210-0530):** Konkrete Implementierungsanweisungen
 
 | Policy-ID | Policy-Titel | Richtlinien-ID | Richtlinien-Titel | BSI Bausteine |
-|-----------|--------------|----------------|-------------------|---------------|
+|----||--|-----|-|
 | BSI-0200 | Policy: Zugriffssteuerung und Berechtigungen | BSI-0210 | Richtlinie: IAM Joiner Mover Leaver und Rezertifizierung | ORP.4, OPS.1.1.2 |
 | BSI-0220 | Policy: Authentisierung und MFA | BSI-0230 | Richtlinie: Passwort, MFA und Sitzungsregeln | ORP.4, OPS.1.1.5 |
 | BSI-0240 | Policy: Asset und Inventarmanagement | BSI-0250 | Richtlinie: Asset Lifecycle, Tagging und Entsorgung | OPS.1.1.1, OPS.1.2.7 |
@@ -53,7 +53,7 @@ Die Sicherheitsrichtlinien sind in Policy-Richtlinien-Paare organisiert:
 ### Management Processes (Management-Prozesse, 0600-0630)
 
 | Dokument-ID | Titel | Beschreibung | BSI Standard |
-|-------------|-------|--------------|--------------|
+|------||||
 | BSI-0600 | Schulung und Awareness-Programm | Sensibilisierung und Schulung | BSI 200-1, ORP.3 |
 | BSI-0610 | Internes Auditprogramm | ISMS-Audits und Kontrollen | BSI 200-1 |
 | BSI-0620 | Managementbewertung (Management Review) | Bewertung durch Top-Management | BSI 200-1 |
@@ -62,7 +62,7 @@ Die Sicherheitsrichtlinien sind in Policy-Richtlinien-Paare organisiert:
 ### Appendices (Anhänge, 0700-0740)
 
 | Dokument-ID | Titel | Beschreibung |
-|-------------|-------|--------------|
+|------|||
 | BSI-0700 | Anhang: Nachweisregister (Evidence) | Register aller Nachweise und Evidenzen |
 | BSI-0710 | Anhang: Assetinventar | Vollständiges Asset-Inventar |
 | BSI-0720 | Anhang: Datenflüsse und Schnittstellen | Dokumentation aller Datenflüsse |
@@ -113,7 +113,7 @@ Alle Templates enthalten `[TODO]`-Markierungen für organisationsspezifische Anp
 ### BSI Standard 200-1: ISMS-Anforderungen
 
 | BSI 200-1 Kapitel | BSI-Dokument | Beschreibung |
-|-------------------|--------------|--------------|
+|-----|||
 | 4 Aufbau eines ISMS | BSI-0010, BSI-0020 | Leitlinie und Organisation |
 | 5 ISMS-Prozess | BSI-0040 bis BSI-0110 | Strukturanalyse bis Umsetzungssteuerung |
 | 6 Dokumentation | BSI-0030 | Dokumentenlenkung |
@@ -125,7 +125,7 @@ Alle Templates enthalten `[TODO]`-Markierungen für organisationsspezifische Anp
 ### BSI Standard 200-2: IT-Grundschutz-Methodik
 
 | BSI 200-2 Kapitel | BSI-Dokument | Beschreibung |
-|-------------------|--------------|--------------|
+|-----|||
 | 4 Festlegung des Geltungsbereichs | BSI-0040 | Informationsverbund |
 | 5 Strukturanalyse | BSI-0050 | Erfassung aller Objekte |
 | 6 Schutzbedarfsfeststellung | BSI-0060 | Bewertung CIA |
@@ -138,7 +138,7 @@ Alle Templates enthalten `[TODO]`-Markierungen für organisationsspezifische Anp
 ### BSI Standard 200-3: Risikoanalyse
 
 | BSI 200-3 Kapitel | BSI-Dokument | Beschreibung |
-|-------------------|--------------|--------------|
+|-----|||
 | 4 Vorbereitung | BSI-0090 | Risikoanalyse-Vorbereitung |
 | 5 Gefährdungsanalyse | BSI-0090 | Identifikation von Gefährdungen |
 | 6 Risikoeinschätzung | BSI-0090 | Bewertung von Risiken |
@@ -149,7 +149,7 @@ Alle Templates enthalten `[TODO]`-Markierungen für organisationsspezifische Anp
 ### Prozess-Bausteine (ORP, OPS, DER)
 
 | Baustein | Titel | BSI-Dokumente |
-|----------|-------|---------------|
+|---||-|
 | ORP.1 | Organisation | BSI-0020 |
 | ORP.2 | Personal | BSI-0600 |
 | ORP.3 | Sensibilisierung und Schulung | BSI-0600 |
@@ -168,7 +168,7 @@ Alle Templates enthalten `[TODO]`-Markierungen für organisationsspezifische Anp
 ### System-Bausteine (SYS, NET, INF)
 
 | Baustein | Titel | BSI-Dokumente |
-|----------|-------|---------------|
+|---||-|
 | SYS.1.1 | Allgemeiner Server | BSI-0260, BSI-0270 |
 | SYS.2.1 | Allgemeiner Client | BSI-0260, BSI-0270, BSI-0480, BSI-0490 |
 | SYS.3.2.2 | Mobile Device Management | BSI-0480, BSI-0490 |
@@ -180,7 +180,7 @@ Alle Templates enthalten `[TODO]`-Markierungen für organisationsspezifische Anp
 ### Konzept-Bausteine (CON)
 
 | Baustein | Titel | BSI-Dokumente |
-|----------|-------|---------------|
+|---||-|
 | CON.1 | Kryptokonzept | BSI-0340, BSI-0350 |
 | CON.2 | Datenschutz | BSI-0420, BSI-0430 |
 | CON.3 | Datensicherungskonzept | BSI-0440, BSI-0450 |
@@ -370,17 +370,3 @@ Bei Fragen oder Problemen:
 **Version:** 1.0.0  
 **Letzte Aktualisierung:** 2026-02-03  
 **Maintainer:** BSI-Grundschutz-Template-Team
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | [TODO] | {{ meta.defaults.author }} | Initiale Erstellung |
-
-## Versionshistorie
-
-| Version | Datum | Änderungen |
-|---------|-------|------------|
-| 0.1 | {{meta.document.last_updated}} | Initiale Erstellung |

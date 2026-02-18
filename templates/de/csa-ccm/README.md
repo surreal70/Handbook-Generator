@@ -122,9 +122,5 @@ Nutzen Sie die CCM-Zuordnungen zu diesen Standards, um Compliance-Überschneidun
 ## Lizenz
 
 Diese Vorlagen sind für den internen Gebrauch in [TODO] bestimmt.
-
-## Versionshistorie
-
-| Version | Datum | Änderungen |
-|---------|-------|------------|
+||-----|
 | 0.1 | {{meta.document.last_updated}} | Initiale Erstellung |

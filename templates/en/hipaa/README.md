@@ -98,17 +98,3 @@ For questions about these templates or HIPAA compliance:
 **Version**: 1.0  
 **Last Updated**: 2026-02-07  
 **Maintained by**: Handbook Generator Project
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | [TODO] | {{ meta.defaults.author }} | Initial Creation |
-
-## Version History
-
-| Version | Date | Changes |
-|---------|------|---------|
-| 0.1 | {{meta.document.last_updated}} | Initial creation |

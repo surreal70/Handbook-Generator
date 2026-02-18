@@ -441,17 +441,3 @@ Diese Templates sind für den internen Gebrauch in Ihrer Organisation bestimmt. 
 **Version:** 1.0.0  
 **Letzte Aktualisierung:** 2024-01-31  
 **Maintainer:** IT Operations Team
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | {{ meta-handbook.last_updated }} | {{ meta-handbook.author }} | Initiale Erstellung |
-
-## Versionshistorie
-
-| Version | Datum | Änderungen |
-|---------|-------|------------|
-| 0.1 | {{meta-handbook.last_updated}} | Initiale Erstellung |

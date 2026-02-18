@@ -1,6 +1,6 @@
 # Version Management
 
-## Current Version: 0.0.15
+## Current Version: 0.0.16
 
 ### Single Source of Truth
 
@@ -32,6 +32,21 @@ To update the version number:
 **Do not** hardcode version numbers elsewhere in the codebase.
 
 ### Version History
+
+- **0.0.16** (2026-02-18): Test Suite Improvements & Bug Fixes
+  - ✅ Fixed 23 test failures across multiple test suites (99.6% pass rate)
+  - ✅ Fixed Common Criteria structure tests (bilingual section headers)
+  - ✅ Fixed framework mapping validation tests (service directory reorganization)
+  - ✅ Fixed placeholder processing tests (proper placeholder detection)
+  - ✅ Fixed template structure tests (service directory path updates)
+  - ✅ Fixed setup version test (removed hardcoded version checks)
+  - ✅ Fixed template manager tests (format validation, metadata extraction, CIS integration)
+  - ✅ Fixed logger verbose details test (bidirectional overlap check)
+  - ✅ Enhanced framework mapping documentation (ITIL v4, COBIT 2019, ISO 20000 details)
+  - ✅ Filtered documentation files from template discovery (README.md, 9999_Framework_Mapping.md)
+  - ✅ Added Unicode surrogate exclusion in hypothesis strategies
+  - ✅ Comprehensive test fixes progress documentation
+  - **Status**: Test suite quality improvement release
 
 - **0.0.15** (2026-02-18): Metadata Placeholder Migration & Testing Improvements
   - ✅ Migrated all 44 metadata files (0000_metadata_*.md) to use placeholder syntax

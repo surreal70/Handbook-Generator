@@ -139,17 +139,3 @@ For questions about template usage or customization, refer to:
 ---
 
 **Note:** These templates provide a starting point for GDPR documentation. They must be customized to reflect your organization's specific context, processing activities, and requirements.
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | [TODO] | {{ meta.defaults.author }} | Initial Creation |
-
-## Version History
-
-| Version | Date | Changes |
-|---------|------|---------|
-| 0.1 | {{meta.document.last_updated}} | Initial creation |

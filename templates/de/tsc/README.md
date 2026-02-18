@@ -11,7 +11,7 @@ Das TSC-Handbuch der [TODO] umfasst strukturierte Dokumente, die alle fünf Trus
 ### Foundation (Grundlagen, 0010-0050)
 
 | Dokument-ID | Titel | Beschreibung |
-|-------------|-------|--------------|
+|------|||
 | TSC-0010 | Systembeschreibung | Beschreibung des Service-Systems und seiner Grenzen |
 | TSC-0020 | System-Boundaries | Definition der System-Grenzen und Schnittstellen |
 | TSC-0030 | System-Komponenten | Infrastruktur, Software, Personen, Prozesse, Daten |
@@ -21,7 +21,7 @@ Das TSC-Handbuch der [TODO] umfasst strukturierte Dokumente, die alle fünf Trus
 ### Common Criteria - Security (Pflicht für alle SOC 2, 0100-0150)
 
 | Dokument-ID | Titel | Beschreibung |
-|-------------|-------|--------------|
+|------|||
 | TSC-0100 | CC1: Control Environment | Organisationsstruktur, Integrität, Ethik |
 | TSC-0110 | CC2: Communication | Kommunikation von Zielen und Verantwortlichkeiten |
 | TSC-0120 | CC3: Risk Assessment | Risikobewertungsprozess |
@@ -32,7 +32,7 @@ Das TSC-Handbuch der [TODO] umfasst strukturierte Dokumente, die alle fünf Trus
 ### Availability Criteria (Optional, 0200-0230)
 
 | Dokument-ID | Titel | Beschreibung |
-|-------------|-------|--------------|
+|------|||
 | TSC-0200 | A1.1: Availability Commitments | Verfügbarkeitszusagen und SLAs |
 | TSC-0210 | A1.2: System Monitoring | Überwachung der Systemverfügbarkeit |
 | TSC-0220 | A1.3: Incident Management | Incident-Response für Verfügbarkeitsprobleme |
@@ -41,7 +41,7 @@ Das TSC-Handbuch der [TODO] umfasst strukturierte Dokumente, die alle fünf Trus
 ### Processing Integrity Criteria (Optional, 0240-0270)
 
 | Dokument-ID | Titel | Beschreibung |
-|-------------|-------|--------------|
+|------|||
 | TSC-0240 | PI1.1: Processing Commitments | Zusagen zur Verarbeitungsintegrität |
 | TSC-0250 | PI1.2: Input Validation | Validierung von Eingabedaten |
 | TSC-0260 | PI1.3: Processing Controls | Kontrollen während der Verarbeitung |
@@ -50,7 +50,7 @@ Das TSC-Handbuch der [TODO] umfasst strukturierte Dokumente, die alle fünf Trus
 ### Confidentiality Criteria (Optional, 0280-0310)
 
 | Dokument-ID | Titel | Beschreibung |
-|-------------|-------|--------------|
+|------|||
 | TSC-0280 | C1.1: Confidentiality Commitments | Vertraulichkeitszusagen |
 | TSC-0290 | C1.2: Access Controls | Zugriffskontrolle für vertrauliche Daten |
 | TSC-0300 | C1.3: Encryption | Verschlüsselung vertraulicher Daten |
@@ -59,7 +59,7 @@ Das TSC-Handbuch der [TODO] umfasst strukturierte Dokumente, die alle fünf Trus
 ### Privacy Criteria (Optional, 0320-0350)
 
 | Dokument-ID | Titel | Beschreibung |
-|-------------|-------|--------------|
+|------|||
 | TSC-0320 | P1: Notice and Communication | Datenschutzhinweise |
 | TSC-0330 | P2-P3: Choice and Consent | Einwilligung und Wahlmöglichkeiten |
 | TSC-0340 | P4-P5: Collection and Use | Datenerhebung und -verwendung |
@@ -68,7 +68,7 @@ Das TSC-Handbuch der [TODO] umfasst strukturierte Dokumente, die alle fünf Trus
 ### Appendices (Anhänge, 0400-0450)
 
 | Dokument-ID | Titel | Beschreibung |
-|-------------|-------|--------------|
+|------|||
 | TSC-0400 | Control Matrix | Vollständige TSC-Kontrollmatrix |
 | TSC-0410 | Evidence Documentation | Nachweisdokumentation für Audits |
 | TSC-0420 | Test Results | Ergebnisse der Kontrolltests |
@@ -104,7 +104,7 @@ Alle Templates enthalten `[TODO]`-Markierungen für organisationsspezifische Anp
 ### Common Criteria (CC) - Pflicht für alle SOC 2
 
 | TSC Criterion | TSC-Dokument | Beschreibung |
-|---------------|--------------|--------------|
+|-|||
 | CC1: Control Environment | TSC-0100 | Organisationsstruktur und Integrität |
 | CC2: Communication | TSC-0110 | Kommunikation von Zielen |
 | CC3: Risk Assessment | TSC-0120 | Risikobewertung |
@@ -118,7 +118,7 @@ Alle Templates enthalten `[TODO]`-Markierungen für organisationsspezifische Anp
 ### Optional Categories
 
 | Category | TSC-Dokumente | Beschreibung |
-|----------|---------------|--------------|
+|---|-||
 | Availability (A) | TSC-0200 - TSC-0230 | Systemverfügbarkeit |
 | Processing Integrity (PI) | TSC-0240 - TSC-0270 | Verarbeitungsintegrität |
 | Confidentiality (C) | TSC-0280 - TSC-0310 | Vertraulichkeit |
@@ -256,17 +256,3 @@ Bei Fragen oder Problemen:
 **Version:** 1.0.0  
 **Letzte Aktualisierung:** 2026-02-07  
 **Maintainer:** TSC-Template-Team
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | [TODO] | {{ meta.defaults.author }} | Initiale Erstellung |
-
-## Versionshistorie
-
-| Version | Datum | Änderungen |
-|---------|-------|------------|
-| 0.1 | {{meta.document.last_updated}} | Initiale Erstellung |

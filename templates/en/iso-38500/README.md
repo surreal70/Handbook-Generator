@@ -125,10 +125,5 @@ See `FRAMEWORK_MAPPING.md` for detailed mapping of templates to ISO/IEC 38500 pr
 ## License
 
 These templates are based on ISO/IEC 38500:2015. The standard itself is copyrighted.
-
-## Version History
-
-| Version | Date | Changes |
-|---------|------|---------|
+||---|
 | 1.0 | 2024 | Initial version based on ISO/IEC 38500:2015 |
-

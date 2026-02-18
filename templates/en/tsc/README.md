@@ -11,7 +11,7 @@ The TSC handbook for [TODO] includes structured documents covering all five Trus
 ### Foundation (0010-0050)
 
 | Document ID | Title | Description |
-|-------------|-------|-------------|
+|-|-|-|
 | TSC-0010 | System Description | Description of the service system and its boundaries |
 | TSC-0020 | System Boundaries | Definition of system boundaries and interfaces |
 | TSC-0030 | System Components | Infrastructure, software, people, processes, data |
@@ -21,7 +21,7 @@ The TSC handbook for [TODO] includes structured documents covering all five Trus
 ### Common Criteria - Security (Required for all SOC 2, 0100-0150)
 
 | Document ID | Title | Description |
-|-------------|-------|-------------|
+|-|-|-|
 | TSC-0100 | CC1: Control Environment | Organizational structure, integrity, ethics |
 | TSC-0110 | CC2: Communication | Communication of objectives and responsibilities |
 | TSC-0120 | CC3: Risk Assessment | Risk assessment process |
@@ -32,7 +32,7 @@ The TSC handbook for [TODO] includes structured documents covering all five Trus
 ### Availability Criteria (Optional, 0200-0230)
 
 | Document ID | Title | Description |
-|-------------|-------|-------------|
+|-|-|-|
 | TSC-0200 | A1.1: Availability Commitments | Availability commitments and SLAs |
 | TSC-0210 | A1.2: System Monitoring | System availability monitoring |
 | TSC-0220 | A1.3: Incident Management | Incident response for availability issues |
@@ -41,7 +41,7 @@ The TSC handbook for [TODO] includes structured documents covering all five Trus
 ### Processing Integrity Criteria (Optional, 0240-0270)
 
 | Document ID | Title | Description |
-|-------------|-------|-------------|
+|-|-|-|
 | TSC-0240 | PI1.1: Processing Commitments | Processing integrity commitments |
 | TSC-0250 | PI1.2: Input Validation | Input data validation |
 | TSC-0260 | PI1.3: Processing Controls | Controls during processing |
@@ -50,7 +50,7 @@ The TSC handbook for [TODO] includes structured documents covering all five Trus
 ### Confidentiality Criteria (Optional, 0280-0310)
 
 | Document ID | Title | Description |
-|-------------|-------|-------------|
+|-|-|-|
 | TSC-0280 | C1.1: Confidentiality Commitments | Confidentiality commitments |
 | TSC-0290 | C1.2: Access Controls | Access control for confidential data |
 | TSC-0300 | C1.3: Encryption | Encryption of confidential data |
@@ -59,7 +59,7 @@ The TSC handbook for [TODO] includes structured documents covering all five Trus
 ### Privacy Criteria (Optional, 0320-0350)
 
 | Document ID | Title | Description |
-|-------------|-------|-------------|
+|-|-|-|
 | TSC-0320 | P1: Notice and Communication | Privacy notices |
 | TSC-0330 | P2-P3: Choice and Consent | Consent and choices |
 | TSC-0340 | P4-P5: Collection and Use | Data collection and use |
@@ -68,7 +68,7 @@ The TSC handbook for [TODO] includes structured documents covering all five Trus
 ### Appendices (0400-0450)
 
 | Document ID | Title | Description |
-|-------------|-------|-------------|
+|-|-|-|
 | TSC-0400 | Control Matrix | Complete TSC control matrix |
 | TSC-0410 | Evidence Documentation | Evidence documentation for audits |
 | TSC-0420 | Test Results | Control test results |
@@ -104,7 +104,7 @@ All templates contain `[TODO]` markers for organization-specific customization:
 ### Common Criteria (CC) - Required for all SOC 2
 
 | TSC Criterion | TSC Document | Description |
-|---------------|--------------|-------------|
+|---|--|-|
 | CC1: Control Environment | TSC-0100 | Organizational structure and integrity |
 | CC2: Communication | TSC-0110 | Communication of objectives |
 | CC3: Risk Assessment | TSC-0120 | Risk assessment |
@@ -118,7 +118,7 @@ All templates contain `[TODO]` markers for organization-specific customization:
 ### Optional Categories
 
 | Category | TSC Documents | Description |
-|----------|---------------|-------------|
+|----|---|-|
 | Availability (A) | TSC-0200 - TSC-0230 | System availability |
 | Processing Integrity (PI) | TSC-0240 - TSC-0270 | Processing integrity |
 | Confidentiality (C) | TSC-0280 - TSC-0310 | Confidentiality |
@@ -256,17 +256,3 @@ For questions or issues:
 **Version:** 1.0.0  
 **Last Updated:** 2026-02-07  
 **Maintainer:** TSC-Template-Team
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | [TODO] | {{ meta.defaults.author }} | Initial Creation |
-
-## Version History
-
-| Version | Date | Changes |
-|---------|------|---------|
-| 0.1 | {{meta.document.last_updated}} | Initial creation |

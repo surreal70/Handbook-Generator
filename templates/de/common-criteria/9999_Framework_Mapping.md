@@ -4,11 +4,12 @@
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}
-**Revision:** {{ meta-handbook.revision }}
+**Revision:** [TODO]
 **Author:** {{ meta-handbook.author }}
 **Status:** {{ meta-handbook.status }}
 **Klassifizierung:** {{ meta-handbook.classification }}
 **Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+**Template Version:** [TODO]
 
 ---
 
@@ -30,25 +31,29 @@ Der Common Criteria Standard besteht aus drei Teilen:
 
 ### Teil 1: ST-Einführung (ISO/IEC 15408-1, Abschnitt 8.1)
 
+Der ST-Einführungsabschnitt bietet Identifikations- und Übersichtsinformationen über das Security Target und den TOE.
+
 | Template | ISO/IEC 15408-1 Referenz | Beschreibung |
 |----------|---------------------------|--------------|
-| 0010_ST_Introduction.md | Abschnitt 8.1.1 | ST-Identifikation, ST-Überblick, ST-Konventionen |
-| 0020_TOE_Overview.md | Abschnitt 8.1.2 | TOE-Überblick und allgemeine Beschreibung |
+| 0010_ST_Introduction.md | Abschnitt 8.1.1 | ST Introduction: ST-Identifikation, ST-Überblick, ST-Konventionen |
+| 0020_TOE_Overview.md | Abschnitt 8.1.2 | TOE Overview: Allgemeine Beschreibung und Überblick über das Evaluierungsobjekt |
 | 0030_TOE_Description_Summary.md | Abschnitt 8.1.2 | Zusammenfassung der TOE-Beschreibung |
-| 0040_Conformance_Claims.md | Abschnitt 8.1.3 | CC-Konformitätsanspruch, PP-Konformitätsanspruch, Paket-Konformitätsanspruch |
-| 0050_Document_Conventions.md | Abschnitt 8.1.4 | Notation, Terminologie und Konventionen |
+| 0040_Conformance_Claims.md | Abschnitt 8.1.3 | Conformance Claims: CC-Konformitätsanspruch, PP-Konformitätsanspruch, Paket-Konformitätsanspruch |
+| 0050_Document_Conventions.md | Abschnitt 8.1.4 | Document Conventions: Notation, Terminologie und Konventionen |
 
-### Teil 2: TOE-Beschreibung (ISO/IEC 15408-1, Abschnitt 8.2)
+### Teil 2: TOE-Beschreibung / TOE Description (ISO/IEC 15408-1, Abschnitt 8.2)
+
+Der TOE-Beschreibungsabschnitt bietet detaillierte Informationen über das Evaluierungsobjekt.
 
 | Template | ISO/IEC 15408-1 Referenz | Beschreibung |
 |----------|---------------------------|--------------|
-| 0100_TOE_Physical_Scope.md | Abschnitt 8.2.1 | Physischer Umfang des TOE (Hardware, Software, Firmware, Anleitungen) |
-| 0110_TOE_Logical_Scope.md | Abschnitt 8.2.2 | Logischer Umfang des TOE (Sicherheitsfunktionen und -merkmale) |
-| 0120_TOE_Interfaces.md | Abschnitt 8.2.3 | TOE-Schnittstellen (Benutzer, Administrator, externe Systeme) |
-| 0130_TOE_Architecture.md | Abschnitt 8.2.4 | TOE-Architektur und Subsysteme |
-| 0140_TOE_Lifecycle.md | Abschnitt 8.2.5 | TOE-Lebenszyklus (Entwicklung, Bereitstellung, Betrieb, Wartung) |
+| 0100_TOE_Physical_Scope.md | Abschnitt 8.2.1 | Physical Scope: Physischer Umfang des TOE (Hardware, Software, Firmware, Anleitungen) |
+| 0110_TOE_Logical_Scope.md | Abschnitt 8.2.2 | Logical Scope: Logischer Umfang des TOE (Sicherheitsfunktionen und -merkmale) |
+| 0120_TOE_Interfaces.md | Abschnitt 8.2.3 | Interfaces: TOE-Schnittstellen (Benutzer, Administrator, externe Systeme) |
+| 0130_TOE_Architecture.md | Abschnitt 8.2.4 | Architecture: TOE-Architektur und Subsysteme |
+| 0140_TOE_Lifecycle.md | Abschnitt 8.2.5 | Lifecycle: TOE-Lebenszyklus (Entwicklung, Bereitstellung, Betrieb, Wartung) |
 
-### Teil 3: Sicherheitsproblem-Definition (ISO/IEC 15408-1, Abschnitt 8.3)
+### Teil 3: Sicherheitsproblem-Definition / Security Problem Definition (ISO/IEC 15408-1, Abschnitt 8.3)
 
 | Template | ISO/IEC 15408-1 Referenz | Beschreibung |
 |----------|---------------------------|--------------|
@@ -58,7 +63,7 @@ Der Common Criteria Standard besteht aus drei Teilen:
 | 0230_Assumptions.md | Abschnitt 8.3.3 | Annahmen über die Betriebsumgebung |
 | 0240_Threat_Agents_and_Assets.md | Abschnitt 8.3.1 | Bedrohungsakteure (Angreifer) und zu schützende Assets |
 
-### Teil 4: Sicherheitsziele (ISO/IEC 15408-1, Abschnitt 8.4)
+### Teil 4: Sicherheitsziele / Security Objectives (ISO/IEC 15408-1, Abschnitt 8.4)
 
 | Template | ISO/IEC 15408-1 Referenz | Beschreibung |
 |----------|---------------------------|--------------|
@@ -67,7 +72,7 @@ Der Common Criteria Standard besteht aus drei Teilen:
 | 0320_Security_Objectives_Coverage_Matrix.md | Abschnitt 8.4.3 | Begründung der Sicherheitsziele und Abdeckungsmatrix |
 | 0330_Security_Objectives_Summary.md | Abschnitt 8.4 | Zusammenfassung der Sicherheitsziele |
 
-### Teil 5: Sicherheitsanforderungen (ISO/IEC 15408-1, Abschnitt 8.5)
+### Teil 5: Sicherheitsanforderungen / Security Requirements (ISO/IEC 15408-1, Abschnitt 8.5)
 
 | Template | ISO/IEC 15408-1 Referenz | Beschreibung |
 |----------|---------------------------|--------------|
@@ -77,15 +82,17 @@ Der Common Criteria Standard besteht aus drei Teilen:
 | 0430_SFR_Dependencies.md | Abschnitt 8.5.3 | SFR-Abhängigkeiten und deren Erfüllung |
 | 0440_Coverage_Matrix.md | Abschnitt 8.5.3 | Anforderungs-Abdeckungsmatrix (SFRs/Ziele) |
 
-### Teil 6: TOE-Zusammenfassende Spezifikation (ISO/IEC 15408-1, Abschnitt 8.6)
+### Teil 6: TOE-Zusammenfassende Spezifikation / TOE Summary Specification (ISO/IEC 15408-1, Abschnitt 8.6)
+
+Die TOE-Zusammenfassende Spezifikation beschreibt, wie der TOE die Sicherheitsanforderungen erfüllt.
 
 | Template | ISO/IEC 15408-1 Referenz | Beschreibung |
 |----------|---------------------------|--------------|
 | 0500_TOE_Summary_Specification.md | Abschnitt 8.6 | Überblick über die zusammenfassende TOE-Spezifikation |
-| 0510_Assurance_Measures.md | Abschnitt 8.6.2 | Vertrauenswürdigkeitsmaßnahmen |
-| 0520_Functions_Rationale.md | Abschnitt 8.6.3 | Begründung der TOE-Sicherheitsfunktionen |
+| 0510_Assurance_Measures.md | Abschnitt 8.6.2 | Assurance Measures: Vertrauenswürdigkeitsmaßnahmen, die im TOE implementiert sind |
+| 0520_Functions_Rationale.md | Abschnitt 8.6.3 | Functions Rationale: Begründung der TOE-Sicherheitsfunktionen |
 | 0530_Coverage_Matrix.md | Abschnitt 8.6.3 | Funktions-Abdeckungsmatrix (TSFs/SFRs) |
-| 0540_Strength_of_Function.md | Abschnitt 8.6.1 | Funktionsstärke-Ansprüche |
+| 0540_Strength_of_Function.md | Abschnitt 8.6.1 | Strength of Function: Funktionsstärke-Ansprüche |
 
 ### Teil 7: Anhänge und unterstützende Dokumentation
 

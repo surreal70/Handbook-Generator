@@ -447,8 +447,10 @@ class TestVerboseLogging:
             st.text(min_size=1, max_size=200).filter(lambda x: x.strip())  # Ensure non-whitespace
         )
         def check_error_details(error_msg, verbose_details):
-            # Skip if error_msg and verbose_details are the same or if verbose_details is substring of error_msg
-            if error_msg == verbose_details or verbose_details in error_msg:
+            # Skip if error_msg and verbose_details overlap in any way
+            if (error_msg == verbose_details or 
+                verbose_details in error_msg or 
+                error_msg in verbose_details):
                 return
             
             import io

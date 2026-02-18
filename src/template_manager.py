@@ -241,8 +241,10 @@ class TemplateManager:
                             templates[language][service_category] = service_files
                 else:
                     # Collect all .md files in the category directory
+                    # Skip special documentation files
                     for template_file in category_dir.glob('*.md'):
-                        template_files.append(template_file)
+                        if template_file.name not in ['README.md', '9999_Framework_Mapping.md']:
+                            template_files.append(template_file)
                     
                     if template_files:
                         templates[language][category] = template_files

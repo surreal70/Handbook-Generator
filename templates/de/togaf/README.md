@@ -157,12 +157,6 @@ Für Fragen oder Vorschläge zu diesen Vorlagen:
 - Reichen Sie Feedback über das Architecture Repository ein
 - Nehmen Sie an Architecture Governance-Meetings teil
 
-## Versionshistorie
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 1.0 | [Date] | [Author] | Initiales Vorlagenset |
-
 ---
 
 *Diese Vorlagen basieren auf TOGAF 9.2 und sollten an die spezifischen Bedürfnisse und den Kontext Ihrer Organisation angepasst werden.*

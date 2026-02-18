@@ -157,12 +157,6 @@ For questions or suggestions about these templates:
 - Submit feedback through the architecture repository
 - Participate in architecture governance meetings
 
-## Version History
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 1.0 | [Date] | [Author] | Initial template set |
-
 ---
 
 *These templates are based on TOGAF 9.2 and should be adapted to your organization's specific needs and context.*

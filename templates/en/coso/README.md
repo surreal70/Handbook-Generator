@@ -137,9 +137,5 @@ For questions about using these templates or the COSO Framework:
 
 - **Version 1.0** - Initial template collection
 - Updates are noted in the document header of each template
-
-## Version History
-
-| Version | Date | Changes |
-|---------|------|---------|
+||---|
 | 0.1 | {{meta.document.last_updated}} | Initial creation |

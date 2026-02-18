@@ -11,11 +11,12 @@ Classification: Internal
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Genehmigt durch:** {{ meta-handbook.approver }}
-**Revision:** {{ meta-handbook.revision }}
+**Revision:** [TODO]
 **Author:** {{ meta-handbook.author }}
 **Status:** {{ meta-handbook.status }}
 **Klassifizierung:** {{ meta-handbook.classification }}
 **Letzte Aktualisierung:** {{ meta-handbook.modifydate }}
+**Template Version:** [TODO]
 
 ---
 

@@ -373,17 +373,3 @@ These templates are intended for internal use within your organization. You are 
 **Version:** 1.0.0  
 **Last Updated:** 2024-01-31  
 **Maintainer:** IT Operations Team
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | {{ meta-handbook.last_updated }} | {{ meta-handbook.author }} | Initial Creation |
-
-## Version History
-
-| Version | Date | Changes |
-|---------|------|---------|
-| 0.1 | {{meta-handbook.last_updated}} | Initial creation |

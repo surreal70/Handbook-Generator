@@ -4,11 +4,12 @@
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}
-**Revision:** {{ meta-handbook.revision }}
+**Revision:** [TODO]
 **Author:** {{ meta-handbook.author }}
 **Status:** {{ meta-handbook.status }}
 **Classification:** {{ meta-handbook.classification }}
 **Last Update:** {{ meta-handbook.modifydate }}
+**Template Version:** [TODO]
 
 ---
 

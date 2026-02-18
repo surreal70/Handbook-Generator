@@ -11,7 +11,7 @@ The PCI-DSS handbook of [TODO] comprises structured documents covering all 12 PC
 ### Foundation (0010-0050)
 
 | Document ID | Title | Description |
-|-------------|-------|-------------|
+|-|-|-|
 | PCI-0010 | Scope and CDE Definition | Definition of Cardholder Data Environment (CDE) and scope |
 | PCI-0020 | Network Segmentation | Documentation of network segmentation and CDE isolation |
 | PCI-0030 | Roles and Responsibilities | PCI-DSS-specific roles and RACI matrices |
@@ -21,7 +21,7 @@ The PCI-DSS handbook of [TODO] comprises structured documents covering all 12 PC
 ### Build and Maintain Secure Network (Requirements 1-2, 0100-0150)
 
 | Document ID | Title | Description |
-|-------------|-------|-------------|
+|-|-|-|
 | PCI-0100 | Firewall Configuration | Firewall and router configuration standards (Req 1) |
 | PCI-0110 | Network Access Control | Network-level access control |
 | PCI-0120 | System Hardening | Secure system configuration (Req 2) |
@@ -31,7 +31,7 @@ The PCI-DSS handbook of [TODO] comprises structured documents covering all 12 PC
 ### Protect Cardholder Data (Requirements 3-4, 0200-0250)
 
 | Document ID | Title | Description |
-|-------------|-------|-------------|
+|-|-|-|
 | PCI-0200 | Data Storage | Protection of stored cardholder data (Req 3) |
 | PCI-0210 | Encryption | Encryption standards and key management |
 | PCI-0220 | Data Transmission | Protection during transmission over public networks (Req 4) |
@@ -41,7 +41,7 @@ The PCI-DSS handbook of [TODO] comprises structured documents covering all 12 PC
 ### Maintain Vulnerability Management (Requirements 5-6, 0300-0350)
 
 | Document ID | Title | Description |
-|-------------|-------|-------------|
+|-|-|-|
 | PCI-0300 | Malware Protection | Anti-malware programs and processes (Req 5) |
 | PCI-0310 | Patch Management | Security patches and updates (Req 6) |
 | PCI-0320 | Secure Development | Secure software development |
@@ -51,7 +51,7 @@ The PCI-DSS handbook of [TODO] comprises structured documents covering all 12 PC
 ### Implement Strong Access Control (Requirements 7-9, 0400-0450)
 
 | Document ID | Title | Description |
-|-------------|-------|-------------|
+|-|-|-|
 | PCI-0400 | Access Control | Need-to-know principle (Req 7) |
 | PCI-0410 | Authentication | User identification and authentication (Req 8) |
 | PCI-0420 | Multi-Factor Authentication | MFA for CDE access |
@@ -61,7 +61,7 @@ The PCI-DSS handbook of [TODO] comprises structured documents covering all 12 PC
 ### Monitor and Test Networks (Requirements 10-11, 0500-0550)
 
 | Document ID | Title | Description |
-|-------------|-------|-------------|
+|-|-|-|
 | PCI-0500 | Logging and Monitoring | Logging of all access (Req 10) |
 | PCI-0510 | Log Review | Daily log review |
 | PCI-0520 | Security Testing | Regular security testing (Req 11) |
@@ -71,7 +71,7 @@ The PCI-DSS handbook of [TODO] comprises structured documents covering all 12 PC
 ### Maintain Information Security Policy (Requirement 12, 0600-0650)
 
 | Document ID | Title | Description |
-|-------------|-------|-------------|
+|-|-|-|
 | PCI-0600 | Security Policy | Information security policy (Req 12) |
 | PCI-0610 | Risk Assessment | Annual risk assessment |
 | PCI-0620 | Training Program | Security awareness training |
@@ -81,7 +81,7 @@ The PCI-DSS handbook of [TODO] comprises structured documents covering all 12 PC
 ### Appendices (0700-0750)
 
 | Document ID | Title | Description |
-|-------------|-------|-------------|
+|-|-|-|
 | PCI-0700 | Compliance Evidence | Documentation for audits |
 | PCI-0710 | Scan Reports | Quarterly vulnerability scan reports |
 | PCI-0720 | Penetration Test Reports | Annual penetration test documentation |
@@ -115,7 +115,7 @@ All templates contain `[TODO]` markers for organization-specific customizations:
 ## PCI-DSS v4.0 Compliance Mapping
 
 | PCI-DSS Requirement | PCI Document | Description |
-|---------------------|--------------|-------------|
+|---|--|-|
 | Req 1: Firewall Configuration | PCI-0100, PCI-0110 | Firewall and network security |
 | Req 2: Secure Configuration | PCI-0120, PCI-0130, PCI-0140 | System hardening |
 | Req 3: Protect Stored Data | PCI-0200, PCI-0210, PCI-0230 | Data storage |
@@ -233,17 +233,3 @@ For questions or issues:
 **Version:** 1.0.0  
 **Last Updated:** 2026-02-06  
 **Maintainer:** PCI-DSS Template Team
-
----
-
-**Document History:**
-
-| Version | Date | Author | Changes |
-|---------|------|--------|---------|
-| 0.1 | [TODO] | {{ meta.defaults.author }} | Initial Creation |
-
-## Version History
-
-| Version | Date | Changes |
-|---------|------|---------|
-| 0.1 | {{meta.document.last_updated}} | Initial creation |

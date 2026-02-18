@@ -439,7 +439,8 @@ class TestMetadataTemplates:
                     f'0001_metadata_{language}_{template_name}.md',  # Wrong number
                     f'metadata_{language}_{template_name}.md',  # Missing number
                     f'0000_{language}_{template_name}.md',  # Missing 'metadata'
-                    f'0000_metadata_{template_name}.md',  # Missing language
+                    f'0000_metadata_xxx_{template_name}.md',  # Invalid language code (3 letters)
+                    f'0000_metadata_1_{template_name}.md',  # Invalid language code (1 letter)
                     f'{template_name}.md',  # Just name
                 ]
                 filename = random.choice(invalid_formats)

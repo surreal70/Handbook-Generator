@@ -3,7 +3,7 @@
 <div align="center">
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
-[![Version](https://img.shields.io/badge/version-0.0.12-orange.svg)](about_versioning/VERSION.md)
+[![Version](https://img.shields.io/badge/version-0.0.16-orange.svg)](about_versioning/VERSION.md)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Code Coverage](https://img.shields.io/badge/coverage-84%25-brightgreen.svg)](htmlcov/index.html)
 [![Tests](https://img.shields.io/badge/tests-765%20passed-success.svg)](tests/)
@@ -23,7 +23,7 @@ A Python tool for generating professional handbooks from Markdown templates with
 
 ## ⚠️ Important Notice
 
-**This is an intermediate development release (0.0.11) and NOT intended for production use.**
+**This is an intermediate development release (0.0.16) and NOT intended for production use.**
 
 This version contains:
 - Experimental Quality Control System
@@ -39,7 +39,7 @@ See [Release Notes](about_versioning/VERSION_0.0.12_RELEASE_NOTES.md) for detail
 
 The Handbook Generator creates professional handbooks in various formats (HTML, PDF, Markdown) from structured Markdown templates. The system replaces placeholders in templates with real data from external systems like NetBox and supports multilingual handbooks.
 
-**Version 0.0.12** - ⚠️ Intermediate Development Release - NOT FOR PRODUCTION
+**Version 0.0.16** - ⚠️ Intermediate Development Release - NOT FOR PRODUCTION
 
 ## Features
 
@@ -666,8 +666,6 @@ Comprehensive documentation can be found in the `docs/` directory:
 
 - **[OUTPUT_FORMATS_GUIDE.md](docs/OUTPUT_FORMATS_GUIDE.md)** - Detailed guide to all output formats (Separate Markdown, PDF with TOC, HTML)
 - **[FRAMEWORK_MAPPING.md](docs/FRAMEWORK_MAPPING.md)** - Framework compliance mappings (ISO 22301, ISO 27001, BSI, ITIL)
-- **[MIGRATION_GUIDE.md](docs/MIGRATION_GUIDE.md)** - Migration guide for existing users
-- **[ROLE_CLEANUP_MIGRATION.md](docs/ROLE_CLEANUP_MIGRATION.md)** - Migration guide for role cleanup (datenschutzbeauftragter → data_protection_officer)
 - **[DOCUMENT_HISTORY_GUIDE.md](docs/DOCUMENT_HISTORY_GUIDE.md)** - Guide to standardized document history in templates
 - **[PDF_GENERATION_GUIDE.md](docs/PDF_GENERATION_GUIDE.md)** - Detailed guide for PDF generation
 - **[PDF_GENERATION_SUMMARY.md](docs/PDF_GENERATION_SUMMARY.md)** - PDF generation summary

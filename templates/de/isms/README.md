@@ -30,7 +30,7 @@ Diese Struktur ermöglicht:
 ### Ebene 1: Basis-ISMS (0010-0160)
 
 | Dokument-ID | Titel | Beschreibung |
-|-------------|-------|--------------|
+|------|||
 | ISMS-0010 | Informationssicherheitsleitlinie | Top-Level ISMS Policy, Management Commitment |
 | ISMS-0020 | Geltungsbereich (Scope) | ISMS Scope Definition, Boundaries |
 | ISMS-0030 | Kontext und Interessierte Parteien | Context of Organization, Stakeholders |
@@ -53,7 +53,7 @@ Diese Struktur ermöglicht:
 High-Level-Sicherheitsrichtlinien für 25 Themenbereiche:
 
 | Dokument-ID | Titel | Annex A Mapping |
-|-------------|-------|-----------------|
+|------||---|
 | ISMS-0200 | Policy: Akzeptable Nutzung IT | A.5.10 |
 | ISMS-0220 | Policy: Zugriffssteuerung und Identitätsmanagement | A.5.15, A.5.16, A.5.18 |
 | ISMS-0240 | Policy: Authentisierung und Passwörter | A.5.17, A.8.5 |
@@ -85,7 +85,7 @@ High-Level-Sicherheitsrichtlinien für 25 Themenbereiche:
 Detaillierte Implementierungsrichtlinien für jede Policy:
 
 | Dokument-ID | Titel | Zugehörige Policy |
-|-------------|-------|-------------------|
+|------||-----|
 | ISMS-0210 | Richtlinie: Akzeptable Nutzung IT | 0200 |
 | ISMS-0230 | Richtlinie: IAM, Joiner-Mover-Leaver, Zugriffsanträge | 0220 |
 | ISMS-0250 | Richtlinie: MFA, Passwortregeln, Session Management | 0240 |
@@ -115,7 +115,7 @@ Detaillierte Implementierungsrichtlinien für jede Policy:
 ### Anhänge (0710-0740)
 
 | Dokument-ID | Titel | Beschreibung |
-|-------------|-------|--------------|
+|------|||
 | ISMS-0710 | Anhang: Annex A Mapping | Vollständiges Mapping aller 93 Annex A Controls |
 | ISMS-0720 | Anhang: Asset- und Systeminventar | Asset Inventory Template |
 | ISMS-0730 | Anhang: Datenflüsse und Schnittstellen | Data Flow Diagrams |
@@ -163,7 +163,7 @@ Alle Templates enthalten `[TODO]`-Markierungen für organisationsspezifische Anp
 ### Hauptklauseln
 
 | ISO 27001 Klausel | ISMS-Dokument | Beschreibung |
-|-------------------|---------------|--------------|
+|-----|-||
 | 4.1 Understanding the organization | ISMS-0030 | Kontext der Organisation |
 | 4.2 Understanding needs of interested parties | ISMS-0030 | Interessierte Parteien |
 | 4.3 Determining the scope | ISMS-0020 | ISMS Scope |
@@ -487,17 +487,3 @@ Bei Fragen oder Problemen:
 **Version:** 1.0.0  
 **Letzte Aktualisierung:** 2026-02-02  
 **Maintainer:** ISMS-Template-Team
-
----
-
-**Dokumenthistorie:**
-
-| Version | Datum | Autor | Änderungen |
-|---------|-------|-------|------------|
-| 0.1 | [TODO] | {{ meta.defaults.author }} | Initiale Erstellung |
-
-## Versionshistorie
-
-| Version | Datum | Änderungen |
-|---------|-------|------------|
-| 0.1 | {{meta.document.last_updated}} | Initiale Erstellung |

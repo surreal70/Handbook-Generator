@@ -4,11 +4,12 @@
 **Organisation:** {{ meta-organisation.name }}
 **Owner:** {{ meta-handbook.owner }}
 **Approved by:** {{ meta-handbook.approver }}
-**Revision:** {{ meta-handbook.revision }}
+**Revision:** [TODO]
 **Author:** {{ meta-handbook.author }}
 **Status:** {{ meta-handbook.status }}
 **Classification:** {{ meta-handbook.classification }}
 **Last Update:** {{ meta-handbook.modifydate }}
+**Template Version:** [TODO]
 
 ---
 
@@ -30,23 +31,27 @@ The Common Criteria standard consists of three parts:
 
 ### Part 1: ST Introduction (ISO/IEC 15408-1, Section 8.1)
 
+The ST Introduction section provides identification and overview information about the Security Target and TOE.
+
 | Template | ISO/IEC 15408-1 Reference | Description |
 |----------|---------------------------|-------------|
-| 0010_ST_Introduction.md | Section 8.1.1 | ST identification, ST overview, ST conventions |
-| 0020_TOE_Overview.md | Section 8.1.2 | TOE overview and general description |
+| 0010_ST_Introduction.md | Section 8.1.1 | ST Introduction: ST identification, ST overview, ST conventions |
+| 0020_TOE_Overview.md | Section 8.1.2 | TOE Overview: General description and overview of the Target of Evaluation |
 | 0030_TOE_Description_Summary.md | Section 8.1.2 | Summary of TOE description |
-| 0040_Conformance_Claims.md | Section 8.1.3 | CC conformance claim, PP conformance claim, Package conformance claim |
-| 0050_Document_Conventions.md | Section 8.1.4 | Notation, terminology, and conventions |
+| 0040_Conformance_Claims.md | Section 8.1.3 | Conformance Claims: CC conformance claim, PP conformance claim, Package conformance claim |
+| 0050_Document_Conventions.md | Section 8.1.4 | Document Conventions: Notation, terminology, and conventions |
 
 ### Part 2: TOE Description (ISO/IEC 15408-1, Section 8.2)
 
+The TOE Description section provides detailed information about the Target of Evaluation.
+
 | Template | ISO/IEC 15408-1 Reference | Description |
 |----------|---------------------------|-------------|
-| 0100_TOE_Physical_Scope.md | Section 8.2.1 | Physical scope of the TOE (hardware, software, firmware, guidance) |
-| 0110_TOE_Logical_Scope.md | Section 8.2.2 | Logical scope of the TOE (security features and functions) |
-| 0120_TOE_Interfaces.md | Section 8.2.3 | TOE interfaces (user, administrator, external systems) |
-| 0130_TOE_Architecture.md | Section 8.2.4 | TOE architecture and subsystems |
-| 0140_TOE_Lifecycle.md | Section 8.2.5 | TOE lifecycle (development, deployment, operation, maintenance) |
+| 0100_TOE_Physical_Scope.md | Section 8.2.1 | Physical Scope: Physical scope of the TOE (hardware, software, firmware, guidance) |
+| 0110_TOE_Logical_Scope.md | Section 8.2.2 | Logical Scope: Logical scope of the TOE (security features and functions) |
+| 0120_TOE_Interfaces.md | Section 8.2.3 | Interfaces: TOE interfaces (user, administrator, external systems) |
+| 0130_TOE_Architecture.md | Section 8.2.4 | Architecture: TOE architecture and subsystems |
+| 0140_TOE_Lifecycle.md | Section 8.2.5 | Lifecycle: TOE lifecycle (development, deployment, operation, maintenance) |
 
 ### Part 3: Security Problem Definition (ISO/IEC 15408-1, Section 8.3)
 
@@ -79,13 +84,15 @@ The Common Criteria standard consists of three parts:
 
 ### Part 6: TOE Summary Specification (ISO/IEC 15408-1, Section 8.6)
 
+The TOE Summary Specification describes how the TOE meets the security requirements.
+
 | Template | ISO/IEC 15408-1 Reference | Description |
 |----------|---------------------------|-------------|
 | 0500_TOE_Summary_Specification.md | Section 8.6 | Overview of TOE summary specification |
-| 0510_Assurance_Measures.md | Section 8.6.2 | Assurance measures |
-| 0520_Functions_Rationale.md | Section 8.6.3 | TOE security functions rationale |
+| 0510_Assurance_Measures.md | Section 8.6.2 | Assurance Measures: Assurance measures implemented in the TOE |
+| 0520_Functions_Rationale.md | Section 8.6.3 | Functions Rationale: TOE security functions rationale |
 | 0530_Coverage_Matrix.md | Section 8.6.3 | Functions coverage matrix (TSFs/SFRs) |
-| 0540_Strength_of_Function.md | Section 8.6.1 | Strength of function claims |
+| 0540_Strength_of_Function.md | Section 8.6.1 | Strength of Function: Strength of function claims |
 
 ### Part 7: Appendices and Supporting Documentation
 

@@ -390,8 +390,8 @@ class TestServiceTemplateGenericity:
     
     def test_service_template_exists_in_both_languages(self):
         """Test that service description template exists in both languages."""
-        de_template = Path('templates/de/service-directory/service-templates/service_description_template.md')
-        en_template = Path('templates/en/service-directory/service-templates/service_description_template.md')
+        de_template = Path('services/de/service-templates/service_description_template.md')
+        en_template = Path('services/en/service-templates/service_description_template.md')
         
         assert de_template.exists(), "German service template should exist"
         assert en_template.exists(), "English service template should exist"
@@ -399,7 +399,7 @@ class TestServiceTemplateGenericity:
     def test_service_template_has_todo_markers(self):
         """Test that service templates contain [TODO] markers for customization."""
         for language in ['de', 'en']:
-            template_path = Path(f'templates/{language}/service-directory/service-templates/service_description_template.md')
+            template_path = Path(f'services/{language}/service-templates/service_description_template.md')
             content = template_path.read_text()
             
             # Should have multiple TODO markers
@@ -412,7 +412,7 @@ class TestServiceTemplateGenericity:
         import re
         
         for language in ['de', 'en']:
-            template_path = Path(f'templates/{language}/service-directory/service-templates/service_description_template.md')
+            template_path = Path(f'services/{language}/service-templates/service_description_template.md')
             content = template_path.read_text()
             
             # Should have meta placeholders
@@ -437,7 +437,7 @@ class TestServiceTemplateGenericity:
             'Kontakte'
         ]
         
-        de_template = Path('templates/de/service-directory/service-templates/service_description_template.md')
+        de_template = Path('services/de/service-templates/service_description_template.md')
         de_content = de_template.read_text()
         
         # Check for German sections
@@ -456,7 +456,7 @@ class TestServiceTemplateGenericity:
             'Contacts'
         ]
         
-        en_template = Path('templates/en/service-directory/service-templates/service_description_template.md')
+        en_template = Path('services/en/service-templates/service_description_template.md')
         en_content = en_template.read_text()
         
         for section in en_sections:
@@ -479,7 +479,7 @@ class TestServiceTemplateGenericity:
         
         Validates: Requirements 15.2, 15.3, 15.5
         """
-        de_template = Path('templates/de/service-directory/service-templates/service_description_template.md')
+        de_template = Path('services/de/service-templates/service_description_template.md')
         content = de_template.read_text()
         
         # Template should contain the section
@@ -521,7 +521,7 @@ class TestServiceTemplateGenericity:
         import tempfile
         import shutil
         
-        de_template = Path('templates/de/service-directory/service-templates/service_description_template.md')
+        de_template = Path('services/de/service-templates/service_description_template.md')
         content = de_template.read_text()
         
         # Create a temporary copy
@@ -564,7 +564,7 @@ class TestServiceTemplateGenericity:
         """Test that service template structure is preserved after customization."""
         import tempfile
         
-        de_template = Path('templates/de/service-directory/service-templates/service_description_template.md')
+        de_template = Path('services/de/service-templates/service_description_template.md')
         content = de_template.read_text()
         
         # Count original structure elements
@@ -1207,12 +1207,12 @@ class TestCompleteTemplateStructure:
         Validates: Requirements 2.1, 2.2, 2.3, 2.4, 2.5
         """
         # Check German service template
-        de_service_template = Path('templates/de/service-directory/service-templates/service_description_template.md')
+        de_service_template = Path('services/de/service-templates/service_description_template.md')
         assert de_service_template.exists(), \
             "German service description template should exist"
         
         # Check English service template
-        en_service_template = Path('templates/en/service-directory/service-templates/service_description_template.md')
+        en_service_template = Path('services/en/service-templates/service_description_template.md')
         assert en_service_template.exists(), \
             "English service description template should exist"
         
@@ -1322,15 +1322,15 @@ class TestCompleteTemplateStructure:
         Note: service-directory is a supplement to existing frameworks, not a framework itself.
         It's not required to exist in all languages and should not be tested for framework compliance.
         """
-        # English service-directory should exist (it's the primary version)
-        en_service_dir = Path('templates/en/service-directory')
-        assert en_service_dir.exists(), "English service-directory should exist"
-        assert en_service_dir.is_dir(), "English service-directory should be a directory"
+        # English services should exist (it's the primary version)
+        en_service_dir = Path('services/en')
+        assert en_service_dir.exists(), "English services directory should exist"
+        assert en_service_dir.is_dir(), "English services directory should be a directory"
         
-        # German service-directory is optional (not required as it's a supplement, not a framework)
-        de_service_dir = Path('templates/de/service-directory')
+        # German services is optional (not required as it's a supplement, not a framework)
+        de_service_dir = Path('services/de')
         if de_service_dir.exists():
-            assert de_service_dir.is_dir(), "If German service-directory exists, it should be a directory"
+            assert de_service_dir.is_dir(), "If German services directory exists, it should be a directory"
     
     def test_no_duplicate_template_numbers(self):
         """Test that there are no duplicate template numbers in each language."""

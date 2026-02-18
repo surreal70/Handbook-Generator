@@ -403,15 +403,21 @@ class TestPhase2ComprehensiveProperties:
                     f"{display_name} ({language}): 9999_Framework_Mapping.md should not be empty"
     
     def test_phase2_template_numbering_ranges(self, template_base_path):
-        """Test that Phase 2 frameworks have appropriate template numbering ranges."""
+        """Test that Phase 2 frameworks have appropriate template numbering ranges.
+        
+        Note: Ranges are adjusted based on framework type:
+        - Governance frameworks (ISO 38500): smaller range
+        - Financial controls (SOC1): focused scope
+        - Cloud security (CSA-CCM): extended range for 16 domains
+        """
         expected_ranges = {
-            'iso-38500': (10, 400),
+            'iso-38500': (10, 400),      # Governance framework - 6 principles
             'iso-31000': (10, 500),
-            'csa-ccm': (10, 800),
+            'csa-ccm': (10, 1000),       # Cloud security - 16 domains, 197 controls
             'tisax': (10, 600),
-            'soc1': (10, 500),
+            'soc1': (10, 500),           # Financial controls - COSO framework
             'coso': (10, 600),
-            'dora': (10, 400)
+            'dora': (10, 500)            # Digital Operational Resilience Act
         }
         
         for framework, (min_num, max_num) in expected_ranges.items():

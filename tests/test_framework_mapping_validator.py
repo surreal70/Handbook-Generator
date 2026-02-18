@@ -156,7 +156,7 @@ class TestFrameworkMappingValidatorProperties:
                     expected_valid.append(framework_name)
                 elif file_status == 'incorrect':
                     # Create incorrectly named mapping file
-                    mapping_file = os.path.join(framework_dir, "9999_Framework_Mapping.md")
+                    mapping_file = os.path.join(framework_dir, "9999_framework_mapping.md")  # Wrong case
                     Path(mapping_file).touch()
                     expected_invalid.append(framework_name)
                 else:  # missing
@@ -255,8 +255,8 @@ class TestFrameworkMappingValidatorUnit:
             framework_dir = os.path.join(tmpdir, "templates", "de", "test-framework")
             os.makedirs(framework_dir)
             
-            # Create incorrectly named mapping file
-            mapping_file = os.path.join(framework_dir, "9999_Framework_Mapping.md")
+            # Create incorrectly named mapping file (wrong case)
+            mapping_file = os.path.join(framework_dir, "9999_framework_mapping.md")
             Path(mapping_file).touch()
             
             validator = FrameworkMappingValidator(tmpdir)
@@ -264,7 +264,7 @@ class TestFrameworkMappingValidatorUnit:
             
             assert len(frameworks) == 1
             assert frameworks[0].has_mapping_file is False
-            assert frameworks[0].mapping_file_name == "9999_Framework_Mapping.md"
+            assert frameworks[0].mapping_file_name == "9999_framework_mapping.md"
     
     def test_framework_without_mapping_file(self):
         """Test framework without any mapping file."""

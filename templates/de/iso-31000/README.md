@@ -149,10 +149,5 @@ Siehe `FRAMEWORK_MAPPING.md` für eine detaillierte Zuordnung der Vorlagen zu IS
 ## Lizenz
 
 Diese Vorlagen basieren auf ISO 31000:2018. Der Standard selbst ist urheberrechtlich geschützt.
-
-## Versionshistorie
-
-| Version | Datum | Änderungen |
-|---------|-------|------------|
+||-----|
 | 1.0 | 2024 | Initiale Version basierend auf ISO 31000:2018 |
-

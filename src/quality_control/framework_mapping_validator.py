@@ -71,11 +71,6 @@ class FrameworkMappingValidator(BaseValidator):
             try:
                 for item in templates_dir.iterdir():
                     if item.is_dir():
-                        # Skip service-directory as it's not a framework
-                        if item.name == 'service-directory':
-                            self.logger.debug(f"Skipping service-directory (not a framework)")
-                            continue
-                        
                         # Check for mapping file
                         mapping_file_path = item / self.EXPECTED_MAPPING_FILE
                         has_mapping = mapping_file_path.exists()
