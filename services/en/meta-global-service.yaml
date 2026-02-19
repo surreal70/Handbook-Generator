@@ -1,0 +1,41 @@
+# Global Service Configuration
+# Applies to all services unless overridden
+
+# Default SLA values
+sla:
+  availability_target: "99.5%"
+  response_time_p1: "15 minutes"
+  response_time_p2: "4 hours"
+  response_time_p3: "24 hours"
+  response_time_p4: "5 business days"
+  
+# Support hours
+support:
+  business_hours: "Mon-Fri 08:00-18:00 CET"
+  extended_hours: "Mon-Fri 06:00-22:00 CET"
+  maintenance_window: "Sat 02:00-06:00 CET"
+  
+# Escalation paths
+escalation:
+  level_1: "{{ group_Helpdesk }}"
+  level_1_email: "{{ group_Helpdesk_email }}"
+  level_2: "{{ role_IT_Manager }}"
+  level_2_email: "{{ role_IT_Manager_email }}"
+  level_3: "{{ role_CIO }}"
+  level_3_email: "{{ role_CIO_email }}"
+  level_4: "{{ role_CEO }}"
+  level_4_email: "{{ role_CEO_email }}"
+  
+# Compliance frameworks
+compliance:
+  cobit_version: "COBIT 2019"
+  itil_version: "ITIL 4"
+  iso_27001: true
+  
+# Service categories
+categories:
+  - infrastructure
+  - application
+  - business
+  - security
+  - support

@@ -3,10 +3,10 @@
 <div align="center">
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
-[![Version](https://img.shields.io/badge/version-0.0.17-orange.svg)](about_versioning/VERSION.md)
+[![Version](https://img.shields.io/badge/version-0.0.18-orange.svg)](about_versioning/VERSION.md)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Code Coverage](https://img.shields.io/badge/coverage-84%25-brightgreen.svg)](htmlcov/index.html)
-[![Tests](https://img.shields.io/badge/tests-765%20passed-success.svg)](tests/)
+[![Code Coverage](https://img.shields.io/badge/coverage-72%25-yellow.svg)](htmlcov/index.html)
+[![Tests](https://img.shields.io/badge/tests-7635%20total-success.svg)](tests/)
 [![Documentation](https://img.shields.io/badge/docs-complete-blue.svg)](docs/)
 
 **Ein professionelles Python-Tool zur Generierung standardkonformer Handbücher**
@@ -27,21 +27,22 @@ Ein Python-Tool zur Generierung professioneller Handbücher aus Markdown-Vorlage
 
 ## ⚠️ Wichtiger Hinweis
 
-**Dies ist eine Zwischen-Entwicklungsversion (0.0.17) und NICHT für den Produktiveinsatz bestimmt.**
+**Dies ist eine Zwischen-Entwicklungsversion (0.0.18) und NICHT für den Produktiveinsatz bestimmt.**
 
 Diese Version enthält:
-- Experimentelles Quality Control System
-- Unvollständige Testabdeckung (95.2% Pass-Rate)
-- 10 bekannte Testfehler
+- Service und Prozess Dokumentationssystem (NEU)
+- Quality Control System
+- Umfassende Testabdeckung (7,635 Tests, 72% Coverage)
+- 10 bekannte Testfehler (pre-existing issues)
 - Nur für Entwicklungszwecke
 
-Siehe [Release Notes](about_versioning/VERSION_0.0.17_RELEASE_NOTES.md) für Details.
+Siehe [Release Notes](about_versioning/VERSION_0.0.18_RELEASE_NOTES.md) für Details.
 
 ## Überblick
 
 Der Handbuch-Generator erstellt aus strukturierten Markdown-Vorlagen professionelle Handbücher in verschiedenen Formaten (HTML, PDF, Markdown). Das System ersetzt Platzhalter in den Vorlagen durch echte Daten aus externen Systemen wie NetBox und unterstützt mehrsprachige Handbücher.
 
-**Version 0.0.17** - ⚠️ Intermediate Development Release - NOT FOR PRODUCTION
+**Version 0.0.18** - ⚠️ Intermediate Development Release - NOT FOR PRODUCTION
 
 ## Features
 
@@ -55,7 +56,7 @@ Der Handbuch-Generator erstellt aus strukturierten Markdown-Vorlagen professione
 - 💬 **HTML-Kommentar-Unterstützung** - Nicht-gerenderte Dokumentation für Template-Autoren
 - ⚙️ **Konfigurierbare Datenquellen** - Flexible Integration externer Systeme
 - 🔍 **Verbose Logging** - Detailliertes Debugging und Fehleranalyse
-- ✅ **Umfassend getestet** - 86% Code Coverage, 450+ Tests (Unit & Property-Based)
+- ✅ **Umfassend getestet** - 72% Code Coverage, 7,635 Tests (Unit, Integration & Property-Based)
 - 📋 **Framework-Compliance** - ISO 22301, ISO 27001:2022, BSI Standards, ITIL v4, CIS Controls v8
 - 📦 **1,732+ Templates** - Professionelle, standardkonforme Vorlagen (866 DE + 866 EN)
 - 🚀 **Batch-Generierung** - Automatische Generierung aller Handbücher
@@ -88,6 +89,113 @@ Der Handbuch-Generator erstellt aus strukturierten Markdown-Vorlagen professione
 | **TSC** | SOC 2 Trust Services | 17/17 | Trust Services Criteria (SOC 2) |
 
 **Gesamt: 866+ Templates (DE) / 866+ Templates (EN)** über 22 Compliance-Frameworks
+
+## Service und Prozess Dokumentation
+
+**Seit Version 0.0.18** unterstützt der Handbook Generator die strukturierte Dokumentation von IT-Services und Geschäftsprozessen mit COBIT/ITIL-Konformität und BPMN-Unterstützung.
+
+### Service-Dokumentation
+
+Dokumentieren Sie IT-Services strukturiert nach COBIT- und ITIL-Standards:
+
+```bash
+# Service-Dokumentation generieren (Deutsch)
+./handbook-generator --language de --service generic-service-template --test
+
+# Service-Dokumentation generieren (Englisch)
+./handbook-generator --language en --service generic-service-template --test
+
+# Service mit allen Formaten
+./handbook-generator -l de --service generic-service-template -o all --test --separate-files --pdf-toc
+```
+
+**Service-Template-Struktur:**
+- Service-Übersicht (Name, Beschreibung, Kategorie)
+- COBIT-Mapping (relevante Prozesse und Controls)
+- ITIL-Mapping (Service Lifecycle Phasen)
+- Service Level Agreements (SLAs)
+- Rollen und Verantwortlichkeiten
+- Support-Modell und Eskalation
+- Monitoring und Reporting
+
+**Verzeichnisstruktur:**
+```
+services/
+├── de/
+│   ├── meta-global-service.yaml         # Globale Service-Konfiguration
+│   └── generic-service-template/
+│       ├── meta-service.yaml            # Service-spezifische Konfiguration
+│       └── service-template.md          # Service-Template
+└── en/
+    └── [identische Struktur]
+```
+
+### Prozess-Dokumentation
+
+Dokumentieren Sie Geschäftsprozesse mit BPMN-Diagrammen und Compliance-Anforderungen:
+
+```bash
+# Prozess-Dokumentation generieren (Deutsch)
+./handbook-generator --language de --process generic-process-template --test
+
+# Prozess-Dokumentation generieren (Englisch)
+./handbook-generator --language en --process generic-process-template --test
+
+# Prozess mit allen Formaten
+./handbook-generator -l de --process generic-process-template -o all --test --separate-files --pdf-toc
+```
+
+**Prozess-Template-Struktur:**
+- Zweck und Ziel des Prozesses
+- Rollen und Verantwortlichkeiten (RACI-Matrix)
+- Ablaufdiagramm (BPMN) mit textueller Beschreibung
+- SLAs und OLAs
+- KPIs und Metriken
+- Kontrollpunkte und Prüfschritte
+- Risiken und Compliance-Anforderungen
+- Segregation of Duties (SoD)
+
+**Verzeichnisstruktur:**
+```
+processes/
+├── de/
+│   ├── meta-global-process.yaml         # Globale Prozess-Konfiguration
+│   └── generic-process-template/
+│       ├── meta-process.yaml            # Prozess-spezifische Konfiguration
+│       ├── diagrams/                    # BPMN-Diagramme
+│       └── process-template.md          # Prozess-Template
+└── en/
+    └── [identische Struktur]
+```
+
+### Metadata-Integration
+
+Service- und Prozess-Templates integrieren sich nahtlos mit bestehenden Metadata-Konfigurationen:
+
+**Hierarchische Placeholder-Auflösung:**
+1. `meta-service.yaml` / `meta-process.yaml` (spezifisch)
+2. `meta-global-service.yaml` / `meta-global-process.yaml` (global)
+3. `meta-organisation-roles.yaml` (Rollen und Kontakte)
+4. `meta-organisation.yaml` (Organisation)
+5. `meta-global.yaml` (Generator-Informationen)
+
+**Beispiel-Placeholders:**
+```markdown
+# Service: {{ service.name }}
+
+**Service Owner:** {{ service.owner }}  # Referenz: role_IT_Manager
+**Organisation:** {{ meta-organisation.name }}
+**Verfügbarkeit:** {{ service.sla.availability_target }}
+**Support:** {{ support.business_hours }}
+```
+
+### Dokumentation
+
+Detaillierte Anleitungen zur Service- und Prozess-Dokumentation:
+
+- **[SERVICE_DOCUMENTATION_GUIDE.md](docs/SERVICE_DOCUMENTATION_GUIDE.md)** - Service-Dokumentation erstellen und anpassen
+- **[PROCESS_DOCUMENTATION_GUIDE.md](docs/PROCESS_DOCUMENTATION_GUIDE.md)** - Prozess-Dokumentation mit BPMN und RACI
+- **[PLACEHOLDER_STRUCTURE.md](docs/PLACEHOLDER_STRUCTURE.md)** - Placeholder-Hierarchie und Verwendung
 
 ## Template Metadata Standardisierung
 
@@ -389,12 +497,16 @@ Das System zeigt verfügbare Sprachen und Handbuchtypen an und fragt nach Ihrer 
 
 - `--language, -l`: Sprache auswählen (`de`, `en`)
 - `--template, -t`: Handbuchtyp auswählen (`bcm`, `isms`, `bsi-grundschutz`, `it-operation`, `cis-controls`, `common-criteria`, `coso`, `csa-ccm`, `dora`, `gdpr`, `hipaa`, `idw-ps-951`, `iso-9001`, `iso-31000`, `iso-38500`, `nist-800-53`, `nist-csf`, `pci-dss`, `soc1`, `tisax`, `togaf`, `tsc`)
+- `--service, -s`: Service-Name für Service-Dokumentation (z.B. `generic-service-template`)
+- `--process, -p`: Prozess-Name für Prozess-Dokumentation (z.B. `generic-process-template`)
 - `--output, -o`: Ausgabeformat (`markdown`, `pdf`, `html`, `both`, `all`) [Standard: `both`]
 - `--test`: Test-Modus aktivieren (erforderlich für Ausgabegenerierung)
 - `--separate-files`: Separate Markdown-Dateien pro Template generieren (statt kombinierter Datei)
 - `--pdf-toc`: PDF mit Inhaltsverzeichnis und Seitenumbrüchen generieren
 - `--verbose, -v`: Ausführliches Logging aktivieren
 - `--config, -c`: Pfad zur Konfigurationsdatei [Standard: `config.yaml`]
+
+**Hinweis:** Die Optionen `--template`, `--service` und `--process` schließen sich gegenseitig aus. Es kann nur eine Option gleichzeitig verwendet werden.
 
 #### Test-Modus und Ausgabestruktur
 

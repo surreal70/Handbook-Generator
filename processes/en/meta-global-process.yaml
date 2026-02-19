@@ -1,0 +1,37 @@
+# Global Process Configuration
+# Applies to all processes unless overridden
+
+# Standard escalation
+escalation:
+  level_1: "{{ role_IT_Manager }}"
+  level_1_email: "{{ role_IT_Manager_email }}"
+  level_2: "{{ role_Risk_Manager }}"
+  level_2_email: "{{ role_Risk_Manager_email }}"
+  level_3: "{{ role_CIO }}"
+  level_3_email: "{{ role_CIO_email }}"
+  level_4: "{{ role_CEO }}"
+  level_4_email: "{{ role_CEO_email }}"
+
+# Compliance frameworks
+compliance:
+  iso_27001: true
+  bsi_grundschutz: true
+  gdpr: true
+
+# Standard KPIs
+kpis:
+  process_efficiency: "Cycle time reduction"
+  quality: "Error rate"
+  compliance: "Audit findings"
+
+# Process categories
+categories:
+  - core
+  - support
+  - management
+
+# Standard control points
+controls:
+  - "Management approval"
+  - "Four-eyes principle"
+  - "Audit trail"

@@ -917,3 +917,433 @@ class TestHandbookMetadataLoading:
             
             assert detected_dir is None, \
                 "Nonexistent handbook directory should return None"
+
+
+
+class TestServiceDiscovery:
+    """Tests for service template discovery functionality."""
+    
+    def test_discover_services_basic(self, tmp_path):
+        """Test basic service discovery."""
+        # Create service directory structure
+        services_dir = tmp_path / 'services'
+        (services_dir / 'de' / 'generic-service-template').mkdir(parents=True)
+        (services_dir / 'de' / 'generic-service-template' / 'meta-service.yaml').write_text('service: test')
+        (services_dir / 'de' / 'generic-service-template' / 'service-template.md').write_text('# Service Template')
+        
+        (services_dir / 'en' / 'generic-service-template').mkdir(parents=True)
+        (services_dir / 'en' / 'generic-service-template' / 'service-template.md').write_text('# Service Template')
+        
+        # Change to tmp_path to make services/ discoverable
+        import os
+        original_cwd = os.getcwd()
+        try:
+            os.chdir(tmp_path)
+            
+            manager = TemplateManager(Path('templates'))
+            services = manager.discover_services()
+            
+            assert 'de' in services
+            assert 'en' in services
+            assert 'generic-service-template' in services['de']
+            assert 'generic-service-template' in services['en']
+            assert len(services['de']['generic-service-template']) == 1
+            assert len(services['en']['generic-service-template']) == 1
+        finally:
+            os.chdir(original_cwd)
+    
+    def test_discover_services_empty(self, tmp_path):
+        """Test service discovery with no services directory."""
+        import os
+        original_cwd = os.getcwd()
+        try:
+            os.chdir(tmp_path)
+            
+            manager = TemplateManager(Path('templates'))
+            services = manager.discover_services()
+            
+            assert services == {}
+        finally:
+            os.chdir(original_cwd)
+    
+    def test_discover_services_skips_special_directories(self, tmp_path):
+        """Test that service discovery skips special directories."""
+        services_dir = tmp_path / 'services'
+        (services_dir / 'de' / 'generic-service-template').mkdir(parents=True)
+        (services_dir / 'de' / 'generic-service-template' / 'service-template.md').write_text('# Service')
+        
+        # Create special directories that should be skipped
+        (services_dir / 'de' / 'diagrams').mkdir(parents=True)
+        (services_dir / 'de' / 'diagrams' / 'test.md').write_text('# Diagram')
+        
+        (services_dir / 'de' / 'examples').mkdir(parents=True)
+        (services_dir / 'de' / 'examples' / 'test.md').write_text('# Example')
+        
+        import os
+        original_cwd = os.getcwd()
+        try:
+            os.chdir(tmp_path)
+            
+            manager = TemplateManager(Path('templates'))
+            services = manager.discover_services()
+            
+            assert 'generic-service-template' in services['de']
+            assert 'diagrams' not in services['de']
+            assert 'examples' not in services['de']
+        finally:
+            os.chdir(original_cwd)
+    
+    def test_get_services_success(self, tmp_path):
+        """Test successful service retrieval."""
+        services_dir = tmp_path / 'services'
+        (services_dir / 'de' / 'email-service').mkdir(parents=True)
+        (services_dir / 'de' / 'email-service' / 'email-service.md').write_text('# Email Service')
+        
+        import os
+        original_cwd = os.getcwd()
+        try:
+            os.chdir(tmp_path)
+            
+            manager = TemplateManager(Path('templates'))
+            templates = manager.get_services('de', 'email-service')
+            
+            assert len(templates) == 1
+            assert templates[0].category == 'email-service'
+            assert templates[0].language == 'de'
+        finally:
+            os.chdir(original_cwd)
+    
+    def test_get_services_no_services_directory(self, tmp_path):
+        """Test get_services with no services directory."""
+        import os
+        original_cwd = os.getcwd()
+        try:
+            os.chdir(tmp_path)
+            
+            manager = TemplateManager(Path('templates'))
+            
+            with pytest.raises(ValueError, match="No services directory found"):
+                manager.get_services('de', 'test-service')
+        finally:
+            os.chdir(original_cwd)
+    
+    def test_get_services_invalid_language(self, tmp_path):
+        """Test get_services with invalid language."""
+        services_dir = tmp_path / 'services'
+        (services_dir / 'de' / 'test-service').mkdir(parents=True)
+        (services_dir / 'de' / 'test-service' / 'service.md').write_text('# Service')
+        
+        import os
+        original_cwd = os.getcwd()
+        try:
+            os.chdir(tmp_path)
+            
+            manager = TemplateManager(Path('templates'))
+            
+            with pytest.raises(ValueError, match="No services found for language 'xx'"):
+                manager.get_services('xx', 'test-service')
+        finally:
+            os.chdir(original_cwd)
+    
+    def test_get_services_invalid_service_name(self, tmp_path):
+        """Test get_services with invalid service name."""
+        services_dir = tmp_path / 'services'
+        (services_dir / 'de' / 'test-service').mkdir(parents=True)
+        (services_dir / 'de' / 'test-service' / 'service.md').write_text('# Service')
+        
+        import os
+        original_cwd = os.getcwd()
+        try:
+            os.chdir(tmp_path)
+            
+            manager = TemplateManager(Path('templates'))
+            
+            with pytest.raises(ValueError, match="Service 'nonexistent' not found"):
+                manager.get_services('de', 'nonexistent')
+        finally:
+            os.chdir(original_cwd)
+
+
+class TestProcessDiscovery:
+    """Tests for process template discovery functionality."""
+    
+    def test_discover_processes_basic(self, tmp_path):
+        """Test basic process discovery."""
+        # Create process directory structure
+        processes_dir = tmp_path / 'processes'
+        (processes_dir / 'de' / 'generic-process-template').mkdir(parents=True)
+        (processes_dir / 'de' / 'generic-process-template' / 'meta-process.yaml').write_text('process: test')
+        (processes_dir / 'de' / 'generic-process-template' / 'process-template.md').write_text('# Process Template')
+        
+        (processes_dir / 'en' / 'generic-process-template').mkdir(parents=True)
+        (processes_dir / 'en' / 'generic-process-template' / 'process-template.md').write_text('# Process Template')
+        
+        import os
+        original_cwd = os.getcwd()
+        try:
+            os.chdir(tmp_path)
+            
+            manager = TemplateManager(Path('templates'))
+            processes = manager.discover_processes()
+            
+            assert 'de' in processes
+            assert 'en' in processes
+            assert 'generic-process-template' in processes['de']
+            assert 'generic-process-template' in processes['en']
+            assert len(processes['de']['generic-process-template']) == 1
+            assert len(processes['en']['generic-process-template']) == 1
+        finally:
+            os.chdir(original_cwd)
+    
+    def test_discover_processes_empty(self, tmp_path):
+        """Test process discovery with no processes directory."""
+        import os
+        original_cwd = os.getcwd()
+        try:
+            os.chdir(tmp_path)
+            
+            manager = TemplateManager(Path('templates'))
+            processes = manager.discover_processes()
+            
+            assert processes == {}
+        finally:
+            os.chdir(original_cwd)
+    
+    def test_discover_processes_skips_special_directories(self, tmp_path):
+        """Test that process discovery skips special directories."""
+        processes_dir = tmp_path / 'processes'
+        (processes_dir / 'de' / 'incident-management').mkdir(parents=True)
+        (processes_dir / 'de' / 'incident-management' / 'process.md').write_text('# Process')
+        
+        # Create special directories that should be skipped
+        (processes_dir / 'de' / 'diagrams').mkdir(parents=True)
+        (processes_dir / 'de' / 'diagrams' / 'test.bpmn').write_text('BPMN')
+        
+        (processes_dir / 'de' / 'examples').mkdir(parents=True)
+        (processes_dir / 'de' / 'examples' / 'test.md').write_text('# Example')
+        
+        import os
+        original_cwd = os.getcwd()
+        try:
+            os.chdir(tmp_path)
+            
+            manager = TemplateManager(Path('templates'))
+            processes = manager.discover_processes()
+            
+            assert 'incident-management' in processes['de']
+            assert 'diagrams' not in processes['de']
+            assert 'examples' not in processes['de']
+        finally:
+            os.chdir(original_cwd)
+    
+    def test_get_processes_success(self, tmp_path):
+        """Test successful process retrieval."""
+        processes_dir = tmp_path / 'processes'
+        (processes_dir / 'de' / 'change-management').mkdir(parents=True)
+        (processes_dir / 'de' / 'change-management' / 'change-management.md').write_text('# Change Management')
+        
+        import os
+        original_cwd = os.getcwd()
+        try:
+            os.chdir(tmp_path)
+            
+            manager = TemplateManager(Path('templates'))
+            templates = manager.get_processes('de', 'change-management')
+            
+            assert len(templates) == 1
+            assert templates[0].category == 'change-management'
+            assert templates[0].language == 'de'
+        finally:
+            os.chdir(original_cwd)
+    
+    def test_get_processes_no_processes_directory(self, tmp_path):
+        """Test get_processes with no processes directory."""
+        import os
+        original_cwd = os.getcwd()
+        try:
+            os.chdir(tmp_path)
+            
+            manager = TemplateManager(Path('templates'))
+            
+            with pytest.raises(ValueError, match="No processes directory found"):
+                manager.get_processes('de', 'test-process')
+        finally:
+            os.chdir(original_cwd)
+    
+    def test_get_processes_invalid_language(self, tmp_path):
+        """Test get_processes with invalid language."""
+        processes_dir = tmp_path / 'processes'
+        (processes_dir / 'de' / 'test-process').mkdir(parents=True)
+        (processes_dir / 'de' / 'test-process' / 'process.md').write_text('# Process')
+        
+        import os
+        original_cwd = os.getcwd()
+        try:
+            os.chdir(tmp_path)
+            
+            manager = TemplateManager(Path('templates'))
+            
+            with pytest.raises(ValueError, match="No processes found for language 'xx'"):
+                manager.get_processes('xx', 'test-process')
+        finally:
+            os.chdir(original_cwd)
+    
+    def test_get_processes_invalid_process_name(self, tmp_path):
+        """Test get_processes with invalid process name."""
+        processes_dir = tmp_path / 'processes'
+        (processes_dir / 'de' / 'test-process').mkdir(parents=True)
+        (processes_dir / 'de' / 'test-process' / 'process.md').write_text('# Process')
+        
+        import os
+        original_cwd = os.getcwd()
+        try:
+            os.chdir(tmp_path)
+            
+            manager = TemplateManager(Path('templates'))
+            
+            with pytest.raises(ValueError, match="Process 'nonexistent' not found"):
+                manager.get_processes('de', 'nonexistent')
+        finally:
+            os.chdir(original_cwd)
+
+
+class TestLoadTemplatesFromDirectory:
+    """Tests for _load_templates_from_directory helper method."""
+    
+    def test_load_templates_from_directory_basic(self, tmp_path):
+        """Test loading templates from a directory."""
+        service_dir = tmp_path / 'test-service'
+        service_dir.mkdir()
+        
+        # Create template files
+        (service_dir / 'service-template.md').write_text('# Service')
+        (service_dir / 'meta-service.yaml').write_text('service: test')
+        
+        manager = TemplateManager(Path('templates'))
+        templates = manager._load_templates_from_directory(service_dir, 'de', 'test-service')
+        
+        # Should only load .md files, not .yaml
+        assert len(templates) == 1
+        assert templates[0].path.name == 'service-template.md'
+    
+    def test_load_templates_from_directory_skips_readme(self, tmp_path):
+        """Test that README.md is skipped."""
+        service_dir = tmp_path / 'test-service'
+        service_dir.mkdir()
+        
+        (service_dir / 'README.md').write_text('# README')
+        (service_dir / 'service-template.md').write_text('# Service')
+        
+        manager = TemplateManager(Path('templates'))
+        templates = manager._load_templates_from_directory(service_dir, 'de', 'test-service')
+        
+        assert len(templates) == 1
+        assert templates[0].path.name == 'service-template.md'
+    
+    def test_load_templates_from_directory_sorting(self, tmp_path):
+        """Test that templates are sorted by sort_order."""
+        service_dir = tmp_path / 'test-service'
+        service_dir.mkdir()
+        
+        # Create templates in random order
+        (service_dir / '0200_second.md').write_text('# Second')
+        (service_dir / '0100_first.md').write_text('# First')
+        (service_dir / '0300_third.md').write_text('# Third')
+        
+        manager = TemplateManager(Path('templates'))
+        templates = manager._load_templates_from_directory(service_dir, 'de', 'test-service')
+        
+        assert len(templates) == 3
+        assert templates[0].sort_order == 100
+        assert templates[1].sort_order == 200
+        assert templates[2].sort_order == 300
+    
+    def test_load_templates_from_directory_empty(self, tmp_path):
+        """Test loading from empty directory."""
+        service_dir = tmp_path / 'test-service'
+        service_dir.mkdir()
+        
+        manager = TemplateManager(Path('templates'))
+        templates = manager._load_templates_from_directory(service_dir, 'de', 'test-service')
+        
+        assert templates == []
+
+
+class TestServiceProcessIntegration:
+    """Integration tests for service and process template discovery."""
+    
+    @settings(max_examples=50)
+    @given(
+        num_languages=st.integers(min_value=1, max_value=3),
+        num_services=st.integers(min_value=1, max_value=5),
+        num_processes=st.integers(min_value=1, max_value=5)
+    )
+    def test_property_service_process_discovery_completeness(
+        self, num_languages, num_services, num_processes
+    ):
+        """
+        Property: Service and Process Discovery Completeness
+        
+        For any valid service and process directory structure with templates in
+        multiple languages, the discovery methods should find all services and
+        processes and correctly categorize them by language.
+        
+        Validates: Requirements AC-1.2, AC-2.2
+        """
+        with tempfile.TemporaryDirectory() as tmpdir:
+            tmpdir_path = Path(tmpdir)
+            
+            languages = ['de', 'en', 'fr'][:num_languages]
+            service_names = [f'service-{i}' for i in range(num_services)]
+            process_names = [f'process-{i}' for i in range(num_processes)]
+            
+            # Create service directories
+            for lang in languages:
+                for service_name in service_names:
+                    service_dir = tmpdir_path / 'services' / lang / service_name
+                    service_dir.mkdir(parents=True)
+                    (service_dir / f'{service_name}.md').write_text(f'# {service_name}')
+            
+            # Create process directories
+            for lang in languages:
+                for process_name in process_names:
+                    process_dir = tmpdir_path / 'processes' / lang / process_name
+                    process_dir.mkdir(parents=True)
+                    (process_dir / f'{process_name}.md').write_text(f'# {process_name}')
+            
+            import os
+            original_cwd = os.getcwd()
+            try:
+                os.chdir(tmpdir_path)
+                
+                manager = TemplateManager(Path('templates'))
+                
+                # Discover services
+                services = manager.discover_services()
+                
+                # Verify all languages discovered for services
+                for lang in languages:
+                    assert lang in services, f"Language {lang} not discovered in services"
+                
+                # Verify all services discovered for each language
+                for lang in languages:
+                    for service_name in service_names:
+                        assert service_name in services[lang], \
+                            f"Service {service_name} not discovered for language {lang}"
+                        assert len(services[lang][service_name]) == 1
+                
+                # Discover processes
+                processes = manager.discover_processes()
+                
+                # Verify all languages discovered for processes
+                for lang in languages:
+                    assert lang in processes, f"Language {lang} not discovered in processes"
+                
+                # Verify all processes discovered for each language
+                for lang in languages:
+                    for process_name in process_names:
+                        assert process_name in processes[lang], \
+                            f"Process {process_name} not discovered for language {lang}"
+                        assert len(processes[lang][process_name]) == 1
+            finally:
+                os.chdir(original_cwd)

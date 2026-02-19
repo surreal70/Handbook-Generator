@@ -1,6 +1,6 @@
 # Version Management
 
-## Current Version: 0.0.17
+## Current Version: 0.0.18
 
 ### Single Source of Truth
 
@@ -33,6 +33,19 @@ To update the version number:
 
 ### Version History
 
+- **0.0.18** (2026-02-19): Service and Process Documentation System
+  - ✅ Added Service and Process Documentation System (major new feature)
+  - ✅ Service documentation with COBIT/ITIL compliance
+  - ✅ Process documentation with BPMN and RACI support
+  - ✅ CLI integration (--service and --process options)
+  - ✅ TemplateManager extensions (discover_services, discover_processes)
+  - ✅ MetaAdapter extensions (hierarchical metadata resolution)
+  - ✅ Bilingual support (German and English)
+  - ✅ Comprehensive documentation (SERVICE_DOCUMENTATION_GUIDE.md, PROCESS_DOCUMENTATION_GUIDE.md)
+  - ✅ Complete test suite (7,635 tests, 72% coverage)
+  - ✅ Final validation (quality control, backward compatibility, performance, security, UAT)
+  - ✅ 2 service templates and 2 process templates per language
+  - **Status**: Service and process documentation feature complete
 - **0.0.17** (2026-02-19): Documentation & Metadata Improvements
   - ✅ Updated all copyright notices to 2025, 2026
   - ✅ Added Handbook Generator logo to README files

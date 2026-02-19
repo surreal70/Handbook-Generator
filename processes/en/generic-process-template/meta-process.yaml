@@ -1,0 +1,64 @@
+# Process-Specific Metadata
+# Overrides global configuration
+
+process:
+  id: "PROC-001"
+  name: "Incident Management"
+  category: "core"
+  criticality: "Critical"
+  status: "Active"
+  classification: "Internal"
+  revision: 2
+  modifydate: "2025-02-19"
+  author: "{{ meta-global.source }}"
+  version: "{{ meta-global.version }}"
+  
+  # Role references from meta-organisation-roles.yaml
+  owner: "role_IT_Manager"
+  manager: "role_IT_Manager"
+  approver: "role_CIO"
+  
+  # Process-specific SLA
+  sla:
+    p1_resolution: "4 hours"
+    p2_resolution: "24 hours"
+    p3_resolution: "5 business days"
+    
+  # Systems used
+  systems:
+    - "ServiceNow"
+    - "Zabbix"
+    - "Slack"
+    
+  # RACI roles
+  raci:
+    incident_detection: 
+      responsible: "role_System_Administrator"
+      accountable: "role_IT_Manager"
+      consulted: "role_CISO"
+      informed: "role_CIO"
+    incident_analysis:
+      responsible: "role_Security_Analyst"
+      accountable: "role_CISO"
+      consulted: "role_IT_Manager"
+      informed: "role_CIO"
+    incident_resolution:
+      responsible: "role_System_Administrator"
+      accountable: "role_IT_Manager"
+      consulted: "role_CISO"
+      informed: "role_CIO"
+      
+  # Compliance requirements
+  compliance:
+    frameworks:
+      - "ISO 27001:2022 - Clause 5.24"
+      - "BSI IT-Grundschutz - DER.2.1"
+    sod_rules:
+      - "Incident handler cannot approve own escalations"
+      - "Security analyst cannot modify audit logs"
+      
+  # KPIs
+  kpis:
+    mttr: "Mean Time To Resolve"
+    mtbf: "Mean Time Between Failures"
+    first_call_resolution: "Percentage"

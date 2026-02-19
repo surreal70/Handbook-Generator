@@ -725,3 +725,195 @@ class TemplateManager:
         unified_metadata.handbook = handbook_metadata
         
         return unified_metadata
+    
+    def discover_services(self) -> dict[str, dict[str, list[Template]]]:
+        """
+        Discover available service templates.
+        
+        Scans the services/ directory for service templates organized by language
+        and service name. Each service directory should contain:
+        - meta-service.yaml: Service-specific metadata
+        - service-template.md or similar: Service template file(s)
+        
+        Returns:
+            Dictionary mapping language -> service_name -> list of Template objects
+            Example: {'de': {'generic-service-template': [Template(...)]}, 'en': {...}}
+        """
+        services = {}
+        services_root = Path('services')
+        
+        if not services_root.exists():
+            return services
+        
+        # Scan for language directories (de, en)
+        for lang_dir in services_root.iterdir():
+            if not lang_dir.is_dir():
+                continue
+            
+            language = lang_dir.name
+            services[language] = {}
+            
+            # Scan for service directories
+            for service_dir in lang_dir.iterdir():
+                if not service_dir.is_dir():
+                    continue
+                
+                # Skip special directories
+                if service_dir.name in ['diagrams', 'examples']:
+                    continue
+                
+                service_name = service_dir.name
+                templates = self._load_templates_from_directory(service_dir, language, service_name)
+                
+                if templates:
+                    services[language][service_name] = templates
+        
+        return services
+    
+    def discover_processes(self) -> dict[str, dict[str, list[Template]]]:
+        """
+        Discover available process templates.
+        
+        Scans the processes/ directory for process templates organized by language
+        and process name. Each process directory should contain:
+        - meta-process.yaml: Process-specific metadata
+        - process-template.md or similar: Process template file(s)
+        - diagrams/: Optional directory for BPMN diagrams
+        
+        Returns:
+            Dictionary mapping language -> process_name -> list of Template objects
+            Example: {'de': {'generic-process-template': [Template(...)]}, 'en': {...}}
+        """
+        processes = {}
+        processes_root = Path('processes')
+        
+        if not processes_root.exists():
+            return processes
+        
+        # Scan for language directories (de, en)
+        for lang_dir in processes_root.iterdir():
+            if not lang_dir.is_dir():
+                continue
+            
+            language = lang_dir.name
+            processes[language] = {}
+            
+            # Scan for process directories
+            for process_dir in lang_dir.iterdir():
+                if not process_dir.is_dir():
+                    continue
+                
+                # Skip special directories
+                if process_dir.name in ['diagrams', 'examples']:
+                    continue
+                
+                process_name = process_dir.name
+                templates = self._load_templates_from_directory(process_dir, language, process_name)
+                
+                if templates:
+                    processes[language][process_name] = templates
+        
+        return processes
+    
+    def get_services(self, language: str, service_name: str) -> list[Template]:
+        """
+        Get service templates for specific language and service.
+        
+        Args:
+            language: Language code (e.g., 'de', 'en')
+            service_name: Service name (e.g., 'generic-service-template', 'email-service')
+        
+        Returns:
+            List of Template objects for the specified service
+            
+        Raises:
+            ValueError: If no services found for language or service not found
+        """
+        services = self.discover_services()
+        
+        if not services:
+            raise ValueError(
+                f"No services directory found. Expected structure: services/{{language}}/{{service_name}}/"
+            )
+        
+        if language not in services:
+            available_languages = list(services.keys())
+            raise ValueError(
+                f"No services found for language '{language}'. "
+                f"Available languages: {', '.join(available_languages)}"
+            )
+        
+        if service_name not in services[language]:
+            available_services = list(services[language].keys())
+            raise ValueError(
+                f"Service '{service_name}' not found for language '{language}'. "
+                f"Available services: {', '.join(available_services)}"
+            )
+        
+        return services[language][service_name]
+    
+    def get_processes(self, language: str, process_name: str) -> list[Template]:
+        """
+        Get process templates for specific language and process.
+        
+        Args:
+            language: Language code (e.g., 'de', 'en')
+            process_name: Process name (e.g., 'generic-process-template', 'incident-management')
+        
+        Returns:
+            List of Template objects for the specified process
+            
+        Raises:
+            ValueError: If no processes found for language or process not found
+        """
+        processes = self.discover_processes()
+        
+        if not processes:
+            raise ValueError(
+                f"No processes directory found. Expected structure: processes/{{language}}/{{process_name}}/"
+            )
+        
+        if language not in processes:
+            available_languages = list(processes.keys())
+            raise ValueError(
+                f"No processes found for language '{language}'. "
+                f"Available languages: {', '.join(available_languages)}"
+            )
+        
+        if process_name not in processes[language]:
+            available_processes = list(processes[language].keys())
+            raise ValueError(
+                f"Process '{process_name}' not found for language '{language}'. "
+                f"Available processes: {', '.join(available_processes)}"
+            )
+        
+        return processes[language][process_name]
+    
+    def _load_templates_from_directory(self, directory: Path, language: str, category: str) -> list[Template]:
+        """
+        Load all template files from a directory.
+        
+        Args:
+            directory: Path to directory containing templates
+            language: Language code
+            category: Category name (service or process name)
+        
+        Returns:
+            List of Template objects found in the directory
+        """
+        templates = []
+        
+        # Collect all .md files in the directory
+        for template_file in directory.glob('*.md'):
+            # Skip README and other documentation files
+            if template_file.name in ['README.md']:
+                continue
+            
+            template = self._parse_template(template_file, language, category)
+            if template:
+                templates.append(template)
+        
+        # Sort templates by sort_order
+        templates.sort(key=lambda t: (t.sort_order, t.path.name))
+        
+        return templates

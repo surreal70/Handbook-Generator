@@ -1,0 +1,57 @@
+# Service-spezifische Metadaten
+# Überschreibt globale Konfiguration
+
+id: "SVC-001"
+name: "Generischer IT-Service"
+category: "infrastructure"
+criticality: "High"
+status: "Production"
+revision: 1
+modifydate: "2025-02-19"
+source: "HandBook Generator"
+version: "0.0.12"
+
+# Rollenreferenzen aus meta-organisation-roles.yaml
+owner: "{{ role_IT_Manager }}"
+owner_email: "{{ role_IT_Manager_email }}"
+manager: "{{ role_IT_Manager }}"
+manager_email: "{{ role_IT_Manager_email }}"
+
+# Service-spezifische SLA (überschreibt globale Werte)
+sla:
+  availability_target: "99.9%"
+  response_time_p1: "10 Minuten"
+  response_time_p2: "2 Stunden"
+  response_time_p3: "12 Stunden"
+  response_time_p4: "3 Werktage"
+  
+# Technologie-Stack
+technology:
+  platform: "Linux/Windows Server"
+  backup: "Veeam Backup & Replication"
+  monitoring: "Zabbix"
+
+# Recovery-Ziele
+recovery:
+  rto: "4 Stunden"
+  rpo: "24 Stunden"
+  
+# COBIT-Mapping
+cobit:
+  processes:
+    - "DSS01 - Manage Operations"
+    - "DSS02 - Manage Service Requests"
+    - "DSS05 - Manage Security Services"
+  controls:
+    - "Ensure service delivery"
+    - "Monitor service levels"
+    - "Manage service continuity"
+    
+# ITIL-Lifecycle
+itil:
+  lifecycle_phase: "Service Operation"
+  processes:
+    - "Incident Management"
+    - "Problem Management"
+    - "Access Management"
+    - "Service Level Management"

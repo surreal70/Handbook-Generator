@@ -3,10 +3,10 @@
 <div align="center">
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
-[![Version](https://img.shields.io/badge/version-0.0.17-orange.svg)](about_versioning/VERSION.md)
+[![Version](https://img.shields.io/badge/version-0.0.18-orange.svg)](about_versioning/VERSION.md)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Code Coverage](https://img.shields.io/badge/coverage-84%25-brightgreen.svg)](htmlcov/index.html)
-[![Tests](https://img.shields.io/badge/tests-765%20passed-success.svg)](tests/)
+[![Code Coverage](https://img.shields.io/badge/coverage-72%25-yellow.svg)](htmlcov/index.html)
+[![Tests](https://img.shields.io/badge/tests-7635%20total-success.svg)](tests/)
 [![Documentation](https://img.shields.io/badge/docs-complete-blue.svg)](docs/)
 
 **A professional Python tool for generating standards-compliant handbooks**
@@ -27,21 +27,22 @@ A Python tool for generating professional handbooks from Markdown templates with
 
 ## ⚠️ Important Notice
 
-**This is an intermediate development release (0.0.17) and NOT intended for production use.**
+**This is an intermediate development release (0.0.18) and NOT intended for production use.**
 
 This version contains:
-- Experimental Quality Control System
-- Incomplete test coverage (95.2% pass rate)
-- 10 known test failures
+- Service and Process Documentation System (NEW)
+- Quality Control System
+- Comprehensive test coverage (7,635 tests, 72% coverage)
+- 10 known test failures (pre-existing issues)
 - Development-only features
 
-See [Release Notes](about_versioning/VERSION_0.0.17_RELEASE_NOTES.md) for details.
+See [Release Notes](about_versioning/VERSION_0.0.18_RELEASE_NOTES.md) for details.
 
 ## Overview
 
 The Handbook Generator creates professional handbooks in various formats (HTML, PDF, Markdown) from structured Markdown templates. The system replaces placeholders in templates with real data from external systems like NetBox and supports multilingual handbooks.
 
-**Version 0.0.17** - ⚠️ Intermediate Development Release - NOT FOR PRODUCTION
+**Version 0.0.18** - ⚠️ Intermediate Development Release - NOT FOR PRODUCTION
 
 ## Features
 

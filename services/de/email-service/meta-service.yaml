@@ -1,0 +1,56 @@
+# Service-Specific Metadata - Email Service
+# Overrides global configuration
+
+service:
+  id: "SVC-INFRA-001"
+  name: "E-Mail Service"
+  category: "infrastructure"
+  criticality: "High"
+  status: "Production"
+  classification: "Internal"
+  revision: 1
+  modifydate: "2025-02-19"
+  
+  # Role references from meta-organisation-roles.yaml
+  owner: "role_IT_Manager"
+  manager: "role_IT_Manager"
+  approver: "role_CIO"
+  
+  # Service-specific SLA (overrides global)
+  sla:
+    availability_target: "99.9%"
+    response_time_p1: "10 minutes"
+    response_time_p2: "2 hours"
+    response_time_p3: "8 hours"
+    response_time_p4: "2 business days"
+    
+  # Technology stack
+  technology:
+    platform: "Microsoft Exchange Online"
+    backup: "Veeam Backup for Office 365"
+    monitoring: "Zabbix"
+    antispam: "Mimecast"
+    archiving: "Barracuda Message Archiver"
+    
+  # COBIT mapping
+  cobit:
+    processes:
+      - "DSS01 - Manage Operations"
+      - "DSS02 - Manage Service Requests and Incidents"
+      - "DSS05 - Manage Security Services"
+      - "DSS06 - Manage Business Process Controls"
+    controls:
+      - "DSS01.01 - Perform operational procedures"
+      - "DSS02.01 - Define service requests"
+      - "DSS05.01 - Protect against malware"
+      - "DSS05.07 - Manage network and connectivity security"
+      
+  # ITIL lifecycle
+  itil:
+    lifecycle_phase: "Service Operation"
+    processes:
+      - "Incident Management"
+      - "Problem Management"
+      - "Access Management"
+      - "Service Request Management"
+      - "Event Management"

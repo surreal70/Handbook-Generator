@@ -36,61 +36,79 @@ def parse_arguments() -> argparse.Namespace:
         epilog="""
 Examples:
   # Interactive mode (test mode required)
-  python -m src.cli --test
+  handbook-generator --test
   
   # Generate German BCM handbook in both formats (markdown + PDF)
-  python -m src.cli --language de --template bcm --test
+  handbook-generator --language de --template bcm --test
   
   # Generate English ISMS handbook in PDF only
-  python -m src.cli -l en -t isms -o pdf --test
+  handbook-generator -l en -t isms -o pdf --test
   
   # Generate German BCM handbook in HTML format
-  python -m src.cli -l de -t bcm -o html --test
+  handbook-generator -l de -t bcm -o html --test
   
   # Generate English BSI Grundschutz handbook in all formats
-  python -m src.cli -l en -t bsi-grundschutz -o all --test
+  handbook-generator -l en -t bsi-grundschutz -o all --test
   
   # Generate German IDW PS 951 IT Auditing handbook
-  python -m src.cli -l de -t idw-ps-951 --test
+  handbook-generator -l de -t idw-ps-951 --test
   
   # Generate English NIST CSF 2.0 handbook
-  python -m src.cli -l en -t nist-csf -o pdf --test
+  handbook-generator -l en -t nist-csf -o pdf --test
   
   # Generate German TOGAF Enterprise Architecture handbook
-  python -m src.cli -l de -t togaf -o html --test
+  handbook-generator -l de -t togaf -o html --test
   
   # Generate English ISO/IEC 38500 IT Governance handbook
-  python -m src.cli -l en -t iso-38500 --test
+  handbook-generator -l en -t iso-38500 --test
   
   # Generate German ISO 31000 Risk Management handbook
-  python -m src.cli -l de -t iso-31000 -o pdf --test
+  handbook-generator -l de -t iso-31000 -o pdf --test
   
   # Generate English CSA CCM Cloud Security handbook
-  python -m src.cli -l en -t csa-ccm -o html --test
+  handbook-generator -l en -t csa-ccm -o html --test
   
   # Generate German TISAX Automotive Security handbook
-  python -m src.cli -l de -t tisax --test
+  handbook-generator -l de -t tisax --test
   
   # Generate English SOC 1 / SSAE 18 handbook
-  python -m src.cli -l en -t soc1 -o pdf --test
+  handbook-generator -l en -t soc1 -o pdf --test
   
   # Generate German COSO Internal Control handbook
-  python -m src.cli -l de -t coso --test
+  handbook-generator -l de -t coso --test
   
   # Generate English DORA DevOps Metrics handbook
-  python -m src.cli -l en -t dora -o html --test
+  handbook-generator -l en -t dora -o html --test
+  
+  # Generate German service documentation
+  handbook-generator --language de --service generic-service-template --test
+  
+  # Generate English service documentation in PDF format
+  handbook-generator -l en --service email-service -o pdf --test
+  
+  # Generate German process documentation
+  handbook-generator --language de --process generic-process-template --test
+  
+  # Generate English process documentation in HTML format
+  handbook-generator -l en --process incident-management -o html --test
   
   # Generate separate markdown files for each template
-  python -m src.cli -l de -t bcm --test --separate-files
+  handbook-generator -l de -t bcm --test --separate-files
   
   # Generate PDF with table of contents and page breaks
-  python -m src.cli -l de -t isms -o pdf --test --pdf-toc
+  handbook-generator -l de -t isms -o pdf --test --pdf-toc
   
   # Generate both separate markdown files and PDF with TOC
-  python -m src.cli -l de -t bcm --test --separate-files --pdf-toc
+  handbook-generator -l de -t bcm --test --separate-files --pdf-toc
   
   # Verbose mode with custom config
-  python -m src.cli -l de -t bcm -v -c custom_config.yaml --test
+  handbook-generator -l de -t bcm -v -c custom_config.yaml --test
+  
+  # Dry run to preview what would be generated
+  handbook-generator -l de -t isms --dry-run
+  
+  # Dry run with verbose output
+  handbook-generator -l en --service email-service --dry-run -v
         """
     )
     
@@ -101,11 +119,26 @@ Examples:
         help='Language for handbook generation (de=German, en=English)'
     )
     
-    parser.add_argument(
+    # Create mutually exclusive group for document types
+    doc_type_group = parser.add_mutually_exclusive_group()
+    
+    doc_type_group.add_argument(
         '--template', '-t',
         type=str,
         choices=['bcm', 'bsi-grundschutz', 'cis-controls', 'common-criteria', 'coso', 'csa-ccm', 'dora', 'email-service', 'gdpr', 'hipaa', 'idw-ps-951', 'isms', 'iso-31000', 'iso-38500', 'iso-9001', 'it-operation', 'nist-800-53', 'nist-csf', 'pci-dss', 'service-templates', 'soc1', 'tisax', 'togaf', 'tsc'],
         help='Template type/category for handbook (bcm=Business Continuity Management, bsi-grundschutz=BSI IT-Grundschutz, cis-controls=CIS Controls v8 Hardening, common-criteria=Common Criteria EAL, coso=COSO Internal Control Framework, csa-ccm=Cloud Security Alliance CCM, dora=DORA DevOps Metrics, email-service=Email Service Management, gdpr=GDPR Compliance, hipaa=HIPAA Compliance, idw-ps-951=IDW PS 951 IT Auditing, isms=Information Security Management System, iso-31000=ISO 31000 Risk Management, iso-38500=ISO/IEC 38500 IT Governance, iso-9001=ISO 9001 Quality Management, it-operation=IT Operations, nist-800-53=NIST 800-53 Security Controls, nist-csf=NIST Cybersecurity Framework 2.0, pci-dss=PCI-DSS Payment Card Security, service-templates=Service Management Templates, soc1=SOC 1 / SSAE 18, tisax=TISAX Automotive Security, togaf=TOGAF Enterprise Architecture, tsc=Trust Services Criteria SOC2)'
+    )
+    
+    doc_type_group.add_argument(
+        '--service', '-s',
+        type=str,
+        help='Service name for service documentation generation (e.g., generic-service-template, email-service)'
+    )
+    
+    doc_type_group.add_argument(
+        '--process', '-p',
+        type=str,
+        help='Process name for process documentation generation (e.g., generic-process-template, incident-management)'
     )
     
     parser.add_argument(
@@ -156,6 +189,12 @@ Examples:
     )
     
     parser.add_argument(
+        '--dry-run',
+        action='store_true',
+        help='Process templates and show what would be generated without writing any files (implies --test)'
+    )
+    
+    parser.add_argument(
         '--separate-files',
         action='store_true',
         help='Generate separate markdown files for each template instead of a combined file (creates TOC.md with links)'
@@ -184,12 +223,25 @@ def validate_arguments(args: argparse.Namespace) -> Optional[str]:
     if args.create_config:
         return None
     
-    # Both language and template must be provided together or both omitted
-    if (args.language is None) != (args.template is None):
+    # --dry-run implies --test
+    if args.dry_run:
+        args.test = True
+    
+    # Count how many doc types are specified
+    doc_types_count = sum([
+        args.template is not None,
+        args.service is not None,
+        args.process is not None
+    ])
+    
+    # Check if language is provided when any doc type is specified
+    if doc_types_count > 0 and args.language is None:
         return (
-            "Error: --language and --template must be provided together, "
-            "or both omitted for interactive mode."
+            "Error: --language must be specified when using --template, --service, or --process"
         )
+    
+    # Note: Mutual exclusivity is already enforced by argparse's mutually_exclusive_group
+    # This validation is kept for clarity and potential future extensions
     
     return None
 
@@ -313,33 +365,79 @@ def main() -> int:
         return 1
     
     # Determine language and template type
-    if args.language and args.template:
+    if args.language:
         language = args.language
-        template_type = args.template
-        logger.log_verbose(f"Using command-line parameters: language={language}, template={template_type}")
+        
+        # Determine document type and name
+        if args.template:
+            doc_type = 'template'
+            doc_name = args.template
+        elif args.service:
+            doc_type = 'service'
+            doc_name = args.service
+        elif args.process:
+            doc_type = 'process'
+            doc_name = args.process
+        else:
+            # Interactive mode with language specified
+            try:
+                language, doc_name = interactive_selection(template_manager)
+                doc_type = 'template'  # Interactive mode only supports templates for now
+            except (KeyboardInterrupt, EOFError):
+                print("\n\nOperation cancelled by user.")
+                return 1
+        
+        logger.log_verbose(f"Using parameters: language={language}, doc_type={doc_type}, name={doc_name}")
     else:
         # Interactive mode
         try:
-            language, template_type = interactive_selection(template_manager)
+            language, doc_name = interactive_selection(template_manager)
+            doc_type = 'template'  # Interactive mode only supports templates for now
         except (KeyboardInterrupt, EOFError):
             print("\n\nOperation cancelled by user.")
             return 1
     
-    # Verify selected combination exists
-    try:
-        templates = template_manager.get_templates(language, template_type)
-    except ValueError as e:
-        logger.log_error(str(e))
-        return 1
+    # Get templates based on doc type
+    if doc_type == 'service':
+        try:
+            templates = template_manager.get_services(language, doc_name)
+            logger.log_verbose(f"Loaded {len(templates)} service template(s) from services/{language}/{doc_name}")
+        except ValueError as e:
+            logger.log_error(str(e))
+            return 1
+        except Exception as e:
+            logger.log_error(f"Failed to load service templates: {str(e)}")
+            return 1
+    elif doc_type == 'process':
+        try:
+            templates = template_manager.get_processes(language, doc_name)
+            logger.log_verbose(f"Loaded {len(templates)} process template(s) from processes/{language}/{doc_name}")
+        except ValueError as e:
+            logger.log_error(str(e))
+            return 1
+        except Exception as e:
+            logger.log_error(f"Failed to load process templates: {str(e)}")
+            return 1
+    else:
+        # Template (handbook) type
+        try:
+            templates = template_manager.get_templates(language, doc_name)
+            logger.log_verbose(f"Loaded {len(templates)} handbook template(s) from templates/{language}/{doc_name}")
+        except ValueError as e:
+            logger.log_error(str(e))
+            return 1
         
     if not templates:
         logger.log_error(
-            f"No templates found for language '{language}' and type '{template_type}'. "
-            f"Please check your template directory structure."
+            f"No templates found for language '{language}' and {doc_type} '{doc_name}'. "
+            f"Please check your directory structure."
         )
         return 1
     
-    logger.log_info(f"\n✓ Found {len(templates)} template(s) for {language}/{template_type}")
+    logger.log_info(f"\n✓ Found {len(templates)} template(s) for {language}/{doc_name}")
+    
+    # Use doc_name as template_type for backward compatibility with output generation
+    template_type = doc_name
     
     # Load NetBox metadata if NetBox is configured
     metadata_netbox_path = Path("metadata-netbox.yaml")
@@ -383,8 +481,18 @@ def main() -> int:
         try:
             meta_adapter = MetaAdapter(config.metadata, language=language)
             if meta_adapter.connect():
-                # Set handbook type for per-handbook metadata support
-                meta_adapter.set_handbook_type(template_type)
+                # Set document type for metadata support
+                if doc_type == 'service':
+                    meta_adapter.set_service_type(doc_name, language)
+                    logger.log_verbose(f"✓ Meta adapter configured for service: {doc_name}")
+                elif doc_type == 'process':
+                    meta_adapter.set_process_type(doc_name, language)
+                    logger.log_verbose(f"✓ Meta adapter configured for process: {doc_name}")
+                else:
+                    # Set handbook type for per-handbook metadata support
+                    meta_adapter.set_handbook_type(doc_name)
+                    logger.log_verbose(f"✓ Meta adapter configured for handbook: {doc_name}")
+                
                 data_sources['meta'] = meta_adapter
                 logger.log_verbose("✓ Meta adapter initialized with organization metadata")
             else:
@@ -410,6 +518,12 @@ def main() -> int:
     # Initialize output generator
     output_dir = Path('test-output')  # Use consolidated test-output directory
     output_generator = OutputGenerator(output_dir, test_mode=args.test)
+    
+    # Check for dry-run mode
+    if args.dry_run:
+        logger.log_info("\n" + "=" * 60)
+        logger.log_info("DRY RUN MODE - No files will be written")
+        logger.log_info("=" * 60)
     
     # Start processing
     logger.start_processing()
@@ -448,7 +562,16 @@ def main() -> int:
         all_errors.extend(result.errors)
     
     # Generate output
-    logger.log_info("\nGenerating output...")
+    if args.dry_run:
+        logger.log_info("\n[DRY RUN] Skipping output generation...")
+        logger.log_info(f"Would generate output in format: {args.output}")
+        logger.log_info(f"Output directory would be: {output_dir}")
+        if args.separate_files:
+            logger.log_info("Would generate separate markdown files for each template")
+        if args.pdf_toc:
+            logger.log_info("Would generate PDF with table of contents")
+    else:
+        logger.log_info("\nGenerating output...")
     
     output_format = args.output
     markdown_path = None
@@ -456,7 +579,7 @@ def main() -> int:
     html_dir = None
     
     # Generate markdown
-    if output_format in ['markdown', 'both', 'all']:
+    if not args.dry_run and output_format in ['markdown', 'both', 'all']:
         if args.separate_files:
             # Generate separate markdown files for each template
             templates_data = [
@@ -520,7 +643,7 @@ def main() -> int:
                 logger.log_info(f"✓ Markdown generated: {markdown_path}")
     
     # Generate PDF
-    if output_format in ['pdf', 'both', 'all']:
+    if not args.dry_run and output_format in ['pdf', 'both', 'all']:
         if args.pdf_toc:
             # Generate PDF with table of contents
             templates_data = []
@@ -566,7 +689,8 @@ def main() -> int:
                 logger.log_info(f"✓ PDF generated: {pdf_path}")
     
     # Generate HTML
-    if output_format in ['html', 'all']:
+    # Generate HTML
+    if not args.dry_run and output_format in ['html', 'all']:
         html_generator = HTMLOutputGenerator(output_dir, test_mode=args.test)
         
         # Extract filenames from templates
@@ -616,6 +740,17 @@ def main() -> int:
     
     # Log summary of warnings and errors
     logger.log_summary(all_warnings, all_errors)
+    
+    # Dry-run summary
+    if args.dry_run:
+        logger.log_info("\n" + "=" * 60)
+        logger.log_info("DRY RUN COMPLETE")
+        logger.log_info("=" * 60)
+        logger.log_info(f"Processed {len(templates)} template(s)")
+        logger.log_info(f"Total replacements: {sum(len(r.replacements) for r in processed_results)}")
+        logger.log_info(f"Content size: {len(assembled_content)} characters")
+        logger.log_info("\nNo files were written. Remove --dry-run to generate output.")
+        logger.log_info("=" * 60)
     
     # Disconnect data sources
     for adapter in data_sources.values():

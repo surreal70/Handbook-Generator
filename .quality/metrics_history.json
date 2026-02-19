@@ -71,6 +71,18 @@
       "total_tests": 289,
       "execution_duration": 29.894027709960938,
       "overall_success": false
+    },
+    {
+      "timestamp": "2026-02-19T08:24:50.368148",
+      "framework_mapping_compliance": 100.0,
+      "version_history_compliance": 0.0,
+      "test_pass_rate": 97.7961432506887,
+      "bilingual_consistency_rate": 100.0,
+      "total_frameworks": 44,
+      "total_templates": 0,
+      "total_tests": 726,
+      "execution_duration": 38.93599224090576,
+      "overall_success": false
     }
   ]
 }

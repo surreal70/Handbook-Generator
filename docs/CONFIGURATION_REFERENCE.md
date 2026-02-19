@@ -905,3 +905,611 @@ For questions or issues with configuration:
 2. Review example files (*.example.yaml)
 3. Check validation error messages for specific guidance
 4. Consult the troubleshooting section above
+
+
+---
+
+## Service and Process Documentation Configuration
+
+**Since Version 0.0.17**, the Handbook Generator supports structured documentation of IT services and business processes.
+
+### Directory Structure
+
+```
+project-root/
+├── services/
+│   ├── de/
+│   │   ├── meta-global-service.yaml      # Global service configuration
+│   │   ├── generic-service-template/
+│   │   │   ├── meta-service.yaml         # Service-specific configuration
+│   │   │   └── service-template.md       # Service template
+│   │   └── email-service/                # Example service
+│   │       ├── meta-service.yaml
+│   │       └── email-service.md
+│   └── en/
+│       └── (similar structure)
+└── processes/
+    ├── de/
+    │   ├── meta-global-process.yaml      # Global process configuration
+    │   ├── generic-process-template/
+    │   │   ├── meta-process.yaml         # Process-specific configuration
+    │   │   ├── diagrams/                 # BPMN diagrams
+    │   │   └── process-template.md       # Process template
+    │   └── incident-management/          # Example process
+    │       ├── meta-process.yaml
+    │       ├── diagrams/
+    │       └── incident-management.md
+    └── en/
+        └── (similar structure)
+```
+
+### meta-global-service.yaml
+
+Global configuration for all services. Provides default values that can be overridden by service-specific configurations.
+
+#### Structure
+
+```yaml
+# Default SLA values
+sla:
+  availability_target: "99.5%"
+  response_time_p1: "15 minutes"
+  response_time_p2: "4 hours"
+  response_time_p3: "24 hours"
+  response_time_p4: "5 business days"
+  
+# Support hours
+support:
+  business_hours: "Mo-Fr 08:00-18:00 CET"
+  extended_hours: "Mo-Fr 06:00-22:00 CET"
+  maintenance_window: "Sa 02:00-06:00 CET"
+  
+# Escalation paths
+escalation:
+  level_1: "{{ group_Helpdesk }}"
+  level_2: "{{ role_IT_Manager }}"
+  level_3: "{{ role_CIO }}"
+  level_4: "{{ role_CEO }}"
+  
+# Compliance frameworks
+compliance:
+  cobit_version: "COBIT 2019"
+  itil_version: "ITIL 4"
+  iso_27001: true
+  
+# Service categories
+categories:
+  - infrastructure
+  - application
+  - business
+  - security
+  - support
+```
+
+#### Fields
+
+##### sla (optional)
+
+Default SLA values for all services.
+
+- **availability_target:** Target availability percentage (e.g., "99.5%", "99.9%")
+- **response_time_p1:** Response time for P1 (Critical) incidents
+- **response_time_p2:** Response time for P2 (High) incidents
+- **response_time_p3:** Response time for P3 (Medium) incidents
+- **response_time_p4:** Response time for P4 (Low) incidents
+
+##### support (optional)
+
+Default support hours and maintenance windows.
+
+- **business_hours:** Standard business hours (e.g., "Mo-Fr 08:00-18:00 CET")
+- **extended_hours:** Extended support hours (e.g., "Mo-Fr 06:00-22:00 CET")
+- **maintenance_window:** Standard maintenance window (e.g., "Sa 02:00-06:00 CET")
+
+##### escalation (optional)
+
+Default escalation paths. Can reference roles from meta-organisation-roles.yaml.
+
+- **level_1:** First escalation level (e.g., "{{ group_Helpdesk }}")
+- **level_2:** Second escalation level (e.g., "{{ role_IT_Manager }}")
+- **level_3:** Third escalation level (e.g., "{{ role_CIO }}")
+- **level_4:** Fourth escalation level (e.g., "{{ role_CEO }}")
+
+##### compliance (optional)
+
+Compliance framework versions and flags.
+
+- **cobit_version:** COBIT version (e.g., "COBIT 2019")
+- **itil_version:** ITIL version (e.g., "ITIL 4")
+- **iso_27001:** ISO 27001 compliance flag (true/false)
+
+##### categories (optional)
+
+List of valid service categories.
+
+- infrastructure
+- application
+- business
+- security
+- support
+
+### meta-service.yaml
+
+Service-specific configuration. Overrides global defaults from meta-global-service.yaml.
+
+#### Structure
+
+```yaml
+service:
+  id: "SVC-001"
+  name: "Email Service"
+  category: "infrastructure"
+  criticality: "High"
+  status: "Production"
+  classification: "Internal"
+  revision: 1
+  modifydate: "2025-02-19"
+  
+  # Role references from meta-organisation-roles.yaml
+  owner: "role_IT_Manager"
+  manager: "role_IT_Manager"
+  approver: "role_CIO"
+  
+  # Service-specific SLA (overrides global)
+  sla:
+    availability_target: "99.9%"
+    response_time_p1: "10 minutes"
+    
+  # Technology stack
+  technology:
+    platform: "Microsoft Exchange Online"
+    backup: "Veeam Backup for Office 365"
+    monitoring: "Zabbix"
+    
+  # COBIT mapping
+  cobit:
+    processes:
+      - "DSS01 - Manage Operations"
+      - "DSS02 - Manage Service Requests"
+      
+  # ITIL lifecycle
+  itil:
+    lifecycle_phase: "Service Operation"
+    processes:
+      - "Incident Management"
+      - "Problem Management"
+```
+
+#### Fields
+
+##### service.id (required)
+
+Unique service identifier.
+
+- **Format:** "SVC-<CATEGORY>-<NUMBER>" (e.g., "SVC-INFRA-001")
+- **Example:** "SVC-001", "SVC-EMAIL-001", "SVC-INFRA-001"
+
+##### service.name (required)
+
+Service name.
+
+- **Example:** "Email Service", "ERP System", "Firewall Service"
+
+##### service.category (required)
+
+Service category. Must be one of the categories defined in meta-global-service.yaml.
+
+- **Values:** infrastructure, application, business, security, support
+
+##### service.criticality (required)
+
+Service criticality level.
+
+- **Values:** Critical, High, Medium, Low
+
+##### service.status (required)
+
+Current service status.
+
+- **Values:** Production, Development, Testing, Retired
+
+##### service.classification (required)
+
+Data classification level.
+
+- **Values:** Public, Internal, Confidential, Restricted
+
+##### service.revision (required)
+
+Document revision number.
+
+- **Type:** Integer
+- **Example:** 1, 2, 3
+
+##### service.modifydate (required)
+
+Last modification date.
+
+- **Format:** "YYYY-MM-DD"
+- **Example:** "2025-02-19"
+
+##### service.owner (required)
+
+Service owner role reference.
+
+- **Format:** Role reference from meta-organisation-roles.yaml
+- **Example:** "role_IT_Manager", "role_CIO"
+
+##### service.manager (required)
+
+Service manager role reference.
+
+- **Format:** Role reference from meta-organisation-roles.yaml
+- **Example:** "role_IT_Manager", "role_Service_Manager"
+
+##### service.approver (required)
+
+Service approver role reference.
+
+- **Format:** Role reference from meta-organisation-roles.yaml
+- **Example:** "role_CIO", "role_CEO"
+
+##### service.sla (optional)
+
+Service-specific SLA values. Overrides global defaults.
+
+- **availability_target:** Target availability (e.g., "99.9%")
+- **response_time_p1:** P1 response time (e.g., "10 minutes")
+- **response_time_p2:** P2 response time (e.g., "2 hours")
+- **response_time_p3:** P3 response time (e.g., "8 hours")
+- **response_time_p4:** P4 response time (e.g., "2 business days")
+
+##### service.technology (optional)
+
+Technology stack information.
+
+- **platform:** Primary platform (e.g., "Microsoft Exchange Online")
+- **backup:** Backup solution (e.g., "Veeam Backup for Office 365")
+- **monitoring:** Monitoring tool (e.g., "Zabbix")
+- Additional fields as needed
+
+##### service.cobit (optional)
+
+COBIT framework mapping.
+
+- **processes:** List of COBIT processes (e.g., ["DSS01 - Manage Operations"])
+- **controls:** List of COBIT controls (e.g., ["DSS01.01 - Perform operational procedures"])
+
+##### service.itil (optional)
+
+ITIL framework mapping.
+
+- **lifecycle_phase:** ITIL lifecycle phase (e.g., "Service Operation")
+- **processes:** List of ITIL processes (e.g., ["Incident Management", "Problem Management"])
+
+### meta-global-process.yaml
+
+Global configuration for all processes. Provides default values that can be overridden by process-specific configurations.
+
+#### Structure
+
+```yaml
+# Standard escalation
+escalation:
+  level_1: "{{ role_IT_Manager }}"
+  level_2: "{{ role_Risk_Manager }}"
+  level_3: "{{ role_CIO }}"
+  level_4: "{{ role_CEO }}"
+  
+# Compliance frameworks
+compliance:
+  iso_27001: true
+  bsi_grundschutz: true
+  gdpr: true
+  
+# Standard KPIs
+kpis:
+  process_efficiency: "Cycle time reduction"
+  quality: "Error rate"
+  compliance: "Audit findings"
+  
+# Process categories
+categories:
+  - core
+  - support
+  - management
+  
+# Standard control points
+controls:
+  - "Management approval"
+  - "Four-eyes principle"
+  - "Audit trail"
+```
+
+#### Fields
+
+##### escalation (optional)
+
+Default escalation paths for processes.
+
+- **level_1:** First escalation level
+- **level_2:** Second escalation level
+- **level_3:** Third escalation level
+- **level_4:** Fourth escalation level
+
+##### compliance (optional)
+
+Compliance framework flags.
+
+- **iso_27001:** ISO 27001 compliance (true/false)
+- **bsi_grundschutz:** BSI IT-Grundschutz compliance (true/false)
+- **gdpr:** GDPR compliance (true/false)
+
+##### kpis (optional)
+
+Standard KPI definitions.
+
+- **process_efficiency:** Efficiency metric description
+- **quality:** Quality metric description
+- **compliance:** Compliance metric description
+
+##### categories (optional)
+
+List of valid process categories.
+
+- core
+- support
+- management
+
+##### controls (optional)
+
+List of standard control points.
+
+- "Management approval"
+- "Four-eyes principle"
+- "Audit trail"
+
+### meta-process.yaml
+
+Process-specific configuration. Overrides global defaults from meta-global-process.yaml.
+
+#### Structure
+
+```yaml
+process:
+  id: "PROC-001"
+  name: "Incident Management"
+  category: "core"
+  criticality: "Critical"
+  status: "Active"
+  classification: "Internal"
+  revision: 2
+  modifydate: "2025-02-19"
+  
+  # Role references from meta-organisation-roles.yaml
+  owner: "role_IT_Manager"
+  manager: "role_IT_Manager"
+  approver: "role_CIO"
+  
+  # Process-specific SLA
+  sla:
+    p1_resolution: "4 hours"
+    p2_resolution: "24 hours"
+    p3_resolution: "5 business days"
+    
+  # Systems used
+  systems:
+    - "ServiceNow"
+    - "Zabbix"
+    - "Slack"
+    
+  # RACI roles
+  raci:
+    incident_detection:
+      responsible: "role_System_Administrator"
+      accountable: "role_IT_Manager"
+      consulted: "role_CISO"
+      informed: "role_CIO"
+      
+  # Compliance requirements
+  compliance:
+    frameworks:
+      - "ISO 27001:2022 - Clause 5.24"
+      - "BSI IT-Grundschutz - DER.2.1"
+    sod_rules:
+      - "Incident handler cannot approve own escalations"
+      
+  # KPIs
+  kpis:
+    mttr: "Mean Time To Resolve"
+    mtbf: "Mean Time Between Failures"
+```
+
+#### Fields
+
+##### process.id (required)
+
+Unique process identifier.
+
+- **Format:** "PROC-<CATEGORY>-<NUMBER>" (e.g., "PROC-INC-001")
+- **Example:** "PROC-001", "PROC-INC-001", "PROC-CHG-001"
+
+##### process.name (required)
+
+Process name.
+
+- **Example:** "Incident Management", "Change Management", "Backup and Recovery"
+
+##### process.category (required)
+
+Process category. Must be one of the categories defined in meta-global-process.yaml.
+
+- **Values:** core, support, management
+
+##### process.criticality (required)
+
+Process criticality level.
+
+- **Values:** Critical, High, Medium, Low
+
+##### process.status (required)
+
+Current process status.
+
+- **Values:** Active, Draft, Retired
+
+##### process.classification (required)
+
+Data classification level.
+
+- **Values:** Public, Internal, Confidential, Restricted
+
+##### process.revision (required)
+
+Document revision number.
+
+- **Type:** Integer
+- **Example:** 1, 2, 3
+
+##### process.modifydate (required)
+
+Last modification date.
+
+- **Format:** "YYYY-MM-DD"
+- **Example:** "2025-02-19"
+
+##### process.owner (required)
+
+Process owner role reference.
+
+- **Format:** Role reference from meta-organisation-roles.yaml
+- **Example:** "role_IT_Manager", "role_Risk_Manager"
+
+##### process.manager (required)
+
+Process manager role reference.
+
+- **Format:** Role reference from meta-organisation-roles.yaml
+- **Example:** "role_IT_Manager", "role_Process_Manager"
+
+##### process.approver (required)
+
+Process approver role reference.
+
+- **Format:** Role reference from meta-organisation-roles.yaml
+- **Example:** "role_CIO", "role_CEO"
+
+##### process.sla (optional)
+
+Process-specific SLA values.
+
+- **p1_resolution:** P1 resolution time (e.g., "4 hours")
+- **p2_resolution:** P2 resolution time (e.g., "24 hours")
+- **p3_resolution:** P3 resolution time (e.g., "5 business days")
+- **p4_resolution:** P4 resolution time (e.g., "10 business days")
+
+##### process.systems (optional)
+
+List of systems used in the process.
+
+- **Example:** ["ServiceNow", "Zabbix", "Slack"]
+
+##### process.raci (optional)
+
+RACI matrix definitions for process steps.
+
+Each process step can have:
+- **responsible:** Role reference (who executes)
+- **accountable:** Role reference (who is accountable)
+- **consulted:** Role reference (who is consulted)
+- **informed:** Role reference (who is informed)
+
+**Example:**
+```yaml
+raci:
+  incident_detection:
+    responsible: "role_System_Administrator"
+    accountable: "role_IT_Manager"
+    consulted: "role_CISO"
+    informed: "role_CIO"
+```
+
+##### process.compliance (optional)
+
+Compliance requirements.
+
+- **frameworks:** List of compliance frameworks (e.g., ["ISO 27001:2022 - Clause 5.24"])
+- **sod_rules:** List of Segregation of Duties rules (e.g., ["Incident handler cannot approve own escalations"])
+
+##### process.kpis (optional)
+
+Process-specific KPIs.
+
+- **Example:** {"mttr": "Mean Time To Resolve", "mtbf": "Mean Time Between Failures"}
+
+### Placeholder Resolution Hierarchy
+
+Placeholders are resolved in the following priority order (highest to lowest):
+
+#### For Services
+
+1. `meta-service.yaml` (service-specific)
+2. `meta-global-service.yaml` (global for all services)
+3. `meta-organisation-roles.yaml` (roles)
+4. `meta-organisation.yaml` (organization)
+5. `meta-global.yaml` (generator)
+
+#### For Processes
+
+1. `meta-process.yaml` (process-specific)
+2. `meta-global-process.yaml` (global for all processes)
+3. `meta-organisation-roles.yaml` (roles)
+4. `meta-organisation.yaml` (organization)
+5. `meta-global.yaml` (generator)
+
+### CLI Usage
+
+#### Generate Service Documentation
+
+```bash
+# German service
+./handbook-generator --language de --service generic-service-template --test
+
+# English service
+./handbook-generator --language en --service email-service --test
+
+# With all output formats
+./handbook-generator -l de --service email-service -o all --test --separate-files --pdf-toc
+```
+
+#### Generate Process Documentation
+
+```bash
+# German process
+./handbook-generator --language de --process generic-process-template --test
+
+# English process
+./handbook-generator --language en --process incident-management --test
+
+# With all output formats
+./handbook-generator -l de --process incident-management -o all --test --separate-files --pdf-toc
+```
+
+### Best Practices
+
+1. **Use Global Defaults:** Define common values in meta-global-service.yaml and meta-global-process.yaml
+2. **Override Selectively:** Only override values in meta-service.yaml and meta-process.yaml when needed
+3. **Role References:** Always use role references (e.g., "role_IT_Manager") instead of direct names
+4. **Consistent IDs:** Use consistent ID formats (SVC-<CATEGORY>-<NUMBER>, PROC-<CATEGORY>-<NUMBER>)
+5. **Bilingual Consistency:** Keep German and English versions synchronized
+6. **Version Control:** Track all metadata files in version control
+7. **Documentation:** Document custom fields and their purpose
+
+### Related Documentation
+
+- **[SERVICE_DOCUMENTATION_GUIDE.md](SERVICE_DOCUMENTATION_GUIDE.md)** - Service documentation guide
+- **[PROCESS_DOCUMENTATION_GUIDE.md](PROCESS_DOCUMENTATION_GUIDE.md)** - Process documentation guide
+- **[PLACEHOLDER_STRUCTURE.md](PLACEHOLDER_STRUCTURE.md)** - Placeholder hierarchy and resolution
+- **[METADATA_REFERENCE.md](METADATA_REFERENCE.md)** - Metadata field reference
+
+---
