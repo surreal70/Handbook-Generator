@@ -449,7 +449,7 @@ Dieses Dokument enthält eine Sammlung von Checklisten, Vorlagen für Standarddo
 - [Monitoring-Daten]
 
 **Erstellt von:** [Name]
-**Genehmigt von:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+**Genehmigt von:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 **Datum:** [YYYY-MM-DD]
 ```
 
@@ -521,7 +521,7 @@ Dieses Dokument enthält eine Sammlung von Checklisten, Vorlagen für Standarddo
 - [ ] CAB-Genehmigung: [Name] - [Datum]
 
 **Antragsteller:** [Name]
-**Change-Manager:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+**Change-Manager:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 **Status:** Beantragt / Genehmigt / Abgelehnt / Implementiert
 ```
 
@@ -727,5 +727,5 @@ Dieses Dokument enthält eine Sammlung von Checklisten, Vorlagen für Standarddo
 
 **Letzte Aktualisierung:** {{ meta-handbook.date }}  
 **Nächste Review:** [TODO: Datum]  
-**Kontakt:** {{ meta-organisation-roles.role_it_operations_manager.email }}
+**Kontakt:** {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
 

@@ -25,7 +25,7 @@ Reference: BSI Standard 200-1 (Non-conformities and Corrective Actions)
 
 This process ensures that deviations from ISMS requirements are systematically captured, addressed, and their effectiveness verified.
 
-**Responsible:** {{ meta.ciso.name }} (CISO)
+**Responsible:** {{ meta-organisation-roles.role_CISO }} (CISO)
 
 ## 2. Sources for Non-Conformities
 
@@ -140,7 +140,7 @@ This process ensures that deviations from ISMS requirements are systematically c
 - Top finding categories
 - Effectiveness of corrective actions
 
-**Responsible:** {{ meta.ciso.name }}  
+**Responsible:** {{ meta-organisation-roles.role_CISO }}  
 **Recipients:** Executive Management, ISMS Team
 
 ## 7. Lessons Learned
@@ -155,8 +155,8 @@ After closing critical or recurring findings:
 
 | Role | Name | Date | Approval |
 |---|---|---|---|
-| CISO | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
-| IT Management | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| CISO | {{ meta-organisation-roles.role_CISO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| IT Management | {{ meta-organisation-roles.role_CIO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **References:**
 - BSI Standard 200-1: ISMS (Non-conformities and Corrective Actions)

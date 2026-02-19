@@ -27,7 +27,7 @@ ISO 27001:2022 Annex A Reference: A.8.1, A.8.2, A.8.3, A.6.7
 **Document ID:** 0620  
 **Document Type:** Policy (abstract)  
 **Standard Reference:** ISO/IEC 27001:2022 Annex A.8.1-A.8.3, A.6.7 (incl. Amendment 1:2024)  
-**Owner:** {{ meta.ciso.name }}  
+**Owner:** {{ meta-organisation-roles.role_CISO }}  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
@@ -46,7 +46,7 @@ This policy applies to:
 - **Devices:** All endpoint devices (workstations, laptops, tablets, smartphones)
 - **Operating Systems:** Windows, macOS, Linux, iOS, Android
 - **Ownership:** Company-owned and BYOD devices (with corporate access)
-- **Locations:** {{ netbox.site.name }} and all other operational sites, remote work
+- **Locations:** [[ netbox.site.name ]] and all other operational sites, remote work
 
 **Exceptions:** Exceptions are only permitted through the defined exception process (`0640_Policy_Exceptions_and_Risk_Waivers.md`).
 
@@ -103,10 +103,10 @@ BYOD devices with corporate access must meet minimum security requirements. BYOD
 
 ### Key Roles
 
-- **Policy Owner:** {{ meta.ciso.name }} (CISO)
-- **Endpoint Security Manager:** {{ meta.endpoint.security_manager }}
-- **IT Operations Manager:** {{ meta.it.operations_manager }}
-- **SOC Manager:** {{ meta.soc.manager }}
+- **Policy Owner:** {{ meta-organisation-roles.role_CISO }} (CISO)
+- **Endpoint Security Manager:** {{ meta-handbook.endpoint_security_manager }}
+- **IT Operations Manager:** {{ meta-handbook.it_operations_manager }}
+- **SOC Manager:** {{ meta-handbook.soc_manager }}
 - **Implementation Responsible:** IT Operations, End Users
 - **Control/Audit Function:** ISMS, Internal Audit, SOC
 
@@ -188,7 +188,7 @@ Exceptions to this policy are only permitted in justified exceptional cases:
 - **CIS Controls v8** - Control 4 (Secure Configuration of Enterprise Assets)
 
 **Approved by:**  
-{{ meta.management.ceo }}, Executive Management  
+{{ meta-handbook.management_ceo }}, Executive Management  
 Date: {{ meta-handbook.modifydate }}
 
 **Next Review:** {{ meta-handbook.next_review }} (annually or as needed)

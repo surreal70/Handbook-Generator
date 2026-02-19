@@ -59,7 +59,7 @@ Dieses Dokument beschreibt das Service-System von {{ meta-organisation.name }}, 
 
 ### 2.2 Service Description
 
-**Service Name:** {{ meta.tsc.system_name }}  
+**Service Name:** {{ meta-handbook.system_name }}  
 **Service Type:** [TODO: z.B. Cloud-basierte Anwendung, Hosting-Service]  
 **Service Purpose:** [TODO: Zweck des Service]  
 
@@ -71,7 +71,7 @@ Dieses Dokument beschreibt das Service-System von {{ meta-organisation.name }}, 
 ### 2.3 Report Period
 
 **Report Type:** [TODO: Type I / Type II]  
-**Report Period:** {{ meta.tsc.report_period }}  
+**Report Period:** {{ meta-handbook.report_period }}  
 **Report Date:** [TODO: Datum für Type I oder Enddatum für Type II]  
 
 ## 3. System Boundaries

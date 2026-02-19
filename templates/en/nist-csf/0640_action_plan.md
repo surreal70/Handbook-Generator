@@ -36,10 +36,10 @@ This document describes the action plan for closing identified gaps and achievin
 
 | Priority | Action | Function | Timeline | Owner | Budget |
 |----------|--------|----------|----------|-------|--------|
-| 1 | Implement MFA | Protect | Q1 2024 | {{ meta-organisation-roles.role_CISO }} | {{ meta.budget_1 }} |
-| 2 | Deploy SIEM | Detect | Q2 2024 | {{ meta-handbook.security_ops_manager }} | {{ meta.budget_2 }} |
-| 3 | Enhance IR plan | Respond | Q1 2024 | {{ meta-handbook.ir_manager }} | {{ meta.budget_3 }} |
-| 4 | Improve asset inventory | Identify | Q2 2024 | {{ meta-organisation-roles.role_IT_Manager }} | {{ meta.budget_4 }} |
+| 1 | Implement MFA | Protect | Q1 2024 | {{ meta-organisation-roles.role_CISO }} | {{ meta-handbook.budget_1 }} |
+| 2 | Deploy SIEM | Detect | Q2 2024 | {{ meta-handbook.security_ops_manager }} | {{ meta-handbook.budget_2 }} |
+| 3 | Enhance IR plan | Respond | Q1 2024 | {{ meta-handbook.ir_manager }} | {{ meta-handbook.budget_3 }} |
+| 4 | Improve asset inventory | Identify | Q2 2024 | {{ meta-organisation-roles.role_IT_Manager }} | {{ meta-handbook.budget_4 }} |
 
 ### Implementation Roadmap
 

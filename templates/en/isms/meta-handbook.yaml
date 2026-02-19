@@ -49,3 +49,195 @@ next_review: "[TODO]"
 
 # Scope of the handbook
 scope: "[TODO]"
+
+# Framework-specific auxiliary placeholders
+
+# Asset Management
+asset_id_format: '[TODO]'
+
+# Audit
+audit_manager: '[TODO]'
+
+# Backup
+backup_server: '[TODO]'
+backup_software: '[TODO]'
+backup_storage: '[TODO]'
+
+# Business Continuity Management
+bcm_manager: '[TODO]'
+
+# Cloud Services
+cloud_backup_provider: '[TODO]'
+cloud_dr_provider: '[TODO]'
+cloud_dr_region: '[TODO]'
+cloud_key_vault: '[TODO]'
+cloud_primary_provider: '[TODO]'
+cloud_primary_region: '[TODO]'
+cloud_secondary_provider: '[TODO]'
+cloud_storage_service: '[TODO]'
+
+# Collaboration Tools
+collaboration_mobile_app: '[TODO]'
+collaboration_sharepoint: '[TODO]'
+collaboration_teams: '[TODO]'
+collaboration_video: '[TODO]'
+
+# Communication
+communication_security_manager: '[TODO]'
+
+# Compliance
+compliance_exception_register: '[TODO]'
+
+# Documentation
+documentation_baseline_repo: '[TODO]'
+
+# Data Protection Officer
+dpo_email: '[TODO]'
+dpo_name: '[TODO]'
+dpo_vvt_tool: '[TODO]'
+
+# Email Systems
+email_archive_system: '[TODO]'
+email_mobile_app: '[TODO]'
+email_system: '[TODO]'
+
+# Endpoint Management
+endpoint_management: '[TODO]'
+endpoint_security_manager: '[TODO]'
+
+# Facility Management
+facility_manager: '[TODO]'
+
+# File Sharing
+filesharing_secure_platform: '[TODO]'
+
+# HR
+hr_manager: '[TODO]'
+hr_system: '[TODO]'
+
+# Identity and Access Management
+iam_idp: '[TODO]'
+iam_portal: '[TODO]'
+iam_portal_url: '[TODO]'
+iam_sspr_url: '[TODO]'
+
+# ISMS
+isms_scope: '[TODO]'
+isms_team: '[TODO]'
+
+# IT Roles
+it_asset_manager: '[TODO]'
+it_backup_admin: '[TODO]'
+it_cab_chair: '[TODO]'
+it_change_manager: '[TODO]'
+it_config_manager: '[TODO]'
+it_crypto_officer: '[TODO]'
+it_dr_coordinator: '[TODO]'
+it_iam_manager: '[TODO]'
+it_key_manager: '[TODO]'
+it_mdm_admin: '[TODO]'
+it_operations_manager: '[TODO]'
+it_patch_manager: '[TODO]'
+it_remote_access_manager: '[TODO]'
+it_service_manager: '[TODO]'
+it_siem_admin: '[TODO]'
+
+# ITSM
+itsm_cmdb: '[TODO]'
+itsm_portal: '[TODO]'
+
+# Management
+management_ceo: '[TODO]'
+management_name: '[TODO]'
+
+# Mobile Device Management
+mdm_system: '[TODO]'
+
+# Naming Conventions
+naming_hostname_format: '[TODO]'
+naming_user_format: '[TODO]'
+
+# Network
+network_admin: '[TODO]'
+network_discovery: '[TODO]'
+network_firewall: '[TODO]'
+network_flow_tool: '[TODO]'
+network_nac_solution: '[TODO]'
+network_security_manager: '[TODO]'
+network_vpn_solution: '[TODO]'
+
+# PKI
+pki_ca: '[TODO]'
+pki_cms: '[TODO]'
+pki_issuing_ca: '[TODO]'
+pki_root_ca: '[TODO]'
+
+# Privacy
+privacy_dpo: '[TODO]'
+privacy_officer: '[TODO]'
+
+# Records Management
+records_manager: '[TODO]'
+
+# Retention Policies
+retention_access_years: '[TODO]'
+retention_audit_years: '[TODO]'
+retention_backup_years: '[TODO]'
+retention_change_years: '[TODO]'
+retention_chat_years: '[TODO]'
+retention_config_years: '[TODO]'
+retention_deletion_log_years: '[TODO]'
+retention_email_years: '[TODO]'
+retention_log_years: '[TODO]'
+retention_visitor_years: '[TODO]'
+
+# Risk Management
+risk_manager: '[TODO]'
+
+# Security Tools and Roles
+security_appsec_lead: '[TODO]'
+security_architect: '[TODO]'
+security_av_solution: '[TODO]'
+security_awareness_manager: '[TODO]'
+security_bug_bounty: '[TODO]'
+security_casb_solution: '[TODO]'
+security_cloud_architect: '[TODO]'
+security_container_scanner: '[TODO]'
+security_dast_tool: '[TODO]'
+security_dependency_tool: '[TODO]'
+security_dlp_solution: '[TODO]'
+security_edr_solution: '[TODO]'
+security_email: '[TODO]'
+security_email_gateway: '[TODO]'
+security_forensics_tools: '[TODO]'
+security_hsm: '[TODO]'
+security_ids_ips: '[TODO]'
+security_incident_manager: '[TODO]'
+security_kms: '[TODO]'
+security_pam_solution: '[TODO]'
+security_password_manager: '[TODO]'
+security_phone: '[TODO]'
+security_physical_security_manager: '[TODO]'
+security_sast_tool: '[TODO]'
+security_sca_tool: '[TODO]'
+security_secrets_manager: '[TODO]'
+security_secrets_scanner: '[TODO]'
+security_siem_solution: '[TODO]'
+security_soc_manager: '[TODO]'
+security_threat_intel: '[TODO]'
+security_threat_modeling_tool: '[TODO]'
+security_tprm_manager: '[TODO]'
+security_vuln_manager: '[TODO]'
+security_vuln_scanner: '[TODO]'
+security_web_filter: '[TODO]'
+security_web_scanner: '[TODO]'
+
+# SOC
+soc_manager: '[TODO]'
+
+# Status Page
+status_url: '[TODO]'
+
+# Support
+support_email: '[TODO]'
+support_phone: '[TODO]'

@@ -72,10 +72,10 @@ IT-Beschaffungen werden aus gültigen Gründen getätigt, auf der Grundlage ange
 
 | Beschaffungswert | Genehmigung durch |
 |------------------|-------------------|
-| < {{ meta.threshold_1 }} EUR | IT-Management |
-| {{ meta.threshold_1 }} - {{ meta.threshold_2 }} EUR | CIO |
-| {{ meta.threshold_2 }} - {{ meta.threshold_3 }} EUR | Geschäftsführung |
-| > {{ meta.threshold_3 }} EUR | Vorstand |
+| < {{ meta-handbook.threshold_1 }} EUR | IT-Management |
+| {{ meta-handbook.threshold_1 }} - {{ meta-handbook.threshold_2 }} EUR | CIO |
+| {{ meta-handbook.threshold_2 }} - {{ meta-handbook.threshold_3 }} EUR | Geschäftsführung |
+| > {{ meta-handbook.threshold_3 }} EUR | Vorstand |
 
 ### Beschaffungskriterien
 

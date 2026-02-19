@@ -118,8 +118,8 @@ Templates use placeholders from the `metadata.yaml` file:
 **Authorizing Official (AO):** [TODO] ([TODO])
 **ISSO:** [TODO] ([TODO])
 **ISSM:** [TODO] ([TODO])
-**System Name:** {{ meta.nist.system_name }}
-**System ID:** {{ meta.nist.system_id }}
+**System Name:** {{ meta-handbook.system_name }}
+**System ID:** {{ meta-handbook.system_id }}
 ```
 
 ### [TODO] Markers

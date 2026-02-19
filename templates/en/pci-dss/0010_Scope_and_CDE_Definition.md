@@ -57,8 +57,8 @@ This document defines the scope of PCI-DSS compliance for {{ meta-organisation.n
 
 **Merchant Level:** [TODO: Level 1/2/3/4]  
 **Service Provider Level:** [TODO: Level 1/2 or N/A]  
-**Merchant ID:** {{ meta.pci.merchant_id }}  
-**Service Provider ID:** {{ meta.pci.service_provider_id }}  
+**Merchant ID:** {{ meta-handbook.merchant_id }}  
+**Service Provider ID:** {{ meta-handbook.service_provider_id }}  
 
 **Transaction Volume (annual):**
 - Visa: [TODO: Number of transactions]

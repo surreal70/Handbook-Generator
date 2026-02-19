@@ -35,7 +35,7 @@ Diese Policy gilt für:
 - **Organisationseinheiten:** Alle Abteilungen und Standorte der {{ meta-organisation.name }}
 - **Systeme:** Alle Server, Workstations, Netzwerkgeräte, Anwendungen, Cloud-Ressourcen
 - **Umgebungen:** Produktion, Test, Entwicklung
-- **Standorte:** {{ netbox.site.name }} und alle weiteren Betriebsstandorte
+- **Standorte:** [[ netbox.site.name ]] und alle weiteren Betriebsstandorte
 
 **Ausnahmen:** Ausnahmen sind nur über den definierten Ausnahmenprozess (`0640_Policy_Ausnahmen_und_Risk_Waivers.md`) zulässig.
 
@@ -90,9 +90,9 @@ Alle Konfigurationsabweichungen von Baselines werden dokumentiert und begründet
 
 ### Schlüsselrollen
 
-- **Policy Owner:** {{ meta.ciso.name }} (CISO)
-- **Configuration Manager:** {{ meta.it.config_manager }}
-- **Security Architect:** {{ meta.security.architect }}
+- **Policy Owner:** {{ meta-organisation-roles.role_CISO }} (CISO)
+- **Configuration Manager:** {{ meta-handbook.it_config_manager }}
+- **Security Architect:** {{ meta-handbook.security_architect }}
 - **Umsetzungsverantwortliche:** IT-Betrieb, System Owner
 - **Kontroll-/Prüfinstanz:** ISMS, Internal Audit
 
@@ -168,7 +168,7 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **BSI IT-Grundschutz** - Sicherheitsanforderungen
 
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
 Datum: {{ meta-handbook.modifydate }}
 
 **Nächster Review:** {{ meta-handbook.next_review }} (jährlich oder anlassbezogen)

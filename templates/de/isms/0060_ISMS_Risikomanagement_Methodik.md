@@ -398,8 +398,8 @@ Risikoscore = 4 × 3 = 12 (Hoch)
 - **NIST SP 800-30** - Guide for Conducting Risk Assessments
 
 **Genehmigt durch:**  
-{{ meta.ciso.name }}, CISO  
-{{ meta.management.ceo }}, Geschäftsführung  
+{{ meta-organisation-roles.role_CISO }}, CISO  
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
 Datum: {{ meta-handbook.modifydate }}
 
 **Nächster Review:** {{ meta-handbook.next_review }}

@@ -54,7 +54,7 @@ Diese Richtlinie konkretisiert die `0300_Policy_Asset_Management.md` und definie
 
 ### 3.1 CMDB (Configuration Management Database)
 
-**System:** {{ meta.itsm.cmdb }} (z.B. ServiceNow, Jira Service Management)
+**System:** {{ meta-handbook.itsm_cmdb }} (z.B. ServiceNow, Jira Service Management)
 
 **Pflichtfelder pro Asset:**
 - Asset-ID (eindeutig)
@@ -76,8 +76,8 @@ Diese Richtlinie konkretisiert die `0300_Policy_Asset_Management.md` und definie
 ### 3.2 Automatische Inventarisierung
 
 **Tools:**
-- **Endpoint-Management:** {{ meta.endpoint.management }} (z.B. Microsoft Intune, Jamf)
-- **Network Discovery:** {{ meta.network.discovery }} (z.B. Nmap, Lansweeper)
+- **Endpoint-Management:** {{ meta-handbook.endpoint_management }} (z.B. Microsoft Intune, Jamf)
+- **Network Discovery:** {{ meta-handbook.network_discovery }} (z.B. Nmap, Lansweeper)
 - **Cloud Asset Inventory:** Native Cloud-Tools (Azure Resource Graph, AWS Config)
 
 **Prozess:**
@@ -106,7 +106,7 @@ Diese Richtlinie konkretisiert die `0300_Policy_Asset_Management.md` und definie
 
 ### 4.1 Tagging-Schema
 
-**Asset-ID-Format:** `{{ meta.asset.id_format }}`  
+**Asset-ID-Format:** `{{ meta-handbook.asset_id_format }}`  
 Beispiel: `LAP-2024-001234` (Laptop, Jahr, laufende Nummer)
 
 **Präfixe:**
@@ -132,7 +132,7 @@ Beispiel: `LAP-2024-001234` (Laptop, Jahr, laufende Nummer)
 ### 4.3 Digitale Tags
 
 **Hostname-Konvention:**
-- Format: `{{ meta.naming.hostname_format }}`
+- Format: `{{ meta-handbook.naming_hostname_format }}`
 - Beispiel: `lap-jdoe-001` (Typ-Nutzer-Nummer)
 
 **Metadaten:**
@@ -210,7 +210,7 @@ Beispiel: `LAP-2024-001234` (Laptop, Jahr, laufende Nummer)
 ### 6.2 Mobile Geräte
 
 **Prozess:**
-1. Remote Wipe über MDM ({{ meta.mdm.system }})
+1. Remote Wipe über MDM ({{ meta-handbook.mdm_system }})
 2. Factory Reset vor Ort
 3. Entfernung von SIM-Karten und SD-Karten
 4. Physische Prüfung der Löschung
@@ -305,6 +305,6 @@ Beispiel: `LAP-2024-001234` (Laptop, Jahr, laufende Nummer)
 - **DIN 66399** - Vernichtung von Datenträgern
 - **WEEE-Richtlinie** - Elektro- und Elektronikgeräte-Entsorgung
 
-**Genehmigt durch:** {{ meta.ciso.name }}, CISO  
+**Genehmigt durch:** {{ meta-organisation-roles.role_CISO }}, CISO  
 **Nächster Review:** {{ meta-handbook.next_review }}
 

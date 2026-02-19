@@ -17,7 +17,7 @@
 
 ## 1. Zweck
 
-Dieses Dokument definiert die Rollen und Verantwortlichkeiten für das Risk Management Framework (RMF) und die Sicherheit des Systems {{ meta.nist.system_name }}.
+Dieses Dokument definiert die Rollen und Verantwortlichkeiten für das Risk Management Framework (RMF) und die Sicherheit des Systems {{ meta-handbook.system_name }}.
 
 ## 2. RMF-Rollen
 

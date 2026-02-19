@@ -17,12 +17,12 @@
 
 ## 1. Purpose
 
-This document defines the scope and authorization boundaries of the information system {{ meta.nist.system_name }}.
+This document defines the scope and authorization boundaries of the information system {{ meta-handbook.system_name }}.
 
 ## 2. System Identification
 
-**System Name:** {{ meta.nist.system_name }}  
-**System ID:** {{ meta.nist.system_id }}  
+**System Name:** {{ meta-handbook.system_name }}  
+**System ID:** {{ meta-handbook.system_id }}  
 **FIPS 199 Categorization:** [TODO: Low / Moderate / High]  
 **System Owner:** [TODO: Name]  
 **Authorizing Official (AO):** [TODO]  

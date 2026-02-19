@@ -36,7 +36,7 @@ Diese Policy gilt für:
 - **Daten:** Alle personenbezogenen Daten gemäß DSGVO
 - **Prozesse:** Alle Verarbeitungstätigkeiten personenbezogener Daten
 - **Schnittstellen:** ISMS ↔ Datenschutz-Management-System
-- **Standorte:** {{ netbox.site.name }} und alle weiteren Betriebsstandorte
+- **Standorte:** [[ netbox.site.name ]] und alle weiteren Betriebsstandorte
 
 **Ausnahmen:** Ausnahmen sind nur über den definierten Ausnahmenprozess (`0640_Policy_Ausnahmen_und_Risk_Waivers.md`) zulässig.
 
@@ -89,9 +89,9 @@ Internationale Datentransfers erfolgen nur mit angemessenen Garantien (Angemesse
 
 ### Schlüsselrollen
 
-- **Policy Owner:** {{ meta.ciso.name }} (CISO) und {{ meta.dpo.name }} (DPO)
-- **Data Protection Officer:** {{ meta.dpo.name }}
-- **Privacy Officer:** {{ meta.privacy.officer }}
+- **Policy Owner:** {{ meta-organisation-roles.role_CISO }} (CISO) und {{ meta-handbook.dpo_name }} (DPO)
+- **Data Protection Officer:** {{ meta-handbook.dpo_name }}
+- **Privacy Officer:** {{ meta-handbook.privacy_officer }}
 - **Umsetzungsverantwortliche:** IT-Betrieb, Business Owner
 - **Kontroll-/Prüfinstanz:** ISMS, Internal Audit, Datenschutzaufsicht
 
@@ -169,7 +169,7 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **BDSG** - Bundesdatenschutzgesetz
 
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
 Datum: {{ meta-handbook.modifydate }}
 
 **Nächster Review:** {{ meta-handbook.next_review }} (jährlich oder anlassbezogen)

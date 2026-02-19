@@ -41,7 +41,7 @@ Dieses Dokument definiert die Anforderungen an die Lenkung dokumentierter Inform
 - **URL:** [TODO: https://docs.organization.com/isms/]
 
 **Backup und Archivierung:**
-- **Backup-System:** {{ netbox.backup.system }}
+- **Backup-System:** [[ netbox.backup.system ]]
 - **Backup-Frequenz:** Täglich
 - **Archivierungsdauer:** 10 Jahre nach Außerbetriebnahme
 
@@ -70,7 +70,7 @@ Dieses Dokument definiert die Anforderungen an die Lenkung dokumentierter Inform
 **Notfallzugriff:**
 - Kritische Dokumente (Notfallpläne, Kontaktlisten) werden zusätzlich offline gespeichert
 - Ablageort: [TODO: Physischer Safe, verschlüsselter USB-Stick]
-- Verantwortlich: {{ meta.ciso.name }}
+- Verantwortlich: {{ meta-organisation-roles.role_CISO }}
 
 **Break-Glass-Zugriff:**
 - Siehe `0200_Notfallzugang_BreakGlass.md` (BCM-Handbuch)
@@ -247,9 +247,9 @@ Jedes Dokument enthält einen Change-Log am Ende:
 
 | Version | Datum | Autor | Beschreibung | Genehmigt durch |
 |---------|-------|-------|--------------|-----------------|
-| 1.0 | 2026-01-15 | {{ meta.ciso.name }} | Initiale Version | Geschäftsführung |
+| 1.0 | 2026-01-15 | {{ meta-organisation-roles.role_CISO }} | Initiale Version | Geschäftsführung |
 | 1.1 | 2026-03-20 | ISMS Manager | Kontaktdaten aktualisiert | CISO |
-| 2.0 | 2026-12-01 | {{ meta.ciso.name }} | Neue Anforderungen aus NIS2 | Geschäftsführung |
+| 2.0 | 2026-12-01 | {{ meta-organisation-roles.role_CISO }} | Neue Anforderungen aus NIS2 | Geschäftsführung |
 ```
 
 ## 5. Dokumentenregister
@@ -260,11 +260,11 @@ Das Dokumentenregister ist die zentrale Übersicht aller ISMS-Dokumente.
 
 | Dokument-ID | Dokumenttitel | Owner | Status | Version | Letzte Änderung | Nächster Review |
 |-------------|---------------|-------|--------|---------|-----------------|-----------------|
-| 0010 | ISMS-Leitlinie | {{ meta.ciso.name }} | Freigegeben | 1.0 | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
-| 0020 | ISMS-Geltungsbereich | {{ meta.ciso.name }} | Freigegeben | 1.0 | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
-| 0030 | Kontext und Stakeholder | {{ meta.ciso.name }} | Freigegeben | 1.0 | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
-| 0040 | ISMS-Governance | {{ meta.ciso.name }} | Freigegeben | 1.0 | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
-| 0050 | Dokumentenlenkung | {{ meta.ciso.name }} | Freigegeben | 1.0 | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
+| 0010 | ISMS-Leitlinie | {{ meta-organisation-roles.role_CISO }} | Freigegeben | 1.0 | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
+| 0020 | ISMS-Geltungsbereich | {{ meta-organisation-roles.role_CISO }} | Freigegeben | 1.0 | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
+| 0030 | Kontext und Stakeholder | {{ meta-organisation-roles.role_CISO }} | Freigegeben | 1.0 | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
+| 0040 | ISMS-Governance | {{ meta-organisation-roles.role_CISO }} | Freigegeben | 1.0 | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
+| 0050 | Dokumentenlenkung | {{ meta-organisation-roles.role_CISO }} | Freigegeben | 1.0 | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
 | ... | ... | ... | ... | ... | ... | ... |
 
 [TODO: Vollständiges Dokumentenregister erstellen und pflegen]
@@ -338,7 +338,7 @@ Siehe `0580_Policy_Aufbewahrung_und_Loeschung.md` für Details.
 - **ISO/IEC 27002:2022** - Control 5.1: Policies for information security
 
 **Genehmigt durch:**  
-{{ meta.ciso.name }}, CISO  
+{{ meta-organisation-roles.role_CISO }}, CISO  
 Datum: {{ meta-handbook.modifydate }}
 
 **Nächster Review:** {{ meta-handbook.next_review }}

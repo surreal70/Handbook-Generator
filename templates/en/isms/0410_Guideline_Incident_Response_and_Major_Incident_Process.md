@@ -52,9 +52,9 @@ This guideline implements the `0400_Policy_Incident_Management.md` and defines:
 ### 3.1 Detection & Reporting
 
 **Reporting Channels:**
-- **IT Support:** {{ meta.support.phone }}, {{ meta.support.email }}
-- **Security Team:** {{ meta.security.email }}, {{ meta.security.phone }}
-- **Self-Service Portal:** {{ meta.itsm.portal }}
+- **IT Support:** {{ meta-handbook.support_phone }}, {{ meta-handbook.support_email }}
+- **Security Team:** {{ meta-handbook.security_email }}, {{ meta-handbook.security_phone }}
+- **Self-Service Portal:** {{ meta-handbook.itsm_portal }}
 
 **Required Information:**
 - Description of problem
@@ -240,7 +240,7 @@ This guideline implements the `0400_Policy_Incident_Management.md` and defines:
 4. **Reporting:** Forensics report
 5. **Chain of Custody:** Complete documentation
 
-**Tools:** {{ meta.security.forensics_tools }}
+**Tools:** {{ meta-handbook.security_forensics_tools }}
 
 ### 5.4 Reporting Obligations
 
@@ -265,7 +265,7 @@ This guideline implements the `0400_Policy_Incident_Management.md` and defines:
 
 **Channels:**
 - Email to stakeholders
-- Status page ({{ meta.status.url }})
+- Status page ({{ meta-handbook.status_url }})
 - Intranet notifications
 
 ### 6.2 Stakeholder Matrix
@@ -307,6 +307,6 @@ This guideline implements the `0400_Policy_Incident_Management.md` and defines:
 - **ISO/IEC 27001:2022 Annex A.5.26** - Response to information security incidents
 - **NIST SP 800-61** - Computer Security Incident Handling Guide
 
-**Approved by:** {{ meta.ciso.name }}, CISO  
+**Approved by:** {{ meta-organisation-roles.role_CISO }}, CISO  
 **Next Review:** {{ meta-handbook.next_review }}
 

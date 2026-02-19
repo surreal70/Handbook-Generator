@@ -36,7 +36,7 @@ Diese Policy gilt für:
 - **Geräte:** Laptops, Smartphones, Tablets, Wearables (unternehmenseigen und BYOD)
 - **Zugriffsmethoden:** VPN, Remote Desktop, Cloud-Services, Mobile Apps
 - **Personen:** Alle Mitarbeiter, Auftragnehmer mit Remote-Zugriff
-- **Standorte:** {{ netbox.site.name }}, Home Office, öffentliche Orte, Reisen
+- **Standorte:** [[ netbox.site.name ]], Home Office, öffentliche Orte, Reisen
 
 **Ausnahmen:** Ausnahmen sind nur über den definierten Ausnahmenprozess (`0640_Policy_Ausnahmen_und_Risk_Waivers.md`) zulässig.
 
@@ -96,9 +96,9 @@ Remote-Arbeitsplätze müssen Sicherheitsanforderungen erfüllen:
 
 ### Schlüsselrollen
 
-- **Policy Owner:** {{ meta.ciso.name }} (CISO)
-- **MDM Administrator:** {{ meta.it.mdm_admin }}
-- **Remote Access Manager:** {{ meta.it.remote_access_manager }}
+- **Policy Owner:** {{ meta-organisation-roles.role_CISO }} (CISO)
+- **MDM Administrator:** {{ meta-handbook.it_mdm_admin }}
+- **Remote Access Manager:** {{ meta-handbook.it_remote_access_manager }}
 - **Umsetzungsverantwortliche:** IT-Betrieb, Mitarbeiter
 - **Kontroll-/Prüfinstanz:** ISMS, Internal Audit
 
@@ -175,7 +175,7 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **DSGVO (EU 2016/679)** - Datenschutz bei BYOD und Remote Work
 
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
 Datum: {{ meta-handbook.modifydate }}
 
 **Nächster Review:** {{ meta-handbook.next_review }} (jährlich oder anlassbezogen)

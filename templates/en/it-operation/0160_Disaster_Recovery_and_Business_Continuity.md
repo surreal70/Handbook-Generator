@@ -21,7 +21,7 @@ This document describes the disaster recovery and business continuity strategies
 
 **Scope:** All critical IT services and business processes of {{ meta-organisation.name }}
 
-**Responsible:** {{ meta-organisation-roles.role_cio.name }} ({{ meta-organisation-roles.role_cio.email }})
+**Responsible:** {{ meta-organisation-roles.role_CIO }} ({{ meta-organisation-roles.role_CIO_email }})
 
 ## Fundamentals
 
@@ -89,7 +89,7 @@ An organization's ability to maintain critical business processes during and aft
 
 **Probability:** Low  
 **Impact:** Very high  
-**Affected Sites:** {{ netbox.site.primary }}, {{ netbox.site.secondary }}
+**Affected Sites:** [[ netbox.site.primary ]], [[ netbox.site.secondary ]]
 
 **Mitigations:**
 - Geographically separated DR site
@@ -208,7 +208,7 @@ An organization's ability to maintain critical business processes during and aft
 - Complex configuration
 - High network requirements
 
-**Application:** Tier 0 services ({{ netbox.service.critical }})
+**Application:** Tier 0 services ([[ netbox.service.critical ]])
 
 **Cost:** ~200% of production infrastructure
 
@@ -231,7 +231,7 @@ An organization's ability to maintain critical business processes during and aft
 - Reduced initial performance
 - Regular testing required
 
-**Application:** Tier 1 services ({{ netbox.service.important }})
+**Application:** Tier 1 services ([[ netbox.service.important ]])
 
 **Cost:** ~50-70% of production infrastructure
 
@@ -254,7 +254,7 @@ An organization's ability to maintain critical business processes during and aft
 - Manual processes
 - Higher risk
 
-**Application:** Tier 2 services ({{ netbox.service.standard }})
+**Application:** Tier 2 services ([[ netbox.service.standard ]])
 
 **Cost:** ~20-30% of production infrastructure
 
@@ -284,34 +284,34 @@ An organization's ability to maintain critical business processes during and aft
 
 ### Primary Site
 
-**Site:** {{ netbox.site.primary }}  
-**Address:** {{ netbox.site.primary_address }}  
-**Data Center:** {{ netbox.site.primary_datacenter }}
+**Site:** [[ netbox.site.primary ]]  
+**Address:** [[ netbox.site.primary_address ]]  
+**Data Center:** [[ netbox.site.primary_datacenter ]]
 
 **Infrastructure:**
-- Production servers: {{ netbox.device.count_primary }}
-- Storage capacity: {{ netbox.storage.capacity_primary }}
-- Network bandwidth: {{ netbox.network.bandwidth_primary }}
+- Production servers: [[ netbox.device.count_primary ]]
+- Storage capacity: [[ netbox.storage.capacity_primary ]]
+- Network bandwidth: [[ netbox.network.bandwidth_primary ]]
 - Power supply: Redundant (N+1)
 
 ### DR Site
 
-**Site:** {{ netbox.site.dr }}  
-**Address:** {{ netbox.site.dr_address }}  
-**Data Center:** {{ netbox.site.dr_datacenter }}  
-**Distance:** {{ netbox.site.distance }} km
+**Site:** [[ netbox.site.dr ]]  
+**Address:** [[ netbox.site.dr_address ]]  
+**Data Center:** [[ netbox.site.dr_datacenter ]]  
+**Distance:** [[ netbox.site.distance ]] km
 
 **Infrastructure:**
-- DR servers: {{ netbox.device.count_dr }}
-- Storage capacity: {{ netbox.storage.capacity_dr }}
-- Network bandwidth: {{ netbox.network.bandwidth_dr }}
+- DR servers: [[ netbox.device.count_dr ]]
+- Storage capacity: [[ netbox.storage.capacity_dr ]]
+- Network bandwidth: [[ netbox.network.bandwidth_dr ]]
 - Power supply: Redundant (N+1)
 
 ### Replication Connection
 
-**Connection Type:** {{ netbox.network.replication_type }}  
-**Bandwidth:** {{ netbox.network.replication_bandwidth }}  
-**Latency:** {{ netbox.network.replication_latency }} ms  
+**Connection Type:** [[ netbox.network.replication_type ]]  
+**Bandwidth:** [[ netbox.network.replication_bandwidth ]]  
+**Latency:** [[ netbox.network.replication_latency ]] ms  
 **Redundancy:** Dual-path
 
 **Replication Technologies:**
@@ -389,8 +389,8 @@ An organization's ability to maintain critical business processes during and aft
 #### 2. DR Team Activation
 
 **DR Team Members:**
-- **DR Coordinator:** {{ meta-organisation-roles.role_cio.name }}
-- **Technical Lead:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+- **DR Coordinator:** {{ meta-organisation-roles.role_CIO }}
+- **Technical Lead:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - **Network Lead:** [Name]
 - **Storage Lead:** [Name]
 - **Application Lead:** [Name]
@@ -696,7 +696,7 @@ An organization's ability to maintain critical business processes during and aft
 - Coordinate DR tests
 - Disaster declaration
 
-**Person:** {{ meta-organisation-roles.role_cio.name }}
+**Person:** {{ meta-organisation-roles.role_CIO }}
 
 ### BC Manager
 
@@ -706,7 +706,7 @@ An organization's ability to maintain critical business processes during and aft
 - Create BC plans
 - BC training
 
-**Person:** {{ meta-organisation-roles.role_coo.name }}
+**Person:** {{ meta-organisation-roles.role_COO }}
 
 ### DR Team
 

@@ -41,13 +41,13 @@ This document defines availability requirements, Service Level Agreements (SLAs)
 - **Availability:** 24/7/365
 - **Support Hours:** 24/7 with on-call availability
 - **Maintenance Window:** Sunday 02:00-06:00 (after announcement)
-- **Emergency Maintenance:** After approval by {{ meta-organisation-roles.role_cio.name }}
+- **Emergency Maintenance:** After approval by {{ meta-organisation-roles.role_CIO }}
 
 #### Business Services
 - **Availability:** Mon-Fri 06:00-22:00
 - **Support Hours:** Mon-Fri 08:00-18:00
 - **Maintenance Window:** Saturday 20:00-24:00
-- **Emergency Maintenance:** After approval by {{ meta-organisation-roles.role_it_operations_manager.name }}
+- **Emergency Maintenance:** After approval by {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 #### Development/Test Services
 - **Availability:** Mon-Fri 08:00-18:00
@@ -104,9 +104,9 @@ This document defines availability requirements, Service Level Agreements (SLAs)
 ### SLA Contract Partners
 
 #### Internal SLAs
-- **Service Provider:** IT Operations ({{ meta-organisation-roles.role_it_operations_manager.name }})
+- **Service Provider:** IT Operations ({{ meta-organisation-roles.role_IT_Operations_Manager }})
 - **Service Consumer:** Business Departments
-- **Responsible:** {{ meta-organisation-roles.role_cio.name }}
+- **Responsible:** {{ meta-organisation-roles.role_CIO }}
 - **Review Cycle:** Quarterly
 
 #### External SLAs
@@ -138,11 +138,11 @@ This document defines availability requirements, Service Level Agreements (SLAs)
 
 | Component | SLO | Measurement Method | Responsible |
 |---|---:|---|---|
-| Compute Cluster | 99.9% | Hypervisor Monitoring | {{ meta-organisation-roles.role_it_operations_manager.name }} |
-| Storage System | 99.95% | Storage Monitoring | {{ meta-organisation-roles.role_it_operations_manager.name }} |
-| Network Core | 99.99% | Network Monitoring | {{ meta-organisation-roles.role_it_operations_manager.name }} |
-| Firewall | 99.95% | Security Monitoring | {{ meta-organisation-roles.role_ciso.name }} |
-| Load Balancer | 99.9% | LB Monitoring | {{ meta-organisation-roles.role_it_operations_manager.name }} |
+| Compute Cluster | 99.9% | Hypervisor Monitoring | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| Storage System | 99.95% | Storage Monitoring | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| Network Core | 99.99% | Network Monitoring | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| Firewall | 99.95% | Security Monitoring | {{ meta-organisation-roles.role_CISO }} |
+| Load Balancer | 99.9% | LB Monitoring | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
 
 #### Application SLOs
 
@@ -265,7 +265,7 @@ Actual Availability: (718 - 1.5) / 718 × 100 = 99.79%
 - **Delivery:** Automatically at 08:00
 
 #### Weekly SLA Report
-- **Recipients:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+- **Recipients:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - **Content:**
   - Weekly availability
   - SLA compliance status
@@ -274,7 +274,7 @@ Actual Availability: (718 - 1.5) / 718 × 100 = 99.79%
 - **Delivery:** Every Monday
 
 #### Monthly SLA Report
-- **Recipients:** {{ meta-organisation-roles.role_cio.name }}, Stakeholders
+- **Recipients:** {{ meta-organisation-roles.role_CIO }}, Stakeholders
 - **Content:**
   - Monthly availability
   - SLA fulfillment vs. targets
@@ -284,7 +284,7 @@ Actual Availability: (718 - 1.5) / 718 × 100 = 99.79%
 - **Delivery:** First business day of following month
 
 #### Quarterly Management Report
-- **Recipients:** {{ meta-organisation-roles.role_ceo.name }}, {{ meta-organisation-roles.role_cio.name }}, {{ meta-organisation-roles.role_cfo.name }}
+- **Recipients:** {{ meta-organisation-roles.role_CEO }}, {{ meta-organisation-roles.role_CIO }}, {{ meta-organisation-roles.role_CFO }}
 - **Content:**
   - Quarterly availability
   - SLA trends
@@ -379,7 +379,7 @@ Actual Availability: (718 - 1.5) / 718 × 100 = 99.79%
 ### Review Process
 
 #### Quarterly SLA Review
-- **Participants:** {{ meta-organisation-roles.role_cio.name }}, {{ meta-organisation-roles.role_it_operations_manager.name }}, Stakeholders
+- **Participants:** {{ meta-organisation-roles.role_CIO }}, {{ meta-organisation-roles.role_IT_Operations_Manager }}, Stakeholders
 - **Agenda:**
   - SLA fulfillment of last 3 months
   - Trend analysis
@@ -388,7 +388,7 @@ Actual Availability: (718 - 1.5) / 718 × 100 = 99.79%
 - **Output:** Review protocol with recommendations
 
 #### Annual SLA Review
-- **Participants:** {{ meta-organisation-roles.role_ceo.name }}, {{ meta-organisation-roles.role_cio.name }}, {{ meta-organisation-roles.role_cfo.name }}, Stakeholders
+- **Participants:** {{ meta-organisation-roles.role_CEO }}, {{ meta-organisation-roles.role_CIO }}, {{ meta-organisation-roles.role_CFO }}, Stakeholders
 - **Agenda:**
   - Annual availability
   - SLA appropriateness
@@ -429,9 +429,9 @@ Actual Availability: (718 - 1.5) / 718 × 100 = 99.79%
 ### Escalation Path
 
 1. **Level 1:** Operations Team - Incident response and monitoring
-2. **Level 2:** {{ meta-organisation-roles.role_it_operations_manager.name }} - SLA violations
-3. **Level 3:** {{ meta-organisation-roles.role_cio.name }} - Critical SLA violations
-4. **Level 4:** {{ meta-organisation-roles.role_ceo.name }} - Contractual consequences
+2. **Level 2:** {{ meta-organisation-roles.role_IT_Operations_Manager }} - SLA violations
+3. **Level 3:** {{ meta-organisation-roles.role_CIO }} - Critical SLA violations
+4. **Level 4:** {{ meta-organisation-roles.role_CEO }} - Contractual consequences
 
 ## Compliance and Standards
 
@@ -469,5 +469,5 @@ Actual Availability: (718 - 1.5) / 718 × 100 = 99.79%
 
 **Last Update:** {{ meta-handbook.date }}  
 **Next Review:** [TODO: Date]  
-**Contact:** {{ meta-organisation-roles.role_it_operations_manager.email }}
+**Contact:** {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
 

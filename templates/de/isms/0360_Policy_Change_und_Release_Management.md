@@ -37,7 +37,7 @@ Diese Policy gilt für:
 - **Systeme:** Alle IT-Systeme, Anwendungen, Infrastruktur, Netzwerke, Cloud-Services
 - **Change-Typen:** Standard Changes, Normal Changes, Emergency Changes
 - **Umgebungen:** Produktion, Test, Entwicklung
-- **Standorte:** {{ netbox.site.name }} und alle weiteren Betriebsstandorte
+- **Standorte:** [[ netbox.site.name ]] und alle weiteren Betriebsstandorte
 
 **Ausnahmen:** Ausnahmen sind nur über den definierten Ausnahmenprozess (`0640_Policy_Ausnahmen_und_Risk_Waivers.md`) zulässig.
 
@@ -89,9 +89,9 @@ Changes mit Sicherheitsrelevanz erfordern ein Security Review durch das Security
 
 ### Schlüsselrollen
 
-- **Policy Owner:** {{ meta.ciso.name }} (CISO)
-- **Change Manager:** {{ meta.it.change_manager }}
-- **CAB Chair:** {{ meta.it.cab_chair }}
+- **Policy Owner:** {{ meta-organisation-roles.role_CISO }} (CISO)
+- **Change Manager:** {{ meta-handbook.it_change_manager }}
+- **CAB Chair:** {{ meta-handbook.it_cab_chair }}
 - **Umsetzungsverantwortliche:** IT-Betrieb, Entwicklung
 - **Kontroll-/Prüfinstanz:** ISMS, Internal Audit
 
@@ -166,7 +166,7 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **ISO/IEC 20000** - IT Service Management
 
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
 Datum: {{ meta-handbook.modifydate }}
 
 **Nächster Review:** {{ meta-handbook.next_review }} (jährlich oder anlassbezogen)

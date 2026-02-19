@@ -35,7 +35,7 @@ ISO 27001:2022 References:
 - Organisationsform: [TODO]
 - Anzahl Mitarbeiter: [TODO]
 - Organisationsstruktur: [TODO: Hierarchie, Abteilungen]
-- Standorte: {{ netbox.site.name }} und weitere
+- Standorte: [[ netbox.site.name ]] und weitere
 
 **Geschäftsprozesse:**
 - Kerngeschäft: [TODO]
@@ -256,8 +256,8 @@ Der Kontext und die Stakeholder-Anforderungen werden regelmäßig überprüft:
 - **DSGVO (EU 2016/679)** - Datenschutz-Grundverordnung
 
 **Genehmigt durch:**  
-{{ meta.ciso.name }}, CISO  
-{{ meta.management.ceo }}, Geschäftsführung  
+{{ meta-organisation-roles.role_CISO }}, CISO  
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
 Datum: {{ meta-handbook.modifydate }}
 
 **Nächster Review:** {{ meta-handbook.next_review }}

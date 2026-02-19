@@ -20,7 +20,7 @@
 This document describes the operations handover process and contains a comprehensive go-live checklist for transitioning new or changed IT services into production.
 
 **Service:** {{ meta-handbook.service_name }}  
-**Responsible:** {{ meta-organisation-roles.role_it_operations_manager.name }}  
+**Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }}  
 **Version:** {{ meta-handbook.revision }}
 
 ## Operations Handover Process
@@ -63,11 +63,11 @@ This document describes the operations handover process and contains a comprehen
 | Role | Responsibility | Contact Person |
 |---|---|---|
 | **Service Owner** | Overall service responsibility | [TODO: Name] |
-| **IT Operations Manager** | Coordinate operations takeover | {{ meta-organisation-roles.role_it_operations_manager.name }} |
+| **IT Operations Manager** | Coordinate operations takeover | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
 | **Technical Lead** | Technical implementation | [TODO: Name] |
-| **Service Desk Lead** | Support readiness | {{ meta-organisation-roles.role_service_desk_lead.name }} |
+| **Service Desk Lead** | Support readiness | {{ meta-organisation-roles.role_Service_Desk_Lead }} |
 | **Change Manager** | Change approval | [TODO: Name] |
-| **CIO** | Final approval | {{ meta-organisation-roles.role_cio.name }} |
+| **CIO** | Final approval | {{ meta-organisation-roles.role_CIO }} |
 
 ## Go-Live Checklist
 
@@ -291,10 +291,10 @@ The handover package must contain the following documents:
 
 **Participants:**
 - Service Owner
-- IT Operations Manager: {{ meta-organisation-roles.role_it_operations_manager.name }}
+- IT Operations Manager: {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - Technical Lead
-- Service Desk Lead: {{ meta-organisation-roles.role_service_desk_lead.name }}
-- CIO: {{ meta-organisation-roles.role_cio.name }}
+- Service Desk Lead: {{ meta-organisation-roles.role_Service_Desk_Lead }}
+- CIO: {{ meta-organisation-roles.role_CIO }}
 
 ## Acceptance Criteria
 
@@ -331,7 +331,7 @@ The handover package must contain the following documents:
 | **Business Requirements** | All business requirements met | ☐ | Service Owner |
 | **User Acceptance** | UAT successfully completed | ☐ | Business Users |
 | **Compliance** | Compliance requirements met | ☐ | Compliance Officer |
-| **Budget** | Within budget | ☐ | {{ meta-organisation-roles.role_cfo.name }} |
+| **Budget** | Within budget | ☐ | {{ meta-organisation-roles.role_CFO }} |
 | **Timeline** | Schedule maintained | ☐ | Project Manager |
 
 ## Go/No-Go Decision
@@ -341,10 +341,10 @@ The handover package must contain the following documents:
 **Timing:** 24 hours before planned go-live  
 **Participants:**
 - Service Owner
-- IT Operations Manager: {{ meta-organisation-roles.role_it_operations_manager.name }}
+- IT Operations Manager: {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - Technical Lead
 - Change Manager
-- CIO: {{ meta-organisation-roles.role_cio.name }}
+- CIO: {{ meta-organisation-roles.role_CIO }}
 
 ### Decision Criteria
 
@@ -437,11 +437,11 @@ Rollback is triggered by:
 
 **Go-Live Team:**
 - **Service Owner:** [TODO: Name] - [TODO: Email]
-- **IT Operations Manager:** {{ meta-organisation-roles.role_it_operations_manager.name }} - {{ meta-organisation-roles.role_it_operations_manager.email }}
+- **IT Operations Manager:** {{ meta-organisation-roles.role_IT_Operations_Manager }} - {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
 - **Technical Lead:** [TODO: Name] - [TODO: Email]
-- **Service Desk Lead:** {{ meta-organisation-roles.role_service_desk_lead.name }} - {{ meta-organisation-roles.role_service_desk_lead.email }}
+- **Service Desk Lead:** {{ meta-organisation-roles.role_Service_Desk_Lead }} - {{ meta-organisation-roles.role_Service_Desk_Lead_email }}
 - **Change Manager:** [TODO: Name] - [TODO: Email]
-- **CIO:** {{ meta-organisation-roles.role_cio.name }} - {{ meta-organisation-roles.role_cio.email }}
+- **CIO:** {{ meta-organisation-roles.role_CIO }} - {{ meta-organisation-roles.role_CIO_email }}
 
 **Document Owner:** {{ meta-handbook.owner }}  
 **Approved by:** {{ meta-handbook.approver }}  

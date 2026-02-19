@@ -29,7 +29,7 @@ Customization required:
 
 ## 1. Zweck
 
-Dieses Dokument beschreibt die Kategorisierung des Informationssystems {{ meta.nist.system_name }} gemäß FIPS 199 und NIST SP 800-60.
+Dieses Dokument beschreibt die Kategorisierung des Informationssystems {{ meta-handbook.system_name }} gemäß FIPS 199 und NIST SP 800-60.
 
 ### 1.1 Ziele
 
@@ -49,8 +49,8 @@ Dieses Dokument beschreibt die Kategorisierung des Informationssystems {{ meta.n
 
 ### 2.1 Systemidentifikation
 
-**Systemname:** {{ meta.nist.system_name }}  
-**System-ID:** {{ meta.nist.system_id }}  
+**Systemname:** {{ meta-handbook.system_name }}  
+**System-ID:** {{ meta-handbook.system_id }}  
 **System Owner:** [TODO: Name] ([TODO: E-Mail])  
 **Authorizing Official (AO):** [TODO] ([TODO])  
 **Information System Security Officer (ISSO):** [TODO] ([TODO])  
@@ -135,7 +135,7 @@ Die Kategorisierung erfolgt nach den drei Sicherheitszielen:
 **FIPS 199 Security Category:**
 
 ```
-SC {{ meta.nist.system_name }} = {(confidentiality, [TODO: impact]), (integrity, [TODO: impact]), (availability, [TODO: impact])}
+SC {{ meta-handbook.system_name }} = {(confidentiality, [TODO: impact]), (integrity, [TODO: impact]), (availability, [TODO: impact])}
 ```
 
 **Beispiel:**

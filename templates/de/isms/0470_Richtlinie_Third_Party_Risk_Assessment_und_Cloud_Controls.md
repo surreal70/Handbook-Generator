@@ -118,7 +118,7 @@ Diese Richtlinie konkretisiert die `0460_Policy_Lieferanten_und_Cloud_Sicherheit
 - Threat Protection
 - Compliance-Monitoring
 
-**CASB-System:** {{ meta.security.casb_solution }}
+**CASB-System:** {{ meta-handbook.security_casb_solution }}
 
 ### 3.4 Multi-Cloud und Hybrid-Cloud
 
@@ -128,8 +128,8 @@ Diese Richtlinie konkretisiert die `0460_Policy_Lieferanten_und_Cloud_Sicherheit
 - Konsistentes Monitoring
 
 **Cloud-Provider:**
-- Primary: {{ meta.cloud.primary_provider }}
-- Secondary: {{ meta.cloud.secondary_provider }}
+- Primary: {{ meta-handbook.cloud_primary_provider }}
+- Secondary: {{ meta-handbook.cloud_secondary_provider }}
 
 ## 4. Vertragsmanagement
 
@@ -217,6 +217,6 @@ Diese Richtlinie konkretisiert die `0460_Policy_Lieferanten_und_Cloud_Sicherheit
 - **ISO/IEC 27001:2022 Annex A.5.22** - Monitoring, review and change management of supplier services
 - **ISO/IEC 27001:2022 Annex A.5.23** - Information security for use of cloud services
 
-**Genehmigt durch:** {{ meta.ciso.name }}, CISO  
+**Genehmigt durch:** {{ meta-organisation-roles.role_CISO }}, CISO  
 **Nächster Review:** {{ meta-handbook.next_review }}
 

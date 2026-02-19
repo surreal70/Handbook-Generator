@@ -33,8 +33,8 @@ Die Dokumentation dient als Grundlage für:
 ## Geltungsbereich
 
 **Organisation:** {{ meta-organisation.name }}  
-**ISMS Scope:** {{ meta.isms.scope }}  
-**Verantwortlich:** {{ meta.ciso.name }}, Data Protection Officer
+**ISMS Scope:** {{ meta-handbook.isms_scope }}  
+**Verantwortlich:** {{ meta-organisation-roles.role_CISO }}, Data Protection Officer
 
 ## Datenfluss-Kategorien
 
@@ -82,8 +82,8 @@ Alle Datenflüsse werden nach folgenden Klassifizierungen bewertet:
 
 | Datenfluss-ID | Quelle-Standort | Ziel-Standort | Verbindungstyp | Bandbreite | Datentyp | Verschlüsselung | Redundanz |
 |---------------|-----------------|---------------|----------------|------------|----------|-----------------|-----------|
-| DF-S2S-001 | {{ netbox.site.name }} | [TODO: Zweigstelle] | MPLS | [TODO: Mbps] | Alle Geschäftsdaten | IPSec | Ja |
-| DF-S2S-002 | {{ netbox.site.name }} | [TODO: DR-Standort] | Dedicated Line | [TODO: Mbps] | Replikationsdaten | AES-256 | Ja |
+| DF-S2S-001 | [[ netbox.site.name ]] | [TODO: Zweigstelle] | MPLS | [TODO: Mbps] | Alle Geschäftsdaten | IPSec | Ja |
+| DF-S2S-002 | [[ netbox.site.name ]] | [TODO: DR-Standort] | Dedicated Line | [TODO: Mbps] | Replikationsdaten | AES-256 | Ja |
 | [TODO] | [TODO: Quelle] | [TODO: Ziel] | [TODO: Typ] | [TODO: Bandbreite] | [TODO: Datentyp] | [TODO: Verschlüsselung] | [TODO: Redundanz] |
 
 **Sicherheitsmaßnahmen:**
@@ -154,7 +154,7 @@ Alle Datenflüsse werden nach folgenden Klassifizierungen bewertet:
 
 | Datenfluss-ID | Quelle (EU) | Ziel (Drittland) | Land | Datentyp | Rechtsgrundlage | Schutzmaßnahmen |
 |---------------|-------------|------------------|------|----------|-----------------|-----------------|
-| DF-CROSS-001 | {{ netbox.site.name }} | [TODO: US-Rechenzentrum] | USA | Cloud-Daten | Standard Contractual Clauses (SCC) | Verschlüsselung, Access Controls |
+| DF-CROSS-001 | [[ netbox.site.name ]] | [TODO: US-Rechenzentrum] | USA | Cloud-Daten | Standard Contractual Clauses (SCC) | Verschlüsselung, Access Controls |
 | [TODO] | [TODO: Quelle] | [TODO: Ziel] | [TODO: Land] | [TODO: Datentyp] | [TODO: Rechtsgrundlage] | [TODO: Maßnahmen] |
 
 **DSGVO-Compliance:**
@@ -358,8 +358,8 @@ Alle Änderungen an Datenflüssen und Schnittstellen unterliegen dem Change Mana
 - Richtlinie: 0610_Richtlinie_Segmentierung_Firewalling_und_Network_Access_Control.md
 - Anhang: 0720_Anhang_Asset_und_Systeminventar_Template.md
 
-**Dokumentverantwortlicher:** {{ meta.ciso.name }}  
-**Genehmigt durch:** {{ meta.management.name }}  
+**Dokumentverantwortlicher:** {{ meta-organisation-roles.role_CISO }}  
+**Genehmigt durch:** {{ meta-handbook.management_name }}  
 **Nächste Überprüfung:** Halbjährlich
 
 <!-- 

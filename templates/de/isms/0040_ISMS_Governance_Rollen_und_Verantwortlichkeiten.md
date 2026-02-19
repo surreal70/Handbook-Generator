@@ -33,14 +33,14 @@ Die ISMS-Governance der **{{ meta-organisation.name }}** ist in die Gesamtorgani
 ```
 ┌─────────────────────────────────────────────────────────┐
 │              Geschäftsführung / Top Management          │
-│                 ({{ meta.management.ceo }})              │
+│                 ({{ meta-handbook.management_ceo }})              │
 └────────────────────┬────────────────────────────────────┘
                      │
          ┌───────────┴───────────┐
          │                       │
 ┌────────▼────────┐    ┌────────▼────────┐
 │  CIO             │    │  CISO            │
-│  {{ meta.cio.name }}  │    │  {{ meta.ciso.name }}  │
+│  {{ meta-organisation-roles.role_CIO }}  │    │  {{ meta-organisation-roles.role_CISO }}  │
 └─────────────────┘    └─────────────────┘
          │                       │
          │              ┌────────┴────────┐
@@ -65,7 +65,7 @@ Die ISMS-Governance der **{{ meta-organisation.name }}** ist in die Gesamtorgani
 ### 1.2 Schlüsselgremien
 
 **Informationssicherheitsgremium (Security Steering Committee):**
-- **Vorsitz:** {{ meta.ciso.name }} (CISO)
+- **Vorsitz:** {{ meta-organisation-roles.role_CISO }} (CISO)
 - **Mitglieder:** CIO, Vertreter Fachabteilungen, IT-Betrieb, Datenschutzbeauftragter
 - **Frequenz:** Quartalsweise oder anlassbezogen
 - **Aufgaben:**
@@ -80,27 +80,27 @@ Die ISMS-Governance der **{{ meta-organisation.name }}** ist in die Gesamtorgani
 **IT Service Management (ITSM):**
 - Integration von Security in ITIL-Prozesse
 - Incident Management, Change Management, Problem Management
-- Kontakt: {{ meta.it.service_manager }}
+- Kontakt: {{ meta-handbook.it_service_manager }}
 
 **Datenschutz (DSMS):**
 - Schnittstelle zu DSGVO-Compliance
 - Gemeinsame Risikoanalyse und Datenschutz-Folgenabschätzung
-- Kontakt: {{ meta.privacy.dpo }}
+- Kontakt: {{ meta-handbook.privacy_dpo }}
 
 **Risk Management:**
 - Integration in Enterprise Risk Management (ERM)
 - Gemeinsames Risikoregister
-- Kontakt: {{ meta.risk.manager }}
+- Kontakt: {{ meta-handbook.risk_manager }}
 
 **Business Continuity Management (BCM):**
 - Schnittstelle zu BCM-Handbuch
 - Gemeinsame BIA und Notfallplanung
-- Kontakt: {{ meta.bcm.manager }}
+- Kontakt: {{ meta-handbook.bcm_manager }}
 
 **Internal Audit:**
 - Unabhängige Prüfung des ISMS
 - Audit-Planung und -Durchführung
-- Kontakt: {{ meta.audit.manager }}
+- Kontakt: {{ meta-handbook.audit_manager }}
 
 <!-- 
 Customize the governance structure based on your organization's specific 
@@ -111,7 +111,7 @@ management structure and reporting lines.
 
 ### 2.1 Geschäftsführung / Top Management
 
-**Rolle:** {{ meta.management.ceo }}
+**Rolle:** {{ meta-handbook.management_ceo }}
 
 **Verantwortlichkeiten:**
 - Gesamtverantwortung für Informationssicherheit
@@ -127,7 +127,7 @@ management structure and reporting lines.
 
 ### 2.2 CISO (Chief Information Security Officer)
 
-**Rolle:** {{ meta.ciso.name }} ({{ meta.ciso.email }})
+**Rolle:** {{ meta-organisation-roles.role_CISO }} ({{ meta-organisation-roles.role_CISO_email }})
 
 **Verantwortlichkeiten:**
 - Entwicklung, Implementierung und Überwachung des ISMS
@@ -144,11 +144,11 @@ management structure and reporting lines.
 - Eskalation bei kritischen Sicherheitsvorfällen
 - Zugriff auf alle sicherheitsrelevanten Informationen
 
-**Berichtslinie:** Berichtet an {{ meta.cio.name }} (CIO) und Geschäftsführung
+**Berichtslinie:** Berichtet an {{ meta-organisation-roles.role_CIO }} (CIO) und Geschäftsführung
 
 ### 2.3 CIO (Chief Information Officer)
 
-**Rolle:** {{ meta.cio.name }} ({{ meta.cio.email }})
+**Rolle:** {{ meta-organisation-roles.role_CIO }} ({{ meta-organisation-roles.role_CIO_email }})
 
 **Verantwortlichkeiten:**
 - IT-Strategie und IT-Betrieb
@@ -238,7 +238,7 @@ management structure and reporting lines.
 
 ### 2.9 Internal Audit / Compliance
 
-**Rolle:** {{ meta.audit.manager }}
+**Rolle:** {{ meta-handbook.audit_manager }}
 
 **Verantwortlichkeiten:**
 - Unabhängige Prüfung des ISMS
@@ -339,7 +339,7 @@ Siehe `0070_ISMS_Risikoakzeptanzkriterien.md` für Details.
 - **ISO/IEC 27002:2022** - Control 5.2: Information security roles and responsibilities
 
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
 Datum: {{ meta-handbook.modifydate }}
 
 **Nächster Review:** {{ meta-handbook.next_review }}

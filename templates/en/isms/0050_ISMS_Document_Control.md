@@ -27,7 +27,7 @@ ISO 27001:2022 Reference: Clause 7.5 - Documented information
 **Document ID:** 0050  
 **Document Type:** ISMS Foundation Document  
 **Standard Reference:** ISO/IEC 27001:2022 Clause 7.5  
-**Owner:** {{ meta.ciso.name }}  
+**Owner:** {{ meta-organisation-roles.role_CISO }}  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
@@ -51,7 +51,7 @@ This document defines the requirements for controlling documented information wi
 - **URL:** [TODO: https://docs.organization.com/isms/]
 
 **Backup and Archiving:**
-- **Backup System:** {{ netbox.backup.system }}
+- **Backup System:** [[ netbox.backup.system ]]
 - **Backup Frequency:** Daily
 - **Archiving Duration:** 10 years after decommissioning
 
@@ -80,7 +80,7 @@ This document defines the requirements for controlling documented information wi
 **Emergency Access:**
 - Critical documents (emergency plans, contact lists) are additionally stored offline
 - Storage Location: [TODO: Physical safe, encrypted USB stick]
-- Responsible: {{ meta.ciso.name }}
+- Responsible: {{ meta-organisation-roles.role_CISO }}
 
 **Break-Glass Access:**
 - See `0200_Emergency_Access_BreakGlass.md` (BCM Handbook)
@@ -257,9 +257,9 @@ Each document contains a change log at the end:
 
 | Version | Date | Author | Description | Approved By |
 |---------|------|--------|-------------|-------------|
-| 1.0 | 2026-01-15 | {{ meta.ciso.name }} | Initial version | Management |
+| 1.0 | 2026-01-15 | {{ meta-organisation-roles.role_CISO }} | Initial version | Management |
 | 1.1 | 2026-03-20 | ISMS Manager | Contact information updated | CISO |
-| 2.0 | 2026-12-01 | {{ meta.ciso.name }} | New requirements from NIS2 | Management |
+| 2.0 | 2026-12-01 | {{ meta-organisation-roles.role_CISO }} | New requirements from NIS2 | Management |
 ```
 
 ## 5. Document Register
@@ -270,11 +270,11 @@ The document register is the central overview of all ISMS documents.
 
 | Document ID | Document Title | Owner | Status | Version | Last Change | Next Review |
 |-------------|----------------|-------|--------|---------|-------------|-------------|
-| 0010 | ISMS Policy | {{ meta.ciso.name }} | Approved | 1.0 | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
-| 0020 | ISMS Scope | {{ meta.ciso.name }} | Approved | 1.0 | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
-| 0030 | Context and Stakeholders | {{ meta.ciso.name }} | Approved | 1.0 | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
-| 0040 | ISMS Governance | {{ meta.ciso.name }} | Approved | 1.0 | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
-| 0050 | Document Control | {{ meta.ciso.name }} | Approved | 1.0 | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
+| 0010 | ISMS Policy | {{ meta-organisation-roles.role_CISO }} | Approved | 1.0 | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
+| 0020 | ISMS Scope | {{ meta-organisation-roles.role_CISO }} | Approved | 1.0 | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
+| 0030 | Context and Stakeholders | {{ meta-organisation-roles.role_CISO }} | Approved | 1.0 | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
+| 0040 | ISMS Governance | {{ meta-organisation-roles.role_CISO }} | Approved | 1.0 | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
+| 0050 | Document Control | {{ meta-organisation-roles.role_CISO }} | Approved | 1.0 | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
 | ... | ... | ... | ... | ... | ... | ... |
 
 [TODO: Create and maintain complete document register]
@@ -348,7 +348,7 @@ See `0580_Policy_Retention_and_Deletion.md` for details.
 - **ISO/IEC 27002:2022** - Control 5.1: Policies for information security
 
 **Approved by:**  
-{{ meta.ciso.name }}, CISO  
+{{ meta-organisation-roles.role_CISO }}, CISO  
 Date: {{ meta-handbook.modifydate }}
 
 **Next Review:** {{ meta-handbook.next_review }}

@@ -25,27 +25,27 @@ Reference: BSI Standard 200-1 (Documentation and Evidence Management)
 
 Das Nachweisregister von **{{ meta-organisation.name }}** bietet eine zentrale Übersicht über alle Nachweise (Evidence), die die Umsetzung von Sicherheitsmaßnahmen, Policies und Richtlinien belegen.
 
-**Verantwortlich:** {{ meta.ciso.name }} (ISB)
+**Verantwortlich:** {{ meta-organisation-roles.role_CISO }} (ISB)
 
 ## 2. Nachweisregister
 
 | Evidence-ID | Thema/Maßnahme | Beschreibung | Dokumenttyp | Ort/Link | Owner | Aufbewahrungsfrist | Letzte Prüfung | Nächste Prüfung | Status |
 |---|---|---|---|---|---|---|---|---|---|
-| E-001 | Patch-Compliance | Monatlicher Patch-Status-Report | Report | [TODO: SharePoint/CMDB] | {{ meta.cio.name }} | 3 Jahre | [TODO] | [TODO] | Aktuell |
-| E-002 | Backup-Tests | Quartalsweise Restore-Tests | Testprotokoll | [TODO] | {{ meta.cio.name }} | 3 Jahre | [TODO] | [TODO] | Aktuell |
-| E-003 | Schulungsnachweise | Teilnehmerlisten Security Awareness | Teilnehmerliste | [TODO: LMS] | {{ meta.ciso.name }} | 5 Jahre | [TODO] | [TODO] | Aktuell |
+| E-001 | Patch-Compliance | Monatlicher Patch-Status-Report | Report | [TODO: SharePoint/CMDB] | {{ meta-organisation-roles.role_CIO }} | 3 Jahre | [TODO] | [TODO] | Aktuell |
+| E-002 | Backup-Tests | Quartalsweise Restore-Tests | Testprotokoll | [TODO] | {{ meta-organisation-roles.role_CIO }} | 3 Jahre | [TODO] | [TODO] | Aktuell |
+| E-003 | Schulungsnachweise | Teilnehmerlisten Security Awareness | Teilnehmerliste | [TODO: LMS] | {{ meta-organisation-roles.role_CISO }} | 5 Jahre | [TODO] | [TODO] | Aktuell |
 | E-004 | Audit-Berichte | Interne Audit-Berichte | Audit-Bericht | [TODO] | Internal Audit | 10 Jahre | [TODO] | [TODO] | Aktuell |
-| E-005 | Risikoakzeptanzen | Dokumentierte Risikoakzeptanzen | Freigabe-Dokument | [TODO] | {{ meta.ceo.name }} | 5 Jahre | [TODO] | [TODO] | Aktuell |
-| E-006 | Vulnerability Scans | Monatliche Vulnerability Scan Reports | Scan-Report | [TODO: Vulnerability Management Tool] | {{ meta.ciso.name }} | 2 Jahre | [TODO] | [TODO] | Aktuell |
-| E-007 | Penetrationstests | Jährliche Pentest-Berichte | Pentest-Bericht | [TODO] | {{ meta.ciso.name }} | 5 Jahre | [TODO] | [TODO] | Aktuell |
-| E-008 | Incident-Dokumentation | Incident-Reports und Postmortems | Incident-Report | [TODO: ITSM] | {{ meta.cio.name }} | 3 Jahre | [TODO] | [TODO] | Aktuell |
-| E-009 | Change-Approvals | Change-Freigaben mit Security-Review | Change-Record | [TODO: ITSM] | {{ meta.cio.name }} | 2 Jahre | [TODO] | [TODO] | Aktuell |
-| E-010 | Zugriffsprotokolle | Privileged Access Logs | Log-Archiv | [TODO: SIEM] | {{ meta.ciso.name }} | 1 Jahr | [TODO] | [TODO] | Aktuell |
-| E-011 | Lieferanten-Assessments | Third-Party Risk Assessments | Assessment-Report | [TODO] | {{ meta.ciso.name }} | 3 Jahre | [TODO] | [TODO] | Aktuell |
-| E-012 | Managementbewertung | Jährliche Management Review Protokolle | Protokoll | [TODO] | {{ meta.ceo.name }} | 10 Jahre | [TODO] | [TODO] | Aktuell |
-| E-013 | Basis-Sicherheitscheck | BSI Basis-Check Ergebnisse | Gap-Analyse | [TODO] | {{ meta.ciso.name }} | 3 Jahre | [TODO] | [TODO] | Aktuell |
-| E-014 | Schutzbedarfsfeststellung | Dokumentierte Schutzbedarfe | Bewertung | [TODO] | {{ meta.ciso.name }} | 5 Jahre | [TODO] | [TODO] | Aktuell |
-| E-015 | Notfallübungen | BCM/DR Test-Protokolle | Testprotokoll | [TODO] | {{ meta.ciso.name }} | 3 Jahre | [TODO] | [TODO] | Aktuell |
+| E-005 | Risikoakzeptanzen | Dokumentierte Risikoakzeptanzen | Freigabe-Dokument | [TODO] | {{ meta-organisation-roles.role_CEO }} | 5 Jahre | [TODO] | [TODO] | Aktuell |
+| E-006 | Vulnerability Scans | Monatliche Vulnerability Scan Reports | Scan-Report | [TODO: Vulnerability Management Tool] | {{ meta-organisation-roles.role_CISO }} | 2 Jahre | [TODO] | [TODO] | Aktuell |
+| E-007 | Penetrationstests | Jährliche Pentest-Berichte | Pentest-Bericht | [TODO] | {{ meta-organisation-roles.role_CISO }} | 5 Jahre | [TODO] | [TODO] | Aktuell |
+| E-008 | Incident-Dokumentation | Incident-Reports und Postmortems | Incident-Report | [TODO: ITSM] | {{ meta-organisation-roles.role_CIO }} | 3 Jahre | [TODO] | [TODO] | Aktuell |
+| E-009 | Change-Approvals | Change-Freigaben mit Security-Review | Change-Record | [TODO: ITSM] | {{ meta-organisation-roles.role_CIO }} | 2 Jahre | [TODO] | [TODO] | Aktuell |
+| E-010 | Zugriffsprotokolle | Privileged Access Logs | Log-Archiv | [TODO: SIEM] | {{ meta-organisation-roles.role_CISO }} | 1 Jahr | [TODO] | [TODO] | Aktuell |
+| E-011 | Lieferanten-Assessments | Third-Party Risk Assessments | Assessment-Report | [TODO] | {{ meta-organisation-roles.role_CISO }} | 3 Jahre | [TODO] | [TODO] | Aktuell |
+| E-012 | Managementbewertung | Jährliche Management Review Protokolle | Protokoll | [TODO] | {{ meta-organisation-roles.role_CEO }} | 10 Jahre | [TODO] | [TODO] | Aktuell |
+| E-013 | Basis-Sicherheitscheck | BSI Basis-Check Ergebnisse | Gap-Analyse | [TODO] | {{ meta-organisation-roles.role_CISO }} | 3 Jahre | [TODO] | [TODO] | Aktuell |
+| E-014 | Schutzbedarfsfeststellung | Dokumentierte Schutzbedarfe | Bewertung | [TODO] | {{ meta-organisation-roles.role_CISO }} | 5 Jahre | [TODO] | [TODO] | Aktuell |
+| E-015 | Notfallübungen | BCM/DR Test-Protokolle | Testprotokoll | [TODO] | {{ meta-organisation-roles.role_CISO }} | 3 Jahre | [TODO] | [TODO] | Aktuell |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## 3. Kategorien von Nachweisen
@@ -109,14 +109,14 @@ Das Nachweisregister von **{{ meta-organisation.name }}** bietet eine zentrale �
 - **Jährlich:** Aufbewahrungsfristen-Review
 - **Bei Audits:** Verfügbarkeit und Aktualität prüfen
 
-**Verantwortlich:** {{ meta.ciso.name }}
+**Verantwortlich:** {{ meta-organisation-roles.role_CISO }}
 
 ## 7. Freigabe
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
-| IT-Leitung | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| ISB | {{ meta-organisation-roles.role_CISO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| IT-Leitung | {{ meta-organisation-roles.role_CIO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **Referenzen:**
 - BSI Standard 200-1: ISMS (Dokumentation)

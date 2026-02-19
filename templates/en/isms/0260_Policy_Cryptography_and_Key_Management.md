@@ -28,7 +28,7 @@ ISO 27001:2022 Annex A Reference: A.8.24
 **Document ID:** 0260  
 **Document Type:** Policy (abstract)  
 **Standard Reference:** ISO/IEC 27001:2022 Annex A.8.24 (incl. Amendment 1:2024)  
-**Owner:** {{ meta.ciso.name }}  
+**Owner:** {{ meta-organisation-roles.role_CISO }}  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
@@ -47,7 +47,7 @@ This policy applies to:
 - **Systems:** All IT systems, applications, databases, networks, cloud services
 - **Data:** All data at rest, in transit, and in use
 - **Cryptographic Procedures:** Encryption, hashing, digital signatures, certificates
-- **Locations:** {{ netbox.site.name }} and all other operational sites
+- **Locations:** [[ netbox.site.name ]] and all other operational sites
 
 **Exceptions:** Exceptions are only permitted through the defined exception process (`0640_Policy_Ausnahmen_und_Risk_Waivers.md`).
 
@@ -116,9 +116,9 @@ The use of cryptography complies with national and international export control 
 
 ### Key Roles
 
-- **Policy Owner:** {{ meta.ciso.name }} (CISO)
-- **Crypto Officer:** {{ meta.it.crypto_officer }}
-- **Key Management Responsible:** {{ meta.it.key_manager }}
+- **Policy Owner:** {{ meta-organisation-roles.role_CISO }} (CISO)
+- **Crypto Officer:** {{ meta-handbook.it_crypto_officer }}
+- **Key Management Responsible:** {{ meta-handbook.it_key_manager }}
 - **Implementation Responsible:** IT operations, development
 - **Control/Audit Function:** ISMS, internal audit, compliance
 
@@ -197,7 +197,7 @@ Exceptions to this policy are only permitted in justified exceptional cases:
 - **eIDAS Regulation (EU 910/2014)** - Electronic Identification and Trust Services
 
 **Approved by:**  
-{{ meta.management.ceo }}, Management  
+{{ meta-handbook.management_ceo }}, Management  
 Date: {{ meta-handbook.modifydate }}
 
 **Next Review:** {{ meta-handbook.next_review }} (annually or as needed)

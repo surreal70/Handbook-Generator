@@ -25,7 +25,7 @@ Reference: BSI Standard 200-1 (Awareness and Training), ORP.3
 
 The training and awareness program of **{{ meta-organisation.name }}** ensures that all employees have the required security knowledge.
 
-**Responsible:** {{ meta.ciso.name }} (CISO)
+**Responsible:** {{ meta-organisation-roles.role_CISO }} (CISO)
 
 ## 2. Target Groups
 
@@ -41,11 +41,11 @@ The training and awareness program of **{{ meta-organisation.name }}** ensures t
 
 | Training | Target Group | Frequency | Duration | Content | Evidence | Owner |
 |---|---|---|---|---|---|---|
-| Information Security Fundamentals | All | Annually | 1h | Policies, Phishing, Passwords, Incident Reporting | LMS Certificate | {{ meta.ciso.name }} |
+| Information Security Fundamentals | All | Annually | 1h | Policies, Phishing, Passwords, Incident Reporting | LMS Certificate | {{ meta-organisation-roles.role_CISO }} |
 | Onboarding Security | New Employees | Upon Entry | 30min | Fundamentals, Policies | Attendance List | HR |
-| Phishing Simulation | All | Quarterly | 10min | Phishing Recognition | Click Rate | {{ meta.ciso.name }} |
-| Admin Training | IT Admins | Annually | 4h | Privileged Access, Hardening, Logging | Attendance List | {{ meta.cio.name }} |
-| Secure Coding | Developers | Annually | 8h | OWASP Top 10, SAST/DAST | Attendance List | {{ meta.cio.name }} |
+| Phishing Simulation | All | Quarterly | 10min | Phishing Recognition | Click Rate | {{ meta-organisation-roles.role_CISO }} |
+| Admin Training | IT Admins | Annually | 4h | Privileged Access, Hardening, Logging | Attendance List | {{ meta-organisation-roles.role_CIO }} |
+| Secure Coding | Developers | Annually | 8h | OWASP Top 10, SAST/DAST | Attendance List | {{ meta-organisation-roles.role_CIO }} |
 | [TODO: Additional Training] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## 4. Effectiveness Measurement
@@ -87,7 +87,7 @@ The training and awareness program of **{{ meta-organisation.name }}** ensures t
 
 | Role | Name | Date | Approval |
 |---|---|---|---|
-| CISO | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| CISO | {{ meta-organisation-roles.role_CISO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 | HR | [TODO] | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **References:**

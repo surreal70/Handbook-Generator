@@ -30,13 +30,13 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 
 | Kategorie | Anzahl Tools | Hauptverantwortlich | Kritikalität |
 |---|---:|---|---|
-| Monitoring & Observability | [TODO] | {{ meta-organisation-roles.role_it_operations_manager.name }} | Hoch |
-| Infrastructure Management | [TODO] | {{ meta-organisation-roles.role_it_operations_manager.name }} | Hoch |
-| Security & Compliance | [TODO] | {{ meta-organisation-roles.role_ciso.name }} | Hoch |
-| Development & Deployment | [TODO] | {{ meta-organisation-roles.role_it_operations_manager.name }} | Mittel |
-| Collaboration & Communication | [TODO] | {{ meta-organisation-roles.role_coo.name }} | Mittel |
-| Documentation & Knowledge | [TODO] | {{ meta-organisation-roles.role_it_operations_manager.name }} | Mittel |
-| Backup & Recovery | [TODO] | {{ meta-organisation-roles.role_it_operations_manager.name }} | Hoch |
+| Monitoring & Observability | [TODO] | {{ meta-organisation-roles.role_IT_Operations_Manager }} | Hoch |
+| Infrastructure Management | [TODO] | {{ meta-organisation-roles.role_IT_Operations_Manager }} | Hoch |
+| Security & Compliance | [TODO] | {{ meta-organisation-roles.role_CISO }} | Hoch |
+| Development & Deployment | [TODO] | {{ meta-organisation-roles.role_IT_Operations_Manager }} | Mittel |
+| Collaboration & Communication | [TODO] | {{ meta-organisation-roles.role_COO }} | Mittel |
+| Documentation & Knowledge | [TODO] | {{ meta-organisation-roles.role_IT_Operations_Manager }} | Mittel |
+| Backup & Recovery | [TODO] | {{ meta-organisation-roles.role_IT_Operations_Manager }} | Hoch |
 
 ## Monitoring und Observability
 
@@ -47,7 +47,7 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **URL:** [TODO: https://monitoring.example.com]
 - **Zugriff:** VPN + SSO
 - **Authentifizierung:** {{ meta-organisation.name }} SSO
-- **Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+- **Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - **Support:** [TODO: Support-Kontakt]
 - **Dokumentation:** [TODO: Dokumentations-URL]
 
@@ -69,7 +69,7 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **URL:** [TODO: https://apm.example.com]
 - **Zugriff:** VPN + SSO
 - **Authentifizierung:** {{ meta-organisation.name }} SSO
-- **Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+- **Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - **Support:** [TODO: Support-Kontakt]
 
 **Hauptfunktionen:**
@@ -85,7 +85,7 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **URL:** [TODO: https://logs.example.com]
 - **Zugriff:** VPN + SSO
 - **Authentifizierung:** {{ meta-organisation.name }} SSO
-- **Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+- **Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - **Support:** [TODO: Support-Kontakt]
 
 **Hauptfunktionen:**
@@ -100,11 +100,11 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 
 #### NetBox
 - **Zweck:** CMDB und IPAM
-- **URL:** {{ netbox.url }}
+- **URL:** [[ netbox.url ]]
 - **Zugriff:** VPN + Username/Password
 - **Authentifizierung:** Lokale Accounts oder LDAP
-- **Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
-- **API:** {{ netbox.api_url }}
+- **Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
+- **API:** [[ netbox.api_url ]]
 - **Dokumentation:** https://docs.netbox.dev/
 
 **Hauptfunktionen:**
@@ -126,7 +126,7 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **URL:** [TODO: https://vcenter.example.com]
 - **Zugriff:** VPN + Username/Password
 - **Authentifizierung:** Lokale Accounts oder AD
-- **Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+- **Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - **Support:** [TODO: Support-Kontakt]
 
 **Hauptfunktionen:**
@@ -142,7 +142,7 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **URL:** [TODO: https://k8s.example.com]
 - **Zugriff:** VPN + kubectl + Token
 - **Authentifizierung:** Service-Accounts, RBAC
-- **Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+- **Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - **Support:** [TODO: Support-Kontakt]
 
 **Hauptfunktionen:**
@@ -158,7 +158,7 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **URL:** [TODO: https://console.cloud-provider.com]
 - **Zugriff:** Internet + MFA
 - **Authentifizierung:** Cloud-Provider-Accounts + MFA
-- **Verantwortlich:** {{ meta-organisation-roles.role_cio.name }}
+- **Verantwortlich:** {{ meta-organisation-roles.role_CIO }}
 - **Support:** Cloud-Provider-Support
 
 **Hauptfunktionen:**
@@ -176,7 +176,7 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **URL:** [TODO: https://siem.example.com]
 - **Zugriff:** VPN + SSO
 - **Authentifizierung:** {{ meta-organisation.name }} SSO
-- **Verantwortlich:** {{ meta-organisation-roles.role_ciso.name }}
+- **Verantwortlich:** {{ meta-organisation-roles.role_CISO }}
 - **Support:** [TODO: Support-Kontakt]
 
 **Hauptfunktionen:**
@@ -192,7 +192,7 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **URL:** [TODO: https://vuln.example.com]
 - **Zugriff:** VPN + Username/Password
 - **Authentifizierung:** Lokale Accounts
-- **Verantwortlich:** {{ meta-organisation-roles.role_ciso.name }}
+- **Verantwortlich:** {{ meta-organisation-roles.role_CISO }}
 - **Support:** [TODO: Support-Kontakt]
 
 **Hauptfunktionen:**
@@ -208,7 +208,7 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **URL:** [TODO: ldap://ad.example.com]
 - **Zugriff:** Intern + VPN
 - **Authentifizierung:** Admin-Accounts
-- **Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+- **Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - **Support:** [TODO: Support-Kontakt]
 
 **Hauptfunktionen:**
@@ -224,7 +224,7 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **URL:** [TODO: https://mfa.example.com]
 - **Zugriff:** Internet
 - **Authentifizierung:** Username + MFA-Token
-- **Verantwortlich:** {{ meta-organisation-roles.role_ciso.name }}
+- **Verantwortlich:** {{ meta-organisation-roles.role_CISO }}
 - **Support:** [TODO: Support-Kontakt]
 
 **Hauptfunktionen:**
@@ -242,7 +242,7 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **URL:** [TODO: https://git.example.com]
 - **Zugriff:** VPN + SSO
 - **Authentifizierung:** {{ meta-organisation.name }} SSO + SSH-Keys
-- **Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+- **Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - **Support:** [TODO: Support-Kontakt]
 
 **Hauptfunktionen:**
@@ -258,7 +258,7 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **URL:** [TODO: https://ci.example.com]
 - **Zugriff:** VPN + SSO
 - **Authentifizierung:** {{ meta-organisation.name }} SSO
-- **Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+- **Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - **Support:** [TODO: Support-Kontakt]
 
 **Hauptfunktionen:**
@@ -274,7 +274,7 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **URL:** [TODO: https://artifacts.example.com]
 - **Zugriff:** VPN + Token
 - **Authentifizierung:** API-Tokens
-- **Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+- **Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - **Support:** [TODO: Support-Kontakt]
 
 **Hauptfunktionen:**
@@ -292,7 +292,7 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **URL:** [TODO: https://tickets.example.com]
 - **Zugriff:** Internet + SSO
 - **Authentifizierung:** {{ meta-organisation.name }} SSO
-- **Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+- **Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - **Support:** [TODO: Support-Kontakt]
 
 **Hauptfunktionen:**
@@ -308,7 +308,7 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **URL:** [TODO: https://chat.example.com]
 - **Zugriff:** Internet + SSO
 - **Authentifizierung:** {{ meta-organisation.name }} SSO
-- **Verantwortlich:** {{ meta-organisation-roles.role_coo.name }}
+- **Verantwortlich:** {{ meta-organisation-roles.role_COO }}
 - **Support:** [TODO: Support-Kontakt]
 
 **Hauptfunktionen:**
@@ -324,7 +324,7 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **URL:** [TODO: https://meet.example.com]
 - **Zugriff:** Internet
 - **Authentifizierung:** {{ meta-organisation.name }} SSO
-- **Verantwortlich:** {{ meta-organisation-roles.role_coo.name }}
+- **Verantwortlich:** {{ meta-organisation-roles.role_COO }}
 - **Support:** [TODO: Support-Kontakt]
 
 **Hauptfunktionen:**
@@ -342,7 +342,7 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **URL:** [TODO: https://wiki.example.com]
 - **Zugriff:** VPN + SSO
 - **Authentifizierung:** {{ meta-organisation.name }} SSO
-- **Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+- **Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - **Support:** [TODO: Support-Kontakt]
 
 **Hauptfunktionen:**
@@ -358,7 +358,7 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **URL:** [TODO: https://diagrams.example.com]
 - **Zugriff:** Internet + SSO
 - **Authentifizierung:** {{ meta-organisation.name }} SSO
-- **Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+- **Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - **Support:** [TODO: Support-Kontakt]
 
 **Hauptfunktionen:**
@@ -376,7 +376,7 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **URL:** [TODO: https://backup.example.com]
 - **Zugriff:** VPN + Username/Password
 - **Authentifizierung:** Lokale Accounts
-- **Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+- **Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - **Support:** [TODO: Support-Kontakt]
 
 **Hauptfunktionen:**
@@ -394,8 +394,8 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **URL:** [TODO: https://vpn.example.com]
 - **Client:** [TODO: VPN-Client-Name]
 - **Authentifizierung:** {{ meta-organisation.name }} AD + MFA
-- **Verantwortlich:** {{ meta-organisation-roles.role_ciso.name }}
-- **Support:** {{ meta-organisation-roles.role_service_desk_lead.email }}
+- **Verantwortlich:** {{ meta-organisation-roles.role_CISO }}
+- **Support:** {{ meta-organisation-roles.role_Service_Desk_Lead_email }}
 
 **Verbindungsanleitung:**
 1. VPN-Client installieren
@@ -416,7 +416,7 @@ Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und U
 - **Hostname:** [TODO: bastion.example.com]
 - **Port:** 22
 - **Authentifizierung:** SSH-Keys + MFA
-- **Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+- **Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 **Verbindungsanleitung:**
 ```bash
@@ -439,7 +439,7 @@ ssh username@target-server
 - **Zweck:** Remote-Desktop-Zugriff auf Windows-Server
 - **URL:** [TODO: https://rdp.example.com]
 - **Authentifizierung:** {{ meta-organisation.name }} AD + MFA
-- **Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+- **Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 **Verbindungsanleitung:**
 1. RDP-Client öffnen
@@ -456,7 +456,7 @@ ssh username@target-server
 - **Protokoll:** SAML 2.0 / OAuth 2.0 / OpenID Connect
 - **MFA:** Erforderlich für alle externen Zugriffe
 - **Session-Timeout:** 8 Stunden
-- **Verantwortlich:** {{ meta-organisation-roles.role_ciso.name }}
+- **Verantwortlich:** {{ meta-organisation-roles.role_CISO }}
 
 **Unterstützte Anwendungen:**
 - [TODO: Liste der SSO-integrierten Anwendungen]
@@ -468,7 +468,7 @@ ssh username@target-server
 - **Generierung:** Über jeweiliges Tool-Interface
 - **Rotation:** Alle 90 Tage
 - **Speicherung:** Secrets-Management-System
-- **Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+- **Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 **Best Practices:**
 - Tokens niemals in Code committen
@@ -483,7 +483,7 @@ ssh username@target-server
 - **Passphrase:** Erforderlich
 - **Rotation:** Jährlich
 - **Speicherung:** Lokal, verschlüsselt
-- **Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+- **Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 **Key-Generierung:**
 ```bash
@@ -517,7 +517,7 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 #### Emergency-Admin-Account
 - **Zweck:** Notfall-Zugriff bei SSO-Ausfall
 - **Speicherung:** Versiegelter Umschlag im Safe
-- **Zugriff:** Nur durch {{ meta-organisation-roles.role_cio.name }} oder {{ meta-organisation-roles.role_ciso.name }}
+- **Zugriff:** Nur durch {{ meta-organisation-roles.role_CIO }} oder {{ meta-organisation-roles.role_CISO }}
 - **Protokollierung:** Jede Nutzung wird geloggt und reviewt
 - **Passwort-Rotation:** Quartalsweise
 
@@ -599,5 +599,5 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 
 **Letzte Aktualisierung:** {{ meta-handbook.date }}  
 **Nächste Review:** [TODO: Datum]  
-**Kontakt:** {{ meta-organisation-roles.role_it_operations_manager.email }}
+**Kontakt:** {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
 

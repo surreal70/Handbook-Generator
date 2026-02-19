@@ -29,7 +29,7 @@ Die Modellierung ordnet den Objekten des Informationsverbunds von **{{ meta-orga
 - Identifikation umzusetzender Anforderungen
 - Systematische Sicherheitsmaßnahmen-Planung
 
-**Verantwortlich:** {{ meta.ciso.name }} (ISB)
+**Verantwortlich:** {{ meta-organisation-roles.role_CISO }} (ISB)
 
 **Wichtig:** Dieses Dokument referenziert nur Bausteine. Die vollständigen Bausteintexte befinden sich im BSI IT-Grundschutz-Kompendium und werden nicht kopiert.
 
@@ -76,20 +76,20 @@ Assign ISMS and organizational modules to the organization as a whole.
 
 | Objekt-ID | Objekt | Objektklasse | Zugeordnete Bausteine | Begründung | Owner |
 |---|---|---|---|---|---|
-| ORG-001 | {{ meta-organisation.name }} | Organisation | ISMS.1 Sicherheitsmanagement | Gesamtorganisation | {{ meta.ciso.name }} |
-| ORG-001 | {{ meta-organisation.name }} | Organisation | ORP.1 Organisation | Organisationsstruktur | {{ meta.ciso.name }} |
+| ORG-001 | {{ meta-organisation.name }} | Organisation | ISMS.1 Sicherheitsmanagement | Gesamtorganisation | {{ meta-organisation-roles.role_CISO }} |
+| ORG-001 | {{ meta-organisation.name }} | Organisation | ORP.1 Organisation | Organisationsstruktur | {{ meta-organisation-roles.role_CISO }} |
 | ORG-001 | {{ meta-organisation.name }} | Organisation | ORP.2 Personal | Personalmanagement | [TODO: HR] |
-| ORG-001 | {{ meta-organisation.name }} | Organisation | ORP.3 Sensibilisierung und Schulung | Awareness-Programm | {{ meta.ciso.name }} |
-| ORG-001 | {{ meta-organisation.name }} | Organisation | ORP.4 Identitäts- und Berechtigungsmanagement | IAM-Prozesse | {{ meta.cio.name }} |
+| ORG-001 | {{ meta-organisation.name }} | Organisation | ORP.3 Sensibilisierung und Schulung | Awareness-Programm | {{ meta-organisation-roles.role_CISO }} |
+| ORG-001 | {{ meta-organisation.name }} | Organisation | ORP.4 Identitäts- und Berechtigungsmanagement | IAM-Prozesse | {{ meta-organisation-roles.role_CIO }} |
 | ORG-001 | {{ meta-organisation.name }} | Organisation | ORP.5 Compliance Management (Anforderungsmanagement) | Compliance | [TODO] |
 
 ### 3.2 Konzeption und Vorgehensweisen (CON)
 
 | Objekt-ID | Objekt | Objektklasse | Zugeordnete Bausteine | Begründung | Owner |
 |---|---|---|---|---|---|
-| CON-001 | Kryptokonzept | Konzept | CON.1 Kryptokonzept | Verschlüsselungsstrategie | {{ meta.ciso.name }} |
-| CON-002 | Datensicherungskonzept | Konzept | CON.3 Datensicherungskonzept | Backup-Strategie | {{ meta.cio.name }} |
-| CON-003 | Löschkonzept | Konzept | CON.6 Löschen und Vernichten | Datenlöschung | {{ meta.ciso.name }} |
+| CON-001 | Kryptokonzept | Konzept | CON.1 Kryptokonzept | Verschlüsselungsstrategie | {{ meta-organisation-roles.role_CISO }} |
+| CON-002 | Datensicherungskonzept | Konzept | CON.3 Datensicherungskonzept | Backup-Strategie | {{ meta-organisation-roles.role_CIO }} |
+| CON-003 | Löschkonzept | Konzept | CON.6 Löschen und Vernichten | Datenlöschung | {{ meta-organisation-roles.role_CISO }} |
 | CON-004 | Patch- und Änderungsmanagement | Konzept | CON.7 Informationssicherheit auf Auslandsreisen | [TODO: falls zutreffend] | [TODO] |
 | CON-005 | Softwareentwicklung | Konzept | CON.8 Software-Entwicklung | [TODO: falls zutreffend] | [TODO] |
 
@@ -97,20 +97,20 @@ Assign ISMS and organizational modules to the organization as a whole.
 
 | Objekt-ID | Objekt | Objektklasse | Zugeordnete Bausteine | Begründung | Owner |
 |---|---|---|---|---|---|
-| OPS-001 | IT-Betrieb | Betriebsprozess | OPS.1.1.2 Ordnungsgemäße IT-Administration | IT-Administration | {{ meta.cio.name }} |
-| OPS-002 | Patch Management | Betriebsprozess | OPS.1.1.3 Patch- und Änderungsmanagement | Patch-Prozess | {{ meta.cio.name }} |
-| OPS-003 | Schutz vor Schadprogrammen | Betriebsprozess | OPS.1.1.4 Schutz vor Schadprogrammen | Malware-Schutz | {{ meta.cio.name }} |
-| OPS-004 | Datensicherung | Betriebsprozess | OPS.1.1.5 Protokollierung | Logging | {{ meta.cio.name }} |
+| OPS-001 | IT-Betrieb | Betriebsprozess | OPS.1.1.2 Ordnungsgemäße IT-Administration | IT-Administration | {{ meta-organisation-roles.role_CIO }} |
+| OPS-002 | Patch Management | Betriebsprozess | OPS.1.1.3 Patch- und Änderungsmanagement | Patch-Prozess | {{ meta-organisation-roles.role_CIO }} |
+| OPS-003 | Schutz vor Schadprogrammen | Betriebsprozess | OPS.1.1.4 Schutz vor Schadprogrammen | Malware-Schutz | {{ meta-organisation-roles.role_CIO }} |
+| OPS-004 | Datensicherung | Betriebsprozess | OPS.1.1.5 Protokollierung | Logging | {{ meta-organisation-roles.role_CIO }} |
 | OPS-005 | Software-Tests | Betriebsprozess | OPS.1.1.6 Software-Tests und -Freigaben | [TODO: falls zutreffend] | [TODO] |
 | OPS-006 | Outsourcing | Betriebsprozess | OPS.2.1 Outsourcing für Kunden | [TODO: falls zutreffend] | [TODO] |
-| OPS-007 | Cloud-Nutzung | Betriebsprozess | OPS.2.2 Cloud-Nutzung | Cloud-Services | {{ meta.cio.name }} |
+| OPS-007 | Cloud-Nutzung | Betriebsprozess | OPS.2.2 Cloud-Nutzung | Cloud-Services | {{ meta-organisation-roles.role_CIO }} |
 
 ### 3.4 Detektion und Reaktion (DER)
 
 | Objekt-ID | Objekt | Objektklasse | Zugeordnete Bausteine | Begründung | Owner |
 |---|---|---|---|---|---|
-| DER-001 | Detektion | Prozess | DER.1 Detektion von sicherheitsrelevanten Ereignissen | SIEM, Monitoring | {{ meta.cio.name }} |
-| DER-002 | Incident Management | Prozess | DER.2.1 Behandlung von Sicherheitsvorfällen | Incident Response | {{ meta.ciso.name }} |
+| DER-001 | Detektion | Prozess | DER.1 Detektion von sicherheitsrelevanten Ereignissen | SIEM, Monitoring | {{ meta-organisation-roles.role_CIO }} |
+| DER-002 | Incident Management | Prozess | DER.2.1 Behandlung von Sicherheitsvorfällen | Incident Response | {{ meta-organisation-roles.role_CISO }} |
 | DER-003 | Forensik | Prozess | DER.2.2 Vorsorge für die IT-Forensik | [TODO: falls zutreffend] | [TODO] |
 | DER-004 | Audits | Prozess | DER.3.1 Audits und Revisionen | Internal Audit | [TODO] |
 
@@ -125,12 +125,12 @@ Assign application modules to all applications from structure analysis.
 |---|---|---|---|---|---|
 | A-001 | [TODO: Anwendung 1] | Anwendung | APP.1.1 Office-Produkte | [TODO: falls Office-Anwendung] | [TODO] |
 | A-002 | [TODO: Anwendung 2] | Anwendung | APP.3.1 Webanwendungen | [TODO: falls Webanwendung] | [TODO] |
-| A-003 | [TODO: Anwendung 3] | Anwendung | APP.3.2 Webserver | [TODO: falls Webserver] | {{ meta.cio.name }} |
-| A-004 | [TODO: Anwendung 4] | Anwendung | APP.3.3 Fileserver | [TODO: falls Fileserver] | {{ meta.cio.name }} |
-| A-005 | [TODO: Anwendung 5] | Anwendung | APP.3.6 DNS-Server | [TODO: falls DNS] | {{ meta.cio.name }} |
-| A-006 | [TODO: Anwendung 6] | Anwendung | APP.4.3 Relationale Datenbanksysteme | [TODO: falls Datenbank] | {{ meta.cio.name }} |
+| A-003 | [TODO: Anwendung 3] | Anwendung | APP.3.2 Webserver | [TODO: falls Webserver] | {{ meta-organisation-roles.role_CIO }} |
+| A-004 | [TODO: Anwendung 4] | Anwendung | APP.3.3 Fileserver | [TODO: falls Fileserver] | {{ meta-organisation-roles.role_CIO }} |
+| A-005 | [TODO: Anwendung 5] | Anwendung | APP.3.6 DNS-Server | [TODO: falls DNS] | {{ meta-organisation-roles.role_CIO }} |
+| A-006 | [TODO: Anwendung 6] | Anwendung | APP.4.3 Relationale Datenbanksysteme | [TODO: falls Datenbank] | {{ meta-organisation-roles.role_CIO }} |
 | A-007 | [TODO: Anwendung 7] | Anwendung | APP.5.1 Allgemeine Groupware | [TODO: falls Groupware] | [TODO] |
-| A-008 | [TODO: Anwendung 8] | Anwendung | APP.5.2 Microsoft Exchange und Outlook | [TODO: falls Exchange] | {{ meta.cio.name }} |
+| A-008 | [TODO: Anwendung 8] | Anwendung | APP.5.2 Microsoft Exchange und Outlook | [TODO: falls Exchange] | {{ meta-organisation-roles.role_CIO }} |
 
 ### 3.6 IT-Systeme (SYS)
 
@@ -142,16 +142,16 @@ Use NetBox data where available.
 
 | Objekt-ID | Objekt | Objektklasse | Zugeordnete Bausteine | Begründung | Owner |
 |---|---|---|---|---|---|
-| S-001 | {{ netbox.device.server_001 }} | Server | SYS.1.1 Allgemeiner Server | Allgemeiner Server | {{ meta.cio.name }} |
-| S-002 | [TODO: Linux-Server] | Server | SYS.1.3 Server unter Linux und Unix | Linux-Server | {{ meta.cio.name }} |
-| S-003 | [TODO: Windows-Server] | Server | SYS.1.2.3 Windows Server | Windows-Server | {{ meta.cio.name }} |
-| S-004 | [TODO: Virtualisierung] | Virtualisierung | SYS.1.5 Virtualisierung | VMware/Hyper-V | {{ meta.cio.name }} |
-| S-005 | [TODO: Container] | Container | SYS.1.6 Containerisierung | Docker/Kubernetes | {{ meta.cio.name }} |
-| S-006 | [TODO: Storage] | Storage | SYS.1.8 Speicherlösungen | SAN/NAS | {{ meta.cio.name }} |
-| S-007 | [TODO: Client] | Client | SYS.2.1 Allgemeiner Client | Workstations | {{ meta.cio.name }} |
-| S-008 | [TODO: Windows-Client] | Client | SYS.2.2.3 Clients unter Windows | Windows-Clients | {{ meta.cio.name }} |
-| S-009 | [TODO: macOS-Client] | Client | SYS.2.4 Clients unter macOS | macOS-Clients | {{ meta.cio.name }} |
-| S-010 | [TODO: Mobile Device] | Mobile | SYS.3.2.1 Allgemeine Smartphones und Tablets | Mobile Devices | {{ meta.cio.name }} |
+| S-001 | [[ netbox.device.server_001 ]] | Server | SYS.1.1 Allgemeiner Server | Allgemeiner Server | {{ meta-organisation-roles.role_CIO }} |
+| S-002 | [TODO: Linux-Server] | Server | SYS.1.3 Server unter Linux und Unix | Linux-Server | {{ meta-organisation-roles.role_CIO }} |
+| S-003 | [TODO: Windows-Server] | Server | SYS.1.2.3 Windows Server | Windows-Server | {{ meta-organisation-roles.role_CIO }} |
+| S-004 | [TODO: Virtualisierung] | Virtualisierung | SYS.1.5 Virtualisierung | VMware/Hyper-V | {{ meta-organisation-roles.role_CIO }} |
+| S-005 | [TODO: Container] | Container | SYS.1.6 Containerisierung | Docker/Kubernetes | {{ meta-organisation-roles.role_CIO }} |
+| S-006 | [TODO: Storage] | Storage | SYS.1.8 Speicherlösungen | SAN/NAS | {{ meta-organisation-roles.role_CIO }} |
+| S-007 | [TODO: Client] | Client | SYS.2.1 Allgemeiner Client | Workstations | {{ meta-organisation-roles.role_CIO }} |
+| S-008 | [TODO: Windows-Client] | Client | SYS.2.2.3 Clients unter Windows | Windows-Clients | {{ meta-organisation-roles.role_CIO }} |
+| S-009 | [TODO: macOS-Client] | Client | SYS.2.4 Clients unter macOS | macOS-Clients | {{ meta-organisation-roles.role_CIO }} |
+| S-010 | [TODO: Mobile Device] | Mobile | SYS.3.2.1 Allgemeine Smartphones und Tablets | Mobile Devices | {{ meta-organisation-roles.role_CIO }} |
 | S-011 | [TODO: IoT] | IoT | SYS.4.4 Allgemeines IoT-Gerät | [TODO: falls IoT] | [TODO] |
 
 ### 3.7 Netzwerke und Kommunikation (NET)
@@ -163,13 +163,13 @@ Assign network modules to all networks from structure analysis.
 
 | Objekt-ID | Objekt | Objektklasse | Zugeordnete Bausteine | Begründung | Owner |
 |---|---|---|---|---|---|
-| N-001 | Netzwerkarchitektur | Netzwerk | NET.1.1 Netzarchitektur und -design | Gesamtnetzwerk | {{ meta.cio.name }} |
-| N-002 | Netzwerkmanagement | Netzwerk | NET.1.2 Netzmanagement | Netzwerk-Monitoring | {{ meta.cio.name }} |
-| N-003 | [TODO: Router/Switches] | Netzwerkkomponente | NET.3.1 Router und Switches | Netzwerkgeräte | {{ meta.cio.name }} |
-| N-004 | [TODO: Firewall] | Sicherheitskomponente | NET.3.2 Firewall | Perimeter-Schutz | {{ meta.cio.name }} |
-| N-005 | [TODO: VPN] | Sicherheitskomponente | NET.3.3 VPN | Remote-Zugriff | {{ meta.cio.name }} |
-| N-006 | [TODO: WLAN] | Netzwerk | NET.2.1 WLAN-Betrieb | Wireless-Netzwerk | {{ meta.cio.name }} |
-| N-007 | [TODO: E-Mail] | Kommunikation | NET.4.1 TLS-Verschlüsselung | [TODO: falls zutreffend] | {{ meta.cio.name }} |
+| N-001 | Netzwerkarchitektur | Netzwerk | NET.1.1 Netzarchitektur und -design | Gesamtnetzwerk | {{ meta-organisation-roles.role_CIO }} |
+| N-002 | Netzwerkmanagement | Netzwerk | NET.1.2 Netzmanagement | Netzwerk-Monitoring | {{ meta-organisation-roles.role_CIO }} |
+| N-003 | [TODO: Router/Switches] | Netzwerkkomponente | NET.3.1 Router und Switches | Netzwerkgeräte | {{ meta-organisation-roles.role_CIO }} |
+| N-004 | [TODO: Firewall] | Sicherheitskomponente | NET.3.2 Firewall | Perimeter-Schutz | {{ meta-organisation-roles.role_CIO }} |
+| N-005 | [TODO: VPN] | Sicherheitskomponente | NET.3.3 VPN | Remote-Zugriff | {{ meta-organisation-roles.role_CIO }} |
+| N-006 | [TODO: WLAN] | Netzwerk | NET.2.1 WLAN-Betrieb | Wireless-Netzwerk | {{ meta-organisation-roles.role_CIO }} |
+| N-007 | [TODO: E-Mail] | Kommunikation | NET.4.1 TLS-Verschlüsselung | [TODO: falls zutreffend] | {{ meta-organisation-roles.role_CIO }} |
 
 ### 3.8 Industrielle IT (IND) - Optional
 
@@ -231,10 +231,10 @@ Only if OT/ICS systems are in scope.
 ### 5.1 Validierungsprozess
 
 Die Bausteinzuordnung wird validiert durch:
-1. **Review durch IT-Leitung:** {{ meta.cio.name }} - Technische Korrektheit
+1. **Review durch IT-Leitung:** {{ meta-organisation-roles.role_CIO }} - Technische Korrektheit
 2. **Review durch Informationsverbund-Verantwortliche:** Vollständigkeit
 3. **Abgleich mit IT-Grundschutz-Kompendium:** Aktualität der Bausteine
-4. **Freigabe durch ISB:** {{ meta.ciso.name }}
+4. **Freigabe durch ISB:** {{ meta-organisation-roles.role_CISO }}
 
 ### 5.2 Qualitätskriterien
 
@@ -261,15 +261,15 @@ Die Bausteinzuordnung wird aktualisiert bei:
 - Neuer Edition des IT-Grundschutz-Kompendiums
 - Mindestens jährlich im Rahmen des ISMS-Reviews
 
-**Verantwortlich:** {{ meta.ciso.name }} (ISB)  
+**Verantwortlich:** {{ meta-organisation-roles.role_CISO }} (ISB)  
 **Nächster Review:** {{ meta-handbook.next_review }}
 
 ## 8. Freigabe
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
-| IT-Leitung | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| ISB | {{ meta-organisation-roles.role_CISO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| IT-Leitung | {{ meta-organisation-roles.role_CIO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **Referenzen:**
 - BSI Standard 200-2: IT-Grundschutz-Methodik (Kapitel 7: Modellierung)

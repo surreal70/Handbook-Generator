@@ -138,8 +138,8 @@ Dieses Dokument beschreibt den Ansatz der Organisation zum Management von Cybers
 - Incident Response Plan erforderlich
 
 **Beispiele:**
-- {{ meta.critical_supplier_1 }}
-- {{ meta.critical_supplier_2 }}
+- {{ meta-handbook.critical_supplier_1 }}
+- {{ meta-handbook.critical_supplier_2 }}
 
 ### Tier 2: Wichtige Lieferanten
 **Kriterien:**
@@ -154,8 +154,8 @@ Dieses Dokument beschreibt den Ansatz der Organisation zum Management von Cybers
 - Alle 2 Jahre Audits
 
 **Beispiele:**
-- {{ meta.important_supplier_1 }}
-- {{ meta.important_supplier_2 }}
+- {{ meta-handbook.important_supplier_1 }}
+- {{ meta-handbook.important_supplier_2 }}
 
 ### Tier 3: Standard-Lieferanten
 **Kriterien:**

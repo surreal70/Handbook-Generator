@@ -85,8 +85,8 @@ Templates use placeholders from the `metadata.yaml` file:
 **Organization:** [TODO]
 **Service Auditor:** [TODO] ([TODO])
 **CISO:** [TODO] ([TODO])
-**System Name:** {{ meta.tsc.system_name }}
-**Report Period:** {{ meta.tsc.report_period }}
+**System Name:** {{ meta-handbook.system_name }}
+**Report Period:** {{ meta-handbook.report_period }}
 ```
 
 ### [TODO] Markers

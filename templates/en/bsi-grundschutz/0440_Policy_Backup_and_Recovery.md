@@ -26,7 +26,7 @@ Reference: BSI IT-Grundschutz-Kompendium, BSI Standards 200-1/200-2/200-3
 
 This policy defines the principles for Backup and Recovery at **{{ meta-organisation.name }}**.
 
-**Responsible:** {{ meta.ciso.name }} (CISO)
+**Responsible:** {{ meta-organisation-roles.role_CISO }} (CISO)
 
 [TODO: Add specific objectives]
 
@@ -55,8 +55,8 @@ This policy defines the principles for Backup and Recovery at **{{ meta-organisa
 
 | Role | Responsibility | Name |
 |---|---|---|
-| **Policy Owner** | Overall responsibility for policy | {{ meta.ciso.name }} |
-| **Implementation Responsible** | Technical implementation | {{ meta.cio.name }} |
+| **Policy Owner** | Overall responsibility for policy | {{ meta-organisation-roles.role_CISO }} |
+| **Implementation Responsible** | Technical implementation | {{ meta-organisation-roles.role_CIO }} |
 | **Control/Audit** | Monitoring compliance | [TODO: Internal Audit] |
 | **All Employees** | Compliance with policy | All |
 
@@ -88,9 +88,9 @@ Violations of this policy may result in the following measures:
 
 | Role | Name | Date | Approval |
 |---|---|---|---|
-| CISO | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
-| IT Management | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
-| Executive Management | {{ meta.ceo.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| CISO | {{ meta-organisation-roles.role_CISO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| IT Management | {{ meta-organisation-roles.role_CIO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| Executive Management | {{ meta-organisation-roles.role_CEO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **References:**
 - BSI IT-Grundschutz-Kompendium

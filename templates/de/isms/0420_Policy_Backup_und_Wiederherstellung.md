@@ -37,7 +37,7 @@ Diese Policy gilt für:
 - **Systeme:** Alle IT-Systeme, Datenbanken, Anwendungen, Dateisysteme, VMs, Cloud-Ressourcen
 - **Daten:** Alle geschäftskritischen und personenbezogenen Daten
 - **Backup-Typen:** Full, Incremental, Differential, Snapshot, Cloud Backup
-- **Standorte:** {{ netbox.site.name }} und alle weiteren Betriebsstandorte
+- **Standorte:** [[ netbox.site.name ]] und alle weiteren Betriebsstandorte
 
 **Ausnahmen:** Ausnahmen sind nur über den definierten Ausnahmenprozess (`0640_Policy_Ausnahmen_und_Risk_Waivers.md`) zulässig.
 
@@ -98,9 +98,9 @@ Backup-Strategien sind in die Disaster Recovery und Business Continuity Pläne i
 
 ### Schlüsselrollen
 
-- **Policy Owner:** {{ meta.ciso.name }} (CISO)
-- **Backup Administrator:** {{ meta.it.backup_admin }}
-- **BCM Manager:** {{ meta.bcm.manager }}
+- **Policy Owner:** {{ meta-organisation-roles.role_CISO }} (CISO)
+- **Backup Administrator:** {{ meta-handbook.it_backup_admin }}
+- **BCM Manager:** {{ meta-handbook.bcm_manager }}
 - **Umsetzungsverantwortliche:** IT-Betrieb, System Owner
 - **Kontroll-/Prüfinstanz:** ISMS, Internal Audit
 
@@ -176,7 +176,7 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **DSGVO (EU 2016/679)** - Datenschutz-Grundverordnung (Backup von personenbezogenen Daten)
 
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
 Datum: {{ meta-handbook.modifydate }}
 
 **Nächster Review:** {{ meta-handbook.next_review }} (jährlich oder anlassbezogen)

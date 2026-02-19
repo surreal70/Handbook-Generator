@@ -26,7 +26,7 @@ Reference: BSI IT-Grundschutz-Kompendium, BSI Standards 200-1/200-2/200-3
 
 This guideline implements **Policy 0320: Policy: Incident Management** and defines specific requirements for incident response process.
 
-**Responsible:** {{ meta.cio.name }} (IT Management)
+**Responsible:** {{ meta-organisation-roles.role_CIO }} (IT Management)
 
 [TODO: Add specific objectives]
 
@@ -81,7 +81,7 @@ Define mandatory requirements that MUST be implemented.
 - [TODO: Tool 1]
 - [TODO: Tool 2]
 
-**Responsible:** {{ meta.cio.name }}
+**Responsible:** {{ meta-organisation-roles.role_CIO }}
 
 ## 6. Evidence
 
@@ -95,7 +95,7 @@ Define mandatory requirements that MUST be implemented.
 
 Exceptions to this guideline are only possible through the **Exception Process (Document 0520)**.
 
-**Exception Request to:** {{ meta.ciso.name }} (ISB)
+**Exception Request to:** {{ meta-organisation-roles.role_CISO }} (ISB)
 
 ## 8. Training and Awareness
 
@@ -103,21 +103,21 @@ Exceptions to this guideline are only possible through the **Exception Process (
 
 **Target Group:** [TODO]  
 **Frequency:** [TODO]  
-**Responsible:** {{ meta.ciso.name }}
+**Responsible:** {{ meta-organisation-roles.role_CISO }}
 
 ## 9. Review and Update
 
 This guideline is reviewed regularly:
 - **Frequency:** Annually or when significant changes occur
-- **Responsible:** {{ meta.cio.name }}
+- **Responsible:** {{ meta-organisation-roles.role_CIO }}
 - **Next Review:** {{ meta-handbook.next_review }}
 
 ## 10. Approval
 
 | Role | Name | Date | Approval |
 |---|---|---|---|
-| IT Management | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
-| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| IT Management | {{ meta-organisation-roles.role_CIO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| ISB | {{ meta-organisation-roles.role_CISO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **References:**
 - BSI IT-Grundschutz Compendium

@@ -36,7 +36,7 @@ Diese Richtlinie konkretisiert die `0220_Policy_Zugriffssteuerung_und_Identitaet
 
 ### 2.1 Prozessübersicht
 
-**Trigger:** HR erstellt neuen Mitarbeiter in HR-System ({{ meta.hr.system }})
+**Trigger:** HR erstellt neuen Mitarbeiter in HR-System ({{ meta-handbook.hr_system }})
 
 **Zeitrahmen:**
 - **Standard-Accounts:** Bereitstellung bis 1 Tag vor Arbeitsbeginn
@@ -46,7 +46,7 @@ Diese Richtlinie konkretisiert die `0220_Policy_Zugriffssteuerung_und_Identitaet
 ### 2.2 Detaillierter Workflow
 
 **Phase 1: HR-Initiierung (T-5 Tage)**
-1. HR erstellt Mitarbeiterdatensatz in {{ meta.hr.system }}
+1. HR erstellt Mitarbeiterdatensatz in {{ meta-handbook.hr_system }}
 2. HR definiert:
    - Abteilung, Rolle, Standort
    - Vorgesetzter, Kostenstelle
@@ -56,8 +56,8 @@ Diese Richtlinie konkretisiert die `0220_Policy_Zugriffssteuerung_und_Identitaet
 **Phase 2: IT-Provisionierung (T-3 Tage)**
 1. **Account-Erstellung:**
    - Active Directory / Azure AD Account
-   - E-Mail-Postfach ({{ meta.email.system }})
-   - Benutzername nach Schema: `{{ meta.naming.user_format }}` (z.B. vorname.nachname)
+   - E-Mail-Postfach ({{ meta-handbook.email_system }})
+   - Benutzername nach Schema: `{{ meta-handbook.naming_user_format }}` (z.B. vorname.nachname)
    - Initiales Passwort (temporär, muss bei erstem Login geändert werden)
 
 2. **Basis-Zugriffe (automatisch via Rollenmodell):**
@@ -131,7 +131,7 @@ Diese Richtlinie konkretisiert die `0220_Policy_Zugriffssteuerung_und_Identitaet
 ### 3.2 Detaillierter Workflow
 
 **Phase 1: HR-Änderung**
-1. HR aktualisiert Mitarbeiterdatensatz in {{ meta.hr.system }}
+1. HR aktualisiert Mitarbeiterdatensatz in {{ meta-handbook.hr_system }}
 2. Änderungen: Abteilung, Rolle, Vorgesetzter, Standort
 3. Automatische Benachrichtigung an IT-Betrieb und bisherigen/neuen Vorgesetzten
 
@@ -167,7 +167,7 @@ Diese Richtlinie konkretisiert die `0220_Policy_Zugriffssteuerung_und_Identitaet
 
 ### 4.1 Prozessübersicht
 
-**Trigger:** HR markiert Mitarbeiter als ausscheidend in {{ meta.hr.system }}
+**Trigger:** HR markiert Mitarbeiter als ausscheidend in {{ meta-handbook.hr_system }}
 
 **Zeitrahmen:**
 - **Geplantes Ausscheiden:** Deaktivierung am letzten Arbeitstag
@@ -204,7 +204,7 @@ Diese Richtlinie konkretisiert die `0220_Policy_Zugriffssteuerung_und_Identitaet
 **Phase 3: Post-Offboarding (T+30 Tage)**
 1. **Account-Löschung:**
    - Nach 30 Tagen: Endgültige Löschung des Accounts
-   - E-Mail-Archivierung gemäß Retention Policy ({{ meta.retention.email_years }} Jahre)
+   - E-Mail-Archivierung gemäß Retention Policy ({{ meta-handbook.retention_email_years }} Jahre)
    - Löschung persönlicher Daten (DSGVO-konform)
 2. **Lizenz-Freigabe:**
    - Rückgabe von Software-Lizenzen
@@ -238,7 +238,7 @@ Diese Richtlinie konkretisiert die `0220_Policy_Zugriffssteuerung_und_Identitaet
 
 ### 5.1 Self-Service-Portal
 
-**Zugriff:** {{ meta.iam.portal_url }}
+**Zugriff:** {{ meta-handbook.iam_portal_url }}
 
 **Funktionen:**
 - Antrag auf neue Zugriffe (Anwendungen, Netzlaufwerke, Gruppen)
@@ -324,7 +324,7 @@ Diese Richtlinie konkretisiert die `0220_Policy_Zugriffssteuerung_und_Identitaet
 **Zusätzliche Kontrollen:**
 - **Vier-Augen-Prinzip:** Zwei Genehmigungen erforderlich
 - **Just-in-Time (JIT) Access:** Privilegien nur bei Bedarf, zeitlich befristet
-- **Privileged Access Management (PAM):** Verwaltung über PAM-System ({{ meta.security.pam_solution }})
+- **Privileged Access Management (PAM):** Verwaltung über PAM-System ({{ meta-handbook.security_pam_solution }})
 - **Session-Recording:** Aufzeichnung privilegierter Sessions für Audit
 
 ## 7. Technische Implementierung
@@ -332,11 +332,11 @@ Diese Richtlinie konkretisiert die `0220_Policy_Zugriffssteuerung_und_Identitaet
 ### 7.1 IAM-Technologie-Stack
 
 **Systeme:**
-- **Identity Provider:** {{ meta.iam.idp }} (z.B. Azure AD, Okta)
-- **HR-System:** {{ meta.hr.system }} (z.B. SAP SuccessFactors, Workday)
-- **IAM-Portal:** {{ meta.iam.portal }} (z.B. SailPoint, Saviynt)
-- **PAM-System:** {{ meta.security.pam_solution }} (z.B. CyberArk, BeyondTrust)
-- **CMDB:** {{ meta.itsm.cmdb }} (z.B. ServiceNow, Jira Service Management)
+- **Identity Provider:** {{ meta-handbook.iam_idp }} (z.B. Azure AD, Okta)
+- **HR-System:** {{ meta-handbook.hr_system }} (z.B. SAP SuccessFactors, Workday)
+- **IAM-Portal:** {{ meta-handbook.iam_portal }} (z.B. SailPoint, Saviynt)
+- **PAM-System:** {{ meta-handbook.security_pam_solution }} (z.B. CyberArk, BeyondTrust)
+- **CMDB:** {{ meta-handbook.itsm_cmdb }} (z.B. ServiceNow, Jira Service Management)
 
 **Integration:**
 - HR-System → IAM-System (automatische Synchronisation)
@@ -398,7 +398,7 @@ Diese Richtlinie konkretisiert die `0220_Policy_Zugriffssteuerung_und_Identitaet
 - **NIST SP 800-63** - Digital Identity Guidelines
 
 **Genehmigt durch:**  
-{{ meta.ciso.name }}, CISO  
+{{ meta-organisation-roles.role_CISO }}, CISO  
 Datum: {{ meta-handbook.modifydate }}
 
 **Nächster Review:** {{ meta-handbook.next_review }}

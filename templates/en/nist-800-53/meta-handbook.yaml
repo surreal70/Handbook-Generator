@@ -49,3 +49,8 @@ next_review: "[TODO]"
 
 # Scope of the handbook
 scope: "[TODO]"
+
+# Auxiliary placeholders (framework-specific)
+auxiliary:
+  system_name: "[TODO]"
+  system_id: "[TODO]"

@@ -68,9 +68,9 @@ Die IT-Strategie der Organisation berücksichtigt die aktuellen und zukünftigen
 
 | Ziel | Beschreibung | Zeitrahmen | Verantwortlich |
 |------|--------------|------------|----------------|
-| {{ meta.it_goal_1 }} | {{ meta.it_goal_1_desc }} | {{ meta.it_goal_1_timeline }} | {{ meta-organisation-roles.role_CIO }} |
-| {{ meta.it_goal_2 }} | {{ meta.it_goal_2_desc }} | {{ meta.it_goal_2_timeline }} | {{ meta-organisation-roles.role_CIO }} |
-| {{ meta.it_goal_3 }} | {{ meta.it_goal_3_desc }} | {{ meta.it_goal_3_timeline }} | {{ meta-organisation-roles.role_CIO }} |
+| {{ meta-handbook.it_goal_1 }} | {{ meta-handbook.it_goal_1_desc }} | {{ meta-handbook.it_goal_1_timeline }} | {{ meta-organisation-roles.role_CIO }} |
+| {{ meta-handbook.it_goal_2 }} | {{ meta-handbook.it_goal_2_desc }} | {{ meta-handbook.it_goal_2_timeline }} | {{ meta-organisation-roles.role_CIO }} |
+| {{ meta-handbook.it_goal_3 }} | {{ meta-handbook.it_goal_3_desc }} | {{ meta-handbook.it_goal_3_timeline }} | {{ meta-organisation-roles.role_CIO }} |
 
 ### Strategieumsetzung
 

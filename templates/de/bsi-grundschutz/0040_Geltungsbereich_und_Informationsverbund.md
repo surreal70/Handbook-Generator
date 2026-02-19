@@ -57,8 +57,8 @@ Dieses Dokument definiert den Geltungsbereich des Informationssicherheits-Manage
 
 | Service | Beschreibung | Nutzer | Service Owner | Im Scope |
 |---|---|---|---|---|
-| [TODO: Service 1] | [TODO] | [TODO] | {{ meta.cio.name }} | ✓ |
-| [TODO: Service 2] | [TODO] | [TODO] | {{ meta.cio.name }} | ✓ |
+| [TODO: Service 1] | [TODO] | [TODO] | {{ meta-organisation-roles.role_CIO }} | ✓ |
+| [TODO: Service 2] | [TODO] | [TODO] | {{ meta-organisation-roles.role_CIO }} | ✓ |
 
 ### 2.3 IT-Infrastruktur
 
@@ -68,9 +68,9 @@ Dieses Dokument definiert den Geltungsbereich des Informationssicherheits-Manage
 
 | Kategorie | Systeme | Anzahl | Im Scope |
 |---|---|---|---|
-| Server | {{ netbox.device.servers }} | [TODO] | ✓ |
-| Netzwerk | {{ netbox.device.network }} | [TODO] | ✓ |
-| Storage | {{ netbox.device.storage }} | [TODO] | ✓ |
+| Server | [[ netbox.device.servers ]] | [TODO] | ✓ |
+| Netzwerk | [[ netbox.device.network ]] | [TODO] | ✓ |
+| Storage | [[ netbox.device.storage ]] | [TODO] | ✓ |
 | Clients | Workstations, Laptops | [TODO] | ✓ |
 | Mobile Devices | Smartphones, Tablets | [TODO] | ✓ |
 
@@ -217,7 +217,7 @@ Save as: diagrams/informationsverbund.png
 4. **Umsetzung:** Aktualisierung aller betroffenen Dokumente
 5. **Kommunikation:** Information aller Stakeholder
 
-**Verantwortlich:** {{ meta.ciso.name }} (ISB)
+**Verantwortlich:** {{ meta-organisation-roles.role_CISO }} (ISB)
 
 ### 6.2 Scope-Review
 
@@ -242,8 +242,8 @@ Folgende Dokumente und Nachweise werden für den Scope geführt:
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| Geschäftsführung | {{ meta.ceo.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
-| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| Geschäftsführung | {{ meta-organisation-roles.role_CEO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| ISB | {{ meta-organisation-roles.role_CISO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **Referenzen:**
 - BSI Standard 200-1: Managementsysteme für Informationssicherheit (ISMS)

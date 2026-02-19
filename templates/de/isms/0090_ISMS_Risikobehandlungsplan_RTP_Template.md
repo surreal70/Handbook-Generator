@@ -48,7 +48,7 @@ Dieser Plan umfasst alle Maßnahmen zur Behandlung von Risiken im ISMS-Scope (si
 
 | Maßnahme-ID | Risiko-ID | Maßnahme | Control-Referenz (Annex A) | Owner | Priorität | Aufwand (PT) | Budget | Zieltermin | Status | Fortschritt | Bemerkungen |
 |-------------|-----------|----------|----------------------------|-------|-----------|--------------|--------|------------|--------|-------------|-------------|
-| M-001 | R-001 | Redundanter Core Switch beschaffen | A.8.6 (Capacity management) | {{ meta.cio.name }} | Hoch | 20 | 50.000 € | 2026-06-30 | Geplant | 0% | Budget genehmigt, Ausschreibung läuft |
+| M-001 | R-001 | Redundanter Core Switch beschaffen | A.8.6 (Capacity management) | {{ meta-organisation-roles.role_CIO }} | Hoch | 20 | 50.000 € | 2026-06-30 | Geplant | 0% | Budget genehmigt, Ausschreibung läuft |
 | M-002 | R-002 | Immutable Backups implementieren | A.8.13 (Information backup) | IT-Betrieb | Sehr hoch | 40 | 30.000 € | 2026-03-31 | In Arbeit | 60% | Pilotphase abgeschlossen |
 | M-003 | R-003 | MFA für alle Benutzer ausrollen | A.5.17 (Authentication information) | IAM-Team | Sehr hoch | 30 | 15.000 € | 2026-02-28 | In Arbeit | 80% | 200 von 250 Benutzern migriert |
 | M-004 | R-004 | Secret-Scanning Tool implementieren | A.8.24 (Use of cryptography) | Dev-Lead | Mittel | 15 | 10.000 € | 2026-04-30 | Geplant | 10% | Tool-Evaluierung: GitGuardian vs. Gitleaks |
@@ -360,10 +360,10 @@ Für jede implementierte Maßnahme muss die Wirksamkeit nachgewiesen werden:
 
 | Version | Datum | Autor | Beschreibung | Genehmigt durch |
 |---------|-------|-------|--------------|-----------------|
-| 1.0 | {{ meta-handbook.modifydate }} | {{ meta.ciso.name }} | Initiale Version | {{ meta.management.ceo }} |
+| 1.0 | {{ meta-handbook.modifydate }} | {{ meta-organisation-roles.role_CISO }} | Initiale Version | {{ meta-handbook.management_ceo }} |
 
 **Genehmigt durch:**  
-{{ meta.ciso.name }}, CISO  
+{{ meta-organisation-roles.role_CISO }}, CISO  
 Datum: {{ meta-handbook.modifydate }}
 
 **Nächster Review:** {{ meta-handbook.next_review }} (Monatlich)

@@ -29,8 +29,8 @@ The inventory is continuously maintained and reviewed at least quarterly.
 ## Scope
 
 **Organization:** {{ meta-organisation.name }}  
-**ISMS Scope:** {{ meta.isms.scope }}  
-**Responsible:** Asset Management Team, {{ meta.ciso.name }}
+**ISMS Scope:** {{ meta-handbook.isms_scope }}  
+**Responsible:** Asset Management Team, {{ meta-organisation-roles.role_CISO }}
 
 ## Asset Categories
 
@@ -70,8 +70,8 @@ Each asset is classified according to the following criteria:
 
 | Asset-ID | Hostname | Type | Location | Owner | Protection Req (C/I/A) | Criticality | Status |
 |----------|----------|------|----------|-------|------------------------|-------------|--------|
-| SRV-001 | {{ netbox.device.primary_server.name }} | Physical Server | {{ netbox.site.name }} | IT Operations | High/High/High | Tier 1 | Production |
-| SRV-002 | {{ netbox.device.backup_server.name }} | Physical Server | {{ netbox.site.name }} | IT Operations | High/High/Medium | Tier 2 | Production |
+| SRV-001 | [[ netbox.device.primary_server.name ]] | Physical Server | [[ netbox.site.name ]] | IT Operations | High/High/High | Tier 1 | Production |
+| SRV-002 | [[ netbox.device.backup_server.name ]] | Physical Server | [[ netbox.site.name ]] | IT Operations | High/High/Medium | Tier 2 | Production |
 | [TODO] | [TODO: Hostname] | [TODO: Type] | [TODO: Location] | [TODO: Owner] | [TODO: C/I/A] | [TODO: Tier] | [TODO: Status] |
 
 **Note:** Import complete server list from NetBox/CMDB.
@@ -80,8 +80,8 @@ Each asset is classified according to the following criteria:
 
 | Asset-ID | Hostname | Type | Location | Owner | Protection Req (C/I/A) | Criticality | Status |
 |----------|----------|------|----------|-------|------------------------|-------------|--------|
-| NET-001 | {{ netbox.device.core_switch.name }} | Core Switch | {{ netbox.site.name }} | Network Team | Medium/High/High | Tier 1 | Production |
-| NET-002 | {{ netbox.device.firewall.name }} | Firewall | {{ netbox.site.name }} | Security Team | High/High/High | Tier 1 | Production |
+| NET-001 | [[ netbox.device.core_switch.name ]] | Core Switch | [[ netbox.site.name ]] | Network Team | Medium/High/High | Tier 1 | Production |
+| NET-002 | [[ netbox.device.firewall.name ]] | Firewall | [[ netbox.site.name ]] | Security Team | High/High/High | Tier 1 | Production |
 | [TODO] | [TODO: Hostname] | [TODO: Type] | [TODO: Location] | [TODO: Owner] | [TODO: C/I/A] | [TODO: Tier] | [TODO: Status] |
 
 **Note:** Import complete network device list from NetBox.
@@ -90,7 +90,7 @@ Each asset is classified according to the following criteria:
 
 | Asset-ID | Hostname | Type | User | Owner | Protection Req (C/I/A) | Status |
 |----------|----------|------|------|-------|------------------------|--------|
-| WS-001 | {{ meta.ciso.workstation }} | Laptop | {{ meta.ciso.name }} | IT Operations | High/Medium/Medium | Production |
+| WS-001 | [TODO: Hostname] | Laptop | {{ meta-organisation-roles.role_CISO }} | IT Operations | High/Medium/Medium | Production |
 | [TODO] | [TODO: Hostname] | [TODO: Type] | [TODO: User] | [TODO: Owner] | [TODO: C/I/A] | [TODO: Status] |
 
 **Note:** Import endpoint inventory from MDM/Endpoint Management System.
@@ -99,7 +99,7 @@ Each asset is classified according to the following criteria:
 
 | Asset-ID | Name | Type | Capacity | Location | Owner | Protection Req (C/I/A) | Criticality |
 |----------|------|------|----------|----------|-------|------------------------|-------------|
-| STO-001 | {{ netbox.device.storage.name }} | SAN | [TODO: Capacity] | {{ netbox.site.name }} | IT Operations | High/High/High | Tier 1 |
+| STO-001 | [[ netbox.device.storage.name ]] | SAN | [TODO: Capacity] | [[ netbox.site.name ]] | IT Operations | High/High/High | Tier 1 |
 | [TODO] | [TODO: Name] | [TODO: Type] | [TODO: Capacity] | [TODO: Location] | [TODO: Owner] | [TODO: C/I/A] | [TODO: Tier] |
 
 ## Software Assets
@@ -161,8 +161,8 @@ Each asset is classified according to the following criteria:
 
 | VLAN-ID | Name | Subnet | Purpose | Security Zone | Owner |
 |---------|------|--------|---------|---------------|-------|
-| {{ netbox.vlan.management.vid }} | {{ netbox.vlan.management.name }} | {{ netbox.vlan.management.subnet }} | Management | Restricted | Network Team |
-| {{ netbox.vlan.production.vid }} | {{ netbox.vlan.production.name }} | {{ netbox.vlan.production.subnet }} | Production | Internal | Network Team |
+| [[ netbox.vlan.management.vid ]] | [[ netbox.vlan.management.name ]] | [[ netbox.vlan.management.subnet ]] | Management | Restricted | Network Team |
+| [[ netbox.vlan.production.vid ]] | [[ netbox.vlan.production.name ]] | [[ netbox.vlan.production.subnet ]] | Production | Internal | Network Team |
 | [TODO] | [TODO: Name] | [TODO: Subnet] | [TODO: Purpose] | [TODO: Zone] | [TODO: Owner] |
 
 **Note:** Import complete VLAN list from NetBox.
@@ -199,7 +199,7 @@ Each asset is classified according to the following criteria:
 
 | Site-ID | Name | Address | Type | Security Level | Owner |
 |---------|------|---------|------|----------------|-------|
-| SITE-001 | {{ netbox.site.name }} | {{ netbox.site.address }} | Main Site | High | Facility Management |
+| SITE-001 | [[ netbox.site.name ]] | [[ netbox.site.address ]] | Main Site | High | Facility Management |
 | SITE-002 | [TODO: Branch Office] | [TODO: Address] | Branch Office | Medium | Facility Management |
 | [TODO] | [TODO: Name] | [TODO: Address] | [TODO: Type] | [TODO: Security] | [TODO: Owner] |
 
@@ -239,7 +239,7 @@ Each asset is classified according to the following criteria:
 |------|------------------|---------|
 | **Asset Owner** | Business responsibility, approvals, budget | [TODO: Name/Department] |
 | **Technical Owner** | Technical responsibility, operations, maintenance | IT Operations |
-| **Security Owner** | Security requirements, risk assessment | {{ meta.ciso.name }} |
+| **Security Owner** | Security requirements, risk assessment | {{ meta-organisation-roles.role_CISO }} |
 | **Data Owner** | Data classification, access control | [TODO: Name/Department] |
 
 ## Asset Tagging and Labeling
@@ -295,7 +295,7 @@ This inventory fulfills the following compliance requirements:
 
 | Date | Change | Performed By | Approved By | Reason |
 |------|--------|--------------|-------------|--------|
-| {{ meta-handbook.modifydate }} | Initial Creation | {{ meta-handbook.author }} | {{ meta.ciso.name }} | ISMS Implementation |
+| {{ meta-handbook.modifydate }} | Initial Creation | {{ meta-handbook.author }} | {{ meta-organisation-roles.role_CISO }} | ISMS Implementation |
 | [TODO: Date] | [TODO: Change] | [TODO: Name] | [TODO: Name] | [TODO: Reason] |
 
 ## References
@@ -306,7 +306,7 @@ This inventory fulfills the following compliance requirements:
 - Appendix: 0730_Appendix_Data_Flow_and_Interfaces_Template.md
 
 **Document Owner:** Asset Management Team  
-**Approved By:** {{ meta.ciso.name }}  
+**Approved By:** {{ meta-organisation-roles.role_CISO }}  
 **Next Review:** Quarterly
 
 <!-- 

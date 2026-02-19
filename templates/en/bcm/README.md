@@ -71,9 +71,9 @@ Templates use placeholders from the `metadata.yaml` file:
 For IT-specific information, NetBox placeholders can be used:
 
 ```markdown
-**Site:** {{ netbox.site.name }}
-**Data Center:** {{ netbox.site.datacenter.name }}
-**Core Switch:** {{ netbox.device.core_switch.name }}
+**Site:** [[ netbox.site.name ]]
+**Data Center:** [[ netbox.site.datacenter.name ]]
+**Core Switch:** [[ netbox.device.core_switch.name ]]
 ```
 
 ### [TODO] Markers

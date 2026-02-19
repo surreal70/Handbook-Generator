@@ -37,7 +37,7 @@ Diese Policy gilt für:
 - **Lieferanten-Typen:** IT-Dienstleister, Cloud-Provider, SaaS-Anbieter, Outsourcing-Partner, Subunternehmer
 - **Services:** IaaS, PaaS, SaaS, Managed Services, Outsourcing
 - **Lebenszyklus:** Auswahl, Onboarding, Betrieb, Monitoring, Offboarding
-- **Standorte:** {{ netbox.site.name }} und alle weiteren Betriebsstandorte
+- **Standorte:** [[ netbox.site.name ]] und alle weiteren Betriebsstandorte
 
 **Ausnahmen:** Ausnahmen sind nur über den definierten Ausnahmenprozess (`0640_Policy_Ausnahmen_und_Risk_Waivers.md`) zulässig.
 
@@ -97,10 +97,10 @@ Datenstandorte (Data Residency) werden dokumentiert und entsprechen regulatorisc
 
 ### Schlüsselrollen
 
-- **Policy Owner:** {{ meta.ciso.name }} (CISO)
-- **Third-Party Risk Manager:** {{ meta.security.tprm_manager }}
-- **Cloud Security Architect:** {{ meta.security.cloud_architect }}
-- **Data Protection Officer:** {{ meta.dpo.name }}
+- **Policy Owner:** {{ meta-organisation-roles.role_CISO }} (CISO)
+- **Third-Party Risk Manager:** {{ meta-handbook.security_tprm_manager }}
+- **Cloud Security Architect:** {{ meta-handbook.security_cloud_architect }}
+- **Data Protection Officer:** {{ meta-handbook.dpo_name }}
 - **Umsetzungsverantwortliche:** Procurement, Legal, IT-Betrieb
 - **Kontroll-/Prüfinstanz:** ISMS, Internal Audit
 
@@ -181,7 +181,7 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **DSGVO (EU 2016/679)** - Art. 28 - Auftragsverarbeitung
 
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
 Datum: {{ meta-handbook.modifydate }}
 
 **Nächster Review:** {{ meta-handbook.next_review }} (jährlich oder anlassbezogen)

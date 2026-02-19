@@ -25,7 +25,7 @@ risks at different levels.
 **Document ID:** 0070  
 **Document Type:** ISMS Foundation Document  
 **Standard Reference:** ISO/IEC 27001:2022 Clause 6.1.2  
-**Owner:** {{ meta.ciso.name }}  
+**Owner:** {{ meta-organisation-roles.role_CISO }}  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
@@ -154,7 +154,7 @@ risks at different levels.
 - **ISO/IEC 27005:2022** - Information security risk management
 
 **Approved by:**  
-{{ meta.management.ceo }}, Management  
+{{ meta-handbook.management_ceo }}, Management  
 Date: {{ meta-handbook.modifydate }}
 
 **Next Review:** {{ meta-handbook.next_review }}

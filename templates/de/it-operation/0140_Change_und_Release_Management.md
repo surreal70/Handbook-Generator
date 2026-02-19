@@ -21,7 +21,7 @@ Dieses Dokument beschreibt die Change- und Release-Management-Prozesse für {{ m
 
 **Geltungsbereich:** Alle IT-Services, Systeme und Infrastruktur-Komponenten von {{ meta-organisation.name }}
 
-**Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }} ({{ meta-organisation-roles.role_it_operations_manager.email }})
+**Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }} ({{ meta-organisation-roles.role_IT_Operations_Manager_email }})
 
 ## Change Management
 
@@ -196,9 +196,9 @@ Ein **Change** ist das Hinzufügen, Ändern oder Entfernen von etwas, das direkt
 **Change Advisory Board (CAB):**
 
 **Mitglieder:**
-- **Chair:** {{ meta-organisation-roles.role_it_operations_manager.name }} (Change Manager)
-- **CIO:** {{ meta-organisation-roles.role_cio.name }}
-- **CISO:** {{ meta-organisation-roles.role_ciso.name }}
+- **Chair:** {{ meta-organisation-roles.role_IT_Operations_Manager }} (Change Manager)
+- **CIO:** {{ meta-organisation-roles.role_CIO }}
+- **CISO:** {{ meta-organisation-roles.role_CISO }}
 - **Service Owner:** [Service-abhängig]
 - **Technical Leads:** [Change-abhängig]
 - **Business Representatives:** [Bei Business-Impact]
@@ -645,7 +645,7 @@ Ein **Release** ist eine Sammlung von Hardware, Software, Dokumentation, Prozess
 - Change-Kalender-Verwaltung
 - Reporting
 
-**Person:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+**Person:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 ### Release Manager
 

@@ -41,13 +41,13 @@ Dieses Dokument definiert die Verfügbarkeitsanforderungen, Service Level Agreem
 - **Verfügbarkeit:** 24/7/365
 - **Support-Zeiten:** 24/7 mit On-Call-Bereitschaft
 - **Wartungsfenster:** Sonntag 02:00-06:00 Uhr (nach Ankündigung)
-- **Notfall-Wartung:** Nach Genehmigung durch {{ meta-organisation-roles.role_cio.name }}
+- **Notfall-Wartung:** Nach Genehmigung durch {{ meta-organisation-roles.role_CIO }}
 
 #### Business-Services
 - **Verfügbarkeit:** Mo-Fr 06:00-22:00 Uhr
 - **Support-Zeiten:** Mo-Fr 08:00-18:00 Uhr
 - **Wartungsfenster:** Samstag 20:00-24:00 Uhr
-- **Notfall-Wartung:** Nach Genehmigung durch {{ meta-organisation-roles.role_it_operations_manager.name }}
+- **Notfall-Wartung:** Nach Genehmigung durch {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 #### Entwicklungs-/Test-Services
 - **Verfügbarkeit:** Mo-Fr 08:00-18:00 Uhr
@@ -104,9 +104,9 @@ Dieses Dokument definiert die Verfügbarkeitsanforderungen, Service Level Agreem
 ### SLA-Vertragspartner
 
 #### Interne SLAs
-- **Service Provider:** IT Operations ({{ meta-organisation-roles.role_it_operations_manager.name }})
+- **Service Provider:** IT Operations ({{ meta-organisation-roles.role_IT_Operations_Manager }})
 - **Service Consumer:** Fachabteilungen
-- **Verantwortlich:** {{ meta-organisation-roles.role_cio.name }}
+- **Verantwortlich:** {{ meta-organisation-roles.role_CIO }}
 - **Review-Zyklus:** Quartalsweise
 
 #### Externe SLAs
@@ -138,11 +138,11 @@ Dieses Dokument definiert die Verfügbarkeitsanforderungen, Service Level Agreem
 
 | Komponente | SLO | Messmethode | Verantwortlich |
 |---|---:|---|---|
-| Compute-Cluster | 99.9% | Hypervisor-Monitoring | {{ meta-organisation-roles.role_it_operations_manager.name }} |
-| Storage-System | 99.95% | Storage-Monitoring | {{ meta-organisation-roles.role_it_operations_manager.name }} |
-| Netzwerk-Core | 99.99% | Network-Monitoring | {{ meta-organisation-roles.role_it_operations_manager.name }} |
-| Firewall | 99.95% | Security-Monitoring | {{ meta-organisation-roles.role_ciso.name }} |
-| Load Balancer | 99.9% | LB-Monitoring | {{ meta-organisation-roles.role_it_operations_manager.name }} |
+| Compute-Cluster | 99.9% | Hypervisor-Monitoring | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| Storage-System | 99.95% | Storage-Monitoring | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| Netzwerk-Core | 99.99% | Network-Monitoring | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| Firewall | 99.95% | Security-Monitoring | {{ meta-organisation-roles.role_CISO }} |
+| Load Balancer | 99.9% | LB-Monitoring | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
 
 #### Anwendungs-SLOs
 
@@ -265,7 +265,7 @@ Tatsächliche Verfügbarkeit: (718 - 1.5) / 718 × 100 = 99.79%
 - **Versand:** Automatisch um 08:00 Uhr
 
 #### Wöchentlicher SLA-Report
-- **Empfänger:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+- **Empfänger:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - **Inhalt:**
   - Wochenverfügbarkeit
   - SLA-Compliance-Status
@@ -274,7 +274,7 @@ Tatsächliche Verfügbarkeit: (718 - 1.5) / 718 × 100 = 99.79%
 - **Versand:** Jeden Montag
 
 #### Monatlicher SLA-Report
-- **Empfänger:** {{ meta-organisation-roles.role_cio.name }}, Stakeholder
+- **Empfänger:** {{ meta-organisation-roles.role_CIO }}, Stakeholder
 - **Inhalt:**
   - Monatsverfügbarkeit
   - SLA-Erfüllung vs. Ziele
@@ -284,7 +284,7 @@ Tatsächliche Verfügbarkeit: (718 - 1.5) / 718 × 100 = 99.79%
 - **Versand:** Erster Arbeitstag des Folgemonats
 
 #### Quartalsweiser Management-Report
-- **Empfänger:** {{ meta-organisation-roles.role_ceo.name }}, {{ meta-organisation-roles.role_cio.name }}, {{ meta-organisation-roles.role_cfo.name }}
+- **Empfänger:** {{ meta-organisation-roles.role_CEO }}, {{ meta-organisation-roles.role_CIO }}, {{ meta-organisation-roles.role_CFO }}
 - **Inhalt:**
   - Quartalsverfügbarkeit
   - SLA-Trends
@@ -379,7 +379,7 @@ Tatsächliche Verfügbarkeit: (718 - 1.5) / 718 × 100 = 99.79%
 ### Review-Prozess
 
 #### Quartalsweiser SLA-Review
-- **Teilnehmer:** {{ meta-organisation-roles.role_cio.name }}, {{ meta-organisation-roles.role_it_operations_manager.name }}, Stakeholder
+- **Teilnehmer:** {{ meta-organisation-roles.role_CIO }}, {{ meta-organisation-roles.role_IT_Operations_Manager }}, Stakeholder
 - **Agenda:**
   - SLA-Erfüllung der letzten 3 Monate
   - Trend-Analyse
@@ -388,7 +388,7 @@ Tatsächliche Verfügbarkeit: (718 - 1.5) / 718 × 100 = 99.79%
 - **Output:** Review-Protokoll mit Handlungsempfehlungen
 
 #### Jährlicher SLA-Review
-- **Teilnehmer:** {{ meta-organisation-roles.role_ceo.name }}, {{ meta-organisation-roles.role_cio.name }}, {{ meta-organisation-roles.role_cfo.name }}, Stakeholder
+- **Teilnehmer:** {{ meta-organisation-roles.role_CEO }}, {{ meta-organisation-roles.role_CIO }}, {{ meta-organisation-roles.role_CFO }}, Stakeholder
 - **Agenda:**
   - Jahresverfügbarkeit
   - SLA-Angemessenheit
@@ -429,9 +429,9 @@ Tatsächliche Verfügbarkeit: (718 - 1.5) / 718 × 100 = 99.79%
 ### Eskalationspfad
 
 1. **Level 1:** Operations Team - Incident-Response und Monitoring
-2. **Level 2:** {{ meta-organisation-roles.role_it_operations_manager.name }} - SLA-Verletzungen
-3. **Level 3:** {{ meta-organisation-roles.role_cio.name }} - Kritische SLA-Verletzungen
-4. **Level 4:** {{ meta-organisation-roles.role_ceo.name }} - Vertragliche Konsequenzen
+2. **Level 2:** {{ meta-organisation-roles.role_IT_Operations_Manager }} - SLA-Verletzungen
+3. **Level 3:** {{ meta-organisation-roles.role_CIO }} - Kritische SLA-Verletzungen
+4. **Level 4:** {{ meta-organisation-roles.role_CEO }} - Vertragliche Konsequenzen
 
 ## Compliance und Standards
 
@@ -469,5 +469,5 @@ Tatsächliche Verfügbarkeit: (718 - 1.5) / 718 × 100 = 99.79%
 
 **Letzte Aktualisierung:** {{ meta-handbook.date }}  
 **Nächste Review:** [TODO: Datum]  
-**Kontakt:** {{ meta-organisation-roles.role_it_operations_manager.email }}
+**Kontakt:** {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
 

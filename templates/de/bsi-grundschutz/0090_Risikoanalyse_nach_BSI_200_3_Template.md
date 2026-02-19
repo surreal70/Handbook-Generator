@@ -26,7 +26,7 @@ Reference: BSI Standard 200-3 (Risk Analysis based on IT-Grundschutz)
 
 Die Risikoanalyse nach BSI Standard 200-3 identifiziert und bewertet Risiken für **{{ meta-organisation.name }}**, die nicht durch IT-Grundschutz-Bausteine abgedeckt sind.
 
-**Verantwortlich:** {{ meta.ciso.name }} (ISB)
+**Verantwortlich:** {{ meta-organisation-roles.role_CISO }} (ISB)
 
 **Auslöser für Risikoanalyse:**
 - Hoher oder sehr hoher Schutzbedarf (siehe Dokument 0060)
@@ -127,9 +127,9 @@ Die Risikoanalyse nach BSI Standard 200-3 identifiziert und bewertet Risiken fü
 
 | Risiko-ID | Objekt | Szenario | Bedrohung | Schwachstelle | Bestehende Maßnahmen | Eintritts­wahrscheinlichkeit | Auswirkung | Risiko (vorher) | Behandlung | Zusätzliche Maßnahme | Owner | Termin | Risiko (nachher) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| R-001 | [TODO] | S-001 | T-002 | V-001, V-002 | Antivirus, Backup | 4 | 5 | Sehr hoch | Mindern | Mikrosegmentierung, MFA | {{ meta.cio.name }} | [TODO] | Mittel |
-| R-002 | [TODO] | S-002 | T-003 | V-002 | Logging, IAM | 3 | 4 | Hoch | Mindern | PAM, DLP | {{ meta.cio.name }} | [TODO] | Niedrig |
-| R-003 | [TODO] | S-003 | T-004 | [TODO] | Firewall | 3 | 3 | Mittel | Mindern | DDoS-Protection | {{ meta.cio.name }} | [TODO] | Niedrig |
+| R-001 | [TODO] | S-001 | T-002 | V-001, V-002 | Antivirus, Backup | 4 | 5 | Sehr hoch | Mindern | Mikrosegmentierung, MFA | {{ meta-organisation-roles.role_CIO }} | [TODO] | Mittel |
+| R-002 | [TODO] | S-002 | T-003 | V-002 | Logging, IAM | 3 | 4 | Hoch | Mindern | PAM, DLP | {{ meta-organisation-roles.role_CIO }} | [TODO] | Niedrig |
+| R-003 | [TODO] | S-003 | T-004 | [TODO] | Firewall | 3 | 3 | Mittel | Mindern | DDoS-Protection | {{ meta-organisation-roles.role_CIO }} | [TODO] | Niedrig |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 **Risikobehandlungsoptionen:**
@@ -165,16 +165,16 @@ Die Risikoanalyse nach BSI Standard 200-3 identifiziert und bewertet Risiken fü
 
 | Risiko-ID | Risiko | Risikoeigner | Akzeptanz | Datum |
 |---|---|---|---|---|
-| R-001 | [TODO] | {{ meta.ceo.name }} | Akzeptiert nach Maßnahmenumsetzung | [TODO] |
-| R-002 | [TODO] | {{ meta.ciso.name }} | Akzeptiert nach Maßnahmenumsetzung | [TODO] |
+| R-001 | [TODO] | {{ meta-organisation-roles.role_CEO }} | Akzeptiert nach Maßnahmenumsetzung | [TODO] |
+| R-002 | [TODO] | {{ meta-organisation-roles.role_CISO }} | Akzeptiert nach Maßnahmenumsetzung | [TODO] |
 
 ### 7.2 Management-Freigabe
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
-| IT-Leitung | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
-| Geschäftsführung | {{ meta.ceo.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| ISB | {{ meta-organisation-roles.role_CISO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| IT-Leitung | {{ meta-organisation-roles.role_CIO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| Geschäftsführung | {{ meta-organisation-roles.role_CEO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 ## 8. Aktualisierung und Pflege
 
@@ -184,7 +184,7 @@ Die Risikoanalyse wird aktualisiert bei:
 - Änderungen am Informationsverbund
 - Mindestens jährlich im Rahmen des ISMS-Reviews
 
-**Verantwortlich:** {{ meta.ciso.name }} (ISB)  
+**Verantwortlich:** {{ meta-organisation-roles.role_CISO }} (ISB)  
 **Nächster Review:** {{ meta-handbook.next_review }}
 
 **Referenzen:**

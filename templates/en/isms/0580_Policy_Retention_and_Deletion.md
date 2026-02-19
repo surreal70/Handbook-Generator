@@ -27,7 +27,7 @@ ISO 27001:2022 Annex A Reference: A.5.33, A.5.34, A.8.10
 **Document ID:** 0580  
 **Document Type:** Policy (abstract)  
 **Standard Reference:** ISO/IEC 27001:2022 Annex A.5.33, A.5.34, A.8.10 (incl. Amendment 1:2024)  
-**Owner:** {{ meta.ciso.name }}  
+**Owner:** {{ meta-organisation-roles.role_CISO }}  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
@@ -46,7 +46,7 @@ This policy applies to:
 - **Data:** All information and data (structured and unstructured)
 - **Systems:** All IT systems, databases, backup systems, archives
 - **Media:** Digital and physical media
-- **Locations:** {{ netbox.site.name }} and all other operational sites
+- **Locations:** [[ netbox.site.name ]] and all other operational sites
 
 **Exceptions:** Exceptions are only permitted through the defined exception process (`0640_Policy_Exceptions_and_Risk_Waivers.md`).
 
@@ -104,9 +104,9 @@ Physical media (hard drives, USB drives, paper) are securely disposed of:
 
 ### Key Roles
 
-- **Policy Owner:** {{ meta.ciso.name }} (CISO)
-- **Records Manager:** {{ meta.records.manager }}
-- **Data Protection Officer:** {{ meta.dpo.name }}
+- **Policy Owner:** {{ meta-organisation-roles.role_CISO }} (CISO)
+- **Records Manager:** {{ meta-handbook.records_manager }}
+- **Data Protection Officer:** {{ meta-handbook.dpo_name }}
 - **Implementation Responsible:** IT Operations, Business Owner
 - **Control/Audit Function:** ISMS, Internal Audit, Legal
 
@@ -184,7 +184,7 @@ Exceptions to this policy are only permitted in justified exceptional cases:
 - **BSI TL-03423** - Guide to Deletion and Destruction
 
 **Approved by:**  
-{{ meta.management.ceo }}, Management  
+{{ meta-handbook.management_ceo }}, Management  
 Date: {{ meta-handbook.modifydate }}
 
 **Next Review:** {{ meta-handbook.next_review }} (annually or as needed)

@@ -51,6 +51,63 @@ next_review: "[TODO]"
 scope: "[TODO]"
 
 # Framework-specific auxiliary placeholders
+
+# Improvements Tracking
+improvement_1: '[TODO]'
+improvement_1_date: '[TODO]'
+improvement_1_owner: '[TODO]'
+improvement_2: '[TODO]'
+improvement_2_date: '[TODO]'
+improvement_2_owner: '[TODO]'
+improvement_3: '[TODO]'
+improvement_3_date: '[TODO]'
+improvement_3_owner: '[TODO]'
+improvement_4: '[TODO]'
+improvement_4_date: '[TODO]'
+improvement_4_owner: '[TODO]'
+improvement_5: '[TODO]'
+improvement_5_date: '[TODO]'
+improvement_5_owner: '[TODO]'
+improvement_6: '[TODO]'
+improvement_6_date: '[TODO]'
+improvement_6_owner: '[TODO]'
+
+# ISO 27001 Audit Information
+iso27001_last_audit: '[TODO]'
+iso27001_next_audit: '[TODO]'
+iso27001_status: '[TODO]'
+
+# IT Goals
+it_goal_1: '[TODO]'
+it_goal_1_desc: '[TODO]'
+it_goal_1_timeline: '[TODO]'
+it_goal_2: '[TODO]'
+it_goal_2_desc: '[TODO]'
+it_goal_2_timeline: '[TODO]'
+it_goal_3: '[TODO]'
+it_goal_3_desc: '[TODO]'
+it_goal_3_timeline: '[TODO]'
+
+# Service Definitions
+service_1: '[TODO]'
+service_1_availability: '[TODO]'
+service_1_response: '[TODO]'
+service_1_support: '[TODO]'
+service_2: '[TODO]'
+service_2_availability: '[TODO]'
+service_2_response: '[TODO]'
+service_2_support: '[TODO]'
+service_3: '[TODO]'
+service_3_availability: '[TODO]'
+service_3_response: '[TODO]'
+service_3_support: '[TODO]'
+
+# Thresholds
+threshold_1: '[TODO]'
+threshold_2: '[TODO]'
+threshold_3: '[TODO]'
+
+# Legacy auxiliary placeholders (nested format - to be migrated)
 auxiliary:
   accessibility: '[TODO]'
   accessibility_compliance: '[TODO]'

@@ -271,6 +271,6 @@ Diese Richtlinie konkretisiert die `0520_Policy_HR_Security.md` und definiert:
 - **ISO/IEC 27001:2022 Annex A.6.3** - Information security awareness, education and training
 - **ISO/IEC 27001:2022 Annex A.6.4** - Disciplinary process
 
-**Genehmigt durch:** {{ meta.ciso.name }}, CISO  
+**Genehmigt durch:** {{ meta-organisation-roles.role_CISO }}, CISO  
 **Nächster Review:** {{ meta-handbook.next_review }}
 

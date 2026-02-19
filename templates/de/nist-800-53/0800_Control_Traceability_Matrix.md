@@ -17,7 +17,7 @@
 
 ## 1. Zweck
 
-Dieses Dokument bietet eine Rückverfolgbarkeitsmatrix für alle NIST 800-53 Sicherheitskontrollen des Systems {{ meta.nist.system_name }}.
+Dieses Dokument bietet eine Rückverfolgbarkeitsmatrix für alle NIST 800-53 Sicherheitskontrollen des Systems {{ meta-handbook.system_name }}.
 
 ## 2. Control Traceability Matrix
 

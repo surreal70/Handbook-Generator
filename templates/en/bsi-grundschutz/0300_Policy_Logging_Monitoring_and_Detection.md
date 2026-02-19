@@ -26,7 +26,7 @@ Reference: BSI IT-Grundschutz-Kompendium, BSI Standards 200-1/200-2/200-3
 
 This policy defines the principles for logging and monitoring at **{{ meta-organisation.name }}**.
 
-**Responsible:** {{ meta.ciso.name }} (ISB)
+**Responsible:** {{ meta-organisation-roles.role_CISO }} (ISB)
 
 [TODO: Add specific objectives]
 
@@ -55,8 +55,8 @@ This policy defines the principles for logging and monitoring at **{{ meta-organ
 
 | Role | Responsibility | Name |
 |---|---|---|
-| **Policy Owner** | Overall responsibility for policy | {{ meta.ciso.name }} |
-| **Implementation Responsible** | Technical implementation | {{ meta.cio.name }} |
+| **Policy Owner** | Overall responsibility for policy | {{ meta-organisation-roles.role_CISO }} |
+| **Implementation Responsible** | Technical implementation | {{ meta-organisation-roles.role_CIO }} |
 | **Control/Audit** | Monitoring compliance | [TODO: Internal Audit] |
 | **All Employees** | Policy compliance | All |
 
@@ -88,9 +88,9 @@ Violations of this policy may result in the following actions:
 
 | Role | Name | Date | Approval |
 |---|---|---|---|
-| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
-| IT Management | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
-| Executive Management | {{ meta.ceo.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| ISB | {{ meta-organisation-roles.role_CISO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| IT Management | {{ meta-organisation-roles.role_CIO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| Executive Management | {{ meta-organisation-roles.role_CEO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **References:**
 - BSI IT-Grundschutz Compendium

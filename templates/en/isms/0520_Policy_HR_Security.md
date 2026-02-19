@@ -28,7 +28,7 @@ ISO 27001:2022 Annex A Reference: A.6.1, A.6.2, A.6.3, A.6.4
 **Document ID:** 0520  
 **Document Type:** Policy (abstract)  
 **Standard Reference:** ISO/IEC 27001:2022 Annex A.6.1-A.6.4 (incl. Amendment 1:2024)  
-**Owner:** {{ meta.ciso.name }}  
+**Owner:** {{ meta-organisation-roles.role_CISO }}  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
@@ -46,7 +46,7 @@ This policy applies to:
 - **Organizational Units:** All departments and locations of {{ meta-organisation.name }}
 - **Persons:** All employees, contractors, temporary workers, interns
 - **Lifecycle:** Pre-employment, onboarding, employment, offboarding
-- **Locations:** {{ netbox.site.name }} and all other operational sites
+- **Locations:** [[ netbox.site.name ]] and all other operational sites
 
 **Exceptions:** Exceptions are only permitted through the defined exception process (`0640_Policy_Exceptions_and_Risk_Waivers.md`).
 
@@ -117,9 +117,9 @@ Upon termination of employment, all access is immediately revoked:
 
 ### Key Roles
 
-- **Policy Owner:** {{ meta.ciso.name }} (CISO)
-- **HR Manager:** {{ meta.hr.manager }}
-- **Security Awareness Manager:** {{ meta.security.awareness_manager }}
+- **Policy Owner:** {{ meta-organisation-roles.role_CISO }} (CISO)
+- **HR Manager:** {{ meta-handbook.hr_manager }}
+- **Security Awareness Manager:** {{ meta-handbook.security_awareness_manager }}
 - **Implementation Responsible:** HR, Hiring Manager, IT Operations
 - **Control/Audit Function:** ISMS, Internal Audit
 
@@ -196,7 +196,7 @@ Exceptions to this policy are only permitted in justified exceptional cases:
 - **GDPR (EU 2016/679)** - Data protection for background checks
 
 **Approved by:**  
-{{ meta.management.ceo }}, Management  
+{{ meta-handbook.management_ceo }}, Management  
 Date: {{ meta-handbook.modifydate }}
 
 **Next Review:** {{ meta-handbook.next_review }} (annually or as needed)

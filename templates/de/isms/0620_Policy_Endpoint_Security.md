@@ -36,7 +36,7 @@ Diese Policy gilt für:
 - **Geräte:** Alle Endgeräte (Workstations, Laptops, Tablets, Smartphones)
 - **Betriebssysteme:** Windows, macOS, Linux, iOS, Android
 - **Eigentum:** Unternehmenseigene und BYOD-Geräte (mit Unternehmenszugriff)
-- **Standorte:** {{ netbox.site.name }} und alle weiteren Betriebsstandorte, Remote Work
+- **Standorte:** [[ netbox.site.name ]] und alle weiteren Betriebsstandorte, Remote Work
 
 **Ausnahmen:** Ausnahmen sind nur über den definierten Ausnahmenprozess (`0640_Policy_Ausnahmen_und_Risk_Waivers.md`) zulässig.
 
@@ -93,10 +93,10 @@ BYOD-Geräte mit Unternehmenszugriff müssen Mindest-Sicherheitsanforderungen er
 
 ### Schlüsselrollen
 
-- **Policy Owner:** {{ meta.ciso.name }} (CISO)
-- **Endpoint Security Manager:** {{ meta.endpoint.security_manager }}
-- **IT Operations Manager:** {{ meta.it.operations_manager }}
-- **SOC Manager:** {{ meta.soc.manager }}
+- **Policy Owner:** {{ meta-organisation-roles.role_CISO }} (CISO)
+- **Endpoint Security Manager:** {{ meta-handbook.endpoint_security_manager }}
+- **IT Operations Manager:** {{ meta-handbook.it_operations_manager }}
+- **SOC Manager:** {{ meta-handbook.soc_manager }}
 - **Umsetzungsverantwortliche:** IT-Betrieb, End Users
 - **Kontroll-/Prüfinstanz:** ISMS, Internal Audit, SOC
 
@@ -178,7 +178,7 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **CIS Controls v8** - Control 4 (Secure Configuration of Enterprise Assets)
 
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
 Datum: {{ meta-handbook.modifydate }}
 
 **Nächster Review:** {{ meta-handbook.next_review }} (jährlich oder anlassbezogen)

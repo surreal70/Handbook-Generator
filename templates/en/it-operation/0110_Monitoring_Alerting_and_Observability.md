@@ -20,7 +20,7 @@
 This document describes the monitoring, alerting, and observability strategy for the IT service. It defines monitoring tools, alerting rules, thresholds, and observability concepts.
 
 **Service:** {{ meta-handbook.service_name }}  
-**Responsible:** {{ meta-organisation-roles.role_it_operations_manager.name }}  
+**Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }}  
 **Version:** {{ meta-handbook.revision }}
 
 ## Monitoring Strategy
@@ -136,7 +136,7 @@ This document describes the monitoring, alerting, and observability strategy for
 
 | Server | Location | Role | Monitoring Agent | Status |
 |---|---|---|---|---|
-| {{ netbox.device.name }} | {{ netbox.device.site }} | {{ netbox.device.role }} | [TODO: Agent] | ☐ Active |
+| [[ netbox.device.name ]] | [[ netbox.device.site ]] | [[ netbox.device.role ]] | [TODO: Agent] | ☐ Active |
 | [TODO] | [TODO] | [TODO] | [TODO] | ☐ Active |
 
 ### Network Monitoring
@@ -156,7 +156,7 @@ This document describes the monitoring, alerting, and observability strategy for
 
 | Device | Type | Location | Management IP | Status |
 |---|---|---|---|---|
-| {{ netbox.device.name }} | {{ netbox.device.device_type }} | {{ netbox.device.site }} | {{ netbox.device.primary_ip }} | ☐ Active |
+| [[ netbox.device.name ]] | [[ netbox.device.device_type ]] | [[ netbox.device.site ]] | [[ netbox.device.primary_ip ]] | ☐ Active |
 | [TODO] | [TODO] | [TODO] | [TODO] | ☐ Active |
 
 ### Storage Monitoring
@@ -305,7 +305,7 @@ This document describes the monitoring, alerting, and observability strategy for
 
 | Alert | Condition | Severity | Action | Responsible |
 |---|---|---|---|---|
-| **Server Down** | Ping failed > 5 min | Critical | Check immediately | {{ meta-organisation-roles.role_service_desk_lead.name }} |
+| **Server Down** | Ping failed > 5 min | Critical | Check immediately | {{ meta-organisation-roles.role_Service_Desk_Lead }} |
 | **High CPU** | CPU > 95% for 5 min | High | Check performance | IT operations |
 | **High Memory** | Memory > 95% for 5 min | High | Check memory leak | IT operations |
 | **Disk Full** | Disk > 90% | High | Free up space | IT operations |
@@ -315,7 +315,7 @@ This document describes the monitoring, alerting, and observability strategy for
 
 | Alert | Condition | Severity | Action | Responsible |
 |---|---|---|---|---|
-| **Service Down** | Health check failed | Critical | Restart service | {{ meta-organisation-roles.role_service_desk_lead.name }} |
+| **Service Down** | Health check failed | Critical | Restart service | {{ meta-organisation-roles.role_Service_Desk_Lead }} |
 | **High Error Rate** | Errors > 5% for 5 min | High | Check logs | Development team |
 | **Slow Response** | Response time > 2s | High | Check performance | Development team |
 | **API Failure** | External API down | High | Contact vendor | IT operations |
@@ -562,20 +562,20 @@ Known monitoring problems and workarounds:
 
 ### Permissions
 
-- **Administrator:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+- **Administrator:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - **Operator:** IT operations team
 - **Read-Only:** Management, auditors
 
 ## Contacts
 
 **Monitoring Team:**
-- **IT Operations Manager:** {{ meta-organisation-roles.role_it_operations_manager.name }} - {{ meta-organisation-roles.role_it_operations_manager.email }}
-- **Service Desk Lead:** {{ meta-organisation-roles.role_service_desk_lead.name }} - {{ meta-organisation-roles.role_service_desk_lead.email }}
+- **IT Operations Manager:** {{ meta-organisation-roles.role_IT_Operations_Manager }} - {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
+- **Service Desk Lead:** {{ meta-organisation-roles.role_Service_Desk_Lead }} - {{ meta-organisation-roles.role_Service_Desk_Lead_email }}
 - **On-Call Engineer:** [TODO: Rotation] - [TODO: On-call number]
 
 **Escalation:**
-- **Level 2:** {{ meta-organisation-roles.role_it_operations_manager.name }} - {{ meta-organisation-roles.role_it_operations_manager.phone }}
-- **Level 3:** {{ meta-organisation-roles.role_cio.name }} - {{ meta-organisation-roles.role_cio.phone }}
+- **Level 2:** {{ meta-organisation-roles.role_IT_Operations_Manager }} - {{ meta-organisation-roles.role_IT_Operations_Manager_phone }}
+- **Level 3:** {{ meta-organisation-roles.role_CIO }} - {{ meta-organisation-roles.role_CIO_phone }}
 
 **Document Owner:** {{ meta-handbook.owner }}  
 **Approved by:** {{ meta-handbook.approver }}  

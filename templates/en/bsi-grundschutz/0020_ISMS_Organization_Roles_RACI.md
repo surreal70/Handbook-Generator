@@ -26,7 +26,7 @@ Reference: BSI Standard 200-1 (ISMS Organization Requirements)
 
 ### 1.1 ISMS Owner/Sponsor
 
-**Responsible:** {{ meta.ceo.name }} ({{ meta.ceo.email }})
+**Responsible:** {{ meta-organisation-roles.role_CEO }} ({{ meta-organisation-roles.role_CEO_email }})
 
 The ISMS Owner bears overall responsibility for the Information Security Management System and ensures that:
 - Sufficient resources are provided
@@ -36,7 +36,7 @@ The ISMS Owner bears overall responsibility for the Information Security Managem
 
 ### 1.2 Information Security Officer (ISO)
 
-**Responsible:** {{ meta.ciso.name }} ({{ meta.ciso.email }})
+**Responsible:** {{ meta-organisation-roles.role_CISO }} ({{ meta-organisation-roles.role_CISO_email }})
 
 The ISO is the central coordination point for all information security activities:
 - Coordination and management of the ISMS
@@ -53,8 +53,8 @@ The ISMS Team supports the ISO in implementing the ISMS:
 
 | Role | Name | Area of Responsibility |
 |---|---|---|
-| ISO (Lead) | {{ meta.ciso.name }} | Overall ISMS coordination |
-| IT Management | {{ meta.cio.name }} | Technical security measures |
+| ISO (Lead) | {{ meta-organisation-roles.role_CISO }} | Overall ISMS coordination |
+| IT Management | {{ meta-organisation-roles.role_CIO }} | Technical security measures |
 | Data Protection Officer | [TODO] | Data protection interface |
 | BCM Manager | [TODO] | Business Continuity |
 | Risk Manager | [TODO] | Risk management |
@@ -67,7 +67,7 @@ The ISMS Team supports the ISO in implementing the ISMS:
 
 #### 1.4.1 IT Service Management (ITSM)
 
-**Contact:** {{ meta.cio.name }}
+**Contact:** {{ meta-organisation-roles.role_CIO }}
 
 Interfaces:
 - Change Management: Security assessment of changes
@@ -167,7 +167,7 @@ Interfaces:
 - Backup and recovery
 - Incident response (technical)
 
-**Responsible:** {{ meta.cio.name }} (IT Management)
+**Responsible:** {{ meta-organisation-roles.role_CIO }} (IT Management)
 
 ### 2.5 All Employees
 

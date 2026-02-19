@@ -29,37 +29,37 @@ The documentation of data flows and interfaces of **{{ meta-organisation.name }}
 - Crypto Concept (Document 0340/0350)
 - Data Protection Compliance (Document 0420/0430)
 
-**Responsible:** {{ meta.ciso.name }} (CISO), {{ meta.cio.name }} (IT Management)
+**Responsible:** {{ meta-organisation-roles.role_CISO }} (CISO), {{ meta-organisation-roles.role_CIO }} (IT Management)
 
 ## 2. Data Flow Register
 
 | Data Flow ID | Source | Destination | Data Types | Protection Need (C/I/A) | Transport Path | Encryption | Storage | Provider/Third Country | Owner | Legal Basis | Note |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| DF-001 | Web Server ({{ netbox.device.name }}) | Database Server | Customer Data (personal) | Very High/High/High | {{ netbox.vlan.name }} (internal) | TLS 1.3 | Encrypted (AES-256) | Internal | {{ meta.cio.name }} | GDPR Art. 6(1)(b) | [TODO] |
-| DF-002 | Backup Server | Cloud Storage (AWS S3) | Backup Data | High/High/High | Internet (VPN) | TLS 1.3 + AES-256 | Encrypted (AES-256) | AWS (EU-West-1) | {{ meta.cio.name }} | GDPR Art. 28 | [TODO] |
-| DF-003 | Employee (Remote) | VPN Gateway | Business Data | High/High/Normal | Internet | IPsec/IKEv2 | N/A | Internal | {{ meta.cio.name }} | - | [TODO] |
-| DF-004 | ERP System | Payment Gateway | Payment Data | Very High/Very High/High | Internet (HTTPS) | TLS 1.3 | Not Stored | Payment Provider (EU) | {{ meta.cio.name }} | PCI-DSS | [TODO] |
-| DF-005 | SIEM | Log Archive | Log Data | Normal/High/Normal | {{ netbox.vlan.name }} (Management) | TLS 1.2 | Encrypted | Internal | {{ meta.ciso.name }} | - | [TODO] |
+| DF-001 | Web Server ([[ netbox.device.name ]]) | Database Server | Customer Data (personal) | Very High/High/High | [[ netbox.vlan.name ]] (internal) | TLS 1.3 | Encrypted (AES-256) | Internal | {{ meta-organisation-roles.role_CIO }} | GDPR Art. 6(1)(b) | [TODO] |
+| DF-002 | Backup Server | Cloud Storage (AWS S3) | Backup Data | High/High/High | Internet (VPN) | TLS 1.3 + AES-256 | Encrypted (AES-256) | AWS (EU-West-1) | {{ meta-organisation-roles.role_CIO }} | GDPR Art. 28 | [TODO] |
+| DF-003 | Employee (Remote) | VPN Gateway | Business Data | High/High/Normal | Internet | IPsec/IKEv2 | N/A | Internal | {{ meta-organisation-roles.role_CIO }} | - | [TODO] |
+| DF-004 | ERP System | Payment Gateway | Payment Data | Very High/Very High/High | Internet (HTTPS) | TLS 1.3 | Not Stored | Payment Provider (EU) | {{ meta-organisation-roles.role_CIO }} | PCI-DSS | [TODO] |
+| DF-005 | SIEM | Log Archive | Log Data | Normal/High/Normal | [[ netbox.vlan.name ]] (Management) | TLS 1.2 | Encrypted | Internal | {{ meta-organisation-roles.role_CISO }} | - | [TODO] |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## 3. Interface Register
 
 | Interface ID | System A | System B | Protocol | Port | Authentication | Encryption | Data Direction | Frequency | Owner | Note |
 |---|---|---|---|---|---|---|---|---|---|---|
-| IF-001 | Web Server | Database | PostgreSQL | 5432 | Certificate | TLS 1.3 | Bidirectional | Permanent | {{ meta.cio.name }} | [TODO] |
-| IF-002 | ERP | CRM | REST API | 443 | OAuth 2.0 | TLS 1.3 | Bidirectional | Real-time | {{ meta.cio.name }} | [TODO] |
-| IF-003 | Monitoring | SIEM | Syslog | 514 | Certificate | TLS 1.2 | Unidirectional | Permanent | {{ meta.ciso.name }} | [TODO] |
-| IF-004 | AD | LDAP Clients | LDAPS | 636 | Kerberos | TLS 1.2 | Bidirectional | On-Demand | {{ meta.cio.name }} | [TODO] |
-| IF-005 | Backup Server | Cloud Storage | S3 API | 443 | API Key | TLS 1.3 | Unidirectional | Daily | {{ meta.cio.name }} | [TODO] |
+| IF-001 | Web Server | Database | PostgreSQL | 5432 | Certificate | TLS 1.3 | Bidirectional | Permanent | {{ meta-organisation-roles.role_CIO }} | [TODO] |
+| IF-002 | ERP | CRM | REST API | 443 | OAuth 2.0 | TLS 1.3 | Bidirectional | Real-time | {{ meta-organisation-roles.role_CIO }} | [TODO] |
+| IF-003 | Monitoring | SIEM | Syslog | 514 | Certificate | TLS 1.2 | Unidirectional | Permanent | {{ meta-organisation-roles.role_CISO }} | [TODO] |
+| IF-004 | AD | LDAP Clients | LDAPS | 636 | Kerberos | TLS 1.2 | Bidirectional | On-Demand | {{ meta-organisation-roles.role_CIO }} | [TODO] |
+| IF-005 | Backup Server | Cloud Storage | S3 API | 443 | API Key | TLS 1.3 | Unidirectional | Daily | {{ meta-organisation-roles.role_CIO }} | [TODO] |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## 4. External Interfaces and Third Parties
 
 | Third Party | Service | Data Types | Protection Need | Location/Third Country | Contract | Data Protection Agreement | Owner | Note |
 |---|---|---|---|---|---|---|---|---|
-| AWS | Cloud Hosting (EC2, S3) | Business Data, Backup | High/High/High | EU-West-1 | [TODO: Contract Number] | Yes (Art. 28 GDPR) | {{ meta.cio.name }} | [TODO] |
-| Microsoft | Office 365 | Email, Documents | High/High/Normal | EU | [TODO] | Yes | {{ meta.cio.name }} | [TODO] |
-| Payment Provider | Payment Processing | Payment Data | Very High/Very High/High | EU | [TODO] | Yes | {{ meta.cio.name }} | PCI-DSS certified |
+| AWS | Cloud Hosting (EC2, S3) | Business Data, Backup | High/High/High | EU-West-1 | [TODO: Contract Number] | Yes (Art. 28 GDPR) | {{ meta-organisation-roles.role_CIO }} | [TODO] |
+| Microsoft | Office 365 | Email, Documents | High/High/Normal | EU | [TODO] | Yes | {{ meta-organisation-roles.role_CIO }} | [TODO] |
+| Payment Provider | Payment Processing | Payment Data | Very High/Very High/High | EU | [TODO] | Yes | {{ meta-organisation-roles.role_CIO }} | PCI-DSS certified |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 **Reference:** Document 0400/0410 (Supplier and Outsourcing Management)
@@ -149,8 +149,8 @@ The documentation of data flows and interfaces of **{{ meta-organisation.name }}
 
 | Role | Name | Date | Approval |
 |---|---|---|---|
-| CISO | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
-| IT Management | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| CISO | {{ meta-organisation-roles.role_CISO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| IT Management | {{ meta-organisation-roles.role_CIO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 | Data Protection Officer | [TODO] | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **References:**

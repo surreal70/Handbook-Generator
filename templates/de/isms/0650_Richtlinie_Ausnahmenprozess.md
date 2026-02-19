@@ -63,7 +63,7 @@ Diese Richtlinie konkretisiert die `0640_Policy_Ausnahmen_und_Risk_Waivers.md` u
 
 ### 3.1 Antragstellung
 
-**Antrag über:** {{ meta.itsm.portal }} (Ticketsystem)
+**Antrag über:** {{ meta-handbook.itsm_portal }} (Ticketsystem)
 
 **Pflichtangaben:**
 - Betroffene Policy/Richtlinie
@@ -139,7 +139,7 @@ Diese Richtlinie konkretisiert die `0640_Policy_Ausnahmen_und_Risk_Waivers.md` u
 - Ablaufdatum
 - Review-Datum
 
-**Speicherort:** {{ meta.compliance.exception_register }}
+**Speicherort:** {{ meta-handbook.compliance_exception_register }}
 
 ## 4. Monitoring und Review
 
@@ -301,6 +301,6 @@ Diese Richtlinie konkretisiert die `0640_Policy_Ausnahmen_und_Risk_Waivers.md` u
 - **ISO/IEC 27001:2022 Annex A.5.1** - Policies for information security
 - **NIST SP 800-53** - Security and Privacy Controls (Tailoring)
 
-**Genehmigt durch:** {{ meta.ciso.name }}, CISO  
+**Genehmigt durch:** {{ meta-organisation-roles.role_CISO }}, CISO  
 **Nächster Review:** {{ meta-handbook.next_review }}
 

@@ -113,9 +113,9 @@ This guideline implements the `0380_Policy_Secure_Development.md` and defines:
 ### 4.3 Automated Code Review
 
 **Tools:**
-- **SAST:** {{ meta.security.sast_tool }} (e.g., SonarQube, Checkmarx)
-- **Dependency Check:** {{ meta.security.dependency_tool }} (e.g., Snyk, Dependabot)
-- **Secrets Scanning:** {{ meta.security.secrets_scanner }} (e.g., GitGuardian, TruffleHog)
+- **SAST:** {{ meta-handbook.security_sast_tool }} (e.g., SonarQube, Checkmarx)
+- **Dependency Check:** {{ meta-handbook.security_dependency_tool }} (e.g., Snyk, Dependabot)
+- **Secrets Scanning:** {{ meta-handbook.security_secrets_scanner }} (e.g., GitGuardian, TruffleHog)
 
 **Integration:**
 - CI/CD pipeline
@@ -134,7 +134,7 @@ This guideline implements the `0380_Policy_Secure_Development.md` and defines:
 
 ### 5.2 Secrets Management System
 
-**System:** {{ meta.security.secrets_manager }} (e.g., HashiCorp Vault, Azure Key Vault, AWS Secrets Manager)
+**System:** {{ meta-handbook.security_secrets_manager }} (e.g., HashiCorp Vault, Azure Key Vault, AWS Secrets Manager)
 
 **Features:**
 - Central secrets storage (encrypted)
@@ -177,7 +177,7 @@ This guideline implements the `0380_Policy_Secure_Development.md` and defines:
 
 ### 6.2 Software Composition Analysis (SCA)
 
-**Tools:** {{ meta.security.sca_tool }} (e.g., Snyk, WhiteSource)
+**Tools:** {{ meta-handbook.security_sca_tool }} (e.g., Snyk, WhiteSource)
 
 **Process:**
 - Automatic scanning on build
@@ -231,13 +231,13 @@ This guideline implements the `0380_Policy_Secure_Development.md` and defines:
 ### 8.1 SAST (Static Application Security Testing)
 
 **Frequency:** On every commit  
-**Tool:** {{ meta.security.sast_tool }}  
+**Tool:** {{ meta-handbook.security_sast_tool }}  
 **Coverage:** All programming languages
 
 ### 8.2 DAST (Dynamic Application Security Testing)
 
 **Frequency:** Weekly (staging), before every release  
-**Tool:** {{ meta.security.dast_tool }}  
+**Tool:** {{ meta-handbook.security_dast_tool }}  
 **Scope:** Web applications, APIs
 
 ### 8.3 Penetration Testing
@@ -283,6 +283,6 @@ This guideline implements the `0380_Policy_Secure_Development.md` and defines:
 - **OWASP ASVS** - Application Security Verification Standard
 - **NIST SP 800-218** - Secure Software Development Framework
 
-**Approved by:** {{ meta.ciso.name }}, CISO  
+**Approved by:** {{ meta-organisation-roles.role_CISO }}, CISO  
 **Next Review:** {{ meta-handbook.next_review }}
 

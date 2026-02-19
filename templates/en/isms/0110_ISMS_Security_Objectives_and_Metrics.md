@@ -27,7 +27,7 @@ ISO 27001:2022 Reference: Clause 6.2 - Information security objectives
 **Document ID:** 0110  
 **Document Type:** ISMS Foundation Document  
 **Standard Reference:** ISO/IEC 27001:2022 Clause 6.2  
-**Owner:** {{ meta.ciso.name }}  
+**Owner:** {{ meta-organisation-roles.role_CISO }}  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
@@ -42,11 +42,11 @@ ISO 27001:2022 Reference: Clause 6.2 - Information security objectives
 
 | Objective ID | Objective | Description | KPI/Metric | Target Value | Measurement Method | Owner | Frequency | Status |
 |--------------|-----------|-------------|------------|--------------|-------------------|-------|-----------|--------|
-| **O-001** | Ensure compliance | Compliance with all legal and contractual requirements | Number of compliance violations | 0 | Audit reports, incident reports | {{ meta.ciso.name }} | Quarterly | Active |
-| **O-002** | Minimize risks | Reduction of high and very high risks | Number of risks with score ≥ 13 | < 5 | Risk register | {{ meta.ciso.name }} | Quarterly | Active |
-| **O-003** | Ensure availability | Ensure availability of critical systems | Uptime of critical systems | ≥ 99.5% | Monitoring system | {{ meta.cio.name }} | Monthly | Active |
-| **O-004** | Reduce incidents | Reduction of number of security incidents | Number of security incidents | < 10 per quarter | Incident management system | {{ meta.ciso.name }} | Quarterly | Active |
-| **O-005** | Increase awareness | Increase security awareness | Training participation rate | 100% | LMS, training records | {{ meta.ciso.name }} | Annually | Active |
+| **O-001** | Ensure compliance | Compliance with all legal and contractual requirements | Number of compliance violations | 0 | Audit reports, incident reports | {{ meta-organisation-roles.role_CISO }} | Quarterly | Active |
+| **O-002** | Minimize risks | Reduction of high and very high risks | Number of risks with score ≥ 13 | < 5 | Risk register | {{ meta-organisation-roles.role_CISO }} | Quarterly | Active |
+| **O-003** | Ensure availability | Ensure availability of critical systems | Uptime of critical systems | ≥ 99.5% | Monitoring system | {{ meta-organisation-roles.role_CIO }} | Monthly | Active |
+| **O-004** | Reduce incidents | Reduction of number of security incidents | Number of security incidents | < 10 per quarter | Incident management system | {{ meta-organisation-roles.role_CISO }} | Quarterly | Active |
+| **O-005** | Increase awareness | Increase security awareness | Training participation rate | 100% | LMS, training records | {{ meta-organisation-roles.role_CISO }} | Annually | Active |
 | **O-006** | Patch compliance | Timely installation of critical patches | Average time to install patches (critical) | < 7 days | Vulnerability management system | IT Operations | Monthly | Active |
 
 [TODO: Add additional organization-specific objectives]
@@ -58,7 +58,7 @@ ISO 27001:2022 Reference: Clause 6.2 - Information security objectives
 | **O-010** | Complete MFA rollout | MFA activation rate | 100% | IT Operations | Monthly |
 | **O-011** | Vulnerability management | Average time to remediate high vulnerabilities | < 30 days | IT Operations | Monthly |
 | **O-012** | Backup tests | Success rate of restore tests | 100% | IT Operations | Quarterly |
-| **O-013** | Phishing resilience | Phishing click rate in simulations | < 5% | {{ meta.ciso.name }} | Quarterly |
+| **O-013** | Phishing resilience | Phishing click rate in simulations | < 5% | {{ meta-organisation-roles.role_CISO }} | Quarterly |
 
 ## 2. Key Performance Indicators (KPIs)
 
@@ -195,8 +195,8 @@ Each objective is linked to measures in the risk treatment plan:
 - **ISO/IEC 27001:2022** - Clause 9.1: Monitoring, measurement, analysis and evaluation
 
 **Approved by:**  
-{{ meta.ciso.name }}, CISO  
-{{ meta.management.ceo }}, Management  
+{{ meta-organisation-roles.role_CISO }}, CISO  
+{{ meta-handbook.management_ceo }}, Management  
 Date: {{ meta-handbook.modifydate }}
 
 **Next Review:** {{ meta-handbook.next_review }}

@@ -296,7 +296,7 @@ This guideline implements `0680_Policy_Security_in_Projects.md` and defines:
 4. Define mitigation measures
 5. Documentation
 
-**Tool:** {{ meta.security.threat_modeling_tool }} (e.g., Microsoft Threat Modeling Tool)
+**Tool:** {{ meta-handbook.security_threat_modeling_tool }} (e.g., Microsoft Threat Modeling Tool)
 
 ## 7. Security Testing
 
@@ -366,6 +366,6 @@ This guideline implements `0680_Policy_Security_in_Projects.md` and defines:
 - **NIST SP 800-64** - Security Considerations in the System Development Life Cycle
 - **OWASP SAMM** - Software Assurance Maturity Model
 
-**Approved by:** {{ meta.ciso.name }}, CISO  
+**Approved by:** {{ meta-organisation-roles.role_CISO }}, CISO  
 **Next Review:** {{ meta-handbook.next_review }}
 

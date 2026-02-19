@@ -74,7 +74,7 @@ Diese Richtlinie konkretisiert die `0480_Policy_Physische_Sicherheit.md` und def
 **Logging:**
 - Alle Zutrittsversuche (Erfolg und Fehler)
 - Timestamp, Person, Tür/Zone
-- Retention: {{ meta.retention.access_years }} Jahre
+- Retention: {{ meta-handbook.retention_access_years }} Jahre
 
 **Monitoring:**
 - Alerts bei unautorisierten Zugriffsversuchen
@@ -113,7 +113,7 @@ Diese Richtlinie konkretisiert die `0480_Policy_Physische_Sicherheit.md` und def
 - Name, Firma, Ausweisnummer
 - Gastgeber, Zweck des Besuchs
 - Ein- und Austrittszeit
-- Retention: {{ meta.retention.visitor_years }} Jahre
+- Retention: {{ meta-handbook.retention_visitor_years }} Jahre
 
 ## 5. Physischer Schutz von Equipment
 
@@ -220,6 +220,6 @@ Diese Richtlinie konkretisiert die `0480_Policy_Physische_Sicherheit.md` und def
 - **ISO/IEC 27001:2022 Annex A.7.3** - Securing offices, rooms and facilities
 - **ISO/IEC 27001:2022 Annex A.7.4** - Physical security monitoring
 
-**Genehmigt durch:** {{ meta.ciso.name }}, CISO  
+**Genehmigt durch:** {{ meta-organisation-roles.role_CISO }}, CISO  
 **Nächster Review:** {{ meta-handbook.next_review }}
 

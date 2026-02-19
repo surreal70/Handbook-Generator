@@ -30,7 +30,7 @@ Die Schutzbedarfsfeststellung bestimmt systematisch den Schutzbedarf für Gesch�
 - Risikoanalyse (Dokument 0090)
 - Compliance-Nachweis
 
-**Verantwortlich:** {{ meta.ciso.name }} (ISB)
+**Verantwortlich:** {{ meta-organisation-roles.role_CISO }} (ISB)
 
 ## 2. Schutzbedarfskategorien und Kriterien
 
@@ -146,7 +146,7 @@ Start with business processes, then derive requirements for applications and sys
 
 | System-ID | System/Komponente | Anwendung | C | I | A | Begründung | Schutzbedarf gesamt |
 |---|---|---|---|---|---|---|---|
-| S-001 | {{ netbox.device.server_001 }} | A-001 | [TODO] | [TODO] | [TODO] | Vererbung von Anwendung A-001 | [TODO] |
+| S-001 | [[ netbox.device.server_001 ]] | A-001 | [TODO] | [TODO] | [TODO] | Vererbung von Anwendung A-001 | [TODO] |
 | S-002 | [TODO: System 2] | A-002 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 | S-003 | [TODO: System 3] | A-003 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
@@ -210,7 +210,7 @@ Netzwerke, Räume
 
 | Objekt | Erwarteter Schutzbedarf | Tatsächlicher Schutzbedarf | Begründung | Genehmigt von |
 |---|---|---|---|---|
-| [TODO: Objekt] | [TODO] | [TODO] | [TODO: Begründung für Abweichung] | {{ meta.ciso.name }} |
+| [TODO: Objekt] | [TODO] | [TODO] | [TODO: Begründung für Abweichung] | {{ meta-organisation-roles.role_CISO }} |
 
 **Wichtig:** Ausnahmen müssen dokumentiert und genehmigt werden.
 
@@ -230,10 +230,10 @@ Wenn ein System mehrere Anwendungen mit unterschiedlichem Schutzbedarf hostet, g
 Die Schutzbedarfsfeststellung wird validiert durch:
 
 1. **Review durch Prozess-Owner:** Bestätigung der Geschäftskritikalität
-2. **Review durch IT-Leitung:** {{ meta.cio.name }} - Technische Machbarkeit
+2. **Review durch IT-Leitung:** {{ meta-organisation-roles.role_CIO }} - Technische Machbarkeit
 3. **Review durch Legal/Compliance:** Gesetzliche Anforderungen
 4. **Review durch Datenschutz:** DSGVO-Konformität
-5. **Freigabe durch ISB:** {{ meta.ciso.name }}
+5. **Freigabe durch ISB:** {{ meta-organisation-roles.role_CISO }}
 
 ### 5.2 Konsistenzprüfung
 
@@ -281,16 +281,16 @@ Die Schutzbedarfsfeststellung wird aktualisiert bei:
 - Sicherheitsvorfällen
 - Mindestens jährlich im Rahmen des ISMS-Reviews
 
-**Verantwortlich:** {{ meta.ciso.name }} (ISB)  
+**Verantwortlich:** {{ meta-organisation-roles.role_CISO }} (ISB)  
 **Nächster Review:** {{ meta-handbook.next_review }}
 
 ## 9. Freigabe
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
-| IT-Leitung | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
-| Geschäftsführung | {{ meta.ceo.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| ISB | {{ meta-organisation-roles.role_CISO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| IT-Leitung | {{ meta-organisation-roles.role_CIO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| Geschäftsführung | {{ meta-organisation-roles.role_CEO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **Referenzen:**
 - BSI Standard 200-2: IT-Grundschutz-Methodik (Kapitel 6: Schutzbedarfsfeststellung)

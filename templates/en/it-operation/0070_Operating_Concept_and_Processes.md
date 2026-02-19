@@ -20,7 +20,7 @@
 This document describes the operating concept and operational processes for the IT service. It defines operating models, process flows according to ITIL standards, interfaces to other processes, and escalation paths.
 
 **Service:** {{ meta-handbook.service_name }}  
-**Responsible:** {{ meta-organisation-roles.role_it_operations_manager.name }}  
+**Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }}  
 **Version:** {{ meta-handbook.revision }}
 
 ## Operating Model
@@ -47,8 +47,8 @@ This document describes the operating concept and operational processes for the 
 ### Support Model
 
 **Support Tiers:**
-- **Level 1 (Service Desk):** {{ meta-organisation-roles.role_service_desk_lead.name }} - {{ meta-organisation-roles.role_service_desk_lead.email }}
-- **Level 2 (IT Operations):** {{ meta-organisation-roles.role_it_operations_manager.name }} - {{ meta-organisation-roles.role_it_operations_manager.email }}
+- **Level 1 (Service Desk):** {{ meta-organisation-roles.role_Service_Desk_Lead }} - {{ meta-organisation-roles.role_Service_Desk_Lead_email }}
+- **Level 2 (IT Operations):** {{ meta-organisation-roles.role_IT_Operations_Manager }} - {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
 - **Level 3 (Specialist/Vendor):** [TODO: Specialist contact]
 
 **On-Call:**
@@ -68,7 +68,7 @@ This document describes the operating concept and operational processes for the 
 - Demand Management
 - Business Relationship Management
 
-**Responsible:** {{ meta-organisation-roles.role_cio.name }}
+**Responsible:** {{ meta-organisation-roles.role_CIO }}
 
 ### Service Design
 
@@ -83,7 +83,7 @@ This document describes the operating concept and operational processes for the 
 - Information Security Management
 - Supplier Management
 
-**Responsible:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+**Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 ### Service Transition
 
@@ -96,7 +96,7 @@ This document describes the operating concept and operational processes for the 
 - Knowledge Management
 - Configuration Management (see Chapter 0090)
 
-**Responsible:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+**Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 ### Service Operation
 
@@ -109,7 +109,7 @@ This document describes the operating concept and operational processes for the 
 - Request Fulfillment
 - Access Management (see Chapter 0100)
 
-**Responsible:** {{ meta-organisation-roles.role_service_desk_lead.name }} (Level 1), {{ meta-organisation-roles.role_it_operations_manager.name }} (Level 2)
+**Responsible:** {{ meta-organisation-roles.role_Service_Desk_Lead }} (Level 1), {{ meta-organisation-roles.role_IT_Operations_Manager }} (Level 2)
 
 ### Continual Service Improvement (CSI)
 
@@ -121,7 +121,7 @@ This document describes the operating concept and operational processes for the 
 - Process Improvement
 - Root Cause Analysis
 
-**Responsible:** {{ meta-organisation-roles.role_cio.name }}
+**Responsible:** {{ meta-organisation-roles.role_CIO }}
 
 ## Process Interfaces
 
@@ -135,7 +135,7 @@ This document describes the operating concept and operational processes for the 
 | **Configuration Management** | CI Updates → CMDB | Configuration Items | CMDB Manager |
 | **Capacity Management** | Capacity data → Planning | Performance Metrics | Capacity Manager |
 | **Availability Management** | Availability data → Reporting | Availability Reports | Availability Manager |
-| **Security Management** | Security Events → Operations | Security Incidents, Patches | {{ meta-organisation-roles.role_ciso.name }} |
+| **Security Management** | Security Events → Operations | Security Incidents, Patches | {{ meta-organisation-roles.role_CISO }} |
 | **Backup Management** | Backup Status → Operations | Backup Reports, Restore Requests | Backup Administrator |
 
 ### Interfaces to Business Processes
@@ -143,7 +143,7 @@ This document describes the operating concept and operational processes for the 
 | Business Process | Interface | Information Flow | Contact Person |
 |---|---|---|---|
 | **Procurement** | Hardware/Software Requirements | Orders, Deliveries | Procurement |
-| **Finance** | Budget and Costs | Cost Reports, Budget Requests | {{ meta-organisation-roles.role_cfo.name }} |
+| **Finance** | Budget and Costs | Cost Reports, Budget Requests | {{ meta-organisation-roles.role_CFO }} |
 | **Compliance** | Audit Requirements | Audit Reports, Evidence | Compliance Officer |
 | **HR** | Employee Onboarding/Offboarding | Access Management | HR Department |
 
@@ -154,18 +154,18 @@ This document describes the operating concept and operational processes for the 
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │ Level 1: Service Desk                                        │
-│ Contact: {{ meta-organisation-roles.role_service_desk_lead.name }}                   │
-│ Email: {{ meta-organisation-roles.role_service_desk_lead.email }}                    │
-│ Phone: {{ meta-organisation-roles.role_service_desk_lead.phone }}                    │
+│ Contact: {{ meta-organisation-roles.role_Service_Desk_Lead }}                   │
+│ Email: {{ meta-organisation-roles.role_Service_Desk_Lead_email }}                    │
+│ Phone: {{ meta-organisation-roles.role_Service_Desk_Lead_phone }}                    │
 │ Escalate after: 30 minutes (P1), 2 hours (P2)               │
 └────────────────────┬────────────────────────────────────────┘
                      │
                      ▼
 ┌─────────────────────────────────────────────────────────────┐
 │ Level 2: IT Operations                                       │
-│ Contact: {{ meta-organisation-roles.role_it_operations_manager.name }}               │
-│ Email: {{ meta-organisation-roles.role_it_operations_manager.email }}                │
-│ Phone: {{ meta-organisation-roles.role_it_operations_manager.phone }}                │
+│ Contact: {{ meta-organisation-roles.role_IT_Operations_Manager }}               │
+│ Email: {{ meta-organisation-roles.role_IT_Operations_Manager_email }}                │
+│ Phone: {{ meta-organisation-roles.role_IT_Operations_Manager_phone }}                │
 │ Escalate after: 1 hour (P1), 4 hours (P2)                   │
 └────────────────────┬────────────────────────────────────────┘
                      │
@@ -184,24 +184,24 @@ This document describes the operating concept and operational processes for the 
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │ Level 1: IT Operations Manager                               │
-│ Contact: {{ meta-organisation-roles.role_it_operations_manager.name }}               │
-│ Email: {{ meta-organisation-roles.role_it_operations_manager.email }}                │
+│ Contact: {{ meta-organisation-roles.role_IT_Operations_Manager }}               │
+│ Email: {{ meta-organisation-roles.role_IT_Operations_Manager_email }}                │
 │ Escalate for: Critical Incidents (P1), SLA Violation        │
 └────────────────────┬────────────────────────────────────────┘
                      │
                      ▼
 ┌─────────────────────────────────────────────────────────────┐
 │ Level 2: Chief Information Officer (CIO)                     │
-│ Contact: {{ meta-organisation-roles.role_cio.name }}                                 │
-│ Email: {{ meta-organisation-roles.role_cio.email }}                                  │
+│ Contact: {{ meta-organisation-roles.role_CIO }}                                 │
+│ Email: {{ meta-organisation-roles.role_CIO_email }}                                  │
 │ Escalate for: Major Incidents, Business Impact              │
 └────────────────────┬────────────────────────────────────────┘
                      │
                      ▼
 ┌─────────────────────────────────────────────────────────────┐
 │ Level 3: Chief Executive Officer (CEO)                       │
-│ Contact: {{ meta-organisation-roles.role_ceo.name }}                                 │
-│ Email: {{ meta-organisation-roles.role_ceo.email }}                                  │
+│ Contact: {{ meta-organisation-roles.role_CEO }}                                 │
+│ Email: {{ meta-organisation-roles.role_CEO_email }}                                  │
 │ Escalate for: Business-critical outages                     │
 └─────────────────────────────────────────────────────────────┘
 ```
@@ -345,9 +345,9 @@ This document describes the operating concept and operational processes for the 
 ## Contacts
 
 **Operations Responsible:**
-- **IT Operations Manager:** {{ meta-organisation-roles.role_it_operations_manager.name }} - {{ meta-organisation-roles.role_it_operations_manager.email }}
-- **Service Desk Lead:** {{ meta-organisation-roles.role_service_desk_lead.name }} - {{ meta-organisation-roles.role_service_desk_lead.email }}
-- **CIO:** {{ meta-organisation-roles.role_cio.name }} - {{ meta-organisation-roles.role_cio.email }}
+- **IT Operations Manager:** {{ meta-organisation-roles.role_IT_Operations_Manager }} - {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
+- **Service Desk Lead:** {{ meta-organisation-roles.role_Service_Desk_Lead }} - {{ meta-organisation-roles.role_Service_Desk_Lead_email }}
+- **CIO:** {{ meta-organisation-roles.role_CIO }} - {{ meta-organisation-roles.role_CIO_email }}
 
 **Additional Contacts:** See Chapter 0270 (Contacts, Escalation and Vendors)
 

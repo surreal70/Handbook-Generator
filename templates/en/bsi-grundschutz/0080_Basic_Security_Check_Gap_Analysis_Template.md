@@ -30,7 +30,7 @@ The basic security check systematically assesses the extent to which the IT-Grun
 - Measure planning (Document 0100)
 - Compliance evidence
 
-**Responsible:** {{ meta.ciso.name }} (ISB)
+**Responsible:** {{ meta-organisation-roles.role_CISO }} (ISB)
 
 ## 2. Approach and Methodology
 
@@ -40,11 +40,11 @@ The following sources are used for the basic security check:
 
 | Data Source | Type | Responsible | Usage |
 |---|---|---|---|
-| Interviews with stakeholders | Primary source | {{ meta.ciso.name }} | Process and organizational requirements |
-| Configuration evidence | Technical | {{ meta.cio.name }} | Technical requirements |
-| Policies and guidelines | Document | {{ meta.ciso.name }} | Organizational requirements |
-| Tickets and change records | System | {{ meta.cio.name }} | Implementation evidence |
-| Logs and monitoring data | System | {{ meta.cio.name }} | Operational requirements |
+| Interviews with stakeholders | Primary source | {{ meta-organisation-roles.role_CISO }} | Process and organizational requirements |
+| Configuration evidence | Technical | {{ meta-organisation-roles.role_CIO }} | Technical requirements |
+| Policies and guidelines | Document | {{ meta-organisation-roles.role_CISO }} | Organizational requirements |
+| Tickets and change records | System | {{ meta-organisation-roles.role_CIO }} | Implementation evidence |
+| Logs and monitoring data | System | {{ meta-organisation-roles.role_CIO }} | Operational requirements |
 | Audit reports | Document | [TODO: Internal Audit] | External validation |
 
 ### 2.2 Assessment Logic
@@ -82,8 +82,8 @@ The following sources are used for the basic security check:
 - **Completion:** [TODO]
 
 **Participants:**
-- ISB: {{ meta.ciso.name }}
-- IT Management: {{ meta.cio.name }}
+- ISB: {{ meta-organisation-roles.role_CISO }}
+- IT Management: {{ meta-organisation-roles.role_CIO }}
 - Information Domain Responsible: [TODO]
 - Departments: [TODO]
 
@@ -99,70 +99,70 @@ Reference the specific module requirements from IT-Grundschutz-Kompendium.
 
 | Module | Requirement (Short) | Object | Status | Evidence | Finding | Measure | Owner | Target Date |
 |---|---|---|---|---|---|---|---|---|
-| ISMS.1 | Security policy created | {{ meta-organisation.name }} | F | Document 0010 | - | - | {{ meta.ciso.name }} | - |
-| ISMS.1 | ISMS organization defined | {{ meta-organisation.name }} | F | Document 0020 | - | - | {{ meta.ciso.name }} | - |
-| ISMS.1 | Resources provided | {{ meta-organisation.name }} | P | Budget evidence | Budget insufficient | Increase budget | {{ meta.ceo.name }} | [TODO] |
-| ORP.1 | Roles and responsibilities defined | {{ meta-organisation.name }} | F | Document 0020 | - | - | {{ meta.ciso.name }} | - |
+| ISMS.1 | Security policy created | {{ meta-organisation.name }} | F | Document 0010 | - | - | {{ meta-organisation-roles.role_CISO }} | - |
+| ISMS.1 | ISMS organization defined | {{ meta-organisation.name }} | F | Document 0020 | - | - | {{ meta-organisation-roles.role_CISO }} | - |
+| ISMS.1 | Resources provided | {{ meta-organisation.name }} | P | Budget evidence | Budget insufficient | Increase budget | {{ meta-organisation-roles.role_CEO }} | [TODO] |
+| ORP.1 | Roles and responsibilities defined | {{ meta-organisation.name }} | F | Document 0020 | - | - | {{ meta-organisation-roles.role_CISO }} | - |
 | ORP.2 | Onboarding of new employees | {{ meta-organisation.name }} | P | HR process | No security training in onboarding | Integrate security training | [TODO: HR] | [TODO] |
-| ORP.3 | Awareness program | {{ meta-organisation.name }} | N | - | No awareness program exists | Establish awareness program | {{ meta.ciso.name }} | [TODO] |
-| ORP.4 | IAM process | {{ meta-organisation.name }} | P | IAM guideline | Recertification missing | Implement recertification process | {{ meta.cio.name }} | [TODO] |
+| ORP.3 | Awareness program | {{ meta-organisation.name }} | N | - | No awareness program exists | Establish awareness program | {{ meta-organisation-roles.role_CISO }} | [TODO] |
+| ORP.4 | IAM process | {{ meta-organisation.name }} | P | IAM guideline | Recertification missing | Implement recertification process | {{ meta-organisation-roles.role_CIO }} | [TODO] |
 
 ### 3.2 Conception and Approaches (CON)
 
 | Module | Requirement (Short) | Object | Status | Evidence | Finding | Measure | Owner | Target Date |
 |---|---|---|---|---|---|---|---|---|
-| CON.1 | Crypto concept created | Crypto concept | N | - | No crypto concept exists | Create crypto concept | {{ meta.ciso.name }} | [TODO] |
-| CON.3 | Data backup concept created | Backup concept | F | Backup documentation | - | - | {{ meta.cio.name }} | - |
-| CON.3 | Backup tests performed | Backup process | P | Test protocols | Tests not regular | Establish quarterly backup tests | {{ meta.cio.name }} | [TODO] |
-| CON.6 | Deletion concept created | Deletion concept | N | - | No deletion concept exists | Create deletion concept | {{ meta.ciso.name }} | [TODO] |
+| CON.1 | Crypto concept created | Crypto concept | N | - | No crypto concept exists | Create crypto concept | {{ meta-organisation-roles.role_CISO }} | [TODO] |
+| CON.3 | Data backup concept created | Backup concept | F | Backup documentation | - | - | {{ meta-organisation-roles.role_CIO }} | - |
+| CON.3 | Backup tests performed | Backup process | P | Test protocols | Tests not regular | Establish quarterly backup tests | {{ meta-organisation-roles.role_CIO }} | [TODO] |
+| CON.6 | Deletion concept created | Deletion concept | N | - | No deletion concept exists | Create deletion concept | {{ meta-organisation-roles.role_CISO }} | [TODO] |
 
 ### 3.3 Operations (OPS)
 
 | Module | Requirement (Short) | Object | Status | Evidence | Finding | Measure | Owner | Target Date |
 |---|---|---|---|---|---|---|---|---|
-| OPS.1.1.2 | Administration concept | IT administration | P | Admin guideline | Privileged Access Management missing | Implement PAM solution | {{ meta.cio.name }} | [TODO] |
-| OPS.1.1.3 | Patch process established | Patch management | F | Patch documentation | - | - | {{ meta.cio.name }} | - |
-| OPS.1.1.3 | Patch SLAs defined | Patch management | P | SLA document | Critical patches > 30 days | Reduce SLA to 7 days | {{ meta.cio.name }} | [TODO] |
-| OPS.1.1.4 | Malware protection implemented | All systems | F | Antivirus solution | - | - | {{ meta.cio.name }} | - |
-| OPS.1.1.5 | Logging activated | All systems | P | Log configuration | Central log collection missing | Implement SIEM | {{ meta.cio.name }} | [TODO] |
-| OPS.2.2 | Cloud security concept | Cloud services | N | - | No cloud security concept | Create cloud security concept | {{ meta.ciso.name }} | [TODO] |
+| OPS.1.1.2 | Administration concept | IT administration | P | Admin guideline | Privileged Access Management missing | Implement PAM solution | {{ meta-organisation-roles.role_CIO }} | [TODO] |
+| OPS.1.1.3 | Patch process established | Patch management | F | Patch documentation | - | - | {{ meta-organisation-roles.role_CIO }} | - |
+| OPS.1.1.3 | Patch SLAs defined | Patch management | P | SLA document | Critical patches > 30 days | Reduce SLA to 7 days | {{ meta-organisation-roles.role_CIO }} | [TODO] |
+| OPS.1.1.4 | Malware protection implemented | All systems | F | Antivirus solution | - | - | {{ meta-organisation-roles.role_CIO }} | - |
+| OPS.1.1.5 | Logging activated | All systems | P | Log configuration | Central log collection missing | Implement SIEM | {{ meta-organisation-roles.role_CIO }} | [TODO] |
+| OPS.2.2 | Cloud security concept | Cloud services | N | - | No cloud security concept | Create cloud security concept | {{ meta-organisation-roles.role_CISO }} | [TODO] |
 
 ### 3.4 Detection and Response (DER)
 
 | Module | Requirement (Short) | Object | Status | Evidence | Finding | Measure | Owner | Target Date |
 |---|---|---|---|---|---|---|---|---|
-| DER.1 | Detection established | Monitoring | P | Monitoring tools | SIEM missing | Implement SIEM | {{ meta.cio.name }} | [TODO] |
-| DER.2.1 | Incident response process | Incident management | P | IR guideline | No incident response exercises | Establish annual IR exercise | {{ meta.ciso.name }} | [TODO] |
-| DER.2.2 | Forensics preparation | Forensics | N | - | No forensics preparation | Create forensics concept | {{ meta.ciso.name }} | [TODO] |
+| DER.1 | Detection established | Monitoring | P | Monitoring tools | SIEM missing | Implement SIEM | {{ meta-organisation-roles.role_CIO }} | [TODO] |
+| DER.2.1 | Incident response process | Incident management | P | IR guideline | No incident response exercises | Establish annual IR exercise | {{ meta-organisation-roles.role_CISO }} | [TODO] |
+| DER.2.2 | Forensics preparation | Forensics | N | - | No forensics preparation | Create forensics concept | {{ meta-organisation-roles.role_CISO }} | [TODO] |
 
 ### 3.5 Applications (APP)
 
 | Module | Requirement (Short) | Object | Status | Evidence | Finding | Measure | Owner | Target Date |
 |---|---|---|---|---|---|---|---|---|
 | APP.3.1 | Secure web application development | [TODO: Web application] | P | SDLC process | SAST/DAST missing | Integrate security testing | [TODO] | [TODO] |
-| APP.3.2 | Web server hardening | [TODO: Web server] | F | Hardening checklist | - | - | {{ meta.cio.name }} | - |
-| APP.4.3 | Database hardening | [TODO: Database] | P | DB configuration | Encryption at rest missing | Activate TDE | {{ meta.cio.name }} | [TODO] |
+| APP.3.2 | Web server hardening | [TODO: Web server] | F | Hardening checklist | - | - | {{ meta-organisation-roles.role_CIO }} | - |
+| APP.4.3 | Database hardening | [TODO: Database] | P | DB configuration | Encryption at rest missing | Activate TDE | {{ meta-organisation-roles.role_CIO }} | [TODO] |
 
 ### 3.6 IT Systems (SYS)
 
 | Module | Requirement (Short) | Object | Status | Evidence | Finding | Measure | Owner | Target Date |
 |---|---|---|---|---|---|---|---|---|
-| SYS.1.1 | Server hardening | {{ netbox.device.server_001 }} | F | Hardening baseline | - | - | {{ meta.cio.name }} | - |
-| SYS.1.3 | Linux hardening | [TODO: Linux server] | P | CIS Benchmark | Not all CIS controls implemented | Complete CIS implementation | {{ meta.cio.name }} | [TODO] |
-| SYS.1.5 | Virtualization security | [TODO: VMware] | P | VMware configuration | Network segmentation insufficient | Implement microsegmentation | {{ meta.cio.name }} | [TODO] |
-| SYS.2.1 | Client hardening | Workstations | P | GPO configuration | BitLocker not comprehensive | Activate BitLocker on all clients | {{ meta.cio.name }} | [TODO] |
-| SYS.3.2.1 | Mobile device management | Mobile devices | N | - | No MDM exists | Implement MDM solution | {{ meta.cio.name }} | [TODO] |
+| SYS.1.1 | Server hardening | [[ netbox.device.server_001 ]] | F | Hardening baseline | - | - | {{ meta-organisation-roles.role_CIO }} | - |
+| SYS.1.3 | Linux hardening | [TODO: Linux server] | P | CIS Benchmark | Not all CIS controls implemented | Complete CIS implementation | {{ meta-organisation-roles.role_CIO }} | [TODO] |
+| SYS.1.5 | Virtualization security | [TODO: VMware] | P | VMware configuration | Network segmentation insufficient | Implement microsegmentation | {{ meta-organisation-roles.role_CIO }} | [TODO] |
+| SYS.2.1 | Client hardening | Workstations | P | GPO configuration | BitLocker not comprehensive | Activate BitLocker on all clients | {{ meta-organisation-roles.role_CIO }} | [TODO] |
+| SYS.3.2.1 | Mobile device management | Mobile devices | N | - | No MDM exists | Implement MDM solution | {{ meta-organisation-roles.role_CIO }} | [TODO] |
 
 ### 3.7 Networks and Communication (NET)
 
 | Module | Requirement (Short) | Object | Status | Evidence | Finding | Measure | Owner | Target Date |
 |---|---|---|---|---|---|---|---|---|
-| NET.1.1 | Network segmentation | Network architecture | P | Network diagram | Segmentation insufficient | Implement microsegmentation | {{ meta.cio.name }} | [TODO] |
-| NET.1.2 | Network monitoring | Network management | F | Monitoring tools | - | - | {{ meta.cio.name }} | - |
-| NET.3.1 | Router/switch hardening | Network devices | P | Configuration evidence | SNMP v3 not everywhere | SNMP v3 comprehensive | {{ meta.cio.name }} | [TODO] |
-| NET.3.2 | Firewall ruleset | Firewall | F | Firewall rules | - | - | {{ meta.cio.name }} | - |
-| NET.3.3 | VPN security | VPN | P | VPN configuration | MFA for VPN missing | Implement MFA for VPN | {{ meta.cio.name }} | [TODO] |
-| NET.2.1 | WLAN security | WLAN | F | WLAN configuration | - | - | {{ meta.cio.name }} | - |
+| NET.1.1 | Network segmentation | Network architecture | P | Network diagram | Segmentation insufficient | Implement microsegmentation | {{ meta-organisation-roles.role_CIO }} | [TODO] |
+| NET.1.2 | Network monitoring | Network management | F | Monitoring tools | - | - | {{ meta-organisation-roles.role_CIO }} | - |
+| NET.3.1 | Router/switch hardening | Network devices | P | Configuration evidence | SNMP v3 not everywhere | SNMP v3 comprehensive | {{ meta-organisation-roles.role_CIO }} | [TODO] |
+| NET.3.2 | Firewall ruleset | Firewall | F | Firewall rules | - | - | {{ meta-organisation-roles.role_CIO }} | - |
+| NET.3.3 | VPN security | VPN | P | VPN configuration | MFA for VPN missing | Implement MFA for VPN | {{ meta-organisation-roles.role_CIO }} | [TODO] |
+| NET.2.1 | WLAN security | WLAN | F | WLAN configuration | - | - | {{ meta-organisation-roles.role_CIO }} | - |
 
 ### 3.8 Infrastructure (INF)
 
@@ -259,16 +259,16 @@ The basic security check is repeated:
 - When significant changes occur in IT infrastructure
 - At least annually as part of the ISMS review
 
-**Responsible:** {{ meta.ciso.name }} (ISB)  
+**Responsible:** {{ meta-organisation-roles.role_CISO }} (ISB)  
 **Next Check:** {{ meta-handbook.next_review }}
 
 ## 8. Approval
 
 | Role | Name | Date | Approval |
 |---|---|---|---|
-| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
-| IT Management | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
-| Executive Management | {{ meta.ceo.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| ISB | {{ meta-organisation-roles.role_CISO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| IT Management | {{ meta-organisation-roles.role_CIO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| Executive Management | {{ meta-organisation-roles.role_CEO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **References:**
 - BSI Standard 200-2: IT-Grundschutz Methodology (Chapter 8: Basic Security Check)

@@ -25,7 +25,7 @@ Reference: BSI Standard 200-1 (Non-conformities and Corrective Actions)
 
 Dieser Prozess stellt sicher, dass Abweichungen von ISMS-Anforderungen systematisch erfasst, behandelt und deren Wirksamkeit geprüft wird.
 
-**Verantwortlich:** {{ meta.ciso.name }} (ISB)
+**Verantwortlich:** {{ meta-organisation-roles.role_CISO }} (ISB)
 
 ## 2. Quellen für Nichtkonformitäten
 
@@ -140,7 +140,7 @@ Dieser Prozess stellt sicher, dass Abweichungen von ISMS-Anforderungen systemati
 - Top-Findings-Kategorien
 - Wirksamkeit von Korrekturmaßnahmen
 
-**Verantwortlich:** {{ meta.ciso.name }}  
+**Verantwortlich:** {{ meta-organisation-roles.role_CISO }}  
 **Empfänger:** Geschäftsführung, ISMS-Team
 
 ## 7. Lessons Learned
@@ -155,8 +155,8 @@ Nach Abschluss kritischer oder wiederkehrender Findings:
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
-| IT-Leitung | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| ISB | {{ meta-organisation-roles.role_CISO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| IT-Leitung | {{ meta-organisation-roles.role_CIO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **Referenzen:**
 - BSI Standard 200-1: ISMS (Non-conformities and Corrective Actions)

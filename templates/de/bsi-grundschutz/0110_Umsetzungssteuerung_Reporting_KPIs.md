@@ -85,68 +85,68 @@ Reference: BSI Standard 200-1 (ISMS Monitoring and Measurement)
 
 | KPI | Definition | Ziel | Quelle | Frequenz | Owner |
 |---|---|---|---|---|---|
-| **Maßnahmenplan-Erfüllung** | % abgeschlossene Maßnahmen vs. geplant | 100% | Maßnahmenplan (Dokument 0100) | Monatlich | {{ meta.ciso.name }} |
-| **P1-Maßnahmen-Erfüllung** | % abgeschlossene P1-Maßnahmen | 100% in [TODO] Monaten | Maßnahmenplan | Wöchentlich | {{ meta.ciso.name }} |
-| **Maßnahmen-Verzögerung** | Durchschnittliche Verzögerung in Tagen | < 14 Tage | Maßnahmenplan | Monatlich | {{ meta.ciso.name }} |
-| **Budget-Einhaltung** | % genutztes Budget vs. geplant | 100% ± 10% | Finanzcontrolling | Monatlich | {{ meta.ceo.name }} |
+| **Maßnahmenplan-Erfüllung** | % abgeschlossene Maßnahmen vs. geplant | 100% | Maßnahmenplan (Dokument 0100) | Monatlich | {{ meta-organisation-roles.role_CISO }} |
+| **P1-Maßnahmen-Erfüllung** | % abgeschlossene P1-Maßnahmen | 100% in [TODO] Monaten | Maßnahmenplan | Wöchentlich | {{ meta-organisation-roles.role_CISO }} |
+| **Maßnahmen-Verzögerung** | Durchschnittliche Verzögerung in Tagen | < 14 Tage | Maßnahmenplan | Monatlich | {{ meta-organisation-roles.role_CISO }} |
+| **Budget-Einhaltung** | % genutztes Budget vs. geplant | 100% ± 10% | Finanzcontrolling | Monatlich | {{ meta-organisation-roles.role_CEO }} |
 
 ### 2.2 IT-Grundschutz-Compliance
 
 | KPI | Definition | Ziel | Quelle | Frequenz | Owner |
 |---|---|---|---|---|---|
-| **Erfüllungsgrad IT-Grundschutz** | % erfüllte Anforderungen | > 80% | Basis-Sicherheitscheck (Dokument 0080) | Quartalsweise | {{ meta.ciso.name }} |
-| **Kritische Lücken** | Anzahl nicht erfüllter P1-Anforderungen | 0 | Basis-Sicherheitscheck | Monatlich | {{ meta.ciso.name }} |
-| **Baustein-Abdeckung** | % modellierte Bausteine mit Soll-Ist-Vergleich | 100% | Modellierung (Dokument 0070) | Quartalsweise | {{ meta.ciso.name }} |
+| **Erfüllungsgrad IT-Grundschutz** | % erfüllte Anforderungen | > 80% | Basis-Sicherheitscheck (Dokument 0080) | Quartalsweise | {{ meta-organisation-roles.role_CISO }} |
+| **Kritische Lücken** | Anzahl nicht erfüllter P1-Anforderungen | 0 | Basis-Sicherheitscheck | Monatlich | {{ meta-organisation-roles.role_CISO }} |
+| **Baustein-Abdeckung** | % modellierte Bausteine mit Soll-Ist-Vergleich | 100% | Modellierung (Dokument 0070) | Quartalsweise | {{ meta-organisation-roles.role_CISO }} |
 
 ### 2.3 Risikomanagement
 
 | KPI | Definition | Ziel | Quelle | Frequenz | Owner |
 |---|---|---|---|---|---|
-| **Risiko-Exposition** | Anzahl "Sehr hoch"-Risiken | 0 | Risikoregister (Dokument 0090) | Monatlich | {{ meta.ciso.name }} |
-| **Risikoreduktion** | % reduzierte Risiken vs. identifiziert | > 80% | Risikoregister | Quartalsweise | {{ meta.ciso.name }} |
-| **Risikoakzeptanz-Quote** | % akzeptierte Risiken (ohne Maßnahmen) | < 10% | Risikoregister | Quartalsweise | {{ meta.ciso.name }} |
+| **Risiko-Exposition** | Anzahl "Sehr hoch"-Risiken | 0 | Risikoregister (Dokument 0090) | Monatlich | {{ meta-organisation-roles.role_CISO }} |
+| **Risikoreduktion** | % reduzierte Risiken vs. identifiziert | > 80% | Risikoregister | Quartalsweise | {{ meta-organisation-roles.role_CISO }} |
+| **Risikoakzeptanz-Quote** | % akzeptierte Risiken (ohne Maßnahmen) | < 10% | Risikoregister | Quartalsweise | {{ meta-organisation-roles.role_CISO }} |
 
 ### 2.4 Patch- und Vulnerability Management
 
 | KPI | Definition | Ziel | Quelle | Frequenz | Owner |
 |---|---|---|---|---|---|
-| **Patch-Compliance** | % Systeme mit aktuellen Patches | > 95% | Patch-Management-Tool | Monatlich | {{ meta.cio.name }} |
-| **Kritische Patches (SLA)** | % kritische Patches innerhalb SLA (7 Tage) | 100% | Patch-Management-Tool | Wöchentlich | {{ meta.cio.name }} |
-| **Vulnerability-Remediation** | Durchschnittliche Zeit bis Behebung (Tage) | < 30 Tage (Hoch), < 90 Tage (Mittel) | Vulnerability Scanner | Monatlich | {{ meta.cio.name }} |
-| **Offene Schwachstellen** | Anzahl offener Schwachstellen (Kritisch/Hoch) | < 10 | Vulnerability Scanner | Wöchentlich | {{ meta.cio.name }} |
+| **Patch-Compliance** | % Systeme mit aktuellen Patches | > 95% | Patch-Management-Tool | Monatlich | {{ meta-organisation-roles.role_CIO }} |
+| **Kritische Patches (SLA)** | % kritische Patches innerhalb SLA (7 Tage) | 100% | Patch-Management-Tool | Wöchentlich | {{ meta-organisation-roles.role_CIO }} |
+| **Vulnerability-Remediation** | Durchschnittliche Zeit bis Behebung (Tage) | < 30 Tage (Hoch), < 90 Tage (Mittel) | Vulnerability Scanner | Monatlich | {{ meta-organisation-roles.role_CIO }} |
+| **Offene Schwachstellen** | Anzahl offener Schwachstellen (Kritisch/Hoch) | < 10 | Vulnerability Scanner | Wöchentlich | {{ meta-organisation-roles.role_CIO }} |
 
 ### 2.5 Backup und Recovery
 
 | KPI | Definition | Ziel | Quelle | Frequenz | Owner |
 |---|---|---|---|---|---|
-| **Backup-Erfolgsrate** | % erfolgreiche Backups | > 99% | Backup-System | Täglich | {{ meta.cio.name }} |
-| **Backup-Testquote** | % erfolgreiche Restore-Tests | 100% | Test-Protokolle | Quartalsweise | {{ meta.cio.name }} |
-| **Recovery Time Actual (RTA)** | Tatsächliche Wiederherstellungszeit | < RTO | Test-Protokolle | Quartalsweise | {{ meta.cio.name }} |
+| **Backup-Erfolgsrate** | % erfolgreiche Backups | > 99% | Backup-System | Täglich | {{ meta-organisation-roles.role_CIO }} |
+| **Backup-Testquote** | % erfolgreiche Restore-Tests | 100% | Test-Protokolle | Quartalsweise | {{ meta-organisation-roles.role_CIO }} |
+| **Recovery Time Actual (RTA)** | Tatsächliche Wiederherstellungszeit | < RTO | Test-Protokolle | Quartalsweise | {{ meta-organisation-roles.role_CIO }} |
 
 ### 2.6 Incident Management
 
 | KPI | Definition | Ziel | Quelle | Frequenz | Owner |
 |---|---|---|---|---|---|
-| **Sicherheitsvorfälle** | Anzahl Sicherheitsvorfälle | Trend abnehmend | Incident-Management-System | Monatlich | {{ meta.ciso.name }} |
-| **Mean Time to Detect (MTTD)** | Durchschnittliche Erkennungszeit | < 24 Stunden | SIEM | Monatlich | {{ meta.cio.name }} |
-| **Mean Time to Respond (MTTR)** | Durchschnittliche Reaktionszeit | < 4 Stunden (Kritisch) | Incident-Management-System | Monatlich | {{ meta.ciso.name }} |
-| **Incident-Closure-Rate** | % geschlossene Incidents innerhalb SLA | > 95% | Incident-Management-System | Monatlich | {{ meta.ciso.name }} |
+| **Sicherheitsvorfälle** | Anzahl Sicherheitsvorfälle | Trend abnehmend | Incident-Management-System | Monatlich | {{ meta-organisation-roles.role_CISO }} |
+| **Mean Time to Detect (MTTD)** | Durchschnittliche Erkennungszeit | < 24 Stunden | SIEM | Monatlich | {{ meta-organisation-roles.role_CIO }} |
+| **Mean Time to Respond (MTTR)** | Durchschnittliche Reaktionszeit | < 4 Stunden (Kritisch) | Incident-Management-System | Monatlich | {{ meta-organisation-roles.role_CISO }} |
+| **Incident-Closure-Rate** | % geschlossene Incidents innerhalb SLA | > 95% | Incident-Management-System | Monatlich | {{ meta-organisation-roles.role_CISO }} |
 
 ### 2.7 Awareness und Schulung
 
 | KPI | Definition | Ziel | Quelle | Frequenz | Owner |
 |---|---|---|---|---|---|
-| **Schulungsquote** | % Mitarbeitende mit Awareness-Schulung | 100% | HR-System | Quartalsweise | {{ meta.ciso.name }} |
-| **Phishing-Test-Erfolgsrate** | % Mitarbeitende, die Phishing-Test bestehen | > 90% | Phishing-Simulation | Quartalsweise | {{ meta.ciso.name }} |
-| **Security-Champion-Quote** | Anzahl Security Champions pro Abteilung | Min. 1 pro Abteilung | ISMS-Team | Jährlich | {{ meta.ciso.name }} |
+| **Schulungsquote** | % Mitarbeitende mit Awareness-Schulung | 100% | HR-System | Quartalsweise | {{ meta-organisation-roles.role_CISO }} |
+| **Phishing-Test-Erfolgsrate** | % Mitarbeitende, die Phishing-Test bestehen | > 90% | Phishing-Simulation | Quartalsweise | {{ meta-organisation-roles.role_CISO }} |
+| **Security-Champion-Quote** | Anzahl Security Champions pro Abteilung | Min. 1 pro Abteilung | ISMS-Team | Jährlich | {{ meta-organisation-roles.role_CISO }} |
 
 ### 2.8 Access Management
 
 | KPI | Definition | Ziel | Quelle | Frequenz | Owner |
 |---|---|---|---|---|---|
-| **Privileged Account Compliance** | % privilegierte Accounts mit MFA | 100% | IAM-System | Monatlich | {{ meta.cio.name }} |
-| **Access Review Compliance** | % durchgeführte Zugriffsrezertifizierungen | 100% | IAM-System | Quartalsweise | {{ meta.cio.name }} |
-| **Orphaned Accounts** | Anzahl verwaister Accounts | 0 | IAM-System | Monatlich | {{ meta.cio.name }} |
+| **Privileged Account Compliance** | % privilegierte Accounts mit MFA | 100% | IAM-System | Monatlich | {{ meta-organisation-roles.role_CIO }} |
+| **Access Review Compliance** | % durchgeführte Zugriffsrezertifizierungen | 100% | IAM-System | Quartalsweise | {{ meta-organisation-roles.role_CIO }} |
+| **Orphaned Accounts** | Anzahl verwaister Accounts | 0 | IAM-System | Monatlich | {{ meta-organisation-roles.role_CIO }} |
 
 ## 3. KPI-Dashboard
 
@@ -239,19 +239,19 @@ Nach jedem größeren Vorfall oder Projekt:
 
 | Tool/System | Zweck | Owner | Status |
 |---|---|---|---|
-| [TODO: GRC-Tool] | Risikomanagement, Compliance | {{ meta.ciso.name }} | [TODO] |
-| [TODO: Ticketing-System] | Maßnahmentracking | {{ meta.cio.name }} | [TODO] |
-| [TODO: SIEM] | Security Monitoring | {{ meta.cio.name }} | [TODO] |
-| [TODO: Vulnerability Scanner] | Schwachstellen-Management | {{ meta.cio.name }} | [TODO] |
-| [TODO: Dashboard-Tool] | KPI-Visualisierung | {{ meta.ciso.name }} | [TODO] |
+| [TODO: GRC-Tool] | Risikomanagement, Compliance | {{ meta-organisation-roles.role_CISO }} | [TODO] |
+| [TODO: Ticketing-System] | Maßnahmentracking | {{ meta-organisation-roles.role_CIO }} | [TODO] |
+| [TODO: SIEM] | Security Monitoring | {{ meta-organisation-roles.role_CIO }} | [TODO] |
+| [TODO: Vulnerability Scanner] | Schwachstellen-Management | {{ meta-organisation-roles.role_CIO }} | [TODO] |
+| [TODO: Dashboard-Tool] | KPI-Visualisierung | {{ meta-organisation-roles.role_CISO }} | [TODO] |
 
 ## 8. Freigabe
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
-| IT-Leitung | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
-| Geschäftsführung | {{ meta.ceo.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| ISB | {{ meta-organisation-roles.role_CISO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| IT-Leitung | {{ meta-organisation-roles.role_CIO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| Geschäftsführung | {{ meta-organisation-roles.role_CEO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **Referenzen:**
 - BSI Standard 200-1: Managementsysteme für Informationssicherheit (ISMS)

@@ -17,7 +17,7 @@
 
 ## 1. Zweck
 
-Dieses Dokument definiert den Geltungsbereich und die Autorisierungsgrenzen des Informationssystems {{ meta.nist.system_name }}.
+Dieses Dokument definiert den Geltungsbereich und die Autorisierungsgrenzen des Informationssystems {{ meta-handbook.system_name }}.
 
 ### 1.1 Ziele
 
@@ -36,8 +36,8 @@ Dieses Dokument definiert den Geltungsbereich und die Autorisierungsgrenzen des 
 
 ### 2.1 Systeminformationen
 
-**Systemname:** {{ meta.nist.system_name }}  
-**System-ID:** {{ meta.nist.system_id }}  
+**Systemname:** {{ meta-handbook.system_name }}  
+**System-ID:** {{ meta-handbook.system_id }}  
 **FIPS 199 Kategorisierung:** [TODO: Low / Moderate / High]  
 **System Owner:** [TODO: Name]  
 **Authorizing Official (AO):** [TODO]  

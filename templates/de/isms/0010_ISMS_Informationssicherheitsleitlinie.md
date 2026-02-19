@@ -41,7 +41,7 @@ Diese Policy gilt für:
 - **Organisationseinheiten:** Alle Abteilungen und Standorte der {{ meta-organisation.name }}
 - **Systeme und Informationen:** Alle IT-Systeme, Anwendungen, Daten und Informationsverarbeitungsprozesse
 - **Personen:** Alle Mitarbeiter, Auftragnehmer, Lieferanten und Dritte mit Zugang zu Informationswerten
-- **Standorte:** {{ netbox.site.name }} und alle weiteren Betriebsstandorte
+- **Standorte:** [[ netbox.site.name ]] und alle weiteren Betriebsstandorte
 
 **Ausnahmen:** Ausnahmen von dieser Policy sind nur über den definierten Ausnahmenprozess (siehe `0640_Policy_Ausnahmen_und_Risk_Waivers.md`) zulässig.
 
@@ -97,15 +97,15 @@ security requirements and risk profile.
 
 ### Schlüsselrollen
 
-- **CISO (Chief Information Security Officer):** {{ meta.ciso.name }} ({{ meta.ciso.email }})
+- **CISO (Chief Information Security Officer):** {{ meta-organisation-roles.role_CISO }} ({{ meta-organisation-roles.role_CISO_email }})
   - Verantwortlich für die Entwicklung, Umsetzung und Überwachung des ISMS
-  - Berichtet an: {{ meta.cio.name }}
+  - Berichtet an: {{ meta-organisation-roles.role_CIO }}
 
-- **CIO (Chief Information Officer):** {{ meta.cio.name }} ({{ meta.cio.email }})
+- **CIO (Chief Information Officer):** {{ meta-organisation-roles.role_CIO }} ({{ meta-organisation-roles.role_CIO_email }})
   - Verantwortlich für IT-Strategie und IT-Betrieb
   - Unterstützt ISMS-Umsetzung
 
-- **Geschäftsführung:** {{ meta.management.ceo }}
+- **Geschäftsführung:** {{ meta-handbook.management_ceo }}
   - Genehmigt ISMS-Leitlinie und stellt Ressourcen bereit
   - Trägt Gesamtverantwortung für Informationssicherheit
 
@@ -187,7 +187,7 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig u
 - **BSI IT-Grundschutz** - Bundesamt für Sicherheit in der Informationstechnik
 
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
 Datum: {{ meta-handbook.modifydate }}
 
 **Nächster Review:** {{ meta-handbook.next_review }} (jährlich oder anlassbezogen)

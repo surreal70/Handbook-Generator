@@ -68,9 +68,9 @@ The organization's IT strategy takes into account the current and future capabil
 
 | Goal | Description | Timeframe | Responsible |
 |------|-------------|-----------|-------------|
-| {{ meta.it_goal_1 }} | {{ meta.it_goal_1_desc }} | {{ meta.it_goal_1_timeline }} | {{ meta-organisation-roles.role_CIO }} |
-| {{ meta.it_goal_2 }} | {{ meta.it_goal_2_desc }} | {{ meta.it_goal_2_timeline }} | {{ meta-organisation-roles.role_CIO }} |
-| {{ meta.it_goal_3 }} | {{ meta.it_goal_3_desc }} | {{ meta.it_goal_3_timeline }} | {{ meta-organisation-roles.role_CIO }} |
+| {{ meta-handbook.it_goal_1 }} | {{ meta-handbook.it_goal_1_desc }} | {{ meta-handbook.it_goal_1_timeline }} | {{ meta-organisation-roles.role_CIO }} |
+| {{ meta-handbook.it_goal_2 }} | {{ meta-handbook.it_goal_2_desc }} | {{ meta-handbook.it_goal_2_timeline }} | {{ meta-organisation-roles.role_CIO }} |
+| {{ meta-handbook.it_goal_3 }} | {{ meta-handbook.it_goal_3_desc }} | {{ meta-handbook.it_goal_3_timeline }} | {{ meta-organisation-roles.role_CIO }} |
 
 ### Strategy Implementation
 

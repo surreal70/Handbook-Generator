@@ -28,7 +28,7 @@ ISO 27001:2022 Annex A Reference: A.5.17, A.5.18
 **Document ID:** 0240  
 **Document Type:** Policy (abstract)  
 **Standard Reference:** ISO/IEC 27001:2022 Annex A.5.17, A.5.18 (incl. Amendment 1:2024)  
-**Owner:** {{ meta.ciso.name }}  
+**Owner:** {{ meta-organisation-roles.role_CISO }}  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
@@ -47,7 +47,7 @@ This policy applies to:
 - **Systems:** All IT systems, applications, databases, networks, cloud services
 - **Persons:** All employees, contractors, suppliers, and third parties with access to IT resources
 - **Authentication Methods:** Passwords, multi-factor authentication (MFA), biometric methods, tokens
-- **Locations:** {{ netbox.site.name }} and all other operational sites
+- **Locations:** [[ netbox.site.name ]] and all other operational sites
 
 **Exceptions:** Exceptions are only permitted through the defined exception process (`0640_Policy_Ausnahmen_und_Risk_Waivers.md`).
 
@@ -112,8 +112,8 @@ Password reset and account recovery processes must be securely designed and veri
 
 ### Key Roles
 
-- **Policy Owner:** {{ meta.ciso.name }} (CISO)
-- **IAM Manager:** {{ meta.it.iam_manager }}
+- **Policy Owner:** {{ meta-organisation-roles.role_CISO }} (CISO)
+- **IAM Manager:** {{ meta-handbook.it_iam_manager }}
 - **Implementation Responsible:** IT operations, IAM team
 - **Control/Audit Function:** ISMS, internal audit, security operations
 
@@ -191,7 +191,7 @@ Exceptions to this policy are only permitted in justified exceptional cases:
 - **BSI TR-02102** - Cryptographic Procedures: Recommendations and Key Lengths
 
 **Approved by:**  
-{{ meta.management.ceo }}, Management  
+{{ meta-handbook.management_ceo }}, Management  
 Date: {{ meta-handbook.modifydate }}
 
 **Next Review:** {{ meta-handbook.next_review }} (annually or as needed)

@@ -192,8 +192,8 @@ Das ISMS folgt dem PDCA-Zyklus (Plan-Do-Check-Act):
 | Item-ID | Titel | Quelle | Beschreibung | Nutzen | Aufwand | Owner | Priorität | Status |
 |---------|-------|--------|--------------|--------|---------|-------|-----------|--------|
 | KVP-001 | SIEM-Automatisierung | Monitoring | Automatische Response-Playbooks | Schnellere Incident Response | 40 PT | Security Team | Hoch | Geplant |
-| KVP-002 | Zero-Trust-Architektur | Best Practice | Implementierung Zero-Trust-Prinzipien | Verbesserte Segmentierung | 200 PT | {{ meta.cio.name }} | Mittel | Evaluierung |
-| KVP-003 | Security Champions Program | Awareness | Multiplikatoren in allen Teams | Höheres Security Awareness | 20 PT | {{ meta.ciso.name }} | Hoch | In Arbeit |
+| KVP-002 | Zero-Trust-Architektur | Best Practice | Implementierung Zero-Trust-Prinzipien | Verbesserte Segmentierung | 200 PT | {{ meta-organisation-roles.role_CIO }} | Mittel | Evaluierung |
+| KVP-003 | Security Champions Program | Awareness | Multiplikatoren in allen Teams | Höheres Security Awareness | 20 PT | {{ meta-organisation-roles.role_CISO }} | Hoch | In Arbeit |
 | KVP-004 | Immutable Infrastructure | DevOps | Infrastructure as Code mit Immutability | Bessere Compliance, weniger Drift | 80 PT | DevOps | Mittel | Geplant |
 
 [TODO: Weitere Verbesserungsvorschläge hinzufügen]
@@ -461,8 +461,8 @@ Priorität = (Risikoreduktion × 0,4) + (Compliance × 0,2) +
 - **NIST Cybersecurity Framework** - Continuous improvement practices
 
 **Genehmigt durch:**  
-{{ meta.ciso.name }}, CISO  
-{{ meta.management.ceo }}, Geschäftsführung  
+{{ meta-organisation-roles.role_CISO }}, CISO  
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
 Datum: {{ meta-handbook.modifydate }}
 
 **Nächster Review:** {{ meta-handbook.next_review }}

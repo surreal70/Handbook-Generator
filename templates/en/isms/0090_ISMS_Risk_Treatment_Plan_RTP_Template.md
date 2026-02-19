@@ -27,7 +27,7 @@ ISO 27001:2022 Reference: Clause 6.1.3 - Information security risk treatment
 **Document ID:** 0090  
 **Document Type:** ISMS Plan/Template  
 **Standard Reference:** ISO/IEC 27001:2022 Clause 6.1.3  
-**Owner:** {{ meta.ciso.name }}  
+**Owner:** {{ meta-organisation-roles.role_CISO }}  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Confidential  
@@ -58,7 +58,7 @@ This plan encompasses all measures for treating risks within the ISMS scope (see
 
 | Measure ID | Risk ID | Measure | Control Reference (Annex A) | Owner | Priority | Effort (PD) | Budget | Target Date | Status | Progress | Remarks |
 |------------|---------|---------|----------------------------|-------|----------|-------------|--------|-------------|--------|----------|---------|
-| M-001 | R-001 | Procure redundant core switch | A.8.6 (Capacity management) | {{ meta.cio.name }} | High | 20 | €50,000 | 2026-06-30 | Planned | 0% | Budget approved, tender in progress |
+| M-001 | R-001 | Procure redundant core switch | A.8.6 (Capacity management) | {{ meta-organisation-roles.role_CIO }} | High | 20 | €50,000 | 2026-06-30 | Planned | 0% | Budget approved, tender in progress |
 | M-002 | R-002 | Implement immutable backups | A.8.13 (Information backup) | IT Operations | Very High | 40 | €30,000 | 2026-03-31 | In Progress | 60% | Pilot phase completed |
 | M-003 | R-003 | Roll out MFA for all users | A.5.17 (Authentication information) | IAM Team | Very High | 30 | €15,000 | 2026-02-28 | In Progress | 80% | 200 of 250 users migrated |
 | M-004 | R-004 | Implement secret scanning tool | A.8.24 (Use of cryptography) | Dev Lead | Medium | 15 | €10,000 | 2026-04-30 | Planned | 10% | Tool evaluation: GitGuardian vs. Gitleaks |
@@ -370,10 +370,10 @@ Effectiveness must be demonstrated for each implemented measure:
 
 | Version | Date | Author | Description | Approved By |
 |---------|------|--------|-------------|-------------|
-| 1.0 | {{ meta-handbook.modifydate }} | {{ meta.ciso.name }} | Initial version | {{ meta.management.ceo }} |
+| 1.0 | {{ meta-handbook.modifydate }} | {{ meta-organisation-roles.role_CISO }} | Initial version | {{ meta-handbook.management_ceo }} |
 
 **Approved by:**  
-{{ meta.ciso.name }}, CISO  
+{{ meta-organisation-roles.role_CISO }}, CISO  
 Date: {{ meta-handbook.modifydate }}
 
 **Next Review:** {{ meta-handbook.next_review }} (Monthly)

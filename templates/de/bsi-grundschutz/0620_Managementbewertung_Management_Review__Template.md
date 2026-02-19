@@ -28,9 +28,9 @@ Reference: BSI Standard 200-1 (Management Review)
 **Dauer:** [TODO]
 
 **Teilnehmer:**
-- Geschäftsführung: {{ meta.ceo.name }}
-- ISB: {{ meta.ciso.name }}
-- IT-Leitung: {{ meta.cio.name }}
+- Geschäftsführung: {{ meta-organisation-roles.role_CEO }}
+- ISB: {{ meta-organisation-roles.role_CISO }}
+- IT-Leitung: {{ meta-organisation-roles.role_CIO }}
 - [TODO: Weitere Teilnehmer]
 
 **Informationsverbund(e):** [TODO: Siehe Dokument 0040]
@@ -101,7 +101,7 @@ Reference: BSI Standard 200-1 (Management Review)
 **Begründung:** [TODO]  
 **Neue Sicherheitsziele:** [TODO]
 
-**Verantwortlich:** {{ meta.ceo.name }}
+**Verantwortlich:** {{ meta-organisation-roles.role_CEO }}
 
 ### 3.2 Ressourcen und Investitionen
 
@@ -109,7 +109,7 @@ Reference: BSI Standard 200-1 (Management Review)
 **Personalressourcen:** [TODO: Zusätzliche Stellen?]  
 **Externe Unterstützung:** [TODO]
 
-**Verantwortlich:** {{ meta.ceo.name }}
+**Verantwortlich:** {{ meta-organisation-roles.role_CEO }}
 
 ### 3.3 Risikoakzeptanzen
 
@@ -117,7 +117,7 @@ Reference: BSI Standard 200-1 (Management Review)
 **Begründung:** [TODO]  
 **Gültigkeitsdauer:** [TODO]
 
-**Verantwortlich:** {{ meta.ceo.name }}
+**Verantwortlich:** {{ meta-organisation-roles.role_CEO }}
 
 ### 3.4 Verbesserungsmaßnahmen
 
@@ -142,8 +142,8 @@ Reference: BSI Standard 200-1 (Management Review)
 
 | Rolle | Name | Datum | Unterschrift |
 |---|---|---|---|
-| Geschäftsführung | {{ meta.ceo.name }} | [TODO] | [TODO] |
-| ISB | {{ meta.ciso.name }} | [TODO] | [TODO] |
+| Geschäftsführung | {{ meta-organisation-roles.role_CEO }} | [TODO] | [TODO] |
+| ISB | {{ meta-organisation-roles.role_CISO }} | [TODO] | [TODO] |
 
 **Referenzen:**
 - BSI Standard 200-1: ISMS (Management Review)

@@ -37,7 +37,7 @@ Diese Policy gilt für:
 - **Systeme:** Alle IT-Systeme, Anwendungen, Datenbanken, Netzwerke, Cloud-Services
 - **Daten:** Alle Daten in Ruhe (Data at Rest), in Bewegung (Data in Transit) und in Verarbeitung (Data in Use)
 - **Kryptografische Verfahren:** Verschlüsselung, Hashing, digitale Signaturen, Zertifikate
-- **Standorte:** {{ netbox.site.name }} und alle weiteren Betriebsstandorte
+- **Standorte:** [[ netbox.site.name ]] und alle weiteren Betriebsstandorte
 
 **Ausnahmen:** Ausnahmen sind nur über den definierten Ausnahmenprozess (`0640_Policy_Ausnahmen_und_Risk_Waivers.md`) zulässig.
 
@@ -106,9 +106,9 @@ Der Einsatz von Kryptografie erfolgt in Übereinstimmung mit nationalen und inte
 
 ### Schlüsselrollen
 
-- **Policy Owner:** {{ meta.ciso.name }} (CISO)
-- **Crypto Officer:** {{ meta.it.crypto_officer }}
-- **Key Management Verantwortlicher:** {{ meta.it.key_manager }}
+- **Policy Owner:** {{ meta-organisation-roles.role_CISO }} (CISO)
+- **Crypto Officer:** {{ meta-handbook.it_crypto_officer }}
+- **Key Management Verantwortlicher:** {{ meta-handbook.it_key_manager }}
 - **Umsetzungsverantwortliche:** IT-Betrieb, Entwicklung
 - **Kontroll-/Prüfinstanz:** ISMS, Internal Audit, Compliance
 
@@ -187,7 +187,7 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **eIDAS-Verordnung (EU 910/2014)** - Elektronische Identifizierung und Vertrauensdienste
 
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
 Datum: {{ meta-handbook.modifydate }}
 
 **Nächster Review:** {{ meta-handbook.next_review }} (jährlich oder anlassbezogen)

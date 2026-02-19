@@ -141,7 +141,7 @@ Criticality is assessed according to the dimensions of availability, integrity, 
 3. **Recipients:** [TODO: All users, Key stakeholders]
 4. **Content:** Time window, reason, impacts, contact person
 
-**Responsible:** {{ meta-organisation-roles.role_it_operations_manager.name }} ({{ meta-organisation-roles.role_it_operations_manager.email }})
+**Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }} ({{ meta-organisation-roles.role_IT_Operations_Manager_email }})
 
 ## Service Level Agreements (SLA)
 
@@ -184,8 +184,8 @@ Criticality is assessed according to the dimensions of availability, integrity, 
 
 **Recipients:**
 - Service Owner: {{ meta-handbook.owner }}
-- IT Operations Manager: {{ meta-organisation-roles.role_it_operations_manager.name }}
-- CIO: {{ meta-organisation-roles.role_cio.name }}
+- IT Operations Manager: {{ meta-organisation-roles.role_IT_Operations_Manager }}
+- CIO: {{ meta-organisation-roles.role_CIO }}
 - [TODO: Additional stakeholders]
 
 **Content:**
@@ -235,20 +235,20 @@ Criticality is assessed according to the dimensions of availability, integrity, 
 |---|---|---|---|
 | **Service Owner** | Overall responsibility | {{ meta-handbook.owner }} | [TODO: Email] |
 | **Technical Lead** | Technical implementation | [TODO: Name] | [TODO: Email] |
-| **Operations Manager** | Daily operations | {{ meta-organisation-roles.role_it_operations_manager.name }} | {{ meta-organisation-roles.role_it_operations_manager.email }} |
-| **Service Desk Lead** | First-level support | {{ meta-organisation-roles.role_service_desk_lead.name }} | {{ meta-organisation-roles.role_service_desk_lead.email }} |
+| **Operations Manager** | Daily operations | {{ meta-organisation-roles.role_IT_Operations_Manager }} | {{ meta-organisation-roles.role_IT_Operations_Manager_email }} |
+| **Service Desk Lead** | First-level support | {{ meta-organisation-roles.role_Service_Desk_Lead }} | {{ meta-organisation-roles.role_Service_Desk_Lead_email }} |
 
 ## Contacts and Escalation
 
 **For questions about the service:**
 - **Service Owner:** {{ meta-handbook.owner }}
-- **IT Operations Manager:** {{ meta-organisation-roles.role_it_operations_manager.name }} ({{ meta-organisation-roles.role_it_operations_manager.email }})
-- **Service Desk:** {{ meta-organisation-roles.role_service_desk_lead.name }} ({{ meta-organisation-roles.role_service_desk_lead.email }})
+- **IT Operations Manager:** {{ meta-organisation-roles.role_IT_Operations_Manager }} ({{ meta-organisation-roles.role_IT_Operations_Manager_email }})
+- **Service Desk:** {{ meta-organisation-roles.role_Service_Desk_Lead }} ({{ meta-organisation-roles.role_Service_Desk_Lead_email }})
 
 **Escalation Path:**
-1. **Level 1:** Service Desk - {{ meta-organisation-roles.role_service_desk_lead.email }}
-2. **Level 2:** IT Operations - {{ meta-organisation-roles.role_it_operations_manager.email }}
-3. **Level 3:** CIO - {{ meta-organisation-roles.role_cio.email }}
+1. **Level 1:** Service Desk - {{ meta-organisation-roles.role_Service_Desk_Lead_email }}
+2. **Level 2:** IT Operations - {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
+3. **Level 3:** CIO - {{ meta-organisation-roles.role_CIO_email }}
 
 **Service Owner:** {{ meta-handbook.owner }}  
 **Approved by:** {{ meta-handbook.approver }}  

@@ -30,27 +30,27 @@ This document describes the processes and methods for capacity and performance m
 
 | Phase | Timeframe | Responsible | Activities |
 |---|---|---|---|
-| Short-term | 1-3 months | {{ meta-organisation-roles.role_it_operations_manager.name }} | Monitoring, adjustments |
-| Medium-term | 3-12 months | {{ meta-organisation-roles.role_cio.name }} | Capacity forecasts, budget planning |
-| Long-term | 1-3 years | {{ meta-organisation-roles.role_ceo.name }} | Strategic planning, investments |
+| Short-term | 1-3 months | {{ meta-organisation-roles.role_IT_Operations_Manager }} | Monitoring, adjustments |
+| Medium-term | 3-12 months | {{ meta-organisation-roles.role_CIO }} | Capacity forecasts, budget planning |
+| Long-term | 1-3 years | {{ meta-organisation-roles.role_CEO }} | Strategic planning, investments |
 
 ### Capacity Dimensions
 
 #### Compute Resources
-- **CPU Capacity:** {{ netbox.cluster.total_cpu_cores }} Cores
-- **RAM Capacity:** {{ netbox.cluster.total_memory_gb }} GB
+- **CPU Capacity:** [[ netbox.cluster.total_cpu_cores ]] Cores
+- **RAM Capacity:** [[ netbox.cluster.total_memory_gb ]] GB
 - **Utilization Target:** 70% (Average), 85% (Peak)
 - **Scaling Threshold:** 80% over 7 days
 
 #### Storage Resources
-- **Total Capacity:** {{ netbox.storage.total_capacity_tb }} TB
-- **Available Capacity:** {{ netbox.storage.available_capacity_tb }} TB
+- **Total Capacity:** [[ netbox.storage.total_capacity_tb ]] TB
+- **Available Capacity:** [[ netbox.storage.available_capacity_tb ]] TB
 - **Utilization Target:** 75% (Average), 85% (Maximum)
 - **Scaling Threshold:** 80% utilization
 
 #### Network Resources
-- **WAN Bandwidth:** {{ netbox.circuit.bandwidth_mbps }} Mbps
-- **LAN Bandwidth:** {{ netbox.network.lan_bandwidth_gbps }} Gbps
+- **WAN Bandwidth:** [[ netbox.circuit.bandwidth_mbps ]] Mbps
+- **LAN Bandwidth:** [[ netbox.network.lan_bandwidth_gbps ]] Gbps
 - **Utilization Target:** 60% (Average), 80% (Peak)
 - **Scaling Threshold:** 75% over 5 days
 
@@ -112,10 +112,10 @@ This document describes the processes and methods for capacity and performance m
 
 | Tool | Purpose | Access | Responsible |
 |---|---|---|---|
-| [TODO: Monitoring Tool] | System Monitoring | [TODO: URL] | {{ meta-organisation-roles.role_it_operations_manager.name }} |
-| [TODO: APM Tool] | Application Performance | [TODO: URL] | {{ meta-organisation-roles.role_it_operations_manager.name }} |
-| [TODO: DB Monitoring] | Database Performance | [TODO: URL] | {{ meta-organisation-roles.role_it_operations_manager.name }} |
-| [TODO: Network Tool] | Network Monitoring | [TODO: URL] | {{ meta-organisation-roles.role_it_operations_manager.name }} |
+| [TODO: Monitoring Tool] | System Monitoring | [TODO: URL] | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| [TODO: APM Tool] | Application Performance | [TODO: URL] | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| [TODO: DB Monitoring] | Database Performance | [TODO: URL] | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| [TODO: Network Tool] | Network Monitoring | [TODO: URL] | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
 
 ### Performance Dashboards
 
@@ -144,13 +144,13 @@ This document describes the processes and methods for capacity and performance m
 
 #### Monthly Analysis
 - **Execution:** First business day of month
-- **Responsible:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+- **Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - **Focus:** Medium-term trends and capacity forecasts
 - **Output:** Monthly report with capacity recommendations
 
 #### Quarterly Analysis
 - **Execution:** End of quarter
-- **Responsible:** {{ meta-organisation-roles.role_cio.name }}
+- **Responsible:** {{ meta-organisation-roles.role_CIO }}
 - **Focus:** Strategic trends and investment planning
 - **Output:** Quarterly report with budget recommendations
 
@@ -261,8 +261,8 @@ This document describes the processes and methods for capacity and performance m
 ### Cloud Scaling
 
 #### Cloud Provider
-- **Provider:** {{ meta-organisation.cloud_provider }}
-- **Region:** {{ meta-organisation.cloud_region }}
+- **Provider:** {{ meta-handbook.cloud_provider }}
+- **Region:** {{ meta-handbook.cloud_region }}
 - **Availability Zones:** [TODO]
 
 #### Scaling Options
@@ -319,7 +319,7 @@ This document describes the processes and methods for capacity and performance m
   - Recommendations
 
 #### Monthly Capacity Report
-- **Recipients:** {{ meta-organisation-roles.role_cio.name }}, {{ meta-organisation-roles.role_it_operations_manager.name }}
+- **Recipients:** {{ meta-organisation-roles.role_CIO }}, {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - **Content:**
   - Capacity utilization
   - Growth trends
@@ -327,7 +327,7 @@ This document describes the processes and methods for capacity and performance m
   - Budget implications
 
 #### Quarterly Management Report
-- **Recipients:** {{ meta-organisation-roles.role_ceo.name }}, {{ meta-organisation-roles.role_cio.name }}, {{ meta-organisation-roles.role_cfo.name }}
+- **Recipients:** {{ meta-organisation-roles.role_CEO }}, {{ meta-organisation-roles.role_CIO }}, {{ meta-organisation-roles.role_CFO }}
 - **Content:**
   - Strategic capacity planning
   - Investment recommendations
@@ -364,9 +364,9 @@ This document describes the processes and methods for capacity and performance m
 ### Escalation Path
 
 1. **Level 1:** Operations Team - Daily monitoring and optimization
-2. **Level 2:** {{ meta-organisation-roles.role_it_operations_manager.name }} - Capacity decisions
-3. **Level 3:** {{ meta-organisation-roles.role_cio.name }} - Strategic planning and budget
-4. **Level 4:** {{ meta-organisation-roles.role_ceo.name }} - Investment decisions
+2. **Level 2:** {{ meta-organisation-roles.role_IT_Operations_Manager }} - Capacity decisions
+3. **Level 3:** {{ meta-organisation-roles.role_CIO }} - Strategic planning and budget
+4. **Level 4:** {{ meta-organisation-roles.role_CEO }} - Investment decisions
 
 ## Tools and Systems
 
@@ -420,5 +420,5 @@ This document describes the processes and methods for capacity and performance m
 
 **Last Update:** {{ meta-handbook.date }}  
 **Next Review:** [TODO: Date]  
-**Contact:** {{ meta-organisation-roles.role_it_operations_manager.email }}
+**Contact:** {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
 

@@ -27,7 +27,7 @@ ISO 27001:2022 Annex A Reference: A.5.1, A.6.1.2
 **Document ID:** 0640  
 **Document Type:** Policy (abstract)  
 **Standard Reference:** ISO/IEC 27001:2022 Annex A.5.1, A.6.1.2 (incl. Amendment 1:2024)  
-**Owner:** {{ meta.ciso.name }}  
+**Owner:** {{ meta-organisation-roles.role_CISO }}  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
@@ -46,7 +46,7 @@ This policy applies to:
 - **Policies:** All security policies and standards
 - **Systems:** All IT systems and applications
 - **Processes:** All security-relevant processes
-- **Locations:** {{ netbox.site.name }} and all other operational sites
+- **Locations:** [[ netbox.site.name ]] and all other operational sites
 
 **Exceptions:** This policy itself is not subject to an exception process.
 
@@ -113,10 +113,10 @@ Exceptions are reviewed regularly (at least quarterly). Exceptions no longer nee
 
 ### Key Roles
 
-- **Policy Owner:** {{ meta.ciso.name }} (CISO)
-- **CIO:** {{ meta.cio.name }}
-- **Risk Manager:** {{ meta.risk.manager }}
-- **ISMS Team:** {{ meta.isms.team }}
+- **Policy Owner:** {{ meta-organisation-roles.role_CISO }} (CISO)
+- **CIO:** {{ meta-organisation-roles.role_CIO }}
+- **Risk Manager:** {{ meta-handbook.risk_manager }}
+- **ISMS Team:** {{ meta-handbook.isms_team }}
 - **Requester:** Business Owner, IT Operations
 - **Control/Audit Function:** ISMS, Internal Audit
 
@@ -187,7 +187,7 @@ This policy itself is not subject to an exception process. Changes to this polic
 - **COBIT 2019** - APO12 (Managed Risk)
 
 **Approved by:**  
-{{ meta.management.ceo }}, Executive Management  
+{{ meta-handbook.management_ceo }}, Executive Management  
 Date: {{ meta-handbook.modifydate }}
 
 **Next Review:** {{ meta-handbook.next_review }} (annually or as needed)

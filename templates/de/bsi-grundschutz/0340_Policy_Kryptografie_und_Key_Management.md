@@ -26,7 +26,7 @@ Reference: BSI IT-Grundschutz-Kompendium, BSI Standards 200-1/200-2/200-3
 
 Diese Policy definiert die Grundsätze für Kryptografie bei **{{ meta-organisation.name }}**.
 
-**Verantwortlich:** {{ meta.ciso.name }} (ISB)
+**Verantwortlich:** {{ meta-organisation-roles.role_CISO }} (ISB)
 
 [TODO: Spezifische Zielsetzung ergänzen]
 
@@ -55,8 +55,8 @@ Diese Policy definiert die Grundsätze für Kryptografie bei **{{ meta-organisat
 
 | Rolle | Verantwortung | Name |
 |---|---|---|
-| **Policy Owner** | Gesamtverantwortung für Policy | {{ meta.ciso.name }} |
-| **Umsetzungsverantwortliche** | Technische Umsetzung | {{ meta.cio.name }} |
+| **Policy Owner** | Gesamtverantwortung für Policy | {{ meta-organisation-roles.role_CISO }} |
+| **Umsetzungsverantwortliche** | Technische Umsetzung | {{ meta-organisation-roles.role_CIO }} |
 | **Kontrolle/Audit** | Überwachung der Einhaltung | [TODO: Internal Audit] |
 | **Alle Mitarbeitenden** | Einhaltung der Policy | Alle |
 
@@ -88,9 +88,9 @@ Verstöße gegen diese Policy können zu folgenden Maßnahmen führen:
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
-| IT-Leitung | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
-| Geschäftsführung | {{ meta.ceo.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| ISB | {{ meta-organisation-roles.role_CISO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| IT-Leitung | {{ meta-organisation-roles.role_CIO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| Geschäftsführung | {{ meta-organisation-roles.role_CEO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **Referenzen:**
 - BSI IT-Grundschutz-Kompendium

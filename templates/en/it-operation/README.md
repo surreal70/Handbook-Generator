@@ -76,9 +76,9 @@ Meta placeholders are populated from the `metadata.yaml` configuration file:
 **Location:** {{ meta-organisation.city }}, {{ meta-organisation.country }}
 **Website:** {{ meta-organisation.website }}
 
-**CIO:** {{ meta-organisation-roles.role_cio.name }} ({{ meta-organisation-roles.role_cio.email }})
-**CISO:** {{ meta-organisation-roles.role_ciso.name }} ({{ meta-organisation-roles.role_ciso.email }})
-**IT Operations Manager:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+**CIO:** {{ meta-organisation-roles.role_CIO }} ({{ meta-organisation-roles.role_CIO_email }})
+**CISO:** {{ meta-organisation-roles.role_CISO }} ({{ meta-organisation-roles.role_CISO_email }})
+**IT Operations Manager:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 ```
 
 **Available Meta Fields:**
@@ -93,12 +93,10 @@ Meta placeholders are populated from the `metadata.yaml` configuration file:
 - `{{ meta-organisation.phone }}` - Phone
 - `{{ meta-organisation.email }}` - Email
 
-**Roles (ceo, cio, ciso, cfo, coo, it_operations_manager, service_desk_lead):**
-- `{{ meta-organisation-roles.role_ROLE.name }}` - Person's name
-- `{{ meta-organisation-roles.role_ROLE.title }}` - Title/position
-- `{{ meta-organisation-roles.role_ROLE.email }}` - Email address
-- `{{ meta-organisation-roles.role_ROLE.phone }}` - Phone number
-- `{{ meta-organisation-roles.role_ROLE.department }}` - Department (optional)
+**Roles (CEO, CIO, CISO, CFO, COO, IT_Operations_Manager, Service_Desk_Lead):**
+- `{{ meta-organisation-roles.role_ROLE }}` - Person's name
+- `{{ meta-organisation-roles.role_ROLE_email }}` - Email address
+- `{{ meta-organisation-roles.role_ROLE_phone }}` - Phone number
 
 **Document:**
 - `{{ meta-handbook.owner }}` - Document owner
@@ -111,13 +109,13 @@ Meta placeholders are populated from the `metadata.yaml` configuration file:
 NetBox placeholders are populated from the NetBox CMDB:
 
 ```markdown
-**Site:** {{ netbox.site.name }}
-**Address:** {{ netbox.site.physical_address }}
-**Data Center:** {{ netbox.site.facility }}
+**Site:** [[ netbox.site.name ]]
+**Address:** [[ netbox.site.physical_address ]]
+**Data Center:** [[ netbox.site.facility ]]
 
-**Core Switch:** {{ netbox.device.core_switch.name }}
-**Management VLAN:** {{ netbox.vlan.management.vid }}
-**Hypervisor Cluster:** {{ netbox.cluster.name }}
+**Core Switch:** [[ netbox.device.core_switch.name ]]
+**Management VLAN:** [[ netbox.vlan.management.vid ]]
+**Hypervisor Cluster:** [[ netbox.cluster.name ]]
 ```
 
 ## Best Practices for Template Customization
@@ -204,9 +202,9 @@ This process meets the following standards:
 ```markdown
 | Metric | Target | Measurement Method | Responsible |
 |---|---:|---|---|
-| Availability | 99.9% | Uptime monitoring | {{ meta-organisation-roles.role_it_operations_manager.name }} |
-| Response time | < 200ms | APM tool | {{ meta-organisation-roles.role_it_operations_manager.name }} |
-| MTTR | < 4h | Incident tracking | {{ meta-organisation-roles.role_service_desk_lead.name }} |
+| Availability | 99.9% | Uptime monitoring | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| Response time | < 200ms | APM tool | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| MTTR | < 4h | Incident tracking | {{ meta-organisation-roles.role_Service_Desk_Lead }} |
 ```
 
 ## Generating Handbooks

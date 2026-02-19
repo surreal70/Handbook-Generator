@@ -76,9 +76,9 @@ Meta-Platzhalter werden aus der `metadata.yaml` Konfigurationsdatei befüllt:
 **Standort:** {{ meta-organisation.city }}, {{ meta-organisation.country }}
 **Website:** {{ meta-organisation.website }}
 
-**CIO:** {{ meta-organisation-roles.role_cio.name }} ({{ meta-organisation-roles.role_cio.email }})
-**CISO:** {{ meta-organisation-roles.role_ciso.name }} ({{ meta-organisation-roles.role_ciso.email }})
-**IT Operations Manager:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+**CIO:** {{ meta-organisation-roles.role_CIO }} ({{ meta-organisation-roles.role_CIO_email }})
+**CISO:** {{ meta-organisation-roles.role_CISO }} ({{ meta-organisation-roles.role_CISO_email }})
+**IT Operations Manager:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 ```
 
 **Verfügbare Meta-Felder:**
@@ -93,12 +93,10 @@ Meta-Platzhalter werden aus der `metadata.yaml` Konfigurationsdatei befüllt:
 - `{{ meta-organisation.phone }}` - Telefon
 - `{{ meta-organisation.email }}` - E-Mail
 
-**Rollen (ceo, cio, ciso, cfo, coo, it_operations_manager, service_desk_lead):**
-- `{{ meta-organisation-roles.role_ROLLE.name }}` - Name der Person
-- `{{ meta-organisation-roles.role_ROLLE.title }}` - Titel/Position
-- `{{ meta-organisation-roles.role_ROLLE.email }}` - E-Mail-Adresse
-- `{{ meta-organisation-roles.role_ROLLE.phone }}` - Telefonnummer
-- `{{ meta-organisation-roles.role_ROLLE.department }}` - Abteilung (optional)
+**Rollen (CEO, CIO, CISO, CFO, COO, IT_Operations_Manager, Service_Desk_Lead):**
+- `{{ meta-organisation-roles.role_ROLLE }}` - Name der Person
+- `{{ meta-organisation-roles.role_ROLLE_email }}` - E-Mail-Adresse
+- `{{ meta-organisation-roles.role_ROLLE_phone }}` - Telefonnummer
 
 **Dokument:**
 - `{{ meta-handbook.owner }}` - Dokumentverantwortlicher
@@ -111,13 +109,13 @@ Meta-Platzhalter werden aus der `metadata.yaml` Konfigurationsdatei befüllt:
 NetBox-Platzhalter werden aus der NetBox-CMDB befüllt:
 
 ```markdown
-**Standort:** {{ netbox.site.name }}
-**Adresse:** {{ netbox.site.physical_address }}
-**Rechenzentrum:** {{ netbox.site.facility }}
+**Standort:** [[ netbox.site.name ]]
+**Adresse:** [[ netbox.site.physical_address ]]
+**Rechenzentrum:** [[ netbox.site.facility ]]
 
-**Core Switch:** {{ netbox.device.core_switch.name }}
-**Management VLAN:** {{ netbox.vlan.management.vid }}
-**Hypervisor-Cluster:** {{ netbox.cluster.name }}
+**Core Switch:** [[ netbox.device.core_switch.name ]]
+**Management VLAN:** [[ netbox.vlan.management.vid ]]
+**Hypervisor-Cluster:** [[ netbox.cluster.name ]]
 ```
 
 ## Best Practices für Template-Anpassungen
@@ -154,7 +152,7 @@ Berücksichtigen Sie:
 
 ## Systemarchitektur
 
-{{ netbox.device.name }}
+[[ netbox.device.name ]]
 
 <!-- TODO: Architekturdiagramm einfügen -->
 ```
@@ -175,8 +173,8 @@ Berücksichtigen Sie:
 
 **Platzhalter-Dokumentation:**
 ```markdown
-<!-- Der Platzhalter {{ meta-organisation-roles.role_cio.name }} wird durch den CIO-Namen ersetzt -->
-**Verantwortlich:** {{ meta-organisation-roles.role_cio.name }}
+<!-- Der Platzhalter {{ meta-organisation-roles.role_CIO }} wird durch den CIO-Namen ersetzt -->
+**Verantwortlich:** {{ meta-organisation-roles.role_CIO }}
 ```
 
 **Best Practices:**
@@ -253,9 +251,9 @@ Dieser Prozess erfüllt folgende Standards:
 ```markdown
 | Kennzahl | Zielwert | Messmethode | Verantwortlich |
 |---|---:|---|---|
-| Verfügbarkeit | 99.9% | Uptime-Monitoring | {{ meta-organisation-roles.role_it_operations_manager.name }} |
-| Antwortzeit | < 200ms | APM-Tool | {{ meta-organisation-roles.role_it_operations_manager.name }} |
-| MTTR | < 4h | Incident-Tracking | {{ meta-organisation-roles.role_service_desk_lead.name }} |
+| Verfügbarkeit | 99.9% | Uptime-Monitoring | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| Antwortzeit | < 200ms | APM-Tool | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| MTTR | < 4h | Incident-Tracking | {{ meta-organisation-roles.role_Service_Desk_Lead }} |
 ```
 
 ## Generierung von Handbüchern

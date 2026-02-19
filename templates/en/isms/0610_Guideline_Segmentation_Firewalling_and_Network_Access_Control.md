@@ -89,7 +89,7 @@ This guideline specifies the `0600_Policy_Network_Security.md` and defines:
 - Between zones
 - Micro-segmentation
 
-**Firewall Platform:** {{ meta.network.firewall }}
+**Firewall Platform:** {{ meta-handbook.network_firewall }}
 
 ### 3.2 Firewall Rules
 
@@ -143,7 +143,7 @@ This guideline specifies the `0600_Policy_Network_Security.md` and defines:
 
 ### 4.1 NAC System
 
-**Platform:** {{ meta.network.nac_solution }} (e.g., Cisco ISE, Aruba ClearPass)
+**Platform:** {{ meta-handbook.network_nac_solution }} (e.g., Cisco ISE, Aruba ClearPass)
 
 **Functions:**
 - 802.1X authentication
@@ -200,7 +200,7 @@ This guideline specifies the `0600_Policy_Network_Security.md` and defines:
 - Between critical zones
 - IPS mode
 
-**IDS/IPS System:** {{ meta.security.ids_ips }}
+**IDS/IPS System:** {{ meta-handbook.security_ids_ips }}
 
 ### 5.2 Signatures and Policies
 
@@ -282,7 +282,7 @@ This guideline specifies the `0600_Policy_Network_Security.md` and defines:
 - Analysis of traffic patterns
 - Anomaly detection
 
-**Tools:** {{ meta.network.flow_tool }}
+**Tools:** {{ meta-handbook.network_flow_tool }}
 
 ### 8.2 Packet Capture
 
@@ -321,6 +321,6 @@ This guideline specifies the `0600_Policy_Network_Security.md` and defines:
 - **ISO/IEC 27001:2022 Annex A.8.22** - Segregation of networks
 - **NIST SP 800-41** - Guidelines on Firewalls and Firewall Policy
 
-**Approved by:** {{ meta.ciso.name }}, CISO  
+**Approved by:** {{ meta-organisation-roles.role_CISO }}, CISO  
 **Next Review:** {{ meta-handbook.next_review }}
 

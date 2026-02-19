@@ -21,7 +21,7 @@ Dieses Dokument beschreibt den Problem-Management-Prozess für {{ meta-organisat
 
 **Geltungsbereich:** Alle IT-Services und -Systeme von {{ meta-organisation.name }}
 
-**Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }} ({{ meta-organisation-roles.role_it_operations_manager.email }})
+**Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }} ({{ meta-organisation-roles.role_IT_Operations_Manager_email }})
 
 ## Problem-Definition
 
@@ -524,8 +524,8 @@ Ein **Postmortem** ist eine strukturierte Analyse eines Major Incidents oder kri
 4. Connection-Pool-Monitoring verbessern
 
 **Betroffene CIs:**
-- {{ netbox.database.server }}
-- {{ netbox.application.server }}
+- [[ netbox.database.server ]]
+- [[ netbox.application.server ]]
 
 **Verknüpfte Incidents:** INC-2024-123, INC-2024-145, INC-2024-167
 
@@ -640,7 +640,7 @@ Ein **Postmortem** ist eine strukturierte Analyse eines Major Incidents oder kri
 - Postmortem-Moderation
 - Reporting
 
-**Person:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+**Person:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 ### Technical Specialists
 

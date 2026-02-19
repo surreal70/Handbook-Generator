@@ -28,7 +28,7 @@ ISO 27001:2022 Annex A Reference: A.8.32
 **Document ID:** 0360  
 **Document Type:** Policy (abstract)  
 **Standard Reference:** ISO/IEC 27001:2022 Annex A.8.32 (incl. Amendment 1:2024)  
-**Owner:** {{ meta.ciso.name }}  
+**Owner:** {{ meta-organisation-roles.role_CISO }}  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
@@ -47,7 +47,7 @@ This policy applies to:
 - **Systems:** All IT systems, applications, infrastructure, networks, cloud services
 - **Change Types:** Standard changes, normal changes, emergency changes
 - **Environments:** Production, test, development
-- **Locations:** {{ netbox.site.name }} and all other operational sites
+- **Locations:** [[ netbox.site.name ]] and all other operational sites
 
 **Exceptions:** Exceptions are only permitted through the defined exception process (`0640_Policy_Exceptions_and_Risk_Waivers.md`).
 
@@ -99,9 +99,9 @@ Changes with security relevance require a security review by the security team b
 
 ### Key Roles
 
-- **Policy Owner:** {{ meta.ciso.name }} (CISO)
-- **Change Manager:** {{ meta.it.change_manager }}
-- **CAB Chair:** {{ meta.it.cab_chair }}
+- **Policy Owner:** {{ meta-organisation-roles.role_CISO }} (CISO)
+- **Change Manager:** {{ meta-handbook.it_change_manager }}
+- **CAB Chair:** {{ meta-handbook.it_cab_chair }}
 - **Implementation Responsible:** IT Operations, Development
 - **Control/Audit Function:** ISMS, Internal Audit
 
@@ -176,7 +176,7 @@ Exceptions to this policy are only permitted in justified cases:
 - **ISO/IEC 20000** - IT Service Management
 
 **Approved by:**  
-{{ meta.management.ceo }}, Management  
+{{ meta-handbook.management_ceo }}, Management  
 Date: {{ meta-handbook.modifydate }}
 
 **Next Review:** {{ meta-handbook.next_review }} (annually or as needed)

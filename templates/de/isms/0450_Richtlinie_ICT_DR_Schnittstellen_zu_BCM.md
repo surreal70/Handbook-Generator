@@ -66,20 +66,20 @@ Diese Richtlinie konkretisiert die `0440_Policy_Business_Continuity_ICT_Readines
 
 ### 3.1 Primäres Rechenzentrum
 
-**Standort:** {{ netbox.site.primary }}  
+**Standort:** [[ netbox.site.primary ]]  
 **Systeme:** Alle Produktionssysteme  
 **Redundanz:** N+1 für kritische Komponenten
 
 ### 3.2 DR-Standort
 
-**Standort:** {{ netbox.site.dr }}  
+**Standort:** [[ netbox.site.dr ]]  
 **Entfernung:** > 50 km vom Primärstandort  
 **Systeme:** Replizierte Tier 1 Systeme, Backup-Infrastruktur
 
 ### 3.3 Cloud-DR
 
-**Cloud-Provider:** {{ meta.cloud.dr_provider }}  
-**Regionen:** {{ meta.cloud.primary_region }}, {{ meta.cloud.dr_region }}  
+**Cloud-Provider:** {{ meta-handbook.cloud_dr_provider }}  
+**Regionen:** {{ meta-handbook.cloud_primary_region }}, {{ meta-handbook.cloud_dr_region }}  
 **Services:** IaaS für DR-Workloads
 
 ## 4. Schnittstellen zu BCM
@@ -216,6 +216,6 @@ Diese Richtlinie konkretisiert die `0440_Policy_Business_Continuity_ICT_Readines
 - **ISO/IEC 27001:2022 Annex A.5.30** - ICT readiness for business continuity
 - **ISO 22301** - Business Continuity Management
 
-**Genehmigt durch:** {{ meta.ciso.name }}, CISO  
+**Genehmigt durch:** {{ meta-organisation-roles.role_CISO }}, CISO  
 **Nächster Review:** {{ meta-handbook.next_review }}
 

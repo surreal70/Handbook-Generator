@@ -77,9 +77,9 @@ The templates use placeholders from the `metadata.yaml` file:
 
 ```markdown
 **Organization:** [TODO]
-**CEO:** {{ meta.ceo.name }} ({{ meta.ceo.email }})
-**CIO:** {{ meta.cio.name }} ({{ meta.cio.email }})
-**CISO/ISB:** {{ meta.ciso.name }} ({{ meta.ciso.email }})
+**CEO:** {{ meta-organisation-roles.role_CEO }} ({{ meta-organisation-roles.role_CEO_email }})
+**CIO:** {{ meta-organisation-roles.role_CIO }} ({{ meta-organisation-roles.role_CIO_email }})
+**CISO/ISB:** {{ meta-organisation-roles.role_CISO }} ({{ meta-organisation-roles.role_CISO_email }})
 **Document Owner:** [TODO]
 **Locations:** [TODO]
 ```
@@ -89,12 +89,12 @@ The templates use placeholders from the `metadata.yaml` file:
 For IT-specific information, NetBox placeholders can be used:
 
 ```markdown
-**Site:** {{ netbox.site.name }}
-**Data Center:** {{ netbox.site.datacenter.name }}
-**Core Switch:** {{ netbox.device.core_switch.name }}
-**Management VLAN:** {{ netbox.vlan.management }}
-**Server:** {{ netbox.device.server_001 }}
-**IP Address:** {{ netbox.ip.server_001 }}
+**Site:** [[ netbox.site.name ]]
+**Data Center:** [[ netbox.site.datacenter.name ]]
+**Core Switch:** [[ netbox.device.core_switch.name ]]
+**Management VLAN:** [[ netbox.vlan.management ]]
+**Server:** [[ netbox.device.server_001 ]]
+**IP Address:** [[ netbox.ip.server_001 ]]
 ```
 
 ### [TODO] Markers

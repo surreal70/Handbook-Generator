@@ -17,7 +17,7 @@
 
 ## 1. Purpose
 
-This document describes the categorization of the information system {{ meta.nist.system_name }} according to FIPS 199 and NIST SP 800-60.
+This document describes the categorization of the information system {{ meta-handbook.system_name }} according to FIPS 199 and NIST SP 800-60.
 
 ### 1.1 Objectives
 
@@ -37,8 +37,8 @@ This document describes the categorization of the information system {{ meta.nis
 
 ### 2.1 System Identification
 
-**System Name:** {{ meta.nist.system_name }}  
-**System ID:** {{ meta.nist.system_id }}  
+**System Name:** {{ meta-handbook.system_name }}  
+**System ID:** {{ meta-handbook.system_id }}  
 **System Owner:** [TODO: Name] ([TODO: Email])  
 **Authorizing Official (AO):** [TODO] ([TODO])  
 **Information System Security Officer (ISSO):** [TODO] ([TODO])  
@@ -123,7 +123,7 @@ Categorization is performed according to three security objectives:
 **FIPS 199 Security Category:**
 
 ```
-SC {{ meta.nist.system_name }} = {(confidentiality, [TODO: impact]), (integrity, [TODO: impact]), (availability, [TODO: impact])}
+SC {{ meta-handbook.system_name }} = {(confidentiality, [TODO: impact]), (integrity, [TODO: impact]), (availability, [TODO: impact])}
 ```
 
 **Example:**

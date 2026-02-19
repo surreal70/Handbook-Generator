@@ -21,7 +21,7 @@ This document describes the patch and update management processes for {{ meta-or
 
 **Scope:** All IT systems, operating systems, applications, and firmware of {{ meta-organisation.name }}
 
-**Responsible:** {{ meta-organisation-roles.role_it_operations_manager.name }} ({{ meta-organisation-roles.role_it_operations_manager.email }})
+**Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }} ({{ meta-organisation-roles.role_IT_Operations_Manager_email }})
 
 ## Patch Management Fundamentals
 
@@ -220,10 +220,10 @@ This document describes the patch and update management processes for {{ meta-or
 
 | Environment | Purpose | Systems |
 |---|---|---|
-| **Dev** | Developer tests | {{ netbox.environment.dev }} |
-| **Test** | Functional tests | {{ netbox.environment.test }} |
-| **Staging** | Pre-production tests | {{ netbox.environment.staging }} |
-| **Production** | Production systems | {{ netbox.environment.production }} |
+| **Dev** | Developer tests | [[ netbox.environment.dev ]] |
+| **Test** | Functional tests | [[ netbox.environment.test ]] |
+| **Staging** | Pre-production tests | [[ netbox.environment.staging ]] |
+| **Production** | Production systems | [[ netbox.environment.production ]] |
 
 **Test Process:**
 
@@ -426,8 +426,8 @@ This document describes the patch and update management processes for {{ meta-or
 ### Windows Patch Management
 
 **Tool:** Windows Server Update Services (WSUS)  
-**Server:** {{ netbox.wsus.server }}  
-**Management:** {{ netbox.wsus.management_url }}
+**Server:** [[ netbox.wsus.server ]]  
+**Management:** [[ netbox.wsus.management_url ]]
 
 **Configuration:**
 - Automatic synchronization with Microsoft Update
@@ -445,7 +445,7 @@ This document describes the patch and update management processes for {{ meta-or
 ### Linux Patch Management
 
 **Tool:** Ansible / Satellite  
-**Server:** {{ netbox.ansible.server }}
+**Server:** [[ netbox.ansible.server ]]
 
 **Playbooks:**
 - `patch-assessment.yml` - Check available updates
@@ -485,7 +485,7 @@ This document describes the patch and update management processes for {{ meta-or
 ### VMware Patch Management
 
 **Tool:** VMware Update Manager (VUM)  
-**Integration:** vCenter {{ netbox.vcenter.server }}
+**Integration:** vCenter [[ netbox.vcenter.server ]]
 
 **Baseline Groups:**
 - **Critical-Patches:** Critical security patches
@@ -695,7 +695,7 @@ yum downgrade <package>
 - Deployment planning
 - Reporting
 
-**Team Lead:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+**Team Lead:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 ### System Administrators
 
@@ -713,7 +713,7 @@ yum downgrade <package>
 - Security patch prioritization
 - Compliance monitoring
 
-**Lead:** {{ meta-organisation-roles.role_ciso.name }}
+**Lead:** {{ meta-organisation-roles.role_CISO }}
 
 ### Application Owners
 

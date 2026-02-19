@@ -61,9 +61,9 @@ Das Risikoregister dokumentiert alle identifizierten Informationssicherheitsrisi
 
 | Risiko-ID | Asset/Prozess | Bedrohung | Schwachstelle | Auswirkung (1-5) | Wahrscheinlichkeit (1-5) | Score | Risikostufe | Risiko-Eigentümer | Behandlung | Maßnahme/Control | Status | Zieltermin | Bemerkungen |
 |-----------|---------------|-----------|---------------|------------------|--------------------------|-------|-------------|-------------------|------------|------------------|--------|------------|-------------|
-| R-001 | {{ netbox.device.core_switch.name }} | Hardware-Ausfall | Keine Redundanz | 4 | 3 | 12 | Mittel | {{ meta.cio.name }} | Mindern | Redundanter Switch beschaffen | Offen | 2026-06-30 | Budget genehmigt |
-| R-002 | Kundendaten (DSGVO) | Ransomware | Unzureichende Backups | 5 | 4 | 20 | Hoch | {{ meta.ciso.name }} | Mindern | Immutable Backups implementieren | In Arbeit | 2026-03-31 | Siehe M-002 |
-| R-003 | E-Mail-System | Phishing | Fehlende MFA | 4 | 4 | 16 | Hoch | {{ meta.cio.name }} | Mindern | MFA für alle Benutzer | In Arbeit | 2026-02-28 | 80% abgeschlossen |
+| R-001 | [[ netbox.device.core_switch.name ]] | Hardware-Ausfall | Keine Redundanz | 4 | 3 | 12 | Mittel | {{ meta-organisation-roles.role_CIO }} | Mindern | Redundanter Switch beschaffen | Offen | 2026-06-30 | Budget genehmigt |
+| R-002 | Kundendaten (DSGVO) | Ransomware | Unzureichende Backups | 5 | 4 | 20 | Hoch | {{ meta-organisation-roles.role_CISO }} | Mindern | Immutable Backups implementieren | In Arbeit | 2026-03-31 | Siehe M-002 |
+| R-003 | E-Mail-System | Phishing | Fehlende MFA | 4 | 4 | 16 | Hoch | {{ meta-organisation-roles.role_CIO }} | Mindern | MFA für alle Benutzer | In Arbeit | 2026-02-28 | 80% abgeschlossen |
 | R-004 | Entwicklungsumgebung | Secrets in Code | Keine Secret-Scanning | 3 | 3 | 9 | Mittel | Dev-Lead | Mindern | Secret-Scanning Tool | Geplant | 2026-04-30 | Tool-Evaluierung läuft |
 | R-005 | Remote-Zugriff | Unbefugter Zugriff | Schwache VPN-Konfiguration | 4 | 2 | 8 | Mittel | IT-Betrieb | Mindern | VPN-Hardening | Offen | 2026-05-31 | - |
 
@@ -78,8 +78,8 @@ uniquely identified and linked to treatment measures.
 
 | Risiko-ID | Asset/Prozess | Bedrohung | Schwachstelle | Score | Risikostufe | Risiko-Eigentümer | Akzeptiert durch | Akzeptanzdatum | Gültig bis | Begründung | Review-Status |
 |-----------|---------------|-----------|---------------|-------|-------------|-------------------|------------------|----------------|------------|------------|---------------|
-| R-010 | Legacy-System XYZ | Ungepatchte Schwachstellen | System im Auslauf | 9 | Mittel | {{ meta.cio.name }} | {{ meta.ciso.name }} | 2026-01-15 | 2026-06-30 | System wird am 30.06.2026 außer Betrieb genommen | Aktiv |
-| R-011 | Testumgebung | Fehlende Verschlüsselung | Keine produktiven Daten | 6 | Niedrig | Dev-Lead | {{ meta.ciso.name }} | 2026-01-20 | 2027-01-20 | Testumgebung enthält nur synthetische Daten | Aktiv |
+| R-010 | Legacy-System XYZ | Ungepatchte Schwachstellen | System im Auslauf | 9 | Mittel | {{ meta-organisation-roles.role_CIO }} | {{ meta-organisation-roles.role_CISO }} | 2026-01-15 | 2026-06-30 | System wird am 30.06.2026 außer Betrieb genommen | Aktiv |
+| R-011 | Testumgebung | Fehlende Verschlüsselung | Keine produktiven Daten | 6 | Niedrig | Dev-Lead | {{ meta-organisation-roles.role_CISO }} | 2026-01-20 | 2027-01-20 | Testumgebung enthält nur synthetische Daten | Aktiv |
 
 [TODO: Akzeptierte Risiken dokumentieren]
 
@@ -306,10 +306,10 @@ uniquely identified and linked to treatment measures.
 
 | Version | Datum | Autor | Beschreibung | Genehmigt durch |
 |---------|-------|-------|--------------|-----------------|
-| 1.0 | {{ meta-handbook.modifydate }} | {{ meta.ciso.name }} | Initiale Version | {{ meta.management.ceo }} |
+| 1.0 | {{ meta-handbook.modifydate }} | {{ meta-organisation-roles.role_CISO }} | Initiale Version | {{ meta-handbook.management_ceo }} |
 
 **Genehmigt durch:**  
-{{ meta.ciso.name }}, CISO  
+{{ meta-organisation-roles.role_CISO }}, CISO  
 Datum: {{ meta-handbook.modifydate }}
 
 **Nächster Review:** {{ meta-handbook.next_review }} (Quartalsweise)

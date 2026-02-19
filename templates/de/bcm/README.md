@@ -71,9 +71,9 @@ Die Templates verwenden Platzhalter aus der `metadata.yaml` Datei:
 Für IT-spezifische Informationen können NetBox-Platzhalter verwendet werden:
 
 ```markdown
-**Standort:** {{ netbox.site.name }}
-**Rechenzentrum:** {{ netbox.site.datacenter.name }}
-**Core Switch:** {{ netbox.device.core_switch.name }}
+**Standort:** [[ netbox.site.name ]]
+**Rechenzentrum:** [[ netbox.site.datacenter.name ]]
+**Core Switch:** [[ netbox.device.core_switch.name ]]
 ```
 
 ### [TODO]-Markierungen

@@ -39,10 +39,10 @@ Das interne Auditprogramm von **{{ meta-organisation.name }}** stellt die Wirksa
 
 | Zeitraum | Audit-Thema | Kriterien | Auditor | Auditee | Status | Ergebnis | Maßnahmen |
 |---|---|---|---|---|---|---|---|
-| Q1 [TODO] | Basis-Sicherheitscheck Stichprobe | Policies, Richtlinien, Evidence | [TODO] | {{ meta.cio.name }} | Geplant | - | - |
-| Q2 [TODO] | Risikomanagement-Prozess | Dokument 0090, Risikoregister | [TODO] | {{ meta.ciso.name }} | Geplant | - | - |
-| Q3 [TODO] | Incident Management | Dokument 0320/0330, Incident-Logs | [TODO] | {{ meta.cio.name }} | Geplant | - | - |
-| Q4 [TODO] | Dokumentenlenkung | Dokument 0030, Dokumentenregister | [TODO] | {{ meta.ciso.name }} | Geplant | - | - |
+| Q1 [TODO] | Basis-Sicherheitscheck Stichprobe | Policies, Richtlinien, Evidence | [TODO] | {{ meta-organisation-roles.role_CIO }} | Geplant | - | - |
+| Q2 [TODO] | Risikomanagement-Prozess | Dokument 0090, Risikoregister | [TODO] | {{ meta-organisation-roles.role_CISO }} | Geplant | - | - |
+| Q3 [TODO] | Incident Management | Dokument 0320/0330, Incident-Logs | [TODO] | {{ meta-organisation-roles.role_CIO }} | Geplant | - | - |
+| Q4 [TODO] | Dokumentenlenkung | Dokument 0030, Dokumentenregister | [TODO] | {{ meta-organisation-roles.role_CISO }} | Geplant | - | - |
 
 ## 4. Audit-Checkpunkte
 
@@ -86,7 +86,7 @@ Das interne Auditprogramm von **{{ meta-organisation.name }}** stellt die Wirksa
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
 | Internal Audit | [TODO] | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
-| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| ISB | {{ meta-organisation-roles.role_CISO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **Referenzen:**
 - BSI Standard 200-1: ISMS

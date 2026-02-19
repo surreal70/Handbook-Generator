@@ -36,7 +36,7 @@ Diese Policy gilt für:
 - **Daten:** Alle Informationen und Daten (strukturiert und unstrukturiert)
 - **Systeme:** Alle IT-Systeme, Datenbanken, Backup-Systeme, Archive
 - **Medien:** Digitale und physische Datenträger
-- **Standorte:** {{ netbox.site.name }} und alle weiteren Betriebsstandorte
+- **Standorte:** [[ netbox.site.name ]] und alle weiteren Betriebsstandorte
 
 **Ausnahmen:** Ausnahmen sind nur über den definierten Ausnahmenprozess (`0640_Policy_Ausnahmen_und_Risk_Waivers.md`) zulässig.
 
@@ -94,9 +94,9 @@ Physische Datenträger (Festplatten, USB-Sticks, Papier) werden sicher entsorgt:
 
 ### Schlüsselrollen
 
-- **Policy Owner:** {{ meta.ciso.name }} (CISO)
-- **Records Manager:** {{ meta.records.manager }}
-- **Data Protection Officer:** {{ meta.dpo.name }}
+- **Policy Owner:** {{ meta-organisation-roles.role_CISO }} (CISO)
+- **Records Manager:** {{ meta-handbook.records_manager }}
+- **Data Protection Officer:** {{ meta-handbook.dpo_name }}
 - **Umsetzungsverantwortliche:** IT-Betrieb, Business Owner
 - **Kontroll-/Prüfinstanz:** ISMS, Internal Audit, Legal
 
@@ -174,7 +174,7 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **BSI TL-03423** - Leitfaden zur Löschung und Vernichtung
 
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
 Datum: {{ meta-handbook.modifydate }}
 
 **Nächster Review:** {{ meta-handbook.next_review }} (jährlich oder anlassbezogen)

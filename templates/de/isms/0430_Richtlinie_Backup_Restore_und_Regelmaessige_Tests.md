@@ -68,12 +68,12 @@ Diese Richtlinie konkretisiert die `0420_Policy_Backup_und_Wiederherstellung.md`
 ### 3.1 Backup-Systeme
 
 **On-Premises:**
-- **Backup-Server:** {{ meta.backup.server }}
-- **Backup-Software:** {{ meta.backup.software }} (z.B. Veeam, Commvault)
-- **Storage:** {{ meta.backup.storage }} (Disk, Tape)
+- **Backup-Server:** {{ meta-handbook.backup_server }}
+- **Backup-Software:** {{ meta-handbook.backup_software }} (z.B. Veeam, Commvault)
+- **Storage:** {{ meta-handbook.backup_storage }} (Disk, Tape)
 
 **Cloud-Backup:**
-- **Cloud-Provider:** {{ meta.cloud.backup_provider }} (z.B. Azure Backup, AWS Backup)
+- **Cloud-Provider:** {{ meta-handbook.cloud_backup_provider }} (z.B. Azure Backup, AWS Backup)
 - **Verschlüsselung:** AES-256
 - **Geo-Redundanz:** Aktiviert
 
@@ -105,12 +105,12 @@ Diese Richtlinie konkretisiert die `0420_Policy_Backup_und_Wiederherstellung.md`
 - **Daily:** 7 Tage
 - **Weekly:** 4 Wochen
 - **Monthly:** 12 Monate
-- **Yearly:** {{ meta.retention.backup_years }} Jahre
+- **Yearly:** {{ meta-handbook.retention_backup_years }} Jahre
 
 **Compliance-Backups:**
 - Finanzd aten: 10 Jahre
 - Personaldaten: Gemäß DSGVO
-- E-Mails: {{ meta.retention.email_years }} Jahre
+- E-Mails: {{ meta-handbook.retention_email_years }} Jahre
 
 ## 4. Restore-Prozesse
 
@@ -298,7 +298,7 @@ Diese Richtlinie konkretisiert die `0420_Policy_Backup_und_Wiederherstellung.md`
 - Konfigurationsänderungen
 - Zugriffe auf Backup-System
 
-**Retention:** {{ meta.retention.log_years }} Jahre
+**Retention:** {{ meta-handbook.retention_log_years }} Jahre
 
 ## 8. Compliance und Audit
 
@@ -329,6 +329,6 @@ Diese Richtlinie konkretisiert die `0420_Policy_Backup_und_Wiederherstellung.md`
 - **ISO/IEC 27001:2022 Annex A.8.13** - Information backup
 - **NIST SP 800-34** - Contingency Planning Guide
 
-**Genehmigt durch:** {{ meta.ciso.name }}, CISO  
+**Genehmigt durch:** {{ meta-organisation-roles.role_CISO }}, CISO  
 **Nächster Review:** {{ meta-handbook.next_review }}
 

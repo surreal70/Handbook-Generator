@@ -37,7 +37,7 @@ Diese Policy gilt für:
 - **Einrichtungen:** Büros, Rechenzentren, Serverräume, Lager, Produktionsstätten
 - **Assets:** IT-Equipment, Server, Netzwerkkomponenten, mobile Geräte, Dokumente
 - **Personen:** Mitarbeiter, Besucher, Auftragnehmer, Lieferanten
-- **Standorte:** {{ netbox.site.name }} und alle weiteren Betriebsstandorte
+- **Standorte:** [[ netbox.site.name ]] und alle weiteren Betriebsstandorte
 
 **Ausnahmen:** Ausnahmen sind nur über den definierten Ausnahmenprozess (`0640_Policy_Ausnahmen_und_Risk_Waivers.md`) zulässig.
 
@@ -97,9 +97,9 @@ IT-Equipment wird vor Diebstahl geschützt (Kensington-Locks, Alarmanlagen, Inve
 
 ### Schlüsselrollen
 
-- **Policy Owner:** {{ meta.ciso.name }} (CISO)
-- **Facility Manager:** {{ meta.facility.manager }}
-- **Security Manager:** {{ meta.security.physical_security_manager }}
+- **Policy Owner:** {{ meta-organisation-roles.role_CISO }} (CISO)
+- **Facility Manager:** {{ meta-handbook.facility_manager }}
+- **Security Manager:** {{ meta-handbook.security_physical_security_manager }}
 - **Umsetzungsverantwortliche:** Facility Management, Security, IT-Betrieb
 - **Kontroll-/Prüfinstanz:** ISMS, Internal Audit
 
@@ -175,7 +175,7 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **BSI IT-Grundschutz** - Baustein INF.1 Allgemeines Gebäude
 
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
 Datum: {{ meta-handbook.modifydate }}
 
 **Nächster Review:** {{ meta-handbook.next_review }} (jährlich oder anlassbezogen)

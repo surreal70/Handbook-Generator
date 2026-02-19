@@ -27,7 +27,7 @@ ISO 27001:2022 Reference: Clause 7.2 - Competence, Clause 7.3 - Awareness
 **Document ID:** 0120  
 **Document Type:** ISMS Foundation Document  
 **Standard Reference:** ISO/IEC 27001:2022 Clauses 7.2, 7.3  
-**Owner:** {{ meta.ciso.name }}  
+**Owner:** {{ meta-organisation-roles.role_CISO }}  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
@@ -57,12 +57,12 @@ The training and awareness program of **{{ meta-organisation.name }}** ensures t
 
 | Target Group | Number | Training Need | Frequency | Responsible |
 |--------------|--------|---------------|-----------|-------------|
-| **All Employees** | [TODO] | Security Awareness Basics | Annually | {{ meta.ciso.name }} |
-| **Admins/Privileged Users** | [TODO] | Advanced Security, Privileged Access | Semi-annually | {{ meta.ciso.name }} |
-| **Developers/DevOps** | [TODO] | Secure Coding, DevSecOps | Semi-annually | {{ meta.ciso.name }} |
-| **Management** | [TODO] | Security Governance, Risk Management | Annually | {{ meta.ciso.name }} |
-| **HR** | [TODO] | HR Security, Onboarding/Offboarding | Annually | {{ meta.ciso.name }} |
-| **Contractors/External** | [TODO] | Security Basics, Compliance | At Onboarding | {{ meta.ciso.name }} |
+| **All Employees** | [TODO] | Security Awareness Basics | Annually | {{ meta-organisation-roles.role_CISO }} |
+| **Admins/Privileged Users** | [TODO] | Advanced Security, Privileged Access | Semi-annually | {{ meta-organisation-roles.role_CISO }} |
+| **Developers/DevOps** | [TODO] | Secure Coding, DevSecOps | Semi-annually | {{ meta-organisation-roles.role_CISO }} |
+| **Management** | [TODO] | Security Governance, Risk Management | Annually | {{ meta-organisation-roles.role_CISO }} |
+| **HR** | [TODO] | HR Security, Onboarding/Offboarding | Annually | {{ meta-organisation-roles.role_CISO }} |
+| **Contractors/External** | [TODO] | Security Basics, Compliance | At Onboarding | {{ meta-organisation-roles.role_CISO }} |
 
 ### 2.2 Role-Specific Requirements
 
@@ -90,12 +90,12 @@ The training and awareness program of **{{ meta-organisation.name }}** ensures t
 
 | Training ID | Training | Target Group | Frequency | Duration | Content | Evidence | Owner | Status |
 |-------------|----------|--------------|-----------|----------|---------|----------|-------|--------|
-| **T-001** | Security Awareness Basics | All Employees | Annually | 60 min | Phishing, passwords, clean desk, incident reporting | LMS certificate | {{ meta.ciso.name }} | Active |
-| **T-002** | GDPR Basics | All Employees | Annually | 30 min | Data protection basics, data subject rights | LMS certificate | {{ meta.privacy.dpo }} | Active |
-| **T-003** | Phishing Awareness | All Employees | Quarterly | 15 min | Phishing detection, reporting | Simulation result | {{ meta.ciso.name }} | Active |
-| **T-004** | Privileged Access Management | Admins | Semi-annually | 90 min | PAM, least privilege, audit logging | LMS certificate | {{ meta.ciso.name }} | Active |
-| **T-005** | Secure Coding | Developers | Semi-annually | 120 min | OWASP Top 10, input validation, secrets | LMS certificate | {{ meta.ciso.name }} | Active |
-| **T-006** | Incident Response | Security Team | Annually | 180 min | IR process, forensics, communication | Workshop attendance | {{ meta.ciso.name }} | Active |
+| **T-001** | Security Awareness Basics | All Employees | Annually | 60 min | Phishing, passwords, clean desk, incident reporting | LMS certificate | {{ meta-organisation-roles.role_CISO }} | Active |
+| **T-002** | GDPR Basics | All Employees | Annually | 30 min | Data protection basics, data subject rights | LMS certificate | {{ meta-handbook.privacy_dpo }} | Active |
+| **T-003** | Phishing Awareness | All Employees | Quarterly | 15 min | Phishing detection, reporting | Simulation result | {{ meta-organisation-roles.role_CISO }} | Active |
+| **T-004** | Privileged Access Management | Admins | Semi-annually | 90 min | PAM, least privilege, audit logging | LMS certificate | {{ meta-organisation-roles.role_CISO }} | Active |
+| **T-005** | Secure Coding | Developers | Semi-annually | 120 min | OWASP Top 10, input validation, secrets | LMS certificate | {{ meta-organisation-roles.role_CISO }} | Active |
+| **T-006** | Incident Response | Security Team | Annually | 180 min | IR process, forensics, communication | Workshop attendance | {{ meta-organisation-roles.role_CISO }} | Active |
 
 [TODO: Add additional training]
 
@@ -333,7 +333,7 @@ For audits, the following evidence is provided:
 - **ISO/IEC 27002:2022** - Control 6.3: Information security awareness, education and training
 
 **Approved by:**  
-{{ meta.ciso.name }}, CISO  
+{{ meta-organisation-roles.role_CISO }}, CISO  
 Date: {{ meta-handbook.modifydate }}
 
 **Next Review:** {{ meta-handbook.next_review }}

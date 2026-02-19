@@ -38,7 +38,7 @@ Diese Policy gilt für:
 - **Systeme:** Alle IT-Systeme, Anwendungen, Datenbanken, Speichermedien
 - **Personen:** Alle Mitarbeiter, Auftragnehmer, Lieferanten und Dritte mit Zugang zu Informationen
 - **Lebenszyklus:** Erstellung, Speicherung, Verarbeitung, Übertragung, Archivierung, Vernichtung
-- **Standorte:** {{ netbox.site.name }} und alle weiteren Betriebsstandorte
+- **Standorte:** [[ netbox.site.name ]] und alle weiteren Betriebsstandorte
 
 **Ausnahmen:** Ausnahmen sind nur über den definierten Ausnahmenprozess (`0640_Policy_Ausnahmen_und_Risk_Waivers.md`) zulässig.
 
@@ -110,9 +110,9 @@ Die Klassifizierung und das Handling personenbezogener Daten erfolgt in Überein
 
 ### Schlüsselrollen
 
-- **Policy Owner:** {{ meta.ciso.name }} (CISO)
+- **Policy Owner:** {{ meta-organisation-roles.role_CISO }} (CISO)
 - **Information Owner:** Fachbereichsleiter, Systemverantwortliche
-- **Data Protection Officer:** {{ meta.dpo.name }}
+- **Data Protection Officer:** {{ meta-handbook.dpo_name }}
 - **Umsetzungsverantwortliche:** Alle Mitarbeiter, IT-Betrieb
 - **Kontroll-/Prüfinstanz:** ISMS, Internal Audit, DPO
 
@@ -191,7 +191,7 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **BSI IT-Grundschutz** - Baustein CON.6 Löschen und Vernichten
 
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
 Datum: {{ meta-handbook.modifydate }}
 
 **Nächster Review:** {{ meta-handbook.next_review }} (jährlich oder anlassbezogen)

@@ -30,10 +30,10 @@ This document describes regular maintenance tasks, operations checklists, and ho
 
 | Category | Description | Frequency | Responsible |
 |---|---|---|---|
-| **Preventive** | Preventive measures to avoid failures | Regular | {{ meta-organisation-roles.role_it_operations_manager.name }} |
-| **Corrective** | Fixing known problems | As needed | {{ meta-organisation-roles.role_it_operations_manager.name }} |
-| **Adaptive** | Adaptation to new requirements | As needed | {{ meta-organisation-roles.role_it_operations_manager.name }} |
-| **Perfective** | Improvement and optimization | Planned | {{ meta-organisation-roles.role_it_operations_manager.name }} |
+| **Preventive** | Preventive measures to avoid failures | Regular | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| **Corrective** | Fixing known problems | As needed | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| **Adaptive** | Adaptation to new requirements | As needed | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| **Perfective** | Improvement and optimization | Planned | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
 
 ### Maintenance Windows
 
@@ -48,7 +48,7 @@ This document describes regular maintenance tasks, operations checklists, and ho
 #### Emergency Maintenance
 - **Time Window:** Anytime after approval
 - **Announcement:** Minimum 4 hours (if possible)
-- **Approval:** {{ meta-organisation-roles.role_cio.name }}
+- **Approval:** {{ meta-organisation-roles.role_CIO }}
 - **Communication:** Inform all stakeholders
 
 ## Daily Routines
@@ -125,7 +125,7 @@ This document describes regular maintenance tasks, operations checklists, and ho
 - [ ] Assign resources
 - [ ] Identify risks
 
-**Participants:** {{ meta-organisation-roles.role_it_operations_manager.name }}, Operations Team  
+**Participants:** {{ meta-organisation-roles.role_IT_Operations_Manager }}, Operations Team  
 **Duration:** 30 minutes  
 **Documentation:** Weekly Planning Notes
 
@@ -172,7 +172,7 @@ This document describes regular maintenance tasks, operations checklists, and ho
 - [ ] Review security incidents
 - [ ] Check compliance status
 
-**Responsible:** Operations Team, {{ meta-organisation-roles.role_ciso.name }}  
+**Responsible:** Operations Team, {{ meta-organisation-roles.role_CISO }}  
 **Duration:** 1-2 hours  
 **Documentation:** Weekly Security Report
 
@@ -185,7 +185,7 @@ This document describes regular maintenance tasks, operations checklists, and ho
 - [ ] Prepare next week
 - [ ] Brief weekend on-call
 
-**Participants:** {{ meta-organisation-roles.role_it_operations_manager.name }}, Operations Team  
+**Participants:** {{ meta-organisation-roles.role_IT_Operations_Manager }}, Operations Team  
 **Duration:** 30 minutes  
 **Documentation:** Weekly Summary Report
 
@@ -222,7 +222,7 @@ This document describes regular maintenance tasks, operations checklists, and ho
 - [ ] Check budget status
 - [ ] Update capacity planning
 
-**Participants:** {{ meta-organisation-roles.role_cio.name }}, {{ meta-organisation-roles.role_it_operations_manager.name }}, Team Leads  
+**Participants:** {{ meta-organisation-roles.role_CIO }}, {{ meta-organisation-roles.role_IT_Operations_Manager }}, Team Leads  
 **Duration:** 1 hour  
 **Documentation:** Monthly Planning Document
 
@@ -249,7 +249,7 @@ This document describes regular maintenance tasks, operations checklists, and ho
 - [ ] Assess scaling needs
 - [ ] Check budget implications
 
-**Responsible:** {{ meta-organisation-roles.role_it_operations_manager.name }}  
+**Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }}  
 **Duration:** 2-3 hours  
 **Documentation:** Monthly Capacity Report
 
@@ -263,7 +263,7 @@ This document describes regular maintenance tasks, operations checklists, and ho
 - [ ] Perform vulnerability scan
 - [ ] Check compliance status
 
-**Responsible:** {{ meta-organisation-roles.role_ciso.name }}, Operations Team  
+**Responsible:** {{ meta-organisation-roles.role_CISO }}, Operations Team  
 **Duration:** 3-4 hours  
 **Documentation:** Monthly Security Audit Report
 
@@ -277,7 +277,7 @@ This document describes regular maintenance tasks, operations checklists, and ho
 - [ ] Identify improvements
 - [ ] Update DR plan
 
-**Responsible:** {{ meta-organisation-roles.role_it_operations_manager.name }}  
+**Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }}  
 **Duration:** 2-4 hours  
 **Documentation:** DR Test Report
 
@@ -291,9 +291,9 @@ This document describes regular maintenance tasks, operations checklists, and ho
 - [ ] Security report
 - [ ] SLA compliance report
 
-**Responsible:** {{ meta-organisation-roles.role_it_operations_manager.name }}  
+**Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }}  
 **Duration:** 2-3 hours  
-**Recipients:** {{ meta-organisation-roles.role_cio.name }}, Stakeholders
+**Recipients:** {{ meta-organisation-roles.role_CIO }}, Stakeholders
 
 ## Quarterly Routines
 
@@ -306,7 +306,7 @@ This document describes regular maintenance tasks, operations checklists, and ho
 - [ ] Conduct budget review
 - [ ] Update resource planning
 
-**Participants:** {{ meta-organisation-roles.role_ceo.name }}, {{ meta-organisation-roles.role_cio.name }}, {{ meta-organisation-roles.role_it_operations_manager.name }}  
+**Participants:** {{ meta-organisation-roles.role_CEO }}, {{ meta-organisation-roles.role_CIO }}, {{ meta-organisation-roles.role_IT_Operations_Manager }}  
 **Duration:** 2 hours  
 **Documentation:** Quarterly Planning Document
 
@@ -319,7 +319,7 @@ This document describes regular maintenance tasks, operations checklists, and ho
 - [ ] Identify consolidation potentials
 - [ ] Conduct investment planning
 
-**Responsible:** {{ meta-organisation-roles.role_it_operations_manager.name }}  
+**Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }}  
 **Duration:** 1 day  
 **Documentation:** Quarterly Infrastructure Report
 
@@ -332,7 +332,7 @@ This document describes regular maintenance tasks, operations checklists, and ho
 - [ ] Define improvement measures
 - [ ] Create implementation plan
 
-**Responsible:** {{ meta-organisation-roles.role_it_operations_manager.name }}, Team Leads  
+**Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }}, Team Leads  
 **Duration:** 1 day  
 **Documentation:** Process Improvement Plan
 
@@ -346,7 +346,7 @@ This document describes regular maintenance tasks, operations checklists, and ho
 - [ ] Validate communication processes
 - [ ] Document lessons learned
 
-**Responsible:** {{ meta-organisation-roles.role_cio.name }}, {{ meta-organisation-roles.role_it_operations_manager.name }}  
+**Responsible:** {{ meta-organisation-roles.role_CIO }}, {{ meta-organisation-roles.role_IT_Operations_Manager }}  
 **Duration:** 1 day  
 **Documentation:** Quarterly DR Test Report
 
@@ -361,7 +361,7 @@ This document describes regular maintenance tasks, operations checklists, and ho
 - [ ] Finalize annual budget
 - [ ] Resource planning for the year
 
-**Participants:** {{ meta-organisation-roles.role_ceo.name }}, {{ meta-organisation-roles.role_cio.name }}, {{ meta-organisation-roles.role_cfo.name }}, {{ meta-organisation-roles.role_it_operations_manager.name }}  
+**Participants:** {{ meta-organisation-roles.role_CEO }}, {{ meta-organisation-roles.role_CIO }}, {{ meta-organisation-roles.role_CFO }}, {{ meta-organisation-roles.role_IT_Operations_Manager }}  
 **Duration:** 1 day  
 **Documentation:** Annual Planning Document
 
@@ -375,7 +375,7 @@ This document describes regular maintenance tasks, operations checklists, and ho
 - [ ] Architecture review
 - [ ] Identify modernization needs
 
-**Responsible:** {{ meta-organisation-roles.role_cio.name }}, {{ meta-organisation-roles.role_it_operations_manager.name }}  
+**Responsible:** {{ meta-organisation-roles.role_CIO }}, {{ meta-organisation-roles.role_IT_Operations_Manager }}  
 **Duration:** 1 week  
 **Documentation:** Annual Infrastructure Audit Report
 
@@ -389,7 +389,7 @@ This document describes regular maintenance tasks, operations checklists, and ho
 - [ ] Test communication processes
 - [ ] Comprehensive documentation
 
-**Responsible:** {{ meta-organisation-roles.role_cio.name }}, {{ meta-organisation-roles.role_it_operations_manager.name }}  
+**Responsible:** {{ meta-organisation-roles.role_CIO }}, {{ meta-organisation-roles.role_IT_Operations_Manager }}  
 **Duration:** 2-3 days  
 **Documentation:** Annual DR Test Report
 
@@ -403,7 +403,7 @@ This document describes regular maintenance tasks, operations checklists, and ho
 - [ ] Prepare next year
 - [ ] Create management presentation
 
-**Participants:** {{ meta-organisation-roles.role_ceo.name }}, {{ meta-organisation-roles.role_cio.name }}, {{ meta-organisation-roles.role_cfo.name }}, {{ meta-organisation-roles.role_it_operations_manager.name }}  
+**Participants:** {{ meta-organisation-roles.role_CEO }}, {{ meta-organisation-roles.role_CIO }}, {{ meta-organisation-roles.role_CFO }}, {{ meta-organisation-roles.role_IT_Operations_Manager }}  
 **Duration:** 1 day  
 **Documentation:** Annual Review Report
 
@@ -498,7 +498,7 @@ This document describes regular maintenance tasks, operations checklists, and ho
 
 | Routine | Frequency | Tool/Script | Responsible |
 |---|---|---|---|
-| Backup Jobs | Daily | [TODO: Backup Tool] | {{ meta-organisation-roles.role_it_operations_manager.name }} |
+| Backup Jobs | Daily | [TODO: Backup Tool] | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
 | Log Rotation | Daily | logrotate | Automated |
 | Health Checks | Hourly | [TODO: Monitoring Tool] | Automated |
 | Disk Cleanup | Weekly | [TODO: Script] | Automated |
@@ -625,5 +625,5 @@ This document describes regular maintenance tasks, operations checklists, and ho
 
 **Last Update:** {{ meta-handbook.date }}  
 **Next Review:** [TODO: Date]  
-**Contact:** {{ meta-organisation-roles.role_it_operations_manager.email }}
+**Contact:** {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
 

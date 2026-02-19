@@ -21,7 +21,7 @@ Dieses Dokument beschreibt die Disaster-Recovery- und Business-Continuity-Strate
 
 **Geltungsbereich:** Alle kritischen IT-Services und Geschäftsprozesse von {{ meta-organisation.name }}
 
-**Verantwortlich:** {{ meta-organisation-roles.role_cio.name }} ({{ meta-organisation-roles.role_cio.email }})
+**Verantwortlich:** {{ meta-organisation-roles.role_CIO }} ({{ meta-organisation-roles.role_CIO_email }})
 
 ## Grundlagen
 
@@ -89,7 +89,7 @@ Fähigkeit einer Organisation, kritische Geschäftsprozesse während und nach ei
 
 **Wahrscheinlichkeit:** Niedrig  
 **Impact:** Sehr hoch  
-**Betroffene Standorte:** {{ netbox.site.primary }}, {{ netbox.site.secondary }}
+**Betroffene Standorte:** [[ netbox.site.primary ]], [[ netbox.site.secondary ]]
 
 **Mitigations:**
 - Geografisch getrennte DR-Site
@@ -208,7 +208,7 @@ Fähigkeit einer Organisation, kritische Geschäftsprozesse während und nach ei
 - Komplexe Konfiguration
 - Hohe Netzwerk-Anforderungen
 
-**Anwendung:** Tier 0 Services ({{ netbox.service.critical }})
+**Anwendung:** Tier 0 Services ([[ netbox.service.critical ]])
 
 **Kosten:** ~200% der Produktions-Infrastruktur
 
@@ -231,7 +231,7 @@ Fähigkeit einer Organisation, kritische Geschäftsprozesse während und nach ei
 - Reduzierte Performance initial
 - Regelmäßige Tests erforderlich
 
-**Anwendung:** Tier 1 Services ({{ netbox.service.important }})
+**Anwendung:** Tier 1 Services ([[ netbox.service.important ]])
 
 **Kosten:** ~50-70% der Produktions-Infrastruktur
 
@@ -254,7 +254,7 @@ Fähigkeit einer Organisation, kritische Geschäftsprozesse während und nach ei
 - Manuelle Prozesse
 - Höheres Risiko
 
-**Anwendung:** Tier 2 Services ({{ netbox.service.standard }})
+**Anwendung:** Tier 2 Services ([[ netbox.service.standard ]])
 
 **Kosten:** ~20-30% der Produktions-Infrastruktur
 
@@ -284,34 +284,34 @@ Fähigkeit einer Organisation, kritische Geschäftsprozesse während und nach ei
 
 ### Primärer Standort
 
-**Standort:** {{ netbox.site.primary }}  
-**Adresse:** {{ netbox.site.primary_address }}  
-**Rechenzentrum:** {{ netbox.site.primary_datacenter }}
+**Standort:** [[ netbox.site.primary ]]  
+**Adresse:** [[ netbox.site.primary_address ]]  
+**Rechenzentrum:** [[ netbox.site.primary_datacenter ]]
 
 **Infrastruktur:**
-- Produktions-Server: {{ netbox.device.count_primary }}
-- Storage-Kapazität: {{ netbox.storage.capacity_primary }}
-- Netzwerk-Bandbreite: {{ netbox.network.bandwidth_primary }}
+- Produktions-Server: [[ netbox.device.count_primary ]]
+- Storage-Kapazität: [[ netbox.storage.capacity_primary ]]
+- Netzwerk-Bandbreite: [[ netbox.network.bandwidth_primary ]]
 - Stromversorgung: Redundant (N+1)
 
 ### DR-Standort
 
-**Standort:** {{ netbox.site.dr }}  
-**Adresse:** {{ netbox.site.dr_address }}  
-**Rechenzentrum:** {{ netbox.site.dr_datacenter }}  
-**Entfernung:** {{ netbox.site.distance }} km
+**Standort:** [[ netbox.site.dr ]]  
+**Adresse:** [[ netbox.site.dr_address ]]  
+**Rechenzentrum:** [[ netbox.site.dr_datacenter ]]  
+**Entfernung:** [[ netbox.site.distance ]] km
 
 **Infrastruktur:**
-- DR-Server: {{ netbox.device.count_dr }}
-- Storage-Kapazität: {{ netbox.storage.capacity_dr }}
-- Netzwerk-Bandbreite: {{ netbox.network.bandwidth_dr }}
+- DR-Server: [[ netbox.device.count_dr ]]
+- Storage-Kapazität: [[ netbox.storage.capacity_dr ]]
+- Netzwerk-Bandbreite: [[ netbox.network.bandwidth_dr ]]
 - Stromversorgung: Redundant (N+1)
 
 ### Replikations-Verbindung
 
-**Verbindungstyp:** {{ netbox.network.replication_type }}  
-**Bandbreite:** {{ netbox.network.replication_bandwidth }}  
-**Latenz:** {{ netbox.network.replication_latency }} ms  
+**Verbindungstyp:** [[ netbox.network.replication_type ]]  
+**Bandbreite:** [[ netbox.network.replication_bandwidth ]]  
+**Latenz:** [[ netbox.network.replication_latency ]] ms  
 **Redundanz:** Dual-Path
 
 **Replikations-Technologien:**
@@ -389,8 +389,8 @@ Fähigkeit einer Organisation, kritische Geschäftsprozesse während und nach ei
 #### 2. DR-Team Activation
 
 **DR-Team-Mitglieder:**
-- **DR-Coordinator:** {{ meta-organisation-roles.role_cio.name }}
-- **Technical Lead:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+- **DR-Coordinator:** {{ meta-organisation-roles.role_CIO }}
+- **Technical Lead:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - **Network Lead:** [Name]
 - **Storage Lead:** [Name]
 - **Application Lead:** [Name]
@@ -696,7 +696,7 @@ Fähigkeit einer Organisation, kritische Geschäftsprozesse während und nach ei
 - DR-Tests koordinieren
 - Disaster-Declaration
 
-**Person:** {{ meta-organisation-roles.role_cio.name }}
+**Person:** {{ meta-organisation-roles.role_CIO }}
 
 ### BC-Manager
 
@@ -706,7 +706,7 @@ Fähigkeit einer Organisation, kritische Geschäftsprozesse während und nach ei
 - BC-Pläne erstellen
 - BC-Training
 
-**Person:** {{ meta-organisation-roles.role_coo.name }}
+**Person:** {{ meta-organisation-roles.role_COO }}
 
 ### DR-Team
 

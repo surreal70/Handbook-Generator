@@ -28,7 +28,7 @@ ISO 27001:2022 Annex A Reference: A.5.29, A.5.30
 **Document ID:** 0440  
 **Document Type:** Policy (abstract)  
 **Standard Reference:** ISO/IEC 27001:2022 Annex A.5.29, A.5.30 (incl. Amendment 1:2024)  
-**Owner:** {{ meta.ciso.name }}  
+**Owner:** {{ meta-organisation-roles.role_CISO }}  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
@@ -47,7 +47,7 @@ This policy applies to:
 - **Systems:** All business-critical IT systems, applications, infrastructure, cloud services
 - **Scenarios:** Natural disasters, cyberattacks, system failures, pandemics, supplier failures
 - **Interfaces:** Integration with BCM (Business Continuity Management)
-- **Locations:** {{ netbox.site.name }} and all other operational sites
+- **Locations:** [[ netbox.site.name ]] and all other operational sites
 
 **Exceptions:** Exceptions are only permitted through the defined exception process (`0640_Policy_Exceptions_and_Risk_Waivers.md`).
 
@@ -102,10 +102,10 @@ Clear escalation paths define when an IT incident escalates to a business contin
 
 ### Key Roles
 
-- **Policy Owner:** {{ meta.ciso.name }} (CISO)
-- **BCM Manager:** {{ meta.bcm.manager }}
-- **DR Coordinator:** {{ meta.it.dr_coordinator }}
-- **CIO:** {{ meta.cio.name }}
+- **Policy Owner:** {{ meta-organisation-roles.role_CISO }} (CISO)
+- **BCM Manager:** {{ meta-handbook.bcm_manager }}
+- **DR Coordinator:** {{ meta-handbook.it_dr_coordinator }}
+- **CIO:** {{ meta-organisation-roles.role_CIO }}
 - **Implementation Responsible:** IT Operations, System Owners
 - **Control/Audit Function:** ISMS, Internal Audit
 
@@ -182,7 +182,7 @@ Exceptions to this policy are only permitted in justified cases:
 - **BSI Standard 100-4** - Business Continuity Management
 
 **Approved by:**  
-{{ meta.management.ceo }}, Management  
+{{ meta-handbook.management_ceo }}, Management  
 Date: {{ meta-handbook.modifydate }}
 
 **Next Review:** {{ meta-handbook.next_review }} (annually or as needed)

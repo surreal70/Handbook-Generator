@@ -127,7 +127,7 @@ This guideline specifies the `0540_Policy_Configuration_and_Hardening.md` and de
 
 ### 4.1 Configuration Management Database (CMDB)
 
-**System:** {{ meta.itsm.cmdb }}
+**System:** {{ meta-handbook.itsm_cmdb }}
 
 **Documented Configurations:**
 - System type and version
@@ -190,7 +190,7 @@ This guideline specifies the `0540_Policy_Configuration_and_Hardening.md` and de
 - Versioning
 - Rollback capability
 
-**Retention:** {{ meta.retention.config_years }} years
+**Retention:** {{ meta-handbook.retention_config_years }} years
 
 ## 6. Exceptions and Deviations
 
@@ -270,7 +270,7 @@ This guideline specifies the `0540_Policy_Configuration_and_Hardening.md` and de
 - Test procedures
 - Rollback procedures
 
-**Location:** {{ meta.documentation.baseline_repo }}
+**Location:** {{ meta-handbook.documentation_baseline_repo }}
 
 ## 9. Compliance and Audit
 
@@ -302,6 +302,6 @@ This guideline specifies the `0540_Policy_Configuration_and_Hardening.md` and de
 - **CIS Benchmarks** - https://www.cisecurity.org/cis-benchmarks/
 - **NIST SP 800-70** - Security Configuration Checklists
 
-**Approved by:** {{ meta.ciso.name }}, CISO  
+**Approved by:** {{ meta-organisation-roles.role_CISO }}, CISO  
 **Next Review:** {{ meta-handbook.next_review }}
 

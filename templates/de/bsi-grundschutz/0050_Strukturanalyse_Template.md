@@ -30,7 +30,7 @@ Die Strukturanalyse erfasst systematisch die Struktur des Informationsverbunds v
 - Basis-Sicherheitscheck (Dokument 0080)
 - Risikoanalyse (Dokument 0090)
 
-**Verantwortlich:** {{ meta.ciso.name }} (ISB)
+**Verantwortlich:** {{ meta-organisation-roles.role_CISO }} (ISB)
 
 ## 2. Vorgehen und Methodik
 
@@ -40,11 +40,11 @@ Folgende Datenquellen werden für die Strukturanalyse genutzt:
 
 | Datenquelle | Typ | Verantwortlich | Aktualität |
 |---|---|---|---|
-| CMDB/Asset-Inventar | System | {{ meta.cio.name }} | [TODO] |
-| Netzwerkdokumentation | Dokument | {{ meta.cio.name }} | [TODO] |
-| Architekturdiagramme | Dokument | {{ meta.cio.name }} | [TODO] |
+| CMDB/Asset-Inventar | System | {{ meta-organisation-roles.role_CIO }} | [TODO] |
+| Netzwerkdokumentation | Dokument | {{ meta-organisation-roles.role_CIO }} | [TODO] |
+| Architekturdiagramme | Dokument | {{ meta-organisation-roles.role_CIO }} | [TODO] |
 | Verträge mit Dienstleistern | Dokument | [TODO] | [TODO] |
-| Interviews mit Stakeholdern | Primärquelle | {{ meta.ciso.name }} | [TODO] |
+| Interviews mit Stakeholdern | Primärquelle | {{ meta-organisation-roles.role_CISO }} | [TODO] |
 
 ### 2.2 Granularität
 
@@ -65,8 +65,8 @@ Die Strukturanalyse erfolgt auf folgenden Granularitätsebenen:
 - **Abschluss:** [TODO]
 
 **Beteiligte:**
-- ISB: {{ meta.ciso.name }}
-- IT-Leitung: {{ meta.cio.name }}
+- ISB: {{ meta-organisation-roles.role_CISO }}
+- IT-Leitung: {{ meta-organisation-roles.role_CIO }}
 - Informationsverbund-Verantwortliche: [TODO]
 - Fachabteilungen: [TODO]
 
@@ -117,10 +117,10 @@ Document all IT systems and components. Use NetBox data where available.
 
 | ID | System/Komponente | Typ | Owner | Standort/Region | Betrieb | IP-Adresse | Bemerkungen |
 |---|---|---|---|---|---|---|---|
-| S-001 | {{ netbox.device.server_001 }} | Server | {{ meta.cio.name }} | [TODO] | Intern | {{ netbox.ip.server_001 }} | [TODO] |
-| S-002 | [TODO: System 2] | Datenbank | {{ meta.cio.name }} | [TODO] | Intern/Extern | [TODO] | [TODO] |
-| S-003 | [TODO: System 3] | Storage | {{ meta.cio.name }} | [TODO] | Intern/Extern | [TODO] | [TODO] |
-| S-004 | [TODO: System 4] | Firewall | {{ meta.cio.name }} | [TODO] | Intern | [TODO] | [TODO] |
+| S-001 | [[ netbox.device.server_001 ]] | Server | {{ meta-organisation-roles.role_CIO }} | [TODO] | Intern | [[ netbox.ip.server_001 ]] | [TODO] |
+| S-002 | [TODO: System 2] | Datenbank | {{ meta-organisation-roles.role_CIO }} | [TODO] | Intern/Extern | [TODO] | [TODO] |
+| S-003 | [TODO: System 3] | Storage | {{ meta-organisation-roles.role_CIO }} | [TODO] | Intern/Extern | [TODO] | [TODO] |
+| S-004 | [TODO: System 4] | Firewall | {{ meta-organisation-roles.role_CIO }} | [TODO] | Intern | [TODO] | [TODO] |
 
 **Anzahl IT-Systeme gesamt:** [TODO]
 
@@ -141,10 +141,10 @@ Document network segments, VLANs, and zones. Use NetBox data where available.
 
 | ID | Netz/Zone | Zweck | Segmentierung | Internetzugang | VLAN-ID | Betreiber | Sicherheitszone |
 |---|---|---|---|---|---|---|---|
-| N-001 | Management-Netz | Administration | Ja | Nein | {{ netbox.vlan.management }} | {{ meta.cio.name }} | Hochsicher |
-| N-002 | Produktiv-Netz | Geschäftsanwendungen | Ja | Ja (gefiltert) | [TODO] | {{ meta.cio.name }} | Sicher |
-| N-003 | DMZ | Externe Services | Ja | Ja | [TODO] | {{ meta.cio.name }} | Mittel |
-| N-004 | Gast-WLAN | Gäste | Ja | Ja (isoliert) | [TODO] | {{ meta.cio.name }} | Niedrig |
+| N-001 | Management-Netz | Administration | Ja | Nein | [[ netbox.vlan.management ]] | {{ meta-organisation-roles.role_CIO }} | Hochsicher |
+| N-002 | Produktiv-Netz | Geschäftsanwendungen | Ja | Ja (gefiltert) | [TODO] | {{ meta-organisation-roles.role_CIO }} | Sicher |
+| N-003 | DMZ | Externe Services | Ja | Ja | [TODO] | {{ meta-organisation-roles.role_CIO }} | Mittel |
+| N-004 | Gast-WLAN | Gäste | Ja | Ja (isoliert) | [TODO] | {{ meta-organisation-roles.role_CIO }} | Niedrig |
 
 **Anzahl Netzwerksegmente gesamt:** [TODO]
 
@@ -193,9 +193,9 @@ Document key personnel and roles relevant for information security.
 
 | Rolle | Name | Verantwortungsbereich | Kontakt | Stellvertreter |
 |---|---|---|---|---|
-| Geschäftsführung | {{ meta.ceo.name }} | Gesamtverantwortung | {{ meta.ceo.email }} | [TODO] |
-| ISB | {{ meta.ciso.name }} | ISMS-Koordination | {{ meta.ciso.email }} | [TODO] |
-| IT-Leitung | {{ meta.cio.name }} | IT-Betrieb | {{ meta.cio.email }} | [TODO] |
+| Geschäftsführung | {{ meta-organisation-roles.role_CEO }} | Gesamtverantwortung | {{ meta-organisation-roles.role_CEO_email }} | [TODO] |
+| ISB | {{ meta-organisation-roles.role_CISO }} | ISMS-Koordination | {{ meta-organisation-roles.role_CISO_email }} | [TODO] |
+| IT-Leitung | {{ meta-organisation-roles.role_CIO }} | IT-Betrieb | {{ meta-organisation-roles.role_CIO_email }} | [TODO] |
 | [TODO: Weitere Rollen] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## 4. Abhängigkeiten und Schnittstellen
@@ -248,10 +248,10 @@ Save in: diagrams/
 ### 6.1 Validierungsprozess
 
 Die Strukturanalyse wird validiert durch:
-1. **Review durch IT-Leitung:** {{ meta.cio.name }}
+1. **Review durch IT-Leitung:** {{ meta-organisation-roles.role_CIO }}
 2. **Review durch Informationsverbund-Verantwortliche:** [TODO]
 3. **Abgleich mit CMDB/Inventar:** [TODO: Datum]
-4. **Freigabe durch ISB:** {{ meta.ciso.name }}
+4. **Freigabe durch ISB:** {{ meta-organisation-roles.role_CISO }}
 
 ### 6.2 Vollständigkeitsprüfung
 
@@ -273,15 +273,15 @@ Die Strukturanalyse wird aktualisiert bei:
 - Organisatorischen Änderungen
 - Mindestens jährlich im Rahmen des ISMS-Reviews
 
-**Verantwortlich:** {{ meta.ciso.name }} (ISB)  
+**Verantwortlich:** {{ meta-organisation-roles.role_CISO }} (ISB)  
 **Nächster Review:** {{ meta-handbook.next_review }}
 
 ## 8. Freigabe
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
-| IT-Leitung | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| ISB | {{ meta-organisation-roles.role_CISO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| IT-Leitung | {{ meta-organisation-roles.role_CIO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **Referenzen:**
 - BSI Standard 200-2: IT-Grundschutz-Methodik (Kapitel 5: Strukturanalyse)

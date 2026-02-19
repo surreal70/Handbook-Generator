@@ -17,7 +17,7 @@
 
 ## 1. Purpose
 
-This document provides a traceability matrix for all NIST 800-53 security controls for system {{ meta.nist.system_name }}.
+This document provides a traceability matrix for all NIST 800-53 security controls for system {{ meta-handbook.system_name }}.
 
 ## 2. Control Traceability Matrix
 

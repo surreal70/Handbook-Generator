@@ -28,7 +28,7 @@ ISO 27001:2022 Annex A Reference: A.5.10 (Acceptable use of information and othe
 **Document ID:** 0200  
 **Document Type:** Policy (Abstract)  
 **Standard Reference:** ISO/IEC 27001:2022 Annex A.5.10 (incl. Amendment 1:2024)  
-**Owner:** {{ meta.ciso.name }}  
+**Owner:** {{ meta-organisation-roles.role_CISO }}  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
@@ -52,7 +52,7 @@ This policy applies to:
 - **Systems:** All IT systems, networks, applications, email, internet, cloud services
 - **Persons:** All employees, contractors, temporary workers, interns, and third parties with access to IT resources
 - **Devices:** Company-owned and private devices (BYOD) accessing company resources
-- **Locations:** {{ netbox.site.name }} and all operational sites
+- **Locations:** [[ netbox.site.name ]] and all operational sites
 
 **Exceptions:** Exceptions are only permitted through the defined exception process (`0640_Policy_Exceptions_and_Risk_Waivers.md`).
 
@@ -103,7 +103,7 @@ acceptable use requirements and risk profile.
 
 ### Key Roles
 
-- **Policy Owner:** {{ meta.ciso.name }} (CISO)
+- **Policy Owner:** {{ meta-organisation-roles.role_CISO }} (CISO)
 - **Implementation Responsible:** IT Operations, HR
 - **Control/Audit Authority:** ISMS, Internal Audit, Legal/Compliance
 
@@ -179,7 +179,7 @@ Exceptions to this policy are only permitted in justified cases:
 - Employment law requirements for IT use
 
 **Approved by:**  
-{{ meta.management.ceo }}, Management  
+{{ meta-handbook.management_ceo }}, Management  
 Date: {{ meta-handbook.modifydate }}
 
 **Next Review:** {{ meta-handbook.next_review }} (annually or as needed)

@@ -27,7 +27,7 @@ ISO 27001:2022 Annex A Reference: A.5.14, A.8.24, A.8.26
 **Document ID:** 0660  
 **Document Type:** Policy (abstract)  
 **Standard Reference:** ISO/IEC 27001:2022 Annex A.5.14, A.8.24, A.8.26 (incl. Amendment 1:2024)  
-**Owner:** {{ meta.ciso.name }}  
+**Owner:** {{ meta-organisation-roles.role_CISO }}  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
@@ -46,7 +46,7 @@ This policy applies to:
 - **Communication Channels:** Email, messaging, file sharing, collaboration tools
 - **Data:** All information (especially confidential and personal data)
 - **Transmission Paths:** Internal, external, cloud, partners
-- **Locations:** {{ netbox.site.name }} and all other operational sites
+- **Locations:** [[ netbox.site.name ]] and all other operational sites
 
 **Exceptions:** Exceptions are only permitted through the defined exception process (`0640_Policy_Exceptions_and_Risk_Waivers.md`).
 
@@ -105,10 +105,10 @@ Business social media use follows social media guidelines. Confidential informat
 
 ### Key Roles
 
-- **Policy Owner:** {{ meta.ciso.name }} (CISO)
-- **Communication Security Manager:** {{ meta.communication.security_manager }}
-- **IT Operations Manager:** {{ meta.it.operations_manager }}
-- **Data Protection Officer:** {{ meta.dpo.name }}
+- **Policy Owner:** {{ meta-organisation-roles.role_CISO }} (CISO)
+- **Communication Security Manager:** {{ meta-handbook.communication_security_manager }}
+- **IT Operations Manager:** {{ meta-handbook.it_operations_manager }}
+- **Data Protection Officer:** {{ meta-handbook.dpo_name }}
 - **Implementation Responsible:** IT Operations, End Users
 - **Control/Audit Function:** ISMS, Internal Audit, DPO
 
@@ -189,7 +189,7 @@ Exceptions to this policy are only permitted in justified exceptional cases:
 - **RFC 7489** - Domain-based Message Authentication, Reporting, and Conformance (DMARC)
 
 **Approved by:**  
-{{ meta.management.ceo }}, Executive Management  
+{{ meta-handbook.management_ceo }}, Executive Management  
 Date: {{ meta-handbook.modifydate }}
 
 **Next Review:** {{ meta-handbook.next_review }} (annually or as needed)

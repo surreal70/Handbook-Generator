@@ -20,7 +20,7 @@
 This document describes configuration management and the Configuration Management Database (CMDB) for the IT service. It defines CI categories, attributes, relationships, and change processes for Configuration Items.
 
 **Service:** {{ meta-handbook.service_name }}  
-**Responsible:** {{ meta-organisation-roles.role_it_operations_manager.name }}  
+**Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }}  
 **CMDB System:** NetBox  
 **Version:** {{ meta-handbook.revision }}
 
@@ -47,9 +47,9 @@ This document describes configuration management and the Configuration Managemen
 ### CMDB System: NetBox
 
 **NetBox Instance:**
-- **URL:** {{ netbox.url }}
+- **URL:** [[ netbox.url ]]
 - **Version:** [TODO]
-- **Responsible:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+- **Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 **NetBox Functions:**
 - IP Address Management (IPAM)
@@ -88,38 +88,38 @@ This document describes configuration management and the Configuration Managemen
 #### Servers
 **Category:** Hardware > Server  
 **Attributes:**
-- **Name:** {{ netbox.device.name }}
-- **Manufacturer:** {{ netbox.device.manufacturer }}
-- **Model:** {{ netbox.device.model }}
-- **Serial Number:** {{ netbox.device.serial }}
-- **Asset Tag:** {{ netbox.device.asset_tag }}
-- **Site:** {{ netbox.device.site }}
-- **Rack:** {{ netbox.device.rack }}
-- **Rack Position:** {{ netbox.device.position }}
+- **Name:** [[ netbox.device.name ]]
+- **Manufacturer:** [[ netbox.device.manufacturer ]]
+- **Model:** [[ netbox.device.model ]]
+- **Serial Number:** [[ netbox.device.serial ]]
+- **Asset Tag:** [[ netbox.device.asset_tag ]]
+- **Site:** [[ netbox.device.site ]]
+- **Rack:** [[ netbox.device.rack ]]
+- **Rack Position:** [[ netbox.device.position ]]
 - **Status:** Active, Planned, Staged, Failed, Decommissioned
-- **Role:** {{ netbox.device.role }}
-- **Primary IP:** {{ netbox.device.primary_ip }}
+- **Role:** [[ netbox.device.role ]]
+- **Primary IP:** [[ netbox.device.primary_ip ]]
 
 #### Network Devices
 **Category:** Hardware > Network  
 **Attributes:**
-- **Name:** {{ netbox.device.name }}
+- **Name:** [[ netbox.device.name ]]
 - **Type:** Switch, Router, Firewall, Load Balancer
-- **Manufacturer:** {{ netbox.device.manufacturer }}
-- **Model:** {{ netbox.device.model }}
-- **Management IP:** {{ netbox.device.primary_ip }}
-- **Site:** {{ netbox.device.site }}
-- **Interfaces:** {{ netbox.device.interfaces }}
-- **VLANs:** {{ netbox.device.vlans }}
+- **Manufacturer:** [[ netbox.device.manufacturer ]]
+- **Model:** [[ netbox.device.model ]]
+- **Management IP:** [[ netbox.device.primary_ip ]]
+- **Site:** [[ netbox.device.site ]]
+- **Interfaces:** [[ netbox.device.interfaces ]]
+- **VLANs:** [[ netbox.device.vlans ]]
 
 #### Storage
 **Category:** Hardware > Storage  
 **Attributes:**
-- **Name:** {{ netbox.device.name }}
+- **Name:** [[ netbox.device.name ]]
 - **Type:** SAN, NAS, DAS
 - **Capacity:** [TODO] TB
-- **Manufacturer:** {{ netbox.device.manufacturer }}
-- **Site:** {{ netbox.device.site }}
+- **Manufacturer:** [[ netbox.device.manufacturer ]]
+- **Site:** [[ netbox.device.site ]]
 
 ### Software CIs
 
@@ -129,7 +129,7 @@ This document describes configuration management and the Configuration Managemen
 - **Name:** [TODO: e.g., Ubuntu Server 22.04]
 - **Version:** [TODO]
 - **License:** [TODO]
-- **Installed on:** {{ netbox.device.name }}
+- **Installed on:** [[ netbox.device.name ]]
 - **Patch Level:** [TODO]
 
 #### Applications
@@ -140,7 +140,7 @@ This document describes configuration management and the Configuration Managemen
 - **Vendor:** [TODO]
 - **License:** [TODO]
 - **License Count:** [TODO]
-- **Installed on:** {{ netbox.device.name }}
+- **Installed on:** [[ netbox.device.name ]]
 - **Responsible:** [TODO]
 
 ### Virtualization CIs
@@ -148,21 +148,21 @@ This document describes configuration management and the Configuration Managemen
 #### Hypervisor Clusters
 **Category:** Virtualization > Cluster  
 **Attributes:**
-- **Name:** {{ netbox.cluster.name }}
-- **Type:** {{ netbox.cluster.type }}
-- **Site:** {{ netbox.cluster.site }}
-- **Host Count:** {{ netbox.cluster.device_count }}
+- **Name:** [[ netbox.cluster.name ]]
+- **Type:** [[ netbox.cluster.type ]]
+- **Site:** [[ netbox.cluster.site ]]
+- **Host Count:** [[ netbox.cluster.device_count ]]
 
 #### Virtual Machines
 **Category:** Virtualization > Virtual Machine  
 **Attributes:**
-- **Name:** {{ netbox.vm.name }}
-- **Cluster:** {{ netbox.vm.cluster }}
-- **vCPUs:** {{ netbox.vm.vcpus }}
-- **Memory:** {{ netbox.vm.memory }} GB
-- **Disk:** {{ netbox.vm.disk }} GB
+- **Name:** [[ netbox.vm.name ]]
+- **Cluster:** [[ netbox.vm.cluster ]]
+- **vCPUs:** [[ netbox.vm.vcpus ]]
+- **Memory:** [[ netbox.vm.memory ]] GB
+- **Disk:** [[ netbox.vm.disk ]] GB
 - **Status:** Active, Offline, Staged
-- **Primary IP:** {{ netbox.vm.primary_ip }}
+- **Primary IP:** [[ netbox.vm.primary_ip ]]
 - **Operating System:** [TODO]
 
 ### Network CIs
@@ -170,27 +170,27 @@ This document describes configuration management and the Configuration Managemen
 #### IP Addresses
 **Category:** Network > IP Address  
 **Attributes:**
-- **IP Address:** {{ netbox.ip.address }}
-- **VLAN:** {{ netbox.ip.vlan }}
+- **IP Address:** [[ netbox.ip.address ]]
+- **VLAN:** [[ netbox.ip.vlan ]]
 - **Status:** Active, Reserved, Deprecated
-- **DNS Name:** {{ netbox.ip.dns_name }}
-- **Assigned to:** {{ netbox.ip.assigned_to }}
+- **DNS Name:** [[ netbox.ip.dns_name ]]
+- **Assigned to:** [[ netbox.ip.assigned_to ]]
 
 #### VLANs
 **Category:** Network > VLAN  
 **Attributes:**
-- **VLAN ID:** {{ netbox.vlan.vid }}
-- **Name:** {{ netbox.vlan.name }}
-- **Site:** {{ netbox.vlan.site }}
-- **Description:** {{ netbox.vlan.description }}
+- **VLAN ID:** [[ netbox.vlan.vid ]]
+- **Name:** [[ netbox.vlan.name ]]
+- **Site:** [[ netbox.vlan.site ]]
+- **Description:** [[ netbox.vlan.description ]]
 
 #### Circuits
 **Category:** Network > Circuit  
 **Attributes:**
-- **Circuit ID:** {{ netbox.circuit.cid }}
-- **Provider:** {{ netbox.circuit.provider }}
-- **Type:** {{ netbox.circuit.type }}
-- **Bandwidth:** {{ netbox.circuit.commit_rate }} Mbps
+- **Circuit ID:** [[ netbox.circuit.cid ]]
+- **Provider:** [[ netbox.circuit.provider ]]
+- **Type:** [[ netbox.circuit.type ]]
+- **Bandwidth:** [[ netbox.circuit.commit_rate ]] Mbps
 - **Status:** Active, Planned, Decommissioned
 
 ### Location CIs
@@ -198,11 +198,11 @@ This document describes configuration management and the Configuration Managemen
 #### Sites
 **Category:** Location > Site  
 **Attributes:**
-- **Name:** {{ netbox.site.name }}
-- **Address:** {{ netbox.site.physical_address }}
-- **Facility:** {{ netbox.site.facility }}
+- **Name:** [[ netbox.site.name ]]
+- **Address:** [[ netbox.site.physical_address ]]
+- **Facility:** [[ netbox.site.facility ]]
 - **Status:** Active, Planned, Retired
-- **Contact:** {{ netbox.site.contact_name }}
+- **Contact:** [[ netbox.site.contact_name ]]
 
 ## CI Relationships
 
@@ -373,7 +373,7 @@ This document describes configuration management and the Configuration Managemen
 - **Frequency:** Quarterly
 - **Scope:** Sample of 10% of all CIs
 - **Method:** Compare CMDB data with actual state
-- **Responsible:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+- **Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 #### Automatic Validation
 - **Discovery Tools:** Automatic detection of devices and software
@@ -402,8 +402,8 @@ This document describes configuration management and the Configuration Managemen
 
 ### Access Control
 
-**CMDB Administrator:** {{ meta-organisation-roles.role_it_operations_manager.name }}  
-**Access via:** {{ netbox.url }}  
+**CMDB Administrator:** {{ meta-organisation-roles.role_IT_Operations_Manager }}  
+**Access via:** [[ netbox.url ]]  
 **Authentication:** SSO/LDAP  
 **Audit Logging:** All changes are logged
 
@@ -423,9 +423,9 @@ This document describes configuration management and the Configuration Managemen
 ### API Access
 
 **NetBox API:**
-- **Endpoint:** {{ netbox.url }}/api/
+- **Endpoint:** [[ netbox.url ]]/api/
 - **Authentication:** API Token
-- **Documentation:** {{ netbox.url }}/api/docs/
+- **Documentation:** [[ netbox.url ]]/api/docs/
 - **Rate Limiting:** [TODO: e.g., 1000 requests/hour]
 
 ## CMDB Reporting
@@ -524,14 +524,14 @@ This document describes configuration management and the Configuration Managemen
 ## Contacts
 
 **CMDB Responsible:**
-- **CMDB Administrator:** {{ meta-organisation-roles.role_it_operations_manager.name }} - {{ meta-organisation-roles.role_it_operations_manager.email }}
+- **CMDB Administrator:** {{ meta-organisation-roles.role_IT_Operations_Manager }} - {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
 - **Network Administrator:** [TODO: Name] - [TODO: Email]
 - **Server Administrator:** [TODO: Name] - [TODO: Email]
-- **CIO:** {{ meta-organisation-roles.role_cio.name }} - {{ meta-organisation-roles.role_cio.email }}
+- **CIO:** {{ meta-organisation-roles.role_CIO }} - {{ meta-organisation-roles.role_CIO_email }}
 
 **NetBox Support:**
-- **URL:** {{ netbox.url }}
-- **Documentation:** {{ netbox.url }}/docs/
+- **URL:** [[ netbox.url ]]
+- **Documentation:** [[ netbox.url ]]/docs/
 - **Support:** [TODO: Support contact]
 
 **Document Owner:** {{ meta-handbook.owner }}  

@@ -17,7 +17,7 @@
 
 ## 1. Purpose
 
-This document describes the continuous monitoring strategy for system {{ meta.nist.system_name }}.
+This document describes the continuous monitoring strategy for system {{ meta-handbook.system_name }}.
 
 ## 2. Continuous Monitoring Overview
 

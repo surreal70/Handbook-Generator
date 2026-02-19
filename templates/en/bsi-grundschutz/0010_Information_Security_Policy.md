@@ -50,8 +50,8 @@ This policy applies to:
 
 - **Organization:** {{ meta-organisation.name }}
 - **Locations:** [TODO]
-- **Executive Management:** {{ meta.ceo.name }}
-- **Information Security Officer (ISB):** {{ meta.ciso.name }}
+- **Executive Management:** {{ meta-organisation-roles.role_CEO }}
+- **Information Security Officer (ISB):** {{ meta-organisation-roles.role_CISO }}
 
 ### 2.2 Information Domains in Scope
 
@@ -96,7 +96,7 @@ The Information Security Management System (ISMS) is continuously monitored, ass
 
 ### 4.1 Top Management / Executive Management
 
-**Responsible:** {{ meta.ceo.name }} ({{ meta.ceo.email }})
+**Responsible:** {{ meta-organisation-roles.role_CEO }} ({{ meta-organisation-roles.role_CEO_email }})
 
 Executive management bears overall responsibility for information security and:
 - Approves the information security policy
@@ -106,7 +106,7 @@ Executive management bears overall responsibility for information security and:
 
 ### 4.2 Information Security Officer (ISO)
 
-**Responsible:** {{ meta.ciso.name }} ({{ meta.ciso.email }})
+**Responsible:** {{ meta-organisation-roles.role_CISO }} ({{ meta-organisation-roles.role_CISO_email }})
 
 The ISO is responsible for:
 - Coordination of the ISMS
@@ -117,7 +117,7 @@ The ISO is responsible for:
 
 ### 4.3 IT Management
 
-**Responsible:** {{ meta.cio.name }} ({{ meta.cio.email }})
+**Responsible:** {{ meta-organisation-roles.role_CIO }} ({{ meta-organisation-roles.role_CIO_email }})
 
 IT management is responsible for:
 - Implementation of technical security measures
@@ -165,8 +165,8 @@ This policy is reviewed and updated at least annually or in case of significant 
 
 | Role | Name | Date | Approval |
 |---|---|---|---|
-| Executive Management | {{ meta.ceo.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
-| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| Executive Management | {{ meta-organisation-roles.role_CEO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| ISB | {{ meta-organisation-roles.role_CISO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **References:**
 - BSI Standard 200-1: Management Systems for Information Security (ISMS)

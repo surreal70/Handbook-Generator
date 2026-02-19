@@ -24,8 +24,8 @@ The mapping considers the changes from Amendment 1:2024 and ensures that all 93 
 ## Scope
 
 **Organization:** {{ meta-organisation.name }}  
-**ISMS Scope:** {{ meta.isms.scope }}  
-**Responsible:** {{ meta.ciso.name }} ({{ meta.ciso.email }})
+**ISMS Scope:** {{ meta-handbook.isms_scope }}  
+**Responsible:** {{ meta-organisation-roles.role_CISO }} ({{ meta-organisation-roles.role_CISO_email }})
 
 ## ISO/IEC 27001:2022 Annex A Structure
 
@@ -52,6 +52,6 @@ The Annex A controls are organized into four main categories:
 - Policy: 0200-0680 (All Topic-Specific Policies)
 - Process: 0050_ISMS_Document_Control.md
 
-**Responsible:** {{ meta.ciso.name }}  
+**Responsible:** {{ meta-organisation-roles.role_CISO }}  
 **Evidence:** Approved and published policies, training records
 

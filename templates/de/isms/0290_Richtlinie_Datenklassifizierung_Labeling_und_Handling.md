@@ -256,6 +256,6 @@ Diese Richtlinie konkretisiert die `0280_Policy_Datenklassifizierung_und_Informa
 - **ISO/IEC 27001:2022 Annex A.5.13** - Labelling of information
 - **DIN 66399** - Vernichtung von Datenträgern
 
-**Genehmigt durch:** {{ meta.ciso.name }}, CISO  
+**Genehmigt durch:** {{ meta-organisation-roles.role_CISO }}, CISO  
 **Nächster Review:** {{ meta-handbook.next_review }}
 

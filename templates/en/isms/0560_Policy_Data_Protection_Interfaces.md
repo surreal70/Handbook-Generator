@@ -27,7 +27,7 @@ ISO 27001:2022 Annex A Reference: A.5.31, A.5.32, A.5.33, A.5.34
 **Document ID:** 0560  
 **Document Type:** Policy (abstract)  
 **Standard Reference:** ISO/IEC 27001:2022 Annex A.5.31-A.5.34 (incl. Amendment 1:2024)  
-**Owner:** {{ meta.ciso.name }}  
+**Owner:** {{ meta-organisation-roles.role_CISO }}  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
@@ -46,7 +46,7 @@ This policy applies to:
 - **Data:** All personal data according to GDPR
 - **Processes:** All processing activities of personal data
 - **Interfaces:** ISMS ↔ Data Protection Management System
-- **Locations:** {{ netbox.site.name }} and all other operational sites
+- **Locations:** [[ netbox.site.name ]] and all other operational sites
 
 **Exceptions:** Exceptions are only permitted through the defined exception process (`0640_Policy_Exceptions_and_Risk_Waivers.md`).
 
@@ -99,9 +99,9 @@ International data transfers only occur with appropriate safeguards (adequacy de
 
 ### Key Roles
 
-- **Policy Owner:** {{ meta.ciso.name }} (CISO) and {{ meta.dpo.name }} (DPO)
-- **Data Protection Officer:** {{ meta.dpo.name }}
-- **Privacy Officer:** {{ meta.privacy.officer }}
+- **Policy Owner:** {{ meta-organisation-roles.role_CISO }} (CISO) and {{ meta-handbook.dpo_name }} (DPO)
+- **Data Protection Officer:** {{ meta-handbook.dpo_name }}
+- **Privacy Officer:** {{ meta-handbook.privacy_officer }}
 - **Implementation Responsible:** IT Operations, Business Owner
 - **Control/Audit Function:** ISMS, Internal Audit, Data Protection Authority
 
@@ -179,7 +179,7 @@ Exceptions to this policy are only permitted in justified exceptional cases:
 - **BDSG** - German Federal Data Protection Act
 
 **Approved by:**  
-{{ meta.management.ceo }}, Management  
+{{ meta-handbook.management_ceo }}, Management  
 Date: {{ meta-handbook.modifydate }}
 
 **Next Review:** {{ meta-handbook.next_review }} (annually or as needed)

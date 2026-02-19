@@ -49,3 +49,8 @@ next_review: "[TODO]"
 
 # Scope of the handbook
 scope: "[TODO]"
+
+# Auxiliary placeholders (framework-specific)
+auxiliary:
+  merchant_id: "[TODO]"
+  service_provider_id: "[TODO]"

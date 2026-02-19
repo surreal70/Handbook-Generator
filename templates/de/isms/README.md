@@ -129,9 +129,9 @@ Die Templates verwenden Platzhalter aus der `metadata.yaml` Datei:
 
 ```markdown
 **Organisation:** [TODO]
-**CEO:** {{ meta.management.ceo }}
-**CIO:** {{ meta.cio.name }} ({{ meta.cio.email }})
-**CISO:** {{ meta.ciso.name }} ({{ meta.ciso.email }})
+**CEO:** {{ meta-handbook.management_ceo }}
+**CIO:** {{ meta-organisation-roles.role_CIO }} ({{ meta-organisation-roles.role_CIO_email }})
+**CISO:** {{ meta-organisation-roles.role_CISO }} ({{ meta-organisation-roles.role_CISO_email }})
 **Dokumentverantwortlicher:** [TODO]
 **Datum:** {{ meta-handbook.modifydate }}
 **Nächster Review:** [TODO]
@@ -142,10 +142,10 @@ Die Templates verwenden Platzhalter aus der `metadata.yaml` Datei:
 Für IT-spezifische Informationen können NetBox-Platzhalter verwendet werden:
 
 ```markdown
-**Standort:** {{ netbox.site.name }}
-**Rechenzentrum:** {{ netbox.site.datacenter.name }}
-**Core Switch:** {{ netbox.device.core_switch.name }}
-**Management VLAN:** {{ netbox.vlan.management.vid }}
+**Standort:** [[ netbox.site.name ]]
+**Rechenzentrum:** [[ netbox.site.datacenter.name ]]
+**Core Switch:** [[ netbox.device.core_switch.name ]]
+**Management VLAN:** [[ netbox.vlan.management.vid ]]
 ```
 
 ### [TODO]-Markierungen
@@ -155,7 +155,7 @@ Alle Templates enthalten `[TODO]`-Markierungen für organisationsspezifische Anp
 ```markdown
 **Kritisches System:** [TODO: Name des Systems]
 **RTO:** [TODO: 4 Stunden]
-**Sicherheitstool:** {{ meta.security.edr_solution }} [TODO: z.B. CrowdStrike, SentinelOne]
+**Sicherheitstool:** {{ meta-handbook.security_edr_solution }} [TODO: z.B. CrowdStrike, SentinelOne]
 ```
 
 ## ISO 27001:2022 Compliance-Mapping

@@ -69,9 +69,9 @@ This document describes the processes and policies for data management and data 
 
 | Data Asset | Classification | Storage Location | Responsible | Retention |
 |---|---|---|---|---|
-| [TODO] | [TODO] | {{ netbox.storage.location }} | [TODO] | [TODO] |
-| [TODO] | [TODO] | {{ netbox.storage.location }} | [TODO] | [TODO] |
-| [TODO] | [TODO] | {{ netbox.storage.location }} | [TODO] | [TODO] |
+| [TODO] | [TODO] | [[ netbox.storage.location ]] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [[ netbox.storage.location ]] | [TODO] | [TODO] |
+| [TODO] | [TODO] | [[ netbox.storage.location ]] | [TODO] | [TODO] |
 
 ## Data Protection Requirements (GDPR)
 
@@ -143,12 +143,12 @@ All information relating to an identified or identifiable natural person.
 
 | Right | Description | Response Time | Responsible |
 |---|---|---|---|
-| **Right of Access** | Information about stored data | 1 month | {{ meta-organisation-roles.role_ciso.name }} |
-| **Right to Rectification** | Correction of inaccurate data | Without delay | {{ meta-organisation-roles.role_ciso.name }} |
-| **Right to Erasure** | Deletion of personal data | Without delay | {{ meta-organisation-roles.role_ciso.name }} |
-| **Right to Restriction** | Restriction of processing | Without delay | {{ meta-organisation-roles.role_ciso.name }} |
-| **Right to Data Portability** | Transfer to another controller | 1 month | {{ meta-organisation-roles.role_ciso.name }} |
-| **Right to Object** | Object to processing | Without delay | {{ meta-organisation-roles.role_ciso.name }} |
+| **Right of Access** | Information about stored data | 1 month | {{ meta-organisation-roles.role_CISO }} |
+| **Right to Rectification** | Correction of inaccurate data | Without delay | {{ meta-organisation-roles.role_CISO }} |
+| **Right to Erasure** | Deletion of personal data | Without delay | {{ meta-organisation-roles.role_CISO }} |
+| **Right to Restriction** | Restriction of processing | Without delay | {{ meta-organisation-roles.role_CISO }} |
+| **Right to Data Portability** | Transfer to another controller | 1 month | {{ meta-organisation-roles.role_CISO }} |
+| **Right to Object** | Object to processing | Without delay | {{ meta-organisation-roles.role_CISO }} |
 
 ### Data Protection Impact Assessment (DPIA)
 
@@ -185,12 +185,12 @@ All information relating to an identified or identifiable natural person.
 
 | Data Type | Retention Period | Legal Basis | Responsible |
 |---|---|---|---|
-| Business Letters | 6 years | HGB § 257 | {{ meta-organisation-roles.role_cfo.name }} |
-| Accounting Documents | 10 years | HGB § 257, AO § 147 | {{ meta-organisation-roles.role_cfo.name }} |
-| Annual Financial Statements | 10 years | HGB § 257 | {{ meta-organisation-roles.role_cfo.name }} |
-| Payroll Documents | 6 years | AO § 147 | {{ meta-organisation-roles.role_cfo.name }} |
-| Tax Documents | 10 years | AO § 147 | {{ meta-organisation-roles.role_cfo.name }} |
-| Personnel Files | 3-10 years | Various | {{ meta-organisation-roles.role_coo.name }} |
+| Business Letters | 6 years | HGB § 257 | {{ meta-organisation-roles.role_CFO }} |
+| Accounting Documents | 10 years | HGB § 257, AO § 147 | {{ meta-organisation-roles.role_CFO }} |
+| Annual Financial Statements | 10 years | HGB § 257 | {{ meta-organisation-roles.role_CFO }} |
+| Payroll Documents | 6 years | AO § 147 | {{ meta-organisation-roles.role_CFO }} |
+| Tax Documents | 10 years | AO § 147 | {{ meta-organisation-roles.role_CFO }} |
+| Personnel Files | 3-10 years | Various | {{ meta-organisation-roles.role_COO }} |
 
 #### Operational Retention Periods
 
@@ -198,8 +198,8 @@ All information relating to an identified or identifiable natural person.
 |---|---|---|---|
 | Contracts | Contract term + 3 years | Warranty | [TODO] |
 | Project Documentation | 5 years | Traceability | [TODO] |
-| Audit Logs | 1 year | Security | {{ meta-organisation-roles.role_ciso.name }} |
-| Backup Data | 30-90 days | Recovery | {{ meta-organisation-roles.role_it_operations_manager.name }} |
+| Audit Logs | 1 year | Security | {{ meta-organisation-roles.role_CISO }} |
+| Backup Data | 30-90 days | Recovery | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
 | Emails | 1-3 years | Business Communication | [TODO] |
 
 ### Deletion Concept
@@ -221,18 +221,18 @@ All information relating to an identified or identifiable natural person.
 
 | Media | Method | Standard | Responsible |
 |---|---|---|---|
-| Hard Drives | Secure Erase / Degaussing | NIST SP 800-88 | {{ meta-organisation-roles.role_it_operations_manager.name }} |
-| SSDs | Crypto Erase / Destruction | NIST SP 800-88 | {{ meta-organisation-roles.role_it_operations_manager.name }} |
-| Backup Media | Overwrite / Destruction | NIST SP 800-88 | {{ meta-organisation-roles.role_it_operations_manager.name }} |
-| Cloud Data | API-based Deletion | Provider Standard | {{ meta-organisation-roles.role_it_operations_manager.name }} |
-| Databases | SQL DELETE / TRUNCATE | Database Standard | {{ meta-organisation-roles.role_it_operations_manager.name }} |
-| Paper | Shredding (P-4) | DIN 66399 | {{ meta-organisation-roles.role_coo.name }} |
+| Hard Drives | Secure Erase / Degaussing | NIST SP 800-88 | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| SSDs | Crypto Erase / Destruction | NIST SP 800-88 | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| Backup Media | Overwrite / Destruction | NIST SP 800-88 | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| Cloud Data | API-based Deletion | Provider Standard | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| Databases | SQL DELETE / TRUNCATE | Database Standard | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| Paper | Shredding (P-4) | DIN 66399 | {{ meta-organisation-roles.role_COO }} |
 
 #### Deletion Proof
 - Documentation of all deletion processes
 - Logging of date, data type, method
 - Retention of deletion proofs for 3 years
-- Responsible: {{ meta-organisation-roles.role_ciso.name }}
+- Responsible: {{ meta-organisation-roles.role_CISO }}
 
 ### Archiving
 
@@ -255,8 +255,8 @@ All information relating to an identified or identifiable natural person.
 ### Governance Structure
 
 #### Data Governance Board
-- **Chair:** {{ meta-organisation-roles.role_cio.name }}
-- **Members:** {{ meta-organisation-roles.role_ciso.name }}, {{ meta-organisation-roles.role_cfo.name }}, Department Heads
+- **Chair:** {{ meta-organisation-roles.role_CIO }}
+- **Members:** {{ meta-organisation-roles.role_CISO }}, {{ meta-organisation-roles.role_CFO }}, Department Heads
 - **Frequency:** Quarterly
 - **Tasks:**
   - Strategic data governance
@@ -329,20 +329,20 @@ All information relating to an identified or identifiable natural person.
 
 | Data Type | Encryption | Algorithm | Key Length | Responsible |
 |---|---|---|---|---|
-| Highly Confidential | Mandatory | AES | 256 Bit | {{ meta-organisation-roles.role_ciso.name }} |
-| Confidential | Mandatory | AES | 256 Bit | {{ meta-organisation-roles.role_ciso.name }} |
-| Internal | Recommended | AES | 128/256 Bit | {{ meta-organisation-roles.role_it_operations_manager.name }} |
+| Highly Confidential | Mandatory | AES | 256 Bit | {{ meta-organisation-roles.role_CISO }} |
+| Confidential | Mandatory | AES | 256 Bit | {{ meta-organisation-roles.role_CISO }} |
+| Internal | Recommended | AES | 128/256 Bit | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
 | Public | Not required | - | - | - |
 
 #### Encryption in Transit (Data in Transit)
 
 | Connection Type | Protocol | Minimum Version | Responsible |
 |---|---|---|---|
-| Web Traffic | HTTPS/TLS | TLS 1.2 | {{ meta-organisation-roles.role_it_operations_manager.name }} |
-| Email | TLS/S/MIME | TLS 1.2 | {{ meta-organisation-roles.role_it_operations_manager.name }} |
-| File Transfer | SFTP/FTPS | TLS 1.2 | {{ meta-organisation-roles.role_it_operations_manager.name }} |
-| VPN | IPsec/OpenVPN | - | {{ meta-organisation-roles.role_it_operations_manager.name }} |
-| Database | TLS | TLS 1.2 | {{ meta-organisation-roles.role_it_operations_manager.name }} |
+| Web Traffic | HTTPS/TLS | TLS 1.2 | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| Email | TLS/S/MIME | TLS 1.2 | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| File Transfer | SFTP/FTPS | TLS 1.2 | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| VPN | IPsec/OpenVPN | - | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| Database | TLS | TLS 1.2 | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
 
 ### Access Control
 
@@ -367,11 +367,11 @@ All information relating to an identified or identifiable natural person.
 
 | Event Type | Logging | Retention | Responsible |
 |---|---|---|---|
-| Data Access (confidential) | Mandatory | 1 year | {{ meta-organisation-roles.role_ciso.name }} |
-| Data Modification | Mandatory | 1 year | {{ meta-organisation-roles.role_ciso.name }} |
-| Data Deletion | Mandatory | 3 years | {{ meta-organisation-roles.role_ciso.name }} |
-| Access Denial | Mandatory | 1 year | {{ meta-organisation-roles.role_ciso.name }} |
-| Admin Activities | Mandatory | 1 year | {{ meta-organisation-roles.role_ciso.name }} |
+| Data Access (confidential) | Mandatory | 1 year | {{ meta-organisation-roles.role_CISO }} |
+| Data Modification | Mandatory | 1 year | {{ meta-organisation-roles.role_CISO }} |
+| Data Deletion | Mandatory | 3 years | {{ meta-organisation-roles.role_CISO }} |
+| Access Denial | Mandatory | 1 year | {{ meta-organisation-roles.role_CISO }} |
+| Admin Activities | Mandatory | 1 year | {{ meta-organisation-roles.role_CISO }} |
 
 #### Log Contents
 - Timestamp
@@ -471,5 +471,5 @@ All information relating to an identified or identifiable natural person.
 
 **Last Update:** {{ meta-handbook.date }}  
 **Next Review:** [TODO: Date]  
-**Contact:** {{ meta-organisation-roles.role_ciso.email }}
+**Contact:** {{ meta-organisation-roles.role_CISO_email }}
 

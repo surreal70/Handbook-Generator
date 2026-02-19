@@ -292,15 +292,15 @@ This chapter describes the system landscape and architecture at a high level.
 |---|---|---|---|
 | **System Architect** | Architecture Design | [TODO: Name] | [TODO: Email] |
 | **Technical Lead** | Technical Implementation | [TODO: Name] | [TODO: Email] |
-| **Operations Manager** | Operation and Maintenance | {{ meta-organisation-roles.role_it_operations_manager.name }} | {{ meta-organisation-roles.role_it_operations_manager.email }} |
-| **Security Officer** | Security Architecture | {{ meta-organisation-roles.role_ciso.name }} | {{ meta-organisation-roles.role_ciso.email }} |
+| **Operations Manager** | Operation and Maintenance | {{ meta-organisation-roles.role_IT_Operations_Manager }} | {{ meta-organisation-roles.role_IT_Operations_Manager_email }} |
+| **Security Officer** | Security Architecture | {{ meta-organisation-roles.role_CISO }} | {{ meta-organisation-roles.role_CISO_email }} |
 
 ## Contacts
 
 **For System Architecture Questions:**
 - **System Architect:** [TODO: Name and Contact]
-- **IT Operations Manager:** {{ meta-organisation-roles.role_it_operations_manager.name }} ({{ meta-organisation-roles.role_it_operations_manager.email }})
-- **CISO:** {{ meta-organisation-roles.role_ciso.name }} ({{ meta-organisation-roles.role_ciso.email }})
+- **IT Operations Manager:** {{ meta-organisation-roles.role_IT_Operations_Manager }} ({{ meta-organisation-roles.role_IT_Operations_Manager_email }})
+- **CISO:** {{ meta-organisation-roles.role_CISO }} ({{ meta-organisation-roles.role_CISO_email }})
 
 **Document Owner:** {{ meta-handbook.owner }}  
 **Approved by:** {{ meta-handbook.approver }}  

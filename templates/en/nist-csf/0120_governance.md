@@ -34,8 +34,8 @@ Documentation of cybersecurity governance requirements and their integration int
 
 ### Legal and Regulatory Requirements
 - GDPR
-- {{ meta.regulation_1 }}
-- {{ meta.regulation_2 }}
+- {{ meta-handbook.regulation_1 }}
+- {{ meta-handbook.regulation_2 }}
 
 ### Cybersecurity Roles
 - CISO: {{ meta-organisation-roles.role_CISO }}

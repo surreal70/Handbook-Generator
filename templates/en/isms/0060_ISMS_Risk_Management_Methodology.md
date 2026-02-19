@@ -28,7 +28,7 @@ ISO 27001:2022 Reference: Clause 6.1.2 - Information security risk assessment
 **Document ID:** 0060  
 **Document Type:** ISMS Foundation Document  
 **Standard Reference:** ISO/IEC 27001:2022 Clause 6.1.2  
-**Owner:** {{ meta.ciso.name }}  
+**Owner:** {{ meta-organisation-roles.role_CISO }}  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
@@ -408,8 +408,8 @@ Risk Score = 4 × 3 = 12 (High)
 - **NIST SP 800-30** - Guide for Conducting Risk Assessments
 
 **Approved by:**  
-{{ meta.ciso.name }}, CISO  
-{{ meta.management.ceo }}, Management  
+{{ meta-organisation-roles.role_CISO }}, CISO  
+{{ meta-handbook.management_ceo }}, Management  
 Date: {{ meta-handbook.modifydate }}
 
 **Next Review:** {{ meta-handbook.next_review }}

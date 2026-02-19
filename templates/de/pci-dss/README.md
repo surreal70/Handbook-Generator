@@ -98,8 +98,8 @@ Die Templates verwenden Platzhalter aus der `metadata.yaml` Datei:
 **Organisation:** [TODO]
 **QSA:** [TODO] ([TODO])
 **CISO:** [TODO] ([TODO])
-**Merchant ID:** {{ meta.pci.merchant_id }}
-**Service Provider ID:** {{ meta.pci.service_provider_id }}
+**Merchant ID:** {{ meta-handbook.merchant_id }}
+**Service Provider ID:** {{ meta-handbook.service_provider_id }}
 ```
 
 ### [TODO]-Markierungen

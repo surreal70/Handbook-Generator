@@ -27,7 +27,7 @@ ISO 27001:2022 Annex A Reference: A.8.9, A.8.10
 **Document ID:** 0540  
 **Document Type:** Policy (abstract)  
 **Standard Reference:** ISO/IEC 27001:2022 Annex A.8.9, A.8.10 (incl. Amendment 1:2024)  
-**Owner:** {{ meta.ciso.name }}  
+**Owner:** {{ meta-organisation-roles.role_CISO }}  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
@@ -45,7 +45,7 @@ This policy applies to:
 - **Organizational Units:** All departments and locations of {{ meta-organisation.name }}
 - **Systems:** All servers, workstations, network devices, applications, cloud resources
 - **Environments:** Production, test, development
-- **Locations:** {{ netbox.site.name }} and all other operational sites
+- **Locations:** [[ netbox.site.name ]] and all other operational sites
 
 **Exceptions:** Exceptions are only permitted through the defined exception process (`0640_Policy_Exceptions_and_Risk_Waivers.md`).
 
@@ -100,9 +100,9 @@ All configuration deviations from baselines are documented and justified. Docume
 
 ### Key Roles
 
-- **Policy Owner:** {{ meta.ciso.name }} (CISO)
-- **Configuration Manager:** {{ meta.it.config_manager }}
-- **Security Architect:** {{ meta.security.architect }}
+- **Policy Owner:** {{ meta-organisation-roles.role_CISO }} (CISO)
+- **Configuration Manager:** {{ meta-handbook.it_config_manager }}
+- **Security Architect:** {{ meta-handbook.security_architect }}
 - **Implementation Responsible:** IT Operations, System Owner
 - **Control/Audit Function:** ISMS, Internal Audit
 
@@ -178,7 +178,7 @@ Exceptions to this policy are only permitted in justified exceptional cases:
 - **BSI IT-Grundschutz** - Security requirements
 
 **Approved by:**  
-{{ meta.management.ceo }}, Management  
+{{ meta-handbook.management_ceo }}, Management  
 Date: {{ meta-handbook.modifydate }}
 
 **Next Review:** {{ meta-handbook.next_review }} (annually or as needed)

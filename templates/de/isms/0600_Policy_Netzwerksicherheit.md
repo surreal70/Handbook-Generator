@@ -36,7 +36,7 @@ Diese Policy gilt für:
 - **Netzwerke:** Alle internen und externen Netzwerke, LAN, WLAN, WAN, VPN
 - **Systeme:** Firewalls, Router, Switches, Load Balancer, IDS/IPS
 - **Verbindungen:** Alle Netzwerkverbindungen (intern, extern, Partner, Cloud)
-- **Standorte:** {{ netbox.site.name }} und alle weiteren Betriebsstandorte
+- **Standorte:** [[ netbox.site.name ]] und alle weiteren Betriebsstandorte
 
 **Ausnahmen:** Ausnahmen sind nur über den definierten Ausnahmenprozess (`0640_Policy_Ausnahmen_und_Risk_Waivers.md`) zulässig.
 
@@ -88,10 +88,10 @@ Netzwerkaktivitäten werden überwacht und protokolliert. Logs werden zentral ge
 
 ### Schlüsselrollen
 
-- **Policy Owner:** {{ meta.ciso.name }} (CISO)
-- **Network Security Manager:** {{ meta.network.security_manager }}
-- **Network Administrator:** {{ meta.network.admin }}
-- **SOC Manager:** {{ meta.soc.manager }}
+- **Policy Owner:** {{ meta-organisation-roles.role_CISO }} (CISO)
+- **Network Security Manager:** {{ meta-handbook.network_security_manager }}
+- **Network Administrator:** {{ meta-handbook.network_admin }}
+- **SOC Manager:** {{ meta-handbook.soc_manager }}
 - **Umsetzungsverantwortliche:** IT-Betrieb, Network Team
 - **Kontroll-/Prüfinstanz:** ISMS, Internal Audit, SOC
 
@@ -174,7 +174,7 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **BSI IT-Grundschutz** - NET.1.1, NET.1.2, NET.3.2
 
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
 Datum: {{ meta-handbook.modifydate }}
 
 **Nächster Review:** {{ meta-handbook.next_review }} (jährlich oder anlassbezogen)

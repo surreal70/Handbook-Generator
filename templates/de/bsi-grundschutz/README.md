@@ -77,9 +77,9 @@ Die Templates verwenden Platzhalter aus der `metadata.yaml` Datei:
 
 ```markdown
 **Organisation:** [TODO]
-**CEO:** {{ meta.ceo.name }} ({{ meta.ceo.email }})
-**CIO:** {{ meta.cio.name }} ({{ meta.cio.email }})
-**CISO/ISB:** {{ meta.ciso.name }} ({{ meta.ciso.email }})
+**CEO:** {{ meta-organisation-roles.role_CEO }} ({{ meta-organisation-roles.role_CEO_email }})
+**CIO:** {{ meta-organisation-roles.role_CIO }} ({{ meta-organisation-roles.role_CIO_email }})
+**CISO/ISB:** {{ meta-organisation-roles.role_CISO }} ({{ meta-organisation-roles.role_CISO_email }})
 **Dokumentverantwortlicher:** [TODO]
 **Standorte:** [TODO]
 ```
@@ -89,12 +89,12 @@ Die Templates verwenden Platzhalter aus der `metadata.yaml` Datei:
 Für IT-spezifische Informationen können NetBox-Platzhalter verwendet werden:
 
 ```markdown
-**Standort:** {{ netbox.site.name }}
-**Rechenzentrum:** {{ netbox.site.datacenter.name }}
-**Core Switch:** {{ netbox.device.core_switch.name }}
-**Management VLAN:** {{ netbox.vlan.management }}
-**Server:** {{ netbox.device.server_001 }}
-**IP-Adresse:** {{ netbox.ip.server_001 }}
+**Standort:** [[ netbox.site.name ]]
+**Rechenzentrum:** [[ netbox.site.datacenter.name ]]
+**Core Switch:** [[ netbox.device.core_switch.name ]]
+**Management VLAN:** [[ netbox.vlan.management ]]
+**Server:** [[ netbox.device.server_001 ]]
+**IP-Adresse:** [[ netbox.ip.server_001 ]]
 ```
 
 ### [TODO]-Markierungen

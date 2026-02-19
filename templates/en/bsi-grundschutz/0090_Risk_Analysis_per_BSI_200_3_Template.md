@@ -26,7 +26,7 @@ Reference: BSI Standard 200-3 (Risk Analysis based on IT-Grundschutz)
 
 The risk analysis according to BSI Standard 200-3 identifies and assesses risks for **{{ meta-organisation.name }}** that are not covered by IT-Grundschutz modules.
 
-**Responsible:** {{ meta.ciso.name }} (ISB)
+**Responsible:** {{ meta-organisation-roles.role_CISO }} (ISB)
 
 **Triggers for Risk Analysis:**
 - High or very high protection need (see Document 0060)
@@ -127,9 +127,9 @@ The risk analysis according to BSI Standard 200-3 identifies and assesses risks 
 
 | Risk ID | Object | Scenario | Threat | Vulnerability | Existing Measures | Likelihood | Impact | Risk (Before) | Treatment | Additional Measure | Owner | Deadline | Risk (After) |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| R-001 | [TODO] | S-001 | T-002 | V-001, V-002 | Antivirus, Backup | 4 | 5 | Very High | Mitigate | Microsegmentation, MFA | {{ meta.cio.name }} | [TODO] | Medium |
-| R-002 | [TODO] | S-002 | T-003 | V-002 | Logging, IAM | 3 | 4 | High | Mitigate | PAM, DLP | {{ meta.cio.name }} | [TODO] | Low |
-| R-003 | [TODO] | S-003 | T-004 | [TODO] | Firewall | 3 | 3 | Medium | Mitigate | DDoS Protection | {{ meta.cio.name }} | [TODO] | Low |
+| R-001 | [TODO] | S-001 | T-002 | V-001, V-002 | Antivirus, Backup | 4 | 5 | Very High | Mitigate | Microsegmentation, MFA | {{ meta-organisation-roles.role_CIO }} | [TODO] | Medium |
+| R-002 | [TODO] | S-002 | T-003 | V-002 | Logging, IAM | 3 | 4 | High | Mitigate | PAM, DLP | {{ meta-organisation-roles.role_CIO }} | [TODO] | Low |
+| R-003 | [TODO] | S-003 | T-004 | [TODO] | Firewall | 3 | 3 | Medium | Mitigate | DDoS Protection | {{ meta-organisation-roles.role_CIO }} | [TODO] | Low |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 **Risk Treatment Options:**
@@ -165,16 +165,16 @@ The risk analysis according to BSI Standard 200-3 identifies and assesses risks 
 
 | Risk ID | Risk | Risk Owner | Acceptance | Date |
 |---|---|---|---|---|
-| R-001 | [TODO] | {{ meta.ceo.name }} | Accepted after measure implementation | [TODO] |
-| R-002 | [TODO] | {{ meta.ciso.name }} | Accepted after measure implementation | [TODO] |
+| R-001 | [TODO] | {{ meta-organisation-roles.role_CEO }} | Accepted after measure implementation | [TODO] |
+| R-002 | [TODO] | {{ meta-organisation-roles.role_CISO }} | Accepted after measure implementation | [TODO] |
 
 ### 7.2 Management Approval
 
 | Role | Name | Date | Approval |
 |---|---|---|---|
-| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
-| IT Management | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
-| Executive Management | {{ meta.ceo.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| ISB | {{ meta-organisation-roles.role_CISO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| IT Management | {{ meta-organisation-roles.role_CIO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| Executive Management | {{ meta-organisation-roles.role_CEO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 ## 8. Update and Maintenance
 
@@ -184,7 +184,7 @@ The risk analysis is updated when:
 - Changes to the information domain occur
 - At least annually as part of the ISMS review
 
-**Responsible:** {{ meta.ciso.name }} (ISB)  
+**Responsible:** {{ meta-organisation-roles.role_CISO }} (ISB)  
 **Next Review:** {{ meta-handbook.next_review }}
 
 **References:**

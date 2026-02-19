@@ -82,7 +82,7 @@ This document describes the compliance and audit processes for {{ meta-organisat
 - **Surveillance Audit:** Annually
 - **Internal Audit:** Quarterly
 
-**Responsible:** {{ meta-organisation-roles.role_ciso.name }}
+**Responsible:** {{ meta-organisation-roles.role_CISO }}
 
 ### ISO/IEC 20000-1:2018 - IT Service Management
 
@@ -101,7 +101,7 @@ This document describes the compliance and audit processes for {{ meta-organisat
 
 **Alignment:** ITIL v4 Framework
 
-**Responsible:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+**Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 ### GDPR - General Data Protection Regulation
 
@@ -140,7 +140,7 @@ This document describes the compliance and audit processes for {{ meta-organisat
 
 **Building Blocks:** IT-Grundschutz Compendium
 
-**Responsible:** {{ meta-organisation-roles.role_ciso.name }}
+**Responsible:** {{ meta-organisation-roles.role_CISO }}
 
 ### PCI-DSS (Payment Card Industry Data Security Standard)
 
@@ -182,7 +182,7 @@ This document describes the compliance and audit processes for {{ meta-organisat
 - IT General Controls (ITGC)
 - Application Controls
 
-**Responsible:** {{ meta-organisation-roles.role_cfo.name }}
+**Responsible:** {{ meta-organisation-roles.role_CFO }}
 
 ### COBIT 2019
 
@@ -1063,7 +1063,7 @@ Deadline: 30 days
 - Security audits
 - Risk management
 
-**Person:** {{ meta-organisation-roles.role_ciso.name }}
+**Person:** {{ meta-organisation-roles.role_CISO }}
 
 ### IT Operations Manager
 
@@ -1073,7 +1073,7 @@ Deadline: 30 days
 - Process compliance
 - Tool implementation
 
-**Person:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+**Person:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 ### Department Heads
 

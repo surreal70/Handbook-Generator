@@ -27,7 +27,7 @@ ISO 27001:2022 Annex A Reference: A.8.25, A.8.26, A.8.27, A.8.28
 **Document ID:** 0380  
 **Document Type:** Policy (abstract)  
 **Standard Reference:** ISO/IEC 27001:2022 Annex A.8.25-A.8.28 (incl. Amendment 1:2024)  
-**Owner:** {{ meta.ciso.name }}  
+**Owner:** {{ meta-organisation-roles.role_CISO }}  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
@@ -46,7 +46,7 @@ This policy applies to:
 - **Applications:** All internally developed applications, APIs, microservices, mobile apps
 - **Development Phases:** Requirements, design, implementation, testing, deployment, maintenance
 - **Development Models:** Agile, Waterfall, DevOps, DevSecOps
-- **Locations:** {{ netbox.site.name }} and all other development sites
+- **Locations:** [[ netbox.site.name ]] and all other development sites
 
 **Exceptions:** Exceptions are only permitted through the defined exception process (`0640_Policy_Exceptions_and_Risk_Waivers.md`).
 
@@ -102,9 +102,9 @@ Applications are deployed with secure configurations. Default credentials are ch
 
 ### Key Roles
 
-- **Policy Owner:** {{ meta.ciso.name }} (CISO)
+- **Policy Owner:** {{ meta-organisation-roles.role_CISO }} (CISO)
 - **Security Champion:** Developer with security expertise in each team
-- **Application Security Lead:** {{ meta.security.appsec_lead }}
+- **Application Security Lead:** {{ meta-handbook.security_appsec_lead }}
 - **Implementation Responsible:** Developers, DevOps, Security Team
 - **Control/Audit Function:** ISMS, Internal Audit
 
@@ -184,7 +184,7 @@ Exceptions to this policy are only permitted in justified cases:
 - **CWE Top 25** - Most Dangerous Software Weaknesses
 
 **Approved by:**  
-{{ meta.management.ceo }}, Management  
+{{ meta-handbook.management_ceo }}, Management  
 Date: {{ meta-handbook.modifydate }}
 
 **Next Review:** {{ meta-handbook.next_review }} (annually or as needed)

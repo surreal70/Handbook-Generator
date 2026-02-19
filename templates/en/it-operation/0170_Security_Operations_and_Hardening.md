@@ -21,7 +21,7 @@ This document describes the security operations processes and hardening guidelin
 
 **Scope:** All IT systems, networks, applications, and data of {{ meta-organisation.name }}
 
-**Responsible:** {{ meta-organisation-roles.role_ciso.name }} ({{ meta-organisation-roles.role_ciso.email }})
+**Responsible:** {{ meta-organisation-roles.role_CISO }} ({{ meta-organisation-roles.role_CISO_email }})
 
 ## Security Fundamentals
 
@@ -171,8 +171,8 @@ This document describes the security operations processes and hardening guidelin
 | Internal | Internet | 80,443 | TCP | Allow | Web access |
 | Any | Any | Any | Any | Deny | Default rule |
 
-**Firewall System:** {{ netbox.firewall.system }}  
-**Management:** {{ netbox.firewall.management_url }}
+**Firewall System:** [[ netbox.firewall.system ]]  
+**Management:** [[ netbox.firewall.management_url ]]
 
 #### Network Segmentation
 
@@ -180,11 +180,11 @@ This document describes the security operations processes and hardening guidelin
 
 | Zone | VLAN | Subnet | Purpose | Security Level |
 |---|---|---|---|---|
-| **DMZ** | {{ netbox.vlan.dmz }} | {{ netbox.subnet.dmz }} | Public services | High |
-| **Production** | {{ netbox.vlan.production }} | {{ netbox.subnet.production }} | Production systems | Very high |
-| **Management** | {{ netbox.vlan.management }} | {{ netbox.subnet.management }} | Admin access | Critical |
-| **User** | {{ netbox.vlan.user }} | {{ netbox.subnet.user }} | User network | Medium |
-| **Guest** | {{ netbox.vlan.guest }} | {{ netbox.subnet.guest }} | Guest WLAN | Low |
+| **DMZ** | [[ netbox.vlan.dmz ]] | [[ netbox.subnet.dmz ]] | Public services | High |
+| **Production** | [[ netbox.vlan.production ]] | [[ netbox.subnet.production ]] | Production systems | Very high |
+| **Management** | [[ netbox.vlan.management ]] | [[ netbox.subnet.management ]] | Admin access | Critical |
+| **User** | [[ netbox.vlan.user ]] | [[ netbox.subnet.user ]] | User network | Medium |
+| **Guest** | [[ netbox.vlan.guest ]] | [[ netbox.subnet.guest ]] | Guest WLAN | Low |
 
 **Segmentation Rules:**
 - No direct communication between zones
@@ -334,9 +334,9 @@ Referrer-Policy: no-referrer
 
 ### Intrusion Detection/Prevention (IDS/IPS)
 
-**IDS/IPS System:** {{ netbox.ids.system }}  
+**IDS/IPS System:** [[ netbox.ids.system ]]  
 **Deployment:** Inline (IPS mode)  
-**Location:** {{ netbox.ids.location }}
+**Location:** [[ netbox.ids.location ]]
 
 **Detection Methods:**
 - **Signature-based:** Known attack patterns
@@ -501,8 +501,8 @@ Referrer-Policy: no-referrer
 - Maintain contact lists
 
 **IR Team:**
-- **IR Manager:** {{ meta-organisation-roles.role_ciso.name }}
-- **Technical Lead:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+- **IR Manager:** {{ meta-organisation-roles.role_CISO }}
+- **Technical Lead:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - **Forensic Analyst:** [Name]
 - **Communication Lead:** [Name]
 - **Legal Counsel:** [Name]
@@ -617,7 +617,7 @@ Referrer-Policy: no-referrer
 
 | Annex A Control | Title | Status | Responsible |
 |---|---|---|---|
-| **A.9** | Access Control | Implemented | {{ meta-organisation-roles.role_ciso.name }} |
+| **A.9** | Access Control | Implemented | {{ meta-organisation-roles.role_CISO }} |
 | **A.10** | Cryptography | Implemented | IT Security |
 | **A.12** | Operations Security | Implemented | IT Operations |
 | **A.13** | Communications Security | Implemented | Network Team |
@@ -718,7 +718,7 @@ Referrer-Policy: no-referrer
 - Incident response coordination
 - Security budget
 
-**Person:** {{ meta-organisation-roles.role_ciso.name }}
+**Person:** {{ meta-organisation-roles.role_CISO }}
 
 ### Security Operations Team
 
@@ -738,7 +738,7 @@ Referrer-Policy: no-referrer
 - Security configuration
 - Backup security
 
-**Lead:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+**Lead:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 ## Metrics and Reporting
 

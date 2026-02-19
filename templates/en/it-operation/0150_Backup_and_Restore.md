@@ -21,7 +21,7 @@ This document describes the backup and restore strategies for {{ meta-organisati
 
 **Scope:** All IT systems, databases, applications, and data of {{ meta-organisation.name }}
 
-**Responsible:** {{ meta-organisation-roles.role_it_operations_manager.name }} ({{ meta-organisation-roles.role_it_operations_manager.email }})
+**Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }} ({{ meta-organisation-roles.role_IT_Operations_Manager_email }})
 
 ## Backup Fundamentals
 
@@ -139,8 +139,8 @@ This document describes the backup and restore strategies for {{ meta-organisati
 - **1 Offsite:** Geographically separated copy
 
 **Example:**
-1. Production data on {{ netbox.storage.primary }}
-2. Backup on {{ netbox.storage.backup_disk }}
+1. Production data on [[ netbox.storage.primary ]]
+2. Backup on [[ netbox.storage.backup_disk ]]
 3. Offsite backup in {{ meta-handbook.backup_cloud_provider }}
 
 #### Backup Tiers
@@ -158,7 +158,7 @@ This document describes the backup and restore strategies for {{ meta-organisati
 
 #### Databases (Critical)
 
-**System:** {{ netbox.database.server }}
+**System:** [[ netbox.database.server ]]
 
 **Backup Strategy:**
 - **Full Backup:** Sunday 02:00
@@ -177,7 +177,7 @@ This document describes the backup and restore strategies for {{ meta-organisati
 
 #### Application Servers (Important)
 
-**System:** {{ netbox.application.server }}
+**System:** [[ netbox.application.server ]]
 
 **Backup Strategy:**
 - **Full Backup:** Sunday 03:00
@@ -194,7 +194,7 @@ This document describes the backup and restore strategies for {{ meta-organisati
 
 #### File Servers (Standard)
 
-**System:** {{ netbox.fileserver.server }}
+**System:** [[ netbox.fileserver.server ]]
 
 **Backup Strategy:**
 - **Full Backup:** Sunday 01:00
@@ -307,14 +307,14 @@ This document describes the backup and restore strategies for {{ meta-organisati
 - Failed backups
 - Trend analyses
 
-**Recipients:** {{ meta-organisation-roles.role_it_operations_manager.email }}
+**Recipients:** {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
 
 ### 6. Offsite Replication
 
 **Replication Methods:**
 - **Cloud Sync:** Automatic replication to {{ meta-handbook.backup_cloud_provider }}
 - **Tape Rotation:** Weekly tape offsite storage
-- **Remote Site:** Replication to {{ netbox.site.dr_location }}
+- **Remote Site:** Replication to [[ netbox.site.dr_location ]]
 
 **Encryption:** TLS in transit, AES-256 at rest
 
@@ -490,13 +490,13 @@ This document describes the backup and restore strategies for {{ meta-organisati
 ### Snapshot Technology
 
 **Storage Snapshots:**
-- **System:** {{ netbox.storage.system }}
+- **System:** [[ netbox.storage.system ]]
 - **Snapshot Frequency:** Every 4 hours
 - **Retention:** 48 hours
 - **Usage:** Quick rollbacks, pre-change snapshots
 
 **VM Snapshots:**
-- **System:** {{ netbox.hypervisor.system }}
+- **System:** [[ netbox.hypervisor.system ]]
 - **Snapshot Type:** Crash-consistent
 - **Usage:** Pre-deployment snapshots
 - **Warning:** Not a long-term backup solution
@@ -671,7 +671,7 @@ This document describes the backup and restore strategies for {{ meta-organisati
 - Compliance assurance
 - Escalation management
 
-**Person:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+**Person:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 ## Compliance and Regulation
 

@@ -22,8 +22,8 @@ Dieses Dokument definiert alle im ISMS verwendeten Begriffe und Abkürzungen. Es
 ## Geltungsbereich
 
 **Organisation:** {{ meta-organisation.name }}  
-**ISMS Scope:** {{ meta.isms.scope }}  
-**Verantwortlich:** {{ meta.ciso.name }}
+**ISMS Scope:** {{ meta-handbook.isms_scope }}  
+**Verantwortlich:** {{ meta-organisation-roles.role_CISO }}
 
 ## Abkürzungen
 
@@ -596,8 +596,8 @@ Anwendbarkeitserklärung; Dokument mit Annex A Kontrollen und deren Anwendbarkei
 - ISO/IEC 27002:2022 Information Security Controls
 - NIST Glossary: https://csrc.nist.gov/glossary
 
-**Dokumentverantwortlicher:** {{ meta.ciso.name }}  
-**Genehmigt durch:** {{ meta.management.name }}  
+**Dokumentverantwortlicher:** {{ meta-organisation-roles.role_CISO }}  
+**Genehmigt durch:** {{ meta-handbook.management_name }}  
 **Nächste Überprüfung:** Jährlich
 
 <!-- 

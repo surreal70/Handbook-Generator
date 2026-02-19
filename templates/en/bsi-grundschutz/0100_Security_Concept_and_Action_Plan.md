@@ -61,8 +61,8 @@ Import all measures from document 0080 (Basis Security Check).
 
 | Measure ID | Source | Description | Priority | Owner | Effort (PD) | Budget | Target Date | Dependencies | Status |
 |---|---|---|---|---|---|---|---|---|---|
-| M-001 | Basic Check (GAP-001) | [TODO: Critical measure 1] | P1 - Critical | {{ meta.ciso.name }} | [TODO] | [TODO] | [TODO] | - | Open |
-| M-002 | Basic Check (QW-001) | [TODO: Quick win 1] | P2 - High | {{ meta.cio.name }} | [TODO] | [TODO] | [TODO] | - | Open |
+| M-001 | Basic Check (GAP-001) | [TODO: Critical measure 1] | P1 - Critical | {{ meta-organisation-roles.role_CISO }} | [TODO] | [TODO] | [TODO] | - | Open |
+| M-002 | Basic Check (QW-001) | [TODO: Quick win 1] | P2 - High | {{ meta-organisation-roles.role_CIO }} | [TODO] | [TODO] | [TODO] | - | Open |
 | M-003 | Basic Check | [TODO: Measure 3] | P3 - Medium | [TODO] | [TODO] | [TODO] | [TODO] | M-001 | Open |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
@@ -75,17 +75,17 @@ Import all measures from document 0090 (Risk Analysis).
 
 | Measure ID | Source | Description | Priority | Owner | Effort (PD) | Budget | Target Date | Dependencies | Status |
 |---|---|---|---|---|---|---|---|---|---|
-| M-101 | Risk Analysis (R-001) | [TODO: Risk mitigation 1] | P1 - Critical | {{ meta.cio.name }} | [TODO] | [TODO] | [TODO] | - | Open |
-| M-102 | Risk Analysis (R-002) | [TODO: Risk mitigation 2] | P2 - High | {{ meta.cio.name }} | [TODO] | [TODO] | [TODO] | - | Open |
+| M-101 | Risk Analysis (R-001) | [TODO: Risk mitigation 1] | P1 - Critical | {{ meta-organisation-roles.role_CIO }} | [TODO] | [TODO] | [TODO] | - | Open |
+| M-102 | Risk Analysis (R-002) | [TODO: Risk mitigation 2] | P2 - High | {{ meta-organisation-roles.role_CIO }} | [TODO] | [TODO] | [TODO] | - | Open |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ### 2.3 Strategic Measures
 
 | Measure ID | Description | Priority | Owner | Effort (PD) | Budget | Target Date | Status |
 |---|---|---|---|---|---|---|---|
-| M-201 | SIEM Implementation | P1 - Critical | {{ meta.cio.name }} | [TODO] | [TODO] | [TODO] | Open |
-| M-202 | Zero Trust Architecture | P2 - High | {{ meta.cio.name }} | [TODO] | [TODO] | [TODO] | Open |
-| M-203 | Security Awareness Program | P2 - High | {{ meta.ciso.name }} | [TODO] | [TODO] | [TODO] | Open |
+| M-201 | SIEM Implementation | P1 - Critical | {{ meta-organisation-roles.role_CIO }} | [TODO] | [TODO] | [TODO] | Open |
+| M-202 | Zero Trust Architecture | P2 - High | {{ meta-organisation-roles.role_CIO }} | [TODO] | [TODO] | [TODO] | Open |
+| M-203 | Security Awareness Program | P2 - High | {{ meta-organisation-roles.role_CISO }} | [TODO] | [TODO] | [TODO] | Open |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## 3. Measure Prioritization
@@ -216,8 +216,8 @@ Import all measures from document 0090 (Risk Analysis).
 
 | Risk | Likelihood | Impact | Mitigation | Owner |
 |---|---|---|---|---|
-| Resource shortage | High | Delay | External support | {{ meta.ciso.name }} |
-| Budget cut | Medium | Prioritization | Focus on P1 measures | {{ meta.ceo.name }} |
+| Resource shortage | High | Delay | External support | {{ meta-organisation-roles.role_CISO }} |
+| Budget cut | Medium | Prioritization | Focus on P1 measures | {{ meta-organisation-roles.role_CEO }} |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## 7. Success Measurement
@@ -255,9 +255,9 @@ Import all measures from document 0090 (Risk Analysis).
 
 | Role | Name | Date | Approval |
 |---|---|---|---|
-| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
-| IT Management | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
-| Executive Management | {{ meta.ceo.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| ISB | {{ meta-organisation-roles.role_CISO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| IT Management | {{ meta-organisation-roles.role_CIO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| Executive Management | {{ meta-organisation-roles.role_CEO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **References:**
 - BSI Standard 200-2: IT-Grundschutz Methodology

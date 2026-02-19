@@ -257,7 +257,7 @@ This guideline implements the `0360_Policy_Change_and_Release_Management.md` and
 - Test results
 - Post-implementation review
 
-**Retention:** {{ meta.retention.change_years }} years
+**Retention:** {{ meta-handbook.retention_change_years }} years
 
 ### 7.2 Post-Implementation Review (PIR)
 
@@ -297,6 +297,6 @@ This guideline implements the `0360_Policy_Change_and_Release_Management.md` and
 - **ISO/IEC 27001:2022 Annex A.8.32** - Change management
 - **ITIL 4** - Change Enablement Practice
 
-**Approved by:** {{ meta.ciso.name }}, CISO  
+**Approved by:** {{ meta-organisation-roles.role_CISO }}, CISO  
 **Next Review:** {{ meta-handbook.next_review }}
 

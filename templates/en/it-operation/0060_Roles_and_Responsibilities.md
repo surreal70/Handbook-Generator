@@ -34,11 +34,9 @@
 
 ### Chief Executive Officer (CEO)
 
-- **Name:** {{ meta-organisation-roles.role_ceo.name }}
-- **Title:** {{ meta-organisation-roles.role_ceo.title }}
-- **Email:** {{ meta-organisation-roles.role_ceo.email }}
-- **Phone:** {{ meta-organisation-roles.role_ceo.phone }}
-- **Department:** {{ meta-organisation-roles.role_ceo.department }}
+- **Name:** {{ meta-organisation-roles.role_CEO }}
+- **Email:** {{ meta-organisation-roles.role_CEO_email }}
+- **Phone:** {{ meta-organisation-roles.role_CEO_phone }}
 
 **Responsibilities:**
 - Overall responsibility for the company
@@ -48,11 +46,9 @@
 
 ### Chief Information Officer (CIO)
 
-- **Name:** {{ meta-organisation-roles.role_cio.name }}
-- **Title:** {{ meta-organisation-roles.role_cio.title }}
-- **Email:** {{ meta-organisation-roles.role_cio.email }}
-- **Phone:** {{ meta-organisation-roles.role_cio.phone }}
-- **Department:** {{ meta-organisation-roles.role_cio.department }}
+- **Name:** {{ meta-organisation-roles.role_CIO }}
+- **Email:** {{ meta-organisation-roles.role_CIO_email }}
+- **Phone:** {{ meta-organisation-roles.role_CIO_phone }}
 
 **Responsibilities:**
 - Overall responsibility for IT strategy and operations
@@ -63,11 +59,9 @@
 
 ### Chief Information Security Officer (CISO)
 
-- **Name:** {{ meta-organisation-roles.role_ciso.name }}
-- **Title:** {{ meta-organisation-roles.role_ciso.title }}
-- **Email:** {{ meta-organisation-roles.role_ciso.email }}
-- **Phone:** {{ meta-organisation-roles.role_ciso.phone }}
-- **Department:** {{ meta-organisation-roles.role_ciso.department }}
+- **Name:** {{ meta-organisation-roles.role_CISO }}
+- **Email:** {{ meta-organisation-roles.role_CISO_email }}
+- **Phone:** {{ meta-organisation-roles.role_CISO_phone }}
 
 **Responsibilities:**
 - IT security strategy and policies
@@ -79,11 +73,9 @@
 
 ### Chief Financial Officer (CFO)
 
-- **Name:** {{ meta-organisation-roles.role_cfo.name }}
-- **Title:** {{ meta-organisation-roles.role_cfo.title }}
-- **Email:** {{ meta-organisation-roles.role_cfo.email }}
-- **Phone:** {{ meta-organisation-roles.role_cfo.phone }}
-- **Department:** {{ meta-organisation-roles.role_cfo.department }}
+- **Name:** {{ meta-organisation-roles.role_CFO }}
+- **Email:** {{ meta-organisation-roles.role_CFO_email }}
+- **Phone:** {{ meta-organisation-roles.role_CFO_phone }}
 
 **Responsibilities:**
 - Financial approval of IT projects
@@ -93,11 +85,9 @@
 
 ### Chief Operating Officer (COO)
 
-- **Name:** {{ meta-organisation-roles.role_coo.name }}
-- **Title:** {{ meta-organisation-roles.role_coo.title }}
-- **Email:** {{ meta-organisation-roles.role_coo.email }}
-- **Phone:** {{ meta-organisation-roles.role_coo.phone }}
-- **Department:** {{ meta-organisation-roles.role_coo.department }}
+- **Name:** {{ meta-organisation-roles.role_COO }}
+- **Email:** {{ meta-organisation-roles.role_COO_email }}
+- **Phone:** {{ meta-organisation-roles.role_COO_phone }}
 
 **Responsibilities:**
 - Operational business processes
@@ -109,11 +99,9 @@
 
 ### IT Operations Manager
 
-- **Name:** {{ meta-organisation-roles.role_it_operations_manager.name }}
-- **Title:** {{ meta-organisation-roles.role_it_operations_manager.title }}
-- **Email:** {{ meta-organisation-roles.role_it_operations_manager.email }}
-- **Phone:** {{ meta-organisation-roles.role_it_operations_manager.phone }}
-- **Department:** {{ meta-organisation-roles.role_it_operations_manager.department }}
+- **Name:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
+- **Email:** {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
+- **Phone:** {{ meta-organisation-roles.role_IT_Operations_Manager_phone }}
 
 **Responsibilities:**
 - Daily IT operations and service delivery
@@ -128,11 +116,9 @@
 
 ### Service Desk Lead
 
-- **Name:** {{ meta-organisation-roles.role_service_desk_lead.name }}
-- **Title:** {{ meta-organisation-roles.role_service_desk_lead.title }}
-- **Email:** {{ meta-organisation-roles.role_service_desk_lead.email }}
-- **Phone:** {{ meta-organisation-roles.role_service_desk_lead.phone }}
-- **Department:** {{ meta-organisation-roles.role_service_desk_lead.department }}
+- **Name:** {{ meta-organisation-roles.role_Service_Desk_Lead }}
+- **Email:** {{ meta-organisation-roles.role_Service_Desk_Lead_email }}
+- **Phone:** {{ meta-organisation-roles.role_Service_Desk_Lead_phone }}
 
 **Responsibilities:**
 - First-level support and incident management
@@ -313,18 +299,18 @@ The RACI matrix defines responsibilities for IT operations activities:
 
 | Role | Name | Email | Phone | Mobile | Availability |
 |---|---|---|---|---|---|
-| **CEO** | {{ meta-organisation-roles.role_ceo.name }} | {{ meta-organisation-roles.role_ceo.email }} | {{ meta-organisation-roles.role_ceo.phone }} | [TODO] | Mon-Fri 09:00-17:00 |
-| **CIO** | {{ meta-organisation-roles.role_cio.name }} | {{ meta-organisation-roles.role_cio.email }} | {{ meta-organisation-roles.role_cio.phone }} | [TODO] | Mon-Fri 08:00-18:00 |
-| **CISO** | {{ meta-organisation-roles.role_ciso.name }} | {{ meta-organisation-roles.role_ciso.email }} | {{ meta-organisation-roles.role_ciso.phone }} | [TODO] | Mon-Fri 08:00-18:00 |
-| **CFO** | {{ meta-organisation-roles.role_cfo.name }} | {{ meta-organisation-roles.role_cfo.email }} | {{ meta-organisation-roles.role_cfo.phone }} | [TODO] | Mon-Fri 09:00-17:00 |
-| **COO** | {{ meta-organisation-roles.role_coo.name }} | {{ meta-organisation-roles.role_coo.email }} | {{ meta-organisation-roles.role_coo.phone }} | [TODO] | Mon-Fri 08:00-18:00 |
+| **CEO** | {{ meta-organisation-roles.role_CEO }} | {{ meta-organisation-roles.role_CEO_email }} | {{ meta-organisation-roles.role_CEO_phone }} | [TODO] | Mon-Fri 09:00-17:00 |
+| **CIO** | {{ meta-organisation-roles.role_CIO }} | {{ meta-organisation-roles.role_CIO_email }} | {{ meta-organisation-roles.role_CIO_phone }} | [TODO] | Mon-Fri 08:00-18:00 |
+| **CISO** | {{ meta-organisation-roles.role_CISO }} | {{ meta-organisation-roles.role_CISO_email }} | {{ meta-organisation-roles.role_CISO_phone }} | [TODO] | Mon-Fri 08:00-18:00 |
+| **CFO** | {{ meta-organisation-roles.role_CFO }} | {{ meta-organisation-roles.role_CFO_email }} | {{ meta-organisation-roles.role_CFO_phone }} | [TODO] | Mon-Fri 09:00-17:00 |
+| **COO** | {{ meta-organisation-roles.role_COO }} | {{ meta-organisation-roles.role_COO_email }} | {{ meta-organisation-roles.role_COO_phone }} | [TODO] | Mon-Fri 08:00-18:00 |
 
 ### IT Operations - Contacts
 
 | Role | Name | Email | Phone | Mobile | Availability |
 |---|---|---|---|---|---|
-| **IT Ops Manager** | {{ meta-organisation-roles.role_it_operations_manager.name }} | {{ meta-organisation-roles.role_it_operations_manager.email }} | {{ meta-organisation-roles.role_it_operations_manager.phone }} | [TODO] | Mon-Fri 07:00-19:00 |
-| **Service Desk Lead** | {{ meta-organisation-roles.role_service_desk_lead.name }} | {{ meta-organisation-roles.role_service_desk_lead.email }} | {{ meta-organisation-roles.role_service_desk_lead.phone }} | [TODO] | Mon-Fri 08:00-17:00 |
+| **IT Ops Manager** | {{ meta-organisation-roles.role_IT_Operations_Manager }} | {{ meta-organisation-roles.role_IT_Operations_Manager_email }} | {{ meta-organisation-roles.role_IT_Operations_Manager_phone }} | [TODO] | Mon-Fri 07:00-19:00 |
+| **Service Desk Lead** | {{ meta-organisation-roles.role_Service_Desk_Lead }} | {{ meta-organisation-roles.role_Service_Desk_Lead_email }} | {{ meta-organisation-roles.role_Service_Desk_Lead_phone }} | [TODO] | Mon-Fri 08:00-17:00 |
 | **System Admin** | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 | **Network Admin** | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 | **DBA** | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
@@ -357,10 +343,10 @@ The RACI matrix defines responsibilities for IT operations activities:
 
 | Week | Primary | Secondary | Escalation |
 |---|---|---|---|
-| **Week [TODO]** | [TODO: Name] | [TODO: Name] | {{ meta-organisation-roles.role_it_operations_manager.name }} |
-| **Week [TODO]** | [TODO: Name] | [TODO: Name] | {{ meta-organisation-roles.role_it_operations_manager.name }} |
-| **Week [TODO]** | [TODO: Name] | [TODO: Name] | {{ meta-organisation-roles.role_it_operations_manager.name }} |
-| **Week [TODO]** | [TODO: Name] | [TODO: Name] | {{ meta-organisation-roles.role_it_operations_manager.name }} |
+| **Week [TODO]** | [TODO: Name] | [TODO: Name] | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| **Week [TODO]** | [TODO: Name] | [TODO: Name] | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| **Week [TODO]** | [TODO: Name] | [TODO: Name] | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| **Week [TODO]** | [TODO: Name] | [TODO: Name] | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
 
 **Rotation Schedule:** [TODO: Link to current on-call schedule]
 
@@ -377,8 +363,8 @@ The RACI matrix defines responsibilities for IT operations activities:
 - **Availability:** [TODO: Response time]
 
 **Escalation:**
-- **IT Operations Manager:** {{ meta-organisation-roles.role_it_operations_manager.name }} ({{ meta-organisation-roles.role_it_operations_manager.phone }})
-- **CIO:** {{ meta-organisation-roles.role_cio.name }} ({{ meta-organisation-roles.role_cio.phone }})
+- **IT Operations Manager:** {{ meta-organisation-roles.role_IT_Operations_Manager }} ({{ meta-organisation-roles.role_IT_Operations_Manager_phone }})
+- **CIO:** {{ meta-organisation-roles.role_CIO }} ({{ meta-organisation-roles.role_CIO_phone }})
 
 ### On-Call Process
 
@@ -486,18 +472,18 @@ External Service Providers + Vendors
 
 | Role | Primary | Deputy 1 | Deputy 2 |
 |---|---|---|---|
-| **CEO** | {{ meta-organisation-roles.role_ceo.name }} | [TODO: Name] | [TODO: Name] |
-| **CIO** | {{ meta-organisation-roles.role_cio.name }} | {{ meta-organisation-roles.role_it_operations_manager.name }} | [TODO: Name] |
-| **CISO** | {{ meta-organisation-roles.role_ciso.name }} | [TODO: Name] | {{ meta-organisation-roles.role_cio.name }} |
-| **CFO** | {{ meta-organisation-roles.role_cfo.name }} | [TODO: Name] | [TODO: Name] |
-| **COO** | {{ meta-organisation-roles.role_coo.name }} | [TODO: Name] | [TODO: Name] |
+| **CEO** | {{ meta-organisation-roles.role_CEO }} | [TODO: Name] | [TODO: Name] |
+| **CIO** | {{ meta-organisation-roles.role_CIO }} | {{ meta-organisation-roles.role_IT_Operations_Manager }} | [TODO: Name] |
+| **CISO** | {{ meta-organisation-roles.role_CISO }} | [TODO: Name] | {{ meta-organisation-roles.role_CIO }} |
+| **CFO** | {{ meta-organisation-roles.role_CFO }} | [TODO: Name] | [TODO: Name] |
+| **COO** | {{ meta-organisation-roles.role_COO }} | [TODO: Name] | [TODO: Name] |
 
 ### IT Operations - Deputies
 
 | Role | Primary | Deputy 1 | Deputy 2 |
 |---|---|---|---|
-| **IT Ops Manager** | {{ meta-organisation-roles.role_it_operations_manager.name }} | [TODO: Name] | {{ meta-organisation-roles.role_cio.name }} |
-| **Service Desk Lead** | {{ meta-organisation-roles.role_service_desk_lead.name }} | [TODO: Name] | {{ meta-organisation-roles.role_it_operations_manager.name }} |
+| **IT Ops Manager** | {{ meta-organisation-roles.role_IT_Operations_Manager }} | [TODO: Name] | {{ meta-organisation-roles.role_CIO }} |
+| **Service Desk Lead** | {{ meta-organisation-roles.role_Service_Desk_Lead }} | [TODO: Name] | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
 | **System Admin** | [TODO: Name] | [TODO: Name] | [TODO: Name] |
 | **Network Admin** | [TODO: Name] | [TODO: Name] | [TODO: Name] |
 | **DBA** | [TODO: Name] | [TODO: Name] | [TODO: Name] |

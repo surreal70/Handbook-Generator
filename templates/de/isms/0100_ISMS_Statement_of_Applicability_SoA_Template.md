@@ -44,7 +44,7 @@ Das SoA ist ein **Pflichtdokument** nach ISO/IEC 27001:2022 und dient als:
 ### 1.2 Geltungsbereich
 
 Dieses SoA gilt für den gesamten ISMS-Scope (siehe `0020_ISMS_Geltungsbereich_Scope.md`):
-- Alle Standorte: {{ netbox.site.name }} und weitere
+- Alle Standorte: [[ netbox.site.name ]] und weitere
 - Alle IT-Systeme und Infrastruktur
 - Alle Geschäftsprozesse im Scope
 - Alle Informationswerte
@@ -123,12 +123,12 @@ Controls können ausgeschlossen werden, wenn:
 
 | Control-ID | Control-Name | Anwendbar | Begründung (bei Nein) | Implementierungsstatus | Umsetzung/Beschreibung | Policy/Richtlinie | Evidence | Owner | Bemerkungen |
 |------------|--------------|-----------|----------------------|------------------------|------------------------|-------------------|----------|-------|-------------|
-| **A.5.1** | Policies for information security | Ja | - | Implementiert | ISMS-Leitlinie und themenspezifische Policies | `0010_ISMS_Informationssicherheitsleitlinie.md` | Policy-Dokumente | {{ meta.ciso.name }} | Jährlicher Review |
-| **A.5.2** | Information security roles and responsibilities | Ja | - | Implementiert | ISMS-Governance-Struktur definiert | `0040_ISMS_Governance_Rollen_und_Verantwortlichkeiten.md` | RACI-Matrizen | {{ meta.ciso.name }} | - |
-| **A.5.3** | Segregation of duties | Ja | - | In Arbeit | Rollentrennung in kritischen Prozessen | `0220_Policy_Zugriffssteuerung_und_Identitaetsmanagement.md` | IAM-Konfiguration | {{ meta.cio.name }} | 70% umgesetzt |
-| **A.5.4** | Management responsibilities | Ja | - | Implementiert | Management-Commitment dokumentiert | `0010_ISMS_Informationssicherheitsleitlinie.md` | Management Review | {{ meta.management.ceo }} | - |
-| **A.5.5** | Contact with authorities | Ja | - | Implementiert | Kontakte zu Behörden dokumentiert | `0050_Kontakte_und_Eskalation.md` (BCM) | Kontaktliste | {{ meta.ciso.name }} | - |
-| **A.5.6** | Contact with special interest groups | Ja | - | Implementiert | Mitgliedschaft in CERT, Branchenverbänden | [TODO: Dokument] | Mitgliedschaftsnachweise | {{ meta.ciso.name }} | - |
+| **A.5.1** | Policies for information security | Ja | - | Implementiert | ISMS-Leitlinie und themenspezifische Policies | `0010_ISMS_Informationssicherheitsleitlinie.md` | Policy-Dokumente | {{ meta-organisation-roles.role_CISO }} | Jährlicher Review |
+| **A.5.2** | Information security roles and responsibilities | Ja | - | Implementiert | ISMS-Governance-Struktur definiert | `0040_ISMS_Governance_Rollen_und_Verantwortlichkeiten.md` | RACI-Matrizen | {{ meta-organisation-roles.role_CISO }} | - |
+| **A.5.3** | Segregation of duties | Ja | - | In Arbeit | Rollentrennung in kritischen Prozessen | `0220_Policy_Zugriffssteuerung_und_Identitaetsmanagement.md` | IAM-Konfiguration | {{ meta-organisation-roles.role_CIO }} | 70% umgesetzt |
+| **A.5.4** | Management responsibilities | Ja | - | Implementiert | Management-Commitment dokumentiert | `0010_ISMS_Informationssicherheitsleitlinie.md` | Management Review | {{ meta-handbook.management_ceo }} | - |
+| **A.5.5** | Contact with authorities | Ja | - | Implementiert | Kontakte zu Behörden dokumentiert | `0050_Kontakte_und_Eskalation.md` (BCM) | Kontaktliste | {{ meta-organisation-roles.role_CISO }} | - |
+| **A.5.6** | Contact with special interest groups | Ja | - | Implementiert | Mitgliedschaft in CERT, Branchenverbänden | [TODO: Dokument] | Mitgliedschaftsnachweise | {{ meta-organisation-roles.role_CISO }} | - |
 | **A.5.7** | Threat intelligence | Ja | - | In Arbeit | Threat Intelligence Feeds abonniert | `0060_ISMS_Risikomanagement_Methodik.md` | TI-Feed-Konfiguration | Security Team | MITRE ATT&CK, CERT |
 | **A.5.8** | Information security in project management | Ja | - | Geplant | Security in Projektlebenszyklus | `0680_Policy_Security_in_Projects.md` | Projekt-Checklisten | PMO | Rollout Q2 2026 |
 | **A.5.9** | Inventory of information and other associated assets | Ja | - | In Arbeit | Asset-Inventar wird gepflegt | `0720_Anhang_Asset_und_Systeminventar_Template.md` | CMDB, NetBox | IT-Betrieb | 80% erfasst |
@@ -147,24 +147,24 @@ Add your organization's specific implementation details, evidence, and status.
 |------------|--------------|-----------|----------------------|------------------------|------------------------|-------------------|----------|-------|-------------|
 | **A.6.1** | Screening | Ja | - | Implementiert | Background Checks für kritische Rollen | `0520_Policy_HR_Security.md` | HR-Prozess | HR | - |
 | **A.6.2** | Terms and conditions of employment | Ja | - | Implementiert | Sicherheitsklauseln in Arbeitsverträgen | `0530_Richtlinie_HR_Onboarding_Rollenwechsel_Offboarding.md` | Arbeitsverträge | HR | - |
-| **A.6.3** | Information security awareness, education and training | Ja | - | In Arbeit | Security Awareness Programm | `0120_ISMS_Schulung_Awareness_und_Kompetenz.md` | Schulungsnachweise | {{ meta.ciso.name }} | Quartalsweise Training |
+| **A.6.3** | Information security awareness, education and training | Ja | - | In Arbeit | Security Awareness Programm | `0120_ISMS_Schulung_Awareness_und_Kompetenz.md` | Schulungsnachweise | {{ meta-organisation-roles.role_CISO }} | Quartalsweise Training |
 | **A.6.4** | Disciplinary process | Ja | - | Implementiert | Disziplinarverfahren bei Verstößen | `0520_Policy_HR_Security.md` | HR-Prozess | HR | - |
 | **A.6.5** | Responsibilities after termination or change of employment | Ja | - | Implementiert | Offboarding-Prozess | `0530_Richtlinie_HR_Onboarding_Rollenwechsel_Offboarding.md` | Offboarding-Checkliste | HR | - |
 | **A.6.6** | Confidentiality or non-disclosure agreements | Ja | - | Implementiert | NDAs für Mitarbeiter und Dritte | `0520_Policy_HR_Security.md` | Signed NDAs | HR | - |
-| **A.6.7** | Remote working | Ja | - | Implementiert | Remote Work Policy | `0500_Policy_Mobile_Device_und_Remote_Work.md` | Remote Work Guidelines | {{ meta.cio.name }} | - |
-| **A.6.8** | Information security event reporting | Ja | - | Implementiert | Incident Reporting Prozess | `0400_Policy_Incident_Management.md` | Incident Reports | {{ meta.ciso.name }} | - |
+| **A.6.7** | Remote working | Ja | - | Implementiert | Remote Work Policy | `0500_Policy_Mobile_Device_und_Remote_Work.md` | Remote Work Guidelines | {{ meta-organisation-roles.role_CIO }} | - |
+| **A.6.8** | Information security event reporting | Ja | - | Implementiert | Incident Reporting Prozess | `0400_Policy_Incident_Management.md` | Incident Reports | {{ meta-organisation-roles.role_CISO }} | - |
 
 ## 6. SoA-Tabelle: Physical Controls (7.x)
 
 | Control-ID | Control-Name | Anwendbar | Begründung (bei Nein) | Implementierungsstatus | Umsetzung/Beschreibung | Policy/Richtlinie | Evidence | Owner | Bemerkungen |
 |------------|--------------|-----------|----------------------|------------------------|------------------------|-------------------|----------|-------|-------------|
-| **A.7.1** | Physical security perimeters | Ja | - | Implementiert | Zutrittskontrollen am Standort {{ netbox.site.name }} | `0480_Policy_Physische_Sicherheit.md` | Zutrittsprotokolle | Facility Mgmt | - |
+| **A.7.1** | Physical security perimeters | Ja | - | Implementiert | Zutrittskontrollen am Standort [[ netbox.site.name ]] | `0480_Policy_Physische_Sicherheit.md` | Zutrittsprotokolle | Facility Mgmt | - |
 | **A.7.2** | Physical entry | Ja | - | Implementiert | Zugangskarten, Besuchermanagement | `0490_Richtlinie_Zutritt_Besucher_und_Schutz_von_Equipment.md` | Besucherlisten | Facility Mgmt | - |
 | **A.7.3** | Securing offices, rooms and facilities | Ja | - | Implementiert | Serverraum gesichert, Alarmanlagen | `0480_Policy_Physische_Sicherheit.md` | Sicherheitskonzept | Facility Mgmt | - |
 | **A.7.4** | Physical security monitoring | Ja | - | Implementiert | Videoüberwachung, Alarmsysteme | `0480_Policy_Physische_Sicherheit.md` | Überwachungsprotokolle | Facility Mgmt | DSGVO-konform |
 | **A.7.5** | Protecting against physical and environmental threats | Ja | - | Implementiert | Brandschutz, Klimatisierung, USV | `0480_Policy_Physische_Sicherheit.md` | Wartungsprotokolle | Facility Mgmt | - |
 | **A.7.6** | Working in secure areas | Ja | - | Implementiert | Clean Desk Policy, Secure Areas | `0480_Policy_Physische_Sicherheit.md` | Audit-Berichte | Facility Mgmt | - |
-| **A.7.7** | Clear desk and clear screen | Ja | - | In Arbeit | Clear Desk Policy kommuniziert | `0480_Policy_Physische_Sicherheit.md` | Awareness-Kampagne | {{ meta.ciso.name }} | Rollout läuft |
+| **A.7.7** | Clear desk and clear screen | Ja | - | In Arbeit | Clear Desk Policy kommuniziert | `0480_Policy_Physische_Sicherheit.md` | Awareness-Kampagne | {{ meta-organisation-roles.role_CISO }} | Rollout läuft |
 | **A.7.8** | Equipment siting and protection | Ja | - | Implementiert | Equipment-Schutz, Diebstahlsicherung | `0490_Richtlinie_Zutritt_Besucher_und_Schutz_von_Equipment.md` | Asset-Register | IT-Betrieb | - |
 | **A.7.9** | Security of assets off-premises | Ja | - | Implementiert | Laptop-Verschlüsselung, Mobile Device Policy | `0500_Policy_Mobile_Device_und_Remote_Work.md` | MDM-Konfiguration | IT-Betrieb | - |
 | **A.7.10** | Storage media | Ja | - | Implementiert | Sichere Handhabung von Speichermedien | `0280_Policy_Datenklassifizierung_und_Informationshandling.md` | Handling-Procedures | IT-Betrieb | - |
@@ -199,7 +199,7 @@ Add your organization's specific implementation details.
 
 | Control-ID | Control-Name | Begründung für Ausschluss | Alternative Maßnahmen | Genehmigt durch |
 |------------|--------------|---------------------------|----------------------|-----------------|
-| [TODO] | [TODO] | [TODO: Nicht im Scope, Risiko akzeptiert, etc.] | [TODO: Falls vorhanden] | {{ meta.ciso.name }} |
+| [TODO] | [TODO] | [TODO: Nicht im Scope, Risiko akzeptiert, etc.] | [TODO: Falls vorhanden] | {{ meta-organisation-roles.role_CISO }} |
 
 **Wichtig:** Ausschlüsse müssen dokumentiert und genehmigt werden. Sie dürfen die Fähigkeit zur Erfüllung von Sicherheitsanforderungen nicht beeinträchtigen.
 
@@ -279,11 +279,11 @@ Für eine vollständige Übersicht aller 93 Annex A Controls siehe:
 
 | Version | Datum | Autor | Beschreibung | Genehmigt durch |
 |---------|-------|-------|--------------|-----------------|
-| 1.0 | {{ meta-handbook.modifydate }} | {{ meta.ciso.name }} | Initiale Version | {{ meta.management.ceo }} |
+| 1.0 | {{ meta-handbook.modifydate }} | {{ meta-organisation-roles.role_CISO }} | Initiale Version | {{ meta-handbook.management_ceo }} |
 
 **Genehmigt durch:**  
-{{ meta.ciso.name }}, CISO  
-{{ meta.management.ceo }}, Geschäftsführung  
+{{ meta-organisation-roles.role_CISO }}, CISO  
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
 Datum: {{ meta-handbook.modifydate }}
 
 **Nächster Review:** {{ meta-handbook.next_review }} (Jährlich)

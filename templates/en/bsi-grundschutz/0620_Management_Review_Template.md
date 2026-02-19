@@ -28,9 +28,9 @@ Reference: BSI Standard 200-1 (Management Review)
 **Duration:** [TODO]
 
 **Participants:**
-- Executive Management: {{ meta.ceo.name }}
-- CISO: {{ meta.ciso.name }}
-- IT Management: {{ meta.cio.name }}
+- Executive Management: {{ meta-organisation-roles.role_CEO }}
+- CISO: {{ meta-organisation-roles.role_CISO }}
+- IT Management: {{ meta-organisation-roles.role_CIO }}
 - [TODO: Additional participants]
 
 **Information Domain(s):** [TODO: See Document 0040]
@@ -101,7 +101,7 @@ Reference: BSI Standard 200-1 (Management Review)
 **Justification:** [TODO]  
 **New Security Objectives:** [TODO]
 
-**Responsible:** {{ meta.ceo.name }}
+**Responsible:** {{ meta-organisation-roles.role_CEO }}
 
 ### 3.2 Resources and Investments
 
@@ -109,7 +109,7 @@ Reference: BSI Standard 200-1 (Management Review)
 **Personnel Resources:** [TODO: Additional positions?]  
 **External Support:** [TODO]
 
-**Responsible:** {{ meta.ceo.name }}
+**Responsible:** {{ meta-organisation-roles.role_CEO }}
 
 ### 3.3 Risk Acceptances
 
@@ -117,7 +117,7 @@ Reference: BSI Standard 200-1 (Management Review)
 **Justification:** [TODO]  
 **Validity Period:** [TODO]
 
-**Responsible:** {{ meta.ceo.name }}
+**Responsible:** {{ meta-organisation-roles.role_CEO }}
 
 ### 3.4 Improvement Actions
 
@@ -142,8 +142,8 @@ Reference: BSI Standard 200-1 (Management Review)
 
 | Role | Name | Date | Signature |
 |---|---|---|---|
-| Executive Management | {{ meta.ceo.name }} | [TODO] | [TODO] |
-| CISO | {{ meta.ciso.name }} | [TODO] | [TODO] |
+| Executive Management | {{ meta-organisation-roles.role_CEO }} | [TODO] | [TODO] |
+| CISO | {{ meta-organisation-roles.role_CISO }} | [TODO] | [TODO] |
 
 **References:**
 - BSI Standard 200-1: ISMS (Management Review)

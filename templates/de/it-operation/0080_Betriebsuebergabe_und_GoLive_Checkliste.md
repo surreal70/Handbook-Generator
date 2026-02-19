@@ -20,7 +20,7 @@
 Dieses Dokument beschreibt den Prozess der Betriebsübergabe und enthält eine umfassende Go-Live-Checkliste für die Überführung neuer oder geänderter IT-Services in den Produktivbetrieb.
 
 **Service:** {{ meta-handbook.service_name }}  
-**Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}  
+**Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}  
 **Stand:** {{ meta-handbook.revision }}
 
 ## Betriebsübergabe-Prozess
@@ -63,11 +63,11 @@ Dieses Dokument beschreibt den Prozess der Betriebsübergabe und enthält eine u
 | Rolle | Verantwortung | Ansprechpartner |
 |---|---|---|
 | **Service Owner** | Gesamtverantwortung für Service | [TODO: Name] |
-| **IT Operations Manager** | Betriebsübernahme koordinieren | {{ meta-organisation-roles.role_it_operations_manager.name }} |
+| **IT Operations Manager** | Betriebsübernahme koordinieren | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
 | **Technical Lead** | Technische Implementierung | [TODO: Name] |
-| **Service Desk Lead** | Support-Bereitschaft | {{ meta-organisation-roles.role_service_desk_lead.name }} |
+| **Service Desk Lead** | Support-Bereitschaft | {{ meta-organisation-roles.role_Service_Desk_Lead }} |
 | **Change Manager** | Change-Genehmigung | [TODO: Name] |
-| **CIO** | Finale Freigabe | {{ meta-organisation-roles.role_cio.name }} |
+| **CIO** | Finale Freigabe | {{ meta-organisation-roles.role_CIO }} |
 
 ## Go-Live-Checkliste
 
@@ -291,10 +291,10 @@ Das Übergabe-Paket muss folgende Dokumente enthalten:
 
 **Teilnehmer:**
 - Service Owner
-- IT Operations Manager: {{ meta-organisation-roles.role_it_operations_manager.name }}
+- IT Operations Manager: {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - Technical Lead
-- Service Desk Lead: {{ meta-organisation-roles.role_service_desk_lead.name }}
-- CIO: {{ meta-organisation-roles.role_cio.name }}
+- Service Desk Lead: {{ meta-organisation-roles.role_Service_Desk_Lead }}
+- CIO: {{ meta-organisation-roles.role_CIO }}
 
 ## Acceptance-Kriterien
 
@@ -331,7 +331,7 @@ Das Übergabe-Paket muss folgende Dokumente enthalten:
 | **Business Requirements** | Alle Geschäftsanforderungen erfüllt | ☐ | Service Owner |
 | **User Acceptance** | UAT erfolgreich abgeschlossen | ☐ | Business Users |
 | **Compliance** | Compliance-Anforderungen erfüllt | ☐ | Compliance Officer |
-| **Budget** | Innerhalb des Budgets | ☐ | {{ meta-organisation-roles.role_cfo.name }} |
+| **Budget** | Innerhalb des Budgets | ☐ | {{ meta-organisation-roles.role_CFO }} |
 | **Timeline** | Zeitplan eingehalten | ☐ | Project Manager |
 
 ## Go/No-Go-Entscheidung
@@ -341,10 +341,10 @@ Das Übergabe-Paket muss folgende Dokumente enthalten:
 **Zeitpunkt:** 24 Stunden vor geplantem Go-Live  
 **Teilnehmer:**
 - Service Owner
-- IT Operations Manager: {{ meta-organisation-roles.role_it_operations_manager.name }}
+- IT Operations Manager: {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - Technical Lead
 - Change Manager
-- CIO: {{ meta-organisation-roles.role_cio.name }}
+- CIO: {{ meta-organisation-roles.role_CIO }}
 
 ### Entscheidungskriterien
 
@@ -437,11 +437,11 @@ Rollback wird ausgelöst bei:
 
 **Go-Live-Team:**
 - **Service Owner:** [TODO: Name] - [TODO: E-Mail]
-- **IT Operations Manager:** {{ meta-organisation-roles.role_it_operations_manager.name }} - {{ meta-organisation-roles.role_it_operations_manager.email }}
+- **IT Operations Manager:** {{ meta-organisation-roles.role_IT_Operations_Manager }} - {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
 - **Technical Lead:** [TODO: Name] - [TODO: E-Mail]
-- **Service Desk Lead:** {{ meta-organisation-roles.role_service_desk_lead.name }} - {{ meta-organisation-roles.role_service_desk_lead.email }}
+- **Service Desk Lead:** {{ meta-organisation-roles.role_Service_Desk_Lead }} - {{ meta-organisation-roles.role_Service_Desk_Lead_email }}
 - **Change Manager:** [TODO: Name] - [TODO: E-Mail]
-- **CIO:** {{ meta-organisation-roles.role_cio.name }} - {{ meta-organisation-roles.role_cio.email }}
+- **CIO:** {{ meta-organisation-roles.role_CIO }} - {{ meta-organisation-roles.role_CIO_email }}
 
 **Dokumentverantwortlicher:** {{ meta-handbook.owner }}  
 **Genehmigt durch:** {{ meta-handbook.approver }}  

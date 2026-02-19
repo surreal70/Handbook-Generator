@@ -17,7 +17,7 @@
 
 ## 1. Purpose
 
-This document describes the application of the NIST Risk Management Framework (RMF) to system {{ meta.nist.system_name }}.
+This document describes the application of the NIST Risk Management Framework (RMF) to system {{ meta-handbook.system_name }}.
 
 ## 2. RMF Overview
 

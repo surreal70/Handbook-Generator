@@ -47,12 +47,12 @@ Das Schulungs- und Awareness-Programm der **{{ meta-organisation.name }}** stell
 
 | Zielgruppe | Anzahl | Schulungsbedarf | Frequenz | Verantwortlich |
 |------------|--------|-----------------|----------|----------------|
-| **Alle Mitarbeitenden** | [TODO] | Security Awareness Basics | Jährlich | {{ meta.ciso.name }} |
-| **Admins/Privileged Users** | [TODO] | Advanced Security, Privileged Access | Halbjährlich | {{ meta.ciso.name }} |
-| **Entwickler/DevOps** | [TODO] | Secure Coding, DevSecOps | Halbjährlich | {{ meta.ciso.name }} |
-| **Management** | [TODO] | Security Governance, Risk Management | Jährlich | {{ meta.ciso.name }} |
-| **HR** | [TODO] | HR Security, Onboarding/Offboarding | Jährlich | {{ meta.ciso.name }} |
-| **Dienstleister/Externe** | [TODO] | Security Basics, Compliance | Bei Onboarding | {{ meta.ciso.name }} |
+| **Alle Mitarbeitenden** | [TODO] | Security Awareness Basics | Jährlich | {{ meta-organisation-roles.role_CISO }} |
+| **Admins/Privileged Users** | [TODO] | Advanced Security, Privileged Access | Halbjährlich | {{ meta-organisation-roles.role_CISO }} |
+| **Entwickler/DevOps** | [TODO] | Secure Coding, DevSecOps | Halbjährlich | {{ meta-organisation-roles.role_CISO }} |
+| **Management** | [TODO] | Security Governance, Risk Management | Jährlich | {{ meta-organisation-roles.role_CISO }} |
+| **HR** | [TODO] | HR Security, Onboarding/Offboarding | Jährlich | {{ meta-organisation-roles.role_CISO }} |
+| **Dienstleister/Externe** | [TODO] | Security Basics, Compliance | Bei Onboarding | {{ meta-organisation-roles.role_CISO }} |
 
 ### 2.2 Rollenspezifische Anforderungen
 
@@ -80,12 +80,12 @@ Das Schulungs- und Awareness-Programm der **{{ meta-organisation.name }}** stell
 
 | Training-ID | Training | Zielgruppe | Frequenz | Dauer | Inhalt | Nachweis | Owner | Status |
 |-------------|----------|------------|----------|-------|--------|----------|-------|--------|
-| **T-001** | Security Awareness Basics | Alle Mitarbeiter | Jährlich | 60 Min | Phishing, Passwörter, Clean Desk, Incident Reporting | LMS-Zertifikat | {{ meta.ciso.name }} | Aktiv |
-| **T-002** | DSGVO Basics | Alle Mitarbeiter | Jährlich | 30 Min | Datenschutz-Grundlagen, Betroffenenrechte | LMS-Zertifikat | {{ meta.privacy.dpo }} | Aktiv |
-| **T-003** | Phishing Awareness | Alle Mitarbeiter | Quartalsweise | 15 Min | Phishing-Erkennung, Meldung | Simulation-Ergebnis | {{ meta.ciso.name }} | Aktiv |
-| **T-004** | Privileged Access Management | Admins | Halbjährlich | 90 Min | PAM, Least Privilege, Audit Logging | LMS-Zertifikat | {{ meta.ciso.name }} | Aktiv |
-| **T-005** | Secure Coding | Entwickler | Halbjährlich | 120 Min | OWASP Top 10, Input Validation, Secrets | LMS-Zertifikat | {{ meta.ciso.name }} | Aktiv |
-| **T-006** | Incident Response | Security Team | Jährlich | 180 Min | IR-Prozess, Forensik, Communication | Workshop-Teilnahme | {{ meta.ciso.name }} | Aktiv |
+| **T-001** | Security Awareness Basics | Alle Mitarbeiter | Jährlich | 60 Min | Phishing, Passwörter, Clean Desk, Incident Reporting | LMS-Zertifikat | {{ meta-organisation-roles.role_CISO }} | Aktiv |
+| **T-002** | DSGVO Basics | Alle Mitarbeiter | Jährlich | 30 Min | Datenschutz-Grundlagen, Betroffenenrechte | LMS-Zertifikat | {{ meta-handbook.privacy_dpo }} | Aktiv |
+| **T-003** | Phishing Awareness | Alle Mitarbeiter | Quartalsweise | 15 Min | Phishing-Erkennung, Meldung | Simulation-Ergebnis | {{ meta-organisation-roles.role_CISO }} | Aktiv |
+| **T-004** | Privileged Access Management | Admins | Halbjährlich | 90 Min | PAM, Least Privilege, Audit Logging | LMS-Zertifikat | {{ meta-organisation-roles.role_CISO }} | Aktiv |
+| **T-005** | Secure Coding | Entwickler | Halbjährlich | 120 Min | OWASP Top 10, Input Validation, Secrets | LMS-Zertifikat | {{ meta-organisation-roles.role_CISO }} | Aktiv |
+| **T-006** | Incident Response | Security Team | Jährlich | 180 Min | IR-Prozess, Forensik, Communication | Workshop-Teilnahme | {{ meta-organisation-roles.role_CISO }} | Aktiv |
 
 [TODO: Weitere Schulungen hinzufügen]
 
@@ -323,7 +323,7 @@ Für Audits werden folgende Nachweise bereitgestellt:
 - **ISO/IEC 27002:2022** - Control 6.3: Information security awareness, education and training
 
 **Genehmigt durch:**  
-{{ meta.ciso.name }}, CISO  
+{{ meta-organisation-roles.role_CISO }}, CISO  
 Datum: {{ meta-handbook.modifydate }}
 
 **Nächster Review:** {{ meta-handbook.next_review }}

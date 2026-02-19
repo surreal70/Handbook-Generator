@@ -20,8 +20,8 @@
 This document describes access and permission management for the IT service. It defines access control models, permission concepts, and role-based access control (RBAC).
 
 **Service:** {{ meta-handbook.service_name }}  
-**Responsible:** {{ meta-organisation-roles.role_it_operations_manager.name }}  
-**Security Officer:** {{ meta-organisation-roles.role_ciso.name }}  
+**Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }}  
+**Security Officer:** {{ meta-organisation-roles.role_CISO }}  
 **Version:** {{ meta-handbook.revision }}
 
 ## Access Management Strategy
@@ -62,12 +62,12 @@ This document describes access and permission management for the IT service. It 
 **Identity Provider:**
 - **System:** [TODO: e.g., Active Directory, Azure AD, Okta]
 - **URL:** [TODO: SSO URL]
-- **Responsible:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+- **Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 **MFA System:**
 - **System:** [TODO: e.g., Duo, Microsoft Authenticator]
 - **Required for:** Administrators, privileged accounts
-- **Responsible:** {{ meta-organisation-roles.role_ciso.name }}
+- **Responsible:** {{ meta-organisation-roles.role_CISO }}
 
 ### Authorization
 
@@ -123,7 +123,7 @@ This document describes access and permission management for the IT service. It 
 - Backup/restore
 
 **Assigned to:**
-- {{ meta-organisation-roles.role_it_operations_manager.name }}
+- {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - [TODO: Additional administrators]
 
 **MFA:** Required
@@ -150,7 +150,7 @@ This document describes access and permission management for the IT service. It 
 - Log access (read-only)
 
 **Assigned to:**
-- {{ meta-organisation-roles.role_service_desk_lead.name }}
+- {{ meta-organisation-roles.role_Service_Desk_Lead }}
 - [TODO: Additional operators]
 
 **MFA:** Optional
@@ -262,7 +262,7 @@ This document describes access and permission management for the IT service. It 
 **Decision:** Approve / Reject / Request clarification
 
 #### 3. Security Review
-**Who:** {{ meta-organisation-roles.role_ciso.name }} or security team  
+**Who:** {{ meta-organisation-roles.role_CISO }} or security team  
 **Review:**
 - Compliance requirements
 - Risk assessment
@@ -271,7 +271,7 @@ This document describes access and permission management for the IT service. It 
 **Decision:** Approve / Reject / Modify
 
 #### 4. Provisioning
-**Who:** {{ meta-organisation-roles.role_it_operations_manager.name }} or IT operations  
+**Who:** {{ meta-organisation-roles.role_IT_Operations_Manager }} or IT operations  
 **Activities:**
 - Create/modify account
 - Assign permissions
@@ -317,7 +317,7 @@ Privileged accounts have extended permissions and access to critical systems.
 ### PAM System
 
 **System:** [TODO: e.g., CyberArk, BeyondTrust, Thycotic]  
-**Responsible:** {{ meta-organisation-roles.role_ciso.name }}  
+**Responsible:** {{ meta-organisation-roles.role_CISO }}  
 **Access:** [TODO: PAM system URL]
 
 ## Service Accounts
@@ -360,7 +360,7 @@ Privileged accounts have extended permissions and access to critical systems.
 #### Annual Reviews
 **Frequency:** Annually  
 **Scope:** Complete access review  
-**Responsible:** {{ meta-organisation-roles.role_ciso.name }}  
+**Responsible:** {{ meta-organisation-roles.role_CISO }}  
 **Process:**
 1. Comprehensive audit of all accounts
 2. Review privileged accounts
@@ -399,7 +399,7 @@ Privileged accounts have extended permissions and access to critical systems.
 7. [ ] Documentation in CMDB
 8. [ ] Send welcome email
 
-**Responsible:** {{ meta-organisation-roles.role_service_desk_lead.name }}
+**Responsible:** {{ meta-organisation-roles.role_Service_Desk_Lead }}
 
 ### Offboarding Process
 
@@ -417,7 +417,7 @@ Privileged accounts have extended permissions and access to critical systems.
 7. [ ] Update documentation
 8. [ ] Inform manager
 
-**Responsible:** {{ meta-organisation-roles.role_service_desk_lead.name }}
+**Responsible:** {{ meta-organisation-roles.role_Service_Desk_Lead }}
 
 #### Role Change
 **Trigger:** HR notification or manager request  
@@ -453,7 +453,7 @@ Privileged accounts have extended permissions and access to critical systems.
 
 **Log Retention:** [TODO: e.g., 1 year]  
 **Log System:** [TODO: e.g., Splunk, ELK]  
-**Responsible:** {{ meta-organisation-roles.role_ciso.name }}
+**Responsible:** {{ meta-organisation-roles.role_CISO }}
 
 ### Audit Reports
 
@@ -479,7 +479,7 @@ Privileged accounts have extended permissions and access to critical systems.
 **Usage:**
 - Only for critical outages
 - When normal access paths unavailable
-- After approval by {{ meta-organisation-roles.role_cio.name }}
+- After approval by {{ meta-organisation-roles.role_CIO }}
 
 **Requirements:**
 - Physically secured passwords
@@ -493,19 +493,19 @@ Privileged accounts have extended permissions and access to critical systems.
 
 **Password Management:**
 - Sealed envelopes in safe
-- Access only by {{ meta-organisation-roles.role_cio.name }} or {{ meta-organisation-roles.role_ciso.name }}
+- Access only by {{ meta-organisation-roles.role_CIO }} or {{ meta-organisation-roles.role_CISO }}
 
 ## Contacts
 
 **Access Management Team:**
-- **IT Operations Manager:** {{ meta-organisation-roles.role_it_operations_manager.name }} - {{ meta-organisation-roles.role_it_operations_manager.email }}
-- **CISO:** {{ meta-organisation-roles.role_ciso.name }} - {{ meta-organisation-roles.role_ciso.email }}
-- **Service Desk Lead:** {{ meta-organisation-roles.role_service_desk_lead.name }} - {{ meta-organisation-roles.role_service_desk_lead.email }}
-- **CIO:** {{ meta-organisation-roles.role_cio.name }} - {{ meta-organisation-roles.role_cio.email }}
+- **IT Operations Manager:** {{ meta-organisation-roles.role_IT_Operations_Manager }} - {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
+- **CISO:** {{ meta-organisation-roles.role_CISO }} - {{ meta-organisation-roles.role_CISO_email }}
+- **Service Desk Lead:** {{ meta-organisation-roles.role_Service_Desk_Lead }} - {{ meta-organisation-roles.role_Service_Desk_Lead_email }}
+- **CIO:** {{ meta-organisation-roles.role_CIO }} - {{ meta-organisation-roles.role_CIO_email }}
 
 **Emergency Contacts:**
-- **Break-Glass Approval:** {{ meta-organisation-roles.role_cio.name }} - {{ meta-organisation-roles.role_cio.phone }}
-- **Security Incident:** {{ meta-organisation-roles.role_ciso.name }} - {{ meta-organisation-roles.role_ciso.phone }}
+- **Break-Glass Approval:** {{ meta-organisation-roles.role_CIO }} - {{ meta-organisation-roles.role_CIO_phone }}
+- **Security Incident:** {{ meta-organisation-roles.role_CISO }} - {{ meta-organisation-roles.role_CISO_phone }}
 
 **Document Owner:** {{ meta-handbook.owner }}  
 **Approved by:** {{ meta-handbook.approver }}  

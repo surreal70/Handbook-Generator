@@ -37,7 +37,7 @@ Diese Policy gilt für:
 - **Systeme:** Alle geschäftskritischen IT-Systeme, Anwendungen, Infrastruktur, Cloud-Services
 - **Szenarien:** Naturkatastrophen, Cyberangriffe, Systemausfälle, Pandemien, Lieferantenausfälle
 - **Schnittstellen:** Integration mit BCM (Business Continuity Management)
-- **Standorte:** {{ netbox.site.name }} und alle weiteren Betriebsstandorte
+- **Standorte:** [[ netbox.site.name ]] und alle weiteren Betriebsstandorte
 
 **Ausnahmen:** Ausnahmen sind nur über den definierten Ausnahmenprozess (`0640_Policy_Ausnahmen_und_Risk_Waivers.md`) zulässig.
 
@@ -92,10 +92,10 @@ Klare Eskalationspfade definieren, wann ein IT-Incident zu einer Business Contin
 
 ### Schlüsselrollen
 
-- **Policy Owner:** {{ meta.ciso.name }} (CISO)
-- **BCM Manager:** {{ meta.bcm.manager }}
-- **DR Coordinator:** {{ meta.it.dr_coordinator }}
-- **CIO:** {{ meta.cio.name }}
+- **Policy Owner:** {{ meta-organisation-roles.role_CISO }} (CISO)
+- **BCM Manager:** {{ meta-handbook.bcm_manager }}
+- **DR Coordinator:** {{ meta-handbook.it_dr_coordinator }}
+- **CIO:** {{ meta-organisation-roles.role_CIO }}
 - **Umsetzungsverantwortliche:** IT-Betrieb, System Owner
 - **Kontroll-/Prüfinstanz:** ISMS, Internal Audit
 
@@ -172,7 +172,7 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **BSI Standard 100-4** - Business Continuity Management
 
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
 Datum: {{ meta-handbook.modifydate }}
 
 **Nächster Review:** {{ meta-handbook.next_review }} (jährlich oder anlassbezogen)

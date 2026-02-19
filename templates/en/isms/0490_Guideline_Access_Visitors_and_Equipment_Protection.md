@@ -74,7 +74,7 @@ This guideline specifies the `0480_Policy_Physical_Security.md` and defines:
 **Logging:**
 - All access attempts (success and failure)
 - Timestamp, person, door/zone
-- Retention: {{ meta.retention.access_years }} years
+- Retention: {{ meta-handbook.retention_access_years }} years
 
 **Monitoring:**
 - Alerts for unauthorized access attempts
@@ -113,7 +113,7 @@ This guideline specifies the `0480_Policy_Physical_Security.md` and defines:
 - Name, company, ID number
 - Host, purpose of visit
 - Entry and exit time
-- Retention: {{ meta.retention.visitor_years }} years
+- Retention: {{ meta-handbook.retention_visitor_years }} years
 
 ## 5. Physical Protection of Equipment
 
@@ -220,6 +220,6 @@ This guideline specifies the `0480_Policy_Physical_Security.md` and defines:
 - **ISO/IEC 27001:2022 Annex A.7.3** - Securing offices, rooms and facilities
 - **ISO/IEC 27001:2022 Annex A.7.4** - Physical security monitoring
 
-**Approved by:** {{ meta.ciso.name }}, CISO  
+**Approved by:** {{ meta-organisation-roles.role_CISO }}, CISO  
 **Next Review:** {{ meta-handbook.next_review }}
 

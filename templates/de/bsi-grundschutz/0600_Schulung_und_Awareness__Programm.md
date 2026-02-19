@@ -25,7 +25,7 @@ Reference: BSI Standard 200-1 (Awareness and Training), ORP.3
 
 Das Schulungs- und Awareness-Programm von **{{ meta-organisation.name }}** stellt sicher, dass alle Mitarbeitenden über erforderliche Sicherheitskenntnisse verfügen.
 
-**Verantwortlich:** {{ meta.ciso.name }} (ISB)
+**Verantwortlich:** {{ meta-organisation-roles.role_CISO }} (ISB)
 
 ## 2. Zielgruppen
 
@@ -41,11 +41,11 @@ Das Schulungs- und Awareness-Programm von **{{ meta-organisation.name }}** stell
 
 | Training | Zielgruppe | Frequenz | Dauer | Inhalte | Nachweis | Owner |
 |---|---|---|---|---|---|---|
-| Grundlagentraining Informationssicherheit | Alle | Jährlich | 1h | Policies, Phishing, Passwörter, Incident-Meldung | LMS-Zertifikat | {{ meta.ciso.name }} |
+| Grundlagentraining Informationssicherheit | Alle | Jährlich | 1h | Policies, Phishing, Passwörter, Incident-Meldung | LMS-Zertifikat | {{ meta-organisation-roles.role_CISO }} |
 | Onboarding Security | Neue Mitarbeitende | Bei Eintritt | 30min | Grundlagen, Policies | Teilnahmeliste | HR |
-| Phishing-Simulation | Alle | Quartalsweise | 10min | Phishing-Erkennung | Klickrate | {{ meta.ciso.name }} |
-| Admin-Schulung | IT-Admins | Jährlich | 4h | Privileged Access, Härtung, Logging | Teilnahmeliste | {{ meta.cio.name }} |
-| Secure Coding | Entwickler | Jährlich | 8h | OWASP Top 10, SAST/DAST | Teilnahmeliste | {{ meta.cio.name }} |
+| Phishing-Simulation | Alle | Quartalsweise | 10min | Phishing-Erkennung | Klickrate | {{ meta-organisation-roles.role_CISO }} |
+| Admin-Schulung | IT-Admins | Jährlich | 4h | Privileged Access, Härtung, Logging | Teilnahmeliste | {{ meta-organisation-roles.role_CIO }} |
+| Secure Coding | Entwickler | Jährlich | 8h | OWASP Top 10, SAST/DAST | Teilnahmeliste | {{ meta-organisation-roles.role_CIO }} |
 | [TODO: Weitere Schulungen] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## 4. Wirksamkeitsmessung
@@ -87,7 +87,7 @@ Das Schulungs- und Awareness-Programm von **{{ meta-organisation.name }}** stell
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| ISB | {{ meta-organisation-roles.role_CISO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 | HR | [TODO] | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **Referenzen:**

@@ -37,7 +37,7 @@ Diese Policy gilt für:
 - **Incident-Typen:** Security Incidents, Data Breaches, Malware, Phishing, DDoS, Insider Threats
 - **Systeme:** Alle IT-Systeme, Anwendungen, Netzwerke, Cloud-Services
 - **Personen:** Alle Mitarbeiter, Auftragnehmer, Lieferanten
-- **Standorte:** {{ netbox.site.name }} und alle weiteren Betriebsstandorte
+- **Standorte:** [[ netbox.site.name ]] und alle weiteren Betriebsstandorte
 
 **Ausnahmen:** Ausnahmen sind nur über den definierten Ausnahmenprozess (`0640_Policy_Ausnahmen_und_Risk_Waivers.md`) zulässig.
 
@@ -96,10 +96,10 @@ Aus jedem Incident werden Lessons Learned abgeleitet. Erkenntnisse fließen in d
 
 ### Schlüsselrollen
 
-- **Policy Owner:** {{ meta.ciso.name }} (CISO)
-- **Incident Manager:** {{ meta.security.incident_manager }}
-- **SOC Manager:** {{ meta.security.soc_manager }}
-- **Data Protection Officer:** {{ meta.dpo.name }}
+- **Policy Owner:** {{ meta-organisation-roles.role_CISO }} (CISO)
+- **Incident Manager:** {{ meta-handbook.security_incident_manager }}
+- **SOC Manager:** {{ meta-handbook.security_soc_manager }}
+- **Data Protection Officer:** {{ meta-handbook.dpo_name }}
 - **Umsetzungsverantwortliche:** SOC, IT-Betrieb, Incident Response Team
 - **Kontroll-/Prüfinstanz:** ISMS, Internal Audit
 
@@ -178,7 +178,7 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **NIS2-Richtlinie** - Network and Information Security Directive
 
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
 Datum: {{ meta-handbook.modifydate }}
 
 **Nächster Review:** {{ meta-handbook.next_review }} (jährlich oder anlassbezogen)

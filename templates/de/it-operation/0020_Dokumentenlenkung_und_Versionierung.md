@@ -82,9 +82,9 @@
 ### 2. Fachreview
 
 **Reviewer:**
-- **Operations:** {{ meta-organisation-roles.role_it_operations_manager.name }} ({{ meta-organisation-roles.role_it_operations_manager.email }})
+- **Operations:** {{ meta-organisation-roles.role_IT_Operations_Manager }} ({{ meta-organisation-roles.role_IT_Operations_Manager_email }})
 - **Architektur:** [TODO: Architektur-Verantwortlicher]
-- **Security:** {{ meta-organisation-roles.role_ciso.name }} ({{ meta-organisation-roles.role_ciso.email }})
+- **Security:** {{ meta-organisation-roles.role_CISO }} ({{ meta-organisation-roles.role_CISO_email }})
 - **Compliance:** [TODO: Compliance-Verantwortlicher]
 
 **Prüfkriterien:**
@@ -136,7 +136,7 @@
 
 ### Wesentliche Änderungen (Major)
 
-- **Genehmigung:** {{ meta-organisation-roles.role_cio.name }} ({{ meta-organisation-roles.role_cio.email }})
+- **Genehmigung:** {{ meta-organisation-roles.role_CIO }} ({{ meta-organisation-roles.role_CIO_email }})
 - **Review:** Alle Fachbereiche + Management
 - **CAB-Sitzung:** Erforderlich
 - **Beispiele:** Grundlegende Überarbeitungen, Architekturänderungen
@@ -181,7 +181,7 @@ Jedes Dokument MUSS folgende Informationen enthalten:
 Verwenden Sie folgende Platzhalter für organisationsweite Informationen:
 
 - **Organisation:** `{{ meta-organisation.name }}`
-- **Rollen:** `{{ meta-organisation-roles.role_ceo.name }}`, `{{ meta-organisation-roles.role_cio.name }}`, `{{ meta-organisation-roles.role_ciso.name }}`
+- **Rollen:** `{{ meta-organisation-roles.role_CEO }}`, `{{ meta-organisation-roles.role_CIO }}`, `{{ meta-organisation-roles.role_CISO }}`
 - **Dokument:** `{{ meta-handbook.owner }}`, `{{ meta-handbook.approver }}`
 - **Autor:** `{{ meta-handbook.author }}`
 
@@ -219,15 +219,15 @@ Verwenden Sie folgende Platzhalter für organisationsweite Informationen:
 | **Dokumentverantwortlicher** | Gesamtverantwortung, Aktualität | {{ meta-handbook.owner }} |
 | **Redakteur** | Inhaltliche Pflege, Änderungen | [Author] |
 | **Freigabeinstanz** | Genehmigung von Änderungen | {{ meta-handbook.approver }} |
-| **CIO** | Strategische Ausrichtung | {{ meta-organisation-roles.role_cio.name }} |
-| **CISO** | Security-Review | {{ meta-organisation-roles.role_ciso.name }} |
+| **CIO** | Strategische Ausrichtung | {{ meta-organisation-roles.role_CIO }} |
+| **CISO** | Security-Review | {{ meta-organisation-roles.role_CISO }} |
 
 ## Kontakte
 
 **Bei Fragen zur Dokumentenlenkung:**
 - **Dokumentverantwortlicher:** {{ meta-handbook.owner }}
-- **IT Operations Manager:** {{ meta-organisation-roles.role_it_operations_manager.name }} ({{ meta-organisation-roles.role_it_operations_manager.email }})
-- **CIO:** {{ meta-organisation-roles.role_cio.name }} ({{ meta-organisation-roles.role_cio.email }})
+- **IT Operations Manager:** {{ meta-organisation-roles.role_IT_Operations_Manager }} ({{ meta-organisation-roles.role_IT_Operations_Manager_email }})
+- **CIO:** {{ meta-organisation-roles.role_CIO }} ({{ meta-organisation-roles.role_CIO_email }})
 
 **Dokumentverantwortlicher:** {{ meta-handbook.owner }}  
 **Genehmigt durch:** {{ meta-handbook.approver }}  

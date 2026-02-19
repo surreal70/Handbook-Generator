@@ -24,8 +24,8 @@ Das Mapping berücksichtigt die Änderungen aus Amendment 1:2024 und stellt sich
 ## Geltungsbereich
 
 **Organisation:** {{ meta-organisation.name }}  
-**ISMS Scope:** {{ meta.isms.scope }}  
-**Verantwortlich:** {{ meta.ciso.name }} ({{ meta.ciso.email }})
+**ISMS Scope:** {{ meta-handbook.isms_scope }}  
+**Verantwortlich:** {{ meta-organisation-roles.role_CISO }} ({{ meta-organisation-roles.role_CISO_email }})
 
 ## ISO/IEC 27001:2022 Annex A Struktur
 
@@ -52,7 +52,7 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0200-0680 (Alle Topic-Specific Policies)
 - Prozess: 0050_ISMS_Dokumentenlenkung.md
 
-**Verantwortlich:** {{ meta.ciso.name }}  
+**Verantwortlich:** {{ meta-organisation-roles.role_CISO }}  
 **Nachweis:** Genehmigte und veröffentlichte Policies, Schulungsnachweise
 
 #### 5.2 Information Security Roles and Responsibilities
@@ -64,7 +64,7 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Dokument: 0040_ISMS_Governance_Rollen_und_Verantwortlichkeiten.md
 - RACI-Matrizen in allen relevanten Policies
 
-**Verantwortlich:** {{ meta.ciso.name }}  
+**Verantwortlich:** {{ meta-organisation-roles.role_CISO }}  
 **Nachweis:** RACI-Matrizen, Stellenbeschreibungen, Organigramm
 
 #### 5.3 Segregation of Duties
@@ -76,7 +76,7 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0220_Policy_Zugriffssteuerung_und_Identitaetsmanagement.md
 - Richtlinie: 0230_Richtlinie_IAM_Joiner_Mover_Leaver_und_Zugriffsantraege.md
 
-**Verantwortlich:** {{ meta.ciso.name }}  
+**Verantwortlich:** {{ meta-organisation-roles.role_CISO }}  
 **Nachweis:** Berechtigungskonzept, Zugriffsreviews
 
 #### 5.4 Management Responsibilities
@@ -88,7 +88,7 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0010_ISMS_Informationssicherheitsleitlinie.md
 - Dokument: 0120_ISMS_Schulung_Awareness_und_Kompetenz.md
 
-**Verantwortlich:** Management, {{ meta.ciso.name }}  
+**Verantwortlich:** Management, {{ meta-organisation-roles.role_CISO }}  
 **Nachweis:** Management-Commitment, Schulungsnachweise
 
 #### 5.5 Contact with Authorities
@@ -100,7 +100,7 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Dokument: 0030_ISMS_Kontext_und_Interessierte_Parteien.md
 - Policy: 0400_Policy_Incident_Management.md
 
-**Verantwortlich:** {{ meta.ciso.name }}  
+**Verantwortlich:** {{ meta-organisation-roles.role_CISO }}  
 **Nachweis:** Kontaktlisten, Kommunikationsprotokolle
 
 #### 5.6 Contact with Special Interest Groups
@@ -111,7 +111,7 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Umsetzung in ISMS:**
 - Dokument: 0030_ISMS_Kontext_und_Interessierte_Parteien.md
 
-**Verantwortlich:** {{ meta.ciso.name }}  
+**Verantwortlich:** {{ meta-organisation-roles.role_CISO }}  
 **Nachweis:** Mitgliedschaften, Teilnahmebestätigungen
 
 #### 5.7 Threat Intelligence
@@ -135,7 +135,7 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0680_Policy_Security_in_Projects.md
 - Richtlinie: 0690_Richtlinie_Sicherheitsanforderungen_im_Projektlebenszyklus.md
 
-**Verantwortlich:** Project Management Office, {{ meta.ciso.name }}  
+**Verantwortlich:** Project Management Office, {{ meta-organisation-roles.role_CISO }}  
 **Nachweis:** Projektdokumentation, Security Reviews
 
 #### 5.9 Inventory of Information and Other Associated Assets
@@ -160,7 +160,7 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0200_Policy_Akzeptable_Nutzung_IT.md
 - Richtlinie: 0210_Richtlinie_Akzeptable_Nutzung_IT.md
 
-**Verantwortlich:** {{ meta.ciso.name }}  
+**Verantwortlich:** {{ meta-organisation-roles.role_CISO }}  
 **Nachweis:** Acceptable Use Policy, Mitarbeiterbestätigungen
 
 #### 5.11 Return of Assets
@@ -184,7 +184,7 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0280_Policy_Datenklassifizierung_und_Informationshandling.md
 - Richtlinie: 0290_Richtlinie_Datenklassifizierung_Labeling_und_Handling.md
 
-**Verantwortlich:** Data Owners, {{ meta.ciso.name }}  
+**Verantwortlich:** Data Owners, {{ meta-organisation-roles.role_CISO }}  
 **Nachweis:** Klassifizierungsschema, gelabelte Dokumente
 
 #### 5.13 Labelling of Information
@@ -207,7 +207,7 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0660_Policy_Informationsuebertragung_und_Kommunikation.md
 - Richtlinie: 0670_Richtlinie_Email_Sharing_und_Zusammenarbeitstools.md
 
-**Verantwortlich:** {{ meta.ciso.name }}  
+**Verantwortlich:** {{ meta-organisation-roles.role_CISO }}  
 **Nachweis:** Transfer-Richtlinien, Verschlüsselungsnachweise
 
 #### 5.15 Access Control
@@ -219,7 +219,7 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0220_Policy_Zugriffssteuerung_und_Identitaetsmanagement.md
 - Richtlinie: 0230_Richtlinie_IAM_Joiner_Mover_Leaver_und_Zugriffsantraege.md
 
-**Verantwortlich:** IAM Team, {{ meta.ciso.name }}  
+**Verantwortlich:** IAM Team, {{ meta-organisation-roles.role_CISO }}  
 **Nachweis:** Berechtigungskonzept, Access Reviews
 
 #### 5.16 Identity Management
@@ -266,7 +266,7 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0460_Policy_Lieferanten_und_Cloud_Sicherheit.md
 - Richtlinie: 0470_Richtlinie_Third_Party_Risk_Assessment_und_Cloud_Controls.md
 
-**Verantwortlich:** Procurement, {{ meta.ciso.name }}  
+**Verantwortlich:** Procurement, {{ meta-organisation-roles.role_CISO }}  
 **Nachweis:** Supplier Security Assessments, Verträge
 
 #### 5.20 Addressing Information Security within Supplier Agreements
@@ -277,7 +277,7 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Umsetzung in ISMS:**
 - Richtlinie: 0470_Richtlinie_Third_Party_Risk_Assessment_und_Cloud_Controls.md
 
-**Verantwortlich:** Procurement, Legal, {{ meta.ciso.name }}  
+**Verantwortlich:** Procurement, Legal, {{ meta-organisation-roles.role_CISO }}  
 **Nachweis:** Vertragsklauseln, SLAs
 
 #### 5.21 Managing Information Security in the ICT Supply Chain
@@ -288,7 +288,7 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Umsetzung in ISMS:**
 - Richtlinie: 0470_Richtlinie_Third_Party_Risk_Assessment_und_Cloud_Controls.md
 
-**Verantwortlich:** {{ meta.ciso.name }}, IT Operations  
+**Verantwortlich:** {{ meta-organisation-roles.role_CISO }}, IT Operations  
 **Nachweis:** Supply Chain Risk Assessments
 
 #### 5.22 Monitoring, Review and Change Management of Supplier Services
@@ -299,7 +299,7 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Umsetzung in ISMS:**
 - Richtlinie: 0470_Richtlinie_Third_Party_Risk_Assessment_und_Cloud_Controls.md
 
-**Verantwortlich:** Supplier Management, {{ meta.ciso.name }}  
+**Verantwortlich:** Supplier Management, {{ meta-organisation-roles.role_CISO }}  
 **Nachweis:** Supplier Reviews, Performance Reports
 
 #### 5.23 Information Security for Use of Cloud Services
@@ -311,7 +311,7 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0460_Policy_Lieferanten_und_Cloud_Sicherheit.md
 - Richtlinie: 0470_Richtlinie_Third_Party_Risk_Assessment_und_Cloud_Controls.md
 
-**Verantwortlich:** Cloud Governance Team, {{ meta.ciso.name }}  
+**Verantwortlich:** Cloud Governance Team, {{ meta-organisation-roles.role_CISO }}  
 **Nachweis:** Cloud Security Assessments, Cloud Contracts
 
 #### 5.24 Information Security Incident Management Planning and Preparation
@@ -323,7 +323,7 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0400_Policy_Incident_Management.md
 - Richtlinie: 0410_Richtlinie_Incident_Response_und_Major_Incident_Prozess.md
 
-**Verantwortlich:** Incident Response Team, {{ meta.ciso.name }}  
+**Verantwortlich:** Incident Response Team, {{ meta-organisation-roles.role_CISO }}  
 **Nachweis:** Incident Response Plan, Runbooks
 
 #### 5.25 Assessment and Decision on Information Security Events
@@ -357,7 +357,7 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Richtlinie: 0410_Richtlinie_Incident_Response_und_Major_Incident_Prozess.md
 - Dokument: 0160_ISMS_Kontinuierliche_Verbesserung.md
 
-**Verantwortlich:** Incident Response Team, {{ meta.ciso.name }}  
+**Verantwortlich:** Incident Response Team, {{ meta-organisation-roles.role_CISO }}  
 **Nachweis:** Lessons Learned Dokumentation, Verbesserungsmaßnahmen
 
 #### 5.28 Collection of Evidence
@@ -380,7 +380,7 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0440_Policy_Business_Continuity_ICT_Readiness.md
 - Richtlinie: 0450_Richtlinie_ICT_DR_Schnittstellen_zu_BCM.md
 
-**Verantwortlich:** BCM Team, {{ meta.ciso.name }}  
+**Verantwortlich:** BCM Team, {{ meta-organisation-roles.role_CISO }}  
 **Nachweis:** Business Continuity Plans, DR Tests
 
 #### 5.30 ICT Readiness for Business Continuity
@@ -404,7 +404,7 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Dokument: 0030_ISMS_Kontext_und_Interessierte_Parteien.md
 - Policy: 0560_Policy_Datenschutz_Schnittstellen.md
 
-**Verantwortlich:** Legal, Compliance, {{ meta.ciso.name }}  
+**Verantwortlich:** Legal, Compliance, {{ meta-organisation-roles.role_CISO }}  
 **Nachweis:** Compliance Register, Legal Reviews
 
 #### 5.32 Intellectual Property Rights
@@ -416,7 +416,7 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0200_Policy_Akzeptable_Nutzung_IT.md
 - Richtlinie: 0290_Richtlinie_Datenklassifizierung_Labeling_und_Handling.md
 
-**Verantwortlich:** Legal, {{ meta.ciso.name }}  
+**Verantwortlich:** Legal, {{ meta-organisation-roles.role_CISO }}  
 **Nachweis:** IP Protection Procedures, Lizenzmanagement
 
 #### 5.33 Protection of Records
@@ -428,7 +428,7 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0580_Policy_Aufbewahrung_und_Loeschung.md
 - Richtlinie: 0590_Richtlinie_Records_Retention_und_Sichere_Loeschung.md
 
-**Verantwortlich:** Records Management, {{ meta.ciso.name }}  
+**Verantwortlich:** Records Management, {{ meta-organisation-roles.role_CISO }}  
 **Nachweis:** Records Retention Policy, Archivierungssysteme
 
 #### 5.34 Privacy and Protection of PII
@@ -440,7 +440,7 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0560_Policy_Datenschutz_Schnittstellen.md
 - Richtlinie: 0570_Richtlinie_Datenschutz_Anforderungen_und_Datenverarbeitung.md
 
-**Verantwortlich:** Data Protection Officer, {{ meta.ciso.name }}  
+**Verantwortlich:** Data Protection Officer, {{ meta-organisation-roles.role_CISO }}  
 **Nachweis:** DSGVO Compliance, Privacy Impact Assessments
 
 #### 5.35 Independent Review of Information Security
@@ -451,7 +451,7 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Umsetzung in ISMS:**
 - Dokument: 0130_ISMS_Internes_Auditprogramm.md
 
-**Verantwortlich:** Internal Audit, {{ meta.ciso.name }}  
+**Verantwortlich:** Internal Audit, {{ meta-organisation-roles.role_CISO }}  
 **Nachweis:** Audit Reports, Audit Plans
 
 #### 5.36 Compliance with Policies, Rules and Standards for Information Security
@@ -463,7 +463,7 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Dokument: 0130_ISMS_Internes_Auditprogramm.md
 - Dokument: 0140_ISMS_Management_Review_Template.md
 
-**Verantwortlich:** Compliance Team, {{ meta.ciso.name }}  
+**Verantwortlich:** Compliance Team, {{ meta-organisation-roles.role_CISO }}  
 **Nachweis:** Compliance Reviews, Audit Findings
 
 #### 5.37 Documented Operating Procedures
@@ -489,7 +489,7 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0520_Policy_HR_Security.md
 - Richtlinie: 0530_Richtlinie_HR_Onboarding_Rollenwechsel_Offboarding.md
 
-**Verantwortlich:** HR, {{ meta.ciso.name }}  
+**Verantwortlich:** HR, {{ meta-organisation-roles.role_CISO }}  
 **Nachweis:** Background Check Procedures, Screening Records
 
 #### 6.2 Terms and Conditions of Employment
@@ -512,7 +512,7 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Umsetzung in ISMS:**
 - Dokument: 0120_ISMS_Schulung_Awareness_und_Kompetenz.md
 
-**Verantwortlich:** {{ meta.ciso.name }}, HR  
+**Verantwortlich:** {{ meta-organisation-roles.role_CISO }}, HR  
 **Nachweis:** Schulungspläne, Teilnahmebestätigungen, Awareness Kampagnen
 
 #### 6.4 Disciplinary Process
@@ -559,7 +559,7 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0500_Policy_Mobile_Device_und_Remote_Work.md
 - Richtlinie: 0510_Richtlinie_MDM_BringYourOwnDevice_und_Remote_Access.md
 
-**Verantwortlich:** IT Operations, {{ meta.ciso.name }}  
+**Verantwortlich:** IT Operations, {{ meta-organisation-roles.role_CISO }}  
 **Nachweis:** Remote Work Policy, VPN Logs, Endpoint Security
 
 #### 6.8 Information Security Event Reporting
@@ -585,7 +585,7 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0480_Policy_Physische_Sicherheit.md
 - Richtlinie: 0490_Richtlinie_Zutritt_Besucher_und_Schutz_von_Equipment.md
 
-**Verantwortlich:** Facility Management, {{ meta.ciso.name }}  
+**Verantwortlich:** Facility Management, {{ meta-organisation-roles.role_CISO }}  
 **Nachweis:** Sicherheitszonen, Zutrittskontrollsysteme
 
 #### 7.2 Physical Entry
@@ -642,7 +642,7 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Umsetzung in ISMS:**
 - Richtlinie: 0490_Richtlinie_Zutritt_Besucher_und_Schutz_von_Equipment.md
 
-**Verantwortlich:** Facility Management, {{ meta.ciso.name }}  
+**Verantwortlich:** Facility Management, {{ meta-organisation-roles.role_CISO }}  
 **Nachweis:** Clean Desk Policy, Secure Area Procedures
 
 #### 7.7 Clear Desk and Clear Screen
@@ -677,7 +677,7 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0500_Policy_Mobile_Device_und_Remote_Work.md
 - Richtlinie: 0510_Richtlinie_MDM_BringYourOwnDevice_und_Remote_Access.md
 
-**Verantwortlich:** IT Operations, {{ meta.ciso.name }}  
+**Verantwortlich:** IT Operations, {{ meta-organisation-roles.role_CISO }}  
 **Nachweis:** Mobile Device Management, Encryption Policies
 
 #### 7.10 Storage Media
@@ -751,7 +751,7 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0620_Policy_Endpoint_Security.md
 - Richtlinie: 0630_Richtlinie_EDR_AV_Host_Firewall_und_Device_Compliance.md
 
-**Verantwortlich:** IT Operations, {{ meta.ciso.name }}  
+**Verantwortlich:** IT Operations, {{ meta-organisation-roles.role_CISO }}  
 **Nachweis:** Endpoint Protection, Device Compliance Policies
 
 #### 8.2 Privileged Access Rights
@@ -763,7 +763,7 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0220_Policy_Zugriffssteuerung_und_Identitaetsmanagement.md
 - Richtlinie: 0230_Richtlinie_IAM_Joiner_Mover_Leaver_und_Zugriffsantraege.md
 
-**Verantwortlich:** IAM Team, {{ meta.ciso.name }}  
+**Verantwortlich:** IAM Team, {{ meta-organisation-roles.role_CISO }}  
 **Nachweis:** Privileged Access Management, PAM Logs
 
 #### 8.3 Information Access Restriction
@@ -787,7 +787,7 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0380_Policy_Secure_Development.md
 - Richtlinie: 0390_Richtlinie_Secure_SDLC_Coding_Review_und_Secrets.md
 
-**Verantwortlich:** Development Team, {{ meta.ciso.name }}  
+**Verantwortlich:** Development Team, {{ meta-organisation-roles.role_CISO }}  
 **Nachweis:** Source Code Access Controls, Git Permissions
 
 #### 8.5 Secure Authentication
@@ -823,7 +823,7 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0620_Policy_Endpoint_Security.md
 - Richtlinie: 0630_Richtlinie_EDR_AV_Host_Firewall_und_Device_Compliance.md
 
-**Verantwortlich:** IT Operations, {{ meta.ciso.name }}  
+**Verantwortlich:** IT Operations, {{ meta-organisation-roles.role_CISO }}  
 **Nachweis:** Antivirus/EDR Deployment, Malware Detection Logs
 
 #### 8.8 Management of Technical Vulnerabilities
@@ -847,7 +847,7 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0540_Policy_Konfiguration_und_Hardening.md
 - Richtlinie: 0550_Richtlinie_Sicherheitsbaselines_Hardening_und_Konfig_Aenderungen.md
 
-**Verantwortlich:** IT Operations, {{ meta.ciso.name }}  
+**Verantwortlich:** IT Operations, {{ meta-organisation-roles.role_CISO }}  
 **Nachweis:** Configuration Management Database, Baseline Configurations
 
 #### 8.10 Information Deletion
@@ -883,7 +883,7 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0280_Policy_Datenklassifizierung_und_Informationshandling.md
 - Richtlinie: 0290_Richtlinie_Datenklassifizierung_Labeling_und_Handling.md
 
-**Verantwortlich:** Security Operations, {{ meta.ciso.name }}  
+**Verantwortlich:** Security Operations, {{ meta-organisation-roles.role_CISO }}  
 **Nachweis:** DLP Implementation, DLP Alerts
 
 #### 8.13 Information Backup
@@ -955,7 +955,7 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0220_Policy_Zugriffssteuerung_und_Identitaetsmanagement.md
 - Richtlinie: 0230_Richtlinie_IAM_Joiner_Mover_Leaver_und_Zugriffsantraege.md
 
-**Verantwortlich:** IT Operations, {{ meta.ciso.name }}  
+**Verantwortlich:** IT Operations, {{ meta-organisation-roles.role_CISO }}  
 **Nachweis:** Privileged Access Controls, Utility Program Restrictions
 
 #### 8.19 Installation of Software on Operational Systems
@@ -979,7 +979,7 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0600_Policy_Netzwerksicherheit.md
 - Richtlinie: 0610_Richtlinie_Segmentierung_Firewalling_und_Network_Access_Control.md
 
-**Verantwortlich:** Network Team, {{ meta.ciso.name }}  
+**Verantwortlich:** Network Team, {{ meta-organisation-roles.role_CISO }}  
 **Nachweis:** Network Security Architecture, Firewall Rules
 
 #### 8.21 Security of Network Services
@@ -1002,7 +1002,7 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 **Umsetzung in ISMS:**
 - Richtlinie: 0610_Richtlinie_Segmentierung_Firewalling_und_Network_Access_Control.md
 
-**Verantwortlich:** Network Team, {{ meta.ciso.name }}  
+**Verantwortlich:** Network Team, {{ meta-organisation-roles.role_CISO }}  
 **Nachweis:** Network Segmentation Design, VLAN Configuration
 
 #### 8.23 Web Filtering
@@ -1026,7 +1026,7 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0260_Policy_Kryptografie_und_Schluesselmanagement.md
 - Richtlinie: 0270_Richtlinie_Key_Management_und_Verschluesselung.md
 
-**Verantwortlich:** {{ meta.ciso.name }}, IT Operations  
+**Verantwortlich:** {{ meta-organisation-roles.role_CISO }}, IT Operations  
 **Nachweis:** Cryptography Policy, Key Management Procedures
 
 #### 8.25 Secure Development Life Cycle
@@ -1038,7 +1038,7 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0380_Policy_Secure_Development.md
 - Richtlinie: 0390_Richtlinie_Secure_SDLC_Coding_Review_und_Secrets.md
 
-**Verantwortlich:** Development Team, {{ meta.ciso.name }}  
+**Verantwortlich:** Development Team, {{ meta-organisation-roles.role_CISO }}  
 **Nachweis:** Secure SDLC Procedures, Code Review Records
 
 #### 8.26 Application Security Requirements
@@ -1096,7 +1096,7 @@ Die Annex A Kontrollen sind in vier Hauptkategorien organisiert:
 - Policy: 0460_Policy_Lieferanten_und_Cloud_Sicherheit.md
 - Richtlinie: 0470_Richtlinie_Third_Party_Risk_Assessment_und_Cloud_Controls.md
 
-**Verantwortlich:** Development Team, {{ meta.ciso.name }}  
+**Verantwortlich:** Development Team, {{ meta-organisation-roles.role_CISO }}  
 **Nachweis:** Supplier Contracts, Development Oversight Records
 
 #### 8.31 Separation of Development, Test and Production Environments
@@ -1189,8 +1189,8 @@ Dieses Mapping dient als:
 - ISO/IEC 27002:2022 Information Security Controls
 - Statement of Applicability (SoA): 0100_ISMS_Statement_of_Applicability_SoA_Template.md
 
-**Dokumentverantwortlicher:** {{ meta.ciso.name }}  
-**Genehmigt durch:** {{ meta.management.name }}  
+**Dokumentverantwortlicher:** {{ meta-organisation-roles.role_CISO }}  
+**Genehmigt durch:** {{ meta-handbook.management_name }}  
 **Nächste Überprüfung:** {{ meta-handbook.next_review }}
 
 <!-- 

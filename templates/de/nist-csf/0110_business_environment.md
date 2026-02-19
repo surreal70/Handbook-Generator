@@ -36,17 +36,17 @@ Dieses Dokument beschreibt das Geschäftsumfeld der Organisation, einschließlic
 {{ meta-handbook.organization_mission }}
 
 ### Strategische Ziele
-1. {{ meta.strategic_goal_1 }}
-2. {{ meta.strategic_goal_2 }}
-3. {{ meta.strategic_goal_3 }}
+1. {{ meta-handbook.strategic_goal_1 }}
+2. {{ meta-handbook.strategic_goal_2 }}
+3. {{ meta-handbook.strategic_goal_3 }}
 
 ## Kritische Geschäftsprozesse
 
 | Prozess | Beschreibung | Kritikalität | Abhängigkeiten |
 |---------|--------------|--------------|----------------|
-| {{ meta.process_1 }} | {{ meta.process_1_desc }} | Hoch | {{ meta.process_1_deps }} |
-| {{ meta.process_2 }} | {{ meta.process_2_desc }} | Hoch | {{ meta.process_2_deps }} |
-| {{ meta.process_3 }} | {{ meta.process_3_desc }} | Mittel | {{ meta.process_3_deps }} |
+| {{ meta-handbook.process_1 }} | {{ meta-handbook.process_1_desc }} | Hoch | {{ meta-handbook.process_1_deps }} |
+| {{ meta-handbook.process_2 }} | {{ meta-handbook.process_2_desc }} | Hoch | {{ meta-handbook.process_2_deps }} |
+| {{ meta-handbook.process_3 }} | {{ meta-handbook.process_3_desc }} | Mittel | {{ meta-handbook.process_3_deps }} |
 
 ## Stakeholder
 

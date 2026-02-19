@@ -72,8 +72,8 @@ Zugriff auf ISMS-Dokumente erfolgt rollenbasiert:
 ### 2.4 Notfallzugriff
 
 Im Notfall (z.B. Ausfall des ISB) haben folgende Personen Zugriff auf alle ISMS-Dokumente:
-- **Geschäftsführung:** {{ meta.ceo.name }}
-- **IT-Leitung:** {{ meta.cio.name }}
+- **Geschäftsführung:** {{ meta-organisation-roles.role_CEO }}
+- **IT-Leitung:** {{ meta-organisation-roles.role_CIO }}
 - **Stellvertretender ISB:** [TODO]
 
 ## 3. Dokumentenlebenszyklus
@@ -173,9 +173,9 @@ Maintain this register with all ISMS documents. Update regularly.
 
 | Dokument | ID | Owner | Status | Version | Letzte Aktualisierung | Nächster Review |
 |---|---|---|---|---|---|---|
-| Informationssicherheitsleitlinie | 0010 | {{ meta.ciso.name }} | {{ meta-handbook.status }} | {{ meta-handbook.revision }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
-| ISMS-Organisation, Rollen und RACI | 0020 | {{ meta.ciso.name }} | {{ meta-handbook.status }} | {{ meta-handbook.revision }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
-| Dokumentenlenkung | 0030 | {{ meta.ciso.name }} | {{ meta-handbook.status }} | {{ meta-handbook.revision }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
+| Informationssicherheitsleitlinie | 0010 | {{ meta-organisation-roles.role_CISO }} | {{ meta-handbook.status }} | {{ meta-handbook.revision }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
+| ISMS-Organisation, Rollen und RACI | 0020 | {{ meta-organisation-roles.role_CISO }} | {{ meta-handbook.status }} | {{ meta-handbook.revision }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
+| Dokumentenlenkung | 0030 | {{ meta-organisation-roles.role_CISO }} | {{ meta-handbook.status }} | {{ meta-handbook.revision }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
 | [TODO: Weitere Dokumente ergänzen] | | | | | | |
 
 ## 5. Änderungsprotokoll

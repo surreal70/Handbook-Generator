@@ -40,7 +40,7 @@ Das Auditprogramm umfasst:
 - Alle Bereiche im ISMS-Scope (siehe `0020_ISMS_Geltungsbereich_Scope.md`)
 - Alle Annex A Controls im SoA (siehe `0100_ISMS_Statement_of_Applicability_SoA_Template.md`)
 - Alle ISMS-Prozesse und -Dokumente
-- Alle Standorte: {{ netbox.site.name }} und weitere
+- Alle Standorte: [[ netbox.site.name ]] und weitere
 
 ## 2. Audit-Ansatz
 
@@ -49,7 +49,7 @@ Das Auditprogramm umfasst:
 **Unabhängigkeit:**
 - Auditoren prüfen nicht ihre eigenen Bereiche
 - Externe Auditoren für kritische Bereiche (optional)
-- Berichtslinie: Audit-Team berichtet an {{ meta.audit.manager }}
+- Berichtslinie: Audit-Team berichtet an {{ meta-handbook.audit_manager }}
 
 **Risikobasiert:**
 - Audit-Frequenz basiert auf Risikobewertung
@@ -88,9 +88,9 @@ Das Auditprogramm umfasst:
 
 | Zeitraum | Audit-Thema/Scope | Audit-Typ | Kriterien | Auditor | Auditee | Geplante Dauer | Status |
 |----------|-------------------|-----------|-----------|---------|---------|----------------|--------|
-| **Q1 2026** | Access Management & IAM | Themen-Audit | A.5.15, A.5.16, A.5.17, A.5.18, A.8.2, A.8.3 | [TODO] | {{ meta.cio.name }} | 2 Tage | Geplant |
+| **Q1 2026** | Access Management & IAM | Themen-Audit | A.5.15, A.5.16, A.5.17, A.5.18, A.8.2, A.8.3 | [TODO] | {{ meta-organisation-roles.role_CIO }} | 2 Tage | Geplant |
 | **Q2 2026** | Vulnerability & Patch Management | Themen-Audit | A.8.8, A.5.23 | [TODO] | IT-Betrieb | 1 Tag | Geplant |
-| **Q3 2026** | Vollständiges ISMS-Audit | Vollaudit | Alle Clauses, SoA | [TODO] | {{ meta.ciso.name }} | 10 Tage | Geplant |
+| **Q3 2026** | Vollständiges ISMS-Audit | Vollaudit | Alle Clauses, SoA | [TODO] | {{ meta-organisation-roles.role_CISO }} | 10 Tage | Geplant |
 | **Q4 2026** | Incident Management & Logging | Themen-Audit | A.5.24, A.5.25, A.5.26, A.5.28, A.8.15, A.8.16 | [TODO] | Security Team | 2 Tage | Geplant |
 
 [TODO: Audit-Plan für 2026 vervollständigen]
@@ -364,8 +364,8 @@ Das Auditprogramm umfasst:
 - **ISO/IEC 27007:2020** - Guidelines for information security management systems auditing
 
 **Genehmigt durch:**  
-{{ meta.audit.manager }}, Audit Manager  
-{{ meta.ciso.name }}, CISO  
+{{ meta-handbook.audit_manager }}, Audit Manager  
+{{ meta-organisation-roles.role_CISO }}, CISO  
 Datum: {{ meta-handbook.modifydate }}
 
 **Nächster Review:** {{ meta-handbook.next_review }}

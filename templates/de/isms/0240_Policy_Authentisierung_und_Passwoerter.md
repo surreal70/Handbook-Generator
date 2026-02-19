@@ -37,7 +37,7 @@ Diese Policy gilt für:
 - **Systeme:** Alle IT-Systeme, Anwendungen, Datenbanken, Netzwerke, Cloud-Services
 - **Personen:** Alle Mitarbeiter, Auftragnehmer, Lieferanten und Dritte mit Zugang zu IT-Ressourcen
 - **Authentisierungsmethoden:** Passwörter, Multi-Faktor-Authentisierung (MFA), biometrische Verfahren, Token
-- **Standorte:** {{ netbox.site.name }} und alle weiteren Betriebsstandorte
+- **Standorte:** [[ netbox.site.name ]] und alle weiteren Betriebsstandorte
 
 **Ausnahmen:** Ausnahmen sind nur über den definierten Ausnahmenprozess (`0640_Policy_Ausnahmen_und_Risk_Waivers.md`) zulässig.
 
@@ -102,8 +102,8 @@ Passwort-Reset- und Account-Recovery-Prozesse müssen sicher gestaltet sein und 
 
 ### Schlüsselrollen
 
-- **Policy Owner:** {{ meta.ciso.name }} (CISO)
-- **IAM-Verantwortlicher:** {{ meta.it.iam_manager }}
+- **Policy Owner:** {{ meta-organisation-roles.role_CISO }} (CISO)
+- **IAM-Verantwortlicher:** {{ meta-handbook.it_iam_manager }}
 - **Umsetzungsverantwortliche:** IT-Betrieb, IAM-Team
 - **Kontroll-/Prüfinstanz:** ISMS, Internal Audit, Security Operations
 
@@ -181,7 +181,7 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **BSI TR-02102** - Kryptographische Verfahren: Empfehlungen und Schlüssellängen
 
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
 Datum: {{ meta-handbook.modifydate }}
 
 **Nächster Review:** {{ meta-handbook.next_review }} (jährlich oder anlassbezogen)

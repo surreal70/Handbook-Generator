@@ -20,7 +20,7 @@
 Dieses Dokument beschreibt das Betriebskonzept und die Betriebsprozesse für den IT-Service. Es definiert Betriebsmodelle, Prozessabläufe nach ITIL-Standards, Schnittstellen zu anderen Prozessen und Eskalationspfade.
 
 **Service:** {{ meta-handbook.service_name }}  
-**Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}  
+**Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}  
 **Stand:** {{ meta-handbook.revision }}
 
 ## Betriebsmodell
@@ -47,8 +47,8 @@ Dieses Dokument beschreibt das Betriebskonzept und die Betriebsprozesse für den
 ### Support-Modell
 
 **Support-Stufen:**
-- **Level 1 (Service Desk):** {{ meta-organisation-roles.role_service_desk_lead.name }} - {{ meta-organisation-roles.role_service_desk_lead.email }}
-- **Level 2 (IT Operations):** {{ meta-organisation-roles.role_it_operations_manager.name }} - {{ meta-organisation-roles.role_it_operations_manager.email }}
+- **Level 1 (Service Desk):** {{ meta-organisation-roles.role_Service_Desk_Lead }} - {{ meta-organisation-roles.role_Service_Desk_Lead_email }}
+- **Level 2 (IT Operations):** {{ meta-organisation-roles.role_IT_Operations_Manager }} - {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
 - **Level 3 (Specialist/Vendor):** [TODO: Spezialist-Kontakt]
 
 **Rufbereitschaft:**
@@ -68,7 +68,7 @@ Dieses Dokument beschreibt das Betriebskonzept und die Betriebsprozesse für den
 - Demand Management
 - Business Relationship Management
 
-**Verantwortlich:** {{ meta-organisation-roles.role_cio.name }}
+**Verantwortlich:** {{ meta-organisation-roles.role_CIO }}
 
 ### Service Design
 
@@ -83,7 +83,7 @@ Dieses Dokument beschreibt das Betriebskonzept und die Betriebsprozesse für den
 - Information Security Management
 - Supplier Management
 
-**Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+**Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 ### Service Transition
 
@@ -96,7 +96,7 @@ Dieses Dokument beschreibt das Betriebskonzept und die Betriebsprozesse für den
 - Knowledge Management
 - Configuration Management (siehe Kapitel 0090)
 
-**Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+**Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 ### Service Operation
 
@@ -109,7 +109,7 @@ Dieses Dokument beschreibt das Betriebskonzept und die Betriebsprozesse für den
 - Request Fulfillment
 - Access Management (siehe Kapitel 0100)
 
-**Verantwortlich:** {{ meta-organisation-roles.role_service_desk_lead.name }} (Level 1), {{ meta-organisation-roles.role_it_operations_manager.name }} (Level 2)
+**Verantwortlich:** {{ meta-organisation-roles.role_Service_Desk_Lead }} (Level 1), {{ meta-organisation-roles.role_IT_Operations_Manager }} (Level 2)
 
 ### Continual Service Improvement (CSI)
 
@@ -121,7 +121,7 @@ Dieses Dokument beschreibt das Betriebskonzept und die Betriebsprozesse für den
 - Process Improvement
 - Root Cause Analysis
 
-**Verantwortlich:** {{ meta-organisation-roles.role_cio.name }}
+**Verantwortlich:** {{ meta-organisation-roles.role_CIO }}
 
 ## Prozessschnittstellen
 
@@ -135,7 +135,7 @@ Dieses Dokument beschreibt das Betriebskonzept und die Betriebsprozesse für den
 | **Configuration Management** | CI-Updates → CMDB | Configuration Items | CMDB Manager |
 | **Capacity Management** | Kapazitätsdaten → Planung | Performance Metrics | Capacity Manager |
 | **Availability Management** | Verfügbarkeitsdaten → Reporting | Availability Reports | Availability Manager |
-| **Security Management** | Security Events → Betrieb | Security Incidents, Patches | {{ meta-organisation-roles.role_ciso.name }} |
+| **Security Management** | Security Events → Betrieb | Security Incidents, Patches | {{ meta-organisation-roles.role_CISO }} |
 | **Backup Management** | Backup-Status → Betrieb | Backup Reports, Restore Requests | Backup Administrator |
 
 ### Schnittstellen zu Geschäftsprozessen
@@ -143,7 +143,7 @@ Dieses Dokument beschreibt das Betriebskonzept und die Betriebsprozesse für den
 | Geschäftsprozess | Schnittstelle | Informationsfluss | Ansprechpartner |
 |---|---|---|---|
 | **Beschaffung** | Hardware/Software-Anforderungen | Bestellungen, Lieferungen | Procurement |
-| **Finanzen** | Budget und Kosten | Kostenberichte, Budgetanfragen | {{ meta-organisation-roles.role_cfo.name }} |
+| **Finanzen** | Budget und Kosten | Kostenberichte, Budgetanfragen | {{ meta-organisation-roles.role_CFO }} |
 | **Compliance** | Audit-Anforderungen | Audit-Berichte, Nachweise | Compliance Officer |
 | **HR** | Mitarbeiter-Onboarding/Offboarding | Zugriffsverwaltung | HR Department |
 
@@ -154,18 +154,18 @@ Dieses Dokument beschreibt das Betriebskonzept und die Betriebsprozesse für den
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │ Level 1: Service Desk                                        │
-│ Kontakt: {{ meta-organisation-roles.role_service_desk_lead.name }}                   │
-│ E-Mail: {{ meta-organisation-roles.role_service_desk_lead.email }}                   │
-│ Telefon: {{ meta-organisation-roles.role_service_desk_lead.phone }}                  │
+│ Kontakt: {{ meta-organisation-roles.role_Service_Desk_Lead }}                   │
+│ E-Mail: {{ meta-organisation-roles.role_Service_Desk_Lead_email }}                   │
+│ Telefon: {{ meta-organisation-roles.role_Service_Desk_Lead_phone }}                  │
 │ Eskalation nach: 30 Minuten (P1), 2 Stunden (P2)            │
 └────────────────────┬────────────────────────────────────────┘
                      │
                      ▼
 ┌─────────────────────────────────────────────────────────────┐
 │ Level 2: IT Operations                                       │
-│ Kontakt: {{ meta-organisation-roles.role_it_operations_manager.name }}               │
-│ E-Mail: {{ meta-organisation-roles.role_it_operations_manager.email }}               │
-│ Telefon: {{ meta-organisation-roles.role_it_operations_manager.phone }}              │
+│ Kontakt: {{ meta-organisation-roles.role_IT_Operations_Manager }}               │
+│ E-Mail: {{ meta-organisation-roles.role_IT_Operations_Manager_email }}               │
+│ Telefon: {{ meta-organisation-roles.role_IT_Operations_Manager_phone }}              │
 │ Eskalation nach: 1 Stunde (P1), 4 Stunden (P2)              │
 └────────────────────┬────────────────────────────────────────┘
                      │
@@ -184,24 +184,24 @@ Dieses Dokument beschreibt das Betriebskonzept und die Betriebsprozesse für den
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │ Stufe 1: IT Operations Manager                               │
-│ Kontakt: {{ meta-organisation-roles.role_it_operations_manager.name }}               │
-│ E-Mail: {{ meta-organisation-roles.role_it_operations_manager.email }}               │
+│ Kontakt: {{ meta-organisation-roles.role_IT_Operations_Manager }}               │
+│ E-Mail: {{ meta-organisation-roles.role_IT_Operations_Manager_email }}               │
 │ Eskalation bei: Kritische Incidents (P1), SLA-Verletzung    │
 └────────────────────┬────────────────────────────────────────┘
                      │
                      ▼
 ┌─────────────────────────────────────────────────────────────┐
 │ Stufe 2: Chief Information Officer (CIO)                     │
-│ Kontakt: {{ meta-organisation-roles.role_cio.name }}                                 │
-│ E-Mail: {{ meta-organisation-roles.role_cio.email }}                                 │
+│ Kontakt: {{ meta-organisation-roles.role_CIO }}                                 │
+│ E-Mail: {{ meta-organisation-roles.role_CIO_email }}                                 │
 │ Eskalation bei: Major Incidents, Business Impact            │
 └────────────────────┬────────────────────────────────────────┘
                      │
                      ▼
 ┌─────────────────────────────────────────────────────────────┐
 │ Stufe 3: Chief Executive Officer (CEO)                       │
-│ Kontakt: {{ meta-organisation-roles.role_ceo.name }}                                 │
-│ E-Mail: {{ meta-organisation-roles.role_ceo.email }}                                 │
+│ Kontakt: {{ meta-organisation-roles.role_CEO }}                                 │
+│ E-Mail: {{ meta-organisation-roles.role_CEO_email }}                                 │
 │ Eskalation bei: Unternehmenskritische Ausfälle              │
 └─────────────────────────────────────────────────────────────┘
 ```
@@ -345,9 +345,9 @@ Dieses Dokument beschreibt das Betriebskonzept und die Betriebsprozesse für den
 ## Kontakte
 
 **Betriebsverantwortliche:**
-- **IT Operations Manager:** {{ meta-organisation-roles.role_it_operations_manager.name }} - {{ meta-organisation-roles.role_it_operations_manager.email }}
-- **Service Desk Lead:** {{ meta-organisation-roles.role_service_desk_lead.name }} - {{ meta-organisation-roles.role_service_desk_lead.email }}
-- **CIO:** {{ meta-organisation-roles.role_cio.name }} - {{ meta-organisation-roles.role_cio.email }}
+- **IT Operations Manager:** {{ meta-organisation-roles.role_IT_Operations_Manager }} - {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
+- **Service Desk Lead:** {{ meta-organisation-roles.role_Service_Desk_Lead }} - {{ meta-organisation-roles.role_Service_Desk_Lead_email }}
+- **CIO:** {{ meta-organisation-roles.role_CIO }} - {{ meta-organisation-roles.role_CIO_email }}
 
 **Weitere Kontakte:** Siehe Kapitel 0270 (Kontakte, Eskalation und Anbieter)
 

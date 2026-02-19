@@ -27,7 +27,7 @@ ISO 27001:2022 Reference: Clause 6.1.2 - Information security risk assessment
 **Document ID:** 0080  
 **Document Type:** ISMS Register/Template  
 **Standard Reference:** ISO/IEC 27001:2022 Clause 6.1.2  
-**Owner:** {{ meta.ciso.name }}  
+**Owner:** {{ meta-organisation-roles.role_CISO }}  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Confidential  
@@ -71,9 +71,9 @@ The risk register documents all identified information security risks within the
 
 | Risk ID | Asset/Process | Threat | Vulnerability | Impact (1-5) | Likelihood (1-5) | Score | Risk Level | Risk Owner | Treatment | Measure/Control | Status | Target Date | Remarks |
 |---------|---------------|--------|---------------|--------------|------------------|-------|------------|------------|------------|-----------------|--------|-------------|---------|
-| R-001 | {{ netbox.device.core_switch.name }} | Hardware failure | No redundancy | 4 | 3 | 12 | Medium | {{ meta.cio.name }} | Mitigate | Procure redundant switch | Open | 2026-06-30 | Budget approved |
-| R-002 | Customer data (GDPR) | Ransomware | Insufficient backups | 5 | 4 | 20 | High | {{ meta.ciso.name }} | Mitigate | Implement immutable backups | In Progress | 2026-03-31 | See M-002 |
-| R-003 | Email system | Phishing | Missing MFA | 4 | 4 | 16 | High | {{ meta.cio.name }} | Mitigate | MFA for all users | In Progress | 2026-02-28 | 80% complete |
+| R-001 | [[ netbox.device.core_switch.name ]] | Hardware failure | No redundancy | 4 | 3 | 12 | Medium | {{ meta-organisation-roles.role_CIO }} | Mitigate | Procure redundant switch | Open | 2026-06-30 | Budget approved |
+| R-002 | Customer data (GDPR) | Ransomware | Insufficient backups | 5 | 4 | 20 | High | {{ meta-organisation-roles.role_CISO }} | Mitigate | Implement immutable backups | In Progress | 2026-03-31 | See M-002 |
+| R-003 | Email system | Phishing | Missing MFA | 4 | 4 | 16 | High | {{ meta-organisation-roles.role_CIO }} | Mitigate | MFA for all users | In Progress | 2026-02-28 | 80% complete |
 | R-004 | Development environment | Secrets in code | No secret scanning | 3 | 3 | 9 | Medium | Dev Lead | Mitigate | Secret scanning tool | Planned | 2026-04-30 | Tool evaluation ongoing |
 | R-005 | Remote access | Unauthorized access | Weak VPN configuration | 4 | 2 | 8 | Medium | IT Operations | Mitigate | VPN hardening | Open | 2026-05-31 | - |
 
@@ -88,8 +88,8 @@ uniquely identified and linked to treatment measures.
 
 | Risk ID | Asset/Process | Threat | Vulnerability | Score | Risk Level | Risk Owner | Accepted By | Acceptance Date | Valid Until | Justification | Review Status |
 |---------|---------------|--------|---------------|-------|-------------|---------------|--------------|----------------|-------------|---------------|---------------|
-| R-010 | Legacy system XYZ | Unpatched vulnerabilities | System being phased out | 9 | Medium | {{ meta.cio.name }} | {{ meta.ciso.name }} | 2026-01-15 | 2026-06-30 | System will be decommissioned on 30.06.2026 | Active |
-| R-011 | Test environment | Missing encryption | No production data | 6 | Low | Dev Lead | {{ meta.ciso.name }} | 2026-01-20 | 2027-01-20 | Test environment contains only synthetic data | Active |
+| R-010 | Legacy system XYZ | Unpatched vulnerabilities | System being phased out | 9 | Medium | {{ meta-organisation-roles.role_CIO }} | {{ meta-organisation-roles.role_CISO }} | 2026-01-15 | 2026-06-30 | System will be decommissioned on 30.06.2026 | Active |
+| R-011 | Test environment | Missing encryption | No production data | 6 | Low | Dev Lead | {{ meta-organisation-roles.role_CISO }} | 2026-01-20 | 2027-01-20 | Test environment contains only synthetic data | Active |
 
 [TODO: Document accepted risks]
 
@@ -316,10 +316,10 @@ uniquely identified and linked to treatment measures.
 
 | Version | Date | Author | Description | Approved By |
 |---------|------|--------|-------------|-------------|
-| 1.0 | {{ meta-handbook.modifydate }} | {{ meta.ciso.name }} | Initial version | {{ meta.management.ceo }} |
+| 1.0 | {{ meta-handbook.modifydate }} | {{ meta-organisation-roles.role_CISO }} | Initial version | {{ meta-handbook.management_ceo }} |
 
 **Approved by:**  
-{{ meta.ciso.name }}, CISO  
+{{ meta-organisation-roles.role_CISO }}, CISO  
 Date: {{ meta-handbook.modifydate }}
 
 **Next Review:** {{ meta-handbook.next_review }} (Quarterly)

@@ -21,7 +21,7 @@ Dieses Dokument beschreibt die Log-Management- und Audit-Prozesse für {{ meta-o
 
 **Geltungsbereich:** Alle IT-Systeme, Netzwerke, Applikationen und Security-Komponenten von {{ meta-organisation.name }}
 
-**Verantwortlich:** {{ meta-organisation-roles.role_ciso.name }} ({{ meta-organisation-roles.role_ciso.email }})
+**Verantwortlich:** {{ meta-organisation-roles.role_CISO }} ({{ meta-organisation-roles.role_CISO_email }})
 
 ## Log-Management-Grundlagen
 
@@ -265,16 +265,16 @@ Dieses Dokument beschreibt die Log-Management- und Audit-Prozesse für {{ meta-o
 # /etc/rsyslog.d/50-remote.conf
 
 # Alle Logs an zentralen Syslog-Server senden
-*.* @@syslog.{{ meta-organisation.domain }}:514
+*.* @@syslog.{{ meta-handbook.domain }}:514
 
 # Nur Security-Logs senden
-authpriv.* @@syslog.{{ meta-organisation.domain }}:514
+authpriv.* @@syslog.{{ meta-handbook.domain }}:514
 
 # TLS-verschlüsselt
 $DefaultNetstreamDriver gtls
 $ActionSendStreamDriverMode 1
 $ActionSendStreamDriverAuthMode x509/name
-*.* @@syslog.{{ meta-organisation.domain }}:6514
+*.* @@syslog.{{ meta-handbook.domain }}:6514
 ```
 
 #### Windows-Server
@@ -290,7 +290,7 @@ wecutil cs subscription.xml
 # Subscription-XML
 <Subscription>
   <SubscriptionId>Security-Events</SubscriptionId>
-  <DestinationUrl>http://wec-server.{{ meta-organisation.domain }}:5985/wsman</DestinationUrl>
+  <DestinationUrl>http://wec-server.{{ meta-handbook.domain }}:5985/wsman</DestinationUrl>
   <Query>
     <QueryList>
       <Query Id="0">
@@ -304,7 +304,7 @@ wecutil cs subscription.xml
 #### Firewall
 
 **Syslog-Konfiguration:**
-- Syslog-Server: {{ netbox.syslog.server }}
+- Syslog-Server: [[ netbox.syslog.server ]]
 - Facility: Local6
 - Severity: Informational und höher
 - Format: RFC 5424
@@ -786,7 +786,7 @@ THEN alert "Unauthorized Configuration Change"
 - Retention-Policy-Umsetzung
 - Tool-Administration
 
-**Team-Lead:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+**Team-Lead:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 ### Security-Operations-Team
 
@@ -796,7 +796,7 @@ THEN alert "Unauthorized Configuration Change"
 - Use-Case-Entwicklung
 - Threat-Hunting
 
-**Team-Lead:** {{ meta-organisation-roles.role_ciso.name }}
+**Team-Lead:** {{ meta-organisation-roles.role_CISO }}
 
 ### Compliance-Officer
 

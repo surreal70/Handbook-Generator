@@ -144,7 +144,7 @@ Die **{{ meta-organisation.name }}** definiert ihren Risikoappetit wie folgt:
 - **ISO/IEC 27005:2022** - Information security risk management
 
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
 Datum: {{ meta-handbook.modifydate }}
 
 **Nächster Review:** {{ meta-handbook.next_review }}

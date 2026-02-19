@@ -28,7 +28,7 @@ ISO 27001:2022 Reference: Clause 4.3 - Determining the scope of the ISMS
 **Document ID:** 0020  
 **Document Type:** ISMS Foundation Document  
 **Standard Reference:** ISO/IEC 27001:2022 Clause 4.3  
-**Owner:** {{ meta.ciso.name }}  
+**Owner:** {{ meta-organisation-roles.role_CISO }}  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
@@ -49,8 +49,8 @@ The scope of the Information Security Management System (ISMS) of **{{ meta-orga
 ### 1.2 Locations
 The ISMS applies to the following locations:
 
-- **Main Location:** {{ netbox.site.name }}
-  - Address: {{ netbox.site.address }}
+- **Main Location:** [[ netbox.site.name ]]
+  - Address: [[ netbox.site.address ]]
   - Function: Data center, offices, development
   
 [TODO: Add additional locations]
@@ -71,7 +71,7 @@ The ISMS covers the following business processes and IT services:
 - [TODO: Additional core processes]
 
 **IT Services:**
-- Network infrastructure ({{ netbox.device.core_switch.name }})
+- Network infrastructure ([[ netbox.device.core_switch.name ]])
 - Server and virtualization platforms
 - Cloud services and SaaS applications
 - Database systems
@@ -107,8 +107,8 @@ Classify information assets according to your data classification scheme
 The ISMS includes the following technical platforms:
 
 **Network Infrastructure:**
-- Core Switch: {{ netbox.device.core_switch.name }}
-- Management VLAN: {{ netbox.vlan.management.vid }}
+- Core Switch: [[ netbox.device.core_switch.name ]]
+- Management VLAN: [[ netbox.vlan.management.vid ]]
 - [TODO: Additional network components from NetBox]
 
 **Servers and Virtualization:**
@@ -269,8 +269,8 @@ The ISMS scope is regularly reviewed:
 - **ISO/IEC 27002:2022** - Information security controls
 
 **Approved by:**  
-{{ meta.ciso.name }}, CISO  
-{{ meta.management.ceo }}, Management  
+{{ meta-organisation-roles.role_CISO }}, CISO  
+{{ meta-handbook.management_ceo }}, Management  
 Date: {{ meta-handbook.modifydate }}
 
 **Next Review:** {{ meta-handbook.next_review }}

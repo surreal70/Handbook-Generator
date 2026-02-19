@@ -72,8 +72,8 @@ Access to ISMS documents is role-based:
 ### 2.4 Emergency Access
 
 In emergencies (e.g. ISO unavailable), the following persons have access to all ISMS documents:
-- **Executive Management:** {{ meta.ceo.name }}
-- **IT Management:** {{ meta.cio.name }}
+- **Executive Management:** {{ meta-organisation-roles.role_CEO }}
+- **IT Management:** {{ meta-organisation-roles.role_CIO }}
 - **Deputy ISO:** [TODO]
 
 ## 3. Document Lifecycle
@@ -173,9 +173,9 @@ Maintain this register with all ISMS documents. Update regularly.
 
 | Document | ID | Owner | Status | Version | Last Updated | Next Review |
 |---|---|---|---|---|---|---|
-| Information Security Policy | 0010 | {{ meta.ciso.name }} | {{ meta-handbook.status }} | {{ meta-handbook.revision }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
-| ISMS Organization, Roles and RACI | 0020 | {{ meta.ciso.name }} | {{ meta-handbook.status }} | {{ meta-handbook.revision }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
-| Document Control | 0030 | {{ meta.ciso.name }} | {{ meta-handbook.status }} | {{ meta-handbook.revision }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
+| Information Security Policy | 0010 | {{ meta-organisation-roles.role_CISO }} | {{ meta-handbook.status }} | {{ meta-handbook.revision }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
+| ISMS Organization, Roles and RACI | 0020 | {{ meta-organisation-roles.role_CISO }} | {{ meta-handbook.status }} | {{ meta-handbook.revision }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
+| Document Control | 0030 | {{ meta-organisation-roles.role_CISO }} | {{ meta-handbook.status }} | {{ meta-handbook.revision }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.next_review }} |
 | [TODO: Add additional documents] | | | | | | |
 
 ## 5. Change Log

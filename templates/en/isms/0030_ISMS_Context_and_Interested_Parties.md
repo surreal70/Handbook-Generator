@@ -30,7 +30,7 @@ ISO 27001:2022 References:
 **Document ID:** 0030  
 **Document Type:** ISMS Foundation Document  
 **Standard Reference:** ISO/IEC 27001:2022 Clauses 4.1, 4.2  
-**Owner:** {{ meta.ciso.name }}  
+**Owner:** {{ meta-organisation-roles.role_CISO }}  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
@@ -45,7 +45,7 @@ ISO 27001:2022 References:
 - Organizational Form: [TODO]
 - Number of Employees: [TODO]
 - Organizational Structure: [TODO: Hierarchy, departments]
-- Locations: {{ netbox.site.name }} and others
+- Locations: [[ netbox.site.name ]] and others
 
 **Business Processes:**
 - Core Business: [TODO]
@@ -266,8 +266,8 @@ Changes to context or stakeholder requirements are documented and assessed:
 - **GDPR (EU 2016/679)** - General Data Protection Regulation
 
 **Approved by:**  
-{{ meta.ciso.name }}, CISO  
-{{ meta.management.ceo }}, Management  
+{{ meta-organisation-roles.role_CISO }}, CISO  
+{{ meta-handbook.management_ceo }}, Management  
 Date: {{ meta-handbook.modifydate }}
 
 **Next Review:** {{ meta-handbook.next_review }}

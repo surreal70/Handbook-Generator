@@ -30,27 +30,27 @@ Dieses Dokument beschreibt die Prozesse und Methoden für das Kapazitäts- und P
 
 | Phase | Zeitraum | Verantwortlich | Aktivitäten |
 |---|---|---|---|
-| Kurzfristig | 1-3 Monate | {{ meta-organisation-roles.role_it_operations_manager.name }} | Monitoring, Anpassungen |
-| Mittelfristig | 3-12 Monate | {{ meta-organisation-roles.role_cio.name }} | Kapazitätsprognosen, Budgetplanung |
-| Langfristig | 1-3 Jahre | {{ meta-organisation-roles.role_ceo.name }} | Strategische Planung, Investitionen |
+| Kurzfristig | 1-3 Monate | {{ meta-organisation-roles.role_IT_Operations_Manager }} | Monitoring, Anpassungen |
+| Mittelfristig | 3-12 Monate | {{ meta-organisation-roles.role_CIO }} | Kapazitätsprognosen, Budgetplanung |
+| Langfristig | 1-3 Jahre | {{ meta-organisation-roles.role_CEO }} | Strategische Planung, Investitionen |
 
 ### Kapazitätsdimensionen
 
 #### Compute-Ressourcen
-- **CPU-Kapazität:** {{ netbox.cluster.total_cpu_cores }} Cores
-- **RAM-Kapazität:** {{ netbox.cluster.total_memory_gb }} GB
+- **CPU-Kapazität:** [[ netbox.cluster.total_cpu_cores ]] Cores
+- **RAM-Kapazität:** [[ netbox.cluster.total_memory_gb ]] GB
 - **Auslastungsziel:** 70% (Durchschnitt), 85% (Peak)
 - **Skalierungsschwelle:** 80% über 7 Tage
 
 #### Storage-Ressourcen
-- **Gesamtkapazität:** {{ netbox.storage.total_capacity_tb }} TB
-- **Verfügbare Kapazität:** {{ netbox.storage.available_capacity_tb }} TB
+- **Gesamtkapazität:** [[ netbox.storage.total_capacity_tb ]] TB
+- **Verfügbare Kapazität:** [[ netbox.storage.available_capacity_tb ]] TB
 - **Auslastungsziel:** 75% (Durchschnitt), 85% (Maximum)
 - **Skalierungsschwelle:** 80% Auslastung
 
 #### Netzwerk-Ressourcen
-- **Bandbreite WAN:** {{ netbox.circuit.bandwidth_mbps }} Mbps
-- **Bandbreite LAN:** {{ netbox.network.lan_bandwidth_gbps }} Gbps
+- **Bandbreite WAN:** [[ netbox.circuit.bandwidth_mbps ]] Mbps
+- **Bandbreite LAN:** [[ netbox.network.lan_bandwidth_gbps ]] Gbps
 - **Auslastungsziel:** 60% (Durchschnitt), 80% (Peak)
 - **Skalierungsschwelle:** 75% über 5 Tage
 
@@ -112,10 +112,10 @@ Dieses Dokument beschreibt die Prozesse und Methoden für das Kapazitäts- und P
 
 | Tool | Zweck | Zugriff | Verantwortlich |
 |---|---|---|---|
-| [TODO: Monitoring-Tool] | System-Monitoring | [TODO: URL] | {{ meta-organisation-roles.role_it_operations_manager.name }} |
-| [TODO: APM-Tool] | Application Performance | [TODO: URL] | {{ meta-organisation-roles.role_it_operations_manager.name }} |
-| [TODO: DB-Monitoring] | Datenbank-Performance | [TODO: URL] | {{ meta-organisation-roles.role_it_operations_manager.name }} |
-| [TODO: Network-Tool] | Netzwerk-Monitoring | [TODO: URL] | {{ meta-organisation-roles.role_it_operations_manager.name }} |
+| [TODO: Monitoring-Tool] | System-Monitoring | [TODO: URL] | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| [TODO: APM-Tool] | Application Performance | [TODO: URL] | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| [TODO: DB-Monitoring] | Datenbank-Performance | [TODO: URL] | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
+| [TODO: Network-Tool] | Netzwerk-Monitoring | [TODO: URL] | {{ meta-organisation-roles.role_IT_Operations_Manager }} |
 
 ### Performance-Dashboards
 
@@ -144,13 +144,13 @@ Dieses Dokument beschreibt die Prozesse und Methoden für das Kapazitäts- und P
 
 #### Monatliche Analyse
 - **Durchführung:** Erster Arbeitstag des Monats
-- **Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+- **Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - **Fokus:** Mittelfristige Trends und Kapazitätsprognosen
 - **Output:** Monatsbericht mit Kapazitätsempfehlungen
 
 #### Quartalsweise Analyse
 - **Durchführung:** Quartalsende
-- **Verantwortlich:** {{ meta-organisation-roles.role_cio.name }}
+- **Verantwortlich:** {{ meta-organisation-roles.role_CIO }}
 - **Fokus:** Strategische Trends und Investitionsplanung
 - **Output:** Quartalsbericht mit Budget-Empfehlungen
 
@@ -261,8 +261,8 @@ Dieses Dokument beschreibt die Prozesse und Methoden für das Kapazitäts- und P
 ### Cloud-Skalierung
 
 #### Cloud-Provider
-- **Provider:** {{ meta-organisation.cloud_provider }}
-- **Region:** {{ meta-organisation.cloud_region }}
+- **Provider:** {{ meta-handbook.cloud_provider }}
+- **Region:** {{ meta-handbook.cloud_region }}
 - **Verfügbarkeitszonen:** [TODO]
 
 #### Skalierungsoptionen
@@ -319,7 +319,7 @@ Dieses Dokument beschreibt die Prozesse und Methoden für das Kapazitäts- und P
   - Handlungsempfehlungen
 
 #### Monatlicher Kapazitäts-Report
-- **Empfänger:** {{ meta-organisation-roles.role_cio.name }}, {{ meta-organisation-roles.role_it_operations_manager.name }}
+- **Empfänger:** {{ meta-organisation-roles.role_CIO }}, {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - **Inhalt:**
   - Kapazitätsauslastung
   - Wachstumstrends
@@ -327,7 +327,7 @@ Dieses Dokument beschreibt die Prozesse und Methoden für das Kapazitäts- und P
   - Budget-Implikationen
 
 #### Quartalsweiser Management-Report
-- **Empfänger:** {{ meta-organisation-roles.role_ceo.name }}, {{ meta-organisation-roles.role_cio.name }}, {{ meta-organisation-roles.role_cfo.name }}
+- **Empfänger:** {{ meta-organisation-roles.role_CEO }}, {{ meta-organisation-roles.role_CIO }}, {{ meta-organisation-roles.role_CFO }}
 - **Inhalt:**
   - Strategische Kapazitätsplanung
   - Investitionsempfehlungen
@@ -364,9 +364,9 @@ Dieses Dokument beschreibt die Prozesse und Methoden für das Kapazitäts- und P
 ### Eskalationspfad
 
 1. **Level 1:** Operations Team - Tägliches Monitoring und Optimierung
-2. **Level 2:** {{ meta-organisation-roles.role_it_operations_manager.name }} - Kapazitätsentscheidungen
-3. **Level 3:** {{ meta-organisation-roles.role_cio.name }} - Strategische Planung und Budget
-4. **Level 4:** {{ meta-organisation-roles.role_ceo.name }} - Investitionsentscheidungen
+2. **Level 2:** {{ meta-organisation-roles.role_IT_Operations_Manager }} - Kapazitätsentscheidungen
+3. **Level 3:** {{ meta-organisation-roles.role_CIO }} - Strategische Planung und Budget
+4. **Level 4:** {{ meta-organisation-roles.role_CEO }} - Investitionsentscheidungen
 
 ## Tools und Systeme
 
@@ -420,5 +420,5 @@ Dieses Dokument beschreibt die Prozesse und Methoden für das Kapazitäts- und P
 
 **Letzte Aktualisierung:** {{ meta-handbook.date }}  
 **Nächste Review:** [TODO: Datum]  
-**Kontakt:** {{ meta-organisation-roles.role_it_operations_manager.email }}
+**Kontakt:** {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
 

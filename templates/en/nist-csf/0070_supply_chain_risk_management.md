@@ -138,8 +138,8 @@ This document describes the organization's approach to managing cybersecurity ri
 - Incident response plan required
 
 **Examples:**
-- {{ meta.critical_supplier_1 }}
-- {{ meta.critical_supplier_2 }}
+- {{ meta-handbook.critical_supplier_1 }}
+- {{ meta-handbook.critical_supplier_2 }}
 
 ### Tier 2: Important Suppliers
 **Criteria:**
@@ -154,8 +154,8 @@ This document describes the organization's approach to managing cybersecurity ri
 - Audits every 2 years
 
 **Examples:**
-- {{ meta.important_supplier_1 }}
-- {{ meta.important_supplier_2 }}
+- {{ meta-handbook.important_supplier_1 }}
+- {{ meta-handbook.important_supplier_2 }}
 
 ### Tier 3: Standard Suppliers
 **Criteria:**

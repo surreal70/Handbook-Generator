@@ -51,6 +51,56 @@ next_review: "[TODO]"
 scope: "[TODO]"
 
 # Framework-specific auxiliary placeholders
+
+# Budget Planning
+budget_1: '[TODO]'
+budget_2: '[TODO]'
+budget_3: '[TODO]'
+budget_4: '[TODO]'
+
+# Business Goals
+business_goal_1: '[TODO]'
+business_goal_2: '[TODO]'
+business_goal_3: '[TODO]'
+
+# Critical Processes
+critical_process_1: '[TODO]'
+critical_process_2: '[TODO]'
+critical_process_3: '[TODO]'
+
+# Critical Suppliers
+critical_supplier_1: '[TODO]'
+critical_supplier_2: '[TODO]'
+
+# Important Suppliers
+important_supplier_1: '[TODO]'
+important_supplier_2: '[TODO]'
+
+# Industry Regulations
+industry_regulation_1: '[TODO]'
+industry_regulation_2: '[TODO]'
+
+# Process Definitions
+process_1: '[TODO]'
+process_1_deps: '[TODO]'
+process_1_desc: '[TODO]'
+process_2: '[TODO]'
+process_2_deps: '[TODO]'
+process_2_desc: '[TODO]'
+process_3: '[TODO]'
+process_3_deps: '[TODO]'
+process_3_desc: '[TODO]'
+
+# Regulations
+regulation_1: '[TODO]'
+regulation_2: '[TODO]'
+
+# Strategic Goals
+strategic_goal_1: '[TODO]'
+strategic_goal_2: '[TODO]'
+strategic_goal_3: '[TODO]'
+
+# Legacy auxiliary placeholders (nested format - to be migrated)
 auxiliary:
   additional_privacy_laws: '[TODO]'
   cloud_provider: '[TODO]'

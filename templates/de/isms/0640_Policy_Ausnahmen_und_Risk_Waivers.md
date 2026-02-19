@@ -36,7 +36,7 @@ Diese Policy gilt für:
 - **Policies:** Alle Sicherheitsrichtlinien und -standards
 - **Systeme:** Alle IT-Systeme und Anwendungen
 - **Prozesse:** Alle sicherheitsrelevanten Prozesse
-- **Standorte:** {{ netbox.site.name }} und alle weiteren Betriebsstandorte
+- **Standorte:** [[ netbox.site.name ]] und alle weiteren Betriebsstandorte
 
 **Ausnahmen:** Diese Policy selbst unterliegt keinem Ausnahmenprozess.
 
@@ -103,10 +103,10 @@ Ausnahmen werden regelmäßig überprüft (mindestens quartalsweise). Nicht mehr
 
 ### Schlüsselrollen
 
-- **Policy Owner:** {{ meta.ciso.name }} (CISO)
-- **CIO:** {{ meta.cio.name }}
-- **Risk Manager:** {{ meta.risk.manager }}
-- **ISMS Team:** {{ meta.isms.team }}
+- **Policy Owner:** {{ meta-organisation-roles.role_CISO }} (CISO)
+- **CIO:** {{ meta-organisation-roles.role_CIO }}
+- **Risk Manager:** {{ meta-handbook.risk_manager }}
+- **ISMS Team:** {{ meta-handbook.isms_team }}
 - **Antragsteller:** Business Owner, IT-Betrieb
 - **Kontroll-/Prüfinstanz:** ISMS, Internal Audit
 
@@ -177,7 +177,7 @@ Diese Policy selbst unterliegt keinem Ausnahmenprozess. Änderungen an dieser Po
 - **COBIT 2019** - APO12 (Managed Risk)
 
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
 Datum: {{ meta-handbook.modifydate }}
 
 **Nächster Review:** {{ meta-handbook.next_review }} (jährlich oder anlassbezogen)

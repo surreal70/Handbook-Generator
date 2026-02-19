@@ -25,14 +25,14 @@ Reference: BSI IT-Grundschutz-Kompendium: OPS.1.1.1 General IT Operations
 
 The asset inventory of **{{ meta-organisation.name }}** documents all IT assets within the ISMS scope.
 
-**Responsible:** {{ meta.cio.name }}
+**Responsible:** {{ meta-organisation-roles.role_CIO }}
 
 ## 2. Maintenance Note
 
 **Recommendation:** This inventory should be maintained in a CMDB (Configuration Management Database) or Asset Management Tool. This document serves as a template/export format.
 
 **CMDB System:** [TODO: e.g., ServiceNow, Device42, NetBox]  
-**Storage Location:** {{ netbox.url }} or [TODO]
+**Storage Location:** [[ netbox.url ]] or [TODO]
 
 ## 3. Asset Categories
 
@@ -63,7 +63,7 @@ The asset inventory of **{{ meta-organisation.name }}** documents all IT assets 
 
 | Asset ID | Name | Type | Category | Owner | Location/Region | Protection Need (C/I/A) | Lifecycle Status | Manufacturer | Model | Serial Number | Acquisition Date | EOL Date | Notes |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| {{ netbox.device.id }} | {{ netbox.device.name }} | Server | Hardware | {{ meta.cio.name }} | {{ netbox.site.name }} | [TODO] | Production | {{ netbox.device.manufacturer }} | {{ netbox.device.model }} | {{ netbox.device.serial }} | [TODO] | [TODO] | [TODO] |
+| [[ netbox.device.id ]] | [[ netbox.device.name ]] | Server | Hardware | {{ meta-organisation-roles.role_CIO }} | [[ netbox.site.name ]] | [TODO] | Production | [[ netbox.device.manufacturer ]] | [[ netbox.device.model ]] | [[ netbox.device.serial ]] | [TODO] | [TODO] | [TODO] |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 **Protection Need Categories:**
@@ -81,14 +81,14 @@ The asset inventory of **{{ meta-organisation.name }}** documents all IT assets 
 
 ## 5. NetBox Integration
 
-**NetBox Instance:** {{ netbox.url }}
+**NetBox Instance:** [[ netbox.url ]]
 
 **Available Data from NetBox:**
-- Devices: {{ netbox.device.name }}, {{ netbox.device.type }}, {{ netbox.device.role }}
-- Sites: {{ netbox.site.name }}, {{ netbox.site.region }}
-- IP Addresses: {{ netbox.ipaddress.address }}
-- VLANs: {{ netbox.vlan.name }}, {{ netbox.vlan.id }}
-- Racks: {{ netbox.rack.name }}, {{ netbox.rack.location }}
+- Devices: [[ netbox.device.name ]], [[ netbox.device.type ]], [[ netbox.device.role ]]
+- Sites: [[ netbox.site.name ]], [[ netbox.site.region ]]
+- IP Addresses: [[ netbox.ipaddress.address ]]
+- VLANs: [[ netbox.vlan.name ]], [[ netbox.vlan.id ]]
+- Racks: [[ netbox.rack.name ]], [[ netbox.rack.location ]]
 
 **Synchronization:** [TODO: Automatic/Manual, Frequency]
 
@@ -146,7 +146,7 @@ The asset inventory of **{{ meta-organisation.name }}** documents all IT assets 
 ```
 Environment: Production
 Criticality: High
-Owner: {{ meta.cio.name }}
+Owner: {{ meta-organisation-roles.role_CIO }}
 Compliance: ISO27001, BSI
 Backup: Yes
 DR: Yes
@@ -159,14 +159,14 @@ DR: Yes
 - **Quarterly:** EOL Report (Assets approaching End-of-Life)
 - **Annually:** Complete Asset Review
 
-**Responsible:** {{ meta.cio.name }}
+**Responsible:** {{ meta-organisation-roles.role_CIO }}
 
 ## 10. Approval
 
 | Role | Name | Date | Approval |
 |---|---|---|---|
-| IT Management | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
-| CISO | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| IT Management | {{ meta-organisation-roles.role_CIO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| CISO | {{ meta-organisation-roles.role_CISO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **References:**
 - BSI IT-Grundschutz-Kompendium: OPS.1.1.1 General IT Operations

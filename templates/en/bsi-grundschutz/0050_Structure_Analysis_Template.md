@@ -30,7 +30,7 @@ The structure analysis systematically captures the structure of the information 
 - Basic security check (Document 0080)
 - Risk analysis (Document 0090)
 
-**Responsible:** {{ meta.ciso.name }} (ISO)
+**Responsible:** {{ meta-organisation-roles.role_CISO }} (ISO)
 
 ## 2. Approach and Methodology
 
@@ -40,11 +40,11 @@ The following data sources are used for the structure analysis:
 
 | Data Source | Type | Responsible | Currency |
 |---|---|---|---|
-| CMDB/Asset Inventory | System | {{ meta.cio.name }} | [TODO] |
-| Network Documentation | Document | {{ meta.cio.name }} | [TODO] |
-| Architecture Diagrams | Document | {{ meta.cio.name }} | [TODO] |
+| CMDB/Asset Inventory | System | {{ meta-organisation-roles.role_CIO }} | [TODO] |
+| Network Documentation | Document | {{ meta-organisation-roles.role_CIO }} | [TODO] |
+| Architecture Diagrams | Document | {{ meta-organisation-roles.role_CIO }} | [TODO] |
 | Service Provider Contracts | Document | [TODO] | [TODO] |
-| Stakeholder Interviews | Primary Source | {{ meta.ciso.name }} | [TODO] |
+| Stakeholder Interviews | Primary Source | {{ meta-organisation-roles.role_CISO }} | [TODO] |
 
 ### 2.2 Granularity
 
@@ -65,8 +65,8 @@ The structure analysis is performed at the following granularity levels:
 - **Completion:** [TODO]
 
 **Participants:**
-- ISO: {{ meta.ciso.name }}
-- IT Management: {{ meta.cio.name }}
+- ISO: {{ meta-organisation-roles.role_CISO }}
+- IT Management: {{ meta-organisation-roles.role_CIO }}
 - Information Domain Managers: [TODO]
 - Departments: [TODO]
 
@@ -117,10 +117,10 @@ Document all IT systems and components. Use NetBox data where available.
 
 | ID | System/Component | Type | Owner | Location/Region | Operation | IP Address | Notes |
 |---|---|---|---|---|---|---|---|
-| S-001 | {{ netbox.device.server_001 }} | Server | {{ meta.cio.name }} | [TODO] | Internal | {{ netbox.ip.server_001 }} | [TODO] |
-| S-002 | [TODO: System 2] | Database | {{ meta.cio.name }} | [TODO] | Internal/External | [TODO] | [TODO] |
-| S-003 | [TODO: System 3] | Storage | {{ meta.cio.name }} | [TODO] | Internal/External | [TODO] | [TODO] |
-| S-004 | [TODO: System 4] | Firewall | {{ meta.cio.name }} | [TODO] | Internal | [TODO] | [TODO] |
+| S-001 | [[ netbox.device.server_001 ]] | Server | {{ meta-organisation-roles.role_CIO }} | [TODO] | Internal | [[ netbox.ip.server_001 ]] | [TODO] |
+| S-002 | [TODO: System 2] | Database | {{ meta-organisation-roles.role_CIO }} | [TODO] | Internal/External | [TODO] | [TODO] |
+| S-003 | [TODO: System 3] | Storage | {{ meta-organisation-roles.role_CIO }} | [TODO] | Internal/External | [TODO] | [TODO] |
+| S-004 | [TODO: System 4] | Firewall | {{ meta-organisation-roles.role_CIO }} | [TODO] | Internal | [TODO] | [TODO] |
 
 **Total Number of IT Systems:** [TODO]
 
@@ -141,10 +141,10 @@ Document network segments, VLANs, and zones. Use NetBox data where available.
 
 | ID | Network/Zone | Purpose | Segmentation | Internet Access | VLAN ID | Operator | Security Zone |
 |---|---|---|---|---|---|---|---|
-| N-001 | Management Network | Administration | Yes | No | {{ netbox.vlan.management }} | {{ meta.cio.name }} | High Security |
-| N-002 | Production Network | Business Applications | Yes | Yes (filtered) | [TODO] | {{ meta.cio.name }} | Secure |
-| N-003 | DMZ | External Services | Yes | Yes | [TODO] | {{ meta.cio.name }} | Medium |
-| N-004 | Guest WLAN | Guests | Yes | Yes (isolated) | [TODO] | {{ meta.cio.name }} | Low |
+| N-001 | Management Network | Administration | Yes | No | [[ netbox.vlan.management ]] | {{ meta-organisation-roles.role_CIO }} | High Security |
+| N-002 | Production Network | Business Applications | Yes | Yes (filtered) | [TODO] | {{ meta-organisation-roles.role_CIO }} | Secure |
+| N-003 | DMZ | External Services | Yes | Yes | [TODO] | {{ meta-organisation-roles.role_CIO }} | Medium |
+| N-004 | Guest WLAN | Guests | Yes | Yes (isolated) | [TODO] | {{ meta-organisation-roles.role_CIO }} | Low |
 
 **Total Number of Network Segments:** [TODO]
 
@@ -193,9 +193,9 @@ Document key personnel and roles relevant for information security.
 
 | Role | Name | Area of Responsibility | Contact | Deputy |
 |---|---|---|---|---|
-| Executive Management | {{ meta.ceo.name }} | Overall Responsibility | {{ meta.ceo.email }} | [TODO] |
-| ISO | {{ meta.ciso.name }} | ISMS Coordination | {{ meta.ciso.email }} | [TODO] |
-| IT Management | {{ meta.cio.name }} | IT Operations | {{ meta.cio.email }} | [TODO] |
+| Executive Management | {{ meta-organisation-roles.role_CEO }} | Overall Responsibility | {{ meta-organisation-roles.role_CEO_email }} | [TODO] |
+| ISO | {{ meta-organisation-roles.role_CISO }} | ISMS Coordination | {{ meta-organisation-roles.role_CISO_email }} | [TODO] |
+| IT Management | {{ meta-organisation-roles.role_CIO }} | IT Operations | {{ meta-organisation-roles.role_CIO_email }} | [TODO] |
 | [TODO: Additional Roles] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## 4. Dependencies and Interfaces
@@ -248,10 +248,10 @@ Save in: diagrams/
 ### 6.1 Validation Process
 
 The structure analysis is validated by:
-1. **Review by IT Management:** {{ meta.cio.name }}
+1. **Review by IT Management:** {{ meta-organisation-roles.role_CIO }}
 2. **Review by Information Domain Managers:** [TODO]
 3. **Comparison with CMDB/Inventory:** [TODO: Date]
-4. **Approval by ISO:** {{ meta.ciso.name }}
+4. **Approval by ISO:** {{ meta-organisation-roles.role_CISO }}
 
 ### 6.2 Completeness Check
 
@@ -273,15 +273,15 @@ The structure analysis is updated when:
 - Organizational changes
 - At least annually as part of ISMS review
 
-**Responsible:** {{ meta.ciso.name }} (ISO)  
+**Responsible:** {{ meta-organisation-roles.role_CISO }} (ISO)  
 **Next Review:** {{ meta-handbook.next_review }}
 
 ## 8. Approval
 
 | Role | Name | Date | Approval |
 |---|---|---|---|
-| ISO | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
-| IT Management | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| ISO | {{ meta-organisation-roles.role_CISO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| IT Management | {{ meta-organisation-roles.role_CIO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **References:**
 - BSI Standard 200-2: IT-Grundschutz Methodology (Chapter 5: Structure Analysis)

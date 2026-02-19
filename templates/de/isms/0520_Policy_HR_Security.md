@@ -36,7 +36,7 @@ Diese Policy gilt für:
 - **Organisationseinheiten:** Alle Abteilungen und Standorte der {{ meta-organisation.name }}
 - **Personen:** Alle Mitarbeiter, Auftragnehmer, Zeitarbeiter, Praktikanten
 - **Lebenszyklus:** Pre-Employment, Onboarding, Employment, Offboarding
-- **Standorte:** {{ netbox.site.name }} und alle weiteren Betriebsstandorte
+- **Standorte:** [[ netbox.site.name ]] und alle weiteren Betriebsstandorte
 
 **Ausnahmen:** Ausnahmen sind nur über den definierten Ausnahmenprozess (`0640_Policy_Ausnahmen_und_Risk_Waivers.md`) zulässig.
 
@@ -107,9 +107,9 @@ Bei Beendigung des Arbeitsverhältnisses werden alle Zugriffe unverzüglich entz
 
 ### Schlüsselrollen
 
-- **Policy Owner:** {{ meta.ciso.name }} (CISO)
-- **HR Manager:** {{ meta.hr.manager }}
-- **Security Awareness Manager:** {{ meta.security.awareness_manager }}
+- **Policy Owner:** {{ meta-organisation-roles.role_CISO }} (CISO)
+- **HR Manager:** {{ meta-handbook.hr_manager }}
+- **Security Awareness Manager:** {{ meta-handbook.security_awareness_manager }}
 - **Umsetzungsverantwortliche:** HR, Hiring Manager, IT-Betrieb
 - **Kontroll-/Prüfinstanz:** ISMS, Internal Audit
 
@@ -186,7 +186,7 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - DSGVO (EU 2016/679) - Datenschutz bei Background Checks
 
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
 Datum: {{ meta-handbook.modifydate }}
 
 **Nächster Review:** {{ meta-handbook.next_review }} (jährlich oder anlassbezogen)

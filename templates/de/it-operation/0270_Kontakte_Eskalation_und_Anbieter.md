@@ -29,67 +29,53 @@ Dieses Dokument enthält Kontaktlisten, Eskalationspfade, Anbieter und Lieferant
 ### Management
 
 #### Chief Executive Officer (CEO)
-- **Name:** {{ meta-organisation-roles.role_ceo.name }}
-- **Titel:** {{ meta-organisation-roles.role_ceo.title }}
-- **E-Mail:** {{ meta-organisation-roles.role_ceo.email }}
-- **Telefon:** {{ meta-organisation-roles.role_ceo.phone }}
-- **Abteilung:** {{ meta-organisation-roles.role_ceo.department }}
+- **Name:** {{ meta-organisation-roles.role_CEO }}
+- **E-Mail:** {{ meta-organisation-roles.role_CEO_email }}
+- **Telefon:** {{ meta-organisation-roles.role_CEO_phone }}
 - **Verfügbarkeit:** Mo-Fr 09:00-18:00
 - **Eskalation:** Nur für kritische Business-Impact-Situationen
 
 #### Chief Information Officer (CIO)
-- **Name:** {{ meta-organisation-roles.role_cio.name }}
-- **Titel:** {{ meta-organisation-roles.role_cio.title }}
-- **E-Mail:** {{ meta-organisation-roles.role_cio.email }}
-- **Telefon:** {{ meta-organisation-roles.role_cio.phone }}
-- **Abteilung:** {{ meta-organisation-roles.role_cio.department }}
+- **Name:** {{ meta-organisation-roles.role_CIO }}
+- **E-Mail:** {{ meta-organisation-roles.role_CIO_email }}
+- **Telefon:** {{ meta-organisation-roles.role_CIO_phone }}
 - **Verfügbarkeit:** Mo-Fr 08:00-18:00
 - **Eskalation:** IT-strategische Entscheidungen, kritische Incidents
 
 #### Chief Information Security Officer (CISO)
-- **Name:** {{ meta-organisation-roles.role_ciso.name }}
-- **Titel:** {{ meta-organisation-roles.role_ciso.title }}
-- **E-Mail:** {{ meta-organisation-roles.role_ciso.email }}
-- **Telefon:** {{ meta-organisation-roles.role_ciso.phone }}
-- **Abteilung:** {{ meta-organisation-roles.role_ciso.department }}
+- **Name:** {{ meta-organisation-roles.role_CISO }}
+- **E-Mail:** {{ meta-organisation-roles.role_CISO_email }}
+- **Telefon:** {{ meta-organisation-roles.role_CISO_phone }}
 - **Verfügbarkeit:** Mo-Fr 08:00-18:00, 24/7 für Security-Incidents
 - **Eskalation:** Security-Incidents, Compliance-Fragen
 
 #### Chief Financial Officer (CFO)
-- **Name:** {{ meta-organisation-roles.role_cfo.name }}
-- **Titel:** {{ meta-organisation-roles.role_cfo.title }}
-- **E-Mail:** {{ meta-organisation-roles.role_cfo.email }}
-- **Telefon:** {{ meta-organisation-roles.role_cfo.phone }}
-- **Abteilung:** {{ meta-organisation-roles.role_cfo.department }}
+- **Name:** {{ meta-organisation-roles.role_CFO }}
+- **E-Mail:** {{ meta-organisation-roles.role_CFO_email }}
+- **Telefon:** {{ meta-organisation-roles.role_CFO_phone }}
 - **Verfügbarkeit:** Mo-Fr 09:00-17:00
 - **Eskalation:** Budget-Fragen, finanzielle Genehmigungen
 
 #### Chief Operating Officer (COO)
-- **Name:** {{ meta-organisation-roles.role_coo.name }}
-- **Titel:** {{ meta-organisation-roles.role_coo.title }}
-- **E-Mail:** {{ meta-organisation-roles.role_coo.email }}
-- **Telefon:** {{ meta-organisation-roles.role_coo.phone }}
-- **Abteilung:** {{ meta-organisation-roles.role_coo.department }}
+- **Name:** {{ meta-organisation-roles.role_COO }}
+- **E-Mail:** {{ meta-organisation-roles.role_COO_email }}
+- **Telefon:** {{ meta-organisation-roles.role_COO_phone }}
 - **Verfügbarkeit:** Mo-Fr 08:00-18:00
 - **Eskalation:** Betriebliche Auswirkungen, Prozessfragen
 
 ### IT-Operations
 
 #### IT Operations Manager
-- **Name:** {{ meta-organisation-roles.role_it_operations_manager.name }}
-- **Titel:** {{ meta-organisation-roles.role_it_operations_manager.title }}
-- **E-Mail:** {{ meta-organisation-roles.role_it_operations_manager.email }}
-- **Telefon:** {{ meta-organisation-roles.role_it_operations_manager.phone }}
-- **Abteilung:** {{ meta-organisation-roles.role_it_operations_manager.department }}
+- **Name:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
+- **E-Mail:** {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
+- **Telefon:** {{ meta-organisation-roles.role_IT_Operations_Manager_phone }}
 - **Verfügbarkeit:** Mo-Fr 08:00-18:00, On-Call für P1-Incidents
 - **Verantwortung:** Gesamtverantwortung IT-Betrieb
 
 #### Service Desk Lead
-- **Name:** {{ meta-organisation-roles.role_service_desk_lead.name }}
-- **Titel:** {{ meta-organisation-roles.role_service_desk_lead.title }}
-- **E-Mail:** {{ meta-organisation-roles.role_service_desk_lead.email }}
-- **Telefon:** {{ meta-organisation-roles.role_service_desk_lead.phone }}
-- **Abteilung:** {{ meta-organisation-roles.role_service_desk_lead.department }}
+- **Name:** {{ meta-organisation-roles.role_Service_Desk_Lead }}
+- **E-Mail:** {{ meta-organisation-roles.role_Service_Desk_Lead_email }}
+- **Telefon:** {{ meta-organisation-roles.role_Service_Desk_Lead_phone }}
 - **Verfügbarkeit:** Mo-Fr 08:00-18:00
 - **Verantwortung:** First-Level-Support, Ticket-Management
 
@@ -109,7 +95,7 @@ Dieses Dokument enthält Kontaktlisten, Eskalationspfade, Anbieter und Lieferant
 - **Verantwortung:** Netzwerk-Infrastruktur, Firewall, VPN
 
 #### Security Team
-- **Team Lead:** {{ meta-organisation-roles.role_ciso.name }}
+- **Team Lead:** {{ meta-organisation-roles.role_CISO }}
 - **E-Mail:** [TODO: security-team@example.com]
 - **Telefon:** [TODO: Telefonnummer]
 - **Verfügbarkeit:** Mo-Fr 08:00-18:00, 24/7 für Security-Incidents
@@ -163,8 +149,8 @@ Dieses Dokument enthält Kontaktlisten, Eskalationspfade, Anbieter und Lieferant
 ### Incident-Eskalation
 
 #### Level 1: Service Desk
-- **Kontakt:** {{ meta-organisation-roles.role_service_desk_lead.email }}
-- **Telefon:** {{ meta-organisation-roles.role_service_desk_lead.phone }}
+- **Kontakt:** {{ meta-organisation-roles.role_Service_Desk_Lead_email }}
+- **Telefon:** {{ meta-organisation-roles.role_Service_Desk_Lead_phone }}
 - **Verfügbarkeit:** Mo-Fr 08:00-18:00
 - **Verantwortung:** First-Level-Support, Ticket-Erstellung
 
@@ -186,8 +172,8 @@ Dieses Dokument enthält Kontaktlisten, Eskalationspfade, Anbieter und Lieferant
 - P3: Nach 8 Stunden ohne Lösung
 
 #### Level 3: IT Operations Manager
-- **Kontakt:** {{ meta-organisation-roles.role_it_operations_manager.email }}
-- **Telefon:** {{ meta-organisation-roles.role_it_operations_manager.phone }}
+- **Kontakt:** {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
+- **Telefon:** {{ meta-organisation-roles.role_IT_Operations_Manager_phone }}
 - **Verfügbarkeit:** Mo-Fr 08:00-18:00, On-Call für P1
 - **Verantwortung:** Koordination, Ressourcen-Allokation
 
@@ -197,8 +183,8 @@ Dieses Dokument enthält Kontaktlisten, Eskalationspfade, Anbieter und Lieferant
 - Wenn externe Unterstützung erforderlich
 
 #### Level 4: CIO
-- **Kontakt:** {{ meta-organisation-roles.role_cio.email }}
-- **Telefon:** {{ meta-organisation-roles.role_cio.phone }}
+- **Kontakt:** {{ meta-organisation-roles.role_CIO_email }}
+- **Telefon:** {{ meta-organisation-roles.role_CIO_phone }}
 - **Verfügbarkeit:** Mo-Fr 08:00-18:00, erreichbar für kritische Incidents
 - **Verantwortung:** Strategische Entscheidungen, Management-Kommunikation
 
@@ -208,8 +194,8 @@ Dieses Dokument enthält Kontaktlisten, Eskalationspfade, Anbieter und Lieferant
 - Regulatorische Auswirkungen
 
 #### Level 5: CEO
-- **Kontakt:** {{ meta-organisation-roles.role_ceo.email }}
-- **Telefon:** {{ meta-organisation-roles.role_ceo.phone }}
+- **Kontakt:** {{ meta-organisation-roles.role_CEO_email }}
+- **Telefon:** {{ meta-organisation-roles.role_CEO_phone }}
 - **Verfügbarkeit:** Nach Vereinbarung
 - **Verantwortung:** Unternehmensweite Entscheidungen
 
@@ -227,8 +213,8 @@ Dieses Dokument enthält Kontaktlisten, Eskalationspfade, Anbieter und Lieferant
 - Compliance-Verletzung
 
 #### Level 2: CISO
-- **Kontakt:** {{ meta-organisation-roles.role_ciso.email }}
-- **Telefon:** {{ meta-organisation-roles.role_ciso.phone }}
+- **Kontakt:** {{ meta-organisation-roles.role_CISO_email }}
+- **Telefon:** {{ meta-organisation-roles.role_CISO_phone }}
 - **Verfügbarkeit:** 24/7 für Security-Incidents
 - **Verantwortung:** Security-Strategie, Compliance
 
@@ -238,7 +224,7 @@ Dieses Dokument enthält Kontaktlisten, Eskalationspfade, Anbieter und Lieferant
 - Regulatorische Meldepflicht
 
 #### Level 3: CIO / CEO
-- **Kontakt:** {{ meta-organisation-roles.role_cio.email }} / {{ meta-organisation-roles.role_ceo.email }}
+- **Kontakt:** {{ meta-organisation-roles.role_CIO_email }} / {{ meta-organisation-roles.role_CEO_email }}
 - **Verfügbarkeit:** Nach Vereinbarung
 - **Verantwortung:** Unternehmensweite Kommunikation, rechtliche Schritte
 
@@ -440,7 +426,7 @@ Dieses Dokument enthält Kontaktlisten, Eskalationspfade, Anbieter und Lieferant
 ### Aktualisierungsprozess
 
 1. **Änderungen melden:**
-   - E-Mail an {{ meta-organisation-roles.role_it_operations_manager.email }}
+   - E-Mail an {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
    - Neue Kontaktdaten angeben
    - Gültigkeitsdatum angeben
 
@@ -459,7 +445,7 @@ Dieses Dokument enthält Kontaktlisten, Eskalationspfade, Anbieter und Lieferant
 
 ### Review-Zyklus
 - **Frequenz:** Quartalsweise
-- **Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+- **Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - **Prozess:**
   - Alle Kontakte durchgehen
   - Aktualität prüfen
@@ -515,14 +501,14 @@ Dieses Dokument enthält Kontaktlisten, Eskalationspfade, Anbieter und Lieferant
 
 | Situation | Kontakt | Telefon |
 |---|---|---|
-| IT-Support | {{ meta-organisation-roles.role_service_desk_lead.name }} | {{ meta-organisation-roles.role_service_desk_lead.phone }} |
-| Kritischer Incident | IT Operations Manager | {{ meta-organisation-roles.role_it_operations_manager.phone }} |
-| Security-Incident | {{ meta-organisation-roles.role_ciso.name }} | {{ meta-organisation-roles.role_ciso.phone }} |
-| Management-Eskalation | {{ meta-organisation-roles.role_cio.name }} | {{ meta-organisation-roles.role_cio.phone }} |
+| IT-Support | {{ meta-organisation-roles.role_Service_Desk_Lead }} | {{ meta-organisation-roles.role_Service_Desk_Lead_phone }} |
+| Kritischer Incident | IT Operations Manager | {{ meta-organisation-roles.role_IT_Operations_Manager_phone }} |
+| Security-Incident | {{ meta-organisation-roles.role_CISO }} | {{ meta-organisation-roles.role_CISO_phone }} |
+| Management-Eskalation | {{ meta-organisation-roles.role_CIO }} | {{ meta-organisation-roles.role_CIO_phone }} |
 | Notfall (Feuer/Medizin) | Notruf | 112 |
 | Polizei | Notruf | 110 |
 
 **Letzte Aktualisierung:** {{ meta-handbook.date }}  
 **Nächste Review:** [TODO: Datum]  
-**Kontakt:** {{ meta-organisation-roles.role_it_operations_manager.email }}
+**Kontakt:** {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
 

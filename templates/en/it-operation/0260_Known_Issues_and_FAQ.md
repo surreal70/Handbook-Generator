@@ -30,7 +30,7 @@ This document contains known issues and workarounds, frequently asked questions 
 
 All known issues are captured in the ticketing system with the label "Known Issue" and documented here.
 
-**Responsible:** {{ meta-organisation-roles.role_it_operations_manager.name }}  
+**Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }}  
 **Review Cycle:** Monthly
 
 ### KI-001: [TODO: Issue Title]
@@ -111,7 +111,7 @@ Core switch overload during backup times (22:00-02:00).
 - **Status:** Planned
 - **ETA:** Q2 2026
 - **Action:** Upgrade core switch to higher bandwidth
-- **Responsible:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+- **Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 #### Affected Users
 All internal users during backup times
@@ -164,8 +164,8 @@ ANALYZE TABLE products;
 #### Q: How do I reach IT support?
 
 **A:** IT support can be reached through the following channels:
-- **Email:** {{ meta-organisation-roles.role_service_desk_lead.email }}
-- **Phone:** {{ meta-organisation-roles.role_service_desk_lead.phone }}
+- **Email:** {{ meta-organisation-roles.role_Service_Desk_Lead_email }}
+- **Phone:** {{ meta-organisation-roles.role_Service_Desk_Lead_phone }}
 - **Ticketing System:** [TODO: URL]
 - **Chat:** [TODO: Chat Channel]
 
@@ -184,12 +184,12 @@ ANALYZE TABLE products;
    - Fill out form and submit
 
 2. **Email:**
-   - Email to {{ meta-organisation-roles.role_service_desk_lead.email }}
+   - Email to {{ meta-organisation-roles.role_Service_Desk_Lead_email }}
    - Subject: Brief problem description
    - Content: Detailed description, screenshots
 
 3. **Phone:**
-   - Call {{ meta-organisation-roles.role_service_desk_lead.phone }}
+   - Call {{ meta-organisation-roles.role_Service_Desk_Lead_phone }}
    - Describe problem
    - Note ticket number
 
@@ -361,7 +361,7 @@ ANALYZE TABLE products;
 **For suspicious emails:**
 - **DO NOT** click on links
 - **DO NOT** open attachments
-- Forward to {{ meta-organisation-roles.role_ciso.email }}
+- Forward to {{ meta-organisation-roles.role_CISO_email }}
 - Delete email
 
 ### Files and Storage
@@ -459,7 +459,7 @@ ANALYZE TABLE products;
 
 2. **Approval:**
    - Manager approval required
-   - Budget review by {{ meta-organisation-roles.role_cfo.name }}
+   - Budget review by {{ meta-organisation-roles.role_CFO }}
 
 3. **Procurement:**
    - IT team orders hardware
@@ -575,7 +575,7 @@ ANALYZE TABLE products;
 Do you have suggestions for improving this document or IT services?
 
 **Contact:**
-- **Email:** {{ meta-organisation-roles.role_it_operations_manager.email }}
+- **Email:** {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
 - **Feedback Form:** [TODO: Form URL]
 
 ### Document Updates
@@ -587,7 +587,7 @@ This document is regularly updated based on:
 - Process improvements
 
 **Review Cycle:** Monthly  
-**Responsible:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+**Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 ## Processes and Responsibilities
 
@@ -629,5 +629,5 @@ This document is regularly updated based on:
 
 **Last Update:** {{ meta-handbook.date }}  
 **Next Review:** [TODO: Date]  
-**Contact:** {{ meta-organisation-roles.role_it_operations_manager.email }}
+**Contact:** {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
 

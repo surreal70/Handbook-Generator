@@ -258,7 +258,7 @@ This document contains a collection of checklists, templates for standard docume
 - [Monitoring Data]
 
 **Created by:** [Name]
-**Approved by:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+**Approved by:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 **Date:** [YYYY-MM-DD]
 ```
 
@@ -330,7 +330,7 @@ This document contains a collection of checklists, templates for standard docume
 - [ ] CAB Approval: [Name] - [Date]
 
 **Requester:** [Name]
-**Change Manager:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+**Change Manager:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 **Status:** Requested / Approved / Rejected / Implemented
 ```
 
@@ -394,7 +394,7 @@ This document contains a collection of checklists, templates for standard docume
 
 **Last Update:** {{ meta-handbook.date }}  
 **Next Review:** [TODO: Date]  
-**Contact:** {{ meta-organisation-roles.role_it_operations_manager.email }}
+**Contact:** {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
 
 
 ### Change Request Template
@@ -465,7 +465,7 @@ This document contains a collection of checklists, templates for standard docume
 - [ ] CAB Approval: [Name] - [Date]
 
 **Requester:** [Name]
-**Change Manager:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+**Change Manager:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 **Status:** Requested / Approved / Rejected / Implemented
 ```
 
@@ -671,4 +671,4 @@ This document contains a collection of checklists, templates for standard docume
 
 **Last Update:** {{ meta-handbook.date }}  
 **Next Review:** [TODO: Date]  
-**Contact:** {{ meta-organisation-roles.role_it_operations_manager.email }}
+**Contact:** {{ meta-organisation-roles.role_IT_Operations_Manager_email }}

@@ -57,8 +57,8 @@ Dieses Dokument definiert den Geltungsbereich der PCI-DSS-Compliance für {{ met
 
 **Merchant Level:** [TODO: Level 1/2/3/4]  
 **Service Provider Level:** [TODO: Level 1/2 oder N/A]  
-**Merchant ID:** {{ meta.pci.merchant_id }}  
-**Service Provider ID:** {{ meta.pci.service_provider_id }}  
+**Merchant ID:** {{ meta-handbook.merchant_id }}  
+**Service Provider ID:** {{ meta-handbook.service_provider_id }}  
 
 **Transaktionsvolumen (jährlich):**
 - Visa: [TODO: Anzahl Transaktionen]

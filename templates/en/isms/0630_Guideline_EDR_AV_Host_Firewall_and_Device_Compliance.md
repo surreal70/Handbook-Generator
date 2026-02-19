@@ -29,7 +29,7 @@ This guideline implements `0620_Policy_Endpoint_Security.md` and defines:
 
 ### 2.1 EDR System
 
-**Platform:** {{ meta.security.edr_solution }} (e.g., CrowdStrike, SentinelOne, Microsoft Defender for Endpoint)
+**Platform:** {{ meta-handbook.security_edr_solution }} (e.g., CrowdStrike, SentinelOne, Microsoft Defender for Endpoint)
 
 **Functions:**
 - Real-time Threat Detection
@@ -85,7 +85,7 @@ This guideline implements `0620_Policy_Endpoint_Security.md` and defines:
 
 ### 3.1 AV System
 
-**Platform:** {{ meta.security.av_solution }} (often integrated in EDR)
+**Platform:** {{ meta-handbook.security_av_solution }} (often integrated in EDR)
 
 **Scan Types:**
 - Real-time Scanning (On-Access)
@@ -317,6 +317,6 @@ This guideline implements `0620_Policy_Endpoint_Security.md` and defines:
 - **NIST SP 800-83** - Guide to Malware Incident Prevention and Handling
 - **CIS Controls** - Malware Defenses
 
-**Approved by:** {{ meta.ciso.name }}, CISO  
+**Approved by:** {{ meta-organisation-roles.role_CISO }}, CISO  
 **Next Review:** {{ meta-handbook.next_review }}
 

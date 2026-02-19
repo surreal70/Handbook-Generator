@@ -54,7 +54,7 @@ This guideline implements the `0300_Policy_Asset_Management.md` and defines:
 
 ### 3.1 CMDB (Configuration Management Database)
 
-**System:** {{ meta.itsm.cmdb }} (e.g., ServiceNow, Jira Service Management)
+**System:** {{ meta-handbook.itsm_cmdb }} (e.g., ServiceNow, Jira Service Management)
 
 **Mandatory Fields per Asset:**
 - Asset ID (unique)
@@ -76,8 +76,8 @@ This guideline implements the `0300_Policy_Asset_Management.md` and defines:
 ### 3.2 Automatic Inventory
 
 **Tools:**
-- **Endpoint Management:** {{ meta.endpoint.management }} (e.g., Microsoft Intune, Jamf)
-- **Network Discovery:** {{ meta.network.discovery }} (e.g., Nmap, Lansweeper)
+- **Endpoint Management:** {{ meta-handbook.endpoint_management }} (e.g., Microsoft Intune, Jamf)
+- **Network Discovery:** {{ meta-handbook.network_discovery }} (e.g., Nmap, Lansweeper)
 - **Cloud Asset Inventory:** Native cloud tools (Azure Resource Graph, AWS Config)
 
 **Process:**
@@ -106,7 +106,7 @@ This guideline implements the `0300_Policy_Asset_Management.md` and defines:
 
 ### 4.1 Tagging Schema
 
-**Asset ID Format:** `{{ meta.asset.id_format }}`  
+**Asset ID Format:** `{{ meta-handbook.asset_id_format }}`  
 Example: `LAP-2024-001234` (Laptop, year, sequential number)
 
 **Prefixes:**
@@ -132,7 +132,7 @@ Example: `LAP-2024-001234` (Laptop, year, sequential number)
 ### 4.3 Digital Tags
 
 **Hostname Convention:**
-- Format: `{{ meta.naming.hostname_format }}`
+- Format: `{{ meta-handbook.naming_hostname_format }}`
 - Example: `lap-jdoe-001` (type-user-number)
 
 **Metadata:**
@@ -210,7 +210,7 @@ Example: `LAP-2024-001234` (Laptop, year, sequential number)
 ### 6.2 Mobile Devices
 
 **Process:**
-1. Remote wipe via MDM ({{ meta.mdm.system }})
+1. Remote wipe via MDM ({{ meta-handbook.mdm_system }})
 2. Factory reset on-site
 3. Removal of SIM cards and SD cards
 4. Physical verification of deletion
@@ -305,6 +305,6 @@ Example: `LAP-2024-001234` (Laptop, year, sequential number)
 - **DIN 66399** - Destruction of data carriers
 - **WEEE Directive** - Electrical and electronic equipment disposal
 
-**Approved by:** {{ meta.ciso.name }}, CISO  
+**Approved by:** {{ meta-organisation-roles.role_CISO }}, CISO  
 **Next Review:** {{ meta-handbook.next_review }}
 

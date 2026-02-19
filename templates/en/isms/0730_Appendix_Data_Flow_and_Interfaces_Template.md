@@ -33,8 +33,8 @@ The documentation serves as the foundation for:
 ## Scope
 
 **Organization:** {{ meta-organisation.name }}  
-**ISMS Scope:** {{ meta.isms.scope }}  
-**Responsible:** {{ meta.ciso.name }}, Data Protection Officer
+**ISMS Scope:** {{ meta-handbook.isms_scope }}  
+**Responsible:** {{ meta-organisation-roles.role_CISO }}, Data Protection Officer
 
 ## Data Flow Categories
 
@@ -82,8 +82,8 @@ All data flows are assessed according to the following classifications:
 
 | Data Flow-ID | Source Site | Destination Site | Connection Type | Bandwidth | Data Type | Encryption | Redundancy |
 |--------------|-------------|------------------|-----------------|-----------|-----------|------------|------------|
-| DF-S2S-001 | {{ netbox.site.name }} | [TODO: Branch Office] | MPLS | [TODO: Mbps] | All Business Data | IPSec | Yes |
-| DF-S2S-002 | {{ netbox.site.name }} | [TODO: DR Site] | Dedicated Line | [TODO: Mbps] | Replication Data | AES-256 | Yes |
+| DF-S2S-001 | [[ netbox.site.name ]] | [TODO: Branch Office] | MPLS | [TODO: Mbps] | All Business Data | IPSec | Yes |
+| DF-S2S-002 | [[ netbox.site.name ]] | [TODO: DR Site] | Dedicated Line | [TODO: Mbps] | Replication Data | AES-256 | Yes |
 | [TODO] | [TODO: Source] | [TODO: Destination] | [TODO: Type] | [TODO: Bandwidth] | [TODO: Data Type] | [TODO: Encryption] | [TODO: Redundancy] |
 
 **Security Measures:**
@@ -154,7 +154,7 @@ All data flows are assessed according to the following classifications:
 
 | Data Flow-ID | Source (EU) | Destination (Third Country) | Country | Data Type | Legal Basis | Protection Measures |
 |--------------|-------------|----------------------------|---------|-----------|-------------|---------------------|
-| DF-CROSS-001 | {{ netbox.site.name }} | [TODO: US Data Center] | USA | Cloud Data | Standard Contractual Clauses (SCC) | Encryption, Access Controls |
+| DF-CROSS-001 | [[ netbox.site.name ]] | [TODO: US Data Center] | USA | Cloud Data | Standard Contractual Clauses (SCC) | Encryption, Access Controls |
 | [TODO] | [TODO: Source] | [TODO: Destination] | [TODO: Country] | [TODO: Data Type] | [TODO: Legal Basis] | [TODO: Measures] |
 
 **GDPR Compliance:**
@@ -358,8 +358,8 @@ All changes to data flows and interfaces are subject to the change management pr
 - Guideline: 0610_Guideline_Segmentation_Firewalling_and_Network_Access_Control.md
 - Appendix: 0720_Appendix_Asset_and_System_Inventory_Template.md
 
-**Document Owner:** {{ meta.ciso.name }}  
-**Approved By:** {{ meta.management.name }}  
+**Document Owner:** {{ meta-organisation-roles.role_CISO }}  
+**Approved By:** {{ meta-handbook.management_name }}  
 **Next Review:** Semi-annually
 
 <!-- 

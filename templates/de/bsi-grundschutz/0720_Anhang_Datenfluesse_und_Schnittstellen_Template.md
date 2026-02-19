@@ -29,37 +29,37 @@ Die Dokumentation der Datenflüsse und Schnittstellen von **{{ meta-organisation
 - Kryptokonzept (Dokument 0340/0350)
 - Datenschutz-Compliance (Dokument 0420/0430)
 
-**Verantwortlich:** {{ meta.ciso.name }} (ISB), {{ meta.cio.name }} (IT-Leitung)
+**Verantwortlich:** {{ meta-organisation-roles.role_CISO }} (ISB), {{ meta-organisation-roles.role_CIO }} (IT-Leitung)
 
 ## 2. Datenfluss-Register
 
 | Datenfluss-ID | Quelle | Ziel | Datenarten | Schutzbedarf (C/I/A) | Transportweg | Verschlüsselung | Speicherung | Provider/Drittland | Owner | Rechtsgrundlage | Notiz |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| DF-001 | Webserver ({{ netbox.device.name }}) | Datenbank-Server | Kundendaten (personenbezogen) | Sehr hoch/Hoch/Hoch | {{ netbox.vlan.name }} (intern) | TLS 1.3 | Verschlüsselt (AES-256) | Intern | {{ meta.cio.name }} | DSGVO Art. 6(1)(b) | [TODO] |
-| DF-002 | Backup-Server | Cloud-Storage (AWS S3) | Backup-Daten | Hoch/Hoch/Hoch | Internet (VPN) | TLS 1.3 + AES-256 | Verschlüsselt (AES-256) | AWS (EU-West-1) | {{ meta.cio.name }} | DSGVO Art. 28 | [TODO] |
-| DF-003 | Mitarbeiter (Remote) | VPN-Gateway | Geschäftsdaten | Hoch/Hoch/Normal | Internet | IPsec/IKEv2 | N/A | Intern | {{ meta.cio.name }} | - | [TODO] |
-| DF-004 | ERP-System | Payment-Gateway | Zahlungsdaten | Sehr hoch/Sehr hoch/Hoch | Internet (HTTPS) | TLS 1.3 | Nicht gespeichert | Payment Provider (EU) | {{ meta.cio.name }} | PCI-DSS | [TODO] |
-| DF-005 | SIEM | Log-Archiv | Log-Daten | Normal/Hoch/Normal | {{ netbox.vlan.name }} (Management) | TLS 1.2 | Verschlüsselt | Intern | {{ meta.ciso.name }} | - | [TODO] |
+| DF-001 | Webserver ([[ netbox.device.name ]]) | Datenbank-Server | Kundendaten (personenbezogen) | Sehr hoch/Hoch/Hoch | [[ netbox.vlan.name ]] (intern) | TLS 1.3 | Verschlüsselt (AES-256) | Intern | {{ meta-organisation-roles.role_CIO }} | DSGVO Art. 6(1)(b) | [TODO] |
+| DF-002 | Backup-Server | Cloud-Storage (AWS S3) | Backup-Daten | Hoch/Hoch/Hoch | Internet (VPN) | TLS 1.3 + AES-256 | Verschlüsselt (AES-256) | AWS (EU-West-1) | {{ meta-organisation-roles.role_CIO }} | DSGVO Art. 28 | [TODO] |
+| DF-003 | Mitarbeiter (Remote) | VPN-Gateway | Geschäftsdaten | Hoch/Hoch/Normal | Internet | IPsec/IKEv2 | N/A | Intern | {{ meta-organisation-roles.role_CIO }} | - | [TODO] |
+| DF-004 | ERP-System | Payment-Gateway | Zahlungsdaten | Sehr hoch/Sehr hoch/Hoch | Internet (HTTPS) | TLS 1.3 | Nicht gespeichert | Payment Provider (EU) | {{ meta-organisation-roles.role_CIO }} | PCI-DSS | [TODO] |
+| DF-005 | SIEM | Log-Archiv | Log-Daten | Normal/Hoch/Normal | [[ netbox.vlan.name ]] (Management) | TLS 1.2 | Verschlüsselt | Intern | {{ meta-organisation-roles.role_CISO }} | - | [TODO] |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## 3. Schnittstellen-Register
 
 | Schnittstellen-ID | System A | System B | Protokoll | Port | Authentisierung | Verschlüsselung | Datenrichtung | Frequenz | Owner | Notiz |
 |---|---|---|---|---|---|---|---|---|---|---|
-| IF-001 | Webserver | Datenbank | PostgreSQL | 5432 | Zertifikat | TLS 1.3 | Bidirektional | Permanent | {{ meta.cio.name }} | [TODO] |
-| IF-002 | ERP | CRM | REST API | 443 | OAuth 2.0 | TLS 1.3 | Bidirektional | Echtzeit | {{ meta.cio.name }} | [TODO] |
-| IF-003 | Monitoring | SIEM | Syslog | 514 | Zertifikat | TLS 1.2 | Unidirektional | Permanent | {{ meta.ciso.name }} | [TODO] |
-| IF-004 | AD | LDAP-Clients | LDAPS | 636 | Kerberos | TLS 1.2 | Bidirektional | On-Demand | {{ meta.cio.name }} | [TODO] |
-| IF-005 | Backup-Server | Cloud-Storage | S3 API | 443 | API-Key | TLS 1.3 | Unidirektional | Täglich | {{ meta.cio.name }} | [TODO] |
+| IF-001 | Webserver | Datenbank | PostgreSQL | 5432 | Zertifikat | TLS 1.3 | Bidirektional | Permanent | {{ meta-organisation-roles.role_CIO }} | [TODO] |
+| IF-002 | ERP | CRM | REST API | 443 | OAuth 2.0 | TLS 1.3 | Bidirektional | Echtzeit | {{ meta-organisation-roles.role_CIO }} | [TODO] |
+| IF-003 | Monitoring | SIEM | Syslog | 514 | Zertifikat | TLS 1.2 | Unidirektional | Permanent | {{ meta-organisation-roles.role_CISO }} | [TODO] |
+| IF-004 | AD | LDAP-Clients | LDAPS | 636 | Kerberos | TLS 1.2 | Bidirektional | On-Demand | {{ meta-organisation-roles.role_CIO }} | [TODO] |
+| IF-005 | Backup-Server | Cloud-Storage | S3 API | 443 | API-Key | TLS 1.3 | Unidirektional | Täglich | {{ meta-organisation-roles.role_CIO }} | [TODO] |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## 4. Externe Schnittstellen und Drittanbieter
 
 | Drittanbieter | Service | Datenarten | Schutzbedarf | Standort/Drittland | Vertrag | Datenschutz-Vereinbarung | Owner | Notiz |
 |---|---|---|---|---|---|---|---|---|
-| AWS | Cloud-Hosting (EC2, S3) | Geschäftsdaten, Backup | Hoch/Hoch/Hoch | EU-West-1 | [TODO: Vertragsnummer] | Ja (Art. 28 DSGVO) | {{ meta.cio.name }} | [TODO] |
-| Microsoft | Office 365 | E-Mail, Dokumente | Hoch/Hoch/Normal | EU | [TODO] | Ja | {{ meta.cio.name }} | [TODO] |
-| Payment Provider | Zahlungsabwicklung | Zahlungsdaten | Sehr hoch/Sehr hoch/Hoch | EU | [TODO] | Ja | {{ meta.cio.name }} | PCI-DSS zertifiziert |
+| AWS | Cloud-Hosting (EC2, S3) | Geschäftsdaten, Backup | Hoch/Hoch/Hoch | EU-West-1 | [TODO: Vertragsnummer] | Ja (Art. 28 DSGVO) | {{ meta-organisation-roles.role_CIO }} | [TODO] |
+| Microsoft | Office 365 | E-Mail, Dokumente | Hoch/Hoch/Normal | EU | [TODO] | Ja | {{ meta-organisation-roles.role_CIO }} | [TODO] |
+| Payment Provider | Zahlungsabwicklung | Zahlungsdaten | Sehr hoch/Sehr hoch/Hoch | EU | [TODO] | Ja | {{ meta-organisation-roles.role_CIO }} | PCI-DSS zertifiziert |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 **Referenz:** Dokument 0400/0410 (Lieferanten und Auslagerungsmanagement)
@@ -149,8 +149,8 @@ Die Dokumentation der Datenflüsse und Schnittstellen von **{{ meta-organisation
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
-| IT-Leitung | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| ISB | {{ meta-organisation-roles.role_CISO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| IT-Leitung | {{ meta-organisation-roles.role_CIO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 | Datenschutzbeauftragter | [TODO] | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **Referenzen:**

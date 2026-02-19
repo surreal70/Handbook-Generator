@@ -36,7 +36,7 @@ Diese Policy gilt für:
 - **Projekte:** Alle IT-Projekte, Infrastrukturprojekte, Softwareentwicklungsprojekte
 - **Projektphasen:** Initiierung, Planung, Umsetzung, Abschluss
 - **Projektarten:** Interne Projekte, externe Projekte, Partnerprojekte
-- **Standorte:** {{ netbox.site.name }} und alle weiteren Betriebsstandorte
+- **Standorte:** [[ netbox.site.name ]] und alle weiteren Betriebsstandorte
 
 **Ausnahmen:** Ausnahmen sind nur über den definierten Ausnahmenprozess (`0640_Policy_Ausnahmen_und_Risk_Waivers.md`) zulässig.
 
@@ -99,10 +99,10 @@ Sicherheitsrelevante Projektdokumentation wird erstellt:
 
 ### Schlüsselrollen
 
-- **Policy Owner:** {{ meta.ciso.name }} (CISO)
-- **Security Architect:** {{ meta.security.architect }}
+- **Policy Owner:** {{ meta-organisation-roles.role_CISO }} (CISO)
+- **Security Architect:** {{ meta-handbook.security_architect }}
 - **Project Manager:** Projektverantwortliche
-- **IT Operations Manager:** {{ meta.it.operations_manager }}
+- **IT Operations Manager:** {{ meta-handbook.it_operations_manager }}
 - **Business Owner:** Fachbereichsverantwortliche
 - **Kontroll-/Prüfinstanz:** ISMS, Internal Audit
 
@@ -184,7 +184,7 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **ISO/IEC 27034** - Application Security
 
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
 Datum: {{ meta-handbook.modifydate }}
 
 **Nächster Review:** {{ meta-handbook.next_review }} (jährlich oder anlassbezogen)

@@ -36,9 +36,9 @@ Dieses Dokument definiert den organisatorischen Kontext für das Cybersecurity-R
 {{ meta-handbook.organization_mission }}
 
 ### Geschäftsziele
-1. {{ meta.business_goal_1 }}
-2. {{ meta.business_goal_2 }}
-3. {{ meta.business_goal_3 }}
+1. {{ meta-handbook.business_goal_1 }}
+2. {{ meta-handbook.business_goal_2 }}
+3. {{ meta-handbook.business_goal_3 }}
 
 ### Cybersecurity-Ziele
 - Schutz kritischer Geschäftsprozesse und -daten
@@ -76,8 +76,8 @@ Dieses Dokument definiert den organisatorischen Kontext für das Cybersecurity-R
    - {{ meta-handbook.additional_privacy_laws }}
 
 2. **Branchenspezifische Vorschriften**
-   - {{ meta.industry_regulation_1 }}
-   - {{ meta.industry_regulation_2 }}
+   - {{ meta-handbook.industry_regulation_1 }}
+   - {{ meta-handbook.industry_regulation_2 }}
 
 3. **Vertragliche Verpflichtungen**
    - Kundenverträge mit Sicherheitsanforderungen
@@ -90,9 +90,9 @@ Dieses Dokument definiert den organisatorischen Kontext für das Cybersecurity-R
 
 | Prozess | Kritikalität | Cybersecurity-Anforderungen |
 |---------|--------------|----------------------------|
-| {{ meta.critical_process_1 }} | Hoch | Verfügbarkeit, Integrität |
-| {{ meta.critical_process_2 }} | Hoch | Vertraulichkeit, Verfügbarkeit |
-| {{ meta.critical_process_3 }} | Mittel | Integrität, Nachvollziehbarkeit |
+| {{ meta-handbook.critical_process_1 }} | Hoch | Verfügbarkeit, Integrität |
+| {{ meta-handbook.critical_process_2 }} | Hoch | Vertraulichkeit, Verfügbarkeit |
+| {{ meta-handbook.critical_process_3 }} | Mittel | Integrität, Nachvollziehbarkeit |
 
 ## Risikotoleranz und -appetit
 

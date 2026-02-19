@@ -27,7 +27,7 @@ ISO 27001:2022 Reference: Clause 9.3 - Management review
 **Document ID:** 0140  
 **Document Type:** ISMS Evidence/Template  
 **Standard Reference:** ISO/IEC 27001:2022 Clause 9.3  
-**Owner:** {{ meta.ciso.name }}  
+**Owner:** {{ meta-organisation-roles.role_CISO }}  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Confidential  
@@ -46,18 +46,18 @@ ISO 27001:2022 Reference: Clause 9.3 - Management review
 
 | Name | Role | Present |
 |------|------|---------|
-| {{ meta.management.ceo }} | Management (Chair) | ✓ / ✗ |
-| {{ meta.ciso.name }} | CISO | ✓ / ✗ |
-| {{ meta.cio.name }} | CIO | ✓ / ✗ |
+| {{ meta-handbook.management_ceo }} | Management (Chair) | ✓ / ✗ |
+| {{ meta-organisation-roles.role_CISO }} | CISO | ✓ / ✗ |
+| {{ meta-organisation-roles.role_CIO }} | CIO | ✓ / ✗ |
 | [TODO] | CFO | ✓ / ✗ |
 | [TODO] | Department Representatives | ✓ / ✗ |
-| {{ meta.audit.manager }} | Internal Audit (Advisory) | ✓ / ✗ |
+| {{ meta-handbook.audit_manager }} | Internal Audit (Advisory) | ✓ / ✗ |
 
 ### 1.2 Scope
 
 This management review encompasses:
 - Entire ISMS in scope (see `0020_ISMS_Scope.md`)
-- All locations: {{ netbox.site.name }} and others
+- All locations: [[ netbox.site.name ]] and others
 - Review period: [TODO]
 
 ## 2. Inputs (Clause 9.3.2)
@@ -256,13 +256,13 @@ This management review encompasses:
 **ISMS Policy:**
 - Changes required: Yes / No
 - Description: [TODO]
-- Responsible: {{ meta.ciso.name }}
+- Responsible: {{ meta-organisation-roles.role_CISO }}
 - Deadline: [TODO]
 
 **Security Objectives:**
 - New objectives: [TODO]
 - Adjustment of existing objectives: [TODO]
-- Responsible: {{ meta.ciso.name }}
+- Responsible: {{ meta-organisation-roles.role_CISO }}
 - Deadline: [TODO]
 
 ### 3.2 Resources and Investments
@@ -301,7 +301,7 @@ This management review encompasses:
 - [TODO: New locations, systems, processes]
 - Impact on risk analysis: [TODO]
 - Impact on SoA: [TODO]
-- Responsible: {{ meta.ciso.name }}
+- Responsible: {{ meta-organisation-roles.role_CISO }}
 - Deadline: [TODO]
 
 ### 3.6 Strategic Decisions
@@ -376,14 +376,14 @@ This management review encompasses:
 
 | Version | Date | Author | Description | Approved By |
 |---------|------|--------|-------------|-------------|
-| 1.0 | {{ meta-handbook.modifydate }} | {{ meta.ciso.name }} | Initial version | {{ meta.management.ceo }} |
+| 1.0 | {{ meta-handbook.modifydate }} | {{ meta-organisation-roles.role_CISO }} | Initial version | {{ meta-handbook.management_ceo }} |
 
 **Recorded by:**  
-{{ meta.ciso.name }}, CISO  
+{{ meta-organisation-roles.role_CISO }}, CISO  
 Date: [TODO]
 
 **Approved by:**  
-{{ meta.management.ceo }}, Management  
+{{ meta-handbook.management_ceo }}, Management  
 Date: [TODO]
 
 **Next Review:** [TODO: Date] (Annually)

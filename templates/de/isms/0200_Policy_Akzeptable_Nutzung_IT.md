@@ -42,7 +42,7 @@ Diese Policy gilt für:
 - **Systeme:** Alle IT-Systeme, Netzwerke, Anwendungen, E-Mail, Internet, Cloud-Services
 - **Personen:** Alle Mitarbeiter, Auftragnehmer, Zeitarbeiter, Praktikanten und Dritte mit Zugang zu IT-Ressourcen
 - **Geräte:** Unternehmenseigene und private Geräte (BYOD), die auf Unternehmensressourcen zugreifen
-- **Standorte:** {{ netbox.site.name }} und alle weiteren Betriebsstandorte
+- **Standorte:** [[ netbox.site.name ]] und alle weiteren Betriebsstandorte
 
 **Ausnahmen:** Ausnahmen sind nur über den definierten Ausnahmenprozess (`0640_Policy_Ausnahmen_und_Risk_Waivers.md`) zulässig.
 
@@ -93,7 +93,7 @@ acceptable use requirements and risk profile.
 
 ### Schlüsselrollen
 
-- **Policy Owner:** {{ meta.ciso.name }} (CISO)
+- **Policy Owner:** {{ meta-organisation-roles.role_CISO }} (CISO)
 - **Umsetzungsverantwortliche:** IT-Betrieb, HR
 - **Kontroll-/Prüfinstanz:** ISMS, Internal Audit, Legal/Compliance
 
@@ -169,7 +169,7 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - Arbeitsrechtliche Vorgaben zur IT-Nutzung
 
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
 Datum: {{ meta-handbook.modifydate }}
 
 **Nächster Review:** {{ meta-handbook.next_review }} (jährlich oder anlassbezogen)

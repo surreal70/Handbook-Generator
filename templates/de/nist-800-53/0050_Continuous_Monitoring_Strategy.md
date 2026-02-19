@@ -17,7 +17,7 @@
 
 ## 1. Zweck
 
-Dieses Dokument beschreibt die Strategie für die kontinuierliche Überwachung (Continuous Monitoring) des Systems {{ meta.nist.system_name }}.
+Dieses Dokument beschreibt die Strategie für die kontinuierliche Überwachung (Continuous Monitoring) des Systems {{ meta-handbook.system_name }}.
 
 ## 2. Continuous Monitoring-Übersicht
 

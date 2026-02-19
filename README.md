@@ -3,7 +3,7 @@
 <div align="center">
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
-[![Version](https://img.shields.io/badge/version-0.0.18-orange.svg)](about_versioning/VERSION.md)
+[![Version](https://img.shields.io/badge/version-0.0.19-orange.svg)](about_versioning/VERSION.md)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Code Coverage](https://img.shields.io/badge/coverage-72%25-yellow.svg)](htmlcov/index.html)
 [![Tests](https://img.shields.io/badge/tests-7635%20total-success.svg)](tests/)
@@ -27,22 +27,24 @@ Ein Python-Tool zur Generierung professioneller Handbücher aus Markdown-Vorlage
 
 ## ⚠️ Wichtiger Hinweis
 
-**Dies ist eine Zwischen-Entwicklungsversion (0.0.18) und NICHT für den Produktiveinsatz bestimmt.**
+**Dies ist eine Zwischen-Entwicklungsversion (0.0.19) und NICHT für den Produktiveinsatz bestimmt.**
 
 Diese Version enthält:
-- Service und Prozess Dokumentationssystem (NEU)
+- Placeholder Migration System (NEU)
+- Placeholder Matrix Analysis Tool (NEU)
+- Service und Prozess Dokumentationssystem
 - Quality Control System
 - Umfassende Testabdeckung (7,635 Tests, 72% Coverage)
 - 10 bekannte Testfehler (pre-existing issues)
 - Nur für Entwicklungszwecke
 
-Siehe [Release Notes](about_versioning/VERSION_0.0.18_RELEASE_NOTES.md) für Details.
+Siehe [Release Notes](about_versioning/VERSION_0.0.19_RELEASE_NOTES.md) für Details.
 
 ## Überblick
 
 Der Handbuch-Generator erstellt aus strukturierten Markdown-Vorlagen professionelle Handbücher in verschiedenen Formaten (HTML, PDF, Markdown). Das System ersetzt Platzhalter in den Vorlagen durch echte Daten aus externen Systemen wie NetBox und unterstützt mehrsprachige Handbücher.
 
-**Version 0.0.18** - ⚠️ Intermediate Development Release - NOT FOR PRODUCTION
+**Version 0.0.19** - ⚠️ Intermediate Development Release - NOT FOR PRODUCTION
 
 ## Features
 
@@ -92,7 +94,7 @@ Der Handbuch-Generator erstellt aus strukturierten Markdown-Vorlagen professione
 
 ## Service und Prozess Dokumentation
 
-**Seit Version 0.0.18** unterstützt der Handbook Generator die strukturierte Dokumentation von IT-Services und Geschäftsprozessen mit COBIT/ITIL-Konformität und BPMN-Unterstützung.
+**Seit Version 0.0.19** unterstützt der Handbook Generator die strukturierte Dokumentation von IT-Services und Geschäftsprozessen mit COBIT/ITIL-Konformität und BPMN-Unterstützung sowie ein umfassendes Placeholder-Management-System.
 
 ### Service-Dokumentation
 

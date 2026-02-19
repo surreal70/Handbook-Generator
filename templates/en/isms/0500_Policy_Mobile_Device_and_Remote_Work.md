@@ -27,7 +27,7 @@ ISO 27001:2022 Annex A Reference: A.6.7, A.6.8, A.8.9
 **Document ID:** 0500  
 **Document Type:** Policy (abstract)  
 **Standard Reference:** ISO/IEC 27001:2022 Annex A.6.7, A.6.8, A.8.9 (incl. Amendment 1:2024)  
-**Owner:** {{ meta.ciso.name }}  
+**Owner:** {{ meta-organisation-roles.role_CISO }}  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
@@ -46,7 +46,7 @@ This policy applies to:
 - **Devices:** Laptops, smartphones, tablets, wearables (corporate-owned and BYOD)
 - **Access Methods:** VPN, Remote Desktop, cloud services, mobile apps
 - **Persons:** All employees, contractors with remote access
-- **Locations:** {{ netbox.site.name }}, home office, public places, travel
+- **Locations:** [[ netbox.site.name ]], home office, public places, travel
 
 **Exceptions:** Exceptions are only permitted through the defined exception process (`0640_Policy_Exceptions_and_Risk_Waivers.md`).
 
@@ -106,9 +106,9 @@ Remote workspaces must meet security requirements:
 
 ### Key Roles
 
-- **Policy Owner:** {{ meta.ciso.name }} (CISO)
-- **MDM Administrator:** {{ meta.it.mdm_admin }}
-- **Remote Access Manager:** {{ meta.it.remote_access_manager }}
+- **Policy Owner:** {{ meta-organisation-roles.role_CISO }} (CISO)
+- **MDM Administrator:** {{ meta-handbook.it_mdm_admin }}
+- **Remote Access Manager:** {{ meta-handbook.it_remote_access_manager }}
 - **Implementation Responsible:** IT Operations, Employees
 - **Control/Audit Function:** ISMS, Internal Audit
 
@@ -185,7 +185,7 @@ Exceptions to this policy are only permitted in justified exceptional cases:
 - **GDPR (EU 2016/679)** - Data protection for BYOD and remote work
 
 **Approved by:**  
-{{ meta.management.ceo }}, Management  
+{{ meta-handbook.management_ceo }}, Management  
 Date: {{ meta-handbook.modifydate }}
 
 **Next Review:** {{ meta-handbook.next_review }} (annually or as needed)

@@ -27,7 +27,7 @@ ISO 27001:2022 Reference: Clause 10.2 - Continual improvement
 **Document ID:** 0160  
 **Document Type:** ISMS Foundation Document  
 **Standard Reference:** ISO/IEC 27001:2022 Clause 10.2  
-**Owner:** {{ meta.ciso.name }}  
+**Owner:** {{ meta-organisation-roles.role_CISO }}  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
@@ -202,8 +202,8 @@ The ISMS follows the PDCA cycle (Plan-Do-Check-Act):
 | Item ID | Title | Source | Description | Benefit | Effort | Owner | Priority | Status |
 |---------|-------|--------|-------------|---------|--------|-------|----------|--------|
 | CI-001 | SIEM automation | Monitoring | Automatic response playbooks | Faster incident response | 40 PD | Security Team | High | Planned |
-| CI-002 | Zero-trust architecture | Best Practice | Implement zero-trust principles | Improved segmentation | 200 PD | {{ meta.cio.name }} | Medium | Evaluation |
-| CI-003 | Security Champions Program | Awareness | Multipliers in all teams | Higher security awareness | 20 PD | {{ meta.ciso.name }} | High | In Progress |
+| CI-002 | Zero-trust architecture | Best Practice | Implement zero-trust principles | Improved segmentation | 200 PD | {{ meta-organisation-roles.role_CIO }} | Medium | Evaluation |
+| CI-003 | Security Champions Program | Awareness | Multipliers in all teams | Higher security awareness | 20 PD | {{ meta-organisation-roles.role_CISO }} | High | In Progress |
 | CI-004 | Immutable infrastructure | DevOps | Infrastructure as Code with immutability | Better compliance, less drift | 80 PD | DevOps | Medium | Planned |
 
 [TODO: Add additional improvement suggestions]
@@ -471,8 +471,8 @@ Priority = (Risk Reduction × 0.4) + (Compliance × 0.2) +
 - **NIST Cybersecurity Framework** - Continuous improvement practices
 
 **Approved by:**  
-{{ meta.ciso.name }}, CISO  
-{{ meta.management.ceo }}, Management  
+{{ meta-organisation-roles.role_CISO }}, CISO  
+{{ meta-handbook.management_ceo }}, Management  
 Date: {{ meta-handbook.modifydate }}
 
 **Next Review:** {{ meta-handbook.next_review }}

@@ -17,7 +17,7 @@
 
 ## 1. Purpose
 
-This document defines roles and responsibilities for the Risk Management Framework (RMF) and security of system {{ meta.nist.system_name }}.
+This document defines roles and responsibilities for the Risk Management Framework (RMF) and security of system {{ meta-handbook.system_name }}.
 
 ## 2. RMF Roles
 

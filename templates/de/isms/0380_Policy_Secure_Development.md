@@ -36,7 +36,7 @@ Diese Policy gilt für:
 - **Anwendungen:** Alle intern entwickelten Anwendungen, APIs, Microservices, Mobile Apps
 - **Entwicklungsphasen:** Requirements, Design, Implementation, Testing, Deployment, Maintenance
 - **Entwicklungsmodelle:** Agile, Waterfall, DevOps, DevSecOps
-- **Standorte:** {{ netbox.site.name }} und alle weiteren Entwicklungsstandorte
+- **Standorte:** [[ netbox.site.name ]] und alle weiteren Entwicklungsstandorte
 
 **Ausnahmen:** Ausnahmen sind nur über den definierten Ausnahmenprozess (`0640_Policy_Ausnahmen_und_Risk_Waivers.md`) zulässig.
 
@@ -92,9 +92,9 @@ Anwendungen werden mit sicheren Konfigurationen deployed. Default-Credentials we
 
 ### Schlüsselrollen
 
-- **Policy Owner:** {{ meta.ciso.name }} (CISO)
+- **Policy Owner:** {{ meta-organisation-roles.role_CISO }} (CISO)
 - **Security Champion:** Entwickler mit Security-Expertise in jedem Team
-- **Application Security Lead:** {{ meta.security.appsec_lead }}
+- **Application Security Lead:** {{ meta-handbook.security_appsec_lead }}
 - **Umsetzungsverantwortliche:** Entwickler, DevOps, Security Team
 - **Kontroll-/Prüfinstanz:** ISMS, Internal Audit
 
@@ -174,7 +174,7 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **CWE Top 25** - Most Dangerous Software Weaknesses
 
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
 Datum: {{ meta-handbook.modifydate }}
 
 **Nächster Review:** {{ meta-handbook.next_review }} (jährlich oder anlassbezogen)

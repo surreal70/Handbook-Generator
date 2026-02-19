@@ -37,18 +37,18 @@ ISO 27001:2022 Reference: Clause 9.3 - Management review
 
 | Name | Rolle | Anwesend |
 |------|-------|----------|
-| {{ meta.management.ceo }} | Geschäftsführung (Vorsitz) | ✓ / ✗ |
-| {{ meta.ciso.name }} | CISO | ✓ / ✗ |
-| {{ meta.cio.name }} | CIO | ✓ / ✗ |
+| {{ meta-handbook.management_ceo }} | Geschäftsführung (Vorsitz) | ✓ / ✗ |
+| {{ meta-organisation-roles.role_CISO }} | CISO | ✓ / ✗ |
+| {{ meta-organisation-roles.role_CIO }} | CIO | ✓ / ✗ |
 | [TODO] | CFO | ✓ / ✗ |
 | [TODO] | Vertreter Fachabteilungen | ✓ / ✗ |
-| {{ meta.audit.manager }} | Internal Audit (beratend) | ✓ / ✗ |
+| {{ meta-handbook.audit_manager }} | Internal Audit (beratend) | ✓ / ✗ |
 
 ### 1.2 Scope
 
 Dieser Management Review umfasst:
 - Gesamtes ISMS im Scope (siehe `0020_ISMS_Geltungsbereich_Scope.md`)
-- Alle Standorte: {{ netbox.site.name }} und weitere
+- Alle Standorte: [[ netbox.site.name ]] und weitere
 - Review-Zeitraum: [TODO]
 
 ## 2. Inputs (Clause 9.3.2)
@@ -247,13 +247,13 @@ Dieser Management Review umfasst:
 **ISMS-Leitlinie:**
 - Änderungen erforderlich: Ja / Nein
 - Beschreibung: [TODO]
-- Verantwortlich: {{ meta.ciso.name }}
+- Verantwortlich: {{ meta-organisation-roles.role_CISO }}
 - Frist: [TODO]
 
 **Sicherheitsziele:**
 - Neue Ziele: [TODO]
 - Anpassung bestehender Ziele: [TODO]
-- Verantwortlich: {{ meta.ciso.name }}
+- Verantwortlich: {{ meta-organisation-roles.role_CISO }}
 - Frist: [TODO]
 
 ### 3.2 Ressourcen und Investitionen
@@ -292,7 +292,7 @@ Dieser Management Review umfasst:
 - [TODO: Neue Standorte, Systeme, Prozesse]
 - Auswirkungen auf Risikoanalyse: [TODO]
 - Auswirkungen auf SoA: [TODO]
-- Verantwortlich: {{ meta.ciso.name }}
+- Verantwortlich: {{ meta-organisation-roles.role_CISO }}
 - Frist: [TODO]
 
 ### 3.6 Strategische Entscheidungen
@@ -367,14 +367,14 @@ Dieser Management Review umfasst:
 
 | Version | Datum | Autor | Beschreibung | Genehmigt durch |
 |---------|-------|-------|--------------|-----------------|
-| 1.0 | {{ meta-handbook.modifydate }} | {{ meta.ciso.name }} | Initiale Version | {{ meta.management.ceo }} |
+| 1.0 | {{ meta-handbook.modifydate }} | {{ meta-organisation-roles.role_CISO }} | Initiale Version | {{ meta-handbook.management_ceo }} |
 
 **Protokolliert durch:**  
-{{ meta.ciso.name }}, CISO  
+{{ meta-organisation-roles.role_CISO }}, CISO  
 Datum: [TODO]
 
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
 Datum: [TODO]
 
 **Nächster Review:** [TODO: Datum] (Jährlich)

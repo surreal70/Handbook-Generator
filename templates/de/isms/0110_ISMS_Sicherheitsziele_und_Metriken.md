@@ -32,11 +32,11 @@ Die **{{ meta-organisation.name }}** definiert folgende strategische Information
 
 | Ziel-ID | Ziel | Beschreibung | KPI/Metrik | Zielwert | Messmethode | Owner | Frequenz | Status |
 |---------|------|--------------|------------|----------|-------------|-------|----------|--------|
-| **Z-001** | Compliance sicherstellen | Einhaltung aller gesetzlichen und vertraglichen Anforderungen | Anzahl Compliance-Verstöße | 0 | Audit-Berichte, Incident Reports | {{ meta.ciso.name }} | Quartalsweise | Aktiv |
-| **Z-002** | Risiken minimieren | Reduzierung hoher und sehr hoher Risiken | Anzahl Risiken mit Score ≥ 13 | < 5 | Risikoregister | {{ meta.ciso.name }} | Quartalsweise | Aktiv |
-| **Z-003** | Verfügbarkeit gewährleisten | Sicherstellung der Verfügbarkeit kritischer Systeme | Uptime kritischer Systeme | ≥ 99,5% | Monitoring-System | {{ meta.cio.name }} | Monatlich | Aktiv |
-| **Z-004** | Incidents reduzieren | Reduzierung der Anzahl Sicherheitsvorfälle | Anzahl Security Incidents | < 10 pro Quartal | Incident Management System | {{ meta.ciso.name }} | Quartalsweise | Aktiv |
-| **Z-005** | Awareness erhöhen | Steigerung des Sicherheitsbewusstseins | Schulungsteilnahme-Quote | 100% | LMS, Schulungsnachweise | {{ meta.ciso.name }} | Jährlich | Aktiv |
+| **Z-001** | Compliance sicherstellen | Einhaltung aller gesetzlichen und vertraglichen Anforderungen | Anzahl Compliance-Verstöße | 0 | Audit-Berichte, Incident Reports | {{ meta-organisation-roles.role_CISO }} | Quartalsweise | Aktiv |
+| **Z-002** | Risiken minimieren | Reduzierung hoher und sehr hoher Risiken | Anzahl Risiken mit Score ≥ 13 | < 5 | Risikoregister | {{ meta-organisation-roles.role_CISO }} | Quartalsweise | Aktiv |
+| **Z-003** | Verfügbarkeit gewährleisten | Sicherstellung der Verfügbarkeit kritischer Systeme | Uptime kritischer Systeme | ≥ 99,5% | Monitoring-System | {{ meta-organisation-roles.role_CIO }} | Monatlich | Aktiv |
+| **Z-004** | Incidents reduzieren | Reduzierung der Anzahl Sicherheitsvorfälle | Anzahl Security Incidents | < 10 pro Quartal | Incident Management System | {{ meta-organisation-roles.role_CISO }} | Quartalsweise | Aktiv |
+| **Z-005** | Awareness erhöhen | Steigerung des Sicherheitsbewusstseins | Schulungsteilnahme-Quote | 100% | LMS, Schulungsnachweise | {{ meta-organisation-roles.role_CISO }} | Jährlich | Aktiv |
 | **Z-006** | Patch-Compliance | Zeitnahe Installation kritischer Patches | Durchschnittliche Zeit zur Patch-Installation (kritisch) | < 7 Tage | Vulnerability Management System | IT-Betrieb | Monatlich | Aktiv |
 
 [TODO: Weitere organisationsspezifische Ziele hinzufügen]
@@ -48,7 +48,7 @@ Die **{{ meta-organisation.name }}** definiert folgende strategische Information
 | **Z-010** | MFA-Rollout abschließen | MFA-Aktivierungsrate | 100% | IT-Betrieb | Monatlich |
 | **Z-011** | Vulnerability Management | Durchschnittliche Zeit zur Behebung hoher Schwachstellen | < 30 Tage | IT-Betrieb | Monatlich |
 | **Z-012** | Backup-Tests | Erfolgsrate Restore-Tests | 100% | IT-Betrieb | Quartalsweise |
-| **Z-013** | Phishing-Resilienz | Phishing-Klickrate bei Simulationen | < 5% | {{ meta.ciso.name }} | Quartalsweise |
+| **Z-013** | Phishing-Resilienz | Phishing-Klickrate bei Simulationen | < 5% | {{ meta-organisation-roles.role_CISO }} | Quartalsweise |
 
 ## 2. Key Performance Indicators (KPIs)
 
@@ -185,8 +185,8 @@ Jedes Ziel ist mit Maßnahmen im Risikobehandlungsplan verknüpft:
 - **ISO/IEC 27001:2022** - Clause 9.1: Monitoring, measurement, analysis and evaluation
 
 **Genehmigt durch:**  
-{{ meta.ciso.name }}, CISO  
-{{ meta.management.ceo }}, Geschäftsführung  
+{{ meta-organisation-roles.role_CISO }}, CISO  
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
 Datum: {{ meta-handbook.modifydate }}
 
 **Nächster Review:** {{ meta-handbook.next_review }}

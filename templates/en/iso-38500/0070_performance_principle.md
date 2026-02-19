@@ -75,9 +75,9 @@ IT is fit for purpose to support the organization by providing the required serv
 
 | Service | Availability | Response Time | Support |
 |---------|--------------|---------------|---------|
-| {{ meta.service_1 }} | {{ meta.service_1_availability }}% | {{ meta.service_1_response }} | {{ meta.service_1_support }} |
-| {{ meta.service_2 }} | {{ meta.service_2_availability }}% | {{ meta.service_2_response }} | {{ meta.service_2_support }} |
-| {{ meta.service_3 }} | {{ meta.service_3_availability }}% | {{ meta.service_3_response }} | {{ meta.service_3_support }} |
+| {{ meta-handbook.service_1 }} | {{ meta-handbook.service_1_availability }}% | {{ meta-handbook.service_1_response }} | {{ meta-handbook.service_1_support }} |
+| {{ meta-handbook.service_2 }} | {{ meta-handbook.service_2_availability }}% | {{ meta-handbook.service_2_response }} | {{ meta-handbook.service_2_support }} |
+| {{ meta-handbook.service_3 }} | {{ meta-handbook.service_3_availability }}% | {{ meta-handbook.service_3_response }} | {{ meta-handbook.service_3_support }} |
 
 ### Performance Improvement
 

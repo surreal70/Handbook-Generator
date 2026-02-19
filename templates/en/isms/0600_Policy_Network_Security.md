@@ -27,7 +27,7 @@ ISO 27001:2022 Annex A Reference: A.8.20, A.8.21, A.8.22, A.8.23
 **Document ID:** 0600  
 **Document Type:** Policy (abstract)  
 **Standard Reference:** ISO/IEC 27001:2022 Annex A.8.20-A.8.23 (incl. Amendment 1:2024)  
-**Owner:** {{ meta.ciso.name }}  
+**Owner:** {{ meta-organisation-roles.role_CISO }}  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
@@ -46,7 +46,7 @@ This policy applies to:
 - **Networks:** All internal and external networks, LAN, WLAN, WAN, VPN
 - **Systems:** Firewalls, routers, switches, load balancers, IDS/IPS
 - **Connections:** All network connections (internal, external, partner, cloud)
-- **Locations:** {{ netbox.site.name }} and all other operational sites
+- **Locations:** [[ netbox.site.name ]] and all other operational sites
 
 **Exceptions:** Exceptions are only permitted through the defined exception process (`0640_Policy_Exceptions_and_Risk_Waivers.md`).
 
@@ -98,10 +98,10 @@ Network activities are monitored and logged. Logs are centrally collected and an
 
 ### Key Roles
 
-- **Policy Owner:** {{ meta.ciso.name }} (CISO)
-- **Network Security Manager:** {{ meta.network.security_manager }}
-- **Network Administrator:** {{ meta.network.admin }}
-- **SOC Manager:** {{ meta.soc.manager }}
+- **Policy Owner:** {{ meta-organisation-roles.role_CISO }} (CISO)
+- **Network Security Manager:** {{ meta-handbook.network_security_manager }}
+- **Network Administrator:** {{ meta-handbook.network_admin }}
+- **SOC Manager:** {{ meta-handbook.soc_manager }}
 - **Implementation Responsible:** IT Operations, Network Team
 - **Control/Audit Function:** ISMS, Internal Audit, SOC
 
@@ -184,7 +184,7 @@ Exceptions to this policy are only permitted in justified exceptional cases:
 - **BSI IT-Grundschutz** - NET.1.1, NET.1.2, NET.3.2
 
 **Approved by:**  
-{{ meta.management.ceo }}, Management  
+{{ meta-handbook.management_ceo }}, Management  
 Date: {{ meta-handbook.modifydate }}
 
 **Next Review:** {{ meta-handbook.next_review }} (annually or as needed)

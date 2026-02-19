@@ -63,7 +63,7 @@ This guideline implements `0640_Policy_Exceptions_and_Risk_Waivers.md` and defin
 
 ### 3.1 Request Submission
 
-**Request via:** {{ meta.itsm.portal }} (ticketing system)
+**Request via:** {{ meta-handbook.itsm_portal }} (ticketing system)
 
 **Mandatory Information:**
 - Affected policy/guideline
@@ -139,7 +139,7 @@ This guideline implements `0640_Policy_Exceptions_and_Risk_Waivers.md` and defin
 - Expiration date
 - Review date
 
-**Storage Location:** {{ meta.compliance.exception_register }}
+**Storage Location:** {{ meta-handbook.compliance_exception_register }}
 
 ## 4. Monitoring and Review
 
@@ -301,6 +301,6 @@ This guideline implements `0640_Policy_Exceptions_and_Risk_Waivers.md` and defin
 - **ISO/IEC 27001:2022 Annex A.5.1** - Policies for information security
 - **NIST SP 800-53** - Security and Privacy Controls (Tailoring)
 
-**Approved by:** {{ meta.ciso.name }}, CISO  
+**Approved by:** {{ meta-organisation-roles.role_CISO }}, CISO  
 **Next Review:** {{ meta-handbook.next_review }}
 

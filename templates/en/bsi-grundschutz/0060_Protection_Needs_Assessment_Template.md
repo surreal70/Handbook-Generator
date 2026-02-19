@@ -30,7 +30,7 @@ The protection needs assessment systematically determines the protection require
 - Risk analysis (Document 0090)
 - Compliance evidence
 
-**Responsible:** {{ meta.ciso.name }} (ISB)
+**Responsible:** {{ meta-organisation-roles.role_CISO }} (ISB)
 
 ## 2. Protection Needs Categories and Criteria
 
@@ -146,7 +146,7 @@ Start with business processes, then derive requirements for applications and sys
 
 | System ID | System/Component | Application | C | I | A | Justification | Overall Protection Need |
 |---|---|---|---|---|---|---|---|
-| S-001 | {{ netbox.device.server_001 }} | A-001 | [TODO] | [TODO] | [TODO] | Inherited from Application A-001 | [TODO] |
+| S-001 | [[ netbox.device.server_001 ]] | A-001 | [TODO] | [TODO] | [TODO] | Inherited from Application A-001 | [TODO] |
 | S-002 | [TODO: System 2] | A-002 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 | S-003 | [TODO: System 3] | A-003 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
@@ -210,7 +210,7 @@ Networks, Rooms
 
 | Object | Expected Protection Need | Actual Protection Need | Justification | Approved By |
 |---|---|---|---|---|
-| [TODO: Object] | [TODO] | [TODO] | [TODO: Justification for deviation] | {{ meta.ciso.name }} |
+| [TODO: Object] | [TODO] | [TODO] | [TODO: Justification for deviation] | {{ meta-organisation-roles.role_CISO }} |
 
 **Important:** Exceptions must be documented and approved.
 
@@ -230,10 +230,10 @@ When a system hosts multiple applications with different protection needs, the *
 The protection needs assessment is validated by:
 
 1. **Review by Process Owners:** Confirmation of business criticality
-2. **Review by IT Management:** {{ meta.cio.name }} - Technical feasibility
+2. **Review by IT Management:** {{ meta-organisation-roles.role_CIO }} - Technical feasibility
 3. **Review by Legal/Compliance:** Legal requirements
 4. **Review by Data Protection:** GDPR compliance
-5. **Approval by ISB:** {{ meta.ciso.name }}
+5. **Approval by ISB:** {{ meta-organisation-roles.role_CISO }}
 
 ### 5.2 Consistency Check
 
@@ -281,16 +281,16 @@ The protection needs assessment is updated when:
 - Security incidents occur
 - At least annually as part of the ISMS review
 
-**Responsible:** {{ meta.ciso.name }} (ISB)  
+**Responsible:** {{ meta-organisation-roles.role_CISO }} (ISB)  
 **Next Review:** {{ meta-handbook.next_review }}
 
 ## 9. Approval
 
 | Role | Name | Date | Approval |
 |---|---|---|---|
-| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
-| IT Management | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
-| Executive Management | {{ meta.ceo.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| ISB | {{ meta-organisation-roles.role_CISO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| IT Management | {{ meta-organisation-roles.role_CIO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| Executive Management | {{ meta-organisation-roles.role_CEO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **References:**
 - BSI Standard 200-2: IT-Grundschutz Methodology (Chapter 6: Protection Needs Assessment)

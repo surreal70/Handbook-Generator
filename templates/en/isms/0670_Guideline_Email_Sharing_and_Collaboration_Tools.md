@@ -28,7 +28,7 @@ This guideline implements `0660_Policy_Information_Transfer_and_Communication.md
 
 ### 2.1 Email System
 
-**Platform:** {{ meta.email.system }} (e.g., Microsoft 365, Google Workspace)
+**Platform:** {{ meta-handbook.email_system }} (e.g., Microsoft 365, Google Workspace)
 
 **Security Features:**
 - SPF, DKIM, DMARC configured
@@ -88,7 +88,7 @@ This guideline implements `0660_Policy_Information_Transfer_and_Communication.md
 
 **Automatic Archiving:**
 - All business emails
-- Retention: {{ meta.retention.email_years }} years
+- Retention: {{ meta-handbook.retention_email_years }} years
 - Immutability (WORM)
 
 **Access:**
@@ -103,12 +103,12 @@ This guideline implements `0660_Policy_Information_Transfer_and_Communication.md
 ### 3.1 Approved Platforms
 
 **Internal:**
-- **File Server:** {{ netbox.device.fileserver }}
-- **SharePoint/OneDrive:** {{ meta.collaboration.sharepoint }}
-- **Teams/Slack:** {{ meta.collaboration.teams }}
+- **File Server:** [[ netbox.device.fileserver ]]
+- **SharePoint/OneDrive:** {{ meta-handbook.collaboration_sharepoint }}
+- **Teams/Slack:** {{ meta-handbook.collaboration_teams }}
 
 **External (with customers/partners):**
-- **Secure File Transfer:** {{ meta.filesharing.secure_platform }}
+- **Secure File Transfer:** {{ meta-handbook.filesharing_secure_platform }}
 - **Only with encryption and password protection**
 
 **Prohibited:**
@@ -159,7 +159,7 @@ This guideline implements `0660_Policy_Information_Transfer_and_Communication.md
 ### 4.2 Video Conferences
 
 **Approved Platforms:**
-- **Internal:** {{ meta.collaboration.video }} (e.g., Teams, Zoom)
+- **Internal:** {{ meta-handbook.collaboration_video }} (e.g., Teams, Zoom)
 - **External:** Only approved platforms
 
 **Security Settings:**
@@ -184,7 +184,7 @@ This guideline implements `0660_Policy_Information_Transfer_and_Communication.md
 - Private messaging apps
 
 **Retention:**
-- Chat history: {{ meta.retention.chat_years }} years
+- Chat history: {{ meta-handbook.retention_chat_years }} years
 - Compliance archiving
 
 ## 5. External Communication
@@ -300,6 +300,6 @@ This guideline implements `0660_Policy_Information_Transfer_and_Communication.md
 - **ISO/IEC 27001:2022 Annex A.5.14** - Information transfer
 - **NIST SP 800-177** - Trustworthy Email
 
-**Approved by:** {{ meta.ciso.name }}, CISO  
+**Approved by:** {{ meta-organisation-roles.role_CISO }}, CISO  
 **Next Review:** {{ meta-handbook.next_review }}
 

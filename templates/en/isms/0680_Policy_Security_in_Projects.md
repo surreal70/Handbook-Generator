@@ -27,7 +27,7 @@ ISO 27001:2022 Annex A Reference: A.5.8, A.8.25, A.8.32
 **Document ID:** 0680  
 **Document Type:** Policy (abstract)  
 **Standard Reference:** ISO/IEC 27001:2022 Annex A.5.8, A.8.25, A.8.32 (incl. Amendment 1:2024)  
-**Owner:** {{ meta.ciso.name }}  
+**Owner:** {{ meta-organisation-roles.role_CISO }}  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
@@ -46,7 +46,7 @@ This policy applies to:
 - **Projects:** All IT projects, infrastructure projects, software development projects
 - **Project Phases:** Initiation, planning, implementation, closure
 - **Project Types:** Internal projects, external projects, partner projects
-- **Locations:** {{ netbox.site.name }} and all other operational sites
+- **Locations:** [[ netbox.site.name ]] and all other operational sites
 
 **Exceptions:** Exceptions are only permitted through the defined exception process (`0640_Policy_Exceptions_and_Risk_Waivers.md`).
 
@@ -109,10 +109,10 @@ Security-relevant project documentation is created:
 
 ### Key Roles
 
-- **Policy Owner:** {{ meta.ciso.name }} (CISO)
-- **Security Architect:** {{ meta.security.architect }}
+- **Policy Owner:** {{ meta-organisation-roles.role_CISO }} (CISO)
+- **Security Architect:** {{ meta-handbook.security_architect }}
 - **Project Manager:** Project responsible persons
-- **IT Operations Manager:** {{ meta.it.operations_manager }}
+- **IT Operations Manager:** {{ meta-handbook.it_operations_manager }}
 - **Business Owner:** Department responsible persons
 - **Control/Audit Function:** ISMS, Internal Audit
 
@@ -194,7 +194,7 @@ Exceptions to this policy are only permitted in justified exceptional cases:
 - **ISO/IEC 27034** - Application Security
 
 **Approved by:**  
-{{ meta.management.ceo }}, Executive Management  
+{{ meta-handbook.management_ceo }}, Executive Management  
 Date: {{ meta-handbook.modifydate }}
 
 **Next Review:** {{ meta-handbook.next_review }} (annually or as needed)

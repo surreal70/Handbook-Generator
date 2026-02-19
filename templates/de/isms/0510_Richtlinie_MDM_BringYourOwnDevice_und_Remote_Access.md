@@ -28,7 +28,7 @@ Diese Richtlinie konkretisiert die `0500_Policy_Mobile_Device_und_Remote_Work.md
 
 ### 2.1 MDM-System
 
-**Plattform:** {{ meta.mdm.system }} (z.B. Microsoft Intune, Jamf, MobileIron)
+**Plattform:** {{ meta-handbook.mdm_system }} (z.B. Microsoft Intune, Jamf, MobileIron)
 
 **Verwaltete Geräte:**
 - Unternehmenseigene Smartphones und Tablets
@@ -125,7 +125,7 @@ Diese Richtlinie konkretisiert die `0500_Policy_Mobile_Device_und_Remote_Work.md
 
 ### 4.1 VPN-Zugriff
 
-**VPN-System:** {{ meta.network.vpn_solution }}
+**VPN-System:** {{ meta-handbook.network_vpn_solution }}
 
 **Anforderungen:**
 - Multi-Faktor-Authentifizierung (MFA)
@@ -202,8 +202,8 @@ Diese Richtlinie konkretisiert die `0500_Policy_Mobile_Device_und_Remote_Work.md
 ### 6.1 Genehmigte Apps
 
 **Unternehmens-Apps:**
-- E-Mail ({{ meta.email.mobile_app }})
-- Collaboration ({{ meta.collaboration.mobile_app }})
+- E-Mail ({{ meta-handbook.email_mobile_app }})
+- Collaboration ({{ meta-handbook.collaboration_mobile_app }})
 - VPN-Client
 - Authenticator-App
 
@@ -224,7 +224,7 @@ Diese Richtlinie konkretisiert die `0500_Policy_Mobile_Device_und_Remote_Work.md
 ### 7.1 Geräteverlust
 
 **Sofortmaßnahmen:**
-1. Meldung an IT-Support ({{ meta.support.phone }})
+1. Meldung an IT-Support ({{ meta-handbook.support_phone }})
 2. Remote Wipe auslösen (innerhalb 1 Stunde)
 3. Passwörter ändern
 4. Incident-Ticket erstellen
@@ -268,6 +268,6 @@ Diese Richtlinie konkretisiert die `0500_Policy_Mobile_Device_und_Remote_Work.md
 - **ISO/IEC 27001:2022 Annex A.8.9** - Configuration management
 - **NIST SP 800-124** - Guidelines for Managing the Security of Mobile Devices
 
-**Genehmigt durch:** {{ meta.ciso.name }}, CISO  
+**Genehmigt durch:** {{ meta-organisation-roles.role_CISO }}, CISO  
 **Nächster Review:** {{ meta-handbook.next_review }}
 

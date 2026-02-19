@@ -61,8 +61,8 @@ Import all measures from document 0080 (Basis Security Check).
 
 | Maßnahme-ID | Quelle | Beschreibung | Priorität | Owner | Aufwand (PT) | Budget | Zieltermin | Abhängigkeiten | Status |
 |---|---|---|---|---|---|---|---|---|---|
-| M-001 | Basis-Check (GAP-001) | [TODO: Kritische Maßnahme 1] | P1 - Kritisch | {{ meta.ciso.name }} | [TODO] | [TODO] | [TODO] | - | Offen |
-| M-002 | Basis-Check (QW-001) | [TODO: Quick Win 1] | P2 - Hoch | {{ meta.cio.name }} | [TODO] | [TODO] | [TODO] | - | Offen |
+| M-001 | Basis-Check (GAP-001) | [TODO: Kritische Maßnahme 1] | P1 - Kritisch | {{ meta-organisation-roles.role_CISO }} | [TODO] | [TODO] | [TODO] | - | Offen |
+| M-002 | Basis-Check (QW-001) | [TODO: Quick Win 1] | P2 - Hoch | {{ meta-organisation-roles.role_CIO }} | [TODO] | [TODO] | [TODO] | - | Offen |
 | M-003 | Basis-Check | [TODO: Maßnahme 3] | P3 - Mittel | [TODO] | [TODO] | [TODO] | [TODO] | M-001 | Offen |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
@@ -75,17 +75,17 @@ Import all measures from document 0090 (Risk Analysis).
 
 | Maßnahme-ID | Quelle | Beschreibung | Priorität | Owner | Aufwand (PT) | Budget | Zieltermin | Abhängigkeiten | Status |
 |---|---|---|---|---|---|---|---|---|---|
-| M-101 | Risikoanalyse (R-001) | [TODO: Risikominderung 1] | P1 - Kritisch | {{ meta.cio.name }} | [TODO] | [TODO] | [TODO] | - | Offen |
-| M-102 | Risikoanalyse (R-002) | [TODO: Risikominderung 2] | P2 - Hoch | {{ meta.cio.name }} | [TODO] | [TODO] | [TODO] | - | Offen |
+| M-101 | Risikoanalyse (R-001) | [TODO: Risikominderung 1] | P1 - Kritisch | {{ meta-organisation-roles.role_CIO }} | [TODO] | [TODO] | [TODO] | - | Offen |
+| M-102 | Risikoanalyse (R-002) | [TODO: Risikominderung 2] | P2 - Hoch | {{ meta-organisation-roles.role_CIO }} | [TODO] | [TODO] | [TODO] | - | Offen |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ### 2.3 Strategische Maßnahmen
 
 | Maßnahme-ID | Beschreibung | Priorität | Owner | Aufwand (PT) | Budget | Zieltermin | Status |
 |---|---|---|---|---|---|---|---|
-| M-201 | SIEM-Implementierung | P1 - Kritisch | {{ meta.cio.name }} | [TODO] | [TODO] | [TODO] | Offen |
-| M-202 | Zero Trust Architecture | P2 - Hoch | {{ meta.cio.name }} | [TODO] | [TODO] | [TODO] | Offen |
-| M-203 | Security Awareness Programm | P2 - Hoch | {{ meta.ciso.name }} | [TODO] | [TODO] | [TODO] | Offen |
+| M-201 | SIEM-Implementierung | P1 - Kritisch | {{ meta-organisation-roles.role_CIO }} | [TODO] | [TODO] | [TODO] | Offen |
+| M-202 | Zero Trust Architecture | P2 - Hoch | {{ meta-organisation-roles.role_CIO }} | [TODO] | [TODO] | [TODO] | Offen |
+| M-203 | Security Awareness Programm | P2 - Hoch | {{ meta-organisation-roles.role_CISO }} | [TODO] | [TODO] | [TODO] | Offen |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## 3. Maßnahmen-Priorisierung
@@ -216,8 +216,8 @@ Import all measures from document 0090 (Risk Analysis).
 
 | Risiko | Wahrscheinlichkeit | Auswirkung | Mitigation | Owner |
 |---|---|---|---|---|
-| Ressourcenmangel | Hoch | Verzögerung | Externe Unterstützung | {{ meta.ciso.name }} |
-| Budget-Kürzung | Mittel | Priorisierung | Fokus auf P1-Maßnahmen | {{ meta.ceo.name }} |
+| Ressourcenmangel | Hoch | Verzögerung | Externe Unterstützung | {{ meta-organisation-roles.role_CISO }} |
+| Budget-Kürzung | Mittel | Priorisierung | Fokus auf P1-Maßnahmen | {{ meta-organisation-roles.role_CEO }} |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## 7. Erfolgsmessung
@@ -255,9 +255,9 @@ Import all measures from document 0090 (Risk Analysis).
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
-| IT-Leitung | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
-| Geschäftsführung | {{ meta.ceo.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| ISB | {{ meta-organisation-roles.role_CISO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| IT-Leitung | {{ meta-organisation-roles.role_CIO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| Geschäftsführung | {{ meta-organisation-roles.role_CEO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **Referenzen:**
 - BSI Standard 200-2: IT-Grundschutz-Methodik

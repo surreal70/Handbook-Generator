@@ -30,7 +30,7 @@ Dieses Dokument enthält bekannte Probleme und Workarounds, häufig gestellte Fr
 
 Alle bekannten Probleme werden im Ticketing-System mit dem Label "Known Issue" erfasst und hier dokumentiert.
 
-**Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}  
+**Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}  
 **Review-Zyklus:** Monatlich
 
 ### KI-001: [TODO: Problem-Titel]
@@ -111,7 +111,7 @@ Benutzer erleben sporadische Netzwerk-Timeouts beim Zugriff auf interne Anwendun
 - **Status:** Geplant
 - **ETA:** Q2 2026
 - **Maßnahme:** Upgrade des Core-Switches auf höhere Bandbreite
-- **Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+- **Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 #### Betroffene Benutzer
 Alle internen Benutzer während Backup-Zeiten
@@ -164,8 +164,8 @@ ANALYZE TABLE products;
 #### F: Wie erreiche ich den IT-Support?
 
 **A:** Der IT-Support ist über folgende Kanäle erreichbar:
-- **E-Mail:** {{ meta-organisation-roles.role_service_desk_lead.email }}
-- **Telefon:** {{ meta-organisation-roles.role_service_desk_lead.phone }}
+- **E-Mail:** {{ meta-organisation-roles.role_Service_Desk_Lead_email }}
+- **Telefon:** {{ meta-organisation-roles.role_Service_Desk_Lead_phone }}
 - **Ticketing-System:** [TODO: URL]
 - **Chat:** [TODO: Chat-Kanal]
 
@@ -184,12 +184,12 @@ ANALYZE TABLE products;
    - Formular ausfüllen und absenden
 
 2. **E-Mail:**
-   - E-Mail an {{ meta-organisation-roles.role_service_desk_lead.email }}
+   - E-Mail an {{ meta-organisation-roles.role_Service_Desk_Lead_email }}
    - Betreff: Kurze Problembeschreibung
    - Inhalt: Detaillierte Beschreibung, Screenshots
 
 3. **Telefon:**
-   - {{ meta-organisation-roles.role_service_desk_lead.phone }} anrufen
+   - {{ meta-organisation-roles.role_Service_Desk_Lead_phone }} anrufen
    - Problem schildern
    - Ticket-Nummer notieren
 
@@ -361,7 +361,7 @@ ANALYZE TABLE products;
 **Bei verdächtigen E-Mails:**
 - **NICHT** auf Links klicken
 - **NICHT** Anhänge öffnen
-- An {{ meta-organisation-roles.role_ciso.email }} weiterleiten
+- An {{ meta-organisation-roles.role_CISO_email }} weiterleiten
 - E-Mail löschen
 
 ### Dateien und Storage
@@ -459,7 +459,7 @@ ANALYZE TABLE products;
 
 2. **Genehmigung:**
    - Manager-Genehmigung erforderlich
-   - Budget-Prüfung durch {{ meta-organisation-roles.role_cfo.name }}
+   - Budget-Prüfung durch {{ meta-organisation-roles.role_CFO }}
 
 3. **Beschaffung:**
    - IT-Team bestellt Hardware
@@ -575,7 +575,7 @@ ANALYZE TABLE products;
 Haben Sie Vorschläge zur Verbesserung dieses Dokuments oder der IT-Services?
 
 **Kontakt:**
-- **E-Mail:** {{ meta-organisation-roles.role_it_operations_manager.email }}
+- **E-Mail:** {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
 - **Feedback-Formular:** [TODO: Formular-URL]
 
 ### Dokument-Updates
@@ -587,7 +587,7 @@ Dieses Dokument wird regelmäßig aktualisiert basierend auf:
 - Prozessverbesserungen
 
 **Review-Zyklus:** Monatlich  
-**Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+**Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 ## Prozesse und Verantwortlichkeiten
 
@@ -629,5 +629,5 @@ Dieses Dokument wird regelmäßig aktualisiert basierend auf:
 
 **Letzte Aktualisierung:** {{ meta-handbook.date }}  
 **Nächste Review:** [TODO: Datum]  
-**Kontakt:** {{ meta-organisation-roles.role_it_operations_manager.email }}
+**Kontakt:** {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
 

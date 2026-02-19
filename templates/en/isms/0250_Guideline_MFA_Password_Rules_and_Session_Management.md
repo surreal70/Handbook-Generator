@@ -26,7 +26,7 @@ Customize based on your organization's risk tolerance and technical capabilities
 **Document Type:** Guideline (detailed)  
 **Related Policy:** 0240_Policy_Authentication_and_Passwords.md  
 **Standard Reference:** ISO/IEC 27001:2022 Annex A.5.17, A.5.18  
-**Owner:** {{ meta.it_operations.manager }}  
+**Owner:** {{ meta-handbook.it_operations_manager }}  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
@@ -148,7 +148,7 @@ This guideline implements the `0240_Policy_Authentication_and_Passwords.md` and 
 ### 3.3 Password Reset
 
 **Self-Service Password Reset (SSPR):**
-- Users can reset password themselves via {{ meta.iam.sspr_url }}
+- Users can reset password themselves via {{ meta-handbook.iam_sspr_url }}
 - Verification via:
   - MFA method (authenticator app, SMS)
   - Alternative email address
@@ -170,7 +170,7 @@ This guideline implements the `0240_Policy_Authentication_and_Passwords.md` and 
 
 **Recommendation:**
 - Use of password manager for all users
-- Enterprise solution: {{ meta.security.password_manager }} (e.g., 1Password, Bitwarden)
+- Enterprise solution: {{ meta-handbook.security_password_manager }} (e.g., 1Password, Bitwarden)
 - Central management of shared credentials
 
 **Features:**
@@ -242,7 +242,7 @@ This guideline implements the `0240_Policy_Authentication_and_Passwords.md` and 
 ### 5.1 Single Sign-On (SSO)
 
 **Implementation:**
-- **Identity Provider:** {{ meta.iam.idp }} (e.g., Azure AD, Okta)
+- **Identity Provider:** {{ meta-handbook.iam_idp }} (e.g., Azure AD, Okta)
 - **Protocols:** SAML 2.0, OAuth 2.0, OpenID Connect
 - **Applications:** All cloud SaaS applications via SSO
 
@@ -267,7 +267,7 @@ This guideline implements the `0240_Policy_Authentication_and_Passwords.md` and 
 - Code signing and email encryption
 
 **PKI Infrastructure:**
-- Internal Certificate Authority (CA): {{ meta.pki.ca }}
+- Internal Certificate Authority (CA): {{ meta-handbook.pki_ca }}
 - Certificate lifecycle management
 - Automatic renewal before expiration
 - Revocation checks (CRL, OCSP)
@@ -364,8 +364,8 @@ This guideline implements the `0240_Policy_Authentication_and_Passwords.md` and 
 - Privileged access
 
 **Retention:**
-- Authentication logs: {{ meta.retention.log_years }} years
-- Audit trails: {{ meta.retention.audit_years }} years
+- Authentication logs: {{ meta-handbook.retention_log_years }} years
+- Audit trails: {{ meta-handbook.retention_audit_years }} years
 
 ## 9. References
 
@@ -381,7 +381,7 @@ This guideline implements the `0240_Policy_Authentication_and_Passwords.md` and 
 - **OWASP Authentication Cheat Sheet**
 
 **Approved by:**  
-{{ meta.ciso.name }}, CISO  
+{{ meta-organisation-roles.role_CISO }}, CISO  
 Date: {{ meta-handbook.modifydate }}
 
 **Next Review:** {{ meta-handbook.next_review }}

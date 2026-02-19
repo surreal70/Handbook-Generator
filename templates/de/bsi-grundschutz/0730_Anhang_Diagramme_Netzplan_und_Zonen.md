@@ -29,7 +29,7 @@ Die Dokumentation der Netzarchitektur und des Zonenmodells von **{{ meta-organis
 - Netzwerksicherheit (Dokument 0460/0470)
 - Incident Response (Dokument 0320/0330)
 
-**Verantwortlich:** {{ meta.cio.name }} (IT-Leitung)
+**Verantwortlich:** {{ meta-organisation-roles.role_CIO }} (IT-Leitung)
 
 ## 2. High-Level Netzplan
 
@@ -47,14 +47,14 @@ Die Dokumentation der Netzarchitektur und des Zonenmodells von **{{ meta-organis
 
 | Zone-ID | Zonenname | Beschreibung | Trust Level | Zugriffskontrolle | Verantwortlich | Notiz |
 |---|---|---|---|---|---|---|
-| Z-001 | Internet | Öffentliches Internet | Untrusted | Firewall (Deny All) | {{ meta.cio.name }} | [TODO] |
-| Z-002 | DMZ | Demilitarisierte Zone (Webserver, Mail-Gateway) | Low Trust | Firewall (Whitelist) | {{ meta.cio.name }} | [TODO] |
-| Z-003 | Internal LAN | Internes Unternehmensnetzwerk | Trusted | Firewall (Default Allow) | {{ meta.cio.name }} | {{ netbox.vlan.name }} |
-| Z-004 | Server VLAN | Produktionsserver | High Trust | Firewall (Whitelist) | {{ meta.cio.name }} | {{ netbox.vlan.name }} |
-| Z-005 | Database VLAN | Datenbank-Server | High Trust | Firewall (Strict Whitelist) | {{ meta.cio.name }} | {{ netbox.vlan.name }} |
-| Z-006 | Management VLAN | Management-Netzwerk (Monitoring, Backup, Admin) | High Trust | Firewall (Strict Whitelist) | {{ meta.cio.name }} | {{ netbox.vlan.name }} |
-| Z-007 | Guest WiFi | Gast-WLAN | Untrusted | Captive Portal, Firewall | {{ meta.cio.name }} | [TODO] |
-| Z-008 | VPN | Remote-Zugriff (VPN) | Trusted (nach Authentisierung) | VPN-Gateway, MFA | {{ meta.cio.name }} | [TODO] |
+| Z-001 | Internet | Öffentliches Internet | Untrusted | Firewall (Deny All) | {{ meta-organisation-roles.role_CIO }} | [TODO] |
+| Z-002 | DMZ | Demilitarisierte Zone (Webserver, Mail-Gateway) | Low Trust | Firewall (Whitelist) | {{ meta-organisation-roles.role_CIO }} | [TODO] |
+| Z-003 | Internal LAN | Internes Unternehmensnetzwerk | Trusted | Firewall (Default Allow) | {{ meta-organisation-roles.role_CIO }} | [[ netbox.vlan.name ]] |
+| Z-004 | Server VLAN | Produktionsserver | High Trust | Firewall (Whitelist) | {{ meta-organisation-roles.role_CIO }} | [[ netbox.vlan.name ]] |
+| Z-005 | Database VLAN | Datenbank-Server | High Trust | Firewall (Strict Whitelist) | {{ meta-organisation-roles.role_CIO }} | [[ netbox.vlan.name ]] |
+| Z-006 | Management VLAN | Management-Netzwerk (Monitoring, Backup, Admin) | High Trust | Firewall (Strict Whitelist) | {{ meta-organisation-roles.role_CIO }} | [[ netbox.vlan.name ]] |
+| Z-007 | Guest WiFi | Gast-WLAN | Untrusted | Captive Portal, Firewall | {{ meta-organisation-roles.role_CIO }} | [TODO] |
+| Z-008 | VPN | Remote-Zugriff (VPN) | Trusted (nach Authentisierung) | VPN-Gateway, MFA | {{ meta-organisation-roles.role_CIO }} | [TODO] |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## 4. Trust Boundaries und Firewall-Regeln
@@ -74,12 +74,12 @@ Die Dokumentation der Netzarchitektur und des Zonenmodells von **{{ meta-organis
 
 | Regel-ID | Quelle | Ziel | Service/Port | Aktion | Begründung | Owner |
 |---|---|---|---|---|---|---|
-| FW-001 | Internet | DMZ (Webserver) | HTTPS (443) | Allow | Öffentlicher Webzugriff | {{ meta.cio.name }} |
-| FW-002 | DMZ (Webserver) | Server VLAN (App-Server) | HTTPS (8443) | Allow | Backend-Kommunikation | {{ meta.cio.name }} |
-| FW-003 | Server VLAN (App-Server) | Database VLAN (DB-Server) | PostgreSQL (5432) | Allow | Datenbank-Zugriff | {{ meta.cio.name }} |
-| FW-004 | Management VLAN | Alle Zonen | SSH (22), RDP (3389) | Allow | Admin-Zugriff | {{ meta.cio.name }} |
-| FW-005 | Guest WiFi | Internet | HTTP/HTTPS (80/443) | Allow | Internet-Zugriff für Gäste | {{ meta.cio.name }} |
-| FW-006 | Guest WiFi | Internal LAN | Alle | Deny | Isolation von internem Netzwerk | {{ meta.cio.name }} |
+| FW-001 | Internet | DMZ (Webserver) | HTTPS (443) | Allow | Öffentlicher Webzugriff | {{ meta-organisation-roles.role_CIO }} |
+| FW-002 | DMZ (Webserver) | Server VLAN (App-Server) | HTTPS (8443) | Allow | Backend-Kommunikation | {{ meta-organisation-roles.role_CIO }} |
+| FW-003 | Server VLAN (App-Server) | Database VLAN (DB-Server) | PostgreSQL (5432) | Allow | Datenbank-Zugriff | {{ meta-organisation-roles.role_CIO }} |
+| FW-004 | Management VLAN | Alle Zonen | SSH (22), RDP (3389) | Allow | Admin-Zugriff | {{ meta-organisation-roles.role_CIO }} |
+| FW-005 | Guest WiFi | Internet | HTTP/HTTPS (80/443) | Allow | Internet-Zugriff für Gäste | {{ meta-organisation-roles.role_CIO }} |
+| FW-006 | Guest WiFi | Internal LAN | Alle | Deny | Isolation von internem Netzwerk | {{ meta-organisation-roles.role_CIO }} |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 **Referenz:** Dokument 0460/0470 (Netzwerksicherheit)
@@ -88,18 +88,18 @@ Die Dokumentation der Netzarchitektur und des Zonenmodells von **{{ meta-organis
 
 | Gerät-ID | Typ | Modell | Standort | IP-Adresse | Management-IP | Rolle | Owner | Notiz |
 |---|---|---|---|---|---|---|---|---|
-| {{ netbox.device.id }} | {{ netbox.device.type }} | {{ netbox.device.model }} | {{ netbox.site.name }} | {{ netbox.ipaddress.address }} | [TODO] | {{ netbox.device.role }} | {{ meta.cio.name }} | [TODO] |
-| [TODO] | Firewall | [TODO] | [TODO] | [TODO] | [TODO] | Perimeter-Firewall | {{ meta.cio.name }} | [TODO] |
-| [TODO] | Switch | [TODO] | [TODO] | [TODO] | [TODO] | Core-Switch | {{ meta.cio.name }} | [TODO] |
-| [TODO] | Router | [TODO] | [TODO] | [TODO] | [TODO] | Internet-Router | {{ meta.cio.name }} | [TODO] |
+| [[ netbox.device.id ]] | [[ netbox.device.type ]] | [[ netbox.device.model ]] | [[ netbox.site.name ]] | [[ netbox.ipaddress.address ]] | [TODO] | [[ netbox.device.role ]] | {{ meta-organisation-roles.role_CIO }} | [TODO] |
+| [TODO] | Firewall | [TODO] | [TODO] | [TODO] | [TODO] | Perimeter-Firewall | {{ meta-organisation-roles.role_CIO }} | [TODO] |
+| [TODO] | Switch | [TODO] | [TODO] | [TODO] | [TODO] | Core-Switch | {{ meta-organisation-roles.role_CIO }} | [TODO] |
+| [TODO] | Router | [TODO] | [TODO] | [TODO] | [TODO] | Internet-Router | {{ meta-organisation-roles.role_CIO }} | [TODO] |
 
-**NetBox-Integration:** {{ netbox.url }}
+**NetBox-Integration:** [[ netbox.url ]]
 
 ## 6. VLANs
 
 | VLAN-ID | VLAN-Name | Netzwerk (CIDR) | Gateway | Beschreibung | Zone | Notiz |
 |---|---|---|---|---|---|---|
-| {{ netbox.vlan.id }} | {{ netbox.vlan.name }} | [TODO: z.B. 10.0.10.0/24] | [TODO] | [TODO] | [TODO] | [TODO] |
+| [[ netbox.vlan.id ]] | [[ netbox.vlan.name ]] | [TODO: z.B. 10.0.10.0/24] | [TODO] | [TODO] | [TODO] | [TODO] |
 | [TODO] | Management | [TODO] | [TODO] | Management-Netzwerk | Z-006 | [TODO] |
 | [TODO] | Servers | [TODO] | [TODO] | Produktionsserver | Z-004 | [TODO] |
 | [TODO] | Database | [TODO] | [TODO] | Datenbank-Server | Z-005 | [TODO] |
@@ -166,7 +166,7 @@ Die Dokumentation der Netzarchitektur und des Zonenmodells von **{{ meta-organis
 
 | Standort | Verbindungstyp | Bandbreite | Provider | Backup-Verbindung | Verschlüsselung | Notiz |
 |---|---|---|---|---|---|---|
-| {{ netbox.site.name }} | [TODO: z.B. MPLS, VPN] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
+| [[ netbox.site.name ]] | [TODO: z.B. MPLS, VPN] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] | [TODO] |
 
 ## 11. Cloud-Integration
@@ -210,8 +210,8 @@ Die Dokumentation der Netzarchitektur und des Zonenmodells von **{{ meta-organis
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| IT-Leitung | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
-| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| IT-Leitung | {{ meta-organisation-roles.role_CIO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| ISB | {{ meta-organisation-roles.role_CISO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **Referenzen:**
 - BSI IT-Grundschutz-Kompendium: NET.1.1 Netzarchitektur und -design

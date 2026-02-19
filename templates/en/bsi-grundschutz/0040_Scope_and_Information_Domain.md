@@ -57,8 +57,8 @@ This document defines the scope of the Information Security Management System (I
 
 | Service | Description | Users | Service Owner | In Scope |
 |---|---|---|---|---|
-| [TODO: Service 1] | [TODO] | [TODO] | {{ meta.cio.name }} | ✓ |
-| [TODO: Service 2] | [TODO] | [TODO] | {{ meta.cio.name }} | ✓ |
+| [TODO: Service 1] | [TODO] | [TODO] | {{ meta-organisation-roles.role_CIO }} | ✓ |
+| [TODO: Service 2] | [TODO] | [TODO] | {{ meta-organisation-roles.role_CIO }} | ✓ |
 
 ### 2.3 IT Infrastructure
 
@@ -68,9 +68,9 @@ This document defines the scope of the Information Security Management System (I
 
 | Category | Systems | Quantity | In Scope |
 |---|---|---|---|
-| Servers | {{ netbox.device.servers }} | [TODO] | ✓ |
-| Network | {{ netbox.device.network }} | [TODO] | ✓ |
-| Storage | {{ netbox.device.storage }} | [TODO] | ✓ |
+| Servers | [[ netbox.device.servers ]] | [TODO] | ✓ |
+| Network | [[ netbox.device.network ]] | [TODO] | ✓ |
+| Storage | [[ netbox.device.storage ]] | [TODO] | ✓ |
 | Clients | Workstations, Laptops | [TODO] | ✓ |
 | Mobile Devices | Smartphones, Tablets | [TODO] | ✓ |
 
@@ -217,7 +217,7 @@ Scope changes require:
 4. **Implementation:** Update of all affected documents
 5. **Communication:** Information to all stakeholders
 
-**Responsible:** {{ meta.ciso.name }} (ISO)
+**Responsible:** {{ meta-organisation-roles.role_CISO }} (ISO)
 
 ### 6.2 Scope Review
 
@@ -242,8 +242,8 @@ The following documents and evidence are maintained for the scope:
 
 | Role | Name | Date | Approval |
 |---|---|---|---|
-| Executive Management | {{ meta.ceo.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
-| ISO | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| Executive Management | {{ meta-organisation-roles.role_CEO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| ISO | {{ meta-organisation-roles.role_CISO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **References:**
 - BSI Standard 200-1: Management Systems for Information Security (ISMS)

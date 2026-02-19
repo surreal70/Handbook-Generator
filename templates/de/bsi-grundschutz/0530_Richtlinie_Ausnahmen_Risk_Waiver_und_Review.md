@@ -26,7 +26,7 @@ Reference: BSI IT-Grundschutz-Kompendium, BSI Standards 200-1/200-2/200-3
 
 Diese Richtlinie konkretisiert die **Policy 0520: Policy: Ausnahmenprozess und Risikoakzeptanz** und definiert spezifische Anforderungen für Ausnahmen-Management.
 
-**Verantwortlich:** {{ meta.cio.name }} (IT-Leitung)
+**Verantwortlich:** {{ meta-organisation-roles.role_CIO }} (IT-Leitung)
 
 [TODO: Spezifische Zielsetzung ergänzen]
 
@@ -81,7 +81,7 @@ Define mandatory requirements that MUST be implemented.
 - [TODO: Tool 1]
 - [TODO: Tool 2]
 
-**Verantwortlich:** {{ meta.cio.name }}
+**Verantwortlich:** {{ meta-organisation-roles.role_CIO }}
 
 ## 6. Nachweise (Evidence)
 
@@ -95,7 +95,7 @@ Define mandatory requirements that MUST be implemented.
 
 Ausnahmen von dieser Richtlinie sind nur über den **Ausnahmenprozess (Dokument 0520)** möglich.
 
-**Ausnahmeantrag an:** {{ meta.ciso.name }} (ISB)
+**Ausnahmeantrag an:** {{ meta-organisation-roles.role_CISO }} (ISB)
 
 ## 8. Schulung und Awareness
 
@@ -103,21 +103,21 @@ Ausnahmen von dieser Richtlinie sind nur über den **Ausnahmenprozess (Dokument 
 
 **Zielgruppe:** [TODO]  
 **Frequenz:** [TODO]  
-**Verantwortlich:** {{ meta.ciso.name }}
+**Verantwortlich:** {{ meta-organisation-roles.role_CISO }}
 
 ## 9. Review und Aktualisierung
 
 Diese Richtlinie wird regelmäßig überprüft:
 - **Frequenz:** Jährlich oder bei wesentlichen Änderungen
-- **Verantwortlich:** {{ meta.cio.name }}
+- **Verantwortlich:** {{ meta-organisation-roles.role_CIO }}
 - **Nächster Review:** {{ meta-handbook.next_review }}
 
 ## 10. Freigabe
 
 | Rolle | Name | Datum | Freigabe |
 |---|---|---|---|
-| IT-Leitung | {{ meta.cio.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
-| ISB | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| IT-Leitung | {{ meta-organisation-roles.role_CIO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| ISB | {{ meta-organisation-roles.role_CISO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **Referenzen:**
 - BSI IT-Grundschutz-Kompendium

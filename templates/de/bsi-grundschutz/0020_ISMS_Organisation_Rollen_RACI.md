@@ -26,7 +26,7 @@ Reference: BSI Standard 200-1 (ISMS Organization Requirements)
 
 ### 1.1 ISMS-Owner/Sponsor
 
-**Verantwortlich:** {{ meta.ceo.name }} ({{ meta.ceo.email }})
+**Verantwortlich:** {{ meta-organisation-roles.role_CEO }} ({{ meta-organisation-roles.role_CEO_email }})
 
 Der ISMS-Owner trägt die Gesamtverantwortung für das Informationssicherheits-Managementsystem und stellt sicher, dass:
 - Ausreichende Ressourcen bereitgestellt werden
@@ -36,7 +36,7 @@ Der ISMS-Owner trägt die Gesamtverantwortung für das Informationssicherheits-M
 
 ### 1.2 Informationssicherheitsbeauftragter (ISB)
 
-**Verantwortlich:** {{ meta.ciso.name }} ({{ meta.ciso.email }})
+**Verantwortlich:** {{ meta-organisation-roles.role_CISO }} ({{ meta-organisation-roles.role_CISO_email }})
 
 Der ISB ist die zentrale Koordinationsstelle für alle Informationssicherheitsaktivitäten:
 - Koordination und Steuerung des ISMS
@@ -53,8 +53,8 @@ Das ISMS-Team unterstützt den ISB bei der Umsetzung des ISMS:
 
 | Rolle | Name | Verantwortungsbereich |
 |---|---|---|
-| ISB (Leitung) | {{ meta.ciso.name }} | Gesamtkoordination ISMS |
-| IT-Leitung | {{ meta.cio.name }} | Technische Sicherheitsmaßnahmen |
+| ISB (Leitung) | {{ meta-organisation-roles.role_CISO }} | Gesamtkoordination ISMS |
+| IT-Leitung | {{ meta-organisation-roles.role_CIO }} | Technische Sicherheitsmaßnahmen |
 | Datenschutzbeauftragter | [TODO] | Datenschutz-Schnittstelle |
 | BCM-Verantwortlicher | [TODO] | Business Continuity |
 | Risk Manager | [TODO] | Risikomanagement |
@@ -67,7 +67,7 @@ Das ISMS-Team unterstützt den ISB bei der Umsetzung des ISMS:
 
 #### 1.4.1 IT Service Management (ITSM)
 
-**Ansprechpartner:** {{ meta.cio.name }}
+**Ansprechpartner:** {{ meta-organisation-roles.role_CIO }}
 
 Schnittstellen:
 - Change Management: Sicherheitsbewertung von Changes
@@ -167,7 +167,7 @@ Schnittstellen:
 - Backup und Recovery
 - Incident Response (technisch)
 
-**Verantwortlich:** {{ meta.cio.name }} (IT-Leitung)
+**Verantwortlich:** {{ meta-organisation-roles.role_CIO }} (IT-Leitung)
 
 ### 2.5 Alle Mitarbeitenden
 

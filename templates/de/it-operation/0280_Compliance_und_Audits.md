@@ -82,7 +82,7 @@ Dieses Dokument beschreibt die Compliance- und Audit-Prozesse für {{ meta-organ
 - **Überwachungs-Audit:** Jährlich
 - **Internes Audit:** Quartalsweise
 
-**Verantwortlich:** {{ meta-organisation-roles.role_ciso.name }}
+**Verantwortlich:** {{ meta-organisation-roles.role_CISO }}
 
 ### ISO/IEC 20000-1:2018 - IT-Service-Management
 
@@ -101,7 +101,7 @@ Dieses Dokument beschreibt die Compliance- und Audit-Prozesse für {{ meta-organ
 
 **Alignment:** ITIL v4 Framework
 
-**Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+**Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 ### DSGVO (GDPR) - Datenschutz-Grundverordnung
 
@@ -140,7 +140,7 @@ Dieses Dokument beschreibt die Compliance- und Audit-Prozesse für {{ meta-organ
 
 **Bausteine:** IT-Grundschutz-Kompendium
 
-**Verantwortlich:** {{ meta-organisation-roles.role_ciso.name }}
+**Verantwortlich:** {{ meta-organisation-roles.role_CISO }}
 
 ### PCI-DSS (Payment Card Industry Data Security Standard)
 
@@ -182,7 +182,7 @@ Dieses Dokument beschreibt die Compliance- und Audit-Prozesse für {{ meta-organ
 - IT-General-Controls (ITGC)
 - Application-Controls
 
-**Verantwortlich:** {{ meta-organisation-roles.role_cfo.name }}
+**Verantwortlich:** {{ meta-organisation-roles.role_CFO }}
 
 ### COBIT 2019
 
@@ -1063,7 +1063,7 @@ Frist: 30 Tage
 - Security-Audits
 - Risiko-Management
 
-**Person:** {{ meta-organisation-roles.role_ciso.name }}
+**Person:** {{ meta-organisation-roles.role_CISO }}
 
 ### IT Operations Manager
 
@@ -1073,7 +1073,7 @@ Frist: 30 Tage
 - Prozess-Compliance
 - Tool-Implementation
 
-**Person:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+**Person:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 ### Fachbereichs-Leiter
 

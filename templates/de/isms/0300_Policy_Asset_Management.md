@@ -37,7 +37,7 @@ Diese Policy gilt für:
 - **Asset-Typen:** Hardware, Software, Daten, Informationen, Dienste, Personen, immaterielle Werte
 - **Systeme:** Alle IT-Systeme, Netzwerkkomponenten, Endgeräte, Server, Cloud-Ressourcen
 - **Lebenszyklus:** Beschaffung, Inbetriebnahme, Betrieb, Wartung, Außerbetriebnahme, Entsorgung
-- **Standorte:** {{ netbox.site.name }} und alle weiteren Betriebsstandorte
+- **Standorte:** [[ netbox.site.name ]] und alle weiteren Betriebsstandorte
 
 **Ausnahmen:** Ausnahmen sind nur über den definierten Ausnahmenprozess (`0640_Policy_Ausnahmen_und_Risk_Waivers.md`) zulässig.
 
@@ -105,9 +105,9 @@ Assets werden am Ende ihres Lebenszyklus sicher entsorgt:
 
 ### Schlüsselrollen
 
-- **Policy Owner:** {{ meta.ciso.name }} (CISO)
+- **Policy Owner:** {{ meta-organisation-roles.role_CISO }} (CISO)
 - **Asset Owner:** Fachbereichsleiter, Systemverantwortliche
-- **Asset Manager:** {{ meta.it.asset_manager }}
+- **Asset Manager:** {{ meta-handbook.it_asset_manager }}
 - **Umsetzungsverantwortliche:** IT-Betrieb, Procurement, Facility Management
 - **Kontroll-/Prüfinstanz:** ISMS, Internal Audit
 
@@ -184,7 +184,7 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **ISO/IEC 19770** - IT Asset Management
 
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
 Datum: {{ meta-handbook.modifydate }}
 
 **Nächster Review:** {{ meta-handbook.next_review }} (jährlich oder anlassbezogen)

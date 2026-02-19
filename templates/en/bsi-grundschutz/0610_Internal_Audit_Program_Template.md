@@ -39,10 +39,10 @@ The internal audit program of **{{ meta-organisation.name }}** ensures the effec
 
 | Period | Audit Topic | Criteria | Auditor | Auditee | Status | Result | Actions |
 |---|---|---|---|---|---|---|---|
-| Q1 [TODO] | Basic Security Check Sample | Policies, Guidelines, Evidence | [TODO] | {{ meta.cio.name }} | Planned | - | - |
-| Q2 [TODO] | Risk Management Process | Document 0090, Risk Register | [TODO] | {{ meta.ciso.name }} | Planned | - | - |
-| Q3 [TODO] | Incident Management | Document 0320/0330, Incident Logs | [TODO] | {{ meta.cio.name }} | Planned | - | - |
-| Q4 [TODO] | Document Control | Document 0030, Document Register | [TODO] | {{ meta.ciso.name }} | Planned | - | - |
+| Q1 [TODO] | Basic Security Check Sample | Policies, Guidelines, Evidence | [TODO] | {{ meta-organisation-roles.role_CIO }} | Planned | - | - |
+| Q2 [TODO] | Risk Management Process | Document 0090, Risk Register | [TODO] | {{ meta-organisation-roles.role_CISO }} | Planned | - | - |
+| Q3 [TODO] | Incident Management | Document 0320/0330, Incident Logs | [TODO] | {{ meta-organisation-roles.role_CIO }} | Planned | - | - |
+| Q4 [TODO] | Document Control | Document 0030, Document Register | [TODO] | {{ meta-organisation-roles.role_CISO }} | Planned | - | - |
 
 ## 4. Audit Checkpoints
 
@@ -86,7 +86,7 @@ The internal audit program of **{{ meta-organisation.name }}** ensures the effec
 | Role | Name | Date | Approval |
 |---|---|---|---|
 | Internal Audit | [TODO] | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
-| CISO | {{ meta.ciso.name }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
+| CISO | {{ meta-organisation-roles.role_CISO }} | {{ meta-handbook.modifydate }} | {{ meta-handbook.status }} |
 
 **References:**
 - BSI Standard 200-1: ISMS

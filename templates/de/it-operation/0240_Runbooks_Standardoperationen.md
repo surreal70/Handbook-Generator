@@ -80,7 +80,7 @@ Jedes Runbook folgt dieser standardisierten Struktur:
 
 **Runbook-ID:** RB-001  
 **Version:** 1.0  
-**Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+**Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 #### Zweck
 Kontrollierter Neustart eines Servers zur Behebung von Problemen oder nach Updates.
@@ -160,7 +160,7 @@ Kontrollierter Neustart eines Servers zur Behebung von Problemen oder nach Updat
 
 **Runbook-ID:** RB-002  
 **Version:** 1.0  
-**Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+**Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 #### Zweck
 Neustart eines einzelnen Services ohne System-Neustart.
@@ -229,7 +229,7 @@ Neustart eines einzelnen Services ohne System-Neustart.
 
 **Runbook-ID:** RB-003  
 **Version:** 1.0  
-**Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+**Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 #### Zweck
 Freigabe von Speicherplatz bei kritischer Disk-Auslastung.
@@ -436,7 +436,7 @@ Wiederherstellung einer Datenbank aus Backup.
 
 **Runbook-ID:** RB-020  
 **Version:** 1.0  
-**Verantwortlich:** {{ meta-organisation-roles.role_ciso.name }}
+**Verantwortlich:** {{ meta-organisation-roles.role_CISO }}
 
 #### Zweck
 Hinzufügen einer neuen Firewall-Regel.
@@ -506,7 +506,7 @@ Hinzufügen einer neuen Firewall-Regel.
 
 **Runbook-ID:** RB-030  
 **Version:** 1.0  
-**Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+**Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 #### Zweck
 Erstellung eines neuen Benutzer-Accounts.
@@ -576,7 +576,7 @@ Erstellung eines neuen Benutzer-Accounts.
 
 **Runbook-ID:** RB-031  
 **Version:** 1.0  
-**Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+**Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 #### Zweck
 Deaktivierung eines Benutzer-Accounts (z.B. bei Austritt).
@@ -642,7 +642,7 @@ Deaktivierung eines Benutzer-Accounts (z.B. bei Austritt).
 
 **Runbook-ID:** RB-040  
 **Version:** 1.0  
-**Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+**Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 #### Zweck
 Systematische Untersuchung eines Monitoring-Alerts.
@@ -711,7 +711,7 @@ Systematische Untersuchung eines Monitoring-Alerts.
 
 **Runbook-ID:** RB-050  
 **Version:** 1.0  
-**Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+**Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 #### Zweck
 Regelmäßige Überprüfung der Backup-Integrität.
@@ -901,5 +901,5 @@ find / -type f -size +100M
 
 **Letzte Aktualisierung:** {{ meta-handbook.date }}  
 **Nächste Review:** [TODO: Datum]  
-**Kontakt:** {{ meta-organisation-roles.role_it_operations_manager.email }}
+**Kontakt:** {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
 

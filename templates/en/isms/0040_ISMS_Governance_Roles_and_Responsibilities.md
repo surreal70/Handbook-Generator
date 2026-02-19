@@ -27,7 +27,7 @@ ISO 27001:2022 Reference: Clause 5.3 - Organizational roles, responsibilities an
 **Document ID:** 0040  
 **Document Type:** ISMS Foundation Document  
 **Standard Reference:** ISO/IEC 27001:2022 Clause 5.3  
-**Owner:** {{ meta.ciso.name }}  
+**Owner:** {{ meta-organisation-roles.role_CISO }}  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
@@ -43,14 +43,14 @@ The ISMS governance of **{{ meta-organisation.name }}** is integrated into the o
 ```
 ┌─────────────────────────────────────────────────────────┐
 │              Management / Top Management                 │
-│                 ({{ meta.management.ceo }})              │
+│                 ({{ meta-handbook.management_ceo }})              │
 └────────────────────┬────────────────────────────────────┘
                      │
          ┌───────────┴───────────┐
          │                       │
 ┌────────▼────────┐    ┌────────▼────────┐
 │  CIO             │    │  CISO            │
-│  {{ meta.cio.name }}  │    │  {{ meta.ciso.name }}  │
+│  {{ meta-organisation-roles.role_CIO }}  │    │  {{ meta-organisation-roles.role_CISO }}  │
 └─────────────────┘    └─────────────────┘
          │                       │
          │              ┌────────┴────────┐
@@ -75,7 +75,7 @@ The ISMS governance of **{{ meta-organisation.name }}** is integrated into the o
 ### 1.2 Key Committees
 
 **Information Security Committee (Security Steering Committee):**
-- **Chair:** {{ meta.ciso.name }} (CISO)
+- **Chair:** {{ meta-organisation-roles.role_CISO }} (CISO)
 - **Members:** CIO, business unit representatives, IT operations, data protection officer
 - **Frequency:** Quarterly or as needed
 - **Responsibilities:**
@@ -90,27 +90,27 @@ The ISMS governance of **{{ meta-organisation.name }}** is integrated into the o
 **IT Service Management (ITSM):**
 - Integration of security into ITIL processes
 - Incident management, change management, problem management
-- Contact: {{ meta.it.service_manager }}
+- Contact: {{ meta-handbook.it_service_manager }}
 
 **Data Protection (DPMS):**
 - Interface to GDPR compliance
 - Joint risk analysis and data protection impact assessment
-- Contact: {{ meta.privacy.dpo }}
+- Contact: {{ meta-handbook.privacy_dpo }}
 
 **Risk Management:**
 - Integration into Enterprise Risk Management (ERM)
 - Shared risk register
-- Contact: {{ meta.risk.manager }}
+- Contact: {{ meta-handbook.risk_manager }}
 
 **Business Continuity Management (BCM):**
 - Interface to BCM handbook
 - Joint BIA and emergency planning
-- Contact: {{ meta.bcm.manager }}
+- Contact: {{ meta-handbook.bcm_manager }}
 
 **Internal Audit:**
 - Independent review of the ISMS
 - Audit planning and execution
-- Contact: {{ meta.audit.manager }}
+- Contact: {{ meta-handbook.audit_manager }}
 
 <!-- 
 Customize the governance structure based on your organization's specific 
@@ -121,7 +121,7 @@ management structure and reporting lines.
 
 ### 2.1 Management / Top Management
 
-**Role:** {{ meta.management.ceo }}
+**Role:** {{ meta-handbook.management_ceo }}
 
 **Responsibilities:**
 - Overall responsibility for information security
@@ -137,7 +137,7 @@ management structure and reporting lines.
 
 ### 2.2 CISO (Chief Information Security Officer)
 
-**Role:** {{ meta.ciso.name }} ({{ meta.ciso.email }})
+**Role:** {{ meta-organisation-roles.role_CISO }} ({{ meta-organisation-roles.role_CISO_email }})
 
 **Responsibilities:**
 - Development, implementation, and monitoring of the ISMS
@@ -154,11 +154,11 @@ management structure and reporting lines.
 - Escalation for critical security incidents
 - Access to all security-relevant information
 
-**Reporting Line:** Reports to {{ meta.cio.name }} (CIO) and management
+**Reporting Line:** Reports to {{ meta-organisation-roles.role_CIO }} (CIO) and management
 
 ### 2.3 CIO (Chief Information Officer)
 
-**Role:** {{ meta.cio.name }} ({{ meta.cio.email }})
+**Role:** {{ meta-organisation-roles.role_CIO }} ({{ meta-organisation-roles.role_CIO_email }})
 
 **Responsibilities:**
 - IT strategy and IT operations
@@ -248,7 +248,7 @@ management structure and reporting lines.
 
 ### 2.9 Internal Audit / Compliance
 
-**Role:** {{ meta.audit.manager }}
+**Role:** {{ meta-handbook.audit_manager }}
 
 **Responsibilities:**
 - Independent review of the ISMS
@@ -349,7 +349,7 @@ See `0070_ISMS_Risk_Acceptance_Criteria.md` for details.
 - **ISO/IEC 27002:2022** - Control 5.2: Information security roles and responsibilities
 
 **Approved by:**  
-{{ meta.management.ceo }}, Management  
+{{ meta-handbook.management_ceo }}, Management  
 Date: {{ meta-handbook.modifydate }}
 
 **Next Review:** {{ meta-handbook.next_review }}

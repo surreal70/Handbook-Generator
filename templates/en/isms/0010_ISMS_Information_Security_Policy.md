@@ -28,7 +28,7 @@ ISO 27001:2022 Reference: Clause 5.2 - Policy
 **Document ID:** 0010  
 **Document Type:** Policy (abstract)  
 **Standard Reference:** ISO/IEC 27001:2022 Clause 5.2 (incl. Amendment 1:2024)  
-**Owner:** {{ meta.ciso.name }}  
+**Owner:** {{ meta-organisation-roles.role_CISO }}  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
@@ -51,7 +51,7 @@ This policy applies to:
 - **Organizational Units:** All departments and locations of {{ meta-organisation.name }}
 - **Systems and Information:** All IT systems, applications, data, and information processing processes
 - **Personnel:** All employees, contractors, suppliers, and third parties with access to information assets
-- **Locations:** {{ netbox.site.name }} and all other operational sites
+- **Locations:** [[ netbox.site.name ]] and all other operational sites
 
 **Exceptions:** Exceptions to this policy are only permitted through the defined exception process (see `0640_Policy_Exceptions_and_Risk_Waivers.md`).
 
@@ -107,15 +107,15 @@ security requirements and risk profile.
 
 ### Key Roles
 
-- **CISO (Chief Information Security Officer):** {{ meta.ciso.name }} ({{ meta.ciso.email }})
+- **CISO (Chief Information Security Officer):** {{ meta-organisation-roles.role_CISO }} ({{ meta-organisation-roles.role_CISO_email }})
   - Responsible for developing, implementing, and monitoring the ISMS
-  - Reports to: {{ meta.cio.name }}
+  - Reports to: {{ meta-organisation-roles.role_CIO }}
 
-- **CIO (Chief Information Officer):** {{ meta.cio.name }} ({{ meta.cio.email }})
+- **CIO (Chief Information Officer):** {{ meta-organisation-roles.role_CIO }} ({{ meta-organisation-roles.role_CIO_email }})
   - Responsible for IT strategy and IT operations
   - Supports ISMS implementation
 
-- **Management:** {{ meta.management.ceo }}
+- **Management:** {{ meta-handbook.management_ceo }}
   - Approves ISMS policy and provides resources
   - Bears overall responsibility for information security
 
@@ -197,7 +197,7 @@ Exceptions to this policy are only permitted in justified exceptional cases and 
 - **BSI IT-Grundschutz** - German Federal Office for Information Security
 
 **Approved by:**  
-{{ meta.management.ceo }}, Management  
+{{ meta-handbook.management_ceo }}, Management  
 Date: {{ meta-handbook.modifydate }}
 
 **Next Review:** {{ meta-handbook.next_review }} (annually or as needed)

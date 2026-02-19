@@ -36,9 +36,9 @@ This document defines the organizational context for cybersecurity risk manageme
 {{ meta-handbook.organization_mission }}
 
 ### Business Objectives
-1. {{ meta.business_goal_1 }}
-2. {{ meta.business_goal_2 }}
-3. {{ meta.business_goal_3 }}
+1. {{ meta-handbook.business_goal_1 }}
+2. {{ meta-handbook.business_goal_2 }}
+3. {{ meta-handbook.business_goal_3 }}
 
 ### Cybersecurity Objectives
 - Protect critical business processes and data
@@ -76,8 +76,8 @@ This document defines the organizational context for cybersecurity risk manageme
    - {{ meta-handbook.additional_privacy_laws }}
 
 2. **Industry-Specific Regulations**
-   - {{ meta.industry_regulation_1 }}
-   - {{ meta.industry_regulation_2 }}
+   - {{ meta-handbook.industry_regulation_1 }}
+   - {{ meta-handbook.industry_regulation_2 }}
 
 3. **Contractual Obligations**
    - Customer contracts with security requirements
@@ -90,9 +90,9 @@ This document defines the organizational context for cybersecurity risk manageme
 
 | Process | Criticality | Cybersecurity Requirements |
 |---------|-------------|---------------------------|
-| {{ meta.critical_process_1 }} | High | Availability, Integrity |
-| {{ meta.critical_process_2 }} | High | Confidentiality, Availability |
-| {{ meta.critical_process_3 }} | Medium | Integrity, Traceability |
+| {{ meta-handbook.critical_process_1 }} | High | Availability, Integrity |
+| {{ meta-handbook.critical_process_2 }} | High | Confidentiality, Availability |
+| {{ meta-handbook.critical_process_3 }} | Medium | Integrity, Traceability |
 
 ## Risk Tolerance and Appetite
 

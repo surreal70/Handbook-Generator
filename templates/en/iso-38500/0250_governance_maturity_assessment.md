@@ -124,22 +124,22 @@ This document applies to:
 
 | Measure | Responsible | Deadline |
 |---------|-------------|----------|
-| {{ meta.improvement_1 }} | {{ meta.improvement_1_owner }} | {{ meta.improvement_1_date }} |
-| {{ meta.improvement_2 }} | {{ meta.improvement_2_owner }} | {{ meta.improvement_2_date }} |
+| {{ meta-handbook.improvement_1 }} | {{ meta-handbook.improvement_1_owner }} | {{ meta-handbook.improvement_1_date }} |
+| {{ meta-handbook.improvement_2 }} | {{ meta-handbook.improvement_2_owner }} | {{ meta-handbook.improvement_2_date }} |
 
 ### Medium-term (6-12 months)
 
 | Measure | Responsible | Deadline |
 |---------|-------------|----------|
-| {{ meta.improvement_3 }} | {{ meta.improvement_3_owner }} | {{ meta.improvement_3_date }} |
-| {{ meta.improvement_4 }} | {{ meta.improvement_4_owner }} | {{ meta.improvement_4_date }} |
+| {{ meta-handbook.improvement_3 }} | {{ meta-handbook.improvement_3_owner }} | {{ meta-handbook.improvement_3_date }} |
+| {{ meta-handbook.improvement_4 }} | {{ meta-handbook.improvement_4_owner }} | {{ meta-handbook.improvement_4_date }} |
 
 ### Long-term (12-24 months)
 
 | Measure | Responsible | Deadline |
 |---------|-------------|----------|
-| {{ meta.improvement_5 }} | {{ meta.improvement_5_owner }} | {{ meta.improvement_5_date }} |
-| {{ meta.improvement_6 }} | {{ meta.improvement_6_owner }} | {{ meta.improvement_6_date }} |
+| {{ meta-handbook.improvement_5 }} | {{ meta-handbook.improvement_5_owner }} | {{ meta-handbook.improvement_5_date }} |
+| {{ meta-handbook.improvement_6 }} | {{ meta-handbook.improvement_6_owner }} | {{ meta-handbook.improvement_6_date }} |
 
 ## Document References
 

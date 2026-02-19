@@ -101,7 +101,7 @@ Diese Richtlinie konkretisiert die `0560_Policy_Datenschutz_Schnittstellen.md` u
 - Fachbereiche liefern Informationen
 - Jährliche Aktualisierung (mindestens)
 
-**Tool:** {{ meta.dpo.vvt_tool }}
+**Tool:** {{ meta-handbook.dpo_vvt_tool }}
 
 ## 4. Datenschutz-Folgenabschätzung (DSFA)
 
@@ -135,7 +135,7 @@ Diese Richtlinie konkretisiert die `0560_Policy_Datenschutz_Schnittstellen.md` u
 ### 5.1 Auskunftsrecht (Art. 15 DSGVO)
 
 **Prozess:**
-1. Antrag per E-Mail an {{ meta.dpo.email }}
+1. Antrag per E-Mail an {{ meta-handbook.dpo_email }}
 2. Identitätsprüfung
 3. Zusammenstellung der Informationen
 4. Antwort innerhalb 1 Monat
@@ -305,6 +305,6 @@ Diese Richtlinie konkretisiert die `0560_Policy_Datenschutz_Schnittstellen.md` u
 - **DSGVO (EU 2016/679)** - Datenschutz-Grundverordnung
 - **BDSG** - Bundesdatenschutzgesetz
 
-**Genehmigt durch:** {{ meta.dpo.name }}, Datenschutzbeauftragter  
+**Genehmigt durch:** {{ meta-handbook.dpo_name }}, Datenschutzbeauftragter  
 **Nächster Review:** {{ meta-handbook.next_review }}
 

@@ -21,7 +21,7 @@ Dieses Dokument beschreibt den Incident-Management-Prozess für {{ meta-organisa
 
 **Geltungsbereich:** Alle IT-Services und -Systeme von {{ meta-organisation.name }}
 
-**Verantwortlich:** {{ meta-organisation-roles.role_it_operations_manager.name }} ({{ meta-organisation-roles.role_it_operations_manager.email }})
+**Verantwortlich:** {{ meta-organisation-roles.role_IT_Operations_Manager }} ({{ meta-organisation-roles.role_IT_Operations_Manager_email }})
 
 ## Incident-Definition
 
@@ -149,7 +149,7 @@ Die Priorität eines Incidents ergibt sich aus **Impact** (Auswirkung) und **Urg
 ### 1. Incident Detection
 
 **Erkennungsquellen:**
-- Monitoring-Alerts ({{ netbox.monitoring_system }})
+- Monitoring-Alerts ([[ netbox.monitoring_system ]])
 - Service Desk Tickets
 - Benutzer-Meldungen
 - Automatische Event-Korrelation
@@ -228,10 +228,10 @@ Die Priorität eines Incidents ergibt sich aus **Impact** (Auswirkung) und **Urg
 
 | Level | Rolle | Kontakt | Eskalation bei |
 |---|---|---|---|
-| **Level 1** | Service Desk | {{ meta-organisation-roles.role_service_desk_lead.email }} | Standard-Incidents |
-| **Level 2** | IT Operations Team | {{ meta-organisation-roles.role_it_operations_manager.email }} | Komplexe technische Probleme |
+| **Level 1** | Service Desk | {{ meta-organisation-roles.role_Service_Desk_Lead_email }} | Standard-Incidents |
+| **Level 2** | IT Operations Team | {{ meta-organisation-roles.role_IT_Operations_Manager_email }} | Komplexe technische Probleme |
 | **Level 3** | Spezialisten / Vendor | [Vendor-Kontakte] | Spezialwissen erforderlich |
-| **Management** | CIO | {{ meta-organisation-roles.role_cio.email }} | P1-Incidents > 2h |
+| **Management** | CIO | {{ meta-organisation-roles.role_CIO_email }} | P1-Incidents > 2h |
 
 ### Funktionale Eskalation
 
@@ -240,7 +240,7 @@ Die Priorität eines Incidents ergibt sich aus **Impact** (Auswirkung) und **Urg
 | **Netzwerk** | Network Team | [E-Mail] | Netzwerk-Infrastruktur |
 | **Server** | Server Team | [E-Mail] | Server und Virtualisierung |
 | **Datenbank** | DBA Team | [E-Mail] | Datenbank-Systeme |
-| **Security** | Security Team | {{ meta-organisation-roles.role_ciso.email }} | Sicherheitsvorfälle |
+| **Security** | Security Team | {{ meta-organisation-roles.role_CISO_email }} | Sicherheitsvorfälle |
 | **Applikationen** | Application Team | [E-Mail] | Business-Applikationen |
 
 ### Eskalations-Trigger
@@ -267,7 +267,7 @@ Die Priorität eines Incidents ergibt sich aus **Impact** (Auswirkung) und **Urg
 **Priorität:** P1 oder P2 (abhängig von Service-Kritikalität)
 
 **Diagnose-Schritte:**
-1. Ping-Test durchführen: `ping {{ netbox.server.ip }}`
+1. Ping-Test durchführen: `ping [[ netbox.server.ip ]]`
 2. Monitoring-Dashboard prüfen
 3. Physischen Zustand prüfen (falls vor Ort)
 4. Netzwerk-Konnektivität prüfen
@@ -369,7 +369,7 @@ Die Priorität eines Incidents ergibt sich aus **Impact** (Auswirkung) und **Urg
 5. Forensische Analyse durchführen
 6. Systeme neu aufsetzen (falls erforderlich)
 
-**Eskalation:** Sofort an CISO ({{ meta-organisation-roles.role_ciso.email }})
+**Eskalation:** Sofort an CISO ({{ meta-organisation-roles.role_CISO_email }})
 
 ### Runbook 6: Netzwerk-Ausfall
 
@@ -462,10 +462,10 @@ Ein **Major Incident** ist ein Incident mit:
 
 | Rolle | Person | Verantwortung |
 |---|---|---|
-| **Incident Manager** | {{ meta-organisation-roles.role_it_operations_manager.name }} | Koordination und Kommunikation |
+| **Incident Manager** | {{ meta-organisation-roles.role_IT_Operations_Manager }} | Koordination und Kommunikation |
 | **Technical Lead** | [Name] | Technische Lösungsfindung |
 | **Communication Lead** | [Name] | Stakeholder-Kommunikation |
-| **Management Rep** | {{ meta-organisation-roles.role_cio.name }} | Entscheidungen und Eskalation |
+| **Management Rep** | {{ meta-organisation-roles.role_CIO }} | Entscheidungen und Eskalation |
 
 ### Major Incident Prozess
 
@@ -513,7 +513,7 @@ Ein **Major Incident** ist ein Incident mit:
 - **Zugriff:** Alle IT-Mitarbeiter
 
 ### Monitoring-System
-- **System:** {{ netbox.monitoring_system }}
+- **System:** [[ netbox.monitoring_system ]]
 - **URL:** {{ meta-handbook.monitoring_url }}
 - **Zugriff:** IT Operations Team
 
@@ -548,10 +548,10 @@ Ein **Major Incident** ist ein Incident mit:
 
 | Team | Primär | Sekundär | Rufbereitschaft |
 |---|---|---|---|
-| **Service Desk** | {{ meta-organisation-roles.role_service_desk_lead.email }} | [Backup] | 24/7 |
-| **IT Operations** | {{ meta-organisation-roles.role_it_operations_manager.email }} | [Backup] | 24/7 |
+| **Service Desk** | {{ meta-organisation-roles.role_Service_Desk_Lead_email }} | [Backup] | 24/7 |
+| **IT Operations** | {{ meta-organisation-roles.role_IT_Operations_Manager_email }} | [Backup] | 24/7 |
 | **Network Team** | [E-Mail] | [Backup] | On-Call |
-| **Security Team** | {{ meta-organisation-roles.role_ciso.email }} | [Backup] | 24/7 |
+| **Security Team** | {{ meta-organisation-roles.role_CISO_email }} | [Backup] | 24/7 |
 
 ### Referenzen
 

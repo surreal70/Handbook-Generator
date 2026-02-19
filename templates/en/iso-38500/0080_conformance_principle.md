@@ -110,7 +110,7 @@ IT complies with all mandatory legislation and regulations. Policies and practic
 | Requirement | Status | Last Audit | Next Audit |
 |-------------|--------|------------|------------|
 | GDPR | {{ meta-handbook.gdpr_status }} | {{ meta-handbook.gdpr_last_audit }} | {{ meta-handbook.gdpr_next_audit }} |
-| ISO 27001 | {{ meta.iso27001_status }} | {{ meta.iso27001_last_audit }} | {{ meta.iso27001_next_audit }} |
+| ISO 27001 | {{ meta-handbook.iso27001_status }} | {{ meta-handbook.iso27001_last_audit }} | {{ meta-handbook.iso27001_next_audit }} |
 | BSI Grundschutz | {{ meta-handbook.bsi_status }} | {{ meta-handbook.bsi_last_audit }} | {{ meta-handbook.bsi_next_audit }} |
 
 ## Document References

@@ -80,7 +80,7 @@ Each runbook follows this standardized structure:
 
 **Runbook ID:** RB-001  
 **Version:** 1.0  
-**Responsible:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+**Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 #### Purpose
 Controlled restart of a server to fix problems or after updates.
@@ -160,7 +160,7 @@ Controlled restart of a server to fix problems or after updates.
 
 **Runbook ID:** RB-002  
 **Version:** 1.0  
-**Responsible:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+**Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 #### Purpose
 Restart a single service without system restart.
@@ -229,7 +229,7 @@ Restart a single service without system restart.
 
 **Runbook ID:** RB-003  
 **Version:** 1.0  
-**Responsible:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+**Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 #### Purpose
 Free up disk space during critical disk utilization.
@@ -436,7 +436,7 @@ Restore a database from backup.
 
 **Runbook ID:** RB-020  
 **Version:** 1.0  
-**Responsible:** {{ meta-organisation-roles.role_ciso.name }}
+**Responsible:** {{ meta-organisation-roles.role_CISO }}
 
 #### Purpose
 Adding a new firewall rule.
@@ -506,7 +506,7 @@ Adding a new firewall rule.
 
 **Runbook ID:** RB-030  
 **Version:** 1.0  
-**Responsible:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+**Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 #### Purpose
 Create a new user account.
@@ -576,7 +576,7 @@ Create a new user account.
 
 **Runbook ID:** RB-031  
 **Version:** 1.0  
-**Responsible:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+**Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 #### Purpose
 Deactivate a user account (e.g., upon departure).
@@ -642,7 +642,7 @@ Deactivate a user account (e.g., upon departure).
 
 **Runbook ID:** RB-040  
 **Version:** 1.0  
-**Responsible:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+**Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 #### Purpose
 Systematic investigation of a monitoring alert.
@@ -711,7 +711,7 @@ Systematic investigation of a monitoring alert.
 
 **Runbook ID:** RB-050  
 **Version:** 1.0  
-**Responsible:** {{ meta-organisation-roles.role_it_operations_manager.name }}
+**Responsible:** {{ meta-organisation-roles.role_IT_Operations_Manager }}
 
 #### Purpose
 Regular verification of backup integrity.
@@ -901,5 +901,5 @@ find / -type f -size +100M
 
 **Last Update:** {{ meta-handbook.date }}  
 **Next Review:** [TODO: Date]  
-**Contact:** {{ meta-organisation-roles.role_it_operations_manager.email }}
+**Contact:** {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
 

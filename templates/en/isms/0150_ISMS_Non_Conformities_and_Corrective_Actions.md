@@ -27,7 +27,7 @@ ISO 27001:2022 Reference: Clause 10.1 - Nonconformity and corrective action
 **Document ID:** 0150  
 **Document Type:** ISMS Process/Template  
 **Standard Reference:** ISO/IEC 27001:2022 Clause 10.1  
-**Owner:** {{ meta.ciso.name }}  
+**Owner:** {{ meta-organisation-roles.role_CISO }}  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
@@ -230,7 +230,7 @@ This document defines the process for systematic treatment of non-conformities i
 |------------|--------|----------|-------------|------------|-------------------|-------|-----|--------|----------------------|
 | F-2026-001 | Audit | Minor | Documentation incomplete | Process not defined | Document process | [TODO] | 2026-03-31 | In Progress | - |
 | F-2026-002 | Incident | Major | Unpatched vulnerability exploited | Patch process insufficient | Improve patch process | IT Operations | 2026-02-28 | In Progress | - |
-| F-2026-003 | Monitoring | Observation | MFA activation < 100% | Awareness insufficient | MFA campaign | {{ meta.ciso.name }} | 2026-04-30 | Planned | - |
+| F-2026-003 | Monitoring | Observation | MFA activation < 100% | Awareness insufficient | MFA campaign | {{ meta-organisation-roles.role_CISO }} | 2026-04-30 | Planned | - |
 
 [TODO: Add active non-conformities]
 
@@ -406,7 +406,7 @@ This document defines the process for systematic treatment of non-conformities i
 - **ISO 19011:2018** - Guidelines for auditing management systems
 
 **Approved by:**  
-{{ meta.ciso.name }}, CISO  
+{{ meta-organisation-roles.role_CISO }}, CISO  
 Date: {{ meta-handbook.modifydate }}
 
 **Next Review:** {{ meta-handbook.next_review }}

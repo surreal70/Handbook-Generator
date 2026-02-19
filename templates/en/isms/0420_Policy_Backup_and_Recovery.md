@@ -28,7 +28,7 @@ ISO 27001:2022 Annex A Reference: A.8.13
 **Document ID:** 0420  
 **Document Type:** Policy (abstract)  
 **Standard Reference:** ISO/IEC 27001:2022 Annex A.8.13 (incl. Amendment 1:2024)  
-**Owner:** {{ meta.ciso.name }}  
+**Owner:** {{ meta-organisation-roles.role_CISO }}  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
@@ -47,7 +47,7 @@ This policy applies to:
 - **Systems:** All IT systems, databases, applications, file systems, VMs, cloud resources
 - **Data:** All business-critical and personal data
 - **Backup Types:** Full, incremental, differential, snapshot, cloud backup
-- **Locations:** {{ netbox.site.name }} and all other operational sites
+- **Locations:** [[ netbox.site.name ]] and all other operational sites
 
 **Exceptions:** Exceptions are only permitted through the defined exception process (`0640_Policy_Exceptions_and_Risk_Waivers.md`).
 
@@ -108,9 +108,9 @@ Backup strategies are integrated into disaster recovery and business continuity 
 
 ### Key Roles
 
-- **Policy Owner:** {{ meta.ciso.name }} (CISO)
-- **Backup Administrator:** {{ meta.it.backup_admin }}
-- **BCM Manager:** {{ meta.bcm.manager }}
+- **Policy Owner:** {{ meta-organisation-roles.role_CISO }} (CISO)
+- **Backup Administrator:** {{ meta-handbook.it_backup_admin }}
+- **BCM Manager:** {{ meta-handbook.bcm_manager }}
 - **Implementation Responsible:** IT Operations, System Owners
 - **Control/Audit Function:** ISMS, Internal Audit
 
@@ -186,7 +186,7 @@ Exceptions to this policy are only permitted in justified cases:
 - **GDPR (EU 2016/679)** - General Data Protection Regulation (backup of personal data)
 
 **Approved by:**  
-{{ meta.management.ceo }}, Management  
+{{ meta-handbook.management_ceo }}, Management  
 Date: {{ meta-handbook.modifydate }}
 
 **Next Review:** {{ meta-handbook.next_review }} (annually or as needed)

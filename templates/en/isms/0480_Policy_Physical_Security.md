@@ -28,7 +28,7 @@ ISO 27001:2022 Annex A Reference: A.7.1, A.7.2, A.7.3, A.7.4
 **Document ID:** 0480  
 **Document Type:** Policy (abstract)  
 **Standard Reference:** ISO/IEC 27001:2022 Annex A.7.1-A.7.4 (incl. Amendment 1:2024)  
-**Owner:** {{ meta.ciso.name }}  
+**Owner:** {{ meta-organisation-roles.role_CISO }}  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
@@ -47,7 +47,7 @@ This policy applies to:
 - **Facilities:** Offices, data centers, server rooms, warehouses, production facilities
 - **Assets:** IT equipment, servers, network components, mobile devices, documents
 - **Persons:** Employees, visitors, contractors, suppliers
-- **Locations:** {{ netbox.site.name }} and all other operational sites
+- **Locations:** [[ netbox.site.name ]] and all other operational sites
 
 **Exceptions:** Exceptions are only permitted through the defined exception process (`0640_Policy_Exceptions_and_Risk_Waivers.md`).
 
@@ -107,9 +107,9 @@ IT equipment is protected against theft (Kensington locks, alarm systems, invent
 
 ### Key Roles
 
-- **Policy Owner:** {{ meta.ciso.name }} (CISO)
-- **Facility Manager:** {{ meta.facility.manager }}
-- **Security Manager:** {{ meta.security.physical_security_manager }}
+- **Policy Owner:** {{ meta-organisation-roles.role_CISO }} (CISO)
+- **Facility Manager:** {{ meta-handbook.facility_manager }}
+- **Security Manager:** {{ meta-handbook.security_physical_security_manager }}
 - **Implementation Responsible:** Facility Management, Security, IT Operations
 - **Control/Audit Function:** ISMS, Internal Audit
 
@@ -185,7 +185,7 @@ Exceptions to this policy are only permitted in justified exceptional cases:
 - **BSI IT-Grundschutz** - Module INF.1 General Building
 
 **Approved by:**  
-{{ meta.management.ceo }}, Management  
+{{ meta-handbook.management_ceo }}, Management  
 Date: {{ meta-handbook.modifydate }}
 
 **Next Review:** {{ meta-handbook.next_review }} (annually or as needed)

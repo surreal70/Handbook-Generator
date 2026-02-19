@@ -36,7 +36,7 @@ Diese Policy gilt für:
 - **Kommunikationskanäle:** E-Mail, Messaging, File Sharing, Collaboration Tools
 - **Daten:** Alle Informationen (insbesondere vertrauliche und personenbezogene Daten)
 - **Übertragungswege:** Intern, extern, Cloud, Partner
-- **Standorte:** {{ netbox.site.name }} und alle weiteren Betriebsstandorte
+- **Standorte:** [[ netbox.site.name ]] und alle weiteren Betriebsstandorte
 
 **Ausnahmen:** Ausnahmen sind nur über den definierten Ausnahmenprozess (`0640_Policy_Ausnahmen_und_Risk_Waivers.md`) zulässig.
 
@@ -95,10 +95,10 @@ Geschäftliche Social-Media-Nutzung folgt Social-Media-Richtlinien. Vertrauliche
 
 ### Schlüsselrollen
 
-- **Policy Owner:** {{ meta.ciso.name }} (CISO)
-- **Communication Security Manager:** {{ meta.communication.security_manager }}
-- **IT Operations Manager:** {{ meta.it.operations_manager }}
-- **Data Protection Officer:** {{ meta.dpo.name }}
+- **Policy Owner:** {{ meta-organisation-roles.role_CISO }} (CISO)
+- **Communication Security Manager:** {{ meta-handbook.communication_security_manager }}
+- **IT Operations Manager:** {{ meta-handbook.it_operations_manager }}
+- **Data Protection Officer:** {{ meta-handbook.dpo_name }}
 - **Umsetzungsverantwortliche:** IT-Betrieb, End Users
 - **Kontroll-/Prüfinstanz:** ISMS, Internal Audit, DPO
 
@@ -179,7 +179,7 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **RFC 7489** - Domain-based Message Authentication, Reporting, and Conformance (DMARC)
 
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
 Datum: {{ meta-handbook.modifydate }}
 
 **Nächster Review:** {{ meta-handbook.next_review }} (jährlich oder anlassbezogen)

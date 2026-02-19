@@ -220,7 +220,7 @@ Dieses Dokument definiert den Prozess zur systematischen Behandlung von Nichtkon
 |------------|--------|-----------|--------------|------------|-------------------|-------|--------|--------|---------------------|
 | F-2026-001 | Audit | Minor | Dokumentation unvollständig | Prozess nicht definiert | Prozess dokumentieren | [TODO] | 2026-03-31 | In Arbeit | - |
 | F-2026-002 | Incident | Major | Ungepatchte Schwachstelle ausgenutzt | Patch-Prozess unzureichend | Patch-Prozess verbessern | IT-Betrieb | 2026-02-28 | In Arbeit | - |
-| F-2026-003 | Monitoring | Observation | MFA-Aktivierung < 100% | Awareness unzureichend | MFA-Kampagne | {{ meta.ciso.name }} | 2026-04-30 | Geplant | - |
+| F-2026-003 | Monitoring | Observation | MFA-Aktivierung < 100% | Awareness unzureichend | MFA-Kampagne | {{ meta-organisation-roles.role_CISO }} | 2026-04-30 | Geplant | - |
 
 [TODO: Aktive Nichtkonformitäten hinzufügen]
 
@@ -396,7 +396,7 @@ Dieses Dokument definiert den Prozess zur systematischen Behandlung von Nichtkon
 - **ISO 19011:2018** - Guidelines for auditing management systems
 
 **Genehmigt durch:**  
-{{ meta.ciso.name }}, CISO  
+{{ meta-organisation-roles.role_CISO }}, CISO  
 Datum: {{ meta-handbook.modifydate }}
 
 **Nächster Review:** {{ meta-handbook.next_review }}

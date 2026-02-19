@@ -97,13 +97,13 @@ ECDHE-RSA-AES128-GCM-SHA256
 ### 3.2 Schlüsselspeicherung
 
 **Hardware Security Modules (HSM):**
-- Kritische Schlüssel (Root-CA, Master-Keys) in HSM: {{ meta.security.hsm }}
+- Kritische Schlüssel (Root-CA, Master-Keys) in HSM: {{ meta-handbook.security_hsm }}
 - FIPS 140-2 Level 2 oder höher
 - Physische Sicherheit und Zugriffskontrolle
 
 **Key Management Systems:**
-- **Cloud:** {{ meta.cloud.key_vault }} (z.B. Azure Key Vault, AWS KMS)
-- **On-Premises:** {{ meta.security.kms }} (z.B. HashiCorp Vault)
+- **Cloud:** {{ meta-handbook.cloud_key_vault }} (z.B. Azure Key Vault, AWS KMS)
+- **On-Premises:** {{ meta-handbook.security_kms }} (z.B. HashiCorp Vault)
 - Verschlüsselte Speicherung
 - Audit-Logging aller Zugriffe
 
@@ -153,9 +153,9 @@ ECDHE-RSA-AES128-GCM-SHA256
 ### 4.1 Public Key Infrastructure (PKI)
 
 **Komponenten:**
-- **Root CA:** {{ meta.pki.root_ca }} (Offline, HSM-geschützt)
-- **Issuing CA:** {{ meta.pki.issuing_ca }} (Online, für Zertifikatsausstellung)
-- **Certificate Management System:** {{ meta.pki.cms }}
+- **Root CA:** {{ meta-handbook.pki_root_ca }} (Offline, HSM-geschützt)
+- **Issuing CA:** {{ meta-handbook.pki_issuing_ca }} (Online, für Zertifikatsausstellung)
+- **Certificate Management System:** {{ meta-handbook.pki_cms }}
 
 **Zertifikatstypen:**
 - **Server-Zertifikate:** Web-Server, API-Endpoints
@@ -353,7 +353,7 @@ ECDHE-RSA-AES128-GCM-SHA256
 - **BSI TR-02102** - Kryptographische Verfahren
 
 **Genehmigt durch:**  
-{{ meta.ciso.name }}, CISO  
+{{ meta-organisation-roles.role_CISO }}, CISO  
 Datum: {{ meta-handbook.modifydate }}
 
 **Nächster Review:** {{ meta-handbook.next_review }}

@@ -39,8 +39,8 @@ Der Geltungsbereich des Information Security Management Systems (ISMS) der **{{ 
 ### 1.2 Standorte
 Das ISMS gilt für folgende Standorte:
 
-- **Hauptstandort:** {{ netbox.site.name }}
-  - Adresse: {{ netbox.site.address }}
+- **Hauptstandort:** [[ netbox.site.name ]]
+  - Adresse: [[ netbox.site.address ]]
   - Funktion: Rechenzentrum, Büros, Entwicklung
   
 [TODO: Weitere Standorte hinzufügen]
@@ -61,7 +61,7 @@ Das ISMS deckt folgende Geschäftsprozesse und IT-Services ab:
 - [TODO: Weitere Kernprozesse]
 
 **IT-Services:**
-- Netzwerkinfrastruktur ({{ netbox.device.core_switch.name }})
+- Netzwerkinfrastruktur ([[ netbox.device.core_switch.name ]])
 - Server- und Virtualisierungsplattformen
 - Cloud-Services und SaaS-Anwendungen
 - Datenbanksysteme
@@ -97,8 +97,8 @@ Classify information assets according to your data classification scheme
 Das ISMS umfasst folgende technische Plattformen:
 
 **Netzwerkinfrastruktur:**
-- Core Switch: {{ netbox.device.core_switch.name }}
-- Management VLAN: {{ netbox.vlan.management.vid }}
+- Core Switch: [[ netbox.device.core_switch.name ]]
+- Management VLAN: [[ netbox.vlan.management.vid ]]
 - [TODO: Weitere Netzwerkkomponenten aus NetBox]
 
 **Server und Virtualisierung:**
@@ -259,8 +259,8 @@ Der ISMS-Scope wird regelmäßig überprüft:
 - **ISO/IEC 27002:2022** - Information security controls
 
 **Genehmigt durch:**  
-{{ meta.ciso.name }}, CISO  
-{{ meta.management.ceo }}, Geschäftsführung  
+{{ meta-organisation-roles.role_CISO }}, CISO  
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
 Datum: {{ meta-handbook.modifydate }}
 
 **Nächster Review:** {{ meta-handbook.next_review }}

@@ -27,7 +27,7 @@ ISO 27001:2022 Reference: Clause 9.2 - Internal audit
 **Document ID:** 0130  
 **Document Type:** ISMS Program/Template  
 **Standard Reference:** ISO/IEC 27001:2022 Clause 9.2  
-**Owner:** {{ meta.audit.manager }}  
+**Owner:** {{ meta-handbook.audit_manager }}  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Confidential  
@@ -50,7 +50,7 @@ The audit program encompasses:
 - All areas within the ISMS scope (see `0020_ISMS_Scope.md`)
 - All Annex A controls in the SoA (see `0100_ISMS_Statement_of_Applicability_SoA_Template.md`)
 - All ISMS processes and documents
-- All locations: {{ netbox.site.name }} and others
+- All locations: [[ netbox.site.name ]] and others
 
 ## 2. Audit Approach
 
@@ -59,7 +59,7 @@ The audit program encompasses:
 **Independence:**
 - Auditors do not audit their own areas
 - External auditors for critical areas (optional)
-- Reporting line: Audit team reports to {{ meta.audit.manager }}
+- Reporting line: Audit team reports to {{ meta-handbook.audit_manager }}
 
 **Risk-Based:**
 - Audit frequency based on risk assessment
@@ -98,9 +98,9 @@ The audit program encompasses:
 
 | Period | Audit Topic/Scope | Audit Type | Criteria | Auditor | Auditee | Planned Duration | Status |
 |--------|-------------------|------------|----------|---------|---------|------------------|--------|
-| **Q1 2026** | Access Management & IAM | Topic Audit | A.5.15, A.5.16, A.5.17, A.5.18, A.8.2, A.8.3 | [TODO] | {{ meta.cio.name }} | 2 days | Planned |
+| **Q1 2026** | Access Management & IAM | Topic Audit | A.5.15, A.5.16, A.5.17, A.5.18, A.8.2, A.8.3 | [TODO] | {{ meta-organisation-roles.role_CIO }} | 2 days | Planned |
 | **Q2 2026** | Vulnerability & Patch Management | Topic Audit | A.8.8, A.5.23 | [TODO] | IT Operations | 1 day | Planned |
-| **Q3 2026** | Complete ISMS Audit | Full Audit | All Clauses, SoA | [TODO] | {{ meta.ciso.name }} | 10 days | Planned |
+| **Q3 2026** | Complete ISMS Audit | Full Audit | All Clauses, SoA | [TODO] | {{ meta-organisation-roles.role_CISO }} | 10 days | Planned |
 | **Q4 2026** | Incident Management & Logging | Topic Audit | A.5.24, A.5.25, A.5.26, A.5.28, A.8.15, A.8.16 | [TODO] | Security Team | 2 days | Planned |
 
 [TODO: Complete audit plan for 2026]
@@ -374,8 +374,8 @@ The audit program encompasses:
 - **ISO/IEC 27007:2020** - Guidelines for information security management systems auditing
 
 **Approved by:**  
-{{ meta.audit.manager }}, Audit Manager  
-{{ meta.ciso.name }}, CISO  
+{{ meta-handbook.audit_manager }}, Audit Manager  
+{{ meta-organisation-roles.role_CISO }}, CISO  
 Date: {{ meta-handbook.modifydate }}
 
 **Next Review:** {{ meta-handbook.next_review }}

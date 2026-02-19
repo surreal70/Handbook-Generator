@@ -37,7 +37,7 @@ Diese Policy gilt für:
 - **Systeme:** Alle IT-Systeme, Anwendungen, Datenbanken, Netzwerke, Cloud-Services
 - **Personen:** Alle Mitarbeiter, Auftragnehmer, Lieferanten und Dritte mit Zugang zu IT-Ressourcen
 - **Zugriffsmethoden:** Lokaler Zugriff, Remote-Zugriff, privilegierter Zugriff, API-Zugriff
-- **Standorte:** {{ netbox.site.name }} und alle weiteren Betriebsstandorte
+- **Standorte:** [[ netbox.site.name ]] und alle weiteren Betriebsstandorte
 
 **Ausnahmen:** Ausnahmen sind nur über den definierten Ausnahmenprozess (`0640_Policy_Ausnahmen_und_Risk_Waivers.md`) zulässig.
 
@@ -92,8 +92,8 @@ Alle Zugriffsvergaben müssen durch den Ressourcen-Owner genehmigt und dokumenti
 
 ### Schlüsselrollen
 
-- **Policy Owner:** {{ meta.ciso.name }} (CISO)
-- **IAM-Verantwortlicher:** {{ meta.it.iam_manager }}
+- **Policy Owner:** {{ meta-organisation-roles.role_CISO }} (CISO)
+- **IAM-Verantwortlicher:** {{ meta-handbook.it_iam_manager }}
 - **Ressourcen-Owner:** Fachbereichsleiter, Systemverantwortliche
 - **Umsetzungsverantwortliche:** IT-Betrieb, HR
 - **Kontroll-/Prüfinstanz:** ISMS, Internal Audit
@@ -171,7 +171,7 @@ Ausnahmen von dieser Policy sind nur in begründeten Ausnahmefällen zulässig:
 - **NIST SP 800-63** - Digital Identity Guidelines
 
 **Genehmigt durch:**  
-{{ meta.management.ceo }}, Geschäftsführung  
+{{ meta-handbook.management_ceo }}, Geschäftsführung  
 Datum: {{ meta-handbook.modifydate }}
 
 **Nächster Review:** {{ meta-handbook.next_review }} (jährlich oder anlassbezogen)

@@ -52,9 +52,9 @@ Diese Richtlinie konkretisiert die `0400_Policy_Incident_Management.md` und defi
 ### 3.1 Detection & Reporting
 
 **Meldewege:**
-- **IT-Support:** {{ meta.support.phone }}, {{ meta.support.email }}
-- **Security-Team:** {{ meta.security.email }}, {{ meta.security.phone }}
-- **Self-Service-Portal:** {{ meta.itsm.portal }}
+- **IT-Support:** {{ meta-handbook.support_phone }}, {{ meta-handbook.support_email }}
+- **Security-Team:** {{ meta-handbook.security_email }}, {{ meta-handbook.security_phone }}
+- **Self-Service-Portal:** {{ meta-handbook.itsm_portal }}
 
 **Pflichtangaben:**
 - Beschreibung des Problems
@@ -240,7 +240,7 @@ Diese Richtlinie konkretisiert die `0400_Policy_Incident_Management.md` und defi
 4. **Reporting:** Forensik-Bericht
 5. **Chain of Custody:** Lückenlose Dokumentation
 
-**Tools:** {{ meta.security.forensics_tools }}
+**Tools:** {{ meta-handbook.security_forensics_tools }}
 
 ### 5.4 Meldepflichten
 
@@ -265,7 +265,7 @@ Diese Richtlinie konkretisiert die `0400_Policy_Incident_Management.md` und defi
 
 **Kanäle:**
 - E-Mail an Stakeholder
-- Status-Page ({{ meta.status.url }})
+- Status-Page ({{ meta-handbook.status_url }})
 - Intranet-Benachrichtigungen
 
 ### 6.2 Stakeholder-Matrix
@@ -307,6 +307,6 @@ Diese Richtlinie konkretisiert die `0400_Policy_Incident_Management.md` und defi
 - **ISO/IEC 27001:2022 Annex A.5.26** - Response to information security incidents
 - **NIST SP 800-61** - Computer Security Incident Handling Guide
 
-**Genehmigt durch:** {{ meta.ciso.name }}, CISO  
+**Genehmigt durch:** {{ meta-organisation-roles.role_CISO }}, CISO  
 **Nächster Review:** {{ meta-handbook.next_review }}
 

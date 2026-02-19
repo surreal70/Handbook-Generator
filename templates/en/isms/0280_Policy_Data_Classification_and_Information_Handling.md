@@ -28,7 +28,7 @@ ISO 27001:2022 Annex A Reference: A.5.12, A.5.13, A.5.14
 **Document ID:** 0280  
 **Document Type:** Policy (abstract)  
 **Standard Reference:** ISO/IEC 27001:2022 Annex A.5.12-A.5.14 (incl. Amendment 1:2024)  
-**Owner:** {{ meta.ciso.name }}  
+**Owner:** {{ meta-organisation-roles.role_CISO }}  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
@@ -48,7 +48,7 @@ This policy applies to:
 - **Systems:** All IT systems, applications, databases, storage media
 - **Persons:** All employees, contractors, suppliers, and third parties with access to information
 - **Lifecycle:** Creation, storage, processing, transmission, archiving, destruction
-- **Locations:** {{ netbox.site.name }} and all other operational sites
+- **Locations:** [[ netbox.site.name ]] and all other operational sites
 
 **Exceptions:** Exceptions are only permitted through the defined exception process (`0640_Policy_Ausnahmen_und_Risk_Waivers.md`).
 
@@ -120,9 +120,9 @@ Classification and handling of personal data complies with GDPR and other data p
 
 ### Key Roles
 
-- **Policy Owner:** {{ meta.ciso.name }} (CISO)
+- **Policy Owner:** {{ meta-organisation-roles.role_CISO }} (CISO)
 - **Information Owners:** Department heads, system owners
-- **Data Protection Officer:** {{ meta.dpo.name }}
+- **Data Protection Officer:** {{ meta-handbook.dpo_name }}
 - **Implementation Responsible:** All employees, IT operations
 - **Control/Audit Function:** ISMS, internal audit, DPO
 
@@ -201,7 +201,7 @@ Exceptions to this policy are only permitted in justified exceptional cases:
 - **BSI IT-Grundschutz** - Module CON.6 Deletion and Destruction
 
 **Approved by:**  
-{{ meta.management.ceo }}, Management  
+{{ meta-handbook.management_ceo }}, Management  
 Date: {{ meta-handbook.modifydate }}
 
 **Next Review:** {{ meta-handbook.next_review }} (annually or as needed)

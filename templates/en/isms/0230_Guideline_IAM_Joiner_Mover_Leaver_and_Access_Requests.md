@@ -26,7 +26,7 @@ Customize based on your organization's HR systems, IAM tools, and approval workf
 **Document Type:** Guideline (detailed)  
 **Related Policy:** 0220_Policy_Access_Control_and_Identity_Management.md  
 **Standard Reference:** ISO/IEC 27001:2022 Annex A.5.15, A.5.16, A.5.18  
-**Owner:** {{ meta.it_operations.manager }}  
+**Owner:** {{ meta-handbook.it_operations_manager }}  
 **Version:** 1.0  
 **Status:** Approved  
 **Classification:** Internal  
@@ -47,7 +47,7 @@ This guideline implements the `0220_Policy_Access_Control_and_Identity_Managemen
 
 ### 2.1 Process Overview
 
-**Trigger:** HR creates new employee in HR system ({{ meta.hr.system }})
+**Trigger:** HR creates new employee in HR system ({{ meta-handbook.hr_system }})
 
 **Timeline:**
 - **Standard Accounts:** Provisioning by 1 day before start date
@@ -57,7 +57,7 @@ This guideline implements the `0220_Policy_Access_Control_and_Identity_Managemen
 ### 2.2 Detailed Workflow
 
 **Phase 1: HR Initiation (T-5 days)**
-1. HR creates employee record in {{ meta.hr.system }}
+1. HR creates employee record in {{ meta-handbook.hr_system }}
 2. HR defines:
    - Department, role, location
    - Supervisor, cost center
@@ -67,8 +67,8 @@ This guideline implements the `0220_Policy_Access_Control_and_Identity_Managemen
 **Phase 2: IT Provisioning (T-3 days)**
 1. **Account Creation:**
    - Active Directory / Azure AD account
-   - Email mailbox ({{ meta.email.system }})
-   - Username per schema: `{{ meta.naming.user_format }}` (e.g., firstname.lastname)
+   - Email mailbox ({{ meta-handbook.email_system }})
+   - Username per schema: `{{ meta-handbook.naming_user_format }}` (e.g., firstname.lastname)
    - Initial password (temporary, must be changed at first login)
 
 2. **Basic Access (automatic via role model):**
@@ -142,7 +142,7 @@ This guideline implements the `0220_Policy_Access_Control_and_Identity_Managemen
 ### 3.2 Detailed Workflow
 
 **Phase 1: HR Change**
-1. HR updates employee record in {{ meta.hr.system }}
+1. HR updates employee record in {{ meta-handbook.hr_system }}
 2. Changes: Department, role, supervisor, location
 3. Automatic notification to IT operations and previous/new supervisors
 
@@ -178,7 +178,7 @@ This guideline implements the `0220_Policy_Access_Control_and_Identity_Managemen
 
 ### 4.1 Process Overview
 
-**Trigger:** HR marks employee as leaving in {{ meta.hr.system }}
+**Trigger:** HR marks employee as leaving in {{ meta-handbook.hr_system }}
 
 **Timeline:**
 - **Planned Departure:** Deactivation on last working day
@@ -215,7 +215,7 @@ This guideline implements the `0220_Policy_Access_Control_and_Identity_Managemen
 **Phase 3: Post-Offboarding (T+30 days)**
 1. **Account Deletion:**
    - After 30 days: Final account deletion
-   - Email archiving per retention policy ({{ meta.retention.email_years }} years)
+   - Email archiving per retention policy ({{ meta-handbook.retention_email_years }} years)
    - Deletion of personal data (GDPR compliant)
 2. **License Release:**
    - Return of software licenses
@@ -249,7 +249,7 @@ This guideline implements the `0220_Policy_Access_Control_and_Identity_Managemen
 
 ### 5.1 Self-Service Portal
 
-**Access:** {{ meta.iam.portal_url }}
+**Access:** {{ meta-handbook.iam_portal_url }}
 
 **Functions:**
 - Request new access (applications, network drives, groups)
@@ -335,7 +335,7 @@ This guideline implements the `0220_Policy_Access_Control_and_Identity_Managemen
 **Additional Controls:**
 - **Four-Eyes Principle:** Two approvals required
 - **Just-in-Time (JIT) Access:** Privileges only when needed, time-limited
-- **Privileged Access Management (PAM):** Management via PAM system ({{ meta.security.pam_solution }})
+- **Privileged Access Management (PAM):** Management via PAM system ({{ meta-handbook.security_pam_solution }})
 - **Session Recording:** Recording of privileged sessions for audit
 
 ## 7. Technical Implementation
@@ -343,11 +343,11 @@ This guideline implements the `0220_Policy_Access_Control_and_Identity_Managemen
 ### 7.1 IAM Technology Stack
 
 **Systems:**
-- **Identity Provider:** {{ meta.iam.idp }} (e.g., Azure AD, Okta)
-- **HR System:** {{ meta.hr.system }} (e.g., SAP SuccessFactors, Workday)
-- **IAM Portal:** {{ meta.iam.portal }} (e.g., SailPoint, Saviynt)
-- **PAM System:** {{ meta.security.pam_solution }} (e.g., CyberArk, BeyondTrust)
-- **CMDB:** {{ meta.itsm.cmdb }} (e.g., ServiceNow, Jira Service Management)
+- **Identity Provider:** {{ meta-handbook.iam_idp }} (e.g., Azure AD, Okta)
+- **HR System:** {{ meta-handbook.hr_system }} (e.g., SAP SuccessFactors, Workday)
+- **IAM Portal:** {{ meta-handbook.iam_portal }} (e.g., SailPoint, Saviynt)
+- **PAM System:** {{ meta-handbook.security_pam_solution }} (e.g., CyberArk, BeyondTrust)
+- **CMDB:** {{ meta-handbook.itsm_cmdb }} (e.g., ServiceNow, Jira Service Management)
 
 **Integration:**
 - HR system → IAM system (automatic synchronization)
@@ -409,7 +409,7 @@ This guideline implements the `0220_Policy_Access_Control_and_Identity_Managemen
 - **NIST SP 800-63** - Digital Identity Guidelines
 
 **Approved by:**  
-{{ meta.ciso.name }}, CISO  
+{{ meta-organisation-roles.role_CISO }}, CISO  
 Date: {{ meta-handbook.modifydate }}
 
 **Next Review:** {{ meta-handbook.next_review }}
