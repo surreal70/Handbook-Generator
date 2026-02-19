@@ -215,26 +215,6 @@ Alle Template-Frameworks verwenden eine einheitliche Metadatenstruktur für kons
 - `helpers/validate_metadata.py` - Metadaten-Validierung
 - `helpers/generate_placeholder_matrix.py` - Platzhalter-Übersicht generieren
 
-### Service Directory Reorganisation
-
-Service-bezogene Templates sind in einem dedizierten Verzeichnis organisiert:
-
-```
-templates/
-├── de/
-│   └── service-directory/
-│       ├── email-service/        # E-Mail-Service-Beispiele
-│       └── service-templates/    # Allgemeine Service-Templates
-└── en/
-    └── service-directory/
-        └── service-templates/    # Allgemeine Service-Templates
-```
-
-**Vorteile:**
-- Klarere Repository-Struktur
-- Einfachere Wartung
-- Bessere Trennung von Framework- und Service-Templates
-
 ### Metadata Validation
 
 Validieren Sie Metadaten mit dem Validierungsskript:
