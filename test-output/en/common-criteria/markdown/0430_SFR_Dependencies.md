@@ -1,6 +1,6 @@
 # SFR Dependencies
 
-**Document-ID:** 0430
+**Document-ID:** COMMON-CRITERIA-0430
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

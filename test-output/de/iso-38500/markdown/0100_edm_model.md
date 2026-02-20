@@ -7,7 +7,7 @@ Classification: Internal
 
 # Evaluate-Direct-Monitor (EDM) Modell
 
-**Dokument-ID:** [FRAMEWORK]-0100
+**Dokument-ID:** ISO-38500-0100
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

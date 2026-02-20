@@ -1,6 +1,6 @@
 # Policy: Cryptography and Key Management
 
-**Document-ID:** [FRAMEWORK]-0260
+**Document-ID:** ISMS-0260
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

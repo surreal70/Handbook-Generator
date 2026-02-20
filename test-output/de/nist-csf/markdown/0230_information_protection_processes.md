@@ -7,7 +7,7 @@ Classification: Internal
 
 # Informationsschutz-Prozesse (PR.IP)
 
-**Dokument-ID:** [FRAMEWORK]-0230
+**Dokument-ID:** NIST-CSF-0230
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

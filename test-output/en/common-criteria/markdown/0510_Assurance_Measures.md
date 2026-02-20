@@ -1,6 +1,6 @@
 # Assurance Measures
 
-**Document-ID:** 0510
+**Document-ID:** COMMON-CRITERIA-0510
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

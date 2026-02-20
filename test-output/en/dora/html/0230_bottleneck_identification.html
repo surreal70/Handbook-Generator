@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0230 - Bottleneck Identification</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0230</div>
+            <h1>Bottleneck Identification</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0220_value_stream_mapping.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0240_lead_time_reduction_strategies.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: dora-0230</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="bottleneck-identification">Bottleneck Identification</h1>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0230
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="purpose">Purpose</h2>
+<p>This document describes methods for identifying and analyzing bottlenecks in the software delivery process.</p>
+<h2 id="scope">Scope</h2>
+<ul>
+<li>Bottleneck analysis methods</li>
+<li>Data collection and analysis</li>
+<li>Prioritization of constraints</li>
+<li>Solution approaches</li>
+</ul>
+<h2 id="organization-information">Organization Information</h2>
+<ul>
+<li><strong>Organization</strong>: [TODO]</li>
+<li><strong>Analysis Owner</strong>: [TODO]</li>
+</ul>
+<h2 id="bottleneck-analysis-methods">Bottleneck Analysis Methods</h2>
+<h3 id="theory-of-constraints">Theory of Constraints</h3>
+<p><strong>Core Principle</strong>: The throughput of a system is determined by its weakest point (bottleneck).</p>
+<p><strong>5-Step Process</strong>:
+1. Identify the bottleneck
+2. Exploit the bottleneck optimally
+3. Subordinate everything to the bottleneck
+4. Elevate the bottleneck
+5. Repeat the process</p>
+<h3 id="queuing-theory">Queuing Theory</h3>
+<p><strong>Little's Law</strong>:</p>
+<div class="codehilite"><pre><span></span><code>Lead Time = Work in Progress / Throughput
+</code></pre></div>
+
+<p><strong>Analysis</strong>:
+- Where do tasks accumulate?
+- Which steps have the longest queues?
+- Where is variability highest?</p>
+<h3 id="throughput-analysis">Throughput Analysis</h3>
+<p><strong>Metrics</strong>:
+- Deployments per time unit
+- Average processing time per step
+- Capacity per step
+- Utilization per step</p>
+<h2 id="data-collection">Data Collection</h2>
+<h3 id="process-metrics">Process Metrics</h3>
+<p><strong>For each process step capture</strong>:
+- Number of tasks in queue
+- Average wait time
+- Average processing time
+- Number of processors/resources
+- Utilization</p>
+<h3 id="analysis-tools">Analysis Tools</h3>
+<ul>
+<li><strong>CI/CD Analytics</strong>: Pipeline metrics</li>
+<li><strong>Issue Tracking</strong>: Ticket flow metrics</li>
+<li><strong>Version Control</strong>: Commit-to-deploy times</li>
+<li><strong>Monitoring</strong>: System performance metrics</li>
+</ul>
+<h2 id="common-bottlenecks">Common Bottlenecks</h2>
+<h3 id="1-code-review">1. Code Review</h3>
+<p><strong>Symptoms</strong>:
+- Long wait times for reviews
+- Large queue of open pull requests
+- Few reviewers for many developers</p>
+<p><strong>Solutions</strong>:
+- Train more reviewers
+- Smaller pull requests
+- Automated code analysis
+- Asynchronous reviews</p>
+<h3 id="2-test-execution">2. Test Execution</h3>
+<p><strong>Symptoms</strong>:
+- Long test run times
+- Flaky tests
+- Limited test infrastructure
+- Sequential test execution</p>
+<p><strong>Solutions</strong>:
+- Test parallelization
+- Test optimization
+- Cloud test infrastructure
+- Selective test execution</p>
+<h3 id="3-approval-processes">3. Approval Processes</h3>
+<p><strong>Symptoms</strong>:
+- Long wait times for approvals
+- Many approval levels
+- Limited approver availability
+- Manual approval processes</p>
+<p><strong>Solutions</strong>:
+- Automated approvals
+- Risk-based approvals
+- Delegated approvals
+- Self-service deployments</p>
+<h3 id="4-deployment-capacity">4. Deployment Capacity</h3>
+<p><strong>Symptoms</strong>:
+- Deployment windows
+- Limited deployment slots
+- Manual deployment steps
+- Shared deployment resources</p>
+<p><strong>Solutions</strong>:
+- Deployment automation
+- On-demand deployments
+- Parallel deployments
+- Self-service deployments</p>
+<h2 id="prioritization">Prioritization</h2>
+<h3 id="impact-assessment">Impact Assessment</h3>
+<p><strong>Criteria</strong>:
+- Frequency of bottleneck
+- Average delay
+- Number of affected teams
+- Business impact</p>
+<p><strong>Calculation</strong>:</p>
+<div class="codehilite"><pre><span></span><code>Impact Score = Frequency × Delay × Teams × Business Value
+</code></pre></div>
+
+<h3 id="solution-effort">Solution Effort</h3>
+<p><strong>Categories</strong>:
+- Quick wins (&lt; 1 week)
+- Medium-term (1-4 weeks)
+- Long-term (&gt; 1 month)</p>
+<h3 id="prioritization-matrix">Prioritization Matrix</h3>
+<div class="codehilite"><pre><span></span><code>High Impact, Low Effort → P1 (Immediate)
+High Impact, High Effort → P2 (Plan)
+Low Impact, Low Effort → P3 (When convenient)
+Low Impact, High Effort → P4 (Avoid)
+</code></pre></div>
+
+<h2 id="solution-approaches">Solution Approaches</h2>
+<h3 id="increase-capacity">Increase Capacity</h3>
+<ul>
+<li>More resources</li>
+<li>Better tools</li>
+<li>Automation</li>
+<li>Parallelization</li>
+</ul>
+<h3 id="reduce-demand">Reduce Demand</h3>
+<ul>
+<li>Reduce batch sizes</li>
+<li>Prioritization</li>
+<li>Eliminate unnecessary steps</li>
+<li>Self-service</li>
+</ul>
+<h3 id="optimize-process">Optimize Process</h3>
+<ul>
+<li>Streamlining</li>
+<li>Standardization</li>
+<li>Automation</li>
+<li>Continuous improvement</li>
+</ul>
+<h2 id="monitoring-and-tracking">Monitoring and Tracking</h2>
+<h3 id="kpis">KPIs</h3>
+<ul>
+<li>Bottleneck duration</li>
+<li>Queue length</li>
+<li>Throughput</li>
+<li>Lead time</li>
+</ul>
+<h3 id="dashboards">Dashboards</h3>
+<ul>
+<li>Real-time monitoring</li>
+<li>Trend analyses</li>
+<li>Alerts on degradation</li>
+</ul>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0220_value_stream_mapping.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0240_lead_time_reduction_strategies.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

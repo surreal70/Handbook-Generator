@@ -20,22 +20,30 @@
         </nav>
         
         <main>
-<hr />
 <p>Document-ID: nist-csf-0030
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
-Status: Draft
-Classification: Internal
-Last Update: {{ meta.date }}</p>
-<hr />
+Owner: [TODO]</p>
+<p>Status: Draft
+Classification: Internal</p>
 <h1 id="risk-management-strategy-gvrm">Risk Management Strategy (GV.RM)</h1>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0030
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
 <h2 id="purpose">Purpose</h2>
 <p>This document defines the organization's cybersecurity risk management strategy, including risk appetite, risk assessment methodology, and risk treatment approaches.</p>
 <h2 id="scope">Scope</h2>
-<p>{{ meta.scope }}</p>
+<p>[TODO]</p>
 <h2 id="risk-management-framework">Risk Management Framework</h2>
 <h3 id="risk-management-approach">Risk Management Approach</h3>
-<p>{{ meta.organization }} follows a risk-based approach to cybersecurity that:
+<p>AdminSend GmbH follows a risk-based approach to cybersecurity that:
 - Aligns business objectives with security requirements
 - Enables continuous risk assessment and monitoring
 - Supports informed decision-making
@@ -49,7 +57,7 @@ Last Update: {{ meta.date }}</p>
 </ol>
 <h2 id="risk-appetite-and-tolerance">Risk Appetite and Tolerance</h2>
 <h3 id="risk-appetite-statement">Risk Appetite Statement</h3>
-<p>{{ meta.risk_appetite_statement }}</p>
+<p>{{ meta-handbook.risk_appetite_statement }}</p>
 <h3 id="risk-tolerance-levels">Risk Tolerance Levels</h3>
 <table>
 <thead>
@@ -91,11 +99,11 @@ Last Update: {{ meta.date }}</p>
 - Low (2): 20-40% probability
 - Very low (1): &lt; 20% probability</p>
 <p><strong>Impact:</strong>
-- Very high (5): &gt; {{ meta.impact_threshold_critical }}
-- High (4): {{ meta.impact_threshold_high }}
-- Medium (3): {{ meta.impact_threshold_medium }}
-- Low (2): {{ meta.impact_threshold_low }}
-- Very low (1): &lt; {{ meta.impact_threshold_minimal }}</p>
+- Very high (5): &gt; {{ meta-handbook.impact_threshold_critical }}
+- High (4): {{ meta-handbook.impact_threshold_high }}
+- Medium (3): {{ meta-handbook.impact_threshold_medium }}
+- Low (2): {{ meta-handbook.impact_threshold_low }}
+- Very low (1): &lt; {{ meta-handbook.impact_threshold_minimal }}</p>
 <h3 id="risk-matrix">Risk Matrix</h3>
 <table>
 <thead>
@@ -245,26 +253,6 @@ Last Update: {{ meta.date }}</p>
 <li>0100_asset_management.md (Identify)</li>
 <li>0130_risk_assessment.md (Identify)</li>
 </ul>
-<hr />
-<p><strong>Document History:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Version</th>
-<th>Date</th>
-<th>Author</th>
-<th>Changes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1.0</td>
-<td>{{ meta.date }}</td>
-<td>Andreas Huemmer [andreas.huemmer@adminsend.de]</td>
-<td>Initial creation</td>
-</tr>
-</tbody>
-</table>
         </main>
         
         <nav class="page-nav">

@@ -7,7 +7,7 @@ Classification: Internal
 
 # Detection Processes (DE.DP)
 
-**Document-ID:** [FRAMEWORK]-0320
+**Document-ID:** NIST-CSF-0320
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

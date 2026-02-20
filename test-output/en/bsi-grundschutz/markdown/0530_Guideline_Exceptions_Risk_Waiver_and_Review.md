@@ -1,6 +1,6 @@
 # Guideline: Exceptions Risk Waiver and Review
 
-**Document-ID:** [FRAMEWORK]-0530
+**Document-ID:** BSI-GRUNDSCHUTZ-0530
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

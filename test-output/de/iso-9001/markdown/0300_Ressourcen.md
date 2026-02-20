@@ -1,6 +1,6 @@
 # Ressourcen
 
-**Dokument-ID:** 0300
+**Dokument-ID:** ISO-9001-0300
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

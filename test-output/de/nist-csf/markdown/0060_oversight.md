@@ -7,7 +7,7 @@ Classification: Internal
 
 # Aufsicht und Überwachung (GV.OV)
 
-**Dokument-ID:** [FRAMEWORK]-0060
+**Dokument-ID:** NIST-CSF-0060
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

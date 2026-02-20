@@ -1,6 +1,6 @@
 # Richtlinie: Incident Response Eskalation und Forensik
 
-**Dokument-ID:** 0330
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0330
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

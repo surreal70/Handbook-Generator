@@ -6,7 +6,7 @@ Classification: Internal
 
 # Board-Aufsicht und Unabhängigkeit
 
-**Dokument-ID:** [FRAMEWORK]-0050
+**Dokument-ID:** COSO-0050
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

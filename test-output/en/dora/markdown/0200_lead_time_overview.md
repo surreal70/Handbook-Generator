@@ -6,7 +6,7 @@ Classification: Internal
 
 # Lead Time Overview
 
-**Document-ID:** [FRAMEWORK]-0200
+**Document-ID:** DORA-0200
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

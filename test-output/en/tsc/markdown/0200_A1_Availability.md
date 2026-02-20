@@ -1,6 +1,6 @@
 # A1: Availability
 
-**Document-ID:** [FRAMEWORK]-0200
+**Document-ID:** TSC-0200
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

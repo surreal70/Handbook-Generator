@@ -1,6 +1,6 @@
 # Anhang: Assetinventar (Template)
 
-**Dokument-ID:** 0710
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0710
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

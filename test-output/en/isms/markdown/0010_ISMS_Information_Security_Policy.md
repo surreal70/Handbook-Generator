@@ -1,6 +1,6 @@
 # ISMS Policy / Information Security Policy
 
-**Document-ID:** [FRAMEWORK]-0010
+**Document-ID:** ISMS-0010
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

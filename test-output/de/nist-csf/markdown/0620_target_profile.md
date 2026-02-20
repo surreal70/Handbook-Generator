@@ -7,7 +7,7 @@ Classification: Internal
 
 # Zielprofil
 
-**Dokument-ID:** [FRAMEWORK]-0620
+**Dokument-ID:** NIST-CSF-0620
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

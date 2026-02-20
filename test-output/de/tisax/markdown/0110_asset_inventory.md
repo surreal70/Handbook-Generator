@@ -6,7 +6,7 @@ Classification: Internal
 
 # Asset-Inventar
 
-**Dokument-ID:** [FRAMEWORK]-0110
+**Dokument-ID:** TISAX-0110
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

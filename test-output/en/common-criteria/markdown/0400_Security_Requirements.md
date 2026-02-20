@@ -1,6 +1,6 @@
 # Security Requirements
 
-**Document-ID:** 0400
+**Document-ID:** COMMON-CRITERIA-0400
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

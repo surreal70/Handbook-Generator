@@ -1,6 +1,6 @@
 # Verhaltensregeln und Zertifizierung
 
-**Dokument-ID:** 0350
+**Dokument-ID:** GDPR-0350
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

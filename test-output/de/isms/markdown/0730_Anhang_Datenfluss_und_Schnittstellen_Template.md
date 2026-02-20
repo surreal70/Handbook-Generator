@@ -1,6 +1,6 @@
 # Anhang C: Datenfluss und Schnittstellen
 
-**Dokument-ID:** [FRAMEWORK]-0730
+**Dokument-ID:** ISMS-0730
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

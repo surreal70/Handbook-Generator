@@ -1,6 +1,6 @@
 # Risk Criteria and Risk Acceptance
 
-**Document-ID:** [FRAMEWORK]-0070
+**Document-ID:** ISMS-0070
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

@@ -7,7 +7,7 @@ Classification: Internal
 
 # Awareness und Schulung (PR.AT)
 
-**Dokument-ID:** [FRAMEWORK]-0210
+**Dokument-ID:** NIST-CSF-0210
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

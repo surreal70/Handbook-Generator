@@ -6,7 +6,7 @@ Classification: Internal
 
 # Datenschutz und Schutz personenbezogener Daten
 
-**Dokument-ID:** [FRAMEWORK]-0380
+**Dokument-ID:** TISAX-0380
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

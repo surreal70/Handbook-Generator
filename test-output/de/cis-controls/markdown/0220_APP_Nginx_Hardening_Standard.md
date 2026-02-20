@@ -1,6 +1,6 @@
 # APP Hardening Standard: Nginx
 
-**Dokument-ID:** 0220
+**Dokument-ID:** CIS-CONTROLS-0220
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

@@ -21,13 +21,24 @@
         
         <main>
 <h1 id="runbooks-und-standardoperationen">Runbooks und Standardoperationen</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0240
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
 <h2 id="ubersicht">Übersicht</h2>
 <p>Dieses Dokument enthält Standard-Runbooks, Schritt-für-Schritt-Anleitungen und Troubleshooting-Guides für häufige Betriebsaufgaben. Ziel ist es, konsistente und effiziente Durchführung von Standardoperationen zu gewährleisten.</p>
-<p><strong>Dokumentverantwortlicher:</strong> IT Operations Manager<br />
-<strong>Genehmigt durch:</strong> CIO<br />
-<strong>Version:</strong> 1.0.0<br />
+<p><strong>Dokumentverantwortlicher:</strong> [TODO]<br />
+<strong>Genehmigt durch:</strong> [TODO]<br />
+<strong>Version:</strong> 0<br />
 <strong>Organisation:</strong> AdminSend GmbH</p>
-<hr />
 <h2 id="runbook-struktur">Runbook-Struktur</h2>
 <h3 id="runbook-template">Runbook-Template</h3>
 <p>Jedes Runbook folgt dieser standardisierten Struktur:</p>
@@ -74,12 +85,11 @@
 <span class="k">-</span><span class="w"> </span>[Tickets]
 </code></pre></div>
 
-<hr />
 <h2 id="system-management-runbooks">System-Management Runbooks</h2>
 <h3 id="rb-001-server-neustart">RB-001: Server-Neustart</h3>
 <p><strong>Runbook-ID:</strong> RB-001<br />
 <strong>Version:</strong> 1.0<br />
-<strong>Verantwortlich:</strong> Andreas Huemmer</p>
+<strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</p>
 <h4 id="zweck">Zweck</h4>
 <p>Kontrollierter Neustart eines Servers zur Behebung von Problemen oder nach Updates.</p>
 <h4 id="voraussetzungen">Voraussetzungen</h4>
@@ -155,11 +165,10 @@
 <li><strong>Problem:</strong> Services starten nicht</li>
 <li><strong>Lösung:</strong> Manuell starten, Logs prüfen, Dependencies prüfen</li>
 </ul>
-<hr />
 <h3 id="rb-002-service-neustart">RB-002: Service-Neustart</h3>
 <p><strong>Runbook-ID:</strong> RB-002<br />
 <strong>Version:</strong> 1.0<br />
-<strong>Verantwortlich:</strong> Andreas Huemmer</p>
+<strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</p>
 <h4 id="zweck_1">Zweck</h4>
 <p>Neustart eines einzelnen Services ohne System-Neustart.</p>
 <h4 id="voraussetzungen_1">Voraussetzungen</h4>
@@ -222,11 +231,10 @@
 <li>[ ] Port ist gebunden</li>
 <li>[ ] Anwendung antwortet</li>
 </ul>
-<hr />
 <h3 id="rb-003-disk-space-cleanup">RB-003: Disk-Space-Cleanup</h3>
 <p><strong>Runbook-ID:</strong> RB-003<br />
 <strong>Version:</strong> 1.0<br />
-<strong>Verantwortlich:</strong> Andreas Huemmer</p>
+<strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</p>
 <h4 id="zweck_2">Zweck</h4>
 <p>Freigabe von Speicherplatz bei kritischer Disk-Auslastung.</p>
 <h4 id="voraussetzungen_2">Voraussetzungen</h4>
@@ -297,7 +305,6 @@
 <li>[ ] Keine wichtigen Daten gelöscht</li>
 <li>[ ] Monitoring-Alerts gelöst</li>
 </ul>
-<hr />
 <h2 id="datenbank-management-runbooks">Datenbank-Management Runbooks</h2>
 <h3 id="rb-010-datenbank-backup">RB-010: Datenbank-Backup</h3>
 <p><strong>Runbook-ID:</strong> RB-010<br />
@@ -345,7 +352,6 @@ mongodump<span class="w"> </span>--db<span class="w"> </span><span class="o">[</
 <li>[ ] Backup-Integrität geprüft</li>
 <li>[ ] Backup-Speicherort dokumentiert</li>
 </ul>
-<hr />
 <h3 id="rb-011-datenbank-restore">RB-011: Datenbank-Restore</h3>
 <p><strong>Runbook-ID:</strong> RB-011<br />
 <strong>Version:</strong> 1.0<br />
@@ -410,12 +416,11 @@ mongodump<span class="w"> </span>--db<span class="w"> </span><span class="o">[</
 <li>[ ] Anwendung funktioniert</li>
 <li>[ ] Keine Fehler in Logs</li>
 </ul>
-<hr />
 <h2 id="netzwerk-management-runbooks">Netzwerk-Management Runbooks</h2>
 <h3 id="rb-020-firewall-regel-hinzufugen">RB-020: Firewall-Regel hinzufügen</h3>
 <p><strong>Runbook-ID:</strong> RB-020<br />
 <strong>Version:</strong> 1.0<br />
-<strong>Verantwortlich:</strong> Thomas Weber</p>
+<strong>Verantwortlich:</strong> [TODO]</p>
 <h4 id="zweck_5">Zweck</h4>
 <p>Hinzufügen einer neuen Firewall-Regel.</p>
 <h4 id="voraussetzungen_5">Voraussetzungen</h4>
@@ -475,12 +480,11 @@ mongodump<span class="w"> </span>--db<span class="w"> </span><span class="o">[</
 <li>[ ] Keine unerwünschten Nebeneffekte</li>
 <li>[ ] Regel dokumentiert</li>
 </ul>
-<hr />
 <h2 id="benutzer-management-runbooks">Benutzer-Management Runbooks</h2>
 <h3 id="rb-030-benutzer-account-erstellen">RB-030: Benutzer-Account erstellen</h3>
 <p><strong>Runbook-ID:</strong> RB-030<br />
 <strong>Version:</strong> 1.0<br />
-<strong>Verantwortlich:</strong> Andreas Huemmer</p>
+<strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</p>
 <h4 id="zweck_6">Zweck</h4>
 <p>Erstellung eines neuen Benutzer-Accounts.</p>
 <h4 id="voraussetzungen_6">Voraussetzungen</h4>
@@ -546,11 +550,10 @@ mongodump<span class="w"> </span>--db<span class="w"> </span><span class="o">[</
 <li>[ ] Benutzer informiert</li>
 <li>[ ] Dokumentiert in CMDB</li>
 </ul>
-<hr />
 <h3 id="rb-031-benutzer-account-deaktivieren">RB-031: Benutzer-Account deaktivieren</h3>
 <p><strong>Runbook-ID:</strong> RB-031<br />
 <strong>Version:</strong> 1.0<br />
-<strong>Verantwortlich:</strong> Andreas Huemmer</p>
+<strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</p>
 <h4 id="zweck_7">Zweck</h4>
 <p>Deaktivierung eines Benutzer-Accounts (z.B. bei Austritt).</p>
 <h4 id="voraussetzungen_7">Voraussetzungen</h4>
@@ -612,12 +615,11 @@ mongodump<span class="w"> </span>--db<span class="w"> </span><span class="o">[</
 <li>[ ] Daten gesichert</li>
 <li>[ ] Dokumentiert</li>
 </ul>
-<hr />
 <h2 id="monitoring-und-alerting-runbooks">Monitoring und Alerting Runbooks</h2>
 <h3 id="rb-040-alert-untersuchung">RB-040: Alert-Untersuchung</h3>
 <p><strong>Runbook-ID:</strong> RB-040<br />
 <strong>Version:</strong> 1.0<br />
-<strong>Verantwortlich:</strong> Andreas Huemmer</p>
+<strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</p>
 <h4 id="zweck_8">Zweck</h4>
 <p>Systematische Untersuchung eines Monitoring-Alerts.</p>
 <h4 id="voraussetzungen_8">Voraussetzungen</h4>
@@ -719,12 +721,11 @@ mongodump<span class="w"> </span>--db<span class="w"> </span><span class="o">[</
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="backup-und-recovery-runbooks">Backup und Recovery Runbooks</h2>
 <h3 id="rb-050-backup-verifikation">RB-050: Backup-Verifikation</h3>
 <p><strong>Runbook-ID:</strong> RB-050<br />
 <strong>Version:</strong> 1.0<br />
-<strong>Verantwortlich:</strong> Andreas Huemmer</p>
+<strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</p>
 <h4 id="zweck_9">Zweck</h4>
 <p>Regelmäßige Überprüfung der Backup-Integrität.</p>
 <h4 id="voraussetzungen_9">Voraussetzungen</h4>
@@ -775,7 +776,6 @@ mongodump<span class="w"> </span>--db<span class="w"> </span><span class="o">[</
 <li>[ ] Restore-Test erfolgreich</li>
 <li>[ ] Dokumentiert</li>
 </ul>
-<hr />
 <h2 id="troubleshooting-guides">Troubleshooting-Guides</h2>
 <h3 id="allgemeine-troubleshooting-methodik">Allgemeine Troubleshooting-Methodik</h3>
 <ol>
@@ -845,7 +845,6 @@ journalctl<span class="w"> </span>-u<span class="w"> </span><span class="o">[</s
 2. Dependencies prüfen
 3. Berechtigungen prüfen
 4. Ports prüfen (bereits belegt?)</p>
-<hr />
 <h4 id="problem-hohe-cpu-last">Problem: Hohe CPU-Last</h4>
 <p><strong>Symptome:</strong>
 - CPU-Auslastung &gt; 80%
@@ -864,7 +863,6 @@ ps<span class="w"> </span>aux<span class="w"> </span><span class="p">|</span><sp
 2. Ressourcen-Limits setzen
 3. Skalierung prüfen
 4. Code-Optimierung</p>
-<hr />
 <h4 id="problem-disk-voll">Problem: Disk voll</h4>
 <p><strong>Symptome:</strong>
 - Disk-Auslastung &gt; 90%
@@ -883,7 +881,6 @@ find<span class="w"> </span>/<span class="w"> </span>-type<span class="w"> </spa
 2. Temporäre Dateien löschen
 3. Alte Backups archivieren
 4. Storage erweitern</p>
-<hr />
 <h2 id="prozesse-und-verantwortlichkeiten">Prozesse und Verantwortlichkeiten</h2>
 <h3 id="raci-matrix">RACI-Matrix</h3>
 <table>
@@ -930,7 +927,6 @@ find<span class="w"> </span>/<span class="w"> </span>-type<span class="w"> </spa
 <blockquote>
 <p><strong>Legende:</strong> R = Responsible, A = Accountable, C = Consulted, I = Informed</p>
 </blockquote>
-<hr />
 <h2 id="compliance-und-standards">Compliance und Standards</h2>
 <h3 id="relevante-standards">Relevante Standards</h3>
 <ul>
@@ -938,7 +934,6 @@ find<span class="w"> </span>/<span class="w"> </span>-type<span class="w"> </spa
 <li><strong>ISO 20000:</strong> Clause 8.1 - Operational Planning and Control</li>
 <li><strong>COBIT 2019:</strong> DSS01 - Managed Operations</li>
 </ul>
-<hr />
 <h2 id="anhang">Anhang</h2>
 <h3 id="glossar">Glossar</h3>
 <table>
@@ -969,10 +964,9 @@ find<span class="w"> </span>/<span class="w"> </span>-type<span class="w"> </spa
 <li>ISO/IEC 20000-1:2018</li>
 <li>COBIT 2019 Framework</li>
 </ul>
-<hr />
-<p><strong>Letzte Aktualisierung:</strong> {{ meta.date }}<br />
+<p><strong>Letzte Aktualisierung:</strong> {{ meta-handbook.date }}<br />
 <strong>Nächste Review:</strong> [TODO: Datum]<br />
-<strong>Kontakt:</strong> andreas.huemmer@adminsend.de</p>
+<strong>Kontakt:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager_email }}</p>
         </main>
         
         <nav class="page-nav">

@@ -6,7 +6,7 @@ Classification: Internal
 
 # Board Oversight
 
-**Document-ID:** [FRAMEWORK]-0120
+**Document-ID:** SOC1-0120
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

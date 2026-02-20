@@ -21,19 +21,29 @@
         
         <main>
 <h1 id="bekannte-probleme-und-faq">Bekannte Probleme und FAQ</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0260
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
 <h2 id="ubersicht">Übersicht</h2>
 <p>Dieses Dokument enthält bekannte Probleme und Workarounds, häufig gestellte Fragen (FAQ) sowie Troubleshooting-Tipps für den IT-Service. Ziel ist es, schnelle Lösungen für wiederkehrende Probleme bereitzustellen und die Effizienz des Supports zu erhöhen.</p>
-<p><strong>Dokumentverantwortlicher:</strong> IT Operations Manager<br />
-<strong>Genehmigt durch:</strong> CIO<br />
-<strong>Version:</strong> 1.0.0<br />
+<p><strong>Dokumentverantwortlicher:</strong> [TODO]<br />
+<strong>Genehmigt durch:</strong> [TODO]<br />
+<strong>Version:</strong> 0<br />
 <strong>Organisation:</strong> AdminSend GmbH</p>
-<hr />
 <h2 id="bekannte-probleme">Bekannte Probleme</h2>
 <h3 id="problem-tracking">Problem-Tracking</h3>
 <p>Alle bekannten Probleme werden im Ticketing-System mit dem Label "Known Issue" erfasst und hier dokumentiert.</p>
-<p><strong>Verantwortlich:</strong> Andreas Huemmer<br />
+<p><strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}<br />
 <strong>Review-Zyklus:</strong> Monatlich</p>
-<hr />
 <h3 id="ki-001-todo-problem-titel">KI-001: [TODO: Problem-Titel]</h3>
 <p><strong>Status:</strong> Offen / In Bearbeitung / Gelöst<br />
 <strong>Priorität:</strong> P1 (Kritisch) / P2 (Hoch) / P3 (Mittel) / P4 (Niedrig)<br />
@@ -75,7 +85,6 @@
 <li>[TODO: Datum] - Update kommuniziert</li>
 <li>[TODO: Datum] - Lösung kommuniziert</li>
 </ul>
-<hr />
 <h3 id="ki-002-intermittierende-netzwerk-timeouts">KI-002: Intermittierende Netzwerk-Timeouts</h3>
 <p><strong>Status:</strong> In Bearbeitung<br />
 <strong>Priorität:</strong> P2 (Hoch)<br />
@@ -109,11 +118,10 @@
 <li><strong>Status:</strong> Geplant</li>
 <li><strong>ETA:</strong> Q2 2026</li>
 <li><strong>Maßnahme:</strong> Upgrade des Core-Switches auf höhere Bandbreite</li>
-<li><strong>Verantwortlich:</strong> Andreas Huemmer</li>
+<li><strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</li>
 </ul>
 <h4 id="betroffene-benutzer_1">Betroffene Benutzer</h4>
 <p>Alle internen Benutzer während Backup-Zeiten</p>
-<hr />
 <h3 id="ki-003-langsame-datenbank-queries">KI-003: Langsame Datenbank-Queries</h3>
 <p><strong>Status:</strong> Gelöst<br />
 <strong>Priorität:</strong> P2 (Hoch)<br />
@@ -153,19 +161,17 @@
 <li>CPU-Last auf DB-Server normalisiert</li>
 <li>Keine Timeouts mehr</li>
 </ul>
-<hr />
 <h2 id="haufig-gestellte-fragen-faq">Häufig gestellte Fragen (FAQ)</h2>
 <h3 id="allgemeine-fragen">Allgemeine Fragen</h3>
 <h4 id="f-wie-erreiche-ich-den-it-support">F: Wie erreiche ich den IT-Support?</h4>
 <p><strong>A:</strong> Der IT-Support ist über folgende Kanäle erreichbar:
-- <strong>E-Mail:</strong> julia.becker@adminsend.de
-- <strong>Telefon:</strong> +49 89 12345678-111
+- <strong>E-Mail:</strong> {{ meta-organisation-roles.role_Service_Desk_Lead_email }}
+- <strong>Telefon:</strong> {{ meta-organisation-roles.role_Service_Desk_Lead_phone }}
 - <strong>Ticketing-System:</strong> [TODO: URL]
 - <strong>Chat:</strong> [TODO: Chat-Kanal]</p>
 <p><strong>Support-Zeiten:</strong>
 - Mo-Fr: 08:00-18:00 Uhr
 - 24/7 für kritische Incidents (P1)</p>
-<hr />
 <h4 id="f-wie-erstelle-ich-ein-support-ticket">F: Wie erstelle ich ein Support-Ticket?</h4>
 <p><strong>A:</strong> Support-Tickets können über folgende Wege erstellt werden:</p>
 <ol>
@@ -179,7 +185,7 @@
 <li>
 <p><strong>E-Mail:</strong></p>
 </li>
-<li>E-Mail an julia.becker@adminsend.de</li>
+<li>E-Mail an {{ meta-organisation-roles.role_Service_Desk_Lead_email }}</li>
 <li>Betreff: Kurze Problembeschreibung</li>
 <li>
 <p>Inhalt: Detaillierte Beschreibung, Screenshots</p>
@@ -187,11 +193,10 @@
 <li>
 <p><strong>Telefon:</strong></p>
 </li>
-<li>+49 89 12345678-111 anrufen</li>
+<li>{{ meta-organisation-roles.role_Service_Desk_Lead_phone }} anrufen</li>
 <li>Problem schildern</li>
 <li>Ticket-Nummer notieren</li>
 </ol>
-<hr />
 <h4 id="f-wie-priorisiert-der-support-tickets">F: Wie priorisiert der Support Tickets?</h4>
 <p><strong>A:</strong> Tickets werden nach folgenden Prioritäten bearbeitet:</p>
 <table>
@@ -230,7 +235,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h3 id="zugriff-und-authentifizierung">Zugriff und Authentifizierung</h3>
 <h4 id="f-ich-habe-mein-passwort-vergessen-was-soll-ich-tun">F: Ich habe mein Passwort vergessen. Was soll ich tun?</h4>
 <p><strong>A:</strong> Passwort-Reset über Self-Service-Portal:</p>
@@ -242,7 +246,6 @@
 <li>Neues Passwort setzen</li>
 </ol>
 <p><strong>Alternativ:</strong> IT-Support kontaktieren</p>
-<hr />
 <h4 id="f-wie-richte-ich-mfa-multi-faktor-authentifizierung-ein">F: Wie richte ich MFA (Multi-Faktor-Authentifizierung) ein?</h4>
 <p><strong>A:</strong> MFA-Einrichtung:</p>
 <ol>
@@ -256,7 +259,6 @@
 <li>MFA testen</li>
 </ol>
 <p><strong>Wichtig:</strong> Backup-Codes an sicherem Ort aufbewahren!</p>
-<hr />
 <h4 id="f-ich-kann-mich-nicht-per-vpn-verbinden-was-kann-ich-tun">F: Ich kann mich nicht per VPN verbinden. Was kann ich tun?</h4>
 <p><strong>A:</strong> VPN-Troubleshooting:</p>
 <ol>
@@ -290,7 +292,6 @@
 - VPN-Client-Version
 - Fehlermeldung (Screenshot)
 - Zeitpunkt des Problems</p>
-<hr />
 <h3 id="anwendungen">Anwendungen</h3>
 <h4 id="f-die-anwendung-ladt-sehr-langsam-was-kann-ich-tun">F: Die Anwendung lädt sehr langsam. Was kann ich tun?</h4>
 <p><strong>A:</strong> Performance-Troubleshooting:</p>
@@ -333,7 +334,6 @@
 - Betroffene Anwendung
 - Zeitpunkt des Problems
 - Screenshot</p>
-<hr />
 <h4 id="f-ich-erhalte-einen-500-internal-server-error-was-bedeutet-das">F: Ich erhalte einen "500 Internal Server Error". Was bedeutet das?</h4>
 <p><strong>A:</strong> Ein 500-Fehler bedeutet, dass ein Problem auf dem Server aufgetreten ist.</p>
 <p><strong>Sofortmaßnahmen:</strong>
@@ -350,7 +350,6 @@
 - Server-Logs prüfen
 - Anwendungs-Logs prüfen
 - Monitoring-Alerts prüfen</p>
-<hr />
 <h3 id="e-mail">E-Mail</h3>
 <h4 id="f-ich-kann-keine-e-mails-senden-was-soll-ich-tun">F: Ich kann keine E-Mails senden. Was soll ich tun?</h4>
 <p><strong>A:</strong> E-Mail-Versand-Troubleshooting:</p>
@@ -387,7 +386,6 @@
 <li>Wurde E-Mail als Spam markiert?</li>
 </ol>
 <p><strong>Wenn Problem weiterhin besteht:</strong> IT-Support kontaktieren</p>
-<hr />
 <h4 id="f-ich-erhalte-viele-spam-e-mails-was-kann-ich-tun">F: Ich erhalte viele Spam-E-Mails. Was kann ich tun?</h4>
 <p><strong>A:</strong> Spam-Reduzierung:</p>
 <ol>
@@ -417,9 +415,8 @@
 <p><strong>Bei verdächtigen E-Mails:</strong>
 - <strong>NICHT</strong> auf Links klicken
 - <strong>NICHT</strong> Anhänge öffnen
-- An thomas.weber@adminsend.de weiterleiten
+- An {{ meta-organisation-roles.role_CISO_email }} weiterleiten
 - E-Mail löschen</p>
-<hr />
 <h3 id="dateien-und-storage">Dateien und Storage</h3>
 <h4 id="f-ich-habe-versehentlich-eine-datei-geloscht-kann-sie-wiederhergestellt-werden">F: Ich habe versehentlich eine Datei gelöscht. Kann sie wiederhergestellt werden?</h4>
 <p><strong>A:</strong> Datei-Wiederherstellung:</p>
@@ -449,7 +446,6 @@
 - Tägliche Backups: 30 Tage
 - Wöchentliche Backups: 90 Tage
 - Monatliche Backups: 1 Jahr</p>
-<hr />
 <h4 id="f-mein-netzwerk-laufwerk-ist-voll-was-soll-ich-tun">F: Mein Netzwerk-Laufwerk ist voll. Was soll ich tun?</h4>
 <p><strong>A:</strong> Storage-Management:</p>
 <ol>
@@ -487,7 +483,6 @@
 - Standard-Benutzer: [TODO: Größe]
 - Power-User: [TODO: Größe]
 - Projekt-Shares: [TODO: Größe]</p>
-<hr />
 <h3 id="hardware">Hardware</h3>
 <h4 id="f-mein-computer-ist-sehr-langsam-was-kann-ich-tun">F: Mein Computer ist sehr langsam. Was kann ich tun?</h4>
 <p><strong>A:</strong> Performance-Optimierung:</p>
@@ -527,7 +522,6 @@
 - Ticket erstellen
 - Hardware-Upgrade prüfen
 - Neuinstallation erwägen</p>
-<hr />
 <h4 id="f-wie-beantrage-ich-neue-hardware">F: Wie beantrage ich neue Hardware?</h4>
 <p><strong>A:</strong> Hardware-Anforderung:</p>
 <ol>
@@ -542,7 +536,7 @@
 </li>
 <li>Manager-Genehmigung erforderlich</li>
 <li>
-<p>Budget-Prüfung durch Maria Müller</p>
+<p>Budget-Prüfung durch [TODO]</p>
 </li>
 <li>
 <p><strong>Beschaffung:</strong></p>
@@ -562,7 +556,6 @@
 - Desktop: [TODO: Modell]
 - Monitor: [TODO: Modell]
 - Peripherie: Maus, Tastatur, Headset</p>
-<hr />
 <h2 id="troubleshooting-tipps">Troubleshooting-Tipps</h2>
 <h3 id="allgemeine-troubleshooting-schritte">Allgemeine Troubleshooting-Schritte</h3>
 <ol>
@@ -608,7 +601,6 @@
 <li>Ticket erstellen</li>
 <li>IT-Support kontaktieren</li>
 </ol>
-<hr />
 <h3 id="browser-probleme">Browser-Probleme</h3>
 <p><strong>Symptome:</strong>
 - Seite lädt nicht
@@ -621,7 +613,6 @@
 4. Inkognito-Modus testen
 5. Anderen Browser testen
 6. Browser neu installieren</p>
-<hr />
 <h3 id="netzwerk-probleme">Netzwerk-Probleme</h3>
 <p><strong>Symptome:</strong>
 - Keine Verbindung
@@ -634,7 +625,6 @@
 4. IP-Konfiguration erneuern (ipconfig /renew)
 5. DNS-Cache leeren (ipconfig /flushdns)
 6. VPN-Verbindung prüfen</p>
-<hr />
 <h3 id="anwendungs-probleme">Anwendungs-Probleme</h3>
 <p><strong>Symptome:</strong>
 - Anwendung startet nicht
@@ -647,7 +637,6 @@
 4. Updates installieren
 5. Kompatibilitätsmodus testen (Windows)
 6. Logs prüfen</p>
-<hr />
 <h2 id="self-service-ressourcen">Self-Service-Ressourcen</h2>
 <h3 id="dokumentation">Dokumentation</h3>
 <ul>
@@ -667,12 +656,11 @@
 <li><strong>Webinare:</strong> [TODO: Webinar-Kalender]</li>
 <li><strong>Präsenz-Schulungen:</strong> Anfrage über IT-Support</li>
 </ul>
-<hr />
 <h2 id="feedback-und-verbesserungen">Feedback und Verbesserungen</h2>
 <h3 id="feedback-geben">Feedback geben</h3>
 <p>Haben Sie Vorschläge zur Verbesserung dieses Dokuments oder der IT-Services?</p>
 <p><strong>Kontakt:</strong>
-- <strong>E-Mail:</strong> andreas.huemmer@adminsend.de
+- <strong>E-Mail:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
 - <strong>Feedback-Formular:</strong> [TODO: Formular-URL]</p>
 <h3 id="dokument-updates">Dokument-Updates</h3>
 <p>Dieses Dokument wird regelmäßig aktualisiert basierend auf:
@@ -681,8 +669,7 @@
 - Benutzer-Feedback
 - Prozessverbesserungen</p>
 <p><strong>Review-Zyklus:</strong> Monatlich<br />
-<strong>Verantwortlich:</strong> Andreas Huemmer</p>
-<hr />
+<strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</p>
 <h2 id="prozesse-und-verantwortlichkeiten">Prozesse und Verantwortlichkeiten</h2>
 <h3 id="raci-matrix">RACI-Matrix</h3>
 <table>
@@ -736,7 +723,6 @@
 <blockquote>
 <p><strong>Legende:</strong> R = Responsible, A = Accountable, C = Consulted, I = Informed</p>
 </blockquote>
-<hr />
 <h2 id="compliance-und-standards">Compliance und Standards</h2>
 <h3 id="relevante-standards">Relevante Standards</h3>
 <ul>
@@ -744,7 +730,6 @@
 <li><strong>ISO 20000:</strong> Clause 8.2 - Service Desk</li>
 <li><strong>COBIT 2019:</strong> DSS02 - Managed Service Requests and Incidents</li>
 </ul>
-<hr />
 <h2 id="anhang">Anhang</h2>
 <h3 id="glossar">Glossar</h3>
 <table>
@@ -783,10 +768,9 @@
 <li>ISO/IEC 20000-1:2018</li>
 <li>COBIT 2019 Framework</li>
 </ul>
-<hr />
-<p><strong>Letzte Aktualisierung:</strong> {{ meta.date }}<br />
+<p><strong>Letzte Aktualisierung:</strong> {{ meta-handbook.date }}<br />
 <strong>Nächste Review:</strong> [TODO: Datum]<br />
-<strong>Kontakt:</strong> andreas.huemmer@adminsend.de</p>
+<strong>Kontakt:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager_email }}</p>
         </main>
         
         <nav class="page-nav">

@@ -1,6 +1,6 @@
 # Richtlinie: Logging, SIEM und Audit Trails
 
-**Dokument-ID:** 0330
+**Dokument-ID:** ISMS-0330
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

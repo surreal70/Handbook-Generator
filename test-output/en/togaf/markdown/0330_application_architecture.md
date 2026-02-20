@@ -6,7 +6,7 @@ Classification: Internal
 
 # Application Architecture
 
-**Document-ID:** [FRAMEWORK]-0330
+**Document-ID:** TOGAF-0330
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

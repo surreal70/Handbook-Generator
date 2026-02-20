@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0100 - Anwendungs- und Schnittstellensicherheit (AIS)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0100</div>
+            <h1>Anwendungs- und Schnittstellensicherheit (AIS)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0090_grc06_policy_impact_on_risk_assessments.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0110_ais01_application_security.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: csa-ccm-0100</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="anwendungs-und-schnittstellensicherheit-ais">Anwendungs- und Schnittstellensicherheit (AIS)</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0100
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="zweck">Zweck</h2>
+<p>Dieses Dokument beschreibt die Sicherheitsmaßnahmen für Anwendungen und Schnittstellen in Cloud-Umgebungen von [TODO].</p>
+<h2 id="geltungsbereich">Geltungsbereich</h2>
+<p>Dieses Dokument gilt für alle Cloud-Anwendungen, APIs und Schnittstellen.</p>
+<h2 id="anwendungssicherheit">Anwendungssicherheit</h2>
+<h3 id="anwendungsinventar">Anwendungsinventar</h3>
+<p><strong>Cloud-Anwendungen</strong>:
+- [Anwendung 1]: [Beschreibung]
+- [Anwendung 2]: [Beschreibung]
+- [Anwendung 3]: [Beschreibung]</p>
+<p><strong>Klassifizierung</strong>:
+- Kritisch: [Anzahl]
+- Hoch: [Anzahl]
+- Mittel: [Anzahl]
+- Niedrig: [Anzahl]</p>
+<h3 id="sicherheitsanforderungen">Sicherheitsanforderungen</h3>
+<p><strong>Vertraulichkeit</strong>:
+- Datenverschlüsselung
+- Zugriffskontrolle
+- Authentifizierung</p>
+<p><strong>Integrität</strong>:
+- Datenvalidierung
+- Integritätsprüfungen
+- Audit-Logging</p>
+<p><strong>Verfügbarkeit</strong>:
+- Hochverfügbarkeit
+- Disaster Recovery
+- Performance-Monitoring</p>
+<h2 id="sichere-softwareentwicklung">Sichere Softwareentwicklung</h2>
+<h3 id="secure-development-lifecycle-sdl">Secure Development Lifecycle (SDL)</h3>
+<p><strong>Anforderungsphase</strong>:
+- Sicherheitsanforderungen definieren
+- Bedrohungsmodellierung
+- Risikobewertung</p>
+<p><strong>Design-Phase</strong>:
+- Sicheres Design
+- Security Architecture Review
+- Threat Modeling</p>
+<p><strong>Implementierungsphase</strong>:
+- Secure Coding Standards
+- Code Reviews
+- Static Application Security Testing (SAST)</p>
+<p><strong>Test-Phase</strong>:
+- Dynamic Application Security Testing (DAST)
+- Penetration Testing
+- Security Testing</p>
+<p><strong>Deployment-Phase</strong>:
+- Security Configuration
+- Deployment Checklists
+- Security Validation</p>
+<p><strong>Wartungsphase</strong>:
+- Patch Management
+- Vulnerability Management
+- Security Updates</p>
+<h3 id="secure-coding-standards">Secure Coding Standards</h3>
+<p><strong>OWASP Top 10 Mitigation</strong>:
+- Injection Prevention
+- Broken Authentication Prevention
+- Sensitive Data Exposure Prevention
+- XML External Entities (XXE) Prevention
+- Broken Access Control Prevention
+- Security Misconfiguration Prevention
+- Cross-Site Scripting (XSS) Prevention
+- Insecure Deserialization Prevention
+- Using Components with Known Vulnerabilities Prevention
+- Insufficient Logging &amp; Monitoring Prevention</p>
+<h2 id="api-sicherheit">API-Sicherheit</h2>
+<h3 id="api-inventar">API-Inventar</h3>
+<p><strong>APIs</strong>:
+- [API 1]: [Beschreibung, Zweck]
+- [API 2]: [Beschreibung, Zweck]</p>
+<h3 id="api-sicherheitskontrollen">API-Sicherheitskontrollen</h3>
+<p><strong>Authentifizierung</strong>:
+- OAuth 2.0
+- API Keys
+- JWT Tokens</p>
+<p><strong>Autorisierung</strong>:
+- Role-Based Access Control (RBAC)
+- Attribute-Based Access Control (ABAC)
+- API Gateways</p>
+<p><strong>Verschlüsselung</strong>:
+- TLS 1.2/1.3
+- End-to-End Encryption
+- Certificate Management</p>
+<p><strong>Rate Limiting</strong>:
+- Request Throttling
+- DDoS Protection
+- Quota Management</p>
+<h2 id="webanwendungssicherheit">Webanwendungssicherheit</h2>
+<h3 id="web-application-firewall-waf">Web Application Firewall (WAF)</h3>
+<p><strong>WAF-Konfiguration</strong>:
+- OWASP Core Rule Set
+- Custom Rules
+- Geo-Blocking</p>
+<p><strong>Überwachung</strong>:
+- Real-time Monitoring
+- Alert Management
+- Incident Response</p>
+<h3 id="content-security-policy-csp">Content Security Policy (CSP)</h3>
+<p><strong>CSP-Richtlinien</strong>:
+- Script Sources
+- Style Sources
+- Image Sources
+- Frame Ancestors</p>
+<h2 id="ccm-kontrollen">CCM-Kontrollen</h2>
+<p><strong>AIS-01</strong>: Application Security
+<strong>AIS-02</strong>: Application Security - Secure Design &amp; Development
+<strong>AIS-03</strong>: Application Security - Application Security Testing
+<strong>AIS-04</strong>: Application Security - Application Security Monitoring</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0090_grc06_policy_impact_on_risk_assessments.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0110_ais01_application_security.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

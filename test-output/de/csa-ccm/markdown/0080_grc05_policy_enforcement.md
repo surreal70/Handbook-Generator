@@ -6,7 +6,7 @@ Classification: Internal
 
 # GRC-05: Richtliniendurchsetzung
 
-**Dokument-ID:** [FRAMEWORK]-0080
+**Dokument-ID:** CSA-CCM-0080
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

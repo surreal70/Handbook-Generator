@@ -7,7 +7,7 @@ Classification: Internal
 
 # Gap-Analyse
 
-**Dokument-ID:** [FRAMEWORK]-0630
+**Dokument-ID:** NIST-CSF-0630
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

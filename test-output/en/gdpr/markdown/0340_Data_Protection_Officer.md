@@ -1,6 +1,6 @@
 # Data Protection Officer
 
-**Document-ID:** 0340
+**Document-ID:** GDPR-0340
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

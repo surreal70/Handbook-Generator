@@ -1,6 +1,6 @@
 # Appendix: Data Flows and Interfaces (Template)
 
-**Document-ID:** [FRAMEWORK]-0720
+**Document-ID:** BSI-GRUNDSCHUTZ-0720
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

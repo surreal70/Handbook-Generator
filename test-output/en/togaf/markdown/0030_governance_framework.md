@@ -6,7 +6,7 @@ Classification: Internal
 
 # Architecture Governance Framework
 
-**Document-ID:** [FRAMEWORK]-0030
+**Document-ID:** TOGAF-0030
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

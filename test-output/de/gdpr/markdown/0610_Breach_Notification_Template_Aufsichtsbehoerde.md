@@ -1,6 +1,6 @@
 # Breach Notification Template (Aufsichtsbehörde)
 
-**Dokument-ID:** 0610
+**Dokument-ID:** GDPR-0610
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

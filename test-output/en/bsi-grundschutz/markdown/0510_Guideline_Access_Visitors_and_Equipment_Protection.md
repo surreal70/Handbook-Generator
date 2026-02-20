@@ -1,6 +1,6 @@
 # Guideline: Access Visitors and Equipment Protection
 
-**Document-ID:** [FRAMEWORK]-0510
+**Document-ID:** BSI-GRUNDSCHUTZ-0510
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

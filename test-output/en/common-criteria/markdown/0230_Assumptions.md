@@ -1,6 +1,6 @@
 # Assumptions
 
-**Document-ID:** 0230
+**Document-ID:** COMMON-CRITERIA-0230
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

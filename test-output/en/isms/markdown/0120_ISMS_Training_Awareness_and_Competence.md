@@ -1,6 +1,6 @@
 # Training, Awareness and Competence
 
-**Document-ID:** [FRAMEWORK]-0120
+**Document-ID:** ISMS-0120
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

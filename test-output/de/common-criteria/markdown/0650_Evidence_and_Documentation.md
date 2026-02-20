@@ -1,6 +1,6 @@
 # Nachweise und Dokumentation
 
-**Dokument-ID:** 0650
+**Dokument-ID:** COMMON-CRITERIA-0650
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

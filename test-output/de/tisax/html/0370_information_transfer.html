@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0370 - Informationsübertragung</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0370</div>
+            <h1>Informationsübertragung</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0360_network_security_management.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0380_privacy_and_personal_data_protection.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: tisax-0370</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="informationsubertragung">Informationsübertragung</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0370
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="zweck">Zweck</h2>
+<p>Dieses Dokument definiert Anforderungen für die sichere Übertragung von Informationen gemäß TISAX-Anforderungen.</p>
+<h2 id="geltungsbereich">Geltungsbereich</h2>
+<p>Dieses Dokument gilt für alle Informationsübertragungen von [TODO].</p>
+<h2 id="ubertragungskanale">Übertragungskanäle</h2>
+<h3 id="e-mail">E-Mail</h3>
+<p><strong>Anforderungen:</strong>
+- Verschlüsselung vertraulicher E-Mails (S/MIME oder PGP)
+- SPF, DKIM, DMARC
+- Spam- und Malware-Filter
+- DLP (Data Loss Prevention)</p>
+<h3 id="dateitransfer">Dateitransfer</h3>
+<p><strong>Sichere Methoden:</strong>
+- SFTP/SCP
+- HTTPS
+- Verschlüsselte Cloud-Services
+- Managed File Transfer (MFT)</p>
+<p><strong>Nicht zugelassen:</strong>
+- FTP (unverschlüsselt)
+- HTTP (unverschlüsselt)
+- Unverschlüsselte E-Mail-Anhänge (vertrauliche Daten)</p>
+<h3 id="physische-medien">Physische Medien</h3>
+<p><strong>Anforderungen:</strong>
+- Verschlüsselung
+- Sichere Verpackung
+- Nachverfolgung
+- Empfangsbestätigung</p>
+<h2 id="verschlusselung">Verschlüsselung</h2>
+<h3 id="ubertragungsverschlusselung">Übertragungsverschlüsselung</h3>
+<p><strong>Anforderungen:</strong>
+- TLS 1.2 oder höher
+- Starke Cipher Suites
+- Zertifikatsvalidierung
+- Perfect Forward Secrecy</p>
+<h3 id="end-to-end-verschlusselung">End-to-End-Verschlüsselung</h3>
+<p><strong>Verwendung für:</strong>
+- Streng vertrauliche Informationen
+- Personenbezogene Daten
+- Geschäftsgeheimnisse</p>
+<h2 id="datenklassifizierung">Datenklassifizierung</h2>
+<h3 id="ubertragungsrichtlinien">Übertragungsrichtlinien</h3>
+<p><strong>Öffentlich:</strong>
+- Keine besonderen Anforderungen</p>
+<p><strong>Intern:</strong>
+- Verschlüsselte Kanäle bevorzugt</p>
+<p><strong>Vertraulich:</strong>
+- Verschlüsselung obligatorisch
+- Genehmigung erforderlich</p>
+<p><strong>Streng Vertraulich:</strong>
+- End-to-End-Verschlüsselung
+- Genehmigungs- und Dokumentationspflicht
+- Empfangsbestätigung</p>
+<h2 id="externe-kommunikation">Externe Kommunikation</h2>
+<h3 id="partner-und-lieferanten">Partner und Lieferanten</h3>
+<p><strong>Anforderungen:</strong>
+- Vertraulichkeitsvereinbarungen
+- Sichere Übertragungskanäle
+- Dokumentation
+- Regelmäßige Überprüfung</p>
+<h3 id="cloud-services">Cloud-Services</h3>
+<p><strong>Anforderungen:</strong>
+- Verschlüsselte Übertragung
+- Verschlüsselte Speicherung
+- Zugriffskontrolle
+- Compliance-Prüfung</p>
+<h2 id="uberwachung">Überwachung</h2>
+<h3 id="monitoring">Monitoring</h3>
+<p><strong>Überwachte Aktivitäten:</strong>
+- Übertragung vertraulicher Daten
+- Große Datenmengen
+- Ungewöhnliche Übertragungsmuster
+- Externe Übertragungen</p>
+<h3 id="dlp-data-loss-prevention">DLP (Data Loss Prevention)</h3>
+<p><strong>Funktionen:</strong>
+- Erkennung sensibler Daten
+- Blockierung unerlaubter Übertragungen
+- Alarmierung
+- Reporting</p>
+<h2 id="tisax-spezifische-anforderungen">TISAX-spezifische Anforderungen</h2>
+<h3 id="vda-isa-kontrollen">VDA ISA Kontrollen</h3>
+<p>Dieses Dokument adressiert:
+- <strong>7.2</strong>: Informationsübertragung</p>
+<h3 id="assessment-nachweise">Assessment-Nachweise</h3>
+<ul>
+<li>Übertragungsrichtlinien</li>
+<li>Verschlüsselungskonfiguration</li>
+<li>DLP-Berichte</li>
+</ul>
+<h2 id="kennzahlen">Kennzahlen</h2>
+<p>[TODO] misst:
+- Anzahl verschlüsselter Übertragungen
+- Anzahl DLP-Vorfälle
+- Compliance-Rate</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0360_network_security_management.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0380_privacy_and_personal_data_protection.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

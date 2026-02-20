@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0110 - Asset Inventory</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0110</div>
+            <h1>Asset Inventory</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0100_asset_management_overview.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0120_information_classification.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: tisax-0110</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="asset-inventory">Asset Inventory</h1>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0110
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="purpose">Purpose</h2>
+<p>This document describes the requirements and processes for maintaining a complete asset inventory according to TISAX requirements.</p>
+<h2 id="scope">Scope</h2>
+<p>This document applies to all assets of [TODO] that must be captured within TISAX-relevant processes.</p>
+<h2 id="inventory-requirements">Inventory Requirements</h2>
+<h3 id="completeness">Completeness</h3>
+<p>The asset inventory must capture all relevant assets:</p>
+<ul>
+<li>Hardware (servers, workstations, network devices, mobile devices)</li>
+<li>Software (operating systems, applications, databases)</li>
+<li>Data and information</li>
+<li>Services (cloud services, external services)</li>
+<li>Documentation</li>
+<li>Physical infrastructure</li>
+</ul>
+<h3 id="currency">Currency</h3>
+<p>The inventory must be kept current:</p>
+<ul>
+<li>New assets are captured within [TODO]</li>
+<li>Changes are documented promptly</li>
+<li>Decommissioning is noted immediately</li>
+<li>Regular validation of inventory data</li>
+</ul>
+<h2 id="inventory-structure">Inventory Structure</h2>
+<h3 id="mandatory-fields">Mandatory Fields</h3>
+<p>The following information is captured for each asset:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Asset ID</td>
+<td>Unique identifier</td>
+<td>AST-2024-001</td>
+</tr>
+<tr>
+<td>Asset Name</td>
+<td>Designation</td>
+<td>Production Server 01</td>
+</tr>
+<tr>
+<td>Asset Type</td>
+<td>Category</td>
+<td>Server</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Detailed description</td>
+<td>Main production server for ERP system</td>
+</tr>
+<tr>
+<td>Asset Owner</td>
+<td>Responsible person</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Location</td>
+<td>Physical/logical location</td>
+<td>Data Center A, Rack 12</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>Operational status</td>
+<td>In Operation</td>
+</tr>
+<tr>
+<td>Classification</td>
+<td>Protection level</td>
+<td>Confidential</td>
+</tr>
+</tbody>
+</table>
+<h3 id="optional-fields">Optional Fields</h3>
+<p>Additional information depending on asset type:</p>
+<ul>
+<li>Manufacturer and model</li>
+<li>Serial number</li>
+<li>Acquisition date and cost</li>
+<li>Maintenance contract</li>
+<li>License information</li>
+<li>IP address/hostname</li>
+<li>Operating system and version</li>
+<li>Dependencies on other assets</li>
+<li>Backup status</li>
+</ul>
+<h2 id="inventorization-process">Inventorization Process</h2>
+<h3 id="1-asset-capture">1. Asset Capture</h3>
+<h4 id="automated-capture">Automated Capture</h4>
+<p>[TODO] uses the following tools:</p>
+<ul>
+<li><strong>Network Discovery</strong>: [TODO]</li>
+<li><strong>Endpoint Management</strong>: [TODO]</li>
+<li><strong>Cloud Asset Management</strong>: [TODO]</li>
+<li><strong>CMDB Integration</strong>: [TODO]</li>
+</ul>
+<h4 id="manual-capture">Manual Capture</h4>
+<p>For assets that cannot be captured automatically:</p>
+<ol>
+<li>Complete asset capture form</li>
+<li>Classification by asset owner</li>
+<li>Entry in asset inventory system</li>
+<li>Validation by asset management team</li>
+</ol>
+<h3 id="2-asset-registration">2. Asset Registration</h3>
+<p>New assets are registered through:</p>
+<ol>
+<li><strong>Procurement Process</strong>: Automatic capture upon ordering</li>
+<li><strong>Onboarding</strong>: Capture during commissioning</li>
+<li><strong>Discovery</strong>: Identification through scanning</li>
+<li><strong>Reporting</strong>: Manual reporting by employees</li>
+</ol>
+<h3 id="3-asset-updates">3. Asset Updates</h3>
+<p>Changes are captured for:</p>
+<ul>
+<li>Hardware upgrades</li>
+<li>Software updates</li>
+<li>Location changes</li>
+<li>Owner changes</li>
+<li>Classification changes</li>
+<li>Status changes</li>
+</ul>
+<h3 id="4-asset-decommissioning">4. Asset Decommissioning</h3>
+<p>Upon decommissioning:</p>
+<ol>
+<li>Set asset status to "Decommissioned"</li>
+<li>Document secure data deletion</li>
+<li>Physical disposal or archiving</li>
+<li>Release licenses</li>
+<li>Resolve dependencies</li>
+</ol>
+<h2 id="inventory-categories">Inventory Categories</h2>
+<h3 id="hardware-assets">Hardware Assets</h3>
+<p><strong>Servers and Infrastructure:</strong>
+- Physical servers
+- Virtual machines
+- Storage systems
+- Network devices (routers, switches, firewalls)</p>
+<p><strong>Endpoints:</strong>
+- Workstations and laptops
+- Mobile devices (smartphones, tablets)
+- Printers and multifunction devices
+- IoT devices</p>
+<h3 id="software-assets">Software Assets</h3>
+<p><strong>System Software:</strong>
+- Operating systems
+- Virtualization platforms
+- Database management systems
+- Middleware</p>
+<p><strong>Application Software:</strong>
+- Business applications
+- Development tools
+- Office software
+- Security software</p>
+<h3 id="information-assets">Information Assets</h3>
+<p><strong>Data:</strong>
+- Customer data
+- Product data
+- Financial data
+- Personnel data
+- Prototypes and development data</p>
+<p><strong>Documentation:</strong>
+- Technical documentation
+- Process documentation
+- Contracts and agreements
+- Policies and procedures</p>
+<h3 id="service-assets">Service Assets</h3>
+<ul>
+<li>Cloud services (IaaS, PaaS, SaaS)</li>
+<li>Managed services</li>
+<li>External services</li>
+<li>Support contracts</li>
+</ul>
+<h2 id="inventory-management">Inventory Management</h2>
+<h3 id="responsibilities">Responsibilities</h3>
+<p><strong>Asset Management Team:</strong>
+- Maintenance of inventory system
+- Coordination of inventorization
+- Quality assurance of data
+- Reporting</p>
+<p><strong>Asset Owner:</strong>
+- Classification of their assets
+- Validation of asset information
+- Reporting of changes
+- Approval of access</p>
+<p><strong>IT Department:</strong>
+- Technical capture of IT assets
+- Automated discovery
+- Integration with CMDB
+- Provision of asset data</p>
+<h3 id="inventory-system">Inventory System</h3>
+<p>[TODO] uses the following system for asset inventory:</p>
+<ul>
+<li><strong>System</strong>: [TODO]</li>
+<li><strong>Access</strong>: [TODO]</li>
+<li><strong>Backup</strong>: [TODO]</li>
+<li><strong>Integration</strong>: [TODO]</li>
+</ul>
+<h2 id="inventory-validation">Inventory Validation</h2>
+<h3 id="regular-review">Regular Review</h3>
+<p><strong>Annual Full Review:</strong>
+- Complete inventory of all assets
+- Comparison with physical inventory
+- Validation of all asset information
+- Cleanup of outdated entries</p>
+<p><strong>Quarterly Sampling:</strong>
+- Review of critical assets
+- Validation of high-risk assets
+- Review of classification
+- Check of asset owner assignment</p>
+<p><strong>Continuous Monitoring:</strong>
+- Automatic consistency checks
+- Detection of uncaptured assets
+- Identification of deviations
+- Alerting for critical changes</p>
+<h3 id="quality-assurance">Quality Assurance</h3>
+<p>Quality criteria for the inventory:</p>
+<ul>
+<li><strong>Completeness</strong>: &gt;95% of all assets captured</li>
+<li><strong>Currency</strong>: &lt;5% outdated entries</li>
+<li><strong>Accuracy</strong>: &lt;2% incorrect information</li>
+<li><strong>Consistency</strong>: 100% mandatory fields completed</li>
+</ul>
+<h2 id="integration-and-interfaces">Integration and Interfaces</h2>
+<h3 id="cmdb-integration">CMDB Integration</h3>
+<p>Integration with Configuration Management Database:</p>
+<ul>
+<li>Bidirectional data exchange</li>
+<li>Synchronization of CI information</li>
+<li>Consistency checking</li>
+<li>Automatic updates</li>
+</ul>
+<h3 id="change-management">Change Management</h3>
+<p>Integration with change management:</p>
+<ul>
+<li>Automatic update upon changes</li>
+<li>Validation of asset changes</li>
+<li>Tracking of configuration changes</li>
+<li>Impact analysis</li>
+</ul>
+<h3 id="procurement">Procurement</h3>
+<p>Integration with procurement:</p>
+<ul>
+<li>Automatic capture of new assets</li>
+<li>License management</li>
+<li>Cost tracking</li>
+<li>Contract management</li>
+</ul>
+<h2 id="tisax-specific-requirements">TISAX-Specific Requirements</h2>
+<h3 id="vda-isa-controls">VDA ISA Controls</h3>
+<p>This document addresses:</p>
+<ul>
+<li><strong>2.2.1</strong>: Inventory of assets</li>
+<li><strong>2.2.2</strong>: Ownership of assets</li>
+<li><strong>2.2.3</strong>: Acceptable use of assets</li>
+</ul>
+<h3 id="assessment-evidence">Assessment Evidence</h3>
+<p>For TISAX assessments:</p>
+<ul>
+<li>Complete asset inventory</li>
+<li>Inventorization process documentation</li>
+<li>Evidence of regular validation</li>
+<li>Examples of asset records</li>
+<li>Reports on inventory quality</li>
+</ul>
+<h2 id="reporting">Reporting</h2>
+<h3 id="regular-reports">Regular Reports</h3>
+<p><strong>Monthly:</strong>
+- Number of newly captured assets
+- Number of decommissioned assets
+- Inventory quality metrics
+- Unassigned assets</p>
+<p><strong>Quarterly:</strong>
+- Completeness analysis
+- Classification overview
+- Asset owner distribution
+- Trend analyses</p>
+<p><strong>Annually:</strong>
+- Total inventory report
+- Asset value analysis
+- Compliance status
+- Improvement recommendations</p>
+<h2 id="metrics">Metrics</h2>
+<p>[TODO] measures:</p>
+<ul>
+<li>Number of captured assets by category</li>
+<li>Inventory completeness (Target: &gt;95%)</li>
+<li>Currency of data (Target: &lt;30 days since last review)</li>
+<li>Percentage of classified assets (Target: 100%)</li>
+<li>Number of unassigned assets (Target: 0)</li>
+<li>Time to capture new assets (Target: &lt;5 days)</li>
+</ul>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0100_asset_management_overview.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0120_information_classification.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

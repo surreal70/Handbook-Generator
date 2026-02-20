@@ -1,6 +1,6 @@
 # APP Hardening Standard: SSH Service
 
-**Document-ID:** [FRAMEWORK]-0320
+**Document-ID:** CIS-CONTROLS-0320
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

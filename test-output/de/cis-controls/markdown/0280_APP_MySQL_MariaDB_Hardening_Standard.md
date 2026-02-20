@@ -1,6 +1,6 @@
 # APP Hardening Standard: MySQL / MariaDB
 
-**Dokument-ID:** 0280
+**Dokument-ID:** CIS-CONTROLS-0280
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

@@ -21,15 +21,17 @@
         
         <main>
 <h1 id="policy-kryptografie-und-schlusselmanagement">Policy: Kryptografie und Schlüsselmanagement</h1>
-<p><strong>Dokument-ID:</strong> 0260<br />
-<strong>Dokumenttyp:</strong> Policy (abstrakt)<br />
-<strong>Standard-Referenz:</strong> ISO/IEC 27001:2022 Annex A.8.24 (inkl. Amendment 1:2024)<br />
-<strong>Owner:</strong> Thomas Weber<br />
-<strong>Version:</strong> 1.0<br />
-<strong>Status:</strong> Freigegeben<br />
-<strong>Klassifizierung:</strong> Intern<br />
-<strong>Letzte Aktualisierung:</strong> {{ meta.document.date }}<br />
-<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+<p><strong>Dokument-ID:</strong> 0260
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
 <hr />
 <h2 id="1-zweck">1. Zweck</h2>
 <p>Diese Policy definiert die Grundsätze für den Einsatz kryptografischer Verfahren und das Management kryptografischer Schlüssel der <strong>AdminSend GmbH</strong>. Sie stellt sicher, dass Informationen durch angemessene kryptografische Kontrollen geschützt werden und Schlüssel sicher verwaltet werden.</p>
@@ -40,7 +42,7 @@
 <li><strong>Systeme:</strong> Alle IT-Systeme, Anwendungen, Datenbanken, Netzwerke, Cloud-Services</li>
 <li><strong>Daten:</strong> Alle Daten in Ruhe (Data at Rest), in Bewegung (Data in Transit) und in Verarbeitung (Data in Use)</li>
 <li><strong>Kryptografische Verfahren:</strong> Verschlüsselung, Hashing, digitale Signaturen, Zertifikate</li>
-<li><strong>Standorte:</strong> {{ netbox.site.name }} und alle weiteren Betriebsstandorte</li>
+<li><strong>Standorte:</strong> [[ netbox.site.name ]] und alle weiteren Betriebsstandorte</li>
 </ul>
 <p><strong>Ausnahmen:</strong> Ausnahmen sind nur über den definierten Ausnahmenprozess (<code>0640_Policy_Ausnahmen_und_Risk_Waivers.md</code>) zulässig.</p>
 <h2 id="3-grundsatze-policy-statements">3. Grundsätze (Policy Statements)</h2>
@@ -156,9 +158,9 @@
 <p><strong>Legende:</strong> R = Responsible (Durchführung), A = Accountable (Verantwortlich), C = Consulted (Konsultiert), I = Informed (Informiert)</p>
 <h3 id="schlusselrollen">Schlüsselrollen</h3>
 <ul>
-<li><strong>Policy Owner:</strong> Thomas Weber (CISO)</li>
-<li><strong>Crypto Officer:</strong> {{ meta.it.crypto_officer }}</li>
-<li><strong>Key Management Verantwortlicher:</strong> {{ meta.it.key_manager }}</li>
+<li><strong>Policy Owner:</strong> [TODO] (CISO)</li>
+<li><strong>Crypto Officer:</strong> {{ meta-handbook.it_crypto_officer }}</li>
+<li><strong>Key Management Verantwortlicher:</strong> {{ meta-handbook.it_key_manager }}</li>
 <li><strong>Umsetzungsverantwortliche:</strong> IT-Betrieb, Entwicklung</li>
 <li><strong>Kontroll-/Prüfinstanz:</strong> ISMS, Internal Audit, Compliance</li>
 </ul>
@@ -237,11 +239,10 @@
 <li><strong>FIPS 140-2/140-3</strong> - Security Requirements for Cryptographic Modules</li>
 <li><strong>eIDAS-Verordnung (EU 910/2014)</strong> - Elektronische Identifizierung und Vertrauensdienste</li>
 </ul>
-<hr />
 <p><strong>Genehmigt durch:</strong><br />
-{{ meta.management.ceo }}, Geschäftsführung<br />
-Datum: {{ meta.document.approval_date }}</p>
-<p><strong>Nächster Review:</strong> {{ meta.document.next_review }} (jährlich oder anlassbezogen)</p>
+{{ meta-handbook.management_ceo }}, Geschäftsführung<br />
+Datum: [TODO]</p>
+<p><strong>Nächster Review:</strong> [TODO] (jährlich oder anlassbezogen)</p>
         </main>
         
         <nav class="page-nav">

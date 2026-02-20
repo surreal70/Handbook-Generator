@@ -1,6 +1,6 @@
 # Data Protection Principles
 
-**Document-ID:** 0030
+**Document-ID:** GDPR-0030
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

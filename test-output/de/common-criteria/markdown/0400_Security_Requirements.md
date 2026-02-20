@@ -1,6 +1,6 @@
 # Sicherheitsanforderungen (Security Requirements)
 
-**Dokument-ID:** 0400
+**Dokument-ID:** COMMON-CRITERIA-0400
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

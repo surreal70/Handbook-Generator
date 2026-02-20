@@ -1,6 +1,6 @@
 # Guideline: Logging, SIEM and Audit Trails
 
-**Document-ID:** [FRAMEWORK]-0330
+**Document-ID:** ISMS-0330
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

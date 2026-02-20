@@ -7,7 +7,7 @@ Classification: Internal
 
 # Vorstandsverantwortlichkeiten für IT-Governance
 
-**Dokument-ID:** [FRAMEWORK]-0210
+**Dokument-ID:** ISO-38500-0210
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

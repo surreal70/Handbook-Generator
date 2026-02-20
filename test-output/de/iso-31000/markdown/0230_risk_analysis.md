@@ -7,7 +7,7 @@ Classification: Internal
 
 # Risikoanalyse
 
-**Dokument-ID:** [FRAMEWORK]-0230
+**Dokument-ID:** ISO-31000-0230
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

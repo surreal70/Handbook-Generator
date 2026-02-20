@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0440 - CI/CD Best Practices</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0440</div>
+            <h1>CI/CD Best Practices</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0430_testing_strategies.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0450_monitoring_observability.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: dora-0440</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="cicd-best-practices">CI/CD Best Practices</h1>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0440
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="purpose">Purpose</h2>
+<p>Best practices for CI/CD to reduce Change Failure Rate.</p>
+<h2 id="scope">Scope</h2>
+<ul>
+<li>CI/CD principles</li>
+<li>Quality gates</li>
+<li>Progressive delivery</li>
+<li>Deployment strategies</li>
+</ul>
+<h2 id="organization-information">Organization Information</h2>
+<ul>
+<li><strong>Organization</strong>: [TODO]</li>
+<li><strong>CI/CD Owner</strong>: [TODO]</li>
+<li><strong>CI/CD Platform</strong>: [TODO]</li>
+</ul>
+<h2 id="cicd-principles">CI/CD Principles</h2>
+<h3 id="continuous-integration">Continuous Integration</h3>
+<p><strong>Core Principles</strong>:
+- Frequent integration (multiple times daily)
+- Automated builds
+- Automated tests
+- Fast feedback</p>
+<p><strong>Best Practices</strong>:
+- Trunk-based development
+- Feature flags
+- Small batch sizes
+- Fast build times</p>
+<h3 id="continuous-delivery">Continuous Delivery</h3>
+<p><strong>Core Principles</strong>:
+- Every commit is deployable
+- Automated deployment pipeline
+- Production-like environments
+- Push-button deployment</p>
+<p><strong>Best Practices</strong>:
+- Automated rollback
+- Blue-green deployments
+- Canary releases
+- Feature toggles</p>
+<h2 id="quality-gates">Quality Gates</h2>
+<h3 id="build-stage-gates">Build Stage Gates</h3>
+<p><strong>Criteria</strong>:
+- Build successful
+- No compiler errors
+- Dependency check successful</p>
+<h3 id="test-stage-gates">Test Stage Gates</h3>
+<p><strong>Criteria</strong>:
+- Unit tests: 100% pass
+- Integration tests: 100% pass
+- Test coverage: &gt; 80%
+- No flaky tests</p>
+<h3 id="security-stage-gates">Security Stage Gates</h3>
+<p><strong>Criteria</strong>:
+- No high/critical vulnerabilities
+- SAST scan successful
+- Dependency scan successful
+- Container scan successful</p>
+<h3 id="quality-stage-gates">Quality Stage Gates</h3>
+<p><strong>Criteria</strong>:
+- Code quality score &gt; threshold
+- No code smells (critical)
+- Technical debt ratio &lt; 5%
+- Duplication &lt; 3%</p>
+<h2 id="progressive-delivery">Progressive Delivery</h2>
+<h3 id="canary-deployments">Canary Deployments</h3>
+<p><strong>Process</strong>:
+1. Deploy to 5% of users
+2. Monitor metrics
+3. Increase to 25%
+4. Monitor metrics
+5. Increase to 50%
+6. Monitor metrics
+7. Full rollout</p>
+<p><strong>Configuration</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">canary</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">      </span><span class="nt">pause</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10m</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">25</span>
+<span class="w">      </span><span class="nt">pause</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10m</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50</span>
+<span class="w">      </span><span class="nt">pause</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10m</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span>
+</code></pre></div>
+
+<h3 id="blue-green-deployments">Blue-Green Deployments</h3>
+<p><strong>Process</strong>:
+1. Deploy to green environment
+2. Test green environment
+3. Switch traffic to green
+4. Monitor
+5. Decommission blue</p>
+<h3 id="feature-flags">Feature Flags</h3>
+<p><strong>Usage</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">if</span> <span class="n">feature_enabled</span><span class="p">(</span><span class="s1">&#39;new_checkout&#39;</span><span class="p">):</span>
+    <span class="n">new_checkout_flow</span><span class="p">()</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">old_checkout_flow</span><span class="p">()</span>
+</code></pre></div>
+
+<p><strong>Rollout Control</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">feature_flags</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">new_checkout</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">rollout_percentage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">25</span>
+<span class="w">    </span><span class="nt">target_users</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">beta_testers</span>
+</code></pre></div>
+
+<h2 id="deployment-strategies">Deployment Strategies</h2>
+<h3 id="rolling-deployment">Rolling Deployment</h3>
+<p><strong>Configuration</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">strategy</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RollingUpdate</span>
+<span class="w">  </span><span class="nt">rollingUpdate</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">maxSurge</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">    </span><span class="nt">maxUnavailable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+</code></pre></div>
+
+<h3 id="recreate-deployment">Recreate Deployment</h3>
+<p><strong>Usage</strong>: For stateful applications</p>
+<h3 id="shadow-deployment">Shadow Deployment</h3>
+<p><strong>Purpose</strong>: Testing without user impact</p>
+<h2 id="monitoring-and-validation">Monitoring and Validation</h2>
+<h3 id="deployment-verification">Deployment Verification</h3>
+<p><strong>Health Checks</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">readinessProbe</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">httpGet</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/health</span>
+<span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080</span>
+<span class="w">  </span><span class="nt">initialDelaySeconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">  </span><span class="nt">periodSeconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+</code></pre></div>
+
+<p><strong>Smoke Tests</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1"># Post-deployment smoke tests</span>
+
+test_health_endpoint<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>curl<span class="w"> </span>-f<span class="w"> </span>http://app/health<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="o">}</span>
+
+test_critical_api<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>curl<span class="w"> </span>-f<span class="w"> </span>http://app/api/critical<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="o">}</span>
+
+test_health_endpoint
+test_critical_api
+</code></pre></div>
+
+<h3 id="automated-rollback">Automated Rollback</h3>
+<p><strong>Trigger Criteria</strong>:
+- Error rate &gt; 5%
+- Response time P95 &gt; 1000ms
+- Health check failures &gt; 3
+- Custom metrics threshold</p>
+<h2 id="pipeline-optimization">Pipeline Optimization</h2>
+<h3 id="caching">Caching</h3>
+<div class="codehilite"><pre><span></span><code><span class="nt">cache</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${CI_COMMIT_REF_SLUG}</span>
+<span class="w">  </span><span class="nt">paths</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">node_modules/</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.cache/</span>
+</code></pre></div>
+
+<h3 id="parallelization">Parallelization</h3>
+<div class="codehilite"><pre><span></span><code><span class="nt">test</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">parallel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">npm run test -- --shard=${CI_NODE_INDEX}/${CI_NODE_TOTAL}</span>
+</code></pre></div>
+
+<h3 id="conditional-execution">Conditional Execution</h3>
+<div class="codehilite"><pre><span></span><code><span class="nt">deploy:production</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">only</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+<span class="w">  </span><span class="nt">except</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">schedules</span>
+</code></pre></div>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0430_testing_strategies.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0450_monitoring_observability.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

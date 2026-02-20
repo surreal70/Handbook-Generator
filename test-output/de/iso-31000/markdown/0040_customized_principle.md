@@ -7,7 +7,7 @@ Classification: Internal
 
 # Prinzip 3: Angepasst
 
-**Dokument-ID:** [FRAMEWORK]-0040
+**Dokument-ID:** ISO-31000-0040
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

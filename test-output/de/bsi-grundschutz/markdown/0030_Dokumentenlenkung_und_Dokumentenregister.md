@@ -1,6 +1,6 @@
 # Dokumentenlenkung und Dokumentenregister
 
-**Dokument-ID:** 0030
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0030
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

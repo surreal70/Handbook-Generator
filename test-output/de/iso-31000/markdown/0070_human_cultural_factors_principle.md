@@ -7,7 +7,7 @@ Classification: Internal
 
 # Prinzip 7: Menschliche und kulturelle Faktoren
 
-**Dokument-ID:** [FRAMEWORK]-0070
+**Dokument-ID:** ISO-31000-0070
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

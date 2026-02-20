@@ -1,6 +1,6 @@
 # Anhang B: Asset- und Systeminventar
 
-**Dokument-ID:** [FRAMEWORK]-0720
+**Dokument-ID:** ISMS-0720
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

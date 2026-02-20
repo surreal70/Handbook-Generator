@@ -6,7 +6,7 @@ Classification: Internal
 
 # IAM-07: Benutzerzugriffsrichtlinie
 
-**Dokument-ID:** [FRAMEWORK]-0370
+**Dokument-ID:** CSA-CCM-0370
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

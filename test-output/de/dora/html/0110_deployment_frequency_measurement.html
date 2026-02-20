@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0110 - Deployment Frequency Messung</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0110</div>
+            <h1>Deployment Frequency Messung</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0100_deployment_frequency_overview.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0120_deployment_automation.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: dora-0110</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="deployment-frequency-messung">Deployment Frequency Messung</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0110
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="zweck">Zweck</h2>
+<p>Dieses Dokument beschreibt die praktische Implementierung der Deployment Frequency Messung, einschließlich Datenerfassung, Berechnung und Reporting.</p>
+<h2 id="umfang">Umfang</h2>
+<p>Dieses Dokument umfasst:
+- Messmethodik und Datenquellen
+- Automatisierte Erfassung
+- Berechnungslogik
+- Reporting und Visualisierung</p>
+<h2 id="messmethodik">Messmethodik</h2>
+<h3 id="organisationsinformationen">Organisationsinformationen</h3>
+<ul>
+<li><strong>Organisation</strong>: [TODO]</li>
+<li><strong>Messverantwortlicher</strong>: [TODO]</li>
+<li><strong>Messsystem</strong>: [TODO]</li>
+<li><strong>Messfrequenz</strong>: [TODO]</li>
+</ul>
+<h2 id="datenerfassung">Datenerfassung</h2>
+<h3 id="primare-datenquellen">Primäre Datenquellen</h3>
+<p><strong>CI/CD-System</strong>: [TODO]
+- Pipeline-Execution-Logs
+- Deployment-Status
+- Timestamp-Informationen
+- Environment-Informationen</p>
+<p><strong>Deployment-Tools</strong>: [TODO]
+- Deployment-Events
+- Success/Failure-Status
+- Deployment-Duration
+- Target-Environment</p>
+<p><strong>Version Control</strong>: [TODO]
+- Commit-Informationen
+- Branch-Informationen
+- Tag-Informationen
+- Merge-Events</p>
+<h3 id="sekundare-datenquellen">Sekundäre Datenquellen</h3>
+<p><strong>Monitoring-Systeme</strong>: [TODO]
+- Application-Health-Checks
+- Deployment-Verification
+- Performance-Metrics</p>
+<p><strong>Ticketing-Systeme</strong>: [TODO]
+- Release-Tickets
+- Deployment-Requests
+- Change-Records</p>
+<h2 id="automatisierte-erfassung">Automatisierte Erfassung</h2>
+<h3 id="cicd-integration">CI/CD-Integration</h3>
+<p><strong>Pipeline-Konfiguration</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Beispiel: GitLab CI/CD</span>
+<span class="nt">deploy_production</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deploy</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deploy.sh production</span>
+<span class="w">  </span><span class="nt">after_script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">report_deployment_metric.sh</span>
+<span class="w">  </span><span class="nt">only</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+<span class="w">  </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">production</span>
+</code></pre></div>
+
+<p><strong>Metric-Reporting</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1"># report_deployment_metric.sh</span>
+
+<span class="nv">DEPLOYMENT_TIME</span><span class="o">=</span><span class="k">$(</span>date<span class="w"> </span>-u<span class="w"> </span>+<span class="s2">&quot;%Y-%m-%dT%H:%M:%SZ&quot;</span><span class="k">)</span>
+<span class="nv">DEPLOYMENT_ID</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">CI_PIPELINE_ID</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="nv">ENVIRONMENT</span><span class="o">=</span><span class="s2">&quot;production&quot;</span>
+<span class="nv">STATUS</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">CI_JOB_STATUS</span><span class="si">}</span><span class="s2">&quot;</span>
+
+<span class="c1"># Send to metrics system</span>
+curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="o">[</span>TODO<span class="o">]</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s2">&quot;{</span>
+<span class="s2">    \&quot;metric\&quot;: \&quot;deployment_frequency\&quot;,</span>
+<span class="s2">    \&quot;timestamp\&quot;: \&quot;</span><span class="si">${</span><span class="nv">DEPLOYMENT_TIME</span><span class="si">}</span><span class="s2">\&quot;,</span>
+<span class="s2">    \&quot;deployment_id\&quot;: \&quot;</span><span class="si">${</span><span class="nv">DEPLOYMENT_ID</span><span class="si">}</span><span class="s2">\&quot;,</span>
+<span class="s2">    \&quot;environment\&quot;: \&quot;</span><span class="si">${</span><span class="nv">ENVIRONMENT</span><span class="si">}</span><span class="s2">\&quot;,</span>
+<span class="s2">    \&quot;status\&quot;: \&quot;</span><span class="si">${</span><span class="nv">STATUS</span><span class="si">}</span><span class="s2">\&quot;</span>
+<span class="s2">  }&quot;</span>
+</code></pre></div>
+
+<h3 id="api-integration">API-Integration</h3>
+<p><strong>Metrics-API</strong>: [TODO]</p>
+<p><strong>Authentifizierung</strong>: [TODO]</p>
+<p><strong>Payload-Format</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;metric_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;deployment_frequency&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-02-13T14:30:00Z&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;deployment_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;12345&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;application&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[TODO]&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;environment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;production&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;commit_sha&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;abc123def456&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;deployed_by&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ci-system&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h2 id="berechnungslogik">Berechnungslogik</h2>
+<h3 id="grundlegende-berechnung">Grundlegende Berechnung</h3>
+<p><strong>Tägliche Deployment Frequency</strong>:</p>
+<div class="codehilite"><pre><span></span><code>Daily Deployment Frequency = Anzahl erfolgreicher Deployments pro Tag
+</code></pre></div>
+
+<p><strong>Wöchentliche Deployment Frequency</strong>:</p>
+<div class="codehilite"><pre><span></span><code>Weekly Deployment Frequency = Anzahl erfolgreicher Deployments pro Woche
+</code></pre></div>
+
+<p><strong>Monatliche Deployment Frequency</strong>:</p>
+<div class="codehilite"><pre><span></span><code>Monthly Deployment Frequency = Anzahl erfolgreicher Deployments pro Monat
+</code></pre></div>
+
+<h3 id="erweiterte-metriken">Erweiterte Metriken</h3>
+<p><strong>Durchschnittliche Deployment Frequency</strong>:</p>
+<div class="codehilite"><pre><span></span><code>Avg Deployment Frequency = Gesamtanzahl Deployments / Anzahl Zeitperioden
+</code></pre></div>
+
+<p><strong>Deployment Frequency Trend</strong>:</p>
+<div class="codehilite"><pre><span></span><code>Trend = (Aktuelle Periode - Vorherige Periode) / Vorherige Periode × 100%
+</code></pre></div>
+
+<p><strong>Team-spezifische Frequency</strong>:</p>
+<div class="codehilite"><pre><span></span><code>Team Deployment Frequency = Deployments des Teams / Zeitperiode
+</code></pre></div>
+
+<h3 id="filterkriterien">Filterkriterien</h3>
+<p><strong>Einzuschließende Deployments</strong>:
+- Erfolgreiche Production-Deployments
+- Geplante Releases
+- Hotfixes (optional)</p>
+<p><strong>Auszuschließende Deployments</strong>:
+- Rollbacks
+- Failed Deployments
+- Non-Production Environments (optional)
+- Infrastructure-only Deployments (optional)</p>
+<h2 id="reporting-und-visualisierung">Reporting und Visualisierung</h2>
+<h3 id="dashboard-komponenten">Dashboard-Komponenten</h3>
+<p><strong>Aktuelle Metriken</strong>:
+- Deployments heute
+- Deployments diese Woche
+- Deployments diesen Monat
+- Aktueller Performance-Level</p>
+<p><strong>Trend-Analysen</strong>:
+- 30-Tage-Trend
+- 90-Tage-Trend
+- Jahr-über-Jahr-Vergleich</p>
+<p><strong>Team-Vergleiche</strong>:
+- Deployment Frequency pro Team
+- Benchmarking zwischen Teams
+- Best Practices Sharing</p>
+<h3 id="visualisierungstypen">Visualisierungstypen</h3>
+<p><strong>Zeitreihen-Diagramme</strong>:
+- Tägliche Deployment-Counts
+- Wöchentliche Aggregation
+- Monatliche Trends</p>
+<p><strong>Heatmaps</strong>:
+- Deployment-Aktivität nach Wochentag
+- Deployment-Aktivität nach Uhrzeit
+- Saisonale Muster</p>
+<p><strong>Performance-Level-Tracking</strong>:
+- Aktuelle Kategorie (Elite/High/Medium/Low)
+- Historische Entwicklung
+- Ziel-Tracking</p>
+<h3 id="reporting-frequenz">Reporting-Frequenz</h3>
+<p><strong>Echtzeit-Dashboards</strong>: [TODO]
+- Aktuelle Deployment-Aktivität
+- Live-Status
+- Sofortige Alerts</p>
+<p><strong>Tägliche Reports</strong>: [TODO]
+- Deployment-Summary
+- Anomalien
+- Quick Insights</p>
+<p><strong>Wöchentliche Reports</strong>: [TODO]
+- Wochenübersicht
+- Trend-Analysen
+- Team-Performance</p>
+<p><strong>Monatliche Reports</strong>: [TODO]
+- Monatsübersicht
+- Performance-Level-Assessment
+- Verbesserungsempfehlungen</p>
+<h2 id="datenqualitat">Datenqualität</h2>
+<h3 id="validierung">Validierung</h3>
+<p><strong>Automatische Checks</strong>:
+- Vollständigkeit der Daten
+- Plausibilität der Timestamps
+- Konsistenz zwischen Systemen</p>
+<p><strong>Manuelle Reviews</strong>:
+- Stichproben-Prüfungen
+- Anomalie-Untersuchungen
+- Feedback-Integration</p>
+<h3 id="fehlerbehandlung">Fehlerbehandlung</h3>
+<p><strong>Missing Data</strong>:
+- Automatische Benachrichtigung
+- Fallback auf manuelle Erfassung
+- Dokumentation von Lücken</p>
+<p><strong>Inkonsistenzen</strong>:
+- Automatische Reconciliation
+- Alert bei Abweichungen
+- Root-Cause-Analyse</p>
+<h2 id="kontinuierliche-verbesserung">Kontinuierliche Verbesserung</h2>
+<h3 id="feedback-loops">Feedback-Loops</h3>
+<ul>
+<li>Regelmäßige Reviews der Messmethodik</li>
+<li>Team-Feedback zu Metriken</li>
+<li>Anpassung der Erfassungslogik</li>
+</ul>
+<h3 id="automatisierung">Automatisierung</h3>
+<ul>
+<li>Reduzierung manueller Schritte</li>
+<li>Integration neuer Datenquellen</li>
+<li>Verbesserung der Datenqualität</li>
+</ul>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0100_deployment_frequency_overview.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0120_deployment_automation.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

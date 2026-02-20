@@ -1,6 +1,6 @@
 # Policy: Change und Release Management
 
-**Dokument-ID:** 0360
+**Dokument-ID:** ISMS-0360
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

@@ -21,13 +21,24 @@
         
         <main>
 <h1 id="kapazitats-und-performance-management">Kapazitäts- und Performance Management</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0200
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
 <h2 id="ubersicht">Übersicht</h2>
 <p>Dieses Dokument beschreibt die Prozesse und Methoden für das Kapazitäts- und Performance Management des IT-Service. Ziel ist es, sicherzustellen, dass ausreichende IT-Ressourcen zur Verfügung stehen, um die aktuellen und zukünftigen Geschäftsanforderungen zu erfüllen.</p>
-<p><strong>Dokumentverantwortlicher:</strong> IT Operations Manager<br />
-<strong>Genehmigt durch:</strong> CIO<br />
-<strong>Version:</strong> 1.0.0<br />
+<p><strong>Dokumentverantwortlicher:</strong> [TODO]<br />
+<strong>Genehmigt durch:</strong> [TODO]<br />
+<strong>Version:</strong> 0<br />
 <strong>Organisation:</strong> AdminSend GmbH</p>
-<hr />
 <h2 id="kapazitatsplanung">Kapazitätsplanung</h2>
 <h3 id="planungszyklus">Planungszyklus</h3>
 <table>
@@ -43,19 +54,19 @@
 <tr>
 <td>Kurzfristig</td>
 <td>1-3 Monate</td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 <td>Monitoring, Anpassungen</td>
 </tr>
 <tr>
 <td>Mittelfristig</td>
 <td>3-12 Monate</td>
-<td>Anna Schmidt</td>
+<td>[TODO]</td>
 <td>Kapazitätsprognosen, Budgetplanung</td>
 </tr>
 <tr>
 <td>Langfristig</td>
 <td>1-3 Jahre</td>
-<td>Max Mustermann</td>
+<td>[TODO]</td>
 <td>Strategische Planung, Investitionen</td>
 </tr>
 </tbody>
@@ -63,22 +74,22 @@
 <h3 id="kapazitatsdimensionen">Kapazitätsdimensionen</h3>
 <h4 id="compute-ressourcen">Compute-Ressourcen</h4>
 <ul>
-<li><strong>CPU-Kapazität:</strong> {{ netbox.cluster.total_cpu_cores }} Cores</li>
-<li><strong>RAM-Kapazität:</strong> {{ netbox.cluster.total_memory_gb }} GB</li>
+<li><strong>CPU-Kapazität:</strong> [[ netbox.cluster.total_cpu_cores ]] Cores</li>
+<li><strong>RAM-Kapazität:</strong> [[ netbox.cluster.total_memory_gb ]] GB</li>
 <li><strong>Auslastungsziel:</strong> 70% (Durchschnitt), 85% (Peak)</li>
 <li><strong>Skalierungsschwelle:</strong> 80% über 7 Tage</li>
 </ul>
 <h4 id="storage-ressourcen">Storage-Ressourcen</h4>
 <ul>
-<li><strong>Gesamtkapazität:</strong> {{ netbox.storage.total_capacity_tb }} TB</li>
-<li><strong>Verfügbare Kapazität:</strong> {{ netbox.storage.available_capacity_tb }} TB</li>
+<li><strong>Gesamtkapazität:</strong> [[ netbox.storage.total_capacity_tb ]] TB</li>
+<li><strong>Verfügbare Kapazität:</strong> [[ netbox.storage.available_capacity_tb ]] TB</li>
 <li><strong>Auslastungsziel:</strong> 75% (Durchschnitt), 85% (Maximum)</li>
 <li><strong>Skalierungsschwelle:</strong> 80% Auslastung</li>
 </ul>
 <h4 id="netzwerk-ressourcen">Netzwerk-Ressourcen</h4>
 <ul>
-<li><strong>Bandbreite WAN:</strong> {{ netbox.circuit.bandwidth_mbps }} Mbps</li>
-<li><strong>Bandbreite LAN:</strong> {{ netbox.network.lan_bandwidth_gbps }} Gbps</li>
+<li><strong>Bandbreite WAN:</strong> [[ netbox.circuit.bandwidth_mbps ]] Mbps</li>
+<li><strong>Bandbreite LAN:</strong> [[ netbox.network.lan_bandwidth_gbps ]] Gbps</li>
 <li><strong>Auslastungsziel:</strong> 60% (Durchschnitt), 80% (Peak)</li>
 <li><strong>Skalierungsschwelle:</strong> 75% über 5 Tage</li>
 </ul>
@@ -140,7 +151,6 @@
 <li>Regulatorische Anforderungen</li>
 <li>Merger &amp; Acquisitions</li>
 </ul>
-<hr />
 <h2 id="performance-monitoring">Performance-Monitoring</h2>
 <h3 id="performance-metriken">Performance-Metriken</h3>
 <h4 id="system-performance">System-Performance</h4>
@@ -312,25 +322,25 @@
 <td>[TODO: Monitoring-Tool]</td>
 <td>System-Monitoring</td>
 <td>[TODO: URL]</td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 </tr>
 <tr>
 <td>[TODO: APM-Tool]</td>
 <td>Application Performance</td>
 <td>[TODO: URL]</td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 </tr>
 <tr>
 <td>[TODO: DB-Monitoring]</td>
 <td>Datenbank-Performance</td>
 <td>[TODO: URL]</td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 </tr>
 <tr>
 <td>[TODO: Network-Tool]</td>
 <td>Netzwerk-Monitoring</td>
 <td>[TODO: URL]</td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 </tr>
 </tbody>
 </table>
@@ -350,7 +360,6 @@
 <li><strong>Anwendung:</strong> Response Times, Throughput, Errors</li>
 <li><strong>Datenbank:</strong> Query-Performance, Connections, Locks</li>
 </ul>
-<hr />
 <h2 id="trend-analysen">Trend-Analysen</h2>
 <h3 id="analyse-prozess">Analyse-Prozess</h3>
 <h4 id="wochentliche-analyse">Wöchentliche Analyse</h4>
@@ -363,14 +372,14 @@
 <h4 id="monatliche-analyse">Monatliche Analyse</h4>
 <ul>
 <li><strong>Durchführung:</strong> Erster Arbeitstag des Monats</li>
-<li><strong>Verantwortlich:</strong> Andreas Huemmer</li>
+<li><strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</li>
 <li><strong>Fokus:</strong> Mittelfristige Trends und Kapazitätsprognosen</li>
 <li><strong>Output:</strong> Monatsbericht mit Kapazitätsempfehlungen</li>
 </ul>
 <h4 id="quartalsweise-analyse">Quartalsweise Analyse</h4>
 <ul>
 <li><strong>Durchführung:</strong> Quartalsende</li>
-<li><strong>Verantwortlich:</strong> Anna Schmidt</li>
+<li><strong>Verantwortlich:</strong> [TODO]</li>
 <li><strong>Fokus:</strong> Strategische Trends und Investitionsplanung</li>
 <li><strong>Output:</strong> Quartalsbericht mit Budget-Empfehlungen</li>
 </ul>
@@ -489,7 +498,6 @@
 <li><strong>Maßnahmen:</strong> Korrekturmaßnahmen oder Eskalation</li>
 <li><strong>Dokumentation:</strong> Lessons Learned und Prozessverbesserung</li>
 </ol>
-<hr />
 <h2 id="skalierungsstrategien">Skalierungsstrategien</h2>
 <h3 id="vertikale-skalierung-scale-up">Vertikale Skalierung (Scale-Up)</h3>
 <h4 id="anwendungsfalle">Anwendungsfälle</h4>
@@ -593,8 +601,8 @@
 <h3 id="cloud-skalierung">Cloud-Skalierung</h3>
 <h4 id="cloud-provider">Cloud-Provider</h4>
 <ul>
-<li><strong>Provider:</strong> {{ meta.organization.cloud_provider }}</li>
-<li><strong>Region:</strong> {{ meta.organization.cloud_region }}</li>
+<li><strong>Provider:</strong> {{ meta-handbook.cloud_provider }}</li>
+<li><strong>Region:</strong> {{ meta-handbook.cloud_region }}</li>
 <li><strong>Verfügbarkeitszonen:</strong> [TODO]</li>
 </ul>
 <h4 id="skalierungsoptionen">Skalierungsoptionen</h4>
@@ -604,7 +612,6 @@
 <li><strong>Serverless:</strong> Lambda / Azure Functions</li>
 <li><strong>Datenbank:</strong> RDS Read Replicas / Cosmos DB Auto-Scale</li>
 </ul>
-<hr />
 <h2 id="kapazitatsoptimierung">Kapazitätsoptimierung</h2>
 <h3 id="optimierungsmanahmen">Optimierungsmaßnahmen</h3>
 <h4 id="ressourcen-konsolidierung">Ressourcen-Konsolidierung</h4>
@@ -639,7 +646,6 @@
 └─────────────────────────────────────────────────────────┘
 </code></pre></div>
 
-<hr />
 <h2 id="reporting">Reporting</h2>
 <h3 id="performance-reports">Performance-Reports</h3>
 <h4 id="wochentlicher-performance-report">Wöchentlicher Performance-Report</h4>
@@ -653,7 +659,7 @@
 </ul>
 <h4 id="monatlicher-kapazitats-report">Monatlicher Kapazitäts-Report</h4>
 <ul>
-<li><strong>Empfänger:</strong> Anna Schmidt, Andreas Huemmer</li>
+<li><strong>Empfänger:</strong> [TODO], {{ meta-organisation-roles.role_IT_Operations_Manager }}</li>
 <li><strong>Inhalt:</strong></li>
 <li>Kapazitätsauslastung</li>
 <li>Wachstumstrends</li>
@@ -662,7 +668,7 @@
 </ul>
 <h4 id="quartalsweiser-management-report">Quartalsweiser Management-Report</h4>
 <ul>
-<li><strong>Empfänger:</strong> Max Mustermann, Anna Schmidt, Maria Müller</li>
+<li><strong>Empfänger:</strong> [TODO], [TODO], [TODO]</li>
 <li><strong>Inhalt:</strong></li>
 <li>Strategische Kapazitätsplanung</li>
 <li>Investitionsempfehlungen</li>
@@ -712,7 +718,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="prozesse-und-verantwortlichkeiten">Prozesse und Verantwortlichkeiten</h2>
 <h3 id="raci-matrix">RACI-Matrix</h3>
 <table>
@@ -783,11 +788,10 @@
 <h3 id="eskalationspfad">Eskalationspfad</h3>
 <ol>
 <li><strong>Level 1:</strong> Operations Team - Tägliches Monitoring und Optimierung</li>
-<li><strong>Level 2:</strong> Andreas Huemmer - Kapazitätsentscheidungen</li>
-<li><strong>Level 3:</strong> Anna Schmidt - Strategische Planung und Budget</li>
-<li><strong>Level 4:</strong> Max Mustermann - Investitionsentscheidungen</li>
+<li><strong>Level 2:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }} - Kapazitätsentscheidungen</li>
+<li><strong>Level 3:</strong> [TODO] - Strategische Planung und Budget</li>
+<li><strong>Level 4:</strong> [TODO] - Investitionsentscheidungen</li>
 </ol>
-<hr />
 <h2 id="tools-und-systeme">Tools und Systeme</h2>
 <h3 id="monitoring-tools_1">Monitoring-Tools</h3>
 <ul>
@@ -808,7 +812,6 @@
 <li><strong>Alerting:</strong> [TODO: Tool-Name]</li>
 <li><strong>Orchestration:</strong> [TODO: Tool-Name]</li>
 </ul>
-<hr />
 <h2 id="compliance-und-standards">Compliance und Standards</h2>
 <h3 id="relevante-standards">Relevante Standards</h3>
 <ul>
@@ -823,7 +826,6 @@
 <li>Skalierungsentscheidungen und Begründungen</li>
 <li>Budget-Nachweise</li>
 </ul>
-<hr />
 <h2 id="anhang">Anhang</h2>
 <h3 id="glossar">Glossar</h3>
 <table>
@@ -867,10 +869,9 @@
 <li>COBIT 2019 Framework</li>
 <li>Cloud Provider Best Practices</li>
 </ul>
-<hr />
-<p><strong>Letzte Aktualisierung:</strong> {{ meta.date }}<br />
+<p><strong>Letzte Aktualisierung:</strong> {{ meta-handbook.date }}<br />
 <strong>Nächste Review:</strong> [TODO: Datum]<br />
-<strong>Kontakt:</strong> andreas.huemmer@adminsend.de</p>
+<strong>Kontakt:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager_email }}</p>
         </main>
         
         <nav class="page-nav">

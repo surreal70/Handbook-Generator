@@ -6,7 +6,7 @@ Classification: Internal
 
 # Securing Offices and Facilities
 
-**Document-ID:** [FRAMEWORK]-0240
+**Document-ID:** TISAX-0240
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

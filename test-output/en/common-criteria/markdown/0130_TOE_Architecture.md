@@ -1,6 +1,6 @@
 # TOE Architecture
 
-**Document-ID:** 0130
+**Document-ID:** COMMON-CRITERIA-0130
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

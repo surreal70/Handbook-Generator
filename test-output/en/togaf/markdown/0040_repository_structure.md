@@ -6,7 +6,7 @@ Classification: Internal
 
 # Architecture Repository Structure
 
-**Document-ID:** [FRAMEWORK]-0040
+**Document-ID:** TOGAF-0040
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

@@ -16,18 +16,29 @@
         <nav class="page-nav">
 <a href="0280_Compliance_and_Audits.html" class="nav-prev">← Previous</a>
 <a href="index.html" class="nav-toc">Table of Contents</a>
-<a href="0000_README.html" class="nav-next">Next →</a>
+<span class="nav-next disabled">—</span>
         </nav>
         
         <main>
 <h1 id="appendix-checklists-and-templates">Appendix: Checklists and Templates</h1>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0290
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
 <h2 id="overview">Overview</h2>
 <p>This document contains a collection of checklists, templates for standard documents, and forms for IT operations. The goal is to ensure consistent and efficient execution of standard processes.</p>
-<p><strong>Document Owner:</strong> IT Operations Manager<br />
-<strong>Approved by:</strong> CIO<br />
-<strong>Version:</strong> 1.0.0<br />
+<p><strong>Document Owner:</strong> [TODO]<br />
+<strong>Approved by:</strong> [TODO]<br />
+<strong>Version:</strong> 0<br />
 <strong>Organization:</strong> AdminSend GmbH</p>
-<hr />
 <h2 id="checklists">Checklists</h2>
 <h3 id="incident-management-checklists">Incident Management Checklists</h3>
 <h4 id="incident-response-checklist">Incident Response Checklist</h4>
@@ -84,7 +95,6 @@
 <span class="gs">**Duration:**</span> [HH:MM]
 </code></pre></div>
 
-<hr />
 <h3 id="change-management-checklists">Change Management Checklists</h3>
 <h4 id="standard-change-checklist">Standard Change Checklist</h4>
 <div class="codehilite"><pre><span></span><code><span class="gh"># Standard Change Checklist</span>
@@ -151,7 +161,6 @@
 <span class="gs">**Status:**</span> Successful / Rollback / Cancelled
 </code></pre></div>
 
-<hr />
 <h3 id="backup-and-recovery-checklists">Backup and Recovery Checklists</h3>
 <h4 id="backup-verification-checklist">Backup Verification Checklist</h4>
 <div class="codehilite"><pre><span></span><code><span class="gh"># Backup Verification Checklist</span>
@@ -197,7 +206,6 @@
 <span class="gs">**Next Test:**</span> [YYYY-MM-DD]
 </code></pre></div>
 
-<hr />
 <h2 id="templates">Templates</h2>
 <h3 id="incident-report-template">Incident Report Template</h3>
 <div class="codehilite"><pre><span></span><code><span class="gh"># Incident Report</span>
@@ -252,11 +260,10 @@
 <span class="k">-</span><span class="w"> </span>[Monitoring Data]
 
 <span class="gs">**Created by:**</span> [Name]
-<span class="gs">**Approved by:**</span> Andreas Huemmer
+<span class="gs">**Approved by:**</span> {{ meta-organisation-roles.role_IT_Operations_Manager }}
 <span class="gs">**Date:**</span> [YYYY-MM-DD]
 </code></pre></div>
 
-<hr />
 <h3 id="change-request-template">Change Request Template</h3>
 <div class="codehilite"><pre><span></span><code><span class="gh"># Change Request</span>
 
@@ -323,11 +330,10 @@
 <span class="k">- [ ]</span> CAB Approval: [Name] - [Date]
 
 <span class="gs">**Requester:**</span> [Name]
-<span class="gs">**Change Manager:**</span> Andreas Huemmer
+<span class="gs">**Change Manager:**</span> {{ meta-organisation-roles.role_IT_Operations_Manager }}
 <span class="gs">**Status:**</span> Requested / Approved / Rejected / Implemented
 </code></pre></div>
 
-<hr />
 <h2 id="forms">Forms</h2>
 <h3 id="access-request-form">Access Request Form</h3>
 <div class="codehilite"><pre><span></span><code><span class="gh"># Access Request</span>
@@ -369,7 +375,6 @@
 <span class="gs">**Status:**</span> Requested / Approved / Rejected / Implemented
 </code></pre></div>
 
-<hr />
 <h2 id="processes-and-responsibilities">Processes and Responsibilities</h2>
 <h3 id="raci-matrix">RACI Matrix</h3>
 <table>
@@ -423,16 +428,338 @@
 <blockquote>
 <p><strong>Legend:</strong> R = Responsible, A = Accountable, C = Consulted, I = Informed</p>
 </blockquote>
-<hr />
-<p><strong>Last Update:</strong> {{ meta.date }}<br />
+<p><strong>Last Update:</strong> {{ meta-handbook.date }}<br />
 <strong>Next Review:</strong> [TODO: Date]<br />
-<strong>Contact:</strong> andreas.huemmer@adminsend.de</p>
+<strong>Contact:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager_email }}</p>
+<h3 id="change-request-template_1">Change Request Template</h3>
+<div class="codehilite"><pre><span></span><code><span class="gh"># Change Request</span>
+
+<span class="gs">**Change ID:**</span> [CHG-XXXXX]
+<span class="gs">**Date:**</span> [YYYY-MM-DD]
+<span class="gs">**Requester:**</span> [Name]
+
+<span class="gu">## Change Details</span>
+<span class="k">-</span><span class="w"> </span><span class="gs">**Title:**</span> [Short title]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Category:**</span> Standard / Normal / Emergency
+<span class="k">-</span><span class="w"> </span><span class="gs">**Priority:**</span> Low / Medium / High / Critical
+<span class="k">-</span><span class="w"> </span><span class="gs">**Planned Date:**</span> [YYYY-MM-DD]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Planned Time:**</span> [HH:MM - HH:MM]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Duration:**</span> [Estimated duration]
+
+<span class="gu">## Description</span>
+[Detailed description of the change]
+
+<span class="gu">## Justification</span>
+[Why is this change necessary?]
+
+<span class="gu">## Affected Systems</span>
+<span class="k">-</span><span class="w"> </span>[System 1]
+<span class="k">-</span><span class="w"> </span>[System 2]
+<span class="k">-</span><span class="w"> </span>[System 3]
+
+<span class="gu">## Affected Users</span>
+[Number and description of affected users]
+
+<span class="gu">## Risk Assessment</span>
+<span class="k">-</span><span class="w"> </span><span class="gs">**Risk:**</span> Low / Medium / High
+<span class="k">-</span><span class="w"> </span><span class="gs">**Impact:**</span> Low / Medium / High
+<span class="k">-</span><span class="w"> </span><span class="gs">**Probability:**</span> Low / Medium / High
+
+<span class="gu">## Risks and Mitigations</span>
+| Risk | Probability | Impact | Mitigation |
+|---|---|---|---|
+| [Risk 1] | [L/M/H] | [L/M/H] | [Measure] |
+| [Risk 2] | [L/M/H] | [L/M/H] | [Measure] |
+
+<span class="gu">## Implementation Plan</span>
+<span class="k">1.</span> [Step 1]
+<span class="k">2.</span> [Step 2]
+<span class="k">3.</span> [Step 3]
+
+<span class="gu">## Rollback Plan</span>
+<span class="k">1.</span> [Step 1]
+<span class="k">2.</span> [Step 2]
+<span class="k">3.</span> [Step 3]
+
+<span class="gu">## Test Plan</span>
+<span class="k">1.</span> [Test 1]
+<span class="k">2.</span> [Test 2]
+<span class="k">3.</span> [Test 3]
+
+<span class="gu">## Communication Plan</span>
+<span class="k">-</span><span class="w"> </span><span class="gs">**Before Change:**</span> [Who, When, How]
+<span class="k">-</span><span class="w"> </span><span class="gs">**During Change:**</span> [Who, When, How]
+<span class="k">-</span><span class="w"> </span><span class="gs">**After Change:**</span> [Who, When, How]
+
+<span class="gu">## Approvals</span>
+<span class="k">- [ ]</span> Technical Approval: [Name] - [Date]
+<span class="k">- [ ]</span> Business Approval: [Name] - [Date]
+<span class="k">- [ ]</span> CAB Approval: [Name] - [Date]
+
+<span class="gs">**Requester:**</span> [Name]
+<span class="gs">**Change Manager:**</span> {{ meta-organisation-roles.role_IT_Operations_Manager }}
+<span class="gs">**Status:**</span> Requested / Approved / Rejected / Implemented
+</code></pre></div>
+
+<h3 id="post-incident-review-template">Post-Incident Review Template</h3>
+<div class="codehilite"><pre><span></span><code><span class="gh"># Post-Incident Review</span>
+
+<span class="gs">**Incident ID:**</span> [INC-XXXXX]
+<span class="gs">**Date:**</span> [YYYY-MM-DD]
+<span class="gs">**Facilitator:**</span> [Name]
+<span class="gs">**Participants:**</span> [Names]
+
+<span class="gu">## Incident Summary</span>
+[Brief summary of the incident]
+
+<span class="gu">## Timeline</span>
+| Time | Event | Who | Action |
+|---|---|---|---|
+| HH:MM | [Event] | [Name] | [Action] |
+| HH:MM | [Event] | [Name] | [Action] |
+
+<span class="gu">## What Went Well?</span>
+<span class="k">-</span><span class="w"> </span>[Point 1]
+<span class="k">-</span><span class="w"> </span>[Point 2]
+<span class="k">-</span><span class="w"> </span>[Point 3]
+
+<span class="gu">## What Didn&#39;t Go Well?</span>
+<span class="k">-</span><span class="w"> </span>[Point 1]
+<span class="k">-</span><span class="w"> </span>[Point 2]
+<span class="k">-</span><span class="w"> </span>[Point 3]
+
+<span class="gu">## Root Cause</span>
+[5-Why analysis or other root cause method]
+
+<span class="k">1.</span> <span class="gs">**Why did the problem occur?**</span> [Answer]
+<span class="k">2.</span> <span class="gs">**Why?**</span> [Answer]
+<span class="k">3.</span> <span class="gs">**Why?**</span> [Answer]
+<span class="k">4.</span> <span class="gs">**Why?**</span> [Answer]
+<span class="k">5.</span> <span class="gs">**Why?**</span> [Answer]
+
+<span class="gs">**Root Cause:**</span> [Final cause]
+
+<span class="gu">## Action Items</span>
+| # | Action | Responsible | Due Date | Status |
+|---|---|---|---|---|
+| 1 | [Action] | [Name] | [Date] | Open |
+| 2 | [Action] | [Name] | [Date] | Open |
+| 3 | [Action] | [Name] | [Date] | Open |
+
+<span class="gu">## Lessons Learned</span>
+<span class="k">-</span><span class="w"> </span>[Lesson 1]
+<span class="k">-</span><span class="w"> </span>[Lesson 2]
+<span class="k">-</span><span class="w"> </span>[Lesson 3]
+
+<span class="gu">## Improvements</span>
+<span class="gu">### Short-term (&lt; 1 month)</span>
+<span class="k">-</span><span class="w"> </span>[Improvement 1]
+<span class="k">-</span><span class="w"> </span>[Improvement 2]
+
+<span class="gu">### Medium-term (1-3 months)</span>
+<span class="k">-</span><span class="w"> </span>[Improvement 1]
+<span class="k">-</span><span class="w"> </span>[Improvement 2]
+
+<span class="gu">### Long-term (&gt; 3 months)</span>
+<span class="k">-</span><span class="w"> </span>[Improvement 1]
+<span class="k">-</span><span class="w"> </span>[Improvement 2]
+
+<span class="gs">**Facilitator:**</span> [Name]
+<span class="gs">**Date:**</span> [YYYY-MM-DD]
+<span class="gs">**Follow-Up:**</span> [Date for action items review]
+</code></pre></div>
+
+<h2 id="forms_1">Forms</h2>
+<h3 id="access-request-form_1">Access Request Form</h3>
+<div class="codehilite"><pre><span></span><code><span class="gh"># Access Request</span>
+
+<span class="gs">**Requester:**</span> [Name]
+<span class="gs">**Date:**</span> [YYYY-MM-DD]
+<span class="gs">**Department:**</span> [Department]
+
+<span class="gu">## User Information</span>
+<span class="k">-</span><span class="w"> </span><span class="gs">**Name:**</span> [Full name]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Email:**</span> [Email address]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Phone:**</span> [Phone number]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Department:**</span> [Department]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Position:**</span> [Position]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Manager:**</span> [Manager name]
+
+<span class="gu">## Access Details</span>
+<span class="k">-</span><span class="w"> </span><span class="gs">**System/Application:**</span> [Name]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Access Level:**</span> Read / Write / Admin
+<span class="k">-</span><span class="w"> </span><span class="gs">**Justification:**</span> [Business justification]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Duration:**</span> Permanent / Temporary until [Date]
+
+<span class="gu">## Required Permissions</span>
+<span class="k">- [ ]</span> [Permission 1]
+<span class="k">- [ ]</span> [Permission 2]
+<span class="k">- [ ]</span> [Permission 3]
+
+<span class="gu">## Approvals</span>
+<span class="k">- [ ]</span> Manager Approval: [Name] - [Date]
+<span class="k">- [ ]</span> Data Owner Approval: [Name] - [Date]
+<span class="k">- [ ]</span> Security Approval: [Name] - [Date]
+
+<span class="gu">## IT Processing</span>
+<span class="k">-</span><span class="w"> </span><span class="gs">**Processed by:**</span> [Name]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Date:**</span> [YYYY-MM-DD]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Access Granted:**</span> Yes / No
+<span class="k">-</span><span class="w"> </span><span class="gs">**Comments:**</span> [Comments]
+
+<span class="gs">**Status:**</span> Requested / Approved / Rejected / Implemented
+</code></pre></div>
+
+<h3 id="hardware-request-form">Hardware Request Form</h3>
+<div class="codehilite"><pre><span></span><code><span class="gh"># Hardware Request</span>
+
+<span class="gs">**Requester:**</span> [Name]
+<span class="gs">**Date:**</span> [YYYY-MM-DD]
+<span class="gs">**Department:**</span> [Department]
+
+<span class="gu">## User Information</span>
+<span class="k">-</span><span class="w"> </span><span class="gs">**Name:**</span> [Full name]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Email:**</span> [Email address]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Department:**</span> [Department]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Location:**</span> [Location]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Manager:**</span> [Manager name]
+
+<span class="gu">## Hardware Details</span>
+<span class="k">-</span><span class="w"> </span><span class="gs">**Type:**</span> Laptop / Desktop / Monitor / Peripherals / Other
+<span class="k">-</span><span class="w"> </span><span class="gs">**Specification:**</span> [Desired specification]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Justification:**</span> [Business justification]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Urgency:**</span> Normal / High / Critical
+
+<span class="gu">## Old Hardware (if replacement)</span>
+<span class="k">-</span><span class="w"> </span><span class="gs">**Type:**</span> [Type]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Model:**</span> [Model]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Serial Number:**</span> [Serial number]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Condition:**</span> [Condition]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Return:**</span> Yes / No
+
+<span class="gu">## Costs</span>
+<span class="k">-</span><span class="w"> </span><span class="gs">**Estimated Cost:**</span> [Amount]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Budget Code:**</span> [Budget code]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Cost Center:**</span> [Cost center]
+
+<span class="gu">## Approvals</span>
+<span class="k">- [ ]</span> Manager Approval: [Name] - [Date]
+<span class="k">- [ ]</span> Budget Approval: [Name] - [Date]
+<span class="k">- [ ]</span> IT Approval: [Name] - [Date]
+
+<span class="gu">## IT Processing</span>
+<span class="k">-</span><span class="w"> </span><span class="gs">**Processed by:**</span> [Name]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Order Date:**</span> [YYYY-MM-DD]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Delivery Date:**</span> [YYYY-MM-DD]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Installation Date:**</span> [YYYY-MM-DD]
+<span class="k">-</span><span class="w"> </span><span class="gs">**Asset Tag:**</span> [Asset tag]
+
+<span class="gs">**Status:**</span> Requested / Approved / Ordered / Delivered / Installed
+</code></pre></div>
+
+<h2 id="processes-and-responsibilities_1">Processes and Responsibilities</h2>
+<h3 id="raci-matrix_1">RACI Matrix</h3>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>Ops Manager</th>
+<th>Ops Team</th>
+<th>Service Desk</th>
+<th>Users</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Checklist Creation</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Template Creation</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Checklist Usage</td>
+<td>C</td>
+<td>R</td>
+<td>R</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Template Usage</td>
+<td>C</td>
+<td>R</td>
+<td>R</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Updates</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Legend:</strong> R = Responsible, A = Accountable, C = Consulted, I = Informed</p>
+</blockquote>
+<h2 id="compliance-and-standards">Compliance and Standards</h2>
+<h3 id="relevant-standards">Relevant Standards</h3>
+<ul>
+<li><strong>ITIL v4:</strong> Service Operation Practice</li>
+<li><strong>ISO 20000:</strong> Clause 8.1 - Operational Planning and Control</li>
+<li><strong>COBIT 2019:</strong> DSS01 - Managed Operations</li>
+</ul>
+<h2 id="appendix">Appendix</h2>
+<h3 id="glossary">Glossary</h3>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Checklist</td>
+<td>Structured list of tasks or checkpoints</td>
+</tr>
+<tr>
+<td>Template</td>
+<td>Standardized document format</td>
+</tr>
+<tr>
+<td>Form</td>
+<td>Structured input document</td>
+</tr>
+<tr>
+<td>Post-Incident Review</td>
+<td>Retrospective analysis of an incident</td>
+</tr>
+</tbody>
+</table>
+<h3 id="references">References</h3>
+<ul>
+<li>ITIL v4 Foundation Handbook</li>
+<li>ISO/IEC 20000-1:2018</li>
+<li>COBIT 2019 Framework</li>
+</ul>
+<p><strong>Last Update:</strong> {{ meta-handbook.date }}<br />
+<strong>Next Review:</strong> [TODO: Date]<br />
+<strong>Contact:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager_email }}</p>
         </main>
         
         <nav class="page-nav">
 <a href="0280_Compliance_and_Audits.html" class="nav-prev">← Previous</a>
 <a href="index.html" class="nav-toc">Table of Contents</a>
-<a href="0000_README.html" class="nav-next">Next →</a>
+<span class="nav-next disabled">—</span>
         </nav>
         
         <footer>

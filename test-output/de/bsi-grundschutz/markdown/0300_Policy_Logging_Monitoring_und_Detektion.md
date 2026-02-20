@@ -1,6 +1,6 @@
 # Policy: Logging Monitoring und Detektion
 
-**Dokument-ID:** 0300
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0300
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

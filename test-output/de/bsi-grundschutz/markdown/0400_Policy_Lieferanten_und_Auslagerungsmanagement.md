@@ -1,6 +1,6 @@
 # Policy: Lieferanten und Auslagerungsmanagement
 
-**Dokument-ID:** 0400
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0400
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

@@ -1,6 +1,6 @@
 # ISMS-Leitlinie / Informationssicherheits-Policy
 
-**Dokument-ID:** 0010
+**Dokument-ID:** ISMS-0010
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

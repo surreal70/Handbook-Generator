@@ -6,7 +6,7 @@ Classification: Internal
 
 # Organizational Performance
 
-**Document-ID:** [FRAMEWORK]-0030
+**Document-ID:** DORA-0030
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

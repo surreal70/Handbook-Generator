@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0330 - Incident Response Procedures</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0330</div>
+            <h1>Incident Response Procedures</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0320_incident_detection.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0340_recovery_automation.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: dora-0330</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="incident-response-procedures">Incident Response Procedures</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0330
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="zweck">Zweck</h2>
+<p>Standardisierte Prozeduren für effektive Incident-Response.</p>
+<h2 id="umfang">Umfang</h2>
+<ul>
+<li>Incident Response Workflow</li>
+<li>Rollen und Verantwortlichkeiten</li>
+<li>Kommunikationsprotokolle</li>
+<li>Eskalationsprozesse</li>
+</ul>
+<h2 id="organisationsinformationen">Organisationsinformationen</h2>
+<ul>
+<li><strong>Organisation</strong>: [TODO]</li>
+<li><strong>Incident Commander</strong>: [TODO]</li>
+<li><strong>On-Call Rotation</strong>: [TODO]</li>
+</ul>
+<h2 id="incident-response-workflow">Incident Response Workflow</h2>
+<h3 id="phase-1-detection-acknowledgment">Phase 1: Detection &amp; Acknowledgment</h3>
+<p><strong>Aktivitäten</strong>:
+1. Alert empfangen
+2. Incident bestätigen
+3. Severity einschätzen
+4. Incident Commander benachrichtigen</p>
+<p><strong>Zeitlimit</strong>: &lt; 5 Minuten</p>
+<h3 id="phase-2-assessment-triage">Phase 2: Assessment &amp; Triage</h3>
+<p><strong>Aktivitäten</strong>:
+1. Impact bewerten
+2. Affected Services identifizieren
+3. Team zusammenstellen
+4. War Room einrichten</p>
+<p><strong>Zeitlimit</strong>: &lt; 15 Minuten</p>
+<h3 id="phase-3-diagnosis">Phase 3: Diagnosis</h3>
+<p><strong>Aktivitäten</strong>:
+1. Logs analysieren
+2. Metrics reviewen
+3. Root Cause identifizieren
+4. Recovery-Plan erstellen</p>
+<p><strong>Zeitlimit</strong>: Variabel nach Severity</p>
+<h3 id="phase-4-recovery">Phase 4: Recovery</h3>
+<p><strong>Aktivitäten</strong>:
+1. Recovery-Maßnahmen durchführen
+2. Service-Status überwachen
+3. Stakeholder informieren
+4. Wiederherstellung bestätigen</p>
+<p><strong>Zeitlimit</strong>: Variabel nach Severity</p>
+<h3 id="phase-5-post-incident">Phase 5: Post-Incident</h3>
+<p><strong>Aktivitäten</strong>:
+1. Incident dokumentieren
+2. Postmortem durchführen
+3. Action Items erstellen
+4. Follow-up sicherstellen</p>
+<p><strong>Zeitlimit</strong>: &lt; 48 Stunden</p>
+<h2 id="rollen-und-verantwortlichkeiten">Rollen und Verantwortlichkeiten</h2>
+<h3 id="incident-commander">Incident Commander</h3>
+<p><strong>Verantwortlichkeiten</strong>:
+- Koordination der Response
+- Entscheidungsfindung
+- Stakeholder-Kommunikation
+- Eskalation bei Bedarf</p>
+<h3 id="technical-lead">Technical Lead</h3>
+<p><strong>Verantwortlichkeiten</strong>:
+- Technische Diagnose
+- Recovery-Durchführung
+- Team-Koordination
+- Technische Dokumentation</p>
+<h3 id="communications-lead">Communications Lead</h3>
+<p><strong>Verantwortlichkeiten</strong>:
+- Status-Updates
+- Stakeholder-Kommunikation
+- Interne Kommunikation
+- Externe Kommunikation</p>
+<h2 id="kommunikationsprotokolle">Kommunikationsprotokolle</h2>
+<h3 id="interne-kommunikation">Interne Kommunikation</h3>
+<p><strong>Channels</strong>:
+- Incident Slack Channel
+- War Room (Video)
+- Status Page (intern)</p>
+<p><strong>Update-Frequenz</strong>:
+- Sev1: Alle 15 Minuten
+- Sev2: Alle 30 Minuten
+- Sev3: Alle 60 Minuten</p>
+<h3 id="externe-kommunikation">Externe Kommunikation</h3>
+<p><strong>Channels</strong>:
+- Status Page (öffentlich)
+- Email-Benachrichtigungen
+- Social Media</p>
+<p><strong>Template</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">[Zeitstempel] - [Status]</span>
+<span class="na">Wir untersuchen aktuell [Problem].</span>
+<span class="na">Betroffene Services</span><span class="o">:</span><span class="w"> </span><span class="s">[Services]</span>
+<span class="na">Nächstes Update</span><span class="o">:</span><span class="w"> </span><span class="s">[Zeit]</span>
+</code></pre></div>
+
+<h2 id="eskalationsprozesse">Eskalationsprozesse</h2>
+<h3 id="eskalations-kriterien">Eskalations-Kriterien</h3>
+<p><strong>Automatische Eskalation</strong>:
+- Keine Response nach 5 Minuten
+- MTTR-Ziel überschritten
+- Severity-Upgrade</p>
+<p><strong>Manuelle Eskalation</strong>:
+- Komplexe technische Probleme
+- Ressourcen-Engpässe
+- Management-Entscheidungen erforderlich</p>
+<h3 id="eskalations-pfade">Eskalations-Pfade</h3>
+<div class="codehilite"><pre><span></span><code>Level 1: On-Call Engineer
+  ↓ (15 min)
+Level 2: Team Lead
+  ↓ (30 min)
+Level 3: Engineering Manager
+  ↓ (60 min)
+Level 4: CTO
+</code></pre></div>
+
+<h2 id="runbooks">Runbooks</h2>
+<h3 id="runbook-struktur">Runbook-Struktur</h3>
+<ol>
+<li><strong>Symptome</strong>: Was wird beobachtet?</li>
+<li><strong>Diagnose</strong>: Wie identifizieren?</li>
+<li><strong>Recovery</strong>: Wie beheben?</li>
+<li><strong>Verification</strong>: Wie bestätigen?</li>
+<li><strong>Prevention</strong>: Wie verhindern?</li>
+</ol>
+<h3 id="runbook-beispiel">Runbook-Beispiel</h3>
+<div class="codehilite"><pre><span></span><code><span class="gh"># Database Connection Pool Exhaustion</span>
+
+<span class="gu">## Symptome</span>
+<span class="k">-</span><span class="w"> </span>Hohe Anzahl von Connection Timeouts
+<span class="k">-</span><span class="w"> </span>Steigende Response Times
+<span class="k">-</span><span class="w"> </span>Error Rate &gt; 5%
+
+<span class="gu">## Diagnose</span>
+<span class="k">1.</span> Check connection pool metrics
+<span class="k">2.</span> Review slow queries
+<span class="k">3.</span> Check for connection leaks
+
+<span class="gu">## Recovery</span>
+<span class="k">1.</span> Increase pool size temporarily
+<span class="k">2.</span> Kill long-running queries
+<span class="k">3.</span> Restart application if needed
+
+<span class="gu">## Verification</span>
+<span class="k">-</span><span class="w"> </span>Connection pool utilization &lt; 80%
+<span class="k">-</span><span class="w"> </span>Error rate &lt; 1%
+<span class="k">-</span><span class="w"> </span>Response times normal
+
+<span class="gu">## Prevention</span>
+<span class="k">-</span><span class="w"> </span>Optimize slow queries
+<span class="k">-</span><span class="w"> </span>Implement connection timeouts
+<span class="k">-</span><span class="w"> </span>Add connection pool monitoring
+</code></pre></div>
+
+<h2 id="best-practices">Best Practices</h2>
+<ol>
+<li><strong>Dokumentation</strong>: Alle Schritte dokumentieren</li>
+<li><strong>Kommunikation</strong>: Regelmäßige Updates</li>
+<li><strong>Fokus</strong>: Erst Recovery, dann Root Cause</li>
+<li><strong>Learning</strong>: Blameless Postmortems</li>
+<li><strong>Automation</strong>: Runbook-Automatisierung</li>
+</ol>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0320_incident_detection.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0340_recovery_automation.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

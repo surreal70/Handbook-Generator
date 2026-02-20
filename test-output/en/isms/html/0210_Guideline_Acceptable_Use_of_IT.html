@@ -21,23 +21,34 @@
         
         <main>
 <h1 id="guideline-acceptable-use-of-it">Guideline: Acceptable Use of IT</h1>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0210
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
 <p><strong>Document ID:</strong> 0210<br />
 <strong>Document Type:</strong> Guideline (detailed)<br />
 <strong>Related Policy:</strong> 0200_Policy_Acceptable_Use_of_IT.md<br />
 <strong>Standard Reference:</strong> ISO/IEC 27001:2022 Annex A.5.10<br />
-<strong>Owner:</strong> {{ meta.it_operations.manager }}<br />
+<strong>Owner:</strong> {{ meta-handbook.it_operations_manager }}<br />
 <strong>Version:</strong> 1.0<br />
 <strong>Status:</strong> Approved<br />
 <strong>Classification:</strong> Internal<br />
-<strong>Last Updated:</strong> {{ meta.document.date }}<br />
-<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
-<hr />
+<strong>Last Updated:</strong> [TODO]<br />
+<strong>Next Review:</strong> [TODO]</p>
 <h2 id="1-purpose-and-scope">1. Purpose and Scope</h2>
 <p>This guideline implements the <code>0200_Policy_Acceptable_Use_of_IT.md</code> and defines detailed rules, procedures, and technical controls for the acceptable use of IT resources at <strong>AdminSend GmbH</strong>.</p>
 <p><strong>Scope:</strong>
 - All employees, contractors, and third parties with access to IT resources
 - All IT systems, networks, applications, and devices
-- Locations: {{ netbox.site.name }} and all operational sites</p>
+- Locations: [[ netbox.site.name ]] and all operational sites</p>
 <h2 id="2-detailed-usage-rules">2. Detailed Usage Rules</h2>
 <h3 id="21-email-usage">2.1 Email Usage</h3>
 <p><strong>Permitted Use:</strong>
@@ -53,7 +64,7 @@
 <p><strong>Technical Controls:</strong>
 - Email filtering and anti-spam systems
 - DLP (Data Loss Prevention) for outgoing emails
-- Email archiving for compliance (retention: {{ meta.retention.email_years }} years)
+- Email archiving for compliance (retention: {{ meta-handbook.retention_email_years }} years)
 - Encryption for confidential emails (S/MIME or PGP)</p>
 <h3 id="22-internet-usage">2.2 Internet Usage</h3>
 <p><strong>Permitted Use:</strong>
@@ -93,7 +104,7 @@
 <h3 id="24-data-handling-and-storage">2.4 Data Handling and Storage</h3>
 <p><strong>Permitted Activities:</strong>
 - Storing business data on approved network drives and cloud storage
-- Using {{ meta.cloud.storage_service }} for file storage
+- Using {{ meta-handbook.cloud_storage_service }} for file storage
 - Encrypting confidential data according to classification</p>
 <p><strong>Prohibited Activities:</strong>
 - Storing business data on personal cloud services (Dropbox, personal Google Drive)
@@ -227,14 +238,14 @@
 <h2 id="6-technical-implementation">6. Technical Implementation</h2>
 <h3 id="61-technology-stack">6.1 Technology Stack</h3>
 <p><strong>Security Tools:</strong>
-- <strong>Web Filter:</strong> {{ meta.security.web_filter }} (e.g., Cisco Umbrella, Zscaler)
-- <strong>Email Security:</strong> {{ meta.security.email_gateway }} (e.g., Proofpoint, Mimecast)
-- <strong>DLP:</strong> {{ meta.security.dlp_solution }} (e.g., Microsoft Purview, Symantec DLP)
-- <strong>Endpoint Protection:</strong> {{ meta.security.edr_solution }} (e.g., CrowdStrike, SentinelOne)
-- <strong>CASB:</strong> {{ meta.security.casb_solution }} (e.g., Microsoft Defender for Cloud Apps)</p>
+- <strong>Web Filter:</strong> {{ meta-handbook.security_web_filter }} (e.g., Cisco Umbrella, Zscaler)
+- <strong>Email Security:</strong> {{ meta-handbook.security_email_gateway }} (e.g., Proofpoint, Mimecast)
+- <strong>DLP:</strong> {{ meta-handbook.security_dlp_solution }} (e.g., Microsoft Purview, Symantec DLP)
+- <strong>Endpoint Protection:</strong> {{ meta-handbook.security_edr_solution }} (e.g., CrowdStrike, SentinelOne)
+- <strong>CASB:</strong> {{ meta-handbook.security_casb_solution }} (e.g., Microsoft Defender for Cloud Apps)</p>
 <p><strong>Monitoring and Logging:</strong>
-- <strong>SIEM:</strong> {{ meta.security.siem_solution }} (e.g., Splunk, Microsoft Sentinel)
-- <strong>Log Retention:</strong> {{ meta.retention.log_years }} years for security logs
+- <strong>SIEM:</strong> {{ meta-handbook.security_siem_solution }} (e.g., Splunk, Microsoft Sentinel)
+- <strong>Log Retention:</strong> {{ meta-handbook.retention_log_years }} years for security logs
 - <strong>Alerting:</strong> Automatic alerts for critical violations</p>
 <h3 id="62-configuration-examples">6.2 Configuration Examples</h3>
 <p><strong>Web Filter Categories (blocked):</strong>
@@ -326,11 +337,10 @@
 <li><strong>GDPR (EU 2016/679)</strong> - General Data Protection Regulation</li>
 <li><strong>Works Constitution Act (BetrVG)</strong> - Co-determination in monitoring</li>
 </ul>
-<hr />
 <p><strong>Approved by:</strong><br />
-Thomas Weber, CISO<br />
-Date: {{ meta.document.approval_date }}</p>
-<p><strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+[TODO], CISO<br />
+Date: [TODO]</p>
+<p><strong>Next Review:</strong> [TODO]</p>
         </main>
         
         <nav class="page-nav">

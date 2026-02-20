@@ -1,6 +1,6 @@
 # Policy: Endpoint Security
 
-**Document-ID:** [FRAMEWORK]-0620
+**Document-ID:** ISMS-0620
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

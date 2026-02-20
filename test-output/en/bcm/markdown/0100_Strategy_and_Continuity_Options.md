@@ -1,6 +1,6 @@
 # Strategy and Continuity Options
 
-**Document-ID:** [FRAMEWORK]-0100
+**Document-ID:** BCM-0100
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

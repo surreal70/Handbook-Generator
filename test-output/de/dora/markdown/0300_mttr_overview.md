@@ -6,7 +6,7 @@ Classification: Internal
 
 # MTTR Übersicht
 
-**Dokument-ID:** [FRAMEWORK]-0300
+**Dokument-ID:** DORA-0300
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

@@ -1,6 +1,6 @@
 # Policy: Physical Security
 
-**Document-ID:** [FRAMEWORK]-0480
+**Document-ID:** ISMS-0480
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

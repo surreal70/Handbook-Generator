@@ -1,6 +1,6 @@
 # Policy: Mobile Device und Remote Work
 
-**Dokument-ID:** 0500
+**Dokument-ID:** ISMS-0500
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

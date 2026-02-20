@@ -6,7 +6,7 @@ Classification: Internal
 
 # BCR-02: Geschäftskontinuitätsplanung
 
-**Dokument-ID:** [FRAMEWORK]-0570
+**Dokument-ID:** CSA-CCM-0570
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

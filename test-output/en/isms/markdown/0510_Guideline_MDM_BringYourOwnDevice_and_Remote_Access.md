@@ -1,6 +1,6 @@
 # Guideline: MDM, Bring Your Own Device and Remote Access
 
-**Document-ID:** [FRAMEWORK]-0510
+**Document-ID:** ISMS-0510
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

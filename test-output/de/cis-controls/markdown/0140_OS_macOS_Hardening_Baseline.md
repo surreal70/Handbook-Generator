@@ -1,6 +1,6 @@
 # OS Hardening Baseline: macOS
 
-**Dokument-ID:** 0140
+**Dokument-ID:** CIS-CONTROLS-0140
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

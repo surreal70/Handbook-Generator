@@ -6,7 +6,7 @@ Classification: Internal
 
 # Physische Sicherheitsperimeter
 
-**Dokument-ID:** [FRAMEWORK]-0220
+**Dokument-ID:** TISAX-0220
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

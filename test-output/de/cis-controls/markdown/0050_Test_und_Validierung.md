@@ -1,6 +1,6 @@
 # Test- und Validierungsstrategie
 
-**Dokument-ID:** 0050
+**Dokument-ID:** CIS-CONTROLS-0050
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

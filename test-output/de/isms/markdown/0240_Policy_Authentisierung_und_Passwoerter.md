@@ -1,6 +1,6 @@
 # Policy: Authentisierung und Passwörter
 
-**Dokument-ID:** 0240
+**Dokument-ID:** ISMS-0240
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

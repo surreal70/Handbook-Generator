@@ -6,7 +6,7 @@ Classification: Internal
 
 # Risikobewertung
 
-**Dokument-ID:** [FRAMEWORK]-0090
+**Dokument-ID:** SOC1-0090
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

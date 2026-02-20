@@ -1,6 +1,6 @@
 # Kontext der Organisation und interessierte Parteien
 
-**Dokument-ID:** 0030
+**Dokument-ID:** ISMS-0030
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

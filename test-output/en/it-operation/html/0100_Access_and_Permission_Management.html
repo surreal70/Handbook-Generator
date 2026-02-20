@@ -21,13 +21,24 @@
         
         <main>
 <h1 id="access-and-permission-management">Access and Permission Management</h1>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0100
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
 <h2 id="overview">Overview</h2>
 <p>This document describes access and permission management for the IT service. It defines access control models, permission concepts, and role-based access control (RBAC).</p>
-<p><strong>Service:</strong> {{ meta.service_name }}<br />
-<strong>Responsible:</strong> Andreas Huemmer<br />
-<strong>Security Officer:</strong> Thomas Weber<br />
-<strong>Version:</strong> 1.0.0</p>
-<hr />
+<p><strong>Service:</strong> {{ meta-handbook.service_name }}<br />
+<strong>Responsible:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}<br />
+<strong>Security Officer:</strong> [TODO]<br />
+<strong>Version:</strong> 0</p>
 <h2 id="access-management-strategy">Access Management Strategy</h2>
 <h3 id="objectives">Objectives</h3>
 <ul>
@@ -45,7 +56,6 @@
 <li><strong>Audit Trail:</strong> Complete logging of all access</li>
 <li><strong>Multi-Factor Authentication:</strong> MFA for privileged access</li>
 </ol>
-<hr />
 <h2 id="access-control-model">Access Control Model</h2>
 <h3 id="authentication">Authentication</h3>
 <h4 id="authentication-methods">Authentication Methods</h4>
@@ -94,11 +104,11 @@
 <p><strong>Identity Provider:</strong>
 - <strong>System:</strong> [TODO: e.g., Active Directory, Azure AD, Okta]
 - <strong>URL:</strong> [TODO: SSO URL]
-- <strong>Responsible:</strong> Andreas Huemmer</p>
+- <strong>Responsible:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</p>
 <p><strong>MFA System:</strong>
 - <strong>System:</strong> [TODO: e.g., Duo, Microsoft Authenticator]
 - <strong>Required for:</strong> Administrators, privileged accounts
-- <strong>Responsible:</strong> Thomas Weber</p>
+- <strong>Responsible:</strong> [TODO]</p>
 <h3 id="authorization">Authorization</h3>
 <h4 id="authorization-models">Authorization Models</h4>
 <p><strong>Role-Based Access Control (RBAC):</strong>
@@ -110,7 +120,6 @@
 - More flexible than RBAC
 - More complex implementation</p>
 <p><strong>Current Model:</strong> [TODO: Select RBAC/ABAC/Hybrid]</p>
-<hr />
 <h2 id="role-based-access-control-rbac">Role-Based Access Control (RBAC)</h2>
 <h3 id="role-hierarchy">Role Hierarchy</h3>
 <div class="codehilite"><pre><span></span><code>┌─────────────────────────────────────────────────────────────┐
@@ -144,7 +153,7 @@
 - System administration
 - Backup/restore</p>
 <p><strong>Assigned to:</strong>
-- Andreas Huemmer
+- {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - [TODO: Additional administrators]</p>
 <p><strong>MFA:</strong> Required</p>
 <h4 id="power-user">Power User</h4>
@@ -165,7 +174,7 @@
 - Standard operations
 - Log access (read-only)</p>
 <p><strong>Assigned to:</strong>
-- Julia Becker
+- {{ meta-organisation-roles.role_Service_Desk_Lead }}
 - [TODO: Additional operators]</p>
 <p><strong>MFA:</strong> Optional</p>
 <h4 id="standard-user">Standard User</h4>
@@ -190,7 +199,6 @@
 - Management
 - [TODO: Additional read-only users]</p>
 <p><strong>MFA:</strong> Optional</p>
-<hr />
 <h2 id="permission-matrix">Permission Matrix</h2>
 <h3 id="system-permissions">System Permissions</h3>
 <table>
@@ -318,7 +326,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="access-request-process">Access Request Process</h2>
 <h3 id="access-request">Access Request</h3>
 <div class="codehilite"><pre><span></span><code>┌─────────────────┐
@@ -367,14 +374,14 @@
 - Separation of duties</p>
 <p><strong>Decision:</strong> Approve / Reject / Request clarification</p>
 <h4 id="3-security-review">3. Security Review</h4>
-<p><strong>Who:</strong> Thomas Weber or security team<br />
+<p><strong>Who:</strong> [TODO] or security team<br />
 <strong>Review:</strong>
 - Compliance requirements
 - Risk assessment
 - Conflict check (separation of duties)</p>
 <p><strong>Decision:</strong> Approve / Reject / Modify</p>
 <h4 id="4-provisioning">4. Provisioning</h4>
-<p><strong>Who:</strong> Andreas Huemmer or IT operations<br />
+<p><strong>Who:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }} or IT operations<br />
 <strong>Activities:</strong>
 - Create/modify account
 - Assign permissions
@@ -388,7 +395,6 @@
 - Provide access credentials
 - Complete documentation
 - Close ticket</p>
-<hr />
 <h2 id="privileged-access-management-pam">Privileged Access Management (PAM)</h2>
 <h3 id="privileged-accounts">Privileged Accounts</h3>
 <h4 id="definition">Definition</h4>
@@ -448,9 +454,8 @@
 </table>
 <h3 id="pam-system">PAM System</h3>
 <p><strong>System:</strong> [TODO: e.g., CyberArk, BeyondTrust, Thycotic]<br />
-<strong>Responsible:</strong> Thomas Weber<br />
+<strong>Responsible:</strong> [TODO]<br />
 <strong>Access:</strong> [TODO: PAM system URL]</p>
-<hr />
 <h2 id="service-accounts">Service Accounts</h2>
 <h3 id="service-account-management">Service Account Management</h3>
 <p><strong>Definition:</strong> Accounts for automated processes and system integrations</p>
@@ -503,7 +508,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="access-review-process">Access Review Process</h2>
 <h3 id="regular-reviews">Regular Reviews</h3>
 <h4 id="quarterly-reviews">Quarterly Reviews</h4>
@@ -518,7 +522,7 @@
 <h4 id="annual-reviews">Annual Reviews</h4>
 <p><strong>Frequency:</strong> Annually<br />
 <strong>Scope:</strong> Complete access review<br />
-<strong>Responsible:</strong> Thomas Weber<br />
+<strong>Responsible:</strong> [TODO]<br />
 <strong>Process:</strong>
 1. Comprehensive audit of all accounts
 2. Review privileged accounts
@@ -535,7 +539,6 @@
 - Automatic notification to manager
 - Deactivation after deadline
 - Documentation</p>
-<hr />
 <h2 id="onboarding-and-offboarding">Onboarding and Offboarding</h2>
 <h3 id="onboarding-process">Onboarding Process</h3>
 <h4 id="new-employee">New Employee</h4>
@@ -550,7 +553,7 @@
 6. [ ] Provide access credentials
 7. [ ] Documentation in CMDB
 8. [ ] Send welcome email</p>
-<p><strong>Responsible:</strong> Julia Becker</p>
+<p><strong>Responsible:</strong> {{ meta-organisation-roles.role_Service_Desk_Lead }}</p>
 <h3 id="offboarding-process">Offboarding Process</h3>
 <h4 id="employee-departure">Employee Departure</h4>
 <p><strong>Trigger:</strong> HR notification<br />
@@ -564,7 +567,7 @@
 6. [ ] Archive data
 7. [ ] Update documentation
 8. [ ] Inform manager</p>
-<p><strong>Responsible:</strong> Julia Becker</p>
+<p><strong>Responsible:</strong> {{ meta-organisation-roles.role_Service_Desk_Lead }}</p>
 <h4 id="role-change">Role Change</h4>
 <p><strong>Trigger:</strong> HR notification or manager request<br />
 <strong>Timeframe:</strong> On change date</p>
@@ -574,7 +577,6 @@
 3. [ ] Conduct access review
 4. [ ] Update documentation
 5. [ ] Inform user</p>
-<hr />
 <h2 id="compliance-and-auditing">Compliance and Auditing</h2>
 <h3 id="compliance-requirements">Compliance Requirements</h3>
 <table>
@@ -618,7 +620,7 @@
 - Password changes</p>
 <p><strong>Log Retention:</strong> [TODO: e.g., 1 year]<br />
 <strong>Log System:</strong> [TODO: e.g., Splunk, ELK]<br />
-<strong>Responsible:</strong> Thomas Weber</p>
+<strong>Responsible:</strong> [TODO]</p>
 <h3 id="audit-reports">Audit Reports</h3>
 <p><strong>Monthly Reports:</strong>
 - New accounts
@@ -631,14 +633,13 @@
 - Compliance status
 - Risk assessment
 - Improvement suggestions</p>
-<hr />
 <h2 id="emergency-access">Emergency Access</h2>
 <h3 id="break-glass-accounts">Break-Glass Accounts</h3>
 <p><strong>Definition:</strong> Emergency accounts for critical situations</p>
 <p><strong>Usage:</strong>
 - Only for critical outages
 - When normal access paths unavailable
-- After approval by Anna Schmidt</p>
+- After approval by [TODO]</p>
 <p><strong>Requirements:</strong>
 - Physically secured passwords
 - Complete logging
@@ -649,21 +650,19 @@
 - <code>emergency_network</code> - Network emergency access</p>
 <p><strong>Password Management:</strong>
 - Sealed envelopes in safe
-- Access only by Anna Schmidt or Thomas Weber</p>
-<hr />
+- Access only by [TODO] or [TODO]</p>
 <h2 id="contacts">Contacts</h2>
 <p><strong>Access Management Team:</strong>
-- <strong>IT Operations Manager:</strong> Andreas Huemmer - andreas.huemmer@adminsend.de
-- <strong>CISO:</strong> Thomas Weber - thomas.weber@adminsend.de
-- <strong>Service Desk Lead:</strong> Julia Becker - julia.becker@adminsend.de
-- <strong>CIO:</strong> Anna Schmidt - anna.schmidt@adminsend.de</p>
+- <strong>IT Operations Manager:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }} - {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
+- <strong>CISO:</strong> [TODO] - {{ meta-organisation-roles.role_CISO_email }}
+- <strong>Service Desk Lead:</strong> {{ meta-organisation-roles.role_Service_Desk_Lead }} - {{ meta-organisation-roles.role_Service_Desk_Lead_email }}
+- <strong>CIO:</strong> [TODO] - {{ meta-organisation-roles.role_CIO_email }}</p>
 <p><strong>Emergency Contacts:</strong>
-- <strong>Break-Glass Approval:</strong> Anna Schmidt - +49 89 12345678-200
-- <strong>Security Incident:</strong> Thomas Weber - +49 89 12345678-300</p>
-<hr />
-<p><strong>Document Owner:</strong> IT Operations Manager<br />
-<strong>Approved by:</strong> CIO<br />
-<strong>Version:</strong> 1.0.0<br />
+- <strong>Break-Glass Approval:</strong> [TODO] - {{ meta-organisation-roles.role_CIO_phone }}
+- <strong>Security Incident:</strong> [TODO] - {{ meta-organisation-roles.role_CISO_phone }}</p>
+<p><strong>Document Owner:</strong> [TODO]<br />
+<strong>Approved by:</strong> [TODO]<br />
+<strong>Version:</strong> 0<br />
 <strong>Organization:</strong> AdminSend GmbH</p>
         </main>
         

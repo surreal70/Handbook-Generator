@@ -1,6 +1,6 @@
 # Requirements Rationale
 
-**Document-ID:** 0420
+**Document-ID:** COMMON-CRITERIA-0420
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

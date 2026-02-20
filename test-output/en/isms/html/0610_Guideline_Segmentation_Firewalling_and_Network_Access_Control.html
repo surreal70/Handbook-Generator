@@ -21,15 +21,17 @@
         
         <main>
 <h1 id="guideline-segmentation-firewalling-and-network-access-control">Guideline: Segmentation, Firewalling and Network Access Control</h1>
-<p><strong>Document ID:</strong> 0610<br />
-<strong>Document Type:</strong> Guideline (detailed)<br />
-<strong>Associated Policy:</strong> 0600_Policy_Network_Security.md<br />
-<strong>Standard Reference:</strong> ISO/IEC 27001:2022 Annex A.8.20, A.8.21, A.8.22<br />
-<strong>Owner:</strong> {{ meta.network.manager }}<br />
-<strong>Version:</strong> 1.0<br />
-<strong>Status:</strong> Approved<br />
-<strong>Classification:</strong> Confidential<br />
-<strong>Last Updated:</strong> {{ meta.document.date }}</p>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0610
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
 <hr />
 <h2 id="1-purpose-and-scope">1. Purpose and Scope</h2>
 <p>This guideline specifies the <code>0600_Policy_Network_Security.md</code> and defines:
@@ -85,7 +87,7 @@
 <p><strong>Internal Firewalls:</strong>
 - Between zones
 - Micro-segmentation</p>
-<p><strong>Firewall Platform:</strong> {{ meta.network.firewall }}</p>
+<p><strong>Firewall Platform:</strong> {{ meta-handbook.network_firewall }}</p>
 <h3 id="32-firewall-rules">3.2 Firewall Rules</h3>
 <p><strong>Default Deny:</strong>
 - All connections blocked by default
@@ -125,7 +127,7 @@
 - Update documentation</p>
 <h2 id="4-network-access-control-nac">4. Network Access Control (NAC)</h2>
 <h3 id="41-nac-system">4.1 NAC System</h3>
-<p><strong>Platform:</strong> {{ meta.network.nac_solution }} (e.g., Cisco ISE, Aruba ClearPass)</p>
+<p><strong>Platform:</strong> {{ meta-handbook.network_nac_solution }} (e.g., Cisco ISE, Aruba ClearPass)</p>
 <p><strong>Functions:</strong>
 - 802.1X authentication
 - MAC address authentication (MAB)
@@ -167,7 +169,7 @@
 <p><strong>Internal:</strong>
 - Between critical zones
 - IPS mode</p>
-<p><strong>IDS/IPS System:</strong> {{ meta.security.ids_ips }}</p>
+<p><strong>IDS/IPS System:</strong> {{ meta-handbook.security_ids_ips }}</p>
 <h3 id="52-signatures-and-policies">5.2 Signatures and Policies</h3>
 <p><strong>Signature Updates:</strong>
 - Automatic, daily
@@ -225,7 +227,7 @@
 - Collection of flow data
 - Analysis of traffic patterns
 - Anomaly detection</p>
-<p><strong>Tools:</strong> {{ meta.network.flow_tool }}</p>
+<p><strong>Tools:</strong> {{ meta-handbook.network_flow_tool }}</p>
 <h3 id="82-packet-capture">8.2 Packet Capture</h3>
 <p><strong>For Forensics:</strong>
 - Packet capture at critical points
@@ -279,9 +281,8 @@
 <li><strong>ISO/IEC 27001:2022 Annex A.8.22</strong> - Segregation of networks</li>
 <li><strong>NIST SP 800-41</strong> - Guidelines on Firewalls and Firewall Policy</li>
 </ul>
-<hr />
-<p><strong>Approved by:</strong> Thomas Weber, CISO<br />
-<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<p><strong>Approved by:</strong> [TODO], CISO<br />
+<strong>Next Review:</strong> [TODO]</p>
         </main>
         
         <nav class="page-nav">

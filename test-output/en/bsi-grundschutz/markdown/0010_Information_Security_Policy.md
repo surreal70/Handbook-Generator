@@ -1,6 +1,6 @@
 # Information Security Policy (Top Management)
 
-**Document-ID:** [FRAMEWORK]-0010
+**Document-ID:** BSI-GRUNDSCHUTZ-0010
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

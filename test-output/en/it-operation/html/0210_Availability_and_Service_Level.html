@@ -21,13 +21,24 @@
         
         <main>
 <h1 id="availability-and-service-level">Availability and Service Level</h1>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0210
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
 <h2 id="overview">Overview</h2>
 <p>This document defines availability requirements, Service Level Agreements (SLAs), and Service Level Objectives (SLOs) for the IT service. It describes measurement methods, reporting processes, and measures for continuous improvement of service availability.</p>
-<p><strong>Document Owner:</strong> IT Operations Manager<br />
-<strong>Approved by:</strong> CIO<br />
-<strong>Version:</strong> 1.0.0<br />
+<p><strong>Document Owner:</strong> [TODO]<br />
+<strong>Approved by:</strong> [TODO]<br />
+<strong>Version:</strong> 0<br />
 <strong>Organization:</strong> AdminSend GmbH</p>
-<hr />
 <h2 id="availability-requirements">Availability Requirements</h2>
 <h3 id="service-classification">Service Classification</h3>
 <table>
@@ -77,16 +88,64 @@
 <li><strong>Availability:</strong> 24/7/365</li>
 <li><strong>Support Hours:</strong> 24/7 with on-call availability</li>
 <li><strong>Maintenance Window:</strong> Sunday 02:00-06:00 (after announcement)</li>
-<li><strong>Emergency Maintenance:</strong> After approval by Anna Schmidt</li>
+<li><strong>Emergency Maintenance:</strong> After approval by [TODO]</li>
 </ul>
 <h4 id="business-services">Business Services</h4>
 <ul>
 <li><strong>Availability:</strong> Mon-Fri 06:00-22:00</li>
 <li><strong>Support Hours:</strong> Mon-Fri 08:00-18:00</li>
 <li><strong>Maintenance Window:</strong> Saturday 20:00-24:00</li>
-<li><strong>Emergency Maintenance:</strong> After approval by Andreas Huemmer</li>
+<li><strong>Emergency Maintenance:</strong> After approval by {{ meta-organisation-roles.role_IT_Operations_Manager }}</li>
 </ul>
-<hr />
+<h4 id="developmenttest-services">Development/Test Services</h4>
+<ul>
+<li><strong>Availability:</strong> Mon-Fri 08:00-18:00</li>
+<li><strong>Support Hours:</strong> Best Effort</li>
+<li><strong>Maintenance Window:</strong> Anytime after announcement</li>
+<li><strong>Emergency Maintenance:</strong> Not required</li>
+</ul>
+<h3 id="planned-maintenance-windows">Planned Maintenance Windows</h3>
+<table>
+<thead>
+<tr>
+<th>Maintenance Type</th>
+<th>Frequency</th>
+<th>Duration</th>
+<th>Announcement Period</th>
+<th>Approval</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Routine Maintenance</td>
+<td>Monthly</td>
+<td>2-4 hours</td>
+<td>7 days</td>
+<td>Ops Manager</td>
+</tr>
+<tr>
+<td>Patch Deployment</td>
+<td>Monthly</td>
+<td>1-2 hours</td>
+<td>5 days</td>
+<td>Ops Manager</td>
+</tr>
+<tr>
+<td>Major Upgrade</td>
+<td>Quarterly</td>
+<td>4-8 hours</td>
+<td>14 days</td>
+<td>CIO</td>
+</tr>
+<tr>
+<td>Emergency Maintenance</td>
+<td>Ad-hoc</td>
+<td>Variable</td>
+<td>4 hours</td>
+<td>CIO</td>
+</tr>
+</tbody>
+</table>
 <h2 id="service-level-agreements-sla">Service Level Agreements (SLA)</h2>
 <h3 id="sla-definitions">SLA Definitions</h3>
 <h4 id="availability-sla">Availability SLA</h4>
@@ -226,7 +285,37 @@
 </tr>
 </tbody>
 </table>
-<hr />
+<h3 id="sla-contract-partners">SLA Contract Partners</h3>
+<h4 id="internal-slas">Internal SLAs</h4>
+<ul>
+<li><strong>Service Provider:</strong> IT Operations ({{ meta-organisation-roles.role_IT_Operations_Manager }})</li>
+<li><strong>Service Consumer:</strong> Business Departments</li>
+<li><strong>Responsible:</strong> [TODO]</li>
+<li><strong>Review Cycle:</strong> Quarterly</li>
+</ul>
+<h4 id="external-slas">External SLAs</h4>
+<ul>
+<li><strong>Service Provider:</strong> AdminSend GmbH</li>
+<li><strong>Service Consumer:</strong> [TODO: Customer/Partner]</li>
+<li><strong>Contract Duration:</strong> [TODO: Duration]</li>
+<li><strong>Penalties:</strong> [TODO: Penalties for SLA violations]</li>
+</ul>
+<h3 id="sla-exceptions">SLA Exceptions</h3>
+<h4 id="exclusion-criteria-force-majeure">Exclusion Criteria (Force Majeure)</h4>
+<ul>
+<li>Natural disasters</li>
+<li>Terrorist attacks</li>
+<li>Wars and civil unrest</li>
+<li>Pandemics</li>
+<li>Power outages beyond control</li>
+</ul>
+<h4 id="planned-exceptions">Planned Exceptions</h4>
+<ul>
+<li>Announced maintenance windows</li>
+<li>Approved emergency maintenance</li>
+<li>Customer-caused outages</li>
+<li>Third-party outages beyond control</li>
+</ul>
 <h2 id="service-level-objectives-slo">Service Level Objectives (SLO)</h2>
 <h3 id="internal-slos">Internal SLOs</h3>
 <h4 id="infrastructure-slos">Infrastructure SLOs</h4>
@@ -244,31 +333,94 @@
 <td>Compute Cluster</td>
 <td style="text-align: right;">99.9%</td>
 <td>Hypervisor Monitoring</td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 </tr>
 <tr>
 <td>Storage System</td>
 <td style="text-align: right;">99.95%</td>
 <td>Storage Monitoring</td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 </tr>
 <tr>
 <td>Network Core</td>
 <td style="text-align: right;">99.99%</td>
 <td>Network Monitoring</td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 </tr>
 <tr>
 <td>Firewall</td>
 <td style="text-align: right;">99.95%</td>
 <td>Security Monitoring</td>
-<td>Thomas Weber</td>
+<td>[TODO]</td>
 </tr>
 <tr>
 <td>Load Balancer</td>
 <td style="text-align: right;">99.9%</td>
 <td>LB Monitoring</td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
+</tr>
+</tbody>
+</table>
+<h4 id="application-slos">Application SLOs</h4>
+<table>
+<thead>
+<tr>
+<th>Application</th>
+<th style="text-align: right;">Availability</th>
+<th style="text-align: right;">Response Time</th>
+<th style="text-align: right;">Error Rate</th>
+<th>Responsible</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: App 1]</td>
+<td style="text-align: right;">99.5%</td>
+<td style="text-align: right;">&lt; 200ms</td>
+<td style="text-align: right;">&lt; 0.1%</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: App 2]</td>
+<td style="text-align: right;">99.0%</td>
+<td style="text-align: right;">&lt; 500ms</td>
+<td style="text-align: right;">&lt; 0.5%</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: App 3]</td>
+<td style="text-align: right;">99.9%</td>
+<td style="text-align: right;">&lt; 100ms</td>
+<td style="text-align: right;">&lt; 0.05%</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="database-slos">Database SLOs</h4>
+<table>
+<thead>
+<tr>
+<th>Database</th>
+<th style="text-align: right;">Availability</th>
+<th style="text-align: right;">Query Time</th>
+<th style="text-align: right;">Connection Time</th>
+<th>Responsible</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: DB 1]</td>
+<td style="text-align: right;">99.95%</td>
+<td style="text-align: right;">&lt; 50ms</td>
+<td style="text-align: right;">&lt; 10ms</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>[TODO: DB 2]</td>
+<td style="text-align: right;">99.5%</td>
+<td style="text-align: right;">&lt; 100ms</td>
+<td style="text-align: right;">&lt; 20ms</td>
+<td>[TODO]</td>
 </tr>
 </tbody>
 </table>
@@ -310,7 +462,25 @@
 </tr>
 </tbody>
 </table>
-<hr />
+<h4 id="error-budget-policy">Error Budget Policy</h4>
+<p><strong>When Error Budget &gt; 50% remaining:</strong>
+- Normal development velocity
+- New features and experiments allowed
+- Routine maintenance as planned</p>
+<p><strong>When Error Budget 25-50% remaining:</strong>
+- Increased caution with changes
+- Focus on stability
+- Additional testing requirements</p>
+<p><strong>When Error Budget &lt; 25% remaining:</strong>
+- Feature freeze
+- Only critical bugfixes
+- Focus on reliability improvements
+- Postmortem for all incidents</p>
+<p><strong>When Error Budget exhausted:</strong>
+- Complete change freeze
+- Only emergency fixes
+- Root cause analysis of all outages
+- Improvement plan before resumption</p>
 <h2 id="availability-measurement">Availability Measurement</h2>
 <h3 id="measurement-methods">Measurement Methods</h3>
 <h4 id="synthetic-monitoring">Synthetic Monitoring</h4>
@@ -327,7 +497,70 @@
 <li><strong>Metrics:</strong> Page Load Time, User Experience, Error Rate</li>
 <li><strong>Privacy:</strong> GDPR compliant, anonymized</li>
 </ul>
-<hr />
+<h4 id="server-side-monitoring">Server-Side Monitoring</h4>
+<ul>
+<li><strong>Method:</strong> Monitoring of server metrics</li>
+<li><strong>Collection:</strong> Logs, Metrics, Traces</li>
+<li><strong>Metrics:</strong> Uptime, Resource Usage, Error Logs</li>
+<li><strong>Aggregation:</strong> Central monitoring system</li>
+</ul>
+<h3 id="availability-calculation">Availability Calculation</h3>
+<h4 id="formula">Formula</h4>
+<div class="codehilite"><pre><span></span><code>Availability (%) = (Total Time - Downtime) / Total Time × 100
+</code></pre></div>
+
+<h4 id="example-calculation-month-with-720-hours">Example Calculation (Month with 720 hours)</h4>
+<div class="codehilite"><pre><span></span><code>Total Time: 720 hours
+Planned Maintenance: 2 hours (excluded)
+Unplanned Outages: 1.5 hours
+Available Time: 720 - 2 = 718 hours
+Actual Availability: (718 - 1.5) / 718 × 100 = 99.79%
+</code></pre></div>
+
+<h4 id="exclusions">Exclusions</h4>
+<ul>
+<li>Planned and announced maintenance windows</li>
+<li>Customer-caused outages</li>
+<li>Force Majeure events</li>
+<li>Third-party outages (as agreed)</li>
+</ul>
+<h3 id="monitoring-tools">Monitoring Tools</h3>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Purpose</th>
+<th>Measurement Interval</th>
+<th>Access</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Uptime Tool]</td>
+<td>Availability Monitoring</td>
+<td>1 minute</td>
+<td>[TODO: URL]</td>
+</tr>
+<tr>
+<td>[TODO: APM Tool]</td>
+<td>Performance Monitoring</td>
+<td>Continuous</td>
+<td>[TODO: URL]</td>
+</tr>
+<tr>
+<td>[TODO: RUM Tool]</td>
+<td>Real User Monitoring</td>
+<td>Continuous</td>
+<td>[TODO: URL]</td>
+</tr>
+<tr>
+<td>[TODO: Log Tool]</td>
+<td>Log Aggregation</td>
+<td>Real-time</td>
+<td>[TODO: URL]</td>
+</tr>
+</tbody>
+</table>
 <h2 id="service-level-reporting">Service Level Reporting</h2>
 <h3 id="report-types">Report Types</h3>
 <h4 id="daily-availability-report">Daily Availability Report</h4>
@@ -342,7 +575,7 @@
 </ul>
 <h4 id="weekly-sla-report">Weekly SLA Report</h4>
 <ul>
-<li><strong>Recipients:</strong> Andreas Huemmer</li>
+<li><strong>Recipients:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</li>
 <li><strong>Content:</strong></li>
 <li>Weekly availability</li>
 <li>SLA compliance status</li>
@@ -352,7 +585,7 @@
 </ul>
 <h4 id="monthly-sla-report">Monthly SLA Report</h4>
 <ul>
-<li><strong>Recipients:</strong> Anna Schmidt, Stakeholders</li>
+<li><strong>Recipients:</strong> [TODO], Stakeholders</li>
 <li><strong>Content:</strong></li>
 <li>Monthly availability</li>
 <li>SLA fulfillment vs. targets</li>
@@ -361,7 +594,242 @@
 <li>Improvement measures</li>
 <li><strong>Delivery:</strong> First business day of following month</li>
 </ul>
-<hr />
+<h4 id="quarterly-management-report">Quarterly Management Report</h4>
+<ul>
+<li><strong>Recipients:</strong> [TODO], [TODO], [TODO]</li>
+<li><strong>Content:</strong></li>
+<li>Quarterly availability</li>
+<li>SLA trends</li>
+<li>Cost-benefit analysis</li>
+<li>Strategic recommendations</li>
+<li><strong>Delivery:</strong> Quarter end + 5 business days</li>
+</ul>
+<h3 id="report-metrics">Report Metrics</h3>
+<h4 id="availability-dashboard">Availability Dashboard</h4>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th style="text-align: right;">Target</th>
+<th style="text-align: right;">Current (Month)</th>
+<th>Trend</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Overall Availability</td>
+<td style="text-align: right;">99.5%</td>
+<td style="text-align: right;">[TODO]%</td>
+<td>[TODO]</td>
+<td>✓ / ⚠ / ✗</td>
+</tr>
+<tr>
+<td>Unplanned Outages</td>
+<td style="text-align: right;">&lt; 2h</td>
+<td style="text-align: right;">[TODO]h</td>
+<td>[TODO]</td>
+<td>✓ / ⚠ / ✗</td>
+</tr>
+<tr>
+<td>MTBF</td>
+<td style="text-align: right;">&gt; 720h</td>
+<td style="text-align: right;">[TODO]h</td>
+<td>[TODO]</td>
+<td>✓ / ⚠ / ✗</td>
+</tr>
+<tr>
+<td>MTTR</td>
+<td style="text-align: right;">&lt; 2h</td>
+<td style="text-align: right;">[TODO]h</td>
+<td>[TODO]</td>
+<td>✓ / ⚠ / ✗</td>
+</tr>
+<tr>
+<td>Error Budget Remaining</td>
+<td style="text-align: right;">&gt; 0%</td>
+<td style="text-align: right;">[TODO]%</td>
+<td>[TODO]</td>
+<td>✓ / ⚠ / ✗</td>
+</tr>
+</tbody>
+</table>
+<h4 id="incident-statistics">Incident Statistics</h4>
+<table>
+<thead>
+<tr>
+<th>Priority</th>
+<th style="text-align: right;">Count</th>
+<th style="text-align: right;">Avg. MTTR</th>
+<th style="text-align: right;">SLA Fulfillment</th>
+<th>Trend</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P1 - Critical</td>
+<td style="text-align: right;">[TODO]</td>
+<td style="text-align: right;">[TODO]h</td>
+<td style="text-align: right;">[TODO]%</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>P2 - High</td>
+<td style="text-align: right;">[TODO]</td>
+<td style="text-align: right;">[TODO]h</td>
+<td style="text-align: right;">[TODO]%</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>P3 - Medium</td>
+<td style="text-align: right;">[TODO]</td>
+<td style="text-align: right;">[TODO]h</td>
+<td style="text-align: right;">[TODO]%</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>P4 - Low</td>
+<td style="text-align: right;">[TODO]</td>
+<td style="text-align: right;">[TODO]h</td>
+<td style="text-align: right;">[TODO]%</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="availability-improvements">Availability Improvements</h2>
+<h3 id="improvement-measures">Improvement Measures</h3>
+<h4 id="redundancy-and-high-availability">Redundancy and High Availability</h4>
+<ul>
+<li><strong>Active-Active Cluster:</strong> Load distribution across multiple nodes</li>
+<li><strong>Active-Passive Cluster:</strong> Failover configuration</li>
+<li><strong>Geographic Redundancy:</strong> Multi-region deployment</li>
+<li><strong>Database Replication:</strong> Synchronous/Asynchronous replication</li>
+<li><strong>Load Balancing:</strong> Distribution of load across multiple instances</li>
+</ul>
+<h4 id="automation">Automation</h4>
+<ul>
+<li><strong>Auto-Healing:</strong> Automatic recovery from failures</li>
+<li><strong>Auto-Scaling:</strong> Automatic capacity adjustment</li>
+<li><strong>Automated Failover:</strong> Automatic failover on failure</li>
+<li><strong>Health Checks:</strong> Continuous health monitoring</li>
+<li><strong>Self-Service:</strong> Automated provisioning</li>
+</ul>
+<h4 id="monitoring-and-alerting">Monitoring and Alerting</h4>
+<ul>
+<li><strong>Proactive Monitoring:</strong> Early detection of problems</li>
+<li><strong>Predictive Analytics:</strong> Prediction of failures</li>
+<li><strong>Intelligent Alerting:</strong> Reduction of false positives</li>
+<li><strong>Anomaly Detection:</strong> ML-based anomaly detection</li>
+<li><strong>Distributed Tracing:</strong> End-to-end tracing</li>
+</ul>
+<h4 id="process-improvements">Process Improvements</h4>
+<ul>
+<li><strong>Incident Management:</strong> Optimization of incident processes</li>
+<li><strong>Change Management:</strong> Reduction of change-related outages</li>
+<li><strong>Capacity Management:</strong> Proactive capacity planning</li>
+<li><strong>Disaster Recovery:</strong> Improvement of DR processes</li>
+<li><strong>Continuous Improvement:</strong> Regular retrospectives</li>
+</ul>
+<h3 id="improvement-roadmap">Improvement Roadmap</h3>
+<table>
+<thead>
+<tr>
+<th>Quarter</th>
+<th>Measure</th>
+<th>Expected Impact</th>
+<th>Responsible</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q1 2026</td>
+<td>[TODO]</td>
+<td>+0.1% Availability</td>
+<td>[TODO]</td>
+<td>Planned</td>
+</tr>
+<tr>
+<td>Q2 2026</td>
+<td>[TODO]</td>
+<td>-30min MTTR</td>
+<td>[TODO]</td>
+<td>Planned</td>
+</tr>
+<tr>
+<td>Q3 2026</td>
+<td>[TODO]</td>
+<td>+0.2% Availability</td>
+<td>[TODO]</td>
+<td>Planned</td>
+</tr>
+<tr>
+<td>Q4 2026</td>
+<td>[TODO]</td>
+<td>-50% Incidents</td>
+<td>[TODO]</td>
+<td>Planned</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lessons-learned">Lessons Learned</h3>
+<h4 id="postmortem-process">Postmortem Process</h4>
+<ol>
+<li><strong>Incident Documentation:</strong> Detailed description of the incident</li>
+<li><strong>Timeline Creation:</strong> Chronological sequence</li>
+<li><strong>Root Cause Analysis:</strong> 5-Why method</li>
+<li><strong>Impact Assessment:</strong> Affected systems and users</li>
+<li><strong>Corrective Actions:</strong> Immediate measures and long-term improvements</li>
+<li><strong>Follow-Up:</strong> Review of implementation</li>
+</ol>
+<h4 id="postmortem-template">Postmortem Template</h4>
+<ul>
+<li><strong>Incident ID:</strong> [TODO]</li>
+<li><strong>Date/Time:</strong> [TODO]</li>
+<li><strong>Duration:</strong> [TODO]</li>
+<li><strong>Affected Services:</strong> [TODO]</li>
+<li><strong>Root Cause:</strong> [TODO]</li>
+<li><strong>Actions:</strong> [TODO]</li>
+<li><strong>Responsible:</strong> [TODO]</li>
+<li><strong>Status:</strong> [TODO]</li>
+</ul>
+<h2 id="sla-review-and-adjustment">SLA Review and Adjustment</h2>
+<h3 id="review-process">Review Process</h3>
+<h4 id="quarterly-sla-review">Quarterly SLA Review</h4>
+<ul>
+<li><strong>Participants:</strong> [TODO], {{ meta-organisation-roles.role_IT_Operations_Manager }}, Stakeholders</li>
+<li><strong>Agenda:</strong></li>
+<li>SLA fulfillment of last 3 months</li>
+<li>Trend analysis</li>
+<li>Improvement potential</li>
+<li>Adjustment needs</li>
+<li><strong>Output:</strong> Review protocol with recommendations</li>
+</ul>
+<h4 id="annual-sla-review">Annual SLA Review</h4>
+<ul>
+<li><strong>Participants:</strong> [TODO], [TODO], [TODO], Stakeholders</li>
+<li><strong>Agenda:</strong></li>
+<li>Annual availability</li>
+<li>SLA appropriateness</li>
+<li>Cost-benefit analysis</li>
+<li>Strategic alignment</li>
+<li><strong>Output:</strong> SLA adjustments for following year</li>
+</ul>
+<h3 id="adjustment-criteria">Adjustment Criteria</h3>
+<h4 id="sla-tightening-higher-requirements">SLA Tightening (higher requirements)</h4>
+<ul>
+<li>Business criticality increased</li>
+<li>Competitive pressure</li>
+<li>Regulatory requirements</li>
+<li>Customer feedback</li>
+</ul>
+<h4 id="sla-relaxation-lower-requirements">SLA Relaxation (lower requirements)</h4>
+<ul>
+<li>Cost-benefit ratio</li>
+<li>Technical feasibility</li>
+<li>Business priority decreased</li>
+<li>Realistic goal setting</li>
+</ul>
 <h2 id="processes-and-responsibilities">Processes and Responsibilities</h2>
 <h3 id="raci-matrix">RACI Matrix</h3>
 <table>
@@ -429,7 +897,13 @@
 <blockquote>
 <p><strong>Legend:</strong> R = Responsible, A = Accountable, C = Consulted, I = Informed</p>
 </blockquote>
-<hr />
+<h3 id="escalation-path">Escalation Path</h3>
+<ol>
+<li><strong>Level 1:</strong> Operations Team - Incident response and monitoring</li>
+<li><strong>Level 2:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }} - SLA violations</li>
+<li><strong>Level 3:</strong> [TODO] - Critical SLA violations</li>
+<li><strong>Level 4:</strong> [TODO] - Contractual consequences</li>
+</ol>
 <h2 id="compliance-and-standards">Compliance and Standards</h2>
 <h3 id="relevant-standards">Relevant Standards</h3>
 <ul>
@@ -437,10 +911,67 @@
 <li><strong>ISO 20000:</strong> Clause 8.9 - Availability Management</li>
 <li><strong>COBIT 2019:</strong> DSS01 - Managed Operations</li>
 </ul>
-<hr />
-<p><strong>Last Update:</strong> {{ meta.date }}<br />
+<h3 id="audit-requirements">Audit Requirements</h3>
+<ul>
+<li>SLA documentation and contracts</li>
+<li>Availability reports and metrics</li>
+<li>Incident documentation</li>
+<li>Evidence of improvement measures</li>
+</ul>
+<h2 id="appendix">Appendix</h2>
+<h3 id="glossary">Glossary</h3>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SLA</td>
+<td>Service Level Agreement - Agreement on service levels</td>
+</tr>
+<tr>
+<td>SLO</td>
+<td>Service Level Objective - Internal service target</td>
+</tr>
+<tr>
+<td>SLI</td>
+<td>Service Level Indicator - Measurable metric</td>
+</tr>
+<tr>
+<td>MTBF</td>
+<td>Mean Time Between Failures - Average time between failures</td>
+</tr>
+<tr>
+<td>MTTR</td>
+<td>Mean Time To Repair - Average repair time</td>
+</tr>
+<tr>
+<td>Error Budget</td>
+<td>Tolerable downtime within the SLO period</td>
+</tr>
+<tr>
+<td>Uptime</td>
+<td>Available time of a system</td>
+</tr>
+<tr>
+<td>Downtime</td>
+<td>Outage time of a system</td>
+</tr>
+</tbody>
+</table>
+<h3 id="references">References</h3>
+<ul>
+<li>ITIL v4 Foundation Handbook</li>
+<li>ISO/IEC 20000-1:2018</li>
+<li>COBIT 2019 Framework</li>
+<li>Site Reliability Engineering (Google)</li>
+</ul>
+<p><strong>Last Update:</strong> {{ meta-handbook.date }}<br />
 <strong>Next Review:</strong> [TODO: Date]<br />
-<strong>Contact:</strong> andreas.huemmer@adminsend.de</p>
+<strong>Contact:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager_email }}</p>
         </main>
         
         <nav class="page-nav">

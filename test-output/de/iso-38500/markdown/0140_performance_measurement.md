@@ -7,7 +7,7 @@ Classification: Internal
 
 # Leistungsmessung
 
-**Dokument-ID:** [FRAMEWORK]-0140
+**Dokument-ID:** ISO-38500-0140
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

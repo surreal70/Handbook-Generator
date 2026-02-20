@@ -6,7 +6,7 @@ Classification: Internal
 
 # Recovery Automation
 
-**Dokument-ID:** [FRAMEWORK]-0340
+**Dokument-ID:** DORA-0340
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

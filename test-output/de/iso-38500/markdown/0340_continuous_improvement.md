@@ -7,7 +7,7 @@ Classification: Internal
 
 # Kontinuierliche Verbesserung in der IT-Governance
 
-**Dokument-ID:** [FRAMEWORK]-0340
+**Dokument-ID:** ISO-38500-0340
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

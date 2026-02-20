@@ -21,10 +21,22 @@
         
         <main>
 <h1 id="disaster-recovery-und-business-continuity">Disaster Recovery und Business Continuity</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0160
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
 <h2 id="zweck-und-geltungsbereich">Zweck und Geltungsbereich</h2>
 <p>Dieses Dokument beschreibt die Disaster-Recovery- und Business-Continuity-Strategien für AdminSend GmbH. Es definiert Disaster-Szenarien, Impact-Analysen, DR-Strategien, Failover-/Failback-Prozeduren und Business-Continuity-Pläne zur Sicherstellung der Geschäftskontinuität bei Katastrophen.</p>
 <p><strong>Geltungsbereich:</strong> Alle kritischen IT-Services und Geschäftsprozesse von AdminSend GmbH</p>
-<p><strong>Verantwortlich:</strong> Anna Schmidt (anna.schmidt@adminsend.de)</p>
+<p><strong>Verantwortlich:</strong> [TODO] ({{ meta-organisation-roles.role_CIO_email }})</p>
 <h2 id="grundlagen">Grundlagen</h2>
 <h3 id="definitionen">Definitionen</h3>
 <p><strong>Disaster (Katastrophe):</strong>
@@ -155,7 +167,7 @@ Fähigkeit einer Organisation, kritische Geschäftsprozesse während und nach ei
 - Stromausfall (regional)</p>
 <p><strong>Wahrscheinlichkeit:</strong> Niedrig<br />
 <strong>Impact:</strong> Sehr hoch<br />
-<strong>Betroffene Standorte:</strong> {{ netbox.site.primary }}, {{ netbox.site.secondary }}</p>
+<strong>Betroffene Standorte:</strong> [[ netbox.site.primary ]], [[ netbox.site.secondary ]]</p>
 <p><strong>Mitigations:</strong>
 - Geografisch getrennte DR-Site
 - Redundante Stromversorgung (USV, Generator)
@@ -323,7 +335,7 @@ Fähigkeit einer Organisation, kritische Geschäftsprozesse während und nach ei
 - Sehr hohe Kosten (doppelte Infrastruktur)
 - Komplexe Konfiguration
 - Hohe Netzwerk-Anforderungen</p>
-<p><strong>Anwendung:</strong> Tier 0 Services ({{ netbox.service.critical }})</p>
+<p><strong>Anwendung:</strong> Tier 0 Services ([[ netbox.service.critical ]])</p>
 <p><strong>Kosten:</strong> ~200% der Produktions-Infrastruktur</p>
 <h3 id="warm-standby-aktiv-passiv">Warm Standby (Aktiv-Passiv)</h3>
 <p><strong>Beschreibung:</strong>
@@ -340,7 +352,7 @@ Fähigkeit einer Organisation, kritische Geschäftsprozesse während und nach ei
 - Kurze Downtime bei Failover
 - Reduzierte Performance initial
 - Regelmäßige Tests erforderlich</p>
-<p><strong>Anwendung:</strong> Tier 1 Services ({{ netbox.service.important }})</p>
+<p><strong>Anwendung:</strong> Tier 1 Services ([[ netbox.service.important ]])</p>
 <p><strong>Kosten:</strong> ~50-70% der Produktions-Infrastruktur</p>
 <h3 id="cold-standby-backup-basiert">Cold Standby (Backup-basiert)</h3>
 <p><strong>Beschreibung:</strong>
@@ -357,7 +369,7 @@ Fähigkeit einer Organisation, kritische Geschäftsprozesse während und nach ei
 - Längere Downtime
 - Manuelle Prozesse
 - Höheres Risiko</p>
-<p><strong>Anwendung:</strong> Tier 2 Services ({{ netbox.service.standard }})</p>
+<p><strong>Anwendung:</strong> Tier 2 Services ([[ netbox.service.standard ]])</p>
 <p><strong>Kosten:</strong> ~20-30% der Produktions-Infrastruktur</p>
 <h3 id="backup-restore">Backup &amp; Restore</h3>
 <p><strong>Beschreibung:</strong>
@@ -377,33 +389,33 @@ Fähigkeit einer Organisation, kritische Geschäftsprozesse während und nach ei
 <p><strong>Kosten:</strong> Nur Backup-Kosten</p>
 <h2 id="dr-infrastruktur">DR-Infrastruktur</h2>
 <h3 id="primarer-standort">Primärer Standort</h3>
-<p><strong>Standort:</strong> {{ netbox.site.primary }}<br />
-<strong>Adresse:</strong> {{ netbox.site.primary_address }}<br />
-<strong>Rechenzentrum:</strong> {{ netbox.site.primary_datacenter }}</p>
+<p><strong>Standort:</strong> [[ netbox.site.primary ]]<br />
+<strong>Adresse:</strong> [[ netbox.site.primary_address ]]<br />
+<strong>Rechenzentrum:</strong> [[ netbox.site.primary_datacenter ]]</p>
 <p><strong>Infrastruktur:</strong>
-- Produktions-Server: {{ netbox.device.count_primary }}
-- Storage-Kapazität: {{ netbox.storage.capacity_primary }}
-- Netzwerk-Bandbreite: {{ netbox.network.bandwidth_primary }}
+- Produktions-Server: [[ netbox.device.count_primary ]]
+- Storage-Kapazität: [[ netbox.storage.capacity_primary ]]
+- Netzwerk-Bandbreite: [[ netbox.network.bandwidth_primary ]]
 - Stromversorgung: Redundant (N+1)</p>
 <h3 id="dr-standort">DR-Standort</h3>
-<p><strong>Standort:</strong> {{ netbox.site.dr }}<br />
-<strong>Adresse:</strong> {{ netbox.site.dr_address }}<br />
-<strong>Rechenzentrum:</strong> {{ netbox.site.dr_datacenter }}<br />
-<strong>Entfernung:</strong> {{ netbox.site.distance }} km</p>
+<p><strong>Standort:</strong> [[ netbox.site.dr ]]<br />
+<strong>Adresse:</strong> [[ netbox.site.dr_address ]]<br />
+<strong>Rechenzentrum:</strong> [[ netbox.site.dr_datacenter ]]<br />
+<strong>Entfernung:</strong> [[ netbox.site.distance ]] km</p>
 <p><strong>Infrastruktur:</strong>
-- DR-Server: {{ netbox.device.count_dr }}
-- Storage-Kapazität: {{ netbox.storage.capacity_dr }}
-- Netzwerk-Bandbreite: {{ netbox.network.bandwidth_dr }}
+- DR-Server: [[ netbox.device.count_dr ]]
+- Storage-Kapazität: [[ netbox.storage.capacity_dr ]]
+- Netzwerk-Bandbreite: [[ netbox.network.bandwidth_dr ]]
 - Stromversorgung: Redundant (N+1)</p>
 <h3 id="replikations-verbindung">Replikations-Verbindung</h3>
-<p><strong>Verbindungstyp:</strong> {{ netbox.network.replication_type }}<br />
-<strong>Bandbreite:</strong> {{ netbox.network.replication_bandwidth }}<br />
-<strong>Latenz:</strong> {{ netbox.network.replication_latency }} ms<br />
+<p><strong>Verbindungstyp:</strong> [[ netbox.network.replication_type ]]<br />
+<strong>Bandbreite:</strong> [[ netbox.network.replication_bandwidth ]]<br />
+<strong>Latenz:</strong> [[ netbox.network.replication_latency ]] ms<br />
 <strong>Redundanz:</strong> Dual-Path</p>
 <p><strong>Replikations-Technologien:</strong>
-- Storage-Replikation: {{ meta.storage_replication_tech }}
-- Datenbank-Replikation: {{ meta.database_replication_tech }}
-- VM-Replikation: {{ meta.vm_replication_tech }}</p>
+- Storage-Replikation: {{ meta-handbook.storage_replication_tech }}
+- Datenbank-Replikation: {{ meta-handbook.database_replication_tech }}
+- VM-Replikation: {{ meta-handbook.vm_replication_tech }}</p>
 <h2 id="failover-prozeduren">Failover-Prozeduren</h2>
 <h3 id="failover-trigger">Failover-Trigger</h3>
 <p><strong>Automatische Failover-Trigger:</strong>
@@ -462,8 +474,8 @@ Fähigkeit einer Organisation, kritische Geschäftsprozesse während und nach ei
 - Kommunikations-Plan aktivieren</p>
 <h4 id="2-dr-team-activation">2. DR-Team Activation</h4>
 <p><strong>DR-Team-Mitglieder:</strong>
-- <strong>DR-Coordinator:</strong> Anna Schmidt
-- <strong>Technical Lead:</strong> Andreas Huemmer
+- <strong>DR-Coordinator:</strong> [TODO]
+- <strong>Technical Lead:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - <strong>Network Lead:</strong> [Name]
 - <strong>Storage Lead:</strong> [Name]
 - <strong>Application Lead:</strong> [Name]
@@ -644,7 +656,7 @@ Fähigkeit einer Organisation, kritische Geschäftsprozesse während und nach ei
 <h3 id="bc-plane">BC-Pläne</h3>
 <h4 id="notfall-kommunikation">Notfall-Kommunikation</h4>
 <p><strong>Kommunikations-Kanäle:</strong>
-- <strong>Primär:</strong> E-Mail (info@adminsend.de)
+- <strong>Primär:</strong> E-Mail ({{ meta-organisation.email }})
 - <strong>Sekundär:</strong> Telefon (+49 89 12345678)
 - <strong>Notfall:</strong> Mobile Apps, SMS</p>
 <p><strong>Kontakt-Listen:</strong>
@@ -674,21 +686,21 @@ Fähigkeit einer Organisation, kritische Geschäftsprozesse während und nach ei
 </thead>
 <tbody>
 <tr>
-<td>{{ meta.isp_provider }}</td>
+<td>{{ meta-handbook.isp_provider }}</td>
 <td>Internet</td>
-<td>{{ meta.isp_contact }}</td>
-<td>{{ meta.isp_backup }}</td>
+<td>{{ meta-handbook.isp_contact }}</td>
+<td>{{ meta-handbook.isp_backup }}</td>
 </tr>
 <tr>
-<td>{{ meta.cloud_provider }}</td>
+<td>{{ meta-handbook.cloud_provider }}</td>
 <td>Cloud-Services</td>
-<td>{{ meta.cloud_contact }}</td>
-<td>{{ meta.cloud_backup }}</td>
+<td>{{ meta-handbook.cloud_contact }}</td>
+<td>{{ meta-handbook.cloud_backup }}</td>
 </tr>
 <tr>
-<td>{{ meta.hardware_vendor }}</td>
+<td>{{ meta-handbook.hardware_vendor }}</td>
 <td>Hardware</td>
-<td>{{ meta.hardware_contact }}</td>
+<td>{{ meta-handbook.hardware_contact }}</td>
 <td>-</td>
 </tr>
 </tbody>
@@ -786,14 +798,14 @@ Fähigkeit einer Organisation, kritische Geschäftsprozesse während und nach ei
 - DR-Plan-Verwaltung
 - DR-Tests koordinieren
 - Disaster-Declaration</p>
-<p><strong>Person:</strong> Anna Schmidt</p>
+<p><strong>Person:</strong> [TODO]</p>
 <h3 id="bc-manager">BC-Manager</h3>
 <p><strong>Verantwortlichkeiten:</strong>
 - BC-Strategie-Entwicklung
 - BIA durchführen
 - BC-Pläne erstellen
 - BC-Training</p>
-<p><strong>Person:</strong> Peter Fischer</p>
+<p><strong>Person:</strong> {{ meta-organisation-roles.role_COO }}</p>
 <h3 id="dr-team">DR-Team</h3>
 <p><strong>Mitglieder:</strong> Siehe Abschnitt "DR-Team Activation"</p>
 <h2 id="referenzen">Referenzen</h2>
@@ -804,12 +816,11 @@ Fähigkeit einer Organisation, kritische Geschäftsprozesse während und nach ei
 <li>NIST SP 800-34 - Contingency Planning Guide</li>
 <li>Business Impact Analysis (BIA) Dokument</li>
 </ul>
-<hr />
-<p><strong>Dokumentverantwortlicher:</strong> IT Operations Manager<br />
-<strong>Genehmigt durch:</strong> CIO<br />
-<strong>Version:</strong> 1.0.0<br />
-<strong>Klassifizierung:</strong> internal<br />
-<strong>Letzte Aktualisierung:</strong> {{ meta.date }}</p>
+<p><strong>Dokumentverantwortlicher:</strong> [TODO]<br />
+<strong>Genehmigt durch:</strong> [TODO]<br />
+<strong>Version:</strong> 0<br />
+<strong>Klassifizierung:</strong> Internal<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta-handbook.date }}</p>
         </main>
         
         <nav class="page-nav">

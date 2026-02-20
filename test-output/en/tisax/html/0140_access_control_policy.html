@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0140 - Access Control Policy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0140</div>
+            <h1>Access Control Policy</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0120_information_classification.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0150_user_access_management.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: tisax-0140</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="access-control-policy">Access Control Policy</h1>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0140
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="purpose">Purpose</h2>
+<p>This document defines the policies and requirements for access control to information systems and resources according to TISAX requirements.</p>
+<h2 id="scope">Scope</h2>
+<p>This policy applies to all users, systems, and resources of [TODO].</p>
+<h2 id="fundamental-principles">Fundamental Principles</h2>
+<h3 id="need-to-know-principle">Need-to-Know Principle</h3>
+<p>Access is only granted when:
+- Business necessity exists
+- Tasks require it
+- Approval is present</p>
+<h3 id="least-privilege-principle">Least-Privilege Principle</h3>
+<p>Users receive:
+- Minimum required permissions
+- Time-limited access
+- Role-based rights</p>
+<h3 id="segregation-of-duties">Segregation of Duties</h3>
+<p>Critical functions are separated:
+- No single person has complete control
+- Four-eyes principle for critical actions
+- Separation of development and production</p>
+<h2 id="access-control-process">Access Control Process</h2>
+<h3 id="1-user-registration">1. User Registration</h3>
+<p><strong>New Employees:</strong>
+- Request by supervisor
+- Approval by IT and information security
+- Creation of user accounts
+- Assignment of standard permissions
+- Training before access grant</p>
+<p><strong>External Users:</strong>
+- Contractual agreement required
+- Time-limited access
+- Sponsorship by internal employee
+- Extended monitoring</p>
+<h3 id="2-permission-assignment">2. Permission Assignment</h3>
+<p><strong>Request Process:</strong>
+1. User or supervisor submits request
+2. Department approves business necessity
+3. Information owner approves data access
+4. IT implements permissions
+5. Documentation in access management system</p>
+<p><strong>Approval Matrix:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Access Type</th>
+<th>Approver</th>
+<th>Documentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Standard Access</td>
+<td>Supervisor</td>
+<td>Email</td>
+</tr>
+<tr>
+<td>Elevated Rights</td>
+<td>Supervisor + IT Manager</td>
+<td>Ticket System</td>
+</tr>
+<tr>
+<td>Admin Rights</td>
+<td>IT Manager + CISO</td>
+<td>Form + Approval</td>
+</tr>
+<tr>
+<td>Production Access</td>
+<td>Department + IT Manager</td>
+<td>Change Request</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-access-management">3. Access Management</h3>
+<p><strong>Regular Review:</strong>
+- Quarterly recertification by supervisors
+- Annual full review of all permissions
+- Automatic detection of unused accounts
+- Removal of no longer needed rights</p>
+<p><strong>Changes:</strong>
+- Upon role change: Adjustment of permissions
+- Upon departure: Immediate revocation of all access
+- Upon security incidents: Temporary suspension possible</p>
+<h3 id="4-access-revocation">4. Access Revocation</h3>
+<p><strong>Planned Revocation:</strong>
+- Upon departure: Deactivation on last working day
+- Upon project end: Revocation after project completion
+- Upon role change: Adjustment of permissions</p>
+<p><strong>Unplanned Revocation:</strong>
+- Upon security incidents: Immediate suspension
+- Upon suspected misuse: Temporary suspension
+- Upon compliance violations: Immediate suspension</p>
+<h2 id="authentication">Authentication</h2>
+<h3 id="password-requirements">Password Requirements</h3>
+<p><strong>Complexity:</strong>
+- Minimum length: [TODO] characters
+- Uppercase, lowercase, numbers, special characters
+- No dictionary words
+- No personal information</p>
+<p><strong>Management:</strong>
+- Change every [TODO] days
+- No reuse of last [TODO] passwords
+- Automatic lockout after [TODO] failed attempts
+- Password manager recommended</p>
+<h3 id="multi-factor-authentication-mfa">Multi-Factor Authentication (MFA)</h3>
+<p>MFA is required for:
+- Administrative access
+- Remote access (VPN, Remote Desktop)
+- Access to confidential systems
+- Privileged accounts</p>
+<p><strong>Supported Factors:</strong>
+- Something you know (password)
+- Something you have (token, smartphone)
+- Something you are (biometrics)</p>
+<h3 id="single-sign-on-sso">Single Sign-On (SSO)</h3>
+<p>[TODO] uses SSO for:
+- Central authentication
+- Reduction of passwords
+- Simplified access management
+- Improved security</p>
+<h2 id="authorization">Authorization</h2>
+<h3 id="role-based-access-control-rbac">Role-Based Access Control (RBAC)</h3>
+<p><strong>Standard Roles:</strong>
+- User: Basic access to standard systems
+- Power User: Extended functions
+- Administrator: System administration
+- Security Admin: Security management</p>
+<p><strong>Department Roles:</strong>
+- Defined by departments
+- Based on business processes
+- Regularly reviewed and updated</p>
+<h3 id="attribute-based-access-control-abac">Attribute-Based Access Control (ABAC)</h3>
+<p>Access based on:
+- User attributes (department, location)
+- Resource attributes (classification, type)
+- Environmental attributes (time, location, device)
+- Action attributes (read, write, delete)</p>
+<h2 id="privileged-access">Privileged Access</h2>
+<h3 id="privileged-access-management-pam">Privileged Access Management (PAM)</h3>
+<p><strong>Requirements:</strong>
+- Separate privileged accounts
+- Just-in-time access
+- Session recording
+- Automatic password rotation</p>
+<p><strong>Monitoring:</strong>
+- Real-time monitoring of privileged sessions
+- Alerting on suspicious activities
+- Regular auditing
+- Compliance reporting</p>
+<h3 id="administrative-accounts">Administrative Accounts</h3>
+<p><strong>Management:</strong>
+- Separate from standard accounts
+- Elevated authentication requirements
+- Time-limited activation
+- Comprehensive logging</p>
+<p><strong>Usage:</strong>
+- Only for administrative tasks
+- No use for email or internet
+- No use on standard workstations
+- Documentation of all uses</p>
+<h2 id="remote-access">Remote Access</h2>
+<h3 id="vpn-access">VPN Access</h3>
+<p><strong>Requirements:</strong>
+- MFA mandatory
+- Encrypted connection
+- Endpoint compliance check
+- Logging of all connections</p>
+<p><strong>Permissions:</strong>
+- Request and approval required
+- Time-limited
+- Regular recertification
+- Automatic disconnection upon inactivity</p>
+<h3 id="remote-desktop">Remote Desktop</h3>
+<p><strong>Security Measures:</strong>
+- Access only via VPN
+- MFA required
+- Session timeout
+- No local data storage</p>
+<h2 id="access-control-for-systems">Access Control for Systems</h2>
+<h3 id="servers-and-infrastructure">Servers and Infrastructure</h3>
+<ul>
+<li>Access only for authorized IT personnel</li>
+<li>Logging of all access</li>
+<li>Regular review of permissions</li>
+<li>Automated compliance checks</li>
+</ul>
+<h3 id="applications">Applications</h3>
+<ul>
+<li>Role-based permissions</li>
+<li>Integration with central authentication</li>
+<li>Regular access reviews</li>
+<li>Segregation of duties</li>
+</ul>
+<h3 id="databases">Databases</h3>
+<ul>
+<li>Minimum permissions</li>
+<li>Encrypted connections</li>
+<li>Audit logging enabled</li>
+<li>Regular access reviews</li>
+</ul>
+<h3 id="cloud-services">Cloud Services</h3>
+<ul>
+<li>Identity federation</li>
+<li>Conditional access policies</li>
+<li>MFA mandatory</li>
+<li>Regular review of permissions</li>
+</ul>
+<h2 id="monitoring-and-logging">Monitoring and Logging</h2>
+<h3 id="logging">Logging</h3>
+<p>The following events are logged:
+- Successful and failed logins
+- Permission changes
+- Access to sensitive data
+- Administrative actions
+- Privileged access</p>
+<h3 id="monitoring">Monitoring</h3>
+<ul>
+<li>Real-time monitoring of critical systems</li>
+<li>Automatic alerting on anomalies</li>
+<li>Regular log analyses</li>
+<li>Security Information and Event Management (SIEM)</li>
+</ul>
+<h3 id="audit">Audit</h3>
+<ul>
+<li>Quarterly sampling audits</li>
+<li>Annual full review</li>
+<li>Compliance verification</li>
+<li>Identification of improvement potential</li>
+</ul>
+<h2 id="exceptions">Exceptions</h2>
+<h3 id="exception-approvals">Exception Approvals</h3>
+<p>Exceptions to this policy:
+- Must be requested in writing
+- Require approval by CISO
+- Are time-limited
+- Are documented and monitored
+- Are regularly reviewed</p>
+<h3 id="emergency-access">Emergency Access</h3>
+<p>In emergencies:
+- Break-glass accounts available
+- Usage is immediately escalated
+- Comprehensive logging
+- Subsequent review mandatory</p>
+<h2 id="tisax-specific-requirements">TISAX-Specific Requirements</h2>
+<h3 id="vda-isa-controls">VDA ISA Controls</h3>
+<p>This document addresses:
+- <strong>3.1</strong>: Access control policy
+- <strong>3.2</strong>: User access management
+- <strong>3.3</strong>: User responsibilities
+- <strong>3.4</strong>: System and application access control</p>
+<h3 id="assessment-evidence">Assessment Evidence</h3>
+<p>For TISAX assessments:
+- Access control policy
+- Process documentation
+- Approval evidence
+- Audit reports
+- Training evidence</p>
+<h2 id="responsibilities">Responsibilities</h2>
+<ul>
+<li><strong>CISO</strong>: Overall responsibility for access control</li>
+<li><strong>IT Manager</strong>: Implementation and operation</li>
+<li><strong>Identity &amp; Access Management Team</strong>: Daily management</li>
+<li><strong>Supervisors</strong>: Approval and recertification</li>
+<li><strong>Information Owner</strong>: Approval of data access</li>
+<li><strong>Users</strong>: Compliance with policy</li>
+</ul>
+<h2 id="training">Training</h2>
+<p>All users are trained on:
+- Access control fundamentals
+- Password security
+- MFA usage
+- Responsibilities
+- Reporting security incidents</p>
+<h2 id="metrics">Metrics</h2>
+<p>[TODO] measures:
+- Number of active user accounts
+- Percentage of MFA-enabled accounts (Target: 100%)
+- Average time to grant access
+- Number of overdue access reviews
+- Number of privileged access
+- Number of access violations</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0120_information_classification.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0150_user_access_management.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

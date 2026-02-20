@@ -6,7 +6,7 @@ Classification: Internal
 
 # Interne Kommunikation
 
-**Dokument-ID:** [FRAMEWORK]-0320
+**Dokument-ID:** COSO-0320
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

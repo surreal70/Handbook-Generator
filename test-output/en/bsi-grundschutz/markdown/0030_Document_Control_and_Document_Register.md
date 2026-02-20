@@ -1,6 +1,6 @@
 # Document Control and Document Register
 
-**Document-ID:** [FRAMEWORK]-0030
+**Document-ID:** BSI-GRUNDSCHUTZ-0030
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

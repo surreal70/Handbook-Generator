@@ -1,6 +1,6 @@
 # Threats (Bedrohungen)
 
-**Dokument-ID:** 0210
+**Dokument-ID:** COMMON-CRITERIA-0210
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

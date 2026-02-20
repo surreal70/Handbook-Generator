@@ -7,7 +7,7 @@ Classification: Internal
 
 # Principle 5: Conformance
 
-**Document-ID:** [FRAMEWORK]-0080
+**Document-ID:** ISO-38500-0080
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

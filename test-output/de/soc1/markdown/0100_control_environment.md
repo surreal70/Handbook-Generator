@@ -6,7 +6,7 @@ Classification: Internal
 
 # Kontrollumgebung - Übersicht
 
-**Dokument-ID:** [FRAMEWORK]-0100
+**Dokument-ID:** SOC1-0100
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

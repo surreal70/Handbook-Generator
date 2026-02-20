@@ -7,7 +7,7 @@ Classification: Internal
 
 # Governance-Rollen Übersicht
 
-**Dokument-ID:** [FRAMEWORK]-0200
+**Dokument-ID:** ISO-38500-0200
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

@@ -6,7 +6,7 @@ Classification: Internal
 
 # Beweissicherung
 
-**Dokument-ID:** [FRAMEWORK]-0450
+**Dokument-ID:** TISAX-0450
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

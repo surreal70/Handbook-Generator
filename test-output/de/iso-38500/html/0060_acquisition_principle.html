@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0060 - Prinzip 3: Beschaffung (Acquisition)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0060</div>
+            <h1>Prinzip 3: Beschaffung (Acquisition)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0050_strategy_principle.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0070_performance_principle.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: iso-38500-0060
+Owner: [TODO]</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="prinzip-3-beschaffung-acquisition">Prinzip 3: Beschaffung (Acquisition)</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0060
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="zweck">Zweck</h2>
+<p>Dieses Dokument beschreibt die Anwendung des Beschaffungs-Prinzips in der IT-Governance der Organisation.</p>
+<h2 id="geltungsbereich">Geltungsbereich</h2>
+<p>Dieses Dokument gilt für:
+- AdminSend GmbH
+- Alle IT-Beschaffungen (Hardware, Software, Services)
+- Beschaffungsprozesse und -entscheidungen</p>
+<h2 id="prinzip-definition">Prinzip-Definition</h2>
+<p>IT-Beschaffungen werden aus gültigen Gründen getätigt, auf der Grundlage angemessener Analysen, mit klaren und transparenten Entscheidungen.</p>
+<h2 id="evaluate-bewerten">Evaluate (Bewerten)</h2>
+<h3 id="beschaffungsbedarf-bewerten">Beschaffungsbedarf bewerten</h3>
+<ul>
+<li>Ist die Beschaffung geschäftlich gerechtfertigt?</li>
+<li>Wurden Alternativen analysiert?</li>
+<li>Sind Kosten und Nutzen angemessen?</li>
+<li>Wurden Risiken bewertet?</li>
+</ul>
+<h3 id="bewertungskriterien">Bewertungskriterien</h3>
+<table>
+<thead>
+<tr>
+<th>Kriterium</th>
+<th>Anforderung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Business Case</td>
+<td>Erforderlich für Beschaffungen &gt;{{ meta-handbook.business_case_threshold }} EUR</td>
+</tr>
+<tr>
+<td>Kosten-Nutzen-Analyse</td>
+<td>Erforderlich</td>
+</tr>
+<tr>
+<td>Risikoanalyse</td>
+<td>Erforderlich</td>
+</tr>
+<tr>
+<td>Alternativenprüfung</td>
+<td>Mindestens 3 Optionen</td>
+</tr>
+</tbody>
+</table>
+<h2 id="direct-steuern">Direct (Steuern)</h2>
+<h3 id="beschaffungsprozess">Beschaffungsprozess</h3>
+<ol>
+<li><strong>Bedarfsermittlung</strong>: Geschäftsbedarf identifizieren</li>
+<li><strong>Business Case</strong>: Rechtfertigung erstellen</li>
+<li><strong>Marktanalyse</strong>: Optionen evaluieren</li>
+<li><strong>Bewertung</strong>: Kosten, Nutzen, Risiken analysieren</li>
+<li><strong>Genehmigung</strong>: Entscheidung durch Governance-Gremium</li>
+<li><strong>Beschaffung</strong>: Durchführung</li>
+<li><strong>Implementierung</strong>: Umsetzung</li>
+<li><strong>Review</strong>: Nachbewertung</li>
+</ol>
+<h3 id="genehmigungsschwellen">Genehmigungsschwellen</h3>
+<table>
+<thead>
+<tr>
+<th>Beschaffungswert</th>
+<th>Genehmigung durch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt; {{ meta-handbook.threshold_1 }} EUR</td>
+<td>IT-Management</td>
+</tr>
+<tr>
+<td>{{ meta-handbook.threshold_1 }} - {{ meta-handbook.threshold_2 }} EUR</td>
+<td>CIO</td>
+</tr>
+<tr>
+<td>{{ meta-handbook.threshold_2 }} - {{ meta-handbook.threshold_3 }} EUR</td>
+<td>Geschäftsführung</td>
+</tr>
+<tr>
+<td>&gt; {{ meta-handbook.threshold_3 }} EUR</td>
+<td>Vorstand</td>
+</tr>
+</tbody>
+</table>
+<h3 id="beschaffungskriterien">Beschaffungskriterien</h3>
+<ul>
+<li><strong>Funktionalität</strong>: Erfüllt Anforderungen</li>
+<li><strong>Kosten</strong>: Total Cost of Ownership</li>
+<li><strong>Qualität</strong>: Zuverlässigkeit und Leistung</li>
+<li><strong>Risiko</strong>: Technische und geschäftliche Risiken</li>
+<li><strong>Compliance</strong>: Regulatorische Anforderungen</li>
+<li><strong>Nachhaltigkeit</strong>: Langfristige Tragfähigkeit</li>
+</ul>
+<h2 id="monitor-uberwachen">Monitor (Überwachen)</h2>
+<h3 id="uberwachungsmanahmen">Überwachungsmaßnahmen</h3>
+<ol>
+<li><strong>Beschaffungs-Reviews</strong>: Quartalsweise</li>
+<li><strong>Nutzenrealisierung</strong>: Nach Implementierung</li>
+<li><strong>Lieferanten-Performance</strong>: Kontinuierlich</li>
+<li><strong>Lessons Learned</strong>: Nach Projektabschluss</li>
+</ol>
+<h3 id="kpis">KPIs</h3>
+<ul>
+<li>Beschaffungen mit Business Case: {{ meta-handbook.acquisitions_with_bc }}%</li>
+<li>Durchschnittliche Beschaffungszeit: {{ meta-handbook.avg_acquisition_time }} Tage</li>
+<li>Nutzenrealisierung: {{ meta-handbook.benefit_realization }}%</li>
+<li>Lieferantenzufriedenheit: {{ meta-handbook.supplier_satisfaction }}/10</li>
+</ul>
+<h2 id="dokumentenverweise">Dokumentenverweise</h2>
+<ul>
+<li>0010_governance_framework.md</li>
+<li>0020_governance_model.md</li>
+</ul>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0050_strategy_principle.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0070_performance_principle.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

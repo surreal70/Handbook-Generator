@@ -21,10 +21,22 @@
         
         <main>
 <h1 id="sicherheitsbetrieb-und-hardening">Sicherheitsbetrieb und Hardening</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0170
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
 <h2 id="zweck-und-geltungsbereich">Zweck und Geltungsbereich</h2>
 <p>Dieses Dokument beschreibt die Sicherheitsbetriebsprozesse und Hardening-Richtlinien für AdminSend GmbH. Es definiert Security-Monitoring, Incident-Response-Prozesse, Vulnerability-Management und Compliance-Anforderungen zur Sicherstellung der Informationssicherheit.</p>
 <p><strong>Geltungsbereich:</strong> Alle IT-Systeme, Netzwerke, Applikationen und Daten von AdminSend GmbH</p>
-<p><strong>Verantwortlich:</strong> Thomas Weber (thomas.weber@adminsend.de)</p>
+<p><strong>Verantwortlich:</strong> [TODO] ({{ meta-organisation-roles.role_CISO_email }})</p>
 <h2 id="sicherheits-grundlagen">Sicherheits-Grundlagen</h2>
 <h3 id="security-ziele-cia-triade">Security-Ziele (CIA-Triade)</h3>
 <p><strong>Confidentiality (Vertraulichkeit):</strong>
@@ -181,8 +193,8 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Firewall-System:</strong> {{ netbox.firewall.system }}<br />
-<strong>Management:</strong> {{ netbox.firewall.management_url }}</p>
+<p><strong>Firewall-System:</strong> [[ netbox.firewall.system ]]<br />
+<strong>Management:</strong> [[ netbox.firewall.management_url ]]</p>
 <h4 id="netzwerk-segmentierung">Netzwerk-Segmentierung</h4>
 <p><strong>Netzwerk-Zonen:</strong></p>
 <table>
@@ -198,36 +210,36 @@
 <tbody>
 <tr>
 <td><strong>DMZ</strong></td>
-<td>{{ netbox.vlan.dmz }}</td>
-<td>{{ netbox.subnet.dmz }}</td>
+<td>[[ netbox.vlan.dmz ]]</td>
+<td>[[ netbox.subnet.dmz ]]</td>
 <td>Öffentliche Services</td>
 <td>Hoch</td>
 </tr>
 <tr>
 <td><strong>Production</strong></td>
-<td>{{ netbox.vlan.production }}</td>
-<td>{{ netbox.subnet.production }}</td>
+<td>[[ netbox.vlan.production ]]</td>
+<td>[[ netbox.subnet.production ]]</td>
 <td>Produktions-Systeme</td>
 <td>Sehr hoch</td>
 </tr>
 <tr>
 <td><strong>Management</strong></td>
-<td>{{ netbox.vlan.management }}</td>
-<td>{{ netbox.subnet.management }}</td>
+<td>[[ netbox.vlan.management ]]</td>
+<td>[[ netbox.subnet.management ]]</td>
 <td>Admin-Zugriff</td>
 <td>Kritisch</td>
 </tr>
 <tr>
 <td><strong>User</strong></td>
-<td>{{ netbox.vlan.user }}</td>
-<td>{{ netbox.subnet.user }}</td>
+<td>[[ netbox.vlan.user ]]</td>
+<td>[[ netbox.subnet.user ]]</td>
 <td>Benutzer-Netzwerk</td>
 <td>Mittel</td>
 </tr>
 <tr>
 <td><strong>Guest</strong></td>
-<td>{{ netbox.vlan.guest }}</td>
-<td>{{ netbox.subnet.guest }}</td>
+<td>[[ netbox.vlan.guest ]]</td>
+<td>[[ netbox.subnet.guest ]]</td>
 <td>Gast-WLAN</td>
 <td>Niedrig</td>
 </tr>
@@ -239,7 +251,7 @@
 - Micro-Segmentierung für kritische Systeme
 - Zero-Trust-Prinzip</p>
 <h4 id="vpn-hartung">VPN-Härtung</h4>
-<p><strong>VPN-Typ:</strong> {{ meta.vpn_type }}<br />
+<p><strong>VPN-Typ:</strong> {{ meta-handbook.vpn_type }}<br />
 <strong>Verschlüsselung:</strong> AES-256<br />
 <strong>Authentifizierung:</strong> Certificate-based + MFA</p>
 <p><strong>Härtungs-Maßnahmen:</strong>
@@ -366,9 +378,9 @@
 <p><strong>Referenz:</strong> CIS Microsoft Azure Foundations Benchmark</p>
 <h2 id="security-monitoring">Security-Monitoring</h2>
 <h3 id="security-information-and-event-management-siem">Security Information and Event Management (SIEM)</h3>
-<p><strong>SIEM-System:</strong> {{ meta.siem_system }}<br />
-<strong>Version:</strong> {{ meta.siem_version }}<br />
-<strong>Management:</strong> {{ meta.siem_url }}</p>
+<p><strong>SIEM-System:</strong> {{ meta-handbook.siem_system }}<br />
+<strong>Version:</strong> [TODO]<br />
+<strong>Management:</strong> {{ meta-handbook.siem_url }}</p>
 <p><strong>Log-Quellen:</strong>
 - Firewalls und IDS/IPS
 - Server (Windows, Linux)
@@ -425,9 +437,9 @@
 </tbody>
 </table>
 <h3 id="intrusion-detectionprevention-idsips">Intrusion Detection/Prevention (IDS/IPS)</h3>
-<p><strong>IDS/IPS-System:</strong> {{ netbox.ids.system }}<br />
+<p><strong>IDS/IPS-System:</strong> [[ netbox.ids.system ]]<br />
 <strong>Deployment:</strong> Inline (IPS-Modus)<br />
-<strong>Standort:</strong> {{ netbox.ids.location }}</p>
+<strong>Standort:</strong> [[ netbox.ids.location ]]</p>
 <p><strong>Erkennungs-Methoden:</strong>
 - <strong>Signature-based:</strong> Bekannte Angriffsmuster
 - <strong>Anomaly-based:</strong> Abweichungen vom Normalverhalten
@@ -441,7 +453,7 @@
 - Regel-Priorisierung
 - Whitelist für legitimen Traffic</p>
 <h3 id="endpoint-detection-and-response-edr">Endpoint Detection and Response (EDR)</h3>
-<p><strong>EDR-System:</strong> {{ meta.edr_system }}<br />
+<p><strong>EDR-System:</strong> {{ meta-handbook.edr_system }}<br />
 <strong>Abdeckung:</strong> Alle Workstations und Server</p>
 <p><strong>Funktionen:</strong>
 - Real-time Threat Detection
@@ -495,9 +507,9 @@
 <h2 id="vulnerability-management">Vulnerability Management</h2>
 <h3 id="vulnerability-scanning">Vulnerability-Scanning</h3>
 <p><strong>Scanning-Tools:</strong>
-- <strong>Netzwerk-Scanner:</strong> {{ meta.vulnerability_scanner }}
-- <strong>Web-App-Scanner:</strong> {{ meta.web_scanner }}
-- <strong>Container-Scanner:</strong> {{ meta.container_scanner }}</p>
+- <strong>Netzwerk-Scanner:</strong> {{ meta-handbook.vulnerability_scanner }}
+- <strong>Web-App-Scanner:</strong> {{ meta-handbook.web_scanner }}
+- <strong>Container-Scanner:</strong> {{ meta-handbook.container_scanner }}</p>
 <p><strong>Scan-Frequenz:</strong>
 - <strong>Kritische Systeme:</strong> Wöchentlich
 - <strong>Produktions-Systeme:</strong> Monatlich
@@ -592,7 +604,7 @@
 - Web-Applikationen
 - Mobile Apps
 - Social Engineering</p>
-<p><strong>Penetration-Test-Provider:</strong> {{ meta.pentest_provider }}</p>
+<p><strong>Penetration-Test-Provider:</strong> {{ meta-handbook.pentest_provider }}</p>
 <h2 id="security-incident-response">Security Incident Response</h2>
 <h3 id="incident-kategorien">Incident-Kategorien</h3>
 <table>
@@ -650,8 +662,8 @@
 - Training und Übungen durchführen
 - Kontakt-Listen pflegen</p>
 <p><strong>IR-Team:</strong>
-- <strong>IR-Manager:</strong> Thomas Weber
-- <strong>Technical Lead:</strong> Andreas Huemmer
+- <strong>IR-Manager:</strong> [TODO]
+- <strong>Technical Lead:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - <strong>Forensic Analyst:</strong> [Name]
 - <strong>Communication Lead:</strong> [Name]
 - <strong>Legal Counsel:</strong> [Name]</p>
@@ -668,7 +680,7 @@
 - Impact-Assessment
 - Incident-Klassifizierung
 - Incident-Priorisierung</p>
-<p><strong>Incident-Ticket:</strong> {{ meta.ticketing_system }}</p>
+<p><strong>Incident-Ticket:</strong> {{ meta-handbook.ticketing_system }}</p>
 <h4 id="3-containment">3. Containment</h4>
 <p><strong>Short-term Containment:</strong>
 - Betroffene Systeme isolieren
@@ -754,7 +766,7 @@
 <td><strong>A.9</strong></td>
 <td>Access Control</td>
 <td>Implementiert</td>
-<td>Thomas Weber</td>
+<td>[TODO]</td>
 </tr>
 <tr>
 <td><strong>A.10</strong></td>
@@ -801,7 +813,7 @@
 </tbody>
 </table>
 <p><strong>Audit-Frequenz:</strong> Jährlich (extern), Quartalsweise (intern)</p>
-<p><strong>Nächstes Audit:</strong> {{ meta.next_iso_audit }}</p>
+<p><strong>Nächstes Audit:</strong> {{ meta-handbook.next_iso_audit }}</p>
 <h3 id="bsi-grundschutz">BSI Grundschutz</h3>
 <p><strong>Basis-Absicherung:</strong>
 - Alle Bausteine der Basis-Absicherung implementiert
@@ -851,7 +863,7 @@
 <p><strong>Datenschutz-Folgenabschätzung (DSFA):</strong>
 - Für Hochrisiko-Verarbeitungen durchgeführt
 - Dokumentiert und genehmigt</p>
-<p><strong>Datenschutzbeauftragter:</strong> {{ meta.data_protection_officer }}</p>
+<p><strong>Datenschutzbeauftragter:</strong> {{ meta-handbook.data_protection_officer }}</p>
 <h3 id="weitere-standards">Weitere Standards</h3>
 <p><strong>PCI-DSS:</strong> [Falls zutreffend]<br />
 <strong>HIPAA:</strong> [Falls zutreffend]<br />
@@ -892,7 +904,7 @@
 - Compliance-Sicherstellung
 - Incident-Response-Koordination
 - Security-Budget</p>
-<p><strong>Person:</strong> Thomas Weber</p>
+<p><strong>Person:</strong> [TODO]</p>
 <h3 id="security-operations-team">Security-Operations-Team</h3>
 <p><strong>Verantwortlichkeiten:</strong>
 - SIEM-Monitoring
@@ -906,7 +918,7 @@
 - Patch-Management
 - Security-Konfiguration
 - Backup-Sicherheit</p>
-<p><strong>Lead:</strong> Andreas Huemmer</p>
+<p><strong>Lead:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</p>
 <h2 id="metriken-und-reporting">Metriken und Reporting</h2>
 <h3 id="security-metriken_1">Security-Metriken</h3>
 <table>
@@ -983,12 +995,11 @@
 <li>MITRE ATT&amp;CK Framework</li>
 <li>DSGVO (GDPR)</li>
 </ul>
-<hr />
-<p><strong>Dokumentverantwortlicher:</strong> IT Operations Manager<br />
-<strong>Genehmigt durch:</strong> CIO<br />
-<strong>Version:</strong> 1.0.0<br />
-<strong>Klassifizierung:</strong> internal<br />
-<strong>Letzte Aktualisierung:</strong> {{ meta.date }}</p>
+<p><strong>Dokumentverantwortlicher:</strong> [TODO]<br />
+<strong>Genehmigt durch:</strong> [TODO]<br />
+<strong>Version:</strong> 0<br />
+<strong>Klassifizierung:</strong> Internal<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta-handbook.date }}</p>
         </main>
         
         <nav class="page-nav">

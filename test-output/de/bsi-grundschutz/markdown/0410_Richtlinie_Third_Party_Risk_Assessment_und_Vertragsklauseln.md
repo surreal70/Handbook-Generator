@@ -1,6 +1,6 @@
 # Richtlinie: Third Party Risk Assessment und Vertragsklauseln
 
-**Dokument-ID:** 0410
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0410
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

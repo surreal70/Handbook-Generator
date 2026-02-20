@@ -1,6 +1,6 @@
 # Statement of Applicability (SoA) – Template
 
-**Document-ID:** [FRAMEWORK]-0100
+**Document-ID:** ISMS-0100
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

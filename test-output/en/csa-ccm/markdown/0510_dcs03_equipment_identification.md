@@ -6,7 +6,7 @@ Classification: Internal
 
 # DCS-03: Equipment Identification
 
-**Document-ID:** [FRAMEWORK]-0510
+**Document-ID:** CSA-CCM-0510
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

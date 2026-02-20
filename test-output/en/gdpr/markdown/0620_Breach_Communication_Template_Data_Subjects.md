@@ -1,6 +1,6 @@
 # Breach Communication Template (Data Subjects)
 
-**Document-ID:** 0620
+**Document-ID:** GDPR-0620
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

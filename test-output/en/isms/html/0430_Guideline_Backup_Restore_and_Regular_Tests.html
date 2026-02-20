@@ -21,15 +21,17 @@
         
         <main>
 <h1 id="guideline-backup-restore-and-regular-tests">Guideline: Backup, Restore and Regular Tests</h1>
-<p><strong>Document ID:</strong> 0430<br />
-<strong>Document Type:</strong> Guideline (detailed)<br />
-<strong>Related Policy:</strong> 0420_Policy_Backup_and_Recovery.md<br />
-<strong>Standard Reference:</strong> ISO/IEC 27001:2022 Annex A.8.13<br />
-<strong>Owner:</strong> {{ meta.it_operations.manager }}<br />
-<strong>Version:</strong> 1.0<br />
-<strong>Status:</strong> Approved<br />
-<strong>Classification:</strong> Confidential<br />
-<strong>Last Updated:</strong> {{ meta.document.date }}</p>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0430
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
 <hr />
 <h2 id="1-purpose-and-scope">1. Purpose and Scope</h2>
 <p>This guideline implements the <code>0420_Policy_Backup_and_Recovery.md</code> and defines:
@@ -110,11 +112,11 @@
 <h2 id="3-backup-implementation">3. Backup Implementation</h2>
 <h3 id="31-backup-systems">3.1 Backup Systems</h3>
 <p><strong>On-Premises:</strong>
-- <strong>Backup Server:</strong> {{ meta.backup.server }}
-- <strong>Backup Software:</strong> {{ meta.backup.software }} (e.g., Veeam, Commvault)
-- <strong>Storage:</strong> {{ meta.backup.storage }} (disk, tape)</p>
+- <strong>Backup Server:</strong> {{ meta-handbook.backup_server }}
+- <strong>Backup Software:</strong> {{ meta-handbook.backup_software }} (e.g., Veeam, Commvault)
+- <strong>Storage:</strong> {{ meta-handbook.backup_storage }} (disk, tape)</p>
 <p><strong>Cloud Backup:</strong>
-- <strong>Cloud Provider:</strong> {{ meta.cloud.backup_provider }} (e.g., Azure Backup, AWS Backup)
+- <strong>Cloud Provider:</strong> {{ meta-handbook.cloud_backup_provider }} (e.g., Azure Backup, AWS Backup)
 - <strong>Encryption:</strong> AES-256
 - <strong>Geo-Redundancy:</strong> Enabled</p>
 <h3 id="32-backup-windows">3.2 Backup Windows</h3>
@@ -138,11 +140,11 @@
 - <strong>Daily:</strong> 7 days
 - <strong>Weekly:</strong> 4 weeks
 - <strong>Monthly:</strong> 12 months
-- <strong>Yearly:</strong> {{ meta.retention.backup_years }} years</p>
+- <strong>Yearly:</strong> {{ meta-handbook.retention_backup_years }} years</p>
 <p><strong>Compliance Backups:</strong>
 - Financial data: 10 years
 - Personnel data: Per GDPR
-- Emails: {{ meta.retention.email_years }} years</p>
+- Emails: {{ meta-handbook.retention_email_years }} years</p>
 <h2 id="4-restore-processes">4. Restore Processes</h2>
 <h3 id="41-restore-types">4.1 Restore Types</h3>
 <p><strong>File-Level Restore:</strong>
@@ -309,7 +311,7 @@
 - Restore requests and executions
 - Configuration changes
 - Access to backup system</p>
-<p><strong>Retention:</strong> {{ meta.retention.log_years }} years</p>
+<p><strong>Retention:</strong> {{ meta-handbook.retention_log_years }} years</p>
 <h2 id="8-compliance-and-audit">8. Compliance and Audit</h2>
 <h3 id="81-key-performance-indicators-kpis">8.1 Key Performance Indicators (KPIs)</h3>
 <table>
@@ -360,9 +362,8 @@
 <li><strong>ISO/IEC 27001:2022 Annex A.8.13</strong> - Information backup</li>
 <li><strong>NIST SP 800-34</strong> - Contingency Planning Guide</li>
 </ul>
-<hr />
-<p><strong>Approved by:</strong> Thomas Weber, CISO<br />
-<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<p><strong>Approved by:</strong> [TODO], CISO<br />
+<strong>Next Review:</strong> [TODO]</p>
         </main>
         
         <nav class="page-nav">

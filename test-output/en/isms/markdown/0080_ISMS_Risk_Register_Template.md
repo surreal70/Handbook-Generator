@@ -1,6 +1,6 @@
 # Risk Register (Template)
 
-**Document-ID:** [FRAMEWORK]-0080
+**Document-ID:** ISMS-0080
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

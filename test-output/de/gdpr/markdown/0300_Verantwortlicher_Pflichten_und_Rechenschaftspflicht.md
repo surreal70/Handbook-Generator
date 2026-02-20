@@ -1,6 +1,6 @@
 # Verantwortlicher: Pflichten und Rechenschaftspflicht
 
-**Dokument-ID:** 0300
+**Dokument-ID:** GDPR-0300
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

@@ -1,6 +1,6 @@
 # Exception Process and Risk Acceptance
 
-**Document-ID:** [FRAMEWORK]-0040
+**Document-ID:** CIS-CONTROLS-0040
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

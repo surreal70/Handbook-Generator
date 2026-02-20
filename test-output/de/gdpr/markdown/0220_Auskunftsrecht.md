@@ -1,6 +1,6 @@
 # Auskunftsrecht
 
-**Dokument-ID:** 0220
+**Dokument-ID:** GDPR-0220
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

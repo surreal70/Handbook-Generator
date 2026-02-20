@@ -7,7 +7,7 @@ Classification: Internal
 
 # Stakeholder-Engagement in der IT-Governance
 
-**Dokument-ID:** [FRAMEWORK]-0240
+**Dokument-ID:** ISO-38500-0240
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

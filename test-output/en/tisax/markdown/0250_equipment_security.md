@@ -6,7 +6,7 @@ Classification: Internal
 
 # Equipment Security
 
-**Document-ID:** [FRAMEWORK]-0250
+**Document-ID:** TISAX-0250
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

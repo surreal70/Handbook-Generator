@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0430 - Testing Strategies</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0430</div>
+            <h1>Testing Strategies</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0410_cfr_measurement.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0440_cicd_practices.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: dora-0430</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="testing-strategies">Testing Strategies</h1>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0430
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="purpose">Purpose</h2>
+<p>Comprehensive testing strategies to reduce Change Failure Rate.</p>
+<h2 id="scope">Scope</h2>
+<ul>
+<li>Test pyramid</li>
+<li>Test types</li>
+<li>Test automation</li>
+<li>Shift-left testing</li>
+</ul>
+<h2 id="organization-information">Organization Information</h2>
+<ul>
+<li><strong>Organization</strong>: [TODO]</li>
+<li><strong>Testing Owner</strong>: [TODO]</li>
+<li><strong>Current Test Coverage</strong>: [TODO]</li>
+</ul>
+<h2 id="test-pyramid">Test Pyramid</h2>
+<h3 id="unit-tests-70">Unit Tests (70%)</h3>
+<p><strong>Purpose</strong>: Test individual components</p>
+<p><strong>Characteristics</strong>:
+- Fast (&lt; 1s)
+- Isolated
+- Deterministic
+- High coverage</p>
+<p><strong>Example</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">test_calculate_total</span><span class="p">():</span>
+    <span class="n">cart</span> <span class="o">=</span> <span class="n">ShoppingCart</span><span class="p">()</span>
+    <span class="n">cart</span><span class="o">.</span><span class="n">add_item</span><span class="p">(</span><span class="n">Item</span><span class="p">(</span><span class="s2">&quot;Book&quot;</span><span class="p">,</span> <span class="mf">10.00</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="n">cart</span><span class="o">.</span><span class="n">total</span><span class="p">()</span> <span class="o">==</span> <span class="mf">10.00</span>
+</code></pre></div>
+
+<h3 id="integration-tests-20">Integration Tests (20%)</h3>
+<p><strong>Purpose</strong>: Test component interactions</p>
+<p><strong>Characteristics</strong>:
+- Medium speed (&lt; 10s)
+- Multiple components
+- Realistic scenarios</p>
+<p><strong>Example</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">test_order_processing</span><span class="p">():</span>
+    <span class="n">order</span> <span class="o">=</span> <span class="n">create_order</span><span class="p">()</span>
+    <span class="n">payment</span> <span class="o">=</span> <span class="n">process_payment</span><span class="p">(</span><span class="n">order</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">payment</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;success&quot;</span>
+    <span class="k">assert</span> <span class="n">order</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;confirmed&quot;</span>
+</code></pre></div>
+
+<h3 id="e2e-tests-10">E2E Tests (10%)</h3>
+<p><strong>Purpose</strong>: Test complete user journeys</p>
+<p><strong>Characteristics</strong>:
+- Slow (&gt; 30s)
+- Full stack
+- Critical paths</p>
+<p><strong>Example</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">test_checkout_flow</span><span class="p">():</span>
+    <span class="n">browser</span><span class="o">.</span><span class="n">visit</span><span class="p">(</span><span class="s2">&quot;/products&quot;</span><span class="p">)</span>
+    <span class="n">browser</span><span class="o">.</span><span class="n">click</span><span class="p">(</span><span class="s2">&quot;Add to Cart&quot;</span><span class="p">)</span>
+    <span class="n">browser</span><span class="o">.</span><span class="n">click</span><span class="p">(</span><span class="s2">&quot;Checkout&quot;</span><span class="p">)</span>
+    <span class="n">browser</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="s2">&quot;payment_info&quot;</span><span class="p">)</span>
+    <span class="n">browser</span><span class="o">.</span><span class="n">click</span><span class="p">(</span><span class="s2">&quot;Complete Order&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">browser</span><span class="o">.</span><span class="n">see</span><span class="p">(</span><span class="s2">&quot;Order Confirmed&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<h2 id="test-types">Test Types</h2>
+<h3 id="functional-tests">Functional Tests</h3>
+<ul>
+<li>Unit tests</li>
+<li>Integration tests</li>
+<li>E2E tests</li>
+<li>API tests</li>
+</ul>
+<h3 id="non-functional-tests">Non-Functional Tests</h3>
+<p><strong>Performance Tests</strong>:
+- Load testing
+- Stress testing
+- Spike testing
+- Endurance testing</p>
+<p><strong>Security Tests</strong>:
+- SAST (Static analysis)
+- DAST (Dynamic analysis)
+- Dependency scanning
+- Penetration testing</p>
+<p><strong>Compatibility Tests</strong>:
+- Browser testing
+- Device testing
+- OS testing</p>
+<h2 id="test-automation">Test Automation</h2>
+<h3 id="cicd-integration">CI/CD Integration</h3>
+<div class="codehilite"><pre><span></span><code><span class="nt">test</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stages</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unit</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integration</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">e2e</span>
+
+<span class="w">  </span><span class="nt">unit</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">script</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">npm run test:unit</span>
+<span class="w">    </span><span class="nt">coverage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80%</span>
+
+<span class="w">  </span><span class="nt">integration</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">script</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">npm run test:integration</span>
+<span class="w">    </span><span class="nt">services</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">redis</span>
+
+<span class="w">  </span><span class="nt">e2e</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">script</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">npm run test:e2e</span>
+<span class="w">    </span><span class="nt">artifacts</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">when</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">on_failure</span>
+<span class="w">      </span><span class="nt">paths</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">screenshots/</span>
+</code></pre></div>
+
+<h3 id="test-parallelization">Test Parallelization</h3>
+<div class="codehilite"><pre><span></span><code><span class="nt">test:unit</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">parallel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">npm run test:unit -- --shard=${CI_NODE_INDEX}/${CI_NODE_TOTAL}</span>
+</code></pre></div>
+
+<h2 id="shift-left-testing">Shift-Left Testing</h2>
+<h3 id="early-test-integration">Early Test Integration</h3>
+<p><strong>Development Phase</strong>:
+- TDD (Test-Driven Development)
+- Unit tests during development
+- Local test execution</p>
+<p><strong>Code Review Phase</strong>:
+- Automated code analysis
+- Test coverage checks
+- Quality gates</p>
+<p><strong>CI Phase</strong>:
+- Automated test execution
+- Fast feedback
+- Fail fast</p>
+<h2 id="test-strategies">Test Strategies</h2>
+<h3 id="risk-based-testing">Risk-Based Testing</h3>
+<p><strong>Prioritization</strong>:
+1. Critical business functions
+2. Frequently changed areas
+3. Error-prone components
+4. Complex logic</p>
+<h3 id="mutation-testing">Mutation Testing</h3>
+<p><strong>Purpose</strong>: Validate test quality</p>
+<p><strong>Process</strong>:
+1. Mutate code
+2. Run tests
+3. Check if tests fail
+4. Calculate mutation score</p>
+<h3 id="property-based-testing">Property-Based Testing</h3>
+<p><strong>Purpose</strong>: Automatically find edge cases</p>
+<p><strong>Example</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nd">@given</span><span class="p">(</span><span class="n">st</span><span class="o">.</span><span class="n">integers</span><span class="p">(),</span> <span class="n">st</span><span class="o">.</span><span class="n">integers</span><span class="p">())</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_addition_commutative</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="n">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="o">==</span> <span class="n">add</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+</code></pre></div>
+
+<h2 id="test-data-management">Test Data Management</h2>
+<h3 id="test-data-strategies">Test Data Strategies</h3>
+<ul>
+<li>Synthetic data generation</li>
+<li>Data masking</li>
+<li>Test data factories</li>
+<li>Database seeding</li>
+</ul>
+<h3 id="test-environments">Test Environments</h3>
+<ul>
+<li>Development</li>
+<li>Testing</li>
+<li>Staging</li>
+<li>Production-like</li>
+</ul>
+<h2 id="continuous-testing">Continuous Testing</h2>
+<h3 id="test-monitoring">Test Monitoring</h3>
+<p><strong>Metrics</strong>:
+- Test execution time
+- Test success rate
+- Flaky test rate
+- Coverage trend</p>
+<h3 id="test-maintenance">Test Maintenance</h3>
+<ul>
+<li>Flaky test elimination</li>
+<li>Test refactoring</li>
+<li>Test documentation</li>
+<li>Test review</li>
+</ul>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0410_cfr_measurement.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0440_cicd_practices.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,6 +1,6 @@
 # Zusammenfassung der Sicherheitsziele (Security Objectives Summary)
 
-**Dokument-ID:** 0330
+**Dokument-ID:** COMMON-CRITERIA-0330
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

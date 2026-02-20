@@ -1,6 +1,6 @@
 # Policy: Akzeptable Nutzung IT
 
-**Dokument-ID:** 0200
+**Dokument-ID:** ISMS-0200
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

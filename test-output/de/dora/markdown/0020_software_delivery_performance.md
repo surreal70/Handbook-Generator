@@ -6,7 +6,7 @@ Classification: Internal
 
 # Software Delivery Performance
 
-**Dokument-ID:** [FRAMEWORK]-0020
+**Dokument-ID:** DORA-0020
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

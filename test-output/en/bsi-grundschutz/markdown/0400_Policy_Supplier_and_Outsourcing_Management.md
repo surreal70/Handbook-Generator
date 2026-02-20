@@ -1,6 +1,6 @@
 # Policy: Supplier and Outsourcing Management
 
-**Document-ID:** [FRAMEWORK]-0400
+**Document-ID:** BSI-GRUNDSCHUTZ-0400
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

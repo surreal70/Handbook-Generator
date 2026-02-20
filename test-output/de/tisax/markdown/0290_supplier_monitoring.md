@@ -6,7 +6,7 @@ Classification: Internal
 
 # Lieferantenüberwachung
 
-**Dokument-ID:** [FRAMEWORK]-0290
+**Dokument-ID:** TISAX-0290
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

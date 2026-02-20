@@ -6,7 +6,7 @@ Classification: Internal
 
 # Kapazitätsmanagement
 
-**Dokument-ID:** [FRAMEWORK]-0060
+**Dokument-ID:** TISAX-0060
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

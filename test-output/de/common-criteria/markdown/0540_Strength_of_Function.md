@@ -1,6 +1,6 @@
 # Strength of Function (Stärke der Sicherheitsfunktionen)
 
-**Dokument-ID:** 0540
+**Dokument-ID:** COMMON-CRITERIA-0540
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

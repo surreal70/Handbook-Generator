@@ -1,6 +1,6 @@
 # Qualitätspolitik
 
-**Dokument-ID:** 0100
+**Dokument-ID:** ISO-9001-0100
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

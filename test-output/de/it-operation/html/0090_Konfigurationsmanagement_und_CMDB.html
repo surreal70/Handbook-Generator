@@ -21,13 +21,24 @@
         
         <main>
 <h1 id="konfigurationsmanagement-und-cmdb">Konfigurationsmanagement und CMDB</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0090
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
 <h2 id="ubersicht">Übersicht</h2>
 <p>Dieses Dokument beschreibt das Konfigurationsmanagement und die Configuration Management Database (CMDB) für den IT-Service. Es definiert CI-Kategorien, Attribute, Beziehungen und Change-Prozesse für Configuration Items.</p>
-<p><strong>Service:</strong> {{ meta.service_name }}<br />
-<strong>Verantwortlich:</strong> Andreas Huemmer<br />
+<p><strong>Service:</strong> {{ meta-handbook.service_name }}<br />
+<strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}<br />
 <strong>CMDB-System:</strong> NetBox<br />
-<strong>Stand:</strong> 1.0.0</p>
-<hr />
+<strong>Stand:</strong> 0</p>
 <h2 id="konfigurationsmanagement-prozess">Konfigurationsmanagement-Prozess</h2>
 <h3 id="ziele-des-konfigurationsmanagements">Ziele des Konfigurationsmanagements</h3>
 <ul>
@@ -45,13 +56,12 @@
 <li><strong>Status Accounting:</strong> Erfassung und Reporting des CI-Status</li>
 <li><strong>Verification and Audit:</strong> Überprüfung der CMDB-Datenqualität</li>
 </ol>
-<hr />
 <h2 id="configuration-management-database-cmdb">Configuration Management Database (CMDB)</h2>
 <h3 id="cmdb-system-netbox">CMDB-System: NetBox</h3>
 <p><strong>NetBox-Instanz:</strong>
-- <strong>URL:</strong> {{ netbox.url }}
-- <strong>Version:</strong> {{ netbox.version }}
-- <strong>Verantwortlich:</strong> Andreas Huemmer</p>
+- <strong>URL:</strong> [[ netbox.url ]]
+- <strong>Version:</strong> [TODO]
+- <strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</p>
 <p><strong>NetBox-Funktionen:</strong>
 - IP Address Management (IPAM)
 - Data Center Infrastructure Management (DCIM)
@@ -79,42 +89,41 @@
 └─────────────────────────────────────────────────────────────┘
 </code></pre></div>
 
-<hr />
 <h2 id="ci-kategorien-und-attribute">CI-Kategorien und Attribute</h2>
 <h3 id="hardware-cis">Hardware-CIs</h3>
 <h4 id="server">Server</h4>
 <p><strong>Kategorie:</strong> Hardware &gt; Server<br />
 <strong>Attribute:</strong>
-- <strong>Name:</strong> {{ netbox.device.name }}
-- <strong>Hersteller:</strong> {{ netbox.device.manufacturer }}
-- <strong>Modell:</strong> {{ netbox.device.model }}
-- <strong>Seriennummer:</strong> {{ netbox.device.serial }}
-- <strong>Asset-Tag:</strong> {{ netbox.device.asset_tag }}
-- <strong>Standort:</strong> {{ netbox.device.site }}
-- <strong>Rack:</strong> {{ netbox.device.rack }}
-- <strong>Rack-Position:</strong> {{ netbox.device.position }}
+- <strong>Name:</strong> [[ netbox.device.name ]]
+- <strong>Hersteller:</strong> [[ netbox.device.manufacturer ]]
+- <strong>Modell:</strong> [[ netbox.device.model ]]
+- <strong>Seriennummer:</strong> [[ netbox.device.serial ]]
+- <strong>Asset-Tag:</strong> [[ netbox.device.asset_tag ]]
+- <strong>Standort:</strong> [[ netbox.device.site ]]
+- <strong>Rack:</strong> [[ netbox.device.rack ]]
+- <strong>Rack-Position:</strong> [[ netbox.device.position ]]
 - <strong>Status:</strong> Active, Planned, Staged, Failed, Decommissioned
-- <strong>Rolle:</strong> {{ netbox.device.role }}
-- <strong>Primary IP:</strong> {{ netbox.device.primary_ip }}</p>
+- <strong>Rolle:</strong> [[ netbox.device.role ]]
+- <strong>Primary IP:</strong> [[ netbox.device.primary_ip ]]</p>
 <h4 id="netzwerkgerate">Netzwerkgeräte</h4>
 <p><strong>Kategorie:</strong> Hardware &gt; Network<br />
 <strong>Attribute:</strong>
-- <strong>Name:</strong> {{ netbox.device.name }}
+- <strong>Name:</strong> [[ netbox.device.name ]]
 - <strong>Typ:</strong> Switch, Router, Firewall, Load Balancer
-- <strong>Hersteller:</strong> {{ netbox.device.manufacturer }}
-- <strong>Modell:</strong> {{ netbox.device.model }}
-- <strong>Management-IP:</strong> {{ netbox.device.primary_ip }}
-- <strong>Standort:</strong> {{ netbox.device.site }}
-- <strong>Interfaces:</strong> {{ netbox.device.interfaces }}
-- <strong>VLANs:</strong> {{ netbox.device.vlans }}</p>
+- <strong>Hersteller:</strong> [[ netbox.device.manufacturer ]]
+- <strong>Modell:</strong> [[ netbox.device.model ]]
+- <strong>Management-IP:</strong> [[ netbox.device.primary_ip ]]
+- <strong>Standort:</strong> [[ netbox.device.site ]]
+- <strong>Interfaces:</strong> [[ netbox.device.interfaces ]]
+- <strong>VLANs:</strong> [[ netbox.device.vlans ]]</p>
 <h4 id="storage">Storage</h4>
 <p><strong>Kategorie:</strong> Hardware &gt; Storage<br />
 <strong>Attribute:</strong>
-- <strong>Name:</strong> {{ netbox.device.name }}
+- <strong>Name:</strong> [[ netbox.device.name ]]
 - <strong>Typ:</strong> SAN, NAS, DAS
 - <strong>Kapazität:</strong> [TODO] TB
-- <strong>Hersteller:</strong> {{ netbox.device.manufacturer }}
-- <strong>Standort:</strong> {{ netbox.device.site }}</p>
+- <strong>Hersteller:</strong> [[ netbox.device.manufacturer ]]
+- <strong>Standort:</strong> [[ netbox.device.site ]]</p>
 <h3 id="software-cis">Software-CIs</h3>
 <h4 id="betriebssysteme">Betriebssysteme</h4>
 <p><strong>Kategorie:</strong> Software &gt; Operating System<br />
@@ -122,7 +131,7 @@
 - <strong>Name:</strong> [TODO: z.B. Ubuntu Server 22.04]
 - <strong>Version:</strong> [TODO]
 - <strong>Lizenz:</strong> [TODO]
-- <strong>Installiert auf:</strong> {{ netbox.device.name }}
+- <strong>Installiert auf:</strong> [[ netbox.device.name ]]
 - <strong>Patch-Level:</strong> [TODO]</p>
 <h4 id="anwendungen">Anwendungen</h4>
 <p><strong>Kategorie:</strong> Software &gt; Application<br />
@@ -132,61 +141,60 @@
 - <strong>Hersteller:</strong> [TODO]
 - <strong>Lizenz:</strong> [TODO]
 - <strong>Lizenzanzahl:</strong> [TODO]
-- <strong>Installiert auf:</strong> {{ netbox.device.name }}
+- <strong>Installiert auf:</strong> [[ netbox.device.name ]]
 - <strong>Verantwortlich:</strong> [TODO]</p>
 <h3 id="virtualisierung-cis">Virtualisierung-CIs</h3>
 <h4 id="hypervisor-cluster">Hypervisor-Cluster</h4>
 <p><strong>Kategorie:</strong> Virtualization &gt; Cluster<br />
 <strong>Attribute:</strong>
-- <strong>Name:</strong> {{ netbox.cluster.name }}
-- <strong>Typ:</strong> {{ netbox.cluster.type }}
-- <strong>Standort:</strong> {{ netbox.cluster.site }}
-- <strong>Anzahl Hosts:</strong> {{ netbox.cluster.device_count }}</p>
+- <strong>Name:</strong> [[ netbox.cluster.name ]]
+- <strong>Typ:</strong> [[ netbox.cluster.type ]]
+- <strong>Standort:</strong> [[ netbox.cluster.site ]]
+- <strong>Anzahl Hosts:</strong> [[ netbox.cluster.device_count ]]</p>
 <h4 id="virtuelle-maschinen">Virtuelle Maschinen</h4>
 <p><strong>Kategorie:</strong> Virtualization &gt; Virtual Machine<br />
 <strong>Attribute:</strong>
-- <strong>Name:</strong> {{ netbox.vm.name }}
-- <strong>Cluster:</strong> {{ netbox.vm.cluster }}
-- <strong>vCPUs:</strong> {{ netbox.vm.vcpus }}
-- <strong>Memory:</strong> {{ netbox.vm.memory }} GB
-- <strong>Disk:</strong> {{ netbox.vm.disk }} GB
+- <strong>Name:</strong> [[ netbox.vm.name ]]
+- <strong>Cluster:</strong> [[ netbox.vm.cluster ]]
+- <strong>vCPUs:</strong> [[ netbox.vm.vcpus ]]
+- <strong>Memory:</strong> [[ netbox.vm.memory ]] GB
+- <strong>Disk:</strong> [[ netbox.vm.disk ]] GB
 - <strong>Status:</strong> Active, Offline, Staged
-- <strong>Primary IP:</strong> {{ netbox.vm.primary_ip }}
+- <strong>Primary IP:</strong> [[ netbox.vm.primary_ip ]]
 - <strong>Betriebssystem:</strong> [TODO]</p>
 <h3 id="netzwerk-cis">Netzwerk-CIs</h3>
 <h4 id="ip-adressen">IP-Adressen</h4>
 <p><strong>Kategorie:</strong> Network &gt; IP Address<br />
 <strong>Attribute:</strong>
-- <strong>IP-Adresse:</strong> {{ netbox.ip.address }}
-- <strong>VLAN:</strong> {{ netbox.ip.vlan }}
+- <strong>IP-Adresse:</strong> [[ netbox.ip.address ]]
+- <strong>VLAN:</strong> [[ netbox.ip.vlan ]]
 - <strong>Status:</strong> Active, Reserved, Deprecated
-- <strong>DNS-Name:</strong> {{ netbox.ip.dns_name }}
-- <strong>Zugewiesen zu:</strong> {{ netbox.ip.assigned_to }}</p>
+- <strong>DNS-Name:</strong> [[ netbox.ip.dns_name ]]
+- <strong>Zugewiesen zu:</strong> [[ netbox.ip.assigned_to ]]</p>
 <h4 id="vlans">VLANs</h4>
 <p><strong>Kategorie:</strong> Network &gt; VLAN<br />
 <strong>Attribute:</strong>
-- <strong>VLAN-ID:</strong> {{ netbox.vlan.vid }}
-- <strong>Name:</strong> {{ netbox.vlan.name }}
-- <strong>Standort:</strong> {{ netbox.vlan.site }}
-- <strong>Beschreibung:</strong> {{ netbox.vlan.description }}</p>
+- <strong>VLAN-ID:</strong> [[ netbox.vlan.vid ]]
+- <strong>Name:</strong> [[ netbox.vlan.name ]]
+- <strong>Standort:</strong> [[ netbox.vlan.site ]]
+- <strong>Beschreibung:</strong> [[ netbox.vlan.description ]]</p>
 <h4 id="circuits">Circuits</h4>
 <p><strong>Kategorie:</strong> Network &gt; Circuit<br />
 <strong>Attribute:</strong>
-- <strong>Circuit-ID:</strong> {{ netbox.circuit.cid }}
-- <strong>Provider:</strong> {{ netbox.circuit.provider }}
-- <strong>Typ:</strong> {{ netbox.circuit.type }}
-- <strong>Bandbreite:</strong> {{ netbox.circuit.commit_rate }} Mbps
+- <strong>Circuit-ID:</strong> [[ netbox.circuit.cid ]]
+- <strong>Provider:</strong> [[ netbox.circuit.provider ]]
+- <strong>Typ:</strong> [[ netbox.circuit.type ]]
+- <strong>Bandbreite:</strong> [[ netbox.circuit.commit_rate ]] Mbps
 - <strong>Status:</strong> Active, Planned, Decommissioned</p>
 <h3 id="standort-cis">Standort-CIs</h3>
 <h4 id="sites">Sites</h4>
 <p><strong>Kategorie:</strong> Location &gt; Site<br />
 <strong>Attribute:</strong>
-- <strong>Name:</strong> {{ netbox.site.name }}
-- <strong>Adresse:</strong> {{ netbox.site.physical_address }}
-- <strong>Facility:</strong> {{ netbox.site.facility }}
+- <strong>Name:</strong> [[ netbox.site.name ]]
+- <strong>Adresse:</strong> [[ netbox.site.physical_address ]]
+- <strong>Facility:</strong> [[ netbox.site.facility ]]
 - <strong>Status:</strong> Active, Planned, Retired
-- <strong>Kontakt:</strong> {{ netbox.site.contact_name }}</p>
-<hr />
+- <strong>Kontakt:</strong> [[ netbox.site.contact_name ]]</p>
 <h2 id="ci-beziehungen">CI-Beziehungen</h2>
 <h3 id="beziehungstypen">Beziehungstypen</h3>
 <table>
@@ -314,7 +322,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="change-prozesse-fur-cis">Change-Prozesse für CIs</h2>
 <h3 id="ci-lifecycle">CI-Lifecycle</h3>
 <div class="codehilite"><pre><span></span><code>┌─────────────┐
@@ -427,7 +434,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="cmdb-datenqualitat">CMDB-Datenqualität</h2>
 <h3 id="datenqualitats-metriken">Datenqualitäts-Metriken</h3>
 <table>
@@ -478,7 +484,7 @@
 <li><strong>Frequenz:</strong> Quartalsweise</li>
 <li><strong>Umfang:</strong> Stichprobe von 10% aller CIs</li>
 <li><strong>Methode:</strong> Vergleich CMDB-Daten mit tatsächlichem Zustand</li>
-<li><strong>Verantwortlich:</strong> Andreas Huemmer</li>
+<li><strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</li>
 </ul>
 <h4 id="automatische-validierung">Automatische Validierung</h4>
 <ul>
@@ -494,7 +500,6 @@
 <li><strong>Dokumentation:</strong> Änderungen dokumentieren</li>
 <li><strong>Genehmigung:</strong> Durch IT Operations Manager</li>
 </ul>
-<hr />
 <h2 id="cmdb-zugriff-und-berechtigungen">CMDB-Zugriff und Berechtigungen</h2>
 <h3 id="zugriffsrollen">Zugriffsrollen</h3>
 <table>
@@ -539,11 +544,10 @@
 </tbody>
 </table>
 <h3 id="zugriffskontrolle">Zugriffskontrolle</h3>
-<p><strong>CMDB-Administrator:</strong> Andreas Huemmer<br />
-<strong>Zugriff über:</strong> {{ netbox.url }}<br />
+<p><strong>CMDB-Administrator:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}<br />
+<strong>Zugriff über:</strong> [[ netbox.url ]]<br />
 <strong>Authentifizierung:</strong> SSO/LDAP<br />
 <strong>Audit-Logging:</strong> Alle Änderungen werden protokolliert</p>
-<hr />
 <h2 id="cmdb-integration">CMDB-Integration</h2>
 <h3 id="integrierte-systeme">Integrierte Systeme</h3>
 <table>
@@ -596,11 +600,10 @@
 </table>
 <h3 id="api-zugriff">API-Zugriff</h3>
 <p><strong>NetBox API:</strong>
-- <strong>Endpoint:</strong> {{ netbox.url }}/api/
+- <strong>Endpoint:</strong> [[ netbox.url ]]/api/
 - <strong>Authentifizierung:</strong> API Token
-- <strong>Dokumentation:</strong> {{ netbox.url }}/api/docs/
+- <strong>Dokumentation:</strong> [[ netbox.url ]]/api/docs/
 - <strong>Rate Limiting:</strong> [TODO: z.B. 1000 Requests/Stunde]</p>
-<hr />
 <h2 id="cmdb-reporting">CMDB-Reporting</h2>
 <h3 id="standard-reports">Standard-Reports</h3>
 <h4 id="ci-inventar-report">CI-Inventar-Report</h4>
@@ -631,7 +634,6 @@
 - Abhängige CIs
 - Risikobewertung
 - Rollback-Plan</p>
-<hr />
 <h2 id="cmdb-wartung">CMDB-Wartung</h2>
 <h3 id="wartungsaktivitaten">Wartungsaktivitäten</h3>
 <h4 id="tagliche-aktivitaten">Tägliche Aktivitäten</h4>
@@ -662,7 +664,6 @@
 <li>[ ] Prozess-Review</li>
 <li>[ ] Training für CMDB-Nutzer</li>
 </ul>
-<hr />
 <h2 id="best-practices">Best Practices</h2>
 <h3 id="cmdb-best-practices">CMDB-Best-Practices</h3>
 <ol>
@@ -687,21 +688,19 @@
 <p><strong>Netzwerkgeräte:</strong>
 - Format: <code>[Standort]-[Typ]-[Funktion]-[Nummer]</code>
 - Beispiel: <code>MUC-SW-CORE-001</code></p>
-<hr />
 <h2 id="kontakte">Kontakte</h2>
 <p><strong>CMDB-Verantwortliche:</strong>
-- <strong>CMDB Administrator:</strong> Andreas Huemmer - andreas.huemmer@adminsend.de
+- <strong>CMDB Administrator:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }} - {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
 - <strong>Network Administrator:</strong> [TODO: Name] - [TODO: E-Mail]
 - <strong>Server Administrator:</strong> [TODO: Name] - [TODO: E-Mail]
-- <strong>CIO:</strong> Anna Schmidt - anna.schmidt@adminsend.de</p>
+- <strong>CIO:</strong> [TODO] - {{ meta-organisation-roles.role_CIO_email }}</p>
 <p><strong>NetBox-Support:</strong>
-- <strong>URL:</strong> {{ netbox.url }}
-- <strong>Dokumentation:</strong> {{ netbox.url }}/docs/
+- <strong>URL:</strong> [[ netbox.url ]]
+- <strong>Dokumentation:</strong> [[ netbox.url ]]/docs/
 - <strong>Support:</strong> [TODO: Support-Kontakt]</p>
-<hr />
-<p><strong>Dokumentverantwortlicher:</strong> IT Operations Manager<br />
-<strong>Genehmigt durch:</strong> CIO<br />
-<strong>Version:</strong> 1.0.0<br />
+<p><strong>Dokumentverantwortlicher:</strong> [TODO]<br />
+<strong>Genehmigt durch:</strong> [TODO]<br />
+<strong>Version:</strong> 0<br />
 <strong>Organisation:</strong> AdminSend GmbH</p>
         </main>
         

@@ -1,6 +1,6 @@
 # Lawfulness of Processing
 
-**Document-ID:** 0040
+**Document-ID:** GDPR-0040
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

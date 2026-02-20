@@ -6,7 +6,7 @@ Classification: Internal
 
 # Business Continuity Planning
 
-**Dokument-ID:** [FRAMEWORK]-0500
+**Dokument-ID:** TISAX-0500
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

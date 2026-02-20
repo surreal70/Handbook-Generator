@@ -6,7 +6,7 @@ Classification: Internal
 
 # Betriebssicherheit Übersicht
 
-**Dokument-ID:** [FRAMEWORK]-0190
+**Dokument-ID:** TISAX-0190
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

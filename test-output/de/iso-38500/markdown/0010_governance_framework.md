@@ -7,7 +7,7 @@ Classification: Internal
 
 # IT-Governance Framework - Übersicht
 
-**Dokument-ID:** [FRAMEWORK]-0010
+**Dokument-ID:** ISO-38500-0010
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

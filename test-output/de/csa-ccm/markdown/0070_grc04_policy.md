@@ -6,7 +6,7 @@ Classification: Internal
 
 # GRC-04: Richtlinie
 
-**Dokument-ID:** [FRAMEWORK]-0070
+**Dokument-ID:** CSA-CCM-0070
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

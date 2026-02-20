@@ -6,7 +6,7 @@ Classification: Internal
 
 # Organisationsstruktur und Verantwortlichkeiten
 
-**Dokument-ID:** [FRAMEWORK]-0060
+**Dokument-ID:** COSO-0060
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

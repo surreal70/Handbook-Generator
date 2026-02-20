@@ -1,6 +1,6 @@
 # OS Hardening Baseline: Windows Client
 
-**Document-ID:** [FRAMEWORK]-0120
+**Document-ID:** CIS-CONTROLS-0120
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

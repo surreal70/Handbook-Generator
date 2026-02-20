@@ -6,7 +6,7 @@ Classification: Internal
 
 # Objectives Specification
 
-**Document-ID:** [FRAMEWORK]-0110
+**Document-ID:** COSO-0110
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

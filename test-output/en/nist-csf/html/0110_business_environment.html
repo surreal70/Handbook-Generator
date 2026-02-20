@@ -20,27 +20,35 @@
         </nav>
         
         <main>
-<hr />
 <p>Document-ID: nist-csf-0110
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
-Status: Draft
-Classification: Internal
-Last Update: {{ meta.date }}</p>
-<hr />
+Owner: [TODO]</p>
+<p>Status: Draft
+Classification: Internal</p>
 <h1 id="business-environment-idbe">Business Environment (ID.BE)</h1>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0110
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
 <h2 id="purpose">Purpose</h2>
 <p>This document describes the organization's business environment, including mission, objectives, stakeholders, and activities to inform cybersecurity decisions.</p>
 <h2 id="scope">Scope</h2>
-<p>{{ meta.scope }}</p>
+<p>[TODO]</p>
 <h2 id="business-mission-and-objectives">Business Mission and Objectives</h2>
 <h3 id="mission">Mission</h3>
-<p>{{ meta.organization_mission }}</p>
+<p>{{ meta-handbook.organization_mission }}</p>
 <h3 id="strategic-objectives">Strategic Objectives</h3>
 <ol>
-<li>{{ meta.strategic_goal_1 }}</li>
-<li>{{ meta.strategic_goal_2 }}</li>
-<li>{{ meta.strategic_goal_3 }}</li>
+<li>{{ meta-handbook.strategic_goal_1 }}</li>
+<li>{{ meta-handbook.strategic_goal_2 }}</li>
+<li>{{ meta-handbook.strategic_goal_3 }}</li>
 </ol>
 <h2 id="critical-business-processes">Critical Business Processes</h2>
 <table>
@@ -54,22 +62,22 @@ Last Update: {{ meta.date }}</p>
 </thead>
 <tbody>
 <tr>
-<td>{{ meta.process_1 }}</td>
-<td>{{ meta.process_1_desc }}</td>
+<td>{{ meta-handbook.process_1 }}</td>
+<td>{{ meta-handbook.process_1_desc }}</td>
 <td>High</td>
-<td>{{ meta.process_1_deps }}</td>
+<td>{{ meta-handbook.process_1_deps }}</td>
 </tr>
 <tr>
-<td>{{ meta.process_2 }}</td>
-<td>{{ meta.process_2_desc }}</td>
+<td>{{ meta-handbook.process_2 }}</td>
+<td>{{ meta-handbook.process_2_desc }}</td>
 <td>High</td>
-<td>{{ meta.process_2_deps }}</td>
+<td>{{ meta-handbook.process_2_deps }}</td>
 </tr>
 <tr>
-<td>{{ meta.process_3 }}</td>
-<td>{{ meta.process_3_desc }}</td>
+<td>{{ meta-handbook.process_3 }}</td>
+<td>{{ meta-handbook.process_3_desc }}</td>
 <td>Medium</td>
-<td>{{ meta.process_3_deps }}</td>
+<td>{{ meta-handbook.process_3_deps }}</td>
 </tr>
 </tbody>
 </table>
@@ -91,15 +99,15 @@ Last Update: {{ meta.date }}</p>
 <h2 id="business-dependencies">Business Dependencies</h2>
 <h3 id="it-systems">IT Systems</h3>
 <ul>
-<li>ERP System: {{ meta.erp_system }}</li>
-<li>CRM System: {{ meta.crm_system }}</li>
-<li>Production Systems: {{ meta.production_systems }}</li>
+<li>ERP System: {{ meta-handbook.erp_system }}</li>
+<li>CRM System: {{ meta-handbook.crm_system }}</li>
+<li>Production Systems: {{ meta-handbook.production_systems }}</li>
 </ul>
 <h3 id="external-services">External Services</h3>
 <ul>
-<li>Cloud Provider: {{ meta.cloud_provider }}</li>
-<li>Managed Services: {{ meta.managed_services }}</li>
-<li>Payment Provider: {{ meta.payment_provider }}</li>
+<li>Cloud Provider: {{ meta-handbook.cloud_provider }}</li>
+<li>Managed Services: {{ meta-handbook.managed_services }}</li>
+<li>Payment Provider: {{ meta-handbook.payment_provider }}</li>
 </ul>
 <h2 id="document-references">Document References</h2>
 <ul>
@@ -107,26 +115,6 @@ Last Update: {{ meta.date }}</p>
 <li>0100_asset_management.md</li>
 <li>0130_risk_assessment.md</li>
 </ul>
-<hr />
-<p><strong>Document History:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Version</th>
-<th>Date</th>
-<th>Author</th>
-<th>Changes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1.0</td>
-<td>{{ meta.date }}</td>
-<td>Andreas Huemmer [andreas.huemmer@adminsend.de]</td>
-<td>Initial creation</td>
-</tr>
-</tbody>
-</table>
         </main>
         
         <nav class="page-nav">

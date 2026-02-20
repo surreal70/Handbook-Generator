@@ -6,7 +6,7 @@ Classification: Internal
 
 # Laufende Evaluierungen
 
-**Document-ID:** [FRAMEWORK]-0410
+**Document-ID:** COSO-0410
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

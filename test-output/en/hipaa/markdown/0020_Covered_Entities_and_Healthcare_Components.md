@@ -1,6 +1,6 @@
 # Covered Entities and Healthcare Components
 
-**Document-ID:** [FRAMEWORK]-0020
+**Document-ID:** HIPAA-0020
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

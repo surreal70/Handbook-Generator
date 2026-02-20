@@ -21,12 +21,23 @@
         
         <main>
 <h1 id="monitoring-alerting-and-observability">Monitoring, Alerting and Observability</h1>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0110
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
 <h2 id="overview">Overview</h2>
 <p>This document describes the monitoring, alerting, and observability strategy for the IT service. It defines monitoring tools, alerting rules, thresholds, and observability concepts.</p>
-<p><strong>Service:</strong> {{ meta.service_name }}<br />
-<strong>Responsible:</strong> Andreas Huemmer<br />
-<strong>Version:</strong> 1.0.0</p>
-<hr />
+<p><strong>Service:</strong> {{ meta-handbook.service_name }}<br />
+<strong>Responsible:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}<br />
+<strong>Version:</strong> 0</p>
 <h2 id="monitoring-strategy">Monitoring Strategy</h2>
 <h3 id="monitoring-objectives">Monitoring Objectives</h3>
 <ul>
@@ -73,7 +84,6 @@
 └─────────────────────────────────────────────────────────────┘
 </code></pre></div>
 
-<hr />
 <h2 id="monitoring-tools">Monitoring Tools</h2>
 <h3 id="tool-stack">Tool Stack</h3>
 <table>
@@ -158,7 +168,6 @@
 └─────────────┘  └─────────────┘
 </code></pre></div>
 
-<hr />
 <h2 id="infrastructure-monitoring">Infrastructure Monitoring</h2>
 <h3 id="server-monitoring">Server Monitoring</h3>
 <h4 id="metrics">Metrics</h4>
@@ -237,9 +246,9 @@
 </thead>
 <tbody>
 <tr>
-<td>{{ netbox.device.name }}</td>
-<td>{{ netbox.device.site }}</td>
-<td>{{ netbox.device.role }}</td>
+<td>[[ netbox.device.name ]]</td>
+<td>[[ netbox.device.site ]]</td>
+<td>[[ netbox.device.role ]]</td>
 <td>[TODO: Agent]</td>
 <td>☐ Active</td>
 </tr>
@@ -322,10 +331,10 @@
 </thead>
 <tbody>
 <tr>
-<td>{{ netbox.device.name }}</td>
-<td>{{ netbox.device.device_type }}</td>
-<td>{{ netbox.device.site }}</td>
-<td>{{ netbox.device.primary_ip }}</td>
+<td>[[ netbox.device.name ]]</td>
+<td>[[ netbox.device.device_type ]]</td>
+<td>[[ netbox.device.site ]]</td>
+<td>[[ netbox.device.primary_ip ]]</td>
 <td>☐ Active</td>
 </tr>
 <tr>
@@ -437,7 +446,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="application-monitoring">Application Monitoring</h2>
 <h3 id="application-performance-monitoring-apm">Application Performance Monitoring (APM)</h3>
 <h4 id="metrics_3">Metrics</h4>
@@ -538,7 +546,6 @@
 - Content validation
 - SSL certificate validity
 - DNS resolution</p>
-<hr />
 <h2 id="observability">Observability</h2>
 <h3 id="the-three-pillars-of-observability">The Three Pillars of Observability</h3>
 <h4 id="1-metrics">1. Metrics</h4>
@@ -595,7 +602,6 @@
 <span class="w">         </span><span class="err">└───────────────────────┘</span>
 </code></pre></div>
 
-<hr />
 <h2 id="alerting">Alerting</h2>
 <h3 id="alerting-strategy">Alerting Strategy</h3>
 <p><strong>Principles:</strong>
@@ -671,7 +677,7 @@
 <td>Ping failed &gt; 5 min</td>
 <td>Critical</td>
 <td>Check immediately</td>
-<td>Julia Becker</td>
+<td>{{ meta-organisation-roles.role_Service_Desk_Lead }}</td>
 </tr>
 <tr>
 <td><strong>High CPU</strong></td>
@@ -720,7 +726,7 @@
 <td>Health check failed</td>
 <td>Critical</td>
 <td>Restart service</td>
-<td>Julia Becker</td>
+<td>{{ meta-organisation-roles.role_Service_Desk_Lead }}</td>
 </tr>
 <tr>
 <td><strong>High Error Rate</strong></td>
@@ -847,7 +853,6 @@
 - <strong>Week 2:</strong> [TODO: Name]
 - <strong>Week 3:</strong> [TODO: Name]
 - <strong>Week 4:</strong> [TODO: Name]</p>
-<hr />
 <h2 id="dashboards">Dashboards</h2>
 <h3 id="dashboard-overview">Dashboard Overview</h3>
 <h4 id="executive-dashboard">Executive Dashboard</h4>
@@ -895,7 +900,6 @@
 <li><strong>Historical:</strong> Show trends over time</li>
 <li><strong>Annotations:</strong> Mark important events</li>
 </ol>
-<hr />
 <h2 id="monitoring-processes">Monitoring Processes</h2>
 <h3 id="daily-monitoring-routines">Daily Monitoring Routines</h3>
 <p><strong>Morning Check (08:00):</strong>
@@ -930,7 +934,6 @@
 <li>[ ] Update monitoring tools</li>
 <li>[ ] Optimize alert rules</li>
 </ul>
-<hr />
 <h2 id="service-level-indicators-slis">Service Level Indicators (SLIs)</h2>
 <h3 id="defined-slis">Defined SLIs</h3>
 <table>
@@ -985,7 +988,6 @@
 - Real-time dashboards
 - Daily reports
 - Monthly SLA reports</p>
-<hr />
 <h2 id="incident-response">Incident Response</h2>
 <h3 id="monitoring-based-incident-response">Monitoring-Based Incident Response</h3>
 <div class="codehilite"><pre><span></span><code>┌─────────────────┐
@@ -1024,7 +1026,6 @@
 </code></pre></div>
 
 <p><strong>Details:</strong> See Chapter 0120 (Incident Management)</p>
-<hr />
 <h2 id="monitoring-documentation">Monitoring Documentation</h2>
 <h3 id="runbooks">Runbooks</h3>
 <p>For each critical alert, a runbook exists:
@@ -1040,7 +1041,6 @@
 - Monitoring gaps
 - Tool limitations</p>
 <p><strong>Known Issues:</strong> See Chapter 0260 (Known Problems and FAQ)</p>
-<hr />
 <h2 id="monitoring-tool-access">Monitoring Tool Access</h2>
 <h3 id="tool-access">Tool Access</h3>
 <table>
@@ -1081,23 +1081,21 @@
 </table>
 <h3 id="permissions">Permissions</h3>
 <ul>
-<li><strong>Administrator:</strong> Andreas Huemmer</li>
+<li><strong>Administrator:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</li>
 <li><strong>Operator:</strong> IT operations team</li>
 <li><strong>Read-Only:</strong> Management, auditors</li>
 </ul>
-<hr />
 <h2 id="contacts">Contacts</h2>
 <p><strong>Monitoring Team:</strong>
-- <strong>IT Operations Manager:</strong> Andreas Huemmer - andreas.huemmer@adminsend.de
-- <strong>Service Desk Lead:</strong> Julia Becker - julia.becker@adminsend.de
+- <strong>IT Operations Manager:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }} - {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
+- <strong>Service Desk Lead:</strong> {{ meta-organisation-roles.role_Service_Desk_Lead }} - {{ meta-organisation-roles.role_Service_Desk_Lead_email }}
 - <strong>On-Call Engineer:</strong> [TODO: Rotation] - [TODO: On-call number]</p>
 <p><strong>Escalation:</strong>
-- <strong>Level 2:</strong> Andreas Huemmer - +49 89 12345678-250
-- <strong>Level 3:</strong> Anna Schmidt - +49 89 12345678-200</p>
-<hr />
-<p><strong>Document Owner:</strong> IT Operations Manager<br />
-<strong>Approved by:</strong> CIO<br />
-<strong>Version:</strong> 1.0.0<br />
+- <strong>Level 2:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }} - {{ meta-organisation-roles.role_IT_Operations_Manager_phone }}
+- <strong>Level 3:</strong> [TODO] - {{ meta-organisation-roles.role_CIO_phone }}</p>
+<p><strong>Document Owner:</strong> [TODO]<br />
+<strong>Approved by:</strong> [TODO]<br />
+<strong>Version:</strong> 0<br />
 <strong>Organization:</strong> AdminSend GmbH</p>
         </main>
         

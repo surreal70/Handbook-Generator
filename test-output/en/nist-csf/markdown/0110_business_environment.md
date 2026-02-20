@@ -7,7 +7,7 @@ Classification: Internal
 
 # Business Environment (ID.BE)
 
-**Document-ID:** [FRAMEWORK]-0110
+**Document-ID:** NIST-CSF-0110
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

@@ -6,7 +6,7 @@ Classification: Internal
 
 # Control Environment
 
-**Document-ID:** [FRAMEWORK]-0030
+**Document-ID:** COSO-0030
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

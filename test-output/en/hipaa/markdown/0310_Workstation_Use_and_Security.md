@@ -1,6 +1,6 @@
 # Workstation Use and Security
 
-**Document-ID:** [FRAMEWORK]-0310
+**Document-ID:** HIPAA-0310
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

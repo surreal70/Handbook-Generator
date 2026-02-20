@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0350 - MTTR Verbesserung</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0350</div>
+            <h1>MTTR Verbesserung</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0340_recovery_automation.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0400_change_failure_rate_overview.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: dora-0350</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="mttr-verbesserung">MTTR Verbesserung</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0350
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="zweck">Zweck</h2>
+<p>Strategien zur kontinuierlichen Verbesserung der MTTR.</p>
+<h2 id="umfang">Umfang</h2>
+<ul>
+<li>Verbesserungsstrategien</li>
+<li>Best Practices</li>
+<li>Postmortem-Prozess</li>
+<li>Continuous Learning</li>
+</ul>
+<h2 id="organisationsinformationen">Organisationsinformationen</h2>
+<ul>
+<li><strong>Organisation</strong>: [TODO]</li>
+<li><strong>Verbesserungs-Verantwortlicher</strong>: [TODO]</li>
+<li><strong>Aktuell</strong>: [TODO]</li>
+<li><strong>Ziel</strong>: [TODO]</li>
+</ul>
+<h2 id="verbesserungsstrategien">Verbesserungsstrategien</h2>
+<h3 id="1-detection-time-reduzieren">1. Detection Time Reduzieren</h3>
+<p><strong>Maßnahmen</strong>:
+- Proactive Monitoring
+- Anomaly Detection
+- Synthetic Monitoring
+- User Feedback Integration</p>
+<p><strong>Ziel</strong>: Detection &lt; 1 Minute</p>
+<h3 id="2-diagnosis-time-reduzieren">2. Diagnosis Time Reduzieren</h3>
+<p><strong>Maßnahmen</strong>:
+- Comprehensive Logging
+- Distributed Tracing
+- Correlation Analysis
+- Runbook Documentation</p>
+<p><strong>Ziel</strong>: Diagnosis &lt; 15 Minuten</p>
+<h3 id="3-recovery-time-reduzieren">3. Recovery Time Reduzieren</h3>
+<p><strong>Maßnahmen</strong>:
+- Automated Rollback
+- Feature Flags
+- Self-Healing Systems
+- Disaster Recovery Automation</p>
+<p><strong>Ziel</strong>: Recovery &lt; 30 Minuten</p>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="observability">Observability</h3>
+<p><strong>Three Pillars</strong>:
+1. <strong>Metrics</strong>: Quantitative Daten
+2. <strong>Logs</strong>: Event-Daten
+3. <strong>Traces</strong>: Request-Flow-Daten</p>
+<p><strong>Implementation</strong>:
+- Structured Logging
+- Distributed Tracing
+- Custom Metrics
+- Dashboards</p>
+<h3 id="incident-management">Incident Management</h3>
+<p><strong>Prozess-Optimierung</strong>:
+- Klare Rollen
+- Standardisierte Workflows
+- Effektive Kommunikation
+- Schnelle Eskalation</p>
+<h3 id="automation">Automation</h3>
+<p><strong>Prioritäten</strong>:
+1. Automated Detection
+2. Automated Diagnosis
+3. Automated Recovery
+4. Automated Verification</p>
+<h2 id="postmortem-prozess">Postmortem-Prozess</h2>
+<h3 id="blameless-postmortems">Blameless Postmortems</h3>
+<p><strong>Prinzipien</strong>:
+- Fokus auf Systeme, nicht Personen
+- Lernkultur
+- Transparenz
+- Actionable Insights</p>
+<h3 id="postmortem-template">Postmortem-Template</h3>
+<div class="codehilite"><pre><span></span><code><span class="gh"># Incident Postmortem: [Titel]</span>
+
+<span class="gu">## Zusammenfassung</span>
+<span class="k">-</span><span class="w"> </span>Datum/Zeit
+<span class="k">-</span><span class="w"> </span>Dauer
+<span class="k">-</span><span class="w"> </span>Impact
+<span class="k">-</span><span class="w"> </span>Root Cause
+
+<span class="gu">## Timeline</span>
+<span class="k">-</span><span class="w"> </span>[<span class="nl">Zeit</span>]: <span class="na">Detection</span>
+<span class="k">-</span><span class="w"> </span>[<span class="nl">Zeit</span>]: <span class="na">Diagnosis</span>
+<span class="k">-</span><span class="w"> </span>[<span class="nl">Zeit</span>]: <span class="na">Recovery</span>
+<span class="k">-</span><span class="w"> </span>[<span class="nl">Zeit</span>]: <span class="na">Verification</span>
+
+<span class="gu">## Root Cause Analysis</span>
+<span class="k">-</span><span class="w"> </span>Was ist passiert?
+<span class="k">-</span><span class="w"> </span>Warum ist es passiert?
+<span class="k">-</span><span class="w"> </span>Wie wurde es behoben?
+
+<span class="gu">## Action Items</span>
+<span class="k">1.</span> [<span class="nl">Action</span>]: <span class="na">[Owner] - [Deadline]</span>
+<span class="k">2.</span> [<span class="nl">Action</span>]: <span class="na">[Owner] - [Deadline]</span>
+
+<span class="gu">## Lessons Learned</span>
+<span class="k">-</span><span class="w"> </span>Was lief gut?
+<span class="k">-</span><span class="w"> </span>Was kann verbessert werden?
+</code></pre></div>
+
+<h3 id="follow-up">Follow-up</h3>
+<p><strong>Tracking</strong>:
+- Action Item Status
+- Implementation Timeline
+- Effectiveness Measurement</p>
+<h2 id="continuous-learning">Continuous Learning</h2>
+<h3 id="knowledge-sharing">Knowledge Sharing</h3>
+<p><strong>Methoden</strong>:
+- Postmortem Reviews
+- Incident Retrospectives
+- Runbook Updates
+- Team Training</p>
+<h3 id="metrics-tracking">Metrics Tracking</h3>
+<p><strong>KPIs</strong>:
+- MTTR Trend
+- Incident Frequency
+- Recovery Success Rate
+- Automation Rate</p>
+<h3 id="improvement-cycles">Improvement Cycles</h3>
+<p><strong>Frequenz</strong>:
+- Wöchentliche Metriken-Reviews
+- Monatliche Retrospektiven
+- Quartalsweise Strategie-Reviews</p>
+<h2 id="implementierungsplan">Implementierungsplan</h2>
+<h3 id="phase-1-foundation-monat-1-2">Phase 1: Foundation (Monat 1-2)</h3>
+<ul>
+<li>Monitoring verbessern</li>
+<li>Runbooks dokumentieren</li>
+<li>On-Call Training</li>
+</ul>
+<p><strong>Erwartete Reduktion</strong>: 20%</p>
+<h3 id="phase-2-automation-monat-3-6">Phase 2: Automation (Monat 3-6)</h3>
+<ul>
+<li>Automated Rollback</li>
+<li>Self-Healing Systems</li>
+<li>Chaos Engineering</li>
+</ul>
+<p><strong>Erwartete Reduktion</strong>: 40%</p>
+<h3 id="phase-3-optimization-monat-7-12">Phase 3: Optimization (Monat 7-12)</h3>
+<ul>
+<li>Predictive Analytics</li>
+<li>Full Automation</li>
+<li>Resilient Architecture</li>
+</ul>
+<p><strong>Erwartete Reduktion</strong>: 60%</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0340_recovery_automation.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0400_change_failure_rate_overview.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

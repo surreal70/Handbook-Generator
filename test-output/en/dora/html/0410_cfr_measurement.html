@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0410 - CFR Measurement</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0410</div>
+            <h1>CFR Measurement</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0400_change_failure_rate_overview.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0430_testing_strategies.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: dora-0410</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="cfr-measurement">CFR Measurement</h1>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0410
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="purpose">Purpose</h2>
+<p>Practical implementation of Change Failure Rate measurement.</p>
+<h2 id="scope">Scope</h2>
+<ul>
+<li>Deployment tracking</li>
+<li>Failure definition</li>
+<li>Calculation logic</li>
+<li>Reporting</li>
+</ul>
+<h2 id="organization-information">Organization Information</h2>
+<ul>
+<li><strong>Organization</strong>: [TODO]</li>
+<li><strong>Measurement Owner</strong>: [TODO]</li>
+</ul>
+<h2 id="deployment-tracking">Deployment Tracking</h2>
+<h3 id="deployment-events">Deployment Events</h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;deployment_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DEP-12345&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-02-13T14:00:00Z&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;commit_sha&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;abc123&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;environment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;production&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;application&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[TODO]&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="failure-events">Failure Events</h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;incident_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;INC-67890&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-02-13T15:00:00Z&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;related_deployment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DEP-12345&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;failure_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;rollback&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;severity&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;high&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h2 id="failure-definition">Failure Definition</h2>
+<h3 id="criteria-for-failed-deployment">Criteria for Failed Deployment</h3>
+<p><strong>Automatic Criteria</strong>:
+- Rollback performed
+- Hotfix deployed
+- Error rate &gt; threshold
+- Performance degradation</p>
+<p><strong>Manual Criteria</strong>:
+- Production incident
+- Customer impact
+- Service degradation</p>
+<h2 id="calculation-logic">Calculation Logic</h2>
+<h3 id="cfr-calculation">CFR Calculation</h3>
+<div class="codehilite"><pre><span></span><code>CFR = (Failed Deployments / Total Deployments) × 100%
+</code></pre></div>
+
+<h3 id="time-windows">Time Windows</h3>
+<ul>
+<li>Daily CFR</li>
+<li>Weekly CFR</li>
+<li>Monthly CFR</li>
+<li>Rolling 30-day CFR</li>
+</ul>
+<h3 id="segmentation">Segmentation</h3>
+<ul>
+<li>CFR by team</li>
+<li>CFR by service</li>
+<li>CFR by environment</li>
+<li>CFR by severity</li>
+</ul>
+<h2 id="reporting">Reporting</h2>
+<h3 id="dashboard-metrics">Dashboard Metrics</h3>
+<ul>
+<li>Current CFR</li>
+<li>CFR trend</li>
+<li>Failed deployments</li>
+<li>Failure types</li>
+</ul>
+<h3 id="visualizations">Visualizations</h3>
+<ul>
+<li>Time series charts</li>
+<li>Pie charts (failure types)</li>
+<li>Heatmaps</li>
+</ul>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0400_change_failure_rate_overview.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0430_testing_strategies.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

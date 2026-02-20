@@ -1,6 +1,6 @@
 # Policy: Security in Projects
 
-**Dokument-ID:** 0680
+**Dokument-ID:** ISMS-0680
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

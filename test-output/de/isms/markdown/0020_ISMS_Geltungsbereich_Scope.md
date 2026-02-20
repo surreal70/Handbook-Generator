@@ -1,6 +1,6 @@
 # ISMS-Geltungsbereich (Scope)
 
-**Dokument-ID:** 0020
+**Dokument-ID:** ISMS-0020
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

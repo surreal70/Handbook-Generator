@@ -1,6 +1,6 @@
 # Scope and Application
 
-**Document-ID:** 0010
+**Document-ID:** GDPR-0010
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

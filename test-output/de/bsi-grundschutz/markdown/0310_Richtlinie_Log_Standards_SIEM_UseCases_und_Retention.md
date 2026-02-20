@@ -1,6 +1,6 @@
 # Richtlinie: Log Standards SIEM UseCases und Retention
 
-**Dokument-ID:** 0310
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0310
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

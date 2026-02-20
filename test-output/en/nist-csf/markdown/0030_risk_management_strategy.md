@@ -7,7 +7,7 @@ Classification: Internal
 
 # Risk Management Strategy (GV.RM)
 
-**Document-ID:** [FRAMEWORK]-0030
+**Document-ID:** NIST-CSF-0030
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

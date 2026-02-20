@@ -7,7 +7,7 @@ Classification: Internal
 
 # Risikoevaluierung
 
-**Dokument-ID:** [FRAMEWORK]-0240
+**Dokument-ID:** ISO-31000-0240
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

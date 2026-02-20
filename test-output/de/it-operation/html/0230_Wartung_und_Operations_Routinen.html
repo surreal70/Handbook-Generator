@@ -21,13 +21,24 @@
         
         <main>
 <h1 id="wartung-und-operations-routinen">Wartung und Operations-Routinen</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0230
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
 <h2 id="ubersicht">Übersicht</h2>
 <p>Dieses Dokument beschreibt die regelmäßigen Wartungsaufgaben, Operations-Checklisten und Housekeeping-Prozeduren für den IT-Service. Ziel ist es, die Systemstabilität, Performance und Sicherheit durch proaktive Wartung zu gewährleisten.</p>
-<p><strong>Dokumentverantwortlicher:</strong> IT Operations Manager<br />
-<strong>Genehmigt durch:</strong> CIO<br />
-<strong>Version:</strong> 1.0.0<br />
+<p><strong>Dokumentverantwortlicher:</strong> [TODO]<br />
+<strong>Genehmigt durch:</strong> [TODO]<br />
+<strong>Version:</strong> 0<br />
 <strong>Organisation:</strong> AdminSend GmbH</p>
-<hr />
 <h2 id="wartungsubersicht">Wartungsübersicht</h2>
 <h3 id="wartungskategorien">Wartungskategorien</h3>
 <table>
@@ -44,25 +55,25 @@
 <td><strong>Präventiv</strong></td>
 <td>Vorbeugende Maßnahmen zur Fehlervermeidung</td>
 <td>Regelmäßig</td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 </tr>
 <tr>
 <td><strong>Korrektiv</strong></td>
 <td>Behebung bekannter Probleme</td>
 <td>Bei Bedarf</td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 </tr>
 <tr>
 <td><strong>Adaptiv</strong></td>
 <td>Anpassung an neue Anforderungen</td>
 <td>Bei Bedarf</td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 </tr>
 <tr>
 <td><strong>Perfektiv</strong></td>
 <td>Verbesserung und Optimierung</td>
 <td>Geplant</td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 </tr>
 </tbody>
 </table>
@@ -106,10 +117,9 @@
 <ul>
 <li><strong>Zeitfenster:</strong> Jederzeit nach Genehmigung</li>
 <li><strong>Ankündigung:</strong> Minimum 4 Stunden (wenn möglich)</li>
-<li><strong>Genehmigung:</strong> Anna Schmidt</li>
+<li><strong>Genehmigung:</strong> [TODO]</li>
 <li><strong>Kommunikation:</strong> Alle Stakeholder informieren</li>
 </ul>
-<hr />
 <h2 id="tagliche-routinen">Tägliche Routinen</h2>
 <h3 id="morgen-checks-0800-uhr">Morgen-Checks (08:00 Uhr)</h3>
 <h4 id="system-health-check">System-Health-Check</h4>
@@ -173,7 +183,6 @@
 <p><strong>Verantwortlich:</strong> Operations Team<br />
 <strong>Dauer:</strong> 15-20 Minuten<br />
 <strong>Dokumentation:</strong> Shift Handover Log</p>
-<hr />
 <h2 id="wochentliche-routinen">Wöchentliche Routinen</h2>
 <h3 id="montag-wochenplanung">Montag: Wochenplanung</h3>
 <h4 id="wochenstart-meeting-0900-uhr">Wochenstart-Meeting (09:00 Uhr)</h4>
@@ -184,7 +193,7 @@
 <li>[ ] Ressourcen zuweisen</li>
 <li>[ ] Risiken identifizieren</li>
 </ul>
-<p><strong>Teilnehmer:</strong> Andreas Huemmer, Operations Team<br />
+<p><strong>Teilnehmer:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}, Operations Team<br />
 <strong>Dauer:</strong> 30 Minuten<br />
 <strong>Dokumentation:</strong> Weekly Planning Notes</p>
 <h4 id="system-updates-prufen">System-Updates prüfen</h4>
@@ -228,7 +237,7 @@
 <li>[ ] Security-Incidents reviewen</li>
 <li>[ ] Compliance-Status prüfen</li>
 </ul>
-<p><strong>Verantwortlich:</strong> Operations Team, Thomas Weber<br />
+<p><strong>Verantwortlich:</strong> Operations Team, [TODO]<br />
 <strong>Dauer:</strong> 1-2 Stunden<br />
 <strong>Dokumentation:</strong> Weekly Security Report</p>
 <h3 id="freitag-wochenabschluss">Freitag: Wochenabschluss</h3>
@@ -240,7 +249,7 @@
 <li>[ ] Nächste Woche vorbereiten</li>
 <li>[ ] Wochenend-On-Call briefen</li>
 </ul>
-<p><strong>Teilnehmer:</strong> Andreas Huemmer, Operations Team<br />
+<p><strong>Teilnehmer:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}, Operations Team<br />
 <strong>Dauer:</strong> 30 Minuten<br />
 <strong>Dokumentation:</strong> Weekly Summary Report</p>
 <h4 id="housekeeping">Housekeeping</h4>
@@ -264,7 +273,6 @@
 <p><strong>Verantwortlich:</strong> On-Call Engineer<br />
 <strong>Dauer:</strong> 2 Stunden<br />
 <strong>Dokumentation:</strong> Maintenance Log</p>
-<hr />
 <h2 id="monatliche-routinen">Monatliche Routinen</h2>
 <h3 id="erste-woche-monatsplanung">Erste Woche: Monatsplanung</h3>
 <h4 id="monatsstart-meeting">Monatsstart-Meeting</h4>
@@ -275,7 +283,7 @@
 <li>[ ] Budget-Status prüfen</li>
 <li>[ ] Kapazitätsplanung aktualisieren</li>
 </ul>
-<p><strong>Teilnehmer:</strong> Anna Schmidt, Andreas Huemmer, Team Leads<br />
+<p><strong>Teilnehmer:</strong> [TODO], {{ meta-organisation-roles.role_IT_Operations_Manager }}, Team Leads<br />
 <strong>Dauer:</strong> 1 Stunde<br />
 <strong>Dokumentation:</strong> Monthly Planning Document</p>
 <h3 id="erste-woche-patch-management">Erste Woche: Patch-Management</h3>
@@ -300,7 +308,7 @@
 <li>[ ] Skalierungsbedarf bewerten</li>
 <li>[ ] Budget-Implikationen prüfen</li>
 </ul>
-<p><strong>Verantwortlich:</strong> Andreas Huemmer<br />
+<p><strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}<br />
 <strong>Dauer:</strong> 2-3 Stunden<br />
 <strong>Dokumentation:</strong> Monthly Capacity Report</p>
 <h3 id="dritte-woche-security-audit">Dritte Woche: Security-Audit</h3>
@@ -313,7 +321,7 @@
 <li>[ ] Vulnerability-Scan durchführen</li>
 <li>[ ] Compliance-Status prüfen</li>
 </ul>
-<p><strong>Verantwortlich:</strong> Thomas Weber, Operations Team<br />
+<p><strong>Verantwortlich:</strong> [TODO], Operations Team<br />
 <strong>Dauer:</strong> 3-4 Stunden<br />
 <strong>Dokumentation:</strong> Monthly Security Audit Report</p>
 <h3 id="vierte-woche-disaster-recovery-test">Vierte Woche: Disaster-Recovery-Test</h3>
@@ -326,7 +334,7 @@
 <li>[ ] Verbesserungen identifizieren</li>
 <li>[ ] DR-Plan aktualisieren</li>
 </ul>
-<p><strong>Verantwortlich:</strong> Andreas Huemmer<br />
+<p><strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}<br />
 <strong>Dauer:</strong> 2-4 Stunden<br />
 <strong>Dokumentation:</strong> DR Test Report</p>
 <h3 id="monatsende-reporting">Monatsende: Reporting</h3>
@@ -339,10 +347,9 @@
 <li>[ ] Security-Report</li>
 <li>[ ] SLA-Compliance-Report</li>
 </ul>
-<p><strong>Verantwortlich:</strong> Andreas Huemmer<br />
+<p><strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}<br />
 <strong>Dauer:</strong> 2-3 Stunden<br />
-<strong>Empfänger:</strong> Anna Schmidt, Stakeholder</p>
-<hr />
+<strong>Empfänger:</strong> [TODO], Stakeholder</p>
 <h2 id="quartalsweise-routinen">Quartalsweise Routinen</h2>
 <h3 id="erste-woche-quartalsplanung">Erste Woche: Quartalsplanung</h3>
 <h4 id="quartalsstart-meeting">Quartalsstart-Meeting</h4>
@@ -353,7 +360,7 @@
 <li>[ ] Budget-Review durchführen</li>
 <li>[ ] Ressourcenplanung aktualisieren</li>
 </ul>
-<p><strong>Teilnehmer:</strong> Max Mustermann, Anna Schmidt, Andreas Huemmer<br />
+<p><strong>Teilnehmer:</strong> [TODO], [TODO], {{ meta-organisation-roles.role_IT_Operations_Manager }}<br />
 <strong>Dauer:</strong> 2 Stunden<br />
 <strong>Dokumentation:</strong> Quarterly Planning Document</p>
 <h3 id="zweite-woche-infrastruktur-review">Zweite Woche: Infrastruktur-Review</h3>
@@ -365,7 +372,7 @@
 <li>[ ] Konsolidierungspotenziale identifizieren</li>
 <li>[ ] Investitionsplanung durchführen</li>
 </ul>
-<p><strong>Verantwortlich:</strong> Andreas Huemmer<br />
+<p><strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}<br />
 <strong>Dauer:</strong> 1 Tag<br />
 <strong>Dokumentation:</strong> Quarterly Infrastructure Report</p>
 <h3 id="dritte-woche-prozess-review">Dritte Woche: Prozess-Review</h3>
@@ -377,7 +384,7 @@
 <li>[ ] Verbesserungsmaßnahmen definieren</li>
 <li>[ ] Implementierungsplan erstellen</li>
 </ul>
-<p><strong>Verantwortlich:</strong> Andreas Huemmer, Team Leads<br />
+<p><strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}, Team Leads<br />
 <strong>Dauer:</strong> 1 Tag<br />
 <strong>Dokumentation:</strong> Process Improvement Plan</p>
 <h3 id="vierte-woche-disaster-recovery-volltest">Vierte Woche: Disaster-Recovery-Volltest</h3>
@@ -390,10 +397,9 @@
 <li>[ ] Kommunikationsprozesse validieren</li>
 <li>[ ] Lessons Learned dokumentieren</li>
 </ul>
-<p><strong>Verantwortlich:</strong> Anna Schmidt, Andreas Huemmer<br />
+<p><strong>Verantwortlich:</strong> [TODO], {{ meta-organisation-roles.role_IT_Operations_Manager }}<br />
 <strong>Dauer:</strong> 1 Tag<br />
 <strong>Dokumentation:</strong> Quarterly DR Test Report</p>
-<hr />
 <h2 id="jahrliche-routinen">Jährliche Routinen</h2>
 <h3 id="q1-jahresplanung">Q1: Jahresplanung</h3>
 <h4 id="jahresstart-meeting">Jahresstart-Meeting</h4>
@@ -404,7 +410,7 @@
 <li>[ ] Jahresbudget finalisieren</li>
 <li>[ ] Ressourcenplanung für das Jahr</li>
 </ul>
-<p><strong>Teilnehmer:</strong> Max Mustermann, Anna Schmidt, Maria Müller, Andreas Huemmer<br />
+<p><strong>Teilnehmer:</strong> [TODO], [TODO], [TODO], {{ meta-organisation-roles.role_IT_Operations_Manager }}<br />
 <strong>Dauer:</strong> 1 Tag<br />
 <strong>Dokumentation:</strong> Annual Planning Document</p>
 <h3 id="q2-infrastruktur-audit">Q2: Infrastruktur-Audit</h3>
@@ -417,7 +423,7 @@
 <li>[ ] Architektur-Review</li>
 <li>[ ] Modernisierungsbedarf identifizieren</li>
 </ul>
-<p><strong>Verantwortlich:</strong> Anna Schmidt, Andreas Huemmer<br />
+<p><strong>Verantwortlich:</strong> [TODO], {{ meta-organisation-roles.role_IT_Operations_Manager }}<br />
 <strong>Dauer:</strong> 1 Woche<br />
 <strong>Dokumentation:</strong> Annual Infrastructure Audit Report</p>
 <h3 id="q3-disaster-recovery-volltest">Q3: Disaster-Recovery-Volltest</h3>
@@ -430,7 +436,7 @@
 <li>[ ] Kommunikationsprozesse testen</li>
 <li>[ ] Umfassende Dokumentation</li>
 </ul>
-<p><strong>Verantwortlich:</strong> Anna Schmidt, Andreas Huemmer<br />
+<p><strong>Verantwortlich:</strong> [TODO], {{ meta-organisation-roles.role_IT_Operations_Manager }}<br />
 <strong>Dauer:</strong> 2-3 Tage<br />
 <strong>Dokumentation:</strong> Annual DR Test Report</p>
 <h3 id="q4-jahresabschluss">Q4: Jahresabschluss</h3>
@@ -443,10 +449,9 @@
 <li>[ ] Nächstes Jahr vorbereiten</li>
 <li>[ ] Management-Präsentation erstellen</li>
 </ul>
-<p><strong>Teilnehmer:</strong> Max Mustermann, Anna Schmidt, Maria Müller, Andreas Huemmer<br />
+<p><strong>Teilnehmer:</strong> [TODO], [TODO], [TODO], {{ meta-organisation-roles.role_IT_Operations_Manager }}<br />
 <strong>Dauer:</strong> 1 Tag<br />
 <strong>Dokumentation:</strong> Annual Review Report</p>
-<hr />
 <h2 id="housekeeping-prozeduren">Housekeeping-Prozeduren</h2>
 <h3 id="datenbank-wartung">Datenbank-Wartung</h3>
 <h4 id="wochentliche-datenbank-wartung">Wöchentliche Datenbank-Wartung</h4>
@@ -527,7 +532,6 @@
 <p><strong>Verantwortlich:</strong> Operations Team<br />
 <strong>Frequenz:</strong> Wöchentlich (Sonntag)<br />
 <strong>Dauer:</strong> 30 Minuten</p>
-<hr />
 <h2 id="automatisierung">Automatisierung</h2>
 <h3 id="automatisierte-routinen">Automatisierte Routinen</h3>
 <table>
@@ -544,7 +548,7 @@
 <td>Backup-Jobs</td>
 <td>Täglich</td>
 <td>[TODO: Backup-Tool]</td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 </tr>
 <tr>
 <td>Log-Rotation</td>
@@ -615,7 +619,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="checklisten-vorlagen">Checklisten-Vorlagen</h2>
 <h3 id="daily-operations-checklist">Daily Operations Checklist</h3>
 <div class="codehilite"><pre><span></span><code><span class="gh"># Daily Operations Checklist - [DATUM]</span>
@@ -675,7 +678,6 @@
 <span class="gs">**Besonderheiten:**</span> [NOTIZEN]
 </code></pre></div>
 
-<hr />
 <h2 id="prozesse-und-verantwortlichkeiten">Prozesse und Verantwortlichkeiten</h2>
 <h3 id="raci-matrix">RACI-Matrix</h3>
 <table>
@@ -743,7 +745,6 @@
 <blockquote>
 <p><strong>Legende:</strong> R = Responsible, A = Accountable, C = Consulted, I = Informed</p>
 </blockquote>
-<hr />
 <h2 id="compliance-und-standards">Compliance und Standards</h2>
 <h3 id="relevante-standards">Relevante Standards</h3>
 <ul>
@@ -758,7 +759,6 @@
 <li>Automatisierungs-Scripts</li>
 <li>Compliance-Nachweise</li>
 </ul>
-<hr />
 <h2 id="anhang">Anhang</h2>
 <h3 id="glossar">Glossar</h3>
 <table>
@@ -793,10 +793,9 @@
 <li>ISO/IEC 20000-1:2018</li>
 <li>COBIT 2019 Framework</li>
 </ul>
-<hr />
-<p><strong>Letzte Aktualisierung:</strong> {{ meta.date }}<br />
+<p><strong>Letzte Aktualisierung:</strong> {{ meta-handbook.date }}<br />
 <strong>Nächste Review:</strong> [TODO: Datum]<br />
-<strong>Kontakt:</strong> andreas.huemmer@adminsend.de</p>
+<strong>Kontakt:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager_email }}</p>
         </main>
         
         <nav class="page-nav">

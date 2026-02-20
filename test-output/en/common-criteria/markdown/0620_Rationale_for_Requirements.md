@@ -1,6 +1,6 @@
 # Rationale for Security Requirements
 
-**Document-ID:** 0620
+**Document-ID:** COMMON-CRITERIA-0620
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0400 - Infrastructure and Virtualization Security (IVS)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0400</div>
+            <h1>Infrastructure and Virtualization Security (IVS)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0380_iam08_user_id_credentials.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0410_ivs01_infrastructure_and_virtualization_security.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: csa-ccm-0400</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="infrastructure-and-virtualization-security-ivs">Infrastructure and Virtualization Security (IVS)</h1>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0400
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="purpose">Purpose</h2>
+<p>This document describes security measures for cloud infrastructure and virtualization within [TODO].</p>
+<h2 id="scope">Scope</h2>
+<p>This document applies to all cloud infrastructure components, virtualization platforms, containers, and datacenter security.</p>
+<h2 id="infrastructure-security">Infrastructure Security</h2>
+<h3 id="network-security">Network Security</h3>
+<p><strong>Network Segmentation</strong>:
+- DMZ (Demilitarized Zone)
+- Production network
+- Development network
+- Management network</p>
+<p><strong>Network Controls</strong>:
+- Firewalls
+- Network Access Control (NAC)
+- Intrusion Detection/Prevention Systems (IDS/IPS)
+- DDoS protection</p>
+<p><strong>Network Monitoring</strong>:
+- Network traffic analysis
+- Flow monitoring
+- Anomaly detection</p>
+<h3 id="compute-security">Compute Security</h3>
+<p><strong>Server Hardening</strong>:
+- Minimal installation
+- Patch management
+- Security baselines
+- Configuration management</p>
+<p><strong>Operating System Security</strong>:
+- OS hardening
+- Antivirus/antimalware
+- Host-based firewall
+- Endpoint Detection and Response (EDR)</p>
+<h2 id="virtualization-security">Virtualization Security</h2>
+<h3 id="hypervisor-security">Hypervisor Security</h3>
+<p><strong>Hypervisor Types</strong>:
+- Type 1 (Bare-Metal): VMware ESXi, Microsoft Hyper-V, KVM
+- Type 2 (Hosted): VMware Workstation, VirtualBox</p>
+<p><strong>Security Measures</strong>:
+- Hypervisor hardening
+- Patch management
+- Access control
+- Audit logging</p>
+<p><strong>VM Isolation</strong>:
+- Resource isolation
+- Network isolation
+- Storage isolation</p>
+<h3 id="virtual-machine-security">Virtual Machine Security</h3>
+<p><strong>VM Lifecycle</strong>:
+- VM creation
+- VM configuration
+- VM operation
+- VM migration
+- VM deletion</p>
+<p><strong>VM Security Controls</strong>:
+- VM templates
+- Security baselines
+- Snapshot management
+- VM sprawl prevention</p>
+<h3 id="virtual-network-security">Virtual Network Security</h3>
+<p><strong>Virtual Switches</strong>:
+- vSwitch configuration
+- Port groups
+- VLANs</p>
+<p><strong>Micro-Segmentation</strong>:
+- Zero Trust Network
+- Software-Defined Networking (SDN)
+- Network Security Groups</p>
+<h2 id="container-security">Container Security</h2>
+<h3 id="container-platforms">Container Platforms</h3>
+<p><strong>Container Technologies</strong>:
+- Docker
+- Kubernetes
+- OpenShift
+- Amazon ECS/EKS</p>
+<p><strong>Container Registry</strong>:
+- Private registry
+- Image scanning
+- Image signing
+- Vulnerability management</p>
+<h3 id="container-security-controls">Container Security Controls</h3>
+<p><strong>Image Security</strong>:
+- Base image selection
+- Image hardening
+- Vulnerability scanning
+- Image signing and verification</p>
+<p><strong>Runtime Security</strong>:
+- Container isolation
+- Resource limits
+- Security contexts
+- Runtime monitoring</p>
+<p><strong>Orchestration Security</strong>:
+- RBAC in Kubernetes
+- Network policies
+- Pod security policies
+- Secrets management</p>
+<h2 id="datacenter-security">Datacenter Security</h2>
+<h3 id="physical-security">Physical Security</h3>
+<p><strong>Access Controls</strong>:
+- Perimeter security
+- Access control systems
+- Biometric authentication
+- Visitor management</p>
+<p><strong>Environmental Controls</strong>:
+- Climate control
+- Fire suppression
+- Power supply (UPS)
+- Surveillance systems</p>
+<h3 id="datacenter-certifications">Datacenter Certifications</h3>
+<p><strong>Standards</strong>:
+- ISO/IEC 27001
+- SOC 2
+- PCI DSS
+- Tier III/IV Certification</p>
+<h2 id="infrastructure-as-code-iac">Infrastructure as Code (IaC)</h2>
+<h3 id="iac-tools">IaC Tools</h3>
+<p><strong>Tools</strong>:
+- Terraform
+- AWS CloudFormation
+- Azure Resource Manager
+- Ansible</p>
+<p><strong>IaC Security</strong>:
+- Code reviews
+- Static analysis
+- Secret management
+- Version control</p>
+<h3 id="configuration-management">Configuration Management</h3>
+<p><strong>Tools</strong>:
+- Ansible
+- Puppet
+- Chef
+- SaltStack</p>
+<p><strong>Security Controls</strong>:
+- Configuration baselines
+- Drift detection
+- Compliance scanning
+- Automated remediation</p>
+<h2 id="network-security_1">Network Security</h2>
+<h3 id="firewall-management">Firewall Management</h3>
+<p><strong>Firewall Types</strong>:
+- Network firewalls
+- Web Application Firewalls (WAF)
+- Next-Generation Firewalls (NGFW)
+- Cloud-native firewalls</p>
+<p><strong>Firewall Rules</strong>:
+- Default deny
+- Least privilege
+- Regular review
+- Change management</p>
+<h3 id="vpn-and-remote-access">VPN and Remote Access</h3>
+<p><strong>VPN Technologies</strong>:
+- IPSec VPN
+- SSL/TLS VPN
+- WireGuard</p>
+<p><strong>Remote Access Security</strong>:
+- Multi-factor authentication
+- Device compliance
+- Session monitoring
+- Split tunneling policy</p>
+<h2 id="ccm-controls">CCM Controls</h2>
+<p><strong>IVS-01</strong>: Infrastructure &amp; Virtualization Security
+<strong>IVS-02</strong>: Network Security
+<strong>IVS-03</strong>: Network Security - Network Security Management
+<strong>IVS-04</strong>: Network Security - Perimeter Security
+<strong>IVS-05</strong>: Network Security - Wireless Security
+<strong>IVS-06</strong>: OS Hardening and Base Controls
+<strong>IVS-07</strong>: Production / Non-Production Environments
+<strong>IVS-08</strong>: Segmentation
+<strong>IVS-09</strong>: Virtualization Security</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0380_iam08_user_id_credentials.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0410_ivs01_infrastructure_and_virtualization_security.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

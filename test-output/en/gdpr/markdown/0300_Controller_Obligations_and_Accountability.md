@@ -1,6 +1,6 @@
 # Controller: Obligations and Accountability
 
-**Document-ID:** 0300
+**Document-ID:** GDPR-0300
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

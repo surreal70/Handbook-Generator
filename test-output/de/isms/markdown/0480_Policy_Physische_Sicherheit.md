@@ -1,6 +1,6 @@
 # Policy: Physische Sicherheit
 
-**Dokument-ID:** 0480
+**Dokument-ID:** ISMS-0480
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

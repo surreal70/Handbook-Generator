@@ -1,6 +1,6 @@
 # Richtlinie: Key Management und Verschlüsselung
 
-**Dokument-ID:** 0270
+**Dokument-ID:** ISMS-0270
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

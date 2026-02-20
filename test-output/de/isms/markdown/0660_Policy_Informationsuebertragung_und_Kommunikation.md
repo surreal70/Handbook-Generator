@@ -1,6 +1,6 @@
 # Policy: Informationsübertragung und Kommunikation
 
-**Dokument-ID:** 0660
+**Dokument-ID:** ISMS-0660
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

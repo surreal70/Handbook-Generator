@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0120 - Deployment Automatisierung</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0120</div>
+            <h1>Deployment Automatisierung</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0110_deployment_frequency_measurement.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0130_deployment_pipeline.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: dora-0120</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="deployment-automatisierung">Deployment Automatisierung</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0120
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="zweck">Zweck</h2>
+<p>Dieses Dokument beschreibt Strategien und Best Practices für die Automatisierung von Deployment-Prozessen zur Steigerung der Deployment Frequency.</p>
+<h2 id="umfang">Umfang</h2>
+<p>Dieses Dokument umfasst:
+- Automatisierungsstrategien
+- CI/CD-Pipeline-Design
+- Deployment-Tools und -Technologien
+- Automatisierungs-Reifegrade</p>
+<h2 id="automatisierungsstrategien">Automatisierungsstrategien</h2>
+<h3 id="organisationsinformationen">Organisationsinformationen</h3>
+<ul>
+<li><strong>Organisation</strong>: [TODO]</li>
+<li><strong>Automatisierungsverantwortlicher</strong>: [TODO]</li>
+<li><strong>Aktueller Automatisierungsgrad</strong>: [TODO]</li>
+<li><strong>Ziel-Automatisierungsgrad</strong>: [TODO]</li>
+</ul>
+<h2 id="automatisierungs-reifegrade">Automatisierungs-Reifegrade</h2>
+<h3 id="level-1-manuelle-deployments">Level 1: Manuelle Deployments</h3>
+<p><strong>Charakteristiken</strong>:
+- Manuelle Ausführung aller Schritte
+- Dokumentierte Runbooks
+- Hohe Fehleranfälligkeit
+- Lange Deployment-Zeiten</p>
+<p><strong>Typische Probleme</strong>:
+- Inkonsistente Deployments
+- Hoher Zeitaufwand
+- Abhängigkeit von Einzelpersonen
+- Schwierige Nachvollziehbarkeit</p>
+<h3 id="level-2-skript-basierte-automatisierung">Level 2: Skript-basierte Automatisierung</h3>
+<p><strong>Charakteristiken</strong>:
+- Deployment-Skripte vorhanden
+- Manuelle Trigger-Ausführung
+- Teilautomatisierung
+- Reduzierte Fehlerrate</p>
+<p><strong>Verbesserungen</strong>:
+- Konsistentere Ausführung
+- Wiederholbarkeit
+- Dokumentation im Code
+- Schnellere Deployments</p>
+<h3 id="level-3-cicd-integration">Level 3: CI/CD-Integration</h3>
+<p><strong>Charakteristiken</strong>:
+- Automatische Trigger
+- Pipeline-basierte Deployments
+- Automatisierte Tests
+- Deployment auf Knopfdruck</p>
+<p><strong>Vorteile</strong>:
+- Hohe Konsistenz
+- Schnelle Feedback-Zyklen
+- Reduzierter manueller Aufwand
+- Bessere Nachvollziehbarkeit</p>
+<h3 id="level-4-continuous-deployment">Level 4: Continuous Deployment</h3>
+<p><strong>Charakteristiken</strong>:
+- Vollautomatische Deployments
+- Keine manuelle Intervention
+- Feature Flags für Kontrolle
+- Automatisches Rollback</p>
+<p><strong>Vorteile</strong>:
+- Maximale Geschwindigkeit
+- Minimales Risiko
+- Höchste Deployment Frequency
+- Optimale Feedback-Zyklen</p>
+<h2 id="cicd-pipeline-design">CI/CD-Pipeline-Design</h2>
+<h3 id="pipeline-struktur">Pipeline-Struktur</h3>
+<p><strong>Build-Stage</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">build</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">build</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">npm install</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">npm run build</span>
+<span class="w">  </span><span class="nt">artifacts</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">paths</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dist/</span>
+<span class="w">    </span><span class="nt">expire_in</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1 hour</span>
+</code></pre></div>
+
+<p><strong>Test-Stage</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">test</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">npm run test:unit</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">npm run test:integration</span>
+<span class="w">  </span><span class="nt">coverage</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;/Coverage:</span><span class="nv"> </span><span class="s">\d+\.\d+%/&#39;</span>
+</code></pre></div>
+
+<p><strong>Security-Stage</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">security</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">security</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">npm audit</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">npm run security:scan</span>
+<span class="w">  </span><span class="nt">allow_failure</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</code></pre></div>
+
+<p><strong>Deploy-Stage</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">deploy_production</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deploy</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./deploy.sh production</span>
+<span class="w">  </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">production</span>
+<span class="w">    </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://[TODO]</span>
+<span class="w">  </span><span class="nt">only</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+<span class="w">  </span><span class="nt">when</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">manual</span><span class="w">  </span><span class="c1"># oder automatic für CD</span>
+</code></pre></div>
+
+<h3 id="deployment-strategien">Deployment-Strategien</h3>
+<p><strong>Blue-Green Deployment</strong>:
+- Zwei identische Produktionsumgebungen
+- Deployment in inaktive Umgebung
+- Sofortiger Switch bei Erfolg
+- Schnelles Rollback möglich</p>
+<p><strong>Canary Deployment</strong>:
+- Schrittweise Ausrollung
+- Kleine Nutzergruppe zuerst
+- Monitoring und Validierung
+- Graduelle Erhöhung des Traffics</p>
+<p><strong>Rolling Deployment</strong>:
+- Schrittweiser Update der Instanzen
+- Kontinuierliche Verfügbarkeit
+- Reduziertes Risiko
+- Längere Deployment-Dauer</p>
+<p><strong>Feature Flags</strong>:
+- Deployment unabhängig von Release
+- Graduelle Feature-Aktivierung
+- A/B-Testing-Möglichkeiten
+- Sofortiges Feature-Rollback</p>
+<h2 id="deployment-tools-und-technologien">Deployment-Tools und -Technologien</h2>
+<h3 id="cicd-plattformen">CI/CD-Plattformen</h3>
+<p><strong>Aktuelle Plattform</strong>: [TODO]</p>
+<p><strong>Alternativen</strong>:
+- GitLab CI/CD
+- GitHub Actions
+- Jenkins
+- CircleCI
+- Azure DevOps
+- AWS CodePipeline</p>
+<h3 id="container-orchestrierung">Container-Orchestrierung</h3>
+<p><strong>Aktuelle Lösung</strong>: [TODO]</p>
+<p><strong>Kubernetes-Deployment</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apps/v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deployment</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">TODO</span><span class="p p-Indicator">]</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">replicas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">  </span><span class="nt">strategy</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RollingUpdate</span>
+<span class="w">    </span><span class="nt">rollingUpdate</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">maxSurge</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">      </span><span class="nt">maxUnavailable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+<span class="w">  </span><span class="nt">template</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">spec</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">containers</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">app</span>
+<span class="w">        </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">TODO</span><span class="p p-Indicator">]</span><span class="l l-Scalar l-Scalar-Plain">/[TODO]:[TODO]</span>
+<span class="w">        </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">containerPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080</span>
+</code></pre></div>
+
+<h3 id="infrastructure-as-code">Infrastructure as Code</h3>
+<p><strong>Aktuelle IaC-Tool</strong>: [TODO]</p>
+<p><strong>Terraform-Beispiel</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;aws_ecs_service&quot;</span><span class="w"> </span><span class="nv">&quot;app&quot;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="na">name</span><span class="w">            </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;[TODO]&quot;</span>
+<span class="w">  </span><span class="na">cluster</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="nv">aws_ecs_cluster.main.id</span>
+<span class="w">  </span><span class="na">task_definition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">aws_ecs_task_definition.app.arn</span>
+<span class="w">  </span><span class="na">desired_count</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="m">3</span>
+
+<span class="w">  </span><span class="nb">deployment_configuration</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="na">maximum_percent</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="m">200</span>
+<span class="w">    </span><span class="na">minimum_healthy_percent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">100</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="configuration-management">Configuration Management</h3>
+<p><strong>Aktuelle Lösung</strong>: [TODO]</p>
+<p><strong>Ansible-Beispiel</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deploy application</span>
+<span class="w">  </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">production</span>
+<span class="w">  </span><span class="nt">tasks</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pull latest image</span>
+<span class="w">      </span><span class="nt">docker_image</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">TODO</span><span class="p p-Indicator">]</span>
+<span class="w">        </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">latest</span>
+<span class="w">        </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pull</span>
+
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Start container</span>
+<span class="w">      </span><span class="nt">docker_container</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">TODO</span><span class="p p-Indicator">]</span>
+<span class="w">        </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">TODO</span><span class="p p-Indicator">]</span><span class="l l-Scalar l-Scalar-Plain">:latest</span>
+<span class="w">        </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">started</span>
+<span class="w">        </span><span class="nt">restart_policy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
+</code></pre></div>
+
+<h2 id="automatisierungs-best-practices">Automatisierungs-Best Practices</h2>
+<h3 id="idempotenz">Idempotenz</h3>
+<p><strong>Prinzip</strong>: Mehrfache Ausführung führt zum gleichen Ergebnis</p>
+<p><strong>Implementierung</strong>:
+- Zustandsprüfungen vor Änderungen
+- Conditional Execution
+- Rollback-Fähigkeit
+- Konsistenz-Checks</p>
+<h3 id="fehlerbehandlung">Fehlerbehandlung</h3>
+<p><strong>Automatisches Rollback</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="nb">set</span><span class="w"> </span>-e
+
+deploy<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">  </span><span class="c1"># Deployment-Logik</span>
+<span class="w">  </span>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>deployment.yaml
+<span class="o">}</span>
+
+rollback<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Deployment failed, rolling back...&quot;</span>
+<span class="w">  </span>kubectl<span class="w"> </span>rollout<span class="w"> </span>undo<span class="w"> </span>deployment/<span class="o">[</span>TODO<span class="o">]</span>
+<span class="o">}</span>
+
+<span class="nb">trap</span><span class="w"> </span>rollback<span class="w"> </span>ERR
+
+deploy
+
+<span class="c1"># Health Check</span>
+<span class="k">if</span><span class="w"> </span>!<span class="w"> </span>./health_check.sh<span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span>rollback
+<span class="w">  </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+</code></pre></div>
+
+<p><strong>Retry-Mechanismen</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">deploy_with_retry</span><span class="p">(</span><span class="n">max_retries</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">attempt</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">max_retries</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">deploy</span><span class="p">()</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">except</span> <span class="n">DeploymentError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">attempt</span> <span class="o">==</span> <span class="n">max_retries</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="k">raise</span>
+            <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="n">attempt</span><span class="p">)</span>  <span class="c1"># Exponential backoff</span>
+    <span class="k">return</span> <span class="kc">False</span>
+</code></pre></div>
+
+<h3 id="monitoring-und-validierung">Monitoring und Validierung</h3>
+<p><strong>Health Checks</strong>:
+- Liveness Probes
+- Readiness Probes
+- Startup Probes
+- Custom Health Endpoints</p>
+<p><strong>Deployment-Validierung</strong>:
+- Smoke Tests
+- Integration Tests
+- Performance Tests
+- Security Scans</p>
+<h3 id="secrets-management">Secrets Management</h3>
+<p><strong>Best Practices</strong>:
+- Keine Secrets im Code
+- Verwendung von Secret Stores
+- Rotation von Credentials
+- Least Privilege Principle</p>
+<p><strong>Implementierung</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Kubernetes Secret</span>
+<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Secret</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">app-secrets</span>
+<span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Opaque</span>
+<span class="nt">data</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">database-password</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">TODO</span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="nt">api-key</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">TODO</span><span class="p p-Indicator">]</span>
+</code></pre></div>
+
+<h2 id="implementierungsplan">Implementierungsplan</h2>
+<h3 id="phase-1-assessment-woche-1-2">Phase 1: Assessment (Woche 1-2)</h3>
+<ul>
+<li>Analyse aktueller Deployment-Prozesse</li>
+<li>Identifikation manueller Schritte</li>
+<li>Bewertung vorhandener Tools</li>
+<li>Definition von Zielen</li>
+</ul>
+<h3 id="phase-2-grundlagen-woche-3-6">Phase 2: Grundlagen (Woche 3-6)</h3>
+<ul>
+<li>Setup CI/CD-Plattform</li>
+<li>Erstellung Basis-Pipelines</li>
+<li>Automatisierung kritischer Pfade</li>
+<li>Team-Training</li>
+</ul>
+<h3 id="phase-3-optimierung-woche-7-10">Phase 3: Optimierung (Woche 7-10)</h3>
+<ul>
+<li>Erweiterte Automatisierung</li>
+<li>Integration zusätzlicher Tests</li>
+<li>Implementierung Deployment-Strategien</li>
+<li>Performance-Optimierung</li>
+</ul>
+<h3 id="phase-4-continuous-improvement-fortlaufend">Phase 4: Continuous Improvement (fortlaufend)</h3>
+<ul>
+<li>Regelmäßige Reviews</li>
+<li>Feedback-Integration</li>
+<li>Tool-Updates</li>
+<li>Best Practices Sharing</li>
+</ul>
+<h2 id="erfolgsmessung">Erfolgsmessung</h2>
+<h3 id="kpis">KPIs</h3>
+<ul>
+<li><strong>Automatisierungsgrad</strong>: Prozentsatz automatisierter Schritte</li>
+<li><strong>Deployment-Dauer</strong>: Zeit von Trigger bis Completion</li>
+<li><strong>Fehlerrate</strong>: Prozentsatz fehlgeschlagener Deployments</li>
+<li><strong>Rollback-Rate</strong>: Häufigkeit von Rollbacks</li>
+<li><strong>Mean Time to Deploy</strong>: Durchschnittliche Deployment-Zeit</li>
+</ul>
+<h3 id="monitoring">Monitoring</h3>
+<ul>
+<li>Pipeline-Execution-Zeiten</li>
+<li>Success/Failure-Raten</li>
+<li>Resource-Utilization</li>
+<li>Cost-Tracking</li>
+</ul>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0110_deployment_frequency_measurement.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0130_deployment_pipeline.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

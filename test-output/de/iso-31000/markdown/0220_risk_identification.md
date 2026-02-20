@@ -7,7 +7,7 @@ Classification: Internal
 
 # Risikoidentifikation
 
-**Dokument-ID:** [FRAMEWORK]-0220
+**Dokument-ID:** ISO-31000-0220
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

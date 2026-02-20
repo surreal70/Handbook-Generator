@@ -1,6 +1,6 @@
 # Richtlinie: Zutritt, Besucher und Schutz von Equipment
 
-**Dokument-ID:** 0490
+**Dokument-ID:** ISMS-0490
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

@@ -1,6 +1,6 @@
 # Richtlinie: Ausnahmen Risk Waiver und Review
 
-**Dokument-ID:** 0530
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0530
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

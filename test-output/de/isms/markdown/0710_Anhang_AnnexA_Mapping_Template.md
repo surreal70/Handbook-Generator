@@ -1,6 +1,6 @@
 # Anhang A: Annex A Control Mapping
 
-**Dokument-ID:** [FRAMEWORK]-0710
+**Dokument-ID:** ISMS-0710
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

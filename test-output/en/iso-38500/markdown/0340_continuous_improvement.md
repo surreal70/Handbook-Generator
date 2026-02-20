@@ -7,7 +7,7 @@ Classification: Internal
 
 # Continuous Improvement in IT Governance
 
-**Document-ID:** [FRAMEWORK]-0340
+**Document-ID:** ISO-38500-0340
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

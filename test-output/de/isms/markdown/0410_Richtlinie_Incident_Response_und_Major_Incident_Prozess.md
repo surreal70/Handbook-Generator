@@ -1,6 +1,6 @@
 # Richtlinie: Incident Response und Major Incident Prozess
 
-**Dokument-ID:** 0410
+**Dokument-ID:** ISMS-0410
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

@@ -7,7 +7,7 @@ Classification: Internal
 
 # Rollen und Verantwortlichkeiten (GV.RR)
 
-**Dokument-ID:** [FRAMEWORK]-0040
+**Dokument-ID:** NIST-CSF-0040
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

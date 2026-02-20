@@ -1,6 +1,6 @@
 # Informationspflicht bei Erhebung
 
-**Dokument-ID:** 0210
+**Dokument-ID:** GDPR-0210
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

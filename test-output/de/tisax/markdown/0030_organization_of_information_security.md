@@ -6,7 +6,7 @@ Classification: Internal
 
 # Organisation der Informationssicherheit
 
-**Dokument-ID:** [FRAMEWORK]-0030
+**Dokument-ID:** TISAX-0030
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

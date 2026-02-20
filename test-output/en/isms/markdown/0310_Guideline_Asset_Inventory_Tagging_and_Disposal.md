@@ -1,6 +1,6 @@
 # Guideline: Asset Inventory, Tagging and Disposal
 
-**Document-ID:** [FRAMEWORK]-0310
+**Document-ID:** ISMS-0310
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

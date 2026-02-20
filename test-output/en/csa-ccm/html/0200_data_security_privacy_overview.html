@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0200 - Data Security and Privacy (DSP)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0200</div>
+            <h1>Data Security and Privacy (DSP)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0140_ais04_application_security_monitoring.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0210_dsp05_data_encryption_at_rest.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: csa-ccm-0200</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="data-security-and-privacy-dsp">Data Security and Privacy (DSP)</h1>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0200
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="purpose">Purpose</h2>
+<p>This document describes data security and privacy measures for cloud data within [TODO].</p>
+<h2 id="scope">Scope</h2>
+<p>This document applies to all data stored, processed, and transmitted in cloud environments.</p>
+<h2 id="data-classification">Data Classification</h2>
+<h3 id="classification-schema">Classification Schema</h3>
+<p><strong>Classification Levels</strong>:
+- <strong>Highly Confidential</strong>: Highly sensitive data (e.g., trade secrets, personal data)
+- <strong>Confidential</strong>: Sensitive business data
+- <strong>Internal</strong>: Internal business information
+- <strong>Public</strong>: Publicly accessible information</p>
+<h3 id="data-types">Data Types</h3>
+<p><strong>Personal Data</strong>:
+- Customer data
+- Employee data
+- Special categories of personal data (Art. 9 GDPR)</p>
+<p><strong>Business Data</strong>:
+- Financial data
+- Contract data
+- Intellectual property</p>
+<p><strong>Technical Data</strong>:
+- System configurations
+- Logs
+- Metadata</p>
+<h3 id="classification-process">Classification Process</h3>
+<p><strong>Responsibilities</strong>:
+- Data Owner: Determine classification
+- Data Custodian: Implement classification
+- Data User: Observe classification</p>
+<p><strong>Classification Criteria</strong>:
+- Confidentiality
+- Integrity
+- Availability
+- Regulatory requirements</p>
+<h2 id="data-encryption">Data Encryption</h2>
+<h3 id="encryption-at-rest">Encryption at Rest</h3>
+<p><strong>Encryption Methods</strong>:
+- AES-256 encryption
+- Transparent Data Encryption (TDE)
+- Full Disk Encryption (FDE)</p>
+<p><strong>Encryption Locations</strong>:
+- Databases
+- File storage
+- Object storage
+- Backup systems</p>
+<h3 id="encryption-in-transit">Encryption in Transit</h3>
+<p><strong>Protocols</strong>:
+- TLS 1.2/1.3
+- IPSec
+- SSH</p>
+<p><strong>Certificate Management</strong>:
+- Certificate Authority (CA)
+- Certificate lifecycle management
+- Certificate monitoring</p>
+<h3 id="encryption-in-use">Encryption in Use</h3>
+<p><strong>Technologies</strong>:
+- Homomorphic encryption
+- Secure enclaves
+- Confidential computing</p>
+<h2 id="key-management">Key Management</h2>
+<h3 id="key-management-system-kms">Key Management System (KMS)</h3>
+<p><strong>Key Types</strong>:
+- Master keys
+- Data Encryption Keys (DEK)
+- Key Encryption Keys (KEK)</p>
+<p><strong>Key Lifecycle</strong>:
+- Key generation
+- Key storage
+- Key distribution
+- Key rotation
+- Key archival
+- Key destruction</p>
+<p><strong>Access Control</strong>:
+- Least privilege
+- Separation of duties
+- Multi-person control</p>
+<h2 id="data-retention-and-deletion">Data Retention and Deletion</h2>
+<h3 id="retention-policies">Retention Policies</h3>
+<p><strong>Retention Periods</strong>:
+- Personal data: [Period]
+- Financial data: [Period]
+- Logs: [Period]
+- Backups: [Period]</p>
+<p><strong>Legal Requirements</strong>:
+- GDPR
+- Commercial Code
+- Tax Code</p>
+<h3 id="data-deletion">Data Deletion</h3>
+<p><strong>Deletion Methods</strong>:
+- Logical deletion
+- Physical deletion
+- Cryptographic deletion</p>
+<p><strong>Deletion Procedures</strong>:
+- Automated deletion
+- Manual deletion
+- Deletion verification</p>
+<h2 id="privacy">Privacy</h2>
+<h3 id="gdpr-compliance">GDPR Compliance</h3>
+<p><strong>Legal Bases</strong>:
+- Consent (Art. 6(1)(a) GDPR)
+- Contract performance (Art. 6(1)(b) GDPR)
+- Legal obligation (Art. 6(1)(c) GDPR)
+- Legitimate interest (Art. 6(1)(f) GDPR)</p>
+<p><strong>Data Subject Rights</strong>:
+- Right of access (Art. 15 GDPR)
+- Right to rectification (Art. 16 GDPR)
+- Right to erasure (Art. 17 GDPR)
+- Right to restriction (Art. 18 GDPR)
+- Right to data portability (Art. 20 GDPR)
+- Right to object (Art. 21 GDPR)</p>
+<h3 id="privacy-by-design-and-by-default">Privacy by Design and by Default</h3>
+<p><strong>Principles</strong>:
+- Data minimization
+- Purpose limitation
+- Storage limitation
+- Accuracy
+- Integrity and confidentiality</p>
+<h2 id="data-loss-prevention-dlp">Data Loss Prevention (DLP)</h2>
+<h3 id="dlp-strategy">DLP Strategy</h3>
+<p><strong>DLP Technologies</strong>:
+- Network DLP
+- Endpoint DLP
+- Cloud DLP</p>
+<p><strong>DLP Policies</strong>:
+- Detection of sensitive data
+- Blocking unauthorized transfers
+- Encryption of sensitive data
+- Audit and reporting</p>
+<h3 id="monitoring-and-incident-response">Monitoring and Incident Response</h3>
+<p><strong>Monitoring</strong>:
+- Real-time monitoring
+- Alert management
+- Incident detection</p>
+<p><strong>Response</strong>:
+- Incident classification
+- Containment
+- Investigation
+- Remediation</p>
+<h2 id="ccm-controls">CCM Controls</h2>
+<p><strong>DSP-01</strong>: Data Inventory / Flows
+<strong>DSP-02</strong>: Data Security / Integrity
+<strong>DSP-03</strong>: Data Classification
+<strong>DSP-04</strong>: Data Retention / Deletion
+<strong>DSP-05</strong>: Data Encryption at Rest
+<strong>DSP-06</strong>: Data Encryption in Transit
+<strong>DSP-07</strong>: Data Loss Prevention (DLP)
+<strong>DSP-08</strong>: Privacy</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0140_ais04_application_security_monitoring.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0210_dsp05_data_encryption_at_rest.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

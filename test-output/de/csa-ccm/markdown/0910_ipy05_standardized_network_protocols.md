@@ -6,7 +6,7 @@ Classification: Internal
 
 # IPY-05: Standardisierte Netzwerkprotokolle
 
-**Dokument-ID:** [FRAMEWORK]-0910
+**Dokument-ID:** CSA-CCM-0910
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0160 - System- und Anwendungszugriffskontrolle</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0160</div>
+            <h1>System- und Anwendungszugriffskontrolle</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0150_user_access_management.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0170_logging_and_monitoring.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: tisax-0160</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="system-und-anwendungszugriffskontrolle">System- und Anwendungszugriffskontrolle</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0160
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="zweck">Zweck</h2>
+<p>Dieses Dokument definiert die Anforderungen für die Zugriffskontrolle auf Systeme und Anwendungen gemäß TISAX-Anforderungen.</p>
+<h2 id="geltungsbereich">Geltungsbereich</h2>
+<p>Dieses Dokument gilt für alle IT-Systeme und Anwendungen von [TODO].</p>
+<h2 id="zugriffskontroll-mechanismen">Zugriffskontroll-Mechanismen</h2>
+<h3 id="authentifizierung">Authentifizierung</h3>
+<p><strong>Anforderungen:</strong>
+- Eindeutige Benutzeridentifikation
+- Sichere Authentifizierungsmethoden
+- Multi-Faktor-Authentifizierung für kritische Systeme
+- Verschlüsselte Übertragung von Credentials</p>
+<p><strong>Methoden:</strong>
+- Passwort-basiert
+- Token-basiert
+- Zertifikat-basiert
+- Biometrisch</p>
+<h3 id="autorisierung">Autorisierung</h3>
+<p><strong>Prinzipien:</strong>
+- Least Privilege
+- Need-to-Know
+- Segregation of Duties
+- Role-Based Access Control (RBAC)</p>
+<p><strong>Implementierung:</strong>
+- Zentrale Autorisierungssysteme
+- Konsistente Rechtevergabe
+- Regelmäßige Überprüfung
+- Audit-Logging</p>
+<h2 id="system-zugriffskontrolle">System-Zugriffskontrolle</h2>
+<h3 id="betriebssysteme">Betriebssysteme</h3>
+<p><strong>Server:</strong>
+- Zugriff nur für autorisiertes Personal
+- Privilegierte Konten getrennt
+- Protokollierung aller Zugriffe
+- Regelmäßige Patch-Management</p>
+<p><strong>Workstations:</strong>
+- Standard-Benutzer ohne Admin-Rechte
+- Verschlüsselte Festplatten
+- Endpoint Protection
+- Automatische Updates</p>
+<h3 id="netzwerkgerate">Netzwerkgeräte</h3>
+<p><strong>Anforderungen:</strong>
+- Separate Admin-Konten
+- Verschlüsselte Management-Verbindungen
+- Protokollierung aller Konfigurationsänderungen
+- Regelmäßige Sicherheitsaudits</p>
+<h3 id="datenbanken">Datenbanken</h3>
+<p><strong>Zugriffskontrolle:</strong>
+- Minimale Berechtigungen
+- Verschlüsselte Verbindungen
+- Audit-Logging aktiviert
+- Regelmäßige Access Reviews</p>
+<h2 id="anwendungszugriffskontrolle">Anwendungszugriffskontrolle</h2>
+<h3 id="geschaftsanwendungen">Geschäftsanwendungen</h3>
+<p><strong>Authentifizierung:</strong>
+- Integration mit zentraler Authentifizierung (SSO)
+- MFA für Remote-Zugriffe
+- Session-Management
+- Automatische Abmeldung bei Inaktivität</p>
+<p><strong>Autorisierung:</strong>
+- Rollenbasierte Berechtigungen
+- Funktionsbasierte Zugriffskontrolle
+- Datenbasierte Zugriffskontrolle
+- Regelmäßige Rezertifizierung</p>
+<h3 id="web-anwendungen">Web-Anwendungen</h3>
+<p><strong>Sicherheitsmaßnahmen:</strong>
+- HTTPS obligatorisch
+- Sichere Session-Verwaltung
+- Input-Validierung
+- Output-Encoding
+- CSRF-Protection
+- XSS-Prevention</p>
+<h3 id="cloud-anwendungen">Cloud-Anwendungen</h3>
+<p><strong>Anforderungen:</strong>
+- Identity Federation
+- Conditional Access Policies
+- MFA obligatorisch
+- Regelmäßige Überprüfung der Berechtigungen</p>
+<h2 id="sichere-anmeldeverfahren">Sichere Anmeldeverfahren</h2>
+<h3 id="passwort-management">Passwort-Management</h3>
+<p><strong>Anforderungen:</strong>
+- Siehe Zugriffskontroll-Richtlinie
+- Sichere Speicherung (Hashing mit Salt)
+- Verschlüsselte Übertragung
+- Passwort-Reset-Prozess</p>
+<h3 id="session-management">Session-Management</h3>
+<p><strong>Anforderungen:</strong>
+- Sichere Session-IDs
+- Session-Timeout bei Inaktivität
+- Automatische Abmeldung
+- Keine Session-Fixation</p>
+<h3 id="fehlerbehandlung">Fehlerbehandlung</h3>
+<p><strong>Anforderungen:</strong>
+- Keine detaillierten Fehlermeldungen an Benutzer
+- Protokollierung von Fehlern
+- Generische Fehlermeldungen
+- Schutz vor Brute-Force-Angriffen</p>
+<h2 id="privilegierte-zugriffskontrolle">Privilegierte Zugriffskontrolle</h2>
+<h3 id="administrative-zugriffe">Administrative Zugriffe</h3>
+<p><strong>Anforderungen:</strong>
+- Separate privilegierte Konten
+- Just-in-Time Access
+- Session-Aufzeichnung
+- Vier-Augen-Prinzip bei kritischen Aktionen</p>
+<h3 id="privileged-access-management-pam">Privileged Access Management (PAM)</h3>
+<p><strong>Funktionen:</strong>
+- Zentrale Verwaltung privilegierter Konten
+- Automatische Passwortrotation
+- Session-Monitoring
+- Compliance-Reporting</p>
+<h2 id="zugriffskontrolle-fur-entwicklung">Zugriffskontrolle für Entwicklung</h2>
+<h3 id="entwicklungsumgebungen">Entwicklungsumgebungen</h3>
+<p><strong>Anforderungen:</strong>
+- Getrennt von Produktionsumgebungen
+- Keine Produktionsdaten in Entwicklung
+- Zugriffskontrolle basierend auf Rollen
+- Versionskontrolle für Code</p>
+<h3 id="test-umgebungen">Test-Umgebungen</h3>
+<p><strong>Anforderungen:</strong>
+- Anonymisierte Testdaten
+- Zugriffskontrolle
+- Protokollierung
+- Regelmäßige Bereinigung</p>
+<h3 id="produktionsumgebungen">Produktionsumgebungen</h3>
+<p><strong>Anforderungen:</strong>
+- Strenge Zugriffskontrolle
+- Change Management erforderlich
+- Umfassende Protokollierung
+- Segregation of Duties</p>
+<h2 id="remote-zugriff">Remote-Zugriff</h2>
+<h3 id="vpn">VPN</h3>
+<p><strong>Anforderungen:</strong>
+- MFA obligatorisch
+- Verschlüsselte Verbindung
+- Endpoint-Compliance-Check
+- Protokollierung aller Verbindungen</p>
+<h3 id="remote-desktop">Remote Desktop</h3>
+<p><strong>Anforderungen:</strong>
+- Zugriff nur über VPN
+- MFA erforderlich
+- Session-Timeout
+- Keine lokale Datenspeicherung</p>
+<h2 id="uberwachung-und-protokollierung">Überwachung und Protokollierung</h2>
+<h3 id="protokollierung">Protokollierung</h3>
+<p><strong>Ereignisse:</strong>
+- Erfolgreiche und fehlgeschlagene Anmeldungen
+- Berechtigungsänderungen
+- Zugriffe auf sensible Daten
+- Administrative Aktionen
+- Privilegierte Zugriffe</p>
+<h3 id="monitoring">Monitoring</h3>
+<p><strong>Überwachung:</strong>
+- Echtzeit-Überwachung kritischer Systeme
+- Automatische Alarmierung bei Anomalien
+- Regelmäßige Log-Analysen
+- SIEM-Integration</p>
+<h2 id="tisax-spezifische-anforderungen">TISAX-spezifische Anforderungen</h2>
+<h3 id="vda-isa-kontrollen">VDA ISA Kontrollen</h3>
+<p>Dieses Dokument adressiert:
+- <strong>3.4.1</strong>: Informationszugriffsbeschränkung
+- <strong>3.4.2</strong>: Sichere Anmeldeverfahren
+- <strong>3.4.3</strong>: Passwortverwaltungssystem
+- <strong>3.4.4</strong>: Verwendung von Dienstprogrammen</p>
+<h3 id="assessment-nachweise">Assessment-Nachweise</h3>
+<ul>
+<li>Zugriffskontroll-Konfigurationen</li>
+<li>Audit-Logs</li>
+<li>Access Review Berichte</li>
+<li>Prozessdokumentation</li>
+</ul>
+<h2 id="kennzahlen">Kennzahlen</h2>
+<p>[TODO] misst:
+- Anzahl fehlgeschlagener Anmeldeversuche
+- Anzahl privilegierter Zugriffe
+- Durchschnittliche Session-Dauer
+- Anzahl Zugriffsverletzungen</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0150_user_access_management.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0170_logging_and_monitoring.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

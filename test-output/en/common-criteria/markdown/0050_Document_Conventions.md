@@ -1,6 +1,6 @@
 # Document Conventions
 
-**Document-ID:** 0050
+**Document-ID:** COMMON-CRITERIA-0050
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

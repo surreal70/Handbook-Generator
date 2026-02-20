@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0220 - Value Stream Mapping</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0220</div>
+            <h1>Value Stream Mapping</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0210_lead_time_measurement.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0230_bottleneck_identification.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: dora-0220</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="value-stream-mapping">Value Stream Mapping</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0220
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="zweck">Zweck</h2>
+<p>Dieses Dokument beschreibt die Anwendung von Value Stream Mapping zur Visualisierung und Optimierung des Software-Delivery-Prozesses.</p>
+<h2 id="umfang">Umfang</h2>
+<ul>
+<li>Value Stream Mapping Grundlagen</li>
+<li>Prozess-Mapping-Methodik</li>
+<li>Identifikation von Verschwendung</li>
+<li>Optimierungsansätze</li>
+</ul>
+<h2 id="organisationsinformationen">Organisationsinformationen</h2>
+<ul>
+<li><strong>Organisation</strong>: [TODO]</li>
+<li><strong>VSM-Verantwortlicher</strong>: [TODO]</li>
+<li><strong>Mapping-Frequenz</strong>: [TODO]</li>
+</ul>
+<h2 id="value-stream-mapping-grundlagen">Value Stream Mapping Grundlagen</h2>
+<h3 id="definition">Definition</h3>
+<p>Value Stream Mapping ist eine Lean-Management-Methode zur Visualisierung und Analyse des Material- und Informationsflusses, der erforderlich ist, um ein Produkt oder eine Dienstleistung zum Kunden zu bringen.</p>
+<h3 id="ziele">Ziele</h3>
+<ul>
+<li><strong>Transparenz</strong>: Sichtbarmachung des gesamten Prozesses</li>
+<li><strong>Verschwendung identifizieren</strong>: Nicht-wertschöpfende Aktivitäten erkennen</li>
+<li><strong>Bottlenecks finden</strong>: Engpässe im Prozess lokalisieren</li>
+<li><strong>Verbesserungen priorisieren</strong>: Fokus auf größte Hebel</li>
+</ul>
+<h2 id="prozess-mapping-methodik">Prozess-Mapping-Methodik</h2>
+<h3 id="schritt-1-prozess-schritte-identifizieren">Schritt 1: Prozess-Schritte identifizieren</h3>
+<p><strong>Typische Schritte im Software-Delivery</strong>:
+1. Anforderungsanalyse
+2. Design
+3. Implementierung
+4. Code Review
+5. Build
+6. Automatisierte Tests
+7. Manuelle Tests
+8. Security Scan
+9. Approval
+10. Deployment
+11. Verification</p>
+<h3 id="schritt-2-zeiten-erfassen">Schritt 2: Zeiten erfassen</h3>
+<p><strong>Für jeden Schritt erfassen</strong>:
+- <strong>Process Time</strong>: Aktive Bearbeitungszeit
+- <strong>Wait Time</strong>: Wartezeit bis zum nächsten Schritt
+- <strong>Lead Time</strong>: Gesamtzeit (Process + Wait)</p>
+<p><strong>Beispiel</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">Schritt</span><span class="o">:</span><span class="w"> </span><span class="n">Code</span><span class="w"> </span><span class="n">Review</span>
+<span class="o">-</span><span class="w"> </span><span class="n">Process</span><span class="w"> </span><span class="n">Time</span><span class="o">:</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">Stunden</span>
+<span class="o">-</span><span class="w"> </span><span class="n">Wait</span><span class="w"> </span><span class="n">Time</span><span class="o">:</span><span class="w"> </span><span class="mi">16</span><span class="w"> </span><span class="n">Stunden</span><span class="w"> </span><span class="o">(</span><span class="n">Warten</span><span class="w"> </span><span class="n">auf</span><span class="w"> </span><span class="n">Reviewer</span><span class="o">)</span>
+<span class="o">-</span><span class="w"> </span><span class="n">Lead</span><span class="w"> </span><span class="n">Time</span><span class="o">:</span><span class="w"> </span><span class="mi">18</span><span class="w"> </span><span class="n">Stunden</span>
+</code></pre></div>
+
+<h3 id="schritt-3-value-stream-map-erstellen">Schritt 3: Value Stream Map erstellen</h3>
+<p><strong>Visualisierung</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="o">[</span><span class="n">Commit</span><span class="o">]</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="o">[</span><span class="n">Build: 10min</span><span class="o">]</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="o">[</span><span class="n">Wait: 2h</span><span class="o">]</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="o">[</span><span class="n">Test: 30min</span><span class="o">]</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="o">[</span><span class="n">Wait: 4h</span><span class="o">]</span><span class="w"> </span><span class="err">→</span><span class="w"> </span>
+<span class="o">[</span><span class="n">Review: 2h</span><span class="o">]</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="o">[</span><span class="n">Wait: 16h</span><span class="o">]</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="o">[</span><span class="n">Approval: 1h</span><span class="o">]</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="o">[</span><span class="n">Wait: 8h</span><span class="o">]</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="o">[</span><span class="n">Deploy: 15min</span><span class="o">]</span>
+
+<span class="n">Total</span><span class="w"> </span><span class="n">Process</span><span class="w"> </span><span class="nc">Time</span><span class="err">:</span><span class="w"> </span><span class="mi">3</span><span class="n">h</span><span class="w"> </span><span class="mi">55</span><span class="nf">min</span>
+<span class="n">Total</span><span class="w"> </span><span class="n">Wait</span><span class="w"> </span><span class="nc">Time</span><span class="err">:</span><span class="w"> </span><span class="mi">30</span><span class="n">h</span>
+<span class="n">Total</span><span class="w"> </span><span class="n">Lead</span><span class="w"> </span><span class="nc">Time</span><span class="err">:</span><span class="w"> </span><span class="mi">33</span><span class="n">h</span><span class="w"> </span><span class="mi">55</span><span class="nf">min</span>
+</code></pre></div>
+
+<h3 id="schritt-4-metriken-berechnen">Schritt 4: Metriken berechnen</h3>
+<p><strong>Process Efficiency</strong>:</p>
+<div class="codehilite"><pre><span></span><code>Efficiency = Process Time / Lead Time × 100%
+Efficiency = 3.92h / 33.92h × 100% = 11.6%
+</code></pre></div>
+
+<p><strong>Value-Added Ratio</strong>:</p>
+<div class="codehilite"><pre><span></span><code>VA Ratio = Value-Added Time / Total Time × 100%
+</code></pre></div>
+
+<h2 id="verschwendungsarten-muda">Verschwendungsarten (Muda)</h2>
+<h3 id="1-waiting-warten">1. Waiting (Warten)</h3>
+<p><strong>Beispiele</strong>:
+- Warten auf Code Reviews
+- Warten auf Approvals
+- Warten auf Test-Umgebungen
+- Warten auf Deployment-Windows</p>
+<p><strong>Lösungsansätze</strong>:
+- Automatisierte Approvals
+- Self-Service-Umgebungen
+- On-Demand Deployments
+- Asynchrone Reviews</p>
+<h3 id="2-overprocessing-uberbearbeitung">2. Overprocessing (Überbearbeitung)</h3>
+<p><strong>Beispiele</strong>:
+- Redundante Approvals
+- Doppelte Tests
+- Unnötige Dokumentation
+- Übermäßige Meetings</p>
+<p><strong>Lösungsansätze</strong>:
+- Prozess-Streamlining
+- Automatisierung
+- Standardisierung
+- Lean Documentation</p>
+<h3 id="3-defects-fehler">3. Defects (Fehler)</h3>
+<p><strong>Beispiele</strong>:
+- Bugs in Production
+- Failed Deployments
+- Rollbacks
+- Rework</p>
+<p><strong>Lösungsansätze</strong>:
+- Test-Automatisierung
+- Shift-Left Testing
+- Quality Gates
+- Continuous Monitoring</p>
+<h3 id="4-motion-bewegung">4. Motion (Bewegung)</h3>
+<p><strong>Beispiele</strong>:
+- Context-Switching
+- Tool-Wechsel
+- Informationssuche
+- Handoffs zwischen Teams</p>
+<p><strong>Lösungsansätze</strong>:
+- Integrierte Toolchains
+- Single Source of Truth
+- Cross-funktionale Teams
+- Automatisierte Workflows</p>
+<h2 id="bottleneck-identifikation">Bottleneck-Identifikation</h2>
+<h3 id="analyse-methoden">Analyse-Methoden</h3>
+<p><strong>Warteschlangen-Analyse</strong>:
+- Wo sammeln sich Aufgaben?
+- Welche Schritte haben die längsten Wartezeiten?</p>
+<p><strong>Durchsatz-Analyse</strong>:
+- Welche Schritte limitieren den Durchsatz?
+- Wo ist die Kapazität am geringsten?</p>
+<p><strong>Variabilität-Analyse</strong>:
+- Welche Schritte haben hohe Schwankungen?
+- Wo ist die Vorhersagbarkeit am niedrigsten?</p>
+<h3 id="priorisierung">Priorisierung</h3>
+<p><strong>Impact-Effort-Matrix</strong>:</p>
+<div class="codehilite"><pre><span></span><code>High Impact, Low Effort → Sofort umsetzen
+High Impact, High Effort → Planen und umsetzen
+Low Impact, Low Effort → Bei Gelegenheit
+Low Impact, High Effort → Vermeiden
+</code></pre></div>
+
+<h2 id="optimierungsansatze">Optimierungsansätze</h2>
+<h3 id="kurzfristige-manahmen">Kurzfristige Maßnahmen</h3>
+<ol>
+<li><strong>Wartezeiten reduzieren</strong></li>
+<li>Automatisierte Notifications</li>
+<li>SLA für Reviews</li>
+<li>
+<p>Parallele Prozesse</p>
+</li>
+<li>
+<p><strong>Batch-Größen reduzieren</strong></p>
+</li>
+<li>Kleinere Pull Requests</li>
+<li>Häufigere Deployments</li>
+<li>
+<p>Continuous Integration</p>
+</li>
+<li>
+<p><strong>Automatisierung erhöhen</strong></p>
+</li>
+<li>Automatisierte Tests</li>
+<li>Automatisierte Deployments</li>
+<li>Automatisierte Approvals</li>
+</ol>
+<h3 id="langfristige-manahmen">Langfristige Maßnahmen</h3>
+<ol>
+<li><strong>Prozess-Redesign</strong></li>
+<li>Elimination unnötiger Schritte</li>
+<li>Parallelisierung</li>
+<li>
+<p>Self-Service-Modelle</p>
+</li>
+<li>
+<p><strong>Organisationsstruktur</strong></p>
+</li>
+<li>Cross-funktionale Teams</li>
+<li>Reduzierung von Handoffs</li>
+<li>
+<p>Erhöhte Autonomie</p>
+</li>
+<li>
+<p><strong>Technologie-Modernisierung</strong></p>
+</li>
+<li>Moderne CI/CD-Plattformen</li>
+<li>Cloud-Infrastruktur</li>
+<li>Microservices-Architektur</li>
+</ol>
+<h2 id="continuous-improvement">Continuous Improvement</h2>
+<h3 id="regelmaige-vsm-sessions">Regelmäßige VSM-Sessions</h3>
+<p><strong>Frequenz</strong>: [TODO]</p>
+<p><strong>Teilnehmer</strong>:
+- Entwickler
+- Operations
+- Product Owner
+- QA</p>
+<p><strong>Agenda</strong>:
+1. Aktuellen Value Stream reviewen
+2. Metriken analysieren
+3. Verbesserungen identifizieren
+4. Maßnahmen priorisieren
+5. Umsetzung planen</p>
+<h3 id="erfolgsmessung">Erfolgsmessung</h3>
+<p><strong>KPIs</strong>:
+- Lead Time Reduction
+- Process Efficiency Improvement
+- Wait Time Reduction
+- Throughput Increase</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0210_lead_time_measurement.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0230_bottleneck_identification.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

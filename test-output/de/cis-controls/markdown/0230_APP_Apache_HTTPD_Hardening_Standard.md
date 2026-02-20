@@ -1,6 +1,6 @@
 # APP Hardening Standard: Apache HTTP Server
 
-**Dokument-ID:** 0230
+**Dokument-ID:** CIS-CONTROLS-0230
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

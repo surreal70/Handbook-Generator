@@ -7,7 +7,7 @@ Classification: Internal
 
 # Datensicherheit (PR.DS)
 
-**Dokument-ID:** [FRAMEWORK]-0220
+**Dokument-ID:** NIST-CSF-0220
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

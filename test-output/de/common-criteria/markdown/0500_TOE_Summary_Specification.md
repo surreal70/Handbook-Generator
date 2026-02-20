@@ -1,6 +1,6 @@
 # TOE Summary Specification
 
-**Dokument-ID:** 0500
+**Dokument-ID:** COMMON-CRITERIA-0500
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

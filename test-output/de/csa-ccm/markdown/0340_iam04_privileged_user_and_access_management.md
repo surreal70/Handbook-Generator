@@ -6,7 +6,7 @@ Classification: Internal
 
 # IAM-04: Privilegiertes Zugriffsmanagement
 
-**Dokument-ID:** [FRAMEWORK]-0340
+**Dokument-ID:** CSA-CCM-0340
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

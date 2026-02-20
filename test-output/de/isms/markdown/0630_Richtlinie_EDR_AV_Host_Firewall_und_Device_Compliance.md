@@ -1,6 +1,6 @@
 # Richtlinie: EDR, Antivirus, Host-Firewall und Device Compliance
 
-**Dokument-ID:** 0630
+**Dokument-ID:** ISMS-0630
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

@@ -1,6 +1,6 @@
 # Scope and Information Domain (Boundaries)
 
-**Document-ID:** [FRAMEWORK]-0040
+**Document-ID:** BSI-GRUNDSCHUTZ-0040
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

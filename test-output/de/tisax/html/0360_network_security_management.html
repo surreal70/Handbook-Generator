@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0360 - Netzwerksicherheitsmanagement</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0360</div>
+            <h1>Netzwerksicherheitsmanagement</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0350_logging_and_monitoring.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0370_information_transfer.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: tisax-0360</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="netzwerksicherheitsmanagement">Netzwerksicherheitsmanagement</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0360
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="zweck">Zweck</h2>
+<p>Dieses Dokument beschreibt die Maßnahmen für Netzwerksicherheit gemäß TISAX-Anforderungen.</p>
+<h2 id="geltungsbereich">Geltungsbereich</h2>
+<p>Dieses Dokument gilt für alle Netzwerke von [TODO].</p>
+<h2 id="netzwerksegmentierung">Netzwerksegmentierung</h2>
+<h3 id="sicherheitszonen">Sicherheitszonen</h3>
+<p><strong>DMZ (Demilitarized Zone):</strong>
+- Öffentlich zugängliche Systeme
+- Strenge Firewall-Regeln
+- Überwachung</p>
+<p><strong>Interne Netzwerke:</strong>
+- Geschäftsnetzwerk
+- Entwicklungsnetzwerk
+- Verwaltungsnetzwerk</p>
+<p><strong>Hochsicherheitsnetzwerk:</strong>
+- Kritische Systeme
+- Strenge Zugriffskontrolle
+- Umfassende Überwachung</p>
+<h3 id="netzwerkzugriffskontrolle">Netzwerkzugriffskontrolle</h3>
+<p><strong>Anforderungen:</strong>
+- 802.1X Authentifizierung
+- NAC (Network Access Control)
+- VLAN-Segmentierung
+- Firewall-Regeln</p>
+<h2 id="firewall-management">Firewall-Management</h2>
+<h3 id="firewall-regeln">Firewall-Regeln</h3>
+<p><strong>Prinzipien:</strong>
+- Default Deny
+- Least Privilege
+- Dokumentierte Regeln
+- Regelmäßige Überprüfung</p>
+<p><strong>Genehmigungsprozess:</strong>
+- Antrag mit Begründung
+- Risikoanalyse
+- Genehmigung durch Netzwerksicherheit
+- Dokumentation</p>
+<h3 id="firewall-typen">Firewall-Typen</h3>
+<p><strong>Perimeter-Firewall:</strong>
+- Schutz des Gesamtnetzwerks
+- Redundante Konfiguration
+- Hochverfügbarkeit</p>
+<p><strong>Interne Firewalls:</strong>
+- Segmentierung
+- Schutz kritischer Bereiche</p>
+<p><strong>Host-basierte Firewalls:</strong>
+- Schutz einzelner Systeme
+- Zentrale Verwaltung</p>
+<h2 id="intrusion-detectionprevention">Intrusion Detection/Prevention</h2>
+<h3 id="idsips-systeme">IDS/IPS-Systeme</h3>
+<p><strong>Funktionen:</strong>
+- Erkennung von Angriffen
+- Automatische Blockierung
+- Alarmierung
+- Reporting</p>
+<p><strong>Platzierung:</strong>
+- Netzwerkgrenzen
+- Kritische Segmente
+- DMZ</p>
+<h2 id="vpn-management">VPN-Management</h2>
+<h3 id="remote-access-vpn">Remote Access VPN</h3>
+<p><strong>Anforderungen:</strong>
+- Multi-Faktor-Authentifizierung
+- Starke Verschlüsselung
+- Endpoint-Compliance-Check
+- Protokollierung</p>
+<h3 id="site-to-site-vpn">Site-to-Site VPN</h3>
+<p><strong>Anforderungen:</strong>
+- Verschlüsselte Verbindungen
+- Redundante Verbindungen
+- Überwachung
+- Dokumentation</p>
+<h2 id="wireless-security">Wireless Security</h2>
+<h3 id="wlan-sicherheit">WLAN-Sicherheit</h3>
+<p><strong>Anforderungen:</strong>
+- WPA3 Verschlüsselung
+- 802.1X Authentifizierung
+- Separate SSIDs für Gäste
+- Regelmäßige Sicherheitsscans</p>
+<h3 id="gast-wlan">Gast-WLAN</h3>
+<p><strong>Anforderungen:</strong>
+- Isoliert vom internen Netzwerk
+- Bandbreitenbegrenzung
+- Zeitliche Begrenzung
+- Akzeptanz von Nutzungsbedingungen</p>
+<h2 id="netzwerkuberwachung">Netzwerküberwachung</h2>
+<h3 id="monitoring">Monitoring</h3>
+<p><strong>Überwachte Parameter:</strong>
+- Netzwerkverkehr
+- Bandbreitennutzung
+- Sicherheitsereignisse
+- Performance</p>
+<p><strong>Tools:</strong>
+- Network Monitoring System
+- SIEM-Integration
+- Flow-Analyse</p>
+<h2 id="tisax-spezifische-anforderungen">TISAX-spezifische Anforderungen</h2>
+<h3 id="vda-isa-kontrollen">VDA ISA Kontrollen</h3>
+<p>Dieses Dokument adressiert:
+- <strong>6.6</strong>: Netzwerksicherheitsmanagement
+- <strong>7.1</strong>: Netzwerksicherheit</p>
+<h3 id="assessment-nachweise">Assessment-Nachweise</h3>
+<ul>
+<li>Netzwerkdiagramme</li>
+<li>Firewall-Regeln</li>
+<li>IDS/IPS-Konfiguration</li>
+<li>Monitoring-Berichte</li>
+</ul>
+<h2 id="kennzahlen">Kennzahlen</h2>
+<p>[TODO] misst:
+- Anzahl blockierter Angriffe
+- Netzwerkverfügbarkeit
+- Anzahl Firewall-Regeländerungen</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0350_logging_and_monitoring.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0370_information_transfer.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

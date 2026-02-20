@@ -6,7 +6,7 @@ Classification: Internal
 
 # BCR-06: Gerätewartung
 
-**Dokument-ID:** [FRAMEWORK]-0610
+**Dokument-ID:** CSA-CCM-0610
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

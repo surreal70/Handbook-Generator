@@ -1,6 +1,6 @@
 # Policy: Asset and Inventory Management
 
-**Document-ID:** [FRAMEWORK]-0240
+**Document-ID:** BSI-GRUNDSCHUTZ-0240
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

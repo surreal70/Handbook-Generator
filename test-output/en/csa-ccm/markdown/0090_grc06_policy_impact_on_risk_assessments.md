@@ -6,7 +6,7 @@ Classification: Internal
 
 # GRC-06: Policy Impact on Risk Assessments
 
-**Document-ID:** [FRAMEWORK]-0090
+**Document-ID:** CSA-CCM-0090
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

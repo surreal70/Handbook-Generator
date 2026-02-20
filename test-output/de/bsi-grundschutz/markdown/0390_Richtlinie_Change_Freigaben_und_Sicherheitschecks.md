@@ -1,6 +1,6 @@
 # Richtlinie: Change Freigaben und Sicherheitschecks
 
-**Dokument-ID:** 0390
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0390
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

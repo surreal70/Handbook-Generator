@@ -6,7 +6,7 @@ Classification: Internal
 
 # Business Architecture Übersicht
 
-**Dokument-ID:** [FRAMEWORK]-0200
+**Dokument-ID:** TOGAF-0200
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

@@ -1,6 +1,6 @@
 # Rechtmäßigkeit der Verarbeitung
 
-**Dokument-ID:** 0040
+**Dokument-ID:** GDPR-0040
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

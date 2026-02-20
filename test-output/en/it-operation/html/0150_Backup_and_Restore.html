@@ -21,10 +21,22 @@
         
         <main>
 <h1 id="backup-and-restore">Backup and Restore</h1>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0150
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
 <h2 id="purpose-and-scope">Purpose and Scope</h2>
 <p>This document describes the backup and restore strategies for AdminSend GmbH. It defines backup methods, schedules, retention periods, RPO/RTO objectives, and restore procedures to ensure data integrity and availability.</p>
 <p><strong>Scope:</strong> All IT systems, databases, applications, and data of AdminSend GmbH</p>
-<p><strong>Responsible:</strong> Andreas Huemmer (andreas.huemmer@adminsend.de)</p>
+<p><strong>Responsible:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }} ({{ meta-organisation-roles.role_IT_Operations_Manager_email }})</p>
 <h2 id="backup-fundamentals">Backup Fundamentals</h2>
 <h3 id="backup-objectives">Backup Objectives</h3>
 <p><strong>Primary Objectives:</strong>
@@ -164,9 +176,9 @@
 - <strong>2 Media:</strong> Disk + tape or cloud
 - <strong>1 Offsite:</strong> Geographically separated copy</p>
 <p><strong>Example:</strong>
-1. Production data on {{ netbox.storage.primary }}
-2. Backup on {{ netbox.storage.backup_disk }}
-3. Offsite backup in {{ meta.backup_cloud_provider }}</p>
+1. Production data on [[ netbox.storage.primary ]]
+2. Backup on [[ netbox.storage.backup_disk ]]
+3. Offsite backup in {{ meta-handbook.backup_cloud_provider }}</p>
 <h4 id="backup-tiers">Backup Tiers</h4>
 <table>
 <thead>
@@ -212,7 +224,7 @@
 <h2 id="backup-schedules">Backup Schedules</h2>
 <h3 id="production-systems">Production Systems</h3>
 <h4 id="databases-critical">Databases (Critical)</h4>
-<p><strong>System:</strong> {{ netbox.database.server }}</p>
+<p><strong>System:</strong> [[ netbox.database.server ]]</p>
 <p><strong>Backup Strategy:</strong>
 - <strong>Full Backup:</strong> Sunday 02:00
 - <strong>Differential Backup:</strong> Daily 02:00 (Mon-Sat)
@@ -226,7 +238,7 @@
 - Monthly backups: 12 months
 - Yearly backups: 7 years</p>
 <h4 id="application-servers-important">Application Servers (Important)</h4>
-<p><strong>System:</strong> {{ netbox.application.server }}</p>
+<p><strong>System:</strong> [[ netbox.application.server ]]</p>
 <p><strong>Backup Strategy:</strong>
 - <strong>Full Backup:</strong> Sunday 03:00
 - <strong>Incremental Backup:</strong> Daily 03:00 (Mon-Sat)
@@ -238,7 +250,7 @@
 - Weekly backups: 8 weeks
 - Monthly backups: 6 months</p>
 <h4 id="file-servers-standard">File Servers (Standard)</h4>
-<p><strong>System:</strong> {{ netbox.fileserver.server }}</p>
+<p><strong>System:</strong> [[ netbox.fileserver.server ]]</p>
 <p><strong>Backup Strategy:</strong>
 - <strong>Full Backup:</strong> Sunday 01:00
 - <strong>Incremental Backup:</strong> Daily 01:00 (Mon-Sat)</p>
@@ -346,7 +358,7 @@
 
 <h3 id="1-backup-scheduling">1. Backup Scheduling</h3>
 <p><strong>Automation:</strong>
-- Backup jobs configured in {{ meta.backup_system }}
+- Backup jobs configured in {{ meta-handbook.backup_system }}
 - Time-controlled execution
 - Dependencies between jobs
 - Retry mechanisms on errors</p>
@@ -366,7 +378,7 @@
 - Encrypt data (AES-256)
 - Transfer data to backup target
 - Store metadata</p>
-<p><strong>Monitoring:</strong> Real-time monitoring in {{ meta.monitoring_system }}</p>
+<p><strong>Monitoring:</strong> Real-time monitoring in {{ meta-handbook.monitoring_system }}</p>
 <h3 id="4-backup-verification">4. Backup Verification</h3>
 <p><strong>Verification Methods:</strong>
 - <strong>Checksum Validation:</strong> MD5/SHA-256 checksums
@@ -381,12 +393,12 @@
 - Storage space utilization
 - Failed backups
 - Trend analyses</p>
-<p><strong>Recipients:</strong> andreas.huemmer@adminsend.de</p>
+<p><strong>Recipients:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager_email }}</p>
 <h3 id="6-offsite-replication">6. Offsite Replication</h3>
 <p><strong>Replication Methods:</strong>
-- <strong>Cloud Sync:</strong> Automatic replication to {{ meta.backup_cloud_provider }}
+- <strong>Cloud Sync:</strong> Automatic replication to {{ meta-handbook.backup_cloud_provider }}
 - <strong>Tape Rotation:</strong> Weekly tape offsite storage
-- <strong>Remote Site:</strong> Replication to {{ netbox.site.dr_location }}</p>
+- <strong>Remote Site:</strong> Replication to [[ netbox.site.dr_location ]]</p>
 <p><strong>Encryption:</strong> TLS in transit, AES-256 at rest</p>
 <h2 id="restore-processes">Restore Processes</h2>
 <h3 id="restore-process-overview">Restore Process Overview</h3>
@@ -435,7 +447,7 @@
 - Where should it be restored?
 - Urgency (RTO)
 - Approval</p>
-<p><strong>Tool:</strong> {{ meta.ticketing_system }}</p>
+<p><strong>Tool:</strong> {{ meta-handbook.ticketing_system }}</p>
 <h3 id="2-restore-planning">2. Restore Planning</h3>
 <p><strong>Planning Activities:</strong>
 - Identify backup set
@@ -520,9 +532,9 @@
 <h2 id="backup-technologies">Backup Technologies</h2>
 <h3 id="backup-software">Backup Software</h3>
 <p><strong>Primary Backup System:</strong>
-- <strong>System:</strong> {{ meta.backup_system }}
-- <strong>Version:</strong> {{ meta.backup_system_version }}
-- <strong>License:</strong> {{ meta.backup_system_license }}</p>
+- <strong>System:</strong> {{ meta-handbook.backup_system }}
+- <strong>Version:</strong> [TODO]
+- <strong>License:</strong> {{ meta-handbook.backup_system_license }}</p>
 <p><strong>Features:</strong>
 - Application-consistent backups
 - Deduplication
@@ -532,19 +544,19 @@
 - Automatic verification</p>
 <h3 id="snapshot-technology">Snapshot Technology</h3>
 <p><strong>Storage Snapshots:</strong>
-- <strong>System:</strong> {{ netbox.storage.system }}
+- <strong>System:</strong> [[ netbox.storage.system ]]
 - <strong>Snapshot Frequency:</strong> Every 4 hours
 - <strong>Retention:</strong> 48 hours
 - <strong>Usage:</strong> Quick rollbacks, pre-change snapshots</p>
 <p><strong>VM Snapshots:</strong>
-- <strong>System:</strong> {{ netbox.hypervisor.system }}
+- <strong>System:</strong> [[ netbox.hypervisor.system ]]
 - <strong>Snapshot Type:</strong> Crash-consistent
 - <strong>Usage:</strong> Pre-deployment snapshots
 - <strong>Warning:</strong> Not a long-term backup solution</p>
 <h3 id="cloud-backup">Cloud Backup</h3>
 <p><strong>Cloud Provider:</strong>
-- <strong>Provider:</strong> {{ meta.backup_cloud_provider }}
-- <strong>Region:</strong> {{ meta.backup_cloud_region }}
+- <strong>Provider:</strong> {{ meta-handbook.backup_cloud_provider }}
+- <strong>Region:</strong> {{ meta-handbook.backup_cloud_region }}
 - <strong>Storage Tier:</strong> Standard / Glacier</p>
 <p><strong>Advantages:</strong>
 - Offsite backup automatic
@@ -565,7 +577,7 @@
 - Separate key management
 - Key rotation every 90 days</p>
 <p><strong>Key Management:</strong>
-- Keys in {{ meta.key_management_system }}
+- Keys in {{ meta-handbook.key_management_system }}
 - Access only for authorized administrators
 - Backup of keys (escrow)</p>
 <h3 id="immutable-backups">Immutable Backups</h3>
@@ -582,7 +594,7 @@
 - Service desk: No backup permission</p>
 <p><strong>Audit Logging:</strong>
 - All backup/restore activities logged
-- Logs in SIEM system {{ meta.siem_system }}
+- Logs in SIEM system {{ meta-handbook.siem_system }}
 - Monthly audit reviews</p>
 <h2 id="backup-testing">Backup Testing</h2>
 <h3 id="test-strategy">Test Strategy</h3>
@@ -698,7 +710,7 @@
 - Budget responsibility
 - Compliance assurance
 - Escalation management</p>
-<p><strong>Person:</strong> Andreas Huemmer</p>
+<p><strong>Person:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</p>
 <h2 id="compliance-and-regulation">Compliance and Regulation</h2>
 <h3 id="regulatory-requirements">Regulatory Requirements</h3>
 <p><strong>GDPR:</strong>
@@ -761,14 +773,13 @@
 <li>ISO/IEC 27001:2013 - Backup Controls</li>
 <li>GDPR - Article 32 (Data Security)</li>
 <li>3-2-1 Backup Rule</li>
-<li>Backup System Documentation: {{ meta.backup_system_docs }}</li>
+<li>Backup System Documentation: {{ meta-handbook.backup_system_docs }}</li>
 </ul>
-<hr />
-<p><strong>Document Owner:</strong> IT Operations Manager<br />
-<strong>Approved by:</strong> CIO<br />
-<strong>Version:</strong> 1.0.0<br />
-<strong>Classification:</strong> internal<br />
-<strong>Last Updated:</strong> {{ meta.date }}</p>
+<p><strong>Document Owner:</strong> [TODO]<br />
+<strong>Approved by:</strong> [TODO]<br />
+<strong>Version:</strong> 0<br />
+<strong>Classification:</strong> Internal<br />
+<strong>Last Updated:</strong> {{ meta-handbook.date }}</p>
         </main>
         
         <nav class="page-nav">

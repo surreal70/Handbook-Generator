@@ -1,6 +1,6 @@
 # Test Protocol and Success Criteria
 
-**Document-ID:** [FRAMEWORK]-0230
+**Document-ID:** BCM-0230
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

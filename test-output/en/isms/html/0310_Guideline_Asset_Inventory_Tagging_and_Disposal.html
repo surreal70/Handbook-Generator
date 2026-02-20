@@ -21,15 +21,17 @@
         
         <main>
 <h1 id="guideline-asset-inventory-tagging-and-disposal">Guideline: Asset Inventory, Tagging and Disposal</h1>
-<p><strong>Document ID:</strong> 0310<br />
-<strong>Document Type:</strong> Guideline (detailed)<br />
-<strong>Related Policy:</strong> 0300_Policy_Asset_Management.md<br />
-<strong>Standard Reference:</strong> ISO/IEC 27001:2022 Annex A.5.9, A.5.10<br />
-<strong>Owner:</strong> {{ meta.it_operations.manager }}<br />
-<strong>Version:</strong> 1.0<br />
-<strong>Status:</strong> Approved<br />
-<strong>Classification:</strong> Internal<br />
-<strong>Last Updated:</strong> {{ meta.document.date }}</p>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0310
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
 <hr />
 <h2 id="1-purpose-and-scope">1. Purpose and Scope</h2>
 <p>This guideline implements the <code>0300_Policy_Asset_Management.md</code> and defines:
@@ -68,7 +70,7 @@
 </ul>
 <h2 id="3-asset-inventory">3. Asset Inventory</h2>
 <h3 id="31-cmdb-configuration-management-database">3.1 CMDB (Configuration Management Database)</h3>
-<p><strong>System:</strong> {{ meta.itsm.cmdb }} (e.g., ServiceNow, Jira Service Management)</p>
+<p><strong>System:</strong> {{ meta-handbook.itsm_cmdb }} (e.g., ServiceNow, Jira Service Management)</p>
 <p><strong>Mandatory Fields per Asset:</strong>
 - Asset ID (unique)
 - Asset type and category
@@ -86,8 +88,8 @@
 - Dependencies to other assets</p>
 <h3 id="32-automatic-inventory">3.2 Automatic Inventory</h3>
 <p><strong>Tools:</strong>
-- <strong>Endpoint Management:</strong> {{ meta.endpoint.management }} (e.g., Microsoft Intune, Jamf)
-- <strong>Network Discovery:</strong> {{ meta.network.discovery }} (e.g., Nmap, Lansweeper)
+- <strong>Endpoint Management:</strong> {{ meta-handbook.endpoint_management }} (e.g., Microsoft Intune, Jamf)
+- <strong>Network Discovery:</strong> {{ meta-handbook.network_discovery }} (e.g., Nmap, Lansweeper)
 - <strong>Cloud Asset Inventory:</strong> Native cloud tools (Azure Resource Graph, AWS Config)</p>
 <p><strong>Process:</strong>
 - Daily automatic scans
@@ -109,7 +111,7 @@
 5. Handover protocol (for employee assignment)</p>
 <h2 id="4-asset-tagging">4. Asset Tagging</h2>
 <h3 id="41-tagging-schema">4.1 Tagging Schema</h3>
-<p><strong>Asset ID Format:</strong> <code>{{ meta.asset.id_format }}</code><br />
+<p><strong>Asset ID Format:</strong> <code>{{ meta-handbook.asset_id_format }}</code><br />
 Example: <code>LAP-2024-001234</code> (Laptop, year, sequential number)</p>
 <p><strong>Prefixes:</strong>
 - LAP: Laptop
@@ -129,7 +131,7 @@ Example: <code>LAP-2024-001234</code> (Laptop, year, sequential number)</p>
 - Integration with access control system</p>
 <h3 id="43-digital-tags">4.3 Digital Tags</h3>
 <p><strong>Hostname Convention:</strong>
-- Format: <code>{{ meta.naming.hostname_format }}</code>
+- Format: <code>{{ meta-handbook.naming_hostname_format }}</code>
 - Example: <code>lap-jdoe-001</code> (type-user-number)</p>
 <p><strong>Metadata:</strong>
 - Cloud resources: Tags for owner, cost center, environment
@@ -228,7 +230,7 @@ Example: <code>LAP-2024-001234</code> (Laptop, year, sequential number)</p>
 - Certificate for third-party disposal</p>
 <h3 id="62-mobile-devices">6.2 Mobile Devices</h3>
 <p><strong>Process:</strong>
-1. Remote wipe via MDM ({{ meta.mdm.system }})
+1. Remote wipe via MDM ({{ meta-handbook.mdm_system }})
 2. Factory reset on-site
 3. Removal of SIM cards and SD cards
 4. Physical verification of deletion
@@ -326,9 +328,8 @@ Example: <code>LAP-2024-001234</code> (Laptop, year, sequential number)</p>
 <li><strong>DIN 66399</strong> - Destruction of data carriers</li>
 <li><strong>WEEE Directive</strong> - Electrical and electronic equipment disposal</li>
 </ul>
-<hr />
-<p><strong>Approved by:</strong> Thomas Weber, CISO<br />
-<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<p><strong>Approved by:</strong> [TODO], CISO<br />
+<strong>Next Review:</strong> [TODO]</p>
         </main>
         
         <nav class="page-nav">

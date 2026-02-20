@@ -1,6 +1,6 @@
 # Security Objectives Coverage Matrix
 
-**Dokument-ID:** 0320
+**Dokument-ID:** COMMON-CRITERIA-0320
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

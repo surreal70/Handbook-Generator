@@ -6,7 +6,7 @@ Classification: Internal
 
 # Quality Assurance Praktiken
 
-**Dokument-ID:** [FRAMEWORK]-0150
+**Dokument-ID:** DORA-0150
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

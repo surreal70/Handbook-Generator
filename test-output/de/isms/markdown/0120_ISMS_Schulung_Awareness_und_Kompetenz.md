@@ -1,6 +1,6 @@
 # Schulung, Awareness und Kompetenz
 
-**Dokument-ID:** 0120
+**Dokument-ID:** ISMS-0120
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

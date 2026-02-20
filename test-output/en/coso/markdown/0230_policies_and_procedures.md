@@ -6,7 +6,7 @@ Classification: Internal
 
 # Policies and Procedures
 
-**Document-ID:** [FRAMEWORK]-0230
+**Document-ID:** COSO-0230
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

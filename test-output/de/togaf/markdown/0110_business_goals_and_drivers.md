@@ -6,7 +6,7 @@ Classification: Internal
 
 # Geschäftsziele und Treiber
 
-**Dokument-ID:** [FRAMEWORK]-0110
+**Dokument-ID:** TOGAF-0110
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

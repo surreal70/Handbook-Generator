@@ -6,7 +6,7 @@ Classification: Internal
 
 # HRS-01: Human Resources Security
 
-**Document-ID:** [FRAMEWORK]-0710
+**Document-ID:** CSA-CCM-0710
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

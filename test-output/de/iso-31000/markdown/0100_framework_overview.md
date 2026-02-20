@@ -7,7 +7,7 @@ Classification: Internal
 
 # Risikomanagement-Rahmenwerk - Übersicht
 
-**Dokument-ID:** [FRAMEWORK]-0100
+**Dokument-ID:** ISO-31000-0100
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

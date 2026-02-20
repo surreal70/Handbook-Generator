@@ -6,7 +6,7 @@ Classification: Internal
 
 # Logging und Monitoring
 
-**Dokument-ID:** [FRAMEWORK]-0170
+**Dokument-ID:** TISAX-0170
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

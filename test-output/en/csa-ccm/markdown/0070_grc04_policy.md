@@ -6,7 +6,7 @@ Classification: Internal
 
 # GRC-04: Policy
 
-**Document-ID:** [FRAMEWORK]-0070
+**Document-ID:** CSA-CCM-0070
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

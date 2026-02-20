@@ -1,6 +1,6 @@
 # Risk Analysis (BSI Standard 200-3) – Template
 
-**Document-ID:** [FRAMEWORK]-0090
+**Document-ID:** BSI-GRUNDSCHUTZ-0090
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

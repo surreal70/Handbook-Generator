@@ -21,15 +21,17 @@
         
         <main>
 <h1 id="guideline-ict-disaster-recovery-interfaces-to-bcm">Guideline: ICT Disaster Recovery - Interfaces to BCM</h1>
-<p><strong>Document ID:</strong> 0450<br />
-<strong>Document Type:</strong> Guideline (detailed)<br />
-<strong>Related Policy:</strong> 0440_Policy_Business_Continuity_ICT_Readiness.md<br />
-<strong>Standard Reference:</strong> ISO/IEC 27001:2022 Annex A.5.29, A.5.30<br />
-<strong>Owner:</strong> {{ meta.it_operations.manager }}<br />
-<strong>Version:</strong> 1.0<br />
-<strong>Status:</strong> Approved<br />
-<strong>Classification:</strong> Confidential<br />
-<strong>Last Updated:</strong> {{ meta.document.date }}</p>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0450
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
 <hr />
 <h2 id="1-purpose-and-scope">1. Purpose and Scope</h2>
 <p>This guideline implements the <code>0440_Policy_Business_Continuity_ICT_Readiness.md</code> and defines:
@@ -69,16 +71,16 @@
 - For Tier 3 systems</p>
 <h2 id="3-dr-infrastructure">3. DR Infrastructure</h2>
 <h3 id="31-primary-data-center">3.1 Primary Data Center</h3>
-<p><strong>Location:</strong> {{ netbox.site.primary }}<br />
+<p><strong>Location:</strong> [[ netbox.site.primary ]]<br />
 <strong>Systems:</strong> All production systems<br />
 <strong>Redundancy:</strong> N+1 for critical components</p>
 <h3 id="32-dr-site">3.2 DR Site</h3>
-<p><strong>Location:</strong> {{ netbox.site.dr }}<br />
+<p><strong>Location:</strong> [[ netbox.site.dr ]]<br />
 <strong>Distance:</strong> &gt; 50 km from primary site<br />
 <strong>Systems:</strong> Replicated Tier 1 systems, backup infrastructure</p>
 <h3 id="33-cloud-dr">3.3 Cloud DR</h3>
-<p><strong>Cloud Provider:</strong> {{ meta.cloud.dr_provider }}<br />
-<strong>Regions:</strong> {{ meta.cloud.primary_region }}, {{ meta.cloud.dr_region }}<br />
+<p><strong>Cloud Provider:</strong> {{ meta-handbook.cloud_dr_provider }}<br />
+<strong>Regions:</strong> {{ meta-handbook.cloud_primary_region }}, {{ meta-handbook.cloud_dr_region }}<br />
 <strong>Services:</strong> IaaS for DR workloads</p>
 <h2 id="4-interfaces-to-bcm">4. Interfaces to BCM</h2>
 <h3 id="41-business-impact-analysis-bia">4.1 Business Impact Analysis (BIA)</h3>
@@ -207,9 +209,8 @@
 <li><strong>ISO/IEC 27001:2022 Annex A.5.30</strong> - ICT readiness for business continuity</li>
 <li><strong>ISO 22301</strong> - Business Continuity Management</li>
 </ul>
-<hr />
-<p><strong>Approved by:</strong> Thomas Weber, CISO<br />
-<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<p><strong>Approved by:</strong> [TODO], CISO<br />
+<strong>Next Review:</strong> [TODO]</p>
         </main>
         
         <nav class="page-nav">

@@ -7,7 +7,7 @@ Classification: Internal
 
 # IT Governance Model
 
-**Document-ID:** [FRAMEWORK]-0020
+**Document-ID:** ISO-38500-0020
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

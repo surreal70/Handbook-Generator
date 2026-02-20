@@ -7,7 +7,7 @@ Classification: Internal
 
 # IT Governance Communication
 
-**Document-ID:** [FRAMEWORK]-0330
+**Document-ID:** ISO-38500-0330
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

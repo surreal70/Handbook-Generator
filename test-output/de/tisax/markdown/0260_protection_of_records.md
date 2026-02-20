@@ -6,7 +6,7 @@ Classification: Internal
 
 # Schutz von Aufzeichnungen
 
-**Dokument-ID:** [FRAMEWORK]-0260
+**Dokument-ID:** TISAX-0260
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

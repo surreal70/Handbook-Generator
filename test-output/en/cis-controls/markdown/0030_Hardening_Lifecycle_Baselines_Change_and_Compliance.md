@@ -1,6 +1,6 @@
 # Hardening Lifecycle: Baselines, Change and Compliance
 
-**Document-ID:** [FRAMEWORK]-0030
+**Document-ID:** CIS-CONTROLS-0030
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

@@ -1,6 +1,6 @@
 # Security Problem Definition
 
-**Dokument-ID:** 0200
+**Dokument-ID:** COMMON-CRITERIA-0200
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

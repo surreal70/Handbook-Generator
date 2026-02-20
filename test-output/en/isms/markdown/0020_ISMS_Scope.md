@@ -1,6 +1,6 @@
 # ISMS Scope
 
-**Document-ID:** [FRAMEWORK]-0020
+**Document-ID:** ISMS-0020
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

@@ -6,7 +6,7 @@ Classification: Internal
 
 # Physical Entry Controls
 
-**Document-ID:** [FRAMEWORK]-0230
+**Document-ID:** TISAX-0230
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

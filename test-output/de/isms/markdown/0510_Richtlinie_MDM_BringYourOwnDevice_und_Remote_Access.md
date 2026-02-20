@@ -1,6 +1,6 @@
 # Richtlinie: MDM, Bring Your Own Device und Remote Access
 
-**Dokument-ID:** 0510
+**Dokument-ID:** ISMS-0510
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

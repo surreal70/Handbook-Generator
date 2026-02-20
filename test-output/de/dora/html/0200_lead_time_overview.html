@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0200 - Lead Time Übersicht</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0200</div>
+            <h1>Lead Time Übersicht</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0190_incident_response_procedures.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0210_lead_time_measurement.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: dora-0200</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="lead-time-ubersicht">Lead Time Übersicht</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0200
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="zweck">Zweck</h2>
+<p>Dieses Dokument bietet eine umfassende Übersicht über die Lead Time for Changes Metrik im DORA Framework und deren Bedeutung für die Software-Delivery-Performance.</p>
+<h2 id="umfang">Umfang</h2>
+<p>Dieses Dokument umfasst:
+- Definition der Lead Time for Changes
+- Performance-Level und Benchmarks
+- Komponenten der Lead Time
+- Bedeutung für die Organisation</p>
+<h2 id="definition">Definition</h2>
+<h3 id="lead-time-for-changes">Lead Time for Changes</h3>
+<p>Die Lead Time for Changes misst die Zeit vom Code-Commit bis zur erfolgreichen Ausführung in der Produktionsumgebung. Diese Metrik ist ein Indikator für die Effizienz des gesamten Software-Delivery-Prozesses.</p>
+<p><strong>Formale Definition</strong>: Zeit zwischen Code-Commit und erfolgreichem Production-Deployment.</p>
+<h3 id="organisationsinformationen">Organisationsinformationen</h3>
+<ul>
+<li><strong>Organisation</strong>: [TODO]</li>
+<li><strong>Verantwortlicher</strong>: [TODO]</li>
+<li><strong>Messperiode</strong>: [TODO]</li>
+<li><strong>Aktuelle Lead Time</strong>: [TODO]</li>
+</ul>
+<h2 id="performance-level">Performance-Level</h2>
+<h3 id="elite-performers">Elite Performers</h3>
+<p><strong>Lead Time</strong>: Weniger als eine Stunde</p>
+<p>Charakteristiken:
+- Vollautomatisierte CI/CD-Pipelines
+- Minimale manuelle Interventionen
+- Trunk-based Development
+- Continuous Deployment
+- Hochgradig automatisierte Tests</p>
+<h3 id="high-performers">High Performers</h3>
+<p><strong>Lead Time</strong>: Zwischen einem Tag und einer Woche</p>
+<p>Charakteristiken:
+- Weitgehend automatisierte Prozesse
+- Regelmäßige Deployments
+- Gute Test-Automatisierung
+- Standardisierte Workflows</p>
+<h3 id="medium-performers">Medium Performers</h3>
+<p><strong>Lead Time</strong>: Zwischen einem Monat und sechs Monaten</p>
+<p>Charakteristiken:
+- Teilweise manuelle Prozesse
+- Batch-Releases
+- Längere Review-Zyklen
+- Komplexe Approval-Prozesse</p>
+<h3 id="low-performers">Low Performers</h3>
+<p><strong>Lead Time</strong>: Mehr als sechs Monate</p>
+<p>Charakteristiken:
+- Überwiegend manuelle Prozesse
+- Seltene, große Releases
+- Umfangreiche manuelle Tests
+- Komplexe Change-Management-Prozesse</p>
+<h2 id="komponenten-der-lead-time">Komponenten der Lead Time</h2>
+<h3 id="1-coding-time">1. Coding Time</h3>
+<p><strong>Definition</strong>: Zeit für die eigentliche Code-Entwicklung</p>
+<p><strong>Einflussfaktoren</strong>:
+- Entwickler-Produktivität
+- Code-Komplexität
+- Verfügbare Tools und IDEs
+- Technische Schulden</p>
+<p><strong>Optimierungsansätze</strong>:
+- Moderne Entwicklungstools
+- Code-Generatoren
+- Pair Programming
+- Technische Schulden abbauen</p>
+<h3 id="2-review-time">2. Review Time</h3>
+<p><strong>Definition</strong>: Zeit für Code-Reviews und Approvals</p>
+<p><strong>Einflussfaktoren</strong>:
+- Team-Größe und -Verfügbarkeit
+- Review-Prozesse
+- Code-Qualität
+- Review-Tools</p>
+<p><strong>Optimierungsansätze</strong>:
+- Automatisierte Code-Analyse
+- Kleinere Pull Requests
+- Asynchrone Reviews
+- Review-Guidelines</p>
+<h3 id="3-build-time">3. Build Time</h3>
+<p><strong>Definition</strong>: Zeit für Kompilierung und Artefakt-Erstellung</p>
+<p><strong>Einflussfaktoren</strong>:
+- Build-Komplexität
+- Hardware-Ressourcen
+- Dependency-Management
+- Build-Tool-Konfiguration</p>
+<p><strong>Optimierungsansätze</strong>:
+- Inkrementelle Builds
+- Build-Caching
+- Parallelisierung
+- Cloud-Build-Services</p>
+<h3 id="4-test-time">4. Test Time</h3>
+<p><strong>Definition</strong>: Zeit für automatisierte und manuelle Tests</p>
+<p><strong>Einflussfaktoren</strong>:
+- Test-Umfang
+- Test-Automatisierungsgrad
+- Test-Infrastruktur
+- Test-Parallelisierung</p>
+<p><strong>Optimierungsansätze</strong>:
+- Test-Parallelisierung
+- Selektive Test-Ausführung
+- Test-Optimierung
+- Bessere Test-Infrastruktur</p>
+<h3 id="5-deployment-time">5. Deployment Time</h3>
+<p><strong>Definition</strong>: Zeit für das eigentliche Deployment</p>
+<p><strong>Einflussfaktoren</strong>:
+- Deployment-Automatisierung
+- Infrastruktur-Komplexität
+- Deployment-Strategie
+- Rollback-Mechanismen</p>
+<p><strong>Optimierungsansätze</strong>:
+- Deployment-Automatisierung
+- Blue-Green Deployments
+- Canary Releases
+- Feature Flags</p>
+<h3 id="6-approval-time">6. Approval Time</h3>
+<p><strong>Definition</strong>: Zeit für Genehmigungen und Change-Management</p>
+<p><strong>Einflussfaktoren</strong>:
+- Approval-Prozesse
+- Stakeholder-Verfügbarkeit
+- Compliance-Anforderungen
+- Organisationskultur</p>
+<p><strong>Optimierungsansätze</strong>:
+- Automatisierte Compliance-Checks
+- Streamlined Approval-Prozesse
+- Self-Service-Deployments
+- Risk-basierte Approvals</p>
+<h2 id="bedeutung-fur-die-organisation">Bedeutung für die Organisation</h2>
+<h3 id="business-vorteile">Business-Vorteile</h3>
+<p><strong>Schnellere Time-to-Market</strong>:
+- Features erreichen Kunden schneller
+- Schnellere Reaktion auf Feedback
+- Wettbewerbsvorteile</p>
+<p><strong>Reduzierte Kosten</strong>:
+- Weniger Work-in-Progress
+- Effizientere Ressourcennutzung
+- Reduzierte Koordinationskosten</p>
+<p><strong>Verbesserte Qualität</strong>:
+- Schnelleres Feedback
+- Kleinere Änderungen
+- Frühere Fehlererkennung</p>
+<h3 id="technische-vorteile">Technische Vorteile</h3>
+<ul>
+<li><strong>Reduzierte Komplexität</strong>: Kleinere, häufigere Änderungen</li>
+<li><strong>Bessere Planbarkeit</strong>: Vorhersagbare Delivery-Zeiten</li>
+<li><strong>Höhere Motivation</strong>: Schnelleres Feedback für Entwickler</li>
+<li><strong>Kontinuierliche Verbesserung</strong>: Regelmäßige Optimierungsmöglichkeiten</li>
+</ul>
+<h2 id="messmethodik">Messmethodik</h2>
+<h3 id="datenerfassung">Datenerfassung</h3>
+<p><strong>Start-Zeitpunkt</strong>: Code-Commit
+- Git-Commit-Timestamp
+- Branch-Informationen
+- Commit-Autor</p>
+<p><strong>End-Zeitpunkt</strong>: Production-Deployment
+- Deployment-Completion-Timestamp
+- Deployment-Status
+- Deployed-Version</p>
+<p><strong>Berechnung</strong>:</p>
+<div class="codehilite"><pre><span></span><code>Lead Time = Deployment-Timestamp - Commit-Timestamp
+</code></pre></div>
+
+<h3 id="aggregation">Aggregation</h3>
+<p><strong>Durchschnittliche Lead Time</strong>:</p>
+<div class="codehilite"><pre><span></span><code>Avg Lead Time = Summe aller Lead Times / Anzahl Deployments
+</code></pre></div>
+
+<p><strong>Median Lead Time</strong>:
+- Robuster gegen Ausreißer
+- Bessere Darstellung typischer Fälle</p>
+<p><strong>Perzentile</strong>:
+- P50 (Median)
+- P75
+- P90
+- P95</p>
+<h2 id="einflussfaktoren">Einflussfaktoren</h2>
+<h3 id="technische-faktoren">Technische Faktoren</h3>
+<ul>
+<li><strong>Automatisierungsgrad</strong>: Höhere Automatisierung = kürzere Lead Time</li>
+<li><strong>Architektur</strong>: Modulare Architektur ermöglicht schnellere Änderungen</li>
+<li><strong>Test-Strategie</strong>: Umfang und Geschwindigkeit der Tests</li>
+<li><strong>Infrastructure</strong>: Cloud vs. On-Premise</li>
+</ul>
+<h3 id="prozess-faktoren">Prozess-Faktoren</h3>
+<ul>
+<li><strong>Batch-Größe</strong>: Kleinere Batches = kürzere Lead Time</li>
+<li><strong>Review-Prozesse</strong>: Anzahl und Dauer der Reviews</li>
+<li><strong>Approval-Prozesse</strong>: Komplexität der Genehmigungen</li>
+<li><strong>Release-Planung</strong>: Feste Windows vs. On-Demand</li>
+</ul>
+<h3 id="organisatorische-faktoren">Organisatorische Faktoren</h3>
+<ul>
+<li><strong>Team-Struktur</strong>: Cross-funktionale Teams</li>
+<li><strong>Kommunikation</strong>: Effiziente Zusammenarbeit</li>
+<li><strong>Kultur</strong>: Vertrauen und Autonomie</li>
+<li><strong>Skills</strong>: Technische Fähigkeiten</li>
+</ul>
+<h2 id="verbesserungsansatze">Verbesserungsansätze</h2>
+<h3 id="kurzfristig-0-3-monate">Kurzfristig (0-3 Monate)</h3>
+<ol>
+<li><strong>Baseline etablieren</strong>: Aktuelle Lead Time messen</li>
+<li><strong>Bottlenecks identifizieren</strong>: Längste Phasen analysieren</li>
+<li><strong>Quick Wins</strong>: Offensichtliche Verzögerungen beseitigen</li>
+<li><strong>Awareness schaffen</strong>: Teams über Bedeutung informieren</li>
+</ol>
+<h3 id="mittelfristig-3-6-monate">Mittelfristig (3-6 Monate)</h3>
+<ol>
+<li><strong>Automatisierung ausbauen</strong>: CI/CD optimieren</li>
+<li><strong>Prozesse streamlinen</strong>: Unnötige Schritte eliminieren</li>
+<li><strong>Batch-Größe reduzieren</strong>: Kleinere, häufigere Änderungen</li>
+<li><strong>Team-Skills verbessern</strong>: Training und Coaching</li>
+</ol>
+<h3 id="langfristig-6-12-monate">Langfristig (6-12 Monate)</h3>
+<ol>
+<li><strong>Kulturwandel</strong>: Continuous Delivery Mindset</li>
+<li><strong>Architektur-Evolution</strong>: Modulare, entkoppelte Systeme</li>
+<li><strong>Organisationsstruktur</strong>: Cross-funktionale Teams</li>
+<li><strong>Continuous Improvement</strong>: Regelmäßige Optimierung</li>
+</ol>
+<h2 id="herausforderungen">Herausforderungen</h2>
+<h3 id="haufige-hindernisse">Häufige Hindernisse</h3>
+<ul>
+<li><strong>Legacy-Systeme</strong>: Langsame Build- und Test-Prozesse</li>
+<li><strong>Organisatorische Silos</strong>: Handoffs zwischen Teams</li>
+<li><strong>Compliance-Anforderungen</strong>: Umfangreiche Approval-Prozesse</li>
+<li><strong>Technische Schulden</strong>: Fehlende Automatisierung</li>
+</ul>
+<h3 id="losungsansatze">Lösungsansätze</h3>
+<ul>
+<li><strong>Inkrementelle Modernisierung</strong>: Schrittweise Verbesserung</li>
+<li><strong>DevOps-Kultur</strong>: Abbau von Silos</li>
+<li><strong>Automated Compliance</strong>: Automatisierte Checks</li>
+<li><strong>Technische Schulden abbauen</strong>: Dedizierte Zeit</li>
+</ul>
+<h2 id="best-practices">Best Practices</h2>
+<ol>
+<li><strong>Messen Sie kontinuierlich</strong>: Etablieren Sie automatisches Tracking</li>
+<li><strong>Visualisieren Sie Bottlenecks</strong>: Value Stream Mapping</li>
+<li><strong>Reduzieren Sie Batch-Größen</strong>: Kleinere, häufigere Änderungen</li>
+<li><strong>Automatisieren Sie alles</strong>: Investieren Sie in Automatisierung</li>
+<li><strong>Optimieren Sie den kritischen Pfad</strong>: Fokus auf längste Phasen</li>
+<li><strong>Fördern Sie Experimente</strong>: Schaffen Sie sichere Umgebungen</li>
+</ol>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0190_incident_response_procedures.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0210_lead_time_measurement.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

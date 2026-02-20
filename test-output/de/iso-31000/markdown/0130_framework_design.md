@@ -7,7 +7,7 @@ Classification: Internal
 
 # Rahmenwerk-Design
 
-**Dokument-ID:** [FRAMEWORK]-0130
+**Dokument-ID:** ISO-31000-0130
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

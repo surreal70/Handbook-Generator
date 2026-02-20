@@ -1,6 +1,6 @@
 # Appendix B: Asset and System Inventory
 
-**Document-ID:** [FRAMEWORK]-0720
+**Document-ID:** ISMS-0720
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

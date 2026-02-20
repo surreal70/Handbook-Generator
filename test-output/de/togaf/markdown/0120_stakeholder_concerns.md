@@ -6,7 +6,7 @@ Classification: Internal
 
 # Stakeholder-Anliegen
 
-**Dokument-ID:** [FRAMEWORK]-0120
+**Dokument-ID:** TOGAF-0120
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

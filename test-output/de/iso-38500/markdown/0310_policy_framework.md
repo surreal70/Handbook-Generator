@@ -7,7 +7,7 @@ Classification: Internal
 
 # IT-Governance-Richtlinien-Framework
 
-**Dokument-ID:** [FRAMEWORK]-0310
+**Dokument-ID:** ISO-38500-0310
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

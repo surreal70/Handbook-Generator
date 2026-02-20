@@ -6,7 +6,7 @@ Classification: Internal
 
 # Entity-Level Controls
 
-**Document-ID:** [FRAMEWORK]-0290
+**Document-ID:** COSO-0290
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

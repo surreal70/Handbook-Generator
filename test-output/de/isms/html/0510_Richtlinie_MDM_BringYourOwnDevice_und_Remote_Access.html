@@ -21,15 +21,17 @@
         
         <main>
 <h1 id="richtlinie-mdm-bring-your-own-device-und-remote-access">Richtlinie: MDM, Bring Your Own Device und Remote Access</h1>
-<p><strong>Dokument-ID:</strong> 0510<br />
-<strong>Dokumenttyp:</strong> Richtlinie (detailliert)<br />
-<strong>Zugehörige Policy:</strong> 0500_Policy_Mobile_Device_und_Remote_Work.md<br />
-<strong>Standard-Referenz:</strong> ISO/IEC 27001:2022 Annex A.6.7, A.8.9<br />
-<strong>Owner:</strong> {{ meta.it_operations.manager }}<br />
-<strong>Version:</strong> 1.0<br />
-<strong>Status:</strong> Freigegeben<br />
-<strong>Klassifizierung:</strong> Intern<br />
-<strong>Letzte Aktualisierung:</strong> {{ meta.document.date }}</p>
+<p><strong>Dokument-ID:</strong> 0510
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
 <hr />
 <h2 id="1-zweck-und-geltungsbereich">1. Zweck und Geltungsbereich</h2>
 <p>Diese Richtlinie konkretisiert die <code>0500_Policy_Mobile_Device_und_Remote_Work.md</code> und definiert:
@@ -39,7 +41,7 @@
 <p><strong>Geltungsbereich:</strong> Alle mobilen Geräte und Remote-Zugriffe bei <strong>AdminSend GmbH</strong></p>
 <h2 id="2-mobile-device-management-mdm">2. Mobile Device Management (MDM)</h2>
 <h3 id="21-mdm-system">2.1 MDM-System</h3>
-<p><strong>Plattform:</strong> {{ meta.mdm.system }} (z.B. Microsoft Intune, Jamf, MobileIron)</p>
+<p><strong>Plattform:</strong> {{ meta-handbook.mdm_system }} (z.B. Microsoft Intune, Jamf, MobileIron)</p>
 <p><strong>Verwaltete Geräte:</strong>
 - Unternehmenseigene Smartphones und Tablets
 - BYOD-Geräte mit Unternehmenszugriff
@@ -112,7 +114,7 @@
 5. Private Daten bleiben erhalten</p>
 <h2 id="4-remote-access">4. Remote Access</h2>
 <h3 id="41-vpn-zugriff">4.1 VPN-Zugriff</h3>
-<p><strong>VPN-System:</strong> {{ meta.network.vpn_solution }}</p>
+<p><strong>VPN-System:</strong> {{ meta-handbook.network_vpn_solution }}</p>
 <p><strong>Anforderungen:</strong>
 - Multi-Faktor-Authentifizierung (MFA)
 - Endpoint-Compliance-Check vor Verbindung
@@ -169,8 +171,8 @@
 <h2 id="6-mobile-application-management-mam">6. Mobile Application Management (MAM)</h2>
 <h3 id="61-genehmigte-apps">6.1 Genehmigte Apps</h3>
 <p><strong>Unternehmens-Apps:</strong>
-- E-Mail ({{ meta.email.mobile_app }})
-- Collaboration ({{ meta.collaboration.mobile_app }})
+- E-Mail ({{ meta-handbook.email_mobile_app }})
+- Collaboration ({{ meta-handbook.collaboration_mobile_app }})
 - VPN-Client
 - Authenticator-App</p>
 <p><strong>Genehmigungsprozess:</strong>
@@ -185,7 +187,7 @@
 <h2 id="7-incident-response">7. Incident Response</h2>
 <h3 id="71-gerateverlust">7.1 Geräteverlust</h3>
 <p><strong>Sofortmaßnahmen:</strong>
-1. Meldung an IT-Support ({{ meta.support.phone }})
+1. Meldung an IT-Support ({{ meta-handbook.support_phone }})
 2. Remote Wipe auslösen (innerhalb 1 Stunde)
 3. Passwörter ändern
 4. Incident-Ticket erstellen
@@ -244,9 +246,8 @@
 <li><strong>ISO/IEC 27001:2022 Annex A.8.9</strong> - Configuration management</li>
 <li><strong>NIST SP 800-124</strong> - Guidelines for Managing the Security of Mobile Devices</li>
 </ul>
-<hr />
-<p><strong>Genehmigt durch:</strong> Thomas Weber, CISO<br />
-<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+<p><strong>Genehmigt durch:</strong> [TODO], CISO<br />
+<strong>Nächster Review:</strong> [TODO]</p>
         </main>
         
         <nav class="page-nav">

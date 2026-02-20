@@ -1,6 +1,6 @@
 # TOE Physical Scope
 
-**Document-ID:** 0100
+**Document-ID:** COMMON-CRITERIA-0100
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

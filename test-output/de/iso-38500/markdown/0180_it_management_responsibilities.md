@@ -7,7 +7,7 @@ Classification: Internal
 
 # IT-Management-Verantwortlichkeiten
 
-**Dokument-ID:** [FRAMEWORK]-0180
+**Dokument-ID:** ISO-38500-0180
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

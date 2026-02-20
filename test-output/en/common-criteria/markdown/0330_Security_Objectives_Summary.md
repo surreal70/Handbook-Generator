@@ -1,6 +1,6 @@
 # Security Objectives Summary
 
-**Document-ID:** 0330
+**Document-ID:** COMMON-CRITERIA-0330
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

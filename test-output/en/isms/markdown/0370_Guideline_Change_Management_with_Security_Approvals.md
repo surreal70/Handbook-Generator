@@ -1,6 +1,6 @@
 # Guideline: Change Management with Security Approvals
 
-**Document-ID:** [FRAMEWORK]-0370
+**Document-ID:** ISMS-0370
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

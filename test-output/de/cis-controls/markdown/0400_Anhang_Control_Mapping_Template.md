@@ -1,6 +1,6 @@
 # Anhang: CIS-Control Mapping Template
 
-**Dokument-ID:** 0400
+**Dokument-ID:** CIS-CONTROLS-0400
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

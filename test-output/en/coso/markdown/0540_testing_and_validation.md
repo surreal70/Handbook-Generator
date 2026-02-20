@@ -6,7 +6,7 @@ Classification: Internal
 
 # Test- und Validierungsverfahren
 
-**Document-ID:** [FRAMEWORK]-0540
+**Document-ID:** COSO-0540
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

@@ -1,6 +1,6 @@
 # Context of the Organization and Interested Parties
 
-**Document-ID:** [FRAMEWORK]-0030
+**Document-ID:** ISMS-0030
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

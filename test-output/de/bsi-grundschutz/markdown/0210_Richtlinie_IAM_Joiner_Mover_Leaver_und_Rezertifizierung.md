@@ -1,6 +1,6 @@
 # Richtlinie: IAM Joiner Mover Leaver und Rezertifizierung
 
-**Dokument-ID:** 0210
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0210
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

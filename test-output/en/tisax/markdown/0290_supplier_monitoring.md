@@ -6,7 +6,7 @@ Classification: Internal
 
 # Supplier Monitoring
 
-**Document-ID:** [FRAMEWORK]-0290
+**Document-ID:** TISAX-0290
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

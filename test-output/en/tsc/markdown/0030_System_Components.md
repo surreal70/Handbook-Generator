@@ -1,6 +1,6 @@
 # System Components
 
-**Document-ID:** [FRAMEWORK]-0030
+**Document-ID:** TSC-0030
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

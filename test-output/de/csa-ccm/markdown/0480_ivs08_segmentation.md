@@ -6,7 +6,7 @@ Classification: Internal
 
 # IVS-08: Segmentierung
 
-**Dokument-ID:** [FRAMEWORK]-0480
+**Dokument-ID:** CSA-CCM-0480
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

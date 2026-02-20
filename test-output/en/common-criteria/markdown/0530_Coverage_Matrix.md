@@ -1,6 +1,6 @@
 # Coverage Matrix
 
-**Document-ID:** 0530
+**Document-ID:** COMMON-CRITERIA-0530
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

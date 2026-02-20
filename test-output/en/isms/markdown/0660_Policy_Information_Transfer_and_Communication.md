@@ -1,6 +1,6 @@
 # Policy: Information Transfer and Communication
 
-**Document-ID:** [FRAMEWORK]-0660
+**Document-ID:** ISMS-0660
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

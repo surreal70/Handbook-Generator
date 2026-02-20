@@ -1,6 +1,6 @@
 # Policy: Kryptografie und Schlüsselmanagement
 
-**Dokument-ID:** 0260
+**Dokument-ID:** ISMS-0260
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

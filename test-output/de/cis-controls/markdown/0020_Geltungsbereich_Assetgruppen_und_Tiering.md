@@ -1,6 +1,6 @@
 # Geltungsbereich, Assetgruppen und Tiering
 
-**Dokument-ID:** 0020
+**Dokument-ID:** CIS-CONTROLS-0020
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

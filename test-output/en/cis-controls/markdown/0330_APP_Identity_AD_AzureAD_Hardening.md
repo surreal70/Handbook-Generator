@@ -1,6 +1,6 @@
 # APP Hardening Baseline: Identity (AD/Azure AD/Entra ID)
 
-**Document-ID:** [FRAMEWORK]-0330
+**Document-ID:** CIS-CONTROLS-0330
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

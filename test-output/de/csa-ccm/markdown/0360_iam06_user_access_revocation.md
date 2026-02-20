@@ -6,7 +6,7 @@ Classification: Internal
 
 # IAM-06: Benutzerzugriffswiderruf
 
-**Dokument-ID:** [FRAMEWORK]-0360
+**Dokument-ID:** CSA-CCM-0360
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0510 - IKT-Kontinuität</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0510</div>
+            <h1>IKT-Kontinuität</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0500_business_continuity_planning.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0520_compliance_with_legal_requirements.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: tisax-0510</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="ikt-kontinuitat">IKT-Kontinuität</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0510
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="zweck">Zweck</h2>
+<p>Dieses Dokument beschreibt die Maßnahmen zur Sicherstellung der IKT-Kontinuität gemäß TISAX-Anforderungen.</p>
+<h2 id="geltungsbereich">Geltungsbereich</h2>
+<p>Dieses Dokument gilt für alle IT- und Kommunikationssysteme von [TODO].</p>
+<h2 id="ikt-kontinuitatsplanung">IKT-Kontinuitätsplanung</h2>
+<h3 id="kritische-systeme">Kritische Systeme</h3>
+<p><strong>Identifikation:</strong>
+- Geschäftskritische Anwendungen
+- Infrastruktur-Systeme
+- Kommunikationssysteme
+- Datenbanken</p>
+<p><strong>Priorisierung:</strong>
+- Tier 1: Kritisch (RTO &lt; 4 Stunden)
+- Tier 2: Wichtig (RTO &lt; 24 Stunden)
+- Tier 3: Standard (RTO &lt; 72 Stunden)</p>
+<h3 id="redundanz">Redundanz</h3>
+<p><strong>Technische Redundanz:</strong>
+- Redundante Server
+- Redundante Netzwerkverbindungen
+- Redundante Stromversorgung
+- Redundante Speichersysteme</p>
+<p><strong>Standort-Redundanz:</strong>
+- Primäres Rechenzentrum
+- Sekundäres Rechenzentrum
+- Cloud-Backup</p>
+<h2 id="disaster-recovery">Disaster Recovery</h2>
+<h3 id="dr-strategien">DR-Strategien</h3>
+<p><strong>Hot Site:</strong>
+- Vollständig gespiegelte Umgebung
+- Sofortige Umschaltung möglich
+- Für kritische Systeme</p>
+<p><strong>Warm Site:</strong>
+- Teilweise vorkonfigurierte Umgebung
+- Schnelle Aktivierung möglich
+- Für wichtige Systeme</p>
+<p><strong>Cold Site:</strong>
+- Grundinfrastruktur vorhanden
+- Manuelle Konfiguration erforderlich
+- Für weniger kritische Systeme</p>
+<h3 id="failover-prozesse">Failover-Prozesse</h3>
+<p><strong>Automatisches Failover:</strong>
+- Für kritische Systeme
+- Überwachung und Alarmierung
+- Automatische Umschaltung</p>
+<p><strong>Manuelles Failover:</strong>
+- Für weniger kritische Systeme
+- Dokumentierte Verfahren
+- Getestete Prozesse</p>
+<h2 id="backup-und-recovery">Backup und Recovery</h2>
+<h3 id="backup-strategie">Backup-Strategie</h3>
+<p><strong>Siehe:</strong> 0340_backup_and_recovery.md</p>
+<p><strong>IKT-spezifisch:</strong>
+- System-Images
+- Konfigurationsdateien
+- Datenbanken
+- Anwendungsdaten</p>
+<h3 id="recovery-verfahren">Recovery-Verfahren</h3>
+<p><strong>Prozess:</strong>
+1. Bewertung des Ausfalls
+2. Aktivierung des DR-Plans
+3. Wiederherstellung der Systeme
+4. Validierung
+5. Rückkehr zum Normalbetrieb</p>
+<h2 id="testing">Testing</h2>
+<h3 id="test-szenarien">Test-Szenarien</h3>
+<p><strong>Regelmäßig testen:</strong>
+- Kompletter Rechenzentrumsausfall
+- Ausfall kritischer Systeme
+- Netzwerkausfall
+- Datenwiederherstellung</p>
+<p><strong>Testfrequenz:</strong>
+- Kritische Systeme: Quartalsweise
+- Wichtige Systeme: Halbjährlich
+- Standard-Systeme: Jährlich</p>
+<h3 id="dokumentation">Dokumentation</h3>
+<p><strong>Nach jedem Test:</strong>
+- Test-Bericht
+- Identifizierte Probleme
+- Verbesserungsmaßnahmen
+- Aktualisierung der Pläne</p>
+<h2 id="tisax-spezifische-anforderungen">TISAX-spezifische Anforderungen</h2>
+<h3 id="vda-isa-kontrollen">VDA ISA Kontrollen</h3>
+<p>Dieses Dokument adressiert:
+- <strong>10.2</strong>: IKT-Kontinuität</p>
+<h3 id="assessment-nachweise">Assessment-Nachweise</h3>
+<ul>
+<li>DR-Pläne</li>
+<li>Redundanz-Dokumentation</li>
+<li>Test-Berichte</li>
+<li>Recovery-Nachweise</li>
+</ul>
+<h2 id="kennzahlen">Kennzahlen</h2>
+<p>[TODO] misst:
+- Systemverfügbarkeit
+- Erfolgsrate DR-Tests
+- Durchschnittliche Recovery-Zeit
+- Anzahl ungeplanter Ausfälle</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0500_business_continuity_planning.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0520_compliance_with_legal_requirements.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

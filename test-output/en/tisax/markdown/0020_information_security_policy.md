@@ -6,7 +6,7 @@ Classification: Internal
 
 # Information Security Policy
 
-**Document-ID:** [FRAMEWORK]-0020
+**Document-ID:** TISAX-0020
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

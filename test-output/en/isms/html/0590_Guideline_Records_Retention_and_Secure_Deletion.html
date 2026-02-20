@@ -21,15 +21,17 @@
         
         <main>
 <h1 id="guideline-records-retention-and-secure-deletion">Guideline: Records Retention and Secure Deletion</h1>
-<p><strong>Document ID:</strong> 0590<br />
-<strong>Document Type:</strong> Guideline (detailed)<br />
-<strong>Associated Policy:</strong> 0580_Policy_Retention_and_Deletion.md<br />
-<strong>Standard Reference:</strong> ISO/IEC 27001:2022 Annex A.5.33<br />
-<strong>Owner:</strong> {{ meta.compliance.manager }}<br />
-<strong>Version:</strong> 1.0<br />
-<strong>Status:</strong> Approved<br />
-<strong>Classification:</strong> Internal<br />
-<strong>Last Updated:</strong> {{ meta.document.date }}</p>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0590
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
 <hr />
 <h2 id="1-purpose-and-scope">1. Purpose and Scope</h2>
 <p>This guideline specifies the <code>0580_Policy_Retention_and_Deletion.md</code> and defines:
@@ -129,12 +131,12 @@
 <tbody>
 <tr>
 <td>Emails (business)</td>
-<td>{{ meta.retention.email_years }} years</td>
+<td>{{ meta-handbook.retention_email_years }} years</td>
 <td>Business correspondence</td>
 </tr>
 <tr>
 <td>Logs (security)</td>
-<td>{{ meta.retention.log_years }} years</td>
+<td>{{ meta-handbook.retention_log_years }} years</td>
 <td>Forensics, compliance</td>
 </tr>
 <tr>
@@ -149,7 +151,7 @@
 </tr>
 <tr>
 <td>Audit trails</td>
-<td>{{ meta.retention.audit_years }} years</td>
+<td>{{ meta-handbook.retention_audit_years }} years</td>
 <td>Compliance</td>
 </tr>
 </tbody>
@@ -284,18 +286,18 @@
 - Deletion method
 - Person performing deletion
 - Confirmation of deletion</p>
-<p><strong>Retention:</strong> {{ meta.retention.deletion_log_years }} years</p>
+<p><strong>Retention:</strong> {{ meta-handbook.retention_deletion_log_years }} years</p>
 <h2 id="5-email-archiving">5. Email Archiving</h2>
 <h3 id="51-archiving-obligation">5.1 Archiving Obligation</h3>
 <p><strong>Business Emails:</strong>
 - Automatic archiving
 - Immutability (WORM)
-- Retention: {{ meta.retention.email_years }} years</p>
+- Retention: {{ meta-handbook.retention_email_years }} years</p>
 <p><strong>Private Emails:</strong>
 - No archiving
 - Marking by user (Subject: [PRIVATE])</p>
 <h3 id="52-archiving-system">5.2 Archiving System</h3>
-<p><strong>System:</strong> {{ meta.email.archive_system }}</p>
+<p><strong>System:</strong> {{ meta-handbook.email_archive_system }}</p>
 <p><strong>Functions:</strong>
 - Automatic archiving
 - Full-text search
@@ -380,9 +382,8 @@
 <li><strong>HGB §257</strong> - Retention of documents</li>
 <li><strong>AO §147</strong> - Regulations for retention of documents</li>
 </ul>
-<hr />
-<p><strong>Approved by:</strong> Thomas Weber, CISO<br />
-<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<p><strong>Approved by:</strong> [TODO], CISO<br />
+<strong>Next Review:</strong> [TODO]</p>
         </main>
         
         <nav class="page-nav">

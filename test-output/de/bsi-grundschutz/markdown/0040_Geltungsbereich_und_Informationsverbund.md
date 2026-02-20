@@ -1,6 +1,6 @@
 # Geltungsbereich und Informationsverbund (Abgrenzung)
 
-**Dokument-ID:** 0040
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0040
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

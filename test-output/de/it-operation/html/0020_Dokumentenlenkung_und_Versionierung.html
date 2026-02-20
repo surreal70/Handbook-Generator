@@ -21,6 +21,18 @@
         
         <main>
 <h1 id="dokumentenlenkung-und-versionierung">Dokumentenlenkung und Versionierung</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0020
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
 <h2 id="dokumentmetadaten">Dokumentmetadaten</h2>
 <table>
 <thead>
@@ -44,19 +56,19 @@
 </tr>
 <tr>
 <td>Eigentümer (Owner)</td>
-<td>IT Operations Manager</td>
+<td>[TODO]</td>
 </tr>
 <tr>
 <td>Verantwortlicher Redakteur</td>
-<td>Andreas Huemmer [andreas.huemmer@adminsend.de]</td>
+<td>[Author]</td>
 </tr>
 <tr>
 <td>Freigabeinstanz</td>
-<td>CIO</td>
+<td>[TODO]</td>
 </tr>
 <tr>
 <td>Klassifizierung</td>
-<td>internal</td>
+<td>Internal</td>
 </tr>
 <tr>
 <td>Ablageort</td>
@@ -68,7 +80,7 @@
 </tr>
 <tr>
 <td>Standort</td>
-<td>München, Deutschland</td>
+<td>{{ meta-organisation.city }}, {{ meta-organisation.country }}</td>
 </tr>
 </tbody>
 </table>
@@ -85,11 +97,11 @@
 </thead>
 <tbody>
 <tr>
-<td>1.0.0</td>
+<td>0</td>
 <td>[TODO: Datum]</td>
-<td>Andreas Huemmer [andreas.huemmer@adminsend.de]</td>
+<td>[Author]</td>
 <td>Initiale Version</td>
-<td>CIO</td>
+<td>[TODO]</td>
 </tr>
 <tr>
 <td></td>
@@ -141,12 +153,12 @@
 - Begründung und Geschäftswert
 - Auswirkungsanalyse
 - Betroffene Abschnitte</p>
-<p><strong>Genehmigung:</strong> IT Operations Manager</p>
+<p><strong>Genehmigung:</strong> [TODO]</p>
 <h3 id="2-fachreview">2. Fachreview</h3>
 <p><strong>Reviewer:</strong>
-- <strong>Operations:</strong> Andreas Huemmer (andreas.huemmer@adminsend.de)
+- <strong>Operations:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }} ({{ meta-organisation-roles.role_IT_Operations_Manager_email }})
 - <strong>Architektur:</strong> [TODO: Architektur-Verantwortlicher]
-- <strong>Security:</strong> Thomas Weber (thomas.weber@adminsend.de)
+- <strong>Security:</strong> [TODO] ({{ meta-organisation-roles.role_CISO_email }})
 - <strong>Compliance:</strong> [TODO: Compliance-Verantwortlicher]</p>
 <p><strong>Prüfkriterien:</strong>
 - Fachliche Korrektheit
@@ -154,7 +166,7 @@
 - Konsistenz mit anderen Dokumenten
 - Einhaltung von Standards und Best Practices</p>
 <h3 id="3-freigabe">3. Freigabe</h3>
-<p><strong>Freigabeinstanz:</strong> CIO</p>
+<p><strong>Freigabeinstanz:</strong> [TODO]</p>
 <p><strong>Freigabekriterien:</strong>
 - Alle Reviews abgeschlossen
 - Keine offenen Kommentare
@@ -163,11 +175,11 @@
 <p><strong>Freigabeprozess:</strong>
 1. Review-Kommentare einarbeiten
 2. Finale Version erstellen
-3. Freigabe durch CIO
+3. Freigabe durch [TODO]
 4. Version inkrementieren
 5. Publikation im Repository</p>
 <h3 id="4-publikation">4. Publikation</h3>
-<p><strong>Verantwortlich:</strong> IT Operations Manager</p>
+<p><strong>Verantwortlich:</strong> [TODO]</p>
 <p><strong>Schritte:</strong>
 1. Dokument im zentralen Repository ablegen
 2. Stakeholder informieren
@@ -182,13 +194,13 @@
 </ul>
 <h3 id="normale-anderungen-minor">Normale Änderungen (Minor)</h3>
 <ul>
-<li><strong>Genehmigung:</strong> CIO</li>
+<li><strong>Genehmigung:</strong> [TODO]</li>
 <li><strong>Review:</strong> Fachbereich (Operations/Security)</li>
 <li><strong>Beispiele:</strong> Neue Abschnitte, Prozessänderungen</li>
 </ul>
 <h3 id="wesentliche-anderungen-major">Wesentliche Änderungen (Major)</h3>
 <ul>
-<li><strong>Genehmigung:</strong> Anna Schmidt (anna.schmidt@adminsend.de)</li>
+<li><strong>Genehmigung:</strong> [TODO] ({{ meta-organisation-roles.role_CIO_email }})</li>
 <li><strong>Review:</strong> Alle Fachbereiche + Management</li>
 <li><strong>CAB-Sitzung:</strong> Erforderlich</li>
 <li><strong>Beispiele:</strong> Grundlegende Überarbeitungen, Architekturänderungen</li>
@@ -196,7 +208,7 @@
 <h2 id="dokumentationsstandards">Dokumentationsstandards</h2>
 <h3 id="sprache-und-format">Sprache und Format</h3>
 <ul>
-<li><strong>Sprache:</strong> de</li>
+<li><strong>Sprache:</strong> {{ meta-handbook.language }}</li>
 <li><strong>Format:</strong> Markdown (.md)</li>
 <li><strong>Zeichensatz:</strong> UTF-8</li>
 <li><strong>Zeilenumbruch:</strong> Unix (LF)</li>
@@ -230,9 +242,9 @@
 <p>Verwenden Sie folgende Platzhalter für organisationsweite Informationen:</p>
 <ul>
 <li><strong>Organisation:</strong> <code>AdminSend GmbH</code></li>
-<li><strong>Rollen:</strong> <code>Max Mustermann</code>, <code>Anna Schmidt</code>, <code>Thomas Weber</code></li>
-<li><strong>Dokument:</strong> <code>IT Operations Manager</code>, <code>CIO</code></li>
-<li><strong>Autor:</strong> <code>Andreas Huemmer [andreas.huemmer@adminsend.de]</code></li>
+<li><strong>Rollen:</strong> <code>[TODO]</code>, <code>[TODO]</code>, <code>[TODO]</code></li>
+<li><strong>Dokument:</strong> <code>[TODO]</code>, <code>[TODO]</code></li>
+<li><strong>Autor:</strong> <code>Handbook-Generator</code></li>
 </ul>
 <h2 id="dokumentenklassifizierung">Dokumentenklassifizierung</h2>
 <table>
@@ -271,7 +283,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Aktuelle Klassifizierung:</strong> internal</p>
+<p><strong>Aktuelle Klassifizierung:</strong> Internal</p>
 <h2 id="archivierung-und-aufbewahrung">Archivierung und Aufbewahrung</h2>
 <h3 id="aufbewahrungsfristen">Aufbewahrungsfristen</h3>
 <ul>
@@ -300,39 +312,38 @@
 <tr>
 <td><strong>Dokumentverantwortlicher</strong></td>
 <td>Gesamtverantwortung, Aktualität</td>
-<td>IT Operations Manager</td>
+<td>[TODO]</td>
 </tr>
 <tr>
 <td><strong>Redakteur</strong></td>
 <td>Inhaltliche Pflege, Änderungen</td>
-<td>Andreas Huemmer [andreas.huemmer@adminsend.de]</td>
+<td>[Author]</td>
 </tr>
 <tr>
 <td><strong>Freigabeinstanz</strong></td>
 <td>Genehmigung von Änderungen</td>
-<td>CIO</td>
+<td>[TODO]</td>
 </tr>
 <tr>
 <td><strong>CIO</strong></td>
 <td>Strategische Ausrichtung</td>
-<td>Anna Schmidt</td>
+<td>[TODO]</td>
 </tr>
 <tr>
 <td><strong>CISO</strong></td>
 <td>Security-Review</td>
-<td>Thomas Weber</td>
+<td>[TODO]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="kontakte">Kontakte</h2>
 <p><strong>Bei Fragen zur Dokumentenlenkung:</strong>
-- <strong>Dokumentverantwortlicher:</strong> IT Operations Manager
-- <strong>IT Operations Manager:</strong> Andreas Huemmer (andreas.huemmer@adminsend.de)
-- <strong>CIO:</strong> Anna Schmidt (anna.schmidt@adminsend.de)</p>
-<hr />
-<p><strong>Dokumentverantwortlicher:</strong> IT Operations Manager<br />
-<strong>Genehmigt durch:</strong> CIO<br />
-<strong>Version:</strong> 1.0.0<br />
+- <strong>Dokumentverantwortlicher:</strong> [TODO]
+- <strong>IT Operations Manager:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }} ({{ meta-organisation-roles.role_IT_Operations_Manager_email }})
+- <strong>CIO:</strong> [TODO] ({{ meta-organisation-roles.role_CIO_email }})</p>
+<p><strong>Dokumentverantwortlicher:</strong> [TODO]<br />
+<strong>Genehmigt durch:</strong> [TODO]<br />
+<strong>Version:</strong> 0<br />
 <strong>Organisation:</strong> AdminSend GmbH</p>
         </main>
         

@@ -6,7 +6,7 @@ Classification: Internal
 
 # IKT-Kontinuität
 
-**Dokument-ID:** [FRAMEWORK]-0080
+**Dokument-ID:** TISAX-0080
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

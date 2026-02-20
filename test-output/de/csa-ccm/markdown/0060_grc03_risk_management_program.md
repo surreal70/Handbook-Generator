@@ -6,7 +6,7 @@ Classification: Internal
 
 # GRC-03: Risikomanagement-Programm
 
-**Dokument-ID:** [FRAMEWORK]-0060
+**Dokument-ID:** CSA-CCM-0060
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

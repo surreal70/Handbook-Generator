@@ -6,7 +6,7 @@ Classification: Internal
 
 # Reifegrad-Assessment
 
-**Dokument-ID:** [FRAMEWORK]-0050
+**Dokument-ID:** DORA-0050
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

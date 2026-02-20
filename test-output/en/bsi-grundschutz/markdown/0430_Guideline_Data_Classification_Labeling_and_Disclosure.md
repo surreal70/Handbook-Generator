@@ -1,6 +1,6 @@
 # Guideline: Data Classification Labeling and Disclosure
 
-**Document-ID:** [FRAMEWORK]-0430
+**Document-ID:** BSI-GRUNDSCHUTZ-0430
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

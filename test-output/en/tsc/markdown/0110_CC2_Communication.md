@@ -1,6 +1,6 @@
 # CC2: Communication and Information
 
-**Document-ID:** [FRAMEWORK]-0110
+**Document-ID:** TSC-0110
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

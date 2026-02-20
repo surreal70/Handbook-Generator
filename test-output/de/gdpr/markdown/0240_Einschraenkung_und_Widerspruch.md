@@ -1,6 +1,6 @@
 # Einschränkung und Widerspruch
 
-**Dokument-ID:** 0240
+**Dokument-ID:** GDPR-0240
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

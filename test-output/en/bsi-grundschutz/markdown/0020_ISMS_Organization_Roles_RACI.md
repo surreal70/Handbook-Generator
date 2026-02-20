@@ -1,6 +1,6 @@
 # ISMS Organization, Roles and Responsibilities
 
-**Document-ID:** [FRAMEWORK]-0020
+**Document-ID:** BSI-GRUNDSCHUTZ-0020
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

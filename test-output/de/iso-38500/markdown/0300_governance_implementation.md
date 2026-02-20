@@ -7,7 +7,7 @@ Classification: Internal
 
 # IT-Governance-Implementierung
 
-**Dokument-ID:** [FRAMEWORK]-0300
+**Dokument-ID:** ISO-38500-0300
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

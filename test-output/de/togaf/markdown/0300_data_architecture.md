@@ -6,7 +6,7 @@ Classification: Internal
 
 # Daten-Architecture
 
-**Dokument-ID:** [FRAMEWORK]-0300
+**Dokument-ID:** TOGAF-0300
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

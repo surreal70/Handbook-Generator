@@ -7,7 +7,7 @@ Classification: Internal
 
 # Mitigation (RS.MI)
 
-**Document-ID:** [FRAMEWORK]-0430
+**Document-ID:** NIST-CSF-0430
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

@@ -6,7 +6,7 @@ Classification: Internal
 
 # Risk Management
 
-**Document-ID:** [FRAMEWORK]-0040
+**Document-ID:** TISAX-0040
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

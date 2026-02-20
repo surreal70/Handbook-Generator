@@ -6,7 +6,7 @@ Classification: Internal
 
 # Business Capability Model
 
-**Dokument-ID:** [FRAMEWORK]-0210
+**Dokument-ID:** TOGAF-0210
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

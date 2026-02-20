@@ -7,7 +7,7 @@ Classification: Internal
 
 # Prinzip 6: Beste verfügbare Informationen
 
-**Dokument-ID:** [FRAMEWORK]-0060
+**Dokument-ID:** ISO-31000-0060
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

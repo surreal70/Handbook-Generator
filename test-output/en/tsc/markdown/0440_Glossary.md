@@ -1,6 +1,6 @@
 # Appendix: Glossary
 
-**Document-ID:** [FRAMEWORK]-0440
+**Document-ID:** TSC-0440
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

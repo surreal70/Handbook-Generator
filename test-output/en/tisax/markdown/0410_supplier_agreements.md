@@ -6,7 +6,7 @@ Classification: Internal
 
 # Supplier Agreements
 
-**Document-ID:** [FRAMEWORK]-0410
+**Document-ID:** TISAX-0410
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

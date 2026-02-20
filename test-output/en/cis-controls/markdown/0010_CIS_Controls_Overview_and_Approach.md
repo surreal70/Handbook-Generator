@@ -1,6 +1,6 @@
 # CIS Controls – Overview and Approach
 
-**Document-ID:** [FRAMEWORK]-0010
+**Document-ID:** CIS-CONTROLS-0010
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

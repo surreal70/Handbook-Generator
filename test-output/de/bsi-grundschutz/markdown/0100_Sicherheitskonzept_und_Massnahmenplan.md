@@ -1,6 +1,6 @@
 # Sicherheitskonzept und Maßnahmenplan
 
-**Dokument-ID:** 0100
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0100
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

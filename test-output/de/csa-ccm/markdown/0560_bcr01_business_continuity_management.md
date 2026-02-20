@@ -6,7 +6,7 @@ Classification: Internal
 
 # BCR-01: Geschäftskontinuitätsmanagement
 
-**Dokument-ID:** [FRAMEWORK]-0560
+**Dokument-ID:** CSA-CCM-0560
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

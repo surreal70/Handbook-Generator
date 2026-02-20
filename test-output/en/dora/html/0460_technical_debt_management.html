@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0460 - Technical Debt Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0460</div>
+            <h1>Technical Debt Management</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0450_monitoring_observability.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<span class="nav-next disabled">—</span>
+        </nav>
+        
+        <main>
+<p>Document-ID: dora-0460</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="technical-debt-management">Technical Debt Management</h1>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0460
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="purpose">Purpose</h2>
+<p>Management of technical debt to reduce Change Failure Rate.</p>
+<h2 id="scope">Scope</h2>
+<ul>
+<li>Technical debt definition</li>
+<li>Identification and measurement</li>
+<li>Prioritization</li>
+<li>Reduction strategies</li>
+</ul>
+<h2 id="organization-information">Organization Information</h2>
+<ul>
+<li><strong>Organization</strong>: [TODO]</li>
+<li><strong>Tech Debt Owner</strong>: [TODO]</li>
+<li><strong>Current Tech Debt</strong>: [TODO]</li>
+</ul>
+<h2 id="technical-debt-definition">Technical Debt Definition</h2>
+<h3 id="types-of-technical-debt">Types of Technical Debt</h3>
+<p><strong>1. Code Debt</strong>:
+- Code smells
+- Duplicate code
+- Complex code
+- Outdated patterns</p>
+<p><strong>2. Architecture Debt</strong>:
+- Tight coupling
+- Missing abstractions
+- Monolithic structure
+- Legacy dependencies</p>
+<p><strong>3. Test Debt</strong>:
+- Low test coverage
+- Flaky tests
+- Missing tests
+- Outdated tests</p>
+<p><strong>4. Documentation Debt</strong>:
+- Missing documentation
+- Outdated documentation
+- Incomplete documentation</p>
+<h2 id="identification-and-measurement">Identification and Measurement</h2>
+<h3 id="code-quality-metrics">Code Quality Metrics</h3>
+<p><strong>SonarQube Metrics</strong>:
+- Technical debt ratio
+- Code smells
+- Bugs
+- Vulnerabilities
+- Duplication</p>
+<p><strong>Example</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">sonarqube</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">metrics</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">tech_debt_ratio</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5%</span>
+<span class="w">    </span><span class="nt">code_smells</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">150</span>
+<span class="w">    </span><span class="nt">bugs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">    </span><span class="nt">vulnerabilities</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">    </span><span class="nt">duplication</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3%</span>
+</code></pre></div>
+
+<h3 id="automated-analysis">Automated Analysis</h3>
+<p><strong>Static Code Analysis</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Run SonarQube analysis</span>
+sonar-scanner<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-Dsonar.projectKey<span class="o">=</span>myproject<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-Dsonar.sources<span class="o">=</span>src<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-Dsonar.host.url<span class="o">=</span>http://sonarqube:9000
+</code></pre></div>
+
+<h2 id="prioritization">Prioritization</h2>
+<h3 id="impact-effort-matrix">Impact-Effort Matrix</h3>
+<p><strong>High Impact, Low Effort</strong> (P1):
+- Critical bugs
+- Security vulnerabilities
+- Performance bottlenecks</p>
+<p><strong>High Impact, High Effort</strong> (P2):
+- Architecture refactoring
+- Major rewrites
+- System modernization</p>
+<p><strong>Low Impact, Low Effort</strong> (P3):
+- Code cleanup
+- Documentation updates
+- Minor refactoring</p>
+<p><strong>Low Impact, High Effort</strong> (P4):
+- Nice-to-have features
+- Cosmetic changes</p>
+<h3 id="risk-assessment">Risk Assessment</h3>
+<p><strong>Criteria</strong>:
+- Change frequency
+- Business criticality
+- Failure impact
+- Maintenance cost</p>
+<h2 id="reduction-strategies">Reduction Strategies</h2>
+<h3 id="boy-scout-rule">Boy Scout Rule</h3>
+<p><strong>Principle</strong>: "Leave the code better than you found it"</p>
+<p><strong>Implementation</strong>:
+- Small improvements with each change
+- Refactoring during feature development
+- Continuous improvement</p>
+<h3 id="dedicated-tech-debt-sprints">Dedicated Tech Debt Sprints</h3>
+<p><strong>Approach</strong>:
+- 20% of sprint capacity for tech debt
+- Dedicated tech debt sprints (quarterly)
+- Tech debt Fridays</p>
+<h3 id="refactoring-patterns">Refactoring Patterns</h3>
+<p><strong>Strangler Fig Pattern</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="mf">1.</span><span class="w"> </span><span class="n">Identify</span><span class="w"> </span><span class="n">component</span><span class="w"> </span><span class="kr">to</span><span class="w"> </span><span class="n">replace</span>
+<span class="mf">2.</span><span class="w"> </span><span class="n">Create</span><span class="w"> </span><span class="kr">new</span><span class="w"> </span><span class="n">implementation</span>
+<span class="mf">3.</span><span class="w"> </span><span class="n">Route</span><span class="w"> </span><span class="n">traffic</span><span class="w"> </span><span class="n">gradually</span>
+<span class="mf">4.</span><span class="w"> </span><span class="n">Deprecate</span><span class="w"> </span><span class="n">old</span><span class="w"> </span><span class="n">implementation</span>
+<span class="mf">5.</span><span class="w"> </span><span class="c1">Remove old code</span>
+</code></pre></div>
+
+<p><strong>Branch by Abstraction</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="mf">1.</span><span class="w"> </span><span class="n">Create</span><span class="w"> </span><span class="nb">abs</span><span class="n">traction</span><span class="w"> </span><span class="n">layer</span>
+<span class="mf">2.</span><span class="w"> </span><span class="n">Implement</span><span class="w"> </span><span class="kr">new</span><span class="w"> </span><span class="n">version</span>
+<span class="mf">3.</span><span class="w"> </span><span class="n">Switch</span><span class="w"> </span><span class="n">implementations</span>
+<span class="mf">4.</span><span class="w"> </span><span class="c1">Remove old version</span>
+</code></pre></div>
+
+<h2 id="prevention">Prevention</h2>
+<h3 id="code-reviews">Code Reviews</h3>
+<p><strong>Focus Areas</strong>:
+- Code quality
+- Test coverage
+- Documentation
+- Architecture compliance</p>
+<h3 id="definition-of-done">Definition of Done</h3>
+<p><strong>Criteria</strong>:
+- Code reviewed
+- Tests written
+- Documentation updated
+- No new tech debt introduced</p>
+<h3 id="automated-quality-gates">Automated Quality Gates</h3>
+<div class="codehilite"><pre><span></span><code><span class="nt">quality_gate</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">conditions</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">metric</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">coverage</span>
+<span class="w">      </span><span class="nt">operator</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LESS_THAN</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span>
+<span class="w">      </span><span class="nt">status</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FAILED</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">metric</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">duplicated_lines_density</span>
+<span class="w">      </span><span class="nt">operator</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GREATER_THAN</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">      </span><span class="nt">status</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FAILED</span>
+</code></pre></div>
+
+<h2 id="monitoring-and-tracking">Monitoring and Tracking</h2>
+<h3 id="tech-debt-dashboard">Tech Debt Dashboard</h3>
+<p><strong>Metrics</strong>:
+- Tech debt ratio trend
+- New vs resolved debt
+- Debt by category
+- Debt by team</p>
+<h3 id="regular-reviews">Regular Reviews</h3>
+<p><strong>Frequency</strong>:
+- Weekly code quality reviews
+- Monthly tech debt reviews
+- Quarterly architecture reviews</p>
+<h2 id="best-practices">Best Practices</h2>
+<ol>
+<li><strong>Make it Visible</strong>: Track and visualize tech debt</li>
+<li><strong>Prioritize Ruthlessly</strong>: Focus on high-impact debt</li>
+<li><strong>Prevent New Debt</strong>: Quality gates and reviews</li>
+<li><strong>Allocate Time</strong>: Dedicate capacity for debt reduction</li>
+<li><strong>Measure Progress</strong>: Track debt reduction over time</li>
+<li><strong>Celebrate Wins</strong>: Recognize debt reduction efforts</li>
+</ol>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0450_monitoring_observability.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<span class="nav-next disabled">—</span>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

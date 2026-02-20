@@ -1,6 +1,6 @@
 # Internes Auditprogramm (Template)
 
-**Dokument-ID:** 0130
+**Dokument-ID:** ISMS-0130
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

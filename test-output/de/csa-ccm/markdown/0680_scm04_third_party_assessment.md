@@ -6,7 +6,7 @@ Classification: Internal
 
 # SCM-04: Drittanbieterbewertung
 
-**Dokument-ID:** [FRAMEWORK]-0680
+**Dokument-ID:** CSA-CCM-0680
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

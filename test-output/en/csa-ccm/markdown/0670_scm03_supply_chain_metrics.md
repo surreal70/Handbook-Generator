@@ -6,7 +6,7 @@ Classification: Internal
 
 # SCM-03: Supply Chain Metrics
 
-**Document-ID:** [FRAMEWORK]-0670
+**Document-ID:** CSA-CCM-0670
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

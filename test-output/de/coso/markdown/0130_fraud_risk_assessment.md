@@ -6,7 +6,7 @@ Classification: Internal
 
 # Betrugrisikobewertung
 
-**Dokument-ID:** [FRAMEWORK]-0130
+**Dokument-ID:** COSO-0130
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

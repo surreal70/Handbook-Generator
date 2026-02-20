@@ -7,7 +7,7 @@ Classification: Internal
 
 # Prinzip 2: Strategie (Strategy)
 
-**Dokument-ID:** [FRAMEWORK]-0050
+**Dokument-ID:** ISO-38500-0050
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

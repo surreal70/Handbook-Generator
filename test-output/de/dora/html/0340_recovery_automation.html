@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0340 - Recovery Automation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0340</div>
+            <h1>Recovery Automation</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0330_incident_response_procedures.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0350_mttr_improvement.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: dora-0340</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="recovery-automation">Recovery Automation</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0340
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="zweck">Zweck</h2>
+<p>Automatisierung von Recovery-Prozessen zur Reduzierung der MTTR.</p>
+<h2 id="umfang">Umfang</h2>
+<ul>
+<li>Automated Rollback</li>
+<li>Self-Healing Systems</li>
+<li>Chaos Engineering</li>
+<li>Recovery Automation Tools</li>
+</ul>
+<h2 id="organisationsinformationen">Organisationsinformationen</h2>
+<ul>
+<li><strong>Organisation</strong>: [TODO]</li>
+<li><strong>Automation-Verantwortlicher</strong>: [TODO]</li>
+</ul>
+<h2 id="automated-rollback">Automated Rollback</h2>
+<h3 id="rollback-strategien">Rollback-Strategien</h3>
+<p><strong>Automatische Trigger</strong>:
+- Error Rate &gt; Threshold
+- Performance Degradation
+- Health Check Failures
+- User-Reported Issues</p>
+<p><strong>Rollback-Mechanismen</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">deployment</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">strategy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">blue-green</span>
+<span class="w">  </span><span class="nt">health_check</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/health</span>
+<span class="w">    </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10s</span>
+<span class="w">    </span><span class="nt">threshold</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">  </span><span class="nt">auto_rollback</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">conditions</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">error_rate &gt; 5%</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">response_time_p95 &gt; 1000ms</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">health_check_failures &gt; 3</span>
+</code></pre></div>
+
+<h3 id="feature-flags">Feature Flags</h3>
+<p><strong>Instant Rollback</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">if</span> <span class="n">feature_flag</span><span class="p">(</span><span class="s1">&#39;new_feature&#39;</span><span class="p">):</span>
+    <span class="n">new_implementation</span><span class="p">()</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">old_implementation</span><span class="p">()</span>
+</code></pre></div>
+
+<p><strong>Gradual Rollout</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">rollout_percentage</span> <span class="o">=</span> <span class="n">get_rollout_percentage</span><span class="p">(</span><span class="s1">&#39;new_feature&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">rollout_percentage</span><span class="p">:</span>
+    <span class="n">new_implementation</span><span class="p">()</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">old_implementation</span><span class="p">()</span>
+</code></pre></div>
+
+<h2 id="self-healing-systems">Self-Healing Systems</h2>
+<h3 id="auto-scaling">Auto-Scaling</h3>
+<p><strong>Horizontal Scaling</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">autoscaling</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">min_replicas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="w">  </span><span class="nt">max_replicas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">  </span><span class="nt">metrics</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cpu</span>
+<span class="w">      </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">70%</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">memory</span>
+<span class="w">      </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80%</span>
+</code></pre></div>
+
+<h3 id="auto-restart">Auto-Restart</h3>
+<p><strong>Health-based Restart</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">livenessProbe</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">httpGet</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/health</span>
+<span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080</span>
+<span class="w">  </span><span class="nt">initialDelaySeconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+<span class="w">  </span><span class="nt">periodSeconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="w">  </span><span class="nt">failureThreshold</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+</code></pre></div>
+
+<h3 id="circuit-breakers">Circuit Breakers</h3>
+<p><strong>Failure Isolation</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nd">@circuit_breaker</span><span class="p">(</span>
+    <span class="n">failure_threshold</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">recovery_timeout</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span>
+    <span class="n">expected_exception</span><span class="o">=</span><span class="n">ServiceUnavailable</span>
+<span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">call_external_service</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">external_api</span><span class="o">.</span><span class="n">call</span><span class="p">()</span>
+</code></pre></div>
+
+<h2 id="chaos-engineering">Chaos Engineering</h2>
+<h3 id="chaos-experiments">Chaos Experiments</h3>
+<p><strong>Failure Injection</strong>:
+- Random Pod Termination
+- Network Latency Injection
+- Resource Exhaustion
+- Dependency Failures</p>
+<p><strong>Example</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">chaos-mesh.org/v1alpha1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PodChaos</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pod-failure</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">action</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pod-failure</span>
+<span class="w">  </span><span class="nt">mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">one</span>
+<span class="w">  </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;30s&quot;</span>
+<span class="w">  </span><span class="nt">selector</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">namespaces</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">production</span>
+</code></pre></div>
+
+<h3 id="game-days">Game Days</h3>
+<p><strong>Scheduled Chaos</strong>:
+- Monatliche Chaos-Tests
+- Team-Übungen
+- Runbook-Validierung
+- Recovery-Prozess-Tests</p>
+<h2 id="recovery-automation-tools">Recovery Automation Tools</h2>
+<h3 id="kubernetes-operators">Kubernetes Operators</h3>
+<p><strong>Custom Recovery Logic</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">r</span><span class="w"> </span><span class="o">*</span><span class="nx">Reconciler</span><span class="p">)</span><span class="w"> </span><span class="nx">Reconcile</span><span class="p">(</span><span class="nx">ctx</span><span class="w"> </span><span class="nx">context</span><span class="p">.</span><span class="nx">Context</span><span class="p">,</span><span class="w"> </span><span class="nx">req</span><span class="w"> </span><span class="nx">ctrl</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nx">ctrl</span><span class="p">.</span><span class="nx">Result</span><span class="p">,</span><span class="w"> </span><span class="kt">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Check health</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">!</span><span class="nx">isHealthy</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Trigger recovery</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">r</span><span class="p">.</span><span class="nb">recover</span><span class="p">()</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">ctrl</span><span class="p">.</span><span class="nx">Result</span><span class="p">{},</span><span class="w"> </span><span class="kc">nil</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="automation-scripts">Automation Scripts</h3>
+<p><strong>Automated Recovery</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="c1"># auto_recovery.sh</span>
+
+check_health<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>curl<span class="w"> </span>-f<span class="w"> </span>http://localhost:8080/health
+<span class="o">}</span>
+
+recover<span class="o">()</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Triggering recovery...&quot;</span>
+<span class="w">    </span>kubectl<span class="w"> </span>rollout<span class="w"> </span>undo<span class="w"> </span>deployment/app
+<span class="w">    </span>kubectl<span class="w"> </span>rollout<span class="w"> </span>status<span class="w"> </span>deployment/app
+<span class="o">}</span>
+
+<span class="k">if</span><span class="w"> </span>!<span class="w"> </span>check_health<span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span>recover
+<span class="k">fi</span>
+</code></pre></div>
+
+<h2 id="monitoring-und-alerting">Monitoring und Alerting</h2>
+<h3 id="recovery-metrics">Recovery Metrics</h3>
+<ul>
+<li>Recovery Success Rate</li>
+<li>Automated vs Manual Recovery</li>
+<li>Recovery Duration</li>
+<li>False Positive Rate</li>
+</ul>
+<h3 id="dashboards">Dashboards</h3>
+<ul>
+<li>Real-time Recovery Status</li>
+<li>Recovery Trends</li>
+<li>Automation Effectiveness</li>
+</ul>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0330_incident_response_procedures.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0350_mttr_improvement.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,6 +1,6 @@
 # Crisis Management Plan
 
-**Document-ID:** [FRAMEWORK]-0120
+**Document-ID:** BCM-0120
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

@@ -7,7 +7,7 @@ Classification: Internal
 
 # Wartung (PR.MA)
 
-**Dokument-ID:** [FRAMEWORK]-0240
+**Dokument-ID:** NIST-CSF-0240
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

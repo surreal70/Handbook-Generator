@@ -7,7 +7,7 @@ Classification: Internal
 
 # Risikoregister-Pflege
 
-**Dokument-ID:** [FRAMEWORK]-0420
+**Dokument-ID:** ISO-31000-0420
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

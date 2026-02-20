@@ -6,7 +6,7 @@ Classification: Internal
 
 # HRS-06: Mobile Device Management
 
-**Document-ID:** [FRAMEWORK]-0760
+**Document-ID:** CSA-CCM-0760
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

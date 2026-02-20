@@ -1,6 +1,6 @@
 # Richtlinie: Backup Restore und Regelmaessige Tests
 
-**Dokument-ID:** 0450
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0450
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

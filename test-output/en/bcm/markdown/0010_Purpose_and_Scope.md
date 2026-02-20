@@ -1,6 +1,6 @@
 # Purpose and Scope
 
-**Document-ID:** [FRAMEWORK]-0010
+**Document-ID:** BCM-0010
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

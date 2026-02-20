@@ -21,10 +21,22 @@
         
         <main>
 <h1 id="problem-management-and-postmortems">Problem Management and Postmortems</h1>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0130
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
 <h2 id="purpose-and-scope">Purpose and Scope</h2>
 <p>This document describes the problem management process for AdminSend GmbH according to ITIL v4 best practices. It defines the systematic analysis of recurring incidents, root cause analysis methods, postmortem processes, and the management of the Known Error Database.</p>
 <p><strong>Scope:</strong> All IT services and systems of AdminSend GmbH</p>
-<p><strong>Responsible:</strong> Andreas Huemmer (andreas.huemmer@adminsend.de)</p>
+<p><strong>Responsible:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }} ({{ meta-organisation-roles.role_IT_Operations_Manager_email }})</p>
 <h2 id="problem-definition">Problem Definition</h2>
 <p>A <strong>problem</strong> is the unknown cause of one or more incidents. The goal of problem management is to identify and eliminate the root cause to prevent future incidents.</p>
 <h3 id="distinction-incident-vs-problem">Distinction: Incident vs. Problem</h3>
@@ -134,7 +146,7 @@
 - Affected services/systems
 - Affected configuration items (CIs)
 - Initial hypotheses about cause</p>
-<p><strong>Tool:</strong> {{ meta.ticketing_system }}</p>
+<p><strong>Tool:</strong> {{ meta-handbook.ticketing_system }}</p>
 <p><strong>Responsible:</strong> Problem Manager</p>
 <h3 id="3-problem-categorization">3. Problem Categorization</h3>
 <p><strong>Categories:</strong>
@@ -602,8 +614,8 @@
 3. Configure connection timeout: <code>idle_in_transaction_session_timeout = 60000</code>
 4. Improve connection pool monitoring</p>
 <p><strong>Affected CIs:</strong>
-- {{ netbox.database.server }}
-- {{ netbox.application.server }}</p>
+- [[ netbox.database.server ]]
+- [[ netbox.application.server ]]</p>
 <p><strong>Linked Incidents:</strong> INC-2024-123, INC-2024-145, INC-2024-167</p>
 <p><strong>Status:</strong> Resolved</p>
 <p><strong>Priority:</strong> P2</p>
@@ -719,7 +731,7 @@
 - KEDB management
 - Postmortem moderation
 - Reporting</p>
-<p><strong>Person:</strong> Andreas Huemmer</p>
+<p><strong>Person:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</p>
 <h3 id="technical-specialists">Technical Specialists</h3>
 <p><strong>Responsibilities:</strong>
 - Technical analysis
@@ -736,21 +748,21 @@
 <h2 id="tools-and-systems">Tools and Systems</h2>
 <h3 id="problem-management-tool">Problem Management Tool</h3>
 <ul>
-<li><strong>System:</strong> {{ meta.ticketing_system }}</li>
-<li><strong>URL:</strong> {{ meta.ticketing_system_url }}</li>
+<li><strong>System:</strong> {{ meta-handbook.ticketing_system }}</li>
+<li><strong>URL:</strong> {{ meta-handbook.ticketing_system_url }}</li>
 <li><strong>Access:</strong> IT Operations Team</li>
 </ul>
 <h3 id="known-error-database">Known Error Database</h3>
 <ul>
-<li><strong>System:</strong> {{ meta.ticketing_system }} (KEDB module)</li>
-<li><strong>URL:</strong> {{ meta.kedb_url }}</li>
+<li><strong>System:</strong> {{ meta-handbook.ticketing_system }} (KEDB module)</li>
+<li><strong>URL:</strong> {{ meta-handbook.kedb_url }}</li>
 <li><strong>Access:</strong> All IT staff (Read)</li>
 </ul>
 <h3 id="rca-tools">RCA Tools</h3>
 <ul>
-<li><strong>Collaboration:</strong> {{ meta.collaboration_tool }}</li>
-<li><strong>Diagramming:</strong> {{ meta.diagramming_tool }}</li>
-<li><strong>Log Analysis:</strong> {{ meta.log_analysis_tool }}</li>
+<li><strong>Collaboration:</strong> {{ meta-handbook.collaboration_tool }}</li>
+<li><strong>Diagramming:</strong> {{ meta-handbook.diagramming_tool }}</li>
+<li><strong>Log Analysis:</strong> {{ meta-handbook.log_analysis_tool }}</li>
 </ul>
 <h2 id="references">References</h2>
 <ul>
@@ -760,12 +772,11 @@
 <li>Internal Incident Management Processes</li>
 <li>Change Management Processes</li>
 </ul>
-<hr />
-<p><strong>Document Owner:</strong> IT Operations Manager<br />
-<strong>Approved by:</strong> CIO<br />
-<strong>Version:</strong> 1.0.0<br />
-<strong>Classification:</strong> internal<br />
-<strong>Last Updated:</strong> {{ meta.date }}</p>
+<p><strong>Document Owner:</strong> [TODO]<br />
+<strong>Approved by:</strong> [TODO]<br />
+<strong>Version:</strong> 0<br />
+<strong>Classification:</strong> Internal<br />
+<strong>Last Updated:</strong> {{ meta-handbook.date }}</p>
         </main>
         
         <nav class="page-nav">

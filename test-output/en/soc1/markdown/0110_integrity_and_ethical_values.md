@@ -6,7 +6,7 @@ Classification: Internal
 
 # Integrity and Ethical Values
 
-**Document-ID:** [FRAMEWORK]-0110
+**Document-ID:** SOC1-0110
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

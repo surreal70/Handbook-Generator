@@ -6,7 +6,7 @@ Classification: Internal
 
 # Netzwerksicherheitsmanagement
 
-**Dokument-ID:** [FRAMEWORK]-0360
+**Dokument-ID:** TISAX-0360
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

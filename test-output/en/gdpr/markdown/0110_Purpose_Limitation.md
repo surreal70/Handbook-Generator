@@ -1,6 +1,6 @@
 # Purpose Limitation
 
-**Document-ID:** 0110
+**Document-ID:** GDPR-0110
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

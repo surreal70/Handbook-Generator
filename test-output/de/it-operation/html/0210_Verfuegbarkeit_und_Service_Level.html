@@ -21,13 +21,24 @@
         
         <main>
 <h1 id="verfugbarkeit-und-service-level">Verfügbarkeit und Service Level</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0210
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
 <h2 id="ubersicht">Übersicht</h2>
 <p>Dieses Dokument definiert die Verfügbarkeitsanforderungen, Service Level Agreements (SLAs) und Service Level Objectives (SLOs) für den IT-Service. Es beschreibt die Messmethoden, Reporting-Prozesse und Maßnahmen zur kontinuierlichen Verbesserung der Serviceverfügbarkeit.</p>
-<p><strong>Dokumentverantwortlicher:</strong> IT Operations Manager<br />
-<strong>Genehmigt durch:</strong> CIO<br />
-<strong>Version:</strong> 1.0.0<br />
+<p><strong>Dokumentverantwortlicher:</strong> [TODO]<br />
+<strong>Genehmigt durch:</strong> [TODO]<br />
+<strong>Version:</strong> 0<br />
 <strong>Organisation:</strong> AdminSend GmbH</p>
-<hr />
 <h2 id="verfugbarkeitsanforderungen">Verfügbarkeitsanforderungen</h2>
 <h3 id="service-klassifizierung">Service-Klassifizierung</h3>
 <table>
@@ -77,14 +88,14 @@
 <li><strong>Verfügbarkeit:</strong> 24/7/365</li>
 <li><strong>Support-Zeiten:</strong> 24/7 mit On-Call-Bereitschaft</li>
 <li><strong>Wartungsfenster:</strong> Sonntag 02:00-06:00 Uhr (nach Ankündigung)</li>
-<li><strong>Notfall-Wartung:</strong> Nach Genehmigung durch Anna Schmidt</li>
+<li><strong>Notfall-Wartung:</strong> Nach Genehmigung durch [TODO]</li>
 </ul>
 <h4 id="business-services">Business-Services</h4>
 <ul>
 <li><strong>Verfügbarkeit:</strong> Mo-Fr 06:00-22:00 Uhr</li>
 <li><strong>Support-Zeiten:</strong> Mo-Fr 08:00-18:00 Uhr</li>
 <li><strong>Wartungsfenster:</strong> Samstag 20:00-24:00 Uhr</li>
-<li><strong>Notfall-Wartung:</strong> Nach Genehmigung durch Andreas Huemmer</li>
+<li><strong>Notfall-Wartung:</strong> Nach Genehmigung durch {{ meta-organisation-roles.role_IT_Operations_Manager }}</li>
 </ul>
 <h4 id="entwicklungs-test-services">Entwicklungs-/Test-Services</h4>
 <ul>
@@ -135,7 +146,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="service-level-agreements-sla">Service Level Agreements (SLA)</h2>
 <h3 id="sla-definitionen">SLA-Definitionen</h3>
 <h4 id="verfugbarkeits-sla">Verfügbarkeits-SLA</h4>
@@ -278,9 +288,9 @@
 <h3 id="sla-vertragspartner">SLA-Vertragspartner</h3>
 <h4 id="interne-slas">Interne SLAs</h4>
 <ul>
-<li><strong>Service Provider:</strong> IT Operations (Andreas Huemmer)</li>
+<li><strong>Service Provider:</strong> IT Operations ({{ meta-organisation-roles.role_IT_Operations_Manager }})</li>
 <li><strong>Service Consumer:</strong> Fachabteilungen</li>
-<li><strong>Verantwortlich:</strong> Anna Schmidt</li>
+<li><strong>Verantwortlich:</strong> [TODO]</li>
 <li><strong>Review-Zyklus:</strong> Quartalsweise</li>
 </ul>
 <h4 id="externe-slas">Externe SLAs</h4>
@@ -306,7 +316,6 @@
 <li>Vom Kunden verursachte Ausfälle</li>
 <li>Drittanbieter-Ausfälle außerhalb der Kontrolle</li>
 </ul>
-<hr />
 <h2 id="service-level-objectives-slo">Service Level Objectives (SLO)</h2>
 <h3 id="interne-slos">Interne SLOs</h3>
 <h4 id="infrastruktur-slos">Infrastruktur-SLOs</h4>
@@ -324,31 +333,31 @@
 <td>Compute-Cluster</td>
 <td style="text-align: right;">99.9%</td>
 <td>Hypervisor-Monitoring</td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 </tr>
 <tr>
 <td>Storage-System</td>
 <td style="text-align: right;">99.95%</td>
 <td>Storage-Monitoring</td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 </tr>
 <tr>
 <td>Netzwerk-Core</td>
 <td style="text-align: right;">99.99%</td>
 <td>Network-Monitoring</td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 </tr>
 <tr>
 <td>Firewall</td>
 <td style="text-align: right;">99.95%</td>
 <td>Security-Monitoring</td>
-<td>Thomas Weber</td>
+<td>[TODO]</td>
 </tr>
 <tr>
 <td>Load Balancer</td>
 <td style="text-align: right;">99.9%</td>
 <td>LB-Monitoring</td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 </tr>
 </tbody>
 </table>
@@ -472,7 +481,6 @@
 - Nur Notfall-Fixes
 - Root-Cause-Analyse aller Ausfälle
 - Verbesserungsplan vor Wiederaufnahme</p>
-<hr />
 <h2 id="verfugbarkeitsmessung">Verfügbarkeitsmessung</h2>
 <h3 id="messmethoden">Messmethoden</h3>
 <h4 id="synthetische-monitoring">Synthetische Monitoring</h4>
@@ -553,7 +561,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="service-level-reporting">Service-Level-Reporting</h2>
 <h3 id="report-typen">Report-Typen</h3>
 <h4 id="taglicher-verfugbarkeits-report">Täglicher Verfügbarkeits-Report</h4>
@@ -568,7 +575,7 @@
 </ul>
 <h4 id="wochentlicher-sla-report">Wöchentlicher SLA-Report</h4>
 <ul>
-<li><strong>Empfänger:</strong> Andreas Huemmer</li>
+<li><strong>Empfänger:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</li>
 <li><strong>Inhalt:</strong></li>
 <li>Wochenverfügbarkeit</li>
 <li>SLA-Compliance-Status</li>
@@ -578,7 +585,7 @@
 </ul>
 <h4 id="monatlicher-sla-report">Monatlicher SLA-Report</h4>
 <ul>
-<li><strong>Empfänger:</strong> Anna Schmidt, Stakeholder</li>
+<li><strong>Empfänger:</strong> [TODO], Stakeholder</li>
 <li><strong>Inhalt:</strong></li>
 <li>Monatsverfügbarkeit</li>
 <li>SLA-Erfüllung vs. Ziele</li>
@@ -589,7 +596,7 @@
 </ul>
 <h4 id="quartalsweiser-management-report">Quartalsweiser Management-Report</h4>
 <ul>
-<li><strong>Empfänger:</strong> Max Mustermann, Anna Schmidt, Maria Müller</li>
+<li><strong>Empfänger:</strong> [TODO], [TODO], [TODO]</li>
 <li><strong>Inhalt:</strong></li>
 <li>Quartalsverfügbarkeit</li>
 <li>SLA-Trends</li>
@@ -689,7 +696,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="verfugbarkeitsverbesserungen">Verfügbarkeitsverbesserungen</h2>
 <h3 id="verbesserungsmanahmen">Verbesserungsmaßnahmen</h3>
 <h4 id="redundanz-und-hochverfugbarkeit">Redundanz und Hochverfügbarkeit</h4>
@@ -787,12 +793,11 @@
 <li><strong>Verantwortlich:</strong> [TODO]</li>
 <li><strong>Status:</strong> [TODO]</li>
 </ul>
-<hr />
 <h2 id="sla-review-und-anpassung">SLA-Review und Anpassung</h2>
 <h3 id="review-prozess">Review-Prozess</h3>
 <h4 id="quartalsweiser-sla-review">Quartalsweiser SLA-Review</h4>
 <ul>
-<li><strong>Teilnehmer:</strong> Anna Schmidt, Andreas Huemmer, Stakeholder</li>
+<li><strong>Teilnehmer:</strong> [TODO], {{ meta-organisation-roles.role_IT_Operations_Manager }}, Stakeholder</li>
 <li><strong>Agenda:</strong></li>
 <li>SLA-Erfüllung der letzten 3 Monate</li>
 <li>Trend-Analyse</li>
@@ -802,7 +807,7 @@
 </ul>
 <h4 id="jahrlicher-sla-review">Jährlicher SLA-Review</h4>
 <ul>
-<li><strong>Teilnehmer:</strong> Max Mustermann, Anna Schmidt, Maria Müller, Stakeholder</li>
+<li><strong>Teilnehmer:</strong> [TODO], [TODO], [TODO], Stakeholder</li>
 <li><strong>Agenda:</strong></li>
 <li>Jahresverfügbarkeit</li>
 <li>SLA-Angemessenheit</li>
@@ -825,7 +830,6 @@
 <li>Geschäftspriorität gesunken</li>
 <li>Realistische Zielsetzung</li>
 </ul>
-<hr />
 <h2 id="prozesse-und-verantwortlichkeiten">Prozesse und Verantwortlichkeiten</h2>
 <h3 id="raci-matrix">RACI-Matrix</h3>
 <table>
@@ -896,11 +900,10 @@
 <h3 id="eskalationspfad">Eskalationspfad</h3>
 <ol>
 <li><strong>Level 1:</strong> Operations Team - Incident-Response und Monitoring</li>
-<li><strong>Level 2:</strong> Andreas Huemmer - SLA-Verletzungen</li>
-<li><strong>Level 3:</strong> Anna Schmidt - Kritische SLA-Verletzungen</li>
-<li><strong>Level 4:</strong> Max Mustermann - Vertragliche Konsequenzen</li>
+<li><strong>Level 2:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }} - SLA-Verletzungen</li>
+<li><strong>Level 3:</strong> [TODO] - Kritische SLA-Verletzungen</li>
+<li><strong>Level 4:</strong> [TODO] - Vertragliche Konsequenzen</li>
 </ol>
-<hr />
 <h2 id="compliance-und-standards">Compliance und Standards</h2>
 <h3 id="relevante-standards">Relevante Standards</h3>
 <ul>
@@ -915,7 +918,6 @@
 <li>Incident-Dokumentation</li>
 <li>Verbesserungsmaßnahmen-Nachweise</li>
 </ul>
-<hr />
 <h2 id="anhang">Anhang</h2>
 <h3 id="glossar">Glossar</h3>
 <table>
@@ -967,10 +969,9 @@
 <li>COBIT 2019 Framework</li>
 <li>Site Reliability Engineering (Google)</li>
 </ul>
-<hr />
-<p><strong>Letzte Aktualisierung:</strong> {{ meta.date }}<br />
+<p><strong>Letzte Aktualisierung:</strong> {{ meta-handbook.date }}<br />
 <strong>Nächste Review:</strong> [TODO: Datum]<br />
-<strong>Kontakt:</strong> andreas.huemmer@adminsend.de</p>
+<strong>Kontakt:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager_email }}</p>
         </main>
         
         <nav class="page-nav">

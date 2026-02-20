@@ -1,6 +1,6 @@
 # APP Hardening Standard: PostgreSQL
 
-**Dokument-ID:** 0270
+**Dokument-ID:** CIS-CONTROLS-0270
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

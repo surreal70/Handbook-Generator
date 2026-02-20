@@ -16,18 +16,29 @@
         <nav class="page-nav">
 <a href="0280_Compliance_und_Audits.html" class="nav-prev">← Zurück</a>
 <a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
-<a href="0000_README.html" class="nav-next">Weiter →</a>
+<span class="nav-next disabled">—</span>
         </nav>
         
         <main>
 <h1 id="anhang-checklisten-und-vorlagen">Anhang: Checklisten und Vorlagen</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0290
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
 <h2 id="ubersicht">Übersicht</h2>
 <p>Dieses Dokument enthält eine Sammlung von Checklisten, Vorlagen für Standarddokumente und Formularen für den IT-Betrieb. Ziel ist es, konsistente und effiziente Durchführung von Standardprozessen zu gewährleisten.</p>
-<p><strong>Dokumentverantwortlicher:</strong> IT Operations Manager<br />
-<strong>Genehmigt durch:</strong> CIO<br />
-<strong>Version:</strong> 1.0.0<br />
+<p><strong>Dokumentverantwortlicher:</strong> [TODO]<br />
+<strong>Genehmigt durch:</strong> [TODO]<br />
+<strong>Version:</strong> 0<br />
 <strong>Organisation:</strong> AdminSend GmbH</p>
-<hr />
 <h2 id="checklisten">Checklisten</h2>
 <h3 id="incident-management-checklisten">Incident-Management-Checklisten</h3>
 <h4 id="incident-response-checkliste">Incident-Response-Checkliste</h4>
@@ -84,7 +95,6 @@
 <span class="gs">**Dauer:**</span> [HH:MM]
 </code></pre></div>
 
-<hr />
 <h4 id="major-incident-checkliste">Major-Incident-Checkliste</h4>
 <div class="codehilite"><pre><span></span><code><span class="gh"># Major-Incident-Checkliste (P1)</span>
 
@@ -142,7 +152,6 @@
 <span class="gs">**Kommunikations-Lead:**</span> [Name]
 </code></pre></div>
 
-<hr />
 <h3 id="change-management-checklisten">Change-Management-Checklisten</h3>
 <h4 id="standard-change-checkliste">Standard-Change-Checkliste</h4>
 <div class="codehilite"><pre><span></span><code><span class="gh"># Standard-Change-Checkliste</span>
@@ -209,7 +218,6 @@
 <span class="gs">**Status:**</span> Erfolgreich / Rollback / Abgebrochen
 </code></pre></div>
 
-<hr />
 <h3 id="backup-und-recovery-checklisten">Backup und Recovery Checklisten</h3>
 <h4 id="backup-verifikations-checkliste">Backup-Verifikations-Checkliste</h4>
 <div class="codehilite"><pre><span></span><code><span class="gh"># Backup-Verifikations-Checkliste</span>
@@ -255,7 +263,6 @@
 <span class="gs">**Nächster Test:**</span> [YYYY-MM-DD]
 </code></pre></div>
 
-<hr />
 <h4 id="disaster-recovery-test-checkliste">Disaster-Recovery-Test-Checkliste</h4>
 <div class="codehilite"><pre><span></span><code><span class="gh"># Disaster-Recovery-Test-Checkliste</span>
 
@@ -319,7 +326,6 @@
 <span class="gs">**Nächster Test:**</span> [YYYY-MM-DD]
 </code></pre></div>
 
-<hr />
 <h3 id="security-checklisten">Security-Checklisten</h3>
 <h4 id="security-incident-response-checkliste">Security-Incident-Response-Checkliste</h4>
 <div class="codehilite"><pre><span></span><code><span class="gh"># Security-Incident-Response-Checkliste</span>
@@ -384,7 +390,6 @@
 <span class="gs">**Status:**</span> Offen / Eingedämmt / Gelöst
 </code></pre></div>
 
-<hr />
 <h2 id="vorlagen">Vorlagen</h2>
 <h3 id="incident-report-vorlage">Incident-Report-Vorlage</h3>
 <div class="codehilite"><pre><span></span><code><span class="gh"># Incident-Report</span>
@@ -439,11 +444,10 @@
 <span class="k">-</span><span class="w"> </span>[Monitoring-Daten]
 
 <span class="gs">**Erstellt von:**</span> [Name]
-<span class="gs">**Genehmigt von:**</span> Andreas Huemmer
+<span class="gs">**Genehmigt von:**</span> {{ meta-organisation-roles.role_IT_Operations_Manager }}
 <span class="gs">**Datum:**</span> [YYYY-MM-DD]
 </code></pre></div>
 
-<hr />
 <h3 id="change-request-vorlage">Change-Request-Vorlage</h3>
 <div class="codehilite"><pre><span></span><code><span class="gh"># Change-Request</span>
 
@@ -510,11 +514,10 @@
 <span class="k">- [ ]</span> CAB-Genehmigung: [Name] - [Datum]
 
 <span class="gs">**Antragsteller:**</span> [Name]
-<span class="gs">**Change-Manager:**</span> Andreas Huemmer
+<span class="gs">**Change-Manager:**</span> {{ meta-organisation-roles.role_IT_Operations_Manager }}
 <span class="gs">**Status:**</span> Beantragt / Genehmigt / Abgelehnt / Implementiert
 </code></pre></div>
 
-<hr />
 <h3 id="postmortem-vorlage">Postmortem-Vorlage</h3>
 <div class="codehilite"><pre><span></span><code><span class="gh"># Postmortem</span>
 
@@ -583,7 +586,6 @@
 <span class="gs">**Follow-Up:**</span> [Datum für Review der Action Items]
 </code></pre></div>
 
-<hr />
 <h2 id="formulare">Formulare</h2>
 <h3 id="zugriffs-anforderungs-formular">Zugriffs-Anforderungs-Formular</h3>
 <div class="codehilite"><pre><span></span><code><span class="gh"># Zugriffs-Anforderung</span>
@@ -625,7 +627,6 @@
 <span class="gs">**Status:**</span> Beantragt / Genehmigt / Abgelehnt / Implementiert
 </code></pre></div>
 
-<hr />
 <h3 id="hardware-anforderungs-formular">Hardware-Anforderungs-Formular</h3>
 <div class="codehilite"><pre><span></span><code><span class="gh"># Hardware-Anforderung</span>
 
@@ -673,7 +674,6 @@
 <span class="gs">**Status:**</span> Beantragt / Genehmigt / Bestellt / Geliefert / Installiert
 </code></pre></div>
 
-<hr />
 <h2 id="prozesse-und-verantwortlichkeiten">Prozesse und Verantwortlichkeiten</h2>
 <h3 id="raci-matrix">RACI-Matrix</h3>
 <table>
@@ -727,7 +727,6 @@
 <blockquote>
 <p><strong>Legende:</strong> R = Responsible, A = Accountable, C = Consulted, I = Informed</p>
 </blockquote>
-<hr />
 <h2 id="compliance-und-standards">Compliance und Standards</h2>
 <h3 id="relevante-standards">Relevante Standards</h3>
 <ul>
@@ -735,7 +734,6 @@
 <li><strong>ISO 20000:</strong> Clause 8.1 - Operational Planning and Control</li>
 <li><strong>COBIT 2019:</strong> DSS01 - Managed Operations</li>
 </ul>
-<hr />
 <h2 id="anhang">Anhang</h2>
 <h3 id="glossar">Glossar</h3>
 <table>
@@ -770,16 +768,15 @@
 <li>ISO/IEC 20000-1:2018</li>
 <li>COBIT 2019 Framework</li>
 </ul>
-<hr />
-<p><strong>Letzte Aktualisierung:</strong> {{ meta.date }}<br />
+<p><strong>Letzte Aktualisierung:</strong> {{ meta-handbook.date }}<br />
 <strong>Nächste Review:</strong> [TODO: Datum]<br />
-<strong>Kontakt:</strong> andreas.huemmer@adminsend.de</p>
+<strong>Kontakt:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager_email }}</p>
         </main>
         
         <nav class="page-nav">
 <a href="0280_Compliance_und_Audits.html" class="nav-prev">← Zurück</a>
 <a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
-<a href="0000_README.html" class="nav-next">Weiter →</a>
+<span class="nav-next disabled">—</span>
         </nav>
         
         <footer>

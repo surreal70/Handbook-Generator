@@ -1,6 +1,6 @@
 # Policy: Asset und Inventarmanagement
 
-**Dokument-ID:** 0240
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0240
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

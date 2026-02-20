@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0140 - Zugriffskontroll-Richtlinie</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0140</div>
+            <h1>Zugriffskontroll-Richtlinie</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0120_information_classification.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0150_user_access_management.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: tisax-0140</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="zugriffskontroll-richtlinie">Zugriffskontroll-Richtlinie</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0140
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="zweck">Zweck</h2>
+<p>Dieses Dokument definiert die Richtlinien und Anforderungen für die Zugriffskontrolle auf Informationssysteme und -ressourcen gemäß TISAX-Anforderungen.</p>
+<h2 id="geltungsbereich">Geltungsbereich</h2>
+<p>Diese Richtlinie gilt für alle Benutzer, Systeme und Ressourcen von [TODO].</p>
+<h2 id="grundprinzipien">Grundprinzipien</h2>
+<h3 id="need-to-know-prinzip">Need-to-Know-Prinzip</h3>
+<p>Zugriff wird nur gewährt, wenn:
+- Geschäftliche Notwendigkeit besteht
+- Aufgaben dies erfordern
+- Genehmigung vorliegt</p>
+<h3 id="least-privilege-prinzip">Least-Privilege-Prinzip</h3>
+<p>Benutzer erhalten:
+- Minimale erforderliche Berechtigungen
+- Zeitlich begrenzte Zugriffe
+- Rollenbasierte Rechte</p>
+<h3 id="segregation-of-duties">Segregation of Duties</h3>
+<p>Kritische Funktionen werden getrennt:
+- Keine Einzelperson hat vollständige Kontrolle
+- Vier-Augen-Prinzip bei kritischen Aktionen
+- Trennung von Entwicklung und Produktion</p>
+<h2 id="zugriffskontroll-prozess">Zugriffskontroll-Prozess</h2>
+<h3 id="1-benutzer-registrierung">1. Benutzer-Registrierung</h3>
+<p><strong>Neue Mitarbeiter:</strong>
+- Antrag durch Vorgesetzten
+- Genehmigung durch IT und Informationssicherheit
+- Erstellung von Benutzerkonten
+- Zuweisung von Standardberechtigungen</p>
+<p><strong>Externe Benutzer:</strong>
+- Vertragliche Vereinbarung erforderlich
+- Zeitlich begrenzte Zugriffe
+- Sponsorship durch internen Mitarbeiter
+- Erweiterte Überwachung</p>
+<h3 id="2-berechtigungsvergabe">2. Berechtigungsvergabe</h3>
+<p><strong>Antragsprozess:</strong>
+1. Benutzer oder Vorgesetzter stellt Antrag
+2. Fachbereich genehmigt geschäftliche Notwendigkeit
+3. Information Owner genehmigt Datenzugriff
+4. IT implementiert Berechtigungen
+5. Dokumentation im Access Management System</p>
+<p><strong>Genehmigungsmatrix:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Zugriffstyp</th>
+<th>Genehmiger</th>
+<th>Dokumentation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Standard-Zugriff</td>
+<td>Vorgesetzter</td>
+<td>E-Mail</td>
+</tr>
+<tr>
+<td>Erhöhte Rechte</td>
+<td>Vorgesetzter + IT-Manager</td>
+<td>Ticket-System</td>
+</tr>
+<tr>
+<td>Admin-Rechte</td>
+<td>IT-Manager + CISO</td>
+<td>Formular + Genehmigung</td>
+</tr>
+<tr>
+<td>Produktionszugriff</td>
+<td>Fachbereich + IT-Manager</td>
+<td>Change Request</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-zugriffsverwaltung">3. Zugriffsverwaltung</h3>
+<p><strong>Regelmäßige Überprüfung:</strong>
+- Quartalsweise Rezertifizierung durch Vorgesetzte
+- Jährliche Vollprüfung aller Berechtigungen
+- Automatische Erkennung ungenutzter Konten
+- Entfernung nicht mehr benötigter Rechte</p>
+<p><strong>Änderungen:</strong>
+- Bei Rollenwechsel: Anpassung der Berechtigungen
+- Bei Austritt: Sofortige Sperrung aller Zugriffe
+- Bei Sicherheitsvorfällen: Temporäre Sperrung möglich</p>
+<h3 id="4-zugriffsentzug">4. Zugriffsentzug</h3>
+<p><strong>Geplanter Entzug:</strong>
+- Bei Austritt: Deaktivierung am letzten Arbeitstag
+- Bei Projektende: Entzug nach Projektabschluss
+- Bei Rollenwechsel: Anpassung der Berechtigungen</p>
+<p><strong>Ungeplanter Entzug:</strong>
+- Bei Sicherheitsvorfällen: Sofortige Sperrung
+- Bei Verdacht auf Missbrauch: Temporäre Sperrung
+- Bei Compliance-Verstößen: Sofortige Sperrung</p>
+<h2 id="authentifizierung">Authentifizierung</h2>
+<h3 id="passwort-anforderungen">Passwort-Anforderungen</h3>
+<p><strong>Komplexität:</strong>
+- Mindestlänge: [TODO] Zeichen
+- Großbuchstaben, Kleinbuchstaben, Zahlen, Sonderzeichen
+- Keine Wörterbuchwörter
+- Keine persönlichen Informationen</p>
+<p><strong>Verwaltung:</strong>
+- Änderung alle [TODO] Tage
+- Keine Wiederverwendung der letzten [TODO] Passwörter
+- Automatische Sperrung nach [TODO] Fehlversuchen
+- Passwort-Manager empfohlen</p>
+<h3 id="multi-faktor-authentifizierung-mfa">Multi-Faktor-Authentifizierung (MFA)</h3>
+<p>MFA ist erforderlich für:
+- Administrative Zugriffe
+- Remote-Zugriffe (VPN, Remote Desktop)
+- Zugriff auf vertrauliche Systeme
+- Privilegierte Konten</p>
+<p><strong>Unterstützte Faktoren:</strong>
+- Etwas, das man weiß (Passwort)
+- Etwas, das man hat (Token, Smartphone)
+- Etwas, das man ist (Biometrie)</p>
+<h3 id="single-sign-on-sso">Single Sign-On (SSO)</h3>
+<p>[TODO] nutzt SSO für:
+- Zentrale Authentifizierung
+- Reduzierung von Passwörtern
+- Vereinfachte Zugriffsverwaltung
+- Verbesserte Sicherheit</p>
+<h2 id="autorisierung">Autorisierung</h2>
+<h3 id="rollenbasierte-zugriffskontrolle-rbac">Rollenbasierte Zugriffskontrolle (RBAC)</h3>
+<p><strong>Standard-Rollen:</strong>
+- Benutzer: Basis-Zugriff auf Standardsysteme
+- Power User: Erweiterte Funktionen
+- Administrator: System-Administration
+- Security Admin: Sicherheitsverwaltung</p>
+<p><strong>Fachbereichs-Rollen:</strong>
+- Definiert durch Fachbereiche
+- Basierend auf Geschäftsprozessen
+- Regelmäßig überprüft und aktualisiert</p>
+<h3 id="attributbasierte-zugriffskontrolle-abac">Attributbasierte Zugriffskontrolle (ABAC)</h3>
+<p>Zugriff basierend auf:
+- Benutzerattributen (Abteilung, Standort)
+- Ressourcenattributen (Klassifizierung, Typ)
+- Umgebungsattributen (Zeit, Ort, Gerät)
+- Aktionsattributen (Lesen, Schreiben, Löschen)</p>
+<h2 id="privilegierte-zugriffe">Privilegierte Zugriffe</h2>
+<h3 id="privileged-access-management-pam">Privileged Access Management (PAM)</h3>
+<p><strong>Anforderungen:</strong>
+- Separate privilegierte Konten
+- Just-in-Time-Zugriff
+- Session-Aufzeichnung
+- Automatische Passwortrotation</p>
+<p><strong>Überwachung:</strong>
+- Echtzeit-Monitoring privilegierter Sitzungen
+- Alarmierung bei verdächtigen Aktivitäten
+- Regelmäßige Auditierung
+- Compliance-Reporting</p>
+<h3 id="administrative-konten">Administrative Konten</h3>
+<p><strong>Verwaltung:</strong>
+- Getrennt von Standard-Konten
+- Erhöhte Authentifizierungsanforderungen
+- Zeitlich begrenzte Aktivierung
+- Umfassende Protokollierung</p>
+<p><strong>Nutzung:</strong>
+- Nur für administrative Tätigkeiten
+- Keine Nutzung für E-Mail oder Internet
+- Keine Nutzung auf Standard-Workstations
+- Dokumentation aller Nutzungen</p>
+<h2 id="remote-zugriff">Remote-Zugriff</h2>
+<h3 id="vpn-zugriff">VPN-Zugriff</h3>
+<p><strong>Anforderungen:</strong>
+- MFA obligatorisch
+- Verschlüsselte Verbindung
+- Endpoint-Compliance-Check
+- Protokollierung aller Verbindungen</p>
+<p><strong>Berechtigungen:</strong>
+- Antrag und Genehmigung erforderlich
+- Zeitlich begrenzt
+- Regelmäßige Rezertifizierung
+- Automatische Trennung bei Inaktivität</p>
+<h3 id="remote-desktop">Remote Desktop</h3>
+<p><strong>Sicherheitsmaßnahmen:</strong>
+- Zugriff nur über VPN
+- MFA erforderlich
+- Session-Timeout
+- Keine lokale Datenspeicherung</p>
+<h2 id="zugriffskontrolle-fur-systeme">Zugriffskontrolle für Systeme</h2>
+<h3 id="server-und-infrastruktur">Server und Infrastruktur</h3>
+<ul>
+<li>Zugriff nur für autorisiertes IT-Personal</li>
+<li>Protokollierung aller Zugriffe</li>
+<li>Regelmäßige Überprüfung der Berechtigungen</li>
+<li>Automatisierte Compliance-Checks</li>
+</ul>
+<h3 id="anwendungen">Anwendungen</h3>
+<ul>
+<li>Rollenbasierte Berechtigungen</li>
+<li>Integration mit zentraler Authentifizierung</li>
+<li>Regelmäßige Access Reviews</li>
+<li>Segregation of Duties</li>
+</ul>
+<h3 id="datenbanken">Datenbanken</h3>
+<ul>
+<li>Minimale Berechtigungen</li>
+<li>Verschlüsselte Verbindungen</li>
+<li>Audit-Logging aktiviert</li>
+<li>Regelmäßige Zugriffsprüfungen</li>
+</ul>
+<h3 id="cloud-services">Cloud-Services</h3>
+<ul>
+<li>Identity Federation</li>
+<li>Conditional Access Policies</li>
+<li>MFA obligatorisch</li>
+<li>Regelmäßige Überprüfung der Berechtigungen</li>
+</ul>
+<h2 id="uberwachung-und-protokollierung">Überwachung und Protokollierung</h2>
+<h3 id="protokollierung">Protokollierung</h3>
+<p>Folgende Ereignisse werden protokolliert:
+- Erfolgreiche und fehlgeschlagene Anmeldungen
+- Berechtigungsänderungen
+- Zugriffe auf sensible Daten
+- Administrative Aktionen
+- Privilegierte Zugriffe</p>
+<h3 id="monitoring">Monitoring</h3>
+<ul>
+<li>Echtzeit-Überwachung kritischer Systeme</li>
+<li>Automatische Alarmierung bei Anomalien</li>
+<li>Regelmäßige Log-Analysen</li>
+<li>Security Information and Event Management (SIEM)</li>
+</ul>
+<h3 id="audit">Audit</h3>
+<ul>
+<li>Quartalsweise Stichproben-Audits</li>
+<li>Jährliche Vollprüfung</li>
+<li>Überprüfung der Compliance</li>
+<li>Identifikation von Verbesserungspotentialen</li>
+</ul>
+<h2 id="ausnahmen">Ausnahmen</h2>
+<h3 id="ausnahmegenehmigungen">Ausnahmegenehmigungen</h3>
+<p>Ausnahmen von dieser Richtlinie:
+- Müssen schriftlich beantragt werden
+- Erfordern Genehmigung durch CISO
+- Sind zeitlich begrenzt
+- Werden dokumentiert und überwacht
+- Werden regelmäßig überprüft</p>
+<h3 id="notfallzugriffe">Notfallzugriffe</h3>
+<p>Bei Notfällen:
+- Break-Glass-Konten verfügbar
+- Nutzung wird sofort eskaliert
+- Umfassende Protokollierung
+- Nachträgliche Überprüfung obligatorisch</p>
+<h2 id="tisax-spezifische-anforderungen">TISAX-spezifische Anforderungen</h2>
+<h3 id="vda-isa-kontrollen">VDA ISA Kontrollen</h3>
+<p>Dieses Dokument adressiert:
+- <strong>3.1</strong>: Zugriffskontroll-Richtlinie
+- <strong>3.2</strong>: Benutzerzugriffsverwaltung
+- <strong>3.3</strong>: Benutzerverantwortlichkeiten
+- <strong>3.4</strong>: System- und Anwendungszugriffskontrolle</p>
+<h3 id="assessment-nachweise">Assessment-Nachweise</h3>
+<p>Für TISAX-Assessments:
+- Zugriffskontroll-Richtlinie
+- Prozessdokumentation
+- Genehmigungsnachweise
+- Audit-Berichte
+- Schulungsnachweise</p>
+<h2 id="verantwortlichkeiten">Verantwortlichkeiten</h2>
+<ul>
+<li><strong>CISO</strong>: Gesamtverantwortung für Zugriffskontrolle</li>
+<li><strong>IT-Manager</strong>: Implementierung und Betrieb</li>
+<li><strong>Identity &amp; Access Management Team</strong>: Tägliche Verwaltung</li>
+<li><strong>Vorgesetzte</strong>: Genehmigung und Rezertifizierung</li>
+<li><strong>Information Owner</strong>: Genehmigung von Datenzugriffen</li>
+<li><strong>Benutzer</strong>: Einhaltung der Richtlinie</li>
+</ul>
+<h2 id="schulung">Schulung</h2>
+<p>Alle Benutzer werden geschult zu:
+- Zugriffskontroll-Grundlagen
+- Passwort-Sicherheit
+- MFA-Nutzung
+- Verantwortlichkeiten
+- Meldung von Sicherheitsvorfällen</p>
+<h2 id="kennzahlen">Kennzahlen</h2>
+<p>[TODO] misst:
+- Anzahl aktiver Benutzerkonten
+- Anteil MFA-aktivierter Konten (Ziel: 100%)
+- Durchschnittliche Zeit bis zur Berechtigungsvergabe
+- Anzahl überfälliger Access Reviews
+- Anzahl privilegierter Zugriffe
+- Anzahl Zugriffsverletzungen</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0120_information_classification.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0150_user_access_management.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

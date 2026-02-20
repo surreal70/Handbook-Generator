@@ -6,7 +6,7 @@ Classification: Internal
 
 # Komplementäre Nutzerorganisationskontrollen
 
-**Dokument-ID:** [FRAMEWORK]-0050
+**Dokument-ID:** SOC1-0050
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

@@ -1,6 +1,6 @@
 # Appendix: DPIA Quick Reference
 
-**Document-ID:** 0710
+**Document-ID:** GDPR-0710
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

@@ -1,6 +1,6 @@
 # Data Breaches and Notification Obligation
 
-**Document-ID:** 0330
+**Document-ID:** GDPR-0330
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

@@ -6,7 +6,7 @@ Classification: Internal
 
 # Testing Strategies
 
-**Document-ID:** [FRAMEWORK]-0250
+**Document-ID:** DORA-0250
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

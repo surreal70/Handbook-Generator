@@ -1,6 +1,6 @@
 # Sicherheitsbetrieb und Hardening
 
-**Dokument-ID:** [FRAMEWORK]-0170
+**Dokument-ID:** IT-OPERATION-0170
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

@@ -1,6 +1,6 @@
 # Informationssicherheitsziele und Metriken
 
-**Dokument-ID:** 0110
+**Dokument-ID:** ISMS-0110
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

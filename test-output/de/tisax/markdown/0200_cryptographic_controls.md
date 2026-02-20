@@ -6,7 +6,7 @@ Classification: Internal
 
 # Kryptographische Kontrollen
 
-**Dokument-ID:** [FRAMEWORK]-0200
+**Dokument-ID:** TISAX-0200
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

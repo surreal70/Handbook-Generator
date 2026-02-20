@@ -6,7 +6,7 @@ Classification: Internal
 
 # DCS-05: Externe Geräte
 
-**Dokument-ID:** [FRAMEWORK]-0530
+**Dokument-ID:** CSA-CCM-0530
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

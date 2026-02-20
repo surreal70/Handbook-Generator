@@ -6,7 +6,7 @@ Classification: Internal
 
 # Fraud Risk Assessment
 
-**Document-ID:** [FRAMEWORK]-0210
+**Document-ID:** SOC1-0210
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

@@ -1,6 +1,6 @@
 # Policy: Aufbewahrung und Löschung
 
-**Dokument-ID:** 0580
+**Dokument-ID:** ISMS-0580
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

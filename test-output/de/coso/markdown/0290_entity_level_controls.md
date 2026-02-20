@@ -6,7 +6,7 @@ Classification: Internal
 
 # Unternehmensweite Kontrollen
 
-**Dokument-ID:** [FRAMEWORK]-0290
+**Dokument-ID:** COSO-0290
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

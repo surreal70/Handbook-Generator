@@ -7,7 +7,7 @@ Classification: Internal
 
 # Communication and Consultation
 
-**Document-ID:** [FRAMEWORK]-0340
+**Document-ID:** ISO-31000-0340
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

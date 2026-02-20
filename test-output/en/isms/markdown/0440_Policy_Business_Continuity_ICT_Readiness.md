@@ -1,6 +1,6 @@
 # Policy: Business Continuity ICT Readiness
 
-**Document-ID:** [FRAMEWORK]-0440
+**Document-ID:** ISMS-0440
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

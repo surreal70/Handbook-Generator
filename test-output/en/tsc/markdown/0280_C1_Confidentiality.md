@@ -1,6 +1,6 @@
 # C1: Confidentiality
 
-**Document-ID:** [FRAMEWORK]-0280
+**Document-ID:** TSC-0280
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

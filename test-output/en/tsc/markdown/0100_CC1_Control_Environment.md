@@ -1,6 +1,6 @@
 # CC1: Control Environment
 
-**Document-ID:** [FRAMEWORK]-0100
+**Document-ID:** TSC-0100
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

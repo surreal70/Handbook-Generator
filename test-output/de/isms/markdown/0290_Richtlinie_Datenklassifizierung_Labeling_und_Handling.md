@@ -1,6 +1,6 @@
 # Richtlinie: Datenklassifizierung, Labeling und Handling
 
-**Dokument-ID:** 0290
+**Dokument-ID:** ISMS-0290
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

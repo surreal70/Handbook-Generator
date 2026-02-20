@@ -1,6 +1,6 @@
 # Besondere Kategorien personenbezogener Daten
 
-**Dokument-ID:** 0050
+**Dokument-ID:** GDPR-0050
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

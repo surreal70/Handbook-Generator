@@ -6,7 +6,7 @@ Classification: Internal
 
 # Kontrollaktivitäten - Übersicht
 
-**Dokument-ID:** [FRAMEWORK]-0300
+**Dokument-ID:** SOC1-0300
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

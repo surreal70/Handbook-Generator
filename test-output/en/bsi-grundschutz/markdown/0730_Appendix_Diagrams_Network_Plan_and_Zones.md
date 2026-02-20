@@ -1,6 +1,6 @@
 # Appendix: Network Plan and Zone Model (Template)
 
-**Document-ID:** [FRAMEWORK]-0730
+**Document-ID:** BSI-GRUNDSCHUTZ-0730
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

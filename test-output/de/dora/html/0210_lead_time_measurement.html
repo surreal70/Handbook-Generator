@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0210 - Lead Time Messung</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0210</div>
+            <h1>Lead Time Messung</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0200_lead_time_overview.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0220_value_stream_mapping.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: dora-0210</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="lead-time-messung">Lead Time Messung</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0210
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="zweck">Zweck</h2>
+<p>Dieses Dokument beschreibt die praktische Implementierung der Lead Time Messung, einschließlich Datenerfassung, Berechnung und Reporting.</p>
+<h2 id="umfang">Umfang</h2>
+<ul>
+<li>Messmethodik und Datenquellen</li>
+<li>Automatisierte Erfassung</li>
+<li>Berechnungslogik</li>
+<li>Reporting und Visualisierung</li>
+</ul>
+<h2 id="organisationsinformationen">Organisationsinformationen</h2>
+<ul>
+<li><strong>Organisation</strong>: [TODO]</li>
+<li><strong>Messverantwortlicher</strong>: [TODO]</li>
+<li><strong>Messsystem</strong>: [TODO]</li>
+</ul>
+<h2 id="datenerfassung">Datenerfassung</h2>
+<h3 id="start-zeitpunkt-code-commit">Start-Zeitpunkt: Code-Commit</h3>
+<p><strong>Git-Integration</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Commit-Timestamp erfassen</span>
+git<span class="w"> </span>log<span class="w"> </span>--format<span class="o">=</span><span class="s2">&quot;%H|%at|%an|%s&quot;</span><span class="w"> </span>-1
+</code></pre></div>
+
+<p><strong>Metadaten</strong>:
+- Commit-SHA
+- Commit-Timestamp
+- Autor
+- Branch
+- Commit-Message</p>
+<h3 id="end-zeitpunkt-production-deployment">End-Zeitpunkt: Production-Deployment</h3>
+<p><strong>Deployment-Event</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;deployment_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;12345&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-02-13T14:30:00Z&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;commit_sha&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;abc123&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;environment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;production&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h2 id="berechnungslogik">Berechnungslogik</h2>
+<h3 id="grundlegende-berechnung">Grundlegende Berechnung</h3>
+<div class="codehilite"><pre><span></span><code>Lead Time = Deployment-Timestamp - Commit-Timestamp
+</code></pre></div>
+
+<h3 id="erweiterte-metriken">Erweiterte Metriken</h3>
+<p><strong>Durchschnittliche Lead Time</strong>:</p>
+<div class="codehilite"><pre><span></span><code>Avg Lead Time = Σ(Lead Times) / Anzahl Deployments
+</code></pre></div>
+
+<p><strong>Median Lead Time</strong>:
+- Sortiere alle Lead Times
+- Wähle mittleren Wert</p>
+<p><strong>Perzentile</strong>:
+- P50: Median
+- P90: 90% der Deployments sind schneller
+- P95: 95% der Deployments sind schneller</p>
+<h2 id="reporting">Reporting</h2>
+<h3 id="dashboard-komponenten">Dashboard-Komponenten</h3>
+<ul>
+<li>Aktuelle Lead Time</li>
+<li>30-Tage-Trend</li>
+<li>Performance-Level-Tracking</li>
+<li>Bottleneck-Analyse</li>
+</ul>
+<h3 id="visualisierungen">Visualisierungen</h3>
+<ul>
+<li>Zeitreihen-Diagramme</li>
+<li>Histogramme</li>
+<li>Heatmaps</li>
+<li>Trend-Linien</li>
+</ul>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0200_lead_time_overview.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0220_value_stream_mapping.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

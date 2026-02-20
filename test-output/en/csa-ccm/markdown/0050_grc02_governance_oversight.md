@@ -6,7 +6,7 @@ Classification: Internal
 
 # GRC-02: Governance Oversight
 
-**Document-ID:** [FRAMEWORK]-0050
+**Document-ID:** CSA-CCM-0050
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

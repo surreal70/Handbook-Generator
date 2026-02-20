@@ -1,6 +1,6 @@
 # DRP IT Recovery Plan Template
 
-**Document-ID:** [FRAMEWORK]-0150
+**Document-ID:** BCM-0150
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

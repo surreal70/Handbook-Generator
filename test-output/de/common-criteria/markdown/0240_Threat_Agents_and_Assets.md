@@ -1,6 +1,6 @@
 # Threat Agents and Assets
 
-**Dokument-ID:** 0240
+**Dokument-ID:** COMMON-CRITERIA-0240
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

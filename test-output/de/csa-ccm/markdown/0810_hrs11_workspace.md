@@ -6,7 +6,7 @@ Classification: Internal
 
 # HRS-11: Arbeitsplatz
 
-**Dokument-ID:** [FRAMEWORK]-0810
+**Dokument-ID:** CSA-CCM-0810
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

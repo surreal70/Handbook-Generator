@@ -6,7 +6,7 @@ Classification: Internal
 
 # MTTR Verbesserung
 
-**Dokument-ID:** [FRAMEWORK]-0350
+**Dokument-ID:** DORA-0350
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

@@ -1,6 +1,6 @@
 # Schutzbedarfsfeststellung (Template)
 
-**Dokument-ID:** 0060
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0060
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

@@ -7,7 +7,7 @@ Classification: Internal
 
 # Verantwortlichkeiten der Geschäftsführung für IT-Governance
 
-**Dokument-ID:** [FRAMEWORK]-0220
+**Dokument-ID:** ISO-38500-0220
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

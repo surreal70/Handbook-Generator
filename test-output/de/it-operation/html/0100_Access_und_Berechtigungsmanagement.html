@@ -21,13 +21,24 @@
         
         <main>
 <h1 id="access-und-berechtigungsmanagement">Access und Berechtigungsmanagement</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0100
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
 <h2 id="ubersicht">Übersicht</h2>
 <p>Dieses Dokument beschreibt das Access- und Berechtigungsmanagement für den IT-Service. Es definiert Zugriffskontrollmodelle, Berechtigungskonzepte und rollenbasierte Zugriffskontrolle (RBAC).</p>
-<p><strong>Service:</strong> {{ meta.service_name }}<br />
-<strong>Verantwortlich:</strong> Andreas Huemmer<br />
-<strong>Security Officer:</strong> Thomas Weber<br />
-<strong>Stand:</strong> 1.0.0</p>
-<hr />
+<p><strong>Service:</strong> {{ meta-handbook.service_name }}<br />
+<strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}<br />
+<strong>Security Officer:</strong> [TODO]<br />
+<strong>Stand:</strong> 0</p>
 <h2 id="access-management-strategie">Access Management Strategie</h2>
 <h3 id="ziele">Ziele</h3>
 <ul>
@@ -45,7 +56,6 @@
 <li><strong>Audit Trail:</strong> Vollständige Protokollierung aller Zugriffe</li>
 <li><strong>Multi-Factor Authentication:</strong> MFA für privilegierte Zugriffe</li>
 </ol>
-<hr />
 <h2 id="zugriffskontrollmodell">Zugriffskontrollmodell</h2>
 <h3 id="authentifizierung">Authentifizierung</h3>
 <h4 id="authentifizierungsmethoden">Authentifizierungsmethoden</h4>
@@ -94,11 +104,11 @@
 <p><strong>Identity Provider:</strong>
 - <strong>System:</strong> [TODO: z.B. Active Directory, Azure AD, Okta]
 - <strong>URL:</strong> [TODO: SSO-URL]
-- <strong>Verantwortlich:</strong> Andreas Huemmer</p>
+- <strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</p>
 <p><strong>MFA-System:</strong>
 - <strong>System:</strong> [TODO: z.B. Duo, Microsoft Authenticator]
 - <strong>Pflicht für:</strong> Administratoren, privilegierte Accounts
-- <strong>Verantwortlich:</strong> Thomas Weber</p>
+- <strong>Verantwortlich:</strong> [TODO]</p>
 <h3 id="autorisierung">Autorisierung</h3>
 <h4 id="autorisierungsmodelle">Autorisierungsmodelle</h4>
 <p><strong>Role-Based Access Control (RBAC):</strong>
@@ -110,7 +120,6 @@
 - Flexibler als RBAC
 - Komplexere Implementierung</p>
 <p><strong>Aktuelles Modell:</strong> [TODO: RBAC/ABAC/Hybrid auswählen]</p>
-<hr />
 <h2 id="rollenbasierte-zugriffskontrolle-rbac">Rollenbasierte Zugriffskontrolle (RBAC)</h2>
 <h3 id="rollen-hierarchie">Rollen-Hierarchie</h3>
 <div class="codehilite"><pre><span></span><code>┌─────────────────────────────────────────────────────────────┐
@@ -144,7 +153,7 @@
 - System-Administration
 - Backup/Restore</p>
 <p><strong>Zugewiesen an:</strong>
-- Andreas Huemmer
+- {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - [TODO: Weitere Administratoren]</p>
 <p><strong>MFA:</strong> Pflicht</p>
 <h4 id="power-user">Power User</h4>
@@ -165,7 +174,7 @@
 - Standard-Operationen
 - Log-Zugriff (Read-only)</p>
 <p><strong>Zugewiesen an:</strong>
-- Julia Becker
+- {{ meta-organisation-roles.role_Service_Desk_Lead }}
 - [TODO: Weitere Operators]</p>
 <p><strong>MFA:</strong> Optional</p>
 <h4 id="standard-user">Standard User</h4>
@@ -190,7 +199,6 @@
 - Management
 - [TODO: Weitere Read-Only-Benutzer]</p>
 <p><strong>MFA:</strong> Optional</p>
-<hr />
 <h2 id="berechtigungsmatrix">Berechtigungsmatrix</h2>
 <h3 id="system-berechtigungen">System-Berechtigungen</h3>
 <table>
@@ -318,7 +326,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="access-request-prozess">Access Request Prozess</h2>
 <h3 id="zugriffs-anforderung">Zugriffs-Anforderung</h3>
 <div class="codehilite"><pre><span></span><code>┌─────────────────┐
@@ -367,14 +374,14 @@
 - Separation of Duties</p>
 <p><strong>Entscheidung:</strong> Genehmigen / Ablehnen / Rückfragen</p>
 <h4 id="3-security-review">3. Security Review</h4>
-<p><strong>Wer:</strong> Thomas Weber oder Security Team<br />
+<p><strong>Wer:</strong> [TODO] oder Security Team<br />
 <strong>Prüfung:</strong>
 - Compliance-Anforderungen
 - Risikobewertung
 - Konfliktprüfung (Separation of Duties)</p>
 <p><strong>Entscheidung:</strong> Genehmigen / Ablehnen / Anpassen</p>
 <h4 id="4-provisionierung">4. Provisionierung</h4>
-<p><strong>Wer:</strong> Andreas Huemmer oder IT Operations<br />
+<p><strong>Wer:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }} oder IT Operations<br />
 <strong>Aktivitäten:</strong>
 - Account erstellen/ändern
 - Berechtigungen zuweisen
@@ -388,7 +395,6 @@
 - Zugangsdaten bereitstellen
 - Dokumentation abschließen
 - Ticket schließen</p>
-<hr />
 <h2 id="privileged-access-management-pam">Privileged Access Management (PAM)</h2>
 <h3 id="privilegierte-accounts">Privilegierte Accounts</h3>
 <h4 id="definition">Definition</h4>
@@ -448,9 +454,8 @@
 </table>
 <h3 id="pam-system">PAM-System</h3>
 <p><strong>System:</strong> [TODO: z.B. CyberArk, BeyondTrust, Thycotic]<br />
-<strong>Verantwortlich:</strong> Thomas Weber<br />
+<strong>Verantwortlich:</strong> [TODO]<br />
 <strong>Zugriff:</strong> [TODO: PAM-System-URL]</p>
-<hr />
 <h2 id="service-accounts">Service Accounts</h2>
 <h3 id="service-account-management">Service Account Management</h3>
 <p><strong>Definition:</strong> Accounts für automatisierte Prozesse und Systemintegrationen</p>
@@ -503,7 +508,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="access-review-prozess">Access Review Prozess</h2>
 <h3 id="regelmaige-reviews">Regelmäßige Reviews</h3>
 <h4 id="quartalsweise-reviews">Quartalsweise Reviews</h4>
@@ -518,7 +522,7 @@
 <h4 id="jahrliche-reviews">Jährliche Reviews</h4>
 <p><strong>Frequenz:</strong> Jährlich<br />
 <strong>Umfang:</strong> Vollständiger Access Review<br />
-<strong>Verantwortlich:</strong> Thomas Weber<br />
+<strong>Verantwortlich:</strong> [TODO]<br />
 <strong>Prozess:</strong>
 1. Umfassender Audit aller Accounts
 2. Privilegierte Accounts prüfen
@@ -535,7 +539,6 @@
 - Automatische Benachrichtigung an Manager
 - Deaktivierung nach Frist
 - Dokumentation</p>
-<hr />
 <h2 id="onboarding-und-offboarding">Onboarding und Offboarding</h2>
 <h3 id="onboarding-prozess">Onboarding-Prozess</h3>
 <h4 id="neuer-mitarbeiter">Neuer Mitarbeiter</h4>
@@ -550,7 +553,7 @@
 6. [ ] Zugangsdaten bereitstellen
 7. [ ] Dokumentation in CMDB
 8. [ ] Willkommens-E-Mail senden</p>
-<p><strong>Verantwortlich:</strong> Julia Becker</p>
+<p><strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_Service_Desk_Lead }}</p>
 <h3 id="offboarding-prozess">Offboarding-Prozess</h3>
 <h4 id="mitarbeiter-austritt">Mitarbeiter-Austritt</h4>
 <p><strong>Trigger:</strong> HR-Benachrichtigung<br />
@@ -564,7 +567,7 @@
 6. [ ] Daten archivieren
 7. [ ] Dokumentation aktualisieren
 8. [ ] Manager informieren</p>
-<p><strong>Verantwortlich:</strong> Julia Becker</p>
+<p><strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_Service_Desk_Lead }}</p>
 <h4 id="rollenwechsel">Rollenwechsel</h4>
 <p><strong>Trigger:</strong> HR-Benachrichtigung oder Manager-Anfrage<br />
 <strong>Zeitrahmen:</strong> Zum Wechseldatum</p>
@@ -574,7 +577,6 @@
 3. [ ] Access Review durchführen
 4. [ ] Dokumentation aktualisieren
 5. [ ] Benutzer informieren</p>
-<hr />
 <h2 id="compliance-und-auditing">Compliance und Auditing</h2>
 <h3 id="compliance-anforderungen">Compliance-Anforderungen</h3>
 <table>
@@ -618,7 +620,7 @@
 - Passwort-Änderungen</p>
 <p><strong>Log-Retention:</strong> [TODO: z.B. 1 Jahr]<br />
 <strong>Log-System:</strong> [TODO: z.B. Splunk, ELK]<br />
-<strong>Verantwortlich:</strong> Thomas Weber</p>
+<strong>Verantwortlich:</strong> [TODO]</p>
 <h3 id="audit-reports">Audit-Reports</h3>
 <p><strong>Monatliche Reports:</strong>
 - Neue Accounts
@@ -631,14 +633,13 @@
 - Compliance-Status
 - Risiko-Assessment
 - Verbesserungsvorschläge</p>
-<hr />
 <h2 id="notfall-zugriff">Notfall-Zugriff</h2>
 <h3 id="break-glass-accounts">Break-Glass-Accounts</h3>
 <p><strong>Definition:</strong> Notfall-Accounts für kritische Situationen</p>
 <p><strong>Verwendung:</strong>
 - Nur bei kritischen Ausfällen
 - Wenn normale Zugriffswege nicht verfügbar
-- Nach Genehmigung durch Anna Schmidt</p>
+- Nach Genehmigung durch [TODO]</p>
 <p><strong>Anforderungen:</strong>
 - Physisch gesicherte Passwörter
 - Vollständige Protokollierung
@@ -649,21 +650,19 @@
 - <code>emergency_network</code> - Netzwerk-Notfallzugriff</p>
 <p><strong>Passwort-Verwaltung:</strong>
 - Versiegelte Umschläge im Safe
-- Zugriff nur durch Anna Schmidt oder Thomas Weber</p>
-<hr />
+- Zugriff nur durch [TODO] oder [TODO]</p>
 <h2 id="kontakte">Kontakte</h2>
 <p><strong>Access Management Team:</strong>
-- <strong>IT Operations Manager:</strong> Andreas Huemmer - andreas.huemmer@adminsend.de
-- <strong>CISO:</strong> Thomas Weber - thomas.weber@adminsend.de
-- <strong>Service Desk Lead:</strong> Julia Becker - julia.becker@adminsend.de
-- <strong>CIO:</strong> Anna Schmidt - anna.schmidt@adminsend.de</p>
+- <strong>IT Operations Manager:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }} - {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
+- <strong>CISO:</strong> [TODO] - {{ meta-organisation-roles.role_CISO_email }}
+- <strong>Service Desk Lead:</strong> {{ meta-organisation-roles.role_Service_Desk_Lead }} - {{ meta-organisation-roles.role_Service_Desk_Lead_email }}
+- <strong>CIO:</strong> [TODO] - {{ meta-organisation-roles.role_CIO_email }}</p>
 <p><strong>Notfall-Kontakte:</strong>
-- <strong>Break-Glass-Freigabe:</strong> Anna Schmidt - +49 89 12345678-200
-- <strong>Security-Incident:</strong> Thomas Weber - +49 89 12345678-300</p>
-<hr />
-<p><strong>Dokumentverantwortlicher:</strong> IT Operations Manager<br />
-<strong>Genehmigt durch:</strong> CIO<br />
-<strong>Version:</strong> 1.0.0<br />
+- <strong>Break-Glass-Freigabe:</strong> [TODO] - {{ meta-organisation-roles.role_CIO_phone }}
+- <strong>Security-Incident:</strong> [TODO] - {{ meta-organisation-roles.role_CISO_phone }}</p>
+<p><strong>Dokumentverantwortlicher:</strong> [TODO]<br />
+<strong>Genehmigt durch:</strong> [TODO]<br />
+<strong>Version:</strong> 0<br />
 <strong>Organisation:</strong> AdminSend GmbH</p>
         </main>
         

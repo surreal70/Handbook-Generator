@@ -1,6 +1,6 @@
 # TOE Lifecycle
 
-**Document-ID:** 0140
+**Document-ID:** COMMON-CRITERIA-0140
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

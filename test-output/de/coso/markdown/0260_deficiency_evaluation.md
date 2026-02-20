@@ -6,7 +6,7 @@ Classification: Internal
 
 # Bewertung und Kommunikation von Mängeln
 
-**Dokument-ID:** [FRAMEWORK]-0260
+**Dokument-ID:** COSO-0260
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

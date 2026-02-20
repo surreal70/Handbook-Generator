@@ -1,6 +1,6 @@
 # Richtlinie: Datenklassifizierung Labeling und Weitergabe
 
-**Dokument-ID:** 0430
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0430
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

@@ -1,6 +1,6 @@
 # Workforce Security
 
-**Document-ID:** [FRAMEWORK]-0110
+**Document-ID:** HIPAA-0110
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

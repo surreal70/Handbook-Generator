@@ -1,6 +1,6 @@
 # Rationale für Sicherheitsziele (Security Objectives Rationale)
 
-**Dokument-ID:** 0310
+**Dokument-ID:** COMMON-CRITERIA-0310
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

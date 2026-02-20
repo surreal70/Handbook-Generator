@@ -1,6 +1,6 @@
 # Appendix: Glossary and Abbreviations
 
-**Document-ID:** [FRAMEWORK]-0710
+**Document-ID:** PCI-DSS-0710
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

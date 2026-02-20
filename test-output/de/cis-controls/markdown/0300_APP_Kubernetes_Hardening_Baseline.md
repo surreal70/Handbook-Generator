@@ -1,6 +1,6 @@
 # APP Hardening Baseline: Kubernetes
 
-**Dokument-ID:** 0300
+**Dokument-ID:** CIS-CONTROLS-0300
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

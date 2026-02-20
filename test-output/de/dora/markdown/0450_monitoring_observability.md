@@ -6,7 +6,7 @@ Classification: Internal
 
 # Monitoring und Observability
 
-**Dokument-ID:** [FRAMEWORK]-0450
+**Dokument-ID:** DORA-0450
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

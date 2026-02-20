@@ -1,6 +1,6 @@
 # Risk Treatment Plan (RTP) – Template
 
-**Document-ID:** [FRAMEWORK]-0090
+**Document-ID:** ISMS-0090
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

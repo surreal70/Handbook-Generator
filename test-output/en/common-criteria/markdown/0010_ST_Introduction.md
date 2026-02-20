@@ -1,6 +1,6 @@
 # ST Introduction
 
-**Document-ID:** 0010
+**Document-ID:** COMMON-CRITERIA-0010
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

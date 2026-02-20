@@ -1,6 +1,6 @@
 # Informationssicherheitsleitlinie (Top-Management)
 
-**Dokument-ID:** 0010
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0010
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

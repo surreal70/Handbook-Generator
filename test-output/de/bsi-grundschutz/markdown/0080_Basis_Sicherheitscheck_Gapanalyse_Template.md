@@ -1,6 +1,6 @@
 # Basis-Sicherheitscheck / Gap-Analyse (Template)
 
-**Dokument-ID:** 0080
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0080
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

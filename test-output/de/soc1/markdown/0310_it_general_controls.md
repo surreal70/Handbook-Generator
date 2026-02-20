@@ -6,7 +6,7 @@ Classification: Internal
 
 # IT General Controls (ITGC)
 
-**Dokument-ID:** [FRAMEWORK]-0310
+**Dokument-ID:** SOC1-0310
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

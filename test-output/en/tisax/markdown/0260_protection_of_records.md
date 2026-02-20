@@ -6,7 +6,7 @@ Classification: Internal
 
 # Protection of Records
 
-**Document-ID:** [FRAMEWORK]-0260
+**Document-ID:** TISAX-0260
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

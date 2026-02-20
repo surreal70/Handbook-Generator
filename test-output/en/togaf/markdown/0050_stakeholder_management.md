@@ -6,7 +6,7 @@ Classification: Internal
 
 # Stakeholder Management
 
-**Document-ID:** [FRAMEWORK]-0050
+**Document-ID:** TOGAF-0050
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

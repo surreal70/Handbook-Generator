@@ -1,6 +1,6 @@
 # Guideline: Change Approvals and Security Checks
 
-**Document-ID:** [FRAMEWORK]-0390
+**Document-ID:** BSI-GRUNDSCHUTZ-0390
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

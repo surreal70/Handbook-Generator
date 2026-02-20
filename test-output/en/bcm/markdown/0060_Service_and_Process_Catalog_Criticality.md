@@ -1,6 +1,6 @@
 # Service and Process Catalog with Criticality
 
-**Document-ID:** [FRAMEWORK]-0060
+**Document-ID:** BCM-0060
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

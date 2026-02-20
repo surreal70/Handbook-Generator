@@ -1,6 +1,6 @@
 # DPIA Template
 
-**Document-ID:** 0410
+**Document-ID:** GDPR-0410
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

@@ -6,7 +6,7 @@ Classification: Internal
 
 # Risk Assessment
 
-**Document-ID:** [FRAMEWORK]-0090
+**Document-ID:** SOC1-0090
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

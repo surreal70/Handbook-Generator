@@ -1,6 +1,6 @@
 # Restriction and Objection
 
-**Document-ID:** 0240
+**Document-ID:** GDPR-0240
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

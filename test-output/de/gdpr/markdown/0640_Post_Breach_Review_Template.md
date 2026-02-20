@@ -1,6 +1,6 @@
 # Post-Breach Review Template
 
-**Dokument-ID:** 0640
+**Dokument-ID:** GDPR-0640
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

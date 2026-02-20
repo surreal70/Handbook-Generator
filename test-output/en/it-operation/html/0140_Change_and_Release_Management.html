@@ -21,10 +21,22 @@
         
         <main>
 <h1 id="change-and-release-management">Change and Release Management</h1>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0140
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
 <h2 id="purpose-and-scope">Purpose and Scope</h2>
 <p>This document describes the change and release management processes for AdminSend GmbH according to ITIL v4 best practices. It defines change categories, approval processes, release strategies, and rollback procedures for controlled implementation of changes to IT services and systems.</p>
 <p><strong>Scope:</strong> All IT services, systems, and infrastructure components of AdminSend GmbH</p>
-<p><strong>Responsible:</strong> Andreas Huemmer (andreas.huemmer@adminsend.de)</p>
+<p><strong>Responsible:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }} ({{ meta-organisation-roles.role_IT_Operations_Manager_email }})</p>
 <h2 id="change-management">Change Management</h2>
 <h3 id="change-definition">Change Definition</h3>
 <p>A <strong>change</strong> is the addition, modification, or removal of anything that could have a direct or indirect effect on services. The goal of change management is to minimize risks while maximizing business value.</p>
@@ -141,7 +153,7 @@
 - <strong>Time Window:</strong> Planned maintenance window
 - <strong>Requester:</strong> Requestor
 - <strong>Implementer:</strong> Executor</p>
-<p><strong>Tool:</strong> {{ meta.ticketing_system }}</p>
+<p><strong>Tool:</strong> {{ meta-handbook.ticketing_system }}</p>
 <p><strong>Responsible:</strong> Change Requester</p>
 <h4 id="2-change-assessment">2. Change Assessment</h4>
 <p><strong>Assessment Criteria:</strong>
@@ -185,9 +197,9 @@
 <h4 id="3-change-authorization-cab">3. Change Authorization (CAB)</h4>
 <p><strong>Change Advisory Board (CAB):</strong></p>
 <p><strong>Members:</strong>
-- <strong>Chair:</strong> Andreas Huemmer (Change Manager)
-- <strong>CIO:</strong> Anna Schmidt
-- <strong>CISO:</strong> Thomas Weber
+- <strong>Chair:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }} (Change Manager)
+- <strong>CIO:</strong> [TODO]
+- <strong>CISO:</strong> [TODO]
 - <strong>Service Owner:</strong> [Service-dependent]
 - <strong>Technical Leads:</strong> [Change-dependent]
 - <strong>Business Representatives:</strong> [For business impact]</p>
@@ -550,10 +562,10 @@
 - Automatic rollbacks on errors
 - Deployment monitoring</p>
 <p><strong>Pipeline Tools:</strong>
-- <strong>CI/CD System:</strong> {{ meta.cicd_system }}
-- <strong>Version Control:</strong> {{ meta.version_control }}
-- <strong>Artifact Repository:</strong> {{ meta.artifact_repository }}
-- <strong>Container Registry:</strong> {{ meta.container_registry }}</p>
+- <strong>CI/CD System:</strong> {{ meta-handbook.cicd_system }}
+- <strong>Version Control:</strong> [TODO]
+- <strong>Artifact Repository:</strong> {{ meta-handbook.artifact_repository }}
+- <strong>Container Registry:</strong> {{ meta-handbook.container_registry }}</p>
 <h2 id="metrics-and-reporting">Metrics and Reporting</h2>
 <h3 id="change-management-metrics">Change Management Metrics</h3>
 <table>
@@ -648,7 +660,7 @@
 - Change assessment
 - Change calendar management
 - Reporting</p>
-<p><strong>Person:</strong> Andreas Huemmer</p>
+<p><strong>Person:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</p>
 <h3 id="release-manager">Release Manager</h3>
 <p><strong>Responsibilities:</strong>
 - Release planning
@@ -666,20 +678,20 @@
 <h2 id="tools-and-systems">Tools and Systems</h2>
 <h3 id="change-management-tool">Change Management Tool</h3>
 <ul>
-<li><strong>System:</strong> {{ meta.ticketing_system }}</li>
-<li><strong>URL:</strong> {{ meta.ticketing_system_url }}</li>
+<li><strong>System:</strong> {{ meta-handbook.ticketing_system }}</li>
+<li><strong>URL:</strong> {{ meta-handbook.ticketing_system_url }}</li>
 <li><strong>Access:</strong> All IT staff</li>
 </ul>
 <h3 id="cicd-pipeline_1">CI/CD Pipeline</h3>
 <ul>
-<li><strong>System:</strong> {{ meta.cicd_system }}</li>
-<li><strong>URL:</strong> {{ meta.cicd_url }}</li>
+<li><strong>System:</strong> {{ meta-handbook.cicd_system }}</li>
+<li><strong>URL:</strong> {{ meta-handbook.cicd_url }}</li>
 <li><strong>Access:</strong> DevOps Team</li>
 </ul>
 <h3 id="version-control">Version Control</h3>
 <ul>
-<li><strong>System:</strong> {{ meta.version_control }}</li>
-<li><strong>URL:</strong> {{ meta.version_control_url }}</li>
+<li><strong>System:</strong> [TODO]</li>
+<li><strong>URL:</strong> [TODO]</li>
 <li><strong>Access:</strong> Development Team</li>
 </ul>
 <h2 id="references">References</h2>
@@ -690,12 +702,11 @@
 <li>DevOps Handbook - Deployment Strategies</li>
 <li>Site Reliability Engineering (SRE) - Release Engineering</li>
 </ul>
-<hr />
-<p><strong>Document Owner:</strong> IT Operations Manager<br />
-<strong>Approved by:</strong> CIO<br />
-<strong>Version:</strong> 1.0.0<br />
-<strong>Classification:</strong> internal<br />
-<strong>Last Updated:</strong> {{ meta.date }}</p>
+<p><strong>Document Owner:</strong> [TODO]<br />
+<strong>Approved by:</strong> [TODO]<br />
+<strong>Version:</strong> 0<br />
+<strong>Classification:</strong> Internal<br />
+<strong>Last Updated:</strong> {{ meta-handbook.date }}</p>
         </main>
         
         <nav class="page-nav">

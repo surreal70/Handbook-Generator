@@ -1,6 +1,6 @@
 # APP Hardening Baseline: Webserver / Reverse Proxy (generisch)
 
-**Dokument-ID:** 0210
+**Dokument-ID:** CIS-CONTROLS-0210
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

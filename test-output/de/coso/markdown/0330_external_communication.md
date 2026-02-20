@@ -6,7 +6,7 @@ Classification: Internal
 
 # Externe Kommunikation
 
-**Dokument-ID:** [FRAMEWORK]-0330
+**Dokument-ID:** COSO-0330
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

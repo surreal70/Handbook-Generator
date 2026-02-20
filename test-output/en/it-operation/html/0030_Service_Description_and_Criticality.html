@@ -21,12 +21,24 @@
         
         <main>
 <h1 id="service-description-and-criticality">Service Description and Criticality</h1>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0030
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
 <h2 id="service-description">Service Description</h2>
 <h3 id="basic-information">Basic Information</h3>
 <ul>
 <li><strong>Service Name:</strong> [TODO: Unique Service Name]</li>
 <li><strong>Service ID:</strong> [TODO: Unique Service Identification]</li>
-<li><strong>Service Owner:</strong> IT Operations Manager</li>
+<li><strong>Service Owner:</strong> [TODO]</li>
 <li><strong>Technical Contact:</strong> [TODO: Name and Contact]</li>
 <li><strong>Organization:</strong> AdminSend GmbH</li>
 </ul>
@@ -247,7 +259,7 @@
 2. <strong>Channel:</strong> [TODO: Email, Portal, Ticket System]
 3. <strong>Recipients:</strong> [TODO: All users, Key stakeholders]
 4. <strong>Content:</strong> Time window, reason, impacts, contact person</p>
-<p><strong>Responsible:</strong> Andreas Huemmer (andreas.huemmer@adminsend.de)</p>
+<p><strong>Responsible:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }} ({{ meta-organisation-roles.role_IT_Operations_Manager_email }})</p>
 <h2 id="service-level-agreements-sla">Service Level Agreements (SLA)</h2>
 <h3 id="sla-overview">SLA Overview</h3>
 <table>
@@ -323,9 +335,9 @@
 <h3 id="sla-reporting">SLA Reporting</h3>
 <p><strong>Reporting Frequency:</strong> [TODO: Monthly/Quarterly]</p>
 <p><strong>Recipients:</strong>
-- Service Owner: IT Operations Manager
-- IT Operations Manager: Andreas Huemmer
-- CIO: Anna Schmidt
+- Service Owner: [TODO]
+- IT Operations Manager: {{ meta-organisation-roles.role_IT_Operations_Manager }}
+- CIO: [TODO]
 - [TODO: Additional stakeholders]</p>
 <p><strong>Content:</strong>
 - Availability statistics
@@ -412,7 +424,7 @@
 <tr>
 <td><strong>Service Owner</strong></td>
 <td>Overall responsibility</td>
-<td>IT Operations Manager</td>
+<td>[TODO]</td>
 <td>[TODO: Email]</td>
 </tr>
 <tr>
@@ -424,30 +436,29 @@
 <tr>
 <td><strong>Operations Manager</strong></td>
 <td>Daily operations</td>
-<td>Andreas Huemmer</td>
-<td>andreas.huemmer@adminsend.de</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager_email }}</td>
 </tr>
 <tr>
 <td><strong>Service Desk Lead</strong></td>
 <td>First-level support</td>
-<td>Julia Becker</td>
-<td>julia.becker@adminsend.de</td>
+<td>{{ meta-organisation-roles.role_Service_Desk_Lead }}</td>
+<td>{{ meta-organisation-roles.role_Service_Desk_Lead_email }}</td>
 </tr>
 </tbody>
 </table>
 <h2 id="contacts-and-escalation">Contacts and Escalation</h2>
 <p><strong>For questions about the service:</strong>
-- <strong>Service Owner:</strong> IT Operations Manager
-- <strong>IT Operations Manager:</strong> Andreas Huemmer (andreas.huemmer@adminsend.de)
-- <strong>Service Desk:</strong> Julia Becker (julia.becker@adminsend.de)</p>
+- <strong>Service Owner:</strong> [TODO]
+- <strong>IT Operations Manager:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }} ({{ meta-organisation-roles.role_IT_Operations_Manager_email }})
+- <strong>Service Desk:</strong> {{ meta-organisation-roles.role_Service_Desk_Lead }} ({{ meta-organisation-roles.role_Service_Desk_Lead_email }})</p>
 <p><strong>Escalation Path:</strong>
-1. <strong>Level 1:</strong> Service Desk - julia.becker@adminsend.de
-2. <strong>Level 2:</strong> IT Operations - andreas.huemmer@adminsend.de
-3. <strong>Level 3:</strong> CIO - anna.schmidt@adminsend.de</p>
-<hr />
-<p><strong>Service Owner:</strong> IT Operations Manager<br />
-<strong>Approved by:</strong> CIO<br />
-<strong>Version:</strong> 1.0.0<br />
+1. <strong>Level 1:</strong> Service Desk - {{ meta-organisation-roles.role_Service_Desk_Lead_email }}
+2. <strong>Level 2:</strong> IT Operations - {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
+3. <strong>Level 3:</strong> CIO - {{ meta-organisation-roles.role_CIO_email }}</p>
+<p><strong>Service Owner:</strong> [TODO]<br />
+<strong>Approved by:</strong> [TODO]<br />
+<strong>Version:</strong> 0<br />
 <strong>Organization:</strong> AdminSend GmbH</p>
         </main>
         

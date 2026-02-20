@@ -7,7 +7,7 @@ Classification: Internal
 
 # Executive Management IT Governance Responsibilities
 
-**Document-ID:** [FRAMEWORK]-0220
+**Document-ID:** ISO-38500-0220
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

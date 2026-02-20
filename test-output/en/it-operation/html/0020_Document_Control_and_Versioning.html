@@ -21,6 +21,18 @@
         
         <main>
 <h1 id="document-control-and-versioning">Document Control and Versioning</h1>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0020
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
 <h2 id="document-metadata">Document Metadata</h2>
 <table>
 <thead>
@@ -44,19 +56,19 @@
 </tr>
 <tr>
 <td>Owner</td>
-<td>IT Operations Manager</td>
+<td>[TODO]</td>
 </tr>
 <tr>
 <td>Responsible Editor</td>
-<td>Andreas Huemmer [andreas.huemmer@adminsend.de]</td>
+<td>[Author]</td>
 </tr>
 <tr>
 <td>Approval Authority</td>
-<td>CIO</td>
+<td>[TODO]</td>
 </tr>
 <tr>
 <td>Classification</td>
-<td>internal</td>
+<td>Internal</td>
 </tr>
 <tr>
 <td>Storage Location</td>
@@ -68,7 +80,7 @@
 </tr>
 <tr>
 <td>Location</td>
-<td>München, Deutschland</td>
+<td>{{ meta-organisation.city }}, {{ meta-organisation.country }}</td>
 </tr>
 </tbody>
 </table>
@@ -85,11 +97,11 @@
 </thead>
 <tbody>
 <tr>
-<td>1.0.0</td>
+<td>0</td>
 <td>[TODO: Date]</td>
-<td>Andreas Huemmer [andreas.huemmer@adminsend.de]</td>
+<td>[Author]</td>
 <td>Initial Version</td>
-<td>CIO</td>
+<td>[TODO]</td>
 </tr>
 <tr>
 <td></td>
@@ -141,12 +153,12 @@
 - Justification and business value
 - Impact analysis
 - Affected sections</p>
-<p><strong>Approval:</strong> IT Operations Manager</p>
+<p><strong>Approval:</strong> [TODO]</p>
 <h3 id="2-technical-review">2. Technical Review</h3>
 <p><strong>Reviewers:</strong>
-- <strong>Operations:</strong> Andreas Huemmer (andreas.huemmer@adminsend.de)
+- <strong>Operations:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }} ({{ meta-organisation-roles.role_IT_Operations_Manager_email }})
 - <strong>Architecture:</strong> [TODO: Architecture Lead]
-- <strong>Security:</strong> Thomas Weber (thomas.weber@adminsend.de)
+- <strong>Security:</strong> [TODO] ({{ meta-organisation-roles.role_CISO_email }})
 - <strong>Compliance:</strong> [TODO: Compliance Lead]</p>
 <p><strong>Review Criteria:</strong>
 - Technical correctness
@@ -154,7 +166,7 @@
 - Consistency with other documents
 - Compliance with standards and best practices</p>
 <h3 id="3-approval">3. Approval</h3>
-<p><strong>Approval Authority:</strong> CIO</p>
+<p><strong>Approval Authority:</strong> [TODO]</p>
 <p><strong>Approval Criteria:</strong>
 - All reviews completed
 - No open comments
@@ -163,11 +175,11 @@
 <p><strong>Approval Process:</strong>
 1. Incorporate review comments
 2. Create final version
-3. Approval by CIO
+3. Approval by [TODO]
 4. Increment version
 5. Publication in repository</p>
 <h3 id="4-publication">4. Publication</h3>
-<p><strong>Responsible:</strong> IT Operations Manager</p>
+<p><strong>Responsible:</strong> [TODO]</p>
 <p><strong>Steps:</strong>
 1. Store document in central repository
 2. Inform stakeholders
@@ -182,13 +194,13 @@
 </ul>
 <h3 id="normal-changes-minor">Normal Changes (Minor)</h3>
 <ul>
-<li><strong>Approval:</strong> CIO</li>
+<li><strong>Approval:</strong> [TODO]</li>
 <li><strong>Review:</strong> Department (Operations/Security)</li>
 <li><strong>Examples:</strong> New sections, process changes</li>
 </ul>
 <h3 id="major-changes-major">Major Changes (Major)</h3>
 <ul>
-<li><strong>Approval:</strong> Anna Schmidt (anna.schmidt@adminsend.de)</li>
+<li><strong>Approval:</strong> [TODO] ({{ meta-organisation-roles.role_CIO_email }})</li>
 <li><strong>Review:</strong> All departments + management</li>
 <li><strong>CAB Meeting:</strong> Required</li>
 <li><strong>Examples:</strong> Fundamental revisions, architecture changes</li>
@@ -196,7 +208,7 @@
 <h2 id="documentation-standards">Documentation Standards</h2>
 <h3 id="language-and-format">Language and Format</h3>
 <ul>
-<li><strong>Language:</strong> de</li>
+<li><strong>Language:</strong> {{ meta-handbook.language }}</li>
 <li><strong>Format:</strong> Markdown (.md)</li>
 <li><strong>Character Set:</strong> UTF-8</li>
 <li><strong>Line Breaks:</strong> Unix (LF)</li>
@@ -230,9 +242,9 @@
 <p>Use the following placeholders for organization-wide information:</p>
 <ul>
 <li><strong>Organization:</strong> <code>AdminSend GmbH</code></li>
-<li><strong>Roles:</strong> <code>Max Mustermann</code>, <code>Anna Schmidt</code>, <code>Thomas Weber</code></li>
-<li><strong>Document:</strong> <code>IT Operations Manager</code>, <code>CIO</code></li>
-<li><strong>Author:</strong> <code>Andreas Huemmer [andreas.huemmer@adminsend.de]</code></li>
+<li><strong>Roles:</strong> <code>[TODO]</code>, <code>[TODO]</code>, <code>[TODO]</code></li>
+<li><strong>Document:</strong> <code>[TODO]</code>, <code>[TODO]</code></li>
+<li><strong>Author:</strong> <code>Handbook-Generator</code></li>
 </ul>
 <h2 id="document-classification">Document Classification</h2>
 <table>
@@ -271,7 +283,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Current Classification:</strong> internal</p>
+<p><strong>Current Classification:</strong> Internal</p>
 <h2 id="archiving-and-retention">Archiving and Retention</h2>
 <h3 id="retention-periods">Retention Periods</h3>
 <ul>
@@ -300,39 +312,38 @@
 <tr>
 <td><strong>Document Owner</strong></td>
 <td>Overall responsibility, currency</td>
-<td>IT Operations Manager</td>
+<td>[TODO]</td>
 </tr>
 <tr>
 <td><strong>Editor</strong></td>
 <td>Content maintenance, changes</td>
-<td>Andreas Huemmer [andreas.huemmer@adminsend.de]</td>
+<td>[Author]</td>
 </tr>
 <tr>
 <td><strong>Approval Authority</strong></td>
 <td>Approval of changes</td>
-<td>CIO</td>
+<td>[TODO]</td>
 </tr>
 <tr>
 <td><strong>CIO</strong></td>
 <td>Strategic alignment</td>
-<td>Anna Schmidt</td>
+<td>[TODO]</td>
 </tr>
 <tr>
 <td><strong>CISO</strong></td>
 <td>Security review</td>
-<td>Thomas Weber</td>
+<td>[TODO]</td>
 </tr>
 </tbody>
 </table>
 <h2 id="contacts">Contacts</h2>
 <p><strong>For questions about document control:</strong>
-- <strong>Document Owner:</strong> IT Operations Manager
-- <strong>IT Operations Manager:</strong> Andreas Huemmer (andreas.huemmer@adminsend.de)
-- <strong>CIO:</strong> Anna Schmidt (anna.schmidt@adminsend.de)</p>
-<hr />
-<p><strong>Document Owner:</strong> IT Operations Manager<br />
-<strong>Approved by:</strong> CIO<br />
-<strong>Version:</strong> 1.0.0<br />
+- <strong>Document Owner:</strong> [TODO]
+- <strong>IT Operations Manager:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }} ({{ meta-organisation-roles.role_IT_Operations_Manager_email }})
+- <strong>CIO:</strong> [TODO] ({{ meta-organisation-roles.role_CIO_email }})</p>
+<p><strong>Document Owner:</strong> [TODO]<br />
+<strong>Approved by:</strong> [TODO]<br />
+<strong>Version:</strong> 0<br />
 <strong>Organization:</strong> AdminSend GmbH</p>
         </main>
         

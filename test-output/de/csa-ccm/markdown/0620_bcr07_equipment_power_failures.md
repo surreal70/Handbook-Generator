@@ -6,7 +6,7 @@ Classification: Internal
 
 # BCR-07: Stromausfälle
 
-**Dokument-ID:** [FRAMEWORK]-0620
+**Dokument-ID:** CSA-CCM-0620
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

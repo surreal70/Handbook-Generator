@@ -6,7 +6,7 @@ Classification: Internal
 
 # Informationsqualität
 
-**Dokument-ID:** [FRAMEWORK]-0310
+**Dokument-ID:** COSO-0310
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

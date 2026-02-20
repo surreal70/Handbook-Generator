@@ -1,6 +1,6 @@
 # Information Security Policy
 
-**Document-ID:** [FRAMEWORK]-0600
+**Document-ID:** PCI-DSS-0600
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

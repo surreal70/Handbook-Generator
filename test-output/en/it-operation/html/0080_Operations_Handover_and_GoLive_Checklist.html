@@ -21,12 +21,23 @@
         
         <main>
 <h1 id="operations-handover-and-go-live-checklist">Operations Handover and Go-Live Checklist</h1>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0080
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
 <h2 id="overview">Overview</h2>
 <p>This document describes the operations handover process and contains a comprehensive go-live checklist for transitioning new or changed IT services into production.</p>
-<p><strong>Service:</strong> {{ meta.service_name }}<br />
-<strong>Responsible:</strong> Andreas Huemmer<br />
-<strong>Version:</strong> 1.0.0</p>
-<hr />
+<p><strong>Service:</strong> {{ meta-handbook.service_name }}<br />
+<strong>Responsible:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}<br />
+<strong>Version:</strong> 0</p>
 <h2 id="operations-handover-process">Operations Handover Process</h2>
 <h3 id="phases-of-operations-handover">Phases of Operations Handover</h3>
 <div class="codehilite"><pre><span></span><code><span class="err">┌─────────────────┐</span>
@@ -77,7 +88,7 @@
 <tr>
 <td><strong>IT Operations Manager</strong></td>
 <td>Coordinate operations takeover</td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 </tr>
 <tr>
 <td><strong>Technical Lead</strong></td>
@@ -87,7 +98,7 @@
 <tr>
 <td><strong>Service Desk Lead</strong></td>
 <td>Support readiness</td>
-<td>Julia Becker</td>
+<td>{{ meta-organisation-roles.role_Service_Desk_Lead }}</td>
 </tr>
 <tr>
 <td><strong>Change Manager</strong></td>
@@ -97,11 +108,10 @@
 <tr>
 <td><strong>CIO</strong></td>
 <td>Final approval</td>
-<td>Anna Schmidt</td>
+<td>[TODO]</td>
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="go-live-checklist">Go-Live Checklist</h2>
 <h3 id="phase-1-preparation-4-6-weeks-before-go-live">Phase 1: Preparation (4-6 Weeks Before Go-Live)</h3>
 <h4 id="project-planning">Project Planning</h4>
@@ -257,7 +267,6 @@
 <li>[ ] Lessons learned documented</li>
 <li>[ ] Post-implementation review conducted</li>
 </ul>
-<hr />
 <h2 id="handover-documentation">Handover Documentation</h2>
 <h3 id="handover-package">Handover Package</h3>
 <p>The handover package must contain the following documents:</p>
@@ -351,11 +360,10 @@
 8. Questions and answers</p>
 <p><strong>Participants:</strong>
 - Service Owner
-- IT Operations Manager: Andreas Huemmer
+- IT Operations Manager: {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - Technical Lead
-- Service Desk Lead: Julia Becker
-- CIO: Anna Schmidt</p>
-<hr />
+- Service Desk Lead: {{ meta-organisation-roles.role_Service_Desk_Lead }}
+- CIO: [TODO]</p>
 <h2 id="acceptance-criteria">Acceptance Criteria</h2>
 <h3 id="technical-acceptance-criteria">Technical Acceptance Criteria</h3>
 <table>
@@ -512,7 +520,7 @@
 <td><strong>Budget</strong></td>
 <td>Within budget</td>
 <td>☐</td>
-<td>Maria Müller</td>
+<td>[TODO]</td>
 </tr>
 <tr>
 <td><strong>Timeline</strong></td>
@@ -522,16 +530,15 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="gono-go-decision">Go/No-Go Decision</h2>
 <h3 id="gono-go-meeting">Go/No-Go Meeting</h3>
 <p><strong>Timing:</strong> 24 hours before planned go-live<br />
 <strong>Participants:</strong>
 - Service Owner
-- IT Operations Manager: Andreas Huemmer
+- IT Operations Manager: {{ meta-organisation-roles.role_IT_Operations_Manager }}
 - Technical Lead
 - Change Manager
-- CIO: Anna Schmidt</p>
+- CIO: [TODO]</p>
 <h3 id="decision-criteria">Decision Criteria</h3>
 <table>
 <thead>
@@ -599,7 +606,6 @@
 - Service Owner: <strong><em>_</em></strong><strong><em>_</em></strong><strong><em> Date: </em></strong><strong><em>_
 - IT Operations Manager: </em></strong><strong><em>_</em></strong><strong><em>_</em></strong> Date: <strong><em>_</em></strong>
 - CIO: <strong><em>_</em></strong><strong><em>_</em></strong><strong><em> Date: </em></strong>____</p>
-<hr />
 <h2 id="rollback-plan">Rollback Plan</h2>
 <h3 id="rollback-triggers">Rollback Triggers</h3>
 <p>Rollback is triggered by:
@@ -625,7 +631,6 @@
 <li><strong>4-24 hours after go-live:</strong> Rollback with increased effort</li>
 <li><strong>After 24 hours:</strong> Rollback only after careful analysis</li>
 </ul>
-<hr />
 <h2 id="post-implementation-review">Post-Implementation Review</h2>
 <h3 id="review-meeting">Review Meeting</h3>
 <p><strong>Timing:</strong> 2-4 weeks after go-live<br />
@@ -730,19 +735,17 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="contacts">Contacts</h2>
 <p><strong>Go-Live Team:</strong>
 - <strong>Service Owner:</strong> [TODO: Name] - [TODO: Email]
-- <strong>IT Operations Manager:</strong> Andreas Huemmer - andreas.huemmer@adminsend.de
+- <strong>IT Operations Manager:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }} - {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
 - <strong>Technical Lead:</strong> [TODO: Name] - [TODO: Email]
-- <strong>Service Desk Lead:</strong> Julia Becker - julia.becker@adminsend.de
+- <strong>Service Desk Lead:</strong> {{ meta-organisation-roles.role_Service_Desk_Lead }} - {{ meta-organisation-roles.role_Service_Desk_Lead_email }}
 - <strong>Change Manager:</strong> [TODO: Name] - [TODO: Email]
-- <strong>CIO:</strong> Anna Schmidt - anna.schmidt@adminsend.de</p>
-<hr />
-<p><strong>Document Owner:</strong> IT Operations Manager<br />
-<strong>Approved by:</strong> CIO<br />
-<strong>Version:</strong> 1.0.0<br />
+- <strong>CIO:</strong> [TODO] - {{ meta-organisation-roles.role_CIO_email }}</p>
+<p><strong>Document Owner:</strong> [TODO]<br />
+<strong>Approved by:</strong> [TODO]<br />
+<strong>Version:</strong> 0<br />
 <strong>Organization:</strong> AdminSend GmbH</p>
         </main>
         

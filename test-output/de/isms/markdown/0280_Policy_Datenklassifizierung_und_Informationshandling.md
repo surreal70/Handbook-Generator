@@ -1,6 +1,6 @@
 # Policy: Datenklassifizierung und Informationshandling
 
-**Dokument-ID:** 0280
+**Dokument-ID:** ISMS-0280
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

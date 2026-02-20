@@ -1,6 +1,6 @@
 # Policy: Authentisierung und MFA
 
-**Dokument-ID:** 0220
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0220
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

@@ -1,6 +1,6 @@
 # Richtlinie: Passwort MFA und Sitzungsregeln
 
-**Dokument-ID:** 0230
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0230
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

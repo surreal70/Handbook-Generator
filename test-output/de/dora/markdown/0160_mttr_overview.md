@@ -6,7 +6,7 @@ Classification: Internal
 
 # Mean Time to Restore (MTTR) Übersicht
 
-**Dokument-ID:** [FRAMEWORK]-0160
+**Dokument-ID:** DORA-0160
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

@@ -3,7 +3,7 @@
 <div align="center">
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
-[![Version](https://img.shields.io/badge/version-0.0.18-orange.svg)](about_versioning/VERSION.md)
+[![Version](https://img.shields.io/badge/version-0.0.21-green.svg)](about_versioning/VERSION.md)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Code Coverage](https://img.shields.io/badge/coverage-72%25-yellow.svg)](htmlcov/index.html)
 [![Tests](https://img.shields.io/badge/tests-7635%20total-success.svg)](tests/)
@@ -25,24 +25,29 @@ A Python tool for generating professional handbooks from Markdown templates with
   <img src="logo/HandBook-Generator.png" alt="Handbook Generator Logo" width="400"/>
 </div>
 
-## ⚠️ Important Notice
+## 🎯 Important Notice
 
-**This is an intermediate development release (0.0.18) and NOT intended for production use.**
+**This is Version 0.0.21 - Limited Production Use**
 
-This version contains:
-- Service and Process Documentation System (NEW)
-- Quality Control System
-- Comprehensive test coverage (7,635 tests, 72% coverage)
-- 10 known test failures (pre-existing issues)
-- Development-only features
+This version is ready for:
+- ✅ Markdown handbook generation (all 44 handbooks)
+- ✅ Documentation projects
+- ✅ Compliance documentation
+- ✅ Development and test environments
+- ✅ Inline placeholder support
+- ✅ Handbook-specific metadata
 
-See [Release Notes](about_versioning/VERSION_0.0.18_RELEASE_NOTES.md) for details.
+Limitations:
+- ⚠️ PDF generation requires system libraries (libpango)
+- ⚠️ HTML output not comprehensively tested
+
+See [Release Notes](about_versioning/VERSION_0.0.21_RELEASE_NOTES.md) for details.
 
 ## Overview
 
 The Handbook Generator creates professional handbooks in various formats (HTML, PDF, Markdown) from structured Markdown templates. The system replaces placeholders in templates with real data from external systems like NetBox and supports multilingual handbooks.
 
-**Version 0.0.18** - ⚠️ Intermediate Development Release - NOT FOR PRODUCTION
+**Version 0.0.21** - 🎯 Limited Production Use - Core functionality stable
 
 ## Features
 

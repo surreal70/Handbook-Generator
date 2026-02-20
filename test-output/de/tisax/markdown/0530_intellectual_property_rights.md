@@ -6,7 +6,7 @@ Classification: Internal
 
 # Schutz geistigen Eigentums
 
-**Dokument-ID:** [FRAMEWORK]-0530
+**Dokument-ID:** TISAX-0530
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

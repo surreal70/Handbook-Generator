@@ -6,7 +6,7 @@ Classification: Internal
 
 # Information and Communication - Overview
 
-**Document-ID:** [FRAMEWORK]-0400
+**Document-ID:** SOC1-0400
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

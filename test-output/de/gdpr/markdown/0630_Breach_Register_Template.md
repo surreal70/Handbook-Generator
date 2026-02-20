@@ -1,6 +1,6 @@
 # Breach Register (Verzeichnis der Datenschutzverletzungen)
 
-**Dokument-ID:** 0630
+**Dokument-ID:** GDPR-0630
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

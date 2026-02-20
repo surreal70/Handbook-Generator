@@ -1,6 +1,6 @@
 # CC6-CC9: Security Controls
 
-**Document-ID:** [FRAMEWORK]-0150
+**Document-ID:** TSC-0150
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

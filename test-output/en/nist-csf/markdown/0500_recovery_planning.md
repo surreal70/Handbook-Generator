@@ -7,7 +7,7 @@ Classification: Internal
 
 # Recovery Planning (RC.RP)
 
-**Document-ID:** [FRAMEWORK]-0500
+**Document-ID:** NIST-CSF-0500
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

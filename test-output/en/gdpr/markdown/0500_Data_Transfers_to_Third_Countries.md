@@ -1,6 +1,6 @@
 # Data Transfers to Third Countries
 
-**Document-ID:** 0500
+**Document-ID:** GDPR-0500
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

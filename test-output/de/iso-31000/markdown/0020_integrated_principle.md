@@ -7,7 +7,7 @@ Classification: Internal
 
 # Prinzip 1: Integriert
 
-**Dokument-ID:** [FRAMEWORK]-0020
+**Dokument-ID:** ISO-31000-0020
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

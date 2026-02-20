@@ -21,13 +21,24 @@
         
         <main>
 <h1 id="capacity-and-performance-management">Capacity and Performance Management</h1>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0200
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
 <h2 id="overview">Overview</h2>
 <p>This document describes the processes and methods for capacity and performance management of the IT service. The goal is to ensure that sufficient IT resources are available to meet current and future business requirements.</p>
-<p><strong>Document Owner:</strong> IT Operations Manager<br />
-<strong>Approved by:</strong> CIO<br />
-<strong>Version:</strong> 1.0.0<br />
+<p><strong>Document Owner:</strong> [TODO]<br />
+<strong>Approved by:</strong> [TODO]<br />
+<strong>Version:</strong> 0<br />
 <strong>Organization:</strong> AdminSend GmbH</p>
-<hr />
 <h2 id="capacity-planning">Capacity Planning</h2>
 <h3 id="planning-cycle">Planning Cycle</h3>
 <table>
@@ -43,19 +54,19 @@
 <tr>
 <td>Short-term</td>
 <td>1-3 months</td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 <td>Monitoring, adjustments</td>
 </tr>
 <tr>
 <td>Medium-term</td>
 <td>3-12 months</td>
-<td>Anna Schmidt</td>
+<td>[TODO]</td>
 <td>Capacity forecasts, budget planning</td>
 </tr>
 <tr>
 <td>Long-term</td>
 <td>1-3 years</td>
-<td>Max Mustermann</td>
+<td>[TODO]</td>
 <td>Strategic planning, investments</td>
 </tr>
 </tbody>
@@ -63,26 +74,83 @@
 <h3 id="capacity-dimensions">Capacity Dimensions</h3>
 <h4 id="compute-resources">Compute Resources</h4>
 <ul>
-<li><strong>CPU Capacity:</strong> {{ netbox.cluster.total_cpu_cores }} Cores</li>
-<li><strong>RAM Capacity:</strong> {{ netbox.cluster.total_memory_gb }} GB</li>
+<li><strong>CPU Capacity:</strong> [[ netbox.cluster.total_cpu_cores ]] Cores</li>
+<li><strong>RAM Capacity:</strong> [[ netbox.cluster.total_memory_gb ]] GB</li>
 <li><strong>Utilization Target:</strong> 70% (Average), 85% (Peak)</li>
 <li><strong>Scaling Threshold:</strong> 80% over 7 days</li>
 </ul>
 <h4 id="storage-resources">Storage Resources</h4>
 <ul>
-<li><strong>Total Capacity:</strong> {{ netbox.storage.total_capacity_tb }} TB</li>
-<li><strong>Available Capacity:</strong> {{ netbox.storage.available_capacity_tb }} TB</li>
+<li><strong>Total Capacity:</strong> [[ netbox.storage.total_capacity_tb ]] TB</li>
+<li><strong>Available Capacity:</strong> [[ netbox.storage.available_capacity_tb ]] TB</li>
 <li><strong>Utilization Target:</strong> 75% (Average), 85% (Maximum)</li>
 <li><strong>Scaling Threshold:</strong> 80% utilization</li>
 </ul>
 <h4 id="network-resources">Network Resources</h4>
 <ul>
-<li><strong>WAN Bandwidth:</strong> {{ netbox.circuit.bandwidth_mbps }} Mbps</li>
-<li><strong>LAN Bandwidth:</strong> {{ netbox.network.lan_bandwidth_gbps }} Gbps</li>
+<li><strong>WAN Bandwidth:</strong> [[ netbox.circuit.bandwidth_mbps ]] Mbps</li>
+<li><strong>LAN Bandwidth:</strong> [[ netbox.network.lan_bandwidth_gbps ]] Gbps</li>
 <li><strong>Utilization Target:</strong> 60% (Average), 80% (Peak)</li>
 <li><strong>Scaling Threshold:</strong> 75% over 5 days</li>
 </ul>
-<hr />
+<h3 id="capacity-modeling">Capacity Modeling</h3>
+<h4 id="growth-forecasts">Growth Forecasts</h4>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th style="text-align: right;">Current</th>
+<th style="text-align: right;">+6 Months</th>
+<th style="text-align: right;">+12 Months</th>
+<th style="text-align: right;">+24 Months</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPU (Cores)</td>
+<td style="text-align: right;">[TODO]</td>
+<td style="text-align: right;">[TODO]</td>
+<td style="text-align: right;">[TODO]</td>
+<td style="text-align: right;">[TODO]</td>
+</tr>
+<tr>
+<td>RAM (GB)</td>
+<td style="text-align: right;">[TODO]</td>
+<td style="text-align: right;">[TODO]</td>
+<td style="text-align: right;">[TODO]</td>
+<td style="text-align: right;">[TODO]</td>
+</tr>
+<tr>
+<td>Storage (TB)</td>
+<td style="text-align: right;">[TODO]</td>
+<td style="text-align: right;">[TODO]</td>
+<td style="text-align: right;">[TODO]</td>
+<td style="text-align: right;">[TODO]</td>
+</tr>
+<tr>
+<td>Network (Gbps)</td>
+<td style="text-align: right;">[TODO]</td>
+<td style="text-align: right;">[TODO]</td>
+<td style="text-align: right;">[TODO]</td>
+<td style="text-align: right;">[TODO]</td>
+</tr>
+<tr>
+<td>Users</td>
+<td style="text-align: right;">[TODO]</td>
+<td style="text-align: right;">[TODO]</td>
+<td style="text-align: right;">[TODO]</td>
+<td style="text-align: right;">[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="influencing-factors">Influencing Factors</h4>
+<ul>
+<li>Business growth and new projects</li>
+<li>Seasonal fluctuations</li>
+<li>Technological changes</li>
+<li>Regulatory requirements</li>
+<li>Mergers &amp; Acquisitions</li>
+</ul>
 <h2 id="performance-monitoring">Performance Monitoring</h2>
 <h3 id="performance-metrics">Performance Metrics</h3>
 <h4 id="system-performance">System Performance</h4>
@@ -190,7 +258,108 @@
 </tr>
 </tbody>
 </table>
-<hr />
+<h4 id="database-performance">Database Performance</h4>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th style="text-align: right;">Target</th>
+<th style="text-align: right;">Warning Threshold</th>
+<th style="text-align: right;">Critical</th>
+<th>Measurement Interval</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Query Response Time</td>
+<td style="text-align: right;">&lt; 100ms</td>
+<td style="text-align: right;">&gt; 500ms</td>
+<td style="text-align: right;">&gt; 2000ms</td>
+<td>1 Minute</td>
+</tr>
+<tr>
+<td>Connection Pool Usage</td>
+<td style="text-align: right;">&lt; 70%</td>
+<td style="text-align: right;">&gt; 85%</td>
+<td style="text-align: right;">&gt; 95%</td>
+<td>1 Minute</td>
+</tr>
+<tr>
+<td>Lock Wait Time</td>
+<td style="text-align: right;">&lt; 10ms</td>
+<td style="text-align: right;">&gt; 100ms</td>
+<td style="text-align: right;">&gt; 500ms</td>
+<td>1 Minute</td>
+</tr>
+<tr>
+<td>Deadlocks</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">&gt; 1/h</td>
+<td style="text-align: right;">&gt; 5/h</td>
+<td>5 Minutes</td>
+</tr>
+<tr>
+<td>Cache Hit Ratio</td>
+<td style="text-align: right;">&gt; 95%</td>
+<td style="text-align: right;">&lt; 90%</td>
+<td style="text-align: right;">&lt; 80%</td>
+<td>5 Minutes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="monitoring-tools">Monitoring Tools</h3>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Purpose</th>
+<th>Access</th>
+<th>Responsible</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[TODO: Monitoring Tool]</td>
+<td>System Monitoring</td>
+<td>[TODO: URL]</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
+</tr>
+<tr>
+<td>[TODO: APM Tool]</td>
+<td>Application Performance</td>
+<td>[TODO: URL]</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
+</tr>
+<tr>
+<td>[TODO: DB Monitoring]</td>
+<td>Database Performance</td>
+<td>[TODO: URL]</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
+</tr>
+<tr>
+<td>[TODO: Network Tool]</td>
+<td>Network Monitoring</td>
+<td>[TODO: URL]</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
+</tr>
+</tbody>
+</table>
+<h3 id="performance-dashboards">Performance Dashboards</h3>
+<h4 id="overview-dashboard">Overview Dashboard</h4>
+<ul>
+<li>Overall system health status</li>
+<li>Critical performance metrics</li>
+<li>Current incidents and alerts</li>
+<li>Capacity utilization</li>
+</ul>
+<h4 id="detail-dashboards">Detail Dashboards</h4>
+<ul>
+<li><strong>Compute:</strong> CPU, RAM, Processes</li>
+<li><strong>Storage:</strong> Disk utilization, I/O performance</li>
+<li><strong>Network:</strong> Bandwidth, latency, packet loss</li>
+<li><strong>Application:</strong> Response times, throughput, errors</li>
+<li><strong>Database:</strong> Query performance, connections, locks</li>
+</ul>
 <h2 id="trend-analysis">Trend Analysis</h2>
 <h3 id="analysis-process">Analysis Process</h3>
 <h4 id="weekly-analysis">Weekly Analysis</h4>
@@ -203,18 +372,132 @@
 <h4 id="monthly-analysis">Monthly Analysis</h4>
 <ul>
 <li><strong>Execution:</strong> First business day of month</li>
-<li><strong>Responsible:</strong> Andreas Huemmer</li>
+<li><strong>Responsible:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</li>
 <li><strong>Focus:</strong> Medium-term trends and capacity forecasts</li>
 <li><strong>Output:</strong> Monthly report with capacity recommendations</li>
 </ul>
 <h4 id="quarterly-analysis">Quarterly Analysis</h4>
 <ul>
 <li><strong>Execution:</strong> End of quarter</li>
-<li><strong>Responsible:</strong> Anna Schmidt</li>
+<li><strong>Responsible:</strong> [TODO]</li>
 <li><strong>Focus:</strong> Strategic trends and investment planning</li>
 <li><strong>Output:</strong> Quarterly report with budget recommendations</li>
 </ul>
-<hr />
+<h3 id="trend-metrics">Trend Metrics</h3>
+<h4 id="growth-trends">Growth Trends</h4>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th style="text-align: right;">Current</th>
+<th>Trend (30d)</th>
+<th>Trend (90d)</th>
+<th>Forecast (12m)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPU Utilization</td>
+<td style="text-align: right;">[TODO]%</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>RAM Utilization</td>
+<td style="text-align: right;">[TODO]%</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Storage Utilization</td>
+<td style="text-align: right;">[TODO]%</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Network Traffic</td>
+<td style="text-align: right;">[TODO] GB/d</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>User Count</td>
+<td style="text-align: right;">[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Transactions/Day</td>
+<td style="text-align: right;">[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="performance-trends">Performance Trends</h4>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th style="text-align: right;">Current</th>
+<th>Trend (30d)</th>
+<th style="text-align: right;">Target</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Avg. Response Time</td>
+<td style="text-align: right;">[TODO]ms</td>
+<td>[TODO]</td>
+<td style="text-align: right;">&lt; 200ms</td>
+<td>✓ / ⚠ / ✗</td>
+</tr>
+<tr>
+<td>95th Percentile RT</td>
+<td style="text-align: right;">[TODO]ms</td>
+<td>[TODO]</td>
+<td style="text-align: right;">&lt; 500ms</td>
+<td>✓ / ⚠ / ✗</td>
+</tr>
+<tr>
+<td>Error Rate</td>
+<td style="text-align: right;">[TODO]%</td>
+<td>[TODO]</td>
+<td style="text-align: right;">&lt; 0.1%</td>
+<td>✓ / ⚠ / ✗</td>
+</tr>
+<tr>
+<td>Availability</td>
+<td style="text-align: right;">[TODO]%</td>
+<td>[TODO]</td>
+<td style="text-align: right;">&gt; 99.5%</td>
+<td>✓ / ⚠ / ✗</td>
+</tr>
+</tbody>
+</table>
+<h3 id="anomaly-detection">Anomaly Detection</h3>
+<h4 id="detection-methods">Detection Methods</h4>
+<ul>
+<li><strong>Statistical Analysis:</strong> Standard deviations, outliers</li>
+<li><strong>Machine Learning:</strong> Anomaly detection algorithms</li>
+<li><strong>Baseline Comparison:</strong> Deviations from historical baselines</li>
+<li><strong>Threshold Monitoring:</strong> Exceeding defined limits</li>
+</ul>
+<h4 id="anomaly-handling">Anomaly Handling</h4>
+<ol>
+<li><strong>Detection:</strong> Automatic alerts on anomalies</li>
+<li><strong>Analysis:</strong> Root cause investigation by operations team</li>
+<li><strong>Assessment:</strong> Impact assessment and prioritization</li>
+<li><strong>Actions:</strong> Corrective measures or escalation</li>
+<li><strong>Documentation:</strong> Lessons learned and process improvement</li>
+</ol>
 <h2 id="scaling-strategies">Scaling Strategies</h2>
 <h3 id="vertical-scaling-scale-up">Vertical Scaling (Scale-Up)</h3>
 <h4 id="use-cases">Use Cases</h4>
@@ -235,6 +518,14 @@
 <li>Single point of failure</li>
 <li>Higher cost per unit</li>
 </ul>
+<h4 id="implementation">Implementation</h4>
+<ol>
+<li>Performance analysis and bottleneck identification</li>
+<li>Hardware upgrade planning</li>
+<li>Maintenance window coordination</li>
+<li>Upgrade execution</li>
+<li>Performance validation</li>
+</ol>
 <h3 id="horizontal-scaling-scale-out">Horizontal Scaling (Scale-Out)</h3>
 <h4 id="use-cases_1">Use Cases</h4>
 <ul>
@@ -254,6 +545,14 @@
 <li>Application changes required</li>
 <li>Load balancing and state management</li>
 </ul>
+<h4 id="implementation_1">Implementation</h4>
+<ol>
+<li>Application architecture review</li>
+<li>Load balancer configuration</li>
+<li>Define auto-scaling rules</li>
+<li>Deployment automation</li>
+<li>Monitoring and optimization</li>
+</ol>
 <h3 id="auto-scaling">Auto-Scaling</h3>
 <h4 id="trigger-conditions">Trigger Conditions</h4>
 <table>
@@ -292,7 +591,61 @@
 </tr>
 </tbody>
 </table>
-<hr />
+<h4 id="scaling-limits">Scaling Limits</h4>
+<ul>
+<li><strong>Minimum Instances:</strong> [TODO]</li>
+<li><strong>Maximum Instances:</strong> [TODO]</li>
+<li><strong>Scale-Up Increment:</strong> [TODO] instances</li>
+<li><strong>Scale-Down Increment:</strong> [TODO] instance</li>
+</ul>
+<h3 id="cloud-scaling">Cloud Scaling</h3>
+<h4 id="cloud-provider">Cloud Provider</h4>
+<ul>
+<li><strong>Provider:</strong> {{ meta-handbook.cloud_provider }}</li>
+<li><strong>Region:</strong> {{ meta-handbook.cloud_region }}</li>
+<li><strong>Availability Zones:</strong> [TODO]</li>
+</ul>
+<h4 id="scaling-options">Scaling Options</h4>
+<ul>
+<li><strong>Compute:</strong> EC2 Auto Scaling Groups / Azure VM Scale Sets</li>
+<li><strong>Container:</strong> ECS/EKS / AKS / GKE</li>
+<li><strong>Serverless:</strong> Lambda / Azure Functions</li>
+<li><strong>Database:</strong> RDS Read Replicas / Cosmos DB Auto-Scale</li>
+</ul>
+<h2 id="capacity-optimization">Capacity Optimization</h2>
+<h3 id="optimization-measures">Optimization Measures</h3>
+<h4 id="resource-consolidation">Resource Consolidation</h4>
+<ul>
+<li>Virtualization and containerization</li>
+<li>Server consolidation</li>
+<li>Storage tiering and deduplication</li>
+<li>Network optimization</li>
+</ul>
+<h4 id="performance-tuning">Performance Tuning</h4>
+<ul>
+<li>Application optimization</li>
+<li>Database tuning (indexes, queries)</li>
+<li>Caching strategies</li>
+<li>Content Delivery Networks (CDN)</li>
+</ul>
+<h4 id="cost-optimization">Cost Optimization</h4>
+<ul>
+<li>Reserved Instances / Savings Plans</li>
+<li>Spot Instances for non-critical workloads</li>
+<li>Rightsizing of resources</li>
+<li>Lifecycle policies for storage</li>
+</ul>
+<h3 id="optimization-cycle">Optimization Cycle</h3>
+<div class="codehilite"><pre><span></span><code>┌─────────────────────────────────────────────────────────┐
+│                                                         │
+│  1. Monitoring  →  2. Analysis  →  3. Planning          │
+│       ↑                                    ↓            │
+│       │                                    │            │
+│  6. Review  ←  5. Validation  ←  4. Implementation     │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
+</code></pre></div>
+
 <h2 id="reporting">Reporting</h2>
 <h3 id="performance-reports">Performance Reports</h3>
 <h4 id="weekly-performance-report">Weekly Performance Report</h4>
@@ -306,7 +659,7 @@
 </ul>
 <h4 id="monthly-capacity-report">Monthly Capacity Report</h4>
 <ul>
-<li><strong>Recipients:</strong> Anna Schmidt, Andreas Huemmer</li>
+<li><strong>Recipients:</strong> [TODO], {{ meta-organisation-roles.role_IT_Operations_Manager }}</li>
 <li><strong>Content:</strong></li>
 <li>Capacity utilization</li>
 <li>Growth trends</li>
@@ -315,14 +668,56 @@
 </ul>
 <h4 id="quarterly-management-report">Quarterly Management Report</h4>
 <ul>
-<li><strong>Recipients:</strong> Max Mustermann, Anna Schmidt, Maria Müller</li>
+<li><strong>Recipients:</strong> [TODO], [TODO], [TODO]</li>
 <li><strong>Content:</strong></li>
 <li>Strategic capacity planning</li>
 <li>Investment recommendations</li>
 <li>ROI analysis</li>
 <li>Risk assessment</li>
 </ul>
-<hr />
+<h3 id="report-templates">Report Templates</h3>
+<h4 id="performance-kpis">Performance KPIs</h4>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th style="text-align: right;">Target</th>
+<th style="text-align: right;">Current</th>
+<th>Trend</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>System Availability</td>
+<td style="text-align: right;">&gt; 99.5%</td>
+<td style="text-align: right;">[TODO]%</td>
+<td>[TODO]</td>
+<td>✓ / ⚠ / ✗</td>
+</tr>
+<tr>
+<td>Avg. Response Time</td>
+<td style="text-align: right;">&lt; 200ms</td>
+<td style="text-align: right;">[TODO]ms</td>
+<td>[TODO]</td>
+<td>✓ / ⚠ / ✗</td>
+</tr>
+<tr>
+<td>CPU Utilization</td>
+<td style="text-align: right;">&lt; 70%</td>
+<td style="text-align: right;">[TODO]%</td>
+<td>[TODO]</td>
+<td>✓ / ⚠ / ✗</td>
+</tr>
+<tr>
+<td>Storage Utilization</td>
+<td style="text-align: right;">&lt; 75%</td>
+<td style="text-align: right;">[TODO]%</td>
+<td>[TODO]</td>
+<td>✓ / ⚠ / ✗</td>
+</tr>
+</tbody>
+</table>
 <h2 id="processes-and-responsibilities">Processes and Responsibilities</h2>
 <h3 id="raci-matrix">RACI Matrix</h3>
 <table>
@@ -390,7 +785,33 @@
 <blockquote>
 <p><strong>Legend:</strong> R = Responsible, A = Accountable, C = Consulted, I = Informed</p>
 </blockquote>
-<hr />
+<h3 id="escalation-path">Escalation Path</h3>
+<ol>
+<li><strong>Level 1:</strong> Operations Team - Daily monitoring and optimization</li>
+<li><strong>Level 2:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }} - Capacity decisions</li>
+<li><strong>Level 3:</strong> [TODO] - Strategic planning and budget</li>
+<li><strong>Level 4:</strong> [TODO] - Investment decisions</li>
+</ol>
+<h2 id="tools-and-systems">Tools and Systems</h2>
+<h3 id="monitoring-tools_1">Monitoring Tools</h3>
+<ul>
+<li><strong>System Monitoring:</strong> [TODO: Tool name and URL]</li>
+<li><strong>Application Performance Monitoring:</strong> [TODO: Tool name and URL]</li>
+<li><strong>Database Monitoring:</strong> [TODO: Tool name and URL]</li>
+<li><strong>Network Monitoring:</strong> [TODO: Tool name and URL]</li>
+</ul>
+<h3 id="analysis-tools">Analysis Tools</h3>
+<ul>
+<li><strong>Capacity Planning:</strong> [TODO: Tool name]</li>
+<li><strong>Trend Analysis:</strong> [TODO: Tool name]</li>
+<li><strong>Reporting:</strong> [TODO: Tool name]</li>
+</ul>
+<h3 id="automation">Automation</h3>
+<ul>
+<li><strong>Auto-Scaling:</strong> [TODO: Tool/Platform]</li>
+<li><strong>Alerting:</strong> [TODO: Tool name]</li>
+<li><strong>Orchestration:</strong> [TODO: Tool name]</li>
+</ul>
 <h2 id="compliance-and-standards">Compliance and Standards</h2>
 <h3 id="relevant-standards">Relevant Standards</h3>
 <ul>
@@ -398,10 +819,59 @@
 <li><strong>ISO 20000:</strong> Clause 8.7 - Capacity Management</li>
 <li><strong>COBIT 2019:</strong> APO03 - Managed Architecture, BAI04 - Managed Availability and Capacity</li>
 </ul>
-<hr />
-<p><strong>Last Update:</strong> {{ meta.date }}<br />
+<h3 id="audit-requirements">Audit Requirements</h3>
+<ul>
+<li>Documentation of capacity planning</li>
+<li>Performance metrics and trends</li>
+<li>Scaling decisions and justifications</li>
+<li>Budget evidence</li>
+</ul>
+<h2 id="appendix">Appendix</h2>
+<h3 id="glossary">Glossary</h3>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Capacity Planning</td>
+<td>Process to ensure sufficient IT resources</td>
+</tr>
+<tr>
+<td>Performance Management</td>
+<td>Monitoring and optimization of system performance</td>
+</tr>
+<tr>
+<td>Vertical Scaling</td>
+<td>Increasing resources of a single system</td>
+</tr>
+<tr>
+<td>Horizontal Scaling</td>
+<td>Adding more systems for load distribution</td>
+</tr>
+<tr>
+<td>Auto-Scaling</td>
+<td>Automatic adjustment of resources based on load</td>
+</tr>
+<tr>
+<td>Rightsizing</td>
+<td>Optimizing resource size for workloads</td>
+</tr>
+</tbody>
+</table>
+<h3 id="references">References</h3>
+<ul>
+<li>ITIL v4 Foundation Handbook</li>
+<li>ISO/IEC 20000-1:2018</li>
+<li>COBIT 2019 Framework</li>
+<li>Cloud Provider Best Practices</li>
+</ul>
+<p><strong>Last Update:</strong> {{ meta-handbook.date }}<br />
 <strong>Next Review:</strong> [TODO: Date]<br />
-<strong>Contact:</strong> andreas.huemmer@adminsend.de</p>
+<strong>Contact:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager_email }}</p>
         </main>
         
         <nav class="page-nav">

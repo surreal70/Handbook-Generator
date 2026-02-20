@@ -6,7 +6,7 @@ Classification: Internal
 
 # Kontinuierliche Verbesserung
 
-**Dokument-ID:** [FRAMEWORK]-0270
+**Dokument-ID:** COSO-0270
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

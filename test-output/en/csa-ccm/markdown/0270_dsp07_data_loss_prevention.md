@@ -6,7 +6,7 @@ Classification: Internal
 
 # DSP-07: Data Loss Prevention
 
-**Document-ID:** [FRAMEWORK]-0270
+**Document-ID:** CSA-CCM-0270
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

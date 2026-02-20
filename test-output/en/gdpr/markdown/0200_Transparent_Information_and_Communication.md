@@ -1,6 +1,6 @@
 # Transparent Information and Communication
 
-**Document-ID:** 0200
+**Document-ID:** GDPR-0200
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

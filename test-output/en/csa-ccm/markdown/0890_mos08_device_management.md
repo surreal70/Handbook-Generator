@@ -6,7 +6,7 @@ Classification: Internal
 
 # MOS-08: Device Management
 
-**Document-ID:** [FRAMEWORK]-0890
+**Document-ID:** CSA-CCM-0890
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

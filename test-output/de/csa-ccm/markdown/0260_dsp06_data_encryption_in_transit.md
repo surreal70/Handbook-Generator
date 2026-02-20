@@ -6,7 +6,7 @@ Classification: Internal
 
 # DSP-06: Verschlüsselung bei Übertragung
 
-**Dokument-ID:** [FRAMEWORK]-0260
+**Dokument-ID:** CSA-CCM-0260
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

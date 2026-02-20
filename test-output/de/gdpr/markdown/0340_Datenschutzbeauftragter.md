@@ -1,6 +1,6 @@
 # Datenschutzbeauftragter
 
-**Dokument-ID:** 0340
+**Dokument-ID:** GDPR-0340
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

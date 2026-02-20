@@ -6,7 +6,7 @@ Classification: Internal
 
 # MOS-11: Remote Wipe
 
-**Document-ID:** [FRAMEWORK]-0920
+**Document-ID:** CSA-CCM-0920
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

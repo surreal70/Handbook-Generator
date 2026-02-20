@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0400 - Change Failure Rate Overview</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0400</div>
+            <h1>Change Failure Rate Overview</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0350_mttr_improvement.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0410_cfr_measurement.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: dora-0400</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="change-failure-rate-overview">Change Failure Rate Overview</h1>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0400
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="purpose">Purpose</h2>
+<p>Comprehensive overview of the Change Failure Rate metric in the DORA Framework.</p>
+<h2 id="scope">Scope</h2>
+<ul>
+<li>Definition of Change Failure Rate</li>
+<li>Performance levels and benchmarks</li>
+<li>Causes of change failures</li>
+<li>Significance for the organization</li>
+</ul>
+<h2 id="definition">Definition</h2>
+<h3 id="change-failure-rate-cfr">Change Failure Rate (CFR)</h3>
+<p>Change Failure Rate measures the percentage of deployments that result in degraded service and require remediation (hotfix, rollback, patch).</p>
+<p><strong>Formal Definition</strong>: (Number of failed deployments / Total deployments) × 100%</p>
+<h3 id="organization-information">Organization Information</h3>
+<ul>
+<li><strong>Organization</strong>: [TODO]</li>
+<li><strong>Responsible</strong>: [TODO]</li>
+<li><strong>Current CFR</strong>: [TODO]</li>
+</ul>
+<h2 id="performance-levels">Performance Levels</h2>
+<h3 id="elite-performers">Elite Performers</h3>
+<p><strong>CFR</strong>: 0-15%</p>
+<p>Characteristics:
+- Comprehensive test automation
+- Shift-left testing
+- Continuous monitoring
+- Feature flags
+- Progressive delivery</p>
+<h3 id="high-performers">High Performers</h3>
+<p><strong>CFR</strong>: 16-30%</p>
+<p>Characteristics:
+- Good test coverage
+- Automated testing
+- Code reviews
+- Staging environments</p>
+<h3 id="medium-performers">Medium Performers</h3>
+<p><strong>CFR</strong>: 31-45%</p>
+<p>Characteristics:
+- Basic testing
+- Manual tests
+- Limited automation
+- Reactive quality assurance</p>
+<h3 id="low-performers">Low Performers</h3>
+<p><strong>CFR</strong>: 46-60%</p>
+<p>Characteristics:
+- Minimal tests
+- Missing automation
+- Insufficient quality gates
+- Frequent production issues</p>
+<h2 id="causes-of-change-failures">Causes of Change Failures</h2>
+<h3 id="1-insufficient-testing">1. Insufficient Testing</h3>
+<p><strong>Problems</strong>:
+- Low test coverage
+- Missing integration tests
+- No performance tests
+- Insufficient edge case tests</p>
+<h3 id="2-poor-code-quality">2. Poor Code Quality</h3>
+<p><strong>Problems</strong>:
+- Technical debt
+- Code smells
+- Missing code reviews
+- Insufficient documentation</p>
+<h3 id="3-incomplete-requirements">3. Incomplete Requirements</h3>
+<p><strong>Problems</strong>:
+- Unclear requirements
+- Missing acceptance criteria
+- Insufficient specifications
+- Misunderstandings</p>
+<h3 id="4-deployment-problems">4. Deployment Problems</h3>
+<p><strong>Problems</strong>:
+- Configuration errors
+- Environment inconsistencies
+- Dependency conflicts
+- Rollback difficulties</p>
+<h3 id="5-monitoring-gaps">5. Monitoring Gaps</h3>
+<p><strong>Problems</strong>:
+- Insufficient monitoring
+- Missing alerts
+- Delayed detection
+- Incomplete observability</p>
+<h2 id="significance-for-the-organization">Significance for the Organization</h2>
+<h3 id="business-impact">Business Impact</h3>
+<ul>
+<li><strong>Customer Satisfaction</strong>: Fewer production issues</li>
+<li><strong>Reputation</strong>: Reliability</li>
+<li><strong>Costs</strong>: Reduced remediation costs</li>
+<li><strong>Productivity</strong>: Less firefighting</li>
+</ul>
+<h3 id="technical-benefits">Technical Benefits</h3>
+<ul>
+<li><strong>Quality</strong>: Higher code quality</li>
+<li><strong>Stability</strong>: More stable systems</li>
+<li><strong>Confidence</strong>: Trust in deployments</li>
+<li><strong>Speed</strong>: Faster delivery</li>
+</ul>
+<h2 id="measurement-methodology">Measurement Methodology</h2>
+<h3 id="data-collection">Data Collection</h3>
+<p><strong>Deployment Tracking</strong>:
+- Deployment timestamp
+- Deployment status
+- Commit SHA
+- Environment</p>
+<p><strong>Failure Tracking</strong>:
+- Incident timestamp
+- Related deployment
+- Failure type
+- Remediation action</p>
+<h3 id="calculation">Calculation</h3>
+<div class="codehilite"><pre><span></span><code>CFR = (Failed Deployments / Total Deployments) × 100%
+</code></pre></div>
+
+<p><strong>Failed Deployment Definition</strong>:
+- Rollback required
+- Hotfix required
+- Service degradation
+- Production incident</p>
+<h2 id="improvement-approaches">Improvement Approaches</h2>
+<h3 id="short-term">Short-term</h3>
+<ul>
+<li>Increase test coverage</li>
+<li>Improve code reviews</li>
+<li>Expand staging tests</li>
+<li>Improve monitoring</li>
+</ul>
+<h3 id="medium-term">Medium-term</h3>
+<ul>
+<li>Test automation</li>
+<li>Quality gates</li>
+<li>Progressive delivery</li>
+<li>Chaos engineering</li>
+</ul>
+<h3 id="long-term">Long-term</h3>
+<ul>
+<li>Shift-left testing</li>
+<li>Continuous testing</li>
+<li>Predictive quality</li>
+<li>Self-healing systems</li>
+</ul>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0350_mttr_improvement.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0410_cfr_measurement.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

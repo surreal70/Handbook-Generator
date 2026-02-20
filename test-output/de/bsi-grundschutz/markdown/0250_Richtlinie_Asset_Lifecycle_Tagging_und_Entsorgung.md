@@ -1,6 +1,6 @@
 # Richtlinie: Asset Lifecycle Tagging und Entsorgung
 
-**Dokument-ID:** 0250
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0250
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0130 - Deployment Pipeline</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0130</div>
+            <h1>Deployment Pipeline</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0120_deployment_automation.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0150_quality_assurance_practices.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: dora-0130</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="deployment-pipeline">Deployment Pipeline</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0130
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="zweck">Zweck</h2>
+<p>Dieses Dokument beschreibt den Aufbau, die Konfiguration und die Optimierung von Deployment-Pipelines für kontinuierliche Software-Delivery.</p>
+<h2 id="umfang">Umfang</h2>
+<p>Dieses Dokument umfasst:
+- Pipeline-Architektur und -Design
+- Stage-Definitionen und -Konfiguration
+- Quality Gates und Approval-Prozesse
+- Pipeline-Optimierung und -Monitoring</p>
+<h2 id="pipeline-architektur">Pipeline-Architektur</h2>
+<h3 id="organisationsinformationen">Organisationsinformationen</h3>
+<ul>
+<li><strong>Organisation</strong>: [TODO]</li>
+<li><strong>Pipeline-Verantwortlicher</strong>: [TODO]</li>
+<li><strong>CI/CD-Plattform</strong>: [TODO]</li>
+<li><strong>Pipeline-Repository</strong>: [TODO]</li>
+</ul>
+<h2 id="pipeline-stages">Pipeline-Stages</h2>
+<h3 id="1-source-stage">1. Source Stage</h3>
+<p><strong>Zweck</strong>: Code-Checkout und Vorbereitung</p>
+<p><strong>Aktivitäten</strong>:
+- Repository-Checkout
+- Submodule-Initialisierung
+- Dependency-Caching
+- Workspace-Setup</p>
+<p><strong>Konfiguration</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">source</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">source</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">git submodule update --init --recursive</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;Source checkout complete&quot;</span>
+<span class="w">  </span><span class="nt">cache</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${CI_COMMIT_REF_SLUG}</span>
+<span class="w">    </span><span class="nt">paths</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">node_modules/</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.cache/</span>
+</code></pre></div>
+
+<h3 id="2-build-stage">2. Build Stage</h3>
+<p><strong>Zweck</strong>: Kompilierung und Artefakt-Erstellung</p>
+<p><strong>Aktivitäten</strong>:
+- Dependency-Installation
+- Code-Kompilierung
+- Asset-Generierung
+- Artefakt-Packaging</p>
+<p><strong>Konfiguration</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">build</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">build</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">npm ci</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">npm run build</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">npm run package</span>
+<span class="w">  </span><span class="nt">artifacts</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;${CI_PROJECT_NAME}-${CI_COMMIT_SHORT_SHA}&quot;</span>
+<span class="w">    </span><span class="nt">paths</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dist/</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">build/</span>
+<span class="w">    </span><span class="nt">expire_in</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1 week</span>
+<span class="w">  </span><span class="nt">only</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">branches</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tags</span>
+</code></pre></div>
+
+<h3 id="3-test-stage">3. Test Stage</h3>
+<p><strong>Zweck</strong>: Qualitätssicherung durch automatisierte Tests</p>
+<p><strong>Unit Tests</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">test:unit</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">npm run test:unit</span>
+<span class="w">  </span><span class="nt">coverage</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;/Coverage:</span><span class="nv"> </span><span class="s">\d+\.\d+%/&#39;</span>
+<span class="w">  </span><span class="nt">artifacts</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">reports</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">junit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">junit.xml</span>
+<span class="w">      </span><span class="nt">coverage_report</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">coverage_format</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cobertura</span>
+<span class="w">        </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">coverage/cobertura-coverage.xml</span>
+</code></pre></div>
+
+<p><strong>Integration Tests</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">test:integration</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test</span>
+<span class="w">  </span><span class="nt">services</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres:13</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">redis:6</span>
+<span class="w">  </span><span class="nt">variables</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">DATABASE_URL</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;postgresql://test:test@postgres:5432/testdb&quot;</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">npm run test:integration</span>
+</code></pre></div>
+
+<p><strong>E2E Tests</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">test:e2e</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">npm run test:e2e</span>
+<span class="w">  </span><span class="nt">artifacts</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">when</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">on_failure</span>
+<span class="w">    </span><span class="nt">paths</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cypress/screenshots/</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cypress/videos/</span>
+</code></pre></div>
+
+<h3 id="4-security-stage">4. Security Stage</h3>
+<p><strong>Zweck</strong>: Sicherheitsüberprüfungen und Vulnerability-Scanning</p>
+<p><strong>Dependency Scanning</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">security:dependencies</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">security</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">npm audit --audit-level=moderate</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">npm run security:check</span>
+<span class="w">  </span><span class="nt">allow_failure</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</code></pre></div>
+
+<p><strong>SAST (Static Application Security Testing)</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">security:sast</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">security</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">semgrep --config=auto .</span>
+<span class="w">  </span><span class="nt">artifacts</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">reports</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">sast</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gl-sast-report.json</span>
+</code></pre></div>
+
+<p><strong>Container Scanning</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">security:container</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">security</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">trivy image --severity HIGH,CRITICAL ${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHA}</span>
+</code></pre></div>
+
+<h3 id="5-quality-stage">5. Quality Stage</h3>
+<p><strong>Zweck</strong>: Code-Qualitätsprüfungen</p>
+<p><strong>Linting</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">quality:lint</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">quality</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">npm run lint</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">npm run format:check</span>
+</code></pre></div>
+
+<p><strong>Code Quality Analysis</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">quality:sonar</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">quality</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sonar-scanner</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">-Dsonar.projectKey=${CI_PROJECT_NAME}</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">-Dsonar.sources=src</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">-Dsonar.host.url=${SONAR_HOST_URL}</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">-Dsonar.login=${SONAR_TOKEN}</span>
+</code></pre></div>
+
+<h3 id="6-package-stage">6. Package Stage</h3>
+<p><strong>Zweck</strong>: Container-Image-Erstellung und -Registrierung</p>
+<p><strong>Docker Build</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">package:docker</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">package</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docker build -t ${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHA} .</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docker tag ${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHA} ${CI_REGISTRY_IMAGE}:latest</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docker push ${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHA}</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">docker push ${CI_REGISTRY_IMAGE}:latest</span>
+<span class="w">  </span><span class="nt">only</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tags</span>
+</code></pre></div>
+
+<h3 id="7-deploy-stage">7. Deploy Stage</h3>
+<p><strong>Zweck</strong>: Deployment in Zielumgebungen</p>
+<p><strong>Development Deployment</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">deploy:dev</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deploy</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kubectl set image deployment/${APP_NAME} ${APP_NAME}=${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHA}</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kubectl rollout status deployment/${APP_NAME}</span>
+<span class="w">  </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">development</span>
+<span class="w">    </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://dev.[TODO]</span>
+<span class="w">  </span><span class="nt">only</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">develop</span>
+</code></pre></div>
+
+<p><strong>Staging Deployment</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">deploy:staging</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deploy</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./deploy.sh staging ${CI_COMMIT_SHA}</span>
+<span class="w">  </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">staging</span>
+<span class="w">    </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://staging.[TODO]</span>
+<span class="w">  </span><span class="nt">only</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+<span class="w">  </span><span class="nt">when</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">manual</span>
+</code></pre></div>
+
+<p><strong>Production Deployment</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">deploy:production</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deploy</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./deploy.sh production ${CI_COMMIT_SHA}</span>
+<span class="w">  </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">production</span>
+<span class="w">    </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://[TODO]</span>
+<span class="w">  </span><span class="nt">only</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tags</span>
+<span class="w">  </span><span class="nt">when</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">manual</span>
+</code></pre></div>
+
+<h2 id="quality-gates">Quality Gates</h2>
+<h3 id="automatische-quality-gates">Automatische Quality Gates</h3>
+<p><strong>Test Coverage Gate</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">coverage_gate</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">quality</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">      </span><span class="no">COVERAGE=$(cat coverage/coverage-summary.json | jq &#39;.total.lines.pct&#39;)</span>
+<span class="w">      </span><span class="no">if (( $(echo &quot;$COVERAGE &lt; 80&quot; | bc -l) )); then</span>
+<span class="w">        </span><span class="no">echo &quot;Coverage $COVERAGE% is below threshold 80%&quot;</span>
+<span class="w">        </span><span class="no">exit 1</span>
+<span class="w">      </span><span class="no">fi</span>
+</code></pre></div>
+
+<p><strong>Performance Gate</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">performance_gate</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">quality</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">npm run test:performance</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">      </span><span class="no">RESPONSE_TIME=$(cat performance-report.json | jq &#39;.avg_response_time&#39;)</span>
+<span class="w">      </span><span class="no">if (( $(echo &quot;$RESPONSE_TIME &gt; 200&quot; | bc -l) )); then</span>
+<span class="w">        </span><span class="no">echo &quot;Response time ${RESPONSE_TIME}ms exceeds threshold 200ms&quot;</span>
+<span class="w">        </span><span class="no">exit 1</span>
+<span class="w">      </span><span class="no">fi</span>
+</code></pre></div>
+
+<p><strong>Security Gate</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">security_gate</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">security</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">      </span><span class="no">VULNERABILITIES=$(npm audit --json | jq &#39;.metadata.vulnerabilities.high + .metadata.vulnerabilities.critical&#39;)</span>
+<span class="w">      </span><span class="no">if [ &quot;$VULNERABILITIES&quot; -gt 0 ]; then</span>
+<span class="w">        </span><span class="no">echo &quot;Found $VULNERABILITIES high/critical vulnerabilities&quot;</span>
+<span class="w">        </span><span class="no">exit 1</span>
+<span class="w">      </span><span class="no">fi</span>
+</code></pre></div>
+
+<h3 id="manuelle-approval-gates">Manuelle Approval Gates</h3>
+<p><strong>Staging Approval</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">approve:staging</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">approve</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;Awaiting staging approval&quot;</span>
+<span class="w">  </span><span class="nt">when</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">manual</span>
+<span class="w">  </span><span class="nt">only</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+</code></pre></div>
+
+<p><strong>Production Approval</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">approve:production</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">approve</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;Awaiting production approval&quot;</span>
+<span class="w">  </span><span class="nt">when</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">manual</span>
+<span class="w">  </span><span class="nt">allow_failure</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">only</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">tags</span>
+</code></pre></div>
+
+<h2 id="pipeline-optimierung">Pipeline-Optimierung</h2>
+<h3 id="parallelisierung">Parallelisierung</h3>
+<p><strong>Parallel Test Execution</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">test:unit</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test</span>
+<span class="w">  </span><span class="nt">parallel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">npm run test:unit -- --shard=${CI_NODE_INDEX}/${CI_NODE_TOTAL}</span>
+</code></pre></div>
+
+<p><strong>Matrix Builds</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">test:compatibility</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test</span>
+<span class="w">  </span><span class="nt">parallel</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">matrix</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">NODE_VERSION</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;14&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;16&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;18&#39;</span><span class="p p-Indicator">]</span>
+<span class="w">        </span><span class="nt">OS</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;ubuntu&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;alpine&#39;</span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">node:${NODE_VERSION}-${OS}</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">npm run test</span>
+</code></pre></div>
+
+<h3 id="caching-strategien">Caching-Strategien</h3>
+<p><strong>Dependency Caching</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">cache</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">key</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">files</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">package-lock.json</span>
+<span class="w">  </span><span class="nt">paths</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">node_modules/</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.npm/</span>
+<span class="w">  </span><span class="nt">policy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pull-push</span>
+</code></pre></div>
+
+<p><strong>Build Caching</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">cache</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${CI_COMMIT_REF_SLUG}</span>
+<span class="w">  </span><span class="nt">paths</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.cache/</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dist/</span>
+<span class="w">  </span><span class="nt">policy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pull</span>
+</code></pre></div>
+
+<h3 id="conditional-execution">Conditional Execution</h3>
+<p><strong>Path-based Triggers</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">test:frontend</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">npm run test:frontend</span>
+<span class="w">  </span><span class="nt">only</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">changes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">src/frontend/**/*</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">package.json</span>
+</code></pre></div>
+
+<p><strong>Branch-based Execution</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">deploy:production</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deploy</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./deploy.sh production</span>
+<span class="w">  </span><span class="nt">only</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/^release-.*$/</span>
+<span class="w">  </span><span class="nt">except</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">schedules</span>
+</code></pre></div>
+
+<h2 id="pipeline-monitoring">Pipeline-Monitoring</h2>
+<h3 id="metriken">Metriken</h3>
+<p><strong>Pipeline-Performance</strong>:
+- Durchschnittliche Pipeline-Dauer
+- Success/Failure-Rate
+- Stage-spezifische Dauer
+- Queue-Zeit</p>
+<p><strong>Deployment-Metriken</strong>:
+- Deployment Frequency
+- Lead Time
+- Change Failure Rate
+- Mean Time to Recovery</p>
+<h3 id="alerting">Alerting</h3>
+<p><strong>Pipeline-Failures</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">notify:failure</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.post</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">      </span><span class="no">curl -X POST ${SLACK_WEBHOOK_URL} \</span>
+<span class="w">        </span><span class="no">-H &#39;Content-Type: application/json&#39; \</span>
+<span class="w">        </span><span class="no">-d &quot;{</span>
+<span class="w">          </span><span class="no">\&quot;text\&quot;: \&quot;Pipeline failed for ${CI_PROJECT_NAME} on ${CI_COMMIT_REF_NAME}\&quot;,</span>
+<span class="w">          </span><span class="no">\&quot;attachments\&quot;: [{</span>
+<span class="w">            </span><span class="no">\&quot;color\&quot;: \&quot;danger\&quot;,</span>
+<span class="w">            </span><span class="no">\&quot;fields\&quot;: [{</span>
+<span class="w">              </span><span class="no">\&quot;title\&quot;: \&quot;Commit\&quot;,</span>
+<span class="w">              </span><span class="no">\&quot;value\&quot;: \&quot;${CI_COMMIT_SHORT_SHA}\&quot;,</span>
+<span class="w">              </span><span class="no">\&quot;short\&quot;: true</span>
+<span class="w">            </span><span class="no">}]</span>
+<span class="w">          </span><span class="no">}]</span>
+<span class="w">        </span><span class="no">}&quot;</span>
+<span class="w">  </span><span class="nt">when</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">on_failure</span>
+</code></pre></div>
+
+<h3 id="dashboard">Dashboard</h3>
+<p><strong>Metriken-Visualisierung</strong>:
+- Grafana-Dashboards
+- Pipeline-Trends
+- Deployment-Statistiken
+- Quality-Metriken</p>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="pipeline-design">Pipeline-Design</h3>
+<ol>
+<li><strong>Fail Fast</strong>: Schnelle Tests zuerst</li>
+<li><strong>Parallelisierung</strong>: Unabhängige Stages parallel ausführen</li>
+<li><strong>Caching</strong>: Wiederverwendung von Artefakten</li>
+<li><strong>Idempotenz</strong>: Wiederholbare Ausführung</li>
+<li><strong>Observability</strong>: Umfassendes Logging und Monitoring</li>
+</ol>
+<h3 id="security">Security</h3>
+<ol>
+<li><strong>Secrets Management</strong>: Keine Secrets im Code</li>
+<li><strong>Least Privilege</strong>: Minimale Berechtigungen</li>
+<li><strong>Audit Logging</strong>: Vollständige Nachvollziehbarkeit</li>
+<li><strong>Vulnerability Scanning</strong>: Automatische Sicherheitsprüfungen</li>
+</ol>
+<h3 id="maintenance">Maintenance</h3>
+<ol>
+<li><strong>Pipeline as Code</strong>: Versionskontrolle</li>
+<li><strong>Documentation</strong>: Inline-Kommentare</li>
+<li><strong>Regular Updates</strong>: Tool- und Dependency-Updates</li>
+<li><strong>Monitoring</strong>: Kontinuierliche Überwachung</li>
+</ol>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0120_deployment_automation.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0150_quality_assurance_practices.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

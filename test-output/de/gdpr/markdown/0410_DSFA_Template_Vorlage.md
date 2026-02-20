@@ -1,6 +1,6 @@
 # DSFA Template - Vorlage
 
-**Dokument-ID:** 0410
+**Dokument-ID:** GDPR-0410
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

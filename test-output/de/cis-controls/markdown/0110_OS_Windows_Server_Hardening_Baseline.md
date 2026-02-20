@@ -1,6 +1,6 @@
 # OS Hardening Baseline: Windows Server
 
-**Dokument-ID:** 0110
+**Dokument-ID:** CIS-CONTROLS-0110
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

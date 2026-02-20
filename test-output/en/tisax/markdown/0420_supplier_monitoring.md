@@ -6,7 +6,7 @@ Classification: Internal
 
 # Supplier Monitoring
 
-**Document-ID:** [FRAMEWORK]-0420
+**Document-ID:** TISAX-0420
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

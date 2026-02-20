@@ -1,6 +1,6 @@
 # ISMS-Organisation, Rollen und Verantwortlichkeiten
 
-**Dokument-ID:** 0020
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0020
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

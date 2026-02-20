@@ -21,16 +21,27 @@
         
         <main>
 <h1 id="policy-configuration-and-hardening">Policy: Configuration and Hardening</h1>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0540
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
 <p><strong>Document ID:</strong> 0540<br />
 <strong>Document Type:</strong> Policy (abstract)<br />
 <strong>Standard Reference:</strong> ISO/IEC 27001:2022 Annex A.8.9, A.8.10 (incl. Amendment 1:2024)<br />
-<strong>Owner:</strong> Thomas Weber<br />
+<strong>Owner:</strong> [TODO]<br />
 <strong>Version:</strong> 1.0<br />
 <strong>Status:</strong> Approved<br />
 <strong>Classification:</strong> Internal<br />
-<strong>Last Updated:</strong> {{ meta.document.date }}<br />
-<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
-<hr />
+<strong>Last Updated:</strong> [TODO]<br />
+<strong>Next Review:</strong> [TODO]</p>
 <h2 id="1-purpose">1. Purpose</h2>
 <p>This policy defines the principles for secure configuration and system hardening at <strong>AdminSend GmbH</strong>. It ensures that IT systems are securely configured and hardened against attacks.</p>
 <h2 id="2-scope">2. Scope</h2>
@@ -39,7 +50,7 @@
 <li><strong>Organizational Units:</strong> All departments and locations of AdminSend GmbH</li>
 <li><strong>Systems:</strong> All servers, workstations, network devices, applications, cloud resources</li>
 <li><strong>Environments:</strong> Production, test, development</li>
-<li><strong>Locations:</strong> {{ netbox.site.name }} and all other operational sites</li>
+<li><strong>Locations:</strong> [[ netbox.site.name ]] and all other operational sites</li>
 </ul>
 <p><strong>Exceptions:</strong> Exceptions are only permitted through the defined exception process (<code>0640_Policy_Exceptions_and_Risk_Waivers.md</code>).</p>
 <h2 id="3-principles-policy-statements">3. Principles (Policy Statements)</h2>
@@ -141,9 +152,9 @@
 <p><strong>Legend:</strong> R = Responsible (Execution), A = Accountable (Ownership), C = Consulted, I = Informed</p>
 <h3 id="key-roles">Key Roles</h3>
 <ul>
-<li><strong>Policy Owner:</strong> Thomas Weber (CISO)</li>
-<li><strong>Configuration Manager:</strong> {{ meta.it.config_manager }}</li>
-<li><strong>Security Architect:</strong> {{ meta.security.architect }}</li>
+<li><strong>Policy Owner:</strong> [TODO] (CISO)</li>
+<li><strong>Configuration Manager:</strong> {{ meta-handbook.it_config_manager }}</li>
+<li><strong>Security Architect:</strong> {{ meta-handbook.security_architect }}</li>
 <li><strong>Implementation Responsible:</strong> IT Operations, System Owner</li>
 <li><strong>Control/Audit Function:</strong> ISMS, Internal Audit</li>
 </ul>
@@ -219,11 +230,10 @@
 <li><strong>NIST SP 800-123</strong> - Guide to General Server Security</li>
 <li><strong>BSI IT-Grundschutz</strong> - Security requirements</li>
 </ul>
-<hr />
 <p><strong>Approved by:</strong><br />
-{{ meta.management.ceo }}, Management<br />
-Date: {{ meta.document.approval_date }}</p>
-<p><strong>Next Review:</strong> {{ meta.document.next_review }} (annually or as needed)</p>
+{{ meta-handbook.management_ceo }}, Management<br />
+Date: [TODO]</p>
+<p><strong>Next Review:</strong> [TODO] (annually or as needed)</p>
         </main>
         
         <nav class="page-nav">

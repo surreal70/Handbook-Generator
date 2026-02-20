@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0320 - Incident Detection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0320</div>
+            <h1>Incident Detection</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0310_mttr_measurement.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0330_incident_response_procedures.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: dora-0320</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="incident-detection">Incident Detection</h1>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0320
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="purpose">Purpose</h2>
+<p>Methods and best practices for fast and reliable incident detection.</p>
+<h2 id="scope">Scope</h2>
+<ul>
+<li>Monitoring strategies</li>
+<li>Alerting configuration</li>
+<li>Anomaly detection</li>
+<li>User feedback</li>
+</ul>
+<h2 id="organization-information">Organization Information</h2>
+<ul>
+<li><strong>Organization</strong>: [TODO]</li>
+<li><strong>Monitoring Owner</strong>: [TODO]</li>
+<li><strong>Monitoring Systems</strong>: [TODO]</li>
+</ul>
+<h2 id="monitoring-strategies">Monitoring Strategies</h2>
+<h3 id="1-synthetic-monitoring">1. Synthetic Monitoring</h3>
+<p><strong>Purpose</strong>: Proactive monitoring through simulated user interactions</p>
+<p><strong>Implementation</strong>:
+- Health check endpoints
+- Synthetic transactions
+- API monitoring
+- User journey monitoring</p>
+<h3 id="2-real-user-monitoring-rum">2. Real User Monitoring (RUM)</h3>
+<p><strong>Purpose</strong>: Monitoring actual user experiences</p>
+<p><strong>Metrics</strong>:
+- Page load time
+- Error rates
+- User interactions
+- Performance metrics</p>
+<h3 id="3-infrastructure-monitoring">3. Infrastructure Monitoring</h3>
+<p><strong>Purpose</strong>: Monitoring infrastructure health</p>
+<p><strong>Metrics</strong>:
+- CPU/Memory usage
+- Disk I/O
+- Network latency
+- Container health</p>
+<h3 id="4-application-performance-monitoring-apm">4. Application Performance Monitoring (APM)</h3>
+<p><strong>Purpose</strong>: Detailed application performance monitoring</p>
+<p><strong>Features</strong>:
+- Distributed tracing
+- Transaction monitoring
+- Error tracking
+- Performance profiling</p>
+<h2 id="alerting-configuration">Alerting Configuration</h2>
+<h3 id="alert-types">Alert Types</h3>
+<p><strong>Critical Alerts</strong>:
+- Service down
+- High error rate
+- Performance degradation
+- Security incidents</p>
+<p><strong>Warning Alerts</strong>:
+- Resource utilization
+- Slow response times
+- Increasing error rates</p>
+<h3 id="alert-routing">Alert Routing</h3>
+<div class="codehilite"><pre><span></span><code><span class="nt">alert_routing</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">critical</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pagerduty</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">slack_critical</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sms</span>
+<span class="w">  </span><span class="nt">warning</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">slack_warnings</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">email</span>
+</code></pre></div>
+
+<h3 id="alert-fatigue-prevention">Alert Fatigue Prevention</h3>
+<ul>
+<li>Intelligent grouping</li>
+<li>Alert suppression</li>
+<li>Escalation policies</li>
+<li>Alert tuning</li>
+</ul>
+<h2 id="anomaly-detection">Anomaly Detection</h2>
+<h3 id="statistical-methods">Statistical Methods</h3>
+<ul>
+<li>Threshold-based detection</li>
+<li>Trend analysis</li>
+<li>Seasonal patterns</li>
+<li>Outlier detection</li>
+</ul>
+<h3 id="machine-learning">Machine Learning</h3>
+<ul>
+<li>Predictive analytics</li>
+<li>Pattern recognition</li>
+<li>Automated baselining</li>
+<li>Adaptive thresholds</li>
+</ul>
+<h2 id="user-feedback-channels">User Feedback Channels</h2>
+<ul>
+<li>Error reporting</li>
+<li>Support tickets</li>
+<li>Social media monitoring</li>
+<li>User surveys</li>
+</ul>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0310_mttr_measurement.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0330_incident_response_procedures.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

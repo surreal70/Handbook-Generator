@@ -21,10 +21,17 @@
         
         <main>
 <h1 id="anhang-b-asset-und-systeminventar">Anhang B: Asset- und Systeminventar</h1>
-<p><strong>Dokumenttyp:</strong> Anhang<br />
-<strong>Version:</strong> 1.0.0<br />
-<strong>Datum:</strong> {{ meta.document.date }}<br />
-<strong>Klassifizierung:</strong> internal</p>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0720
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
 <hr />
 <h2 id="zweck">Zweck</h2>
 <p>Dieses Dokument stellt das zentrale Asset- und Systeminventar der Organisation dar. Es erfüllt die Anforderungen von ISO/IEC 27001:2022 Annex A 5.9 (Inventory of Information and Other Associated Assets) und dient als Grundlage für:</p>
@@ -37,9 +44,8 @@
 <p>Das Inventar wird kontinuierlich gepflegt und mindestens quartalsweise überprüft.</p>
 <h2 id="geltungsbereich">Geltungsbereich</h2>
 <p><strong>Organisation:</strong> AdminSend GmbH<br />
-<strong>ISMS Scope:</strong> {{ meta.isms.scope }}<br />
-<strong>Verantwortlich:</strong> Asset Management Team, Thomas Weber</p>
-<hr />
+<strong>ISMS Scope:</strong> {{ meta-handbook.isms_scope }}<br />
+<strong>Verantwortlich:</strong> Asset Management Team, [TODO]</p>
 <h2 id="asset-kategorien">Asset-Kategorien</h2>
 <p>Das Inventar umfasst folgende Asset-Kategorien:</p>
 <ol>
@@ -50,7 +56,6 @@
 <li><strong>Cloud Assets:</strong> Cloud Services, SaaS-Anwendungen</li>
 <li><strong>Physische Assets:</strong> Räume, Infrastruktur, Dokumentation</li>
 </ol>
-<hr />
 <h2 id="asset-klassifizierung">Asset-Klassifizierung</h2>
 <p>Jedes Asset wird nach folgenden Kriterien klassifiziert:</p>
 <h3 id="schutzbedarf-confidentiality-integrity-availability">Schutzbedarf (Confidentiality, Integrity, Availability)</h3>
@@ -117,7 +122,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="hardware-assets">Hardware Assets</h2>
 <h3 id="server">Server</h3>
 <table>
@@ -136,9 +140,9 @@
 <tbody>
 <tr>
 <td>SRV-001</td>
-<td>{{ netbox.device.primary_server.name }}</td>
+<td>[[ netbox.device.primary_server.name ]]</td>
 <td>Physical Server</td>
-<td>{{ netbox.site.name }}</td>
+<td>[[ netbox.site.name ]]</td>
 <td>IT Operations</td>
 <td>Hoch/Hoch/Hoch</td>
 <td>Tier 1</td>
@@ -146,9 +150,9 @@
 </tr>
 <tr>
 <td>SRV-002</td>
-<td>{{ netbox.device.backup_server.name }}</td>
+<td>[[ netbox.device.backup_server.name ]]</td>
 <td>Physical Server</td>
-<td>{{ netbox.site.name }}</td>
+<td>[[ netbox.site.name ]]</td>
 <td>IT Operations</td>
 <td>Hoch/Hoch/Mittel</td>
 <td>Tier 2</td>
@@ -167,7 +171,6 @@
 </tbody>
 </table>
 <p><strong>Hinweis:</strong> Vollständige Server-Liste aus NetBox/CMDB importieren.</p>
-<hr />
 <h3 id="netzwerkgerate">Netzwerkgeräte</h3>
 <table>
 <thead>
@@ -185,9 +188,9 @@
 <tbody>
 <tr>
 <td>NET-001</td>
-<td>{{ netbox.device.core_switch.name }}</td>
+<td>[[ netbox.device.core_switch.name ]]</td>
 <td>Core Switch</td>
-<td>{{ netbox.site.name }}</td>
+<td>[[ netbox.site.name ]]</td>
 <td>Network Team</td>
 <td>Mittel/Hoch/Hoch</td>
 <td>Tier 1</td>
@@ -195,9 +198,9 @@
 </tr>
 <tr>
 <td>NET-002</td>
-<td>{{ netbox.device.firewall.name }}</td>
+<td>[[ netbox.device.firewall.name ]]</td>
 <td>Firewall</td>
-<td>{{ netbox.site.name }}</td>
+<td>[[ netbox.site.name ]]</td>
 <td>Security Team</td>
 <td>Hoch/Hoch/Hoch</td>
 <td>Tier 1</td>
@@ -216,7 +219,6 @@
 </tbody>
 </table>
 <p><strong>Hinweis:</strong> Vollständige Netzwerkgeräte-Liste aus NetBox importieren.</p>
-<hr />
 <h3 id="endpoints">Endpoints</h3>
 <table>
 <thead>
@@ -233,9 +235,9 @@
 <tbody>
 <tr>
 <td>WS-001</td>
-<td>{{ meta.ciso.workstation }}</td>
+<td>[TODO: Hostname]</td>
 <td>Laptop</td>
-<td>Thomas Weber</td>
+<td>[TODO]</td>
 <td>IT Operations</td>
 <td>Hoch/Mittel/Mittel</td>
 <td>Produktiv</td>
@@ -252,7 +254,6 @@
 </tbody>
 </table>
 <p><strong>Hinweis:</strong> Endpoint-Inventar aus MDM/Endpoint Management System importieren.</p>
-<hr />
 <h3 id="storage-systeme">Storage-Systeme</h3>
 <table>
 <thead>
@@ -270,10 +271,10 @@
 <tbody>
 <tr>
 <td>STO-001</td>
-<td>{{ netbox.device.storage.name }}</td>
+<td>[[ netbox.device.storage.name ]]</td>
 <td>SAN</td>
 <td>[TODO: Kapazität]</td>
-<td>{{ netbox.site.name }}</td>
+<td>[[ netbox.site.name ]]</td>
 <td>IT Operations</td>
 <td>Hoch/Hoch/Hoch</td>
 <td>Tier 1</td>
@@ -290,7 +291,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="software-assets">Software Assets</h2>
 <h3 id="betriebssysteme">Betriebssysteme</h3>
 <table>
@@ -344,7 +344,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h3 id="geschaftsanwendungen">Geschäftsanwendungen</h3>
 <table>
 <thead>
@@ -392,7 +391,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h3 id="sicherheitssoftware">Sicherheitssoftware</h3>
 <table>
 <thead>
@@ -445,7 +443,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="daten-assets">Daten Assets</h2>
 <h3 id="datenbanken">Datenbanken</h3>
 <table>
@@ -498,7 +495,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h3 id="dateisysteme-und-shares">Dateisysteme und Shares</h3>
 <table>
 <thead>
@@ -546,7 +542,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h3 id="code-repositories">Code Repositories</h3>
 <table>
 <thead>
@@ -581,7 +576,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="netzwerk-assets">Netzwerk Assets</h2>
 <h3 id="vlans">VLANs</h3>
 <table>
@@ -597,17 +591,17 @@
 </thead>
 <tbody>
 <tr>
-<td>{{ netbox.vlan.management.vid }}</td>
-<td>{{ netbox.vlan.management.name }}</td>
-<td>{{ netbox.vlan.management.subnet }}</td>
+<td>[[ netbox.vlan.management.vid ]]</td>
+<td>[[ netbox.vlan.management.name ]]</td>
+<td>[[ netbox.vlan.management.subnet ]]</td>
 <td>Management</td>
 <td>Restricted</td>
 <td>Network Team</td>
 </tr>
 <tr>
-<td>{{ netbox.vlan.production.vid }}</td>
-<td>{{ netbox.vlan.production.name }}</td>
-<td>{{ netbox.vlan.production.subnet }}</td>
+<td>[[ netbox.vlan.production.vid ]]</td>
+<td>[[ netbox.vlan.production.name ]]</td>
+<td>[[ netbox.vlan.production.subnet ]]</td>
 <td>Production</td>
 <td>Internal</td>
 <td>Network Team</td>
@@ -623,7 +617,6 @@
 </tbody>
 </table>
 <p><strong>Hinweis:</strong> Vollständige VLAN-Liste aus NetBox importieren.</p>
-<hr />
 <h3 id="externe-verbindungen">Externe Verbindungen</h3>
 <table>
 <thead>
@@ -667,7 +660,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="cloud-assets">Cloud Assets</h2>
 <h3 id="cloud-services-iaaspaas">Cloud Services (IaaS/PaaS)</h3>
 <table>
@@ -716,7 +708,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h3 id="saas-anwendungen">SaaS-Anwendungen</h3>
 <table>
 <thead>
@@ -760,7 +751,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="physische-assets">Physische Assets</h2>
 <h3 id="standorte-und-raume">Standorte und Räume</h3>
 <table>
@@ -777,8 +767,8 @@
 <tbody>
 <tr>
 <td>SITE-001</td>
-<td>{{ netbox.site.name }}</td>
-<td>{{ netbox.site.address }}</td>
+<td>[[ netbox.site.name ]]</td>
+<td>[[ netbox.site.address ]]</td>
 <td>Hauptstandort</td>
 <td>Hoch</td>
 <td>Facility Management</td>
@@ -801,7 +791,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h3 id="serverraume-und-rechenzentren">Serverräume und Rechenzentren</h3>
 <table>
 <thead>
@@ -839,7 +828,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h3 id="kritische-infrastruktur">Kritische Infrastruktur</h3>
 <table>
 <thead>
@@ -897,7 +885,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="asset-lifecycle-management">Asset Lifecycle Management</h2>
 <h3 id="lifecycle-phasen">Lifecycle-Phasen</h3>
 <table>
@@ -954,7 +941,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h3 id="asset-owner-und-verantwortlichkeiten">Asset Owner und Verantwortlichkeiten</h3>
 <table>
 <thead>
@@ -978,7 +964,7 @@
 <tr>
 <td><strong>Security Owner</strong></td>
 <td>Sicherheitsanforderungen, Risikobewertung</td>
-<td>Thomas Weber</td>
+<td>[TODO]</td>
 </tr>
 <tr>
 <td><strong>Data Owner</strong></td>
@@ -987,7 +973,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="asset-tagging-und-kennzeichnung">Asset-Tagging und Kennzeichnung</h2>
 <h3 id="tagging-schema">Tagging-Schema</h3>
 <p>Alle Assets werden mit folgenden Tags versehen:</p>
@@ -1033,7 +1018,6 @@
 </tbody>
 </table>
 <p><strong>Hinweis:</strong> Tagging wird in CMDB/Asset Management System gepflegt.</p>
-<hr />
 <h2 id="inventarisierungsprozess">Inventarisierungsprozess</h2>
 <h3 id="regelmaige-uberprufung">Regelmäßige Überprüfung</h3>
 <table>
@@ -1072,7 +1056,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h3 id="discovery-tools">Discovery-Tools</h3>
 <table>
 <thead>
@@ -1116,7 +1099,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="compliance-und-audit">Compliance und Audit</h2>
 <h3 id="audit-anforderungen">Audit-Anforderungen</h3>
 <p>Dieses Inventar erfüllt folgende Compliance-Anforderungen:</p>
@@ -1126,7 +1108,6 @@
 <li><strong>ISO/IEC 27001:2022 Annex A 8.9:</strong> Configuration Management</li>
 <li><strong>[TODO: Weitere Compliance-Anforderungen]</strong></li>
 </ul>
-<hr />
 <h3 id="audit-trail">Audit Trail</h3>
 <table>
 <thead>
@@ -1140,10 +1121,10 @@
 </thead>
 <tbody>
 <tr>
-<td>{{ meta.document.date }}</td>
+<td>[TODO]</td>
 <td>Initiale Erstellung</td>
-<td>{{ meta.document.author }}</td>
-<td>Thomas Weber</td>
+<td>Handbook-Generator</td>
+<td>[TODO]</td>
 <td>ISMS-Implementierung</td>
 </tr>
 <tr>
@@ -1155,7 +1136,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="referenzen">Referenzen</h2>
 <ul>
 <li>Policy: 0300_Policy_Asset_Management.md</li>
@@ -1163,9 +1143,8 @@
 <li>Dokument: 0100_ISMS_Statement_of_Applicability_SoA_Template.md</li>
 <li>Anhang: 0730_Anhang_Datenfluss_und_Schnittstellen_Template.md</li>
 </ul>
-<hr />
 <p><strong>Dokumentverantwortlicher:</strong> Asset Management Team<br />
-<strong>Genehmigt durch:</strong> Thomas Weber<br />
+<strong>Genehmigt durch:</strong> [TODO]<br />
 <strong>Nächste Überprüfung:</strong> Quartalsweise</p>
         </main>
         

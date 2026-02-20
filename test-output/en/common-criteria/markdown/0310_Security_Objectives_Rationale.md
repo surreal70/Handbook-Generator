@@ -1,6 +1,6 @@
 # Security Objectives Rationale
 
-**Document-ID:** 0310
+**Document-ID:** COMMON-CRITERIA-0310
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

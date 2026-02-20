@@ -6,7 +6,7 @@ Classification: Internal
 
 # Change Management
 
-**Dokument-ID:** [FRAMEWORK]-0310
+**Dokument-ID:** TISAX-0310
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

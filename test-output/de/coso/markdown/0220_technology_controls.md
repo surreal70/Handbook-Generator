@@ -6,7 +6,7 @@ Classification: Internal
 
 # Zusätzliche Technologiekontrollen
 
-**Dokument-ID:** [FRAMEWORK]-0220
+**Dokument-ID:** COSO-0220
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

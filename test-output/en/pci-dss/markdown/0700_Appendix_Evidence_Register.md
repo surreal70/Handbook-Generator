@@ -1,6 +1,6 @@
 # Appendix: Evidence Register
 
-**Document-ID:** [FRAMEWORK]-0700
+**Document-ID:** PCI-DSS-0700
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

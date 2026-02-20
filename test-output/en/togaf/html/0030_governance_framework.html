@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0030 - Architecture Governance Framework</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0030</div>
+            <h1>Architecture Governance Framework</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0020_architecture_principles.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0040_repository_structure.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: togaf-0030</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="architecture-governance-framework">Architecture Governance Framework</h1>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0030
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="purpose">Purpose</h2>
+<p>This document defines the architecture governance framework for [TODO]. It establishes the processes, roles, and mechanisms for ensuring architecture compliance and managing architecture decisions.</p>
+<h2 id="scope">Scope</h2>
+<p>This document covers:
+- Governance structure and roles
+- Decision-making processes
+- Compliance management
+- Architecture review boards
+- Exception handling</p>
+<h2 id="governance-structure">Governance Structure</h2>
+<h3 id="architecture-governance-organization">Architecture Governance Organization</h3>
+<div class="codehilite"><pre><span></span><code><span class="o">[</span><span class="n">TODO</span><span class="o">]</span>
+</code></pre></div>
+
+<h3 id="key-governance-bodies">Key Governance Bodies</h3>
+<table>
+<thead>
+<tr>
+<th>Body</th>
+<th>Purpose</th>
+<th>Membership</th>
+<th>Meeting Frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Architecture Board</td>
+<td>Strategic architecture decisions</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Architecture Review Board</td>
+<td>Technical architecture reviews</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Change Advisory Board</td>
+<td>Architecture change approval</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="roles-and-responsibilities">Roles and Responsibilities</h2>
+<h3 id="chief-architect">Chief Architect</h3>
+<p><strong>Responsibilities</strong>:
+- Overall architecture strategy and direction
+- Architecture governance oversight
+- Architecture board leadership
+- Stakeholder management</p>
+<p><strong>Authority</strong>:
+- Approve architecture principles
+- Approve major architecture decisions
+- Grant exceptions to architecture standards</p>
+<h3 id="domain-architects">Domain Architects</h3>
+<p><strong>Responsibilities</strong>:
+- Domain-specific architecture design
+- Architecture compliance within domain
+- Technical guidance to project teams
+- Architecture artifact creation</p>
+<p><strong>Domains</strong>:
+- Business Architecture: [TODO]
+- Data Architecture: [TODO]
+- Application Architecture: [TODO]
+- Technology Architecture: [TODO]</p>
+<h3 id="architecture-review-board">Architecture Review Board</h3>
+<p><strong>Responsibilities</strong>:
+- Review architecture designs
+- Assess compliance with principles and standards
+- Recommend approval or rejection
+- Identify risks and issues</p>
+<h2 id="decision-making-process">Decision-Making Process</h2>
+<h3 id="architecture-decision-records-adrs">Architecture Decision Records (ADRs)</h3>
+<p>All significant architecture decisions are documented using ADRs with:
+- <strong>Context</strong>: Background and problem statement
+- <strong>Decision</strong>: What was decided
+- <strong>Rationale</strong>: Why this decision was made
+- <strong>Consequences</strong>: Expected impacts and trade-offs
+- <strong>Status</strong>: Proposed, Accepted, Superseded, Deprecated</p>
+<h3 id="decision-authority-matrix">Decision Authority Matrix</h3>
+<table>
+<thead>
+<tr>
+<th>Decision Type</th>
+<th>Authority</th>
+<th>Escalation Path</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Architecture Principles</td>
+<td>Architecture Board</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Technology Standards</td>
+<td>Chief Architect</td>
+<td>Architecture Board</td>
+</tr>
+<tr>
+<td>Project Architecture</td>
+<td>Domain Architect</td>
+<td>Chief Architect</td>
+</tr>
+<tr>
+<td>Architecture Exceptions</td>
+<td>Architecture Board</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="compliance-management">Compliance Management</h2>
+<h3 id="architecture-compliance-review">Architecture Compliance Review</h3>
+<p>All projects must undergo architecture compliance review at:
+- Project initiation
+- Design completion
+- Before production deployment</p>
+<h3 id="compliance-assessment-criteria">Compliance Assessment Criteria</h3>
+<p>Projects are assessed against:
+- Architecture principles compliance
+- Technology standards compliance
+- Security and privacy requirements
+- Integration standards
+- Data management standards</p>
+<h3 id="compliance-levels">Compliance Levels</h3>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Description</th>
+<th>Action Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Compliant</td>
+<td>Fully meets all requirements</td>
+<td>Approve</td>
+</tr>
+<tr>
+<td>Conditional</td>
+<td>Minor issues identified</td>
+<td>Approve with conditions</td>
+</tr>
+<tr>
+<td>Non-Compliant</td>
+<td>Significant issues identified</td>
+<td>Reject or require remediation</td>
+</tr>
+</tbody>
+</table>
+<h2 id="exception-management">Exception Management</h2>
+<h3 id="exception-request-process">Exception Request Process</h3>
+<ol>
+<li>Project team submits exception request</li>
+<li>Domain architect reviews and provides recommendation</li>
+<li>Architecture board evaluates request</li>
+<li>Decision communicated to project team</li>
+<li>Exception tracked and reviewed periodically</li>
+</ol>
+<h3 id="exception-documentation">Exception Documentation</h3>
+<p>Each exception must document:
+- <strong>Reason</strong>: Why exception is needed
+- <strong>Impact</strong>: Risks and consequences
+- <strong>Mitigation</strong>: How risks will be managed
+- <strong>Duration</strong>: Time limit for exception
+- <strong>Review Date</strong>: When exception will be reassessed</p>
+<h2 id="architecture-review-process">Architecture Review Process</h2>
+<h3 id="review-types">Review Types</h3>
+<table>
+<thead>
+<tr>
+<th>Review Type</th>
+<th>Timing</th>
+<th>Scope</th>
+<th>Participants</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Concept Review</td>
+<td>Project initiation</td>
+<td>High-level approach</td>
+<td>Domain architect, project lead</td>
+</tr>
+<tr>
+<td>Design Review</td>
+<td>Design phase</td>
+<td>Detailed design</td>
+<td>Review board, project team</td>
+</tr>
+<tr>
+<td>Implementation Review</td>
+<td>Before deployment</td>
+<td>As-built architecture</td>
+<td>Domain architect, operations</td>
+</tr>
+</tbody>
+</table>
+<h3 id="review-checklist">Review Checklist</h3>
+<ul>
+<li>[ ] Alignment with architecture principles</li>
+<li>[ ] Compliance with technology standards</li>
+<li>[ ] Security and privacy requirements met</li>
+<li>[ ] Integration approach validated</li>
+<li>[ ] Performance and scalability addressed</li>
+<li>[ ] Operational considerations documented</li>
+<li>[ ] Documentation complete and accurate</li>
+</ul>
+<h2 id="governance-metrics">Governance Metrics</h2>
+<h3 id="key-performance-indicators">Key Performance Indicators</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Target</th>
+<th>Current</th>
+<th>Trend</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Architecture compliance rate</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Exception rate</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Review cycle time</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="continuous-improvement">Continuous Improvement</h2>
+<p>The governance framework is reviewed and updated:
+- Annually as part of strategic planning
+- After major organizational changes
+- Based on lessons learned from projects
+- In response to new regulatory requirements</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0020_architecture_principles.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0040_repository_structure.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -6,7 +6,7 @@ Classification: Internal
 
 # Schutz von Aufzeichnungen
 
-**Dokument-ID:** [FRAMEWORK]-0540
+**Dokument-ID:** TISAX-0540
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

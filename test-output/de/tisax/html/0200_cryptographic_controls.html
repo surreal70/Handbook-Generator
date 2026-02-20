@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0200 - Kryptographische Kontrollen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0200</div>
+            <h1>Kryptographische Kontrollen</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0190_operations_security_overview.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0210_key_management.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: tisax-0200</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="kryptographische-kontrollen">Kryptographische Kontrollen</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0200
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="zweck">Zweck</h2>
+<p>Dieses Dokument definiert die Anforderungen für den Einsatz kryptographischer Kontrollen gemäß TISAX-Anforderungen.</p>
+<h2 id="geltungsbereich">Geltungsbereich</h2>
+<p>Dieses Dokument gilt für alle kryptographischen Maßnahmen in [TODO].</p>
+<h2 id="kryptographie-richtlinie">Kryptographie-Richtlinie</h2>
+<h3 id="ziele">Ziele</h3>
+<ul>
+<li>Schutz der Vertraulichkeit sensibler Informationen</li>
+<li>Sicherstellung der Datenintegrität</li>
+<li>Authentifizierung von Kommunikationspartnern</li>
+<li>Nicht-Abstreitbarkeit von Transaktionen</li>
+</ul>
+<h3 id="anwendungsbereiche">Anwendungsbereiche</h3>
+<p><strong>Verschlüsselung erforderlich für:</strong>
+- Vertrauliche und streng vertrauliche Daten
+- Personenbezogene Daten
+- Geschäftsgeheimnisse
+- Authentifizierungsinformationen
+- Datenübertragung über unsichere Netzwerke</p>
+<h2 id="verschlusselungsstandards">Verschlüsselungsstandards</h2>
+<h3 id="symmetrische-verschlusselung">Symmetrische Verschlüsselung</h3>
+<p><strong>Zugelassene Algorithmen:</strong>
+- AES-256 (bevorzugt)
+- AES-128 (akzeptabel)
+- ChaCha20 (akzeptabel)</p>
+<p><strong>Nicht zugelassen:</strong>
+- DES, 3DES
+- RC4
+- Blowfish</p>
+<h3 id="asymmetrische-verschlusselung">Asymmetrische Verschlüsselung</h3>
+<p><strong>Zugelassene Algorithmen:</strong>
+- RSA (mindestens 2048 Bit, bevorzugt 4096 Bit)
+- ECC (mindestens 256 Bit)
+- Ed25519</p>
+<p><strong>Nicht zugelassen:</strong>
+- RSA &lt; 2048 Bit
+- DSA &lt; 2048 Bit</p>
+<h3 id="hash-funktionen">Hash-Funktionen</h3>
+<p><strong>Zugelassene Algorithmen:</strong>
+- SHA-256 (bevorzugt)
+- SHA-384
+- SHA-512
+- SHA-3</p>
+<p><strong>Nicht zugelassen:</strong>
+- MD5
+- SHA-1</p>
+<h2 id="verschlusselung-ruhender-daten">Verschlüsselung ruhender Daten</h2>
+<h3 id="datenspeicherung">Datenspeicherung</h3>
+<p><strong>Anforderungen:</strong>
+- Verschlüsselung vertraulicher Daten at rest
+- Full Disk Encryption für mobile Geräte
+- Datenbank-Verschlüsselung für sensible Daten
+- Verschlüsselte Backups</p>
+<p><strong>Implementierung:</strong>
+- BitLocker (Windows)
+- FileVault (macOS)
+- LUKS (Linux)
+- Transparent Data Encryption (Datenbanken)</p>
+<h3 id="cloud-speicher">Cloud-Speicher</h3>
+<p><strong>Anforderungen:</strong>
+- Verschlüsselung vor Upload (Client-seitig)
+- Verschlüsselung durch Cloud-Provider
+- Schlüsselverwaltung durch Organisation
+- Regelmäßige Überprüfung</p>
+<h2 id="verschlusselung-ubertragener-daten">Verschlüsselung übertragener Daten</h2>
+<h3 id="netzwerkverschlusselung">Netzwerkverschlüsselung</h3>
+<p><strong>Anforderungen:</strong>
+- TLS 1.2 oder höher für alle Verbindungen
+- Starke Cipher Suites
+- Zertifikatsvalidierung
+- Perfect Forward Secrecy</p>
+<p><strong>Protokolle:</strong>
+- HTTPS für Web-Verkehr
+- SFTP/SCP für Dateitransfer
+- VPN für Remote-Zugriff
+- S/MIME oder PGP für E-Mail</p>
+<h3 id="e-mail-verschlusselung">E-Mail-Verschlüsselung</h3>
+<p><strong>Anforderungen:</strong>
+- Verschlüsselung vertraulicher E-Mails
+- S/MIME oder PGP
+- Digitale Signaturen
+- Sichere Schlüsselverteilung</p>
+<h2 id="digitale-signaturen">Digitale Signaturen</h2>
+<h3 id="anwendung">Anwendung</h3>
+<p><strong>Verwendung für:</strong>
+- Verträge und Vereinbarungen
+- Softwareverteilung
+- E-Mail-Kommunikation
+- Dokumentenauthentifizierung</p>
+<p><strong>Anforderungen:</strong>
+- Qualifizierte elektronische Signaturen wo erforderlich
+- Zeitstempel für Langzeitarchivierung
+- Sichere Schlüsselaufbewahrung
+- Widerrufsmechanismen</p>
+<h2 id="zertifikatsverwaltung">Zertifikatsverwaltung</h2>
+<h3 id="public-key-infrastructure-pki">Public Key Infrastructure (PKI)</h3>
+<p><strong>Komponenten:</strong>
+- Certificate Authority (CA)
+- Registration Authority (RA)
+- Certificate Revocation List (CRL)
+- Online Certificate Status Protocol (OCSP)</p>
+<p><strong>Anforderungen:</strong>
+- Vertrauenswürdige CAs
+- Regelmäßige Zertifikatserneuerung
+- Widerrufsprüfung
+- Sichere Schlüsselgenerierung</p>
+<h3 id="zertifikats-lebenszyklus">Zertifikats-Lebenszyklus</h3>
+<p><strong>Phasen:</strong>
+1. Anforderung und Validierung
+2. Ausstellung
+3. Verteilung
+4. Nutzung
+5. Erneuerung
+6. Widerruf
+7. Archivierung</p>
+<h2 id="schlusselverwaltung">Schlüsselverwaltung</h2>
+<h3 id="schlusselgenerierung">Schlüsselgenerierung</h3>
+<p><strong>Anforderungen:</strong>
+- Kryptographisch sichere Zufallszahlengeneratoren
+- Ausreichende Schlüssellänge
+- Sichere Generierungsumgebung
+- Dokumentation</p>
+<h3 id="schlusselspeicherung">Schlüsselspeicherung</h3>
+<p><strong>Anforderungen:</strong>
+- Hardware Security Modules (HSM) für kritische Schlüssel
+- Verschlüsselte Speicherung
+- Zugriffskontrolle
+- Physische Sicherheit</p>
+<p><strong>Methoden:</strong>
+- HSM
+- Key Management Service (KMS)
+- Verschlüsselte Dateien
+- Sichere Tresore</p>
+<h3 id="schlusselverteilung">Schlüsselverteilung</h3>
+<p><strong>Anforderungen:</strong>
+- Sichere Übertragungskanäle
+- Authentifizierung der Empfänger
+- Protokollierung
+- Bestätigung des Empfangs</p>
+<h3 id="schlusselrotation">Schlüsselrotation</h3>
+<p><strong>Anforderungen:</strong>
+- Regelmäßige Rotation (mindestens jährlich)
+- Automatisierte Prozesse wo möglich
+- Keine Unterbrechung des Betriebs
+- Dokumentation</p>
+<h3 id="schlusselwiderruf">Schlüsselwiderruf</h3>
+<p><strong>Gründe:</strong>
+- Kompromittierung
+- Mitarbeiteraustritt
+- Ablauf der Gültigkeit
+- Änderung der Anforderungen</p>
+<p><strong>Prozess:</strong>
+- Sofortige Sperrung
+- Benachrichtigung der Stakeholder
+- Neuausstellung bei Bedarf
+- Dokumentation</p>
+<h3 id="schlusselarchivierung">Schlüsselarchivierung</h3>
+<p><strong>Anforderungen:</strong>
+- Langzeitaufbewahrung für verschlüsselte Daten
+- Sichere Speicherung
+- Zugriffskontrolle
+- Wiederherstellungsprozess</p>
+<h3 id="schlusselvernichtung">Schlüsselvernichtung</h3>
+<p><strong>Anforderungen:</strong>
+- Sichere Löschung
+- Dokumentation
+- Überprüfung der Vollständigkeit
+- Keine Wiederherstellbarkeit</p>
+<h2 id="kryptographische-gerate">Kryptographische Geräte</h2>
+<h3 id="hardware-security-modules-hsm">Hardware Security Modules (HSM)</h3>
+<p><strong>Verwendung:</strong>
+- Schlüsselgenerierung und -speicherung
+- Kryptographische Operationen
+- Digitale Signaturen
+- Zertifikatsverwaltung</p>
+<p><strong>Anforderungen:</strong>
+- FIPS 140-2 Level 2 oder höher
+- Physische Sicherheit
+- Zugriffskontrolle
+- Regelmäßige Wartung</p>
+<h3 id="trusted-platform-modules-tpm">Trusted Platform Modules (TPM)</h3>
+<p><strong>Verwendung:</strong>
+- Festplattenverschlüsselung
+- Sichere Schlüsselspeicherung
+- Plattform-Authentifizierung
+- Secure Boot</p>
+<h2 id="compliance-und-standards">Compliance und Standards</h2>
+<h3 id="relevante-standards">Relevante Standards</h3>
+<ul>
+<li>ISO/IEC 27001:2013 (Anhang A.10)</li>
+<li>NIST SP 800-57 (Key Management)</li>
+<li>NIST SP 800-52 (TLS)</li>
+<li>BSI TR-02102 (Kryptographische Verfahren)</li>
+</ul>
+<h3 id="regulatorische-anforderungen">Regulatorische Anforderungen</h3>
+<ul>
+<li>DSGVO (Verschlüsselung personenbezogener Daten)</li>
+<li>eIDAS (Elektronische Signaturen)</li>
+<li>TISAX (VDA ISA Katalog)</li>
+</ul>
+<h2 id="kryptographie-bewertung">Kryptographie-Bewertung</h2>
+<h3 id="regelmaige-uberprufung">Regelmäßige Überprüfung</h3>
+<p><strong>Jährlich:</strong>
+- Überprüfung der verwendeten Algorithmen
+- Bewertung der Schlüssellängen
+- Überprüfung der Implementierungen
+- Aktualisierung der Richtlinien</p>
+<p><strong>Bei Bedarf:</strong>
+- Bei neuen Bedrohungen
+- Bei neuen Standards
+- Bei Sicherheitsvorfällen
+- Bei technologischen Änderungen</p>
+<h2 id="tisax-spezifische-anforderungen">TISAX-spezifische Anforderungen</h2>
+<h3 id="vda-isa-kontrollen">VDA ISA Kontrollen</h3>
+<p>Dieses Dokument adressiert:
+- <strong>4.1</strong>: Kryptographische Kontrollen
+- <strong>4.2</strong>: Schlüsselverwaltung</p>
+<h3 id="assessment-nachweise">Assessment-Nachweise</h3>
+<ul>
+<li>Kryptographie-Richtlinie</li>
+<li>Schlüsselverwaltungsprozesse</li>
+<li>Verschlüsselungsnachweise</li>
+<li>Audit-Berichte</li>
+</ul>
+<h2 id="verantwortlichkeiten">Verantwortlichkeiten</h2>
+<ul>
+<li><strong>CISO</strong>: Gesamtverantwortung</li>
+<li><strong>Kryptographie-Beauftragter</strong>: Implementierung und Überwachung</li>
+<li><strong>IT-Sicherheit</strong>: Technische Umsetzung</li>
+<li><strong>Schlüsselverwalter</strong>: Schlüsselverwaltung</li>
+</ul>
+<h2 id="schulung">Schulung</h2>
+<p>Schulung für:
+- Kryptographie-Grundlagen
+- Sichere Schlüsselverwaltung
+- Verwendung von Verschlüsselungstools
+- Incident Response bei Schlüsselkompromittierung</p>
+<h2 id="kennzahlen">Kennzahlen</h2>
+<p>[TODO] misst:
+- Anteil verschlüsselter Daten (Ziel: 100% für vertrauliche Daten)
+- Anzahl aktiver Schlüssel
+- Anzahl Schlüsselrotationen
+- Anzahl Sicherheitsvorfälle im Zusammenhang mit Kryptographie</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0190_operations_security_overview.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0210_key_management.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

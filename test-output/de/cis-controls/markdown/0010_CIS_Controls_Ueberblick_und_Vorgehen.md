@@ -1,6 +1,6 @@
 # CIS Controls – Überblick und Vorgehen
 
-**Dokument-ID:** 0010
+**Dokument-ID:** CIS-CONTROLS-0010
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

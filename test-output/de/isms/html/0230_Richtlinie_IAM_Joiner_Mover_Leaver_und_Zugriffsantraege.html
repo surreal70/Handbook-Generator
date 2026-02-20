@@ -21,16 +21,17 @@
         
         <main>
 <h1 id="richtlinie-iam-joiner-mover-leaver-und-zugriffsantrage">Richtlinie: IAM - Joiner, Mover, Leaver und Zugriffsanträge</h1>
-<p><strong>Dokument-ID:</strong> 0230<br />
-<strong>Dokumenttyp:</strong> Richtlinie (detailliert)<br />
-<strong>Zugehörige Policy:</strong> 0220_Policy_Zugriffssteuerung_und_Identitaetsmanagement.md<br />
-<strong>Standard-Referenz:</strong> ISO/IEC 27001:2022 Annex A.5.15, A.5.16, A.5.18<br />
-<strong>Owner:</strong> {{ meta.it_operations.manager }}<br />
-<strong>Version:</strong> 1.0<br />
-<strong>Status:</strong> Freigegeben<br />
-<strong>Klassifizierung:</strong> Intern<br />
-<strong>Letzte Aktualisierung:</strong> {{ meta.document.date }}<br />
-<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+<p><strong>Dokument-ID:</strong> 0230
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
 <hr />
 <h2 id="1-zweck-und-geltungsbereich">1. Zweck und Geltungsbereich</h2>
 <p>Diese Richtlinie konkretisiert die <code>0220_Policy_Zugriffssteuerung_und_Identitaetsmanagement.md</code> und definiert detaillierte Prozesse für:
@@ -41,14 +42,14 @@
 <p><strong>Geltungsbereich:</strong> Alle Mitarbeiter, Auftragnehmer und Dritte bei <strong>AdminSend GmbH</strong></p>
 <h2 id="2-joiner-prozess-onboarding">2. Joiner-Prozess (Onboarding)</h2>
 <h3 id="21-prozessubersicht">2.1 Prozessübersicht</h3>
-<p><strong>Trigger:</strong> HR erstellt neuen Mitarbeiter in HR-System ({{ meta.hr.system }})</p>
+<p><strong>Trigger:</strong> HR erstellt neuen Mitarbeiter in HR-System ({{ meta-handbook.hr_system }})</p>
 <p><strong>Zeitrahmen:</strong>
 - <strong>Standard-Accounts:</strong> Bereitstellung bis 1 Tag vor Arbeitsbeginn
 - <strong>Spezial-Zugriffe:</strong> Bereitstellung bis 3 Tage vor Arbeitsbeginn
 - <strong>Externe Auftragnehmer:</strong> Bereitstellung nach Vertragsunterzeichnung</p>
 <h3 id="22-detaillierter-workflow">2.2 Detaillierter Workflow</h3>
 <p><strong>Phase 1: HR-Initiierung (T-5 Tage)</strong>
-1. HR erstellt Mitarbeiterdatensatz in {{ meta.hr.system }}
+1. HR erstellt Mitarbeiterdatensatz in {{ meta-handbook.hr_system }}
 2. HR definiert:
    - Abteilung, Rolle, Standort
    - Vorgesetzter, Kostenstelle
@@ -57,8 +58,8 @@
 <p><strong>Phase 2: IT-Provisionierung (T-3 Tage)</strong>
 1. <strong>Account-Erstellung:</strong>
    - Active Directory / Azure AD Account
-   - E-Mail-Postfach ({{ meta.email.system }})
-   - Benutzername nach Schema: <code>{{ meta.naming.user_format }}</code> (z.B. vorname.nachname)
+   - E-Mail-Postfach ({{ meta-handbook.email_system }})
+   - Benutzername nach Schema: <code>{{ meta-handbook.naming_user_format }}</code> (z.B. vorname.nachname)
    - Initiales Passwort (temporär, muss bei erstem Login geändert werden)</p>
 <ol>
 <li><strong>Basis-Zugriffe (automatisch via Rollenmodell):</strong></li>
@@ -159,7 +160,7 @@
 <p><strong>Zeitrahmen:</strong> Zugriffsanpassung innerhalb 2 Arbeitstagen nach HR-Änderung</p>
 <h3 id="32-detaillierter-workflow">3.2 Detaillierter Workflow</h3>
 <p><strong>Phase 1: HR-Änderung</strong>
-1. HR aktualisiert Mitarbeiterdatensatz in {{ meta.hr.system }}
+1. HR aktualisiert Mitarbeiterdatensatz in {{ meta-handbook.hr_system }}
 2. Änderungen: Abteilung, Rolle, Vorgesetzter, Standort
 3. Automatische Benachrichtigung an IT-Betrieb und bisherigen/neuen Vorgesetzten</p>
 <p><strong>Phase 2: Zugriffs-Review</strong>
@@ -187,7 +188,7 @@
 - <strong>Monitoring:</strong> Erhöhtes Monitoring privilegierter Aktivitäten</p>
 <h2 id="4-leaver-prozess-offboarding">4. Leaver-Prozess (Offboarding)</h2>
 <h3 id="41-prozessubersicht">4.1 Prozessübersicht</h3>
-<p><strong>Trigger:</strong> HR markiert Mitarbeiter als ausscheidend in {{ meta.hr.system }}</p>
+<p><strong>Trigger:</strong> HR markiert Mitarbeiter als ausscheidend in {{ meta-handbook.hr_system }}</p>
 <p><strong>Zeitrahmen:</strong>
 - <strong>Geplantes Ausscheiden:</strong> Deaktivierung am letzten Arbeitstag
 - <strong>Ungeplantes Ausscheiden:</strong> Sofortige Deaktivierung (z.B. Kündigung, Notfall)</p>
@@ -219,7 +220,7 @@
 <p><strong>Phase 3: Post-Offboarding (T+30 Tage)</strong>
 1. <strong>Account-Löschung:</strong>
    - Nach 30 Tagen: Endgültige Löschung des Accounts
-   - E-Mail-Archivierung gemäß Retention Policy ({{ meta.retention.email_years }} Jahre)
+   - E-Mail-Archivierung gemäß Retention Policy ({{ meta-handbook.retention_email_years }} Jahre)
    - Löschung persönlicher Daten (DSGVO-konform)
 2. <strong>Lizenz-Freigabe:</strong>
    - Rückgabe von Software-Lizenzen
@@ -247,7 +248,7 @@
    - Dokumentation für rechtliche Zwecke</p>
 <h2 id="5-zugriffsantrage-access-requests">5. Zugriffsanträge (Access Requests)</h2>
 <h3 id="51-self-service-portal">5.1 Self-Service-Portal</h3>
-<p><strong>Zugriff:</strong> {{ meta.iam.portal_url }}</p>
+<p><strong>Zugriff:</strong> {{ meta-handbook.iam_portal_url }}</p>
 <p><strong>Funktionen:</strong>
 - Antrag auf neue Zugriffe (Anwendungen, Netzlaufwerke, Gruppen)
 - Übersicht eigener Zugriffe
@@ -314,16 +315,16 @@
 <p><strong>Zusätzliche Kontrollen:</strong>
 - <strong>Vier-Augen-Prinzip:</strong> Zwei Genehmigungen erforderlich
 - <strong>Just-in-Time (JIT) Access:</strong> Privilegien nur bei Bedarf, zeitlich befristet
-- <strong>Privileged Access Management (PAM):</strong> Verwaltung über PAM-System ({{ meta.security.pam_solution }})
+- <strong>Privileged Access Management (PAM):</strong> Verwaltung über PAM-System ({{ meta-handbook.security_pam_solution }})
 - <strong>Session-Recording:</strong> Aufzeichnung privilegierter Sessions für Audit</p>
 <h2 id="7-technische-implementierung">7. Technische Implementierung</h2>
 <h3 id="71-iam-technologie-stack">7.1 IAM-Technologie-Stack</h3>
 <p><strong>Systeme:</strong>
-- <strong>Identity Provider:</strong> {{ meta.iam.idp }} (z.B. Azure AD, Okta)
-- <strong>HR-System:</strong> {{ meta.hr.system }} (z.B. SAP SuccessFactors, Workday)
-- <strong>IAM-Portal:</strong> {{ meta.iam.portal }} (z.B. SailPoint, Saviynt)
-- <strong>PAM-System:</strong> {{ meta.security.pam_solution }} (z.B. CyberArk, BeyondTrust)
-- <strong>CMDB:</strong> {{ meta.itsm.cmdb }} (z.B. ServiceNow, Jira Service Management)</p>
+- <strong>Identity Provider:</strong> {{ meta-handbook.iam_idp }} (z.B. Azure AD, Okta)
+- <strong>HR-System:</strong> {{ meta-handbook.hr_system }} (z.B. SAP SuccessFactors, Workday)
+- <strong>IAM-Portal:</strong> {{ meta-handbook.iam_portal }} (z.B. SailPoint, Saviynt)
+- <strong>PAM-System:</strong> {{ meta-handbook.security_pam_solution }} (z.B. CyberArk, BeyondTrust)
+- <strong>CMDB:</strong> {{ meta-handbook.itsm_cmdb }} (z.B. ServiceNow, Jira Service Management)</p>
 <p><strong>Integration:</strong>
 - HR-System → IAM-System (automatische Synchronisation)
 - IAM-System → Active Directory / Azure AD (Provisionierung)
@@ -403,11 +404,10 @@
 <li><strong>ISO/IEC 27001:2022 Annex A.5.18</strong> - Access rights</li>
 <li><strong>NIST SP 800-63</strong> - Digital Identity Guidelines</li>
 </ul>
-<hr />
 <p><strong>Genehmigt durch:</strong><br />
-Thomas Weber, CISO<br />
-Datum: {{ meta.document.approval_date }}</p>
-<p><strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+[TODO], CISO<br />
+Datum: [TODO]</p>
+<p><strong>Nächster Review:</strong> [TODO]</p>
         </main>
         
         <nav class="page-nav">

@@ -1,6 +1,6 @@
 # Internes Auditprogramm (Template)
 
-**Dokument-ID:** 0610
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0610
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

@@ -6,7 +6,7 @@ Classification: Internal
 
 # IVS-03: Netzwerksicherheitsmanagement
 
-**Dokument-ID:** [FRAMEWORK]-0430
+**Dokument-ID:** CSA-CCM-0430
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

@@ -1,6 +1,6 @@
 # Policy: Konfiguration und Hardening
 
-**Dokument-ID:** 0260
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0260
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

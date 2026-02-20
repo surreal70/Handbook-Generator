@@ -1,6 +1,6 @@
 # Policy: Logging und Monitoring
 
-**Dokument-ID:** 0320
+**Dokument-ID:** ISMS-0320
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

@@ -1,6 +1,6 @@
 # Anhang: Begriffe und Abkürzungen
 
-**Dokument-ID:** 0740
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0740
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

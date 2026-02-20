@@ -1,6 +1,6 @@
 # Richtlinie: Secure SDLC Code Reviews SAST DAST Secrets
 
-**Dokument-ID:** 0370
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0370
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

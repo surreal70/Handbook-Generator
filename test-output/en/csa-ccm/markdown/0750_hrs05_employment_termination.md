@@ -6,7 +6,7 @@ Classification: Internal
 
 # HRS-05: Employment Termination
 
-**Document-ID:** [FRAMEWORK]-0750
+**Document-ID:** CSA-CCM-0750
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

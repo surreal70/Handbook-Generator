@@ -1,6 +1,6 @@
 # Richtlinie: Third-Party Risk Assessment und Cloud Controls
 
-**Dokument-ID:** 0470
+**Dokument-ID:** ISMS-0470
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

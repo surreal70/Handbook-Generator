@@ -21,13 +21,24 @@
         
         <main>
 <h1 id="tooling-und-zugangswege">Tooling und Zugangswege</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0250
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
 <h2 id="ubersicht">Übersicht</h2>
 <p>Dieses Dokument beschreibt die verwendeten Tools und Systeme, Zugriffswege und URLs sowie Authentifizierungsmethoden für den IT-Service. Ziel ist es, einen zentralen Überblick über alle relevanten Werkzeuge und deren Zugang zu bieten.</p>
-<p><strong>Dokumentverantwortlicher:</strong> IT Operations Manager<br />
-<strong>Genehmigt durch:</strong> CIO<br />
-<strong>Version:</strong> 1.0.0<br />
+<p><strong>Dokumentverantwortlicher:</strong> [TODO]<br />
+<strong>Genehmigt durch:</strong> [TODO]<br />
+<strong>Version:</strong> 0<br />
 <strong>Organisation:</strong> AdminSend GmbH</p>
-<hr />
 <h2 id="tool-kategorien">Tool-Kategorien</h2>
 <h3 id="ubersicht-der-tool-kategorien">Übersicht der Tool-Kategorien</h3>
 <table>
@@ -43,48 +54,47 @@
 <tr>
 <td>Monitoring &amp; Observability</td>
 <td style="text-align: right;">[TODO]</td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 <td>Hoch</td>
 </tr>
 <tr>
 <td>Infrastructure Management</td>
 <td style="text-align: right;">[TODO]</td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 <td>Hoch</td>
 </tr>
 <tr>
 <td>Security &amp; Compliance</td>
 <td style="text-align: right;">[TODO]</td>
-<td>Thomas Weber</td>
+<td>[TODO]</td>
 <td>Hoch</td>
 </tr>
 <tr>
 <td>Development &amp; Deployment</td>
 <td style="text-align: right;">[TODO]</td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 <td>Mittel</td>
 </tr>
 <tr>
 <td>Collaboration &amp; Communication</td>
 <td style="text-align: right;">[TODO]</td>
-<td>Peter Fischer</td>
+<td>{{ meta-organisation-roles.role_COO }}</td>
 <td>Mittel</td>
 </tr>
 <tr>
 <td>Documentation &amp; Knowledge</td>
 <td style="text-align: right;">[TODO]</td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 <td>Mittel</td>
 </tr>
 <tr>
 <td>Backup &amp; Recovery</td>
 <td style="text-align: right;">[TODO]</td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 <td>Hoch</td>
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="monitoring-und-observability">Monitoring und Observability</h2>
 <h3 id="system-monitoring">System-Monitoring</h3>
 <h4 id="todo-monitoring-tool-name">[TODO: Monitoring-Tool Name]</h4>
@@ -93,7 +103,7 @@
 <li><strong>URL:</strong> [TODO: https://monitoring.example.com]</li>
 <li><strong>Zugriff:</strong> VPN + SSO</li>
 <li><strong>Authentifizierung:</strong> AdminSend GmbH SSO</li>
-<li><strong>Verantwortlich:</strong> Andreas Huemmer</li>
+<li><strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</li>
 <li><strong>Support:</strong> [TODO: Support-Kontakt]</li>
 <li><strong>Dokumentation:</strong> [TODO: Dokumentations-URL]</li>
 </ul>
@@ -106,7 +116,6 @@
 - <strong>Admin:</strong> IT Operations Manager, Senior Engineers
 - <strong>Read/Write:</strong> Operations Team
 - <strong>Read-Only:</strong> Management, Stakeholder</p>
-<hr />
 <h3 id="application-performance-monitoring-apm">Application Performance Monitoring (APM)</h3>
 <h4 id="todo-apm-tool-name">[TODO: APM-Tool Name]</h4>
 <ul>
@@ -114,7 +123,7 @@
 <li><strong>URL:</strong> [TODO: https://apm.example.com]</li>
 <li><strong>Zugriff:</strong> VPN + SSO</li>
 <li><strong>Authentifizierung:</strong> AdminSend GmbH SSO</li>
-<li><strong>Verantwortlich:</strong> Andreas Huemmer</li>
+<li><strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</li>
 <li><strong>Support:</strong> [TODO: Support-Kontakt]</li>
 </ul>
 <p><strong>Hauptfunktionen:</strong>
@@ -122,7 +131,6 @@
 - Error-Tracking
 - Performance-Metriken
 - User-Experience-Monitoring</p>
-<hr />
 <h3 id="log-management">Log-Management</h3>
 <h4 id="todo-log-management-tool-name">[TODO: Log-Management-Tool Name]</h4>
 <ul>
@@ -130,7 +138,7 @@
 <li><strong>URL:</strong> [TODO: https://logs.example.com]</li>
 <li><strong>Zugriff:</strong> VPN + SSO</li>
 <li><strong>Authentifizierung:</strong> AdminSend GmbH SSO</li>
-<li><strong>Verantwortlich:</strong> Andreas Huemmer</li>
+<li><strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</li>
 <li><strong>Support:</strong> [TODO: Support-Kontakt]</li>
 </ul>
 <p><strong>Hauptfunktionen:</strong>
@@ -138,17 +146,16 @@
 - Log-Suche und -Filterung
 - Log-Analyse und Visualisierung
 - Alerting auf Log-Patterns</p>
-<hr />
 <h2 id="infrastructure-management">Infrastructure Management</h2>
 <h3 id="configuration-management-database-cmdb">Configuration Management Database (CMDB)</h3>
 <h4 id="netbox">NetBox</h4>
 <ul>
 <li><strong>Zweck:</strong> CMDB und IPAM</li>
-<li><strong>URL:</strong> {{ netbox.url }}</li>
+<li><strong>URL:</strong> [[ netbox.url ]]</li>
 <li><strong>Zugriff:</strong> VPN + Username/Password</li>
 <li><strong>Authentifizierung:</strong> Lokale Accounts oder LDAP</li>
-<li><strong>Verantwortlich:</strong> Andreas Huemmer</li>
-<li><strong>API:</strong> {{ netbox.api_url }}</li>
+<li><strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</li>
+<li><strong>API:</strong> [[ netbox.api_url ]]</li>
 <li><strong>Dokumentation:</strong> https://docs.netbox.dev/</li>
 </ul>
 <p><strong>Hauptfunktionen:</strong>
@@ -161,7 +168,6 @@
 - <strong>Admin:</strong> IT Operations Manager
 - <strong>Read/Write:</strong> Operations Team, Network Team
 - <strong>Read-Only:</strong> Management, Auditors</p>
-<hr />
 <h3 id="virtualisierung">Virtualisierung</h3>
 <h4 id="todo-hypervisor-management">[TODO: Hypervisor-Management]</h4>
 <ul>
@@ -169,7 +175,7 @@
 <li><strong>URL:</strong> [TODO: https://vcenter.example.com]</li>
 <li><strong>Zugriff:</strong> VPN + Username/Password</li>
 <li><strong>Authentifizierung:</strong> Lokale Accounts oder AD</li>
-<li><strong>Verantwortlich:</strong> Andreas Huemmer</li>
+<li><strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</li>
 <li><strong>Support:</strong> [TODO: Support-Kontakt]</li>
 </ul>
 <p><strong>Hauptfunktionen:</strong>
@@ -177,7 +183,6 @@
 - Resource-Allocation
 - Snapshot-Management
 - Migration und HA</p>
-<hr />
 <h3 id="container-orchestrierung">Container-Orchestrierung</h3>
 <h4 id="todo-container-platform">[TODO: Container-Platform]</h4>
 <ul>
@@ -185,7 +190,7 @@
 <li><strong>URL:</strong> [TODO: https://k8s.example.com]</li>
 <li><strong>Zugriff:</strong> VPN + kubectl + Token</li>
 <li><strong>Authentifizierung:</strong> Service-Accounts, RBAC</li>
-<li><strong>Verantwortlich:</strong> Andreas Huemmer</li>
+<li><strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</li>
 <li><strong>Support:</strong> [TODO: Support-Kontakt]</li>
 </ul>
 <p><strong>Hauptfunktionen:</strong>
@@ -193,7 +198,6 @@
 - Service-Discovery
 - Load-Balancing
 - Auto-Scaling</p>
-<hr />
 <h3 id="cloud-management">Cloud-Management</h3>
 <h4 id="todo-cloud-provider-console">[TODO: Cloud-Provider Console]</h4>
 <ul>
@@ -201,7 +205,7 @@
 <li><strong>URL:</strong> [TODO: https://console.cloud-provider.com]</li>
 <li><strong>Zugriff:</strong> Internet + MFA</li>
 <li><strong>Authentifizierung:</strong> Cloud-Provider-Accounts + MFA</li>
-<li><strong>Verantwortlich:</strong> Anna Schmidt</li>
+<li><strong>Verantwortlich:</strong> [TODO]</li>
 <li><strong>Support:</strong> Cloud-Provider-Support</li>
 </ul>
 <p><strong>Hauptfunktionen:</strong>
@@ -209,7 +213,6 @@
 - Storage-Management
 - Networking
 - IAM und Security</p>
-<hr />
 <h2 id="security-und-compliance">Security und Compliance</h2>
 <h3 id="security-information-and-event-management-siem">Security Information and Event Management (SIEM)</h3>
 <h4 id="todo-siem-tool-name">[TODO: SIEM-Tool Name]</h4>
@@ -218,7 +221,7 @@
 <li><strong>URL:</strong> [TODO: https://siem.example.com]</li>
 <li><strong>Zugriff:</strong> VPN + SSO</li>
 <li><strong>Authentifizierung:</strong> AdminSend GmbH SSO</li>
-<li><strong>Verantwortlich:</strong> Thomas Weber</li>
+<li><strong>Verantwortlich:</strong> [TODO]</li>
 <li><strong>Support:</strong> [TODO: Support-Kontakt]</li>
 </ul>
 <p><strong>Hauptfunktionen:</strong>
@@ -226,7 +229,6 @@
 - Threat-Detection
 - Incident-Response
 - Compliance-Reporting</p>
-<hr />
 <h3 id="vulnerability-management">Vulnerability Management</h3>
 <h4 id="todo-vulnerability-scanner">[TODO: Vulnerability-Scanner]</h4>
 <ul>
@@ -234,7 +236,7 @@
 <li><strong>URL:</strong> [TODO: https://vuln.example.com]</li>
 <li><strong>Zugriff:</strong> VPN + Username/Password</li>
 <li><strong>Authentifizierung:</strong> Lokale Accounts</li>
-<li><strong>Verantwortlich:</strong> Thomas Weber</li>
+<li><strong>Verantwortlich:</strong> [TODO]</li>
 <li><strong>Support:</strong> [TODO: Support-Kontakt]</li>
 </ul>
 <p><strong>Hauptfunktionen:</strong>
@@ -242,7 +244,6 @@
 - Patch-Management
 - Compliance-Checks
 - Reporting</p>
-<hr />
 <h3 id="identity-and-access-management-iam">Identity and Access Management (IAM)</h3>
 <h4 id="active-directory-ldap">Active Directory / LDAP</h4>
 <ul>
@@ -250,7 +251,7 @@
 <li><strong>URL:</strong> [TODO: ldap://ad.example.com]</li>
 <li><strong>Zugriff:</strong> Intern + VPN</li>
 <li><strong>Authentifizierung:</strong> Admin-Accounts</li>
-<li><strong>Verantwortlich:</strong> Andreas Huemmer</li>
+<li><strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</li>
 <li><strong>Support:</strong> [TODO: Support-Kontakt]</li>
 </ul>
 <p><strong>Hauptfunktionen:</strong>
@@ -258,7 +259,6 @@
 - Gruppenverwaltung
 - Authentifizierung
 - Autorisierung</p>
-<hr />
 <h3 id="multi-factor-authentication-mfa">Multi-Factor Authentication (MFA)</h3>
 <h4 id="todo-mfa-solution">[TODO: MFA-Solution]</h4>
 <ul>
@@ -266,7 +266,7 @@
 <li><strong>URL:</strong> [TODO: https://mfa.example.com]</li>
 <li><strong>Zugriff:</strong> Internet</li>
 <li><strong>Authentifizierung:</strong> Username + MFA-Token</li>
-<li><strong>Verantwortlich:</strong> Thomas Weber</li>
+<li><strong>Verantwortlich:</strong> [TODO]</li>
 <li><strong>Support:</strong> [TODO: Support-Kontakt]</li>
 </ul>
 <p><strong>Hauptfunktionen:</strong>
@@ -274,7 +274,6 @@
 - Token-Management
 - Push-Notifications
 - Backup-Codes</p>
-<hr />
 <h2 id="development-und-deployment">Development und Deployment</h2>
 <h3 id="version-control">Version Control</h3>
 <h4 id="todo-git-platform">[TODO: Git-Platform]</h4>
@@ -283,7 +282,7 @@
 <li><strong>URL:</strong> [TODO: https://git.example.com]</li>
 <li><strong>Zugriff:</strong> VPN + SSO</li>
 <li><strong>Authentifizierung:</strong> AdminSend GmbH SSO + SSH-Keys</li>
-<li><strong>Verantwortlich:</strong> Andreas Huemmer</li>
+<li><strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</li>
 <li><strong>Support:</strong> [TODO: Support-Kontakt]</li>
 </ul>
 <p><strong>Hauptfunktionen:</strong>
@@ -291,7 +290,6 @@
 - Code-Review
 - CI/CD-Integration
 - Issue-Tracking</p>
-<hr />
 <h3 id="cicd-pipeline">CI/CD Pipeline</h3>
 <h4 id="todo-cicd-tool">[TODO: CI/CD-Tool]</h4>
 <ul>
@@ -299,7 +297,7 @@
 <li><strong>URL:</strong> [TODO: https://ci.example.com]</li>
 <li><strong>Zugriff:</strong> VPN + SSO</li>
 <li><strong>Authentifizierung:</strong> AdminSend GmbH SSO</li>
-<li><strong>Verantwortlich:</strong> Andreas Huemmer</li>
+<li><strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</li>
 <li><strong>Support:</strong> [TODO: Support-Kontakt]</li>
 </ul>
 <p><strong>Hauptfunktionen:</strong>
@@ -307,7 +305,6 @@
 - Test-Automation
 - Deployment-Automation
 - Pipeline-Management</p>
-<hr />
 <h3 id="artifact-repository">Artifact Repository</h3>
 <h4 id="todo-artifact-repository">[TODO: Artifact-Repository]</h4>
 <ul>
@@ -315,7 +312,7 @@
 <li><strong>URL:</strong> [TODO: https://artifacts.example.com]</li>
 <li><strong>Zugriff:</strong> VPN + Token</li>
 <li><strong>Authentifizierung:</strong> API-Tokens</li>
-<li><strong>Verantwortlich:</strong> Andreas Huemmer</li>
+<li><strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</li>
 <li><strong>Support:</strong> [TODO: Support-Kontakt]</li>
 </ul>
 <p><strong>Hauptfunktionen:</strong>
@@ -323,7 +320,6 @@
 - Container-Registry
 - Dependency-Management
 - Version-Management</p>
-<hr />
 <h2 id="collaboration-und-communication">Collaboration und Communication</h2>
 <h3 id="ticketing-system">Ticketing-System</h3>
 <h4 id="todo-ticketing-tool">[TODO: Ticketing-Tool]</h4>
@@ -332,7 +328,7 @@
 <li><strong>URL:</strong> [TODO: https://tickets.example.com]</li>
 <li><strong>Zugriff:</strong> Internet + SSO</li>
 <li><strong>Authentifizierung:</strong> AdminSend GmbH SSO</li>
-<li><strong>Verantwortlich:</strong> Andreas Huemmer</li>
+<li><strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</li>
 <li><strong>Support:</strong> [TODO: Support-Kontakt]</li>
 </ul>
 <p><strong>Hauptfunktionen:</strong>
@@ -340,7 +336,6 @@
 - Request-Management
 - Change-Management
 - SLA-Tracking</p>
-<hr />
 <h3 id="team-kommunikation">Team-Kommunikation</h3>
 <h4 id="todo-chat-platform">[TODO: Chat-Platform]</h4>
 <ul>
@@ -348,7 +343,7 @@
 <li><strong>URL:</strong> [TODO: https://chat.example.com]</li>
 <li><strong>Zugriff:</strong> Internet + SSO</li>
 <li><strong>Authentifizierung:</strong> AdminSend GmbH SSO</li>
-<li><strong>Verantwortlich:</strong> Peter Fischer</li>
+<li><strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_COO }}</li>
 <li><strong>Support:</strong> [TODO: Support-Kontakt]</li>
 </ul>
 <p><strong>Hauptfunktionen:</strong>
@@ -356,7 +351,6 @@
 - Channels und Direct Messages
 - File-Sharing
 - Integration mit anderen Tools</p>
-<hr />
 <h3 id="video-conferencing">Video-Conferencing</h3>
 <h4 id="todo-video-tool">[TODO: Video-Tool]</h4>
 <ul>
@@ -364,7 +358,7 @@
 <li><strong>URL:</strong> [TODO: https://meet.example.com]</li>
 <li><strong>Zugriff:</strong> Internet</li>
 <li><strong>Authentifizierung:</strong> AdminSend GmbH SSO</li>
-<li><strong>Verantwortlich:</strong> Peter Fischer</li>
+<li><strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_COO }}</li>
 <li><strong>Support:</strong> [TODO: Support-Kontakt]</li>
 </ul>
 <p><strong>Hauptfunktionen:</strong>
@@ -372,7 +366,6 @@
 - Screen-Sharing
 - Recording
 - Chat</p>
-<hr />
 <h2 id="documentation-und-knowledge-management">Documentation und Knowledge Management</h2>
 <h3 id="wiki-knowledge-base">Wiki / Knowledge Base</h3>
 <h4 id="todo-wiki-platform">[TODO: Wiki-Platform]</h4>
@@ -381,7 +374,7 @@
 <li><strong>URL:</strong> [TODO: https://wiki.example.com]</li>
 <li><strong>Zugriff:</strong> VPN + SSO</li>
 <li><strong>Authentifizierung:</strong> AdminSend GmbH SSO</li>
-<li><strong>Verantwortlich:</strong> Andreas Huemmer</li>
+<li><strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</li>
 <li><strong>Support:</strong> [TODO: Support-Kontakt]</li>
 </ul>
 <p><strong>Hauptfunktionen:</strong>
@@ -389,7 +382,6 @@
 - Wissensartikel
 - Suche und Navigation
 - Versionierung</p>
-<hr />
 <h3 id="diagramm-tool">Diagramm-Tool</h3>
 <h4 id="todo-diagramming-tool">[TODO: Diagramming-Tool]</h4>
 <ul>
@@ -397,7 +389,7 @@
 <li><strong>URL:</strong> [TODO: https://diagrams.example.com]</li>
 <li><strong>Zugriff:</strong> Internet + SSO</li>
 <li><strong>Authentifizierung:</strong> AdminSend GmbH SSO</li>
-<li><strong>Verantwortlich:</strong> Andreas Huemmer</li>
+<li><strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</li>
 <li><strong>Support:</strong> [TODO: Support-Kontakt]</li>
 </ul>
 <p><strong>Hauptfunktionen:</strong>
@@ -405,7 +397,6 @@
 - Collaboration
 - Export in verschiedene Formate
 - Versionierung</p>
-<hr />
 <h2 id="backup-und-recovery">Backup und Recovery</h2>
 <h3 id="backup-system">Backup-System</h3>
 <h4 id="todo-backup-solution">[TODO: Backup-Solution]</h4>
@@ -414,7 +405,7 @@
 <li><strong>URL:</strong> [TODO: https://backup.example.com]</li>
 <li><strong>Zugriff:</strong> VPN + Username/Password</li>
 <li><strong>Authentifizierung:</strong> Lokale Accounts</li>
-<li><strong>Verantwortlich:</strong> Andreas Huemmer</li>
+<li><strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</li>
 <li><strong>Support:</strong> [TODO: Support-Kontakt]</li>
 </ul>
 <p><strong>Hauptfunktionen:</strong>
@@ -422,7 +413,6 @@
 - Backup-Monitoring
 - Restore-Funktionen
 - Retention-Management</p>
-<hr />
 <h2 id="zugangswege">Zugangswege</h2>
 <h3 id="vpn-zugang">VPN-Zugang</h3>
 <h4 id="corporate-vpn">Corporate VPN</h4>
@@ -431,8 +421,8 @@
 <li><strong>URL:</strong> [TODO: https://vpn.example.com]</li>
 <li><strong>Client:</strong> [TODO: VPN-Client-Name]</li>
 <li><strong>Authentifizierung:</strong> AdminSend GmbH AD + MFA</li>
-<li><strong>Verantwortlich:</strong> Thomas Weber</li>
-<li><strong>Support:</strong> julia.becker@adminsend.de</li>
+<li><strong>Verantwortlich:</strong> [TODO]</li>
+<li><strong>Support:</strong> {{ meta-organisation-roles.role_Service_Desk_Lead_email }}</li>
 </ul>
 <p><strong>Verbindungsanleitung:</strong>
 1. VPN-Client installieren
@@ -444,7 +434,6 @@
   - <strong>Lösung:</strong> Credentials prüfen, MFA-Token prüfen, Netzwerk prüfen
 - <strong>Problem:</strong> Langsame Verbindung
   - <strong>Lösung:</strong> Anderen VPN-Gateway wählen, Split-Tunneling prüfen</p>
-<hr />
 <h3 id="ssh-zugang">SSH-Zugang</h3>
 <h4 id="ssh-bastion-host">SSH-Bastion-Host</h4>
 <ul>
@@ -452,7 +441,7 @@
 <li><strong>Hostname:</strong> [TODO: bastion.example.com]</li>
 <li><strong>Port:</strong> 22</li>
 <li><strong>Authentifizierung:</strong> SSH-Keys + MFA</li>
-<li><strong>Verantwortlich:</strong> Andreas Huemmer</li>
+<li><strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</li>
 </ul>
 <p><strong>Verbindungsanleitung:</strong></p>
 <div class="codehilite"><pre><span></span><code><span class="c1"># SSH-Key generieren (falls nicht vorhanden)</span>
@@ -468,21 +457,19 @@ ssh<span class="w"> </span>-i<span class="w"> </span>~/.ssh/id_ed25519<span clas
 ssh<span class="w"> </span>username@target-server
 </code></pre></div>
 
-<hr />
 <h3 id="remote-desktop">Remote Desktop</h3>
 <h4 id="rdp-gateway">RDP-Gateway</h4>
 <ul>
 <li><strong>Zweck:</strong> Remote-Desktop-Zugriff auf Windows-Server</li>
 <li><strong>URL:</strong> [TODO: https://rdp.example.com]</li>
 <li><strong>Authentifizierung:</strong> AdminSend GmbH AD + MFA</li>
-<li><strong>Verantwortlich:</strong> Andreas Huemmer</li>
+<li><strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</li>
 </ul>
 <p><strong>Verbindungsanleitung:</strong>
 1. RDP-Client öffnen
 2. Gateway-Adresse eingeben
 3. Mit AD-Credentials + MFA authentifizieren
 4. Ziel-Server auswählen</p>
-<hr />
 <h2 id="authentifizierungsmethoden">Authentifizierungsmethoden</h2>
 <h3 id="single-sign-on-sso">Single Sign-On (SSO)</h3>
 <h4 id="adminsend-gmbh-sso">AdminSend GmbH SSO</h4>
@@ -491,11 +478,10 @@ ssh<span class="w"> </span>username@target-server
 <li><strong>Protokoll:</strong> SAML 2.0 / OAuth 2.0 / OpenID Connect</li>
 <li><strong>MFA:</strong> Erforderlich für alle externen Zugriffe</li>
 <li><strong>Session-Timeout:</strong> 8 Stunden</li>
-<li><strong>Verantwortlich:</strong> Thomas Weber</li>
+<li><strong>Verantwortlich:</strong> [TODO]</li>
 </ul>
 <p><strong>Unterstützte Anwendungen:</strong>
 - [TODO: Liste der SSO-integrierten Anwendungen]</p>
-<hr />
 <h3 id="api-authentifizierung">API-Authentifizierung</h3>
 <h4 id="api-tokens">API-Tokens</h4>
 <ul>
@@ -503,14 +489,13 @@ ssh<span class="w"> </span>username@target-server
 <li><strong>Generierung:</strong> Über jeweiliges Tool-Interface</li>
 <li><strong>Rotation:</strong> Alle 90 Tage</li>
 <li><strong>Speicherung:</strong> Secrets-Management-System</li>
-<li><strong>Verantwortlich:</strong> Andreas Huemmer</li>
+<li><strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</li>
 </ul>
 <p><strong>Best Practices:</strong>
 - Tokens niemals in Code committen
 - Minimale Berechtigungen (Least Privilege)
 - Regelmäßige Rotation
 - Monitoring der Token-Nutzung</p>
-<hr />
 <h3 id="ssh-keys">SSH-Keys</h3>
 <h4 id="ssh-key-management">SSH-Key-Management</h4>
 <ul>
@@ -518,7 +503,7 @@ ssh<span class="w"> </span>username@target-server
 <li><strong>Passphrase:</strong> Erforderlich</li>
 <li><strong>Rotation:</strong> Jährlich</li>
 <li><strong>Speicherung:</strong> Lokal, verschlüsselt</li>
-<li><strong>Verantwortlich:</strong> Andreas Huemmer</li>
+<li><strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</li>
 </ul>
 <p><strong>Key-Generierung:</strong></p>
 <div class="codehilite"><pre><span></span><code><span class="c1"># ED25519 (empfohlen)</span>
@@ -528,7 +513,6 @@ ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="
 ssh-keygen<span class="w"> </span>-t<span class="w"> </span>rsa<span class="w"> </span>-b<span class="w"> </span><span class="m">4096</span><span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;your_email@example.com&quot;</span>
 </code></pre></div>
 
-<hr />
 <h2 id="tool-zugriffs-matrix">Tool-Zugriffs-Matrix</h2>
 <h3 id="zugriffsberechtigung-nach-rolle">Zugriffsberechtigung nach Rolle</h3>
 <table>
@@ -617,14 +601,13 @@ ssh-keygen<span class="w"> </span>-t<span class="w"> </span>rsa<span class="w"> 
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="notfall-zugange">Notfall-Zugänge</h2>
 <h3 id="break-glass-accounts">Break-Glass-Accounts</h3>
 <h4 id="emergency-admin-account">Emergency-Admin-Account</h4>
 <ul>
 <li><strong>Zweck:</strong> Notfall-Zugriff bei SSO-Ausfall</li>
 <li><strong>Speicherung:</strong> Versiegelter Umschlag im Safe</li>
-<li><strong>Zugriff:</strong> Nur durch Anna Schmidt oder Thomas Weber</li>
+<li><strong>Zugriff:</strong> Nur durch [TODO] oder [TODO]</li>
 <li><strong>Protokollierung:</strong> Jede Nutzung wird geloggt und reviewt</li>
 <li><strong>Passwort-Rotation:</strong> Quartalsweise</li>
 </ul>
@@ -636,7 +619,6 @@ ssh-keygen<span class="w"> </span>-t<span class="w"> </span>rsa<span class="w"> 
 5. Alle Aktionen protokollieren
 6. Passwort ändern und neuen Umschlag versiegeln
 7. Incident-Report erstellen</p>
-<hr />
 <h2 id="tool-lifecycle-management">Tool-Lifecycle-Management</h2>
 <h3 id="tool-bewertung">Tool-Bewertung</h3>
 <h4 id="neue-tools-evaluieren">Neue Tools evaluieren</h4>
@@ -658,7 +640,6 @@ ssh-keygen<span class="w"> </span>-t<span class="w"> </span>rsa<span class="w"> 
 <li>Support-Qualität</li>
 <li>Integration mit anderen Tools</li>
 </ul>
-<hr />
 <h2 id="prozesse-und-verantwortlichkeiten">Prozesse und Verantwortlichkeiten</h2>
 <h3 id="raci-matrix">RACI-Matrix</h3>
 <table>
@@ -719,7 +700,6 @@ ssh-keygen<span class="w"> </span>-t<span class="w"> </span>rsa<span class="w"> 
 <blockquote>
 <p><strong>Legende:</strong> R = Responsible, A = Accountable, C = Consulted, I = Informed</p>
 </blockquote>
-<hr />
 <h2 id="compliance-und-standards">Compliance und Standards</h2>
 <h3 id="relevante-standards">Relevante Standards</h3>
 <ul>
@@ -734,7 +714,6 @@ ssh-keygen<span class="w"> </span>-t<span class="w"> </span>rsa<span class="w"> 
 <li>Authentifizierungs-Logs</li>
 <li>Notfall-Zugriffs-Dokumentation</li>
 </ul>
-<hr />
 <h2 id="anhang">Anhang</h2>
 <h3 id="glossar">Glossar</h3>
 <table>
@@ -777,10 +756,9 @@ ssh-keygen<span class="w"> </span>-t<span class="w"> </span>rsa<span class="w"> 
 <li>COBIT 2019 Framework</li>
 <li>NIST Cybersecurity Framework</li>
 </ul>
-<hr />
-<p><strong>Letzte Aktualisierung:</strong> {{ meta.date }}<br />
+<p><strong>Letzte Aktualisierung:</strong> {{ meta-handbook.date }}<br />
 <strong>Nächste Review:</strong> [TODO: Datum]<br />
-<strong>Kontakt:</strong> andreas.huemmer@adminsend.de</p>
+<strong>Kontakt:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager_email }}</p>
         </main>
         
         <nav class="page-nav">

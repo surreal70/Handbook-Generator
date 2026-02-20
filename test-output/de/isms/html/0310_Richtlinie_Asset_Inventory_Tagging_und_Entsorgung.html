@@ -21,15 +21,17 @@
         
         <main>
 <h1 id="richtlinie-asset-inventory-tagging-und-entsorgung">Richtlinie: Asset Inventory, Tagging und Entsorgung</h1>
-<p><strong>Dokument-ID:</strong> 0310<br />
-<strong>Dokumenttyp:</strong> Richtlinie (detailliert)<br />
-<strong>Zugehörige Policy:</strong> 0300_Policy_Asset_Management.md<br />
-<strong>Standard-Referenz:</strong> ISO/IEC 27001:2022 Annex A.5.9, A.5.10<br />
-<strong>Owner:</strong> {{ meta.it_operations.manager }}<br />
-<strong>Version:</strong> 1.0<br />
-<strong>Status:</strong> Freigegeben<br />
-<strong>Klassifizierung:</strong> Intern<br />
-<strong>Letzte Aktualisierung:</strong> {{ meta.document.date }}</p>
+<p><strong>Dokument-ID:</strong> 0310
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
 <hr />
 <h2 id="1-zweck-und-geltungsbereich">1. Zweck und Geltungsbereich</h2>
 <p>Diese Richtlinie konkretisiert die <code>0300_Policy_Asset_Management.md</code> und definiert:
@@ -68,7 +70,7 @@
 </ul>
 <h2 id="3-asset-inventarisierung">3. Asset-Inventarisierung</h2>
 <h3 id="31-cmdb-configuration-management-database">3.1 CMDB (Configuration Management Database)</h3>
-<p><strong>System:</strong> {{ meta.itsm.cmdb }} (z.B. ServiceNow, Jira Service Management)</p>
+<p><strong>System:</strong> {{ meta-handbook.itsm_cmdb }} (z.B. ServiceNow, Jira Service Management)</p>
 <p><strong>Pflichtfelder pro Asset:</strong>
 - Asset-ID (eindeutig)
 - Asset-Typ und Kategorie
@@ -86,8 +88,8 @@
 - Abhängigkeiten zu anderen Assets</p>
 <h3 id="32-automatische-inventarisierung">3.2 Automatische Inventarisierung</h3>
 <p><strong>Tools:</strong>
-- <strong>Endpoint-Management:</strong> {{ meta.endpoint.management }} (z.B. Microsoft Intune, Jamf)
-- <strong>Network Discovery:</strong> {{ meta.network.discovery }} (z.B. Nmap, Lansweeper)
+- <strong>Endpoint-Management:</strong> {{ meta-handbook.endpoint_management }} (z.B. Microsoft Intune, Jamf)
+- <strong>Network Discovery:</strong> {{ meta-handbook.network_discovery }} (z.B. Nmap, Lansweeper)
 - <strong>Cloud Asset Inventory:</strong> Native Cloud-Tools (Azure Resource Graph, AWS Config)</p>
 <p><strong>Prozess:</strong>
 - Tägliche automatische Scans
@@ -109,7 +111,7 @@
 5. Übergabeprotokoll (bei Mitarbeiter-Zuweisung)</p>
 <h2 id="4-asset-tagging">4. Asset-Tagging</h2>
 <h3 id="41-tagging-schema">4.1 Tagging-Schema</h3>
-<p><strong>Asset-ID-Format:</strong> <code>{{ meta.asset.id_format }}</code><br />
+<p><strong>Asset-ID-Format:</strong> <code>{{ meta-handbook.asset_id_format }}</code><br />
 Beispiel: <code>LAP-2024-001234</code> (Laptop, Jahr, laufende Nummer)</p>
 <p><strong>Präfixe:</strong>
 - LAP: Laptop
@@ -129,7 +131,7 @@ Beispiel: <code>LAP-2024-001234</code> (Laptop, Jahr, laufende Nummer)</p>
 - Integration mit Zutrittskontrollsystem</p>
 <h3 id="43-digitale-tags">4.3 Digitale Tags</h3>
 <p><strong>Hostname-Konvention:</strong>
-- Format: <code>{{ meta.naming.hostname_format }}</code>
+- Format: <code>{{ meta-handbook.naming_hostname_format }}</code>
 - Beispiel: <code>lap-jdoe-001</code> (Typ-Nutzer-Nummer)</p>
 <p><strong>Metadaten:</strong>
 - Cloud-Resources: Tags für Owner, Kostenstelle, Umgebung
@@ -228,7 +230,7 @@ Beispiel: <code>LAP-2024-001234</code> (Laptop, Jahr, laufende Nummer)</p>
 - Zertifikat bei Dienstleister-Entsorgung</p>
 <h3 id="62-mobile-gerate">6.2 Mobile Geräte</h3>
 <p><strong>Prozess:</strong>
-1. Remote Wipe über MDM ({{ meta.mdm.system }})
+1. Remote Wipe über MDM ({{ meta-handbook.mdm_system }})
 2. Factory Reset vor Ort
 3. Entfernung von SIM-Karten und SD-Karten
 4. Physische Prüfung der Löschung
@@ -326,9 +328,8 @@ Beispiel: <code>LAP-2024-001234</code> (Laptop, Jahr, laufende Nummer)</p>
 <li><strong>DIN 66399</strong> - Vernichtung von Datenträgern</li>
 <li><strong>WEEE-Richtlinie</strong> - Elektro- und Elektronikgeräte-Entsorgung</li>
 </ul>
-<hr />
-<p><strong>Genehmigt durch:</strong> Thomas Weber, CISO<br />
-<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+<p><strong>Genehmigt durch:</strong> [TODO], CISO<br />
+<strong>Nächster Review:</strong> [TODO]</p>
         </main>
         
         <nav class="page-nav">

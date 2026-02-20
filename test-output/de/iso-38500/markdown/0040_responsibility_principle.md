@@ -7,7 +7,7 @@ Classification: Internal
 
 # Prinzip 1: Verantwortung (Responsibility)
 
-**Dokument-ID:** [FRAMEWORK]-0040
+**Dokument-ID:** ISO-38500-0040
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

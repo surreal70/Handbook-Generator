@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0100 - Asset Management (ID.AM)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0100</div>
+            <h1>Asset Management (ID.AM)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0070_supply_chain_risk_management.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0110_business_environment.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: nist-csf-0100
+Owner: [TODO]</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="asset-management-idam">Asset Management (ID.AM)</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0100
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="zweck">Zweck</h2>
+<p>Dieses Dokument beschreibt das Asset-Management-Programm zur Identifikation und Verwaltung von Daten, Personal, Geräten, Systemen und Einrichtungen, die es der Organisation ermöglichen, Geschäftsziele zu erreichen.</p>
+<h2 id="geltungsbereich">Geltungsbereich</h2>
+<p>[TODO]</p>
+<h2 id="asset-kategorien">Asset-Kategorien</h2>
+<h3 id="1-hardware-assets">1. Hardware-Assets</h3>
+<ul>
+<li>Server und Workstations</li>
+<li>Netzwerkgeräte</li>
+<li>Mobile Geräte</li>
+<li>IoT-Geräte</li>
+<li>Speichersysteme</li>
+</ul>
+<h3 id="2-software-assets">2. Software-Assets</h3>
+<ul>
+<li>Betriebssysteme</li>
+<li>Anwendungen</li>
+<li>Datenbanken</li>
+<li>Middleware</li>
+<li>Entwicklungstools</li>
+</ul>
+<h3 id="3-daten-assets">3. Daten-Assets</h3>
+<ul>
+<li>Kundendaten</li>
+<li>Finanzdaten</li>
+<li>Geistiges Eigentum</li>
+<li>Personaldaten</li>
+<li>Geschäftsgeheimnisse</li>
+</ul>
+<h3 id="4-dienste-und-systeme">4. Dienste und Systeme</h3>
+<ul>
+<li>Cloud-Services</li>
+<li>SaaS-Anwendungen</li>
+<li>Managed Services</li>
+<li>Kritische Geschäftsprozesse</li>
+</ul>
+<h3 id="5-personal">5. Personal</h3>
+<ul>
+<li>IT-Personal</li>
+<li>Privilegierte Benutzer</li>
+<li>Externe Dienstleister</li>
+<li>Administratoren</li>
+</ul>
+<h2 id="asset-inventar">Asset-Inventar</h2>
+<h3 id="inventarisierungsprozess">Inventarisierungsprozess</h3>
+<ol>
+<li>Asset-Erkennung (automatisiert und manuell)</li>
+<li>Asset-Klassifizierung</li>
+<li>Asset-Bewertung</li>
+<li>Dokumentation im CMDB</li>
+<li>Regelmäßige Aktualisierung</li>
+</ol>
+<h3 id="asset-attribute">Asset-Attribute</h3>
+<table>
+<thead>
+<tr>
+<th>Attribut</th>
+<th>Beschreibung</th>
+<th>Pflichtfeld</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Asset-ID</td>
+<td>Eindeutige Kennung</td>
+<td>Ja</td>
+</tr>
+<tr>
+<td>Asset-Name</td>
+<td>Beschreibender Name</td>
+<td>Ja</td>
+</tr>
+<tr>
+<td>Asset-Typ</td>
+<td>Kategorie</td>
+<td>Ja</td>
+</tr>
+<tr>
+<td>Owner</td>
+<td>Verantwortlicher</td>
+<td>Ja</td>
+</tr>
+<tr>
+<td>Standort</td>
+<td>Physischer/logischer Ort</td>
+<td>Ja</td>
+</tr>
+<tr>
+<td>Kritikalität</td>
+<td>Geschäftswichtigkeit</td>
+<td>Ja</td>
+</tr>
+<tr>
+<td>Wert</td>
+<td>Geschäftswert</td>
+<td>Ja</td>
+</tr>
+<tr>
+<td>Status</td>
+<td>Aktiv/Inaktiv/Außer Betrieb</td>
+<td>Ja</td>
+</tr>
+</tbody>
+</table>
+<h2 id="asset-klassifizierung">Asset-Klassifizierung</h2>
+<h3 id="kritikalitatsstufen">Kritikalitätsstufen</h3>
+<table>
+<thead>
+<tr>
+<th>Stufe</th>
+<th>Beschreibung</th>
+<th>Beispiele</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kritisch</td>
+<td>Geschäftsessentiell</td>
+<td>Produktionssysteme, Kundendatenbanken</td>
+</tr>
+<tr>
+<td>Hoch</td>
+<td>Wichtig für Geschäftsbetrieb</td>
+<td>ERP-Systeme, E-Mail-Server</td>
+</tr>
+<tr>
+<td>Mittel</td>
+<td>Unterstützende Systeme</td>
+<td>Intranet, Collaboration-Tools</td>
+</tr>
+<tr>
+<td>Niedrig</td>
+<td>Nicht-kritische Systeme</td>
+<td>Test-Umgebungen</td>
+</tr>
+</tbody>
+</table>
+<h3 id="datenklassifizierung">Datenklassifizierung</h3>
+<table>
+<thead>
+<tr>
+<th>Klassifizierung</th>
+<th>Beschreibung</th>
+<th>Schutzanforderungen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Streng vertraulich</td>
+<td>Höchste Sensitivität</td>
+<td>Verschlüsselung, MFA, Audit-Logging</td>
+</tr>
+<tr>
+<td>Vertraulich</td>
+<td>Geschäftssensitiv</td>
+<td>Zugriffskontrolle, Verschlüsselung</td>
+</tr>
+<tr>
+<td>Intern</td>
+<td>Nur für Mitarbeiter</td>
+<td>Zugriffskontrolle</td>
+</tr>
+<tr>
+<td>Öffentlich</td>
+<td>Keine Einschränkungen</td>
+<td>Basis-Schutz</td>
+</tr>
+</tbody>
+</table>
+<h2 id="asset-lifecycle">Asset-Lifecycle</h2>
+<h3 id="1-beschaffung">1. Beschaffung</h3>
+<ul>
+<li>Genehmigungsprozess</li>
+<li>Sicherheitsanforderungen</li>
+<li>Lieferantenbewertung</li>
+<li>Vertragsmanagement</li>
+</ul>
+<h3 id="2-bereitstellung">2. Bereitstellung</h3>
+<ul>
+<li>Konfiguration nach Standards</li>
+<li>Sicherheitshärtung</li>
+<li>Inventarisierung</li>
+<li>Dokumentation</li>
+</ul>
+<h3 id="3-betrieb">3. Betrieb</h3>
+<ul>
+<li>Patch-Management</li>
+<li>Monitoring</li>
+<li>Wartung</li>
+<li>Änderungsmanagement</li>
+</ul>
+<h3 id="4-auerbetriebnahme">4. Außerbetriebnahme</h3>
+<ul>
+<li>Datenlöschung</li>
+<li>Asset-Rückgabe</li>
+<li>Dokumentation</li>
+<li>Entsorgung</li>
+</ul>
+<h2 id="asset-ownership">Asset-Ownership</h2>
+<h3 id="verantwortlichkeiten">Verantwortlichkeiten</h3>
+<p><strong>Asset Owner:</strong>
+- Geschäftliche Verantwortung
+- Klassifizierung
+- Zugriffsgenehmigung
+- Compliance</p>
+<p><strong>Asset Custodian (IT):</strong>
+- Technische Verwaltung
+- Sicherheitskontrollen
+- Backup und Recovery
+- Patch-Management</p>
+<p><strong>Asset User:</strong>
+- Ordnungsgemäße Nutzung
+- Meldung von Problemen
+- Einhaltung von Richtlinien</p>
+<h2 id="dokumentenverweise">Dokumentenverweise</h2>
+<ul>
+<li>0110_business_environment.md</li>
+<li>0130_risk_assessment.md</li>
+<li>0220_data_security.md (Protect)</li>
+</ul>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0070_supply_chain_risk_management.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0110_business_environment.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

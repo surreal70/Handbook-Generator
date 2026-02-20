@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0160 - System and Application Access Control</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0160</div>
+            <h1>System and Application Access Control</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0150_user_access_management.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0170_logging_and_monitoring.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: tisax-0160</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="system-and-application-access-control">System and Application Access Control</h1>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0160
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="purpose">Purpose</h2>
+<p>This document defines requirements for access control to systems and applications according to TISAX requirements.</p>
+<h2 id="scope">Scope</h2>
+<p>This document applies to all IT systems and applications of [TODO].</p>
+<h2 id="access-control-mechanisms">Access Control Mechanisms</h2>
+<h3 id="authentication">Authentication</h3>
+<ul>
+<li>Unique user identification</li>
+<li>Secure authentication methods</li>
+<li>Multi-factor authentication for critical systems</li>
+<li>Encrypted transmission of credentials</li>
+</ul>
+<h3 id="authorization">Authorization</h3>
+<ul>
+<li>Least Privilege</li>
+<li>Need-to-Know</li>
+<li>Segregation of Duties</li>
+<li>Role-Based Access Control (RBAC)</li>
+</ul>
+<h2 id="system-access-control">System Access Control</h2>
+<h3 id="operating-systems">Operating Systems</h3>
+<p><strong>Servers:</strong>
+- Access only for authorized personnel
+- Privileged accounts separated
+- Logging of all access
+- Regular patch management</p>
+<p><strong>Workstations:</strong>
+- Standard users without admin rights
+- Encrypted hard drives
+- Endpoint protection
+- Automatic updates</p>
+<h3 id="network-devices">Network Devices</h3>
+<ul>
+<li>Separate admin accounts</li>
+<li>Encrypted management connections</li>
+<li>Logging of all configuration changes</li>
+<li>Regular security audits</li>
+</ul>
+<h3 id="databases">Databases</h3>
+<ul>
+<li>Minimum permissions</li>
+<li>Encrypted connections</li>
+<li>Audit logging enabled</li>
+<li>Regular access reviews</li>
+</ul>
+<h2 id="application-access-control">Application Access Control</h2>
+<h3 id="business-applications">Business Applications</h3>
+<p><strong>Authentication:</strong>
+- Integration with central authentication (SSO)
+- MFA for remote access
+- Session management
+- Automatic logout upon inactivity</p>
+<p><strong>Authorization:</strong>
+- Role-based permissions
+- Function-based access control
+- Data-based access control
+- Regular recertification</p>
+<h3 id="web-applications">Web Applications</h3>
+<ul>
+<li>HTTPS mandatory</li>
+<li>Secure session management</li>
+<li>Input validation</li>
+<li>Output encoding</li>
+<li>CSRF protection</li>
+<li>XSS prevention</li>
+</ul>
+<h3 id="cloud-applications">Cloud Applications</h3>
+<ul>
+<li>Identity federation</li>
+<li>Conditional access policies</li>
+<li>MFA mandatory</li>
+<li>Regular review of permissions</li>
+</ul>
+<h2 id="secure-login-procedures">Secure Login Procedures</h2>
+<h3 id="password-management">Password Management</h3>
+<ul>
+<li>See Access Control Policy</li>
+<li>Secure storage (hashing with salt)</li>
+<li>Encrypted transmission</li>
+<li>Password reset process</li>
+</ul>
+<h3 id="session-management">Session Management</h3>
+<ul>
+<li>Secure session IDs</li>
+<li>Session timeout upon inactivity</li>
+<li>Automatic logout</li>
+<li>No session fixation</li>
+</ul>
+<h2 id="privileged-access-control">Privileged Access Control</h2>
+<h3 id="administrative-access">Administrative Access</h3>
+<ul>
+<li>Separate privileged accounts</li>
+<li>Just-in-time access</li>
+<li>Session recording</li>
+<li>Four-eyes principle for critical actions</li>
+</ul>
+<h3 id="privileged-access-management-pam">Privileged Access Management (PAM)</h3>
+<ul>
+<li>Central management of privileged accounts</li>
+<li>Automatic password rotation</li>
+<li>Session monitoring</li>
+<li>Compliance reporting</li>
+</ul>
+<h2 id="access-control-for-development">Access Control for Development</h2>
+<h3 id="development-environments">Development Environments</h3>
+<ul>
+<li>Separated from production environments</li>
+<li>No production data in development</li>
+<li>Access control based on roles</li>
+<li>Version control for code</li>
+</ul>
+<h3 id="test-environments">Test Environments</h3>
+<ul>
+<li>Anonymized test data</li>
+<li>Access control</li>
+<li>Logging</li>
+<li>Regular cleanup</li>
+</ul>
+<h3 id="production-environments">Production Environments</h3>
+<ul>
+<li>Strict access control</li>
+<li>Change management required</li>
+<li>Comprehensive logging</li>
+<li>Segregation of duties</li>
+</ul>
+<h2 id="remote-access">Remote Access</h2>
+<h3 id="vpn">VPN</h3>
+<ul>
+<li>MFA mandatory</li>
+<li>Encrypted connection</li>
+<li>Endpoint compliance check</li>
+<li>Logging of all connections</li>
+</ul>
+<h3 id="remote-desktop">Remote Desktop</h3>
+<ul>
+<li>Access only via VPN</li>
+<li>MFA required</li>
+<li>Session timeout</li>
+<li>No local data storage</li>
+</ul>
+<h2 id="monitoring-and-logging">Monitoring and Logging</h2>
+<h3 id="logging">Logging</h3>
+<ul>
+<li>Successful and failed logins</li>
+<li>Permission changes</li>
+<li>Access to sensitive data</li>
+<li>Administrative actions</li>
+<li>Privileged access</li>
+</ul>
+<h3 id="monitoring">Monitoring</h3>
+<ul>
+<li>Real-time monitoring of critical systems</li>
+<li>Automatic alerting on anomalies</li>
+<li>Regular log analyses</li>
+<li>SIEM integration</li>
+</ul>
+<h2 id="tisax-specific-requirements">TISAX-Specific Requirements</h2>
+<h3 id="vda-isa-controls">VDA ISA Controls</h3>
+<ul>
+<li><strong>3.4.1</strong>: Information access restriction</li>
+<li><strong>3.4.2</strong>: Secure login procedures</li>
+<li><strong>3.4.3</strong>: Password management system</li>
+<li><strong>3.4.4</strong>: Use of utility programs</li>
+</ul>
+<h3 id="assessment-evidence">Assessment Evidence</h3>
+<ul>
+<li>Access control configurations</li>
+<li>Audit logs</li>
+<li>Access review reports</li>
+<li>Process documentation</li>
+</ul>
+<h2 id="metrics">Metrics</h2>
+<p>[TODO] measures:
+- Number of failed login attempts
+- Number of privileged access
+- Average session duration
+- Number of access violations</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0150_user_access_management.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0170_logging_and_monitoring.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

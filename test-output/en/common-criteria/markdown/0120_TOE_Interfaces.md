@@ -1,6 +1,6 @@
 # TOE Interfaces
 
-**Document-ID:** 0120
+**Document-ID:** COMMON-CRITERIA-0120
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

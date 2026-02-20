@@ -6,7 +6,7 @@ Classification: Internal
 
 # Überwachungsaktivitäten
 
-**Dokument-ID:** [FRAMEWORK]-0140
+**Dokument-ID:** SOC1-0140
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

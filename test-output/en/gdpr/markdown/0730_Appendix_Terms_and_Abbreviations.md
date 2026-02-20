@@ -1,6 +1,6 @@
 # Appendix: Terms and Abbreviations
 
-**Document-ID:** 0730
+**Document-ID:** GDPR-0730
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

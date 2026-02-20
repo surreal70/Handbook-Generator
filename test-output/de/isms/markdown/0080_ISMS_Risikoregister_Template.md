@@ -1,6 +1,6 @@
 # Risikoregister (Template)
 
-**Dokument-ID:** 0080
+**Dokument-ID:** ISMS-0080
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

@@ -1,6 +1,6 @@
 # Anhang: Datenflüsse und Schnittstellen (Template)
 
-**Dokument-ID:** 0720
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0720
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

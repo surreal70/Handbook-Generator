@@ -6,7 +6,7 @@ Classification: Internal
 
 # Unternehmensebenen-Kontrollen
 
-**Document-ID:** [FRAMEWORK]-0510
+**Document-ID:** COSO-0510
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

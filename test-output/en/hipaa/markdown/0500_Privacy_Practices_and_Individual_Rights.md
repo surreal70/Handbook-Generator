@@ -1,6 +1,6 @@
 # Privacy Practices and Individual Rights
 
-**Document-ID:** [FRAMEWORK]-0500
+**Document-ID:** HIPAA-0500
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

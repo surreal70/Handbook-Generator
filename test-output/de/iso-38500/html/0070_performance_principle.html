@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0070 - Prinzip 4: Leistung (Performance)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0070</div>
+            <h1>Prinzip 4: Leistung (Performance)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0060_acquisition_principle.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0080_conformance_principle.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: iso-38500-0070
+Owner: [TODO]</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="prinzip-4-leistung-performance">Prinzip 4: Leistung (Performance)</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0070
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="zweck">Zweck</h2>
+<p>Dieses Dokument beschreibt die Anwendung des Leistungs-Prinzips in der IT-Governance der Organisation.</p>
+<h2 id="geltungsbereich">Geltungsbereich</h2>
+<p>Dieses Dokument gilt für:
+- AdminSend GmbH
+- Alle IT-Services und -Systeme
+- IT-Leistungsmanagement</p>
+<h2 id="prinzip-definition">Prinzip-Definition</h2>
+<p>IT ist fit für den Zweck, um die Organisation zu unterstützen, indem sie die erforderlichen Dienstleistungen, Servicelevel und Servicequalität bereitstellt.</p>
+<h2 id="evaluate-bewerten">Evaluate (Bewerten)</h2>
+<h3 id="leistungsanforderungen-bewerten">Leistungsanforderungen bewerten</h3>
+<ul>
+<li>Erfüllt IT die Geschäftsanforderungen?</li>
+<li>Sind Servicelevel angemessen definiert?</li>
+<li>Wird die erforderliche Qualität geliefert?</li>
+<li>Sind Kapazitäten ausreichend?</li>
+</ul>
+<h3 id="bewertungskriterien">Bewertungskriterien</h3>
+<table>
+<thead>
+<tr>
+<th>Kriterium</th>
+<th>Ziel</th>
+<th>Aktuell</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Service Availability</td>
+<td>&gt;99.5%</td>
+<td>{{ meta-handbook.service_availability }}%</td>
+</tr>
+<tr>
+<td>Response Time</td>
+<td>&lt;2s</td>
+<td>{{ meta-handbook.response_time }}s</td>
+</tr>
+<tr>
+<td>User Satisfaction</td>
+<td>&gt;85%</td>
+<td>{{ meta-handbook.user_satisfaction }}%</td>
+</tr>
+<tr>
+<td>Incident Resolution</td>
+<td>&lt;4h</td>
+<td>{{ meta-handbook.incident_resolution }}h</td>
+</tr>
+</tbody>
+</table>
+<h2 id="direct-steuern">Direct (Steuern)</h2>
+<h3 id="leistungsziele">Leistungsziele</h3>
+<p><strong>Service Delivery:</strong>
+- Verfügbarkeit: {{ meta-handbook.availability_target }}%
+- Performance: {{ meta-handbook.performance_target }}
+- Kapazität: {{ meta-handbook.capacity_target }}%
+- Zuverlässigkeit: {{ meta-handbook.reliability_target }}%</p>
+<p><strong>Service Support:</strong>
+- Incident Response: {{ meta-handbook.incident_response_target }}
+- Problem Resolution: {{ meta-handbook.problem_resolution_target }}
+- Change Success Rate: {{ meta-handbook.change_success_target }}%
+- User Support: {{ meta-handbook.user_support_target }}</p>
+<h3 id="service-level-agreements-slas">Service Level Agreements (SLAs)</h3>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Verfügbarkeit</th>
+<th>Response Time</th>
+<th>Support</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{{ meta-handbook.service_1 }}</td>
+<td>{{ meta-handbook.service_1_availability }}%</td>
+<td>{{ meta-handbook.service_1_response }}</td>
+<td>{{ meta-handbook.service_1_support }}</td>
+</tr>
+<tr>
+<td>{{ meta-handbook.service_2 }}</td>
+<td>{{ meta-handbook.service_2_availability }}%</td>
+<td>{{ meta-handbook.service_2_response }}</td>
+<td>{{ meta-handbook.service_2_support }}</td>
+</tr>
+<tr>
+<td>{{ meta-handbook.service_3 }}</td>
+<td>{{ meta-handbook.service_3_availability }}%</td>
+<td>{{ meta-handbook.service_3_response }}</td>
+<td>{{ meta-handbook.service_3_support }}</td>
+</tr>
+</tbody>
+</table>
+<h3 id="leistungsverbesserung">Leistungsverbesserung</h3>
+<ol>
+<li><strong>Kontinuierliche Messung</strong>: Tägliche Überwachung</li>
+<li><strong>Regelmäßige Reviews</strong>: Monatliche Leistungsberichte</li>
+<li><strong>Problemanalyse</strong>: Root Cause Analysis</li>
+<li><strong>Verbesserungsmaßnahmen</strong>: Kontinuierliche Optimierung</li>
+</ol>
+<h2 id="monitor-uberwachen">Monitor (Überwachen)</h2>
+<h3 id="uberwachungsmanahmen">Überwachungsmaßnahmen</h3>
+<ol>
+<li><strong>Real-time Monitoring</strong>: 24/7 Überwachung</li>
+<li><strong>Performance Dashboards</strong>: Echtzeit-Visualisierung</li>
+<li><strong>Trend-Analyse</strong>: Langfristige Entwicklung</li>
+<li><strong>Benchmarking</strong>: Vergleich mit Best Practices</li>
+</ol>
+<h3 id="kpis">KPIs</h3>
+<ul>
+<li>System Availability: {{ meta-handbook.system_availability }}%</li>
+<li>Mean Time To Repair (MTTR): {{ meta-handbook.mttr }} Stunden</li>
+<li>Mean Time Between Failures (MTBF): {{ meta-handbook.mtbf }} Stunden</li>
+<li>Service Desk First Call Resolution: {{ meta-handbook.fcr }}%</li>
+<li>Customer Satisfaction Score (CSAT): {{ meta-handbook.csat }}/10</li>
+</ul>
+<h2 id="dokumentenverweise">Dokumentenverweise</h2>
+<ul>
+<li>0010_governance_framework.md</li>
+<li>0020_governance_model.md</li>
+</ul>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0060_acquisition_principle.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0080_conformance_principle.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

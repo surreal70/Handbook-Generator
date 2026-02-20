@@ -6,7 +6,7 @@ Classification: Internal
 
 # Rechenschaftspflicht
 
-**Dokument-ID:** [FRAMEWORK]-0080
+**Dokument-ID:** COSO-0080
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

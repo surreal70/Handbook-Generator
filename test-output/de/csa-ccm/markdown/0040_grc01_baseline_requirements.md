@@ -6,7 +6,7 @@ Classification: Internal
 
 # GRC-01: Baseline-Anforderungen
 
-**Dokument-ID:** [FRAMEWORK]-0040
+**Dokument-ID:** CSA-CCM-0040
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

@@ -1,6 +1,6 @@
 # Guideline: ICT Disaster Recovery - Interfaces to BCM
 
-**Document-ID:** [FRAMEWORK]-0450
+**Document-ID:** ISMS-0450
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

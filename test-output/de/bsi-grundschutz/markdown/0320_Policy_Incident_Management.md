@@ -1,6 +1,6 @@
 # Policy: Incident Management
 
-**Dokument-ID:** 0320
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0320
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

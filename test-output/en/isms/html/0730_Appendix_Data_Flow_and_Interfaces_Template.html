@@ -21,10 +21,17 @@
         
         <main>
 <h1 id="appendix-c-data-flow-and-interfaces">Appendix C: Data Flow and Interfaces</h1>
-<p><strong>Document Type:</strong> Appendix<br />
-<strong>Version:</strong> 1.0.0<br />
-<strong>Date:</strong> {{ meta.document.date }}<br />
-<strong>Classification:</strong> internal</p>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0730
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
 <hr />
 <h2 id="purpose">Purpose</h2>
 <p>This document documents all data flows and interfaces within the organization as well as to external partners and service providers. It fulfills the requirements of:</p>
@@ -42,9 +49,8 @@
 </ul>
 <h2 id="scope">Scope</h2>
 <p><strong>Organization:</strong> AdminSend GmbH<br />
-<strong>ISMS Scope:</strong> {{ meta.isms.scope }}<br />
-<strong>Responsible:</strong> Thomas Weber, Data Protection Officer</p>
-<hr />
+<strong>ISMS Scope:</strong> {{ meta-handbook.isms_scope }}<br />
+<strong>Responsible:</strong> [TODO], Data Protection Officer</p>
 <h2 id="data-flow-categories">Data Flow Categories</h2>
 <h3 id="internal-data-flows">Internal Data Flows</h3>
 <p>Data transfers within the organization between different systems and sites.</p>
@@ -52,7 +58,6 @@
 <p>Data transfers between the organization and external partners, customers, suppliers, or cloud services.</p>
 <h3 id="cross-border-data-flows">Cross-Border Data Flows</h3>
 <p>Data transfers across country borders that must meet special data protection requirements (GDPR Art. 44-50).</p>
-<hr />
 <h2 id="data-classification">Data Classification</h2>
 <p>All data flows are assessed according to the following classifications:</p>
 <table>
@@ -91,7 +96,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="internal-data-flows_1">Internal Data Flows</h2>
 <h3 id="application-to-application-communication">Application-to-Application Communication</h3>
 <table>
@@ -160,7 +164,6 @@
 - Firewall rules with least privilege principle
 - Encrypted connections (TLS 1.2+)
 - Authentication via certificates or service accounts</p>
-<hr />
 <h3 id="site-to-site-connections">Site-to-Site Connections</h3>
 <table>
 <thead>
@@ -178,7 +181,7 @@
 <tbody>
 <tr>
 <td>DF-S2S-001</td>
-<td>{{ netbox.site.name }}</td>
+<td>[[ netbox.site.name ]]</td>
 <td>[TODO: Branch Office]</td>
 <td>MPLS</td>
 <td>[TODO: Mbps]</td>
@@ -188,7 +191,7 @@
 </tr>
 <tr>
 <td>DF-S2S-002</td>
-<td>{{ netbox.site.name }}</td>
+<td>[[ netbox.site.name ]]</td>
 <td>[TODO: DR Site]</td>
 <td>Dedicated Line</td>
 <td>[TODO: Mbps]</td>
@@ -213,7 +216,6 @@
 - Redundant connections for critical sites
 - Monitoring and alerting for connection failures
 - Regular security audits</p>
-<hr />
 <h3 id="database-replication">Database Replication</h3>
 <table>
 <thead>
@@ -261,7 +263,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="external-data-flows_1">External Data Flows</h2>
 <h3 id="cloud-services">Cloud Services</h3>
 <table>
@@ -326,7 +327,6 @@
 - Encryption in transit and at rest
 - Regular security assessments of cloud providers
 - Data residency compliance (GDPR)</p>
-<hr />
 <h3 id="partner-interfaces">Partner Interfaces</h3>
 <table>
 <thead>
@@ -380,7 +380,6 @@
 - Mutual TLS (mTLS) for API communication
 - API rate limiting and monitoring
 - Regular security audits</p>
-<hr />
 <h3 id="customer-interfaces">Customer Interfaces</h3>
 <table>
 <thead>
@@ -434,7 +433,6 @@
 - Rate limiting and throttling
 - Input validation and output encoding
 - Security headers (HSTS, CSP, etc.)</p>
-<hr />
 <h2 id="cross-border-data-flows_1">Cross-Border Data Flows</h2>
 <h3 id="eu-third-country-transfers">EU-Third Country Transfers</h3>
 <table>
@@ -452,7 +450,7 @@
 <tbody>
 <tr>
 <td>DF-CROSS-001</td>
-<td>{{ netbox.site.name }}</td>
+<td>[[ netbox.site.name ]]</td>
 <td>[TODO: US Data Center]</td>
 <td>USA</td>
 <td>Cloud Data</td>
@@ -475,7 +473,6 @@
 - Standard Contractual Clauses (SCC) according to Art. 46 para. 2 lit. c GDPR
 - Transfer Impact Assessment (TIA) conducted
 - Additional protection measures implemented</p>
-<hr />
 <h2 id="interface-documentation">Interface Documentation</h2>
 <h3 id="api-interfaces">API Interfaces</h3>
 <table>
@@ -540,7 +537,6 @@
 - Output filtering (no sensitive data in error messages)
 - Logging and monitoring of all API access
 - Versioning and deprecation policy</p>
-<hr />
 <h3 id="file-transfer-interfaces">File Transfer Interfaces</h3>
 <table>
 <thead>
@@ -598,7 +594,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h3 id="messaging-interfaces">Messaging Interfaces</h3>
 <table>
 <thead>
@@ -646,7 +641,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h3 id="email-communication">Email Communication</h3>
 <table>
 <thead>
@@ -663,7 +657,7 @@
 <tbody>
 <tr>
 <td>Business Email</td>
-<td>{{ meta.organization.domain }}</td>
+<td>[TODO]</td>
 <td>External</td>
 <td>Business Correspondence</td>
 <td>Confidential</td>
@@ -672,7 +666,7 @@
 </tr>
 <tr>
 <td>Confidential Email</td>
-<td>{{ meta.organization.domain }}</td>
+<td>[TODO]</td>
 <td>External</td>
 <td>Contract Documents</td>
 <td>Strictly Confidential</td>
@@ -681,8 +675,8 @@
 </tr>
 <tr>
 <td>Internal Email</td>
-<td>{{ meta.organization.domain }}</td>
-<td>{{ meta.organization.domain }}</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
 <td>Internal Communication</td>
 <td>Internal</td>
 <td>TLS (Enforced)</td>
@@ -696,7 +690,6 @@
 - Data Loss Prevention (DLP) for outgoing emails
 - Email encryption for confidential content
 - Email archiving according to legal requirements</p>
-<hr />
 <h2 id="network-architecture">Network Architecture</h2>
 <h3 id="network-zones">Network Zones</h3>
 <table>
@@ -747,7 +740,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h3 id="firewall-rules-example">Firewall Rules (Example)</h3>
 <table>
 <thead>
@@ -816,7 +808,6 @@
 </tbody>
 </table>
 <p><strong>Note:</strong> Complete firewall rules in separate documentation.</p>
-<hr />
 <h2 id="data-flow-diagrams">Data Flow Diagrams</h2>
 <h3 id="high-level-architecture">High-Level Architecture</h3>
 <div class="codehilite"><pre><span></span><code><span class="k">[Internet]</span>
@@ -839,7 +830,6 @@
 </code></pre></div>
 
 <p><strong>Note:</strong> Detailed network diagrams in separate files (e.g., Visio, Draw.io).</p>
-<hr />
 <h3 id="data-flow-for-critical-business-processes">Data Flow for Critical Business Processes</h3>
 <h4 id="example-customer-order">Example: Customer Order</h4>
 <div class="codehilite"><pre><span></span><code><span class="o">[</span><span class="n">Customer</span><span class="o">]</span><span class="w"> </span>
@@ -856,7 +846,6 @@
 - Authentication at each level
 - Input validation
 - Audit logging of all transactions</p>
-<hr />
 <h2 id="risk-assessment-data-flows">Risk Assessment Data Flows</h2>
 <h3 id="risk-matrix">Risk Matrix</h3>
 <table>
@@ -910,7 +899,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="monitoring-and-logging">Monitoring and Logging</h2>
 <h3 id="data-flow-monitoring">Data Flow Monitoring</h3>
 <table>
@@ -954,7 +942,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h3 id="security-events">Security Events</h3>
 <p>The following security events are monitored for data flows:</p>
 <ul>
@@ -965,7 +952,6 @@
 <li>Encryption errors</li>
 <li>DLP violations</li>
 </ul>
-<hr />
 <h2 id="compliance-and-data-protection">Compliance and Data Protection</h2>
 <h3 id="gdpr-requirements">GDPR Requirements</h3>
 <table>
@@ -1004,11 +990,9 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h3 id="processing-register-reference">Processing Register Reference</h3>
 <p>All data flows are documented in the processing register according to Art. 30 GDPR.</p>
 <p><strong>Reference:</strong> [TODO: Link to processing register]</p>
-<hr />
 <h2 id="change-management">Change Management</h2>
 <h3 id="change-control">Change Control</h3>
 <p>All changes to data flows and interfaces are subject to the change management process:</p>
@@ -1021,7 +1005,6 @@
 <li><strong>Documentation Update:</strong> Update of this document</li>
 </ol>
 <p><strong>Reference:</strong> 0360_Policy_Change_and_Release_Management.md</p>
-<hr />
 <h2 id="references">References</h2>
 <ul>
 <li>Policy: 0660_Policy_Information_Transfer_and_Communication.md</li>
@@ -1032,9 +1015,8 @@
 <li>Guideline: 0610_Guideline_Segmentation_Firewalling_and_Network_Access_Control.md</li>
 <li>Appendix: 0720_Appendix_Asset_and_System_Inventory_Template.md</li>
 </ul>
-<hr />
-<p><strong>Document Owner:</strong> Thomas Weber<br />
-<strong>Approved By:</strong> {{ meta.management.name }}<br />
+<p><strong>Document Owner:</strong> [TODO]<br />
+<strong>Approved By:</strong> {{ meta-handbook.management_name }}<br />
 <strong>Next Review:</strong> Semi-annually</p>
         </main>
         

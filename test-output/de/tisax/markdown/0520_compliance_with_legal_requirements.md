@@ -6,7 +6,7 @@ Classification: Internal
 
 # Einhaltung gesetzlicher Anforderungen
 
-**Dokument-ID:** [FRAMEWORK]-0520
+**Dokument-ID:** TISAX-0520
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

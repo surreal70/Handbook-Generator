@@ -7,7 +7,7 @@ Classification: Internal
 
 # Security Continuous Monitoring (DE.CM)
 
-**Document-ID:** [FRAMEWORK]-0310
+**Document-ID:** NIST-CSF-0310
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

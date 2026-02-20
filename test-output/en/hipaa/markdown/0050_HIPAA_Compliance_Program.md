@@ -1,6 +1,6 @@
 # HIPAA Compliance Program
 
-**Document-ID:** [FRAMEWORK]-0050
+**Document-ID:** HIPAA-0050
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

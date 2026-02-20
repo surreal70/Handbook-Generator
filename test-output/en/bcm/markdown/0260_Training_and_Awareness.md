@@ -1,6 +1,6 @@
 # Training and Awareness
 
-**Document-ID:** [FRAMEWORK]-0260
+**Document-ID:** BCM-0260
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

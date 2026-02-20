@@ -6,7 +6,7 @@ Classification: Internal
 
 # HRS-07: Vertraulichkeitsvereinbarungen
 
-**Dokument-ID:** [FRAMEWORK]-0770
+**Dokument-ID:** CSA-CCM-0770
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

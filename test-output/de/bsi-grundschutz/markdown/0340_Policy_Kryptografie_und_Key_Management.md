@@ -1,6 +1,6 @@
 # Policy: Kryptografie und Key Management
 
-**Dokument-ID:** 0340
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0340
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

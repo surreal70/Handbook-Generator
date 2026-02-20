@@ -1,6 +1,6 @@
 # Risikomanagement – Methodik
 
-**Dokument-ID:** 0060
+**Dokument-ID:** ISMS-0060
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

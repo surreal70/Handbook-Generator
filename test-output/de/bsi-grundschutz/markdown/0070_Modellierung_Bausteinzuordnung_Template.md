@@ -1,6 +1,6 @@
 # Modellierung: Bausteinzuordnung (Template)
 
-**Dokument-ID:** 0070
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0070
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

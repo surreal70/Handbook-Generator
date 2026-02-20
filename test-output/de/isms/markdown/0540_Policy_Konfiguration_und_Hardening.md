@@ -1,6 +1,6 @@
 # Policy: Konfiguration und Hardening
 
-**Dokument-ID:** 0540
+**Dokument-ID:** ISMS-0540
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

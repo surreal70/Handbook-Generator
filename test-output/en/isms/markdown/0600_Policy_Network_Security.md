@@ -1,6 +1,6 @@
 # Policy: Network Security
 
-**Document-ID:** [FRAMEWORK]-0600
+**Document-ID:** ISMS-0600
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

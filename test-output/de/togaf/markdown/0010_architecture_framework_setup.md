@@ -6,7 +6,7 @@ Classification: Internal
 
 # Einrichtung des Architecture Frameworks
 
-**Dokument-ID:** [FRAMEWORK]-0010
+**Dokument-ID:** TOGAF-0010
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

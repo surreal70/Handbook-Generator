@@ -1,6 +1,6 @@
 # Richtlinie: Akzeptable Nutzung IT
 
-**Dokument-ID:** 0210
+**Dokument-ID:** ISMS-0210
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

@@ -6,7 +6,7 @@ Classification: Internal
 
 # GRC-06: Richtlinienauswirkungen
 
-**Dokument-ID:** [FRAMEWORK]-0090
+**Dokument-ID:** CSA-CCM-0090
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

@@ -21,13 +21,24 @@
         
         <main>
 <h1 id="datenmanagement-und-datenschutz">Datenmanagement und Datenschutz</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0220
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
 <h2 id="ubersicht">Übersicht</h2>
 <p>Dieses Dokument beschreibt die Prozesse und Richtlinien für das Datenmanagement und den Datenschutz im IT-Service. Es definiert Datenklassifizierung, Datenschutzanforderungen gemäß DSGVO, Datenaufbewahrung und -löschung sowie Data-Governance-Strukturen.</p>
-<p><strong>Dokumentverantwortlicher:</strong> IT Operations Manager<br />
-<strong>Genehmigt durch:</strong> CIO<br />
-<strong>Version:</strong> 1.0.0<br />
+<p><strong>Dokumentverantwortlicher:</strong> [TODO]<br />
+<strong>Genehmigt durch:</strong> [TODO]<br />
+<strong>Version:</strong> 0<br />
 <strong>Organisation:</strong> AdminSend GmbH</p>
-<hr />
 <h2 id="datenklassifizierung">Datenklassifizierung</h2>
 <h3 id="klassifizierungsstufen">Klassifizierungsstufen</h3>
 <table>
@@ -114,27 +125,26 @@
 <tr>
 <td>[TODO]</td>
 <td>[TODO]</td>
-<td>{{ netbox.storage.location }}</td>
+<td>[[ netbox.storage.location ]]</td>
 <td>[TODO]</td>
 <td>[TODO]</td>
 </tr>
 <tr>
 <td>[TODO]</td>
 <td>[TODO]</td>
-<td>{{ netbox.storage.location }}</td>
+<td>[[ netbox.storage.location ]]</td>
 <td>[TODO]</td>
 <td>[TODO]</td>
 </tr>
 <tr>
 <td>[TODO]</td>
 <td>[TODO]</td>
-<td>{{ netbox.storage.location }}</td>
+<td>[[ netbox.storage.location ]]</td>
 <td>[TODO]</td>
 <td>[TODO]</td>
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="datenschutz-anforderungen-dsgvo">Datenschutz-Anforderungen (DSGVO)</h2>
 <h3 id="rechtliche-grundlagen">Rechtliche Grundlagen</h3>
 <h4 id="eu-datenschutz-grundverordnung-dsgvo">EU-Datenschutz-Grundverordnung (DSGVO)</h4>
@@ -247,37 +257,37 @@
 <td><strong>Auskunftsrecht</strong></td>
 <td>Information über gespeicherte Daten</td>
 <td>1 Monat</td>
-<td>Thomas Weber</td>
+<td>[TODO]</td>
 </tr>
 <tr>
 <td><strong>Berichtigungsrecht</strong></td>
 <td>Korrektur unrichtiger Daten</td>
 <td>Unverzüglich</td>
-<td>Thomas Weber</td>
+<td>[TODO]</td>
 </tr>
 <tr>
 <td><strong>Löschungsrecht</strong></td>
 <td>Löschung personenbezogener Daten</td>
 <td>Unverzüglich</td>
-<td>Thomas Weber</td>
+<td>[TODO]</td>
 </tr>
 <tr>
 <td><strong>Einschränkung</strong></td>
 <td>Einschränkung der Verarbeitung</td>
 <td>Unverzüglich</td>
-<td>Thomas Weber</td>
+<td>[TODO]</td>
 </tr>
 <tr>
 <td><strong>Datenübertragbarkeit</strong></td>
 <td>Übertragung an anderen Verantwortlichen</td>
 <td>1 Monat</td>
-<td>Thomas Weber</td>
+<td>[TODO]</td>
 </tr>
 <tr>
 <td><strong>Widerspruchsrecht</strong></td>
 <td>Widerspruch gegen Verarbeitung</td>
 <td>Unverzüglich</td>
-<td>Thomas Weber</td>
+<td>[TODO]</td>
 </tr>
 </tbody>
 </table>
@@ -309,7 +319,6 @@
 <li>Zusammenarbeit mit Aufsichtsbehörden</li>
 <li>Anlaufstelle für Betroffene</li>
 </ul>
-<hr />
 <h2 id="datenaufbewahrung-und-loschung">Datenaufbewahrung und -löschung</h2>
 <h3 id="aufbewahrungsfristen">Aufbewahrungsfristen</h3>
 <h4 id="gesetzliche-aufbewahrungsfristen">Gesetzliche Aufbewahrungsfristen</h4>
@@ -327,37 +336,37 @@
 <td>Geschäftsbriefe</td>
 <td>6 Jahre</td>
 <td>HGB § 257</td>
-<td>Maria Müller</td>
+<td>[TODO]</td>
 </tr>
 <tr>
 <td>Buchungsbelege</td>
 <td>10 Jahre</td>
 <td>HGB § 257, AO § 147</td>
-<td>Maria Müller</td>
+<td>[TODO]</td>
 </tr>
 <tr>
 <td>Jahresabschlüsse</td>
 <td>10 Jahre</td>
 <td>HGB § 257</td>
-<td>Maria Müller</td>
+<td>[TODO]</td>
 </tr>
 <tr>
 <td>Lohnunterlagen</td>
 <td>6 Jahre</td>
 <td>AO § 147</td>
-<td>Maria Müller</td>
+<td>[TODO]</td>
 </tr>
 <tr>
 <td>Steuerunterlagen</td>
 <td>10 Jahre</td>
 <td>AO § 147</td>
-<td>Maria Müller</td>
+<td>[TODO]</td>
 </tr>
 <tr>
 <td>Personalakten</td>
 <td>3-10 Jahre</td>
 <td>Verschiedene</td>
-<td>Peter Fischer</td>
+<td>{{ meta-organisation-roles.role_COO }}</td>
 </tr>
 </tbody>
 </table>
@@ -388,13 +397,13 @@
 <td>Audit-Logs</td>
 <td>1 Jahr</td>
 <td>Sicherheit</td>
-<td>Thomas Weber</td>
+<td>[TODO]</td>
 </tr>
 <tr>
 <td>Backup-Daten</td>
 <td>30-90 Tage</td>
 <td>Wiederherstellung</td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 </tr>
 <tr>
 <td>E-Mails</td>
@@ -431,37 +440,37 @@
 <td>Festplatten</td>
 <td>Secure Erase / Degaussing</td>
 <td>NIST SP 800-88</td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 </tr>
 <tr>
 <td>SSDs</td>
 <td>Crypto Erase / Zerstörung</td>
 <td>NIST SP 800-88</td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 </tr>
 <tr>
 <td>Backup-Medien</td>
 <td>Überschreiben / Zerstörung</td>
 <td>NIST SP 800-88</td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 </tr>
 <tr>
 <td>Cloud-Daten</td>
 <td>API-basierte Löschung</td>
 <td>Provider-Standard</td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 </tr>
 <tr>
 <td>Datenbanken</td>
 <td>SQL DELETE / TRUNCATE</td>
 <td>Datenbankstandard</td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 </tr>
 <tr>
 <td>Papier</td>
 <td>Aktenvernichtung (P-4)</td>
 <td>DIN 66399</td>
-<td>Peter Fischer</td>
+<td>{{ meta-organisation-roles.role_COO }}</td>
 </tr>
 </tbody>
 </table>
@@ -470,7 +479,7 @@
 <li>Dokumentation aller Löschvorgänge</li>
 <li>Protokollierung von Datum, Datenart, Methode</li>
 <li>Aufbewahrung der Löschnachweise für 3 Jahre</li>
-<li>Verantwortlich: Thomas Weber</li>
+<li>Verantwortlich: [TODO]</li>
 </ul>
 <h3 id="archivierung">Archivierung</h3>
 <h4 id="archivierungsprozess">Archivierungsprozess</h4>
@@ -503,13 +512,12 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="data-governance">Data-Governance</h2>
 <h3 id="governance-struktur">Governance-Struktur</h3>
 <h4 id="data-governance-board">Data Governance Board</h4>
 <ul>
-<li><strong>Vorsitz:</strong> Anna Schmidt</li>
-<li><strong>Mitglieder:</strong> Thomas Weber, Maria Müller, Fachbereichsleiter</li>
+<li><strong>Vorsitz:</strong> [TODO]</li>
+<li><strong>Mitglieder:</strong> [TODO], [TODO], Fachbereichsleiter</li>
 <li><strong>Frequenz:</strong> Quartalsweise</li>
 <li><strong>Aufgaben:</strong></li>
 <li>Strategische Daten-Governance</li>
@@ -612,7 +620,6 @@
 <li><strong>Prävention:</strong> Maßnahmen zur Vermeidung zukünftiger Probleme</li>
 <li><strong>Monitoring:</strong> Kontinuierliche Überwachung</li>
 </ol>
-<hr />
 <h2 id="datensicherheit">Datensicherheit</h2>
 <h3 id="verschlusselung">Verschlüsselung</h3>
 <h4 id="verschlusselung-im-ruhezustand-data-at-rest">Verschlüsselung im Ruhezustand (Data at Rest)</h4>
@@ -632,21 +639,21 @@
 <td>Pflicht</td>
 <td>AES</td>
 <td>256 Bit</td>
-<td>Thomas Weber</td>
+<td>[TODO]</td>
 </tr>
 <tr>
 <td>Vertraulich</td>
 <td>Pflicht</td>
 <td>AES</td>
 <td>256 Bit</td>
-<td>Thomas Weber</td>
+<td>[TODO]</td>
 </tr>
 <tr>
 <td>Intern</td>
 <td>Empfohlen</td>
 <td>AES</td>
 <td>128/256 Bit</td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 </tr>
 <tr>
 <td>Öffentlich</td>
@@ -672,31 +679,31 @@
 <td>Web-Traffic</td>
 <td>HTTPS/TLS</td>
 <td>TLS 1.2</td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 </tr>
 <tr>
 <td>E-Mail</td>
 <td>TLS/S/MIME</td>
 <td>TLS 1.2</td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 </tr>
 <tr>
 <td>Dateiübertragung</td>
 <td>SFTP/FTPS</td>
 <td>TLS 1.2</td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 </tr>
 <tr>
 <td>VPN</td>
 <td>IPsec/OpenVPN</td>
 <td>-</td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 </tr>
 <tr>
 <td>Datenbank</td>
 <td>TLS</td>
 <td>TLS 1.2</td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 </tr>
 </tbody>
 </table>
@@ -734,31 +741,31 @@
 <td>Datenzugriff (vertraulich)</td>
 <td>Pflicht</td>
 <td>1 Jahr</td>
-<td>Thomas Weber</td>
+<td>[TODO]</td>
 </tr>
 <tr>
 <td>Datenänderung</td>
 <td>Pflicht</td>
 <td>1 Jahr</td>
-<td>Thomas Weber</td>
+<td>[TODO]</td>
 </tr>
 <tr>
 <td>Datenlöschung</td>
 <td>Pflicht</td>
 <td>3 Jahre</td>
-<td>Thomas Weber</td>
+<td>[TODO]</td>
 </tr>
 <tr>
 <td>Zugriffsverweigerung</td>
 <td>Pflicht</td>
 <td>1 Jahr</td>
-<td>Thomas Weber</td>
+<td>[TODO]</td>
 </tr>
 <tr>
 <td>Admin-Aktivitäten</td>
 <td>Pflicht</td>
 <td>1 Jahr</td>
-<td>Thomas Weber</td>
+<td>[TODO]</td>
 </tr>
 </tbody>
 </table>
@@ -771,7 +778,6 @@
 <li>Quell-IP-Adresse</li>
 <li>Ergebnis (Erfolg/Fehler)</li>
 </ul>
-<hr />
 <h2 id="datenschutzvorfalle">Datenschutzvorfälle</h2>
 <h3 id="meldepflicht">Meldepflicht</h3>
 <h4 id="dsgvo-meldepflicht">DSGVO-Meldepflicht</h4>
@@ -806,7 +812,6 @@
 <li><strong>Dokumentation:</strong> Erfassung im Incident-Register</li>
 <li><strong>Lessons Learned:</strong> Prozessverbesserungen</li>
 </ol>
-<hr />
 <h2 id="prozesse-und-verantwortlichkeiten">Prozesse und Verantwortlichkeiten</h2>
 <h3 id="raci-matrix">RACI-Matrix</h3>
 <table>
@@ -890,7 +895,6 @@
 <blockquote>
 <p><strong>Legende:</strong> R = Responsible, A = Accountable, C = Consulted, I = Informed</p>
 </blockquote>
-<hr />
 <h2 id="compliance-und-standards">Compliance und Standards</h2>
 <h3 id="relevante-standards">Relevante Standards</h3>
 <ul>
@@ -908,7 +912,6 @@
 <li>Löschnachweise</li>
 <li>Audit-Logs</li>
 </ul>
-<hr />
 <h2 id="anhang">Anhang</h2>
 <h3 id="glossar">Glossar</h3>
 <table>
@@ -957,10 +960,9 @@
 <li>ISO/IEC 27701:2019</li>
 <li>NIST SP 800-88 Rev. 1</li>
 </ul>
-<hr />
-<p><strong>Letzte Aktualisierung:</strong> {{ meta.date }}<br />
+<p><strong>Letzte Aktualisierung:</strong> {{ meta-handbook.date }}<br />
 <strong>Nächste Review:</strong> [TODO: Datum]<br />
-<strong>Kontakt:</strong> thomas.weber@adminsend.de</p>
+<strong>Kontakt:</strong> {{ meta-organisation-roles.role_CISO_email }}</p>
         </main>
         
         <nav class="page-nav">

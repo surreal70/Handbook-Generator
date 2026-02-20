@@ -21,15 +21,17 @@
         
         <main>
 <h1 id="policy-security-in-projects">Policy: Security in Projects</h1>
-<p><strong>Dokument-ID:</strong> 0680<br />
-<strong>Dokumenttyp:</strong> Policy (abstrakt)<br />
-<strong>Standard-Referenz:</strong> ISO/IEC 27001:2022 Annex A.5.8, A.8.25, A.8.32 (inkl. Amendment 1:2024)<br />
-<strong>Owner:</strong> Thomas Weber<br />
-<strong>Version:</strong> 1.0<br />
-<strong>Status:</strong> Freigegeben<br />
-<strong>Klassifizierung:</strong> Intern<br />
-<strong>Letzte Aktualisierung:</strong> {{ meta.document.date }}<br />
-<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+<p><strong>Dokument-ID:</strong> 0680
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
 <hr />
 <h2 id="1-zweck">1. Zweck</h2>
 <p>Diese Policy definiert die Anforderungen an die Integration von Informationssicherheit in Projekte der <strong>AdminSend GmbH</strong>. Sie stellt sicher, dass Sicherheitsanforderungen im gesamten Projektlebenszyklus berücksichtigt werden.</p>
@@ -40,7 +42,7 @@
 <li><strong>Projekte:</strong> Alle IT-Projekte, Infrastrukturprojekte, Softwareentwicklungsprojekte</li>
 <li><strong>Projektphasen:</strong> Initiierung, Planung, Umsetzung, Abschluss</li>
 <li><strong>Projektarten:</strong> Interne Projekte, externe Projekte, Partnerprojekte</li>
-<li><strong>Standorte:</strong> {{ netbox.site.name }} und alle weiteren Betriebsstandorte</li>
+<li><strong>Standorte:</strong> [[ netbox.site.name ]] und alle weiteren Betriebsstandorte</li>
 </ul>
 <p><strong>Ausnahmen:</strong> Ausnahmen sind nur über den definierten Ausnahmenprozess (<code>0640_Policy_Ausnahmen_und_Risk_Waivers.md</code>) zulässig.</p>
 <h2 id="3-grundsatze-policy-statements">3. Grundsätze (Policy Statements)</h2>
@@ -156,10 +158,10 @@
 <p><strong>Legende:</strong> R = Responsible (Durchführung), A = Accountable (Verantwortlich), C = Consulted (Konsultiert), I = Informed (Informiert)</p>
 <h3 id="schlusselrollen">Schlüsselrollen</h3>
 <ul>
-<li><strong>Policy Owner:</strong> Thomas Weber (CISO)</li>
-<li><strong>Security Architect:</strong> {{ meta.security.architect }}</li>
+<li><strong>Policy Owner:</strong> [TODO] (CISO)</li>
+<li><strong>Security Architect:</strong> {{ meta-handbook.security_architect }}</li>
 <li><strong>Project Manager:</strong> Projektverantwortliche</li>
-<li><strong>IT Operations Manager:</strong> {{ meta.it.operations_manager }}</li>
+<li><strong>IT Operations Manager:</strong> {{ meta-handbook.it_operations_manager }}</li>
 <li><strong>Business Owner:</strong> Fachbereichsverantwortliche</li>
 <li><strong>Kontroll-/Prüfinstanz:</strong> ISMS, Internal Audit</li>
 </ul>
@@ -241,11 +243,10 @@
 <li><strong>BSIMM</strong> - Building Security In Maturity Model</li>
 <li><strong>ISO/IEC 27034</strong> - Application Security</li>
 </ul>
-<hr />
 <p><strong>Genehmigt durch:</strong><br />
-{{ meta.management.ceo }}, Geschäftsführung<br />
-Datum: {{ meta.document.approval_date }}</p>
-<p><strong>Nächster Review:</strong> {{ meta.document.next_review }} (jährlich oder anlassbezogen)</p>
+{{ meta-handbook.management_ceo }}, Geschäftsführung<br />
+Datum: [TODO]</p>
+<p><strong>Nächster Review:</strong> [TODO] (jährlich oder anlassbezogen)</p>
         </main>
         
         <nav class="page-nav">

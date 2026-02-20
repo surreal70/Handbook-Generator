@@ -6,7 +6,7 @@ Classification: Internal
 
 # IAM-06: User Access Revocation
 
-**Document-ID:** [FRAMEWORK]-0360
+**Document-ID:** CSA-CCM-0360
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

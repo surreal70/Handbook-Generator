@@ -6,7 +6,7 @@ Classification: Internal
 
 # DCS-04: Externe Autorisierung
 
-**Dokument-ID:** [FRAMEWORK]-0520
+**Dokument-ID:** CSA-CCM-0520
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

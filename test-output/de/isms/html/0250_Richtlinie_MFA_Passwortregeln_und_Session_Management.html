@@ -21,16 +21,17 @@
         
         <main>
 <h1 id="richtlinie-mfa-passwortregeln-und-session-management">Richtlinie: MFA, Passwortregeln und Session Management</h1>
-<p><strong>Dokument-ID:</strong> 0250<br />
-<strong>Dokumenttyp:</strong> Richtlinie (detailliert)<br />
-<strong>Zugehörige Policy:</strong> 0240_Policy_Authentisierung_und_Passwoerter.md<br />
-<strong>Standard-Referenz:</strong> ISO/IEC 27001:2022 Annex A.5.17, A.5.18<br />
-<strong>Owner:</strong> {{ meta.it_operations.manager }}<br />
-<strong>Version:</strong> 1.0<br />
-<strong>Status:</strong> Freigegeben<br />
-<strong>Klassifizierung:</strong> Intern<br />
-<strong>Letzte Aktualisierung:</strong> {{ meta.document.date }}<br />
-<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+<p><strong>Dokument-ID:</strong> 0250
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
 <hr />
 <h2 id="1-zweck-und-geltungsbereich">1. Zweck und Geltungsbereich</h2>
 <p>Diese Richtlinie konkretisiert die <code>0240_Policy_Authentisierung_und_Passwoerter.md</code> und definiert detaillierte Regeln für:
@@ -154,7 +155,7 @@
 - Verhindert Rotation zwischen wenigen Passwörtern</p>
 <h3 id="33-passwort-reset">3.3 Passwort-Reset</h3>
 <p><strong>Self-Service Password Reset (SSPR):</strong>
-- Nutzer können Passwort selbst zurücksetzen über {{ meta.iam.sspr_url }}
+- Nutzer können Passwort selbst zurücksetzen über {{ meta-handbook.iam_sspr_url }}
 - Verifizierung über:
   - MFA-Methode (Authenticator-App, SMS)
   - Alternative E-Mail-Adresse
@@ -172,7 +173,7 @@
 <h3 id="34-passwort-manager">3.4 Passwort-Manager</h3>
 <p><strong>Empfehlung:</strong>
 - Nutzung von Passwort-Manager für alle Nutzer
-- Unternehmens-Lösung: {{ meta.security.password_manager }} (z.B. 1Password, Bitwarden)
+- Unternehmens-Lösung: {{ meta-handbook.security_password_manager }} (z.B. 1Password, Bitwarden)
 - Zentrale Verwaltung von Shared Credentials</p>
 <p><strong>Funktionen:</strong>
 - Generierung starker, zufälliger Passwörter
@@ -255,7 +256,7 @@
 <h2 id="5-authentifizierungsmethoden">5. Authentifizierungsmethoden</h2>
 <h3 id="51-single-sign-on-sso">5.1 Single Sign-On (SSO)</h3>
 <p><strong>Implementierung:</strong>
-- <strong>Identity Provider:</strong> {{ meta.iam.idp }} (z.B. Azure AD, Okta)
+- <strong>Identity Provider:</strong> {{ meta-handbook.iam_idp }} (z.B. Azure AD, Okta)
 - <strong>Protokolle:</strong> SAML 2.0, OAuth 2.0, OpenID Connect
 - <strong>Anwendungen:</strong> Alle Cloud-SaaS-Anwendungen über SSO</p>
 <p><strong>Vorteile:</strong>
@@ -275,7 +276,7 @@
 - Wireless-Netzwerk (802.1X)
 - Code-Signing und E-Mail-Verschlüsselung</p>
 <p><strong>PKI-Infrastruktur:</strong>
-- Interne Certificate Authority (CA): {{ meta.pki.ca }}
+- Interne Certificate Authority (CA): {{ meta-handbook.pki_ca }}
 - Zertifikats-Lebenszyklus-Management
 - Automatische Erneuerung vor Ablauf
 - Revocation-Checks (CRL, OCSP)</p>
@@ -378,8 +379,8 @@
 - Account-Sperrungen und Entsperrungen
 - Privilegierte Zugriffe</p>
 <p><strong>Retention:</strong>
-- Authentifizierungs-Logs: {{ meta.retention.log_years }} Jahre
-- Audit-Trails: {{ meta.retention.audit_years }} Jahre</p>
+- Authentifizierungs-Logs: {{ meta-handbook.retention_log_years }} Jahre
+- Audit-Trails: {{ meta-handbook.retention_audit_years }} Jahre</p>
 <h2 id="9-referenzen">9. Referenzen</h2>
 <h3 id="interne-dokumente">Interne Dokumente</h3>
 <ul>
@@ -394,11 +395,10 @@
 <li><strong>NIST SP 800-63B</strong> - Digital Identity Guidelines (Authentication)</li>
 <li><strong>OWASP Authentication Cheat Sheet</strong></li>
 </ul>
-<hr />
 <p><strong>Genehmigt durch:</strong><br />
-Thomas Weber, CISO<br />
-Datum: {{ meta.document.approval_date }}</p>
-<p><strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+[TODO], CISO<br />
+Datum: [TODO]</p>
+<p><strong>Nächster Review:</strong> [TODO]</p>
         </main>
         
         <nav class="page-nav">

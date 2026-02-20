@@ -1,6 +1,6 @@
 # Glossary and Abbreviations
 
-**Document-ID:** [FRAMEWORK]-0290
+**Document-ID:** BCM-0290
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

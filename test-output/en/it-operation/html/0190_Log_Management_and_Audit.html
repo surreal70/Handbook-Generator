@@ -21,10 +21,22 @@
         
         <main>
 <h1 id="log-management-and-audit">Log Management and Audit</h1>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0190
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
 <h2 id="purpose-and-scope">Purpose and Scope</h2>
 <p>This document describes the log management and audit processes for AdminSend GmbH. It defines log collection, aggregation, retention, audit trail requirements, and SIEM integration to ensure traceability, compliance, and security monitoring.</p>
 <p><strong>Scope:</strong> All IT systems, networks, applications, and security components of AdminSend GmbH</p>
-<p><strong>Responsible:</strong> Thomas Weber (thomas.weber@adminsend.de)</p>
+<p><strong>Responsible:</strong> [TODO] ({{ meta-organisation-roles.role_CISO_email }})</p>
 <h2 id="log-management-fundamentals">Log Management Fundamentals</h2>
 <h3 id="objectives">Objectives</h3>
 <p><strong>Primary Objectives:</strong>
@@ -241,19 +253,108 @@
 - Limited parsing options</p>
 <p><strong>Usage:</strong> Windows environments</p>
 <h3 id="log-aggregation-platform">Log Aggregation Platform</h3>
-<p><strong>SIEM System:</strong> {{ meta.siem_system }}<br />
-<strong>Version:</strong> {{ meta.siem_version }}<br />
-<strong>Management URL:</strong> {{ meta.siem_url }}</p>
+<p><strong>SIEM System:</strong> {{ meta-handbook.siem_system }}<br />
+<strong>Version:</strong> [TODO]<br />
+<strong>Management URL:</strong> {{ meta-handbook.siem_url }}</p>
 <p><strong>Components:</strong>
-- <strong>Log Collectors:</strong> {{ meta.log_collectors }}
-- <strong>Indexers:</strong> {{ meta.log_indexers }}
-- <strong>Search Heads:</strong> {{ meta.log_search_heads }}
-- <strong>Storage:</strong> {{ meta.log_storage }}</p>
+- <strong>Log Collectors:</strong> {{ meta-handbook.log_collectors }}
+- <strong>Indexers:</strong> {{ meta-handbook.log_indexers }}
+- <strong>Search Heads:</strong> {{ meta-handbook.log_search_heads }}
+- <strong>Storage:</strong> {{ meta-handbook.log_storage }}</p>
 <p><strong>Capacity:</strong>
-- <strong>Ingestion Rate:</strong> {{ meta.log_ingestion_rate }} GB/day
-- <strong>Storage Capacity:</strong> {{ meta.log_storage_capacity }} TB
-- <strong>Retention (Hot):</strong> {{ meta.log_retention_hot }} days
-- <strong>Retention (Cold):</strong> {{ meta.log_retention_cold }} days</p>
+- <strong>Ingestion Rate:</strong> {{ meta-handbook.log_ingestion_rate }} GB/day
+- <strong>Storage Capacity:</strong> {{ meta-handbook.log_storage_capacity }} TB
+- <strong>Retention (Hot):</strong> {{ meta-handbook.log_retention_hot }} days
+- <strong>Retention (Cold):</strong> {{ meta-handbook.log_retention_cold }} days</p>
+<h3 id="log-source-configuration">Log Source Configuration</h3>
+<h4 id="linux-servers">Linux Servers</h4>
+<p><strong>Rsyslog Configuration:</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># /etc/rsyslog.d/50-remote.conf</span>
+
+<span class="c1"># Send all logs to central syslog server</span>
+*.*<span class="w"> </span>@@syslog.<span class="o">{{</span><span class="w"> </span>meta-handbook.domain<span class="w"> </span><span class="o">}}</span>:514
+
+<span class="c1"># Send only security logs</span>
+authpriv.*<span class="w"> </span>@@syslog.<span class="o">{{</span><span class="w"> </span>meta-handbook.domain<span class="w"> </span><span class="o">}}</span>:514
+
+<span class="c1"># TLS encrypted</span>
+<span class="nv">$DefaultNetstreamDriver</span><span class="w"> </span>gtls
+<span class="nv">$ActionSendStreamDriverMode</span><span class="w"> </span><span class="m">1</span>
+<span class="nv">$ActionSendStreamDriverAuthMode</span><span class="w"> </span>x509/name
+*.*<span class="w"> </span>@@syslog.<span class="o">{{</span><span class="w"> </span>meta-handbook.domain<span class="w"> </span><span class="o">}}</span>:6514
+</code></pre></div>
+
+<h4 id="windows-servers">Windows Servers</h4>
+<p><strong>Event Forwarding Configuration:</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="c"># Enable event forwarding</span>
+<span class="n">wecutil</span> <span class="n">qc</span>
+
+<span class="c"># Create subscription</span>
+<span class="n">wecutil</span> <span class="n">cs</span> <span class="n">subscription</span><span class="p">.</span><span class="n">xml</span>
+
+<span class="c"># Subscription XML</span>
+<span class="p">&lt;</span><span class="n">Subscription</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="n">SubscriptionId</span><span class="p">&gt;</span><span class="n">Security-Events</span><span class="p">&lt;/</span><span class="n">SubscriptionId</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="n">DestinationUrl</span><span class="p">&gt;</span><span class="n">http</span><span class="p">://</span><span class="n">wec-server</span><span class="p">.{{</span> <span class="n">meta-handbook</span><span class="p">.</span><span class="n">domain</span> <span class="p">}}:</span><span class="n">5985</span><span class="p">/</span><span class="n">wsman</span><span class="p">&lt;/</span><span class="n">DestinationUrl</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="n">Query</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="n">QueryList</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="n">Query</span> <span class="n">Id</span><span class="p">=</span><span class="s2">&quot;0&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nb">Select </span><span class="n">Path</span><span class="p">=</span><span class="s2">&quot;Security&quot;</span><span class="p">&gt;*[</span><span class="n">System</span><span class="p">[(</span><span class="n">EventID</span><span class="p">=</span><span class="n">4624</span> <span class="n">or</span> <span class="n">EventID</span><span class="p">=</span><span class="n">4625</span><span class="p">)]]&lt;/</span><span class="n">Select</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="n">Query</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="n">QueryList</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="n">Query</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="n">Subscription</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<h4 id="firewall">Firewall</h4>
+<p><strong>Syslog Configuration:</strong>
+- Syslog Server: [[ netbox.syslog.server ]]
+- Facility: Local6
+- Severity: Informational and higher
+- Format: RFC 5424</p>
+<p><strong>Logged Events:</strong>
+- All allowed/blocked connections
+- Policy changes
+- VPN connections
+- Admin access</p>
+<h4 id="web-server-apache">Web Server (Apache)</h4>
+<p><strong>Log Configuration:</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="c"># /etc/apache2/sites-available/default-ssl.conf</span>
+
+<span class="c"># Access Log</span>
+<span class="nb">CustomLog</span><span class="w"> </span><span class="sx">/var/log/apache2/access.log</span><span class="w"> </span>combined
+
+<span class="c"># Error Log</span>
+<span class="nb">ErrorLog</span><span class="w"> </span><span class="sx">/var/log/apache2/error.log</span>
+<span class="nb">LogLevel</span><span class="w"> </span><span class="k">warn</span>
+
+<span class="c"># Forwarding to Syslog</span>
+<span class="nb">CustomLog</span><span class="w"> </span><span class="s2">&quot;|/usr/bin/logger -t apache -p local6.info&quot;</span><span class="w"> </span>combined
+</code></pre></div>
+
+<h4 id="database-mysql">Database (MySQL)</h4>
+<p><strong>Log Configuration:</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># /etc/mysql/my.cnf</span>
+
+<span class="k">[mysqld]</span>
+<span class="c1"># General Query Log (for debugging only)</span>
+<span class="na">general_log</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">0</span>
+<span class="na">general_log_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/var/log/mysql/query.log</span>
+
+<span class="c1"># Error Log</span>
+<span class="na">log_error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/var/log/mysql/error.log</span>
+
+<span class="c1"># Slow Query Log</span>
+<span class="na">slow_query_log</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">1</span>
+<span class="na">slow_query_log_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/var/log/mysql/slow.log</span>
+<span class="na">long_query_time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">2</span>
+
+<span class="c1"># Audit Plugin (for compliance)</span>
+<span class="na">plugin-load</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">audit_log.so</span>
+<span class="na">audit_log_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">/var/log/mysql/audit.log</span>
+<span class="na">audit_log_format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">JSON</span>
+</code></pre></div>
+
 <h2 id="log-retention-and-archiving">Log Retention and Archiving</h2>
 <h3 id="retention-policies">Retention Policies</h3>
 <h4 id="retention-by-log-type">Retention by Log Type</h4>
@@ -319,6 +420,18 @@
 </tr>
 </tbody>
 </table>
+<h4 id="retention-by-compliance">Retention by Compliance</h4>
+<p><strong>GDPR:</strong>
+- Personal data: Only as long as necessary
+- Access logs: 6 months (recommended)
+- Security logs: 1-2 years</p>
+<p><strong>ISO 27001:</strong>
+- Security logs: At least 1 year
+- Audit logs: At least 1 year</p>
+<p><strong>Industry-specific:</strong>
+- Financial sector: 7-10 years
+- Healthcare: 10 years
+- Telecommunications: 6 months (data retention)</p>
 <h3 id="storage-tiers">Storage Tiers</h3>
 <h4 id="hot-storage-fast-access">Hot Storage (Fast Access)</h4>
 <p><strong>Technology:</strong> SSD, NVMe<br />
@@ -347,9 +460,34 @@
 - Long-term archiving
 - Compliance requirements
 - Legal retention</p>
+<h3 id="archiving-process">Archiving Process</h3>
+<p><strong>Automatic Archiving:</strong>
+1. Logs older than hot retention are compressed
+2. Compressed logs are moved to warm/cold storage
+3. Metadata remains available for search
+4. Originals are deleted from hot storage</p>
+<p><strong>Archive Format:</strong>
+- Compression: gzip, bzip2
+- Encryption: AES-256
+- Integrity: SHA-256 checksums
+- Metadata: JSON index</p>
+<p><strong>Archive Location:</strong> {{ meta-handbook.log_archive_location }}</p>
+<h3 id="log-deletion">Log Deletion</h3>
+<p><strong>Automatic Deletion:</strong>
+- Logs older than retention policy are automatically deleted
+- Deletion is logged (audit trail)
+- Verify checksums before deletion</p>
+<p><strong>Manual Deletion:</strong>
+- Only with management approval
+- Document justification
+- Create deletion protocol</p>
+<p><strong>GDPR Deletion:</strong>
+- Right to be forgotten
+- Delete personal data
+- Document deletion</p>
 <h2 id="log-analysis-and-monitoring">Log Analysis and Monitoring</h2>
 <h3 id="siem-integration">SIEM Integration</h3>
-<p><strong>SIEM System:</strong> {{ meta.siem_system }}</p>
+<p><strong>SIEM System:</strong> {{ meta-handbook.siem_system }}</p>
 <p><strong>Functions:</strong>
 - <strong>Real-time Monitoring:</strong> Real-time monitoring
 - <strong>Correlation:</strong> Event correlation
@@ -380,6 +518,198 @@ THEN alert &quot;Possible Brute-Force Attack&quot;
 
 <p><strong>Severity:</strong> Critical<br />
 <strong>Response:</strong> Immediate investigation, deactivate account</p>
+<h4 id="data-exfiltration">Data Exfiltration</h4>
+<p><strong>Use Case:</strong> Detection of unusual data transfers</p>
+<p><strong>Rule:</strong></p>
+<div class="codehilite"><pre><span></span><code>IF data_transfer_size &gt; 1GB
+   AND destination = external
+   AND time = outside_business_hours
+THEN alert &quot;Possible Data Exfiltration&quot;
+</code></pre></div>
+
+<p><strong>Severity:</strong> Critical<br />
+<strong>Response:</strong> Block connection, start forensics</p>
+<h4 id="malware-detection">Malware Detection</h4>
+<p><strong>Use Case:</strong> Detection of malware activities</p>
+<p><strong>Rule:</strong></p>
+<div class="codehilite"><pre><span></span><code>IF antivirus_alert = &quot;malware_detected&quot;
+   OR process_name IN malware_indicators
+   OR network_connection TO known_c2_server
+THEN alert &quot;Malware Detected&quot;
+</code></pre></div>
+
+<p><strong>Severity:</strong> Critical<br />
+<strong>Response:</strong> Isolate host, incident response</p>
+<h4 id="configuration-changes">Configuration Changes</h4>
+<p><strong>Use Case:</strong> Monitoring of critical configuration changes</p>
+<p><strong>Rule:</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="nx">IF</span><span class="w"> </span><span class="nx">event_type</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;config_change&quot;</span>
+<span class="w">   </span><span class="nx">AND</span><span class="w"> </span><span class="nx">system</span><span class="w"> </span><span class="nx">IN</span><span class="w"> </span><span class="nx">critical_systems</span>
+<span class="w">   </span><span class="nx">AND</span><span class="w"> </span><span class="nx">user</span><span class="w"> </span><span class="nx">NOT</span><span class="w"> </span><span class="nx">IN</span><span class="w"> </span><span class="nx">authorized_admins</span>
+<span class="nx">THEN</span><span class="w"> </span><span class="nx">alert</span><span class="w"> </span><span class="s">&quot;Unauthorized Configuration Change&quot;</span>
+</code></pre></div>
+
+<p><strong>Severity:</strong> High<br />
+<strong>Response:</strong> Verify change, rollback if necessary</p>
+<h3 id="dashboards">Dashboards</h3>
+<h4 id="security-dashboard">Security Dashboard</h4>
+<p><strong>Metrics:</strong>
+- Failed login attempts (last 24h)
+- Security alerts (by severity)
+- Top 10 attacker IPs
+- Malware detections
+- Firewall blocks</p>
+<p><strong>Target Audience:</strong> Security Operations Team</p>
+<h4 id="operations-dashboard">Operations Dashboard</h4>
+<p><strong>Metrics:</strong>
+- System errors (by system)
+- Application errors (by app)
+- Performance metrics
+- Disk space warnings
+- Service availability</p>
+<p><strong>Target Audience:</strong> IT Operations Team</p>
+<h4 id="compliance-dashboard">Compliance Dashboard</h4>
+<p><strong>Metrics:</strong>
+- Audit log coverage
+- Retention compliance
+- Access reviews
+- Policy violations
+- Privileged access monitoring</p>
+<p><strong>Target Audience:</strong> Compliance Officer, Auditors</p>
+<h3 id="alerting">Alerting</h3>
+<p><strong>Alert Channels:</strong>
+- <strong>Email:</strong> {{ meta-handbook.alert_email }}
+- <strong>SMS:</strong> For critical alerts
+- <strong>Ticketing:</strong> {{ meta-handbook.ticketing_system }}
+- <strong>SIEM Console:</strong> Real-time alerts
+- <strong>Slack/Teams:</strong> Team notifications</p>
+<p><strong>Alert Prioritization:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Severity</th>
+<th>Response Time</th>
+<th>Escalation</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Critical</strong></td>
+<td>Immediate</td>
+<td>Immediate to on-call</td>
+<td>Malware, Data Breach</td>
+</tr>
+<tr>
+<td><strong>High</strong></td>
+<td>&lt; 1 hour</td>
+<td>After 1h</td>
+<td>Failed Logins, Privilege Escalation</td>
+</tr>
+<tr>
+<td><strong>Medium</strong></td>
+<td>&lt; 4 hours</td>
+<td>After 4h</td>
+<td>Config Changes, Policy Violations</td>
+</tr>
+<tr>
+<td><strong>Low</strong></td>
+<td>&lt; 24 hours</td>
+<td>After 24h</td>
+<td>Informational Events</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Alert Tuning:</strong>
+- False positive reduction
+- Threshold adjustment
+- Whitelist for legitimate activities
+- Regular review (monthly)</p>
+<h2 id="audit-trail-requirements">Audit Trail Requirements</h2>
+<h3 id="audit-logging-principles">Audit Logging Principles</h3>
+<p><strong>What is logged:</strong>
+- <strong>Who:</strong> User ID, IP address, Session ID
+- <strong>What:</strong> Action, Resource, Changes
+- <strong>When:</strong> Timestamp (UTC)
+- <strong>Where:</strong> System, Application, Component
+- <strong>Result:</strong> Success/Failure, Error code</p>
+<p><strong>Audit Log Format:</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-01-31T10:30:45Z&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;jdoe&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;source_ip&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;192.168.1.100&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;action&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;file_access&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;resource&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/data/sensitive/customer_data.csv&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;result&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;system&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;fileserver01&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;session_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;abc123xyz&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="critical-audit-events">Critical Audit Events</h3>
+<h4 id="authentication-and-authorization">Authentication and Authorization</h4>
+<p><strong>Events:</strong>
+- Login (successful/failed)
+- Logout
+- Password change
+- Account creation/deletion
+- Privilege change
+- Role assignment</p>
+<h4 id="data-access">Data Access</h4>
+<p><strong>Events:</strong>
+- Access to sensitive data
+- Data export
+- Data modification
+- Data deletion
+- Database queries (for sensitive data)</p>
+<h4 id="system-changes">System Changes</h4>
+<p><strong>Events:</strong>
+- Configuration changes
+- Software installation/uninstallation
+- Service start/stop
+- Firewall rule changes
+- Network changes</p>
+<h4 id="administrative-activities">Administrative Activities</h4>
+<p><strong>Events:</strong>
+- Privileged access
+- Backup/restore operations
+- Security policy changes
+- Audit log access
+- System maintenance</p>
+<h3 id="audit-log-integrity">Audit Log Integrity</h3>
+<p><strong>Protection Measures:</strong>
+- <strong>Write-Once:</strong> Logs cannot be modified
+- <strong>Digital Signatures:</strong> Logs are signed
+- <strong>Checksums:</strong> Integrity verification
+- <strong>Separate Storage:</strong> Logs on separate system
+- <strong>Access Control:</strong> Only authorized access</p>
+<p><strong>Verification:</strong>
+- Regular integrity checks
+- Checksum validation
+- Signature verification
+- Anomaly detection (missing logs)</p>
+<h2 id="roles-and-responsibilities">Roles and Responsibilities</h2>
+<h3 id="log-management-team">Log Management Team</h3>
+<p><strong>Responsibilities:</strong>
+- Log infrastructure management
+- Log collection configuration
+- Retention policy implementation
+- Tool administration</p>
+<p><strong>Team Lead:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</p>
+<h3 id="security-operations-team">Security Operations Team</h3>
+<p><strong>Responsibilities:</strong>
+- SIEM monitoring
+- Alert response
+- Use case development
+- Threat hunting</p>
+<p><strong>Team Lead:</strong> [TODO]</p>
+<h3 id="compliance-officer">Compliance Officer</h3>
+<p><strong>Responsibilities:</strong>
+- Define compliance requirements
+- Audit support
+- Retention policy review
+- Regulatory monitoring</p>
+<p><strong>Person:</strong> [TODO]</p>
 <h2 id="compliance-and-regulation">Compliance and Regulation</h2>
 <h3 id="gdpr">GDPR</h3>
 <p><strong>Requirements:</strong>
@@ -403,6 +733,108 @@ THEN alert &quot;Possible Brute-Force Attack&quot;
 - Log integrity ensured
 - Privileged access logged
 - NTP synchronization</p>
+<h3 id="pci-dss-if-applicable">PCI-DSS (if applicable)</h3>
+<p><strong>Requirements:</strong>
+- Requirement 10: Track and monitor all access to network resources and cardholder data
+- Audit trails for all access
+- Daily log reviews
+- Retention: At least 1 year (3 months online)</p>
+<h3 id="sox-if-applicable">SOX (if applicable)</h3>
+<p><strong>Requirements:</strong>
+- Audit trails for financially relevant systems
+- Change traceability
+- Access controls logged
+- Retention: 7 years</p>
+<h2 id="log-management-tools">Log Management Tools</h2>
+<h3 id="siem-platform">SIEM Platform</h3>
+<p><strong>System:</strong> {{ meta-handbook.siem_system }}<br />
+<strong>Components:</strong>
+- Indexers
+- Search Heads
+- Forwarders
+- Deployment Server</p>
+<h3 id="log-collectors">Log Collectors</h3>
+<p><strong>Rsyslog:</strong>
+- Central syslog servers
+- Filtering and parsing
+- Forwarding to SIEM</p>
+<p><strong>Fluentd/Fluent Bit:</strong>
+- Lightweight log collector
+- Plugin-based
+- Kubernetes integration</p>
+<p><strong>Elastic Beats:</strong>
+- Filebeat: Log files
+- Metricbeat: System metrics
+- Packetbeat: Network traffic
+- Auditbeat: Audit data</p>
+<h3 id="log-analysis-tools">Log Analysis Tools</h3>
+<p><strong>Kibana:</strong>
+- Visualization
+- Dashboards
+- Ad-hoc queries</p>
+<p><strong>Grafana:</strong>
+- Metrics visualization
+- Alerting
+- Multi-source integration</p>
+<h2 id="metrics-and-reporting">Metrics and Reporting</h2>
+<h3 id="log-management-metrics">Log Management Metrics</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Target Value</th>
+<th>Measurement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Log Collection Rate</strong></td>
+<td>&gt; 99%</td>
+<td>Collected Logs / Expected Logs</td>
+</tr>
+<tr>
+<td><strong>Log Ingestion Latency</strong></td>
+<td>&lt; 5 Min</td>
+<td>Time from Event to SIEM</td>
+</tr>
+<tr>
+<td><strong>Storage Utilization</strong></td>
+<td>&lt; 80%</td>
+<td>Used Storage / Total Storage</td>
+</tr>
+<tr>
+<td><strong>Alert Response Time</strong></td>
+<td>&lt; 15 Min</td>
+<td>Time from Alert to Response</td>
+</tr>
+<tr>
+<td><strong>False Positive Rate</strong></td>
+<td>&lt; 10%</td>
+<td>False Positives / Total Alerts</td>
+</tr>
+</tbody>
+</table>
+<h3 id="reporting">Reporting</h3>
+<p><strong>Daily Log Status Report:</strong>
+- Log collection status
+- Missing log sources
+- Storage utilization
+- Critical alerts</p>
+<p><strong>Weekly Security Report:</strong>
+- Security events summary
+- Top alerts
+- Trend analysis
+- Anomalies</p>
+<p><strong>Monthly Compliance Report:</strong>
+- Audit log coverage
+- Retention compliance
+- Access reviews
+- Policy violations</p>
+<p><strong>Quarterly Management Report:</strong>
+- Log management strategy review
+- Capacity planning
+- Compliance status
+- Improvement measures</p>
 <h2 id="references">References</h2>
 <ul>
 <li>ISO/IEC 27001:2013 - A.12.4 (Logging and Monitoring)</li>
@@ -412,12 +844,11 @@ THEN alert &quot;Possible Brute-Force Attack&quot;
 <li>CIS Controls v8 - Control 8 (Audit Log Management)</li>
 <li>ITIL v4 - Monitoring and Event Management</li>
 </ul>
-<hr />
-<p><strong>Document Owner:</strong> IT Operations Manager<br />
-<strong>Approved by:</strong> CIO<br />
-<strong>Version:</strong> 1.0.0<br />
-<strong>Classification:</strong> internal<br />
-<strong>Last Update:</strong> {{ meta.date }}</p>
+<p><strong>Document Owner:</strong> [TODO]<br />
+<strong>Approved by:</strong> [TODO]<br />
+<strong>Version:</strong> 0<br />
+<strong>Classification:</strong> Internal<br />
+<strong>Last Update:</strong> {{ meta-handbook.date }}</p>
         </main>
         
         <nav class="page-nav">

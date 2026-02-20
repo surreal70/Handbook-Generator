@@ -1,6 +1,6 @@
 # Richtlinie: Asset Inventory, Tagging und Entsorgung
 
-**Dokument-ID:** 0310
+**Dokument-ID:** ISMS-0310
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

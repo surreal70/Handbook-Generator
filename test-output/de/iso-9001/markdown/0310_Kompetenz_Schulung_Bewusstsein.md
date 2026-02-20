@@ -1,6 +1,6 @@
 # Kompetenz, Schulung und Bewusstsein
 
-**Dokument-ID:** 0310
+**Dokument-ID:** ISO-9001-0310
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

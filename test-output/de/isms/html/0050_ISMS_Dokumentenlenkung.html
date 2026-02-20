@@ -21,15 +21,17 @@
         
         <main>
 <h1 id="dokumentenlenkung-dokumentierte-information">Dokumentenlenkung / Dokumentierte Information</h1>
-<p><strong>Dokument-ID:</strong> 0050<br />
-<strong>Dokumenttyp:</strong> ISMS-Grundlagendokument<br />
-<strong>Standard-Referenz:</strong> ISO/IEC 27001:2022 Clause 7.5<br />
-<strong>Owner:</strong> Thomas Weber<br />
-<strong>Version:</strong> 1.0<br />
-<strong>Status:</strong> Freigegeben<br />
-<strong>Klassifizierung:</strong> Intern<br />
-<strong>Letzte Aktualisierung:</strong> {{ meta.document.date }}<br />
-<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+<p><strong>Dokument-ID:</strong> 0050
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
 <hr />
 <h2 id="1-zweck-und-geltungsbereich">1. Zweck und Geltungsbereich</h2>
 <p>Dieses Dokument definiert die Anforderungen an die Lenkung dokumentierter Informationen im Rahmen des ISMS der <strong>AdminSend GmbH</strong>. Es stellt sicher, dass:
@@ -43,7 +45,7 @@
 - <strong>Pfad:</strong> [TODO: /ISMS/Dokumentation/]
 - <strong>URL:</strong> [TODO: https://docs.organization.com/isms/]</p>
 <p><strong>Backup und Archivierung:</strong>
-- <strong>Backup-System:</strong> {{ netbox.backup.system }}
+- <strong>Backup-System:</strong> [[ netbox.backup.system ]]
 - <strong>Backup-Frequenz:</strong> Täglich
 - <strong>Archivierungsdauer:</strong> 10 Jahre nach Außerbetriebnahme</p>
 <h3 id="22-zugriffskontrolle">2.2 Zugriffskontrolle</h3>
@@ -119,7 +121,7 @@
 <p><strong>Notfallzugriff:</strong>
 - Kritische Dokumente (Notfallpläne, Kontaktlisten) werden zusätzlich offline gespeichert
 - Ablageort: [TODO: Physischer Safe, verschlüsselter USB-Stick]
-- Verantwortlich: Thomas Weber</p>
+- Verantwortlich: [TODO]</p>
 <p><strong>Break-Glass-Zugriff:</strong>
 - Siehe <code>0200_Notfallzugang_BreakGlass.md</code> (BCM-Handbuch)
 - Notfallzugriff auf ISMS-Dokumentation bei Ausfall des primären Systems</p>
@@ -302,9 +304,9 @@ Jedes Dokument enthält einen Change-Log mit:
 
 | Version | Datum | Autor | Beschreibung | Genehmigt durch |
 |---------|-------|-------|--------------|-----------------|
-| 1.0 | 2026-01-15 | Thomas Weber | Initiale Version | Geschäftsführung |
+| 1.0 | 2026-01-15 | [TODO] | Initiale Version | Geschäftsführung |
 | 1.1 | 2026-03-20 | ISMS Manager | Kontaktdaten aktualisiert | CISO |
-| 2.0 | 2026-12-01 | Thomas Weber | Neue Anforderungen aus NIS2 | Geschäftsführung |
+| 2.0 | 2026-12-01 | [TODO] | Neue Anforderungen aus NIS2 | Geschäftsführung |
 </code></pre></div>
 
 <h2 id="5-dokumentenregister">5. Dokumentenregister</h2>
@@ -326,47 +328,47 @@ Jedes Dokument enthält einen Change-Log mit:
 <tr>
 <td>0010</td>
 <td>ISMS-Leitlinie</td>
-<td>Thomas Weber</td>
+<td>[TODO]</td>
 <td>Freigegeben</td>
 <td>1.0</td>
-<td>{{ meta.document.date }}</td>
-<td>{{ meta.document.next_review }}</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
 </tr>
 <tr>
 <td>0020</td>
 <td>ISMS-Geltungsbereich</td>
-<td>Thomas Weber</td>
+<td>[TODO]</td>
 <td>Freigegeben</td>
 <td>1.0</td>
-<td>{{ meta.document.date }}</td>
-<td>{{ meta.document.next_review }}</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
 </tr>
 <tr>
 <td>0030</td>
 <td>Kontext und Stakeholder</td>
-<td>Thomas Weber</td>
+<td>[TODO]</td>
 <td>Freigegeben</td>
 <td>1.0</td>
-<td>{{ meta.document.date }}</td>
-<td>{{ meta.document.next_review }}</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
 </tr>
 <tr>
 <td>0040</td>
 <td>ISMS-Governance</td>
-<td>Thomas Weber</td>
+<td>[TODO]</td>
 <td>Freigegeben</td>
 <td>1.0</td>
-<td>{{ meta.document.date }}</td>
-<td>{{ meta.document.next_review }}</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
 </tr>
 <tr>
 <td>0050</td>
 <td>Dokumentenlenkung</td>
-<td>Thomas Weber</td>
+<td>[TODO]</td>
 <td>Freigegeben</td>
 <td>1.0</td>
-<td>{{ meta.document.date }}</td>
-<td>{{ meta.document.next_review }}</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
 </tr>
 <tr>
 <td>...</td>
@@ -496,11 +498,10 @@ Jedes Dokument enthält einen Change-Log mit:
 <li><strong>ISO/IEC 27001:2022</strong> - Clause 7.5: Documented information</li>
 <li><strong>ISO/IEC 27002:2022</strong> - Control 5.1: Policies for information security</li>
 </ul>
-<hr />
 <p><strong>Genehmigt durch:</strong><br />
-Thomas Weber, CISO<br />
-Datum: {{ meta.document.approval_date }}</p>
-<p><strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+[TODO], CISO<br />
+Datum: [TODO]</p>
+<p><strong>Nächster Review:</strong> [TODO]</p>
         </main>
         
         <nav class="page-nav">

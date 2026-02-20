@@ -21,15 +21,17 @@
         
         <main>
 <h1 id="guideline-logging-siem-and-audit-trails">Guideline: Logging, SIEM and Audit Trails</h1>
-<p><strong>Document ID:</strong> 0330<br />
-<strong>Document Type:</strong> Guideline (detailed)<br />
-<strong>Related Policy:</strong> 0320_Policy_Logging_and_Monitoring.md<br />
-<strong>Standard Reference:</strong> ISO/IEC 27001:2022 Annex A.8.15, A.8.16<br />
-<strong>Owner:</strong> {{ meta.it_operations.manager }}<br />
-<strong>Version:</strong> 1.0<br />
-<strong>Status:</strong> Approved<br />
-<strong>Classification:</strong> Confidential<br />
-<strong>Last Updated:</strong> {{ meta.document.date }}</p>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0330
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
 <hr />
 <h2 id="1-purpose-and-scope">1. Purpose and Scope</h2>
 <p>This guideline implements the <code>0320_Policy_Logging_and_Monitoring.md</code> and defines:
@@ -122,7 +124,7 @@
 </table>
 <h2 id="3-siem-integration">3. SIEM Integration</h2>
 <h3 id="31-siem-system">3.1 SIEM System</h3>
-<p><strong>Platform:</strong> {{ meta.security.siem_solution }} (e.g., Splunk, Microsoft Sentinel, Elastic SIEM)</p>
+<p><strong>Platform:</strong> {{ meta-handbook.security_siem_solution }} (e.g., Splunk, Microsoft Sentinel, Elastic SIEM)</p>
 <p><strong>Architecture:</strong>
 - Log collection via agents or syslog
 - Central log aggregation
@@ -194,7 +196,7 @@
 - Approval workflow before access
 - Detailed logging of all actions</p>
 <p><strong>PAM Integration:</strong>
-- Privileged Access Management System: {{ meta.security.pam_solution }}
+- Privileged Access Management System: {{ meta-handbook.security_pam_solution }}
 - Just-in-Time (JIT) access
 - Automatic password rotation
 - Session monitoring and recording</p>
@@ -223,13 +225,13 @@
 <tr>
 <td>Security logs</td>
 <td>90 days</td>
-<td>{{ meta.retention.log_years }} years</td>
+<td>{{ meta-handbook.retention_log_years }} years</td>
 <td>Forensics, compliance</td>
 </tr>
 <tr>
 <td>Authentication logs</td>
 <td>90 days</td>
-<td>{{ meta.retention.log_years }} years</td>
+<td>{{ meta-handbook.retention_log_years }} years</td>
 <td>Audit, compliance</td>
 </tr>
 <tr>
@@ -247,7 +249,7 @@
 <tr>
 <td>Audit trails (compliance)</td>
 <td>180 days</td>
-<td>{{ meta.retention.audit_years }} years</td>
+<td>{{ meta-handbook.retention_audit_years }} years</td>
 <td>Regulatory</td>
 </tr>
 </tbody>
@@ -361,9 +363,8 @@
 <li><strong>ISO/IEC 27001:2022 Annex A.8.16</strong> - Monitoring activities</li>
 <li><strong>NIST SP 800-92</strong> - Guide to Computer Security Log Management</li>
 </ul>
-<hr />
-<p><strong>Approved by:</strong> Thomas Weber, CISO<br />
-<strong>Next Review:</strong> {{ meta.document.next_review }}</p>
+<p><strong>Approved by:</strong> [TODO], CISO<br />
+<strong>Next Review:</strong> [TODO]</p>
         </main>
         
         <nav class="page-nav">

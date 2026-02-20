@@ -1,6 +1,6 @@
 # Datenübertragbarkeit
 
-**Dokument-ID:** 0250
+**Dokument-ID:** GDPR-0250
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

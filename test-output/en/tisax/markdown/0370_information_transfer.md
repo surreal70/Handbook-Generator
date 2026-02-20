@@ -6,7 +6,7 @@ Classification: Internal
 
 # Information Transfer
 
-**Document-ID:** [FRAMEWORK]-0370
+**Document-ID:** TISAX-0370
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

@@ -6,7 +6,7 @@ Classification: Internal
 
 # Requirements Management
 
-**Dokument-ID:** [FRAMEWORK]-0700
+**Dokument-ID:** TOGAF-0700
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

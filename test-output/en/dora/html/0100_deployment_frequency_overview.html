@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0100 - Deployment Frequency Overview</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0100</div>
+            <h1>Deployment Frequency Overview</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0090_change_failure_rate_overview.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0110_deployment_frequency_measurement.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: dora-0100</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="deployment-frequency-overview">Deployment Frequency Overview</h1>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0100
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="purpose">Purpose</h2>
+<p>This document provides a comprehensive overview of the Deployment Frequency metric in the DORA Framework and its significance for software delivery performance.</p>
+<h2 id="scope">Scope</h2>
+<p>This document covers:
+- Definition of Deployment Frequency
+- Performance levels and benchmarks
+- Measurement methodology
+- Significance for the organization</p>
+<h2 id="definition">Definition</h2>
+<h3 id="deployment-frequency">Deployment Frequency</h3>
+<p>Deployment Frequency measures how often an organization successfully deploys code to the production environment. This metric is an indicator of the agility and speed of software delivery.</p>
+<p><strong>Formal Definition</strong>: Number of successful production deployments per time unit (day, week, month).</p>
+<h3 id="organization-information">Organization Information</h3>
+<ul>
+<li><strong>Organization</strong>: [TODO]</li>
+<li><strong>Responsible</strong>: [TODO]</li>
+<li><strong>Measurement Period</strong>: [TODO]</li>
+<li><strong>Current Frequency</strong>: [TODO]</li>
+</ul>
+<h2 id="performance-levels">Performance Levels</h2>
+<h3 id="elite-performers">Elite Performers</h3>
+<p><strong>Deployment Frequency</strong>: On-demand (multiple times per day)</p>
+<p>Characteristics:
+- Fully automated deployment pipelines
+- Trunk-based development
+- Comprehensive test automation
+- Feature flags for risk management
+- High team autonomy</p>
+<h3 id="high-performers">High Performers</h3>
+<p><strong>Deployment Frequency</strong>: Between once per day and once per week</p>
+<p>Characteristics:
+- Largely automated deployments
+- Regular integration
+- Good test coverage
+- Standardized deployment processes</p>
+<h3 id="medium-performers">Medium Performers</h3>
+<p><strong>Deployment Frequency</strong>: Between once per week and once per month</p>
+<p>Characteristics:
+- Partially automated deployments
+- Manual approval processes
+- Batch releases
+- Longer stabilization phases</p>
+<h3 id="low-performers">Low Performers</h3>
+<p><strong>Deployment Frequency</strong>: Between once per month and once every six months</p>
+<p>Characteristics:
+- Predominantly manual deployments
+- Complex approval processes
+- Large release batches
+- High deployment risks</p>
+<h2 id="significance-for-the-organization">Significance for the Organization</h2>
+<h3 id="business-benefits">Business Benefits</h3>
+<p><strong>Faster Time-to-Market</strong>:
+- New features reach customers faster
+- Competitive advantages through agility
+- Faster response to market changes</p>
+<p><strong>Reduced Risk</strong>:
+- Smaller changes are easier to test
+- Faster rollback in case of problems
+- Lower impact of individual deployments</p>
+<p><strong>Improved Quality</strong>:
+- Continuous feedback
+- Early error detection
+- Iterative improvement</p>
+<h3 id="technical-benefits">Technical Benefits</h3>
+<ul>
+<li><strong>Reduced Complexity</strong>: Smaller, more frequent deployments</li>
+<li><strong>Better Testability</strong>: Manageable change scopes</li>
+<li><strong>Faster Feedback</strong>: Shorter feedback cycles</li>
+<li><strong>Higher Automation</strong>: Necessity drives automation</li>
+</ul>
+<h2 id="measurement-methodology">Measurement Methodology</h2>
+<h3 id="data-sources">Data Sources</h3>
+<ol>
+<li><strong>CI/CD Systems</strong>: [TODO]</li>
+<li><strong>Deployment Tools</strong>: [TODO]</li>
+<li><strong>Monitoring Systems</strong>: [TODO]</li>
+<li><strong>Version Control</strong>: [TODO]</li>
+</ol>
+<h3 id="measurement-approach">Measurement Approach</h3>
+<p><strong>Collection</strong>:
+- Automatic collection from CI/CD pipeline
+- Tracking of production deployments
+- Exclusion of rollbacks and hotfixes (optional)</p>
+<p><strong>Calculation</strong>:</p>
+<div class="codehilite"><pre><span></span><code>Deployment Frequency = Number of successful deployments / Time period
+</code></pre></div>
+
+<p><strong>Reporting</strong>:
+- Daily/Weekly dashboards
+- Trend analyses
+- Team-specific metrics</p>
+<h2 id="influencing-factors">Influencing Factors</h2>
+<h3 id="technical-factors">Technical Factors</h3>
+<ul>
+<li><strong>Automation Level</strong>: Higher automation enables more frequent deployments</li>
+<li><strong>Architecture</strong>: Microservices vs. Monolith</li>
+<li><strong>Test Strategy</strong>: Scope and speed of tests</li>
+<li><strong>Infrastructure</strong>: Cloud vs. On-Premise</li>
+</ul>
+<h3 id="process-factors">Process Factors</h3>
+<ul>
+<li><strong>Approval Processes</strong>: Number and duration of approvals</li>
+<li><strong>Change Management</strong>: Flexibility vs. Control</li>
+<li><strong>Release Planning</strong>: Fixed windows vs. On-Demand</li>
+<li><strong>Team Structure</strong>: Autonomy and ownership</li>
+</ul>
+<h3 id="cultural-factors">Cultural Factors</h3>
+<ul>
+<li><strong>Risk Appetite</strong>: Culture of experimentation</li>
+<li><strong>Trust</strong>: Trust in automation and tests</li>
+<li><strong>Learning Culture</strong>: Handling of failures</li>
+<li><strong>Collaboration</strong>: Cooperation between teams</li>
+</ul>
+<h2 id="improvement-approaches">Improvement Approaches</h2>
+<h3 id="short-term-0-3-months">Short-term (0-3 months)</h3>
+<ol>
+<li><strong>Establish baseline</strong>: Measure current frequency</li>
+<li><strong>Identify bottlenecks</strong>: Analyze manual steps</li>
+<li><strong>Quick wins</strong>: Implement simple automations</li>
+<li><strong>Create awareness</strong>: Inform teams about significance</li>
+</ol>
+<h3 id="medium-term-3-6-months">Medium-term (3-6 months)</h3>
+<ol>
+<li><strong>Expand automation</strong>: Optimize CI/CD pipeline</li>
+<li><strong>Streamline processes</strong>: Simplify approval processes</li>
+<li><strong>Test automation</strong>: Increase coverage</li>
+<li><strong>Feature flags</strong>: Decouple deployment from release</li>
+</ol>
+<h3 id="long-term-6-12-months">Long-term (6-12 months)</h3>
+<ol>
+<li><strong>Cultural change</strong>: Establish continuous delivery mindset</li>
+<li><strong>Architecture evolution</strong>: Promote modular architecture</li>
+<li><strong>Team autonomy</strong>: Enable self-service deployments</li>
+<li><strong>Continuous improvement</strong>: Regular retrospectives</li>
+</ol>
+<h2 id="challenges">Challenges</h2>
+<h3 id="common-obstacles">Common Obstacles</h3>
+<ul>
+<li><strong>Legacy Systems</strong>: Hard-to-automate legacy systems</li>
+<li><strong>Compliance Requirements</strong>: Regulatory requirements</li>
+<li><strong>Organizational Inertia</strong>: Resistance to change</li>
+<li><strong>Technical Debt</strong>: Missing test automation</li>
+</ul>
+<h3 id="solution-approaches">Solution Approaches</h3>
+<ul>
+<li><strong>Incremental Modernization</strong>: Gradual improvement</li>
+<li><strong>Compliance Automation</strong>: Automated compliance checks</li>
+<li><strong>Change Management</strong>: Stakeholder engagement</li>
+<li><strong>Reduce Technical Debt</strong>: Dedicated refactoring time</li>
+</ul>
+<h2 id="best-practices">Best Practices</h2>
+<ol>
+<li><strong>Measure continuously</strong>: Establish automatic tracking</li>
+<li><strong>Set realistic goals</strong>: Gradual improvement</li>
+<li><strong>Focus on automation</strong>: Invest in CI/CD</li>
+<li><strong>Encourage experiments</strong>: Create safe environments</li>
+<li><strong>Learn from failures</strong>: Blameless postmortems</li>
+<li><strong>Share successes</strong>: Celebrate wins</li>
+</ol>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0090_change_failure_rate_overview.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0110_deployment_frequency_measurement.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

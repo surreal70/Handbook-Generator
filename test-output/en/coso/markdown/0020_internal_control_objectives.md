@@ -6,7 +6,7 @@ Classification: Internal
 
 # Internal Control Objectives
 
-**Document-ID:** [FRAMEWORK]-0020
+**Document-ID:** COSO-0020
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

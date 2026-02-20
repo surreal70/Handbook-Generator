@@ -6,7 +6,7 @@ Classification: Internal
 
 # Deficiency Evaluation and Communication
 
-**Document-ID:** [FRAMEWORK]-0260
+**Document-ID:** COSO-0260
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

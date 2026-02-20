@@ -7,7 +7,7 @@ Classification: Internal
 
 # Prinzip 3: Beschaffung (Acquisition)
 
-**Dokument-ID:** [FRAMEWORK]-0060
+**Dokument-ID:** ISO-38500-0060
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

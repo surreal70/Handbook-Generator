@@ -1,6 +1,6 @@
 # Breach Notification Template (Supervisory Authority)
 
-**Document-ID:** 0610
+**Document-ID:** GDPR-0610
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

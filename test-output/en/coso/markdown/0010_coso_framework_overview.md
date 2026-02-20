@@ -6,7 +6,7 @@ Classification: Internal
 
 # COSO Framework Overview
 
-**Document-ID:** [FRAMEWORK]-0010
+**Document-ID:** COSO-0010
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

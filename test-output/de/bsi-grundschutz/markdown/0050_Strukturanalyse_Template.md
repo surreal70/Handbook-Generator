@@ -1,6 +1,6 @@
 # Strukturanalyse (Template)
 
-**Dokument-ID:** 0050
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0050
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

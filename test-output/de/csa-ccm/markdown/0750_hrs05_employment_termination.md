@@ -6,7 +6,7 @@ Classification: Internal
 
 # HRS-05: Beendigung des Arbeitsverhältnisses
 
-**Dokument-ID:** [FRAMEWORK]-0750
+**Dokument-ID:** CSA-CCM-0750
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

@@ -1,6 +1,6 @@
 # Evidence and Documentation
 
-**Document-ID:** 0650
+**Document-ID:** COMMON-CRITERIA-0650
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

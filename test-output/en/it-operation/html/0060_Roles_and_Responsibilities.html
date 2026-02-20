@@ -21,26 +21,36 @@
         
         <main>
 <h1 id="roles-and-responsibilities">Roles and Responsibilities</h1>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0060
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
 <h2 id="organizational-structure">Organizational Structure</h2>
 <h3 id="company-information">Company Information</h3>
 <ul>
 <li><strong>Organization:</strong> AdminSend GmbH</li>
-<li><strong>Address:</strong> Musterstraße 123, 80331 München</li>
-<li><strong>Country:</strong> Deutschland</li>
-<li><strong>Website:</strong> https://www.adminsend.de</li>
+<li><strong>Address:</strong> Musterstraße 123, {{ meta-organisation.postal_code }} {{ meta-organisation.city }}</li>
+<li><strong>Country:</strong> {{ meta-organisation.country }}</li>
+<li><strong>Website:</strong> {{ meta-organisation.website }}</li>
 <li><strong>Phone:</strong> +49 89 12345678</li>
-<li><strong>Email:</strong> info@adminsend.de</li>
+<li><strong>Email:</strong> {{ meta-organisation.email }}</li>
 </ul>
 <h3 id="organizational-overview">Organizational Overview</h3>
 <p>[TODO: Insert organizational chart or description of organizational structure here]</p>
 <h2 id="executive-level">Executive Level</h2>
 <h3 id="chief-executive-officer-ceo">Chief Executive Officer (CEO)</h3>
 <ul>
-<li><strong>Name:</strong> Max Mustermann</li>
-<li><strong>Title:</strong> Chief Executive Officer</li>
-<li><strong>Email:</strong> max.mustermann@adminsend.de</li>
-<li><strong>Phone:</strong> +49 89 12345678-100</li>
-<li><strong>Department:</strong> Management</li>
+<li><strong>Name:</strong> [TODO]</li>
+<li><strong>Email:</strong> {{ meta-organisation-roles.role_CEO_email }}</li>
+<li><strong>Phone:</strong> {{ meta-organisation-roles.role_CEO_phone }}</li>
 </ul>
 <p><strong>Responsibilities:</strong>
 - Overall responsibility for the company
@@ -49,11 +59,9 @@
 - Escalation point for business-critical IT incidents</p>
 <h3 id="chief-information-officer-cio">Chief Information Officer (CIO)</h3>
 <ul>
-<li><strong>Name:</strong> Anna Schmidt</li>
-<li><strong>Title:</strong> Chief Information Officer</li>
-<li><strong>Email:</strong> anna.schmidt@adminsend.de</li>
-<li><strong>Phone:</strong> +49 89 12345678-200</li>
-<li><strong>Department:</strong> IT</li>
+<li><strong>Name:</strong> [TODO]</li>
+<li><strong>Email:</strong> {{ meta-organisation-roles.role_CIO_email }}</li>
+<li><strong>Phone:</strong> {{ meta-organisation-roles.role_CIO_phone }}</li>
 </ul>
 <p><strong>Responsibilities:</strong>
 - Overall responsibility for IT strategy and operations
@@ -63,11 +71,9 @@
 - Responsibility for IT service quality and SLA compliance</p>
 <h3 id="chief-information-security-officer-ciso">Chief Information Security Officer (CISO)</h3>
 <ul>
-<li><strong>Name:</strong> Thomas Weber</li>
-<li><strong>Title:</strong> Chief Information Security Officer</li>
-<li><strong>Email:</strong> thomas.weber@adminsend.de</li>
-<li><strong>Phone:</strong> +49 89 12345678-300</li>
-<li><strong>Department:</strong> IT Security</li>
+<li><strong>Name:</strong> [TODO]</li>
+<li><strong>Email:</strong> {{ meta-organisation-roles.role_CISO_email }}</li>
+<li><strong>Phone:</strong> {{ meta-organisation-roles.role_CISO_phone }}</li>
 </ul>
 <p><strong>Responsibilities:</strong>
 - IT security strategy and policies
@@ -78,11 +84,9 @@
 - Security awareness and training</p>
 <h3 id="chief-financial-officer-cfo">Chief Financial Officer (CFO)</h3>
 <ul>
-<li><strong>Name:</strong> Maria Müller</li>
-<li><strong>Title:</strong> Chief Financial Officer</li>
-<li><strong>Email:</strong> maria.mueller@adminsend.de</li>
-<li><strong>Phone:</strong> +49 89 12345678-400</li>
-<li><strong>Department:</strong> Finance</li>
+<li><strong>Name:</strong> [TODO]</li>
+<li><strong>Email:</strong> {{ meta-organisation-roles.role_CFO_email }}</li>
+<li><strong>Phone:</strong> {{ meta-organisation-roles.role_CFO_phone }}</li>
 </ul>
 <p><strong>Responsibilities:</strong>
 - Financial approval of IT projects
@@ -91,11 +95,9 @@
 - Financial compliance and audits</p>
 <h3 id="chief-operating-officer-coo">Chief Operating Officer (COO)</h3>
 <ul>
-<li><strong>Name:</strong> Peter Fischer</li>
-<li><strong>Title:</strong> Chief Operating Officer</li>
-<li><strong>Email:</strong> peter.fischer@adminsend.de</li>
-<li><strong>Phone:</strong> +49 89 12345678-500</li>
-<li><strong>Department:</strong> Operations</li>
+<li><strong>Name:</strong> {{ meta-organisation-roles.role_COO }}</li>
+<li><strong>Email:</strong> {{ meta-organisation-roles.role_COO_email }}</li>
+<li><strong>Phone:</strong> {{ meta-organisation-roles.role_COO_phone }}</li>
 </ul>
 <p><strong>Responsibilities:</strong>
 - Operational business processes
@@ -105,11 +107,9 @@
 <h2 id="it-operations-level">IT Operations Level</h2>
 <h3 id="it-operations-manager">IT Operations Manager</h3>
 <ul>
-<li><strong>Name:</strong> Andreas Huemmer</li>
-<li><strong>Title:</strong> IT Operations Manager</li>
-<li><strong>Email:</strong> andreas.huemmer@adminsend.de</li>
-<li><strong>Phone:</strong> +49 89 12345678-250</li>
-<li><strong>Department:</strong> IT Operations</li>
+<li><strong>Name:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</li>
+<li><strong>Email:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager_email }}</li>
+<li><strong>Phone:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager_phone }}</li>
 </ul>
 <p><strong>Responsibilities:</strong>
 - Daily IT operations and service delivery
@@ -122,11 +122,9 @@
 <p><strong>Deputy:</strong> [TODO: Name and contact of deputy]</p>
 <h3 id="service-desk-lead">Service Desk Lead</h3>
 <ul>
-<li><strong>Name:</strong> Julia Becker</li>
-<li><strong>Title:</strong> Service Desk Lead</li>
-<li><strong>Email:</strong> julia.becker@adminsend.de</li>
-<li><strong>Phone:</strong> +49 89 12345678-111</li>
-<li><strong>Department:</strong> Service Desk</li>
+<li><strong>Name:</strong> {{ meta-organisation-roles.role_Service_Desk_Lead }}</li>
+<li><strong>Email:</strong> {{ meta-organisation-roles.role_Service_Desk_Lead_email }}</li>
+<li><strong>Phone:</strong> {{ meta-organisation-roles.role_Service_Desk_Lead_phone }}</li>
 </ul>
 <p><strong>Responsibilities:</strong>
 - First-level support and incident management
@@ -1115,41 +1113,41 @@
 <tbody>
 <tr>
 <td><strong>CEO</strong></td>
-<td>Max Mustermann</td>
-<td>max.mustermann@adminsend.de</td>
-<td>+49 89 12345678-100</td>
+<td>[TODO]</td>
+<td>{{ meta-organisation-roles.role_CEO_email }}</td>
+<td>{{ meta-organisation-roles.role_CEO_phone }}</td>
 <td>[TODO]</td>
 <td>Mon-Fri 09:00-17:00</td>
 </tr>
 <tr>
 <td><strong>CIO</strong></td>
-<td>Anna Schmidt</td>
-<td>anna.schmidt@adminsend.de</td>
-<td>+49 89 12345678-200</td>
+<td>[TODO]</td>
+<td>{{ meta-organisation-roles.role_CIO_email }}</td>
+<td>{{ meta-organisation-roles.role_CIO_phone }}</td>
 <td>[TODO]</td>
 <td>Mon-Fri 08:00-18:00</td>
 </tr>
 <tr>
 <td><strong>CISO</strong></td>
-<td>Thomas Weber</td>
-<td>thomas.weber@adminsend.de</td>
-<td>+49 89 12345678-300</td>
+<td>[TODO]</td>
+<td>{{ meta-organisation-roles.role_CISO_email }}</td>
+<td>{{ meta-organisation-roles.role_CISO_phone }}</td>
 <td>[TODO]</td>
 <td>Mon-Fri 08:00-18:00</td>
 </tr>
 <tr>
 <td><strong>CFO</strong></td>
-<td>Maria Müller</td>
-<td>maria.mueller@adminsend.de</td>
-<td>+49 89 12345678-400</td>
+<td>[TODO]</td>
+<td>{{ meta-organisation-roles.role_CFO_email }}</td>
+<td>{{ meta-organisation-roles.role_CFO_phone }}</td>
 <td>[TODO]</td>
 <td>Mon-Fri 09:00-17:00</td>
 </tr>
 <tr>
 <td><strong>COO</strong></td>
-<td>Peter Fischer</td>
-<td>peter.fischer@adminsend.de</td>
-<td>+49 89 12345678-500</td>
+<td>{{ meta-organisation-roles.role_COO }}</td>
+<td>{{ meta-organisation-roles.role_COO_email }}</td>
+<td>{{ meta-organisation-roles.role_COO_phone }}</td>
 <td>[TODO]</td>
 <td>Mon-Fri 08:00-18:00</td>
 </tr>
@@ -1170,17 +1168,17 @@
 <tbody>
 <tr>
 <td><strong>IT Ops Manager</strong></td>
-<td>Andreas Huemmer</td>
-<td>andreas.huemmer@adminsend.de</td>
-<td>+49 89 12345678-250</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager_email }}</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager_phone }}</td>
 <td>[TODO]</td>
 <td>Mon-Fri 07:00-19:00</td>
 </tr>
 <tr>
 <td><strong>Service Desk Lead</strong></td>
-<td>Julia Becker</td>
-<td>julia.becker@adminsend.de</td>
-<td>+49 89 12345678-111</td>
+<td>{{ meta-organisation-roles.role_Service_Desk_Lead }}</td>
+<td>{{ meta-organisation-roles.role_Service_Desk_Lead_email }}</td>
+<td>{{ meta-organisation-roles.role_Service_Desk_Lead_phone }}</td>
 <td>[TODO]</td>
 <td>Mon-Fri 08:00-17:00</td>
 </tr>
@@ -1256,25 +1254,25 @@
 <td><strong>Week [TODO]</strong></td>
 <td>[TODO: Name]</td>
 <td>[TODO: Name]</td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 </tr>
 <tr>
 <td><strong>Week [TODO]</strong></td>
 <td>[TODO: Name]</td>
 <td>[TODO: Name]</td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 </tr>
 <tr>
 <td><strong>Week [TODO]</strong></td>
 <td>[TODO: Name]</td>
 <td>[TODO: Name]</td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 </tr>
 <tr>
 <td><strong>Week [TODO]</strong></td>
 <td>[TODO: Name]</td>
 <td>[TODO: Name]</td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 </tr>
 </tbody>
 </table>
@@ -1289,8 +1287,8 @@
 - <strong>Email:</strong> [TODO: Backup email]
 - <strong>Availability:</strong> [TODO: Response time]</p>
 <p><strong>Escalation:</strong>
-- <strong>IT Operations Manager:</strong> Andreas Huemmer (+49 89 12345678-250)
-- <strong>CIO:</strong> Anna Schmidt (+49 89 12345678-200)</p>
+- <strong>IT Operations Manager:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }} ({{ meta-organisation-roles.role_IT_Operations_Manager_phone }})
+- <strong>CIO:</strong> [TODO] ({{ meta-organisation-roles.role_CIO_phone }})</p>
 <h3 id="on-call-process">On-Call Process</h3>
 <p><strong>1. Alerting:</strong>
 - Monitoring system sends alert
@@ -1386,31 +1384,31 @@ Level 5: CEO
 <tbody>
 <tr>
 <td><strong>CEO</strong></td>
-<td>Max Mustermann</td>
+<td>[TODO]</td>
 <td>[TODO: Name]</td>
 <td>[TODO: Name]</td>
 </tr>
 <tr>
 <td><strong>CIO</strong></td>
-<td>Anna Schmidt</td>
-<td>Andreas Huemmer</td>
+<td>[TODO]</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 <td>[TODO: Name]</td>
 </tr>
 <tr>
 <td><strong>CISO</strong></td>
-<td>Thomas Weber</td>
+<td>[TODO]</td>
 <td>[TODO: Name]</td>
-<td>Anna Schmidt</td>
+<td>[TODO]</td>
 </tr>
 <tr>
 <td><strong>CFO</strong></td>
-<td>Maria Müller</td>
+<td>[TODO]</td>
 <td>[TODO: Name]</td>
 <td>[TODO: Name]</td>
 </tr>
 <tr>
 <td><strong>COO</strong></td>
-<td>Peter Fischer</td>
+<td>{{ meta-organisation-roles.role_COO }}</td>
 <td>[TODO: Name]</td>
 <td>[TODO: Name]</td>
 </tr>
@@ -1429,15 +1427,15 @@ Level 5: CEO
 <tbody>
 <tr>
 <td><strong>IT Ops Manager</strong></td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 <td>[TODO: Name]</td>
-<td>Anna Schmidt</td>
+<td>[TODO]</td>
 </tr>
 <tr>
 <td><strong>Service Desk Lead</strong></td>
-<td>Julia Becker</td>
+<td>{{ meta-organisation-roles.role_Service_Desk_Lead }}</td>
 <td>[TODO: Name]</td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 </tr>
 <tr>
 <td><strong>System Admin</strong></td>
@@ -1539,17 +1537,16 @@ Level 5: CEO
 <tr>
 <td>1.0.0</td>
 <td>[TODO]</td>
-<td>IT Operations Manager</td>
+<td>[TODO]</td>
 <td>Initial version</td>
-<td>CIO</td>
+<td>[TODO]</td>
 </tr>
 </tbody>
 </table>
-<hr />
-<p><strong>Document Owner:</strong> IT Operations Manager<br />
-<strong>Approved by:</strong> CIO<br />
-<strong>Version:</strong> 1.0.0<br />
-<strong>Classification:</strong> internal<br />
+<p><strong>Document Owner:</strong> [TODO]<br />
+<strong>Approved by:</strong> [TODO]<br />
+<strong>Version:</strong> 0<br />
+<strong>Classification:</strong> Internal<br />
 <strong>Organization:</strong> AdminSend GmbH</p>
         </main>
         

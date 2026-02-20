@@ -1,6 +1,6 @@
 # APP Hardening Standard: Microsoft IIS
 
-**Dokument-ID:** 0240
+**Dokument-ID:** CIS-CONTROLS-0240
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

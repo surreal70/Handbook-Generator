@@ -6,7 +6,7 @@ Classification: Internal
 
 # Lead Time Measurement
 
-**Document-ID:** [FRAMEWORK]-0210
+**Document-ID:** DORA-0210
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

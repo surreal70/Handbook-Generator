@@ -21,15 +21,17 @@
         
         <main>
 <h1 id="statement-of-applicability-soa-template">Statement of Applicability (SoA) – Template</h1>
-<p><strong>Dokument-ID:</strong> 0100<br />
-<strong>Dokumenttyp:</strong> ISMS-Nachweis/Template<br />
-<strong>Standard-Referenz:</strong> ISO/IEC 27001:2022 Clause 6.1.3 d), Annex A<br />
-<strong>Owner:</strong> Thomas Weber<br />
-<strong>Version:</strong> 1.0<br />
-<strong>Status:</strong> Freigegeben<br />
-<strong>Klassifizierung:</strong> Vertraulich<br />
-<strong>Letzte Aktualisierung:</strong> {{ meta.document.date }}<br />
-<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+<p><strong>Dokument-ID:</strong> 0100
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
 <hr />
 <h2 id="1-zweck-und-geltungsbereich">1. Zweck und Geltungsbereich</h2>
 <h3 id="11-zweck">1.1 Zweck</h3>
@@ -45,7 +47,7 @@
 - Verknüpfung zwischen Risikoanalyse und Controls</p>
 <h3 id="12-geltungsbereich">1.2 Geltungsbereich</h3>
 <p>Dieses SoA gilt für den gesamten ISMS-Scope (siehe <code>0020_ISMS_Geltungsbereich_Scope.md</code>):
-- Alle Standorte: {{ netbox.site.name }} und weitere
+- Alle Standorte: [[ netbox.site.name ]] und weitere
 - Alle IT-Systeme und Infrastruktur
 - Alle Geschäftsprozesse im Scope
 - Alle Informationswerte</p>
@@ -194,7 +196,7 @@
 <td>ISMS-Leitlinie und themenspezifische Policies</td>
 <td><code>0010_ISMS_Informationssicherheitsleitlinie.md</code></td>
 <td>Policy-Dokumente</td>
-<td>Thomas Weber</td>
+<td>[TODO]</td>
 <td>Jährlicher Review</td>
 </tr>
 <tr>
@@ -206,7 +208,7 @@
 <td>ISMS-Governance-Struktur definiert</td>
 <td><code>0040_ISMS_Governance_Rollen_und_Verantwortlichkeiten.md</code></td>
 <td>RACI-Matrizen</td>
-<td>Thomas Weber</td>
+<td>[TODO]</td>
 <td>-</td>
 </tr>
 <tr>
@@ -218,7 +220,7 @@
 <td>Rollentrennung in kritischen Prozessen</td>
 <td><code>0220_Policy_Zugriffssteuerung_und_Identitaetsmanagement.md</code></td>
 <td>IAM-Konfiguration</td>
-<td>Anna Schmidt</td>
+<td>[TODO]</td>
 <td>70% umgesetzt</td>
 </tr>
 <tr>
@@ -230,7 +232,7 @@
 <td>Management-Commitment dokumentiert</td>
 <td><code>0010_ISMS_Informationssicherheitsleitlinie.md</code></td>
 <td>Management Review</td>
-<td>{{ meta.management.ceo }}</td>
+<td>{{ meta-handbook.management_ceo }}</td>
 <td>-</td>
 </tr>
 <tr>
@@ -242,7 +244,7 @@
 <td>Kontakte zu Behörden dokumentiert</td>
 <td><code>0050_Kontakte_und_Eskalation.md</code> (BCM)</td>
 <td>Kontaktliste</td>
-<td>Thomas Weber</td>
+<td>[TODO]</td>
 <td>-</td>
 </tr>
 <tr>
@@ -254,7 +256,7 @@
 <td>Mitgliedschaft in CERT, Branchenverbänden</td>
 <td>[TODO: Dokument]</td>
 <td>Mitgliedschaftsnachweise</td>
-<td>Thomas Weber</td>
+<td>[TODO]</td>
 <td>-</td>
 </tr>
 <tr>
@@ -358,7 +360,7 @@
 <td>Security Awareness Programm</td>
 <td><code>0120_ISMS_Schulung_Awareness_und_Kompetenz.md</code></td>
 <td>Schulungsnachweise</td>
-<td>Thomas Weber</td>
+<td>[TODO]</td>
 <td>Quartalsweise Training</td>
 </tr>
 <tr>
@@ -406,7 +408,7 @@
 <td>Remote Work Policy</td>
 <td><code>0500_Policy_Mobile_Device_und_Remote_Work.md</code></td>
 <td>Remote Work Guidelines</td>
-<td>Anna Schmidt</td>
+<td>[TODO]</td>
 <td>-</td>
 </tr>
 <tr>
@@ -418,7 +420,7 @@
 <td>Incident Reporting Prozess</td>
 <td><code>0400_Policy_Incident_Management.md</code></td>
 <td>Incident Reports</td>
-<td>Thomas Weber</td>
+<td>[TODO]</td>
 <td>-</td>
 </tr>
 </tbody>
@@ -446,7 +448,7 @@
 <td>Ja</td>
 <td>-</td>
 <td>Implementiert</td>
-<td>Zutrittskontrollen am Standort {{ netbox.site.name }}</td>
+<td>Zutrittskontrollen am Standort [[ netbox.site.name ]]</td>
 <td><code>0480_Policy_Physische_Sicherheit.md</code></td>
 <td>Zutrittsprotokolle</td>
 <td>Facility Mgmt</td>
@@ -521,7 +523,7 @@
 <td>Clear Desk Policy kommuniziert</td>
 <td><code>0480_Policy_Physische_Sicherheit.md</code></td>
 <td>Awareness-Kampagne</td>
-<td>Thomas Weber</td>
+<td>[TODO]</td>
 <td>Rollout läuft</td>
 </tr>
 <tr>
@@ -744,7 +746,7 @@
 <td>[TODO]</td>
 <td>[TODO: Nicht im Scope, Risiko akzeptiert, etc.]</td>
 <td>[TODO: Falls vorhanden]</td>
-<td>Thomas Weber</td>
+<td>[TODO]</td>
 </tr>
 </tbody>
 </table>
@@ -803,7 +805,6 @@
 <li><strong>ISO/IEC 27001:2022/Amd 1:2024</strong> - Amendment 1 (Annex A updates)</li>
 <li><strong>ISO/IEC 27002:2022</strong> - Information security controls (detailed guidance)</li>
 </ul>
-<hr />
 <h2 id="anderungshistorie">Änderungshistorie</h2>
 <table>
 <thead>
@@ -818,19 +819,18 @@
 <tbody>
 <tr>
 <td>1.0</td>
-<td>{{ meta.document.date }}</td>
-<td>Thomas Weber</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
 <td>Initiale Version</td>
-<td>{{ meta.management.ceo }}</td>
+<td>{{ meta-handbook.management_ceo }}</td>
 </tr>
 </tbody>
 </table>
-<hr />
 <p><strong>Genehmigt durch:</strong><br />
-Thomas Weber, CISO<br />
-{{ meta.management.ceo }}, Geschäftsführung<br />
-Datum: {{ meta.document.approval_date }}</p>
-<p><strong>Nächster Review:</strong> {{ meta.document.next_review }} (Jährlich)</p>
+[TODO], CISO<br />
+{{ meta-handbook.management_ceo }}, Geschäftsführung<br />
+Datum: [TODO]</p>
+<p><strong>Nächster Review:</strong> [TODO] (Jährlich)</p>
         </main>
         
         <nav class="page-nav">

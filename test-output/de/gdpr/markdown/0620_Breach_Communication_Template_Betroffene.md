@@ -1,6 +1,6 @@
 # Breach Communication Template (Betroffene Personen)
 
-**Dokument-ID:** 0620
+**Dokument-ID:** GDPR-0620
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

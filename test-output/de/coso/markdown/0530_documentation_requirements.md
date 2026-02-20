@@ -6,7 +6,7 @@ Classification: Internal
 
 # Dokumentationsanforderungen
 
-**Dokument-ID:** [FRAMEWORK]-0530
+**Dokument-ID:** COSO-0530
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

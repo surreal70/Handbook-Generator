@@ -21,31 +21,33 @@
         
         <main>
 <h1 id="isms-geltungsbereich-scope">ISMS-Geltungsbereich (Scope)</h1>
-<p><strong>Dokument-ID:</strong> 0020<br />
-<strong>Dokumenttyp:</strong> ISMS-Grundlagendokument<br />
-<strong>Standard-Referenz:</strong> ISO/IEC 27001:2022 Clause 4.3<br />
-<strong>Owner:</strong> Thomas Weber<br />
-<strong>Version:</strong> 1.0<br />
-<strong>Status:</strong> Freigegeben<br />
-<strong>Klassifizierung:</strong> Intern<br />
-<strong>Letzte Aktualisierung:</strong> {{ meta.document.date }}<br />
-<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+<p><strong>Dokument-ID:</strong> 0020
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
 <hr />
 <h2 id="1-scope-definition">1. Scope-Definition</h2>
 <p>Der Geltungsbereich des Information Security Management Systems (ISMS) der <strong>AdminSend GmbH</strong> umfasst:</p>
 <h3 id="11-organisation">1.1 Organisation</h3>
 <ul>
 <li><strong>Organisationsname:</strong> AdminSend GmbH</li>
-<li><strong>Rechtsform:</strong> {{ meta.organization.legal_form }}</li>
+<li><strong>Rechtsform:</strong> [TODO]</li>
 <li><strong>Hauptsitz:</strong> Musterstraße 123</li>
-<li><strong>Anzahl Mitarbeiter:</strong> {{ meta.organization.employee_count }}</li>
-<li><strong>Branche:</strong> {{ meta.organization.industry }}</li>
+<li><strong>Anzahl Mitarbeiter:</strong> [TODO]</li>
+<li><strong>Branche:</strong> [TODO]</li>
 </ul>
 <h3 id="12-standorte">1.2 Standorte</h3>
 <p>Das ISMS gilt für folgende Standorte:</p>
 <ul>
-<li><strong>Hauptstandort:</strong> {{ netbox.site.name }}</li>
-<li>Adresse: {{ netbox.site.address }}</li>
+<li><strong>Hauptstandort:</strong> [[ netbox.site.name ]]</li>
+<li>Adresse: [[ netbox.site.address ]]</li>
 <li>Funktion: Rechenzentrum, Büros, Entwicklung</li>
 </ul>
 <p>[TODO: Weitere Standorte hinzufügen]</p>
@@ -58,7 +60,7 @@
 - Kundenservice und Support
 - [TODO: Weitere Kernprozesse]</p>
 <p><strong>IT-Services:</strong>
-- Netzwerkinfrastruktur ({{ netbox.device.core_switch.name }})
+- Netzwerkinfrastruktur ([[ netbox.device.core_switch.name ]])
 - Server- und Virtualisierungsplattformen
 - Cloud-Services und SaaS-Anwendungen
 - Datenbanksysteme
@@ -83,8 +85,8 @@
 <h3 id="15-systeme-und-plattformen">1.5 Systeme und Plattformen</h3>
 <p>Das ISMS umfasst folgende technische Plattformen:</p>
 <p><strong>Netzwerkinfrastruktur:</strong>
-- Core Switch: {{ netbox.device.core_switch.name }}
-- Management VLAN: {{ netbox.vlan.management.vid }}
+- Core Switch: [[ netbox.device.core_switch.name ]]
+- Management VLAN: [[ netbox.vlan.management.vid ]]
 - [TODO: Weitere Netzwerkkomponenten aus NetBox]</p>
 <p><strong>Server und Virtualisierung:</strong>
 - [TODO: Serverliste aus Asset-Inventar]</p>
@@ -202,12 +204,11 @@ Ausschlüsse:
 <li><strong>ISO/IEC 27001:2022</strong> - Clause 4.3: Determining the scope of the ISMS</li>
 <li><strong>ISO/IEC 27002:2022</strong> - Information security controls</li>
 </ul>
-<hr />
 <p><strong>Genehmigt durch:</strong><br />
-Thomas Weber, CISO<br />
-{{ meta.management.ceo }}, Geschäftsführung<br />
-Datum: {{ meta.document.approval_date }}</p>
-<p><strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+[TODO], CISO<br />
+{{ meta-handbook.management_ceo }}, Geschäftsführung<br />
+Datum: [TODO]</p>
+<p><strong>Nächster Review:</strong> [TODO]</p>
         </main>
         
         <nav class="page-nav">

@@ -20,19 +20,27 @@
         </nav>
         
         <main>
-<hr />
 <p>Document-ID: nist-csf-0050
-Owner: {{ meta.owner }}
-Version: {{ meta.version }}
-Status: Draft
-Classification: Internal
-Last Update: {{ meta.date }}</p>
-<hr />
+Owner: [TODO]</p>
+<p>Status: Draft
+Classification: Internal</p>
 <h1 id="policy-framework-gvpo">Policy Framework (GV.PO)</h1>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0050
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
 <h2 id="purpose">Purpose</h2>
 <p>This document describes the organization's cybersecurity policy framework, including policy hierarchy, development process, and enforcement mechanisms.</p>
 <h2 id="scope">Scope</h2>
-<p>{{ meta.scope }}</p>
+<p>[TODO]</p>
 <h2 id="policy-hierarchy">Policy Hierarchy</h2>
 <h3 id="level-1-cybersecurity-policy-overarching-policy">Level 1: Cybersecurity Policy (Overarching Policy)</h3>
 <p><strong>Purpose:</strong> Defines overarching cybersecurity objectives and principles<br />
@@ -54,8 +62,8 @@ Last Update: {{ meta.date }}</p>
 <h3 id="1-information-security-policy">1. Information Security Policy</h3>
 <p><strong>Description:</strong> Overarching security policy<br />
 <strong>Scope:</strong> Entire organization<br />
-<strong>Responsible:</strong> Thomas Weber<br />
-<strong>Status:</strong> {{ meta.policy_status }}</p>
+<strong>Responsible:</strong> [TODO]<br />
+<strong>Status:</strong> {{ meta-handbook.policy_status }}</p>
 <p><strong>Core Principles:</strong>
 - Confidentiality, Integrity, Availability (CIA)
 - Defense-in-Depth
@@ -64,7 +72,7 @@ Last Update: {{ meta.date }}</p>
 <h3 id="2-access-control-policy">2. Access Control Policy</h3>
 <p><strong>Description:</strong> Regulation of access to information and systems<br />
 <strong>Scope:</strong> All users and systems<br />
-<strong>Responsible:</strong> {{ meta.security_architect }}</p>
+<strong>Responsible:</strong> {{ meta-handbook.security_architect }}</p>
 <p><strong>Core Elements:</strong>
 - User identification and authentication
 - Authorization and access rights
@@ -73,7 +81,7 @@ Last Update: {{ meta.date }}</p>
 <h3 id="3-data-protection-policy">3. Data Protection Policy</h3>
 <p><strong>Description:</strong> Protection of personal and sensitive data<br />
 <strong>Scope:</strong> All data processing activities<br />
-<strong>Responsible:</strong> {{ meta.dpo }}</p>
+<strong>Responsible:</strong> [TODO]</p>
 <p><strong>Core Elements:</strong>
 - Data classification
 - Data protection principles (GDPR)
@@ -82,7 +90,7 @@ Last Update: {{ meta.date }}</p>
 <h3 id="4-incident-response-policy">4. Incident Response Policy</h3>
 <p><strong>Description:</strong> Handling of security incidents<br />
 <strong>Scope:</strong> All employees<br />
-<strong>Responsible:</strong> {{ meta.security_ops_manager }}</p>
+<strong>Responsible:</strong> {{ meta-handbook.security_ops_manager }}</p>
 <p><strong>Core Elements:</strong>
 - Incident classification
 - Reporting obligations
@@ -91,7 +99,7 @@ Last Update: {{ meta.date }}</p>
 <h3 id="5-acceptable-use-policy">5. Acceptable Use Policy</h3>
 <p><strong>Description:</strong> Acceptable use of IT resources<br />
 <strong>Scope:</strong> All users<br />
-<strong>Responsible:</strong> {{ meta.it_director }}</p>
+<strong>Responsible:</strong> [TODO]</p>
 <p><strong>Core Elements:</strong>
 - Permitted and prohibited activities
 - Personal use
@@ -100,7 +108,7 @@ Last Update: {{ meta.date }}</p>
 <h3 id="6-third-party-risk-management-policy">6. Third-Party Risk Management Policy</h3>
 <p><strong>Description:</strong> Management of third-party risks<br />
 <strong>Scope:</strong> All suppliers and partners<br />
-<strong>Responsible:</strong> {{ meta.procurement_director }}</p>
+<strong>Responsible:</strong> {{ meta-handbook.procurement_director }}</p>
 <p><strong>Core Elements:</strong>
 - Supplier assessment
 - Contractual security requirements
@@ -199,7 +207,7 @@ Last Update: {{ meta.date }}</p>
 <li>Compensating controls</li>
 </ul>
 <h2 id="policy-repository">Policy Repository</h2>
-<p><strong>Location:</strong> {{ meta.policy_repository }}<br />
+<p><strong>Location:</strong> {{ meta-handbook.policy_repository }}<br />
 <strong>Access:</strong> All employees (read access)<br />
 <strong>Management:</strong> Compliance team</p>
 <h2 id="training-and-awareness">Training and Awareness</h2>
@@ -222,26 +230,6 @@ Last Update: {{ meta.date }}</p>
 <li>0060_oversight.md</li>
 <li>0210_awareness_training.md (Protect)</li>
 </ul>
-<hr />
-<p><strong>Document History:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Version</th>
-<th>Date</th>
-<th>Author</th>
-<th>Changes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1.0</td>
-<td>{{ meta.date }}</td>
-<td>Andreas Huemmer [andreas.huemmer@adminsend.de]</td>
-<td>Initial creation</td>
-</tr>
-</tbody>
-</table>
         </main>
         
         <nav class="page-nav">

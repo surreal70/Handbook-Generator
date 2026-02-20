@@ -7,7 +7,7 @@ Classification: Internal
 
 # Prinzip 4 & 5: Inklusiv und Dynamisch
 
-**Dokument-ID:** [FRAMEWORK]-0050
+**Dokument-ID:** ISO-31000-0050
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

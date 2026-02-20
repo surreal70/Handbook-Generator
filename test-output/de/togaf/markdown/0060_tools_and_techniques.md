@@ -6,7 +6,7 @@ Classification: Internal
 
 # Architecture-Werkzeuge und -Techniken
 
-**Dokument-ID:** [FRAMEWORK]-0060
+**Dokument-ID:** TOGAF-0060
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

@@ -6,7 +6,7 @@ Classification: Internal
 
 # MTTR Messung
 
-**Dokument-ID:** [FRAMEWORK]-0310
+**Dokument-ID:** DORA-0310
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

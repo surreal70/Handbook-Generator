@@ -21,68 +21,123 @@
         
         <main>
 <h1 id="contacts-escalation-and-vendors">Contacts, Escalation, and Vendors</h1>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0270
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
 <h2 id="overview">Overview</h2>
 <p>This document contains contact lists, escalation paths, vendors and suppliers, as well as support contacts for the IT service. The goal is to ensure quick access to relevant contact information in all situations.</p>
-<p><strong>Document Owner:</strong> IT Operations Manager<br />
-<strong>Approved by:</strong> CIO<br />
-<strong>Version:</strong> 1.0.0<br />
+<p><strong>Document Owner:</strong> [TODO]<br />
+<strong>Approved by:</strong> [TODO]<br />
+<strong>Version:</strong> 0<br />
 <strong>Organization:</strong> AdminSend GmbH</p>
-<hr />
 <h2 id="internal-contacts">Internal Contacts</h2>
 <h3 id="management">Management</h3>
 <h4 id="chief-executive-officer-ceo">Chief Executive Officer (CEO)</h4>
 <ul>
-<li><strong>Name:</strong> Max Mustermann</li>
-<li><strong>Title:</strong> Chief Executive Officer</li>
-<li><strong>Email:</strong> max.mustermann@adminsend.de</li>
-<li><strong>Phone:</strong> +49 89 12345678-100</li>
-<li><strong>Department:</strong> Management</li>
+<li><strong>Name:</strong> [TODO]</li>
+<li><strong>Email:</strong> {{ meta-organisation-roles.role_CEO_email }}</li>
+<li><strong>Phone:</strong> {{ meta-organisation-roles.role_CEO_phone }}</li>
 <li><strong>Availability:</strong> Mon-Fri 09:00-18:00</li>
 <li><strong>Escalation:</strong> Only for critical business impact situations</li>
 </ul>
 <h4 id="chief-information-officer-cio">Chief Information Officer (CIO)</h4>
 <ul>
-<li><strong>Name:</strong> Anna Schmidt</li>
-<li><strong>Title:</strong> Chief Information Officer</li>
-<li><strong>Email:</strong> anna.schmidt@adminsend.de</li>
-<li><strong>Phone:</strong> +49 89 12345678-200</li>
-<li><strong>Department:</strong> IT</li>
+<li><strong>Name:</strong> [TODO]</li>
+<li><strong>Email:</strong> {{ meta-organisation-roles.role_CIO_email }}</li>
+<li><strong>Phone:</strong> {{ meta-organisation-roles.role_CIO_phone }}</li>
 <li><strong>Availability:</strong> Mon-Fri 08:00-18:00</li>
 <li><strong>Escalation:</strong> IT strategic decisions, critical incidents</li>
 </ul>
 <h4 id="chief-information-security-officer-ciso">Chief Information Security Officer (CISO)</h4>
 <ul>
-<li><strong>Name:</strong> Thomas Weber</li>
-<li><strong>Title:</strong> Chief Information Security Officer</li>
-<li><strong>Email:</strong> thomas.weber@adminsend.de</li>
-<li><strong>Phone:</strong> +49 89 12345678-300</li>
-<li><strong>Department:</strong> IT Security</li>
+<li><strong>Name:</strong> [TODO]</li>
+<li><strong>Email:</strong> {{ meta-organisation-roles.role_CISO_email }}</li>
+<li><strong>Phone:</strong> {{ meta-organisation-roles.role_CISO_phone }}</li>
 <li><strong>Availability:</strong> Mon-Fri 08:00-18:00, 24/7 for security incidents</li>
 <li><strong>Escalation:</strong> Security incidents, compliance questions</li>
 </ul>
-<hr />
+<h4 id="chief-financial-officer-cfo">Chief Financial Officer (CFO)</h4>
+<ul>
+<li><strong>Name:</strong> [TODO]</li>
+<li><strong>Email:</strong> {{ meta-organisation-roles.role_CFO_email }}</li>
+<li><strong>Phone:</strong> {{ meta-organisation-roles.role_CFO_phone }}</li>
+<li><strong>Availability:</strong> Mon-Fri 09:00-17:00</li>
+<li><strong>Escalation:</strong> Budget questions, financial approvals</li>
+</ul>
+<h4 id="chief-operating-officer-coo">Chief Operating Officer (COO)</h4>
+<ul>
+<li><strong>Name:</strong> {{ meta-organisation-roles.role_COO }}</li>
+<li><strong>Email:</strong> {{ meta-organisation-roles.role_COO_email }}</li>
+<li><strong>Phone:</strong> {{ meta-organisation-roles.role_COO_phone }}</li>
+<li><strong>Availability:</strong> Mon-Fri 08:00-18:00</li>
+<li><strong>Escalation:</strong> Operational impacts, process questions</li>
+</ul>
 <h3 id="it-operations">IT Operations</h3>
 <h4 id="it-operations-manager">IT Operations Manager</h4>
 <ul>
-<li><strong>Name:</strong> Andreas Huemmer</li>
-<li><strong>Title:</strong> IT Operations Manager</li>
-<li><strong>Email:</strong> andreas.huemmer@adminsend.de</li>
-<li><strong>Phone:</strong> +49 89 12345678-250</li>
-<li><strong>Department:</strong> IT Operations</li>
+<li><strong>Name:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</li>
+<li><strong>Email:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager_email }}</li>
+<li><strong>Phone:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager_phone }}</li>
 <li><strong>Availability:</strong> Mon-Fri 08:00-18:00, On-call for P1 incidents</li>
 <li><strong>Responsibility:</strong> Overall responsibility for IT operations</li>
 </ul>
 <h4 id="service-desk-lead">Service Desk Lead</h4>
 <ul>
-<li><strong>Name:</strong> Julia Becker</li>
-<li><strong>Title:</strong> Service Desk Lead</li>
-<li><strong>Email:</strong> julia.becker@adminsend.de</li>
-<li><strong>Phone:</strong> +49 89 12345678-111</li>
-<li><strong>Department:</strong> Service Desk</li>
+<li><strong>Name:</strong> {{ meta-organisation-roles.role_Service_Desk_Lead }}</li>
+<li><strong>Email:</strong> {{ meta-organisation-roles.role_Service_Desk_Lead_email }}</li>
+<li><strong>Phone:</strong> {{ meta-organisation-roles.role_Service_Desk_Lead_phone }}</li>
 <li><strong>Availability:</strong> Mon-Fri 08:00-18:00</li>
 <li><strong>Responsibility:</strong> First-level support, ticket management</li>
 </ul>
-<hr />
+<h4 id="operations-team">Operations Team</h4>
+<ul>
+<li><strong>Email:</strong> [TODO: ops-team@example.com]</li>
+<li><strong>Phone:</strong> [TODO: +49 89 12345678-250]</li>
+<li><strong>Availability:</strong> Mon-Fri 08:00-18:00</li>
+<li><strong>Responsibility:</strong> Daily operations, monitoring, incident response</li>
+</ul>
+<h3 id="specialized-teams">Specialized Teams</h3>
+<h4 id="network-team">Network Team</h4>
+<ul>
+<li><strong>Team Lead:</strong> [TODO: Name]</li>
+<li><strong>Email:</strong> [TODO: network-team@example.com]</li>
+<li><strong>Phone:</strong> [TODO: Phone Number]</li>
+<li><strong>Availability:</strong> Mon-Fri 08:00-18:00</li>
+<li><strong>Responsibility:</strong> Network infrastructure, firewall, VPN</li>
+</ul>
+<h4 id="security-team">Security Team</h4>
+<ul>
+<li><strong>Team Lead:</strong> [TODO]</li>
+<li><strong>Email:</strong> [TODO: security-team@example.com]</li>
+<li><strong>Phone:</strong> [TODO: Phone Number]</li>
+<li><strong>Availability:</strong> Mon-Fri 08:00-18:00, 24/7 for security incidents</li>
+<li><strong>Responsibility:</strong> IT security, compliance, incident response</li>
+</ul>
+<h4 id="database-team">Database Team</h4>
+<ul>
+<li><strong>Team Lead:</strong> [TODO: Name]</li>
+<li><strong>Email:</strong> [TODO: dba-team@example.com]</li>
+<li><strong>Phone:</strong> [TODO: Phone Number]</li>
+<li><strong>Availability:</strong> Mon-Fri 08:00-18:00</li>
+<li><strong>Responsibility:</strong> Database administration, performance tuning</li>
+</ul>
+<h4 id="application-team">Application Team</h4>
+<ul>
+<li><strong>Team Lead:</strong> [TODO: Name]</li>
+<li><strong>Email:</strong> [TODO: app-team@example.com]</li>
+<li><strong>Phone:</strong> [TODO: Phone Number]</li>
+<li><strong>Availability:</strong> Mon-Fri 08:00-18:00</li>
+<li><strong>Responsibility:</strong> Application support, deployment</li>
+</ul>
 <h2 id="on-call-and-standby">On-Call and Standby</h2>
 <h3 id="on-call-rotation">On-Call Rotation</h3>
 <h4 id="primary-on-call">Primary On-Call</h4>
@@ -107,13 +162,19 @@
 <li><strong>Access:</strong> All IT staff</li>
 <li><strong>Update:</strong> Automatic through rotation tool</li>
 </ul>
-<hr />
+<h3 id="on-call-guidelines">On-Call Guidelines</h3>
+<ul>
+<li><strong>Response Time P1:</strong> 15 minutes</li>
+<li><strong>Response Time P2:</strong> 1 hour</li>
+<li><strong>Availability:</strong> Phone and email</li>
+<li><strong>Escalation:</strong> After 30 minutes without response</li>
+</ul>
 <h2 id="escalation-paths">Escalation Paths</h2>
 <h3 id="incident-escalation">Incident Escalation</h3>
 <h4 id="level-1-service-desk">Level 1: Service Desk</h4>
 <ul>
-<li><strong>Contact:</strong> julia.becker@adminsend.de</li>
-<li><strong>Phone:</strong> +49 89 12345678-111</li>
+<li><strong>Contact:</strong> {{ meta-organisation-roles.role_Service_Desk_Lead_email }}</li>
+<li><strong>Phone:</strong> {{ meta-organisation-roles.role_Service_Desk_Lead_phone }}</li>
 <li><strong>Availability:</strong> Mon-Fri 08:00-18:00</li>
 <li><strong>Responsibility:</strong> First-level support, ticket creation</li>
 </ul>
@@ -122,7 +183,6 @@
 - P2: After 1 hour without solution
 - P3: After 4 hours without solution
 - P4: After 8 hours without solution</p>
-<hr />
 <h4 id="level-2-operations-team">Level 2: Operations Team</h4>
 <ul>
 <li><strong>Contact:</strong> [TODO: ops-team@example.com]</li>
@@ -134,11 +194,10 @@
 - P1: After 2 hours without solution
 - P2: After 4 hours without solution
 - P3: After 8 hours without solution</p>
-<hr />
 <h4 id="level-3-it-operations-manager">Level 3: IT Operations Manager</h4>
 <ul>
-<li><strong>Contact:</strong> andreas.huemmer@adminsend.de</li>
-<li><strong>Phone:</strong> +49 89 12345678-250</li>
+<li><strong>Contact:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager_email }}</li>
+<li><strong>Phone:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager_phone }}</li>
 <li><strong>Availability:</strong> Mon-Fri 08:00-18:00, On-call for P1</li>
 <li><strong>Responsibility:</strong> Coordination, resource allocation</li>
 </ul>
@@ -146,11 +205,10 @@
 - P1: After 4 hours without solution
 - P2: After 8 hours without solution
 - When external support required</p>
-<hr />
 <h4 id="level-4-cio">Level 4: CIO</h4>
 <ul>
-<li><strong>Contact:</strong> anna.schmidt@adminsend.de</li>
-<li><strong>Phone:</strong> +49 89 12345678-200</li>
+<li><strong>Contact:</strong> {{ meta-organisation-roles.role_CIO_email }}</li>
+<li><strong>Phone:</strong> {{ meta-organisation-roles.role_CIO_phone }}</li>
 <li><strong>Availability:</strong> Mon-Fri 08:00-18:00, reachable for critical incidents</li>
 <li><strong>Responsibility:</strong> Strategic decisions, management communication</li>
 </ul>
@@ -158,7 +216,42 @@
 - Critical business impact
 - Media relevance
 - Regulatory implications</p>
-<hr />
+<h4 id="level-5-ceo">Level 5: CEO</h4>
+<ul>
+<li><strong>Contact:</strong> {{ meta-organisation-roles.role_CEO_email }}</li>
+<li><strong>Phone:</strong> {{ meta-organisation-roles.role_CEO_phone }}</li>
+<li><strong>Availability:</strong> By appointment</li>
+<li><strong>Responsibility:</strong> Company-wide decisions</li>
+</ul>
+<h3 id="security-incident-escalation">Security Incident Escalation</h3>
+<h4 id="level-1-security-team">Level 1: Security Team</h4>
+<ul>
+<li><strong>Contact:</strong> [TODO: security-team@example.com]</li>
+<li><strong>Phone:</strong> [TODO: Phone Number]</li>
+<li><strong>Availability:</strong> 24/7</li>
+<li><strong>Responsibility:</strong> Incident response, forensics</li>
+</ul>
+<p><strong>Escalation to Level 2:</strong>
+- Critical security incident
+- Data loss or theft
+- Compliance violation</p>
+<h4 id="level-2-ciso">Level 2: CISO</h4>
+<ul>
+<li><strong>Contact:</strong> {{ meta-organisation-roles.role_CISO_email }}</li>
+<li><strong>Phone:</strong> {{ meta-organisation-roles.role_CISO_phone }}</li>
+<li><strong>Availability:</strong> 24/7 for security incidents</li>
+<li><strong>Responsibility:</strong> Security strategy, compliance</li>
+</ul>
+<p><strong>Escalation to Level 3:</strong>
+- Severe data loss
+- Public disclosure required
+- Regulatory reporting obligation</p>
+<h4 id="level-3-cio-ceo">Level 3: CIO / CEO</h4>
+<ul>
+<li><strong>Contact:</strong> {{ meta-organisation-roles.role_CIO_email }} / {{ meta-organisation-roles.role_CEO_email }}</li>
+<li><strong>Availability:</strong> By appointment</li>
+<li><strong>Responsibility:</strong> Company-wide communication, legal action</li>
+</ul>
 <h2 id="external-vendors-and-suppliers">External Vendors and Suppliers</h2>
 <h3 id="hardware-vendor">Hardware Vendor</h3>
 <h4 id="todo-hardware-vendor-name">[TODO: Hardware Vendor Name]</h4>
@@ -176,7 +269,6 @@
 <li>Warranty and repair</li>
 <li>Spare parts service</li>
 </ul>
-<hr />
 <h3 id="software-vendor">Software Vendor</h3>
 <h4 id="todo-software-vendor-name">[TODO: Software Vendor Name]</h4>
 <ul>
@@ -194,7 +286,6 @@
 <li>Technical support</li>
 <li>Training</li>
 </ul>
-<hr />
 <h3 id="cloud-provider">Cloud Provider</h3>
 <h4 id="todo-cloud-provider-name">[TODO: Cloud Provider Name]</h4>
 <ul>
@@ -210,7 +301,71 @@
 <li>SLA: [TODO: Availability]</li>
 <li>Technical support</li>
 </ul>
-<hr />
+<p><strong>Support Channels:</strong>
+- <strong>Phone:</strong> [TODO: Number]
+- <strong>Chat:</strong> [TODO: URL]
+- <strong>Ticket:</strong> [TODO: Portal URL]
+- <strong>Emergency:</strong> [TODO: Emergency Number]</p>
+<h3 id="network-provider">Network Provider</h3>
+<h4 id="internet-provider">Internet Provider</h4>
+<ul>
+<li><strong>Provider:</strong> [TODO: Provider Name]</li>
+<li><strong>Contact Person:</strong> [TODO: Name]</li>
+<li><strong>Email:</strong> [TODO: Email]</li>
+<li><strong>Phone:</strong> [TODO: Phone Number]</li>
+<li><strong>Fault Hotline:</strong> [TODO: Fault Number]</li>
+<li><strong>Contract Number:</strong> [TODO: Contract Number]</li>
+<li><strong>Bandwidth:</strong> [TODO: Bandwidth]</li>
+<li><strong>SLA:</strong> [TODO: Availability]</li>
+<li><strong>Services:</strong></li>
+<li>Internet connectivity</li>
+<li>24/7 support</li>
+<li>Fault resolution</li>
+</ul>
+<h3 id="managed-service-provider">Managed Service Provider</h3>
+<h4 id="todo-msp-name">[TODO: MSP Name]</h4>
+<ul>
+<li><strong>Contact Person:</strong> [TODO: Name]</li>
+<li><strong>Email:</strong> [TODO: Email]</li>
+<li><strong>Phone:</strong> [TODO: Phone Number]</li>
+<li><strong>Support Hotline:</strong> [TODO: Support Number]</li>
+<li><strong>Contract Number:</strong> [TODO: Contract Number]</li>
+<li><strong>Contract End:</strong> [TODO: Date]</li>
+<li><strong>Support Level:</strong> [TODO: 24/7, Business Hours]</li>
+<li><strong>Services:</strong></li>
+<li>[TODO: Managed Services]</li>
+<li>[TODO: Monitoring]</li>
+<li>[TODO: Support]</li>
+</ul>
+<h3 id="backup-service-provider">Backup Service Provider</h3>
+<h4 id="todo-backup-provider-name">[TODO: Backup Provider Name]</h4>
+<ul>
+<li><strong>Contact Person:</strong> [TODO: Name]</li>
+<li><strong>Email:</strong> [TODO: Email]</li>
+<li><strong>Phone:</strong> [TODO: Phone Number]</li>
+<li><strong>Support Hotline:</strong> [TODO: Support Number]</li>
+<li><strong>Contract Number:</strong> [TODO: Contract Number]</li>
+<li><strong>Storage Capacity:</strong> [TODO: Capacity]</li>
+<li><strong>Retention:</strong> [TODO: Retention Period]</li>
+<li><strong>Services:</strong></li>
+<li>Backup storage</li>
+<li>Disaster recovery</li>
+<li>24/7 support</li>
+</ul>
+<h3 id="security-service-provider">Security Service Provider</h3>
+<h4 id="todo-security-provider-name">[TODO: Security Provider Name]</h4>
+<ul>
+<li><strong>Contact Person:</strong> [TODO: Name]</li>
+<li><strong>Email:</strong> [TODO: Email]</li>
+<li><strong>Phone:</strong> [TODO: Phone Number]</li>
+<li><strong>SOC Hotline:</strong> [TODO: SOC Number]</li>
+<li><strong>Contract Number:</strong> [TODO: Contract Number]</li>
+<li><strong>Services:</strong></li>
+<li>Security monitoring</li>
+<li>Incident response</li>
+<li>Threat intelligence</li>
+<li>Penetration testing</li>
+</ul>
 <h2 id="emergency-contacts">Emergency Contacts</h2>
 <h3 id="critical-situations">Critical Situations</h3>
 <h4 id="fire-medical-emergency">Fire / Medical Emergency</h4>
@@ -230,7 +385,22 @@
 <li><strong>Availability:</strong> 24/7</li>
 <li><strong>Responsibility:</strong> Building security, access</li>
 </ul>
-<hr />
+<h4 id="legal-department">Legal Department</h4>
+<ul>
+<li><strong>Contact Person:</strong> [TODO: Name]</li>
+<li><strong>Email:</strong> [TODO: Email]</li>
+<li><strong>Phone:</strong> [TODO: Phone Number]</li>
+<li><strong>Availability:</strong> Mon-Fri 09:00-17:00, emergency hotline</li>
+<li><strong>Responsibility:</strong> Legal advice, contracts</li>
+</ul>
+<h4 id="pr-communications">PR / Communications</h4>
+<ul>
+<li><strong>Contact Person:</strong> [TODO: Name]</li>
+<li><strong>Email:</strong> [TODO: Email]</li>
+<li><strong>Phone:</strong> [TODO: Phone Number]</li>
+<li><strong>Availability:</strong> Mon-Fri 09:00-18:00, emergency hotline</li>
+<li><strong>Responsibility:</strong> External communication, media</li>
+</ul>
 <h2 id="communication-channels">Communication Channels</h2>
 <h3 id="internal-communication">Internal Communication</h3>
 <h4 id="email">Email</h4>
@@ -258,12 +428,41 @@
 <h1 id="general-general-communication">general: General communication</h1>
 </li>
 </ul>
-<hr />
+<h4 id="phone-conference">Phone Conference</h4>
+<ul>
+<li><strong>System:</strong> [TODO: Conferencing System]</li>
+<li><strong>Bridge Number:</strong> [TODO: Phone Number]</li>
+<li><strong>PIN:</strong> [TODO: PIN]</li>
+</ul>
+<h4 id="video-conference">Video Conference</h4>
+<ul>
+<li><strong>System:</strong> [TODO: Video System]</li>
+<li><strong>URL:</strong> [TODO: Meeting URL]</li>
+</ul>
+<h3 id="external-communication">External Communication</h3>
+<h4 id="customer-communication">Customer Communication</h4>
+<ul>
+<li><strong>Email:</strong> [TODO: support@example.com]</li>
+<li><strong>Phone:</strong> [TODO: Support Number]</li>
+<li><strong>Portal:</strong> [TODO: Portal URL]</li>
+</ul>
+<h4 id="status-page">Status Page</h4>
+<ul>
+<li><strong>URL:</strong> [TODO: status.example.com]</li>
+<li><strong>Purpose:</strong> Public status updates</li>
+<li><strong>Update:</strong> During incidents and maintenance</li>
+</ul>
+<h4 id="social-media">Social Media</h4>
+<ul>
+<li><strong>Twitter:</strong> [TODO: @company]</li>
+<li><strong>LinkedIn:</strong> [TODO: Company Page]</li>
+<li><strong>Purpose:</strong> Public announcements</li>
+</ul>
 <h2 id="contact-update">Contact Update</h2>
 <h3 id="update-process">Update Process</h3>
 <ol>
 <li><strong>Report Changes:</strong></li>
-<li>Email to andreas.huemmer@adminsend.de</li>
+<li>Email to {{ meta-organisation-roles.role_IT_Operations_Manager_email }}</li>
 <li>Provide new contact details</li>
 <li>
 <p>Specify effective date</p>
@@ -292,9 +491,114 @@
 <h3 id="review-cycle">Review Cycle</h3>
 <ul>
 <li><strong>Frequency:</strong> Quarterly</li>
-<li><strong>Responsible:</strong> Andreas Huemmer</li>
+<li><strong>Responsible:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</li>
+<li><strong>Process:</strong></li>
+<li>Review all contacts</li>
+<li>Check for accuracy</li>
+<li>Document changes</li>
+<li>Inform teams</li>
 </ul>
-<hr />
+<h2 id="processes-and-responsibilities">Processes and Responsibilities</h2>
+<h3 id="raci-matrix">RACI Matrix</h3>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>CIO</th>
+<th>Ops Manager</th>
+<th>Ops Team</th>
+<th>Service Desk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Contact Management</td>
+<td>C</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+</tr>
+<tr>
+<td>Escalation Level 1-2</td>
+<td>I</td>
+<td>C</td>
+<td>R</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Escalation Level 3-4</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Vendor Management</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Emergency Communication</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Legend:</strong> R = Responsible, A = Accountable, C = Consulted, I = Informed</p>
+</blockquote>
+<h2 id="compliance-and-standards">Compliance and Standards</h2>
+<h3 id="relevant-standards">Relevant Standards</h3>
+<ul>
+<li><strong>ITIL v4:</strong> Service Desk Practice, Incident Management</li>
+<li><strong>ISO 20000:</strong> Clause 8.2 - Service Desk</li>
+<li><strong>COBIT 2019:</strong> DSS02 - Managed Service Requests and Incidents</li>
+</ul>
+<h3 id="audit-requirements">Audit Requirements</h3>
+<ul>
+<li>Current contact lists</li>
+<li>Escalation path documentation</li>
+<li>Vendor contracts</li>
+<li>Communication protocols</li>
+</ul>
+<h2 id="appendix">Appendix</h2>
+<h3 id="glossary">Glossary</h3>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>On-Call</td>
+<td>Standby duty outside regular working hours</td>
+</tr>
+<tr>
+<td>Escalation</td>
+<td>Forwarding to higher support level</td>
+</tr>
+<tr>
+<td>SLA</td>
+<td>Service Level Agreement - agreement on service performance</td>
+</tr>
+<tr>
+<td>MSP</td>
+<td>Managed Service Provider - external service provider</td>
+</tr>
+</tbody>
+</table>
+<h3 id="references">References</h3>
+<ul>
+<li>ITIL v4 Foundation Handbook</li>
+<li>ISO/IEC 20000-1:2018</li>
+<li>COBIT 2019 Framework</li>
+</ul>
 <h2 id="quick-reference">Quick Reference</h2>
 <h3 id="most-important-contacts">Most Important Contacts</h3>
 <table>
@@ -308,23 +612,23 @@
 <tbody>
 <tr>
 <td>IT Support</td>
-<td>Julia Becker</td>
-<td>+49 89 12345678-111</td>
+<td>{{ meta-organisation-roles.role_Service_Desk_Lead }}</td>
+<td>{{ meta-organisation-roles.role_Service_Desk_Lead_phone }}</td>
 </tr>
 <tr>
 <td>Critical Incident</td>
 <td>IT Operations Manager</td>
-<td>+49 89 12345678-250</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager_phone }}</td>
 </tr>
 <tr>
 <td>Security Incident</td>
-<td>Thomas Weber</td>
-<td>+49 89 12345678-300</td>
+<td>[TODO]</td>
+<td>{{ meta-organisation-roles.role_CISO_phone }}</td>
 </tr>
 <tr>
 <td>Management Escalation</td>
-<td>Anna Schmidt</td>
-<td>+49 89 12345678-200</td>
+<td>[TODO]</td>
+<td>{{ meta-organisation-roles.role_CIO_phone }}</td>
 </tr>
 <tr>
 <td>Emergency (Fire/Medical)</td>
@@ -338,10 +642,9 @@
 </tr>
 </tbody>
 </table>
-<hr />
-<p><strong>Last Update:</strong> {{ meta.date }}<br />
+<p><strong>Last Update:</strong> {{ meta-handbook.date }}<br />
 <strong>Next Review:</strong> [TODO: Date]<br />
-<strong>Contact:</strong> andreas.huemmer@adminsend.de</p>
+<strong>Contact:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager_email }}</p>
         </main>
         
         <nav class="page-nav">

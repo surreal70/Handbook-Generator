@@ -1,6 +1,6 @@
 # Policy: Endpoint und Mobile Security
 
-**Dokument-ID:** 0480
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0480
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

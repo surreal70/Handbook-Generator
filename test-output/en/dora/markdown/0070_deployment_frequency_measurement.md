@@ -6,7 +6,7 @@ Classification: Internal
 
 # Deployment Frequency Measurement
 
-**Document-ID:** [FRAMEWORK]-0070
+**Document-ID:** DORA-0070
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

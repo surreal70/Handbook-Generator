@@ -7,7 +7,7 @@ Classification: Internal
 
 # Kommunikation (RC.CO)
 
-**Dokument-ID:** [FRAMEWORK]-0520
+**Dokument-ID:** NIST-CSF-0520
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

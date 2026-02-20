@@ -6,7 +6,7 @@ Classification: Internal
 
 # Intellectual Property Rights
 
-**Document-ID:** [FRAMEWORK]-0530
+**Document-ID:** TISAX-0530
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

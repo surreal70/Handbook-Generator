@@ -1,6 +1,6 @@
 # Coverage Matrix
 
-**Dokument-ID:** 0440
+**Dokument-ID:** COMMON-CRITERIA-0440
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

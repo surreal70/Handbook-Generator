@@ -6,7 +6,7 @@ Classification: Internal
 
 # Kontrollmängel und Behebung
 
-**Dokument-ID:** [FRAMEWORK]-0150
+**Dokument-ID:** SOC1-0150
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

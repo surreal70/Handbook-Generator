@@ -6,7 +6,7 @@ Classification: Internal
 
 # Aufsicht durch den Vorstand
 
-**Dokument-ID:** [FRAMEWORK]-0120
+**Dokument-ID:** SOC1-0120
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

@@ -1,6 +1,6 @@
 # Strength of Function
 
-**Document-ID:** 0540
+**Document-ID:** COMMON-CRITERIA-0540
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

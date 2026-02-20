@@ -1,6 +1,6 @@
 # Policy: Datenschutz Schnittstellen
 
-**Dokument-ID:** 0560
+**Dokument-ID:** ISMS-0560
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

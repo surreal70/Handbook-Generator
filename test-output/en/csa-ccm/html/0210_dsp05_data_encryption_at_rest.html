@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0210 - DSP-05: Data Encryption at Rest</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0210</div>
+            <h1>DSP-05: Data Encryption at Rest</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0200_data_security_privacy_overview.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0220_dsp02_data_security_integrity.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: csa-ccm-0210</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="dsp-05-data-encryption-at-rest">DSP-05: Data Encryption at Rest</h1>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0210
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="ccm-control">CCM Control</h2>
+<p><strong>Control Domain</strong>: Data Security &amp; Privacy (DSP)<br />
+<strong>Control ID</strong>: DSP-05<br />
+<strong>Control Name</strong>: Data Encryption at Rest</p>
+<h2 id="control-objective">Control Objective</h2>
+<p>Protect sensitive data at rest through encryption to prevent unauthorized access and ensure confidentiality.</p>
+<h2 id="control-description">Control Description</h2>
+<p>The organization must:
+- Encrypt all sensitive data at rest
+- Use strong encryption algorithms (minimum AES-256)
+- Securely manage encryption keys
+- Implement encryption for all storage locations (databases, file storage, backups)
+- Regularly review encryption implementation</p>
+<h2 id="implementation-at-todo">Implementation at [TODO]</h2>
+<h3 id="encryption-standards">Encryption Standards</h3>
+<p><strong>Algorithms</strong>:
+- <strong>Symmetric</strong>: AES-256-GCM
+- <strong>Asymmetric</strong>: RSA-4096, ECC P-384
+- <strong>Hashing</strong>: SHA-256, SHA-384</p>
+<p><strong>Protocols</strong>:
+- TLS 1.3 (for data in transit)
+- IPSec (for VPN connections)</p>
+<h3 id="encryption-implementation">Encryption Implementation</h3>
+<p><strong>Databases</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Database</th>
+<th>Type</th>
+<th>Encryption Method</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[DB 1]</td>
+<td>PostgreSQL</td>
+<td>Transparent Data Encryption (TDE)</td>
+<td>Active</td>
+</tr>
+<tr>
+<td>[DB 2]</td>
+<td>MySQL</td>
+<td>InnoDB Encryption</td>
+<td>Active</td>
+</tr>
+<tr>
+<td>[DB 3]</td>
+<td>MongoDB</td>
+<td>Encryption at Rest</td>
+<td>Active</td>
+</tr>
+</tbody>
+</table>
+<p><strong>File Storage</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Storage</th>
+<th>Type</th>
+<th>Encryption Method</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[Storage 1]</td>
+<td>Object Storage</td>
+<td>Server-Side Encryption (SSE)</td>
+<td>Active</td>
+</tr>
+<tr>
+<td>[Storage 2]</td>
+<td>Block Storage</td>
+<td>LUKS Full Disk Encryption</td>
+<td>Active</td>
+</tr>
+<tr>
+<td>[Storage 3]</td>
+<td>NAS</td>
+<td>AES-256 Encryption</td>
+<td>Active</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Backups</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Backup System</th>
+<th>Encryption Method</th>
+<th>Key Management</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[Backup 1]</td>
+<td>AES-256</td>
+<td>KMS</td>
+<td>Active</td>
+</tr>
+<tr>
+<td>[Backup 2]</td>
+<td>AES-256</td>
+<td>HSM</td>
+<td>Active</td>
+</tr>
+</tbody>
+</table>
+<h3 id="key-management">Key Management</h3>
+<p><strong>Key Management System (KMS)</strong>:
+- <strong>Provider</strong>: [KMS Provider]
+- <strong>Type</strong>: Cloud-based / On-Premises / Hybrid
+- <strong>FIPS 140-2 Level</strong>: Level 2/3</p>
+<p><strong>Key Hierarchy</strong>:</p>
+<div class="codehilite"><pre><span></span><code>Master Key (Root Key)
+    ├── Key Encryption Keys (KEK)
+    │   ├── Data Encryption Key 1 (DEK)
+    │   ├── Data Encryption Key 2 (DEK)
+    │   └── Data Encryption Key 3 (DEK)
+    └── Backup Encryption Keys
+</code></pre></div>
+
+<p><strong>Key Rotation</strong>:
+- <strong>Master Keys</strong>: Annually
+- <strong>Data Encryption Keys</strong>: Quarterly
+- <strong>Backup Keys</strong>: Semi-annually</p>
+<h3 id="access-control-for-encryption-keys">Access Control for Encryption Keys</h3>
+<p><strong>Permission Model</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Permission</th>
+<th>Approval Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Security Admin</td>
+<td>Full KMS access</td>
+<td>CISO</td>
+</tr>
+<tr>
+<td>Database Admin</td>
+<td>Access to DB keys</td>
+<td>Security Admin</td>
+</tr>
+<tr>
+<td>Backup Admin</td>
+<td>Access to backup keys</td>
+<td>Security Admin</td>
+</tr>
+<tr>
+<td>Developer</td>
+<td>No direct access</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Multi-Person Control</strong>:
+- Key generation: 2 persons required
+- Key deletion: 3 persons required
+- Master Key rotation: CISO + 2 Security Admins</p>
+<h2 id="control-activities">Control Activities</h2>
+<h3 id="1-encryption-implementation">1. Encryption Implementation</h3>
+<p><strong>Process</strong>:
+1. Perform data classification
+2. Define encryption requirements
+3. Select encryption solution
+4. Implementation and configuration
+5. Testing and validation
+6. Documentation</p>
+<p><strong>Responsible</strong>: Security Team, Infrastructure Team</p>
+<h3 id="2-key-management">2. Key Management</h3>
+<p><strong>Process</strong>:
+1. Key generation
+2. Key storage in KMS/HSM
+3. Key distribution (automated)
+4. Key rotation (scheduled)
+5. Key archival
+6. Key destruction</p>
+<p><strong>Automation</strong>: 95% of key operations automated</p>
+<h3 id="3-encryption-monitoring">3. Encryption Monitoring</h3>
+<p><strong>Monitoring</strong>:
+- Encryption status of all systems
+- Key access and usage
+- Failed encryption operations
+- Compliance deviations</p>
+<p><strong>Tools</strong>:
+- SIEM Integration
+- KMS Audit Logs
+- Cloud Security Posture Management (CSPM)</p>
+<p><strong>Alerting</strong>:
+- Unencrypted sensitive data detected
+- Unauthorized key access
+- Encryption failures
+- Key rotation overdue</p>
+<h3 id="4-compliance-validation">4. Compliance Validation</h3>
+<p><strong>Validation Methods</strong>:
+- Automated compliance scans
+- Manual sampling
+- Penetration tests
+- External audits</p>
+<p><strong>Frequency</strong>:
+- Automated: Daily
+- Manual: Monthly
+- Penetration Test: Annually
+- Audit: Annually</p>
+<h2 id="evidence-and-documentation">Evidence and Documentation</h2>
+<h3 id="required-evidence">Required Evidence</h3>
+<ol>
+<li><strong>Encryption Configuration</strong>:</li>
+<li>Encryption policies</li>
+<li>Configuration documentation</li>
+<li>
+<p>Encryption inventory</p>
+</li>
+<li>
+<p><strong>Key Management</strong>:</p>
+</li>
+<li>KMS configuration</li>
+<li>Key rotation logs</li>
+<li>
+<p>Access logs</p>
+</li>
+<li>
+<p><strong>Monitoring and Alerting</strong>:</p>
+</li>
+<li>SIEM logs</li>
+<li>Compliance scan reports</li>
+<li>
+<p>Alert history</p>
+</li>
+<li>
+<p><strong>Testing and Validation</strong>:</p>
+</li>
+<li>Encryption tests</li>
+<li>Penetration test reports</li>
+<li>Audit reports</li>
+</ol>
+<h2 id="metrics-and-kpis">Metrics and KPIs</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Target Value</th>
+<th>Measurement Frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Encryption rate (sensitive data)</td>
+<td>100%</td>
+<td>Daily</td>
+</tr>
+<tr>
+<td>Unencrypted sensitive data</td>
+<td>0</td>
+<td>Daily</td>
+</tr>
+<tr>
+<td>Key rotation on time</td>
+<td>100%</td>
+<td>Monthly</td>
+</tr>
+<tr>
+<td>Encryption failures</td>
+<td>&lt; 0.1%</td>
+<td>Weekly</td>
+</tr>
+<tr>
+<td>KMS availability</td>
+<td>≥ 99.9%</td>
+<td>Monthly</td>
+</tr>
+<tr>
+<td>Time to encrypt new data</td>
+<td>≤ 24 hours</td>
+<td>Per system</td>
+</tr>
+</tbody>
+</table>
+<h2 id="risks-and-control-gaps">Risks and Control Gaps</h2>
+<h3 id="identified-risks">Identified Risks</h3>
+<table>
+<thead>
+<tr>
+<th>Risk</th>
+<th>Likelihood</th>
+<th>Impact</th>
+<th>Risk Score</th>
+<th>Mitigation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Key loss</td>
+<td>Low</td>
+<td>Critical</td>
+<td>15</td>
+<td>Backup, Escrow</td>
+</tr>
+<tr>
+<td>Unauthorized key access</td>
+<td>Low</td>
+<td>High</td>
+<td>10</td>
+<td>MFA, Monitoring</td>
+</tr>
+<tr>
+<td>Weak encryption</td>
+<td>Very low</td>
+<td>High</td>
+<td>5</td>
+<td>Standards, Reviews</td>
+</tr>
+<tr>
+<td>Performance issues</td>
+<td>Medium</td>
+<td>Medium</td>
+<td>9</td>
+<td>Hardware acceleration</td>
+</tr>
+</tbody>
+</table>
+<h3 id="control-gaps">Control Gaps</h3>
+<p><strong>Legacy Systems</strong>:
+- <strong>Description</strong>: Some legacy systems do not support modern encryption
+- <strong>Risk</strong>: Medium
+- <strong>Remediation</strong>: Migration to new systems planned
+- <strong>Due Date</strong>: [Date]</p>
+<h2 id="audit-notes">Audit Notes</h2>
+<h3 id="audit-questions">Audit Questions</h3>
+<ol>
+<li>Is all sensitive data at rest encrypted?</li>
+<li>Are strong encryption algorithms used (AES-256)?</li>
+<li>Is a Key Management System implemented?</li>
+<li>Are encryption keys rotated regularly?</li>
+<li>Is encryption status monitored?</li>
+<li>Are backups encrypted?</li>
+</ol>
+<h3 id="audit-evidence">Audit Evidence</h3>
+<ul>
+<li>Encryption policies</li>
+<li>Encryption inventory</li>
+<li>KMS configuration</li>
+<li>Key rotation logs</li>
+<li>Compliance scan reports</li>
+<li>Audit logs</li>
+<li>Penetration test reports</li>
+</ul>
+<h2 id="references">References</h2>
+<h3 id="internal-documents">Internal Documents</h3>
+<ul>
+<li>Data Encryption Policy</li>
+<li>Key Management Procedures</li>
+<li>Data Classification Policy</li>
+</ul>
+<h3 id="external-standards">External Standards</h3>
+<ul>
+<li>CSA CCM v4.0 - DSP-05</li>
+<li>NIST SP 800-57 (Key Management)</li>
+<li>NIST SP 800-111 (Storage Encryption)</li>
+<li>ISO/IEC 27018:2019 (Cloud Privacy)</li>
+<li>FIPS 140-2 (Cryptographic Module Validation)</li>
+<li>GDPR Article 32 (Security of Processing)</li>
+</ul>
+<h2 id="change-history">Change History</h2>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>[Date]</td>
+<td>[Author]</td>
+<td>Initial version</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0200_data_security_privacy_overview.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0220_dsp02_data_security_integrity.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

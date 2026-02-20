@@ -6,7 +6,7 @@ Classification: Internal
 
 # Segregation of Duties
 
-**Document-ID:** [FRAMEWORK]-0180
+**Document-ID:** COSO-0180
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

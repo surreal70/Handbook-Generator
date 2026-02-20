@@ -6,7 +6,7 @@ Classification: Internal
 
 # Privacy and Personal Data Protection
 
-**Document-ID:** [FRAMEWORK]-0550
+**Document-ID:** TISAX-0550
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

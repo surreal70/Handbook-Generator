@@ -1,6 +1,6 @@
 # TOE Logical Scope
 
-**Dokument-ID:** 0110
+**Dokument-ID:** COMMON-CRITERIA-0110
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

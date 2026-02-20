@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0240 - Lead Time Reduktionsstrategien</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0240</div>
+            <h1>Lead Time Reduktionsstrategien</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0230_bottleneck_identification.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0250_testing_strategies.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: dora-0240</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="lead-time-reduktionsstrategien">Lead Time Reduktionsstrategien</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0240
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="zweck">Zweck</h2>
+<p>Dieses Dokument beschreibt konkrete Strategien und Maßnahmen zur Reduzierung der Lead Time for Changes.</p>
+<h2 id="umfang">Umfang</h2>
+<ul>
+<li>Strategische Ansätze</li>
+<li>Technische Maßnahmen</li>
+<li>Prozess-Optimierungen</li>
+<li>Kulturelle Veränderungen</li>
+</ul>
+<h2 id="organisationsinformationen">Organisationsinformationen</h2>
+<ul>
+<li><strong>Organisation</strong>: [TODO]</li>
+<li><strong>Strategie-Verantwortlicher</strong>: [TODO]</li>
+<li><strong>Aktuell</strong>: [TODO]</li>
+<li><strong>Ziel</strong>: [TODO]</li>
+</ul>
+<h2 id="strategische-ansatze">Strategische Ansätze</h2>
+<h3 id="1-batch-groen-reduzieren">1. Batch-Größen reduzieren</h3>
+<p><strong>Prinzip</strong>: Kleinere Änderungen = Schnellere Durchlaufzeit</p>
+<p><strong>Maßnahmen</strong>:
+- Trunk-based Development
+- Feature Flags
+- Kleinere User Stories
+- Häufigere Commits</p>
+<p><strong>Erwarteter Impact</strong>: 30-50% Lead Time Reduktion</p>
+<h3 id="2-automatisierung-erhohen">2. Automatisierung erhöhen</h3>
+<p><strong>Prinzip</strong>: Automatisierung eliminiert Wartezeiten</p>
+<p><strong>Maßnahmen</strong>:
+- CI/CD-Automatisierung
+- Test-Automatisierung
+- Deployment-Automatisierung
+- Automated Compliance Checks</p>
+<p><strong>Erwarteter Impact</strong>: 40-60% Lead Time Reduktion</p>
+<h3 id="3-parallelisierung">3. Parallelisierung</h3>
+<p><strong>Prinzip</strong>: Parallele Ausführung reduziert Gesamtzeit</p>
+<p><strong>Maßnahmen</strong>:
+- Parallele Test-Ausführung
+- Parallele Builds
+- Parallele Reviews
+- Parallele Deployments</p>
+<p><strong>Erwarteter Impact</strong>: 20-40% Lead Time Reduktion</p>
+<h2 id="technische-manahmen">Technische Maßnahmen</h2>
+<h3 id="cicd-optimierung">CI/CD-Optimierung</h3>
+<p><strong>Pipeline-Beschleunigung</strong>:
+- Caching von Dependencies
+- Inkrementelle Builds
+- Parallele Stages
+- Optimierte Container-Images</p>
+<p><strong>Beispiel</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Optimierte Pipeline</span>
+<span class="nt">build</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">cache</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${CI_COMMIT_REF_SLUG}</span>
+<span class="w">    </span><span class="nt">paths</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">node_modules/</span>
+<span class="w">  </span><span class="nt">parallel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+<span class="w">  </span><span class="nt">script</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">npm ci --cache .npm --prefer-offline</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">npm run build</span>
+</code></pre></div>
+
+<h3 id="test-optimierung">Test-Optimierung</h3>
+<p><strong>Strategien</strong>:
+- Test-Parallelisierung
+- Selektive Test-Ausführung
+- Test-Priorisierung
+- Flaky Test Elimination</p>
+<p><strong>Impact</strong>: Reduzierung der Test-Zeit um 50-70%</p>
+<h3 id="architektur-modernisierung">Architektur-Modernisierung</h3>
+<p><strong>Ansätze</strong>:
+- Microservices
+- Modulare Monolithen
+- API-First Design
+- Loose Coupling</p>
+<p><strong>Impact</strong>: Ermöglicht unabhängige Deployments</p>
+<h2 id="prozess-optimierungen">Prozess-Optimierungen</h2>
+<h3 id="review-prozess">Review-Prozess</h3>
+<p><strong>Optimierungen</strong>:
+- Automatisierte Code-Analyse
+- Review-SLAs
+- Pair Programming
+- Mob Programming</p>
+<p><strong>Ziel</strong>: Review-Zeit &lt; 4 Stunden</p>
+<h3 id="approval-prozess">Approval-Prozess</h3>
+<p><strong>Streamlining</strong>:
+- Risk-basierte Approvals
+- Automatisierte Low-Risk Approvals
+- Delegierte Approvals
+- Post-Deployment Approvals</p>
+<p><strong>Ziel</strong>: Approval-Zeit &lt; 1 Stunde</p>
+<h3 id="deployment-prozess">Deployment-Prozess</h3>
+<p><strong>Verbesserungen</strong>:
+- On-Demand Deployments
+- Self-Service Deployments
+- Automated Rollbacks
+- Progressive Delivery</p>
+<p><strong>Ziel</strong>: Deployment-Zeit &lt; 15 Minuten</p>
+<h2 id="kulturelle-veranderungen">Kulturelle Veränderungen</h2>
+<h3 id="mindset-shift">Mindset-Shift</h3>
+<p><strong>Von</strong>:
+- "Big Bang Releases"
+- "Change Control"
+- "Risk Avoidance"</p>
+<p><strong>Zu</strong>:
+- "Continuous Delivery"
+- "Change Enablement"
+- "Risk Management"</p>
+<h3 id="team-empowerment">Team-Empowerment</h3>
+<p><strong>Maßnahmen</strong>:
+- Erhöhte Autonomie
+- Ownership-Kultur
+- Blameless Postmortems
+- Experimentation Culture</p>
+<h2 id="implementierungsplan">Implementierungsplan</h2>
+<h3 id="phase-1-quick-wins-monat-1-2">Phase 1: Quick Wins (Monat 1-2)</h3>
+<p><strong>Maßnahmen</strong>:
+- Automatisierte Deployments
+- Parallele Tests
+- Review-SLAs</p>
+<p><strong>Erwartete Reduktion</strong>: 20-30%</p>
+<h3 id="phase-2-strukturelle-verbesserungen-monat-3-6">Phase 2: Strukturelle Verbesserungen (Monat 3-6)</h3>
+<p><strong>Maßnahmen</strong>:
+- CI/CD-Optimierung
+- Prozess-Streamlining
+- Tool-Modernisierung</p>
+<p><strong>Erwartete Reduktion</strong>: 40-50%</p>
+<h3 id="phase-3-transformation-monat-7-12">Phase 3: Transformation (Monat 7-12)</h3>
+<p><strong>Maßnahmen</strong>:
+- Architektur-Evolution
+- Kulturwandel
+- Continuous Improvement</p>
+<p><strong>Erwartete Reduktion</strong>: 60-70%</p>
+<h2 id="erfolgsmessung">Erfolgsmessung</h2>
+<h3 id="kpis">KPIs</h3>
+<ul>
+<li>Lead Time Trend</li>
+<li>Deployment Frequency</li>
+<li>Process Efficiency</li>
+<li>Team Satisfaction</li>
+</ul>
+<h3 id="monitoring">Monitoring</h3>
+<ul>
+<li>Wöchentliche Metriken-Reviews</li>
+<li>Monatliche Retrospektiven</li>
+<li>Quartalsweise Strategie-Reviews</li>
+</ul>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0230_bottleneck_identification.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0250_testing_strategies.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

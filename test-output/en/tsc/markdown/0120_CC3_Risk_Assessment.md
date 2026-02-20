@@ -1,6 +1,6 @@
 # CC3: Risk Assessment
 
-**Document-ID:** [FRAMEWORK]-0120
+**Document-ID:** TSC-0120
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

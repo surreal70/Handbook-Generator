@@ -1,6 +1,6 @@
 # Datenschutzgrundsätze
 
-**Dokument-ID:** 0030
+**Dokument-ID:** GDPR-0030
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

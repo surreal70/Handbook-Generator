@@ -6,7 +6,7 @@ Classification: Internal
 
 # Performance Benchmarking
 
-**Dokument-ID:** [FRAMEWORK]-0040
+**Dokument-ID:** DORA-0040
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

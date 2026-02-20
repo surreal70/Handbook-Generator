@@ -7,7 +7,7 @@ Classification: Internal
 
 # Organisatorischer Kontext (GV.OC)
 
-**Dokument-ID:** [FRAMEWORK]-0020
+**Dokument-ID:** NIST-CSF-0020
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

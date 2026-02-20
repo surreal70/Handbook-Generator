@@ -1,6 +1,6 @@
 # Richtlinie: Change Management mit Sicherheitsfreigaben
 
-**Dokument-ID:** 0370
+**Dokument-ID:** ISMS-0370
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

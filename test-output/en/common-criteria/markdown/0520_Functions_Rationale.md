@@ -1,6 +1,6 @@
 # Functions Rationale
 
-**Document-ID:** 0520
+**Document-ID:** COMMON-CRITERIA-0520
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

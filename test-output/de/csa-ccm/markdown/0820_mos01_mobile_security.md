@@ -6,7 +6,7 @@ Classification: Internal
 
 # MOS-01: Mobile Sicherheit
 
-**Dokument-ID:** [FRAMEWORK]-0820
+**Dokument-ID:** CSA-CCM-0820
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

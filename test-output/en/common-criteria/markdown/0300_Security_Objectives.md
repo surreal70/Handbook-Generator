@@ -1,6 +1,6 @@
 # Security Objectives
 
-**Document-ID:** 0300
+**Document-ID:** COMMON-CRITERIA-0300
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

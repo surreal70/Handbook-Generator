@@ -1,6 +1,6 @@
 # Policy: HR Security
 
-**Dokument-ID:** 0520
+**Dokument-ID:** ISMS-0520
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

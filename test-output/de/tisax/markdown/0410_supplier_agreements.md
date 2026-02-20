@@ -6,7 +6,7 @@ Classification: Internal
 
 # Lieferantenvereinbarungen
 
-**Dokument-ID:** [FRAMEWORK]-0410
+**Dokument-ID:** TISAX-0410
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

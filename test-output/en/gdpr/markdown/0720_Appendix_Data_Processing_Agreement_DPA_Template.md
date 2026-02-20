@@ -1,6 +1,6 @@
 # Appendix: Data Processing Agreement (DPA) Template
 
-**Document-ID:** 0720
+**Document-ID:** GDPR-0720
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

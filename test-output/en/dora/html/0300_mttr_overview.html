@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0300 - MTTR Overview</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0300</div>
+            <h1>MTTR Overview</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0280_technical_debt_management.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0310_mttr_measurement.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: dora-0300</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="mttr-overview">MTTR Overview</h1>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0300
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="purpose">Purpose</h2>
+<p>This document provides a comprehensive overview of the Mean Time to Restore (MTTR) metric in the DORA Framework.</p>
+<h2 id="scope">Scope</h2>
+<ul>
+<li>Definition of MTTR</li>
+<li>Performance levels and benchmarks</li>
+<li>Components of MTTR</li>
+<li>Significance for the organization</li>
+</ul>
+<h2 id="definition">Definition</h2>
+<h3 id="mean-time-to-restore-mttr">Mean Time to Restore (MTTR)</h3>
+<p>MTTR measures the average time to restore service after an incident or outage in the production environment.</p>
+<p><strong>Formal Definition</strong>: Average time from incident detection to complete service restoration.</p>
+<h3 id="organization-information">Organization Information</h3>
+<ul>
+<li><strong>Organization</strong>: [TODO]</li>
+<li><strong>Responsible</strong>: [TODO]</li>
+<li><strong>Current MTTR</strong>: [TODO]</li>
+</ul>
+<h2 id="performance-levels">Performance Levels</h2>
+<h3 id="elite-performers">Elite Performers</h3>
+<p><strong>MTTR</strong>: Less than one hour</p>
+<p>Characteristics:
+- Automated incident detection
+- Automated rollback
+- Comprehensive monitoring
+- On-call rotation
+- Runbook automation</p>
+<h3 id="high-performers">High Performers</h3>
+<p><strong>MTTR</strong>: Less than one day</p>
+<p>Characteristics:
+- Good monitoring systems
+- Documented runbooks
+- Fast escalation
+- Regular incident reviews</p>
+<h3 id="medium-performers">Medium Performers</h3>
+<p><strong>MTTR</strong>: Between one day and one week</p>
+<p>Characteristics:
+- Basic monitoring
+- Manual recovery processes
+- Longer diagnosis times
+- Limited automation</p>
+<h3 id="low-performers">Low Performers</h3>
+<p><strong>MTTR</strong>: More than one week</p>
+<p>Characteristics:
+- Reactive incident detection
+- Complex recovery processes
+- Missing documentation
+- Long escalation chains</p>
+<h2 id="components-of-mttr">Components of MTTR</h2>
+<h3 id="1-detection-time">1. Detection Time</h3>
+<p><strong>Definition</strong>: Time until incident detection</p>
+<p><strong>Optimization</strong>:
+- Proactive monitoring
+- Automated alerting
+- Anomaly detection
+- User feedback channels</p>
+<h3 id="2-diagnosis-time">2. Diagnosis Time</h3>
+<p><strong>Definition</strong>: Time to identify root cause</p>
+<p><strong>Optimization</strong>:
+- Comprehensive logging
+- Distributed tracing
+- Correlation analysis
+- Runbook documentation</p>
+<h3 id="3-recovery-time">3. Recovery Time</h3>
+<p><strong>Definition</strong>: Time to restore service</p>
+<p><strong>Optimization</strong>:
+- Automated rollback
+- Blue-green deployments
+- Feature flags
+- Disaster recovery plans</p>
+<h3 id="4-verification-time">4. Verification Time</h3>
+<p><strong>Definition</strong>: Time to confirm complete restoration</p>
+<p><strong>Optimization</strong>:
+- Automated health checks
+- Synthetic monitoring
+- User acceptance testing
+- Performance validation</p>
+<h2 id="significance-for-the-organization">Significance for the Organization</h2>
+<h3 id="business-impact">Business Impact</h3>
+<ul>
+<li><strong>Availability</strong>: Higher service availability</li>
+<li><strong>Customer Satisfaction</strong>: Faster problem resolution</li>
+<li><strong>Reputation</strong>: Trust in reliability</li>
+<li><strong>Costs</strong>: Reduced downtime costs</li>
+</ul>
+<h3 id="technical-benefits">Technical Benefits</h3>
+<ul>
+<li><strong>Resilience</strong>: More robust systems</li>
+<li><strong>Observability</strong>: Better insights</li>
+<li><strong>Automation</strong>: Faster recovery</li>
+<li><strong>Learning</strong>: Continuous improvement</li>
+</ul>
+<h2 id="measurement-methodology">Measurement Methodology</h2>
+<h3 id="data-collection">Data Collection</h3>
+<p><strong>Incident Start</strong>: Time of detection
+<strong>Incident End</strong>: Time of complete restoration</p>
+<p><strong>Calculation</strong>:</p>
+<div class="codehilite"><pre><span></span><code>MTTR = Σ(Recovery Times) / Number of Incidents
+</code></pre></div>
+
+<h3 id="incident-categorization">Incident Categorization</h3>
+<ul>
+<li><strong>Severity 1</strong>: Complete service outage</li>
+<li><strong>Severity 2</strong>: Partial service outage</li>
+<li><strong>Severity 3</strong>: Degraded performance</li>
+<li><strong>Severity 4</strong>: Minor issues</li>
+</ul>
+<h2 id="improvement-approaches">Improvement Approaches</h2>
+<h3 id="short-term">Short-term</h3>
+<ul>
+<li>Improved monitoring alerts</li>
+<li>Documented runbooks</li>
+<li>On-call training</li>
+<li>Incident response drills</li>
+</ul>
+<h3 id="medium-term">Medium-term</h3>
+<ul>
+<li>Automated rollback</li>
+<li>Enhanced observability</li>
+<li>Chaos engineering</li>
+<li>Incident automation</li>
+</ul>
+<h3 id="long-term">Long-term</h3>
+<ul>
+<li>Self-healing systems</li>
+<li>Predictive analytics</li>
+<li>Full automation</li>
+<li>Resilient architecture</li>
+</ul>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0280_technical_debt_management.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0310_mttr_measurement.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

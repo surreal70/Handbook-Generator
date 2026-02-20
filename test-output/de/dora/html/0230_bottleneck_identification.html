@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0230 - Bottleneck-Identifikation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0230</div>
+            <h1>Bottleneck-Identifikation</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0220_value_stream_mapping.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0240_lead_time_reduction_strategies.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: dora-0230</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="bottleneck-identifikation">Bottleneck-Identifikation</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0230
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="zweck">Zweck</h2>
+<p>Dieses Dokument beschreibt Methoden zur Identifikation und Analyse von Bottlenecks im Software-Delivery-Prozess.</p>
+<h2 id="umfang">Umfang</h2>
+<ul>
+<li>Bottleneck-Analyse-Methoden</li>
+<li>Datenerfassung und -analyse</li>
+<li>Priorisierung von Engpässen</li>
+<li>Lösungsansätze</li>
+</ul>
+<h2 id="organisationsinformationen">Organisationsinformationen</h2>
+<ul>
+<li><strong>Organisation</strong>: [TODO]</li>
+<li><strong>Analyse-Verantwortlicher</strong>: [TODO]</li>
+</ul>
+<h2 id="bottleneck-analyse-methoden">Bottleneck-Analyse-Methoden</h2>
+<h3 id="theory-of-constraints">Theory of Constraints</h3>
+<p><strong>Grundprinzip</strong>: Der Durchsatz eines Systems wird durch seinen schwächsten Punkt (Bottleneck) bestimmt.</p>
+<p><strong>5-Schritte-Prozess</strong>:
+1. Identifiziere den Bottleneck
+2. Nutze den Bottleneck optimal aus
+3. Ordne alles dem Bottleneck unter
+4. Erweitere den Bottleneck
+5. Wiederhole den Prozess</p>
+<h3 id="warteschlangen-theorie">Warteschlangen-Theorie</h3>
+<p><strong>Little's Law</strong>:</p>
+<div class="codehilite"><pre><span></span><code>Lead Time = Work in Progress / Throughput
+</code></pre></div>
+
+<p><strong>Analyse</strong>:
+- Wo sammeln sich Aufgaben?
+- Welche Schritte haben die längsten Queues?
+- Wo ist die Variabilität am höchsten?</p>
+<h3 id="durchsatz-analyse">Durchsatz-Analyse</h3>
+<p><strong>Metriken</strong>:
+- Deployments pro Zeiteinheit
+- Durchschnittliche Bearbeitungszeit pro Schritt
+- Kapazität pro Schritt
+- Auslastung pro Schritt</p>
+<h2 id="datenerfassung">Datenerfassung</h2>
+<h3 id="prozess-metriken">Prozess-Metriken</h3>
+<p><strong>Für jeden Prozess-Schritt erfassen</strong>:
+- Anzahl der Aufgaben in Queue
+- Durchschnittliche Wartezeit
+- Durchschnittliche Bearbeitungszeit
+- Anzahl der Bearbeiter/Ressourcen
+- Auslastung</p>
+<h3 id="analyse-tools">Analyse-Tools</h3>
+<ul>
+<li><strong>CI/CD-Analytics</strong>: Pipeline-Metriken</li>
+<li><strong>Issue-Tracking</strong>: Ticket-Flow-Metriken</li>
+<li><strong>Version Control</strong>: Commit-to-Deploy-Zeiten</li>
+<li><strong>Monitoring</strong>: System-Performance-Metriken</li>
+</ul>
+<h2 id="haufige-bottlenecks">Häufige Bottlenecks</h2>
+<h3 id="1-code-review">1. Code Review</h3>
+<p><strong>Symptome</strong>:
+- Lange Wartezeiten auf Reviews
+- Große Queue von offenen Pull Requests
+- Wenige Reviewer für viele Entwickler</p>
+<p><strong>Lösungsansätze</strong>:
+- Mehr Reviewer trainieren
+- Kleinere Pull Requests
+- Automatisierte Code-Analyse
+- Asynchrone Reviews</p>
+<h3 id="2-test-ausfuhrung">2. Test-Ausführung</h3>
+<p><strong>Symptome</strong>:
+- Lange Test-Laufzeiten
+- Flaky Tests
+- Begrenzte Test-Infrastruktur
+- Sequentielle Test-Ausführung</p>
+<p><strong>Lösungsansätze</strong>:
+- Test-Parallelisierung
+- Test-Optimierung
+- Cloud-Test-Infrastruktur
+- Selektive Test-Ausführung</p>
+<h3 id="3-approval-prozesse">3. Approval-Prozesse</h3>
+<p><strong>Symptome</strong>:
+- Lange Wartezeiten auf Genehmigungen
+- Viele Approval-Stufen
+- Begrenzte Verfügbarkeit von Approvers
+- Manuelle Approval-Prozesse</p>
+<p><strong>Lösungsansätze</strong>:
+- Automatisierte Approvals
+- Risk-basierte Approvals
+- Delegierte Approvals
+- Self-Service-Deployments</p>
+<h3 id="4-deployment-kapazitat">4. Deployment-Kapazität</h3>
+<p><strong>Symptome</strong>:
+- Deployment-Windows
+- Begrenzte Deployment-Slots
+- Manuelle Deployment-Schritte
+- Shared Deployment-Ressourcen</p>
+<p><strong>Lösungsansätze</strong>:
+- Deployment-Automatisierung
+- On-Demand Deployments
+- Parallele Deployments
+- Self-Service-Deployments</p>
+<h2 id="priorisierung">Priorisierung</h2>
+<h3 id="impact-assessment">Impact-Assessment</h3>
+<p><strong>Kriterien</strong>:
+- Häufigkeit des Bottlenecks
+- Durchschnittliche Verzögerung
+- Anzahl betroffener Teams
+- Business-Impact</p>
+<p><strong>Berechnung</strong>:</p>
+<div class="codehilite"><pre><span></span><code>Impact Score = Frequency × Delay × Teams × Business Value
+</code></pre></div>
+
+<h3 id="losungs-aufwand">Lösungs-Aufwand</h3>
+<p><strong>Kategorien</strong>:
+- Quick Wins (&lt; 1 Woche)
+- Mittelfristig (1-4 Wochen)
+- Langfristig (&gt; 1 Monat)</p>
+<h3 id="priorisierungs-matrix">Priorisierungs-Matrix</h3>
+<div class="codehilite"><pre><span></span><code>High Impact, Low Effort → P1 (Sofort)
+High Impact, High Effort → P2 (Planen)
+Low Impact, Low Effort → P3 (Bei Gelegenheit)
+Low Impact, High Effort → P4 (Vermeiden)
+</code></pre></div>
+
+<h2 id="losungsansatze">Lösungsansätze</h2>
+<h3 id="kapazitat-erhohen">Kapazität erhöhen</h3>
+<ul>
+<li>Mehr Ressourcen</li>
+<li>Bessere Tools</li>
+<li>Automatisierung</li>
+<li>Parallelisierung</li>
+</ul>
+<h3 id="nachfrage-reduzieren">Nachfrage reduzieren</h3>
+<ul>
+<li>Batch-Größen reduzieren</li>
+<li>Priorisierung</li>
+<li>Elimination unnötiger Schritte</li>
+<li>Self-Service</li>
+</ul>
+<h3 id="prozess-optimieren">Prozess optimieren</h3>
+<ul>
+<li>Streamlining</li>
+<li>Standardisierung</li>
+<li>Automatisierung</li>
+<li>Continuous Improvement</li>
+</ul>
+<h2 id="monitoring-und-tracking">Monitoring und Tracking</h2>
+<h3 id="kpis">KPIs</h3>
+<ul>
+<li>Bottleneck-Dauer</li>
+<li>Queue-Länge</li>
+<li>Durchsatz</li>
+<li>Lead Time</li>
+</ul>
+<h3 id="dashboards">Dashboards</h3>
+<ul>
+<li>Echtzeit-Monitoring</li>
+<li>Trend-Analysen</li>
+<li>Alerts bei Verschlechterung</li>
+</ul>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0220_value_stream_mapping.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0240_lead_time_reduction_strategies.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

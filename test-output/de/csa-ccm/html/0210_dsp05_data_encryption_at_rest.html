@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0210 - DSP-05: Data Encryption at Rest</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0210</div>
+            <h1>DSP-05: Data Encryption at Rest</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0200_data_security_privacy_overview.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0220_dsp02_data_security_integrity.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: csa-ccm-0210</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="dsp-05-data-encryption-at-rest">DSP-05: Data Encryption at Rest</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0210
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="ccm-kontrolle">CCM-Kontrolle</h2>
+<p><strong>Kontrolldomäne</strong>: Data Security &amp; Privacy (DSP)<br />
+<strong>Kontroll-ID</strong>: DSP-05<br />
+<strong>Kontrollname</strong>: Data Encryption at Rest</p>
+<h2 id="kontrollziel">Kontrollziel</h2>
+<p>Schutz sensibler Daten im Ruhezustand durch Verschlüsselung, um unbefugten Zugriff zu verhindern und Vertraulichkeit zu gewährleisten.</p>
+<h2 id="kontrollbeschreibung">Kontrollbeschreibung</h2>
+<p>Die Organisation muss:
+- Alle sensiblen Daten im Ruhezustand verschlüsseln
+- Starke Verschlüsselungsalgorithmen verwenden (mindestens AES-256)
+- Verschlüsselungsschlüssel sicher verwalten
+- Verschlüsselung für alle Speicherorte implementieren (Datenbanken, File Storage, Backups)
+- Regelmäßige Überprüfung der Verschlüsselungsimplementierung</p>
+<h2 id="implementierung-in-todo">Implementierung in [TODO]</h2>
+<h3 id="verschlusselungsstandards">Verschlüsselungsstandards</h3>
+<p><strong>Algorithmen</strong>:
+- <strong>Symmetrisch</strong>: AES-256-GCM
+- <strong>Asymmetrisch</strong>: RSA-4096, ECC P-384
+- <strong>Hashing</strong>: SHA-256, SHA-384</p>
+<p><strong>Protokolle</strong>:
+- TLS 1.3 (für Daten in Übertragung)
+- IPSec (für VPN-Verbindungen)</p>
+<h3 id="verschlusselungsimplementierung">Verschlüsselungsimplementierung</h3>
+<p><strong>Datenbanken</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Datenbank</th>
+<th>Typ</th>
+<th>Verschlüsselungsmethode</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[DB 1]</td>
+<td>PostgreSQL</td>
+<td>Transparent Data Encryption (TDE)</td>
+<td>Aktiv</td>
+</tr>
+<tr>
+<td>[DB 2]</td>
+<td>MySQL</td>
+<td>InnoDB Encryption</td>
+<td>Aktiv</td>
+</tr>
+<tr>
+<td>[DB 3]</td>
+<td>MongoDB</td>
+<td>Encryption at Rest</td>
+<td>Aktiv</td>
+</tr>
+</tbody>
+</table>
+<p><strong>File Storage</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Storage</th>
+<th>Typ</th>
+<th>Verschlüsselungsmethode</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[Storage 1]</td>
+<td>Object Storage</td>
+<td>Server-Side Encryption (SSE)</td>
+<td>Aktiv</td>
+</tr>
+<tr>
+<td>[Storage 2]</td>
+<td>Block Storage</td>
+<td>LUKS Full Disk Encryption</td>
+<td>Aktiv</td>
+</tr>
+<tr>
+<td>[Storage 3]</td>
+<td>NAS</td>
+<td>AES-256 Encryption</td>
+<td>Aktiv</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Backups</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Backup-System</th>
+<th>Verschlüsselungsmethode</th>
+<th>Schlüsselverwaltung</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[Backup 1]</td>
+<td>AES-256</td>
+<td>KMS</td>
+<td>Aktiv</td>
+</tr>
+<tr>
+<td>[Backup 2]</td>
+<td>AES-256</td>
+<td>HSM</td>
+<td>Aktiv</td>
+</tr>
+</tbody>
+</table>
+<h3 id="schlusselverwaltung">Schlüsselverwaltung</h3>
+<p><strong>Key Management System (KMS)</strong>:
+- <strong>Anbieter</strong>: [KMS-Anbieter]
+- <strong>Typ</strong>: Cloud-basiert / On-Premises / Hybrid
+- <strong>FIPS 140-2 Level</strong>: Level 2/3</p>
+<p><strong>Schlüsselhierarchie</strong>:</p>
+<div class="codehilite"><pre><span></span><code>Master Key (Root Key)
+    ├── Key Encryption Keys (KEK)
+    │   ├── Data Encryption Key 1 (DEK)
+    │   ├── Data Encryption Key 2 (DEK)
+    │   └── Data Encryption Key 3 (DEK)
+    └── Backup Encryption Keys
+</code></pre></div>
+
+<p><strong>Schlüsselrotation</strong>:
+- <strong>Master Keys</strong>: Jährlich
+- <strong>Data Encryption Keys</strong>: Quartalsweise
+- <strong>Backup Keys</strong>: Halbjährlich</p>
+<h3 id="zugriffskontrolle-fur-verschlusselungsschlussel">Zugriffskontrolle für Verschlüsselungsschlüssel</h3>
+<p><strong>Berechtigungsmodell</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Rolle</th>
+<th>Berechtigung</th>
+<th>Genehmigung erforderlich</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Security Admin</td>
+<td>Vollzugriff auf KMS</td>
+<td>CISO</td>
+</tr>
+<tr>
+<td>Database Admin</td>
+<td>Zugriff auf DB-Schlüssel</td>
+<td>Security Admin</td>
+</tr>
+<tr>
+<td>Backup Admin</td>
+<td>Zugriff auf Backup-Schlüssel</td>
+<td>Security Admin</td>
+</tr>
+<tr>
+<td>Developer</td>
+<td>Kein direkter Zugriff</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Multi-Person Control</strong>:
+- Schlüsselerzeugung: 2 Personen erforderlich
+- Schlüssellöschung: 3 Personen erforderlich
+- Master Key Rotation: CISO + 2 Security Admins</p>
+<h2 id="kontrollaktivitaten">Kontrollaktivitäten</h2>
+<h3 id="1-verschlusselungsimplementierung">1. Verschlüsselungsimplementierung</h3>
+<p><strong>Prozess</strong>:
+1. Datenklassifizierung durchführen
+2. Verschlüsselungsanforderungen definieren
+3. Verschlüsselungslösung auswählen
+4. Implementierung und Konfiguration
+5. Testing und Validierung
+6. Dokumentation</p>
+<p><strong>Verantwortlich</strong>: Security Team, Infrastructure Team</p>
+<h3 id="2-schlusselmanagement">2. Schlüsselmanagement</h3>
+<p><strong>Prozess</strong>:
+1. Schlüsselerzeugung
+2. Schlüsselspeicherung im KMS/HSM
+3. Schlüsselverteilung (automatisiert)
+4. Schlüsselrotation (geplant)
+5. Schlüsselarchivierung
+6. Schlüsselvernichtung</p>
+<p><strong>Automatisierung</strong>: 95% der Schlüsseloperationen automatisiert</p>
+<h3 id="3-verschlusselungsuberwachung">3. Verschlüsselungsüberwachung</h3>
+<p><strong>Monitoring</strong>:
+- Verschlüsselungsstatus aller Systeme
+- Schlüsselzugriffe und -verwendung
+- Fehlgeschlagene Verschlüsselungsoperationen
+- Compliance-Abweichungen</p>
+<p><strong>Tools</strong>:
+- SIEM Integration
+- KMS Audit Logs
+- Cloud Security Posture Management (CSPM)</p>
+<p><strong>Alerting</strong>:
+- Unverschlüsselte sensible Daten erkannt
+- Unberechtigter Schlüsselzugriff
+- Verschlüsselungsfehler
+- Schlüsselrotation überfällig</p>
+<h3 id="4-compliance-validierung">4. Compliance-Validierung</h3>
+<p><strong>Validierungsmethoden</strong>:
+- Automatisierte Compliance-Scans
+- Manuelle Stichproben
+- Penetration Tests
+- Externe Audits</p>
+<p><strong>Frequenz</strong>:
+- Automatisiert: Täglich
+- Manuell: Monatlich
+- Penetration Test: Jährlich
+- Audit: Jährlich</p>
+<h2 id="nachweise-und-evidenzen">Nachweise und Evidenzen</h2>
+<h3 id="erforderliche-nachweise">Erforderliche Nachweise</h3>
+<ol>
+<li><strong>Verschlüsselungskonfiguration</strong>:</li>
+<li>Verschlüsselungsrichtlinien</li>
+<li>Konfigurationsdokumentation</li>
+<li>
+<p>Verschlüsselungsinventar</p>
+</li>
+<li>
+<p><strong>Schlüsselverwaltung</strong>:</p>
+</li>
+<li>KMS-Konfiguration</li>
+<li>Schlüsselrotationsprotokolle</li>
+<li>
+<p>Zugriffsprotokolle</p>
+</li>
+<li>
+<p><strong>Monitoring und Alerting</strong>:</p>
+</li>
+<li>SIEM-Logs</li>
+<li>Compliance-Scan-Berichte</li>
+<li>
+<p>Alert-Historie</p>
+</li>
+<li>
+<p><strong>Testing und Validierung</strong>:</p>
+</li>
+<li>Verschlüsselungstests</li>
+<li>Penetration Test Reports</li>
+<li>Audit-Berichte</li>
+</ol>
+<h2 id="metriken-und-kpis">Metriken und KPIs</h2>
+<table>
+<thead>
+<tr>
+<th>Metrik</th>
+<th>Zielwert</th>
+<th>Messfrequenz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Verschlüsselungsrate (sensible Daten)</td>
+<td>100%</td>
+<td>Täglich</td>
+</tr>
+<tr>
+<td>Unverschlüsselte sensible Daten</td>
+<td>0</td>
+<td>Täglich</td>
+</tr>
+<tr>
+<td>Schlüsselrotation pünktlich</td>
+<td>100%</td>
+<td>Monatlich</td>
+</tr>
+<tr>
+<td>Verschlüsselungsfehler</td>
+<td>&lt; 0.1%</td>
+<td>Wöchentlich</td>
+</tr>
+<tr>
+<td>KMS-Verfügbarkeit</td>
+<td>≥ 99.9%</td>
+<td>Monatlich</td>
+</tr>
+<tr>
+<td>Zeit bis zur Verschlüsselung neuer Daten</td>
+<td>≤ 24 Stunden</td>
+<td>Pro System</td>
+</tr>
+</tbody>
+</table>
+<h2 id="risiken-und-kontrolllucken">Risiken und Kontrolllücken</h2>
+<h3 id="identifizierte-risiken">Identifizierte Risiken</h3>
+<table>
+<thead>
+<tr>
+<th>Risiko</th>
+<th>Wahrscheinlichkeit</th>
+<th>Auswirkung</th>
+<th>Risikoscore</th>
+<th>Maßnahme</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Schlüsselverlust</td>
+<td>Niedrig</td>
+<td>Kritisch</td>
+<td>15</td>
+<td>Backup, Escrow</td>
+</tr>
+<tr>
+<td>Unberechtigter Schlüsselzugriff</td>
+<td>Niedrig</td>
+<td>Hoch</td>
+<td>10</td>
+<td>MFA, Monitoring</td>
+</tr>
+<tr>
+<td>Schwache Verschlüsselung</td>
+<td>Sehr niedrig</td>
+<td>Hoch</td>
+<td>5</td>
+<td>Standards, Reviews</td>
+</tr>
+<tr>
+<td>Performance-Probleme</td>
+<td>Mittel</td>
+<td>Mittel</td>
+<td>9</td>
+<td>Hardware-Beschleunigung</td>
+</tr>
+</tbody>
+</table>
+<h3 id="kontrolllucken">Kontrolllücken</h3>
+<p><strong>Legacy-Systeme</strong>:
+- <strong>Beschreibung</strong>: Einige Legacy-Systeme unterstützen keine moderne Verschlüsselung
+- <strong>Risiko</strong>: Mittel
+- <strong>Remediation</strong>: Migration zu neuen Systemen geplant
+- <strong>Fälligkeitsdatum</strong>: [Datum]</p>
+<h2 id="audit-hinweise">Audit-Hinweise</h2>
+<h3 id="audit-fragen">Audit-Fragen</h3>
+<ol>
+<li>Sind alle sensiblen Daten im Ruhezustand verschlüsselt?</li>
+<li>Werden starke Verschlüsselungsalgorithmen verwendet (AES-256)?</li>
+<li>Ist ein Key Management System implementiert?</li>
+<li>Werden Verschlüsselungsschlüssel regelmäßig rotiert?</li>
+<li>Wird der Verschlüsselungsstatus überwacht?</li>
+<li>Sind Backups verschlüsselt?</li>
+</ol>
+<h3 id="audit-evidenzen">Audit-Evidenzen</h3>
+<ul>
+<li>Verschlüsselungsrichtlinien</li>
+<li>Verschlüsselungsinventar</li>
+<li>KMS-Konfiguration</li>
+<li>Schlüsselrotationsprotokolle</li>
+<li>Compliance-Scan-Berichte</li>
+<li>Audit-Logs</li>
+<li>Penetration Test Reports</li>
+</ul>
+<h2 id="referenzen">Referenzen</h2>
+<h3 id="interne-dokumente">Interne Dokumente</h3>
+<ul>
+<li>Data Encryption Policy</li>
+<li>Key Management Procedures</li>
+<li>Data Classification Policy</li>
+</ul>
+<h3 id="externe-standards">Externe Standards</h3>
+<ul>
+<li>CSA CCM v4.0 - DSP-05</li>
+<li>NIST SP 800-57 (Key Management)</li>
+<li>NIST SP 800-111 (Storage Encryption)</li>
+<li>ISO/IEC 27018:2019 (Cloud Privacy)</li>
+<li>FIPS 140-2 (Cryptographic Module Validation)</li>
+<li>GDPR Article 32 (Security of Processing)</li>
+</ul>
+<h2 id="anderungshistorie">Änderungshistorie</h2>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Datum</th>
+<th>Autor</th>
+<th>Änderung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>[Date]</td>
+<td>[Author]</td>
+<td>Initiale Version</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0200_data_security_privacy_overview.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0220_dsp02_data_security_integrity.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

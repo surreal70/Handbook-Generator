@@ -1,6 +1,6 @@
 # Policy: Ausnahmen und Risk Waivers
 
-**Dokument-ID:** 0640
+**Dokument-ID:** ISMS-0640
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

@@ -1,6 +1,6 @@
 # Anhang: DSFA Quick Reference
 
-**Dokument-ID:** 0710
+**Dokument-ID:** GDPR-0710
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

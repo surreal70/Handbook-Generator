@@ -6,7 +6,7 @@ Classification: Internal
 
 # Technical Debt Management
 
-**Dokument-ID:** [FRAMEWORK]-0460
+**Dokument-ID:** DORA-0460
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

@@ -1,6 +1,6 @@
 # Guideline: EDR, Antivirus, Host Firewall and Device Compliance
 
-**Document-ID:** [FRAMEWORK]-0630
+**Document-ID:** ISMS-0630
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

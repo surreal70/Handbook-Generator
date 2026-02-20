@@ -21,10 +21,22 @@
         
         <main>
 <h1 id="log-management-und-audit">Log Management und Audit</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0190
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
 <h2 id="zweck-und-geltungsbereich">Zweck und Geltungsbereich</h2>
 <p>Dieses Dokument beschreibt die Log-Management- und Audit-Prozesse für AdminSend GmbH. Es definiert Log-Sammlung, -Aggregation, -Retention, Audit-Trail-Anforderungen und SIEM-Integration zur Sicherstellung von Nachvollziehbarkeit, Compliance und Security-Monitoring.</p>
 <p><strong>Geltungsbereich:</strong> Alle IT-Systeme, Netzwerke, Applikationen und Security-Komponenten von AdminSend GmbH</p>
-<p><strong>Verantwortlich:</strong> Thomas Weber (thomas.weber@adminsend.de)</p>
+<p><strong>Verantwortlich:</strong> [TODO] ({{ meta-organisation-roles.role_CISO_email }})</p>
 <h2 id="log-management-grundlagen">Log-Management-Grundlagen</h2>
 <h3 id="ziele">Ziele</h3>
 <p><strong>Primäre Ziele:</strong>
@@ -241,35 +253,35 @@
 - Begrenzte Parsing-Optionen</p>
 <p><strong>Verwendung:</strong> Windows-Umgebungen</p>
 <h3 id="log-aggregation-platform">Log-Aggregation-Platform</h3>
-<p><strong>SIEM-System:</strong> {{ meta.siem_system }}<br />
-<strong>Version:</strong> {{ meta.siem_version }}<br />
-<strong>Management-URL:</strong> {{ meta.siem_url }}</p>
+<p><strong>SIEM-System:</strong> {{ meta-handbook.siem_system }}<br />
+<strong>Version:</strong> [TODO]<br />
+<strong>Management-URL:</strong> {{ meta-handbook.siem_url }}</p>
 <p><strong>Komponenten:</strong>
-- <strong>Log-Collectors:</strong> {{ meta.log_collectors }}
-- <strong>Indexer:</strong> {{ meta.log_indexers }}
-- <strong>Search-Heads:</strong> {{ meta.log_search_heads }}
-- <strong>Storage:</strong> {{ meta.log_storage }}</p>
+- <strong>Log-Collectors:</strong> {{ meta-handbook.log_collectors }}
+- <strong>Indexer:</strong> {{ meta-handbook.log_indexers }}
+- <strong>Search-Heads:</strong> {{ meta-handbook.log_search_heads }}
+- <strong>Storage:</strong> {{ meta-handbook.log_storage }}</p>
 <p><strong>Kapazität:</strong>
-- <strong>Ingestion-Rate:</strong> {{ meta.log_ingestion_rate }} GB/Tag
-- <strong>Storage-Kapazität:</strong> {{ meta.log_storage_capacity }} TB
-- <strong>Retention (Hot):</strong> {{ meta.log_retention_hot }} Tage
-- <strong>Retention (Cold):</strong> {{ meta.log_retention_cold }} Tage</p>
+- <strong>Ingestion-Rate:</strong> {{ meta-handbook.log_ingestion_rate }} GB/Tag
+- <strong>Storage-Kapazität:</strong> {{ meta-handbook.log_storage_capacity }} TB
+- <strong>Retention (Hot):</strong> {{ meta-handbook.log_retention_hot }} Tage
+- <strong>Retention (Cold):</strong> {{ meta-handbook.log_retention_cold }} Tage</p>
 <h3 id="log-quellen-konfiguration">Log-Quellen-Konfiguration</h3>
 <h4 id="linux-server">Linux-Server</h4>
 <p><strong>Rsyslog-Konfiguration:</strong></p>
 <div class="codehilite"><pre><span></span><code><span class="c1"># /etc/rsyslog.d/50-remote.conf</span>
 
 <span class="c1"># Alle Logs an zentralen Syslog-Server senden</span>
-*.*<span class="w"> </span>@@syslog.<span class="o">{{</span><span class="w"> </span>meta.organization.domain<span class="w"> </span><span class="o">}}</span>:514
+*.*<span class="w"> </span>@@syslog.<span class="o">{{</span><span class="w"> </span>meta-handbook.domain<span class="w"> </span><span class="o">}}</span>:514
 
 <span class="c1"># Nur Security-Logs senden</span>
-authpriv.*<span class="w"> </span>@@syslog.<span class="o">{{</span><span class="w"> </span>meta.organization.domain<span class="w"> </span><span class="o">}}</span>:514
+authpriv.*<span class="w"> </span>@@syslog.<span class="o">{{</span><span class="w"> </span>meta-handbook.domain<span class="w"> </span><span class="o">}}</span>:514
 
 <span class="c1"># TLS-verschlüsselt</span>
 <span class="nv">$DefaultNetstreamDriver</span><span class="w"> </span>gtls
 <span class="nv">$ActionSendStreamDriverMode</span><span class="w"> </span><span class="m">1</span>
 <span class="nv">$ActionSendStreamDriverAuthMode</span><span class="w"> </span>x509/name
-*.*<span class="w"> </span>@@syslog.<span class="o">{{</span><span class="w"> </span>meta.organization.domain<span class="w"> </span><span class="o">}}</span>:6514
+*.*<span class="w"> </span>@@syslog.<span class="o">{{</span><span class="w"> </span>meta-handbook.domain<span class="w"> </span><span class="o">}}</span>:6514
 </code></pre></div>
 
 <h4 id="windows-server">Windows-Server</h4>
@@ -283,7 +295,7 @@ authpriv.*<span class="w"> </span>@@syslog.<span class="o">{{</span><span class=
 <span class="c"># Subscription-XML</span>
 <span class="p">&lt;</span><span class="n">Subscription</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="n">SubscriptionId</span><span class="p">&gt;</span><span class="n">Security-Events</span><span class="p">&lt;/</span><span class="n">SubscriptionId</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="n">DestinationUrl</span><span class="p">&gt;</span><span class="n">http</span><span class="p">://</span><span class="n">wec-server</span><span class="p">.{{</span> <span class="n">meta</span><span class="p">.</span><span class="n">organization</span><span class="p">.</span><span class="n">domain</span> <span class="p">}}:</span><span class="n">5985</span><span class="p">/</span><span class="n">wsman</span><span class="p">&lt;/</span><span class="n">DestinationUrl</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="n">DestinationUrl</span><span class="p">&gt;</span><span class="n">http</span><span class="p">://</span><span class="n">wec-server</span><span class="p">.{{</span> <span class="n">meta-handbook</span><span class="p">.</span><span class="n">domain</span> <span class="p">}}:</span><span class="n">5985</span><span class="p">/</span><span class="n">wsman</span><span class="p">&lt;/</span><span class="n">DestinationUrl</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="n">Query</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="n">QueryList</span><span class="p">&gt;</span>
       <span class="p">&lt;</span><span class="n">Query</span> <span class="n">Id</span><span class="p">=</span><span class="s2">&quot;0&quot;</span><span class="p">&gt;</span>
@@ -296,7 +308,7 @@ authpriv.*<span class="w"> </span>@@syslog.<span class="o">{{</span><span class=
 
 <h4 id="firewall">Firewall</h4>
 <p><strong>Syslog-Konfiguration:</strong>
-- Syslog-Server: {{ netbox.syslog.server }}
+- Syslog-Server: [[ netbox.syslog.server ]]
 - Facility: Local6
 - Severity: Informational und höher
 - Format: RFC 5424</p>
@@ -459,7 +471,7 @@ authpriv.*<span class="w"> </span>@@syslog.<span class="o">{{</span><span class=
 - Verschlüsselung: AES-256
 - Integrität: SHA-256 Checksums
 - Metadaten: JSON-Index</p>
-<p><strong>Archiv-Speicherort:</strong> {{ meta.log_archive_location }}</p>
+<p><strong>Archiv-Speicherort:</strong> {{ meta-handbook.log_archive_location }}</p>
 <h3 id="log-loschung">Log-Löschung</h3>
 <p><strong>Automatische Löschung:</strong>
 - Logs älter als Retention-Policy werden automatisch gelöscht
@@ -475,7 +487,7 @@ authpriv.*<span class="w"> </span>@@syslog.<span class="o">{{</span><span class=
 - Dokumentation der Löschung</p>
 <h2 id="log-analyse-und-monitoring">Log-Analyse und -Monitoring</h2>
 <h3 id="siem-integration">SIEM-Integration</h3>
-<p><strong>SIEM-System:</strong> {{ meta.siem_system }}</p>
+<p><strong>SIEM-System:</strong> {{ meta-handbook.siem_system }}</p>
 <p><strong>Funktionen:</strong>
 - <strong>Real-time Monitoring:</strong> Echtzeit-Überwachung
 - <strong>Correlation:</strong> Event-Korrelation
@@ -566,9 +578,9 @@ THEN alert &quot;Malware Detected&quot;
 <p><strong>Zielgruppe:</strong> Compliance-Officer, Auditoren</p>
 <h3 id="alerting">Alerting</h3>
 <p><strong>Alert-Kanäle:</strong>
-- <strong>E-Mail:</strong> {{ meta.alert_email }}
+- <strong>E-Mail:</strong> {{ meta-handbook.alert_email }}
 - <strong>SMS:</strong> Für kritische Alerts
-- <strong>Ticketing:</strong> {{ meta.ticketing_system }}
+- <strong>Ticketing:</strong> {{ meta-handbook.ticketing_system }}
 - <strong>SIEM-Console:</strong> Real-time Alerts
 - <strong>Slack/Teams:</strong> Team-Benachrichtigungen</p>
 <p><strong>Alert-Priorisierung:</strong></p>
@@ -713,7 +725,7 @@ THEN alert &quot;Malware Detected&quot;
 - Retention: 7 Jahre</p>
 <h2 id="log-management-tools">Log-Management-Tools</h2>
 <h3 id="siem-platform">SIEM-Platform</h3>
-<p><strong>System:</strong> {{ meta.siem_system }}<br />
+<p><strong>System:</strong> {{ meta-handbook.siem_system }}<br />
 <strong>Komponenten:</strong>
 - Indexer
 - Search-Heads
@@ -749,21 +761,21 @@ THEN alert &quot;Malware Detected&quot;
 - Log-Sammlung-Konfiguration
 - Retention-Policy-Umsetzung
 - Tool-Administration</p>
-<p><strong>Team-Lead:</strong> Andreas Huemmer</p>
+<p><strong>Team-Lead:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</p>
 <h3 id="security-operations-team">Security-Operations-Team</h3>
 <p><strong>Verantwortlichkeiten:</strong>
 - SIEM-Monitoring
 - Alert-Response
 - Use-Case-Entwicklung
 - Threat-Hunting</p>
-<p><strong>Team-Lead:</strong> Thomas Weber</p>
+<p><strong>Team-Lead:</strong> [TODO]</p>
 <h3 id="compliance-officer">Compliance-Officer</h3>
 <p><strong>Verantwortlichkeiten:</strong>
 - Compliance-Anforderungen definieren
 - Audit-Unterstützung
 - Retention-Policy-Review
 - Regulierungs-Überwachung</p>
-<p><strong>Person:</strong> {{ meta.compliance_officer }}</p>
+<p><strong>Person:</strong> [TODO]</p>
 <h2 id="metriken-und-reporting">Metriken und Reporting</h2>
 <h3 id="log-management-metriken">Log-Management-Metriken</h3>
 <table>
@@ -832,12 +844,11 @@ THEN alert &quot;Malware Detected&quot;
 <li>CIS Controls v8 - Control 8 (Audit Log Management)</li>
 <li>ITIL v4 - Monitoring and Event Management</li>
 </ul>
-<hr />
-<p><strong>Dokumentverantwortlicher:</strong> IT Operations Manager<br />
-<strong>Genehmigt durch:</strong> CIO<br />
-<strong>Version:</strong> 1.0.0<br />
-<strong>Klassifizierung:</strong> internal<br />
-<strong>Letzte Aktualisierung:</strong> {{ meta.date }}</p>
+<p><strong>Dokumentverantwortlicher:</strong> [TODO]<br />
+<strong>Genehmigt durch:</strong> [TODO]<br />
+<strong>Version:</strong> 0<br />
+<strong>Klassifizierung:</strong> Internal<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta-handbook.date }}</p>
         </main>
         
         <nav class="page-nav">

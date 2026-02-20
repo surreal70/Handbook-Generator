@@ -1,6 +1,6 @@
 # Protection Profile Conformance
 
-**Document-ID:** 0600
+**Document-ID:** COMMON-CRITERIA-0600
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

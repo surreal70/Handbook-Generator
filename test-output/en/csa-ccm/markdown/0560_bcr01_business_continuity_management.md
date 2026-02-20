@@ -6,7 +6,7 @@ Classification: Internal
 
 # BCR-01: Business Continuity Management
 
-**Document-ID:** [FRAMEWORK]-0560
+**Document-ID:** CSA-CCM-0560
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

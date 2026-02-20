@@ -1,6 +1,6 @@
 # Dokumentenlenkung / Dokumentierte Information
 
-**Dokument-ID:** 0050
+**Dokument-ID:** ISMS-0050
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

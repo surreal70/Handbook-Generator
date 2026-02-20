@@ -1,6 +1,6 @@
 # Policy: Configuration and Hardening
 
-**Document-ID:** [FRAMEWORK]-0540
+**Document-ID:** ISMS-0540
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

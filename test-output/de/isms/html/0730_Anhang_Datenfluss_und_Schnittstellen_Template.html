@@ -21,10 +21,17 @@
         
         <main>
 <h1 id="anhang-c-datenfluss-und-schnittstellen">Anhang C: Datenfluss und Schnittstellen</h1>
-<p><strong>Dokumenttyp:</strong> Anhang<br />
-<strong>Version:</strong> 1.0.0<br />
-<strong>Datum:</strong> {{ meta.document.date }}<br />
-<strong>Klassifizierung:</strong> internal</p>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0730
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
 <hr />
 <h2 id="zweck">Zweck</h2>
 <p>Dieses Dokument dokumentiert alle Datenflüsse und Schnittstellen innerhalb der Organisation sowie zu externen Partnern und Dienstleistern. Es erfüllt die Anforderungen von:</p>
@@ -42,9 +49,8 @@
 </ul>
 <h2 id="geltungsbereich">Geltungsbereich</h2>
 <p><strong>Organisation:</strong> AdminSend GmbH<br />
-<strong>ISMS Scope:</strong> {{ meta.isms.scope }}<br />
-<strong>Verantwortlich:</strong> Thomas Weber, Data Protection Officer</p>
-<hr />
+<strong>ISMS Scope:</strong> {{ meta-handbook.isms_scope }}<br />
+<strong>Verantwortlich:</strong> [TODO], Data Protection Officer</p>
 <h2 id="datenfluss-kategorien">Datenfluss-Kategorien</h2>
 <h3 id="interne-datenflusse">Interne Datenflüsse</h3>
 <p>Datenübertragungen innerhalb der Organisation zwischen verschiedenen Systemen und Standorten.</p>
@@ -52,7 +58,6 @@
 <p>Datenübertragungen zwischen der Organisation und externen Partnern, Kunden, Lieferanten oder Cloud-Diensten.</p>
 <h3 id="grenzuberschreitende-datenflusse">Grenzüberschreitende Datenflüsse</h3>
 <p>Datenübertragungen über Ländergrenzen hinweg, die besondere Datenschutzanforderungen (DSGVO Art. 44-50) erfüllen müssen.</p>
-<hr />
 <h2 id="datenklassifizierung">Datenklassifizierung</h2>
 <p>Alle Datenflüsse werden nach folgenden Klassifizierungen bewertet:</p>
 <table>
@@ -91,7 +96,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="interne-datenflusse_1">Interne Datenflüsse</h2>
 <h3 id="anwendungs-zu-anwendungs-kommunikation">Anwendungs-zu-Anwendungs Kommunikation</h3>
 <table>
@@ -160,7 +164,6 @@
 - Firewall-Regeln mit Least-Privilege-Prinzip
 - Verschlüsselte Verbindungen (TLS 1.2+)
 - Authentifizierung über Zertifikate oder Service Accounts</p>
-<hr />
 <h3 id="site-to-site-verbindungen">Site-to-Site Verbindungen</h3>
 <table>
 <thead>
@@ -178,7 +181,7 @@
 <tbody>
 <tr>
 <td>DF-S2S-001</td>
-<td>{{ netbox.site.name }}</td>
+<td>[[ netbox.site.name ]]</td>
 <td>[TODO: Zweigstelle]</td>
 <td>MPLS</td>
 <td>[TODO: Mbps]</td>
@@ -188,7 +191,7 @@
 </tr>
 <tr>
 <td>DF-S2S-002</td>
-<td>{{ netbox.site.name }}</td>
+<td>[[ netbox.site.name ]]</td>
 <td>[TODO: DR-Standort]</td>
 <td>Dedicated Line</td>
 <td>[TODO: Mbps]</td>
@@ -213,7 +216,6 @@
 - Redundante Verbindungen für kritische Standorte
 - Monitoring und Alerting bei Verbindungsausfällen
 - Regelmäßige Sicherheitsaudits</p>
-<hr />
 <h3 id="datenbank-replikation">Datenbank-Replikation</h3>
 <table>
 <thead>
@@ -261,7 +263,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="externe-datenflusse_1">Externe Datenflüsse</h2>
 <h3 id="cloud-services">Cloud Services</h3>
 <table>
@@ -326,7 +327,6 @@
 - Verschlüsselung in Transit und At-Rest
 - Regelmäßige Security Assessments der Cloud Provider
 - Data Residency Compliance (DSGVO)</p>
-<hr />
 <h3 id="partner-schnittstellen">Partner-Schnittstellen</h3>
 <table>
 <thead>
@@ -380,7 +380,6 @@
 - Mutual TLS (mTLS) für API-Kommunikation
 - API Rate Limiting und Monitoring
 - Regelmäßige Sicherheitsaudits</p>
-<hr />
 <h3 id="kunden-schnittstellen">Kunden-Schnittstellen</h3>
 <table>
 <thead>
@@ -434,7 +433,6 @@
 - Rate Limiting und Throttling
 - Input Validation und Output Encoding
 - Security Headers (HSTS, CSP, etc.)</p>
-<hr />
 <h2 id="grenzuberschreitende-datenflusse_1">Grenzüberschreitende Datenflüsse</h2>
 <h3 id="eu-drittland-transfers">EU-Drittland-Transfers</h3>
 <table>
@@ -452,7 +450,7 @@
 <tbody>
 <tr>
 <td>DF-CROSS-001</td>
-<td>{{ netbox.site.name }}</td>
+<td>[[ netbox.site.name ]]</td>
 <td>[TODO: US-Rechenzentrum]</td>
 <td>USA</td>
 <td>Cloud-Daten</td>
@@ -475,7 +473,6 @@
 - Standard Contractual Clauses (SCC) gemäß Art. 46 Abs. 2 lit. c DSGVO
 - Transfer Impact Assessment (TIA) durchgeführt
 - Zusätzliche Schutzmaßnahmen implementiert</p>
-<hr />
 <h2 id="schnittstellen-dokumentation">Schnittstellen-Dokumentation</h2>
 <h3 id="api-schnittstellen">API-Schnittstellen</h3>
 <table>
@@ -540,7 +537,6 @@
 - Output Filtering (keine sensiblen Daten in Fehlermeldungen)
 - Logging und Monitoring aller API-Zugriffe
 - Versionierung und Deprecation Policy</p>
-<hr />
 <h3 id="datei-transfer-schnittstellen">Datei-Transfer-Schnittstellen</h3>
 <table>
 <thead>
@@ -598,7 +594,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h3 id="messaging-schnittstellen">Messaging-Schnittstellen</h3>
 <table>
 <thead>
@@ -646,7 +641,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h3 id="e-mail-kommunikation">E-Mail-Kommunikation</h3>
 <table>
 <thead>
@@ -663,7 +657,7 @@
 <tbody>
 <tr>
 <td>Geschäfts-E-Mail</td>
-<td>{{ meta.organization.domain }}</td>
+<td>[TODO]</td>
 <td>Extern</td>
 <td>Geschäftskorrespondenz</td>
 <td>Vertraulich</td>
@@ -672,7 +666,7 @@
 </tr>
 <tr>
 <td>Vertrauliche E-Mail</td>
-<td>{{ meta.organization.domain }}</td>
+<td>[TODO]</td>
 <td>Extern</td>
 <td>Vertragsdokumente</td>
 <td>Streng Vertraulich</td>
@@ -681,8 +675,8 @@
 </tr>
 <tr>
 <td>Interne E-Mail</td>
-<td>{{ meta.organization.domain }}</td>
-<td>{{ meta.organization.domain }}</td>
+<td>[TODO]</td>
+<td>[TODO]</td>
 <td>Interne Kommunikation</td>
 <td>Intern</td>
 <td>TLS (Enforced)</td>
@@ -696,7 +690,6 @@
 - Data Loss Prevention (DLP) für ausgehende E-Mails
 - E-Mail-Verschlüsselung für vertrauliche Inhalte
 - E-Mail-Archivierung gemäß gesetzlichen Anforderungen</p>
-<hr />
 <h2 id="netzwerk-architektur">Netzwerk-Architektur</h2>
 <h3 id="netzwerk-zonen">Netzwerk-Zonen</h3>
 <table>
@@ -747,7 +740,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h3 id="firewall-regeln-beispiel">Firewall-Regeln (Beispiel)</h3>
 <table>
 <thead>
@@ -816,7 +808,6 @@
 </tbody>
 </table>
 <p><strong>Hinweis:</strong> Vollständige Firewall-Regeln in separater Dokumentation.</p>
-<hr />
 <h2 id="datenfluss-diagramme">Datenfluss-Diagramme</h2>
 <h3 id="high-level-architektur">High-Level Architektur</h3>
 <div class="codehilite"><pre><span></span><code><span class="k">[Internet]</span>
@@ -839,7 +830,6 @@
 </code></pre></div>
 
 <p><strong>Hinweis:</strong> Detaillierte Netzwerkdiagramme in separaten Dateien (z.B. Visio, Draw.io).</p>
-<hr />
 <h3 id="datenfluss-fur-kritische-geschaftsprozesse">Datenfluss für kritische Geschäftsprozesse</h3>
 <h4 id="beispiel-kundenbestellung">Beispiel: Kundenbestellung</h4>
 <div class="codehilite"><pre><span></span><code><span class="o">[</span><span class="n">Kunde</span><span class="o">]</span><span class="w"> </span>
@@ -856,7 +846,6 @@
 - Authentifizierung auf jeder Ebene
 - Input Validation
 - Audit Logging aller Transaktionen</p>
-<hr />
 <h2 id="risikobewertung-datenflusse">Risikobewertung Datenflüsse</h2>
 <h3 id="risikomatrix">Risikomatrix</h3>
 <table>
@@ -910,7 +899,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="monitoring-und-logging">Monitoring und Logging</h2>
 <h3 id="datenfluss-monitoring">Datenfluss-Monitoring</h3>
 <table>
@@ -954,7 +942,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h3 id="security-events">Security Events</h3>
 <p>Folgende Security Events werden für Datenflüsse überwacht:</p>
 <ul>
@@ -965,7 +952,6 @@
 <li>Verschlüsselungsfehler</li>
 <li>DLP-Verstöße</li>
 </ul>
-<hr />
 <h2 id="compliance-und-datenschutz">Compliance und Datenschutz</h2>
 <h3 id="dsgvo-anforderungen">DSGVO-Anforderungen</h3>
 <table>
@@ -1004,11 +990,9 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h3 id="verarbeitungsverzeichnis-referenz">Verarbeitungsverzeichnis-Referenz</h3>
 <p>Alle Datenflüsse sind im Verarbeitungsverzeichnis gemäß Art. 30 DSGVO dokumentiert.</p>
 <p><strong>Referenz:</strong> [TODO: Link zum Verarbeitungsverzeichnis]</p>
-<hr />
 <h2 id="anderungsmanagement">Änderungsmanagement</h2>
 <h3 id="change-control">Change Control</h3>
 <p>Alle Änderungen an Datenflüssen und Schnittstellen unterliegen dem Change Management Prozess:</p>
@@ -1021,7 +1005,6 @@
 <li><strong>Documentation Update:</strong> Aktualisierung dieses Dokuments</li>
 </ol>
 <p><strong>Referenz:</strong> 0360_Policy_Change_und_Release_Management.md</p>
-<hr />
 <h2 id="referenzen">Referenzen</h2>
 <ul>
 <li>Policy: 0660_Policy_Informationsuebertragung_und_Kommunikation.md</li>
@@ -1032,9 +1015,8 @@
 <li>Richtlinie: 0610_Richtlinie_Segmentierung_Firewalling_und_Network_Access_Control.md</li>
 <li>Anhang: 0720_Anhang_Asset_und_Systeminventar_Template.md</li>
 </ul>
-<hr />
-<p><strong>Dokumentverantwortlicher:</strong> Thomas Weber<br />
-<strong>Genehmigt durch:</strong> {{ meta.management.name }}<br />
+<p><strong>Dokumentverantwortlicher:</strong> [TODO]<br />
+<strong>Genehmigt durch:</strong> {{ meta-handbook.management_name }}<br />
 <strong>Nächste Überprüfung:</strong> Halbjährlich</p>
         </main>
         

@@ -1,6 +1,6 @@
 # Organizational Security Policies (OSPs)
 
-**Document-ID:** 0220
+**Document-ID:** COMMON-CRITERIA-0220
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

@@ -6,7 +6,7 @@ Classification: Internal
 
 # Separate Evaluierungen
 
-**Dokument-ID:** [FRAMEWORK]-0420
+**Dokument-ID:** COSO-0420
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

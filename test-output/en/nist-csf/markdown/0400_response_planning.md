@@ -7,7 +7,7 @@ Classification: Internal
 
 # Response Planning (RS.RP)
 
-**Document-ID:** [FRAMEWORK]-0400
+**Document-ID:** NIST-CSF-0400
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

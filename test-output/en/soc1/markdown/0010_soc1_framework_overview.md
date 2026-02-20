@@ -6,7 +6,7 @@ Classification: Internal
 
 # SOC 1 Framework Overview
 
-**Document-ID:** [FRAMEWORK]-0010
+**Document-ID:** SOC1-0010
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

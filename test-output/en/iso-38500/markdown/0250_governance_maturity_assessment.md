@@ -7,7 +7,7 @@ Classification: Internal
 
 # IT Governance Maturity Assessment
 
-**Document-ID:** [FRAMEWORK]-0250
+**Document-ID:** ISO-38500-0250
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

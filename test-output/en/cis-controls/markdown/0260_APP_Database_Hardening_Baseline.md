@@ -1,6 +1,6 @@
 # APP Hardening Baseline: Databases (generic)
 
-**Document-ID:** [FRAMEWORK]-0260
+**Document-ID:** CIS-CONTROLS-0260
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

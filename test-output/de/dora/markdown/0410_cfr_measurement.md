@@ -6,7 +6,7 @@ Classification: Internal
 
 # CFR Messung
 
-**Dokument-ID:** [FRAMEWORK]-0410
+**Dokument-ID:** DORA-0410
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

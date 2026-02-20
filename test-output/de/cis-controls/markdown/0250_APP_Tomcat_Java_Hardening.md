@@ -1,6 +1,6 @@
 # APP Hardening Standard: Java Runtime / Tomcat (generisch)
 
-**Dokument-ID:** 0250
+**Dokument-ID:** CIS-CONTROLS-0250
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

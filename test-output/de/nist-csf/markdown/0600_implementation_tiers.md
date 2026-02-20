@@ -7,7 +7,7 @@ Classification: Internal
 
 # Implementierungsstufen
 
-**Dokument-ID:** [FRAMEWORK]-0600
+**Dokument-ID:** NIST-CSF-0600
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

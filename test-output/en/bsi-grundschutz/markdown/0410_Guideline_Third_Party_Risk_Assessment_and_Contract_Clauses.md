@@ -1,6 +1,6 @@
 # Guideline: Third Party Risk Assessment and Contract Clauses
 
-**Document-ID:** [FRAMEWORK]-0410
+**Document-ID:** BSI-GRUNDSCHUTZ-0410
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

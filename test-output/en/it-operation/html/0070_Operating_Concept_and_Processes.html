@@ -21,12 +21,23 @@
         
         <main>
 <h1 id="operating-concept-and-processes">Operating Concept and Processes</h1>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0070
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
 <h2 id="overview">Overview</h2>
 <p>This document describes the operating concept and operational processes for the IT service. It defines operating models, process flows according to ITIL standards, interfaces to other processes, and escalation paths.</p>
-<p><strong>Service:</strong> {{ meta.service_name }}<br />
-<strong>Responsible:</strong> Andreas Huemmer<br />
-<strong>Version:</strong> 1.0.0</p>
-<hr />
+<p><strong>Service:</strong> {{ meta-handbook.service_name }}<br />
+<strong>Responsible:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}<br />
+<strong>Version:</strong> 0</p>
 <h2 id="operating-model">Operating Model</h2>
 <h3 id="service-hours">Service Hours</h3>
 <table>
@@ -94,14 +105,13 @@
 </table>
 <h3 id="support-model">Support Model</h3>
 <p><strong>Support Tiers:</strong>
-- <strong>Level 1 (Service Desk):</strong> Julia Becker - julia.becker@adminsend.de
-- <strong>Level 2 (IT Operations):</strong> Andreas Huemmer - andreas.huemmer@adminsend.de
+- <strong>Level 1 (Service Desk):</strong> {{ meta-organisation-roles.role_Service_Desk_Lead }} - {{ meta-organisation-roles.role_Service_Desk_Lead_email }}
+- <strong>Level 2 (IT Operations):</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }} - {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
 - <strong>Level 3 (Specialist/Vendor):</strong> [TODO: Specialist contact]</p>
 <p><strong>On-Call:</strong>
 - <strong>On-Call Rotation:</strong> [TODO: Describe rotation schedule]
 - <strong>Availability:</strong> [TODO: Phone/Pager number]
 - <strong>Response Time:</strong> [TODO: e.g., 15 minutes]</p>
-<hr />
 <h2 id="itil-processes">ITIL Processes</h2>
 <h3 id="service-strategy">Service Strategy</h3>
 <p><strong>Objective:</strong> Strategic alignment of IT services with business requirements</p>
@@ -110,7 +120,7 @@
 - Financial Management
 - Demand Management
 - Business Relationship Management</p>
-<p><strong>Responsible:</strong> Anna Schmidt</p>
+<p><strong>Responsible:</strong> [TODO]</p>
 <h3 id="service-design">Service Design</h3>
 <p><strong>Objective:</strong> Design of new or changed services for production operation</p>
 <p><strong>Activities:</strong>
@@ -121,7 +131,7 @@
 - IT Service Continuity Management
 - Information Security Management
 - Supplier Management</p>
-<p><strong>Responsible:</strong> Andreas Huemmer</p>
+<p><strong>Responsible:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</p>
 <h3 id="service-transition">Service Transition</h3>
 <p><strong>Objective:</strong> Transition of new or changed services into production</p>
 <p><strong>Activities:</strong>
@@ -130,7 +140,7 @@
 - Service Validation and Testing
 - Knowledge Management
 - Configuration Management (see Chapter 0090)</p>
-<p><strong>Responsible:</strong> Andreas Huemmer</p>
+<p><strong>Responsible:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</p>
 <h3 id="service-operation">Service Operation</h3>
 <p><strong>Objective:</strong> Ensure effective and efficient operation</p>
 <p><strong>Activities:</strong>
@@ -139,7 +149,7 @@
 - Event Management
 - Request Fulfillment
 - Access Management (see Chapter 0100)</p>
-<p><strong>Responsible:</strong> Julia Becker (Level 1), Andreas Huemmer (Level 2)</p>
+<p><strong>Responsible:</strong> {{ meta-organisation-roles.role_Service_Desk_Lead }} (Level 1), {{ meta-organisation-roles.role_IT_Operations_Manager }} (Level 2)</p>
 <h3 id="continual-service-improvement-csi">Continual Service Improvement (CSI)</h3>
 <p><strong>Objective:</strong> Continuous improvement of service quality</p>
 <p><strong>Activities:</strong>
@@ -147,8 +157,7 @@
 - Service Review
 - Process Improvement
 - Root Cause Analysis</p>
-<p><strong>Responsible:</strong> Anna Schmidt</p>
-<hr />
+<p><strong>Responsible:</strong> [TODO]</p>
 <h2 id="process-interfaces">Process Interfaces</h2>
 <h3 id="interfaces-to-other-it-processes">Interfaces to Other IT Processes</h3>
 <table>
@@ -201,7 +210,7 @@
 <td><strong>Security Management</strong></td>
 <td>Security Events → Operations</td>
 <td>Security Incidents, Patches</td>
-<td>Thomas Weber</td>
+<td>[TODO]</td>
 </tr>
 <tr>
 <td><strong>Backup Management</strong></td>
@@ -232,7 +241,7 @@
 <td><strong>Finance</strong></td>
 <td>Budget and Costs</td>
 <td>Cost Reports, Budget Requests</td>
-<td>Maria Müller</td>
+<td>[TODO]</td>
 </tr>
 <tr>
 <td><strong>Compliance</strong></td>
@@ -248,23 +257,22 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="escalation-paths">Escalation Paths</h2>
 <h3 id="technical-escalation">Technical Escalation</h3>
 <div class="codehilite"><pre><span></span><code><span class="err">┌─────────────────────────────────────────────────────────────┐</span>
 <span class="err">│</span><span class="w"> </span><span class="n">Level</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="w"> </span><span class="n">Service</span><span class="w"> </span><span class="n">Desk</span><span class="w">                                        </span><span class="err">│</span>
-<span class="err">│</span><span class="w"> </span><span class="n">Contact:</span><span class="w"> </span><span class="n">Julia</span><span class="w"> </span><span class="n">Becker</span><span class="w">                   </span><span class="err">│</span>
-<span class="err">│</span><span class="w"> </span><span class="n">Email:</span><span class="w"> </span><span class="n">julia</span><span class="o">.</span><span class="n">becker</span><span class="nv">@adminsend</span><span class="o">.</span><span class="n">de</span><span class="w">                    </span><span class="err">│</span>
-<span class="err">│</span><span class="w"> </span><span class="n">Phone:</span><span class="w"> </span><span class="o">+</span><span class="mi">49</span><span class="w"> </span><span class="mi">89</span><span class="w"> </span><span class="mi">12345678</span><span class="o">-</span><span class="mi">111</span><span class="w">                    </span><span class="err">│</span>
+<span class="err">│</span><span class="w"> </span><span class="n">Contact:</span><span class="w"> </span><span class="p">{{</span><span class="w"> </span><span class="n">meta</span><span class="o">-</span><span class="n">organisation</span><span class="o">-</span><span class="n">roles</span><span class="o">.</span><span class="n">role_Service_Desk_Lead</span><span class="w"> </span><span class="p">}}</span><span class="w">                   </span><span class="err">│</span>
+<span class="err">│</span><span class="w"> </span><span class="n">Email:</span><span class="w"> </span><span class="p">{{</span><span class="w"> </span><span class="n">meta</span><span class="o">-</span><span class="n">organisation</span><span class="o">-</span><span class="n">roles</span><span class="o">.</span><span class="n">role_Service_Desk_Lead_email</span><span class="w"> </span><span class="p">}}</span><span class="w">                    </span><span class="err">│</span>
+<span class="err">│</span><span class="w"> </span><span class="n">Phone:</span><span class="w"> </span><span class="p">{{</span><span class="w"> </span><span class="n">meta</span><span class="o">-</span><span class="n">organisation</span><span class="o">-</span><span class="n">roles</span><span class="o">.</span><span class="n">role_Service_Desk_Lead_phone</span><span class="w"> </span><span class="p">}}</span><span class="w">                    </span><span class="err">│</span>
 <span class="err">│</span><span class="w"> </span><span class="n">Escalate</span><span class="w"> </span><span class="n">after:</span><span class="w"> </span><span class="mi">30</span><span class="w"> </span><span class="n">minutes</span><span class="w"> </span><span class="p">(</span><span class="n">P1</span><span class="p">),</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">hours</span><span class="w"> </span><span class="p">(</span><span class="n">P2</span><span class="p">)</span><span class="w">               </span><span class="err">│</span>
 <span class="err">└────────────────────┬────────────────────────────────────────┘</span>
 <span class="w">                     </span><span class="err">│</span>
 <span class="w">                     </span><span class="err">▼</span>
 <span class="err">┌─────────────────────────────────────────────────────────────┐</span>
 <span class="err">│</span><span class="w"> </span><span class="n">Level</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span><span class="w"> </span><span class="n">IT</span><span class="w"> </span><span class="n">Operations</span><span class="w">                                       </span><span class="err">│</span>
-<span class="err">│</span><span class="w"> </span><span class="n">Contact:</span><span class="w"> </span><span class="n">Andreas</span><span class="w"> </span><span class="n">Huemmer</span><span class="w">               </span><span class="err">│</span>
-<span class="err">│</span><span class="w"> </span><span class="n">Email:</span><span class="w"> </span><span class="n">andreas</span><span class="o">.</span><span class="n">huemmer</span><span class="nv">@adminsend</span><span class="o">.</span><span class="n">de</span><span class="w">                </span><span class="err">│</span>
-<span class="err">│</span><span class="w"> </span><span class="n">Phone:</span><span class="w"> </span><span class="o">+</span><span class="mi">49</span><span class="w"> </span><span class="mi">89</span><span class="w"> </span><span class="mi">12345678</span><span class="o">-</span><span class="mi">250</span><span class="w">                </span><span class="err">│</span>
+<span class="err">│</span><span class="w"> </span><span class="n">Contact:</span><span class="w"> </span><span class="p">{{</span><span class="w"> </span><span class="n">meta</span><span class="o">-</span><span class="n">organisation</span><span class="o">-</span><span class="n">roles</span><span class="o">.</span><span class="n">role_IT_Operations_Manager</span><span class="w"> </span><span class="p">}}</span><span class="w">               </span><span class="err">│</span>
+<span class="err">│</span><span class="w"> </span><span class="n">Email:</span><span class="w"> </span><span class="p">{{</span><span class="w"> </span><span class="n">meta</span><span class="o">-</span><span class="n">organisation</span><span class="o">-</span><span class="n">roles</span><span class="o">.</span><span class="n">role_IT_Operations_Manager_email</span><span class="w"> </span><span class="p">}}</span><span class="w">                </span><span class="err">│</span>
+<span class="err">│</span><span class="w"> </span><span class="n">Phone:</span><span class="w"> </span><span class="p">{{</span><span class="w"> </span><span class="n">meta</span><span class="o">-</span><span class="n">organisation</span><span class="o">-</span><span class="n">roles</span><span class="o">.</span><span class="n">role_IT_Operations_Manager_phone</span><span class="w"> </span><span class="p">}}</span><span class="w">                </span><span class="err">│</span>
 <span class="err">│</span><span class="w"> </span><span class="n">Escalate</span><span class="w"> </span><span class="n">after:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">hour</span><span class="w"> </span><span class="p">(</span><span class="n">P1</span><span class="p">),</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="n">hours</span><span class="w"> </span><span class="p">(</span><span class="n">P2</span><span class="p">)</span><span class="w">                   </span><span class="err">│</span>
 <span class="err">└────────────────────┬────────────────────────────────────────┘</span>
 <span class="w">                     </span><span class="err">│</span>
@@ -281,24 +289,24 @@
 <h3 id="management-escalation">Management Escalation</h3>
 <div class="codehilite"><pre><span></span><code><span class="err">┌─────────────────────────────────────────────────────────────┐</span>
 <span class="err">│</span><span class="w"> </span><span class="k">Level</span><span class="w"> </span><span class="mi">1</span><span class="err">:</span><span class="w"> </span><span class="n">IT</span><span class="w"> </span><span class="n">Operations</span><span class="w"> </span><span class="n">Manager</span><span class="w">                               </span><span class="err">│</span>
-<span class="err">│</span><span class="w"> </span><span class="nl">Contact</span><span class="p">:</span><span class="w"> </span><span class="n">Andreas</span><span class="w"> </span><span class="n">Huemmer</span><span class="w">               </span><span class="err">│</span>
-<span class="err">│</span><span class="w"> </span><span class="nl">Email</span><span class="p">:</span><span class="w"> </span><span class="n">andreas</span><span class="p">.</span><span class="n">huemmer</span><span class="nv">@adminsend</span><span class="p">.</span><span class="n">de</span><span class="w">                </span><span class="err">│</span>
+<span class="err">│</span><span class="w"> </span><span class="nl">Contact</span><span class="p">:</span><span class="w"> </span><span class="err">{{</span><span class="w"> </span><span class="n">meta</span><span class="o">-</span><span class="n">organisation</span><span class="o">-</span><span class="n">roles</span><span class="p">.</span><span class="n">role_IT_Operations_Manager</span><span class="w"> </span><span class="err">}}</span><span class="w">               </span><span class="err">│</span>
+<span class="err">│</span><span class="w"> </span><span class="nl">Email</span><span class="p">:</span><span class="w"> </span><span class="err">{{</span><span class="w"> </span><span class="n">meta</span><span class="o">-</span><span class="n">organisation</span><span class="o">-</span><span class="n">roles</span><span class="p">.</span><span class="n">role_IT_Operations_Manager_email</span><span class="w"> </span><span class="err">}}</span><span class="w">                </span><span class="err">│</span>
 <span class="err">│</span><span class="w"> </span><span class="n">Escalate</span><span class="w"> </span><span class="k">for</span><span class="err">:</span><span class="w"> </span><span class="n">Critical</span><span class="w"> </span><span class="n">Incidents</span><span class="w"> </span><span class="p">(</span><span class="n">P1</span><span class="p">),</span><span class="w"> </span><span class="n">SLA</span><span class="w"> </span><span class="n">Violation</span><span class="w">        </span><span class="err">│</span>
 <span class="err">└────────────────────┬────────────────────────────────────────┘</span>
 <span class="w">                     </span><span class="err">│</span>
 <span class="w">                     </span><span class="err">▼</span>
 <span class="err">┌─────────────────────────────────────────────────────────────┐</span>
 <span class="err">│</span><span class="w"> </span><span class="k">Level</span><span class="w"> </span><span class="mi">2</span><span class="err">:</span><span class="w"> </span><span class="n">Chief</span><span class="w"> </span><span class="n">Information</span><span class="w"> </span><span class="n">Officer</span><span class="w"> </span><span class="p">(</span><span class="n">CIO</span><span class="p">)</span><span class="w">                     </span><span class="err">│</span>
-<span class="err">│</span><span class="w"> </span><span class="nl">Contact</span><span class="p">:</span><span class="w"> </span><span class="n">Anna</span><span class="w"> </span><span class="n">Schmidt</span><span class="w">                                 </span><span class="err">│</span>
-<span class="err">│</span><span class="w"> </span><span class="nl">Email</span><span class="p">:</span><span class="w"> </span><span class="n">anna</span><span class="p">.</span><span class="n">schmidt</span><span class="nv">@adminsend</span><span class="p">.</span><span class="n">de</span><span class="w">                                  </span><span class="err">│</span>
+<span class="err">│</span><span class="w"> </span><span class="nl">Contact</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="n">TODO</span><span class="o">]</span><span class="w">                                 </span><span class="err">│</span>
+<span class="err">│</span><span class="w"> </span><span class="nl">Email</span><span class="p">:</span><span class="w"> </span><span class="err">{{</span><span class="w"> </span><span class="n">meta</span><span class="o">-</span><span class="n">organisation</span><span class="o">-</span><span class="n">roles</span><span class="p">.</span><span class="n">role_CIO_email</span><span class="w"> </span><span class="err">}}</span><span class="w">                                  </span><span class="err">│</span>
 <span class="err">│</span><span class="w"> </span><span class="n">Escalate</span><span class="w"> </span><span class="k">for</span><span class="err">:</span><span class="w"> </span><span class="n">Major</span><span class="w"> </span><span class="n">Incidents</span><span class="p">,</span><span class="w"> </span><span class="n">Business</span><span class="w"> </span><span class="n">Impact</span><span class="w">              </span><span class="err">│</span>
 <span class="err">└────────────────────┬────────────────────────────────────────┘</span>
 <span class="w">                     </span><span class="err">│</span>
 <span class="w">                     </span><span class="err">▼</span>
 <span class="err">┌─────────────────────────────────────────────────────────────┐</span>
 <span class="err">│</span><span class="w"> </span><span class="k">Level</span><span class="w"> </span><span class="mi">3</span><span class="err">:</span><span class="w"> </span><span class="n">Chief</span><span class="w"> </span><span class="n">Executive</span><span class="w"> </span><span class="n">Officer</span><span class="w"> </span><span class="p">(</span><span class="n">CEO</span><span class="p">)</span><span class="w">                       </span><span class="err">│</span>
-<span class="err">│</span><span class="w"> </span><span class="nl">Contact</span><span class="p">:</span><span class="w"> </span><span class="nf">Max</span><span class="w"> </span><span class="n">Mustermann</span><span class="w">                                 </span><span class="err">│</span>
-<span class="err">│</span><span class="w"> </span><span class="nl">Email</span><span class="p">:</span><span class="w"> </span><span class="nf">max</span><span class="p">.</span><span class="n">mustermann</span><span class="nv">@adminsend</span><span class="p">.</span><span class="n">de</span><span class="w">                                  </span><span class="err">│</span>
+<span class="err">│</span><span class="w"> </span><span class="nl">Contact</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="n">TODO</span><span class="o">]</span><span class="w">                                 </span><span class="err">│</span>
+<span class="err">│</span><span class="w"> </span><span class="nl">Email</span><span class="p">:</span><span class="w"> </span><span class="err">{{</span><span class="w"> </span><span class="n">meta</span><span class="o">-</span><span class="n">organisation</span><span class="o">-</span><span class="n">roles</span><span class="p">.</span><span class="n">role_CEO_email</span><span class="w"> </span><span class="err">}}</span><span class="w">                                  </span><span class="err">│</span>
 <span class="err">│</span><span class="w"> </span><span class="n">Escalate</span><span class="w"> </span><span class="k">for</span><span class="err">:</span><span class="w"> </span><span class="n">Business</span><span class="o">-</span><span class="n">critical</span><span class="w"> </span><span class="n">outages</span><span class="w">                     </span><span class="err">│</span>
 <span class="err">└─────────────────────────────────────────────────────────────┘</span>
 </code></pre></div>
@@ -340,7 +348,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="operational-process-overview">Operational Process Overview</h2>
 <h3 id="daily-operating-routines">Daily Operating Routines</h3>
 <p><strong>Morning Check (08:00):</strong>
@@ -378,7 +385,6 @@
 <li>[ ] Compliance check</li>
 <li>[ ] Vendor review</li>
 </ul>
-<hr />
 <h2 id="process-metrics-and-kpis">Process Metrics and KPIs</h2>
 <h3 id="operating-metrics">Operating Metrics</h3>
 <table>
@@ -472,7 +478,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="continuous-improvement">Continuous Improvement</h2>
 <h3 id="csi-process">CSI Process</h3>
 <ol>
@@ -523,7 +528,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="documentation-and-knowledge-management">Documentation and Knowledge Management</h2>
 <h3 id="documentation-repository">Documentation Repository</h3>
 <ul>
@@ -541,7 +545,6 @@
 <li><strong>Knowledge Sharing:</strong> Team meetings and workshops</li>
 <li><strong>Lessons Learned:</strong> Post-incident reviews</li>
 </ul>
-<hr />
 <h2 id="compliance-and-governance">Compliance and Governance</h2>
 <h3 id="relevant-standards">Relevant Standards</h3>
 <ul>
@@ -558,17 +561,15 @@
 <li>Incident management reports</li>
 <li>Compliance evidence</li>
 </ul>
-<hr />
 <h2 id="contacts">Contacts</h2>
 <p><strong>Operations Responsible:</strong>
-- <strong>IT Operations Manager:</strong> Andreas Huemmer - andreas.huemmer@adminsend.de
-- <strong>Service Desk Lead:</strong> Julia Becker - julia.becker@adminsend.de
-- <strong>CIO:</strong> Anna Schmidt - anna.schmidt@adminsend.de</p>
+- <strong>IT Operations Manager:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }} - {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
+- <strong>Service Desk Lead:</strong> {{ meta-organisation-roles.role_Service_Desk_Lead }} - {{ meta-organisation-roles.role_Service_Desk_Lead_email }}
+- <strong>CIO:</strong> [TODO] - {{ meta-organisation-roles.role_CIO_email }}</p>
 <p><strong>Additional Contacts:</strong> See Chapter 0270 (Contacts, Escalation and Vendors)</p>
-<hr />
-<p><strong>Document Owner:</strong> IT Operations Manager<br />
-<strong>Approved by:</strong> CIO<br />
-<strong>Version:</strong> 1.0.0<br />
+<p><strong>Document Owner:</strong> [TODO]<br />
+<strong>Approved by:</strong> [TODO]<br />
+<strong>Version:</strong> 0<br />
 <strong>Organization:</strong> AdminSend GmbH</p>
         </main>
         

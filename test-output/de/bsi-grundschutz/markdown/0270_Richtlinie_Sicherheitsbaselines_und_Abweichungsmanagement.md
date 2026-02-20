@@ -1,6 +1,6 @@
 # Richtlinie: Sicherheitsbaselines und Abweichungsmanagement
 
-**Dokument-ID:** 0270
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0270
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

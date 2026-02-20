@@ -7,7 +7,7 @@ Classification: Internal
 
 # Governance (ID.GV)
 
-**Dokument-ID:** [FRAMEWORK]-0120
+**Dokument-ID:** NIST-CSF-0120
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

@@ -1,6 +1,6 @@
 # Richtigkeit
 
-**Dokument-ID:** 0130
+**Dokument-ID:** GDPR-0130
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

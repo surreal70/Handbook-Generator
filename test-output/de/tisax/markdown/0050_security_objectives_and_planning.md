@@ -6,7 +6,7 @@ Classification: Internal
 
 # Sicherheitsziele und Planung
 
-**Dokument-ID:** [FRAMEWORK]-0050
+**Dokument-ID:** TISAX-0050
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

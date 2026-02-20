@@ -1,6 +1,6 @@
 # TOE Description Summary
 
-**Dokument-ID:** 0030
+**Dokument-ID:** COMMON-CRITERIA-0030
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

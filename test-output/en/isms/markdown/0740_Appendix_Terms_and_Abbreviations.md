@@ -1,6 +1,6 @@
 # Appendix D: Terms and Abbreviations
 
-**Document-ID:** [FRAMEWORK]-0740
+**Document-ID:** ISMS-0740
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

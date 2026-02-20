@@ -21,19 +21,29 @@
         
         <main>
 <h1 id="known-issues-and-faq">Known Issues and FAQ</h1>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0260
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
 <h2 id="overview">Overview</h2>
 <p>This document contains known issues and workarounds, frequently asked questions (FAQ), and troubleshooting tips for the IT service. The goal is to provide quick solutions for recurring problems and increase support efficiency.</p>
-<p><strong>Document Owner:</strong> IT Operations Manager<br />
-<strong>Approved by:</strong> CIO<br />
-<strong>Version:</strong> 1.0.0<br />
+<p><strong>Document Owner:</strong> [TODO]<br />
+<strong>Approved by:</strong> [TODO]<br />
+<strong>Version:</strong> 0<br />
 <strong>Organization:</strong> AdminSend GmbH</p>
-<hr />
 <h2 id="known-issues">Known Issues</h2>
 <h3 id="issue-tracking">Issue Tracking</h3>
 <p>All known issues are captured in the ticketing system with the label "Known Issue" and documented here.</p>
-<p><strong>Responsible:</strong> Andreas Huemmer<br />
+<p><strong>Responsible:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}<br />
 <strong>Review Cycle:</strong> Monthly</p>
-<hr />
 <h3 id="ki-001-todo-issue-title">KI-001: [TODO: Issue Title]</h3>
 <p><strong>Status:</strong> Open / In Progress / Resolved<br />
 <strong>Priority:</strong> P1 (Critical) / P2 (High) / P3 (Medium) / P4 (Low)<br />
@@ -67,19 +77,101 @@
 <li><strong>ETA:</strong> [TODO: Expected date]</li>
 <li><strong>Responsible:</strong> [TODO: Name]</li>
 </ul>
-<hr />
+<h4 id="affected-users">Affected Users</h4>
+<p>[TODO: Number or description of affected users]</p>
+<h4 id="communication">Communication</h4>
+<ul>
+<li>[TODO: Date] - Users informed</li>
+<li>[TODO: Date] - Update communicated</li>
+<li>[TODO: Date] - Solution communicated</li>
+</ul>
+<h3 id="ki-002-intermittent-network-timeouts">KI-002: Intermittent Network Timeouts</h3>
+<p><strong>Status:</strong> In Progress<br />
+<strong>Priority:</strong> P2 (High)<br />
+<strong>Created:</strong> 2025-01-15<br />
+<strong>Last Update:</strong> 2025-01-28<br />
+<strong>Ticket ID:</strong> INC-12345</p>
+<h4 id="description_1">Description</h4>
+<p>Users experience sporadic network timeouts when accessing internal applications. The timeouts occur irregularly and last 30-60 seconds.</p>
+<h4 id="affected-systems_1">Affected Systems</h4>
+<ul>
+<li>Intranet Portal</li>
+<li>File Server</li>
+<li>Email System</li>
+</ul>
+<h4 id="symptoms_1">Symptoms</h4>
+<ul>
+<li>Connection drops without error message</li>
+<li>Slow loading times</li>
+<li>Timeout errors after 30-60 seconds</li>
+</ul>
+<h4 id="root-cause_1">Root Cause</h4>
+<p>Core switch overload during backup times (22:00-02:00).</p>
+<h4 id="workaround_1">Workaround</h4>
+<div class="codehilite"><pre><span></span><code><span class="mf">1.</span><span class="w"> </span><span class="n">Perform</span><span class="w"> </span><span class="n">critical</span><span class="w"> </span><span class="n">work</span><span class="w"> </span><span class="n">outside</span><span class="w"> </span><span class="n">backup</span><span class="w"> </span><span class="n">times</span>
+<span class="mf">2.</span><span class="w"> </span><span class="n">On</span><span class="w"> </span><span class="n">timeout</span><span class="p">:</span><span class="w"> </span><span class="n">Reload</span><span class="w"> </span><span class="n">page</span><span class="w"> </span><span class="p">(</span><span class="n">F5</span><span class="p">)</span>
+<span class="mf">3.</span><span class="w"> </span><span class="n">Use</span><span class="w"> </span><span class="n">alternative</span><span class="w"> </span><span class="n">route</span><span class="w"> </span><span class="n">via</span><span class="w"> </span><span class="n">VPN</span><span class="w"> </span><span class="p">(</span><span class="k">if</span><span class="w"> </span><span class="n">available</span><span class="p">)</span>
+</code></pre></div>
+
+<h4 id="permanent-solution_1">Permanent Solution</h4>
+<ul>
+<li><strong>Status:</strong> Planned</li>
+<li><strong>ETA:</strong> Q2 2026</li>
+<li><strong>Action:</strong> Upgrade core switch to higher bandwidth</li>
+<li><strong>Responsible:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</li>
+</ul>
+<h4 id="affected-users_1">Affected Users</h4>
+<p>All internal users during backup times</p>
+<h3 id="ki-003-slow-database-queries">KI-003: Slow Database Queries</h3>
+<p><strong>Status:</strong> Resolved<br />
+<strong>Priority:</strong> P2 (High)<br />
+<strong>Created:</strong> 2025-01-10<br />
+<strong>Resolved:</strong> 2025-01-25<br />
+<strong>Ticket ID:</strong> INC-12340</p>
+<h4 id="description_2">Description</h4>
+<p>Certain database queries ran very slowly (&gt; 10 seconds), leading to timeouts in the application.</p>
+<h4 id="affected-systems_2">Affected Systems</h4>
+<ul>
+<li>Production Database</li>
+<li>Web Application</li>
+</ul>
+<h4 id="symptoms_2">Symptoms</h4>
+<ul>
+<li>Slow page load times</li>
+<li>Timeout errors</li>
+<li>High CPU load on DB server</li>
+</ul>
+<h4 id="root-cause_2">Root Cause</h4>
+<p>Missing indexes on frequently queried tables.</p>
+<h4 id="solution">Solution</h4>
+<div class="codehilite"><pre><span></span><code><span class="c1">-- Added missing indexes</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_users_email</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">users</span><span class="p">(</span><span class="n">email</span><span class="p">);</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_orders_date</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">orders</span><span class="p">(</span><span class="n">order_date</span><span class="p">);</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">idx_products_category</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">products</span><span class="p">(</span><span class="n">category_id</span><span class="p">);</span>
+
+<span class="c1">-- Updated statistics</span>
+<span class="k">ANALYZE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span><span class="p">;</span>
+<span class="k">ANALYZE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">orders</span><span class="p">;</span>
+<span class="k">ANALYZE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">products</span><span class="p">;</span>
+</code></pre></div>
+
+<h4 id="result">Result</h4>
+<ul>
+<li>Query time reduced from 10+ seconds to &lt; 100ms</li>
+<li>CPU load on DB server normalized</li>
+<li>No more timeouts</li>
+</ul>
 <h2 id="frequently-asked-questions-faq">Frequently Asked Questions (FAQ)</h2>
 <h3 id="general-questions">General Questions</h3>
 <h4 id="q-how-do-i-reach-it-support">Q: How do I reach IT support?</h4>
 <p><strong>A:</strong> IT support can be reached through the following channels:
-- <strong>Email:</strong> julia.becker@adminsend.de
-- <strong>Phone:</strong> +49 89 12345678-111
+- <strong>Email:</strong> {{ meta-organisation-roles.role_Service_Desk_Lead_email }}
+- <strong>Phone:</strong> {{ meta-organisation-roles.role_Service_Desk_Lead_phone }}
 - <strong>Ticketing System:</strong> [TODO: URL]
 - <strong>Chat:</strong> [TODO: Chat Channel]</p>
 <p><strong>Support Hours:</strong>
 - Mon-Fri: 08:00-18:00
 - 24/7 for critical incidents (P1)</p>
-<hr />
 <h4 id="q-how-do-i-create-a-support-ticket">Q: How do I create a support ticket?</h4>
 <p><strong>A:</strong> Support tickets can be created through the following methods:</p>
 <ol>
@@ -93,7 +185,7 @@
 <li>
 <p><strong>Email:</strong></p>
 </li>
-<li>Email to julia.becker@adminsend.de</li>
+<li>Email to {{ meta-organisation-roles.role_Service_Desk_Lead_email }}</li>
 <li>Subject: Brief problem description</li>
 <li>
 <p>Content: Detailed description, screenshots</p>
@@ -101,11 +193,48 @@
 <li>
 <p><strong>Phone:</strong></p>
 </li>
-<li>Call +49 89 12345678-111</li>
+<li>Call {{ meta-organisation-roles.role_Service_Desk_Lead_phone }}</li>
 <li>Describe problem</li>
 <li>Note ticket number</li>
 </ol>
-<hr />
+<h4 id="q-how-does-support-prioritize-tickets">Q: How does support prioritize tickets?</h4>
+<p><strong>A:</strong> Tickets are processed according to the following priorities:</p>
+<table>
+<thead>
+<tr>
+<th>Priority</th>
+<th>Description</th>
+<th>Response Time</th>
+<th>Resolution Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P1 - Critical</td>
+<td>Complete system outage</td>
+<td>15 minutes</td>
+<td>4 hours</td>
+</tr>
+<tr>
+<td>P2 - High</td>
+<td>Partial outage, many users affected</td>
+<td>1 hour</td>
+<td>8 hours</td>
+</tr>
+<tr>
+<td>P3 - Medium</td>
+<td>Individual users affected</td>
+<td>4 hours</td>
+<td>24 hours</td>
+</tr>
+<tr>
+<td>P4 - Low</td>
+<td>Questions, feature requests</td>
+<td>8 hours</td>
+<td>72 hours</td>
+</tr>
+</tbody>
+</table>
 <h3 id="access-and-authentication">Access and Authentication</h3>
 <h4 id="q-i-forgot-my-password-what-should-i-do">Q: I forgot my password. What should I do?</h4>
 <p><strong>A:</strong> Password reset via self-service portal:</p>
@@ -117,7 +246,6 @@
 <li>Set new password</li>
 </ol>
 <p><strong>Alternative:</strong> Contact IT support</p>
-<hr />
 <h4 id="q-how-do-i-set-up-mfa-multi-factor-authentication">Q: How do I set up MFA (Multi-Factor Authentication)?</h4>
 <p><strong>A:</strong> MFA setup:</p>
 <ol>
@@ -131,7 +259,39 @@
 <li>Test MFA</li>
 </ol>
 <p><strong>Important:</strong> Keep backup codes in a safe place!</p>
-<hr />
+<h4 id="q-i-cannot-connect-via-vpn-what-can-i-do">Q: I cannot connect via VPN. What can I do?</h4>
+<p><strong>A:</strong> VPN troubleshooting:</p>
+<ol>
+<li><strong>Check credentials:</strong></li>
+<li>Username correct?</li>
+<li>Password correct?</li>
+<li>
+<p>MFA token current?</p>
+</li>
+<li>
+<p><strong>Check VPN client:</strong></p>
+</li>
+<li>Latest version installed?</li>
+<li>
+<p>Profile correctly configured?</p>
+</li>
+<li>
+<p><strong>Check network:</strong></p>
+</li>
+<li>Internet connection working?</li>
+<li>
+<p>Firewall not blocking VPN?</p>
+</li>
+<li>
+<p><strong>Alternatives:</strong></p>
+</li>
+<li>Try different VPN gateway</li>
+<li>Reinstall VPN client</li>
+</ol>
+<p><strong>If nothing helps:</strong> Contact IT support with:
+- VPN client version
+- Error message (screenshot)
+- Time of problem</p>
 <h3 id="applications">Applications</h3>
 <h4 id="q-the-application-loads-very-slowly-what-can-i-do">Q: The application loads very slowly. What can I do?</h4>
 <p><strong>A:</strong> Performance troubleshooting:</p>
@@ -174,7 +334,22 @@
 - Affected application
 - Time of problem
 - Screenshot</p>
-<hr />
+<h4 id="q-i-receive-a-500-internal-server-error-what-does-that-mean">Q: I receive a "500 Internal Server Error". What does that mean?</h4>
+<p><strong>A:</strong> A 500 error means a problem occurred on the server.</p>
+<p><strong>Immediate actions:</strong>
+1. Reload page (F5)
+2. Wait 5 minutes and try again
+3. Clear browser cache
+4. Try different browser</p>
+<p><strong>If error persists:</strong>
+- Create ticket (P2 - High)
+- Attach screenshot of error
+- Provide exact URL
+- Note time</p>
+<p><strong>For IT team:</strong>
+- Check server logs
+- Check application logs
+- Check monitoring alerts</p>
 <h3 id="email">Email</h3>
 <h4 id="q-i-cannot-send-emails-what-should-i-do">Q: I cannot send emails. What should I do?</h4>
 <p><strong>A:</strong> Email sending troubleshooting:</p>
@@ -211,7 +386,37 @@
 <li>Was email marked as spam?</li>
 </ol>
 <p><strong>If problem persists:</strong> Contact IT support</p>
-<hr />
+<h4 id="q-i-receive-many-spam-emails-what-can-i-do">Q: I receive many spam emails. What can I do?</h4>
+<p><strong>A:</strong> Spam reduction:</p>
+<ol>
+<li><strong>Train spam filter:</strong></li>
+<li>Mark spam emails as "Spam"</li>
+<li>
+<p>Mark non-spam emails as "Not Spam"</p>
+</li>
+<li>
+<p><strong>Block sender:</strong></p>
+</li>
+<li>
+<p>Add sender to blocklist</p>
+</li>
+<li>
+<p><strong>Create email rules:</strong></p>
+</li>
+<li>
+<p>Automatic filtering based on sender/subject</p>
+</li>
+<li>
+<p><strong>Be careful sharing email:</strong></p>
+</li>
+<li>Don't post email address publicly</li>
+<li>Use separate email for newsletters</li>
+</ol>
+<p><strong>For suspicious emails:</strong>
+- <strong>DO NOT</strong> click on links
+- <strong>DO NOT</strong> open attachments
+- Forward to {{ meta-organisation-roles.role_CISO_email }}
+- Delete email</p>
 <h3 id="files-and-storage">Files and Storage</h3>
 <h4 id="q-i-accidentally-deleted-a-file-can-it-be-recovered">Q: I accidentally deleted a file. Can it be recovered?</h4>
 <p><strong>A:</strong> File recovery:</p>
@@ -241,7 +446,116 @@
 - Daily backups: 30 days
 - Weekly backups: 90 days
 - Monthly backups: 1 year</p>
-<hr />
+<h4 id="q-my-network-drive-is-full-what-should-i-do">Q: My network drive is full. What should I do?</h4>
+<p><strong>A:</strong> Storage management:</p>
+<ol>
+<li><strong>Analyze storage:</strong></li>
+<li>Identify large files</li>
+<li>
+<p>Delete old/unnecessary files</p>
+</li>
+<li>
+<p><strong>Archive files:</strong></p>
+</li>
+<li>Archive old projects</li>
+<li>
+<p>Move to archive storage</p>
+</li>
+<li>
+<p><strong>Remove duplicates:</strong></p>
+</li>
+<li>
+<p>Identify and delete duplicate files</p>
+</li>
+<li>
+<p><strong>Compression:</strong></p>
+</li>
+<li>
+<p>Compress large files (ZIP, 7z)</p>
+</li>
+<li>
+<p><strong>Request quota increase:</strong></p>
+</li>
+<li>Create ticket with justification</li>
+<li>Manager approval required</li>
+</ol>
+<p><strong>Quota limits:</strong>
+- Standard users: [TODO: Size]
+- Power users: [TODO: Size]
+- Project shares: [TODO: Size]</p>
+<h3 id="hardware">Hardware</h3>
+<h4 id="q-my-computer-is-very-slow-what-can-i-do">Q: My computer is very slow. What can I do?</h4>
+<p><strong>A:</strong> Performance optimization:</p>
+<ol>
+<li><strong>Restart:</strong></li>
+<li>Restart computer</li>
+<li>
+<p>Often solves the problem</p>
+</li>
+<li>
+<p><strong>Close programs:</strong></p>
+</li>
+<li>Close unnecessary programs</li>
+<li>
+<p>Check Task Manager (Ctrl+Shift+Esc)</p>
+</li>
+<li>
+<p><strong>Disk cleanup:</strong></p>
+</li>
+<li>Delete temporary files</li>
+<li>
+<p>Run Disk Cleanup tool</p>
+</li>
+<li>
+<p><strong>Check updates:</strong></p>
+</li>
+<li>Install Windows updates</li>
+<li>
+<p>Install application updates</p>
+</li>
+<li>
+<p><strong>Malware scan:</strong></p>
+</li>
+<li>Run antivirus scan</li>
+</ol>
+<p><strong>If problem persists:</strong>
+- Create ticket
+- Check hardware upgrade
+- Consider reinstallation</p>
+<h4 id="q-how-do-i-request-new-hardware">Q: How do I request new hardware?</h4>
+<p><strong>A:</strong> Hardware request:</p>
+<ol>
+<li><strong>Create ticket:</strong></li>
+<li>Category: "Hardware Request"</li>
+<li>Specify desired hardware</li>
+<li>
+<p>Provide justification</p>
+</li>
+<li>
+<p><strong>Approval:</strong></p>
+</li>
+<li>Manager approval required</li>
+<li>
+<p>Budget review by [TODO]</p>
+</li>
+<li>
+<p><strong>Procurement:</strong></p>
+</li>
+<li>IT team orders hardware</li>
+<li>
+<p>Delivery time: [TODO: Timeframe]</p>
+</li>
+<li>
+<p><strong>Installation:</strong></p>
+</li>
+<li>Schedule appointment with IT team</li>
+<li>Old hardware will be returned</li>
+</ol>
+<p><strong>Standard hardware:</strong>
+- Laptop: [TODO: Model]
+- Desktop: [TODO: Model]
+- Monitor: [TODO: Model]
+- Peripherals: Mouse, keyboard, headset</p>
 <h2 id="troubleshooting-tips">Troubleshooting Tips</h2>
 <h3 id="general-troubleshooting-steps">General Troubleshooting Steps</h3>
 <ol>
@@ -287,7 +601,42 @@
 <li>Create ticket</li>
 <li>Contact IT support</li>
 </ol>
-<hr />
+<h3 id="browser-issues">Browser Issues</h3>
+<p><strong>Symptoms:</strong>
+- Page doesn't load
+- Incorrect display
+- Functions don't work</p>
+<p><strong>Solutions:</strong>
+1. Clear cache (Ctrl+Shift+Del)
+2. Delete cookies
+3. Disable browser extensions
+4. Test incognito mode
+5. Test different browser
+6. Reinstall browser</p>
+<h3 id="network-issues">Network Issues</h3>
+<p><strong>Symptoms:</strong>
+- No connection
+- Slow connection
+- Intermittent connection</p>
+<p><strong>Solutions:</strong>
+1. Check network cable
+2. Check WiFi connection
+3. Restart router
+4. Renew IP configuration (ipconfig /renew)
+5. Flush DNS cache (ipconfig /flushdns)
+6. Check VPN connection</p>
+<h3 id="application-issues">Application Issues</h3>
+<p><strong>Symptoms:</strong>
+- Application doesn't start
+- Application crashes
+- Functions missing</p>
+<p><strong>Solutions:</strong>
+1. Restart application
+2. Restart computer
+3. Reinstall application
+4. Install updates
+5. Test compatibility mode (Windows)
+6. Check logs</p>
 <h2 id="self-service-resources">Self-Service Resources</h2>
 <h3 id="documentation">Documentation</h3>
 <ul>
@@ -301,12 +650,17 @@
 <li><strong>Password Reset:</strong> [TODO: Reset URL]</li>
 <li><strong>Software Download:</strong> [TODO: Download URL]</li>
 </ul>
-<hr />
+<h3 id="training">Training</h3>
+<ul>
+<li><strong>Online Courses:</strong> [TODO: Course URL]</li>
+<li><strong>Webinars:</strong> [TODO: Webinar Calendar]</li>
+<li><strong>In-Person Training:</strong> Request via IT support</li>
+</ul>
 <h2 id="feedback-and-improvements">Feedback and Improvements</h2>
 <h3 id="give-feedback">Give Feedback</h3>
 <p>Do you have suggestions for improving this document or IT services?</p>
 <p><strong>Contact:</strong>
-- <strong>Email:</strong> andreas.huemmer@adminsend.de
+- <strong>Email:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager_email }}
 - <strong>Feedback Form:</strong> [TODO: Form URL]</p>
 <h3 id="document-updates">Document Updates</h3>
 <p>This document is regularly updated based on:
@@ -315,11 +669,108 @@
 - User feedback
 - Process improvements</p>
 <p><strong>Review Cycle:</strong> Monthly<br />
-<strong>Responsible:</strong> Andreas Huemmer</p>
-<hr />
-<p><strong>Last Update:</strong> {{ meta.date }}<br />
+<strong>Responsible:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</p>
+<h2 id="processes-and-responsibilities">Processes and Responsibilities</h2>
+<h3 id="raci-matrix">RACI Matrix</h3>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>Ops Manager</th>
+<th>Ops Team</th>
+<th>Service Desk</th>
+<th>Users</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Document known issues</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Update FAQ</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>I</td>
+</tr>
+<tr>
+<td>Develop workarounds</td>
+<td>A</td>
+<td>R</td>
+<td>C</td>
+<td>-</td>
+</tr>
+<tr>
+<td>User support</td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Collect feedback</td>
+<td>A</td>
+<td>C</td>
+<td>R</td>
+<td>R</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Legend:</strong> R = Responsible, A = Accountable, C = Consulted, I = Informed</p>
+</blockquote>
+<h2 id="compliance-and-standards">Compliance and Standards</h2>
+<h3 id="relevant-standards">Relevant Standards</h3>
+<ul>
+<li><strong>ITIL v4:</strong> Service Desk Practice, Knowledge Management</li>
+<li><strong>ISO 20000:</strong> Clause 8.2 - Service Desk</li>
+<li><strong>COBIT 2019:</strong> DSS02 - Managed Service Requests and Incidents</li>
+</ul>
+<h2 id="appendix">Appendix</h2>
+<h3 id="glossary">Glossary</h3>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Known Issue</td>
+<td>Known problem with documented workaround</td>
+</tr>
+<tr>
+<td>FAQ</td>
+<td>Frequently Asked Questions</td>
+</tr>
+<tr>
+<td>Workaround</td>
+<td>Temporary solution for a problem</td>
+</tr>
+<tr>
+<td>Root Cause</td>
+<td>Underlying cause of a problem</td>
+</tr>
+<tr>
+<td>Self-Service</td>
+<td>User solves problem without support</td>
+</tr>
+</tbody>
+</table>
+<h3 id="references">References</h3>
+<ul>
+<li>ITIL v4 Foundation Handbook</li>
+<li>ISO/IEC 20000-1:2018</li>
+<li>COBIT 2019 Framework</li>
+</ul>
+<p><strong>Last Update:</strong> {{ meta-handbook.date }}<br />
 <strong>Next Review:</strong> [TODO: Date]<br />
-<strong>Contact:</strong> andreas.huemmer@adminsend.de</p>
+<strong>Contact:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager_email }}</p>
         </main>
         
         <nav class="page-nav">

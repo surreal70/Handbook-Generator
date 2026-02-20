@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0210 - Key Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0210</div>
+            <h1>Key Management</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0200_cryptographic_controls.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0220_physical_security_perimeter.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: tisax-0210</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="key-management">Key Management</h1>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0210
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="purpose">Purpose</h2>
+<p>This document describes the processes and procedures for managing cryptographic keys according to TISAX requirements.</p>
+<h2 id="scope">Scope</h2>
+<p>This document applies to all cryptographic keys at [TODO].</p>
+<h2 id="key-lifecycle">Key Lifecycle</h2>
+<h3 id="1-key-generation">1. Key Generation</h3>
+<ul>
+<li>Cryptographically secure random number generators (CSRNG)</li>
+<li>Sufficient key length according to standards</li>
+<li>Secure generation environment</li>
+<li>Documentation of generation</li>
+</ul>
+<h3 id="2-key-storage">2. Key Storage</h3>
+<ul>
+<li>Hardware Security Modules (HSM) for critical keys</li>
+<li>Encrypted storage</li>
+<li>Redundant storage</li>
+<li>Access control</li>
+<li>Physical security</li>
+</ul>
+<h3 id="3-key-distribution">3. Key Distribution</h3>
+<ul>
+<li>Secure transmission channels</li>
+<li>Authentication of recipients</li>
+<li>Encrypted transmission</li>
+<li>Logging</li>
+<li>Confirmation of receipt</li>
+</ul>
+<h3 id="4-key-usage">4. Key Usage</h3>
+<ul>
+<li>Use only for intended purpose</li>
+<li>Logging of usage</li>
+<li>Monitoring for misuse</li>
+<li>Regular review</li>
+</ul>
+<h3 id="5-key-rotation">5. Key Rotation</h3>
+<ul>
+<li>Regular rotation according to policy</li>
+<li>Automated processes where possible</li>
+<li>No interruption of operations</li>
+<li>Documentation</li>
+</ul>
+<p><strong>Rotation Intervals:</strong>
+- Critical keys: Quarterly
+- Production keys: Semi-annually
+- Standard keys: Annually
+- Test keys: As needed</p>
+<h3 id="6-key-revocation">6. Key Revocation</h3>
+<p><strong>Reasons:</strong>
+- Compromise suspected or confirmed
+- Employee departure
+- Expiration
+- Change of requirements
+- Security incident</p>
+<p><strong>Process:</strong>
+1. Identification of revocation reason
+2. Immediate revocation of key
+3. Notification of all stakeholders
+4. Reissuance if needed
+5. Documentation
+6. Post-incident review</p>
+<h3 id="7-key-archiving">7. Key Archiving</h3>
+<ul>
+<li>Long-term retention for encrypted data</li>
+<li>Secure storage</li>
+<li>Access control</li>
+<li>Recovery process</li>
+<li>Regular integrity verification</li>
+</ul>
+<h3 id="8-key-destruction">8. Key Destruction</h3>
+<ul>
+<li>Secure deletion</li>
+<li>Multiple overwriting</li>
+<li>Documentation</li>
+<li>Verification of completeness</li>
+<li>No recoverability</li>
+</ul>
+<h2 id="key-types">Key Types</h2>
+<h3 id="symmetric-keys">Symmetric Keys</h3>
+<ul>
+<li>Data encryption</li>
+<li>Message authentication</li>
+<li>Database encryption</li>
+</ul>
+<h3 id="asymmetric-key-pairs">Asymmetric Key Pairs</h3>
+<ul>
+<li>Digital signatures</li>
+<li>Key exchange</li>
+<li>Authentication</li>
+<li>Certificates</li>
+</ul>
+<h3 id="master-keys">Master Keys</h3>
+<ul>
+<li>Encryption of other keys (Key Encryption Keys)</li>
+<li>Highest security level</li>
+</ul>
+<h3 id="session-keys">Session Keys</h3>
+<ul>
+<li>Temporary encryption</li>
+<li>Communication sessions</li>
+</ul>
+<h2 id="key-management-systems">Key Management Systems</h2>
+<h3 id="hardware-security-modules-hsm">Hardware Security Modules (HSM)</h3>
+<ul>
+<li>Secure key generation</li>
+<li>Protected key storage</li>
+<li>Cryptographic operations</li>
+<li>Audit logging</li>
+</ul>
+<p><strong>Requirements:</strong>
+- FIPS 140-2 Level 2 or higher
+- Redundant configuration
+- Regular maintenance
+- Backup and recovery</p>
+<h3 id="key-management-service-kms">Key Management Service (KMS)</h3>
+<ul>
+<li>Central key management</li>
+<li>API-based access</li>
+<li>Automated rotation</li>
+<li>Audit logging</li>
+</ul>
+<h2 id="key-recovery">Key Recovery</h2>
+<h3 id="backup-and-recovery">Backup and Recovery</h3>
+<ul>
+<li>Regular backups of critical keys</li>
+<li>Secure storage of backups</li>
+<li>Tested recovery processes</li>
+<li>Documentation</li>
+</ul>
+<h3 id="escrow">Escrow</h3>
+<ul>
+<li>For critical business keys</li>
+<li>Upon employee departure</li>
+<li>For emergency recovery</li>
+</ul>
+<h2 id="access-control">Access Control</h2>
+<h3 id="permissions">Permissions</h3>
+<p><strong>Roles:</strong>
+- Key Manager: Complete management
+- Key User: Use of assigned keys
+- Auditor: Read-only access to logs
+- Emergency Access: Break-glass access</p>
+<h3 id="authentication">Authentication</h3>
+<ul>
+<li>Multi-factor authentication</li>
+<li>Strong passwords</li>
+<li>Regular recertification</li>
+<li>Logging of all access</li>
+</ul>
+<h2 id="monitoring-and-audit">Monitoring and Audit</h2>
+<h3 id="logging">Logging</h3>
+<p><strong>Events:</strong>
+- Key generation
+- Key access
+- Key rotation
+- Key revocation
+- Key destruction
+- Failed access attempts</p>
+<h3 id="monitoring">Monitoring</h3>
+<ul>
+<li>Real-time monitoring of critical operations</li>
+<li>Automatic alerting on anomalies</li>
+<li>Regular log analyses</li>
+<li>Compliance checks</li>
+</ul>
+<h3 id="audit">Audit</h3>
+<ul>
+<li>Quarterly sampling</li>
+<li>Annual full review</li>
+<li>Compliance verification</li>
+<li>Identification of improvement potential</li>
+</ul>
+<h2 id="emergency-management">Emergency Management</h2>
+<h3 id="key-compromise">Key Compromise</h3>
+<p><strong>Immediate Actions:</strong>
+1. Identification of compromised key
+2. Immediate revocation
+3. Notification of all stakeholders
+4. Reissuance of keys
+5. Investigation of incident
+6. Documentation</p>
+<h3 id="key-loss">Key Loss</h3>
+<ol>
+<li>Attempt recovery from backup</li>
+<li>If unsuccessful: Reissuance</li>
+<li>Review of impact</li>
+<li>Notification of affected parties</li>
+<li>Documentation</li>
+</ol>
+<h2 id="tisax-specific-requirements">TISAX-Specific Requirements</h2>
+<h3 id="vda-isa-controls">VDA ISA Controls</h3>
+<ul>
+<li><strong>4.2.1</strong>: Key management</li>
+<li><strong>4.2.2</strong>: Key generation</li>
+<li><strong>4.2.3</strong>: Key storage</li>
+<li><strong>4.2.4</strong>: Key distribution</li>
+</ul>
+<h3 id="assessment-evidence">Assessment Evidence</h3>
+<ul>
+<li>Key management processes</li>
+<li>Key management database</li>
+<li>Audit logs</li>
+<li>Training evidence</li>
+<li>Incident response plans</li>
+</ul>
+<h2 id="metrics">Metrics</h2>
+<p>[TODO] measures:
+- Number of active keys
+- Number of key rotations (Target: 100% on time)
+- Number of key compromises (Target: 0)
+- Average time to key provisioning
+- Compliance rate (Target: 100%)</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0200_cryptographic_controls.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0220_physical_security_perimeter.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -21,11 +21,23 @@
         
         <main>
 <h1 id="infrastruktur-und-plattform">Infrastruktur und Plattform</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0050
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
 <h2 id="uberblick">Überblick</h2>
 <h3 id="infrastrukturlandschaft">Infrastrukturlandschaft</h3>
 <p>Dieses Kapitel beschreibt die physische und virtuelle Infrastruktur, auf der die IT-Services betrieben werden.</p>
 <p><strong>Organisation:</strong> AdminSend GmbH<br />
-<strong>Standort:</strong> München, Deutschland</p>
+<strong>Standort:</strong> {{ meta-organisation.city }}, {{ meta-organisation.country }}</p>
 <p><strong>Kurzbeschreibung:</strong>
 [TODO: Beschreiben Sie die Infrastrukturlandschaft in 2-3 Sätzen. Welche Hauptkomponenten gibt es? Wo wird die Infrastruktur betrieben?]</p>
 <h3 id="infrastruktur-ubersicht">Infrastruktur-Übersicht</h3>
@@ -94,9 +106,9 @@
 <h3 id="rechenzentren-und-standorte">Rechenzentren und Standorte</h3>
 <h4 id="primarer-standort">Primärer Standort</h4>
 <ul>
-<li><strong>Standort-Name:</strong> {{ netbox.site.name }}</li>
-<li><strong>Adresse:</strong> {{ netbox.site.physical_address }}</li>
-<li><strong>Rechenzentrum:</strong> {{ netbox.site.facility }}</li>
+<li><strong>Standort-Name:</strong> [[ netbox.site.name ]]</li>
+<li><strong>Adresse:</strong> [[ netbox.site.physical_address ]]</li>
+<li><strong>Rechenzentrum:</strong> [[ netbox.site.facility ]]</li>
 <li><strong>Betreiber:</strong> [TODO: RZ-Betreiber]</li>
 <li><strong>Zertifizierungen:</strong> [TODO: z.B. ISO 27001, Tier III]</li>
 </ul>
@@ -134,7 +146,7 @@
 <tbody>
 <tr>
 <td>[TODO: RACK-01]</td>
-<td>{{ netbox.site.name }}</td>
+<td>[[ netbox.site.name ]]</td>
 <td style="text-align: right;">[TODO: 42]</td>
 <td style="text-align: right;">[TODO: 80%]</td>
 <td>[TODO: 2x 32A]</td>
@@ -142,7 +154,7 @@
 </tr>
 <tr>
 <td>[TODO: RACK-02]</td>
-<td>{{ netbox.site.name }}</td>
+<td>[[ netbox.site.name ]]</td>
 <td style="text-align: right;">[TODO: 42]</td>
 <td style="text-align: right;">[TODO: 60%]</td>
 <td>[TODO: 2x 32A]</td>
@@ -150,7 +162,7 @@
 </tr>
 <tr>
 <td>[TODO: RACK-03]</td>
-<td>{{ netbox.site.name }}</td>
+<td>[[ netbox.site.name ]]</td>
 <td style="text-align: right;">[TODO: 42]</td>
 <td style="text-align: right;">[TODO: 40%]</td>
 <td>[TODO: 2x 16A]</td>
@@ -174,32 +186,32 @@
 </thead>
 <tbody>
 <tr>
-<td>{{ netbox.device.server01.name }}</td>
+<td>[[ netbox.device.server01.name ]]</td>
 <td>[TODO: Dell R740]</td>
 <td>[TODO: 2x Xeon]</td>
 <td>[TODO: 256GB]</td>
 <td>[TODO: 2TB SSD]</td>
-<td>{{ netbox.site.name }}</td>
+<td>[[ netbox.site.name ]]</td>
 <td>[TODO: RACK-01]</td>
 <td>[TODO: Hypervisor]</td>
 </tr>
 <tr>
-<td>{{ netbox.device.server02.name }}</td>
+<td>[[ netbox.device.server02.name ]]</td>
 <td>[TODO: HP DL380]</td>
 <td>[TODO: 2x Xeon]</td>
 <td>[TODO: 128GB]</td>
 <td>[TODO: 1TB SSD]</td>
-<td>{{ netbox.site.name }}</td>
+<td>[[ netbox.site.name ]]</td>
 <td>[TODO: RACK-01]</td>
 <td>[TODO: Hypervisor]</td>
 </tr>
 <tr>
-<td>{{ netbox.device.server03.name }}</td>
+<td>[[ netbox.device.server03.name ]]</td>
 <td>[TODO: Dell R640]</td>
 <td>[TODO: 2x Xeon]</td>
 <td>[TODO: 64GB]</td>
 <td>[TODO: 500GB SSD]</td>
-<td>{{ netbox.site.name }}</td>
+<td>[[ netbox.site.name ]]</td>
 <td>[TODO: RACK-02]</td>
 <td>[TODO: Application]</td>
 </tr>
@@ -228,18 +240,18 @@
 </thead>
 <tbody>
 <tr>
-<td>{{ netbox.device.core_switch01.name }}</td>
+<td>[[ netbox.device.core_switch01.name ]]</td>
 <td>Core Switch</td>
 <td>[TODO: Cisco Nexus]</td>
-<td>{{ netbox.site.name }}</td>
+<td>[[ netbox.site.name ]]</td>
 <td>[TODO: Core]</td>
 <td>[TODO: 4x 100G]</td>
 </tr>
 <tr>
-<td>{{ netbox.device.core_switch02.name }}</td>
+<td>[[ netbox.device.core_switch02.name ]]</td>
 <td>Core Switch</td>
 <td>[TODO: Cisco Nexus]</td>
-<td>{{ netbox.site.name }}</td>
+<td>[[ netbox.site.name ]]</td>
 <td>[TODO: Core]</td>
 <td>[TODO: 4x 100G]</td>
 </tr>
@@ -262,7 +274,7 @@
 <td>[TODO: DIST-SW-01]</td>
 <td>Distribution Switch</td>
 <td>[TODO: Modell]</td>
-<td>{{ netbox.site.name }}</td>
+<td>[[ netbox.site.name ]]</td>
 <td>[TODO: Distribution]</td>
 <td>[TODO: 2x 40G]</td>
 </tr>
@@ -270,7 +282,7 @@
 <td>[TODO: DIST-SW-02]</td>
 <td>Distribution Switch</td>
 <td>[TODO: Modell]</td>
-<td>{{ netbox.site.name }}</td>
+<td>[[ netbox.site.name ]]</td>
 <td>[TODO: Distribution]</td>
 <td>[TODO: 2x 40G]</td>
 </tr>
@@ -293,7 +305,7 @@
 <td>[TODO: ACC-SW-01]</td>
 <td>Access Switch</td>
 <td>[TODO: Modell]</td>
-<td>{{ netbox.site.name }}</td>
+<td>[[ netbox.site.name ]]</td>
 <td>[TODO: 48x 1G]</td>
 <td>[TODO: 2x 10G]</td>
 </tr>
@@ -301,7 +313,7 @@
 <td>[TODO: ACC-SW-02]</td>
 <td>Access Switch</td>
 <td>[TODO: Modell]</td>
-<td>{{ netbox.site.name }}</td>
+<td>[[ netbox.site.name ]]</td>
 <td>[TODO: 48x 1G]</td>
 <td>[TODO: 2x 10G]</td>
 </tr>
@@ -320,17 +332,17 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: right;">{{ netbox.vlan.management.vid }}</td>
+<td style="text-align: right;">[[ netbox.vlan.management.vid ]]</td>
 <td>Management</td>
 <td>[TODO: Management-Netz]</td>
-<td>{{ netbox.vlan.management.prefix }}</td>
+<td>[[ netbox.vlan.management.prefix ]]</td>
 <td>[TODO: Gateway]</td>
 </tr>
 <tr>
-<td style="text-align: right;">{{ netbox.vlan.production.vid }}</td>
+<td style="text-align: right;">[[ netbox.vlan.production.vid ]]</td>
 <td>Production</td>
 <td>[TODO: Produktions-Netz]</td>
-<td>{{ netbox.vlan.production.prefix }}</td>
+<td>[[ netbox.vlan.production.prefix ]]</td>
 <td>[TODO: Gateway]</td>
 </tr>
 <tr>
@@ -401,7 +413,7 @@
 </table>
 <p><strong>IPAM (IP Address Management):</strong>
 - <strong>Tool:</strong> [TODO: z.B. NetBox, phpIPAM]
-- <strong>Verantwortlich:</strong> Andreas Huemmer</p>
+- <strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</p>
 <h3 id="firewall-und-security">Firewall und Security</h3>
 <table>
 <thead>
@@ -419,7 +431,7 @@
 <td>[TODO: FW-01]</td>
 <td>Firewall</td>
 <td>[TODO: Palo Alto]</td>
-<td>{{ netbox.site.name }}</td>
+<td>[[ netbox.site.name ]]</td>
 <td>[TODO: Perimeter]</td>
 <td>[TODO: 10 Gbps]</td>
 </tr>
@@ -427,7 +439,7 @@
 <td>[TODO: FW-02]</td>
 <td>Firewall</td>
 <td>[TODO: Palo Alto]</td>
-<td>{{ netbox.site.name }}</td>
+<td>[[ netbox.site.name ]]</td>
 <td>[TODO: Perimeter]</td>
 <td>[TODO: 10 Gbps]</td>
 </tr>
@@ -436,7 +448,7 @@
 <p><strong>Firewall-Regeln:</strong>
 - <strong>Anzahl Regeln:</strong> [TODO: z.B. 500]
 - <strong>Review-Zyklus:</strong> [TODO: z.B. Quartalsweise]
-- <strong>Verantwortlich:</strong> Thomas Weber</p>
+- <strong>Verantwortlich:</strong> [TODO]</p>
 <h3 id="load-balancer">Load Balancer</h3>
 <table>
 <thead>
@@ -454,7 +466,7 @@
 <td>[TODO: LB-01]</td>
 <td>Load Balancer</td>
 <td>[TODO: F5/HAProxy]</td>
-<td>{{ netbox.site.name }}</td>
+<td>[[ netbox.site.name ]]</td>
 <td>[TODO: Round-Robin]</td>
 <td>[TODO: 10k RPS]</td>
 </tr>
@@ -462,7 +474,7 @@
 <td>[TODO: LB-02]</td>
 <td>Load Balancer</td>
 <td>[TODO: F5/HAProxy]</td>
-<td>{{ netbox.site.name }}</td>
+<td>[[ netbox.site.name ]]</td>
 <td>[TODO: Round-Robin]</td>
 <td>[TODO: 10k RPS]</td>
 </tr>
@@ -485,7 +497,7 @@
 <td>[TODO: Provider 1]</td>
 <td>[TODO: MPLS]</td>
 <td>[TODO: 1 Gbps]</td>
-<td>{{ netbox.site.name }}</td>
+<td>[[ netbox.site.name ]]</td>
 <td>[TODO: 99.9%]</td>
 <td>[TODO: EUR]</td>
 </tr>
@@ -493,7 +505,7 @@
 <td>[TODO: Provider 2]</td>
 <td>[TODO: Internet]</td>
 <td>[TODO: 500 Mbps]</td>
-<td>{{ netbox.site.name }}</td>
+<td>[[ netbox.site.name ]]</td>
 <td>[TODO: 99.5%]</td>
 <td>[TODO: EUR]</td>
 </tr>
@@ -518,7 +530,7 @@
 </thead>
 <tbody>
 <tr>
-<td>{{ netbox.cluster.prod.name }}</td>
+<td>[[ netbox.cluster.prod.name ]]</td>
 <td>[TODO: VMware]</td>
 <td style="text-align: right;">[TODO: 4]</td>
 <td style="text-align: right;">[TODO: 128]</td>
@@ -527,7 +539,7 @@
 <td style="text-align: right;">[TODO: 80]</td>
 </tr>
 <tr>
-<td>{{ netbox.cluster.test.name }}</td>
+<td>[[ netbox.cluster.test.name ]]</td>
 <td>[TODO: VMware]</td>
 <td style="text-align: right;">[TODO: 2]</td>
 <td style="text-align: right;">[TODO: 64]</td>
@@ -558,8 +570,8 @@
 </thead>
 <tbody>
 <tr>
-<td>{{ netbox.vm.app01.name }}</td>
-<td>{{ netbox.cluster.prod.name }}</td>
+<td>[[ netbox.vm.app01.name ]]</td>
+<td>[[ netbox.cluster.prod.name ]]</td>
 <td style="text-align: right;">[TODO: 4]</td>
 <td style="text-align: right;">[TODO: 16]</td>
 <td style="text-align: right;">[TODO: 200]</td>
@@ -568,8 +580,8 @@
 <td>[TODO: Running]</td>
 </tr>
 <tr>
-<td>{{ netbox.vm.db01.name }}</td>
-<td>{{ netbox.cluster.prod.name }}</td>
+<td>[[ netbox.vm.db01.name ]]</td>
+<td>[[ netbox.cluster.prod.name ]]</td>
 <td style="text-align: right;">[TODO: 8]</td>
 <td style="text-align: right;">[TODO: 32]</td>
 <td style="text-align: right;">[TODO: 500]</td>
@@ -578,8 +590,8 @@
 <td>[TODO: Running]</td>
 </tr>
 <tr>
-<td>{{ netbox.vm.web01.name }}</td>
-<td>{{ netbox.cluster.prod.name }}</td>
+<td>[[ netbox.vm.web01.name ]]</td>
+<td>[[ netbox.cluster.prod.name ]]</td>
 <td style="text-align: right;">[TODO: 2]</td>
 <td style="text-align: right;">[TODO: 8]</td>
 <td style="text-align: right;">[TODO: 100]</td>
@@ -608,21 +620,21 @@
 <tbody>
 <tr>
 <td>[TODO: Production]</td>
-<td>{{ netbox.cluster.prod.name }}</td>
+<td>[[ netbox.cluster.prod.name ]]</td>
 <td>[TODO: High]</td>
 <td>[TODO: 50%]</td>
 <td>[TODO: Produktions-VMs]</td>
 </tr>
 <tr>
 <td>[TODO: Development]</td>
-<td>{{ netbox.cluster.test.name }}</td>
+<td>[[ netbox.cluster.test.name ]]</td>
 <td>[TODO: Normal]</td>
 <td>[TODO: 25%]</td>
 <td>[TODO: Entwicklungs-VMs]</td>
 </tr>
 <tr>
 <td>[TODO: Test]</td>
-<td>{{ netbox.cluster.test.name }}</td>
+<td>[[ netbox.cluster.test.name ]]</td>
 <td>[TODO: Low]</td>
 <td>[TODO: 10%]</td>
 <td>[TODO: Test-VMs]</td>
@@ -938,7 +950,7 @@
 <td style="text-align: right;">[TODO: 100]</td>
 <td style="text-align: right;">[TODO: 70%]</td>
 <td>[TODO: FC/iSCSI]</td>
-<td>{{ netbox.site.name }}</td>
+<td>[[ netbox.site.name ]]</td>
 <td>[TODO: VM-Storage]</td>
 </tr>
 <tr>
@@ -947,7 +959,7 @@
 <td style="text-align: right;">[TODO: 50]</td>
 <td style="text-align: right;">[TODO: 60%]</td>
 <td>[TODO: NFS/CIFS]</td>
-<td>{{ netbox.site.name }}</td>
+<td>[[ netbox.site.name ]]</td>
 <td>[TODO: File-Shares]</td>
 </tr>
 <tr>
@@ -1026,7 +1038,7 @@
 <td>[TODO: Disk]</td>
 <td style="text-align: right;">[TODO: 100]</td>
 <td>[TODO: 30 Tage]</td>
-<td>{{ netbox.site.name }}</td>
+<td>[[ netbox.site.name ]]</td>
 <td>[TODO: Disk-Backup]</td>
 </tr>
 <tr>
@@ -1034,7 +1046,7 @@
 <td>[TODO: Tape Library]</td>
 <td style="text-align: right;">[TODO: 500]</td>
 <td>[TODO: 7 Jahre]</td>
-<td>{{ netbox.site.name }}</td>
+<td>[[ netbox.site.name ]]</td>
 <td>[TODO: Langzeit-Archiv]</td>
 </tr>
 <tr>
@@ -1070,14 +1082,14 @@
 <td>[TODO: USV-01]</td>
 <td style="text-align: right;">[TODO: 100]</td>
 <td style="text-align: right;">[TODO: 15]</td>
-<td>{{ netbox.site.name }}</td>
+<td>[[ netbox.site.name ]]</td>
 <td>[TODO: Online]</td>
 </tr>
 <tr>
 <td>[TODO: USV-02]</td>
 <td style="text-align: right;">[TODO: 100]</td>
 <td style="text-align: right;">[TODO: 15]</td>
-<td>{{ netbox.site.name }}</td>
+<td>[[ netbox.site.name ]]</td>
 <td>[TODO: Online]</td>
 </tr>
 </tbody>
@@ -1237,7 +1249,7 @@
 <td><strong>Beschaffung</strong></td>
 <td>[TODO: 4-8 Wochen]</td>
 <td>[TODO: Anforderung, Bestellung, Lieferung]</td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 </tr>
 <tr>
 <td><strong>Inbetriebnahme</strong></td>
@@ -1345,8 +1357,8 @@
 <tr>
 <td><strong>Infrastructure Manager</strong></td>
 <td>Gesamtverantwortung Infrastruktur</td>
-<td>Andreas Huemmer</td>
-<td>andreas.huemmer@adminsend.de</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager_email }}</td>
 </tr>
 <tr>
 <td><strong>Network Administrator</strong></td>
@@ -1382,16 +1394,15 @@
 </table>
 <h2 id="kontakte">Kontakte</h2>
 <p><strong>Bei Fragen zur Infrastruktur:</strong>
-- <strong>IT Operations Manager:</strong> Andreas Huemmer (andreas.huemmer@adminsend.de)
-- <strong>CIO:</strong> Anna Schmidt (anna.schmidt@adminsend.de)</p>
+- <strong>IT Operations Manager:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }} ({{ meta-organisation-roles.role_IT_Operations_Manager_email }})
+- <strong>CIO:</strong> [TODO] ({{ meta-organisation-roles.role_CIO_email }})</p>
 <p><strong>Notfallkontakte:</strong>
 - <strong>Rechenzentrum:</strong> [TODO: Telefon 24/7]
 - <strong>Stromversorger:</strong> [TODO: Telefon]
 - <strong>Facility Management:</strong> [TODO: Telefon]</p>
-<hr />
-<p><strong>Dokumentverantwortlicher:</strong> IT Operations Manager<br />
-<strong>Genehmigt durch:</strong> CIO<br />
-<strong>Version:</strong> 1.0.0<br />
+<p><strong>Dokumentverantwortlicher:</strong> [TODO]<br />
+<strong>Genehmigt durch:</strong> [TODO]<br />
+<strong>Version:</strong> 0<br />
 <strong>Organisation:</strong> AdminSend GmbH</p>
         </main>
         

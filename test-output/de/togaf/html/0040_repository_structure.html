@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0040 - Architecture Repository-Struktur</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0040</div>
+            <h1>Architecture Repository-Struktur</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0030_governance_framework.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0050_stakeholder_management.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: togaf-0040</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="architecture-repository-struktur">Architecture Repository-Struktur</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0040
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="zweck">Zweck</h2>
+<p>Dieses Dokument definiert die Struktur und Organisation des Architecture Repositorys für [TODO]. Das Repository dient als zentrale Speicherstelle für alle Architecture-Artefakte und Ergebnisse.</p>
+<h2 id="geltungsbereich">Geltungsbereich</h2>
+<p>Dieses Dokument umfasst:
+- Repository-Struktur und -Organisation
+- Artefakt-Klassifizierung
+- Versionskontrolle und Lifecycle-Management
+- Zugriffskontrolle und Sicherheit
+- Repository-Werkzeuge und -Technologie</p>
+<h2 id="repository-struktur">Repository-Struktur</h2>
+<h3 id="architecture-landscape">Architecture Landscape</h3>
+<p>Die Architecture Landscape enthält:
+- <strong>Architecture Metamodel</strong>: Definiert die Arten von Artefakten und ihre Beziehungen
+- <strong>Architecture Capability</strong>: Dokumentiert die Architecture-Funktion und -Prozesse
+- <strong>Architecture-Prinzipien</strong>: Grundlegende Regeln und Richtlinien
+- <strong>Architecture Vision</strong>: High-Level strategische Ausrichtung</p>
+<h3 id="standards-information-base">Standards Information Base</h3>
+<p>Enthält:
+- <strong>Technologie-Standards</strong>: Genehmigte Technologien und Plattformen
+- <strong>Design Patterns</strong>: Wiederverwendbare Lösungsmuster
+- <strong>Best Practices</strong>: Bewährte Ansätze und Methoden
+- <strong>Referenzmodelle</strong>: Branchen- und organisatorische Referenz-Architectures</p>
+<h3 id="governance-log">Governance Log</h3>
+<p>Verfolgt:
+- <strong>Architecture-Entscheidungen</strong>: ADRs und Entscheidungshistorie
+- <strong>Compliance-Bewertungen</strong>: Review-Ergebnisse und Feststellungen
+- <strong>Ausnahmen</strong>: Genehmigte Abweichungen von Standards
+- <strong>Änderungsanträge</strong>: Architecture-Änderungsvorschläge</p>
+<h3 id="architecture-repository">Architecture Repository</h3>
+<p>Organisiert nach Architecture-Domänen:</p>
+<div class="codehilite"><pre><span></span><code>Architecture Repository/
+├── Business Architecture/
+│   ├── Business Capabilities/
+│   ├── Value Streams/
+│   ├── Organisationsmodelle/
+│   └── Geschäftsprozesse/
+├── Data Architecture/
+│   ├── Datenmodelle/
+│   ├── Datenflussdiagramme/
+│   ├── Data Governance/
+│   └── Datenstandards/
+├── Application Architecture/
+│   ├── Anwendungsportfolio/
+│   ├── Anwendungsschnittstellen/
+│   ├── Anwendungskomponenten/
+│   └── Integrationsmuster/
+└── Technology Architecture/
+    ├── Infrastrukturmodelle/
+    ├── Netzwerkdiagramme/
+    ├── Sicherheits-Architecture/
+    └── Technologie-Standards/
+</code></pre></div>
+
+<h2 id="artefakt-klassifizierung">Artefakt-Klassifizierung</h2>
+<h3 id="artefakt-typen">Artefakt-Typen</h3>
+<table>
+<thead>
+<tr>
+<th>Artefakt-Typ</th>
+<th>Beschreibung</th>
+<th>Speicherort</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Architecture Vision</td>
+<td>Strategische Ausrichtung</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Architecture-Prinzipien</td>
+<td>Leitende Regeln</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Architecture-Modelle</td>
+<td>Visuelle Darstellungen</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Architecture-Spezifikationen</td>
+<td>Detaillierte Anforderungen</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Architecture-Entscheidungen</td>
+<td>ADRs</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Standards</td>
+<td>Technologie-Standards</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="artefakt-lifecycle-zustande">Artefakt-Lifecycle-Zustände</h3>
+<table>
+<thead>
+<tr>
+<th>Zustand</th>
+<th>Beschreibung</th>
+<th>Erlaubte Übergänge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Draft</td>
+<td>In Bearbeitung</td>
+<td>Review, Cancelled</td>
+</tr>
+<tr>
+<td>Review</td>
+<td>In Prüfung</td>
+<td>Approved, Draft, Rejected</td>
+</tr>
+<tr>
+<td>Approved</td>
+<td>Formal genehmigt</td>
+<td>Published, Superseded</td>
+</tr>
+<tr>
+<td>Published</td>
+<td>Zur Nutzung verfügbar</td>
+<td>Superseded, Deprecated</td>
+</tr>
+<tr>
+<td>Superseded</td>
+<td>Durch neuere Version ersetzt</td>
+<td>Archived</td>
+</tr>
+<tr>
+<td>Deprecated</td>
+<td>Nicht mehr empfohlen</td>
+<td>Archived</td>
+</tr>
+<tr>
+<td>Archived</td>
+<td>Nur historische Referenz</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<h2 id="versionskontrolle">Versionskontrolle</h2>
+<h3 id="versionierungsschema">Versionierungsschema</h3>
+<p>Artefakte verwenden semantische Versionierung: MAJOR.MINOR.PATCH</p>
+<ul>
+<li><strong>MAJOR</strong>: Wesentliche Änderungen, die Kompatibilität brechen</li>
+<li><strong>MINOR</strong>: Neue Features oder Erweiterungen</li>
+<li><strong>PATCH</strong>: Fehlerbehebungen und kleinere Korrekturen</li>
+</ul>
+<h3 id="versionskontroll-prozess">Versionskontroll-Prozess</h3>
+<ol>
+<li>Artefakt zur Bearbeitung auschecken</li>
+<li>Änderungen im Draft-Zustand vornehmen</li>
+<li>Zur Prüfung einreichen</li>
+<li>Review-Feedback einarbeiten</li>
+<li>Neue Version genehmigen und veröffentlichen</li>
+<li>Vorherige Version archivieren</li>
+</ol>
+<h2 id="zugriffskontrolle">Zugriffskontrolle</h2>
+<h3 id="zugriffsebenen">Zugriffsebenen</h3>
+<table>
+<thead>
+<tr>
+<th>Rolle</th>
+<th>Lesen</th>
+<th>Schreiben</th>
+<th>Genehmigen</th>
+<th>Löschen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Architecture Team</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Projektteams</td>
+<td>✓</td>
+<td>Anfrage</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Management</td>
+<td>✓</td>
+<td>-</td>
+<td>✓</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Alle Mitarbeiter</td>
+<td>✓</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sicherheitsklassifizierung">Sicherheitsklassifizierung</h3>
+<p>Artefakte werden klassifiziert als:
+- <strong>Public</strong>: Für alle verfügbar
+- <strong>Internal</strong>: Für Mitarbeiter verfügbar
+- <strong>Confidential</strong>: Eingeschränkter Zugriff
+- <strong>Restricted</strong>: Hochsensibel, Need-to-know-Basis</p>
+<h2 id="repository-werkzeuge">Repository-Werkzeuge</h2>
+<h3 id="primares-repository-werkzeug">Primäres Repository-Werkzeug</h3>
+<p><strong>Werkzeug</strong>: [TODO]</p>
+<p><strong>Fähigkeiten</strong>:
+- Versionskontrolle
+- Workflow-Management
+- Kollaborationsfunktionen
+- Suche und Entdeckung
+- Reporting und Analytics</p>
+<h3 id="integrationspunkte">Integrationspunkte</h3>
+<p>Das Repository integriert mit:
+- <strong>Modellierungswerkzeuge</strong>: [TODO]
+- <strong>Dokumentationswerkzeuge</strong>: [TODO]
+- <strong>Projektmanagement</strong>: [TODO]
+- <strong>CMDB</strong>: [TODO]</p>
+<h2 id="repository-wartung">Repository-Wartung</h2>
+<h3 id="wartungsaktivitaten">Wartungsaktivitäten</h3>
+<table>
+<thead>
+<tr>
+<th>Aktivität</th>
+<th>Häufigkeit</th>
+<th>Verantwortlich</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Artefakt-Review</td>
+<td>[TODO]</td>
+<td>Domain Architects</td>
+</tr>
+<tr>
+<td>Bereinigung veralteter Artefakte</td>
+<td>[TODO]</td>
+<td>Repository-Administrator</td>
+</tr>
+<tr>
+<td>Zugriffsrechte-Review</td>
+<td>[TODO]</td>
+<td>Security Team</td>
+</tr>
+<tr>
+<td>Backup-Verifikation</td>
+<td>[TODO]</td>
+<td>IT Operations</td>
+</tr>
+</tbody>
+</table>
+<h3 id="qualitatssicherung">Qualitätssicherung</h3>
+<p>Repository-Qualität wird aufrechterhalten durch:
+- Regelmäßige Audits der Artefakt-Vollständigkeit
+- Validierung von Artefakt-Beziehungen
+- Verifikation der Metadaten-Genauigkeit
+- Review von Zugriffsmustern und Nutzung</p>
+<h2 id="suche-und-entdeckung">Suche und Entdeckung</h2>
+<h3 id="metadaten-schema">Metadaten-Schema</h3>
+<p>Alle Artefakte enthalten:
+- <strong>Titel</strong>: Beschreibender Name
+- <strong>Beschreibung</strong>: Zweck und Umfang
+- <strong>Autor</strong>: Ersteller
+- <strong>Eigentümer</strong>: Aktuell Verantwortlicher
+- <strong>Version</strong>: Aktuelle Versionsnummer
+- <strong>Status</strong>: Lifecycle-Zustand
+- <strong>Klassifizierung</strong>: Sicherheitsstufe
+- <strong>Tags</strong>: Schlüsselwörter zur Entdeckung
+- <strong>Verwandte Artefakte</strong>: Links zu verwandten Elementen</p>
+<h3 id="suchfahigkeiten">Suchfähigkeiten</h3>
+<p>Benutzer können suchen nach:
+- Schlüsselwort in Titel oder Beschreibung
+- Artefakt-Typ
+- Domäne
+- Autor oder Eigentümer
+- Status
+- Tags
+- Datumsbereich</p>
+<h2 id="reporting">Reporting</h2>
+<h3 id="standard-reports">Standard-Reports</h3>
+<table>
+<thead>
+<tr>
+<th>Report</th>
+<th>Zweck</th>
+<th>Häufigkeit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Artefakt-Inventar</td>
+<td>Vollständige Liste der Artefakte</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Artefakt-Status</td>
+<td>Verteilung der Lifecycle-Zustände</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Nutzungsanalyse</td>
+<td>Meist aufgerufene Artefakte</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Compliance-Status</td>
+<td>Architecture-Compliance-Metriken</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0030_governance_framework.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0050_stakeholder_management.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

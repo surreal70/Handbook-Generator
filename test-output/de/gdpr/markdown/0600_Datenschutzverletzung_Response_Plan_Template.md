@@ -1,6 +1,6 @@
 # Datenschutzverletzung Response Plan (Template)
 
-**Dokument-ID:** 0600
+**Dokument-ID:** GDPR-0600
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

@@ -1,6 +1,6 @@
 # Anhang D: Begriffe und Abkürzungen
 
-**Dokument-ID:** [FRAMEWORK]-0740
+**Dokument-ID:** ISMS-0740
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

@@ -1,6 +1,6 @@
 # APP Hardening Standard: Microsoft SQL Server
 
-**Document-ID:** [FRAMEWORK]-0290
+**Document-ID:** CIS-CONTROLS-0290
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

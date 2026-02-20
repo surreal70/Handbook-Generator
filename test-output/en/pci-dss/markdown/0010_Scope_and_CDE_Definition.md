@@ -1,6 +1,6 @@
 # Scope and CDE Definition
 
-**Document-ID:** [FRAMEWORK]-0010
+**Document-ID:** PCI-DSS-0010
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

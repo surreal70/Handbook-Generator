@@ -1,6 +1,6 @@
 # Richtlinie: Segmentierung, Firewalling und Network Access Control
 
-**Dokument-ID:** 0610
+**Dokument-ID:** ISMS-0610
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

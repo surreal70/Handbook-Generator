@@ -1,6 +1,6 @@
 # Policy: Datenschutz und Datenhandling
 
-**Dokument-ID:** 0420
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0420
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

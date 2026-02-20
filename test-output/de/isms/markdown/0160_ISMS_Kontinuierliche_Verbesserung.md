@@ -1,6 +1,6 @@
 # Kontinuierliche Verbesserung (KVP) im ISMS
 
-**Dokument-ID:** 0160
+**Dokument-ID:** ISMS-0160
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

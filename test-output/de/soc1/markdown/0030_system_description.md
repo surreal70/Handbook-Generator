@@ -6,7 +6,7 @@ Classification: Internal
 
 # Systembeschreibung
 
-**Dokument-ID:** [FRAMEWORK]-0030
+**Dokument-ID:** SOC1-0030
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

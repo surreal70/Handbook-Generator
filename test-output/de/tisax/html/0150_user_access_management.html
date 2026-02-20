@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0150 - Benutzerzugriffsverwaltung</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0150</div>
+            <h1>Benutzerzugriffsverwaltung</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0140_access_control_policy.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0160_system_and_application_access_control.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: tisax-0150</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="benutzerzugriffsverwaltung">Benutzerzugriffsverwaltung</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0150
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="zweck">Zweck</h2>
+<p>Dieses Dokument beschreibt die Prozesse und Verfahren für die Verwaltung von Benutzerzugriffen gemäß TISAX-Anforderungen.</p>
+<h2 id="geltungsbereich">Geltungsbereich</h2>
+<p>Dieses Dokument gilt für alle Benutzerkonten und Zugriffe in [TODO].</p>
+<h2 id="benutzer-lebenszyklus">Benutzer-Lebenszyklus</h2>
+<h3 id="1-onboarding">1. Onboarding</h3>
+<p><strong>Neue Mitarbeiter:</strong>
+- Antrag durch HR-Abteilung
+- Genehmigung durch Vorgesetzten
+- Erstellung von Benutzerkonten
+- Zuweisung von Standard-Berechtigungen
+- Schulung vor Zugriffsvergabe</p>
+<p><strong>Externe Benutzer:</strong>
+- Vertragliche Vereinbarung erforderlich
+- Sponsorship durch internen Mitarbeiter
+- Zeitlich begrenzte Zugriffe
+- Erweiterte Überwachung</p>
+<h3 id="2-anderungen">2. Änderungen</h3>
+<p><strong>Rollenwechsel:</strong>
+- Überprüfung bestehender Berechtigungen
+- Anpassung an neue Rolle
+- Entfernung nicht mehr benötigter Rechte
+- Dokumentation der Änderungen</p>
+<p><strong>Zusätzliche Berechtigungen:</strong>
+- Antrag mit Begründung
+- Genehmigung durch Vorgesetzten und Information Owner
+- Zeitlich begrenzt oder permanent
+- Regelmäßige Überprüfung</p>
+<h3 id="3-offboarding">3. Offboarding</h3>
+<p><strong>Geplanter Austritt:</strong>
+- Deaktivierung am letzten Arbeitstag
+- Rückgabe von Zugangsmitteln
+- Archivierung von Daten
+- Dokumentation des Prozesses</p>
+<p><strong>Ungeplanter Austritt:</strong>
+- Sofortige Sperrung aller Zugriffe
+- Sicherstellung der Datenintegrität
+- Überprüfung auf Sicherheitsvorfälle
+- Dokumentation</p>
+<h2 id="benutzerkonto-verwaltung">Benutzerkonto-Verwaltung</h2>
+<h3 id="konto-typen">Konto-Typen</h3>
+<p><strong>Standard-Benutzerkonten:</strong>
+- Für reguläre Mitarbeiter
+- Standard-Berechtigungen
+- Normale Überwachung</p>
+<p><strong>Privilegierte Konten:</strong>
+- Für administrative Tätigkeiten
+- Erhöhte Sicherheitsanforderungen
+- Intensive Überwachung</p>
+<p><strong>Service-Konten:</strong>
+- Für Anwendungen und Services
+- Technische Konten ohne interaktive Anmeldung
+- Automatisierte Verwaltung</p>
+<p><strong>Gast-Konten:</strong>
+- Für temporäre Zugriffe
+- Zeitlich begrenzt
+- Eingeschränkte Berechtigungen</p>
+<h3 id="konto-richtlinien">Konto-Richtlinien</h3>
+<p><strong>Namenskonventionen:</strong>
+- Format: [TODO]
+- Eindeutige Identifikation
+- Keine persönlichen Informationen in Service-Konten</p>
+<p><strong>Passwort-Richtlinien:</strong>
+- Siehe Zugriffskontroll-Richtlinie
+- Regelmäßige Änderung
+- Keine Weitergabe</p>
+<p><strong>Konto-Sperrung:</strong>
+- Nach [TODO] Fehlversuchen
+- Automatische Entsperrung nach [TODO] Minuten
+- Manuelle Entsperrung durch IT-Support</p>
+<h2 id="berechtigungsverwaltung">Berechtigungsverwaltung</h2>
+<h3 id="berechtigungsmodell">Berechtigungsmodell</h3>
+<p><strong>Rollenbasiert:</strong>
+- Vordefinierte Rollen
+- Basierend auf Jobfunktionen
+- Regelmäßig überprüft</p>
+<p><strong>Gruppenbasiert:</strong>
+- Active Directory Gruppen
+- Vereinfachte Verwaltung
+- Automatische Vererbung</p>
+<h3 id="berechtigungsantrag">Berechtigungsantrag</h3>
+<p><strong>Prozess:</strong>
+1. Benutzer oder Vorgesetzter stellt Antrag
+2. Geschäftliche Begründung erforderlich
+3. Genehmigung durch Vorgesetzten
+4. Genehmigung durch Information Owner (bei Datenzugriff)
+5. Implementierung durch IT
+6. Bestätigung an Antragsteller</p>
+<p><strong>Dokumentation:</strong>
+- Alle Anträge werden dokumentiert
+- Genehmigungen werden archiviert
+- Audit-Trail wird geführt</p>
+<h3 id="berechtigungsentzug">Berechtigungsentzug</h3>
+<p><strong>Automatisch:</strong>
+- Bei Austritt
+- Bei Ablauf zeitlich begrenzter Rechte
+- Bei Inaktivität ([TODO] Tage)</p>
+<p><strong>Manuell:</strong>
+- Bei Rollenwechsel
+- Bei Sicherheitsvorfällen
+- Auf Antrag</p>
+<h2 id="access-reviews">Access Reviews</h2>
+<h3 id="regelmaige-uberprufung">Regelmäßige Überprüfung</h3>
+<p><strong>Quartalsweise:</strong>
+- Überprüfung durch Vorgesetzte
+- Bestätigung der Notwendigkeit
+- Entfernung nicht benötigter Rechte</p>
+<p><strong>Jährlich:</strong>
+- Vollständige Rezertifizierung
+- Überprüfung aller Berechtigungen
+- Dokumentation der Ergebnisse</p>
+<h3 id="prozess">Prozess</h3>
+<ol>
+<li>Automatische Generierung von Review-Listen</li>
+<li>Versand an Vorgesetzte</li>
+<li>Überprüfung und Bestätigung</li>
+<li>Eskalation bei fehlender Rückmeldung</li>
+<li>Implementierung von Änderungen</li>
+<li>Dokumentation und Reporting</li>
+</ol>
+<h2 id="privilegierte-zugriffe">Privilegierte Zugriffe</h2>
+<h3 id="verwaltung">Verwaltung</h3>
+<p><strong>Separate Konten:</strong>
+- Getrennt von Standard-Konten
+- Erhöhte Sicherheitsanforderungen
+- Umfassende Protokollierung</p>
+<p><strong>Just-in-Time Access:</strong>
+- Temporäre Aktivierung
+- Zeitlich begrenzt
+- Automatische Deaktivierung</p>
+<p><strong>Privileged Access Management (PAM):</strong>
+- Zentrale Verwaltung
+- Session-Aufzeichnung
+- Automatische Passwortrotation</p>
+<h3 id="uberwachung">Überwachung</h3>
+<ul>
+<li>Echtzeit-Monitoring</li>
+<li>Alarmierung bei Anomalien</li>
+<li>Regelmäßige Auditierung</li>
+<li>Compliance-Reporting</li>
+</ul>
+<h2 id="externe-benutzer">Externe Benutzer</h2>
+<h3 id="anforderungen">Anforderungen</h3>
+<p><strong>Vertragliche Basis:</strong>
+- NDA erforderlich
+- Vertragliche Vereinbarung
+- Haftungsregelung</p>
+<p><strong>Sponsorship:</strong>
+- Interner Sponsor erforderlich
+- Verantwortung für externe Benutzer
+- Regelmäßige Überprüfung</p>
+<h3 id="verwaltung_1">Verwaltung</h3>
+<p><strong>Zugriffsvergabe:</strong>
+- Antrag durch Sponsor
+- Genehmigung durch Management
+- Zeitlich begrenzt
+- Eingeschränkte Berechtigungen</p>
+<p><strong>Überwachung:</strong>
+- Erweiterte Protokollierung
+- Regelmäßige Überprüfung
+- Automatische Benachrichtigung bei Ablauf</p>
+<h2 id="service-konten">Service-Konten</h2>
+<h3 id="verwaltung_2">Verwaltung</h3>
+<p><strong>Erstellung:</strong>
+- Antrag mit technischer Begründung
+- Genehmigung durch IT-Manager
+- Dokumentation des Verwendungszwecks
+- Zuweisung eines Verantwortlichen</p>
+<p><strong>Sicherheit:</strong>
+- Starke, zufällige Passwörter
+- Regelmäßige Passwortrotation
+- Minimale Berechtigungen
+- Keine interaktive Anmeldung</p>
+<p><strong>Überwachung:</strong>
+- Protokollierung aller Aktivitäten
+- Regelmäßige Überprüfung der Nutzung
+- Identifikation ungenutzter Konten
+- Deaktivierung nicht benötigter Konten</p>
+<h2 id="inaktive-konten">Inaktive Konten</h2>
+<h3 id="erkennung">Erkennung</h3>
+<p>Konten gelten als inaktiv nach:
+- [TODO] Tagen ohne Anmeldung
+- Keine Aktivität in Systemen
+- Keine geplante Nutzung</p>
+<h3 id="manahmen">Maßnahmen</h3>
+<p><strong>Warnung:</strong>
+- Benachrichtigung an Benutzer und Vorgesetzten
+- [TODO] Tage vor Deaktivierung</p>
+<p><strong>Deaktivierung:</strong>
+- Automatische Deaktivierung
+- Benachrichtigung an Stakeholder
+- Möglichkeit zur Reaktivierung</p>
+<p><strong>Löschung:</strong>
+- Nach [TODO] Tagen Inaktivität
+- Archivierung relevanter Daten
+- Endgültige Entfernung</p>
+<h2 id="notfallzugriffe">Notfallzugriffe</h2>
+<h3 id="break-glass-konten">Break-Glass-Konten</h3>
+<p><strong>Zweck:</strong>
+- Zugriff bei Notfällen
+- Wenn normale Authentifizierung nicht möglich
+- Für kritische Systemwiederherstellung</p>
+<p><strong>Verwaltung:</strong>
+- Passwörter in versiegelten Umschlägen
+- Mehrere Personen erforderlich
+- Umfassende Protokollierung
+- Sofortige Eskalation bei Nutzung</p>
+<p><strong>Nachbereitung:</strong>
+- Überprüfung der Nutzung
+- Passwortänderung
+- Dokumentation
+- Management-Reporting</p>
+<h2 id="uberwachung-und-reporting">Überwachung und Reporting</h2>
+<h3 id="monitoring">Monitoring</h3>
+<p><strong>Echtzeit:</strong>
+- Fehlgeschlagene Anmeldeversuche
+- Privilegierte Zugriffe
+- Ungewöhnliche Aktivitäten
+- Zugriffe außerhalb der Geschäftszeiten</p>
+<p><strong>Regelmäßig:</strong>
+- Anzahl aktiver Konten
+- Anzahl inaktiver Konten
+- Anzahl privilegierter Konten
+- Anzahl externer Benutzer</p>
+<h3 id="reporting">Reporting</h3>
+<p><strong>Monatlich:</strong>
+- Konto-Statistiken
+- Access Review Status
+- Inaktive Konten
+- Sicherheitsvorfälle</p>
+<p><strong>Quartalsweise:</strong>
+- Compliance-Status
+- Trend-Analysen
+- Verbesserungsempfehlungen</p>
+<h2 id="tisax-spezifische-anforderungen">TISAX-spezifische Anforderungen</h2>
+<h3 id="vda-isa-kontrollen">VDA ISA Kontrollen</h3>
+<p>Dieses Dokument adressiert:
+- <strong>3.2.1</strong>: Benutzerzugriffsverwaltung
+- <strong>3.2.2</strong>: Bereitstellung von Benutzerzugriffen
+- <strong>3.2.3</strong>: Verwaltung privilegierter Zugriffsrechte
+- <strong>3.2.4</strong>: Verwaltung geheimer Authentifizierungsinformationen</p>
+<h3 id="assessment-nachweise">Assessment-Nachweise</h3>
+<ul>
+<li>Prozessdokumentation</li>
+<li>Beispiele für Zugriffsgenehmigungen</li>
+<li>Access Review Berichte</li>
+<li>Audit-Logs</li>
+<li>Schulungsnachweise</li>
+</ul>
+<h2 id="verantwortlichkeiten">Verantwortlichkeiten</h2>
+<ul>
+<li><strong>Identity &amp; Access Management Team</strong>: Tägliche Verwaltung</li>
+<li><strong>IT-Support</strong>: Erste Anlaufstelle für Benutzer</li>
+<li><strong>Vorgesetzte</strong>: Genehmigung und Rezertifizierung</li>
+<li><strong>Information Owner</strong>: Genehmigung von Datenzugriffen</li>
+<li><strong>CISO</strong>: Überwachung und Compliance</li>
+</ul>
+<h2 id="kennzahlen">Kennzahlen</h2>
+<p>[TODO] misst:
+- Anzahl aktiver Benutzerkonten
+- Durchschnittliche Zeit bis zur Zugriffsvergabe (Ziel: &lt;4 Stunden)
+- Anzahl überfälliger Access Reviews (Ziel: 0)
+- Anzahl inaktiver Konten (Ziel: &lt;5%)
+- Anzahl Zugriffsverletzungen (Ziel: 0)</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0140_access_control_policy.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0160_system_and_application_access_control.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

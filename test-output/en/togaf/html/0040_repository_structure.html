@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0040 - Architecture Repository Structure</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0040</div>
+            <h1>Architecture Repository Structure</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0030_governance_framework.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0050_stakeholder_management.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: togaf-0040</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="architecture-repository-structure">Architecture Repository Structure</h1>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0040
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="purpose">Purpose</h2>
+<p>This document defines the structure and organization of the architecture repository for [TODO]. The repository serves as the central storage for all architecture artifacts and deliverables.</p>
+<h2 id="scope">Scope</h2>
+<p>This document covers:
+- Repository structure and organization
+- Artifact classification
+- Version control and lifecycle management
+- Access control and security
+- Repository tools and technology</p>
+<h2 id="repository-structure">Repository Structure</h2>
+<h3 id="architecture-landscape">Architecture Landscape</h3>
+<p>The architecture landscape contains:
+- <strong>Architecture Metamodel</strong>: Defines the types of artifacts and their relationships
+- <strong>Architecture Capability</strong>: Documents the architecture function and processes
+- <strong>Architecture Principles</strong>: Foundational rules and guidelines
+- <strong>Architecture Vision</strong>: High-level strategic direction</p>
+<h3 id="standards-information-base">Standards Information Base</h3>
+<p>Contains:
+- <strong>Technology Standards</strong>: Approved technologies and platforms
+- <strong>Design Patterns</strong>: Reusable solution patterns
+- <strong>Best Practices</strong>: Proven approaches and methodologies
+- <strong>Reference Models</strong>: Industry and organizational reference architectures</p>
+<h3 id="governance-log">Governance Log</h3>
+<p>Tracks:
+- <strong>Architecture Decisions</strong>: ADRs and decision history
+- <strong>Compliance Assessments</strong>: Review results and findings
+- <strong>Exceptions</strong>: Approved deviations from standards
+- <strong>Change Requests</strong>: Architecture change proposals</p>
+<h3 id="architecture-repository">Architecture Repository</h3>
+<p>Organized by architecture domain:</p>
+<div class="codehilite"><pre><span></span><code>Architecture Repository/
+├── Business Architecture/
+│   ├── Business Capabilities/
+│   ├── Value Streams/
+│   ├── Organization Models/
+│   └── Business Processes/
+├── Data Architecture/
+│   ├── Data Models/
+│   ├── Data Flow Diagrams/
+│   ├── Data Governance/
+│   └── Data Standards/
+├── Application Architecture/
+│   ├── Application Portfolio/
+│   ├── Application Interfaces/
+│   ├── Application Components/
+│   └── Integration Patterns/
+└── Technology Architecture/
+    ├── Infrastructure Models/
+    ├── Network Diagrams/
+    ├── Security Architecture/
+    └── Technology Standards/
+</code></pre></div>
+
+<h2 id="artifact-classification">Artifact Classification</h2>
+<h3 id="artifact-types">Artifact Types</h3>
+<table>
+<thead>
+<tr>
+<th>Artifact Type</th>
+<th>Description</th>
+<th>Storage Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Architecture Vision</td>
+<td>Strategic direction</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Architecture Principles</td>
+<td>Guiding rules</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Architecture Models</td>
+<td>Visual representations</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Architecture Specifications</td>
+<td>Detailed requirements</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Architecture Decisions</td>
+<td>ADRs</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Standards</td>
+<td>Technology standards</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+<h3 id="artifact-lifecycle-states">Artifact Lifecycle States</h3>
+<table>
+<thead>
+<tr>
+<th>State</th>
+<th>Description</th>
+<th>Allowed Transitions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Draft</td>
+<td>Work in progress</td>
+<td>Review, Cancelled</td>
+</tr>
+<tr>
+<td>Review</td>
+<td>Under review</td>
+<td>Approved, Draft, Rejected</td>
+</tr>
+<tr>
+<td>Approved</td>
+<td>Formally approved</td>
+<td>Published, Superseded</td>
+</tr>
+<tr>
+<td>Published</td>
+<td>Available for use</td>
+<td>Superseded, Deprecated</td>
+</tr>
+<tr>
+<td>Superseded</td>
+<td>Replaced by newer version</td>
+<td>Archived</td>
+</tr>
+<tr>
+<td>Deprecated</td>
+<td>No longer recommended</td>
+<td>Archived</td>
+</tr>
+<tr>
+<td>Archived</td>
+<td>Historical reference only</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<h2 id="version-control">Version Control</h2>
+<h3 id="versioning-scheme">Versioning Scheme</h3>
+<p>Artifacts use semantic versioning: MAJOR.MINOR.PATCH</p>
+<ul>
+<li><strong>MAJOR</strong>: Significant changes that break compatibility</li>
+<li><strong>MINOR</strong>: New features or enhancements</li>
+<li><strong>PATCH</strong>: Bug fixes and minor corrections</li>
+</ul>
+<h3 id="version-control-process">Version Control Process</h3>
+<ol>
+<li>Check out artifact for editing</li>
+<li>Make changes in draft state</li>
+<li>Submit for review</li>
+<li>Incorporate review feedback</li>
+<li>Approve and publish new version</li>
+<li>Archive previous version</li>
+</ol>
+<h2 id="access-control">Access Control</h2>
+<h3 id="access-levels">Access Levels</h3>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Read</th>
+<th>Write</th>
+<th>Approve</th>
+<th>Delete</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Architecture Team</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>Project Teams</td>
+<td>✓</td>
+<td>Request</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Management</td>
+<td>✓</td>
+<td>-</td>
+<td>✓</td>
+<td>-</td>
+</tr>
+<tr>
+<td>All Staff</td>
+<td>✓</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="security-classification">Security Classification</h3>
+<p>Artifacts are classified as:
+- <strong>Public</strong>: Available to all
+- <strong>Internal</strong>: Available to employees
+- <strong>Confidential</strong>: Restricted access
+- <strong>Restricted</strong>: Highly sensitive, need-to-know basis</p>
+<h2 id="repository-tools">Repository Tools</h2>
+<h3 id="primary-repository-tool">Primary Repository Tool</h3>
+<p><strong>Tool</strong>: [TODO]</p>
+<p><strong>Capabilities</strong>:
+- Version control
+- Workflow management
+- Collaboration features
+- Search and discovery
+- Reporting and analytics</p>
+<h3 id="integration-points">Integration Points</h3>
+<p>The repository integrates with:
+- <strong>Modeling Tools</strong>: [TODO]
+- <strong>Documentation Tools</strong>: [TODO]
+- <strong>Project Management</strong>: [TODO]
+- <strong>CMDB</strong>: [TODO]</p>
+<h2 id="repository-maintenance">Repository Maintenance</h2>
+<h3 id="maintenance-activities">Maintenance Activities</h3>
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>Frequency</th>
+<th>Responsible</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Artifact review</td>
+<td>[TODO]</td>
+<td>Domain Architects</td>
+</tr>
+<tr>
+<td>Cleanup of obsolete artifacts</td>
+<td>[TODO]</td>
+<td>Repository Administrator</td>
+</tr>
+<tr>
+<td>Access rights review</td>
+<td>[TODO]</td>
+<td>Security Team</td>
+</tr>
+<tr>
+<td>Backup verification</td>
+<td>[TODO]</td>
+<td>IT Operations</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quality-assurance">Quality Assurance</h3>
+<p>Repository quality is maintained through:
+- Regular audits of artifact completeness
+- Validation of artifact relationships
+- Verification of metadata accuracy
+- Review of access patterns and usage</p>
+<h2 id="search-and-discovery">Search and Discovery</h2>
+<h3 id="metadata-schema">Metadata Schema</h3>
+<p>All artifacts include:
+- <strong>Title</strong>: Descriptive name
+- <strong>Description</strong>: Purpose and scope
+- <strong>Author</strong>: Creator
+- <strong>Owner</strong>: Current responsible party
+- <strong>Version</strong>: Current version number
+- <strong>Status</strong>: Lifecycle state
+- <strong>Classification</strong>: Security level
+- <strong>Tags</strong>: Keywords for discovery
+- <strong>Related Artifacts</strong>: Links to related items</p>
+<h3 id="search-capabilities">Search Capabilities</h3>
+<p>Users can search by:
+- Keyword in title or description
+- Artifact type
+- Domain
+- Author or owner
+- Status
+- Tags
+- Date range</p>
+<h2 id="reporting">Reporting</h2>
+<h3 id="standard-reports">Standard Reports</h3>
+<table>
+<thead>
+<tr>
+<th>Report</th>
+<th>Purpose</th>
+<th>Frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Artifact Inventory</td>
+<td>Complete list of artifacts</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Artifact Status</td>
+<td>Lifecycle state distribution</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Usage Analytics</td>
+<td>Most accessed artifacts</td>
+<td>[TODO]</td>
+</tr>
+<tr>
+<td>Compliance Status</td>
+<td>Architecture compliance metrics</td>
+<td>[TODO]</td>
+</tr>
+</tbody>
+</table>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0030_governance_framework.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0050_stakeholder_management.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

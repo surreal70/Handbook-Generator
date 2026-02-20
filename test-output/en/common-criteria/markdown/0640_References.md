@@ -1,6 +1,6 @@
 # References and Citations
 
-**Document-ID:** 0640
+**Document-ID:** COMMON-CRITERIA-0640
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

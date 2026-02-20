@@ -7,7 +7,7 @@ Classification: Internal
 
 # IT-Governance Rollen und Verantwortlichkeiten
 
-**Dokument-ID:** [FRAMEWORK]-0150
+**Dokument-ID:** ISO-38500-0150
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

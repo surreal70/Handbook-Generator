@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0210 - Schlüsselverwaltung</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0210</div>
+            <h1>Schlüsselverwaltung</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0200_cryptographic_controls.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0220_physical_security_perimeter.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: tisax-0210</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="schlusselverwaltung">Schlüsselverwaltung</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0210
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="zweck">Zweck</h2>
+<p>Dieses Dokument beschreibt die Prozesse und Verfahren für die Verwaltung kryptographischer Schlüssel gemäß TISAX-Anforderungen.</p>
+<h2 id="geltungsbereich">Geltungsbereich</h2>
+<p>Dieses Dokument gilt für alle kryptographischen Schlüssel in [TODO].</p>
+<h2 id="schlussel-lebenszyklus">Schlüssel-Lebenszyklus</h2>
+<h3 id="1-schlusselgenerierung">1. Schlüsselgenerierung</h3>
+<p><strong>Anforderungen:</strong>
+- Kryptographisch sichere Zufallszahlengeneratoren (CSRNG)
+- Ausreichende Schlüssellänge gemäß Standards
+- Sichere Generierungsumgebung
+- Dokumentation der Generierung</p>
+<p><strong>Prozess:</strong>
+1. Anforderung mit Begründung
+2. Genehmigung durch Schlüsselverwalter
+3. Generierung in sicherer Umgebung
+4. Validierung der Schlüsselqualität
+5. Dokumentation und Registrierung</p>
+<h3 id="2-schlusselspeicherung">2. Schlüsselspeicherung</h3>
+<p><strong>Anforderungen:</strong>
+- Hardware Security Modules (HSM) für kritische Schlüssel
+- Verschlüsselte Speicherung
+- Redundante Speicherung
+- Zugriffskontrolle
+- Physische Sicherheit</p>
+<p><strong>Speicherorte:</strong>
+- HSM für Produktionsschlüssel
+- Key Management Service (KMS) für Cloud-Schlüssel
+- Verschlüsselte Dateien für weniger kritische Schlüssel
+- Sichere Tresore für Backup-Schlüssel</p>
+<h3 id="3-schlusselverteilung">3. Schlüsselverteilung</h3>
+<p><strong>Anforderungen:</strong>
+- Sichere Übertragungskanäle
+- Authentifizierung der Empfänger
+- Verschlüsselte Übertragung
+- Protokollierung
+- Bestätigung des Empfangs</p>
+<p><strong>Methoden:</strong>
+- Automatisierte Verteilung über sichere APIs
+- Manuelle Übergabe in versiegelten Umschlägen
+- Elektronische Übertragung über verschlüsselte Kanäle
+- Persönliche Übergabe bei höchster Sensitivität</p>
+<h3 id="4-schlusselnutzung">4. Schlüsselnutzung</h3>
+<p><strong>Anforderungen:</strong>
+- Verwendung nur für vorgesehenen Zweck
+- Protokollierung der Nutzung
+- Überwachung auf Missbrauch
+- Regelmäßige Überprüfung</p>
+<p><strong>Kontrollen:</strong>
+- Zugriffskontrolle
+- Audit-Logging
+- Anomalie-Erkennung
+- Compliance-Monitoring</p>
+<h3 id="5-schlusselrotation">5. Schlüsselrotation</h3>
+<p><strong>Anforderungen:</strong>
+- Regelmäßige Rotation gemäß Richtlinie
+- Automatisierte Prozesse wo möglich
+- Keine Unterbrechung des Betriebs
+- Dokumentation</p>
+<p><strong>Rotationsintervalle:</strong>
+- Kritische Schlüssel: Quartalsweise
+- Produktionsschlüssel: Halbjährlich
+- Standard-Schlüssel: Jährlich
+- Test-Schlüssel: Bei Bedarf</p>
+<h3 id="6-schlusselwiderruf">6. Schlüsselwiderruf</h3>
+<p><strong>Gründe:</strong>
+- Kompromittierung vermutet oder bestätigt
+- Mitarbeiteraustritt
+- Ablauf der Gültigkeit
+- Änderung der Anforderungen
+- Sicherheitsvorfall</p>
+<p><strong>Prozess:</strong>
+1. Identifikation des Widerrufsgrundes
+2. Sofortige Sperrung des Schlüssels
+3. Benachrichtigung aller Stakeholder
+4. Neuausstellung bei Bedarf
+5. Dokumentation
+6. Post-Incident-Review</p>
+<h3 id="7-schlusselarchivierung">7. Schlüsselarchivierung</h3>
+<p><strong>Anforderungen:</strong>
+- Langzeitaufbewahrung für verschlüsselte Daten
+- Sichere Speicherung
+- Zugriffskontrolle
+- Wiederherstellungsprozess
+- Regelmäßige Überprüfung der Integrität</p>
+<p><strong>Aufbewahrungsfristen:</strong>
+- Gemäß gesetzlichen Anforderungen
+- Gemäß Datenaufbewahrungsrichtlinie
+- Mindestens solange verschlüsselte Daten existieren</p>
+<h3 id="8-schlusselvernichtung">8. Schlüsselvernichtung</h3>
+<p><strong>Anforderungen:</strong>
+- Sichere Löschung
+- Mehrfache Überschreibung
+- Dokumentation
+- Überprüfung der Vollständigkeit
+- Keine Wiederherstellbarkeit</p>
+<p><strong>Methoden:</strong>
+- Kryptographisches Löschen (Crypto-Shredding)
+- Physische Zerstörung von Speichermedien
+- Sichere Löschverfahren (z.B. DoD 5220.22-M)
+- Zertifizierte Vernichtung</p>
+<h2 id="schlusseltypen">Schlüsseltypen</h2>
+<h3 id="symmetrische-schlussel">Symmetrische Schlüssel</h3>
+<p><strong>Verwendung:</strong>
+- Datenverschlüsselung
+- Nachrichtenauthentifizierung
+- Datenbank-Verschlüsselung</p>
+<p><strong>Verwaltung:</strong>
+- Sichere Generierung
+- Verschlüsselte Speicherung
+- Regelmäßige Rotation
+- Sichere Verteilung</p>
+<h3 id="asymmetrische-schlusselpaare">Asymmetrische Schlüsselpaare</h3>
+<p><strong>Verwendung:</strong>
+- Digitale Signaturen
+- Schlüsselaustausch
+- Authentifizierung
+- Zertifikate</p>
+<p><strong>Verwaltung:</strong>
+- Private Schlüssel: Höchste Sicherheitsstufe
+- Öffentliche Schlüssel: Verteilung über PKI
+- Zertifikatsverwaltung
+- Widerrufslisten</p>
+<h3 id="master-schlussel">Master-Schlüssel</h3>
+<p><strong>Verwendung:</strong>
+- Verschlüsselung anderer Schlüssel (Key Encryption Keys)
+- Höchste Sicherheitsstufe</p>
+<p><strong>Verwaltung:</strong>
+- Speicherung in HSM
+- Mehrfache Redundanz
+- Strenge Zugriffskontrolle
+- Notfall-Wiederherstellungsplan</p>
+<h3 id="session-schlussel">Session-Schlüssel</h3>
+<p><strong>Verwendung:</strong>
+- Temporäre Verschlüsselung
+- Kommunikationssitzungen</p>
+<p><strong>Verwaltung:</strong>
+- Automatische Generierung
+- Kurze Lebensdauer
+- Automatische Vernichtung nach Nutzung</p>
+<h2 id="schlusselverwaltungssysteme">Schlüsselverwaltungssysteme</h2>
+<h3 id="hardware-security-modules-hsm">Hardware Security Modules (HSM)</h3>
+<p><strong>Funktionen:</strong>
+- Sichere Schlüsselgenerierung
+- Geschützte Schlüsselspeicherung
+- Kryptographische Operationen
+- Audit-Logging</p>
+<p><strong>Anforderungen:</strong>
+- FIPS 140-2 Level 2 oder höher
+- Redundante Konfiguration
+- Regelmäßige Wartung
+- Backup und Recovery</p>
+<h3 id="key-management-service-kms">Key Management Service (KMS)</h3>
+<p><strong>Funktionen:</strong>
+- Zentrale Schlüsselverwaltung
+- API-basierter Zugriff
+- Automatisierte Rotation
+- Audit-Logging</p>
+<p><strong>Anforderungen:</strong>
+- Hochverfügbarkeit
+- Verschlüsselte Kommunikation
+- Zugriffskontrolle
+- Compliance-Monitoring</p>
+<h3 id="schlusselverwaltungsdatenbank">Schlüsselverwaltungsdatenbank</h3>
+<p><strong>Inhalte:</strong>
+- Schlüssel-Metadaten
+- Verwendungszweck
+- Eigentümer und Verantwortliche
+- Gültigkeitsdauer
+- Nutzungshistorie</p>
+<p><strong>Sicherheit:</strong>
+- Verschlüsselte Speicherung
+- Zugriffskontrolle
+- Audit-Logging
+- Regelmäßige Backups</p>
+<h2 id="schlusselwiederherstellung">Schlüsselwiederherstellung</h2>
+<h3 id="backup-und-recovery">Backup und Recovery</h3>
+<p><strong>Anforderungen:</strong>
+- Regelmäßige Backups kritischer Schlüssel
+- Sichere Speicherung der Backups
+- Getestete Wiederherstellungsprozesse
+- Dokumentation</p>
+<p><strong>Prozess:</strong>
+1. Identifikation des Wiederherstellungsbedarfs
+2. Genehmigung durch autorisierte Person
+3. Wiederherstellung aus Backup
+4. Validierung der Wiederherstellung
+5. Dokumentation</p>
+<h3 id="escrow">Escrow</h3>
+<p><strong>Verwendung:</strong>
+- Für kritische Geschäftsschlüssel
+- Bei Mitarbeiteraustritt
+- Für Notfallwiederherstellung</p>
+<p><strong>Anforderungen:</strong>
+- Vertrauenswürdige Escrow-Stelle
+- Mehrfache Authentifizierung für Zugriff
+- Regelmäßige Überprüfung
+- Dokumentation</p>
+<h2 id="zugriffskontrolle">Zugriffskontrolle</h2>
+<h3 id="berechtigungen">Berechtigungen</h3>
+<p><strong>Rollen:</strong>
+- <strong>Schlüsselverwalter</strong>: Vollständige Verwaltung
+- <strong>Schlüsselnutzer</strong>: Nutzung zugewiesener Schlüssel
+- <strong>Auditor</strong>: Nur Lesezugriff auf Logs
+- <strong>Notfallzugriff</strong>: Break-Glass-Zugriff</p>
+<p><strong>Prinzipien:</strong>
+- Least Privilege
+- Need-to-Know
+- Segregation of Duties
+- Vier-Augen-Prinzip bei kritischen Operationen</p>
+<h3 id="authentifizierung">Authentifizierung</h3>
+<p><strong>Anforderungen:</strong>
+- Multi-Faktor-Authentifizierung
+- Starke Passwörter
+- Regelmäßige Rezertifizierung
+- Protokollierung aller Zugriffe</p>
+<h2 id="uberwachung-und-audit">Überwachung und Audit</h2>
+<h3 id="protokollierung">Protokollierung</h3>
+<p><strong>Ereignisse:</strong>
+- Schlüsselgenerierung
+- Schlüsselzugriffe
+- Schlüsselrotation
+- Schlüsselwiderruf
+- Schlüsselvernichtung
+- Fehlgeschlagene Zugriffsversuche</p>
+<h3 id="monitoring">Monitoring</h3>
+<p><strong>Überwachung:</strong>
+- Echtzeit-Monitoring kritischer Operationen
+- Automatische Alarmierung bei Anomalien
+- Regelmäßige Log-Analysen
+- Compliance-Checks</p>
+<h3 id="audit">Audit</h3>
+<p><strong>Regelmäßig:</strong>
+- Quartalsweise Stichproben
+- Jährliche Vollprüfung
+- Überprüfung der Compliance
+- Identifikation von Verbesserungspotentialen</p>
+<h2 id="notfallmanagement">Notfallmanagement</h2>
+<h3 id="schlusselkompromittierung">Schlüsselkompromittierung</h3>
+<p><strong>Sofortmaßnahmen:</strong>
+1. Identifikation des kompromittierten Schlüssels
+2. Sofortiger Widerruf
+3. Benachrichtigung aller Stakeholder
+4. Neuausstellung von Schlüsseln
+5. Untersuchung des Vorfalls
+6. Dokumentation</p>
+<h3 id="schlusselverlust">Schlüsselverlust</h3>
+<p><strong>Maßnahmen:</strong>
+1. Versuch der Wiederherstellung aus Backup
+2. Bei Misserfolg: Neuausstellung
+3. Überprüfung der Auswirkungen
+4. Benachrichtigung der Betroffenen
+5. Dokumentation</p>
+<h3 id="disaster-recovery">Disaster Recovery</h3>
+<p><strong>Anforderungen:</strong>
+- Dokumentierte Recovery-Prozesse
+- Regelmäßige Tests
+- Offsite-Backups
+- Notfall-Kontakte</p>
+<h2 id="tisax-spezifische-anforderungen">TISAX-spezifische Anforderungen</h2>
+<h3 id="vda-isa-kontrollen">VDA ISA Kontrollen</h3>
+<p>Dieses Dokument adressiert:
+- <strong>4.2.1</strong>: Schlüsselverwaltung
+- <strong>4.2.2</strong>: Schlüsselgenerierung
+- <strong>4.2.3</strong>: Schlüsselspeicherung
+- <strong>4.2.4</strong>: Schlüsselverteilung</p>
+<h3 id="assessment-nachweise">Assessment-Nachweise</h3>
+<ul>
+<li>Schlüsselverwaltungsprozesse</li>
+<li>Schlüsselverwaltungsdatenbank</li>
+<li>Audit-Logs</li>
+<li>Schulungsnachweise</li>
+<li>Incident-Response-Pläne</li>
+</ul>
+<h2 id="verantwortlichkeiten">Verantwortlichkeiten</h2>
+<ul>
+<li><strong>Schlüsselverwalter</strong>: Tägliche Verwaltung</li>
+<li><strong>CISO</strong>: Gesamtverantwortung</li>
+<li><strong>IT-Sicherheit</strong>: Technische Implementierung</li>
+<li><strong>Auditor</strong>: Compliance-Überwachung</li>
+</ul>
+<h2 id="schulung">Schulung</h2>
+<p>Schulungsinhalte:
+- Schlüsselverwaltungsprozesse
+- Sichere Handhabung von Schlüsseln
+- Incident Response
+- Compliance-Anforderungen</p>
+<h2 id="kennzahlen">Kennzahlen</h2>
+<p>[TODO] misst:
+- Anzahl aktiver Schlüssel
+- Anzahl Schlüsselrotationen (Ziel: 100% fristgerecht)
+- Anzahl Schlüsselkompromittierungen (Ziel: 0)
+- Durchschnittliche Zeit bis zur Schlüsselbereitstellung
+- Compliance-Rate (Ziel: 100%)</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0200_cryptographic_controls.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0220_physical_security_perimeter.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

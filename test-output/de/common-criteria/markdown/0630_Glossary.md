@@ -1,6 +1,6 @@
 # Glossar und Begriffsdefinitionen
 
-**Dokument-ID:** 0630
+**Dokument-ID:** COMMON-CRITERIA-0630
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

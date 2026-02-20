@@ -6,7 +6,7 @@ Classification: Internal
 
 # Control Deficiencies and Remediation
 
-**Document-ID:** [FRAMEWORK]-0150
+**Document-ID:** SOC1-0150
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

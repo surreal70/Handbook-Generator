@@ -1,6 +1,6 @@
 # Policy: Data Protection Interfaces
 
-**Document-ID:** [FRAMEWORK]-0560
+**Document-ID:** ISMS-0560
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

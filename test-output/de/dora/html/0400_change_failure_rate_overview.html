@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0400 - Change Failure Rate Übersicht</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0400</div>
+            <h1>Change Failure Rate Übersicht</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0350_mttr_improvement.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0410_cfr_measurement.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: dora-0400</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="change-failure-rate-ubersicht">Change Failure Rate Übersicht</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0400
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="zweck">Zweck</h2>
+<p>Umfassende Übersicht über die Change Failure Rate Metrik im DORA Framework.</p>
+<h2 id="umfang">Umfang</h2>
+<ul>
+<li>Definition der Change Failure Rate</li>
+<li>Performance-Level und Benchmarks</li>
+<li>Ursachen von Change Failures</li>
+<li>Bedeutung für die Organisation</li>
+</ul>
+<h2 id="definition">Definition</h2>
+<h3 id="change-failure-rate-cfr">Change Failure Rate (CFR)</h3>
+<p>Die Change Failure Rate misst den Prozentsatz der Deployments, die zu degradiertem Service führen und Remediation (Hotfix, Rollback, Patch) erfordern.</p>
+<p><strong>Formale Definition</strong>: (Anzahl fehlgeschlagener Deployments / Gesamtanzahl Deployments) × 100%</p>
+<h3 id="organisationsinformationen">Organisationsinformationen</h3>
+<ul>
+<li><strong>Organisation</strong>: [TODO]</li>
+<li><strong>Verantwortlicher</strong>: [TODO]</li>
+<li><strong>Aktuelle CFR</strong>: [TODO]</li>
+</ul>
+<h2 id="performance-level">Performance-Level</h2>
+<h3 id="elite-performers">Elite Performers</h3>
+<p><strong>CFR</strong>: 0-15%</p>
+<p>Charakteristiken:
+- Umfassende Test-Automatisierung
+- Shift-Left Testing
+- Continuous Monitoring
+- Feature Flags
+- Progressive Delivery</p>
+<h3 id="high-performers">High Performers</h3>
+<p><strong>CFR</strong>: 16-30%</p>
+<p>Charakteristiken:
+- Gute Test-Coverage
+- Automated Testing
+- Code Reviews
+- Staging Environments</p>
+<h3 id="medium-performers">Medium Performers</h3>
+<p><strong>CFR</strong>: 31-45%</p>
+<p>Charakteristiken:
+- Basis-Testing
+- Manuelle Tests
+- Begrenzte Automation
+- Reaktive Quality Assurance</p>
+<h3 id="low-performers">Low Performers</h3>
+<p><strong>CFR</strong>: 46-60%</p>
+<p>Charakteristiken:
+- Minimale Tests
+- Fehlende Automation
+- Unzureichende Quality Gates
+- Häufige Production Issues</p>
+<h2 id="ursachen-von-change-failures">Ursachen von Change Failures</h2>
+<h3 id="1-unzureichende-tests">1. Unzureichende Tests</h3>
+<p><strong>Probleme</strong>:
+- Niedrige Test-Coverage
+- Fehlende Integration Tests
+- Keine Performance Tests
+- Unzureichende Edge Case Tests</p>
+<h3 id="2-mangelhafte-code-qualitat">2. Mangelhafte Code-Qualität</h3>
+<p><strong>Probleme</strong>:
+- Technische Schulden
+- Code Smells
+- Fehlende Code Reviews
+- Unzureichende Dokumentation</p>
+<h3 id="3-unvollstandige-requirements">3. Unvollständige Requirements</h3>
+<p><strong>Probleme</strong>:
+- Unklare Anforderungen
+- Fehlende Acceptance Criteria
+- Unzureichende Spezifikationen
+- Missverständnisse</p>
+<h3 id="4-deployment-probleme">4. Deployment-Probleme</h3>
+<p><strong>Probleme</strong>:
+- Konfigurationsfehler
+- Umgebungs-Inkonsistenzen
+- Dependency-Konflikte
+- Rollback-Schwierigkeiten</p>
+<h3 id="5-monitoring-lucken">5. Monitoring-Lücken</h3>
+<p><strong>Probleme</strong>:
+- Unzureichendes Monitoring
+- Fehlende Alerts
+- Verzögerte Detection
+- Unvollständige Observability</p>
+<h2 id="bedeutung-fur-die-organisation">Bedeutung für die Organisation</h2>
+<h3 id="business-impact">Business-Impact</h3>
+<ul>
+<li><strong>Kundenzufriedenheit</strong>: Weniger Production Issues</li>
+<li><strong>Reputation</strong>: Zuverlässigkeit</li>
+<li><strong>Kosten</strong>: Reduzierte Remediation-Kosten</li>
+<li><strong>Produktivität</strong>: Weniger Firefighting</li>
+</ul>
+<h3 id="technische-vorteile">Technische Vorteile</h3>
+<ul>
+<li><strong>Qualität</strong>: Höhere Code-Qualität</li>
+<li><strong>Stabilität</strong>: Stabilere Systeme</li>
+<li><strong>Vertrauen</strong>: Vertrauen in Deployments</li>
+<li><strong>Geschwindigkeit</strong>: Schnellere Delivery</li>
+</ul>
+<h2 id="messmethodik">Messmethodik</h2>
+<h3 id="datenerfassung">Datenerfassung</h3>
+<p><strong>Deployment-Tracking</strong>:
+- Deployment-Timestamp
+- Deployment-Status
+- Commit-SHA
+- Environment</p>
+<p><strong>Failure-Tracking</strong>:
+- Incident-Timestamp
+- Related Deployment
+- Failure Type
+- Remediation Action</p>
+<h3 id="berechnung">Berechnung</h3>
+<div class="codehilite"><pre><span></span><code>CFR = (Failed Deployments / Total Deployments) × 100%
+</code></pre></div>
+
+<p><strong>Failed Deployment Definition</strong>:
+- Rollback erforderlich
+- Hotfix erforderlich
+- Service Degradation
+- Production Incident</p>
+<h2 id="verbesserungsansatze">Verbesserungsansätze</h2>
+<h3 id="kurzfristig">Kurzfristig</h3>
+<ul>
+<li>Test-Coverage erhöhen</li>
+<li>Code Reviews verbessern</li>
+<li>Staging-Tests erweitern</li>
+<li>Monitoring verbessern</li>
+</ul>
+<h3 id="mittelfristig">Mittelfristig</h3>
+<ul>
+<li>Test-Automatisierung</li>
+<li>Quality Gates</li>
+<li>Progressive Delivery</li>
+<li>Chaos Engineering</li>
+</ul>
+<h3 id="langfristig">Langfristig</h3>
+<ul>
+<li>Shift-Left Testing</li>
+<li>Continuous Testing</li>
+<li>Predictive Quality</li>
+<li>Self-Healing Systems</li>
+</ul>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0350_mttr_improvement.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0410_cfr_measurement.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

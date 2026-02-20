@@ -1,6 +1,6 @@
 # Zweckbindung
 
-**Dokument-ID:** 0110
+**Dokument-ID:** GDPR-0110
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

@@ -21,10 +21,22 @@
         
         <main>
 <h1 id="incident-management-runbook">Incident Management Runbook</h1>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0120
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
 <h2 id="purpose-and-scope">Purpose and Scope</h2>
 <p>This document describes the incident management process for AdminSend GmbH according to ITIL v4 best practices. It defines categories, priorities, escalation processes, and standard runbooks for handling service disruptions.</p>
 <p><strong>Scope:</strong> All IT services and systems of AdminSend GmbH</p>
-<p><strong>Responsible:</strong> Andreas Huemmer (andreas.huemmer@adminsend.de)</p>
+<p><strong>Responsible:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }} ({{ meta-organisation-roles.role_IT_Operations_Manager_email }})</p>
 <h2 id="incident-definition">Incident Definition</h2>
 <p>An <strong>incident</strong> is an unplanned interruption or quality reduction of an IT service. The goal of incident management is to restore normal service operation as quickly as possible.</p>
 <h3 id="distinction-from-other-processes">Distinction from Other Processes</h3>
@@ -294,7 +306,7 @@
 
 <h3 id="1-incident-detection">1. Incident Detection</h3>
 <p><strong>Detection Sources:</strong>
-- Monitoring alerts ({{ netbox.monitoring_system }})
+- Monitoring alerts ([[ netbox.monitoring_system ]])
 - Service desk tickets
 - User reports
 - Automatic event correlation</p>
@@ -307,7 +319,7 @@
 - Symptom description
 - Affected users/locations
 - Reporter (name, contact)</p>
-<p><strong>Tool:</strong> {{ meta.ticketing_system }}</p>
+<p><strong>Tool:</strong> {{ meta-handbook.ticketing_system }}</p>
 <p><strong>Responsible:</strong> Service desk</p>
 <h3 id="3-categorization-prioritization">3. Categorization &amp; Prioritization</h3>
 <p><strong>Activities:</strong>
@@ -361,13 +373,13 @@
 <tr>
 <td><strong>Level 1</strong></td>
 <td>Service desk</td>
-<td>julia.becker@adminsend.de</td>
+<td>{{ meta-organisation-roles.role_Service_Desk_Lead_email }}</td>
 <td>Standard incidents</td>
 </tr>
 <tr>
 <td><strong>Level 2</strong></td>
 <td>IT operations team</td>
-<td>andreas.huemmer@adminsend.de</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager_email }}</td>
 <td>Complex technical problems</td>
 </tr>
 <tr>
@@ -379,7 +391,7 @@
 <tr>
 <td><strong>Management</strong></td>
 <td>CIO</td>
-<td>anna.schmidt@adminsend.de</td>
+<td>{{ meta-organisation-roles.role_CIO_email }}</td>
 <td>P1 incidents &gt; 2h</td>
 </tr>
 </tbody>
@@ -416,7 +428,7 @@
 <tr>
 <td><strong>Security</strong></td>
 <td>Security team</td>
-<td>thomas.weber@adminsend.de</td>
+<td>{{ meta-organisation-roles.role_CISO_email }}</td>
 <td>Security incidents</td>
 </tr>
 <tr>
@@ -444,7 +456,7 @@
 <p><strong>Symptoms:</strong> Server not responding to ping, services unavailable</p>
 <p><strong>Priority:</strong> P1 or P2 (depending on service criticality)</p>
 <p><strong>Diagnosis Steps:</strong>
-1. Perform ping test: <code>ping {{ netbox.server.ip }}</code>
+1. Perform ping test: <code>ping [[ netbox.server.ip ]]</code>
 2. Check monitoring dashboard
 3. Check physical state (if on-site)
 4. Check network connectivity
@@ -520,7 +532,7 @@
 4. Reset passwords
 5. Perform forensic analysis
 6. Rebuild systems (if required)</p>
-<p><strong>Escalation:</strong> Immediately to CISO (thomas.weber@adminsend.de)</p>
+<p><strong>Escalation:</strong> Immediately to CISO ({{ meta-organisation-roles.role_CISO_email }})</p>
 <h3 id="runbook-6-network-outage">Runbook 6: Network Outage</h3>
 <p><strong>Symptoms:</strong> No network connectivity, devices unreachable</p>
 <p><strong>Priority:</strong> P1 or P2</p>
@@ -546,7 +558,7 @@
 <p><strong>During Processing:</strong>
 - Regular status updates (P1: every 30 min, P2: every 2h)
 - Escalation notifications
-- Team communication via {{ meta.collaboration_tool }}</p>
+- Team communication via {{ meta-handbook.collaboration_tool }}</p>
 <p><strong>At Incident Resolution:</strong>
 - User notification of resolution
 - Management information for P1/P2
@@ -557,8 +569,8 @@
 - Customers for service outages
 - External partners for dependencies</p>
 <p><strong>Communication Channels:</strong>
-- Email: info@adminsend.de
-- Status page: {{ meta.status_page_url }}
+- Email: {{ meta-organisation.email }}
+- Status page: {{ meta-handbook.status_page_url }}
 - Phone: +49 89 12345678</p>
 <p><strong>Communication Template:</strong></p>
 <div class="codehilite"><pre><span></span><code><span class="nl">Subject</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="n">P1</span><span class="o">/</span><span class="n">P2</span><span class="p">]</span><span class="w"> </span><span class="n">Service</span><span class="w"> </span><span class="n">Disruption</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="n">Service</span><span class="w"> </span><span class="n">Name</span><span class="p">]</span>
@@ -601,7 +613,7 @@
 <tbody>
 <tr>
 <td><strong>Incident Manager</strong></td>
-<td>Andreas Huemmer</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager }}</td>
 <td>Coordination and communication</td>
 </tr>
 <tr>
@@ -616,7 +628,7 @@
 </tr>
 <tr>
 <td><strong>Management Rep</strong></td>
-<td>Anna Schmidt</td>
+<td>[TODO]</td>
 <td>Decisions and escalation</td>
 </tr>
 </tbody>
@@ -684,21 +696,21 @@
 <h2 id="tools-and-systems">Tools and Systems</h2>
 <h3 id="incident-management-tool">Incident Management Tool</h3>
 <ul>
-<li><strong>System:</strong> {{ meta.ticketing_system }}</li>
-<li><strong>URL:</strong> {{ meta.ticketing_system_url }}</li>
+<li><strong>System:</strong> {{ meta-handbook.ticketing_system }}</li>
+<li><strong>URL:</strong> {{ meta-handbook.ticketing_system_url }}</li>
 <li><strong>Access:</strong> All IT staff</li>
 </ul>
 <h3 id="monitoring-system">Monitoring System</h3>
 <ul>
-<li><strong>System:</strong> {{ netbox.monitoring_system }}</li>
-<li><strong>URL:</strong> {{ meta.monitoring_url }}</li>
+<li><strong>System:</strong> [[ netbox.monitoring_system ]]</li>
+<li><strong>URL:</strong> {{ meta-handbook.monitoring_url }}</li>
 <li><strong>Access:</strong> IT operations team</li>
 </ul>
 <h3 id="communication-tools">Communication Tools</h3>
 <ul>
-<li><strong>Chat:</strong> {{ meta.collaboration_tool }}</li>
-<li><strong>Conference:</strong> {{ meta.conference_system }}</li>
-<li><strong>Status Page:</strong> {{ meta.status_page_url }}</li>
+<li><strong>Chat:</strong> {{ meta-handbook.collaboration_tool }}</li>
+<li><strong>Conference:</strong> {{ meta-handbook.conference_system }}</li>
+<li><strong>Status Page:</strong> {{ meta-handbook.status_page_url }}</li>
 </ul>
 <h2 id="appendix">Appendix</h2>
 <h3 id="incident-categories-complete">Incident Categories (Complete)</h3>
@@ -734,13 +746,13 @@
 <tbody>
 <tr>
 <td><strong>Service Desk</strong></td>
-<td>julia.becker@adminsend.de</td>
+<td>{{ meta-organisation-roles.role_Service_Desk_Lead_email }}</td>
 <td>[Backup]</td>
 <td>24/7</td>
 </tr>
 <tr>
 <td><strong>IT Operations</strong></td>
-<td>andreas.huemmer@adminsend.de</td>
+<td>{{ meta-organisation-roles.role_IT_Operations_Manager_email }}</td>
 <td>[Backup]</td>
 <td>24/7</td>
 </tr>
@@ -752,7 +764,7 @@
 </tr>
 <tr>
 <td><strong>Security Team</strong></td>
-<td>thomas.weber@adminsend.de</td>
+<td>{{ meta-organisation-roles.role_CISO_email }}</td>
 <td>[Backup]</td>
 <td>24/7</td>
 </tr>
@@ -765,12 +777,11 @@
 <li>Internal Service Level Agreements</li>
 <li>Escalation Matrix</li>
 </ul>
-<hr />
-<p><strong>Document Owner:</strong> IT Operations Manager<br />
-<strong>Approved by:</strong> CIO<br />
-<strong>Version:</strong> 1.0.0<br />
-<strong>Classification:</strong> internal<br />
-<strong>Last Update:</strong> {{ meta.date }}</p>
+<p><strong>Document Owner:</strong> [TODO]<br />
+<strong>Approved by:</strong> [TODO]<br />
+<strong>Version:</strong> 0<br />
+<strong>Classification:</strong> Internal<br />
+<strong>Last Update:</strong> {{ meta-handbook.date }}</p>
         </main>
         
         <nav class="page-nav">

@@ -7,7 +7,7 @@ Classification: Internal
 
 # Supply Chain Risk Management (GV.SC)
 
-**Document-ID:** [FRAMEWORK]-0070
+**Document-ID:** NIST-CSF-0070
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

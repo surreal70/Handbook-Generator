@@ -6,7 +6,7 @@ Classification: Internal
 
 # Kontrollaktivitäten
 
-**Dokument-ID:** [FRAMEWORK]-0200
+**Dokument-ID:** COSO-0200
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

@@ -6,7 +6,7 @@ Classification: Internal
 
 # DCS-05: Off-Site Equipment
 
-**Document-ID:** [FRAMEWORK]-0530
+**Document-ID:** CSA-CCM-0530
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

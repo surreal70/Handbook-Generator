@@ -6,7 +6,7 @@ Classification: Internal
 
 # Lead Time Reduktionsstrategien
 
-**Dokument-ID:** [FRAMEWORK]-0240
+**Dokument-ID:** DORA-0240
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

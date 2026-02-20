@@ -21,10 +21,22 @@
         
         <main>
 <h1 id="problem-management-und-postmortems">Problem Management und Postmortems</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0130
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
 <h2 id="zweck-und-geltungsbereich">Zweck und Geltungsbereich</h2>
 <p>Dieses Dokument beschreibt den Problem-Management-Prozess für AdminSend GmbH gemäß ITIL v4 Best Practices. Es definiert die systematische Analyse wiederkehrender Incidents, Root-Cause-Analysis-Methoden, Postmortem-Prozesse und die Verwaltung der Known Error Database.</p>
 <p><strong>Geltungsbereich:</strong> Alle IT-Services und -Systeme von AdminSend GmbH</p>
-<p><strong>Verantwortlich:</strong> Andreas Huemmer (andreas.huemmer@adminsend.de)</p>
+<p><strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }} ({{ meta-organisation-roles.role_IT_Operations_Manager_email }})</p>
 <h2 id="problem-definition">Problem-Definition</h2>
 <p>Ein <strong>Problem</strong> ist die unbekannte Ursache eines oder mehrerer Incidents. Das Ziel des Problem Managements ist die Identifikation und Beseitigung der Grundursache, um zukünftige Incidents zu verhindern.</p>
 <h3 id="abgrenzung-incident-vs-problem">Abgrenzung Incident vs. Problem</h3>
@@ -134,7 +146,7 @@
 - Betroffene Services/Systeme
 - Betroffene Configuration Items (CIs)
 - Erste Hypothesen zur Ursache</p>
-<p><strong>Tool:</strong> {{ meta.ticketing_system }}</p>
+<p><strong>Tool:</strong> {{ meta-handbook.ticketing_system }}</p>
 <p><strong>Verantwortlich:</strong> Problem Manager</p>
 <h3 id="3-problem-categorization">3. Problem Categorization</h3>
 <p><strong>Kategorien:</strong>
@@ -602,8 +614,8 @@
 3. Connection-Timeout konfigurieren: <code>idle_in_transaction_session_timeout = 60000</code>
 4. Connection-Pool-Monitoring verbessern</p>
 <p><strong>Betroffene CIs:</strong>
-- {{ netbox.database.server }}
-- {{ netbox.application.server }}</p>
+- [[ netbox.database.server ]]
+- [[ netbox.application.server ]]</p>
 <p><strong>Verknüpfte Incidents:</strong> INC-2024-123, INC-2024-145, INC-2024-167</p>
 <p><strong>Status:</strong> Resolved</p>
 <p><strong>Priorität:</strong> P2</p>
@@ -719,7 +731,7 @@
 - KEDB-Verwaltung
 - Postmortem-Moderation
 - Reporting</p>
-<p><strong>Person:</strong> Andreas Huemmer</p>
+<p><strong>Person:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</p>
 <h3 id="technical-specialists">Technical Specialists</h3>
 <p><strong>Verantwortlichkeiten:</strong>
 - Technische Analyse
@@ -736,21 +748,21 @@
 <h2 id="tools-und-systeme">Tools und Systeme</h2>
 <h3 id="problem-management-tool">Problem-Management-Tool</h3>
 <ul>
-<li><strong>System:</strong> {{ meta.ticketing_system }}</li>
-<li><strong>URL:</strong> {{ meta.ticketing_system_url }}</li>
+<li><strong>System:</strong> {{ meta-handbook.ticketing_system }}</li>
+<li><strong>URL:</strong> {{ meta-handbook.ticketing_system_url }}</li>
 <li><strong>Zugriff:</strong> IT Operations Team</li>
 </ul>
 <h3 id="known-error-database">Known Error Database</h3>
 <ul>
-<li><strong>System:</strong> {{ meta.ticketing_system }} (KEDB-Modul)</li>
-<li><strong>URL:</strong> {{ meta.kedb_url }}</li>
+<li><strong>System:</strong> {{ meta-handbook.ticketing_system }} (KEDB-Modul)</li>
+<li><strong>URL:</strong> {{ meta-handbook.kedb_url }}</li>
 <li><strong>Zugriff:</strong> Alle IT-Mitarbeiter (Read)</li>
 </ul>
 <h3 id="rca-tools">RCA-Tools</h3>
 <ul>
-<li><strong>Collaboration:</strong> {{ meta.collaboration_tool }}</li>
-<li><strong>Diagramming:</strong> {{ meta.diagramming_tool }}</li>
-<li><strong>Log-Analysis:</strong> {{ meta.log_analysis_tool }}</li>
+<li><strong>Collaboration:</strong> {{ meta-handbook.collaboration_tool }}</li>
+<li><strong>Diagramming:</strong> {{ meta-handbook.diagramming_tool }}</li>
+<li><strong>Log-Analysis:</strong> {{ meta-handbook.log_analysis_tool }}</li>
 </ul>
 <h2 id="referenzen">Referenzen</h2>
 <ul>
@@ -760,12 +772,11 @@
 <li>Interne Incident-Management-Prozesse</li>
 <li>Change-Management-Prozesse</li>
 </ul>
-<hr />
-<p><strong>Dokumentverantwortlicher:</strong> IT Operations Manager<br />
-<strong>Genehmigt durch:</strong> CIO<br />
-<strong>Version:</strong> 1.0.0<br />
-<strong>Klassifizierung:</strong> internal<br />
-<strong>Letzte Aktualisierung:</strong> {{ meta.date }}</p>
+<p><strong>Dokumentverantwortlicher:</strong> [TODO]<br />
+<strong>Genehmigt durch:</strong> [TODO]<br />
+<strong>Version:</strong> 0<br />
+<strong>Klassifizierung:</strong> Internal<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta-handbook.date }}</p>
         </main>
         
         <nav class="page-nav">

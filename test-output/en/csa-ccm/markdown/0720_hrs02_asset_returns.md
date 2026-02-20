@@ -6,7 +6,7 @@ Classification: Internal
 
 # HRS-02: Asset Returns
 
-**Document-ID:** [FRAMEWORK]-0720
+**Document-ID:** CSA-CCM-0720
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

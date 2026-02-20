@@ -1,6 +1,6 @@
 # Network Segmentation
 
-**Document-ID:** [FRAMEWORK]-0020
+**Document-ID:** PCI-DSS-0020
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

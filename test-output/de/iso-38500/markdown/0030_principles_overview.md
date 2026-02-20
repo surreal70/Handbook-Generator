@@ -7,7 +7,7 @@ Classification: Internal
 
 # IT-Governance Prinzipien - Übersicht
 
-**Dokument-ID:** [FRAMEWORK]-0030
+**Dokument-ID:** ISO-38500-0030
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

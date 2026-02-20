@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0450 - Monitoring und Observability</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0450</div>
+            <h1>Monitoring und Observability</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0440_cicd_practices.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0460_technical_debt_management.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: dora-0450</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="monitoring-und-observability">Monitoring und Observability</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0450
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="zweck">Zweck</h2>
+<p>Monitoring und Observability zur Früherkennung und Prävention von Change Failures.</p>
+<h2 id="umfang">Umfang</h2>
+<ul>
+<li>Observability-Prinzipien</li>
+<li>Monitoring-Strategien</li>
+<li>Alerting</li>
+<li>Dashboards</li>
+</ul>
+<h2 id="organisationsinformationen">Organisationsinformationen</h2>
+<ul>
+<li><strong>Organisation</strong>: [TODO]</li>
+<li><strong>Monitoring-Verantwortlicher</strong>: [TODO]</li>
+<li><strong>Monitoring-Systeme</strong>: [TODO]</li>
+</ul>
+<h2 id="observability-prinzipien">Observability-Prinzipien</h2>
+<h3 id="three-pillars">Three Pillars</h3>
+<p><strong>1. Metrics</strong>:
+- Quantitative Messungen
+- Time-Series Data
+- Aggregierbare Daten</p>
+<p><strong>2. Logs</strong>:
+- Event-Daten
+- Strukturierte Logs
+- Kontextuelle Informationen</p>
+<p><strong>3. Traces</strong>:
+- Request-Flow
+- Distributed Tracing
+- Performance-Analyse</p>
+<h2 id="monitoring-strategien">Monitoring-Strategien</h2>
+<h3 id="application-monitoring">Application Monitoring</h3>
+<p><strong>Key Metrics</strong>:
+- Request Rate
+- Error Rate
+- Response Time (P50, P95, P99)
+- Throughput</p>
+<p><strong>Implementation</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">prometheus_client</span><span class="w"> </span><span class="kn">import</span> <span class="n">Counter</span><span class="p">,</span> <span class="n">Histogram</span>
+
+<span class="n">request_count</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="s1">&#39;http_requests_total&#39;</span><span class="p">,</span> <span class="s1">&#39;Total HTTP requests&#39;</span><span class="p">)</span>
+<span class="n">request_duration</span> <span class="o">=</span> <span class="n">Histogram</span><span class="p">(</span><span class="s1">&#39;http_request_duration_seconds&#39;</span><span class="p">,</span> <span class="s1">&#39;HTTP request duration&#39;</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/api/endpoint&#39;</span><span class="p">)</span>
+<span class="nd">@request_duration</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">endpoint</span><span class="p">():</span>
+    <span class="n">request_count</span><span class="o">.</span><span class="n">inc</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">process_request</span><span class="p">()</span>
+</code></pre></div>
+
+<h3 id="infrastructure-monitoring">Infrastructure Monitoring</h3>
+<p><strong>Key Metrics</strong>:
+- CPU Usage
+- Memory Usage
+- Disk I/O
+- Network I/O</p>
+<h3 id="business-metrics">Business Metrics</h3>
+<p><strong>Key Metrics</strong>:
+- Conversion Rate
+- Transaction Volume
+- User Engagement
+- Revenue Metrics</p>
+<h2 id="logging">Logging</h2>
+<h3 id="structured-logging">Structured Logging</h3>
+<p><strong>Format</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-02-13T14:00:00Z&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;level&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ERROR&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;service&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;api&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;trace_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;abc123&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Database connection failed&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ConnectionError&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Timeout after 30s&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="log-levels">Log Levels</h3>
+<ul>
+<li><strong>DEBUG</strong>: Detaillierte Informationen</li>
+<li><strong>INFO</strong>: Allgemeine Informationen</li>
+<li><strong>WARN</strong>: Warnungen</li>
+<li><strong>ERROR</strong>: Fehler</li>
+<li><strong>FATAL</strong>: Kritische Fehler</li>
+</ul>
+<h2 id="distributed-tracing">Distributed Tracing</h2>
+<h3 id="trace-context">Trace Context</h3>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">opentelemetry</span><span class="w"> </span><span class="kn">import</span> <span class="n">trace</span>
+
+<span class="n">tracer</span> <span class="o">=</span> <span class="n">trace</span><span class="o">.</span><span class="n">get_tracer</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="n">tracer</span><span class="o">.</span><span class="n">start_as_current_span</span><span class="p">(</span><span class="s2">&quot;process_order&quot;</span><span class="p">):</span>
+    <span class="n">order</span> <span class="o">=</span> <span class="n">create_order</span><span class="p">()</span>
+    <span class="k">with</span> <span class="n">tracer</span><span class="o">.</span><span class="n">start_as_current_span</span><span class="p">(</span><span class="s2">&quot;payment&quot;</span><span class="p">):</span>
+        <span class="n">process_payment</span><span class="p">(</span><span class="n">order</span><span class="p">)</span>
+    <span class="k">with</span> <span class="n">tracer</span><span class="o">.</span><span class="n">start_as_current_span</span><span class="p">(</span><span class="s2">&quot;shipping&quot;</span><span class="p">):</span>
+        <span class="n">schedule_shipping</span><span class="p">(</span><span class="n">order</span><span class="p">)</span>
+</code></pre></div>
+
+<h2 id="alerting">Alerting</h2>
+<h3 id="alert-rules">Alert Rules</h3>
+<p><strong>Error Rate Alert</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">alert</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HighErrorRate</span>
+<span class="nt">expr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rate(http_requests_total{status=~&quot;5..&quot;}[5m]) &gt; 0.05</span>
+<span class="nt">for</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5m</span>
+<span class="nt">labels</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">severity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">critical</span>
+<span class="nt">annotations</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">summary</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;High</span><span class="nv"> </span><span class="s">error</span><span class="nv"> </span><span class="s">rate</span><span class="nv"> </span><span class="s">detected&quot;</span>
+</code></pre></div>
+
+<p><strong>Response Time Alert</strong>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">alert</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SlowResponseTime</span>
+<span class="nt">expr</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">histogram_quantile(0.95, http_request_duration_seconds) &gt; 1.0</span>
+<span class="nt">for</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10m</span>
+<span class="nt">labels</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">severity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">warning</span>
+</code></pre></div>
+
+<h3 id="alert-routing">Alert Routing</h3>
+<div class="codehilite"><pre><span></span><code><span class="nt">route</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;team-pager&#39;</span>
+<span class="w">  </span><span class="nt">group_by</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;alertname&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;service&#39;</span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="nt">routes</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">match</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">severity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">critical</span>
+<span class="w">      </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;pagerduty&#39;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">match</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">severity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">warning</span>
+<span class="w">      </span><span class="nt">receiver</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;slack&#39;</span>
+</code></pre></div>
+
+<h2 id="dashboards">Dashboards</h2>
+<h3 id="service-dashboard">Service Dashboard</h3>
+<p><strong>Panels</strong>:
+- Request Rate
+- Error Rate
+- Response Time
+- Saturation</p>
+<h3 id="deployment-dashboard">Deployment Dashboard</h3>
+<p><strong>Panels</strong>:
+- Deployment Frequency
+- Change Failure Rate
+- Lead Time
+- MTTR</p>
+<h3 id="business-dashboard">Business Dashboard</h3>
+<p><strong>Panels</strong>:
+- Active Users
+- Transaction Volume
+- Conversion Rate
+- Revenue</p>
+<h2 id="slis-und-slos">SLIs und SLOs</h2>
+<h3 id="service-level-indicators-slis">Service Level Indicators (SLIs)</h3>
+<p><strong>Availability</strong>:</p>
+<div class="codehilite"><pre><span></span><code>Availability = Successful Requests / Total Requests
+</code></pre></div>
+
+<p><strong>Latency</strong>:</p>
+<div class="codehilite"><pre><span></span><code>Latency SLI = Requests &lt; 200ms / Total Requests
+</code></pre></div>
+
+<h3 id="service-level-objectives-slos">Service Level Objectives (SLOs)</h3>
+<p><strong>Example</strong>:
+- Availability: 99.9%
+- Latency P95: &lt; 200ms
+- Error Rate: &lt; 0.1%</p>
+<h2 id="continuous-improvement">Continuous Improvement</h2>
+<h3 id="monitoring-reviews">Monitoring Reviews</h3>
+<ul>
+<li>Wöchentliche Metriken-Reviews</li>
+<li>Monatliche SLO-Reviews</li>
+<li>Quartalsweise Strategie-Reviews</li>
+</ul>
+<h3 id="alert-tuning">Alert Tuning</h3>
+<ul>
+<li>False Positive Reduction</li>
+<li>Alert Threshold Optimization</li>
+<li>Alert Fatigue Prevention</li>
+</ul>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0440_cicd_practices.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0460_technical_debt_management.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

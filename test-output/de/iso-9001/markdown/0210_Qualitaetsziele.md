@@ -1,6 +1,6 @@
 # Qualitätsziele und Planung zu deren Erreichung
 
-**Dokument-ID:** 0210
+**Dokument-ID:** ISO-9001-0210
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

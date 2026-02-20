@@ -1,6 +1,6 @@
 # Resource Planning and Minimum Staffing
 
-**Document-ID:** [FRAMEWORK]-0190
+**Document-ID:** BCM-0190
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

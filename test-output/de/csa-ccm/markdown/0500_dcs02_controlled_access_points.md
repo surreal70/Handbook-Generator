@@ -6,7 +6,7 @@ Classification: Internal
 
 # DCS-02: Kontrollierte Zugangspunkte
 
-**Dokument-ID:** [FRAMEWORK]-0500
+**Dokument-ID:** CSA-CCM-0500
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

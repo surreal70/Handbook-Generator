@@ -6,7 +6,7 @@ Classification: Internal
 
 # IVS-06: OS-Härtung
 
-**Dokument-ID:** [FRAMEWORK]-0460
+**Dokument-ID:** CSA-CCM-0460
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

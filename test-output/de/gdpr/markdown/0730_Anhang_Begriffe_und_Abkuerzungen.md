@@ -1,6 +1,6 @@
 # Anhang: Begriffe und Abkürzungen
 
-**Dokument-ID:** 0730
+**Dokument-ID:** GDPR-0730
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

@@ -6,7 +6,7 @@ Classification: Internal
 
 # Auswahl und Entwicklung von Kontrollaktivitäten
 
-**Dokument-ID:** [FRAMEWORK]-0150
+**Dokument-ID:** COSO-0150
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

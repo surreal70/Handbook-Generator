@@ -6,7 +6,7 @@ Classification: Internal
 
 # Physische Zutrittskontrolle
 
-**Dokument-ID:** [FRAMEWORK]-0230
+**Dokument-ID:** TISAX-0230
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

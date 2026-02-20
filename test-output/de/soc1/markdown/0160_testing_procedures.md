@@ -6,7 +6,7 @@ Classification: Internal
 
 # Testverfahren
 
-**Dokument-ID:** [FRAMEWORK]-0160
+**Dokument-ID:** SOC1-0160
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

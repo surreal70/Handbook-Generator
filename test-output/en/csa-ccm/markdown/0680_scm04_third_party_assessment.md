@@ -6,7 +6,7 @@ Classification: Internal
 
 # SCM-04: Third Party Assessment
 
-**Document-ID:** [FRAMEWORK]-0680
+**Document-ID:** CSA-CCM-0680
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

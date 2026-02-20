@@ -1,6 +1,6 @@
 # Konfigurationsmanagement und CMDB
 
-**Dokument-ID:** [FRAMEWORK]-0090
+**Dokument-ID:** IT-OPERATION-0090
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

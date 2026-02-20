@@ -6,7 +6,7 @@ Classification: Internal
 
 # Informationsklassifizierung
 
-**Dokument-ID:** [FRAMEWORK]-0120
+**Dokument-ID:** TISAX-0120
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

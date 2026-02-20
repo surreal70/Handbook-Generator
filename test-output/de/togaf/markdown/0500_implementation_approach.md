@@ -6,7 +6,7 @@ Classification: Internal
 
 # Implementierungsansatz
 
-**Dokument-ID:** [FRAMEWORK]-0500
+**Dokument-ID:** TOGAF-0500
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

@@ -1,6 +1,6 @@
 # Data Minimization
 
-**Document-ID:** 0120
+**Document-ID:** GDPR-0120
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

@@ -6,7 +6,7 @@ Classification: Internal
 
 # Lieferantensicherheit
 
-**Dokument-ID:** [FRAMEWORK]-0400
+**Dokument-ID:** TISAX-0400
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

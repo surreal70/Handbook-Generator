@@ -6,7 +6,7 @@ Classification: Internal
 
 # Competence
 
-**Document-ID:** [FRAMEWORK]-0070
+**Document-ID:** COSO-0070
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

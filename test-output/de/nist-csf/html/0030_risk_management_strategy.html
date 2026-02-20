@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0030 - Risikomanagement-Strategie (GV.RM)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0030</div>
+            <h1>Risikomanagement-Strategie (GV.RM)</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0020_organizational_context.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0040_roles_responsibilities.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: nist-csf-0030
+Owner: [TODO]</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="risikomanagement-strategie-gvrm">Risikomanagement-Strategie (GV.RM)</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0030
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="zweck">Zweck</h2>
+<p>Dieses Dokument definiert die Cybersecurity-Risikomanagement-Strategie der Organisation, einschließlich Risikoappetit, Risikobewertungsmethodik und Risikobehandlungsansätze.</p>
+<h2 id="geltungsbereich">Geltungsbereich</h2>
+<p>[TODO]</p>
+<h2 id="risikomanagement-rahmenwerk">Risikomanagement-Rahmenwerk</h2>
+<h3 id="risikomanagement-ansatz">Risikomanagement-Ansatz</h3>
+<p>AdminSend GmbH verfolgt einen risikobasierten Ansatz für Cybersecurity, der:
+- Geschäftsziele mit Sicherheitsanforderungen in Einklang bringt
+- Kontinuierliche Risikobewertung und -überwachung ermöglicht
+- Informierte Entscheidungsfindung unterstützt
+- Ressourcen auf kritische Risiken fokussiert</p>
+<h3 id="risikomanagement-prozess">Risikomanagement-Prozess</h3>
+<ol>
+<li><strong>Risikoidentifikation</strong>: Erkennung potenzieller Cybersecurity-Bedrohungen</li>
+<li><strong>Risikobewertung</strong>: Analyse von Wahrscheinlichkeit und Auswirkung</li>
+<li><strong>Risikobehandlung</strong>: Auswahl geeigneter Maßnahmen</li>
+<li><strong>Risikoüberwachung</strong>: Kontinuierliche Überprüfung und Anpassung</li>
+</ol>
+<h2 id="risikoappetit-und-toleranz">Risikoappetit und -toleranz</h2>
+<h3 id="risikoappetit-erklarung">Risikoappetit-Erklärung</h3>
+<p>{{ meta-handbook.risk_appetite_statement }}</p>
+<h3 id="risikotoleranz-niveaus">Risikotoleranz-Niveaus</h3>
+<table>
+<thead>
+<tr>
+<th>Risikoniveau</th>
+<th>Beschreibung</th>
+<th>Maßnahmen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kritisch</td>
+<td>Existenzbedrohend</td>
+<td>Sofortige Behandlung erforderlich</td>
+</tr>
+<tr>
+<td>Hoch</td>
+<td>Erhebliche Auswirkung</td>
+<td>Behandlung innerhalb 30 Tagen</td>
+</tr>
+<tr>
+<td>Mittel</td>
+<td>Moderate Auswirkung</td>
+<td>Behandlung innerhalb 90 Tagen</td>
+</tr>
+<tr>
+<td>Niedrig</td>
+<td>Geringe Auswirkung</td>
+<td>Akzeptabel mit Überwachung</td>
+</tr>
+</tbody>
+</table>
+<h2 id="risikobewertungsmethodik">Risikobewertungsmethodik</h2>
+<h3 id="bewertungskriterien">Bewertungskriterien</h3>
+<p><strong>Wahrscheinlichkeit:</strong>
+- Sehr hoch (5): &gt; 80% Wahrscheinlichkeit
+- Hoch (4): 60-80% Wahrscheinlichkeit
+- Mittel (3): 40-60% Wahrscheinlichkeit
+- Niedrig (2): 20-40% Wahrscheinlichkeit
+- Sehr niedrig (1): &lt; 20% Wahrscheinlichkeit</p>
+<p><strong>Auswirkung:</strong>
+- Sehr hoch (5): &gt; {{ meta-handbook.impact_threshold_critical }}
+- Hoch (4): {{ meta-handbook.impact_threshold_high }}
+- Mittel (3): {{ meta-handbook.impact_threshold_medium }}
+- Niedrig (2): {{ meta-handbook.impact_threshold_low }}
+- Sehr niedrig (1): &lt; {{ meta-handbook.impact_threshold_minimal }}</p>
+<h3 id="risikomatrix">Risikomatrix</h3>
+<table>
+<thead>
+<tr>
+<th>Wahrscheinlichkeit</th>
+<th>Sehr niedrig</th>
+<th>Niedrig</th>
+<th>Mittel</th>
+<th>Hoch</th>
+<th>Sehr hoch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sehr hoch (5)</td>
+<td>Mittel</td>
+<td>Hoch</td>
+<td>Hoch</td>
+<td>Kritisch</td>
+<td>Kritisch</td>
+</tr>
+<tr>
+<td>Hoch (4)</td>
+<td>Niedrig</td>
+<td>Mittel</td>
+<td>Hoch</td>
+<td>Hoch</td>
+<td>Kritisch</td>
+</tr>
+<tr>
+<td>Mittel (3)</td>
+<td>Niedrig</td>
+<td>Mittel</td>
+<td>Mittel</td>
+<td>Hoch</td>
+<td>Hoch</td>
+</tr>
+<tr>
+<td>Niedrig (2)</td>
+<td>Sehr niedrig</td>
+<td>Niedrig</td>
+<td>Mittel</td>
+<td>Mittel</td>
+<td>Hoch</td>
+</tr>
+<tr>
+<td>Sehr niedrig (1)</td>
+<td>Sehr niedrig</td>
+<td>Niedrig</td>
+<td>Niedrig</td>
+<td>Mittel</td>
+<td>Mittel</td>
+</tr>
+</tbody>
+</table>
+<h2 id="risikobehandlungsoptionen">Risikobehandlungsoptionen</h2>
+<h3 id="behandlungsstrategien">Behandlungsstrategien</h3>
+<ol>
+<li><strong>Vermeiden</strong>: Aktivität einstellen, die das Risiko verursacht</li>
+<li><strong>Reduzieren</strong>: Kontrollen implementieren, um Risiko zu mindern</li>
+<li><strong>Übertragen</strong>: Risiko auf Dritte übertragen (z.B. Versicherung)</li>
+<li><strong>Akzeptieren</strong>: Risiko bewusst akzeptieren mit Begründung</li>
+</ol>
+<h3 id="entscheidungskriterien">Entscheidungskriterien</h3>
+<table>
+<thead>
+<tr>
+<th>Risikoniveau</th>
+<th>Bevorzugte Strategie</th>
+<th>Genehmigung erforderlich</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kritisch</td>
+<td>Vermeiden oder Reduzieren</td>
+<td>Vorstand</td>
+</tr>
+<tr>
+<td>Hoch</td>
+<td>Reduzieren</td>
+<td>CISO</td>
+</tr>
+<tr>
+<td>Mittel</td>
+<td>Reduzieren oder Übertragen</td>
+<td>Risikomanager</td>
+</tr>
+<tr>
+<td>Niedrig</td>
+<td>Akzeptieren mit Überwachung</td>
+<td>Abteilungsleiter</td>
+</tr>
+</tbody>
+</table>
+<h2 id="risikokommunikation">Risikokommunikation</h2>
+<h3 id="berichterstattung">Berichterstattung</h3>
+<table>
+<thead>
+<tr>
+<th>Zielgruppe</th>
+<th>Häufigkeit</th>
+<th>Inhalt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vorstand</td>
+<td>Quartalsweise</td>
+<td>Risikoprofil, kritische Risiken, Trends</td>
+</tr>
+<tr>
+<td>Geschäftsführung</td>
+<td>Monatlich</td>
+<td>Aktuelle Risiken, Behandlungsfortschritt</td>
+</tr>
+<tr>
+<td>CISO</td>
+<td>Wöchentlich</td>
+<td>Detaillierte Risikoanalyse, Vorfälle</td>
+</tr>
+<tr>
+<td>Risikomanager</td>
+<td>Täglich</td>
+<td>Neue Risiken, Statusänderungen</td>
+</tr>
+</tbody>
+</table>
+<h2 id="integration-mit-geschaftsrisikomanagement">Integration mit Geschäftsrisikomanagement</h2>
+<h3 id="abstimmung-mit-enterprise-risk-management-erm">Abstimmung mit Enterprise Risk Management (ERM)</h3>
+<ul>
+<li>Cybersecurity-Risiken werden in das ERM-Framework integriert</li>
+<li>Konsistente Risikobewertungsmethodik über alle Risikokategorien</li>
+<li>Gemeinsame Berichterstattung an Vorstand und Geschäftsführung</li>
+</ul>
+<h2 id="kontinuierliche-verbesserung">Kontinuierliche Verbesserung</h2>
+<h3 id="uberprufungszyklen">Überprüfungszyklen</h3>
+<ul>
+<li>Jährliche Überprüfung der Risikomanagement-Strategie</li>
+<li>Quartalsweise Aktualisierung der Risikobewertungen</li>
+<li>Monatliche Überprüfung kritischer Risiken</li>
+</ul>
+<h2 id="dokumentenverweise">Dokumentenverweise</h2>
+<ul>
+<li>0020_organizational_context.md</li>
+<li>0040_roles_responsibilities.md</li>
+<li>0100_asset_management.md (Identify)</li>
+<li>0130_risk_assessment.md (Identify)</li>
+</ul>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0020_organizational_context.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0040_roles_responsibilities.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

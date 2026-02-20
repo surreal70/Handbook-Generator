@@ -21,15 +21,17 @@
         
         <main>
 <h1 id="internes-auditprogramm-template">Internes Auditprogramm (Template)</h1>
-<p><strong>Dokument-ID:</strong> 0130<br />
-<strong>Dokumenttyp:</strong> ISMS-Programm/Template<br />
-<strong>Standard-Referenz:</strong> ISO/IEC 27001:2022 Clause 9.2<br />
-<strong>Owner:</strong> {{ meta.audit.manager }}<br />
-<strong>Version:</strong> 1.0<br />
-<strong>Status:</strong> Freigegeben<br />
-<strong>Klassifizierung:</strong> Vertraulich<br />
-<strong>Letzte Aktualisierung:</strong> {{ meta.document.date }}<br />
-<strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+<p><strong>Dokument-ID:</strong> 0130
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
 <hr />
 <h2 id="1-zweck-und-geltungsbereich">1. Zweck und Geltungsbereich</h2>
 <h3 id="11-zweck">1.1 Zweck</h3>
@@ -43,13 +45,13 @@
 - Alle Bereiche im ISMS-Scope (siehe <code>0020_ISMS_Geltungsbereich_Scope.md</code>)
 - Alle Annex A Controls im SoA (siehe <code>0100_ISMS_Statement_of_Applicability_SoA_Template.md</code>)
 - Alle ISMS-Prozesse und -Dokumente
-- Alle Standorte: {{ netbox.site.name }} und weitere</p>
+- Alle Standorte: [[ netbox.site.name ]] und weitere</p>
 <h2 id="2-audit-ansatz">2. Audit-Ansatz</h2>
 <h3 id="21-audit-prinzipien">2.1 Audit-Prinzipien</h3>
 <p><strong>Unabhängigkeit:</strong>
 - Auditoren prüfen nicht ihre eigenen Bereiche
 - Externe Auditoren für kritische Bereiche (optional)
-- Berichtslinie: Audit-Team berichtet an {{ meta.audit.manager }}</p>
+- Berichtslinie: Audit-Team berichtet an {{ meta-handbook.audit_manager }}</p>
 <p><strong>Risikobasiert:</strong>
 - Audit-Frequenz basiert auf Risikobewertung
 - Kritische Bereiche werden häufiger geprüft
@@ -96,7 +98,7 @@
 <td>Themen-Audit</td>
 <td>A.5.15, A.5.16, A.5.17, A.5.18, A.8.2, A.8.3</td>
 <td>[TODO]</td>
-<td>Anna Schmidt</td>
+<td>[TODO]</td>
 <td>2 Tage</td>
 <td>Geplant</td>
 </tr>
@@ -116,7 +118,7 @@
 <td>Vollaudit</td>
 <td>Alle Clauses, SoA</td>
 <td>[TODO]</td>
-<td>Thomas Weber</td>
+<td>[TODO]</td>
 <td>10 Tage</td>
 <td>Geplant</td>
 </tr>
@@ -525,12 +527,11 @@
 <li><strong>ISO 19011:2018</strong> - Guidelines for auditing management systems</li>
 <li><strong>ISO/IEC 27007:2020</strong> - Guidelines for information security management systems auditing</li>
 </ul>
-<hr />
 <p><strong>Genehmigt durch:</strong><br />
-{{ meta.audit.manager }}, Audit Manager<br />
-Thomas Weber, CISO<br />
-Datum: {{ meta.document.approval_date }}</p>
-<p><strong>Nächster Review:</strong> {{ meta.document.next_review }}</p>
+{{ meta-handbook.audit_manager }}, Audit Manager<br />
+[TODO], CISO<br />
+Datum: [TODO]</p>
+<p><strong>Nächster Review:</strong> [TODO]</p>
         </main>
         
         <nav class="page-nav">

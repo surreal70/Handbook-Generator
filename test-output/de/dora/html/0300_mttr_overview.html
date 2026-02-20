@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0300 - MTTR Übersicht</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0300</div>
+            <h1>MTTR Übersicht</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0280_technical_debt_management.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0310_mttr_measurement.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: dora-0300</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="mttr-ubersicht">MTTR Übersicht</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0300
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="zweck">Zweck</h2>
+<p>Dieses Dokument bietet eine umfassende Übersicht über die Mean Time to Restore (MTTR) Metrik im DORA Framework.</p>
+<h2 id="umfang">Umfang</h2>
+<ul>
+<li>Definition von MTTR</li>
+<li>Performance-Level und Benchmarks</li>
+<li>Komponenten der MTTR</li>
+<li>Bedeutung für die Organisation</li>
+</ul>
+<h2 id="definition">Definition</h2>
+<h3 id="mean-time-to-restore-mttr">Mean Time to Restore (MTTR)</h3>
+<p>MTTR misst die durchschnittliche Zeit zur Wiederherstellung des Service nach einem Incident oder Ausfall in der Produktionsumgebung.</p>
+<p><strong>Formale Definition</strong>: Durchschnittliche Zeit von Incident-Erkennung bis zur vollständigen Service-Wiederherstellung.</p>
+<h3 id="organisationsinformationen">Organisationsinformationen</h3>
+<ul>
+<li><strong>Organisation</strong>: [TODO]</li>
+<li><strong>Verantwortlicher</strong>: [TODO]</li>
+<li><strong>Aktuelle MTTR</strong>: [TODO]</li>
+</ul>
+<h2 id="performance-level">Performance-Level</h2>
+<h3 id="elite-performers">Elite Performers</h3>
+<p><strong>MTTR</strong>: Weniger als eine Stunde</p>
+<p>Charakteristiken:
+- Automatisierte Incident Detection
+- Automated Rollback
+- Comprehensive Monitoring
+- On-Call Rotation
+- Runbook Automation</p>
+<h3 id="high-performers">High Performers</h3>
+<p><strong>MTTR</strong>: Weniger als ein Tag</p>
+<p>Charakteristiken:
+- Gute Monitoring-Systeme
+- Dokumentierte Runbooks
+- Schnelle Eskalation
+- Regelmäßige Incident Reviews</p>
+<h3 id="medium-performers">Medium Performers</h3>
+<p><strong>MTTR</strong>: Zwischen einem Tag und einer Woche</p>
+<p>Charakteristiken:
+- Basis-Monitoring
+- Manuelle Recovery-Prozesse
+- Längere Diagnose-Zeiten
+- Begrenzte Automatisierung</p>
+<h3 id="low-performers">Low Performers</h3>
+<p><strong>MTTR</strong>: Mehr als eine Woche</p>
+<p>Charakteristiken:
+- Reaktive Incident-Erkennung
+- Komplexe Recovery-Prozesse
+- Fehlende Dokumentation
+- Lange Eskalationsketten</p>
+<h2 id="komponenten-der-mttr">Komponenten der MTTR</h2>
+<h3 id="1-detection-time">1. Detection Time</h3>
+<p><strong>Definition</strong>: Zeit bis zur Erkennung des Incidents</p>
+<p><strong>Optimierung</strong>:
+- Proactive Monitoring
+- Automated Alerting
+- Anomaly Detection
+- User Feedback Channels</p>
+<h3 id="2-diagnosis-time">2. Diagnosis Time</h3>
+<p><strong>Definition</strong>: Zeit zur Identifikation der Root Cause</p>
+<p><strong>Optimierung</strong>:
+- Comprehensive Logging
+- Distributed Tracing
+- Correlation Analysis
+- Runbook Documentation</p>
+<h3 id="3-recovery-time">3. Recovery Time</h3>
+<p><strong>Definition</strong>: Zeit zur Wiederherstellung des Service</p>
+<p><strong>Optimierung</strong>:
+- Automated Rollback
+- Blue-Green Deployments
+- Feature Flags
+- Disaster Recovery Plans</p>
+<h3 id="4-verification-time">4. Verification Time</h3>
+<p><strong>Definition</strong>: Zeit zur Bestätigung der vollständigen Wiederherstellung</p>
+<p><strong>Optimierung</strong>:
+- Automated Health Checks
+- Synthetic Monitoring
+- User Acceptance Testing
+- Performance Validation</p>
+<h2 id="bedeutung-fur-die-organisation">Bedeutung für die Organisation</h2>
+<h3 id="business-impact">Business-Impact</h3>
+<ul>
+<li><strong>Verfügbarkeit</strong>: Höhere Service-Verfügbarkeit</li>
+<li><strong>Kundenzufriedenheit</strong>: Schnellere Problem-Lösung</li>
+<li><strong>Reputation</strong>: Vertrauen in Zuverlässigkeit</li>
+<li><strong>Kosten</strong>: Reduzierte Downtime-Kosten</li>
+</ul>
+<h3 id="technische-vorteile">Technische Vorteile</h3>
+<ul>
+<li><strong>Resilienz</strong>: Robustere Systeme</li>
+<li><strong>Observability</strong>: Bessere Einblicke</li>
+<li><strong>Automation</strong>: Schnellere Recovery</li>
+<li><strong>Learning</strong>: Kontinuierliche Verbesserung</li>
+</ul>
+<h2 id="messmethodik">Messmethodik</h2>
+<h3 id="datenerfassung">Datenerfassung</h3>
+<p><strong>Incident Start</strong>: Zeitpunkt der Erkennung
+<strong>Incident End</strong>: Zeitpunkt der vollständigen Wiederherstellung</p>
+<p><strong>Berechnung</strong>:</p>
+<div class="codehilite"><pre><span></span><code>MTTR = Σ(Recovery Times) / Anzahl Incidents
+</code></pre></div>
+
+<h3 id="incident-kategorisierung">Incident-Kategorisierung</h3>
+<ul>
+<li><strong>Severity 1</strong>: Kompletter Service-Ausfall</li>
+<li><strong>Severity 2</strong>: Teilweiser Service-Ausfall</li>
+<li><strong>Severity 3</strong>: Degradierte Performance</li>
+<li><strong>Severity 4</strong>: Minor Issues</li>
+</ul>
+<h2 id="verbesserungsansatze">Verbesserungsansätze</h2>
+<h3 id="kurzfristig">Kurzfristig</h3>
+<ul>
+<li>Verbesserte Monitoring-Alerts</li>
+<li>Dokumentierte Runbooks</li>
+<li>On-Call Training</li>
+<li>Incident Response Drills</li>
+</ul>
+<h3 id="mittelfristig">Mittelfristig</h3>
+<ul>
+<li>Automated Rollback</li>
+<li>Enhanced Observability</li>
+<li>Chaos Engineering</li>
+<li>Incident Automation</li>
+</ul>
+<h3 id="langfristig">Langfristig</h3>
+<ul>
+<li>Self-Healing Systems</li>
+<li>Predictive Analytics</li>
+<li>Full Automation</li>
+<li>Resilient Architecture</li>
+</ul>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0280_technical_debt_management.html" class="nav-prev">← Zurück</a>
+<a href="index.html" class="nav-toc">Inhaltsverzeichnis</a>
+<a href="0310_mttr_measurement.html" class="nav-next">Weiter →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

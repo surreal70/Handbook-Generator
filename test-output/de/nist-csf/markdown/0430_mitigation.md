@@ -7,7 +7,7 @@ Classification: Internal
 
 # Eindämmung (RS.MI)
 
-**Dokument-ID:** [FRAMEWORK]-0430
+**Dokument-ID:** NIST-CSF-0430
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

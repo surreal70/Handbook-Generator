@@ -6,7 +6,7 @@ Classification: Internal
 
 # Informationssicherheitsrichtlinie
 
-**Dokument-ID:** [FRAMEWORK]-0020
+**Dokument-ID:** TISAX-0020
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

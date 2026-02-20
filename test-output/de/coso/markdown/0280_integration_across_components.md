@@ -6,7 +6,7 @@ Classification: Internal
 
 # Integration über Komponenten hinweg
 
-**Dokument-ID:** [FRAMEWORK]-0280
+**Dokument-ID:** COSO-0280
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

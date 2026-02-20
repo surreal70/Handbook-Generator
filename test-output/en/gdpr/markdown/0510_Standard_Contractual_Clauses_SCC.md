@@ -1,6 +1,6 @@
 # Standard Contractual Clauses (SCC)
 
-**Document-ID:** 0510
+**Document-ID:** GDPR-0510
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

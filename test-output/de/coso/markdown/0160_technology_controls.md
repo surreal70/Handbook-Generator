@@ -6,7 +6,7 @@ Classification: Internal
 
 # Technologiekontrollen
 
-**Dokument-ID:** [FRAMEWORK]-0160
+**Dokument-ID:** COSO-0160
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

@@ -6,7 +6,7 @@ Classification: Internal
 
 # Service Organization Description
 
-**Document-ID:** [FRAMEWORK]-0020
+**Document-ID:** SOC1-0020
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

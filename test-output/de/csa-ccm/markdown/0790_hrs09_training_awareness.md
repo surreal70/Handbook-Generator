@@ -6,7 +6,7 @@ Classification: Internal
 
 # HRS-09: Schulung und Bewusstsein
 
-**Dokument-ID:** [FRAMEWORK]-0790
+**Dokument-ID:** CSA-CCM-0790
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

@@ -1,6 +1,6 @@
 # Least Privilege
 
-**Document-ID:** [FRAMEWORK]-0150
+**Document-ID:** NIST-800-53-0150
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

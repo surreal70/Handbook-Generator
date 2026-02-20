@@ -1,6 +1,6 @@
 # Richtlinie: IAM - Joiner, Mover, Leaver und Zugriffsanträge
 
-**Dokument-ID:** 0230
+**Dokument-ID:** ISMS-0230
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

@@ -7,7 +7,7 @@ Classification: Internal
 
 # Supply Chain Risk Management (ID.SC)
 
-**Document-ID:** [FRAMEWORK]-0150
+**Document-ID:** NIST-CSF-0150
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

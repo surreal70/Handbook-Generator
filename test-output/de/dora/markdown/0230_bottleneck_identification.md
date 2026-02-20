@@ -6,7 +6,7 @@ Classification: Internal
 
 # Bottleneck-Identifikation
 
-**Dokument-ID:** [FRAMEWORK]-0230
+**Dokument-ID:** DORA-0230
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

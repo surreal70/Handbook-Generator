@@ -7,7 +7,7 @@ Classification: Internal
 
 # Integration of Risk Management
 
-**Document-ID:** [FRAMEWORK]-0120
+**Document-ID:** ISO-31000-0120
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

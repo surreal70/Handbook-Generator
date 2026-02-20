@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0200 - Cryptographic Controls</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="template-number">0200</div>
+            <h1>Cryptographic Controls</h1>
+        </header>
+        
+        <nav class="page-nav">
+<a href="0190_operations_security_overview.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0210_key_management.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <main>
+<p>Document-ID: tisax-0200</p>
+<p>Status: Draft
+Classification: Internal</p>
+<h1 id="cryptographic-controls">Cryptographic Controls</h1>
+<p><strong>Document-ID:</strong> [FRAMEWORK]-0200
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Approved by:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Classification:</strong> Internal
+<strong>Last Update:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
+<h2 id="purpose">Purpose</h2>
+<p>This document defines requirements for the use of cryptographic controls according to TISAX requirements.</p>
+<h2 id="scope">Scope</h2>
+<p>This document applies to all cryptographic measures at [TODO].</p>
+<h2 id="cryptography-policy">Cryptography Policy</h2>
+<h3 id="objectives">Objectives</h3>
+<ul>
+<li>Protection of confidentiality of sensitive information</li>
+<li>Ensuring data integrity</li>
+<li>Authentication of communication partners</li>
+<li>Non-repudiation of transactions</li>
+</ul>
+<h3 id="application-areas">Application Areas</h3>
+<p>Encryption required for:
+- Confidential and strictly confidential data
+- Personal data
+- Trade secrets
+- Authentication information
+- Data transmission over insecure networks</p>
+<h2 id="encryption-standards">Encryption Standards</h2>
+<h3 id="symmetric-encryption">Symmetric Encryption</h3>
+<p><strong>Approved Algorithms:</strong>
+- AES-256 (preferred)
+- AES-128 (acceptable)
+- ChaCha20 (acceptable)</p>
+<p><strong>Not Approved:</strong>
+- DES, 3DES
+- RC4
+- Blowfish</p>
+<h3 id="asymmetric-encryption">Asymmetric Encryption</h3>
+<p><strong>Approved Algorithms:</strong>
+- RSA (minimum 2048 bit, preferred 4096 bit)
+- ECC (minimum 256 bit)
+- Ed25519</p>
+<p><strong>Not Approved:</strong>
+- RSA &lt; 2048 bit
+- DSA &lt; 2048 bit</p>
+<h3 id="hash-functions">Hash Functions</h3>
+<p><strong>Approved Algorithms:</strong>
+- SHA-256 (preferred)
+- SHA-384
+- SHA-512
+- SHA-3</p>
+<p><strong>Not Approved:</strong>
+- MD5
+- SHA-1</p>
+<h2 id="encryption-of-data-at-rest">Encryption of Data at Rest</h2>
+<h3 id="data-storage">Data Storage</h3>
+<ul>
+<li>Encryption of confidential data at rest</li>
+<li>Full disk encryption for mobile devices</li>
+<li>Database encryption for sensitive data</li>
+<li>Encrypted backups</li>
+</ul>
+<h3 id="cloud-storage">Cloud Storage</h3>
+<ul>
+<li>Encryption before upload (client-side)</li>
+<li>Encryption by cloud provider</li>
+<li>Key management by organization</li>
+<li>Regular review</li>
+</ul>
+<h2 id="encryption-of-data-in-transit">Encryption of Data in Transit</h2>
+<h3 id="network-encryption">Network Encryption</h3>
+<ul>
+<li>TLS 1.2 or higher for all connections</li>
+<li>Strong cipher suites</li>
+<li>Certificate validation</li>
+<li>Perfect forward secrecy</li>
+</ul>
+<h3 id="email-encryption">Email Encryption</h3>
+<ul>
+<li>Encryption of confidential emails</li>
+<li>S/MIME or PGP</li>
+<li>Digital signatures</li>
+<li>Secure key distribution</li>
+</ul>
+<h2 id="digital-signatures">Digital Signatures</h2>
+<h3 id="application">Application</h3>
+<ul>
+<li>Contracts and agreements</li>
+<li>Software distribution</li>
+<li>Email communication</li>
+<li>Document authentication</li>
+</ul>
+<h2 id="certificate-management">Certificate Management</h2>
+<h3 id="public-key-infrastructure-pki">Public Key Infrastructure (PKI)</h3>
+<ul>
+<li>Certificate Authority (CA)</li>
+<li>Registration Authority (RA)</li>
+<li>Certificate Revocation List (CRL)</li>
+<li>Online Certificate Status Protocol (OCSP)</li>
+</ul>
+<h2 id="key-management">Key Management</h2>
+<h3 id="key-generation">Key Generation</h3>
+<ul>
+<li>Cryptographically secure random number generators</li>
+<li>Sufficient key length</li>
+<li>Secure generation environment</li>
+<li>Documentation</li>
+</ul>
+<h3 id="key-storage">Key Storage</h3>
+<ul>
+<li>Hardware Security Modules (HSM) for critical keys</li>
+<li>Encrypted storage</li>
+<li>Access control</li>
+<li>Physical security</li>
+</ul>
+<h3 id="key-distribution">Key Distribution</h3>
+<ul>
+<li>Secure transmission channels</li>
+<li>Authentication of recipients</li>
+<li>Logging</li>
+<li>Confirmation of receipt</li>
+</ul>
+<h3 id="key-rotation">Key Rotation</h3>
+<ul>
+<li>Regular rotation (at least annually)</li>
+<li>Automated processes where possible</li>
+<li>No interruption of operations</li>
+<li>Documentation</li>
+</ul>
+<h3 id="key-revocation">Key Revocation</h3>
+<p><strong>Reasons:</strong>
+- Compromise
+- Employee departure
+- Expiration
+- Change of requirements</p>
+<p><strong>Process:</strong>
+- Immediate revocation
+- Notification of stakeholders
+- Reissuance if needed
+- Documentation</p>
+<h3 id="key-archiving">Key Archiving</h3>
+<ul>
+<li>Long-term retention for encrypted data</li>
+<li>Secure storage</li>
+<li>Access control</li>
+<li>Recovery process</li>
+</ul>
+<h3 id="key-destruction">Key Destruction</h3>
+<ul>
+<li>Secure deletion</li>
+<li>Multiple overwriting</li>
+<li>Documentation</li>
+<li>Verification of completeness</li>
+<li>No recoverability</li>
+</ul>
+<h2 id="cryptographic-devices">Cryptographic Devices</h2>
+<h3 id="hardware-security-modules-hsm">Hardware Security Modules (HSM)</h3>
+<ul>
+<li>FIPS 140-2 Level 2 or higher</li>
+<li>Physical security</li>
+<li>Access control</li>
+<li>Regular maintenance</li>
+</ul>
+<h2 id="compliance-and-standards">Compliance and Standards</h2>
+<h3 id="relevant-standards">Relevant Standards</h3>
+<ul>
+<li>ISO/IEC 27001:2013 (Annex A.10)</li>
+<li>NIST SP 800-57 (Key Management)</li>
+<li>NIST SP 800-52 (TLS)</li>
+<li>BSI TR-02102 (Cryptographic Procedures)</li>
+</ul>
+<h2 id="tisax-specific-requirements">TISAX-Specific Requirements</h2>
+<h3 id="vda-isa-controls">VDA ISA Controls</h3>
+<ul>
+<li><strong>4.1</strong>: Cryptographic controls</li>
+<li><strong>4.2</strong>: Key management</li>
+</ul>
+<h3 id="assessment-evidence">Assessment Evidence</h3>
+<ul>
+<li>Cryptography policy</li>
+<li>Key management processes</li>
+<li>Encryption evidence</li>
+<li>Audit reports</li>
+</ul>
+<h2 id="metrics">Metrics</h2>
+<p>[TODO] measures:
+- Percentage of encrypted data (Target: 100% for confidential data)
+- Number of active keys
+- Number of key rotations
+- Number of security incidents related to cryptography</p>
+        </main>
+        
+        <nav class="page-nav">
+<a href="0190_operations_security_overview.html" class="nav-prev">← Previous</a>
+<a href="index.html" class="nav-toc">Table of Contents</a>
+<a href="0210_key_management.html" class="nav-next">Next →</a>
+        </nav>
+        
+        <footer>
+            <p>Generated by Handbook Generator</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,6 +1,6 @@
 # Verfügbarkeit und Service Level
 
-**Dokument-ID:** [FRAMEWORK]-0210
+**Dokument-ID:** IT-OPERATION-0210
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

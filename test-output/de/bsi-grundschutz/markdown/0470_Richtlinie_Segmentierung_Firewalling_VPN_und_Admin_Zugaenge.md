@@ -1,6 +1,6 @@
 # Richtlinie: Segmentierung Firewalling VPN und Admin Zugaenge
 
-**Dokument-ID:** 0470
+**Dokument-ID:** BSI-GRUNDSCHUTZ-0470
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

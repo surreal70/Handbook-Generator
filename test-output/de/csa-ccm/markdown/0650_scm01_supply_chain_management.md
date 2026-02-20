@@ -6,7 +6,7 @@ Classification: Internal
 
 # SCM-01: Lieferkettenmanagement
 
-**Dokument-ID:** [FRAMEWORK]-0650
+**Dokument-ID:** CSA-CCM-0650
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

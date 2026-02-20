@@ -6,7 +6,7 @@ Classification: Internal
 
 # Control Objectives
 
-**Document-ID:** [FRAMEWORK]-0040
+**Document-ID:** SOC1-0040
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

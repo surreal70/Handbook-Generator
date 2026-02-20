@@ -7,7 +7,7 @@ Classification: Internal
 
 # Prinzip 2: Strukturiert und umfassend
 
-**Dokument-ID:** [FRAMEWORK]-0030
+**Dokument-ID:** ISO-31000-0030
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

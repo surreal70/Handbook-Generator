@@ -1,6 +1,6 @@
 # Evaluation Assurance Level (EAL)
 
-**Document-ID:** 0410
+**Document-ID:** COMMON-CRITERIA-0410
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

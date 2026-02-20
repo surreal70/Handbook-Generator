@@ -7,7 +7,7 @@ Classification: Internal
 
 # Prinzip 6: Menschliches Verhalten (Human Behavior)
 
-**Dokument-ID:** [FRAMEWORK]-0090
+**Dokument-ID:** ISO-38500-0090
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

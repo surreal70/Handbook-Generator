@@ -1,6 +1,6 @@
 # Policy: Netzwerksicherheit
 
-**Dokument-ID:** 0600
+**Dokument-ID:** ISMS-0600
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

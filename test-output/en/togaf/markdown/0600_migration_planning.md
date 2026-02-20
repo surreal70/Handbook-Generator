@@ -6,7 +6,7 @@ Classification: Internal
 
 # Migration Planning
 
-**Document-ID:** [FRAMEWORK]-0600
+**Document-ID:** TOGAF-0600
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

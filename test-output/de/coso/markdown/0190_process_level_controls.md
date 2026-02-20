@@ -6,7 +6,7 @@ Classification: Internal
 
 # Prozessebene-Kontrollen
 
-**Dokument-ID:** [FRAMEWORK]-0190
+**Dokument-ID:** COSO-0190
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

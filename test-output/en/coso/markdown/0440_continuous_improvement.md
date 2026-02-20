@@ -6,7 +6,7 @@ Classification: Internal
 
 # Kontinuierliche Verbesserung
 
-**Document-ID:** [FRAMEWORK]-0440
+**Document-ID:** COSO-0440
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Approved by:** [TODO]

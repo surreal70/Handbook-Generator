@@ -7,7 +7,7 @@ Classification: Internal
 
 # Asset Management (ID.AM)
 
-**Dokument-ID:** [FRAMEWORK]-0100
+**Dokument-ID:** NIST-CSF-0100
 **Organisation:** AdminSend GmbH
 **Owner:** [TODO]
 **Genehmigt durch:** [TODO]

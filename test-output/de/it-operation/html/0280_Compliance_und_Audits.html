@@ -21,10 +21,22 @@
         
         <main>
 <h1 id="compliance-und-audits">Compliance und Audits</h1>
+<p><strong>Dokument-ID:</strong> [FRAMEWORK]-0280
+<strong>Organisation:</strong> AdminSend GmbH
+<strong>Owner:</strong> [TODO]
+<strong>Genehmigt durch:</strong> [TODO]
+<strong>Revision:</strong> [TODO]
+<strong>Author:</strong> Handbook-Generator
+<strong>Status:</strong> Draft
+<strong>Klassifizierung:</strong> Internal
+<strong>Letzte Aktualisierung:</strong> [TODO]
+<strong>Template Version:</strong> [TODO]</p>
+<hr />
+<hr />
 <h2 id="zweck-und-geltungsbereich">Zweck und Geltungsbereich</h2>
 <p>Dieses Dokument beschreibt die Compliance- und Audit-Prozesse für AdminSend GmbH. Es definiert relevante Standards, Audit-Prozesse, Compliance-Kontrollen, Nachweise und Non-Compliance-Risiken zur Sicherstellung der Einhaltung regulatorischer und vertraglicher Anforderungen.</p>
 <p><strong>Geltungsbereich:</strong> Alle IT-Systeme, Prozesse und Aktivitäten von AdminSend GmbH</p>
-<p><strong>Verantwortlich:</strong> {{ meta.compliance_officer }} ({{ meta.compliance_officer_email }})</p>
+<p><strong>Verantwortlich:</strong> [TODO] ({{ meta-handbook.compliance_officer_email }})</p>
 <h2 id="compliance-grundlagen">Compliance-Grundlagen</h2>
 <h3 id="compliance-definition">Compliance-Definition</h3>
 <p><strong>Compliance:</strong> Einhaltung von Gesetzen, Vorschriften, Standards, Richtlinien und vertraglichen Verpflichtungen</p>
@@ -55,10 +67,10 @@
 <h3 id="isoiec-270012013-informationssicherheits-management">ISO/IEC 27001:2013 - Informationssicherheits-Management</h3>
 <p><strong>Beschreibung:</strong> Internationaler Standard für Informationssicherheits-Managementsysteme (ISMS)</p>
 <p><strong>Geltungsbereich:</strong> Alle IT-Systeme und Informationsverarbeitung</p>
-<p><strong>Status:</strong> {{ meta.iso27001_status }}<br />
-<strong>Zertifizierung:</strong> {{ meta.iso27001_certification }}<br />
-<strong>Zertifizierungs-Stelle:</strong> {{ meta.iso27001_certifier }}<br />
-<strong>Gültig bis:</strong> {{ meta.iso27001_valid_until }}</p>
+<p><strong>Status:</strong> {{ meta-handbook.iso27001_status }}<br />
+<strong>Zertifizierung:</strong> {{ meta-handbook.iso27001_certification }}<br />
+<strong>Zertifizierungs-Stelle:</strong> {{ meta-handbook.iso27001_certifier }}<br />
+<strong>Gültig bis:</strong> {{ meta-handbook.iso27001_valid_until }}</p>
 <p><strong>Kern-Anforderungen:</strong>
 - ISMS etablieren, implementieren, betreiben, überwachen, reviewen, warten und verbessern
 - Risiko-Assessment und -Treatment
@@ -68,11 +80,11 @@
 - <strong>Zertifizierungs-Audit:</strong> Alle 3 Jahre
 - <strong>Überwachungs-Audit:</strong> Jährlich
 - <strong>Internes Audit:</strong> Quartalsweise</p>
-<p><strong>Verantwortlich:</strong> Thomas Weber</p>
+<p><strong>Verantwortlich:</strong> [TODO]</p>
 <h3 id="isoiec-20000-12018-it-service-management">ISO/IEC 20000-1:2018 - IT-Service-Management</h3>
 <p><strong>Beschreibung:</strong> Internationaler Standard für IT-Service-Management-Systeme (SMS)</p>
 <p><strong>Geltungsbereich:</strong> IT-Service-Management-Prozesse</p>
-<p><strong>Status:</strong> {{ meta.iso20000_status }}</p>
+<p><strong>Status:</strong> {{ meta-handbook.iso20000_status }}</p>
 <p><strong>Kern-Anforderungen:</strong>
 - Service-Management-System (SMS)
 - Service-Planung und -Bereitstellung
@@ -80,7 +92,7 @@
 - Resolution-Prozesse
 - Control-Prozesse</p>
 <p><strong>Alignment:</strong> ITIL v4 Framework</p>
-<p><strong>Verantwortlich:</strong> Andreas Huemmer</p>
+<p><strong>Verantwortlich:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</p>
 <h3 id="dsgvo-gdpr-datenschutz-grundverordnung">DSGVO (GDPR) - Datenschutz-Grundverordnung</h3>
 <p><strong>Beschreibung:</strong> EU-Verordnung zum Schutz personenbezogener Daten</p>
 <p><strong>Geltungsbereich:</strong> Alle Verarbeitungen personenbezogener Daten</p>
@@ -93,22 +105,22 @@
 - Meldepflicht bei Data Breach (Art. 33, 34)
 - Datenschutz-Folgenabschätzung (Art. 35)</p>
 <p><strong>Bußgelder:</strong> Bis zu 20 Mio. € oder 4% des weltweiten Jahresumsatzes</p>
-<p><strong>Datenschutzbeauftragter:</strong> {{ meta.data_protection_officer }}</p>
-<p><strong>Verzeichnis von Verarbeitungstätigkeiten:</strong> {{ meta.processing_activities_register }}</p>
+<p><strong>Datenschutzbeauftragter:</strong> {{ meta-handbook.data_protection_officer }}</p>
+<p><strong>Verzeichnis von Verarbeitungstätigkeiten:</strong> {{ meta-handbook.processing_activities_register }}</p>
 <h3 id="bsi-it-grundschutz">BSI IT-Grundschutz</h3>
 <p><strong>Beschreibung:</strong> Methodik des Bundesamts für Sicherheit in der Informationstechnik</p>
 <p><strong>Geltungsbereich:</strong> IT-Sicherheit</p>
-<p><strong>Status:</strong> {{ meta.bsi_grundschutz_status }}</p>
+<p><strong>Status:</strong> {{ meta-handbook.bsi_grundschutz_status }}</p>
 <p><strong>Absicherungs-Level:</strong>
 - <strong>Basis-Absicherung:</strong> Standard-Sicherheitsmaßnahmen
 - <strong>Kern-Absicherung:</strong> Erhöhte Sicherheitsanforderungen
 - <strong>Standard-Absicherung:</strong> Vollständige Umsetzung</p>
 <p><strong>Bausteine:</strong> IT-Grundschutz-Kompendium</p>
-<p><strong>Verantwortlich:</strong> Thomas Weber</p>
+<p><strong>Verantwortlich:</strong> [TODO]</p>
 <h3 id="pci-dss-payment-card-industry-data-security-standard">PCI-DSS (Payment Card Industry Data Security Standard)</h3>
 <p><strong>Beschreibung:</strong> Sicherheitsstandard für Kreditkarten-Datenverarbeitung</p>
 <p><strong>Geltungsbereich:</strong> Systeme, die Kreditkarten-Daten verarbeiten, speichern oder übertragen</p>
-<p><strong>Status:</strong> {{ meta.pci_dss_status }}</p>
+<p><strong>Status:</strong> {{ meta-handbook.pci_dss_status }}</p>
 <p><strong>12 Anforderungen:</strong>
 1. Firewall-Konfiguration
 2. Keine Standard-Passwörter
@@ -122,23 +134,23 @@
 10. Tracking und Monitoring
 11. Regelmäßige Security-Tests
 12. Informationssicherheits-Policy</p>
-<p><strong>Compliance-Level:</strong> {{ meta.pci_dss_level }}<br />
-<strong>QSA (Qualified Security Assessor):</strong> {{ meta.pci_dss_qsa }}</p>
+<p><strong>Compliance-Level:</strong> {{ meta-handbook.pci_dss_level }}<br />
+<strong>QSA (Qualified Security Assessor):</strong> {{ meta-handbook.pci_dss_qsa }}</p>
 <h3 id="sox-sarbanes-oxley-act">SOX (Sarbanes-Oxley Act)</h3>
 <p><strong>Beschreibung:</strong> US-Gesetz für finanzielle Berichterstattung</p>
 <p><strong>Geltungsbereich:</strong> Finanzrelevante IT-Systeme (falls börsennotiert)</p>
-<p><strong>Status:</strong> {{ meta.sox_status }}</p>
+<p><strong>Status:</strong> {{ meta-handbook.sox_status }}</p>
 <p><strong>IT-relevante Anforderungen:</strong>
 - Section 302: Management-Verantwortung für interne Kontrollen
 - Section 404: Assessment der internen Kontrollen
 - Section 409: Zeitnahe Offenlegung
 - IT-General-Controls (ITGC)
 - Application-Controls</p>
-<p><strong>Verantwortlich:</strong> Maria Müller</p>
+<p><strong>Verantwortlich:</strong> [TODO]</p>
 <h3 id="cobit-2019">COBIT 2019</h3>
 <p><strong>Beschreibung:</strong> Framework für IT-Governance und -Management</p>
 <p><strong>Geltungsbereich:</strong> IT-Governance</p>
-<p><strong>Status:</strong> {{ meta.cobit_status }}</p>
+<p><strong>Status:</strong> {{ meta-handbook.cobit_status }}</p>
 <p><strong>Governance-Objectives:</strong>
 - EDM01: Ensured Governance Framework Setting and Maintenance
 - EDM02: Ensured Benefits Delivery
@@ -307,8 +319,8 @@
 - <strong>Stage 2:</strong> On-Site-Audit
 - <strong>Surveillance:</strong> Jährliche Überwachung</p>
 <p><strong>Zertifizierungs-Stellen:</strong>
-- ISO 27001: {{ meta.iso27001_certifier }}
-- ISO 20000: {{ meta.iso20000_certifier }}</p>
+- ISO 27001: {{ meta-handbook.iso27001_certifier }}
+- ISO 20000: {{ meta-handbook.iso20000_certifier }}</p>
 <h4 id="kunden-audits">Kunden-Audits</h4>
 <p><strong>Zweck:</strong> Nachweis der Compliance gegenüber Kunden</p>
 <p><strong>Frequenz:</strong> Nach Kunden-Anforderung</p>
@@ -768,7 +780,7 @@ Frist: 30 Tage
 - <strong>Mitigate:</strong> Risiko reduzieren (Kontrollen implementieren)
 - <strong>Transfer:</strong> Risiko übertragen (Versicherung, Outsourcing)
 - <strong>Accept:</strong> Risiko akzeptieren (mit Management-Genehmigung)</p>
-<p><strong>Risiko-Register:</strong> {{ meta.risk_register }}</p>
+<p><strong>Risiko-Register:</strong> {{ meta-handbook.risk_register }}</p>
 <h3 id="incident-response-bei-non-compliance">Incident-Response bei Non-Compliance</h3>
 <p><strong>Prozess:</strong></p>
 <ol>
@@ -875,7 +887,7 @@ Frist: 30 Tage
 - Training-Completion-Rate
 - Policy-Review-Status
 - Incident-Trends</p>
-<p><strong>Tool:</strong> {{ meta.compliance_dashboard }}</p>
+<p><strong>Tool:</strong> {{ meta-handbook.compliance_dashboard }}</p>
 <p><strong>Zugriff:</strong> Management, Compliance-Team, Auditoren</p>
 <h3 id="reporting">Reporting</h3>
 <h4 id="monatliches-compliance-status-report">Monatliches Compliance-Status-Report</h4>
@@ -906,9 +918,9 @@ Frist: 30 Tage
 <p><strong>Empfänger:</strong> Management, Board, Stakeholder</p>
 <h2 id="compliance-tools-und-systeme">Compliance-Tools und -Systeme</h2>
 <h3 id="governance-risk-and-compliance-grc-platform">Governance, Risk, and Compliance (GRC) Platform</h3>
-<p><strong>System:</strong> {{ meta.grc_system }}<br />
-<strong>Version:</strong> {{ meta.grc_version }}<br />
-<strong>Management-URL:</strong> {{ meta.grc_url }}</p>
+<p><strong>System:</strong> {{ meta-handbook.grc_system }}<br />
+<strong>Version:</strong> [TODO]<br />
+<strong>Management-URL:</strong> {{ meta-handbook.grc_url }}</p>
 <p><strong>Funktionen:</strong>
 - Compliance-Management
 - Risiko-Management
@@ -917,7 +929,7 @@ Frist: 30 Tage
 - Incident-Management
 - Reporting und Dashboards</p>
 <h3 id="dokumenten-management">Dokumenten-Management</h3>
-<p><strong>System:</strong> {{ meta.document_management_system }}</p>
+<p><strong>System:</strong> {{ meta-handbook.document_management_system }}</p>
 <p><strong>Funktionen:</strong>
 - Zentrale Dokumenten-Ablage
 - Versions-Kontrolle
@@ -931,16 +943,16 @@ Frist: 30 Tage
 - Training-Materialien
 - Verträge</p>
 <h3 id="compliance-scanning-tools">Compliance-Scanning-Tools</h3>
-<p><strong>Vulnerability-Scanner:</strong> {{ meta.vulnerability_scanner }}<br />
-<strong>Configuration-Scanner:</strong> {{ meta.config_scanner }}<br />
-<strong>Compliance-Scanner:</strong> {{ meta.compliance_scanner }}</p>
+<p><strong>Vulnerability-Scanner:</strong> {{ meta-handbook.vulnerability_scanner }}<br />
+<strong>Configuration-Scanner:</strong> {{ meta-handbook.config_scanner }}<br />
+<strong>Compliance-Scanner:</strong> {{ meta-handbook.compliance_scanner }}</p>
 <p><strong>Funktionen:</strong>
 - Automatische Compliance-Checks
 - Konfigurations-Audits
 - Benchmark-Vergleiche (CIS, STIG)
 - Continuous-Compliance-Monitoring</p>
 <h3 id="training-management">Training-Management</h3>
-<p><strong>System:</strong> {{ meta.training_system }}</p>
+<p><strong>System:</strong> {{ meta-handbook.training_system }}</p>
 <p><strong>Funktionen:</strong>
 - Training-Katalog
 - Enrollment und Tracking
@@ -955,7 +967,7 @@ Frist: 30 Tage
 - Audit-Koordination
 - Risiko-Management
 - Reporting an Management</p>
-<p><strong>Person:</strong> {{ meta.compliance_officer }}</p>
+<p><strong>Person:</strong> [TODO]</p>
 <h3 id="data-protection-officer-dpo">Data Protection Officer (DPO)</h3>
 <p><strong>Verantwortlichkeiten:</strong>
 - DSGVO-Compliance
@@ -963,28 +975,28 @@ Frist: 30 Tage
 - Überwachung der Datenverarbeitung
 - Zusammenarbeit mit Aufsichtsbehörden
 - Schulungen</p>
-<p><strong>Person:</strong> {{ meta.data_protection_officer }}</p>
+<p><strong>Person:</strong> {{ meta-handbook.data_protection_officer }}</p>
 <h3 id="internal-audit-team">Internal Audit Team</h3>
 <p><strong>Verantwortlichkeiten:</strong>
 - Interne Audits durchführen
 - Audit-Planung
 - Findings dokumentieren
 - Follow-up auf Corrective Actions</p>
-<p><strong>Team-Lead:</strong> {{ meta.internal_audit_lead }}</p>
+<p><strong>Team-Lead:</strong> {{ meta-handbook.internal_audit_lead }}</p>
 <h3 id="ciso-chief-information-security-officer">CISO (Chief Information Security Officer)</h3>
 <p><strong>Verantwortlichkeiten:</strong>
 - Security-Compliance
 - ISO 27001-Ownership
 - Security-Audits
 - Risiko-Management</p>
-<p><strong>Person:</strong> Thomas Weber</p>
+<p><strong>Person:</strong> [TODO]</p>
 <h3 id="it-operations-manager">IT Operations Manager</h3>
 <p><strong>Verantwortlichkeiten:</strong>
 - Operative Compliance-Umsetzung
 - ISO 20000-Ownership
 - Prozess-Compliance
 - Tool-Implementation</p>
-<p><strong>Person:</strong> Andreas Huemmer</p>
+<p><strong>Person:</strong> {{ meta-organisation-roles.role_IT_Operations_Manager }}</p>
 <h3 id="fachbereichs-leiter">Fachbereichs-Leiter</h3>
 <p><strong>Verantwortlichkeiten:</strong>
 - Compliance in ihrem Bereich
@@ -1154,12 +1166,11 @@ Frist: 30 Tage
 <li>NIST SP 800-53 - Security and Privacy Controls</li>
 <li>CIS Controls v8 - Center for Internet Security Controls</li>
 </ul>
-<hr />
-<p><strong>Dokumentverantwortlicher:</strong> IT Operations Manager<br />
-<strong>Genehmigt durch:</strong> CIO<br />
-<strong>Version:</strong> 1.0.0<br />
-<strong>Klassifizierung:</strong> internal<br />
-<strong>Letzte Aktualisierung:</strong> {{ meta.date }}</p>
+<p><strong>Dokumentverantwortlicher:</strong> [TODO]<br />
+<strong>Genehmigt durch:</strong> [TODO]<br />
+<strong>Version:</strong> 0<br />
+<strong>Klassifizierung:</strong> Internal<br />
+<strong>Letzte Aktualisierung:</strong> {{ meta-handbook.date }}</p>
         </main>
         
         <nav class="page-nav">
